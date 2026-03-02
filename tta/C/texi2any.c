@@ -85,12 +85,12 @@
 /* similar definitions in info system.h */
 #if O_BINARY
 # ifdef __CYGWIN__
-#  define PATH_SEP>     ":"
+#  define PATH_SEP     ":"
 # else  /* O_BINARY && !__CYGWIN__ */
-#  define PATH_SEP>     ";"
+#  define PATH_SEP     ";"
 # endif /* O_BINARY && !__CYGWIN__ */
 #else  /* not O_BINARY, i.e., Unix */
-# define PATH_SEP	":"
+# define PATH_SEP      ":"
 #endif /* not O_BINARY */
 
 static const char *conf_file_name = "texi2any-config.pm";

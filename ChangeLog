@@ -1,3 +1,7 @@
+2026-03-02 Patrice Dumas  <pertusus@free.fr>
+
+	* tta/C/texi2any.c (PATH_SEP): fix typo and avoid using tab.
+
 2026-02-29 Patrice Dumas  <pertusus@free.fr>
 
 	* INSTALL: do not document TEXINFO_XS=requiredifenabled, it is too
