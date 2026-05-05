@@ -2319,71 +2319,81 @@ forward_move_node_structure (WINDOW *window, int behaviour)
         /* Okay, there wasn't a "Next:" for this node.  Move "Up:" until we
            can move "Next:".  If that isn't possible, complain that there
            are no more nodes. */
-        {
-          int up_counter;
-          int starting_hist_index = window->hist_index;
+        int up_counter;
+        int starting_hist_index = window->hist_index;
 
-          /* Back up through the "Up:" pointers until we have found a "Next:"
-             that isn't the same as the first menu item found in that node. */
-          up_counter = 0;
-          while (1)
-            {
-              if (window->node->up)
-                {
-                  REFERENCE *entry;
+        /* Back up through the "Up:" pointers until we have found a "Next:"
+           that isn't the same as the first menu item found in that node. */
+        up_counter = 0;
+        while (1)
+          {
+            if (window->node->up)
+              {
+                REFERENCE *entry;
 
-                  if (!info_handle_pointer ("Up", window))
-                    return 1;
+                info_parse_node (window->node->up);
 
-                  up_counter++;
-
-                  /* If no "Next" pointer, keep backing up. */
-                  if (!window->node->next)
-                    continue;
-
-                  /* If this node's first menu item is the same as this node's
-                     Next pointer, keep backing up. */
-                  entry = select_menu_digit (window, '1');
-                  if (entry && !strcmp (window->node->next, entry->nodename))
-                    continue;
-
-                  /* This node has a "Next" pointer, and it is not the
-                     same as the first menu item found in this node. */
-                  if (!info_handle_pointer ("Next", window))
-                    return 1;
-
-                  /* Don't include intermediate nodes in the window's
-                     history.  */
-                  cleanup_history (window, starting_hist_index,
-                                   window->hist_index - 1);
-                  return 0;
-                }
-              else
-                {
-                  /* No more "Up" pointers.  We are at the last node in the
-                     file. */
-                  register int i;
-
-                  for (i = 0; i < up_counter; i++)
-                    forget_node (window);
-
-                  switch (scroll_last_node)
-                    {
-                    case SLN_Stop:
-                      info_error ("%s",
-                                  _("No more nodes within this document"));
+                /* Only go Up if there is no filename component in the
+                   "Up" string, and the node referenced is different to
+                   the current one. */
+                if (!info_parsed_filename && info_parsed_nodename
+                    && strcmp (info_parsed_nodename,
+                               window->node->nodename) != 0)
+                  {
+                    NODE *node = info_get_node (window->node->fullpath,
+                                                info_parsed_nodename);
+                    if (!node)
                       return 1;
 
-                    case SLN_Top:
-                      info_parse_and_select ("Top", window);
-                      return 0;
+                    info_set_node_of_window (window, node);
 
-                    default:
-                      abort ();
-                    }
-                }
-            }
-        }
+                    up_counter++;
+
+                    /* If no "Next" pointer, keep backing up. */
+                    if (!window->node->next)
+                      continue;
+
+                    /* If this node's first menu item is the same as this node's
+                       Next pointer, keep backing up. */
+                    entry = select_menu_digit (window, '1');
+                    if (entry && !strcmp (window->node->next, entry->nodename))
+                      continue;
+
+                    /* This node has a "Next" pointer, and it is not the
+                       same as the first menu item found in this node. */
+                    if (!info_handle_pointer ("Next", window))
+                      return 1;
+
+                    /* Don't include intermediate nodes in the window's
+                       history.  */
+                    cleanup_history (window, starting_hist_index,
+                                     window->hist_index - 1);
+                    return 0;
+                  }
+              }
+
+            /* No more "Up" pointers.  We are at the last node in the
+               file. */
+            register int i;
+
+            for (i = 0; i < up_counter; i++)
+              forget_node (window);
+
+            switch (scroll_last_node)
+              {
+              case SLN_Stop:
+                info_error ("%s",
+                            _("No more nodes within this document"));
+                return 1;
+
+              case SLN_Top:
+                info_parse_and_select ("Top", window);
+                return 0;
+
+              default:
+                abort ();
+              }
+          }
         break;
       }
     }

@@ -1,3 +1,16 @@
+2026-05-05  Gavin Smith <gavinsmith0123@gmail.com>
+
+	* info/session-cmd.c (forward_move_node_structure):
+	Replace call ito info_handle_pointer to follow "Up" pointer.
+	Check Up pointer is not to a different file, to avoid going
+	all the way up to "(dir)".  Also check that it does not point
+	to the current node, to avoid an infinite loop.  Fall through to
+	code handling last node in the file when we can't go Up any more.
+	Remove braces and extra level of indentation.
+	
+	An infinite loop occured when the "dir" node had an Up node.
+	Report from Aidan <aidanczhai@gmail.com>.
+
 2026-05-04  Gavin Smith <gavinsmith0123@gmail.com>
 
 	* doc/texinfo.tex (@documentlanguagevariant, @documentscript):
