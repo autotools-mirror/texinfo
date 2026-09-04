@@ -1,5 +1,9 @@
 2026-09-04 Patrice Dumas  <pertusus@free.fr>
 
+	* tta/perl/t/info_tests.t: remove TODO for text fixed.
+
+2026-09-04 Patrice Dumas  <pertusus@free.fr>
+
 	* tta/perl/Texinfo/Convert/PlaintextNonXS.pm: rename pending txts
 	'location' to 'conv_type'.
 

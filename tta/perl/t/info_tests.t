@@ -1180,10 +1180,6 @@ gg
 
 @printindex cp
 '],
-# TODO not sure that it is worth fixing.
-# The result is many times incorrect in term of quoted images
-# split, line width incorrect because of quote included, NUL stops
-# width computation...
 ['multitable_images',
 '@multitable {aaaaaaaaaaaaaaaaaaaaaaa} {bbbbbbbbbbbbbbbbbbb}
 @item
@@ -1213,11 +1209,6 @@ Col2 quoted
 2Z @image{figure, , , ,txt} 2Y @image{figure, , , ,txt} 2T
 @end multitable
 '],
-# TODO not sure that it is worth fixing.
-# The result is many times incorrect in term of quoted images
-# split, line width incorrect because of quote included, NUL stops
-# width computation...  And the flushing right may not be correct too,
-# it needs investigation.
 ['multitable_flushright_image',
 '@multitable {aaaaaaaaaaaaaaaaaaaaaa} {bbbbbbbbbbbbbbbbbbbbbbb}
 @item
