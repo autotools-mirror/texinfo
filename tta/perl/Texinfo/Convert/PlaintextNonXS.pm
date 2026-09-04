@@ -998,7 +998,7 @@ sub _add_lines_count($$) {
 sub add_target_location($$) {
   my ($self, $element) = @_;
 
-  my $anchor_info = {'location' => 'anchor', 'anchor' => $element};
+  my $anchor_info = {'conv_type' => 'anchor', 'anchor' => $element};
 
   my $count_context = $self->{'count_context'}->[-1];
   if (scalar(@{$count_context->{'pending_text'}->[-1]}) == 1) {
@@ -1036,7 +1036,7 @@ sub _adjust_final_locations($) {
 sub add_quoted_image($$;$) {
   my ($self, $quoted_image, $trailing_text) = @_;
 
-  my $image_info = {'location' => 'quoted_image'};
+  my $image_info = {'conv_type' => 'quoted_image'};
   push @{$self->{'count_context'}->[-1]->{'pending_text'}},
        [$quoted_image, $image_info], [$trailing_text];
 }
@@ -1135,7 +1135,7 @@ sub _stream_to_text_anchor($) {
   foreach my $pending_string (@$pending) {
     $result .= $pending_string->[0];
     if (defined($pending_string->[1])
-        and ($pending_string->[1]->{'location'} eq 'anchor')) {
+        and ($pending_string->[1]->{'conv_type'} eq 'anchor')) {
       push @anchors, $pending_string->[1]->{'anchor'};
     }
   }
@@ -1171,7 +1171,7 @@ sub _stream_encode($$) {
       }
     }
     if (defined($pending_string->[1])
-        and $pending_string->[1]->{'location'} eq 'anchor'
+        and $pending_string->[1]->{'conv_type'} eq 'anchor'
         and exists($self->{'target_locations'})) {
       push @{$self->{'target_locations'}}, {
              'target_element' => $pending_string->[1]->{'anchor'},
@@ -1217,11 +1217,11 @@ sub _debug_print_pending($) {
   foreach my $pending (@$pending_texts) {
     my $result = $pending->[0];
     if (defined($pending->[1])) {
-      if ($pending->[1]->{'location'} eq 'anchor') {
+      if ($pending->[1]->{'conv_type'} eq 'anchor') {
         $result .= '['
          . Texinfo::Convert::Texinfo::target_element_to_texi_label(
              $pending->[1]->{'anchor'}).']';
-      } elsif ($pending->[1]->{'location'} eq 'quoted_image') {
+      } elsif ($pending->[1]->{'conv_type'} eq 'quoted_image') {
         $result .= '{'.length($pending->[0]).'}';
       }
     }
@@ -1571,8 +1571,8 @@ sub collect_pending_texts_lines($) {
   foreach my $pending_text (@$pending_texts) {
     my @pending_lines;
     if (defined($pending_text->[1])
-        and ($pending_text->[1]->{'location'} eq 'quoted_image'
-             or $pending_text->[1]->{'location'} eq 'protected_text')) {
+        and ($pending_text->[1]->{'conv_type'} eq 'quoted_image'
+             or $pending_text->[1]->{'conv_type'} eq 'protected_text')) {
       push @pending_lines, $pending_text;
     } elsif ($pending_text->[0] eq '') {
       # need a separate case, as split does not return an empty string.
@@ -1612,7 +1612,7 @@ sub _align_lines($$$$) {
     for (my $j = 0; $j < scalar(@$line); $j++) {
       my $pending_text = $line->[$j];
       last if (defined($pending_text->[1])
-               and $pending_text->[1]->{'location'} eq 'protected_text');
+               and $pending_text->[1]->{'conv_type'} eq 'protected_text');
       $pending_text->[0] =~ s/^(\s*)//;
       if ($pending_text->[0] ne '') {
         last;
@@ -1622,7 +1622,7 @@ sub _align_lines($$$$) {
       my $pending_text = $line->[$j -1];
       chomp($pending_text->[0]);
       last if (defined($pending_text->[1])
-               and $pending_text->[1]->{'location'} eq 'protected_text');
+               and $pending_text->[1]->{'conv_type'} eq 'protected_text');
       $pending_text->[0] =~ s/(\s*)$//;
       if ($pending_text->[0] ne '') {
         last;
@@ -2390,7 +2390,7 @@ sub stream_image_formatted_text($$$$) {
     # the last line is part of the image but does not have a new line
     $lines_count = scalar(@lines) -1;
     foreach my $line (@lines) {
-      my $line_info = {'location' => 'protected_text'};
+      my $line_info = {'conv_type' => 'protected_text'};
       push @{$self->{'count_context'}->[-1]->{'pending_text'}},
         [$line, $line_info];
     }
@@ -2506,7 +2506,7 @@ sub _pending_texts_width($) {
   my $width = 0;
   foreach my $pending (@$pending_texts) {
     if (defined($pending->[1])
-        and $pending->[1]->{'location'} eq 'quoted_image') {
+        and $pending->[1]->{'conv_type'} eq 'quoted_image') {
       $width += $IMAGE_WIDTH;
     } else {
       $width += Texinfo::Convert::Unicode::string_width($pending->[0]);
@@ -2519,7 +2519,7 @@ sub _pending_text_has_anchor($) {
   my $pending_texts = shift;
 
   foreach my $pending (@$pending_texts) {
-    if (defined($pending->[1]) and $pending->[1]->{'location'} eq 'anchor') {
+    if (defined($pending->[1]) and $pending->[1]->{'conv_type'} eq 'anchor') {
       return 1;
     }
   }
@@ -4434,7 +4434,7 @@ sub _convert($$) {
                 }
               }
               if (defined($pending_text->[1])
-                  and $pending_text->[1]->{'location'} eq 'quoted_image') {
+                  and $pending_text->[1]->{'conv_type'} eq 'quoted_image') {
                 $line_width += $IMAGE_WIDTH;
               } else {
                 $line_width
