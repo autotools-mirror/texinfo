@@ -226,26 +226,12 @@ pop_count_context (COUNT_CONTEXT_STACK *stack)
 def_alloc_fns(PENDING_TEXT_LIST, pending_text, PENDING_TEXT, 5);
 
 static PENDING_TEXT *
-add_top_pending_text (PENDING_TEXT_LIST *pending_texts, const ELEMENT *anchor,
-                      TEXT *image_string, int protected_text)
+add_top_pending_text (PENDING_TEXT_LIST *pending_texts, enum conv_type type)
 {
   PENDING_TEXT *pending_text = add_init_(pending_text) (pending_texts);
 
   text_append (&pending_text->text, "");
-  if (anchor)
-    {
-      pending_text->type = PLT_anchor;
-      pending_text->l.anchor = anchor;
-    }
-  else if (image_string)
-    {
-      pending_text->type = PLT_quoted_image;
-      pending_text->l.image_string = *image_string;
-    }
-  else if (protected_text)
-    pending_text->type = PLT_protected_text;
-  else
-    pending_text->type = PLT_text;
+  pending_text->type = type;
 
   return pending_text;
 }
@@ -258,7 +244,7 @@ push_count_context (COUNT_CONTEXT_STACK *stack)
   COUNT_CONTEXT *pushed_context = add_init_(count_context) (stack);
 
   pushed_context->lines = 0;
-  add_top_pending_text (&pushed_context->pending_text, 0, 0, 0);
+  add_top_pending_text (&pushed_context->pending_text, PLT_text);
 }
 
 
@@ -1103,14 +1089,15 @@ plaintext_add_quoted_image (CONVERTER *self, TEXT *image_string,
 {
   PLAINTEXT_CONVERTER_STATE *self_plaintext = self->plaintext_converter;
   COUNT_CONTEXT *count_context
-    = top_(count_context) (&self_plaintext->count_context);
+      = top_(count_context) (&self_plaintext->count_context);
   PENDING_TEXT_LIST *pending = &count_context->pending_text;
-  PENDING_TEXT *pending_image
-                  = add_top_pending_text (pending, 0, image_string, 0);
+  PENDING_TEXT *pending_image = add_top_pending_text (pending,
+                                                      PLT_quoted_image);
+  pending_image->l.image_string = *image_string;
   text_append_n (&pending_image->text,
                  image_quoted->text, image_quoted->end);
   free (image_quoted->text);
-  PENDING_TEXT *trailing = add_top_pending_text (pending, 0, 0, 0);
+  PENDING_TEXT *trailing = add_top_pending_text (pending, PLT_text);
   if (trailing_text)
     {
       text_append_n (&trailing->text, trailing_text->text,
@@ -1254,9 +1241,13 @@ plaintext_add_target_location (CONVERTER *self, const ELEMENT *element)
       top_pending_text->l.anchor = element;
     }
   else
-    add_top_pending_text (&count_context->pending_text, element, 0, 0);
+    {
+      PENDING_TEXT *pending_anchor
+        = add_top_pending_text (&count_context->pending_text, PLT_anchor);
+      pending_anchor->l.anchor = element;
+    }
 
-  add_top_pending_text (&count_context->pending_text, 0, 0, 0);
+  add_top_pending_text (&count_context->pending_text, PLT_text);
 }
 
 int
@@ -1411,7 +1402,7 @@ ensure_end_of_line (CONVERTER *self)
             {
    /* add new pending text to keep the anchor/image before the end of line */
               PENDING_TEXT *new_nl
-                = add_top_pending_text (pending_texts, 0, 0, 0);
+                = add_top_pending_text (pending_texts, PLT_text);
               text_append_n (&new_nl->text, "\n", 1);
             }
           add_lines_count (self, 1);
@@ -1880,7 +1871,7 @@ merge_pending_texts (PENDING_TEXT_LIST *dst_pending_texts,
       /* swap source and destination, in case destination has some
          unused allocated memory */
       PENDING_TEXT *top_pending_text
-        = add_top_pending_text (dst_pending_texts, 0, 0, 0);
+        = add_top_pending_text (dst_pending_texts, PLT_text);
       PENDING_TEXT tmp = *top_pending_text;
       *top_pending_text = source->list[i];
        /*
@@ -2001,7 +1992,7 @@ move_pending_texts (PENDING_TEXT_LIST *dst_pending_texts,
   for (i = 0; i < source->number; i++)
     {
       PENDING_TEXT *top_pending_text
-        = add_top_pending_text (dst_pending_texts, 0, 0, 0);
+        = add_top_pending_text (dst_pending_texts, PLT_text);
       replace_pending_text (top_pending_text, &source->list[i]);
     }
   source->number = 0;
@@ -2253,7 +2244,7 @@ align_lines (CONVERTER *self, int max_column, enum align_directions direction,
      /* add an empty text if the last pending is not regular text such
         that an anchor does not have its location modified and image
         text is not modified either */
-              add_top_pending_text (result, 0, 0, 0);
+              add_top_pending_text (result, PLT_text);
             }
         }
       else
@@ -3429,7 +3420,8 @@ plaintext_stream_image_formatted_text (CONVERTER *self, const ELEMENT *element,
       /* split lines and add them to pending texts as protexted text */
       while (len > 0)
         {
-          PENDING_TEXT *pending_text = add_top_pending_text (pending, 0, 0, 1);
+          PENDING_TEXT *pending_text
+            = add_top_pending_text (pending, PLT_protected_text);
           TEXT *t = &pending_text->text;
           const char *q = memchr (p, '\n', len);
           if (q)
@@ -3453,7 +3445,7 @@ plaintext_stream_image_formatted_text (CONVERTER *self, const ELEMENT *element,
               p = q +1;
             }
         }
-      add_top_pending_text (pending, 0, 0, 0);
+      add_top_pending_text (pending, PLT_text);
       return lines_count;
     }
 
@@ -6718,7 +6710,7 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
                                   if (indent_len > 0)
                                     {
                                       PENDING_TEXT *spaces
-                                      = add_top_pending_text (result, 0, 0, 0);
+                                      = add_top_pending_text (result, PLT_text);
                                       for (k = 0; k < indent_len; k++)
                                         text_append_n (&spaces->text, " ", 1);
                                       indent_done = 1;
@@ -6730,7 +6722,7 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
                           else
                             line_width += width_multibyte (t->text, t->end);
                           PENDING_TEXT *dst_pending_text
-                            = add_top_pending_text (result, 0, 0, 0);
+                            = add_top_pending_text (result, PLT_text);
                           replace_pending_text (dst_pending_text, pending_text);
                         }
                     }
@@ -6743,7 +6735,7 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
                           if (!indent_done)
                             {
                               PENDING_TEXT *spaces
-                                      = add_top_pending_text (result, 0, 0, 0);
+                                 = add_top_pending_text (result, PLT_text);
                               for (k = 0; k < indent_len; k++)
                                 text_append_n (&spaces->text, " ", 1);
                               indent_done = 1;
@@ -6754,7 +6746,7 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
                           if (spaces_nr > 0)
                             {
                               PENDING_TEXT *spaces
-                                      = add_top_pending_text (result, 0, 0, 0);
+                                 = add_top_pending_text (result, PLT_text);
                               for (k = 0; k < spaces_nr; k++)
                                 text_append_n (&spaces->text, " ", 1);
                             }
@@ -6762,7 +6754,7 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
                         }
                     }
                 }
-              PENDING_TEXT *new_nl = add_top_pending_text (result, 0, 0, 0);
+              PENDING_TEXT *new_nl = add_top_pending_text (result, PLT_text);
               text_append_n (&new_nl->text, "\n", 1);
             }
           free (cell_beginnings);

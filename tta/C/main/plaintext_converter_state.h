@@ -90,7 +90,7 @@ decl_list_fns(TARGET_LOCATION_LIST, target_location, TARGET_LOCATION);
 def_list_type(INDEX_ENTRY_LINE_COUNT_LIST, int *);
 decl_list_fns(INDEX_ENTRY_LINE_COUNT_LIST, index_entry_location, int *);
 
-enum location_type {
+enum conv_type {
    PLT_text,
    PLT_protected_text,
    PLT_anchor,
@@ -99,7 +99,7 @@ enum location_type {
 
 typedef struct PENDING_TEXT {
     TEXT text;
-    enum location_type type;
+    enum conv_type type;
     union {
       const ELEMENT *anchor;
       /* representation of image without control characters, for debugging */
