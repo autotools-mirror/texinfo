@@ -1612,7 +1612,7 @@ main (int argc, char *argv[], char *env[])
 
       getopt_long_index = 0;
 
-      option_character = getopt_long (argc, argv, "VhvFc:D:e:f:I:P:o:E:U:",
+      option_character = getopt_long (argc, argv, "VhvFc:D:e:f:I:P:o:E:U:p:",
                                       long_options,
                                       &getopt_long_index);
 

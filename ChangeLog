@@ -1,5 +1,10 @@
 2026-09-05 Patrice Dumas  <pertusus@free.fr>
 
+	* tta/C/texi2any.c (main): add missing short option -p to getopt_long
+	call.  Report from Gavin.
+
+2026-09-05 Patrice Dumas  <pertusus@free.fr>
+
 	* tta/C/main/plaintext_converter_state.h (enum conv_type): rename enum
 	location_type as enum conv_type.
 
