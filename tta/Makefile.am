@@ -77,6 +77,7 @@ maintenance_files = \
   maintain/regenerate_file_lists.pl \
   maintain/regenerate_commands_perl_info.pl \
   maintain/regenerate_perl_options_info.pl \
+  maintain/regenerate_tap_tests_lists.pl \
   maintain/regenerate_C_options_info.pl \
   maintain/setup_accent_tables.pl \
   maintain/catalog.xml.in

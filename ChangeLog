@@ -1,5 +1,22 @@
 2026-09-05 Patrice Dumas  <pertusus@free.fr>
 
+	Do not use EXTRA_DIST for test files list
+
+	* autogen.sh, tta/Makefile.am (maintenance_files),
+	tta/maintain/regenerate_file_lists.pl,
+	tta/maintain/regenerate_tap_tests_lists.pl, tta/perl/Makefile.am
+	(Makefile.tres, products_regenerate_file_lists)
+	(stamp.regenerate_file_lists, EXTRA_DIST, dist-hook): do not use
+	EXTRA_DIST for the list of generated test files, as it leads to
+	"Argument list too long".  Split regenerate_tap_tests_lists.pl out of
+	regenerate_file_lists.pl for the generated list of tap files.
+	Generate a separate list of directories and files in
+	regenerate_file_lists.pl.  Add targets to Makefile.am to generate the
+	files and use them in dist-hook.  Report and example code from Bruno
+	Haible.
+
+2026-09-05 Patrice Dumas  <pertusus@free.fr>
+
 	* tta/maintain/regenerate_documentlanguages-iana.pl: close files and
 	check closing errors.  Check gperf system calls errors.
 

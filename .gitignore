@@ -341,6 +341,7 @@ tta/perl/t/*.trs
 tta/perl/t/*.log
 tta/perl/t/z_misc/*.trs
 tta/perl/t/z_misc/*.log
+tta/perl/stamp.regenerate_file_lists
 
 tta/perl/XSTexinfo/MiscXS.c
 tta/perl/XSTexinfo/ParagraphXS.c

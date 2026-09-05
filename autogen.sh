@@ -11,6 +11,11 @@ fi
 echo "Preparing Texinfo development infrastructure:"
 
 # Generates tta/perl/Makefile.tres (included by tta/perl/Makefile.am).
+cmd="./tta/maintain/regenerate_tap_tests_lists.pl"
+echo "  $cmd"
+$chicken eval $cmd || exit 1
+
+# Generates tta/perl/t/test_*s_generated_list.txt (used in tta/perl/Makefile.am).
 cmd="./tta/maintain/regenerate_file_lists.pl"
 echo "  $cmd"
 $chicken eval $cmd || exit 1

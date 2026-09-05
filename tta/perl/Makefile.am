@@ -28,8 +28,25 @@ converterdatadir = $(datadir)/$(CONVERTER)
 include $(srcdir)/Makefile.tres
 
 # should be kept in sync with autogen.sh call
-$(srcdir)/Makefile.tres: ../maintain/regenerate_file_lists.pl
+$(srcdir)/Makefile.tres: ../maintain/regenerate_tap_tests_lists.pl
+	cd $(srcdir)/ && $(PERL) ../maintain/regenerate_tap_tests_lists.pl
+
+MAINTAINERCLEANFILES =
+
+products_regenerate_file_lists = $(srcdir)/t/test_dirs_generated_list.txt \
+                                 $(srcdir)/t/test_files_generated_list.txt
+
+$(srcdir)/stamp.regenerate_file_lists: ../maintain/regenerate_file_lists.pl
+	@rm -f tmp.regenerate_file_lists
+	@touch -f tmp.regenerate_file_lists
 	cd $(srcdir)/ && $(PERL) ../maintain/regenerate_file_lists.pl
+	@mv -f tmp.regenerate_file_lists $@
+
+$(products_regenerate_file_lists): $(srcdir)/stamp.regenerate_file_lists
+	@test -f $@ || rm -f stamp.regenerate_file_lists
+	@test -f $@ || $(MAKE) $(AM_MAKEFLAGS) stamp.regenerate_file_lists
+EXTRA_DIST += stamp.regenerate_file_lists
+MAINTAINERCLEANFILES += $(products_regenerate_file_lists) stamp.regenerate_file_lists
 
 if !PREFER_C_TEXI2ANY
 bin_SCRIPTS = texi2any
@@ -349,18 +366,20 @@ test_files = \
  t/input_files/htmlxref-split.cnf \
  #
 
-# test_files_generated_list comes from the generated Makefile.tres
+# test_tap_files_generated_list comes from the generated Makefile.tres
 EXTRA_DIST += \
   Convert_format_template.pod \
   load_txi_modules.pl \
   prove.sh \
   texi2any.pl \
   $(test_files) \
-  $(test_files_generated_list)
+  $(test_tap_files_generated_list) \
+  t/test_dirs_generated_list.txt \
+  t/test_files_generated_list.txt
 
 # template.pod is the basis for the .pm documentation, and the script
 # invoked here updates them; to be run when template.pod changes.
-# 
+#
 # If we ever make that documentation more extensive, the .pm doc could
 # (and probably should) just be maintained separately, by hand.
 do-pm-doc:
@@ -436,12 +455,22 @@ AM_T_LOG_FLAGS = -w
 
 AM_TESTS_ENVIRONMENT = srcdir="$(srcdir)"; export srcdir; t2a_srcdir="$(top_srcdir)"; export t2a_srcdir; t2a_builddir="$(top_builddir)"; export t2a_builddir;
 
+# use read and not for `cat ...` because of spaces in files names
+dist-hook: $(srcdir)/t/test_files_generated_list.txt \
+                     $(srcdir)/t/test_dirs_generated_list.txt
+	while read dir ; do \
+	  $(MKDIR_P) "$(distdir)/$$dir" || exit 1; \
+	done < $(srcdir)/t/test_dirs_generated_list.txt
+	while read file ; do \
+	  cp -p "$(srcdir)/$$file" "$(distdir)/$$file" || exit 1; \
+	done < $(srcdir)/t/test_files_generated_list.txt
+
 distclean-local:
 	rm -f t/results/*/*.pl.new
 	rm -rf t/results/*/*/out_*/
 
 CLEANFILES = texi2any makeinfo load_txi_modules Texinfo/ModulePath.pm \
              Texinfo/Configure.pm
-MAINTAINERCLEANFILES = Texinfo/Commands.pm Texinfo/CommandsValues.pm \
+MAINTAINERCLEANFILES += Texinfo/Commands.pm Texinfo/CommandsValues.pm \
                        Texinfo/HTMLData.pm Texinfo/HTMLDataCSS.pm \
                        Texinfo/Options.pm
