@@ -94,7 +94,7 @@ enum conv_type {
    PLT_text,
    PLT_protected_text,
    PLT_anchor,
-   PLT_quoted_image, /* quoted image */
+   PLT_quoted_image,
 };
 
 typedef struct PENDING_TEXT {

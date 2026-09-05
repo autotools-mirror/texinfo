@@ -1992,7 +1992,7 @@ main (int argc, char *argv[], char *env[])
 
                 GNUT_set_from_cmdline (&cmdline_options,
                           cmdline_options.options->paragraphindent.number,
-                                  value);
+                                  integer_value);
               }
             else
               {
@@ -2000,7 +2000,7 @@ main (int argc, char *argv[], char *env[])
                 char *encoded_message;
 
                 xasprintf (&formatted_message,
-    _("%s:  --paragraph-indent arg must be numeric/`none'/`asis', not `%s'."),
+    _("%s: --paragraph-indent arg must be numeric/`none'/`asis', not `%s'."),
                   program_file, value);
                 encoded_message = GNUT_encode_message (formatted_message);
                 free (formatted_message);

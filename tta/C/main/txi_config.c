@@ -177,9 +177,12 @@ set_option_value (OPTIONS_LIST *options_list, size_t number,
       char *endptr;
       long long_value = strtol (value, &endptr, 10);
       int int_value = (int) long_value;
-      if (endptr != value && int_value >= 0)
+      if (endptr != value)
         {
-          option_set_conf (option, int_value, 0);
+          if (int_value >= 0
+              || (int_value == -2
+                  && option->number == txi_base_options.paragraphindent.number))
+            option_set_conf (option, int_value, 0);
         }
       else
         {
