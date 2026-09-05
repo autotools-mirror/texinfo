@@ -1,5 +1,13 @@
 2026-09-05 Patrice Dumas  <pertusus@free.fr>
 
+	* tta/maintain/regenerate_documentlanguages-iana.pl: close files and
+	check closing errors.  Check gperf system calls errors.
+
+	* tta/maintain/regenerate_file_lists.pl: remove CVS and .svn match.
+	Change in spacing and in comments.
+
+2026-09-05 Patrice Dumas  <pertusus@free.fr>
+
 	* tta/C/main/txi_config.c (set_option_value): set integer
 	customization variable recognized as integer if it is positive or it
 	corresponds to the special value for paragraphindent asis.  Otherwise

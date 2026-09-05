@@ -34,9 +34,10 @@ my %alias_ISO_script = (
 );
 
 my $dir = 'maintain/documentlanguage';
-system ("cd $dir && wget -N http://www.iana.org/assignments/language-subtag-registry");
+system("cd $dir && wget -N http://www.iana.org/assignments/language-subtag-registry");
 
-open(TXT,"$dir/language-subtag-registry") or die "Open $dir/language-subtag-registry: $!\n";
+open(TXT,"$dir/language-subtag-registry")
+    or die "Open $dir/language-subtag-registry: $!\n";
 
 my $entry;
 my @entries;
@@ -57,8 +58,9 @@ if (!defined($entry->{'Type'})) {
 
 my $program_name = basename($0);
 
-open(OUT, ">perl/Texinfo/Documentlanguages.pm") or die "Open Texinfo/Documentlanguages.pm: $!\n";
-#open(OUT, ">$dir/Documentlanguages.pm") or die "Open Texinfo/Documentlanguages.pm: $!\n";
+my $perl_document_language_out = 'perl/Texinfo/Documentlanguages.pm';
+open(OUT, ">$perl_document_language_out")
+       or die "Open $perl_document_language_out: $!\n";
 
 my @languages;
 my @regions;
@@ -105,27 +107,32 @@ foreach my $entry (@entries) {
 
 my $declarations = "%{\n#include <config.h>\n%}\n"
                    ."%includes\n%%\n";
-open(LANGUAGES, ">$dir/languages.gperf") or die "Open $dir/languages.gperf: $!\n";
+my $gperf_languages_file = "$dir/languages.gperf";
+open(LANGUAGES, ">$gperf_languages_file") or die "Open $gperf_languages_file: $!\n";
 print LANGUAGES $declarations;
 
-open(REGIONS, ">$dir/regions.gperf") or die "Open $dir/regions.gperf: $!\n";
+my $gperf_regions_file = "$dir/regions.gperf";
+open(REGIONS, ">$gperf_regions_file") or die "Open $gperf_regions_file: $!\n";
 print REGIONS $declarations;
 
 # we setup aliases, so we need to declare a structure
 my $scripts_declarations = "%{\n#include <config.h>\n%}\n"
      ."struct TXI_DOCUMENT_SCRIPT { char const *name; const char *code; };\n"
                    ."%includes\n%%\n";
-open(SCRIPTS, ">$dir/scripts.gperf") or die "Open $dir/scripts.gperf: $!\n";
+my $gperf_scripts_file = "$dir/scripts.gperf";
+open(SCRIPTS, ">$gperf_scripts_file") or die "Open $gperf_scripts_file: $!\n";
 print SCRIPTS $scripts_declarations;
 
 my $script_names_declarations = "%{\n#include <config.h>\n%}\n"
  ."struct TXI_DOCUMENT_SCRIPT_NAME { char const *name; const char *alias; };\n"
                    ."%includes\n%%\n";
-open(SCRIPT_NAMES, ">$dir/script_names.gperf")
-   or die "Open $dir/script_names.gperf: $!\n";
+my $gperf_script_names_file = "$dir/script_names.gperf";
+open(SCRIPT_NAMES, ">$gperf_script_names_file")
+   or die "Open $gperf_script_names_file: $!\n";
 print SCRIPT_NAMES $script_names_declarations;
 
-open(VARIANTS, ">$dir/variants.gperf") or die "Open $dir/variants.gperf: $!\n";
+my $gperf_variants_file = "$dir/variants.gperf";
+open(VARIANTS, ">$gperf_variants_file") or die "Open $gperf_variants_file: $!\n";
 print VARIANTS $declarations;
 
 print OUT "# This file was automatically generated from $program_name\n\n";
@@ -179,8 +186,25 @@ print OUT ");\n\n";
 
 print OUT "1;\n";
 
-system ("gperf --output-file=C/main/txi_documentlanguage_languages.c -N txi_in_language_codes $dir/languages.gperf");
-system ("gperf --output-file=C/main/txi_documentlanguage_regions.c -N txi_in_language_regions $dir/regions.gperf");
-system ("gperf -t --output-file=C/main/txi_documentlanguage_scripts.c -N txi_in_language_scripts $dir/scripts.gperf");
-system ("gperf -t --output-file=C/main/txi_documentlanguage_script_names.c -N txi_in_language_script_names $dir/script_names.gperf");
-system ("gperf --output-file=C/main/txi_documentlanguage_variants.c -N txi_in_language_variants $dir/variants.gperf");
+close(LANGUAGES) or die "$gperf_languages_file: error closing: $!\n";
+close(REGIONS) or die "$gperf_regions_file: error closing: $!\n";
+close(SCRIPTS) or die "$gperf_scripts_file: error closing: $!\n";
+close(SCRIPT_NAMES) or die "$gperf_script_names_file: error closing: $!\n";
+close(VARIANTS) or die "$gperf_variants_file: error closing: $!\n";
+
+my $command = "gperf --output-file=C/main/txi_documentlanguage_languages.c -N txi_in_language_codes $gperf_languages_file";
+system($command) == 0 or die ("$command: failed: $?\n");
+
+$command = "gperf --output-file=C/main/txi_documentlanguage_regions.c -N txi_in_language_regions $gperf_regions_file";
+system($command) == 0 or die ("$command: failed: $?\n");
+
+$command = "gperf -t --output-file=C/main/txi_documentlanguage_scripts.c -N txi_in_language_scripts $gperf_scripts_file";
+system($command) == 0 or die ("$command: failed: $?\n");
+
+$command = "gperf -t --output-file=C/main/txi_documentlanguage_script_names.c -N txi_in_language_script_names $gperf_script_names_file";
+system($command) == 0 or die ("$command: failed: $?\n");
+
+$command = "gperf --output-file=C/main/txi_documentlanguage_variants.c -N txi_in_language_variants $gperf_variants_file";
+system($command) == 0 or die ("$command: failed: $?\n");
+
+close(OUT) or die "$perl_document_language_out: error closing: $!\n";

@@ -18,16 +18,13 @@ doing the first flushright formatting.  It could be for the same reason as
 the issue above, the count context is only added for paragraphs, not
 for a whole @flushright.
 
-Discuss @image in @multitable, especially when image is quoted.
-Do not put text= in that case?  Or first line only?
-
 Some tests do not use Perl anymore, but SKIP is based on Perl.  For example
 'Skipping tests that require compatible unicode collation', or /a missing...
 
 Use PARA_CONF_VARIABLES_LIST to have the same order of conf set in
 ParagraphXS.xs that in convert_to_plaintext.c?  Not sure that it is
 relevant, as, although it is possible to have ParagraphXS loaded and not
-the other C libraries (no functionning iconv) it is unlikely to be
+the other C libraries (no functioning iconv) it is unlikely to be
 used for debug.  In pure Perl it could be relevant, though to try
 to have the same Paragraph debug output as much as possible.
 
