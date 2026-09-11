@@ -1674,6 +1674,7 @@ info_format_image_element (CONVERTER *self, const ELEMENT *element)
           char *located_image_path;
           char *file_name;
           char *input_file_encoding;
+          int use_inc_dir;
 
           xasprintf (&image_file, "%s%s", basefile, extensions->list[i]);
 
@@ -1684,7 +1685,8 @@ info_format_image_element (CONVERTER *self, const ELEMENT *element)
           free (input_file_encoding);
 
           located_image_path = locate_include_file (file_name,
-                                   self->conf->INCLUDE_DIRECTORIES.o.strlist);
+                                   self->conf->INCLUDE_DIRECTORIES.o.strlist,
+                                   &use_inc_dir);
           free (file_name);
 
           if (located_image_path)

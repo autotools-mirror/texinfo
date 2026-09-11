@@ -1,3 +1,10 @@
+2026-09-11 Patrice Dumas  <pertusus@free.fr>
+
+	* tta/C/main/utils.c (locate_include_file), tta/perl/Texinfo/Common.pm
+	(locate_include_file): return the information about include
+	directories having been used or not (for path staring with ., .. or
+	absolute paths).  Update callers.
+
 2026-09-10 Patrice Dumas  <pertusus@free.fr>
 
 	update po-files
@@ -24,7 +31,7 @@
 	characters in the text being processed.  It is not obviously right,
 	but it should not be problematic either, as a lower or upper case
 	letter makes no difference before an after punctuation characters
-	eeven if followed by a punctuation character.  The objective is to
+	even if followed by a punctuation character.  The objective is to
 	have the same processing as in Perl.
 
 2026-09-09 Patrice Dumas  <pertusus@free.fr>

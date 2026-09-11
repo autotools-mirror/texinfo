@@ -3577,7 +3577,7 @@ sub _convert($$) {
         foreach my $extension (@LaTeX_image_extensions) {
           my ($file_name, $file_name_encoding)
              = $self->encoded_input_file_name("$basefile.$extension");
-          my $located_file =
+          my ($located_file, $use_inc_dir) =
             Texinfo::Common::locate_include_file($file_name,
                                   $self->get_conf('INCLUDE_DIRECTORIES'));
           if (defined($located_file)) {

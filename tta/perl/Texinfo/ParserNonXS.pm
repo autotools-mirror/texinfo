@@ -3954,7 +3954,7 @@ sub _end_line_misc_line($$$) {
         # We want Perl binary strings representing sequences of bytes,
         # not character strings in the internal perl encoding.
         my ($file_path, $file_name_encoding) = _encode_file_name($self, $text);
-        my $included_file_path
+        my ($included_file_path, $use_inc_dir)
              = Texinfo::Common::locate_include_file($file_path,
                                   $self->{'conf'}->{'INCLUDE_DIRECTORIES'});
         if (defined($included_file_path)) {
@@ -3988,7 +3988,7 @@ sub _end_line_misc_line($$$) {
         # gather included file for 'included_files'.  No errors, they
         # should be output by converters
         my ($file_path, $file_name_encoding) = _encode_file_name($self, $text);
-        my $included_file_path
+        my ($included_file_path, $use_inc_dir)
              = Texinfo::Common::locate_include_file($file_path,
                                      $self->{'conf'}->{'INCLUDE_DIRECTORIES'});
         if (defined($included_file_path) and -r $included_file_path) {

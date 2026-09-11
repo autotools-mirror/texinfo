@@ -1854,8 +1854,10 @@ html_prepare_css (CONVERTER *self)
         }
       else
         {
+          int use_inc_dir;
           css_file_path = locate_include_file (css_file,
-                             self->conf->INCLUDE_DIRECTORIES.o.strlist);
+                             self->conf->INCLUDE_DIRECTORIES.o.strlist,
+                               &use_inc_dir);
           if (!css_file_path)
             {
               char *css_input_file_name;

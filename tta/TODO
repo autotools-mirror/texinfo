@@ -10,8 +10,6 @@ This is the todo list for texi2any
 Before next release
 ===================
 
-Have a look at texi2pod.pl in GCC
-
 Add "shadow targets" or nodes to sectioning commands without nodes <- DONE
 (and change USE_NODES to have 3 possible meaning?)
 [no] output units are split at sections, and lone nodes are associated to
@@ -116,6 +114,15 @@ converter_customization_options, unique_at_command_options.
 
 Delayed bugs/features
 =====================
+
+GCC use a simple Perl script to convert Texinfo to POD, as an intermediary
+for man pages generation.  There are also special macros and "magic"
+comments, probably mainly to determine the blocks to use.
+https://gcc.gnu.org/git/?p=gcc.git;a=blob;f=contrib/texi2pod.pl
+https://gcc.gnu.org/onlinedocs/gccint/Man-Page-Generation.html
+It would be nice to have a conversion to POD in texi2any.  A difficulty
+is that there is nothing that corresponds to @anchor in POD (@*ref and
+@anchor are simply ignored in texi2pod.pl).
 
 Use SWIG interface in pod2texi, but wait first for the SWIG interface
 to become common.

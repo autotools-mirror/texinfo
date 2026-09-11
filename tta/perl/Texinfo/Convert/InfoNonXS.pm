@@ -1100,8 +1100,10 @@ sub format_image_element($$) {
     foreach my $extension (@extensions) {
       my ($file_name, $file_name_encoding)
         = $self->encoded_input_file_name($basefile.$extension);
-      if (Texinfo::Common::locate_include_file($file_name,
-                          $self->get_conf('INCLUDE_DIRECTORIES'))) {
+      my ($file, $use_inc_dir)
+        = Texinfo::Common::locate_include_file($file_name,
+                             $self->get_conf('INCLUDE_DIRECTORIES'));
+      if (defined($file)) {
         # use the basename and not the file found.  It is agreed that it is
         # better, since in any case the files are moved.
         # If the file path found was to be used it should be decoded to perl

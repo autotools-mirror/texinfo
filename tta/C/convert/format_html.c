@@ -6659,6 +6659,7 @@ find_image_extension_file (CONVERTER *self, const ELEMENT *element,
   char *input_file_encoding;
   char *file_name;
   char *located_image_path;
+  int use_inc_dir;
 
   xasprintf (&image_file, "%s%s", image_basefile, extension);
   file_name = converter_encoded_input_file_name (self->conf,
@@ -6667,7 +6668,8 @@ find_image_extension_file (CONVERTER *self, const ELEMENT *element,
                     &element->e.c->source_info);
 
   located_image_path = locate_include_file (file_name,
-                                   self->conf->INCLUDE_DIRECTORIES.o.strlist);
+                               self->conf->INCLUDE_DIRECTORIES.o.strlist,
+                               &use_inc_dir);
   free (file_name);
 
   if (located_image_path)

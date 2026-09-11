@@ -616,6 +616,7 @@ expand_verbatiminclude (const ELEMENT *current,
   char *file;
   const char *input_encoding;
   int warn;
+  int use_inc_dir;
 
   if (!file_name_text)
     return 0;
@@ -630,7 +631,7 @@ expand_verbatiminclude (const ELEMENT *current,
                                        &file_name_encoding,
                                        &current->e.c->source_info);
 
-  file = locate_include_file (file_name, include_directories);
+  file = locate_include_file (file_name, include_directories, &use_inc_dir);
 
   if (file)
     {

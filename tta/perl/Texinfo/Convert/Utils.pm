@@ -498,8 +498,8 @@ sub expand_verbatiminclude($$$$$;$$) {
                   $doc_encoding_for_input_file_name, $locale_encoding,
                                           $document, $input_encoding);
 
-  my $file = Texinfo::Common::locate_include_file($file_name,
-                                                  $include_directories);
+  my ($file, $use_inc_dir) = Texinfo::Common::locate_include_file($file_name,
+                                                        $include_directories);
 
   my $verbatiminclude;
 

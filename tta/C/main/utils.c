@@ -2167,17 +2167,19 @@ splitdir (char *directories_str)
 /* try to locate a file called FILENAME, looking for it in the list of include
    directories. */
 char *
-locate_include_file (const char *filename, const STRING_LIST *include_dirs_list)
+locate_include_file (const char *filename, const STRING_LIST *include_dirs_list,
+                     int *use_include_directories)
 {
   char *fullpath;
   struct stat dummy;
   int status;
   size_t i;
-  int ignore_include_directories = 0;
+
+  *use_include_directories = 1;
 
   /* Checks if filename is absolute or relative to current directory. */
   if (file_name_is_absolute (filename))
-    ignore_include_directories = 1;
+    *use_include_directories = 0;
   else
     {
       char *file_name_and_directories[3];
@@ -2196,7 +2198,7 @@ locate_include_file (const char *filename, const STRING_LIST *include_dirs_list)
               if ((strlen (directory) == 2 && !memcmp (directory, "..", 2))
                   || (strlen (directory) == 1 && !memcmp (directory, ".", 1)))
                 {
-                  ignore_include_directories = 1;
+                  *use_include_directories = 1;
                   break;
                 }
             }
@@ -2204,7 +2206,7 @@ locate_include_file (const char *filename, const STRING_LIST *include_dirs_list)
         }
     }
 
-  if (ignore_include_directories)
+  if (! *use_include_directories)
     {
       status = stat (filename, &dummy);
       if (status == 0)
@@ -2212,6 +2214,7 @@ locate_include_file (const char *filename, const STRING_LIST *include_dirs_list)
     }
   else if (!include_dirs_list)
     {
+      *use_include_directories = 0;
       return 0;
     }
   else
@@ -2225,6 +2228,7 @@ locate_include_file (const char *filename, const STRING_LIST *include_dirs_list)
           free (fullpath);
         }
     }
+  *use_include_directories = 0;
   return 0;
 }
 

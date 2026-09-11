@@ -252,7 +252,8 @@ void free_indices_info (INDEX_LIST *indices_info);
 void add_include_directory (const char *filename,
                             STRING_LIST *include_dirs_list);
 char *locate_include_file (const char *filename,
-                           const STRING_LIST *include_dirs_list);
+                           const STRING_LIST *include_dirs_list,
+                           int *use_include_directories);
 char *locate_file_in_dirs (const char *filename,
                      const STRING_LIST *directories,
                      STRING_LIST *all_files,

@@ -1565,7 +1565,8 @@ sub txt_image_text($$$) {
   my ($text_file_name, $file_name_encoding)
     = $self->encoded_input_file_name($basefile.'.txt');
 
-  my $txt_file = Texinfo::Common::locate_include_file($text_file_name,
+  my ($txt_file, $use_inc_dir)
+     = Texinfo::Common::locate_include_file($text_file_name,
                                   $self->get_conf('INCLUDE_DIRECTORIES'));
   if (!defined($txt_file)) {
     return undef, undef;

@@ -2622,7 +2622,7 @@ sub _prepare_css($) {
       $css_file_fh = \*STDIN;
       $css_file_path = '-';
     } else {
-      $css_file_path = Texinfo::Common::locate_include_file($css_file,
+      ($css_file_path, undef) = Texinfo::Common::locate_include_file($css_file,
                                   $self->get_conf('INCLUDE_DIRECTORIES'));
       unless (defined($css_file_path)) {
         my $css_input_file_name;

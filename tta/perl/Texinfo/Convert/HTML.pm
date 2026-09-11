@@ -380,7 +380,7 @@ sub html_image_file_location_name($$$$$) {
   foreach my $tried_extension (@extensions) {
     my ($file_name, $file_name_encoding)
       = $self->encoded_input_file_name($image_basefile.$tried_extension);
-    my $located_image_path
+    my ($located_image_path, $use_inc_dir)
           = Texinfo::Common::locate_include_file($file_name,
                                   $self->get_conf('INCLUDE_DIRECTORIES'));
     if (defined($located_image_path) and $located_image_path ne '') {

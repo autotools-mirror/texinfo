@@ -384,7 +384,7 @@ Manual testing:
   debugging is only enabled for DEBUG > 1, as the caching debug output
   is different for XS and pure Perl (in general, more hit of the cache
   with pure Perl, as a cache in both Perl and C data must be built with XS).
-  The check should be done with TEXINFO_XS unset or set to omit.
+  The check should be done with TEXINFO_XS both unset and set to omit.
   Output with debugging level set to 2, grep the messages and check visually
   that cache is hit once built with the following commands (in tta/perl):
    cache common for all the converters for translated strings:

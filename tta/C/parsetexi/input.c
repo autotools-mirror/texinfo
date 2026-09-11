@@ -512,8 +512,9 @@ top_file_index (void)
 char *
 parser_locate_include_file (const char *filename)
 {
+  int use_inc_dir;
   return locate_include_file (filename,
-                              &parser_include_directories);
+                              &parser_include_directories, &use_inc_dir);
 }
 
 /* Try to open a file path INPUT_FILE_PATH */

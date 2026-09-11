@@ -1387,12 +1387,12 @@ sub encode_file_name($$) {
 sub locate_include_file($;$) {
   my ($input_file_path, $include_directories) = @_;
 
-  my $ignore_include_directories = 0;
+  my $use_include_directories = 1;
 
   # If the path is absolute or begins with . or .., do not search in
   # include directories.  This is consistent with Kpathsea for Texinfo TeX.
   if (File::Spec->file_name_is_absolute($input_file_path)) {
-    $ignore_include_directories = 1;
+    $use_include_directories = 0;
   } else {
     my ($volume, $directories, $filename)
       = File::Spec->splitpath($input_file_path);
@@ -1400,7 +1400,7 @@ sub locate_include_file($;$) {
 
     foreach my $dir (@directories) {
       if ($dir eq File::Spec->updir() or $dir eq File::Spec->curdir()) {
-        $ignore_include_directories = 1;
+        $use_include_directories = 0;
         last;
       } elsif ($dir ne '') {
         last;
@@ -1408,23 +1408,23 @@ sub locate_include_file($;$) {
     }
   }
 
-  if ($ignore_include_directories) {
+  if (not $use_include_directories) {
     if (-e $input_file_path and -r $input_file_path) {
-      return $input_file_path;
+      return ($input_file_path, $use_include_directories);
     }
   } else {
     if (!$include_directories) {
       # no directory list and not an absolute path, never succeed
-      return undef;
+      return (undef, 0);
     }
     foreach my $include_dir (@$include_directories) {
       my $possible_file = "$include_dir/$input_file_path";
       if (-e $possible_file and -r $possible_file) {
-        return $possible_file;
+        return ($possible_file, $use_include_directories);
       }
     }
   }
-  return undef;
+  return (undef, 0);
 }
 
 # ALTIMP C/main/utils.c
@@ -2545,15 +2545,18 @@ Return true if the I<$tree> has content that could be formatted.
 I<$do_not_ignore_index_entries> is optional.  If set, index entries
 are considered to be formatted.
 
-=item $file = locate_include_file($customization_information, $file_path)
+=item ($file, $use_inc_dir) = locate_include_file($file_path, \@include_directories)
 X<C<locate_include_file>>
 
-Locate I<$file_path>.  If I<$file_path> is an absolute path or has C<.>
-or C<..> in the path directories it is checked that the path exists and is a
-file.  Otherwise, the file name in I<$file_path> is located in include
-directories also used to find texinfo files included in Texinfo documents.
-I<$file_path> should be a binary string.  C<undef> is returned if the file was
-not found, otherwise the file found is returned as a binary string.
+Locate I<$file_path>.  Returns the file path found in I<$file> and set
+I<$use_inc_dir> to indicate if the include directories were used.  If
+I<$file_path> is an absolute path or has C<.> or C<..> in the path directories
+it is checked that the path exists and is a file.  In that case I<$use_inc_dir>
+is set to 0.  Otherwise, the file name in I<$file_path> is located in the
+include directories passed in I<\@include_directories>.  In that case
+I<$use_inc_dir> is set to 1.  I<$file_path> should be a binary string.
+C<undef> is returned if the file was not found, otherwise the file found is
+returned as a binary string.
 
 =item ($index_entry, $index_info) = lookup_index_entry($index_entry_info, $indices_information)
 

@@ -291,16 +291,19 @@ Return true if the @emph{$tree} has content that could be formatted.
 @emph{$do_not_ignore_index_entries} is optional.  If set, index entries
 are considered to be formatted.
 
-@item $file = locate_include_file($customization_information, $file_path)
-@anchor{Texinfo@asis{::}Common $file = locate_include_file($customization_information@comma{} $file_path)}
+@item ($file, $use_inc_dir) = locate_include_file($file_path, \@@include_directories)
+@anchor{Texinfo@asis{::}Common ($file@comma{} $use_inc_dir) = locate_include_file($file_path@comma{} \@@include_directories)}
 @cindex @code{locate_include_file}
 
-Locate @emph{$file_path}.  If @emph{$file_path} is an absolute path or has @code{.}
-or @code{..} in the path directories it is checked that the path exists and is a
-file.  Otherwise, the file name in @emph{$file_path} is located in include
-directories also used to find texinfo files included in Texinfo documents.
-@emph{$file_path} should be a binary string.  @code{undef} is returned if the file was
-not found, otherwise the file found is returned as a binary string.
+Locate @emph{$file_path}.  Returns the file path found in @emph{$file} and set
+@emph{$use_inc_dir} to indicate if the include directories were used.  If
+@emph{$file_path} is an absolute path or has @code{.} or @code{..} in the path directories
+it is checked that the path exists and is a file.  In that case @emph{$use_inc_dir}
+is set to 0.  Otherwise, the file name in @emph{$file_path} is located in the
+include directories passed in @emph{\@@include_directories}.  In that case
+@emph{$use_inc_dir} is set to 1.  @emph{$file_path} should be a binary string.
+@code{undef} is returned if the file was not found, otherwise the file found is
+returned as a binary string.
 
 @item ($index_entry, $index_info) = lookup_index_entry($index_entry_info, $indices_information)
 @anchor{Texinfo@asis{::}Common ($index_entry@comma{} $index_info) = lookup_index_entry($index_entry_info@comma{} $indices_information)}

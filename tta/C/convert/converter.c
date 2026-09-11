@@ -1605,6 +1605,7 @@ converter_txt_image_text (CONVERTER *self, const ELEMENT *element,
   char *txt_file;
   char *image_text_file;
   char *file_name;
+  int use_inc_dir;
 
   xasprintf (&image_text_file, "%s.txt", basefile);
 
@@ -1615,7 +1616,8 @@ converter_txt_image_text (CONVERTER *self, const ELEMENT *element,
   free (input_file_encoding);
 
   txt_file = locate_include_file (file_name,
-                                self->conf->INCLUDE_DIRECTORIES.o.strlist);
+                                self->conf->INCLUDE_DIRECTORIES.o.strlist,
+                                &use_inc_dir);
   free (file_name);
 
   if (txt_file)

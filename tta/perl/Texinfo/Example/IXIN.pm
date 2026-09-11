@@ -967,8 +967,9 @@ sub output_ixin($$)
         my $file_name_text = "$basefile.$extension";
         my ($file_name, $file_name_encoding)
           = $self->encoded_input_file_name($file_name_text);
-        my $file = Texinfo::Common::locate_include_file($file_name,
-                                  $self->get_conf('INCLUDE_DIRECTORIES'));
+        my ($file, $use_inc_dir)
+          = Texinfo::Common::locate_include_file($file_name,
+                             $self->get_conf('INCLUDE_DIRECTORIES'));
         if (defined($file)) {
           my $filehandle = do { local *FH };
           if (open($filehandle, $file)) {

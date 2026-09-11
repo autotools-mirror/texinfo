@@ -1567,8 +1567,10 @@ sub _convert($$;$) {
           foreach my $extension (@docbook_image_extensions) {
             my ($file_name, $file_name_encoding)
                = $self->encoded_input_file_name("$basefile.$extension");
-            if (Texinfo::Common::locate_include_file($file_name,
-                                  $self->get_conf('INCLUDE_DIRECTORIES'))) {
+            my ($file, $use_inc_dir)
+              = Texinfo::Common::locate_include_file($file_name,
+                                  $self->get_conf('INCLUDE_DIRECTORIES'));
+            if (defined($file)) {
               push @files, ["$basefile.$extension", uc($extension)];
             }
           }
