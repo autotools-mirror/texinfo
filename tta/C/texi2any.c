@@ -2493,6 +2493,11 @@ main (int argc, char *argv[], char *env[])
  #ifdef USE_LIBINTL_PERL_IN_XS
       || 1
  #endif
+  /* Perl translation function is called from C if nls is not enabled in C,
+     load embedded Perl such that the call succeeds */
+ #ifndef ENABLE_NLS
+      || 1
+ #endif
      )
     {
       load_interpreter (&loading_info);

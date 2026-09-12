@@ -1,5 +1,11 @@
 2026-09-12 Patrice Dumas  <pertusus@free.fr>
 
+	* tta/C/texi2any.c (main): load embedded Perl if ENABLE_NLS is not
+	set, such that the Perl translation function called from C if nls is
+	not enabled in C succeeds.
+
+2026-09-12 Patrice Dumas  <pertusus@free.fr>
+
 	Copy image to destination in HTML
 
 	Discussed here and forgotten
