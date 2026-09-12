@@ -1286,6 +1286,97 @@ create_destination_directory (CONVERTER *self,
   return 1;
 }
 
+/* Set FOPEN_RBIN and ROPEN_WBIN. */
+#ifndef O_BINARY
+# ifdef _O_BINARY
+#  define O_BINARY _O_BINARY
+# else
+  #  define O_BINARY 0
+  # endif
+#endif /* O_BINARY */
+
+#if O_BINARY /* MS-Windows */
+# define FOPEN_RBIN     "rb"
+# define FOPEN_WBIN     "wb"
+#else
+# define FOPEN_RBIN     "r"
+# define FOPEN_WBIN     "w"
+#endif
+
+/* Copy FROM to TO.  FROM_FILE_NAME and TO_FILE_NAME are unencoded strings
+   used for error messages. */
+void
+copy_file_to (CONVERTER *self,
+              const char *from, const char *to,
+              const char *from_file_name, const char *to_file_name)
+{
+  FILE *src = 0, *dest = 0;
+
+  src = fopen (from, FOPEN_RBIN);
+  if (!src)
+    {
+      message_list_document_error (&self->error_messages,
+          self->conf, 0,
+          "error while opening %s for reading: %s",
+          from_file_name, strerror (errno));
+      return;
+    }
+
+  dest = fopen (to, FOPEN_WBIN);
+  if (!dest)
+    {
+      message_list_document_error (&self->error_messages,
+          self->conf, 0,
+          "cannot open %s for writing: %s",
+          to_file_name, strerror (errno));
+      fclose (src);
+      return;
+    }
+
+#define bufsize 512
+  char buf[bufsize];
+  size_t nread, nwritten;
+  do
+    {
+      nread = fread (buf, sizeof(char), sizeof(buf), src);
+
+      nwritten = fwrite (buf, sizeof(char), nread, dest);
+      if (nwritten != nread)
+        {
+          message_list_document_error (&self->error_messages,
+              self->conf, 0,
+              "error writing %s: %s",
+              to_file_name, strerror (errno));
+          fclose (src);
+          fclose (dest);
+          return;
+        }
+    }
+  while (nread == bufsize);
+#undef bufsize
+
+  if (ferror (src))
+    {
+      message_list_document_error (&self->error_messages,
+          self->conf, 0,
+          "error reading %s: %s",
+          from_file_name, strerror (errno));
+      fclose (src);
+      fclose (dest);
+      return;
+    }
+
+  fclose (src);
+  if (fclose (dest) != 0)
+    {
+       message_list_document_error (&self->error_messages,
+           self->conf, 0,
+           "error closing %s: %s",
+           to_file_name, strerror (errno));
+       return;
+    }
+}
+
 
 
 static const enum command_id conf_for_documentlanguage[]

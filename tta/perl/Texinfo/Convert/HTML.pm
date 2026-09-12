@@ -367,10 +367,9 @@ sub html_image_file_location_name($$$$$) {
 
   my @extensions = @image_files_extensions;
 
-  my $image_file;
-  my $image_extension;
+  my ($image_file, $image_extension, $used_inc_dir, $image_path_encoding);
   # this variable is bytes encoded in the filesystem encoding
-  my ($image_path, $image_path_encoding);
+  my $image_path;
   my $extension;
   # NOTE should be consistent with $image_basefile formatting
   if (defined($args->[4]) and defined($args->[4]->{'filenametext'})) {
@@ -393,6 +392,7 @@ sub html_image_file_location_name($$$$$) {
       # codepoints too.
       $image_file = $image_basefile.$tried_extension;
       $image_extension = $tried_extension;
+      $used_inc_dir = $use_inc_dir;
       last;
     }
   }
@@ -406,7 +406,7 @@ sub html_image_file_location_name($$$$$) {
     }
   }
   return ($image_file, $image_extension, $image_path,
-          $image_path_encoding);
+          $image_path_encoding, $used_inc_dir);
 }
 
 # flags used to specify the conversion contexts.  Use flags to avoid
@@ -2336,7 +2336,8 @@ sub _convert_image_command($$$$) {
     $basefile_string = $args->[0]->{'monospacestring'}
         if (defined($args->[0]->{'monospacestring'}));
     return $basefile_string if (in_string($self));
-    my ($image_file, $image_extension, $image_path)
+    my ($image_file, $image_extension, $image_path, $image_path_encoding,
+        $used_inc_dir)
       = $self->html_image_file_location_name($cmdname, $command,
                                              $image_basefile, $args);
     if (not defined($image_path)) {
@@ -2355,6 +2356,54 @@ sub _convert_image_command($$$$) {
     }
     if (defined($self->get_conf('IMAGE_LINK_PREFIX'))) {
       $image_file = $self->get_conf('IMAGE_LINK_PREFIX') . $image_file;
+    } elsif (defined($image_path) and $used_inc_dir
+             and $self->get_conf('COPY_IMAGES')) {
+      # copy image file if it does not already exist
+      my ($volume, $directories, $image_basefile_name)
+        = File::Spec->splitpath($image_file);
+      my $destination_directory = '';
+      if (exists($self->{'converter_info'}->{'destination_directory'})) {
+        $destination_directory
+          = $self->{'converter_info'}->{'destination_directory'};
+      }
+      my $image_destination_directory = '';
+      if ($destination_directory ne '') {
+        $image_destination_directory .= $destination_directory . '/';
+      }
+      if (defined($directories) and $directories ne '') {
+        $image_destination_directory .= $directories . '/';
+      }
+      if ($image_destination_directory ne '') {
+        my ($encoded_destination_directory, $dir_encoding)
+          = $self->encoded_output_file_name($image_destination_directory);
+
+        my $succeeded
+          = $self->create_destination_directory($encoded_destination_directory,
+                                                $image_destination_directory);
+        if (!$succeeded) {
+          $image_basefile_name = undef;
+        }
+      }
+      if (defined($image_basefile_name)) {
+        my $image_destination_path_name
+          = $image_destination_directory . $image_basefile_name;
+        my ($encoded_image_dest_path_name, $image_dest_path_encoding)
+            = $self->encoded_output_file_name($image_destination_path_name);
+        if (! -e $encoded_image_dest_path_name) {
+          my $copy_succeeded = copy($image_path, $encoded_image_dest_path_name);
+          if (not $copy_succeeded) {
+            my $image_path_text;
+            if (defined($image_path_encoding)) {
+              $image_path_text = decode($image_path_encoding, $image_path);
+            } else {
+              $image_path_text = $image_path;
+            }
+            $self->converter_document_error(sprintf(__(
+                   "could not copy `%s' to `%s': %s"),
+                      $image_path_text, $image_destination_path_name, $!));
+          }
+        }
+      }
     }
     my $alt_string;
     if (defined($args->[3]) and defined($args->[3]->{'string'})

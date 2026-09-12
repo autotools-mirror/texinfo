@@ -180,14 +180,16 @@ TREE_TRANSFORMATIONS         program_customization undef     char
 # up node of Top node default value
 TOP_NODE_UP                        converter_customization (dir)   char
 BASEFILENAME_LENGTH                converter_customization 255-10  integer
+CASE_INSENSITIVE_FILENAMES         converter_customization 0       integer
+# currently only used in HTML
+COPY_IMAGES                        converter_customization 0       integer
+DEBUG                              converter_customization 0       integer
 DOC_ENCODING_FOR_INPUT_FILE_NAME   converter_customization 1       integer
 DOC_ENCODING_FOR_OUTPUT_FILE_NAME  converter_customization 0       integer
 # only used in HTML
-IMAGE_LINK_PREFIX                  converter_customization undef   char
-CASE_INSENSITIVE_FILENAMES         converter_customization 0       integer
-DEBUG                              converter_customization 0       integer
-# only used in HTML
 HANDLER_FATAL_ERROR_LEVEL          converter_customization 100     integer
+# only used in HTML
+IMAGE_LINK_PREFIX                  converter_customization undef   char
 TEST                               converter_customization 0       integer
 # for textcontent format
 TEXTCONTENT_COMMENT                converter_customization undef   integer

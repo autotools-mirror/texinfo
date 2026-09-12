@@ -157,6 +157,9 @@ void determine_files_and_directory (CONVERTER *self, const char *output_format,
 int create_destination_directory (CONVERTER *self,
                                   const char *destination_directory_path,
                                   const char *destination_directory_name);
+void copy_file_to (CONVERTER *self,
+                   const char *from, const char *to,
+                   const char *from_file_name, const char *to_file_name);
 
 const char *current_bcp47_locale (CONVERTER *self);
 void set_converter_preamble_language_commands (CONVERTER *self);

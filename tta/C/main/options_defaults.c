@@ -87,12 +87,13 @@ set_converter_customization_options_defaults (OPTIONS *options)
 {
   option_set_conf (&options->TOP_NODE_UP, -2, "(dir)");
   option_set_conf (&options->BASEFILENAME_LENGTH, 255-10, 0);
+  option_set_conf (&options->CASE_INSENSITIVE_FILENAMES, 0, 0);
+  option_set_conf (&options->COPY_IMAGES, 0, 0);
+  option_set_conf (&options->DEBUG, 0, 0);
   option_set_conf (&options->DOC_ENCODING_FOR_INPUT_FILE_NAME, 1, 0);
   option_set_conf (&options->DOC_ENCODING_FOR_OUTPUT_FILE_NAME, 0, 0);
-  option_set_conf (&options->IMAGE_LINK_PREFIX, -2, 0);
-  option_set_conf (&options->CASE_INSENSITIVE_FILENAMES, 0, 0);
-  option_set_conf (&options->DEBUG, 0, 0);
   option_set_conf (&options->HANDLER_FATAL_ERROR_LEVEL, 100, 0);
+  option_set_conf (&options->IMAGE_LINK_PREFIX, -2, 0);
   option_set_conf (&options->TEST, 0, 0);
   option_set_conf (&options->TEXTCONTENT_COMMENT, -1, 0);
   option_set_conf (&options->TEXINFO_DTD_VERSION, -2, "7.3");
@@ -231,12 +232,13 @@ add_converter_customization_options_defaults (OPTIONS_LIST *options_list)
 {
   add_option_value (options_list, "TOP_NODE_UP", -2, "(dir)");
   add_option_value (options_list, "BASEFILENAME_LENGTH", 255-10, 0);
+  add_option_value (options_list, "CASE_INSENSITIVE_FILENAMES", 0, 0);
+  add_option_value (options_list, "COPY_IMAGES", 0, 0);
+  add_option_value (options_list, "DEBUG", 0, 0);
   add_option_value (options_list, "DOC_ENCODING_FOR_INPUT_FILE_NAME", 1, 0);
   add_option_value (options_list, "DOC_ENCODING_FOR_OUTPUT_FILE_NAME", 0, 0);
-  add_option_value (options_list, "IMAGE_LINK_PREFIX", -2, 0);
-  add_option_value (options_list, "CASE_INSENSITIVE_FILENAMES", 0, 0);
-  add_option_value (options_list, "DEBUG", 0, 0);
   add_option_value (options_list, "HANDLER_FATAL_ERROR_LEVEL", 100, 0);
+  add_option_value (options_list, "IMAGE_LINK_PREFIX", -2, 0);
   add_option_value (options_list, "TEST", 0, 0);
   add_option_value (options_list, "TEXTCONTENT_COMMENT", -1, 0);
   add_option_value (options_list, "TEXINFO_DTD_VERSION", -2, "7.3");

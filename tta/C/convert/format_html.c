@@ -21,6 +21,7 @@
 /* for uint8_t, uintptr_t */
 #include <stdint.h>
 #include <ctype.h>
+#include <sys/stat.h>
 #include <unitypes.h>
 #include <unistr.h>
 #include <unictype.h>
@@ -6650,16 +6651,14 @@ static const char *image_files_extensions[] = {
 /* return, IMAGE_PATH and IMAGE_PATH_ENCODING to be freed by caller */
 static char *
 find_image_extension_file (CONVERTER *self, const ELEMENT *element,
-                                  const char *image_basefile,
-                                  const char *extension,
-                                  char **image_path,
-                                  char **image_path_encoding)
+                     const char *image_basefile, const char *extension,
+                     char **image_path, char **image_path_encoding,
+                     int *use_inc_dir)
 {
   char *image_file;
   char *input_file_encoding;
   char *file_name;
   char *located_image_path;
-  int use_inc_dir;
 
   xasprintf (&image_file, "%s%s", image_basefile, extension);
   file_name = converter_encoded_input_file_name (self->conf,
@@ -6669,7 +6668,7 @@ find_image_extension_file (CONVERTER *self, const ELEMENT *element,
 
   located_image_path = locate_include_file (file_name,
                                self->conf->INCLUDE_DIRECTORIES.o.strlist,
-                               &use_inc_dir);
+                               use_inc_dir);
   free (file_name);
 
   if (located_image_path)
@@ -6689,6 +6688,7 @@ typedef struct IMAGE_FILE_LOCATION_INFO {
     char *image_extension;
     char *image_path;
     char *image_path_encoding;
+    int use_include_directory;
 } IMAGE_FILE_LOCATION_INFO;
 
 void
@@ -6719,7 +6719,8 @@ html_image_file_location_name (CONVERTER *self, const enum command_id cmd,
       image_file
         = find_image_extension_file (self, element, image_basefile,
                                      extension, &result->image_path,
-                                     &result->image_path_encoding);
+                                     &result->image_path_encoding,
+                                     &result->use_include_directory);
       if (!image_file)
         {
           char *dot_ext;
@@ -6727,7 +6728,8 @@ html_image_file_location_name (CONVERTER *self, const enum command_id cmd,
           image_file
             = find_image_extension_file (self, element, image_basefile,
                                          dot_ext, &result->image_path,
-                                         &result->image_path_encoding);
+                                         &result->image_path_encoding,
+                                         &result->use_include_directory);
           if (image_file)
             result->image_extension = dot_ext;
           else
@@ -6745,7 +6747,8 @@ html_image_file_location_name (CONVERTER *self, const enum command_id cmd,
           image_file
             = find_image_extension_file (self, element, image_basefile,
                         image_files_extensions[i], &result->image_path,
-                              &result->image_path_encoding);
+                              &result->image_path_encoding,
+                              &result->use_include_directory);
           if (image_file)
             {
               result->image_extension = strdup (image_files_extensions[i]);
@@ -6831,8 +6834,6 @@ html_convert_image_command (CONVERTER *self, const enum command_id cmd,
                      image_basefile, image_file);
             }
         }
-      free_image_file_location_info (image_path_info);
-      free (image_path_info);
 
       if (self->conf->IMAGE_LINK_PREFIX.o.string)
         {
@@ -6842,6 +6843,98 @@ html_convert_image_command (CONVERTER *self, const enum command_id cmd,
           free (image_file);
           image_file = tmp;
         }
+      else if (image_path_info->image_path
+               && image_path_info->use_include_directory
+               && self->conf->COPY_IMAGES.o.integer)
+        {
+          HTML_CONVERTER_STATE *self_html = self->html_converter;
+          char *file_name_and_directories[3];
+          char *image_basefile_name;
+          /* first used as directory name, then file name added */
+          TEXT image_destination_path_name;
+          text_init (&image_destination_path_name);
+          text_append (&image_destination_path_name, "");
+
+          splitpath (image_file, file_name_and_directories);
+          free (file_name_and_directories[0]);
+
+          image_basefile_name = file_name_and_directories[2];
+
+          if (self_html->destination_directory)
+            {
+              text_append (&image_destination_path_name,
+                           self_html->destination_directory);
+              text_append_n (&image_destination_path_name, "/", 1);
+            }
+          if (file_name_and_directories[1])
+            {
+              text_append (&image_destination_path_name,
+                           file_name_and_directories[1]);
+              free (file_name_and_directories[1]);
+              text_append_n (&image_destination_path_name, "/", 1);
+            }
+
+          if (image_destination_path_name.end > 0)
+            {
+              char *encoded_destination_directory;
+              char *dir_encoding;
+              int succeeded;
+
+              /* cast to remove const since the argument cannot
+                 be const even though the string is not modified */
+              encoded_destination_directory
+                = converter_encoded_output_file_name (self->conf,
+                                            &self->document->global_info,
+                                        image_destination_path_name.text,
+                                                       &dir_encoding, 0);
+              free (dir_encoding);
+
+              succeeded = create_destination_directory (self,
+                                     encoded_destination_directory,
+                                     image_destination_path_name.text);
+
+              free (encoded_destination_directory);
+
+              if (!succeeded)
+                {
+                  free (image_basefile_name);
+                  image_basefile_name = 0;
+                }
+            }
+
+          if (image_basefile_name)
+            {
+              char *encoded_image_dest_path_name;
+              char *image_dest_path_encoding;
+              int status;
+              struct stat dummy;
+
+              text_append (&image_destination_path_name, image_basefile_name);
+              encoded_image_dest_path_name
+                = converter_encoded_output_file_name (self->conf,
+                                            &self->document->global_info,
+                                        image_destination_path_name.text,
+                                          &image_dest_path_encoding, 0);
+
+              status = stat (encoded_image_dest_path_name, &dummy);
+
+              if (status != 0)
+                {
+                  int status;
+                  char *image_path_text
+                    = decode_string (image_path_info->image_path_encoding,
+                                     image_path_info->image_path, &status, 0);
+                  copy_file_to (self, image_path_info->image_path,
+                                encoded_image_dest_path_name,
+                                image_path_text,
+                                image_destination_path_name.text);
+
+                  free (image_path_text);
+                }
+            }
+        }
+      free_image_file_location_info (image_path_info);
+      free (image_path_info);
 
       classes = new_string_list ();
       add_string (classes, builtin_command_name (cmd));

@@ -1,3 +1,31 @@
+2026-09-12 Patrice Dumas  <pertusus@free.fr>
+
+	Copy image to destination in HTML
+
+	Discussed here and forgotten
+	https://lists.gnu.org/archive/html/help-texinfo/2020-11/msg00146.html
+	and retrieved here
+	https://lists.gnu.org/archive/html/help-texinfo/2026-08/msg00001.html
+
+	* tta/C/convert/convert_html.c, tta/C/convert/converter.c
+	(copy_file_to): move to converter.c.
+
+	* tta/data/options_data.txt (COPY_IMAGES): add.  Reorder
+	alphabetically.
+
+	* tta/C/convert/format_html.c (find_image_extension_file)
+	(IMAGE_FILE_LOCATION_INFO, html_image_file_location_name),
+	tta/perl/Texinfo/Convert/HTML.pm (html_image_file_location_name): pass
+	use_inc_dir to find_image_extension_file and set a field in
+	IMAGE_FILE_LOCATION_INFO in html_image_file_location_name, or return
+	in Perl.
+
+	* tta/C/convert/format_html.c (html_convert_image_command),
+	tta/perl/Texinfo/Convert/HTML.pm (_convert_image_command): copy image
+	to destination if include directory are used, ie if there is no
+	leading ., .. in the image path and the image path is not absolute and
+	if COPY_IMAGES is set.
+
 2026-09-11 Patrice Dumas  <pertusus@free.fr>
 
 	* tta/C/main/utils.c (locate_include_file), tta/perl/Texinfo/Common.pm
