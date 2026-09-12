@@ -1,5 +1,13 @@
 2026-09-12 Patrice Dumas  <pertusus@free.fr>
 
+	* tta/configure.ac (t2a-tests): remove use Data::Compare; use
+	Test::Deep from configure check, as these modules are no longer
+	needed for t2a-tests.
+
+	* tta/README, tta/swig/README: update.
+
+2026-09-12 Patrice Dumas  <pertusus@free.fr>
+
 	* tta/perl/t/z_misc/test_sort.t (by letter index entries): use
 	text for the reference, and generate text based on the sorted index
 	entries by letter.

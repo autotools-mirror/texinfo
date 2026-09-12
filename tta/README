@@ -75,20 +75,13 @@ need to set the srcdir environment variable, and/or set the t2a_srcdir
 environment variables to the in-source tta/ directory.
 
 
-Debugging output of the Texinfo::Convert::Paragraph Perl module is commented
-out because there is no equivalent in C code.  To enable, uncomment code
-in tta/perl/Texinfo/Convert/Plaintext.pm new_formatter.
-
-
 Running tests:
 
 Tests in perl/t/ test the Perl modules used by the texi2any command.
 To run those tests, you also need:
-  Test::More, Data::Compare, Test::Deep
+  Test::More
 On Debian-based distros, Test::More is part of perl-modules and thus
-installed with perl, the packages corresponding to the other modules
-are named:
-  libdata-compare-perl libtest-deep-perl
+installed with perl.
 
 Devel::Refcount is needed for some checks.  It is detected at configure
 time.  If checks using Devel::Refcount fail, Devel::FindRef, detected at

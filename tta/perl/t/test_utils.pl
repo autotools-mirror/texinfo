@@ -48,8 +48,6 @@ use Test::More;
 use I18N::Langinfo qw(langinfo CODESET);
 use Encode ();
 #use Data::Dumper ();
-#use Data::Compare ();
-#use Test::Deep ();
 use Storable qw(dclone); # standard in 5.007003
 use Getopt::Long qw(GetOptions);
 use Locale::Messages ();

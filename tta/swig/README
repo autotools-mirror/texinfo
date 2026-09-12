@@ -53,6 +53,13 @@ $ export PYTHONPATH=.libs
 For the Perl interface, finding the Perl module and extension from the build
 directory is built-in the scripts and test files.
 
+To run the tests in perl/t/, you need:
+  Test::More, Data::Compare, Test::Deep
+On Debian-based distros, Test::More is part of perl-modules and thus
+installed with perl, the packages corresponding to the other modules
+are named:
+  libdata-compare-perl libtest-deep-perl
+
 In addition to the build and test system, this distribution includes the
 following files:
     README                    This file.

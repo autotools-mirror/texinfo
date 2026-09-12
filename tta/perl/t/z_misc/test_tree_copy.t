@@ -7,9 +7,8 @@ use Test::More;
 
 BEGIN { plan tests => 7; }
 
-use Data::Dumper;
+#use Data::Dumper;
 use File::Spec;
-#use Text::Diff;
 
 use Texinfo::TreeElement;
 

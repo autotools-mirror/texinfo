@@ -15,8 +15,6 @@ use Texinfo::Parser;
 use Texinfo::Document;
 use Texinfo::Indices;
 use Texinfo::Document::Indices;
-# for cmp_deeply
-#use Test::Deep;
 # package Texinfo::MainConfig is in Texinfo::Config
 use Texinfo::Config;
 
@@ -166,7 +164,6 @@ foreach my $entry (@{$document_sorted_index_entries->{'cp'}}) {
   push @entries, $index_entries_sort_strings->{$entry};
 }
 
-#cmp_deeply(\@entries, \@entries_ref, 'subentry document sorted');
 is_diff(join("\n", @entries), join("\n", @entries_ref), 'subentry document sorted');
 
 @entries = ();
@@ -176,6 +173,5 @@ foreach my $entry (@{$sorted_index_entries->{'cp'}}) {
 
 #print STDERR join(', ', map {"'$_'"} @entries)."\n";
 
-#cmp_deeply(\@entries, \@entries_ref, 'subentry sorted');
 is_diff(join("\n", @entries), join("\n", @entries_ref), 'subentry sorted');
 
