@@ -1,5 +1,12 @@
 2026-09-12 Patrice Dumas  <pertusus@free.fr>
 
+	* tta/perl/t/z_misc/test_sort.t: use is_diff on strings instead of
+	Test::Deep, as, with Text::Diff there is more context for test results
+	comparison.  Also it removes a dependency.  Simplify
+	@letter_entries_ref by using arrays instead of hashes.
+
+2026-09-12 Patrice Dumas  <pertusus@free.fr>
+
 	* tta/C/texi2any.c (main): load embedded Perl if ENABLE_NLS is not
 	set, such that the Perl translation function called from C if nls is
 	not enabled in C succeeds.
