@@ -407,8 +407,10 @@ undef, {'test_file' => 'char_us_ascii_latin1_in_refs.texi'},
 # to test without transliteration too
 {'TRANSLITERATE_FILE_NAMES' => 0},
 ],
+# On NetBSD it seems that there is no transliteration at all
 ['char_latin2_latin2_in_refs',
-undef, {'test_file' => 'char_latin2_latin2_in_refs.texi'},
+undef, {'test_file' => 'char_latin2_latin2_in_refs.texi',
+        'skip' => $XS_convert ? 'Non reproducible transliteration' : undef,},
 # to test transliteration too
 {'TRANSLITERATE_FILE_NAMES' => 1},
 ],
