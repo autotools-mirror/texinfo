@@ -93,52 +93,32 @@ is_diff(join("\n", @entries), join("\n", @entries_ref), 'sorted index entries');
 my $sorted_index_entries_by_letter
  = Texinfo::Indices::sort_indices_by_letter($indices_sort_strings);
 
-my @letter_entries_ref = (
-   ['!', [ '!' ]],
-   ['"' , [ '"' ]],
-   ['A', [ 'aaaaaaaaaaaa' ]],
-# result with accented letters separate
-#   ['E', [ 'e', 'E']],
-#   ['Ẽ', [ 'ẽ' ]],
-   ['E', [ 'e', 'E', 'ẽ' ]],
-   ['Ł', [ 'ł' ]],
-);
+my $letter_entries_ref = '!:
+ !
+":
+ "
+A:
+ aaaaaaaaaaaa
+E:
+ e
+ E
+ ẽ
+Ł:
+ ł
+';
 
 my @letter_entries;
+my $letter_entries_text = '';
 foreach my $letter (@{$sorted_index_entries_by_letter->{'cp'}}) {
-  my $letter_entry = [$letter->{'letter'}, []];
+  $letter_entries_text .= "$letter->{'letter'}:\n";
   foreach my $entry (@{$letter->{'entries'}}) {
-    push @{$letter_entry->[1]}, $index_entries_sort_strings->{$entry};
+    $letter_entries_text .= " $index_entries_sort_strings->{$entry}\n";
   }
-  push @letter_entries, $letter_entry;
 }
 
-#{
-#local $Data::Dumper::Purity = 1;
-#local $Data::Dumper::Maxdepth = 2;
-#local $Data::Dumper::Indent = 1;
-#print STDERR "".Data::Dumper->Dump([$sorted_index_entries_by_letter])."\n";
-#foreach my $letter (@{$sorted_index_entries_by_letter->{'cp'}}) {
-#  print STDERR "AAA $letter->{'letter'} ".join('|',keys(%$letter))."\n";
-#}
-# print STDERR "".Data::Dumper->Dump([\@letter_entries])."\n";
-#}
+#print STDERR "$letter_entries_text\n";
 
-sub _letter_entries_text($) {
-  my $letters_entries = shift;
-
-  my $result = '';
-  foreach my $letter_entry (@$letters_entries) {
-    $result .= "$letter_entry->[0]:\n";
-    $result .= join("\n", map {' '.$_} @{$letter_entry->[1]});
-    $result .= "\n";
-  }
-  return $result;
-}
-
-#cmp_deeply (\@letter_entries, \@letter_entries_ref, 'by letter index entries');
-is_diff(_letter_entries_text(\@letter_entries),
-        _letter_entries_text(\@letter_entries_ref), 'by letter index entries');
+is_diff($letter_entries_text, $letter_entries_ref, 'by letter index entries');
 
 $parser = Texinfo::Parser::parser();
 $document = $parser->parse_text('@node Top
