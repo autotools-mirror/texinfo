@@ -1,5 +1,15 @@
 2026-09-26  Gavin Smith <gavinsmith0123@gmail.com>
 
+	* doc/texinfo.tex (\ignorenode): Stop ignoring node at top-level
+	section commands: @chapter, @centerchap, @unnumbered, or
+	@appendix.  This allows a lone @chapter to appear immediately
+	after the Top node without being elided.
+	(\chapter, \appendix\, \unnumbered, \centerchap): Remove \outer
+	from definition as this makes it hard to manipulate these sequences
+	using TeX macros.
+
+2026-09-26  Gavin Smith <gavinsmith0123@gmail.com>
+
 	* doc/texinfo.tex (\checkshadowactive): expand XR definition in
 	the correct context to avoid an error if control sequences are used
 	in a section title.

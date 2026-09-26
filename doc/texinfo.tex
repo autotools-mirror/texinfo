@@ -6430,7 +6430,7 @@ might help (with 'rm \jobname.?? \jobname.??s')%
 % (e.g., figures), q.v.  By default (before any chapter), that is empty.
 \let\chaplevelprefix = \empty
 %
-\outer\parseargdef\chapter{\numhead0{#1}} % normally numhead0 calls chapterzzz
+\parseargdef\chapter{\numhead0{#1}} % normally numhead0 calls chapterzzz
 \def\chapterzzz#1{%
   % section resetting is \global in case the chapter is in a group, such
   % as an @include file.
@@ -6454,7 +6454,7 @@ might help (with 'rm \jobname.?? \jobname.??s')%
   \global\let\subsubsection = \numberedsubsubsec
 }
 
-\outer\parseargdef\appendix{\apphead0{#1}} % normally calls appendixzzz
+\parseargdef\appendix{\apphead0{#1}} % normally calls appendixzzz
 %
 \def\appendixzzz#1{%
   \global\secno=0 \global\subsecno=0 \global\subsubsecno=0
@@ -6474,7 +6474,7 @@ might help (with 'rm \jobname.?? \jobname.??s')%
 }
 
 % normally unnmhead0 calls unnumberedzzz:
-\outer\parseargdef\unnumbered{\unnmhead0{#1}}
+\parseargdef\unnumbered{\unnmhead0{#1}}
 \def\unnumberedzzz#1{%
   \global\advance\unnumberedno by 1
   %
@@ -6504,7 +6504,7 @@ might help (with 'rm \jobname.?? \jobname.??s')%
 }
 
 % @centerchap is like @unnumbered, but the heading is centered.
-\outer\parseargdef\centerchap{%
+\parseargdef\centerchap{%
   \let\centerparametersmaybe = \centerparameters
   \unnmhead0{#1}%
   \let\centerparametersmaybe = \relax
@@ -9149,12 +9149,19 @@ might help (with 'rm \jobname.?? \jobname.??s')%
 }
 \def\wordTop{Top}
 
-% Until the next @node, @part or @bye command, divert output to a box that
-% is not output.
+% Until the next @node, top-level section command, @part or @bye command,
+% divert output to a box that is not output.
 \def\ignorenode{\setbox\dummybox\vbox\bgroup
-\def\part{\egroup\part}%
-\def\node{\egroup\node}%
-\ignorenodebye
+  % redefine top-level commands to close the dummy
+  % box and restart processing.
+  \def\restartat##1{\def##1{\egroup##1}}%
+  \restartat\part
+  \restartat\node
+  \restartat\chapter
+  \restartat\centerchap
+  \restartat\unnumbered
+  \restartat\appendix
+  \ignorenodebye
 }
 
 {\let\bye\relax
