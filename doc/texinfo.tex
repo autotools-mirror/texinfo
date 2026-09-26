@@ -3,7 +3,7 @@
 % Load plain if necessary, i.e., if running under initex.
 \expandafter\ifx\csname fmtname\endcsname\relax\input plain\fi
 %
-\def\texinfoversion{2026-09-26.16}
+\def\texinfoversion{2026-09-26.17}
 %
 % Copyright 1985, 1986, 1988, 1990-2026 Free Software Foundation, Inc.
 %
@@ -9239,11 +9239,20 @@ might help (with 'rm \jobname.?? \jobname.??s')%
 % Similar to \setref, but used for targets created by sectioning commands.
 % Write information about this target using @xrshad instead of @xrdef.
 \def\setrefshadow#1#2{%
-  % For PDF, output the target with \pdfdest.  Note pdfTeX issues a warning
-  % if we output two targets with the same name.
+  % For PDF, output the target with \pdfdest.
+  % Temporarily suppress pdfTeX warning for trying to output two targets
+  % with the same name.
+  \pdfsuppresswarningdupdest1
   \pdfmkdest{\pdfshadowprefix#2}%
+  \pdfsuppresswarningdupdest0
   \dosetref{#2}{#1}{#2}{xrshad}%
 }
+
+% Primitive introduced in pdfTeX 1.40.13.  Supply dummy definition for
+% older versions or when not running with pdfTeX.
+\ifx\pdfsuppresswarningdupdest\thisisundefined
+  \def\pdfsuppresswarningdupdest#1{}%
+\fi
 
 \def\pdfshadowprefix{XXSHADOW-}
 

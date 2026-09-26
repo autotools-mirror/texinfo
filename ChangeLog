@@ -1,5 +1,10 @@
 2026-09-26  Gavin Smith <gavinsmith0123@gmail.com>
 
+	* doc/texinfo.tex (\setrefshadow): With pdfTeX, suppress warnings
+	about attempting to output multiple targets with the same name.
+
+2026-09-26  Gavin Smith <gavinsmith0123@gmail.com>
+
 	texinfo.tex: warning for ambiguous reference to shadow target
 
 	* doc/texinfo.tex (\checkshadowactive): set a value in the output
