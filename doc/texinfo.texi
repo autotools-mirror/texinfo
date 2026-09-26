@@ -15150,9 +15150,7 @@ blocks will be.
 @opindex --info
 Generate Info output.  By default, if the output file contains more
 than about 300,000 bytes, it is split into shorter subfiles of about
-that size.  The name of the output file and any subfiles is determined
-by the input file name, or by @code{@@setfilename}, if present
-(@pxref{Setting the Output File Name}).  @xref{Tag and Split Files}.
+that size.
 
 @item --init-file=@var{file}
 @opindex --init-file=@var{file}
@@ -15527,6 +15525,9 @@ extension (@samp{.html} for HTML) if the given name has no extension.
 
 You can give the @option{-o} option to change the output file name;
 see @ref{Invoking @command{texi2any}}.
+
+For split Info output, the names of the subfiles are set the same way.
+@xref{Tag and Split Files}.
 
 @cindex Length of file names
 @cindex File name collision
