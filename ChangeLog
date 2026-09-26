@@ -1,5 +1,12 @@
 2026-09-26  Gavin Smith <gavinsmith0123@gmail.com>
 
+	* doc/texinfo.texi (Invoking texi2any) <--output>:
+	State that the directory for split output HTML is not wiped
+	automatically.  Place other discussion of a directory as the
+	argument inside an @ignore block.
+
+2026-09-26  Gavin Smith <gavinsmith0123@gmail.com>
+
 	* doc/texinfo.texi (Invoking texi2any):
 	Move discussion of the effect of outputting to standard output
 	on splitting from --output to --split.

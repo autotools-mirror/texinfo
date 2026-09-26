@@ -15318,6 +15318,18 @@ a @code{@@setfilename} command found in the Texinfo source.  If neither
 @code{@@setfilename} nor this option are specified, the input file name is
 used to determine the output name.  @xref{Setting the Output File Name}.
 
+When generating HTML and output is split, @var{file} is used as the
+name for the directory into which all files are written.  For example,
+@samp{texi2any -o bar --html foo.texi} will write
+@file{bar/index.html}, among other files.  Note that if the output
+directory already exists, @command{texi2any} will not delete any
+pre-existing files in that directory, only overwriting an existing file
+if it creates an output file with the same name.  This means the output
+directory may contain stale files from previous runs of @command{texi2any}
+--- you need to delete these manually, or simply wipe the output directory
+before running @command{texi2any}.
+
+@ignore
 If @var{file} is a directory or ends with a @samp{/} the usual rules
 are used to determine the output file name (namely, use
 @code{@@setfilename} or the input file name) but the files are written
@@ -15325,16 +15337,12 @@ to the @var{file} directory.  For example, @samp{texi2any -o bar/
 foo.texi}, with or without @option{--no-split}, will write
 @file{bar/foo.info}, and possibly other files, under @file{bar/}.
 
-When generating HTML and output is split, @var{file} is used as the
-name for the directory into which all files are written.  For example,
-@samp{texi2any -o bar --html foo.texi} will write
-@file{bar/index.html}, among other files.
-
 When generating EPUB a container directory for the files and directories needed
 for the EPUB format is created, as well as the EPUB output file.  If @var{file}
 corresponds to a directory, the container directory is placed within @var{file}.
 The EPUB output file is never put in this directory.  If @var{file} corresponds
 to a file, it is used for the EPUB output file name.
+@end ignore
 
 @item --output-indent=@var{val}
 @opindex --outputindent
