@@ -1,5 +1,12 @@
 2026-09-26  Gavin Smith <gavinsmith0123@gmail.com>
 
+	* doc/texinfo.texi (Setting the Output File Name):
+	New node in texi2any chapter, split out from @setfilename,
+	for information specific to texi2any.
+	(Minimum): Move text to new node.
+
+2026-09-26  Gavin Smith <gavinsmith0123@gmail.com>
+
 	* doc/texinfo.texi (Minimum):
 	Correct "an universal" to "a universal".
 
