@@ -15310,14 +15310,13 @@ with hierarchically structured manuals.  You should specify
 @opindex -o @var{file}
 @c @vindex OUTFILE
 @c @vindex SUBDIR
-Specify that the output should be directed to @var{file}.  This
-overrides any file name specified in a @code{@@setfilename} command
-found in the Texinfo source.  If neither @code{@@setfilename} nor this
-option are specified, the input file name is used to determine the
-output name.  @xref{Setting the Output File Name}.
+Specify that the output should be directed to @var{file}.  If @var{file}
+is @samp{-}, output goes to standard output.
 
-If @var{file} is @samp{-}, output goes to standard output and
-@samp{--no-split} is implied.
+A value given with @option{--output} overrides any file name specified in
+a @code{@@setfilename} command found in the Texinfo source.  If neither
+@code{@@setfilename} nor this option are specified, the input file name is
+used to determine the output name.  @xref{Setting the Output File Name}.
 
 If @var{file} is a directory or ends with a @samp{/} the usual rules
 are used to determine the output file name (namely, use
@@ -15444,6 +15443,10 @@ The output is split at every node.  This is the default.
 Plain text output can be split similarly to HTML@.  This may be useful
 for extracting sections from a Texinfo document and making them
 available as separate files.
+
+For Info and HTML output, the @samp{--no-split} option is implied if
+outputting to standard output (i.e.@: if @samp{-o -} was given on the
+command line).
 
 @item --split-size=@var{num}
 @opindex --split-size=@var{num}

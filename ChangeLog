@@ -1,5 +1,11 @@
 2026-09-26  Gavin Smith <gavinsmith0123@gmail.com>
 
+	* doc/texinfo.texi (Invoking texi2any):
+	Move discussion of the effect of outputting to standard output
+	on splitting from --output to --split.
+
+2026-09-26  Gavin Smith <gavinsmith0123@gmail.com>
+
 	* doc/texinfo.texi (@setfilename): Edit.  State that the command
 	is no longer required earlier in the node.  Suggestion from Patrice.
 	(Setting the Output File Name): Fix typo and remove duplicate link.
