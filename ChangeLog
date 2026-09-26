@@ -1,5 +1,10 @@
 2026-09-26  Gavin Smith <gavinsmith0123@gmail.com>
 
+	* doc/texinfo.texi (Minimum):
+	Correct "an universal" to "a universal".
+
+2026-09-26  Gavin Smith <gavinsmith0123@gmail.com>
+
 	* doc/texinfo.texi (@setfilename):
 	Do not state that the "Texinfo processors" ignore text before
 	@setfilename, as this is not true of texinfo.tex.  Discuss the

@@ -896,7 +896,7 @@ documents, is just the one line at the beginning and the one line
 at the end.
 
 Without additional information, the input and output encodings are
-assumed to be UTF-8, an universal codeset compatible with 7-bit
+assumed to be UTF-8, a universal codeset compatible with 7-bit
 ASCII.
 
 
