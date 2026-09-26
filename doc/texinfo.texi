@@ -1082,8 +1082,11 @@ extension.  It is not advised to base the @code{@@setfilename} name
 on a entirely different name than the input file name.
 
 @cindex Ignored before @code{@@setfilename}
-When a @code{@@setfilename} line is present, the Texinfo processors
-ignore everything written before the @code{@@setfilename} line.
+When a @code{@@setfilename} line is present, @command{texi2any}
+ignores everything written before the @code{@@setfilename} line.
+(As of the time of writing, the Emacs formatting commands such as
+@code{texinfo-format-buffer} require this command to appear in the input,
+and also ignore everything written before it. @xref{texinfo-format commands}.)
 
 If there is no @code{@@setfilename} line, @command{texi2any} uses the
 input file name to determine the output name (@pxref{Minimum}).  The

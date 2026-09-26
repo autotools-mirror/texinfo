@@ -1,6 +1,13 @@
 2026-09-26  Gavin Smith <gavinsmith0123@gmail.com>
 
 	* doc/texinfo.texi (@setfilename):
+	Do not state that the "Texinfo processors" ignore text before
+	@setfilename, as this is not true of texinfo.tex.  Discuss the
+	behaviour with texi2any and texinfo-format-buffer separately.
+
+2026-09-26  Gavin Smith <gavinsmith0123@gmail.com>
+
+	* doc/texinfo.texi (@setfilename):
 	Remove incorrect statement about @setfilename being responsible
 	for ignoring the "\input texinfo" line in an input file.
 
