@@ -1,5 +1,15 @@
 2026-09-26  Gavin Smith <gavinsmith0123@gmail.com>
 
+	texinfo.tex: warning for ambiguous reference to shadow target
+
+	* doc/texinfo.tex (\checkshadowactive): set a value in the output
+	to show if there were multiple shadow targets (and no definition
+	made with @node or @anchor).
+	(\xrefX): print a warning if there are multiple shadow targets
+	for an xref.
+
+2026-09-26  Gavin Smith <gavinsmith0123@gmail.com>
+
 	* doc/texinfo.texi (Invoking texi2any) <--output>:
 	State that the directory for split output HTML is not wiped
 	automatically.  Place other discussion of a directory as the

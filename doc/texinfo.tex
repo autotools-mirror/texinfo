@@ -3,7 +3,7 @@
 % Load plain if necessary, i.e., if running under initex.
 \expandafter\ifx\csname fmtname\endcsname\relax\input plain\fi
 %
-\def\texinfoversion{2026-09-06.15}
+\def\texinfoversion{2026-09-26.16}
 %
 % Copyright 1985, 1986, 1988, 1990-2026 Free Software Foundation, Inc.
 %
@@ -9296,9 +9296,12 @@ might help (with 'rm \jobname.?? \jobname.??s')%
     \checkshadowactive{#1}\countA
     \expandafter\ifnum\countA = 1
       \startxreflink{\pdfshadowprefix#1}{}%
+    \else\expandafter\ifnum\countA = 2
+      \txiwarning{ambiguous xref to #1}%
+      \startxreflink{}{}%
     \else
       \startxreflink{#1}{}%
-    \fi
+    \fi\fi
   \else
     \startxreflink{#1}{#4}%
   \fi
@@ -9594,7 +9597,10 @@ might help (with 'rm \jobname.?? \jobname.??s')%
 }
 
 % Check if shadow definitions are active for target name #1, setting the
-% count register sequence in #2 to 1 if so.
+% count register sequence in #2 to:
+%  1 if they are active
+%  0 if they are not
+%  2 if multiple definitions were made
 \def\checkshadowactive#1#2{%
   \requireauxfile
   {%
@@ -9605,7 +9611,7 @@ might help (with 'rm \jobname.?? \jobname.??s')%
     #2=0 % no definitions made
   \else
     \ifx\tmp\empty
-      #2=0 % shadow definitions were disabled
+      #2=2 % shadow definitions were disabled
     \else
       \expandafter\let\expandafter\tmp\csname XR#1-title\endcsname
       \ifx\tmp\relax
