@@ -1,3 +1,9 @@
+2026-09-26  Gavin Smith <gavinsmith0123@gmail.com>
+
+	* doc/texinfo.texi (@setfilename):
+	Remove incorrect statement about @setfilename being responsible
+	for ignoring the "\input texinfo" line in an input file.
+
 2026-09-26 Patrice Dumas  <pertusus@free.fr>
 
 	* tta/tests/run_parser_all.sh (to_current), tta/tests/*/list-of-tests:

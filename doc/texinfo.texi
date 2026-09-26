@@ -1082,11 +1082,8 @@ extension.  It is not advised to base the @code{@@setfilename} name
 on a entirely different name than the input file name.
 
 @cindex Ignored before @code{@@setfilename}
-@cindex @samp{\input} source line ignored
 When a @code{@@setfilename} line is present, the Texinfo processors
-ignore everything written before the @code{@@setfilename} line.  This
-is why the very first line of the file (the @code{\input} line) does
-not show up in the output.
+ignore everything written before the @code{@@setfilename} line.
 
 If there is no @code{@@setfilename} line, @command{texi2any} uses the
 input file name to determine the output name (@pxref{Minimum}).  The
