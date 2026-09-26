@@ -3,7 +3,7 @@
 % Load plain if necessary, i.e., if running under initex.
 \expandafter\ifx\csname fmtname\endcsname\relax\input plain\fi
 %
-\def\texinfoversion{2026-09-26.19}
+\def\texinfoversion{2026-09-26.20}
 %
 % Copyright 1985, 1986, 1988, 1990-2026 Free Software Foundation, Inc.
 %
@@ -9612,7 +9612,10 @@ might help (with 'rm \jobname.?? \jobname.??s')%
 %  2 if multiple definitions were made
 \def\checkshadowactive#1#2{%
   \requireauxfile
-  \expandafter\let\expandafter\tmp\csname XR#1-title\endcsname
+  {%
+    \xrdefctxt
+    \expandafter\global\expandafter\let\expandafter\tmp\csname XR#1-title\endcsname
+  }%
   \ifx\tmp\relax
     % a real definition was not made
     {%

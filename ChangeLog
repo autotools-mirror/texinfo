@@ -1,5 +1,11 @@
 2026-09-26  Gavin Smith <gavinsmith0123@gmail.com>
 
+	* doc/texinfo.tex (\checkshadowactive): expand XR definition in
+	the correct context to avoid an error if control sequences are used
+	in a section title.
+
+2026-09-26  Gavin Smith <gavinsmith0123@gmail.com>
+
 	* doc/texinfo.tex (\checkshadowactive): fix conditionals
 	so that repeated shadow targets are not warned about if a
 	real target has been defined with @node or @anchor.
