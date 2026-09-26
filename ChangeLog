@@ -1,5 +1,11 @@
 2026-09-26  Gavin Smith <gavinsmith0123@gmail.com>
 
+	* doc/texinfo.tex (\checkshadowactive): fix conditionals
+	so that repeated shadow targets are not warned about if a
+	real target has been defined with @node or @anchor.
+
+2026-09-26  Gavin Smith <gavinsmith0123@gmail.com>
+
 	* doc/texinfo.tex (\setrefshadow): With pdfTeX, suppress warnings
 	about attempting to output multiple targets with the same name.
 

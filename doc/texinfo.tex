@@ -3,7 +3,7 @@
 % Load plain if necessary, i.e., if running under initex.
 \expandafter\ifx\csname fmtname\endcsname\relax\input plain\fi
 %
-\def\texinfoversion{2026-09-26.17}
+\def\texinfoversion{2026-09-26.19}
 %
 % Copyright 1985, 1986, 1988, 1990-2026 Free Software Foundation, Inc.
 %
@@ -9612,23 +9612,22 @@ might help (with 'rm \jobname.?? \jobname.??s')%
 %  2 if multiple definitions were made
 \def\checkshadowactive#1#2{%
   \requireauxfile
-  {%
-    \xrdefctxt
-    \expandafter\global\expandafter\let\expandafter\tmp\csname SXR#1-title\endcsname
-  }%
+  \expandafter\let\expandafter\tmp\csname XR#1-title\endcsname
   \ifx\tmp\relax
-    #2=0 % no definitions made
-  \else
-    \ifx\tmp\empty
+    % a real definition was not made
+    {%
+      \xrdefctxt
+      \expandafter\global\expandafter\let\expandafter\tmp\csname SXR#1-title\endcsname
+    }%
+    \ifx\tmp\relax
+      #2=0 % no definitions made
+    \else\ifx\tmp\empty
       #2=2 % shadow definitions were disabled
     \else
-      \expandafter\let\expandafter\tmp\csname XR#1-title\endcsname
-      \ifx\tmp\relax
-        #2=1 % yes, shadow definitions are active
-      \else
-        #2=0 % no, a real definition was made.
-      \fi
-    \fi
+      #2=1 % yes, shadow definitions are active
+    \fi\fi
+  \else
+    #2=0 % no, a real definition was made.
   \fi
 }%
 
