@@ -55,7 +55,6 @@ check_latex2html_and_tex4ht ()
 {
   use_latex2html=no
   use_tex4ht=no
-  l2h_flags=
   maybe_use_latex2html=no
   if echo "$remaining" | grep '[-]l2h' >/dev/null; then
     maybe_use_latex2html=yes
@@ -69,14 +68,6 @@ check_latex2html_and_tex4ht ()
       return 1
     fi
     use_latex2html=yes
-    if test z"$tmp_dir" = 'z'; then
-       tmp_dir=`mktemp -d l2h_t2h_XXXXXXXX`
-       if test z"$tmp_dir" = 'z'; then
-         echo "$0: mktemp failed" 1>&2
-         exit 1
-       fi
-    fi
-    l2h_flags="-c L2H_CLEAN=0 -c 'L2H_TMP $tmp_dir' -c L2H_FILE=$srcdir/../perl/t/init/l2h.init"
   else
     maybe_use_tex4ht=no
     if echo "$remaining" | grep '[-]init tex4ht.pm' >/dev/null; then
@@ -371,6 +362,21 @@ mkdir -p "${outdir}"
 
 return_code=0
 
+# prepended to path to go back from the directory where the command tested is
+# called to the directory the current script is called from.
+# Corresponds to $testdir/${out_dir}/$dir or "${outdir}$dir", for example
+# formatting/out_perl/test_name.
+to_current=../../../
+
+if test "z$t2a_srcdir" != 'z' ; then
+  t2a_srcdir="${to_current}$t2a_srcdir"
+  export t2a_srcdir
+fi
+if test "z$t2a_builddir" != 'z' ; then
+  t2a_builddir="${to_current}$t2a_builddir"
+  export t2a_builddir
+fi
+
 exec <"$driving_file"
 while read line; do
   # skip comments.
@@ -412,7 +418,6 @@ while read line; do
     exit 1
   fi
 
-  outdir="$testdir/${out_dir}/"
   results_dir="$srcdir/$testdir/${res_dir}"
   one_test_done=yes
 
@@ -438,9 +443,30 @@ while read line; do
   dir=$current
   test -d "${outdir}$dir" && rm -rf "${outdir}$dir"
   mkdir "${outdir}$dir"
-  remaining_out_dir=`echo $remaining | sed 's,@OUT_DIR@,'"${outdir}$dir/"',g'`
+
+  srcdir_path="${to_current}$srcdir"
+
+  l2h_flags=
+  tmp_dir=
+  if test z$use_latex2html = zyes ; then
+    cd ${outdir}$dir || exit 1
+    tmp_dir=`mktemp -d l2h_t2h_XXXXXXXX`
+    if test z"$tmp_dir" = 'z'; then
+      echo "$0: mktemp failed" 1>&2
+      exit 1
+    fi
+    cd ${to_current} || exit 1
+    l2h_flags="-c L2H_CLEAN=0 -c 'L2H_TMP $tmp_dir' -c L2H_FILE=$srcdir_path/../perl/t/init/l2h.init"
+  fi
+
+  #remaining_out_dir=`echo $remaining | sed 's,@OUT_DIR@,'"${outdir}$dir/"',g'`
+  remaining_out_dir=`echo $remaining | sed 's,@OUT_DIR@,./,g'`
+  src_file_path="${to_current}$src_file"
+  testdir_path="../.."
   echo "$tested_command $dir -> ${outdir}$dir" >> $logfile
-  cmd="$prepended_command $command_run --force --conf-dir $srcdir/../perl/t/init/ --conf-dir $srcdir/../perl/init --conf-dir $srcdir/../perl/ext -I $srcdir/$testdir -I $testdir/ -I $srcdir/ -I . -I built_input -I built_input/non_ascii --error-limit=1000 -c TEST=$test_level $l2h_flags --output ${outdir}$dir/ $remaining_out_dir $src_file > ${outdir}$dir/$basename.1 2>${outdir}$dir/$basename.2"
+  #cmd="$prepended_command $command_run --force --conf-dir $srcdir/../perl/t/init/ --conf-dir $srcdir/../perl/init --conf-dir $srcdir/../perl/ext -I $srcdir/$testdir -I $testdir/ -I $srcdir/ -I . -I built_input -I built_input/non_ascii --error-limit=1000 -c TEST=$test_level $l2h_flags --output ${outdir}$dir/ $remaining_out_dir $src_file > ${outdir}$dir/$basename.1 2>${outdir}$dir/$basename.2"
+  command_run_path="${to_current}$command_run"
+  cmd="(cd "${outdir}$dir" && $prepended_command $command_run_path --force --conf-dir $srcdir_path/../perl/t/init/ --conf-dir $srcdir_path/../perl/init --conf-dir $srcdir_path/../perl/ext -I $srcdir_path/$testdir -I $testdir_path/ -I $srcdir_path/ -I ${to_current} -I ${to_current}built_input -I ${to_current}built_input/non_ascii --error-limit=1000 -c TEST=$test_level $l2h_flags $remaining_out_dir $src_file_path > $basename.1 2>$basename.2)"
   echo "$cmd" >>$logfile
   eval $cmd
   ret=$?
@@ -458,6 +484,7 @@ while read line; do
     rm -rf "${raw_outdir}$dir"
 
     post_process_output
+    test -n "$tmp_dir" && rm -rf ${outdir}$dir/$tmp_dir
     escape_file_names $utf8_output_file
 
     if test "z$results_dir_used" != 'z' ; then
@@ -482,8 +509,6 @@ while read line; do
     return_code=1
   fi
 done
-
-test -n "$tmp_dir" && rm -rf $tmp_dir
 
 if test "$one_test" = 'yes' && test "z$one_test_done" != "zyes"; then
   echo "$0: test not found: $the_test (file: $the_file) " >&2

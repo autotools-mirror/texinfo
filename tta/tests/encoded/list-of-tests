@@ -21,9 +21,10 @@
 #no_command_line_encoding built_input/non_ascii/osé_utf8.texi --html -D 'neednonasciifilenames Need non-ASCII file names'
 
 # check non ascii command line arguments and css files
+# Note that --no-split is overriden by --split=
 # no transliteration, as Perl and C transliterate differently
 #  -c 'TRANSLITERATE_FILE_NAMES 1'
-non_ascii_command_line built_input/non_ascii/osé_utf8.texi --html --no-split -c DO_ABOUT=1 -c COMMAND_LINE_ENCODING=UTF-8 -c MESSAGE_ENCODING=UTF-8 -c OUTPUT_FILE_NAME_ENCODING=UTF-8 --split=Mekanïk --document-language=Destruktïw -c 'Kommandöh vâl' -D TÛT -D 'vùr ké' -U ôndef -c 'FORMAT_MENU mînù' --macro-expand=@OUT_DIR@osé-texinfo.texi --internal-links=@OUT_DIR@intérnal.txt --css-include çss.css --css-include cêss.css --css-ref=rëf --css-ref=öref -D 'neednonasciifilenames Need non-ASCII file names'
+non_ascii_command_line built_input/non_ascii/osé_utf8.texi --html --no-split -c DO_ABOUT=1 -c COMMAND_LINE_ENCODING=UTF-8 -c MESSAGE_ENCODING=UTF-8 -c OUTPUT_FILE_NAME_ENCODING=UTF-8 --split=Mekanïk -o. --document-language=Destruktïw -c 'Kommandöh vâl' -D TÛT -D 'vùr ké' -U ôndef -c 'FORMAT_MENU mînù' --macro-expand=@OUT_DIR@osé-texinfo.texi --internal-links=@OUT_DIR@intérnal.txt --css-include çss.css --css-include cêss.css --css-ref=rëf --css-ref=öref -D 'neednonasciifilenames Need non-ASCII file names'
 
 # test for the copying of image with non ascii characters for epub
 # no transliteration, as Perl and C transliterate differently
@@ -57,9 +58,9 @@ manual_include_accented_file_name_latin1_use_locale_encoding manual_include_acce
 # The following tests tests how verbatiminclude file name encoding is
 # resolved in raw text in HTML and in raw text converter and how
 # customization options are used.
-verbatiminclude_names_latin1_html verbatiminclude_names_latin1.texi --html -c MESSAGE_ENCODING=UTF-8
+verbatiminclude_names_latin1_html verbatiminclude_names_latin1.texi --html -o. -c MESSAGE_ENCODING=UTF-8
 
-verbatiminclude_names_latin1_html_explicit_encoding verbatiminclude_names_latin1.texi --html -c INPUT_FILE_NAME_ENCODING=UTF-8 -c MESSAGE_ENCODING=UTF-8 -D 'neednonasciifilenames Need non-ASCII file names'
+verbatiminclude_names_latin1_html_explicit_encoding verbatiminclude_names_latin1.texi --html -o. -c INPUT_FILE_NAME_ENCODING=UTF-8 -c MESSAGE_ENCODING=UTF-8 -D 'neednonasciifilenames Need non-ASCII file names'
 
 verbatiminclude_names_latin1_rawtext verbatiminclude_names_latin1.texi -c TEXINFO_OUTPUT_FORMAT=rawtext -c MESSAGE_ENCODING=UTF-8 -D 'neednonasciifilenames Need non-ASCII file names'
 

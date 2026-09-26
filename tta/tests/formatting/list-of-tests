@@ -43,7 +43,7 @@ info_extension_warning foo.info
 
 # test JS_WEBLABELS_FILE set to a file already output as part of the manual
 # formatting.
-js_license_reuse_output_file split_nocopying.texi --html -c JS_WEBLABELS_FILE=Ch1.html -c INFO_JS_DIR=js
+js_license_reuse_output_file split_nocopying.texi --html -o. -c JS_WEBLABELS_FILE=Ch1.html -c INFO_JS_DIR=js
 
 # test --macro-expand with the same name as output file.
-reuse_macro_expand_file simplest.texi --macro-expand=@OUT_DIR@simplest.info
+reuse_macro_expand_file simplest.texi -o. --macro-expand=@OUT_DIR@simplest.info

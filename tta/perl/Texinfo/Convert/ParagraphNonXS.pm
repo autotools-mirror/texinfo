@@ -442,7 +442,7 @@ sub add_text($$) {
     } elsif (defined($added_word)) {
       my $tmp = $added_word;
       # Prepend 'last_letter' to add the information on the last
-      # letter even if it was read as part of a previous string
+      # letter even if it was read as part of a previous string.
       # Add it here because _add_next overwrites it.
       $tmp = $paragraph->{'last_letter'} . $tmp;
 

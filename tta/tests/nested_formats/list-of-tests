@@ -1,5 +1,5 @@
 
-texi_nested_formats nested_formats.texi --html -c TEXINFO_OUTPUT_FORMAT=plaintexinfo
+texi_nested_formats nested_formats.texi --html -o. -c TEXINFO_OUTPUT_FORMAT=plaintexinfo
 
 nested_group_html nested_formats.texi --html --no-split
 nested_itemize_html nested_formats.texi --html --no-split -D format_itemize

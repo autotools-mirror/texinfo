@@ -1,3 +1,14 @@
+2026-09-26 Patrice Dumas  <pertusus@free.fr>
+
+	* tta/tests/run_parser_all.sh (to_current), tta/tests/*/list-of-tests:
+	cd to test directory before calling the tested command.  Remove -o
+	from the call.  Setup a temporary directory for latex2html for each
+	test.  Set up the latex2html flags in the test run code, not in the
+	features check function.  Do not reset outdir.
+	Add -o to list-of-tests tests when needed, mainly for split HTML and
+	plaintext.
+	This prepare for erroring with -o DIR when a file is expected.
+
 2026-09-25 Patrice Dumas  <pertusus@free.fr>
 
 	* tta/C/main/utils.c (file_separator_canonpath): when removing .,

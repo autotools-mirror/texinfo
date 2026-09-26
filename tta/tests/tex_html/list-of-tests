@@ -31,7 +31,7 @@ tex_encoded_utf8_l2h built_input/non_ascii/tex_encodé_utf8.texi --html --no-spl
 tex_encoded_utf8_httex built_input/non_ascii/tex_encodé_utf8.texi --html --no-split --init tex4ht.pm --iftex -c 'COMMAND_LINE_ENCODING UTF-8' -c OUTPUT_FILE_NAME_ENCODING=UTF-8 -c 'TRANSLITERATE_FILE_NAMES 1' -D 'neednonasciifilenames Need non-ASCII file names'
 tex_encoded_latin1_l2h tex_encode_latin1.texi --html --no-split -c 'HTML_MATH l2h' --iftex
 tex_encoded_latin1_httex tex_encode_latin1.texi --html --no-split --init tex4ht.pm --iftex
-formatting_singular ../coverage/formatting.texi -c 'TEXI2HTML=1' -D 'needcollationcompat Need collation compatibility' --init-file t2h_singular.init -c 'HTML_MATH l2h' -c 'EXTENSION htm' -c 'PREFIX sing' -c 'TOP_FILE index.htm' --no-verbose
+formatting_singular ../coverage/formatting.texi -c 'TEXI2HTML=1' -D 'needcollationcompat Need collation compatibility' -o. --init-file t2h_singular.init -c 'HTML_MATH l2h' -c 'EXTENSION htm' -c 'PREFIX sing' -c 'TOP_FILE index.htm' --no-verbose
 # The following could be added, mainly to test the full 
 # ../layout/formatting.texi processing with tex4ht, but
 # also to check that singular style is compatible with tex4ht
