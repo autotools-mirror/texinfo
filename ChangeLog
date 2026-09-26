@@ -1,5 +1,11 @@
 2026-09-26  Gavin Smith <gavinsmith0123@gmail.com>
 
+	* doc/texinfo.texi (@setfilename): Edit.  State that the command
+	is no longer required earlier in the node.  Suggestion from Patrice.
+	(Setting the Ouptut File Name): Fix typo and remove duplicate link.
+
+2026-09-26  Gavin Smith <gavinsmith0123@gmail.com>
+
 	* doc/texinfo.texi (Invoking texi2any) <--info>:
 	Remove discussion of output file name, as it does not occur
 	in the documentation of options for other output formats like --html.
