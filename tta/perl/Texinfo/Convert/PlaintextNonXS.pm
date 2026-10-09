@@ -2054,7 +2054,7 @@ sub process_printindex($$;$) {
       _stream_output($self, $self->{'outside_of_any_node_text'});
       $line_width += $self->{'outside_of_any_node_text_width'};
 
-      # TODO when outside of sectioning commands this message was already
+      # NOTE when outside of sectioning commands this message was already
       # done by the Parser.
       # Warn, only once.
       if (!exists($self->{'index_entries_no_node'}->{$entry})) {
@@ -3654,7 +3654,7 @@ sub _convert($$) {
           my $previous_paragraph_count
               = $self->{'format_context'}->[-1]->{'paragraph_count'};
 
-          # TODO it would be logical to use convert_line here, and it would
+          # NOTE it would be logical to use convert_line here, and it would
           # allow to cover translations that do not use @center, but we
           # cannot use convert_line here in case there is indentation:
           # @center in $prepended already adds an end of line as part

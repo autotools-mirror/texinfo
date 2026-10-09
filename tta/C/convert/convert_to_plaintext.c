@@ -2851,7 +2851,7 @@ plaintext_process_printindex (CONVERTER *self,
           stream_output_n (self, self_plaintext->outside_of_any_node_text.text,
                            self_plaintext->outside_of_any_node_text.end);
           line_width += self_plaintext->outside_of_any_node_text_width;
-    /* TODO when outside of sectioning commands this message was already
+    /* NOTE when outside of sectioning commands this message was already
        done by the Parser.
        Warn, only once. */
           if (!self_plaintext->silent)
@@ -5516,7 +5516,7 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
                   int previous_paragraph_count
                     = top_format_context->paragraph_count;
 
-         /* TODO it would be logical to use convert_line here, and it would
+         /* NOTE it would be logical to use convert_line here, and it would
             allow to cover translations that do not use @center, but we
             cannot use convert_line here in case there is indentation:
             @center in $prepended already adds an end of line as part
