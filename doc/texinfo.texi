@@ -12154,12 +12154,15 @@ if your document encoding is not the default encoding.
 @end example
 
 UTF-8 should always be the best choice for the encoding.
-Texinfo still supports additional encodings, mainly for compatibility with
-older manuals@footnote{@command{texi2any} supports more encodings for Texinfo
-manuals, potentially all the encodings supported by both Perl and iconv
-(@pxref{Generic Charset Conversion,,, libc, The GNU C Library}).
-The support in output formats may be lacking, however, especially for @LaTeX{}
-output.}:
+Texinfo still supports additional encodings@footnote{An additional encoding
+may be substituted by a compatible encoding by @command{texi2any}, both in
+input and in output to follow past usage conventions and allow for more
+glyphs to be available in the output encoding.},
+mainly for compatibility with older manuals@footnote{@command{texi2any}
+supports more encodings for Texinfo manuals, potentially all the encodings
+supported by both Perl and iconv (@pxref{Generic Charset Conversion,,, libc,
+The GNU C Library}).  The support in output formats may be lacking, however,
+especially for @LaTeX{} output.}:
 
 @table @code
 @item US-ASCII
@@ -12186,10 +12189,10 @@ This was a commonly used encoding for the Ukrainian language before UTF-8.
 
 @end table
 
-For most output formats, the output encoding is set to the input encoding.
+For most output formats, the output encoding is based on the input encoding.
 For EPUB and LaTeX output, however, the input encoding is ignored and the
 output encoding is set to UTF-8.  You can set the @code{OUTPUT_ENCODING_NAME}
-customization variable to set the output encoding name to a different value,
+customization variable to base the output encoding name on a different value,
 except for EPUB.  When outputting EPUB, the @code{OUTPUT_ENCODING_NAME} value
 is ignored because the encoding is mandated by the standard.
 

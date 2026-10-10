@@ -1,5 +1,14 @@
 2026-10-10 Patrice Dumas  <pertusus@free.fr>
 
+	* doc/texinfo.texi (@code{@@documentencoding}): add a footnote
+	explaining that texi2any may substitute encodings.  Used "based on"
+	instead of "set to" in the main text to match this possibility of
+	substitution.  The text remains vague on purpose to avoid committing
+	to anything, but the user should not be surprised if the output
+	encoding is not the encoding specified by OUTPUT_ENCODING_NAME.
+
+2026-10-10 Patrice Dumas  <pertusus@free.fr>
+
 	* tta/perl/Texinfo/Common.pm (processing_output_encoding): use the
 	encoding_name_conversion_map map on preferred encoding name obtained
 	with call of Encode::find_encoding followed by
