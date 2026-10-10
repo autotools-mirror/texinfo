@@ -11,9 +11,4 @@ TEXT call_translations_translate_string (const char *string,
                                          const char *language_env,
                                          const char *translation_context);
 
-void *call_setup_lang_collator (const char *locale_lang);
-
-BYTES_STRING *call_collator_getSortKey (const void *collator_sv,
-                                        const char *string);
-
 #endif

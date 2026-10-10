@@ -8472,10 +8472,15 @@ file is what is actually used to print the index.
 a traditional two-column index, with index terms and page numbers.
 
 @item
+@ignore
 When processing with @command{texi2any}, the sorting of index entries
 is affected by the following variables:
 @code{COLLATION_LANGUAGE}, @code{USE_UNICODE_COLLATION}, and
-@code{DOCUMENTLANGUAGE_COLLATION}.  @xref{Global Customization Variables}.
+@code{DOCUMENTLANGUAGE_COLLATION}.
+@end ignore
+When processing with @command{texi2any}, the sorting of index entries
+is affected by @code{USE_UNICODE_COLLATION}.
+@xref{Global Customization Variables}.
 
 @command{texi2any} is expected to sort indices in a reproducible order when
 run on the same input file with the same options.  However, the exact order
@@ -12074,9 +12079,14 @@ and script.
 These commands change the translation of various @dfn{document strings}
 such as ``see'' in cross-references (@pxref{Cross References}),
 ``Function'' in defuns (@pxref{Definition Commands}), and so on.
+@c removed from documentation until there is a C native implementation
+@c of linguistic tailoring of index sorting
+@ignore
 Optionally, @code{@@documentlanguage} and @code{@@documentscript} may also
 affect how @command{texi2any} sorts indices (@pxref{Global Customization
-Variables}, under @code{DOCUMENTLANGUAGE_COLLATION}).  If the document language
+Variables}, under @code{DOCUMENTLANGUAGE_COLLATION}).
+@end ignore
+If the document language
 is not specified, the default English document strings are output as they are.
 
 Note that in Info output, some strings, such as ``Node:'', ``Next:'',
@@ -16001,6 +16011,9 @@ are not consistent with the order of node menu entries.  This is a more
 thorough structure check than that provided by
 @code{CHECK_MISSING_MENU_ENTRY}.  On by default.
 
+@c removed from documentation until there is a C native implementation
+@c of linguistic tailoring of index sorting
+@ignore
 @item COLLATION_LANGUAGE
 By default, @command{texi2any} sorts document indices according to the
 @dfn{Unicode Collation Algorithm} (defined in
@@ -16020,6 +16033,7 @@ If @code{USE_UNICODE_COLLATION} is set to @samp{0}, there is no Unicode
 collation and so no linguistic tailoring either.
 
 See also the @code{DOCUMENTLANGUAGE_COLLATION} variable, described below.
+@end ignore
 
 @item COMMAND_LINE_ENCODING
 Encoding used to decode and encode command-line arguments.  Default is based on
@@ -16067,11 +16081,15 @@ is used for the encoding of file content.
 
 The @code{OUTPUT_FILE_NAME_ENCODING} variable overrides this variable.
 
+@c removed from documentation until there is a C native implementation
+@c of linguistic tailoring of index sorting
+@ignore
 @item DOCUMENTLANGUAGE_COLLATION
 If set, try to use the language specified in a @code{@@documentlanguage}
 (and @code{@@documentscript}) directive for language-specific tailoring of
 index sorting.  See also the @code{COLLATION_LANGUAGE} variable, described
 above.  (@xref{Setting the language}.)
+@end ignore
 
 @item DUMP_STRUCTURE
 For debugging.  If set, the tree constructed upon parsing a Texinfo

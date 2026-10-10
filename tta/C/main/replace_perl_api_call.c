@@ -91,23 +91,6 @@ call_translations_translate_string (const char *string,
   return result;
 }
 
-void *
-call_setup_lang_collator (const char *locale_lang)
-{
-  return 0;
-}
-
-/* since call_setup_lang_collator returns 0, the following function will never
-   be called */
-BYTES_STRING *
-call_collator_getSortKey (const void *collator_sv, const char *string)
-{
-  BYTES_STRING *result;
-  result = (BYTES_STRING *) malloc (sizeof (BYTES_STRING));
-  memset (result, 0, sizeof (BYTES_STRING));
-  return result;
-}
-
 int
 call_eval_load_texinfo_modules (int texinfo_uninstalled,
           const char *t2a_builddir, int updirs, const char *modules_dir,

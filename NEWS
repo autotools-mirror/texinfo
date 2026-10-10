@@ -29,6 +29,8 @@ X.Y ()
     customization variable.
   . add AUTO_SECTION_NODE customization variable, replacing the
     insert_nodes_for_sectioning_commands tree transformation.
+  . remove COLLATION_LANGUAGE and DOCUMENTLANGUAGE_COLLATION customization
+    variables.
   . Info and plaintext C converters.
   . Build and install Python and Perl modules with Texinfo Parser, Reader,
     and Document information by default, if SWIG is found.

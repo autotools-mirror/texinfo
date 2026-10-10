@@ -719,10 +719,6 @@ setup_index_entries_sort_strings (ERROR_MESSAGE_LIST *error_messages,
 typedef struct INDEX_COLLATOR {
     enum collation_type_name type;
     union {
-      /* perl element. This should be SV *sv,
-         but we don't want to include the Perl headers everywhere; */
-      /* not const because of refcount increase/decrease */
-      void *sv;
   #ifdef HAVE_NEWLOCALE
       locale_t locale;
   #endif
@@ -767,7 +763,13 @@ get_sort_key (const INDEX_COLLATOR *collator, const char *sort_string)
         }
         break;
       #endif
+  /* impossible to go here, collator->type is never set to ctn_language_collation
+     Could do something here if there was native C linguistic tailoring.
+      case ctn_language_collation:
+        ......
+   */
       case ctn_unicode:
+      default:
         sort_key = (BYTES_STRING *) malloc (sizeof (BYTES_STRING));
 
         static Collation_choice collation;
@@ -782,11 +784,6 @@ get_sort_key (const INDEX_COLLATOR *collator, const char *sort_string)
           sort_string, strlen (sort_string),
           NULL, &sort_key->len);
 
-        break;
-      case ctn_language_collation:
-      default: /* !HAVE_STRXFRM_L && ctn_locale_collation */
-        sort_key = call_collator_getSortKey (collator->coll.sv,
-                                             sort_string);
         break;
     }
   return sort_key;
@@ -808,9 +805,11 @@ setup_collator (int use_unicode_collation, const char *collation_language,
     {
       if (collation_language)
         {
-          result->coll.sv = call_setup_lang_collator (collation_language);
-          if (result->coll.sv)
+ /* Could do something here if there was native C collation linguistic tailoring
+          .....
+          if (.....)
             result->type = ctn_language_collation;
+  */
         }
 
       if (!result->type)
@@ -1107,8 +1106,6 @@ destroy_collator (INDEX_COLLATOR *collator)
       freelocale (collator->coll.locale);
   #endif
     }
-  else if (collator->coll.sv)
-    unregister_perl_data (collator->coll.sv);
   free (collator);
 }
 
@@ -1517,19 +1514,23 @@ get_collation_sorted_indices_by_index (
   if (use_unicode_collation == 0)
     collation_sorted_indices
       = &collations->collation_sorted_indices[ctn_no_unicode];
-  else if (!input_lang_sorting_locale && !collation_locale)
+  /* use ctn_unicode collation for input_lang_sorting_locale until there is a
+     native C possibility for collation linguistic tailoring */
+  else if (/* !input_lang_sorting_locale && */ !collation_locale)
     collation_sorted_indices
       = &collations->collation_sorted_indices[ctn_unicode];
   else
     {
       enum collation_type_name type;
 
+    /*
       if (input_lang_sorting_locale)
         {
           type = ctn_language_collation;
           lang_sorting_locale = input_lang_sorting_locale;
         }
       else
+     */
         {
           type = ctn_locale_collation;
           lang_sorting_locale = collation_locale;
@@ -1624,19 +1625,23 @@ get_collation_sorted_indices_by_letter (
   if (use_unicode_collation == 0)
     collation_sorted_indices
       = &collations->collation_sorted_indices[ctn_no_unicode];
-  else if (!input_lang_sorting_locale && !collation_locale)
+  /* use ctn_unicode collation for input_lang_sorting_locale until there is a
+     native C possibility for collation linguistic tailoring */
+  else if (/* !input_lang_sorting_locale && */ !collation_locale)
     collation_sorted_indices
       = &collations->collation_sorted_indices[ctn_unicode];
   else
     {
       enum collation_type_name type;
 
+    /*
       if (input_lang_sorting_locale)
         {
           type = ctn_language_collation;
           lang_sorting_locale = input_lang_sorting_locale;
         }
       else
+     */
         {
           type = ctn_locale_collation;
           lang_sorting_locale = collation_locale;

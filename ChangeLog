@@ -1,5 +1,37 @@
 2026-10-10 Patrice Dumas  <pertusus@free.fr>
 
+	hide COLLATION_LANGUAGE and DOCUMENTLANGUAGE_COLLATION, remove from C
+
+	* tta/C/main/document_types.h (enum collation_type_name),
+	tta/C/main/manipulate_indices.c (get_sort_key, setup_collator)
+	(get_collation_sorted_indices_by_index)
+	(get_collation_sorted_indices_by_letter): remove the
+	ctn_language_collation possibility from get_sort_key, comment out the
+	collation_language code in setup_collator, use ctn_unicode collation
+	for input_lang_sorting_locale in get_collation_sorted_indices_by_*
+	and comment out code related to ctn_language_collation.  Comment out
+	ctn_language_collation from enum collation_type_name now that it is
+	not used anymore.  Add comments explaining how code could be readded
+	if there was native C possibility for collation linguistic tailoring.
+
+	* tta/C/main/manipulate_indices.c (INDEX_COLLATOR, destroy_collator),
+	tta/C/main/call_perl_function.c: remove unused INDEX_COLLATOR coll.sv
+	field and associated code, remove unused call_setup_lang_collator and
+	call_collator_getSortKey.
+
+	* tta/C/texi2any.c (main): do not load embedded Perl anymore if
+	DOCUMENTLANGUAGE_COLLATION or COLLATION_LANGUAGE are set.
+
+	* NEWS, doc/texinfo.texi (Printing Indices & Menus)
+	(Setting the language, Global Customization Variables): update, 
+	put documentation related to COLLATION_LANGUAGE and
+	DOCUMENTLANGUAGE_COLLATION in @ignore.
+
+	* tta/tests/other/list-of-tests: comment out all the tests related to
+	collation linguistic tailoring.
+
+2026-10-10 Patrice Dumas  <pertusus@free.fr>
+
 	* tta/configure.ac, tta/defs.in: remove TESTS_MAIN_COMMAND AC_SUBST
 	from configure.ac, as nothing sets the variable anymore.  Change
 	defs.in such that the value is not set by configure.  Leave it to be

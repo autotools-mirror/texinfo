@@ -1220,8 +1220,6 @@ main (int argc, char *argv[], char *env[])
   const OPTION *tree_transformations_option;
   const OPTION *split_option;
   const OPTION *show_builtin_css_rules_option;
-  const OPTION *documentlanguage_collation_option;
-  const OPTION *collation_language_option;
   const OPTION *auto_section_node_option;
   int no_warn = 0;
   int test_mode_set = 0;
@@ -2468,24 +2466,19 @@ main (int argc, char *argv[], char *env[])
   /* Setup output string translations (including Locales path). */
   general_output_strings_setup ();
 
+  int need_interpreter = 0
   /* load a Perl interpreter for the options or configurations triggering
      calling Perl functions from C */
-  documentlanguage_collation_option
-  = GNUT_get_conf (program_options.options->DOCUMENTLANGUAGE_COLLATION.number);
-  collation_language_option
-   = GNUT_get_conf (program_options.options->COLLATION_LANGUAGE.number);
-  if ((documentlanguage_collation_option
-       && documentlanguage_collation_option->o.integer > 0)
-      || (collation_language_option && collation_language_option->o.string)
  #ifdef USE_LIBINTL_PERL_IN_XS
-      || 1
+     || 1
  #endif
   /* Perl translation function is called from C if nls is not enabled in C,
      load embedded Perl such that the call succeeds */
  #ifndef ENABLE_NLS
       || 1
  #endif
-     )
+    ;
+  if (need_interpreter)
     {
       load_interpreter (&loading_info);
 

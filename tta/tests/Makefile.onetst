@@ -167,14 +167,6 @@ type_other_one_perl_test_files_generated_list =  \
     test_scripts/other_perl_highlight_syntax_example_highlight.sh \
     test_scripts/other_perl_highlight_syntax_example_default_language.sh \
     test_scripts/other_perl_highlight_syntax_example_latin9.sh \
-    test_scripts/other_perl_index_collation_test_plaintext.sh \
-    test_scripts/other_perl_index_collation_test_html.sh \
-    test_scripts/other_perl_index_collation_test_collation_language.sh \
-    test_scripts/other_perl_index_collation_test_collation_language_html.sh \
-    test_scripts/other_perl_index_collation_test_documentlanguage_collation.sh \
-    test_scripts/other_perl_index_collation_test_documentlanguage_collation_html.sh \
-    test_scripts/other_perl_accented_lang_index_collation_documentlanguage_collation.sh \
-    test_scripts/other_perl_index_collation_script_test_documentlanguage_collation.sh \
     test_scripts/info_tex_perl_tex_math_info_math_images.sh
 
 # list of native type base test files
@@ -318,13 +310,5 @@ type_other_one_native_test_files_generated_list =  \
     test_scripts/other_native_highlight_syntax_example_highlight.sh \
     test_scripts/other_native_highlight_syntax_example_default_language.sh \
     test_scripts/other_native_highlight_syntax_example_latin9.sh \
-    test_scripts/other_native_index_collation_test_plaintext.sh \
-    test_scripts/other_native_index_collation_test_html.sh \
-    test_scripts/other_native_index_collation_test_collation_language.sh \
-    test_scripts/other_native_index_collation_test_collation_language_html.sh \
-    test_scripts/other_native_index_collation_test_documentlanguage_collation.sh \
-    test_scripts/other_native_index_collation_test_documentlanguage_collation_html.sh \
-    test_scripts/other_native_accented_lang_index_collation_documentlanguage_collation.sh \
-    test_scripts/other_native_index_collation_script_test_documentlanguage_collation.sh \
     test_scripts/info_tex_native_tex_math_info_math_images.sh
 

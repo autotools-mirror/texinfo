@@ -210,7 +210,10 @@ typedef struct INDEX_SORTED_BY_LETTER {
 enum collation_type_name {
    ctn_unicode, /* the default */
    ctn_no_unicode,
+ /* removed until there is a native C possibility for collation
+    linguistic tailoring
    ctn_language_collation,
+  */
    ctn_locale_collation, /* experimental, to test strxfrm */
 };
 

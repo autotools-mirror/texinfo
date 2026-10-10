@@ -11,27 +11,27 @@ highlight_syntax_example_latin9 highlight_example.texi --html -o. -c HIGHLIGHT_S
 
 # collation
 
-index_collation_test_plaintext index_collation_test.texi --plaintext -o index_collation_test.txt
+#index_collation_test_plaintext index_collation_test.texi --plaintext -o index_collation_test.txt
 
-index_collation_test_html index_collation_test.texi --html -o.
+#index_collation_test_html index_collation_test.texi --html -o.
 
-index_collation_test_collation_language index_collation_test.texi --plaintext -o index_collation_test.txt -c COLLATION_LANGUAGE=se
+#index_collation_test_collation_language index_collation_test.texi --plaintext -o index_collation_test.txt -c COLLATION_LANGUAGE=se
 
 # TODO there is no difference with index_collation_test_html above,
 # it would be better to find out a language that has a different collation
 # order when sorting indices by letter as done for HTML output.
-index_collation_test_collation_language_html index_collation_test.texi --html -o. -c COLLATION_LANGUAGE=se
+#index_collation_test_collation_language_html index_collation_test.texi --html -o. -c COLLATION_LANGUAGE=se
 
-#index_collation_test_collation_locale_en index_collation_test.texi --plaintext -c XS_STRXFRM_COLLATION_LOCALE='en.utf-8'
+##index_collation_test_collation_locale_en index_collation_test.texi --plaintext -c XS_STRXFRM_COLLATION_LOCALE='en.utf-8'
 
-#index_collation_test_collation_locale_en_US index_collation_test.texi --plaintext -c XS_STRXFRM_COLLATION_LOCALE='en_US.utf-8'
+##index_collation_test_collation_locale_en_US index_collation_test.texi --plaintext -c XS_STRXFRM_COLLATION_LOCALE='en_US.utf-8'
 
-#index_collation_test_collation_locale_sv index_collation_test.texi --plaintext -c XS_STRXFRM_COLLATION_LOCALE='sv_SE.utf8'
+##index_collation_test_collation_locale_sv index_collation_test.texi --plaintext -c XS_STRXFRM_COLLATION_LOCALE='sv_SE.utf8'
 
-index_collation_test_documentlanguage_collation index_collation_test.texi --plaintext -o index_collation_test.txt -c DOCUMENTLANGUAGE_COLLATION=1
+#index_collation_test_documentlanguage_collation index_collation_test.texi --plaintext -o index_collation_test.txt -c DOCUMENTLANGUAGE_COLLATION=1
 
-index_collation_test_documentlanguage_collation_html index_collation_test.texi --html -o. -c DOCUMENTLANGUAGE_COLLATION=1
+#index_collation_test_documentlanguage_collation_html index_collation_test.texi --html -o. -c DOCUMENTLANGUAGE_COLLATION=1
 
-accented_lang_index_collation_documentlanguage_collation accented_lang_index_collation.texi --plaintext -o accented_lang_index_collation.txt -c DOCUMENTLANGUAGE_COLLATION=1 -c MESSAGE_ENCODING=UTF-8
+#accented_lang_index_collation_documentlanguage_collation accented_lang_index_collation.texi --plaintext -o accented_lang_index_collation.txt -c DOCUMENTLANGUAGE_COLLATION=1 -c MESSAGE_ENCODING=UTF-8
 
-index_collation_script_test_documentlanguage_collation index_collation_script_test.texi --plaintext -o index_collation_script_test.txt -c DOCUMENTLANGUAGE_COLLATION=1 -c MESSAGE_ENCODING=UTF-8
+#index_collation_script_test_documentlanguage_collation index_collation_script_test.texi --plaintext -o index_collation_script_test.txt -c DOCUMENTLANGUAGE_COLLATION=1 -c MESSAGE_ENCODING=UTF-8
