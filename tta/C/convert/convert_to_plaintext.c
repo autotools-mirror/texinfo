@@ -781,15 +781,21 @@ plaintext_setup_output_encoding (CONVERTER *self)
 {
   PLAINTEXT_CONVERTER_STATE *self_plaintext = self->plaintext_converter;
 
-  if (self->conf->OUTPUT_ENCODING_NAME.o.string
-      && strcmp (self->conf->OUTPUT_ENCODING_NAME.o.string, "utf-8")
-      && strcmp (self->conf->OUTPUT_ENCODING_NAME.o.string, "ascii"))
+  if (self->conf->OUTPUT_ENCODING_NAME.o.string)
     {
-      self_plaintext->encoding_object
-           = get_encoding_conversion (
-                            self->conf->OUTPUT_ENCODING_NAME.o.string,
-                                            &output_conversions);
+      const char *encoding
+       = processing_output_encoding (self->conf->OUTPUT_ENCODING_NAME.o.string);
+
+      self_plaintext->encoding_name = encoding;
+
+      if (encoding && strcasecmp (encoding, "utf-8"))
+        {
+          self_plaintext->encoding_object
+           = get_encoding_conversion (encoding, &output_conversions);
+        }
     }
+  else
+    self_plaintext->encoding_name = 0;
 }
 
 void

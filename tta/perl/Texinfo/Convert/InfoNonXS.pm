@@ -546,7 +546,7 @@ sub output($$) {
   }
   $tag_text .=  "\x{1F}\nEnd Tag Table\n";
 
-  my $coding = $self->get_conf('OUTPUT_ENCODING_NAME');
+  my $coding = $self->{'encoding_name'};
   $coding = undef if (defined($coding) and $coding eq '');
 
   if (defined($coding) or defined($preamble_documentlanguage)) {

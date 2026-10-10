@@ -62,13 +62,13 @@ setup_convert_utils (void)
   default_asis_command = new_command_element (ET_brace_command, CM_asis);
 }
 
-/* in Texinfo::Common */
+/* ALTIMP Texinfo::Common */
 static const char *
 element_associated_processing_encoding (const ELEMENT *element)
 {
   const char *input_encoding = lookup_extra_string (element,
                                               AI_key_input_encoding_name);
-  return input_encoding;
+  return processing_output_encoding (input_encoding);
 }
 
 

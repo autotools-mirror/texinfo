@@ -466,24 +466,124 @@ word_bytes_len_multibyte (const char *text)
 
 /* encoding and decoding. Use iconv. */
 
+/* Map ENCODING name to output encoding name usually used in HTML and
+   other formats.
+
+   No equivalent function in Perl, but a similar code is
+   inlined in Parser and in Texinfo::Common::processing_output_encoding.
+   In Perl Encode::find_encoding is called, so knows about more encodings
+   aliases than what we know about here.
+   In Perl, lc(Encode::find_encoding()->mime_name()) is used for the final
+   encoding name.
+ */
+const char *
+map_encoding_name (const char *encoding)
+{
+  const char *result_encoding = 0;
+  size_t i;
+
+  struct encoding_map {
+      const char *from; const char *to;
+  };
+
+  static const struct encoding_map map[] = {
+        {"utf-8", "utf-8"},
+        {"utf8", "utf-8"},
+        {"ascii",  "us-ascii"},
+        {"shiftjis", "shift_jis"},
+        {"latin1", "iso-8859-1"},
+        {"latin-1", "iso-8859-1"},
+        {"iso-8859-1",  "iso-8859-1"},
+        {"iso-8859-2",  "iso-8859-2"},
+        {"iso-8859-15", "iso-8859-15"},
+        {"koi8-r",      "koi8-r"},
+        {"koi8-u",      "koi8-u"},
+    /* For some reason Encode mime_name() for GB2312, a simplified
+       chinese character set encoded as EUC-CN is EUC-CN, while in the
+       IANA character sets assignments, there is no EUC-CN and
+       the Preferred MIME Name of GB2312 is GB2312, see:
+      https://www.iana.org/assignments/character-sets/character-sets.xhtml
+
+       Set it the same as Perl here, to have the same output.
+     */
+        {"gb2312",      "euc-cn"},
+  };
+  for (i = 0; i < sizeof map / sizeof *map; i++)
+    {
+     /* Elements in first column map to elements in
+        second column.  Elements in second column map
+        to themselves. */
+      if (!strcasecmp (encoding, map[i].from)
+           || !strcasecmp (encoding, map[i].to))
+        {
+          result_encoding = map[i].to;
+          break;
+        }
+    }
+  return result_encoding;
+}
+
+/* same as %Texinfo::Common::encoding_name_conversion_map{lc(..)} in Perl.
+   Thoughts on this mapping are available near
+   Texinfo::Common::encoding_name_conversion_map definition
+ */
+static const char *
+encoding_name_conversion_map (const char *encoding)
+{
+  if (!strcasecmp (encoding, "utf8"))
+    return "utf-8";
+  if (!strcasecmp (encoding, "us-ascii"))
+    return "iso-8859-1";
+  return 0;
+}
+
+/* Corresponds to Texinfo::Common::processing_output_encoding, but only
+   for the encoding name determination, we let get_encoding_conversion/iconv
+   do the aliasing of encoding name for conversions between encodings.
+
+   Return the encoding name, possibly different from the argument
+   if a compatible encoding extending the original encoding is used.
+ */
+const char *
+processing_output_encoding (const char *encoding)
+{
+  const char *encoding_name;
+
+  if (!encoding || !strcmp (encoding, ""))
+    return encoding;
+
+  encoding_name = encoding_name_conversion_map (encoding);
+  if (encoding_name)
+    return encoding_name;
+  else
+    {
+      const char *preferred_encoding_name = map_encoding_name (encoding);
+      if (preferred_encoding_name)
+        {
+          encoding_name
+            = encoding_name_conversion_map (preferred_encoding_name);
+          if (encoding_name)
+            return encoding_name;
+        }
+    }
+
+  return encoding;
+}
+
 /* conversion to or from utf-8 should always be set before other
    conversion */
 ENCODING_CONVERSION *
 get_encoding_conversion (const char *encoding,
                          ENCODING_CONVERSION_LIST *encodings_list)
 {
-  const char *conversion_encoding = encoding;
+  const char *conversion_encoding;
   size_t encoding_nr = 0;
   size_t encoding_index = 0;
   int utf8_missing = 0;
 
-  /* should correspond to
-     Texinfo::Common::encoding_name_conversion_map.
-     Thoughts on this mapping are available near
-     Texinfo::Common::encoding_name_conversion_map definition
-  */
-  if (!strcasecmp (encoding, "us-ascii"))
-    conversion_encoding = "iso-8859-1";
+  conversion_encoding = encoding_name_conversion_map (encoding);
+  if (!conversion_encoding)
+    conversion_encoding = encoding;
 
   if (!strcasecmp (encoding, "utf-8"))
     {

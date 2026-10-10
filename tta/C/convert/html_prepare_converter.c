@@ -4141,7 +4141,6 @@ html_setup_output (CONVERTER *self, char **paths)
 
   if (self->conf->OUTFILE.o.string)
     {
-      int i;
       int need_unsplit = 0;
       const char *outfile = self->conf->OUTFILE.o.string;
       if (!strcmp (outfile, "") || !strcmp (outfile, "-"))

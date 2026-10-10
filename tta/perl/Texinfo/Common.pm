@@ -1363,14 +1363,39 @@ sub locate_file_in_dirs($$$;$) {
   return undef, undef;
 }
 
+# apply %encoding_name_conversion_map for consistency with input encoding
+# handling in Parser and then return the canonical Perl encoding.
+# This Perl specific name is to be used for decoding/encoding only.
+# Also return the encoding name, possibly different from the argument
+# if a compatible encoding extending the original encoding is used.
 sub processing_output_encoding($) {
-  my $encoding = shift;
+  my $orig_encoding = shift;
 
+  my $encoding_name = $orig_encoding;
   my $perl_encoding;
 
-  if (defined($encoding) and $encoding ne '') {
-    $encoding = $encoding_name_conversion_map{$encoding}
-      if (defined($encoding_name_conversion_map{$encoding}));
+  if (defined($orig_encoding) and $orig_encoding ne '') {
+    my $encoding;
+    if (exists($encoding_name_conversion_map{lc($orig_encoding)})) {
+      $encoding = $encoding_name_conversion_map{lc($orig_encoding)};
+      $encoding_name = $encoding;
+    } else {
+      # try again to use the encoding_name_conversion_map using Perl
+      # map to encoding preferred names
+      my $Encode_orig_encoding_object = Encode::find_encoding($orig_encoding);
+      if (defined($Encode_orig_encoding_object)) {
+        my $preferred_encoding_name
+          = lc($Encode_orig_encoding_object->mime_name());
+        if (exists($encoding_name_conversion_map{$preferred_encoding_name})) {
+          $encoding = $encoding_name_conversion_map{$preferred_encoding_name};
+          $encoding_name = $encoding;
+        } else {
+          $encoding = $preferred_encoding_name;
+        }
+      } else {# no mapping nor Perl encoding found
+        return (undef, undef);
+      }
+    }
     my $Encode_encoding_object = Encode::find_encoding($encoding);
     if (defined($Encode_encoding_object)) {
       $perl_encoding = $Encode_encoding_object->name();
@@ -1379,9 +1404,12 @@ sub processing_output_encoding($) {
     }
   }
 
-  return $perl_encoding;
+  return ($perl_encoding, $encoding_name);
 }
 
+# ALTIMP tta/C/main/convert_utils.c
+# returns the encoding that can be used in Perl for encoding/decoding
+# associated to the input encoding that was in use when this element was parsed.
 sub associated_processing_encoding($) {
   my $element = shift;
 

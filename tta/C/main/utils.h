@@ -283,6 +283,8 @@ void add_new_deprecated_dir_info (DEPRECATED_DIRS_LIST *deprecated_dirs,
 void clear_deprecated_dirs_list (DEPRECATED_DIRS_LIST *deprecated_dirs);
 void free_deprecated_dirs_list (DEPRECATED_DIRS_LIST *deprecated_dirs);
 
+const char *map_encoding_name (const char *encoding);
+const char *processing_output_encoding (const char *encoding);
 ENCODING_CONVERSION *get_encoding_conversion (const char *encoding,
                                     ENCODING_CONVERSION_LIST *encodings_list);
 TEXT encode_with_iconv (iconv_t our_iconv,  char *s, size_t len,

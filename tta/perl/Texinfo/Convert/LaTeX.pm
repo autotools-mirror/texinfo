@@ -940,6 +940,11 @@ sub conversion_initialization($;$) {
 
   %{$self->{'quotes_map'}} = %quotes_map;
 
+  # The Perl output encoding is ignored here, it is determined for each
+  # output file.
+  (undef, $self->{'output_encoding_name'})
+    = Texinfo::Common::processing_output_encoding(
+                    $self->get_conf('OUTPUT_ENCODING_NAME'));
   # this condition means that there is no way to turn off
   # @U expansion to utf-8 characters even though this
   # could output characters that are not known in the
@@ -947,8 +952,8 @@ sub conversion_initialization($;$) {
   # This is described in the Texinfo manual, but not in
   # in a precise way.
   # FIXME add a customization variable?  Use a fontenc with more points?
-  if ($self->get_conf('OUTPUT_ENCODING_NAME')
-      and $self->get_conf('OUTPUT_ENCODING_NAME') eq 'utf-8') {
+  if ($self->{'output_encoding_name'}
+      and $self->{'output_encoding_name'} eq 'utf-8') {
     # cache this to avoid redoing calls to get_conf
     $self->{'to_utf8'} = 1;
 
@@ -973,7 +978,6 @@ sub conversion_initialization($;$) {
   }
   # some caching to avoid calling get_conf
   $self->{'output_characters'} = $self->get_conf('OUTPUT_CHARACTERS');
-  $self->{'output_encoding_name'} = $self->get_conf('OUTPUT_ENCODING_NAME');
   $self->{'debug'} = $self->get_conf('DEBUG');
 }
 
@@ -1380,6 +1384,8 @@ my %LaTeX_encoding_names_map = (
   'utf-8' => ['utf8', 'T1'],
   # from https://ctan.gutenberg-asso.fr/macros/latex/base/inputenc.pdf
   # The ASCII encoding only allows characters in the range 32-127,
+  # NOTE this should never be selected, as ascii should be mapped to
+  # another character set that extend it, for instance 'iso-8859-1'.
   'us-ascii' => ['ascii', 'T1'],
   'iso-8859-1' => ['latin1', 'T1'],
   # The ISO Latin-9 encoding file defines the characters in the ISO 8859-15
@@ -5140,6 +5146,10 @@ sub convert_math_to_images($$$;$) {
     $counter++;
     if ($counter == 1) {
       local *MATH2IMG_TEXFILE;
+      my ($output_perl_encoding, $output_encoding_name)
+        = Texinfo::Common::processing_output_encoding(
+                               $self->get_conf('OUTPUT_ENCODING_NAME'));
+      # TODO why not use Texinfo::Convert::Utils::output_files_open_out?
       unless (open(*MATH2IMG_TEXFILE,
               ">$encoded_math2img_latex_file_path_name")) {
         $self->converter_document_error(
@@ -5149,10 +5159,6 @@ sub convert_math_to_images($$$;$) {
       }
       $fh = *MATH2IMG_TEXFILE;
 
-      # TODO why not use Texinfo::Convert::Utils::output_files_open_out?
-      my $output_encoding = $self->get_conf('OUTPUT_ENCODING_NAME');
-      my $output_perl_encoding
-        = Texinfo::Common::processing_output_encoding($output_encoding);
       if (defined($output_perl_encoding)) {
         binmode($fh, ":encoding($output_perl_encoding)");
       }
@@ -5186,7 +5192,7 @@ sub convert_math_to_images($$$;$) {
 \documentclass[fleqn]{minimal}
 ';
       my $enc_usepackages
-        = _enc_usepackage($self->get_conf('OUTPUT_ENCODING_NAME'));
+        = _enc_usepackage($output_encoding_name);
       $class_and_usepackage_begin .= $enc_usepackages;
 
       $class_and_usepackage_begin .= '\usepackage{amsmath}

@@ -781,10 +781,10 @@ info_output (CONVERTER *self, DOCUMENT *document)
   clear_c_hashmap (seen_anchors);
   free (seen_anchors);
 
-  const char *coding = 0;
-  if (self->conf->OUTPUT_ENCODING_NAME.o.string
-      && strcmp (self->conf->OUTPUT_ENCODING_NAME.o.string, ""))
-    coding = self->conf->OUTPUT_ENCODING_NAME.o.string;
+  const char *coding = self_plaintext->encoding_name;
+
+  if (coding && !strcmp (coding, ""))
+    coding = 0;
 
   if (coding || preamble_documentlanguage)
     {

@@ -1414,7 +1414,7 @@ end_line_misc_line (ELEMENT *current)
               else
                 {
                   int encoding_set;
-                  char *input_encoding = 0;
+                  const char *input_encoding = 0;
 
             /* Warn if the encoding is not one of the encodings supported as an
                argument to @documentencoding, documented in Texinfo manual */
@@ -1451,52 +1451,8 @@ end_line_misc_line (ELEMENT *current)
 
               /* Set input_encoding -- for output within an HTML file, used
                                        in most output formats */
-                  {
-                    struct encoding_map {
-                        char *from; char *to;
-                    };
+                  input_encoding = map_encoding_name (normalized_text);
 
-                  /* In the perl parser,
-                     lc(Encode::find_encoding()->mime_name()) is used */
-                  /* the Perl Parser calls Encode::find_encoding, so knows
-                     about more encodings than what we know about here.
-                   */
-                    static const struct encoding_map map[] = {
-                          {"utf-8", "utf-8"},
-                          {"utf8", "utf-8"},
-                          {"ascii",  "us-ascii"},
-                          {"shiftjis", "shift_jis"},
-                          {"latin1", "iso-8859-1"},
-                          {"latin-1", "iso-8859-1"},
-                          {"iso-8859-1",  "iso-8859-1"},
-                          {"iso-8859-2",  "iso-8859-2"},
-                          {"iso-8859-15", "iso-8859-15"},
-                          {"koi8-r",      "koi8-r"},
-                          {"koi8-u",      "koi8-u"},
-             /* For some reason Encode mime_name() for GB2312, a simplified
-                chinese character set encoded as EUC-CN is EUC-CN, while in the
-                IANA character sets assignments, there is no EUC-CN and
-                the Preferred MIME Name of GB2312 is GB2312, see:
-      https://www.iana.org/assignments/character-sets/character-sets.xhtml
-
-                Set it the same as Perl here, even though it looks wrong,
-                just to have the same output.
-                    */
-                          {"gb2312",      "euc-cn"},
-                    };
-                    for (i = 0; i < sizeof map / sizeof *map; i++)
-                      {
-                       /* Elements in first column map to elements in
-                          second column.  Elements in second column map
-                          to themselves. */
-                        if (!strcasecmp (normalized_text, map[i].from)
-                             || !strcasecmp (normalized_text, map[i].to))
-                          {
-                            input_encoding = map[i].to;
-                            break;
-                          }
-                      }
-                  }
                   if (!input_encoding)
                     {
                       input_encoding = normalized_text;

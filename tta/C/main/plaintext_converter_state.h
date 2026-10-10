@@ -195,6 +195,7 @@ typedef struct PLAINTEXT_CONVERTER_STATE {
     PLAINTEXT_COMMAND_STRUCT commands_data[BUILTIN_CMD_NUMBER];
     /* also based on OUTPUT_ENCODING_NAME, so could be different for
        each document */
+    const char *encoding_name;
     const char *open_quote;
     const char *close_quote;
     const char *open_double_quote;

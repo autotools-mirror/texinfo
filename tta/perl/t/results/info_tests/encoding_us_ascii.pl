@@ -74,7 +74,7 @@ End Tag Table
 
 
 Local Variables:
-coding: us-ascii
+coding: iso-8859-1
 End:
 ');
 

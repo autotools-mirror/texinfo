@@ -408,19 +408,19 @@ sub converter_defaults($;$) {
   return \%defaults;
 }
 
+# set encoding name and Perl encode object for conversion for
+# OUTPUT_ENCODING_NAME.
+# Do it in a similar way as would be done for an input encoding
+# used to decode an input manual.
 sub _setup_output_encoding($) {
   my $self = shift;
 
-  my $encoding
-      = Texinfo::Common::processing_output_encoding(
-                               $self->{'output_encoding_name'});
-  # TODO currently encoding cannot be ascii unless directly
-  # specified as OUTPUT_ENCODING_NAME customization variable as
-  # ascii documentencoding is mapped to us-ascii as input encoding
-  # (either explicitly in C or through Encode mime_name in Perl)
-  # and then us-ascii is mapped to iso-8859-1 output perl encoding
-  # through Texinfo::Common::encoding_name_conversion_map.
-  if (!defined($encoding) or $encoding eq 'ascii') {
+  my ($encoding, $encoding_name)
+       = Texinfo::Common::processing_output_encoding(
+                               $self->get_conf('OUTPUT_ENCODING_NAME'));
+  $self->{'encoding_name'} = $encoding_name;
+
+  if (!defined($encoding)) {
     return;
   }
   my $Encode_encoding_object = Encode::find_encoding($encoding);
@@ -505,7 +505,6 @@ sub conversion_initialization($;$) {
 
   # some caching to avoid calling get_conf
   $self->{'ascii_glyph'} = $self->get_conf('ASCII_GLYPH');
-  $self->{'output_encoding_name'} = $self->get_conf('OUTPUT_ENCODING_NAME');
   $self->{'debug'} = $self->get_conf('DEBUG');
 
   # initialize context stacks
