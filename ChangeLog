@@ -1,3 +1,11 @@
+2026-10-10  Gavin Smith <gavinsmith0123@gmail.com>
+
+	Fix \ in @math on section line
+
+	* doc/texinfo.tex (\math): Use \scantokens to scan the @math argument.
+	(\newwrite, \scantokens): Move definitions earlier in file as now they
+	are no longer used just for macro expansion.
+
 2026-10-09 Patrice Dumas  <pertusus@free.fr>
 
 	* tta/C/convert/convert_to_info.c (info_format_reference_to_footnote),
