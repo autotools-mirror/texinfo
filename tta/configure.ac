@@ -570,8 +570,6 @@ fi
 
 AM_CONDITIONAL([PREFER_C_TEXI2ANY], [test "z$prefer_c_t2a" = 'zyes'])
 
-AC_SUBST([TESTS_MAIN_COMMAND])
-
 build_C_code=no
 test "z$enable_xs" = zyes && build_C_code=yes
 test "z$use_shared_txi_libraries" = zyes && build_C_code=yes

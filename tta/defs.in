@@ -2,7 +2,8 @@ PERL="@PERL@"
 DIFF_OPTIONS="@DIFF_OPTIONS@"
 HOST_IS_WINDOWS_VARIABLE="@HOST_IS_WINDOWS_VARIABLE@"
 PERL_UNICODE_COLLATE_OK="@PERL_UNICODE_COLLATE_OK@"
-TESTS_MAIN_COMMAND="@TESTS_MAIN_COMMAND@"
+# the following variable is not set by configure, but can be set manually
+TESTS_MAIN_COMMAND=
 DEFAULT_TEST_LEVEL="@DEFAULT_TEST_LEVEL@"
 if [ "z$srcdir" = 'z' ]; then
   srcdir="@srcdir@"

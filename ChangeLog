@@ -1,5 +1,13 @@
 2026-10-10 Patrice Dumas  <pertusus@free.fr>
 
+	* tta/configure.ac, tta/defs.in: remove TESTS_MAIN_COMMAND AC_SUBST
+	from configure.ac, as nothing sets the variable anymore.  Change
+	defs.in such that the value is not set by configure.  Leave it to be
+	set manually, it could be useful to set in one place the command used
+	for the tta/tests temporarily.
+
+2026-10-10 Patrice Dumas  <pertusus@free.fr>
+
 	* doc/texinfo.texi (@code{@@documentencoding}): add a footnote
 	explaining that texi2any may substitute encodings.  Used "based on"
 	instead of "set to" in the main text to match this possibility of
@@ -6211,7 +6219,7 @@
 2026-06-21 Patrice Dumas  <pertusus@free.fr>
 
 	* tta/tests/run_parser_all.sh: change variables names, use
-	TESTS_MAIN_COMMAND on ly if set, set language based on input command
+	TESTS_MAIN_COMMAND only if set, set language based on input command
 	name.
 
 2026-06-20 Patrice Dumas  <pertusus@free.fr>
