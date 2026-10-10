@@ -1150,6 +1150,17 @@ With @code{@@set txidefnamenospace}
 @end deftypefn
 
 
+@chapter Test of @code{@@math}
+
+In section title:
+@section Laplacian (@math{\nabla ^2}) operators
+
+In @code{@@example}:
+
+@example
+AA@math{\nabla ^2}AA
+@end example
+
 
 @chapter Test of @code{@@displaymath}
 

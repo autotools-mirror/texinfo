@@ -1,5 +1,9 @@
 2026-10-10  Gavin Smith <gavinsmith0123@gmail.com>
 
+	* doc/texinfo-tex-test.texi (Test of @math): Add.
+
+2026-10-10  Gavin Smith <gavinsmith0123@gmail.com>
+
 	Fix \ in @math on section line
 
 	* doc/texinfo.tex (\math): Use \scantokens to scan the @math argument.
