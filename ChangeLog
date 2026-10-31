@@ -1,5 +1,10 @@
 2026-10-31  Gavin Smith <gavinsmith0123@gmail.com>
 
+	* tta/perl/Makefile.am (uninstall-hook): Add rule for uninstalling
+	makeinfo symlink, needed with Automake 1.19.92.
+
+2026-10-31  Gavin Smith <gavinsmith0123@gmail.com>
+
 	Do not complain about wrong Up pointer for nodes in Top node menu
 
 	* tta/perl/Texinfo/StructuringNonXS.pm
