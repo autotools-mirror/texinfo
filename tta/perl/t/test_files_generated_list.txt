@@ -1684,7 +1684,6 @@ t/results/init_files_tests/add_lower_case_redirection_file_names/res_html/chap.h
 t/results/init_files_tests/add_lower_case_redirection_file_names/res_html/index.html
 t/results/init_files_tests/add_lower_case_redirection_file_names/res_html/lowerc.html
 t/results/init_files_tests/add_lower_case_redirection_file_names/res_html/section.html
-t/results/init_files_tests/add_lower_case_redirection_file_names/res_html/up-and-down.html
 t/results/init_files_tests/button_replacement_and_direction_customization.pl
 t/results/init_files_tests/button_replacement_and_direction_customization/res_html/chapter.html
 t/results/init_files_tests/button_replacement_and_direction_customization/res_html/index.html

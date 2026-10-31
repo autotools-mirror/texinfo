@@ -41,11 +41,12 @@ sub test_lower_case_redirection_file_names {
   return @$reference_redirection_files
     if ($added_redirection_file eq $filename);
   foreach my $redirection_file (@$reference_redirection_files) {
-    if ($added_redirection_file eq $redirection_file) {
+    if ($added_redirection_file eq $redirection_file
+        or ($converter->get_conf('CASE_INSENSITIVE_FILENAMES')
+            and $added_redirection_file eq lc($redirection_file))) {
       return @$reference_redirection_files;
     }
   }
-  my @result = (@$reference_redirection_files, $added_redirection_file);
   return @$reference_redirection_files, $added_redirection_file;
 }
 
