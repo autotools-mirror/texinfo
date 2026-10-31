@@ -1560,8 +1560,8 @@ $result_errors{'macro_in_misc_commands'} = '* W l23|@documentlanguage should onl
 * W l65|@definfoenclose is obsolete
  warning: @definfoenclose is obsolete
 
-* W l78|@definfoenclose is obsolete
- warning: @definfoenclose is obsolete
+* WC l65|further warnings for @definfoenclose suppressed
+ warning: further warnings for @definfoenclose suppressed
 
 * W l125|multiple @footnotestyle
  warning: multiple @footnotestyle
@@ -1595,6 +1595,9 @@ $result_errors{'macro_in_misc_commands'} = '* W l23|@documentlanguage should onl
 
 * W l174:@refillmacro|@refill is obsolete
  warning: @refill is obsolete (possibly involving @refillmacro)
+
+* WC l174:@refillmacro|further warnings for @refill suppressed
+ warning: further warnings for @refill suppressed (possibly involving @refillmacro)
 
 ';
 

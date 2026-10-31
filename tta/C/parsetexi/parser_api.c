@@ -26,6 +26,7 @@
 #include "option_types.h"
 /* new_element */
 #include "tree.h"
+#include "hashmap.h"
 /* for wipe_values ... */
 #include "utils.h"
 /* reset_command_stack */
@@ -75,6 +76,9 @@ initialize_parsing (enum context root_ct)
   clear_strings_list (&parser_include_directories);
   copy_strings (&parser_include_directories,
                 &global_parser_conf->include_directories);
+
+  clear_c_hashmap (&warned_deprecated_commands);
+  init_c_hashmap (&warned_deprecated_commands, DEPRECATED_CMD_NUMBER);
 
   /* with the help of parser_conf_set_* calls, same as setting parser_state
      documentlanguage and documentscript from parser conf */

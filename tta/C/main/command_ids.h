@@ -434,6 +434,8 @@ CM_hex_7e,
 
 #define BUILTIN_CMD_NUMBER 398
 
+#define DEPRECATED_CMD_NUMBER 7
+
 #define TXI_CMD_CATEGORY_BLOCK \
   tcc_cmd_category(conditional, block, BLOCK) \
   tcc_cmd_category(def, block, BLOCK) \

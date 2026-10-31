@@ -170,6 +170,9 @@ $result_errors{'also_not_line'} = '* W l3|@page should only appear at the beginn
 * W l15|@refill is obsolete
  warning: @refill is obsolete
 
+* WC l15|further warnings for @refill suppressed
+ warning: further warnings for @refill suppressed
+
 * W l16|@novalidate should only appear at the beginning of a line
  warning: @novalidate should only appear at the beginning of a line
 

@@ -751,11 +751,8 @@ $result_errors{'refs_formatting'} = '* W l34|@inforef is obsolete
 * W l35|@inforef is obsolete
  warning: @inforef is obsolete
 
-* W l36|@inforef is obsolete
- warning: @inforef is obsolete
-
-* W l37|@inforef is obsolete
- warning: @inforef is obsolete
+* WC l35|further warnings for @inforef suppressed
+ warning: further warnings for @inforef suppressed
 
 * E l19|@ref reference to nonexistent node `(pman)anode\'
  @ref reference to nonexistent node `(pman)anode\'

@@ -393,8 +393,8 @@ $result_errors{'macro_alias_definfoenclose_defindex'} = '* W l12|@definfoenclose
 * W l21|@definfoenclose is obsolete
  warning: @definfoenclose is obsolete
 
-* W l40|@definfoenclose is obsolete
- warning: @definfoenclose is obsolete
+* WC l21|further warnings for @definfoenclose suppressed
+ warning: further warnings for @definfoenclose suppressed
 
 ';
 

@@ -752,11 +752,8 @@ $result_errors{'top_in_ref'} = '* W l35|@inforef is obsolete
 * W l36|@inforef is obsolete
  warning: @inforef is obsolete
 
-* W l37|@inforef is obsolete
- warning: @inforef is obsolete
-
-* W l38|@inforef is obsolete
- warning: @inforef is obsolete
+* WC l36|further warnings for @inforef suppressed
+ warning: further warnings for @inforef suppressed
 
 * E l20|@ref reference to nonexistent node `(pman)Top\'
  @ref reference to nonexistent node `(pman)Top\'

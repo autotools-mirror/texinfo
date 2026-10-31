@@ -777,26 +777,11 @@ $result_errors{'ref_error_formatting'} = '* W l4|command @ref missing a node or 
 * W l34|@inforef is obsolete
  warning: @inforef is obsolete
 
-* W l35|@inforef is obsolete
- warning: @inforef is obsolete
-
-* W l36|@inforef is obsolete
- warning: @inforef is obsolete
+* WC l34|further warnings for @inforef suppressed
+ warning: further warnings for @inforef suppressed
 
 * W l36|command @inforef missing a node or external manual argument
  warning: command @inforef missing a node or external manual argument
-
-* W l38|@inforef is obsolete
- warning: @inforef is obsolete
-
-* W l39|@inforef is obsolete
- warning: @inforef is obsolete
-
-* W l40|@inforef is obsolete
- warning: @inforef is obsolete
-
-* W l41|@inforef is obsolete
- warning: @inforef is obsolete
 
 * E l2|@ref reference to nonexistent node `node\'
  @ref reference to nonexistent node `node\'

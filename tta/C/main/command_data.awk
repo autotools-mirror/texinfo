@@ -146,6 +146,7 @@ END {
 
     # We want the output sorted so we can use bsearch
     PROCINFO["sorted_in"]="@ind_str_asc"
+    deprecated_cmd_nr = 0
     i = 1
     for (c in commands) {
         i++
@@ -191,6 +192,8 @@ END {
                   }
                   tmp_str = global_unique_commands_struct_str
                   global_unique_commands_struct_str = tmp_str "   ELEMENT *" c ";\n"
+                } else if (flags_array[flag_idx] == "deprecated") {
+                  deprecated_cmd_nr++
                 }
                 # filter out other flags.  Use
                 # an array and not a regexp because word boundary matching
@@ -277,6 +280,8 @@ END {
     print      > CI
     print "#define BUILTIN_CMD_NUMBER " i > CI
     print                                 > CI
+    print "#define DEPRECATED_CMD_NUMBER " deprecated_cmd_nr > CI
+    print                                                    > CI
 
     print global_unique_commands_struct_str   > GCT
     print "   /* Arrays of elements */"       > GCT

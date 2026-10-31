@@ -117,6 +117,7 @@ extern const char *linecommand_expansion_delimiters;
 extern DOCUMENT *parsed_document;
 
 extern FLOAT_RECORD_LIST parser_float_records;
+extern C_HASHMAP warned_deprecated_commands;
 
 extern NODE_RELATIONS *current_node;
 extern const SECTION_RELATIONS *current_section;

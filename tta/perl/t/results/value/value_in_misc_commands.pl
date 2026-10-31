@@ -1262,8 +1262,8 @@ $result_errors{'value_in_misc_commands'} = '* E l20|bad argument to @headings: o
 * W l43|@definfoenclose is obsolete
  warning: @definfoenclose is obsolete
 
-* W l52|@definfoenclose is obsolete
- warning: @definfoenclose is obsolete
+* WC l43|further warnings for @definfoenclose suppressed
+ warning: further warnings for @definfoenclose suppressed
 
 * W l83|multiple @footnotestyle
  warning: multiple @footnotestyle

@@ -63,6 +63,9 @@ $result_errors{'empty_ref'} = '* W l2|command @ref missing a node or external ma
 * W l3|@inforef is obsolete
  warning: @inforef is obsolete
 
+* WC l3|further warnings for @inforef suppressed
+ warning: further warnings for @inforef suppressed
+
 * W l3|command @inforef missing a node or external manual argument
  warning: command @inforef missing a node or external manual argument
 

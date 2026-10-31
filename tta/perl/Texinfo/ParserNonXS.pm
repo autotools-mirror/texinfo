@@ -171,6 +171,8 @@ my %parser_document_state_initialization = (
   'sections_level_modifier' => 0, # modified by raise/lowersections
 
   'input_file_encoding' => 'utf-8', # encoding name used for the input file
+  'warned_deprecated_commands' => {}, # number of warnings for deprecated
+                                      # commands
 );
 
 my %parsing_state_initialization = (
@@ -7741,9 +7743,16 @@ sub _process_remaining_on_line($$$$) {
       # goto funexit;  # used in XS code
     }
 
-    if (defined($deprecated_commands{$command})) {
-      _line_warn($self, sprintf(__("\@%s is obsolete"),
-                                $command), $source_info);
+    if (defined($deprecated_commands{$command})
+        and (!defined($self->{'warned_deprecated_commands'}->{$command})
+             or ($self->{'warned_deprecated_commands'}->{$command} < 2))) {
+       _line_warn($self, sprintf(__("\@%s is obsolete"),
+                                 $command), $source_info);
+      if (++($self->{'warned_deprecated_commands'}->{$command}) == 2) {
+        _line_warn($self, sprintf(__("further warnings for \@%s suppressed"),
+                                  $command),
+                   $source_info, 1);
+      }
     }
 
     # special case with @ followed by a newline protecting end of lines

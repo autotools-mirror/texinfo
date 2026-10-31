@@ -31,6 +31,7 @@
 #include "tree.h"
 #include "extra.h"
 #include "builtin_commands.h"
+#include "hashmap.h"
 /* for whitespace_chars, read_flag_len, item_line_parent
    parse_line_directive, count_multibyte */
 #include "utils.h"
@@ -69,6 +70,7 @@ DOCUMENT *parsed_document = 0;
 
 FLOAT_RECORD_LIST parser_float_records;
 
+C_HASHMAP warned_deprecated_commands;
 
 /* Check if the contents of S2 appear at S1). */
 int
@@ -2408,7 +2410,31 @@ process_remaining_on_line (ELEMENT **current_inout, const char **line_inout)
       /* Warn on deprecated command */
       if (parsed_command_data(cmd).flags & CF_deprecated)
         {
-          line_warn ("@%s is obsolete", command_name(cmd));
+          int found;
+          const char *cmd_name = command_name(cmd);
+          uintptr_t warning_nr
+           = (uintptr_t)c_hashmap_value (&warned_deprecated_commands, cmd_name,
+                                         &found);
+          if (found)
+            {
+              if (warning_nr < 2)
+                {
+                  warning_nr++;
+                  c_hashmap_set_value (&warned_deprecated_commands, cmd_name,
+                                       (const void *) warning_nr);
+                  line_warn ("@%s is obsolete", cmd_name);
+                  if (warning_nr == 2)
+                    line_error_ext (MSG_warning, 1, &current_source_info,
+                           "further warnings for @%s suppressed", cmd_name);
+                }
+            }
+          else
+            {
+              warning_nr = 1;
+              c_hashmap_register (&warned_deprecated_commands, cmd_name,
+                                  (const void *) warning_nr);
+              line_warn ("@%s is obsolete", cmd_name);
+            }
         }
 
       /* special case with @ followed by a newline protecting end of lines

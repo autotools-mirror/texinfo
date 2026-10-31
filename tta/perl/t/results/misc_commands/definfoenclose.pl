@@ -114,11 +114,11 @@ $result_errors{'definfoenclose'} = '* W l2|@definfoenclose is obsolete
 * W l6|@definfoenclose is obsolete
  warning: @definfoenclose is obsolete
 
+* WC l6|further warnings for @definfoenclose suppressed
+ warning: further warnings for @definfoenclose suppressed
+
 * W l6|@definfoenclose should only appear at the beginning of a line
  warning: @definfoenclose should only appear at the beginning of a line
-
-* W l12|@definfoenclose is obsolete
- warning: @definfoenclose is obsolete
 
 ';
 

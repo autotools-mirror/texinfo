@@ -111,14 +111,11 @@ $result_errors{'definfoenclose_texinfo_commands'} = '* W l1|@definfoenclose is o
 * W l2|@definfoenclose is obsolete
  warning: @definfoenclose is obsolete
 
+* WC l2|further warnings for @definfoenclose suppressed
+ warning: further warnings for @definfoenclose suppressed
+
 * E l2|cannot redefine with @definfoenclose: TeX
  cannot redefine with @definfoenclose: TeX
-
-* W l3|@definfoenclose is obsolete
- warning: @definfoenclose is obsolete
-
-* W l4|@definfoenclose is obsolete
- warning: @definfoenclose is obsolete
 
 * E l4|cannot redefine with @definfoenclose: quotation
  cannot redefine with @definfoenclose: quotation

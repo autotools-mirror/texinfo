@@ -1,3 +1,18 @@
+2026-10-31  Gavin Smith  <gavinsmith0123@gmail.com>, and
+            Patrice Dumas  <pertusus@free.fr>
+
+	limit warnings for repeated use of deprecated commands
+
+	* tta/C/main/command_data.awk: add DEPRECATED_CMD_NUMBER.
+
+	* tta/C/parsetexi/parser.c (process_remaining_on_line)
+	(warned_deprecated_commands), tta/C/parsetexi/parser_api.c
+	(initialize_parsing), tta/perl/Texinfo/ParserNonXS.pm
+	(%parser_document_state_initialization, _process_remaining_on_line):
+	limit the number of warnings to 2 for obsolete commands, and add a
+	final message that there won't be more warnings.  Perl change and idea
+	by Gavin, C change by Patrice.
+
 2026-10-31 Patrice Dumas  <pertusus@free.fr>
 
 	* tta/perl/ext/latex2html.pm (l2h_to_html): add missing declaration.
