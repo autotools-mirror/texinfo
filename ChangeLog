@@ -1,5 +1,9 @@
 2026-10-31 Patrice Dumas  <pertusus@free.fr>
 
+	* tta/perl/ext/latex2html.pm (l2h_to_html): add missing declaration.
+
+2026-10-31 Patrice Dumas  <pertusus@free.fr>
+
 	* tta/perl/t/init/lowercase_file_names_and_redirections.pm
 	(test_lower_case_redirection_file_names),
 	tta/perl/t/test_files_generated_list.txt: compare case-insensitively

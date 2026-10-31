@@ -433,6 +433,7 @@ sub l2h_to_html($$$) {
   my $init_file = $self->get_conf('L2H_FILE');
   if (defined($init_file) and $init_file ne '') {
     # we use the encoding also used to encode $call_start below
+    my $encoded_init_file;
     if (defined($encoding)) {
       $encoded_init_file = encode($encoding, $init_file);
     } else {
