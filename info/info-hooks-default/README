@@ -1,0 +1,21 @@
+Hints for working on these hooks.
+
+manual-not-found is generated from manual-not-found.in.
+
+Rebuild with
+
+$ make -C .. info-hooks-default/manual-not-found
+
+You can test the hooks by running from the command line,
+e.g. "./manual-not-found foo".
+
+To test, the files need to be accessible via the XDG config dirs.
+For example, you could do:
+
+$ mkdir -p ~/.config/texinfo/info-hooks/
+$ cd ~/.config/texinfo/info-hooks/
+$ ln -sf -t . $texinfo_git_checkout/info/info-hooks-default/*
+
+where $texinfo_git_checkout is the directory name of the Texinfo sources.
+
+"info -x 1" prints some messages on stderr about hook searching.

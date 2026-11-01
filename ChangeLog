@@ -1,3 +1,8 @@
+2026-11-01  Gavin Smith <gavinsmith0123@gmail.com>
+
+	* info/info-hooks-default/README: add some notes about developing
+	the hook script.
+
 2026-11-01  Patrice Dumas  <pertusus@free.fr>
 
 	* tta/tests/tex_html/Makefile.am (EXTRA_DIST),
