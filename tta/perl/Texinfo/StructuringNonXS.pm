@@ -1005,7 +1005,7 @@ sub check_node_tree_menu_structure($) {
       my $node = $node_relations->{'element'};
       next if !$node_relations->{'menus'};
 
-      my $in_top_node = ($node eq $top_node);
+      my $in_top_node = (defined($top_node) and $node eq $top_node);
 
       my ($menu_prev_node, $menu_prev_node_directions);
       foreach my $menu (@{$node_relations->{'menus'}}) {
