@@ -52,18 +52,6 @@ reader support.
 Bugs
 ====
 
-To be investigated/fixed as C without libperl/Perl is more important now, as
-proposed by Gavin.
-
-Without XS, on Cygwin32 linking leads to an empty library:
- libtool: link: gcc -shared  main/.libs/libtexinfo_la-tree.o main/.libs/libtexinfo_la-text.o main/.libs/libtexinfo_la-base_utils.o main/.libs/libtexinfo_la-builtin_commands.o main/.libs/libtexinfo_la-types_data.o main/.libs/libtexinfo_la-debug.o main/.libs/libtexinfo_la-errors.o .... -Wl,--whole-archive ./.libs/libcallperl_libtexinfo.a -Wl,--no-whole-archive  -liconv -lintl  -g -O2   -o .libs/cygtexinfo-1.dll -Wl,--enable-auto-image-base -Xlinker --out-implib -Xlinker .libs/libtexinfo.dll.a
-
-The following link flags are in Perl flags and are probably needed
- -Wl,--enable-auto-import -Wl,--export-all-symbols
-
-Reported here:
-https://savannah.gnu.org/support/index.php?111465
-
 
 Documentation
 =============
@@ -103,6 +91,16 @@ converter_customization_options, unique_at_command_options.
 
 Delayed bugs/features
 =====================
+
+In the CI, for Cygwin32, with --disable-perl-xs, there is a failure in
+linking because shared libraries are empty because
+"-Wl,--enable-auto-import -Wl,--export-all-symbols" are not added
+by libtool.  This only show up if built without XS, as the flags are
+in Perl flags.  tta/C/Makefile.am ADDED_LTLIB_LDFLAGS is there to be able
+to pass such flags.
+Reported here:
+  https://savannah.gnu.org/support/index.php?111465
+Nothing more to do, wait for the bug to be fixed in libtool.
 
 GCC use a simple Perl script to convert Texinfo to POD, as an intermediary
 for man pages generation.  There are also special macros and "magic"
@@ -249,8 +247,6 @@ See message/thread from Reißner Ernst: Feature request: api docs
 https://lists.gnu.org/archive/html/bug-texinfo/2022-02/msg00000.html
 
 Right now VERBOSE is almost not used.
-
-Should we warn if output is on STDOUT and OUTPUT_ENCODING_NAME != MESSAGE_OUTPUT_ENCODING_NAME?
 
 Handle better @exdent in html? (there is a FIXME in the code)
 

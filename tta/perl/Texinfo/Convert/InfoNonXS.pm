@@ -677,8 +677,9 @@ sub format_footnotes($;$) {
         'contents' => [Texinfo::TreeElement::new({'type' => 'arguments_line',
                                       'contents' => [$footnotes_node_arg],})],
         'extra' => {'is_target' => 1,
-                'identifier'
-                  => $node_element->{'extra'}->{'identifier'}.'-Footnotes',
+           # identifier added to be like other nodes, but should not be used
+                    'identifier'
+                     => $node_element->{'extra'}->{'identifier'}.'-Footnotes',
                    }
       });
       my $footnotes_node_relations = {
@@ -694,10 +695,11 @@ sub format_footnotes($;$) {
       my $footnote_number = $footnote_info->{'number'};
 
       # If nested within another footnote and footnotestyle is separate,
-      # the element here will be the parent element and not the footnote
-      # element, while the pxref will point to the name with the
-      # footnote node taken into account.  Not really problematic as
-      # nested footnotes are not right.
+      # the element here will be the parent element, found through the
+      # output unit, and not the node holding footnotes element, while
+      # the pxref to a footnote will point to a name with the name of the
+      # node holding footnotes taken into account, found as current_node.
+      # Not really problematic as nested footnotes are not right.
       if (defined($label_element) and defined($self->{'target_locations'})) {
         my $footnote_anchor_postfix = "-Footnote-$footnote_number";
         my $footnote_anchor_arg
@@ -708,8 +710,10 @@ sub format_footnotes($;$) {
         my $footnote_anchor = Texinfo::TreeElement::new({'cmdname' => 'anchor',
                                     'contents' => [$footnote_anchor_arg],
                                     'extra' => {'is_target' => 1,
+           # identifier added to be like other anchors, but should not be used
                                                 'identifier'
-       => $node_element->{'extra'}->{'identifier'}.$footnote_anchor_postfix},
+       => $node_element->{'extra'}->{'identifier'}.$footnote_anchor_postfix
+                                               },
                             });
         $self->add_target_location($footnote_anchor);
       }

@@ -3512,20 +3512,19 @@ sub _convert($$) {
             # place where we might output actual UTF-8 binary bytes, we have
             # to check that it is possible.  If not, silently fall back to
             # plain text, on the theory that the user wants something.
-            my $res;
             if ($self->{'to_utf8'}) {
               my $possible_conversion
                 = Texinfo::Convert::Unicode::check_unicode_point_conversion(
                                                   $arg_text, $self->{'debug'});
               if ($possible_conversion) {
-                $res = chr(hex($arg_text)); # ok to call chr
-              } else {
-                $res = "U+$arg_text";
+                my $res = chr(hex($arg_text)); # ok to call chr
+                _stream_output_add_text($self, $res);
+                return;
               }
-            } else {
-              $res = "U+$arg_text";  # not outputting UTF-8
             }
-            _stream_output_add_text ($self, $res);
+            # split in two calls to match C code
+            _stream_output_add_text ($self, 'U+');
+            _stream_output_add_text ($self, $arg_text);
           }
         }
         return;
@@ -3800,8 +3799,10 @@ sub _convert($$) {
           + $item_indent_format_length{$element->{'parent'}->{'cmdname'}});
       push @{$self->{'formatters'}}, $line;
       if ($element->{'parent'}->{'cmdname'} eq 'enumerate') {
+        # split in two calls to match C code
         _stream_output_add_next($self,
-             Texinfo::Common::enumerate_item_representation($element). '. ');
+             Texinfo::Common::enumerate_item_representation($element));
+        _stream_output_add_next($self, '. ');
       } else {
         my $prepended_element
           = Texinfo::Common::item_itemize_prepended($element);

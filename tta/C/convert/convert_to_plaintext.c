@@ -5217,7 +5217,6 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
                                        &surplus_arg);
                   if (arg_text && strcmp (arg_text->text, ""))
                     {
-                      int conversion_done = 0;
                       if (self_plaintext->to_utf8)
                         {
                           int len;
@@ -5229,16 +5228,13 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
                             {
                               stream_output_add_text (self, result, len);
                               free (result);
-                              conversion_done = 1;
+                              return;
                             }
                         }
 
-                      if (!conversion_done)
-                        {
-                          stream_output_add_text (self, "U+", 2);
-                          stream_output_add_text (self, arg_text->text,
-                                                  arg_text->end);
-                        }
+                      stream_output_add_text (self, "U+", 2);
+                      stream_output_add_text (self, arg_text->text,
+                                              arg_text->end);
                     }
                 }
               return;
