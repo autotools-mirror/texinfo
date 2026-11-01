@@ -15,12 +15,14 @@ use Texinfo::Convert::Paragraph qw(add_end_sentence add_next add_pending_word
 
 ok(1, 'modules loading');
 
+# TODO destroy paragraphs
+
 sub test_para($$$;$) {
   my ($args, $reference, $name, $conf) = @_;
 
   my $result = '';
   $conf = {} if (!defined($conf));
-  #$conf->{'DEBUG'} = 1;
+  #$conf->{'debug'} = 1;
   my $para = Texinfo::Convert::Paragraph::new($conf);
   foreach my $arg (@$args) {
     $result .= add_text($para, $arg);
@@ -517,7 +519,7 @@ sub test_line($$$;$)
   my $conf = shift;
 
   my $result = '';
-  #$conf = {'DEBUG' => 1} if (!defined($conf));
+  #$conf = {'debug'} => 1} if (!defined($conf));
   $conf = {} if (!defined($conf));
   my $line = _new_line_formatter($conf);
   foreach my $arg (@$args) {

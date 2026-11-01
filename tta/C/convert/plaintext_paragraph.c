@@ -579,7 +579,8 @@ TEXT
 para_add_text (const char *text, int len)
 {
   const char *p = text;
-  char32_t wc_fw = (char32_t) '0';
+  char32_t next_wc = (char32_t) '0';
+  char32_t wc;
   size_t next_len = 0;
   int width;
   static TEXT result;
@@ -602,6 +603,13 @@ para_add_text (const char *text, int len)
          before the beginning, or is type_finished after the last block. */
 
       type = next_type;
+
+      /* NOTE next_wc is only set/reset when the next type is a non-space
+         character.
+         Therefore wc is accurate only when previous next_type was a non-space
+         character, ie when type is a non-space character.  wc should
+         only be used in that case */
+      wc = next_wc;
 
       /* at the end of the string */
       if (type == type_finished)
@@ -634,17 +642,16 @@ para_add_text (const char *text, int len)
             }
           else
             {
-              char32_t wc;
-              next_len = u8_mbtouc (&wc, (uint8_t *) q, len);
+              next_len = u8_mbtouc (&next_wc, (uint8_t *) q, len);
 
-              if (wc == 0xfffd) /* bug - invalid string */
+              if (next_wc == 0xfffd) /* bug - invalid string */
                 {
                   if (next_len <= 0)
                     next_len = 1; /* avoid an infinte loop */
                 }
 
              /* Note: width == 0 includes accent characters. */
-              width = uc_width (wc, "UTF-8");
+              width = uc_width (next_wc, "UTF-8");
               if (width == 1 || width == 0)
                 {
                   regular_col_count += width;
@@ -653,7 +660,6 @@ para_add_text (const char *text, int len)
               else if (width == 2)
                 {
                   next_type = type_double_width;
-                  wc_fw = wc; /* final value is used below */
                 }
               else
                 next_type = type_unknown;
@@ -797,7 +803,7 @@ para_add_text (const char *text, int len)
 
           /* fullwidth latin letters can be upper case, so it is important to
              use the actual characters here. */
-          state.last_letter = wc_fw;
+          state.last_letter = wc;
 
           /* We allow a line break in between Chinese characters even if
              there was no space between them, unlike single-width
