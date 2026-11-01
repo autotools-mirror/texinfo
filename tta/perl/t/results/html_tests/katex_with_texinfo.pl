@@ -101,8 +101,8 @@ $result_converted{'html'}->{'katex_with_texinfo'} = '<!DOCTYPE html>
 pre.displaymath {font-style: italic; font-family: serif; display: flex; justify-content: center}
 </style>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.19.1/dist/katex.css" integrity="sha384-dyEuTchRIWTUUS5esbTCpMfx+B+xfO8EoTt5SiUbKmafuP0Gilzcq4YNJuy9EkCC" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/katex@0.19.1/dist/katex.js" integrity="sha384-H4X0CTVqduiMCy79KQw+noSKkBB6tvyQopi29LC//G1uFcl52atjOC6Ltc9br/U7" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.19.1/dist/katex.min.css" integrity="sha384-WwGtaC6ywCHxA5cstpj/3+xIZvTez8dq2IcBQaXRkenHZ7FVVq1ZROtURwfbtTlG" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/katex@0.19.1/dist/katex.min.js" integrity="sha384-a1WQdjRj162i159OYq041X6I4K8NenkrI09LlPmiHg0YOb7CR+wJOraXwK9abpnE" crossorigin="anonymous"></script>
 <script>
 const macros = {};
 </script>

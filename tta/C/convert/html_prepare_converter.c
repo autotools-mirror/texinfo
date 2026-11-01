@@ -4122,7 +4122,7 @@ initialize_jslicense_files (JSLICENSE_FILE_INFO_LIST *jslicences_files_info,
   jslicences_files_info->number = size;
 }
 
-#define KATEX_0_19_1_SCRIPT "https://cdn.jsdelivr.net/npm/katex@0.19.1/dist/katex.js"
+#define KATEX_0_19_1_SCRIPT "https://cdn.jsdelivr.net/npm/katex@0.19.1/dist/katex.min.js"
 
 /* first function to call a stage handler */
 int
@@ -4214,8 +4214,8 @@ html_setup_output (CONVERTER *self, char **paths)
               if (! strcmp(self->conf->KATEX_SCRIPT.o.string,
                            KATEX_0_19_1_SCRIPT))
                 option_set_conf (&self->conf->KATEX_LINKS, 0,
-      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/katex@0.19.1/dist/katex.css\" integrity=\"sha384-dyEuTchRIWTUUS5esbTCpMfx+B+xfO8EoTt5SiUbKmafuP0Gilzcq4YNJuy9EkCC\" crossorigin=\"anonymous\">\n"
-      "<script src=\"" KATEX_0_19_1_SCRIPT "\" integrity=\"sha384-H4X0CTVqduiMCy79KQw+noSKkBB6tvyQopi29LC//G1uFcl52atjOC6Ltc9br/U7\" crossorigin=\"anonymous\"></script>\n");
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/katex@0.19.1/dist/katex.min.css\" integrity=\"sha384-WwGtaC6ywCHxA5cstpj/3+xIZvTez8dq2IcBQaXRkenHZ7FVVq1ZROtURwfbtTlG\" crossorigin=\"anonymous\">\n"
+      "<script src=\"" KATEX_0_19_1_SCRIPT "\" integrity=\"sha384-a1WQdjRj162i159OYq041X6I4K8NenkrI09LlPmiHg0YOb7CR+wJOraXwK9abpnE\" crossorigin=\"anonymous\"></script>\n");
               else
                 message_list_document_error (&self->error_messages,
                          self->conf, 0, "Unknown KaTeX script: %s",
@@ -4223,7 +4223,7 @@ html_setup_output (CONVERTER *self, char **paths)
             }
           if (!self->conf->KATEX_SOURCE.o.string)
             option_set_conf (&self->conf->KATEX_SOURCE, 0,
-                             "https://github.com/KaTeX/KaTeX");
+                             "https://github.com/KaTeX/KaTeX/releases/tag/v0.19.1");
           if (!self->conf->KATEX_CONFIGURATION.o.string)
             option_set_conf (&self->conf->KATEX_CONFIGURATION, 0,
                              "throwOnError: false");

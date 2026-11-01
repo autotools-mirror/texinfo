@@ -5091,7 +5091,7 @@ sub _node_redirections($$$$) {
 }
 
 my $katex_0_19_1_script
-   = 'https://cdn.jsdelivr.net/npm/katex@0.19.1/dist/katex.js';
+   = 'https://cdn.jsdelivr.net/npm/katex@0.19.1/dist/katex.min.js';
 
 sub _setup_output($) {
   my $self = shift;
@@ -5159,9 +5159,9 @@ sub _setup_output($) {
       if (! defined($katex_links)) {
         my $katex_script = $self->get_conf('KATEX_SCRIPT');
         if ($katex_script eq $katex_0_19_1_script) {
-          $katex_links = '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.19.1/dist/katex.css" integrity="sha384-dyEuTchRIWTUUS5esbTCpMfx+B+xfO8EoTt5SiUbKmafuP0Gilzcq4YNJuy9EkCC" crossorigin="anonymous">'."\n"
+          $katex_links = '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.19.1/dist/katex.min.css" integrity="sha384-WwGtaC6ywCHxA5cstpj/3+xIZvTez8dq2IcBQaXRkenHZ7FVVq1ZROtURwfbtTlG" crossorigin="anonymous">'."\n"
             .'<script src="'.$katex_0_19_1_script.
-    '" integrity="sha384-H4X0CTVqduiMCy79KQw+noSKkBB6tvyQopi29LC//G1uFcl52atjOC6Ltc9br/U7" crossorigin="anonymous"></script>'."\n";
+    '" integrity="sha384-a1WQdjRj162i159OYq041X6I4K8NenkrI09LlPmiHg0YOb7CR+wJOraXwK9abpnE" crossorigin="anonymous"></script>'."\n";
           $self->set_conf('KATEX_LINKS', $katex_links);
         } else {
           $self->converter_document_error(
@@ -5171,7 +5171,7 @@ sub _setup_output($) {
 
       my $katex_source = $self->get_conf('KATEX_SOURCE');
       if (! defined($katex_source)) {
-        $katex_source = 'https://github.com/KaTeX/KaTeX';
+        $katex_source = 'https://github.com/KaTeX/KaTeX/releases/tag/v0.19.1';
         $self->set_conf('KATEX_SOURCE', $katex_source);
       }
 

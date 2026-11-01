@@ -1,5 +1,17 @@
 2026-11-01  Gavin Smith <gavinsmith0123@gmail.com>
 
+	Reference minified KaTeX files
+
+	* tta/C/convert/html_prepare_converter.c (KATEX_0_19_1_SCRIPT):
+	Reference "katex.min.js" not "katex.js".
+	(html_setup_output): Reference "katex.min.css" not "katex.css".
+	Reference specific link for katex 0.19.1 on Github in KATEX_SOURCE.
+
+	* tta/perl/Texinfo/Convert/HTMLNonXS.pm ($katex_0_19_1_script)
+	(_setup_output): Likewise.
+
+2026-11-01  Gavin Smith <gavinsmith0123@gmail.com>
+
 	Edit KaTeX documentation
 
 	* doc/texinfo.texi (Inserting Math, HTML Customization for Math):
