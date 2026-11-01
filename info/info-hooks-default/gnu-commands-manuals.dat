@@ -1,18 +1,172 @@
 # gnu-commands-manuals.dat
 #
 # Copyright 2026 Free Software Foundation, Inc.
-# 
+#
 # Copying and distribution of this file, with or without modification,
 # are permitted in any medium without royalty provided the copyright
 # notice and this notice are preserved.
-#
 #
 # List of commands that are documented in a manual with a different name.
 # Used by default manual-not-found hook when there is no dir entry for this
 # manual, e.g. "info ls" when the coreutils manual is not installed.
 
 # Note that a manual isn't displayed unless it is also listed in
-# gnu-manuals-locations.dat. 
+# gnu-manuals-locations.dat.
 
+# List of coreutils programs extracted from coreutils.info with:
+# info coreutils | perl -wnle '/Node: ([^, ]*) invocation/ && print $1'
+cat		coreutils
+tac		coreutils
+nl		coreutils
+od		coreutils
+base32		coreutils
+base64		coreutils
+basenc		coreutils
+fmt		coreutils
+pr		coreutils
+fold		coreutils
+head		coreutils
+tail		coreutils
+split		coreutils
+csplit		coreutils
+wc		coreutils
+sum		coreutils
+cksum		coreutils
+md5sum		coreutils
+b2sum		coreutils
+sha1sum		coreutils
+sort		coreutils
+shuf		coreutils
+uniq		coreutils
+comm		coreutils
+ptx		coreutils
+tsort		coreutils
+cut		coreutils
+paste		coreutils
+join		coreutils
+tr		coreutils
+expand		coreutils
+unexpand	coreutils
 ls		coreutils
+dir		coreutils
+vdir		coreutils
+dircolors	coreutils
+cp		coreutils
+dd		coreutils
+install		coreutils
+mv		coreutils
+rm		coreutils
+shred		coreutils
+link		coreutils
+ln		coreutils
+mkdir		coreutils
+mkfifo		coreutils
+mknod		coreutils
+readlink	coreutils
+rmdir		coreutils
+unlink		coreutils
+chown		coreutils
+chgrp		coreutils
+chmod		coreutils
+touch		coreutils
+df		coreutils
+du		coreutils
+stat		coreutils
+sync		coreutils
+truncate	coreutils
+echo		coreutils
+printf		coreutils
+yes		coreutils
+false		coreutils
+true		coreutils
+#test		coreutils
+expr		coreutils
+tee		coreutils
+basename	coreutils
+dirname		coreutils
+pathchk		coreutils
+mktemp		coreutils
+realpath	coreutils
+pwd		coreutils
+stty		coreutils
+printenv	coreutils
+tty		coreutils
+id		coreutils
+logname		coreutils
+whoami		coreutils
+groups		coreutils
+users		coreutils
+who		coreutils
+date		coreutils
+arch		coreutils
+nproc		coreutils
+uname		coreutils
+hostname	coreutils
+hostid		coreutils
+uptime		coreutils
+chcon		coreutils
+runcon		coreutils
+chroot		coreutils
+env		coreutils
+nice		coreutils
+nohup		coreutils
+stdbuf		coreutils
+timeout		coreutils
+kill		coreutils
+sleep		coreutils
+factor		coreutils
+numfmt		coreutils
+seq		coreutils
+
+# Extract list from Bash manual with:
+# LC_ALL=C info bash -n "Bourne Shell Builtins" | cat | grep ^\'
+:		bash
+.		bash
+break		bash
 cd		bash
+continue	bash
+eval		bash
+exec		bash
+exit		bash
+export		bash
+getopts		bash
+hash		bash
+pwd		bash
+readonly	bash
+return		bash
+shift		bash
+test		bash
+[		bash
+times		bash
+trap		bash
+umask		bash
+unset		bash
+
+# From output of:
+# LC_ALL=C info bash -n "Bash Builtins" | grep ^\'
+alias		bash
+bind		bash
+builtin		bash
+caller		bash
+command		bash
+declare		bash
+echo		bash
+enable		bash
+help		bash
+let		bash
+local		bash
+logout		bash
+mapfile		bash
+printf		bash
+read		bash
+readarray	bash
+source		bash
+type		bash
+typeset		bash
+ulimit		bash
+unalias		bash
+
+# Extra
+set		bash
+shopt		bash
+

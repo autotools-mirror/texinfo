@@ -1,5 +1,10 @@
 2026-11-01  Gavin Smith <gavinsmith0123@gmail.com>
 
+	* info/info-hooks-default/gnu-commands-manuals.dat:
+	Add coreutils programs and bash builtins.
+
+2026-11-01  Gavin Smith <gavinsmith0123@gmail.com>
+
 	Add individual commands for info hooks.
 
 	* info/info-hooks-default/gnu-commands-manuals.dat:
