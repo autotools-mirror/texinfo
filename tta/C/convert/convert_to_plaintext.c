@@ -1703,6 +1703,7 @@ info_cache_node_names (CONVERTER *self, NODE_RELATIONS_LIST *nodes_list,
 
       /* reset counters */
       para_end_line ();
+      para_end ();
 
       pop_count_context (&self_plaintext->count_context);
 

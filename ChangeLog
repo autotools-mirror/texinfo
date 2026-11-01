@@ -1,5 +1,12 @@
 2026-11-01  Patrice Dumas  <pertusus@free.fr>
 
+	* tta/C/convert/convert_to_plaintext.c (info_cache_node_names),
+	tta/perl/Texinfo/Convert/PlaintextNonXS.pm (_cache_node_names):
+	call paragraph end after a node name formatting in cache_node_names 
+	too.
+
+2026-11-01  Patrice Dumas  <pertusus@free.fr>
+
 	* tta/C/convert/plaintext_paragraph.c (para_add_text): keep the next
 	codepoint in a variable named next_wc to make clear that it is the
 	next character.  Set wc, the current character, based on next_wc.
