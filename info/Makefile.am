@@ -255,7 +255,7 @@ info-hooks-default/manual-not-found: info-hooks-default/manual-not-found.in
 
 dist_hooks_DATA = \
   info-hooks-default/gnu-manuals-locations.dat \
-  info-hooks-default/gnu-commands-manuals.dat \
+  info-hooks-default/gnu-commands-manuals.dat
 
 if HOST_IS_WINDOWS
   dist_hooks_DATA += info-hooks-default/gnu-manuals.awk

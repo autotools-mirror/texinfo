@@ -1,5 +1,9 @@
 2026-11-01  Gavin Smith <gavinsmith0123@gmail.com>
 
+	* info/Makefile.am: remove extra \ at end of a line
+
+2026-11-01  Gavin Smith <gavinsmith0123@gmail.com>
+
 	* info/info-hooks-default/gnu-commands-manuals.dat:
 	Add coreutils programs and bash builtins.
 
