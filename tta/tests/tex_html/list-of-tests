@@ -16,6 +16,8 @@ tex_gdef_httex tex_gdef.texi --html --no-split --init tex4ht.pm --iftex -D tex4h
 tex_gdef_l2h tex_gdef.texi --html --no-split -c 'HTML_MATH l2h' --iftex
 tex_mathjax tex.texi --html --no-split -c HTML_MATH=mathjax --iftex
 tex_gdef_mathjax tex_gdef.texi --html --no-split -c HTML_MATH=mathjax --iftex
+tex_katex tex.texi --html --no-split -c HTML_MATH=katex --iftex
+tex_gdef_katex tex_gdef.texi --html --no-split -c HTML_MATH=katex --iftex
 # No mediawki tests for now
 #tex_mediawiki tex.texi --init mediawiki.pm --iftex
 #tex_httex_mediawiki tex.texi --html --init tex4ht.pm --init mediawiki.pm --iftex

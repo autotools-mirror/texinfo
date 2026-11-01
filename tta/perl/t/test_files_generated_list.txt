@@ -1012,6 +1012,7 @@ t/results/html_tests/itemize_arguments_enable_encoding.pl
 t/results/html_tests/itemize_arguments_enable_encoding/res_html/index.html
 t/results/html_tests/itemize_tieaccent.pl
 t/results/html_tests/itemize_tieaccent/res_html/index.html
+t/results/html_tests/katex_with_texinfo.pl
 t/results/html_tests/letter_command_in_index.pl
 t/results/html_tests/maketitle_documentinfo_publication.pl
 t/results/html_tests/mathjax_with_texinfo.pl

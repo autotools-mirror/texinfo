@@ -4122,6 +4122,8 @@ initialize_jslicense_files (JSLICENSE_FILE_INFO_LIST *jslicences_files_info,
   jslicences_files_info->number = size;
 }
 
+#define KATEX_0_19_1_SCRIPT "https://cdn.jsdelivr.net/npm/katex@0.19.1/dist/katex.js"
+
 /* first function to call a stage handler */
 int
 html_setup_output (CONVERTER *self, char **paths)
@@ -4181,23 +4183,51 @@ html_setup_output (CONVERTER *self, char **paths)
                          handler_fatal_error_level, 0);
     }
 
-  if (self->conf->HTML_MATH.o.string
-      && !strcmp (self->conf->HTML_MATH.o.string, "mathjax"))
+  if (self->conf->HTML_MATH.o.string)
     {
-     /*
-     See https://www.gnu.org/licenses/javascript-labels.html
+      if (!strcmp (self->conf->HTML_MATH.o.string, "mathjax"))
+        {
+         /*
+         See https://www.gnu.org/licenses/javascript-labels.html
 
-     The link to the source for mathjax does not strictly follow the advice
-     there: instead we link to instructions for obtaining the full source in
-     its preferred form of modification.
-      */
-       if (!self->conf->MATHJAX_SCRIPT.o.string)
-         option_set_conf (&self->conf->MATHJAX_SCRIPT, 0,
-            "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js");
+         The link to the source for mathjax does not strictly follow the advice
+         there: instead we link to instructions for obtaining the full source in
+         its preferred form of modification.
+          */
+          if (!self->conf->MATHJAX_SCRIPT.o.string)
+            option_set_conf (&self->conf->MATHJAX_SCRIPT, 0,
+                "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js");
 
-       if (!self->conf->MATHJAX_SOURCE.o.string)
-         option_set_conf (&self->conf->MATHJAX_SOURCE, 0,
+          if (!self->conf->MATHJAX_SOURCE.o.string)
+            option_set_conf (&self->conf->MATHJAX_SOURCE, 0,
  "http://docs.mathjax.org/en/latest/web/hosting.html#getting-mathjax-via-git");
+        }
+      else if (!strcmp (self->conf->HTML_MATH.o.string, "katex"))
+        {/* Same comment as for MathJax */
+          if (!self->conf->KATEX_SCRIPT.o.string)
+            {
+              option_set_conf (&self->conf->KATEX_SCRIPT, 0,
+                               KATEX_0_19_1_SCRIPT);
+            }
+          if (!self->conf->KATEX_LINKS.o.string)
+            {
+              if (! strcmp(self->conf->KATEX_SCRIPT.o.string,
+                           KATEX_0_19_1_SCRIPT))
+                option_set_conf (&self->conf->KATEX_LINKS, 0,
+      "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/katex@0.19.1/dist/katex.css\" integrity=\"sha384-dyEuTchRIWTUUS5esbTCpMfx+B+xfO8EoTt5SiUbKmafuP0Gilzcq4YNJuy9EkCC\" crossorigin=\"anonymous\">\n"
+      "<script src=\"" KATEX_0_19_1_SCRIPT "\" integrity=\"sha384-H4X0CTVqduiMCy79KQw+noSKkBB6tvyQopi29LC//G1uFcl52atjOC6Ltc9br/U7\" crossorigin=\"anonymous\"></script>\n");
+              else
+                message_list_document_error (&self->error_messages,
+                         self->conf, 0, "Unknown KaTeX script: %s",
+                         self->conf->KATEX_SCRIPT.o.string);
+            }
+          if (!self->conf->KATEX_SOURCE.o.string)
+            option_set_conf (&self->conf->KATEX_SOURCE, 0,
+                             "https://github.com/KaTeX/KaTeX");
+          if (!self->conf->KATEX_CONFIGURATION.o.string)
+            option_set_conf (&self->conf->KATEX_CONFIGURATION, 0,
+                             "throwOnError: false");
+        }
     }
 
   setup_handler_status = html_run_stage_handlers (self, HSHT_type_setup);
@@ -4245,7 +4275,8 @@ html_setup_output (CONVERTER *self, char **paths)
   init_conversion_after_setup_handler (self);
 
   if (self->conf->HTML_MATH.o.string
-      && !strcmp (self->conf->HTML_MATH.o.string, "mathjax"))
+      && (!strcmp (self->conf->HTML_MATH.o.string, "mathjax")
+          || !strcmp (self->conf->HTML_MATH.o.string, "katex")))
     js_categories_list_nr++;
 
   if (self->conf->INFO_JS_DIR.o.string)
@@ -4255,18 +4286,36 @@ html_setup_output (CONVERTER *self, char **paths)
     {
       int i = 0;
       initialize_js_categories_list (&self_html->jslicenses, js_categories_list_nr);
-      if (self->conf->HTML_MATH.o.string
-          && !strcmp (self->conf->HTML_MATH.o.string, "mathjax"))
+      if (self->conf->HTML_MATH.o.string)
         {
-          JSLICENSE_FILE_INFO_LIST *jslicences_files_info
-            = &self_html->jslicenses.list[i];
-          initialize_jslicense_files (jslicences_files_info, "mathjax", 1);
-          fill_jslicense_file_info (&jslicences_files_info->list[0],
+          if (!strcmp (self->conf->HTML_MATH.o.string, "mathjax"))
+            {
+              JSLICENSE_FILE_INFO_LIST *jslicences_files_info
+                = &self_html->jslicenses.list[i];
+              initialize_jslicense_files (jslicences_files_info, "mathjax", 1);
+              fill_jslicense_file_info (&jslicences_files_info->list[0],
                                     self->conf->MATHJAX_SCRIPT.o.string,
                                     "Apache License, Version 2.0.",
                                 "https://www.apache.org/licenses/LICENSE-2.0",
                                     self->conf->MATHJAX_SOURCE.o.string);
-          i++;
+              i++;
+            }
+          else if (!strcmp (self->conf->HTML_MATH.o.string, "katex"))
+            {
+              JSLICENSE_FILE_INFO_LIST *jslicences_files_info
+                = &self_html->jslicenses.list[i];
+              initialize_jslicense_files (jslicences_files_info, "katex", 1);
+              fill_jslicense_file_info (&jslicences_files_info->list[0],
+                                    self->conf->KATEX_SCRIPT.o.string,
+                                    "Expat",
+                                /* use the link from KATEX_SOURCE */
+                                    "https://opensource.org/license/MIT",
+                                /*
+                                "https://directory.fsf.org/wiki/License:Expat",
+                                 */
+                                    self->conf->KATEX_SOURCE.o.string);
+              i++;
+            }
         }
       if (self->conf->INFO_JS_DIR.o.string)
         {
@@ -4294,6 +4343,8 @@ html_setup_output (CONVERTER *self, char **paths)
 
   return 1;
 }
+
+#undef KATEX_0_19_1_SCRIPT
 
 void
 html_setup_convert (CONVERTER *self)

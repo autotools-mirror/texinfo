@@ -3702,6 +3702,7 @@ html_default_format_end_file (CONVERTER *self, const char *filename,
     {
       int infojs_jslicenses_file_nr = 0;
       int mathjax_jslicenses_file_nr = 0;
+      int katex_jslicenses_file_nr = 0;
       size_t i;
       int status;
       for (i = 0; i < self_html->jslicenses.number; i++)
@@ -3712,13 +3713,21 @@ html_default_format_end_file (CONVERTER *self, const char *filename,
             infojs_jslicenses_file_nr = jslicences_files_info->number;
           else if (!strcmp (jslicences_files_info->category, "mathjax"))
             mathjax_jslicenses_file_nr = jslicences_files_info->number;
+          else if (!strcmp (jslicences_files_info->category, "katex"))
+            katex_jslicenses_file_nr = jslicences_files_info->number;
         }
       if (infojs_jslicenses_file_nr > 0
           || ((html_get_file_information (self, "mathjax",
                                           filename, &status) > 0
                || (!self->conf->SPLIT.o.string
                    || !strlen (self->conf->SPLIT.o.string)))
-              && mathjax_jslicenses_file_nr > 0))
+              && mathjax_jslicenses_file_nr > 0)
+          || ((html_get_file_information (self, "katex",
+                                          filename, &status) > 0
+               || (!self->conf->SPLIT.o.string
+                   || !strlen (self->conf->SPLIT.o.string)))
+              && katex_jslicenses_file_nr > 0)
+         )
         {
           if (self->conf->JS_WEBLABELS_FILE.o.string
               && self->conf->JS_WEBLABELS.o.string
@@ -4200,6 +4209,15 @@ file_header_information (CONVERTER *self, const ELEMENT *command,
  "  src=\"%s\">\n"
  "</script>", mathjax_script);
       free (mathjax_script);
+    }
+  else if (self->conf->HTML_MATH.o.string
+      && !strcmp (self->conf->HTML_MATH.o.string, "katex")
+      && (html_get_file_information (self, "katex", filename, &status) > 0))
+    {
+      text_append (&text, self->conf->KATEX_LINKS.o.string);
+      text_append (&text, "<script>\n"
+                          "const macros = {};\n"
+                          "</script>\n");
     }
   begin_info->extra_head = text.text;
   return begin_info;
@@ -6993,6 +7011,64 @@ html_convert_image_command (CONVERTER *self, const enum command_id cmd,
     }
 }
 
+static void
+protect_javascript_string (const char *string, TEXT *result)
+{
+  size_t len = strlen (string);
+  const char *p = string;
+
+  while (len > 0)
+    {
+      const char *q = strpbrk (p, "\\\"\n");
+      if (q)
+        {
+          if (q != p)
+            {
+              text_append_n (result, p, q - p);
+              len -= q - p;
+              p = q;
+            }
+          if (*p == '\n')
+            {
+              text_append_n (result, "\\n\"\n+\"", 6);
+            }
+          else
+            {
+              text_append_n (result, "\\", 1);
+              text_append_n (result, p, 1);
+            }
+          p++;
+          len--;
+        }
+      else
+        {
+          text_append_n (result, p, len);
+          return;
+        }
+    }
+}
+
+static void
+html_add_katex_script (CONVERTER *self, const char *arg,
+                       const char *katex_id, TEXT *result, int displaymode)
+{
+  text_append_n (result, "<script>\nkatex.render(\"", 23);
+  protect_javascript_string (arg, result);
+  text_printf (result, "\", %s, {", katex_id);
+
+  if (self->conf->KATEX_CONFIGURATION.o.string
+      && strcmp (self->conf->KATEX_CONFIGURATION.o.string, ""))
+    {
+      text_append (result, self->conf->KATEX_CONFIGURATION.o.string);
+      text_append_n (result, ",\n", 2);
+    }
+
+  if (displaymode)
+    text_append_n (result, "displayMode: true,\n", 19);
+
+  text_append_n (result, "macros})\n</script>\n", 19);
+}
+
 void
 html_convert_math_command (CONVERTER *self, const enum command_id cmd,
                            const ELEMENT *element,
@@ -7012,15 +7088,41 @@ html_convert_math_command (CONVERTER *self, const enum command_id cmd,
   classes = new_string_list ();
   add_string (classes, builtin_command_name (cmd));
 
-  if (self->conf->HTML_MATH.o.string
-      && !strcmp (self->conf->HTML_MATH.o.string, "mathjax"))
+  if (self->conf->HTML_MATH.o.string)
     {
-      html_register_file_information (self, "mathjax", 1);
-      add_string (classes, "tex2jax_process");
-      attribute_class = html_attribute_class (self, "em", classes);
-      text_append (result, attribute_class);
-      text_printf (result, ">\\(%s\\)</em>", arg);
-      goto out;
+      if (!strcmp (self->conf->HTML_MATH.o.string, "mathjax"))
+        {
+          html_register_file_information (self, "mathjax", 1);
+          add_string (classes, "tex2jax_process");
+          attribute_class = html_attribute_class (self, "em", classes);
+          text_append (result, attribute_class);
+          text_printf (result, ">\\(%s\\)</em>", arg);
+          goto out;
+        }
+      else if (!strcmp (self->conf->HTML_MATH.o.string, "katex"))
+        {
+          int status;
+          char *katex_id;
+          int katex_file_counter = html_get_file_information (self, "katex",
+                                                              0, &status);
+          if (status)
+            katex_file_counter = 0;
+
+          xasprintf (&katex_id, "_katex_%s_%d", builtin_command_name (cmd),
+                     katex_file_counter);
+
+          attribute_class = html_attribute_class (self, "em", classes);
+          text_append (result, attribute_class);
+          text_printf (result, " id=\"%s\">%s</em>\n", katex_id, arg);
+
+          html_add_katex_script (self, arg, katex_id, result, 0);
+
+          katex_file_counter++;
+          html_register_file_information (self, "katex", katex_file_counter);
+
+          free (katex_id);
+          goto out;
+        }
     }
 
   attribute_class = html_attribute_class (self, "em", classes);
@@ -8716,7 +8818,9 @@ html_convert_displaymath_command (CONVERTER *self, const enum command_id cmd,
 {
   char *attribute_class;
   STRING_LIST *classes;
-  int use_mathjax;
+  int use_mathjax = 0;
+  int use_katex = 0;
+  char *katex_id;
 
   if (html_in_string (self))
     {
@@ -8725,8 +8829,13 @@ html_convert_displaymath_command (CONVERTER *self, const enum command_id cmd,
       return;
     }
 
-  use_mathjax = (self->conf->HTML_MATH.o.string
-      && !strcmp (self->conf->HTML_MATH.o.string, "mathjax"));
+  if (self->conf->HTML_MATH.o.string)
+    {
+      if (!strcmp (self->conf->HTML_MATH.o.string, "mathjax"))
+        use_mathjax = 1;
+      else if (!strcmp (self->conf->HTML_MATH.o.string, "katex"))
+        use_katex = 1;
+    }
 
   classes = new_string_list ();
   add_string (classes, builtin_command_name (cmd));
@@ -8740,6 +8849,21 @@ html_convert_displaymath_command (CONVERTER *self, const enum command_id cmd,
   attribute_class = html_attribute_class (self, "pre", classes);
   text_append (result, attribute_class);
   free (attribute_class);
+  if (use_katex)
+    {
+      int status;
+      int katex_file_counter = html_get_file_information (self, "katex",
+                                                          0, &status);
+      if (status)
+        katex_file_counter = 0;
+
+      xasprintf (&katex_id, "_katex_%s_%d", builtin_command_name (cmd),
+                 katex_file_counter);
+      text_printf (result, " id=\"%s\"", katex_id);
+
+      katex_file_counter++;
+      html_register_file_information (self, "katex", katex_file_counter);
+    }
   text_append_n (result, ">", 1);
 
   destroy_strings_list (classes);
@@ -8750,6 +8874,12 @@ html_convert_displaymath_command (CONVERTER *self, const enum command_id cmd,
     text_printf (result, "%s", content);
 
   text_append_n (result, "</pre>", 6);
+  if (use_katex)
+    {
+      text_append_n (result, "\n", 1);
+      html_add_katex_script (self, content, katex_id, result, 1);
+      free (katex_id);
+    }
 }
 
 void

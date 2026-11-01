@@ -986,6 +986,7 @@ html_get_file_information (const CONVERTER *self, const char *key,
       *status = -2;
       return 0;
     }
+
   return k->integer;
 }
 

@@ -5090,6 +5090,9 @@ sub _node_redirections($$$$) {
   return $redirection_files_done;
 }
 
+my $katex_0_19_1_script
+   = 'https://cdn.jsdelivr.net/npm/katex@0.19.1/dist/katex.js';
+
 sub _setup_output($) {
   my $self = shift;
 
@@ -5126,24 +5129,55 @@ sub _setup_output($) {
                       $handler_fatal_error_level);
   }
 
-  if ($self->get_conf('HTML_MATH')
-        and $self->get_conf('HTML_MATH') eq 'mathjax') {
-    # See https://www.gnu.org/licenses/javascript-labels.html
-    #
-    # The link to the source for mathjax does not strictly follow the advice
-    # there: instead we link to instructions for obtaining the full source in
-    # its preferred form of modification.
+  if ($self->get_conf('HTML_MATH')) {
+    if ($self->get_conf('HTML_MATH') eq 'mathjax') {
+      # See https://www.gnu.org/licenses/javascript-labels.html
+      #
+      # The link to the source for mathjax does not strictly follow the advice
+      # there: instead we link to instructions for obtaining the full source in
+      # its preferred form of modification.
 
-    my $mathjax_script = $self->get_conf('MATHJAX_SCRIPT');
-    if (! defined($mathjax_script)) {
-      $mathjax_script = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js';
-      $self->set_conf('MATHJAX_SCRIPT', $mathjax_script);
-    }
+      my $mathjax_script = $self->get_conf('MATHJAX_SCRIPT');
+      if (! defined($mathjax_script)) {
+        $mathjax_script = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js';
+        $self->set_conf('MATHJAX_SCRIPT', $mathjax_script);
+      }
 
-    my $mathjax_source = $self->get_conf('MATHJAX_SOURCE');
-    if (! defined($mathjax_source)) {
-      $mathjax_source = 'http://docs.mathjax.org/en/latest/web/hosting.html#getting-mathjax-via-git';
-      $self->set_conf('MATHJAX_SOURCE', $mathjax_source);
+      my $mathjax_source = $self->get_conf('MATHJAX_SOURCE');
+      if (! defined($mathjax_source)) {
+        $mathjax_source = 'http://docs.mathjax.org/en/latest/web/hosting.html#getting-mathjax-via-git';
+        $self->set_conf('MATHJAX_SOURCE', $mathjax_source);
+      }
+    } elsif ($self->get_conf('HTML_MATH') eq 'katex') {
+      # Same comment as for MathJax
+      my $katex_script = $self->get_conf('KATEX_SCRIPT');
+      if (! defined($katex_script)) {
+        $katex_script = $katex_0_19_1_script;
+        $self->set_conf('KATEX_SCRIPT', $katex_script);
+      }
+      my $katex_links = $self->get_conf('KATEX_LINKS');
+      if (! defined($katex_links)) {
+        my $katex_script = $self->get_conf('KATEX_SCRIPT');
+        if ($katex_script eq $katex_0_19_1_script) {
+          $katex_links = '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.19.1/dist/katex.css" integrity="sha384-dyEuTchRIWTUUS5esbTCpMfx+B+xfO8EoTt5SiUbKmafuP0Gilzcq4YNJuy9EkCC" crossorigin="anonymous">'."\n"
+            .'<script src="'.$katex_0_19_1_script.
+    '" integrity="sha384-H4X0CTVqduiMCy79KQw+noSKkBB6tvyQopi29LC//G1uFcl52atjOC6Ltc9br/U7" crossorigin="anonymous"></script>'."\n";
+          $self->set_conf('KATEX_LINKS', $katex_links);
+        } else {
+          $self->converter_document_error(
+              sprintf(__("Unknown KaTeX script: %s"), $katex_script));
+        }
+      }
+
+      my $katex_source = $self->get_conf('KATEX_SOURCE');
+      if (! defined($katex_source)) {
+        $katex_source = 'https://github.com/KaTeX/KaTeX';
+        $self->set_conf('KATEX_SOURCE', $katex_source);
+      }
+
+      if (!defined($self->get_conf('KATEX_CONFIGURATION'))) {
+        $self->set_conf('KATEX_CONFIGURATION', 'throwOnError: false');
+      }
     }
  }
 
@@ -5197,18 +5231,31 @@ sub _setup_output($) {
   _init_conversion_after_setup_handler($self);
 
   my $jslicenses = {};
-  if ($self->get_conf('HTML_MATH')
-        and $self->get_conf('HTML_MATH') eq 'mathjax') {
-    # See https://www.gnu.org/licenses/javascript-labels.html
+  my $html_math = $self->get_conf('HTML_MATH');
+  if (defined($html_math)) {
+    if ($html_math eq 'mathjax') {
+      # See https://www.gnu.org/licenses/javascript-labels.html
 
-    my $mathjax_script = $self->get_conf('MATHJAX_SCRIPT');
-    my $mathjax_source = $self->get_conf('MATHJAX_SOURCE');
+      my $mathjax_script = $self->get_conf('MATHJAX_SCRIPT');
+      my $mathjax_source = $self->get_conf('MATHJAX_SOURCE');
 
-    $jslicenses->{'mathjax'} = {
-      $mathjax_script =>
-        [ 'Apache License, Version 2.0.',
-          'https://www.apache.org/licenses/LICENSE-2.0',
-          $mathjax_source ]};
+      $jslicenses->{'mathjax'} = {
+        $mathjax_script =>
+          [ 'Apache License, Version 2.0.',
+            'https://www.apache.org/licenses/LICENSE-2.0',
+            $mathjax_source ]};
+    } elsif ($html_math eq 'katex') {
+      my $katex_script = $self->get_conf('KATEX_SCRIPT');
+      my $katex_source = $self->get_conf('KATEX_SOURCE');
+
+      $jslicenses->{'katex'} = {
+        $katex_script =>
+          [ 'Expat',
+            # use the link from KATEX_SOURCE
+            'https://opensource.org/license/MIT',
+            #'https://directory.fsf.org/wiki/License:Expat',
+            $katex_source ]};
+    }
   }
   if ($self->get_conf('INFO_JS_DIR')) {
     $jslicenses->{'infojs'} = {

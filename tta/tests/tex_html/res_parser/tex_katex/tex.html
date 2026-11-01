@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<!-- Created by texinfo, https://www.gnu.org/software/texinfo/ -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Tests</title>
+
+<meta name="description" content="Tests">
+<meta name="keywords" content="Tests">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2any">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<link href="#Top" rel="start" title="Top">
+<style type="text/css">
+a.copiable-link {visibility: hidden; text-decoration: none; line-height: 0em}
+pre.displaymath {font-style: italic; font-family: serif; display: flex; justify-content: center}
+span:hover a.copiable-link {visibility: visible}
+</style>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.19.1/dist/katex.css" integrity="sha384-dyEuTchRIWTUUS5esbTCpMfx+B+xfO8EoTt5SiUbKmafuP0Gilzcq4YNJuy9EkCC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/katex@0.19.1/dist/katex.js" integrity="sha384-H4X0CTVqduiMCy79KQw+noSKkBB6tvyQopi29LC//G1uFcl52atjOC6Ltc9br/U7" crossorigin="anonymous"></script>
+<script>
+const macros = {};
+</script>
+
+</head>
+
+<body>
+<div class="top-level-extent" id="Top">
+<h1 class="top" id="Tests"><span>Tests<a class="copiable-link" href="#Tests"> &para;</a></span></h1>
+
+<p>Now tex on the same line 
+$$ \chi^2 = \sum_{i=1}^N
+          \left(y_i - (a + b x_i)
+	  \over \sigma_i\right)^2 $$
+		    
+
+Some text one the line following @end tex
+</p>
+<p>LaTeX block
+</p>
+<p>Now tex on the following line, valid fot tex (with @end tex on a line).
+
+tex \TeX 
+</p>
+<p>Same that @html (but empty following line not ignored).
+</p>
+<p>Test of @math
+Here some <em class="math" id="_katex_math_0">{x^i}\over{\tan y}</em>
+<script>
+katex.render("{x^i}\\over{\\tan y}", _katex_math_0, {throwOnError: false,
+macros})
+</script>
+.
+</p>
+<p>Maths with protected \:
+<em class="math" id="_katex_math_1">a \backslash{} b</em>
+<script>
+katex.render("a \\backslash{} b", _katex_math_1, {throwOnError: false,
+macros})
+</script>
+.
+</p>
+<p>Maths with code @-command:
+</p>
+<p><em class="math" id="_katex_math_2">\mathtt{math code} a < b</em>
+<script>
+katex.render("\\mathtt{math code} a < b", _katex_math_2, {throwOnError: false,
+macros})
+</script>
+
+</p>
+<p>Maths with code @-command and braces:
+</p>
+<p><em class="math" id="_katex_math_3">\underline{\mathtt{math \hbox{ code }}} \sum_{i}{\underline{\mathit{eff}}}</em>
+<script>
+katex.render("\\underline{\\mathtt{math \\hbox{ code }}} \\sum_{i}{\\underline{\\mathit{eff}}}", _katex_math_3, {throwOnError: false,
+macros})
+</script>
+
+</p>
+<p>Maths with @-sup
+</p>
+<p><em class="math" id="_katex_math_4">\sum_{i} f(x)^{2}</em>
+<script>
+katex.render("\\sum_{i} f(x)^{2}", _katex_math_4, {throwOnError: false,
+macros})
+</script>
+
+</p>
+<p>@\ outside of math
+</p>
+<p>\
+</p>
+<p>Displaymath
+</p><pre class="displaymath" id="_katex_displaymath_5">-- f(x) = {1 \over \sigma \sqrt{2\pi}}e^{-{1 \over 2}\left({x-\mu \over \sigma}\right)^2}
+</pre>
+<script>
+katex.render("-- f(x) = {1 \\over \\sigma \\sqrt{2\\pi}}e^{-{1 \\over 2}\\left({x-\\mu \\over \\sigma}\\right)^2}\n"
++"", _katex_displaymath_5, {throwOnError: false,
+displayMode: true,
+macros})
+</script>
+
+</div>
+
+
+<a href="js_licenses.html" rel="jslicense"><small>JavaScript license information</small></a>
+</body>
+</html>

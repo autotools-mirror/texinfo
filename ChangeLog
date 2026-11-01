@@ -1,3 +1,33 @@
+2026-11-01  Patrice Dumas  <pertusus@free.fr>
+
+	use KaTeX to render math in HTML if HTML_MATH is set to katex
+
+	* tta/data/options_data.txt, tta/C/convert/html_prepare_converter.c
+	(html_setup_output), tta/perl/Texinfo/Convert/HTMLNonXS.pm
+	(_setup_output): add KATEX_CONFIGURATION, KATEX_SCRIPT, KATEX_LINKS
+	and KATEX_SOURCE, set them up if HTML_MATH is set to katex.
+
+	* tta/C/convert/format_html.c (html_default_format_end_file)
+	(file_header_information), tta/perl/Texinfo/Convert/HTML.pm
+	(_default_format_end_file, _file_header_information): add loading of
+	KaTeX files in file header and add url to javascript licences for
+	KaTeX.
+
+	* tta/C/convert/format_html.c (protect_javascript_string)
+	(html_add_katex_script, html_convert_math_command)
+	(html_convert_displaymath_command), tta/perl/Texinfo/Convert/HTML.pm
+	(%quoted_javascript_string_chars, _add_katex_script)
+	(_convert_math_command, _convert_displaymath_command): add KaTeX
+	specific identifier on HTML elements emitted for math commands
+	and add script elements to render math for those HTML elements.
+
+	Report from Sebastian Meyer.
+
+	* tta/perl/t/html_tests.t (katex_with_texinfo),
+	tta/perl/t/test_files_generated_list.txt,
+	tta/tests/tex_html/list-of-tests (tex_katex, tex_gdef_katex): add
+	HTML_MATH katex related tests.
+
 2026-11-01  Gavin Smith <gavinsmith0123@gmail.com>
 
 	* info/info-hooks-default/gnu-manuals-locations.dat:

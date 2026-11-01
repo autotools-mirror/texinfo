@@ -281,6 +281,10 @@ INLINE_CSS_STYLE                   converter_customization undef   boolean
 INPUT_FILE_NAME_ENCODING           converter_customization undef   char
 JS_WEBLABELS                       converter_customization undef   char
 JS_WEBLABELS_FILE                  converter_customization undef   char
+KATEX_CONFIGURATION                converter_customization undef   char
+KATEX_SCRIPT                       converter_customization undef   char
+KATEX_LINKS                        converter_customization undef   char
+KATEX_SOURCE                       converter_customization undef   char
 LATEX_FLOATS_FILE_EXTENSION        converter_customization tfl     char
 LATEX_TAGGED_PDF                   converter_customization undef   char
 LOCALE_ENCODING                    converter_customization undef   char

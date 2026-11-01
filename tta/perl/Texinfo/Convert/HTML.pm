@@ -2444,6 +2444,31 @@ sub _convert_image_command($$$$) {
 
 $default_commands_conversion{'image'} = \&_convert_image_command;
 
+my %quoted_javascript_string_chars = (
+  "\\" => "\\\\",
+  '"' => '\"',
+  "\n" => '\n"'."\n".'+"',
+);
+
+sub _add_katex_script($$$;$) {
+  my ($self, $arg, $katex_id, $displaymode) = @_;
+
+  my $arg_quoted = $arg;
+  $arg_quoted =~ s/([\\\"\n])/$quoted_javascript_string_chars{$1}/ge;
+
+  my $result
+    = "<script>\nkatex.render(\"$arg_quoted\", $katex_id, {";
+  my $katex_config = $self->get_conf('KATEX_CONFIGURATION');
+  if (defined($katex_config) and $katex_config ne '') {
+    $result .= $katex_config.",\n";
+  }
+  if ($displaymode) {
+    $result .= "displayMode: true,\n";
+  }
+  $result .= "macros})\n</script>\n";
+  return $result;
+}
+
 sub _convert_math_command($$$$) {
   my ($self, $cmdname, $command, $args) = @_;
 
@@ -2455,10 +2480,24 @@ sub _convert_math_command($$$$) {
   }
 
   my $math_type = $self->get_conf('HTML_MATH');
-  if (defined($math_type) and $math_type eq 'mathjax') {
-    $self->register_file_information('mathjax', 1);
-    return $self->html_attribute_class('em', [$cmdname, 'tex2jax_process'])
+  if (defined($math_type)) {
+    if ($math_type eq 'mathjax') {
+      $self->register_file_information('mathjax', 1);
+      return $self->html_attribute_class('em', [$cmdname, 'tex2jax_process'])
                                           .">\\($arg\\)</em>";
+    } elsif ($math_type eq 'katex') {
+      my $katex_file_counter = $self->get_file_information('katex');
+      $katex_file_counter = 0 if (!defined($katex_file_counter));
+      my $katex_id = "_katex_${cmdname}_${katex_file_counter}";
+
+      my $result = $self->html_attribute_class('em', [$cmdname])
+           . " id=\"$katex_id\">$arg</em>\n";
+      $result .= _add_katex_script($self, $arg, $katex_id);
+
+      $katex_file_counter++;
+      $self->register_file_information('katex', $katex_file_counter);
+      return $result;
+    }
   }
   return $self->html_attribute_class('em', [$cmdname]).">$arg</em>";
 }
@@ -3703,21 +3742,41 @@ sub _convert_displaymath_command($$$$$) {
   my $result = '';
   my $pre_classes = [$cmdname];
 
-  my $use_mathjax = ($self->get_conf('HTML_MATH')
-        and $self->get_conf('HTML_MATH') eq 'mathjax');
+  my $html_math = $self->get_conf('HTML_MATH');
+  my ($use_mathjax, $use_katex);
+  if (defined($html_math)) {
+    if ($html_math eq 'mathjax') {
+      $use_mathjax = 1;
+    } elsif ($html_math eq 'katex') {
+      $use_katex = 1;
+    }
+  }
 
   if ($use_mathjax) {
     $self->register_file_information('mathjax', 1);
     push @$pre_classes, 'tex2jax_process';
   }
-  $result .= $self->html_attribute_class('pre', $pre_classes).'>';
-  if ($self->get_conf('HTML_MATH')
-        and $self->get_conf('HTML_MATH') eq 'mathjax') {
+  $result .= $self->html_attribute_class('pre', $pre_classes);
+  my $katex_id;
+  if ($use_katex) {
+    my $katex_file_counter = $self->get_file_information('katex');
+    $katex_file_counter = 0 if (!defined($katex_file_counter));
+    $katex_id = "_katex_${cmdname}_${katex_file_counter}";
+    $result .= " id=\"$katex_id\"";
+
+    $katex_file_counter++;
+    $self->register_file_information('katex', $katex_file_counter);
+  }
+  $result .= '>';
+  if ($use_mathjax) {
     $result .= "\\[$content\\]";
   } else {
     $result .= $content;
   }
   $result .= '</pre>';
+  if ($use_katex) {
+    $result .= "\n"._add_katex_script($self, $content, $katex_id, 1);
+  }
   return $result;
 }
 
@@ -7250,7 +7309,12 @@ sub _default_format_end_file($$$) {
            or (($self->get_file_information('mathjax', $filename)
                 or !$self->get_conf('SPLIT'))
                and (exists($jslicenses->{'mathjax'})
-                    and scalar(keys %{$jslicenses->{'mathjax'}}))))) {
+                    and scalar(keys %{$jslicenses->{'mathjax'}})))
+           or (($self->get_file_information('katex', $filename)
+                or !$self->get_conf('SPLIT'))
+               and (exists($jslicenses->{'katex'})
+                    and scalar(keys %{$jslicenses->{'katex'}})))
+           )) {
     my $js_setting = $self->get_conf('JS_WEBLABELS');
     my $js_path = $self->get_conf('JS_WEBLABELS_FILE');
     if (defined($js_setting) and defined($js_path)
@@ -7480,6 +7544,14 @@ for (let component in MathJax_conf) {
   src="'.$self->url_protect_url_text($mathjax_script).'">
 </script>';
 
+  } elsif ((defined($self->get_conf('HTML_MATH'))
+            and $self->get_conf('HTML_MATH') eq 'katex')
+           and ($self->get_file_information('katex', $filename))) {
+    $extra_head .= $self->get_conf('KATEX_LINKS');
+    $extra_head .= '<script>
+const macros = {};
+</script>
+';
   }
 
   return ($title, $description, $keywords, $encoding, $date, $css_lines,

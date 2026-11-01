@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<!-- Created by texinfo, https://www.gnu.org/software/texinfo/ -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Tests</title>
+
+<meta name="description" content="Tests">
+<meta name="keywords" content="Tests">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2any">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<link href="#Top" rel="start" title="Top">
+<style type="text/css">
+a.copiable-link {visibility: hidden; text-decoration: none; line-height: 0em}
+pre.displaymath {font-style: italic; font-family: serif; display: flex; justify-content: center}
+span:hover a.copiable-link {visibility: visible}
+</style>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.19.1/dist/katex.css" integrity="sha384-dyEuTchRIWTUUS5esbTCpMfx+B+xfO8EoTt5SiUbKmafuP0Gilzcq4YNJuy9EkCC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/katex@0.19.1/dist/katex.js" integrity="sha384-H4X0CTVqduiMCy79KQw+noSKkBB6tvyQopi29LC//G1uFcl52atjOC6Ltc9br/U7" crossorigin="anonymous"></script>
+<script>
+const macros = {};
+</script>
+
+</head>
+
+<body>
+<div class="top-level-extent" id="Top">
+<h1 class="top" id="Tests"><span>Tests<a class="copiable-link" href="#Tests"> &para;</a></span></h1>
+
+  \gdef\Desig{\buildrel \rm def \over \equiv}
+
+<pre class="displaymath" id="_katex_displaymath_0">\def\otest{\sqrt{64}}%
+</pre>
+<script>
+katex.render("\\def\\otest{\\sqrt{64}}%\n"
++"", _katex_displaymath_0, {throwOnError: false,
+displayMode: true,
+macros})
+</script>
+
+<pre class="displaymath" id="_katex_displaymath_1">\gdef\testmacro{a \equiv b}
+</pre>
+<script>
+katex.render("\\gdef\\testmacro{a \\equiv b}\n"
++"", _katex_displaymath_1, {throwOnError: false,
+displayMode: true,
+macros})
+</script>
+
+<p><em class="math" id="_katex_math_2">\Desig \testmacro \otest</em>
+<script>
+katex.render("\\Desig \\testmacro \\otest", _katex_math_2, {throwOnError: false,
+macros})
+</script>
+
+</p>
+<pre class="displaymath" id="_katex_displaymath_3"> \Desig \testmacro \otest
+</pre>
+<script>
+katex.render(" \\Desig \\testmacro \\otest\n"
++"", _katex_displaymath_3, {throwOnError: false,
+displayMode: true,
+macros})
+</script>
+
+</div>
+
+
+<a href="js_licenses.html" rel="jslicense"><small>JavaScript license information</small></a>
+</body>
+</html>
