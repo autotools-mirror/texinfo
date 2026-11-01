@@ -1,5 +1,18 @@
 2026-11-01  Gavin Smith <gavinsmith0123@gmail.com>
 
+	Add individual commands for info hooks.
+
+	* info/info-hooks-default/gnu-commands-manuals.dat:
+	New file.
+	* info/info-hooks-default/manual-not-found.in:
+	If --interactive not given, check for the argument in
+	gnu-commands-manual.dat
+
+	* info/info-hooks-default/gnu-manuals-locations.dat: update
+	comment at start of file with name of file.
+
+2026-11-01  Gavin Smith <gavinsmith0123@gmail.com>
+
 	* info/info-hooks-default/README: add some notes about developing
 	the hook script.
 

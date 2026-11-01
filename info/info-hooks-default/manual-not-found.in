@@ -7,6 +7,8 @@
 # Copying and distribution of this file, with or without modification,
 # are permitted in any medium without royalty provided the copyright
 # notice and this notice are preserved.
+#
+# Usage: manual-not-found [--interactive] TOPIC
 
 AWK=@AWK@
 
@@ -23,12 +25,38 @@ fi
 pwd=`pwd`
 hook_dir=`dirname $0`
 
+topic=$1
+if test -z $topic ; then
+  exit 2 # invalid usage
+fi
+
+
+# If --interactive not given, allow topic to be a program documented in
+# a larger manual.
+redirection_msg=
+lookup_file=$hook_dir/gnu-commands-manuals.dat
+if test $interactive = 0 && test -f "$lookup_file" ; then
+  lookup_file=$hook_dir/gnu-commands-manuals.dat
+  manual=`cat "$lookup_file" | $AWK -v prog="$topic" \
+     '/^#/ {}
+      $1 == prog { print $2 ; exit }
+'`
+  if test -n "$manual" ; then
+    redirection_msg="The $topic command is usually documented in the '$manual' manual
+(*note ($manual)Top::).
+
+"
+    topic=$manual
+  fi
+fi
+
+
 url_msg=
 
-if test -f "$hook_dir/gnu-manuals-locations.dat" ; then
-  lookup_file=$hook_dir/gnu-manuals-locations.dat
+lookup_file=$hook_dir/gnu-manuals-locations.dat
 
-  url=`cat "$lookup_file" | $AWK -v prog="$1" \
+if test -f "$lookup_file" ; then
+  url=`cat "$lookup_file" | $AWK -v prog="$topic" \
      '/^#/ {}
       $1 == prog {
         url=$2 ; for (v in file_vars) gsub("@" v "@",file_vars[v],url) ;
@@ -44,7 +72,7 @@ if test -f "$hook_dir/gnu-manuals-locations.dat" ; then
     exit 1
   fi
   url_msg="You could try visiting the following URL in a web browser to download
-the Info manual, or to read the '$1' manual in other formats:\n\n$url"
+the Info manual, or to read the '$topic' manual in other formats:\n\n$url"
 fi
 
 manpage_exists=0
@@ -54,7 +82,7 @@ fi
 
 msg="An Info manual called '$1' was not found on your system.
 
-$url_msg
+$redirection_msg$url_msg
 "
 
 if test $interactive = 0; then

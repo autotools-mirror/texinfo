@@ -1,0 +1,18 @@
+# gnu-commands-manuals.dat
+#
+# Copyright 2026 Free Software Foundation, Inc.
+# 
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.
+#
+#
+# List of commands that are documented in a manual with a different name.
+# Used by default manual-not-found hook when there is no dir entry for this
+# manual, e.g. "info ls" when the coreutils manual is not installed.
+
+# Note that a manual isn't displayed unless it is also listed in
+# gnu-manuals-locations.dat. 
+
+ls		coreutils
+cd		bash
