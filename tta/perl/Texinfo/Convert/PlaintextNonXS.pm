@@ -1392,6 +1392,8 @@ sub node_name($$) {
 
     # reset counters
     Texinfo::Convert::Paragraph::end_line($formatter->{'container'});
+    # reset last letter too, isolate from previous line
+    Texinfo::Convert::Paragraph::end($formatter->{'container'});
 
     pop @{$self->{'formatters'}};
     pop @{$self->{'count_context'}};

@@ -146,6 +146,9 @@ sub _end_line($) {
 
   $paragraph->{'counter'} = 0;
   $paragraph->{'space'} = '';
+  # do not reset in case it is an end of command and we want to keep
+  # the information about upper-case letter
+  #$paragraph->{'last_letter'} = '';
   if (defined($paragraph->{'indent_length_next'})) {
     $paragraph->{'indent_length'} = $paragraph->{'indent_length_next'};
     delete $paragraph->{'indent_length_next'};
@@ -209,7 +212,7 @@ sub end($) {
   $paragraph->{'end_line_count'} = 0;
   print STDERR "PARA END\n" if ($paragraph->{'debug'});
   my $result = _add_pending_word($paragraph, $paragraph->{'add_final_space'});
-  # probably not really useful, but cleaner
+  # cleaner if the paragraph is reused
   $paragraph->{'last_letter'} = '';
   if (!$paragraph->{'no_final_newline'} and $paragraph->{'counter'} != 0) {
     $result .= "\n";

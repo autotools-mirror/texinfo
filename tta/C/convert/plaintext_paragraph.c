@@ -255,6 +255,10 @@ para__end_line (void)
 {
   state.counter = 0;
   state.space.end = 0;
+  /* do not reset in case it is an end of command and we want to keep
+     the information about upper-case letter
+  state.last_letter = (char32_t) '\0';
+   */
 
   /* This will only be true for the first line of output. */
   if (state.indent_length_next != -1)
@@ -367,7 +371,7 @@ para_end (void)
   if (state.debug)
     fprintf (stderr, "PARA END\n");
 
-  /* probably not really useful, but cleaner */
+  /* cleaner if the paragraph is reused */
   state.last_letter = (char32_t) '\0';
 
   para__add_pending_word (&ret, state.add_final_space);

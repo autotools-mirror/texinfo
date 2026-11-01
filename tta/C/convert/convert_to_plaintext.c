@@ -1588,6 +1588,7 @@ plaintext_convert_node_name (CONVERTER *self, const ELEMENT *element,
   string_result->width = para_counter ();
 
   para_end_line ();
+  para_end ();
   if (heading_copy)
     destroy_element_and_children (node_text);
   else
