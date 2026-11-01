@@ -42,9 +42,12 @@ X.Y ()
   . if AUTO_MENU_DESCRIPTION_ALIGN_COLUMN is set to 0, use the defaults.
     Same for AUTO_MENU_MAX_WIDTH.
   . HTML output:
-      .  add HTML_COPY_IMAGES customization variable.  If on, copy image
-         files to destination directory, unless image begins with . or ..
-         or is an absolute file name.
+      . KaTeX support for display of math.  new katex value for HTML_MATH,
+        new variables KATEX_CONFIGURATION, KATEX_SCRIPT, KATEX_LINKS
+        and KATEX_SOURCE.
+      . add HTML_COPY_IMAGES customization variable.  If on, copy image
+        files to destination directory, unless image begins with . or ..
+        or is an absolute file name.
       . add <span> with a class for output of @expansion{}, @arrow{},
         @point{}, @print{} and @result{}, to allow use of CSS styling
   Info and plaintext output:

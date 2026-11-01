@@ -1,5 +1,16 @@
 2026-11-01  Patrice Dumas  <pertusus@free.fr>
 
+	document KaTeX use to format math in HTML
+
+	* doc/texinfo.texi (Inserting Math, HTML Customization for Math)
+	(KaTeX Customization Variables): add information on setting HTML_MATH
+	to katex to use KaTeX to format math in HTML, and information on
+	customization of KaTeX.
+
+	* NEWS: add KaTeX.
+
+2026-11-01  Patrice Dumas  <pertusus@free.fr>
+
 	use KaTeX to render math in HTML if HTML_MATH is set to katex
 
 	* tta/data/options_data.txt, tta/C/convert/html_prepare_converter.c

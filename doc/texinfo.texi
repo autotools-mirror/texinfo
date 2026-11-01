@@ -10424,7 +10424,7 @@ and so on.
 @cindex Math output for HTML
 @cindex HTML output @subentry math
 By default, the HTML output is only emphasized.
-@command{texi2any} provides three options for displaying properly
+@command{texi2any} provides four options for displaying properly
 formatted mathematics for HTML.  You can select these with the
 @code{HTML_MATH} variable (@pxref{HTML Customization for Math}).
 With @code{HTML_MATH} set to @samp{l2h}, @command{texi2any} attempts
@@ -10432,11 +10432,14 @@ to use the @command{latex2html} program to produce image files for
 mathematical material.  With the @samp{t4h} setting, @command{texi2any}
 attempts to use the @command{tex4ht} program.  With the @samp{mathjax}
 setting, @command{texi2any} inserts references in the output files
-to MathJax scripts to format the material.  The MathJax option
-requires JavaScript to be enabled in the browser to work.  See also
-@ref{MathJax Customization Variables}, @ref{@command{latex2html}
-Customization Variables} and @ref{@command{tex4ht} Customization
-Variables}.
+to MathJax scripts to format the material.  With the @samp{katex}
+setting, @command{texi2any} inserts references in the output files
+to KaTeX scripts and CSS and HTML code to render mathematics.
+The MathJax and KaTeX options
+require JavaScript to be enabled in the browser to work.  See also
+@ref{MathJax Customization Variables}, @ref{KaTeX Customization Variables},
+@ref{@command{latex2html} Customization Variables} and
+@ref{@command{tex4ht} Customization Variables}.
 
 @cindex Displayed equations
 @cindex Equations, displayed
@@ -19539,6 +19542,16 @@ set @option{--iftex}, @code{@@tex} sections are converted to HTML, and if you
 set @option{--iflatex} @code{@@latex} sections are converted to HTML.
 
 @table @code
+@item katex
+Inserts references in the output files to KaTeX script and CSS file and code
+for each @@-command to format mathematics.  The KaTeX option requires
+JavaScript to be enabled in the browser to work.
+
+If math commands are actually processed, a JavaScript license web label is
+generated for KaTeX scripts (@pxref{JavaScript license web labels}).
+
+@xref{KaTeX Customization Variables}.
+
 @item l2h
 Use the @command{latex2html} program to produce
 image files for mathematical material.
@@ -19654,10 +19667,52 @@ others' distribution systems.
 @end vtable
 
 
+@subsubsection KaTeX Customization Variables
+
+This table lists the customization variables which can be used when
+KaTeX is being used, which will be the case when @code{HTML_MATH}
+is set to @samp{katex}.
+
+@vtable @code
+@item KATEX_CONFIGURATION
+Configuration added to each of the call to the KaTeX function used to
+render math code.  If unset, set to @samp{throwOnError: false} in the
+default case.  @code{displayMode} is already set appropriately
+for each call.
+
+@item KATEX_LINKS
+@itemx KATEX_SCRIPT
+@code{KATEX_LINKS} is HTML code for a link to KaTeX CSS file and a
+script element for KaTeX script file.  The variable is output in file headers
+if math commands are actually processed.  @code{KATEX_SCRIPT} is the URL of
+the KaTeX component file (e.g.@: @file{katex.js}) you are using.
+@command{texi2any} provides a default value for @code{KATEX_SCRIPT}.  The
+@code{KATEX_LINKS} default value is based on @code{KATEX_SCRIPT} if set to a
+recognized value.
+
+You are encouraged to host the files yourself on your website so that you are
+not dependent on others' hosting and set values accordingly for both
+@code{KATEX_SCRIPT} and @code{KATEX_LINKS}.
+
+@item KATEX_SOURCE
+A URL of the full source code in its preferred form for modification,
+or instructions for obtaining such source code, for the component file
+named by @code{KATEX_SCRIPT}.  `Preferred form for modification'
+means that this should not be in a `minified' form.  Used in the
+license labels page (@pxref{JavaScript license web labels}).
+
+Again, @command{texi2any} provides a default value for this variable,
+but you are encouraged to host the source code for KaTeX and its
+dependencies yourself.  This is in order to make the source code
+available reliably, and to reduce you and your users' dependence on
+others' distribution systems.
+@end vtable
+
+
 @node @command{latex2html} Customization Variables
 @subsubsection @command{latex2html} Customization Variables
 
-This table lists the customization variables which can be used when 
+This table lists the customization variables which can be used when
 @command{latex2html} is being used to convert @code{@@math},
 @code{@@displaymath}, @code{@@latex} and @code{@@tex} sections for HTML@.
 These customization variables are relevant only if @code{HTML_MATH} is set to
