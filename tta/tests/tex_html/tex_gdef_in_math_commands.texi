@@ -1,0 +1,36 @@
+\input texinfo @c -*-texinfo-*-
+
+@node Top
+@top Tests
+
+@c KaTeX does not know about \buildrel.
+@displaymath
+\buildrel \rm def \over \equiv
+@end displaymath
+
+A para
+
+@c MathJax does not know about \gdef.
+@displaymath
+\gdef\Desig{\rm def \over \equiv}
+\Desig 
+@end displaymath
+
+@displaymath
+\gdef\otest{\sqrt{64}}%
+@end displaymath
+
+@c MathJax doesn't get \gdef
+@displaymath
+\gdef\testmacro{a \equiv b}
+@end displaymath
+
+@math{\Desig \testmacro \otest "
+a +b}.
+
+@displaymath
+ \Desig \testmacro \otest
+ " a+b
+@end displaymath
+
+@bye

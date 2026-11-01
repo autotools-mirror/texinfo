@@ -158,6 +158,8 @@ type_tex_html_one_perl_test_files_generated_list =  \
     test_scripts/tex_html_perl_tex_gdef_mathjax.sh \
     test_scripts/tex_html_perl_tex_katex.sh \
     test_scripts/tex_html_perl_tex_gdef_katex.sh \
+    test_scripts/tex_html_perl_tex_gdef_in_math_commands_mathjax.sh \
+    test_scripts/tex_html_perl_tex_gdef_in_math_commands_katex.sh \
     test_scripts/tex_html_perl_tex_complex_httex.sh \
     test_scripts/tex_html_perl_tex_complex_l2h.sh \
     test_scripts/tex_html_perl_tex_eqalign_httex.sh \
@@ -312,6 +314,8 @@ type_tex_html_one_native_test_files_generated_list =  \
     test_scripts/tex_html_native_tex_gdef_mathjax.sh \
     test_scripts/tex_html_native_tex_katex.sh \
     test_scripts/tex_html_native_tex_gdef_katex.sh \
+    test_scripts/tex_html_native_tex_gdef_in_math_commands_mathjax.sh \
+    test_scripts/tex_html_native_tex_gdef_in_math_commands_katex.sh \
     test_scripts/tex_html_native_tex_complex_httex.sh \
     test_scripts/tex_html_native_tex_complex_l2h.sh \
     test_scripts/tex_html_native_tex_eqalign_httex.sh \

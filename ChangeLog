@@ -1,5 +1,15 @@
 2026-11-01  Patrice Dumas  <pertusus@free.fr>
 
+	* tta/tests/tex_html/Makefile.am (EXTRA_DIST),
+	tta/tests/tex_html/tex_gdef_in_math_commands.texi,
+	tta/tests/tex_html/list-of-tests (tex_gdef_in_math_commands_mathjax)
+	(tex_gdef_in_math_commands_katex): add tests more suited for
+	Javascript options for math, for which gdef is only used in
+	displaymath, and with some test of escaping in strings, mainly for
+	KaTeX.
+
+2026-11-01  Patrice Dumas  <pertusus@free.fr>
+
 	document KaTeX use to format math in HTML
 
 	* doc/texinfo.texi (Inserting Math, HTML Customization for Math)
