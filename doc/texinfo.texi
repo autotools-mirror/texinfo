@@ -10434,7 +10434,7 @@ attempts to use the @command{tex4ht} program.  With the @samp{mathjax}
 setting, @command{texi2any} inserts references in the output files
 to MathJax scripts to format the material.  With the @samp{katex}
 setting, @command{texi2any} inserts references in the output files
-to KaTeX scripts and CSS and HTML code to render mathematics.
+to KaTeX files (JavaScript and CSS) to format the material.
 The MathJax and KaTeX options
 require JavaScript to be enabled in the browser to work.  See also
 @ref{MathJax Customization Variables}, @ref{KaTeX Customization Variables},
@@ -19543,8 +19543,10 @@ set @option{--iflatex} @code{@@latex} sections are converted to HTML.
 
 @table @code
 @item katex
-Inserts references in the output files to KaTeX script and CSS file and code
-for each @@-command to format mathematics.  The KaTeX option requires
+Format mathematics in the output files using KaTeX
+(@uref{https://katex.org/}).  In each output file with math commands, insert
+references to the JavaScript file and CSS file from KaTeX, and add
+JavaScript code to format each math @@-command.  The KaTeX option requires
 JavaScript to be enabled in the browser to work.
 
 If math commands are actually processed, a JavaScript license web label is
@@ -19570,7 +19572,6 @@ a cache file to avoid redoing translation to HTML if already done.
 @xref{@command{latex2html} Customization Variables}.
 
 @item mathjax
-@anchor{MathJax scripts}
 Inserts references in the output files to MathJax scripts to format
 mathematics.  The MathJax option requires JavaScript to be enabled in the
 browser to work.
@@ -19676,27 +19677,35 @@ is set to @samp{katex}.
 @vtable @code
 @item KATEX_CONFIGURATION
 Configuration added to each of the call to the KaTeX function used to
-render math code.  If unset, set to @samp{throwOnError: false} in the
-default case.  @code{displayMode} is already set appropriately
-for each call.
+render math code.  This is a comma-separated list of key-value pairs to
+be included in a JavaScript hash table constant.
+By default, this is set to @samp{throwOnError: false}.
+(@code{displayMode} is always set appropriately regardless of the value
+of this variable.)
+See @uref{https://katex.org/docs/options} for the KaTeX documentation
+on available options.
 
 @item KATEX_LINKS
 @itemx KATEX_SCRIPT
-@code{KATEX_LINKS} is HTML code for a link to KaTeX CSS file and a
-script element for KaTeX script file.  The variable is output in file headers
-if math commands are actually processed.  @code{KATEX_SCRIPT} is the URL of
-the KaTeX component file (e.g.@: @file{katex.js}) you are using.
-@command{texi2any} provides a default value for @code{KATEX_SCRIPT}.  The
-@code{KATEX_LINKS} default value is based on @code{KATEX_SCRIPT} if set to a
-recognized value.
+@code{KATEX_LINKS} is HTML code for a link to the KaTeX CSS file and a
+script element for the KaTeX script file.  The contents of this variable is
+output in HTML file headers only if math commands are actually processed.
+@code{KATEX_SCRIPT} is the URL of the KaTeX JavaScript file (e.g.@:
+@file{katex.js}) you are using.
 
-You are encouraged to host the files yourself on your website so that you are
-not dependent on others' hosting and set values accordingly for both
-@code{KATEX_SCRIPT} and @code{KATEX_LINKS}.
+@command{texi2any} provides a default value for @code{KATEX_SCRIPT}.
+If @code{KATEX_SCRIPT} is set to a recognized value and you do not set
+@code{KATEX_LINKS}, @command{texi2any} bases the value of
+@code{KATEX_LINKS} on @code{KATEX_SCRIPT}.
+
+We encourage you to host the JavaScript and CSS files yourself on your
+website so that you are not dependent on others' hosting.  If you do this,
+you need to set values accordingly for both @code{KATEX_SCRIPT} and
+@code{KATEX_LINKS}.
 
 @item KATEX_SOURCE
 A URL of the full source code in its preferred form for modification,
-or instructions for obtaining such source code, for the component file
+or instructions for obtaining such source code, for the file
 named by @code{KATEX_SCRIPT}.  `Preferred form for modification'
 means that this should not be in a `minified' form.  Used in the
 license labels page (@pxref{JavaScript license web labels}).
@@ -19814,7 +19823,8 @@ This last setting is useful if you separately maintain a single labels
 file for a larger website that includes your manual.
 
 Labels files can be generated if @code{INFO_JS_DIR} is set, or if
-@code{HTML_MATH} is set to @samp{mathjax} (@pxref{MathJax scripts}).
+@code{HTML_MATH} is set to @samp{mathjax} or @samp{katex}
+(@pxref{HTML Customization for Math}).
 
 
 @node HTML Customization Variables List

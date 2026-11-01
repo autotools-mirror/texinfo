@@ -1,3 +1,19 @@
+2026-11-01  Gavin Smith <gavinsmith0123@gmail.com>
+
+	Edit KaTeX documentation
+
+	* doc/texinfo.texi (Inserting Math, HTML Customization for Math):
+	Edit.
+	(MathJax Customization Variables):
+	Elaborate on format of KATEX_CONFIGURATION and link to KaTeX
+	docs on the Web.
+	Avoid use of collocation "KaTeX component", as this was an
+	adaptation of the usage "MathJax component", which uses a
+	definition of the word "component" that is particular to the
+	MathJax project.
+	(JavaScript Interface and Licenses): Mention possibility of
+	KaTeX alongside MathJax.
+
 2026-11-01  Patrice Dumas  <pertusus@free.fr>
 
 	* tta/C/convert/convert_to_plaintext.c
