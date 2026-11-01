@@ -1123,6 +1123,12 @@ insert_nodes_for_sectioning_commands (DOCUMENT *document,
         }
     }
 
+  if (warn_duplicate_section_target > 0)
+    {
+      clear_c_hashmap (first_normalized);
+      free (first_normalized);
+    }
+
   /* add the nodes */
   for (idx = 0; idx < root->e.c->contents.number; idx++)
     {

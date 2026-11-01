@@ -1,3 +1,8 @@
+2026-11-01  Patrice Dumas  <pertusus@free.fr>
+
+	* tta/C/structuring_transfo/transformations.c
+	(insert_nodes_for_sectioning_commands): free first_normalized.
+
 2026-11-01  Gavin Smith <gavinsmith0123@gmail.com>
 
 	* info/Makefile.am: remove extra \ at end of a line
