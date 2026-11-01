@@ -137,7 +137,6 @@ gcc                     https://gcc.gnu.org/onlinedocs
   libiberty             https://gcc.gnu.org/onlinedocs
   libstdc++             https://gcc.gnu.org/onlinedocs
 gdb                     https://sourceware.org/gdb/documentation/
-  stabs                 https://sourceware.org/gdb/current/onlinedocs/
 gdbm                    http://www.gnu.org.ua/software/gdbm/manual
 gettext                 @G@/gettext/manual
 gforth                  https://www.complang.tuwien.ac.at/forth/gforth/

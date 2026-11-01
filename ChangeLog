@@ -1,3 +1,8 @@
+2026-11-01  Gavin Smith <gavinsmith0123@gmail.com>
+
+	* info/info-hooks-default/gnu-manuals-locations.dat:
+	Remove 'stabs' as this manual is not distributed by gdb any more.
+
 2026-10-31  Gavin Smith <gavinsmith0123@gmail.com>
 
 	* tta/perl/Makefile.am (uninstall-hook): Add rule for uninstalling
