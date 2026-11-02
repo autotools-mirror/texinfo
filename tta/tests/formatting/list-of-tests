@@ -27,6 +27,17 @@ no_content_do_contents_inline no_content.texi --html --no-split -c 'BIG_RULE <hr
 indices_in_begin_tables_lists indices_in_begin_tables_lists.texi --html --no-split -c 'USE_NODES 0'
 indices_in_begin_tables_lists_latex indices_in_begin_tables_lists.texi --latex
 
+# test Javascript options for math rendering
+tex_mathjax ../tex_html/tex.texi --html --no-split -c HTML_MATH=mathjax --iftex
+tex_gdef_mathjax ../tex_html/tex_gdef.texi --html --no-split -c HTML_MATH=mathjax --iftex
+tex_katex ../tex_html/tex.texi --html --no-split -c HTML_MATH=katex --iftex
+tex_gdef_katex ../tex_html/tex_gdef.texi --html --no-split -c HTML_MATH=katex --iftex
+
+# tests specific of Javascript options, also with test of escaping
+# in strings
+tex_gdef_in_math_commands_mathjax tex_gdef_in_math_commands.texi --html --no-split -c HTML_MATH=mathjax
+tex_gdef_in_math_commands_katex tex_gdef_in_math_commands.texi --html --no-split -c HTML_MATH=katex
+
 # Same file also tested in t/converters_tests.t.  Here we test customization
 # of raw text output, as this output is not customized in t/*.t tests.
 formatting_customizations_input_raw_text ../../perl/t/input_files/formatting_customizations_input.texi -c TEXINFO_OUTPUT_FORMAT=rawtext -c NUMBER_SECTIONS=0 -c ASCII_GLYPH=1 --enable-encoding

@@ -1,5 +1,18 @@
 2026-11-02  Patrice Dumas  <pertusus@free.fr>
 
+	move MathJax and KaTeX codes to formatting
+
+	* tta/tests/formatting/Makefile.am (EXTRA_DIST),
+	tta/tests/formatting/list-of-tests (tex_mathjax, tex_gdef_mathjax)
+	(tex_katex, tex_gdef_katex, tex_gdef_in_math_commands_mathjax)
+	(tex_gdef_in_math_commands_katex), tta/tests/tex_html/Makefile.am
+	(EXTRA_DIST), tta/tests/tex_html/list-of-tests: move KaTeX and MathJax
+	related tests to formatting/list-of-tests out of
+	tex_html/list-of-tests as they do not depend on an installed command.
+	Move tex_gdef_in_math_commands.texi to formatting.  Idea from Gavin.
+
+2026-11-02  Patrice Dumas  <pertusus@free.fr>
+
 	* tta/C/convert/plaintext_paragraph.c (enum text_class)
 	(para_add_text): handle type_unknown as type_regular, but without
 	increasing the column count.  It should be more efficient as it should

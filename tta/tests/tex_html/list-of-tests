@@ -14,15 +14,6 @@ tex_accents_httex tex_accents.texi --html --no-split --init tex4ht.pm --iftex
 tex_accents_l2h tex_accents.texi --html --no-split -c 'HTML_MATH l2h' --iftex
 tex_gdef_httex tex_gdef.texi --html --no-split --init tex4ht.pm --iftex -D tex4ht
 tex_gdef_l2h tex_gdef.texi --html --no-split -c 'HTML_MATH l2h' --iftex
-tex_mathjax tex.texi --html --no-split -c HTML_MATH=mathjax --iftex
-tex_gdef_mathjax tex_gdef.texi --html --no-split -c HTML_MATH=mathjax --iftex
-tex_katex tex.texi --html --no-split -c HTML_MATH=katex --iftex
-tex_gdef_katex tex_gdef.texi --html --no-split -c HTML_MATH=katex --iftex
-
-# tests specific of Javascript options, also with test of escaping
-# in strings
-tex_gdef_in_math_commands_mathjax tex_gdef_in_math_commands.texi --html --no-split -c HTML_MATH=mathjax
-tex_gdef_in_math_commands_katex tex_gdef_in_math_commands.texi --html --no-split -c HTML_MATH=katex
 
 # No mediawki tests for now
 #tex_mediawiki tex.texi --init mediawiki.pm --iftex

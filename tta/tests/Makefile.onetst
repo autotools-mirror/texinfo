@@ -42,6 +42,12 @@ type_base_one_perl_test_files_generated_list =  \
     test_scripts/formatting_perl_no_content_do_contents_inline.sh \
     test_scripts/formatting_perl_indices_in_begin_tables_lists.sh \
     test_scripts/formatting_perl_indices_in_begin_tables_lists_latex.sh \
+    test_scripts/formatting_perl_tex_mathjax.sh \
+    test_scripts/formatting_perl_tex_gdef_mathjax.sh \
+    test_scripts/formatting_perl_tex_katex.sh \
+    test_scripts/formatting_perl_tex_gdef_katex.sh \
+    test_scripts/formatting_perl_tex_gdef_in_math_commands_mathjax.sh \
+    test_scripts/formatting_perl_tex_gdef_in_math_commands_katex.sh \
     test_scripts/formatting_perl_formatting_customizations_input_raw_text.sh \
     test_scripts/formatting_perl_index_entries_relate_to_item.sh \
     test_scripts/formatting_perl_no_detailmenu_lang_at_begin_end.sh \
@@ -154,12 +160,6 @@ type_tex_html_one_perl_test_files_generated_list =  \
     test_scripts/tex_html_perl_tex_accents_l2h.sh \
     test_scripts/tex_html_perl_tex_gdef_httex.sh \
     test_scripts/tex_html_perl_tex_gdef_l2h.sh \
-    test_scripts/tex_html_perl_tex_mathjax.sh \
-    test_scripts/tex_html_perl_tex_gdef_mathjax.sh \
-    test_scripts/tex_html_perl_tex_katex.sh \
-    test_scripts/tex_html_perl_tex_gdef_katex.sh \
-    test_scripts/tex_html_perl_tex_gdef_in_math_commands_mathjax.sh \
-    test_scripts/tex_html_perl_tex_gdef_in_math_commands_katex.sh \
     test_scripts/tex_html_perl_tex_complex_httex.sh \
     test_scripts/tex_html_perl_tex_complex_l2h.sh \
     test_scripts/tex_html_perl_tex_eqalign_httex.sh \
@@ -198,6 +198,12 @@ type_base_one_native_test_files_generated_list =  \
     test_scripts/formatting_native_no_content_do_contents_inline.sh \
     test_scripts/formatting_native_indices_in_begin_tables_lists.sh \
     test_scripts/formatting_native_indices_in_begin_tables_lists_latex.sh \
+    test_scripts/formatting_native_tex_mathjax.sh \
+    test_scripts/formatting_native_tex_gdef_mathjax.sh \
+    test_scripts/formatting_native_tex_katex.sh \
+    test_scripts/formatting_native_tex_gdef_katex.sh \
+    test_scripts/formatting_native_tex_gdef_in_math_commands_mathjax.sh \
+    test_scripts/formatting_native_tex_gdef_in_math_commands_katex.sh \
     test_scripts/formatting_native_formatting_customizations_input_raw_text.sh \
     test_scripts/formatting_native_index_entries_relate_to_item.sh \
     test_scripts/formatting_native_no_detailmenu_lang_at_begin_end.sh \
@@ -310,12 +316,6 @@ type_tex_html_one_native_test_files_generated_list =  \
     test_scripts/tex_html_native_tex_accents_l2h.sh \
     test_scripts/tex_html_native_tex_gdef_httex.sh \
     test_scripts/tex_html_native_tex_gdef_l2h.sh \
-    test_scripts/tex_html_native_tex_mathjax.sh \
-    test_scripts/tex_html_native_tex_gdef_mathjax.sh \
-    test_scripts/tex_html_native_tex_katex.sh \
-    test_scripts/tex_html_native_tex_gdef_katex.sh \
-    test_scripts/tex_html_native_tex_gdef_in_math_commands_mathjax.sh \
-    test_scripts/tex_html_native_tex_gdef_in_math_commands_katex.sh \
     test_scripts/tex_html_native_tex_complex_httex.sh \
     test_scripts/tex_html_native_tex_complex_l2h.sh \
     test_scripts/tex_html_native_tex_eqalign_httex.sh \

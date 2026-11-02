@@ -8,13 +8,7 @@ fi
 one_test_logs_dir=test_log
 
 
-
-if test "z$TEX_HTML_TESTS" != z"yes"; then
-  echo "Skipping HTML TeX tests that are not easily reproducible"
-  exit 77
-fi
-
-dir=tex_html
+dir=formatting
 name='tex_gdef_in_math_commands_mathjax'
 mkdir -p $dir
 

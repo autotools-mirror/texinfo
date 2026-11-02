@@ -9,6 +9,7 @@ EXTRA_DIST = \
  lightweight_markups.texi \
  no_content.texi no_detailmenu_lang_at_begin_end.texi \
  simplest.texi split_nocopying.texi \
+ tex_gdef_in_math_commands.texi \
  foo.info \
  file.css list-of-tests  res_parser
 

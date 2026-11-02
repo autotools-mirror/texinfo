@@ -4,7 +4,7 @@ EXTRA_DIST = \
  tex.texi tex_accents.texi tex_complex.texi \
  tex_encode_latin1.texi \
  tex_eqalign.texi \
- tex_gdef.texi tex_gdef_in_math_commands.texi \
+ tex_gdef.texi \
  tex_in_copying.texi \
  tex_not_closed.texi \
  list-of-tests res_parser
