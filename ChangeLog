@@ -1,3 +1,16 @@
+2026-11-02  Patrice Dumas  <pertusus@free.fr>
+
+	* tta/C/convert/plaintext_paragraph.c (enum text_class)
+	(para_add_text): handle type_unknown as type_regular, but without
+	increasing the column count.  It should be more efficient as it should
+	be grouped together with type_regular.  Also it clarifies the code,
+	since when parentheses or commas are postpended, the type_unknown
+	had the same effect of type_regular, this makes it clearer.
+	Remove type_unknown.
+
+	* tta/perl/Texinfo/Convert/ParagraphNonXS.pm (add_text): minor
+	change in code.
+
 2026-11-01  Patrice Dumas  <pertusus@free.fr>
 
 	* tta/C/convert/convert_to_plaintext.c (info_cache_node_names),

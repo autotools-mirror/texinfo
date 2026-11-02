@@ -443,11 +443,10 @@ sub add_text($$) {
       # allow an end of sentence to occur.
       allow_end_sentence($paragraph);
     } elsif (defined($added_word)) {
-      my $tmp = $added_word;
       # Prepend 'last_letter' to add the information on the last
       # letter even if it was read as part of a previous string.
-      # Add it here because _add_next overwrites it.
-      $tmp = $paragraph->{'last_letter'} . $tmp;
+      # Add it here because _add_next may overwrite it.
+      my $tmp = $paragraph->{'last_letter'} . $added_word;
 
       $result .= _add_next($paragraph, $added_word, undef,
                            !$newline_possible_flag);

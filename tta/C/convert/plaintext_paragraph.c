@@ -570,7 +570,7 @@ para_set_space_protection (int no_break)
 
 enum text_class { type_NULL, type_spaces, type_regular,
                  type_double_width, type_EOS, type_finished,
-                 type_unknown };
+                 };
 
 /* Return string to be added to paragraph contents, wrapping text. */
 /* The return value should not be modified and should be accessed before
@@ -582,7 +582,6 @@ para_add_text (const char *text, int len)
   char32_t next_wc = (char32_t) '0';
   char32_t wc;
   size_t next_len = 0;
-  int width;
   static TEXT result;
   enum text_class type = type_NULL, next_type = type_NULL;
 
@@ -642,6 +641,7 @@ para_add_text (const char *text, int len)
             }
           else
             {
+              int width;
               next_len = u8_mbtouc (&next_wc, (uint8_t *) q, len);
 
               if (next_wc == 0xfffd) /* bug - invalid string */
@@ -662,8 +662,28 @@ para_add_text (const char *text, int len)
                   next_type = type_double_width;
                 }
               else
-                next_type = type_unknown;
+                {
+          /* Not printable, possibly a tab, or a combining character.
+             Add it to the pending word without increasing the column
+             count. */
+                  next_type = type_regular;
+                }
             }
+
+          /* ready to use debugging for this loop, commented out
+             because there is no equivalent in Perl
+            {
+              uint8_t next_wc_u8[7];
+              int next_wc_len
+                = u8_uctomb (next_wc_u8, next_wc, 6);
+              if (next_wc_len < 0)
+                fatal ("u8_uctomb returns negative value");
+              next_wc_u8[next_wc_len] = 0;
+
+              fprintf (stderr, "type: %d next_t: %d next_wc: `%s'\n",
+                       type, next_type, (char *)next_wc_u8);
+            }
+           */
 
           /* For type_regular and type_spaces we operate on blocks of
              multiple characters at once. */
@@ -826,7 +846,7 @@ para_add_text (const char *text, int len)
         {
           para_allow_end_sentence ();
         }
-      /*************** Word character ******************************/
+      /*************** Word and other characters ************************/
       else if (type == type_regular)
         {
           para__add_next (&result, p, q - p, 0, regular_col_count);
@@ -868,13 +888,6 @@ para_add_text (const char *text, int len)
                   break;
                 }
             }
-        }
-      else if (type == type_unknown)
-        {
-          /* Not printable, possibly a tab, or a combining character.
-             Add it to the pending word without increasing the column
-             count. */
-          text_append_n (&state.word, p, q - p);
         }
 
       p = q;
