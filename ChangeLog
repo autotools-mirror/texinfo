@@ -1,3 +1,14 @@
+2026-11-02  Gavin Smith <gavinsmith0123@gmail.com>
+
+	Prefer "sectioning command" to "chapter structuring command"
+
+	* doc/texinfo.texi (Preamble, Contents, Chapter Structuring)
+	(Node Menu Illustration, Unstructured Nodes)
+	(Customization of Navigation and Headers)
+	(HTML Customization Variables List, Updating Commands)
+	(Updating Requirements):
+	Prefer term "sectioning command" to "chapter structuring command".
+
 2026-11-02  Patrice Dumas  <pertusus@free.fr>
 
 	move MathJax and KaTeX codes to formatting

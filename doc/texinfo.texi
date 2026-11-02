@@ -1148,8 +1148,7 @@ regular output.
 
 Any text that starts a paragraph, @@-commands that are formatted
 as quotations, tables, lists and so on, and @code{@@node} (@pxref{Nodes})
-and chapter structuring commands (@pxref{Chapter Structuring}) end the
-preamble.
+and sectioning commands (@pxref{Chapter Structuring}) end the preamble.
 
 The concept of the preamble is significant for @LaTeX{} output, as the
 @code{\begin@{document@}} line is output at the end of the preamble.
@@ -1934,7 +1933,7 @@ Or, you may specify your own page heading and footing format.
 @findex summarycontents
 @findex shortcontents
 
-The @code{@@chapter}, @code{@@section}, and other structuring commands
+The @code{@@chapter}, @code{@@section}, and other sectioning commands
 (@pxref{Chapter Structuring}) supply the information to make up a
 table of contents, but they do not cause an actual table to appear in
 the manual.  To do this, you must use the @code{@@contents} and/or
@@ -2172,7 +2171,7 @@ Beginning a Texinfo File
 
 @cindex Frontmatter, text in
 The body segment contains all the text of the document.  A manual is
-divided into one or more nodes using chapter structuring commands
+divided into one or more nodes using sectioning commands
 (@pxref{Chapter Structuring}).
 
 The example illustrates a chapter made of three nodes, one for
@@ -2280,11 +2279,11 @@ ignored.
 @cindex Structuring of chapters
 @cindex Sectioning
 
-Texinfo's @dfn{chapter structuring} or @dfn{sectioning} commands divide
-a document into a hierarchy of chapters, sections, subsections, and
-subsubsections.  These commands generate large headings in the text,
-like the one above.  They also provide information for generating the
-table of contents (@pxref{Contents,, Generating a Table of Contents}).
+Texinfo's @dfn{sectioning} commands (also known as @dfn{chapter structuring}
+commands) divide a document into a hierarchy of chapters, sections,
+subsections, and subsubsections.  These commands generate large headings in
+the text, like the one above.  They also provide information for generating
+the table of contents (@pxref{Contents,, Generating a Table of Contents}).
 
 For example, the @code{@@chapter} command introduces a chapter.  It
 could be used like this:
@@ -3292,8 +3291,8 @@ different Info file.  However, it would be very confusing for readers
 to have the `Next', `Previous' and `Up' pointers lead to nodes that
 do not correspond, even loosely, to the next, previous and up node.
 
-A @code{@@node} command is conventionally followed by a chapter
-structuring command.  Chapter structuring commands are often followed by
+A @code{@@node} command is conventionally followed by a sectioning
+command.  Sectioning commands are often followed by
 indexing commands.  (As shown in the example above, you may follow the
 @code{@@node} line with a comment line, e.g., to show which pointer is
 which if explicit pointers are used.)  The Texinfo processors use this
@@ -3321,10 +3320,10 @@ Texinfo File''.  This shows a @code{@@node} line followed by a
 
 @cindex Unstructured nodes
 All the examples of nodes in this chapter so far have used a @code{@@node}
-line followed by a structuring command (such as @code{@@chapter}).
+line followed by a sectioning command (such as @code{@@chapter}).
 
 @c @cindex Topic-oriented documentation
-However, you can also create nodes without using a structuring command.
+However, you can also create nodes without using a sectioning command.
 You may find this useful if you do not want your manual (or parts of
 a manual) to have a hierarchical structure, with chapters superior to
 sections, sections superior to sub-sections and so on.
@@ -4624,7 +4623,7 @@ When you delete or rename a node, it is usually a good idea to define an
 @code{@@anchor} with the old name.  That way, any links to the old node,
 whether from other Texinfo manuals or general web pages, keep working.
 Place any such anchors at the start of the node, after the @samp{@@node}
-line and any structuring or heading command line.
+line and any sectioning or heading command line.
 
 By default, links to anchors are unaffected by the
 @code{xrefautomaticsectiontitle} setting (see @ref{Three Arguments,,
@@ -19249,7 +19248,7 @@ The @code{<title>} and the document description in @code{<head>}
 are based on @code{@@settitle} (@pxref{@code{@@settitle}}).
 If the manual is split, the node name is also added to this HTML title.
 Set @code{SECTION_NAME_IN_TITLE} to use the argument of the associated
-chapter structuring command instead of the node name.
+sectioning command instead of the node name.
 
 @vindex OUTPUT_ENCODING_NAME @subentry @r{for HTML}
 By default, if an input encoding is set (typically through
@@ -20143,8 +20142,8 @@ If set, output the program name and miscellaneous related
 information in the page footers; default false.
 
 @item SECTION_NAME_IN_TITLE
-If set,  when output is split, use the argument of the chapter
-structuring command (e.g., @code{@@chapter} or @code{@@section})
+If set, when output is split, use the argument of the
+sectioning command (e.g., @code{@@chapter} or @code{@@section})
 in the @code{<title>} instead of the argument to @code{@@node}.
 
 @item SHORT_TOC_LINK_TO_TOC
@@ -22848,14 +22847,14 @@ region or in a whole Texinfo file.
 
 The updating commands work only with conventional Texinfo files, which
 are structured hierarchically like books.  In such files, a line with a
-structuring command must follow closely after each @code{@@node} line,
+sectioning command must follow closely after each @code{@@node} line,
 except for the `Top' @code{@@node} line.
 
-You can write the structuring command on the line that follows
+You can write the sectioning command on the line that follows
 immediately after an @code{@@node} line or else on the line that
 follows after a single @code{@@comment} line or a single
 @code{@@ifinfo} line.  You cannot interpose more than one line between
-the @code{@@node} line and the structuring command line; and you may
+the @code{@@node} line and the sectioning command line; and you may
 interpose only a @code{@@comment} line or an @code{@@ifinfo} line.
 
 Commands which work on a whole buffer require that the `Top' node be
@@ -23014,11 +23013,11 @@ number of levels at one time---for example, from a subsection to a
 chapter.
 
 Each @code{@@node} line, with the exception of the line for the `Top'
-node, must be followed by a line with a structuring command such as
+node, must be followed by a line with a sectioning command such as
 @code{@@chapter}, @code{@@section}, or
 @code{@@unnumberedsubsec}.
 
-Each @code{@@node} line/structuring-command line combination
+Each @code{@@node} line/sectioning-command line combination
 must look either like this:
 
 @example
