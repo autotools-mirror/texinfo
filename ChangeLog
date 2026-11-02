@@ -1,3 +1,16 @@
+2026-11-02  Gavin Smith <gavinsmith0123@gmail.com>
+
+	* tta/perl/Texinfo/StructuringNonXS.pm
+	(check_node_tree_menu_structure),
+	* tta/C/structuring_transfo/structuring.c
+	(check_node_tree_menu_structure):
+	After "unexpected node" warning, stop warning about further menu
+	entries if no other node is expected in the menu.
+	
+	This may be especially relevant if there is a missing @detailmenu
+	command in the Top node menu.  After this change, we warn about
+	the first unexpected entry but not any more.
+
 2026-11-01  Gavin Smith <gavinsmith0123@gmail.com>
 
 	Reference minified KaTeX files

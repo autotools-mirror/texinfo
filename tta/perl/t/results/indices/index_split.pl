@@ -894,12 +894,6 @@ $result_errors{'index_split'} = '* W index_split.texi:l16|node `Top\' in menu in
 * W index_split.texi:l44|unexpected node `node in section 3\' in menu
  warning: unexpected node `node in section 3\' in menu
 
-* W index_split.texi:l45|unexpected node `node 2 in section 3\' in menu
- warning: unexpected node `node 2 in section 3\' in menu
-
-* W index_split.texi:l46|unexpected node `node 3 in section 3\' in menu
- warning: unexpected node `node 3 in section 3\' in menu
-
 ';
 
 $result_nodes_list{'index_split'} = '1|Top

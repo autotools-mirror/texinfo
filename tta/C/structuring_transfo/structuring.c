@@ -1537,6 +1537,10 @@ check_node_tree_menu_structure (DOCUMENT *document)
                               menu_node_texi);
                       free (menu_node_texi);
                       node_errors[menu_node_element_number - 1] = 1;
+                      /* If no more nodes were expected, don't warn about
+                         any further menu entries. */
+                      if (!next_pointer_node)
+                        break;
                     }
 
                   /* Now set section_node for the section that is

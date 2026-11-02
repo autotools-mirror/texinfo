@@ -888,6 +888,9 @@ sub check_node_tree_menu_structure($) {
                 target_element_to_texi_label($menu_node)),
               $menu_content->{'source_info'});
             $node_errors{$menu_node_element_number} = 1;
+            # If no more nodes were expected, don't warn about any
+            # further menu entries.
+            last if !defined($next_pointer_node);
           }
 
           # Now set section_node for the section that is
