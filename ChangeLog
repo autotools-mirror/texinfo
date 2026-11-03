@@ -1,3 +1,16 @@
+2026-11-03  Gavin Smith <gavinsmith0123@gmail.com>
+
+	Fix contents links to lone sectioning commands in PDF
+
+	* doc/texinfo.tex (\donoderef, \setrefshadow):
+	Take an additional argument, the section number.
+	(\setrefshadow) [pdftex]: Output a PDF target using the section number
+	in addition to a target using the section title, for the sole purpose
+	of linking to it from the table of contents.
+	(\writetocentry): If \lastnode undefined, which is the case for
+	sectioning commands without @node, output a PDF target name using the
+	section number constructed the same way as in \setrefshadow.
+
 2026-11-02  Gavin Smith <gavinsmith0123@gmail.com>
 
 	Prefer "sectioning command" to "chapter structuring command"

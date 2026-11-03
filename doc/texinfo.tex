@@ -3,7 +3,7 @@
 % Load plain if necessary, i.e., if running under initex.
 \expandafter\ifx\csname fmtname\endcsname\relax\input plain\fi
 %
-\def\texinfoversion{2026-10-30.17}
+\def\texinfoversion{2026-11-03.17}
 %
 % Copyright 1985, 1986, 1988, 1990-2026 Free Software Foundation, Inc.
 %
@@ -6675,7 +6675,7 @@ might help (with 'rm \jobname.?? \jobname.??s')%
 
 % @xrefname - give text with printed name for linking to node and allow
 % referencing node, but do not print any heading.
-\parseargdef\xrefname{\donoderef{Yomitfromtoc}{#1}}%
+\parseargdef\xrefname{\donoderef{Yomitfromtoc}{#1}{}}%
 
 % These macros generate a chapter, section, etc. heading only
 % (including whitespace, linebreaking, etc. around it),
@@ -6824,7 +6824,7 @@ might help (with 'rm \jobname.?? \jobname.??s')%
     % been typeset.  If the destination for the pdf outline is after the
     % text, then jumping from the outline may wind up with the text not
     % being visible, for instance under high magnification.
-    \donoderef{#2}{#1}%
+    \donoderef{#2}{#1}{#3}%
     %
     % Typeset the actual heading.
     \nobreak % Avoid page breaks at the interline glue.
@@ -6958,7 +6958,7 @@ might help (with 'rm \jobname.?? \jobname.??s')%
     %
     % Write the node reference (= pdf destination for pdftex).
     % Again, see comments in \chapmacro.
-    \donoderef{#3}{#1}%
+    \donoderef{#3}{#1}{#4}%
     %
     % Interline glue will be inserted when the vbox is completed.
     % That glue will be a valid breakpoint for the page, since it'll be
@@ -7028,7 +7028,12 @@ might help (with 'rm \jobname.?? \jobname.??s')%
     \iflinks
       {\atdummies
        \edef\temp{%
-         \write\tocfile{@#1entry{#2}{#3}{\lastnode}{\noexpand\folio}}}%
+        % \lastnode contains the target name for linking to the section in
+        % PDF output.  If this is empty, construct a target name using the
+        % section number.
+         \write\tocfile{@#1entry{#2}{#3}%
+           {\ifx\lastnode\empty\pdfshadowprefix sec-#3\else\lastnode\fi}%
+           {\noexpand\folio}}}%
        \temp
       }%
     \fi
@@ -9219,10 +9224,11 @@ might help (with 'rm \jobname.?? \jobname.??s')%
 
 % Write a cross-reference definition for the current node.  #1 is the
 % type (Ynumbered, Yappendix, Ynothing).  #2 is the section title.
+% #3 is the section number.
 %
-\def\donoderef#1#2{%
+\def\donoderef#1#2#3{%
   \ifx\lastnode\empty
-    \setrefshadow{#1}{#2}%
+    \setrefshadow{#1}{#2}{#3}%
   \else
     \setref{\lastnode}{#1}{#2}%
     \global\let\lastnode=\empty
@@ -9290,13 +9296,18 @@ might help (with 'rm \jobname.?? \jobname.??s')%
 }
 
 % Similar to \setref, but used for targets created by sectioning commands.
+% Create a target using a section title.  Additionally, create a target
+% using the section number, for referencing from the table of contents:
+% this allows several sections with the same title to be referenced
+% correctly from the TOC at least.
 % Write information about this target using @xrshad instead of @xrdef.
-\def\setrefshadow#1#2{%
+\def\setrefshadow#1#2#3{%
   % For PDF, output the target with \pdfdest.
   % Temporarily suppress pdfTeX warning for trying to output two targets
   % with the same name.
   \pdfsuppresswarningdupdest1
   \pdfmkdest{\pdfshadowprefix#2}%
+  \pdfmkdest{\pdfshadowprefix sec-#3}%
   \pdfsuppresswarningdupdest0
   \dosetref{#2}{#1}{#2}{xrshad}%
 }
