@@ -1364,7 +1364,7 @@ info_format_ref (CONVERTER *self, enum command_id cmd,
 
       self_plaintext->silent++;
       plaintext_convert_line_new_context (self, node_code_element,
-                                           -1, -1, 1, 1,
+                                          0, -1, 1, 1,
                                           &node_texts);
       self_plaintext->silent--;
       destroy_element (node_code_element);

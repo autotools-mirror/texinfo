@@ -6186,13 +6186,13 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
               para_indent_next = 0;
             }
 
-          top_format->paragraph_count++;
-
           FORMATTER new_paragraph
             = new_formatter (self, formatter_paragraph,
                              para_indent_size, para_indent_next);
 
           push_formatter (self, &new_paragraph);
+
+          top_format->paragraph_count++;
 
           if (context_cmd == CM_flushright)
             {
