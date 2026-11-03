@@ -4090,7 +4090,6 @@ sub _convert($$) {
       # indent. Not first paragraph.
       if ($self->{'format_context'}->[-1]->{'cmdname'} eq '_top_format'
           and $self->get_conf('paragraphindent') >= 0
-          and $self->get_conf('paragraphindent')
           and ((exists($element->{'extra'})
                 and $element->{'extra'}->{'indent'})
              or (!(exists($element->{'extra'})
