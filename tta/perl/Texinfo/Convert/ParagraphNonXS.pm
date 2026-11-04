@@ -456,8 +456,7 @@ sub add_text($$) {
       # Check if it is considered as an end of sentence.  There are two things
       # to check: one, that we have a ., ! or ?; and second, that it is not
       # preceded by an upper-case letter (ignoring some punctuation)
-      if (exists($paragraph->{'end_sentence'})
-          and $added_word =~ /^[$after_punctuation_characters]*$/o) {
+      if ($added_word =~ /^[$after_punctuation_characters]*$/o) {
         # do nothing in the case of a continuation of after_punctuation_characters
       } elsif (!$paragraph->{'unfilled'}
           and $tmp =~

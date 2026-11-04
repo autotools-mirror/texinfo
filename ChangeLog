@@ -1,5 +1,15 @@
 2026-11-04  Patrice Dumas  <pertusus@free.fr>
 
+	* tta/perl/Texinfo/Convert/ParagraphNonXS.pm (add_text): remove a
+	useless check of exists($paragraph->{'end_sentence'}) in condition.
+	Something different could be if it is false and the associated
+	condition is true, but in that case the second condition cannot be
+	true as there are no end_sentence_characters in $added_word,
+	nor in last_letter because of how last letter is set, and the last
+	condition does nothing.  Gavin analysis.
+
+2026-11-04  Patrice Dumas  <pertusus@free.fr>
+
 	* tta/perl/t/input_files/all_spaces.texi,
 	tta/perl/t/input_files/in_menu_only_special_spaces_node.texi,
 	tta/perl/t/input_files/only_special_spaces_node.texi,
