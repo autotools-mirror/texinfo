@@ -291,8 +291,6 @@ sub _add_next($;$$$) {
 # Values for 'end_sentence'.
 # 'end_sentence' can also be unset, meaning not at the end of a sentence.
 use constant {
-  # end of sentence is inhibited
-  eos_inhibited => 0,
   # at end of sentence
   eos_present => 1,
   # at end of sentence but frenchspacing is on.
@@ -302,7 +300,7 @@ use constant {
 sub remove_end_sentence($) {
   my $paragraph = shift;
 
-  $paragraph->{'end_sentence'} = eos_inhibited;
+  delete $paragraph->{'end_sentence'};
 }
 
 sub add_end_sentence($) {

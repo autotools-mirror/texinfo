@@ -1,5 +1,12 @@
 2026-11-04  Patrice Dumas  <pertusus@free.fr>
 
+	* tta/C/convert/plaintext_paragraph.c (enum eos_status)
+	(para_remove_end_sentence), tta/perl/Texinfo/Convert/ParagraphNonXS.pm
+	(remove_end_sentence): unset end_sentence instead of setting
+	eos_inhibited, as this value is never checked.
+
+2026-11-04  Patrice Dumas  <pertusus@free.fr>
+
 	* tta/perl/Texinfo/Convert/ParagraphNonXS.pm (add_text): remove a
 	useless check of exists($paragraph->{'end_sentence'}) in condition.
 	Something different could be if it is false and the associated

@@ -34,10 +34,9 @@
 
 static int debug = 0;
 
-enum eos_status { eos_unset = -2, eos_inhibited = 0, eos_present = 1,
+enum eos_status { eos_unset = -2, eos_present = 1,
                   eos_present_frenchspacing = -1 };
 /* eos_unset                 - not at the end of a sentence (unset in Perl),
-   eos_inhibited             - end of sentence is inhibited
    eos_present               - at end of sentence
    eos_present_frenchspacing - at end of sentence but frenchspacing is on. */
 
@@ -529,7 +528,7 @@ para_add_next (const char *text, int text_len, int transparent)
 void
 para_remove_end_sentence (void)
 {
-  state.end_sentence = eos_inhibited;
+  state.end_sentence = eos_unset;
 }
 
 void
@@ -878,13 +877,13 @@ para_add_text (const char *text, int len)
                     {
                      at that point, we already know that we are not
                      at the end of the sentence, so we could have set
-                     state.end_sentence and break, however we wait for
+                     state.end_sentence =eos_unset and break'ed out
+                     of the loop, however we wait for
                      the loop to reach the first non end_sentence_characters
                      non after_punctuation_characters to unset the
                      end sentence, in the condition below.
 
-                     TODO in Perl, there is a break here, therefore
-                     the debugging output is different.
+                     NOTE in Perl, there is a break here.
                     }
                    */
                 }
