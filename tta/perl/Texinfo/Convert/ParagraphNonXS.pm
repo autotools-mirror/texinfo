@@ -381,6 +381,8 @@ sub add_text($$) {
       print STDERR "p ($paragraph->{'counter'}+$paragraph->{'word_counter'}) "
        ."s `" . _print_escaped_spaces($paragraph->{'space'})."', "
        ."l `$paragraph->{'last_letter'}', "
+       ."eol ".(exists($paragraph->{'end_sentence'}) ?
+                 $paragraph->{'end_sentence'} : '-2').', '
        ."w$paragraph->{'invisible_pending_word'} `$paragraph->{'word'}'\n";
     }
     if (defined($spaces)) {

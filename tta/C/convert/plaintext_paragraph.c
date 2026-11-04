@@ -709,12 +709,13 @@ para_add_text (const char *text, int len)
             fatal ("u8_uctomb returns negative value");
           last_letter_u8[last_letter_len] = 0;
 
-          fprintf(stderr, "p (%d+%d) s `%s', l `%s', w%d `%s'\n",
+          fprintf(stderr, "p (%d+%d) s `%s', l `%s', eol %d, w%d `%s'\n",
                     state.counter, state.word_counter,
                     state.space.end == 0 ? ""
                       : para__print_escaped_spaces (state.space.text,
                                                       state.space.end),
-                    (char *)last_letter_u8, state.invisible_pending_word,
+                    (char *)last_letter_u8, state.end_sentence,
+                    state.invisible_pending_word,
                     state.word.text);
         }
 
@@ -872,6 +873,20 @@ para_add_text (const char *text, int len)
                         fprintf (stderr, "END_SENTENCE\n");
                       break;
                     }
+                  /*
+                  else
+                    {
+                     at that point, we already know that we are not
+                     at the end of the sentence, so we could have set
+                     state.end_sentence and break, however we wait for
+                     the loop to reach the first non end_sentence_characters
+                     non after_punctuation_characters to unset the
+                     end sentence, in the condition below.
+
+                     TODO in Perl, there is a break here, therefore
+                     the debugging output is different.
+                    }
+                   */
                 }
               else if (strchr (after_punctuation_characters, *q2))
                 {

@@ -1,3 +1,12 @@
+2026-11-04  Patrice Dumas  <pertusus@free.fr>
+
+	* tta/C/convert/plaintext_paragraph.c (para_add_text),
+	tta/perl/Texinfo/Convert/ParagraphNonXS.pm (add_text): add
+	end_sentence to the debugging output.
+
+	* tta/C/convert/plaintext_paragraph.c (para_add_text): explain in a
+	comment why the code works even if it is different from Perl code.
+
 2026-11-03  Patrice Dumas  <pertusus@free.fr>
 
 	* tta/C/convert/convert_to_info.c (info_format_ref): prevent
