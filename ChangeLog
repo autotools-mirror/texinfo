@@ -1,5 +1,15 @@
 2026-11-04  Patrice Dumas  <pertusus@free.fr>
 
+	* tta/perl/Texinfo/Convert/ParagraphNonXS.pm (remove_end_sentence),
+	tta/C/convert/plaintext_paragraph.c (para_remove_end_sentence):
+	add debug message.
+
+	* tta/perl/Texinfo/Convert/ParagraphNonXS.pm (add_text), 
+	tta/C/convert/plaintext_paragraph.c (para_add_text): fix debug
+	message.
+
+2026-11-04  Patrice Dumas  <pertusus@free.fr>
+
 	* tta/C/convert/convert_to_plaintext.c
 	(convert_to_plaintext_internal): check if there is not an upper case
 	letter in the whole accent argument before calling

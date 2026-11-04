@@ -528,6 +528,9 @@ para_add_next (const char *text, int text_len, int transparent)
 void
 para_remove_end_sentence (void)
 {
+  if (state.debug)
+    fprintf (stderr, "REMOVE END SENTENCE\n");
+
   state.end_sentence = eos_unset;
 }
 
@@ -708,7 +711,7 @@ para_add_text (const char *text, int len)
             fatal ("u8_uctomb returns negative value");
           last_letter_u8[last_letter_len] = 0;
 
-          fprintf(stderr, "p (%d+%d) s `%s', l `%s', eol %d, w%d `%s'\n",
+          fprintf(stderr, "p (%d+%d) s `%s', l `%s', eos %d, w%d `%s'\n",
                     state.counter, state.word_counter,
                     state.space.end == 0 ? ""
                       : para__print_escaped_spaces (state.space.text,

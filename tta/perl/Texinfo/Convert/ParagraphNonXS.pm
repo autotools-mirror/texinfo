@@ -300,6 +300,7 @@ use constant {
 sub remove_end_sentence($) {
   my $paragraph = shift;
 
+  printf STDERR "REMOVE END SENTENCE\n" if ($paragraph->{'debug'});
   delete $paragraph->{'end_sentence'};
 }
 
@@ -379,7 +380,7 @@ sub add_text($$) {
       print STDERR "p ($paragraph->{'counter'}+$paragraph->{'word_counter'}) "
        ."s `" . _print_escaped_spaces($paragraph->{'space'})."', "
        ."l `$paragraph->{'last_letter'}', "
-       ."eol ".(exists($paragraph->{'end_sentence'}) ?
+       ."eos ".(exists($paragraph->{'end_sentence'}) ?
                  $paragraph->{'end_sentence'} : '-2').', '
        ."w$paragraph->{'invisible_pending_word'} `$paragraph->{'word'}'\n";
     }
