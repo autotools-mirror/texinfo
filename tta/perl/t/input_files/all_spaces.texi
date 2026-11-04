@@ -46,8 +46,10 @@ THIN SPACE: | |
 
 HAIR SPACE: | |
 
+@c Perl and C code give different width.
 LINE SEPARATOR: | |
 
+@c Perl and C code give different width.
 PARAGRAPH SEPARATOR: | |
 
 NARROW NO-BREAK SPACE: | |

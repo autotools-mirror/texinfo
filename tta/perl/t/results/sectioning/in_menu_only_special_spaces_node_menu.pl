@@ -255,7 +255,7 @@ $result_tree_text{'in_menu_only_special_spaces_node_menu'} = '*document_root C16
   *@c C1
    *line_arg C3
     {spaces_before_argument: }
-    {rawline_text:Perl and XS code give different width.}
+    {rawline_text:Perl and C code give different width.}
     {spaces_after_argument:\\n}
   *@c C1
    *line_arg C3
@@ -312,7 +312,7 @@ $result_texis{'in_menu_only_special_spaces_node_menu'} = '
 @chapter THREE-PER-EM SPACE| | FOUR-PER-EM SPACE| | SIX-PER-EM SPACE| | PUNCTUATION SPACE| | THIN SPACE| | HAIR SPACE| | NARROW NO-BREAK SPACE| | IDEOGRAPHIC SPACE|　|
 @c FIGURE SPACE| | MEDIUM MATHEMATICAL SPACE| |
 
-@c Perl and XS code give different width.
+@c Perl and C code give different width.
 @c @node   
 @c @chapter LINE SEPARATOR| | PARAGRAPH SEPARATOR| |
 

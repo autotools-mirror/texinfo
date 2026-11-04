@@ -184,7 +184,7 @@ $result_tree_text{'only_special_spaces_node_transliterate'} = '*document_root C1
   *@c C1
    *line_arg C3
     {spaces_before_argument: }
-    {rawline_text:Perl and XS code give different width.}
+    {rawline_text:Perl and C code give different width.}
     {spaces_after_argument:\\n}
   *@c C1
    *line_arg C3
@@ -231,7 +231,7 @@ $result_texis{'only_special_spaces_node_transliterate'} = '
 @c different transliteration in Perl and C
 @c FIGURE SPACE| | MEDIUM MATHEMATICAL SPACE| |
 
-@c Perl and XS code give different width.
+@c Perl and C code give different width.
 @c @node   
 @c @chapter LINE SEPARATOR| | PARAGRAPH SEPARATOR| |
 

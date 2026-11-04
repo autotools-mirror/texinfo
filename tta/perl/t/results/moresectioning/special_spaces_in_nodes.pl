@@ -210,7 +210,7 @@ $result_tree_text{'special_spaces_in_nodes'} = '*document_root C14
     {THREE-PER-EM SPACE| | FOUR-PER-EM SPACE| | SIX-PER-EM SPACE| |}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C2 special_spaces_in_nodes.texi:l30 {FIGURE SPACE| | PUNCTUATION SPACE| | THIN SPACE| |}
+ *@node C3 special_spaces_in_nodes.texi:l30 {FIGURE SPACE| | PUNCTUATION SPACE| | THIN SPACE| |}
  |EXTRA
  |identifier:{FIGURE-SPACE_007c_2007_007c-PUNCTUATION-SPACE_007c_2008_007c-THIN-SPACE_007c_2009_007c}
  |is_target:{1}
@@ -221,7 +221,12 @@ $result_tree_text{'special_spaces_in_nodes'} = '*document_root C14
     {FIGURE SPACE| | PUNCTUATION SPACE| | THIN SPACE| |}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C2 special_spaces_in_nodes.texi:l32 {HAIR SPACE| | LINE SEPARATOR| | PARAGRAPH SEPARATOR| |}
+  *@c C1
+   *line_arg C3
+    {spaces_before_argument: }
+    {rawline_text:Perl and C code give different width.}
+    {spaces_after_argument:\\n}
+ *@node C2 special_spaces_in_nodes.texi:l33 {HAIR SPACE| | LINE SEPARATOR| | PARAGRAPH SEPARATOR| |}
  |EXTRA
  |identifier:{HAIR-SPACE_007c_200a_007c-LINE-SEPARATOR_007c_2028_007c-PARAGRAPH-SEPARATOR_007c_2029_007c}
  |is_target:{1}
@@ -232,7 +237,7 @@ $result_tree_text{'special_spaces_in_nodes'} = '*document_root C14
     {HAIR SPACE| | LINE SEPARATOR| | PARAGRAPH SEPARATOR| |}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C4 special_spaces_in_nodes.texi:l34 {NARROW NO-BREAK SPACE| | MEDIUM MATHEMATICAL SPACE| | IDEOGRAPHIC SPACE|　|}
+ *@node C4 special_spaces_in_nodes.texi:l35 {NARROW NO-BREAK SPACE| | MEDIUM MATHEMATICAL SPACE| | IDEOGRAPHIC SPACE|　|}
  |EXTRA
  |identifier:{NARROW-NO_002dBREAK-SPACE_007c_202f_007c-MEDIUM-MATHEMATICAL-SPACE_007c_205f_007c-IDEOGRAPHIC-SPACE_007c_3000_007c}
  |is_target:{1}
@@ -244,7 +249,7 @@ $result_tree_text{'special_spaces_in_nodes'} = '*document_root C14
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@ref C1 special_spaces_in_nodes.texi:l36
+   *@ref C1 special_spaces_in_nodes.texi:l37
     *brace_arg C1
     |EXTRA
     |node_content:{NEXT LINE (NEL)|| NO-BREAK SPACE| | OGHAM SPACE MARK| |}
@@ -289,6 +294,7 @@ $result_texis{'special_spaces_in_nodes'} = '
 
 @node FIGURE SPACE| | PUNCTUATION SPACE| | THIN SPACE| |
 
+@c Perl and C code give different width.
 @node HAIR SPACE| | LINE SEPARATOR| | PARAGRAPH SEPARATOR| |
 
 @node NARROW NO-BREAK SPACE| | MEDIUM MATHEMATICAL SPACE| | IDEOGRAPHIC SPACE|　|

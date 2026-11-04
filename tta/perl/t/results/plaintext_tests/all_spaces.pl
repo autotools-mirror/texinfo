@@ -31,7 +31,7 @@ $result_tree_text{'all_spaces'} = '*document_root C3
     {spaces_before_argument: }
     {Top}
     {spaces_after_argument:\\n}
- *@node C56 all_spaces.texi:l4 {chap}
+ *@node C58 all_spaces.texi:l4 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -109,9 +109,19 @@ $result_tree_text{'all_spaces'} = '*document_root C3
   *paragraph C1
    {HAIR SPACE: | |\\n}
   {empty_line:\\n}
+  *@c C1
+   *line_arg C3
+    {spaces_before_argument: }
+    {rawline_text:Perl and C code give different width.}
+    {spaces_after_argument:\\n}
   *paragraph C1
    {LINE SEPARATOR: | |\\n}
   {empty_line:\\n}
+  *@c C1
+   *line_arg C3
+    {spaces_before_argument: }
+    {rawline_text:Perl and C code give different width.}
+    {spaces_after_argument:\\n}
   *paragraph C1
    {PARAGRAPH SEPARATOR: | |\\n}
   {empty_line:\\n}
@@ -175,8 +185,10 @@ THIN SPACE: | |
 
 HAIR SPACE: | |
 
+@c Perl and C code give different width.
 LINE SEPARATOR: | |
 
+@c Perl and C code give different width.
 PARAGRAPH SEPARATOR: | |
 
 NARROW NO-BREAK SPACE: | |

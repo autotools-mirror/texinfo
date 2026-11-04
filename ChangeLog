@@ -1,5 +1,13 @@
 2026-11-04  Patrice Dumas  <pertusus@free.fr>
 
+	* tta/perl/t/input_files/all_spaces.texi,
+	tta/perl/t/input_files/in_menu_only_special_spaces_node.texi,
+	tta/perl/t/input_files/only_special_spaces_node.texi,
+	tta/perl/t/input_files/special_spaces_in_nodes.texi: add/modify
+	comment about Perl and C different widths.
+
+2026-11-04  Patrice Dumas  <pertusus@free.fr>
+
 	* tta/C/convert/plaintext_paragraph.c (para_add_text),
 	tta/perl/Texinfo/Convert/ParagraphNonXS.pm (add_text): add
 	end_sentence to the debugging output.
