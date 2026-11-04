@@ -7,7 +7,8 @@
 
 	* tta/perl/t/plaintext_tests.t
 	(non_character_prepended_lower_case_accent)
-	(non_character_prepended_upper_case_accent): add tests of dot after
+	(non_character_prepended_upper_case_accent),
+	tta/perl/t/test_files_generated_list.txt: add tests of dot after
 	accented letter with ENABLE_ENCODING set to 0, which leads to a
 	non-letter character prepended for the tested accent, to check if end
 	of line is removed or not.
