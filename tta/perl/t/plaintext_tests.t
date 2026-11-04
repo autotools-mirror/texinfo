@@ -713,7 +713,20 @@ HHH
 
 @node chap
 @chapter Chapter @anchor{point} after anchor
-']
+'],
+# With ENABLE_ENCODING set to 0, @udotaccent{r} becomes ".r"; with
+# @sc{} it becomes ".R", but since it is in @sc, it should end a
+# sentence.  The test checks that it is detected that the initial
+# letter was a lower-case letter even if a non-letter character has been
+# prepended.
+['non_character_prepended_lower_case_accent',
+'@udotaccent{r}. A
+@sc{@udotaccent{r}}. B', {},
+{'ENABLE_ENCODING' => 0}],
+['non_character_prepended_upper_case_accent',
+'@udotaccent{R}.  A
+@sc{@udotaccent{R}}.  B', {},
+{'ENABLE_ENCODING' => 0}],
 );
 
 my $insert_copying_and_paragraph = 

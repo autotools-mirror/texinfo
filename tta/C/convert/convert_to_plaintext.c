@@ -4414,27 +4414,37 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
                     }
                   else
                     {
-                      if (isascii (accented_text_original[0]))
+                      int has_upper = 0;
+                      const char *p = accented_text_original;
+                      while (*p)
                         {
-                          if (islower (accented_text_original[0]))
+                          if (isascii (*p))
                             {
-                              para_allow_end_sentence ();
+                              if (isupper (*p))
+                                {
+                                  has_upper = 1;
+                                  break;
+                                }
+                              else
+                                p++;
+                            }
+                          else
+                            {
+                              int char_len = 1;
+                              while ((p[char_len] & 0xC0) == 0x80)
+                                char_len++;
+                              char32_t wc;
+                              u8_mbtouc (&wc, (uint8_t *)p, char_len);
+                              if (uc_is_upper (wc))
+                                {
+                                  has_upper = 1;
+                                  break;
+                                }
+                              p += char_len;
                             }
                         }
-                      else
-                        {
-                          int char_len = 1;
-                          while ((accented_text_original[char_len] & 0xC0)
-                                                                     == 0x80)
-                            char_len++;
-                          char32_t wc;
-                          u8_mbtouc (&wc, (uint8_t *) accented_text_original,
-                                     char_len);
-                          if (!uc_is_upper (wc))
-                            {
-                              para_allow_end_sentence ();
-                            }
-                        }
+                      if (!has_upper)
+                        para_allow_end_sentence ();
                     }
                 }
               free (accented_text_original);

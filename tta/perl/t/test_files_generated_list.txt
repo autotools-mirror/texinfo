@@ -2620,6 +2620,8 @@ t/results/plaintext_tests/no_punctuation_commands.pl
 t/results/plaintext_tests/no_punctuation_commands_frenchspacing.pl
 t/results/plaintext_tests/non_break_spaces.pl
 t/results/plaintext_tests/non_break_spaces/res_plaintext/non_break_spaces.txt
+t/results/plaintext_tests/non_character_prepended_lower_case_accent.pl
+t/results/plaintext_tests/non_character_prepended_upper_case_accent.pl
 t/results/plaintext_tests/paragraphindent.pl
 t/results/plaintext_tests/protect_spaces_on_line.pl
 t/results/plaintext_tests/protected_space_end_line.pl

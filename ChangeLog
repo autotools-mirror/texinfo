@@ -1,5 +1,19 @@
 2026-11-04  Patrice Dumas  <pertusus@free.fr>
 
+	* tta/C/convert/convert_to_plaintext.c
+	(convert_to_plaintext_internal): check if there is not an upper case
+	letter in the whole accent argument before calling
+	para_allow_end_sentence.
+
+	* tta/perl/t/plaintext_tests.t
+	(non_character_prepended_lower_case_accent)
+	(non_character_prepended_upper_case_accent): add tests of dot after
+	accented letter with ENABLE_ENCODING set to 0, which leads to a
+	non-letter character prepended for the tested accent, to check if end
+	of line is removed or not.
+
+2026-11-04  Patrice Dumas  <pertusus@free.fr>
+
 	* tta/C/convert/plaintext_paragraph.c (enum eos_status)
 	(para_remove_end_sentence), tta/perl/Texinfo/Convert/ParagraphNonXS.pm
 	(remove_end_sentence): unset end_sentence instead of setting
