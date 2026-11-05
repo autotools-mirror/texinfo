@@ -232,7 +232,10 @@ sub destroy($) {
 }
 
 my $end_sentence_characters = quotemeta('.?!');
-my $after_punctuation_characters = quotemeta('"\')]');
+# DEL is also there even though it is not an end sentence character,
+# such that it is ignored too, if there is a quoted node name in
+# an @*ref before end sentence punctuation
+my $after_punctuation_characters = quotemeta('"\')]'."\x{7f}");
 
 # Add $WORD to paragraph, returning the text to be added to the paragraph.
 sub add_next($;$$) {

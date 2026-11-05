@@ -1589,6 +1589,7 @@ t/results/info_tests/empty_in_flushright_index_entry.pl
 t/results/info_tests/encoding_us_ascii.pl
 t/results/info_tests/end_of_line_command_in_node_lines.pl
 t/results/info_tests/end_of_line_command_in_node_lines/res_info/end_of_line_command_in_node_lines.info
+t/results/info_tests/end_sentence_after_or_not_after_quoted_node.pl
 t/results/info_tests/error_in_footnote.pl
 t/results/info_tests/example_in_multitable_index.pl
 t/results/info_tests/file_only_png.pl

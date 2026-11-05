@@ -398,7 +398,10 @@ para_destroy (void)
 
 /* ignored after end sentence character to determine if
    at the end of a sentence */
-#define after_punctuation_characters "\"')]"
+/* DEL is also there even though it is not an end sentence character,
+   such that it is ignored too, if there is a quoted node name in
+   an @*ref before end sentence punctuation */
+#define after_punctuation_characters "\"')]" "\x7F"
 /* characters triggering an end of sentence */
 #define end_sentence_characters ".?!"
 

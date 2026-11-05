@@ -1,10 +1,22 @@
+2026-11-05  Patrice Dumas  <pertusus@free.fr>
+
+	* tta/C/convert/plaintext_paragraph.c (after_punctuation_characters),
+	tta/perl/Texinfo/Convert/ParagraphNonXS.pm
+	($after_punctuation_characters): add DEL \x7F as an
+	after_punctuation_characters, such that it is ignored if there is a
+	quoted node name in an @*ref before end sentence punctuation.
+
+	* tta/perl/t/test_files_generated_list.txt, tta/perl/t/info_tests.t
+	(end_sentence_after_or_not_after_quoted_node): test DEL-quoted and not
+	DEL-quoted node names in @ref before a period.
+
 2026-11-04  Patrice Dumas  <pertusus@free.fr>
 
 	* tta/perl/Texinfo/Convert/ParagraphNonXS.pm (remove_end_sentence),
 	tta/C/convert/plaintext_paragraph.c (para_remove_end_sentence):
 	add debug message.
 
-	* tta/perl/Texinfo/Convert/ParagraphNonXS.pm (add_text), 
+	* tta/perl/Texinfo/Convert/ParagraphNonXS.pm (add_text),
 	tta/C/convert/plaintext_paragraph.c (para_add_text): fix debug
 	message.
 
@@ -126,7 +138,7 @@
 
 	* tta/C/convert/convert_to_plaintext.c (info_cache_node_names),
 	tta/perl/Texinfo/Convert/PlaintextNonXS.pm (_cache_node_names):
-	call paragraph end after a node name formatting in cache_node_names 
+	call paragraph end after a node name formatting in cache_node_names
 	too.
 
 2026-11-01  Patrice Dumas  <pertusus@free.fr>

@@ -1542,6 +1542,21 @@ Arrived in Chapter.
 ',
  {'skip' => ($^O eq 'MSWin32') ? 'file looking like a drive stripped' : undef},
 ],
+['end_sentence_after_or_not_after_quoted_node',
+'@node Top
+@top top
+
+@ref{aaa, n}. b.
+@ref{aaB, n}. b.
+
+@ref{c.dd, n}. v.
+@ref{c.dD, n}. v.
+
+@anchor{aaa}
+@anchor{aaB}
+@anchor{c.dd}
+@anchor{c.dD}
+'],
 );
 
 my @file_tests = (
