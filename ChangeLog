@@ -1,5 +1,18 @@
 2026-11-06  Patrice Dumas  <pertusus@free.fr>
 
+	* tta/C/convert/plaintext_paragraph.c (para__cut_line, para__add_next)
+	(para_add_text), tta/perl/Texinfo/Convert/ParagraphNonXS.pm
+	(_cut_line, _add_next, add_text): do the comparison to max in
+	_cut_line, pass the columns count to _cut_line.
+
+	* tta/C/convert/convert_to_plaintext.c (fill_line_formatter)
+	(new_unfilled_formatter), tta/perl/Texinfo/Convert/PlaintextNonXS.pm
+	(new_line_formatter, new_unfilled_formatter): set ignore_columns for
+	line_formatter.  Do not set max for line_formatter nor
+	unfilled_formatter, it is not accessed if ignore_columns is set.
+
+2026-11-06  Patrice Dumas  <pertusus@free.fr>
+
 	* tta/perl/Texinfo/Convert/PlaintextNonXS.pm (new_line_formatter)
 	(new_paragraph_formatter): remove $suppress_styles and $no_added_eol
 	arguments, instead modify the formatter returned by the function.

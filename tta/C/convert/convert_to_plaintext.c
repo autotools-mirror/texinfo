@@ -357,10 +357,10 @@ fill_line_formatter (FORMATTER *formatter, CONVERTER *self,
   common_fill_formatter (formatter, self, indent_length,
                          self->conf->frenchspacing.o.string);
 
-  para_set_conf_max (10000001);
   para_set_conf_keep_end_lines (1);
   para_set_conf_no_final_newline (1);
   para_set_conf_add_final_space (1);
+  para_set_conf_ignore_columns (1);
 }
 
 FORMATTER
@@ -380,7 +380,6 @@ new_unfilled_formatter (CONVERTER *self, int indent_length)
   common_fill_formatter (&formatter, self, indent_length, 0);
 
   para_set_conf_unfilled (1);
-  para_set_conf_max (10000000);
   para_set_conf_keep_end_lines (1);
   para_set_conf_no_final_newline (1);
   para_set_conf_ignore_columns (1);

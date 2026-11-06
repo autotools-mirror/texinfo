@@ -217,11 +217,11 @@ PARA_CONF_VARIABLES_LIST
 /************************************************************************/
 
 
-/* Append a newline character to RESULT. */
+/* Append a newline character to RESULT if the line is cut. */
 void
-para__cut_line (TEXT *result)
+para__cut_line (TEXT *result, int column_counts)
 {
-  if (!state.ignore_columns)
+  if (!state.ignore_columns && column_counts > state.max)
     {
       para__end_line ();
 
@@ -496,11 +496,10 @@ para__add_next (TEXT *result, const char *word, int word_len,
        }
 
 
-      if (state.counter != 0
-          && state.counter + state.word_counter + (int)state.space.end
-              > state.max)
+      if (state.counter != 0)
         {
-          para__cut_line (result);
+          para__cut_line (result, state.counter + state.word_counter
+                                  + (int)state.space.end);
         }
     }
   if (state.debug)
@@ -768,11 +767,10 @@ para_add_text (const char *text, int len)
                       state.word_counter += 1;
                     }
 
-                  if (state.counter != 0
-                      && state.counter + state.word_counter
-                          + (int)state.space.end > state.max)
+                  if (state.counter != 0)
                     {
-                      para__cut_line (&result);
+                      para__cut_line (&result, state.counter
+                          + state.word_counter + (int)state.space.end);
                     }
                 }
             }
@@ -804,10 +802,7 @@ para_add_text (const char *text, int len)
 
           /* If not enough space in the line for the pending space, start
              a new line. */
-          if (state.counter + (int)state.space.end > state.max)
-            {
-              para__cut_line (&result);
-            }
+          para__cut_line (&result, state.counter + (int)state.space.end);
 
           if (!state.unfilled && state.keep_end_lines
               && memchr (p, '\n', q - p))
@@ -835,10 +830,9 @@ para_add_text (const char *text, int len)
              there was no space between them, unlike single-width
              characters. */
 
-          if (state.counter != 0
-              && state.counter + state.word_counter > state.max)
+          if (state.counter != 0)
             {
-              para__cut_line (&result);
+              para__cut_line (&result, state.counter + state.word_counter);
             }
           /* Accumulate the characters so that they can be pushed
              onto the next line if necessary. */

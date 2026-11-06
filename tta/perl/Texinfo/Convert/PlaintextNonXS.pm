@@ -940,7 +940,7 @@ sub new_line_formatter($;$) {
   my ($self, $indent_length) = @_;
 
   my $container_conf = {
-   'max'                 => 10000001,
+   'ignore_columns'      => 1,
    'keep_end_lines'      => 1,
    'no_final_newline'    => 1,
    'add_final_space'     => 1,
@@ -977,7 +977,6 @@ sub new_unfilled_formatter($;$) {
   my ($self, $indent_length) = @_;
 
   my $container_conf = {
-    'max'                => 10000000,
     'ignore_columns'     => 1,
     'keep_end_lines'     => 1,
     'unfilled'           => 1,
