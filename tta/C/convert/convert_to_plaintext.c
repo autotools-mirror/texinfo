@@ -340,11 +340,10 @@ new_paragraph_formatter (CONVERTER *self, int indent_length,
   if (indent_length_next != -1)
     para_set_conf_indent_length_next (indent_length_next);
 
-  para_set_conf_max (text_element_context->max);
   if (plaintext_commands_data[context_cmd].flags & PF_flush)
-    {
-      para_set_conf_keep_end_lines (1);
-    }
+    para_set_conf_keep_end_lines (1);
+  else
+    para_set_conf_max (text_element_context->max);
 
   return formatter;
 }

@@ -959,9 +959,10 @@ sub new_paragraph_formatter($;$$) {
 
   $container_conf->{'indent_length_next'} = $indent_length_next;
 
-  $container_conf->{'max'} = $self->{'text_element_context'}->[-1]->{'max'};
   if ($flush_commands{$self->{'context'}->[-1]}) {
     $container_conf->{'keep_end_lines'} = 1;
+  } else {
+    $container_conf->{'max'} = $self->{'text_element_context'}->[-1]->{'max'};
   }
 
   my $frenchspacing_conf = $self->get_conf('frenchspacing');

@@ -1,5 +1,12 @@
 2026-11-06  Patrice Dumas  <pertusus@free.fr>
 
+	* tta/C/convert/convert_to_plaintext.c (new_paragraph_formatter),
+	tta/perl/Texinfo/Convert/PlaintextNonXS.pm (new_paragraph_formatter):
+	set container fonc max only if keep_end_lines is not set, as if
+	keep_end_lines is set, max is not accessed.
+
+2026-11-06  Patrice Dumas  <pertusus@free.fr>
+
 	* tta/C/convert/convert_to_plaintext.c (new_paragraph_formatter)
 	(fill_line_formatter, new_unfilled_formatter),
 	tta/C/convert/plaintext_paragraph.c (PARAGRAPH, para__cut_line),
