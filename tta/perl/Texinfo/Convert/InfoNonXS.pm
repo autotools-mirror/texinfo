@@ -151,7 +151,7 @@ sub _info_header($$$) {
         if (exists($command->{'contents'}->[0]->{'contents'})) {
           $self->_stream_output("INFO-DIR-SECTION ");
           $self->convert_line($command->{'contents'}->[0], undef, undef,
-                              {'no_added_eol' => 1});
+                              undef, 1);
           $self->_stream_output("\n");
         }
       } elsif ($command->{'cmdname'} eq 'direntry') {
@@ -959,9 +959,7 @@ sub format_ref($$$) {
     my ($pending, undef) = $self->convert_line_new_context(
         Texinfo::TreeElement::new({'type' => '_code',
                                    'contents' => [$label_element]}),
-                                   0, undef,
-                                  {'suppress_styles' => 1,
-                                    'no_added_eol' => 1});
+                                   0, undef, 1, 1);
     $node_name = $self->_pending_to_text($pending);
     $self->{'silent'}--;
   } else {
@@ -1165,8 +1163,7 @@ sub format_node($$;$) {
                         Texinfo::TreeElement::new({'text' => '('}),
                              $node_direction->{'extra'}->{'manual_content'},
                                Texinfo::TreeElement::new({'text' => ')'})]});
-        $self->convert_line($file_formatted, undef, undef,
-                            {'suppress_styles' => 1});
+        $self->convert_line($file_formatted, undef, undef, 1);
       }
 
       if (exists($node_direction->{'extra'}->{'identifier'})

@@ -874,8 +874,9 @@ case we need those extra categories back again.
 
 For converters in C, agreed with Gavin that, in general, it is better not to
 translate a perl tree in input, but access directly the C tree that was setup
-by the XS parser.  When using the TreeElements interface, being able to
-create a C element based on a Perl element is needed, though.
+by the XS parser.  The TreeElements interface has been removed, but when
+it was present, being able to create a C element based on a Perl element was
+needed for that interface.
 
 There is disagreement on the strategy to use for libraries versioning.
 For Gavin, the code that can link against libraries should be the code

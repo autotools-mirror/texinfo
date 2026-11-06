@@ -907,9 +907,9 @@ sub _process_text_internal($) {
   return $text;
 }
 
-sub new_formatter($$;$$$) {
-  my ($self, $type,
-      $indent_length, $indent_length_next, $formatter_conf) = @_;
+sub new_formatter($$;$$$$) {
+  my ($self, $type, $indent_length, $indent_length_next,
+      $suppress_styles, $no_added_eol) = @_;
 
   my $container_conf = {};
 
@@ -958,13 +958,9 @@ sub new_formatter($$;$$$) {
                    'upper_case_stack' => [{}],
                    'font_type_stack' => [{}],
                    'w' => 0,
-                   'frenchspacing_stack' => [ $frenchspacing_conf ],
-                   'suppress_styles' => undef,
-                   'no_added_eol' => undef};
-  if (defined($formatter_conf)) {
-    $formatter->{'suppress_styles'} = $formatter_conf->{'suppress_styles'};
-    $formatter->{'no_added_eol'} = $formatter_conf->{'no_added_eol'};
-  }
+                   'frenchspacing_stack' => [ $frenchspacing_conf ]};
+  $formatter->{'suppress_styles'} = 1 if ($suppress_styles);
+  $formatter->{'no_added_eol'} = 1 if ($no_added_eol);
 
   if ($type eq 'unfilled') {
     foreach my $context (reverse(@{$self->{'context'}})) {
@@ -974,9 +970,10 @@ sub new_formatter($$;$$$) {
                or exists($format_raw_commands{$context})
                or exists($math_commands{$context})) {
         $formatter->{'font_type_stack'}->[-1]->{'monospace'} = 1;
-        $formatter->{'font_type_stack'}->[-1]->{'code_command'} = 1
-          if (exists($preformatted_code_commands{$context})
-              or exists($math_commands{$context}));
+        if (exists($preformatted_code_commands{$context})
+            or exists($math_commands{$context})) {
+          $formatter->{'font_type_stack'}->[-1]->{'code_command'} = 1
+        }
         last;
       }
     }
@@ -1212,12 +1209,13 @@ sub _stream_final_result($) {
   return $new_encoded;
 }
 
-sub convert_line($$;$$$) {
+sub convert_line($$;$$$$) {
   my ($self, $converted, $indent_length, $indent_length_next,
-      $formatter_conf) = @_;
+      $suppress_styles, $no_added_eol) = @_;
 
   my $formatter = new_formatter($self, 'line', $indent_length,
-                                $indent_length_next, $formatter_conf);
+                                $indent_length_next, $suppress_styles,
+                                $no_added_eol);
   push @{$self->{'formatters'}}, $formatter;
   _convert($self, $converted);
   my $end_line = Texinfo::Convert::Paragraph::end($formatter->{'container'});
@@ -1251,14 +1249,15 @@ sub _debug_print_pending($) {
 
 # convert with a line formatter in a new count context, not changing
 # the current context.  return the result of the conversion.
-sub convert_line_new_context($$;$$$) {
+sub convert_line_new_context($$;$$$$) {
   my ($self, $converted, $indent_length, $indent_length_next,
-      $formatter_conf) = @_;
+      $suppress_styles, $no_added_eol) = @_;
 
   push @{$self->{'count_context'}}, {'lines' => 0,
                                      'pending_text' => [['']]};
   my $count = convert_line($self, $converted, $indent_length,
-                           $indent_length_next, $formatter_conf);
+                           $indent_length_next, $suppress_styles,
+                           $no_added_eol);
 
   my $pending_text = $self->{'count_context'}->[-1]->{'pending_text'};
   pop @{$self->{'count_context'}};
@@ -1378,8 +1377,7 @@ sub node_name($$) {
                                      'pending_text' => [['']]};
     if (!defined($node_names_formatter)) {
       # FIXME $self could affect the result through frenchspacing
-      $node_names_formatter = new_formatter($self, 'line', 0, undef,
-                  {'suppress_styles' => 1, 'no_added_eol' => 1,});
+      $node_names_formatter = new_formatter($self, 'line', 0, undef, 1, 1);
     }
     my $formatter = $node_names_formatter;
     push @{$self->{'formatters'}}, $formatter;
@@ -1424,8 +1422,7 @@ sub _cache_node_names($$;$) {
   my $index_string_in_node_found;
 
   if (!defined($node_names_formatter)) {
-    $node_names_formatter = new_formatter($self, 'line', 0, undef,
-               {'suppress_styles' => 1, 'no_added_eol' => 1,});
+    $node_names_formatter = new_formatter($self, 'line', 0, undef, 1, 1);
   }
   my $formatter = $node_names_formatter;
 
@@ -1957,8 +1954,7 @@ sub process_printindex($$;$) {
 
   # Use the same line formatter for all the index entries.  This is
   # slightly faster than making a new one for each entry.
-  my $formatter = new_formatter($self, 'line', 0, undef,
-    { 'suppress_styles' => 1, 'no_added_eol' => 1 } );
+  my $formatter = new_formatter($self, 'line', 0, undef, 1, 1);
   push @{$self->{'formatters'}}, $formatter;
 
   foreach my $entry (@{$sorted_index}) {
@@ -2856,9 +2852,7 @@ sub _convert_def_line($$) {
     my $def_paragraph = new_formatter($self, 'paragraph',
       $self->{'format_context'}->[-2]->{'context_indent_len'},
       $self->{'format_context'}->[-1]->{'context_indent_len'}
-         + $default_indent_length,
-      { 'suppress_styles' => 1 }
-     );
+         + $default_indent_length, 1);
     push @{$self->{'formatters'}}, $def_paragraph;
 
     _convert($self, $tree);
