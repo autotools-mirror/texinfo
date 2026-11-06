@@ -71,10 +71,10 @@ typedef struct PARAGRAPH {
                                as-is. */
     int no_final_newline;   /* Do not terminate with a final newline. */
     int add_final_space;    /* Terminate with any trailing space. */
-    int ignore_columns;     /* Don't cut line at right margin.  Used by
-                               @flushleft and @flushright. */
-    int keep_end_lines;     /* A newline in the input ends a line in the output.
-                               Used by @flushleft and @flushright. */
+    int keep_end_lines;     /* Don't cut line at right margin.
+                               A newline in the input ends a line in the output.
+                               Used by @flushleft, @flushright lines and
+                               unfilled formatters. */
     int frenchspacing;      /* Only one space, not two, after a full stop. */
     int debug;              /* output debugging messages */
 
@@ -221,7 +221,7 @@ PARA_CONF_VARIABLES_LIST
 void
 para__cut_line (TEXT *result, int column_counts)
 {
-  if (!state.ignore_columns && column_counts > state.max)
+  if (!state.keep_end_lines && column_counts > state.max)
     {
       para__end_line ();
 

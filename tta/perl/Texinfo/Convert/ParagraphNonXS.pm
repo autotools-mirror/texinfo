@@ -37,7 +37,7 @@ use Carp qw(cluck confess);
 # same ordering as in C
 my @para_ordered_conf = ('debug', 'indent_length', 'frenchspacing',
    'counter', 'indent_length_next', 'unfilled', 'max', 'keep_end_lines',
-   'no_final_newline', 'add_final_space', 'ignore_columns');
+   'no_final_newline', 'add_final_space');
 
 # used if debugging only, to have legible identifier for debug messages
 my @para_array;
@@ -52,7 +52,6 @@ sub new(;$) {
     'debug' => 0, 'indent_length' => 0, 'indent_length_next' => undef,
     'frenchspacing' => 0, 'counter' => 0, 'unfilled' => 0, 'max' => 72,
     'keep_end_lines' => 0, 'no_final_newline' => 0, 'add_final_space' => 0,
-    'ignore_columns' => 0,
     # set by function calls, not by $conf
     # 'no_break' => 0, 'double_width_no_break' => 0,
 
@@ -110,7 +109,7 @@ sub dump($) {
 sub _cut_line($$) {
   my ($paragraph, $column_counts) = @_;
 
-  if ($paragraph->{'ignore_columns'} or $column_counts <= $paragraph->{'max'}) {
+  if ($paragraph->{'keep_end_lines'} or $column_counts <= $paragraph->{'max'}) {
     return '';
   }
   return _end_line($paragraph);

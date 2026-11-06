@@ -344,7 +344,6 @@ new_paragraph_formatter (CONVERTER *self, int indent_length,
   if (plaintext_commands_data[context_cmd].flags & PF_flush)
     {
       para_set_conf_keep_end_lines (1);
-      para_set_conf_ignore_columns (1);
     }
 
   return formatter;
@@ -360,7 +359,6 @@ fill_line_formatter (FORMATTER *formatter, CONVERTER *self,
   para_set_conf_keep_end_lines (1);
   para_set_conf_no_final_newline (1);
   para_set_conf_add_final_space (1);
-  para_set_conf_ignore_columns (1);
 }
 
 FORMATTER
@@ -382,7 +380,6 @@ new_unfilled_formatter (CONVERTER *self, int indent_length)
   para_set_conf_unfilled (1);
   para_set_conf_keep_end_lines (1);
   para_set_conf_no_final_newline (1);
-  para_set_conf_ignore_columns (1);
 
   size_t j;
   for (j = self_plaintext->context.number; j > 0; j--)

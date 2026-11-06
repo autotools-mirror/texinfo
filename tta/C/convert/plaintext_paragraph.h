@@ -30,7 +30,6 @@
   para_SET_CONF(no_final_newline) \
   para_SET_CONF(add_final_space) \
   para_SET_CONF(no_break) \
-  para_SET_CONF(ignore_columns) \
   para_SET_CONF(keep_end_lines) \
   para_SET_CONF(frenchspacing) \
   para_SET_CONF(double_width_no_break) \

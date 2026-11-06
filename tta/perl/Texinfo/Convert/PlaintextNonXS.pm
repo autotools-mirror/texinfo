@@ -940,7 +940,6 @@ sub new_line_formatter($;$) {
   my ($self, $indent_length) = @_;
 
   my $container_conf = {
-   'ignore_columns'      => 1,
    'keep_end_lines'      => 1,
    'no_final_newline'    => 1,
    'add_final_space'     => 1,
@@ -962,7 +961,6 @@ sub new_paragraph_formatter($;$$) {
 
   $container_conf->{'max'} = $self->{'text_element_context'}->[-1]->{'max'};
   if ($flush_commands{$self->{'context'}->[-1]}) {
-    $container_conf->{'ignore_columns'} = 1;
     $container_conf->{'keep_end_lines'} = 1;
   }
 
@@ -977,7 +975,6 @@ sub new_unfilled_formatter($;$) {
   my ($self, $indent_length) = @_;
 
   my $container_conf = {
-    'ignore_columns'     => 1,
     'keep_end_lines'     => 1,
     'unfilled'           => 1,
     'no_final_newline'   => 1,
