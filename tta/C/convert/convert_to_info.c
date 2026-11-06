@@ -146,8 +146,7 @@ info_header (CONVERTER *self, const char *input_basefile,
   TEXT para_text;
   TEXT new_text;
 
-  FORMATTER heading_formatter
-    = new_formatter (self, formatter_paragraph, 0, -1);
+  FORMATTER heading_formatter = new_paragraph_formatter (self, 0, -1);
   push_formatter (self, &heading_formatter);
   text_init (&para_text);
 
@@ -215,7 +214,7 @@ info_header (CONVERTER *self, const char *input_basefile,
               if (line_arg->e.c->contents.number > 0)
                 {
                   stream_output_n (self, "INFO-DIR-SECTION ", 17);
-                  plaintext_convert_line (self, line_arg, -1, -1, 0, 1);
+                  plaintext_convert_line (self, line_arg, -1, 0, 1);
                   stream_output_n (self, "\n", 1);
                 }
             }
@@ -940,7 +939,7 @@ info_format_footnotes (CONVERTER *self, const OUTPUT_UNIT *output_unit)
 {
   PLAINTEXT_CONVERTER_STATE *self_plaintext = self->plaintext_converter;
   /* may not be used */
-  FORMATTER formatter = new_formatter (self, formatter_line, -1, -1);
+  FORMATTER formatter = new_line_formatter (self, 0);
 
   push_formatter (self, &formatter);
 
@@ -1266,7 +1265,7 @@ info_format_ref (CONVERTER *self, enum command_id cmd,
      a colon.  Output may differ slightly from the current formatting
      context (e.g if inside @sc) but this should not make a difference. */
           LINE_WIDTH_PENDING_TEXT name_texts;
-          plaintext_convert_line_new_context (self, name, -1, -1, -1, -1,
+          plaintext_convert_line_new_context (self, name, 0, -1, -1,
                                               &name_texts);
           TEXT name_check = pending_to_text (name_texts.pending_text);
           if (strpbrk (name_check.text, ":"))
@@ -1364,8 +1363,7 @@ info_format_ref (CONVERTER *self, enum command_id cmd,
 
       self_plaintext->silent++;
       plaintext_convert_line_new_context (self, node_code_element,
-                                          0, -1, 1, 1,
-                                          &node_texts);
+                                          0, 1, 1, &node_texts);
       self_plaintext->silent--;
       destroy_element (node_code_element);
       node_name_text = pending_to_text (node_texts.pending_text);
@@ -1697,7 +1695,7 @@ info_format_node (CONVERTER *self, const ELEMENT *node,
                                                close_parenthese);
 
               plaintext_convert_line (self,
-                   direction_file_code_element, -1, -1, 1, 0);
+                   direction_file_code_element, -1, 1, 0);
               destroy_element (open_parenthese);
               destroy_element (close_parenthese);
               destroy_element (direction_file_code_element);

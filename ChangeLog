@@ -1,5 +1,41 @@
 2026-11-06  Patrice Dumas  <pertusus@free.fr>
 
+	* tta/C/convert/convert_to_plaintext.c (common_fill_formatter)
+	(new_paragraph_formatter, fill_line_formatter, new_line_formatter)
+	(new_unfilled_formatter), tta/C/convert/convert_to_plaintext.h,
+	tta/perl/Texinfo/Convert/ParagraphNonXS.pm (@para_ordered_conf),
+	tta/perl/Texinfo/Convert/PlaintextNonXS.pm (_new_formatter)
+	(new_line_formatter, new_paragraph_formatter, new_unfilled_formatter):
+	split new_formatter or fill_formatter into three functions,
+	new_paragraph_formatter, new_line_formatter and
+	new_unfilled_formatter, one for each formatter type.  Add
+	common_fill_formatter or _new_formatter for common code.  Update
+	callers.  Remove new_formatter and fill_formatter.  Remove enum
+	formatter_type.
+
+	* tta/C/convert/convert_to_plaintext.c (common_fill_formatter),
+	(new_paragraph_formatter, new_line_formatter, new_unfilled_formatter),
+	tta/perl/Texinfo/Convert/PlaintextNonXS.pm (_new_formatter)
+	(new_line_formatter, new_paragraph_formatter, new_unfilled_formatter):
+	pass frenchspacing configuration information as an argument.  Set it
+	to an arbitrary value or NULL for new_unfilled_formatter, as the
+	frenchspacing configuration is never used with an unfilled formatter.
+
+	* tta/C/convert/convert_to_plaintext.c (plaintext_convert_line)
+	(plaintext_convert_line_new_context),
+	tta/perl/Texinfo/Convert/PlaintextNonXS.pm (convert_line)
+	(convert_line_new_context): remove indent_length_next argument.
+	Update callers.
+
+	* tta/C/convert/convert_to_info.c (info_format_footnotes)
+	(info_format_ref), tta/C/convert/convert_to_plaintext.c
+	(push_top_formatter, plaintext_format_footnotes),
+	tta/perl/Texinfo/Convert/InfoNonXS.pm (format_footnotes, format_ref),
+	tta/perl/Texinfo/Convert/PlaintextNonXS.pm (push_top_formatter)
+	(format_footnotes): set indent argument in more cases.
+
+2026-11-06  Patrice Dumas  <pertusus@free.fr>
+
 	* tta/perl/Texinfo/Convert/PlaintextNonXS.pm (new_formatter)
 	(convert_line, convert_line_new_context): pass $suppress_styles and
 	$no_added_eol as argument instead of in a hash.  Update callers.

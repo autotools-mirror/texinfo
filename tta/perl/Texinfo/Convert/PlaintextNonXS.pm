@@ -388,7 +388,7 @@ sub push_top_formatter($$) {
   # This is not really meant to be used, as contents should open
   # their own formatters, however it happens that there is some text
   # outside any content that needs to be formatted, as @sp for example.
-  push @{$self->{'formatters'}}, new_formatter($self, 'line');
+  push @{$self->{'formatters'}}, new_line_formatter($self, 0);
   $self->{'formatters'}->[-1]->{'_top_formatter'} = 1;
 }
 
@@ -907,11 +907,10 @@ sub _process_text_internal($) {
   return $text;
 }
 
-sub new_formatter($$;$$$$) {
-  my ($self, $type, $indent_length, $indent_length_next,
-      $suppress_styles, $no_added_eol) = @_;
-
-  my $container_conf = {};
+# initialization of container and formatter common to all the types
+# of formatters
+sub _new_formatter($$$$) {
+  my ($self, $indent_length, $frenchspacing_conf, $container_conf) = @_;
 
   $container_conf->{'debug'} = 1 if (defined($self->{'debug'})
                                      and $self->{'debug'} > 1);
@@ -919,63 +918,94 @@ sub new_formatter($$;$$$$) {
   $container_conf->{'indent_length'} = (defined($indent_length) ? $indent_length
            : $self->{'format_context'}->[-1]->{'context_indent_len'});
 
-  $container_conf->{'indent_length_next'} = $indent_length_next;
-
-  my $frenchspacing_conf = $self->get_conf('frenchspacing');
-
-  $container_conf->{'frenchspacing'} = 1
-    if ($frenchspacing_conf eq 'on');
+  if ($frenchspacing_conf eq 'on') {
+    $container_conf->{'frenchspacing'} = 1;
+  }
 
   $container_conf->{'counter'}
     = $self->{'text_element_context'}->[-1]->{'counter'};
 
-  my $container;
-  if ($type eq 'paragraph') {
-    $container_conf->{'max'} = $self->{'text_element_context'}->[-1]->{'max'};
-    if ($flush_commands{$self->{'context'}->[-1]}) {
-      $container_conf->{'ignore_columns'} = 1;
-      $container_conf->{'keep_end_lines'} = 1;
-    }
-    # nothing else to change/set
-  } elsif ($type eq 'line') {
-    $container_conf->{'max'} = 10000001;
-    $container_conf->{'keep_end_lines'} = 1;
-    $container_conf->{'no_final_newline'} = 1;
-    $container_conf->{'add_final_space'} = 1;
-  } elsif ($type eq 'unfilled') {
-    $container_conf->{'max'} = 10000000;
-    $container_conf->{'ignore_columns'} = 1;
-    $container_conf->{'keep_end_lines'} = 1;
-    $container_conf->{'frenchspacing'} = 1;
-    $container_conf->{'unfilled'} = 1;
-    $container_conf->{'no_final_newline'} = 1;
-  } else {
-    die "Unknown container type $type\n";
-  }
-  $container = Texinfo::Convert::Paragraph::new($container_conf);
+  my $container = Texinfo::Convert::Paragraph::new($container_conf);
 
   my $formatter = {'container' => $container,
                    'upper_case_stack' => [{}],
                    'font_type_stack' => [{}],
                    'w' => 0,
                    'frenchspacing_stack' => [ $frenchspacing_conf ]};
+
+  return $formatter;
+}
+
+sub new_line_formatter($;$$$) {
+  my ($self, $indent_length, $suppress_styles, $no_added_eol) = @_;
+
+  my $container_conf = {
+   'max'                 => 10000001,
+   'keep_end_lines'      => 1,
+   'no_final_newline'    => 1,
+   'add_final_space'     => 1,
+  };
+
+  my $frenchspacing_conf = $self->get_conf('frenchspacing');
+  my $formatter = _new_formatter($self, $indent_length, $frenchspacing_conf,
+                                 $container_conf);
+
   $formatter->{'suppress_styles'} = 1 if ($suppress_styles);
   $formatter->{'no_added_eol'} = 1 if ($no_added_eol);
 
-  if ($type eq 'unfilled') {
-    foreach my $context (reverse(@{$self->{'context'}})) {
-      if (exists($menu_commands{$context})) {
-        last;
-      } elsif (exists($preformatted_code_commands{$context})
-               or exists($format_raw_commands{$context})
-               or exists($math_commands{$context})) {
-        $formatter->{'font_type_stack'}->[-1]->{'monospace'} = 1;
-        if (exists($preformatted_code_commands{$context})
-            or exists($math_commands{$context})) {
-          $formatter->{'font_type_stack'}->[-1]->{'code_command'} = 1
-        }
-        last;
+  return $formatter;
+}
+
+sub new_paragraph_formatter($;$$$) {
+  my ($self, $indent_length, $indent_length_next, $suppress_styles) = @_;
+
+  my $container_conf = {};
+
+  $container_conf->{'indent_length_next'} = $indent_length_next;
+
+  $container_conf->{'max'} = $self->{'text_element_context'}->[-1]->{'max'};
+  if ($flush_commands{$self->{'context'}->[-1]}) {
+    $container_conf->{'ignore_columns'} = 1;
+    $container_conf->{'keep_end_lines'} = 1;
+  }
+
+  my $frenchspacing_conf = $self->get_conf('frenchspacing');
+  my $formatter = _new_formatter($self, $indent_length, $frenchspacing_conf,
+                                 $container_conf);
+
+  $formatter->{'suppress_styles'} = 1 if ($suppress_styles);
+
+  return $formatter;
+}
+
+sub new_unfilled_formatter($;$) {
+  my ($self, $indent_length) = @_;
+
+  my $container_conf = {
+    'max'                => 10000000,
+    'ignore_columns'     => 1,
+    'keep_end_lines'     => 1,
+    'unfilled'           => 1,
+    'no_final_newline'   => 1,
+  };
+
+  # the freanchspacing configuration argument is set to an arbitrary
+  # string, as frenchspacing conf is never accessed if unfilled is set.
+  my $formatter = _new_formatter($self, $indent_length,
+                                 'undefined', $container_conf);
+
+  foreach my $context (reverse(@{$self->{'context'}})) {
+    if (exists($menu_commands{$context})) {
+      last;
+    } elsif (exists($preformatted_code_commands{$context})
+             or exists($format_raw_commands{$context})
+             or exists($math_commands{$context})) {
+      $formatter->{'font_type_stack'}->[-1]->{'monospace'} = 1;
+      if (exists($preformatted_code_commands{$context})
+          or exists($math_commands{$context})) {
+        $formatter->{'font_type_stack'}->[-1]->{'code_command'} = 1
       }
+      last;
     }
   }
   return $formatter;
@@ -1209,13 +1239,11 @@ sub _stream_final_result($) {
   return $new_encoded;
 }
 
-sub convert_line($$;$$$$) {
-  my ($self, $converted, $indent_length, $indent_length_next,
-      $suppress_styles, $no_added_eol) = @_;
+sub convert_line($$;$$$) {
+  my ($self, $converted, $indent_length, $suppress_styles, $no_added_eol) = @_;
 
-  my $formatter = new_formatter($self, 'line', $indent_length,
-                                $indent_length_next, $suppress_styles,
-                                $no_added_eol);
+  my $formatter = new_line_formatter($self, $indent_length,
+                                     $suppress_styles, $no_added_eol);
   push @{$self->{'formatters'}}, $formatter;
   _convert($self, $converted);
   my $end_line = Texinfo::Convert::Paragraph::end($formatter->{'container'});
@@ -1249,15 +1277,13 @@ sub _debug_print_pending($) {
 
 # convert with a line formatter in a new count context, not changing
 # the current context.  return the result of the conversion.
-sub convert_line_new_context($$;$$$$) {
-  my ($self, $converted, $indent_length, $indent_length_next,
-      $suppress_styles, $no_added_eol) = @_;
+sub convert_line_new_context($$;$$$) {
+  my ($self, $converted, $indent_length, $suppress_styles, $no_added_eol) = @_;
 
   push @{$self->{'count_context'}}, {'lines' => 0,
                                      'pending_text' => [['']]};
   my $count = convert_line($self, $converted, $indent_length,
-                           $indent_length_next, $suppress_styles,
-                           $no_added_eol);
+                           $suppress_styles, $no_added_eol);
 
   my $pending_text = $self->{'count_context'}->[-1]->{'pending_text'};
   pop @{$self->{'count_context'}};
@@ -1377,7 +1403,7 @@ sub node_name($$) {
                                      'pending_text' => [['']]};
     if (!defined($node_names_formatter)) {
       # FIXME $self could affect the result through frenchspacing
-      $node_names_formatter = new_formatter($self, 'line', 0, undef, 1, 1);
+      $node_names_formatter = new_line_formatter($self, 0, 1, 1);
     }
     my $formatter = $node_names_formatter;
     push @{$self->{'formatters'}}, $formatter;
@@ -1422,7 +1448,7 @@ sub _cache_node_names($$;$) {
   my $index_string_in_node_found;
 
   if (!defined($node_names_formatter)) {
-    $node_names_formatter = new_formatter($self, 'line', 0, undef, 1, 1);
+    $node_names_formatter = new_line_formatter($self, 0, 1, 1);
   }
   my $formatter = $node_names_formatter;
 
@@ -1522,7 +1548,7 @@ sub process_one_footnote($$) {
 sub format_footnotes($;$) {
   my ($self, $output_unit) = @_;
 
-  my $formatter = new_formatter($self, 'line');
+  my $formatter = new_line_formatter($self, 0);
   push @{$self->{'formatters'}}, $formatter;
 
   if (scalar(@{$self->{'pending_footnotes'}})) {
@@ -1954,7 +1980,7 @@ sub process_printindex($$;$) {
 
   # Use the same line formatter for all the index entries.  This is
   # slightly faster than making a new one for each entry.
-  my $formatter = new_formatter($self, 'line', 0, undef, 1, 1);
+  my $formatter = new_line_formatter($self, 0, 1, 1);
   push @{$self->{'formatters'}}, $formatter;
 
   foreach my $entry (@{$sorted_index}) {
@@ -2849,7 +2875,7 @@ sub _convert_def_line($$) {
       }
     }
 
-    my $def_paragraph = new_formatter($self, 'paragraph',
+    my $def_paragraph = new_paragraph_formatter($self,
       $self->{'format_context'}->[-2]->{'context_indent_len'},
       $self->{'format_context'}->[-1]->{'context_indent_len'}
          + $default_indent_length, 1);
@@ -2917,7 +2943,7 @@ sub _convert($$) {
 
     # '_top_formatter' is only set in the formatter setup when calling
     # push_top_formatter.
-    # Formatters created by new_formatter() when encountering paragraphs,
+    # Formatters created by new_*_formatter() when encountering paragraphs,
     # lines and blocks do not set that key, the formatting of text should
     # in general be done in those formatters.  Exceptions are empty lines
     # handled above and some other text elements that can appear outside of
@@ -3612,7 +3638,7 @@ sub _convert($$) {
         if (exists($preformatted_context_commands{$cmdname})
             and !exists($preformatted_commands{$cmdname})
             and !exists($format_raw_commands{$cmdname})) {
-          $preformatted = new_formatter($self, 'unfilled');
+          $preformatted = new_unfilled_formatter($self);
           push @{$self->{'formatters'}}, $preformatted;
           # displaymath rendered as an image, push a count to capture
           # formatted content
@@ -3792,7 +3818,7 @@ sub _convert($$) {
              and $block_commands{$element->{'parent'}->{'cmdname'}}
                                                       eq 'item_container') {
       $self->{'format_context'}->[-1]->{'paragraph_count'} = 0;
-      my $line = new_formatter($self, 'line',
+      my $line = new_line_formatter($self,
         $self->{'format_context'}->[-2]->{'context_indent_len'}
           + $item_indent_format_length{$element->{'parent'}->{'cmdname'}});
       push @{$self->{'formatters'}}, $line;
@@ -3868,7 +3894,7 @@ sub _convert($$) {
                          $element->{'contents'}->[0])) {
         if (exists(
             $preformatted_context_commands{$self->{'context'}->[-1]})) {
-          my $formatter = new_formatter($self, 'unfilled',
+          my $formatter = new_unfilled_formatter($self,
               $self->{'format_context'}->[-2]->{'context_indent_len'});
           $formatter->{'font_type_stack'}->[-1]->{'monospace'} = 1;
           push @{$self->{'formatters'}}, $formatter;
@@ -3933,8 +3959,8 @@ sub _convert($$) {
           my $float_entry = $self->float_type_number($float);
           next if !defined($float_entry);
 
-          my $formatter = new_formatter($self, 'paragraph',
-                                        0, $listoffloat_entry_length);
+          my $formatter = new_paragraph_formatter($self, 0,
+                                                  $listoffloat_entry_length);
           my $container = $formatter->{'container'};
           push @{$self->{'formatters'}}, $formatter;
 
@@ -4094,8 +4120,8 @@ sub _convert($$) {
         $para_indent_size = $self->get_conf('paragraphindent');
         $para_indent_next = 0;
       }
-      $paragraph = new_formatter($self, 'paragraph',
-                                 $para_indent_size, $para_indent_next);
+      $paragraph = new_paragraph_formatter($self, $para_indent_size,
+                                           $para_indent_next);
       push @{$self->{'formatters'}}, $paragraph;
       $self->{'format_context'}->[-1]->{'paragraph_count'}++;
       if ($self->{'context'}->[-1] eq 'flushright') {
@@ -4110,7 +4136,7 @@ sub _convert($$) {
       if ($type eq 'rawpreformatted'
           or !exists($element->{'parent'}->{'type'})
           or $element->{'parent'}->{'type'} ne 'menu_entry_description') {
-        $preformatted = new_formatter($self, 'unfilled');
+        $preformatted = new_unfilled_formatter($self);
         push @{$self->{'formatters'}}, $preformatted;
         if ($self->{'context'}->[-1] eq 'flushright') {
           push @{$self->{'count_context'}}, {'lines' => 0,
@@ -4336,8 +4362,8 @@ sub _convert($$) {
 
             if (!$long_description) {
               # push a paragraph container to format the description.
-              $description_para = new_formatter($self, 'paragraph',
-                  $description_indent_length);
+              $description_para = new_paragraph_formatter($self,
+                                       $description_indent_length);
               push @{$self->{'formatters'}}, $description_para;
               $formatted_elt = $node_description->{'contents'}->[0];
             } else {

@@ -109,7 +109,7 @@ sub _open_info_file($$) {
 sub _info_header($$$) {
   my ($self, $input_basefile, $output_filename) = @_;
 
-  my $formatter = $self->new_formatter('paragraph', 0);
+  my $formatter = $self->new_paragraph_formatter(0);
   push @{$self->{'formatters'}}, $formatter;
   my $paragraph = $formatter->{'container'};
   my $para_text = add_text($paragraph, "This is ");
@@ -150,8 +150,7 @@ sub _info_header($$$) {
       if ($command->{'cmdname'} eq 'dircategory') {
         if (exists($command->{'contents'}->[0]->{'contents'})) {
           $self->_stream_output("INFO-DIR-SECTION ");
-          $self->convert_line($command->{'contents'}->[0], undef, undef,
-                              undef, 1);
+          $self->convert_line($command->{'contents'}->[0], undef, undef, 1);
           $self->_stream_output("\n");
         }
       } elsif ($command->{'cmdname'} eq 'direntry') {
@@ -639,7 +638,7 @@ sub format_contents($$$) {
 sub format_footnotes($;$) {
   my ($self, $output_unit) = @_;
 
-  my $formatter = $self->new_formatter('line'); # may not be used
+  my $formatter = $self->new_line_formatter(0); # may not be used
   push @{$self->{'formatters'}}, $formatter;
 
   if (scalar(@{$self->{'pending_footnotes'}})) {
@@ -889,7 +888,7 @@ sub format_ref($$$) {
     # Convert line for sole purpose of checking if the output contains
     # a colon.  Output may differ slightly from the current formatting
     # context (e.g if inside @sc) but this should not make a difference.
-    my ($pending, undef) = $self->convert_line_new_context($name);
+    my ($pending, undef) = $self->convert_line_new_context($name, 0);
     my $name_text_checked = $self->_pending_to_text($pending);
     my $quoting_required = 0;
     if ($name_text_checked =~ /:/m) {
@@ -959,7 +958,7 @@ sub format_ref($$$) {
     my ($pending, undef) = $self->convert_line_new_context(
         Texinfo::TreeElement::new({'type' => '_code',
                                    'contents' => [$label_element]}),
-                                   0, undef, 1, 1);
+                                   0, 1, 1);
     $node_name = $self->_pending_to_text($pending);
     $self->{'silent'}--;
   } else {
@@ -1163,7 +1162,7 @@ sub format_node($$;$) {
                         Texinfo::TreeElement::new({'text' => '('}),
                              $node_direction->{'extra'}->{'manual_content'},
                                Texinfo::TreeElement::new({'text' => ')'})]});
-        $self->convert_line($file_formatted, undef, undef, 1);
+        $self->convert_line($file_formatted, undef, 1);
       }
 
       if (exists($node_direction->{'extra'}->{'identifier'})

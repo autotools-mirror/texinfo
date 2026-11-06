@@ -35,8 +35,8 @@ use Texinfo::Convert::Unicode;
 use Carp qw(cluck confess);
 
 # same ordering as in C
-my @para_ordered_conf = ('debug', 'indent_length', 'indent_length_next',
-   'frenchspacing', 'counter', 'unfilled', 'max', 'keep_end_lines',
+my @para_ordered_conf = ('debug', 'indent_length', 'frenchspacing',
+   'counter', 'indent_length_next', 'unfilled', 'max', 'keep_end_lines',
    'no_final_newline', 'add_final_space', 'ignore_columns');
 
 # used if debugging only, to have legible identifier for debug messages

@@ -51,15 +51,10 @@ TEXT plaintext_convert_tree (CONVERTER *self, const ELEMENT *tree);
 void plaintext_free_converter (CONVERTER *self);
 void plaintext_converter_initialize (CONVERTER *self);
 
-/* used in the Info converter */
-enum formatter_type {
-  formatter_paragraph,
-  formatter_line,
-  formatter_unfilled
-};
-
-FORMATTER new_formatter (CONVERTER *self, enum formatter_type type,
-               int indent_length, int indent_length_next);
+FORMATTER new_paragraph_formatter (CONVERTER *self, int indent_length,
+                                   int indent_length_next);
+FORMATTER new_line_formatter (CONVERTER *self, int indent_length);
+FORMATTER new_unfilled_formatter (CONVERTER *self, int indent_length);
 void push_formatter (CONVERTER *self, const FORMATTER *formatter);
 void pop_formatter (CONVERTER *self, int reuse_formatter);
 
@@ -98,12 +93,12 @@ void stream_final_result (CONVERTER *self, TEXT *result);
 
 void plaintext_add_target_location (CONVERTER *self, const ELEMENT *element);
 int plaintext_convert_line (CONVERTER *self, const ELEMENT *converted,
-                            int indent_length, int indent_length_next,
-                            int suppress_styles, int no_added_eol);
+                            int indent_length, int suppress_styles,
+                            int no_added_eol);
 void plaintext_convert_line_new_context (CONVERTER *self,
                           const ELEMENT *converted,
-                          int indent_length, int indent_length_next,
-                          int suppress_styles, int no_added_eol,
+                          int indent_length, int suppress_styles,
+                          int no_added_eol,
                           LINE_WIDTH_PENDING_TEXT *output);
 
 void pop_count_context (COUNT_CONTEXT_STACK *stack);
