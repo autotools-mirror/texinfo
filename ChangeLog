@@ -1,3 +1,16 @@
+2026-11-07  Gavin Smith <gavinsmith0123@gmail.com>
+
+	* install-info/install-info.c (format_entry):
+	Change calculation of space needed for result.  (The exact thinking
+	behind the previous calculation is a mystery to me.)
+	
+	The previous calculation did not account for the possibility that
+	the part of the line before the entry description was longer than
+	the value for the maximum width of a line.  This would lead to a
+	buffer overflow for very long node references.
+
+	Report from Sunlv Wang <wangsunlv@gmail.com>.
+
 2026-11-07  Patrice Dumas  <pertusus@free.fr>
 
 	* tta/perl/Texinfo/Convert/ParagraphNonXS.pm (_add_next): simplify

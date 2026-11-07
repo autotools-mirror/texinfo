@@ -1460,8 +1460,29 @@ format_entry (char *name, size_t name_len, char *desc, size_t desc_len,
   if (!desc || !name)
     return 1;
 
-  outstr = xmalloc (width
-         + (desc_len + width) / (width - align) * width * 2 * sizeof (char));
+  /* Attempt to allocate enough for the output. */
+  size_t outstr_alloc = 0;
+
+  /* First, enough for the first line. */
+  outstr_alloc += ((name_len > width) ? name_len : width) + 1;
+
+  /* Use a generous estimate of the number of lines to wrap 'desc'.
+     Divide the length of 'desc' by the space on each continuation
+     line, rounding up.  Doubling the answer should be enough, as a
+     a line can only broken before half-way if there is a long word
+     that will be placed on the next line in its entirety. */
+  size_t max_wrap_lines = ((desc_len - 1)/(width - align) + 1) * 2;
+
+  /* Multiply by the bytes needed to indent each line and newline. */
+  outstr_alloc += max_wrap_lines * ((align-1) + 1);
+
+  /* Enough for 'desc' itself. */
+  outstr_alloc += desc_len;
+
+  /* Add space for terminating null. */
+  outstr_alloc++;
+
+  outstr = xmalloc (outstr_alloc);
   outstr[0] = '\0';
   char *poutstr = outstr;
 
