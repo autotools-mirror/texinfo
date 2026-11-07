@@ -409,45 +409,95 @@ para_destroy (void)
    of the line, fill RESULT and start a new one.  TRANSPARENT means that
    the letters in WORD are ignored for the purpose of deciding whether a
    full stop ends a sentence or not.  If COL_COUNT is non-negative, it is
-   the number of screen columns taken up by the word. */
-void
+   the number of screen columns taken up by the word; it is non-negative
+   if called from add_text, if called from add_next, COL_COUNT is
+   always negative.
+   If called from add_text, with non-negative COL_COUNT, set end of sentence
+   related states.
+ */
+static void
 para__add_next (TEXT *result, const char *word, int word_len,
-                  int transparent, int col_count)
+                int transparent, int col_count)
 {
   if (!word)
     return;
+
+  if (!transparent && !state.unfilled)
+    {
+      /* Check for an end of sentence and go backwards before the
+         end-sentence and 'after punctuation' characters.
+         We can iterate backwards by bytes as all those characters are
+         ASCII.
+       */
+      int end_sentence = 0;
+      const char *p = word + word_len;
+
+      while (p > word)
+        {
+          p--;
+          if (strchr (end_sentence_characters, *p))
+            end_sentence = 1;
+          else if (strchr (after_punctuation_characters, *p))
+            {
+              /* These characters are ignored when checking for the end
+                 of a sentence. */
+            }
+          else
+            {/* another character, move p back to the position right after
+                the character */
+              p++;
+              break;
+            }
+        }
+
+      /* Save last non-punctuation character in WORD */
+      if (p > word)
+        {
+          int len = 0;
+          const char *q = p;
+          /* Back one UTF-8 code point */
+          do
+            {
+              q--;
+              len++;
+            }
+          while ((*q & 0xC0) == 0x80 && q > word);
+
+          char32_t wc;
+          u8_mbtouc (&wc, (uint8_t *) q, len);
+          state.last_letter = wc;
+        }
+
+      /* called from add_text */
+      if (col_count >= 0)
+        {
+          /* Set/unset state.end_sentence. */
+          /* Doesn't count if preceded by an upper-case letter. */
+          if (end_sentence && !uc_is_upper (state.last_letter))
+            {
+              if (state.frenchspacing)
+                state.end_sentence = eos_present_frenchspacing;
+              else
+                state.end_sentence = eos_present;
+              if (state.debug)
+                fprintf (stderr, "END_SENTENCE\n");
+            }
+          else if (p > word)
+            {
+              /* Not at the end of a sentence.  and not only
+                 after_punctuation_characters */
+              if (state.debug && state.end_sentence != eos_unset)
+                fprintf (stderr, "delete END_SENTENCE(%d)\n",
+                                  state.end_sentence);
+              state.end_sentence = eos_unset;
+            }
+        }
+    }
 
   if (word_len == 0)
     state.invisible_pending_word = 1;
   else
     text_append_n (&state.word, word, word_len);
-
-  if (!transparent)
-    {
-      /* Save last character in WORD */
-      const char *p = word + word_len;
-
-      while (p > word)
-        {
-          int len = 0;
-          /* Back one UTF-8 code point */
-          do
-            {
-              p--;
-              len++;
-            }
-          while ((*p & 0xC0) == 0x80 && p > word);
-
-          if (!strchr (end_sentence_characters
-                       after_punctuation_characters, *p))
-            {
-              char32_t wc;
-              u8_mbtouc (&wc, (uint8_t *) p, len);
-              state.last_letter = wc;
-              break;
-            }
-        }
-    }
 
   if (memchr (word, '\n', word_len))
     {
@@ -483,7 +533,7 @@ para__add_next (TEXT *result, const char *word, int word_len,
               if (w == 0xfffd) /* bug - invalid string */
                 {
                   if (char_len <= 0)
-                    char_len = 1; /* avoid an infinte loop */
+                    char_len = 1; /* avoid an infinite loop */
                 }
               left -= char_len;
               p += char_len;
@@ -502,6 +552,7 @@ para__add_next (TEXT *result, const char *word, int word_len,
                                   + (int)state.space.end);
         }
     }
+
   if (state.debug)
     {
       static TEXT printed_word;
@@ -851,57 +902,6 @@ para_add_text (const char *text, int len)
         {
           para__add_next (&result, p, q - p, 0, regular_col_count);
           regular_col_count = 0;
-
-          /* Now check for an end of sentence.  We can iterate backwards
-             by bytes as all the end-sentence characters or punctuation are
-             ASCII. */
-          const char *q2 = q;
-          while (q2 > p)
-            {
-              q2--;
-              if (strchr (end_sentence_characters, *q2) && !state.unfilled)
-                {
-                  /* Doesn't count if preceded by an upper-case letter. */
-                  if (!uc_is_upper (state.last_letter))
-                    {
-                      if (state.frenchspacing)
-                        state.end_sentence = eos_present_frenchspacing;
-                      else
-                        state.end_sentence = eos_present;
-                      if (state.debug)
-                        fprintf (stderr, "END_SENTENCE\n");
-                      break;
-                    }
-                  /*
-                  else
-                    {
-                     at that point, we already know that we are not
-                     at the end of the sentence, so we could have set
-                     state.end_sentence =eos_unset and break'ed out
-                     of the loop, however we wait for
-                     the loop to reach the first non end_sentence_characters
-                     non after_punctuation_characters to unset the
-                     end sentence, in the condition below.
-
-                     NOTE in Perl, there is a break here.
-                    }
-                   */
-                }
-              else if (strchr (after_punctuation_characters, *q2))
-                {
-                  /* These characters are ignored when checking for the end
-                     of a sentence. */
-                }
-              else
-                {
-                  /* Not at the end of a sentence. */
-                  if (state.debug && state.end_sentence != eos_unset)
-                    fprintf (stderr, "delete END_SENTENCE(%d)\n",
-                                      state.end_sentence);
-                  state.end_sentence = eos_unset;
-                  break;
-                }
-            }
         }
 
       p = q;

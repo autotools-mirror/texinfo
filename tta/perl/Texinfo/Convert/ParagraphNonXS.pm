@@ -246,28 +246,72 @@ sub add_next($;$$) {
   return _add_next($paragraph, $word, $transparent);
 }
 
-# add a word (without wrapping).
-sub _add_next($;$$$) {
-  my ($paragraph, $word, $transparent, $no_newline_in_word) = @_;
+# Values for 'end_sentence'.
+# 'end_sentence' can also be unset, meaning not at the end of a sentence.
+use constant {
+  # at end of sentence
+  eos_present => 1,
+  # at end of sentence but frenchspacing is on.
+  eos_present_frenchspacing => -1,
+};
 
-  my $result = '';
+# add a word (without wrapping).
+# If $SET_END_SENTENCE is set, the function is called through add_text and the
+# end of sentence states should be set/unset.  If not set, the function is
+# called as add_next, and the end of sentence states are not set/unset.
+# 'last_letter' is set in any case, if not in unfilled container.
+sub _add_next($;$$$$) {
+  my ($paragraph, $word, $transparent, $no_newline_in_word,
+      $set_end_of_sentence) = @_;
 
   if (!defined($word)) {
     return '';
   }
 
+  if (!$transparent and !$paragraph->{'unfilled'}) {
+    if ($word =~ /^[$after_punctuation_characters]*$/o) {
+   # set nothing in the case of a continuation of after_punctuation_characters
+    } elsif ($word =~
+             /([^$after_punctuation_characters$end_sentence_characters])?
+              [$after_punctuation_characters]*[$end_sentence_characters]
+              [$end_sentence_characters$after_punctuation_characters]*$/ox) {
+      # we have $end_sentence_characters, therefore we are possibly at the
+      # end of a sentence.
+
+      $paragraph->{'last_letter'} = $1 if (defined($1));
+      # to have an end of sentence, we should be called through add_text
+      # and the punctuation should not be preceded by an upper-case letter.
+      if ($set_end_of_sentence
+                  and ($paragraph->{'last_letter'} eq ''
+                       or $paragraph->{'last_letter'} =~ /^[^\p{Upper}]$/)) {
+        if ($paragraph->{'frenchspacing'}) {
+          $paragraph->{'end_sentence'} = eos_present_frenchspacing;
+        } else {
+          $paragraph->{'end_sentence'} = eos_present;
+        }
+        print STDERR "END_SENTENCE\n" if ($paragraph->{'debug'});
+      }
+    } else {
+      if ($set_end_of_sentence) {
+        print STDERR "delete END_SENTENCE($paragraph->{'end_sentence'})\n"
+          if (exists($paragraph->{'end_sentence'}) and $paragraph->{'debug'});
+        delete $paragraph->{'end_sentence'};
+      }
+      if ($word =~
+           /([^$end_sentence_characters$after_punctuation_characters])
+            [$end_sentence_characters$after_punctuation_characters]*$/ox) {
+        # Save the last character in $word before punctuation
+        $paragraph->{'last_letter'} = $1;
+      }
+    }
+  }
+
+  my $result = '';
+
   if ($word eq '') {
     $paragraph->{'invisible_pending_word'} = 1;
   } else {
     $paragraph->{'word'} .= $word;
-  }
-
-  if (!$transparent
-      and ($word =~
-           /([^$end_sentence_characters$after_punctuation_characters])
-            [$end_sentence_characters$after_punctuation_characters]*$/ox)) {
-    # Save the last character in $word before punctuation
-    $paragraph->{'last_letter'} = $1;
   }
 
   if (!$no_newline_in_word and $word =~ /\n/) {
@@ -285,21 +329,13 @@ sub _add_next($;$$$) {
         length($paragraph->{'space'}));
     }
   }
+
   if ($paragraph->{'debug'}) {
     print STDERR "WORD+ $word -> $paragraph->{'word'}\n";
   }
 
   return $result;
 }
-
-# Values for 'end_sentence'.
-# 'end_sentence' can also be unset, meaning not at the end of a sentence.
-use constant {
-  # at end of sentence
-  eos_present => 1,
-  # at end of sentence but frenchspacing is on.
-  eos_present_frenchspacing => -1,
-};
 
 sub remove_end_sentence($) {
   my $paragraph = shift;
@@ -449,35 +485,10 @@ sub add_text($$) {
       # allow an end of sentence to occur.
       allow_end_sentence($paragraph);
     } elsif (defined($added_word)) {
-      # Prepend 'last_letter' to add the information on the last
-      # letter even if it was read as part of a previous string.
-      # Add it here because _add_next may overwrite it.
-      my $tmp = $paragraph->{'last_letter'} . $added_word;
 
       $result .= _add_next($paragraph, $added_word, undef,
-                           !$newline_in_text);
+                           !$newline_in_text, 1);
 
-      # Check if it is considered as an end of sentence.  There are two things
-      # to check: one, that we have a ., ! or ?; and second, that it is not
-      # preceded by an upper-case letter (ignoring some punctuation)
-      if ($added_word =~ /^[$after_punctuation_characters]*$/o) {
-        # do nothing in the case of a continuation of after_punctuation_characters
-      } elsif (!$paragraph->{'unfilled'}
-          and $tmp =~
-        /(^|[^\p{Upper}$after_punctuation_characters$end_sentence_characters])
-         [$after_punctuation_characters]*[$end_sentence_characters]
-         [$end_sentence_characters$after_punctuation_characters]*$/ox) {
-        if ($paragraph->{'frenchspacing'}) {
-          $paragraph->{'end_sentence'} = eos_present_frenchspacing;
-        } else {
-          $paragraph->{'end_sentence'} = eos_present;
-        }
-        print STDERR "END_SENTENCE\n" if ($paragraph->{'debug'});
-      } else {
-        print STDERR "delete END_SENTENCE($paragraph->{'end_sentence'})\n"
-          if (exists($paragraph->{'end_sentence'}) and $paragraph->{'debug'});
-        delete $paragraph->{'end_sentence'};
-      }
     } elsif (defined($fullwidth_segment)) {
       print STDERR "FULLWIDTH\n" if ($paragraph->{'debug'});
 

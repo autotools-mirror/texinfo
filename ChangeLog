@@ -1,5 +1,15 @@
 2026-11-07  Patrice Dumas  <pertusus@free.fr>
 
+	* tta/C/convert/plaintext_paragraph.c (para__add_next, para_add_text),
+	tta/perl/Texinfo/Convert/ParagraphNonXS.pm (_add_next, add_text): move
+	code from add_text related to setting last_letter for regular
+	characters and setting end_sentence to para__add_next/_add_next
+	to avoid having related code in two places.  Add an argument to
+	_add_next to notify that the end_sentence states should be set in
+	Perl, in C reuse another argument for this purpose.
+
+2026-11-07  Patrice Dumas  <pertusus@free.fr>
+
 	* tta/perl/Texinfo/Convert/ParagraphNonXS.pm (_add_next): rename
 	$newlines_impossible as $no_newline_in_word.
 
