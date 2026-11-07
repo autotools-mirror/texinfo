@@ -248,7 +248,7 @@ sub add_next($;$$) {
 
 # add a word (without wrapping).
 sub _add_next($;$$$) {
-  my ($paragraph, $word, $transparent, $newlines_impossible) = @_;
+  my ($paragraph, $word, $transparent, $no_newline_in_word) = @_;
 
   my $result = '';
 
@@ -270,7 +270,7 @@ sub _add_next($;$$$) {
     $paragraph->{'last_letter'} = $1;
   }
 
-  if (!$newlines_impossible and $word =~ /\n/) {
+  if (!$no_newline_in_word and $word =~ /\n/) {
     $result .= _add_pending_word($paragraph);
     _end_line($paragraph);
   } else {
@@ -368,9 +368,11 @@ sub add_text($$) {
     /(\s+)|(\p{InFullwidth})|((?:[^\s\p{InFullwidth}\x08])+)|(\x08)/,
     $text;
 
+  # FIXME remove this optimization?  It makes reading the code
+  # more difficult for a dubious gain, especially since there is XS.
   # Check now if a newline exists anywhere in the string to
   # try to eliminate regex checks later.
-  my $newline_possible_flag = ($text =~ /\n/);
+  my $newline_in_text = ($text =~ /\n/);
 
   my $debug_flag = $paragraph->{'debug'};
   while (@segments) {
@@ -438,7 +440,7 @@ sub add_text($$) {
       $result .= _cut_line($paragraph, $paragraph->{'counter'}
                                   + length($paragraph->{'space'}));
 
-      if ($newline_possible_flag and !$paragraph->{'unfilled'}
+      if ($newline_in_text and !$paragraph->{'unfilled'}
           and $paragraph->{'keep_end_lines'} and $spaces =~ /\n/) {
         $result .= _end_line($paragraph);
       }
@@ -453,7 +455,7 @@ sub add_text($$) {
       my $tmp = $paragraph->{'last_letter'} . $added_word;
 
       $result .= _add_next($paragraph, $added_word, undef,
-                           !$newline_possible_flag);
+                           !$newline_in_text);
 
       # Check if it is considered as an end of sentence.  There are two things
       # to check: one, that we have a ., ! or ?; and second, that it is not
