@@ -52,9 +52,8 @@ use Texinfo::OutputUnits;
 use Texinfo::Convert::Utils;
 use Texinfo::Convert::Text;
 use Texinfo::Convert::Converter;
-use Texinfo::Convert::Paragraph qw(add_end_sentence add_next add_pending_word
-       add_text allow_end_sentence end_line remove_end_sentence
-       set_frenchspacing set_space_protection);
+use Texinfo::Convert::Paragraph qw(add_next add_pending_word
+                             allow_end_sentence set_frenchspacing);
 
 # commands that are of use for formatting.
 my %formatted_line_commands = %Texinfo::Commands::formatted_line_commands;
@@ -977,8 +976,8 @@ sub new_unfilled_formatter($;$) {
 
   my $container_conf = {
     'keep_end_lines'     => 1,
-    'unfilled'           => 1,
     'no_final_newline'   => 1,
+    'unfilled'           => 1,
   };
 
   # the freanchspacing configuration argument is set to an arbitrary
@@ -1109,7 +1108,7 @@ sub _stream_output_add_text($$) {
   my ($self, $text) = @_;
 
   my $container = $self->{'formatters'}->[-1]->{'container'};
-  my $output = add_text($container, $text);
+  my $output = Texinfo::Convert::Paragraph::add_text($container, $text);
 
   _stream_output_count_nl($self, $output);
 
@@ -1405,8 +1404,7 @@ sub node_name($$) {
     push @{$self->{'formatters'}}, $formatter;
 
     _convert($self, $node_text);
-    _stream_output($self,
-      Texinfo::Convert::Paragraph::add_pending_word($formatter->{'container'}));
+    _stream_output($self, add_pending_word($formatter->{'container'}));
     $result = _stream_to_text($self);
     $width = Texinfo::Convert::Paragraph::counter($formatter->{'container'});
 
@@ -1462,8 +1460,7 @@ sub _cache_node_names($$;$) {
     push @{$self->{'count_context'}}, {'lines' => 0,
                                        'pending_text' => [['']]};
     _convert($self, $node_text);
-    _stream_output($self,
-      Texinfo::Convert::Paragraph::add_pending_word($formatter->{'container'}));
+    _stream_output($self, add_pending_word($formatter->{'container'}));
     my $result = _stream_to_text($self);
     my $width = Texinfo::Convert::Paragraph::counter($formatter->{'container'});
 
@@ -3082,7 +3079,8 @@ sub _convert($$) {
       # in case the text added ends with punctuation.
       # If the text is empty (likely because of an error) previous
       # punctuation will be cancelled, we don't want that.
-      remove_end_sentence($formatter->{'container'})
+      Texinfo::Convert::Paragraph::remove_end_sentence(
+                                        $formatter->{'container'})
         if ($accented_text ne '');
       return;
     } elsif (defined($type) and $type eq 'definfoenclose_command') {
@@ -3123,7 +3121,8 @@ sub _convert($$) {
         }
         if ($cmdname eq 'w') {
           $formatter->{'w'}++;
-          set_space_protection($formatter->{'container'}, 1)
+          Texinfo::Convert::Paragraph::set_space_protection(
+                                          $formatter->{'container'}, 1)
             if ($formatter->{'w'} == 1);
         }
         my ($text_before, $text_after);
@@ -3171,7 +3170,8 @@ sub _convert($$) {
            if (defined($text_after));
         if ($cmdname eq 'w') {
           $formatter->{'w'}--;
-          set_space_protection($formatter->{'container'}, 0)
+          Texinfo::Convert::Paragraph::set_space_protection(
+                                               $formatter->{'container'}, 0)
             if ($formatter->{'w'} == 0);
         }
         if (exists($brace_code_commands{$cmdname})) {
@@ -3305,7 +3305,8 @@ sub _convert($$) {
 
           if ($punctuation_no_arg_commands{$cmdname}) {
             _stream_output_add_next($self, $text);
-            add_end_sentence($formatter->{'container'});
+            Texinfo::Convert::Paragraph::add_end_sentence(
+                                                $formatter->{'container'});
           } elsif ($cmdname eq 'tie') {
             _stream_output_add_next($self, $text);
           } else {
@@ -3325,7 +3326,8 @@ sub _convert($$) {
             }
 
             if ($cmdname eq 'dots') {
-              remove_end_sentence($formatter->{'container'});
+              Texinfo::Convert::Paragraph::remove_end_sentence(
+                                                $formatter->{'container'});
             }
           }
           if ($formatter->{'upper_case_stack'}->[-1]->{'var'}
@@ -3548,8 +3550,8 @@ sub _convert($$) {
               }
             }
             # split in two calls to match C code
-            _stream_output_add_text ($self, 'U+');
-            _stream_output_add_text ($self, $arg_text);
+            _stream_output_add_text($self, 'U+');
+            _stream_output_add_text($self, $arg_text);
           }
         }
         return;
@@ -3568,7 +3570,8 @@ sub _convert($$) {
       }
     } elsif (defined($nobrace_symbol_text{$cmdname})) {
       if ($cmdname eq ':') {
-        remove_end_sentence($formatter->{'container'});
+        Texinfo::Convert::Paragraph::remove_end_sentence(
+                                             $formatter->{'container'});
       } elsif ($cmdname eq '*') {
         _stream_output_count_nl($self,
                        add_pending_word($formatter->{'container'}));
@@ -3579,11 +3582,12 @@ sub _convert($$) {
           _stream_output_add_text($self, ' ');
         } else {
           _stream_output_count_nl($self,
-                         end_line($formatter->{'container'}));
+           Texinfo::Convert::Paragraph::end_line($formatter->{'container'}));
         }
       } elsif ($cmdname eq '.' or $cmdname eq '?' or $cmdname eq '!') {
         _stream_output_add_next($self, $cmdname);
-        add_end_sentence($formatter->{'container'});
+        Texinfo::Convert::Paragraph::add_end_sentence(
+                                              $formatter->{'container'});
       } elsif ($cmdname eq ' ' or $cmdname eq "\n" or $cmdname eq "\t") {
         _stream_output_add_next($self, $nobrace_symbol_text{$cmdname});
       } else {
@@ -3595,10 +3599,11 @@ sub _convert($$) {
       # remark:
       # cartouche group and raggedright -> nothing on format stack
 
-      my $format_menu = $self->get_conf('FORMAT_MENU');
-      if (exists($menu_commands{$cmdname})
-          and (!$format_menu or $format_menu eq 'nomenu')) {
-        return;
+      if (exists($menu_commands{$cmdname})) {
+        my $format_menu = $self->get_conf('FORMAT_MENU');
+        if (!defined($format_menu) or $format_menu eq 'nomenu') {
+          return;
+        }
       }
       # includes @verbatim raw block_commands and block_math_commands
       if (exists($preformatted_context_commands{$cmdname})
@@ -3978,8 +3983,7 @@ sub _convert($$) {
                           'contents' =>
                       [$float->{'contents'}->[0]->{'contents'}->[1]]}));
           _stream_output_add_next($self, '.');
-          _stream_output_count_nl($self,
-                   Texinfo::Convert::Paragraph::add_pending_word($container));
+          _stream_output_count_nl($self, add_pending_word($container));
 
           # NB we trust that only $container was used to format text
           # inside the call to convert_line so that all output text is
@@ -4055,7 +4059,7 @@ sub _convert($$) {
       }
       for (my $i = 0; $i < $sp_nr; $i++) {
         _stream_output_count_nl($self,
-                       end_line($formatter->{'container'}));
+          Texinfo::Convert::Paragraph::end_line($formatter->{'container'}));
       }
       $self->{'text_element_context'}->[-1]->{'counter'} = 0;
       return;
@@ -4172,8 +4176,7 @@ sub _convert($$) {
                                               'contents' => [$content]}));
 
           _stream_output_count_nl($self,
-                        Texinfo::Convert::Paragraph::add_pending_word
-                          ($formatter->{'container'}, 1));
+                         add_pending_word($formatter->{'container'}, 1));
           my $node_text = _stream_to_text($self);
           pop @{$self->{'count_context'}};
 
@@ -4242,13 +4245,12 @@ sub _convert($$) {
                                              'pending_text' => [['']]};
           _convert($self, $content);
           _stream_output_count_nl($self,
-                        Texinfo::Convert::Paragraph::add_pending_word
-                          ($formatter->{'container'}, 1));
+                        add_pending_word($formatter->{'container'}, 1));
           my $entry_name = _stream_to_text($self);
           pop @{$self->{'count_context'}};
 
           delete $self->{'formatters'}->[-1]->{'no_added_eol'};
-          my $formatter = $self->{'formatters'}->[-1];
+
           $entry_name_seen = 1;
           $pre_quote = $post_quote = '';
           if ($entry_name =~ /:/) {
@@ -4332,9 +4334,7 @@ sub _convert($$) {
 
             if ($text_count >= $description_indent_length) {
               my $inserted_space = '  ';
-              _stream_output_count_nl($self,
-                             add_text($formatter->{'container'},
-                                      $inserted_space));
+              _stream_output_add_text($self, $inserted_space);
               _stream_output_count_nl($self,
                              add_pending_word($formatter->{'container'}, 1));
               $text_count += length($inserted_space);
@@ -4406,7 +4406,7 @@ sub _convert($$) {
       } else {
         _stream_output_count_nl($self,
                        add_pending_word($formatter->{'container'}));
-        end_line($formatter->{'container'});
+        Texinfo::Convert::Paragraph::end_line($formatter->{'container'});
         _ensure_end_of_line($self);
       }
 

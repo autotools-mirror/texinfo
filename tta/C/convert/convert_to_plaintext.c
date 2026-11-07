@@ -6545,9 +6545,7 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
 
                       if (text_count >= description_indent_length)
                         {
-                          const TEXT result = para_add_text ("  ", 2);
-                          stream_output_count_nl (self, result);
-
+                          stream_output_add_text (self, "  ", 2);
                           const TEXT pending_word = para_add_pending_word (1);
                           stream_output_count_nl (self, pending_word);
                           text_count += 2;
