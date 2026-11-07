@@ -260,9 +260,8 @@ use constant {
 # end of sentence states should be set/unset.  If not set, the function is
 # called as add_next, and the end of sentence states are not set/unset.
 # 'last_letter' is set in any case, if not in unfilled container.
-sub _add_next($;$$$$) {
-  my ($paragraph, $word, $transparent, $no_newline_in_word,
-      $set_end_of_sentence) = @_;
+sub _add_next($;$$$) {
+  my ($paragraph, $word, $transparent, $set_end_of_sentence) = @_;
 
   if (!defined($word)) {
     return '';
@@ -313,7 +312,9 @@ sub _add_next($;$$$$) {
     $paragraph->{'word'} .= $word;
   }
 
-  if (!$no_newline_in_word and $word =~ /\n/) {
+  # if $set_end_of_sentence, called from add_text, no end of line in
+  # word, spaces are separate.
+  if (not $set_end_of_sentence and $word =~ /\n/) {
     $result .= _add_pending_word($paragraph);
     _end_line($paragraph);
   } else {
@@ -403,12 +404,6 @@ sub add_text($$) {
     /(\s+)|(\p{InFullwidth})|((?:[^\s\p{InFullwidth}\x08])+)|(\x08)/,
     $text;
 
-  # FIXME remove this optimization?  It makes reading the code
-  # more difficult for a dubious gain, especially since there is XS.
-  # Check now if a newline exists anywhere in the string to
-  # try to eliminate regex checks later.
-  my $newline_in_text = ($text =~ /\n/);
-
   my $debug_flag = $paragraph->{'debug'};
   while (@segments) {
     # $empty_segment should be an empty string; the other variables
@@ -475,7 +470,7 @@ sub add_text($$) {
       $result .= _cut_line($paragraph, $paragraph->{'counter'}
                                   + length($paragraph->{'space'}));
 
-      if ($newline_in_text and !$paragraph->{'unfilled'}
+      if (!$paragraph->{'unfilled'}
           and $paragraph->{'keep_end_lines'} and $spaces =~ /\n/) {
         $result .= _end_line($paragraph);
       }
@@ -484,10 +479,8 @@ sub add_text($$) {
       # allow an end of sentence to occur.
       allow_end_sentence($paragraph);
     } elsif (defined($added_word)) {
-
-      $result .= _add_next($paragraph, $added_word, undef,
-                           !$newline_in_text, 1);
-
+      # regular text
+      $result .= _add_next($paragraph, $added_word, undef, 1);
     } elsif (defined($fullwidth_segment)) {
       print STDERR "FULLWIDTH\n" if ($paragraph->{'debug'});
 

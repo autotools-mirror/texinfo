@@ -1,3 +1,11 @@
+2026-11-07  Patrice Dumas  <pertusus@free.fr>
+
+	* tta/perl/Texinfo/Convert/ParagraphNonXS.pm (_add_next, add_text):
+	remove $newline_in_text in add_text and $no_newline_in_word argument of
+	_add_next.  In _add_next do not check for end of line if called from
+	add_text, as in that case there is no end of line in word, as end of
+	line is handled as a space.
+
 2026-11-07  Gavin Smith <gavinsmith0123@gmail.com>
 
 	* install-info/install-info.c (format_entry):
