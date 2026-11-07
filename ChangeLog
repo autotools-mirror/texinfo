@@ -1,5 +1,11 @@
 2026-11-07  Patrice Dumas  <pertusus@free.fr>
 
+	* tta/perl/Texinfo/Convert/ParagraphNonXS.pm (_add_next): simplify
+	code when not only continuation of after_punctuation_characters nor
+	end of sentence.
+
+2026-11-07  Patrice Dumas  <pertusus@free.fr>
+
 	* tta/C/convert/plaintext_paragraph.c (para__add_next, para_add_text),
 	tta/perl/Texinfo/Convert/ParagraphNonXS.pm (_add_next, add_text): move
 	code from add_text related to setting last_letter for regular

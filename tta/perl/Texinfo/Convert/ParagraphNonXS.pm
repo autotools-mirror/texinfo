@@ -278,6 +278,7 @@ sub _add_next($;$$$$) {
       # we have $end_sentence_characters, therefore we are possibly at the
       # end of a sentence.
 
+      # Save the last character in $word before punctuation
       $paragraph->{'last_letter'} = $1 if (defined($1));
       # to have an end of sentence, we should be called through add_text
       # and the punctuation should not be preceded by an upper-case letter.
@@ -297,12 +298,10 @@ sub _add_next($;$$$$) {
           if (exists($paragraph->{'end_sentence'}) and $paragraph->{'debug'});
         delete $paragraph->{'end_sentence'};
       }
-      if ($word =~
-           /([^$end_sentence_characters$after_punctuation_characters])
-            [$end_sentence_characters$after_punctuation_characters]*$/ox) {
-        # Save the last character in $word before punctuation
-        $paragraph->{'last_letter'} = $1;
-      }
+      $word =~ /([^$after_punctuation_characters])
+                [$after_punctuation_characters]*$/ox;
+      # Save the last character in $word before punctuation
+      $paragraph->{'last_letter'} = $1;
     }
   }
 
