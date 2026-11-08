@@ -1485,10 +1485,14 @@ format_entry (char *name, size_t name_len, char *desc, size_t desc_len,
   outstr = xmalloc (outstr_alloc);
   outstr[0] = '\0';
   char *poutstr = outstr;
+  const char *poutstr_end = outstr + outstr_alloc;
 
-#define cat(out, str, len) { memcpy (out, str, len); out += len; }
+  /* Append to outstr with bounds checking (just in case the calculation
+     of outstr_alloc was too small). */
+#define cat(str, len) { if (poutstr + len < poutstr_end) { \
+                          memcpy (poutstr, str, len); poutstr += len; }}
 
-  cat (poutstr, name, name_len);
+  cat (name, name_len);
 
   column = name_len;
 
@@ -1497,12 +1501,12 @@ format_entry (char *name, size_t name_len, char *desc, size_t desc_len,
       /* Name is too long to have description on the same line. */
       if (desc_len > 1)
         {
-          cat (poutstr, "\n", 1);
+          cat ("\n", 1);
           column = 0;
           for (j = 0; j < calign - 1; j++)
             {
               column = adjust_column (column, ' ');
-              cat (poutstr, " ", 1);
+              cat (" ", 1);
             }
         }
     }
@@ -1512,7 +1516,7 @@ format_entry (char *name, size_t name_len, char *desc, size_t desc_len,
         if (desc_len <= 2)
           break;
         column = adjust_column (column, ' ');
-        cat (poutstr, " ", 1);
+        cat (" ", 1);
       }
 
   for (i = 0; i < desc_len; i++)
@@ -1529,7 +1533,7 @@ format_entry (char *name, size_t name_len, char *desc, size_t desc_len,
       if (c == '\n')
         {
           line_out[offset_out++] = c;
-          cat (poutstr, line_out, offset_out);
+          cat (line_out, offset_out);
           column = offset_out = 0;
           continue;
         }
@@ -1565,12 +1569,12 @@ format_entry (char *name, size_t name_len, char *desc, size_t desc_len,
 
               /* Found a blank.  Don't output the part after it. */
               logical_end++;
-              cat (poutstr, line_out, logical_end);
-              cat (poutstr, "\n", 1);
+              cat (line_out, logical_end);
+              cat ("\n", 1);
               for (j = 0; j < align - 1; j++)
                 {
                   column = adjust_column (column, ' ');
-                  cat (poutstr, " ", 1);
+                  cat (" ", 1);
                 }
 
               /* Move the remainder to the beginning of the next 
@@ -1591,7 +1595,7 @@ format_entry (char *name, size_t name_len, char *desc, size_t desc_len,
             }
 
           line_out[offset_out++] = '\n';
-          cat (poutstr, line_out, offset_out);
+          cat (line_out, offset_out);
           column = offset_out = 0;
           goto rescan;
         }
@@ -1599,10 +1603,10 @@ format_entry (char *name, size_t name_len, char *desc, size_t desc_len,
     }
 
   if (desc_len <= 2)
-    cat (poutstr, "\n", 1);
+    cat ("\n", 1);
 
   if (offset_out)
-    cat (poutstr, line_out, offset_out);
+    cat (line_out, offset_out);
 
   poutstr[0] = '\0';
 
