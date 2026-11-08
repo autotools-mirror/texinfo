@@ -1,5 +1,31 @@
 2026-11-08  Gavin Smith <gavinsmith0123@gmail.com>
 
+	Use of "chapter structuring" versus "sectioning" etc.
+
+	* doc/texinfo.texi:
+	Only refer to @chapter-like commands as "sectioning" commands.
+	Refer to @part and @heading-like commands in the broader category
+	of "chapter structuring" commands.  (Although @heading does not
+	affect the "document structure" per se to the same extent as
+	@chapter-like commands, they are documented along with them in
+	the same chapter in the manual, and they can be used by users
+	to provide a kind of visual structure for readers.)
+	This avoids a need to add exceptions everywhere we talk about
+	"sectioning commands" to exclude @part and @*heading.
+	
+	(Chapter Structuring): Describe "sectioning commands" as an
+	important subgroup of "chapter structuring" commands.  Introduce
+	the term "heading-only" commands for @heading-like commands.
+	(@part): Mention that a @part cannot be cross-referenced.  Remove
+	duplicative @node line from example.
+	(Raise/lower section): Add FIXME saying to check the effect of
+	these commands on @*heading.  (When I tested the effect appeared
+	different with texi2any vs. texinfo.tex and this needs investigating.)
+	(Command Contexts): List @part along with @section as a command
+	that does not occur in "general text".
+
+2026-11-08  Gavin Smith <gavinsmith0123@gmail.com>
+
 	* doc/texinfo.texi (Structuring Command Types):
 	Edit to make slightly clear what the "four groups" of commands are.
 

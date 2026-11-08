@@ -1148,7 +1148,8 @@ regular output.
 
 Any text that starts a paragraph, @@-commands that are formatted
 as quotations, tables, lists and so on, and @code{@@node} (@pxref{Nodes})
-and sectioning commands (@pxref{Chapter Structuring}) end the preamble.
+and chapter structuring commands (@pxref{Chapter Structuring}) end
+the preamble.
 
 The concept of the preamble is significant for @LaTeX{} output, as the
 @code{\begin@{document@}} line is output at the end of the preamble.
@@ -1961,7 +1962,7 @@ table of contents in addition to the full table of contents.
 Both contents commands should be written on a line by themselves, and
 placed near the beginning of the file, after the @code{@@end
 titlepage} (@pxref{@code{@@titlepage}}) or the @code{@@end
-documentinfo} (@pxref{Document Metadata}), before any sectioning
+documentinfo} (@pxref{Document Metadata}), before any chapter structuring
 command.  The contents commands automatically generate a chapter-like
 heading at the top of the first table of contents page, so don't
 include any sectioning command such as @code{@@unnumbered} before
@@ -2279,14 +2280,25 @@ ignored.
 @cindex Structuring of chapters
 @cindex Sectioning
 
-Texinfo's @dfn{sectioning} commands (also known as @dfn{chapter structuring}
-commands) divide a document into a hierarchy of chapters, sections,
-subsections, and subsubsections.  These commands generate large headings in
-the text, like the one above.  They also provide information for generating
-the table of contents (@pxref{Contents,, Generating a Table of Contents}).
+You can use the @dfn{chapter structuring} commands to structure your
+document.
 
-For example, the @code{@@chapter} command introduces a chapter.  It
-could be used like this:
+The most important subgroup of these commands is the @dfn{sectioning}
+commands.  These divide a document into a hierarchy of chapters, sections,
+subsections, and subsubsections.  These commands generate large headings
+in the text, like the one above.  They also provide information for
+generating the table of contents (@pxref{Contents,, Generating a Table
+of Contents}).
+
+The @code{@@part} command creates a division of the manual above the
+level of chapter, but the usage of this command is quite different to
+the sectioning commands.
+
+Finally, Texinfo also has @dfn{heading-only} commands, which print
+headings, but do not generate entries in the table of contents.
+
+Here is a basic example of a sectioning command, which introduces a
+chapter titled ``Chapter 2''.
 
 @example
 @@chapter Chapter 2
@@ -2300,8 +2312,9 @@ command, as follows:
 @@chapter Chapter 2
 @end example
 
-The sectioning commands are described in the sections that follow.
-The @code{@@node} command is described in the next chapter (@pxref{Nodes}).
+The sectioning commands, @code{@@part}, and heading-only commands are
+described in the sections that follow.  The @code{@@node} command is
+described in the next chapter (@pxref{Nodes}).
 
 
 @node Tree Structuring
@@ -2656,8 +2669,8 @@ headings that appear in the table of contents.
 @findex subsubheading
 @cindex Subsub sectioning commands
 
-The fourth and lowest level sectioning commands in Texinfo are the
-`subsub' commands.  They are:
+The fourth and lowest level of chapter structuring commands in Texinfo
+are the `subsub' commands.  They are:
 
 @table @code
 @item @@subsubsection
@@ -2693,13 +2706,12 @@ subsections of @code{@@unnumbered} and @code{@@appendix} chapters
 @findex part
 @cindex Part pages
 
-The final sectioning command is @code{@@part}, to mark a @dfn{part} of
-a manual, that is, a group of chapters or (rarely) appendices.  This
-behaves quite differently from the other sectioning commands, to fit
+The final chapter structuring command is @code{@@part}, to mark a
+@dfn{part} of a manual, that is, a group of chapters or (rarely) appendices.
+This behaves quite differently from the sectioning commands, to fit
 with the way such ``parts'' are conventionally used in books.
 
-No @code{@@node} command is associated with @code{@@part}.  Just write
-the command on a line by itself, including the part title, at the
+Just write the command on a line by itself, including the part title, at the
 place in the document you want to mark off as starting that part.  For
 example:
 
@@ -2710,15 +2722,17 @@ example:
 As can be inferred from this example, no automatic numbering or
 labeling of the @code{@@part} text is done.  The text is taken as-is.
 
+A @code{@@part} command cannot be associated with @code{@@node}, and the
+command cannot be cross-referenced.
+
 Because parts are not associated with nodes, no general text can
 follow the @code{@@part} line.  To produce the intended output, it
-must be followed by a chapter-level command (including its node).
-Thus, to continue the example:
+must be followed by a chapter-level command.  Thus, to continue the
+example:
 
 @example
 @@part Part I:@@* The beginning
 
-@@node Introduction
 @@chapter Introduction
 ...
 @end example
@@ -2760,6 +2774,7 @@ section).  That is, it is never lowered and nothing can be raised to it.
 The @code{@@raisesections} and @code{@@lowersections} commands
 implicitly raise and lower the hierarchical level of following
 chapters, sections and the other sectioning commands (excluding parts).
+@c FIXME unclear if @raisesections should affect heading-only commands
 
 That is, the @code{@@raisesections} command changes sections to
 chapters, subsections to sections, and so on.  Conversely, the
@@ -3336,8 +3351,8 @@ sections, sections superior to sub-sections and so on.
 @c style of documentation is known as @dfn{topic-oriented documentation},
 @c notably used by the DITA and Mallard systems.
 
-To do this, follow the @code{@@node} line with one of the heading commands.
-For example:
+To do this, follow the @code{@@node} line with one of the heading-only
+commands.  For example:
 
 @example
 @@node Topic
@@ -21808,7 +21823,7 @@ implementations.
 
 By @dfn{general text} below, we mean anything except sectioning and
 other such outer-level document commands, such as @code{@@section},
-@code{@@node}, and @code{@@setfilename}.
+@code{@@part}, @code{@@node}, and @code{@@setfilename}.
 
 @code{@@c}, @code{@@comment} and @code{@@if ... @@end if} conditional
 commands may appear anywhere (except the conditionals must still be on lines by
