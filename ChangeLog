@@ -2,6 +2,15 @@
 
 	Deprecate install-info --align and --calign
 
+	* install-info/install-info.c (print_help),
+	* doc/texinfo.texi (Installing Dir Entries, Invoking install-info),
+	* NEWS:
+	Update for --align, --calign deprecation.
+
+2026-11-08  Gavin Smith <gavinsmith0123@gmail.com>
+
+	Deprecate install-info --align and --calign
+
 	* install-info/install-info.c (main) <--align, --calign>:
 	Do nothing, and print a warning saying the option is deprecated.
 	(deprecated_option): New.

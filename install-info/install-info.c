@@ -525,13 +525,9 @@ print_help (void)
 or --dir-file (or --info-dir) options are given, respectively."));
   puts ("");
 
+  puts (_("Options:"));
   puts (_("\
-Options:\n\
- --add-once          add only to first matching section, not all.\n\
- --align=COL         start description of new entries at column COL.\n\
- --calign=COL        format second and subsequent description lines to\n\
-                       start at column COL."));
-
+ --add-once          add only to first matching section, not all."));
   puts (_("\
  --debug             report what is being done.\n\
  --delete            delete existing entries for INFO-FILE from DIR-FILE;\n\

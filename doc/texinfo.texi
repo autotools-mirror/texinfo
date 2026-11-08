@@ -17342,7 +17342,6 @@ start at column 32, starting at zero (as in
 @code{what-cursor-position} in Emacs).  This will make it align with
 most others.  Description for individual utilities best start in
 column 48, where possible.  For more information about formatting see
-the @samp{--calign}, @samp{--align}, and @samp{--max-width} options in
 @ref{Invoking @command{install-info}}.
 
 If you use @code{@@dircategory} more than once in the Texinfo source,
@@ -17398,17 +17397,25 @@ Options:
 @opindex --add-once@r{, for @command{install-info}}
 Specifies that the entry or entries will only be put into a single section.
 
+@ignore
+@c --align and --calign are deprecated, and do nothing.
+@c Note that the meaning of these two options appears to have been swapped
+@c from the original Debian install-info.  However, they also became no-ops
+@c and were deprecated in that program too, before it was abandoned in favor
+@c of the present program.
 @item --align=@var{column}
 @opindex --align=@var{column}@r{, for @command{install-info}}
 Specifies the column that the second and subsequent lines of menu entry's
 description will be formatted to begin at.  The default for this option is
 @samp{35}.  It is used in conjunction with the @samp{--max-width} option.
 @var{column} starts counting at 1.
+@end ignore
 
 @item --append-new-sections
 @opindex --append-new-sections@r{, for @command{install-info}}
 Instead of alphabetizing new sections, place them at the end of the DIR file.
 
+@ignore
 @item --calign=@var{column}
 @opindex --calign=@var{column}@r{, for @command{install-info}}
 Specifies the column that the first line of menu entry's description will
@@ -17417,6 +17424,7 @@ used in conjunction with the @samp{--max-width} option.
 When the name of the menu entry exceeds this column, entry's description
 will start on the following line.
 @var{column} starts counting at 1.
+@end ignore
 
 @item --debug
 @opindex --debug@r{, for @command{install-info}}

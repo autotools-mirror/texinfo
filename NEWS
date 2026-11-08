@@ -54,6 +54,9 @@ X.Y ()
       . C converters.
       . partial redesign of conversion.
 
+* install-info
+  . Deprecate --align and --calign and make these options do nothing.
+
 * Distribution
   . Remove --enable-refcounts-checks, --enable-perl-api-texi-build
     and --enable-pod-simple-texinfo-tests configure flags.
