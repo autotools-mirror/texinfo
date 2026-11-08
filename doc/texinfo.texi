@@ -16270,8 +16270,8 @@ If set to @samp{menu}, output Texinfo menus.  This is the default for
 Info.  @samp{sectiontoc} is the default setting for HTML, where instead
 of the contents of @code{@@menu} blocks being output, a list of subordinate
 sections is output in each node.  Set to @samp{menu_no_detailmenu} instead
-of @samp{menu} in HTML if you want menus but no automatically generated
-@code{@@detailmenu} in the Top node master menu.  If set to
+of @samp{menu} in HTML and Info if you want menus but no automatically
+generated @code{@@detailmenu} in the Top node master menu.  If set to
 @samp{nomenu}, do not output menus.
 
 This variable is set to @samp{nomenu} when generating DocBook, or when
