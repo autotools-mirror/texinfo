@@ -2179,6 +2179,19 @@ sub converter_or_document_line_warn($$$$;$) {
   }
 }
 
+# For code that can be called both from the main
+# context and from a converter.  With either a converter, and, if
+# not given, a document.
+# NOTE should be avoided when possible, not documented.
+sub converter_or_document_get_conf($$$) {
+  my ($document, $converter, $name) = @_;
+  if (defined($converter)) {
+    return $converter->get_conf($name);
+  } else {
+    return $document->get_conf($name);
+  }
+}
+
 # functions used for debugging.  May be used in other modules.
 # Not documented.
 

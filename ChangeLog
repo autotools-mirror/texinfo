@@ -1,5 +1,19 @@
 2026-11-08  Patrice Dumas  <pertusus@free.fr>
 
+	* tta/perl/Texinfo/Common.pm (converter_or_document_get_conf): add.
+
+	* tta/C/structuring_transfo/structuring.c (print_down_menus),
+	tta/perl/Texinfo/Structuring.pm (_print_down_menus): show the 'node
+	appears in its own menus' warning only if CHECK_NORMAL_MENU_STRUCTURE
+	is set, since non-tree-like manuals for which
+	CHECK_NORMAL_MENU_STRUCTURE is set to 0 may have cycles in menus on
+	purpose.
+
+	* tta/perl/t/info_tests.t (recursive_down_menu): set
+	CHECK_NORMAL_MENU_STRUCTURE to get the recursive menu warning.
+
+2026-11-08  Patrice Dumas  <pertusus@free.fr>
+
 	FORMAT_MENU menu_no_detailmenu in Info
 
 	* tta/C/convert/convert_to_plaintext.c

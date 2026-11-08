@@ -1393,7 +1393,8 @@ Some text.
 * chapN::
 @end menu
 ', {'test_formats' => ['html']},
-   {'FORMAT_MENU' => 'menu'}],
+   {'CHECK_NORMAL_MENU_STRUCTURE' => 1,
+    'FORMAT_MENU' => 'menu'}],
 ['anchor_in_empty_center',
 '@node Top
 

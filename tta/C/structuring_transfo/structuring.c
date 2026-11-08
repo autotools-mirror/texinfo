@@ -2729,14 +2729,20 @@ print_down_menus (const ELEMENT *node, CONST_ELEMENT_LIST *up_nodes,
                 = lookup_extra_string (up_node, AI_key_identifier);
               if (!strcmp (normalized_child, normalized_up_node))
                 {
-                  char *up_node_texi
-                    = target_element_to_texi_label (up_node);
-                  message_list_command_warn (error_messages,
+                  if (!options
+                      || options->CHECK_NORMAL_MENU_STRUCTURE.o.integer > 0)
+                    {/* we show only if CHECK_NORMAL_MENU_STRUCTURE is set
+                        as non-tree-like manuals may have cycles in menus
+                        on purpose */
+                      char *up_node_texi
+                        = target_element_to_texi_label (up_node);
+                      message_list_command_warn (error_messages,
                                 (options && options->DEBUG.o.integer > 0),
                                              up_node, 0,
                                    "node `%s' appears in its own menus",
                                    up_node_texi);
-                  free (up_node_texi);
+                      free (up_node_texi);
+                    }
                   up_node_in_menu = 1;
                   break;
                 }

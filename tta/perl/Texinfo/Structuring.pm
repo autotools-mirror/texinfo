@@ -675,11 +675,17 @@ sub _print_down_menus($$$$$$;$) {
       my $normalized_child = $child->{'extra'}->{'identifier'};
       foreach my $up_node_normalized (@$up_nodes) {
         if ($normalized_child eq $up_node_normalized->[0]) {
-          Texinfo::Common::converter_or_document_line_warn($document,
+          # we show only if CHECK_NORMAL_MENU_STRUCTURE is set
+          # as non-tree-like manuals may have cycles in menus
+          # on purpose
+          if (Texinfo::Common::converter_or_document_get_conf(
+               $document, $converter, 'CHECK_NORMAL_MENU_STRUCTURE')) {
+            Texinfo::Common::converter_or_document_line_warn($document,
                    $converter,
                 sprintf(__("node `%s' appears in its own menus"),
                 target_element_to_texi_label($up_node_normalized->[1])),
                            $up_node_normalized->[1]->{'source_info'});
+          }
           $up_node_in_menu = 1;
           last;
         }
