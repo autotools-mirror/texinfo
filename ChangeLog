@@ -1,5 +1,10 @@
 2026-11-08  Gavin Smith <gavinsmith0123@gmail.com>
 
+	* doc/texinfo.texi (Structuring Command Types):
+	Edit to make slightly clear what the "four groups" of commands are.
+
+2026-11-08  Gavin Smith <gavinsmith0123@gmail.com>
+
 	Deprecate install-info --align and --calign
 
 	* install-info/install-info.c (print_help),

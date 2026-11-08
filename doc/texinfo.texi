@@ -2338,9 +2338,11 @@ Section  Section   Section  Section   Section  Section
 @node Structuring Command Types
 @section Structuring Command Types
 
-The chapter structuring commands fall into four groups, each of which
-contains structuring commands at the levels of chapters, sections,
-subsections, and subsubsections:
+There are four groups of chapter structuring commands: the
+@code{@@chapter} series, the @code{@@unnumbered} series, the
+@code{@@appendix} series, and the @code{@@heading} series.  Each
+of these contains commands at the levels of chapters, sections,
+subsections, and subsubsections.  Here are the details:
 
 @itemize @bullet
 @item
