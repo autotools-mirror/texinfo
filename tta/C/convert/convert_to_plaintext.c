@@ -7025,13 +7025,28 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
                     = &self->document->nodes_list;
               const NODE_RELATIONS *node_relations
                  = nodes_list->list[node_number -1];
+              ELEMENT *menu_node;
 
-              ELEMENT *menu_node
-                = new_complete_menu_master_menu (&self->error_messages,
+              if (!self->conf->FORMAT_MENU.o.string
+                  || strcmp (self->conf->FORMAT_MENU.o.string,
+                             "menu_no_detailmenu"))
+                {
+
+                  menu_node
+                    = new_complete_menu_master_menu (&self->error_messages,
                                       self->conf,
                                       self->current_lang_translations,
                                       &self->document->identifiers_target,
                                       nodes_list, node_relations, 0);
+                }
+              else
+                {
+                  menu_node
+                    = new_complete_node_menu (node_relations,
+                                        self->document,
+                                        self->current_lang_translations,
+                                        self->conf->DEBUG.o.integer, 0, 0);
+                }
 
               c_hashmap_register (&self_plaintext->seenmenus,
                                   identifier, 0);

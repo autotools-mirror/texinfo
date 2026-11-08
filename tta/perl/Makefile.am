@@ -358,6 +358,7 @@ test_files = \
  t/input_files/reference_to_only_special_spaces_node.texi \
  t/input_files/sample_utf8.texi \
  t/input_files/section_in_unnumbered_text.texi \
+ t/input_files/short_topic_guide.texi \
  t/input_files/simplest.texi \
  t/input_files/split_chapter_index.texi \
  t/input_files/simple_only_special_spaces_node.texi \

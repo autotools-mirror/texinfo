@@ -659,6 +659,20 @@ undef, {'test_file' => 'character_and_spaces_in_refs_text.texi',
    'CHECK_NORMAL_MENU_STRUCTURE' => 0,},
   {'FORMAT_MENU' => 'menu', } # add explicitly for the converter
 ],
+['short_topic_guide',
+  undef,
+  {'test_file' => 'short_topic_guide.texi',
+   'test_formats' => ['file_info', 'file_html'],
+   'CHECK_NORMAL_MENU_STRUCTURE' => 0,},
+  {'FORMAT_MENU' => 'menu' } # add explicitly for the converter
+],
+['short_topic_guide_no_auto_detailmenu',
+  undef,
+  {'test_file' => 'short_topic_guide.texi',
+   'test_formats' => ['file_info', 'file_html'],
+   'CHECK_NORMAL_MENU_STRUCTURE' => 0,},
+  {'FORMAT_MENU' => 'menu_no_detailmenu' } # add explicitly for the converter
+],
 ['anchor_in_footnote_split_node',
 $anchor_in_footnote_text,
 {}, {'SPLIT' => 'node'}

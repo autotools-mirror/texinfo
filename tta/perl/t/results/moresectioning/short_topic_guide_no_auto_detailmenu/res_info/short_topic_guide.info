@@ -1,0 +1,86 @@
+This is short_topic_guide.info, produced from short_topic_guide.texi.
+
+
+File: short_topic_guide.info,  Node: Top,  Next: guide1,  Up: (dir)
+
+A short example of guide topic
+******************************
+
+* Menu:
+
+* guide1::
+* guide2::
+
+
+File: short_topic_guide.info,  Node: guide1,  Next: guide2,  Prev: Top,  Up: Top
+
+1 guide 1 for an easy use
+*************************
+
+* Menu:
+
+* topic1:: topic1 description
+* topic3:: topic3 description
+
+
+File: short_topic_guide.info,  Node: topic1,  Next: topic3
+
+Topic 1 title
+=============
+
+* Menu:
+
+More information
+
+* guide1:: guide 1
+
+
+File: short_topic_guide.info,  Node: topic3,  Prev: topic1
+
+Topic 3 title
+=============
+
+* Menu:
+
+More information
+
+* guide1:: guide 1
+* guide2:: guide 2
+
+
+File: short_topic_guide.info,  Node: topic4,  Prev: topic3,  Up: guide2
+
+This is topic 4
+
+* Menu:
+
+More information
+
+* guide2:: guide 2
+
+
+File: short_topic_guide.info,  Node: guide2,  Prev: guide1,  Up: Top
+
+2 guide 2 for an in depth use
+*****************************
+
+* Menu:
+
+* topic3:: topic3 description
+* topic4:: topic4 description
+
+
+Tag Table:
+Node: Top71
+Node: guide1237
+Node: topic1444
+Node: topic3582
+Node: topic4739
+Node: guide2878
+
+End Tag Table
+
+
+Local Variables:
+coding: utf-8
+End:

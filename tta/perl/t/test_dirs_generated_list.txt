@@ -779,6 +779,12 @@ t/results/moresectioning/nodes_before_after_top_xref
 t/results/moresectioning/nodes_before_after_top_xref/res_latex
 t/results/moresectioning/sectioning_part_appendix_texi2html_chapter
 t/results/moresectioning/sectioning_part_appendix_texi2html_chapter/res_html
+t/results/moresectioning/short_topic_guide
+t/results/moresectioning/short_topic_guide/res_html
+t/results/moresectioning/short_topic_guide/res_info
+t/results/moresectioning/short_topic_guide_no_auto_detailmenu
+t/results/moresectioning/short_topic_guide_no_auto_detailmenu/res_html
+t/results/moresectioning/short_topic_guide_no_auto_detailmenu/res_info
 t/results/moresectioning/topic_guide
 t/results/moresectioning/topic_guide/res_html
 t/results/moresectioning/topic_guide/res_info

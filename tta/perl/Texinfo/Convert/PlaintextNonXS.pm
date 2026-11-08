@@ -4641,11 +4641,22 @@ sub _convert($$) {
           = $nodes_list->[$node->{'extra'}->{'node_number'} -1];
 
         $self->{'seenmenus'}->{$node} = 1;
-        my $menu_node
-         = Texinfo::Structuring::new_complete_menu_master_menu($self,
-                                    $identifiers_target, $nodes_list,
-                                    $node_relations);
-        if ($menu_node) {
+        my $format_menu = $self->get_conf('FORMAT_MENU');
+        my $menu_node;
+
+        if (!defined($format_menu) or $format_menu ne 'menu_no_detailmenu') {
+          $menu_node
+            = Texinfo::Structuring::new_complete_menu_master_menu($self,
+                                      $identifiers_target, $nodes_list,
+                                      $node_relations);
+        } else {
+          $menu_node
+            = Texinfo::Structuring::new_complete_node_menu(
+                              $node_relations,
+                              $self->{'current_lang_translations'},
+                              $self->get_conf('DEBUG'));
+        }
+        if (defined($menu_node)) {
           _convert($self, $menu_node);
           _add_newline_if_needed($self);
         }

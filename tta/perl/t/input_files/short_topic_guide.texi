@@ -1,0 +1,52 @@
+\input texinfo.tex
+
+@node Top
+@top A short example of guide topic
+
+@node guide1
+@chapter guide 1 for an easy use
+
+@menu
+* topic1:: topic1 description
+* topic3:: topic3 description
+@end menu
+
+@node topic1, topic3
+@heading Topic 1 title
+
+@menu
+More information
+
+* guide1:: guide 1
+@end menu
+
+@node topic3, , topic1
+@heading Topic 3 title
+
+@menu
+More information
+
+* guide1:: guide 1
+* guide2:: guide 2
+@end menu
+
+@node topic4
+@xrefname Topic 4 only gets a ref name, no title
+
+This is topic 4
+
+@menu
+More information
+
+* guide2:: guide 2
+@end menu
+
+@node guide2
+@chapter guide 2 for an in depth use
+
+@menu
+* topic3:: topic3 description
+* topic4:: topic4 description
+@end menu
+
+@bye
