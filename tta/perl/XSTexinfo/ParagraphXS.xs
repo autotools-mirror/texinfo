@@ -188,17 +188,19 @@ para_destroy (int paragraph)
         para_destroy ();
 
 SV *
-para_add_text (int paragraph, text_in)
-        SV *text_in
+para_add_text (int paragraph, SV *text_in, SV *do_upper_case_in=0)
     PREINIT:
         char *text;
         STRLEN text_len;
         TEXT retval;
+        int do_upper_case = 0;
     CODE:
         text = SvPVutf8 (text_in, text_len);
+        if (do_upper_case_in && SvOK (do_upper_case_in))
+          do_upper_case = SvIV (do_upper_case_in);
 
         para_set_state (paragraph);
-        retval = para_add_text (text, text_len);
+        retval = para_add_text (text, text_len, do_upper_case);
 
         RETVAL = newSVpv (retval.text ? retval.text : "", retval.end);
         SvUTF8_on (RETVAL);

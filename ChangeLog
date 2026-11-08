@@ -1,3 +1,31 @@
+2026-11-08  Patrice Dumas  <pertusus@free.fr>
+
+	upper-case plaintext text in paragraph after determining end of sentence
+
+	Do the upper-casing of text in the paragraph containers, not in the
+	plaintext converter.  This allows upper-casing only after end of
+	sentence state has been determined, and removes the need to protect
+	some end of sentences with a control character.
+
+	* tta/C/convert/plaintext_paragraph. (append_to_word, para__add_next)
+	(para_add_text), tta/perl/Texinfo/Convert/ParagraphNonXS.pm
+	(_add_next, add_text), tta/perl/XSTexinfo/ParagraphXS.xs
+	(para_add_text): add an argument to para_add_text and para__add_next
+	to upper-case text added to pending word after having determined if
+	there is an end of sentence.  Add the append_to_word function to C to
+	do the upper-casing.
+
+	* tta/C/convert/convert_to_plaintext.c (stream_output_add_text)
+	(convert_to_plaintext_internal), tta/C/convert/plaintext_paragraph.c
+	(enum text_class, para_add_text),
+	tta/perl/Texinfo/Convert/ParagraphNonXS.pm (add_text),
+	tta/perl/Texinfo/Convert/PlaintextNonXS.pm (_stream_output_add_text)
+	(_convert): add an argument to stream_output_add_text to upper-case
+	text, passed to Paragraph add_text instead of calling
+	protect_sentence_ends and upper-casing before calling
+	stream_output_add_text.  Remove type_EOS, ignore \b \x08 in
+	para_add_text input.  Remove protect_sentence_ends.  Update callers.
+
 2026-11-07  Patrice Dumas  <pertusus@free.fr>
 
 	* tta/perl/Texinfo/Convert/ParagraphNonXS.pm (_add_next, add_text):

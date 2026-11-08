@@ -848,41 +848,6 @@ sub output($$) {
   return undef;
 }
 
-my $end_sentence = quotemeta('.?!');
-my $after_punctuation = quotemeta('"\')]');
-
-sub _protect_sentence_ends($) {
-  my $text = shift;
-
-  # Avoid suppressing end of sentence, by inserting a control character
-  # in front of the full stop.  The choice of BS for this is arbitrary.
-  # Note that the use of ?: is not crucial but since we do not use the
-  # grouping value, setting no backtracking could be more efficient.
-  $text =~ s/(?<=[^\p{Upper}])
-             (?=[$end_sentence][$after_punctuation]*(?:\s|$))
-             /\x08/xg;
-
-  #my $visible_text_f = $text;
-  #$visible_text_f =~ s/\x08/\~/g;
-  #print STDERR "0PSE '$text' '$visible_text_f'\n";
-
-  # Also insert a control character at end of string, to protect a full stop
-  # that may follow later.
-
-  #$text =~ s/(?<=[^\p{Upper}\s][$after_punctuation]*)$/\x08/;
-  # Perl doesn't support "variable length lookbehind"
-
-  $text = reverse $text;
-  $text =~ s/^(?=[$after_punctuation]*(?:[^\p{Upper}\s]))/\x08/;
-  $text = reverse $text;
-
-  #my $visible_text = $text;
-  #$visible_text =~ s/\x08/\~/g;
-  #print STDERR "PSE '$visible_text'\n";
-
-  return $text;
-}
-
 my %dash_text = ('---' => '--', '--' => '-');
 
 sub _process_text_internal($) {
@@ -1104,11 +1069,12 @@ sub _stream_output_count_nl($$) {
 
 # Pass $TEXT to add_text and output the resulting text.  Used for
 # concision in calling code.
-sub _stream_output_add_text($$) {
-  my ($self, $text) = @_;
+sub _stream_output_add_text($$;$) {
+  my ($self, $text, $do_upper_case) = @_;
 
   my $container = $self->{'formatters'}->[-1]->{'container'};
-  my $output = Texinfo::Convert::Paragraph::add_text($container, $text);
+  my $output = Texinfo::Convert::Paragraph::add_text($container, $text,
+                                                     $do_upper_case);
 
   _stream_output_count_nl($self, $output);
 
@@ -2954,10 +2920,6 @@ sub _convert($$) {
         # output, possibly coverting to upper case as well.
         my $text = $element->{'text'};
 
-        if ($formatter->{'upper_case_stack'}->[-1]->{'upper_case'}) {
-          $text = _protect_sentence_ends($text);
-          $text = uc($text);
-        }
         if (!$self->{'ascii_dashes_and_quotes'} and $self->{'to_utf8'}) {
           $text = Texinfo::Convert::Unicode::unicode_text($text,
                       $formatter->{'font_type_stack'}->[-1]->{'monospace'});
@@ -2965,7 +2927,8 @@ sub _convert($$) {
           $text = _process_text_internal($text);
         }
 
-        _stream_output_add_text($self, $text);
+        _stream_output_add_text($self, $text,
+                       $formatter->{'upper_case_stack'}->[-1]->{'upper_case'});
       }
     } elsif (defined($type) and $type eq 'spaces_before_paragraph') {
       my $indent = $self->get_conf('paragraphindent');
@@ -3296,7 +3259,7 @@ sub _convert($$) {
             $text = '...';
           } else {
             # Note that we set set_case to 0 irrespective of upper case
-            # context, as we want the call to _protect_sentence_ends
+            # context, as we want the call to add_text
             # to be on a text not already upper cased
             $text = Texinfo::Convert::Text::brace_no_arg_command($element,
                                           $self->{'enabled_encoding'},
@@ -3310,15 +3273,15 @@ sub _convert($$) {
           } elsif ($cmdname eq 'tie') {
             _stream_output_add_next($self, $text);
           } else {
+            my $do_upper_case;
             # @AA{} should suppress an end sentence, @aa{} shouldn't.  This
             # is the case whether we are in @sc or not.
             if ($formatter->{'upper_case_stack'}->[-1]->{'upper_case'}
                 and $letter_no_arg_commands{$cmdname}) {
-              $text = _protect_sentence_ends($text);
-              $text = uc($text);
+              $do_upper_case = 1;
             }
 
-            _stream_output_add_text($self, $text);
+            _stream_output_add_text($self, $text, $do_upper_case);
 
             # This is to have @TeX{}, for example, not to prevent end sentences.
             if (!exists($letter_no_arg_commands{$cmdname})) {

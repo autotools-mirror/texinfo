@@ -150,7 +150,7 @@ info_header (CONVERTER *self, const char *input_basefile,
   push_formatter (self, &heading_formatter);
   text_init (&para_text);
 
-  new_text = para_add_text ("This is ", 8);
+  new_text = para_add_text ("This is ", 8, 0);
   text_append_n (&para_text, new_text.text, new_text.end);
   /* This ensures that spaces in file are kept. */
   new_text = para_add_next (output_filename, strlen (output_filename), 0);
@@ -160,20 +160,20 @@ info_header (CONVERTER *self, const char *input_basefile,
       char *program_version;
       xasprintf (&program_version, ", produced by %s version %s from ",
                  program, version);
-      new_text = para_add_text (program_version, strlen (program_version));
+      new_text = para_add_text (program_version, strlen (program_version), 0);
       text_append_n (&para_text, new_text.text, new_text.end);
       free (program_version);
     }
   else
     {
       const char *str = ", produced from ";
-      new_text = para_add_text (str, strlen (str));
+      new_text = para_add_text (str, strlen (str), 0);
       text_append_n (&para_text, new_text.text, new_text.end);
     }
   new_text = para_add_next (input_basefile, strlen (input_basefile), 0);
   if (new_text.text)
     text_append_n (&para_text, new_text.text, new_text.end);
-  new_text = para_add_text (".", 1);
+  new_text = para_add_text (".", 1, 0);
   if (new_text.text)
     text_append_n (&para_text, new_text.text, new_text.end);
   const TEXT end_para_text = para_end ();
@@ -1285,14 +1285,14 @@ info_format_ref (CONVERTER *self, enum command_id cmd,
 
     /* do the actual output of name */
       if (name_quoting_required)
-        stream_output_add_text (self, node_quote, 1);
+        stream_output_add_text (self, node_quote, 1, 0);
 
       convert_to_plaintext_internal (self, name);
 
       if (name_quoting_required)
-        stream_output_add_text (self, node_quote, 1);
+        stream_output_add_text (self, node_quote, 1, 0);
 
-      stream_output_add_text (self, ": ", 2);
+      stream_output_add_text (self, ": ", 2, 0);
     }
 
   if (args[3])
@@ -1536,7 +1536,7 @@ info_format_ref (CONVERTER *self, enum command_id cmd,
                            "`.' or `,' must follow @xref");
                 }
             }
-          stream_output_add_text (self, ".", 1);
+          stream_output_add_text (self, ".", 1, 0);
           /* the added full stop is there to have valid Info, but does not
              end a sentence */
           para_remove_end_sentence ();

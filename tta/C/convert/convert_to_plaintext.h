@@ -86,7 +86,8 @@ void add_lines_count (CONVERTER *self, int lines_count);
 void stream_output_n (CONVERTER *self, const char *text, size_t n);
 void stream_output (CONVERTER *self, const char *text);
 void stream_output_count_nl (CONVERTER *self, const TEXT text);
-void stream_output_add_text (CONVERTER *self, const char *text, size_t n);
+void stream_output_add_text (CONVERTER *self, const char *text, size_t n,
+                             int do_upper_case);
 void stream_output_add_next (CONVERTER *self, const char *text, size_t n);
 TEXT pending_to_text (PENDING_TEXT_LIST *pending_texts);
 void stream_final_result (CONVERTER *self, TEXT *result);

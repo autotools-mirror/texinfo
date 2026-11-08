@@ -998,126 +998,6 @@ plaintext_conversion_finalization (CONVERTER *self)
     }
 }
 
-/* Also set in plaintext_paragraph.c */
-/* ignored after end sentence character to determine if
-   at the end of a sentence */
-#define after_punctuation_characters "\"')]"
-/* characters triggering an end of sentence */
-#define end_sentence_characters ".?!"
-
-static char *
-protect_sentence_ends (const char *text)
-{
-  TEXT t;
-  text_init (&t);
-
-  const char *p = text;
-
-  while (*p)
-    {
-      const char *q = strpbrk (p, end_sentence_characters);
-      if (q)
-        {
-          const char *l = q;
-          l++;
-          if (*l)
-            {
-              l += strspn (l, after_punctuation_characters);
-              if (*l)
-                {
-                  if (strchr (whitespace_chars, *l))
-                    l++;
-                  else
-                    {
-                      text_append_n (&t, p, l-p);
-                      p = l;
-                      continue;
-                    }
-                }
-            }
-          if (q > text)
-            {
-   /* now check that character before punctuation is not upper-case */
-              int len = 0;
-              const char *r = q;
-              /* Back one UTF-8 code point */
-              do
-                {
-                  r--;
-                  len++;
-                }
-              while ((*r & 0xC0) == 0x80 && r > text);
-
-              char32_t wc;
-              u8_mbtouc (&wc, (uint8_t *) r, len);
-              if (uc_is_upper (wc))
-                {
-                  text_append_n (&t, p, l-p);
-                  p = l;
-                  continue;
-                }
-            }
-          /* add up to the punctuation */
-          text_append_n (&t, p, q-p);
-          text_append_n (&t, "\x08", 1);
-       /* add after_punctuation_characters/space text, if any */
-          text_append_n (&t, q, l-q);
-          p = l;
-        }
-      else
-        {
-          text_append (&t, p);
-          break;
-        }
-    }
-  /* Also insert a control character at end of string, to protect a full stop
-     that may follow later */
-  if (t.end > 0)
-    {
-      p = t.text + t.end;
-      while (p > t.text && strchr (after_punctuation_characters, *(p-1)))
-        p--;
-      if (p == t.text)
-        {
-          /* not really sure that it makes sense to add the control character
-             when there are only after punctuation characters, but it is
-             the same as in Perl */
-          text_append_n (&t, "\x08", 1);
-          return t.text;
-        }
-      if (!strchr (whitespace_chars, *(p-1)))
-        {
-          int len = 0;
-          /* Back one UTF-8 code point */
-          do
-            {
-              p--;
-              len++;
-            }
-          while ((*p & 0xC0) == 0x80 && p > t.text);
-          char32_t wc;
-          u8_mbtouc (&wc, (uint8_t *) p, len);
-          if (!uc_is_upper (wc))
-            {
-              text_append_n (&t, "\x08", 1);
-            }
-        }
-    }
-
-  /* For debugging
-    {
-      char visible_text[t.end];
-      memcpy (visible_text, t.text, t.end+1);
-      size_t i;
-      for (i = 0; i < t.end; i++)
-        if (visible_text[i] == '\x08')
-          visible_text[i] = '~';
-      fprintf (stderr, "CPSE '%s'\n", visible_text);
-    }
-   */
-  return t.text;
-}
-
 void
 add_lines_count (CONVERTER *self, int lines_count)
 {
@@ -1195,9 +1075,10 @@ stream_output_count_nl (CONVERTER *self, const TEXT text)
 }
 
 void
-stream_output_add_text (CONVERTER *self, const char *text, size_t len)
+stream_output_add_text (CONVERTER *self, const char *text, size_t len,
+                        int do_upper_case)
 {
-  const TEXT result = para_add_text (text, len);
+  const TEXT result = para_add_text (text, len, do_upper_case);
 
   stream_output_count_nl (self, result);
 }
@@ -4140,7 +4021,7 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
 
           if (plaintext_commands_data[context_cmd].flags
                                             & PF_preformatted_context)
-            stream_output_add_text (self, "\n", 1);
+            stream_output_add_text (self, "\n", 1, 0);
           else
             add_newline_if_needed (self);
           return;
@@ -4185,13 +4066,6 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
                     = top_(font_type) (formatter->font_type_stack);
               UPPER_CASE *upper_case
                     = top_(upper_case) (formatter->upper_case_stack);
-
-              if (upper_case->upper_case)
-                {
-                  char *tmp_text = protect_sentence_ends (text);
-                  text = to_upper_or_lower_multibyte (tmp_text, 1);
-                  free (tmp_text);
-                }
 
               if (!font_type->monospace)
                 {
@@ -4274,13 +4148,12 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
                             }
                         }
                     }
-                  stream_output_add_text (self, t.text, t.end);
+                  stream_output_add_text (self, t.text, t.end,
+                                          upper_case->upper_case);
                 }
               else
-                stream_output_add_text (self, text, strlen (text));
-
-              if (upper_case->upper_case)
-                free (text);
+                stream_output_add_text (self, text, strlen (text),
+                                        upper_case->upper_case);
             }
         }
       else if (type == ET_spaces_before_paragraph)
@@ -4298,7 +4171,7 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
                              type_data[type].name);
           if (text[strspn (text, whitespace_chars)] == '\0')
             {
-              stream_output_add_text (self, text, element->e.text->end);
+              stream_output_add_text (self, text, element->e.text->end, 0);
             }
           else
             fprintf (stderr, "ignored text not empty `%s'\n", text);
@@ -4406,7 +4279,8 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
 
           accented_text = text_accents (element,
                                         self_plaintext->enabled_encoding, sc);
-          stream_output_add_text (self, accented_text, strlen (accented_text));
+          stream_output_add_text (self, accented_text,
+                                  strlen (accented_text), 0);
 
           if (upper_case->upper_case)
             {
@@ -4810,7 +4684,7 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
                   else
                     {
            /* Note that we set set_case to 0 irrespective of upper case
-              context, as we want the call to _protect_sentence_ends
+              context, as we want the call to add_text
               to be on a text not already upper cased */
                       text = text_brace_no_arg_command (element,
                                    self_plaintext->enabled_encoding,
@@ -4827,19 +4701,16 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
                     stream_output_add_next (self, text, strlen (text));
                   else
                     {
+                      int do_upper_case = 0;
                       if (command_other_flags (element) & CF_letter_no_arg
                           && upper_case->upper_case)
                         {
            /* @AA{} should suppress an end sentence, @aa{} shouldn't.  This
               is the case whether we are in @sc or not. */
-                          char *tmp_text = protect_sentence_ends (text);
-                          if (text_need_free)
-                            free (text);
-                          text = to_upper_or_lower_multibyte (tmp_text, 1);
-                          free (tmp_text);
-                          text_need_free = 1;
+                          do_upper_case = 1;
                         }
-                      stream_output_add_text (self, text, strlen (text));
+                      stream_output_add_text (self, text, strlen (text),
+                                              do_upper_case);
 
       /* This is to have @TeX{}, for example, not to prevent end sentences. */
                       if (!(command_other_flags (element) & CF_letter_no_arg))
@@ -5249,15 +5120,15 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
 
                           if (result)
                             {
-                              stream_output_add_text (self, result, len);
+                              stream_output_add_text (self, result, len, 0);
                               free (result);
                               return;
                             }
                         }
 
-                      stream_output_add_text (self, "U+", 2);
+                      stream_output_add_text (self, "U+", 2, 0);
                       stream_output_add_text (self, arg_text->text,
-                                              arg_text->end);
+                                              arg_text->end, 0);
                     }
                 }
               return;
@@ -5310,7 +5181,7 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
           entry and therefore index entry would lead to end of line on
           node pointers line, in tag table, or on menu, all being invalid. */
               if (formatter->no_added_eol)
-                stream_output_add_text (self, " ", 1);
+                stream_output_add_text (self, " ", 1, 0);
               else
                 {
                   const TEXT end_line = para_end_line ();
@@ -5329,7 +5200,7 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
                                     strlen (nobrace_symbol_text[cmd]));
           else
             stream_output_add_text (self, nobrace_symbol_text[cmd],
-                                    strlen (nobrace_symbol_text[cmd]));
+                                    strlen (nobrace_symbol_text[cmd]), 0);
 
           return;
         }
@@ -6545,7 +6416,7 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
 
                       if (text_count >= description_indent_length)
                         {
-                          stream_output_add_text (self, "  ", 2);
+                          stream_output_add_text (self, "  ", 2, 0);
                           const TEXT pending_word = para_add_pending_word (1);
                           stream_output_count_nl (self, pending_word);
                           text_count += 2;

@@ -24,6 +24,7 @@
 #include <uniwidth.h>
 #include <unictype.h>
 #include <unistr.h>
+#include "unicase.h"
 #include <uchar.h>
 /* PRIuLEAST32 */
 #include <inttypes.h>
@@ -393,6 +394,23 @@ para_destroy (void)
   state.in_use = 0;
 }
 
+static void
+append_to_word (const char *text, size_t len, int do_upper_case)
+{
+  if (do_upper_case)
+    {
+      size_t length;
+      uint8_t *u8_result = u8_toupper ((uint8_t *)text, len,
+                                       NULL, NULL, NULL, &length);
+      text_append_n (&state.word, (char *)u8_result, length);
+      free (u8_result);
+    }
+  else
+    {
+      text_append_n (&state.word, text, len);
+    }
+}
+
 /* check if a byte is in the printable ASCII range */
 #define PRINTABLE_ASCII(c) (0x20 <= (c) && (c) <= 0x7E)
 
@@ -414,10 +432,12 @@ para_destroy (void)
    always negative.
    If called from add_text, with non-negative COL_COUNT, set end of sentence
    related states.
+   If DO_UPPER_CASE is set, upper-case the text after having determined
+   if an upper-case letter precedes end sentence punctuation.
  */
 static void
 para__add_next (TEXT *result, const char *word, int word_len,
-                int transparent, int col_count)
+                int transparent, int col_count, int do_upper_case)
 {
   if (!word)
     return;
@@ -497,7 +517,7 @@ para__add_next (TEXT *result, const char *word, int word_len,
   if (word_len == 0)
     state.invisible_pending_word = 1;
   else
-    text_append_n (&state.word, word, word_len);
+    append_to_word (word, word_len, do_upper_case);
 
   if (memchr (word, '\n', word_len))
     {
@@ -573,7 +593,7 @@ para_add_next (const char *text, int text_len, int transparent)
 
   text_reset (&t);
   state.end_line_count = 0;
-  para__add_next (&t, text, text_len, transparent, -1);
+  para__add_next (&t, text, text_len, transparent, -1, 0);
 
   return t;
 }
@@ -624,14 +644,17 @@ para_set_space_protection (int no_break)
 /*****************************************************************/
 
 enum text_class { type_NULL, type_spaces, type_regular,
-                 type_double_width, type_EOS, type_finished,
+                 type_double_width, type_finished,
                  };
 
-/* Return string to be added to paragraph contents, wrapping text. */
+/* Return string to be added to paragraph contents, wrapping text.
+   If DO_UPPER_CASE is set, upper-case the text after having determined
+   if an upper-case letter precedes end sentence punctuation.
+ */
 /* The return value should not be modified and should be accessed before
    calling the function again */
 TEXT
-para_add_text (const char *text, int len)
+para_add_text (const char *text, int len, int do_upper_case)
 {
   const char *p = text;
   char32_t next_wc = (char32_t) '0';
@@ -644,6 +667,8 @@ para_add_text (const char *text, int len)
      next_type.  We do not have two type_regular blocks in a row so there
      is no chance of this being overwritten before it is used.  It is
      zeroed when the block is output. */
+  /* Being non-negative in para__add_next call also triggers setting
+     end of sentence related states */
   int regular_col_count = 0;
 
   text_reset (&result);
@@ -685,13 +710,6 @@ para_add_text (const char *text, int len)
           else if (isascii_space (*q))
             {
               next_type = type_spaces;
-              next_len = 1;
-            }
-          else if (*q == '\b')
-            {
-            /* Code to say that a following full stop (or question or
-               exclamation mark) may be an end of sentence. */
-              next_type = type_EOS;
               next_len = 1;
             }
           else
@@ -870,12 +888,15 @@ para_add_text (const char *text, int len)
           if (state.debug)
             fprintf (stderr, "FULLWIDTH\n");
 
-          text_append_n (&state.word, p, q - p);
-          state.word_counter += 2;
-
           /* fullwidth latin letters can be upper case, so it is important to
              use the actual characters here. */
           state.last_letter = wc;
+
+          append_to_word (p, q - p, do_upper_case);
+
+          /* NOTE we assume that upper-case fullwidth character is also
+             fullwidth */
+          state.word_counter += 2;
 
           /* We allow a line break in between Chinese characters even if
              there was no space between them, unlike single-width
@@ -893,14 +914,11 @@ para_add_text (const char *text, int len)
             }
           state.end_sentence = eos_unset;
         }
-      else if (type == type_EOS)
-        {
-          para_allow_end_sentence ();
-        }
       /*************** Word and other characters ************************/
       else if (type == type_regular)
         {
-          para__add_next (&result, p, q - p, 0, regular_col_count);
+          para__add_next (&result, p, q - p, 0, regular_col_count,
+                          do_upper_case);
           regular_col_count = 0;
         }
 

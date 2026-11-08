@@ -256,12 +256,15 @@ use constant {
 };
 
 # add a word (without wrapping).
+# If $DO_UPPER_CASE is set, upper-case the text after having determined
+# if an upper-case letter precedes end sentence punctuation.
 # If $SET_END_SENTENCE is set, the function is called through add_text and the
 # end of sentence states should be set/unset.  If not set, the function is
 # called as add_next, and the end of sentence states are not set/unset.
 # 'last_letter' is set in any case, if not in unfilled container.
-sub _add_next($;$$$) {
-  my ($paragraph, $word, $transparent, $set_end_of_sentence) = @_;
+sub _add_next($;$$$$) {
+  my ($paragraph, $word, $transparent, $do_upper_case,
+      $set_end_of_sentence) = @_;
 
   if (!defined($word)) {
     return '';
@@ -309,6 +312,7 @@ sub _add_next($;$$$) {
   if ($word eq '') {
     $paragraph->{'invisible_pending_word'} = 1;
   } else {
+    $word = uc($word) if ($do_upper_case);
     $paragraph->{'word'} .= $word;
   }
 
@@ -391,17 +395,17 @@ sub set_space_protection($$) {
 }
 
 # Wrap $TEXT, returning the wrapped text, taking into account the current state
-# of $PARAGRAPH.  Any end of sentence punctuation in $TEXT that should be
-# allowed to end a sentence but which would otherwise be preceded by an
-# upper-case letter should instead by preceded by a backspace character.
-sub add_text($$) {
-  my ($paragraph, $text) = @_;
+# of $PARAGRAPH.
+# If $DO_UPPER_CASE is set, upper-case the text after having determined
+# if an upper-case letter precedes end sentence punctuation.
+sub add_text($$;$) {
+  my ($paragraph, $text, $do_upper_case) = @_;
 
   $paragraph->{'end_line_count'} = 0;
   my $result = '';
 
   my @segments = split
-    /(\s+)|(\p{InFullwidth})|((?:[^\s\p{InFullwidth}\x08])+)|(\x08)/,
+    /(\s+)|(\p{InFullwidth})|((?:[^\s\p{InFullwidth}])+)/,
     $text;
 
   my $debug_flag = $paragraph->{'debug'};
@@ -409,8 +413,8 @@ sub add_text($$) {
     # $empty_segment should be an empty string; the other variables
     # here were recognized as field separators by split.  One of the
     # other variable matched as separator, the other are undef.
-    my ($empty_segment, $spaces, $fullwidth_segment, $added_word, $allow_eos)
-     = splice (@segments, 0, 5);
+    my ($empty_segment, $spaces, $fullwidth_segment, $added_word)
+     = splice (@segments, 0, 4);
 
     if ($debug_flag) {
       print STDERR "p ($paragraph->{'counter'}+$paragraph->{'word_counter'}) "
@@ -475,21 +479,20 @@ sub add_text($$) {
         $result .= _end_line($paragraph);
       }
       $paragraph->{'last_letter'} = ' ';
-    } elsif (defined($allow_eos)) {
-      # allow an end of sentence to occur.
-      allow_end_sentence($paragraph);
     } elsif (defined($added_word)) {
       # regular text
-      $result .= _add_next($paragraph, $added_word, undef, 1);
+      $result .= _add_next($paragraph, $added_word, undef, $do_upper_case, 1);
     } elsif (defined($fullwidth_segment)) {
       print STDERR "FULLWIDTH\n" if ($paragraph->{'debug'});
-
-      $paragraph->{'word'} .= $fullwidth_segment;
-      $paragraph->{'word_counter'} += 2;
 
       # fullwidth latin letters can be upper case, so it is important to
       # use the actual characters here.
       $paragraph->{'last_letter'} = $fullwidth_segment;
+
+      $fullwidth_segment = uc($fullwidth_segment) if ($do_upper_case);
+
+      $paragraph->{'word'} .= $fullwidth_segment;
+      $paragraph->{'word_counter'} += 2;
 
       # We allow a line break in between Chinese characters even if
       # there was no space between them, unlike single-width
