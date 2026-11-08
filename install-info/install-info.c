@@ -509,6 +509,13 @@ suggest_asking_for_help (void)
 }
 
 void
+deprecated_option (const char *option)
+{
+  fprintf (stderr, _("%s: warning: --%s is deprecated\n"),
+           progname, option);
+}
+
+void
 print_help (void)
 {
   printf (_("Usage: %s [OPTION]... [INFO-FILE [DIR-FILE]]\n"), progname);
@@ -2076,14 +2083,19 @@ main (int argc, char *argv[])
 
         case 'A':
           {
-            char *end = NULL;
-            unsigned long int val;
-            val = strtoul (optarg, &end, 0);
-            if (end == NULL || end == optarg || *end != '\0')
-              suggest_asking_for_help ();
-            align = val;
-            if (align <= 0)
-              suggest_asking_for_help ();
+            if (0)
+              {
+                char *end = NULL;
+                unsigned long int val;
+                val = strtoul (optarg, &end, 0);
+                if (end == NULL || end == optarg || *end != '\0')
+                  suggest_asking_for_help ();
+                align = val;
+                if (align <= 0)
+                  suggest_asking_for_help ();
+              }
+            else
+              deprecated_option ("align");
           }
           break;
 
@@ -2134,14 +2146,19 @@ main (int argc, char *argv[])
 
         case 'C':
           {
-            char *end = NULL;
-            unsigned long int val;
-            val = strtoul (optarg, &end, 0);
-            if (end == NULL || end == optarg || *end != '\0')
-              suggest_asking_for_help ();
-            calign = val;
-            if (calign <= 0)
-              suggest_asking_for_help ();
+            if (0)
+              {
+                char *end = NULL;
+                unsigned long int val;
+                val = strtoul (optarg, &end, 0);
+                if (end == NULL || end == optarg || *end != '\0')
+                  suggest_asking_for_help ();
+                calign = val;
+                if (calign <= 0)
+                  suggest_asking_for_help ();
+              }
+            else
+              deprecated_option ("calign");
           }
           break;
 

@@ -1,5 +1,27 @@
 2026-11-08  Gavin Smith <gavinsmith0123@gmail.com>
 
+	Deprecate install-info --align and --calign
+
+	* install-info/install-info.c (main) <--align, --calign>:
+	Do nothing, and print a warning saying the option is deprecated.
+	(deprecated_option): New.
+	
+	These options were badly tested, and do not appear to be used.  Making
+	these no-ops prevents bugs, including the following, reported by
+	Sunlv Wang <wangsunlv@gmail.com>:
+	
+	- --align 79 led to a division by zero (79 is max line length)
+	- --calign 200 led to a buffer overflow (longer than max line length).
+	
+	Moreover, the meanings of these options appears to have been swapped
+	from the Debian install-info program these were copied from.
+	Originally, --align was for the first line, and --calign was for
+	the continuation line.  Nobody appears to have noticed this since
+	2008.  Moreover, these options were also no-ops in the Debian program
+	for several years before its abandonment in favour of GNU install-info.
+
+2026-11-08  Gavin Smith <gavinsmith0123@gmail.com>
+
 	* install-info/install-info.c (format_entry):
 	Append to output buffer with bounds checking.
 
