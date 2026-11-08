@@ -1,7 +1,7 @@
 \input texinfo.tex
 
 @node Top
-@top A example quide topic collection
+@top An example of guide topic based manual
 
 This is an example of guide/topic based manual inspired by the Mallard
 format.
@@ -23,6 +23,7 @@ This is the guide for an easy use.
 @end menu
 
 @node topic1, topic2
+@heading Topic 1 title
 
 This is topic 1.
 
@@ -33,6 +34,7 @@ More information
 @end menu
 
 @node topic2, topic3, topic1
+@heading Topic 2 title
 
 This is topic 2
 
@@ -43,6 +45,7 @@ More information
 @end menu
 
 @node topic3, topic5, topic2
+@heading Topic 3 title
 
 This is topic 3
 
@@ -52,6 +55,7 @@ More information
 @end menu
 
 @node topic4
+@xrefname Topic 4 only gets a ref name, no title
 
 This is topic 4
 
@@ -62,6 +66,7 @@ More information
 @end menu
 
 @node topic5, , topic3
+@heading Topic 5 title
 
 This is topic 5
 

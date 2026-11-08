@@ -148,6 +148,17 @@ Windows there will be two copies of each DLL installed, not one.
 https://lists.gnu.org/archive/html/bug-texinfo/2026-02/msg00090.html
 
 
+For pod2texi: add an option to generate sectioning commands only, no
+nodes now that it is becoming the norm.
+
+
+Revisit @subentry implementation in texi2any parser, according to Gavin,
+@subentry has a similar syntax to @tab used to separate columns in a multitable
+@item.  However, @subentry is a line command and not a nobrace command, maybe
+this could be revised.  Note that an end of line stops a @subentry, like
+a line command.
+
+
 hyphenation: should only appear in toplevel.
 
 

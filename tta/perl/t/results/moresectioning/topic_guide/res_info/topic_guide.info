@@ -3,8 +3,8 @@ This is topic_guide.info, produced from topic_guide.texi.
 
 File: topic_guide.info,  Node: Top,  Next: guide1,  Up: (dir)
 
-A example quide topic collection
-********************************
+An example of guide topic based manual
+**************************************
 
 This is an example of guide/topic based manual inspired by the Mallard
 format.
@@ -31,6 +31,9 @@ This is the guide for an easy use.
 
 File: topic_guide.info,  Node: topic1,  Next: topic2
 
+Topic 1 title
+=============
+
 This is topic 1.
 
 * Menu:
@@ -42,6 +45,9 @@ More information
 
 File: topic_guide.info,  Node: topic2,  Next: topic3,  Prev: topic1
 
+Topic 2 title
+=============
+
 This is topic 2
 
 * Menu:
@@ -52,6 +58,9 @@ More information
 
 
 File: topic_guide.info,  Node: topic3,  Next: topic5,  Prev: topic2
+
+Topic 3 title
+=============
 
 This is topic 3
 
@@ -72,6 +81,9 @@ More information
 
 
 File: topic_guide.info,  Node: topic5,  Prev: topic3
+
+Topic 5 title
+=============
 
 This is topic 5
 
@@ -98,13 +110,13 @@ This is the guide for an in depth use
 
 Tag Table:
 Node: Top59
-Node: guide1334
-Node: topic1569
-Node: topic2690
-Node: topic3825
-Node: topic4940
-Node: topic51073
-Node: guide21212
+Node: guide1346
+Node: topic1581
+Node: topic2731
+Node: topic3895
+Node: topic41039
+Node: topic51172
+Node: guide21340
 
 End Tag Table
 

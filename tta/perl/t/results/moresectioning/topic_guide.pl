@@ -24,14 +24,14 @@ $result_tree_text{'topic_guide'} = '*document_root C13
     {spaces_before_argument: }
     {Top}
     {spaces_after_argument:\\n}
- *@top C6 topic_guide.texi:l4 {A example quide topic collection}
+ *@top C6 topic_guide.texi:l4 {An example of guide topic based manual}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {A example quide topic collection}
+    {An example of guide topic based manual}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
@@ -141,7 +141,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
      {menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C6 topic_guide.texi:l25 {topic1}
+ *@node C7 topic_guide.texi:l25 {topic1}
  |EXTRA
  |identifier:{topic1}
  |is_target:{1}
@@ -157,11 +157,19 @@ $result_tree_text{'topic_guide'} = '*document_root C13
     {spaces_before_argument: }
     {topic2}
     {spaces_after_argument:\\n}
+  *@heading C1 topic_guide.texi:l26
+  |EXTRA
+  |global_command_number:{1}
+  |heading_number:{1}
+   *line_arg C3
+    {spaces_before_argument: }
+    {Topic 1 title}
+    {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
    {This is topic 1.\\n}
   {empty_line:\\n}
-  *@menu C4 topic_guide.texi:l29
+  *@menu C4 topic_guide.texi:l30
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -169,7 +177,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
     *preformatted C2
      {More information\\n}
      {empty_line:\\n}
-   *menu_entry C4 topic_guide.texi:l32
+   *menu_entry C4 topic_guide.texi:l33
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
@@ -180,7 +188,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
     *menu_entry_description C1
      *preformatted C1
       {guide 1\\n}
-   *@end C1 topic_guide.texi:l33
+   *@end C1 topic_guide.texi:l34
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -188,7 +196,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
      {menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C6 topic_guide.texi:l35 {topic2}
+ *@node C7 topic_guide.texi:l36 {topic2}
  |EXTRA
  |identifier:{topic2}
  |is_target:{1}
@@ -210,11 +218,19 @@ $result_tree_text{'topic_guide'} = '*document_root C13
     {spaces_before_argument: }
     {topic1}
     {spaces_after_argument:\\n}
+  *@heading C1 topic_guide.texi:l37
+  |EXTRA
+  |global_command_number:{2}
+  |heading_number:{2}
+   *line_arg C3
+    {spaces_before_argument: }
+    {Topic 2 title}
+    {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
    {This is topic 2\\n}
   {empty_line:\\n}
-  *@menu C4 topic_guide.texi:l39
+  *@menu C4 topic_guide.texi:l41
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -222,7 +238,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
     *preformatted C2
      {More information\\n}
      {empty_line:\\n}
-   *menu_entry C4 topic_guide.texi:l42
+   *menu_entry C4 topic_guide.texi:l44
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
@@ -233,7 +249,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
     *menu_entry_description C1
      *preformatted C1
       {guide 1\\n}
-   *@end C1 topic_guide.texi:l43
+   *@end C1 topic_guide.texi:l45
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -241,7 +257,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
      {menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C6 topic_guide.texi:l45 {topic3}
+ *@node C7 topic_guide.texi:l47 {topic3}
  |EXTRA
  |identifier:{topic3}
  |is_target:{1}
@@ -263,11 +279,19 @@ $result_tree_text{'topic_guide'} = '*document_root C13
     {spaces_before_argument: }
     {topic2}
     {spaces_after_argument:\\n}
+  *@heading C1 topic_guide.texi:l48
+  |EXTRA
+  |global_command_number:{3}
+  |heading_number:{3}
+   *line_arg C3
+    {spaces_before_argument: }
+    {Topic 3 title}
+    {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
    {This is topic 3\\n}
   {empty_line:\\n}
-  *@menu C3 topic_guide.texi:l49
+  *@menu C3 topic_guide.texi:l52
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -275,7 +299,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
     *preformatted C2
      {More information\\n}
      {empty_line:\\n}
-   *@end C1 topic_guide.texi:l52
+   *@end C1 topic_guide.texi:l55
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -283,7 +307,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
      {menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C6 topic_guide.texi:l54 {topic4}
+ *@node C7 topic_guide.texi:l57 {topic4}
  |EXTRA
  |identifier:{topic4}
  |is_target:{1}
@@ -293,11 +317,19 @@ $result_tree_text{'topic_guide'} = '*document_root C13
     {spaces_before_argument: }
     {topic4}
     {spaces_after_argument:\\n}
+  *@xrefname C1 topic_guide.texi:l58
+  |EXTRA
+  |global_command_number:{1}
+  |heading_number:{4}
+   *line_arg C3
+    {spaces_before_argument: }
+    {Topic 4 only gets a ref name, no title}
+    {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
    {This is topic 4\\n}
   {empty_line:\\n}
-  *@menu C4 topic_guide.texi:l58
+  *@menu C4 topic_guide.texi:l62
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -305,7 +337,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
     *preformatted C2
      {More information\\n}
      {empty_line:\\n}
-   *menu_entry C4 topic_guide.texi:l61
+   *menu_entry C4 topic_guide.texi:l65
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
@@ -316,7 +348,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
     *menu_entry_description C1
      *preformatted C1
       {guide 2\\n}
-   *@end C1 topic_guide.texi:l62
+   *@end C1 topic_guide.texi:l66
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -324,7 +356,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
      {menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C6 topic_guide.texi:l64 {topic5}
+ *@node C7 topic_guide.texi:l68 {topic5}
  |EXTRA
  |identifier:{topic5}
  |is_target:{1}
@@ -342,11 +374,19 @@ $result_tree_text{'topic_guide'} = '*document_root C13
     {spaces_before_argument: }
     {topic3}
     {spaces_after_argument:\\n}
+  *@heading C1 topic_guide.texi:l69
+  |EXTRA
+  |global_command_number:{4}
+  |heading_number:{5}
+   *line_arg C3
+    {spaces_before_argument: }
+    {Topic 5 title}
+    {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
    {This is topic 5\\n}
   {empty_line:\\n}
-  *@menu C5 topic_guide.texi:l68
+  *@menu C5 topic_guide.texi:l73
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -354,7 +394,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
     *preformatted C2
      {More information\\n}
      {empty_line:\\n}
-   *menu_entry C4 topic_guide.texi:l71
+   *menu_entry C4 topic_guide.texi:l76
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
@@ -365,7 +405,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
     *menu_entry_description C1
      *preformatted C1
       {guide 1\\n}
-   *menu_entry C4 topic_guide.texi:l72
+   *menu_entry C4 topic_guide.texi:l77
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
@@ -376,7 +416,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
     *menu_entry_description C1
      *preformatted C1
       {guide 2\\n}
-   *@end C1 topic_guide.texi:l73
+   *@end C1 topic_guide.texi:l78
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -384,7 +424,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
      {menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 topic_guide.texi:l75 {guide2}
+ *@node C1 topic_guide.texi:l80 {guide2}
  |EXTRA
  |identifier:{guide2}
  |is_target:{1}
@@ -394,7 +434,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
     {spaces_before_argument: }
     {guide2}
     {spaces_after_argument:\\n}
- *@chapter C6 topic_guide.texi:l76 {guide 2}
+ *@chapter C6 topic_guide.texi:l81 {guide 2}
  |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
@@ -408,11 +448,11 @@ $result_tree_text{'topic_guide'} = '*document_root C13
   *paragraph C1
    {This is the guide for an in depth use\\n}
   {empty_line:\\n}
-  *@menu C4 topic_guide.texi:l80
+  *@menu C4 topic_guide.texi:l85
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
-   *menu_entry C4 topic_guide.texi:l81
+   *menu_entry C4 topic_guide.texi:l86
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
@@ -423,7 +463,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
     *menu_entry_description C1
      *preformatted C1
       {topic5 description\\n}
-   *menu_entry C4 topic_guide.texi:l82
+   *menu_entry C4 topic_guide.texi:l87
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
@@ -434,7 +474,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
     *menu_entry_description C1
      *preformatted C1
       {topic4 description\\n}
-   *@end C1 topic_guide.texi:l83
+   *@end C1 topic_guide.texi:l88
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -451,7 +491,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
 $result_texis{'topic_guide'} = '\\input texinfo.tex
 
 @node Top
-@top A example quide topic collection
+@top An example of guide topic based manual
 
 This is an example of guide/topic based manual inspired by the Mallard
 format.
@@ -473,6 +513,7 @@ This is the guide for an easy use.
 @end menu
 
 @node topic1, topic2
+@heading Topic 1 title
 
 This is topic 1.
 
@@ -483,6 +524,7 @@ More information
 @end menu
 
 @node topic2, topic3, topic1
+@heading Topic 2 title
 
 This is topic 2
 
@@ -493,6 +535,7 @@ More information
 @end menu
 
 @node topic3, topic5, topic2
+@heading Topic 3 title
 
 This is topic 3
 
@@ -502,6 +545,7 @@ More information
 @end menu
 
 @node topic4
+@xrefname Topic 4 only gets a ref name, no title
 
 This is topic 4
 
@@ -512,6 +556,7 @@ More information
 @end menu
 
 @node topic5, , topic3
+@heading Topic 5 title
 
 This is topic 5
 
@@ -536,8 +581,8 @@ This is the guide for an in depth use
 ';
 
 
-$result_texts{'topic_guide'} = 'A example quide topic collection
-********************************
+$result_texts{'topic_guide'} = 'An example of guide topic based manual
+**************************************
 
 This is an example of guide/topic based manual inspired by the Mallard
 format.
@@ -554,6 +599,8 @@ This is the guide for an easy use.
 * topic2:: topic2 description
 * topic5:: topic5 description
 
+Topic 1 title
+=============
 
 This is topic 1.
 
@@ -561,6 +608,8 @@ More information
 
 * guide1:: guide 1
 
+Topic 2 title
+=============
 
 This is topic 2
 
@@ -568,6 +617,8 @@ More information
 
 * guide1:: guide 1
 
+Topic 3 title
+=============
 
 This is topic 3
 
@@ -581,6 +632,8 @@ More information
 
 * guide2:: guide 2
 
+Topic 5 title
+=============
 
 This is topic 5
 
@@ -602,8 +655,8 @@ This is the guide for an in depth use
 $result_errors{'topic_guide'} = '';
 
 $result_nodes_list{'topic_guide'} = '1|Top
- associated_section: A example quide topic collection
- associated_title_command: A example quide topic collection
+ associated_section: An example of guide topic based manual
+ associated_title_command: An example of guide topic based manual
  menus:
   guide1
   guide2
@@ -621,28 +674,33 @@ $result_nodes_list{'topic_guide'} = '1|Top
   prev->Top
   up->Top
 3|topic1
+ associated_title_command: @heading Topic 1 title
  menus:
   guide1
  node_directions:
   next->topic2
 4|topic2
+ associated_title_command: @heading Topic 2 title
  menus:
   guide1
  node_directions:
   next->topic3
   prev->topic1
 5|topic3
+ associated_title_command: @heading Topic 3 title
  menus:
  node_directions:
   next->topic5
   prev->topic2
 6|topic4
+ associated_title_command: @xrefname Topic 4 only gets a ref name, no title
  menus:
   guide2
  node_directions:
   prev->topic5
   up->guide2
 7|topic5
+ associated_title_command: @heading Topic 5 title
  menus:
   guide1
   guide2
@@ -659,7 +717,7 @@ $result_nodes_list{'topic_guide'} = '1|Top
   up->Top
 ';
 
-$result_sections_list{'topic_guide'} = '1|A example quide topic collection
+$result_sections_list{'topic_guide'} = '1|An example of guide topic based manual
  associated_anchor_command: Top
  associated_node: Top
  toplevel_directions:
@@ -672,27 +730,37 @@ $result_sections_list{'topic_guide'} = '1|A example quide topic collection
  associated_node: guide1
  section_directions:
   next->guide 2
-  up->A example quide topic collection
+  up->An example of guide topic based manual
  toplevel_directions:
   next->guide 2
-  prev->A example quide topic collection
-  up->A example quide topic collection
+  prev->An example of guide topic based manual
+  up->An example of guide topic based manual
 3|guide 2
  associated_anchor_command: guide2
  associated_node: guide2
  section_directions:
   prev->guide 1
-  up->A example quide topic collection
+  up->An example of guide topic based manual
  toplevel_directions:
   prev->guide 1
-  up->A example quide topic collection
+  up->An example of guide topic based manual
 ';
 
 $result_sectioning_root{'topic_guide'} = 'level: -1
 list:
- 1|A example quide topic collection
+ 1|An example of guide topic based manual
 ';
 
-$result_headings_list{'topic_guide'} = '';
+$result_headings_list{'topic_guide'} = '1|Topic 1 title
+ associated_anchor_command: topic1
+2|Topic 2 title
+ associated_anchor_command: topic2
+3|Topic 3 title
+ associated_anchor_command: topic3
+4|Topic 4 only gets a ref name, no title
+ associated_anchor_command: topic4
+5|Topic 5 title
+ associated_anchor_command: topic5
+';
 
 1;

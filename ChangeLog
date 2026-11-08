@@ -1,5 +1,10 @@
 2026-11-08  Patrice Dumas  <pertusus@free.fr>
 
+	* tta/perl/t/input_files/topic_guide.texi: update by adding @*heading
+	or @xrefname to topic nodes.  Fix @top.
+
+2026-11-08  Patrice Dumas  <pertusus@free.fr>
+
 	upper-case plaintext text in paragraph after determining end of sentence
 
 	Do the upper-casing of text in the paragraph containers, not in the
