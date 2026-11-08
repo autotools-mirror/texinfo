@@ -1,5 +1,11 @@
 2026-11-08  Patrice Dumas  <pertusus@free.fr>
 
+	* doc/texinfo.texi (Unstructured Nodes): add an example of a manual
+	based on th eguide/topic structure and hints about customization
+	varialbes to set when processing with texi2any.
+
+2026-11-08  Patrice Dumas  <pertusus@free.fr>
+
 	* doc/texinfo.texi (Global Customization Variables): document that
 	setting FORMAT_MENU to menu_no_detailmenu has an effect for Info output
 	too.
