@@ -680,6 +680,13 @@ Text
 '@node top
 @top Element top
 
+@node @asis{(}no_ext)no space
+@chapter @asis{(}no_ext)no space
+
+aa @ref{@asis{(}toto) titi}.
+
+@cindex no space
+
 @node @asis{(}toto) titi
 @chapter C @asis{(}toto) titi
 

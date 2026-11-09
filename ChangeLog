@@ -1,3 +1,11 @@
+2026-11-09  Patrice Dumas  <pertusus@free.fr>
+
+	* tta/perl/t/info_tests.t
+	(lead_parenthesis_in_node_name_in_printindex): add case with no spaces
+	between closing parenthesis and following text, and add a @ref.
+
+2026-11-08  Patrice Dumas  <pertusus@free.fr>
+
 2026-11-10  Gavin Smith <gavinsmith0123@gmail.com>
 
 	* doc/texinfo.texi (Raise/lower sections):
@@ -104,8 +112,8 @@
 2026-11-08  Patrice Dumas  <pertusus@free.fr>
 
 	* doc/texinfo.texi (Unstructured Nodes): add an example of a manual
-	based on th eguide/topic structure and hints about customization
-	varialbes to set when processing with texi2any.
+	based on the guide/topic structure and hints about customization
+	variables to set when processing with texi2any.
 
 2026-11-08  Patrice Dumas  <pertusus@free.fr>
 
