@@ -318,6 +318,7 @@ sub _add_next($;$$$$) {
 
   # if $set_end_of_sentence, called from add_text, no end of line in
   # word, spaces are separate.
+  # end of line in word can only happen when called for 'raw' text.
   if (not $set_end_of_sentence and $word =~ /\n/) {
     $result .= _add_pending_word($paragraph);
     _end_line($paragraph);

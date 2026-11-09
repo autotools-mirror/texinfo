@@ -27,7 +27,6 @@
 #define PF_advance_paragraph_count  0x2000
 #define PF_no_punctuation_munging   0x4000
 #define PF_non_quoted_when_nested   0x8000
-#define PF_index_style              0x00010000
 
 typedef struct LINE_WIDTH_PENDING_TEXT {
     PENDING_TEXT_LIST *pending_text;

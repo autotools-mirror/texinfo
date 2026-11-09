@@ -1,5 +1,14 @@
 2026-11-09  Patrice Dumas  <pertusus@free.fr>
 
+	* tta/C/convert/convert_to_plaintext.c
+	(convert_to_plaintext_internal), tta/C/convert/convert_to_plaintext.h,
+	tta/perl/Texinfo/Convert/PlaintextNonXS.pm (_convert): remove
+	index_style_commands hash, list and flag, as those commands are
+	the same than the style_map commands.  Update the order of
+	conditions in conversion.
+
+2026-11-09  Patrice Dumas  <pertusus@free.fr>
+
 	* tta/perl/t/info_tests.t
 	(lead_parenthesis_in_node_name_in_printindex): add case with no spaces
 	between closing parenthesis and following text, and add a @ref.

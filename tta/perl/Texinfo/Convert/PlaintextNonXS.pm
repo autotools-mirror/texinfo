@@ -301,6 +301,8 @@ foreach my $type (
   $ignored_types{$type} = 1;
 }
 
+# These commands produce styles that are also output in node names and
+# index entries (ie if suppress_styles is set).
 my %style_map = (
   'strong' => ['*', '*'],
   'emph'   => ['_', '_'],
@@ -332,12 +334,6 @@ delete $non_quoted_commands_when_nested{'samp'};
 delete $non_quoted_commands_when_nested{'indicateurl'};
 
 my %double_quoted_commands = ('dfn' => 1);
-
-# Commands producing styles that are output in node names and index entries.
-my %index_style_commands;
-for my $index_style_command ('strong', 'emph', 'sub', 'sup', 'key') {
-  $index_style_commands{$index_style_command} = 1;
-}
 
 
 # in those commands, there is no addition of double space after a dot.
@@ -2914,6 +2910,7 @@ sub _convert($$) {
     # paragraphs, lines and blocks that should only contain spaces.
     if (!$formatter->{'_top_formatter'}) {
       if (defined($type) and $type eq 'raw') {
+        # in raw block like verbatim or ignore, ignored Texinfo, and in @verb.
         _stream_output_add_next($self, $element->{'text'});
       } else {
         # Convert ``, '', `, ', ---, -- in $COMMAND->{'text'} to their
@@ -3091,11 +3088,10 @@ sub _convert($$) {
         my ($text_before, $text_after);
         if (exists($non_quoted_commands_when_nested{$cmdname})
                  and $formatter->{'font_type_stack'}->[-1]->{'code_command'}) {
-        } elsif ($formatter->{'suppress_styles'}
-                 and !exists($index_style_commands{$cmdname})) {
         } elsif (exists($style_map{$cmdname})) {
           $text_before = $style_map{$cmdname}->[0];
           $text_after = $style_map{$cmdname}->[1];
+        } elsif ($formatter->{'suppress_styles'}) {
         } elsif ($is_quoted_command) {
           $text_before = $self->{'open_quote'};
           $text_after = $self->{'close_quote'};

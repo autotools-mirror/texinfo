@@ -95,6 +95,10 @@ struct style_map {
   const char *post;
 };
 
+
+/* These commands produce styles that are also output in node names and
+   index entries (ie if suppress_styles is set).
+ */
 static struct style_map style_map[] =
 {
   {CM_strong, "*", "*"},
@@ -770,16 +774,6 @@ plaintext_format_setup (enum converter_format format)
   /* always quoted even when nested */
   plaintext_commands_data[CM_samp].flags &= ~PF_non_quoted_when_nested;
   plaintext_commands_data[CM_indicateurl].flags &= ~PF_non_quoted_when_nested;
-
-  /*
-  Commands producing styles that are output in node names and index entries.
-   */
-  static enum command_id index_style_commands[] = {
-   CM_strong, CM_emph, CM_sub, CM_sup, CM_key, 0};
-
-  for (i = 0; index_style_commands[i]; i++)
-    plaintext_commands_data[index_style_commands[i]].flags
-                                                   |= PF_index_style;
 
   /* Sort style_map by command. */
   int n = sizeof(style_map) / sizeof(style_map[0]);
@@ -4412,10 +4406,6 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
                            & PF_non_quoted_when_nested)
                   && font_type->code_command)
                 {}
-              else if (formatter->suppress_styles
-                       && !(plaintext_commands_data[cmd].flags
-                                                   & PF_index_style))
-                {}
               else if (plaintext_commands_data[cmd].flags & PF_style_map)
                 {
                   /* Look up in style map by linear search.
@@ -4437,6 +4427,8 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
                     { /* bug */
                     }
                 }
+              else if (formatter->suppress_styles)
+                {}
               else if (plaintext_commands_data[cmd].flags & PF_quoted)
                 {
                   text_before = self_plaintext->open_quote;
