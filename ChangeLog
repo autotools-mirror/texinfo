@@ -1,3 +1,13 @@
+2026-11-09  Gavin Smith <gavinsmith0123@gmail.com>
+
+	* doc/texinfo.tex (\chapmacro, \sectionheading):
+	Do not call \donoderef for Yomitfromtoc section (i.e. @*heading),
+	as it is unnecessary.
+
+	This is to prevent a possible pdftex warning ("destination with
+	the same identifier (name{XXSHADOW-sec-}) has been already used,
+	duplicate ignored").
+
 2026-11-08  Gavin Smith <gavinsmith0123@gmail.com>
 
 	Use of "chapter structuring" versus "sectioning" etc.
