@@ -1,5 +1,9 @@
 2026-11-09  Gavin Smith <gavinsmith0123@gmail.com>
 
+	* doc/texinfo.texi (Unstructured Nodes): Edit for grammar and style.
+
+2026-11-09  Gavin Smith <gavinsmith0123@gmail.com>
+
 	* doc/texinfo.tex (\chapmacro, \sectionheading):
 	Do not call \donoderef for Yomitfromtoc section (i.e. @*heading),
 	as it is unnecessary.

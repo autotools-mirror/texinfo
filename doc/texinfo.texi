@@ -3386,10 +3386,10 @@ the node when the @code{xrefautomaticsectiontitle} flag is on, so
 @samp{@@xref@{Topic@}} would produce output like ``See `All about the
 Topic@w{'}''.
 
-The following manual is not based on the sectioning commands structure,
+The following example is not based on the sectioning commands structure,
 but on the guide/topic structure, where guide nodes point to topic nodes that
-point back to the guide nodes they appear in (loosely based on the Mallard
-format guides and topics):
+point back to the guide nodes they appear in.  (This example is loosely
+based on the Mallard format guides and topics.)
 
 @example
 @@node guide1
@@ -3439,10 +3439,10 @@ More information
 @@end menu
 @end example
 
-When processing such manual with @command{texi2any}, you may want to
+When processing such a manual with @command{texi2any}, you may want to
 set @code{CHECK_NORMAL_MENU_STRUCTURE} to 0 to avoid warnings about
-the menu structure that does not follow a tree structure.  The automatically
-generated master menu is likely to have redundant entries, you may want to
+the menu structure not following a tree structure.  The automatically
+generated master menu is likely to have redundant entries; you may want to
 avoid an automatically generated master menu by setting @code{FORMAT_MENU} to
 @samp{menu_no_detailmenu}.  @xref{Global Customization Variables}.
 
