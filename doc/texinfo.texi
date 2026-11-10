@@ -2773,8 +2773,8 @@ section).  That is, it is never lowered and nothing can be raised to it.
 
 The @code{@@raisesections} and @code{@@lowersections} commands
 implicitly raise and lower the hierarchical level of following
-chapters, sections and the other sectioning commands (excluding parts).
-@c FIXME unclear if @raisesections should affect heading-only commands
+chapters, sections and the other sectioning and heading commands
+(excluding parts).
 
 That is, the @code{@@raisesections} command changes sections to
 chapters, subsections to sections, and so on.  Conversely, the

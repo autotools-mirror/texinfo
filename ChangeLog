@@ -1,5 +1,10 @@
 2026-11-10  Gavin Smith <gavinsmith0123@gmail.com>
 
+	* doc/texinfo.texi (Raise/lower sections):
+	Say that these commands affect "sectioning and heading commands".
+
+2026-11-10  Gavin Smith <gavinsmith0123@gmail.com>
+
 	texinfo.tex: @raisesections/@lowersections affects @*heading
 
 	* doc/texinfo.tex (\genhead): Allow "H" as a type argument
