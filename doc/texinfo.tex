@@ -3,7 +3,7 @@
 % Load plain if necessary, i.e., if running under initex.
 \expandafter\ifx\csname fmtname\endcsname\relax\input plain\fi
 %
-\def\texinfoversion{2026-11-09.18}
+\def\texinfoversion{2026-11-10.18}
 %
 % Copyright 1985, 1986, 1988, 1990-2026 Free Software Foundation, Inc.
 %
@@ -6453,23 +6453,28 @@ might help (with 'rm \jobname.?? \jobname.??s')%
     \or \unnumberedsubseczzz{#3}%
     \or \unnumberedsubsubseczzz{#3}%
     \fi
-  \else
-    \if \headtype A%
-      \ifcase\absseclevel
-	  \appendixzzz{#3}%
-      \or \appendixsectionzzz{#3}%
-      \or \appendixsubseczzz{#3}%
-      \or \appendixsubsubseczzz{#3}%
-      \fi
-    \else
-      \ifcase\absseclevel
-	  \chapterzzz{#3}%
-      \or \seczzz{#3}%
-      \or \numberedsubseczzz{#3}%
-      \or \numberedsubsubseczzz{#3}%
-      \fi
+  \else \if \headtype A%
+    \ifcase\absseclevel
+        \appendixzzz{#3}%
+    \or \appendixsectionzzz{#3}%
+    \or \appendixsubseczzz{#3}%
+    \or \appendixsubsubseczzz{#3}%
     \fi
-  \fi
+  \else \if \headtype U%
+    \ifcase\absseclevel
+       \chapterzzz{#3}%
+    \or \seczzz{#3}%
+    \or \numberedsubseczzz{#3}%
+    \or \numberedsubsubseczzz{#3}%
+    \fi
+  \else % \if \headtype H%
+    \ifcase\absseclevel
+	\chapheadingzzz{#3}%
+    \or \headingzzz{#3}%
+    \or \subheadingzzz{#3}%
+    \or \subsubheadingzzz{#3}%
+    \fi
+  \fi\fi\fi
   \suppressfirstparagraphindent
 }
 
@@ -6477,6 +6482,7 @@ might help (with 'rm \jobname.?? \jobname.??s')%
 \def\numhead{\genhead N}
 \def\apphead{\genhead A}
 \def\unnmhead{\genhead U}
+\def\hdghead{\genhead H}
 
 % @chapter, @appendix, @unnumbered.  Increment top-level counter, reset
 % all lower-level sectioning counters to zero.
@@ -6651,26 +6657,30 @@ might help (with 'rm \jobname.?? \jobname.??s')%
 \let\subsection = \numberedsubsec
 \let\subsubsection = \numberedsubsubsec
 
-% Define @majorheading, @heading and @subheading
+% Define @majorheading, @chapheading, @heading and @subheading
 
-\def\majorheading{%
+\parseargdef\majorheading{%
   {\advance\chapheadingskip by 10pt \chapbreak }%
-  \parsearg\chapheadingzzz
+  \chapheadingzzzz{#1}%
 }
 
-\def\chapheading{\chapbreak \parsearg\chapheadingzzz}
-\def\chapheadingzzz#1{%
+\parseargdef\chapheading{\hdghead0{#1}}
+\def\chapheadingzzz#1{\chapbreak\chapheadingzzzz{#1}}
+\def\chapheadingzzzz#1{%
   \vbox{\chapfonts \raggedtitlesettings #1\par}%
   \nobreak\bigskip \nobreak
   \suppressfirstparagraphindent
 }
 
 % @heading, @subheading, @subsubheading.
-\parseargdef\heading{\sectionheading{#1}{sec}{Yomitfromtoc}{}
+\parseargdef\heading{\hdghead1{#1}}
+\def\headingzzz#1{\sectionheading{#1}{sec}{Yomitfromtoc}{}
   \suppressfirstparagraphindent}
-\parseargdef\subheading{\sectionheading{#1}{subsec}{Yomitfromtoc}{}
+\parseargdef\subheading{\hdghead2{#1}}
+\def\subheadingzzz#1{\sectionheading{#1}{subsec}{Yomitfromtoc}{}
   \suppressfirstparagraphindent}
-\parseargdef\subsubheading{\sectionheading{#1}{subsubsec}{Yomitfromtoc}{}
+\parseargdef\subsubheading{\hdghead3{#1}}
+\def\subsubheadingzzz#1{\sectionheading{#1}{subsubsec}{Yomitfromtoc}{}
   \suppressfirstparagraphindent}
 
 % @xrefname - give text with printed name for linking to node and allow

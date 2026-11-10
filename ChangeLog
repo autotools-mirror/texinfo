@@ -1,3 +1,20 @@
+2026-11-10  Gavin Smith <gavinsmith0123@gmail.com>
+
+	texinfo.tex: @raisesections/@lowersections affects @*heading
+
+	* doc/texinfo.tex (\genhead): Allow "H" as a type argument
+	for heading-only commands, and dispatch to the macro to 
+	print the heading at the level set by @raise/lowersections.
+	(\hdghead): Wrapper for \genhead.
+	(\chapheading, \heading, \subheading, \subsubheading):
+	Dispatch via \hdghead.
+	(\majorheading): Update use of lower-level macro in \chapheading
+	implementation.
+	
+	Heading-only commands are affected by @raise/lowersections in
+	texi2any and this makes texinfo.tex consistent.
+	Note: the output of @majorheading is unaffected by this change.
+
 2026-11-09  Gavin Smith <gavinsmith0123@gmail.com>
 
 	* doc/texinfo.texi (Unstructured Nodes): Edit for grammar and style.
