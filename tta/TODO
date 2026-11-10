@@ -10,6 +10,9 @@ This is the todo list for texi2any
 Before next release
 ===================
 
+If svg is added for @image, for INFO_MATH_IMAGES, could be used:
+dvisvgm --page=1- -o tex_info_images/tex_info_math2img%p.svg $encoded_math2img_dvi_basefile
+
 Why both LOCALE_ENCODING (added in 2022-07-23) and COMMAND_LINE_ENCODING
 (added in 2022-03-05 as DATA_INPUT_ENCODING_NAME, renamed in 2022-05-29).
 https://lists.gnu.org/archive/html/bug-texinfo/2022-07/msg00012.html

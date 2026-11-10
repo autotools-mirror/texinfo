@@ -260,7 +260,7 @@ use constant {
 # if an upper-case letter precedes end sentence punctuation.
 # If $SET_END_SENTENCE is set, the function is called through add_text and the
 # end of sentence states should be set/unset.  If not set, the function is
-# called as add_next, and the end of sentence states are not set/unset.
+# called through add_next, and the end of sentence states are not set/unset.
 # 'last_letter' is set in any case, if not in unfilled container.
 sub _add_next($;$$$$) {
   my ($paragraph, $word, $transparent, $do_upper_case,

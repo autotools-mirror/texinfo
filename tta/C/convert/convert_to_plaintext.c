@@ -5024,20 +5024,15 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
 
               if (element->e.c->contents.number > 0)
                 {
-                  ELEMENT *math_frenchspacing_element
-                    = new_element (ET__frenchspacing);
                   ELEMENT *math_code_element = new_element (ET__code);
 
                   add_to_contents_as_array (math_code_element,
                                             element->e.c->contents.list[0]);
-                  add_to_element_contents (math_frenchspacing_element,
-                                           math_code_element);
 
                   convert_to_plaintext_internal (self,
-                                                math_frenchspacing_element);
+                                                math_code_element);
 
                   destroy_element (math_code_element);
-                  destroy_element (math_frenchspacing_element);
                }
 
               if (element_image && element_image->filename)

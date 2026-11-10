@@ -3453,9 +3453,8 @@ sub _convert($$) {
                                                'index_entry_locations' => [],
                                                'pending_text' => [['']]};
           }
-          _convert($self, Texinfo::TreeElement::new({'type' => '_frenchspacing',
-           'contents' => [Texinfo::TreeElement::new({'type' => '_code',
-                          'contents' => [$element->{'contents'}->[0]]})]}));
+          _convert($self, Texinfo::TreeElement::new({'type' => '_code',
+                          'contents' => [$element->{'contents'}->[0]]}));
           if (exists($self->{'elements_images'})
               and exists($self->{'elements_images'}->{$element})) {
             # flush @math, including spaces
@@ -3692,8 +3691,8 @@ sub _convert($$) {
           # of its formatting. When the formatter end() is called in
           # convert_line we are at the beginning of the line and trailing
           # spaces (although there are no space pending) are added because
-          # 'add_final_space' is set in line formatter leads to spurious
-          # spaces added for indentation at the beginning of the line.
+          # 'add_final_space' is set in line formatter and leads to the
+          # addition of spaces for indentation at the beginning of the line.
           #$self->convert_line($prepended);
           _convert($self, $prepended);
           # This is not actually useful since @center already does it,
