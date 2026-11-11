@@ -225,7 +225,6 @@ para__cut_line (TEXT *result, int column_counts)
   if (!state.keep_end_lines && column_counts > state.max)
     {
       para__end_line ();
-
       text_append_n (result, "\n", 1);
     }
 }
@@ -248,8 +247,8 @@ para_counter (void)
   return state.counter;
 }
 
-/* End a line (throwing away a pending space, which we don't need)
-   Note _end_line in Paragraph.pm returned "\n". */
+/* End a line, throwing away a pending space.
+ */
 void
 para__end_line (void)
 {
@@ -320,13 +319,13 @@ para__add_pending_word (TEXT *result, int add_spaces)
     {
       text_append_n (result, state.space.text, state.space.end);
 
-      state.counter += state.space.end;
-
       if (state.debug)
-        fprintf (stderr, "ADD_SPACES(%d+%d) `%s'\n", state.counter,
-                                 state.word_counter,
+        fprintf (stderr, "ADD_SPACES(%d)+%zu `%s'\n", state.counter,
+                                                     state.space.end,
                       para__print_escaped_spaces (state.space.text,
                                                   state.space.end));
+      state.counter += state.space.end;
+
       state.space.end = 0;
     }
 

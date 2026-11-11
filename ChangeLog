@@ -1,3 +1,14 @@
+2026-11-11  Patrice Dumas  <pertusus@free.fr>
+
+	* tta/C/convert/plaintext_paragraph.c (_cut_line, end_line, _end_line)
+	(add_text): do not get end of line from _end_line, add it or not in
+	the caller.  Makes for a clearer code to understand when an end of
+	line is actually emitted, and same as C code.
+
+	* tta/C/convert/plaintext_paragraph.c (para__end_line),
+	tta/perl/Texinfo/Convert/ParagraphNonXS.pm (_end_line): change debug
+	message.
+
 2026-11-10  Patrice Dumas  <pertusus@free.fr>
 
 	* tta/C/convert/convert_to_plaintext.c

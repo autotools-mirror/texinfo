@@ -112,7 +112,8 @@ sub _cut_line($$) {
   if ($paragraph->{'keep_end_lines'} or $column_counts <= $paragraph->{'max'}) {
     return '';
   }
-  return _end_line($paragraph);
+  _end_line($paragraph);
+  return "\n";
 }
 
 sub end_line_count($) {
@@ -138,10 +139,11 @@ sub end_line($) {
   my $paragraph = shift;
 
   $paragraph->{'end_line_count'} = 0;
-  return _end_line($paragraph);
+  _end_line($paragraph);
+  return "\n";
 }
 
-# end a line.
+# End a line, throwing away a pending space.
 sub _end_line($) {
   my $paragraph = shift;
 
@@ -156,7 +158,6 @@ sub _end_line($) {
   }
   $paragraph->{'end_line_count'}++;
   print STDERR "END_LINE\n" if ($paragraph->{'debug'});
-  return "\n";
 }
 
 sub add_pending_word($;$) {
@@ -187,10 +188,11 @@ sub _add_pending_word($;$) {
   }
   if ($paragraph->{'space'} ne '') {
     $result .= $paragraph->{'space'};
-    $paragraph->{'counter'} += length($paragraph->{'space'});
-    print STDERR "ADD_SPACES($paragraph->{'counter'}+$paragraph->{'word_counter'})"
+    print STDERR "ADD_SPACES($paragraph->{'counter'})+"
+         .length($paragraph->{'space'})
          . " `"._print_escaped_spaces($paragraph->{'space'})."'\n"
        if ($paragraph->{'debug'});
+    $paragraph->{'counter'} += length($paragraph->{'space'});
     $paragraph->{'space'} = '';
   }
   if ($paragraph->{'word'} ne '' or $paragraph->{'invisible_pending_word'}) {
@@ -431,7 +433,8 @@ sub add_text($$;$) {
       if ($paragraph->{'unfilled'}) {
         $result .= _add_pending_word($paragraph);
         if ($spaces =~ /\n/) {
-          $result .= _end_line($paragraph);
+          _end_line($paragraph);
+          $result .= "\n";
         } else {
           $paragraph->{'space'} .= $spaces;
         }
@@ -477,7 +480,8 @@ sub add_text($$;$) {
 
       if (!$paragraph->{'unfilled'}
           and $paragraph->{'keep_end_lines'} and $spaces =~ /\n/) {
-        $result .= _end_line($paragraph);
+        _end_line($paragraph);
+        $result .= "\n";
       }
       $paragraph->{'last_letter'} = ' ';
     } elsif (defined($added_word)) {

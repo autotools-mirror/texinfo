@@ -95,6 +95,15 @@ converter_customization_options, unique_at_command_options.
 Delayed bugs/features
 =====================
 
+The Perl and C tree differ slightly.  Now that C is becoming the reference
+it could make sense to align the Perl tree on C.  The main downside is
+that it would use more memory in Perl and more space for test results.
+* normal text has a type in C.  That would probably be a good thing
+  anyway, for clearer code/tree
+* in C commands have a type, normally used exclusively to ease memory
+  management.  There would not be much interest in adding these types
+  except for consistency
+
 In the CI, for Cygwin32, with --disable-perl-xs, there is a failure in
 linking because shared libraries are empty because
 "-Wl,--enable-auto-import -Wl,--export-all-symbols" are not added
