@@ -1,5 +1,19 @@
 2026-11-11  Patrice Dumas  <pertusus@free.fr>
 
+	* tta/C/convert/plaintext_paragraph.c (para__cut_line),
+	tta/perl/Texinfo/Convert/ParagraphNonXS.pm (_cut_line): check
+	keep_end_lines value outside of _cut_line, update callers.  No
+	functional change, mainly to try to have a clearer code.
+
+	* tta/C/convert/plaintext_paragraph.c (para_add_text),
+	tta/perl/Texinfo/Convert/ParagraphNonXS.pm (add_text): change C code
+	to be more like Perl, with a condition on unfilled first.
+	Put code already done with unfilled in the not unfilled condition,
+	since keep_end_lines is always set if unfilled is set.  Also do not
+	set last_letter for unfilled, it is never used.
+
+2026-11-11  Patrice Dumas  <pertusus@free.fr>
+
 	* tta/C/convert/plaintext_paragraph.c (_cut_line, end_line, _end_line)
 	(add_text): do not get end of line from _end_line, add it or not in
 	the caller.  Makes for a clearer code to understand when an end of

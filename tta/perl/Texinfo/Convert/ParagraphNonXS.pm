@@ -109,7 +109,7 @@ sub dump($) {
 sub _cut_line($$) {
   my ($paragraph, $column_counts) = @_;
 
-  if ($paragraph->{'keep_end_lines'} or $column_counts <= $paragraph->{'max'}) {
+  if ($column_counts <= $paragraph->{'max'}) {
     return '';
   }
   _end_line($paragraph);
@@ -330,7 +330,7 @@ sub _add_next($;$$$$) {
 
     # The $paragraph->{'counter'} != 0 is here to avoid having an
     # additional line output when the text is longer than the max.
-    if ($paragraph->{'counter'} != 0) {
+    if ($paragraph->{'counter'} != 0 and !$paragraph->{'keep_end_lines'}) {
       $result .= _cut_line($paragraph,
         $paragraph->{'counter'} + $paragraph->{'word_counter'} +
         length($paragraph->{'space'}));
@@ -452,7 +452,8 @@ sub add_text($$;$) {
 
             # The $paragraph->{'counter'} != 0 is here to avoid having an
             # additional line output when the text is longer than the max.
-            if ($paragraph->{'counter'} != 0) {
+            if ($paragraph->{'counter'} != 0
+                and !$paragraph->{'keep_end_lines'}) {
               $result .= _cut_line($paragraph,
                 $paragraph->{'counter'} + $paragraph->{'word_counter'} +
                 length($paragraph->{'space'}));
@@ -474,16 +475,15 @@ sub add_text($$;$) {
             }
           }
         }
-      }
-      $result .= _cut_line($paragraph, $paragraph->{'counter'}
+        if (!$paragraph->{'keep_end_lines'}) {
+          $result .= _cut_line($paragraph, $paragraph->{'counter'}
                                   + length($paragraph->{'space'}));
-
-      if (!$paragraph->{'unfilled'}
-          and $paragraph->{'keep_end_lines'} and $spaces =~ /\n/) {
-        _end_line($paragraph);
-        $result .= "\n";
+        } elsif ($spaces =~ /\n/) {
+          _end_line($paragraph);
+          $result .= "\n";
+        }
+        $paragraph->{'last_letter'} = ' ';
       }
-      $paragraph->{'last_letter'} = ' ';
     } elsif (defined($added_word)) {
       # regular text
       $result .= _add_next($paragraph, $added_word, undef, $do_upper_case, 1);
@@ -502,7 +502,7 @@ sub add_text($$;$) {
       # We allow a line break in between Chinese characters even if
       # there was no space between them, unlike single-width
       # characters.
-      if ($paragraph->{'counter'} != 0) {
+      if ($paragraph->{'counter'} != 0 and !$paragraph->{'keep_end_lines'}) {
         $result .= _cut_line($paragraph, $paragraph->{'counter'}
                                         + $paragraph->{'word_counter'});
       }

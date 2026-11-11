@@ -222,7 +222,7 @@ PARA_CONF_VARIABLES_LIST
 void
 para__cut_line (TEXT *result, int column_counts)
 {
-  if (!state.keep_end_lines && column_counts > state.max)
+  if (column_counts > state.max)
     {
       para__end_line ();
       text_append_n (result, "\n", 1);
@@ -565,7 +565,7 @@ para__add_next (TEXT *result, const char *word, int word_len,
        }
 
 
-      if (state.counter != 0)
+      if (state.counter != 0 && !state.keep_end_lines)
         {
           para__cut_line (result, state.counter + state.word_counter
                                   + (int)state.space.end);
@@ -817,68 +817,73 @@ para_add_text (const char *text, int len, int do_upper_case)
                   text_append_n (&state.space, p, q - p);
                 }
             }
-          else if (state.no_break)
+          else
             {
-              /* Append the spaces to the pending word. */
-              if (state.word.end == 0
-                  || state.word.text[state.word.end - 1] != ' ')
+              if (state.no_break)
                 {
-                  if (state.end_sentence == eos_present
-                      && !state.frenchspacing)
+                  /* Append the spaces to the pending word. */
+                  if (state.word.end == 0
+                      || state.word.text[state.word.end - 1] != ' ')
                     {
-                      text_append_n (&state.word, "  ", 2);
-                      state.word_counter += 2;
-                    }
-                  else
-                    {
-                      text_append_n (&state.word, " ", 1);
-                      state.word_counter += 1;
-                    }
-
-                  if (state.counter != 0)
-                    {
-                      para__cut_line (&result, state.counter
-                          + state.word_counter + (int)state.space.end);
-                    }
-                }
-            }
-          else /* no_break off */
-            {
-              int pending = state.invisible_pending_word;
-              para__add_pending_word (&result, 0);
-
-              if (state.counter != 0 || pending)
-                {
-                  /* If we are at the end of a sentence where two spaces
-                     are required. */
-                  if (state.end_sentence == eos_present
-                      && !state.frenchspacing)
-                    {
-                      state.space.end = 0;
-                      text_append_n (&state.space, "  ", 2);
-                    }
-                  else /* Not at end of sentence. */
-                    {
-                      /* Only save the first space. */
-                      if (state.space.end < 1)
+                      if (state.end_sentence == eos_present
+                          && !state.frenchspacing)
                         {
-                          text_append_n (&state.space, " ", 1);
+                          text_append_n (&state.word, "  ", 2);
+                          state.word_counter += 2;
+                        }
+                      else
+                        {
+                          text_append_n (&state.word, " ", 1);
+                          state.word_counter += 1;
+                        }
+
+                      if (state.counter != 0 && !state.keep_end_lines)
+                        {
+                          para__cut_line (&result, state.counter
+                              + state.word_counter + (int)state.space.end);
                         }
                     }
                 }
-            }
+              else /* no_break off */
+                {
+                  int pending = state.invisible_pending_word;
+                  para__add_pending_word (&result, 0);
 
-          /* If not enough space in the line for the pending space, start
-             a new line. */
-          para__cut_line (&result, state.counter + (int)state.space.end);
+                  if (state.counter != 0 || pending)
+                    {
+                      /* If we are at the end of a sentence where two spaces
+                         are required. */
+                      if (state.end_sentence == eos_present
+                          && !state.frenchspacing)
+                        {
+                          state.space.end = 0;
+                          text_append_n (&state.space, "  ", 2);
+                        }
+                      else /* Not at end of sentence. */
+                        {
+                          /* Only save the first space. */
+                          if (state.space.end < 1)
+                            {
+                              text_append_n (&state.space, " ", 1);
+                            }
+                        }
+                    }
+                }
 
-          if (!state.unfilled && state.keep_end_lines
-              && memchr (p, '\n', q - p))
-            {
-              para__end_line ();
-              text_append_n (&result, "\n", 1);
+              if (!state.keep_end_lines)
+                {
+              /* If not enough space in the line for the pending space, start
+                 a new line. */
+                  para__cut_line (&result,
+                                  state.counter + (int)state.space.end);
+                }
+              else if (memchr (p, '\n', q - p))
+                {
+                  para__end_line ();
+                  text_append_n (&result, "\n", 1);
+                }
+              state.last_letter = (char32_t) ' ';
             }
-          state.last_letter = (char32_t) ' ';
         }
 
       /*************** Double width character. *********************/
@@ -901,7 +906,7 @@ para_add_text (const char *text, int len, int do_upper_case)
              there was no space between them, unlike single-width
              characters. */
 
-          if (state.counter != 0)
+          if (state.counter != 0 && !state.keep_end_lines)
             {
               para__cut_line (&result, state.counter + state.word_counter);
             }

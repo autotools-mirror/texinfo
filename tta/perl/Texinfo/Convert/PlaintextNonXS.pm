@@ -941,7 +941,7 @@ sub new_unfilled_formatter($;$) {
     'unfilled'           => 1,
   };
 
-  # the freanchspacing configuration argument is set to an arbitrary
+  # the frenchspacing configuration argument is set to an arbitrary
   # string, as frenchspacing conf is never accessed if unfilled is set.
   my $formatter = _new_formatter($self, $indent_length,
                                  'undefined', $container_conf);
