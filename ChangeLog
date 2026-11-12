@@ -1,5 +1,10 @@
 2026-11-12  Patrice Dumas  <pertusus@free.fr>
 
+	* tta/perl/t/02coverage.t (empty_w): add an empty @w{} at the end of a
+	paragraph after a space.
+
+2026-11-12  Patrice Dumas  <pertusus@free.fr>
+
 	* tta/C/convert/plaintext_paragraph.c,
 	tta/perl/Texinfo/Convert/ParagraphNonXS.pm: rename
 	invisible_pending_word as invisible_word.

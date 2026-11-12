@@ -82,7 +82,9 @@ a/2
 @end displaymath
 '],
 ['empty_w',
-'@w{} @w{a b}.'
+'@w{} @w{a b}.
+
+para     @w{}'
 ],
 ['hyphenation',
 '
