@@ -55,7 +55,7 @@
 	element for @math, no need for an additional _frenchspacing, as _code
 	already sets frenchspacing.
 
-2026-11-09  Patrice Dumas  <pertusus@free.fr>
+2026-11-10  Patrice Dumas  <pertusus@free.fr>
 
 	* tta/C/convert/convert_to_plaintext.c
 	(convert_to_plaintext_internal), tta/C/convert/convert_to_plaintext.h,
@@ -64,13 +64,11 @@
 	the same than the style_map commands.  Update the order of
 	conditions in conversion.
 
-2026-11-09  Patrice Dumas  <pertusus@free.fr>
+2026-11-10  Patrice Dumas  <pertusus@free.fr>
 
 	* tta/perl/t/info_tests.t
 	(lead_parenthesis_in_node_name_in_printindex): add case with no spaces
 	between closing parenthesis and following text, and add a @ref.
-
-2026-11-08  Patrice Dumas  <pertusus@free.fr>
 
 2026-11-10  Gavin Smith <gavinsmith0123@gmail.com>
 
@@ -82,7 +80,7 @@
 	texinfo.tex: @raisesections/@lowersections affects @*heading
 
 	* doc/texinfo.tex (\genhead): Allow "H" as a type argument
-	for heading-only commands, and dispatch to the macro to 
+	for heading-only commands, and dispatch to the macro to
 	print the heading at the level set by @raise/lowersections.
 	(\hdghead): Wrapper for \genhead.
 	(\chapheading, \heading, \subheading, \subsubheading):
@@ -215,7 +213,7 @@
 	tta/perl/t/40moresectioning.t (short_topic_guide)
 	(short_topic_guide_no_auto_detailmenu),
 	tta/perl/t/test_dirs_generated_list.txt,
-	tta/perl/t/test_files_generated_list.txt: add non-ree-like tests with
+	tta/perl/t/test_files_generated_list.txt: add non-tree-like tests with
 	an automatic Top menu, called with FORMAT_MENU set to menu or
 	menu_no_detailmenu.
 
@@ -9440,7 +9438,7 @@
 	* texindex/texindex.awk (string_compare_internal):
 	Compare values with a subtraction, as stated in comment about
 	Ordval initialization.  This is more concise and also is slightly
-	faster. 
+	faster.
 
 2026-06-12  Gavin Smith <gavinsmith0123@gmail.com>
 
@@ -9867,7 +9865,7 @@
 
 	* texindex/ti.twjr (quicksort): Add comment explaining
 	how to call the function and what the parameters mean.
-	Inline @<Set compare mechanism@> and 
+	Inline @<Set compare mechanism@> and
 	@<Do ``less than'' comparison@> chunks.
 
 2026-06-06 Patrice Dumas  <pertusus@free.fr>
