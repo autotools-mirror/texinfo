@@ -3206,8 +3206,10 @@ sub _convert($$) {
       } elsif ($cmdname eq 'image') {
         _stream_output_count_nl($self,
                        add_pending_word($formatter->{'container'}, 1));
-        # add an empty word so that following spaces aren't lost
-        add_next($formatter->{'container'}, '');
+        # add an empty word so that an end of line is added if needed, the
+        # image formatting may not add anything at all and stream text
+        # directly.
+        _stream_output_add_next($self, '');
 
         # Flush right an image outside of paragraph and preformatted.
         if ($self->{'formatters'}->[-1]->{'_top_formatter'}

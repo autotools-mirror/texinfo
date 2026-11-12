@@ -257,7 +257,7 @@ use constant {
   eos_present_frenchspacing => -1,
 };
 
-# add a word (without wrapping).
+# add a word.
 # If $DO_UPPER_CASE is set, upper-case the text after having determined
 # if an upper-case letter precedes end sentence punctuation.
 # If $SET_END_SENTENCE is set, the function is called through add_text and the
@@ -314,8 +314,11 @@ sub _add_next($;$$$$) {
   if ($word eq '') {
     $paragraph->{'invisible_pending_word'} = 1;
   } else {
-    $word = uc($word) if ($do_upper_case);
-    $paragraph->{'word'} .= $word;
+    if ($do_upper_case) {
+      $paragraph->{'word'} .= uc($word);
+    } else {
+      $paragraph->{'word'} .= $word;
+    }
   }
 
   # if $set_end_of_sentence, called from add_text, no end of line in
@@ -330,6 +333,7 @@ sub _add_next($;$$$$) {
 
     # The $paragraph->{'counter'} != 0 is here to avoid having an
     # additional line output when the text is longer than the max.
+    # Wrap the previous text if the new word end is past the line size.
     if ($paragraph->{'counter'} != 0 and !$paragraph->{'keep_end_lines'}) {
       $result .= _cut_line($paragraph,
         $paragraph->{'counter'} + $paragraph->{'word_counter'} +
@@ -452,6 +456,8 @@ sub add_text($$;$) {
 
             # The $paragraph->{'counter'} != 0 is here to avoid having an
             # additional line output when the text is longer than the max.
+            # Wrap the previous text if the new word end, with unbreakable
+            # space added to the word, is past the line size.
             if ($paragraph->{'counter'} != 0
                 and !$paragraph->{'keep_end_lines'}) {
               $result .= _cut_line($paragraph,
@@ -468,17 +474,23 @@ sub add_text($$;$) {
             if ($at_two_spaces_end_sentence) {
               $paragraph->{'space'} = '  ';
             } else { # Not at end of sentence.
-              # Only save the first space
+              # Add a space if there is not already one space that
+              # was previously added.  Note that 'space' is only set here
+              # (not in unfilled), therefore this other space would also
+              # have been added here.
+              # Another space added does not happen so often, since
+              # contiguous spaces in text are processed together, this mainly
+              # happens with spaces after command opening (that are not
+              # ignored), or spaces after command closing.
+              # Note also that setting $paragraph->{'space'} = ' '
+              # unconditionally would have also worked out.
               if (length($paragraph->{'space'}) < 1) {
                 $paragraph->{'space'} = ' ';
               }
             }
           }
         }
-        if (!$paragraph->{'keep_end_lines'}) {
-          $result .= _cut_line($paragraph, $paragraph->{'counter'}
-                                  + length($paragraph->{'space'}));
-        } elsif ($spaces =~ /\n/) {
+        if ($paragraph->{'keep_end_lines'} and $spaces =~ /\n/) {
           _end_line($paragraph);
           $result .= "\n";
         }
@@ -494,20 +506,27 @@ sub add_text($$;$) {
       # use the actual characters here.
       $paragraph->{'last_letter'} = $fullwidth_segment;
 
-      $fullwidth_segment = uc($fullwidth_segment) if ($do_upper_case);
-
-      $paragraph->{'word'} .= $fullwidth_segment;
+      if ($do_upper_case) {
+        $paragraph->{'word'} .= uc($fullwidth_segment);
+      } else {
+        $paragraph->{'word'} .= $fullwidth_segment;
+      }
+      # NOTE we assume that upper-case fullwidth character is also
+      # fullwidth
       $paragraph->{'word_counter'} += 2;
 
-      # We allow a line break in between Chinese characters even if
-      # there was no space between them, unlike single-width
-      # characters.
+      # We allow a line break before Chinese characters even if
+      # there is no space before unlike single-width characters.
       if ($paragraph->{'counter'} != 0 and !$paragraph->{'keep_end_lines'}) {
         $result .= _cut_line($paragraph, $paragraph->{'counter'}
                                         + $paragraph->{'word_counter'});
       }
+
       if (!$paragraph->{'no_break'}
           and !$paragraph->{'double_width_no_break'}) {
+        # accumulate the characters in result as soon as possible,
+        # such that end of line can be added directly after the last
+        # double width character when over the max number on a line.
         $result .= _add_pending_word($paragraph);
       }
       delete $paragraph->{'end_sentence'};

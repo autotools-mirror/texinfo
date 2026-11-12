@@ -422,13 +422,13 @@ append_to_word (const char *text, size_t len, int do_upper_case)
 /* characters triggering an end of sentence */
 #define end_sentence_characters ".?!"
 
-/* Add WORD to paragraph, not refilling WORD.  If we go past the end
-   of the line, fill RESULT and start a new one.  TRANSPARENT means that
-   the letters in WORD are ignored for the purpose of deciding whether a
-   full stop ends a sentence or not.  If COL_COUNT is non-negative, it is
-   the number of screen columns taken up by the word; it is non-negative
-   if called from add_text, if called from add_next, COL_COUNT is
-   always negative.
+/* Add WORD to paragraph.
+   If we go past the end of the line, fill RESULT and start a new one.
+   TRANSPARENT means that the letters in WORD are ignored for the purpose
+   of deciding whether a full stop ends a sentence or not.
+   If COL_COUNT is non-negative, it is the number of screen columns taken up
+    by the word; it is non-negative if called from add_text, if called from
+   add_next, COL_COUNT is always negative.
    If called from add_text, with non-negative COL_COUNT, set end of sentence
    related states.
    If DO_UPPER_CASE is set, upper-case the text after having determined
@@ -564,7 +564,7 @@ para__add_next (TEXT *result, const char *word, int word_len,
           state.word_counter += len;
        }
 
-
+      /* Wrap the previous text if the new word end is past the line size. */
       if (state.counter != 0 && !state.keep_end_lines)
         {
           para__cut_line (result, state.counter + state.word_counter
@@ -837,6 +837,8 @@ para_add_text (const char *text, int len, int do_upper_case)
                           state.word_counter += 1;
                         }
 
+                /* Wrap the previous text if the new word end, with unbreakable
+                   space added to the word, is past the line size. */
                       if (state.counter != 0 && !state.keep_end_lines)
                         {
                           para__cut_line (&result, state.counter
@@ -861,7 +863,17 @@ para_add_text (const char *text, int len, int do_upper_case)
                         }
                       else /* Not at end of sentence. */
                         {
-                          /* Only save the first space. */
+              /* Add a space if there is not already one space that
+                 was previously added.  Note that state.space is only set here
+                 (not in unfilled), therefore this other space would also
+                 have been added here.
+                 Another space added does not happen so often, since
+                 contiguous spaces in text are processed together, this mainly
+                 happens with spaces after command opening (that are not
+                 ignored), or spaces after command closing.
+                 Note also that setting state.space to " "
+                 unconditionally would have also worked out.
+               */
                           if (state.space.end < 1)
                             {
                               text_append_n (&state.space, " ", 1);
@@ -870,14 +882,7 @@ para_add_text (const char *text, int len, int do_upper_case)
                     }
                 }
 
-              if (!state.keep_end_lines)
-                {
-              /* If not enough space in the line for the pending space, start
-                 a new line. */
-                  para__cut_line (&result,
-                                  state.counter + (int)state.space.end);
-                }
-              else if (memchr (p, '\n', q - p))
+              if (state.keep_end_lines && memchr (p, '\n', q - p))
                 {
                   para__end_line ();
                   text_append_n (&result, "\n", 1);
@@ -902,18 +907,18 @@ para_add_text (const char *text, int len, int do_upper_case)
              fullwidth */
           state.word_counter += 2;
 
-          /* We allow a line break in between Chinese characters even if
-             there was no space between them, unlike single-width
-             characters. */
-
+          /* We allow a line break before Chinese characters even if
+             there is no space before them, unlike single-width characters. */
           if (state.counter != 0 && !state.keep_end_lines)
             {
               para__cut_line (&result, state.counter + state.word_counter);
             }
-          /* Accumulate the characters so that they can be pushed
-             onto the next line if necessary. */
+
           if (!state.no_break && !state.double_width_no_break)
             {
+            /* accumulate the characters in result as soon as possible,
+               such that end of line can be added directly after the last
+               double width character when over the max number on a line. */
               para__add_pending_word (&result, 0);
             }
           state.end_sentence = eos_unset;

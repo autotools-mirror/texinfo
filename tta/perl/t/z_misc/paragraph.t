@@ -379,9 +379,9 @@ $result .= add_text($para, 'a');
 $result .= add_text($para, '  ');
 set_space_protection($para, 0);
 $result .= add_text($para, 'c ');
+$result .= Texinfo::Convert::Paragraph::end($para);
 is($result, "aa.)  bb eee .)_  aa .  gg.  a c\n",
    'protected spaces many inputs');
-Texinfo::Convert::Paragraph::end($para);
 
 $para = Texinfo::Convert::Paragraph::new({'max' => 10});
 $result = '';

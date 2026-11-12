@@ -4606,8 +4606,10 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
               const TEXT pending_word = para_add_pending_word (1);
               stream_output_count_nl (self, pending_word);
 
-              /* add an empty word so that following spaces aren't lost */
-              para_add_next ("", 0, 0);
+         /* add an empty word so that an end of line is added if needed, the
+            image formatting may not add anything at all and stream text
+            directly. */
+              stream_output_add_next (self, "", 0);
 
           /* Flush right an image outside of paragraph and preformatted. */
               if (top_formatter->is_top_formatter

@@ -1,5 +1,29 @@
 2026-11-11  Patrice Dumas  <pertusus@free.fr>
 
+	* tta/C/convert/convert_to_plaintext.c
+	(convert_to_plaintext_internal),
+	tta/perl/Texinfo/Convert/PlaintextNonXS.pm (_convert): call
+	stream_output_add_next before an image, not para_add_next such that an
+	end of line is added if needed, the image formatting may not add
+	anything at all and stream text directly.
+
+	* tta/C/convert/plaintext_paragraph.c (para_add_text),
+	tta/perl/Texinfo/Convert/ParagraphNonXS.pm (add_text): do not add an
+	end of line if space only is gathered, end of line should only be
+	added when some word is gathered, which end goes over the end of the
+	line.
+
+	* tta/perl/t/z_misc/paragraph.t (protected spaces many inputs):
+	get final end of line from the call to end.
+
+	* tta/perl/Texinfo/Convert/ParagraphNonXS.pm (_add_next, add_text):
+	add upper-case text to word without modifying the input text (no
+	functional change).
+
+	Changes/additions in comments.
+
+2026-11-11  Patrice Dumas  <pertusus@free.fr>
+
 	* tta/C/convert/plaintext_paragraph.c (para__cut_line),
 	tta/perl/Texinfo/Convert/ParagraphNonXS.pm (_cut_line): check
 	keep_end_lines value outside of _cut_line, update callers.  No
