@@ -99,6 +99,500 @@ Please report bugs in this stand-alone Info program to
 sent to @email{bug-gnu-emacs@@gnu.org}.
 
 
+@node Invoking Info
+@nodedescription Options you can pass on the command line.
+@chapter Invoking Info
+
+@cindex Info, invoking
+@cindex invoking Info
+@cindex command line options
+@cindex options, command line
+@cindex arguments, command line
+
+GNU Info accepts several options to control the initial node or nodes
+being viewed, and to specify which directories to search for Info files.
+Here is a template showing an invocation of GNU Info from the shell:
+
+@example
+info [@var{option}@dots{}] [@var{manual}] [@var{menu-or-index-item}@dots{}]
+@end example
+
+Info will look for an entry called @var{manual} in the directory
+files, which are named @file{dir}, that it finds in its search path.
+The search is case-insensitive and considers substrings.
+(If @var{manual} is not given, by default Info displays a composite
+directory listing, constructed by combining the @file{dir} files.)
+A basic example:
+
+@example
+info coreutils
+@end example
+
+This looks for an entry labelled @code{coreutils}, or
+@code{Coreutils}, etc., and if found, displays the referenced file
+(e.g., @file{coreutils.info}) at the location given.
+@code{info coreu} will find it too, if there is no better match.
+
+Another example:
+
+@example
+info ls
+@end example
+
+Assuming the normal @code{dir} entry for @code{ls}, this will show the
+@code{ls} documentation, which happens to be within the
+@code{coreutils} manual rather than a separate manual.  The @code{dir}
+entries can point to any node within a manual, so that users don't
+have to be concerned with the exact structure used by different
+authors.
+
+@cindex compressed Info files
+@cindex files, compressed
+@cindex Info files, compressed
+If no entry is found in the directories, Info looks for a file called
+@var{manual} in its search path.  If not found, Info looks for it
+with the file extensions @file{.info}, @file{-info}, and @file{.inf}.
+For each of these known extensions, if a regular file is not found,
+Info looks for a compressed file.@footnote{Info supports files
+compressed with @code{gzip}, @code{xz}, @code{bzip2}, @code{lzip},
+@code{lzma}, @code{compress} and @code{yabba} programs, assumed
+to have extensions @file{.z}, @file{.gz}, @file{.xz}, @file{.bz2},
+@file{.lz}, @file{.lzma}, @file{.Z}, and @file{.Y} respectively.
+
+On MS-DOS, Info allows for the Info
+extension, such as @code{.inf}, and the short compressed file extensions,
+such as @file{.z} and @file{.gz}, to be merged into a single extension,
+since DOS doesn't allow more than a single dot in the basename of
+a file.  Thus, on MS-DOS, if Info looks for @file{bison}, file names
+like @file{bison.igz} and @file{bison.inz} will be found and decompressed
+by @code{gunzip}.}
+
+You can specify the name of a node to visit with the @code{--node} or 
+@code{-n} option.  Alternatively, you can specify the file and node 
+together using the same format that occurs in Info cross-references.  
+These two examples both load the @samp{Files} node within the 
+@samp{emacs} manual:
+
+@example
+info emacs -n Files
+info '(emacs)Files'
+@end example
+
+@cindex absolute Info file names
+@cindex relative Info file names
+@cindex file names, relative
+@cindex Info files, relative
+If you want to load a file without looking in the search path, specify
+@var{manual} either as an absolute path, or as a path relative to the
+current directory which contains at least one slash character.  (You
+can also use the @code{--file} option for similar behavior, described
+below.)
+Examples:
+
+@example
+info /usr/local/share/info/bash.info
+info ./document.info
+@end example
+
+@noindent
+Info looks for @var{manual} only in the explicitly specified
+directory, and adds that directory to its search path.
+
+@anchor{command-line menu items}
+@cindex menu, following
+Info treats any remaining arguments as the names of menu items, or
+(see below) index entries.  The first argument is a menu item in the
+@samp{Top} node of the file loaded, the second argument is a menu item
+in the first argument's node, etc.  You can move to the node of your
+choice by specifying the menu names which describe the path to that
+node.  For example,
+
+@example
+info emacs buffers
+info texinfo Overview 'Using Texinfo'
+@end example
+
+@noindent
+The first example selects the menu item @samp{Buffers} in the node
+@samp{(emacs)Top}.  The second example loads the @file{texinfo} file and
+looks in its top-level menu for a @samp{Overview} item, looks in the menu
+of the node referenced, and finally displays the node referenced by the
+@samp{Using Texinfo} item.
+
+If there was only one @var{menu-or-index-item} argument and it wasn't
+found as a menu item, Info looks for it as an index entry. For example:
+
+@example
+info libc printf
+@end example
+
+@noindent
+This loads the libc Info manual and first looks for @code{printf} in
+the top-level menu as usual; since it isn't there (at this writing),
+it then looks in the indices.  If it's found there (which it is),
+the relevant node at the given location is displayed.
+
+When Info looks for the second argument as an index entry, it will prefer to
+use an index entry that refers to the node that it found with the first
+argument.  For example, the following takes you to documentation of the
+@samp{-s} option of the @command{cp} program:
+
+@example
+info -- cp -s
+@end example
+
+@noindent
+The first argument takes Info to the @samp{cp invocation} node within
+the @samp{coreutils} manual.  The second argument takes it to the
+index entry for @samp{-s} within this node, even though there are several
+other index entries for @samp{-s} within the @samp{coreutils} manual
+as a whole.
+(We had to start the argument list with @samp{--} to mark the end of
+options so that the @samp{-s} text would be sought in the indices,
+rather than used as an option to Info itself.)
+
+@cindex Non-interactive usage
+@cindex Standard output not a terminal
+If Info is invoked when its standard output is not a terminal, it
+does not attempt to start an interactive session; rather, it
+writes the contents of the loaded nodes and subnodes to standard output,
+as if the @option{--output=-} and @option{--subnodes} options were given.
+This can be used to pipe the contents of Info nodes to another program,
+such as a pager.
+
+A complete list of options follows.
+
+@table @code
+@anchor{--all}
+@item --all
+@itemx -a
+@cindex @code{--all} (@code{-a}) command line option
+@cindex @code{-a} (@code{--all}) command line option
+Find all files matching @var{manual}.  Three usage patterns are
+supported, as follows.
+
+First, if @code{--all} is used together with @option{--where},
+@command{info} prints the names of all matching files found on
+standard output (including @samp{*manpages*} if relevant) and exits.
+
+Second, if @code{--all} is used together with @option{--output}, the
+contents of all matched files are dumped to the specified output
+file.
+
+Otherwise, an interactive session is initiated.  If more than one file
+matches, a menu node is displayed listing the matches and allowing you
+to select one.  This menu node can be brought back at any time by
+pressing @kbd{C-x f}.  If there is only one match, @command{info}
+starts as usual.
+
+When used with the @option{--index-search} option, @command{info}
+displays a menu of matching index entries (just as the
+@code{virtual-index} command does; see @ref{Index Commands}).
+
+The @option{--node} option cannot be used together with this option.
+
+@anchor{--apropos}
+@item --apropos=@var{string}
+@itemx -k @var{string}
+@cindex @code{--apropos} (@code{-k}) command line option
+@cindex @code{-k} (@code{--apropos}) command line option
+@cindex Searching all indices
+@cindex Info files@r{, searching all indices}
+@cindex Apropos@r{, in Info files}
+Specify a string to search in every index of every Info file installed
+on your system.  Info looks up the named @var{string} in all the
+indices it can find, prints the results to standard output, and then
+exits.  If you are not sure which Info file explains certain issues,
+this option is your friend.  (If your system has a lot of Info files
+installed, searching all of them might take some time!)
+
+You can invoke the apropos command from inside Info; see
+@ref{Searching Commands}.
+
+@item --debug=@var{number}
+@itemx -x @var{number} 
+@cindex @code{--debug} (@code{-x}) command line option
+@cindex @code{-x} (@code{--debug}) command line option
+@cindex debugging
+Print additional debugging information.  The argument specifies the
+verbosity level, so a higher level includes all the information from
+lower levels.  For all available debugging output, use
+@option{-x@tie{}-1}.  Info version @value{VERSION} has these levels:
+
+@table @code
+@item 1
+Print information about file handling, such as looking for @file{dir}
+files and nodes written with @samp{--output}.
+
+@item 2
+Print operations relating to @env{INFOPATH}.
+
+@item 3
+Print information about node searching.
+@end table
+
+Debugging output goes to standard error.
+
+@item --directory @var{directory-path}
+@itemx -d @var{directory-path}
+@cindex @code{--directory} (@code{-d}) command line option
+@cindex @code{-d} (@code{--directory}) command line option
+@cindex directory path
+@cindex @env{INFOPATH}
+@anchor{INFOPATH}
+Add @var{directory-path} to the list of directory paths searched
+when Info needs to find a file.  You may issue @code{--directory}
+multiple times; once for each directory which contains Info files,
+or with a list of such directories separated by a colon (or semicolon
+on MS-DOS/MS-Windows).
+
+Directories specified in the environment variable @env{INFOPATH} are added
+to the directories specified with @code{--directory}, if any.  The value of
+@code{INFOPATH} is a list of directories usually separated by a colon;
+on MS-DOS/MS-Windows systems, the semicolon is used.  If the value of
+@code{INFOPATH} ends with a colon (or semicolon on MS-DOS/MS-Windows),
+the initial list of directories is constructed by appending the
+build-time default to the value of @code{INFOPATH}.
+
+If you do not define @code{INFOPATH}, Info uses a default path defined
+when Info was built as the initial list of directories.  
+
+Regardless of whether @code{INFOPATH} is defined, the default
+documentation directory defined when Info was built is added to the
+search path.  If you do not want this directory to be included, set
+the @code{infopath-no-defaults} variable to @code{On}
+(@pxref{infopath-no-defaults}).
+ 
+If the list of directories contains the element @code{PATH}, that
+element is replaced by a list of directories derived from the value of
+the environment variable @code{PATH}.  Each path element of the form
+@var{dir/base} is replaced by @var{dir}@code{/share/info} or
+@var{dir}@code{/info}, provided that directory exists.
+
+@item --dribble=@var{file}
+@cindex @code{--dribble} command line option
+@cindex keystrokes, recording
+@cindex remembering user keystrokes
+Specify a file where all user keystrokes will be recorded.  This file
+can be used later to replay the same sequence of commands, see the
+@samp{--restore} option below.
+
+@item --file @var{manual}
+@itemx -f @var{manual}
+@cindex @code{--file} (@code{-f}) command line option
+@cindex @code{-f} (@code{--file}) command line option
+@cindex Info manual, specifying initial
+@cindex initial node, specifying
+@cindex startup node, specifying
+Specify a particular manual to visit without looking its name up in any
+@file{dir} files.
+
+With this option, it starts by trying to visit
+@code{(@var{manual})Top}, i.e., the @code{Top} node in (typically)
+@file{@var{manual}.info}.  As above, it tries various file extensions
+to find the file. If no such file (or node) can be found, Info exits
+without doing anything.  As with the @file{dir} lookup described above,
+any extra @var{menu-or-index-item} arguments are used to locate a node 
+within the loaded file.
+
+If @var{manual} is an absolute file name, or begins with @file{./} or
+@file{../}, or contains an intermediate directory, Info will only look
+for the file in the directory specified, and add this directory to
+@code{INFOPATH}.  (This is the same as what happens when @code{--file}
+is not given.)
+
+@item --help
+@itemx -h
+@cindex @code{--help} (@code{-h}) command line option
+@cindex @code{-h} (@code{--help}) command line option
+Output a brief description of the available Info command-line options.
+
+@item --index-search @var{string}
+@cindex @code{--index-search} command line option
+@cindex index search, selecting from the command line
+@cindex online help, using Info as
+After processing all command-line arguments, go to the index in the
+selected Info file and search for index entries which match
+@var{string}.  If such an entry is found, the Info session begins with
+displaying the node pointed to by the first matching index entry;
+press @kbd{,} to step through the rest of the matching entries.  If no
+such entry exists, print @samp{no entries found} and exit with nonzero
+status.  This can be used from another program as a way to provide
+online help, or as a quick way of starting to read an Info file at a
+certain node when you don't know the exact name of that node.
+
+When used with the @option{--all} option, @command{info}
+displays a menu of matching index entries (just as the
+@code{virtual-index} command does; see @ref{Index Commands}).
+
+This command can also be invoked from inside Info; @pxref{Searching
+Commands}.
+
+@item --init-file @var{INIT-FILE}
+@anchor{--init-file}
+@cindex @code{--init-file} command line option
+Read key bindings and variable settings from @var{INIT-FILE} instead
+of the default location.  @xref{Custom Key Bindings}.
+
+@item --node @var{nodename}
+@itemx -n @var{nodename}
+@cindex @code{--node} (@code{-n}) command line option
+@cindex @code{-n} (@code{--node}) command line option
+@cindex node, selecting from the command line
+Specify a particular node to visit in the initial file that Info
+loads.  You may specify @code{--node} multiple times: for an interactive
+Info, each @var{nodename} is visited in its own window; for a
+non-interactive Info (such as when @code{--output} is given) each
+@var{nodename} is processed sequentially.
+
+You can specify both the file and node to the @code{--node} option
+using the usual Info syntax, but don't forget to escape the open and
+close parentheses and whitespace from the shell; for example:@*
+@t{info --node "(emacs)Buffers"}
+
+@item --output @var{file}
+@itemx -o @var{file}
+@cindex @code{--output} (@code{-o}) command line option
+@cindex @code{-o} (@code{--output}) command line option
+@cindex file, outputting to
+@cindex outputting to a file
+Direct output to @var{file}.  Each node that Info visits will be
+output to @var{file} instead of interactively viewed.  A value of
+@code{-} for @var{file} means standard output.
+
+@item --no-raw-escapes
+@itemx --raw-escapes, -R
+@anchor {--raw-escapes}
+@cindex @code{--raw-escapes} (@code{-R}) command line option
+@cindex @code{-R} (@code{--raw-escapes}) command line option
+@cindex colors in documents
+@cindex ANSI escape sequences in documents
+By default, Info passes SGR terminal control sequences (also known as
+ANSI escape sequences) found in documents directly through to the
+terminal.  If you use the @code{--no-raw-escapes} options, these
+sequences are displayed as other control characters are; for example, an
+@key{ESC} byte is displayed as @samp{^[}.  The @code{--raw-escapes} and
+@code{-R} options do not do anything, but are included for completeness.
+
+@ignore
+@cindex man pages, bold and underline
+@vindex GROFF_SGR
+Some versions of Groff (@pxref{Top,,,groff,Groff}) produce man pages
+with ANSI escape sequences for bold, italics, and underlined
+characters, and for colorized text.  If your @command{man} command
+uses a version of Groff that does this (original GNU Groff does), and
+your terminal supports these sequences, Info will display any bold or
+underlined text in man pages.  Some distributions have modified Groff
+to require setting the @code{GROFF_SGR} environment variable to get
+these sequences.  @xref{Invoking grotty,,, groff, Groff}.
+@end ignore
+
+@item --restore=@var{dribble-file}
+@cindex @code{--restore} command line option
+@cindex replaying recorded keystrokes
+Read keystrokes from @var{dribble-file}, presumably recorded during
+previous Info session (see the description of the @samp{--dribble}
+option above).  When the keystrokes in the files are all read, Info
+reverts its input to the usual interactive operation.
+
+@item --show-malformed-multibytes
+@itemx --no-show-malformed-multibytes
+@cindex @code{--show-malformed-multibytes} command line option
+@cindex malformed multibyte sequences, showing
+Show malformed multibyte sequences in the output.  By default, such
+sequences are dropped.
+
+@anchor{--show-options}
+@item --show-options
+@itemx --usage
+@itemx -O
+@cindex @code{--show-options} (@code{--usage}, @code{-O}) command line option
+@cindex @code{--usage} (@code{--show-options}, @code{-O}) command line option
+@cindex @code{-O} (@code{--usage}, @code{--show-options}) command line option
+@cindex command-line options, how to find
+@cindex invocation description, how to find
+Look for the node that describes how to invoke the
+program.  The name of the program is taken from the other non-option
+arguments on the command line.  For example, @samp{info emacs -O} loads
+the @code{Emacs Invocation} node of the @code{emacs} manual.
+
+This option is provided to make it easier to find the
+most important usage information in a manual without navigating
+through menu hierarchies.  The effect is similar to the @code{@kbd{M-x}
+goto-invocation} command (@pxref{goto-invocation}) from inside Info.
+
+@item --speech-friendly
+@itemx -b
+@cindex @code{--speech-friendly} (@code{-b}) command line option
+@cindex @code{-b} (@code{--speech-friendly}) command line option
+@cindex speech synthesizers
+On MS-DOS/MS-Windows only, this option causes Info to use standard
+file I/O functions for screen writes.  (By default, Info uses direct
+writes to the video memory on these systems, for faster operation and
+colored display support.)  This allows the speech synthesizers used by
+blind persons to catch the output and convert it to audible speech.
+
+@item --strict-node-location 
+@cindex @code{--strict-node-location} command line option
+This option causes Info not to search ``nearby'' to locate nodes, and
+instead strictly use the information provided in the Info file.  The
+practical use for this option is for debugging programs that write
+Info files, to check that they are outputting the correct locations.
+Due to bugs and malfeasances in the various Info writing programs over
+the years and versions, it is not advisable to ever use this option
+when just trying to read documentation.
+
+@item --subnodes
+@cindex @code{--subnodes}, command line option
+This option only has meaning when given in conjunction with
+@code{--output}.  It means to recursively output the nodes appearing in
+the menus of each node being output.  Menu items which resolve to
+external Info files are not output, and neither are menu items which are
+members of an index.  Each node is only output once.
+
+@anchor{variable-assignment}
+@item -v @var{name}=@var{value}
+@itemx --variable=@var{name}=@var{value}
+@cindex @code{--variable} (@code{-v}) command line option
+@cindex @code{-v} (@code{--variable}) command line option
+@cindex variable assignment
+Set the @command{info} variable @var{name} to @var{value}.
+@xref{Variables}.
+
+@item --version
+@cindex @code{--version} command line option
+@cindex version information
+Prints the version information of Info and exits.
+
+@anchor{--vi-keys}
+@item --vi-keys
+@cindex @code{--vi-keys} command line option
+@cindex vi-like key bindings
+@cindex Less-like key bindings
+This option binds functions to keys differently, to emulate the key
+bindings of @code{vi} and Less.  The bindings activated by this option
+are documented in @ref{@t{infokey} format}.  (@xref{Custom Key Bindings} 
+for a more general way of altering GNU Info's key bindings.)
+
+@item --where
+@itemx --location
+@itemx -w
+@cindex @code{--where} (@code{--location}, @code{-w}) command line option
+@cindex @code{--location} (@code{--where}, @code{-w}) command line option
+@cindex @code{-w} (@code{--location}, @code{--where}) command line option
+@cindex Info manual location
+@cindex Where is an Info manual?
+Show the filename that would be read and exit, instead of actually
+reading it and starting Info.
+@end table
+
+Finally, Info defines many default key bindings and variables.
+@xref{Custom Key Bindings} for information on how to customize these
+settings.
+
+@c FIXME: the feature with lowercasing the file name isn't documented
+
+
 @node Node Commands
 @nodedescription Commands for selecting a new node.
 @chapter Selecting a Node
@@ -1459,502 +1953,6 @@ associated with a node when the node is selected by setting the
 variable @code{automatic-footnotes}.  @xref{Variables,,
 @code{automatic-footnotes}}.
 @end table
-
-
-@node Invoking Info
-@nodedescription Options you can pass on the command line.
-@chapter Invoking Info
-
-@cindex Info, invoking
-@cindex invoking Info
-@cindex command line options
-@cindex options, command line
-@cindex arguments, command line
-
-GNU Info accepts several options to control the initial node or nodes
-being viewed, and to specify which directories to search for Info files.
-Here is a template showing an invocation of GNU Info from the shell:
-
-@example
-info [@var{option}@dots{}] [@var{manual}] [@var{menu-or-index-item}@dots{}]
-@end example
-
-Info will look for an entry called @var{manual} in the directory
-files, which are named @file{dir}, that it finds in its search path.
-The search is case-insensitive and considers substrings.
-(If @var{manual} is not given, by default Info displays a composite
-directory listing, constructed by combining the @file{dir} files.)
-A basic example:
-
-@example
-info coreutils
-@end example
-
-This looks for an entry labelled @code{coreutils}, or
-@code{Coreutils}, etc., and if found, displays the referenced file
-(e.g., @file{coreutils.info}) at the location given.
-@code{info coreu} will find it too, if there is no better match.
-
-Another example:
-
-@example
-info ls
-@end example
-
-Assuming the normal @code{dir} entry for @code{ls}, this will show the
-@code{ls} documentation, which happens to be within the
-@code{coreutils} manual rather than a separate manual.  The @code{dir}
-entries can point to any node within a manual, so that users don't
-have to be concerned with the exact structure used by different
-authors.
-
-@cindex compressed Info files
-@cindex files, compressed
-@cindex Info files, compressed
-If no entry is found in the directories, Info looks for a file called
-@var{manual} in its search path.  If not found, Info looks for it
-with the file extensions @file{.info}, @file{-info}, and @file{.inf}.
-For each of these known extensions, if a regular file is not found,
-Info looks for a compressed file.@footnote{Info supports files
-compressed with @code{gzip}, @code{xz}, @code{bzip2}, @code{lzip},
-@code{lzma}, @code{compress} and @code{yabba} programs, assumed
-to have extensions @file{.z}, @file{.gz}, @file{.xz}, @file{.bz2},
-@file{.lz}, @file{.lzma}, @file{.Z}, and @file{.Y} respectively.
-
-On MS-DOS, Info allows for the Info
-extension, such as @code{.inf}, and the short compressed file extensions,
-such as @file{.z} and @file{.gz}, to be merged into a single extension,
-since DOS doesn't allow more than a single dot in the basename of
-a file.  Thus, on MS-DOS, if Info looks for @file{bison}, file names
-like @file{bison.igz} and @file{bison.inz} will be found and decompressed
-by @code{gunzip}.}
-
-You can specify the name of a node to visit with the @code{--node} or 
-@code{-n} option.  Alternatively, you can specify the file and node 
-together using the same format that occurs in Info cross-references.  
-These two examples both load the @samp{Files} node within the 
-@samp{emacs} manual:
-
-@example
-info emacs -n Files
-info '(emacs)Files'
-@end example
-
-@cindex absolute Info file names
-@cindex relative Info file names
-@cindex file names, relative
-@cindex Info files, relative
-If you want to load a file without looking in the search path, specify
-@var{manual} either as an absolute path, or as a path relative to the
-current directory which contains at least one slash character.  (You
-can also use the @code{--file} option for similar behavior, described
-below.)
-Examples:
-
-@example
-info /usr/local/share/info/bash.info
-info ./document.info
-@end example
-
-@noindent
-Info looks for @var{manual} only in the explicitly specified
-directory, and adds that directory to its search path.
-
-@anchor{command-line menu items}
-@cindex menu, following
-Info treats any remaining arguments as the names of menu items, or
-(see below) index entries.  The first argument is a menu item in the
-@samp{Top} node of the file loaded, the second argument is a menu item
-in the first argument's node, etc.  You can move to the node of your
-choice by specifying the menu names which describe the path to that
-node.  For example,
-
-@example
-info emacs buffers
-info texinfo Overview 'Using Texinfo'
-@end example
-
-@noindent
-The first example selects the menu item @samp{Buffers} in the node
-@samp{(emacs)Top}.  The second example loads the @file{texinfo} file and
-looks in its top-level menu for a @samp{Overview} item, looks in the menu
-of the node referenced, and finally displays the node referenced by the
-@samp{Using Texinfo} item.
-
-If there was only one @var{menu-or-index-item} argument and it wasn't
-found as a menu item, Info looks for it as an index entry. For example:
-
-@example
-info libc printf
-@end example
-
-@noindent
-This loads the libc Info manual and first looks for @code{printf} in
-the top-level menu as usual; since it isn't there (at this writing),
-it then looks in the indices.  If it's found there (which it is),
-the relevant node at the given location is displayed.
-
-When Info looks for the second argument as an index entry, it will prefer to
-use an index entry that refers to the node that it found with the first
-argument.  For example, the following takes you to documentation of the
-@samp{-s} option of the @command{cp} program:
-
-@example
-info -- cp -s
-@end example
-
-@noindent
-The first argument takes Info to the @samp{cp invocation} node within
-the @samp{coreutils} manual.  The second argument takes it to the
-index entry for @samp{-s} within this node, even though there are several
-other index entries for @samp{-s} within the @samp{coreutils} manual
-as a whole.
-(We had to start the argument list with @samp{--} to mark the end of
-options so that the @samp{-s} text would be sought in the indices,
-rather than used as an option to Info itself.)
-
-@cindex Non-interactive usage
-@cindex Standard output not a terminal
-If Info is invoked when its standard output is not a terminal, it
-does not attempt to start an interactive session; rather, it
-writes the contents of the loaded nodes and subnodes to standard output,
-as if the @option{--output=-} and @option{--subnodes} options were given.
-This can be used to pipe the contents of Info nodes to another program,
-such as a pager.
-
-A complete list of options follows.
-
-@table @code
-@anchor{--all}
-@item --all
-@itemx -a
-@cindex @code{--all} (@code{-a}) command line option
-@cindex @code{-a} (@code{--all}) command line option
-Find all files matching @var{manual}.  Three usage patterns are
-supported, as follows.
-
-First, if @code{--all} is used together with @option{--where},
-@command{info} prints the names of all matching files found on
-standard output (including @samp{*manpages*} if relevant) and exits.
-
-Second, if @code{--all} is used together with @option{--output}, the
-contents of all matched files are dumped to the specified output
-file.
-
-Otherwise, an interactive session is initiated.  If more than one file
-matches, a menu node is displayed listing the matches and allowing you
-to select one.  This menu node can be brought back at any time by
-pressing @kbd{C-x f}.  If there is only one match, @command{info}
-starts as usual.
-
-When used with the @option{--index-search} option, @command{info}
-displays a menu of matching index entries (just as the
-@code{virtual-index} command does; see @ref{Index Commands}).
-
-The @option{--node} option cannot be used together with this option.
-
-@anchor{--apropos}
-@item --apropos=@var{string}
-@itemx -k @var{string}
-@cindex @code{--apropos} (@code{-k}) command line option
-@cindex @code{-k} (@code{--apropos}) command line option
-@cindex Searching all indices
-@cindex Info files@r{, searching all indices}
-@cindex Apropos@r{, in Info files}
-Specify a string to search in every index of every Info file installed
-on your system.  Info looks up the named @var{string} in all the
-indices it can find, prints the results to standard output, and then
-exits.  If you are not sure which Info file explains certain issues,
-this option is your friend.  (If your system has a lot of Info files
-installed, searching all of them might take some time!)
-
-You can invoke the apropos command from inside Info; see
-@ref{Searching Commands}.
-
-@item --debug=@var{number}
-@itemx -x @var{number} 
-@cindex @code{--debug} (@code{-x}) command line option
-@cindex @code{-x} (@code{--debug}) command line option
-@cindex debugging
-Print additional debugging information.  The argument specifies the
-verbosity level, so a higher level includes all the information from
-lower levels.  For all available debugging output, use
-@option{-x@tie{}-1}.  Info version @value{VERSION} has these levels:
-
-@table @code
-@item 1
-Print information about file handling, such as looking for @file{dir}
-files and nodes written with @samp{--output}.
-
-@item 2
-Print operations relating to @env{INFOPATH}.
-
-@item 3
-Print information about node searching.
-@end table
-
-Debugging output goes to standard error.
-
-@item --directory @var{directory-path}
-@itemx -d @var{directory-path}
-@cindex @code{--directory} (@code{-d}) command line option
-@cindex @code{-d} (@code{--directory}) command line option
-@cindex directory path
-@cindex @env{INFOPATH}
-@anchor{INFOPATH}
-Add @var{directory-path} to the list of directory paths searched
-when Info needs to find a file.  You may issue @code{--directory}
-multiple times; once for each directory which contains Info files,
-or with a list of such directories separated by a colon (or semicolon
-on MS-DOS/MS-Windows).
-
-Directories specified in the environment variable @env{INFOPATH} are added
-to the directories specified with @code{--directory}, if any.  The value of
-@code{INFOPATH} is a list of directories usually separated by a colon;
-on MS-DOS/MS-Windows systems, the semicolon is used.  If the value of
-@code{INFOPATH} ends with a colon (or semicolon on MS-DOS/MS-Windows),
-the initial list of directories is constructed by appending the
-build-time default to the value of @code{INFOPATH}.
-
-If you do not define @code{INFOPATH}, Info uses a default path defined
-when Info was built as the initial list of directories.  
-
-Regardless of whether @code{INFOPATH} is defined, the default
-documentation directory defined when Info was built is added to the
-search path.  If you do not want this directory to be included, set
-the @code{infopath-no-defaults} variable to @code{On}
-(@pxref{infopath-no-defaults}).
- 
-If the list of directories contains the element @code{PATH}, that
-element is replaced by a list of directories derived from the value of
-the environment variable @code{PATH}.  Each path element of the form
-@var{dir/base} is replaced by @var{dir}@code{/share/info} or
-@var{dir}@code{/info}, provided that directory exists.
-
-@item --dribble=@var{file}
-@cindex @code{--dribble} command line option
-@cindex keystrokes, recording
-@cindex remembering user keystrokes
-Specify a file where all user keystrokes will be recorded.  This file
-can be used later to replay the same sequence of commands, see the
-@samp{--restore} option below.
-
-@item --file @var{manual}
-@itemx -f @var{manual}
-@cindex @code{--file} (@code{-f}) command line option
-@cindex @code{-f} (@code{--file}) command line option
-@cindex Info manual, specifying initial
-@cindex initial node, specifying
-@cindex startup node, specifying
-Specify a particular manual to visit without looking its name up in any
-@file{dir} files.
-
-With this option, it starts by trying to visit
-@code{(@var{manual})Top}, i.e., the @code{Top} node in (typically)
-@file{@var{manual}.info}.  As above, it tries various file extensions
-to find the file. If no such file (or node) can be found, Info exits
-without doing anything.  As with the @file{dir} lookup described above,
-any extra @var{menu-or-index-item} arguments are used to locate a node 
-within the loaded file.
-
-If @var{manual} is an absolute file name, or begins with @file{./} or
-@file{../}, or contains an intermediate directory, Info will only look
-for the file in the directory specified, and add this directory to
-@code{INFOPATH}.  (This is the same as what happens when @code{--file}
-is not given.)
-
-@item --help
-@itemx -h
-@cindex @code{--help} (@code{-h}) command line option
-@cindex @code{-h} (@code{--help}) command line option
-Output a brief description of the available Info command-line options.
-
-@item --index-search @var{string}
-@cindex @code{--index-search} command line option
-@cindex index search, selecting from the command line
-@cindex online help, using Info as
-After processing all command-line arguments, go to the index in the
-selected Info file and search for index entries which match
-@var{string}.  If such an entry is found, the Info session begins with
-displaying the node pointed to by the first matching index entry;
-press @kbd{,} to step through the rest of the matching entries.  If no
-such entry exists, print @samp{no entries found} and exit with nonzero
-status.  This can be used from another program as a way to provide
-online help, or as a quick way of starting to read an Info file at a
-certain node when you don't know the exact name of that node.
-
-When used with the @option{--all} option, @command{info}
-displays a menu of matching index entries (just as the
-@code{virtual-index} command does; see @ref{Index Commands}).
-
-This command can also be invoked from inside Info; @pxref{Searching
-Commands}.
-
-@item --init-file @var{INIT-FILE}
-@anchor{--init-file}
-@cindex @code{--init-file} command line option
-Read key bindings and variable settings from @var{INIT-FILE} instead
-of the default location.  @xref{Custom Key Bindings}.
-
-@item --node @var{nodename}
-@itemx -n @var{nodename}
-@cindex @code{--node} (@code{-n}) command line option
-@cindex @code{-n} (@code{--node}) command line option
-@cindex node, selecting from the command line
-Specify a particular node to visit in the initial file that Info
-loads.  You may specify @code{--node} multiple times: for an interactive
-Info, each @var{nodename} is visited in its own window; for a
-non-interactive Info (such as when @code{--output} is given) each
-@var{nodename} is processed sequentially.
-
-You can specify both the file and node to the @code{--node} option
-using the usual Info syntax, but don't forget to escape the open and
-close parentheses and whitespace from the shell; for example:@*
-@t{info --node "(emacs)Buffers"}
-
-@item --output @var{file}
-@itemx -o @var{file}
-@cindex @code{--output} (@code{-o}) command line option
-@cindex @code{-o} (@code{--output}) command line option
-@cindex file, outputting to
-@cindex outputting to a file
-Direct output to @var{file}.  Each node that Info visits will be
-output to @var{file} instead of interactively viewed.  A value of
-@code{-} for @var{file} means standard output.
-
-@item --no-raw-escapes
-@itemx --raw-escapes, -R
-@anchor {--raw-escapes}
-@cindex @code{--raw-escapes} (@code{-R}) command line option
-@cindex @code{-R} (@code{--raw-escapes}) command line option
-@cindex colors in documents
-@cindex ANSI escape sequences in documents
-By default, Info passes SGR terminal control sequences (also known as
-ANSI escape sequences) found in documents directly through to the
-terminal.  If you use the @code{--no-raw-escapes} options, these
-sequences are displayed as other control characters are; for example, an
-@key{ESC} byte is displayed as @samp{^[}.  The @code{--raw-escapes} and
-@code{-R} options do not do anything, but are included for completeness.
-
-@ignore
-@cindex man pages, bold and underline
-@vindex GROFF_SGR
-Some versions of Groff (@pxref{Top,,,groff,Groff}) produce man pages
-with ANSI escape sequences for bold, italics, and underlined
-characters, and for colorized text.  If your @command{man} command
-uses a version of Groff that does this (original GNU Groff does), and
-your terminal supports these sequences, Info will display any bold or
-underlined text in man pages.  Some distributions have modified Groff
-to require setting the @code{GROFF_SGR} environment variable to get
-these sequences.  @xref{Invoking grotty,,, groff, Groff}.
-@end ignore
-
-@item --restore=@var{dribble-file}
-@cindex @code{--restore} command line option
-@cindex replaying recorded keystrokes
-Read keystrokes from @var{dribble-file}, presumably recorded during
-previous Info session (see the description of the @samp{--dribble}
-option above).  When the keystrokes in the files are all read, Info
-reverts its input to the usual interactive operation.
-
-@item --show-malformed-multibytes
-@itemx --no-show-malformed-multibytes
-@cindex @code{--show-malformed-multibytes} command line option
-@cindex malformed multibyte sequences, showing
-Show malformed multibyte sequences in the output.  By default, such
-sequences are dropped.
-
-@anchor{--show-options}
-@item --show-options
-@itemx --usage
-@itemx -O
-@cindex @code{--show-options} (@code{--usage}, @code{-O}) command line option
-@cindex @code{--usage} (@code{--show-options}, @code{-O}) command line option
-@cindex @code{-O} (@code{--usage}, @code{--show-options}) command line option
-@cindex command-line options, how to find
-@cindex invocation description, how to find
-Look for the node that describes how to invoke the
-program.  The name of the program is taken from the other non-option
-arguments on the command line.  For example, @samp{info emacs -O} loads
-the @code{Emacs Invocation} node of the @code{emacs} manual.
-
-This option is provided to make it easier to find the
-most important usage information in a manual without navigating
-through menu hierarchies.  The effect is similar to the @code{@kbd{M-x}
-goto-invocation} command (@pxref{goto-invocation}) from inside Info.
-
-@item --speech-friendly
-@itemx -b
-@cindex @code{--speech-friendly} (@code{-b}) command line option
-@cindex @code{-b} (@code{--speech-friendly}) command line option
-@cindex speech synthesizers
-On MS-DOS/MS-Windows only, this option causes Info to use standard
-file I/O functions for screen writes.  (By default, Info uses direct
-writes to the video memory on these systems, for faster operation and
-colored display support.)  This allows the speech synthesizers used by
-blind persons to catch the output and convert it to audible speech.
-
-@item --strict-node-location 
-@cindex @code{--strict-node-location} command line option
-This option causes Info not to search ``nearby'' to locate nodes, and
-instead strictly use the information provided in the Info file.  The
-practical use for this option is for debugging programs that write
-Info files, to check that they are outputting the correct locations.
-Due to bugs and malfeasances in the various Info writing programs over
-the years and versions, it is not advisable to ever use this option
-when just trying to read documentation.
-
-@item --subnodes
-@cindex @code{--subnodes}, command line option
-This option only has meaning when given in conjunction with
-@code{--output}.  It means to recursively output the nodes appearing in
-the menus of each node being output.  Menu items which resolve to
-external Info files are not output, and neither are menu items which are
-members of an index.  Each node is only output once.
-
-@anchor{variable-assignment}
-@item -v @var{name}=@var{value}
-@itemx --variable=@var{name}=@var{value}
-@cindex @code{--variable} (@code{-v}) command line option
-@cindex @code{-v} (@code{--variable}) command line option
-@cindex variable assignment
-Set the @command{info} variable @var{name} to @var{value}.
-@xref{Variables}.
-
-@item --version
-@cindex @code{--version} command line option
-@cindex version information
-Prints the version information of Info and exits.
-
-@anchor{--vi-keys}
-@item --vi-keys
-@cindex @code{--vi-keys} command line option
-@cindex vi-like key bindings
-@cindex Less-like key bindings
-This option binds functions to keys differently, to emulate the key
-bindings of @code{vi} and Less.  The bindings activated by this option
-are documented in @ref{@t{infokey} format}.  (@xref{Custom Key Bindings} 
-for a more general way of altering GNU Info's key bindings.)
-
-@item --where
-@itemx --location
-@itemx -w
-@cindex @code{--where} (@code{--location}, @code{-w}) command line option
-@cindex @code{--location} (@code{--where}, @code{-w}) command line option
-@cindex @code{-w} (@code{--location}, @code{--where}) command line option
-@cindex Info manual location
-@cindex Where is an Info manual?
-Show the filename that would be read and exit, instead of actually
-reading it and starting Info.
-@end table
-
-Finally, Info defines many default key bindings and variables.
-@xref{Custom Key Bindings} for information on how to customize these
-settings.
-
-@c FIXME: the feature with lowercasing the file name isn't documented
-
-
 
 
 @node Variables

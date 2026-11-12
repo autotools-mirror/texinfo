@@ -1,5 +1,10 @@
 2026-11-12  Gavin Smith <gavinsmith0123@gmail.com>
 
+	* doc/info-stnd.texi (Invoking Info):
+	Move node much earlier in the manual.
+
+2026-11-12  Gavin Smith <gavinsmith0123@gmail.com>
+
 	* doc/info-stnd.texi (Top, Stand-alone Info):
 	State the name of the program by which the program is run, "info".
 
