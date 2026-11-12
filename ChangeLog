@@ -1,5 +1,13 @@
 2026-11-12  Patrice Dumas  <pertusus@free.fr>
 
+	* tta/C/convert/convert_to_plaintext.c
+	(convert_to_plaintext_internal),
+	tta/perl/Texinfo/Convert/PlaintextNonXS.pm (_convert): when outputting
+	math as an image call stream_output_add_next, not para_add_next such
+	that an end of line is added if needed (same as for @image).
+
+2026-11-12  Patrice Dumas  <pertusus@free.fr>
+
 	* tta/perl/t/z_misc/paragraph.t (leading spaces ignore columns and
 	keep end lines): remove setting ignore_columns, which does not exist
 	anymore.

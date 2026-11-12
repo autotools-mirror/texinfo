@@ -3446,10 +3446,10 @@ sub _convert($$) {
             # flush before @math, including spaces
             _stream_output_count_nl($self,
                        add_pending_word($formatter->{'container'}, 1));
-            # NOTE same as @image code.  Does not have any effect as leading
-            # spaces in @math are ignored spaces_before_argument.
-            # Add an empty word so that following spaces aren't lost
-            add_next($formatter->{'container'}, '');
+            # add an empty word so that an end of line is added if needed, the
+            # math image formatting may not add anything at all and stream text
+            # directly.
+            _stream_output_add_next($self, '');
             # math rendered as an image, push a count to capture content
             push @{$self->{'count_context'}}, {'lines' => 0,
                                                'index_entry_locations' => [],

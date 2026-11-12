@@ -5014,10 +5014,10 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
                       /* flush before @math, including spaces */
                       const TEXT pending_word = para_add_pending_word (1);
                       stream_output_count_nl (self, pending_word);
-           /* NOTE same as @image code.  Does not have any effect as leading
-              spaces in @math are ignored spaces_before_argument.
-              Add an empty word so that following spaces aren't lost */
-                      para_add_next ("", 0, 0);
+         /* add an empty word so that an end of line is added if needed, the
+            math image formatting may not add anything at all and stream text
+            directly. */
+                      stream_output_add_next (self, "", 0);
 
            /* math rendered as an image, push a count to capture content */
                       push_count_context (&self_plaintext->count_context);
