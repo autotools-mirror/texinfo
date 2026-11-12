@@ -16625,6 +16625,13 @@ requires a working @TeX{} installation, the @samp{preview} package
 of @LaTeX{}, as well as the @command{dvipng} program.  It may be suitable
 for math-heavy documents that are unlikely to be viewed in a text terminal.
 
+The images are generated in a subdirectory of the output directory.
+The subdirectory name is derived from the base name (that is, any
+extension is removed), with @code{_info_images} appended.  For example,
+images for @file{math_manual.texi} would be output into a subdirectory
+named @samp{math_manual_info_images}.  If you copy the Info manual, you
+should copy the subdirectory and the images inside too.
+
 This feature is marked as experimental as it would require extra support
 in Info-viewing programs (currently, only the Info mode of Emacs) to
 view the images correctly.  The images should be visible with existing
