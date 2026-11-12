@@ -424,19 +424,25 @@ info_output (CONVERTER *self, DOCUMENT *document)
   if (self->conf->INFO_MATH_IMAGES.o.integer > 0)
     {
       const char *curdir = ".";
+      char *math_images_dirname;
       char *math_images_dir;
       char *prefix;
       MATH_ELEMENTS_IMAGES *element_images;
 
       call_eval_use_module ("Texinfo::Convert::LaTeX");
 
+      xasprintf (&math_images_dirname, "%s_info_images", document_name);
+
       if (!destination_directory
           || !destination_directory[strspn (destination_directory,
                                             whitespace_chars)]
           || !strcmp (destination_directory, curdir))
-        xasprintf (&math_images_dir, "%s_info_images", document_name);
+        math_images_dir = strdup (math_images_dirname);
       else
-        math_images_dir = strdup (destination_directory);
+        {
+          xasprintf (&math_images_dir, "%s/%s", destination_directory,
+                                       math_images_dirname);
+        }
       xasprintf (&prefix, "%s_info", document_name);
 
       element_images = call_latex_convert_math_to_images (self,
@@ -444,7 +450,10 @@ info_output (CONVERTER *self, DOCUMENT *document)
                                                   math_images_dir);
 
       if (element_images)
-        self_plaintext->element_images = element_images;
+        {
+          self_plaintext->element_images = element_images;
+          self_plaintext->math_images_dirname = math_images_dirname;
+        }
 
       free (prefix);
       free (math_images_dir);

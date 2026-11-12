@@ -989,6 +989,9 @@ plaintext_conversion_finalization (CONVERTER *self)
         }
       free (self_plaintext->element_images);
       self_plaintext->element_images = 0;
+
+      free (self_plaintext->math_images_dirname);
+      self_plaintext->math_images_dirname = 0;
     }
 }
 
@@ -5040,6 +5043,7 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
               if (element_image && element_image->filename)
                 {
                   TEXT math_text;
+                  char *image_file_path;
                    /* flush @math, including spaces */
                   const TEXT pending_word = para_add_pending_word (1);
                   stream_output_count_nl (self, pending_word);
@@ -5058,12 +5062,17 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
                       anchors.number = 0;
                     }
 
+                  xasprintf (&image_file_path, "%s/%s",
+                             self_plaintext->math_images_dirname,
+                             element_image->filename);
+
                   int line_count
-                     = plaintext_insert_image (self, element_image->filename,
+                     = plaintext_insert_image (self, image_file_path,
                              math_text,
                              element_image->dpi, element_image->depth);
                   free (math_text.text);
                   add_lines_count (self, line_count);
+                  free (image_file_path);
                 }
               popped_cmd = pop_context (&self_plaintext->context);
               if (popped_cmd != cmd)
@@ -6850,6 +6859,7 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
           if (element_image->filename)
             {
               static CONST_ELEMENT_LIST anchors;
+              char *image_file_path;
               TEXT math_text = stream_to_text_anchor (self, &anchors);
 
               pop_count_context (&self_plaintext->count_context);
@@ -6863,16 +6873,21 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
                   anchors.number = 0;
                 }
 
+              xasprintf (&image_file_path, "%s/%s",
+                         self_plaintext->math_images_dirname,
+                         element_image->filename);
+
      /* NB we don't output the below-baseline depth for @displaymath as
         it does not need to be aligned with surrounding text. */
               int line_count
-                 = plaintext_insert_image (self, element_image->filename,
+                 = plaintext_insert_image (self, image_file_path,
                              math_text,
                              element_image->dpi, 0);
 
               add_lines_count (self, line_count);
               ensure_end_of_line (self);
               free (math_text.text);
+              free (image_file_path);
             }
 
           self_plaintext->element_images->displaymath_index++;

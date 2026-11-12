@@ -292,18 +292,21 @@ sub output($$) {
   if ($self->get_conf('INFO_MATH_IMAGES')) {
     require Texinfo::Convert::LaTeX;
     Texinfo::Convert::LaTeX->import;
+    my $math_images_dirname = $document_name.'_info_images';
     my $math_images_dir;
     if (!defined($destination_directory) or $destination_directory =~ /^\s*$/
         or $destination_directory eq File::Spec->curdir()) {
-      $math_images_dir = $document_name.'_info_images';
+      $math_images_dir = $math_images_dirname;
     } else {
-      $math_images_dir = $destination_directory;
+      $math_images_dir
+        = join('/', ($destination_directory, $math_images_dirname));
     }
     my ($elements_images, $collected_commands)
         = Texinfo::Convert::LaTeX::convert_math_to_images($self, $document,
                                                     $document_name.'_info',
                                                     $math_images_dir);
     if (defined($elements_images)) {
+      $self->{'math_images_dirname'} = $math_images_dirname;
       $self->{'elements_images'} = $elements_images;
     }
     #if (defined($elements_images)) {

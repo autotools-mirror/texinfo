@@ -237,6 +237,7 @@ typedef struct PLAINTEXT_CONVERTER_STATE {
     C_HASHMAP seen_node_descriptions;
     C_HASHMAP seenmenus;
     MATH_ELEMENTS_IMAGES *element_images;
+    char *math_images_dirname;
     /* added elements during conversion that either are needed until the
        end because they are in tag table or are needed for some time, as
        is the case for footnote added node in case footnotestyle is separate

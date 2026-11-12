@@ -452,9 +452,6 @@ sub conversion_initialization($;$) {
 
   delete $self->{'encoding_object'};
 
-  # for INFO_MATH_IMAGES
-  #$self->{'elements_images'};
-
   $self->set_global_document_commands('before', \@informative_global_commands);
   $self->set_global_document_commands('before', \@contents_commands);
 
@@ -574,7 +571,6 @@ sub converter_destroy($) {
 
   delete $self->{'index_entry_info'};
   delete $self->{'current_node'};
-  delete $self->{'elements_images'};
 }
 
 sub conversion_finalization($) {
@@ -593,6 +589,10 @@ sub conversion_finalization($) {
   }
 
   delete $self->{'target_locations'};
+
+  # for INFO_MATH_IMAGES
+  delete $self->{'elements_images'};
+  delete $self->{'math_images_dirname'};
 }
 
 sub count_context_bug_message($$$) {
@@ -3468,7 +3468,8 @@ sub _convert($$) {
               $self->add_target_location($anchor);
             }
             my $lines_count = _insert_image($self,
-                  $self->{'elements_images'}->{$element}->{'filename'},
+             join('/', ($self->{'math_images_dirname'},
+                        $self->{'elements_images'}->{$element}->{'filename'})),
                   $math_text,
                   $self->{'elements_images'}->{$element}->{'dpi'},
                   $self->{'elements_images'}->{$element}->{'depth'});
@@ -4565,7 +4566,8 @@ sub _convert($$) {
       # it does not need to be aligned with surrounding text.
       my $lines_count
          = _insert_image($self,
-                         $self->{'elements_images'}->{$element}->{'filename'},
+             join('/', ($self->{'math_images_dirname'},
+                        $self->{'elements_images'}->{$element}->{'filename'})),
                          $math_text,
                          $self->{'elements_images'}->{$element}->{'dpi'});
       _add_lines_count($self, $lines_count);
