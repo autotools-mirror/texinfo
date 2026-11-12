@@ -1,5 +1,26 @@
 2026-11-12  Patrice Dumas  <pertusus@free.fr>
 
+	* tta/C/convert/plaintext_paragraph.c,
+	tta/perl/Texinfo/Convert/ParagraphNonXS.pm: rename
+	invisible_pending_word as invisible_word.
+
+	* tta/C/convert/plaintext_paragraph.c (para__add_next),
+	tta/perl/Texinfo/Convert/ParagraphNonXS.pm (_add_next): do not set
+	invisible_word even if word is empty in _add_next, if a caller wants
+	an invisible word, it can call set_space_protection(1) followed by
+	set_space_protection(0).
+
+	* tta/C/convert/plaintext_paragraph.c (para__add_pending_word),
+	tta/perl/Texinfo/Convert/ParagraphNonXS.pm (_add_pending_word):
+	separate condition on invisible_word from condition on word.
+
+	* tta/C/convert/plaintext_paragraph.c (para_set_space_protection)
+	(para__add_pending_word), tta/perl/Texinfo/Convert/ParagraphNonXS.pm
+	(_add_pending_word, set_space_protection): add debug message when
+	setting/unsetting invisible_word.
+
+2026-11-12  Patrice Dumas  <pertusus@free.fr>
+
 	* tta/C/convert/convert_to_plaintext.c
 	(convert_to_plaintext_internal),
 	tta/perl/Texinfo/Convert/PlaintextNonXS.pm (_convert): when outputting

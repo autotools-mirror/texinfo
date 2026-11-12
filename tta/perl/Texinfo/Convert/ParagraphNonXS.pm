@@ -58,8 +58,11 @@ sub new(;$) {
     # state
     'word_counter' => 0, 'space' => '', # 'end_sentence' is unset
     'end_line_count' => 0, 'last_letter' => '', 'word' => '',
-    # When 'word' eq '', this indicates a word of length 0.
-    'invisible_pending_word' => 0,};
+    # This indicates an unbreakable "word", corresponding to @w.  It is useful
+    # if not already in a word and @w{} is empty, such that it is considered
+    # as an "unbreakable" word of length 0.
+    'invisible_word' => 0,
+  };
 
   if (defined($conf)) {
     foreach my $key (keys(%$conf)) {
@@ -100,7 +103,7 @@ sub dump($) {
   my $self = shift;
 
   print STDERR "para ($self->{'counter'}+$self->{'word_counter'}) "
-    ."word(invisible:$self->{'invisible_pending_word'}): $self->{'word'}"
+    ."word(invisible:$self->{'invisible_word'}): $self->{'word'}"
     .", space `$self->{'space'}' "
     ."end_sentence: ".(exists($self->{'end_sentence'})
                                 ? $self->{'end_sentence'} : 'UNSET')."\n";
@@ -173,7 +176,7 @@ sub _add_pending_word($;$) {
 
   my $result = '';
 
-  if ($paragraph->{'word'} eq '' and not $paragraph->{'invisible_pending_word'}
+  if ($paragraph->{'word'} eq '' and not $paragraph->{'invisible_word'}
       and not $add_spaces) {
     print STDERR "ADD_PENDING, nothing to add\n" if ($paragraph->{'debug'});
     return $result;
@@ -195,7 +198,7 @@ sub _add_pending_word($;$) {
     $paragraph->{'counter'} += length($paragraph->{'space'});
     $paragraph->{'space'} = '';
   }
-  if ($paragraph->{'word'} ne '' or $paragraph->{'invisible_pending_word'}) {
+  if ($paragraph->{'word'} ne '') {
     $result .= $paragraph->{'word'};
     $paragraph->{'counter'} += $paragraph->{'word_counter'};
     print STDERR "ADD_WORD[$paragraph->{'word'}]+$paragraph->{'word_counter'}"
@@ -203,7 +206,10 @@ sub _add_pending_word($;$) {
         if ($paragraph->{'debug'});
     $paragraph->{'word'} = '';
     $paragraph->{'word_counter'} = 0;
-    $paragraph->{'invisible_pending_word'} = 0;
+  }
+  if ($paragraph->{'invisible_word'}) {
+    print STDERR "INVISIBLE WORD UNSET\n" if ($paragraph->{'debug'});
+    $paragraph->{'invisible_word'} = 0;
   }
   return $result;
 }
@@ -311,14 +317,10 @@ sub _add_next($;$$$$) {
 
   my $result = '';
 
-  if ($word eq '') {
-    $paragraph->{'invisible_pending_word'} = 1;
+  if ($do_upper_case) {
+    $paragraph->{'word'} .= uc($word);
   } else {
-    if ($do_upper_case) {
-      $paragraph->{'word'} .= uc($word);
-    } else {
-      $paragraph->{'word'} .= $word;
-    }
+    $paragraph->{'word'} .= $word;
   }
 
   # if $set_end_of_sentence, called from add_text, no end of line in
@@ -395,9 +397,11 @@ sub set_space_protection($$) {
   $paragraph->{'no_break'} = $no_break
     if defined($no_break);
 
-  # begin a word, to have something even if empty
+  # add an invisible word, to have something even if empty to put
+  # between spaces.
   if ($no_break and $paragraph->{'word'} eq '') {
-    $paragraph->{'invisible_pending_word'} = 1;
+    print STDERR "INVISIBLE WORD SET\n" if ($paragraph->{'debug'});
+    $paragraph->{'invisible_word'} = 1;
   }
 }
 
@@ -429,7 +433,7 @@ sub add_text($$;$) {
        ."l `$paragraph->{'last_letter'}', "
        ."eos ".(exists($paragraph->{'end_sentence'}) ?
                  $paragraph->{'end_sentence'} : '-2').', '
-       ."w$paragraph->{'invisible_pending_word'} `$paragraph->{'word'}'\n";
+       ."w$paragraph->{'invisible_word'} `$paragraph->{'word'}'\n";
     }
     if (defined($spaces)) {
       print STDERR "SPACES($paragraph->{'counter'}) `"
@@ -466,9 +470,11 @@ sub add_text($$;$) {
             }
           }
         } else { # no_break off
-          my $pending = $paragraph->{'invisible_pending_word'};
+          my $invisible_word = $paragraph->{'invisible_word'};
           $result .= _add_pending_word($paragraph);
-          if ($paragraph->{'counter'} != 0 or $pending) {
+          # checking invisible_word is needed if there is a space before
+          # an empty @w{}
+          if ($paragraph->{'counter'} != 0 or $invisible_word) {
             # If we are at the end of a sentence where two spaces
             # are required.
             if ($at_two_spaces_end_sentence) {

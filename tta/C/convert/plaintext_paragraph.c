@@ -48,8 +48,10 @@ typedef struct PARAGRAPH {
                    the line to be too long, the line should have been cut before
                    saving it. */
 
-    /* When word.end == 0, this indicates a word of length 0. */
-    int invisible_pending_word;
+    /* This indicates an unbreakable "word", corresponding to @w.  It is useful
+       if not already in a word and @w{} is empty, such that it is considered
+       as an "unbreakable" word of length 0. */
+    int invisible_word;
 
     int word_counter;  /* Characters added so far in current word. */
 
@@ -286,7 +288,7 @@ para_end_line (void)
 void
 para__add_pending_word (TEXT *result, int add_spaces)
 {
-  if (state.word.end == 0 && !state.invisible_pending_word && !add_spaces)
+  if (state.word.end == 0 && !state.invisible_word && !add_spaces)
     {
       if (state.debug)
         fprintf (stderr, "ADD_PENDING, nothing to add\n");
@@ -329,7 +331,7 @@ para__add_pending_word (TEXT *result, int add_spaces)
       state.space.end = 0;
     }
 
-  if (state.word.end > 0 || state.invisible_pending_word)
+  if (state.word.end > 0)
     {
       text_append_n (result, state.word.text, state.word.end);
       state.counter += state.word_counter;
@@ -340,7 +342,13 @@ para__add_pending_word (TEXT *result, int add_spaces)
 
       text_reset (&state.word);
       state.word_counter = 0;
-      state.invisible_pending_word = 0;
+    }
+
+  if (state.invisible_word)
+    {
+      state.invisible_word = 0;
+      if (state.debug)
+        fprintf (stderr, "INVISIBLE WORD UNSET\n");
     }
 }
 
@@ -513,10 +521,7 @@ para__add_next (TEXT *result, const char *word, int word_len,
         }
     }
 
-  if (word_len == 0)
-    state.invisible_pending_word = 1;
-  else
-    append_to_word (word, word_len, do_upper_case);
+  append_to_word (word, word_len, do_upper_case);
 
   if (memchr (word, '\n', word_len))
     {
@@ -628,14 +633,16 @@ para_set_space_protection (int no_break)
   if (no_break != -1)
     state.no_break = no_break;
 
- if (no_break != -1 && state.no_break && state.word.end == 0)
-   {
+  if (no_break != -1 && state.no_break && state.word.end == 0)
+    {
      /* In _add_pending_word this meant that an "empty word" would
         be output.  This makes "a @w{} b" -> "a  b", not "a b", and
         "a @w{}" at end of paragraph -> "a ", not "a". */
 
-     state.invisible_pending_word = 1;
-   }
+      state.invisible_word = 1;
+      if (state.debug)
+        fprintf (stderr, "INVISIBLE WORD SET\n");
+    }
 
  return;
 }
@@ -787,7 +794,7 @@ para_add_text (const char *text, int len, int do_upper_case)
                       : para__print_escaped_spaces (state.space.text,
                                                       state.space.end),
                     (char *)last_letter_u8, state.end_sentence,
-                    state.invisible_pending_word,
+                    state.invisible_word,
                     state.word.text);
         }
 
@@ -848,7 +855,7 @@ para_add_text (const char *text, int len, int do_upper_case)
                 }
               else /* no_break off */
                 {
-                  int pending = state.invisible_pending_word;
+                  int pending = state.invisible_word;
                   para__add_pending_word (&result, 0);
 
                   if (state.counter != 0 || pending)
