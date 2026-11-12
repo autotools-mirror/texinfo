@@ -355,8 +355,7 @@ $result .= add_text($para, ' after');
 $result .= Texinfo::Convert::Paragraph::end($para);
 is($result, "aa.))) after\n", 'inhibit end sentence and ))');
 
-$para = Texinfo::Convert::Paragraph::new({'ignore_columns' => 1,
-                                          'keep_end_lines' => 1});
+$para = Texinfo::Convert::Paragraph::new({'keep_end_lines' => 1});
 $result = '';
 $result .= add_text($para, '  aa.) bb.');
 $result .= Texinfo::Convert::Paragraph::end($para);

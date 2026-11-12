@@ -1,3 +1,9 @@
+2026-11-12  Patrice Dumas  <pertusus@free.fr>
+
+	* tta/perl/t/z_misc/paragraph.t (leading spaces ignore columns and
+	keep end lines): remove setting ignore_columns, which does not exist
+	anymore.
+
 2026-11-11  Patrice Dumas  <pertusus@free.fr>
 
 	* tta/C/convert/convert_to_plaintext.c
