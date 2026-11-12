@@ -54,8 +54,8 @@ license to the document, as described in section 6 of the license.
 @node Top
 @top Stand-alone GNU Info
 
-This documentation describes the stand-alone Info reader which you can
-use to read Info documentation.
+This documentation describes @command{info}, the stand-alone Info reader
+which you can use to read Info documentation.
 
 If you are new to the Info reader, then you can get started by typing
 @samp{H} for a list of basic key bindings.  You can read through the
@@ -68,7 +68,7 @@ and @key{Backspace}) to move forwards and backwards in it.
 @nodedescription What is Info?
 @chapter Stand-alone Info
 
-The @dfn{Info} program described here is a stand-alone program, part
+The @command{info} program described here is a stand-alone program, part
 of the Texinfo distribution, which is used to view Info files on a
 text terminal.  @dfn{Info files} are typically the result of
 processing Texinfo files with the program @code{texi2any} (also in the
