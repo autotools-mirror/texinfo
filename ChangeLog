@@ -1,5 +1,24 @@
 2026-11-14  Patrice Dumas  <pertusus@free.fr>
 
+	* tta/C/convert/plaintext_paragraph.c
+	(para__reset_state_for_end_line, para__add_next_word),
+	tta/perl/Texinfo/Convert/ParagraphNonXS.pm (_reset_state_for_end_line)
+	(_add_next_word): rename _end_line as _reset_state_for_end_line and
+	_add_next as _add_next_word, and do similar renaming in C.  Update
+	callers.
+
+	* tta/C/convert/plaintext_paragraph.c
+	(para_add_pending_word_internal),
+	tta/perl/Texinfo/Convert/ParagraphNonXS.pm (add_pending_word): remove
+	_add_pending_word in Perl use directly add_pending_word.  Update
+	callers.  In C, rename para__add_pending_word as
+	para_add_pending_word_internal, update callers.
+
+	* tta/perl/Texinfo/Convert/ParagraphNonXS.pm: move _cut_line later
+	and end_line earlier in the file.
+
+2026-11-14  Patrice Dumas  <pertusus@free.fr>
+
 	* tta/C/convert/plaintext_paragraph.c (para__cut_line)
 	(para__add_next, para_add_text),
 	tta/perl/Texinfo/Convert/ParagraphNonXS.pm (_cut_line, _add_next)

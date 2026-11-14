@@ -219,7 +219,7 @@ PARA_CONF_VARIABLES_LIST
 /* End a line, throwing away a pending space.
  */
 static void
-para__end_line (void)
+para__reset_state_for_end_line (void)
 {
   state.counter = 0;
   state.space.end = 0;
@@ -258,7 +258,7 @@ para__cut_line (int column_counts)
     return 0;
   else
     {
-      para__end_line ();
+      para__reset_state_for_end_line ();
       return 1;
     }
 }
@@ -279,15 +279,15 @@ static const TEXT_AND_LINE_COUNT new_line_text = {{"\n", 1, 1}, 1};
 TEXT_AND_LINE_COUNT
 para_end_line (void)
 {
-  para__end_line ();
+  para__reset_state_for_end_line ();
   return new_line_text;
 }
 
 /* Append to RESULT pending space followed by pending word, clearing them
    afterwards.  Assume we don't need to wrap a line.  Only add spaces without a
    word if ADD_SPACES. */
-void
-para__add_pending_word (TEXT *result, int add_spaces)
+static void
+para_add_pending_word_internal (TEXT *result, int add_spaces)
 {
   if (state.word.end == 0 && !state.invisible_word && !add_spaces)
     {
@@ -362,7 +362,7 @@ para_add_pending_word (int add_spaces)
   static TEXT ret;
 
   text_reset (&ret);
-  para__add_pending_word (&ret, add_spaces);
+  para_add_pending_word_internal (&ret, add_spaces);
   return ret;
 }
 
@@ -381,7 +381,7 @@ para_end (void)
   /* cleaner if the paragraph is reused */
   state.last_letter = (char32_t) '\0';
 
-  para__add_pending_word (&ret.text, state.add_final_space);
+  para_add_pending_word_internal (&ret.text, state.add_final_space);
   if (!state.no_final_newline && state.counter != 0)
     {
       text_append_n (&ret.text, "\n", 1);
@@ -434,7 +434,7 @@ append_to_word (const char *text, size_t len, int do_upper_case)
 /* Add WORD to paragraph.
    If we go past the end of the line, fill RESULT and start a new one.
    TRANSPARENT means that the letters in WORD are ignored for the purpose
-   of deciding whether a full stop ends a sentence or not.
+   of deciding whether end sentence punctuation ends a sentence or not.
    If COL_COUNT is non-negative, it is the number of screen columns taken up
     by the word; it is non-negative if called from add_text, if called from
    add_next, COL_COUNT is always negative.
@@ -442,10 +442,14 @@ append_to_word (const char *text, size_t len, int do_upper_case)
    related states.
    If DO_UPPER_CASE is set, upper-case the text after having determined
    if an upper-case letter precedes end sentence punctuation.
+
+   Note that DO_UPPER_CASE happens only with COL_COUNT non-negative and
+   TRANSPARENT only with a negative COL_COUNT  but it would not be an issue
+   if it was not the case.
  */
 static int
-para__add_next (TEXT *result, const char *word, int word_len,
-                int transparent, int col_count, int do_upper_case)
+para__add_next_word (TEXT *result, const char *word, int word_len,
+                     int transparent, int col_count, int do_upper_case)
 {
   if (!word)
     return 0;
@@ -498,10 +502,9 @@ para__add_next (TEXT *result, const char *word, int word_len,
           state.last_letter = wc;
         }
 
-      /* called from add_text */
+      /* called from add_text.  Set/unset state.end_sentence. */
       if (col_count >= 0)
         {
-          /* Set/unset state.end_sentence. */
           /* Doesn't count if preceded by an upper-case letter. */
           if (end_sentence && !uc_is_upper (state.last_letter))
             {
@@ -530,13 +533,13 @@ para__add_next (TEXT *result, const char *word, int word_len,
     {
       /* If there was a newline in the word we just added, put the entire
          pending ouput in the results string, and start a new line. */
-      para__add_pending_word (result, 0);
-      para__end_line ();
+      para_add_pending_word_internal (result, 0);
+      para__reset_state_for_end_line ();
       end_line_count++;
     }
   else
     {
-     if (col_count >= 0)
+      if (col_count >= 0)
         state.word_counter += col_count;
       else
         {
@@ -603,7 +606,7 @@ para_add_next (const char *text, int text_len, int transparent)
 
   text_reset (&t.text);
   t.line_count
-   = para__add_next (&t.text, text, text_len, transparent, -1, 0);
+   = para__add_next_word (&t.text, text, text_len, transparent, -1, 0);
 
   return t;
 }
@@ -679,7 +682,7 @@ para_add_text (const char *text, int len, int do_upper_case)
      next_type.  We do not have two type_regular blocks in a row so there
      is no chance of this being overwritten before it is used.  It is
      zeroed when the block is output. */
-  /* Being non-negative in para__add_next call also triggers setting
+  /* Being non-negative in para__add_next_word call also triggers setting
      end of sentence related states */
   int regular_col_count = 0;
 
@@ -819,10 +822,10 @@ para_add_text (const char *text, int len, int do_upper_case)
 
           if (state.unfilled)
             {
-              para__add_pending_word (&result.text, 0);
+              para_add_pending_word_internal (&result.text, 0);
               if (memchr (p, '\n', q - p))
                 {
-                   para__end_line ();
+                   para__reset_state_for_end_line ();
                    text_append_n (&result.text, "\n", 1);
                    end_line_count++;
                 }
@@ -864,7 +867,7 @@ para_add_text (const char *text, int len, int do_upper_case)
               else /* no_break off */
                 {
                   int pending = state.invisible_word;
-                  para__add_pending_word (&result.text, 0);
+                  para_add_pending_word_internal (&result.text, 0);
 
                   if (state.counter != 0 || pending)
                     {
@@ -899,7 +902,7 @@ para_add_text (const char *text, int len, int do_upper_case)
 
               if (state.keep_end_lines && memchr (p, '\n', q - p))
                 {
-                  para__end_line ();
+                  para__reset_state_for_end_line ();
                   text_append_n (&result.text, "\n", 1);
                   end_line_count++;
                 }
@@ -936,7 +939,7 @@ para_add_text (const char *text, int len, int do_upper_case)
             /* accumulate the characters in result as soon as possible,
                such that end of line can be added directly after the last
                double-width character when over the max number on a line. */
-              para__add_pending_word (&result.text, 0);
+              para_add_pending_word_internal (&result.text, 0);
             }
           state.end_sentence = eos_unset;
         }
@@ -944,8 +947,8 @@ para_add_text (const char *text, int len, int do_upper_case)
       else if (type == type_regular)
         {
           int line_count
-            = para__add_next (&result.text, p, q - p, 0, regular_col_count,
-                              do_upper_case);
+            = para__add_next_word (&result.text, p, q - p, 0,
+                                   regular_col_count, do_upper_case);
           end_line_count += line_count;
           regular_col_count = 0;
         }

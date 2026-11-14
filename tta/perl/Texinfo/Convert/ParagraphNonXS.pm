@@ -109,6 +109,42 @@ sub dump($) {
                                 ? $self->{'end_sentence'} : 'UNSET')."\n";
 }
 
+sub add_to_counter($$) {
+  my ($paragraph, $n) = @_;
+
+  $paragraph->{'counter'} += $n;
+}
+
+sub counter($) {
+  my $paragraph = shift;
+
+  return $paragraph->{'counter'};
+}
+
+# End a line, throwing away a pending space.  The caller should add
+# a new line and increase/set the lines count.
+sub _reset_state_for_end_line($) {
+  my $paragraph = shift;
+
+  $paragraph->{'counter'} = 0;
+  $paragraph->{'space'} = '';
+  # do not reset in case it is an end of command and we want to keep
+  # the information about upper-case letter
+  #$paragraph->{'last_letter'} = '';
+  if (defined($paragraph->{'indent_length_next'})) {
+    $paragraph->{'indent_length'} = $paragraph->{'indent_length_next'};
+    delete $paragraph->{'indent_length_next'};
+  }
+  print STDERR "END_LINE\n" if ($paragraph->{'debug'});
+}
+
+sub end_line($) {
+  my $paragraph = shift;
+
+  _reset_state_for_end_line($paragraph);
+  return ("\n", 1);
+}
+
 # Return 1 if the line should be cut.
 # Verify that conditions are met to add a new line before the new space
 # and word.
@@ -126,55 +162,13 @@ sub _cut_line($$) {
       or $paragraph->{'counter'} == 0) {
     return 0;
   } else {
-    _end_line($paragraph);
+    _reset_state_for_end_line($paragraph);
     return 1;
   }
 }
 
-sub add_to_counter($$) {
-  my ($paragraph, $n) = @_;
-
-  $paragraph->{'counter'} += $n;
-}
-
-
-sub counter($) {
-  my $paragraph = shift;
-
-  return $paragraph->{'counter'};
-}
-
-sub end_line($) {
-  my $paragraph = shift;
-
-  _end_line($paragraph);
-  return ("\n", 1);
-}
-
-# End a line, throwing away a pending space.
-sub _end_line($) {
-  my $paragraph = shift;
-
-  $paragraph->{'counter'} = 0;
-  $paragraph->{'space'} = '';
-  # do not reset in case it is an end of command and we want to keep
-  # the information about upper-case letter
-  #$paragraph->{'last_letter'} = '';
-  if (defined($paragraph->{'indent_length_next'})) {
-    $paragraph->{'indent_length'} = $paragraph->{'indent_length_next'};
-    delete $paragraph->{'indent_length_next'};
-  }
-  print STDERR "END_LINE\n" if ($paragraph->{'debug'});
-}
-
-sub add_pending_word($;$) {
-  my ($paragraph, $add_spaces) = @_;
-
-  return _add_pending_word($paragraph, $add_spaces);
-}
-
 # put a pending word and spaces in the result string.
-sub _add_pending_word($;$) {
+sub add_pending_word($;$) {
   my ($paragraph, $add_spaces) = @_;
 
   my $result = '';
@@ -223,7 +217,7 @@ sub end($) {
 
   my $end_line_count = 0;
   print STDERR "PARA END\n" if ($paragraph->{'debug'});
-  my $result = _add_pending_word($paragraph, $paragraph->{'add_final_space'});
+  my $result = add_pending_word($paragraph, $paragraph->{'add_final_space'});
   # cleaner if the paragraph is reused
   $paragraph->{'last_letter'} = '';
   if (!$paragraph->{'no_final_newline'} and $paragraph->{'counter'} != 0) {
@@ -249,11 +243,11 @@ my $end_sentence_characters = quotemeta('.?!');
 # an @*ref before end sentence punctuation
 my $after_punctuation_characters = quotemeta('"\')]'."\x{7f}");
 
-# Add $WORD to paragraph, returning the text to be added to the paragraph.
+# Add $WORD to paragraph.
 sub add_next($;$$) {
   my ($paragraph, $word, $transparent) = @_;
 
-  return _add_next($paragraph, $word, $transparent);
+  return _add_next_word($paragraph, $word, $transparent);
 }
 
 # Values for 'end_sentence'.
@@ -265,14 +259,24 @@ use constant {
   eos_present_frenchspacing => -1,
 };
 
-# add a word.
+# add $WORD to $PARAGRPAH.
+# If we go past the end of the line, fill the result string and start
+# a new one.
+# $TRANSPARENT means that the letters in $WORD are ignored for the purpose
+# of deciding whether end sentence punctuation ends a sentence or not.
 # If $DO_UPPER_CASE is set, upper-case the text after having determined
 # if an upper-case letter precedes end sentence punctuation.
 # If $SET_END_SENTENCE is set, the function is called through add_text and the
 # end of sentence states should be set/unset.  If not set, the function is
 # called through add_next, and the end of sentence states are not set/unset.
-# 'last_letter' is set in any case, if not in unfilled container.
-sub _add_next($;$$$$) {
+# 'last_letter' is set in both case, if not in unfilled container.
+# Also, if called from add_text, there cannot be spaces in $WORD, if called
+# from add_next there can be anything (in particular spaces and end of lines).
+#
+# Note that $DO_UPPER_CASE happens only with $SET_END_SENTENCE and $TRANSPARENT
+# only with $SET_END_SENTENCE unset, but it would not be an issue if it was
+# not the case.
+sub _add_next_word($;$$$$) {
   my ($paragraph, $word, $transparent, $do_upper_case,
       $set_end_of_sentence) = @_;
 
@@ -332,8 +336,8 @@ sub _add_next($;$$$$) {
   # word, spaces are handled separately.
   # end of line in word can only happen when called for 'raw' text.
   if (not $set_end_of_sentence and $word =~ /\n/) {
-    $result .= _add_pending_word($paragraph);
-    _end_line($paragraph);
+    $result .= add_pending_word($paragraph);
+    _reset_state_for_end_line($paragraph);
     $end_line_count++;
   } else {
     $paragraph->{'word_counter'}
@@ -394,7 +398,6 @@ sub set_double_width_no_break($$) {
   $paragraph->{'double_width_no_break'} = $val;
 }
 
-
 sub set_space_protection($$) {
   my ($paragraph, $no_break) = @_;
 
@@ -443,9 +446,9 @@ sub add_text($$;$) {
       print STDERR "SPACES($paragraph->{'counter'}) `"
           ._print_escaped_spaces($spaces)."'\n" if $debug_flag;
       if ($paragraph->{'unfilled'}) {
-        $result .= _add_pending_word($paragraph);
+        $result .= add_pending_word($paragraph);
         if ($spaces =~ /\n/) {
-          _end_line($paragraph);
+          _reset_state_for_end_line($paragraph);
           $end_line_count++;
           $result .= "\n";
         } else {
@@ -474,7 +477,7 @@ sub add_text($$;$) {
           }
         } else { # no_break off
           my $invisible_word = $paragraph->{'invisible_word'};
-          $result .= _add_pending_word($paragraph);
+          $result .= add_pending_word($paragraph);
           # checking invisible_word is needed if there is a space before
           # an empty @w{}
           if ($paragraph->{'counter'} != 0 or $invisible_word) {
@@ -500,7 +503,7 @@ sub add_text($$;$) {
           }
         }
         if ($paragraph->{'keep_end_lines'} and $spaces =~ /\n/) {
-          _end_line($paragraph);
+          _reset_state_for_end_line($paragraph);
           $end_line_count++;
           $result .= "\n";
         }
@@ -509,7 +512,7 @@ sub add_text($$;$) {
     } elsif (defined($added_word)) {
       # regular text
       my ($result_text, $line_count)
-        = _add_next($paragraph, $added_word, undef, $do_upper_case, 1);
+        = _add_next_word($paragraph, $added_word, undef, $do_upper_case, 1);
       $result .= $result_text;
       $end_line_count += $line_count;
     } elsif (defined($fullwidth_segment)) {
@@ -541,7 +544,7 @@ sub add_text($$;$) {
         # accumulate the characters in result as soon as possible,
         # such that end of line can be added directly after the last
         # double-width character when over the max number on a line.
-        $result .= _add_pending_word($paragraph);
+        $result .= add_pending_word($paragraph);
       }
       delete $paragraph->{'end_sentence'};
     }
