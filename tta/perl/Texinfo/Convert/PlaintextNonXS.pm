@@ -1093,13 +1093,13 @@ sub _stream_output_add_text($$;$) {
 
 # Pass $TEXT to add_next and output the resulting text.  Used for
 # concision in calling code.
-sub _stream_output_add_next($$) {
-  my ($self, $text) = @_;
+sub _stream_output_add_next($$;$) {
+  my ($self, $text, $transparent) = @_;
 
   my $container = $self->{'formatters'}->[-1]->{'container'};
-  my $output = add_next($container, $text);
+  my ($output, $count) = add_next($container, $text, $transparent);
 
-  _stream_output_count_nl($self, $output);
+  _stream_output_nl($self, $output, $count);
 
   return;
 }
@@ -3063,15 +3063,11 @@ sub _convert($$) {
         if ($accented_text ne '');
       return;
     } elsif (defined($type) and $type eq 'definfoenclose_command') {
-      _stream_output_count_nl($self,
-                       add_next($formatter->{'container'},
-                                $element->{'extra'}->{'begin'}, 1));
+      _stream_output_add_next($self, $element->{'extra'}->{'begin'}, 1);
       if (exists($element->{'contents'})) {
         _convert($self, $element->{'contents'}->[0]);
       }
-      _stream_output_count_nl($self,
-                       add_next($formatter->{'container'},
-                                $element->{'extra'}->{'end'}, 1));
+      _stream_output_add_next($self, $element->{'extra'}->{'end'}, 1);
       return;
     } elsif (exists($brace_commands{$cmdname})) {
       my ($is_quoted_command, $is_double_quoted_command, $is_asis_command);
@@ -3126,8 +3122,7 @@ sub _convert($$) {
         if (exists($non_quoted_commands_when_nested{$cmdname})) {
           $formatter->{'font_type_stack'}->[-1]->{'code_command'}++;
         }
-        _stream_output_count_nl($self,
-                       add_next($formatter->{'container'}, $text_before, 1))
+        _stream_output_add_next($self, $text_before, 1)
            if (defined($text_before));
         if (exists($element->{'contents'})) {
           _convert($self, $element->{'contents'}->[0]);
@@ -3143,8 +3138,7 @@ sub _convert($$) {
                              $element->{'source_info'});
           }
         }
-        _stream_output_count_nl($self,
-                       add_next($formatter->{'container'}, $text_after, 1))
+        _stream_output_add_next($self, $text_after, 1)
            if (defined($text_after));
         if ($cmdname eq 'w') {
           $formatter->{'w'}--;
@@ -3394,9 +3388,7 @@ sub _convert($$) {
         if (!$self->{'in_copying_header'}) {
           $self->format_error_outside_of_any_node($element);
         }
-        _stream_output_count_nl($self,
-             add_next($formatter->{'container'},
-                      "($formatted_footnote_number)", 1));
+        _stream_output_add_next($self, "($formatted_footnote_number)", 1);
         $self->format_reference_to_footnote();
         return;
       } elsif ($cmdname eq 'anchor' or $cmdname eq 'namedanchor') {

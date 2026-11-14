@@ -144,6 +144,7 @@ info_header (CONVERTER *self, const char *input_basefile,
   const char *program = self->conf->PROGRAM.o.string;
   const char *version = self->conf->PACKAGE_VERSION.o.string;
   TEXT para_text;
+  TEXT_AND_LINE_COUNT new_next;
   TEXT new_text;
 
   FORMATTER heading_formatter = new_paragraph_formatter (self, 0, -1);
@@ -153,8 +154,8 @@ info_header (CONVERTER *self, const char *input_basefile,
   new_text = para_add_text ("This is ", 8, 0);
   text_append_n (&para_text, new_text.text, new_text.end);
   /* This ensures that spaces in file are kept. */
-  new_text = para_add_next (output_filename, strlen (output_filename), 0);
-  text_append_n (&para_text, new_text.text, new_text.end);
+  new_next = para_add_next (output_filename, strlen (output_filename), 0);
+  text_append_n (&para_text, new_next.text.text, new_next.text.end);
   if (program && strcmp (program, ""))
     {
       char *program_version;
@@ -170,9 +171,9 @@ info_header (CONVERTER *self, const char *input_basefile,
       new_text = para_add_text (str, strlen (str), 0);
       text_append_n (&para_text, new_text.text, new_text.end);
     }
-  new_text = para_add_next (input_basefile, strlen (input_basefile), 0);
-  if (new_text.text)
-    text_append_n (&para_text, new_text.text, new_text.end);
+  new_next = para_add_next (input_basefile, strlen (input_basefile), 0);
+  if (new_next.text.text)
+    text_append_n (&para_text, new_next.text.text, new_next.text.end);
   new_text = para_add_text (".", 1, 0);
   if (new_text.text)
     text_append_n (&para_text, new_text.text, new_text.end);
@@ -1438,7 +1439,7 @@ info_format_ref (CONVERTER *self, enum command_id cmd,
     free (node_name);
 
   if (quoting_required)
-    stream_output_add_next (self, node_quote, 1);
+    stream_output_add_next (self, node_quote, 1, 0);
 
   if (label_element || node_element)
     {
@@ -1469,10 +1470,10 @@ info_format_ref (CONVERTER *self, enum command_id cmd,
     }
 
   if (quoting_required)
-    stream_output_add_next (self, node_quote, 1);
+    stream_output_add_next (self, node_quote, 1, 0);
 
   if (!name)
-    stream_output_add_next (self, "::", 2);
+    stream_output_add_next (self, "::", 2, 0);
 
   /* Check if punctuation follows the ref command with a label
      argument.  If not, add a full stop. */

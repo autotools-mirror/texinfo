@@ -46,7 +46,7 @@ void para_set_conf_##variable (int variable);
 int para_new (void);
 
 void para_set_state (int paragraph);
-TEXT para_add_next (const char *, int, int transparent);
+TEXT_AND_LINE_COUNT para_add_next (const char *, int, int transparent);
 TEXT para_add_text (const char *, int, int do_upper_case);
 void para_set_space_protection (int no_break);
 void para__end_line (void);

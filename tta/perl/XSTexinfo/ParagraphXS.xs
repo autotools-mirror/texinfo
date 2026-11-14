@@ -219,36 +219,31 @@ para_add_text (int paragraph, SV *text_in, SV *do_upper_case_in=0)
     OUTPUT:
         RETVAL
 
-SV *
-para_add_next (int paragraph, text_in, ...)
-        SV *text_in
+void
+para_add_next (int paragraph, SV *text_in, SV *transparent_in=0)
     PREINIT:
         char *text;
         STRLEN text_len;
-        TEXT retval;
-        SV *arg_in;
         int transparent = 0;
-    CODE:
-        items -= 2;
-        if (items > 0)
-          {
-            items--;
-            arg_in = ST(2);
-            if (SvOK(arg_in))
-              transparent = (int)SvIV(arg_in);
-          }
+        TEXT_AND_LINE_COUNT retval;
+        SV *text_sv;
+        SV *count_sv;
+    PPCODE:
+        if (transparent_in && SvOK(transparent_in))
+          transparent = (int)SvIV(transparent_in);
 
         text = SvPVutf8 (text_in, text_len);
 
         para_set_state (paragraph);
         retval = para_add_next (text, text_len, transparent);
 
-        RETVAL = newSVpv (retval.text ? retval.text : "", retval.end);
-        SvUTF8_on (RETVAL);
+        text_sv = newSVpv (retval.text.text, retval.text.end);
+        SvUTF8_on (text_sv);
+        count_sv = newSViv (retval.line_count);
 
-    OUTPUT:
-        RETVAL
-
+        EXTEND(SP, 2);
+        PUSHs(sv_2mortal(text_sv));
+        PUSHs(sv_2mortal(count_sv));
 
 void
 para_remove_end_sentence (int paragraph)

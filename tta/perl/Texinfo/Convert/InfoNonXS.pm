@@ -114,7 +114,9 @@ sub _info_header($$$) {
   my $paragraph = $formatter->{'container'};
   my $para_text = add_text($paragraph, "This is ");
   # This ensures that spaces in file are kept.
-  $para_text .= add_next($paragraph, $output_filename);
+  my $text;
+  ($text, undef) = add_next($paragraph, $output_filename);
+  $para_text .= $text;
   my $program = $self->get_conf('PROGRAM');
   my $version = $self->get_conf('PACKAGE_VERSION');
   if (defined($program) and $program ne '') {
@@ -123,7 +125,8 @@ sub _info_header($$$) {
   } else {
     $para_text .= add_text($paragraph, ", produced from ");
   }
-  $para_text .= add_next($paragraph, $input_basefile);
+  ($text, undef) = add_next($paragraph, $input_basefile);
+  $para_text .= $text;
   $para_text .= add_text($paragraph, '.');
   my ($result_text, undef) = Texinfo::Convert::Paragraph::end($paragraph);
   $para_text .= $result_text;

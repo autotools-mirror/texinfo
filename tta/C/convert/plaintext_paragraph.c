@@ -596,16 +596,16 @@ para__add_next (TEXT *result, const char *word, int word_len,
   return end_line_count;
 }
 
-/* Note that t.text can be NULL if the text added does not start
+/* Note that t.text.text can be NULL if the text added does not start
    a new line and accumulate in the paragraphe word. */
-TEXT
+TEXT_AND_LINE_COUNT
 para_add_next (const char *text, int text_len, int transparent)
 {
-  static TEXT t;
+  static TEXT_AND_LINE_COUNT t;
 
-  text_reset (&t);
-  state.end_line_count
-   = para__add_next (&t, text, text_len, transparent, -1, 0);
+  text_reset (&t.text);
+  t.line_count
+   = para__add_next (&t.text, text, text_len, transparent, -1, 0);
 
   return t;
 }

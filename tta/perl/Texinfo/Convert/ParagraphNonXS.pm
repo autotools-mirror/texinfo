@@ -251,9 +251,7 @@ my $after_punctuation_characters = quotemeta('"\')]'."\x{7f}");
 sub add_next($;$$) {
   my ($paragraph, $word, $transparent) = @_;
 
-  my ($result, $end_line_count) = _add_next($paragraph, $word, $transparent);
-  $paragraph->{'end_line_count'} = $end_line_count;
-  return $result;
+  return _add_next($paragraph, $word, $transparent);
 }
 
 # Values for 'end_sentence'.
