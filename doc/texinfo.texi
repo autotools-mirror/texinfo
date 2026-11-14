@@ -2377,6 +2377,27 @@ with nodes, and cannot be cross-referenced.  These heading commands
 never start a new page.
 @end itemize
 
+Here is a summary of these commands:
+
+@tex
+{\globaldefs=1 \smallfonts \rm}
+@end tex
+
+@multitable @columnfractions .21 .28 .29 .22
+@headitem Numbered@*@i{In contents}
+@tab Lettered/numbered@*@i{In contents}
+@tab Unnumbered@*@i{In contents}
+@tab Unnumbered@*@i{Not in contents}@*@i{No new page}
+@item @t{@@chapter}       @tab @t{@@appendix}          @tab @t{@@unnumbered}          @tab @t{@@majorheading}/@*@t{@@chapheading}
+@item @t{@@section}       @tab @t{@@appendixsec}       @tab @t{@@unnumberedsec}       @tab @t{@@heading}
+@item @t{@@subsection}    @tab @t{@@appendixsubsec}    @tab @t{@@unnumberedsubsec}    @tab @t{@@subheading}
+@item @t{@@subsubsection} @tab @t{@@appendixsubsubsec} @tab @t{@@unnumberedsubsubsec} @tab @t{@@subsubheading}
+@end multitable
+@tex
+{\globaldefs=1 \textfonts \rm}
+@end tex
+
+
 In printed output, the chapter structuring commands produce headings
 in the document.  When a @code{@@setchapternewpage} command says to do so, the
 @code{@@chapter}, @code{@@unnumbered}, and @code{@@appendix} commands
@@ -2410,26 +2431,6 @@ The produced element includes all following sections up to the next command
 at the same or higher level.
 For example, a @code{<chapter>} element is produced for @code{@@chapter},
 and contains any sections or subsections in the chapter.
-
-Here is a summary:
-
-@tex
-{\globaldefs=1 \smallfonts \rm}
-@end tex
-
-@multitable @columnfractions .19 .30 .29 .22
-@item                        @tab                              @tab                       @tab No new page
-@item @i{Numbered}           @tab @i{Unnumbered}               @tab @i{Lettered/numbered} @tab @i{Unnumbered}
-@item In contents            @tab In contents                  @tab In contents           @tab Not in contents
-@item                        @tab @code{@@top}                 @tab                       @tab @code{@@majorheading}
-@item @code{@@chapter}       @tab @code{@@unnumbered}          @tab @code{@@appendix} @tab @code{@@chapheading}
-@item @code{@@section}       @tab @code{@@unnumberedsec}       @tab @code{@@appendixsec} @tab @code{@@heading}
-@item @code{@@subsection}    @tab @code{@@unnumberedsubsec}    @tab @code{@@appendixsubsec} @tab @code{@@subheading}
-@item @code{@@subsubsection} @tab @code{@@unnumberedsubsubsec} @tab @code{@@appendixsubsubsec} @tab @code{@@subsubheading}
-@end multitable
-@tex
-{\globaldefs=1 \textfonts \rm}
-@end tex
 
 
 @node @code{@@top} Command
@@ -2531,7 +2532,7 @@ output as the element title as usual.
 @findex chapheading
 
 The @code{@@majorheading} and @code{@@chapheading} commands produce
-chapter-like headings in the body of a document.
+chapter-level headings in the body of a document.
 
 However, neither command produces an entry in the table of contents,
 and neither command causes @TeX{} to start a new page in a printed

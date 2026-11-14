@@ -1,5 +1,18 @@
 2026-11-14  Gavin Smith <gavinsmith0123@gmail.com>
 
+	* doc/texinfo.texi (Structuring Command Types):
+	Revise formatting of table so that @majorheading does not appear
+	at the same level as @top, as this appears not be the case.  Remove
+	@top from the table.  Reorder columns so that the command types are
+	presented in the same order they are introduced in the text.  Define
+	heading row of @multitable using @headitem.  Place summary table
+	earlier in node, before detailed information.
+	(@majorheading @chapheading):
+	Change "chapter-like" to "chapter-level" to emphasize that these
+	commands are at the same structural level.
+
+2026-11-14  Gavin Smith <gavinsmith0123@gmail.com>
+
 	@raise/lowersections affects @majorheading
 
 	* doc/texinfo.tex (\majorheading): If at a different level to
