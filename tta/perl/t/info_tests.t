@@ -7,8 +7,6 @@ use Texinfo::Configure;
 
 use Texinfo::XSLoader;
 
-my $XS_convert = Texinfo::XSLoader::XS_modules_enabled();
-
 require 't/test_utils.pl';
 
 my $invalid_node_name_text = '
