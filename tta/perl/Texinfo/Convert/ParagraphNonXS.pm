@@ -230,8 +230,7 @@ sub end($) {
     $result .= "\n";
     $end_line_count++;
   }
-  $paragraph->{'end_line_count'} = $end_line_count;
-  return $result;
+  return ($result, $end_line_count);
 }
 
 sub destroy($) {

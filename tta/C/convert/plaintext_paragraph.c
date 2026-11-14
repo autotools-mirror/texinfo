@@ -368,13 +368,13 @@ para_add_pending_word (int add_spaces)
 }
 
 /* End a paragraph. */
-TEXT
+TEXT_AND_LINE_COUNT
 para_end (void)
 {
-  static TEXT ret;
+  static TEXT_AND_LINE_COUNT ret;
   int end_line_count = 0;
 
-  text_reset (&ret);
+  text_reset (&ret.text);
 
   if (state.debug)
     fprintf (stderr, "PARA END\n");
@@ -382,14 +382,14 @@ para_end (void)
   /* cleaner if the paragraph is reused */
   state.last_letter = (char32_t) '\0';
 
-  para__add_pending_word (&ret, state.add_final_space);
+  para__add_pending_word (&ret.text, state.add_final_space);
   if (!state.no_final_newline && state.counter != 0)
     {
-      text_append_n (&ret, "\n", 1);
+      text_append_n (&ret.text, "\n", 1);
       end_line_count++;
     }
 
-  state.end_line_count = end_line_count;
+  ret.line_count = end_line_count;
   return ret;
 }
 

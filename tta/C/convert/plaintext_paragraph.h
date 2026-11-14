@@ -51,7 +51,7 @@ TEXT para_add_text (const char *, int, int do_upper_case);
 void para_set_space_protection (int no_break);
 void para__end_line (void);
 TEXT para_end_line (void);
-TEXT para_end (void);
+TEXT_AND_LINE_COUNT para_end (void);
 void para_destroy (void);
 TEXT para_add_pending_word (int add_spaces);
 void para_allow_end_sentence (void);

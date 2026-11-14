@@ -27,7 +27,9 @@ sub test_para($$$;$) {
   foreach my $arg (@$args) {
     $result .= add_text($para, $arg);
   }
-  $result .= Texinfo::Convert::Paragraph::end($para);
+  my $result_end;
+  ($result_end, undef) = Texinfo::Convert::Paragraph::end($para);
+  $result .= $result_end;
   if (defined($reference)) {
     is($result, $reference, $name);
   } else {
@@ -139,10 +141,12 @@ test_para(['aaaa bbbbbbb cccccccc dddddddddddd'],
 
 my $para = Texinfo::Convert::Paragraph::new();
 my $result = '';
+my $result_end;
 $result .= add_text($para, 'aa.)');
 $result .= add_next($para, '_');
 $result .= add_text($para, ' after');
-$result .= Texinfo::Convert::Paragraph::end($para);
+($result_end, undef) = Texinfo::Convert::Paragraph::end($para);
+$result .= $result_end;
 is($result, "aa.)_  after\n", 'add char after end sentence parentheses');
 
 $para = Texinfo::Convert::Paragraph::new();
@@ -152,7 +156,8 @@ $result .= add_next($para, '_');
 $result .= add_text($para, '.');
 $result .= add_next($para, '_');
 $result .= add_text($para, ' after');
-$result .= Texinfo::Convert::Paragraph::end($para);
+($result_end, undef) = Texinfo::Convert::Paragraph::end($para);
+$result .= $result_end;
 is($result, "b _._  after\n", 'add char after end sentence');
 
 $para = Texinfo::Convert::Paragraph::new();
@@ -160,14 +165,16 @@ $result = '';
 $result .= add_next($para, 'a');
 $result .= add_next($para, "\n");
 $result .= add_next($para, '_');
-$result .= Texinfo::Convert::Paragraph::end($para);
+($result_end, undef) = Texinfo::Convert::Paragraph::end($para);
+$result .= $result_end;
 is($result, "a\n_\n", 'add_next: add char after separate end line');
 
 $para = Texinfo::Convert::Paragraph::new();
 $result = '';
 $result .= add_next($para, "a\n");
 $result .= add_next($para, '_');
-$result .= Texinfo::Convert::Paragraph::end($para);
+($result_end, undef) = Texinfo::Convert::Paragraph::end($para);
+$result .= $result_end;
 is($result, "a\n_\n", 'add_next: add char after end line');
 
 $para = Texinfo::Convert::Paragraph::new();
@@ -176,7 +183,8 @@ $result .= add_text($para, 'A');
 $result .= add_next($para, '_');
 $result .= add_text($para, '.)');
 $result .= add_text($para, ' Next');
-$result .= Texinfo::Convert::Paragraph::end($para);
+($result_end, undef) = Texinfo::Convert::Paragraph::end($para);
+$result .= $result_end;
 is($result, "A_.)  Next\n", 'add_next: period after next, not transparent');
 
 $para = Texinfo::Convert::Paragraph::new();
@@ -185,7 +193,8 @@ $result .= add_text($para, 'A');
 $result .= add_next($para, '_', 1);
 $result .= add_text($para, '.)');
 $result .= add_text($para, ' Next');
-$result .= Texinfo::Convert::Paragraph::end($para);
+($result_end, undef) = Texinfo::Convert::Paragraph::end($para);
+$result .= $result_end;
 is($result, "A_.) Next\n", 'add_next: period after next, transparent');
 
 $para = Texinfo::Convert::Paragraph::new();
@@ -194,7 +203,8 @@ $result .= add_text($para, "aa.\n");
 set_frenchspacing($para, 1);
 $result .= add_next($para, '_');
 $result .= add_text($para, 'b');
-$result .= Texinfo::Convert::Paragraph::end($para);
+($result_end, undef) = Texinfo::Convert::Paragraph::end($para);
+$result .= $result_end;
 is($result, "aa.  _b\n", 'add char after space protection end sentence space');
 
 $para = Texinfo::Convert::Paragraph::new();
@@ -203,7 +213,8 @@ set_frenchspacing($para, 1);
 $result .= add_text($para, 'b');
 set_frenchspacing($para, 0);
 $result .= add_text($para, '. after');
-$result .= Texinfo::Convert::Paragraph::end($para);
+($result_end, undef) = Texinfo::Convert::Paragraph::end($para);
+$result .= $result_end;
 is($result, "b.  after\n", 'punctuation after end space protection');
 
 $para = Texinfo::Convert::Paragraph::new();
@@ -212,7 +223,8 @@ set_frenchspacing($para, 1);
 $result .= add_text($para, 'b.');
 set_frenchspacing($para, 0);
 $result .= add_text($para, ' follow');
-$result .= Texinfo::Convert::Paragraph::end($para);
+($result_end, undef) = Texinfo::Convert::Paragraph::end($para);
+$result .= $result_end;
 is($result, "b. follow\n", 'punctuation before end space protection');
 
 $para = Texinfo::Convert::Paragraph::new();
@@ -221,7 +233,8 @@ set_frenchspacing($para, 1);
 $result .= add_text($para, 'b.');
 set_frenchspacing($para, 0);
 $result .= add_text($para, '  follow');
-$result .= Texinfo::Convert::Paragraph::end($para);
+($result_end, undef) = Texinfo::Convert::Paragraph::end($para);
+$result .= $result_end;
 is($result, "b. follow\n", 'punctuation before end space protection 2 space');
 
 $para = Texinfo::Convert::Paragraph::new();
@@ -230,7 +243,8 @@ set_frenchspacing($para, 1);
 $result .= add_text($para, 'b. ');
 set_frenchspacing($para, 0);
 $result .= add_text($para, ' follow');
-$result .= Texinfo::Convert::Paragraph::end($para);
+($result_end, undef) = Texinfo::Convert::Paragraph::end($para);
+$result .= $result_end;
 is($result, "b. follow\n", 'punctuation space before end space protection');
 
 
@@ -239,7 +253,8 @@ $result = '';
 $result .= add_text($para, "In w:\n");
 set_space_protection($para, 1);
 $result .= add_text($para, 'Out of code -- out-of-code.   ggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg');
-$result .= Texinfo::Convert::Paragraph::end($para);
+($result_end, undef) = Texinfo::Convert::Paragraph::end($para);
+$result .= $result_end;
 is($result, "In w:\nOut of code -- out-of-code.  ggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg\n", 'space protection after end sentence');
 
 $para = Texinfo::Convert::Paragraph::new();
@@ -249,7 +264,8 @@ set_space_protection($para, 1);
 $result .= add_text($para, 'Out of code -- out-of-code.');
 set_frenchspacing($para, 1);
 $result .= add_text($para, 'in code');
-$result .= Texinfo::Convert::Paragraph::end($para);
+($result_end, undef) = Texinfo::Convert::Paragraph::end($para);
+$result .= $result_end;
 is($result, "In w: Out of code -- out-of-code.in code\n", 'set frenchspacing after space protection');
 
 $para = Texinfo::Convert::Paragraph::new();
@@ -257,14 +273,16 @@ $result = '';
 $result .= add_text($para, 'a ');
 $result .= add_next($para, '...', 1);
 $result .= add_text($para, 'c');
-$result .= Texinfo::Convert::Paragraph::end($para);
+($result_end, undef) = Texinfo::Convert::Paragraph::end($para);
+$result .= $result_end;
 is($result, "a ...c\n", 'add end sentence and text');
 
 $para = Texinfo::Convert::Paragraph::new();
 $result = '';
 $result .= end_line($para);
 $result .= add_text($para, ' after');
-$result .= Texinfo::Convert::Paragraph::end($para);
+($result_end, undef) = Texinfo::Convert::Paragraph::end($para);
+$result .= $result_end;
 is($result, "\nafter\n", 'space after end_line');
 #print STDERR "$result";
 
@@ -275,15 +293,16 @@ $result .= add_pending_word($para);
 is($result, 'aa.)', 'call add_pending_word');
 $result = end_line($para);
 is($result, "\n", 'call end_line after add_pending_word');
-$result = Texinfo::Convert::Paragraph::end($para);
-is($result, '', 'call end after end_line');
+($result_end, undef) = Texinfo::Convert::Paragraph::end($para);
+is($result_end, '', 'call end after end_line');
 
 $para = Texinfo::Convert::Paragraph::new();
 $result = '';
 $result .= add_text($para, 'aa.)');
 $result .= add_pending_word($para);
 $result .= add_text($para, ' after');
-$result .= Texinfo::Convert::Paragraph::end($para);
+($result_end, undef) = Texinfo::Convert::Paragraph::end($para);
+$result .= $result_end;
 is($result, "aa.)  after\n", 'space after sentence and add_pending_word');
 
 $para = Texinfo::Convert::Paragraph::new();
@@ -292,7 +311,8 @@ $result .= add_text($para, 'aA');
 $result .= add_next($para, '.');
 add_end_sentence($para);
 $result .= add_text($para, ' after');
-$result .= Texinfo::Convert::Paragraph::end($para);
+($result_end, undef) = Texinfo::Convert::Paragraph::end($para);
+$result .= $result_end;
 is($result, "aA.  after\n", 'force end sentence after upper case');
 
 $para = Texinfo::Convert::Paragraph::new();
@@ -301,7 +321,8 @@ $result .= add_text($para, 'aa');
 $result .= add_next($para, '.');
 add_end_sentence($para);
 $result .= add_text($para, 'b c');
-$result .= Texinfo::Convert::Paragraph::end($para);
+($result_end, undef) = Texinfo::Convert::Paragraph::end($para);
+$result .= $result_end;
 is($result, "aa.b c\n", 'force end sentence followed by text');
 
 $para = Texinfo::Convert::Paragraph::new();
@@ -309,7 +330,8 @@ $result = '';
 $result .= add_text($para, 'aA');
 $result .= add_text($para, '.');
 $result .= add_text($para, ' after');
-$result .= Texinfo::Convert::Paragraph::end($para);
+($result_end, undef) = Texinfo::Convert::Paragraph::end($para);
+$result .= $result_end;
 is($result, "aA. after\n", 'end sentence after upper case');
 
 $para = Texinfo::Convert::Paragraph::new();
@@ -317,7 +339,8 @@ $result = '';
 $result .= add_text($para, 'aa.)');
 $result .= add_text($para, '))');
 $result .= add_text($para, ' after');
-$result .= Texinfo::Convert::Paragraph::end($para);
+($result_end, undef) = Texinfo::Convert::Paragraph::end($para);
+$result .= $result_end;
 is($result, "aa.)))  after\n", 'continue with after_punctuation_characters');
 
 $para = Texinfo::Convert::Paragraph::new();
@@ -325,7 +348,8 @@ $result = '';
 $result .= add_text($para, 'aa.)');
 remove_end_sentence($para, );
 $result .= add_text($para, ' after');
-$result .= Texinfo::Convert::Paragraph::end($para);
+($result_end, undef) = Texinfo::Convert::Paragraph::end($para);
+$result .= $result_end;
 is($result, "aa.) after\n", 'inhibit end sentence');
 
 $para = Texinfo::Convert::Paragraph::new();
@@ -334,7 +358,8 @@ $result .= add_text($para, 'aa.)');
 remove_end_sentence($para, );
 $result .= add_next($para, '_');
 $result .= add_text($para, ' after');
-$result .= Texinfo::Convert::Paragraph::end($para);
+($result_end, undef) = Texinfo::Convert::Paragraph::end($para);
+$result .= $result_end;
 is($result, "aa.)_ after\n", 'inhibit end sentence then add next');
 
 $para = Texinfo::Convert::Paragraph::new();
@@ -343,7 +368,8 @@ $result .= add_text($para, 'aa.)');
 remove_end_sentence($para, );
 $result .= add_text($para, 'aa.)');
 $result .= add_text($para, ' after');
-$result .= Texinfo::Convert::Paragraph::end($para);
+($result_end, undef) = Texinfo::Convert::Paragraph::end($para);
+$result .= $result_end;
 is($result, "aa.)aa.)  after\n", 'cancel inhibit end sentence');
 
 $para = Texinfo::Convert::Paragraph::new();
@@ -352,13 +378,15 @@ $result .= add_text($para, 'aa.)');
 remove_end_sentence($para, );
 $result .= add_text($para, '))');
 $result .= add_text($para, ' after');
-$result .= Texinfo::Convert::Paragraph::end($para);
+($result_end, undef) = Texinfo::Convert::Paragraph::end($para);
+$result .= $result_end;
 is($result, "aa.))) after\n", 'inhibit end sentence and ))');
 
 $para = Texinfo::Convert::Paragraph::new({'keep_end_lines' => 1});
 $result = '';
 $result .= add_text($para, '  aa.) bb.');
-$result .= Texinfo::Convert::Paragraph::end($para);
+($result_end, undef) = Texinfo::Convert::Paragraph::end($para);
+$result .= $result_end;
 is($result,"aa.)  bb.\n", 'leading spaces ignore columns and keep end lines');
 
 
@@ -378,7 +406,8 @@ $result .= add_text($para, 'a');
 $result .= add_text($para, '  ');
 set_space_protection($para, 0);
 $result .= add_text($para, 'c ');
-$result .= Texinfo::Convert::Paragraph::end($para);
+($result_end, undef) = Texinfo::Convert::Paragraph::end($para);
+$result .= $result_end;
 is($result, "aa.)  bb eee .)_  aa .  gg.  a c\n",
    'protected spaces many inputs');
 
@@ -386,14 +415,16 @@ $para = Texinfo::Convert::Paragraph::new({'max' => 10});
 $result = '';
 $result .= add_next($para, 'AAAAAAA');
 $result .= add_text($para, 'GGG GGG');
-$result .= Texinfo::Convert::Paragraph::end($para);
+($result_end, undef) = Texinfo::Convert::Paragraph::end($para);
+$result .= $result_end;
 is($result, "AAAAAAAGGG\nGGG\n", 'line split check');
 
 $para = Texinfo::Convert::Paragraph::new({'max' => 10});
 $result = '';
 $result .= add_next($para, "AAAAAAA\n");
 $result .= add_text($para, 'GGG GGG');
-$result .= Texinfo::Convert::Paragraph::end($para);
+($result_end, undef) = Texinfo::Convert::Paragraph::end($para);
+$result .= $result_end;
 is($result, "AAAAAAA\nGGG GGG\n", 'end line reset counter');
 
 $para = Texinfo::Convert::Paragraph::new({'indent_length' => 3});
@@ -401,7 +432,8 @@ $result = '';
 set_space_protection($para, 1);
 $result .= add_text($para, " a\n");
 set_space_protection($para, 0);
-$result .= Texinfo::Convert::Paragraph::end($para);
+($result_end, undef) = Texinfo::Convert::Paragraph::end($para);
+$result .= $result_end;
 is($result, "    a \n", 'end space protection by end line');
 
 $para = Texinfo::Convert::Paragraph::new();
@@ -411,7 +443,8 @@ $result .= add_text($para, "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa bb
 $result .= add_text($para,  'ccc dddd');
 set_space_protection($para, 0);
 $result .= add_text($para,  "gg.\n");
-$result .= Texinfo::Convert::Paragraph::end($para);
+($result_end, undef) = Texinfo::Convert::Paragraph::end($para);
+$result .= $result_end;
 is($result, "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa bbbbbbbbbbbbb bbbbb bbb b b b b b b b b b bb .  ccc ddddgg.\n", 'long text followed by text protected');
 
 $para = Texinfo::Convert::Paragraph::new();
@@ -518,13 +551,15 @@ sub test_line($$$;$)
   my $conf = shift;
 
   my $result = '';
+  my $result_end;
   #$conf = {'debug'} => 1} if (!defined($conf));
   $conf = {} if (!defined($conf));
   my $line = _new_line_formatter($conf);
   foreach my $arg (@$args) {
     $result .= add_text($line, $arg);
   }
-  $result .= Texinfo::Convert::Paragraph::end($line);
+  ($result_end, undef) = Texinfo::Convert::Paragraph::end($line);
+  $result .= $result_end;
   is($result, $reference, "line $name");
   #print STDERR "$result\n";
 }
@@ -552,14 +587,16 @@ $result = '';
 $result .= add_text($line, 'aa.)');
 $result .= add_next($line, '_');
 $result .= add_text($line, ' after');
-$result .= Texinfo::Convert::Paragraph::end($line);
+($result_end, undef) = Texinfo::Convert::Paragraph::end($line);
+$result .= $result_end;
 is($result, 'aa.)_  after', 'line add char after end sentence');
 
 $line = _new_line_formatter();
 $result = '';
 $result .= end_line($line);
 $result .= add_text($line, ' after');
-$result .= Texinfo::Convert::Paragraph::end($line);
+($result_end, undef) = Texinfo::Convert::Paragraph::end($line);
+$result .= $result_end;
 is($result, "\nafter", 'line space after end_line');
 #print STDERR "$result";
 
@@ -569,7 +606,8 @@ $result .= add_text($line, 'A');
 $result .= add_next($line, '_', 1);
 $result .= add_text($line, '.)');
 $result .= add_text($line, ' Next');
-$result .= Texinfo::Convert::Paragraph::end($line);
+($result_end, undef) = Texinfo::Convert::Paragraph::end($line);
+$result .= $result_end;
 is($result, 'A_.) Next', 'line add_next: period after next, transparent');
 
 $line = _new_line_formatter();
@@ -579,15 +617,16 @@ $result .= add_pending_word($line);
 is($result, 'aa.)', 'line call add_pending_word');
 $result = end_line($line);
 is($result, "\n", 'line call end_line after add_pending_word');
-$result = Texinfo::Convert::Paragraph::end($line);
-is($result, '', 'line call end after end_line');
+($result_end, undef) = Texinfo::Convert::Paragraph::end($line);
+is($result_end, '', 'line call end after end_line');
 
 $line = _new_line_formatter();
 $result = '';
 $result .= add_text($line, 'aa.)');
 $result .= add_pending_word($line);
 $result .= add_text($line, ' after');
-$result .= Texinfo::Convert::Paragraph::end($line);
+($result_end, undef) = Texinfo::Convert::Paragraph::end($line);
+$result .= $result_end;
 is($result, 'aa.)  after', 'line space after sentence and add_pending_word');
 
 $line = _new_line_formatter();
@@ -596,7 +635,8 @@ $result .= add_text($line, 'aA');
 $result .= add_next($line, '.');
 add_end_sentence($line);
 $result .= add_text($line, ' after');
-$result .= Texinfo::Convert::Paragraph::end($line);
+($result_end, undef) = Texinfo::Convert::Paragraph::end($line);
+$result .= $result_end;
 is($result, 'aA.  after', 'line force end sentence after upper case');
 
 $line = _new_line_formatter();
@@ -604,7 +644,8 @@ $result = '';
 $result .= add_text($line, 'aA');
 $result .= add_text($line, '.');
 $result .= add_text($line, ' after');
-$result .= Texinfo::Convert::Paragraph::end($line);
+($result_end, undef) = Texinfo::Convert::Paragraph::end($line);
+$result .= $result_end;
 is($result, 'aA. after', 'line end sentence after upper case');
 
 $line = _new_line_formatter();
@@ -612,7 +653,8 @@ $result = '';
 $result .= add_text($line, 'aa.)');
 $result .= add_text($line, '))');
 $result .= add_text($line, ' after');
-$result .= Texinfo::Convert::Paragraph::end($line);
+($result_end, undef) = Texinfo::Convert::Paragraph::end($line);
+$result .= $result_end;
 is($result, 'aa.)))  after', 'line continue with after_punctuation_characters');
 
 $line = _new_line_formatter();
@@ -620,7 +662,8 @@ $result = '';
 $result .= add_text($line, 'aa.)');
 remove_end_sentence($line, );
 $result .= add_text($line, ' after');
-$result .= Texinfo::Convert::Paragraph::end($line);
+($result_end, undef) = Texinfo::Convert::Paragraph::end($line);
+$result .= $result_end;
 is($result, 'aa.) after', 'line inhibit end sentence');
 
 $line = _new_line_formatter();
@@ -629,7 +672,8 @@ $result .= add_text($line, 'aa.)');
 remove_end_sentence($line, );
 $result .= add_next($line, '_');
 $result .= add_text($line, ' after');
-$result .= Texinfo::Convert::Paragraph::end($line);
+($result_end, undef) = Texinfo::Convert::Paragraph::end($line);
+$result .= $result_end;
 is($result, 'aa.)_ after', 'line inhibit end sentence then add next');
 
 $line = _new_line_formatter();
@@ -638,7 +682,8 @@ $result .= add_text($line, 'aa.)');
 remove_end_sentence($line, );
 $result .= add_text($line, 'aa.)');
 $result .= add_text($line, ' after');
-$result .= Texinfo::Convert::Paragraph::end($line);
+($result_end, undef) = Texinfo::Convert::Paragraph::end($line);
+$result .= $result_end;
 is($result, 'aa.)aa.)  after', 'line cancel inhibit end sentence');
 
 $line = _new_line_formatter();
@@ -647,7 +692,8 @@ $result .= add_text($line, 'aa.)');
 remove_end_sentence($line, );
 $result .= add_text($line, '))');
 $result .= add_text($line, ' after');
-$result .= Texinfo::Convert::Paragraph::end($line);
+($result_end, undef) = Texinfo::Convert::Paragraph::end($line);
+$result .= $result_end;
 is($result, 'aa.))) after', 'line inhibit end sentence and ))');
 
 $line = _new_line_formatter();
@@ -658,7 +704,8 @@ $result .= add_text($line, ' ');
 $result .= add_text($line, 'then');
 $result .= add_text($line, 'fff     g');
 set_space_protection($line, 0);
-$result .= Texinfo::Convert::Paragraph::end($line);
+($result_end, undef) = Texinfo::Convert::Paragraph::end($line);
+$result .= $result_end;
 is($result, ' aa.)  thenfff g', 'line space_protection and spaces');
 
 $line = _new_line_formatter();
@@ -669,7 +716,8 @@ $result .= add_next($line, '_');
 $result .= add_text($line, 'b');
 set_frenchspacing($line, 0);
 $result .= add_text($line, '. after');
-$result .= Texinfo::Convert::Paragraph::end($line);
+($result_end, undef) = Texinfo::Convert::Paragraph::end($line);
+$result .= $result_end;
 is($result, 'aa.  _b.  after',
    'line add char after space protection end sentence space');
 
@@ -679,7 +727,8 @@ set_frenchspacing($line, 1);
 $result .= add_text($line, 'b.');
 set_frenchspacing($line, 0);
 $result .= add_text($line, '  follow');
-$result .= Texinfo::Convert::Paragraph::end($line);
+($result_end, undef) = Texinfo::Convert::Paragraph::end($line);
+$result .= $result_end;
 is($result, 'b. follow',
    'line punctuation before end space protection 2 space');
 
@@ -689,7 +738,8 @@ set_space_protection($line, 1);
 $result .= add_text($line, 'protected. B');
 set_space_protection($line, 0);
 $result .= add_text($line, '  after');
-$result .= Texinfo::Convert::Paragraph::end($line);
+($result_end, undef) = Texinfo::Convert::Paragraph::end($line);
+$result .= $result_end;
 is($result, 'protected.  B after', 'line 2 spaces after end space protection');
 
 $line = _new_line_formatter();
@@ -698,7 +748,8 @@ set_space_protection($line, 1);
 $result .= add_text($line, 'protected');
 set_space_protection($line, 0);
 $result .= add_text($line, '  after');
-$result .= Texinfo::Convert::Paragraph::end($line);
+($result_end, undef) = Texinfo::Convert::Paragraph::end($line);
+$result .= $result_end;
 is($result, 'protected after',
    'line 2 spaces after end space protection with dot');
 

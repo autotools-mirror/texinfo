@@ -1057,6 +1057,19 @@ stream_output (CONVERTER *self, const char *text)
 }
 
 void
+stream_output_nl (CONVERTER *self, const TEXT_AND_LINE_COUNT text_nl)
+{
+  PLAINTEXT_CONVERTER_STATE *self_plaintext = self->plaintext_converter;
+  COUNT_CONTEXT *count_context
+    = top_(count_context) (&self_plaintext->count_context);
+
+  count_context->lines += text_nl.line_count;
+
+  if (text_nl.text.text)
+    stream_output_n (self, text_nl.text.text, text_nl.text.end);
+}
+
+void
 stream_output_count_nl (CONVERTER *self, const TEXT text)
 {
   int count;
@@ -1202,10 +1215,10 @@ plaintext_convert_line (CONVERTER *self, const ELEMENT *converted,
 
   push_formatter (self, &formatter);
   convert_to_plaintext_internal (self, converted);
-  const TEXT end_line = para_end ();
+  const TEXT_AND_LINE_COUNT end_line = para_end ();
   width = para_counter ();
-  if (end_line.text)
-    stream_output_n (self, end_line.text, end_line.end);
+  if (end_line.text.text)
+    stream_output_n (self, end_line.text.text, end_line.text.end);
   para_destroy ();
   pop_formatter (self, 0);
   return width;
@@ -1730,8 +1743,8 @@ plaintext_format_footnotes (CONVERTER *self, const OUTPUT_UNIT *output_unit)
 
   self_plaintext->footnote_index = 0;
 
-  const TEXT end_result = para_end ();
-  stream_output_count_nl (self, end_result);
+  const TEXT_AND_LINE_COUNT end_result = para_end ();
+  stream_output_nl (self, end_result);
 
   para_destroy ();
   pop_formatter (self, 0);
@@ -2620,8 +2633,8 @@ plaintext_process_printindex (CONVERTER *self,
       /* Convert entry text in a new context in order to capture result. */
       push_count_context (&self_plaintext->count_context);
       convert_to_plaintext_internal (self, entry_tree_element);
-      const TEXT end_result = para_end ();
-      stream_output_count_nl (self, end_result);
+      const TEXT_AND_LINE_COUNT end_result = para_end ();
+      stream_output_nl (self, end_result);
       entry_text = stream_to_text (self);
       pop_count_context (&self_plaintext->count_context);
 
@@ -2689,8 +2702,8 @@ plaintext_process_printindex (CONVERTER *self,
             }
 
           convert_to_plaintext_internal (self, reference_tree);
-          const TEXT end_result = para_end ();
-          stream_output_count_nl (self, end_result);
+          const TEXT_AND_LINE_COUNT end_result = para_end ();
+          stream_output_nl (self, end_result);
           stream_output_n (self, ".\n", 2);
           add_lines_count (self, 1);
 
@@ -3948,8 +3961,8 @@ convert_def_line (CONVERTER *self, const ELEMENT *element)
 
       destroy_element_and_children (tree);
 
-      const TEXT result = para_end ();
-      stream_output_count_nl (self, result);
+      const TEXT_AND_LINE_COUNT end_result = para_end ();
+      stream_output_nl (self, end_result);
 
       para_destroy ();
       pop_formatter (self, 0);
@@ -5634,8 +5647,8 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
               convert_to_plaintext_internal (self, space_element);
               destroy_element (space_element);
             }
-          const TEXT result = para_end ();
-          stream_output_count_nl (self, result);
+          const TEXT_AND_LINE_COUNT end_result = para_end ();
+          stream_output_nl (self, end_result);
           text_element_context->counter += para_counter ();
           para_destroy ();
           pop_formatter (self, 0);
@@ -5731,8 +5744,8 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
 
                   push_formatter (self, &new_preformatted);
                   convert_to_plaintext_internal (self, exdent_line_arg);
-                  const TEXT result = para_end ();
-                  stream_output_count_nl (self, result);
+                  const TEXT_AND_LINE_COUNT end_result = para_end ();
+                  stream_output_nl (self, end_result);
                   para_destroy ();
                   pop_formatter (self, 0);
                 }
@@ -5928,8 +5941,8 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
                           pop_context (&self_plaintext->context);
                         }
                       /* flush and add newline */
-                      const TEXT result = para_end ();
-                      stream_output_count_nl (self, result);
+                      const TEXT_AND_LINE_COUNT end_result = para_end ();
+                      stream_output_nl (self, end_result);
 
                       para_destroy ();
                       pop_formatter (self, 0);
@@ -6452,8 +6465,8 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
                           push_formatter (self, &description_para);
                           convert_to_plaintext_internal (self,
                                     node_description->e.c->contents.list[0]);
-                          const TEXT result = para_end ();
-                          stream_output_count_nl (self, result);
+                          const TEXT_AND_LINE_COUNT end_result = para_end ();
+                          stream_output_nl (self, end_result);
                           para_destroy ();
                           pop_formatter (self, 0);
                         }
@@ -6809,8 +6822,8 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
     {
       TEXT_CONTEXT *text_element_context
         = top_(text_element_context) (&self_plaintext->text_element_context);
-      const TEXT result = para_end ();
-      stream_output_count_nl (self, result);
+      const TEXT_AND_LINE_COUNT end_result = para_end ();
+      stream_output_nl (self, end_result);
       enum command_id context_cmd = *top_(command) (&self_plaintext->context);
 
       if (context_cmd == CM_flushright)
@@ -6829,10 +6842,10 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
     {
       TEXT_CONTEXT *text_element_context
         = top_(text_element_context) (&self_plaintext->text_element_context);
-      const TEXT end_line = para_end ();
+      const TEXT_AND_LINE_COUNT end_line = para_end ();
       enum command_id context_cmd = *top_(command) (&self_plaintext->context);
 
-      stream_output_count_nl (self, end_line);
+      stream_output_nl (self, end_line);
 
       ensure_end_of_line (self);
 

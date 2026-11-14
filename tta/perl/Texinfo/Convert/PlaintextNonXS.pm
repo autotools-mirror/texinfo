@@ -1046,6 +1046,20 @@ sub _stream_output($$) {
   return;
 }
 
+sub _stream_output_nl($$$) {
+  my ($self, $text, $count) = @_;
+
+  my $count_context = $self->{'count_context'}->[-1];
+  my $container = $self->{'formatters'}->[-1]->{'container'};
+
+  # update number of newlines
+  $count_context->{'lines'} += $count;
+
+  _stream_output($self, $text);
+
+  return;
+}
+
 # Use instead of _stream_output to count the number of newlines
 # in the added text.
 sub _stream_output_count_nl($$) {
@@ -1201,7 +1215,8 @@ sub convert_line($$;$$$) {
 
   push @{$self->{'formatters'}}, $formatter;
   _convert($self, $converted);
-  my $end_line = Texinfo::Convert::Paragraph::end($formatter->{'container'});
+  my ($end_line, undef)
+     = Texinfo::Convert::Paragraph::end($formatter->{'container'});
   _stream_output($self, $end_line);
   my $count = Texinfo::Convert::Paragraph::counter($formatter->{'container'});
   destroy_formatter(pop @{$self->{'formatters'}});
@@ -1523,8 +1538,9 @@ sub format_footnotes($;$) {
   }
   $self->{'footnote_index'} = 0;
 
-  _stream_output_count_nl($self,
-                 Texinfo::Convert::Paragraph::end($formatter->{'container'}));
+  my ($result, $count)
+    = Texinfo::Convert::Paragraph::end($formatter->{'container'});
+  _stream_output_nl($self, $result, $count);
   destroy_formatter(pop @{$self->{'formatters'}});
 
   return;
@@ -1970,8 +1986,9 @@ sub process_printindex($$;$) {
     push @{$self->{'count_context'}}, {'lines' => 0,
                                        'pending_text' => [['']]};
     _convert($self, $entry_tree);
-    _stream_output_count_nl($self,
-                   Texinfo::Convert::Paragraph::end($formatter->{'container'}));
+    my ($result_text, $count)
+      = Texinfo::Convert::Paragraph::end($formatter->{'container'});
+    _stream_output_nl($self, $result_text, $count);
     $entry_text = _stream_to_text($self);
     pop @{$self->{'count_context'}};
 
@@ -2019,8 +2036,9 @@ sub process_printindex($$;$) {
                            {'see_also_entry' => $referred_tree});
       }
       _convert($self, $reference_tree);
-      _stream_output_count_nl($self,
-             Texinfo::Convert::Paragraph::end($formatter->{'container'}));
+      my ($result_text, $count)
+        = Texinfo::Convert::Paragraph::end($formatter->{'container'});
+      _stream_output_nl($self, $result_text, $count);
       _stream_output($self, ".\n");
       _add_lines_count($self, 1);
       next;
@@ -2842,8 +2860,9 @@ sub _convert_def_line($$) {
     push @{$self->{'formatters'}}, $def_paragraph;
 
     _convert($self, $tree);
-    _stream_output_count_nl($self,
-      Texinfo::Convert::Paragraph::end($def_paragraph->{'container'}));
+    my ($result_text, $count)
+      = Texinfo::Convert::Paragraph::end($def_paragraph->{'container'});
+    _stream_output_nl($self, $result_text, $count);
 
     destroy_formatter(pop @{$self->{'formatters'}});
     $self->{'text_element_context'}->[-1]->{'counter'} = 0;
@@ -3801,8 +3820,9 @@ sub _convert($$) {
         _convert($self, $prepended_element);
         _convert($self, Texinfo::TreeElement::new({ 'text' => ' ' }));
       }
-      _stream_output_count_nl($self,
-                     Texinfo::Convert::Paragraph::end($line->{'container'}));
+      my ($result_text, $count)
+        = Texinfo::Convert::Paragraph::end($line->{'container'});
+      _stream_output_nl($self, $result_text, $count);
       $self->{'text_element_context'}->[-1]->{'counter'} +=
          Texinfo::Convert::Paragraph::counter($line->{'container'});
       destroy_formatter(pop @{$self->{'formatters'}});
@@ -3866,8 +3886,9 @@ sub _convert($$) {
           $formatter->{'font_type_stack'}->[-1]->{'monospace'} = 1;
           push @{$self->{'formatters'}}, $formatter;
           _convert($self, $element->{'contents'}->[0]);
-          _stream_output_count_nl($self,
-            Texinfo::Convert::Paragraph::end($formatter->{'container'}));
+          my ($result_text, $count)
+            = Texinfo::Convert::Paragraph::end($formatter->{'container'});
+          _stream_output_nl($self, $result_text, $count);
           destroy_formatter(pop @{$self->{'formatters'}});
         } else {
           # remains 0 if at top level
@@ -3999,8 +4020,9 @@ sub _convert($$) {
             my $old_context = pop @{$self->{'context'}};
           }
           # flush and add newline
-          _stream_output_count_nl($self,
-            Texinfo::Convert::Paragraph::end($container));
+          my ($result_text, $count)
+            = Texinfo::Convert::Paragraph::end($container);
+          _stream_output_nl($self, $result_text, $count);
 
           destroy_formatter(pop @{$self->{'formatters'}});
         }
@@ -4339,8 +4361,9 @@ sub _convert($$) {
             }
             _convert($self, $formatted_elt);
             if (!$long_description) {
-              _stream_output_count_nl($self,
-                 Texinfo::Convert::Paragraph::end($description_para->{'container'}));
+              my ($result_text, $count)
+        = Texinfo::Convert::Paragraph::end($description_para->{'container'});
+              _stream_output_nl($self, $result_text, $count);
               destroy_formatter(pop @{$self->{'formatters'}});
             } else {
               pop @{$self->{'format_context'}};
@@ -4534,8 +4557,9 @@ sub _convert($$) {
   }
   # close paragraphs and preformatted
   if (defined($paragraph)) {
-    _stream_output_count_nl($self,
-               Texinfo::Convert::Paragraph::end($paragraph->{'container'}));
+    my ($result_text, $count)
+            = Texinfo::Convert::Paragraph::end($paragraph->{'container'});
+    _stream_output_nl($self, $result_text, $count);
     if ($self->{'context'}->[-1] eq 'flushright') {
       _align_environment($self,
         $self->{'text_element_context'}->[-1]->{'max'}, 'right');
@@ -4546,8 +4570,9 @@ sub _convert($$) {
   # may have been opened for a block commands, @menu, raw output
   # format, @verbatim..., or for (raw)preformatted type
   } elsif (defined($preformatted)) {
-    _stream_output_count_nl($self,
-               Texinfo::Convert::Paragraph::end($preformatted->{'container'}));
+    my ($result_text, $count)
+            = Texinfo::Convert::Paragraph::end($preformatted->{'container'});
+    _stream_output_nl($self, $result_text, $count);
     _ensure_end_of_line($self);
 
     if ($self->{'context'}->[-1] eq 'flushright') {

@@ -32,6 +32,13 @@ typedef struct TEXT {
     size_t end;
 } TEXT;
 
+/* not used in this file, but conveniently defined for all the code that includes
+   the header file */
+typedef struct TEXT_AND_LINE_COUNT {
+    TEXT text;
+    int line_count;
+} TEXT_AND_LINE_COUNT;
+
 void text_init (TEXT *t);
 void text_append (TEXT *t, const char *s);
 void text_append_n (TEXT *t, const char *s, size_t len);

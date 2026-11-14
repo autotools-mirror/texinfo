@@ -168,18 +168,23 @@ para_add_pending_word (int paragraph, ...)
     OUTPUT:
         RETVAL
 
-SV *
+void
 para_end (int paragraph)
     PREINIT:
-        TEXT retval;
-    CODE:
+        TEXT_AND_LINE_COUNT retval;
+        SV *text_sv;
+        SV *count_sv;
+    PPCODE:
         para_set_state (paragraph);
         retval = para_end ();
 
-        RETVAL = newSVpv (retval.text, retval.end);
-        SvUTF8_on (RETVAL);
-    OUTPUT:
-        RETVAL
+        text_sv = newSVpv (retval.text.text, retval.text.end);
+        SvUTF8_on (text_sv);
+        count_sv = newSViv (retval.line_count);
+
+        EXTEND(SP, 2);
+        PUSHs(sv_2mortal(text_sv));
+        PUSHs(sv_2mortal(count_sv));
 
 void
 para_destroy (int paragraph)

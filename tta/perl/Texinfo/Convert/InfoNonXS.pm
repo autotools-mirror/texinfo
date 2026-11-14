@@ -125,7 +125,8 @@ sub _info_header($$$) {
   }
   $para_text .= add_next($paragraph, $input_basefile);
   $para_text .= add_text($paragraph, '.');
-  $para_text .= Texinfo::Convert::Paragraph::end($paragraph);
+  my ($result_text, undef) = Texinfo::Convert::Paragraph::end($paragraph);
+  $para_text .= $result_text;
   $para_text .= "\n";
   $self->_stream_output($para_text);
   Texinfo::Convert::Paragraph::destroy($paragraph);
@@ -725,8 +726,9 @@ sub format_footnotes($;$) {
   }
   $self->{'footnote_index'} = 0;
 
-  $self->_stream_output_count_nl(
-                 Texinfo::Convert::Paragraph::end($formatter->{'container'}));
+  my ($result_text, $count)
+    = Texinfo::Convert::Paragraph::end($formatter->{'container'});
+  $self->_stream_output_nl($result_text, $count);
 
   pop @{$self->{'formatters'}};
   Texinfo::Convert::Paragraph::destroy($formatter->{'container'});

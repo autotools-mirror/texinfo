@@ -176,8 +176,8 @@ info_header (CONVERTER *self, const char *input_basefile,
   new_text = para_add_text (".", 1, 0);
   if (new_text.text)
     text_append_n (&para_text, new_text.text, new_text.end);
-  const TEXT end_para_text = para_end ();
-  text_append_n (&para_text, end_para_text.text, end_para_text.end);
+  const TEXT_AND_LINE_COUNT end_para_text = para_end ();
+  text_append_n (&para_text, end_para_text.text.text, end_para_text.text.end);
   text_append_n (&para_text, "\n", 1);
   stream_output_n (self, para_text.text, para_text.end);
   para_destroy ();
@@ -1074,8 +1074,8 @@ info_format_footnotes (CONVERTER *self, const OUTPUT_UNIT *output_unit)
 
   self_plaintext->footnote_index = 0;
 
-  const TEXT end_result = para_end ();
-  stream_output_count_nl (self, end_result);
+  const TEXT_AND_LINE_COUNT end_result = para_end ();
+  stream_output_nl (self, end_result);
 
   para_destroy ();
   pop_formatter (self, 0);
