@@ -277,9 +277,11 @@ $result .= add_text($para, 'c');
 $result .= $result_end;
 is($result, "a ...c\n", 'add end sentence and text');
 
+my $result_end_line;
 $para = Texinfo::Convert::Paragraph::new();
 $result = '';
-$result .= end_line($para);
+($result_end_line, undef) = end_line($para);
+$result .= $result_end_line;
 $result .= add_text($para, ' after');
 ($result_end, undef) = Texinfo::Convert::Paragraph::end($para);
 $result .= $result_end;
@@ -291,8 +293,8 @@ $result = '';
 $result .= add_text($para, 'aa.)');
 $result .= add_pending_word($para);
 is($result, 'aa.)', 'call add_pending_word');
-$result = end_line($para);
-is($result, "\n", 'call end_line after add_pending_word');
+($result_end_line, undef) = end_line($para);
+is($result_end_line, "\n", 'call end_line after add_pending_word');
 ($result_end, undef) = Texinfo::Convert::Paragraph::end($para);
 is($result_end, '', 'call end after end_line');
 
@@ -593,7 +595,8 @@ is($result, 'aa.)_  after', 'line add char after end sentence');
 
 $line = _new_line_formatter();
 $result = '';
-$result .= end_line($line);
+($result_end_line, undef) = end_line($para);
+$result .= $result_end_line;
 $result .= add_text($line, ' after');
 ($result_end, undef) = Texinfo::Convert::Paragraph::end($line);
 $result .= $result_end;
@@ -615,8 +618,8 @@ $result = '';
 $result .= add_text($line, 'aa.)');
 $result .= add_pending_word($line);
 is($result, 'aa.)', 'line call add_pending_word');
-$result = end_line($line);
-is($result, "\n", 'line call end_line after add_pending_word');
+($result_end_line, undef) = end_line($line);
+is($result_end_line, "\n", 'line call end_line after add_pending_word');
 ($result_end, undef) = Texinfo::Convert::Paragraph::end($line);
 is($result_end, '', 'line call end after end_line');
 

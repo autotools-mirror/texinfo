@@ -133,17 +133,23 @@ para__end_line (int paragraph)
         para_set_state (paragraph);
         para__end_line ();
 
-SV *
+void
 para_end_line (int paragraph)
     PREINIT:
-        TEXT end_line;
-    CODE:
+        TEXT_AND_LINE_COUNT end_line;
+        SV *text_sv;
+        SV *count_sv;
+    PPCODE:
         para_set_state (paragraph);
         end_line = para_end_line ();
-        RETVAL = newSVpv (end_line.text, end_line.end);
-        SvUTF8_on (RETVAL);
-    OUTPUT:
-        RETVAL
+
+        text_sv = newSVpv (end_line.text.text, end_line.text.end);
+        SvUTF8_on (text_sv);
+        count_sv = newSViv (end_line.line_count);
+
+        EXTEND(SP, 2);
+        PUSHs(sv_2mortal(text_sv));
+        PUSHs(sv_2mortal(count_sv));
 
 # ... is for add_spaces
 SV *

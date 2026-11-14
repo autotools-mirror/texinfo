@@ -146,8 +146,7 @@ sub end_line($) {
   my $paragraph = shift;
 
   _end_line($paragraph);
-  $paragraph->{'end_line_count'} = 1;
-  return "\n";
+  return ("\n", 1);
 }
 
 # End a line, throwing away a pending space.
@@ -169,7 +168,6 @@ sub _end_line($) {
 sub add_pending_word($;$) {
   my ($paragraph, $add_spaces) = @_;
 
-  $paragraph->{'end_line_count'} = 0;
   return _add_pending_word($paragraph, $add_spaces);
 }
 

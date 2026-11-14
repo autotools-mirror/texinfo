@@ -274,12 +274,11 @@ para__end_line (void)
     fprintf (stderr, "END_LINE\n");
 }
 
-static const TEXT new_line_text = {"\n", 1, 1};
-TEXT
+static const TEXT_AND_LINE_COUNT new_line_text = {{"\n", 1, 1}, 1};
+TEXT_AND_LINE_COUNT
 para_end_line (void)
 {
   para__end_line ();
-  state.end_line_count = 1;
   return new_line_text;
 }
 
@@ -363,7 +362,6 @@ para_add_pending_word (int add_spaces)
 
   text_reset (&ret);
   para__add_pending_word (&ret, add_spaces);
-  state.end_line_count = 0;
   return ret;
 }
 
