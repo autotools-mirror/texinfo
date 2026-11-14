@@ -3,7 +3,7 @@
 % Load plain if necessary, i.e., if running under initex.
 \expandafter\ifx\csname fmtname\endcsname\relax\input plain\fi
 %
-\def\texinfoversion{2026-11-14.13}
+\def\texinfoversion{2026-11-14.18}
 %
 % Copyright 1985, 1986, 1988, 1990-2026 Free Software Foundation, Inc.
 %
@@ -6670,8 +6670,12 @@ might help (with 'rm \jobname.?? \jobname.??s')%
 % Define @majorheading, @chapheading, @heading and @subheading
 
 \parseargdef\majorheading{%
-  {\advance\chapheadingskip by 10pt \chapbreak }%
-  \chapheadingzzzz{#1}%
+  \ifnum\secbase = 0
+    {\advance\chapheadingskip by 10pt \chapbreak }%
+    \chapheadingzzzz{#1}%
+  \else
+    \hdghead0{#1}%
+  \fi
 }
 
 \parseargdef\chapheading{\hdghead0{#1}}

@@ -1,5 +1,13 @@
 2026-11-14  Gavin Smith <gavinsmith0123@gmail.com>
 
+	@raise/lowersections affects @majorheading
+
+	* doc/texinfo.tex (\majorheading): If at a different level to
+	the default with @raisesections or @lowersections, go through
+	the level changing machinery to get to the right command.
+
+2026-11-14  Gavin Smith <gavinsmith0123@gmail.com>
+
 	Fix PDF listing of chapters
 
 	* doc/texinfo.tex (\genhead): correct a condition
