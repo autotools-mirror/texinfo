@@ -239,16 +239,28 @@ para__end_line (void)
     fprintf (stderr, "END_LINE\n");
 }
 
-/* Return 1 if the line should be cut. */
+/* Return 1 if the line should be cut.
+  Verify that conditions are met to add a new line before the new space
+  and word.
+  COLUMN_COUNTS should hold the line width with the new space and word
+  length taken into account.
+ */
 static int
 para__cut_line (int column_counts)
 {
-  if (column_counts > state.max)
+  /* - state.counter == 0 avoids having an additional empty line output when
+       the new text is longer than the max.
+     - If keep_end_lines is set, no line wrapping.
+     - Wrap the text before the new word only if new word end is past
+       the line size.
+   */
+  if (column_counts <= state.max || state.keep_end_lines || state.counter == 0)
+    return 0;
+  else
     {
       para__end_line ();
       return 1;
     }
-  return 0;
 }
 
 void
@@ -562,14 +574,11 @@ para__add_next (TEXT *result, const char *word, int word_len,
        }
 
       /* Wrap the previous text if the new word end is past the line size. */
-      if (state.counter != 0 && !state.keep_end_lines)
+      if (para__cut_line (state.counter + state.word_counter
+                            + (int)state.space.end))
         {
-          if (para__cut_line (state.counter + state.word_counter
-                                  + (int)state.space.end))
-            {
-              text_append_n (result, "\n", 1);
-              end_line_count++;
-            }
+          text_append_n (result, "\n", 1);
+          end_line_count++;
         }
     }
 
@@ -842,16 +851,13 @@ para_add_text (const char *text, int len, int do_upper_case)
                           state.word_counter += 1;
                         }
 
-                /* Wrap the previous text if the new word end, with unbreakable
-                   space added to the word, is past the line size. */
-                      if (state.counter != 0 && !state.keep_end_lines)
+              /* Wrap the previous text if the new word end, with unbreakable
+                 space added to the word, is past the line size. */
+                      if (para__cut_line (state.counter
+                            + state.word_counter + (int)state.space.end))
                         {
-                          if (para__cut_line (state.counter
-                              + state.word_counter + (int)state.space.end))
-                            {
-                              text_append_n (&result.text, "\n", 1);
-                              end_line_count++;
-                            }
+                          text_append_n (&result.text, "\n", 1);
+                          end_line_count++;
                         }
                     }
                 }
@@ -907,8 +913,8 @@ para_add_text (const char *text, int len, int do_upper_case)
           if (state.debug)
             fprintf (stderr, "FULLWIDTH\n");
 
-          /* fullwidth latin letters can be upper case, so it is important to
-             use the actual characters here. */
+        /* double-width latin letters can be upper case, so it is important to
+           use the actual characters here. */
           state.last_letter = wc;
 
           append_to_word (p, q - p, do_upper_case);
@@ -917,22 +923,19 @@ para_add_text (const char *text, int len, int do_upper_case)
              fullwidth */
           state.word_counter += 2;
 
-          /* We allow a line break before Chinese characters even if
+          /* We allow a line break before double-width characters even if
              there is no space before them, unlike single-width characters. */
-          if (state.counter != 0 && !state.keep_end_lines)
+          if (para__cut_line (state.counter + state.word_counter))
             {
-              if (para__cut_line (state.counter + state.word_counter))
-                {
-                  text_append_n (&result.text, "\n", 1);
-                  end_line_count++;
-                }
+              text_append_n (&result.text, "\n", 1);
+              end_line_count++;
             }
 
           if (!state.no_break && !state.double_width_no_break)
             {
             /* accumulate the characters in result as soon as possible,
                such that end of line can be added directly after the last
-               double width character when over the max number on a line. */
+               double-width character when over the max number on a line. */
               para__add_pending_word (&result.text, 0);
             }
           state.end_sentence = eos_unset;
