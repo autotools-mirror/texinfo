@@ -112,7 +112,8 @@ sub _info_header($$$) {
   my $formatter = $self->new_paragraph_formatter(0);
   push @{$self->{'formatters'}}, $formatter;
   my $paragraph = $formatter->{'container'};
-  my $para_text = add_text($paragraph, "This is ");
+  my $para_text;
+  ($para_text, undef) = add_text($paragraph, "This is ");
   # This ensures that spaces in file are kept.
   my $text;
   ($text, undef) = add_next($paragraph, $output_filename);
@@ -120,14 +121,17 @@ sub _info_header($$$) {
   my $program = $self->get_conf('PROGRAM');
   my $version = $self->get_conf('PACKAGE_VERSION');
   if (defined($program) and $program ne '') {
-    $para_text .=
-        add_text($paragraph, ", produced by $program version $version from ");
+    ($text, undef)
+      = add_text($paragraph, ", produced by $program version $version from ");
+    $para_text .= $text;
   } else {
-    $para_text .= add_text($paragraph, ", produced from ");
+    ($text, undef) = add_text($paragraph, ", produced from ");
+    $para_text .= $text;
   }
   ($text, undef) = add_next($paragraph, $input_basefile);
   $para_text .= $text;
-  $para_text .= add_text($paragraph, '.');
+  ($text, undef) = add_text($paragraph, '.');
+  $para_text .= $text;
   my ($result_text, undef) = Texinfo::Convert::Paragraph::end($paragraph);
   $para_text .= $result_text;
   $para_text .= "\n";

@@ -13,9 +13,9 @@
    You should have received a copy of the GNU General Public License
    along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 
-/* This code should only be called when there is XS but no Texinfo
-   libraries, which should only happen with specific configure settings or
-   non-functioning iconv.
+/* This code should only be called for the t/z_misc/paragraph.t tests
+   and when there is XS but no Texinfo libraries, which should only happen
+   with specific configure settings or non-functioning iconv.
  */
 
 #define PERL_NO_GET_CONTEXT
@@ -105,14 +105,6 @@ para_new (...)
 #undef para_SET_CONF
 
 
-int
-para_end_line_count (int paragraph)
-    CODE:
-        para_set_state (paragraph);
-        RETVAL = para_end_line_count ();
-    OUTPUT:
-        RETVAL
-
 void
 para_add_to_counter (int paragraph, int n)
     CODE:
@@ -126,12 +118,6 @@ para_counter (int paragraph)
         RETVAL = para_counter ();
     OUTPUT:
         RETVAL
-
-void
-para__end_line (int paragraph)
-    CODE:
-        para_set_state (paragraph);
-        para__end_line ();
 
 void
 para_end_line (int paragraph)
@@ -198,14 +184,16 @@ para_destroy (int paragraph)
         para_set_state (paragraph);
         para_destroy ();
 
-SV *
+void
 para_add_text (int paragraph, SV *text_in, SV *do_upper_case_in=0)
     PREINIT:
         char *text;
         STRLEN text_len;
-        TEXT retval;
         int do_upper_case = 0;
-    CODE:
+        TEXT_AND_LINE_COUNT retval;
+        SV *text_sv;
+        SV *count_sv;
+    PPCODE:
         text = SvPVutf8 (text_in, text_len);
         if (do_upper_case_in && SvOK (do_upper_case_in))
           do_upper_case = SvIV (do_upper_case_in);
@@ -213,11 +201,14 @@ para_add_text (int paragraph, SV *text_in, SV *do_upper_case_in=0)
         para_set_state (paragraph);
         retval = para_add_text (text, text_len, do_upper_case);
 
-        RETVAL = newSVpv (retval.text ? retval.text : "", retval.end);
-        SvUTF8_on (RETVAL);
+        text_sv = newSVpv (retval.text.text ? retval.text.text : "",
+                           retval.text.end);
+        SvUTF8_on (text_sv);
+        count_sv = newSViv (retval.line_count);
 
-    OUTPUT:
-        RETVAL
+        EXTEND(SP, 2);
+        PUSHs(sv_2mortal(text_sv));
+        PUSHs(sv_2mortal(count_sv));
 
 void
 para_add_next (int paragraph, SV *text_in, SV *transparent_in=0)
@@ -237,7 +228,8 @@ para_add_next (int paragraph, SV *text_in, SV *transparent_in=0)
         para_set_state (paragraph);
         retval = para_add_next (text, text_len, transparent);
 
-        text_sv = newSVpv (retval.text.text, retval.text.end);
+        text_sv = newSVpv (retval.text.text ? retval.text.text : "",
+                           retval.text.end);
         SvUTF8_on (text_sv);
         count_sv = newSViv (retval.line_count);
 

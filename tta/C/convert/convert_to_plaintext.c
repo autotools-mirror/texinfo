@@ -1070,27 +1070,12 @@ stream_output_nl (CONVERTER *self, const TEXT_AND_LINE_COUNT text_nl)
 }
 
 void
-stream_output_count_nl (CONVERTER *self, const TEXT text)
-{
-  int count;
-  PLAINTEXT_CONVERTER_STATE *self_plaintext = self->plaintext_converter;
-  COUNT_CONTEXT *count_context
-    = top_(count_context) (&self_plaintext->count_context);
-
-  count = para_end_line_count ();
-  count_context->lines += count;
-
-  if (text.text)
-    stream_output_n (self, text.text, text.end);
-}
-
-void
 stream_output_add_text (CONVERTER *self, const char *text, size_t len,
                         int do_upper_case)
 {
-  const TEXT result = para_add_text (text, len, do_upper_case);
+  const TEXT_AND_LINE_COUNT result = para_add_text (text, len, do_upper_case);
 
-  stream_output_count_nl (self, result);
+  stream_output_nl (self, result);
 }
 
 /* Pass $TEXT to add_next and output the resulting text.  Used for

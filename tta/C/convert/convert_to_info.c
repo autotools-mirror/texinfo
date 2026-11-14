@@ -144,39 +144,38 @@ info_header (CONVERTER *self, const char *input_basefile,
   const char *program = self->conf->PROGRAM.o.string;
   const char *version = self->conf->PACKAGE_VERSION.o.string;
   TEXT para_text;
-  TEXT_AND_LINE_COUNT new_next;
-  TEXT new_text;
+  TEXT_AND_LINE_COUNT new_text;
 
   FORMATTER heading_formatter = new_paragraph_formatter (self, 0, -1);
   push_formatter (self, &heading_formatter);
   text_init (&para_text);
 
   new_text = para_add_text ("This is ", 8, 0);
-  text_append_n (&para_text, new_text.text, new_text.end);
+  text_append_n (&para_text, new_text.text.text, new_text.text.end);
   /* This ensures that spaces in file are kept. */
-  new_next = para_add_next (output_filename, strlen (output_filename), 0);
-  text_append_n (&para_text, new_next.text.text, new_next.text.end);
+  new_text = para_add_next (output_filename, strlen (output_filename), 0);
+  text_append_n (&para_text, new_text.text.text, new_text.text.end);
   if (program && strcmp (program, ""))
     {
       char *program_version;
       xasprintf (&program_version, ", produced by %s version %s from ",
                  program, version);
       new_text = para_add_text (program_version, strlen (program_version), 0);
-      text_append_n (&para_text, new_text.text, new_text.end);
+      text_append_n (&para_text, new_text.text.text, new_text.text.end);
       free (program_version);
     }
   else
     {
       const char *str = ", produced from ";
       new_text = para_add_text (str, strlen (str), 0);
-      text_append_n (&para_text, new_text.text, new_text.end);
+      text_append_n (&para_text, new_text.text.text, new_text.text.end);
     }
-  new_next = para_add_next (input_basefile, strlen (input_basefile), 0);
-  if (new_next.text.text)
-    text_append_n (&para_text, new_next.text.text, new_next.text.end);
+  new_text = para_add_next (input_basefile, strlen (input_basefile), 0);
+  if (new_text.text.text)
+    text_append_n (&para_text, new_text.text.text, new_text.text.end);
   new_text = para_add_text (".", 1, 0);
-  if (new_text.text)
-    text_append_n (&para_text, new_text.text, new_text.end);
+  if (new_text.text.text)
+    text_append_n (&para_text, new_text.text.text, new_text.text.end);
   const TEXT_AND_LINE_COUNT end_para_text = para_end ();
   text_append_n (&para_text, end_para_text.text.text, end_para_text.text.end);
   text_append_n (&para_text, "\n", 1);

@@ -1,5 +1,29 @@
 2026-11-14  Patrice Dumas  <pertusus@free.fr>
 
+	para add_text returns directly the added line count
+
+	* tta/C/convert/plaintext_paragraph.c,
+	tta/perl/XSTexinfo/ParagraphXS.xs: move para__end_line early and make
+	static.  Remove para__end_line from ParagraphXS.xs.
+
+	* tta/C/convert/convert_to_plaintext.c (stream_output_add_text),
+	tta/C/convert/plaintext_paragraph.c (para_add_text),
+	tta/perl/Texinfo/Convert/ParagraphNonXS.pm (add_text),
+	tta/perl/XSTexinfo/ParagraphXS.xs (para_add_text):
+	have para_add_text return the count of added new lines.  Update
+	callers.  Remove stream_output_count_nl.
+
+	* tta/C/convert/plaintext_paragraph.c (PARAGRAPH),
+	tta/C/convert/plaintext_paragraph.h (PARA_CONF_VARIABLES_LIST),
+	tta/perl/Texinfo/Convert/ParagraphNonXS.pm (new),
+	tta/perl/XSTexinfo/ParagraphXS.xs: remove end_line_count from state
+	and from PARA_CONF_VARIABLES_LIST, remove para_end_line_count.
+
+	* tta/perl/XSTexinfo/ParagraphXS.xs (para_add_next): emit an empty
+	string instead of undef.
+
+2026-11-14  Patrice Dumas  <pertusus@free.fr>
+
 	para add_next returns directly the added line count
 
 	* tta/C/convert/convert_to_plaintext.c (stream_output_add_next)

@@ -57,10 +57,6 @@ sub new(;$) {
 
     # state
     'word_counter' => 0, 'space' => '', # 'end_sentence' is unset
-    # number of end of lines added for the call of a function adding
-    # text or new line, adding the pending word of ending the
-    # paragraph.
-    'end_line_count' => 0,
     'last_letter' => '', 'word' => '',
     # This indicates an unbreakable "word", corresponding to @w.  It is useful
     # if not already in a word and @w{} is empty, such that it is considered
@@ -121,12 +117,6 @@ sub _cut_line($$) {
   }
   _end_line($paragraph);
   return 1;
-}
-
-sub end_line_count($) {
-  my $paragraph = shift;
-
-  return $paragraph->{'end_line_count'};
 }
 
 sub add_to_counter($$) {
@@ -556,8 +546,7 @@ sub add_text($$;$) {
     }
   }
 
-  $paragraph->{'end_line_count'} = $end_line_count;
-  return $result;
+  return ($result, $end_line_count);
 }
 
 # for debug

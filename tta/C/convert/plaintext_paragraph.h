@@ -25,7 +25,6 @@
   para_SET_CONF(max) \
   para_SET_CONF(indent_length) \
   para_SET_CONF(indent_length_next) \
-  para_SET_CONF(end_line_count) \
   para_SET_CONF(unfilled) \
   para_SET_CONF(no_final_newline) \
   para_SET_CONF(add_final_space) \
@@ -47,9 +46,8 @@ int para_new (void);
 
 void para_set_state (int paragraph);
 TEXT_AND_LINE_COUNT para_add_next (const char *, int, int transparent);
-TEXT para_add_text (const char *, int, int do_upper_case);
+TEXT_AND_LINE_COUNT para_add_text (const char *, int, int do_upper_case);
 void para_set_space_protection (int no_break);
-void para__end_line (void);
 TEXT_AND_LINE_COUNT para_end_line (void);
 TEXT_AND_LINE_COUNT para_end (void);
 void para_destroy (void);
@@ -57,7 +55,6 @@ TEXT para_add_pending_word (int add_spaces);
 void para_allow_end_sentence (void);
 void para_remove_end_sentence (void);
 void para_add_end_sentence (void);
-int para_end_line_count (void);
 void para_add_to_counter (int n);
 int para_counter (void);
 

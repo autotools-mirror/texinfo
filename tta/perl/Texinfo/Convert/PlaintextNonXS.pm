@@ -1046,6 +1046,8 @@ sub _stream_output($$) {
   return;
 }
 
+# Use instead of _stream_output to use $COUNT for the number of newlines
+# in the added text.
 sub _stream_output_nl($$$) {
   my ($self, $text, $count) = @_;
 
@@ -1060,33 +1062,17 @@ sub _stream_output_nl($$$) {
   return;
 }
 
-# Use instead of _stream_output to count the number of newlines
-# in the added text.
-sub _stream_output_count_nl($$) {
-  my ($self, $text) = @_;
-
-  my $count_context = $self->{'count_context'}->[-1];
-  my $container = $self->{'formatters'}->[-1]->{'container'};
-
-  # count number of newlines in $text
-  my $count = Texinfo::Convert::Paragraph::end_line_count($container);
-  $count_context->{'lines'} += $count;
-
-  _stream_output($self, $text);
-
-  return;
-}
-
 # Pass $TEXT to add_text and output the resulting text.  Used for
 # concision in calling code.
 sub _stream_output_add_text($$;$) {
   my ($self, $text, $do_upper_case) = @_;
 
   my $container = $self->{'formatters'}->[-1]->{'container'};
-  my $output = Texinfo::Convert::Paragraph::add_text($container, $text,
+  my ($output, $count)
+       = Texinfo::Convert::Paragraph::add_text($container, $text,
                                                      $do_upper_case);
 
-  _stream_output_count_nl($self, $output);
+  _stream_output_nl($self, $output, $count);
 
   return;
 }
