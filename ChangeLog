@@ -1,6 +1,16 @@
 2026-11-14  Gavin Smith <gavinsmith0123@gmail.com>
 
 	* doc/texinfo.texi (Structuring Command Types):
+	Remove mention of @top as an "unnumbered" command, as it is sui
+	generis.
+	(@top Command): Simply say that @top produces a "large unnumbered
+	heading", avoiding mention of @unnumbered.
+	(Chapter Structuring): Interchange the order in which we
+	introduce @part and heading-only commands.
+
+2026-11-14  Gavin Smith <gavinsmith0123@gmail.com>
+
+	* doc/texinfo.texi (Structuring Command Types):
 	Revise formatting of table so that @majorheading does not appear
 	at the same level as @top, as this appears not be the case.  Remove
 	@top from the table.  Reorder columns so that the command types are

@@ -2290,12 +2290,12 @@ in the text, like the one above.  They also provide information for
 generating the table of contents (@pxref{Contents,, Generating a Table
 of Contents}).
 
-The @code{@@part} command creates a division of the manual above the
-level of chapter, but the usage of this command is quite different to
-the sectioning commands.
+Texinfo also has @dfn{heading-only} commands, which print headings,
+but do not generate entries in the table of contents.
 
-Finally, Texinfo also has @dfn{heading-only} commands, which print
-headings, but do not generate entries in the table of contents.
+Finally, the @code{@@part} command creates a division of the manual above
+the level of chapter, but the usage of this command is quite different
+to the sectioning commands.
 
 Here is a basic example of a sectioning command, which introduces a
 chapter titled ``Chapter 2''.
@@ -2365,10 +2365,8 @@ in its table of contents.
 
 @item
 The @code{@@unnumbered}-like commands produce unnumbered entries
-both in the body of a document and in its table of contents.  The
-@code{@@top} command, which has a special use, is a member of this
-group (@pxref{@code{@@top} Command}).  An @code{@@unnumbered} section
-is a normal part of the document structure.
+both in the body of a document and in its table of contents.  An
+@code{@@unnumbered} section is a normal part of the document structure.
 
 @item
 The @code{@@heading}-like commands produce simple unnumbered
@@ -2444,12 +2442,12 @@ and contains any sections or subsections in the chapter.
 
 The @code{@@top} command is a special sectioning command that you use
 at the beginning of a Texinfo file, before any other sectioning commands.
-It introduces the @samp{Top} node; see @ref{The Top Node} for more
-information.
+It introduces the @samp{Top} node which is at higher level than any other
+node; see @ref{The Top Node} for more information.
 
 The argument to @code{@@top} should be the title of the document.
-When the Top node is output, @code{@@top} produces a large heading, similar
-to @code{@@unnumbered} (@pxref{@code{@@unnumbered @@appendix}}).
+When the Top node is output, @code{@@top} produces a large unnumbered
+heading.
 
 @code{@@top} is ignored when raising or lowering sections.  That is,
 it is never lowered and nothing can be raised to it
