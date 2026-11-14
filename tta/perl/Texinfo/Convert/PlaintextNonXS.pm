@@ -2914,7 +2914,7 @@ sub _convert($$) {
         _stream_output_add_next($self, $element->{'text'});
       } else {
         # Convert ``, '', `, ', ---, -- in $COMMAND->{'text'} to their
-        # output, possibly coverting to upper case as well.
+        # output.
         my $text = $element->{'text'};
 
         if (!$self->{'ascii_dashes_and_quotes'} and $self->{'to_utf8'}) {

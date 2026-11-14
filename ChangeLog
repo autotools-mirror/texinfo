@@ -1,3 +1,28 @@
+2026-11-14  Patrice Dumas  <pertusus@free.fr>
+
+	set end_line_count state at the end of functions
+
+	* tta/C/convert/plaintext_paragraph.c (para__cut_line),
+	tta/perl/Texinfo/Convert/ParagraphNonXS.pm (_cut_line): change
+	_cut_line to return a boolean determining if the line should be cut,
+	but leave appending the new line to the caller.  Update callers.
+
+	* tta/C/convert/plaintext_paragraph.c (para__end_line),
+	tta/perl/Texinfo/Convert/ParagraphNonXS.pm (_end_line): do not
+	increase end_line_count in _end_line but in the caller.  Update
+	callers.
+
+	* tta/C/convert/plaintext_paragraph.c (para__add_next),
+	tta/perl/Texinfo/Convert/ParagraphNonXS.pm (_add_next): return the
+	number of end of lines added.
+
+	* tta/C/convert/plaintext_paragraph.c (para_end_line)
+	(para_add_pending_word, para_end, para_add_next, para_add_text),
+	tta/perl/Texinfo/Convert/ParagraphNonXS.pm (end_line, end, add_next)
+	(add_text): determine the number of end of lines added as a local
+	variable and set end_line_count as a state at the end of the function
+	only.
+
 2026-11-12  Gavin Smith <gavinsmith0123@gmail.com>
 
 	* doc/info-stnd.texi (Invoking Info):

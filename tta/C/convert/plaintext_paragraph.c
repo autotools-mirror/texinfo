@@ -55,8 +55,9 @@ typedef struct PARAGRAPH {
 
     int word_counter;  /* Characters added so far in current word. */
 
-    int end_line_count; /* Number of newlines so far in an output unit, i.e.
-                           with add_text or add_next. */
+    int end_line_count; /* Number of newlines added for by a function adding
+                           text or new line, adding the pending word or
+                           ending the paragraph. */
 
     char32_t last_letter; /* Last letter in word, used to decide if we're
                             at the end of a sentence. */
@@ -220,15 +221,16 @@ PARA_CONF_VARIABLES_LIST
 /************************************************************************/
 
 
-/* Append a newline character to RESULT if the line is cut. */
-void
-para__cut_line (TEXT *result, int column_counts)
+/* Return 1 if the line should be cut. */
+static int
+para__cut_line (int column_counts)
 {
   if (column_counts > state.max)
     {
       para__end_line ();
-      text_append_n (result, "\n", 1);
+      return 1;
     }
+  return 0;
 }
 
 int
@@ -268,7 +270,6 @@ para__end_line (void)
       state.indent_length_next = -1;
     }
 
-  state.end_line_count++;
   if (state.debug)
     fprintf (stderr, "END_LINE\n");
 }
@@ -277,8 +278,8 @@ static const TEXT new_line_text = {"\n", 1, 1};
 TEXT
 para_end_line (void)
 {
-  state.end_line_count = 0;
   para__end_line ();
+  state.end_line_count = 1;
   return new_line_text;
 }
 
@@ -361,8 +362,8 @@ para_add_pending_word (int add_spaces)
   static TEXT ret;
 
   text_reset (&ret);
-  state.end_line_count = 0;
   para__add_pending_word (&ret, add_spaces);
+  state.end_line_count = 0;
   return ret;
 }
 
@@ -371,9 +372,9 @@ TEXT
 para_end (void)
 {
   static TEXT ret;
+  int end_line_count = 0;
 
   text_reset (&ret);
-  state.end_line_count = 0;
 
   if (state.debug)
     fprintf (stderr, "PARA END\n");
@@ -385,9 +386,10 @@ para_end (void)
   if (!state.no_final_newline && state.counter != 0)
     {
       text_append_n (&ret, "\n", 1);
-      state.end_line_count++;
+      end_line_count++;
     }
 
+  state.end_line_count = end_line_count;
   return ret;
 }
 
@@ -442,12 +444,14 @@ append_to_word (const char *text, size_t len, int do_upper_case)
    If DO_UPPER_CASE is set, upper-case the text after having determined
    if an upper-case letter precedes end sentence punctuation.
  */
-static void
+static int
 para__add_next (TEXT *result, const char *word, int word_len,
                 int transparent, int col_count, int do_upper_case)
 {
   if (!word)
-    return;
+    return 0;
+
+  int end_line_count = 0;
 
   if (!transparent && !state.unfilled)
     {
@@ -529,6 +533,7 @@ para__add_next (TEXT *result, const char *word, int word_len,
          pending ouput in the results string, and start a new line. */
       para__add_pending_word (result, 0);
       para__end_line ();
+      end_line_count++;
     }
   else
     {
@@ -572,8 +577,12 @@ para__add_next (TEXT *result, const char *word, int word_len,
       /* Wrap the previous text if the new word end is past the line size. */
       if (state.counter != 0 && !state.keep_end_lines)
         {
-          para__cut_line (result, state.counter + state.word_counter
-                                  + (int)state.space.end);
+          if (para__cut_line (state.counter + state.word_counter
+                                  + (int)state.space.end))
+            {
+              text_append_n (result, "\n", 1);
+              end_line_count++;
+            }
         }
     }
 
@@ -585,9 +594,10 @@ para__add_next (TEXT *result, const char *word, int word_len,
       fprintf (stderr, "WORD+ %s -> %s\n", printed_word.text,
                state.word.text);
     }
+
+  return end_line_count;
 }
 
-/* Like _add_next but zero end_line_count at beginning. */
 /* Note that t.text can be NULL if the text added does not start
    a new line and accumulate in the paragraphe word. */
 TEXT
@@ -596,8 +606,8 @@ para_add_next (const char *text, int text_len, int transparent)
   static TEXT t;
 
   text_reset (&t);
-  state.end_line_count = 0;
-  para__add_next (&t, text, text_len, transparent, -1, 0);
+  state.end_line_count
+   = para__add_next (&t, text, text_len, transparent, -1, 0);
 
   return t;
 }
@@ -679,7 +689,7 @@ para_add_text (const char *text, int len, int do_upper_case)
 
   text_reset (&result);
 
-  state.end_line_count = 0;
+  int end_line_count = 0;
 
   while (1)
     {
@@ -818,6 +828,7 @@ para_add_text (const char *text, int len, int do_upper_case)
                 {
                    para__end_line ();
                    text_append_n (&result, "\n", 1);
+                   end_line_count++;
                 }
               else
                 {
@@ -848,8 +859,12 @@ para_add_text (const char *text, int len, int do_upper_case)
                    space added to the word, is past the line size. */
                       if (state.counter != 0 && !state.keep_end_lines)
                         {
-                          para__cut_line (&result, state.counter
-                              + state.word_counter + (int)state.space.end);
+                          if (para__cut_line (state.counter
+                              + state.word_counter + (int)state.space.end))
+                            {
+                              text_append_n (&result, "\n", 1);
+                              end_line_count++;
+                            }
                         }
                     }
                 }
@@ -893,6 +908,7 @@ para_add_text (const char *text, int len, int do_upper_case)
                 {
                   para__end_line ();
                   text_append_n (&result, "\n", 1);
+                  end_line_count++;
                 }
               state.last_letter = (char32_t) ' ';
             }
@@ -918,7 +934,11 @@ para_add_text (const char *text, int len, int do_upper_case)
              there is no space before them, unlike single-width characters. */
           if (state.counter != 0 && !state.keep_end_lines)
             {
-              para__cut_line (&result, state.counter + state.word_counter);
+              if (para__cut_line (state.counter + state.word_counter))
+                {
+                  text_append_n (&result, "\n", 1);
+                  end_line_count++;
+                }
             }
 
           if (!state.no_break && !state.double_width_no_break)
@@ -933,14 +953,17 @@ para_add_text (const char *text, int len, int do_upper_case)
       /*************** Word and other characters ************************/
       else if (type == type_regular)
         {
-          para__add_next (&result, p, q - p, 0, regular_col_count,
-                          do_upper_case);
+          int line_count
+            = para__add_next (&result, p, q - p, 0, regular_col_count,
+                              do_upper_case);
+          end_line_count += line_count;
           regular_col_count = 0;
         }
 
       p = q;
     }
 
+  state.end_line_count = end_line_count;
   return result;
 }
 

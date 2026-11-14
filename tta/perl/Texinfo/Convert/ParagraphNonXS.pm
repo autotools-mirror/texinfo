@@ -57,7 +57,11 @@ sub new(;$) {
 
     # state
     'word_counter' => 0, 'space' => '', # 'end_sentence' is unset
-    'end_line_count' => 0, 'last_letter' => '', 'word' => '',
+    # number of end of lines added for the call of a function adding
+    # text or new line, adding the pending word of ending the
+    # paragraph.
+    'end_line_count' => 0,
+    'last_letter' => '', 'word' => '',
     # This indicates an unbreakable "word", corresponding to @w.  It is useful
     # if not already in a word and @w{} is empty, such that it is considered
     # as an "unbreakable" word of length 0.
@@ -113,10 +117,10 @@ sub _cut_line($$) {
   my ($paragraph, $column_counts) = @_;
 
   if ($column_counts <= $paragraph->{'max'}) {
-    return '';
+    return 0;
   }
   _end_line($paragraph);
-  return "\n";
+  return 1;
 }
 
 sub end_line_count($) {
@@ -141,8 +145,8 @@ sub counter($) {
 sub end_line($) {
   my $paragraph = shift;
 
-  $paragraph->{'end_line_count'} = 0;
   _end_line($paragraph);
+  $paragraph->{'end_line_count'} = 1;
   return "\n";
 }
 
@@ -159,7 +163,6 @@ sub _end_line($) {
     $paragraph->{'indent_length'} = $paragraph->{'indent_length_next'};
     delete $paragraph->{'indent_length_next'};
   }
-  $paragraph->{'end_line_count'}++;
   print STDERR "END_LINE\n" if ($paragraph->{'debug'});
 }
 
@@ -218,15 +221,16 @@ sub _add_pending_word($;$) {
 sub end($) {
   my $paragraph = shift;
 
-  $paragraph->{'end_line_count'} = 0;
+  my $end_line_count = 0;
   print STDERR "PARA END\n" if ($paragraph->{'debug'});
   my $result = _add_pending_word($paragraph, $paragraph->{'add_final_space'});
   # cleaner if the paragraph is reused
   $paragraph->{'last_letter'} = '';
   if (!$paragraph->{'no_final_newline'} and $paragraph->{'counter'} != 0) {
     $result .= "\n";
-    $paragraph->{'end_line_count'}++;
+    $end_line_count++;
   }
+  $paragraph->{'end_line_count'} = $end_line_count;
   return $result;
 }
 
@@ -250,8 +254,9 @@ my $after_punctuation_characters = quotemeta('"\')]'."\x{7f}");
 sub add_next($;$$) {
   my ($paragraph, $word, $transparent) = @_;
 
-  $paragraph->{'end_line_count'} = 0;
-  return _add_next($paragraph, $word, $transparent);
+  my ($result, $end_line_count) = _add_next($paragraph, $word, $transparent);
+  $paragraph->{'end_line_count'} = $end_line_count;
+  return $result;
 }
 
 # Values for 'end_sentence'.
@@ -275,8 +280,10 @@ sub _add_next($;$$$$) {
       $set_end_of_sentence) = @_;
 
   if (!defined($word)) {
-    return '';
+    return ('', 0);
   }
+
+  my $end_line_count = 0;
 
   if (!$transparent and !$paragraph->{'unfilled'}) {
     if ($word =~ /^[$after_punctuation_characters]*$/o) {
@@ -329,6 +336,7 @@ sub _add_next($;$$$$) {
   if (not $set_end_of_sentence and $word =~ /\n/) {
     $result .= _add_pending_word($paragraph);
     _end_line($paragraph);
+    $end_line_count++;
   } else {
     $paragraph->{'word_counter'}
       += Texinfo::Convert::Unicode::string_width($word);
@@ -337,9 +345,12 @@ sub _add_next($;$$$$) {
     # additional line output when the text is longer than the max.
     # Wrap the previous text if the new word end is past the line size.
     if ($paragraph->{'counter'} != 0 and !$paragraph->{'keep_end_lines'}) {
-      $result .= _cut_line($paragraph,
-        $paragraph->{'counter'} + $paragraph->{'word_counter'} +
-        length($paragraph->{'space'}));
+      if (_cut_line($paragraph,
+            $paragraph->{'counter'} + $paragraph->{'word_counter'} +
+            length($paragraph->{'space'}))) {
+        $result .= "\n";
+        $end_line_count++;
+      }
     }
   }
 
@@ -347,7 +358,7 @@ sub _add_next($;$$$$) {
     print STDERR "WORD+ $word -> $paragraph->{'word'}\n";
   }
 
-  return $result;
+  return ($result, $end_line_count);
 }
 
 sub remove_end_sentence($) {
@@ -412,7 +423,7 @@ sub set_space_protection($$) {
 sub add_text($$;$) {
   my ($paragraph, $text, $do_upper_case) = @_;
 
-  $paragraph->{'end_line_count'} = 0;
+  my $end_line_count = 0;
   my $result = '';
 
   my @segments = split
@@ -442,6 +453,7 @@ sub add_text($$;$) {
         $result .= _add_pending_word($paragraph);
         if ($spaces =~ /\n/) {
           _end_line($paragraph);
+          $end_line_count++;
           $result .= "\n";
         } else {
           $paragraph->{'space'} .= $spaces;
@@ -464,9 +476,12 @@ sub add_text($$;$) {
             # space added to the word, is past the line size.
             if ($paragraph->{'counter'} != 0
                 and !$paragraph->{'keep_end_lines'}) {
-              $result .= _cut_line($paragraph,
-                $paragraph->{'counter'} + $paragraph->{'word_counter'} +
-                length($paragraph->{'space'}));
+              if (_cut_line($paragraph,
+                   $paragraph->{'counter'} + $paragraph->{'word_counter'} +
+                   length($paragraph->{'space'}))) {
+                $result .= "\n";
+                $end_line_count++;
+              }
             }
           }
         } else { # no_break off
@@ -498,13 +513,17 @@ sub add_text($$;$) {
         }
         if ($paragraph->{'keep_end_lines'} and $spaces =~ /\n/) {
           _end_line($paragraph);
+          $end_line_count++;
           $result .= "\n";
         }
         $paragraph->{'last_letter'} = ' ';
       }
     } elsif (defined($added_word)) {
       # regular text
-      $result .= _add_next($paragraph, $added_word, undef, $do_upper_case, 1);
+      my ($result_text, $line_count)
+        = _add_next($paragraph, $added_word, undef, $do_upper_case, 1);
+      $result .= $result_text;
+      $end_line_count += $line_count;
     } elsif (defined($fullwidth_segment)) {
       print STDERR "FULLWIDTH\n" if ($paragraph->{'debug'});
 
@@ -524,8 +543,11 @@ sub add_text($$;$) {
       # We allow a line break before Chinese characters even if
       # there is no space before unlike single-width characters.
       if ($paragraph->{'counter'} != 0 and !$paragraph->{'keep_end_lines'}) {
-        $result .= _cut_line($paragraph, $paragraph->{'counter'}
-                                        + $paragraph->{'word_counter'});
+        if (_cut_line($paragraph, $paragraph->{'counter'}
+                                     + $paragraph->{'word_counter'})) {
+          $result .= "\n";
+          $end_line_count++;
+        }
       }
 
       if (!$paragraph->{'no_break'}
@@ -538,6 +560,8 @@ sub add_text($$;$) {
       delete $paragraph->{'end_sentence'};
     }
   }
+
+  $paragraph->{'end_line_count'} = $end_line_count;
   return $result;
 }
 
