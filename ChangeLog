@@ -1,5 +1,11 @@
 2026-11-14  Patrice Dumas  <pertusus@free.fr>
 
+	* tta/perl/Texinfo/Convert/LaTeX.pm (convert_math_to_images): remove
+	2img from the math to images file basename for more readable file
+	names.  Report from Heime.
+
+2026-11-14  Patrice Dumas  <pertusus@free.fr>
+
 	para add_text returns directly the added line count
 
 	* tta/C/convert/plaintext_paragraph.c,

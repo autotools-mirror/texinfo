@@ -174,9 +174,9 @@ post_process_output ()
       sed -e "s/${dir_suffix}/${ref_dir_suffix}/" \
           $raw_outdir$dir/$basename.2 > $outdir$dir/$basename.2
       if test "$use_info_math2img" = 'yes' ; then
-        rm -f ${outdir}$dir/*_info_images/*info_math2img.aux \
-              ${outdir}$dir/*_info_images/*info_math2img.log \
-          ${outdir}$dir/*_info_images/*info_math2img.dvi
+        rm -f ${outdir}$dir/*_info_images/*info_math.aux \
+              ${outdir}$dir/*_info_images/*info_math.log \
+          ${outdir}$dir/*_info_images/*info_math.dvi
       fi
     fi
   fi

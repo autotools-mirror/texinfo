@@ -5078,7 +5078,7 @@ sub convert_math_to_images($$$;$) {
                                         $math2img_out_dir);
   }
 
-  my $math2img_basename = "${prefix}_math2img";
+  my $math2img_basename = "${prefix}_math";
 
   # Dots-per-inch value given as argument to -D flag of dvips.
   # Note: in the absence of any image scaling in Emacs Info mode,
