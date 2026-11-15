@@ -1,5 +1,11 @@
 2026-11-15  Patrice Dumas  <pertusus@free.fr>
 
+	* tta/perl/t/z_misc/paragraph.t: call
+	Texinfo::Convert::Paragraph::destroy.  Change formatting of functions
+	beginning.  Do not set max in _new_line_formatter, it is not used.
+
+2026-11-15  Patrice Dumas  <pertusus@free.fr>
+
 	* tta/perl/Texinfo/ManipulateTreeNonXS.pm
 	(insert_nodes_for_sectioning_commands): call tree_remove_parents to
 	have removed elements released.
