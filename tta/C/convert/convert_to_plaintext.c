@@ -288,8 +288,9 @@ common_fill_formatter (FORMATTER *formatter, CONVERTER *self,
   PLAINTEXT_CONVERTER_STATE *self_plaintext = self->plaintext_converter;
   TEXT_CONTEXT *text_element_context
     = top_(text_element_context) (&self_plaintext->text_element_context);
-  formatter->container.paragraph = para_new ();
   int frenchspacing = 0;
+
+  formatter->container.paragraph = para_new ();
 
   if (self->conf->DEBUG.o.integer > 1)
     para_set_conf_debug (1);
@@ -313,6 +314,7 @@ common_fill_formatter (FORMATTER *formatter, CONVERTER *self,
 
   para_set_conf_counter (text_element_context->counter);
 
+  /* formatter initialization */
   add_(integer) (&formatter->frenchspacing_stack, frenchspacing);
 
   formatter->font_type_stack = (FONT_TYPE_STACK *)

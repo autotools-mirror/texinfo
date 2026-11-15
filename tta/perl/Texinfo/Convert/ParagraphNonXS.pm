@@ -311,6 +311,7 @@ sub _add_next_word($;$$$$) {
           }
           print STDERR "END_SENTENCE\n" if ($paragraph->{'debug'});
         } else {
+          # not an end sentence
           if (exists($paragraph->{'end_sentence'})) {
             print STDERR "delete END_SENTENCE($paragraph->{'end_sentence'})\n"
               if ($paragraph->{'debug'});

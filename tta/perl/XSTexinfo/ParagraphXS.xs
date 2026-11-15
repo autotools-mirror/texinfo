@@ -33,9 +33,6 @@ MODULE = Texinfo::Convert::Paragraph PACKAGE = Texinfo::Convert::Paragraph PREFI
 
 PROTOTYPES: ENABLE
 
-void
-para_set_state (int state)
-
 # Return an identifier for the paragraph container.  In Perl the paragraph
 # container hash reference itself is returned.
 # Optional CONF parameter.
@@ -137,21 +134,15 @@ para_end_line (int paragraph)
         PUSHs(sv_2mortal(text_sv));
         PUSHs(sv_2mortal(count_sv));
 
-# ... is for add_spaces
 SV *
-para_add_pending_word (int paragraph, ...)
+para_add_pending_word (int paragraph, SV *add_spaces_in=0)
     PREINIT:
         int add_spaces = 0;
         TEXT retval;
     CODE:
-        items -= 1;
-        if (items > 0)
-          {
-            if (SvOK(ST(1)))
-              {
-                add_spaces = (int)SvIV(ST(1));;
-              }
-          }
+        if (add_spaces_in && SvOK(add_spaces_in))
+          add_spaces = (int)SvIV(add_spaces_in);
+
         para_set_state (paragraph);
         retval = para_add_pending_word (add_spaces);
 
@@ -268,8 +259,7 @@ para_set_double_width_no_break (int paragraph, int val)
         para_set_conf_double_width_no_break (val);
 
 void
-para_set_space_protection (int paragraph, space_protection_in)
-        SV * space_protection_in
+para_set_space_protection (int paragraph, SV *space_protection_in)
     PREINIT:
         int space_protection = -1;
     CODE:

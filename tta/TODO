@@ -1301,11 +1301,11 @@ dblatex -o texinfo-dblatex.pdf texinfo.xml
 
 Open a specific info file in Emacs Info reader: C-u C-h i
 
-Count reference of the SV
+Count reference of the SV:
 Devel::Peek::SvREFCNT.  Not actually used because it cannot load in an eval.
 Instead implemented in
 Texinfo::ManipulateTree::SvREFCNT
-Count reference of the object pointed to
+Count reference of the object pointed to:
 Devel::Refcount::refcount
 
 In tta/tests/, generate Texinfo file for Texinfo TeX coverage

@@ -1,5 +1,15 @@
 2026-11-15  Patrice Dumas  <pertusus@free.fr>
 
+	* tta/C/convert/convert_to_plaintext.c (common_fill_formatter): move
+	code for better legibility.
+
+	* tta/perl/XSTexinfo/ParagraphXS.xs: remove para_set_state.
+
+	* tta/perl/XSTexinfo/ParagraphXS.xs (para_add_pending_word): pass
+	add_spaces_in as an optional SV.
+
+2026-11-15  Patrice Dumas  <pertusus@free.fr>
+
 	* tta/perl/t/z_misc/paragraph.t: call
 	Texinfo::Convert::Paragraph::destroy.  Change formatting of functions
 	beginning.  Do not set max in _new_line_formatter, it is not used.
