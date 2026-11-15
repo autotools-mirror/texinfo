@@ -727,7 +727,11 @@ sub insert_nodes_for_sectioning_commands($;$) {
                            $content->{'source_info'}, 0, $debug);
 
                 # remove explicit directions
-                splice(@{$up_node_arguments_line->{'contents'}}, 1);
+                foreach my $removed_e (
+                      splice(@{$up_node_arguments_line->{'contents'}}, 1)) {
+                  # remove cycles to release the removed elements
+                  tree_remove_parents($removed_e);
+                }
                 # readd end of line
                 push @{$node_name_arg->{'contents'}},
                   Texinfo::TreeElement::new({'text' => "\n",
