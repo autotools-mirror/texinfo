@@ -1,5 +1,31 @@
 2026-11-15  Patrice Dumas  <pertusus@free.fr>
 
+	for added node, remove explicit directions of up node without menu
+
+	If an added node up node has explicit directions and no menu, the new
+	node will not be referenced in any menu.  Remove explicit directions
+	of the up node in that case, to have an automatically generated menu,
+	and emit a warning.  Gavin report and analysis.
+
+	* tta/C/structuring_transfo/transformations.c
+	(complete_transform_document), tta/perl/t/test_utils.pl (test),
+	tta/perl/texi2any.pl: call sectioning_structure before calling
+	insert_nodes_for_sectioning_commands, such that sectioning directions
+	are available in insert_nodes_for_sectioning_commands.
+
+	* tta/C/structuring_transfo/transformations.c
+	(insert_nodes_for_sectioning_commands),
+	tta/perl/Texinfo/ManipulateTreeNonXS.pm
+	(insert_nodes_for_sectioning_commands): if the up node of a new node
+	do not have a menu and has automatic remove the up node automatic
+	directions to get an automatic menu.
+
+	* tta/perl/t/info_tests.t
+	(explicit_directions_no_menu_automatic_node_up): add test based on
+	Gavin report based on Mtools package Texinfo manual.
+
+2026-11-15  Patrice Dumas  <pertusus@free.fr>
+
 	* tta/perl/Texinfo/Convert/ParagraphNonXS.pm (_add_next_word): unset
 	end of sentence if there is an end of sentence punctuation, but no end
 	of sentence.

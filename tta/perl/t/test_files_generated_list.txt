@@ -1592,6 +1592,7 @@ t/results/info_tests/end_of_line_command_in_node_lines/res_info/end_of_line_comm
 t/results/info_tests/end_sentence_after_or_not_after_quoted_node.pl
 t/results/info_tests/error_in_footnote.pl
 t/results/info_tests/example_in_multitable_index.pl
+t/results/info_tests/explicit_directions_no_menu_automatic_node_up.pl
 t/results/info_tests/file_only_png.pl
 t/results/info_tests/float_long_captions.pl
 t/results/info_tests/float_without_type.pl

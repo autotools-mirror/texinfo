@@ -980,6 +980,8 @@ sub test($$) {
                                                                    $document);
   }
 
+  Texinfo::Structuring::sectioning_structure($document);
+
   my $warn_duplicate_section_target
     = $document->get_conf('WARN_DUPLICATE_SECTION_TARGET');
   if ($document->get_conf('AUTO_SECTION_NODE')) {
@@ -989,7 +991,6 @@ sub test($$) {
 
   Texinfo::Structuring::warn_multiple_node_descriptions($document);
 
-  Texinfo::Structuring::sectioning_structure($document);
   Texinfo::Structuring::sectioning_targets($document,
                                            $warn_duplicate_section_target);
 

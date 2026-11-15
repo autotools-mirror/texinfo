@@ -2011,6 +2011,11 @@ while (@input_files) {
     }
   }
 
+  # information obtained through Texinfo::Structuring
+  # and useful in converters.
+  # every format needs the sectioning structure
+  Texinfo::Structuring::sectioning_structure($document);
+
   if (get_conf('AUTO_SECTION_NODE')
       or (not defined(get_conf('AUTO_SECTION_NODE'))
           and $formats_table{$converted_format}->{'auto_section_node'})
@@ -2022,11 +2027,6 @@ while (@input_files) {
   if ($formats_table{$converted_format}->{'warn_multiple_node_descriptions'}) {
     Texinfo::Structuring::warn_multiple_node_descriptions($document);
   }
-
-  # information obtained through Texinfo::Structuring
-  # and useful in converters.
-  # every format needs the sectioning structure
-  Texinfo::Structuring::sectioning_structure($document);
 
   # targets are always associated to sectioning commands not already associated
   # to nodes.

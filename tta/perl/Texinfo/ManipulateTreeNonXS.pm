@@ -695,6 +695,51 @@ sub insert_nodes_for_sectioning_commands($;$) {
         # reassociate index entries and menus
         modify_tree($content, \&_reassociate_to_node,
                     [$new_node_relations, $previous_node_relations]);
+
+        # if the up node of the new node do not have a menu and has automatic
+        # direction, the new node will not appear in any menu.  In that case,
+        # remove the up node automatic directions to get a correct automatic
+        # menu.
+        if (exists($section_relations->{'section_directions'})
+            and exists($section_relations->{'section_directions'}->{'up'})) {
+          my $section_relation_up
+            = $section_relations->{'section_directions'}->{'up'};
+          if ($section_relation_up->{'associated_node'}) {
+            my $up_node_relations = $section_relation_up->{'associated_node'};
+            my $up_node = $up_node_relations->{'element'};
+            if (!exists($up_node_relations->{'menus'})) {
+              my $up_node_arguments_line = $up_node->{'contents'}->[0];
+              if (scalar(@{$up_node_arguments_line->{'contents'}}) > 1) {
+                my $debug = $document->get_conf('DEBUG');
+                my $error_messages = $document->{'error_messages'};
+
+                my $section_texinfo
+      = Texinfo::Convert::Texinfo::convert_contents_to_texinfo($new_node_tree);
+                # section argument missing
+                $section_texinfo = '' if (!defined($section_texinfo));
+                my $node_name_arg = $up_node_arguments_line->{'contents'}->[0];
+                my $up_node_texinfo
+                  = Texinfo::Convert::Texinfo::convert_contents_to_texinfo(
+                                                            $node_name_arg);
+                push @$error_messages, Texinfo::Report::line_warn(
+   sprintf(__("remove directions of `%s' to have an automatic menu for `%s'"),
+                           $up_node_texinfo, $section_texinfo),
+                           $content->{'source_info'}, 0, $debug);
+
+                # remove explicit directions
+                splice(@{$up_node_arguments_line->{'contents'}}, 1);
+                # readd end of line
+                push @{$node_name_arg->{'contents'}},
+                  Texinfo::TreeElement::new({'text' => "\n",
+                                             'type' => 'spaces_after_argument'});
+              }
+            }
+          } else {
+            print STDERR "BUG: Unexpected up section without associated node: "
+                . Texinfo::Convert::Texinfo::root_heading_command_to_texinfo(
+                        $section_relation_up->{'element'})."\n"; 
+          }
+        }
       }
     }
     # check is_target to avoid erroneous nodes, such as duplicates

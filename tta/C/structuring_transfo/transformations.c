@@ -981,6 +981,7 @@ typedef struct ELEMENT_WITH_ADDED_INFO {
 } ELEMENT_WITH_ADDED_INFO;
 
 /* ALTIMP Texinfo/ManipulateTreeNonXS.pm */
+/* This should be called after structuring.c sectioning_structure */
 void
 insert_nodes_for_sectioning_commands (DOCUMENT *document,
                                       int warn_duplicate_section_target)
@@ -993,9 +994,9 @@ insert_nodes_for_sectioning_commands (DOCUMENT *document,
   size_t node_idx = 0;
   C_HASHMAP *first_normalized = 0;
   const C_HASHMAP *identifiers_target = 0;
-  OPTIONS *options;
-  int warn_debug;
-  ERROR_MESSAGE_LIST *error_messages;
+  ERROR_MESSAGE_LIST *error_messages = &document->error_messages;
+  OPTIONS *options = document->options;
+  int warn_debug = (options && options->DEBUG.o.integer > 0);
 
   /* associate normalized reference added name to the number of
      section commands with such a normalized name. */
@@ -1004,10 +1005,6 @@ insert_nodes_for_sectioning_commands (DOCUMENT *document,
   if (warn_duplicate_section_target > 0)
     {
       first_normalized = new_c_hashmap (sections_list->number);
-      identifiers_target = &document->identifiers_target;
-      error_messages = &document->error_messages;
-      options = document->options;
-      warn_debug = (options && options->DEBUG.o.integer > 0);
     }
 
   /* cache information to avoid redoing the computations and avoid
@@ -1163,7 +1160,6 @@ insert_nodes_for_sectioning_commands (DOCUMENT *document,
               added_node = new_node (&document->error_messages, new_node_tree,
                                      document, content,
                                      (normalized_nr_count > 1 ? 1 : 0));
-              destroy_element (new_node_tree);
               if (added_node)
                 {
                   NODE_RELATIONS_LIST new_previous;
@@ -1190,7 +1186,78 @@ insert_nodes_for_sectioning_commands (DOCUMENT *document,
                   modify_tree (content, &reassociate_to_node,
                                (void *)&new_previous);
                   free (new_previous.list);
+
+     /* if the up node of the new node do not have a menu and has automatic
+        direction, the new node will not appear in any menu.  In that case,
+        remove the up node automatic directions to get a correct automatic
+        menu.
+      */
+                  if (section_relations->section_directions
+                      && section_relations->section_directions[D_up])
+                    {
+                      const SECTION_RELATIONS *section_relation_up
+                        = section_relations->section_directions[D_up];
+                      if (section_relation_up->associated_node)
+                        {
+                          const NODE_RELATIONS *up_node_relations
+                           = section_relation_up->associated_node;
+                          const ELEMENT *up_node = up_node_relations->element;
+                          if (!up_node_relations->menus
+                              || up_node_relations->menus->number <= 0)
+                            {
+                              ELEMENT *up_node_arguments_line
+                                = up_node->e.c->contents.list[0];
+                              if (
+                           up_node_arguments_line->e.c->contents.number > 1)
+                                {
+                                  ELEMENT *node_name_arg
+                               = up_node_arguments_line->e.c->contents.list[0];
+                                  char *up_node_texinfo
+                                 = convert_contents_to_texinfo (node_name_arg);
+                                  char *section_texinfo
+                                 = convert_contents_to_texinfo (new_node_tree);
+                                  /* section argument missing */
+                                  if (!section_texinfo)
+                                    section_texinfo = strdup ("");
+                                  message_list_command_warn (error_messages,
+                                   warn_debug, content, 0,
+              "remove directions of `%s' to have an automatic menu for `%s'",
+                                   up_node_texinfo, section_texinfo);
+                                  free (section_texinfo);
+                                  free (up_node_texinfo);
+
+                                  /* remove explicit directions */
+                                  while (up_node_arguments_line->e.c
+                                                   ->contents.number > 1)
+                                    {
+                                      ELEMENT *popped_e
+                                       = pop_element_from_contents(
+                                                up_node_arguments_line);
+                                      destroy_element_and_children (popped_e);
+                                    }
+                                  /* readd end of line */
+                                  ELEMENT *spaces_after_arg
+                                = new_text_element (ET_spaces_after_argument);
+                                  text_append_n (spaces_after_arg->e.text,
+                                                 "\n", 1);
+                                  add_to_contents_as_array (node_name_arg,
+                                                            spaces_after_arg);
+                                }
+                            }
+                        }
+                      else
+                        {
+                          char *section_up_texi
+                            = root_heading_command_to_texinfo (
+                                                section_relation_up->element);
+                          fprintf (stderr,
+            "BUG: Unexpected up section without associated node: %s\n",
+                                   section_up_texi);
+                          free (section_up_texi);
+                        }
+                    }
                 }
+              destroy_element (new_node_tree);
             }
         }
       if (content->e.c->cmd == CM_node)
@@ -1898,6 +1965,8 @@ complete_transform_document (DOCUMENT *document, unsigned long flags,
   if (flags & STTF_move_index_entries_after_items)
     move_index_entries_after_items_in_document (document);
 
+  sectioning_structure (document);
+
   if (auto_section_node > 0)
     insert_nodes_for_sectioning_commands (document,
                                           warn_duplicate_section_target);
@@ -1905,7 +1974,6 @@ complete_transform_document (DOCUMENT *document, unsigned long flags,
   if (flags & STTF_warn_multiple_node_descriptions)
     warn_multiple_node_descriptions (document);
 
-  sectioning_structure (document);
   sectioning_targets (document, warn_duplicate_section_target);
 
   associate_internal_references (document);

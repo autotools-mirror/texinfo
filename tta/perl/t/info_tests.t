@@ -1527,6 +1527,25 @@ AA.
 @chapter chap
 
 '],
+['explicit_directions_no_menu_automatic_node_up',
+'@node Top, Location, (dir), (dir)
+@top The doc
+
+This is the documentation.
+
+@unnumbered Introduction
+A collection of tools
+
+@menu
+* Location::          Where to find
+@end menu
+
+
+@node Location,, Top, Top
+@chapter Where to get
+
+Here.
+', {'AUTO_SECTION_NODE' => 1}],
 # this tests that in the resulting Info a comma in file name is protected.
 # It can also be used to test the Info readers that a ", Node:" in the
 # file name is not used for the node name.
