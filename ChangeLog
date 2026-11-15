@@ -1,3 +1,14 @@
+2026-11-15  Patrice Dumas  <pertusus@free.fr>
+
+	* tta/perl/Texinfo/Convert/ParagraphNonXS.pm (_add_next_word): unset
+	end of sentence if there is an end of sentence punctuation, but no end
+	of sentence.
+
+	* tta/perl/t/test_files_generated_list.txt,
+	tta/perl/t/plaintext_tests.t (punctuation_and_upper_case): new test
+	with end of sentence set followed by uppercase and end of sentence to
+	check that the end of sentence is unset in that case.
+
 2026-11-14  Gavin Smith <gavinsmith0123@gmail.com>
 
 	* tta/perl/t/info_tests.t: Remove unnecessary check of

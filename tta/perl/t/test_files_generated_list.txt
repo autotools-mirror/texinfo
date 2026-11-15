@@ -2648,6 +2648,7 @@ t/results/plaintext_tests/punctuation_and_code_style_commands.pl
 t/results/plaintext_tests/punctuation_and_code_style_commands_utf8.pl
 t/results/plaintext_tests/punctuation_and_footnotes.pl
 t/results/plaintext_tests/punctuation_and_footnotes_frenchspacing.pl
+t/results/plaintext_tests/punctuation_and_upper_case.pl
 t/results/plaintext_tests/punctuation_and_upper_case_commands.pl
 t/results/plaintext_tests/punctuation_and_upper_case_commands_utf8.pl
 t/results/plaintext_tests/punctuation_at_end_command.pl

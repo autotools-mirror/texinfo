@@ -796,6 +796,13 @@ push @test_cases, (
 ['punctuation',
 $punctuation_text
 ],
+# this tests an end of sentence set before upper-case letters with an end
+# of sentence too, to verify that the previous end of sentence is unset
+# in that case.
+['punctuation_and_upper_case',
+'Question?  GAAA.
+BBB. b
+'],
 ['punctuation_frenchspacing',
 '@frenchspacing on'."\n".$punctuation_text],
 );

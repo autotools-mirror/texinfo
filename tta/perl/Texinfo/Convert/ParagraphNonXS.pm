@@ -301,21 +301,30 @@ sub _add_next_word($;$$$$) {
 
       # to have an end of sentence, we should be called through add_text
       # and the punctuation should not be preceded by an upper-case letter.
-      if ($set_end_of_sentence
-          and ($paragraph->{'last_letter'} eq ''
-               or $paragraph->{'last_letter'} =~ /^[^\p{Upper}]$/)) {
-        if ($paragraph->{'frenchspacing'}) {
-          $paragraph->{'end_sentence'} = eos_present_frenchspacing;
+      if ($set_end_of_sentence) {
+        if ($paragraph->{'last_letter'} eq ''
+            or $paragraph->{'last_letter'} =~ /^[^\p{Upper}]$/) {
+          if ($paragraph->{'frenchspacing'}) {
+            $paragraph->{'end_sentence'} = eos_present_frenchspacing;
+          } else {
+            $paragraph->{'end_sentence'} = eos_present;
+          }
+          print STDERR "END_SENTENCE\n" if ($paragraph->{'debug'});
         } else {
-          $paragraph->{'end_sentence'} = eos_present;
+          if (exists($paragraph->{'end_sentence'})) {
+            print STDERR "delete END_SENTENCE($paragraph->{'end_sentence'})\n"
+              if ($paragraph->{'debug'});
+            delete $paragraph->{'end_sentence'};
+          }
         }
-        print STDERR "END_SENTENCE\n" if ($paragraph->{'debug'});
       }
     } else {
       if ($set_end_of_sentence) {
-        print STDERR "delete END_SENTENCE($paragraph->{'end_sentence'})\n"
-          if (exists($paragraph->{'end_sentence'}) and $paragraph->{'debug'});
-        delete $paragraph->{'end_sentence'};
+        if (exists($paragraph->{'end_sentence'})) {
+          print STDERR "delete END_SENTENCE($paragraph->{'end_sentence'})\n"
+            if ($paragraph->{'debug'});
+          delete $paragraph->{'end_sentence'};
+        }
       }
       $word =~ /([^$after_punctuation_characters])
                 [$after_punctuation_characters]*$/ox;
