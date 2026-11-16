@@ -159,8 +159,8 @@ A collection of tools
 Here.
 ';
 
-$result_errors{'explicit_directions_no_menu_automatic_node_up'} = '* W l6|remove directions of `Top\' to have an automatic menu for `Introduction\'
- warning: remove directions of `Top\' to have an automatic menu for `Introduction\'
+$result_errors{'explicit_directions_no_menu_automatic_node_up'} = '* W l6|modifying node relations of `Top\' to reference `Introduction\'
+ warning: modifying node relations of `Top\' to reference `Introduction\'
 
 * W l10|node up pointer for `Location\' is `Top\' but up is `Introduction\' in menu
  warning: node up pointer for `Location\' is `Top\' but up is `Introduction\' in menu

@@ -722,7 +722,7 @@ sub insert_nodes_for_sectioning_commands($;$) {
                   = Texinfo::Convert::Texinfo::convert_contents_to_texinfo(
                                                             $node_name_arg);
                 push @$error_messages, Texinfo::Report::line_warn(
-   sprintf(__("remove directions of `%s' to have an automatic menu for `%s'"),
+              sprintf(__("modifying node relations of `%s' to reference `%s'"),
                            $up_node_texinfo, $section_texinfo),
                            $content->{'source_info'}, 0, $debug);
 

@@ -1221,7 +1221,7 @@ insert_nodes_for_sectioning_commands (DOCUMENT *document,
                                     section_texinfo = strdup ("");
                                   message_list_command_warn (error_messages,
                                    warn_debug, content, 0,
-              "remove directions of `%s' to have an automatic menu for `%s'",
+                        "modifying node relations of `%s' to reference `%s'",
                                    up_node_texinfo, section_texinfo);
                                   free (section_texinfo);
                                   free (up_node_texinfo);
