@@ -168,8 +168,7 @@ sub _associate_internal_references($) {
         my $node_target = $identifier_target->{$normalized};
         if (!$customization_information->get_conf('novalidate')
             and !Texinfo::Convert::Texinfo::check_node_same_texinfo_code(
-                               $node_target,
-                               $label_element->{'extra'}->{'node_content'})) {
+                               $node_target, $label_element)) {
           $document->document_line_warn(
                  sprintf(__("\@%s to `%s', different from %s name `%s'"),
                      $ref->{'cmdname'},

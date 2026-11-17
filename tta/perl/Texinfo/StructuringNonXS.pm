@@ -443,7 +443,7 @@ sub _check_menu_entry($$$$$) {
                             $menu_content->{'source_info'});
     } else {
       if (!Texinfo::Convert::Texinfo::check_node_same_texinfo_code($menu_node,
-                           $menu_entry_node->{'extra'}->{'node_content'})) {
+                                                           $menu_entry_node)) {
         $document->document_line_warn(
         sprintf(__("\@%s entry node name `%s' different from %s name `%s'"),
                 $command,
@@ -512,8 +512,8 @@ sub check_nodes_are_referenced($) {
     if (defined($node_directions)) {
       foreach my $direction (@node_directions_names) {
         if ($node_directions->{$direction}
-            and not $node_directions->{$direction}
-                                   ->{'extra'}->{'manual_content'}) {
+            and not exists($node_directions->{$direction}
+                                ->{'extra'}->{'manual_content'})) {
           $referenced_nodes{$node_directions->{$direction}} = 1;
         }
       }
@@ -1248,8 +1248,7 @@ sub construct_nodes_tree($) {
 
             if (!$customization_information->get_conf('novalidate')
                 and !Texinfo::Convert::Texinfo::check_node_same_texinfo_code(
-                                 $node_target,
-                                 $direction_element->{'extra'}->{'node_content'})) {
+                                 $node_target, $direction_element)) {
               $document->document_line_warn(sprintf(
              __("%s pointer `%s' (for node `%s') different from %s name `%s'"),
                   $direction_texts{$direction},

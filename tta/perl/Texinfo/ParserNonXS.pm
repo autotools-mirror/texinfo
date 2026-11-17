@@ -4131,7 +4131,7 @@ sub _end_line_misc_line($$$) {
           $node_line_arg->{'extra'}->{$label_info}
             = $arg_label_manual_info->{$label_info};
         }
-        if ($node_line_arg->{'extra'}->{'node_content'}) {
+        if (exists($node_line_arg->{'extra'}->{'node_content'})) {
           my $normalized
        = Texinfo::Convert::NodeNameNormalization::convert_to_node_identifier(
               $node_line_arg->{'extra'}->{'node_content'});

@@ -12507,7 +12507,7 @@ html_convert_menu_entry_type (CONVERTER *self, const enum element_type type,
                   TEXT text;
                   html_set_code_context (self, 1);
 
-                  text = html_convert_tree_explanation (self, node_content,
+                  text = html_convert_tree_explanation (self, menu_entry_node,
                                                         "menu_arg name");
                   name = text.text;
                   html_pop_code_context (self);

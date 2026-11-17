@@ -1197,7 +1197,7 @@ sub format_node($$;$) {
           if ($self->{'info_special_chars_warning'}
               # warn only for external nodes, internal nodes should already
               # trigger a warning when defined
-              and $node_direction->{'extra'}->{'manual_content'}) {
+              and exists($node_direction->{'extra'}->{'manual_content'})) {
             $self->plaintext_line_warn($self, sprintf(__(
                  "\@node %s name should not contain `,': %s"),
                                            $direction, $node_text),

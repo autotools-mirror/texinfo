@@ -600,9 +600,7 @@ check_menu_entry (DOCUMENT *document, enum command_id cmd,
         }
       else
         {
-          const ELEMENT *node_content = lookup_extra_container (menu_entry_node,
-                                                          AI_key_node_content);
-          if (!check_node_same_texinfo_code (menu_node, node_content))
+          if (!check_node_same_texinfo_code (menu_node, menu_entry_node))
             {
               char *entry_node_texi
                 = convert_contents_to_texinfo (menu_entry_node);
@@ -2042,11 +2040,8 @@ construct_nodes_tree (DOCUMENT *document)
                           if ((!options)
                                || options->novalidate.o.integer <= 0)
                             {
-                               const ELEMENT *direction_node_content
-                                 = lookup_extra_container (direction_element,
-                                                      AI_key_node_content);
                                if (!check_node_same_texinfo_code (node_target,
-                                                       direction_node_content))
+                                                       direction_element))
                                  {
                                    char *direction_texi
                                     = convert_contents_to_texinfo (
@@ -2169,13 +2164,11 @@ associate_internal_references (DOCUMENT *document)
             }
           else
             {
-              label_node_content = lookup_extra_container (label_element,
-                                                         AI_key_node_content);
               if ((!options)
                   || options->novalidate.o.integer <= 0)
                 {
                   if (!check_node_same_texinfo_code (node_target,
-                                                     label_node_content))
+                                                     label_element))
                     {
                       char *label_texi
                          = convert_contents_to_texinfo (label_element);

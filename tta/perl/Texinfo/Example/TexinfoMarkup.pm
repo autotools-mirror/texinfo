@@ -1225,7 +1225,7 @@ sub _convert($$;$) {
           my $normalized;
           my $node_arg = $element->{'contents'}->[0];
           if ($node_arg and $node_arg->{'extra'}
-              and $node_arg->{'extra'}->{'node_content'}) {
+              and exists($node_arg->{'extra'}->{'node_content'})) {
             my $normalized;
             if (defined($node_arg->{'extra'}->{'normalized'})) {
               $normalized = $node_arg->{'extra'}->{'normalized'};

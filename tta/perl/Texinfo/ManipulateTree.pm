@@ -465,20 +465,6 @@ sub tree_remove_parents($) {
     foreach my $content (@{$element->{'contents'}}) {
       tree_remove_parents($content);
     }
-    #if (exists($element->{'extra'})) {
-      #if (exists($element->{'extra'}->{'def_index_element'})) {
-      #  tree_remove_parents($element->{'extra'}->{'def_index_element'});
-      #  if (exists($element->{'extra'}->{'def_index_ref_element'})) {
-      #    tree_remove_parents($element->{'extra'}->{'def_index_ref_element'});
-      #  }
-      #}
-      # elements also in $element->{'contents'} (without parent when added).
-      #foreach my $key ('node_content', 'manual_content') {
-      #  if (exists($element->{'extra'}->{$key})) {
-      #    tree_remove_parents($element->{'extra'}->{$key});
-      #  }
-      #}
-    #}
   }
 }
 
@@ -1381,7 +1367,7 @@ sub normalized_menu_entry_internal_node($) {
   foreach my $content (@{$entry->{'contents'}}) {
     if ($content->{'type'} eq 'menu_entry_node') {
       if (exists($content->{'extra'})) {
-        if (! $content->{'extra'}->{'manual_content'}) {
+        if (! exists($content->{'extra'}->{'manual_content'})) {
           return $content->{'extra'}->{'normalized'};
         }
       }

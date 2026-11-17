@@ -6265,9 +6265,8 @@ sub _convert_menu_entry_type($$$) {
         $name = $self->command_text($menu_entry_node);
       } elsif (exists($menu_entry_node->{'extra'})
                and exists($menu_entry_node->{'extra'}->{'node_content'})) {
-        $name = $self->set_context_convert_tree(
-                     $menu_entry_node->{'extra'}->{'node_content'},
-                               $CTXF_code, 'menu_arg name');
+        $name = $self->set_context_convert_tree($menu_entry_node,
+                                                $CTXF_code, 'menu_arg name');
       } else {
         $name = '';
       }

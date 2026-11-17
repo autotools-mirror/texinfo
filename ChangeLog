@@ -1,5 +1,24 @@
 2026-11-17  Patrice Dumas  <pertusus@free.fr>
 
+	* tta/perl/Texinfo/Convert/Texinfo.pm (check_node_same_texinfo_code):
+	call convert_contents_to_texinfo instead of convert_to_texinfo to
+	avoid leading and trailing spaces for the comparison.
+
+	* tta/C/convert/format_html.c (html_convert_menu_entry_type),
+	tta/C/structuring_transfo/structuring.c (check_menu_entry)
+	(construct_nodes_tree, associate_internal_references),
+	tta/perl/Texinfo/Convert/HTML.pm (_convert_menu_entry_type),
+	tta/perl/Texinfo/Structuring.pm (_associate_internal_references),
+	tta/perl/Texinfo/StructuringNonXS.pm (_check_menu_entry)
+	(construct_nodes_tree): use the element instead of the extra
+	node_content information when both are equivalent.
+
+	* tta/perl/Texinfo/Example/TexinfoMarkup.pm,
+	tta/perl/Texinfo/ParserNonXS.pm, tta/perl/Texinfo/StructuringNonXS.pm:
+	use exist in conditional when the value is not needed.
+
+2026-11-17  Patrice Dumas  <pertusus@free.fr>
+
 	* tta/C/main/tree_types.h (AI_KEYS_LIST): remove entry for none and
 	AI_key_none, as it is not used anywhere.
 

@@ -1335,6 +1335,8 @@ sub node_name($$) {
     # converted here, except for nodes dynamically added for footnotes.
     my $label_element = Texinfo::Common::get_label_element($node);
     if (!defined($label_element)) {
+      # FIXME it would be better not to go there if there is an external
+      # manual, check the code
       # node direction to an external node
       $label_element = $node->{'extra'}->{'node_content'};
     } elsif (exists($Texinfo::Commands::sectioning_heading_commands{

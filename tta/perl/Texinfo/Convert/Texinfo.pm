@@ -134,7 +134,7 @@ sub check_node_same_texinfo_code($$) {
       $contents_node
         = Texinfo::TreeElement::new({'contents' => $contents});
     }
-    $node_texi = convert_to_texinfo($contents_node);
+    $node_texi = convert_contents_to_texinfo($contents_node);
     $node_texi =~ s/\s+/ /g;
   } else {
     $node_texi = '';
