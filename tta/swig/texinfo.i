@@ -469,6 +469,7 @@ typedef struct SOURCE_INFO {
     char *macro;
 } SOURCE_INFO;
 
+// for SOURCE_MARK
 %include "source_mark_types.h"
 
 // swig_interface.h

@@ -592,7 +592,7 @@ check_menu_entry (DOCUMENT *document, enum command_id cmd,
                                                    normalized_menu_node);
       if (!menu_node)
         {
-          char *entry_node_texi = link_element_to_texi (menu_entry_node);
+          char *entry_node_texi = convert_contents_to_texinfo (menu_entry_node);
           message_list_command_error (error_messages, warn_debug, menu_content,
                          "@%s reference to nonexistent node `%s'",
                          builtin_command_name (cmd), entry_node_texi);
@@ -604,7 +604,8 @@ check_menu_entry (DOCUMENT *document, enum command_id cmd,
                                                           AI_key_node_content);
           if (!check_node_same_texinfo_code (menu_node, node_content))
             {
-              char *entry_node_texi = link_element_to_texi (menu_entry_node);
+              char *entry_node_texi
+                = convert_contents_to_texinfo (menu_entry_node);
               char *menu_node_texi = target_element_to_texi_label (menu_node);
               message_list_command_warn (error_messages, warn_debug,
                   menu_content, 0,
@@ -2048,7 +2049,8 @@ construct_nodes_tree (DOCUMENT *document)
                                                        direction_node_content))
                                  {
                                    char *direction_texi
-                                    = link_element_to_texi (direction_element);
+                                    = convert_contents_to_texinfo (
+                                                          direction_element);
                                    char *node_texi
                                     = target_element_to_texi_label (node);
                                    char *node_target_texi
@@ -2073,7 +2075,8 @@ construct_nodes_tree (DOCUMENT *document)
                                || options->novalidate.o.integer <= 0)
                             {
                               char *direction_texi
-                                 = link_element_to_texi (direction_element);
+                               = convert_contents_to_texinfo (
+                                                       direction_element);
                               message_list_command_error (error_messages,
                                      warn_debug, node,
                                      "%s reference to nonexistent `%s'",
@@ -2156,7 +2159,8 @@ associate_internal_references (DOCUMENT *document)
               if ((!options)
                   || options->novalidate.o.integer <= 0)
                 {
-                  char *label_texi = link_element_to_texi (label_element);
+                  char *label_texi
+                    = convert_contents_to_texinfo (label_element);
                   message_list_command_error (error_messages, warn_debug,
                              ref, "@%s reference to nonexistent node `%s'",
                              builtin_command_name (ref->e.c->cmd), label_texi);
@@ -2173,7 +2177,8 @@ associate_internal_references (DOCUMENT *document)
                   if (!check_node_same_texinfo_code (node_target,
                                                      label_node_content))
                     {
-                      char *label_texi = link_element_to_texi (label_element);
+                      char *label_texi
+                         = convert_contents_to_texinfo (label_element);
                       char *target_texi
                          = target_element_to_texi_label (node_target);
                        message_list_command_warn (error_messages, warn_debug,

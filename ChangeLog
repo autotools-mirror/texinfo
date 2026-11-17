@@ -1,3 +1,20 @@
+2026-11-17  Patrice Dumas  <pertusus@free.fr>
+
+	* tta/C/main/tree_types.h (AI_KEYS_LIST): remove entry for none and
+	AI_key_none, as it is not used anywhere.
+
+	Add/remove/update comments.
+
+2026-11-17  Patrice Dumas  <pertusus@free.fr>
+
+	* tta/C/main/convert_to_texinfo.c,
+	tta/C/structuring_transfo/structuring.c,
+	tta/perl/Texinfo/Convert/Texinfo.pm, tta/perl/Texinfo/Structuring.pm,
+	tta/perl/Texinfo/StructuringNonXS.pm: replace link_element_to_texi
+	calls by convert_contents_to_texinfo calls.  The element should
+	contain the parentheses and file and node names directly in argument,
+	no need to reconstruct.  Remove link_element_to_texi.
+
 2026-11-16  Patrice Dumas  <pertusus@free.fr>
 
 	* tta/C/structuring_transfo/transformations.c

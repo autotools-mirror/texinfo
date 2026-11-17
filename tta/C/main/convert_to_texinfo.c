@@ -210,6 +210,7 @@ convert_to_texinfo (const ELEMENT *e)
   return result.text;
 }
 
+/* Return value to be freed by caller. */
 char *
 convert_contents_to_texinfo (const ELEMENT *e)
 {
@@ -234,43 +235,13 @@ convert_contents_to_texinfo (const ELEMENT *e)
 
 /* Return value to be freed by caller. */
 char *
-link_element_to_texi (const ELEMENT *element)
-{
-  TEXT result;
-  const ELEMENT *element_link;
-
-  text_init (&result);
-  text_append (&result, "");
-
-  element_link = lookup_extra_container (element, AI_key_manual_content);
-  if (element_link)
-    {
-      char *manual_texi = convert_to_texinfo (element_link);
-      text_append (&result, "(");
-      text_append (&result, manual_texi);
-      text_append (&result, ")");
-      free (manual_texi);
-    }
-
-  element_link = lookup_extra_container (element, AI_key_node_content);
-  if (element_link)
-    {
-      char *node_texi = convert_to_texinfo (element_link);
-      text_append (&result, node_texi);
-      free (node_texi);
-    }
-  return result.text;
-}
-
-/* Return value to be freed by caller. */
-char *
 target_element_to_texi_label (const ELEMENT *element)
 {
   const ELEMENT *label_element = get_label_element (element);
   /* get_label_element does not handle links to external manuals in menus */
   if (!label_element)
     {
-      return link_element_to_texi (element);
+      return convert_contents_to_texinfo (element);
     }
   return convert_contents_to_texinfo (label_element);
 }

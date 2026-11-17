@@ -792,7 +792,8 @@ sub _debug_protect_eol($) {
 }
 
 # currently no ARRAY, and for HASH only 'node_content' 'manual_content'
-# and out_of_tree_element_name, therefore no call to element_number_or_error
+# and out_of_tree_element_name (only for spaces_after_cmd_before_arg),
+# therefore no call to element_number_or_error
 sub _print_element_associated_info($$$$$;$$) {
   my ($associated_info, $header, $level, $prepended, $current_nr,
       $fname_encoding, $use_filename) = @_;
@@ -823,6 +824,7 @@ sub _print_element_associated_info($$$$$;$$) {
       }
     } elsif (($ref eq 'HASH' or $ref eq 'Texinfo::TreeElement')
               and $out_of_tree_element_name{$key}) {
+      # currently no extra_element_oot, only extra_element_info
       my $info_e_text;
       ($current_nr, $info_e_text)
         = _print_element_add_prepend_info($value, $level+1, $prepended,
@@ -832,6 +834,7 @@ sub _print_element_associated_info($$$$$;$$) {
       $had_eol = 1;
     } elsif ($ref eq 'HASH' or $ref eq 'Texinfo::TreeElement') {
       if ($extra_directions{$key}) {
+        # no corresponding key currently (would have been extra_directions)
         my @directions_strings;
         foreach my $d_key (@node_directions_names) {
           if (exists($value->{$d_key})) {
@@ -841,26 +844,29 @@ sub _print_element_associated_info($$$$$;$$) {
           }
         }
         $result .= 'D['.join('|', @directions_strings).']';
+      # sync with main/tree_types.h AI_KEYS_LIST extra_container
       } elsif ($key eq 'node_content' or $key eq 'manual_content') {
         my $container_value
           = Texinfo::Convert::Texinfo::convert_to_texinfo($value);
         $container_value = _debug_protect_eol($container_value);
         $result .= "{$container_value}";
       } else {
+        # no corresponding key currently (would have been extra_element)
         my $element_value = element_number_or_error($value);
         $result .= "[$element_value]";
       }
-    # sync next two with main/tree_types.h AI_KEYS_LIST
-    # string_list and index_entry
+    # sync with main/tree_types.h AI_KEYS_LIST extra_string_list
     } elsif ($ref eq 'ARRAY'
              and ($key eq 'misc_args'
                   or $key eq 'formal_args'
                   or $key eq 'documentlanguagevariant')) {
       $result .= 'A{'.join('|', @{$value}).'}';
+    # sync with main/tree_types.h AI_KEYS_LIST extra_index_entry
     } elsif ($key eq 'index_entry' or $key eq 'associated_index_entry') {
       my ($index_name, $number) = @{$value};
       $result .= "I{${index_name},${number}}";
     } elsif ($ref eq 'ARRAY') {
+      # no corresponding key currently (would have been extra_contents)
       my @elts_list;
       foreach my $e (@$value) {
         push @elts_list, element_number_or_error($e);
@@ -872,9 +878,6 @@ sub _print_element_associated_info($$$$$;$$) {
     }
   }
 
-  #'misc_args' array of strings
-  #'node_content' 'node_manual' special
-  #'index_entry'} = [$index_name, $number]
   return ($current_nr, $result);
 }
 

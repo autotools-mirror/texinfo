@@ -36,17 +36,20 @@ enum directions {
    D_up,
 };
 
+/* types without corresponding keys cannot be set, but are still used
+   in code in case they would become useful again */
 enum extra_type {
- /* mainly used for deleted associated info */
-   extra_none,
+ /* only for AI_key_none for deleted associated info */
+   extra_none,           /* no such type currently */
  /* CONTAINER ASSOCIATED_INFO and lookup_* functions */
-   extra_element,
-   extra_element_oot,
-   extra_contents,
+   extra_element,        /* no such type currently */
+   extra_element_oot,    /* no such type currently */
+   extra_contents,       /* no such type currently */
    extra_container,
-   extra_directions,
+   extra_directions,     /* no such type currently */
    extra_string_list,
-   extra_index_entry, /* index name and position in index */
+   /* index name and position in index */
+   extra_index_entry,
    extra_string,
    extra_integer,
 
@@ -79,7 +82,7 @@ enum extra_type {
 /* transiently used for numbering of the elements for the representation
    of the tree.  Not currently used. */
 #define EF_numbered                      0x1000
-/* and added element, not in the initial tree.  Not systematically set,
+/* an added element, not in the initial tree.  Not systematically set,
    only when useful */
 #define EF_added                         0x2000
 
@@ -102,11 +105,12 @@ enum string_info_type {
    _print_element_associated_info list for ARRAY ref
    and element_oot with @extra_out_of_tree (currently none)
 */
+/* was previously used for removed associated data, currently unused
+   ai_key(none, none, 0)
+ */
 /* corresponds to name, extra type and associated data.  The associated data
    is only used for interfacing with Perl */
 #define AI_KEYS_LIST \
-  ai_key(none, none, 0) \
-  \
   ai_key(cell_number, integer, 0) \
   ai_key(item_number, integer, 0) \
   ai_key(global_command_number, integer, 0) \

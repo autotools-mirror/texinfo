@@ -35,8 +35,7 @@ use Texinfo::Common;
 use Texinfo::ManipulateTree;
 
 # for error messages
-use Texinfo::Convert::Texinfo qw(target_element_to_texi_label
-                                 link_element_to_texi);
+use Texinfo::Convert::Texinfo qw(target_element_to_texi_label);
 
 # for internal references and misc uses
 use Texinfo::Convert::NodeNameNormalization;
@@ -162,7 +161,7 @@ sub _associate_internal_references($) {
           $document->document_line_error(
                      sprintf(__("\@%s reference to nonexistent node `%s'"),
                              $ref->{'cmdname'},
-                             link_element_to_texi($label_element)),
+      Texinfo::Convert::Texinfo::convert_contents_to_texinfo($label_element)),
                                  $ref->{'source_info'});
         }
       } else {
@@ -174,7 +173,7 @@ sub _associate_internal_references($) {
           $document->document_line_warn(
                  sprintf(__("\@%s to `%s', different from %s name `%s'"),
                      $ref->{'cmdname'},
-                     link_element_to_texi($label_element),
+      Texinfo::Convert::Texinfo::convert_contents_to_texinfo($label_element),
                      $node_target->{'cmdname'},
                      target_element_to_texi_label($node_target)),
                                 $ref->{'source_info'});

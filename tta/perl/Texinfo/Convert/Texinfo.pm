@@ -53,7 +53,6 @@ our $VERSION = '7.3dev';
 
 our @EXPORT_OK = qw(
   convert_to_texinfo
-  link_element_to_texi
   target_element_to_texi_label
 );
 
@@ -97,29 +96,13 @@ sub convert_contents_to_texinfo($) {
 }
 
 # TODO document?
-sub link_element_to_texi($) {
-  my $element = shift;
-
-  my $result = '';
-  return $result if (!exists($element->{'extra'}));
-  if (exists($element->{'extra'}->{'manual_content'})) {
-    $result = '('.convert_to_texinfo($element->{'extra'}->{'manual_content'})
-                    .')';
-  }
-  if (exists($element->{'extra'}->{'node_content'})) {
-    $result .= convert_to_texinfo($element->{'extra'}->{'node_content'});
-  }
-  return $result
-}
-
-# TODO document?
 sub target_element_to_texi_label($) {
   my $element = shift;
 
   my $label_element = Texinfo::Common::get_label_element($element);
   # get_label_element does not handle links to external manuals in menus
   if (!defined($label_element)) {
-    return link_element_to_texi($element);
+    return convert_contents_to_texinfo($element);
   }
   return convert_contents_to_texinfo($label_element);
 }

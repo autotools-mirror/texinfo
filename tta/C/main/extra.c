@@ -255,9 +255,6 @@ lookup_associated_info (const ASSOCIATED_INFO *a, enum ai_key_name key)
   size_t i;
   for (i = 0; i < a->info_number; i++)
     {
-      /* We could reuse removed key pair slots by checking for AI_key_none
-         but it is not worth it as they are only generated in case of
-         erroneous constructs */
       if (a->info[i].key == key)
         return &a->info[i];
     }

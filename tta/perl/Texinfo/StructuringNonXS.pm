@@ -50,8 +50,7 @@ use Texinfo::Common;
 use Texinfo::ManipulateTree qw(normalized_entry_associated_internal_node);
 
 # for error messages
-use Texinfo::Convert::Texinfo qw(target_element_to_texi_label
-                                 link_element_to_texi);
+use Texinfo::Convert::Texinfo qw(target_element_to_texi_label);
 
 my %command_structuring_level = %Texinfo::CommandsValues::command_structuring_level;
 
@@ -440,7 +439,7 @@ sub _check_menu_entry($$$$$) {
       $document->document_line_error(
                   sprintf(__("\@%s reference to nonexistent node `%s'"),
                           $command,
-                          link_element_to_texi($menu_entry_node)),
+     Texinfo::Convert::Texinfo::convert_contents_to_texinfo($menu_entry_node)),
                             $menu_content->{'source_info'});
     } else {
       if (!Texinfo::Convert::Texinfo::check_node_same_texinfo_code($menu_node,
@@ -448,7 +447,7 @@ sub _check_menu_entry($$$$$) {
         $document->document_line_warn(
         sprintf(__("\@%s entry node name `%s' different from %s name `%s'"),
                 $command,
-                link_element_to_texi($menu_entry_node),
+  Texinfo::Convert::Texinfo::convert_contents_to_texinfo($menu_entry_node),
                 $menu_node->{'cmdname'},
                 target_element_to_texi_label($menu_node)),
                                $menu_content->{'source_info'});
@@ -1254,7 +1253,7 @@ sub construct_nodes_tree($) {
               $document->document_line_warn(sprintf(
              __("%s pointer `%s' (for node `%s') different from %s name `%s'"),
                   $direction_texts{$direction},
-                  link_element_to_texi($direction_element),
+    Texinfo::Convert::Texinfo::convert_contents_to_texinfo($direction_element),
                   target_element_to_texi_label($node),
                                      $node_target->{'cmdname'},
                   target_element_to_texi_label($node_target)),
@@ -1265,7 +1264,7 @@ sub construct_nodes_tree($) {
               $document->document_line_error(
                    sprintf(__("%s reference to nonexistent `%s'"),
                       $direction_texts{$direction},
-                      link_element_to_texi($direction_element)),
+    Texinfo::Convert::Texinfo::convert_contents_to_texinfo($direction_element)),
                                 $node->{'source_info'});
             }
           }
