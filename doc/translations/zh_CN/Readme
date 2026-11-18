@@ -1,0 +1,34 @@
+
+Source text:
+    info-stnd.texi
+    texinfo.texi
+    pod2texi.texi
+    version.texi
+    fdl.texi
+
+Chinese text:
+    info-stnd-zh_CN.texi
+    texinfo-zh_CN.texi
+    pod2texi-zh_CN.texi
+
+ Rendered files:
+    info-stnd-zh_CN.pdf
+    info-stnd-zh_CN.html
+    info-stnd-zh_CN.plaintext.gz
+    info-stnd-zh_CN.info.gz
+    texinfo-zh_CN.pdf
+    texinfo-zh_CN.html
+    texinfo-zh_CN.plaintext.gz
+    texinfo-zh_CN.info.gz
+
+The source text is from <https://git.savannah.gnu.org/git/texinfo.git>, tag "texinfo-7.2".
+
+
+The repository for downloading source texts, Chinese texts, and rendered files:
+<https://gitee.com/zhaiyongning/texinfo-zh_CN.download.git>
+
+
+
+The repository for translation work: 
+<https://gitee.com/zhaiyongning/texinfo-zh_CN.git>
+The branch is "texinfo-7.2".

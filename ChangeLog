@@ -1,3 +1,8 @@
+2026-11-18  zhaiyn <zhaiyn-free@foxmail.com>
+
+	* doc/translations/zh_CN: updates.  add info-stnd-zh_CN.texi and
+	pod2texi-zh_CN.texi.
+
 2026-11-15  Patrice Dumas  <pertusus@free.fr>
 
 	* tta/C/convert/convert_to_plaintext.c (common_fill_formatter): move

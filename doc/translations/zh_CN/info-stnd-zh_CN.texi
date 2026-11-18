@@ -1,0 +1,2024 @@
+\input texinfo-zh    @c -*-texinfo-*-
+@c We must \input texinfo.tex instead of texinfo, otherwise make distcheck in the Texinfo distribution fails, because the texinfo Info file is made first, and texi2dvi must include . first in the path.
+@c 我们必须输入“texinfo.tex”而不是“texinfo”，否则在Texinfo发行版中@command{make distcheck}会失败，因为首先会生成texinfo的Info文件，而texi2dvi必须首先在路径中包含'.'。
+@comment %**start of header
+@setfilename info-stnd-zh_CN.info
+@include version-stnd.texi
+@settitle 独立 GNU Info @value{VERSION}
+
+@firstparagraphindent insert
+@paragraphindent 2
+@ifinfo
+@paragraphindent 4
+@end ifinfo
+@documentencoding UTF-8
+@documentlanguage zh_CN
+@frenchspacing on
+@c 此前8行，为中文译者增加，这样更符合中文的首行缩进习惯。
+
+@syncodeindex vr cp
+@syncodeindex fn cp
+@syncodeindex ky cp
+@comment %**end of header
+
+@copying
+本手册适用于独立 GNU Info （版本 @value{VERSION}，@value{UPDATED}），这是一个用于查看Info格式文档（通常由Texinfo源文件创建）的程序。
+
+版权所有 @copyright{} 1992，1993，1996，1997，1998，1999，2001-2024 自由软件基金会股份有限公司。
+
+@quotation
+根据自由软件基金会发布的@uref{https://www.gnu.org/licenses/fdl-1.3.html , GNU自由文档许可证1.3版}或任何后续版本的条款，允许复制、允许和/或修改本文档；无不变部分、无封面文本、无封底文本。许可证副本包含在Texinfo手册``GNU自由文档许可证''章节中。
+@end quotation
+
+本文档是遵循GNU自由文档许可证（GNU Free Documentation License）发布的系列文档的一部分。如果您希望将本文档从该系列中单独发布，可以按照许可证第6节所述，在文档中添加一份许可证副本。
+@end copying
+
+@dircategory Texinfo 文档系统
+@direntry
+* info独立程序: (info-stnd).       阅读Info文档，不使用Emacs。
+@end direntry
+
+@titlepage
+@title 独立 GNU Info
+@subtitle 适用于版本@value{VERSION},@value{UPDATED}
+@author 布莱恩·J·福克斯(Brian J. Fox)
+@author 以及Texinfo的维护者
+@page
+@vskip 0pt plus 1filll
+@insertcopying
+@end titlepage
+
+@contents
+
+
+@node Top
+@top 独立 GNU Info
+
+本文档介绍了独立的Info阅读器，您可以使用它来阅读Info文档。
+
+如果您是Info阅读器的新手，那么您可以通过输入@key{H}来获取基本键绑定列表以开始使用。您可以通过输入@key{SPC(空格)}和@key{DEL(删除)}（或@key{Space(空格)}和@key{Backspace(回退)}）进行前后移动，以阅读本手册的其余部分。
+
+
+@node Stand-alone Info
+@nodedescription Info是什么？
+@chapter 独立Info 
+
+这里描述的 @dfn{Info} 程序是一个独立程序，属于Texinfo发行版的一部分，用于在文本终端上查看Info文件。@dfn{Info文件} 通常是使用程序@code{texi2any}（也在Texinfo发行版中）处理Texinfo文件后生成的。
+
+Texinfo本身（请参阅 @ref{Top,,, texinfo, Texinfo}）是一个文档系统，它使用单个源文件来生成在线信息和打印输出。您可以排版和打印使用Info阅读的文件。
+
+@cindex Emacs Info reader
+@cindex Emacs Info 阅读器 @sortas{EmacsInfoydq}
+@cindex Info files, reading in Emacs
+@cindex Info文件，用Emacs阅读 @sortas{InfowjyEmacsyd}
+GNU Emacs 也提供了一个Info阅读器（只需在Emacs中输入@code{@kbd{M-x} info}即可）。Emacs Info和Info独立程序具有几乎相同的用户界面，尽管定制化和其他细节有所不同（本手册解释的是独立Info阅读器）。Emacs Info 阅读器支持 X Window 系统和其他此类位图界面，而不仅仅是纯ASCII界面，因此，如果您希望Info文件有更美观的显示，不妨尝试一下。您可以在不使用Emacs进行其他操作的情况下使用 Emacs Info。（输入@kbd{C-x C-c}退出；这在独立Info阅读器中同样有效。）请参阅 @ref{Top,,, info, Info} 以得到关于Info系统的教程和更多背景信息，以及关于作为 GNU Emacs 一部分的Info阅读器的信息。
+
+@cindex bugs, reporting
+@cindex 错误，报告 @sortas{cwbg}
+请将此独立Info程序中的错误报告至@email{bug-texinfo@@gnu.org}。Emacs Info 阅读器中的错误应发送至@email{bug-gnu-emacs@@gnu.org}。
+
+
+@node Node Commands
+@nodedescription 用于选择一个新节点的命令。
+@chapter 选择一个节点
+@cindex nodes, selection of 
+@cindex 节点的选择 @sortas{jddxz}
+
+最基本的节点命令是@samp{n}、@samp{p}和@samp{u}。这些命令可让您在文件的节点结构中移动：
+
+@table @asis
+@item @kbd{n} (@code{next-node})
+@kindex n
+@findex next-node
+选择`下一个'节点。
+
+@item @kbd{p} (@code{prev-node})
+@kindex p
+@findex prev-node
+选择`上一个'节点。
+
+@item @kbd{u} (@code{up-node})
+@kindex u
+@findex up-node
+选择`上一级'节点。
+@end table
+
+每个Info节点的顶行(即:导航栏)包含 @dfn{指针} ，用于描述`下一个(Next)'、`上一个(Prev)'和`上一级(Up)'节点的位置。
+
+Info文件中的节点通常按层次结构排列；例如，章的某一节的`Next`指针会指引你进入同一章的下一个节，而`Up'指针则会指引你进入对应于上一级节点的整个章。
+
+您可以使用@samp{l}命令选择您已经查看过的节点，该命令代表``刚才的(last)节点''：
+
+@table @asis
+@item @kbd{l} (@code{history-node})
+@kindex l
+@findex history-node
+在此窗口中，通过已访问节点的历史记录进行回退。当前节点将从历史记录中移除。
+
+当您跟随一个指向另一个节点的引用去阅读其它相关资料后，如果希望从原来阅读的地方继续阅读，这将非常有用。
+@end table
+
+@noindent
+另外两个命令，@samp{t}和@samp{d}，用于选择特殊节点：
+
+@table @asis
+@item @kbd{t} (@code{top-node})
+@kindex t
+@findex top-node
+选择当前Info文件中的@samp{顶(Top)}节点。
+
+@item @kbd{d} (@code{dir-node})
+@kindex d
+@findex dir-node
+选择目录(@samp{(dir)})节点。该节点包含一个菜单，其中列出了系统上安装的所有可用Info文件。
+@end table
+
+@findex execute-command
+在本手册的命令说明中，@kbd{M-x}命令名称会显示在括号内。@kbd{M-x}本身是一个允许您通过名称来运行命令的命令（@code{execute-command}）。例如，您可以使用@kbd{M-x next-node}选择`下一个'节点。
+
+@kbd{C-@var{x}}表示按下@key{Ctrl}键和 @var{x} 键。@kbd{M-@var{x}}表示按下@key{Meta}键和 @var{x} 键。（@key{Meta}也经常标记为@key{Alt}。）@key{SPC}是空格键。其他键通常以按键上印制的名字来称呼。这种描述击键的符号表示法与Emacs册中使用的表示法相同（请参阅 @ref{User Input,,, emacs, The GNU Emacs Manual}）。
+
+许多Info命令可以接受一个 @dfn{数值参数(numeric argument)} ；请参阅 @ref{Miscellaneous Commands, @code{universal-argument}} 以了解如何提供参数。
+
+
+@node More Node Commands
+@nodedescription 更多用于选择节点的命令。
+@chapter 更多用于选择节点的命令
+
+本章介绍了一些其他用于选择不同节点的命令。
+
+@table @asis
+@item @kbd{<} (@code{first-node})
+@kindex <
+@findex first-node
+选择此文件中出现的第一个节点。该节点通常为@samp{Top}，但并非必须如此。若给定一个数字参数 @var{N} ，则选择第 @var{N} 个节点（第一个节点为节点 1 ）。 0 与 1 的效果相同。
+
+@item @kbd{>} (@code{last-node})
+@kindex >
+@findex last-node
+选择此文件中出现的最后一个节点。若给定一个数字参数 @var{N}，则选择第 @var{N} 个节点（第一个节点为节点 1 ）。0 与无参数相同，即选择最后一个节点。
+
+@item @kbd{]} (@code{global-next-node})
+@kindex ]
+@findex global-next-node
+在节点结构中向前移动。如果当前查看的节点有一个菜单，选择第一个菜单项。否则，如果该节点有一个@samp{Next(下一个)}指针，跟随它。如果没有菜单也没有@samp{Next}指针，那么跟随@samp{Up(上一级)}指针，直到出现一个@samp{Next}指针，然后跟随它。
+
+@item @kbd{[} (@code{global-prev-node})
+@kindex [
+@findex global-prev-node
+在节点结构中向后移动。
+
+如果你当前查看的节点有一个@samp{Prev}指针，则选择该节点。否则，如果该节点有一个@samp{Up}指针，则选择该节点；如果该节点有一个菜单，则选择菜单中的最后一项。@footnote{译者注：原文描述得不清晰，但译文没有改进它。}@footnote{译者注：实际上，将树状的节点结构压成线状结构(节点次序规则：节点永远在其下属节点之前，同级节点按排序紧跟上级节点)，@kbd{[}及@kbd{]}的作用就是在这条线上进行前后节点切换。}
+
+在使用@key{SPC}和@key{DEL}简单滚动文件时，您可以获得与@code{global-next-node}和@code{global-prev-node}相同的行为（请参阅 @ref{scroll-behavior}）。
+
+@anchor{goto-node}
+@item @kbd{g} (@code{goto-node})
+@kindex g
+@findex goto-node
+读取节点的名称并选择它。如果所需的节点位于其他文件中，则必须按照该Info文件中显示的节点名称进行输入，并包含其他文件的名称。例如：
+
+@example
+@code{g(emacs)Buffers}
+@end example
+
+@noindent
+在Info文件@file{emacs}中找到节点@samp{Buffers}。
+
+在读取节点名称时，仅对位于当前Info会话中加载的Info文件中的节点进行补全（请参阅 @ref{The Echo Area, completion}）。
+
+@anchor{goto-invocation}
+@item @kbd{O} (@code{goto-invocation})
+@kindex O
+@findex goto-invocation
+@cindex finding the Invocation node
+@cindex 查找调用节点 @sortas{czdyjd}
+读取程序名称，并在当前Info文件中查找描述该程序的调用及命令行选项的节点。默认程序名称来源于当前Info文件的名称。此命令与@samp{--show-options}命令行选项（请参阅 @ref{--show-options}）功能相同，但允许指定程序名称；这对于描述多个程序的手册非常重要。
+
+如果你需要查找在另一个Info文件中的描述程序调用的节点，那么在调用@samp{O}之前，你需要先访问那个文件。例如，如果你正在阅读Emacs手册，并想查看@code{texi2any}程序的命令行选项，请输入@kbd{g (texinfo) @key{RET}}，然后输入@kbd{O texi2any @key{RET}}。如果你不知道哪个Info文件记录了该命令，或者调用@samp{O}没有显示正确的节点，请转到@samp{(dir)}节点（使用@samp{d}命令），并从那里再调用@samp{O}。
+
+@item @kbd{G} (@code{menu-sequence})
+@kindex G
+@findex menu-sequence
+@cindex menu, following, from inside Info
+@cindex 菜单，跟随，从Info内部 @sortas{cdgscInfonb}
+读取一系列菜单项并按照顺序跳转。Info提示输入一系列以逗号分隔的菜单项。（由于节点名称中不允许使用逗号，因此逗号成为菜单项序列中分隔符的自然选择。）然后，Info会在节点@samp{(dir)}的菜单中查找的第一个项（如果找不到@samp{(dir)}节点，Info会使用@samp{Top}）。如果找到了这样的条目，Info会跳转到它指向的节点，并在该节点的菜单中查找第二个项，依此类推。换句话说，你可以指定一个完整的路径，从@samp{(dir)}节点开始，沿着特定Info文件的菜单层次结构向下导航。这与在Info的命令行上输入菜单项序列的效果相同，请参见 @ref{command-line menu items,, Info command-line arguments processing}。例如，
+
+@example
+ @kbd{G Texinfo,Overview,Reporting Bugs @key{RET}}
+@end example
+
+@noindent
+在Texinfo手册中显示@samp{Reporting Bugs}节点。（您实际上无需完整输入菜单项，也无需严格按照其字母大小写输入。但是，如果您确实完全按照菜单条目输入，Info将能更快地找到它。）
+
+如果您输入的某个菜单项未找到，Info将在找到的最后一个菜单项处停止，并报告错误。
+
+@item @kbd{C-x C-f} (@code{view-file})
+@kindex C-x C-f
+@findex view-file
+读取文件名并选择整个文件。该命令
+@example
+@code{C-x C-f @var{文件名}}
+@end example
+等同于输入
+@example
+@code{g(@var{文件名})*}
+@end example
+
+@item @kbd{C-x C-b} (@code{list-visited-nodes})
+@kindex C-x C-b
+@findex list-visited-nodes
+创建一个包含当前所有已访问节点菜单的窗口。此窗口成为选定窗口，您可以在其中使用标准的Info命令。
+
+@item @kbd{C-x @kbd{b}} (@code{select-visited-node})
+@kindex C-x b
+@findex select-visited-node
+选择一个之前在可见窗口中访问过的节点。这类似于先按@samp{C-x C-b}，再按@samp{m}，但不会创建窗口。
+
+@item @code{@kbd{M-x} man}
+@findex man
+@cindex man pages, displaying
+@cindex 手册页，显示 @sortas{scyts}
+读取需要加载并显示的手册页的名称。这会在您的系统上使用@command{man}命令来检索所请求手册页的内容。另参阅 @ref{--raw-escapes}。
+@end table
+
+
+@node Cursor Commands
+@nodedescription 在节点内移动光标的命令。
+@chapter 移动光标
+@cindex cursor, moving
+@cindex 光标，移动 @sortas{gbyd}
+@cindex moving the cursor
+@cindex 移动光标 @sortas{ydgb}
+
+GNU Info 提供了几个命令，允许您在屏幕上移动光标。
+
+如带有数字参数，移动命令按该参数指定的次数简单执行；例如，给@code{next-line}命令一个数字参数4，光标就会向下移动4行。对于负数参数，移动方向会相反；给@code{next-line}命令一个负数参数-4，光标就会向 @emph{上} 移动4行。
+
+@table @asis
+@item @kbd{C-n} (@code{next-line})
+@itemx @key{DOWN} (方向键)
+@kindex C-n
+@kindex DOWN @r{(方向键)}
+@findex next-line
+将光标向下移动一行。
+
+@item @kbd{C-p} (@code{prev-line})
+@itemx @key{UP} (方向键)
+@kindex C-p
+@kindex UP @r{(方向键)}
+@findex prev-line
+将光标向上移一行。
+
+@item @kbd{C-a} (@code{beginning-of-line})
+@kindex C-a@r{, 在Info窗口中}
+@findex beginning-of-line
+将光标移动到当前行的行首。
+
+@item @kbd{C-e} (@code{end-of-line})
+@kindex C-e@r{, 在Info窗口中}
+@findex end-of-line
+将光标移动到当前行的行末。
+
+@item @kbd{C-f} (@code{forward-char})
+@itemx @key{RIGHT} (方向键)
+@kindex C-f@r{, 在Info窗口中}
+@kindex RIGHT @r{(方向键)}
+@findex forward-char
+将光标向右(前)移动一个字符。
+
+@item @kbd{C-b} (@code{backward-char})
+@itemx @key{LEFT} (方向键)
+@kindex C-b@r{, 在Info窗口中}
+@kindex LEFT @r{(方向键)}
+@findex backward-char
+将光标向左(后)移动一个字符。
+
+@item @kbd{M-f} (@code{forward-word})
+@kindex M-f@r{, 在Info窗口中}
+@findex forward-word
+将光标向右(前)移动一个词。
+
+@item @kbd{M-b} (@code{backward-word})
+@kindex M-b@r{, 在Info窗口中}
+@findex backward-word
+将光标向左(后)移动一个词。
+
+@item @kbd{M-<} (@code{beginning-of-node})
+@itemx @kbd{b}
+@kindex b@r{, 在Info窗口中}
+@kindex M-<
+@findex beginning-of-node
+将光标移动到当前节点的开始处。
+
+@item @kbd{M->} (@code{end-of-node})
+@itemx @kbd{e}
+@kindex M->
+@kindex e@r{, 在Info窗口中}
+@findex end-of-node
+将光标移动到当前节点的末尾。
+
+@item @kbd{M-r} (@code{move-to-window-line})
+@kindex M-r
+@findex move-to-window-line
+将光标移动到窗口的特定行。如果不带数字参数，@code{M-r}会将光标移动到窗口中央行的行首。如果带有数字参数 @var{n}，@code{M-r}会将光标移动到窗口中第 @var{n} 行的行首。
+@end table
+
+如果您在节点接近结束（或开始）时发出光标移动命令，Info可能会加载另一个节点，具体取决于@code{cursor-movement-scrolls}变量的设置（请参阅 @ref{cursor-movement-scrolls}）。
+
+
+@node Scrolling Commands
+@nodedescription 用于阅读节点内文本的命令。
+@chapter 在窗口内移动文本
+@cindex scrolling
+@cindex 滚动 @sortas{gd}
+
+有时，你正看着一屏文字，而屏幕上只能看到当前正在阅读的段落的一部分。本节中详细介绍的命令用于调整当前节点在屏幕上可见的部分。
+
+@table @asis
+@item @key{SPC} (@code{scroll-forward})
+@kindex SPC@r{, 在Info窗口中}
+@itemx @key{NEXT}
+@kindex NEXT
+@findex scroll-forward
+将此窗口中的文本上移。即，显示更多当前位于窗口底部下方的节点内容。若带数字参数，则表示在窗口底部增加的行的数量；若数字参数为4，则将窗口中的所有文本上移4行（丢弃顶部4行），并在窗口底部显示4行新内容。若不带数字参数，@key{SPC}会将窗口底部的两行内容移至窗口顶部，从而重新显示几乎一整屏的行。如果你位于某个节点的末尾，@key{SPC}会带你进入``下一个''节点，这样你就可以通过重复@key{SPC}从头到尾阅读整个手册。
+
+@kindex PageDown
+@key{NEXT}键在某些键盘上被称为@key{PageDown}键。
+
+@item @kbd{C-v} (@code{scroll-forward-page-only})
+@kindex C-v
+@findex scroll-forward-page-only
+将此窗口中的文本上移。这与上述的@key{SPC}操作相同，只是它永远不会滚动越过当前节点末尾。
+
+@item @code{@kbd{M-x} scroll-forward-page-only-set-window}
+@findex scroll-forward-page-only-set-window
+向前滚动，类似于使用@kbd{C-v}，但如果指定了数字参数，则该参数将成为后续@code{scroll-forward}和@code{scroll-backward}命令及其类似命令的默认滚动大小。
+
+@item @key{DEL} (@code{scroll-backward})
+@kindex DEL@r{, 在Info窗口中}
+@item @key{PREVIOUS}
+@kindex PREVIOUS
+@findex scroll-backward
+将此窗口中的文本向下移动。这是@code{scroll-forward}的相反操作。如果你位于某个节点的开头，按@key{DEL}会跳转到``上一个''节点，这样你就可以通过重复按@key{DEL}来从尾到头阅读整个手册。默认的滚动大小可以通过调用带有数值参数的(@code{scroll-backward-page-only-set-window})命令来更改。
+
+@kindex BS (backspace)
+如果你的键盘上没有@key{DEL}键，那么可以找找名为@key{BS}或@samp{Backspace}的键，这个键有时会用一个指向左边的箭头来表示，它们应该具有相同的功能。
+
+@kindex PageUp
+@key{PREVIOUS}键在许多键盘上对应的是@key{PageUp}键。Emacs将其称为@key{PRIOR}。
+
+@item @kbd{M-v} (@code{scroll-backward-page-only})
+@kindex M-v
+@findex scroll-backward-page-only
+将此窗口中的文本下移。与@code{scroll-forward-page-only}相反。不会滚动越过当前节点开始处。默认滚动大小可通过调用带有数值参数的@code{scroll-backward-page-only-set-window}命令进行更改。
+
+@item @code{@kbd{M-x} scroll-backward-page-only-set-window}
+@findex scroll-backward-page-only-set-window
+向后滚动，类似于使用@kbd{M-v}，但如果指定了数值参数，则该参数将成为后续@code{scroll-forward}和@code{scroll-backward}命令的默认滚动大小。
+
+@item @code{@kbd{M-x} down-line}
+@findex down-line
+向下滚一行。若带数值参数，则前滚动相应行数。
+
+@item @code{@kbd{M-x} up-line}
+@findex up-line
+向上滚一行。若带数值参数，则回滚动相应行数。
+
+@item @code{@kbd{M-x} scroll-half-screen-down}
+@findex scroll-half-screen-down
+将屏幕向下滚半个大小。若带数值参数，则滚动相应行数。若指定了参数，则该参数将成为后续@code{scroll-half-screen-down}和@code{scroll-half-screen-up}命令滚动新的默认行数。
+
+@item @code{@kbd{M-x} scroll-half-screen-up}
+@findex scroll-half-screen-up
+将屏幕向上滚半个大小。若带数值参数，则上滚相应行数。若指定了参数，则该参数将成为后续@code{scroll-half-screen-down}和@code{scroll-half-screen-up}命令新的默认滚动行数。
+@end table
+
+@cindex scrolling through node structure
+@cindex 滚动，贯穿节点结构 @sortas{gdgcjdjg}
+
+@code{scroll-forward}和@code{scroll-backward}命令还可以在文件的节点结构中向前和向后移动。如果在查看节点末尾时按下@key{SPC}，或在查看节点开头时按下@key{DEL}，则发生的情况由变量@code{scroll-behavior}控制（请参阅 @ref{scroll-behavior}）。
+
+@code{scroll-forward-page-only}和@code{scroll-backward-page-only}命令永远不会滚动到当前节点之外。
+
+
+@node Searching Commands
+@nodedescription 用于搜索Info文件的命令。
+@chapter 搜索Info文件
+@cindex searching
+@cindex 搜索 @sortas{ss}
+
+GNU Info 允许您在整个Info文件中搜索特定字符序列。以下是执行此操作的命令：
+
+@table @asis
+@item @kbd{s} (@code{search})
+@itemx @kbd{/}
+@kindex s
+@kindex /
+@findex search
+@cindex regular expression search
+@cindex 正则表达式搜索 @sortas{zzbdsss}
+在提示区读取一个字符串并对其进行搜索，可以将字符串视为正则表达式（默认）或字面字符串。如果字符串包含大写字符，则Info文件会区分大小写地进行搜索；否则，Info会忽略字母的大小写。如果使用数值参数 @var{N}，则搜索字符串的第 @var{N} 次出现。负数参数表示向后搜索。
+
+@item @kbd{?} (@code{search-backward})
+@kindex ?
+@findex search-backward
+在提示区读取一个字符串，并在Info文件中向后搜索该字符串。如果字符串包含大写字符，则Info文件会区分大小写地进行搜索；否则，Info会忽略字母的大小写。使用数字参数 @var{N}，可以搜索字符串的第 @var{N} 次出现。负数参数表示向前搜索。
+
+@anchor{repeated-search}
+@item @kbd{C-x @kbd{n}} (@code{search-next})
+@itemx @kbd{@}}
+@kindex C-x n
+@kindex @}
+@findex search-next
+@cindex repeated search
+@cindex 重复搜索 @sortas{cfss}
+向前搜索用于上一个搜索命令的字符串。区分大小写和使用正则表达式的方式保持不变。若传入一个数值参数 @var{n}，则搜索第 @var{n} 个后续匹配项。
+
+默认情况下，搜索将从光标紧随的位置开始。但是，如果设置了变量@code{search-skip-screen}（请参阅 @ref{Variables,, @code{search-skip-screen}}），则搜索将从下一页的开头开始，从而跳过所有当前显示的行。
+
+@item @kbd{C-x @kbd{N}} (@code{search-previous})
+@itemx @kbd{@{}
+@kindex C-x N
+@kindex @{
+@findex search-previous
+就像@code{search-next}一样，但方向相反。你可以同时使用@code{search-next}和@code{search-previous}来在匹配项中前后移动。@code{search-previous}通常会跳转到文件中的上一个@code{search-next}之前显示的位置，反之亦然。@footnote{当@code{search-skip-screen}设置为@code{On}且搜索跨节点，此时上述规律不一定成立。}
+
+
+@item @kbd{R} (@code{toggle-regexp})
+@kindex R
+@findex toggle-regexp
+在搜索时，可在使用正则表达式和字面字符串之间进行切换。Info使用的是所谓的`扩展'正则表达式语法（请参阅 @ref{Regular Expressions,,, grep, GNU Grep}）。
+
+@item @kbd{S} (@code{search-case-sensitively})
+@kindex S
+@findex search-case-sensitively
+@cindex search, case-sensitive
+@cindex 搜索，大小写敏感 @sortas{ssdxxmg}
+@cindex case-sensitive search
+@cindex 大小写敏感搜索 @sortas{dxxmgss}
+在提示区读取一个字符串，并对其进行区分大小写的搜索，即使该字符串仅包含小写字母。使用数值参数 @var{N} ，可搜索字符串的第 @var{N} 个匹配项。负数参数表示向后搜索。
+
+@item @kbd{C-s} (@code{isearch-forward})
+@kindex C-s
+@findex isearch-forward
+@cindex incremental search
+@cindex 增量搜索 @sortas{zlss}
+在键入字符串的同时，在Info文件中向前交互式搜索该字符串。如果字符串包含大写字符，则搜索区分大小写；否则，Info会忽略字母的大小写。
+
+@item @kbd{C-r} (@code{isearch-backward})
+@kindex C-r
+@findex isearch-backward
+在键入字符串时，通过Info文件进行交互式向后搜索。如果字符串包含大写字符，则搜索区分大小写；否则，Info会忽略字母的大小写。
+
+@item @kbd{M-/} (@code{tree-search})
+@findex tree-search
+@cindex recursively search
+@cindex 递归搜索 @sortas{dgss}
+递归搜索此节点以及菜单中列出的所有子节点，以查找某个字符串。
+
+@item @kbd{M-@}} (@code{tree-search-next})
+@itemx @kbd{M-@{} (@code{tree-search-previous})
+@findex tree-search-next
+@findex tree-search-previous
+在执行树搜索(递归搜索)时，向前或向后匹配。
+@end table
+
+最基本的搜索命令是@samp{s}或@samp{/}(@code{搜索(search)})。@samp{s}命令会在提示区提示您输入一个字符串，然后在Info文件的其余部分中搜索该字符串的出现。如果找到了该字符串，则会选择包含它的节点，并将光标定位在找到的字符串的开头。后续的@samp{s}命令会显示默认的搜索字符串；按@key{RET}而不是键入新字符串将使用默认的搜索字符串。
+
+@dfn{增量搜索} 与基本搜索类似，但会在您键入字符串的同时进行查找，而无需等到整个搜索字符串全部指定完毕。
+
+树搜索可以从@code{dir}节点开始，搜索系统上安装的所有Info文件。当您对其他章的匹配结果不感兴趣时，它还可以用于搜索手册的特定章节。
+
+@vindex highlight-searches
+@findex clear-search
+如果设置了@code{highlight-searches}变量，则搜索命令中的匹配项将被高亮显示。请参阅 @ref{Variables,, @code{highlight-searches}}。使用@code{@kbd{M-x} clear-search}命令可清除所有搜索高亮显示。
+
+@cindex search, and case-sensitivity
+@cindex 搜索，及大小写敏感 @sortas{ssjdxxmg}
+@cindex case-sensitivity, and search
+@cindex 大小写敏感，及搜索 @sortas{dxxmgjss}
+在将Info文件文本与搜索字符串进行比较时，默认情况下，增量搜索和非增量搜索都会忽略字母的大小写。但是，如果搜索字符串中包含大写字母，则搜索将区分大小写。通过使用@samp{S}命令（@code{search-case-sensitively}），您可以强制进行区分大小写的非增量搜索，即使搜索字符串仅包含小写字母。如果上一个搜索命令是@samp{S}，则@samp{n}和@samp{N}命令也会区分大小写。
+
+通常，搜索模式不应短于某个预定义的限制。默认情况下，此限制设置为 1 个字符。有关此限制的更多信息，请参阅 @ref{min-search-length}。
+
+
+@node Index Commands
+@nodedescription 在索引中进行搜索的命令。
+@chapter 索引命令
+@cindex index
+@cindex indices
+@cindex indexes
+@cindex 索引 @sortas{sy}
+
+GNU Info 提供了在Info文件索引中进行搜索的命令，这有助于您在Info文件中找到讨论特定主题的部分。
+
+@table @asis
+@item @kbd{i} (@code{index-search})
+@kindex i
+@findex index-search
+@cindex index, searching
+@cindex 索引，搜索 @sortas{syss}
+@cindex searching, in the indices
+@cindex 搜索，在索引中 @sortas{sszsyz}
+在Info文件的索引中查找一个字符串，并选择含匹配索引条目的节点。
+
+@item @kbd{I} (@code{virtual-index})
+@kindex I
+@findex virtual-index
+@cindex index, virtual
+@cindex 索引，虚拟 @sortas{syxn}
+在Info文件的索引中查找字符串，并在一个新虚拟节点中展示所有索引条目，该节点是即时合成的。
+
+@item @kbd{,} (@code{next-index-match})
+@kindex ,
+@findex next-index-match
+以上一个@samp{i}命令为基础，移动到包含下一个匹配索引条目的节点。
+
+@item @code{@kbd{M-x} index-apropos}
+@findex index-apropos
+在系统上所有已知的Info文件的索引中搜索某个字符串，并构建一个包含可能匹配项的菜单。
+@end table
+
+在手册中快速查找某项内容的最有效方法是使用@samp{i}命令（@code{index-search}）。此命令会提示输入一个字符串，然后会在当前Info手册的所有索引中查找该字符串。如果找到匹配的索引条目，它会显示该条目所在的节点，并在提示区打印出已匹配索引条目的全文。您可以按@samp{,}（@code{next-index-match}）来查找更多匹配项。一本好的Info手册会为其所有重要概念编制索引，因此@samp{i}命令使您可以将手册用作参考。
+
+如果你不知道某个内容在哪个手册中，可以尝试使用@kbd{M-x index-apropos}命令。它会提示输入一个字符串，然后在系统上安装的所有Info文档的所有索引中查找该字符串。该命令也可以从命令行调用；请参阅 @ref{--apropos}。
+
+
+@node Xref Commands
+@nodedescription 用于选择交叉引用的命令。
+@chapter 选择交叉引用
+
+我们已经讨论过出现在节点顶部的@samp{Next(下一个)}、@samp{Prev(上一个)}和@samp{Up(上一级)}指针，它们用于指引你访问不同的节点。
+
+此外，一个节点可能包含一个 @dfn{菜单}，以及散布在节点文本中的 @dfn{交叉引用}（简称 @dfn{xrefs}）。交叉引用可以指向本Info文件或另一个Info文件中的节点。
+
+
+@node Parts of an Xref
+@nodedescription 什么是交叉引用。
+@section 交叉引用的组成部分
+
+以下是一个菜单条目的示例，展示了交叉引用的各个部分：
+
+@example
+* Foo Label: Foo Target.        More information about Foo.
+@end example
+
+@noindent
+引用包含两部分：第一部分称为@dfn{标签(label)},它是引用交叉的名称；第二部分是@dfn{目标(target)}，它是交叉引用所指向节点的全名。目标与标签之间用单个冒号@samp{:}分隔；先出现标签，然后是目标。
+
+@samp{.}用于结束目标名称。@samp{.}并非目标的一部分；它仅用于告知@command{Info}目标名称的结束位置。
+
+一种简化的引用指定方式是，用两个相邻的冒号来表示目标名称，并与标签名称相同：
+
+@example
+* Foo Commands::                Commands pertaining to Foo.
+@end example
+
+在上述示例中，目标的名称与标签的名称相同，在本例中为@code{Foo Commands}。
+
+在查看节点时，你通常会看到两种类型的交叉引用：@dfn{菜单(menu)} 引用和 @dfn{ 批注(note)} 引用。菜单引用出现在节点的菜单中；它们以行首的@samp{*}开始，接着是标签、目标以及描述目标节点包含什么的注释。
+
+批注引用出现在节点文本的正文中；它们以@code{*Note}开头，后跟一个标签和一个目标。
+
+与@samp{Next}、@samp{Prev}和@samp{Up}指针类似，交叉引用也可以指向任何有效节点。它们用于指引你找到关于特定主题的更详细信息。以下是一个指向Texinfo文档中某个节点的交叉引用：请参阅 @ref{Cross References,, Cross-refrences, texinfo, the Texinfo Manual}，以获取更多关于创建您自己的Texinfo交叉引用的信息。
+
+
+@node Selecting Xrefs
+@nodedescription 用于选择菜单或批注引用的命令。
+@section 选择交叉引用
+
+下表列出了对菜单项进行操作的Info命令。
+
+@table @asis
+@item @kbd{1} (@code{menu-digit})
+@itemx @kbd{2} @dots{} @kbd{9} (@code{menu-digit})
+@itemx @kbd{M-1}, 类vi操作
+@itemx @kbd{M-2} @dots{} @kbd{M-9}, 类vi操作
+@kindex 1 @dots{} 9@r{, 在Info窗口中}
+@kindex M-1 @dots{} M-9@r{, 类vi操作}
+@findex menu-digit
+在Info窗口中，按下单个数字（如@samp{1}）会选择对应的菜单项，并将该菜单项所指节点置于当前窗口中。为方便起见，有一个例外；按下@samp{0}会选择节点菜单中的 @emph{最后一个} 项。当 @option{--vi-keys} 生效时，数字（0@dots{}9 ）会设置数值参数，因此这些命令会被重映射为其@samp{M-}变体。例如，要选择最后一个菜单项，请按下@kbd{M-0}。
+
+@item @kbd{0} (@code{last-menu-item})
+@itemx @kbd{M-0}, 类vi操作
+@kindex 0@r{, 在Info窗口中}
+@kindex M-0@r{, 类vi操作}
+@findex last-menu-item
+选择当前节点菜单中的最后一个项目。
+
+@item @kbd{m} (@code{menu-item})
+@kindex m
+@findex menu-item
+在提示区读取菜单项的名称并选择菜单项的节点。在读取菜单标签时，可以使用补全功能。请参阅 @ref{The Echo Area, completion}。
+
+@item @code{@kbd{M-x} find-menu}
+@findex find-menu
+将光标移动到此当前节点的菜单的开头。
+@end table
+
+下表列出了对交叉引用进行操作的Info命令。
+
+@table @asis
+@item @kbd{f} (@code{xref-item})
+@itemx @kbd{r}
+@kindex f
+@kindex r
+@findex xref-item
+在提示区读取批注交叉引用的名称(标签)并选择其节点。在读取交叉引用标签时，可提供补全功能。请参阅 @ref{The Echo Area, completion}。
+@end table
+
+下面的列出几个命令，可以相同的方式对菜单项或批注引用进行操作：
+
+@table @asis
+@item @key{TAB} (@code{move-to-next-xref})
+@kindex TAB@r{, 在Info窗口中}
+@findex move-to-next-xref
+将光标移动到下一个最近的菜单项或批注引用的开头。然后，您可以使用@key{RET} (@code{select-reference-this-line})来选择该菜单项或批注引用。
+
+@item @kbd{M-@key{TAB}} (@code{(move-to-prev-xref)})
+@itemx @kbd{BackTab}
+@kindex M-TAB@r{, 在Info窗口中}
+@findex move-to-prev-xref
+将光标移动到最近的上一个菜单项或批注引用的开头。
+
+@kindex Shift-TAB@r{, 在Info窗口中}
+@kindex BackTab@r{, 在Info窗口中}
+在某些终端上，可以通过按下@kbd{Shift-@key{TAB}}组合键来生成@kbd{BackTab}键。
+
+@item @key{RET} (@code{select-reference-this-line})
+@kindex RET@r{, 在Info窗口中}
+选择在这一行上出现的的菜单项或批注引用。
+@end table
+
+
+@node Window Commands
+@nodedescription 操控多个窗口的命令。
+@chapter 操控多个窗口
+@cindex windows, manipulating
+@cindex 窗口，操控 @sortas{ckck}
+
+@dfn{窗口(window)} 是显示节点文本的地方。窗口有一个视图区域，用于显示节点的文本；还有一个关联的 @dfn{模式行(mode line)}，简要描述正在查看的节点。
+
+GNU Info 支持在单个屏幕中显示多个窗口；每个窗口之间通过模式行分隔；任何时候都只有一个 @dfn{活动(active)} 窗口，即光标所在的窗口；提供了用于创建窗口、更改窗口大小、选择活动窗口以及删除窗口的命令。
+
+
+@node The Mode Line
+@nodedescription 模式行中会显示什么？
+@section 模式行
+
+@dfn{模式行(mode line)} 是出现在Info窗口底部的反转显示的一行。它描述了上方窗口的内容；这些信息包括该窗口中出现的文件和节点的名称、显示该节点内容所占用的总的屏幕行数，以及窗口顶部以上的文本百分比。
+
+以下是一个包含名为@file{dir}文件的窗口的示例模式行，显示节点@samp{Top}。
+
+@example
+@group
+-----Info: (dir)Top, 40 lines --Top-------------------------------------
+            ^^   ^   ^^^        ^^
+          (文件)节点 #总行数    位置
+@end group
+@end example
+
+长行的截断（与将它们回绕到下一行显示不同，请参阅 @ref{Scrolling Commands, toggle-wrap}）由模式行左边缘的@samp{$}符号表示：
+
+@example
+--$--Info: (texinfo)Top, 480 lines --Top--------------------------------
+@end example
+
+在Info在内部创建一个(虚拟)节点且磁盘上没有对应的info文件时，该节点的名称会被星号（@samp{*}）包围。名称本身会告诉您窗口的内容；下面的示例模式行显示了一个内部构造的节点，展示了可能的补全项：
+
+@example
+-----Info: *Completions*, 7 lines --All---------------------------------
+@end example
+
+
+@node Basic Windows
+@nodedescription 在Info中操控窗口。
+@section 窗口命令
+
+一次查看多个节点会非常方便。为实现这一功能，Info可以显示多个 @dfn{窗口(window)}。每个窗口都有自己的模式行（请参阅 @ref{The Mode Line}）和在该窗口中查看过的节点的历史记录（请参阅 @ref{Node Commands, , @code{history-node}}）。
+
+@table @asis
+@item @kbd{C-x @kbd{o}} (@code{next-window})
+@cindex windows, selecting
+@cindex 窗口，选择 @sortas{cksz}
+@kindex C-x o
+@findex next-window
+选择屏幕上的下一个窗口。请注意，只有提示区已使用且您暂时离开后，才能选择它。通常，@samp{C-x o}只会将光标移动到屏幕上的下一个窗口，或者如果您已经在最后一个窗口中，则移动到屏幕上的第一个窗口。如果给定一个数值参数，该数字是@samp{C-x o}移动光标的次数。如果参数为负数，则@samp{C-x o}会选择屏幕上的上一个窗口。
+
+@item @code{@kbd{M-x} prev-window}
+@findex prev-window
+选择屏幕上的上一个窗口。这与带有负数参数的@samp{C-x o}命令相同。
+
+@item @kbd{C-x @kbd{2}} (@code{split-window})
+@cindex windows, creating
+@cindex 窗口，创建 @sortas{ckcj}
+@kindex C-x 2
+@findex split-window
+将当前窗口拆分为两个窗口，两个窗口均显示相同的节点。每个窗口的大小为原始窗口的一半，光标仍位于原始窗口中。变量@code{automatic-tiling}可以自动调整屏幕上所有窗口的大小（请参阅 @ref{Variables,, @code{automatic-tiling}}）。
+
+@item @kbd{C-x @kbd{0}} (@code{delete-window})
+@cindex windows, deleting
+@cindex 窗口，删除 @sortas{cksc}
+@kindex C-x 0
+@findex delete-window
+从屏幕上删除当前窗口。如果你打开了太多窗口，导致屏幕显得杂乱无章，那么这就是删除部分窗口的方法。
+
+@item @kbd{C-x @kbd{1}} (@code{keep-one-window})
+@cindex 窗口，仅保留 @sortas{ckjbl}
+@kindex C-x 1
+@findex keep-one-window
+删除除当前窗口外的所有窗口。
+
+@item @kbd{@key{ESC} @kbd{C-v}} (@code{scroll-other-window})
+@kindex ESC C-v@r{, 在Info窗口中}
+@findex scroll-other-window
+以与@samp{C-v}滚动当前窗口相同的方式滚动另一个窗口。若给定负数参数，则向后滚动``另一个''窗口。
+
+@item @kbd{C-x @kbd{^}} (@code{grow-window})
+@kindex C-x ^
+@findex grow-window
+扩大（或缩小）当前窗口。若给定一个数值参数，则将当前窗口扩大相应行数；若给定一个负数参数，则缩小窗口。
+
+@item @kbd{C-x @kbd{t}} (@code{tile-windows})
+@cindex tiling
+@cindex 平铺 @sortas{pp}
+@kindex C-x t
+@findex tile-windows
+将可用的屏幕空间分配给所有可见窗口。每个窗口都会获得相等的屏幕空间来显示其内容。变量@code{automatic-tiling}可以在创建或删除窗口后调用@code{tile-windows}。请参阅 @ref{Variables,, @code{automatic-tiling}}。
+@end table
+
+
+@node The Echo Area
+@nodedescription 用于显示错误和读取输入。
+@section 提示区
+@cindex echo area
+@cindex 提示区 @sortas{tsq}
+
+@dfn{提示区(echo area)} 是一个出现在屏幕底部的单行窗口。它用于显示信息性或错误性消息，并在必要时读取您输入的行。提示区中几乎所有的可用命令都与Emacs中的对应命令相同，因此请参阅相关文档，以更深入地了解文本行编辑这个概念。下表简要列出了提示区在读取输入时可用的命令：
+
+@table @asis
+@item @kbd{C-f} (@code{echo-area-forward})
+@itemx @key{RIGHT} (方向键)
+@kindex C-f@r{, 在提示区}
+@kindex RIGHT@r{, 在提示区}
+@findex echo-area-forward
+向前移动一个字符。
+
+@item @kbd{C-b} (@code{echo-area-backward})
+@itemx @key{LEFT} (方向键)
+@kindex LEFT@r{, 在提示区}
+@kindex C-b@r{, 在提示区}
+@findex echo-area-backward
+向后移动一个字符。
+
+@item @kbd{C-a} (@code{echo-area-beg-of-line})
+@kindex C-a@r{, 在提示区}
+@findex echo-area-beg-of-line
+移动到输入行的开始。
+
+@item @kbd{C-e} (@code{echo-area-end-of-line})
+@kindex C-e@r{, 在提示区}
+@findex echo-area-end-of-line
+移动到输出行的末尾。
+
+@item @kbd{M-f} (@code{echo-area-forward-word})
+@kindex M-f@r{, 在提示区}
+@findex echo-area-forward-word
+向前移动一个词。
+
+@item @kbd{M-b} (@code{echo-area-backward-word})
+@kindex M-b@r{, 在提示区}
+@findex echo-area-backward-word
+向后移动一个词。
+
+@item @kbd{C-d} (@code{echo-area-delete})
+@kindex C-d@r{, 在提示区}
+@findex echo-area-delete
+删除光标上的字符。
+
+@item @key{DEL} (@code{echo-area-rubout})
+@kindex DEL@r{, 在提示区}
+@findex echo-area-rubout
+删除光标前的字符。@footnote{译者注：原文说是删除光标后的字符，但实际删除的是光标前的字符。}
+
+在某些键盘上，这个键被指定为@key{BS}，代表@samp{Backspace}（退格键）。这些键盘有时会将提示区中的@key{DEL}（删除键）绑定到@code{echo-area-delete}（提示区删除）。
+
+@item @kbd{C-g} (@code{echo-area-abort})
+@kindex C-g@r{, 在提示区}
+@findex echo-area-abort
+取消或退出当前操作。如果正在读取补全内容，此命令将丢弃与任何补全内容都不匹配的输入行文本。如果输入行为空，则中止功能调用。
+
+@item @key{RET} (@code{echo-area-newline})
+@kindex RET@r{, 在提示区}
+@findex echo-area-newline
+接受（或强制完成）当前输入行。
+
+@item @kbd{C-q} (@code{echo-area-quoted-insert})
+@kindex C-q@r{, 在提示区}
+@findex echo-area-quoted-insert
+以字面意义方式插入下一个字符。这就是将控制字符插入到搜索字符串中的方法。
+
+@item @kbd{M-@key{TAB}} (@code{echo-area-tab-insert})
+@kindex M-TAB@r{, 在提示区}
+@findex echo-area-tab-insert
+插入一个@key{TAB}字符。
+
+@item @kbd{C-t} (@code{echo-area-transpose-chars})
+@kindex C-t@r{, 在提示区}
+@findex echo-area-transpose-chars
+将光标处的字符（与前一个字符）进行对换。
+
+@item @var{可打印字符(printing character)} 
+@kindex @r{printing characters, 在提示区}
+@kindex @r{可打印字符，在提示区} @sortas{kdyzfztsq}
+插入这个字符。
+
+@end table
+
+接下来的一组命令涉及 @dfn{删除(killing)} 和 @dfn{取回(yanking)}文本。（有时这些操作分别被称为 @dfn{剪切(cut)} 和 @dfn{粘贴(paste)}。） 如需深入了解，请参阅 @ref{Killing, , Killing and Deleting, emacs, the GNU Emacs Manual}。
+
+@table @asis
+@item @kbd{M-d} (@code{echo-area-kill-word})
+@kindex M-d@r{, 在提示区}
+@findex echo-area-kill-word
+删除跟在光标后的词。
+
+@item @kbd{M-@key{DEL}} (@code{echo-area-backward-kill-word})
+@itemx @kbd{M-@key{BS}}
+@kindex M-DEL@r{, 在提示区}
+@findex echo-area-backward-kill-word
+删除光标前的单词。
+
+@kindex M-BS@r{, 在提示区}
+在某些键盘上，使用@samp{Backspace}键而不是@code{DEL}，因此@code{M-@key{Backspace}}与@code{M-@key{DEL}}具有相同的效果。
+
+@item @kbd{C-k} (@code{echo-area-kill-line})
+@kindex C-k@r{, 在提示区}
+@findex echo-area-kill-line
+删除光标至行尾的文本。
+
+@item @kbd{C-x @key{DEL}} (@code{echo-area-backward-kill-line})
+@kindex C-x DEL@r{, 在提示区}
+@findex echo-area-backward-kill-line
+删除光标到行首之间的文本。
+
+@item @kbd{C-y} (@code{echo-area-yank})
+@kindex C-y@r{, 在提示区}
+@findex echo-area-yank
+把最后删除的文本取回。
+
+@item @kbd{M-y} (@code{echo-area-yank-pop})
+@kindex M-y@r{, 在提示区}
+@findex echo-area-yank-pop
+取回一个之前的删除，在这之前，最近被抓回的文本。@footnote{译者注：被删除的内容会被压入一个堆栈中，取回时，总是会取回栈顶内容。知道了这个原理，@code{echo-area-yank-pop}的功能就好理解了。}
+@end table
+
+@cindex completion
+@cindex 补全 @sortas{bq}
+有时在提示区读取输入时，需要输入的命令只接受几个选项中的一个。这些选项代表@dfn{可能的补全项}，你必须从中选择一个进行回应(respond)。由于可做出的回应(response)数量有限，Info允许你简化输入，只键入能唯一标识某个回应的必需部分。此外，你可以请求Info尽可能多地提供回应(response)；这被称为 @dfn{补全(completing)}。
+
+在提示区进行补全时，有以下命令可用：
+
+@table @asis
+@item @key{TAB} (@code{echo-area-complete})
+@kindex TAB@r{, 在提示区}
+@findex echo-area-complete
+尽可能多地插入补全内容。此之，还显示一个窗口，其中包含您到目前为止输入内容的可能补全列表。例如，如果可用选项为：
+
+@example
+@group
+bar
+foliate
+food
+forget
+@end group
+@end example
+
+@noindent
+如果你输入了@samp{f}，然后按了@key{TAB}，那么提示区中会出现@samp{fo}，因为所有以@samp{f}开头的选项都会以@samp{o}继续。
+
+现在，如果你再次键入@key{TAB}，Info将弹出一个补全(completions)窗口，显示一个名为@samp{*Completions*}的虚拟节点，其中列出了可能的补全项，如下所示：
+
+@example
+@group
+3 completions:
+foliate         food
+forget
+@end group
+@end example
+
+@noindent
+即，所有以@samp{fo}开头的选项。
+
+现在，输入@samp{l}后跟@samp{TAB}，会在提示区显示@samp{foliate}，因为这是唯一以@samp{fol}开头的选项。
+
+@item @kbd{@key{ESC} C-v} (@code{echo-area-scroll-completions-window})
+@kindex ESC C-v@r{, 在提示区}
+@findex echo-area-scroll-completions-window
+如果补全窗口可见，请滚动该窗口；如果不可见，则滚动``其他''窗口。
+@end table
+
+
+@node Printing Nodes
+@nodedescription 如何打印出某个节点的内容。
+@chapter 打印节点
+@cindex printing
+@cindex 打印 @sortas{dy}
+
+一般来说，我们建议您使用@TeX{}来格式化文档并打印其中的部分内容，方法是对Texinfo源文件运行@code{tex}。但是，如果您希望将某个节点的内容打印出来作为快速参考文档以备后用，或者您没有安装@TeX{}，Info为您提供了一个相应的命令。
+
+@table @asis
+@item @code{@kbd{M-x} print-node}
+@findex print-node
+@cindex @env{INFO_PRINT_COMMAND}, environment variable
+@cindex @env{INFO_PRINT_COMMAND}, 环境变量
+使用管道将当前节点的内容输出给环境变量@env{INFO_PRINT_COMMAND}指定的命令。如果该变量不存在，则将节点内容通过管道输出到@code{lpr}（在DOS/Windows上，默认是将节点内容打印到本地打印机设备@file{PRN}）。
+
+@cindex printing nodes to the local printer
+@cindex 打印节点到本地打印机 @sortas{dyjddbddyj}
+@cindex local printer device
+@cindex 本地打印机设备 @sortas{bddyjsb}
+@env{INFO_PRINT_COMMAND}的值可能以@samp{>}字符开头，如@samp{>/dev/printer}，在这种情况下，Info会将剩余部分视为文件名或设备名。Info不会将其作为命令通过管道输出，而是会打开文件，写入节点内容，然后关闭文件，假定写入该文件的文本将由底层操作系统打印出来。
+@end table
+
+
+@node Miscellaneous Commands
+@nodedescription 一些无法归类的命令。
+@chapter 杂项命令
+
+GNU Info 包含几个自描述 GNU Info 的命令：
+
+@table @asis
+@item @code{@kbd{M-x} describe-command}
+@cindex functions, describing
+@cindex 功能，描述 @sortas{gnms}
+@cindex commands, describing
+@cindex 命令，描述 @sortas{mlms}
+@findex describe-command
+在提示区读取Info命令的名称，然后显示该命令功能的简要描述。
+
+@item @code{@kbd{M-x} describe-key}
+@cindex keys, describing
+@cindex 键，描述 @sortas{jms}
+@findex describe-key
+在提示区读取一个按键序列，然后显示该按键序列所调用的Info命令的名称及简要描述。
+
+@item @code{@kbd{M-x} describe-variable}
+在提示区读取变量的名称，然后显示该变量作用的简要描述。
+
+@item @code{@kbd{M-x} where-is}
+@findex where-is
+在提示区读取Info命令的名称，然后显示一个键序列，用户可以输入该键序列以调用该命令。
+
+@item @kbd{H} (@code{get-help-window})
+@kindex H@r{, 在Info窗口中} @sortas{HzInfockz} @c 译者增加
+@c 以下三行，只是索引，而不是正确的Info帮助命令，因为读者经常误认为这个键能得到帮助信息
+@kindex C-h     
+@kindex ?@r{, 在Info窗口中}
+@kindex F1
+@findex get-help-window
+打开（或切换至）显示@code{*Help*}的窗口，并在其中打开一个包含快速参考卡的节点。此窗口会展示最简明的 GNU Info 帮助信息。
+
+@item @kbd{h} (@code{get-info-help-node})
+@kindex h@r{, 在Info窗口中}
+@findex get-info-help-node
+尝试访问@code{(info)Help}节点；随 GNU Emacs 分发的Info文件@file{info.texi}包含此节点。当然，该文件必须先用@command{texi2any}处理，然后放置到您的Info目录中。
+
+@item @kbd{=} (@code{display-file-info})
+@cindex current file, information about
+@cindex 当前文件，相关信息 @sortas{dqwjxgxx}
+@findex display-file-info
+@kindex =@r{, 在Info窗口中}
+在提示区显示当前正在Info窗口中查看的内容的信息：Info文件名，以及当前节点内的当前行号和百分比。
+
+@item @code{@kbd{M-x} info-version}
+@findex info-version
+显示当前正在运行的Info程序的名称和版本。
+
+@end table
+
+以下是生成数值参数的命令：
+
+@table @asis
+@item @kbd{C-u} (@code{universal-argument})
+@cindex numeric arguments
+@cindex 数值参数 @sortas{szcs}
+@kindex C-u
+@findex universal-argument
+开始设置当前数值参数，或将数值参数乘以4。@samp{C-u}是给光标移动或滚动命令设置较小数值参数的好方法；@samp{C-u C-v}将屏幕滚动4行，而@samp{C-u C-u C-n}将光标向下移动16行。@samp{C-u}后跟数字键可将数值参数设置为所键入的数字：@kbd{C-u 1 2 0}将参数设置为120。
+
+@item @kbd{M-1} (@code{add-digit-to-numeric-arg})
+@itemx @kbd{1}, 类vi操作
+@itemx @kbd{M-2} @dots{} @kbd{M-9}
+@itemx @kbd{2} @dots{} @kbd{9}, 类vi操作
+@itemx @kbd{M-0}
+@itemx @kbd{0}, 类vi操作
+@kindex M-0 @dots{} M-9
+@kindex 0 @dots{} 9@r{, 类vi操作}
+@findex add-digit-to-numeric-arg
+将键的数位部分添加到当前数值参数中。一旦Info正在读取一个数值参数，您只需输入参数的数位部分（即：无需Meta前缀）。例如，您可以通过输入以下内容为@samp{C-l}指定数值参数32：
+
+@example
+@kbd{C-u 3 2 C-l}
+@end example
+
+@noindent
+或
+
+@example
+@kbd{M-3 2 C-l}
+@end example
+
+@item @kbd{M--} (@code{add-digit-to-numeric-arg})
+@itemx @kbd{-}
+@kindex M--
+@kindex -
+@cindex negative arguments
+@cindex 负值参数 @sortas{fzcs}
+@cindex arguments, negative
+@cindex 参数，负值 @sortas{csfz}
+@cindex numeric arguments, negative
+@cindex 数值参数，负值 @sortas{szcsfz}
+要输入负值参数，请输 @kbd{-}。单独输入 @kbd{-} 会生成一个值为 @minus{}1 的负值参数。如果在 @kbd{-} 之后继续输入@kbd{@var{数位}}键或@kbd{M-@var{数位}}键，则结果是由这些数位组成的负值。
+
+在提示区直接输入时 @kbd{-} 不起作用，因为你需要插入的是@samp{-}字符本身（而不是 @kbd{-} 键）。如果你需要在提示区指定负数参数，请使用@kbd{M--}。
+@end table
+
+@key{C-g}用于中止多字符按键序列的读取，取消耗时的操作（如多文件搜索），以及取消在提示区读取输入。
+
+@table @asis
+@item @kbd{C-g} (@code{abort-key})
+@cindex cancelling typeahead
+@cindex 取消自动补全 @sortas{qxzdbq}
+@cindex cancelling the current operation
+@cindex 取消当前操作 @sortas{qxdqcz}
+@kindex C-g@r{, 在Info窗口中}
+@findex abort-key
+取消当前操作。
+@end table
+
+Info中的@samp{q}命令直接退出Info的运行。
+
+@table @asis
+@item @kbd{q} (@code{quit})
+@itemx @kbd{C-x C-c}
+@cindex quitting
+@cindex 退出 @sortas{tc}
+@kindex q
+@kindex C-x C-c
+@findex quit
+退出 GNU Info。
+@end table
+
+以下是影响节点显示的命令：
+
+@table @asis
+@item @kbd{C-l} (@code{redraw-display})
+@kindex C-l
+@findex redraw-display
+从头开始重绘显示内容，或将包含光标的行移动到指定位置。如果不带数字参数，@samp{C-l}会清除屏幕，然后重绘整个屏幕内容。如果给定数值参数@var{n}，则包含光标的行会移动到窗口的第 @var{n }行。
+
+@item @code{@kbd{M-x} set-screen-height}
+@findex set-screen-height
+@cindex screen, changing the height of
+@cindex 屏幕，改变高度 @sortas{pmgbgd}
+提示区读取高度值，并将显示屏幕的高度设置为该值。例如，如果操作系统告诉 GNU Info ：屏幕高度为60行，而实际上只有40行，则可以使用此命令告诉Info：操作系统提供的信息不正确。
+
+@item @kbd{C-x @kbd{w}} (@code{toggle-wrap})
+@c 译者认为原文有误
+@c @kindex C-w
+@kindex C-x w @c 应该是这样的
+@findex toggle-wrap
+在当前窗口中切换行回绕的状态。通常情况下，长度超过屏幕宽度而 @dfn{wrap(回绕)} 的行会在下一行继续显示。回绕的行会在屏幕最右侧的列显示一个@samp{\}。您可以通过使用@kbd{C-x w}更改窗口中的换行状态，使这些行在屏幕最右侧的列终止。当显示的行需要比一个屏幕宽度更多的空间时，屏幕最右侧的列会显示一个@samp{$}，而行的其余部分则不可见。当长行被截断时，模式行会在其左边缘附近显示一个@samp{$}字符@footnote{译者注：实际上，模式行并没有这个@samp{$}。}。
+@end table
+
+在MS-DOS/MS-Windows操作系统中，此命令实际上会尝试将可见屏幕的尺寸更改为您在提示区中输入的值。
+
+最后，Info提供了一种方式来显示与当前节点相关的脚注：
+
+@table @asis
+@item @kbd{@key{ESC} C-f} (@code{show-footnotes})
+@kindex ESC C-f
+@findex show-footnotes
+@cindex footnotes, displaying
+@cindex 脚注，显示 @sortas{jzxs}
+在另一个窗口中显示与当前节点相关的脚注（如果有的话）。通过设置变量@code{automatic-footnotes}，可以在选择节点时让Info自动显示与该节点相关的脚注。请参阅 @ref{Variables,, @code{automatic-footnotes}}。
+@end table
+
+
+@node Invoking Info
+@nodedescription 您可以在命令行中传递的选项。
+@chapter 调用Info
+
+@cindex Info, invoking
+@cindex Info, 调用 @sortas{Infoty} 
+@cindex invoking Info
+@cindex 调用Info @sortas{dyInfo}
+@cindex command line options
+@cindex 命令行选项 @sortas{mlhxx}
+@cindex options, command line
+@cindex 选项，命令行 @sortas{xxmlh}
+@cindex arguments, command line
+@cindex 参数，命令行 @sortas{csmlh}
+
+GNU Info 接受多个选项(option)来控制初始查看的节点，并指定要在哪些目录中搜索Info文件。以下是一个模板，展示了从shell中调用 GNU Info 的示例：
+
+@example
+info [@var{option}@dots{}] [@var{manual}] [@var{menu-or-index-item}@dots{}]
+@end example
+Info会在其搜索路径中找到的名为@file{dir}的目录文件中查找名为 @var{manual} 的条目。搜索不区分大小写，并考虑子字符串。（如果未给出 @var{manual} ，则默认情况下，Info会显示一个合成的目录列表，该列表是通过组合多个@file{dir}文件构建的。）一个基本示例：
+
+@example
+info coreutils
+@end example
+
+这会在给定位置查找标记为@code{coreutils}（及@code{Coreutils}等）的条目，如果找到，则显示引用的文件（例如，@file{coreutils.info}）。如果没有更好的匹配项，使用@code{info coreu}也会找到@file{coreutils.info}。
+
+另一个示例：
+
+@example
+info ls
+@end example
+
+假设用于@code{ls}的@code{dir}条目是正常的，@code{ls}的文档将被显示。该文档位于@code{coreutils}手册中，而不是单独的手册。@code{dir}条目可以指向手册中的任何节点，这样用户就不必担心不同作者使用的确切结构。
+
+@cindex compressed Info files
+@cindex 压缩的Info文件 @sortas{ysdInfowj}
+@cindex files, compressed
+@cindex 文件，压缩的 @sortas{wjysd}
+@cindex Info files, compressed
+@cindex Info文件，压缩的 @sortas{Infowjysd}
+如果在目录文件中未找到条目，Info会在其搜索路径中查找名为@var{manual}的文件。如果未找到，Info会以@file{.info}、@file{-info}和@file{.inf}为文件扩展名进行查找。对于这些已知的扩展名，如果未找到常规文件，Info会查找压缩文件。
+@footnote{Info支持使用@code{gzip}、@code{xz}、@code{bzip2}、@code{lzip}、@code{lzma}、@code{compress}和@code{yabba}程序压缩的文件，这些文件分别假定具有@file{.z}、@file{.gz}、@file{.xz}、@file{.bz2}、@file{.lz}、@file{.lzma}、@file{.Z}和@file{.Y}的扩展名。
+
+在MS-DOS上，Info允许将Info扩展名（如@code{.inf}）和短压缩文件扩展名（如@file{.z}和@file{.gz}）合并为一个扩展名，因为DOS不允许文件基本名中包含多个点。因此，在MS-DOS上，如果Info查找@file{bison}，则@file{bison.igz}和@file{bison.inz}这样的文件名也会被找到，并由@code{gunzip}解压。}
+
+您可以使用@code{--node}或@code{-n}选项指定要访问的节点名称。或者，您也可以使用与Info交叉引用中相同的格式，同时指定文件和节点。以下两个示例均在@samp{emacs}手册中加载了@samp{Files}节点：
+
+@example
+info emacs -n Files
+info '(emacs)Files'
+@end example
+
+@cindex absolute Info file names
+@cindex 绝对Info文件名 @sortas{jdInfowjm}
+@cindex relative Info file names
+@cindex 相对Info文件名 @sortas{xdInfowjm}
+@cindex file names, relative
+@cindex 文件名，相对 @sortas{wjmxd}
+@cindex Info files, relative
+@cindex Info文件名，相对 @sortas{Infowjmxd}
+如果您想在不查看搜索路径的情况下加载文件，请将@var{manual}指定为绝对路径，或指定为相对于当前目录的路径，且该路径至少包含一个斜杠(@samp{/})字符。（您也可以使用@code{--file}选项来实现类似行为，具体如下所述。）示例：
+
+@example
+info /usr/local/share/info/bash.info
+info ./document.info
+@end example
+
+@noindent
+Info仅在明确指定的目录中查找 @var{manual}，并将该目录添加到其搜索路径中。
+
+@anchor{command-line menu items}
+@cindex menu, following
+@cindex 菜单，跟随 @sortas{cdgs}
+Info将任何剩余的参数视为菜单项的名称，或（见下文）索引条目的名称。第一个参数是加载的文件中@samp{Top}节点中的菜单项，第二个参数是第一个参数所在节点中的菜单项，以此类推。您可以通过指定(描述到所选节点的路径的)一系列菜单名称来移动到该节点。例如，
+
+@example
+info emacs buffers
+info texinfo Overview 'Using Texinfo'
+@end example
+
+@noindent
+第一个示例选择了节点@samp{(emacs)Top}中的菜单项@samp{Buffers}。第二个示例加载了@file{texinfo}文件，并在其顶级菜单中查找@samp{Overview}项，在所引用节点的菜单中查找@samp{Using Texinfo}项，最后显示所引用的节点。
+
+如果只有一个 @var{menu-or-index-item} 参数，并且该参数未被识别为菜单项，Info会将其视为索引条目。例如：
+
+@example
+info libc printf
+@end example
+
+@noindent
+这将加载libc的Info手册，并像往常一样首先在顶层菜单中查找@code{printf}；由于它不在那里（在撰写本文时），它会在索引中查找。如果能在索引中找到（事实上确实能找到），则会显示与给定位置相关的节点。
+
+@cindex Non-interactive usage
+@cindex 非交互式用法 @sortas{fjhsyf}
+@cindex Standard output not a terminal
+@cindex 标准输出不是终端 @sortas{bzscbszd}
+如果Info在标准输出不是终端的情况下被调用，它不会尝试启动交互会话；相反，它会将已加载节点和子节点的内容写入标准输出，就像指定了 @option{--output=-} 和 @option{--subnodes} 选项一样。这可用于将Info节点的内容通过管道传输到另一个程序，如分页器(pager)。
+
+以下是一份完整的选项列表。
+
+@table @code
+@anchor{--all}
+@item --all
+@itemx -a
+@cindex @code{--all} (@code{-a}) 命令行选项
+查找所有与 @var{manual} 匹配的文件。支持以下三种使用模式。
+
+@enumerate
+@item 首先，如果同时使用 @option{--all} 和 @option{--where} 选项，@command{info}将在标准输出上打印所有匹配文件的名称（如果相关，还包括@samp{*manpages*}），然后退出。
+
+@item 其次，如果同时使用 @option{--all} 和 @option{--output}，则所有匹配文件的内容将被转储到指定的输出文件中。
+
+@item 否则，将启动交互式会话。如果匹配的文件不止一个，则会显示一个菜单节点，列出所有匹配项并允许您选择一个。通过按@kbd{C-x f}，可以随时返回此菜单节点。如果只有一个匹配项，则@command{info}会照常启动。
+@end enumerate
+
+当与 @option{--index-search} 选项一起使用时，@command{info}会显示一个匹配索引条目的菜单（与@code{virtual-index}命令的作用相同；请参阅 @ref{Index Commands}）。
+
+@option{--node} 选项不能与此选项同时使用。
+
+@anchor{--apropos}
+@item --apropos=@var{string}
+@itemx -k @var{string}
+@cindex @code{--apropos} (@code{-k}) 命令行选项 
+@cindex Searching all indices
+@cindex 搜索所有索引 @sortas{sssyss}
+@cindex Info files@r{, searching all indices}
+@cindex Info文件(多个)@r{, 搜索所有索引} @sortas{Infowjsssyss}
+@cindex Apropos@r{, in Info files}
+@cindex 关于@r{, 在(多个)Info文件中} @sortas{gyzdgInfowjz}
+指定一个字符串，在系统上安装的每个Info文件的每个索引中搜索。Info会在其能找到的所有索引中查找指定的@var{string}，将结果打印到标准输出，然后退出。如果你不确定哪个Info文件解释了某些问题，这个选项会帮到你。（如果你的系统安装了大量Info文件，搜索所有文件可能需要一些时间！）
+
+您可以在Info内部调用apropos命令；请参阅 @ref{Searching Commands}。
+
+@item --debug=@var{number}
+@itemx -x @var{number} 
+@cindex @code{--debug} (@code{-x}) 命令行选项
+@cindex debugging
+@cindex 调试 @sortas{ts}
+@cindex 除错 @sortas{cc}
+输出额外的调试信息。参数指定了详细级别，因此，级别越高，包含的信息越全面，也含有低级别的所有信息。要获取所有可用的调试输出，请使用 @option{-x@tie{}-1}。Info版本@value{VERSION}有以下级别：
+
+@table @code
+@item 1
+输出关于文件操作的信息，例如查找@file{dir}文件及以@samp{--output}选项写入的节点。
+
+@item 2
+输出与@env{INFOPATH}相关的操作。
+
+@item 3
+输出有关节点搜索的信息。
+@end table
+
+调试输出会发送到标准错误。
+
+@item --directory @var{directory-path}
+@itemx -d @var{directory-path}
+@cindex @code{--directory} (@code{-d}) 命令行选项
+@cindex directory path
+@cindex 目录路径 @sortas{mllj}
+@cindex @env{INFOPATH}
+@anchor{INFOPATH}
+将 @var{directory-path} 添加到Info需要查找文件时搜索的目录路径列表中。您可以多次使用 @option{--directory}；每个包含Info文件的目录使用一次，或者使用冒号（在MS-DOS/MS-Windows上为分号）分隔的此类目录列表。
+
+环境变量@env{INFOPATH}的值通常是由冒号分隔的目录列表，在MS-DOS/MS-Windows系统中，使用分号。@env{INFOPATH}中的目录列表将合并到使用 @option{--directory}指定的目录列表中。如果@code{INFOPATH}的值以冒号（或在MS-DOS/MS-Windows系统中以分号）结尾，则初始的Info搜索目录列表是通过将构建时的默认值附加到@env{INFOPATH}的值来构建的。
+
+如果您未定义@env{INFOPATH}，Info将使用构建时定义的默认路径列表作为Info搜索初始目录列表。 
+
+无论是否定义了@env{INFOPATH}，构建Info时定义的默认文档目录都会被添加到搜索路径中。如果您不希望包含此目录，请将@code{infopath-no-defaults}变量设置为@code{On}（请参阅 @ref{infopath-no-defaults}）。
+
+如果目录列表中包含元素@code{PATH}，则该元素将被替换为从环境变量@code{PATH}的值派生出的目录列表。每个形式为 @var{dir/base} 的路径元素，只要对应的目录存在，都将被替换为 @var{dir}@code{/share/info} 或 @var{dir}@code{/info}。
+
+@item --dribble=@var{file}
+@cindex @code{--dribble} 命令行选项
+@cindex keystrokes, recording
+@cindex 击键，记录 @sortas{jjjl}
+@cindex remembering user keystrokes
+@cindex 记住用户的击键 @sortas{jzyhdjj}
+指定一个文件，用于记录所有用户按键操作。该文件可在后续用于重放相同的命令序列，请参阅下面的@samp{--restore}选项。
+
+@item --file @var{manual}
+@itemx -f @var{manual}
+@cindex @code{--file} (@code{-f}) 命令行选项
+@cindex Info manual, specifying initial
+@cindex Info手册，指定初始节点 @sortas{Infosczdcsjd}
+@cindex initial node, specifying
+@cindex 初始节点，指定 @sortas{csjdzd}
+@cindex startup node, specifying
+@cindex 启动节点，指定 @sortas{qdjdzd}
+指定要访问的特定手册(manual)，而无需在任何@file{dir}文件中查找其名称。
+
+使用此选项时，它会首先尝试访问@code{(@var{manual})Top}，即（通常）@file{@var{manual}.info}中的@code{Top}节点。如上所述，它会尝试各种文件扩展名来查找该文件。如果找不到此类文件（或节点），Info将退出而不执行任何操作。与上述@file{dir}查找相同，任何额外的 @var{menu-or-index-item} 参数都用于在已加载的文件中定位节点。
+
+如果@var{manual}是一个绝对文件名，或者以@file{./}或@file{../}开头，或者包含中间目录，Info将只在指定的目录中查找该文件，并将此目录添加到@code{INFOPATH}中。（这与未指定@code{--file}时的情况相同。）
+
+
+@item --help
+@itemx -h
+@cindex @code{--help} (@code{-h}) 命令行选项
+输出关于Info命令行选项的简要说明。
+
+@item --index-search @var{string}
+@cindex @code{--index-search} 命令行选项
+@cindex index search, selecting from the command line
+@cindex 索引的搜索，从命令行中选择 @sortas{sydsscmlhzxz}
+@cindex online help, using Info as
+@cindex 在线帮助，使用Info作为 @sortas{zxbzsyInfozf}
+处理完所有命令行参数后，转到所选Info文件中的索引，并搜索与 @var{string} 匹配的索引条目。如果找到此类条目，Info会话将从第一个匹配的索引条目所指向的节点开始显示；按 @kbd{,} 键可遍历其余匹配条目。如果不存在此类条目，则打印@samp{no entries found}并退出，退出状态为非零。这可以从另一个程序中使用，作为提供在线帮助的一种方式，或者当您不知道某个节点的确切名称时，作为从该节点开始阅读Info文件的快捷方式。
+
+当与 @option{--all} 选项一起使用时，@command{info}会显示一个包含所有已匹配索引条目的菜单（与@code{virtual-index}命令的作用相同；请参阅 @ref{Index Commands}）。
+
+此命令也可从Info内部调用；请参阅 @ref{Searching Commands}。
+
+@item --init-file @var{INIT-FILE}
+@anchor{--init-file}
+@cindex @code{--init-file} 命令行选项
+从@var{INIT-FILE}读取键绑定和变量设置，而不是从默认位置读取。请参阅 @ref{Custom Key Bindings}。
+
+@item --node @var{nodename}
+@itemx -n @var{nodename}
+@cindex @code{--node} (@code{-n}) 命令行选项
+@cindex node, selecting from the command line
+@cindex 节点，从命令行中选择 @sortas{jdcmlhzxz}
+在Info加载的初始文件中指定要访问的特定节点。您可以多次指定 @code{--node} ：对于交互式Info，每个 @var{nodename} 都会在单独的窗口中访问；对于非交互式Info（例如当指定 @code{--output} 时），每个 @var{nodename} 都会按顺序处理。
+
+您可以使用常见的Info语法，在@code{--node}选项中同时指定文件和节点，但不要忘记在shell中转义开括号、闭括号和空格；例如：
+
+@example sh
+info --node "(emacs)Buffers"
+@end example
+
+@item --output @var{file}
+@itemx -o @var{file}
+@cindex @code{--output} (@code{-o}) 命令行选项
+@cindex file, outputting to
+@cindex 文件，输出到 @sortas{wjscd}
+@cindex outputting to a file
+@cindex 输出到一个文件 @sortas{scdygwj}
+直接输出到 @var{file}。Info访问的每个节点都将输出到@var{file}，而不是以交互方式查看。@var{file} 的值为 @code{-} 表示标准输出。
+
+@item --no-raw-escapes
+@itemx --raw-escapes, -R
+@anchor {--raw-escapes}
+@cindex @code{--raw-escapes} (@code{-R}) 命令行选项 
+@cindex colors in documents
+@cindex 颜色，文档中的 @sortas{yswdzd}
+@cindex ANSI escape sequences in documents
+@cindex ANSI转义序列，文档中的 @sortas{ANSIzyxlwdzd}
+默认情况下，Info会将文档中的SGR终端控制序列（也称为ANSI转义序列）直接传递给终端。如果您使用@code{--no-raw-escapes}选项，这些序列将像其他控制字符一样显示；例如，@key{ESC}字节将显示为@samp{^[}。@code{--raw-escapes}和@code{-R}选项则不会执行任何操作，但为了选项的完备性而包含在内。
+
+@ignore
+@cindex man pages, bold and underline
+@vindex GROFF_SGR
+Some versions of Groff (@pxref{Top,,,groff,Groff}) produce man pages with ANSI escape sequences for bold, italics, and underlined characters, and for colorized text.  If your @command{man} command uses a version of Groff that does this (original GNU Groff does), and your terminal supports these sequences, Info will display any bold or underlined text in man pages.  Some distributions have modified Groff to require setting the @code{GROFF_SGR} environment variable to get these sequences.  @xref{Invoking grotty,,, groff, Groff}.
+@end ignore
+
+@item --restore=@var{dribble-file}
+@cindex @code{--restore} 命令行选项
+@cindex replaying recorded keystrokes
+@cindex 回放已录制的击键操作序列 @sortas{hfylzdjpcz}
+从 @var{dribble-file} 读取击键操作序列，这些序列可能是之前Info会话期间记录的（请参阅上文对@samp{--dribble}选项的描述）。当文件中的所有击键都被读取后，Info将恢复输入，成为为常规交互操作的Info。
+
+@item --show-malformed-multibytes
+@itemx --no-show-malformed-multibytes
+@cindex @code{--show-malformed-multibytes} 命令行选项
+@cindex malformed multibyte sequences, showing
+@cindex 格式错误的多字节序列，显示 @sortas{gscwddzjxlxs}
+在输出中显示格式错误的多字节序列。默认情况下，此类序列会被丢弃。
+
+@anchor{--show-options}
+@item --show-options
+@itemx --usage
+@itemx -O
+@cindex @code{--show-options} (@code{--usage}, @code{-O}) 命令行选项
+@cindex command-line options, how to find
+@cindex 命令行选项，如何找到 @sortas{mlhxxrhzd}
+@cindex invocation description, how to find
+@cindex 调用描述，如何找到 @sortas{dymsrhzd}
+查找描述如何调用程序的节点。程序名称取自命令行上的其他非选项参数。例如，@samp{info emacs -O}会加载@code{Emacs Invocation}节点，该节点属于@code{emacs}手册。
+
+提供此选项是为了更方便地在手册中找到最重要的使用信息，而无需在菜单层级中导航。其效果类似于在Info内部使用@code{@kbd{M-x} goto-invocation}命令（请参阅 @ref{goto-invocation}）。
+
+@item --speech-friendly
+@itemx -b
+@cindex @code{--speech-friendly} (@code{-b}) 命令行选项
+@cindex speech synthesizers
+@cindex 语音合成器 @sortas{yyhcq}
+仅在MS-DOS/MS-Windows系统上使用；此选项会使Info使用标准的文件I/O函数进行屏幕写入。（默认情况下，Info在这些系统上直接写入视频内存，以实现更快的操作和彩色显示支持。）这使得盲人使用的语音合成器能够捕捉输出并将其转换为可听语音。
+
+@item --strict-node-location 
+@cindex @code{--strict-node-location} 命令行选项
+此选项使Info不搜索``附近''来定位节点，而是严格使用Info文件中提供的信息。此选项的实际用途是调试编写Info文件的程序，以检查它们是否输出正确的位置。由于多年来各种编写Info的程序在不同版本中存在错误和不当行为，因此，在仅想阅读文档时，不建议使用此选项。
+
+@item --subnodes
+@cindex @code{--subnodes}, 命令行选项
+此选项仅在与@code{--output}一起使用时才有意义。它表示递归输出每个输出节点菜单中出现的节点。解析为外部Info文件的菜单项以及作为索引成员的菜单项均不会输出。每个节点只输出一次。
+
+@anchor{variable-assignment}
+@item -v @var{name}=@var{value}
+@itemx --variable=@var{name}=@var{value}
+@cindex @code{--variable} (@code{-v}) 命令行选项
+@cindex variable assignment
+@cindex 变量赋值 @sortas{blfz}
+将@command{info}的变量 @var{name} 设置为 @var{value}。
+请参阅 @ref{Variables}.
+
+@item --version
+@cindex @code{--version} 命令行选项
+@cindex version information
+@cindex 版本信息 @sortas{bbxx}
+Prints the version information of Info and exits.
+输出Info的版本信息并退出。
+
+@anchor{--vi-keys}
+@item --vi-keys
+@cindex @code{--vi-keys} 命令行选项
+@cindex vi-like key bindings
+@cindex 类vi键绑定 @sortas{lvijbd}
+@cindex Less-like key bindings
+@cindex 类Less键绑定 @sortas{llessjbd}
+此选项以不同的方式将功能绑定到键上，以模拟@code{vi}和Less的键绑定。此选项激活的绑定以@ref{@t{infokey} format}记录。（如需更通用的更改 GNU Info 键绑定方式，请参见 @ref{Custom Key Bindings}。）
+
+@item --where
+@itemx --location
+@itemx -w
+@cindex @code{--where} (@code{--location}, @code{-w}) 命令行参数
+@cindex Info manual location
+@cindex 定位Info手册 @sortas{dwInfosc}
+@cindex Where is an Info manual?
+@cindex Info手册在哪里？ @sortas{Infoscznl}
+@cindex entry
+@cindex 入口 @sortas{rk}
+显示将要读取的文件名并退出，而不是实际读取并启动Info。
+@end table
+
+最后，Info定义了许多默认的键绑定和变量。如何定制这些设置，请参阅 @xref{Custom Key Bindings}。
+
+@c FIXME: the feature with lowercasing the file name isn't documented
+
+
+@node Variables
+@nodedescription 如何更改Info的默认行为。
+@chapter 控制变量
+
+GNU Info 使用多个内部 @dfn{变量(Variables)}，这些变量的值会被各种Info命令使用。如果需要，您可以更改这些变量的值，从而改变Info的行为。
+
+设置变量值的方法有三种，按优先级顺序列出如下：
+
+@enumerate
+@item
+通过交互方式，使用下文所述的@code{set-variable}命令；
+@item
+在命令行中，使用 @option{-v} (@option{--variable}) 命令行选项 (请参阅 @ref{variable-assignment})；
+@item
+在@file{infokey}文件的@code{#var}部分（请参阅 @ref{Custom Key Bindings}）。
+@end enumerate
+
+@table @asis
+@item @code{@kbd{M-x} set-variable}
+@cindex variables, setting
+@cindex 变量，设置 @sortas{blsz}
+@findex set-variable
+在提示区读取变量的名称及值，然后将变量设置为该值。在读取变量名称时，可以使用补全功能（请参阅 @ref{The Echo Area}）；在读取值时，如果合适，也可以使用补全功能。
+
+@item @code{@kbd{M-x} describe-variable}
+@cindex variables, describing
+@cindex 变量，描述 @sortas{blms}
+@findex describe-variable
+在提示区读取变量的名称，并显示其值和简要描述。
+@end table
+
+以下是在Info中可以设置的变量列表。
+
+@vtable @code
+@item automatic-footnotes
+@cindex @code{*Footnotes*} 窗口
+@cindex 脚注窗口 @sortas{jzck}
+当设置为@code{On}时，脚注会自动出现和消失；否则，它们会出现在节点文本的底部。此变量默认为@code{Off}。当选择一个节点时，会创建一个包含该节点中出现的脚注的窗口，脚注会显示在新窗口中。Info创建的包含脚注的窗口称为@code{*Footnotes*}。如果选择的节点不包含脚注，而屏幕上有一个@code{*Footnotes*}窗口，则该@code{*Footnotes*}窗口会被删除。以这种方式创建的脚注窗口不会自动平铺，以便尽可能少地占用显示空间。
+
+@item automatic-tiling
+当设置为@code{On}时，创建或删除窗口会调整其他窗口的大小。此变量默认为@code{Off}。通常，键入@samp{C-x 2}会将当前窗口等分为两部分。当@code{automatic-tiling}设置为@code{On}时，所有窗口会自动调整大小，使每个窗口中可见的行数保持相等。任何@code{*Completions*}和@code{*Footnotes*}窗口都是自动平铺的例外；它们会保持原始大小。
+
+@anchor{cursor-movement-scrolls}
+@item cursor-movement-scrolls
+当设置为@code{On}时，当光标移动命令到达节点的顶部或底部时，会根据@code{scroll-behavior}的值（见下文）加载另一个节点。这是默认设置。当此变量设置为@code{Off}时，光标移动会在节点的顶部或底部停止。
+
+@item errors-ring-bell
+当设置为@code{On}（默认设置）时，出错会导致铃声响起。
+
+
+@item follow-strategy
+当设置为@code{remain}（默认值）时，Info在跟随交叉引用到外部手册时，会先在包含当前Info文件所在目录中，然后再在搜索路径中查找所引用的手册。另一个可选值是@code{path}，表示立即在整个搜索路径中查找。
+
+@code{remain}旨在用于多个Texinfo手册，这些手册之间相互引用，且其版本应保持一致。（例如，与特定版本的Emacs相关的各种手册。）
+
+当您的Info文件搜索路径与命令shell的搜索路径相同时，并且您总是希望找到shell将执行的程序版本的文档时，使用@code{path}的替代行为可能会有用。
+
+@item gc-compressed-files
+当设置为@code{On}时，Info会对那些须解压的文件进行垃圾收集。此变量的默认值为@code{Off}。每当在Info中访问一个节点时，包含该节点的Info文件就会被读入内存，并且Info会读取该文件中包含的标签和节点的信息。一旦Info读取了标签信息，这些信息就永远不会被抛弃。但是，除非特定的Info窗口需要，否则不需要保留节点的实际文本。对于非压缩文件，当节点文本不再使用时，不会被保留。但是解压文件可能是一项耗时的操作，因此Info会尽量避免重复解压。此变量告诉Info可以放心地对磁盘上压缩过的文件的节点文本进行垃圾收集。
+
+@item hide-note-references
+默认情况下，Info文件的内容大多会原样显示，包括Info阅读器用于导航的文本（例如，标记菜单或交叉引用的位置）。如果将此变量设置为@code{On}，则部分文本会以类似于Emacs中的@code{Info-hide-note-references}变量的方式隐藏起来（请参阅 @ref{Emacs Info Variables, , , info, Info}）。
+
+@item highlight-searches
+当设置为@code{On}时，会高亮显示搜索命令得到的匹配项（请参阅 @ref{Searching Commands}）。
+
+@item infopath-no-defaults
+@anchor{infopath-no-defaults}
+与@env{INFOPATH}环境变量（请参阅 @ref{INFOPATH}）结合使用。当设置为@code{On}时，不会将构建Info时定义的默认文档目录（如@file{/usr/share/info}）添加到Info文件的搜索路径中。
+
+@item ISO-Latin
+@cindex ISO Latin characters
+@cindex ISO拉丁字符 @sortas{ISOldzf}
+@cindex Meta key sets eighth bit
+@cindex Meta键设置第八位 @sortas{Metajszdbw}
+默认设置为@code{On}，这意味着Info接受并显示由值大于等于128的字节表示的字符，如UTF-8编码中的字符或各种8位ISO拉丁字符，同时也允许用户输入此类字符。
+
+将此变量设置为@code{Off}的唯一原因，可能是你的终端将字节的第八位设置为表示元键（Meta键）被按下。
+
+@item key-time
+@cindex slow network connections
+@cindex 慢速网络链接 @sortas{mswllj}
+等待键盘上某个键（或键组合）生成的字节序列中下一个字节的时间长度（以毫秒为单位）。例如，如果@kbd{down}键生成的字节序列为@kbd{@key{ESC} O B}，并且已接收到两个字节@kbd{@key{ESC} O}，则在此时间长度内必须接收到一个@kbd{B}字节，才能记录下@kbd{down}键的按下。对于速度较慢的终端或网络连接，您可能希望将此变量设置为较大的值。
+
+如果将此变量设置为 0，则无法确定一个代表键的已识别字节序列是否优先于另一个代表键的已识别序列（该序列是第一个序列的初始子序列）。在某些情况下，通过将此变量设置为 0，并在@file{infokey}文件中给出该键发送的字节序列，您可能能够使按下键盘上Info不知道的特殊键（例如功能键）来执行命令。 （请参阅 @ref{Custom Key Bindings}。）
+
+@anchor{min-search-length}
+@item min-search-length
+搜索字符串的最小长度（默认为 1）。若尝试启动搜索的字符串（或正则表达式）长度小于此值，则会导致错误。
+
+@item mouse
+使用某种方法从鼠标设备获取输入。默认值为@samp{Off}。如果检测到终端支持鼠标设备，则将此变量设置为@code{normal-tracking}，以使Info使用``正常跟踪模式(normal tracking mode)''。这样，您就可以使用鼠标滚轮滚动活动窗口的内容。
+
+@cindex Selecting text with the mouse
+@cindex 选择文本，使用鼠标 @sortas{xzwbsysb}
+@cindex xterm mouse selections
+@cindex xterm,用鼠标选择 @sortas{xtermysbxz}
+@cindex 终端模拟器，用鼠标选择 @sortas{zdmnqysbxz}
+在 X Window 系统下运行的终端模拟器（如@command{xterm}）中，通常可以使用鼠标选择文本。然而，鼠标跟踪模式可能会对此造成干扰。当出现这种情况时，您可以通过按住@kbd{Shift}键并点击拖动来选择文本。
+
+@item nodeline
+@cindex node header line
+@cindex 节点导航栏 @sortas{jddhl}
+如何显示每个节点顶部出现的节点导航栏(node header line)。默认情况下，@code{nodeline}的值为@code{pointers}，仅显示指向相邻节点的指针（``Next''、``Prev''和``Up''指针）。如希望显示完整的导航栏(包括文件名和指向相邻节点的指针），请设置为@code{print}；如希望完全不显示导航栏，请设置为@code{no}。
+
+@anchor{scroll-behavior}
+@item scroll-behavior
+@itemx scroll-behaviour
+这两个变量名是同义词。控制当在节点的末尾或开头使用滚动命令时发生的行为（请参阅 @ref{Scrolling Commands})）。此变量的默认值为@code{Continuous}。可能的值有：
+
+@table @code
+@item Continuous
+尝试获取此节点菜单中的第一项，若失败，则尝试获取@samp{Next}节点，若再失败，则尝试获取@samp{Up}节点中的@samp{Next}。此行为与使用@samp{]}（@code{global-next-node}）和@samp{[}（@code{global-prev-node}）命令的效果相同。
+
+@item Next Only
+仅尝试获取@samp{Next}节点。
+
+@item Page Only
+停止，不做任何改变。使用这个值，任何滚动命令都无法改变当前节点。
+@end table
+
+除非@code{cursor-movement-scrolls}变量设置为@code{Off}，否则此变量也会影响光标移动命令（请参阅 @ref{Cursor Commands}）。请参阅 @ref{cursor-movement-scrolls}。
+
+@item scroll-last-node
+控制当在最后一个节点末尾发出滚动命令时发生的行为。可能的值包括：
+
+@table @code
+@item Stop
+不滚动。在提示区显示@samp{No more nodes within this document(此文档中无更多节点)}消息。这是默认设置。
+
+@item Top
+跳转到文档的顶(Top)节点。
+@end table
+
+此变量仅在@code{scroll-behavior}设置为@code{Continuous}时有效。
+
+@item scroll-step
+让光标回到窗口所需的滚动行数。此变量的默认值为 1，这会产生一种``平滑滚动''的效果，有些人更喜欢这种效果。如果光标移出了节点文本的可见部分，则会自动进行滚动。
+
+如果变量@code{scroll-step}为 0，则光标（及其附加的文本）将置于窗口中央。
+
+@item search-skip-screen
+设置重复搜索的起始点（请参阅 @ref{repeated-search}）。当设置为@code{Off}（默认值）时，重复搜索将从光标紧随的位置开始（正向搜索时）或紧邻的前一个位置开始（反向搜索时）。当设置为@code{On}时，重复搜索会忽略屏幕上可见的行。换言之，正向搜索（@kbd{@}}）将从下一页的开头开始，而反向搜索（@kbd{@{}）将从上一页的末尾开始。
+
+@item show-index-match
+当设置为 @code{On}（默认设置）时，您输入的匹配搜索字符串的部分会在结果消息中以``反色''显示（请参阅 @ref{Searching Commands,, @code{next-index-match}}）。
+
+@item visible-bell
+当设置为@code{On}时，Info会尝试闪烁屏幕而不是响铃。此变量默认为@code{Off}。如果终端不支持闪烁，则此变量无效。（但您仍然可以通过将@code{errors-ring-bell}变量设置为@code{Off}，或者使用外部命令使铃声静音（例如，@code{xset b 0 0 0}），从而使Info安静运行。）
+
+@end vtable
+
+
+@node Colors and Styles
+@nodedescription 定制Info使用的色彩。
+@chapter 色彩及样式
+
+您可以选择使用多种样式（包括颜色、粗体和下划线）来突出Info的部分显示内容，如交叉引用和搜索匹配项。以下是可用于此操作的变量：
+
+@vtable @code
+@item link-style
+用于交叉引用和菜单项。
+
+@item active-link-style
+用于交叉引用或菜单项，具有该样式的交叉引用或菜单项被称为 @dfn{活动的(active)}，当键入@key{RET}时，它将被选中并转到其指向的位置。
+
+@item match-style
+用于搜索命令得到的匹配。（请参阅 @ref{Searching Commands}。）
+@end vtable
+
+这里的每一个变量都像上一章中的变量一样，在@file{infokey}文件中给出。它们的值是下表中以逗号分隔的值的列表：
+
+@table @code
+@item  black   (黑)
+@itemx red     (红)
+@itemx green   (绿)
+@itemx yellow  (黄)
+@itemx blue    (蓝)
+@itemx magenta (品红)
+@itemx cyan    (青)
+@itemx white   (白)
+@cindex Colored foreground
+@cindex 前景颜色 @sortas{qjys}
+@cindex 颜色，前景 @sortas{ysqj}
+指定文本(前景)颜色。(`(@dots{})'不是值的一部分。)
+
+@item nocolor
+@itemx nocolour
+关闭所有当前生效的颜色，使用终端的默认颜色。
+
+@item  bgblack 
+@itemx bgred
+@itemx bggreen
+@itemx bgyellow
+@itemx bgblue
+@itemx bgmagenta
+@itemx bgcyan
+@itemx bgwhite
+@cindex Colored background
+@cindex 背景颜色 @sortas{bjys}
+@cindex 颜色，背景 @sortas{ysbj}
+指定背景颜色。
+
+@item bgnocolor
+@itemx bgnocolour
+使用终端的缺省背景颜色。
+
+@item underline
+@itemx nounderline
+@cindex Underlined text
+@cindex 下划线文本 @sortas{xhxwb}
+打开(关闭)文本的下划线。
+
+@item standout
+@itemx nostandout
+打开或关闭`突出模式'。突出模式会使用使文本更加醒目的外观模式，且不同终端之间可能有所不同。
+
+@item bold
+@itemx regular
+@itemx nobold
+@cindex Bold text
+@cindex 粗体文本 @sortas{ctwb}
+打开或关闭粗体。
+
+@item blink
+@itemx noblink
+@cindex 闪烁文本 @sortas{sswb}
+让文本闪烁或不闪烁。
+
+@end table
+
+以下是从@file{infokey}文件中摘录的一个示例：
+
+@example
+#var
+link-style=yellow
+active-link-style=yellow,bold
+match-style=underline,bold,nocolor
+@end example
+
+@noindent 
+这样一来，所有交叉引用都会变为黄色，而活动交叉引用还会以粗体显示。任何搜索匹配项都会以粗体并带有下划线的方式显示。此外，如果交叉引用内部有搜索匹配项，则@samp{nocolor}呈现样式会取消黄色，使匹配项中的文本保持终端的默认颜色。（但请注意，活动交叉引用的呈现样式优先于搜索匹配项的呈现样式，因此搜索匹配项仍会以黄色显示。）
+
+
+@node Custom Key Bindings
+@nodedescription 如何定义您自己的键至命令的绑定。
+@chapter 定制键绑定及变量
+
+@cindex default key bindings, overriding
+@cindex 默认键绑定，覆盖 @sortas{mrjbdfg}
+@cindex overriding default key bindings
+@cindex 覆盖默认键绑定 @sortas{fgmrjbd}
+@cindex customizing key bindings
+@cindex 定制键绑定 @sortas{dzjbd}
+@cindex key bindings, customizing
+@cindex 键绑定，定制 @sortas{jbddz}
+@cindex @command{infokey}, program for customizing key bindings
+@cindex @command{infokey}, 用于定制键绑定的程序 @sortas{infoyydzjbddcx}
+@cindex @file{_info} file (MS-DOS)
+@cindex @file{_info}文件(MS-DOS)  @sortas{_infowjMSDOS}
+
+Info允许您覆盖本文档中描述的默认的键与命令的绑定及变量设置。启动时，GNU Info 会查找一个配置文件：
+
+@c ccccc
+@itemize @bullet
+@item
+首先，Info会检查@file{~/.infokey}文件，其中@file{~}指代用户的@env{HOME}目录。@footnote{由于DOS文件系统的限制，MS-DOS版本的Info会查找文件@file{_infokey}。如果未定义@env{HOME}变量，Info还会在当前目录中查找。}
+
+@item
+如果该文件不在此位置，Info会检查@file{@env{$XDG_CONFIG_HOME/texinfo/infokey}}。@env{$XDG_CONFIG_HOME}的默认值是@file{~/.config}，因此该文件通常位于@file{~/.config/texinfo/infokey}。
+
+@item
+Info会检查@file{@var{sysconfdir}/xdg/texinfo/infokey}，其中@var{sysconfdir}是在构建Info时设置的，通常为@samp{/etc/}或@samp{/usr/local/etc}。
+
+@item
+最后，Info会通过@env{$XDG_CONFIG_DIRS}（一个以冒号分隔的目录名称列表）来检查是否存在名为@file{texinfo/infokey}的文件。
+
+@end itemize
+
+@noindent
+此搜索顺序与@uref{https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html, XDG基础目录规范}兼容，尽管并非在每个细节上都遵循该规范。
+
+若要使用其他配置文件，请使用 @option{--init-file} 选项（请参阅 @ref{--init-file}）。
+
+如果找到一个@file{infokey}文件，那么Info会采用其中包含的键绑定和变量设置。
+
+变量也可以在命令行上使用 @option{--variable} 选项进行设置（请参阅 @ref{variable-assignment}）。命令行上的变量设置会覆盖@file{infokey}文件中的设置。
+
+（@option{--vi-keys} 选项可一次性重新绑定多个键；请参阅 @ref{--vi-keys}。）
+
+
+@node @t{infokey} format
+@nodedescription @command{infokey}格式
+@section @command{infokey}格式
+
+@cindex @command{infokey} format
+@cindex @file{infokey} format
+@cindex @file{infokey}格式 @sortas{infokeygs}
+@cindex format of @file{infokey}
+@cindex 格式，@file{infokey}  @sortas{gsinfokey}
+
+以下是一个@file{infokey}文件示例，其中指定了通过Info的 @option{--vi-keys} 选项（请参阅 @ref{--vi-keys}）激活的键绑定。
+
+@example
+#info
+g       first-node
+G       last-node
+\mb     beginning-of-node
+\me     end-of-node
+j       next-line
+k       prev-line
+
+f       scroll-forward-page-only
+^f      scroll-forward-page-only
+\m\     scroll-forward-page-only
+z       scroll-forward-page-only-set-window
+
+b       scroll-backward-page-only
+^b      scroll-backward-page-only
+w       scroll-backward-page-only-set-window
+
+\kd     down-line
+^e      down-line
+^j      down-line
+^m      down-line
+\ku     up-line
+^y      up-line
+^k      up-line
+
+d       scroll-half-screen-down
+^d      scroll-half-screen-down
+u       scroll-half-screen-up
+^u      scroll-half-screen-up
+
+^xn     next-node
+^xp     prev-node
+^xu     up-node
+'       last-node
+\mt     top-node
+\md     dir-node
+
+^xg     goto-node
+I       goto-invocation-node
+
+n       search-next
+N       search-previous
+
+\mf     xref-item
+^xr     xref-item
+
+\mg     select-reference-this-line
+^x^j    select-reference-this-line
+^x^m    select-reference-this-line
+
+^c      abort-key
+
+\mh     get-info-help-node
+
+:q      quit
+ZZ      quit
+
+#echo-area
+\mh     echo-area-backward
+\ml     echo-area-forward
+\m0     echo-area-beg-of-line
+\m$     echo-area-end-of-line
+\mw     echo-area-forward-word
+\mx     echo-area-delete
+\mu     echo-area-abort
+^v      echo-area-quoted-insert
+\mX     echo-area-kill-word
+@end example
+
+@c ccccc
+该文件包含一个或多个@dfn{节(sections)}。每个节都以用`#@dots{}'行开始，用于标识节的类型。可能的节包括：
+@table @code
+@item #info
+Info窗口的键绑定。本节的开头由一行单独的@code{#info}表示。如果这是源文件中的第一个节，则可以省略@code{#info}行。本节的其余部分由以下格式的行组成：
+
+@example
+@var{string} whitespace @var{action} [ whitespace [ # comment ] ] newline
+@end example
+
+空白(whitespace)是指一个或多个空格和(或)制表符的任意序列。注释(comment)是指除换行符外的任何字符的任意序列。@var{string}是调用动作的键序列。@var{action}是Info命令的名称。@var{string}中的字符按字面意思解释，或以插入符号（@code{^}）作为前缀来表示控制字符(Ctrl)。反斜杠后跟某些字符指定输入按键，具体如下：
+
+@table @code
+@item \b
+回退键(Backspace)
+@item \e
+退出键(Escape) (ESC)
+@item \n
+换行键(Newline)
+@item \r
+回车键(Return)
+@item \t
+制表键(Tab)
+@item \ku
+向上键(Up arrow)
+@item \kd
+向下键(Down arrow)
+@item \kl
+向左键(Left arrow)
+@item \kr
+向右键(Right arrow)
+@item \kU
+上翻页键(Page Up)
+@item \kD
+下翻页键(Page Down)
+@item \kh
+回家键(HOME)
+@item \ke
+末尾键(END)
+@item \kx
+删除键(Delete) (DEL)
+@item \m@var{x}
+Meta-@var{x}，其中@var{x}是上述描述的任何字符。Meta也常被称为ALT。
+@end table
+
+反斜杠后跟任何其他字符表示该字符应按字面意思理解。必须以反斜杠开头的字符包括脱字符(^)、空格、制表符和反斜杠本身。
+
+@item #echo-area
+提示区的键绑定。本节的开头由一行单独的@code{#echo-area}表示。本节其余部分的语法与上述Info节的键定义语法相同。
+
+@item #var
+变量初始化。本节由仅包含@code{#var}的行表示开始。此行之后是一系列变量赋值语句，每行一个。每行由一个变量名（请参阅 @ref{Variables}）后跟@code{=}再后跟一个值组成。变量名和@code{=}之间不能有空格，@code{=}后的所有字符（包括空格）都包含在值中。
+@end table
+
+除了特殊的用于说明节类型的节标题行外，空行和以@code{#}开头的行将被忽略。
+
+无论是否使用@samp{--vi-keys}，在@file{infokey}文件中定义的键绑定都会优先于 GNU Info 的默认键绑定。可以通过在@file{infokey}文件中使用@code{invalid}操作来覆盖默认键绑定，从而禁用它。此外，通过在相关节的 @emph{任何位置} 添加以下行，可以禁用 @emph{所有} 默认键绑定：
+
+@example
+#stop
+@end example
+
+这将导致 GNU Info 忽略该节所有的默认键命令。
+
+注意：@code{#stop} 可能会很危险。由于它会禁用所有默认键绑定，因此您必须提供足够的新的键绑定来启用所有必要的操作。例如，如果未将任何键绑定到@code{quit}命令，可能会导致操作失败。
+
+请注意，某些键（如@key{C-c}）对终端具有特殊含义，因此对这些键的任何绑定都不会生效。请参阅 @ref{Special Characters,,, coreutils, GNU Coreutils}。
+
+在@file{infokey}文件中定义键绑定的顺序并不重要，但有一点需要注意：由@code{get-help-window}命令生成的命令摘要仅显示@emph{第一个}绑定到某个命令的键。
+
+
+@node MS-DOS/Windows keybindings
+@nodedescription DOS/Windows上的键绑定。
+@chapter DOS/Windows上的键绑定
+
+以下是一些仅在MS-DOS/Windows上Info使用的键绑定。
+
+@heading 光标命令
+
+@kindex Home
+@kindex End
+@kindex C-RIGHT
+@kindex C-LEFT
+@kindex C-Home
+@kindex C-End
+@table @kbd
+@item @key{Home}
+@code{beginning-of-line}
+@item @key{End}
+@code{end-of-line}
+@item C-@key{RIGHT}
+@code{forward-word}
+@item C-@key{LEFT}
+@code{backward-word}
+@item C-@key{Home}
+@code{beginning-of-node}
+@item C-@key{End}
+@code{end-of-node}
+@end table
+
+@heading 节点命令
+
+@kindex C-NEXT
+@kindex C-PgDn
+@kindex C-PREVIOUS
+@kindex C-PgUp
+@kindex C-CENTER
+@kindex C-UP
+@table @kbd
+@item C-@key{NEXT}
+@code{next-node}
+@item C-@key{PREVIOUS}
+@code{prev-node}
+@item C-@key{UP} (方向键)
+@code{up-node}
+@item C-@key{CENTER}
+@code{history-node}
+@end table
+
+在某些键盘上，@key{NEXT}键被称为@key{PgDn}键。在某些键盘上，@key{PREVIOUS}键被称为@key{PgUp}键。
+
+@heading 提示区命令
+
+@kindex C-RIGHT@r{, 在提示区}
+@kindex C-LEFT@r{, 在提示区}
+@kindex Shift-TAB@r{, 在提示区}
+@kindex BackTab@r{, 在提示区}
+@table @kbd
+@item C-@key{RIGHT}
+@code{echo-area-forward-word}
+@item C-@key{LEFT}
+@code{echo-area-backward-word}
+@item Shift-@key{TAB}
+@code{echo-area-tab-insert}
+@end table
+
+仅在DOS/Windows系统上，@kbd{Shift-@key{TAB}}键是@kbd{M-@key{TAB}}的别名。此键有时也被称为@samp{BackTab}。
+
+@heading 杂项命令
+
+@table @kbd
+@item @key{F1}
+@code{get-help-window}
+@end table
+
+
+@node Translation notes
+@nodedescription 简体中文翻译。
+@unnumbered 翻译说明
+本文档是《Stand-alone GNU Info manual》的简体中文版。在此，对翻译相关事项进行说明。
+
+
+@node Original
+@nodedescription 被翻译的原文。 
+@section 原文
+原文的语言为英文，文件名@file{info-stnd.texi}，来自于@indicateurl{https://git.savannah.gnu.org@//git@//texinfo.git }，标签是@samp{texinfo-@value{VERSION}}。
+
+
+@node Word phrase concept
+@nodedescription 一些词、短语、概念的翻译
+@section 一些词、短语、概念的翻译
+
+@table @code
+@item Free Software Foundation,Inc.
+自由软件基金会股份有限公司。
+@item chapter 
+章。
+@item section
+节，章节(章与节的统称)。
+@item customization
+定制化。尽管有建议将其译作``自定义''或``用户化'' 。
+@item node
+节点。
+@item top node
+顶节点。
+@item Next, Prev(ious), Up
+在用于指针名称时译作：``下一个''，``上一个''，``上一级''。有时不作翻译。
+@item note
+批注。
+@item echo area
+提示区。
+@item numeric argument
+数值参数。
+@item node header line
+@itemx node top line
+节点导航栏，节点顶行。
+@end table 
+
+
+@node Contribution
+@nodedescription 翻译工作的贡献者 
+@section 贡献
+2026年10月至今，由@tie{}@email{zhaiyn-free@@foxmail.com,翟永宁(Yongning Zhai)}@tie{}翻译。
+
+@node Index
+@nodedescription 全局索引。
+@appendix 索引
+
+@printindex cp
+
+@bye

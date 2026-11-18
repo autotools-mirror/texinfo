@@ -1,0 +1,148 @@
+@subsection pod2texi
+@anchor{pod2texi}
+
+@subsubheading pod2texi 命名
+@anchor{pod2texi NAME}
+
+pod2texi - 将Pod格式文件转换为Texinfo格式文件
+
+@subsubheading pod2texi 概述
+@anchor{pod2texi SYNOPSIS}
+
+@verbatim
+  pod2texi [选项(OPTION)] ... POD文件 ...
+@end verbatim 
+
+@subsubheading pod2texi 描述
+@anchor{pod2texi DESCRIPTION}
+
+将Pod格式文件转换为Texinfo格式文件。有两种基本操作模式。第一种，默认情况下，每个Pod都会被翻译成一个独立的Texinfo手册。
+
+第二种，如果@code{--base-level}设置为大于0，则每个Pod都会被翻译成一个适合@code{@@include}的文件，并且还会生成一个包含主菜单和所有@code{@@include}的文件。
+
+@subsubheading pod2texi 选项
+@anchor{pod2texi OPTIONS}
+
+@table @asis
+@item @strong{@asis{}-@asis{}-@asis{}appendix-sections}
+@anchor{pod2texi @strong{@asis{}-@asis{}-@asis{}appendix-sections}}
+
+使用附录章节命令（@code{@@appendix}，...）而不是默认的编号章节@@命令（@code{@@chapter}，@code{@@section}，...）。
+
+@item @strong{@asis{}-@asis{}-@asis{}base-level}=@emph{NUM|NAME}
+@anchor{pod2texi @strong{@asis{}-@asis{}-@asis{}base-level}=@emph{NUM|NAME}}
+
+设置@code{head1}命令的级别。它可以是整数或Texinfo的章节命令（不带@code{@@}）：1 对应于@code{@@chapter}/@code{@@unnumbered}级别，2 对应于@code{@@section}级别，以此类推。默认值为 0，表示@code{head1}命令仍然作为章节输出，但输出内容被安排为独立的手册。
+
+如果级别不为 0，则Pod文件将作为适合被@code{@@include}的Texinfo手册片段呈现。在这种情况下，每个Pod文件都有一个额外的章节命令，用以涵盖Pod整个文件，该命令的级别比@code{--base-level}值高一级。因此，要使每个Pod文件成为大型手册中的一个章节，您应该使用@code{section}作为基础级别。
+
+有关利用Perl文档本身制作Texinfo的示例，请参阅Texinfo源代码分发包中的@code{contrib/perldoc-all}。
+
+
+@item @strong{@asis{}-@asis{}-@asis{}debug}=@emph{NUM}
+@anchor{pod2texi @strong{@asis{}-@asis{}-@asis{}debug}=@emph{NUM}}
+
+将调试级别设置为@emph{NUM}。
+
+@item @strong{@asis{}-@asis{}-@asis{}generate-setfilename}
+@anchor{pod2texi @strong{@asis{}-@asis{}-@asis{}generate-setfilename}}
+
+为独立手册生成一个 @code{@@setfilename} 行。可以通过 @code{--no-generate-setfilename} 选项来取消此操作。如果 @code{--base-level} 不为 0，则忽略此操作。
+
+@item @strong{@asis{}-@asis{}-@asis{}headings-as-sections}
+@anchor{pod2texi @strong{@asis{}-@asis{}-@asis{}headings-as-sections}}
+
+使用标题命令（@code{@@heading}，...）而不是默认的编号式Texinfo章节命令（@code{@@chapter}，@code{@@section}，...）。如果@strong{@asis{}-@asis{}-@asis{}base-level}不为 0，则分别涵盖每个Pod文件的整体输出的章节命令，将是一个编号式命令。
+
+@item @strong{@asis{}-@asis{}-@asis{}help}
+@anchor{pod2texi @strong{@asis{}-@asis{}-@asis{}help}}
+
+显示帮助信息并退出。
+
+@item @strong{@asis{}-@asis{}-@asis{}menus}
+@anchor{pod2texi @strong{@asis{}-@asis{}-@asis{}menus}}
+
+输出节点菜单。如果存在主手册，由于存在主控菜单，所以主手册的顶节点菜单始终会输出。在默认情况下，其他节点的菜单不会输出。
+
+@item @strong{@asis{}-@asis{}-@asis{}outdir}=@emph{NAME}
+@anchor{pod2texi @strong{@asis{}-@asis{}-@asis{}outdir}=@emph{NAME}}
+
+如果存在一个包含多个包含文件（每个文件对应一个输入Pod文件）的主手册，那么生成的Texinfo文件将被放置在名为@emph{NAME}的目录中。默认目录基于@code{--subdir}设置。
+
+@item @strong{@asis{}-@asis{}-@asis{}output}=@emph{NAME}
+@anchor{pod2texi @strong{@asis{}-@asis{}-@asis{}output}=@emph{NAME}}
+
+第一个手册的名称，或者如果有主手册的话，则为主手册的名称。默认情况下，会写入标准输出。
+
+@item @strong{@asis{}-@asis{}-@asis{}no-section-nodes}
+@anchor{pod2texi @strong{@asis{}-@asis{}-@asis{}no-section-nodes}}
+
+对章节使用锚点，而不是节点。
+
+@item @strong{@asis{}-@asis{}-@asis{}no-fill-section-gaps}
+@anchor{pod2texi @strong{@asis{}-@asis{}-@asis{}no-fill-section-gaps}}
+
+不要用空的@code{@@unnumbered}文件来填充章节之间的空白。通常，保持章节层次结构的完整性是很好的做法。
+
+@item @strong{@asis{}-@asis{}-@asis{}preamble}=@emph{STR}
+@anchor{pod2texi @strong{@asis{}-@asis{}-@asis{}preamble}=@emph{STR}}
+
+在菜单和包含文件之前插入@emph{STR}作为顶部标准文本。如果@emph{STR}设置为@code{-}，则从标准输入读取顶部标准文本。默认的顶部标准文本是Texinfo文档的最小化的起始文本。
+
+@item @strong{@asis{}-@asis{}-@asis{}setfilename}=@emph{STR}
+@anchor{pod2texi @strong{@asis{}-@asis{}-@asis{}setfilename}=@emph{STR}}
+
+如果@code{--base-level}未设置为 0，则在主手册的菜单前的顶部标准文本中，将@emph{STR}作为@code{@@setfilename}的参数。如果@code{--base-level}为 0，则忽略此操作。在默认情况下，不会给主手册输出@code{@@setfilename}。
+
+@item @strong{@asis{}-@asis{}-@asis{}subdir}=@emph{NAME}
+@anchor{pod2texi @strong{@asis{}-@asis{}-@asis{}subdir}=@emph{NAME}}
+
+如果存在一个包含多个包含文件（每个包含文件对应一个输入Pod文件）的主手册，那么这些包含文件将从目录@emph{NAME}中引入。
+
+如果设置了@code{--outdir}，则通常应将@emph{NAME}设置为与主手册和@code{--outdir}参数之间的相对目录。
+
+@item @strong{@asis{}-@asis{}-@asis{}unnumbered-sections}
+@anchor{pod2texi @strong{@asis{}-@asis{}-@asis{}unnumbered-sections}}
+
+使用未编号的章节命令（@code{@@unnumbered}，...）而不是默认的编号章节Texinfo的@@命令（@code{@@chapter}，@code{@@section}，...）。
+
+@item @strong{@asis{}-@asis{}-@asis{}top}=@emph{TOP}
+@anchor{pod2texi @strong{@asis{}-@asis{}-@asis{}top}=@emph{TOP}}
+
+主手册中 @code{@@top} 元素的名称。可包含Texinfo代码。
+
+@item @strong{@asis{}-@asis{}-@asis{}version}
+@anchor{pod2texi @strong{@asis{}-@asis{}-@asis{}version}}
+
+显示版本信息并退出。
+
+@end table
+
+@subsubheading 与pod2texi相关的其它信息
+@anchor{pod2texi SEE ALSO}
+
+@itemize 
+@item
+@url{https://www.gnu.org/software/texinfo/manual/Pod/Simple/Texinfo.html, Pod::Simple::Texinfo}。 
+
+@item
+@url{https://metacpan.org/pod/perlpod, perlpod}。
+
+@item 
+Texinfo的手册。 Texinfo的主页：@url{https://www.gnu.org/software/texinfo/}
+@end itemize
+
+@subsubheading pod2texi 的版权及许可证
+@anchor{pod2texi COPYRIGHT AND LICENSE}
+
+版权所有 2012-2024 自由软件基金会股份有限公司。
+
+本程序为自由软件；您可以按照自由软件基金会发布的GNU通用公共许可证条款进行再分发和/或修改；许可证版本3或（您选择的）任何后续版本均可。
+
+在法律许可的范围内，不提供任何保证。
+
+@subsubheading pod2texi的作者
+@anchor{pod2texi AUTHOR}
+
+帕特里斯·迪马(Patrice Dumas) <bug-texinfo@@gnu.org>.
+

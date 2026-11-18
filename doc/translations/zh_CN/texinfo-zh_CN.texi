@@ -1,4 +1,4 @@
-\input texinfo-zh    @c -*-texinfo-*-
+\input texinfo-zh.tex    @c -*-texinfo-*-
 
 @c %**start of header
 @c 此前一行，为中文译者增加，以适应Emcas的texinfo模式。
@@ -14,14 +14,11 @@
 @ifinfo
 @paragraphindent 4
 @end ifinfo
-@c 此前5行，为中文译者增加，这样更符合中文的首行缩进习惯。
-
 @documentencoding UTF-8
 @documentlanguage zh_CN
-@c @set DOCUMENTLANGUAGE_COLLATION
-@c @set USE_UNICODE_COLLATION = 1 
-@c @set COLLATION_LANGUAGE = zh_CN
-@c 此前2行，为中文译者增加。
+@c 此前7行，为中文译者增加。
+@frenchspacing on
+@c 上面一行，打开法式留白，是译者加上的
 
 @c 为命令行选项定义一个新的索引。
 @defcodeindex op
@@ -42,8 +39,6 @@
 
 @microtype on
 
-@frenchspacing on
-@c 上面一行，打开法式空白，是译者加上的
 
 @c %**end of header
 @c 此前一行，为中文译者增加，为适应Emcas的texinfo模式。
@@ -56,7 +51,7 @@ Copyright @copyright{} 1988-2024 自由软件基金会股份有限公司
 @sp 1 
 
 @quotation
-根据自由软件基金会发布的@uref{https://www.gnu.org/licenses/fdl-1.3.html , GNU自由文档许可证1.3版或任何后续版本}的条款，授予复制、分发和/或修改本文档的权限；无不变章节、无封面文本、无封底文本。许可证副本包括在``@ref{GNU Free Documentation License}''章节中。
+根据自由软件基金会发布的@uref{https://www.gnu.org/licenses/fdl-1.3.html , GNU自由文档许可证1.3版}或任何后续版本的条款，允许复制、允许和/或修改本文档的；无不变部分、无封面文本、无封底文本。许可证副本包括在``@ref{GNU Free Documentation License}''章节中。
 @end quotation
 
 @end copying
@@ -118,7 +113,7 @@ Copyright @copyright{} 1988-2024 自由软件基金会股份有限公司
 @insertcopying
 
 @sp 1
-Published by the Free Software Foundation @*
+Published by the Free Software Foundation @footnote{原文的出版信息,未作翻译。}@*
 31 Milk St # 960789 @*
 Boston, MA 02196 @*
 USA @*
@@ -126,7 +121,7 @@ ISBN 1-882114-67-1 @c for version 4.0, September 1999.
 @c ISBN 1-882114-65-5 is for version 3.12, March 1998.
 @c ISBN 1-882114-64-7 is for edition 2.24 of November 1996.
 @c ISBN 1-882114-63-9 is for edition 2.20 of 28 February 1995.
-@footnote{这是原文的出版信息。}
+
 
 @ignore
 @sp 1
@@ -673,7 +668,7 @@ formats, it's not possible to use form feeds completely portably.
 
 按照惯例，Texinfo文件的名称以扩展名 @file{.texi} 、 @file{.texinfo} 、 @file{.txi} 或 @file{.tex} 之一结尾。不推荐使用@file{.tex}，因为此扩展名已被@TeX{}和@LaTeX{}输入文件使用。最常见且推荐的扩展名为 @file{.texi}。Texinfo文件的名称应仅包含ASCII字符。
 
-在默认情况下，输出名称基于输入文件名。首先，从输入文件名中移除所有扩展名为 @file{.texi} 、 @file{.tex} 、 @file{.txi} 或 @file{.texinfo} 的部分；然后，添加特定于输出格式的扩展名---生成HTML时为 @file{.html} ，生成Info时为 @file{.info} ，以此类推。输出文件名应仅包含 ASCII 字符@footnote{@command{texi2any}命令可以处理输入文件名中的非ASCII字符，但输出文件名中的非ASCII字符会给某些输出格式带来问题，尤其是对交叉引用而言}。
+在默认情况下，输出名称基于输入文件名。首先，从输入文件名中移除所有扩展名为 @file{.texi} 、 @file{.tex} 、 @file{.txi} 或 @file{.texinfo} 的部分；然后，添加特定于输出格式的扩展名---生成HTML时为 @file{.html} ，生成Info时为 @file{.info} ，以此类推。输出文件名应仅包含ASCII字符。@footnote{@command{texi2any}命令可以处理输入文件名中的非ASCII字符，但输出文件名中的非ASCII字符会给某些输出格式带来问题，尤其是对交叉引用而言。}
 
 @cindex Requirements for formatting
 @cindex 要求，格式化 @sortas{yqgsh}
@@ -682,7 +677,7 @@ formats, it's not possible to use form feeds completely portably.
 @cindex Formatting requirements
 @cindex 格式要求 @sortas{gsyq}
 
-为了被制作成印刷手册，Texinfo文件必须以这样的一行开头@footnote{译者注：为正确处理中文，本文档的@samp{texinfo}替换为@samp{texinfo_zh}。}：
+为了被制作成印刷手册，Texinfo文件必须以这样的一行开头@footnote{译者注：为正确处理中文，本文档的@samp{texinfo}替换为@samp{texinfo_zh}。下同。}：
 @example
 @group
 \input texinfo
@@ -801,7 +796,7 @@ Texinfo文件用以下行开头：
 \input texinfo
 @end example
 
-@samp{\input texinfo}这行代码告诉@TeX{}使用 @file{texinfo.tex} @footnote{译者注：如是中文文档，的@samp{texinfo}需替换为@samp{texinfo_zh}。}文件，该文件告诉@TeX{}如何将Texinfo的@@命令转换为@TeX{}排版命令。请注意反斜杠@samp{\}的使用；这对于@TeX{}是正确的。
+@samp{\input texinfo}这行代码告诉@TeX{}使用@file{texinfo.tex}@footnote{译者注：如是中文文档，的@samp{texinfo}需替换为@samp{texinfo_zh}，以使用@file{texinfo_zh.tex}。下同。}文件，该文件告诉@TeX{}如何将Texinfo的@@命令转换为@TeX{}排版命令。请注意反斜杠@samp{\}的使用；这对于@TeX{}是正确的。
 
 将任何影响整体文档格式的命令纳入Texinfo的文件头部中是有意义的。@code{@@settitle}行通常出现在文件头部的开始处：
 
@@ -1132,7 +1127,7 @@ Copyright @copyright{} @var{年份} @var{版权所有者}.
 @nodedescription 创建标题页和版权页。
 @section 标题和版权页
 
-在纸质输出中，手册的名称和作者通常印在标题页@footnote{译者注：在中文的习惯中，可称之为封面。}上。版权信息通常印在标题页的背面（即反面）。此部分必须包含在@code{@@titlepage}和@code{@@end titlepage}命令之间：
+在纸质输出中，手册的名称和作者通常印在标题页@footnote{译者注：在中文习惯称之为封面。}上。版权信息通常印在标题页的背面（即反面）。此部分必须包含在@code{@@titlepage}和@code{@@end titlepage}命令之间：
 
 @example
 @group
@@ -1171,7 +1166,7 @@ Copyright @copyright{} @var{年份} @var{版权所有者}.
 @findex page@r{，在@code{@@titlepage}内}
 通过使用@code{@@page}命令，可以在由@code{@@titlepage}的@code{@@end titlepage}命令划定的区域内强制分页，从而创建多个未编号的页面。这就是版权页的制作方式。（@code{@@titlepage}命令或许可以更好地命名为@code{@@titleandadditionalpages}命令，但那样会显得相当冗长！）
 
-当你编写关于计算机程序的手册时，应在标题页上注明该手册适用的程序版本。如果手册的更新频率高于程序，或者手册与程序无关，则还应为手册包含一个版本号@footnote{我们发现，将独立手册的版本称为``版次''，将程序的版本称为``版本''很有帮助；否则，在交谈中，我们可能会因为使用相同的词语来指代文档和软件而相互混淆。}。这有助于读者了解哪个手册对应哪个版本的程序。（``顶''节点也应包含此信息；见@ref{The Top Node}。）
+当你编写关于计算机程序的手册时，应在标题页上注明该手册适用的程序版本。如果手册的更新频率高于程序，或者手册与程序无关，则还应为手册包含一个版次号@footnote{我们发现，将独立手册的版本称为``版次''，将程序的版本称为``版本''很有帮助；否则，在交谈中，我们可能会因为使用相同的词语来指代文档和软件而相互混淆。}。这有助于读者了解哪个手册对应哪个版本的程序。（``顶''节点也应包含此信息；见@ref{The Top Node}。）
 
 一种方法是使用@code{@@title}、@code{@@subtitle}和@code{@@author}命令来创建标题页。使用这种方法时，无需指定标题页的任何实际格式。只需指定所需的文本，Texinfo就会完成格式设置。通常的格式设置包括标题和作者行下方的黑色规则线，以及设置在页面右侧的副标题文本。
 
@@ -1760,7 +1755,7 @@ Texinfo文件的结尾应包含创建索引的命令（请参阅 @ref{Printing I
 @cindex 命令，在节点名中 @sortas{mlzjdmz}
 @cindex @sortas{at} @@-commands @subentry in node names
 @cindex @sortas{at} @@命令 @subentry 节点名称中的
-节点名可以包含@@命令@footnote{在 2013 年 Texinfo 5 发布之前，此功能以一种特殊的方式得到支持（@command{makeinfo}的@option{--commands-in-node-names}选项）。现在，它已成为该语言的一部分。}。 
+节点名可以包含@@命令@footnote{在2013年 Texinfo 5 发布之前，此功能以一种特殊的方式得到支持（@command{makeinfo}的@option{--commands-in-node-names}选项）。现在，它已成为该语言的一部分。}。 
 
 例如，在节点名称中使用@code{@@TeX@{@}}会输出@TeX{}标志，就像在普通文本中一样。交叉引用应与节点名称一样，使用@code{@@TeX@{@}}。
 
@@ -3127,7 +3122,7 @@ See section ``Overview'' in @cite{The GNU Make Manual}.
 @cindex References using @code{@@xref}
 @cindex @sortas{syxref} 使用@code{@@xref}的引用
 
-@code{@@xref} 命令用于为句首生成交叉引用。使用@code{@@xref}的示例见前文。@footnote{译者注：在中文Texinfo的打印输出中，｀见'替代`See'及`see'。}
+@code{@@xref} 命令用于为句首生成交叉引用。使用@code{@@xref}的示例见前文。@footnote{译者注：在中文Texinfo的打印输出中，｀`See'及`see'都译作`见'。}
 
 
 @node @code{@@ref}
@@ -3163,7 +3158,7 @@ For more information, see Section 1.1 [This], page 1,
 and Section 1.2 [That], page 2.
 @end quotation
 
-@code{@@ref}命令可能会诱使作者以适合打印手册的方式表达自己，但在Info格式中看起来却显得笨拙。请记住，您的受众可能同时使用打印版和其他输出格式（如: Info）@footnote{译者注：尽管不受推荐，但本手册仍使用适合打印的方式表达，大量使用@samp{请参阅 @@ref@dots{}}，并尽可能代替原文中的@code{@@pxref}及@code{@@xref}，原因请参阅：@ref{Convention}。}。例如：
+@code{@@ref}命令可能会诱使作者以适合打印手册的方式表达自己，但在Info格式中看起来却显得笨拙。请记住，您的受众可能同时使用打印版和其他输出格式（如: Info）@footnote{译者注：尽管不受推荐，但本手册仍使用适合打印的方式表达，大量使用@samp{请参阅 @@ref@dots{}}，并尽可能代替原文中的@code{@@pxref}及@code{@@xref}，原因请参阅：@ref{Write a Chinese Texinfo document}。}。例如：
 
 @cindex Sea surges
 @example
@@ -4078,7 +4073,7 @@ The option @option{-l} produces a long listing.
 
 @code{@@abbr} 接受一个可选的第二个参数，该参数用于表示缩写词的含义@footnote{译者注：指的是未缩写的形式。}。
 
-如果在没有第二个参数且以小写字母结尾的缩写之后有非句末句号@footnote{译者注：半角句号。}，请记住使用@code{@@.}命令(请参阅 @ref{Ending a Sentence})方式书写句号，以获得正确的间距。在缩写本身内部无需使用@code{@@.}，因为Texinfo会自动假定缩写中的句号并不结束句子。
+如果在没有第二个参数且以小写字母结尾的缩写之后有非句末句号@footnote{译者注：指的是半角(ASCII)句号。}，请记住使用@code{@@.}命令(请参阅 @ref{Ending a Sentence})方式书写句号，以获得正确的间距。在缩写本身内部无需使用@code{@@.}，因为Texinfo会自动假定缩写中的句号并不结束句子。
 
 在可使用适当标签的输出格式中，如HTML和DocBook，可能会使用此标签。否则，第一个参数将按原样打印；如果第二个参数存在，则会在缩写后用括号打印出来。例如：
 
@@ -4626,7 +4621,7 @@ cp foo @var{dest1}; \
 
 使用@code{@@verbatim}环境来打印可能包含不应被解释的特殊字符或命令的文本，例如计算机输入或输出（@code{@@example}将其文本视为常规的Texinfo命令）。这在Texinfo手册中包含自动生成的文件时特别有用。
 
-一般来说，输出将与输入完全相同。不会进行任何字符替换，例如，所有空格和空行（包括制表符）都视为有效字符@footnote{译者注：这里的``逐字''文本、``字面''文本，可以认为就是C++语言（11版本及之后）的原始(RAW)字符串。}。文本以等宽字体排版，且不会进行缩进或填充。
+一般来说，输出将与输入完全相同。不会进行任何字符替换，例如，所有空格和空行（包括制表符）都视为有效字符@footnote{译者注：这里的``逐字''文本、``字面''文本，可以认为就是 C++ 语言（11版本及之后）的原始(RAW)字符串。}。文本以等宽字体排版，且不会进行缩进或填充。
 
 在行首单独编写一个@code{@@verbatim}命令。此行将从输出中消失。用@code{@@end verbatim}命令标记verbatim块的结束，该命令同样单独写在行首。@code{@@end verbatim}也将从输出中消失。
 
@@ -4773,7 +4768,7 @@ the @code{@@format} command does not fill the text.
 @cindex Indentation undoing
 @cindex 缩进撤销 @sortas{sjcx}
 
-@code{@@exdent}命令用于移除一行中可能存在的所有缩进该命令位于行首，仅对命令后同一行中的文本生效。文本前后不要使用大括号。在输出格式允许的情况下，@code{@@exdent}行中的文本也会以罗马字体显示。
+@code{@@exdent}命令用于移除一行中可能存在的所有缩进。该命令位于行首，仅对命令后同一行中的文本生效。文本前后不要使用大括号。在输出格式允许的情况下，@code{@@exdent}行中的文本也会以罗马字体显示。
 
 @code{@@exdent}通常用于示例中。因此，
 
@@ -5095,7 +5090,7 @@ Texinfo有多种方式来制作列表和表格。列表可以是项目符号列�
 
 Texinfo会自动对列表或表格中的文本进行缩进，并为枚举列表自动编号。自动编号功能在修改列表时非常有用，因为您无需自己重新编号。
 
-列表@footnote{译者注：原文是@samp{Numbered lists}，但译者认为原文有误，应为@samp{Lists}。}和表格以行首的相应@code{@@命令}开始，并以单独一行上的相应 @code{@@end 命令} 结束。表格和项目列表命令还要求您在行首的@code{@@命令}所在的同一行写上格式化信息。
+列表@footnote{译者注：原文是@samp{Numbered lists}，但译者认为原文有误，应为@samp{Lists}。}和表格以行首的相应@samp{@@命令}开始，并以单独一行上的相应@samp{@@end 命令}结束。表格和项目列表命令还要求您在行首的@samp{@@命令}所在的同一行写上格式化信息。
 
 开始一个枚举列表，例如，使用@code{@@enumerate}命令，并在列表结束时使用@code{@@end enumerate}命令。开始一个条目列表，使用@code{@@itemize}命令，并在同一行后跟一个格式化命令(如：@code{@@bullet})，并在列表结束时使用@code{@@end itemize}命令。
 
@@ -5254,7 +5249,7 @@ Some text for bar.
 
 @code{@@enumerate}类似于@code{@@itemize}（请参阅 @ref{@code{@@itemize}}），不同之处在于，项目上的标记是连续的整数或字母，而不是条目符号。
 
-在一行的开头编写@code{@@enumerate}命令。该命令不需要参数，但接受数字或字母作为选项。如果没有参数，@code{@@enumerate}将以数字@samp{1}作为列表的起始项。如果有一个数字参数，如@samp{3}，则该命令将以该数字作为列表的起始项。如果有一个大写或小写字母参数，如：@samp{a}或@samp{A}，则该命令将以该字母作为列表的起始项。@footnote{译者注：@*1. 字母参数在输出中的效果，有时等效于数字参数，要看Texinfo翻译器的处理情况；@*2. 在输出中，如果字母递增超过@samp{z}或@samp{Z}，则编号变得不可知，要看Texinfo翻译器的处理情况；@*3. 字母参数，只能是单字母，不允许双字母，如 `aa'。}
+在一行的开头编写@code{@@enumerate}命令。该命令不需要参数，但接受数字或字母作为选项。如果没有参数，@code{@@enumerate}将以数字@samp{1}作为列表的起始项。如果有一个数字参数，如@samp{3}，则该命令将以该数字作为列表的起始项。如果有一个大写或小写字母参数，如：@samp{a}或@samp{A}，则该命令将以该字母作为列表的起始项。@footnote{译者注：@*1. 字母参数在输出中的效果，有时等效于数字参数，要看Texinfo翻译器的处理情况；@*2. 在输出中，如果字母递增超过@samp{z}或@samp{Z}，则编号变得不可知，要看Texinfo翻译器的处理情况；@*3. 字母参数，只能是单字母，不允许双字母，如 `aa'。@*4. 列表条目前的序号，可以累加到双字母，如 `aa'。}
 
 按照条目列表的方式编写枚举列表的文本：在枚举的每个条目，另起一行并以@code{@@item}开头。@code{@@item}后面可以跟有文本，并且一个条目的文本可以延续多个段落。
 
@@ -6000,7 +5995,7 @@ scaled point (65536sp = 1pt)
 在Texinfo中，脚注是通过@code{@@footnote}命令创建的。此命令后紧接一个左括号，然后是脚注文本，最后是一个右括号作为结束。脚注可以是任意长度（如有必要，它们会分页显示），但通常较短。模板如下：
 
 @example
-普通文本@@footnote@{@var{脚注的文本}@}
+普通文本@@footnote@{@var{脚注文本}@}
 @end example
 
 如下所示，@code{@@footnote}命令应紧跟在要添加脚注的文本之后，中间不要有空格；否则，脚注标记可能会另起一行。
@@ -6013,7 +6008,7 @@ scaled point (65536sp = 1pt)
 
 如您所见，此源文本中包含两个相邻的标点符号；在本例中，序列为@samp{。@};}。这是正常的（第一个标点符号用于结束脚注，而第二个标点符号属于被脚注的句子），所以不必担心它看起来很奇怪；另一种完全可接受的样式是将脚注放在属于句子的标点符号之后，如 @samp{;@@footnote@{...}。
 
-在打印输出格式中，脚注的引用标记是一个小的上标数字；脚注文本出现在页面底部，位于一条水平线之下。@footnote{译者注：也就是@dfn{页脚}。}
+在打印输出格式中，脚注的引用标记是一个小的上标数字；脚注文本出现在页面底部，位于一条水平线之下。@footnote{译者注：也就是处于 @dfn{页脚} 区域。}
 
 在Info中，脚注的引用标记是一对括号，括号之间是脚注编号，如 @samp{(1)}。如果脚注放在单独的节点中，则引用标记后会有一个指向脚注文本的交叉引用链接（@pxref{Footnote Styles}）。
 
@@ -6054,7 +6049,7 @@ scaled point (65536sp = 1pt)
 @end group
 @end example
 
-在HTML输出中，当脚注为节点末尾样式时，或者输出未拆分@footnote{译者注：@command{makeinfo}工具使用@option{no-split}选项}，则脚注会放在每个输出文件的末尾。
+在HTML输出中，当脚注为节点末尾样式时，或者输出未分割@footnote{译者注：@command{makeinfo}使用 @option{--no-split} 选项。}，则脚注会放在每个输出文件的末尾。
 
 @cindex @samp{separate} footnote style
 @cindex @samp{separate}脚注样式
@@ -6066,18 +6061,27 @@ scaled point (65536sp = 1pt)
 
 脚注节点的名称是通过在使用脚注的节点的名称后附加@w{@samp{-Footnotes}}来构建的。因此，@file{Footnotes}节点的脚注节点是@w{@file{Footnotes-Footnotes}}！脚注节点有一个``Up''节点指针，指向其父节点。
 
-@noindent 以下是在独立节点样式中，本手册的第一个脚注@footnote{译者注：原文有误；这不是本手册的第一个脚注，甚至不是脚注。}在Info输出中的显示效果：
-@c ????w?
+@noindent 以下是在独立节点样式中，本手册的第一个脚注@footnote{译者注：原文有误,本译文已纠正。}在Info输出格式的文件中的结果：
+
 @example
 @group
 
-File: texinfo.info  Node: Overview-Footnotes, Up: Overview
+File: texinfo-zh_CN.info,  Node: Minimum,  Next: Short Sample Texinfo File,  Prev: Comments,  Up: Writing a Texinfo File
 
-(1) "Texinfo"的第一个音节发音类似于"speck"，而不是"hex"。@dots{}
+2.3 Texinfo文件必须包含的内容
+=============================
+
+@dots{}
+@dots{}
+
+   ---------- Footnotes ----------
+
+   (1) ‘texi2any’命令可以处理输入文件名中的非ASCII字符，但输出文件名中的
+非ASCII字符会给某些输出格式带来问题，尤其是对交叉引用而言。
 @end group
 @end example
 
-在HTML中，当脚注样式为独立节点样式，且输出被拆分@footnote{译者注：@command{makeinfo}工具未使用@option{--no-split}选项}时，脚注会被放置在一个单独的文件中。
+在HTML中，当脚注样式为独立节点样式，且输出被分割@footnote{译者注：@command{makeinfo}工具使用@option{--split}选项}时，脚注会被放置在一个单独的文件中。
 @end table
 
 除非你的文档中有长篇且重要的脚注（比如，像吉本（Gibbon）的《罗马帝国衰亡史》中的脚注那样），否则我们建议使用节点末尾样式，因为这种样式更便于读者理解。
@@ -6781,7 +6785,7 @@ Texinfo文档中，@samp{\}也可作为命令字符用在@code{@@math}环境中(
 
 这些设置会影响@code{@@code}、@code{@@example}、@code{@@kbd}、@code{@@samp}、@code{@@verb} 和@code{@@verbatim}。请参阅 @ref{Useful Highlighting}。
 
-遗憾的是，一些文档查看器在复制和粘贴时会损坏有向引号字符。（免费的PDF阅读器@command{xpdf}运行良好，但其他PDF阅读器，无论是免费的还是收费的，都存在问题。@footnote{译者注：实际上，@command{atril}并没有问题。}）
+遗憾的是，一些文档查看器在复制和粘贴时会损坏有向引号字符。（免费的PDF阅读器@command{xpdf}运行良好，但其他PDF阅读器，无论是免费的还是收费的，都存在问题。@footnote{译者注：实际上，当前版本的@command{atril}并没有问题。}）
 
 @vindex txicodequoteundirected
 @vindex txicodequotebacktick
@@ -7426,6 +7430,7 @@ e^{-{1\over2}\left({x-\mu\over\sigma}\right)^2}
 @findex \mathopsup
 由于与Texinfo的@code{@@sup}命令存在冲突，在极少数情况下（仅在处理@TeX{}时，而非输出@LaTeX{}或使用任何@code{HTML_MATH}选项时），您可以将普通的@TeX{}命令@code{\sup}替换为@code{\mathopsup}来访问。 @footnote{译者注：由于不确定翻译是否准确，所以将本段的原文附在此处：@*Due to the conflict with Texinfo's @code{@@sup} command, you can access the plain @TeX{} command @code{\sup} as @code{\mathopsup} instead, in the unlikely occurrence that you want to do this (but only when processing with @TeX{}, not when outputting @LaTeX{} nor with any of the @code{HTML_MATH} options). }
 
+
 @node Glyphs for Text
 @nodedescription 插入点、项目符号、货币符号等。
 @section 文本用图符
@@ -7951,7 +7956,7 @@ This is the changed @@point@{@}contents of foo.
 
 @cindex Unicode and @TeX{}
 @cindex Unicode和@TeX{}
-此命令存在诸多限制---与在UTF-8或其他二进制格式中插入Unicode字符时所遇到的限制相同。首先且最重要的是，@TeX{}对大部分Unicode一无所知。虽然可以根据请求支持特定的额外字形，但@file{texinfo.tex}无法支持全部额外的脚本（日语、乌尔都语 @dots{}）@footnote{译者注：本译文，用的是 @file{texinfo-zh.tex} ，可以使用中文。}。@code{@@U}命令无法改变这一点。如果@TeX{}不支持指定的字符，则会报错。@LaTeX{}输出在UTF-8方面有更多可能性，但可能需要额外代码来加载字体并声明如何输出UTF-8字符。请参阅 @ref{@code{@@documentencoding}}。
+此命令存在诸多限制---与在UTF-8或其他二进制格式中插入Unicode字符时所遇到的限制相同。首先且最重要的是，@TeX{}对大部分Unicode一无所知。虽然可以根据请求支持特定的额外字形，但@file{texinfo.tex}无法支持全部额外的脚本（日语、乌尔都语 @dots{}）。@code{@@U}命令无法改变这一点。如果@TeX{}不支持指定的字符，则会报错。@LaTeX{}输出在UTF-8方面有更多可能性，但可能需要额外代码来加载字体并声明如何输出UTF-8字符。请参阅 @ref{@code{@@documentencoding}}。
 
 @cindex Entity reference in HTML et al.
 @cindex 实体引用，在类HTML中 @sortas{styyzlHTMLz}
@@ -8413,7 +8418,7 @@ This paragraph is preceded by @dots{}
 @cindex @sortas{@@} @samp{@@} as continuation in definition commands
 @cindex @samp{@@} 作为定义命令中的延续 @sortas{@@zwdymlzdys}
 
-定义命令的标题行可能会很长。因此，Texinfo采用了一种特殊语法，允许标题行在源文件中跨行延续：在每行末尾单独使用@samp{@@}@footnote{译者注：续行符}以表示延续。示例如下：
+定义命令的标题行可能会很长。因此，Texinfo采用了一种特殊语法，允许标题行在源文件中跨行延续：在每行末尾单独使用@samp{@@}@footnote{译者注：续行符。}以表示延续。示例如下：
 
 @example
 @@defun fn_name(函数名) @@
@@ -8620,15 +8625,15 @@ Move point forward @@var@{nchars@} characters.
 
 @findex defun
 @item @@defun @var{名称} @var{参数}@dots{}
-@code{@@defun}命令是用于定义带有简单参数的函数的命令。@code{@@defun}等同于@code{@@deffn Function @dots{}}@footnote{译者注：在使用@file{texinfo_zh.tex}时，在打印输出中，@samp{Function}被自动译为@samp{函数}。下同。}。在单独的一行上使用@code{@@end defun}来结束定义。
+@code{@@defun}命令是用于定义带有简单参数的函数的命令。@code{@@defun}等同于@code{@@deffn Function @dots{}}@footnote{译者注：如使用@file{texinfo_zh.tex}，在打印输出中，@samp{Function}被自动译为@samp{函数}。下同。}。在单独的一行上使用@code{@@end defun}来结束定义。
 
 @findex defmac
 @item @@defmac @var{名称} @var{参数}@dots{}
-@code{@@defmac}命令是宏的定义命令。@code{@@defmac}等同于@code{@@deffn Macro @dots{}}@footnote{译者注：在使用@file{texinfo_zh.tex}时，在打印输出中，@samp{Macro}被自动译为@samp{宏}。下同。}，其工作方式类似于@code{@@defun}。
+@code{@@defmac}命令是宏的定义命令。@code{@@defmac}等同于@code{@@deffn Macro @dots{}}@footnote{译者注：如使用@file{texinfo_zh.tex}，在打印输出中，@samp{Macro}被自动译为@samp{宏}。下同。}，其工作方式类似于@code{@@defun}。
 
 @findex defspec
 @item @@defspec @var{名称} @var{参数}@dots{}
-@code{@@defspec}命令是特殊形式的定义命令。（在Lisp中，特殊形式是一种类似于函数的实体；请参阅 @ref{特殊形式,,, elisp, GNU Emacs Lisp 参考手册}。）@code{@@defspec}等同于@code{@@deffn @{Special Form@} @dots{}}@footnote{译者注：在使用@file{texinfo_zh.tex}时，在打印输出中，@samp{Special Form}被自动译为@samp{特殊形式}。下同。}，其工作方式类似于@code{@@defun}。
+@code{@@defspec}命令是特殊形式的定义命令。（在Lisp中，特殊形式是一种类似于函数的实体；请参阅 @ref{特殊形式,,, elisp, GNU Emacs Lisp 参考手册}。）@code{@@defspec}等同于@code{@@deffn @{Special Form@} @dots{}}@footnote{译者注：如使用@file{texinfo_zh.tex}，在打印输出中，@samp{Special Form}被自动译为@samp{特殊形式}。下同。}，其工作方式类似于@code{@@defun}。
 @end table
 
 所有这些命令都会在函数索引中创建条目。
@@ -8655,7 +8660,7 @@ Move point forward @@var@{nchars@} characters.
 
 @example
 @group
-@@deftypefn @{库函数库函数(Library Function)@} int foobar @@
+@@deftypefn @{库函数(Library Function)@} int foobar @@
   (int @@var@{foo@}, float @@var@{bar@})
 @dots{}
 @@end deftypefn
@@ -8665,13 +8670,13 @@ Move point forward @@var@{nchars@} characters.
 产生：
 
 @quotation
-@deftypefn {库函数库函数(Library Function)} int foobar @
+@deftypefn {库函数(Library Function)} int foobar @
   (int @var{foo}, float @var{bar})
 @dots{}
 @end deftypefn
 @end quotation
 
-这意味着@code{foobar}是一个``库函数库函数(Library Function)''，它返回一个@code{int}类型的数据，其参数为@var{foo}（@code{int}类型）和@var{bar}（@code{float}类型）。@samp{(库函数(Library Function)}必须用花括号括起来，以使其成为一个整体。
+这意味着@code{foobar}是一个``库函数(Library Function)''，它返回一个@code{int}类型的数据，其参数为@var{foo}（@code{int}类型）和@var{bar}（@code{float}类型）。@samp{(库函数(Library Function)}必须用花括号括起来，以使其成为一个整体。
 
 在使用@code{@@deftypefn}命令及其变体时，应使用@code{@@var}来标记参数名称，以将其与编程语言数据的类型名称、关键字以及字面语法的其他部分区分开来。在输出格式允许的情况下，定义行上的所有输出默认采用等宽字体。@code{@@var}在其出现的位置使用适当的字体。
 
@@ -8810,7 +8815,7 @@ the maximum width of filled lines.
 
 @findex defvar
 @item @@defvar @var{名称}
-@code{@@defvar}命令是用于定义变量的命令。@code{@@defvar}等同于@code{@@defvr Variable @dots{}}@footnote{译者注：在使用@file{texinfo_zh.tex}时，在打印输出中，@samp{Variable}被自动译为@samp{变量}。下同。}。
+@code{@@defvar}命令是用于定义变量的命令。@code{@@defvar}等同于@code{@@defvr Variable @dots{}}@footnote{译者注：如使用@file{texinfo_zh.tex}，在打印输出中，@samp{Variable}被自动译为@samp{变量}。下同。}。
 
 @need 750
 示例：
@@ -8829,7 +8834,7 @@ the maximum width of filled lines.
 @cindex User options, marking
 @cindex 用户选项，标记 @sortas{yhxxbj}
 @item @@defopt @var{名称}
-@code{@@defopt}命令是用于定义 @dfn{用户选项(User options)} 的命令，即供用户根据个人喜好更改的变量；Emacs中有许多这样的选项 (请参阅 @ref{Variables,,, emacs, The GNU Emacs Manual})。@code{@@defopt}等同于@code{@@defvr @{User Option@} @dots{}}@footnote{译者注：在使用@file{texinfo_zh.tex}时，在打印输出中，@samp{User options}被自动译为@samp{变量}。下同。}。
+@code{@@defopt}命令是用于定义 @dfn{用户选项(User options)} 的命令，即供用户根据个人喜好更改的变量；Emacs中有许多这样的选项 (请参阅 @ref{Variables,,, emacs, The GNU Emacs Manual})。@code{@@defopt}等同于@code{@@defvr @{User Option@} @dots{}}@footnote{译者注：如使用@file{texinfo_zh.tex}，在打印输出中，@samp{User options}被自动译为@samp{变量}。下同。}。
 @end table
 
 
@@ -8983,7 +8988,7 @@ the maximum width of filled lines.
 
 @findex defivar
 @item @@defivar @var{类(class)} @var{名称(name)}
-@code{@@defivar}命令是在面向对象编程中，对实例变量(Instance Variable)进行定义的命令。@code{@@defivar}等同于@code{@@defcv @{Instance Variable@} @dots{}}@footnote{译者注：在使用@file{texinfo_zh.tex}时，在打印输出中，@samp{Instance Variable}被自动译为@samp{实例变量}。下同。}。示例：
+@code{@@defivar}命令是在面向对象编程中，对实例变量(Instance Variable)进行定义的命令。@code{@@defivar}等同于@code{@@defcv @{Instance Variable@} @dots{}}@footnote{译者注：如使用@file{texinfo_zh.tex}，在打印输出中，@samp{Instance Variable}被自动译为@samp{实例变量}。下同。}。示例：
 
 @example
 @group
@@ -9457,7 +9462,7 @@ End:
 @cindex 计算机现代字体 @sortas{jsjxdzt}
 在@TeX{}输出中，标准计算机现代(Computer Modern)字体中支持的字符会相应地输出。例如，这意味着使用构造的重音符号而非预制的字形。使用缺失的字符会生成警告消息，指定未实现的编码也会生成警告消息。
 
-尽管现代@TeX{}系统支持世界上几乎所有使用的文字，但@file{texinfo.tex}@footnote{译者注：本译文文档使用@file{texinfo-zh.tex}。}中并未提供这样广泛支持，而且复制或整合所有这些努力也是不可行的。
+尽管现代@TeX{}系统支持世界上几乎所有使用的文字，但@file{texinfo.tex}@footnote{译者注：不同语言的文档要使用不同的 @file{.tex} 文件。}中并未提供这样广泛支持，而且复制或整合所有这些努力也是不可行的。
 
 在@LaTeX{}输出中，根据源文件的编码，输出加载@samp{inputenc}包的代码。这本身并不能确保输入文档中的所有字符都能随后输出。默认情况下使用的字体应涵盖特定的Texinfo字形，但并非所有可能的编码字符。您可能需要在导言(preamble)中加载不同的字体，并使用带有 UTF-8 编码的@code{\DeclareUnicodeCharacter}。例如：
 
@@ -11130,7 +11135,7 @@ Texinfo files.
 @cindex Output, in PDF
 @cindex 输出，用PDF格式 @sortas{scyPDFgs}
 
-@command{texi2dvi}程序负责处理从Texinfo文档生成@TeX{} DVI文件的所有步骤。同样地，@command{texi2pdf}程序则负责生成PDF@footnote{@dfn{PDF}代表`便携式文档格式'。它由 Adobe Systems 基于其PostScript语言发明，用于文档交换。}文件。
+@command{texi2dvi}程序负责处理从Texinfo文档生成@TeX{} DVI文件的所有步骤。同样地，@command{texi2pdf}程序则负责生成PDF@footnote{@dfn{PDF} 代表`便携式文档格式'。它由 Adobe Systems 基于其PostScript语言发明，用于文档交换。}文件。
 
 要对输入文件@file{foo.texi}运行@command{texi2dvi}或@command{texi2pdf}，请执行以下操作（其中@samp{prompt$}是您的shell提示符）：
 
@@ -11372,7 +11377,7 @@ texindex foo.??
 @cindex Initialization file for @TeX{} input
 @cindex @TeX{}输入的初始化文件
 
-@TeX{}需要找到第一行中@samp{\input texinfo}命令所读取的@file{texinfo.tex}文件@footnote{译者注：中文Texinfo文件用@samp{\input texinfo-zh}命令，读取@file{texinfo-zh.tex}文件。}。@file{texinfo.tex}文件告诉@TeX{}如何处理@@命令；它包含在所有标准的GNU发行版中。最新发布的通用版本可以从常规的GNU服务器和镜像站点获取：
+@TeX{}需要找到第一行中@samp{\input texinfo}命令所读取的@file{texinfo.tex}文件。@file{texinfo.tex}文件告诉@TeX{}如何处理@@命令；它包含在所有标准的GNU发行版中。最新发布的通用版本可以从常规的GNU服务器和镜像站点获取：
 
 @display
 @uref{http://ftp.gnu.org/gnu/texinfo/texinfo.tex}
@@ -12733,8 +12738,7 @@ see @{node_file_href@} section `@{section@}' in @@cite@{@{book@}@}
 @node pod2texi manual page
 @c nodedescription @command{pod2texi} invocation in a manual page format.
 @nodedescription 用手册页(manpage)格式的@command{pod2texi}帮助。
-@include pod2texi.texi
-@c pod2texi.texi，属于示例，所以暂时没有翻译为中文。
+@include pod2texi-zh_CN.texi
 
 
 @node @command{texi2html}
@@ -13245,7 +13249,7 @@ Node: conventions^?6855
 
 在间接文件列表中，文件名后的数字记录了前述间接文件的累积字节数，但不包括文件列表本身、标签表及第一个文件中的任何许可文本。在标签表中，节点名后的数字记录了节点开始的位置，即从（未拆分的）输出文件开头算起的字节数。
 
-如果您正在使用@code{texinfo-format-buffer}来创建Info文件，您可能需要运行@code{Info-validate}命令。（@command{texi2any}命令本身就做得很好，您不需要@code{Info-validate}。）但是，您无法对间接文件运行@kbd{M-x Info-validate}节点检查命令。有关如何防止文件被@code{texinfo-format-buffer}拆分以及如何验证节点结构的信息，请参阅 @ref{Using @code{Info-validate}}。@footnote{译者注：这一段，是在描述@command{Emcas}下的操作。}
+如果您正在使用@code{texinfo-format-buffer}来创建Info文件，您可能需要运行@code{Info-validate}命令。（@command{texi2any}命令本身就做得很好，您不需要@code{Info-validate}。）但是，您无法对间接文件运行@kbd{M-x Info-validate}节点检查命令。有关如何防止文件被@code{texinfo-format-buffer}拆分以及如何验证节点结构的信息，请参阅 @ref{Using @code{Info-validate}}。@footnote{译者注：这一段，是在描述@command{Emcas}的操作。}
 
 
 @node Info Format FAQ
@@ -14737,6 +14741,56 @@ tex: @{
 仅适用于没有交叉引用名称（第二个参数）的交叉引用命令。如果设置为@samp{1}，则在交叉引用@@命令中使用节点名（第一个）参数作为超链接显示的文本。如果设置为@samp{0}，则：如果设置了@code{USE_NODES}，则使用节点名称，否则使用章节名称。如果设置为@samp{undef}，则在预格式化环境中使用第一个参数，否则根据@code{USE_NODES}使用节点名称或章节名称。默认值为@samp{undef}。
 @end table
 
+
+@node Write a Chinese Texinfo document
+@nodedescription  给中文Texinfo文档作者的建议
+@chapter 编写中文Texinfo文档
+
+编写（翻译、创作）中文Texinfo文档，一般情况下与编写英文文档基本一致，但仍有一些需特别注意：
+@enumerate
+@item 在首行中，使用@code{\input texinfo_zh}（或@code{\input texinfo_zh.tex}），而不是@code{\input texinfo}（或@code{\input texinfo.tex}）。
+
+@item 在Texinfo源文件的头部增加：
+
+@example texi
+@@firstparagraphindent insert @@c 章节的首段需要缩进
+
+@@paragraphindent 2           @@c 指定缩进量
+@@ifinfo
+@@paragraphindent 4 
+@@end ifinfo
+
+@@documentencoding UTF-8      @@ 指定文档的编码
+@@documentlanguage zh_CN      @@ 指定文档的语言
+@end example
+
+@item  
+使用@samp{参阅：@code{@@ref}}或@samp{请参阅：@code{@@ref}}，替代@code{@@pxref}及@code{@@xref}，原因有下面几点：
+
+@itemize 
+@item @code{@@pxref}及@code{@@xref}，在HTML输出中，会产生``see''及``See''，@command{texi2any}无法自动将其译成中文。
+@item @code{@@pxref}及@code{@@xref}，在PDF输出中，@command{texi2any}自动将``see''及``See''译成中文``见''，不符合中文习惯。中文的习惯应是：``参阅：''、``请参阅：''、``参见：''、``请参见：''。（冒号，根据上下文可选。)
+@item 在中文读者的眼中，``*note'' 及``*Note''只是一个修饰链接目标的标记，它与上下文之间不会产生语法关联，因此，在Info输出中出现@samp{请参阅 *Note @dots{}}不会让读者感到不适。
+@item 如果不希望见到``*note'' 及``*Note''，使用独立Info阅读器时，可增加选项@samp{-v automatic-footnotes=On}；使用Emacs时，可设置 @code{Info-hide-note-references}变量。
+@end itemize
+
+@item 
+只对一部分示例进行翻译；主要取决于：译文与原文相比，是否有利于展示。
+
+@item 在译文之后，又以注释方式（或@@footnote命令)附上了原文，表明译者对此段内容的译文的正确性没有把握。
+
+@item 尽管Texinfo源文件使用的满列宽(fill column)是70或72，是 GUN Texinfo 给的官方建议(参见：@ref{Tips})，但由于以下几个原因，已没有必要，甚至对中文文档还有害处：
+
+@itemize 
+@item 在中文Texinfo源文件的一个句子中，如果存在换行，就会在Info及纯文本输出中产生一个多余的空格， 这违反中文的排版惯例。
+@item 现代的编辑器都可设定列宽的，并可自动换行显示。对文档的全列宽不作限制，不会影响内容的显示及编辑。
+@item 现代的编辑器（甚至包括是较为古老的@command{vim}、@command{Emacs}、@command{nano}），都运行在GUI下，或仿真终端下（专用终端设备已被淘汰），编辑区的长宽是随窗口大小而自动变化的，完全不会被限制在80x25或某个固定值上。新编写的文档，已不会有文档维护者会使用过时的专用终端设备。
+@item 如果仍限制文档的满列宽为70或72，当现代的编辑器的列宽变为明显大于80时，编辑空间会有很多浪费；变为小于80时，就会产生过多换行，让文本显示得参差不齐，观感很差。
+@item 如果仍限制文档的满列宽为70或72，很多段落会被写到多个行上，这非常不得于面向行的文本处理器(如：@command{sed}、@command{awk}等)的操作，因为这样导致非常多的跨行处理。 
+@end itemize
+@end enumerate
+
+
 @node @@-Command Details
 @nodedescription Texinfo中@@命令的详细信息。
 @appendix @@命令的详情
@@ -15198,7 +15252,7 @@ Texinfo有以下类型的@@命令：
 生成特殊符号@samp{@expansion{}}，向读者标识：后面内容是宏展开的结果。请参阅 @ref{@code{@@expansion}}。
 
 @item @@file@{@var{文件名(filename)}@}
-突出显示文件、缓冲区、节点@footnote{译者注：指的不的是Texinfo的节点，是文件系统的节点。}、目录等的名称。请参阅 @ref{@code{@@file}}。
+突出显示文件、缓冲区、节点@footnote{译者注：指的不的是Texinfo的`节点'，是文件系统的`节点'。}、目录等的名称。请参阅 @ref{@code{@@file}}。
 
 @item @@finalout
 阻止@TeX{}在过宽行的边上打印出用于警告的大黑色矩形。请参阅 @ref{Overfull hboxes}。
@@ -15344,7 +15398,7 @@ Texinfo有以下类型的@@命令：
 仅当输出格式为 @var{fmt} 时，才插入原始文本 @var{raw-text} 。
 
 @item \input @var{宏定义文件(macro-definitions-file)}
-使用指定的宏定义文件。此命令仅在Texinfo文件的第一行使用，以使@TeX{}使用@file{texinfo}@footnote{译者注：本手册是中文版，所以使用@file{texinfo_zh}，而不是@file{texinfo}。}宏定义文件。在@code{\input}中使用@code{\}而不是@code{@@}，因为@TeX{}在读取定义文件之前无法识别@code{@@}。 请参阅 @ref{Texinfo File Header}。
+使用指定的宏定义文件。此命令仅在Texinfo文件的第一行使用，让@TeX{}使用@file{texinfo}宏定义文件。在@code{\input}中使用@code{\}而不是@code{@@}，因为@TeX{}在读取定义文件之前无法识别@code{@@}。 请参阅 @ref{Texinfo File Header}。
 
 @item @@insertcopying
 插入之前使用@code{@@copying}环境定义的文本。请参阅 @ref{@code{@@insertcopying}}。
@@ -15685,7 +15739,7 @@ Texinfo有以下类型的@@命令：
 开始标题页。将命令单独占一行，并配以 @code{@@end titlepage}。在默认情况下，在线格式中不会输出标题页。@xref{@code{@@titlepage}}。
 
 @item @@today@{@}
-以`1 Jan 1900'格式@footnote{译者注：可能与当前区域设置(locale)的日期格式有关。在@TeX{}输出格式中，输出中文日期格式`1900年1月1日'，但HTML和Info输出格式中不支持中文，输出`Jan 1 1900'。}插入当前日期。请参阅 @ref{Custom Headings}。
+以`1 Jan 1900'格式@footnote{译者注：当使用@file{texinfo_zh.tex}时，@TeX{}输出格式的日期格式是`1900年1月1日'，HTML和Info输出格式输出`Jan 1 1900'。}插入当前日期。请参阅 @ref{Custom Headings}。
 
 @item @@top @var{标题(title)}
 在文件中最顶级的节点是`Top'，该节点定义行(@@node Top)之后一行，必须是@code{@@top}命令。标题以章级标题的级别被格式化。在@TeX{}中，@code{@@top}命令仅仅是@code{@@unnumbered}的同义词。
@@ -15824,7 +15878,7 @@ Texinfo有以下类型的@@命令：
 积极地写作！例如，写``我们建议@dots{}''而不是``建议@dots{}''。
 
 @item
-使用 70 或 72 作为你的全列宽。过长的行难以阅读@footnote{译者注：实际上，这条建议有些过时，对于新建的文档，没必要遵守。理由参见：@ref{Convention}。}。
+使用70或72作为你的满列宽(fill column)。过长的行难以阅读。@footnote{译者注：实际上，这条建议有些过时，对于新建的文档，没必要遵守。理由参见：@ref{Write a Chinese Texinfo document} 。}
 
 @item
 包含版权(copyright)声明和复制(copying)许可。
@@ -16251,7 +16305,7 @@ there were, you could see its basic usage and command line options here.
 
 @printindex cp
 
-@bye @ccccc 临时改`@@bye'为注释，以便于翻译编辑工作。因为编辑器会误码将`@@bye'当作是本文件(texinfo-zh_CN.texi)的末尾。需要在翻译定稿发布时，取消注释。
+@bye 
 @end verbatim
 
 
@@ -16509,30 +16563,36 @@ Manual}）和《GDB 手册》（@cite{GDB Manual}）中不同@@命令的使用�
 
 在 GNU Emacs 的Texinfo模式下，@code{texinfo-show-structure}命令会列出所有以指定结构的@@命令开头的行：@code{@@chapter}、@code{@@section}、@code{@@appendix}等。如果交互式操作，则以@w{@kbd{C-u}}作为前缀参数，该命令还会显示@code{@@node}行。默认情况下，在Texinfo模式下，@code{texinfo-show-structure}命令绑定到@kbd{C-c C-s}。
 
-这些行显示在一个名为@samp{*Occur*}的缓冲区中，并按层级缩进。例如，以下是在本手册上运行@code{texinfo-show-structure}后生成的一部分内容@footnote{译者注：是原文的，不是译文的。}：
+这些行显示在一个名为@samp{*Occur*}的缓冲区中，并按层级缩进。例如，以下是在本手册上运行@code{texinfo-show-structure}后生成的一部分内容：
 
 @example
 @group
-Lines matching "^@@\\(chapter \\|sect\\|subs\\|subh\\|
-unnum\\|major\\|chapheading \\|heading \\|appendix\\)"
-in buffer texinfo.texi.
+425 matches for "^\(?:\(@@\(?:appendix\(?:s\(?:ec\(?:tion\)?\|
+ubs\(?:\(?:ubs\)?ec\)\)\)?\|chap\(?:heading\|ter\)\|heading\|
+majorheading\|s\(?:ection\|ub\(?:heading\|s\(?:ection\|ub\(?
+:heading\|section\)\)\)\)\|top\|unnumbered\(?:s\(?:\(?:ubs\(?:
+ubs\)?\)?ec\)\)?\)\)\>\)" in buffer: texinfo-zh_CN.texi
 @dots{}
-4177:@@chapter Nodes
-4198:    @@heading Two Paths
-4231:    @@section Node and Menu Illustration
-4337:    @@section The @@code@{@@@@node@} Command
-4393:        @@subheading Choosing Node and Pointer Names
-4417:        @@subsection How to Write a @@code@{@@@@node@} Line
-4469:        @@subsection @@code@{@@@@node@} Line Tips
+532:@@chapter 编写Texinfo文件
+539:    @@section 通用句法约定
+641:    @@section 注释
+666:    @@section Texinfo文件必须包含的内容
+710:    @@section 简短的示例 
+793:    @@section Texinfo 文件头部
+818:	@@subsection Texinfo文件的第一行
+846:	@@subsection @@code@{@@@@setfilename@}：设置输出文件名
+891:	@@subsection @@code@{@@@@settitle@}：设置文档标题
+916:	@@subsection 前导 
+963:	@@subsection Emacs使用的，头部的开始和结束 
 @dots{}
 @end group
 @end example
 
-这表示在@file{texinfo.texi}文件的第4337、4393和4417行分别以 @code{@@section}、 @code{@@subheading} 和 @code{@@subsection} 命令开头。如果你将光标移动到@samp{*Occur*}窗口，你可以将光标定位到其中一行，并使用@kbd{C-c C-c}命令（@code{occur-mode-goto-occurrence}）跳转到Texinfo文件中相应的位置。有关@code{occur-mode-goto-occurrence}的更多信息，请参阅 @ref{Other Repeating Search, , Using Occur, emacs, The GNU Emacs Manual}。
+这表示在@file{texinfo-zh_CN.texi}文件的第532、793和818行分别以@code{@@chapter}、@code{@@section}和@code{@@subsection}命令开头。如果你将光标移动到@samp{*Occur*}窗口，你可以将光标定位到其中一行，并使用@kbd{C-c C-c}命令（@code{occur-mode-goto-occurrence}）跳转到Texinfo文件中相应的位置。有关@code{occur-mode-goto-occurrence}的更多信息，请参阅 @ref{Other Repeating Search, , Using Occur, emacs, The GNU Emacs Manual}。
 
 @samp{*Occur*}窗口中的第一行描述了由 @var{texinfo-heading-pattern} 指定的 @dfn{正则表达式} 。这个正则表达式是@code{texinfo-show-structure}所查找的模式。有关更多信息，请参阅 @ref{Regexps, , Using Regular Expressions, emacs, The GNU Emacs Manual}。
 
-当你调用@code{texinfo-show-structure}命令时，Emacs将显示整个缓冲区@footnote{译者注：指的就是已打开的被编辑的文件。}的结构。如果你想只查看缓冲区的部分结构，例如只想看某一章的结构，可以使用 @kbd{C-x n n} （@code{narrow-to-region}）命令来标记区域。（请参阅 @ref{Narrowing, , , emacs, The GNU Emacs Manual}。）上面的示例就是这样生成的。（要再次查看整个缓冲区，请使用@kbd{C-x n w}(@code{widen})。)
+当你调用@code{texinfo-show-structure}命令时，Emacs将显示整个缓冲区@footnote{译者注：指的就是已打开的正在被编辑的文件。}的结构。如果你想只查看缓冲区的部分结构，例如只想看某一章的结构，可以使用@kbd{C-x n n}（@code{narrow-to-region}）命令来标记区域。（请参阅 @ref{Narrowing, , , emacs, The GNU Emacs Manual}。）上面的示例就是这样生成的。（要再次查看整个缓冲区，请使用@kbd{C-x n w}(@code{widen})。)
 
 如果你通过键入@w{@kbd{C-u C-c C-s}}来调用带有前缀参数的@code{texinfo-show-structure}，它将列出以@code{@@node}以及@code{@@chapter}、@code{@@section}等@@命令开头的行。
 
@@ -17015,7 +17075,7 @@ Texinfo模式为@TeX{}的格式化和打印提供了多个预定义的快捷键�
 @cindex 局部格式化和打印 @sortas{jbgshhdy}
 通常，在编写文档时，您可能只想排版和打印文件的局部，以查看其效果。为此，您可以使用@code{texinfo-tex-region}及相关命令。使用@code{texinfo-tex-buffer}命令可格式化整个缓冲区。
 
-为了让@code{texinfo-tex-region}或@code{texinfo-tex-buffer}生效，文件 @emph{必须} 以@samp{\input texinfo}@footnote{译者注：中文文档用@samp{\input texinfo-zh}。}行开头，并且必须包含@code{@@settitle}行。文件必须以单独一行的@code{@@bye}结束。（使用@code{texinfo-tex-region}时，@code{@@settitle}行必须在由@code{@samp{start-of-header}@dots{}@samp{end-of-header}}构成的头部区域。请参阅 @ref{Start and End of Header}。）
+为了让@code{texinfo-tex-region}或@code{texinfo-tex-buffer}生效，文件 @emph{必须} 以@samp{\input texinfo}@footnote{译者注：不同语言各不相同；中文用@samp{\input texinfo-zh}。}行开头，并且必须包含@code{@@settitle}行。文件必须以单独一行的@code{@@bye}结束。（使用@code{texinfo-tex-region}时，@code{@@settitle}行必须在由@code{@samp{start-of-header}@dots{}@samp{end-of-header}}构成的头部区域。请参阅 @ref{Start and End of Header}。）
 
 @table @kbd
 @findex texinfo-tex-buffer
@@ -17839,7 +17899,7 @@ Texinfo提供了两种标准的页眉格式，一种适用于每页单面打印�
 @end example
 
 @noindent
-章名前会加上``Chapter''、章编号和一个冒号@footnote{译者注：这是原文（英文）的形式。在中文文档的输出（使用@command{XeTeX}输出）中的形式是这样：章名前加上``第 n 章''， @var{n} 为章编号，在附录名前加上``附录 c''， @var{c} 是附录编号。}。这样便于你追踪自己在手册中的位置。
+章名前会加上``Chapter''、章编号和一个冒号@footnote{译者注：这是原文（英文）的形式。在中文文档的输出（使用@command{XeTeX}输出）中的形式是这样：章名前加上``第 n 章''， @var{n} 为章编号，在附录名前加上``附录 C''， @var{C} 是附录编号。}。这样便于你追踪自己在手册中的位置。
 
 请注意，在新章开始的页面上，页眉行可能会省略一些文本。
 
@@ -18046,7 +18106,7 @@ Texinfo处理器可能会在每个段落的第一行开头插入空格，从而�
 @cindex Headings, indentation after
 @cindex 标题，之后的缩进 @sortas{btzhdsj}
 
-如本手册所示，任何章节的首段默认情况下都不会缩进。从排版的角度来看，缩进是一种段落分隔符，这意味着在新章节开始时，缩进是不必要的@footnote{译者注：中文的排版习惯，新章节的首段也是要缩进的。}。这种缩进是通过@code{@@firstparagraphindent}命令来控制的：
+如本手册所示，任何章节的首段默认情况下都不会缩进。从排版的角度来看，缩进是一种段落分隔符，这意味着在新章节开始时，缩进是不必要的@footnote{译者注：中文的排版习惯，章节的首段也是要缩进的。}。这种缩进是通过@code{@@firstparagraphindent}命令来控制的：
 
 @example
 @@firstparagraphindent @var{word}
@@ -18493,7 +18553,6 @@ File: <fn>, Node: <id1>, (Next: <id2>, )? (Prev: <id3>, )? Up: <id4>
 节点的@t{<general text>}可以包含下文所述的特殊构造。
 
 
-@c ccccc
 @node Info Format Menu
 @section Info格式：菜单
 
@@ -18541,7 +18600,6 @@ File: <fn>, Node: <id1>, (Next: <id2>, )? (Prev: <id3>, )? Up: <id4>
 该格式并未规定在显示@t{<image file>}、@t{<alt text>}还是@t{<txt file contents>}之间如何做出选择。
 
 
-@c ccccc
 @node Info Format Printindex
 @section Info格式：打印索引
 
@@ -18588,7 +18646,6 @@ Info格式的索引是一种菜单，在开头有一个额外的指令，用于�
 这意味着`thunder'的索引条目出现在`Weather Phenomena'节点的第5行。
 
 
-@c ccccc
 @node Info Format Cross Reference
 @section Info格式：交叉引用
 
@@ -18637,7 +18694,7 @@ Info格式中的通用交叉引用具有以下两种形式之一：
 
 请参阅 @ref{Cross References}。
 
-@c ccccc
+
 
 @node GNU Free Documentation License
 @nodedescription 本手册的复制许可。
@@ -18674,73 +18731,20 @@ Info格式中的通用交叉引用具有以下两种形式之一：
 
 
 @node Translation notes
-@nodedescription 简体中文翻译。
+@nodedescription 翻译说明
 @unnumbered 翻译说明
-本文档是《The GNU Documentation Format》的简体中文版。在此，对翻译相关事项进行说明。
+本文档是《The GNU Documentation Format》的简体中文版。
 
 
 @node Original
 @nodedescription 被翻译的原文。 
 @section 原文
-原文为英文，来自于@indicateurl{https://git.savannah.gnu.org/git/texinfo.git }，标签是@samp{texinfo-7.2}。
+原文的语言为英文，文件名@file{texinfo.texi}，来自于@indicateurl{https://git.savannah.gnu.org/git/texinfo.git }，标签是@samp{texinfo-7.2}。
 
-@node Convention
-@nodedescription 翻译时使用的惯例 
-@section 惯例
 
-@enumerate
-@item 
-使用法式空白（增加@code{@@frenchspacing on}行）。
-@item 
-对部分原文没有采用逐字逐句的对比翻译,而是总括其意思,转换为使用简体中文的用户的习惯表达方式。
-
-@item
-对变量名、选项名、命令名等保留字，不作翻译。
-
-@item
-对@samp{cp}索引，保留原文的索引条目，增加翻译后的中文索引条目。
-
-@item
-中文索引条目，不是仅从原文翻译，而是要根据中文特点进行重建。
-@c Todo: 全文都在改。 先从@node Include Files Requirements 开始
-
-@item
-对翻译后的索引条目，如果是汉字开头，则增加排序键值(使用@@sortas命令)。将索引条目中的汉字用@uref{http://www.moe.gov.cn/ewebeditor/uploadfile/2015/03/02/20150302165814246.pdf,拼音}的首字母代替，并删除非数字、非字母的符号，从而生成排序键值。
-
-@item 
-不翻译锚点名(@@anchor)及节点名(@@node)。原因是：中文节名配合锚点，并不能完全实现原文中节点名、锚点名的作用。
-
-@item
-翻译节点描述(@@nodedescription)、章节标题(章节名)(@@chapter、@@section等)。
-@item
-本译本中，大量使用@samp{参阅：@@ref}或@samp{请参阅：@@ref}，替代@code{@@pxref}及@code{@@xref}，原因有下面几点：
-
-@itemize
-@item @code{@@pxref}及@code{@@xref}，在HTML输出中，会产生``see''及``See''，@command{texi2any}无法自动将其译成中文。
-@item @code{@@pxref}及@code{@@xref}，在PDF输出中，@command{texi2any}自动将``see''及``See''译成中文``见''，不符合中文习惯。中文的习惯应是：``参阅：''、``请参阅：''、``参见：''、``请参见：''。（冒号，根据上下文可选。)
-@item 在中文读者的眼中，``*note'' 及``*Note''只是一个修饰链接目标的标记，它与上下文之间不会产生语法关联，因此，在Info输出中出现@samp{请参阅 *Note @dots{}}不会产生不适感。(请参阅：@ref{@code{@@ref}}。)
-@end itemize
-
-@item 
-只对部分注释(由@@c或@@ignore命令定义)进行翻译；主要取决于：译文与原文相比，是否有利于理解。
-
-@item 
-只对部分示例进行翻译；主要取决于：译文与原文相比，是否有利于展示。
-
-@item 在个别译文后，又以注释方式附上了原文，表明译者对此段内容的译文的正确性没有把握。
-
-@item 尽管建议Texinfo文档使用的全列宽(fill column)是 70 或 72 (参见：@ref{Tips})，但由于以下几个原因，这变得没有必要，甚至还有害处：
-
-@itemize 
-@item 在中文Texinfo源文件的一个句子中，如果存在换行，就会在Info及纯文本输出中产生一个多余的空格， 这违反中文的排版惯例。
-@item 现代的编辑器都可设定列宽的，并可自动换行显示。对文档的全列宽不作限制，不会影响内容的显示及编辑。
-@item 现代的编辑器（甚至包括是较为古老的@command{vim}、@command{Emacs}、@command{nano}），都运行在GUI下，或仿真终端下（独立的专用终端设备已被淘汰），编辑区的长宽是随窗口大小而自动变化的，完全不会被限制在 80x25 或某个固定值上。本文作为新出现的文档，已不会有文档维护者会使用过时的专用终端设备。
-@item 如果仍限制文档的全列宽为 70 或 72 ，当现代的编辑器的列宽变为明显大于80时，屏幕空间会有很多浪费，变为小于80时，就会产生过多换行，让文本显示得参差不齐，观感很差。
-@item 如果仍限制文档的全列宽为70或72，很多段落会被写到多个行上，这非常不得于面向行的文本处理器(如：@command{sed}、@command{awk}等)的操作，因为这样导致非常多的跨行处理。 
-@end itemize
-因此，本文档没有文档全列宽限制。
-
-@item 原文中一些词、短语、概念：
+@node Word phrase concept
+@nodedescription 一些词、短语、概念的翻译
+@section 一些词、短语、概念的翻译
 
 @table @code
 @item Free Software Foundation,Inc.
@@ -18790,7 +18794,7 @@ Info格式中的通用交叉引用具有以下两种形式之一：
 @item customization
 定制化。尽管有建议将其译作``自定义''或``用户化'' 。
 @item dimension
-度量单位。该词在本手册中用在@code{@@dmn}相关描述中。尽管直译应该是``量纲''，但根据上下文，应该译为``度量单位''。猜测这是原文作者用词有误，当然也可能是译者水平不足，但译作``度量单位''是符合中文常规的。@samp{量纲}，应该是指一个物理量，如：长度、时长、质量等。
+度量单位。该词在本手册中用在@code{@@dmn}相关描述中。尽管直译应该是``量纲''，但根据上下文，应该译为``度量单位''。猜测这是Texinfor的作者用词有误，当然也可能是译者水平不足。译作``度量单位''是符合中文常规的。``量纲''，应该是指一个物理量的一个属性；7个基本量的量纲：长度(L)、质量(M)、时间(T)、电流强度(I)、温度(Θ)、物质的量(N)、光强度(J)；加速度的量纲：@code{LT@sup{-2}}，国际单位制下加速度的``度量单位''是：@code{m/s@sup{2}}。
 @item mark
 标记，为@dots{}作标记。
 @item edition
@@ -18809,7 +18813,7 @@ Info格式中的通用交叉引用具有以下两种形式之一：
 @item verbatim modes 
 逐字模式。
 @item menu entry
-菜单条目，菜单项。本文优先前者。
+菜单条目，菜单项。
 @item quotation
 引用。（主要指摘录他人的话语或文字。）
 @item cross reference
@@ -18825,13 +18829,11 @@ Info格式中的通用交叉引用具有以下两种形式之一：
 @item Square brackets
 方括号，中括号。
 @end table 
-@end enumerate
-
 
 @node Contribution
 @nodedescription 翻译工作的贡献者 
 @section 贡献
-2025年11月至今，由@tie{}@email{zhaiyn-free@@foxmail.com,YongNing Zhai(翟永宁)}@tie{}翻译。
+2025年11月至今，由@tie{}@email{zhaiyn-free@@foxmail.com,翟永宁(Yongning Zhai)}@tie{}翻译。
 
 
 @bye
