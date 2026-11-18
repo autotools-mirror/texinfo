@@ -1,5 +1,10 @@
 2026-11-18  zhaiyn <zhaiyn-free@foxmail.com>
 
+	* doc/translations/zh_CN, doc/translations/zh_CN/7.2:
+	create subdirectory.
+
+2026-11-18  zhaiyn <zhaiyn-free@foxmail.com>
+
 	* doc/translations/zh_CN: updates.  add info-stnd-zh_CN.texi and
 	pod2texi-zh_CN.texi.
 
