@@ -1989,6 +1989,20 @@ free_name_number_list (NAME_NUMBER_LIST *name_number_list)
 
 
 
+/* integer list */
+
+def_list_fns(INTEGER_LIST, integer, int, 5);
+
+INTEGER_LIST *
+new_integer_list (void)
+{
+  INTEGER_LIST *result = (INTEGER_LIST *) malloc (sizeof (INTEGER_LIST));
+  memset (result, 0, sizeof (INTEGER_LIST));
+
+  return result;
+}
+
+
 /* string lists */
 
 STRING_LIST *

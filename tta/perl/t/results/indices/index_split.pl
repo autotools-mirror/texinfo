@@ -81,7 +81,7 @@ $result_tree_text{'index_split'} = '*document_root C21
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{Top}
+    |node_content:A{0|0}
     |normalized:{Top}
      {Top}
     {menu_entry_separator::: }
@@ -92,7 +92,7 @@ $result_tree_text{'index_split'} = '*document_root C21
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{first}
+    |node_content:A{0|0}
     |normalized:{first}
      {first}
     {menu_entry_separator:::}
@@ -103,7 +103,7 @@ $result_tree_text{'index_split'} = '*document_root C21
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{second chapter}
+    |node_content:A{0|0}
     |normalized:{second-chapter}
      {second chapter}
     {menu_entry_separator:::}
@@ -235,7 +235,7 @@ $result_tree_text{'index_split'} = '*document_root C21
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{section 1}
+    |node_content:A{0|0}
     |normalized:{section-1}
      {section 1}
     {menu_entry_separator:::}
@@ -246,7 +246,7 @@ $result_tree_text{'index_split'} = '*document_root C21
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{section 2}
+    |node_content:A{0|0}
     |normalized:{section-2}
      {section 2}
     {menu_entry_separator:::}
@@ -257,7 +257,7 @@ $result_tree_text{'index_split'} = '*document_root C21
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{section 3}
+    |node_content:A{0|0}
     |normalized:{section-3}
      {section 3}
     {menu_entry_separator:::}
@@ -268,7 +268,7 @@ $result_tree_text{'index_split'} = '*document_root C21
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{node in section 3}
+    |node_content:A{0|0}
     |normalized:{node-in-section-3}
      {node in section 3}
     {menu_entry_separator:::}
@@ -279,7 +279,7 @@ $result_tree_text{'index_split'} = '*document_root C21
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{node 2 in section 3}
+    |node_content:A{0|0}
     |normalized:{node-2-in-section-3}
      {node 2 in section 3}
     {menu_entry_separator:::}
@@ -290,7 +290,7 @@ $result_tree_text{'index_split'} = '*document_root C21
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{node 3 in section 3}
+    |node_content:A{0|0}
     |normalized:{node-3-in-section-3}
      {node 3 in section 3}
     {menu_entry_separator:::}
@@ -344,7 +344,7 @@ $result_tree_text{'index_split'} = '*document_root C21
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{subsection 1}
+    |node_content:A{0|0}
     |normalized:{subsection-1}
      {subsection 1}
     {menu_entry_separator:::}
@@ -355,7 +355,7 @@ $result_tree_text{'index_split'} = '*document_root C21
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{subsection 2}
+    |node_content:A{0|0}
     |normalized:{subsection-2}
      {subsection 2}
     {menu_entry_separator:::}
@@ -542,12 +542,12 @@ $result_tree_text{'index_split'} = '*document_root C21
    *line_arg
    *line_arg C1
    |EXTRA
-   |node_content:{section 3}
+   |node_content:A{0|0}
    |normalized:{section-3}
     {section 3}
    *line_arg C2
    |EXTRA
-   |node_content:{first}
+   |node_content:A{0|0}
    |normalized:{first}
     {first}
     {spaces_after_argument:\\n}
@@ -577,7 +577,7 @@ $result_tree_text{'index_split'} = '*document_root C21
    *line_arg
    *line_arg C2
    |EXTRA
-   |node_content:{first}
+   |node_content:A{0|0}
    |normalized:{first}
     {first}
     {spaces_after_argument:\\n}
@@ -642,7 +642,7 @@ $result_tree_text{'index_split'} = '*document_root C21
    *line_arg
    *line_arg C2
    |EXTRA
-   |node_content:{first}
+   |node_content:A{0|0}
    |normalized:{first}
     {first}
     {spaces_after_argument:\\n}

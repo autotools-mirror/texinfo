@@ -48,7 +48,7 @@ NodeBack: [U0]
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{chap part node after top}
+    |node_content:A{0|0}
     |normalized:{chap-part-node-after-top}
      {chap part node after top}
     {menu_entry_separator:::}

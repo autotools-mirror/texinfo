@@ -63,7 +63,7 @@ NodeForward: [U1]
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{umlaut}
+    |node_content:A{0|0}
     |normalized:{umlaut}
      {umlaut}
     {menu_entry_separator:::}
@@ -74,7 +74,7 @@ NodeForward: [U1]
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{circumflex}
+    |node_content:A{0|0}
     |normalized:{circumflex}
      {circumflex}
     {menu_entry_separator:::}
@@ -133,7 +133,7 @@ NodeBack: [U0]
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{@"i}
+    |node_content:A{0|0}
     |normalized:{_00ef}
      *@" C1 l16
       *following_arg C1
@@ -146,7 +146,7 @@ NodeBack: [U0]
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{@~{@dotless{i}}}
+    |node_content:A{0|0}
     |normalized:{_0129}
      *@~ C1 l17
       *brace_container C1
@@ -234,7 +234,7 @@ NodeBack: [U2]
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{@^i}
+    |node_content:A{0|0}
     |normalized:{_00ee}
      *@^ C1 l28
       *following_arg C1

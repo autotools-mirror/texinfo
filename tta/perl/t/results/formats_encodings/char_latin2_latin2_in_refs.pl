@@ -49,7 +49,7 @@ $result_tree_text{'char_latin2_latin2_in_refs'} = '*document_root C6
    *@ref C1 char_latin2_latin2_in_refs.texi:l8
     *brace_arg C1
     |EXTRA
-    |node_content:{Ą ą Ę ę}
+    |node_content:A{0|0}
     |normalized:{_0104-_0105-_0118-_0119}
      {Ą ą Ę ę}
    {.\\n}
@@ -76,7 +76,7 @@ $result_tree_text{'char_latin2_latin2_in_refs'} = '*document_root C6
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{Ą ą Ę ę}
+    |node_content:A{0|0}
     |normalized:{_0104-_0105-_0118-_0119}
      {Ą ą Ę ę}
     {menu_entry_separator:::}

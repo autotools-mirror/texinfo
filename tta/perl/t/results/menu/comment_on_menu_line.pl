@@ -34,7 +34,7 @@ $result_tree_text{'comment_on_menu_line'} = '*document_root C4
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{first}
+    |node_content:A{0|0}
     |normalized:{first}
      {first}
     {menu_entry_separator:::}

@@ -36,7 +36,7 @@ $result_tree_text{'entry_after_detailmenu'} = '*document_root C4
      {menu_entry_leading_text:* }
      *menu_entry_node C1
      |EXTRA
-     |node_content:{second}
+     |node_content:A{0|0}
      |normalized:{second}
       {second}
      {menu_entry_separator:::}
@@ -59,7 +59,7 @@ $result_tree_text{'entry_after_detailmenu'} = '*document_root C4
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{chap first}
+    |node_content:A{0|0}
     |normalized:{chap-first}
      {chap first}
     {menu_entry_separator:::}
@@ -79,7 +79,7 @@ $result_tree_text{'entry_after_detailmenu'} = '*document_root C4
      {menu_entry_leading_text:* }
      *menu_entry_node C1
      |EXTRA
-     |node_content:{second}
+     |node_content:A{0|0}
      |normalized:{second}
       {second}
      {menu_entry_separator:::}
@@ -97,7 +97,7 @@ $result_tree_text{'entry_after_detailmenu'} = '*document_root C4
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{second}
+    |node_content:A{0|0}
     |normalized:{second}
      {second}
     {menu_entry_separator:::}

@@ -42,7 +42,7 @@ $result_tree_text{'special_docbook_unnumbered'} = '*document_root C11
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{Dedication}
+    |node_content:A{0|0}
     |normalized:{Dedication}
      {Dedication}
     {menu_entry_separator:::}
@@ -53,7 +53,7 @@ $result_tree_text{'special_docbook_unnumbered'} = '*document_root C11
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{preface}
+    |node_content:A{0|0}
     |normalized:{preface}
      {preface}
     {menu_entry_separator:::}
@@ -64,7 +64,7 @@ $result_tree_text{'special_docbook_unnumbered'} = '*document_root C11
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{colophon}
+    |node_content:A{0|0}
     |normalized:{colophon}
      {colophon}
     {menu_entry_separator:::}
@@ -75,7 +75,7 @@ $result_tree_text{'special_docbook_unnumbered'} = '*document_root C11
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{acknowledgements}
+    |node_content:A{0|0}
     |normalized:{acknowledgements}
      {acknowledgements}
     {menu_entry_separator:::}

@@ -33,7 +33,7 @@ $result_tree_text{'dot_and_dot_space_in_node_menu_entry'} = '*document_root C3
     {menu_entry_separator:: }
     *menu_entry_node C4
     |EXTRA
-    |node_content:{aa.bb@asis{. }c\\n}
+    |node_content:A{0|3}
     |normalized:{aa_002ebb_002e-c}
      {aa.bb}
      *@asis C1 l4

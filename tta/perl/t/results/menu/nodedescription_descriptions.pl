@@ -39,7 +39,7 @@ $result_tree_text{'nodedescription_descriptions'} = '*document_root C17
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{toto}
+    |node_content:A{0|0}
     |normalized:{toto}
      {toto}
     {menu_entry_separator:::   }
@@ -50,7 +50,7 @@ $result_tree_text{'nodedescription_descriptions'} = '*document_root C17
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{titi}
+    |node_content:A{0|0}
     |normalized:{titi}
      {titi}
     {menu_entry_separator:::  }
@@ -64,7 +64,7 @@ $result_tree_text{'nodedescription_descriptions'} = '*document_root C17
     {menu_entry_separator:: }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{other}
+    |node_content:A{0|0}
     |normalized:{other}
      {other}
     {menu_entry_separator:.}
@@ -81,7 +81,7 @@ $result_tree_text{'nodedescription_descriptions'} = '*document_root C17
     {menu_entry_separator:: }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{last}
+    |node_content:A{0|0}
     |normalized:{last}
      {last}
     {menu_entry_separator:. }
@@ -92,7 +92,7 @@ $result_tree_text{'nodedescription_descriptions'} = '*document_root C17
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{a somewhat long node without description nor following space}
+    |node_content:A{0|0}
     |normalized:{a-somewhat-long-node-without-description-nor-following-space}
      {a somewhat long node without description nor following space}
     {menu_entry_separator:::}
@@ -103,7 +103,7 @@ $result_tree_text{'nodedescription_descriptions'} = '*document_root C17
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{a very long node without description with very little space left for}
+    |node_content:A{0|0}
     |normalized:{a-very-long-node-without-description-with-very-little-space-left-for}
      {a very long node without description with very little space left for}
     {menu_entry_separator:::}
@@ -114,7 +114,7 @@ $result_tree_text{'nodedescription_descriptions'} = '*document_root C17
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{very very long node extending past the max columns and without description}
+    |node_content:A{0|0}
     |normalized:{very-very-long-node-extending-past-the-max-columns-and-without-description}
      {very very long node extending past the max columns and without description}
     {menu_entry_separator:::}

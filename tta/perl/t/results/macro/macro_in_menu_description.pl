@@ -34,7 +34,7 @@ $result_tree_text{'macro_in_menu_description'} = '*document_root C1
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{Copying Conditions}
+    |node_content:A{0|0}
     |normalized:{Copying-Conditions}
      {Copying Conditions}
     {menu_entry_separator:::          }

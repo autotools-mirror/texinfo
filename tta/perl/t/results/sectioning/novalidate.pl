@@ -28,7 +28,7 @@ $result_tree_text{'novalidate'} = '*document_root C2
     {first}
    *line_arg C3
    |EXTRA
-   |node_content:{unknown node}
+   |node_content:A{1|1}
    |normalized:{unknown-node}
     {spaces_before_argument: }
     {unknown node}
@@ -42,7 +42,7 @@ $result_tree_text{'novalidate'} = '*document_root C2
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{not a node}
+    |node_content:A{0|0}
     |normalized:{not-a-node}
      {not a node}
     {menu_entry_separator:::}
@@ -61,7 +61,7 @@ $result_tree_text{'novalidate'} = '*document_root C2
    *@xref C1 l10
     *brace_arg C1
     |EXTRA
-    |node_content:{unknown ref}
+    |node_content:A{0|0}
     |normalized:{unknown-ref}
      {unknown ref}
    {.\\n}

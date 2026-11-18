@@ -27,7 +27,7 @@ $result_tree_text{'things_before_setfilename_no_element'} = '*document_root C1
     *@ref C1 things_before_setfilename_no_element.texi:l6
      *brace_arg C1
      |EXTRA
-     |node_content:{An anchor}
+     |node_content:A{0|0}
      |normalized:{An-anchor}
       {An anchor}
     {\\n}
@@ -37,7 +37,7 @@ $result_tree_text{'things_before_setfilename_no_element'} = '*document_root C1
     *@ref C1 things_before_setfilename_no_element.texi:l9
      *brace_arg C1
      |EXTRA
-     |node_content:{Anchor in footnote}
+     |node_content:A{0|0}
      |normalized:{Anchor-in-footnote}
       {Anchor in footnote}
     {.\\n}
@@ -63,7 +63,7 @@ $result_tree_text{'things_before_setfilename_no_element'} = '*document_root C1
        *@ref C1 things_before_setfilename_no_element.texi:l16
         *brace_arg C1
         |EXTRA
-        |node_content:{An anchor}
+        |node_content:A{0|0}
         |normalized:{An-anchor}
          {An anchor}
        {\\n}
@@ -98,7 +98,7 @@ $result_tree_text{'things_before_setfilename_no_element'} = '*document_root C1
     *@ref C1 things_before_setfilename_no_element.texi:l24
      *brace_arg C1
      |EXTRA
-     |node_content:{float anchor}
+     |node_content:A{0|0}
      |normalized:{float-anchor}
       {float anchor}
     {.\\n}
@@ -148,7 +148,7 @@ $result_tree_text{'things_before_setfilename_no_element'} = '*document_root C1
      {menu_entry_leading_text:* }
      *menu_entry_node C1
      |EXTRA
-     |node_content:{An anchor}
+     |node_content:A{0|0}
      |normalized:{An-anchor}
       {An anchor}
      {menu_entry_separator:::                }
@@ -203,7 +203,7 @@ $result_tree_text{'things_before_setfilename_no_element'} = '*document_root C1
    *@ref C1 things_before_setfilename_no_element.texi:l47
     *brace_arg C1
     |EXTRA
-    |node_content:{An anchor}
+    |node_content:A{0|0}
     |normalized:{An-anchor}
      {An anchor}
    {\\n}
@@ -213,7 +213,7 @@ $result_tree_text{'things_before_setfilename_no_element'} = '*document_root C1
    *@ref C1 things_before_setfilename_no_element.texi:l50
     *brace_arg C1
     |EXTRA
-    |node_content:{Anchor in footnote}
+    |node_content:A{0|0}
     |normalized:{Anchor-in-footnote}
      {Anchor in footnote}
    {\\n}

@@ -56,7 +56,7 @@ $result_tree_text{'at_commands_in_refs_utf8'} = '*document_root C55
     {menu_entry_leading_text:* }
     *menu_entry_node C5
     |EXTRA
-    |node_content:{@- @{ @}}
+    |node_content:A{0|4}
     |normalized:{-_007b-_007d}
      *@-
      { }
@@ -71,7 +71,7 @@ $result_tree_text{'at_commands_in_refs_utf8'} = '*document_root C55
     {menu_entry_leading_text:* }
     *menu_entry_node C17
     |EXTRA
-    |node_content:{@  @\\t @! @* @. @: .@: @? @@}
+    |node_content:A{0|16}
     |normalized:{-_0021-_002e-_002e-_003f-_0040}
      *@ 
      { }
@@ -98,7 +98,7 @@ $result_tree_text{'at_commands_in_refs_utf8'} = '*document_root C55
     {menu_entry_leading_text:* }
     *menu_entry_node C9
     |EXTRA
-    |node_content:{@atchar{} @lbracechar{} @rbracechar{} @backslashchar{} @hashchar{}}
+    |node_content:A{0|8}
     |normalized:{_0040-_007b-_007d-_005c-_0023}
      *@atchar C1 l10
       *brace_container
@@ -122,7 +122,7 @@ $result_tree_text{'at_commands_in_refs_utf8'} = '*document_root C55
     {menu_entry_leading_text:* }
     *menu_entry_node C9
     |EXTRA
-    |node_content:{@LaTeX{} @TeX{} @comma{} @dots{} @enddots{}}
+    |node_content:A{0|8}
     |normalized:{LaTeX-TeX-_002c-_2026-_002e_002e_002e}
      *@LaTeX C1 l11
       *brace_container
@@ -146,7 +146,7 @@ $result_tree_text{'at_commands_in_refs_utf8'} = '*document_root C55
     {menu_entry_leading_text:* }
     *menu_entry_node C5
     |EXTRA
-    |node_content:{@error{} @euro{} @exclamdown{}}
+    |node_content:A{0|4}
     |normalized:{error_002d_002d_003e-_20ac-_00a1}
      *@error C1 l12
       *brace_container
@@ -164,7 +164,7 @@ $result_tree_text{'at_commands_in_refs_utf8'} = '*document_root C55
     {menu_entry_leading_text:* }
     *menu_entry_node C5
     |EXTRA
-    |node_content:{@ordf{} @ordm{} @questiondown{}}
+    |node_content:A{0|4}
     |normalized:{_00aa-_00ba-_00bf}
      *@ordf C1 l13
       *brace_container
@@ -182,7 +182,7 @@ $result_tree_text{'at_commands_in_refs_utf8'} = '*document_root C55
     {menu_entry_leading_text:* }
     *menu_entry_node C6
     |EXTRA
-    |node_content:{a@tie{}b @today{} @aa{}}
+    |node_content:A{0|5}
     |normalized:{a-b-_00e5}
      {a}
      *@tie C1 l14
@@ -201,7 +201,7 @@ $result_tree_text{'at_commands_in_refs_utf8'} = '*document_root C55
     {menu_entry_leading_text:* }
     *menu_entry_node C25
     |EXTRA
-    |node_content:{@AA{} @ae{} @oe{} @AE{} @OE{} @o{} @O{} @ss{} @l{} @L{} @DH{} @dh{} @th{}}
+    |node_content:A{0|24}
     |normalized:{_00c5-_00e6-_0153-_00c6-_0152-_00f8-_00d8-_00df-_0142-_0141-_00d0-_00f0-_00fe}
      *@AA C1 l15
       *brace_container
@@ -249,7 +249,7 @@ $result_tree_text{'at_commands_in_refs_utf8'} = '*document_root C55
     {menu_entry_leading_text:* }
     *menu_entry_node C21
     |EXTRA
-    |node_content:{@"{a} @~{e} @^{@dotless{i}} @^{a} @`{a} @\'e @,{c} @={e} @ringaccent{e} @H{e} @ogonek{e}}
+    |node_content:A{0|20}
     |normalized:{_00e4-_1ebd-_00ee-_00e2-_00e0-_00e9-_00e7-_0113-e_030a-e_030b-_0119}
      *@" C1 l16
       *brace_container C1
@@ -304,7 +304,7 @@ $result_tree_text{'at_commands_in_refs_utf8'} = '*document_root C55
     {menu_entry_leading_text:* }
     *menu_entry_node C13
     |EXTRA
-    |node_content:{@dotaccent{e} @u{e} @ubaraccent{e} @udotaccent{e} @v{e} @dotless{j} @tieaccent{ee}}
+    |node_content:A{0|12}
     |normalized:{_0117-_0115-e_0332-_1eb9-_011b-_0237-e_0361e}
      *@dotaccent C1 l17
       *brace_container C1
@@ -341,7 +341,7 @@ $result_tree_text{'at_commands_in_refs_utf8'} = '*document_root C55
     {menu_entry_leading_text:* }
     *menu_entry_node C5
     |EXTRA
-    |node_content:{@dotless{i} @`{@=E} @,{@\'C}}
+    |node_content:A{0|4}
     |normalized:{_0131-_1e14-_1e08}
      *@dotless C1 l18
       *brace_container C1
@@ -366,7 +366,7 @@ $result_tree_text{'at_commands_in_refs_utf8'} = '*document_root C55
     {menu_entry_leading_text:* }
     *menu_entry_node C11
     |EXTRA
-    |node_content:{@quotedblleft{} @quotedblright{} @quoteleft{} @quoteright{} @quotedblbase{} @quotesinglbase{}}
+    |node_content:A{0|10}
     |normalized:{_201c-_201d-_2018-_2019-_201e-_201a}
      *@quotedblleft C1 l19
       *brace_container
@@ -393,7 +393,7 @@ $result_tree_text{'at_commands_in_refs_utf8'} = '*document_root C55
     {menu_entry_leading_text:* }
     *menu_entry_node C11
     |EXTRA
-    |node_content:{@guillemetleft{} @guillemetright{} @guillemotleft{} @guillemotright{} @guilsinglleft{} @guilsinglright{}}
+    |node_content:A{0|10}
     |normalized:{_00ab-_00bb-_00ab-_00bb-_2039-_203a}
      *@guillemetleft C1 l20
       *brace_container
@@ -420,7 +420,7 @@ $result_tree_text{'at_commands_in_refs_utf8'} = '*document_root C55
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{`` \'\' --- -- ` \'}
+    |node_content:A{0|0}
     |normalized:{_0060_0060-_0027_0027-_002d_002d_002d-_002d_002d-_0060-_0027}
      {`` \'\' --- -- ` \'}
     {menu_entry_separator:::}
@@ -431,7 +431,7 @@ $result_tree_text{'at_commands_in_refs_utf8'} = '*document_root C55
     {menu_entry_leading_text:* }
     *menu_entry_node C5
     |EXTRA
-    |node_content:{@acronym{AAA, fff} @acronym{AAA} @acronym{BBB}}
+    |node_content:A{0|4}
     |normalized:{AAA-AAA-BBB}
      *@acronym C2 l22
       *brace_arg C1
@@ -455,7 +455,7 @@ $result_tree_text{'at_commands_in_refs_utf8'} = '*document_root C55
     {menu_entry_leading_text:* }
     *menu_entry_node C5
     |EXTRA
-    |node_content:{@abbr{CCC, rrr} @abbr{CCC} @abbr{DDD}}
+    |node_content:A{0|4}
     |normalized:{CCC-CCC-DDD}
      *@abbr C2 l23
       *brace_arg C1
@@ -479,7 +479,7 @@ $result_tree_text{'at_commands_in_refs_utf8'} = '*document_root C55
     {menu_entry_leading_text:* }
     *menu_entry_node C3
     |EXTRA
-    |node_content:{@email{someone@@somewher, the someone} @email{no_explain@@there}}
+    |node_content:A{0|2}
     |normalized:{someone_0040somewher-no_005fexplain_0040there}
      *@email C2 l24
       *brace_arg C3
@@ -503,7 +503,7 @@ $result_tree_text{'at_commands_in_refs_utf8'} = '*document_root C55
     {menu_entry_leading_text:* }
     *menu_entry_node C3
     |EXTRA
-    |node_content:{@image{f--ile1}  @image{f--ile,aze,az,alt,e--xt}}
+    |node_content:A{0|2}
     |normalized:{f_002d_002dile1-f_002d_002dile}
      *@image C1 l25
      |EXTRA
@@ -532,7 +532,7 @@ $result_tree_text{'at_commands_in_refs_utf8'} = '*document_root C55
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{@verb{. @ {} . .}}
+    |node_content:A{0|0}
     |normalized:{-_0040-_007b_007d-_002e-}
      *@verb C1 l26
      |INFO
@@ -547,7 +547,7 @@ $result_tree_text{'at_commands_in_refs_utf8'} = '*document_root C55
     {menu_entry_leading_text:* }
     *menu_entry_node C17
     |EXTRA
-    |node_content:{@cite{cite @asis{asis}} @w{in @@w @b{b}} @r{in r} @sc{sc} @strong{str} @t{t} @var{var} @dfn{dfn} @i{i}}
+    |node_content:A{0|16}
     |normalized:{cite-asis-in-_0040w-b-in-r-sc-str-t-var-dfn-i}
      *@cite C1 l27
       *brace_container C2
@@ -600,7 +600,7 @@ $result_tree_text{'at_commands_in_refs_utf8'} = '*document_root C55
     {menu_entry_leading_text:* }
     *menu_entry_node C13
     |EXTRA
-    |node_content:{@env{env} @code{code} @option{option} @samp{samp} @command{command} @file{file} @kbd{C-x @key{ESC}}}
+    |node_content:A{0|12}
     |normalized:{env-code-option-samp-command-file-C_002dx-ESC}
      *@env C1 l28
       *brace_container C1
@@ -640,7 +640,7 @@ $result_tree_text{'at_commands_in_refs_utf8'} = '*document_root C55
     {menu_entry_leading_text:* }
     *menu_entry_node C2
     |EXTRA
-    |node_content:{8.27@dmn{in}}
+    |node_content:A{0|1}
     |normalized:{8_002e27in}
      {8.27}
      *@dmn C1 l29
@@ -654,7 +654,7 @@ $result_tree_text{'at_commands_in_refs_utf8'} = '*document_root C55
     {menu_entry_leading_text:* }
     *menu_entry_node C3
     |EXTRA
-    |node_content:{@sansserif{sansserif} @slanted{slanted}}
+    |node_content:A{0|2}
     |normalized:{sansserif-slanted}
      *@sansserif C1 l30
       *brace_container C1
@@ -671,7 +671,7 @@ $result_tree_text{'at_commands_in_refs_utf8'} = '*document_root C55
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{@indicateurl{indicateurl}}
+    |node_content:A{0|0}
     |normalized:{indicateurl}
      *@indicateurl C1 l31
       *brace_container C1
@@ -684,7 +684,7 @@ $result_tree_text{'at_commands_in_refs_utf8'} = '*document_root C55
     {menu_entry_leading_text:* }
     *menu_entry_node C3
     |EXTRA
-    |node_content:{@sub{g}H 3@sup{rd}}
+    |node_content:A{0|2}
     |normalized:{gH-3rd}
      *@sub C1 l32
       *brace_container C1
@@ -701,7 +701,7 @@ $result_tree_text{'at_commands_in_refs_utf8'} = '*document_root C55
     {menu_entry_leading_text:* }
     *menu_entry_node C5
     |EXTRA
-    |node_content:{@url{http://somewhere_aaa} @url{url, text} @uref{/man.cgi/1/ls,,ls}}
+    |node_content:A{0|4}
     |normalized:{http_003a_002f_002fsomewhere_005faaa-url-_002fman_002ecgi_002f1_002fls}
      *@url C1 l33
       *brace_arg C1
@@ -2099,7 +2099,7 @@ $result_tree_text{'at_commands_in_refs_utf8'} = '*document_root C55
    *@ref C1 l120
     *brace_arg C5
     |EXTRA
-    |node_content:{@- @{ @}}
+    |node_content:A{0|4}
     |normalized:{-_007b-_007d}
      *@-
      { }
@@ -2112,7 +2112,7 @@ $result_tree_text{'at_commands_in_refs_utf8'} = '*document_root C55
    *@ref C1 l122
     *brace_arg C17
     |EXTRA
-    |node_content:{@  @\\t @! @* @. @: .@: @? @@}
+    |node_content:A{0|16}
     |normalized:{-_0021-_002e-_002e-_003f-_0040}
      *@ 
      { }
@@ -2137,7 +2137,7 @@ $result_tree_text{'at_commands_in_refs_utf8'} = '*document_root C55
    *@ref C1 l124
     *brace_arg C9
     |EXTRA
-    |node_content:{@atchar{} @lbracechar{} @rbracechar{} @backslashchar{} @hashchar{}}
+    |node_content:A{0|8}
     |normalized:{_0040-_007b-_007d-_005c-_0023}
      *@atchar C1 l124
       *brace_container
@@ -2159,7 +2159,7 @@ $result_tree_text{'at_commands_in_refs_utf8'} = '*document_root C55
    *@ref C1 l126
     *brace_arg C9
     |EXTRA
-    |node_content:{@LaTeX{} @TeX{} @comma{} @dots{} @enddots{}}
+    |node_content:A{0|8}
     |normalized:{LaTeX-TeX-_002c-_2026-_002e_002e_002e}
      *@LaTeX C1 l126
       *brace_container
@@ -2181,7 +2181,7 @@ $result_tree_text{'at_commands_in_refs_utf8'} = '*document_root C55
    *@ref C1 l128
     *brace_arg C5
     |EXTRA
-    |node_content:{@error{} @euro{} @exclamdown{}}
+    |node_content:A{0|4}
     |normalized:{error_002d_002d_003e-_20ac-_00a1}
      *@error C1 l128
       *brace_container
@@ -2197,7 +2197,7 @@ $result_tree_text{'at_commands_in_refs_utf8'} = '*document_root C55
    *@ref C1 l130
     *brace_arg C5
     |EXTRA
-    |node_content:{@ordf{} @ordm{} @questiondown{}}
+    |node_content:A{0|4}
     |normalized:{_00aa-_00ba-_00bf}
      *@ordf C1 l130
       *brace_container
@@ -2213,7 +2213,7 @@ $result_tree_text{'at_commands_in_refs_utf8'} = '*document_root C55
    *@ref C1 l132
     *brace_arg C6
     |EXTRA
-    |node_content:{a@tie{}b @today{} @aa{}}
+    |node_content:A{0|5}
     |normalized:{a-b-_00e5}
      {a}
      *@tie C1 l132
@@ -2230,7 +2230,7 @@ $result_tree_text{'at_commands_in_refs_utf8'} = '*document_root C55
    *@ref C1 l134
     *brace_arg C25
     |EXTRA
-    |node_content:{@AA{} @ae{} @oe{} @AE{} @OE{} @o{} @O{} @ss{} @l{} @L{} @DH{} @dh{} @th{}}
+    |node_content:A{0|24}
     |normalized:{_00c5-_00e6-_0153-_00c6-_0152-_00f8-_00d8-_00df-_0142-_0141-_00d0-_00f0-_00fe}
      *@AA C1 l134
       *brace_container
@@ -2276,7 +2276,7 @@ $result_tree_text{'at_commands_in_refs_utf8'} = '*document_root C55
    *@ref C1 l136
     *brace_arg C21
     |EXTRA
-    |node_content:{@"{a} @~{e} @^{@dotless{i}} @^{a} @`{a} @\'e @,{c} @={e} @ringaccent{e} @H{e} @ogonek{e}}
+    |node_content:A{0|20}
     |normalized:{_00e4-_1ebd-_00ee-_00e2-_00e0-_00e9-_00e7-_0113-e_030a-e_030b-_0119}
      *@" C1 l136
       *brace_container C1
@@ -2329,7 +2329,7 @@ $result_tree_text{'at_commands_in_refs_utf8'} = '*document_root C55
    *@ref C1 l138
     *brace_arg C13
     |EXTRA
-    |node_content:{@dotaccent{e} @u{e} @ubaraccent{e} @udotaccent{e} @v{e} @dotless{j} @tieaccent{ee}}
+    |node_content:A{0|12}
     |normalized:{_0117-_0115-e_0332-_1eb9-_011b-_0237-e_0361e}
      *@dotaccent C1 l138
       *brace_container C1
@@ -2364,7 +2364,7 @@ $result_tree_text{'at_commands_in_refs_utf8'} = '*document_root C55
    *@ref C1 l140
     *brace_arg C5
     |EXTRA
-    |node_content:{@dotless{i} @`{@=E} @,{@\'C}}
+    |node_content:A{0|4}
     |normalized:{_0131-_1e14-_1e08}
      *@dotless C1 l140
       *brace_container C1
@@ -2387,7 +2387,7 @@ $result_tree_text{'at_commands_in_refs_utf8'} = '*document_root C55
    *@ref C1 l142
     *brace_arg C11
     |EXTRA
-    |node_content:{@quotedblleft{} @quotedblright{} @quoteleft{} @quoteright{} @quotedblbase{} @quotesinglbase{}}
+    |node_content:A{0|10}
     |normalized:{_201c-_201d-_2018-_2019-_201e-_201a}
      *@quotedblleft C1 l142
       *brace_container
@@ -2412,7 +2412,7 @@ $result_tree_text{'at_commands_in_refs_utf8'} = '*document_root C55
    *@ref C1 l144
     *brace_arg C11
     |EXTRA
-    |node_content:{@guillemetleft{} @guillemetright{} @guillemotleft{} @guillemotright{} @guilsinglleft{} @guilsinglright{}}
+    |node_content:A{0|10}
     |normalized:{_00ab-_00bb-_00ab-_00bb-_2039-_203a}
      *@guillemetleft C1 l144
       *brace_container
@@ -2437,7 +2437,7 @@ $result_tree_text{'at_commands_in_refs_utf8'} = '*document_root C55
    *@ref C1 l146
     *brace_arg C1
     |EXTRA
-    |node_content:{`` \'\' --- -- ` \'}
+    |node_content:A{0|0}
     |normalized:{_0060_0060-_0027_0027-_002d_002d_002d-_002d_002d-_0060-_0027}
      {`` \'\' --- -- ` \'}
    {\\n}
@@ -2446,7 +2446,7 @@ $result_tree_text{'at_commands_in_refs_utf8'} = '*document_root C55
    *@ref C1 l148
     *brace_arg C5
     |EXTRA
-    |node_content:{@acronym{AAA, fff} @acronym{AAA} @acronym{BBB}}
+    |node_content:A{0|4}
     |normalized:{AAA-AAA-BBB}
      *@acronym C2 l148
       *brace_arg C1
@@ -2474,7 +2474,7 @@ $result_tree_text{'at_commands_in_refs_utf8'} = '*document_root C55
    *@ref C1 l151
     *brace_arg C5
     |EXTRA
-    |node_content:{@abbr{CCC, rrr} @abbr{CCC} @abbr{DDD}}
+    |node_content:A{0|4}
     |normalized:{CCC-CCC-DDD}
      *@abbr C2 l151
       *brace_arg C1
@@ -2505,7 +2505,7 @@ $result_tree_text{'at_commands_in_refs_utf8'} = '*document_root C55
    *@ref C1 l154
     *brace_arg C3
     |EXTRA
-    |node_content:{@email{someone@@somewher, the someone} @email{no_explain@@there}}
+    |node_content:A{0|2}
     |normalized:{someone_0040somewher-no_005fexplain_0040there}
      *@email C2 l154
       *brace_arg C3
@@ -2533,7 +2533,7 @@ $result_tree_text{'at_commands_in_refs_utf8'} = '*document_root C55
    *@ref C1 l157
     *brace_arg C3
     |EXTRA
-    |node_content:{@image{f--ile1}  @image{f--ile,aze,az,alt,e--xt}}
+    |node_content:A{0|2}
     |normalized:{f_002d_002dile1-f_002d_002dile}
      *@image C1 l157
      |EXTRA
@@ -2560,7 +2560,7 @@ $result_tree_text{'at_commands_in_refs_utf8'} = '*document_root C55
    *@ref C1 l159
     *brace_arg C1
     |EXTRA
-    |node_content:{@verb{. @ {} . .}}
+    |node_content:A{0|0}
     |normalized:{-_0040-_007b_007d-_002e-}
      *@verb C1 l159
      |INFO
@@ -2582,7 +2582,7 @@ $result_tree_text{'at_commands_in_refs_utf8'} = '*document_root C55
    *@ref C1 l162
     *brace_arg C17
     |EXTRA
-    |node_content:{@cite{cite @asis{asis}} @w{in @@w @b{b}} @r{in r} @sc{sc} @strong{str} @t{t} @var{var} @dfn{dfn} @i{i}}
+    |node_content:A{0|16}
     |normalized:{cite-asis-in-_0040w-b-in-r-sc-str-t-var-dfn-i}
      *@cite C1 l162
       *brace_container C2
@@ -2633,7 +2633,7 @@ $result_tree_text{'at_commands_in_refs_utf8'} = '*document_root C55
    *@ref C1 l164
     *brace_arg C13
     |EXTRA
-    |node_content:{@env{env} @code{code} @option{option} @samp{samp} @command{command} @file{file} @kbd{C-x @key{ESC}}}
+    |node_content:A{0|12}
     |normalized:{env-code-option-samp-command-file-C_002dx-ESC}
      *@env C1 l164
       *brace_container C1
@@ -2671,7 +2671,7 @@ $result_tree_text{'at_commands_in_refs_utf8'} = '*document_root C55
    *@ref C1 l166
     *brace_arg C2
     |EXTRA
-    |node_content:{8.27@dmn{in}}
+    |node_content:A{0|1}
     |normalized:{8_002e27in}
      {8.27}
      *@dmn C1 l166
@@ -2683,7 +2683,7 @@ $result_tree_text{'at_commands_in_refs_utf8'} = '*document_root C55
    *@ref C1 l168
     *brace_arg C3
     |EXTRA
-    |node_content:{@sansserif{sansserif} @slanted{slanted}}
+    |node_content:A{0|2}
     |normalized:{sansserif-slanted}
      *@sansserif C1 l168
       *brace_container C1
@@ -2698,7 +2698,7 @@ $result_tree_text{'at_commands_in_refs_utf8'} = '*document_root C55
    *@ref C1 l170
     *brace_arg C1
     |EXTRA
-    |node_content:{@indicateurl{indicateurl}}
+    |node_content:A{0|0}
     |normalized:{indicateurl}
      *@indicateurl C1 l170
       *brace_container C1
@@ -2709,7 +2709,7 @@ $result_tree_text{'at_commands_in_refs_utf8'} = '*document_root C55
    *@ref C1 l172
     *brace_arg C3
     |EXTRA
-    |node_content:{@sub{g}H 3@sup{rd}}
+    |node_content:A{0|2}
     |normalized:{gH-3rd}
      *@sub C1 l172
       *brace_container C1
@@ -2724,7 +2724,7 @@ $result_tree_text{'at_commands_in_refs_utf8'} = '*document_root C55
    *@ref C1 l174
     *brace_arg C5
     |EXTRA
-    |node_content:{@url{http://somewhere_aaa} @url{url, text} @uref{/man.cgi/1/ls,,ls}}
+    |node_content:A{0|4}
     |normalized:{http_003a_002f_002fsomewhere_005faaa-url-_002fman_002ecgi_002f1_002fls}
      *@url C1 l174
       *brace_arg C1

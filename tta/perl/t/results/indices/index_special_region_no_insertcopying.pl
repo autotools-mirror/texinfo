@@ -305,7 +305,7 @@ $result_tree_text{'index_special_region_no_insertcopying'} = '*document_root C7
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{Copying and indices}
+    |node_content:A{0|0}
     |normalized:{Copying-and-indices}
      {Copying and indices}
     {menu_entry_separator:::}
@@ -366,14 +366,14 @@ $result_tree_text{'index_special_region_no_insertcopying'} = '*document_root C7
    *@ref C1 index_special_region_no_insertcopying.texi:l71
     *brace_arg C1
     |EXTRA
-    |node_content:{Copying information}
+    |node_content:A{0|0}
     |normalized:{Copying-information}
      {Copying information}
    { for the copying information.\\n}
    *@ref C1 index_special_region_no_insertcopying.texi:l72
     *brace_arg C1
     |EXTRA
-    |node_content:{Public domain reference}
+    |node_content:A{0|0}
     |normalized:{Public-domain-reference}
      {Public domain reference}
    { for reference on the licence.\\n}
@@ -382,14 +382,14 @@ $result_tree_text{'index_special_region_no_insertcopying'} = '*document_root C7
    *@ref C1 index_special_region_no_insertcopying.texi:l74
     *brace_arg C1
     |EXTRA
-    |node_content:{Titlepage anchor}
+    |node_content:A{0|0}
     |normalized:{Titlepage-anchor}
      {Titlepage anchor}
    { for the titlepage.\\n}
    *@ref C1 index_special_region_no_insertcopying.texi:l75
     *brace_arg C1
     |EXTRA
-    |node_content:{Titlepage footnote anchor}
+    |node_content:A{0|0}
     |normalized:{Titlepage-footnote-anchor}
      {Titlepage footnote anchor}
    { for reference on the titlepage.\\n}

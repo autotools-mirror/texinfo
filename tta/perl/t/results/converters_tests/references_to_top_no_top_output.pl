@@ -188,42 +188,42 @@ $result_tree_text{'references_to_top_no_top_output'} = '*document_root C5
    *@pxref C1 l35
     *brace_arg C1
     |EXTRA
-    |node_content:{a in copying}
+    |node_content:A{0|0}
     |normalized:{a-in-copying}
      {a in copying}
    {.\\n}
    *@pxref C1 l36
     *brace_arg C1
     |EXTRA
-    |node_content:{a in top}
+    |node_content:A{0|0}
     |normalized:{a-in-top}
      {a in top}
    {\\n}
    *@pxref C1 l37
     *brace_arg C1
     |EXTRA
-    |node_content:{a in footnote}
+    |node_content:A{0|0}
     |normalized:{a-in-footnote}
      {a in footnote}
    {\\n}
    *@pxref C1 l38
     *brace_arg C1
     |EXTRA
-    |node_content:{a in float}
+    |node_content:A{0|0}
     |normalized:{a-in-float}
      {a in float}
    {\\n}
    *@pxref C1 l39
     *brace_arg C1
     |EXTRA
-    |node_content:{a in caption}
+    |node_content:A{0|0}
     |normalized:{a-in-caption}
      {a in caption}
    {\\n}
    *@pxref C1 l40
     *brace_arg C1
     |EXTRA
-    |node_content:{a in paragraph in top}
+    |node_content:A{0|0}
     |normalized:{a-in-paragraph-in-top}
      {a in paragraph in top}
    {\\n}

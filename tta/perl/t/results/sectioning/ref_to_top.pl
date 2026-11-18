@@ -37,7 +37,7 @@ $result_tree_text{'ref_to_top'} = '*document_root C3
    *@xref C1 l5
     *brace_arg C1
     |EXTRA
-    |node_content:{TOP}
+    |node_content:A{0|0}
     |normalized:{Top}
      {TOP}
    {.\\n}

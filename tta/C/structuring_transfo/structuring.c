@@ -1121,8 +1121,8 @@ complete_node_tree_with_menus (DOCUMENT *document)
                         = menu_content->e.c->contents.list[l];
                       if (content->type == ET_menu_entry_node)
                         {
-                          const ELEMENT *manual_content
-                           = lookup_extra_container (content,
+                          const INTEGER_LIST *manual_content
+                           = lookup_extra_integer_list (content,
                                                      AI_key_manual_content);
 
                           if (!manual_content)
@@ -1167,8 +1167,8 @@ complete_node_tree_with_menus (DOCUMENT *document)
                     }
                   if (menu_node && previous_node_relations)
                     {
-                      const ELEMENT *prev_manual_content
-                        = lookup_extra_container (previous_node,
+                      const INTEGER_LIST *prev_manual_content
+                        = lookup_extra_integer_list (previous_node,
                                                   AI_key_manual_content);
                       if (!prev_manual_content)
                         {
@@ -1187,8 +1187,8 @@ complete_node_tree_with_menus (DOCUMENT *document)
                     }
                   if (menu_node_relations && previous_node)
                     {
-                      const ELEMENT *manual_content
-                        = lookup_extra_container (menu_node,
+                      const INTEGER_LIST *manual_content
+                        = lookup_extra_integer_list (menu_node,
                                                   AI_key_manual_content);
 
                       if (!manual_content)
@@ -1232,8 +1232,8 @@ complete_node_tree_with_menus (DOCUMENT *document)
                       const ELEMENT *content = menu_content->e.c->contents.list[l];
                       if (content->type == ET_menu_entry_node)
                         {
-                          const ELEMENT *manual_content
-                           = lookup_extra_container (content,
+                          const INTEGER_LIST *manual_content
+                           = lookup_extra_integer_list (content,
                                                    AI_key_manual_content);
 
                           if (!manual_content)
@@ -1330,8 +1330,8 @@ check_node_tree_menu_structure (DOCUMENT *document)
                     if (content->type != ET_menu_entry_node)
                       continue;
 
-                    const ELEMENT *manual_content
-                     = lookup_extra_container (content,
+                    const INTEGER_LIST *manual_content
+                     = lookup_extra_integer_list (content,
                                                AI_key_manual_content);
 
                     if (!manual_content)
@@ -1623,8 +1623,8 @@ check_node_tree_menu_structure (DOCUMENT *document)
           }
         if (up_node)
           {
-            const ELEMENT *manual_content = lookup_extra_container (up_node,
-                                                     AI_key_manual_content);
+            const INTEGER_LIST *manual_content
+                = lookup_extra_integer_list (up_node, AI_key_manual_content);
             int is_target = (node->flags & EF_is_target);
 
             /* No check if node up is an external manual */
@@ -1911,8 +1911,8 @@ set_top_node_next (const NODE_RELATIONS_LIST *nodes_list,
                 top_node_next = 0;
               else
                 {
-                  const ELEMENT *top_node_next_manual_content
-                   = lookup_extra_container (top_node_next,
+                  const INTEGER_LIST *top_node_next_manual_content
+                   = lookup_extra_integer_list (top_node_next,
                                              AI_key_manual_content);
               /* no prev from top_node_next to Top if not a local node */
                   if (top_node_next_manual_content)
@@ -2012,8 +2012,8 @@ construct_nodes_tree (DOCUMENT *document)
               const ELEMENT *direction_element
                 = arguments_line->e.c->contents.list[i];
               int direction = (int) i - 1;
-              const ELEMENT *manual_content
-                            = lookup_extra_container (direction_element,
+              const INTEGER_LIST *manual_content
+                       = lookup_extra_integer_list (direction_element,
                                                     AI_key_manual_content);
               if (manual_content)
                 {
@@ -2109,7 +2109,7 @@ associate_internal_references (DOCUMENT *document)
     {
       ELEMENT *ref = refs->list[i];
       ELEMENT *label_element;
-      const ELEMENT *label_node_content;
+      const INTEGER_LIST *label_node_content;
 
       if (ref->type == ET_menu_entry_node)
         label_element = ref;
@@ -2117,11 +2117,16 @@ associate_internal_references (DOCUMENT *document)
         label_element = ref->e.c->contents.list[0];
 
       label_node_content
-        = lookup_extra_container (label_element, AI_key_node_content);
+        = lookup_extra_integer_list (label_element, AI_key_node_content);
       if (label_node_content)
         {
+          ELEMENT *tmp = new_element (ET_NONE);
+          insert_slice_into_contents (tmp, 0, label_element,
+                                  label_node_content->list[0],
+                                  label_node_content->list[1] +1);
+
           char *normalized
-            = convert_contents_to_node_identifier (label_node_content);
+            = convert_contents_to_node_identifier (tmp);
           if (normalized)
             {
               if (strlen (normalized))
@@ -2132,6 +2137,7 @@ associate_internal_references (DOCUMENT *document)
               else
                 free (normalized);
             }
+          destroy_element (tmp);
         }
 
       if (ref->type == ET_menu_entry_node)
@@ -2377,9 +2383,15 @@ new_node_menu_entry (const NODE_RELATIONS *node_relations, int use_sections)
   if (parsed_entry_node->node_content)
     {
       char *normalized;
-      add_extra_container (menu_entry_node, AI_key_node_content,
-                           parsed_entry_node->node_content);
-      normalized = convert_to_node_identifier (parsed_entry_node->node_content);
+      ELEMENT *tmp = new_element (ET_NONE);
+      add_extra_integer_list (menu_entry_node, AI_key_node_content,
+                              parsed_entry_node->node_content);
+      insert_slice_into_contents (tmp, 0, menu_entry_node,
+                                  parsed_entry_node->node_content->list[0],
+                                  parsed_entry_node->node_content->list[1] +1);
+      normalized = convert_to_node_identifier (tmp);
+      destroy_element (tmp);
+
       if (normalized)
         {
           if (strlen (normalized))
@@ -2393,8 +2405,8 @@ new_node_menu_entry (const NODE_RELATIONS *node_relations, int use_sections)
     }
   /* seems that it may happen, if there is leading parenthesised text? */
   if (parsed_entry_node->manual_content)
-    add_extra_container (menu_entry_node, AI_key_manual_content,
-                         parsed_entry_node->manual_content);
+    add_extra_integer_list (menu_entry_node, AI_key_manual_content,
+                            parsed_entry_node->manual_content);
   free (parsed_entry_node);
 
   return entry;

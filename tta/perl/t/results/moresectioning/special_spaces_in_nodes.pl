@@ -63,7 +63,7 @@ $result_tree_text{'special_spaces_in_nodes'} = '*document_root C14
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{CHARACTER TABULATION|\\t| FORM FEED|\\f| LINE TABULATION||}
+    |node_content:A{0|0}
     |normalized:{CHARACTER-TABULATION_007c-_007c-FORM-FEED_007c-_007c-LINE-TABULATION_007c-_007c}
      {CHARACTER TABULATION|\\t| FORM FEED|\\f| LINE TABULATION||}
     {menu_entry_separator:::}
@@ -74,7 +74,7 @@ $result_tree_text{'special_spaces_in_nodes'} = '*document_root C14
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{CARRIAGE RETURN|'."\r".'|}
+    |node_content:A{0|0}
     |normalized:{CARRIAGE-RETURN_007c-_007c}
      {CARRIAGE RETURN|'."\r".'|}
     {menu_entry_separator:::}
@@ -85,7 +85,7 @@ $result_tree_text{'special_spaces_in_nodes'} = '*document_root C14
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{NEXT LINE (NEL)|| NO-BREAK SPACE| | OGHAM SPACE MARK| |}
+    |node_content:A{0|0}
     |normalized:{NEXT-LINE-_0028NEL_0029_007c_0085_007c-NO_002dBREAK-SPACE_007c_00a0_007c-OGHAM-SPACE-MARK_007c_1680_007c}
      {NEXT LINE (NEL)|| NO-BREAK SPACE| | OGHAM SPACE MARK| |}
     {menu_entry_separator:::}
@@ -96,7 +96,7 @@ $result_tree_text{'special_spaces_in_nodes'} = '*document_root C14
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{MONGOLIAN VOWEL SEPARATOR|᠎| EM SPACE| |}
+    |node_content:A{0|0}
     |normalized:{MONGOLIAN-VOWEL-SEPARATOR_007c_180e_007c-EM-SPACE_007c_2003_007c}
      {MONGOLIAN VOWEL SEPARATOR|᠎| EM SPACE| |}
     {menu_entry_separator:::}
@@ -107,7 +107,7 @@ $result_tree_text{'special_spaces_in_nodes'} = '*document_root C14
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{THREE-PER-EM SPACE| | FOUR-PER-EM SPACE| | SIX-PER-EM SPACE| |}
+    |node_content:A{0|0}
     |normalized:{THREE_002dPER_002dEM-SPACE_007c_2004_007c-FOUR_002dPER_002dEM-SPACE_007c_2005_007c-SIX_002dPER_002dEM-SPACE_007c_2006_007c}
      {THREE-PER-EM SPACE| | FOUR-PER-EM SPACE| | SIX-PER-EM SPACE| |}
     {menu_entry_separator:::}
@@ -118,7 +118,7 @@ $result_tree_text{'special_spaces_in_nodes'} = '*document_root C14
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{FIGURE SPACE| | PUNCTUATION SPACE| | THIN SPACE| |}
+    |node_content:A{0|0}
     |normalized:{FIGURE-SPACE_007c_2007_007c-PUNCTUATION-SPACE_007c_2008_007c-THIN-SPACE_007c_2009_007c}
      {FIGURE SPACE| | PUNCTUATION SPACE| | THIN SPACE| |}
     {menu_entry_separator:::}
@@ -129,7 +129,7 @@ $result_tree_text{'special_spaces_in_nodes'} = '*document_root C14
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{HAIR SPACE| | LINE SEPARATOR| | PARAGRAPH SEPARATOR| |}
+    |node_content:A{0|0}
     |normalized:{HAIR-SPACE_007c_200a_007c-LINE-SEPARATOR_007c_2028_007c-PARAGRAPH-SEPARATOR_007c_2029_007c}
      {HAIR SPACE| | LINE SEPARATOR| | PARAGRAPH SEPARATOR| |}
     {menu_entry_separator:::}
@@ -140,7 +140,7 @@ $result_tree_text{'special_spaces_in_nodes'} = '*document_root C14
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{NARROW NO-BREAK SPACE| | MEDIUM MATHEMATICAL SPACE| | IDEOGRAPHIC SPACE|　|}
+    |node_content:A{0|0}
     |normalized:{NARROW-NO_002dBREAK-SPACE_007c_202f_007c-MEDIUM-MATHEMATICAL-SPACE_007c_205f_007c-IDEOGRAPHIC-SPACE_007c_3000_007c}
      {NARROW NO-BREAK SPACE| | MEDIUM MATHEMATICAL SPACE| | IDEOGRAPHIC SPACE|　|}
     {menu_entry_separator:::}
@@ -252,7 +252,7 @@ $result_tree_text{'special_spaces_in_nodes'} = '*document_root C14
    *@ref C1 special_spaces_in_nodes.texi:l37
     *brace_arg C1
     |EXTRA
-    |node_content:{NEXT LINE (NEL)|| NO-BREAK SPACE| | OGHAM SPACE MARK| |}
+    |node_content:A{0|0}
     |normalized:{NEXT-LINE-_0028NEL_0029_007c_0085_007c-NO_002dBREAK-SPACE_007c_00a0_007c-OGHAM-SPACE-MARK_007c_1680_007c}
      {NEXT LINE (NEL)|| NO-BREAK SPACE| | OGHAM SPACE MARK| |}
    {\\n}

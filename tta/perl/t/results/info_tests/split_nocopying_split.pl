@@ -47,7 +47,7 @@ $result_tree_text{'split_nocopying_split'} = '*document_root C6
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{Ch1}
+    |node_content:A{0|0}
     |normalized:{Ch1}
      {Ch1}
     {menu_entry_separator:::}

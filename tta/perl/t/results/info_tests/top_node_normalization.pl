@@ -26,14 +26,14 @@ $result_tree_text{'top_node_normalization'} = '*document_root C2
    *@xref C1 l3
     *brace_arg C1
     |EXTRA
-    |node_content:{TOP}
+    |node_content:A{0|0}
     |normalized:{Top}
      {TOP}
    {. }
    *@xref C1 l3
     *brace_arg C1
     |EXTRA
-    |node_content:{tOP}
+    |node_content:A{0|0}
     |normalized:{Top}
      {tOP}
    {.\\n}
@@ -46,7 +46,7 @@ $result_tree_text{'top_node_normalization'} = '*document_root C2
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{tOP}
+    |node_content:A{0|0}
     |normalized:{Top}
      {tOP}
     {menu_entry_separator:::}

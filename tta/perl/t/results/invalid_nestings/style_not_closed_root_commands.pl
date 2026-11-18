@@ -39,7 +39,7 @@ $result_tree_text{'style_not_closed_root_commands'} = '*document_root C6
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{chapter}
+    |node_content:A{0|0}
     |normalized:{chapter}
      {chapter}
     {menu_entry_separator:::}

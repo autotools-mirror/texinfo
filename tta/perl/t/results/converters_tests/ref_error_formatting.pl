@@ -25,7 +25,7 @@ $result_tree_text{'ref_error_formatting'} = '*document_root C1
    *@ref C1 l2
     *brace_arg C1
     |EXTRA
-    |node_content:{node}
+    |node_content:A{0|0}
     |normalized:{node}
      {node}
    {\\n}
@@ -100,7 +100,7 @@ $result_tree_text{'ref_error_formatting'} = '*document_root C1
    *@ref C2 l8
     *brace_arg C1
     |EXTRA
-    |node_content:{node}
+    |node_content:A{0|0}
     |normalized:{node}
      {node}
     *brace_arg C1
@@ -117,7 +117,7 @@ $result_tree_text{'ref_error_formatting'} = '*document_root C1
    *@ref C3 l9
     *brace_arg C1
     |EXTRA
-    |node_content:{node}
+    |node_content:A{0|0}
     |normalized:{node}
      {node}
     *brace_arg
@@ -135,7 +135,7 @@ $result_tree_text{'ref_error_formatting'} = '*document_root C1
    *@ref C4 l10
     *brace_arg C1
     |EXTRA
-    |node_content:{node}
+    |node_content:A{0|0}
      {node}
     *brace_arg
     *brace_arg
@@ -153,7 +153,7 @@ $result_tree_text{'ref_error_formatting'} = '*document_root C1
    *@ref C5 l11
     *brace_arg C1
     |EXTRA
-    |node_content:{node}
+    |node_content:A{0|0}
      {node}
     *brace_arg
     *brace_arg
@@ -172,7 +172,7 @@ $result_tree_text{'ref_error_formatting'} = '*document_root C1
    *@ref C4 l12
     *brace_arg C1
     |EXTRA
-    |node_content:{node}
+    |node_content:A{0|0}
     |normalized:{node}
      {node}
     *brace_arg C1
@@ -192,7 +192,7 @@ $result_tree_text{'ref_error_formatting'} = '*document_root C1
    *@ref C4 l13
     *brace_arg C1
     |EXTRA
-    |node_content:{node}
+    |node_content:A{0|0}
      {node}
     *brace_arg C1
      {cross ref name}
@@ -211,7 +211,7 @@ $result_tree_text{'ref_error_formatting'} = '*document_root C1
    *@ref C5 l14
     *brace_arg C1
     |EXTRA
-    |node_content:{node}
+    |node_content:A{0|0}
      {node}
     *brace_arg C1
      {cross ref name}
@@ -231,7 +231,7 @@ $result_tree_text{'ref_error_formatting'} = '*document_root C1
    *@ref C4 l15
     *brace_arg C1
     |EXTRA
-    |node_content:{node}
+    |node_content:A{0|0}
      {node}
     *brace_arg C1
      {cross ref name}
@@ -251,7 +251,7 @@ $result_tree_text{'ref_error_formatting'} = '*document_root C1
    *@ref C5 l16
     *brace_arg C1
     |EXTRA
-    |node_content:{node}
+    |node_content:A{0|0}
      {node}
     *brace_arg C1
      {cross ref name}
@@ -272,7 +272,7 @@ $result_tree_text{'ref_error_formatting'} = '*document_root C1
    *@ref C5 l17
     *brace_arg C1
     |EXTRA
-    |node_content:{node}
+    |node_content:A{0|0}
      {node}
     *brace_arg C1
      {cross ref name}
@@ -296,7 +296,7 @@ $result_tree_text{'ref_error_formatting'} = '*document_root C1
    *@ref C4 l18
     *brace_arg C1
     |EXTRA
-    |node_content:{node}
+    |node_content:A{0|0}
      {node}
     *brace_arg
     *brace_arg C1
@@ -315,7 +315,7 @@ $result_tree_text{'ref_error_formatting'} = '*document_root C1
    *@ref C5 l19
     *brace_arg C1
     |EXTRA
-    |node_content:{node}
+    |node_content:A{0|0}
      {node}
     *brace_arg
     *brace_arg C1
@@ -335,7 +335,7 @@ $result_tree_text{'ref_error_formatting'} = '*document_root C1
    *@ref C5 l20
     *brace_arg C1
     |EXTRA
-    |node_content:{node}
+    |node_content:A{0|0}
      {node}
     *brace_arg
     *brace_arg C1
@@ -358,7 +358,7 @@ $result_tree_text{'ref_error_formatting'} = '*document_root C1
    *@ref C5 l21
     *brace_arg C1
     |EXTRA
-    |node_content:{node}
+    |node_content:A{0|0}
      {node}
     *brace_arg
     *brace_arg
@@ -611,7 +611,7 @@ $result_tree_text{'ref_error_formatting'} = '*document_root C1
    *@inforef C3 l38
     *brace_arg C1
     |EXTRA
-    |node_content:{node}
+    |node_content:A{0|0}
      {node}
     *brace_arg C2
      {spaces_before_argument: }
@@ -631,7 +631,7 @@ $result_tree_text{'ref_error_formatting'} = '*document_root C1
    *@inforef C1 l39
     *brace_arg C1
     |EXTRA
-    |node_content:{node}
+    |node_content:A{0|0}
     |normalized:{node}
      {node}
    {\\n}
@@ -646,7 +646,7 @@ $result_tree_text{'ref_error_formatting'} = '*document_root C1
    *@inforef C2 l40
     *brace_arg C1
     |EXTRA
-    |node_content:{node}
+    |node_content:A{0|0}
     |normalized:{node}
      {node}
     *brace_arg C2
@@ -664,7 +664,7 @@ $result_tree_text{'ref_error_formatting'} = '*document_root C1
    *@inforef C3 l41
     *brace_arg C1
     |EXTRA
-    |node_content:{node}
+    |node_content:A{0|0}
      {node}
     *brace_arg
     *brace_arg C1

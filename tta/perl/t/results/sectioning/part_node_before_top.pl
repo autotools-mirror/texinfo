@@ -27,14 +27,14 @@ NodeBack: [U0]
     {part node before top}
    *line_arg C2
    |EXTRA
-   |node_content:{Top}
+   |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
     {Top}
    *line_arg
    *line_arg C2
    |EXTRA
-   |node_content:{Top}
+   |node_content:A{0|0}
    |normalized:{Top}
     {Top}
     {spaces_after_argument:\\n}
@@ -77,7 +77,7 @@ NodeBack: [U0]
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{part node before top}
+    |node_content:A{0|0}
     |normalized:{part-node-before-top}
      {part node before top}
     {menu_entry_separator:::}

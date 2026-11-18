@@ -61,7 +61,7 @@ $result_tree_text{'section_chapter_before_top_nodes'} = '*document_root C7
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{section node}
+    |node_content:A{0|0}
     |normalized:{section-node}
      {section node}
     {menu_entry_separator:::}
@@ -104,7 +104,7 @@ $result_tree_text{'section_chapter_before_top_nodes'} = '*document_root C7
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{chapter node}
+    |node_content:A{0|0}
     |normalized:{chapter-node}
      {chapter node}
     {menu_entry_separator:::}

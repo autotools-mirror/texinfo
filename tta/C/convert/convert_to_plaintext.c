@@ -1439,7 +1439,12 @@ plaintext_convert_node_name (CONVERTER *self, const ELEMENT *element,
   if (!label_element)
     {
       /* external node */
-      label_element = lookup_extra_container (element, AI_key_node_content);
+      const INTEGER_LIST *node_content
+         = lookup_extra_integer_list (element, AI_key_node_content);
+      label_element = new_element (ET_NONE);
+      insert_slice_into_contents (label_element, 0, element,
+                                  node_content->list[0],
+                                  node_content->list[1] +1);
     }
   else if (command_data[element->e.c->cmd].flags & CF_sectioning_heading)
     {
@@ -6164,9 +6169,9 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
                   if (node_text.text[0] == '('
                       && self->conf->INFO_SPECIAL_CHARS_QUOTE.o.integer > 0)
                     {
-                      const ELEMENT *manual_content
-                            = lookup_extra_container (menu_entry_node,
-                                                      AI_key_manual_content);
+                      const INTEGER_LIST *manual_content
+                            = lookup_extra_integer_list (menu_entry_node,
+                                                         AI_key_manual_content);
                       if (!manual_content)
                         node_quoting_required = 1;
                     }

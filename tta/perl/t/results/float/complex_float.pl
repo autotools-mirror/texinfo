@@ -52,7 +52,7 @@ $result_tree_text{'complex_float'} = '*document_root C5
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{chapter}
+    |node_content:A{0|0}
     |normalized:{chapter}
      {chapter}
     {menu_entry_separator:::}
@@ -184,7 +184,7 @@ $result_tree_text{'complex_float'} = '*document_root C5
     *@xref C2 l45
      *brace_arg C1
      |EXTRA
-     |node_content:{Top}
+     |node_content:A{0|0}
      |normalized:{Top}
       {Top}
      *brace_arg C1
@@ -389,7 +389,7 @@ $result_tree_text{'complex_float'} = '*document_root C5
       *@xref C2 l80
        *brace_arg C1
        |EXTRA
-       |node_content:{Top}
+       |node_content:A{0|0}
        |normalized:{Top}
         {Top}
        *brace_arg C1
@@ -688,7 +688,7 @@ $result_tree_text{'complex_float'} = '*document_root C5
       *@xref C2 l127
        *brace_arg C1
        |EXTRA
-       |node_content:{Top}
+       |node_content:A{0|0}
        |normalized:{Top}
         {Top}
        *brace_arg C1
@@ -758,7 +758,7 @@ $result_tree_text{'complex_float'} = '*document_root C5
    *@xref C1 l136
     *brace_arg C1
     |EXTRA
-    |node_content:{text with a lot of features}
+    |node_content:A{0|0}
     |normalized:{text-with-a-lot-of-features}
      {text with a lot of features}
    {.\\n}

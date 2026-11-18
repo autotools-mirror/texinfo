@@ -47,7 +47,7 @@ $result_tree_text{'direntry_dircategory_after_first_node'} = '*document_root C3
     {menu_entry_separator:: }
     *menu_entry_node C3
     |EXTRA
-    |manual_content:{in_text}
+    |manual_content:A{1|1}
      {(}
      {in_text}
      {)}

@@ -30,21 +30,21 @@ $result_tree_text{'value_in_node'} = '*document_root C6
     {Top}
    *line_arg C4
    |EXTRA
-   |manual_content:{dir}
+   |manual_content:A{2|2}
     {spaces_before_argument: }
     {(}
     {dir}
     {)}
    *line_arg C4
    |EXTRA
-   |manual_content:{dir}
+   |manual_content:A{2|2}
     {spaces_before_argument: }
     {(}
     {dir}
     {)}
    *line_arg C5
    |EXTRA
-   |manual_content:{dir}
+   |manual_content:A{2|2}
     {spaces_before_argument: }
     {(}
     {dir}
@@ -68,7 +68,7 @@ $result_tree_text{'value_in_node'} = '*document_root C6
     {menu_entry_leading_text:* }
     *menu_entry_node C2
     |EXTRA
-    |node_content:{Node 1  }
+    |node_content:A{0|1}
     |normalized:{Node-1}
      {Node 1}
      >SOURCEMARKS
@@ -109,13 +109,13 @@ $result_tree_text{'value_in_node'} = '*document_root C6
    *line_arg
    *line_arg C2
    |EXTRA
-   |node_content:{Top}
+   |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
     {Top}
    *line_arg C3
    |EXTRA
-   |node_content:{Top}
+   |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
     {Top}
@@ -147,7 +147,7 @@ $result_tree_text{'value_in_node'} = '*document_root C6
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{Section 1.1}
+    |node_content:A{0|0}
     |normalized:{Section-1_002e1}
      {Section 1.1}
      >SOURCEMARKS
@@ -181,13 +181,13 @@ $result_tree_text{'value_in_node'} = '*document_root C6
     {spaces_before_argument: }
    *line_arg C2
    |EXTRA
-   |node_content:{Node 1}
+   |node_content:A{1|1}
    |normalized:{Node-1}
     {spaces_before_argument: }
     {Node 1}
    *line_arg C3
    |EXTRA
-   |node_content:{Node 1}
+   |node_content:A{1|1}
    |normalized:{Node-1}
     {spaces_before_argument: }
     {Node 1}
@@ -197,7 +197,7 @@ $result_tree_text{'value_in_node'} = '*document_root C6
    *@xref C1 l21
     *brace_arg C1
     |EXTRA
-    |node_content:{Node 1}
+    |node_content:A{0|0}
     |normalized:{Node-1}
      {Node 1}
      >SOURCEMARKS

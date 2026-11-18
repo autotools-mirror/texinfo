@@ -61,7 +61,7 @@ $result_tree_text{'no_monolithic_only_toc_out'} = '*document_root C6
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{chapter}
+    |node_content:A{0|0}
     |normalized:{chapter}
      {chapter}
     {menu_entry_separator:::}

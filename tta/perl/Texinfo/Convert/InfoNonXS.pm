@@ -1168,11 +1168,13 @@ sub format_node($$;$) {
 
       # file
       if (exists($node_direction->{'extra'}->{'manual_content'})) {
+        my ($begin_manual, $end_manual)
+         = @{$node_direction->{'extra'}->{'manual_content'}};
         my $file_formatted = Texinfo::TreeElement::new(
                          {'type' => '_code',
                           'contents' => [
                         Texinfo::TreeElement::new({'text' => '('}),
-                             $node_direction->{'extra'}->{'manual_content'},
+                @{$node_direction->{'contents'}}[$begin_manual .. $end_manual],
                                Texinfo::TreeElement::new({'text' => ')'})]});
         $self->convert_line($file_formatted, undef, 1);
       }

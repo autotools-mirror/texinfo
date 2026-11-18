@@ -41,7 +41,7 @@ $result_tree_text{'anchor_in_menu_entry_name'} = '*document_root C3
     {menu_entry_separator:: }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{first}
+    |node_content:A{0|0}
     |normalized:{first}
      {first}
     {menu_entry_separator:.}

@@ -10,6 +10,9 @@ This is the todo list for texi2any
 Before next release
 ===================
 
+When an extra information is added, and sometime modified, the SWIG
+interface should be updated.
+
 If svg is added for @image, for INFO_MATH_IMAGES, could be used:
 dvisvgm --page=1- -o tex_info_images/tex_info_math2img%p.svg $encoded_math2img_dvi_basefile
 

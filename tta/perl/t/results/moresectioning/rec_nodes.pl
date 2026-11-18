@@ -32,7 +32,7 @@ $result_tree_text{'rec_nodes'} = '*document_root C6
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{chap node}
+    |node_content:A{0|0}
     |normalized:{chap-node}
      {chap node}
     {menu_entry_separator:::}
@@ -43,7 +43,7 @@ $result_tree_text{'rec_nodes'} = '*document_root C6
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{node following second}
+    |node_content:A{0|0}
     |normalized:{node-following-second}
      {node following second}
     {menu_entry_separator:::}
@@ -70,12 +70,12 @@ $result_tree_text{'rec_nodes'} = '*document_root C6
    *line_arg
    *line_arg C1
    |EXTRA
-   |node_content:{Top}
+   |node_content:A{0|0}
    |normalized:{Top}
     {Top}
    *line_arg C2
    |EXTRA
-   |node_content:{Top}
+   |node_content:A{0|0}
    |normalized:{Top}
     {Top}
     {spaces_after_argument:\\n}
@@ -88,7 +88,7 @@ $result_tree_text{'rec_nodes'} = '*document_root C6
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{other node}
+    |node_content:A{0|0}
     |normalized:{other-node}
      {other node}
     {menu_entry_separator:::}
@@ -99,7 +99,7 @@ $result_tree_text{'rec_nodes'} = '*document_root C6
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{chap node}
+    |node_content:A{0|0}
     |normalized:{chap-node}
      {chap node}
     {menu_entry_separator:::}
@@ -127,7 +127,7 @@ $result_tree_text{'rec_nodes'} = '*document_root C6
    *line_arg
    *line_arg C2
    |EXTRA
-   |node_content:{chap node}
+   |node_content:A{0|0}
    |normalized:{chap-node}
     {chap node}
     {spaces_after_argument:\\n}
@@ -140,7 +140,7 @@ $result_tree_text{'rec_nodes'} = '*document_root C6
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{other node}
+    |node_content:A{0|0}
     |normalized:{other-node}
      {other node}
     {menu_entry_separator:::}
@@ -168,7 +168,7 @@ $result_tree_text{'rec_nodes'} = '*document_root C6
    *line_arg
    *line_arg C2
    |EXTRA
-   |node_content:{node following second}
+   |node_content:A{0|0}
    |normalized:{node-following-second}
     {node following second}
     {spaces_after_argument:\\n}
@@ -180,7 +180,7 @@ $result_tree_text{'rec_nodes'} = '*document_root C6
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{node following second}
+    |node_content:A{0|0}
     |normalized:{node-following-second}
      {node following second}
     {menu_entry_separator:::}
@@ -211,7 +211,7 @@ $result_tree_text{'rec_nodes'} = '*document_root C6
    *line_arg
    *line_arg C2
    |EXTRA
-   |node_content:{node up node following second}
+   |node_content:A{0|0}
    |normalized:{node-up-node-following-second}
     {node up node following second}
     {spaces_after_argument:\\n}
@@ -226,7 +226,7 @@ $result_tree_text{'rec_nodes'} = '*document_root C6
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{node up node following second}
+    |node_content:A{0|0}
     |normalized:{node-up-node-following-second}
      {node up node following second}
     {menu_entry_separator:::}

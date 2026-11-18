@@ -45,13 +45,14 @@ enum extra_type {
    extra_element,        /* no such type currently */
    extra_element_oot,    /* no such type currently */
    extra_contents,       /* no such type currently */
-   extra_container,
+   extra_container,      /* no such type currently */
    extra_directions,     /* no such type currently */
+   extra_string,
    extra_string_list,
    /* index name and position in index */
    extra_index_entry,
-   extra_string,
    extra_integer,
+   extra_integer_list,
 
    /* ELEMENT flags */
    extra_flag,
@@ -144,8 +145,8 @@ enum string_info_type {
   ai_key(text_arg, string, 0) \
   ai_key(translation_context, string, 0) \
   \
-  ai_key(manual_content, container, 0) \
-  ai_key(node_content, container, 0) \
+  ai_key(manual_content, integer_list, 0) \
+  ai_key(node_content, integer_list, 0) \
   \
   ai_key(documentlanguagevariant, string_list, 0) \
   ai_key(formal_args, string_list, 0) \
@@ -197,6 +198,7 @@ typedef struct INDEX_ENTRY_LOCATION {
 } INDEX_ENTRY_LOCATION;
 
 def_list_type(STRING_LIST, char *);
+def_list_type(INTEGER_LIST, int);
 
 typedef struct KEY_PAIR {
     enum ai_key_name key;
@@ -215,6 +217,8 @@ typedef struct KEY_PAIR {
       INDEX_ENTRY_LOCATION *index_entry;
       /* for extra_string_list */
       STRING_LIST *strings_list;
+      /* for extra_integer_list */
+      INTEGER_LIST *integers_list;
       const struct ELEMENT **directions;
     } k;
 } KEY_PAIR;
@@ -365,9 +369,8 @@ typedef struct INDEX_ENTRY_AND_INDEX {
 
 /* See parse_node_manual function. */
 typedef struct {
-    ELEMENT *manual_content;
-    ELEMENT *node_content;
-    ELEMENT **out_of_tree_elements;
+    INTEGER_LIST *manual_content;
+    INTEGER_LIST *node_content;
 } NODE_SPEC_EXTRA;
 
 typedef struct {

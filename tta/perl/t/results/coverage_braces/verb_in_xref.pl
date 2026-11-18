@@ -23,7 +23,7 @@ $result_tree_text{'verb_in_xref'} = '*document_root C1
    *@xref C2 l3
     *brace_arg C1
     |EXTRA
-    |node_content:{point}
+    |node_content:A{0|0}
     |normalized:{point}
      {point}
     *brace_arg C2

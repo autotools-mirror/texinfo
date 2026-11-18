@@ -42,7 +42,7 @@ $result_tree_text{'space_in_menu'} = '*document_root C5
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{node}
+    |node_content:A{0|0}
     |normalized:{node}
      {node}
     {menu_entry_separator:::           }

@@ -29,19 +29,19 @@ $result_tree_text{'root_command_in_conditional'} = '*document_root C2
     {Getting Started}
    *line_arg C2
    |EXTRA
-   |node_content:{Tutorial}
+   |node_content:A{1|1}
    |normalized:{Tutorial}
     {spaces_before_argument: }
     {Tutorial}
    *line_arg C2
    |EXTRA
-   |node_content:{Top}
+   |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
     {Top}
    *line_arg C3
    |EXTRA
-   |node_content:{Top}
+   |node_content:A{1|1}
    |normalized:{Top}
    >SOURCEMARKS
    >expanded_conditional_command<end;1>

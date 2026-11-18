@@ -22,21 +22,21 @@ $result_tree_text{'top_node_up_explicit_no_nodes'} = '*document_root C5
     {Top}
    *line_arg C4
    |EXTRA
-   |manual_content:{dir}
+   |manual_content:A{2|2}
     {spaces_before_argument: }
     {(}
     {dir}
     {)}
    *line_arg C4
    |EXTRA
-   |manual_content:{weird}
+   |manual_content:A{2|2}
     {spaces_before_argument: }
     {(}
     {weird}
     {)}
    *line_arg C5
    |EXTRA
-   |manual_content:{dir}
+   |manual_content:A{2|2}
     {spaces_before_argument: }
     {(}
     {dir}
@@ -63,7 +63,7 @@ $result_tree_text{'top_node_up_explicit_no_nodes'} = '*document_root C5
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{Chap}
+    |node_content:A{0|0}
     |normalized:{Chap}
      {Chap}
     {menu_entry_separator:::}

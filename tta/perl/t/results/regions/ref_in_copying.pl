@@ -19,7 +19,7 @@ $result_tree_text{'ref_in_copying'} = '*document_root C5
      *@ref C1 l2
       *brace_arg C1
       |EXTRA
-      |node_content:{GFDL}
+      |node_content:A{0|0}
       |normalized:{GFDL}
        {GFDL}
      {\\n}
@@ -65,7 +65,7 @@ $result_tree_text{'ref_in_copying'} = '*document_root C5
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{GFDL}
+    |node_content:A{0|0}
     |normalized:{GFDL}
      {GFDL}
     {menu_entry_separator:::}

@@ -114,7 +114,7 @@ $result_tree_text{'glossary'} = '*document_root C5
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{glossary}
+    |node_content:A{0|0}
     |normalized:{glossary}
      {glossary}
     {menu_entry_separator:::}
@@ -152,7 +152,7 @@ $result_tree_text{'glossary'} = '*document_root C5
    *@ref C2 glossary.texi:l42:@gentry
     *brace_arg C1
     |EXTRA
-    |node_content:{id1}
+    |node_content:A{0|0}
     |normalized:{id1}
      {id1}
     *brace_arg C1
@@ -261,7 +261,7 @@ $result_tree_text{'glossary'} = '*document_root C5
    *@ref C2 glossary.texi:l43:@gentry
     *brace_arg C1
     |EXTRA
-    |node_content:{id2}
+    |node_content:A{0|0}
     |normalized:{id2}
      {id2}
     *brace_arg C1

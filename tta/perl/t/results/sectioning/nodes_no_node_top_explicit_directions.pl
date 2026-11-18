@@ -30,7 +30,7 @@ NodeForward: [U1]
    *line_arg
    *line_arg C4
    |EXTRA
-   |manual_content:{dir}
+   |manual_content:A{1|1}
     {(}
     {dir}
     {)}
@@ -46,7 +46,7 @@ NodeForward: [U1]
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{second node}
+    |node_content:A{0|0}
     |normalized:{second-node}
      {second node}
     {menu_entry_separator:::}
@@ -81,12 +81,12 @@ NodeBack: [U0]
    *line_arg
    *line_arg C1
    |EXTRA
-   |node_content:{first}
+   |node_content:A{0|0}
    |normalized:{first}
     {first}
    *line_arg C2
    |EXTRA
-   |node_content:{first}
+   |node_content:A{0|0}
    |normalized:{first}
     {first}
     {spaces_after_argument:\\n}

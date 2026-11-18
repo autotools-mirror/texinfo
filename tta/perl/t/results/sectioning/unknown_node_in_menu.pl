@@ -30,7 +30,7 @@ $result_tree_text{'unknown_node_in_menu'} = '*document_root C2
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{unknown}
+    |node_content:A{0|0}
     |normalized:{unknown}
      {unknown}
     {menu_entry_separator:::}

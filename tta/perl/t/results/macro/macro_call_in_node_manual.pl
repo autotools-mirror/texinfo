@@ -109,7 +109,7 @@ $result_tree_text{'macro_call_in_node_manual'} = '*document_root C1
     {menu_entry_leading_text:* }
     *menu_entry_node C3
     |EXTRA
-    |manual_content:{a_man}
+    |manual_content:A{1|1}
      {(}
      >SOURCEMARKS
      >macro_expansion<start;1>
@@ -126,7 +126,7 @@ $result_tree_text{'macro_call_in_node_manual'} = '*document_root C1
     {menu_entry_leading_text:* }
     *menu_entry_node C3
     |EXTRA
-    |manual_content:{begin}
+    |manual_content:A{1|1}
      {(}
      >SOURCEMARKS
      >macro_expansion<start;2>
@@ -144,8 +144,8 @@ $result_tree_text{'macro_call_in_node_manual'} = '*document_root C1
     {menu_entry_leading_text:* }
     *menu_entry_node C4
     |EXTRA
-    |manual_content:{begin}
-    |node_content:{the node}
+    |manual_content:A{1|1}
+    |node_content:A{3|3}
     |normalized:{the-node}
      {(}
      >SOURCEMARKS
@@ -165,7 +165,7 @@ $result_tree_text{'macro_call_in_node_manual'} = '*document_root C1
     {menu_entry_leading_text:* }
     *menu_entry_node C3
     |EXTRA
-    |manual_content:{beginlast}
+    |manual_content:A{1|1}
      {(}
      >SOURCEMARKS
      >macro_expansion<start;4>
@@ -187,8 +187,8 @@ $result_tree_text{'macro_call_in_node_manual'} = '*document_root C1
     {menu_entry_leading_text:* }
     *menu_entry_node C5
     |EXTRA
-    |manual_content:{nomlast}
-    |node_content:{distant}
+    |manual_content:A{1|1}
+    |node_content:A{4|4}
     |normalized:{distant}
      {(}
      {nomlast}
@@ -209,7 +209,7 @@ $result_tree_text{'macro_call_in_node_manual'} = '*document_root C1
     {menu_entry_leading_text:* }
     *menu_entry_node C5
     |EXTRA
-    |manual_content:{begin@code{in code}last}
+    |manual_content:A{1|3}
      {(}
      >SOURCEMARKS
      >macro_expansion<start;7>
@@ -237,8 +237,8 @@ $result_tree_text{'macro_call_in_node_manual'} = '*document_root C1
     {menu_entry_leading_text:* }
     *menu_entry_node C5
     |EXTRA
-    |manual_content:{nomlast}
-    |node_content:{thenode}
+    |manual_content:A{1|1}
+    |node_content:A{4|4}
     |normalized:{thenode}
      {(}
      {nomlast}
@@ -259,8 +259,8 @@ $result_tree_text{'macro_call_in_node_manual'} = '*document_root C1
     {menu_entry_leading_text:* }
     *menu_entry_node C5
     |EXTRA
-    |manual_content:{nomlast}
-    |node_content:{mynodeand after}
+    |manual_content:A{1|1}
+    |node_content:A{4|4}
     |normalized:{mynodeand-after}
      {(}
      {nomlast}

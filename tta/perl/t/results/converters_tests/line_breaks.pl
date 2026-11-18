@@ -125,7 +125,7 @@ $result_tree_text{'line_breaks'} = '*document_root C5
       *@ref C2 l19
        *brace_arg C3
        |EXTRA
-       |node_content:{a @* new node}
+       |node_content:A{0|2}
        |normalized:{a-new-node}
         {a }
         *@*
@@ -191,7 +191,7 @@ $result_tree_text{'line_breaks'} = '*document_root C5
     *@xref C1 l33
      *brace_arg C3
      |EXTRA
-     |node_content:{a @* new node}
+     |node_content:A{0|2}
      |normalized:{a-new-node}
       {a }
       *@*

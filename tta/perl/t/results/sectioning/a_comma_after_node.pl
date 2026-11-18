@@ -22,13 +22,13 @@ $result_tree_text{'a_comma_after_node'} = '*document_root C2
     {Commands}
    *line_arg C2
    |EXTRA
-   |node_content:{Requirements}
+   |node_content:A{1|1}
    |normalized:{Requirements}
     {spaces_before_argument: }
     {Requirements}
    *line_arg C3
    |EXTRA
-   |node_content:{Nodes and Menus}
+   |node_content:A{1|1}
    |normalized:{Nodes-and-Menus}
     {spaces_before_argument: }
     {Nodes and Menus}

@@ -66,7 +66,7 @@ $result_tree_text{'equivalent_labels'} = '*document_root C2
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{anch}
+    |node_content:A{0|0}
     |normalized:{anch}
      {anch}
     {menu_entry_separator:::}
@@ -77,7 +77,7 @@ $result_tree_text{'equivalent_labels'} = '*document_root C2
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{@code{floa}}
+    |node_content:A{0|0}
     |normalized:{floa}
      *@code C1 l11
       *brace_container C1

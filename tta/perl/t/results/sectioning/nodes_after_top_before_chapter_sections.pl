@@ -35,7 +35,7 @@ NodeUp: [U0]
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{second node}
+    |node_content:A{0|0}
     |normalized:{second-node}
      {second node}
     {menu_entry_separator:::}
@@ -46,7 +46,7 @@ NodeUp: [U0]
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{third node}
+    |node_content:A{0|0}
     |normalized:{third-node}
      {third node}
     {menu_entry_separator:::}
@@ -72,18 +72,18 @@ NodeUp: [U0]
     {second node}
    *line_arg C2
    |EXTRA
-   |node_content:{third node}
+   |node_content:A{1|1}
    |normalized:{third-node}
     {spaces_before_argument: }
     {third node}
    *line_arg C1
    |EXTRA
-   |node_content:{Top}
+   |node_content:A{0|0}
    |normalized:{Top}
     {Top}
    *line_arg C2
    |EXTRA
-   |node_content:{Top}
+   |node_content:A{0|0}
    |normalized:{Top}
     {Top}
     {spaces_after_argument:\\n}
@@ -103,12 +103,12 @@ NodeUp: [U0]
    *line_arg
    *line_arg C1
    |EXTRA
-   |node_content:{second node}
+   |node_content:A{0|0}
    |normalized:{second-node}
     {second node}
    *line_arg C2
    |EXTRA
-   |node_content:{Top}
+   |node_content:A{0|0}
    |normalized:{Top}
     {Top}
     {spaces_after_argument:\\n}

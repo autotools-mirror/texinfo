@@ -309,7 +309,7 @@ $result_tree_text{'headings_after_lone_nodes'} = '*document_root C13
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{subnode}
+    |node_content:A{0|0}
     |normalized:{subnode}
      {subnode}
     {menu_entry_separator:::}

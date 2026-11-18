@@ -31,8 +31,8 @@ $result_tree_text{'node_on_index_entry_line'} = '*document_root C2
     {a}
    *line_arg C5
    |EXTRA
-   |manual_content:{m}
-   |node_content:{b}
+   |manual_content:A{2|2}
+   |node_content:A{4|4}
    |normalized:{b}
     {spaces_before_argument: }
     {(}
@@ -41,8 +41,8 @@ $result_tree_text{'node_on_index_entry_line'} = '*document_root C2
     {b}
    *line_arg C5
    |EXTRA
-   |manual_content:{m}
-   |node_content:{c}
+   |manual_content:A{2|2}
+   |node_content:A{4|4}
    |normalized:{c}
     {spaces_before_argument: }
     {(}
@@ -51,8 +51,8 @@ $result_tree_text{'node_on_index_entry_line'} = '*document_root C2
     {c}
    *line_arg C6
    |EXTRA
-   |manual_content:{h}
-   |node_content:{d}
+   |manual_content:A{2|2}
+   |node_content:A{4|4}
    |normalized:{d}
     {spaces_before_argument: }
     {(}

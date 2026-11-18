@@ -84,7 +84,7 @@ $result_tree_text{'headings_nodes_before_chapter'} = '*document_root C7
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{Node 1}
+    |node_content:A{0|0}
     |normalized:{Node-1}
      {Node 1}
     {menu_entry_separator:::}
@@ -95,7 +95,7 @@ $result_tree_text{'headings_nodes_before_chapter'} = '*document_root C7
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{Node 2}
+    |node_content:A{0|0}
     |normalized:{Node-2}
      {Node 2}
     {menu_entry_separator:::}

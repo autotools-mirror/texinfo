@@ -120,8 +120,7 @@ pop_string_stack (STRING_LIST *stack)
 
 /* stack of integers */
 
-def_list_fns(INTEGER_STACK, integer, int, 5);
-def_stack_fns(INTEGER_STACK, integer, int);
+def_stack_fns(INTEGER_LIST, integer, int);
 
 
 /* accents/elements stacks */

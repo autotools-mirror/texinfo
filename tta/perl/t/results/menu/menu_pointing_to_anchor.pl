@@ -50,7 +50,7 @@ $result_tree_text{'menu_pointing_to_anchor'} = '*document_root C3
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{An anchor}
+    |node_content:A{0|0}
     |normalized:{An-anchor}
      {An anchor}
     {menu_entry_separator:::                }

@@ -35,7 +35,7 @@ $result_tree_text{'end_sentence_after_or_not_after_quoted_node'} = '*document_ro
    *@ref C2 l4
     *brace_arg C1
     |EXTRA
-    |node_content:{aaa}
+    |node_content:A{0|0}
     |normalized:{aaa}
      {aaa}
     *brace_arg C2
@@ -45,7 +45,7 @@ $result_tree_text{'end_sentence_after_or_not_after_quoted_node'} = '*document_ro
    *@ref C2 l5
     *brace_arg C1
     |EXTRA
-    |node_content:{aaB}
+    |node_content:A{0|0}
     |normalized:{aaB}
      {aaB}
     *brace_arg C2
@@ -57,7 +57,7 @@ $result_tree_text{'end_sentence_after_or_not_after_quoted_node'} = '*document_ro
    *@ref C2 l7
     *brace_arg C1
     |EXTRA
-    |node_content:{c.dd}
+    |node_content:A{0|0}
     |normalized:{c_002edd}
      {c.dd}
     *brace_arg C2
@@ -67,7 +67,7 @@ $result_tree_text{'end_sentence_after_or_not_after_quoted_node'} = '*document_ro
    *@ref C2 l8
     *brace_arg C1
     |EXTRA
-    |node_content:{c.dD}
+    |node_content:A{0|0}
     |normalized:{c_002edD}
      {c.dD}
     *brace_arg C2

@@ -49,7 +49,7 @@ $result_tree_text{'at_commands_glued_in_paragraph'} = '*document_root C1
    *@ref C1 l7
     *brace_arg C1
     |EXTRA
-    |node_content:{Top}
+    |node_content:A{0|0}
     |normalized:{Top}
      {Top}
    {ref.\\n}

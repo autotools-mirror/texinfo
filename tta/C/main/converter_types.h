@@ -217,7 +217,6 @@ typedef struct {
 } COMMAND_OR_TYPE;
 
 def_list_type(COMMAND_OR_TYPE_STACK, COMMAND_OR_TYPE);
-def_list_type(INTEGER_STACK, int);
 
 /* following types used in several converter codes, but not in this file */
 

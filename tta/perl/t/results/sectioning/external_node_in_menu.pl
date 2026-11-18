@@ -39,7 +39,7 @@ $result_tree_text{'external_node_in_menu'} = '*document_root C7
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{nchapter1}
+    |node_content:A{0|0}
     |normalized:{nchapter1}
      {nchapter1}
     {menu_entry_separator:::}
@@ -50,8 +50,8 @@ $result_tree_text{'external_node_in_menu'} = '*document_root C7
     {menu_entry_leading_text:* }
     *menu_entry_node C4
     |EXTRA
-    |manual_content:{aaa}
-    |node_content:{other}
+    |manual_content:A{1|1}
+    |node_content:A{3|3}
     |normalized:{other}
      {(}
      {aaa}
@@ -65,7 +65,7 @@ $result_tree_text{'external_node_in_menu'} = '*document_root C7
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{nchapter2}
+    |node_content:A{0|0}
     |normalized:{nchapter2}
      {nchapter2}
     {menu_entry_separator:::}

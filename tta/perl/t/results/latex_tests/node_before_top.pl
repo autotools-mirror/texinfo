@@ -67,7 +67,7 @@ $result_tree_text{'node_before_top'} = '*document_root C6
    *@pxref C1 l9
     *brace_arg C1
     |EXTRA
-    |node_content:{before Top}
+    |node_content:A{0|0}
     |normalized:{before-Top}
      {before Top}
    {\\n}

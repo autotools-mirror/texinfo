@@ -41,7 +41,7 @@ $result_tree_text{'chapter_between_nodes_texi2html'} = '*document_root C6
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{section node}
+    |node_content:A{0|0}
     |normalized:{section-node}
      {section node}
     {menu_entry_separator:::}
@@ -85,7 +85,7 @@ $result_tree_text{'chapter_between_nodes_texi2html'} = '*document_root C6
    *line_arg
    *line_arg C2
    |EXTRA
-   |node_content:{Top}
+   |node_content:A{0|0}
    |normalized:{Top}
     {Top}
     {spaces_after_argument:\\n}

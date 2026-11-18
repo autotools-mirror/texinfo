@@ -31,7 +31,7 @@ $result_tree_text{'nodes_after_top_before_chapter_no_use_nodes_chapter'} = '*doc
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{second node}
+    |node_content:A{0|0}
     |normalized:{second-node}
      {second node}
     {menu_entry_separator:::}
@@ -42,7 +42,7 @@ $result_tree_text{'nodes_after_top_before_chapter_no_use_nodes_chapter'} = '*doc
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{third node}
+    |node_content:A{0|0}
     |normalized:{third-node}
      {third node}
     {menu_entry_separator:::}
@@ -68,18 +68,18 @@ $result_tree_text{'nodes_after_top_before_chapter_no_use_nodes_chapter'} = '*doc
     {second node}
    *line_arg C2
    |EXTRA
-   |node_content:{third node}
+   |node_content:A{1|1}
    |normalized:{third-node}
     {spaces_before_argument: }
     {third node}
    *line_arg C1
    |EXTRA
-   |node_content:{Top}
+   |node_content:A{0|0}
    |normalized:{Top}
     {Top}
    *line_arg C2
    |EXTRA
-   |node_content:{Top}
+   |node_content:A{0|0}
    |normalized:{Top}
     {Top}
     {spaces_after_argument:\\n}
@@ -99,12 +99,12 @@ $result_tree_text{'nodes_after_top_before_chapter_no_use_nodes_chapter'} = '*doc
    *line_arg
    *line_arg C1
    |EXTRA
-   |node_content:{second node}
+   |node_content:A{0|0}
    |normalized:{second-node}
     {second node}
    *line_arg C2
    |EXTRA
-   |node_content:{Top}
+   |node_content:A{0|0}
    |normalized:{Top}
     {Top}
     {spaces_after_argument:\\n}

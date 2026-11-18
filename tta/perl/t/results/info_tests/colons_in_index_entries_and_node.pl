@@ -30,7 +30,7 @@ $result_tree_text{'colons_in_index_entries_and_node'} = '*document_root C4
     {menu_entry_leading_text:* }
     *menu_entry_node C5
     |EXTRA
-    |node_content:{One@asis{::}node@comma{} with entries.}
+    |node_content:A{0|4}
     |normalized:{One_003a_003anode_002c-with-entries_002e}
      {One}
      *@asis C1 l4
@@ -48,7 +48,7 @@ $result_tree_text{'colons_in_index_entries_and_node'} = '*document_root C4
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{Concept Index}
+    |node_content:A{0|0}
     |normalized:{Concept-Index}
      {Concept Index}
     {menu_entry_separator:::}

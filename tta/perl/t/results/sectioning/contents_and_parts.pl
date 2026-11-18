@@ -39,7 +39,7 @@ $result_tree_text{'contents_and_parts'} = '*document_root C11
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{chapter 1 node}
+    |node_content:A{0|0}
     |normalized:{chapter-1-node}
      {chapter 1 node}
     {menu_entry_separator:::}
@@ -50,7 +50,7 @@ $result_tree_text{'contents_and_parts'} = '*document_root C11
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{chapter 2 node}
+    |node_content:A{0|0}
     |normalized:{chapter-2-node}
      {chapter 2 node}
     {menu_entry_separator:::}
@@ -61,7 +61,7 @@ $result_tree_text{'contents_and_parts'} = '*document_root C11
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{chapter 3 node}
+    |node_content:A{0|0}
     |normalized:{chapter-3-node}
      {chapter 3 node}
     {menu_entry_separator:::}

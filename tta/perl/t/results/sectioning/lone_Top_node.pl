@@ -34,7 +34,7 @@ NodeUp: [U0]
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{First}
+    |node_content:A{0|0}
     |normalized:{First}
      {First}
     {menu_entry_separator:::}

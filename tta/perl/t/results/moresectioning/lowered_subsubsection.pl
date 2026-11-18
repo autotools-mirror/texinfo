@@ -37,7 +37,7 @@ $result_tree_text{'lowered_subsubsection'} = '*document_root C16
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{Chapter}
+    |node_content:A{0|0}
     |normalized:{Chapter}
      {Chapter}
     {menu_entry_separator:::}
@@ -81,7 +81,7 @@ $result_tree_text{'lowered_subsubsection'} = '*document_root C16
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{Section}
+    |node_content:A{0|0}
     |normalized:{Section}
      {Section}
     {menu_entry_separator:::}
@@ -125,7 +125,7 @@ $result_tree_text{'lowered_subsubsection'} = '*document_root C16
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{Subsection}
+    |node_content:A{0|0}
     |normalized:{Subsection}
      {Subsection}
     {menu_entry_separator:::}
@@ -169,7 +169,7 @@ $result_tree_text{'lowered_subsubsection'} = '*document_root C16
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{Subsubsection}
+    |node_content:A{0|0}
     |normalized:{Subsubsection}
      {Subsubsection}
     {menu_entry_separator:::}
@@ -180,7 +180,7 @@ $result_tree_text{'lowered_subsubsection'} = '*document_root C16
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{Lowered subsec}
+    |node_content:A{0|0}
     |normalized:{Lowered-subsec}
      {Lowered subsec}
     {menu_entry_separator:::}
@@ -249,7 +249,7 @@ $result_tree_text{'lowered_subsubsection'} = '*document_root C16
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{Lowered subsubsection}
+    |node_content:A{0|0}
     |normalized:{Lowered-subsubsection}
      {Lowered subsubsection}
     {menu_entry_separator:::}

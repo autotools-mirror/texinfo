@@ -56,7 +56,7 @@ $result_tree_text{'shadow_links_to_sections'} = '*document_root C12
    *@xref C1 l7
     *brace_arg C1
     |EXTRA
-    |node_content:{two}
+    |node_content:A{0|0}
     |normalized:{two}
      {two}
    {. --- goes to one of the section named two\\n}
@@ -77,7 +77,7 @@ $result_tree_text{'shadow_links_to_sections'} = '*document_root C12
    *@xref C1 l11
     *brace_arg C1
     |EXTRA
-    |node_content:{bar}
+    |node_content:A{0|0}
     |normalized:{bar}
      {bar}
    {.\\n}
@@ -100,7 +100,7 @@ $result_tree_text{'shadow_links_to_sections'} = '*document_root C12
    *@xref C1 l15
     *brace_arg C1
     |EXTRA
-    |node_content:{foo}
+    |node_content:A{0|0}
     |normalized:{foo}
      {foo}
    {. -- goes to baz chapter.\\n}
@@ -125,7 +125,7 @@ $result_tree_text{'shadow_links_to_sections'} = '*document_root C12
    *@xref C1 l21
     *brace_arg C1
     |EXTRA
-    |node_content:{baz}
+    |node_content:A{0|0}
     |normalized:{baz}
      {baz}
    {. --- fails\\n}
@@ -182,7 +182,7 @@ $result_tree_text{'shadow_links_to_sections'} = '*document_root C12
     *@ref C2 l32
      *brace_arg C1
      |EXTRA
-     |node_content:{foo}
+     |node_content:A{0|0}
      |normalized:{foo}
       {foo}
      *brace_arg C2
@@ -195,7 +195,7 @@ $result_tree_text{'shadow_links_to_sections'} = '*document_root C12
    *@xref C1 l34
     *brace_arg C1
     |EXTRA
-    |node_content:{with foo after}
+    |node_content:A{0|0}
     |normalized:{with-foo-after}
      {with foo after}
    {. --- link to section with }
@@ -206,7 +206,7 @@ $result_tree_text{'shadow_links_to_sections'} = '*document_root C12
    *@xref C1 l36
     *brace_arg C1
     |EXTRA
-    |node_content:{two}
+    |node_content:A{0|0}
     |normalized:{two}
      {two}
    {. --- another link to a section named two.\\n}

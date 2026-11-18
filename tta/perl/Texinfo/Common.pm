@@ -783,14 +783,17 @@ sub non_leading_trailing_indices($) {
 #
 # Returned object is a hash with two fields:
 #
-#     manual_content - Texinfo tree for a manual name extracted from the
-#                      node specification.
-#     node_content - Texinfo tree for the node name on its own
+#     manual_content - start and end index of manual content in
+#                      the modified tree.
+#     node_content - start and end index of node content in
+#                    the modified tree.
 #
 # If $MODIFY_TREE is set and manual name is retrieved, modify the
 # $LABEL_CONTENTS_CONTAINER contents such that the parentheses, the manual
-# part and the node part are not in the same elements in the contents,
-# and use the corresponding elements in the returned object.
+# part and the node part are not in the same elements in the contents.
+# NOTE the indices returned are not accurate if the tree is not modified,
+# the caller should only check if they exist for the manual, not
+# the value.
 sub parse_node_manual($;$) {
   my ($label_contents_container, $modify_node) = @_;
 
@@ -798,13 +801,15 @@ sub parse_node_manual($;$) {
 
   my $contents = $label_contents_container->{'contents'};
 
-  my $manual;
-  my $result;
-  my $node_content = [];
-
   my ($first_idx, $end_idx)
     = non_leading_trailing_indices($label_contents_container);
   return undef if (!defined($first_idx));
+
+  # there is something else than spaces, therefore there need to be
+  # either a manual, a node or both.
+  my $result = {};
+  my $manual_count = 0;
+  my $node_content_count = 0;
 
   my $idx = $first_idx;
   my $orig_contents_len = scalar(@$contents);
@@ -812,7 +817,7 @@ sub parse_node_manual($;$) {
   if (exists($contents->[$idx]->{'text'})
       and $contents->[$idx]->{'text'} =~ /^\(/) {
     my ($new_first, $opening_brace);
-    $manual = [];
+    $manual_count = 0;
     my $braces_count = 1; # Number of ( seen minus number of ) seen.
     # the leading ( from @$contents is not in manual.
     # If the first contents element is "(" followed by more text, split
@@ -838,7 +843,7 @@ sub parse_node_manual($;$) {
         $content = $contents->[$idx];
       }
       if (!exists($content->{'text'}) or $content->{'text'} !~ /\)/) {
-        push @$manual, $content;
+        $manual_count++;
         $braces_count = _count_opened_tree_braces($content, $braces_count);
         # This is an error, braces were closed in a command
         if ($braces_count == 0) {
@@ -879,7 +884,7 @@ sub parse_node_manual($;$) {
             # text before ), part of the manual name
             my $last_manual_element
               = Texinfo::TreeElement::new({ 'text' => $before });
-            push @$manual, $last_manual_element;
+            $manual_count++;
             if ($modify_node) {
               splice(@$contents, $idx, 0, $last_manual_element);
               $idx++;
@@ -912,7 +917,7 @@ sub parse_node_manual($;$) {
             # text after ), part of the node name.
             my $leading_node_content
               = Texinfo::TreeElement::new({'text' => $after});
-            push @$node_content, $leading_node_content;
+            $node_content_count++;
             if ($modify_node) {
               splice(@$contents, $idx, 0, $leading_node_content);
               $current_position = relocate_source_marks(
@@ -923,33 +928,29 @@ sub parse_node_manual($;$) {
           }
           last;
         } else {
-          push @$manual, $content;
+          $manual_count++;
         }
       }
     }
     if ($braces_count != 0) {
       # unclosed brace, reset
-      $manual = undef;
+      $manual_count = 0;
       $idx = $first_idx;
     } else {
-      $result = {};
       $result->{'manual_content'}
-        = Texinfo::TreeElement::new({'contents' => $manual});
+       = [$first_idx +1, $first_idx + $manual_count];
     }
   }
 
   my $new_contents_len = scalar(@$contents);
-  if ($idx < $new_contents_len) {
-    # take into account that contents size may have increased
-    # and increased consistently $end_idx.
-    push(@$node_content, @$contents[$idx ..
-                    $end_idx + $new_contents_len - $orig_contents_len]);
-  }
+  # take into account that contents size may have increased
+  # and increase consistently $end_idx.
+  my $new_end_idx = $end_idx + $new_contents_len - $orig_contents_len;
+  $node_content_count += ($new_end_idx +1 - $idx);
 
-  if (scalar(@$node_content)) {
-    $result = Texinfo::TreeElement::new({}) if (!defined($result));
+  if ($node_content_count > 0) {
     $result->{'node_content'}
-      = Texinfo::TreeElement::new({'contents' => $node_content});
+      = [$new_end_idx - $node_content_count +1, $new_end_idx];
   }
 
   return $result;

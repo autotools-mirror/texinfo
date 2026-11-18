@@ -43,7 +43,7 @@ $result_tree_text{'comma_node_in_file_name'} = '*document_root C5
    *@xref C1 l6
     *brace_arg C1
     |EXTRA
-    |node_content:{chap}
+    |node_content:A{0|0}
     |normalized:{chap}
      {chap}
    {\\n}

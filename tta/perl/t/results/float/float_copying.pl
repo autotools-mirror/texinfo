@@ -79,7 +79,7 @@ $result_tree_text{'float_copying'} = '*document_root C5
            *@ref C1 l15
             *brace_arg C1
             |EXTRA
-            |node_content:{Copying and floats}
+            |node_content:A{0|0}
             |normalized:{Copying-and-floats}
              {Copying and floats}
            {.\\n}
@@ -161,7 +161,7 @@ $result_tree_text{'float_copying'} = '*document_root C5
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{Copying and floats}
+    |node_content:A{0|0}
     |normalized:{Copying-and-floats}
      {Copying and floats}
     {menu_entry_separator:::}

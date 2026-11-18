@@ -36,7 +36,7 @@ NodeForward: [U1]
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{chap first}
+    |node_content:A{0|0}
     |normalized:{chap-first}
      {chap first}
     {menu_entry_separator:::}
@@ -72,14 +72,14 @@ NodeBack: [U0]
     {chap first}
    *line_arg C4
    |EXTRA
-   |manual_content:{manual1}
+   |manual_content:A{2|2}
     {spaces_before_argument: }
     {(}
     {manual1}
     {)}
    *line_arg C5
    |EXTRA
-   |manual_content:{manual2}
+   |manual_content:A{2|2}
     {spaces_before_argument: }
     {(}
     {manual2}
@@ -87,7 +87,7 @@ NodeBack: [U0]
     {spaces_after_argument: }
    *line_arg C5
    |EXTRA
-   |manual_content:{manual3}
+   |manual_content:A{2|2}
     {spaces_before_argument: }
     {(}
     {manual3}

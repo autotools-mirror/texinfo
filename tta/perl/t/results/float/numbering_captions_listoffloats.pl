@@ -283,7 +283,7 @@ $result_tree_text{'numbering_captions_listoffloats'} = '*document_root C21
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{chapter}
+    |node_content:A{0|0}
     |normalized:{chapter}
      {chapter}
     {menu_entry_separator:::}
@@ -294,7 +294,7 @@ $result_tree_text{'numbering_captions_listoffloats'} = '*document_root C21
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{Unnumbered}
+    |node_content:A{0|0}
     |normalized:{Unnumbered}
      {Unnumbered}
     {menu_entry_separator:::}
@@ -305,7 +305,7 @@ $result_tree_text{'numbering_captions_listoffloats'} = '*document_root C21
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{Chapter with unnumbsubsec}
+    |node_content:A{0|0}
     |normalized:{Chapter-with-unnumbsubsec}
      {Chapter with unnumbsubsec}
     {menu_entry_separator:::}
@@ -316,7 +316,7 @@ $result_tree_text{'numbering_captions_listoffloats'} = '*document_root C21
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{Appendix for float}
+    |node_content:A{0|0}
     |normalized:{Appendix-for-float}
      {Appendix for float}
     {menu_entry_separator:::}
@@ -327,7 +327,7 @@ $result_tree_text{'numbering_captions_listoffloats'} = '*document_root C21
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{list of floats}
+    |node_content:A{0|0}
     |normalized:{list-of-floats}
      {list of floats}
     {menu_entry_separator:::}
@@ -558,7 +558,7 @@ $result_tree_text{'numbering_captions_listoffloats'} = '*document_root C21
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{section}
+    |node_content:A{0|0}
     |normalized:{section}
      {section}
     {menu_entry_separator:::}
@@ -649,7 +649,7 @@ $result_tree_text{'numbering_captions_listoffloats'} = '*document_root C21
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{Section within unnumbered}
+    |node_content:A{0|0}
     |normalized:{Section-within-unnumbered}
      {Section within unnumbered}
     {menu_entry_separator:::}
@@ -817,7 +817,7 @@ $result_tree_text{'numbering_captions_listoffloats'} = '*document_root C21
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{unnumbered sec}
+    |node_content:A{0|0}
     |normalized:{unnumbered-sec}
      {unnumbered sec}
     {menu_entry_separator:::}
@@ -1037,7 +1037,7 @@ $result_tree_text{'numbering_captions_listoffloats'} = '*document_root C21
    *@ref C1 l180
     *brace_arg C1
     |EXTRA
-    |node_content:{text in section}
+    |node_content:A{0|0}
     |normalized:{text-in-section}
      {text in section}
    {.\\n}
@@ -1045,14 +1045,14 @@ $result_tree_text{'numbering_captions_listoffloats'} = '*document_root C21
    *@pxref C1 l181
     *brace_arg C1
     |EXTRA
-    |node_content:{text in chapter}
+    |node_content:A{0|0}
     |normalized:{text-in-chapter}
      {text in chapter}
    {).\\n}
    *@xref C1 l182
     *brace_arg C1
     |EXTRA
-    |node_content:{text with a lot of features}
+    |node_content:A{0|0}
     |normalized:{text-with-a-lot-of-features}
      {text with a lot of features}
    {.\\n}
@@ -1062,7 +1062,7 @@ $result_tree_text{'numbering_captions_listoffloats'} = '*document_root C21
    *@ref C3 l185
     *brace_arg C1
     |EXTRA
-    |node_content:{text with a lot of features}
+    |node_content:A{0|0}
     |normalized:{text-with-a-lot-of-features}
      {text with a lot of features}
     *brace_arg C2
@@ -1078,7 +1078,7 @@ $result_tree_text{'numbering_captions_listoffloats'} = '*document_root C21
    *@ref C4 l188
     *brace_arg C1
     |EXTRA
-    |node_content:{text with a lot of features}
+    |node_content:A{0|0}
      {text with a lot of features}
     *brace_arg C2
      {spaces_before_argument: }
@@ -1096,7 +1096,7 @@ $result_tree_text{'numbering_captions_listoffloats'} = '*document_root C21
    *@ref C5 l191
     *brace_arg C1
     |EXTRA
-    |node_content:{text with a lot of features}
+    |node_content:A{0|0}
      {text with a lot of features}
     *brace_arg C2
      {spaces_before_argument: }
@@ -1115,7 +1115,7 @@ $result_tree_text{'numbering_captions_listoffloats'} = '*document_root C21
    *@ref C1 l193
     *brace_arg C1
     |EXTRA
-    |node_content:{label but no type}
+    |node_content:A{0|0}
     |normalized:{label-but-no-type}
      {label but no type}
    {.\\n}

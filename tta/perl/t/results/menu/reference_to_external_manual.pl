@@ -32,7 +32,7 @@ $result_tree_text{'reference_to_external_manual'} = '*document_root C2
     {menu_entry_leading_text:* }
     *menu_entry_node C3
     |EXTRA
-    |manual_content:{info}
+    |manual_content:A{1|1}
      {(}
      {info}
      {)}

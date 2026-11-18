@@ -39,7 +39,7 @@ $result_tree_text{'loop_nodes'} = '*document_root C6
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{chap node up}
+    |node_content:A{0|0}
     |normalized:{chap-node-up}
      {chap node up}
     {menu_entry_separator:::}
@@ -67,7 +67,7 @@ $result_tree_text{'loop_nodes'} = '*document_root C6
    *line_arg
    *line_arg C2
    |EXTRA
-   |node_content:{node down}
+   |node_content:A{0|0}
    |normalized:{node-down}
     {node down}
     {spaces_after_argument:\\n}
@@ -80,7 +80,7 @@ $result_tree_text{'loop_nodes'} = '*document_root C6
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{node middle}
+    |node_content:A{0|0}
     |normalized:{node-middle}
      {node middle}
     {menu_entry_separator:::}
@@ -108,7 +108,7 @@ $result_tree_text{'loop_nodes'} = '*document_root C6
    *line_arg
    *line_arg C2
    |EXTRA
-   |node_content:{chap node up}
+   |node_content:A{0|0}
    |normalized:{chap-node-up}
     {chap node up}
     {spaces_after_argument:\\n}
@@ -121,7 +121,7 @@ $result_tree_text{'loop_nodes'} = '*document_root C6
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{node down}
+    |node_content:A{0|0}
     |normalized:{node-down}
      {node down}
     {menu_entry_separator:::}

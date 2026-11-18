@@ -19,7 +19,7 @@ $result_tree_text{'ref_in_multitable'} = '*document_root C1
    *@ref C1 l3
     *brace_arg C2
     |EXTRA
-    |node_content:{XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XX XXX XXX XXX XXX \\nXXX XXX XXX XXX XXX XXX XXX XXX XX}
+    |node_content:A{0|1}
     |normalized:{XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XX}
      {XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XX XXX XXX XXX XXX \\n}
      {XXX XXX XXX XXX XXX XXX XXX XXX XX}
@@ -57,7 +57,7 @@ $result_tree_text{'ref_in_multitable'} = '*document_root C1
        *@ref C1 l8
         *brace_arg C1
         |EXTRA
-        |node_content:{RRR RRR RRR RRR RRR RRR RRR RRR RRR RRRR}
+        |node_content:A{0|0}
         |normalized:{RRR-RRR-RRR-RRR-RRR-RRR-RRR-RRR-RRR-RRRR}
          {RRR RRR RRR RRR RRR RRR RRR RRR RRR RRRR}
        {.\\n}
@@ -79,7 +79,7 @@ $result_tree_text{'ref_in_multitable'} = '*document_root C1
        *@ref C1 l10
         *brace_arg C1
         |EXTRA
-        |node_content:{SSS SSS SSS SSS SSS SSS SSS SSS SSS SSS SSS SSS SSSSS}
+        |node_content:A{0|0}
         |normalized:{SSS-SSS-SSS-SSS-SSS-SSS-SSS-SSS-SSS-SSS-SSS-SSS-SSSSS}
          {SSS SSS SSS SSS SSS SSS SSS SSS SSS SSS SSS SSS SSSSS}
        {.\\n}
@@ -100,7 +100,7 @@ $result_tree_text{'ref_in_multitable'} = '*document_root C1
           *@ref C1 l11
            *brace_arg C2
            |EXTRA
-           |node_content:{XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XX \\nXXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XX}
+           |node_content:A{0|1}
            |normalized:{XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XX}
             {XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XX \\n}
             {XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XX}
@@ -123,7 +123,7 @@ $result_tree_text{'ref_in_multitable'} = '*document_root C1
    *@ref C1 l16
     *brace_arg C2
     |EXTRA
-    |node_content:{XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XX XXX XXX XXX XXX \\nXXX XXX XXX XXX XXX XXX XXX XXX XX}
+    |node_content:A{0|1}
     |normalized:{XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XX}
      {XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XX XXX XXX XXX XXX \\n}
      {XXX XXX XXX XXX XXX XXX XXX XXX XX}

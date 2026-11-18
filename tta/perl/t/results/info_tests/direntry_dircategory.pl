@@ -43,7 +43,7 @@ $result_tree_text{'direntry_dircategory'} = '*document_root C6
      {menu_entry_separator:: }
      *menu_entry_node C3
      |EXTRA
-     |manual_content:{foo}
+     |manual_content:A{1|1}
       {(}
       {foo}
       {)}
@@ -76,7 +76,7 @@ $result_tree_text{'direntry_dircategory'} = '*document_root C6
      {menu_entry_leading_text:* }
      *menu_entry_node C2
      |EXTRA
-     |node_content:{aaa }
+     |node_content:A{0|1}
      |normalized:{aaa}
       {aaa}
       {space_at_end_menu_node: }
@@ -136,7 +136,7 @@ $result_tree_text{'direntry_dircategory'} = '*document_root C6
     {menu_entry_separator:: }
     *menu_entry_node C3
     |EXTRA
-    |manual_content:{in_text}
+    |manual_content:A{1|1}
      {(}
      {in_text}
      {)}
@@ -160,7 +160,7 @@ $result_tree_text{'direntry_dircategory'} = '*document_root C6
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{chapter}
+    |node_content:A{0|0}
     |normalized:{chapter}
      {chapter}
     {menu_entry_separator:::}

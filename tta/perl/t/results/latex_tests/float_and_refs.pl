@@ -173,14 +173,14 @@ $result_tree_text{'float_and_refs'} = '*document_root C7
    *@xref C1 l27
     *brace_arg C1
     |EXTRA
-    |node_content:{no type}
+    |node_content:A{0|0}
     |normalized:{no-type}
      {no type}
    {.\\n}
    *@xref C2 l28
     *brace_arg C1
     |EXTRA
-    |node_content:{no type}
+    |node_content:A{0|0}
     |normalized:{no-type}
      {no type}
     *brace_arg C2
@@ -190,7 +190,7 @@ $result_tree_text{'float_and_refs'} = '*document_root C7
    *@xref C3 l29
     *brace_arg C1
     |EXTRA
-    |node_content:{no type}
+    |node_content:A{0|0}
     |normalized:{no-type}
      {no type}
     *brace_arg C2
@@ -203,7 +203,7 @@ $result_tree_text{'float_and_refs'} = '*document_root C7
    *@xref C4 l30
     *brace_arg C1
     |EXTRA
-    |node_content:{no type}
+    |node_content:A{0|0}
      {no type}
     *brace_arg C2
      {spaces_before_argument: }
@@ -218,7 +218,7 @@ $result_tree_text{'float_and_refs'} = '*document_root C7
    *@xref C5 l31
     *brace_arg C1
     |EXTRA
-    |node_content:{no type}
+    |node_content:A{0|0}
      {no type}
     *brace_arg C2
      {spaces_before_argument: }
@@ -238,14 +238,14 @@ $result_tree_text{'float_and_refs'} = '*document_root C7
    *@xref C1 l33
     *brace_arg C1
     |EXTRA
-    |node_content:{with type}
+    |node_content:A{0|0}
     |normalized:{with-type}
      {with type}
    {.\\n}
    *@xref C2 l34
     *brace_arg C1
     |EXTRA
-    |node_content:{with type}
+    |node_content:A{0|0}
     |normalized:{with-type}
      {with type}
     *brace_arg C2
@@ -255,7 +255,7 @@ $result_tree_text{'float_and_refs'} = '*document_root C7
    *@xref C3 l35
     *brace_arg C1
     |EXTRA
-    |node_content:{with type}
+    |node_content:A{0|0}
     |normalized:{with-type}
      {with type}
     *brace_arg C2
@@ -268,7 +268,7 @@ $result_tree_text{'float_and_refs'} = '*document_root C7
    *@xref C4 l36
     *brace_arg C1
     |EXTRA
-    |node_content:{with type}
+    |node_content:A{0|0}
      {with type}
     *brace_arg C2
      {spaces_before_argument: }
@@ -283,7 +283,7 @@ $result_tree_text{'float_and_refs'} = '*document_root C7
    *@xref C5 l37
     *brace_arg C1
     |EXTRA
-    |node_content:{with type}
+    |node_content:A{0|0}
      {with type}
     *brace_arg C2
      {spaces_before_argument: }
@@ -303,14 +303,14 @@ $result_tree_text{'float_and_refs'} = '*document_root C7
    *@xref C1 l39
     *brace_arg C1
     |EXTRA
-    |node_content:{my figure}
+    |node_content:A{0|0}
     |normalized:{my-figure}
      {my figure}
    {.\\n}
    *@xref C2 l40
     *brace_arg C1
     |EXTRA
-    |node_content:{my figure}
+    |node_content:A{0|0}
     |normalized:{my-figure}
      {my figure}
     *brace_arg C2
@@ -320,7 +320,7 @@ $result_tree_text{'float_and_refs'} = '*document_root C7
    *@xref C3 l41
     *brace_arg C1
     |EXTRA
-    |node_content:{my figure}
+    |node_content:A{0|0}
     |normalized:{my-figure}
      {my figure}
     *brace_arg C2
@@ -333,7 +333,7 @@ $result_tree_text{'float_and_refs'} = '*document_root C7
    *@xref C4 l42
     *brace_arg C1
     |EXTRA
-    |node_content:{my figure}
+    |node_content:A{0|0}
      {my figure}
     *brace_arg C2
      {spaces_before_argument: }
@@ -348,7 +348,7 @@ $result_tree_text{'float_and_refs'} = '*document_root C7
    *@xref C5 l43
     *brace_arg C1
     |EXTRA
-    |node_content:{my figure}
+    |node_content:A{0|0}
      {my figure}
     *brace_arg C2
      {spaces_before_argument: }

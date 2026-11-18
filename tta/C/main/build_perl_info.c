@@ -440,6 +440,24 @@ build_perl_directions (const ELEMENT * const *e_l, int avoid_recursion)
   return sv;
 }
 
+AV *
+build_integer_list (const INTEGER_LIST *integer_list)
+{
+  AV *av;
+  size_t i;
+
+  dTHX;
+
+  av = newAV ();
+
+  for (i = 0; i < integer_list->number; i++)
+    {
+      int value = integer_list->list[i];
+      av_push (av, newSViv (value));
+    }
+  return av;
+}
+
 SV *
 build_extra_index_entry (const INDEX_ENTRY_LOCATION *entry_loc)
 {
@@ -553,6 +571,12 @@ build_key_pair_info (const KEY_PAIR *k, int avoid_recursion)
     case extra_string_list:
       {
       AV *av = build_string_list (k->k.strings_list, svt_char);
+      return newRV_noinc ((SV *)av);
+      break;
+      }
+    case extra_integer_list:
+      {
+      AV *av = build_integer_list (k->k.integers_list);
       return newRV_noinc ((SV *)av);
       break;
       }
@@ -1369,25 +1393,6 @@ build_heading_relations_list (const HEADING_RELATIONS_LIST *list)
 }
 
 #undef STORE_RELS_INFO_ELEMENT
-
-/* currently unused */
-AV *
-build_integer_stack (const INTEGER_STACK *integer_stack)
-{
-  AV *av;
-  size_t i;
-
-  dTHX;
-
-  av = newAV ();
-
-  for (i = 0; i < integer_stack->number; i++)
-    {
-      int value = integer_stack->list[i];
-      av_push (av, newSViv (value));
-    }
-  return av;
-}
 
 
 

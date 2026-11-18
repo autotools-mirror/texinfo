@@ -63,7 +63,7 @@ $result_tree_text{'missing_detailmenu_menu_entry_names'} = '*document_root C15
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{C1 Sec1}
+    |node_content:A{0|0}
     |normalized:{C1-Sec1}
      {C1 Sec1}
     {menu_entry_separator:::   }
@@ -74,7 +74,7 @@ $result_tree_text{'missing_detailmenu_menu_entry_names'} = '*document_root C15
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{C1 Sec2}
+    |node_content:A{0|0}
     |normalized:{C1-Sec2}
      {C1 Sec2}
     {menu_entry_separator:::   }
@@ -166,7 +166,7 @@ $result_tree_text{'missing_detailmenu_menu_entry_names'} = '*document_root C15
     {menu_entry_separator:: }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{C2 Sec1}
+    |node_content:A{0|0}
     |normalized:{C2-Sec1}
      {C2 Sec1}
     {menu_entry_separator:.   }
@@ -177,7 +177,7 @@ $result_tree_text{'missing_detailmenu_menu_entry_names'} = '*document_root C15
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{C2 Sec2}
+    |node_content:A{0|0}
     |normalized:{C2-Sec2}
      {C2 Sec2}
     {menu_entry_separator:::}

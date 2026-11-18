@@ -207,6 +207,18 @@ add_extra_string_list (ELEMENT *e, enum ai_key_name key, STRING_LIST *value)
 }
 
 void
+add_extra_integer_list (ELEMENT *e, enum ai_key_name key, INTEGER_LIST *value)
+{
+  if (!value) return;
+
+  if (check_key_type_or_abort (key, extra_integer_list, "add_extra_integer_list"))
+    {
+      KEY_PAIR *k = get_associated_info_key (&e->e.c->extra_info, key);
+      k->k.integers_list = value;
+    }
+}
+
+void
 add_extra_index_entry (ELEMENT *e, enum ai_key_name key,
                        INDEX_ENTRY_LOCATION *value)
 {
@@ -372,6 +384,19 @@ lookup_extra_string_list (const ELEMENT *e, enum ai_key_name key)
       const KEY_PAIR *k = lookup_extra (e, key);
       if (k)
         return k->k.strings_list;
+    }
+  return 0;
+}
+
+const INTEGER_LIST *
+lookup_extra_integer_list (const ELEMENT *e, enum ai_key_name key)
+{
+  if (check_key_type_or_abort (key, extra_integer_list,
+                               "lookup_extra_integer_list"))
+    {
+      const KEY_PAIR *k = lookup_extra (e, key);
+      if (k)
+        return k->k.integers_list;
     }
   return 0;
 }

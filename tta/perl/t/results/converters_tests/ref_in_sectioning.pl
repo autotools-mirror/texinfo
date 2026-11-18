@@ -38,21 +38,21 @@ $result_tree_text{'ref_in_sectioning'} = '*document_root C20
     *@ref C1 l4
      *brace_arg C1
      |EXTRA
-     |node_content:{node}
+     |node_content:A{0|0}
      |normalized:{node}
       {node}
     { (}
     *@pxref C1 l4
      *brace_arg C1
      |EXTRA
-     |node_content:{node}
+     |node_content:A{0|0}
      |normalized:{node}
       {node}
     {) (}
     *@pxref C5 l4
      *brace_arg C1
      |EXTRA
-     |node_content:{Top}
+     |node_content:A{0|0}
       {Top}
      *brace_arg
      *brace_arg
@@ -73,7 +73,7 @@ $result_tree_text{'ref_in_sectioning'} = '*document_root C20
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{node}
+    |node_content:A{0|0}
     |normalized:{node}
      {node}
     {menu_entry_separator:::}
@@ -84,7 +84,7 @@ $result_tree_text{'ref_in_sectioning'} = '*document_root C20
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{chap}
+    |node_content:A{0|0}
     |normalized:{chap}
      {chap}
     {menu_entry_separator:::}
@@ -120,7 +120,7 @@ $result_tree_text{'ref_in_sectioning'} = '*document_root C20
     *@xref C5 l12
      *brace_arg C1
      |EXTRA
-     |node_content:{node}
+     |node_content:A{0|0}
       {node}
      *brace_arg
      *brace_arg C1
@@ -155,7 +155,7 @@ $result_tree_text{'ref_in_sectioning'} = '*document_root C20
     *@ref C1 l15
      *brace_arg C1
      |EXTRA
-     |node_content:{node}
+     |node_content:A{0|0}
      |normalized:{node}
       {node}
     { just node}
@@ -175,21 +175,21 @@ $result_tree_text{'ref_in_sectioning'} = '*document_root C20
     *@ref C1 l17
      *brace_arg C1
      |EXTRA
-     |node_content:{node}
+     |node_content:A{0|0}
      |normalized:{node}
       {node}
     { (}
     *@pxref C1 l17
      *brace_arg C1
      |EXTRA
-     |node_content:{node}
+     |node_content:A{0|0}
      |normalized:{node}
       {node}
     {) (}
     *@pxref C5 l17
      *brace_arg C1
      |EXTRA
-     |node_content:{Top}
+     |node_content:A{0|0}
       {Top}
      *brace_arg
      *brace_arg
@@ -215,7 +215,7 @@ $result_tree_text{'ref_in_sectioning'} = '*document_root C20
     *@ref C2 l19
      *brace_arg C1
      |EXTRA
-     |node_content:{node}
+     |node_content:A{0|0}
      |normalized:{node}
       {node}
      *brace_arg C2
@@ -237,7 +237,7 @@ $result_tree_text{'ref_in_sectioning'} = '*document_root C20
     *@ref C3 l21
      *brace_arg C1
      |EXTRA
-     |node_content:{@code{node}}
+     |node_content:A{0|0}
      |normalized:{node}
       *@code C1 l21
        *brace_container C1
@@ -264,7 +264,7 @@ $result_tree_text{'ref_in_sectioning'} = '*document_root C20
     *@ref C4 l23
      *brace_arg C1
      |EXTRA
-     |node_content:{@code{node}}
+     |node_content:A{0|0}
       *@code C1 l23
        *brace_container C1
         {node}
@@ -289,7 +289,7 @@ $result_tree_text{'ref_in_sectioning'} = '*document_root C20
     *@ref C5 l25
      *brace_arg C1
      |EXTRA
-     |node_content:{node}
+     |node_content:A{0|0}
       {node}
      *brace_arg
      *brace_arg
@@ -314,7 +314,7 @@ $result_tree_text{'ref_in_sectioning'} = '*document_root C20
     *@ref C5 l27
      *brace_arg C1
      |EXTRA
-     |node_content:{Top}
+     |node_content:A{0|0}
       {Top}
      *brace_arg
      *brace_arg
@@ -381,7 +381,7 @@ $result_tree_text{'ref_in_sectioning'} = '*document_root C20
     *@inforef C3 l33
      *brace_arg C1
      |EXTRA
-     |node_content:{a}
+     |node_content:A{0|0}
       {a}
      *brace_arg C2
       {spaces_before_argument: }
@@ -406,7 +406,7 @@ $result_tree_text{'ref_in_sectioning'} = '*document_root C20
     *@pxref C4 l35
      *brace_arg C3
      |EXTRA
-     |node_content:{Top}
+     |node_content:A{1|1}
       {spaces_before_argument: }
       {Top}
       {spaces_after_argument: }
@@ -454,7 +454,7 @@ $result_tree_text{'ref_in_sectioning'} = '*document_root C20
     *@xref C4 l39
      *brace_arg C1
      |EXTRA
-     |node_content:{Top}
+     |node_content:A{0|0}
       {Top}
      *brace_arg
      *brace_arg

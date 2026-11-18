@@ -15,7 +15,7 @@ $result_tree_text{'ref_to_unknown_node'} = '*document_root C1
    *@xref C1 l1
     *brace_arg C1
     |EXTRA
-    |node_content:{unknown node}
+    |node_content:A{0|0}
     |normalized:{unknown-node}
      {unknown node}
    {.}

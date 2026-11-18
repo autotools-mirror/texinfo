@@ -60,7 +60,7 @@ $result_tree_text{'menu_pointing_to_anchor_nodes'} = '*document_root C5
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{An anchor}
+    |node_content:A{0|0}
     |normalized:{An-anchor}
      {An anchor}
     {menu_entry_separator:::                }
@@ -71,7 +71,7 @@ $result_tree_text{'menu_pointing_to_anchor_nodes'} = '*document_root C5
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{chap}
+    |node_content:A{0|0}
     |normalized:{chap}
      {chap}
     {menu_entry_separator:::}
@@ -82,7 +82,7 @@ $result_tree_text{'menu_pointing_to_anchor_nodes'} = '*document_root C5
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{!Named!}
+    |node_content:A{0|0}
     |normalized:{_0021Named_0021}
      {!Named!}
     {menu_entry_separator:::}

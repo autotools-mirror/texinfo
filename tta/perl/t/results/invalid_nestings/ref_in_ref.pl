@@ -25,12 +25,12 @@ $result_tree_text{'ref_in_ref'} = '*document_root C2
    *@ref C1 l2
     *brace_arg C1
     |EXTRA
-    |node_content:{@ref{first}}
+    |node_content:A{0|0}
     |normalized:{first}
      *@ref C1 l2
       *brace_arg C1
       |EXTRA
-      |node_content:{first}
+      |node_content:A{0|0}
       |normalized:{first}
        {first}
 ';

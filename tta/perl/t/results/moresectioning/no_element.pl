@@ -40,7 +40,7 @@ $result_tree_text{'no_element'} = '*document_root C1
    *@ref C1 l8
     *brace_arg C1
     |EXTRA
-    |node_content:{An anchor}
+    |node_content:A{0|0}
     |normalized:{An-anchor}
      {An anchor}
    {\\n}
@@ -50,7 +50,7 @@ $result_tree_text{'no_element'} = '*document_root C1
    *@ref C1 l11
     *brace_arg C1
     |EXTRA
-    |node_content:{Anchor in footnote}
+    |node_content:A{0|0}
     |normalized:{Anchor-in-footnote}
      {Anchor in footnote}
    {.\\n}
@@ -76,7 +76,7 @@ $result_tree_text{'no_element'} = '*document_root C1
       *@ref C1 l18
        *brace_arg C1
        |EXTRA
-       |node_content:{An anchor}
+       |node_content:A{0|0}
        |normalized:{An-anchor}
         {An anchor}
       {\\n}
@@ -111,7 +111,7 @@ $result_tree_text{'no_element'} = '*document_root C1
    *@ref C1 l26
     *brace_arg C1
     |EXTRA
-    |node_content:{float anchor}
+    |node_content:A{0|0}
     |normalized:{float-anchor}
      {float anchor}
    {.\\n}
@@ -124,7 +124,7 @@ $result_tree_text{'no_element'} = '*document_root C1
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{An anchor}
+    |node_content:A{0|0}
     |normalized:{An-anchor}
      {An anchor}
     {menu_entry_separator:::                }

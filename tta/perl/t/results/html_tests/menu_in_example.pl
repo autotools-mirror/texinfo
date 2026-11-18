@@ -34,7 +34,7 @@ $result_tree_text{'menu_in_example'} = '*document_root C2
      {menu_entry_leading_text:* }
      *menu_entry_node C3
      |EXTRA
-     |manual_content:{entry}
+     |manual_content:A{1|1}
       {(}
       {entry}
       {)}
@@ -77,8 +77,8 @@ $result_tree_text{'menu_in_example'} = '*document_root C2
      {menu_entry_leading_text:* }
      *menu_entry_node C5
      |EXTRA
-     |manual_content:{node}
-     |node_content:{menu}
+     |manual_content:A{1|1}
+     |node_content:A{4|4}
      |normalized:{menu}
       {(}
       {node}
@@ -96,8 +96,8 @@ $result_tree_text{'menu_in_example'} = '*document_root C2
      {menu_entry_separator::}
      *menu_entry_node C5
      |EXTRA
-     |manual_content:{other}
-     |node_content:{node}
+     |manual_content:A{1|1}
+     |node_content:A{4|4}
      |normalized:{node}
       {(}
       {other}

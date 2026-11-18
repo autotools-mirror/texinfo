@@ -41,7 +41,7 @@ $result_tree_text{'index_table_chapter_no_node'} = '*document_root C12
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{node with ftable and vtable}
+    |node_content:A{0|0}
     |normalized:{node-with-ftable-and-vtable}
      {node with ftable and vtable}
     {menu_entry_separator:::}
@@ -52,7 +52,7 @@ $result_tree_text{'index_table_chapter_no_node'} = '*document_root C12
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{node with printindex}
+    |node_content:A{0|0}
     |normalized:{node-with-printindex}
      {node with printindex}
     {menu_entry_separator:::}
@@ -63,7 +63,7 @@ $result_tree_text{'index_table_chapter_no_node'} = '*document_root C12
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{indices refs}
+    |node_content:A{0|0}
     |normalized:{indices-refs}
      {indices refs}
     {menu_entry_separator::: }
@@ -282,7 +282,7 @@ $result_tree_text{'index_table_chapter_no_node'} = '*document_root C12
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{node}
+    |node_content:A{0|0}
     |normalized:{node}
      {node}
     {menu_entry_separator:::       }

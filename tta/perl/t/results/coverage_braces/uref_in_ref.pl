@@ -15,7 +15,7 @@ $result_tree_text{'uref_in_ref'} = '*document_root C1
    *@ref C5 l1
     *brace_arg C1
     |EXTRA
-    |node_content:{(file)node}
+    |node_content:A{0|0}
      {(file)node}
     *brace_arg C3
      {spaces_before_argument: }

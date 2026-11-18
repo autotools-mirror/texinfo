@@ -93,28 +93,28 @@ $result_tree_text{'add_lower_case_redirection_file_names'} = '*document_root C7
    *@xref C1 l14
     *brace_arg C1
     |EXTRA
-    |node_content:{Up and Down}
+    |node_content:A{0|0}
     |normalized:{Up-and-Down}
      {Up and Down}
    {.\\n}
    *@xref C1 l15
     *brace_arg C1
     |EXTRA
-    |node_content:{Chap}
+    |node_content:A{0|0}
     |normalized:{Chap}
      {Chap}
    {.\\n}
    *@xref C1 l16
     *brace_arg C1
     |EXTRA
-    |node_content:{section}
+    |node_content:A{0|0}
     |normalized:{section}
      {section}
    {.\\n}
    *@xref C1 l17
     *brace_arg C1
     |EXTRA
-    |node_content:{lowerc}
+    |node_content:A{0|0}
     |normalized:{lowerc}
      {lowerc}
    {.\\n}

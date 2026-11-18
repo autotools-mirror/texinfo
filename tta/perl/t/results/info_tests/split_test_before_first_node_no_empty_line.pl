@@ -52,7 +52,7 @@ $result_tree_text{'split_test_before_first_node_no_empty_line'} = '*document_roo
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{chap1}
+    |node_content:A{0|0}
     |normalized:{chap1}
      {chap1}
     {menu_entry_separator:::}

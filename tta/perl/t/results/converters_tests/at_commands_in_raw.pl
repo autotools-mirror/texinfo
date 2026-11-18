@@ -181,7 +181,7 @@ $result_tree_text{'at_commands_in_raw'} = '*document_root C5
    *@xref C1 l69
     *brace_arg C1
     |EXTRA
-    |node_content:{anchor in html}
+    |node_content:A{0|0}
     |normalized:{anchor-in-html}
      {anchor in html}
    {.\\n}
@@ -190,7 +190,7 @@ $result_tree_text{'at_commands_in_raw'} = '*document_root C5
    *@ref C1 l71
     *brace_arg C1
     |EXTRA
-    |node_content:{anchor in tex}
+    |node_content:A{0|0}
     |normalized:{anchor-in-tex}
      {anchor in tex}
    {.\\n}

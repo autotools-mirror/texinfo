@@ -48,20 +48,20 @@ $result_tree_text{'commands_and_spaces'} = '*document_root C2
     {spaces_after_argument: }
    *line_arg C3
    |EXTRA
-   |manual_content:{b}
+   |manual_content:A{1|1}
     {(}
     {b}
     {)}
    *line_arg C4
    |EXTRA
-   |manual_content:{c}
+   |manual_content:A{1|1}
     {(}
     {c}
     {)}
     {spaces_after_argument: }
    *line_arg C5
    |EXTRA
-   |manual_content:{d}
+   |manual_content:A{2|2}
     {spaces_before_argument: }
     {(}
     {d}

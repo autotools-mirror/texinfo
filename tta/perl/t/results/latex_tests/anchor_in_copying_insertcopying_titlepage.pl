@@ -114,14 +114,14 @@ $result_tree_text{'anchor_in_copying_insertcopying_titlepage'} = '*document_root
    *@pxref C1 l19
     *brace_arg C1
     |EXTRA
-    |node_content:{a in copying}
+    |node_content:A{0|0}
     |normalized:{a-in-copying}
      {a in copying}
    {.\\n}
    *@pxref C1 l20
     *brace_arg C1
     |EXTRA
-    |node_content:{a in titlepage}
+    |node_content:A{0|0}
     |normalized:{a-in-titlepage}
      {a in titlepage}
    {.\\n}

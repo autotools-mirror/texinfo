@@ -58,7 +58,7 @@ $result_tree_text{'ref_in_center'} = '*document_root C5
     *@ref C1 l7
      *brace_arg C1
      |EXTRA
-     |node_content:{Top}
+     |node_content:A{0|0}
      |normalized:{Top}
       {Top}
     {spaces_after_argument:\\n}

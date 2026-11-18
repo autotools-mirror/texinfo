@@ -66,7 +66,7 @@ $result_tree_text{'unknown_language'} = '*document_root C5
    *@xref C1 l9
     *brace_arg C1
     |EXTRA
-    |node_content:{Top}
+    |node_content:A{0|0}
     |normalized:{Top}
      {Top}
    {.\\n}
@@ -85,7 +85,7 @@ $result_tree_text{'unknown_language'} = '*document_root C5
    *@xref C1 l13
     *brace_arg C1
     |EXTRA
-    |node_content:{Top}
+    |node_content:A{0|0}
     |normalized:{Top}
      {Top}
    {.\\n}

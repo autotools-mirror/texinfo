@@ -45,7 +45,7 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
    *@ref C2 l5
     *brace_arg C1
     |EXTRA
-    |node_content:{Top}
+    |node_content:A{0|0}
     |normalized:{Top}
      {Top}
     *brace_arg C1
@@ -62,7 +62,7 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
    *@ref C3 l6
     *brace_arg C1
     |EXTRA
-    |node_content:{Top}
+    |node_content:A{0|0}
     |normalized:{Top}
      {Top}
     *brace_arg
@@ -80,7 +80,7 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
    *@ref C4 l7
     *brace_arg C1
     |EXTRA
-    |node_content:{Top}
+    |node_content:A{0|0}
      {Top}
     *brace_arg
     *brace_arg
@@ -98,7 +98,7 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
    *@ref C5 l8
     *brace_arg C1
     |EXTRA
-    |node_content:{Top}
+    |node_content:A{0|0}
      {Top}
     *brace_arg
     *brace_arg
@@ -117,7 +117,7 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
    *@ref C4 l9
     *brace_arg C1
     |EXTRA
-    |node_content:{Top}
+    |node_content:A{0|0}
     |normalized:{Top}
      {Top}
     *brace_arg C1
@@ -137,7 +137,7 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
    *@ref C4 l10
     *brace_arg C1
     |EXTRA
-    |node_content:{Top}
+    |node_content:A{0|0}
      {Top}
     *brace_arg C1
      {cross ref name}
@@ -156,7 +156,7 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
    *@ref C5 l11
     *brace_arg C1
     |EXTRA
-    |node_content:{Top}
+    |node_content:A{0|0}
      {Top}
     *brace_arg C1
      {cross ref name}
@@ -176,7 +176,7 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
    *@ref C4 l12
     *brace_arg C1
     |EXTRA
-    |node_content:{Top}
+    |node_content:A{0|0}
      {Top}
     *brace_arg C1
      {cross ref name}
@@ -196,7 +196,7 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
    *@ref C5 l13
     *brace_arg C1
     |EXTRA
-    |node_content:{Top}
+    |node_content:A{0|0}
      {Top}
     *brace_arg C1
      {cross ref name}
@@ -217,7 +217,7 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
    *@ref C5 l14
     *brace_arg C1
     |EXTRA
-    |node_content:{Top}
+    |node_content:A{0|0}
      {Top}
     *brace_arg C1
      {cross ref name}
@@ -241,7 +241,7 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
    *@ref C4 l15
     *brace_arg C1
     |EXTRA
-    |node_content:{Top}
+    |node_content:A{0|0}
      {Top}
     *brace_arg
     *brace_arg C1
@@ -260,7 +260,7 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
    *@ref C5 l16
     *brace_arg C1
     |EXTRA
-    |node_content:{Top}
+    |node_content:A{0|0}
      {Top}
     *brace_arg
     *brace_arg C1
@@ -280,7 +280,7 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
    *@ref C5 l17
     *brace_arg C1
     |EXTRA
-    |node_content:{Top}
+    |node_content:A{0|0}
      {Top}
     *brace_arg
     *brace_arg C1
@@ -303,7 +303,7 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
    *@ref C5 l18
     *brace_arg C1
     |EXTRA
-    |node_content:{Top}
+    |node_content:A{0|0}
      {Top}
     *brace_arg
     *brace_arg
@@ -325,7 +325,7 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
    *@ref C2 l20
     *brace_arg C1
     |EXTRA
-    |node_content:{(pman)Top}
+    |node_content:A{0|0}
     |normalized:{_0028pman_0029Top}
      {(pman)Top}
     *brace_arg C1
@@ -342,7 +342,7 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
    *@ref C3 l21
     *brace_arg C1
     |EXTRA
-    |node_content:{(pman)Top}
+    |node_content:A{0|0}
     |normalized:{_0028pman_0029Top}
      {(pman)Top}
     *brace_arg
@@ -360,7 +360,7 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
    *@ref C4 l22
     *brace_arg C1
     |EXTRA
-    |node_content:{(pman)Top}
+    |node_content:A{0|0}
      {(pman)Top}
     *brace_arg
     *brace_arg
@@ -378,7 +378,7 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
    *@ref C5 l23
     *brace_arg C1
     |EXTRA
-    |node_content:{(pman)Top}
+    |node_content:A{0|0}
      {(pman)Top}
     *brace_arg
     *brace_arg
@@ -397,7 +397,7 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
    *@ref C4 l24
     *brace_arg C1
     |EXTRA
-    |node_content:{(pman)Top}
+    |node_content:A{0|0}
     |normalized:{_0028pman_0029Top}
      {(pman)Top}
     *brace_arg C1
@@ -417,7 +417,7 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
    *@ref C4 l25
     *brace_arg C1
     |EXTRA
-    |node_content:{(pman)Top}
+    |node_content:A{0|0}
      {(pman)Top}
     *brace_arg C1
      {cross ref name}
@@ -436,7 +436,7 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
    *@ref C5 l26
     *brace_arg C1
     |EXTRA
-    |node_content:{(pman)Top}
+    |node_content:A{0|0}
      {(pman)Top}
     *brace_arg C1
      {cross ref name}
@@ -456,7 +456,7 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
    *@ref C4 l27
     *brace_arg C1
     |EXTRA
-    |node_content:{(pman)Top}
+    |node_content:A{0|0}
      {(pman)Top}
     *brace_arg C1
      {cross ref name}
@@ -476,7 +476,7 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
    *@ref C5 l28
     *brace_arg C1
     |EXTRA
-    |node_content:{(pman)Top}
+    |node_content:A{0|0}
      {(pman)Top}
     *brace_arg C1
      {cross ref name}
@@ -497,7 +497,7 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
    *@ref C5 l29
     *brace_arg C1
     |EXTRA
-    |node_content:{(pman)Top}
+    |node_content:A{0|0}
      {(pman)Top}
     *brace_arg C1
      {cross ref name}
@@ -521,7 +521,7 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
    *@ref C4 l30
     *brace_arg C1
     |EXTRA
-    |node_content:{(pman)Top}
+    |node_content:A{0|0}
      {(pman)Top}
     *brace_arg
     *brace_arg C1
@@ -540,7 +540,7 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
    *@ref C5 l31
     *brace_arg C1
     |EXTRA
-    |node_content:{(pman)Top}
+    |node_content:A{0|0}
      {(pman)Top}
     *brace_arg
     *brace_arg C1
@@ -560,7 +560,7 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
    *@ref C5 l32
     *brace_arg C1
     |EXTRA
-    |node_content:{(pman)Top}
+    |node_content:A{0|0}
      {(pman)Top}
     *brace_arg
     *brace_arg C1
@@ -583,7 +583,7 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
    *@ref C5 l33
     *brace_arg C1
     |EXTRA
-    |node_content:{(pman)Top}
+    |node_content:A{0|0}
      {(pman)Top}
     *brace_arg
     *brace_arg
@@ -605,7 +605,7 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
    *@inforef C3 l35
     *brace_arg C1
     |EXTRA
-    |node_content:{Top}
+    |node_content:A{0|0}
      {Top}
     *brace_arg C2
      {spaces_before_argument: }
@@ -625,7 +625,7 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
    *@inforef C1 l36
     *brace_arg C1
     |EXTRA
-    |node_content:{Top}
+    |node_content:A{0|0}
     |normalized:{Top}
      {Top}
    {\\n}
@@ -640,7 +640,7 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
    *@inforef C2 l37
     *brace_arg C1
     |EXTRA
-    |node_content:{Top}
+    |node_content:A{0|0}
     |normalized:{Top}
      {Top}
     *brace_arg C2
@@ -658,7 +658,7 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
    *@inforef C3 l38
     *brace_arg C1
     |EXTRA
-    |node_content:{Top}
+    |node_content:A{0|0}
      {Top}
     *brace_arg
     *brace_arg C1

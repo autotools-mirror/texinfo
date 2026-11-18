@@ -46,7 +46,7 @@ NodeForward: [U1]
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{chapter 1}
+    |node_content:A{0|0}
     |normalized:{chapter-1}
      {chapter 1}
     {menu_entry_separator:::}
@@ -57,7 +57,7 @@ NodeForward: [U1]
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{node after chapter 1}
+    |node_content:A{0|0}
     |normalized:{node-after-chapter-1}
      {node after chapter 1}
     {menu_entry_separator:::}
@@ -68,7 +68,7 @@ NodeForward: [U1]
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{last node in chapter 1}
+    |node_content:A{0|0}
     |normalized:{last-node-in-chapter-1}
      {last node in chapter 1}
     {menu_entry_separator:::}
@@ -106,19 +106,19 @@ NodeBack: [U0]
     {chapter 1}
    *line_arg C2
    |EXTRA
-   |node_content:{node after chapter 1}
+   |node_content:A{1|1}
    |normalized:{node-after-chapter-1}
     {spaces_before_argument: }
     {node after chapter 1}
    *line_arg C2
    |EXTRA
-   |node_content:{Top}
+   |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
     {Top}
    *line_arg C3
    |EXTRA
-   |node_content:{Top}
+   |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
     {Top}

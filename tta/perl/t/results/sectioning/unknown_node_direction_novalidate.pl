@@ -26,7 +26,7 @@ $result_tree_text{'unknown_node_direction_novalidate'} = '*document_root C2
     {one arg2}
    *line_arg C3
    |EXTRA
-   |node_content:{two arg}
+   |node_content:A{1|1}
    |normalized:{two-arg}
     {spaces_before_argument: }
     {two arg}

@@ -79,7 +79,7 @@ $result_tree_text{'anchor_in_copying_insertcopying_chap'} = '*document_root C5
    *@pxref C1 l11
     *brace_arg C1
     |EXTRA
-    |node_content:{a in copying}
+    |node_content:A{0|0}
     |normalized:{a-in-copying}
      {a in copying}
    {\\n}
@@ -94,7 +94,7 @@ $result_tree_text{'anchor_in_copying_insertcopying_chap'} = '*document_root C5
    *@pxref C1 l15
     *brace_arg C1
     |EXTRA
-    |node_content:{a in copying}
+    |node_content:A{0|0}
     |normalized:{a-in-copying}
      {a in copying}
    {\\n}

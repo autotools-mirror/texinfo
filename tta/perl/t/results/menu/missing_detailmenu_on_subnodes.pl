@@ -39,7 +39,7 @@ $result_tree_text{'missing_detailmenu_on_subnodes'} = '*document_root C13
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{chapter}
+    |node_content:A{0|0}
     |normalized:{chapter}
      {chapter}
     {menu_entry_separator:::}
@@ -50,7 +50,7 @@ $result_tree_text{'missing_detailmenu_on_subnodes'} = '*document_root C13
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{chapter 2}
+    |node_content:A{0|0}
     |normalized:{chapter-2}
      {chapter 2}
     {menu_entry_separator:::}
@@ -64,7 +64,7 @@ $result_tree_text{'missing_detailmenu_on_subnodes'} = '*document_root C13
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{section}
+    |node_content:A{0|0}
     |normalized:{section}
      {section}
     {menu_entry_separator:::}
@@ -80,7 +80,7 @@ $result_tree_text{'missing_detailmenu_on_subnodes'} = '*document_root C13
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{section chap 2}
+    |node_content:A{0|0}
     |normalized:{section-chap-2}
      {section chap 2}
     {menu_entry_separator:::}
@@ -91,7 +91,7 @@ $result_tree_text{'missing_detailmenu_on_subnodes'} = '*document_root C13
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{unnumberedsec}
+    |node_content:A{0|0}
     |normalized:{unnumberedsec}
      {unnumberedsec}
     {menu_entry_separator:::}
@@ -135,7 +135,7 @@ $result_tree_text{'missing_detailmenu_on_subnodes'} = '*document_root C13
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{section}
+    |node_content:A{0|0}
     |normalized:{section}
      {section}
     {menu_entry_separator:::}
@@ -200,7 +200,7 @@ $result_tree_text{'missing_detailmenu_on_subnodes'} = '*document_root C13
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{section chap 2}
+    |node_content:A{0|0}
     |normalized:{section-chap-2}
      {section chap 2}
     {menu_entry_separator:::}
@@ -211,7 +211,7 @@ $result_tree_text{'missing_detailmenu_on_subnodes'} = '*document_root C13
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{unnumberedsec}
+    |node_content:A{0|0}
     |normalized:{unnumberedsec}
      {unnumberedsec}
     {menu_entry_separator:::}

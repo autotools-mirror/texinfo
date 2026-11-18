@@ -32,7 +32,7 @@ $result_tree_text{'space_in_node'} = '*document_root C5
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{Chap    first here}
+    |node_content:A{0|0}
     |normalized:{Chap-first-here}
      {Chap    first here}
     {menu_entry_separator:::}
@@ -46,7 +46,7 @@ $result_tree_text{'space_in_node'} = '*document_root C5
     {menu_entry_separator::}
     *menu_entry_node C1
     |EXTRA
-    |node_content:{Test   title}
+    |node_content:A{0|0}
     |normalized:{Test-title}
      {Test   title}
     {menu_entry_separator:.}
@@ -57,7 +57,7 @@ $result_tree_text{'space_in_node'} = '*document_root C5
     {menu_entry_leading_text:*   }
     *menu_entry_node C2
     |EXTRA
-    |node_content:{Last with spaces    }
+    |node_content:A{0|1}
     |normalized:{Last-with-spaces}
      {Last with spaces}
      {space_at_end_menu_node:    }

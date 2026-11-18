@@ -81,7 +81,7 @@ $result_tree_text{'node_heading_between'} = '*document_root C6
    *@xref C1 l11
     *brace_arg C1
     |EXTRA
-    |node_content:{Topic}
+    |node_content:A{0|0}
     |normalized:{Topic}
      {Topic}
    {\\n}

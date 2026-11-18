@@ -26,7 +26,7 @@ $result_tree_text{'nodes_before_top_and_sections_chapter'} = '*document_root C13
     {first before top}
    *line_arg C2
    |EXTRA
-   |node_content:{Top}
+   |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
     {Top}
@@ -34,7 +34,7 @@ $result_tree_text{'nodes_before_top_and_sections_chapter'} = '*document_root C13
     {spaces_before_argument: }
    *line_arg C4
    |EXTRA
-   |manual_content:{dir}
+   |manual_content:A{1|1}
     {(}
     {dir}
     {)}
@@ -78,7 +78,7 @@ $result_tree_text{'nodes_before_top_and_sections_chapter'} = '*document_root C13
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{node in menu before top}
+    |node_content:A{0|0}
     |normalized:{node-in-menu-before-top}
      {node in menu before top}
     {menu_entry_separator:::}
@@ -107,7 +107,7 @@ $result_tree_text{'nodes_before_top_and_sections_chapter'} = '*document_root C13
    *line_arg
    *line_arg C2
    |EXTRA
-   |node_content:{first before top}
+   |node_content:A{0|0}
    |normalized:{first-before-top}
     {first before top}
     {spaces_after_argument:\\n}
@@ -157,7 +157,7 @@ $result_tree_text{'nodes_before_top_and_sections_chapter'} = '*document_root C13
     {spaces_before_argument: }
    *line_arg C2
    |EXTRA
-   |node_content:{first before top}
+   |node_content:A{0|0}
    |normalized:{first-before-top}
     {first before top}
     {spaces_after_argument:\\n}
@@ -230,7 +230,7 @@ $result_tree_text{'nodes_before_top_and_sections_chapter'} = '*document_root C13
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{first}
+    |node_content:A{0|0}
     |normalized:{first}
      {first}
     {menu_entry_separator:::}
@@ -241,7 +241,7 @@ $result_tree_text{'nodes_before_top_and_sections_chapter'} = '*document_root C13
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{chapter}
+    |node_content:A{0|0}
     |normalized:{chapter}
      {chapter}
     {menu_entry_separator:::}
@@ -252,7 +252,7 @@ $result_tree_text{'nodes_before_top_and_sections_chapter'} = '*document_root C13
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{node in chapter}
+    |node_content:A{0|0}
     |normalized:{node-in-chapter}
      {node in chapter}
     {menu_entry_separator:::}
@@ -280,12 +280,12 @@ $result_tree_text{'nodes_before_top_and_sections_chapter'} = '*document_root C13
    *line_arg
    *line_arg C1
    |EXTRA
-   |node_content:{Top}
+   |node_content:A{0|0}
    |normalized:{Top}
     {Top}
    *line_arg C3
    |EXTRA
-   |node_content:{Top}
+   |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
     {Top}
@@ -334,7 +334,7 @@ $result_tree_text{'nodes_before_top_and_sections_chapter'} = '*document_root C13
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{second}
+    |node_content:A{0|0}
     |normalized:{second}
      {second}
     {menu_entry_separator:::}
@@ -363,7 +363,7 @@ $result_tree_text{'nodes_before_top_and_sections_chapter'} = '*document_root C13
    *line_arg
    *line_arg C2
    |EXTRA
-   |node_content:{first}
+   |node_content:A{0|0}
    |normalized:{first}
     {first}
     {spaces_after_argument:\\n}
@@ -375,7 +375,7 @@ $result_tree_text{'nodes_before_top_and_sections_chapter'} = '*document_root C13
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{a node}
+    |node_content:A{0|0}
     |normalized:{a-node}
      {a node}
     {menu_entry_separator:::}
@@ -386,7 +386,7 @@ $result_tree_text{'nodes_before_top_and_sections_chapter'} = '*document_root C13
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{another}
+    |node_content:A{0|0}
     |normalized:{another}
      {another}
     {menu_entry_separator:::}
@@ -423,13 +423,13 @@ $result_tree_text{'nodes_before_top_and_sections_chapter'} = '*document_root C13
     {spaces_before_argument: }
    *line_arg C2
    |EXTRA
-   |node_content:{a node}
+   |node_content:A{1|1}
    |normalized:{a-node}
     {spaces_before_argument: }
     {a node}
    *line_arg C3
    |EXTRA
-   |node_content:{second}
+   |node_content:A{1|1}
    |normalized:{second}
     {spaces_before_argument: }
     {second}
@@ -472,7 +472,7 @@ $result_tree_text{'nodes_before_top_and_sections_chapter'} = '*document_root C13
     {a node}
    *line_arg C2
    |EXTRA
-   |node_content:{another}
+   |node_content:A{1|1}
    |normalized:{another}
     {spaces_before_argument: }
     {another}
@@ -480,7 +480,7 @@ $result_tree_text{'nodes_before_top_and_sections_chapter'} = '*document_root C13
     {spaces_before_argument: }
    *line_arg C2
    |EXTRA
-   |node_content:{second}
+   |node_content:A{0|0}
    |normalized:{second}
     {second}
     {spaces_after_argument:\\n}
@@ -540,13 +540,13 @@ $result_tree_text{'nodes_before_top_and_sections_chapter'} = '*document_root C13
     {chapter}
    *line_arg C1
    |EXTRA
-   |node_content:{node in chapter}
+   |node_content:A{0|0}
    |normalized:{node-in-chapter}
     {node in chapter}
    *line_arg
    *line_arg C2
    |EXTRA
-   |node_content:{Top}
+   |node_content:A{0|0}
    |normalized:{Top}
     {Top}
     {spaces_after_argument:\\n}
@@ -582,13 +582,13 @@ $result_tree_text{'nodes_before_top_and_sections_chapter'} = '*document_root C13
    *line_arg
    *line_arg C2
    |EXTRA
-   |node_content:{chapter}
+   |node_content:A{1|1}
    |normalized:{chapter}
     {spaces_before_argument: }
     {chapter}
    *line_arg C2
    |EXTRA
-   |node_content:{Top}
+   |node_content:A{0|0}
    |normalized:{Top}
     {Top}
     {spaces_after_argument:\\n}

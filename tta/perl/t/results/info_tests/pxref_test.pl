@@ -27,7 +27,7 @@ $result_tree_text{'pxref_test'} = '*document_root C2
    *@pxref C4 l3
     *brace_arg C1
     |EXTRA
-    |node_content:{in pxref}
+    |node_content:A{0|0}
      {in pxref}
     *brace_arg
     *brace_arg
@@ -38,7 +38,7 @@ $result_tree_text{'pxref_test'} = '*document_root C2
    *@pxref C4 l3
     *brace_arg C1
     |EXTRA
-    |node_content:{in pxref}
+    |node_content:A{0|0}
      {in pxref}
     *brace_arg C2
      {spaces_before_argument: }
@@ -51,7 +51,7 @@ $result_tree_text{'pxref_test'} = '*document_root C2
    *@pxref C4 l4
     *brace_arg C1
     |EXTRA
-    |node_content:{n}
+    |node_content:A{0|0}
      {n}
     *brace_arg
     *brace_arg
@@ -62,7 +62,7 @@ $result_tree_text{'pxref_test'} = '*document_root C2
    *@pxref C4 l4
     *brace_arg C1
     |EXTRA
-    |node_content:{n}
+    |node_content:A{0|0}
      {n}
     *brace_arg C2
      {spaces_before_argument: }

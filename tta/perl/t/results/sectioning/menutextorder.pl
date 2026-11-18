@@ -19,7 +19,7 @@ $result_tree_text{'menutextorder'} = '*document_root C15
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{foo}
+    |node_content:A{0|0}
     |normalized:{foo}
      {foo}
     {menu_entry_separator:::}
@@ -30,7 +30,7 @@ $result_tree_text{'menutextorder'} = '*document_root C15
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{bar}
+    |node_content:A{0|0}
     |normalized:{bar}
      {bar}
     {menu_entry_separator:::}
@@ -74,7 +74,7 @@ $result_tree_text{'menutextorder'} = '*document_root C15
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{onesub2}
+    |node_content:A{0|0}
     |normalized:{onesub2}
      {onesub2}
     {menu_entry_separator:::}
@@ -161,7 +161,7 @@ $result_tree_text{'menutextorder'} = '*document_root C15
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{sub1}
+    |node_content:A{0|0}
     |normalized:{sub1}
      {sub1}
     {menu_entry_separator:::}
@@ -172,7 +172,7 @@ $result_tree_text{'menutextorder'} = '*document_root C15
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{sub3}
+    |node_content:A{0|0}
     |normalized:{sub3}
      {sub3}
     {menu_entry_separator:::}
@@ -183,7 +183,7 @@ $result_tree_text{'menutextorder'} = '*document_root C15
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{sub2}
+    |node_content:A{0|0}
     |normalized:{sub2}
      {sub2}
     {menu_entry_separator:::}

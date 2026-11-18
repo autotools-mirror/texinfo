@@ -30,7 +30,7 @@ $result_tree_text{'ref_to_top_in_anchor'} = '*document_root C2
     *@ref C1 l2
      *brace_arg C1
      |EXTRA
-     |node_content:{Top}
+     |node_content:A{0|0}
      |normalized:{Top}
       {Top}
 ';

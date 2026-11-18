@@ -37,7 +37,7 @@ $result_tree_text{'macro_for_dot_in_menu_not_separator'} = '*document_root C1
     {menu_entry_separator:: }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{name.after}
+    |node_content:A{0|0}
     |normalized:{name_002eafter}
      {name.after}
      >SOURCEMARKS

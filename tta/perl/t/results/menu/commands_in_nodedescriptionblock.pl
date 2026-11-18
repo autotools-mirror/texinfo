@@ -39,7 +39,7 @@ $result_tree_text{'commands_in_nodedescriptionblock'} = '*document_root C7
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{node1}
+    |node_content:A{0|0}
     |normalized:{node1}
      {node1}
     {menu_entry_separator:::}
@@ -50,7 +50,7 @@ $result_tree_text{'commands_in_nodedescriptionblock'} = '*document_root C7
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{node2}
+    |node_content:A{0|0}
     |normalized:{node2}
      {node2}
     {menu_entry_separator:::}
@@ -69,14 +69,14 @@ $result_tree_text{'commands_in_nodedescriptionblock'} = '*document_root C7
    *@ref C1 l9
     *brace_arg C1
     |EXTRA
-    |node_content:{in nodescription}
+    |node_content:A{0|0}
     |normalized:{in-nodescription}
      {in nodescription}
    {, }
    *@ref C1 l9
     *brace_arg C1
     |EXTRA
-    |node_content:{f1}
+    |node_content:A{0|0}
     |normalized:{f1}
      {f1}
    {.\\n}
@@ -118,7 +118,7 @@ $result_tree_text{'commands_in_nodedescriptionblock'} = '*document_root C7
     *@ref C1 l17
      *brace_arg C1
      |EXTRA
-     |node_content:{node2}
+     |node_content:A{0|0}
      |normalized:{node2}
       {node2}
     {. Footnote}
@@ -212,14 +212,14 @@ $result_tree_text{'commands_in_nodedescriptionblock'} = '*document_root C7
    *@ref C1 l32
     *brace_arg C1
     |EXTRA
-    |node_content:{in nodescription}
+    |node_content:A{0|0}
     |normalized:{in-nodescription}
      {in nodescription}
    {, }
    *@ref C1 l32
     *brace_arg C1
     |EXTRA
-    |node_content:{f1}
+    |node_content:A{0|0}
     |normalized:{f1}
      {f1}
    {.\\n}
@@ -237,7 +237,7 @@ $result_tree_text{'commands_in_nodedescriptionblock'} = '*document_root C7
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{node1}
+    |node_content:A{0|0}
     |normalized:{node1}
      {node1}
     {menu_entry_separator:::}

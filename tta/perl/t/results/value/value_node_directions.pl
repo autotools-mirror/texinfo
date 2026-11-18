@@ -30,7 +30,7 @@ $result_tree_text{'value_node_directions'} = '*document_root C7
     {Top}
    *line_arg C2
    |EXTRA
-   |node_content:{bar}
+   |node_content:A{1|1}
    |normalized:{bar}
     {spaces_before_argument: }
     >SOURCEMARKS
@@ -43,14 +43,14 @@ $result_tree_text{'value_node_directions'} = '*document_root C7
     >value_expansion<end;1><p:3>
    *line_arg C4
    |EXTRA
-   |manual_content:{dir}
+   |manual_content:A{2|2}
     {spaces_before_argument: }
     {(}
     {dir}
     {)}
    *line_arg C5
    |EXTRA
-   |manual_content:{dir}
+   |manual_content:A{2|2}
     {spaces_before_argument: }
     {(}
     {dir}
@@ -98,19 +98,19 @@ $result_tree_text{'value_node_directions'} = '*document_root C7
     >value_expansion<end;4><p:3>
    *line_arg C2
    |EXTRA
-   |node_content:{BarFoo}
+   |node_content:A{1|1}
    |normalized:{BarFoo}
     {spaces_before_argument: }
     {BarFoo}
    *line_arg C2
    |EXTRA
-   |node_content:{Top}
+   |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
     {Top}
    *line_arg C5
    |EXTRA
-   |manual_content:{dir}
+   |manual_content:A{2|2}
     {spaces_before_argument: }
     {(}
     {dir}
@@ -140,7 +140,7 @@ $result_tree_text{'value_node_directions'} = '*document_root C7
     {spaces_before_argument: }
    *line_arg C2
    |EXTRA
-   |node_content:{bar}
+   |node_content:A{1|1}
    |normalized:{bar}
     {spaces_before_argument: }
     >SOURCEMARKS
@@ -153,7 +153,7 @@ $result_tree_text{'value_node_directions'} = '*document_root C7
     >value_expansion<end;5><p:3>
    *line_arg C5
    |EXTRA
-   |manual_content:{dir}
+   |manual_content:A{2|2}
     {spaces_before_argument: }
     {(}
     {dir}

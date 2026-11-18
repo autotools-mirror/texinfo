@@ -48,7 +48,7 @@ $result_tree_text{'anchor_in_menu_on_sectioning_command_line'} = '*document_root
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{ggg}
+    |node_content:A{0|0}
     |normalized:{ggg}
      {ggg}
     {menu_entry_separator:::}

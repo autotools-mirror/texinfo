@@ -22,7 +22,7 @@ $result_tree_text{'nodes_before_top'} = '*document_root C7
     {first}
    *line_arg C2
    |EXTRA
-   |node_content:{Top}
+   |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
     {Top}
@@ -30,7 +30,7 @@ $result_tree_text{'nodes_before_top'} = '*document_root C7
     {spaces_before_argument: }
    *line_arg C4
    |EXTRA
-   |manual_content:{dir}
+   |manual_content:A{1|1}
     {(}
     {dir}
     {)}
@@ -44,7 +44,7 @@ $result_tree_text{'nodes_before_top'} = '*document_root C7
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{node in menu before top}
+    |node_content:A{0|0}
     |normalized:{node-in-menu-before-top}
      {node in menu before top}
     {menu_entry_separator:::}
@@ -72,7 +72,7 @@ $result_tree_text{'nodes_before_top'} = '*document_root C7
    *line_arg
    *line_arg C2
    |EXTRA
-   |node_content:{first}
+   |node_content:A{0|0}
    |normalized:{first}
     {first}
     {spaces_after_argument:\\n}
@@ -89,7 +89,7 @@ $result_tree_text{'nodes_before_top'} = '*document_root C7
    *line_arg
    *line_arg C2
    |EXTRA
-   |node_content:{first}
+   |node_content:A{0|0}
    |normalized:{first}
     {first}
     {spaces_after_argument:\\n}
@@ -111,7 +111,7 @@ $result_tree_text{'nodes_before_top'} = '*document_root C7
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{second node}
+    |node_content:A{0|0}
     |normalized:{second-node}
      {second node}
     {menu_entry_separator:::}

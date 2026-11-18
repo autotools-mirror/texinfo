@@ -46,7 +46,7 @@ $result_tree_text{'macro_in_menu_comment_closed_by_detailmenu'} = '*document_roo
      {menu_entry_leading_text:* }
      *menu_entry_node C1
      |EXTRA
-     |node_content:{second}
+     |node_content:A{0|0}
      |normalized:{second}
       {second}
      {menu_entry_separator:::}

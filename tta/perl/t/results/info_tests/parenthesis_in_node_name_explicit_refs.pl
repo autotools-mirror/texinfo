@@ -40,7 +40,7 @@ $result_tree_text{'parenthesis_in_node_name_explicit_refs'} = '*document_root C7
     {menu_entry_leading_text:* }
     *menu_entry_node C2
     |EXTRA
-    |node_content:{One@asis{:}}
+    |node_content:A{0|1}
     |normalized:{One_003a}
      {One}
      *@asis C1 l7
@@ -54,7 +54,7 @@ $result_tree_text{'parenthesis_in_node_name_explicit_refs'} = '*document_root C7
     {menu_entry_leading_text:* }
     *menu_entry_node C3
     |EXTRA
-    |manual_content:{Two}
+    |manual_content:A{1|1}
      {(}
      {Two}
      {)}
@@ -81,20 +81,20 @@ $result_tree_text{'parenthesis_in_node_name_explicit_refs'} = '*document_root C7
     {One:}
    *line_arg C4
    |EXTRA
-   |manual_content:{Two}
+   |manual_content:A{2|2}
     {spaces_before_argument: }
     {(}
     {Two}
     {)}
    *line_arg C2
    |EXTRA
-   |node_content:{Top}
+   |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
     {Top}
    *line_arg C3
    |EXTRA
-   |node_content:{Top}
+   |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
     {Top}
@@ -145,7 +145,7 @@ $result_tree_text{'parenthesis_in_node_name_explicit_refs'} = '*document_root C7
    *@xref C1 l20
     *brace_arg C1
     |EXTRA
-    |node_content:{(Two)}
+    |node_content:A{0|0}
     |normalized:{_0028Two_0029}
      {(Two)}
    {.\\n}

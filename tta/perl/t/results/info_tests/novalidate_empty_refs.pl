@@ -32,13 +32,13 @@ $result_tree_text{'novalidate_empty_refs'} = '*document_root C5
    *@xref C1 l6
     *brace_arg C1
     |EXTRA
-    |node_content:{@:}
+    |node_content:A{0|0}
      *@:
    {.\\n}
    *@xref C1 l7
     *brace_arg C1
     |EXTRA
-    |node_content:{@asis{ }}
+    |node_content:A{0|0}
     |normalized:{-}
      *@asis C1 l7
       *brace_container C1

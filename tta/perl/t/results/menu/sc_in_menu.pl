@@ -37,7 +37,7 @@ $result_tree_text{'sc_in_menu'} = '*document_root C3
     {menu_entry_separator::}
     *menu_entry_node C1
     |EXTRA
-    |node_content:{@sc{node}}
+    |node_content:A{0|0}
     |normalized:{node}
      *@sc C1 l5
       *brace_container C1
@@ -125,8 +125,8 @@ $result_tree_text{'sc_in_menu'} = '*document_root C3
      {menu_entry_separator::}
      *menu_entry_node C4
      |EXTRA
-     |manual_content:{dir}
-     |node_content:{@sc{example node}}
+     |manual_content:A{1|1}
+     |node_content:A{3|3}
      |normalized:{example-node}
       {(}
       {dir}

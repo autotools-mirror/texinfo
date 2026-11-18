@@ -145,14 +145,14 @@ $result_tree_text{'namedanchor'} = '*document_root C11
    *@xref C1 l22
     *brace_arg C1
     |EXTRA
-    |node_content:{in chap no name}
+    |node_content:A{0|0}
     |normalized:{in-chap-no-name}
      {in chap no name}
    {\\n}
    *@xref C2 l23
     *brace_arg C1
     |EXTRA
-    |node_content:{in chap no name}
+    |node_content:A{0|0}
     |normalized:{in-chap-no-name}
      {in chap no name}
     *brace_arg C2
@@ -162,7 +162,7 @@ $result_tree_text{'namedanchor'} = '*document_root C11
    *@xref C3 l24
     *brace_arg C1
     |EXTRA
-    |node_content:{in chap no name}
+    |node_content:A{0|0}
     |normalized:{in-chap-no-name}
      {in chap no name}
     *brace_arg C2
@@ -177,14 +177,14 @@ $result_tree_text{'namedanchor'} = '*document_root C11
    *@xref C1 l26
     *brace_arg C1
     |EXTRA
-    |node_content:{normal}
+    |node_content:A{0|0}
     |normalized:{normal}
      {normal}
    {\\n}
    *@xref C2 l27
     *brace_arg C1
     |EXTRA
-    |node_content:{normal}
+    |node_content:A{0|0}
     |normalized:{normal}
      {normal}
     *brace_arg C2
@@ -194,7 +194,7 @@ $result_tree_text{'namedanchor'} = '*document_root C11
    *@xref C3 l28
     *brace_arg C1
     |EXTRA
-    |node_content:{normal}
+    |node_content:A{0|0}
     |normalized:{normal}
      {normal}
     *brace_arg C2
@@ -218,14 +218,14 @@ $result_tree_text{'namedanchor'} = '*document_root C11
    *@xref C1 l32
     *brace_arg C1
     |EXTRA
-    |node_content:{in chap empty name}
+    |node_content:A{0|0}
     |normalized:{in-chap-empty-name}
      {in chap empty name}
    {\\n}
    *@xref C2 l33
     *brace_arg C1
     |EXTRA
-    |node_content:{in chap empty name}
+    |node_content:A{0|0}
     |normalized:{in-chap-empty-name}
      {in chap empty name}
     *brace_arg C2
@@ -235,7 +235,7 @@ $result_tree_text{'namedanchor'} = '*document_root C11
    *@xref C3 l34
     *brace_arg C1
     |EXTRA
-    |node_content:{in chap empty name}
+    |node_content:A{0|0}
     |normalized:{in-chap-empty-name}
      {in chap empty name}
     *brace_arg C2
@@ -250,14 +250,14 @@ $result_tree_text{'namedanchor'} = '*document_root C11
    *@xref C1 l36
     *brace_arg C1
     |EXTRA
-    |node_content:{normal}
+    |node_content:A{0|0}
     |normalized:{normal}
      {normal}
    {\\n}
    *@xref C2 l37
     *brace_arg C1
     |EXTRA
-    |node_content:{normal}
+    |node_content:A{0|0}
     |normalized:{normal}
      {normal}
     *brace_arg C2
@@ -267,7 +267,7 @@ $result_tree_text{'namedanchor'} = '*document_root C11
    *@xref C3 l38
     *brace_arg C1
     |EXTRA
-    |node_content:{normal}
+    |node_content:A{0|0}
     |normalized:{normal}
      {normal}
     *brace_arg C2
@@ -282,14 +282,14 @@ $result_tree_text{'namedanchor'} = '*document_root C11
    *@xref C1 l40
     *brace_arg C1
     |EXTRA
-    |node_content:{in Top}
+    |node_content:A{0|0}
     |normalized:{in-Top}
      {in Top}
    {\\n}
    *@xref C1 l41
     *brace_arg C1
     |EXTRA
-    |node_content:{Not here!}
+    |node_content:A{0|0}
     |normalized:{Not-here_0021}
      {Not here!}
    {\\n}
@@ -323,7 +323,7 @@ $result_tree_text{'namedanchor'} = '*document_root C11
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{secc2}
+    |node_content:A{0|0}
     |normalized:{secc2}
      {secc2}
     {menu_entry_separator:::}
@@ -334,7 +334,7 @@ $result_tree_text{'namedanchor'} = '*document_root C11
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{in Top}
+    |node_content:A{0|0}
     |normalized:{in-Top}
      {in Top}
     {menu_entry_separator:::}
@@ -345,7 +345,7 @@ $result_tree_text{'namedanchor'} = '*document_root C11
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{Not here!}
+    |node_content:A{0|0}
     |normalized:{Not-here_0021}
      {Not here!}
     {menu_entry_separator:::}
@@ -356,7 +356,7 @@ $result_tree_text{'namedanchor'} = '*document_root C11
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{in chap no name}
+    |node_content:A{0|0}
     |normalized:{in-chap-no-name}
      {in chap no name}
     {menu_entry_separator:::}
@@ -367,7 +367,7 @@ $result_tree_text{'namedanchor'} = '*document_root C11
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{normal}
+    |node_content:A{0|0}
     |normalized:{normal}
      {normal}
     {menu_entry_separator:::}
@@ -378,7 +378,7 @@ $result_tree_text{'namedanchor'} = '*document_root C11
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{in chap empty name}
+    |node_content:A{0|0}
     |normalized:{in-chap-empty-name}
      {in chap empty name}
     {menu_entry_separator:::}

@@ -30,7 +30,7 @@ $result_tree_text{'formats_in_menu'} = '*document_root C2
     {menu_entry_leading_text:* }
     *menu_entry_node C3
     |EXTRA
-    |manual_content:{gcc}
+    |manual_content:A{1|1}
      {(}
      {gcc}
      {)}
@@ -68,7 +68,7 @@ $result_tree_text{'formats_in_menu'} = '*document_root C2
     {menu_entry_leading_text:* }
     *menu_entry_node C3
     |EXTRA
-    |manual_content:{info}
+    |manual_content:A{1|1}
      {(}
      {info}
      {)}
@@ -93,7 +93,7 @@ $result_tree_text{'formats_in_menu'} = '*document_root C2
     {menu_entry_leading_text:* }
     *menu_entry_node C3
     |EXTRA
-    |manual_content:{manual2}
+    |manual_content:A{1|1}
      {(}
      {manual2}
      {)}
@@ -120,7 +120,7 @@ $result_tree_text{'formats_in_menu'} = '*document_root C2
     {menu_entry_leading_text:* }
     *menu_entry_node C3
     |EXTRA
-    |manual_content:{truc}
+    |manual_content:A{1|1}
      {(}
      {truc}
      {)}

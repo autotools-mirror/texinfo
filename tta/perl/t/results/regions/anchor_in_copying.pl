@@ -76,7 +76,7 @@ $result_tree_text{'anchor_in_copying'} = '*document_root C3
    *@xref C1 l17
     *brace_arg C1
     |EXTRA
-    |node_content:{Copying information}
+    |node_content:A{0|0}
     |normalized:{Copying-information}
      {Copying information}
    {.\\n}

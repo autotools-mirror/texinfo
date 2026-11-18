@@ -39,7 +39,7 @@ $result_tree_text{'inlineraw_in_menu_description'} = '*document_root C3
     {menu_entry_leading_text:* }
     *menu_entry_node C3
     |EXTRA
-    |manual_content:{manual}
+    |manual_content:A{1|1}
      {(}
      {manual}
      {)}

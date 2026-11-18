@@ -34,7 +34,7 @@ $result_tree_text{'node_line_arguments'} = '*document_root C8
     {one arg2}
    *line_arg C3
    |EXTRA
-   |node_content:{two arg}
+   |node_content:A{1|1}
    |normalized:{two-arg}
     {spaces_before_argument: }
     {two arg}
@@ -50,13 +50,13 @@ $result_tree_text{'node_line_arguments'} = '*document_root C8
     {one arg3}
    *line_arg C2
    |EXTRA
-   |node_content:{two arg}
+   |node_content:A{1|1}
    |normalized:{two-arg}
     {spaces_before_argument: }
     {two arg}
    *line_arg C3
    |EXTRA
-   |node_content:{three arg}
+   |node_content:A{1|1}
    |normalized:{three-arg}
     {spaces_before_argument: }
     {three arg}
@@ -72,19 +72,19 @@ $result_tree_text{'node_line_arguments'} = '*document_root C8
     {one arg4}
    *line_arg C2
    |EXTRA
-   |node_content:{two arg}
+   |node_content:A{1|1}
    |normalized:{two-arg}
     {spaces_before_argument: }
     {two arg}
    *line_arg C2
    |EXTRA
-   |node_content:{three arg}
+   |node_content:A{1|1}
    |normalized:{three-arg}
     {spaces_before_argument: }
     {three arg}
    *line_arg C3
    |EXTRA
-   |node_content:{four arg}
+   |node_content:A{1|1}
    |normalized:{four-arg}
     {spaces_before_argument: }
     {four arg}
@@ -100,19 +100,19 @@ $result_tree_text{'node_line_arguments'} = '*document_root C8
     {one arg5}
    *line_arg C2
    |EXTRA
-   |node_content:{two arg}
+   |node_content:A{1|1}
    |normalized:{two-arg}
     {spaces_before_argument: }
     {two arg}
    *line_arg C2
    |EXTRA
-   |node_content:{three arg}
+   |node_content:A{1|1}
    |normalized:{three-arg}
     {spaces_before_argument: }
     {three arg}
    *line_arg C3
    |EXTRA
-   |node_content:{four arg five arg}
+   |node_content:A{1|1}
    |normalized:{four-arg-five-arg}
     {spaces_before_argument: }
     {four arg five arg}
@@ -147,7 +147,7 @@ $result_tree_text{'node_line_arguments'} = '*document_root C8
     { arg2}
    *line_arg C3
    |EXTRA
-   |node_content:{@,cedilla}
+   |node_content:A{1|2}
    |normalized:{_00e7edilla}
     {spaces_before_argument: }
     *@, C1 l10
@@ -156,7 +156,7 @@ $result_tree_text{'node_line_arguments'} = '*document_root C8
     {edilla}
    *line_arg C4
    |EXTRA
-   |node_content:{@strong{comma in strong,}}
+   |node_content:A{1|1}
    |normalized:{comma-in-strong_002c}
     {spaces_before_argument: }
     *@strong C1 l10

@@ -51,7 +51,7 @@ $result_tree_text{'contents_at_document_begin_separate_element'} = '*document_ro
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{chapter}
+    |node_content:A{0|0}
     |normalized:{chapter}
      {chapter}
     {menu_entry_separator:::}

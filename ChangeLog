@@ -1,3 +1,54 @@
+2026-11-18  Patrice Dumas  <pertusus@free.fr>
+
+	manual_content and node_content as indices of element contents not elements
+
+	* tta/C/main/command_stack.c, tta/C/main/converter_types.h, 
+	tta/C/main/tree_types.h (INTEGER_LIST), tta/C/main/utils.c
+	(new_integer_list): rename INTEGER_STACK as INTEGER_LIST.  Move
+	type definition to tree_types.h and functions definitions to
+	utils.c, add new_integer_list.
+
+	* tta/C/main/build_perl_info.c (build_integer_list): rename
+	build_integer_stack as build_integer_list.
+
+	* tta/C/main/build_perl_info.c (build_key_pair_info),
+	tta/C/main/extra.c (add_extra_integer_list)
+	(lookup_extra_integer_list), tta/C/main/manipulate_tree.c
+	(copy_associated_info, print_element_extra), tta/C/main/tree.c
+	(destroy_key_pair_value), tta/C/main/tree_types.h (enum extra_type):
+	add extra_integer_list.
+
+	* tta/C/convert/format_html.c (html_command_text),
+	tta/perl/Texinfo/Convert/HTML.pm (command_text): do not generate a
+	new Texinfo tree based on node_content and manual_content for an external
+	node element, convert the element.
+
+	* tta/C/main/manipulate_tree.c (parse_node_manual), tta/C/main/tree.c
+	(destroy_node_spec), tta/C/main/tree_types.h (NODE_SPEC_EXTRA)
+	(AI_KEYS_LIST), tta/perl/Texinfo/Common.pm (parse_node_manual),
+	tta/perl/Texinfo/ManipulateTree.pm (_element_remove_references)
+	(_print_element_associated_info): store start and end indices of manual
+	name and node name in node element contents in manual_content and
+	node_content in parse_node_manual.  Update NODE_SPEC_EXTRA and use
+	extra_integer_list in C.
+
+	* tta/C/convert/convert_to_info.c (info_format_node),
+	tta/C/convert/convert_to_plaintext.c (plaintext_convert_node_name),
+	tta/C/convert/format_html.c (external_node_href),
+	tta/C/convert/format_html.c (html_convert_xref_command),
+	tta/C/parsetexi/end_line.c (end_line_misc_line),
+	tta/C/parsetexi/menus.c (register_extra_menu_entry_information),
+	tta/C/parsetexi/separator.c (handle_close_brace),
+	tta/C/structuring_transfo/structuring.c
+	(associate_internal_references, new_node_menu_entry),
+	tta/perl/Texinfo/Convert/HTML.pm (_external_node_href)
+	(_convert_xref_command), tta/perl/Texinfo/Convert/InfoNonXS.pm
+	(format_node), tta/perl/Texinfo/Convert/PlaintextNonXS.pm (node_name),
+	tta/perl/Texinfo/ParserNonXS.pm (_end_line_misc_line)
+	(_handle_close_brace), tta/perl/Texinfo/Structuring.pm
+	(_associate_internal_references, new_node_menu_entry): update for
+	change in manual_content and manual_name representation.
+
 2026-11-17  Patrice Dumas  <pertusus@free.fr>
 
 	* tta/perl/Texinfo/Convert/Texinfo.pm (check_node_same_texinfo_code):

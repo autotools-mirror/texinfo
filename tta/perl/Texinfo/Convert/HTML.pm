@@ -601,10 +601,14 @@ sub _external_node_href($$$) {
      $source_command) = @_;
 
   my $normalized = $external_node->{'extra'}->{'normalized'};
-  my $node_contents = $external_node->{'extra'}->{'node_content'};
-  #print STDERR "external_node: ".join('|', keys(%$external_node))."\n";
+  my $node_content;
+  if (exists($external_node->{'extra'}->{'node_content'})) {
+    my ($begin, $end) = @{$external_node->{'extra'}->{'node_content'}};
+    $node_content = {'contents'
+            => [@{$external_node->{'contents'}}[$begin .. $end]]};
+  }
   my ($target_filebase, $external_file_extension, $target)
-     = _standard_label_id_file($self, $normalized, $node_contents,
+     = _standard_label_id_file($self, $normalized, $node_content,
                                $self->get_conf('EXTERNAL_CROSSREF_EXTENSION'),
                                      $defaults{'EXTENSION'});
 
@@ -623,9 +627,13 @@ sub _external_node_href($$$) {
   # used if $is_target_split
   my $directory = '';
   if (exists($external_node->{'extra'}->{'manual_content'})) {
+    my ($begin_manual, $end_manual)
+      = @{$external_node->{'extra'}->{'manual_content'}};
+    my $manual_content = {'contents'
+        => [@{$external_node->{'contents'}}[$begin_manual .. $end_manual]]};
     Texinfo::Convert::Text::set_options_code($self->{'convert_text_options'});
     my $manual_name = Texinfo::Convert::Text::convert_to_text(
-                            $external_node->{'extra'}->{'manual_content'},
+                            $manual_content,
                             $self->{'convert_text_options'});
     Texinfo::Convert::Text::reset_options_code($self->{'convert_text_options'});
     if ($self->get_conf('IGNORE_REF_TO_TOP_NODE_UP') and $target eq '') {
@@ -805,14 +813,6 @@ sub command_text($$;$) {
   if (exists($command->{'extra'})
       and exists($command->{'extra'}->{'manual_content'})) {
 
-    my $tree = Texinfo::TreeElement::new(
-       {'contents' => [Texinfo::TreeElement::new({'text' => '('}),
-                       $command->{'extra'}->{'manual_content'},
-                       Texinfo::TreeElement::new({'text' => ')'})]});
-    if (exists($command->{'extra'}->{'node_content'})) {
-      push @{$tree->{'contents'}}, $command->{'extra'}->{'node_content'};
-    }
-
     my $context_str = "command_text $type ";
     if (exists($command->{'cmdname'})) {
       # this never happens, as the external node label tree
@@ -834,7 +834,7 @@ sub command_text($$;$) {
     # In addition, regarding multiple pass, it is unlikely for
     # @-commands which should better be converted only once to be present.
     my $result
-      = $self->convert_tree_new_formatting_context($tree,
+      = $self->convert_tree_new_formatting_context($command,
                                                $context_str, $context_type,
                                                'command_text-manual_content');
 
@@ -1110,6 +1110,7 @@ sub from_element_direction($$$;$$$) {
     }
     ########
     if ($target_unit->{'unit_type'} eq 'external_node_unit') {
+      # a label element with manual_content
       my $external_node_element = $target_unit->{'unit_command'};
       #print STDERR "FROM_ELEMENT_DIRECTION ext node $type $direction\n"
       #  if ($self->get_conf('DEBUG'));
@@ -4677,34 +4678,37 @@ sub _convert_xref_command($$$$) {
   } else {
     # external reference, including unknown node without file nor book
 
-    # We setup a label_element based on the node argument and not directly the
-    # node argument to be able to use the $file argument
+    # We setup a label_element based on the node argument and $file argument
     my $label_element;
-    my $node_content;
-    if (defined($arg_node) and exists($arg_node->{'extra'})
-        and exists($arg_node->{'extra'}->{'node_content'})) {
-      $node_content = $arg_node->{'extra'}->{'node_content'};
-      $label_element = Texinfo::TreeElement::new(
-          {'extra' => {'node_content' => $node_content}});
-      if (exists($arg_node->{'extra'}->{'normalized'})) {
-        $label_element->{'extra'}->{'normalized'}
-          = $arg_node->{'extra'}->{'normalized'};
-      }
-    }
     # file argument
     if (defined($file)) {
-      if (!$label_element) {
-        $label_element = Texinfo::TreeElement::new({'extra' => {}});
-      } elsif (!exists($label_element->{'extra'})) {
-        $label_element->{'extra'} = {};
+      $label_element = Texinfo::TreeElement::new(
+       {'extra' => {'manual_content' => [1, 1]},
+       'contents' => [Texinfo::TreeElement::new({'text' => '('}),
+                      $file_arg->{'arg_tree'},
+                      Texinfo::TreeElement::new({'text' => ')'})]
+      });
+    }
+    my $node_element;
+    if (defined($arg_node) and exists($arg_node->{'extra'})
+        and exists($arg_node->{'extra'}->{'node_content'})) {
+      $node_element = $arg_node;
+
+      if (!defined($label_element)) {
+        $label_element = Texinfo::TreeElement::new({'contents' => []});
       }
-      $label_element->{'extra'}->{'manual_content'} = $file_arg->{'arg_tree'};
+      my ($begin, $end) = @{$arg_node->{'extra'}->{'node_content'}};
+      my $len = scalar(@{$label_element->{'contents'}});
+      $label_element->{'extra'}->{'node_content'}
+        = [$len, $len + $end - $begin];
+      push @{$label_element->{'contents'}},
+        @{$arg_node->{'contents'}}[$begin .. $end];
     }
 
     if (!defined($name)) {
       if (defined($book)) {
-        if (defined($node_content)) {
-          my $node_name = $self->set_context_convert_tree($node_content,
+        if (defined($node_element)) {
+          my $node_name = $self->set_context_convert_tree($node_element,
                                                  $CTXF_code, 'node in ref');
           if (defined($node_name) and $node_name ne 'Top') {
             $name = $node_name;

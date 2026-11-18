@@ -460,8 +460,8 @@ $result_tree_text{'line_passed_and_formats'} = '*document_root C2
     {menu_entry_leading_text:* }
     *menu_entry_node C4
     |EXTRA
-    |manual_content:{manual}
-    |node_content:{node}
+    |manual_content:A{1|1}
+    |node_content:A{3|3}
     |normalized:{node}
      {(}
      {manual}

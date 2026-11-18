@@ -31,7 +31,7 @@ $result_tree_text{'direntry_dircategory_and_commands'} = '*document_root C3
      {menu_entry_separator:: }
      *menu_entry_node C3
      |EXTRA
-     |manual_content:{foo}
+     |manual_content:A{1|1}
       {(}
       {foo}
       {)}
@@ -64,7 +64,7 @@ $result_tree_text{'direntry_dircategory_and_commands'} = '*document_root C3
      {menu_entry_leading_text:* }
      *menu_entry_node C2
      |EXTRA
-     |node_content:{aaa }
+     |node_content:A{0|1}
      |normalized:{aaa}
       {aaa}
       {space_at_end_menu_node: }

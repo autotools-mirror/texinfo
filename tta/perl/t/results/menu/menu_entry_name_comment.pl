@@ -22,8 +22,8 @@ $result_tree_text{'menu_entry_name_comment'} = '*document_root C1
     {menu_entry_separator:: }
     *menu_entry_node C4
     |EXTRA
-    |manual_content:{f}
-    |node_content:{b}
+    |manual_content:A{1|1}
+    |node_content:A{3|3}
     |normalized:{b}
      {(}
      {f}
@@ -43,8 +43,8 @@ $result_tree_text{'menu_entry_name_comment'} = '*document_root C1
     {menu_entry_separator:: }
     *menu_entry_node C5
     |EXTRA
-    |manual_content:{f}
-    |node_content:{b }
+    |manual_content:A{1|1}
+    |node_content:A{3|4}
     |normalized:{b}
      {(}
      {f}
@@ -65,8 +65,8 @@ $result_tree_text{'menu_entry_name_comment'} = '*document_root C1
     {menu_entry_separator:: }
     *menu_entry_node C4
     |EXTRA
-    |manual_content:{f}
-    |node_content:{b1c.c}
+    |manual_content:A{1|1}
+    |node_content:A{3|3}
     |normalized:{b1c_002ec}
      {(}
      {f}
@@ -87,8 +87,8 @@ $result_tree_text{'menu_entry_name_comment'} = '*document_root C1
     {menu_entry_separator:: }
     *menu_entry_node C4
     |EXTRA
-    |manual_content:{f}
-    |node_content:{b2c.c}
+    |manual_content:A{1|1}
+    |node_content:A{3|3}
     |normalized:{b2c_002ec}
      {(}
      {f}
@@ -109,8 +109,8 @@ $result_tree_text{'menu_entry_name_comment'} = '*document_root C1
     {menu_entry_separator:: }
     *menu_entry_node C4
     |EXTRA
-    |manual_content:{f}
-    |node_content:{b3c.c}
+    |manual_content:A{1|1}
+    |node_content:A{3|3}
     |normalized:{b3c_002ec}
      {(}
      {f}

@@ -1145,7 +1145,7 @@ $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{node atext}
+    |node_content:A{0|0}
     |normalized:{node-atext}
      {node atext}
      >SOURCEMARKS

@@ -41,7 +41,7 @@ $result_tree_text{'protected_node_parentheses'} = '*document_root C4
     {menu_entry_leading_text:* }
     *menu_entry_node C2
     |EXTRA
-    |node_content:{@asis{(}manual) name}
+    |node_content:A{0|1}
     |normalized:{_0028manual_0029-name}
      *@asis C1 l6
       *brace_container C1
@@ -88,7 +88,7 @@ $result_tree_text{'protected_node_parentheses'} = '*document_root C4
    *@ref C1 l13
     *brace_arg C2
     |EXTRA
-    |node_content:{@asis{(}manual2) name2}
+    |node_content:A{0|1}
     |normalized:{_0028manual2_0029-name2}
      *@asis C1 l13
       *brace_container C1
@@ -100,7 +100,7 @@ $result_tree_text{'protected_node_parentheses'} = '*document_root C4
    *@ref C1 l15
     *brace_arg C2
     |EXTRA
-    |node_content:{@asis{(}manual) name}
+    |node_content:A{0|1}
     |normalized:{_0028manual_0029-name}
      *@asis C1 l15
       *brace_container C1

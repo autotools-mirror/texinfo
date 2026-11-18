@@ -39,7 +39,7 @@ $result_tree_text{'macro_in_empty_menu_comment'} = '*document_root C1
     >macro_expansion<end;1>
     *menu_entry_node C1
     |EXTRA
-    |node_content:{Copying Conditions}
+    |node_content:A{0|0}
     |normalized:{Copying-Conditions}
      {Copying Conditions}
     {menu_entry_separator:::          }

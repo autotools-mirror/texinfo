@@ -24,7 +24,7 @@ $result_tree_text{'one_node_explicit_directions_anchor'} = '*document_root C2
    *line_arg
    *line_arg C4
    |EXTRA
-   |manual_content:{dir}
+   |manual_content:A{1|1}
     {(}
     {dir}
     {)}
@@ -47,7 +47,7 @@ $result_tree_text{'one_node_explicit_directions_anchor'} = '*document_root C2
    *@ref C1 l6
     *brace_arg C1
     |EXTRA
-    |node_content:{ref}
+    |node_content:A{0|0}
     |normalized:{ref}
      {ref}
    {.\\n}

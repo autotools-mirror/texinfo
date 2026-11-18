@@ -156,7 +156,7 @@ $result_tree_text{'anchor_on_vtable_item'} = '*document_root C7
    *@xref C1 l24
     *brace_arg C1
     |EXTRA
-    |node_content:{label1}
+    |node_content:A{0|0}
     |normalized:{label1}
      {label1}
    {.\\n}

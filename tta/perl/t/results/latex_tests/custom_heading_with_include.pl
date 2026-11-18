@@ -154,7 +154,7 @@ $result_tree_text{'custom_heading_with_include'} = '*document_root C25
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{Section}
+    |node_content:A{0|0}
     |normalized:{Section}
      {Section}
     {menu_entry_separator:::}
@@ -198,7 +198,7 @@ $result_tree_text{'custom_heading_with_include'} = '*document_root C25
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{Subsection}
+    |node_content:A{0|0}
     |normalized:{Subsection}
      {Subsection}
     {menu_entry_separator:::}

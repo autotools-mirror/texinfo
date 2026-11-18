@@ -47,7 +47,7 @@ NodeForward: [U1]
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{chapter node}
+    |node_content:A{0|0}
     |normalized:{chapter-node}
      {chapter node}
     {menu_entry_separator:::}
@@ -58,7 +58,7 @@ NodeForward: [U1]
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{part chapter node}
+    |node_content:A{0|0}
     |normalized:{part-chapter-node}
      {part chapter node}
     {menu_entry_separator:::}

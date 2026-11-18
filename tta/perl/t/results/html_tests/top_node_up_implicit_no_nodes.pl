@@ -42,7 +42,7 @@ $result_tree_text{'top_node_up_implicit_no_nodes'} = '*document_root C5
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{Chap}
+    |node_content:A{0|0}
     |normalized:{Chap}
      {Chap}
     {menu_entry_separator:::}

@@ -30,7 +30,7 @@ $result_tree_text{'spaces_in_node_names'} = '*document_root C5
     {menu_entry_leading_text:* }
     *menu_entry_node C3
     |EXTRA
-    |node_content:{chap@ @ }
+    |node_content:A{0|2}
     |normalized:{chap-}
      {chap}
      *@ 
@@ -43,7 +43,7 @@ $result_tree_text{'spaces_in_node_names'} = '*document_root C5
     {menu_entry_leading_text:* }
     *menu_entry_node C2
     |EXTRA
-    |node_content:{b@verb{:  :}}
+    |node_content:A{0|1}
     |normalized:{b-}
      {b}
      *@verb C1 l5
@@ -59,7 +59,7 @@ $result_tree_text{'spaces_in_node_names'} = '*document_root C5
     {menu_entry_leading_text:* }
     *menu_entry_node C2
     |EXTRA
-    |node_content:{c@ }
+    |node_content:A{0|1}
     |normalized:{c-}
      {c}
      *@ 
@@ -122,7 +122,7 @@ $result_tree_text{'spaces_in_node_names'} = '*document_root C5
    *@ref C1 l15
     *brace_arg C3
     |EXTRA
-    |node_content:{chap@ @ }
+    |node_content:A{0|2}
     |normalized:{chap-}
      {chap}
      *@ 
@@ -133,7 +133,7 @@ $result_tree_text{'spaces_in_node_names'} = '*document_root C5
    *@ref C1 l17
     *brace_arg C2
     |EXTRA
-    |node_content:{b@verb{:  :}}
+    |node_content:A{0|1}
     |normalized:{b-}
      {b}
      *@verb C1 l17
@@ -147,7 +147,7 @@ $result_tree_text{'spaces_in_node_names'} = '*document_root C5
    *@ref C1 l19
     *brace_arg C2
     |EXTRA
-    |node_content:{c@w{  }}
+    |node_content:A{0|1}
     |normalized:{c-}
      {c}
      *@w C1 l19

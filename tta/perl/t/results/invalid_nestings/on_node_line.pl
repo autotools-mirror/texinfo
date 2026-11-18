@@ -22,7 +22,7 @@ $result_tree_text{'on_node_line'} = '*document_root C2
     *@ref C4 l1
      *brace_arg C1
      |EXTRA
-     |node_content:{a}
+     |node_content:A{0|0}
       {a}
      *brace_arg C2
       {spaces_before_argument: }
@@ -35,15 +35,15 @@ $result_tree_text{'on_node_line'} = '*document_root C2
       {filename}
    *line_arg C9
    |EXTRA
-   |manual_content:{@pxref{Top,,, somemanual}}
-   |node_content:{@anchor{in anchor}@footnote{footnote} @exdent exdent\\n}
+   |manual_content:A{2|2}
+   |node_content:A{5|8}
    |normalized:{-}
     {spaces_before_argument: }
     {(}
     *@pxref C4 l1
      *brace_arg C1
      |EXTRA
-     |node_content:{Top}
+     |node_content:A{0|0}
       {Top}
      *brace_arg
      *brace_arg

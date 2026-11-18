@@ -24,7 +24,7 @@ $result_tree_text{'placed_things_before_node'} = '*document_root C5
    *@ref C1 l4
     *brace_arg C1
     |EXTRA
-    |node_content:{An anchor}
+    |node_content:A{0|0}
     |normalized:{An-anchor}
      {An anchor}
    {\\n}
@@ -34,7 +34,7 @@ $result_tree_text{'placed_things_before_node'} = '*document_root C5
    *@ref C1 l7
     *brace_arg C1
     |EXTRA
-    |node_content:{Anchor in footnote}
+    |node_content:A{0|0}
     |normalized:{Anchor-in-footnote}
      {Anchor in footnote}
    {.\\n}
@@ -60,7 +60,7 @@ $result_tree_text{'placed_things_before_node'} = '*document_root C5
       *@ref C1 l14
        *brace_arg C1
        |EXTRA
-       |node_content:{An anchor}
+       |node_content:A{0|0}
        |normalized:{An-anchor}
         {An anchor}
       {\\n}
@@ -95,7 +95,7 @@ $result_tree_text{'placed_things_before_node'} = '*document_root C5
    *@ref C1 l22
     *brace_arg C1
     |EXTRA
-    |node_content:{float anchor}
+    |node_content:A{0|0}
     |normalized:{float-anchor}
      {float anchor}
    {.\\n}
@@ -108,7 +108,7 @@ $result_tree_text{'placed_things_before_node'} = '*document_root C5
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{An anchor}
+    |node_content:A{0|0}
     |normalized:{An-anchor}
      {An anchor}
     {menu_entry_separator:::                }
@@ -177,7 +177,7 @@ $result_tree_text{'placed_things_before_node'} = '*document_root C5
    *@ref C1 l37
     *brace_arg C1
     |EXTRA
-    |node_content:{An anchor}
+    |node_content:A{0|0}
     |normalized:{An-anchor}
      {An anchor}
    {\\n}
@@ -187,7 +187,7 @@ $result_tree_text{'placed_things_before_node'} = '*document_root C5
    *@ref C1 l40
     *brace_arg C1
     |EXTRA
-    |node_content:{Anchor in footnote}
+    |node_content:A{0|0}
     |normalized:{Anchor-in-footnote}
      {Anchor in footnote}
    {\\n}

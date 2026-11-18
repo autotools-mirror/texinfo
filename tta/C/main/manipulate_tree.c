@@ -175,6 +175,14 @@ copy_associated_info (ASSOCIATED_INFO *info, ASSOCIATED_INFO *new_info,
           copy_strings (k->k.strings_list, k_ref->k.strings_list);
           break;
           }
+        case extra_integer_list:
+          {
+          KEY_PAIR *k = get_associated_info_key (new_info, key);
+          k->k.integers_list = new_integer_list();
+          for (j = 0; j < k_ref->k.integers_list->number; j++)
+            add_(integer) (k->k.integers_list, k_ref->k.integers_list->list[j]);
+          break;
+          }
         case extra_index_entry:
           {
             KEY_PAIR *k = get_associated_info_key (new_info, key);
@@ -738,13 +746,15 @@ relocate_source_marks (SOURCE_MARK_LIST *source_mark_list, ELEMENT *new_e,
 
 
 
+/* FIXME change interface */
 /* In Texinfo::Common */
 /* NODE->e.c->contents is the Texinfo for the specification of a node.  This
    function sets two fields on the returned object:
 
-     manual_content - Texinfo tree for a manual name extracted from the
-                      node specification.
-     node_content - Texinfo tree for the node name on its own
+     manual_content - start and end index of manual content in
+                      the modified tree.
+     node_content - start and end index of node content in
+                    the modified tree.
 
    Objects returned from this function are used as an 'extra' key in
    the element for elements linking to nodes (such as @*ref,
@@ -755,31 +765,24 @@ relocate_source_marks (SOURCE_MARK_LIST *source_mark_list, ELEMENT *new_e,
    This function is also used for elements that are targets of links (@node and
    @anchor first argument, float second argument) mainly to check that
    the syntax for an external node is not used.  In that case modify_node
-   is set to 0 and the node is not modified, and added elements are
-   collected in a third field of the returned object,
-     out_of_tree_elements - elements collected in manual_content or
-                            node_content and not in the node
+   is set to 0 and the node is not modified.
+   NOTE the indices returned are not accurate if the tree is not modified,
+   the caller should only check if they exist, not the value.
  */
 
 NODE_SPEC_EXTRA *
 parse_node_manual (ELEMENT *node, int modify_node)
 {
   NODE_SPEC_EXTRA *result;
-  ELEMENT *node_content = 0;
   size_t idx; /* index into node->e.c->contents */
   ARG_INDICES arg_indices;
   int non_empty;
+  int manual_count = 0;
+  int node_content_count = 0;
   size_t orig_contents_len = node->e.c->contents.number;
 
   result = (NODE_SPEC_EXTRA *) malloc (sizeof (NODE_SPEC_EXTRA));
   result->manual_content = result->node_content = 0;
-  /* if not modifying the tree, and there is a manual name, the elements
-     added for the manual name and for the node content that are based
-     on texts from tree elements are not anywhere in the tree.
-     They are collected in result->out_of_tree_element to be freed later.
-     These elements correspond to the text after the first manual name
-     opening brace and text before and after the closing manual name brace */
-  result->out_of_tree_elements = 0;
 
   non_empty = non_leading_trailing_indices (node, &arg_indices);
 
@@ -793,7 +796,7 @@ parse_node_manual (ELEMENT *node, int modify_node)
       && node->e.c->contents.list[idx]->e.text->end > 0
       && node->e.c->contents.list[idx]->e.text->text[0] == '(')
     {
-      ELEMENT *manual, *first;
+      ELEMENT *first;
       ELEMENT *new_first = 0;
       ELEMENT *opening_brace = 0;
       char *opening_bracket, *closing_bracket;
@@ -801,8 +804,6 @@ parse_node_manual (ELEMENT *node, int modify_node)
 
       /* Handle nested parentheses in the manual name, for whatever reason. */
       int bracket_count = 1; /* Number of ( seen minus number of ) seen. */
-
-      manual = new_element (ET_NONE);
 
       /* If the first contents element is "(" followed by more text, split
          the leading "(" into its own element. */
@@ -836,8 +837,8 @@ parse_node_manual (ELEMENT *node, int modify_node)
 
           if (e->type != ET_normal_text)
             {
-              /* Put this element in the manual contents. */
-              add_to_contents_as_array (manual, e);
+              /* This element is in the manual contents. */
+              manual_count++;
               continue;
             }
           p = e->e.text->text;
@@ -873,7 +874,7 @@ parse_node_manual (ELEMENT *node, int modify_node)
             }
 
           if (bracket_count > 0)
-            add_to_contents_as_array (manual, e);
+            manual_count++;
           else /* end of filename component */
             {
               size_t current_position = 0;
@@ -913,22 +914,24 @@ parse_node_manual (ELEMENT *node, int modify_node)
                 }
               else
                 {
-                  /* collect elements out of tree */
-                  result->out_of_tree_elements = calloc (3, sizeof (ELEMENT *));
                   if (new_first)
-                    result->out_of_tree_elements[0] = new_first;
+                    {
+                      destroy_element (new_first);
+                      new_first = 0;
+                    }
                 }
               p--; /* point at ) */
               if (p > e->e.text->text)
                 {
-                  /* text before ), part of the manual name */
-                  ELEMENT *last_manual_element
-                                      = new_text_element (ET_normal_text);
-                  text_append_n (last_manual_element->e.text, e->e.text->text,
-                                 p - e->e.text->text);
-                  add_to_contents_as_array (manual, last_manual_element);
+                  manual_count++;
                   if (modify_node)
                     {
+                      /* text before ), part of the manual name */
+                      ELEMENT *last_manual_element
+                                      = new_text_element (ET_normal_text);
+                      text_append_n (last_manual_element->e.text,
+                                     e->e.text->text,
+                                     p - e->e.text->text);
                       insert_into_contents_as_array (node,
                                                    last_manual_element, idx++);
                       current_position
@@ -937,8 +940,6 @@ parse_node_manual (ELEMENT *node, int modify_node)
                                                  current_position,
                             count_multibyte (last_manual_element->e.text->text));
                     }
-                  else
-                    result->out_of_tree_elements[1] = last_manual_element;
                 }
 
               if (modify_node)
@@ -973,16 +974,14 @@ parse_node_manual (ELEMENT *node, int modify_node)
               p = q;
               if (*p)
                 {
-                  /* text after ), part of the node name. */
-                  ELEMENT *leading_node_content
-                      = new_text_element (ET_normal_text);
-                  text_append_n (leading_node_content->e.text, p,
-                                 e->e.text->text + e->e.text->end - p);
-                  /* start node_content */
-                  node_content = new_element (ET_NONE);
-                  add_to_contents_as_array (node_content, leading_node_content);
+                  node_content_count++;
                   if (modify_node)
                     {
+                      /* text after ), part of the node name. */
+                      ELEMENT *leading_node_content
+                        = new_text_element (ET_normal_text);
+                      text_append_n (leading_node_content->e.text, p,
+                                     e->e.text->text + e->e.text->end - p);
                       insert_into_contents_as_array (node,
                                                     leading_node_content, idx);
                       current_position
@@ -991,8 +990,6 @@ parse_node_manual (ELEMENT *node, int modify_node)
                                                  current_position,
                             count_multibyte (leading_node_content->e.text->text));
                     }
-                  else
-                    result->out_of_tree_elements[2] = leading_node_content;
                   idx++;
                 }
               if (modify_node)
@@ -1002,14 +999,17 @@ parse_node_manual (ELEMENT *node, int modify_node)
         } /* for */
 
       if (bracket_count == 0)
-        result->manual_content = manual;
+        {
+          result->manual_content = new_integer_list ();
+          add_(integer) (result->manual_content, first_idx +1);
+          add_(integer) (result->manual_content, first_idx + manual_count);
+        }
       else /* Unbalanced parentheses, consider that there is no manual
               afterall.  So far the node has not been modified, so the
               only thing that needs to be done is to remove the manual
               element and the elements allocated for the beginning of
               the manual, and start over */
         {
-          destroy_element (manual);
           if (new_first)
             destroy_element (new_first);
           if (opening_brace)
@@ -1019,25 +1019,17 @@ parse_node_manual (ELEMENT *node, int modify_node)
         }
     }
 
-  /* If anything left up to trailing spaces and comments, it is part of
-     the node name. */
-  if (idx < node->e.c->contents.number)
-    {
-      if (!node_content)
-        node_content = new_element (ET_NONE);
-      insert_slice_into_contents (node_content,
-                                  node_content->e.c->contents.number,
-                                  node, idx,
-                         arg_indices.end + 1 + node->e.c->contents.number
-                                          - orig_contents_len);
-    }
+  /* take into account that contents size may have increased
+     and increase consistently $end_idx. */
+  int new_end_idx = arg_indices.end + node->e.c->contents.number
+                       - orig_contents_len;
+  node_content_count += (new_end_idx +1 - idx);
 
-  if (node_content)
+  if (node_content_count > 0)
     {
-      if (node_content->e.c->contents.number > 0)
-        result->node_content = node_content;
-      else
-        destroy_element (node_content);
+      result->node_content = new_integer_list ();
+      add_(integer) (result->node_content, new_end_idx - node_content_count +1);
+      add_(integer) (result->node_content, new_end_idx);
     }
   return result;
 }
@@ -1575,6 +1567,24 @@ print_element_extra (ELEMENT *element, int level,
             char *values_string = join_strings_list (k_pair->k.strings_list, 0);
             xasprintf (&value, "A{%s}", values_string);
             free (values_string);
+            break;
+          }
+        case extra_integer_list:
+          {
+            TEXT text;
+            size_t i;
+            const INTEGER_LIST *integers = k_pair->k.integers_list;
+
+            text_init (&text);
+            text_append_n (&text, "A{", 2);
+            for (i = 0; i < integers->number; i++)
+              {
+                if (i != 0)
+                  text_append_n (&text, "|", 1);
+                text_printf (&text, "%d", integers->list[i]);
+              }
+            text_append_n (&text, "}", 1);
+            value = text.text;
             break;
           }
         case extra_index_entry:
@@ -2268,7 +2278,7 @@ normalized_menu_entry_internal_node (const ELEMENT *entry)
       const ELEMENT *content = entry->e.c->contents.list[i];
       if (content->type == ET_menu_entry_node)
         {
-          if (!lookup_extra_container (content, AI_key_manual_content))
+          if (!lookup_extra_integer_list (content, AI_key_manual_content))
             {
               return lookup_extra_string (content, AI_key_normalized);
             }
@@ -2329,8 +2339,8 @@ first_menu_node (const NODE_RELATIONS *node_relations,
                         = menu_content->e.c->contents.list[k];
                       if (content->type == ET_menu_entry_node)
                         {
-                          const ELEMENT *manual_content
-                           = lookup_extra_container (content,
+                          const INTEGER_LIST *manual_content
+                           = lookup_extra_integer_list (content,
                                                   AI_key_manual_content);
                           /* a reference to an external manual */
                           if (manual_content)

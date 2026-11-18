@@ -30,7 +30,7 @@ $result_tree_text{'simple'} = '*document_root C1
     {menu_entry_separator:: }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{node}
+    |node_content:A{0|0}
     |normalized:{node}
      {node}
     {menu_entry_separator:.    }
@@ -41,7 +41,7 @@ $result_tree_text{'simple'} = '*document_root C1
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{node name}
+    |node_content:A{0|0}
     |normalized:{node-name}
      {node name}
     {menu_entry_separator:::                }
@@ -55,7 +55,7 @@ $result_tree_text{'simple'} = '*document_root C1
     {menu_entry_separator:: }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{node}
+    |node_content:A{0|0}
     |normalized:{node}
      {node}
     {menu_entry_separator:,    }
@@ -66,7 +66,7 @@ $result_tree_text{'simple'} = '*document_root C1
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{last}
+    |node_content:A{0|0}
     |normalized:{last}
      {last}
     {menu_entry_separator:::}
@@ -83,7 +83,7 @@ $result_tree_text{'simple'} = '*document_root C1
     {menu_entry_leading_text:* }
     *menu_entry_node C2
     |EXTRA
-    |node_content:{last node entry }
+    |node_content:A{0|1}
     |normalized:{last-node-entry}
      {last node entry}
      {space_at_end_menu_node: }

@@ -22,7 +22,7 @@ $result_tree_text{'double_top'} = '*document_root C3
     {ToP}
    *line_arg C3
    |EXTRA
-   |node_content:{top}
+   |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
     {top}
@@ -39,12 +39,12 @@ $result_tree_text{'double_top'} = '*document_root C3
    *line_arg
    *line_arg C1
    |EXTRA
-   |node_content:{ToP}
+   |node_content:A{0|0}
    |normalized:{Top}
     {ToP}
    *line_arg C2
    |EXTRA
-   |node_content:{Top}
+   |node_content:A{0|0}
    |normalized:{Top}
     {Top}
     {spaces_after_argument:\\n}

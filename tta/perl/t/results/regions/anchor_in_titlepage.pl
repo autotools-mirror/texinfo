@@ -78,7 +78,7 @@ $result_tree_text{'anchor_in_titlepage'} = '*document_root C5
    *@xref C1 l12
     *brace_arg C1
     |EXTRA
-    |node_content:{in titlepage}
+    |node_content:A{0|0}
     |normalized:{in-titlepage}
      {in titlepage}
    {.\\n}

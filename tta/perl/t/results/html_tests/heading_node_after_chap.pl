@@ -46,7 +46,7 @@ $result_tree_text{'heading_node_after_chap'} = '*document_root C6
    *@xref C1 l6
     *brace_arg C1
     |EXTRA
-    |node_content:{Node 1}
+    |node_content:A{0|0}
     |normalized:{Node-1}
      {Node 1}
    {\\n}

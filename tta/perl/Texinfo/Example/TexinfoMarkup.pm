@@ -1230,10 +1230,12 @@ sub _convert($$;$) {
             if (defined($node_arg->{'extra'}->{'normalized'})) {
               $normalized = $node_arg->{'extra'}->{'normalized'};
             } else {
+              my ($begin, $end) = @{$node_arg->{'extra'}->{'node_content'}};
+              my $node_content
+                = {'contents' => [@{$node_arg->{'contents'}}[$begin .. $end]]};
               $normalized
         = Texinfo::Convert::NodeNameNormalization::convert_to_node_identifier(
-                  Texinfo::TreeElement::new(
-                   $node_arg->{'extra'}->{'node_content'}));
+                  Texinfo::TreeElement::new($node_content));
             }
             if ($normalized) {
               push @$attribute, ['label', $normalized];

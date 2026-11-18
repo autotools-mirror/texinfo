@@ -21,7 +21,7 @@ $result_tree_text{'detailmenu'} = '*document_root C1
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{Copying Conditions}
+    |node_content:A{0|0}
     |normalized:{Copying-Conditions}
      {Copying Conditions}
     {menu_entry_separator:::          }
@@ -41,7 +41,7 @@ $result_tree_text{'detailmenu'} = '*document_root C1
      {menu_entry_leading_text:* }
      *menu_entry_node C1
      |EXTRA
-     |node_content:{detailmenu}
+     |node_content:A{0|0}
      |normalized:{detailmenu}
       {detailmenu}
      {menu_entry_separator:::}

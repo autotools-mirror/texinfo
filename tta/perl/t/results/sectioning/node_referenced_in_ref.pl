@@ -30,7 +30,7 @@ $result_tree_text{'node_referenced_in_ref'} = '*document_root C4
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{chap first level node}
+    |node_content:A{0|0}
     |normalized:{chap-first-level-node}
      {chap first level node}
     {menu_entry_separator:::}
@@ -49,7 +49,7 @@ $result_tree_text{'node_referenced_in_ref'} = '*document_root C4
    *@ref C1 l7
     *brace_arg C1
     |EXTRA
-    |node_content:{second level node}
+    |node_content:A{0|0}
     |normalized:{second-level-node}
      {second level node}
    {.\\n}

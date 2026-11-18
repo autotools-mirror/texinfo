@@ -41,7 +41,7 @@ $result_tree_text{'in_menu_only_special_spaces_node_menu_transliterate'} = '*doc
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{   }
+    |node_content:A{0|0}
     |normalized:{_2002_2003_2002}
      {   }
     {menu_entry_separator:::}
@@ -66,7 +66,7 @@ $result_tree_text{'in_menu_only_special_spaces_node_menu_transliterate'} = '*doc
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{  }
+    |node_content:A{0|0}
     |normalized:{_0085_00a0_1680}
      {  }
     {menu_entry_separator:::}
@@ -77,7 +77,7 @@ $result_tree_text{'in_menu_only_special_spaces_node_menu_transliterate'} = '*doc
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{᠎ }
+    |node_content:A{0|0}
     |normalized:{_180e_2003}
      {᠎ }
     {menu_entry_separator:::}
@@ -88,7 +88,7 @@ $result_tree_text{'in_menu_only_special_spaces_node_menu_transliterate'} = '*doc
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{         　}
+    |node_content:A{0|0}
     |normalized:{_2004_2005_2006_2007_2008_2009_200a_202f_205f_3000}
      {         　}
     {menu_entry_separator:::}

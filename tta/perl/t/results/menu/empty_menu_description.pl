@@ -33,8 +33,8 @@ $result_tree_text{'empty_menu_description'} = '*document_root C2
     {menu_entry_separator::}
     *menu_entry_node C5
     |EXTRA
-    |manual_content:{f}
-    |node_content:{b\\n}
+    |manual_content:A{1|1}
+    |node_content:A{3|4}
     |normalized:{b}
      {(}
      {f}

@@ -58,7 +58,7 @@ $result_tree_text{'reference_to_only_special_spaces_node_transliterate'} = '*doc
    *@ref C2 reference_to_only_special_spaces_node.texi:l8
     *brace_arg C2
     |EXTRA
-    |node_content:{   }
+    |node_content:A{1|1}
     |normalized:{_2002_2003_2002}
      {spaces_before_argument: }
      {   }
@@ -95,7 +95,7 @@ $result_tree_text{'reference_to_only_special_spaces_node_transliterate'} = '*doc
    *@ref C2 reference_to_only_special_spaces_node.texi:l13
     *brace_arg C1
     |EXTRA
-    |node_content:{@code{   }}
+    |node_content:A{0|0}
     |normalized:{_2002_2003_2002}
      *@code C1 reference_to_only_special_spaces_node.texi:l13
       *brace_container C1

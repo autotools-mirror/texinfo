@@ -560,8 +560,8 @@ static OUTPUT_UNIT *
 label_target_unit_element (const ELEMENT *label,
                            OUTPUT_UNIT_LIST *external_node_target_units)
 {
-  const ELEMENT *manual_content
-    = lookup_extra_container (label, AI_key_manual_content);
+  const INTEGER_LIST *manual_content
+    = lookup_extra_integer_list (label, AI_key_manual_content);
   if (manual_content)
     {
   /* setup an output_unit for consistency with regular output units */

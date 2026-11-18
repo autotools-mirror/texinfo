@@ -41,7 +41,7 @@ $result_tree_text{'some_at_commands_in_ref_nodes'} = '*document_root C5
     {menu_entry_leading_text:* }
     *menu_entry_node C14
     |EXTRA
-    |node_content:{A @sc{sc @~n @aa{} @TeX{}} node @"i @"{@dotless{i}} @`{@=E} @l{} @,{@\'C} @exclamdown{}}
+    |node_content:A{0|13}
     |normalized:{A-sc-_00f1-_00e5-TeX-node-_00ef-_00ef-_1e14-_0142-_1e08-_00a1}
      {A }
      *@sc C1 l6
@@ -193,7 +193,7 @@ $result_tree_text{'some_at_commands_in_ref_nodes'} = '*document_root C5
    *@ref C4 l12
     *brace_arg C14
     |EXTRA
-    |node_content:{a @strong{strong} ref with @sc{sc}@comma{} a i trema @"i@comma{} a dotless i trema @"{@dotless{i}} @`{@=E} and exclamdown @exclamdown{}}
+    |node_content:A{0|13}
      {a }
      *@strong C1 l12
       *brace_container C1
@@ -235,7 +235,7 @@ $result_tree_text{'some_at_commands_in_ref_nodes'} = '*document_root C5
    *@xref C1 l14
     *brace_arg C14
     |EXTRA
-    |node_content:{A @sc{sc @~n @aa{} @TeX{}} node @"i @"{@dotless{i}} @`{@=E} @l{} @,{@\'C} @exclamdown{}}
+    |node_content:A{0|13}
     |normalized:{A-sc-_00f1-_00e5-TeX-node-_00ef-_00ef-_1e14-_0142-_1e08-_00a1}
      {A }
      *@sc C1 l14

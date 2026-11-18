@@ -32,7 +32,7 @@ $result_tree_text{'recursive_self_section_reference'} = '*document_root C3
     *@ref C1 l2
      *brace_arg C1
      |EXTRA
-     |node_content:{sharp}
+     |node_content:A{0|0}
      |normalized:{sharp}
       {sharp}
     { tuple}

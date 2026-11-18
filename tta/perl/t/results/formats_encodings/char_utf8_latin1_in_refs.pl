@@ -62,7 +62,7 @@ $result_tree_text{'char_utf8_latin1_in_refs'} = '*document_root C14
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{ä ë ï ö ü ÿ Ä Ë Ï Ö Ü}
+    |node_content:A{0|0}
     |normalized:{_00e4-_00eb-_00ef-_00f6-_00fc-_00ff-_00c4-_00cb-_00cf-_00d6-_00dc}
      {ä ë ï ö ü ÿ Ä Ë Ï Ö Ü}
     {menu_entry_separator:::}
@@ -73,7 +73,7 @@ $result_tree_text{'char_utf8_latin1_in_refs'} = '*document_root C14
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{é}
+    |node_content:A{0|0}
     |normalized:{_00e9}
      {é}
     {menu_entry_separator:::}
@@ -84,7 +84,7 @@ $result_tree_text{'char_utf8_latin1_in_refs'} = '*document_root C14
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{à è ù}
+    |node_content:A{0|0}
     |normalized:{_00e0-_00e8-_00f9}
      {à è ù}
     {menu_entry_separator:::}
@@ -95,7 +95,7 @@ $result_tree_text{'char_utf8_latin1_in_refs'} = '*document_root C14
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{â ê î ô û Â Ê Î Ô Û}
+    |node_content:A{0|0}
     |normalized:{_00e2-_00ea-_00ee-_00f4-_00fb-_00c2-_00ca-_00ce-_00d4-_00db}
      {â ê î ô û Â Ê Î Ô Û}
     {menu_entry_separator:::}
@@ -106,7 +106,7 @@ $result_tree_text{'char_utf8_latin1_in_refs'} = '*document_root C14
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{ç}
+    |node_content:A{0|0}
     |normalized:{_00e7}
      {ç}
     {menu_entry_separator:::}
@@ -230,35 +230,35 @@ $result_tree_text{'char_utf8_latin1_in_refs'} = '*document_root C14
    *@ref C1 char_utf8_latin1_in_refs.texi:l33
     *brace_arg C1
     |EXTRA
-    |node_content:{ä ë ï ö ü ÿ Ä Ë Ï Ö Ü}
+    |node_content:A{0|0}
     |normalized:{_00e4-_00eb-_00ef-_00f6-_00fc-_00ff-_00c4-_00cb-_00cf-_00d6-_00dc}
      {ä ë ï ö ü ÿ Ä Ë Ï Ö Ü}
    {\\n}
    *@ref C1 char_utf8_latin1_in_refs.texi:l34
     *brace_arg C1
     |EXTRA
-    |node_content:{é}
+    |node_content:A{0|0}
     |normalized:{_00e9}
      {é}
    {\\n}
    *@ref C1 char_utf8_latin1_in_refs.texi:l35
     *brace_arg C1
     |EXTRA
-    |node_content:{à è ù}
+    |node_content:A{0|0}
     |normalized:{_00e0-_00e8-_00f9}
      {à è ù}
    {\\n}
    *@ref C1 char_utf8_latin1_in_refs.texi:l36
     *brace_arg C1
     |EXTRA
-    |node_content:{â ê î ô û Â Ê Î Ô Û}
+    |node_content:A{0|0}
     |normalized:{_00e2-_00ea-_00ee-_00f4-_00fb-_00c2-_00ca-_00ce-_00d4-_00db}
      {â ê î ô û Â Ê Î Ô Û}
    {\\n}
    *@ref C1 char_utf8_latin1_in_refs.texi:l37
     *brace_arg C1
     |EXTRA
-    |node_content:{ç}
+    |node_content:A{0|0}
     |normalized:{_00e7}
      {ç}
    {\\n}

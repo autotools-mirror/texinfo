@@ -26,7 +26,7 @@ $result_tree_text{'ignore_in_xref'} = '*document_root C2
    *@xref C2 l3
     *brace_arg C1
     |EXTRA
-    |node_content:{first}
+    |node_content:A{0|0}
     |normalized:{first}
      {first}
     *brace_arg C2

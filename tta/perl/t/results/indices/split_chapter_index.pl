@@ -63,7 +63,7 @@ $result_tree_text{'split_chapter_index'} = '*document_root C10
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{first}
+    |node_content:A{0|0}
     |normalized:{first}
      {first}
     {menu_entry_separator:::}
@@ -186,7 +186,7 @@ $result_tree_text{'split_chapter_index'} = '*document_root C10
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{section 1}
+    |node_content:A{0|0}
     |normalized:{section-1}
      {section 1}
     {menu_entry_separator:::}
@@ -230,7 +230,7 @@ $result_tree_text{'split_chapter_index'} = '*document_root C10
     {menu_entry_leading_text:*  }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{subsection 1}
+    |node_content:A{0|0}
     |normalized:{subsection-1}
      {subsection 1}
     {menu_entry_separator:::}

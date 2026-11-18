@@ -30,7 +30,7 @@ $result_tree_text{'next_no_prev_to_node'} = '*document_root C4
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{chap first node}
+    |node_content:A{0|0}
     |normalized:{chap-first-node}
      {chap first node}
     {menu_entry_separator:::}
@@ -41,7 +41,7 @@ $result_tree_text{'next_no_prev_to_node'} = '*document_root C4
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{no return}
+    |node_content:A{0|0}
     |normalized:{no-return}
      {no return}
     {menu_entry_separator:::}
@@ -67,14 +67,14 @@ $result_tree_text{'next_no_prev_to_node'} = '*document_root C4
     {chap first node}
    *line_arg C2
    |EXTRA
-   |node_content:{no return}
+   |node_content:A{1|1}
    |normalized:{no-return}
     {spaces_before_argument: }
     {no return}
    *line_arg
    *line_arg C3
    |EXTRA
-   |node_content:{Top}
+   |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
     {Top}
@@ -93,7 +93,7 @@ $result_tree_text{'next_no_prev_to_node'} = '*document_root C4
    *line_arg
    *line_arg C3
    |EXTRA
-   |node_content:{Top}
+   |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
     {Top}

@@ -72,7 +72,7 @@ $result_tree_text{'index_nodes_no_split_no_use_nodes'} = '*document_root C7
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{chap first}
+    |node_content:A{0|0}
     |normalized:{chap-first}
      {chap first}
     {menu_entry_separator:::}
@@ -100,12 +100,12 @@ $result_tree_text{'index_nodes_no_split_no_use_nodes'} = '*document_root C7
    *line_arg
    *line_arg C1
    |EXTRA
-   |node_content:{Top}
+   |node_content:A{0|0}
    |normalized:{Top}
     {Top}
    *line_arg C3
    |EXTRA
-   |node_content:{Top}
+   |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
     {Top}
@@ -162,7 +162,7 @@ $result_tree_text{'index_nodes_no_split_no_use_nodes'} = '*document_root C7
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{second}
+    |node_content:A{0|0}
     |normalized:{second}
      {second}
     {menu_entry_separator:::}
@@ -191,7 +191,7 @@ $result_tree_text{'index_nodes_no_split_no_use_nodes'} = '*document_root C7
    *line_arg
    *line_arg C2
    |EXTRA
-   |node_content:{chap first}
+   |node_content:A{0|0}
    |normalized:{chap-first}
     {chap first}
     {spaces_after_argument:\\n}
@@ -203,7 +203,7 @@ $result_tree_text{'index_nodes_no_split_no_use_nodes'} = '*document_root C7
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{a node}
+    |node_content:A{0|0}
     |normalized:{a-node}
      {a node}
     {menu_entry_separator:::}
@@ -214,7 +214,7 @@ $result_tree_text{'index_nodes_no_split_no_use_nodes'} = '*document_root C7
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{another}
+    |node_content:A{0|0}
     |normalized:{another}
      {another}
     {menu_entry_separator:::}
@@ -251,13 +251,13 @@ $result_tree_text{'index_nodes_no_split_no_use_nodes'} = '*document_root C7
     {spaces_before_argument: }
    *line_arg C2
    |EXTRA
-   |node_content:{a node}
+   |node_content:A{1|1}
    |normalized:{a-node}
     {spaces_before_argument: }
     {a node}
    *line_arg C3
    |EXTRA
-   |node_content:{second}
+   |node_content:A{1|1}
    |normalized:{second}
     {spaces_before_argument: }
     {second}
@@ -300,7 +300,7 @@ $result_tree_text{'index_nodes_no_split_no_use_nodes'} = '*document_root C7
     {a node}
    *line_arg C2
    |EXTRA
-   |node_content:{another}
+   |node_content:A{1|1}
    |normalized:{another}
     {spaces_before_argument: }
     {another}
@@ -308,7 +308,7 @@ $result_tree_text{'index_nodes_no_split_no_use_nodes'} = '*document_root C7
     {spaces_before_argument: }
    *line_arg C2
    |EXTRA
-   |node_content:{second}
+   |node_content:A{0|0}
    |normalized:{second}
     {second}
     {spaces_after_argument:\\n}

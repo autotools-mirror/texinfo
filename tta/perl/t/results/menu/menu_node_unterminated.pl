@@ -33,7 +33,7 @@ $result_tree_text{'menu_node_unterminated'} = '*document_root C2
     {menu_entry_separator:: }
     *menu_entry_node C2
     |EXTRA
-    |node_content:{Examples of Login Verification Functions\\n}
+    |node_content:A{0|1}
     |normalized:{Examples-of-Login-Verification-Functions}
      {Examples of Login Verification Functions}
      {space_at_end_menu_node:\\n}

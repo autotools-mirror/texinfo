@@ -39,7 +39,7 @@ $result_tree_text{'nodename_parentheses'} = '*document_root C9
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{Node (with parentheses)}
+    |node_content:A{0|0}
     |normalized:{Node-_0028with-parentheses_0029}
      {Node (with parentheses)}
     {menu_entry_separator:::}
@@ -50,7 +50,7 @@ $result_tree_text{'nodename_parentheses'} = '*document_root C9
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{Other node}
+    |node_content:A{0|0}
     |normalized:{Other-node}
      {Other node}
     {menu_entry_separator:::}
@@ -61,8 +61,8 @@ $result_tree_text{'nodename_parentheses'} = '*document_root C9
     {menu_entry_leading_text:* }
     *menu_entry_node C4
     |EXTRA
-    |manual_content:{manual}
-    |node_content:{node}
+    |manual_content:A{1|1}
+    |node_content:A{3|3}
     |normalized:{node}
      {(}
      {manual}
@@ -130,7 +130,7 @@ $result_tree_text{'nodename_parentheses'} = '*document_root C9
    *@ref C1 l18
     *brace_arg C1
     |EXTRA
-    |node_content:{Node (with parentheses)}
+    |node_content:A{0|0}
     |normalized:{Node-_0028with-parentheses_0029}
      {Node (with parentheses)}
    {.\\n}
@@ -140,7 +140,7 @@ $result_tree_text{'nodename_parentheses'} = '*document_root C9
    *@ref C1 l20
     *brace_arg C1
     |EXTRA
-    |node_content:{(manual)node}
+    |node_content:A{0|0}
     |normalized:{_0028manual_0029node}
      {(manual)node}
    {.\\n}

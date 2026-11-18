@@ -15,7 +15,7 @@ $result_tree_text{'nested_args'} = '*document_root C1
    *@xref C4 l1
     *brace_arg C3
     |EXTRA
-    |node_content:{@@ @samp{in samp}}
+    |node_content:A{0|2}
      *@@
      { }
      *@samp C1 l1

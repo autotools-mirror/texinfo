@@ -38,7 +38,7 @@ $result_tree_text{'top_without_node_texi2html_no_use_nodes'} = '*document_root C
    *line_arg
    *line_arg C4
    |EXTRA
-   |manual_content:{dir}
+   |manual_content:A{1|1}
     {(}
     {dir}
     {)}

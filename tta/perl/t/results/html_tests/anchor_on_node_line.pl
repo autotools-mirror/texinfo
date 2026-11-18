@@ -83,7 +83,7 @@ $result_tree_text{'anchor_on_node_line'} = '*document_root C6
    *@xref C1 l9
     *brace_arg C1
     |EXTRA
-    |node_content:{iln}
+    |node_content:A{0|0}
     |normalized:{iln}
      {iln}
    {.\\n}
@@ -92,7 +92,7 @@ $result_tree_text{'anchor_on_node_line'} = '*document_root C6
    *@xref C1 l11
     *brace_arg C1
     |EXTRA
-    |node_content:{cnl}
+    |node_content:A{0|0}
     |normalized:{cnl}
      {cnl}
    {\\n}

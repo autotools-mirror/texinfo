@@ -38,7 +38,7 @@ $result_tree_text{'ref_in_def'} = '*document_root C2
        *@ref C1 l4
         *brace_arg C1
         |EXTRA
-        |node_content:{myanchor}
+        |node_content:A{0|0}
         |normalized:{myanchor}
          {myanchor}
      {spaces: }
@@ -47,7 +47,7 @@ $result_tree_text{'ref_in_def'} = '*document_root C2
        *@ref C1 l4
         *brace_arg C1
         |EXTRA
-        |node_content:{myanchor}
+        |node_content:A{0|0}
         |normalized:{myanchor}
          {myanchor}
      {spaces: }
@@ -56,7 +56,7 @@ $result_tree_text{'ref_in_def'} = '*document_root C2
        *@pxref C1 l4
         *brace_arg C1
         |EXTRA
-        |node_content:{myanchor}
+        |node_content:A{0|0}
         |normalized:{myanchor}
          {myanchor}
      {spaces: }
@@ -65,7 +65,7 @@ $result_tree_text{'ref_in_def'} = '*document_root C2
        *@pxref C1 l4
         *brace_arg C1
         |EXTRA
-        |node_content:{myanchor}
+        |node_content:A{0|0}
         |normalized:{myanchor}
          {myanchor}
      {spaces: }
@@ -74,7 +74,7 @@ $result_tree_text{'ref_in_def'} = '*document_root C2
        *@pxref C1 l4
         *brace_arg C1
         |EXTRA
-        |node_content:{myanchor}
+        |node_content:A{0|0}
         |normalized:{myanchor}
          {myanchor}
      {spaces_after_argument:\\n}
@@ -91,7 +91,7 @@ $result_tree_text{'ref_in_def'} = '*document_root C2
        *@ref C1 l5
         *brace_arg C1
         |EXTRA
-        |node_content:{myanchor}
+        |node_content:A{0|0}
         |normalized:{myanchor}
          {myanchor}
      {spaces: }
@@ -100,7 +100,7 @@ $result_tree_text{'ref_in_def'} = '*document_root C2
        *@ref C1 l5
         *brace_arg C1
         |EXTRA
-        |node_content:{myanchor}
+        |node_content:A{0|0}
         |normalized:{myanchor}
          {myanchor}
      {spaces: }
@@ -109,7 +109,7 @@ $result_tree_text{'ref_in_def'} = '*document_root C2
        *@pxref C1 l5
         *brace_arg C1
         |EXTRA
-        |node_content:{myanchor}
+        |node_content:A{0|0}
         |normalized:{myanchor}
          {myanchor}
      {spaces: }
@@ -118,7 +118,7 @@ $result_tree_text{'ref_in_def'} = '*document_root C2
        *@pxref C1 l5
         *brace_arg C1
         |EXTRA
-        |node_content:{myanchor}
+        |node_content:A{0|0}
         |normalized:{myanchor}
          {myanchor}
      {spaces: }
@@ -127,7 +127,7 @@ $result_tree_text{'ref_in_def'} = '*document_root C2
        *@pxref C1 l5
         *brace_arg C1
         |EXTRA
-        |node_content:{myanchor}
+        |node_content:A{0|0}
         |normalized:{myanchor}
          {myanchor}
      {spaces_after_argument:\\n}

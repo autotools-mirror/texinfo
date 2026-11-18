@@ -68,7 +68,7 @@ $result_tree_text{'quoted_xref_in_flushright'} = '*document_root C5
     *@ref C1 l9
      *brace_arg C3
      |EXTRA
-     |node_content:{a:@comma{}b}
+     |node_content:A{0|2}
      |normalized:{a_003a_002cb}
       {a:}
       *@comma C1 l9

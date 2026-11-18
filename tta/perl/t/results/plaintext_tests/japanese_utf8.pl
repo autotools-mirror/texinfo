@@ -109,7 +109,7 @@ $result_tree_text{'japanese_utf8'} = '*document_root C8
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{Preface}
+    |node_content:A{0|0}
     |normalized:{Preface}
      {Preface}
     {menu_entry_separator:::}
@@ -120,7 +120,7 @@ $result_tree_text{'japanese_utf8'} = '*document_root C8
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{Introduction}
+    |node_content:A{0|0}
     |normalized:{Introduction}
      {Introduction}
     {menu_entry_separator:::                   }

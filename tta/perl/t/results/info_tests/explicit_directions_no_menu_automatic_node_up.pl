@@ -65,7 +65,7 @@ $result_tree_text{'explicit_directions_no_menu_automatic_node_up'} = '*document_
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{Location}
+    |node_content:A{0|0}
     |normalized:{Location}
      {Location}
     {menu_entry_separator:::          }
@@ -93,13 +93,13 @@ $result_tree_text{'explicit_directions_no_menu_automatic_node_up'} = '*document_
    *line_arg
    *line_arg C2
    |EXTRA
-   |node_content:{Top}
+   |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
     {Top}
    *line_arg C3
    |EXTRA
-   |node_content:{Top}
+   |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
     {Top}

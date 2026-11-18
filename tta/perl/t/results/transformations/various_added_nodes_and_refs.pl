@@ -184,7 +184,7 @@ $result_tree_text{'various_added_nodes_and_refs'} = '*document_root C19
     *@ref C1 l11
      *brace_arg C2
      |EXTRA
-     |node_content:{@code{node}}
+     |node_content:A{1|1}
      |normalized:{node}
       {spaces_before_argument: }
       *@code C1 l11
@@ -288,14 +288,14 @@ $result_tree_text{'various_added_nodes_and_refs'} = '*document_root C19
    *@ref C1 l20
     *brace_arg C1
     |EXTRA
-    |node_content:{a node}
+    |node_content:A{0|0}
     |normalized:{a-node}
      {a node}
    {\\n}
    *@ref C1 l21
     *brace_arg C4
     |EXTRA
-    |node_content:{a node @code{in code}}
+    |node_content:A{0|1}
     |normalized:{a-node-in-code}
      {a node }
      *@code C1 l21
@@ -311,7 +311,7 @@ $result_tree_text{'various_added_nodes_and_refs'} = '*document_root C19
    *@ref C3 l23
     *brace_arg C2
     |EXTRA
-    |node_content:{a}
+    |node_content:A{0|0}
     |normalized:{a}
      {a}
      {spaces_after_argument: }
@@ -326,20 +326,20 @@ $result_tree_text{'various_added_nodes_and_refs'} = '*document_root C19
    *@ref C1 l24
     *brace_arg C1
     |EXTRA
-    |node_content:{(in paren(too  aaa}
+    |node_content:A{0|0}
     |normalized:{_0028in-paren_0028too-aaa}
      {(in paren(too  aaa}
    {\\n}
    *@ref C1 l25
     *brace_arg C5
     |EXTRA
-    |node_content:{changed @ref{ @code{node}} and (@pxref{ ,, , @samp{file}})}
+    |node_content:A{0|4}
     |normalized:{changed-node-and-_0028file_0029}
      {changed }
      *@ref C1 l25
       *brace_arg C2
       |EXTRA
-      |node_content:{@code{node}}
+      |node_content:A{1|1}
       |normalized:{node}
        {spaces_before_argument: }
        *@code C1 l25
@@ -362,14 +362,14 @@ $result_tree_text{'various_added_nodes_and_refs'} = '*document_root C19
    *@ref C1 l26
     *brace_arg C1
     |EXTRA
-    |node_content:{@asis{}}
+    |node_content:A{0|0}
      *@asis C1 l26
       *brace_container
    {\\n}
    *@ref C1 l27
     *brace_arg C1
     |EXTRA
-    |node_content:{a::b\\t c}
+    |node_content:A{0|0}
     |normalized:{a_003a_003ab-c}
      {a::b\\t c}
    {\\n}

@@ -26,7 +26,7 @@ $result_tree_text{'equivalent_nodes_novalidate'} = '*document_root C3
     {first}
    *line_arg C3
    |EXTRA
-   |node_content:{@emph{node}}
+   |node_content:A{1|1}
    |normalized:{node}
     {spaces_before_argument: }
     *@emph C1 l3
@@ -42,7 +42,7 @@ $result_tree_text{'equivalent_nodes_novalidate'} = '*document_root C3
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{@strong{node}}
+    |node_content:A{0|0}
     |normalized:{node}
      *@strong C1 l6
       *brace_container C1
@@ -76,7 +76,7 @@ $result_tree_text{'equivalent_nodes_novalidate'} = '*document_root C3
    *@xref C1 l11
     *brace_arg C1
     |EXTRA
-    |node_content:{node}
+    |node_content:A{0|0}
     |normalized:{node}
      {node}
    {.\\n}

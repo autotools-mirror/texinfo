@@ -56,7 +56,7 @@ $result_tree_text{'reference_to_from_appendix'} = '*document_root C7
    *@xref C1 l7
     *brace_arg C1
     |EXTRA
-    |node_content:{appendix}
+    |node_content:A{0|0}
     |normalized:{appendix}
      {appendix}
    {.\\n}
@@ -86,7 +86,7 @@ $result_tree_text{'reference_to_from_appendix'} = '*document_root C7
    *@xref C1 l12
     *brace_arg C1
     |EXTRA
-    |node_content:{chap}
+    |node_content:A{0|0}
     |normalized:{chap}
      {chap}
    {.\\n}

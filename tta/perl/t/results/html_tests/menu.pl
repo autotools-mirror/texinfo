@@ -39,7 +39,7 @@ $result_tree_text{'menu'} = '*document_root C3
     {menu_entry_leading_text:* }
     *menu_entry_node C3
     |EXTRA
-    |manual_content:{ggg}
+    |manual_content:A{1|1}
      {(}
      {ggg}
      {)}
@@ -140,7 +140,7 @@ $result_tree_text{'menu'} = '*document_root C3
     {menu_entry_leading_text:* }
     *menu_entry_node C3
     |EXTRA
-    |manual_content:{manual}
+    |manual_content:A{1|1}
      {(}
      {manual}
      {)}
@@ -157,7 +157,7 @@ $result_tree_text{'menu'} = '*document_root C3
     {menu_entry_leading_text:* }
     *menu_entry_node C3
     |EXTRA
-    |manual_content:{after_comment}
+    |manual_content:A{1|1}
      {(}
      {after_comment}
      {)}
@@ -170,7 +170,7 @@ $result_tree_text{'menu'} = '*document_root C3
     {menu_entry_leading_text:* }
     *menu_entry_node C3
     |EXTRA
-    |manual_content:{after_description}
+    |manual_content:A{1|1}
      {(}
      {after_description}
      {)}
@@ -191,7 +191,7 @@ $result_tree_text{'menu'} = '*document_root C3
      {menu_entry_leading_text:* }
      *menu_entry_node C3
      |EXTRA
-     |manual_content:{detailggg}
+     |manual_content:A{1|1}
       {(}
       {detailggg}
       {)}
@@ -292,7 +292,7 @@ $result_tree_text{'menu'} = '*document_root C3
      {menu_entry_leading_text:* }
      *menu_entry_node C3
      |EXTRA
-     |manual_content:{detailmanual}
+     |manual_content:A{1|1}
       {(}
       {detailmanual}
       {)}
@@ -309,7 +309,7 @@ $result_tree_text{'menu'} = '*document_root C3
      {menu_entry_leading_text:* }
      *menu_entry_node C3
      |EXTRA
-     |manual_content:{detailafter_comment}
+     |manual_content:A{1|1}
       {(}
       {detailafter_comment}
       {)}
@@ -322,7 +322,7 @@ $result_tree_text{'menu'} = '*document_root C3
      {menu_entry_leading_text:* }
      *menu_entry_node C3
      |EXTRA
-     |manual_content:{detailafter_description}
+     |manual_content:A{1|1}
       {(}
       {detailafter_description}
       {)}

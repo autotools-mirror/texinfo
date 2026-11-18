@@ -39,7 +39,7 @@ $result_tree_text{'regenerate_master_menu_no_need_for_master_menu'} = '*document
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{chap}
+    |node_content:A{0|0}
     |normalized:{chap}
      {chap}
     {menu_entry_separator:::}

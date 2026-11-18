@@ -30,7 +30,7 @@ $result_tree_text{'node_nested_parentheses'} = '*document_root C2
     {menu_entry_leading_text:* }
     *menu_entry_node C3
     |EXTRA
-    |manual_content:{(some) file}
+    |manual_content:A{1|1}
      {(}
      {(some) file}
      {)}
@@ -42,8 +42,8 @@ $result_tree_text{'node_nested_parentheses'} = '*document_root C2
     {menu_entry_leading_text:* }
     *menu_entry_node C4
     |EXTRA
-    |manual_content:{other (file)}
-    |node_content:{node name}
+    |manual_content:A{1|1}
+    |node_content:A{3|3}
     |normalized:{node-name}
      {(}
      {other (file)}
@@ -57,8 +57,8 @@ $result_tree_text{'node_nested_parentheses'} = '*document_root C2
     {menu_entry_leading_text:* }
     *menu_entry_node C5
     |EXTRA
-    |manual_content:{@code{open(}}
-    |node_content:{close)}
+    |manual_content:A{1|1}
+    |node_content:A{4|4}
     |normalized:{close_0029}
      {(}
      *@code C1 l6
@@ -75,7 +75,7 @@ $result_tree_text{'node_nested_parentheses'} = '*document_root C2
     {menu_entry_leading_text:* }
     *menu_entry_node C3
     |EXTRA
-    |node_content:{(@code{)))} error}
+    |node_content:A{0|2}
     |normalized:{_0028_0029_0029_0029-error}
      {(}
      *@code C1 l7

@@ -60,7 +60,7 @@ $result_tree_text{'recursive_down_menu'} = '*document_root C5
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{chapN}
+    |node_content:A{0|0}
     |normalized:{chapN}
      {chapN}
     {menu_entry_separator:::}

@@ -91,7 +91,7 @@ $result_tree_text{'float_copying'} = '*document_root C6
            *@ref C1 float_copying.texi:l19
             *brace_arg C1
             |EXTRA
-            |node_content:{Copying and floats}
+            |node_content:A{0|0}
             |normalized:{Copying-and-floats}
              {Copying and floats}
            {.\\n}
@@ -173,7 +173,7 @@ $result_tree_text{'float_copying'} = '*document_root C6
    *@ref C1 float_copying.texi:l35
     *brace_arg C1
     |EXTRA
-    |node_content:{public domain anchor}
+    |node_content:A{0|0}
     |normalized:{public-domain-anchor}
      {public domain anchor}
    {.\\n}
@@ -183,7 +183,7 @@ $result_tree_text{'float_copying'} = '*document_root C6
    *@ref C1 float_copying.texi:l37
     *brace_arg C1
     |EXTRA
-    |node_content:{public domain}
+    |node_content:A{0|0}
     |normalized:{public-domain}
      {public domain}
    {.\\n}
@@ -202,7 +202,7 @@ $result_tree_text{'float_copying'} = '*document_root C6
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{Copying and floats}
+    |node_content:A{0|0}
     |normalized:{Copying-and-floats}
      {Copying and floats}
     {menu_entry_separator:::}
@@ -248,7 +248,7 @@ $result_tree_text{'float_copying'} = '*document_root C6
    *@ref C1 float_copying.texi:l51
     *brace_arg C1
     |EXTRA
-    |node_content:{public domain anchor}
+    |node_content:A{0|0}
     |normalized:{public-domain-anchor}
      {public domain anchor}
    {.\\n}
@@ -258,7 +258,7 @@ $result_tree_text{'float_copying'} = '*document_root C6
    *@ref C1 float_copying.texi:l53
     *brace_arg C1
     |EXTRA
-    |node_content:{public domain}
+    |node_content:A{0|0}
     |normalized:{public-domain}
      {public domain}
    {.\\n}

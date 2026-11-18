@@ -28,7 +28,7 @@ $result_tree_text{'xref_test'} = '*document_root C2
    *@xref C4 l4
     *brace_arg C1
     |EXTRA
-    |node_content:{in xref}
+    |node_content:A{0|0}
      {in xref}
     *brace_arg
     *brace_arg
@@ -39,7 +39,7 @@ $result_tree_text{'xref_test'} = '*document_root C2
    *@xref C4 l4
     *brace_arg C1
     |EXTRA
-    |node_content:{bad xref}
+    |node_content:A{0|0}
      {bad xref}
     *brace_arg
     *brace_arg
@@ -52,7 +52,7 @@ $result_tree_text{'xref_test'} = '*document_root C2
      *@xref C4 l5
       *brace_arg C1
       |EXTRA
-      |node_content:{bad nested xref}
+      |node_content:A{0|0}
        {bad nested xref}
       *brace_arg
       *brace_arg
@@ -63,7 +63,7 @@ $result_tree_text{'xref_test'} = '*document_root C2
    *@xref C4 l6
     *brace_arg C1
     |EXTRA
-    |node_content:{in ref ending with a dot.}
+    |node_content:A{0|0}
      {in ref ending with a dot.}
     *brace_arg C2
      {spaces_before_argument: }
@@ -76,7 +76,7 @@ $result_tree_text{'xref_test'} = '*document_root C2
    *@xref C3 l7
     *brace_arg C1
     |EXTRA
-    |node_content:{in ref followed by symbol}
+    |node_content:A{0|0}
     |normalized:{in-ref-followed-by-symbol}
      {in ref followed by symbol}
     *brace_arg

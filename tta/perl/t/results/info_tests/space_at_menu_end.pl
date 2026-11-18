@@ -30,7 +30,7 @@ $result_tree_text{'space_at_menu_end'} = '*document_root C2
     {menu_entry_leading_text:* }
     *menu_entry_node C3
     |EXTRA
-    |manual_content:{out}
+    |manual_content:A{1|1}
      {(}
      {out}
      {)}

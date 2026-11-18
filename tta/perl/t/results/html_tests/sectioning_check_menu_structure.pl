@@ -25,12 +25,12 @@ $result_tree_text{'sectioning_check_menu_structure'} = '*document_root C29
     {Top}
    *line_arg C1
    |EXTRA
-   |node_content:{First node}
+   |node_content:A{0|0}
    |normalized:{First-node}
     {First node}
    *line_arg C4
    |EXTRA
-   |manual_content:{dir}
+   |manual_content:A{1|1}
     {(}
     {dir}
     {)}
@@ -50,7 +50,7 @@ $result_tree_text{'sectioning_check_menu_structure'} = '*document_root C29
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{First node}
+    |node_content:A{0|0}
     |normalized:{First-node}
      {First node}
     {menu_entry_separator:::    }
@@ -79,7 +79,7 @@ $result_tree_text{'sectioning_check_menu_structure'} = '*document_root C29
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{between node}
+    |node_content:A{0|0}
     |normalized:{between-node}
      {between node}
     {menu_entry_separator::: }
@@ -96,7 +96,7 @@ $result_tree_text{'sectioning_check_menu_structure'} = '*document_root C29
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{Second node}
+    |node_content:A{0|0}
     |normalized:{Second-node}
      {Second node}
     {menu_entry_separator:::   }
@@ -112,7 +112,7 @@ $result_tree_text{'sectioning_check_menu_structure'} = '*document_root C29
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{Third node unnumbered}
+    |node_content:A{0|0}
     |normalized:{Third-node-unnumbered}
      {Third node unnumbered}
     {menu_entry_separator::: }
@@ -123,7 +123,7 @@ $result_tree_text{'sectioning_check_menu_structure'} = '*document_root C29
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{Last node no description}
+    |node_content:A{0|0}
     |normalized:{Last-node-no-description}
      {Last node no description}
     {menu_entry_separator:::}
@@ -155,12 +155,12 @@ $result_tree_text{'sectioning_check_menu_structure'} = '*document_root C29
    *line_arg
    *line_arg C1
    |EXTRA
-   |node_content:{Top}
+   |node_content:A{0|0}
    |normalized:{Top}
     {Top}
    *line_arg C2
    |EXTRA
-   |node_content:{Top}
+   |node_content:A{0|0}
    |normalized:{Top}
     {Top}
     {spaces_after_argument:\\n}
@@ -185,7 +185,7 @@ $result_tree_text{'sectioning_check_menu_structure'} = '*document_root C29
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{unnumbered}
+    |node_content:A{0|0}
     |normalized:{unnumbered}
      {unnumbered}
     {menu_entry_separator::: }
@@ -196,7 +196,7 @@ $result_tree_text{'sectioning_check_menu_structure'} = '*document_root C29
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{unnumbered2}
+    |node_content:A{0|0}
     |normalized:{unnumbered2}
      {unnumbered2}
     {menu_entry_separator::: }
@@ -207,7 +207,7 @@ $result_tree_text{'sectioning_check_menu_structure'} = '*document_root C29
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{numbered}
+    |node_content:A{0|0}
     |normalized:{numbered}
      {numbered}
     {menu_entry_separator::: }
@@ -253,7 +253,7 @@ $result_tree_text{'sectioning_check_menu_structure'} = '*document_root C29
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{unnumbered sub}
+    |node_content:A{0|0}
     |normalized:{unnumbered-sub}
      {unnumbered sub}
     {menu_entry_separator::: }
@@ -264,7 +264,7 @@ $result_tree_text{'sectioning_check_menu_structure'} = '*document_root C29
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{numbered sub}
+    |node_content:A{0|0}
     |normalized:{numbered-sub}
      {numbered sub}
     {menu_entry_separator::: }
@@ -275,7 +275,7 @@ $result_tree_text{'sectioning_check_menu_structure'} = '*document_root C29
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{unnumbered sub2}
+    |node_content:A{0|0}
     |normalized:{unnumbered-sub2}
      {unnumbered sub2}
     {menu_entry_separator::: }
@@ -286,7 +286,7 @@ $result_tree_text{'sectioning_check_menu_structure'} = '*document_root C29
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{numbered sub2}
+    |node_content:A{0|0}
     |normalized:{numbered-sub2}
      {numbered sub2}
     {menu_entry_separator::: }
@@ -409,7 +409,7 @@ $result_tree_text{'sectioning_check_menu_structure'} = '*document_root C29
     {menu_entry_leading_text:*  }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{numbered sub3}
+    |node_content:A{0|0}
     |normalized:{numbered-sub3}
      {numbered sub3}
     {menu_entry_separator:::}
@@ -479,7 +479,7 @@ $result_tree_text{'sectioning_check_menu_structure'} = '*document_root C29
    *line_arg
    *line_arg C2
    |EXTRA
-   |node_content:{Top}
+   |node_content:A{0|0}
    |normalized:{Top}
     {Top}
     {spaces_after_argument:\\n}
@@ -498,13 +498,13 @@ $result_tree_text{'sectioning_check_menu_structure'} = '*document_root C29
     {Second node}
    *line_arg C1
    |EXTRA
-   |node_content:{Third node unnumbered}
+   |node_content:A{0|0}
    |normalized:{Third-node-unnumbered}
     {Third node unnumbered}
    *line_arg
    *line_arg C2
    |EXTRA
-   |node_content:{Top}
+   |node_content:A{0|0}
    |normalized:{Top}
     {Top}
     {spaces_after_argument:\\n}
@@ -562,12 +562,12 @@ $result_tree_text{'sectioning_check_menu_structure'} = '*document_root C29
    *line_arg
    *line_arg C1
    |EXTRA
-   |node_content:{Third node unnumbered}
+   |node_content:A{0|0}
    |normalized:{Third-node-unnumbered}
     {Third node unnumbered}
    *line_arg C2
    |EXTRA
-   |node_content:{Top}
+   |node_content:A{0|0}
    |normalized:{Top}
     {Top}
     {spaces_after_argument:\\n}

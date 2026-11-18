@@ -82,7 +82,7 @@ $result_tree_text{'anchor_in_copying_in_footnote'} = '*document_root C3
    *@xref C1 l18
     *brace_arg C1
     |EXTRA
-    |node_content:{Copying footnote}
+    |node_content:A{0|0}
     |normalized:{Copying-footnote}
      {Copying footnote}
    {.\\n}

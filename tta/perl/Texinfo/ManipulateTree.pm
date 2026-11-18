@@ -209,7 +209,7 @@ sub _copy_tree($;$) {
             }
           }
         } elsif (ref($value->[0]) eq '') {
-        # misc_args index_entry
+        # misc_args index_entry node_content node_manual
           $new->{$info_type}->{$key} = [@$value];
         } else {
           print STDERR "Unexpected array $info_type [$command_or_type]{$key}: "
@@ -219,13 +219,10 @@ sub _copy_tree($;$) {
         #print STDERR "II HASH $key $value\n";
         if (not $other_trees
             and ($info_type eq 'extra'
-                 # elements that do not point to other parts of the tree,
-                 # point to associated element
-                 and $key ne 'node_content'
-                 and $key ne 'node_manual'
-                 # point to element only in extra, not in the document tree
-                 #and $key ne 'def_index_element'
-                 #and $key ne 'def_index_ref_element'
+                 # elements that point locally of the tree,
+                 # for instance that would point to the associated element
+                 # or to element only in extra, not in the document tree
+                 #and $key ne 'key_pointing_locally'
            )) {
           next;
         }
@@ -303,7 +300,7 @@ sub _remove_element_copy_info($;$$) {
             or ref($value->[0]) eq 'Texinfo::TreeElement') {
         #print STDERR (' ' x $level) .
         #           "Array $command_or_type $info_type -> $key\n";
-          # manual_content menus node_content
+          # formerly menus now in node relations
           for (my $index = 0; $index < scalar(@{$value}); $index++) {
             #my $context = "$info_type [$command_or_type]{$key} [$index]";
             _remove_element_copy_info($value->[$index], $level,
@@ -506,13 +503,6 @@ sub _element_remove_references($;$$) {
       if (exists($element->{'extra'})) {
         # if there were out of tree elements, they would be recursed into
         # here.
-        #
-        # hold duplicates of the element label contents
-        foreach my $key ('node_content', 'manual_content') {
-          if (exists($element->{'extra'}->{$key})) {
-            delete $element->{'extra'}->{$key}->{'contents'};
-          }
-        }
       }
       for (my $i = 0; $i < scalar(@{$element->{'contents'}}); $i++) {
         _element_remove_references($element->{'contents'}->[$i],
@@ -777,7 +767,7 @@ sub _debug_protect_eol($) {
   return $line;
 }
 
-# currently no ARRAY, and for HASH only 'node_content' 'manual_content'
+# currently no element ARRAY
 # and out_of_tree_element_name (only for spaces_after_cmd_before_arg),
 # therefore no call to element_number_or_error
 sub _print_element_associated_info($$$$$;$$) {
@@ -831,7 +821,9 @@ sub _print_element_associated_info($$$$$;$$) {
         }
         $result .= 'D['.join('|', @directions_strings).']';
       # sync with main/tree_types.h AI_KEYS_LIST extra_container
-      } elsif ($key eq 'node_content' or $key eq 'manual_content') {
+      # no corresponding key currently.
+      #} elsif ($key eq 'a_container_type') {
+      } elsif (0) {
         my $container_value
           = Texinfo::Convert::Texinfo::convert_to_texinfo($value);
         $container_value = _debug_protect_eol($container_value);
@@ -842,10 +834,14 @@ sub _print_element_associated_info($$$$$;$$) {
         $result .= "[$element_value]";
       }
     # sync with main/tree_types.h AI_KEYS_LIST extra_string_list
+    # and extra_integer_list
     } elsif ($ref eq 'ARRAY'
              and ($key eq 'misc_args'
+                  or $key eq 'node_content'
+                  or $key eq 'manual_content'
                   or $key eq 'formal_args'
-                  or $key eq 'documentlanguagevariant')) {
+                  or $key eq 'documentlanguagevariant'
+                  )) {
       $result .= 'A{'.join('|', @{$value}).'}';
     # sync with main/tree_types.h AI_KEYS_LIST extra_index_entry
     } elsif ($key eq 'index_entry' or $key eq 'associated_index_entry') {

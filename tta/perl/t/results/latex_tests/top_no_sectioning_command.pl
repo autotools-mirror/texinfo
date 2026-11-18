@@ -47,7 +47,7 @@ $result_tree_text{'top_no_sectioning_command'} = '*document_root C4
    *@pxref C1 l6
     *brace_arg C1
     |EXTRA
-    |node_content:{Top}
+    |node_content:A{0|0}
     |normalized:{Top}
      {Top}
    {\\n}

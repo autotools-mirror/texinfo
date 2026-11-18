@@ -39,7 +39,7 @@ $result_tree_text{'end_of_line_command_in_node_lines'} = '*document_root C7
     {menu_entry_leading_text:* }
     *menu_entry_node C5
     |EXTRA
-    |node_content:{chap @* f     nl Something? @* After punct}
+    |node_content:A{0|4}
     |normalized:{chap-f-nl-Something_003f-After-punct}
      {chap }
      *@*
@@ -54,7 +54,7 @@ $result_tree_text{'end_of_line_command_in_node_lines'} = '*document_root C7
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{new n}
+    |node_content:A{0|0}
     |normalized:{new-n}
      {new n}
     {menu_entry_separator:::}
@@ -157,7 +157,7 @@ $result_tree_text{'end_of_line_command_in_node_lines'} = '*document_root C7
    *@xref C1 l23
     *brace_arg C5
     |EXTRA
-    |node_content:{chap @* f     nl Something? @* After punct}
+    |node_content:A{0|4}
     |normalized:{chap-f-nl-Something_003f-After-punct}
      {chap }
      *@*
@@ -170,7 +170,7 @@ $result_tree_text{'end_of_line_command_in_node_lines'} = '*document_root C7
    *@xref C1 l25
     *brace_arg C3
     |EXTRA
-    |node_content:{ankh @* p}
+    |node_content:A{0|2}
     |normalized:{ankh-p}
      {ankh }
      *@*
@@ -181,7 +181,7 @@ $result_tree_text{'end_of_line_command_in_node_lines'} = '*document_root C7
    *@xref C2 l27
     *brace_arg C3
     |EXTRA
-    |node_content:{ankh @* p}
+    |node_content:A{0|2}
     |normalized:{ankh-p}
      {ankh }
      *@*
@@ -201,7 +201,7 @@ $result_tree_text{'end_of_line_command_in_node_lines'} = '*document_root C7
     {menu_entry_leading_text:* }
     *menu_entry_node C3
     |EXTRA
-    |node_content:{ankh @* p}
+    |node_content:A{0|2}
     |normalized:{ankh-p}
      {ankh }
      *@*
@@ -219,7 +219,7 @@ $result_tree_text{'end_of_line_command_in_node_lines'} = '*document_root C7
     {menu_entry_separator:: }
     *menu_entry_node C3
     |EXTRA
-    |node_content:{ankh @* p}
+    |node_content:A{0|2}
     |normalized:{ankh-p}
      {ankh }
      *@*
@@ -237,7 +237,7 @@ $result_tree_text{'end_of_line_command_in_node_lines'} = '*document_root C7
     {menu_entry_separator:: }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{ankh p}
+    |node_content:A{0|0}
     |normalized:{ankh-p}
      {ankh p}
     {menu_entry_separator:.}

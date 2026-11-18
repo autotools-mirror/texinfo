@@ -52,7 +52,7 @@ $result_tree_text{'menu_in_deffn'} = '*document_root C2
       {menu_entry_leading_text:* }
       *menu_entry_node C3
       |EXTRA
-      |manual_content:{mynode}
+      |manual_content:A{1|1}
        {(}
        {mynode}
        {)}

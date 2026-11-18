@@ -47,7 +47,7 @@ NodeForward: [U1]
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{chapter node}
+    |node_content:A{0|0}
     |normalized:{chapter-node}
      {chapter node}
     {menu_entry_separator:::}
@@ -58,7 +58,7 @@ NodeForward: [U1]
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{appendix part}
+    |node_content:A{0|0}
     |normalized:{appendix-part}
      {appendix part}
     {menu_entry_separator:::}

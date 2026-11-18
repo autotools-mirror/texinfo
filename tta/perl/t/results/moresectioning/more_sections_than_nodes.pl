@@ -39,7 +39,7 @@ $result_tree_text{'more_sections_than_nodes'} = '*document_root C19
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{n c2}
+    |node_content:A{0|0}
     |normalized:{n-c2}
      {n c2}
     {menu_entry_separator:::}
@@ -50,7 +50,7 @@ $result_tree_text{'more_sections_than_nodes'} = '*document_root C19
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{n c3}
+    |node_content:A{0|0}
     |normalized:{n-c3}
      {n c3}
     {menu_entry_separator:::}
@@ -61,7 +61,7 @@ $result_tree_text{'more_sections_than_nodes'} = '*document_root C19
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{n c3 s1 s2}
+    |node_content:A{0|0}
     |normalized:{n-c3-s1-s2}
      {n c3 s1 s2}
     {menu_entry_separator:::}
@@ -134,19 +134,19 @@ $result_tree_text{'more_sections_than_nodes'} = '*document_root C19
     {n c3}
    *line_arg C2
    |EXTRA
-   |node_content:{n c3 s1 s2}
+   |node_content:A{1|1}
    |normalized:{n-c3-s1-s2}
     {spaces_before_argument: }
     {n c3 s1 s2}
    *line_arg C2
    |EXTRA
-   |node_content:{n c2}
+   |node_content:A{1|1}
    |normalized:{n-c2}
     {spaces_before_argument: }
     {n c2}
    *line_arg C3
    |EXTRA
-   |node_content:{Top}
+   |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
     {Top}
@@ -170,7 +170,7 @@ $result_tree_text{'more_sections_than_nodes'} = '*document_root C19
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{n c3 s 2}
+    |node_content:A{0|0}
     |normalized:{n-c3-s-2}
      {n c3 s 2}
     {menu_entry_separator:::}
@@ -283,12 +283,12 @@ $result_tree_text{'more_sections_than_nodes'} = '*document_root C19
    *line_arg
    *line_arg C1
    |EXTRA
-   |node_content:{n c3}
+   |node_content:A{0|0}
    |normalized:{n-c3}
     {n c3}
    *line_arg C2
    |EXTRA
-   |node_content:{Top}
+   |node_content:A{0|0}
    |normalized:{Top}
     {Top}
     {spaces_after_argument:\\n}

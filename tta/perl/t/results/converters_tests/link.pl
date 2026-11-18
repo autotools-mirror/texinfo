@@ -61,7 +61,7 @@ $result_tree_text{'link'} = '*document_root C4
    *@link C1 l11
     *brace_arg C1
     |EXTRA
-    |node_content:{One}
+    |node_content:A{0|0}
     |normalized:{One}
      {One}
    {\\n}
@@ -70,7 +70,7 @@ $result_tree_text{'link'} = '*document_root C4
    *@link C2 l13
     *brace_arg C1
     |EXTRA
-    |node_content:{One}
+    |node_content:A{0|0}
     |normalized:{One}
      {One}
     *brace_arg C2
@@ -93,7 +93,7 @@ $result_tree_text{'link'} = '*document_root C4
    *@link C1 l18
     *brace_arg C1
     |EXTRA
-    |node_content:{One}
+    |node_content:A{0|0}
     |normalized:{One}
      {One}
    {\\n}
@@ -102,7 +102,7 @@ $result_tree_text{'link'} = '*document_root C4
    *@link C2 l20
     *brace_arg C1
     |EXTRA
-    |node_content:{One}
+    |node_content:A{0|0}
     |normalized:{One}
      {One}
     *brace_arg C2
@@ -117,7 +117,7 @@ $result_tree_text{'link'} = '*document_root C4
    *@link C3 l24
     *brace_arg C1
     |EXTRA
-    |node_content:{Introduction}
+    |node_content:A{0|0}
      {Introduction}
     *brace_arg
     *brace_arg C1
@@ -128,7 +128,7 @@ $result_tree_text{'link'} = '*document_root C4
    *@link C3 l26
     *brace_arg C1
     |EXTRA
-    |node_content:{Introduction}
+    |node_content:A{0|0}
      {Introduction}
     *brace_arg C1
      {Bash}

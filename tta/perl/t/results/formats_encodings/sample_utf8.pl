@@ -156,7 +156,7 @@ $result_tree_text{'sample_utf8'} = '*document_root C10
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{第一章（First Chapter）}
+    |node_content:A{0|0}
     |normalized:{_7b2c_4e00_7ae0_ff08First-Chapter_ff09}
      {第一章（First Chapter）}
     {menu_entry_separator::: }
@@ -168,7 +168,7 @@ $result_tree_text{'sample_utf8'} = '*document_root C10
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{Second Chapter AE ĄĘ ae ąę}
+    |node_content:A{0|0}
     |normalized:{Second-Chapter-AE-_0104_0118-ae-_0105_0119}
      {Second Chapter AE ĄĘ ae ąę}
     {menu_entry_separator:::  }
@@ -179,7 +179,7 @@ $result_tree_text{'sample_utf8'} = '*document_root C10
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{Index node}
+    |node_content:A{0|0}
     |normalized:{Index-node}
      {Index node}
     {menu_entry_separator:::    }

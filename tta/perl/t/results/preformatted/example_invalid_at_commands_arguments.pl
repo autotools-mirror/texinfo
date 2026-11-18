@@ -18,7 +18,7 @@ $result_tree_text{'example_invalid_at_commands_arguments'} = '*document_root C1
      *@ref C4 l1
       *brace_arg C1
       |EXTRA
-      |node_content:{a}
+      |node_content:A{0|0}
        {a}
       *brace_arg C1
        {b}

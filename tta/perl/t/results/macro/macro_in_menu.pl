@@ -115,7 +115,7 @@ $result_tree_text{'macro_in_menu'} = '*document_root C1
       >*brace_arg
     *menu_entry_node C1
     |EXTRA
-    |node_content:{menu entry}
+    |node_content:A{0|0}
     |normalized:{menu-entry}
      {menu entry}
      >SOURCEMARKS
@@ -147,7 +147,7 @@ $result_tree_text{'macro_in_menu'} = '*document_root C1
     >macro_expansion<end;4><p:1>
     *menu_entry_node C1
     |EXTRA
-    |node_content:{node}
+    |node_content:A{0|0}
     |normalized:{node}
      {node}
     {menu_entry_separator:::}
@@ -166,7 +166,7 @@ $result_tree_text{'macro_in_menu'} = '*document_root C1
       >*brace_arg
     *menu_entry_node C1
     |EXTRA
-    |node_content:{other node}
+    |node_content:A{0|0}
     |normalized:{other-node}
      {other node}
      >SOURCEMARKS
@@ -179,7 +179,7 @@ $result_tree_text{'macro_in_menu'} = '*document_root C1
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{node colon macro}
+    |node_content:A{0|0}
     |normalized:{node-colon-macro}
      {node colon macro}
      >SOURCEMARKS
@@ -207,7 +207,7 @@ $result_tree_text{'macro_in_menu'} = '*document_root C1
     {menu_entry_separator:: }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{entry}
+    |node_content:A{0|0}
     |normalized:{entry}
      {entry}
     {menu_entry_separator:. }

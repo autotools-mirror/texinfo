@@ -96,7 +96,7 @@ $result_tree_text{'xrefname'} = '*document_root C7
    *@xref C1 l15
     *brace_arg C1
     |EXTRA
-    |node_content:{ntiti}
+    |node_content:A{0|0}
     |normalized:{ntiti}
      {ntiti}
    {\\n}
@@ -115,7 +115,7 @@ $result_tree_text{'xrefname'} = '*document_root C7
    *@ref C1 l19
     *brace_arg C1
     |EXTRA
-    |node_content:{ntiti}
+    |node_content:A{0|0}
     |normalized:{ntiti}
      {ntiti}
    {.\\n}

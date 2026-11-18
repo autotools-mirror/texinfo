@@ -4132,9 +4132,12 @@ sub _end_line_misc_line($$$) {
             = $arg_label_manual_info->{$label_info};
         }
         if (exists($node_line_arg->{'extra'}->{'node_content'})) {
+          my ($begin, $end) = @{$node_line_arg->{'extra'}->{'node_content'}};
+          my $node_content = {'contents'
+            => [@{$node_line_arg->{'contents'}}[$begin .. $end]]};
           my $normalized
        = Texinfo::Convert::NodeNameNormalization::convert_to_node_identifier(
-              $node_line_arg->{'extra'}->{'node_content'});
+                                      $node_content);
           $node_line_arg->{'extra'}->{'normalized'} = $normalized;
         }
       }
@@ -6838,9 +6841,7 @@ sub _handle_close_brace($$$) {
 
         if (defined($first_idx)) {
           $arg_label->{'extra'} = {} if (!exists($arg_label->{'extra'}));
-          $arg_label->{'extra'}->{'node_content'}
-            = Texinfo::TreeElement::new({'contents'
-               => [@{$arg_label->{'contents'}}[$first_idx .. $end_idx]]});
+          $arg_label->{'extra'}->{'node_content'} = [$first_idx, $end_idx];
           if (!$link_or_inforef
                 and !defined($args[3]) and !defined($args[4])
               or $link_or_inforef and !defined($args[2])) {

@@ -108,7 +108,7 @@ $result_tree_text{'file_name_case_insensitive_conflict_redirections'} = '*docume
    *@xref C1 l18
     *brace_arg C1
     |EXTRA
-    |node_content:{foo}
+    |node_content:A{0|0}
     |normalized:{foo}
      {foo}
    {\\n}
@@ -117,7 +117,7 @@ $result_tree_text{'file_name_case_insensitive_conflict_redirections'} = '*docume
    *@xref C1 l20
     *brace_arg C1
     |EXTRA
-    |node_content:{Foo}
+    |node_content:A{0|0}
     |normalized:{Foo}
      {Foo}
    {\\n}

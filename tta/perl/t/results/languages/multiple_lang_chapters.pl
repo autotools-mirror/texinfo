@@ -93,7 +93,7 @@ $result_tree_text{'multiple_lang_chapters'} = '*document_root C13
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{chapter ja}
+    |node_content:A{0|0}
     |normalized:{chapter-ja}
      {chapter ja}
     {menu_entry_separator:::}
@@ -104,7 +104,7 @@ $result_tree_text{'multiple_lang_chapters'} = '*document_root C13
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{chapter en}
+    |node_content:A{0|0}
     |normalized:{chapter-en}
      {chapter en}
     {menu_entry_separator:::}
@@ -115,7 +115,7 @@ $result_tree_text{'multiple_lang_chapters'} = '*document_root C13
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{chapter fr_FR}
+    |node_content:A{0|0}
     |normalized:{chapter-fr_005fFR}
      {chapter fr_FR}
     {menu_entry_separator:::}
@@ -126,7 +126,7 @@ $result_tree_text{'multiple_lang_chapters'} = '*document_root C13
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{chapter de}
+    |node_content:A{0|0}
     |normalized:{chapter-de}
      {chapter de}
     {menu_entry_separator:::}
@@ -137,7 +137,7 @@ $result_tree_text{'multiple_lang_chapters'} = '*document_root C13
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{chapter pt_BR}
+    |node_content:A{0|0}
     |normalized:{chapter-pt_005fBR}
      {chapter pt_BR}
     {menu_entry_separator:::}
@@ -186,7 +186,7 @@ $result_tree_text{'multiple_lang_chapters'} = '*document_root C13
    *@xref C1 l27
     *brace_arg C1
     |EXTRA
-    |node_content:{chapter ja}
+    |node_content:A{0|0}
     |normalized:{chapter-ja}
      {chapter ja}
    {.\\n}
@@ -263,7 +263,7 @@ $result_tree_text{'multiple_lang_chapters'} = '*document_root C13
    *@xref C1 l35
     *brace_arg C1
     |EXTRA
-    |node_content:{chapter ja}
+    |node_content:A{0|0}
     |normalized:{chapter-ja}
      {chapter ja}
    {.\\n}
@@ -437,7 +437,7 @@ $result_tree_text{'multiple_lang_chapters'} = '*document_root C13
    *@xref C1 l54
     *brace_arg C1
     |EXTRA
-    |node_content:{chapter ja}
+    |node_content:A{0|0}
     |normalized:{chapter-ja}
      {chapter ja}
    {.\\n}

@@ -52,7 +52,7 @@ $result_tree_text{'double_recursive_self_section_node_reference'} = '*document_r
     *@ref C1 l5
      *brace_arg C1
      |EXTRA
-     |node_content:{to node1}
+     |node_content:A{0|0}
      |normalized:{to-node1}
       {to node1}
     {spaces_after_argument:\\n}
@@ -69,7 +69,7 @@ $result_tree_text{'double_recursive_self_section_node_reference'} = '*document_r
     *@ref C1 l7
      *brace_arg C1
      |EXTRA
-     |node_content:{node1}
+     |node_content:A{0|0}
      |normalized:{node1}
       {node1}
     {spaces_after_argument:\\n}

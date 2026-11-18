@@ -1336,9 +1336,11 @@ sub node_name($$) {
     my $label_element = Texinfo::Common::get_label_element($node);
     if (!defined($label_element)) {
       # FIXME it would be better not to go there if there is an external
-      # manual, check the code
+      # manual, but use the full tree element, check the code
       # node direction to an external node
-      $label_element = $node->{'extra'}->{'node_content'};
+      my ($begin, $end) = @{$node->{'extra'}->{'node_content'}};
+      $label_element
+        = {'contents' => [@{$node->{'contents'}}[$begin .. $end]]};
     } elsif (exists($Texinfo::Commands::sectioning_heading_commands{
                                                   $node->{'cmdname'}})) {
       # @ref is accepted in section name, not in @node and similar.  It would
@@ -2871,6 +2873,9 @@ sub _convert($$) {
     cluck("BUG? Plaintext _convert element undef\n");
   }
 
+  #if (ref($element) ne 'HASH' and ref($element) ne 'Texinfo::TreeElement') {
+  #  cluck();
+  #}
   #print STDERR "CTPI "
   # .Texinfo::ManipulateTree::element_print_details($element)."\n";
 

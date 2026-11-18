@@ -34,7 +34,7 @@ $result_tree_text{'xref_quote_long_item'} = '*document_root C1
       *@xref C4 l4
        *brace_arg C5
        |EXTRA
-       |node_content:{Texinfo::Convert::Utils $tree = expand_verbatiminclude($registrar@comma{} $configuration_information@comma{} $verbatiminclude)}
+       |node_content:A{0|4}
         {Texinfo::Convert::Utils $tree = expand_verbatiminclude($registrar}
         *@comma C1 l4
          *brace_container

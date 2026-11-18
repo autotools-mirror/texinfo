@@ -24,7 +24,7 @@ $result_tree_text{'section_before_top'} = '*document_root C5
    *line_arg
    *line_arg C2
    |EXTRA
-   |node_content:{Top}
+   |node_content:A{0|0}
    |normalized:{Top}
     {Top}
     {spaces_after_argument:\\n}
@@ -67,7 +67,7 @@ $result_tree_text{'section_before_top'} = '*document_root C5
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{section node}
+    |node_content:A{0|0}
     |normalized:{section-node}
      {section node}
     {menu_entry_separator:::}

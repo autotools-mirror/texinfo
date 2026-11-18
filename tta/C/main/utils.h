@@ -221,6 +221,9 @@ size_t find_name_number (const NAME_NUMBER_LIST *name_number,
 void free_name_number_list (NAME_NUMBER_LIST *name_number_list);
 void sort_name_number_list (NAME_NUMBER_LIST *name_number_list);
 
+decl_list_fns(INTEGER_LIST, integer, int);
+INTEGER_LIST *new_integer_list (void);
+
 decl_list_fns(STRING_LIST, string, char *);
 STRING_LIST *new_string_list (void);
 void clear_strings_list (STRING_LIST *strings);

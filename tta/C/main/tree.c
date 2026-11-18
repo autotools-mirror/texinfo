@@ -168,6 +168,10 @@ destroy_key_pair_value (KEY_PAIR *k_pair)
     case extra_string_list:
       destroy_strings_list (k_pair->k.strings_list);
       break;
+    case extra_integer_list:
+      free (k_pair->k.integers_list->list);
+      free (k_pair->k.integers_list);
+      break;
     case extra_index_entry:
       free (k_pair->k.index_entry->index_name);
       free (k_pair->k.index_entry);
@@ -651,18 +655,16 @@ replace_remove_list_element (ELEMENT_LIST *list, const ELEMENT *removed,
 void
 destroy_node_spec (NODE_SPEC_EXTRA *nse)
 {
-  if (nse->out_of_tree_elements)
-    {/* always 3 elements maximum added, to be freed */
-      int i;
-      for (i = 0; i < 3; i++)
-        if (nse->out_of_tree_elements[i])
-          destroy_element (nse->out_of_tree_elements[i]);
-      free (nse->out_of_tree_elements);
-    }
   if (nse->manual_content)
-    destroy_element (nse->manual_content);
+    {
+      free (nse->manual_content->list);
+      free (nse->manual_content);
+    }
   if (nse->node_content)
-    destroy_element (nse->node_content);
+    {
+      free (nse->node_content->list);
+      free (nse->node_content);
+    }
   free (nse);
 }
 

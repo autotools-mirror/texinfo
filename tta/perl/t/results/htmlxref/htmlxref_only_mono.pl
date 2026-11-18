@@ -42,7 +42,7 @@ $result_tree_text{'htmlxref_only_mono'} = '*document_root C9
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{other nodes}
+    |node_content:A{0|0}
     |normalized:{other-nodes}
      {other nodes}
     {menu_entry_separator:::}
@@ -76,7 +76,7 @@ $result_tree_text{'htmlxref_only_mono'} = '*document_root C9
    *@ref C4 test_refs.texi:l12
     *brace_arg C3
     |EXTRA
-    |node_content:{a  node}
+    |node_content:A{1|1}
      {spaces_before_argument: }
      {a  node}
      {spaces_after_argument: }
@@ -112,7 +112,7 @@ $result_tree_text{'htmlxref_only_mono'} = '*document_root C9
    *@ref C4 test_refs.texi:l18
     *brace_arg C1
     |EXTRA
-    |node_content:{:}
+    |node_content:A{0|0}
      {:}
     *brace_arg
     *brace_arg
@@ -144,7 +144,7 @@ $result_tree_text{'htmlxref_only_mono'} = '*document_root C9
    *@ref C4 test_refs.texi:l24
     *brace_arg C3
     |EXTRA
-    |node_content:{top}
+    |node_content:A{1|1}
      {spaces_before_argument: }
      {top}
      {spaces_after_argument: }
@@ -189,7 +189,7 @@ $result_tree_text{'htmlxref_only_mono'} = '*document_root C9
    *@ref C4 test_refs.texi:l32
     *brace_arg C1
     |EXTRA
-    |node_content:{node}
+    |node_content:A{0|0}
      {node}
     *brace_arg
     *brace_arg
@@ -232,7 +232,7 @@ $result_tree_text{'htmlxref_only_mono'} = '*document_root C9
    *@ref C1 test_refs.texi:l40
     *brace_arg C1
     |EXTRA
-    |node_content:{!_"#$%&\'()*+-.}
+    |node_content:A{0|0}
     |normalized:{_0021_005f_0022_0023_0024_0025_0026_0027_0028_0029_002a_002b_002d_002e}
      {!_"#$%&\'()*+-.}
    {\\n}
@@ -260,7 +260,7 @@ $result_tree_text{'htmlxref_only_mono'} = '*document_root C9
    *@ref C1 test_refs.texi:l45
     *brace_arg C1
     |EXTRA
-    |node_content:{/;<=>?[\\]^_`|~}
+    |node_content:A{0|0}
     |normalized:{_002f_003b_003c_003d_003e_003f_005b_005c_005d_005e_005f_0060_007c_007e}
      {/;<=>?[\\]^_`|~}
    *@*
@@ -289,7 +289,7 @@ $result_tree_text{'htmlxref_only_mono'} = '*document_root C9
    *@ref C1 test_refs.texi:l50
     *brace_arg C2
     |EXTRA
-    |node_content:{Top}
+    |node_content:A{1|1}
     |normalized:{Top}
      {spaces_before_argument: }
      {Top}
@@ -318,7 +318,7 @@ $result_tree_text{'htmlxref_only_mono'} = '*document_root C9
    *@ref C1 test_refs.texi:l55
     *brace_arg C2
     |EXTRA
-    |node_content:{local   node}
+    |node_content:A{1|1}
     |normalized:{local-node}
      {spaces_before_argument:  }
      {local   node}
@@ -352,7 +352,7 @@ $result_tree_text{'htmlxref_only_mono'} = '*document_root C9
    *@ref C1 test_refs.texi:l61
     *brace_arg C1
     |EXTRA
-    |node_content:{(mtexinfo)Cross References}
+    |node_content:A{0|0}
     |normalized:{_0028mtexinfo_0029Cross-References}
      {(mtexinfo)Cross References}
    {\\n}
@@ -389,19 +389,19 @@ $result_tree_text{'htmlxref_only_mono'} = '*document_root C9
     {other nodes}
    *line_arg C2
    |EXTRA
-   |node_content:{!_"#$%&\'()*+-.}
+   |node_content:A{1|1}
    |normalized:{_0021_005f_0022_0023_0024_0025_0026_0027_0028_0029_002a_002b_002d_002e}
     {spaces_before_argument: }
     {!_"#$%&\'()*+-.}
    *line_arg C2
    |EXTRA
-   |node_content:{Top}
+   |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
     {Top}
    *line_arg C3
    |EXTRA
-   |node_content:{Top}
+   |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
     {Top}
@@ -441,7 +441,7 @@ $result_tree_text{'htmlxref_only_mono'} = '*document_root C9
    *@ref C1 test_refs.texi:l75
     *brace_arg C2
     |EXTRA
-    |node_content:{Top}
+    |node_content:A{1|1}
     |normalized:{Top}
      {spaces_before_argument: }
      {Top}
@@ -468,7 +468,7 @@ $result_tree_text{'htmlxref_only_mono'} = '*document_root C9
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{!_"#$%&\'()*+-.}
+    |node_content:A{0|0}
     |normalized:{_0021_005f_0022_0023_0024_0025_0026_0027_0028_0029_002a_002b_002d_002e}
      {!_"#$%&\'()*+-.}
     {menu_entry_separator:::}
@@ -479,7 +479,7 @@ $result_tree_text{'htmlxref_only_mono'} = '*document_root C9
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{/;<=>?[\\]^_`|~}
+    |node_content:A{0|0}
     |normalized:{_002f_003b_003c_003d_003e_003f_005b_005c_005d_005e_005f_0060_007c_007e}
      {/;<=>?[\\]^_`|~}
     {menu_entry_separator:::}
@@ -490,7 +490,7 @@ $result_tree_text{'htmlxref_only_mono'} = '*document_root C9
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{local node}
+    |node_content:A{0|0}
     |normalized:{local-node}
      {local node}
     {menu_entry_separator:::}
@@ -516,19 +516,19 @@ $result_tree_text{'htmlxref_only_mono'} = '*document_root C9
     {!_"#$%&\'()*+-.}
    *line_arg C2
    |EXTRA
-   |node_content:{/;<=>?[\\]^_`|~}
+   |node_content:A{1|1}
    |normalized:{_002f_003b_003c_003d_003e_003f_005b_005c_005d_005e_005f_0060_007c_007e}
     {spaces_before_argument: }
     {/;<=>?[\\]^_`|~}
    *line_arg C2
    |EXTRA
-   |node_content:{other nodes}
+   |node_content:A{1|1}
    |normalized:{other-nodes}
     {spaces_before_argument: }
     {other nodes}
    *line_arg C3
    |EXTRA
-   |node_content:{other nodes}
+   |node_content:A{1|1}
    |normalized:{other-nodes}
     {spaces_before_argument: }
     {other nodes}
@@ -558,17 +558,17 @@ $result_tree_text{'htmlxref_only_mono'} = '*document_root C9
     {/;<=>?[\\]^_`|~}
    *line_arg C1
    |EXTRA
-   |node_content:{local   node}
+   |node_content:A{0|0}
    |normalized:{local-node}
     {local   node}
    *line_arg C1
    |EXTRA
-   |node_content:{!_"#$%&\'()*+-.}
+   |node_content:A{0|0}
    |normalized:{_0021_005f_0022_0023_0024_0025_0026_0027_0028_0029_002a_002b_002d_002e}
     {!_"#$%&\'()*+-.}
    *line_arg C3
    |EXTRA
-   |node_content:{other nodes}
+   |node_content:A{1|1}
    |normalized:{other-nodes}
     {spaces_before_argument: }
     {other nodes}
@@ -599,12 +599,12 @@ $result_tree_text{'htmlxref_only_mono'} = '*document_root C9
    *line_arg
    *line_arg C1
    |EXTRA
-   |node_content:{/;<=>?[\\]^_`|~}
+   |node_content:A{0|0}
    |normalized:{_002f_003b_003c_003d_003e_003f_005b_005c_005d_005e_005f_0060_007c_007e}
     {/;<=>?[\\]^_`|~}
    *line_arg C2
    |EXTRA
-   |node_content:{other nodes}
+   |node_content:A{0|0}
    |normalized:{other-nodes}
     {other nodes}
     {spaces_after_argument:\\n}

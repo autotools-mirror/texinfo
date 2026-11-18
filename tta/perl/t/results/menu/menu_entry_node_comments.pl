@@ -19,8 +19,8 @@ $result_tree_text{'menu_entry_node_comments'} = '*document_root C1
     {menu_entry_leading_text:* }
     *menu_entry_node C4
     |EXTRA
-    |manual_content:{f}
-    |node_content:{a1c}
+    |manual_content:A{1|1}
+    |node_content:A{3|3}
     |normalized:{a1c}
      {(}
      {f}
@@ -38,8 +38,8 @@ $result_tree_text{'menu_entry_node_comments'} = '*document_root C1
     {menu_entry_leading_text:* }
     *menu_entry_node C4
     |EXTRA
-    |manual_content:{f}
-    |node_content:{a2c}
+    |manual_content:A{1|1}
+    |node_content:A{3|3}
     |normalized:{a2c}
      {(}
      {f}
@@ -57,8 +57,8 @@ $result_tree_text{'menu_entry_node_comments'} = '*document_root C1
     {menu_entry_leading_text:* }
     *menu_entry_node C4
     |EXTRA
-    |manual_content:{f}
-    |node_content:{a3c}
+    |manual_content:A{1|1}
+    |node_content:A{3|3}
     |normalized:{a3c}
      {(}
      {f}
@@ -77,8 +77,8 @@ $result_tree_text{'menu_entry_node_comments'} = '*document_root C1
     {menu_entry_leading_text:* }
     *menu_entry_node C6
     |EXTRA
-    |manual_content:{f}
-    |node_content:{a4 }
+    |manual_content:A{1|1}
+    |node_content:A{4|5}
     |normalized:{a4}
      {(}
      {f}
@@ -165,7 +165,7 @@ td.menu-entry-destination {vertical-align: top}
 <tr><td class="menu-entry-destination">&bull; <a href="f.html#a1c" accesskey="1">(f)a1c</a>:</td><td class="menu-entry-description"></td></tr>
 <tr><td class="menu-entry-destination">&bull; <a href="f.html#a2c" accesskey="2">(f)a2c</a>:</td><td class="menu-entry-description"></td></tr>
 <tr><td class="menu-entry-destination">&bull; <a href="f.html#a3c" accesskey="3">(f)a3c</a>:</td><td class="menu-entry-description">d</td></tr>
-<tr><td class="menu-entry-destination">&bull; <a href="f.html#a4" accesskey="4">(f)a4 </a>:</td><td class="menu-entry-description"></td></tr>
+<tr><td class="menu-entry-destination">&bull; <a href="f.html#a4" accesskey="4">(f) a4 </a>:</td><td class="menu-entry-description"></td></tr>
 </table>
 
 

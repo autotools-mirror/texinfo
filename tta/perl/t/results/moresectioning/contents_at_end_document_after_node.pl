@@ -39,7 +39,7 @@ $result_tree_text{'contents_at_end_document_after_node'} = '*document_root C5
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{a node}
+    |node_content:A{0|0}
     |normalized:{a-node}
      {a node}
     {menu_entry_separator:::}
@@ -80,7 +80,7 @@ $result_tree_text{'contents_at_end_document_after_node'} = '*document_root C5
    *line_arg
    *line_arg C2
    |EXTRA
-   |node_content:{Top}
+   |node_content:A{0|0}
    |normalized:{Top}
     {Top}
     {spaces_after_argument:\\n}

@@ -42,7 +42,7 @@ $result_tree_text{'chapter_node_before_and_after_part'} = '*document_root C6
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{after}
+    |node_content:A{0|0}
     |normalized:{after}
      {after}
     {menu_entry_separator:::}

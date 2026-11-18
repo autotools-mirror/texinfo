@@ -30,7 +30,7 @@ $result_tree_text{'ref_in_preformatted'} = '*document_root C3
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{chap nnn the node name}
+    |node_content:A{0|0}
     |normalized:{chap-nnn-the-node-name}
      {chap nnn the node name}
     {menu_entry_separator:::}
@@ -54,7 +54,7 @@ $result_tree_text{'ref_in_preformatted'} = '*document_root C3
     *@ref C1 l8
      *brace_arg C2
      |EXTRA
-     |node_content:{chap nnn the\\nnode name}
+     |node_content:A{0|1}
      |normalized:{chap-nnn-the-node-name}
       {chap nnn the\\n}
       {node name}

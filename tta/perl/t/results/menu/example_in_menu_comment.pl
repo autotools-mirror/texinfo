@@ -19,7 +19,7 @@ $result_tree_text{'example_in_menu_comment'} = '*document_root C1
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{entry}
+    |node_content:A{0|0}
     |normalized:{entry}
      {entry}
     {menu_entry_separator:::}

@@ -64,7 +64,7 @@ $result_tree_text{'ref_to_float'} = '*document_root C1
    *@ref C1 l9
     *brace_arg C1
     |EXTRA
-    |node_content:{Label1}
+    |node_content:A{0|0}
     |normalized:{Label1}
      {Label1}
    {\\n}
@@ -73,7 +73,7 @@ $result_tree_text{'ref_to_float'} = '*document_root C1
    *@ref C1 l11
     *brace_arg C1
     |EXTRA
-    |node_content:{Label2}
+    |node_content:A{0|0}
     |normalized:{Label2}
      {Label2}
    {\\n}

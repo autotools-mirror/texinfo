@@ -22,7 +22,7 @@ $result_tree_text{'equivalent_nodes_defined_linked'} = '*document_root C3
     {Top}
    *line_arg C3
    |EXTRA
-   |node_content:{@asis{chap}}
+   |node_content:A{1|1}
    |normalized:{chap}
     {spaces_before_argument: }
     *@asis C1 l1
@@ -38,7 +38,7 @@ $result_tree_text{'equivalent_nodes_defined_linked'} = '*document_root C3
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{@strong{chap}}
+    |node_content:A{0|0}
     |normalized:{chap}
      *@strong C1 l4
       *brace_container C1
@@ -106,7 +106,7 @@ $result_tree_text{'equivalent_nodes_defined_linked'} = '*document_root C3
    *@ref C1 l15
     *brace_arg C1
     |EXTRA
-    |node_content:{chap}
+    |node_content:A{0|0}
     |normalized:{chap}
      {chap}
    {.\\n}
@@ -122,7 +122,7 @@ $result_tree_text{'equivalent_nodes_defined_linked'} = '*document_root C3
    *@ref C1 l17
     *brace_arg C1
     |EXTRA
-    |node_content:{@samp{chap}}
+    |node_content:A{0|0}
     |normalized:{chap}
      *@samp C1 l17
       *brace_container C1

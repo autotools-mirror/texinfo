@@ -51,7 +51,7 @@ NodeUp: (dir)
    *line_arg
    *line_arg C4
    |EXTRA
-   |manual_content:{dir}
+   |manual_content:A{1|1}
     {(}
     {dir}
     {)}

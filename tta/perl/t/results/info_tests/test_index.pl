@@ -35,7 +35,7 @@ $result_tree_text{'test_index'} = '*document_root C13
    *@xref C1 l4
     *brace_arg C1
     |EXTRA
-    |node_content:{a counting anchor}
+    |node_content:A{0|0}
     |normalized:{a-counting-anchor}
      {a counting anchor}
    {.\\n}
@@ -193,7 +193,7 @@ $result_tree_text{'test_index'} = '*document_root C13
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{name}
+    |node_content:A{0|0}
     |normalized:{name}
      {name}
     {menu_entry_separator:::}
@@ -204,7 +204,7 @@ $result_tree_text{'test_index'} = '*document_root C13
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{name1 looooooooooooooooooooooooooooooooooooooooooooooooooooooooong}
+    |node_content:A{0|0}
     |normalized:{name1-looooooooooooooooooooooooooooooooooooooooooooooooooooooooong}
      {name1 looooooooooooooooooooooooooooooooooooooooooooooooooooooooong}
     {menu_entry_separator:::}

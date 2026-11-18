@@ -33,8 +33,8 @@ $result_tree_text{'empty_leading_menu_comment'} = '*document_root C2
     {menu_entry_leading_text:* }
     *menu_entry_node C4
     |EXTRA
-    |manual_content:{f}
-    |node_content:{b}
+    |manual_content:A{1|1}
+    |node_content:A{3|3}
     |normalized:{b}
      {(}
      {f}

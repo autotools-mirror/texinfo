@@ -24,8 +24,8 @@ $result_tree_text{'dash_in_menu'} = '*document_root C1
     {menu_entry_separator:: }
     *menu_entry_node C4
     |EXTRA
-    |manual_content:{manual}
-    |node_content:{n---ode}
+    |manual_content:A{1|1}
+    |node_content:A{3|3}
     |normalized:{n_002d_002d_002dode}
      {(}
      {manual}

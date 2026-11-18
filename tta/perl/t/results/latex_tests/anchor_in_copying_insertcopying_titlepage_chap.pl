@@ -105,7 +105,7 @@ $result_tree_text{'anchor_in_copying_insertcopying_titlepage_chap'} = '*document
    *@pxref C1 l18
     *brace_arg C1
     |EXTRA
-    |node_content:{a in copying}
+    |node_content:A{0|0}
     |normalized:{a-in-copying}
      {a in copying}
    {\\n}
@@ -120,7 +120,7 @@ $result_tree_text{'anchor_in_copying_insertcopying_titlepage_chap'} = '*document
    *@pxref C1 l22
     *brace_arg C1
     |EXTRA
-    |node_content:{a in copying}
+    |node_content:A{0|0}
     |normalized:{a-in-copying}
      {a in copying}
    {\\n}

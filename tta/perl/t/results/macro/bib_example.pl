@@ -1060,7 +1060,7 @@ $result_tree_text{'bib_example'} = '*document_root C9
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{Introduction}
+    |node_content:A{0|0}
     |normalized:{Introduction}
      {Introduction}
     {menu_entry_separator:::}
@@ -1071,7 +1071,7 @@ $result_tree_text{'bib_example'} = '*document_root C9
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{References}
+    |node_content:A{0|0}
     |normalized:{References}
      {References}
      >SOURCEMARKS
@@ -1168,7 +1168,7 @@ $result_tree_text{'bib_example'} = '*document_root C9
    *@ref C2 bib-example.texi:l43:@mybibmakeref
     *brace_arg C1
     |EXTRA
-    |node_content:{References}
+    |node_content:A{0|0}
     |normalized:{References}
      {References}
      >SOURCEMARKS

@@ -34,19 +34,19 @@ $result_tree_text{'character_and_spaces_in_node'} = '*document_root C6
     {chap nodes}
    *line_arg C2
    |EXTRA
-   |node_content:{!_"#$%&\'()*+-.}
+   |node_content:A{1|1}
    |normalized:{_0021_005f_0022_0023_0024_0025_0026_0027_0028_0029_002a_002b_002d_002e}
     {spaces_before_argument: }
     {!_"#$%&\'()*+-.}
    *line_arg C2
    |EXTRA
-   |node_content:{Top}
+   |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
     {Top}
    *line_arg C3
    |EXTRA
-   |node_content:{Top}
+   |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
     {Top}
@@ -62,19 +62,19 @@ $result_tree_text{'character_and_spaces_in_node'} = '*document_root C6
     {!_"#$%&\'()*+-.}
    *line_arg C2
    |EXTRA
-   |node_content:{/;<=>?[\\]^_`|~}
+   |node_content:A{1|1}
    |normalized:{_002f_003b_003c_003d_003e_003f_005b_005c_005d_005e_005f_0060_007c_007e}
     {spaces_before_argument: }
     {/;<=>?[\\]^_`|~}
    *line_arg C2
    |EXTRA
-   |node_content:{chap nodes}
+   |node_content:A{1|1}
    |normalized:{chap-nodes}
     {spaces_before_argument: }
     {chap nodes}
    *line_arg C3
    |EXTRA
-   |node_content:{chap nodes}
+   |node_content:A{1|1}
    |normalized:{chap-nodes}
     {spaces_before_argument: }
     {chap nodes}
@@ -90,17 +90,17 @@ $result_tree_text{'character_and_spaces_in_node'} = '*document_root C6
     {/;<=>?[\\]^_`|~}
    *line_arg C1
    |EXTRA
-   |node_content:{local   node}
+   |node_content:A{0|0}
    |normalized:{local-node}
     {local   node}
    *line_arg C1
    |EXTRA
-   |node_content:{!_"#$%&\'()*+-.}
+   |node_content:A{0|0}
    |normalized:{_0021_005f_0022_0023_0024_0025_0026_0027_0028_0029_002a_002b_002d_002e}
     {!_"#$%&\'()*+-.}
    *line_arg C3
    |EXTRA
-   |node_content:{chap nodes}
+   |node_content:A{1|1}
    |normalized:{chap-nodes}
     {spaces_before_argument: }
     {chap nodes}
@@ -117,12 +117,12 @@ $result_tree_text{'character_and_spaces_in_node'} = '*document_root C6
    *line_arg
    *line_arg C1
    |EXTRA
-   |node_content:{/;<=>?[\\]^_`|~}
+   |node_content:A{0|0}
    |normalized:{_002f_003b_003c_003d_003e_003f_005b_005c_005d_005e_005f_0060_007c_007e}
     {/;<=>?[\\]^_`|~}
    *line_arg C2
    |EXTRA
-   |node_content:{chap nodes}
+   |node_content:A{0|0}
    |normalized:{chap-nodes}
     {chap nodes}
     {spaces_after_argument:\\n}

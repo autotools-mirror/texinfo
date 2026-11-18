@@ -63,7 +63,7 @@ $result_tree_text{'anchor_in_footnote_separate_split_node'} = '*document_root C5
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{chapter}
+    |node_content:A{0|0}
     |normalized:{chapter}
      {chapter}
     {menu_entry_separator:::}
@@ -103,7 +103,7 @@ $result_tree_text{'anchor_in_footnote_separate_split_node'} = '*document_root C5
    *@ref C1 l16
     *brace_arg C1
     |EXTRA
-    |node_content:{Anchor in footnote}
+    |node_content:A{0|0}
     |normalized:{Anchor-in-footnote}
      {Anchor in footnote}
    {.\\n}

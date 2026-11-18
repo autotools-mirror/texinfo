@@ -1679,7 +1679,7 @@ info_format_node (CONVERTER *self, const ELEMENT *node,
           const ELEMENT *node_direction
             = node_relations->node_directions[i];
           char *direction_label;
-          const ELEMENT *manual_content;
+          const INTEGER_LIST *manual_content;
 
           xasprintf (&direction_label, ",  %s: ", directions[i]);
           stream_output (self, direction_label);
@@ -1687,7 +1687,7 @@ info_format_node (CONVERTER *self, const ELEMENT *node,
 
           /* file */
           manual_content
-           = lookup_extra_container (node_direction, AI_key_manual_content);
+           = lookup_extra_integer_list (node_direction, AI_key_manual_content);
           if (manual_content)
             {
               ELEMENT *direction_file_code_element = new_element (ET__code);
@@ -1698,8 +1698,11 @@ info_format_node (CONVERTER *self, const ELEMENT *node,
               add_element_to_element_contents (direction_file_code_element,
                                                open_parenthese);
               /* cast to drop const */
-              add_to_contents_as_array (direction_file_code_element,
-                                        (ELEMENT *)manual_content);
+              insert_slice_into_contents (direction_file_code_element,
+                           direction_file_code_element->e.c->contents.number,
+                           node_direction,
+                           manual_content->list[0], manual_content->list[1] +1);
+
               add_element_to_element_contents (direction_file_code_element,
                                                close_parenthese);
 

@@ -50,7 +50,7 @@ $result_tree_text{'section_in_unnumbered_info'} = '*document_root C65
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{chapter}
+    |node_content:A{0|0}
     |normalized:{chapter}
      {chapter}
     {menu_entry_separator:::}
@@ -61,7 +61,7 @@ $result_tree_text{'section_in_unnumbered_info'} = '*document_root C65
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{unnumbered}
+    |node_content:A{0|0}
     |normalized:{unnumbered}
      {unnumbered}
     {menu_entry_separator:::}
@@ -72,7 +72,7 @@ $result_tree_text{'section_in_unnumbered_info'} = '*document_root C65
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{chapter 2}
+    |node_content:A{0|0}
     |normalized:{chapter-2}
      {chapter 2}
     {menu_entry_separator:::}
@@ -83,7 +83,7 @@ $result_tree_text{'section_in_unnumbered_info'} = '*document_root C65
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{chapter 3}
+    |node_content:A{0|0}
     |normalized:{chapter-3}
      {chapter 3}
     {menu_entry_separator:::}
@@ -94,7 +94,7 @@ $result_tree_text{'section_in_unnumbered_info'} = '*document_root C65
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{unnumbered 4}
+    |node_content:A{0|0}
     |normalized:{unnumbered-4}
      {unnumbered 4}
     {menu_entry_separator:::}
@@ -138,7 +138,7 @@ $result_tree_text{'section_in_unnumbered_info'} = '*document_root C65
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{section in chapter}
+    |node_content:A{0|0}
     |normalized:{section-in-chapter}
      {section in chapter}
     {menu_entry_separator:::}
@@ -202,7 +202,7 @@ $result_tree_text{'section_in_unnumbered_info'} = '*document_root C65
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{section in unnumbered}
+    |node_content:A{0|0}
     |normalized:{section-in-unnumbered}
      {section in unnumbered}
     {menu_entry_separator:::}
@@ -266,7 +266,7 @@ $result_tree_text{'section_in_unnumbered_info'} = '*document_root C65
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{unnumberedsec 2}
+    |node_content:A{0|0}
     |normalized:{unnumberedsec-2}
      {unnumberedsec 2}
     {menu_entry_separator:::}
@@ -277,7 +277,7 @@ $result_tree_text{'section_in_unnumbered_info'} = '*document_root C65
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{unnumberedsec 2-1}
+    |node_content:A{0|0}
     |normalized:{unnumberedsec-2_002d1}
      {unnumberedsec 2-1}
     {menu_entry_separator:::}
@@ -320,7 +320,7 @@ $result_tree_text{'section_in_unnumbered_info'} = '*document_root C65
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{unnumbered sub 2}
+    |node_content:A{0|0}
     |normalized:{unnumbered-sub-2}
      {unnumbered sub 2}
     {menu_entry_separator:::}
@@ -331,7 +331,7 @@ $result_tree_text{'section_in_unnumbered_info'} = '*document_root C65
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{numbered sub 2}
+    |node_content:A{0|0}
     |normalized:{numbered-sub-2}
      {numbered sub 2}
     {menu_entry_separator:::}
@@ -342,7 +342,7 @@ $result_tree_text{'section_in_unnumbered_info'} = '*document_root C65
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{unnumbered sub2 2}
+    |node_content:A{0|0}
     |normalized:{unnumbered-sub2-2}
      {unnumbered sub2 2}
     {menu_entry_separator:::}
@@ -353,7 +353,7 @@ $result_tree_text{'section_in_unnumbered_info'} = '*document_root C65
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{numbered sub2 2}
+    |node_content:A{0|0}
     |normalized:{numbered-sub2-2}
      {numbered sub2 2}
     {menu_entry_separator:::}
@@ -476,7 +476,7 @@ $result_tree_text{'section_in_unnumbered_info'} = '*document_root C65
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{numbered sub 2-1}
+    |node_content:A{0|0}
     |normalized:{numbered-sub-2_002d1}
      {numbered sub 2-1}
     {menu_entry_separator:::}
@@ -541,7 +541,7 @@ $result_tree_text{'section_in_unnumbered_info'} = '*document_root C65
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{unnumberedsec 3}
+    |node_content:A{0|0}
     |normalized:{unnumberedsec-3}
      {unnumberedsec 3}
     {menu_entry_separator:::}
@@ -552,7 +552,7 @@ $result_tree_text{'section_in_unnumbered_info'} = '*document_root C65
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{section 3-1}
+    |node_content:A{0|0}
     |normalized:{section-3_002d1}
      {section 3-1}
     {menu_entry_separator:::}
@@ -563,7 +563,7 @@ $result_tree_text{'section_in_unnumbered_info'} = '*document_root C65
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{unnumberedsec 3-2}
+    |node_content:A{0|0}
     |normalized:{unnumberedsec-3_002d2}
      {unnumberedsec 3-2}
     {menu_entry_separator:::}
@@ -574,7 +574,7 @@ $result_tree_text{'section_in_unnumbered_info'} = '*document_root C65
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{section 3-3}
+    |node_content:A{0|0}
     |normalized:{section-3_002d3}
      {section 3-3}
     {menu_entry_separator:::}
@@ -585,7 +585,7 @@ $result_tree_text{'section_in_unnumbered_info'} = '*document_root C65
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{unnumberedsec 3-4}
+    |node_content:A{0|0}
     |normalized:{unnumberedsec-3_002d4}
      {unnumberedsec 3-4}
     {menu_entry_separator:::}
@@ -628,7 +628,7 @@ $result_tree_text{'section_in_unnumbered_info'} = '*document_root C65
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{unnumbered sub 3}
+    |node_content:A{0|0}
     |normalized:{unnumbered-sub-3}
      {unnumbered sub 3}
     {menu_entry_separator:::}
@@ -639,7 +639,7 @@ $result_tree_text{'section_in_unnumbered_info'} = '*document_root C65
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{numbered sub 3}
+    |node_content:A{0|0}
     |normalized:{numbered-sub-3}
      {numbered sub 3}
     {menu_entry_separator:::}
@@ -650,7 +650,7 @@ $result_tree_text{'section_in_unnumbered_info'} = '*document_root C65
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{unnumbered sub2 3}
+    |node_content:A{0|0}
     |normalized:{unnumbered-sub2-3}
      {unnumbered sub2 3}
     {menu_entry_separator:::}
@@ -661,7 +661,7 @@ $result_tree_text{'section_in_unnumbered_info'} = '*document_root C65
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{numbered sub2 3}
+    |node_content:A{0|0}
     |normalized:{numbered-sub2-3}
      {numbered sub2 3}
     {menu_entry_separator:::}
@@ -805,7 +805,7 @@ $result_tree_text{'section_in_unnumbered_info'} = '*document_root C65
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{numbered sub 3-2}
+    |node_content:A{0|0}
     |normalized:{numbered-sub-3_002d2}
      {numbered sub 3-2}
     {menu_entry_separator:::}
@@ -869,7 +869,7 @@ $result_tree_text{'section_in_unnumbered_info'} = '*document_root C65
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{subsection 3-3}
+    |node_content:A{0|0}
     |normalized:{subsection-3_002d3}
      {subsection 3-3}
     {menu_entry_separator:::}
@@ -933,7 +933,7 @@ $result_tree_text{'section_in_unnumbered_info'} = '*document_root C65
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{numbered sub 3-4}
+    |node_content:A{0|0}
     |normalized:{numbered-sub-3_002d4}
      {numbered sub 3-4}
     {menu_entry_separator:::}
@@ -996,7 +996,7 @@ $result_tree_text{'section_in_unnumbered_info'} = '*document_root C65
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{unnumberedsec 4}
+    |node_content:A{0|0}
     |normalized:{unnumberedsec-4}
      {unnumberedsec 4}
     {menu_entry_separator:::}
@@ -1039,7 +1039,7 @@ $result_tree_text{'section_in_unnumbered_info'} = '*document_root C65
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{unnumbered sub 4}
+    |node_content:A{0|0}
     |normalized:{unnumbered-sub-4}
      {unnumbered sub 4}
     {menu_entry_separator:::}
@@ -1050,7 +1050,7 @@ $result_tree_text{'section_in_unnumbered_info'} = '*document_root C65
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{numbered sub 4}
+    |node_content:A{0|0}
     |normalized:{numbered-sub-4}
      {numbered sub 4}
     {menu_entry_separator:::}
@@ -1061,7 +1061,7 @@ $result_tree_text{'section_in_unnumbered_info'} = '*document_root C65
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{unnumbered sub2 4}
+    |node_content:A{0|0}
     |normalized:{unnumbered-sub2-4}
      {unnumbered sub2 4}
     {menu_entry_separator:::}
@@ -1072,7 +1072,7 @@ $result_tree_text{'section_in_unnumbered_info'} = '*document_root C65
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{numbered sub2 4}
+    |node_content:A{0|0}
     |normalized:{numbered-sub2-4}
      {numbered sub2 4}
     {menu_entry_separator:::}

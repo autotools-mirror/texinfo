@@ -37,7 +37,7 @@ $result_tree_text{'invalid_node_name_warning'} = '*document_root C5
     {menu_entry_separator:: }
     *menu_entry_node C2
     |EXTRA
-    |node_content:{@asis{nodename. a}\\n}
+    |node_content:A{0|1}
     |normalized:{nodename_002e-a}
      *@asis C1 l5
       *brace_container C1
@@ -50,7 +50,7 @@ $result_tree_text{'invalid_node_name_warning'} = '*document_root C5
     {menu_entry_separator:: }
     *menu_entry_node C3
     |EXTRA
-    |node_content:{node@comma{}comma}
+    |node_content:A{0|2}
     |normalized:{node_002ccomma}
      {node}
      *@comma C1 l6
@@ -64,7 +64,7 @@ $result_tree_text{'invalid_node_name_warning'} = '*document_root C5
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{@asis{bidule:}}
+    |node_content:A{0|0}
     |normalized:{bidule_003a}
      *@asis C1 l7
       *brace_container C1
@@ -125,7 +125,7 @@ $result_tree_text{'invalid_node_name_warning'} = '*document_root C5
    *@ref C2 l16
     *brace_arg C1
     |EXTRA
-    |node_content:{@asis{nodename. a}}
+    |node_content:A{0|0}
     |normalized:{nodename_002e-a}
      *@asis C1 l16
       *brace_container C1
@@ -139,7 +139,7 @@ $result_tree_text{'invalid_node_name_warning'} = '*document_root C5
    *@ref C2 l16
     *brace_arg C3
     |EXTRA
-    |node_content:{node@comma{}comma}
+    |node_content:A{0|2}
     |normalized:{node_002ccomma}
      {node}
      *@comma C1 l16
@@ -152,7 +152,7 @@ $result_tree_text{'invalid_node_name_warning'} = '*document_root C5
    *@ref C1 l17
     *brace_arg C1
     |EXTRA
-    |node_content:{@asis{bidule:}}
+    |node_content:A{0|0}
     |normalized:{bidule_003a}
      *@asis C1 l17
       *brace_container C1

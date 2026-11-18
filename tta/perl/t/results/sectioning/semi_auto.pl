@@ -39,7 +39,7 @@ $result_tree_text{'semi_auto'} = '*document_root C9
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{Chap1}
+    |node_content:A{0|0}
     |normalized:{Chap1}
      {Chap1}
     {menu_entry_separator:::}
@@ -50,7 +50,7 @@ $result_tree_text{'semi_auto'} = '*document_root C9
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{Section non auto}
+    |node_content:A{0|0}
     |normalized:{Section-non-auto}
      {Section non auto}
     {menu_entry_separator:::}
@@ -94,7 +94,7 @@ $result_tree_text{'semi_auto'} = '*document_root C9
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{Sec in chapter}
+    |node_content:A{0|0}
     |normalized:{Sec-in-chapter}
      {Sec in chapter}
     {menu_entry_separator:::}
@@ -142,13 +142,13 @@ $result_tree_text{'semi_auto'} = '*document_root C9
    *line_arg
    *line_arg C2
    |EXTRA
-   |node_content:{Chap1}
+   |node_content:A{1|1}
    |normalized:{Chap1}
     {spaces_before_argument: }
     {Chap1}
    *line_arg C3
    |EXTRA
-   |node_content:{Top}
+   |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
     {Top}

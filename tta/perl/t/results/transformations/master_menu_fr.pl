@@ -51,7 +51,7 @@ $result_tree_text{'master_menu_fr'} = '*document_root C7
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{chap}
+    |node_content:A{0|0}
     |normalized:{chap}
      {chap}
     {menu_entry_separator:::}
@@ -88,7 +88,7 @@ $result_tree_text{'master_menu_fr'} = '*document_root C7
      {menu_entry_leading_text:* }
      *menu_entry_node C1
      |EXTRA
-     |node_content:{section}
+     |node_content:A{0|0}
      |normalized:{section}
       {section}
      {menu_entry_separator:::}
@@ -139,7 +139,7 @@ $result_tree_text{'master_menu_fr'} = '*document_root C7
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{section}
+    |node_content:A{0|0}
     |normalized:{section}
      {section}
     {menu_entry_separator:::}

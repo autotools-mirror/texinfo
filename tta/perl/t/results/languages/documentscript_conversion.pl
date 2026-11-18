@@ -121,7 +121,7 @@ $result_tree_text{'documentscript_conversion'} = '*document_root C5
    *@xref C2 l16
     *brace_arg C1
     |EXTRA
-    |node_content:{Top}
+    |node_content:A{0|0}
     |normalized:{Top}
      {Top}
     *brace_arg C2
@@ -227,7 +227,7 @@ $result_tree_text{'documentscript_conversion'} = '*document_root C5
    *@xref C2 l27
     *brace_arg C1
     |EXTRA
-    |node_content:{Top}
+    |node_content:A{0|0}
     |normalized:{Top}
      {Top}
     *brace_arg C2
@@ -263,7 +263,7 @@ $result_tree_text{'documentscript_conversion'} = '*document_root C5
    *@xref C2 l33
     *brace_arg C1
     |EXTRA
-    |node_content:{Top}
+    |node_content:A{0|0}
     |normalized:{Top}
      {Top}
     *brace_arg C2

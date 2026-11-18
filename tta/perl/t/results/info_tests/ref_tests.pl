@@ -28,7 +28,7 @@ $result_tree_text{'ref_tests'} = '*document_root C2
    *@ref C4 l4
     *brace_arg C1
     |EXTRA
-    |node_content:{in ref followed by comma}
+    |node_content:A{0|0}
      {in ref followed by comma}
     *brace_arg
     *brace_arg
@@ -39,7 +39,7 @@ $result_tree_text{'ref_tests'} = '*document_root C2
    *@ref C4 l5
     *brace_arg C1
     |EXTRA
-    |node_content:{in ref not followed by comma}
+    |node_content:A{0|0}
      {in ref not followed by comma}
     *brace_arg
     *brace_arg
@@ -52,7 +52,7 @@ $result_tree_text{'ref_tests'} = '*document_root C2
      *@ref C4 l6
       *brace_arg C1
       |EXTRA
-      |node_content:{in ref followed by end command}
+      |node_content:A{0|0}
        {in ref followed by end command}
       *brace_arg
       *brace_arg
@@ -66,7 +66,7 @@ $result_tree_text{'ref_tests'} = '*document_root C2
    *@ref C4 l9
     *brace_arg C1
     |EXTRA
-    |node_content:{in ref followed by comma}
+    |node_content:A{0|0}
      {in ref followed by comma}
     *brace_arg C2
      {spaces_before_argument: }
@@ -79,7 +79,7 @@ $result_tree_text{'ref_tests'} = '*document_root C2
    *@ref C4 l10
     *brace_arg C1
     |EXTRA
-    |node_content:{in ref not followed by comma}
+    |node_content:A{0|0}
      {in ref not followed by comma}
     *brace_arg C2
      {spaces_before_argument: }
@@ -94,7 +94,7 @@ $result_tree_text{'ref_tests'} = '*document_root C2
      *@ref C4 l11
       *brace_arg C1
       |EXTRA
-      |node_content:{in ref followed by end command}
+      |node_content:A{0|0}
        {in ref followed by end command}
       *brace_arg C2
        {spaces_before_argument: }
@@ -107,7 +107,7 @@ $result_tree_text{'ref_tests'} = '*document_root C2
    *@ref C4 l12
     *brace_arg C1
     |EXTRA
-    |node_content:{in ref ending with a dot.}
+    |node_content:A{0|0}
      {in ref ending with a dot.}
     *brace_arg C2
      {spaces_before_argument: }

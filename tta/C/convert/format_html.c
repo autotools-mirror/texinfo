@@ -765,15 +765,31 @@ external_node_href (CONVERTER *self, const ELEMENT *external_node,
   const char *extension;
   int target_split = 0;
   char *normalized = lookup_extra_string (external_node, AI_key_normalized);
-  const ELEMENT *node_contents = lookup_extra_container (external_node,
-                                                 AI_key_node_content);
-  const ELEMENT *manual_content = lookup_extra_container (external_node,
-                                                  AI_key_manual_content);
+  const INTEGER_LIST *node_content
+    = lookup_extra_integer_list (external_node, AI_key_node_content);
+  const INTEGER_LIST *manual_content
+    = lookup_extra_integer_list (external_node, AI_key_manual_content);
+  TARGET_FILENAME *target_filename = 0;
 
-  TARGET_FILENAME *target_filename =
-    html_standard_label_id_file (self, normalized, node_contents,
+  if (node_content)
+    {
+      ELEMENT *tmp = new_element (ET_NONE);
+      insert_slice_into_contents (tmp, 0, external_node,
+                                  node_content->list[0],
+                                  node_content->list[1] +1);
+      add_tree_to_build (self, tmp);
+      target_filename =
+        html_standard_label_id_file (self, normalized, tmp,
                  self->conf->EXTERNAL_CROSSREF_EXTENSION.o.string,
         html_default_options->options->EXTENSION.o.string);
+      remove_tree_to_build (self, tmp);
+
+      destroy_element (tmp);
+    }
+  else
+    target_filename = html_standard_label_id_file (self, normalized, 0,
+                     self->conf->EXTERNAL_CROSSREF_EXTENSION.o.string,
+                     html_default_options->options->EXTENSION.o.string);
 
   extension = target_filename->extension;
   /* to be freed before return */
@@ -796,10 +812,15 @@ external_node_href (CONVERTER *self, const ELEMENT *external_node,
       char *htmlxref_href = 0;
       enum htmlxref_split_type split_found = htmlxref_split_type_none;
       HTMLXREF_MANUAL *htmlxref_manual;
+      ELEMENT *tmp = new_element (ET_NONE);
+      insert_slice_into_contents (tmp, 0, external_node,
+                                  manual_content->list[0],
+                                  manual_content->list[1] +1);
 
       self->convert_text_options->code_state++;
-      manual_name = convert_to_text (manual_content,
+      manual_name = convert_to_text (tmp,
                                      self->convert_text_options);
+      destroy_element (tmp);
       self->convert_text_options->code_state--;
 
       if (self->conf->IGNORE_REF_TO_TOP_NODE_UP.o.integer > 0
@@ -1517,8 +1538,8 @@ html_command_description (CONVERTER *self, const ELEMENT *command,
 {
   HTML_TARGET *target_info;
 
-  const ELEMENT *manual_content = lookup_extra_container (command,
-                                                  AI_key_manual_content);
+  const INTEGER_LIST *manual_content = lookup_extra_integer_list (command,
+                                                    AI_key_manual_content);
   if (manual_content)
     return 0;
 
@@ -1666,8 +1687,8 @@ html_command_href (CONVERTER *self, const ELEMENT *command,
                    const ELEMENT *source_command,
                    const char *specified_target)
 {
-  const ELEMENT *manual_content = lookup_extra_container (command,
-                                                  AI_key_manual_content);
+  const INTEGER_LIST *manual_content = lookup_extra_integer_list (command,
+                                                    AI_key_manual_content);
   if (manual_content)
     {
       return external_node_href (self, command, source_command);
@@ -2185,28 +2206,12 @@ html_command_text (CONVERTER *self, const ELEMENT *command,
                    const enum html_text_type type)
 {
   char *result;
-  ELEMENT *manual_content = lookup_extra_container (command,
+  const INTEGER_LIST *manual_content = lookup_extra_integer_list (command,
                                                   AI_key_manual_content);
   if (manual_content)
     { /* external node */
       unsigned long context_type = CTXF_code;
       char *context_str;
-      ELEMENT *command_tree = new_element (ET_NONE);
-      ELEMENT *open_p = new_text_element (ET_normal_text);
-      ELEMENT *close_p = new_text_element (ET_normal_text);
-
-      ELEMENT *node_content = lookup_extra_container (command,
-                                                AI_key_node_content);
-
-      text_append_n (open_p->e.text, "(", 1);
-      text_append_n (close_p->e.text, ")", 1);
-
-      add_to_contents_as_array (command_tree, open_p);
-      add_to_contents_as_array (command_tree, manual_content);
-      add_to_contents_as_array (command_tree, close_p);
-
-      if (node_content)
-        add_to_contents_as_array (command_tree, node_content);
 
       if (command->e.c->cmd)
         /* this never happens, as the external node label tree
@@ -2226,18 +2231,13 @@ html_command_text (CONVERTER *self, const ELEMENT *command,
       if (type == HTT_string || type == HTT_string_nonumber)
         context_type |= CTXF_string;
 
-      add_tree_to_build (self, command_tree);
       result = html_convert_tree_new_formatting_context (self,
-                                     command_tree,
+                                     command,
                                      context_str, context_type,
                                      "command_text-manual_content", 0, 0);
 
       free (context_str);
-      remove_tree_to_build (self, command_tree);
 
-      destroy_element (open_p);
-      destroy_element (close_p);
-      destroy_element (command_tree);
       return result;
     }
 
@@ -2321,7 +2321,7 @@ char *
 html_command_name (CONVERTER *self, const ELEMENT *command,
                    const enum html_text_type type)
 {
-  ELEMENT *manual_content = lookup_extra_container (command,
+  const INTEGER_LIST *manual_content = lookup_extra_integer_list (command,
                                                   AI_key_manual_content);
   if (manual_content)
     return html_command_text (self, command, type);
@@ -8315,46 +8315,76 @@ html_convert_xref_command (CONVERTER *self, const enum command_id cmd,
       NAMED_STRING_ELEMENT_LIST *substrings
                                        = new_named_string_element_list ();
 
- /* We setup a label_element based on the node argument and not directly the
-    node argument to be able to use the $file argument */
+ /* We setup a label_element based on the node argument and $file argument */
 
       ELEMENT *label_element = 0;
-      ELEMENT *node_content = 0;
-
-      if (arg_node)
-        {
-          node_content = lookup_extra_container (arg_node, AI_key_node_content);
-          if (node_content)
-            {
-              const char *normalized = lookup_extra_string (arg_node,
-                                                            AI_key_normalized);
-              label_element = new_element (ET_NONE);
-              add_extra_container (label_element, AI_key_node_content,
-                                   copy_container_contents (node_content));
-              if (normalized)
-                add_extra_string_dup (label_element, AI_key_normalized,
-                                      normalized);
-            }
-        }
+      const ELEMENT *node_element = 0;
+      ELEMENT *open_p = 0;
+      ELEMENT *close_p = 0;
 
       if (file)
         {
-          if (!label_element)
-            label_element = new_element (ET_NONE);
-          add_extra_container (label_element, AI_key_manual_content,
-                               copy_container_contents (file_arg->arg_tree));
+          label_element = new_element (ET_NONE);
+          open_p = new_text_element (ET_normal_text);
+          close_p = new_text_element (ET_normal_text);
+
+          INTEGER_LIST *manual_content = new_integer_list ();
+          add_(integer) (manual_content, 1);
+          add_(integer) (manual_content, 1);
+          add_extra_integer_list (label_element, AI_key_manual_content,
+                                  manual_content);
+
+          text_append_n (open_p->e.text, "(", 1);
+          text_append_n (close_p->e.text, ")", 1);
+
+          add_to_contents_as_array (label_element, open_p);
+          /* cast to drop const */
+          add_to_contents_as_array (label_element, (ELEMENT *)file_arg->arg_tree);
+          add_to_contents_as_array (label_element, close_p);
         }
+
+      if (arg_node)
+        {
+          const INTEGER_LIST *node_content
+            = lookup_extra_integer_list (arg_node, AI_key_node_content);
+          if (node_content)
+            {
+              node_element = arg_node;
+
+              if (!label_element)
+                label_element = new_element (ET_NONE);
+
+              INTEGER_LIST *label_node_content = new_integer_list ();
+              add_(integer) (label_node_content,
+                             label_element->e.c->contents.number);
+              add_(integer) (label_node_content,
+                             label_element->e.c->contents.number
+                             + node_content->list[1] - node_content->list[0]);
+
+              add_extra_integer_list (label_element, AI_key_node_content,
+                                      label_node_content);
+
+              insert_slice_into_contents (label_element,
+                                         label_element->e.c->contents.number,
+                                         arg_node,
+                                         node_content->list[0],
+                                         node_content->list[1] +1);
+            }
+        }
+
+      if (label_element)
+        add_tree_to_build (self, label_element);
 
       if (!name)
         {
           if (book)
             {
-              if (node_content)
+              if (node_element)
                 {
                   TEXT node_name;
                   html_set_code_context (self, 1);
                   node_name
-                   = html_convert_tree_explanation (self, node_content,
+                   = html_convert_tree_explanation (self, node_element,
                                                     "node in ref");
                   html_pop_code_context (self);
 
@@ -8381,6 +8411,12 @@ html_convert_xref_command (CONVERTER *self, const enum command_id cmd,
         {
           if (!html_in_string (self))
             href = html_command_href (self, label_element, 0, element, 0);
+          remove_tree_to_build (self, label_element);
+          if (file)
+            {
+              destroy_element (open_p);
+              destroy_element (close_p);
+            }
           destroy_element (label_element);
         }
 
@@ -12212,7 +12248,7 @@ html_convert_menu_entry_type (CONVERTER *self, const enum element_type type,
   ELEMENT *menu_entry_node = 0;
   const ELEMENT *menu_entry_leading_text = 0;
   const ELEMENT *menu_entry_separators[2];
-  const ELEMENT *manual_content;
+  const INTEGER_LIST *manual_content;
   const ELEMENT *node_description = 0;
   int long_description = 0;
   const ELEMENT *associated_title_command = 0;
@@ -12245,7 +12281,7 @@ html_convert_menu_entry_type (CONVERTER *self, const enum element_type type,
         menu_entry_node = arg;
     }
 
-  manual_content = lookup_extra_container (menu_entry_node,
+  manual_content = lookup_extra_integer_list (menu_entry_node,
                                          AI_key_manual_content);
 
   if (manual_content)
@@ -12492,11 +12528,11 @@ html_convert_menu_entry_type (CONVERTER *self, const enum element_type type,
             }
           if (!name)
             {
-              const ELEMENT *manual_content
-                           = lookup_extra_container (menu_entry_node,
+              const INTEGER_LIST *manual_content
+                           = lookup_extra_integer_list (menu_entry_node,
                                                    AI_key_manual_content);
-              ELEMENT *node_content
-                         = lookup_extra_container (menu_entry_node,
+              const INTEGER_LIST *node_content
+                         = lookup_extra_integer_list (menu_entry_node,
                                                  AI_key_node_content);
               if (manual_content)
                 {

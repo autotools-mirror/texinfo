@@ -52,7 +52,7 @@ typedef struct FORMATTER {
     UPPER_CASE_STACK *upper_case_stack;
     FONT_TYPE_STACK *font_type_stack;
     int w;
-    INTEGER_STACK frenchspacing_stack;
+    INTEGER_LIST frenchspacing_stack;
     int suppress_styles;
     int no_added_eol;
     int is_top_formatter;

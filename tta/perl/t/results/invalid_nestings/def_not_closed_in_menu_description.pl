@@ -19,7 +19,7 @@ $result_tree_text{'def_not_closed_in_menu_description'} = '*document_root C1
     {menu_entry_leading_text:* }
     *menu_entry_node C3
     |EXTRA
-    |manual_content:{info}
+    |manual_content:A{1|1}
      {(}
      {info}
      {)}

@@ -47,7 +47,7 @@ NodeForward: [U1]
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{a node after part}
+    |node_content:A{0|0}
     |normalized:{a-node-after-part}
      {a node after part}
     {menu_entry_separator:::}
@@ -58,7 +58,7 @@ NodeForward: [U1]
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{chapter}
+    |node_content:A{0|0}
     |normalized:{chapter}
      {chapter}
     {menu_entry_separator:::}
@@ -105,19 +105,19 @@ NodeBack: [U0]
     {a node after part}
    *line_arg C2
    |EXTRA
-   |node_content:{chapter}
+   |node_content:A{1|1}
    |normalized:{chapter}
     {spaces_before_argument: }
     {chapter}
    *line_arg C2
    |EXTRA
-   |node_content:{Top}
+   |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
     {Top}
    *line_arg C3
    |EXTRA
-   |node_content:{Top}
+   |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
     {Top}
@@ -136,14 +136,14 @@ NodeBack: [U0]
     {chapter}
    *line_arg C2
    |EXTRA
-   |node_content:{a node after part}
+   |node_content:A{1|1}
    |normalized:{a-node-after-part}
     {spaces_before_argument: }
     {a node after part}
    *line_arg
    *line_arg C3
    |EXTRA
-   |node_content:{Top}
+   |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
     {Top}

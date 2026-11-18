@@ -99,7 +99,7 @@ $result_tree_text{'documentation_examples'} = '*document_root C11
    *@xref C1 l13
     *brace_arg C1
     |EXTRA
-    |node_content:{my node}
+    |node_content:A{0|0}
     |normalized:{my-node}
      {my node}
    *@footnote C1 l13

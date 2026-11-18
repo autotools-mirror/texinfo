@@ -172,7 +172,7 @@ $result_tree_text{'image_inline_or_not'} = '*document_root C5
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{@image{node_image}}
+    |node_content:A{0|0}
     |normalized:{node_005fimage}
      *@image C1 l35
      |EXTRA
@@ -199,8 +199,8 @@ $result_tree_text{'image_inline_or_not'} = '*document_root C5
     {menu_entry_separator:: }
     *menu_entry_node C4
     |EXTRA
-    |manual_content:{somewhere}
-    |node_content:{@image{extnode}}
+    |manual_content:A{1|1}
+    |node_content:A{3|3}
     |normalized:{extnode}
      {(}
      {somewhere}

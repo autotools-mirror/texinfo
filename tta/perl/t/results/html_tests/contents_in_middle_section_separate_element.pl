@@ -45,7 +45,7 @@ $result_tree_text{'contents_in_middle_section_separate_element'} = '*document_ro
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{chapter}
+    |node_content:A{0|0}
     |normalized:{chapter}
      {chapter}
     {menu_entry_separator:::}
@@ -90,7 +90,7 @@ $result_tree_text{'contents_in_middle_section_separate_element'} = '*document_ro
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{section}
+    |node_content:A{0|0}
     |normalized:{section}
      {section}
     {menu_entry_separator:::}
@@ -101,7 +101,7 @@ $result_tree_text{'contents_in_middle_section_separate_element'} = '*document_ro
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{section1}
+    |node_content:A{0|0}
     |normalized:{section1}
      {section1}
     {menu_entry_separator:::}

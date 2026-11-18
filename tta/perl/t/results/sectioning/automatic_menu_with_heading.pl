@@ -44,7 +44,7 @@ $result_tree_text{'automatic_menu_with_heading'} = '*document_root C5
    *@xref C1 l6
     *brace_arg C1
     |EXTRA
-    |node_content:{heading or chapter}
+    |node_content:A{0|0}
     |normalized:{heading-or-chapter}
      {heading or chapter}
    {.\\n}

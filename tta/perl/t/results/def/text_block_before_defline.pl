@@ -89,7 +89,7 @@ $result_tree_text{'text_block_before_defline'} = '*document_root C5
       {menu_entry_leading_text:* }
       *menu_entry_node C3
       |EXTRA
-      |manual_content:{other_manual}
+      |manual_content:A{1|1}
        {(}
        {other_manual}
        {)}

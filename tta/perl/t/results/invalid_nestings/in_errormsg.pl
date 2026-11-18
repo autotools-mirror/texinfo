@@ -34,7 +34,7 @@ $result_tree_text{'in_errormsg'} = '*document_root C1
      *@ref C1 l3
       *brace_arg C1
       |EXTRA
-      |node_content:{in ref}
+      |node_content:A{0|0}
       |normalized:{in-ref}
        {in ref}
    {\\n}

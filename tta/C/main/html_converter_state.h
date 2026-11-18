@@ -374,8 +374,8 @@ typedef struct HTML_DOCUMENT_CONTEXT {
     int math_ctx;
     int inside_preformatted;
     char *document_global_context;
-    INTEGER_STACK monospace;
-    INTEGER_STACK preformatted_context;
+    INTEGER_LIST monospace;
+    INTEGER_LIST preformatted_context;
     COMMAND_OR_TYPE_STACK composition_context;
     COMMAND_STACK block_commands;
     HTML_FORMATTING_CONTEXT_STACK formatting_context;

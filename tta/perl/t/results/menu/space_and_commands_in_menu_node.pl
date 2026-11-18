@@ -39,7 +39,7 @@ $result_tree_text{'space_and_commands_in_menu_node'} = '*document_root C5
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{chap  b}
+    |node_content:A{0|0}
     |normalized:{chap-b}
      {chap  b}
     {menu_entry_separator:::}
@@ -50,7 +50,7 @@ $result_tree_text{'space_and_commands_in_menu_node'} = '*document_root C5
     {menu_entry_leading_text:* }
     *menu_entry_node C3
     |EXTRA
-    |node_content:{chap @: b}
+    |node_content:A{0|2}
     |normalized:{chap-b}
      {chap }
      *@:
@@ -63,7 +63,7 @@ $result_tree_text{'space_and_commands_in_menu_node'} = '*document_root C5
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{chap b}
+    |node_content:A{0|0}
     |normalized:{chap-b}
      {chap b}
     {menu_entry_separator:::}
@@ -74,7 +74,7 @@ $result_tree_text{'space_and_commands_in_menu_node'} = '*document_root C5
     {menu_entry_leading_text:* }
     *menu_entry_node C4
     |EXTRA
-    |node_content:{chap@ @ b}
+    |node_content:A{0|3}
     |normalized:{chap-b}
      {chap}
      *@ 
@@ -88,7 +88,7 @@ $result_tree_text{'space_and_commands_in_menu_node'} = '*document_root C5
     {menu_entry_leading_text:* }
     *menu_entry_node C3
     |EXTRA
-    |node_content:{chap@  b}
+    |node_content:A{0|2}
     |normalized:{chap-b}
      {chap}
      *@ 
@@ -101,7 +101,7 @@ $result_tree_text{'space_and_commands_in_menu_node'} = '*document_root C5
     {menu_entry_leading_text:* }
     *menu_entry_node C3
     |EXTRA
-    |node_content:{chap @ b}
+    |node_content:A{0|2}
     |normalized:{chap-b}
      {chap }
      *@ 
@@ -117,7 +117,7 @@ $result_tree_text{'space_and_commands_in_menu_node'} = '*document_root C5
     {menu_entry_separator:: }
     *menu_entry_node C3
     |EXTRA
-    |node_content:{chap @: b}
+    |node_content:A{0|2}
     |normalized:{chap-b}
      {chap }
      *@:
@@ -133,7 +133,7 @@ $result_tree_text{'space_and_commands_in_menu_node'} = '*document_root C5
     {menu_entry_separator:: }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{chap b}
+    |node_content:A{0|0}
     |normalized:{chap-b}
      {chap b}
     {menu_entry_separator:.}
@@ -147,7 +147,7 @@ $result_tree_text{'space_and_commands_in_menu_node'} = '*document_root C5
     {menu_entry_separator:: }
     *menu_entry_node C4
     |EXTRA
-    |node_content:{chap @ @ b}
+    |node_content:A{0|3}
     |normalized:{chap-b}
      {chap }
      *@ 

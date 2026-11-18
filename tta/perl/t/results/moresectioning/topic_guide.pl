@@ -46,7 +46,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{guide1}
+    |node_content:A{0|0}
     |normalized:{guide1}
      {guide1}
     {menu_entry_separator::: }
@@ -57,7 +57,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{guide2}
+    |node_content:A{0|0}
     |normalized:{guide2}
      {guide2}
     {menu_entry_separator::: }
@@ -104,7 +104,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{topic1}
+    |node_content:A{0|0}
     |normalized:{topic1}
      {topic1}
     {menu_entry_separator::: }
@@ -115,7 +115,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{topic2}
+    |node_content:A{0|0}
     |normalized:{topic2}
      {topic2}
     {menu_entry_separator::: }
@@ -126,7 +126,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{topic5}
+    |node_content:A{0|0}
     |normalized:{topic5}
      {topic5}
     {menu_entry_separator::: }
@@ -152,7 +152,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
     {topic1}
    *line_arg C3
    |EXTRA
-   |node_content:{topic2}
+   |node_content:A{1|1}
    |normalized:{topic2}
     {spaces_before_argument: }
     {topic2}
@@ -181,7 +181,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{guide1}
+    |node_content:A{0|0}
     |normalized:{guide1}
      {guide1}
     {menu_entry_separator::: }
@@ -207,13 +207,13 @@ $result_tree_text{'topic_guide'} = '*document_root C13
     {topic2}
    *line_arg C2
    |EXTRA
-   |node_content:{topic3}
+   |node_content:A{1|1}
    |normalized:{topic3}
     {spaces_before_argument: }
     {topic3}
    *line_arg C3
    |EXTRA
-   |node_content:{topic1}
+   |node_content:A{1|1}
    |normalized:{topic1}
     {spaces_before_argument: }
     {topic1}
@@ -242,7 +242,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{guide1}
+    |node_content:A{0|0}
     |normalized:{guide1}
      {guide1}
     {menu_entry_separator::: }
@@ -268,13 +268,13 @@ $result_tree_text{'topic_guide'} = '*document_root C13
     {topic3}
    *line_arg C2
    |EXTRA
-   |node_content:{topic5}
+   |node_content:A{1|1}
    |normalized:{topic5}
     {spaces_before_argument: }
     {topic5}
    *line_arg C3
    |EXTRA
-   |node_content:{topic2}
+   |node_content:A{1|1}
    |normalized:{topic2}
     {spaces_before_argument: }
     {topic2}
@@ -341,7 +341,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{guide2}
+    |node_content:A{0|0}
     |normalized:{guide2}
      {guide2}
     {menu_entry_separator::: }
@@ -369,7 +369,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
     {spaces_before_argument: }
    *line_arg C3
    |EXTRA
-   |node_content:{topic3}
+   |node_content:A{1|1}
    |normalized:{topic3}
     {spaces_before_argument: }
     {topic3}
@@ -398,7 +398,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{guide1}
+    |node_content:A{0|0}
     |normalized:{guide1}
      {guide1}
     {menu_entry_separator::: }
@@ -409,7 +409,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{guide2}
+    |node_content:A{0|0}
     |normalized:{guide2}
      {guide2}
     {menu_entry_separator::: }
@@ -456,7 +456,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{topic5}
+    |node_content:A{0|0}
     |normalized:{topic5}
      {topic5}
     {menu_entry_separator::: }
@@ -467,7 +467,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{topic4}
+    |node_content:A{0|0}
     |normalized:{topic4}
      {topic4}
     {menu_entry_separator::: }

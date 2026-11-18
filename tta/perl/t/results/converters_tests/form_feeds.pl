@@ -108,7 +108,7 @@ $result_tree_text{'form_feeds'} = '*document_root C3
    *@xref C1 l20
     *brace_arg C1
     |EXTRA
-    |node_content:{chap\\fnode}
+    |node_content:A{0|0}
     |normalized:{chap-node}
      {chap\\fnode}
    {\\n}

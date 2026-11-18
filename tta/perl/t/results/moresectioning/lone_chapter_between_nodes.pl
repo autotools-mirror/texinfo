@@ -39,7 +39,7 @@ $result_tree_text{'lone_chapter_between_nodes'} = '*document_root C8
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{1}
+    |node_content:A{0|0}
     |normalized:{1}
      {1}
     {menu_entry_separator:::}
@@ -50,7 +50,7 @@ $result_tree_text{'lone_chapter_between_nodes'} = '*document_root C8
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{3}
+    |node_content:A{0|0}
     |normalized:{3}
      {3}
     {menu_entry_separator:::}

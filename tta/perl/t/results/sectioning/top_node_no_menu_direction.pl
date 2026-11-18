@@ -30,7 +30,7 @@ $result_tree_text{'top_node_no_menu_direction'} = '*document_root C3
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{chap node}
+    |node_content:A{0|0}
     |normalized:{chap-node}
      {chap node}
     {menu_entry_separator:::}
@@ -41,7 +41,7 @@ $result_tree_text{'top_node_no_menu_direction'} = '*document_root C3
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{TOP}
+    |node_content:A{0|0}
     |normalized:{Top}
      {TOP}
     {menu_entry_separator::: }
@@ -68,12 +68,12 @@ $result_tree_text{'top_node_no_menu_direction'} = '*document_root C3
    *line_arg
    *line_arg C1
    |EXTRA
-   |node_content:{top}
+   |node_content:A{0|0}
    |normalized:{Top}
     {top}
    *line_arg C2
    |EXTRA
-   |node_content:{TOP}
+   |node_content:A{0|0}
    |normalized:{Top}
     {TOP}
     {spaces_after_argument:\\n}

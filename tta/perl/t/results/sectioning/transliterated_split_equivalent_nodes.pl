@@ -36,7 +36,7 @@ NodeForward: [U1]
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{@~a}
+    |node_content:A{0|0}
     |normalized:{_00e3}
      *@~ C1 l4
       *following_arg C1
@@ -49,7 +49,7 @@ NodeForward: [U1]
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{n}
+    |node_content:A{0|0}
     |normalized:{n}
      {n}
     {menu_entry_separator:::}
@@ -60,7 +60,7 @@ NodeForward: [U1]
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{@^a}
+    |node_content:A{0|0}
     |normalized:{_00e2}
      *@^ C1 l6
       *following_arg C1

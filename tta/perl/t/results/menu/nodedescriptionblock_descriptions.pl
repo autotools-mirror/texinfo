@@ -39,7 +39,7 @@ $result_tree_text{'nodedescriptionblock_descriptions'} = '*document_root C13
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{toto}
+    |node_content:A{0|0}
     |normalized:{toto}
      {toto}
     {menu_entry_separator:::}
@@ -50,7 +50,7 @@ $result_tree_text{'nodedescriptionblock_descriptions'} = '*document_root C13
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{titi}
+    |node_content:A{0|0}
     |normalized:{titi}
      {titi}
     {menu_entry_separator:::  }
@@ -64,7 +64,7 @@ $result_tree_text{'nodedescriptionblock_descriptions'} = '*document_root C13
     {menu_entry_separator:: }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{other}
+    |node_content:A{0|0}
     |normalized:{other}
      {other}
     {menu_entry_separator:.}
@@ -78,7 +78,7 @@ $result_tree_text{'nodedescriptionblock_descriptions'} = '*document_root C13
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{a somewhat long node without description nor following space}
+    |node_content:A{0|0}
     |normalized:{a-somewhat-long-node-without-description-nor-following-space}
      {a somewhat long node without description nor following space}
     {menu_entry_separator:::}
@@ -89,7 +89,7 @@ $result_tree_text{'nodedescriptionblock_descriptions'} = '*document_root C13
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{node double nodedescriptionblock}
+    |node_content:A{0|0}
     |normalized:{node-double-nodedescriptionblock}
      {node double nodedescriptionblock}
     {menu_entry_separator:::}

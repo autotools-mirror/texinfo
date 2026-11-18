@@ -30,7 +30,7 @@ $result_tree_text{'spaces_in_empty_node_names'} = '*document_root C5
     {menu_entry_leading_text:* }
     *menu_entry_node C2
     |EXTRA
-    |node_content:{@ @ }
+    |node_content:A{0|1}
     |normalized:{-}
      *@ 
      *@ 
@@ -42,7 +42,7 @@ $result_tree_text{'spaces_in_empty_node_names'} = '*document_root C5
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{@verb{:  :}}
+    |node_content:A{0|0}
     |normalized:{-}
      *@verb C1 l5
      |INFO
@@ -57,7 +57,7 @@ $result_tree_text{'spaces_in_empty_node_names'} = '*document_root C5
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{@ }
+    |node_content:A{0|0}
     |normalized:{-}
      *@ 
     {menu_entry_separator:::}
@@ -104,7 +104,7 @@ $result_tree_text{'spaces_in_empty_node_names'} = '*document_root C5
    *@ref C1 l15
     *brace_arg C2
     |EXTRA
-    |node_content:{@ @ }
+    |node_content:A{0|1}
     |normalized:{-}
      *@ 
      *@ 
@@ -114,7 +114,7 @@ $result_tree_text{'spaces_in_empty_node_names'} = '*document_root C5
    *@ref C1 l17
     *brace_arg C1
     |EXTRA
-    |node_content:{@verb{:  :}}
+    |node_content:A{0|0}
     |normalized:{-}
      *@verb C1 l17
      |INFO
@@ -127,7 +127,7 @@ $result_tree_text{'spaces_in_empty_node_names'} = '*document_root C5
    *@ref C1 l19
     *brace_arg C1
     |EXTRA
-    |node_content:{@w{  }}
+    |node_content:A{0|0}
     |normalized:{-}
      *@w C1 l19
       *brace_container C1

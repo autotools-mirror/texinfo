@@ -161,7 +161,7 @@ $result_tree_text{'printindex_index_entry_in_copying_no_insertcopying'} = '*docu
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{chapter}
+    |node_content:A{0|0}
     |normalized:{chapter}
      {chapter}
     {menu_entry_separator:::}

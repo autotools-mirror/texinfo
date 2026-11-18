@@ -26,7 +26,7 @@ $result_tree_text{'inforef_too_much_args'} = '*document_root C2
    *@inforef C3 l3
     *brace_arg C1
     |EXTRA
-    |node_content:{chapter}
+    |node_content:A{0|0}
      {chapter}
     *brace_arg C2
      {spaces_before_argument: }

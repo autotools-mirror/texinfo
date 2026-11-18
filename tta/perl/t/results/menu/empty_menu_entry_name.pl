@@ -32,7 +32,7 @@ $result_tree_text{'empty_menu_entry_name'} = '*document_root C3
     {menu_entry_separator:: }
     *menu_entry_node C3
     |EXTRA
-    |manual_content:{vvv}
+    |manual_content:A{1|1}
      {(}
      {vvv}
      {)}
@@ -46,7 +46,7 @@ $result_tree_text{'empty_menu_entry_name'} = '*document_root C3
     {menu_entry_separator::}
     *menu_entry_node C1
     |EXTRA
-    |node_content:{aaa}
+    |node_content:A{0|0}
     |normalized:{aaa}
      {aaa}
     {menu_entry_separator:,}

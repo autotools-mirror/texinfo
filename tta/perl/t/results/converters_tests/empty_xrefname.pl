@@ -60,7 +60,7 @@ $result_tree_text{'empty_xrefname'} = '*document_root C8
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{entiti}
+    |node_content:A{0|0}
     |normalized:{entiti}
      {entiti}
     {menu_entry_separator:::}
@@ -135,7 +135,7 @@ $result_tree_text{'empty_xrefname'} = '*document_root C8
    *@xref C1 l21
     *brace_arg C1
     |EXTRA
-    |node_content:{entiti}
+    |node_content:A{0|0}
     |normalized:{entiti}
      {entiti}
    {\\n}
@@ -154,7 +154,7 @@ $result_tree_text{'empty_xrefname'} = '*document_root C8
    *@ref C1 l25
     *brace_arg C1
     |EXTRA
-    |node_content:{entiti}
+    |node_content:A{0|0}
     |normalized:{entiti}
      {entiti}
    {.\\n}

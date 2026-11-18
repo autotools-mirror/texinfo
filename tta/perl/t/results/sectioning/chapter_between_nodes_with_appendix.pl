@@ -53,7 +53,7 @@ $result_tree_text{'chapter_between_nodes_with_appendix'} = '*document_root C6
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{Additional}
+    |node_content:A{0|0}
     |normalized:{Additional}
      {Additional}
     {menu_entry_separator:::}

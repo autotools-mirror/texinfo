@@ -132,7 +132,7 @@ $result_tree_text{'documentscript_variant_reset_in_preamble'} = '*document_root 
    *@xref C2 l16
     *brace_arg C1
     |EXTRA
-    |node_content:{Top}
+    |node_content:A{0|0}
     |normalized:{Top}
      {Top}
     *brace_arg C2

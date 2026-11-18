@@ -30,20 +30,20 @@ NodeForward: [U1]
     {Top}
    *line_arg C2
    |EXTRA
-   |node_content:{chap}
+   |node_content:A{1|1}
    |normalized:{chap}
     {spaces_before_argument: }
     {chap}
    *line_arg C4
    |EXTRA
-   |manual_content:{dir}
+   |manual_content:A{2|2}
     {spaces_before_argument: }
     {(}
     {dir}
     {)}
    *line_arg C5
    |EXTRA
-   |manual_content:{dir}
+   |manual_content:A{2|2}
     {spaces_before_argument: }
     {(}
     {dir}
@@ -67,7 +67,7 @@ NodeForward: [U1]
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{chap}
+    |node_content:A{0|0}
     |normalized:{chap}
      {chap}
     {menu_entry_separator:::}
@@ -104,13 +104,13 @@ NodeBack: [U0]
     {spaces_before_argument: }
    *line_arg C2
    |EXTRA
-   |node_content:{Top}
+   |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
     {Top}
    *line_arg C5
    |EXTRA
-   |manual_content:{dir}
+   |manual_content:A{2|2}
     {spaces_before_argument: }
     {(}
     {dir}

@@ -39,8 +39,7 @@ void push_string_stack_string (STRING_LIST *stack, const char *string);
 decl_stack_fns(STRING_LIST, string, char *);
 void pop_string_stack (STRING_LIST *stack);
 
-decl_list_fns(INTEGER_STACK, integer, int);
-decl_stack_fns(INTEGER_STACK, integer, int);
+decl_stack_fns(INTEGER_LIST, integer, int);
 
 decl_stack_fns(CONST_ELEMENT_LIST, const_element, const ELEMENT *);
 

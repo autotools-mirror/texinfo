@@ -265,7 +265,7 @@ $result_tree_text{'multiple_include_encodings'} = '*document_root C19
    *@ref C1 chapter_char_latin2_latin2_in_refs.texi:l6
     *brace_arg C1
     |EXTRA
-    |node_content:{Ą ą ˛ Ę ę}
+    |node_content:A{0|0}
     |normalized:{_0104-_0105-_02db-_0118-_0119}
      {Ą ą ˛ Ę ę}
    {.\\n}
@@ -292,7 +292,7 @@ $result_tree_text{'multiple_include_encodings'} = '*document_root C19
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{Ą ą ˛ Ę ę}
+    |node_content:A{0|0}
     |normalized:{_0104-_0105-_02db-_0118-_0119}
      {Ą ą ˛ Ę ę}
     {menu_entry_separator:::}

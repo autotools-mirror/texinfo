@@ -143,9 +143,12 @@ sub _associate_internal_references($) {
 
     if (exists($label_element->{'extra'})
         and exists($label_element->{'extra'}->{'node_content'})) {
+      my ($begin, $end) = @{$label_element->{'extra'}->{'node_content'}};
+      my $node_content = {'contents'
+            => [@{$label_element->{'contents'}}[$begin .. $end]]};
       my $normalized =
         Texinfo::Convert::NodeNameNormalization::convert_to_node_identifier(
-            $label_element->{'extra'}->{'node_content'});
+                              $node_content);
       $label_element->{'extra'}->{'normalized'} = $normalized
         if (defined($normalized) and $normalized ne '');
     }
@@ -300,17 +303,21 @@ sub new_node_menu_entry($;$) {
   my $parsed_node_manual
     = Texinfo::Common::parse_node_manual($menu_entry_node, 1);
   if (defined($parsed_node_manual)) {
+    # node_content manual_content
     foreach my $label_info (keys(%$parsed_node_manual)) {
       $menu_entry_node->{'extra'} = {}
          if (!exists($menu_entry_node->{'extra'}));
       $menu_entry_node->{'extra'}->{$label_info}
          = $parsed_node_manual->{$label_info};
+    }
 
-      if ($label_info eq 'node_content') {
-        $menu_entry_node->{'extra'}->{'normalized'}
+    if (exists($menu_entry_node->{'extra'}->{'node_content'})) {
+      my ($begin, $end) = @{$menu_entry_node->{'extra'}->{'node_content'}};
+      my $node_content = {'contents'
+          => [@{$menu_entry_node->{'contents'}}[$begin .. $end]]};
+      $menu_entry_node->{'extra'}->{'normalized'}
       = Texinfo::Convert::NodeNameNormalization::convert_to_node_identifier(
-             $menu_entry_node->{'extra'}->{$label_info});
-      }
+             $node_content);
     }
   }
 

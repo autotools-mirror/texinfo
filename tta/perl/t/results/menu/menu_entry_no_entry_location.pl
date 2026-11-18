@@ -19,7 +19,7 @@ $result_tree_text{'menu_entry_no_entry_location'} = '*document_root C1
     {menu_entry_leading_text:* }
     *menu_entry_node C3
     |EXTRA
-    |manual_content:{manual}
+    |manual_content:A{1|1}
      {(}
      {manual}
      {)}
@@ -32,7 +32,7 @@ $result_tree_text{'menu_entry_no_entry_location'} = '*document_root C1
     {menu_entry_leading_text:* }
     *menu_entry_node C3
     |EXTRA
-    |manual_content:{manual}
+    |manual_content:A{1|1}
      {(}
      {manual}
      {)}
@@ -47,7 +47,7 @@ $result_tree_text{'menu_entry_no_entry_location'} = '*document_root C1
     {menu_entry_leading_text:* }
     *menu_entry_node C3
     |EXTRA
-    |manual_content:{last manual}
+    |manual_content:A{1|1}
      {(}
      {last manual}
      {)}

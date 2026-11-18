@@ -75,21 +75,21 @@ $result_tree_text{'commands_in_var'} = '*document_root C5
      *@ref C1 l7
       *brace_arg C1
       |EXTRA
-      |node_content:{chap}
+      |node_content:A{0|0}
       |normalized:{chap}
        {chap}
      { }
      *@xref C1 l7
       *brace_arg C1
       |EXTRA
-      |node_content:{(f)node}
+      |node_content:A{0|0}
       |normalized:{_0028f_0029node}
        {(f)node}
      {\\n}
      *@ref C4 l8
       *brace_arg C1
       |EXTRA
-      |node_content:{ext}
+      |node_content:A{0|0}
        {ext}
       *brace_arg
       *brace_arg C1

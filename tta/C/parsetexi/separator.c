@@ -338,11 +338,11 @@ handle_close_brace (ELEMENT *current, const char **line_inout)
 
               if (non_empty)
                 {
-                  ELEMENT *node_content = new_element (ET_NONE);
-                  insert_slice_into_contents (node_content, 0, arg_label,
-                                      arg_indices.start, arg_indices.end +1);
-                  add_extra_container (arg_label, AI_key_node_content,
-                                       node_content);
+                  INTEGER_LIST *node_content = new_integer_list ();
+                  add_(integer) (node_content, arg_indices.start);
+                  add_(integer) (node_content, arg_indices.end);
+                  add_extra_integer_list (arg_label, AI_key_node_content,
+                                          node_content);
                 }
               if ((!link_or_inforef
                    && (ref->e.c->contents.number <= 3

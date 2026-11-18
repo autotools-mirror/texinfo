@@ -160,7 +160,7 @@ $result_tree_text{'documentlanguage_option'} = '*document_root C6
    *@xref C1 documentlanguage.texi:l30
     *brace_arg C1
     |EXTRA
-    |node_content:{chapter}
+    |node_content:A{0|0}
     |normalized:{chapter}
      {chapter}
    {.\\n}

@@ -39,7 +39,7 @@ $result_tree_text{'raiselowersections'} = '*document_root C14
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{Chapter}
+    |node_content:A{0|0}
     |normalized:{Chapter}
      {Chapter}
     {menu_entry_separator:::}
@@ -50,7 +50,7 @@ $result_tree_text{'raiselowersections'} = '*document_root C14
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{Second chapter}
+    |node_content:A{0|0}
     |normalized:{Second-chapter}
      {Second chapter}
     {menu_entry_separator:::}
@@ -103,7 +103,7 @@ $result_tree_text{'raiselowersections'} = '*document_root C14
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{Chapter in included file}
+    |node_content:A{0|0}
     |normalized:{Chapter-in-included-file}
      {Chapter in included file}
     {menu_entry_separator:::}
@@ -215,7 +215,7 @@ $result_tree_text{'raiselowersections'} = '*document_root C14
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{Section}
+    |node_content:A{0|0}
     |normalized:{Section}
      {Section}
     {menu_entry_separator:::}
@@ -260,7 +260,7 @@ $result_tree_text{'raiselowersections'} = '*document_root C14
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{Subsection}
+    |node_content:A{0|0}
     |normalized:{Subsection}
      {Subsection}
     {menu_entry_separator:::}

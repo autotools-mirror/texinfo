@@ -35,7 +35,7 @@ $result_tree_text{'anchor_zero'} = '*document_root C2
    *@xref C1 l5
     *brace_arg C1
     |EXTRA
-    |node_content:{0}
+    |node_content:A{0|0}
     |normalized:{0}
      {0}
    {.\\n}

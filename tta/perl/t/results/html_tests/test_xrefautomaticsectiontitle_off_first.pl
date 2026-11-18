@@ -50,7 +50,7 @@ $result_tree_text{'test_xrefautomaticsectiontitle_off_first'} = '*document_root 
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{chap}
+    |node_content:A{0|0}
     |normalized:{chap}
      {chap}
     {menu_entry_separator:::}
@@ -90,7 +90,7 @@ $result_tree_text{'test_xrefautomaticsectiontitle_off_first'} = '*document_root 
    *@xref C1 l14
     *brace_arg C1
     |EXTRA
-    |node_content:{chap}
+    |node_content:A{0|0}
     |normalized:{chap}
      {chap}
    {.\\n}
@@ -108,7 +108,7 @@ $result_tree_text{'test_xrefautomaticsectiontitle_off_first'} = '*document_root 
    *@xref C1 l18
     *brace_arg C1
     |EXTRA
-    |node_content:{chap}
+    |node_content:A{0|0}
     |normalized:{chap}
      {chap}
    {.\\n}

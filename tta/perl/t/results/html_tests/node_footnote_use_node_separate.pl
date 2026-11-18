@@ -39,7 +39,7 @@ $result_tree_text{'node_footnote_use_node_separate'} = '*document_root C8
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{@\'a}
+    |node_content:A{0|0}
     |normalized:{_00e1}
      *@\' C1 node_footnote.texi:l8
       *following_arg C1
@@ -52,7 +52,7 @@ $result_tree_text{'node_footnote_use_node_separate'} = '*document_root C8
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{@^a}
+    |node_content:A{0|0}
     |normalized:{_00e2}
      *@^ C1 node_footnote.texi:l9
       *following_arg C1
@@ -65,7 +65,7 @@ $result_tree_text{'node_footnote_use_node_separate'} = '*document_root C8
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{chapter}
+    |node_content:A{0|0}
     |normalized:{chapter}
      {chapter}
     {menu_entry_separator:::}
@@ -76,7 +76,7 @@ $result_tree_text{'node_footnote_use_node_separate'} = '*document_root C8
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{@`a}
+    |node_content:A{0|0}
     |normalized:{_00e0}
      *@` C1 node_footnote.texi:l11
       *following_arg C1
@@ -184,7 +184,7 @@ $result_tree_text{'node_footnote_use_node_separate'} = '*document_root C8
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{@`a}
+    |node_content:A{0|0}
     |normalized:{_00e0}
      *@` C1 node_footnote.texi:l28
       *following_arg C1

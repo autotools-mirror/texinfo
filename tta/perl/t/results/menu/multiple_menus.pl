@@ -30,8 +30,8 @@ $result_tree_text{'multiple_menus'} = '*document_root C2
     {menu_entry_leading_text:* }
     *menu_entry_node C4
     |EXTRA
-    |manual_content:{a}
-    |node_content:{a}
+    |manual_content:A{1|1}
+    |node_content:A{3|3}
     |normalized:{a}
      {(}
      {a}
@@ -57,8 +57,8 @@ $result_tree_text{'multiple_menus'} = '*document_root C2
     {menu_entry_leading_text:* }
     *menu_entry_node C4
     |EXTRA
-    |manual_content:{b}
-    |node_content:{b}
+    |manual_content:A{1|1}
+    |node_content:A{3|3}
     |normalized:{b}
      {(}
      {b}

@@ -107,7 +107,7 @@ $result_tree_text{'contain_plain_text_nestings'} = '*document_root C5
      *@ref C2 l13
       *brace_arg C1
       |EXTRA
-      |node_content:{Top}
+      |node_content:A{0|0}
       |normalized:{Top}
        {Top}
       *brace_arg C2
@@ -122,7 +122,7 @@ $result_tree_text{'contain_plain_text_nestings'} = '*document_root C5
      *@ref C2 l14
       *brace_arg C1
       |EXTRA
-      |node_content:{Top}
+      |node_content:A{0|0}
       |normalized:{Top}
        {Top}
       *brace_arg C2
@@ -135,7 +135,7 @@ $result_tree_text{'contain_plain_text_nestings'} = '*document_root C5
      *@ref C2 l15
       *brace_arg C1
       |EXTRA
-      |node_content:{Top}
+      |node_content:A{0|0}
       |normalized:{Top}
        {Top}
       *brace_arg C2
@@ -157,7 +157,7 @@ $result_tree_text{'contain_plain_text_nestings'} = '*document_root C5
        *@ref C2 l16
         *brace_arg C1
         |EXTRA
-        |node_content:{Top}
+        |node_content:A{0|0}
         |normalized:{Top}
          {Top}
         *brace_arg C2

@@ -30,8 +30,8 @@ $result_tree_text{'invalid_info_menu_entry'} = '*document_root C2
     {menu_entry_leading_text:* }
     *menu_entry_node C4
     |EXTRA
-    |manual_content:{f}
-    |node_content:{@asis{a:}}
+    |manual_content:A{1|1}
+    |node_content:A{3|3}
     |normalized:{a_003a}
      {(}
      {f}
@@ -52,8 +52,8 @@ $result_tree_text{'invalid_info_menu_entry'} = '*document_root C2
     {menu_entry_separator:: }
     *menu_entry_node C4
     |EXTRA
-    |manual_content:{f}
-    |node_content:{node}
+    |manual_content:A{1|1}
+    |node_content:A{3|3}
     |normalized:{node}
      {(}
      {f}
@@ -70,8 +70,8 @@ $result_tree_text{'invalid_info_menu_entry'} = '*document_root C2
     {menu_entry_separator:: }
     *menu_entry_node C4
     |EXTRA
-    |manual_content:{f}
-    |node_content:{@asis{node. }}
+    |manual_content:A{1|1}
+    |node_content:A{3|3}
     |normalized:{node_002e-}
      {(}
      {f}
@@ -90,8 +90,8 @@ $result_tree_text{'invalid_info_menu_entry'} = '*document_root C2
     {menu_entry_separator:: }
     *menu_entry_node C4
     |EXTRA
-    |manual_content:{f}
-    |node_content:{@asis{node,n}}
+    |manual_content:A{1|1}
+    |node_content:A{3|3}
     |normalized:{node_002cn}
      {(}
      {f}
@@ -110,8 +110,8 @@ $result_tree_text{'invalid_info_menu_entry'} = '*document_root C2
     {menu_entry_separator:: }
     *menu_entry_node C4
     |EXTRA
-    |manual_content:{f}
-    |node_content:{@asis{node\\tn}}
+    |manual_content:A{1|1}
+    |node_content:A{3|3}
     |normalized:{node-n}
      {(}
      {f}

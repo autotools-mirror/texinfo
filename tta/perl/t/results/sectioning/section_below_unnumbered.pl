@@ -50,7 +50,7 @@ $result_tree_text{'section_below_unnumbered'} = '*document_root C8
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{Unn}
+    |node_content:A{0|0}
     |normalized:{Unn}
      {Unn}
     {menu_entry_separator:::}
@@ -94,7 +94,7 @@ $result_tree_text{'section_below_unnumbered'} = '*document_root C8
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
-    |node_content:{Sec}
+    |node_content:A{0|0}
     |normalized:{Sec}
      {Sec}
     {menu_entry_separator:::}
