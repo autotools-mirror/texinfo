@@ -1278,15 +1278,25 @@ sub _convert($$;$) {
       }
     } elsif (defined($e_type)
              and $e_type eq 'definfoenclose_command') {
-      if (exists($element->{'contents'})) {
-        my $arg_text = _convert($self, $element->{'contents'}->[0]);
+      my $args = Texinfo::Common::get_non_empty_brace_args($element);
+      if (defined($args) and defined($args->[0])) {
+        my $arg_text = _convert($self, $args->[0]);
         $result .= $arg_text;
       }
       return $result;
 
-    } elsif (exists($element->{'contents'})
-             and exists($brace_commands{$cmdname})) {
-      #Texinfo::Common::debug_list(" brace command with args", $element->{'contents'});
+    } elsif (exists($brace_commands{$cmdname})) {
+      my $args = Texinfo::Common::get_non_empty_brace_args($element);
+
+      if (!defined($args)) {
+        if ($cmdname eq 'w') {
+    # special case to ensure that @w leads to something even if empty
+          return $w_command_mark;
+        } else {
+          return '';
+        }
+      }
+
       if ($style_commands_formatting{$cmdname}) {
         if ($brace_commands{$cmdname} eq 'context'
             or exists($Texinfo::Commands::math_commands{$cmdname})) {
@@ -1313,7 +1323,7 @@ sub _convert($$;$) {
 
         my ($style, $attribute_text)
            = _parse_attribute($formatting->{'attribute'});
-        my $result = _convert($self, $element->{'contents'}->[0]);
+        my $result = _convert($self, $args->[0]);
         if ($style ne '' and (!$self->{'document_context'}->[-1]->{'inline'}
                                or $inline_elements{$style})) {
           $result = "<$style${attribute_text}>$result</$style>";
@@ -1344,212 +1354,201 @@ sub _convert($$;$) {
       } elsif ($cmdname eq 'anchor' or $cmdname eq 'namedanchor') {
         return _output_anchor($element);
       } elsif (exists($Texinfo::Commands::ref_commands{$cmdname})) {
-        if (exists($element->{'contents'})) {
-          my $args_nr = scalar(@{$element->{'contents'}});
-          my $command_name;
-          my $book_element;
-          my ($section_name, $node_name);
-          my $manual_file_index = 3;
-          if ($cmdname eq 'inforef') {
-            $manual_file_index = 2;
-            $command_name = 'xref';
-          } elsif ($cmdname eq 'link') {
-            $manual_file_index = 2;
-            $command_name = 'ref';
-          } else {
-            if ($args_nr >= 5
-                and not Texinfo::Common::empty_spaces_argument(
-                                     $element->{'contents'}->[4])) {
-              $book_element = $element->{'contents'}->[4];
-            }
-            if ($args_nr >= 3
-                and not Texinfo::Common::empty_spaces_argument(
-                                    $element->{'contents'}->[2])) {
-              my $section_arg = $element->{'contents'}->[2];
-              $section_name = _convert($self, $section_arg);
-            }
-            $command_name = $cmdname;
-          }
-          my $manual_file_element;
-          if ($args_nr >= $manual_file_index+1
-              and not Texinfo::Common::empty_spaces_argument(
-                                $element->{'contents'}->[$manual_file_index])) {
-            $manual_file_element = $element->{'contents'}->[$manual_file_index];
-          }
-          if (! defined($section_name) and $args_nr >= 2
-              and not Texinfo::Common::empty_spaces_argument(
-                                       $element->{'contents'}->[1])) {
-            my $section_arg = $element->{'contents'}->[1];
-            $section_name = _convert($self, $section_arg);
-          } elsif (not Texinfo::Common::empty_spaces_argument(
-                                      $element->{'contents'}->[0])) {
-            my $node_arg = $element->{'contents'}->[0];
-            push @{$self->{'document_context'}->[-1]->{'upper_case'}}, 0;
-            $node_name = _convert($self, $node_arg);
-            pop @{$self->{'document_context'}->[-1]->{'upper_case'}};
-
-            if ((defined($book_element) or defined($manual_file_element))
-                and $node_name eq 'Top') {
-              $node_name = undef;
-            }
-          }
-
-          my $result;
-          push @{$self->{'document_context'}->[-1]->{'upper_case'}}, 0;
-          # external book ref
-          if (defined($book_element)) {
-            if (defined($section_name)) {
-              my $substituted_strings = {
-                  'section_name' =>
-                    Texinfo::TreeElement::new({'type' => '_converted',
-                                               'text' => $section_name}),
-                  'book' => $book_element
-                };
-              if ($command_name eq 'ref') {
-                $result = _convert($self,
-                  $self->cdt('section ``{section_name}\'\' in @cite{{book}}',
-                             $substituted_strings));
-              } elsif ($command_name eq 'xref') {
-                $result = _convert($self,
-                 $self->cdt('See section ``{section_name}\'\' in @cite{{book}}',
-                             $substituted_strings));
-              } elsif ($command_name eq 'pxref') {
-                my $tree
-                  = $self->cdt('see section ``{section_name}\'\' in @cite{{book}}',
-                             $substituted_strings);
-                $result = _convert($self, $tree);
-              }
-            } elsif (defined($node_name)) {
-              my $substituted_strings = {
-                 'node_name' =>
-                    Texinfo::TreeElement::new({'type' => '_converted',
-                                               'text' => $node_name}),
-                 'book' => $book_element
-                };
-              if ($command_name eq 'ref') {
-                $result = _convert($self,
-                  $self->cdt('``{node_name}\'\' in @cite{{book}}',
-                             $substituted_strings));
-              } elsif ($command_name eq 'xref') {
-                $result = _convert($self,
-                  $self->cdt('See ``{node_name}\'\' in @cite{{book}}',
-                             $substituted_strings));
-              } elsif ($command_name eq 'pxref') {
-                $result = _convert($self,
-                  $self->cdt('see ``{node_name}\'\' in @cite{{book}}',
-                             $substituted_strings));
-              }
-            } else {
-              if ($command_name eq 'ref') {
-                $result = _convert($self,
-                  $self->cdt('@cite{{book}}', {'book' => $book_element }));
-              } elsif ($command_name eq 'xref') {
-                $result = _convert($self,
-                  $self->cdt('See @cite{{book}}', {'book' => $book_element }));
-              } elsif ($command_name eq 'pxref') {
-                $result = _convert($self, $self->cdt('see @cite{{book}}',
-                                                  {'book' => $book_element }));
-              }
-            }
-          } elsif (defined($manual_file_element)) {
-            if (defined($section_name)) {
-              my $substituted_strings = {
-                'section_name' =>
-                   Texinfo::TreeElement::new({'type' => '_converted',
-                                              'text' => $section_name}),
-                'manual' => $manual_file_element
-               };
-              if ($command_name eq 'ref') {
-                $result = _convert($self,
-                  $self->cdt('section ``{section_name}\'\' in @file{{manual}}',
-                             $substituted_strings));
-              } elsif ($command_name eq 'xref') {
-                $result = _convert($self,
-               $self->cdt('See section ``{section_name}\'\' in @file{{manual}}',
-                             $substituted_strings));
-              } elsif ($command_name eq 'pxref') {
-                $result = _convert($self,
-               $self->cdt('see section ``{section_name}\'\' in @file{{manual}}',
-                             $substituted_strings));
-              }
-            } elsif (defined($node_name)) {
-              my $substituted_strings = {
-                  'node_name' =>
-                    Texinfo::TreeElement::new({'type' => '_converted',
-                                               'text' => $node_name}),
-                  'manual' => $manual_file_element
-                };
-              if ($command_name eq 'ref') {
-                $result = _convert($self,
-                  $self->cdt('``{node_name}\'\' in @file{{manual}}',
-                             $substituted_strings));
-              } elsif ($command_name eq 'xref') {
-                $result = _convert($self,
-                  $self->cdt('See ``{node_name}\'\' in @file{{manual}}',
-                             $substituted_strings));
-              } elsif ($command_name eq 'pxref') {
-                $result = _convert($self,
-                  $self->cdt('see ``{node_name}\'\' in @file{{manual}}',
-                             $substituted_strings));
-              }
-            } else {
-              if ($command_name eq 'ref') {
-                $result = _convert($self,
-                  $self->cdt('@file{{manual}}',
-                    {'manual' => $manual_file_element }));
-              } elsif ($command_name eq 'xref') {
-                $result = _convert($self,
-                  $self->cdt('See @file{{manual}}',
-                    {'manual' => $manual_file_element }));
-              } elsif ($command_name eq 'pxref') {
-                $result = _convert($self,
-                  $self->cdt('see @file{{manual}}',
-                    {'manual' => $manual_file_element }));
-              }
-            }
-          } elsif ($cmdname eq 'inforef') {
-            $result = '';
-          } else {
-            my $linkend = '';
-            my $node_arg = $element->{'contents'}->[0];
-            if (exists($node_arg->{'extra'})
-                and defined($node_arg->{'extra'}->{'normalized'})) {
-              $linkend = " linkend=\"$node_arg->{'extra'}->{'normalized'}\"";
-            }
-            my $link_text = $section_name;
-            $link_text = $node_name if (! defined($link_text));
-            my $argument = "<link${linkend}>".$link_text."</link>";
-            if ($cmdname eq 'ref' or $cmdname eq 'link') {
-              $result = _convert($self,
-                      $self->cdt('{title_ref}', {'title_ref' =>
-                       Texinfo::TreeElement::new({'type' => '_converted',
-                                                  'text' => $argument})}));
-            } elsif ($cmdname eq 'xref') {
-              $result = _convert($self,
-                      $self->cdt('See {title_ref}', {'title_ref' =>
-                        Texinfo::TreeElement::new({'type' => '_converted',
-                                                   'text' => $argument})}));
-            } elsif ($cmdname eq 'pxref') {
-              $result = _convert($self,
-                      $self->cdt('see {title_ref}', {'title_ref' =>
-                       Texinfo::TreeElement::new({'type' => '_converted',
-                                                  'text' => $argument})}));
-            }
-          }
-          pop @{$self->{'document_context'}->[-1]->{'upper_case'}};
-          return $result;
+        my $args_nr = scalar(@$args);
+        my $command_name;
+        my $book_element;
+        my ($section_name, $node_name);
+        my $manual_file_index = 3;
+        if ($cmdname eq 'inforef') {
+          $manual_file_index = 2;
+          $command_name = 'xref';
+        } elsif ($cmdname eq 'link') {
+          $manual_file_index = 2;
+          $command_name = 'ref';
         } else {
-          return '';
+          if ($args_nr >= 5 and defined($args->[4])) {
+            $book_element = $args->[4];
+          }
+          if ($args_nr >= 3 and defined($args->[2])) {
+            my $section_arg = $args->[2];
+            $section_name = _convert($self, $section_arg);
+          }
+          $command_name = $cmdname;
         }
+        my $manual_file_element;
+        if ($args_nr >= $manual_file_index+1
+            and defined($args->[$manual_file_index])) {
+          $manual_file_element = $args->[$manual_file_index];
+        }
+        if (! defined($section_name) and $args_nr >= 2
+            and defined($args->[1])) {
+          my $section_arg = $args->[1];
+          $section_name = _convert($self, $section_arg);
+        } elsif (defined($args->[0])) {
+          my $node_arg = $args->[0];
+          push @{$self->{'document_context'}->[-1]->{'upper_case'}}, 0;
+          $node_name = _convert($self, $node_arg);
+          pop @{$self->{'document_context'}->[-1]->{'upper_case'}};
+
+          if ((defined($book_element) or defined($manual_file_element))
+              and $node_name eq 'Top') {
+            $node_name = undef;
+          }
+        }
+
+        my $result;
+        push @{$self->{'document_context'}->[-1]->{'upper_case'}}, 0;
+        # external book ref
+        if (defined($book_element)) {
+          if (defined($section_name)) {
+            my $substituted_strings = {
+                'section_name' =>
+                  Texinfo::TreeElement::new({'type' => '_converted',
+                                             'text' => $section_name}),
+                'book' => $book_element
+              };
+            if ($command_name eq 'ref') {
+              $result = _convert($self,
+                $self->cdt('section ``{section_name}\'\' in @cite{{book}}',
+                           $substituted_strings));
+            } elsif ($command_name eq 'xref') {
+              $result = _convert($self,
+               $self->cdt('See section ``{section_name}\'\' in @cite{{book}}',
+                           $substituted_strings));
+            } elsif ($command_name eq 'pxref') {
+              my $tree
+                = $self->cdt('see section ``{section_name}\'\' in @cite{{book}}',
+                           $substituted_strings);
+              $result = _convert($self, $tree);
+            }
+          } elsif (defined($node_name)) {
+            my $substituted_strings = {
+               'node_name' =>
+                  Texinfo::TreeElement::new({'type' => '_converted',
+                                             'text' => $node_name}),
+               'book' => $book_element
+              };
+            if ($command_name eq 'ref') {
+              $result = _convert($self,
+                $self->cdt('``{node_name}\'\' in @cite{{book}}',
+                           $substituted_strings));
+            } elsif ($command_name eq 'xref') {
+              $result = _convert($self,
+                $self->cdt('See ``{node_name}\'\' in @cite{{book}}',
+                           $substituted_strings));
+            } elsif ($command_name eq 'pxref') {
+              $result = _convert($self,
+                $self->cdt('see ``{node_name}\'\' in @cite{{book}}',
+                           $substituted_strings));
+            }
+          } else {
+            if ($command_name eq 'ref') {
+              $result = _convert($self,
+                $self->cdt('@cite{{book}}', {'book' => $book_element }));
+            } elsif ($command_name eq 'xref') {
+              $result = _convert($self,
+                $self->cdt('See @cite{{book}}', {'book' => $book_element }));
+            } elsif ($command_name eq 'pxref') {
+              $result = _convert($self, $self->cdt('see @cite{{book}}',
+                                                {'book' => $book_element }));
+            }
+          }
+        } elsif (defined($manual_file_element)) {
+          if (defined($section_name)) {
+            my $substituted_strings = {
+              'section_name' =>
+                 Texinfo::TreeElement::new({'type' => '_converted',
+                                            'text' => $section_name}),
+              'manual' => $manual_file_element
+             };
+            if ($command_name eq 'ref') {
+              $result = _convert($self,
+                $self->cdt('section ``{section_name}\'\' in @file{{manual}}',
+                           $substituted_strings));
+            } elsif ($command_name eq 'xref') {
+              $result = _convert($self,
+             $self->cdt('See section ``{section_name}\'\' in @file{{manual}}',
+                           $substituted_strings));
+            } elsif ($command_name eq 'pxref') {
+              $result = _convert($self,
+             $self->cdt('see section ``{section_name}\'\' in @file{{manual}}',
+                           $substituted_strings));
+            }
+          } elsif (defined($node_name)) {
+            my $substituted_strings = {
+                'node_name' =>
+                  Texinfo::TreeElement::new({'type' => '_converted',
+                                             'text' => $node_name}),
+                'manual' => $manual_file_element
+              };
+            if ($command_name eq 'ref') {
+              $result = _convert($self,
+                $self->cdt('``{node_name}\'\' in @file{{manual}}',
+                           $substituted_strings));
+            } elsif ($command_name eq 'xref') {
+              $result = _convert($self,
+                $self->cdt('See ``{node_name}\'\' in @file{{manual}}',
+                           $substituted_strings));
+            } elsif ($command_name eq 'pxref') {
+              $result = _convert($self,
+                $self->cdt('see ``{node_name}\'\' in @file{{manual}}',
+                           $substituted_strings));
+            }
+          } else {
+            if ($command_name eq 'ref') {
+              $result = _convert($self,
+                $self->cdt('@file{{manual}}',
+                  {'manual' => $manual_file_element }));
+            } elsif ($command_name eq 'xref') {
+              $result = _convert($self,
+                $self->cdt('See @file{{manual}}',
+                  {'manual' => $manual_file_element }));
+            } elsif ($command_name eq 'pxref') {
+              $result = _convert($self,
+                $self->cdt('see @file{{manual}}',
+                  {'manual' => $manual_file_element }));
+            }
+          }
+        } elsif ($cmdname eq 'inforef') {
+          $result = '';
+        } else {
+          my $linkend = '';
+          my $node_arg = $args->[0];
+          if (exists($node_arg->{'extra'})
+              and defined($node_arg->{'extra'}->{'normalized'})) {
+            $linkend = " linkend=\"$node_arg->{'extra'}->{'normalized'}\"";
+          }
+          my $link_text = $section_name;
+          $link_text = $node_name if (! defined($link_text));
+          my $argument = "<link${linkend}>".$link_text."</link>";
+          if ($cmdname eq 'ref' or $cmdname eq 'link') {
+            $result = _convert($self,
+                    $self->cdt('{title_ref}', {'title_ref' =>
+                     Texinfo::TreeElement::new({'type' => '_converted',
+                                                'text' => $argument})}));
+          } elsif ($cmdname eq 'xref') {
+            $result = _convert($self,
+                    $self->cdt('See {title_ref}', {'title_ref' =>
+                      Texinfo::TreeElement::new({'type' => '_converted',
+                                                 'text' => $argument})}));
+          } elsif ($cmdname eq 'pxref') {
+            $result = _convert($self,
+                    $self->cdt('see {title_ref}', {'title_ref' =>
+                     Texinfo::TreeElement::new({'type' => '_converted',
+                                                'text' => $argument})}));
+          }
+        }
+        pop @{$self->{'document_context'}->[-1]->{'upper_case'}};
+        return $result;
       } elsif ($cmdname eq 'image') {
-        if (exists($element->{'contents'})
-            and exists($element->{'contents'}->[0]->{'contents'})) {
+        if (defined($args->[0])
+            and exists($args->[0]->{'contents'})) {
           Texinfo::Convert::Text::set_options_code(
                                  $self->{'convert_text_options'});
           Texinfo::Convert::Text::set_options_encoding_if_not_ascii($self,
                                   $self->{'convert_text_options'});
           my $basefile = Texinfo::Convert::Text::convert_to_text(
-                                        $element->{'contents'}->[0],
+                                        $args->[0],
                                     $self->{'convert_text_options'});
           Texinfo::Convert::Text::reset_options_code(
                                  $self->{'convert_text_options'});
@@ -1605,125 +1604,110 @@ sub _convert($$;$) {
         }
         return $result;
       } elsif ($cmdname eq 'email') {
-        if (exists($element->{'contents'})) {
-          my $name;
-          my $email;
-          my $email_text;
-          if (scalar(@{$element->{'contents'}}) >= 2
-              and not Texinfo::Common::empty_spaces_argument(
-                                  $element->{'contents'}->[1])) {
-            $name = $element->{'contents'}->[1];
-          }
-          if (not Texinfo::Common::empty_spaces_argument(
-                                       $element->{'contents'}->[0])) {
-            $email = $element->{'contents'}->[0];
-            Texinfo::Convert::Text::set_options_code(
-                                 $self->{'convert_text_options'});
-            Texinfo::Convert::Text::set_options_encoding_if_not_ascii($self,
-                                  $self->{'convert_text_options'});
-            $email_text
-              = _protect_text($self, Texinfo::Convert::Text::convert_to_text(
-                            $email, $self->{'convert_text_options'}));
-            Texinfo::Convert::Text::reset_options_code(
-                                 $self->{'convert_text_options'});
-            Texinfo::Convert::Text::reset_options_encoding(
-                                 $self->{'convert_text_options'});
-          }
-          if (defined($name) and defined($email)) {
-            # FIXME DocBook 5 ulink -> link
-            # There is no possibility to do something similar in DocBook 5.
-            # The best is probably either to forget about the name, or
-            # follow <email> by the name in parentheses
-            my $link_name = _convert($self, $name);
-            return "<ulink url=\"mailto:$email_text\">$link_name</ulink>";
-          } elsif (defined($email)) {
-            return "<email>$email_text</email>";
-          } elsif (defined($name)) {
-            return _convert($self, $name);
-          }
-        } else {
-          return '';
+        my $name;
+        my $email;
+        my $email_text;
+        if (scalar(@$args) >= 2 and defined($args->[1])) {
+          $name = $args->[1];
         }
-
+        if (defined($args->[0])) {
+          $email = $args->[0];
+          Texinfo::Convert::Text::set_options_code(
+                               $self->{'convert_text_options'});
+          Texinfo::Convert::Text::set_options_encoding_if_not_ascii($self,
+                                $self->{'convert_text_options'});
+          $email_text
+            = _protect_text($self, Texinfo::Convert::Text::convert_to_text(
+                          $email, $self->{'convert_text_options'}));
+          Texinfo::Convert::Text::reset_options_code(
+                               $self->{'convert_text_options'});
+          Texinfo::Convert::Text::reset_options_encoding(
+                               $self->{'convert_text_options'});
+        }
+        if (defined($name) and defined($email)) {
+          # FIXME DocBook 5 ulink -> link
+          # There is no possibility to do something similar in DocBook 5.
+          # The best is probably either to forget about the name, or
+          # follow <email> by the name in parentheses
+          my $link_name = _convert($self, $name);
+          return "<ulink url=\"mailto:$email_text\">$link_name</ulink>";
+        } elsif (defined($email)) {
+          return "<email>$email_text</email>";
+        } elsif (defined($name)) {
+          return _convert($self, $name);
+        }
       } elsif ($cmdname eq 'uref' or $cmdname eq 'url') {
-        if (exists($element->{'contents'})) {
-          my $args_nr = scalar(@{$element->{'contents'}});
-          my ($url_text, $url_arg);
-          if (exists($element->{'contents'}->[0]->{'contents'})) {
-            $url_arg = $element->{'contents'}->[0];
-            Texinfo::Convert::Text::set_options_code(
-                                 $self->{'convert_text_options'});
-            Texinfo::Convert::Text::set_options_encoding_if_not_ascii($self,
-                                  $self->{'convert_text_options'});
-            $url_text = _protect_text($self,
-              Texinfo::Convert::Text::convert_to_text($url_arg,
-                                       $self->{'convert_text_options'}));
-            Texinfo::Convert::Text::reset_options_code(
-                                 $self->{'convert_text_options'});
-            Texinfo::Convert::Text::reset_options_encoding(
-                                 $self->{'convert_text_options'});
-          } else {
-            $url_text = '';
-          }
-          my $replacement;
-          if ($args_nr >= 2
-              and exists($element->{'contents'}->[1]->{'contents'})) {
-            $replacement = _convert($self, $element->{'contents'}->[1]);
-          }
-          if (!defined($replacement) or $replacement eq '') {
-            if ($args_nr >= 3
-                and exists($element->{'contents'}->[2]->{'contents'})) {
-              $replacement = _convert($self, $element->{'contents'}->[2]);
-            }
-          }
-          if (!defined($replacement) or $replacement eq '') {
-            $replacement = $url_text;
-          }
-          return "<ulink url=\"$url_text\">$replacement</ulink>";
-          # FIXME DocBook 5
-          # need to add in the preamble
-          #    xmlns:xlink="http://www.w3.org/1999/xlink"
-          # return "<link xlink:href=\"$url_text\">$replacement</link>";
+        my $args_nr = scalar(@$args);
+        my ($url_text, $url_arg);
+        if (defined($args->[0]) and exists($args->[0]->{'contents'})) {
+          $url_arg = $args->[0];
+          Texinfo::Convert::Text::set_options_code(
+                               $self->{'convert_text_options'});
+          Texinfo::Convert::Text::set_options_encoding_if_not_ascii($self,
+                                $self->{'convert_text_options'});
+          $url_text = _protect_text($self,
+            Texinfo::Convert::Text::convert_to_text($url_arg,
+                                     $self->{'convert_text_options'}));
+          Texinfo::Convert::Text::reset_options_code(
+                               $self->{'convert_text_options'});
+          Texinfo::Convert::Text::reset_options_encoding(
+                               $self->{'convert_text_options'});
+        } else {
+          $url_text = '';
         }
-
+        my $replacement;
+        if ($args_nr >= 2 and defined($args->[1])
+            and exists($args->[1]->{'contents'})) {
+          $replacement = _convert($self, $args->[1]);
+        }
+        if (!defined($replacement) or $replacement eq '') {
+          if ($args_nr >= 3 and defined($args->[2])
+              and exists($args->[2]->{'contents'})) {
+            $replacement = _convert($self, $args->[2]);
+          }
+        }
+        if (!defined($replacement) or $replacement eq '') {
+          $replacement = $url_text;
+        }
+        return "<ulink url=\"$url_text\">$replacement</ulink>";
+        # FIXME DocBook 5
+        # need to add in the preamble
+        #    xmlns:xlink="http://www.w3.org/1999/xlink"
+        # return "<link xlink:href=\"$url_text\">$replacement</link>";
       } elsif ($cmdname eq 'abbr' or $cmdname eq 'acronym') {
-        if (exists($element->{'contents'})) {
-          my $argument;
-          if (exists($element->{'contents'}->[0]->{'contents'})) {
-            my $arg_text = _convert($self, $element->{'contents'}->[0]);
-            if ($arg_text ne '') {
-              my $format_element;
-              if ($cmdname eq 'abbr') {
-                $format_element = 'abbrev';
-              } else {
-                $format_element = $cmdname;
-              }
-              $argument = "<$format_element>$arg_text</$format_element>";
-            }
-          }
-          if (scalar(@{$element->{'contents'}}) >= 2
-              and exists($element->{'contents'}->[1]->{'contents'})) {
-            if (defined($argument)) {
-              my $tree = $self->cdt('{abbr_or_acronym} ({explanation})',
-                             {'abbr_or_acronym' =>
-                        Texinfo::TreeElement::new({'type' => '_converted',
-                                                   'text' => $argument}),
-                              'explanation' =>
-                                  $element->{'contents'}->[1]});
-              return _convert($self, $tree);
+        my $argument;
+        if (defined($args->[0]) and exists($args->[0]->{'contents'})) {
+          my $arg_text = _convert($self, $args->[0]);
+          if ($arg_text ne '') {
+            my $format_element;
+            if ($cmdname eq 'abbr') {
+              $format_element = 'abbrev';
             } else {
-              return _convert($self, $element->{'contents'}->[1]);
+              $format_element = $cmdname;
             }
-          } elsif (defined($argument)) {
-            return $argument;
+            $argument = "<$format_element>$arg_text</$format_element>";
           }
         }
-        return '';
-
+        if (scalar(@{$args}) >= 2 and defined($args->[1])
+            and exists($args->[1]->{'contents'})) {
+          if (defined($argument)) {
+            my $tree = $self->cdt('{abbr_or_acronym} ({explanation})',
+                           {'abbr_or_acronym' =>
+                      Texinfo::TreeElement::new({'type' => '_converted',
+                                                 'text' => $argument}),
+                            'explanation' =>
+                                $args->[1]});
+            return _convert($self, $tree);
+          } else {
+            return _convert($self, $args->[1]);
+          }
+        } elsif (defined($argument)) {
+          return $argument;
+        }
       } elsif ($cmdname eq 'U') {
-        if (exists($element->{'contents'})) {
+        if (defined($args->[0])) {
           my ($arg_text, $surplus_arg)
-            = Texinfo::Common::simple_arg_text($element->{'contents'}->[0]);
+            = Texinfo::Common::simple_arg_text($args->[0]);
           if (defined($arg_text) and $arg_text ne '') {
             my $result = "&#x$arg_text;";
             return $result;
@@ -1751,9 +1735,9 @@ sub _convert($$;$) {
                  and ! $self->{'expanded_formats'}->{$element->{'extra'}->{'format'}}) {
           $arg_index = 2;
         }
-        if (scalar(@{$element->{'contents'}}) > $arg_index
-            and exists($element->{'contents'}->[$arg_index]->{'contents'})) {
-          $result .= _convert($self, $element->{'contents'}->[$arg_index]);
+        if (scalar(@$args) > $arg_index and defined($args->[$arg_index])
+            and exists($args->[$arg_index]->{'contents'})) {
+          $result .= _convert($self, $args->[$arg_index]);
         }
         if ($cmdname eq 'inlineraw') {
           pop @{$self->{'document_context'}};
@@ -1766,10 +1750,6 @@ sub _convert($$;$) {
         return '';
       }
 
-    # special case to ensure that @w leads to something even if empty
-    } elsif ($cmdname eq 'w') {
-      return $w_command_mark;
-
     } elsif (exists($Texinfo::Commands::block_commands{$cmdname})) {
       if ($ignored_block_commands{$cmdname}) {
         return '';

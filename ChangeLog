@@ -1,5 +1,13 @@
 2026-11-19  Patrice Dumas  <pertusus@free.fr>
 
+	* tta/perl/Texinfo/Convert/DocBook.pm (_convert): use
+	get_non_empty_brace_args for definfoenclose and brace arg commands.
+	Return early if there are no arguments.  Use arguments returned by
+	get_non_empty_brace_args instead of element contents.  Remove one
+	level of conditional when not needed anymore.
+
+2026-11-19  Patrice Dumas  <pertusus@free.fr>
+
 	* tta/C/main/utils.c (get_non_empty_brace_args),
 	tta/perl/Texinfo/Common.pm (get_non_empty_brace_args): return a list
 	of arguments of brace commands, with the possibility to skip ignored
