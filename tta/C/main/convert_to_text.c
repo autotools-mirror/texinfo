@@ -702,55 +702,48 @@ convert_to_text_internal (const ELEMENT *element, TEXT_OPTIONS *text_options,
           free (brace_no_args_text);
           return;
         }
-      if (command_data[data_cmd].flags & CF_brace
-          && command_data[data_cmd].data == BRACE_accent)
+      else if (command_data[data_cmd].flags & CF_brace)
         {
-          char *text = text_accents (element, text_options->encoding,
-                                     text_options->set_case);
-          ADD(text);
-          free (text);
-          return;
-        }
-      else if (data_cmd == CM_image)
-        {
-          if (element->e.c->contents.number > 0)
+          if (command_data[data_cmd].data == BRACE_accent)
+            {
+              char *text = text_accents (element, text_options->encoding,
+                                         text_options->set_case);
+              ADD(text);
+              free (text);
+            }
+          else if (element->e.c->contents.number <= 0) {}
+          else if (data_cmd == CM_image)
             {
               text_options->code_state++;
               convert_to_text_internal (element->e.c->contents.list[0],
                                         text_options, result);
               text_options->code_state--;
             }
-          return;
-        }
-      else if (data_cmd == CM_email)
-        {
-          if (element->e.c->contents.number >= 2)
+          else if (data_cmd == CM_email)
             {
-              TEXT replacement;
-              text_init (&replacement);
-              convert_to_text_internal (element->e.c->contents.list[1],
-                                        text_options, &replacement);
-              if (replacement.end > 0)
+              if (element->e.c->contents.number >= 2)
                 {
-                  ADD(replacement.text);
-                  free (replacement.text);
-                  return;
+                  TEXT replacement;
+                  text_init (&replacement);
+                  convert_to_text_internal (element->e.c->contents.list[1],
+                                            text_options, &replacement);
+                  if (replacement.end > 0)
+                    {
+                      ADD(replacement.text);
+                      free (replacement.text);
+                      return;
+                    }
+                }
+
+              if (element->e.c->contents.number > 0)
+                {
+                  text_options->code_state++;
+                  convert_to_text_internal (element->e.c->contents.list[0],
+                                            text_options, result);
+                  text_options->code_state--;
                 }
             }
-
-          if (element->e.c->contents.number > 0)
-            {
-              text_options->code_state++;
-              convert_to_text_internal (element->e.c->contents.list[0],
-                                        text_options, result);
-              text_options->code_state--;
-            }
-
-          return;
-        }
-      else if (data_cmd == CM_uref || data_cmd == CM_url)
-        {
-          if (element->e.c->contents.number > 0)
+          else if (data_cmd == CM_uref || data_cmd == CM_url)
             {
               TEXT url_text;
 
@@ -795,58 +788,47 @@ convert_to_text_internal (const ELEMENT *element, TEXT_OPTIONS *text_options,
                   free (url_text.text);
                 }
             }
-          return;
-        }
-      else if ((command_data[data_cmd].other_flags & CF_explained)
-               && element->e.c->contents.number >= 2)
-        {
-          TEXT explanation;
-          text_init (&explanation);
-          convert_to_text_internal (element->e.c->contents.list[1],
-                                    text_options, &explanation);
-
-          convert_to_text_internal (element->e.c->contents.list[0],
-                                    text_options, result);
-          if (explanation.end > 0)
+          else if (command_data[data_cmd].other_flags & CF_explained)
             {
-              text_printf (result, " (%s)", explanation.text);
-              free (explanation.text);
-            }
-          return;
-        }
-      else if ((command_data[data_cmd].flags & CF_brace)
-               && command_data[data_cmd].data == BRACE_inline)
-        {
-          size_t arg_index = 1;
-          if (data_cmd == CM_inlineraw)
-            text_options->raw_state++;
+              convert_to_text_internal (element->e.c->contents.list[0],
+                                        text_options, result);
+              if (element->e.c->contents.number >= 2)
+                {
+                  TEXT explanation;
+                  text_init (&explanation);
+                  convert_to_text_internal (element->e.c->contents.list[1],
+                                            text_options, &explanation);
 
-          if (data_cmd == CM_inlinefmtifelse)
+                  if (explanation.end > 0)
+                    {
+                      text_printf (result, " (%s)", explanation.text);
+                      free (explanation.text);
+                    }
+                }
+            }
+          else if (command_data[data_cmd].data == BRACE_inline)
             {
-              char *format = lookup_extra_string (element, AI_key_format);
-              if (!format
-                  || !format_expanded_p (text_options->expanded_formats,
-                                         format))
-                arg_index = 2;
+              size_t arg_index = 1;
+              if (data_cmd == CM_inlineraw)
+                text_options->raw_state++;
+
+              if (data_cmd == CM_inlinefmtifelse)
+                {
+                  char *format = lookup_extra_string (element, AI_key_format);
+                  if (!format
+                      || !format_expanded_p (text_options->expanded_formats,
+                                             format))
+                    arg_index = 2;
+                }
+
+              if (element->e.c->contents.number > arg_index)
+                convert_to_text_internal (element->e.c->contents.list[arg_index],
+                                          text_options, result);
+
+              if (data_cmd == CM_inlineraw)
+                text_options->raw_state--;
             }
-
-          if (element->e.c->contents.number > arg_index)
-            convert_to_text_internal (element->e.c->contents.list[arg_index],
-                                      text_options, result);
-
-          if (data_cmd == CM_inlineraw)
-            text_options->raw_state--;
-          return;
-        }
-      else if (element->e.c->contents.number > 0
-                && (element->e.c->contents.list[0]->type == ET_brace_container
-                    || element->e.c->contents.list[0]->type == ET_brace_arg
-                    || (command_data[data_cmd].flags & CF_brace
-                        && command_data[data_cmd].flags & CF_math)))
-        {
-          int in_code = 0;
-
-          if (data_cmd == CM_U)
+          else if (data_cmd == CM_U)
             {
               int surplus_arg;
               const TEXT *arg_text
@@ -877,25 +859,27 @@ convert_to_text_internal (const ELEMENT *element, TEXT_OPTIONS *text_options,
                       text_append_n (result, arg_text->text, arg_text->end);
                     }
                 }
-              return;
             }
+          else
+            {
+              int in_code = 0;
+              if (data_cmd == CM_sc)
+                text_options->set_case++;
 
-          if (data_cmd == CM_sc)
-            text_options->set_case++;
+              if (command_data[data_cmd].other_flags & CF_brace_code
+                  || command_data[data_cmd].flags & CF_math)
+                in_code = 1;
 
-          if (command_data[data_cmd].other_flags & CF_brace_code
-              || command_data[data_cmd].flags & CF_math)
-            in_code = 1;
+              if (in_code)
+                text_options->code_state++;
+              convert_to_text_internal (element->e.c->contents.list[0],
+                                        text_options, result);
+              if (in_code)
+                text_options->code_state--;
 
-          if (in_code)
-            text_options->code_state++;
-          convert_to_text_internal (element->e.c->contents.list[0],
-                                    text_options, result);
-          if (in_code)
-            text_options->code_state--;
-
-          if (data_cmd == CM_sc)
-            text_options->set_case--;
+              if (data_cmd == CM_sc)
+                text_options->set_case--;
+            }
           return;
         }
       /* block commands */

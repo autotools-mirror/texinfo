@@ -1,5 +1,15 @@
 2026-11-19  Patrice Dumas  <pertusus@free.fr>
 
+	* tta/C/main/convert_to_text.c (convert_to_text_internal),
+	tta/perl/Texinfo/Convert/Text.pm (_convert): rearrange brace commands
+	code in a condition.  Use the same $result variable in Perl.  Check
+	that there are arguments once and avoid returns for each of the
+	command types if possible.  Group the explained_commands conversion
+	whatever the number of arguments.  Remove the condition on remaining
+	brace commands, instead take all remaining brace commands.
+
+2026-11-19  Patrice Dumas  <pertusus@free.fr>
+
 	* tta/perl/Texinfo/Convert/LaTeX.pm (_convert): use
 	get_non_empty_brace_args for definfoenclose and brace arg commands.
 	Use arguments returned by get_non_empty_brace_args instead of element

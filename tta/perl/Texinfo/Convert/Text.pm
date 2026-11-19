@@ -614,98 +614,78 @@ sub _convert($$) {
                 $options->{'enabled_encoding'}, $options->{'ASCII_GLYPH'},
                 $options->{'sort_string'}, $options->{'set_case'});
     # commands with braces
-    } elsif (exists($Texinfo::Commands::brace_commands{$cmdname})
-             and $Texinfo::Commands::brace_commands{$cmdname} eq 'accent') {
-      my $result = text_accents($element, $options->{'enabled_encoding'},
-                                $options->{'set_case'});
-      return $result;
-    } elsif ($cmdname eq 'image') {
-      if (exists($element->{'contents'})) {
-        $options->{'_code_state'}++;
-        my $text = _convert($options, $element->{'contents'}->[0]);
-        $options->{'_code_state'}--;
-        return $text;
-      } else {
+    } elsif (exists($Texinfo::Commands::brace_commands{$cmdname})) {
+      if ($Texinfo::Commands::brace_commands{$cmdname} eq 'accent') {
+        $result = text_accents($element, $options->{'enabled_encoding'},
+                                  $options->{'set_case'});
+      } elsif (!exists($element->{'contents'})) {
         return '';
-      }
-    } elsif ($cmdname eq 'email') {
-      if (exists($element->{'contents'})) {
+      } elsif ($cmdname eq 'image') {
+        $options->{'_code_state'}++;
+        $result = _convert($options, $element->{'contents'}->[0]);
+          $options->{'_code_state'}--;
+      } elsif ($cmdname eq 'email') {
         my $text;
         $text = _convert($options, $element->{'contents'}->[1])
            if (defined($element->{'contents'}->[1]));
-        return $text if (defined($text) and ($text ne ''));
-        $options->{'_code_state'}++;
-        my $mail = _convert($options, $element->{'contents'}->[0]);
-        $options->{'_code_state'}--;
-        return $mail;
-      } else {
-        return '';
-      }
-    } elsif ($cmdname eq 'uref' or $cmdname eq 'url') {
-      if (exists($element->{'contents'})) {
+        if (defined($text) and ($text ne '')) {
+          $result = $text;
+        } else {
+          $options->{'_code_state'}++;
+          my $mail = _convert($options, $element->{'contents'}->[0]);
+          $options->{'_code_state'}--;
+          $result = $mail;
+        }
+      } elsif ($cmdname eq 'uref' or $cmdname eq 'url') {
         my $replacement;
         $replacement = _convert($options, $element->{'contents'}->[2])
           if (defined($element->{'contents'}->[2]));
-        return $replacement if (defined($replacement) and $replacement ne '');
-        my $text;
-        $text = _convert($options, $element->{'contents'}->[1])
-          if (defined($element->{'contents'}->[1]));
-        $options->{'_code_state'}++;
-        my $url = _convert($options, $element->{'contents'}->[0]);
-        $options->{'_code_state'}--;
-        if (defined($text) and $text ne '') {
-          return "$url ($text)";
+        if (defined($replacement) and $replacement ne '') {
+          $result = $replacement;
         } else {
-          return $url;
+          my $text;
+          $text = _convert($options, $element->{'contents'}->[1])
+            if (defined($element->{'contents'}->[1]));
+          $options->{'_code_state'}++;
+          my $url = _convert($options, $element->{'contents'}->[0]);
+          $options->{'_code_state'}--;
+          if (defined($text) and $text ne '') {
+            $result = "$url ($text)";
+          } else {
+            $result = $url;
+          }
         }
-      } else {
-        return '';
-      }
-    # if there is only one argument, it is processed below with the other
-    # brace commands
-    } elsif (exists($Texinfo::Commands::explained_commands{$cmdname})
-             and exists($element->{'contents'})
-             and scalar(@{$element->{'contents'}}) >= 2) {
-      my $explanation = _convert($options, $element->{'contents'}->[1]);
-      if ($explanation ne '') {
-        return _convert($options, $element->{'contents'}->[0])
-                                             ." ($explanation)";
-      } else {
-        return _convert($options, $element->{'contents'}->[0]);
-      }
-    } elsif (exists($Texinfo::Commands::brace_commands{$cmdname})
-             and $Texinfo::Commands::brace_commands{$cmdname} eq 'inline') {
-      if ($cmdname eq 'inlineraw') {
-        $options->{'_raw_state'}++;
-      }
-      my $arg_index = 1;
-      if ($cmdname eq 'inlinefmtifelse'
-          and (!exists($element->{'extra'})
-               or !exists($element->{'extra'}->{'format'})
-               or !exists($options->{'expanded_formats'})
-               or !$options->{'expanded_formats'}
+      } elsif (exists($Texinfo::Commands::explained_commands{$cmdname})) {
+        my $explanation = '';
+        if (scalar(@{$element->{'contents'}}) >= 2) {
+          $explanation = _convert($options, $element->{'contents'}->[1]);
+        }
+        if ($explanation ne '') {
+          $result = _convert($options, $element->{'contents'}->[0])
+                                                    ." ($explanation)";
+        } else {
+          $result = _convert($options, $element->{'contents'}->[0]);
+        }
+      } elsif ($Texinfo::Commands::brace_commands{$cmdname} eq 'inline') {
+        if ($cmdname eq 'inlineraw') {
+          $options->{'_raw_state'}++;
+        }
+        my $arg_index = 1;
+        if ($cmdname eq 'inlinefmtifelse'
+            and (!exists($element->{'extra'})
+                 or !exists($element->{'extra'}->{'format'})
+                 or !exists($options->{'expanded_formats'})
+                 or !$options->{'expanded_formats'}
                                    ->{$element->{'extra'}->{'format'}})) {
-        $arg_index = 2;
-      }
-      my $result = '';
-      if (exists($element->{'contents'})
-          and scalar(@{$element->{'contents'}}) > $arg_index) {
-        $result = _convert($options, $element->{'contents'}->[$arg_index]);
-      }
-      if ($cmdname eq 'inlineraw') {
-        $options->{'_raw_state'}--;
-      }
-      return $result;
-    } elsif (exists($element->{'contents'})
-           and ((exists($element->{'contents'}->[0]->{'type'})
-                and ($element->{'contents'}->[0]->{'type'} eq 'brace_container'
-                     or $element->{'contents'}->[0]->{'type'} eq 'brace_arg'))
-                or (exists($Texinfo::Commands::math_commands{$cmdname})
-                    and exists($Texinfo::Commands::brace_commands{$cmdname})))) {
-      my $result;
-      my $in_code;
-
-      if ($cmdname eq 'U') {
+          $arg_index = 2;
+        }
+        if (scalar(@{$element->{'contents'}}) > $arg_index) {
+          $result = _convert($options, $element->{'contents'}->[$arg_index]);
+        }
+        if ($cmdname eq 'inlineraw') {
+          $options->{'_raw_state'}--;
+        }
+      } elsif ($cmdname eq 'U') {
         my ($arg_text, $surplus_arg)
           = Texinfo::Common::simple_arg_text($element->{'contents'}->[0]);
         if (defined($arg_text) and $arg_text ne '') {
@@ -727,21 +707,20 @@ sub _convert($$) {
           } else {
             $result = "U+$arg_text";
           }
-        } else {
-          $result = '';
         }
-        return $result;
-      }
+      } else {
+        my $in_code;
 
-      $options->{'set_case'}++ if ($cmdname eq 'sc');
-      if (exists($Texinfo::Commands::brace_code_commands{$cmdname})
-          or exists($Texinfo::Commands::math_commands{$cmdname})) {
-        $in_code = 1;
+        $options->{'set_case'}++ if ($cmdname eq 'sc');
+        if (exists($Texinfo::Commands::brace_code_commands{$cmdname})
+            or exists($Texinfo::Commands::math_commands{$cmdname})) {
+          $in_code = 1;
+        }
+        $options->{'_code_state'}++ if ($in_code);
+        $result = _convert($options, $element->{'contents'}->[0]);
+        $options->{'_code_state'}-- if ($in_code);
+        $options->{'set_case'}-- if ($cmdname eq 'sc');
       }
-      $options->{'_code_state'}++ if ($in_code);
-      $result = _convert($options, $element->{'contents'}->[0]);
-      $options->{'_code_state'}-- if ($in_code);
-      $options->{'set_case'}-- if ($cmdname eq 'sc');
       return $result;
     # block commands
     } elsif ($cmdname eq 'quotation'
