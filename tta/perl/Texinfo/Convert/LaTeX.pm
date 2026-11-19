@@ -3391,736 +3391,716 @@ sub _convert($$) {
       }
       return $result;
     # commands with braces
-    } elsif (exists($Texinfo::Commands::brace_commands{$cmdname})
-             and $Texinfo::Commands::brace_commands{$cmdname} eq 'accent') {
-      if ($self->{'output_characters'}) {
-        my $encoding = $self->{'output_encoding_name'};
-        my $sc;
-        my $accented_text
-           = Texinfo::Convert::Text::text_accents($element, $encoding, $sc);
-        $result .= _protect_text($self, $accented_text);
-      } else {
-        my $accent_arg = '';
+    } elsif (exists($Texinfo::Commands::brace_commands{$cmdname})) {
+      if ($Texinfo::Commands::brace_commands{$cmdname} eq 'accent') {
+        if ($self->{'output_characters'}) {
+          my $encoding = $self->{'output_encoding_name'};
+          my $sc;
+          my $accented_text
+             = Texinfo::Convert::Text::text_accents($element, $encoding, $sc);
+          $result .= _protect_text($self, $accented_text);
+        } else {
+          my $accent_arg = '';
 
-        if (exists($LaTeX_accent_commands{$command_format_context}->{$cmdname})) {
-          $result
+          if (exists(
+              $LaTeX_accent_commands{$command_format_context}->{$cmdname})) {
+            $result
            .= "\\$LaTeX_accent_commands{$command_format_context}->{$cmdname}\{";
-          if (exists($element->{'contents'})) {
-            $accent_arg = _convert($self, $element->{'contents'}->[0]);
-          }
-          $result .= $accent_arg;
-          $result .= '}';
-        } elsif ($cmdname eq 'dotless') {
-          if (exists($element->{'contents'})) {
-            $accent_arg = _convert($self, $element->{'contents'}->[0]);
-          }
-          if ($accent_arg eq 'i' or $accent_arg eq 'j') {
-            if ($command_format_context eq 'cmd_math') {
-              $result .= "\\${accent_arg}math{}";
-            } else {
-              $result .= "\\${accent_arg}{}";
+            if (exists($element->{'contents'})) {
+              $accent_arg = _convert($self, $element->{'contents'}->[0]);
             }
-          } else {
-            # should be an error, but we do not care, it is better if it is
-            # handled during parsing
-            $result .= _protect_text($self, $accent_arg);
-          }
-          return $result;
-        # accent without math mode command, use slanted text
-        } elsif ($command_format_context eq 'cmd_math'
-                 and exists($LaTeX_accent_commands{'cmd_text'}->{$cmdname})) {
-          $result
+            $result .= $accent_arg;
+            $result .= '}';
+          } elsif ($cmdname eq 'dotless') {
+            if (exists($element->{'contents'})) {
+              $accent_arg = _convert($self, $element->{'contents'}->[0]);
+            }
+            if ($accent_arg eq 'i' or $accent_arg eq 'j') {
+              if ($command_format_context eq 'cmd_math') {
+                $result .= "\\${accent_arg}math{}";
+              } else {
+                $result .= "\\${accent_arg}{}";
+              }
+            } else {
+              # should be an error, but we do not care, it is better if it is
+              # handled during parsing
+              $result .= _protect_text($self, $accent_arg);
+            }
+            return $result;
+          # accent without math mode command, use slanted text
+          } elsif ($command_format_context eq 'cmd_math'
+                   and exists($LaTeX_accent_commands{'cmd_text'}->{$cmdname})) {
+            $result
                .= "\\textsl{\\$LaTeX_accent_commands{'cmd_text'}->{$cmdname}\{";
-          # we do not want accents within to be math accents
-          if (exists($element->{'contents'})) {
-            push @{$self->{'formatting_context'}->[-1]->{'text_context'}},
-                 'ctx_text';
-            $accent_arg = _convert($self, $element->{'contents'}->[0]);
-            my $old_context
-              = pop @{$self->{'formatting_context'}->[-1]->{'text_context'}};
+            # we do not want accents within to be math accents
+            if (exists($element->{'contents'})) {
+              push @{$self->{'formatting_context'}->[-1]->{'text_context'}},
+                   'ctx_text';
+              $accent_arg = _convert($self, $element->{'contents'}->[0]);
+              my $old_context
+                = pop @{$self->{'formatting_context'}->[-1]->{'text_context'}};
+            }
+            $result .= $accent_arg;
+            $result .= '}}';
           }
-          $result .= $accent_arg;
-          $result .= '}}';
         }
-      }
-      return $result;
-    } elsif (exists($LaTeX_style_brace_commands{'cmd_text'}->{$cmdname})
-         or (exists($element->{'type'})
-             and $element->{'type'} eq 'definfoenclose_command')) {
-      my $did_stop_embrac = 0;
-      ($result, $did_stop_embrac) = _stop_embrac($self, $result)
-         if ($cmdname eq 'r');
-      my $formatted_cmdname;
-      if ($cmdname eq 'kbd' and _kbd_code_style($self)) {
-        # use code for kbd formatting if needed
-        $formatted_cmdname = 'code';
-      } else {
-        $formatted_cmdname = $cmdname;
-      }
-      if (exists($brace_code_commands{$cmdname})) {
-        push @{$self->{'formatting_context'}->[-1]->{'code'}}, 1;
-      } elsif ($roman_style_commands{$cmdname}) {
-        push @{$self->{'formatting_context'}->[-1]->{'code'}}, 0;
-      }
-      if (exists($self->{'quotes_map'}->{$formatted_cmdname})) {
-        $result .= $self->{'quotes_map'}->{$formatted_cmdname}->[0];
-      }
-      my $command_format_context = $command_format_context;
-      # gather for outputting in the preamble if associated to a new command
-      if ($style_brace_format_command_new_commands{$command_format_context}
+      } elsif (exists($LaTeX_style_brace_commands{'cmd_text'}->{$cmdname})
+           or (exists($element->{'type'})
+               and $element->{'type'} eq 'definfoenclose_command')) {
+        my $did_stop_embrac = 0;
+        ($result, $did_stop_embrac) = _stop_embrac($self, $result)
+           if ($cmdname eq 'r');
+        my $formatted_cmdname;
+        if ($cmdname eq 'kbd' and _kbd_code_style($self)) {
+          # use code for kbd formatting if needed
+          $formatted_cmdname = 'code';
+        } else {
+          $formatted_cmdname = $cmdname;
+        }
+        if (exists($brace_code_commands{$cmdname})) {
+          push @{$self->{'formatting_context'}->[-1]->{'code'}}, 1;
+        } elsif ($roman_style_commands{$cmdname}) {
+          push @{$self->{'formatting_context'}->[-1]->{'code'}}, 0;
+        }
+        if (exists($self->{'quotes_map'}->{$formatted_cmdname})) {
+          $result .= $self->{'quotes_map'}->{$formatted_cmdname}->[0];
+        }
+        my $command_format_context = $command_format_context;
+        # gather for outputting in the preamble if associated to a new command
+        if ($style_brace_format_command_new_commands{$command_format_context}
                                                      ->{$formatted_cmdname}) {
-        $self->{'style_brace_format_commands'}->{$command_format_context}
+          $self->{'style_brace_format_commands'}->{$command_format_context}
                                                      ->{$formatted_cmdname} = 1;
-      }
-      if ($LaTeX_style_brace_commands{$command_format_context}
+        }
+        if ($LaTeX_style_brace_commands{$command_format_context}
                                                        ->{$formatted_cmdname}) {
-        my $LaTeX_style_command
-          = $LaTeX_style_brace_commands{$command_format_context}
+          my $LaTeX_style_command
+            = $LaTeX_style_brace_commands{$command_format_context}
                                                  ->{$formatted_cmdname};
-        if (exists($need_known_embrac{$LaTeX_style_command})
-            and scalar(@{$self->{'formatting_context'}->[-1]->{'embrac'}})
-            and $self->{'formatting_context'}->[-1]->{'embrac'}->[-1]->{'status'} == 1) {
-          my $defined_style_embrac = $need_known_embrac{$LaTeX_style_command};
-          $self->{'formatting_context'}->[-1]->{'embrac'}->[-1]
-                       ->{'made_known'}->{$defined_style_embrac} = 1;
+          if (exists($need_known_embrac{$LaTeX_style_command})
+              and scalar(@{$self->{'formatting_context'}->[-1]->{'embrac'}})
+              and $self->{'formatting_context'}->[-1]->{'embrac'}->[-1]->{'status'} == 1) {
+            my $defined_style_embrac = $need_known_embrac{$LaTeX_style_command};
+            $self->{'formatting_context'}->[-1]->{'embrac'}->[-1]
+                         ->{'made_known'}->{$defined_style_embrac} = 1;
+          }
+          $result .= "$LaTeX_style_command\{";
         }
-        $result .= "$LaTeX_style_command\{";
-      }
-      if ($element->{'contents'}) {
-        $result .= _convert($self, $element->{'contents'}->[0]);
-      }
-      if ($LaTeX_style_brace_commands{$command_format_context}
+        if ($element->{'contents'}) {
+          $result .= _convert($self, $element->{'contents'}->[0]);
+        }
+        if ($LaTeX_style_brace_commands{$command_format_context}
                                                    ->{$formatted_cmdname}) {
-        $result .= '}';
-      }
-      if ($self->{'quotes_map'}->{$formatted_cmdname}) {
-        $result .= $self->{'quotes_map'}->{$formatted_cmdname}->[1];
-      }
-      if ($brace_code_commands{$cmdname}) {
-        pop @{$self->{'formatting_context'}->[-1]->{'code'}};
-      } elsif ($roman_style_commands{$cmdname}) {
-        pop @{$self->{'formatting_context'}->[-1]->{'code'}};
-      }
-      $result = _restart_embrac_if_needed($self, $result, $did_stop_embrac);
-      return $result;
-    } elsif ($def_line_commands{$cmdname}) {
-      $result .= _convert_def_line($self, $element);
-      return $result;
-    } elsif ($cmdname eq 'dmn') {
-      $result .= '\\thinspace ';
-      if ($element->{'contents'}) {
-        $result .= _convert($self, $element->{'contents'}->[0]);
-      }
-      return $result;
-    } elsif ($cmdname eq 'verb') {
-      # NOTE \verb is forbidden in other macros in LaTeX.  We do
-      # not enforce this constraint here, nor warn.  Checking
-      # whether we are in another LaTeX macro would probably be a pain.
-      # It should be ok, though, as it is described as an error in the manual:
-      #   It is not reliable to use @verb inside other Texinfo constructs
-      my $delim;
-      if ($element->{'info'}
-          and defined($element->{'info'}->{'delimiter'})) {
-        $delim = $element->{'info'}->{'delimiter'};
-      } else {
-        # delimiter also tried below
-        $delim = '|';
-      }
-      my $contents = '';
-      my @lines;
-
-      push @{$self->{'formatting_context'}->[-1]->{'text_context'}}, 'ctx_raw';
-      if ($element->{'contents'}) {
-        $contents = _convert($self, $element->{'contents'}->[0]);
-        @lines = split /\n/, $contents, -1;
-      }
-      my $old_context
-         = pop @{$self->{'formatting_context'}->[-1]->{'text_context'}};
-      die if ($old_context ne 'ctx_raw');
-
-      my @lines_out;
-    LINE:
-      for my $line (@lines) {
-        # Check delimiter is not in contents.  If it is, try other characters.
-        for my $char ($delim, '|', '!', ':', '@') {
-          if (index($line, $char) == -1) {
-            push @lines_out, "\\verb$char$line$char";
-            next LINE;
-          }
+          $result .= '}';
         }
-        $self->converter_line_warn(
-           sprintf(__("\\verb delimiter `%s' (for LaTeX) used in text `%s'"),
-                      $delim, $line),
-           $element->{'source_info'});
-        push @lines_out, "\\verb$delim$delim";
-      }
-      $result .= join "\\\\\n", @lines_out;
-      return $result;
-    } elsif ($cmdname eq 'image') {
-      if (exists($element->{'contents'})
-          and !Texinfo::Common::empty_spaces_argument(
-                                  $element->{'contents'}->[0])) {
-        # distinguish text basefile used to find the file and
-        # converted basefile with special characters escaped
-        Texinfo::Convert::Text::set_options_code(
-                                 $self->{'convert_text_options'});
-        Texinfo::Convert::Text::set_options_encoding_if_not_ascii($self,
-                                  $self->{'convert_text_options'});
-        my $basefile = Texinfo::Convert::Text::convert_to_text(
-                                        $element->{'contents'}->[0],
-                                    $self->{'convert_text_options'});
-        Texinfo::Convert::Text::reset_options_code(
-                                 $self->{'convert_text_options'});
-        Texinfo::Convert::Text::reset_options_encoding(
-                                 $self->{'convert_text_options'});
-
-        # warn if no file is found, even though the basefile is used
-        # in any case.
-        my $image_file_found;
-        foreach my $extension (@LaTeX_image_extensions) {
-          my ($file_name, $file_name_encoding)
-             = $self->encoded_input_file_name("$basefile.$extension");
-          my ($located_file, $use_inc_dir) =
-            Texinfo::Common::locate_include_file($file_name,
-                                  $self->get_conf('INCLUDE_DIRECTORIES'));
-          if (defined($located_file)) {
-            $image_file_found = 1;
-            last;
-          }
+        if ($self->{'quotes_map'}->{$formatted_cmdname}) {
+          $result .= $self->{'quotes_map'}->{$formatted_cmdname}->[1];
         }
-        if (not $image_file_found) {
+        if ($brace_code_commands{$cmdname}) {
+          pop @{$self->{'formatting_context'}->[-1]->{'code'}};
+        } elsif ($roman_style_commands{$cmdname}) {
+          pop @{$self->{'formatting_context'}->[-1]->{'code'}};
+        }
+        $result = _restart_embrac_if_needed($self, $result, $did_stop_embrac);
+      } elsif ($cmdname eq 'dmn') {
+        $result .= '\\thinspace ';
+        if ($element->{'contents'}) {
+          $result .= _convert($self, $element->{'contents'}->[0]);
+        }
+      } elsif ($cmdname eq 'verb') {
+        # NOTE \verb is forbidden in other macros in LaTeX.  We do
+        # not enforce this constraint here, nor warn.  Checking
+        # whether we are in another LaTeX macro would probably be a pain.
+        # It should be ok, though, as it is described as an error in the manual:
+        #   It is not reliable to use @verb inside other Texinfo constructs
+        my $delim;
+        if ($element->{'info'}
+            and defined($element->{'info'}->{'delimiter'})) {
+          $delim = $element->{'info'}->{'delimiter'};
+        } else {
+          # delimiter also tried below
+          $delim = '|';
+        }
+        my $contents = '';
+        my @lines;
+
+        push @{$self->{'formatting_context'}->[-1]->{'text_context'}}, 'ctx_raw';
+        if ($element->{'contents'}) {
+          $contents = _convert($self, $element->{'contents'}->[0]);
+          @lines = split /\n/, $contents, -1;
+        }
+        my $old_context
+           = pop @{$self->{'formatting_context'}->[-1]->{'text_context'}};
+        die if ($old_context ne 'ctx_raw');
+
+        my @lines_out;
+      LINE:
+        for my $line (@lines) {
+          # Check delimiter is not in contents.  If it is, try other characters.
+          for my $char ($delim, '|', '!', ':', '@') {
+            if (index($line, $char) == -1) {
+              push @lines_out, "\\verb$char$line$char";
+              next LINE;
+            }
+          }
           $self->converter_line_warn(
+             sprintf(__("\\verb delimiter `%s' (for LaTeX) used in text `%s'"),
+                        $delim, $line),
+             $element->{'source_info'});
+          push @lines_out, "\\verb$delim$delim";
+        }
+        $result .= join "\\\\\n", @lines_out;
+      } elsif ($cmdname eq 'image') {
+        if (exists($element->{'contents'})
+            and !Texinfo::Common::empty_spaces_argument(
+                                    $element->{'contents'}->[0])) {
+          # distinguish text basefile used to find the file and
+          # converted basefile with special characters escaped
+          Texinfo::Convert::Text::set_options_code(
+                                   $self->{'convert_text_options'});
+          Texinfo::Convert::Text::set_options_encoding_if_not_ascii($self,
+                                    $self->{'convert_text_options'});
+          my $basefile = Texinfo::Convert::Text::convert_to_text(
+                                          $element->{'contents'}->[0],
+                                      $self->{'convert_text_options'});
+          Texinfo::Convert::Text::reset_options_code(
+                                   $self->{'convert_text_options'});
+          Texinfo::Convert::Text::reset_options_encoding(
+                                   $self->{'convert_text_options'});
+
+          # warn if no file is found, even though the basefile is used
+          # in any case.
+          my $image_file_found;
+          foreach my $extension (@LaTeX_image_extensions) {
+            my ($file_name, $file_name_encoding)
+               = $self->encoded_input_file_name("$basefile.$extension");
+            my ($located_file, $use_inc_dir) =
+              Texinfo::Common::locate_include_file($file_name,
+                                    $self->get_conf('INCLUDE_DIRECTORIES'));
+            if (defined($located_file)) {
+              $image_file_found = 1;
+              last;
+            }
+          }
+          if (not $image_file_found) {
+            $self->converter_line_warn(
                          sprintf(__("\@image file `%s' (for LaTeX) not found"),
                                  $basefile),
                            $element->{'source_info'});
-        }
-        # Use the basename and not the file found.  It is agreed that it is
-        # better, since in any case the files are moved.
-        # If the file path found was to be used it should be decoded to perl
-        # codepoints too.
-        # using basefile with escaped characters, no extension to let LaTeX
-        # choose the extension
-        # for LaTeX > 2020 (approximately) the file name does not need any
-        # protection, and cannot have anything protected as \ is left as
-        # is and does not protect the next character.  % and \% cannot
-        # appear in file name.
-        my $converted_basefile = $basefile;
-        # no need nor possibility of escaping
-        #$converted_basefile =~ s/([%{}\\])/\\$1/g;
-        my $image_file = $converted_basefile;
+          }
+          # Use the basename and not the file found.  It is agreed that it is
+          # better, since in any case the files are moved.
+          # If the file path found was to be used it should be decoded to perl
+          # codepoints too.
+          # using basefile with escaped characters, no extension to let LaTeX
+          # choose the extension
+          # for LaTeX > 2020 (approximately) the file name does not need any
+          # protection, and cannot have anything protected as \ is left as
+          # is and does not protect the next character.  % and \% cannot
+          # appear in file name.
+          my $converted_basefile = $basefile;
+          # no need nor possibility of escaping
+          #$converted_basefile =~ s/([%{}\\])/\\$1/g;
+          my $image_file = $converted_basefile;
 
-        my @image_options;
-        if (scalar(@{$element->{'contents'}}) >= 2) {
-          push @{$self->{'formatting_context'}->[-1]->{'text_context'}},
-               'ctx_raw';
-          my $width = _convert($self, $element->{'contents'}->[1]);
-          my $old_context
-            = pop @{$self->{'formatting_context'}->[-1]->{'text_context'}};
-          die if ($old_context ne 'ctx_raw');
-          if ($width =~ /\S/) {
-            push @image_options, "width=$width";
+          my @image_options;
+          if (scalar(@{$element->{'contents'}}) >= 2) {
+            push @{$self->{'formatting_context'}->[-1]->{'text_context'}},
+                 'ctx_raw';
+            my $width = _convert($self, $element->{'contents'}->[1]);
+            my $old_context
+              = pop @{$self->{'formatting_context'}->[-1]->{'text_context'}};
+            die if ($old_context ne 'ctx_raw');
+            if ($width =~ /\S/) {
+              push @image_options, "width=$width";
+            }
           }
-        }
-        if (scalar(@{$element->{'contents'}}) >= 3) {
-          push @{$self->{'formatting_context'}->[-1]->{'text_context'}},
-               'ctx_raw';
-          my $height = _convert($self, $element->{'contents'}->[2]);
-          my $old_context
-             = pop @{$self->{'formatting_context'}->[-1]->{'text_context'}};
-          die if ($old_context ne 'ctx_raw');
-          if ($height =~ /\S/) {
-            push @image_options, "height=$height";
+          if (scalar(@{$element->{'contents'}}) >= 3) {
+            push @{$self->{'formatting_context'}->[-1]->{'text_context'}},
+                 'ctx_raw';
+            my $height = _convert($self, $element->{'contents'}->[2]);
+            my $old_context
+               = pop @{$self->{'formatting_context'}->[-1]->{'text_context'}};
+            die if ($old_context ne 'ctx_raw');
+            if ($height =~ /\S/) {
+              push @image_options, "height=$height";
+            }
           }
-        }
-        if (scalar(@{$element->{'contents'}}) >= 4
-            and !Texinfo::Common::empty_spaces_argument(
-                                 $element->{'contents'}->[3])) {
-          my $alt_text = Texinfo::Convert::Text::convert_to_text(
-                                  $element->{'contents'}->[3],
-                                    $self->{'convert_text_options'});
-          if ($alt_text =~ /\S/) {
-            # in {} in PDF attributes, [] do not need to be escaped, and the
-            # processor tries to consider input text as plain text, therefore
-            # only {, } and % need to be escaped.
-            #$alt_text =~ s/([{}%])/\\$1/g;
-            # However, if includegraphics is redefined, as in tests as
-            # \renewcommand{\includegraphics}[1]{\fbox{FIG \detokenize{#1}}}
-            # it may be more robust to protect more
-            $alt_text = _protect_latex_text($alt_text);
-            push @image_options, "alt={$alt_text}";
+          if (scalar(@{$element->{'contents'}}) >= 4
+              and !Texinfo::Common::empty_spaces_argument(
+                                   $element->{'contents'}->[3])) {
+            my $alt_text = Texinfo::Convert::Text::convert_to_text(
+                                    $element->{'contents'}->[3],
+                                      $self->{'convert_text_options'});
+            if ($alt_text =~ /\S/) {
+              # in {} in PDF attributes, [] do not need to be escaped, and the
+              # processor tries to consider input text as plain text, therefore
+              # only {, } and % need to be escaped.
+              #$alt_text =~ s/([{}%])/\\$1/g;
+              # However, if includegraphics is redefined, as in tests as
+              # \renewcommand{\includegraphics}[1]{\fbox{FIG \detokenize{#1}}}
+              # it may be more robust to protect more
+              $alt_text = _protect_latex_text($alt_text);
+              push @image_options, "alt={$alt_text}";
+            }
           }
-        }
 
-        $result .= "\\includegraphics";
-        if (scalar(@image_options) > 0) {
-          $result .= "[";
-          $result .= join(',', @image_options);
-          $result .= "]";
+          $result .= "\\includegraphics";
+          if (scalar(@image_options) > 0) {
+            $result .= "[";
+            $result .= join(',', @image_options);
+            $result .= "]";
+          }
+          $result .= "{$image_file}";
         }
-        $result .= "{$image_file}";
-      }
-      return $result;
-    } elsif ($cmdname eq 'email') {
-      if (exists($element->{'contents'})) {
-        my $name;
-        my $converted_name;
-        my $email_arg;
-        my $email_text;
-        if (scalar(@{$element->{'contents'}}) == 2
-            and not Texinfo::Common::empty_spaces_argument(
-                                     $element->{'contents'}->[1])) {
-          $name = $element->{'contents'}->[1];
-          $converted_name = _convert($self, $name);
-        }
-        if (not Texinfo::Common::empty_spaces_argument(
-                                  $element->{'contents'}->[0])) {
-          $email_arg = $element->{'contents'}->[0];
-          Texinfo::Convert::Text::set_options_code(
-                          $self->{'convert_text_options'});
-          $email_text
-            = _protect_url($self, Texinfo::Convert::Text::convert_to_text(
-                                                    $email_arg,
-                                       $self->{'convert_text_options'}));
-          Texinfo::Convert::Text::reset_options_code(
-                                         $self->{'convert_text_options'});
-        }
-        if ($name and $email_arg) {
-          $result .= "\\href{mailto:$email_text}{$converted_name}";
-        } elsif ($email_arg) {
-          $result .= "\\href{mailto:$email_text}{\\nolinkurl{$email_text}}";
-        } elsif ($name) {
-          $result .= $converted_name;
-        }
-      }
-      return $result;
-    } elsif ($cmdname eq 'uref' or $cmdname eq 'url') {
-      if ($element->{'contents'}) {
-        if (scalar(@{$element->{'contents'}}) == 3
-             and not Texinfo::Common::empty_spaces_argument(
-                                     $element->{'contents'}->[2])) {
-          unshift @{$self->{'current_contents'}->[-1]},
-                     $element->{'contents'}->[2];
-        } elsif (not Texinfo::Common::empty_spaces_argument(
-                              $element->{'contents'}->[0])) {
-          my $url_arg = $element->{'contents'}->[0];
-          Texinfo::Convert::Text::set_options_code(
-                                   $self->{'convert_text_options'});
-          my $url_text = _protect_url($self,
-            Texinfo::Convert::Text::convert_to_text($url_arg,
-                                 $self->{'convert_text_options'}));
-          Texinfo::Convert::Text::reset_options_code(
-                                   $self->{'convert_text_options'});
+      } elsif ($cmdname eq 'email') {
+        if (exists($element->{'contents'})) {
+          my $name;
+          my $converted_name;
+          my $email_arg;
+          my $email_text;
           if (scalar(@{$element->{'contents'}}) == 2
               and not Texinfo::Common::empty_spaces_argument(
-                                  $element->{'contents'}->[1])) {
-            my $description_text = _convert($self, $element->{'contents'}->[1]);
-            my $text = $self->cdt_string('{text} ({url})',
-              {'text' => $description_text, 'url' => "\\nolinkurl{$url_text}"});
-            $result .= "\\href{$url_text}{$text}";
-            return $result;
-          } else {
-            $result .= "\\url{$url_text}";
-            return $result;
+                                       $element->{'contents'}->[1])) {
+            $name = $element->{'contents'}->[1];
+            $converted_name = _convert($self, $name);
           }
-        } elsif (scalar(@{$element->{'contents'}}) == 2
-                 and not Texinfo::Common::empty_spaces_argument(
-                         $element->{'contents'}->[1])) {
-          unshift @{$self->{'current_contents'}->[-1]},
-            {'contents' => $element->{'contents'}->[1]->{'contents'}};
-        }
-      }
-      return $result;
-    } elsif ($cmdname eq 'footnote') {
-      _push_new_context($self, 'footnote');
-      $result .= '\footnote{';
-      if ($element->{'contents'}) {
-        $result .= _convert($self, $element->{'contents'}->[0]);
-      }
-      $result .= '}';
-      _pop_context($self);
-      return $result;
-    } elsif ($cmdname eq 'anchor' or $cmdname eq 'namedanchor') {
-      if (exists($element->{'contents'})) {
-        my $anchor_label
-           = _tree_anchor_label($element->{'contents'}->[0]);
-        $result .= "\\label{$anchor_label}%\n";
-      }
-      return $result;
-    } elsif ($ref_commands{$cmdname}) {
-      if ($element->{'contents'}) {
-        my @args;
-        foreach my $arg (@{$element->{'contents'}}) {
-          if (Texinfo::Common::empty_spaces_argument($arg)) {
-            push @args, undef;
-          } else {
-            push @args, $arg;
+          if (not Texinfo::Common::empty_spaces_argument(
+                                    $element->{'contents'}->[0])) {
+            $email_arg = $element->{'contents'}->[0];
+            Texinfo::Convert::Text::set_options_code(
+                            $self->{'convert_text_options'});
+            $email_text
+              = _protect_url($self, Texinfo::Convert::Text::convert_to_text(
+                                                      $email_arg,
+                                         $self->{'convert_text_options'}));
+            Texinfo::Convert::Text::reset_options_code(
+                                           $self->{'convert_text_options'});
+          }
+          if ($name and $email_arg) {
+            $result .= "\\href{mailto:$email_text}{$converted_name}";
+          } elsif ($email_arg) {
+            $result .= "\\href{mailto:$email_text}{\\nolinkurl{$email_text}}";
+          } elsif ($name) {
+            $result .= $converted_name;
           }
         }
-        my $node_arg = $element->{'contents'}->[0];
-        if (($cmdname eq 'link' or $cmdname eq 'inforef')
-            and scalar(@args) == 3) {
-          $args[3] = $args[2]; # use as the manual argument
-          $args[2] = undef;
-        }
-        my $book = '';
-        if (defined($args[4])) {
-          $book = _convert($self, $args[4]);
-        }
-
-        my $file_element;
-        if (defined($args[3])) {
-          $file_element = $args[3];
-        }
-        my $filename = '';
-        if ($file_element) {
-          push @{$self->{'formatting_context'}->[-1]->{'code'}}, 1;
-          $filename = _convert($self, $file_element);
-          pop @{$self->{'formatting_context'}->[-1]->{'code'}};
-        }
-
-        my $identifiers_target;
-        if ($self->{'document'}) {
-          $identifiers_target = $self->{'document'}->labels_information();
-        }
-
-        if ($cmdname ne 'inforef' and $book eq '' and $filename eq ''
-            and $node_arg and $node_arg->{'extra'}
-            and defined($node_arg->{'extra'}->{'normalized'})
-            and $identifiers_target
-            and $identifiers_target->{$node_arg->{'extra'}->{'normalized'}}) {
-          # internal reference
-          my $reference
-           = $identifiers_target->{$node_arg->{'extra'}->{'normalized'}};
-          my $label_element = Texinfo::Common::get_label_element($reference);
-
-          my $section_command;
-          my $associated_title_command;
-          if ($reference->{'cmdname'} eq 'node'
-              and exists($self->{'document'})
-              and exists($reference->{'extra'})
-              and $reference->{'extra'}->{'node_number'}) {
-            my $nodes_list = $self->{'document'}->nodes_list();
-            my $node_relations
-             = $nodes_list->[$reference->{'extra'}->{'node_number'} -1];
-            $associated_title_command
-              = $node_relations->{'associated_title_command'};
-          }
-
-          if (defined($associated_title_command)) {
-            $section_command = $associated_title_command;
-          } elsif ($reference->{'cmdname'} ne 'float') {
-            my $normalized_name
-              = $node_arg->{'extra'}->{'normalized'};
-            if ($self->{'normalized_nodes_associated_section'}
-                and $self->{'normalized_nodes_associated_section'}
-                                                         ->{$normalized_name}) {
-              $section_command
-                = $self->{'normalized_nodes_associated_section'}
-                                                        ->{$normalized_name};
-            } elsif ($reference->{'cmdname'} eq 'node') {
-              # can only happen if there is no sectioning commands at all,
-              # otherwise it would have been associated in
-              # _associate_other_nodes_to_sections.  Nothing to do in that case.
+      } elsif ($cmdname eq 'uref' or $cmdname eq 'url') {
+        if ($element->{'contents'}) {
+          if (scalar(@{$element->{'contents'}}) == 3
+               and not Texinfo::Common::empty_spaces_argument(
+                                       $element->{'contents'}->[2])) {
+            unshift @{$self->{'current_contents'}->[-1]},
+                       $element->{'contents'}->[2];
+          } elsif (not Texinfo::Common::empty_spaces_argument(
+                                $element->{'contents'}->[0])) {
+            my $url_arg = $element->{'contents'}->[0];
+            Texinfo::Convert::Text::set_options_code(
+                                     $self->{'convert_text_options'});
+            my $url_text = _protect_url($self,
+              Texinfo::Convert::Text::convert_to_text($url_arg,
+                                   $self->{'convert_text_options'}));
+            Texinfo::Convert::Text::reset_options_code(
+                                     $self->{'convert_text_options'});
+            if (scalar(@{$element->{'contents'}}) == 2
+                and not Texinfo::Common::empty_spaces_argument(
+                                    $element->{'contents'}->[1])) {
+              my $description_text = _convert($self, $element->{'contents'}->[1]);
+              my $text = $self->cdt_string('{text} ({url})',
+                {'text' => $description_text, 'url' => "\\nolinkurl{$url_text}"});
+              $result .= "\\href{$url_text}{$text}";
             } else {
-              # Find associated section using top level parent @-command.
-              my $current = $reference;
-              while ($current->{'parent'}) {
-                $current = $current->{'parent'};
-                if ($current->{'cmdname'}
-                    and $root_commands{$current->{'cmdname'}}) {
-                  if ($current->{'cmdname'} ne 'node') {
-                    $section_command = $current;
-                  } else {
-                    if ($self->{'document'}) {
-                      my $nodes_list = $self->{'document'}->nodes_list();
-                      my $node_relations
-                        = $nodes_list->[$current->{'extra'}->{'node_number'} -1];
-                      if ($node_relations->{'associated_section'}) {
+              $result .= "\\url{$url_text}";
+            }
+          } elsif (scalar(@{$element->{'contents'}}) == 2
+                   and not Texinfo::Common::empty_spaces_argument(
+                           $element->{'contents'}->[1])) {
+            unshift @{$self->{'current_contents'}->[-1]},
+              {'contents' => $element->{'contents'}->[1]->{'contents'}};
+          }
+        }
+      } elsif ($cmdname eq 'footnote') {
+        _push_new_context($self, 'footnote');
+        $result .= '\footnote{';
+        if ($element->{'contents'}) {
+          $result .= _convert($self, $element->{'contents'}->[0]);
+        }
+        $result .= '}';
+        _pop_context($self);
+      } elsif ($cmdname eq 'anchor' or $cmdname eq 'namedanchor') {
+        if (exists($element->{'contents'})) {
+          my $anchor_label
+             = _tree_anchor_label($element->{'contents'}->[0]);
+          $result .= "\\label{$anchor_label}%\n";
+        }
+      } elsif ($ref_commands{$cmdname}) {
+        if ($element->{'contents'}) {
+          my @args;
+          foreach my $arg (@{$element->{'contents'}}) {
+            if (Texinfo::Common::empty_spaces_argument($arg)) {
+              push @args, undef;
+            } else {
+              push @args, $arg;
+            }
+          }
+          my $node_arg = $element->{'contents'}->[0];
+          if (($cmdname eq 'link' or $cmdname eq 'inforef')
+              and scalar(@args) == 3) {
+            $args[3] = $args[2]; # use as the manual argument
+            $args[2] = undef;
+          }
+          my $book = '';
+          if (defined($args[4])) {
+            $book = _convert($self, $args[4]);
+          }
+
+          my $file_element;
+          if (defined($args[3])) {
+            $file_element = $args[3];
+          }
+          my $filename = '';
+          if ($file_element) {
+            push @{$self->{'formatting_context'}->[-1]->{'code'}}, 1;
+            $filename = _convert($self, $file_element);
+            pop @{$self->{'formatting_context'}->[-1]->{'code'}};
+          }
+
+          my $identifiers_target;
+          if ($self->{'document'}) {
+            $identifiers_target = $self->{'document'}->labels_information();
+          }
+
+          if ($cmdname ne 'inforef' and $book eq '' and $filename eq ''
+              and $node_arg and $node_arg->{'extra'}
+              and defined($node_arg->{'extra'}->{'normalized'})
+              and $identifiers_target
+              and $identifiers_target->{$node_arg->{'extra'}->{'normalized'}}) {
+            # internal reference
+            my $reference
+             = $identifiers_target->{$node_arg->{'extra'}->{'normalized'}};
+            my $label_element = Texinfo::Common::get_label_element($reference);
+
+            my $section_command;
+            my $associated_title_command;
+            if ($reference->{'cmdname'} eq 'node'
+                and exists($self->{'document'})
+                and exists($reference->{'extra'})
+                and $reference->{'extra'}->{'node_number'}) {
+              my $nodes_list = $self->{'document'}->nodes_list();
+              my $node_relations
+               = $nodes_list->[$reference->{'extra'}->{'node_number'} -1];
+              $associated_title_command
+                = $node_relations->{'associated_title_command'};
+            }
+
+            if (defined($associated_title_command)) {
+              $section_command = $associated_title_command;
+            } elsif ($reference->{'cmdname'} ne 'float') {
+              my $normalized_name
+                = $node_arg->{'extra'}->{'normalized'};
+              if ($self->{'normalized_nodes_associated_section'}
+                  and $self->{'normalized_nodes_associated_section'}
+                                                       ->{$normalized_name}) {
+                $section_command
+                  = $self->{'normalized_nodes_associated_section'}
+                                                          ->{$normalized_name};
+              } elsif ($reference->{'cmdname'} eq 'node') {
+                # can only happen if there is no sectioning commands at all,
+                # otherwise it would have been associated in
+                # _associate_other_nodes_to_sections.  Nothing to do in that case.
+              } else {
+                # Find associated section using top level parent @-command.
+                my $current = $reference;
+                while ($current->{'parent'}) {
+                  $current = $current->{'parent'};
+                  if ($current->{'cmdname'}
+                      and $root_commands{$current->{'cmdname'}}) {
+                    if ($current->{'cmdname'} ne 'node') {
+                      $section_command = $current;
+                    } else {
+                      if ($self->{'document'}) {
+                        my $nodes_list = $self->{'document'}->nodes_list();
+                        my $node_relations
+                          = $nodes_list->[$current->{'extra'}->{'node_number'} -1];
+                        if ($node_relations->{'associated_section'}) {
+                          $section_command
+                           = $node_relations->{'associated_section'}->{'element'};
+                        }
+                      }
+                      if (!$section_command
+                          and (exists($current->{'extra'}->{'identifier'})
+                               and $self->{'normalized_nodes_associated_section'}
+                                    ->{$current->{'extra'}->{'identifier'}})) {
                         $section_command
-                         = $node_relations->{'associated_section'}->{'element'};
+                          = $self->{'normalized_nodes_associated_section'}
+                                     ->{$current->{'extra'}->{'identifier'}};
                       }
                     }
-                    if (!$section_command
-                        and (exists($current->{'extra'}->{'identifier'})
-                             and $self->{'normalized_nodes_associated_section'}
-                                      ->{$current->{'extra'}->{'identifier'}})) {
-                      $section_command
-                        = $self->{'normalized_nodes_associated_section'}
-                                           ->{$current->{'extra'}->{'identifier'}};
-                    }
+                    last;
+                  } elsif ($current->{'type'}
+                           and $current->{'type'} eq 'before_node_section') {
+                    # anchor before Top node, can be in copying, titlepage,
+                    # or directly in the main document.
+                    # Could also be before setfilename.
+                    last;
                   }
-                  last;
-                } elsif ($current->{'type'}
-                         and $current->{'type'} eq 'before_node_section') {
-                  # anchor before Top node, can be in copying, titlepage,
-                  # or directly in the main document.
-                  # Could also be before setfilename.
-                  last;
                 }
-              }
-              if (defined($section_command)) {
-                # set the association with anchor
-                $self->{'normalized_nodes_associated_section'}->{$normalized_name}
-                  = $section_command;
-              } elsif (not defined($current->{'parent'})) {
-                # that means that it is an anchor, but we did not find a root
-                # sectioning command nor 'before_node_section' type, which
-                # should not be possible.
-                print STDERR "BUG/TODO assoc ".$reference->{'cmdname'}
-                       .": $normalized_name: "
-                       .join("|", sort(keys(%{$reference->{'extra'}})))."\n";
-              }
-            }
-          }
-          # reference to a float with a label
-          my $float_type;
-          if (exists($reference->{'cmdname'})
-              and $reference->{'cmdname'} eq 'float') {
-            my $float_arguments_line = $reference->{'contents'}->[0];
-            my $float_blockline_args
-                  = $float_arguments_line->{'contents'}->[0];
-            if ($reference->{'extra'}->{'float_type'} ne '') {
-              $float_type
-                = _convert($self, $float_blockline_args);
-            } else {
-              $float_type = '';
-            }
-          }
-          my $text_representation;
-          if ($self->{'formatting_context'}->[-1]
-                                    ->{'in_sectioning_command_heading'}) {
-            # hyperref leads, understandably to some errors in a heading for
-            # the table of content.  In that case, setup a text representation.
-            $text_representation = '';
-          }
-          # TODO translation
-          my $reference_result = '';
-          if ($cmdname eq 'xref') {
-            $reference_result = "See ";
-          } elsif ($cmdname eq 'pxref') {
-            $reference_result = "see ";
-          } elsif ($cmdname eq 'ref') {
-          }
-          $text_representation .= $reference_result
-            if defined($text_representation);
-          my $name;
-          if ($cmdname eq 'link' and defined($args[1])) {
-            $name = $args[1];
-          } elsif (defined($args[2])) {
-            $name = $args[2];
-          } elsif (not defined($float_type)) {
-            if (defined($self->get_conf('xrefautomaticsectiontitle'))
-                and $self->get_conf('xrefautomaticsectiontitle') eq 'on') {
-              if (exists($reference->{'cmdname'})
-                  and $reference->{'cmdname'} eq 'namedanchor'
-                  and scalar(@{$reference->{'contents'}}) > 1
-                  and not Texinfo::Common::empty_spaces_argument(
-                                          $reference->{'contents'}->[1])) {
-                $name = $reference->{'contents'}->[1];
-              } elsif (defined($section_command)) {
-                if (exists($section_command->{'contents'}->[0]->{'type'})
-                    and $section_command->{'contents'}->[0]->{'type'}
-                                                     eq 'arguments_line') {
-                  my $arguments_line = $section_command->{'contents'}->[0];
-                  $name = $arguments_line->{'contents'}->[0];
-                } elsif (not Texinfo::Common::empty_spaces_argument(
-                                     $section_command->{'contents'}->[0])) {
-                  # xrefname may be empty
-                  $name = $section_command->{'contents'}->[0];
+                if (defined($section_command)) {
+                  # set the association with anchor
+                  $self->{'normalized_nodes_associated_section'}->{$normalized_name}
+                    = $section_command;
+                } elsif (not defined($current->{'parent'})) {
+                  # that means that it is an anchor, but we did not find a root
+                  # sectioning command nor 'before_node_section' type, which
+                  # should not be possible.
+                  print STDERR "BUG/TODO assoc ".$reference->{'cmdname'}
+                         .": $normalized_name: "
+                         .join("|", sort(keys(%{$reference->{'extra'}})))."\n";
                 }
               }
             }
-            if (!defined($name)) {
-              $name = $label_element;
-            }
-          }
-          my $reference_label = _tree_anchor_label($label_element);
-
-          my $name_text;
-          if (defined($name)) {
-            $name_text = _convert($self, $name);
-            $text_representation .= $name_text if (defined($text_representation));
-          }
-
-          if ($cmdname eq 'link') {
-            if (defined($name_text)) {
-              $reference_result .= "\\hyperref[$reference_label]{$name_text}";
-            }
-          } elsif (defined($float_type)) {
-            # no page for float reference in Texinfo TeX
-            if (defined($name_text)) {
-              $reference_result .= "\\hyperref[$reference_label]{$name_text}";
-            } else {
-              if ($float_type ne '') {
-                $reference_result
-                  .= "\\hyperref[$reference_label]{$float_type~\\ref*{$reference_label}}";
-                $text_representation .= $float_type
-                     if (defined($text_representation));
+            # reference to a float with a label
+            my $float_type;
+            if (exists($reference->{'cmdname'})
+                and $reference->{'cmdname'} eq 'float') {
+              my $float_arguments_line = $reference->{'contents'}->[0];
+              my $float_blockline_args
+                    = $float_arguments_line->{'contents'}->[0];
+              if ($reference->{'extra'}->{'float_type'} ne '') {
+                $float_type
+                  = _convert($self, $float_blockline_args);
               } else {
-                $reference_result
-                  .= "\\hyperref[$reference_label]{\\ref*{$reference_label}}";
+                $float_type = '';
               }
             }
-          } else {
-            # FIXME seems like a , should be added last, but only if not
-            # followed by punctuation which means a painful look ahead
-            # code to do...  From the Texinfo manual:
-            # When processing with TeX, a comma is automatically inserted after the page number
-            # for cross-references to within the same manual, unless the closing brace of the argument
-            # is followed by non-whitespace (such as a comma or period).
-            #
-            # If an unwanted comma is added, follow the argument with a command such as @:
-            if ($reference->{'cmdname'} and $reference->{'cmdname'} eq 'node'
-                and $section_command) {
-              # @*heading and @xrefname
-              if (!defined($section_command->{'extra'}->{'section_level'})) {
-                # TODO translation
-                $reference_result
-  .= "\\hyperref[$reference_label]{[$name_text], page~\\pageref*{$reference_label}}";
+            my $text_representation;
+            if ($self->{'formatting_context'}->[-1]
+                                      ->{'in_sectioning_command_heading'}) {
+              # hyperref leads, understandably to some errors in a heading for
+              # the table of content.  In that case, setup a text representation.
+              $text_representation = '';
+            }
+            # TODO translation
+            my $reference_result = '';
+            if ($cmdname eq 'xref') {
+              $reference_result = "See ";
+            } elsif ($cmdname eq 'pxref') {
+              $reference_result = "see ";
+            } elsif ($cmdname eq 'ref') {
+            }
+            $text_representation .= $reference_result
+              if defined($text_representation);
+            my $name;
+            if ($cmdname eq 'link' and defined($args[1])) {
+              $name = $args[1];
+            } elsif (defined($args[2])) {
+              $name = $args[2];
+            } elsif (not defined($float_type)) {
+              if (defined($self->get_conf('xrefautomaticsectiontitle'))
+                  and $self->get_conf('xrefautomaticsectiontitle') eq 'on') {
+                if (exists($reference->{'cmdname'})
+                    and $reference->{'cmdname'} eq 'namedanchor'
+                    and scalar(@{$reference->{'contents'}}) > 1
+                    and not Texinfo::Common::empty_spaces_argument(
+                                            $reference->{'contents'}->[1])) {
+                  $name = $reference->{'contents'}->[1];
+                } elsif (defined($section_command)) {
+                  if (exists($section_command->{'contents'}->[0]->{'type'})
+                      and $section_command->{'contents'}->[0]->{'type'}
+                                                       eq 'arguments_line') {
+                    my $arguments_line = $section_command->{'contents'}->[0];
+                    $name = $arguments_line->{'contents'}->[0];
+                  } elsif (not Texinfo::Common::empty_spaces_argument(
+                                       $section_command->{'contents'}->[0])) {
+                    # xrefname may be empty
+                    $name = $section_command->{'contents'}->[0];
+                  }
+                }
+              }
+              if (!defined($name)) {
+                $name = $label_element;
+              }
+            }
+            my $reference_label = _tree_anchor_label($label_element);
 
-              } elsif ($section_command->{'extra'}->{'section_level'} > 1) {
-                # TODO command that could be used for translation \sectionname
-                # does not exist in the default case.  it is defined in the
-                # pagenote package together with \pagename which is page in
-                # the default case, but it is unclear if this can be used as
-                # a basis for translations.
-                $reference_result
-  .= "\\hyperref[$reference_label]{Section~\\ref*{$reference_label} [$name_text], page~\\pageref*{$reference_label}}";
+            my $name_text;
+            if (defined($name)) {
+              $name_text = _convert($self, $name);
+              $text_representation .= $name_text if (defined($text_representation));
+            }
+
+            if ($cmdname eq 'link') {
+              if (defined($name_text)) {
+                $reference_result .= "\\hyperref[$reference_label]{$name_text}";
+              }
+            } elsif (defined($float_type)) {
+              # no page for float reference in Texinfo TeX
+              if (defined($name_text)) {
+                $reference_result .= "\\hyperref[$reference_label]{$name_text}";
               } else {
-                # TODO translation
-                if ($section_command->{'cmdname'} =~ /appendix/) {
+                if ($float_type ne '') {
                   $reference_result
-  .= "\\hyperref[$reference_label]{\\appendixname~\\ref*{$reference_label} [$name_text], page~\\pageref*{$reference_label}}";
+                  .= "\\hyperref[$reference_label]{$float_type~\\ref*{$reference_label}}";
+                  $text_representation .= $float_type
+                     if (defined($text_representation));
                 } else {
                   $reference_result
-  .= "\\hyperref[$reference_label]{\\chaptername~\\ref*{$reference_label} [$name_text], page~\\pageref*{$reference_label}}";
+                    .= "\\hyperref[$reference_label]{\\ref*{$reference_label}}";
                 }
               }
             } else {
-              # anchor or document without sectioning commands
-              # TODO translation
-              $reference_result
+              # FIXME seems like a , should be added last, but only if not
+              # followed by punctuation which means a painful look ahead
+              # code to do...  From the Texinfo manual:
+              # When processing with TeX, a comma is automatically inserted after the page number
+              # for cross-references to within the same manual, unless the closing brace of the argument
+              # is followed by non-whitespace (such as a comma or period).
+              #
+              # If an unwanted comma is added, follow the argument with a command such as @:
+              if ($reference->{'cmdname'} and $reference->{'cmdname'} eq 'node'
+                  and $section_command) {
+                # @*heading and @xrefname
+                if (!defined($section_command->{'extra'}->{'section_level'})) {
+                  # TODO translation
+                  $reference_result
   .= "\\hyperref[$reference_label]{[$name_text], page~\\pageref*{$reference_label}}";
+
+                } elsif ($section_command->{'extra'}->{'section_level'} > 1) {
+                  # TODO command that could be used for translation \sectionname
+                  # does not exist in the default case.  it is defined in the
+                  # pagenote package together with \pagename which is page in
+                  # the default case, but it is unclear if this can be used as
+                  # a basis for translations.
+                  $reference_result
+  .= "\\hyperref[$reference_label]{Section~\\ref*{$reference_label} [$name_text], page~\\pageref*{$reference_label}}";
+                } else {
+                  # TODO translation
+                  if ($section_command->{'cmdname'} =~ /appendix/) {
+                    $reference_result
+  .= "\\hyperref[$reference_label]{\\appendixname~\\ref*{$reference_label} [$name_text], page~\\pageref*{$reference_label}}";
+                  } else {
+                    $reference_result
+  .= "\\hyperref[$reference_label]{\\chaptername~\\ref*{$reference_label} [$name_text], page~\\pageref*{$reference_label}}";
+                  }
+                }
+              } else {
+                # anchor or document without sectioning commands
+                # TODO translation
+                $reference_result
+  .= "\\hyperref[$reference_label]{[$name_text], page~\\pageref*{$reference_label}}";
+              }
             }
-          }
-          if (not defined($text_representation)) {
-            $result .= $reference_result;
+            if (not defined($text_representation)) {
+              $result .= $reference_result;
+            } else {
+              $result .= '\texorpdfstring{'.$reference_result.'}{'
+                               .$text_representation.'}';
+            }
+          } elsif ($cmdname ne 'link') {
+            # external ref
+            # TODO hyper reference to manual file which seems to be implemented
+            # in recent Texinfo TeX
+            # TODO translation
+            if ($cmdname eq 'xref') {
+              $result .= "See ";
+            } elsif ($cmdname eq 'pxref') {
+              $result .= "see ";
+            } elsif ($cmdname eq 'ref') {
+            }
+            my $name;
+            if (defined($args[2])) {
+              $name = $args[2];
+            } elsif (defined($args[0])) {
+              $name = $args[0];
+            }
+            my $name_text;
+            if (defined($name)) {
+              $name_text = _convert($self, $name);
+            }
+
+            if ($book ne '') {
+              if (defined ($name_text)) {
+                # TODO translation
+                $result .= "Section ``$name_text'' in \\textsl{$book}";
+              } else {
+                $result .= "\\textsl{$book}";
+              }
+            } elsif ($filename ne '') {
+              if (defined ($name_text)) {
+                # TODO translation
+                $result .= "Section ``$name_text'' in \\texttt{$filename}";
+              } else {
+                $result .= "\\texttt{$filename}";
+              }
+            } elsif ($name_text) {
+              $result .= $name_text;
+            }
           } else {
-            $result .= '\texorpdfstring{'.$reference_result.'}{'
-                             .$text_representation.'}';
-          }
-          return $result;
-        } elsif ($cmdname ne 'link') {
-          # external ref
-          # TODO hyper reference to manual file which seems to be implemented
-          # in recent Texinfo TeX
-          # TODO translation
-          if ($cmdname eq 'xref') {
-            $result .= "See ";
-          } elsif ($cmdname eq 'pxref') {
-            $result .= "see ";
-          } elsif ($cmdname eq 'ref') {
-          }
-          my $name;
-          if (defined($args[2])) {
-            $name = $args[2];
-          } elsif (defined($args[0])) {
-            $name = $args[0];
-          }
-          my $name_text;
-          if (defined($name)) {
-            $name_text = _convert($self, $name);
-          }
-
-          if ($book ne '') {
-            if (defined ($name_text)) {
-              # TODO translation
-              $result .= "Section ``$name_text'' in \\textsl{$book}";
-            } else {
-              $result .= "\\textsl{$book}";
+            # external @link - just produce non-working text.
+            my $name;
+            if (defined($args[1])) {
+              $name = $args[1];
+            } elsif (defined($args[0])) {
+              $name = $args[0];
             }
-          } elsif ($filename ne '') {
-            if (defined ($name_text)) {
-              # TODO translation
-              $result .= "Section ``$name_text'' in \\texttt{$filename}";
-            } else {
-              $result .= "\\texttt{$filename}";
-            }
-          } elsif ($name_text) {
-            $result .= $name_text;
-          }
-        } else {
-          # external @link - just produce non-working text.
-          my $name;
-          if (defined($args[1])) {
-            $name = $args[1];
-          } elsif (defined($args[0])) {
-            $name = $args[0];
-          }
 
-          my $name_text;
-          if (defined($name)) {
-            $name_text = _convert($self, $name);
-            $result .= $name_text;
+            my $name_text;
+            if (defined($name)) {
+              $name_text = _convert($self, $name);
+              $result .= $name_text;
+            }
           }
         }
-        return $result;
-      }
-      return $result;
-    } elsif ($explained_commands{$cmdname}) {
-      if (exists($element->{'contents'})
-          and not Texinfo::Common::empty_spaces_argument(
-                                  $element->{'contents'}->[0])) {
-        # in abbr spaces never end a sentence.
-        my $argument;
-        if ($cmdname eq 'abbr') {
-          $argument
-            = Texinfo::TreeElement::new({'type' => '_dot_not_end_sentence',
-                                'contents' => [$element->{'contents'}->[0]]});
-        } else {
-        # TODO in TeX, acronym is in a smaller font (1pt less).
-          $argument = $element->{'contents'}->[0];
-        }
-        if (scalar (@{$element->{'contents'}}) == 2
+      } elsif ($explained_commands{$cmdname}) {
+        if (exists($element->{'contents'})
             and not Texinfo::Common::empty_spaces_argument(
-                                        $element->{'contents'}->[1])) {
-          my $prepended
-           = $self->cdt('{abbr_or_acronym} ({explanation})',
-                        {'abbr_or_acronym' => $argument,
-                         'explanation'
-                                   => $element->{'contents'}->[1]});
-          $result .= _convert($self, $prepended);
-        } else {
-          $result .= _convert($self, $argument);
+                                    $element->{'contents'}->[0])) {
+          # in abbr spaces never end a sentence.
+          my $argument;
+          if ($cmdname eq 'abbr') {
+            $argument
+              = Texinfo::TreeElement::new({'type' => '_dot_not_end_sentence',
+                                  'contents' => [$element->{'contents'}->[0]]});
+          } else {
+          # TODO in TeX, acronym is in a smaller font (1pt less).
+            $argument = $element->{'contents'}->[0];
+          }
+          if (scalar (@{$element->{'contents'}}) == 2
+              and not Texinfo::Common::empty_spaces_argument(
+                                          $element->{'contents'}->[1])) {
+            my $prepended
+             = $self->cdt('{abbr_or_acronym} ({explanation})',
+                          {'abbr_or_acronym' => $argument,
+                           'explanation'
+                                     => $element->{'contents'}->[1]});
+            $result .= _convert($self, $prepended);
+          } else {
+            $result .= _convert($self, $argument);
+          }
         }
-      }
-      return $result;
-    } elsif (exists($Texinfo::Commands::brace_commands{$cmdname})
-             and $Texinfo::Commands::brace_commands{$cmdname} eq 'inline') {
-      my $arg_index = 1;
-      if ($cmdname eq 'inlinefmtifelse'
-          and (!$element->{'extra'}->{'format'}
-               or !$self->{'expanded_formats'}
+      } elsif ($Texinfo::Commands::brace_commands{$cmdname} eq 'inline') {
+        my $arg_index = 1;
+        if ($cmdname eq 'inlinefmtifelse'
+            and (!$element->{'extra'}->{'format'}
+                 or !$self->{'expanded_formats'}
                                         ->{$element->{'extra'}->{'format'}})) {
-        $arg_index = 2;
-      }
-      if (scalar(@{$element->{'contents'}}) > $arg_index
-         and exists($element->{'contents'}->[$arg_index]->{'contents'})) {
-        if ($cmdname eq 'inlineraw') {
-          push @{$self->{'formatting_context'}->[-1]->{'text_context'}},
-               'ctx_raw';
+          $arg_index = 2;
         }
-        $result .= _convert($self, $element->{'contents'}->[$arg_index]);
-        if ($cmdname eq 'inlineraw') {
-          my $old_context
-              = pop @{$self->{'formatting_context'}->[-1]->{'text_context'}};
-          die if ($old_context ne 'ctx_raw');
+        if (scalar(@{$element->{'contents'}}) > $arg_index
+           and exists($element->{'contents'}->[$arg_index]->{'contents'})) {
+          if ($cmdname eq 'inlineraw') {
+            push @{$self->{'formatting_context'}->[-1]->{'text_context'}},
+                 'ctx_raw';
+          }
+          $result .= _convert($self, $element->{'contents'}->[$arg_index]);
+          if ($cmdname eq 'inlineraw') {
+            my $old_context
+                = pop @{$self->{'formatting_context'}->[-1]->{'text_context'}};
+            die if ($old_context ne 'ctx_raw');
+          }
         }
-      }
-      return $result;
-    } elsif ($math_commands{$cmdname}) {
-      push @{$self->{'formatting_context'}->[-1]->{'text_context'}}, 'ctx_math';
-      if (not exists($block_commands{$cmdname})) {
+      } elsif ($math_commands{$cmdname}) {
+        push @{$self->{'formatting_context'}->[-1]->{'text_context'}}, 'ctx_math';
         push @{$self->{'formatting_context'}->[-1]->{'math_style'}}, 'one-line';
         if ($cmdname eq 'math') {
           if (exists($element->{'contents'})) {
@@ -4135,125 +4115,125 @@ sub _convert($$) {
         my $old_math_style
             = pop @{$self->{'formatting_context'}->[-1]->{'math_style'}};
         die if ($old_math_style ne 'one-line');
-        return $result;
-      } else {
-        if ($cmdname eq 'displaymath') {
-          push @{$self->{'formatting_context'}->[-1]->{'math_style'}}, 'one-line';
-          # close all preformatted formats
-          $preformatted_to_reopen
-              = [@{$self->{'formatting_context'}->[-1]->{'preformatted_context'}}];
-          $result .= _close_preformatted_stack($self, $preformatted_to_reopen);
-          $result .= "\\[\n";
+      } elsif ($cmdname eq 'caption' or $cmdname eq 'shortcaption') {
+        my $float;
+        if ($element->{'parent'}
+            and $element->{'parent'}->{'cmdname'}
+            and $element->{'parent'}->{'cmdname'} eq 'float') {
+          $float = $element->{'parent'};
         }
-      }
-    } elsif ($cmdname eq 'caption' or $cmdname eq 'shortcaption') {
-      my $float;
-      if ($element->{'parent'}
-          and $element->{'parent'}->{'cmdname'}
-          and $element->{'parent'}->{'cmdname'} eq 'float') {
-        $float = $element->{'parent'};
-      }
-      if (not defined($float)) {
-        return $result;
-      }
-      my $shortcaption;
-      my ($float_caption, $float_shortcaption)
-        =Texinfo::Common::find_float_caption_shortcaption($float);
-      if ($cmdname eq 'shortcaption') {
-        if ($float_caption) {
-          # nothing to do, will use @shortcaption when converting @caption
+        if (not defined($float)) {
           return $result;
-        } else {
-          # shortcaption used as caption;
         }
-      } else {
-        if ($float_shortcaption) {
-          $shortcaption = $float_shortcaption;
-        }
-      }
-      my $caption_text = '';
-      if (exists($element->{'contents'})) {
-        _push_new_context($self, 'latex_caption');
-        $caption_text = _convert($self, $element->{'contents'}->[0]);
-        _pop_context($self);
-      }
-
-      if (scalar(@{$self->{'formatting_context'}->[-1]
-                                               ->{'non_floating_commands'}})) {
-        my $normalized_float_type = $float->{'extra'}->{'float_type'};
-        if (not exists($self->{'normalized_float_latex'}
-                                                 ->{$normalized_float_type})) {
-          cluck("caption \@float $normalized_float_type: not found\n");
-          return '';
-        }
-        my $latex_float_name
-          = $self->{'normalized_float_latex'}->{$normalized_float_type};
-
-        $result .= "\\captionof{$latex_float_name}";
-      } else {
-        $result .= '\caption';
-      }
-
-      if (defined($shortcaption)
-          and exists($shortcaption->{'contents'})
-          and exists($shortcaption->{'contents'}->[0]->{'contents'})) {
-        _push_new_context($self, 'latex_shortcaption');
-        my $shortcaption_text
-          = _convert($self, $shortcaption->{'contents'}->[0]);
-        _pop_context($self);
-        $result .= '['.$shortcaption_text.']';
-      }
-      $result .= "{$caption_text}\n";
-      return $result;
-    } elsif ($cmdname eq 'titlefont') {
-      $result .= _title_font($self, $element);
-      return $result;
-    } elsif ($cmdname eq 'U') {
-      if (exists($element->{'contents'})) {
-        my ($arg_text, $surplus_arg)
-          = Texinfo::Common::simple_arg_text($element->{'contents'}->[0]);
-        if (defined($arg_text) and $arg_text ne '') {
-          # Syntactic checks on the value were already done in Parser.pm,
-          # but we have one more thing to test: since this is the one
-          # place where we might output actual UTF-8 binary bytes, we have
-          # to check that it is possible.  If not, silently fall back to
-          # plain text, on the theory that the user wants something.
-          # Note that being able to output an unicode point as encoded
-          # character does not mean that LaTeX will be able to process it.
-          my $res;
-          if ($self->{'to_utf8'}) {
-            # There is no way to turn off @U expansion to utf-8
-            # characters if encoding output is utf-8 even though this
-            # could output characters that are not known in the
-            # fontenc and will lead to an error.  This is not specific
-            # of @U, this also happens with characters already UTF-8 encoded
-            # that are not known in the fontenc.
-            # This is described in the Texinfo manual.
-            my $possible_conversion
-            = Texinfo::Convert::Unicode::check_unicode_point_conversion(
-                                                  $arg_text, $self->{'debug'});
-            if ($possible_conversion) {
-              $res = chr(hex($arg_text)); # ok to call chr
-            } else {
-              $res = "U+$arg_text";
-            }
+        my $shortcaption;
+        my ($float_caption, $float_shortcaption)
+          = Texinfo::Common::find_float_caption_shortcaption($float);
+        if ($cmdname eq 'shortcaption') {
+          if ($float_caption) {
+            # nothing to do, will use @shortcaption when converting @caption
+            return $result;
           } else {
-            $res = "U+$arg_text";  # not outputting UTF-8
+            # shortcaption used as caption;
           }
-          $result .= _protect_text($self, $res);
+        } else {
+          if ($float_shortcaption) {
+            $shortcaption = $float_shortcaption;
+          }
         }
-      }
-      return $result;
-    } elsif ($cmdname eq 'value') {
-      my $expansion = $self->cdt('@{No value for `{value}\'@}',
+        my $caption_text = '';
+        if (exists($element->{'contents'})) {
+          _push_new_context($self, 'latex_caption');
+          $caption_text = _convert($self, $element->{'contents'}->[0]);
+          _pop_context($self);
+        }
+
+        if (scalar(@{$self->{'formatting_context'}->[-1]
+                                               ->{'non_floating_commands'}})) {
+          my $normalized_float_type = $float->{'extra'}->{'float_type'};
+          if (not exists($self->{'normalized_float_latex'}
+                                                 ->{$normalized_float_type})) {
+            cluck("caption \@float $normalized_float_type: not found\n");
+            return '';
+          }
+          my $latex_float_name
+            = $self->{'normalized_float_latex'}->{$normalized_float_type};
+
+          $result .= "\\captionof{$latex_float_name}";
+        } else {
+          $result .= '\caption';
+        }
+
+        if (defined($shortcaption)
+            and exists($shortcaption->{'contents'})
+            and exists($shortcaption->{'contents'}->[0]->{'contents'})) {
+          _push_new_context($self, 'latex_shortcaption');
+          my $shortcaption_text
+            = _convert($self, $shortcaption->{'contents'}->[0]);
+          _pop_context($self);
+          $result .= '['.$shortcaption_text.']';
+        }
+        $result .= "{$caption_text}\n";
+      } elsif ($cmdname eq 'titlefont') {
+        $result .= _title_font($self, $element);
+      } elsif ($cmdname eq 'U') {
+        if (exists($element->{'contents'})) {
+          my ($arg_text, $surplus_arg)
+            = Texinfo::Common::simple_arg_text($element->{'contents'}->[0]);
+          if (defined($arg_text) and $arg_text ne '') {
+            # Syntactic checks on the value were already done in Parser.pm,
+            # but we have one more thing to test: since this is the one
+            # place where we might output actual UTF-8 binary bytes, we have
+            # to check that it is possible.  If not, silently fall back to
+            # plain text, on the theory that the user wants something.
+            # Note that being able to output an unicode point as encoded
+            # character does not mean that LaTeX will be able to process it.
+            my $res;
+            if ($self->{'to_utf8'}) {
+              # There is no way to turn off @U expansion to utf-8
+              # characters if encoding output is utf-8 even though this
+              # could output characters that are not known in the
+              # fontenc and will lead to an error.  This is not specific
+              # of @U, this also happens with characters already UTF-8 encoded
+              # that are not known in the fontenc.
+              # This is described in the Texinfo manual.
+              my $possible_conversion
+              = Texinfo::Convert::Unicode::check_unicode_point_conversion(
+                                                  $arg_text, $self->{'debug'});
+              if ($possible_conversion) {
+                $res = chr(hex($arg_text)); # ok to call chr
+              } else {
+                $res = "U+$arg_text";
+              }
+            } else {
+              $res = "U+$arg_text";  # not outputting UTF-8
+            }
+            $result .= _protect_text($self, $res);
+          }
+        }
+      } elsif ($cmdname eq 'value') {
+        my $expansion = $self->cdt('@{No value for `{value}\'@}',
                                  {'value'
                                     => $element->{'contents'}->[0]});
-      $expansion = {'type' => 'paragraph',
-                    'contents' => [$expansion]};
-      $result .= _convert($self, $expansion);
+        $expansion = {'type' => 'paragraph',
+                      'contents' => [$expansion]};
+        $result .= _convert($self, $expansion);
+      }
+      # end of brace commands
+      return $result;
+    } elsif ($def_line_commands{$cmdname}) {
+      $result .= _convert_def_line($self, $element);
       return $result;
     # block commands
     } elsif (exists($block_commands{$cmdname})) {
+      if ($cmdname eq 'displaymath') {
+        push @{$self->{'formatting_context'}->[-1]->{'text_context'}}, 'ctx_math';
+        push @{$self->{'formatting_context'}->[-1]->{'math_style'}}, 'one-line';
+        # close all preformatted formats
+        $preformatted_to_reopen
+            = [@{$self->{'formatting_context'}->[-1]->{'preformatted_context'}}];
+        $result .= _close_preformatted_stack($self, $preformatted_to_reopen);
+        $result .= "\\[\n";
+      }
       if ($LaTeX_environment_commands{$cmdname}) {
         push @{$self->{'formatting_context'}->[-1]->{'non_floating_commands'}},
           $cmdname

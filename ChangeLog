@@ -1,5 +1,11 @@
 2026-11-19  Patrice Dumas  <pertusus@free.fr>
 
+	* tta/perl/Texinfo/Convert/LaTeX.pm (_convert): move together all the
+	brace commands.  Return result at the end of all the brace commands
+	preferentially.  Put displaymath with block commands.
+
+2026-11-19  Patrice Dumas  <pertusus@free.fr>
+
 	* tta/perl/Texinfo/Convert/DocBook.pm (_convert): use
 	get_non_empty_brace_args for definfoenclose and brace arg commands.
 	Return early if there are no arguments.  Use arguments returned by
