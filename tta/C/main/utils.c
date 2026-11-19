@@ -1297,6 +1297,25 @@ simple_arg_text (const ELEMENT *element, int *surplus_arg)
   return &empty_text;
 }
 
+CONST_ELEMENT_LIST *
+get_non_empty_brace_args (const ELEMENT *element)
+{
+  size_t i;
+  CONST_ELEMENT_LIST *args = new_const_element_list ();
+
+  for (i = 0; i < element->e.c->contents.number; i++)
+    {
+      const ELEMENT *arg = element->e.c->contents.list[i];
+      if (arg->type == ET_spaces_after_cmd_before_arg)
+        continue;
+      if (empty_spaces_argument (arg))
+        add_(const_element) (args, 0);
+      else
+        add_(const_element) (args, arg);
+    }
+  return args;
+}
+
 
 /* index related code used both in parsing and conversion */
 /* NAME is the name of an index, e.g. "cp" */
@@ -3037,9 +3056,10 @@ find_innermost_accent_contents (const ELEMENT *element)
 
   while (1)
     {
-      const ELEMENT *arg;
+      const ELEMENT *arg = 0;
       size_t i;
       enum command_id data_cmd;
+      CONST_ELEMENT_LIST *args;
 
       if (type_data[current->type].flags & TF_text)
         return accent_stack;
@@ -3053,10 +3073,17 @@ find_innermost_accent_contents (const ELEMENT *element)
         return accent_stack;
 
       add_(const_element) (&accent_stack->stack, current);
+
+      args = get_non_empty_brace_args (current);
       /* A bogus accent, that may happen */
-      if (current->e.c->contents.number <= 0)
+      if (args->number > 0 && args->list[0])
+        arg = args->list[0];
+
+      destroy_const_element_list (args);
+
+      if (!arg)
         return accent_stack;
-      arg = current->e.c->contents.list[0];
+
       if (arg->e.c->contents.number <= 0)
         return accent_stack;
       for (i = 0; i < arg->e.c->contents.number; i++)
@@ -3101,6 +3128,7 @@ find_innermost_accent_contents (const ELEMENT *element)
                              0, &argument, 0, argument.number);
       argument.number = 0;
     }
+
   return accent_stack;
 }
 

@@ -22,7 +22,7 @@ void info_format_footnotes (CONVERTER *self, const OUTPUT_UNIT *output_unit);
 void info_format_reference_to_footnote (CONVERTER *self);
 void info_format_printindex (CONVERTER *self, const ELEMENT *printindex);
 void info_format_ref (CONVERTER *self, enum command_id cmd,
-                      const ELEMENT *element);
+                      const ELEMENT *element, const CONST_ELEMENT_LIST *args);
 void info_format_error_outside_of_any_node (CONVERTER *self,
                                        const ELEMENT *element);
 void info_format_node (CONVERTER *self, const ELEMENT *node,
@@ -30,6 +30,7 @@ void info_format_node (CONVERTER *self, const ELEMENT *node,
 TEXT info_format_image (CONVERTER *self, const char *image_file,
                    const TEXT *text, const TEXT *alt,
                    int dpi, int depth, int *lines_count);
-int info_format_image_element (CONVERTER *self, const ELEMENT *element);
+int info_format_image_element (CONVERTER *self, const ELEMENT *element,
+                               const CONST_ELEMENT_LIST *args);
 TEXT info_quote_image (CONVERTER *self, const TEXT *image_text);
 #endif

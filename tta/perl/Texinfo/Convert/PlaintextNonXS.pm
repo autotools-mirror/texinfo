@@ -2161,21 +2161,13 @@ sub format_printindex($$) {
   return;
 }
 
-sub format_ref($$$) {
-  my ($self, $cmdname, $element) = @_;
+sub format_ref($$$$) {
+  my ($self, $cmdname, $element, $args) = @_;
 
   # no args may happen with bogus @-commands without argument, maybe only
   # at the end of a document
-  return if (!exists($element->{'contents'}));
+  return if (!defined($args));
 
-  my @args;
-  foreach my $arg (@{$element->{'contents'}}) {
-    if (Texinfo::Common::empty_spaces_argument($arg)) {
-      push @args, undef;
-    } else {
-      push @args, $arg;
-    }
-  }
   my $node_arg = $element->{'contents'}->[0];
 
   # normalize node name, to get a ref with the right formatting
@@ -2193,8 +2185,8 @@ sub format_ref($$$) {
       # excludes external nodes, as only internal refs get an extra normalized
       and defined($node_arg->{'extra'}->{'normalized'})
       # exclude external nodes again, in case internal refs get normalized
-      and !defined($args[3])
-      and !defined($args[4])
+      and !defined($args->[3])
+      and !defined($args->[4])
       and defined($identifiers_target)
       and exists($identifiers_target->{$node_arg->{'extra'}->{'normalized'}})) {
     $target_element
@@ -2209,39 +2201,39 @@ sub format_ref($$$) {
   }
   if (!defined($label_element)) {
     # may still be undef if node argument is empty
-    $label_element = $args[0];
+    $label_element = $args->[0];
   }
 
   # if it a reference to a float with a label, $args[1] is
   # set to '$type $number' or '$number' if there is no type.
-  if (! defined($args[1])
+  if (! defined($args->[1])
       and defined($target_element) and exists($target_element->{'cmdname'})
       and $target_element->{'cmdname'} eq 'float') {
     my $name = $self->float_type_number($target_element);
-    $args[1] = $name;
+    $args->[1] = $name;
   }
 
-  if ($cmdname eq 'inforef' and scalar(@args) >= 3) {
-    $args[3] = $args[2];
-    $args[2] = undef;
+  if ($cmdname eq 'inforef' and scalar(@$args) >= 3) {
+    $args->[3] = $args->[2];
+    $args->[2] = undef;
   }
 
   my $name;
-  if (defined($args[1])) {
-    $name = $args[1];
-  } elsif (defined($args[2])) {
-    $name = $args[2];
+  if (defined($args->[1])) {
+    $name = $args->[1];
+  } elsif (defined($args->[2])) {
+    $name = $args->[2];
   }
 
   my $file;
   my $book;
-  if (defined($args[3])) {
+  if (defined($args->[3])) {
     $file = Texinfo::TreeElement::new({'type' => '_stop_upper_case',
              'contents' => [Texinfo::TreeElement::new({'type' => '_code',
-                                                  'contents' => [$args[3]]})],
+                                                  'contents' => [$args->[3]]})],
             });
-  } elsif (defined($args[4])) {
-    $book = $args[4];
+  } elsif (defined($args->[4])) {
+    $book = $args->[4];
   }
 
   my $node;
@@ -2404,8 +2396,8 @@ sub format_anchor($$) {
 
 my $listoffloat_entry_length = 41;
 
-sub stream_image_formatted_text($$$$) {
-  my ($self, $element, $basefile, $text) = @_;
+sub stream_image_formatted_text($$$$$) {
+  my ($self, $element, $args, $basefile, $text) = @_;
 
   my $lines_count;
   if (defined($text)) {
@@ -2423,11 +2415,9 @@ sub stream_image_formatted_text($$$$) {
     push @{$self->{'count_context'}->[-1]->{'pending_text'}}, [''];
   } else {
     my $result;
-    if (scalar(@{$element->{'contents'}}) >= 4
-        and not Texinfo::Common::empty_spaces_argument(
-                                    $element->{'contents'}->[3])) {
-      $result = '[' .Texinfo::Convert::Text::convert_to_text(
-         $element->{'contents'}->[3], $self->{'convert_text_options'}) .']';
+    if (scalar(@$args) >= 4 and defined($args->[3])) {
+      $result = '[' .Texinfo::Convert::Text::convert_to_text($args->[3],
+                                         $self->{'convert_text_options'}) .']';
     } else {
       $self->plaintext_line_warn($self, sprintf(__(
                     "could not find \@image file `%s.txt' nor alternate text"),
@@ -2440,22 +2430,20 @@ sub stream_image_formatted_text($$$$) {
   return $lines_count;
 }
 
-sub format_image_element($$) {
-  my ($self, $element) = @_;
+sub format_image_element($$$) {
+  my ($self, $element, $args) = @_;
 
-  if (exists($element->{'contents'})
-      and not Texinfo::Common::empty_spaces_argument(
-                                     $element->{'contents'}->[0])) {
+  if (defined($args) and defined($args->[0])) {
     Texinfo::Convert::Text::set_options_code(
                                  $self->{'convert_text_options'});
     my $basefile = Texinfo::Convert::Text::convert_to_text(
-                                      $element->{'contents'}->[0],
+                                      $args->[0],
                                       $self->{'convert_text_options'});
     Texinfo::Convert::Text::reset_options_code(
                                  $self->{'convert_text_options'});
     my ($text, $width) = $self->txt_image_text($element, $basefile);
     my $lines_count
-      = $self->stream_image_formatted_text($element, $basefile, $text);
+      = $self->stream_image_formatted_text($element, $args, $basefile, $text);
     return $lines_count;
   }
   return 0;
@@ -3057,12 +3045,14 @@ sub _convert($$) {
       return;
     } elsif (defined($type) and $type eq 'definfoenclose_command') {
       _stream_output_add_next($self, $element->{'extra'}->{'begin'}, 1);
-      if (exists($element->{'contents'})) {
-        _convert($self, $element->{'contents'}->[0]);
+      my $args = Texinfo::Common::get_non_empty_brace_args($element);
+      if (defined($args) and defined($args->[0])) {
+        _convert($self, $args->[0]);
       }
       _stream_output_add_next($self, $element->{'extra'}->{'end'}, 1);
       return;
     } elsif (exists($brace_commands{$cmdname})) {
+      my $args = Texinfo::Common::get_non_empty_brace_args($element);
       my ($is_quoted_command, $is_double_quoted_command, $is_asis_command);
       if (exists($style_map{$cmdname})
             or ($is_quoted_command = exists($quoted_commands{$cmdname}))
@@ -3117,13 +3107,12 @@ sub _convert($$) {
         }
         _stream_output_add_next($self, $text_before, 1)
            if (defined($text_before));
-        if (exists($element->{'contents'})) {
-          _convert($self, $element->{'contents'}->[0]);
+        if (defined($args) and defined($args->[0])) {
+          _convert($self, $args->[0]);
           if ($cmdname eq 'strong'
-              and exists($element->{'contents'}->[0]->{'contents'})
-              and exists($element->{'contents'}->[0]->{'contents'}->[0]
-                                                                   ->{'text'})
-              and $element->{'contents'}->[0]->{'contents'}->[0]->{'text'}
+              and exists($args->[0]->{'contents'})
+              and exists($args->[0]->{'contents'}->[0]->{'text'})
+              and $args->[0]->{'contents'}->[0]->{'text'}
                     =~ /^Note\s/i
               and $self->{'warn_strong_note'}) {
             $self->plaintext_line_warn($self, __(
@@ -3161,7 +3150,6 @@ sub _convert($$) {
                                  eq 'on');
           set_frenchspacing($formatter->{'container'}, $frenchspacing);
         }
-        return;
       } elsif (exists($upper_case_commands{$cmdname})) {
         $formatter->{'upper_case_stack'}->[-1]->{'upper_case'}++;
         if ($cmdname eq 'var') {
@@ -3170,8 +3158,8 @@ sub _convert($$) {
           set_frenchspacing($formatter->{'container'}, 1);
         }
 
-        if (exists($element->{'contents'})) {
-          _convert($self, $element->{'contents'}->[0]);
+        if (defined($args) and defined($args->[0])) {
+          _convert($self, $args->[0]);
         }
 
         $formatter->{'upper_case_stack'}->[-1]->{'upper_case'}--;
@@ -3186,29 +3174,23 @@ sub _convert($$) {
           # Allow a following full stop to terminate a sentence.
           allow_end_sentence($formatter->{'container'});
         }
-        return;
       } elsif ($cmdname eq 'link') {
-        if (exists($element->{'contents'})) {
+        if (defined($args)) {
           # Use arg 2 if present, otherwise use arg 1.  Do not produce
           # functional link in Info/plaintext output.
           my $text_arg;
 
-          if (scalar(@{$element->{'contents'}}) >= 2
-              and not Texinfo::Common::empty_spaces_argument(
-                                  $element->{'contents'}->[1])) {
-            $text_arg = $element->{'contents'}->[1];
-          } elsif (not Texinfo::Common::empty_spaces_argument(
-                                   $element->{'contents'}->[0])) {
-            $text_arg = $element->{'contents'}->[0];
+          if (scalar(@$args) >= 2 and defined($args->[1])) {
+            $text_arg = $args->[1];
+          } elsif (defined($args->[0])) {
+            $text_arg = $args->[0];
           }
           if (defined($text_arg)) {
             _convert($self, $text_arg);
           }
         }
-        return;
       } elsif (exists($ref_commands{$cmdname})) {
-        $self->format_ref($cmdname, $element);
-        return;
+        $self->format_ref($cmdname, $element, $args);
       } elsif ($cmdname eq 'image') {
         _stream_output($self,
                        add_pending_word($formatter->{'container'}, 1));
@@ -3225,7 +3207,7 @@ sub _convert($$) {
                                            'pending_text' => [['']]};
         }
 
-        my $lines_count = $self->format_image_element($element);
+        my $lines_count = $self->format_image_element($element, $args);
         # We do not how much horizontal space @image will take:
         #   * In plain text output or standalone Info, the replacement
         #     text will be used
@@ -3245,11 +3227,9 @@ sub _convert($$) {
             $self->{'text_element_context'}->[-1]->{'max'}, 'right');
           _ensure_end_of_line($self);
         }
-        return;
       } elsif ($cmdname eq 'today') {
         my $today = $self->expand_today();
         _convert($self, $today);
-        return;
       } elsif (exists($brace_no_arg_commands{$cmdname})) {
         my $tree = $self->translated_command_tree($cmdname);
 
@@ -3302,19 +3282,15 @@ sub _convert($$) {
             allow_end_sentence($formatter->{'container'});
           }
         }
-        return;
       } elsif ($cmdname eq 'email') {
-        if (exists($element->{'contents'})) {
+        if (defined($args)) {
           my $name;
           my $email;
-          if (scalar(@{$element->{'contents'}}) >= 2
-              and not Texinfo::Common::empty_spaces_argument(
-                                     $element->{'contents'}->[1])) {
-            $name = $element->{'contents'}->[1];
+          if (scalar(@$args) >= 2 and defined($args->[1])) {
+            $name = $args->[1];
           }
-          if (not Texinfo::Common::empty_spaces_argument(
-                                 $element->{'contents'}->[0])) {
-            $email = $element->{'contents'}->[0];
+          if (defined($args->[0])) {
+            $email = $args->[0];
           }
           my $email_tree;
           if (defined($name) and defined($email)) {
@@ -3330,43 +3306,34 @@ sub _convert($$) {
           }
           _convert($self, $email_tree);
         }
-        return;
       } elsif ($cmdname eq 'uref' or $cmdname eq 'url') {
         my $inserted;
-        if (exists($element->{'contents'})) {
-          if (scalar(@{$element->{'contents'}}) == 3
-               and not Texinfo::Common::empty_spaces_argument(
-                                            $element->{'contents'}->[2])) {
+        if (defined($args)) {
+          if (scalar(@$args) == 3 and defined($args->[2])) {
             $inserted = Texinfo::TreeElement::new(
                         {'type' => '_stop_upper_case',
-                         'contents' => [$element->{'contents'}->[2]]});
-          } elsif (not Texinfo::Common::empty_spaces_argument(
-                                                $element->{'contents'}->[0])) {
+                         'contents' => [$args->[2]]});
+          } elsif (defined($args->[0])) {
             # no mangling of --- and similar in url.
             my $url = Texinfo::TreeElement::new(
              {'type' => '_stop_upper_case',
               'contents' => [
                Texinfo::TreeElement::new({'type' => '_code',
-                'contents' => [$element->{'contents'}->[0]]})]});
-            if (scalar(@{$element->{'contents'}}) == 2
-                and not Texinfo::Common::empty_spaces_argument(
-                                                $element->{'contents'}->[1])) {
+                'contents' => [$args->[0]]})]});
+            if (scalar(@$args) == 2 and defined($args->[1])) {
               $inserted = $self->cdt('{text} ({url})',
-                   {'text' => $element->{'contents'}->[1],
+                   {'text' => $args->[1],
                     'url' => $url });
             } else {
               $inserted = $self->cdt('@t{<{url}>}', {'url' => $url});
             }
-          } elsif (scalar(@{$element->{'contents'}}) == 2
-                   and not Texinfo::Common::empty_spaces_argument(
-                             $element->{'contents'}->[1])) {
-            $inserted = $element->{'contents'}->[1];
+          } elsif (scalar(@$args) == 2 and defined($args->[1])) {
+            $inserted = $args->[1];
           }
         }
         if ($inserted) {
           _convert($self, $inserted);
         }
-        return;
       } elsif ($cmdname eq 'footnote') {
         $self->{'footnote_index'}++ unless ($self->{'multiple_pass'});
         my $formatted_footnote_number;
@@ -3383,30 +3350,24 @@ sub _convert($$) {
         }
         _stream_output_add_next($self, "($formatted_footnote_number)", 1);
         $self->format_reference_to_footnote();
-        return;
       } elsif ($cmdname eq 'anchor' or $cmdname eq 'namedanchor') {
         _stream_output($self,
                        add_pending_word($formatter->{'container'}));
         $self->format_anchor($element);
-        return;
       } elsif (exists($explained_commands{$cmdname})) {
-        if (exists($element->{'contents'})
-            and not Texinfo::Common::empty_spaces_argument(
-                                 $element->{'contents'}->[0])) {
+        if (defined($args) and defined($args->[0])) {
           # in abbr spaces never end a sentence.
           my $argument;
           if ($cmdname eq 'abbr') {
             $argument = Texinfo::TreeElement::new({'type' => '_frenchspacing',
-                         'contents' => [$element->{'contents'}->[0]]});
+                         'contents' => [$args->[0]]});
           } else {
-            $argument = $element->{'contents'}->[0];
+            $argument = $args->[0];
           }
-          if (scalar(@{$element->{'contents'}}) >= 2
-              and not Texinfo::Common::empty_spaces_argument(
-                                      $element->{'contents'}->[1])) {
+          if (scalar(@$args) >= 2 and defined($args->[1])) {
             my $inserted = $self->cdt('{abbr_or_acronym} ({explanation})',
                    {'abbr_or_acronym' => $argument,
-                    'explanation' => $element->{'contents'}->[1]});
+                    'explanation' => $args->[1]});
             _convert($self, $inserted);
           } else {
             _convert($self, $argument);
@@ -3416,7 +3377,6 @@ sub _convert($$) {
             allow_end_sentence($formatter->{'container'});
           }
         }
-        return;
       } elsif ($brace_commands{$cmdname} eq 'inline') {
         my $arg_index = 1;
         if ($cmdname eq 'inlinefmtifelse'
@@ -3425,9 +3385,9 @@ sub _convert($$) {
                                   ->{$element->{'extra'}->{'format'}})) {
           $arg_index = 2;
         }
-        if (scalar(@{$element->{'contents'}}) > $arg_index
-            and exists($element->{'contents'}->[$arg_index]->{'contents'})) {
-          my $arg = $element->{'contents'}->[$arg_index];
+        if (scalar(@$args) > $arg_index
+            and exists($args->[$arg_index]->{'contents'})) {
+          my $arg = $args->[$arg_index];
           my $argument;
           if ($cmdname eq 'inlineraw') {
             $argument = Texinfo::TreeElement::new(
@@ -3440,10 +3400,9 @@ sub _convert($$) {
           }
           _convert($self, $argument);
         }
-        return;
         # condition should actually be that the $cmdname is inline
       } elsif (exists($math_commands{$cmdname})) {
-        if (exists($element->{'contents'})) {
+        if (defined($args)) {
           push @{$self->{'context'}}, $cmdname;
           if (exists($self->{'elements_images'})
               and exists($self->{'elements_images'}->{$element})) {
@@ -3460,7 +3419,7 @@ sub _convert($$) {
                                                'pending_text' => [['']]};
           }
           _convert($self, Texinfo::TreeElement::new({'type' => '_code',
-                          'contents' => [$element->{'contents'}->[0]]}));
+                          'contents' => [$args->[0]]}));
           if (exists($self->{'elements_images'})
               and exists($self->{'elements_images'}->{$element})) {
             # flush @math, including spaces
@@ -3482,47 +3441,45 @@ sub _convert($$) {
           my $old_context = pop @{$self->{'context'}};
           die if ($old_context ne $cmdname);
         }
-        return;
       } elsif ($cmdname eq 'titlefont') {
-        if (!Texinfo::Common::empty_spaces_argument($element)) {
+        if (defined($args) and defined($args->[0])) {
           _text_heading($self,
            Texinfo::TreeElement::new({'extra' => {'section_level' => 0},
                                       'cmdname' => 'titlefont'}),
-                            $element->{'contents'}->[0],
+                            $args->[0],
                             $self->get_conf('NUMBER_SECTIONS'),
                $self->{'format_context'}->[-1]->{'context_indent_len'}, 1);
           _add_lines_count($self, 1);
         }
-        return;
       } elsif ($cmdname eq 'U') {
-        if (exists($element->{'contents'})) {
+        if (defined($args) and defined($args->[0])) {
           my ($arg_text, $surplus_arg)
-            = Texinfo::Common::simple_arg_text($element->{'contents'}->[0]);
+            = Texinfo::Common::simple_arg_text($args->[0]);
           if (defined($arg_text) and $arg_text ne '') {
+            my $possible_conversion;
             # Syntactic checks on the value were already done in Parser.pm,
             # but we have one more thing to test: since this is the one
             # place where we might output actual UTF-8 binary bytes, we have
             # to check that it is possible.  If not, silently fall back to
             # plain text, on the theory that the user wants something.
             if ($self->{'to_utf8'}) {
-              my $possible_conversion
+              $possible_conversion
                 = Texinfo::Convert::Unicode::check_unicode_point_conversion(
                                                   $arg_text, $self->{'debug'});
-              if ($possible_conversion) {
-                my $res = chr(hex($arg_text)); # ok to call chr
-                _stream_output_add_text($self, $res);
-                return;
-              }
             }
-            # split in two calls to match C code
-            _stream_output_add_text($self, 'U+');
-            _stream_output_add_text($self, $arg_text);
+            if ($possible_conversion) {
+              my $res = chr(hex($arg_text)); # ok to call chr
+              _stream_output_add_text($self, $res);
+            } else {
+              # split in two calls to match C code
+              _stream_output_add_text($self, 'U+');
+              _stream_output_add_text($self, $arg_text);
+            }
           }
         }
-        return;
       } elsif ($cmdname eq 'value') {
         my $expansion = $self->cdt('@{No value for `{value}\'@}',
-                                   {'value' => $element->{'contents'}->[0]});
+                                   {'value' => $args->[0]});
         my $piece;
         if ($formatter->{'_top_formatter'}) {
           $piece = {'type' => 'paragraph',
@@ -3531,8 +3488,8 @@ sub _convert($$) {
           $piece = $expansion;
         }
         _convert($self, $piece);
-        return;
       }
+      return;
     } elsif (defined($nobrace_symbol_text{$cmdname})) {
       if ($cmdname eq ':') {
         Texinfo::Convert::Paragraph::remove_end_sentence(

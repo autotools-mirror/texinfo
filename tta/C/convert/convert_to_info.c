@@ -1139,7 +1139,8 @@ static const char *node_quote = "\x7f";
 
 void
 info_format_ref (CONVERTER *self, enum command_id cmd,
-                 const ELEMENT *element)
+                 const ELEMENT *element,
+                 const CONST_ELEMENT_LIST *element_args)
 {
   PLAINTEXT_CONVERTER_STATE *self_plaintext = self->plaintext_converter;
   const size_t max_xref_args = 5;
@@ -1163,31 +1164,30 @@ info_format_ref (CONVERTER *self, enum command_id cmd,
     = (self->conf->INFO_SPECIAL_CHARS_WARNING.o.integer > 0
        && !self_plaintext->silent);
 
-  /* no args may happen with bogus @-commands without argument, maybe only
+  /* no argument may happen with bogus @-commands without argument, maybe only
      at the end of a document */
 
-  if (!element->e.c->contents.number)
+  if (element_args->number <= 0)
     return;
-  else if (element->e.c->contents.number > max_xref_args)
+  if (element_args->number > max_xref_args)
     fatal ("xref command with too many arguments");
 
   memset (args, 0, max_xref_args * sizeof (const ELEMENT *));
 
-  for (i = 0; i < element->e.c->contents.number; i++)
+  for (i = 0; i < element_args->number; i++)
     {
-      const ELEMENT *arg = element->e.c->contents.list[i];
-      if (!empty_spaces_argument (arg))
-        args[i] = arg;
+      if (element_args->list[i])
+        args[i] = element_args->list[i];
     }
 
-  arg_node = element->e.c->contents.list[0];
+  arg_node = element_args->list[0];
 
 
   /* normalize node name, to get a ref with the right formatting
      NOTE as a consequence, the line numbers appearing in case of errors
      correspond to the node lines numbers, and not the @ref. */
   /* exclude external nodes (in case internal refs get normalized) */
-  if (!args[3] && !args[4])
+  if (!args[3] && !args[4] && arg_node)
     {
       const char *normalized
        = lookup_extra_string (arg_node, AI_key_normalized);
@@ -1906,10 +1906,10 @@ static const char *image_files_extensions[] = {
 };
 
 int
-info_format_image_element (CONVERTER *self, const ELEMENT *element)
+info_format_image_element (CONVERTER *self, const ELEMENT *element,
+                          const CONST_ELEMENT_LIST *args)
 {
-  if (element->e.c->contents.number > 0
-      && !empty_spaces_argument (element->e.c->contents.list[0]))
+  if (args->number > 0 && args->list[0])
     {
       PLAINTEXT_CONVERTER_STATE *self_plaintext = self->plaintext_converter;
       char *basefile;
@@ -1923,18 +1923,18 @@ info_format_image_element (CONVERTER *self, const ELEMENT *element)
       int width = 0;
 
       self->convert_text_options->code_state++;
-      basefile = convert_to_text (element->e.c->contents.list[0],
+      basefile = convert_to_text (args->list[0],
                                   self->convert_text_options);
       self->convert_text_options->code_state--;
 
-      if (element->e.c->contents.number > 4
-          && element->e.c->contents.list[4]->e.c->contents.number > 0)
+      if (args->number > 4 && args->list[4]
+          && args->list[4]->e.c->contents.number > 0)
         {
           char *extension;
           char *dot_extension;
 
           self->convert_text_options->code_state++;
-          extension = convert_to_text (element->e.c->contents.list[4],
+          extension = convert_to_text (args->list[4],
                                        self->convert_text_options);
           self->convert_text_options->code_state--;
 
@@ -1984,10 +1984,10 @@ info_format_image_element (CONVERTER *self, const ELEMENT *element)
 
       text = converter_txt_image_text (self, element, basefile, &width);
 
-      if (element->e.c->contents.number > 3
-          && element->e.c->contents.list[3]->e.c->contents.number > 0)
+      if (args->number > 3 && args->list[3]
+          && args->list[3]->e.c->contents.number > 0)
         {
-          alt = convert_to_text_text (element->e.c->contents.list[3],
+          alt = convert_to_text_text (args->list[3],
                                        self->convert_text_options);
           alt_ref = &alt;
         }
@@ -2023,7 +2023,7 @@ info_format_image_element (CONVERTER *self, const ELEMENT *element)
       else
         {
           lines_count
-               = plaintext_stream_image_formatted_text (self, element,
+               = plaintext_stream_image_formatted_text (self, element, args,
                                                         basefile, text);
         }
       free (text.text);

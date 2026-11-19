@@ -140,12 +140,14 @@ typedef struct PLAINTEXT_FORMAT_FUNCTIONS {
     TEXT (* format_image) (CONVERTER *self, const char *image_file,
                    const TEXT *text, const TEXT *alt,
                    int dpi, int depth, int *lines_count);
-    int (* format_image_element) (CONVERTER *self, const ELEMENT *element);
+    int (* format_image_element) (CONVERTER *self, const ELEMENT *element,
+                                  const CONST_ELEMENT_LIST *args);
     void (* format_node) (CONVERTER *self, const ELEMENT *element,
                           const NODE_RELATIONS *node_relations);
     void (* format_printindex) (CONVERTER *self, const ELEMENT *element);
     void (* format_ref) (CONVERTER *self, enum command_id cmd,
-                         const ELEMENT *element);
+                         const ELEMENT *element,
+                         const CONST_ELEMENT_LIST *args);
     void (* format_reference_to_footnote) (CONVERTER *self);
     TEXT (* quote_image) (CONVERTER *self, const TEXT *image_text);
 } PLAINTEXT_FORMAT_FUNCTIONS;
@@ -2975,7 +2977,8 @@ plaintext_format_printindex (CONVERTER *self, const ELEMENT *printindex)
 
 void
 plaintext_format_ref (CONVERTER *self, enum command_id cmd,
-                      const ELEMENT *element)
+                      const ELEMENT *element,
+                      const CONST_ELEMENT_LIST *element_args)
 {
   const size_t max_xref_args = 5;
   const ELEMENT *args[max_xref_args];
@@ -3001,27 +3004,26 @@ plaintext_format_ref (CONVERTER *self, enum command_id cmd,
   /* no args may happen with bogus @-commands without argument, maybe only
      at the end of a document */
 
-  if (!element->e.c->contents.number)
+  if (element_args->number <= 0)
     return;
-  else if (element->e.c->contents.number > max_xref_args)
+  if (element_args->number > max_xref_args)
     fatal ("xref command with too many arguments");
 
   memset (args, 0, max_xref_args * sizeof (const ELEMENT *));
 
-  for (i = 0; i < element->e.c->contents.number; i++)
+  for (i = 0; i < element_args->number; i++)
     {
-      const ELEMENT *arg = element->e.c->contents.list[i];
-      if (!empty_spaces_argument (arg))
-        args[i] = arg;
+      if (element_args->list[i])
+        args[i] = element_args->list[i];
     }
 
-  arg_node = element->e.c->contents.list[0];
+  arg_node = element_args->list[0];
 
   /* normalize node name, to get a ref with the right formatting
      NOTE as a consequence, the line numbers appearing in case of errors
      correspond to the node lines numbers, and not the @ref. */
   /* exclude external nodes (in case internal refs get normalized) */
-  if (!args[3] && !args[4])
+  if (!args[3] && !args[4] && arg_node)
     {
       const char *normalized
        = lookup_extra_string (arg_node, AI_key_normalized);
@@ -3333,6 +3335,7 @@ plaintext_format_anchor (CONVERTER *self, const ELEMENT *anchor)
 
 int
 plaintext_stream_image_formatted_text (CONVERTER *self, const ELEMENT *element,
+                                       const CONST_ELEMENT_LIST *args,
                                        const char *basefile, TEXT text)
 {
   int lines_count = 0;
@@ -3380,10 +3383,9 @@ plaintext_stream_image_formatted_text (CONVERTER *self, const ELEMENT *element,
   text_init (&result);
 
   text_append_n (&result, "[", 1);
-  if (element->e.c->contents.number >= 4
-      && !empty_spaces_argument (element->e.c->contents.list[3]))
+  if (args->number >= 4 && args->list[3])
     {
-      TEXT alt = convert_to_text_text (element->e.c->contents.list[3],
+      TEXT alt = convert_to_text_text (args->list[3],
                                        self->convert_text_options);
       text_append_n (&result, alt.text, alt.end);
       free (alt.text);
@@ -3426,10 +3428,10 @@ plaintext_stream_image_formatted_text (CONVERTER *self, const ELEMENT *element,
 }
 
 int
-plaintext_format_image_element (CONVERTER *self, const ELEMENT *element)
+plaintext_format_image_element (CONVERTER *self, const ELEMENT *element,
+                                const CONST_ELEMENT_LIST *args)
 {
-  if (element->e.c->contents.number > 0
-      && !empty_spaces_argument (element->e.c->contents.list[0]))
+  if (args->number > 0 && args->list[0])
     {
       char *basefile;
       TEXT text;
@@ -3437,15 +3439,15 @@ plaintext_format_image_element (CONVERTER *self, const ELEMENT *element)
       int lines_count;
 
       self->convert_text_options->code_state++;
-      basefile = convert_to_text (element->e.c->contents.list[0],
+      basefile = convert_to_text (args->list[0],
                                   self->convert_text_options);
       self->convert_text_options->code_state--;
 
       text = converter_txt_image_text (self, element, basefile, &width);
 
       lines_count
-        = plaintext_stream_image_formatted_text (self, element, basefile,
-                                                 text);
+        = plaintext_stream_image_formatted_text (self, element, args,
+                                                 basefile, text);
       free (text.text);
       free (basefile);
 
@@ -4352,16 +4354,19 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
         {
           const char *begin = lookup_extra_string (element, AI_key_begin);
           const char *end = lookup_extra_string (element, AI_key_end);
+          CONST_ELEMENT_LIST *args = get_non_empty_brace_args (element);
           stream_output_add_next (self, begin, strlen (begin), 1);
-          if (element->e.c->contents.number > 0)
-            convert_to_plaintext_internal (self,
-                                           element->e.c->contents.list[0]);
+          if (args->number > 0 && args->list[0])
+            convert_to_plaintext_internal (self, args->list[0]);
           stream_output_add_next (self, end, strlen (end), 1);
+
+          destroy_const_element_list (args);
 
           return;
         }
       else if (cmd_data->flags & CF_brace)
         {
+          CONST_ELEMENT_LIST *args = get_non_empty_brace_args (element);
           if ((plaintext_commands_data[cmd].flags
                & (PF_style_map | PF_asis | PF_quoted))
               || cmd == CM_dfn /* %double_quoted_commands in Perl */)
@@ -4467,10 +4472,9 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
                                           strlen (text_before), 1);
                 }
 
-              if (element->e.c->contents.number != 0)
+              if (args->number > 0 && args->list[0])
                 {
-                  const ELEMENT *brace_container
-                            = element->e.c->contents.list[0];
+                  const ELEMENT *brace_container = args->list[0];
                   convert_to_plaintext_internal (self, brace_container);
 
                   if (cmd == CM_strong
@@ -4540,7 +4544,6 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
                   para_set_conf_frenchspacing (*(top_(integer)
                                  (&formatter->frenchspacing_stack)));
                 }
-              return;
             }
           else if (cmd == CM_var || cmd == CM_sc)
             {/* upper_case_commands */
@@ -4557,9 +4560,9 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
                   para_set_conf_frenchspacing (1);
                 }
 
-              if (element->e.c->contents.number != 0)
+              if (args->number > 0 && args->list[0])
                 convert_to_plaintext_internal (self,
-                                               element->e.c->contents.list[0]);
+                                               args->list[0]);
               formatter
                     = top_(formatter) (&self_plaintext->formatters);
               upper_case
@@ -4575,32 +4578,27 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
                  /* Allow a following full stop to terminate a sentence. */
                   para_allow_end_sentence ();
                 }
-              return;
             }
           else if (cmd == CM_link)
             {
-              if (element->e.c->contents.number > 0)
+              if (args->number > 0)
                 {
                   const ELEMENT *text_arg = 0;
          /* Use arg 2 if present, otherwise use arg 1.  Do not produce
             functional link in Info/plaintext output. */
-                  if (element->e.c->contents.number >= 2
-                      && !empty_spaces_argument (
-                                      element->e.c->contents.list[1]))
-                    text_arg = element->e.c->contents.list[1];
-                  else if (!empty_spaces_argument (
-                                      element->e.c->contents.list[0]))
-                    text_arg = element->e.c->contents.list[0];
+                  if (args->number >= 2 && args->list[1])
+                    text_arg = args->list[1];
+                  else if (args->list[0])
+                    text_arg = args->list[0];
 
                   if (text_arg)
                     convert_to_plaintext_internal (self, text_arg);
                 }
-              return;
             }
           else if (cmd_data->flags & CF_ref)
             {
-              plaintext_functions[self->format].format_ref (self, cmd, element);
-              return;
+              plaintext_functions[self->format].format_ref (self, cmd, element,
+                                                            args);
             }
           else if (cmd == CM_image)
             {
@@ -4625,7 +4623,7 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
 
               int lines_count
                 = plaintext_functions[self->format].format_image_element (self,
-                                                                      element);
+                                                                element, args);
 
        /* We do not how much horizontal space @image will take:
             * In plain text output or standalone Info, the replacement
@@ -4651,14 +4649,12 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
                   ensure_end_of_line (self);
                 }
 
-              return;
             }
           else if (cmd == CM_today)
             {
               ELEMENT *today_element = converter_expand_today (self);
               convert_to_plaintext_internal (self, today_element);
               destroy_element_and_children (today_element);
-              return;
             }
           else if (cmd_data->data == BRACE_noarg)
             {
@@ -4733,37 +4729,34 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
                       para_allow_end_sentence ();
                     }
                 }
-
-              return;
             }
           else if (cmd == CM_email)
             {
-              if (element->e.c->contents.number > 0)
+              if (args->number > 0)
                 {
-       /* next elements are temporarily modified during copy, so cannot be
-          const, but they are conceptually const */
-                  ELEMENT *name = 0;
-                  ELEMENT *email = 0;
+                  const ELEMENT *name = 0;
+                  const ELEMENT *email = 0;
 
                   ELEMENT *email_tree;
 
-                  if (element->e.c->contents.number >= 2
-                   && !empty_spaces_argument (element->e.c->contents.list[1]))
-                    name = element->e.c->contents.list[1];
-                  if (!empty_spaces_argument (element->e.c->contents.list[0]))
-                    email = element->e.c->contents.list[0];
+                  if (args->number >= 2 && args->list[1])
+                    name = args->list[1];
+                  if (args->list[0])
+                    email = args->list[0];
 
                   if (email)
                     {
                       NAMED_STRING_ELEMENT_LIST *substrings
                                  = new_named_string_element_list ();
-                      ELEMENT *email_copy = copy_element_tree (email, 0);
+                      ELEMENT *email_copy
+                        = copy_element_tree ((ELEMENT *)email, 0);
                       add_element_to_named_string_element_list (substrings,
                                                          "email", email_copy);
 
                       if (name)
                         {
-                           ELEMENT *name_copy = copy_element_tree (name, 0);
+                           ELEMENT *name_copy
+                              = copy_element_tree ((ELEMENT *)name, 0);
                            add_element_to_named_string_element_list (substrings,
                                                             "name", name_copy);
                            email_tree = cdt_tree ("{name} @url{{email}}", self,
@@ -4783,23 +4776,20 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
                   else if (name)
                     convert_to_plaintext_internal (self, name);
                 }
-              return;
             }
           else if (cmd == CM_uref || cmd == CM_url)
             {
-              if (element->e.c->contents.number > 0)
+              if (args->number > 0)
                 {
-                  if (element->e.c->contents.number == 3
-                   && !empty_spaces_argument (element->e.c->contents.list[2]))
+                  if (args->number == 3 && args->list[2])
                     {
                       ELEMENT *inserted = new_element (ET__stop_upper_case);
                       add_to_contents_as_array (inserted,
-                                                element->e.c->contents.list[2]);
+                                                (ELEMENT *)args->list[2]);
                       convert_to_plaintext_internal (self, inserted);
                       destroy_element (inserted);
                     }
-                  else if (!empty_spaces_argument (
-                                           element->e.c->contents.list[0]))
+                  else if (args->list[0])
                     {
                       ELEMENT *inserted;
                       NAMED_STRING_ELEMENT_LIST *substrings
@@ -4810,19 +4800,16 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
                       ELEMENT *url_code = new_element (ET__code);
                       add_to_element_contents (url, url_code);
                       ELEMENT *url_arg_copy
-                        = copy_element_tree (element->e.c->contents.list[0], 0);
+                        = copy_element_tree ((ELEMENT *)args->list[0], 0);
                       add_to_element_contents (url_code, url_arg_copy);
 
                       add_element_to_named_string_element_list (substrings,
                                                                 "url", url);
 
-                      if (element->e.c->contents.number == 2
-                          && !empty_spaces_argument (
-                                               element->e.c->contents.list[1]))
+                      if (args->number == 2 && args->list[1])
                         {
                           ELEMENT *text_copy
-                            = copy_element_tree (
-                                         element->e.c->contents.list[1], 0);
+                            = copy_element_tree ((ELEMENT *)args->list[1], 0);
                           add_element_to_named_string_element_list (substrings,
                                                             "text", text_copy);
                           inserted = cdt_tree ("{text} ({url})", self,
@@ -4837,15 +4824,11 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
                       destroy_element_and_children (inserted);
                       destroy_named_string_element_list (substrings);
                     }
-                  else if (element->e.c->contents.number == 2
-                          && !empty_spaces_argument (
-                                            element->e.c->contents.list[1]))
+                  else if (args->number == 2 && args->list[1])
                     {
-                      convert_to_plaintext_internal (self,
-                                          element->e.c->contents.list[1]);
+                      convert_to_plaintext_internal (self, args->list[1]);
                     }
                 }
-              return;
             }
           else if (cmd == CM_footnote)
             {
@@ -4882,36 +4865,31 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
 
               plaintext_functions[self->format]
                                  .format_reference_to_footnote (self);
-
-              return;
             }
           else if (cmd == CM_anchor || cmd == CM_namedanchor)
             {
               const TEXT pending_word = para_add_pending_word (0);
               stream_output_n (self, pending_word.text, pending_word.end);
               plaintext_functions[self->format].format_anchor (self, element);
-              return;
             }
           else if (command_data[cmd].other_flags & CF_explained)
             {
-              if (element->e.c->contents.number > 0
-                  && !empty_spaces_argument (element->e.c->contents.list[0]))
+              if (args->number > 0 && args->list[0])
                 {
                   ELEMENT *abbr_frenchspacing = 0;
                   if (cmd == CM_abbr)
                     /* in abbr spaces never end a sentence. */
                     abbr_frenchspacing = new_element (ET__frenchspacing);
-                  if (element->e.c->contents.number >= 2
-                      && !empty_spaces_argument (element->e.c->contents.list[1]))
+                  if (args->number >= 2 && args->list[1])
                     {
                       ELEMENT *inserted;
                       NAMED_STRING_ELEMENT_LIST *substrings
                                  = new_named_string_element_list ();
 
                       ELEMENT *explanation_copy
-                        = copy_element_tree (element->e.c->contents.list[1], 0);
+                        = copy_element_tree ((ELEMENT *)args->list[1], 0);
                       ELEMENT *first_arg_copy
-                        = copy_element_tree (element->e.c->contents.list[0], 0);
+                        = copy_element_tree ((ELEMENT *)args->list[0], 0);
                       if (abbr_frenchspacing)
                         {
                           add_to_element_contents (abbr_frenchspacing,
@@ -4937,7 +4915,7 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
                       if (abbr_frenchspacing)
                         {
                           add_to_contents_as_array (abbr_frenchspacing,
-                                         element->e.c->contents.list[0]);
+                                                    (ELEMENT *)args->list[0]);
 
                           convert_to_plaintext_internal (self,
                                                          abbr_frenchspacing);
@@ -4945,14 +4923,13 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
                         }
                       else
                         convert_to_plaintext_internal (self,
-                                             element->e.c->contents.list[0]);
+                                                       args->list[0]);
 
            /* We want to permit an end of sentence, but not force it
               as @. does. */
                       para_allow_end_sentence ();
                     }
                 }
-              return;
             }
           else if (cmd_data->data == BRACE_inline)
             {
@@ -4966,9 +4943,8 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
                     arg_index = 2;
                 }
 
-              if (element->e.c->contents.number > arg_index
-                  && element->e.c->contents.list[arg_index]
-                              ->e.c->contents.number > 0)
+              if (args->number > arg_index && args->list[arg_index]
+                  && args->list[arg_index]->e.c->contents.number > 0)
                 {
                   if (cmd == CM_inlineraw)
                     {
@@ -4978,7 +4954,7 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
                         = new_element (ET__code);
                       add_to_element_contents (inline_stop_upper, inline_code);
                       add_to_contents_as_array (inline_code,
-                                 element->e.c->contents.list[arg_index]);
+                                                (ELEMENT *)args->list[arg_index]);
 
                       convert_to_plaintext_internal (self,
                                                      inline_stop_upper);
@@ -4987,9 +4963,8 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
                     }
                   else
                     convert_to_plaintext_internal (self,
-                                  element->e.c->contents.list[arg_index]);
+                                                   (ELEMENT *)args->list[arg_index]);
                 }
-              return;
             }
           else if (cmd_data->flags & CF_math)
             {
@@ -5028,12 +5003,12 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
                     }
                 }
 
-              if (element->e.c->contents.number > 0)
+              if (args->number > 0 && args->list[0])
                 {
                   ELEMENT *math_code_element = new_element (ET__code);
 
                   add_to_contents_as_array (math_code_element,
-                                            element->e.c->contents.list[0]);
+                                            (ELEMENT *)args->list[0]);
 
                   convert_to_plaintext_internal (self,
                                                 math_code_element);
@@ -5078,11 +5053,10 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
               popped_cmd = pop_context (&self_plaintext->context);
               if (popped_cmd != cmd)
                 abort ();
-              return;
             }
           else if (cmd == CM_titlefont)
             {
-              if (!empty_spaces_argument (element))
+              if (args->number > 0 && args->list[0])
                 {
                   FORMAT_CONTEXT *top_format_context
                    = top_(format_context) (&self_plaintext->format_context);
@@ -5092,45 +5066,42 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
                                      AI_key_section_level, 0);
 
                   text_heading (self, titlefont_with_level,
-                                element->e.c->contents.list[0],
+                                args->list[0],
                                 self->conf->NUMBER_SECTIONS.o.integer,
                                 top_format_context->context_indent_len, 1);
                   add_lines_count (self, 1);
                   destroy_element (titlefont_with_level);
                 }
-              return;
             }
           else if (cmd == CM_U)
             {
-              if (element->e.c->contents.number > 0)
+              if (args->number > 0 && args->list[0])
                 {
                   int surplus_arg;
                   const TEXT *arg_text
-                    = simple_arg_text (element->e.c->contents.list[0],
+                    = simple_arg_text (args->list[0],
                                        &surplus_arg);
                   if (arg_text && strcmp (arg_text->text, ""))
                     {
+                      int len;
+                      char *result = 0;
+
                       if (self_plaintext->to_utf8)
+                        result = hex_string_to_utf8_char (arg_text->text,
+                                        self->conf->DEBUG.o.integer, &len);
+                      if (result)
                         {
-                          int len;
-                          char *result
-                            = hex_string_to_utf8_char (arg_text->text,
-                                      self->conf->DEBUG.o.integer, &len);
-
-                          if (result)
-                            {
-                              stream_output_add_text (self, result, len, 0);
-                              free (result);
-                              return;
-                            }
+                          stream_output_add_text (self, result, len, 0);
+                          free (result);
                         }
-
-                      stream_output_add_text (self, "U+", 2, 0);
-                      stream_output_add_text (self, arg_text->text,
-                                              arg_text->end, 0);
+                      else
+                        {
+                          stream_output_add_text (self, "U+", 2, 0);
+                          stream_output_add_text (self, arg_text->text,
+                                                  arg_text->end, 0);
+                        }
                     }
                 }
-              return;
             }
           else if (cmd == CM_value)
             {
@@ -5138,7 +5109,7 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
                = top_(formatter) (&self_plaintext->formatters);
               ELEMENT *expansion;
               ELEMENT *value_arg_copy
-                = copy_element_tree (element->e.c->contents.list[0], 0);
+                = copy_element_tree ((ELEMENT *)args->list[0], 0);
               NAMED_STRING_ELEMENT_LIST *substrings
                                  = new_named_string_element_list ();
               add_element_to_named_string_element_list (substrings,
@@ -5160,9 +5131,9 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
                   destroy_element_and_children (expansion);
                 }
               destroy_named_string_element_list (substrings);
-
-              return;
             }
+          destroy_const_element_list (args);
+          return;
         }
       else if (nobrace_symbol_text[cmd])
         {

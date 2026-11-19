@@ -72,6 +72,7 @@ void plaintext_process_printindex (CONVERTER *self,
                                    const ELEMENT *printindex, int in_info);
 int plaintext_stream_image_formatted_text (CONVERTER *self,
                                        const ELEMENT *element,
+                                       const CONST_ELEMENT_LIST *args,
                                        const char *basefile, TEXT text);
 
 void plaintext_setup_output_encoding (CONVERTER *self);

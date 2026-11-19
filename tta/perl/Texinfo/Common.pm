@@ -1080,6 +1080,29 @@ sub non_trailing_tree($) {
   return $result;
 }
 
+sub get_non_empty_brace_args($) {
+  my $element = shift;
+
+  return undef if (!exists($element->{'contents'}));
+
+  my @args;
+  foreach my $arg (@{$element->{'contents'}}) {
+    next if (exists($arg->{'type'})
+             and $arg->{'type'} eq 'spaces_after_cmd_before_arg');
+    if (empty_spaces_argument($arg)) {
+      push @args, undef;
+    } else {
+      push @args, $arg;
+    }
+  }
+
+  if (scalar(@args) == 0) {
+    return undef;
+  } else {
+    return \@args;
+  }
+}
+
 # ALTIMP C/main/utils.c
 # Used in converters
 # find the accent commands stack and the innermost text contents
@@ -1102,12 +1125,13 @@ sub find_innermost_accent_contents($) {
       return (undef, \@accent_commands);
     }
     push @accent_commands, $current;
-    # A bogus accent, that may happen
-    if (!exists($current->{'contents'})) {
+    my $args = get_non_empty_brace_args($current);
+    if (!defined($args)) {
+      # A bogus accent, that may happen
       return (undef, \@accent_commands);
     }
-    my $arg = $current->{'contents'}->[0];
-    if (!exists($arg->{'contents'})) {
+    my $arg = $args->[0];
+    if (!defined($arg) or !exists($arg->{'contents'})) {
       return (undef, \@accent_commands);
     }
     # inside the argument of an accent

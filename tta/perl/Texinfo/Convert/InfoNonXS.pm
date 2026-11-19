@@ -796,21 +796,12 @@ sub format_anchor($$) {
   }
 }
 
-sub format_ref($$$) {
-  my ($self, $cmdname, $element) = @_;
+sub format_ref($$$$) {
+  my ($self, $cmdname, $element, $args) = @_;
 
-  return if (!exists($element->{'contents'}));
+  return if (!defined($args));
 
   my $formatter = $self->{'formatters'}->[-1];
-
-  my @args;
-  foreach my $arg (@{$element->{'contents'}}) {
-    if (Texinfo::Common::empty_spaces_argument($arg)) {
-      push @args, undef;
-    } else {
-      push @args, $arg;
-    }
-  }
 
   my $node_arg = $element->{'contents'}->[0];
 
@@ -829,8 +820,8 @@ sub format_ref($$$) {
       # exclude external nodes, as only internal refs get an extra normalized
       and defined($node_arg->{'extra'}->{'normalized'})
       # exclude external nodes again, in case internal refs get normalized
-      and !defined($args[3])
-      and !defined($args[4])
+      and !defined($args->[3])
+      and !defined($args->[4])
       and defined($identifiers_target)
       and exists($identifiers_target->{$node_arg->{'extra'}->{'normalized'}})) {
     $target_element
@@ -845,28 +836,28 @@ sub format_ref($$$) {
   }
   if (!defined($label_element)) {
     # may still be undef if node argument is empty
-    $label_element = $args[0];
+    $label_element = $args->[0];
   }
 
-  # if it a reference to a float with a label, $args[1] is
+  # if it a reference to a float with a label, $args->[1] is
   # set to '$type $number' or '$number' if there is no type.
-  if (! defined($args[1])
+  if (! defined($args->[1])
       and defined($target_element) and exists($target_element->{'cmdname'})
       and $target_element->{'cmdname'} eq 'float') {
     my $name = $self->float_type_number($target_element);
-    $args[1] = $name;
+    $args->[1] = $name;
   }
 
-  if ($cmdname eq 'inforef' and scalar(@args) >= 3) {
-    $args[3] = $args[2];
-    $args[2] = undef;
+  if ($cmdname eq 'inforef' and scalar(@$args) >= 3) {
+    $args->[3] = $args->[2];
+    $args->[2] = undef;
   }
 
   my $name;
-  if (defined($args[1])) {
-    $name = $args[1];
-  } elsif (defined($args[2])) {
-    $name = $args[2];
+  if (defined($args->[1])) {
+    $name = $args->[1];
+  } elsif (defined($args->[2])) {
+    $name = $args->[2];
   }
 
   # Treat cross-reference commands in a multitable cell as if they
@@ -928,17 +919,17 @@ sub format_ref($$$) {
   }
 
   my $has_file = 0;
-  if (defined($args[3])) {
+  if (defined($args->[3])) {
     my $file = Texinfo::TreeElement::new({'contents' => [
                Texinfo::TreeElement::new({'text' => '('}),
                Texinfo::TreeElement::new({'type' => '_stop_upper_case',
                   'contents' => [Texinfo::TreeElement::new(
                                   {'type' => '_code',
-                                   'contents' => [$args[3]]})],}),
+                                   'contents' => [$args->[3]]})],}),
                Texinfo::TreeElement::new({'text' => ')'}),]});
     $self->_convert($file);
     $has_file = 1;
-  } elsif (defined($args[4])) {
+  } elsif (defined($args->[4])) {
     # add a () such that the node is considered to be external,
     # even though the manual name is not known.  This should only
     # happen if a book argument is given, but no manual name.
@@ -1266,29 +1257,24 @@ sub format_image($$$;$$$) {
 }
 
 my @image_files_extensions = ('.png', '.jpg');
-sub format_image_element($$) {
-  my ($self, $element) = @_;
+sub format_image_element($$$) {
+  my ($self, $element, $args) = @_;
 
   my $lines_count = 0;
 
-  if (exists($element->{'contents'})
-      and not Texinfo::Common::empty_spaces_argument(
-                              $element->{'contents'}->[0])) {
+  if (defined($args) and defined($args->[0])) {
     Texinfo::Convert::Text::set_options_code(
                                  $self->{'convert_text_options'});
-    my $basefile = Texinfo::Convert::Text::convert_to_text(
-                                         $element->{'contents'}->[0],
+    my $basefile = Texinfo::Convert::Text::convert_to_text($args->[0],
                                    $self->{'convert_text_options'});
     Texinfo::Convert::Text::reset_options_code(
                                  $self->{'convert_text_options'});
 
     my @extensions;
-    if (defined($element->{'contents'}->[4])
-        and exists($element->{'contents'}->[4]->{'contents'})) {
+    if (defined($args->[4]) and exists($args->[4]->{'contents'})) {
       Texinfo::Convert::Text::set_options_code(
                                  $self->{'convert_text_options'});
-      my $extension = Texinfo::Convert::Text::convert_to_text(
-                                         $element->{'contents'}->[4],
+      my $extension = Texinfo::Convert::Text::convert_to_text($args->[4],
                                    $self->{'convert_text_options'});
       Texinfo::Convert::Text::reset_options_code(
                                  $self->{'convert_text_options'});
@@ -1313,10 +1299,9 @@ sub format_image_element($$) {
     }
     my ($text, $width) = $self->txt_image_text($element, $basefile);
     my $alt;
-    if (defined($element->{'contents'}->[3])
-        and exists($element->{'contents'}->[3]->{'contents'})) {
-     $alt = Texinfo::Convert::Text::convert_to_text(
-                                    $element->{'contents'}->[3],
+    if (defined($args->[3])
+        and exists($args->[3]->{'contents'})) {
+     $alt = Texinfo::Convert::Text::convert_to_text($args->[3],
                                   $self->{'convert_text_options'});
     }
 
@@ -1338,7 +1323,7 @@ sub format_image_element($$) {
       return $lines_count;
     } else {
       my $lines_count
-       = $self->stream_image_formatted_text($element, $basefile, $text);
+       = $self->stream_image_formatted_text($element, $args, $basefile, $text);
       return $lines_count;
     }
   }
