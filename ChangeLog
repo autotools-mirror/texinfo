@@ -1,5 +1,13 @@
 2026-11-19  Gavin Smith <gavinsmith0123@gmail.com>
 
+	* doc/texinfo.texi (Setting the language): Refer to "latin"
+	and "cyrillic" as "well-known synonyms" of ISO-15924 script codes,
+	instead of "well-known aliases".  This gives these names
+	a more equal status.  Add index entries for Latin and Cyrillic
+	scripts.
+
+2026-11-19  Gavin Smith <gavinsmith0123@gmail.com>
+
 	* doc/texinfo.texi (Internationalization, Setting the language)
 	(Invoking @command{texi2any}):
 	Change "main language" to "language" as it unnecessarily

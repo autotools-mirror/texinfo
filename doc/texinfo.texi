@@ -12271,12 +12271,13 @@ itself, after @code{@@documentlanguage}.
 @@documentscript [@var{script}]
 @end example
 
-Include a script name, either a four letter ISO@tie{}15924 script code name,
-such as @samp{Latn} or a well-known alias, such as @samp{latin} or
-@samp{cyrillic} following the command name.  An empty argument unsets the
-script.
+@cindex Latin script
+@cindex Cyrillic script
+Follow the command by a script name: either a four-letter ISO@tie{}15924
+script code name, such as @samp{Latn}, or a well-known synonym, such as
+@samp{latin} or @samp{cyrillic}.  An empty argument unsets the script.
 
-Setting @code{@@documentlanguage} unsets both language variants
+Any use of @code{@@documentlanguage} resets both language variants
 and script.
 
 @cindex Document strings, translation of
