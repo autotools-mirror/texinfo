@@ -62,13 +62,13 @@ register_extra_menu_entry_information (ELEMENT *current)
         }
       else if (arg->type == ET_menu_entry_node)
         {
-          NODE_SPEC_EXTRA *parsed_entry_node;
+          NODE_SPEC_EXTRA parsed_entry_node;
 
           isolate_trailing_space (arg, ET_space_at_end_menu_node);
 
-          parsed_entry_node = parse_node_manual (arg, 1);
-          if (!parsed_entry_node->manual_content
-              && !parsed_entry_node->node_content)
+          parse_node_manual (arg, &parsed_entry_node);
+          if (!parsed_entry_node.manual_content
+              && !parsed_entry_node.node_content)
             {
               if (global_parser_conf->show_menu)
                 line_error ("empty node name in menu entry");
@@ -76,14 +76,13 @@ register_extra_menu_entry_information (ELEMENT *current)
           else
             {
               menu_entry_node = arg;
-              if (parsed_entry_node->node_content)
+              if (parsed_entry_node.node_content)
                 add_extra_integer_list (arg, AI_key_node_content,
-                                        parsed_entry_node->node_content);
-              if (parsed_entry_node->manual_content)
+                                        parsed_entry_node.node_content);
+              if (parsed_entry_node.manual_content)
                 add_extra_integer_list (arg, AI_key_manual_content,
-                                        parsed_entry_node->manual_content);
+                                        parsed_entry_node.manual_content);
             }
-          free (parsed_entry_node);
         }
     }
   return menu_entry_node;

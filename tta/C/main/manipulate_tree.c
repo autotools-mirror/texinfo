@@ -746,34 +746,34 @@ relocate_source_marks (SOURCE_MARK_LIST *source_mark_list, ELEMENT *new_e,
 
 
 
-/* FIXME change interface */
 /* In Texinfo::Common */
-/* NODE->e.c->contents is the Texinfo for the specification of a node.  This
-   function sets two fields on the returned object:
+/* NODE->e.c->contents is the Texinfo for the specification of a node.
+   If CONTENT_INDICES is not NULL, this function sets the CONTENT_INDICES fields:
 
      manual_content - start and end index of manual content in
                       the modified tree.
      node_content - start and end index of node content in
                     the modified tree.
 
-   Objects returned from this function are used as an 'extra' key in
-   the element for elements linking to nodes (such as @*ref,
-   menu_entry_node or node direction arguments).  In that case
-   modify_node is set to 1 and the node contents are modified in-place to
-   hold the same elements as the returned objects.
+   In that case NODE contents are modified in-place if a manual name is
+   found out such that the parentheses, the manual part and the node part
+   are not in the same elements in the contents.
 
-   This function is also used for elements that are targets of links (@node and
+   Those fields are used as an 'extra' key in
+   the element for elements linking to nodes (such as @*ref,
+   menu_entry_node or node direction arguments).
+
+   If CONTENT_INDICES is NULL, NODE is not modified.  This corresponds to
+   calls of the function for elements that are targets of links (@node and
    @anchor first argument, float second argument) mainly to check that
-   the syntax for an external node is not used.  In that case modify_node
-   is set to 0 and the node is not modified.
-   NOTE the indices returned are not accurate if the tree is not modified,
-   the caller should only check if they exist, not the value.
+   the syntax for an external node is not used.
+
+   The function returns 1 if the syntax for an external node is used.
  */
 
-NODE_SPEC_EXTRA *
-parse_node_manual (ELEMENT *node, int modify_node)
+int
+parse_node_manual (ELEMENT *node, NODE_SPEC_EXTRA *content_indices)
 {
-  NODE_SPEC_EXTRA *result;
   size_t idx; /* index into node->e.c->contents */
   ARG_INDICES arg_indices;
   int non_empty;
@@ -781,13 +781,16 @@ parse_node_manual (ELEMENT *node, int modify_node)
   int node_content_count = 0;
   size_t orig_contents_len = node->e.c->contents.number;
 
-  result = (NODE_SPEC_EXTRA *) malloc (sizeof (NODE_SPEC_EXTRA));
-  result->manual_content = result->node_content = 0;
+  if (content_indices)
+    {
+      content_indices->manual_content = 0;
+      content_indices->node_content = 0;
+    }
 
   non_empty = non_leading_trailing_indices (node, &arg_indices);
 
   if (!non_empty)
-    return result;
+    return 0;
 
   idx = arg_indices.start;
 
@@ -810,7 +813,7 @@ parse_node_manual (ELEMENT *node, int modify_node)
       first = node->e.c->contents.list[idx];
       if (first->e.text->end > 1)
         {
-          if (modify_node)
+          if (content_indices)
             {
               opening_brace = new_text_element (ET_normal_text);
               text_append_n (opening_brace->e.text, "(", 1);
@@ -880,11 +883,11 @@ parse_node_manual (ELEMENT *node, int modify_node)
               size_t current_position = 0;
               /* At this point, we are sure that there is a manual part,
                  so the pending removal/addition of elements at the beginning
-                 of the manual can proceed (if modify_node). */
+                 of the manual can proceed (if content_indices). */
               /* Also, split the element in two, putting the part before the ")"
                  in the manual name, leaving the part afterwards for the
                  node name. */
-              if (modify_node)
+              if (content_indices)
                 {
                   if (opening_brace)
                     {
@@ -910,21 +913,19 @@ parse_node_manual (ELEMENT *node, int modify_node)
                       destroy_element (first);
                     }
                   remove_from_contents (node, idx); /* Remove current element e
-                                                       with closing brace from the tree. */
+                                              with closing brace from the tree. */
                 }
               else
                 {
                   if (new_first)
-                    {
-                      destroy_element (new_first);
-                      new_first = 0;
-                    }
+                    destroy_element (new_first);
+                  return 1;
                 }
               p--; /* point at ) */
               if (p > e->e.text->text)
                 {
                   manual_count++;
-                  if (modify_node)
+                  if (content_indices)
                     {
                       /* text before ), part of the manual name */
                       ELEMENT *last_manual_element
@@ -942,7 +943,7 @@ parse_node_manual (ELEMENT *node, int modify_node)
                     }
                 }
 
-              if (modify_node)
+              if (content_indices)
                 {
                   ELEMENT *closing_brace = new_text_element (ET_normal_text);
                   text_append_n (closing_brace->e.text, ")", 1);
@@ -959,7 +960,7 @@ parse_node_manual (ELEMENT *node, int modify_node)
                  UTF-8 space characters here. */
               p++;
               q = p + strspn (p, whitespace_chars);
-              if (q > p && modify_node)
+              if (q > p && content_indices)
                 {
                   ELEMENT *spaces_element = new_text_element (ET_normal_text);
                   text_append_n (spaces_element->e.text, p, q - p);
@@ -975,7 +976,7 @@ parse_node_manual (ELEMENT *node, int modify_node)
               if (*p)
                 {
                   node_content_count++;
-                  if (modify_node)
+                  if (content_indices)
                     {
                       /* text after ), part of the node name. */
                       ELEMENT *leading_node_content
@@ -992,7 +993,7 @@ parse_node_manual (ELEMENT *node, int modify_node)
                     }
                   idx++;
                 }
-              if (modify_node)
+              if (content_indices)
                 destroy_element (e);
               break;
             }
@@ -1000,15 +1001,15 @@ parse_node_manual (ELEMENT *node, int modify_node)
 
       if (bracket_count == 0)
         {
-          result->manual_content = new_integer_list ();
-          add_(integer) (result->manual_content, first_idx +1);
-          add_(integer) (result->manual_content, first_idx + manual_count);
+          content_indices->manual_content = new_integer_list ();
+          add_(integer) (content_indices->manual_content, first_idx +1);
+          add_(integer) (content_indices->manual_content,
+                         first_idx + manual_count);
         }
       else /* Unbalanced parentheses, consider that there is no manual
               afterall.  So far the node has not been modified, so the
-              only thing that needs to be done is to remove the manual
-              element and the elements allocated for the beginning of
-              the manual, and start over */
+              only thing that needs to be done is to remove the elements
+              allocated for the beginning of the manual, and start over */
         {
           if (new_first)
             destroy_element (new_first);
@@ -1016,8 +1017,12 @@ parse_node_manual (ELEMENT *node, int modify_node)
             destroy_element (opening_brace);
           idx = first_idx; /* Back to the start, and consider the whole thing
                               as a node name. */
+          manual_count = 0;
         }
     }
+
+  if (!content_indices)
+    return 0;
 
   /* take into account that contents size may have increased
      and increase consistently $end_idx. */
@@ -1027,11 +1032,12 @@ parse_node_manual (ELEMENT *node, int modify_node)
 
   if (node_content_count > 0)
     {
-      result->node_content = new_integer_list ();
-      add_(integer) (result->node_content, new_end_idx - node_content_count +1);
-      add_(integer) (result->node_content, new_end_idx);
+      content_indices->node_content = new_integer_list ();
+      add_(integer) (content_indices->node_content,
+                     new_end_idx - node_content_count +1);
+      add_(integer) (content_indices->node_content, new_end_idx);
     }
-  return result;
+  return (manual_count > 0);
 }
 
 

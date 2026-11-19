@@ -300,15 +300,15 @@ sub new_node_menu_entry($;$) {
         $description];
   }
 
-  my $parsed_node_manual
-    = Texinfo::Common::parse_node_manual($menu_entry_node, 1);
-  if (defined($parsed_node_manual)) {
+  my %parsed_node_manual;
+  Texinfo::Common::parse_node_manual($menu_entry_node, \%parsed_node_manual);
+  if (scalar(keys(%parsed_node_manual))) {
     # node_content manual_content
-    foreach my $label_info (keys(%$parsed_node_manual)) {
+    foreach my $label_info (keys(%parsed_node_manual)) {
       $menu_entry_node->{'extra'} = {}
          if (!exists($menu_entry_node->{'extra'}));
       $menu_entry_node->{'extra'}->{$label_info}
-         = $parsed_node_manual->{$label_info};
+         = $parsed_node_manual{$label_info};
     }
 
     if (exists($menu_entry_node->{'extra'}->{'node_content'})) {

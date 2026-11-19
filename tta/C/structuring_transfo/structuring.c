@@ -2292,7 +2292,7 @@ new_node_menu_entry (const NODE_RELATIONS *node_relations, int use_sections)
   ELEMENT *preformatted;
   ELEMENT *description_text;
   ELEMENT *menu_entry_leading_text;
-  NODE_SPEC_EXTRA *parsed_entry_node;
+  NODE_SPEC_EXTRA parsed_entry_node;
   size_t i;
   const ELEMENT *node = node_relations->element;
   int is_target = (node->flags & EF_is_target);
@@ -2379,16 +2379,16 @@ new_node_menu_entry (const NODE_RELATIONS *node_relations, int use_sections)
 
   add_to_element_contents (entry, description);
 
-  parsed_entry_node = parse_node_manual (menu_entry_node, 1);
-  if (parsed_entry_node->node_content)
+  parse_node_manual (menu_entry_node, &parsed_entry_node);
+  if (parsed_entry_node.node_content)
     {
       char *normalized;
       ELEMENT *tmp = new_element (ET_NONE);
       add_extra_integer_list (menu_entry_node, AI_key_node_content,
-                              parsed_entry_node->node_content);
+                              parsed_entry_node.node_content);
       insert_slice_into_contents (tmp, 0, menu_entry_node,
-                                  parsed_entry_node->node_content->list[0],
-                                  parsed_entry_node->node_content->list[1] +1);
+                                  parsed_entry_node.node_content->list[0],
+                                  parsed_entry_node.node_content->list[1] +1);
       normalized = convert_to_node_identifier (tmp);
       destroy_element (tmp);
 
@@ -2404,10 +2404,9 @@ new_node_menu_entry (const NODE_RELATIONS *node_relations, int use_sections)
          }
     }
   /* seems that it may happen, if there is leading parenthesised text? */
-  if (parsed_entry_node->manual_content)
+  if (parsed_entry_node.manual_content)
     add_extra_integer_list (menu_entry_node, AI_key_manual_content,
-                            parsed_entry_node->manual_content);
-  free (parsed_entry_node);
+                            parsed_entry_node.manual_content);
 
   return entry;
 }

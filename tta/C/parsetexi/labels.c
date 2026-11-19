@@ -54,15 +54,14 @@ check_register_target_element_label (ELEMENT *label_element,
       char *non_hyphen_char;
       /* check that the label used as an anchor for link target has no
          external manual part */
-      NODE_SPEC_EXTRA *label_info = parse_node_manual (label_element, 0);
-      if (label_info && label_info->manual_content)
+      int external_link = parse_node_manual (label_element, 0);
+      if (external_link)
         {
           /* show contents only to avoid leading/trailing spaces */
           char *texi = convert_contents_to_texinfo (label_element);
           line_error ("syntax for an external node used for `%s'", texi);
           free (texi);
         }
-      destroy_node_spec (label_info);
       normalized = convert_to_node_identifier (label_element);
       non_hyphen_char = normalized + strspn (normalized, "-");
       if (!*non_hyphen_char)

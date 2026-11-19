@@ -1,5 +1,16 @@
 2026-11-18  Patrice Dumas  <pertusus@free.fr>
 
+	* tta/C/main/manipulate_tree.c (parse_node_manual),
+	tta/perl/Texinfo/Common.pm (parse_node_manual): pass a reference
+	instead of a boolean.  If the reference is defined, modify the node
+	and set the manual_content and node_content start and end indices in
+	the reference.  Return 1 if the node is an external node with a
+	manual.  Update callers.
+
+	Remove destroy_node_spec, which is now unused.
+
+2026-11-18  Patrice Dumas  <pertusus@free.fr>
+
 	manual_content and node_content as indices of element contents not elements
 
 	* tta/C/main/command_stack.c, tta/C/main/converter_types.h, 

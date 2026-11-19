@@ -781,33 +781,33 @@ sub non_leading_trailing_indices($) {
 # $LABEL_CONTENTS_CONTAINER is typically
 # $node->{'contents'}->[0]->{'contents'}->[0].
 #
-# Returned object is a hash with two fields:
+# if \%CONTENT_INDICES is set this function sets the fields in the variable:
 #
 #     manual_content - start and end index of manual content in
 #                      the modified tree.
 #     node_content - start and end index of node content in
 #                    the modified tree.
 #
-# If $MODIFY_TREE is set and manual name is retrieved, modify the
-# $LABEL_CONTENTS_CONTAINER contents such that the parentheses, the manual
-# part and the node part are not in the same elements in the contents.
-# NOTE the indices returned are not accurate if the tree is not modified,
-# the caller should only check if they exist for the manual, not
-# the value.
+# In that case, $LABEL_CONTENTS_CONTAINER contents are modified in-place
+# if a manual name is found out such that the parentheses, the manual part
+# and the node part are not in the same elements in the contents.
+#
+# If \%CONTENT_INDICES is undef, $LABEL_CONTENTS_CONTAINER is not modified.
+#
+# The function returns true if the syntax for an external node is used.
 sub parse_node_manual($;$) {
-  my ($label_contents_container, $modify_node) = @_;
+  my ($label_contents_container, $content_indices) = @_;
 
-  return undef if (!exists($label_contents_container->{'contents'}));
+  return 0 if (!exists($label_contents_container->{'contents'}));
 
   my $contents = $label_contents_container->{'contents'};
 
   my ($first_idx, $end_idx)
     = non_leading_trailing_indices($label_contents_container);
-  return undef if (!defined($first_idx));
+  return 0 if (!defined($first_idx));
 
   # there is something else than spaces, therefore there need to be
   # either a manual, a node or both.
-  my $result = {};
   my $manual_count = 0;
   my $node_content_count = 0;
 
@@ -824,7 +824,7 @@ sub parse_node_manual($;$) {
     # the leading "(" into its own element.
     my $first = $contents->[$idx];
     if ($first->{'text'} ne '(') {
-      if ($modify_node) {
+      if ($content_indices) {
         $opening_brace
           = Texinfo::TreeElement::new({'text' => '('});
       }
@@ -857,8 +857,8 @@ sub parse_node_manual($;$) {
           my $current_position = 0;
           # At this point, we are sure that there is a manual part,
           # so the pending removal/addition of elements at the beginning
-          # of the manual can proceed (if modify_node).
-          if ($modify_node) {
+          # of the manual can proceed (if content_indices).
+          if ($content_indices) {
             if ($opening_brace) {
               # remove the original $first first element and prepend the
               # split "(" and text elements
@@ -876,6 +876,8 @@ sub parse_node_manual($;$) {
             }
             # Remove current element $content with closing brace from the tree.
             splice(@$contents, $idx, 1);
+          } else {
+            return 1;
           }
 
           # remove the closing ), it is not in manual_content
@@ -885,7 +887,7 @@ sub parse_node_manual($;$) {
             my $last_manual_element
               = Texinfo::TreeElement::new({ 'text' => $before });
             $manual_count++;
-            if ($modify_node) {
+            if ($content_indices) {
               splice(@$contents, $idx, 0, $last_manual_element);
               $idx++;
               $current_position = relocate_source_marks(
@@ -893,7 +895,7 @@ sub parse_node_manual($;$) {
                          $current_position, length($before));
             }
           }
-          if ($modify_node) {
+          if ($content_indices) {
             my $closing_brace
               = Texinfo::TreeElement::new({'text' => ')'});
             splice(@$contents, $idx, 0, $closing_brace);
@@ -904,7 +906,7 @@ sub parse_node_manual($;$) {
           }
           $after =~ s/^(\s*)//;
           my $spaces_after = $1;
-          if ($spaces_after and $modify_node) {
+          if ($spaces_after and $content_indices) {
             my $spaces_element
               = Texinfo::TreeElement::new({'text' => $spaces_after,});
             splice(@$contents, $idx, 0, $spaces_element);
@@ -918,7 +920,7 @@ sub parse_node_manual($;$) {
             my $leading_node_content
               = Texinfo::TreeElement::new({'text' => $after});
             $node_content_count++;
-            if ($modify_node) {
+            if ($content_indices) {
               splice(@$contents, $idx, 0, $leading_node_content);
               $current_position = relocate_source_marks(
                            $content->{'source_marks'}, $leading_node_content,
@@ -937,9 +939,13 @@ sub parse_node_manual($;$) {
       $manual_count = 0;
       $idx = $first_idx;
     } else {
-      $result->{'manual_content'}
+      $content_indices->{'manual_content'}
        = [$first_idx +1, $first_idx + $manual_count];
     }
+  }
+
+  if (not defined($content_indices)) {
+    return 0;
   }
 
   my $new_contents_len = scalar(@$contents);
@@ -949,11 +955,11 @@ sub parse_node_manual($;$) {
   $node_content_count += ($new_end_idx +1 - $idx);
 
   if ($node_content_count > 0) {
-    $result->{'node_content'}
+    $content_indices->{'node_content'}
       = [$new_end_idx - $node_content_count +1, $new_end_idx];
   }
 
-  return $result;
+  return ($manual_count > 0);
 }
 
 

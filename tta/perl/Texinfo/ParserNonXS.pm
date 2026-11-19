@@ -4121,15 +4121,16 @@ sub _end_line_misc_line($$$) {
     my $arguments_line = $current->{'contents'}->[0];
     for (my $i = 1; $i < scalar(@{$arguments_line->{'contents'}}); $i++) {
       my $node_line_arg = $arguments_line->{'contents'}->[$i];
-      my $arg_label_manual_info
-        = Texinfo::Common::parse_node_manual($node_line_arg, 1);
-      if (defined($arg_label_manual_info)) {
+      my %arg_label_manual_info;
+      Texinfo::Common::parse_node_manual($node_line_arg,
+                                         \%arg_label_manual_info);
+      if (scalar(keys(%arg_label_manual_info))) {
         # 'node_content' 'manual_content'
-        foreach my $label_info (keys(%$arg_label_manual_info)) {
+        foreach my $label_info (keys(%arg_label_manual_info)) {
           $node_line_arg->{'extra'} = {}
                if (!exists($node_line_arg->{'extra'}));
           $node_line_arg->{'extra'}->{$label_info}
-            = $arg_label_manual_info->{$label_info};
+            = $arg_label_manual_info{$label_info};
         }
         if (exists($node_line_arg->{'extra'}->{'node_content'})) {
           my ($begin, $end) = @{$node_line_arg->{'extra'}->{'node_content'}};
@@ -5052,9 +5053,9 @@ sub _check_register_target_element_label($$$$) {
 
   if (defined($label_element)
       and !Texinfo::Common::empty_spaces_argument($label_element)) {
-    my $label_info
+    my $external_link
       = Texinfo::Common::parse_node_manual($label_element);
-    if (defined($label_info) and exists($label_info->{'manual_content'})) {
+    if ($external_link) {
       _line_error($self, sprintf(__("syntax for an external node used for `%s'"),
        Texinfo::Convert::Texinfo::convert_contents_to_texinfo(
                                                         $label_element)),
@@ -5117,13 +5118,13 @@ sub _register_extra_menu_entry_information($$;$) {
         }
       } else {
         $menu_entry_node = $arg;
-        my $parsed_entry_node
-          = Texinfo::Common::parse_node_manual($arg, 1);
-        if (defined($parsed_entry_node)) {
-          foreach my $label_info (keys(%$parsed_entry_node)) {
+        my %parsed_entry_node;
+        Texinfo::Common::parse_node_manual($arg, \%parsed_entry_node);
+        if (scalar(keys(%parsed_entry_node))) {
+          foreach my $label_info (keys(%parsed_entry_node)) {
             $arg->{'extra'} = {} if (!exists($arg->{'extra'}));
             $arg->{'extra'}->{$label_info}
-              = $parsed_entry_node->{$label_info};
+              = $parsed_entry_node{$label_info};
           }
         } else {
           _bug_message($self, "No label info for menu_entry_node contents",

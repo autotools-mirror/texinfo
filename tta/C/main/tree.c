@@ -648,26 +648,6 @@ replace_remove_list_element (ELEMENT_LIST *list, const ELEMENT *removed,
   return 0;
 }
 
-/* should only be used if the nse->manual_content
-   and nse->node_content are not already in the tree,
-   in practice when the node spec was created by
-   parse_node_manual (., 0); */
-void
-destroy_node_spec (NODE_SPEC_EXTRA *nse)
-{
-  if (nse->manual_content)
-    {
-      free (nse->manual_content->list);
-      free (nse->manual_content);
-    }
-  if (nse->node_content)
-    {
-      free (nse->node_content->list);
-      free (nse->node_content);
-    }
-  free (nse);
-}
-
 const ELEMENT **
 new_directions (void)
 {

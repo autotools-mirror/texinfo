@@ -1590,28 +1590,27 @@ end_line_misc_line (ELEMENT *current)
       for (i = 1; i < arguments_line->e.c->contents.number && i < 4; i++)
         {
           ELEMENT *node_line_arg = arguments_line->e.c->contents.list[i];
-          NODE_SPEC_EXTRA *direction_label_info
-            = parse_node_manual (node_line_arg, 1);
-          if (direction_label_info->node_content)
+          NODE_SPEC_EXTRA direction_label_info;
+          parse_node_manual (node_line_arg, &direction_label_info);
+          if (direction_label_info.node_content)
             {
               ELEMENT *tmp = new_element (ET_NONE);
               char *normalized;
 
               add_extra_integer_list (node_line_arg, AI_key_node_content,
-                                      direction_label_info->node_content);
+                                      direction_label_info.node_content);
 
               insert_slice_into_contents (tmp, 0, node_line_arg,
-                                  direction_label_info->node_content->list[0],
-                                  direction_label_info->node_content->list[1] +1);
+                              direction_label_info.node_content->list[0],
+                              direction_label_info.node_content->list[1] +1);
               normalized = convert_to_node_identifier (tmp);
               destroy_element (tmp);
 
               add_extra_string (node_line_arg, AI_key_normalized, normalized);
             }
-          if (direction_label_info->manual_content)
+          if (direction_label_info.manual_content)
             add_extra_integer_list (node_line_arg, AI_key_manual_content,
-                                    direction_label_info->manual_content);
-          free (direction_label_info);
+                                    direction_label_info.manual_content);
         }
 
       /* Now take care of the node itself */

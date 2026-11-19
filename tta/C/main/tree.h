@@ -57,7 +57,6 @@ void destroy_element (ELEMENT *e);
 void destroy_element_and_children (ELEMENT *e);
 const ELEMENT *replace_remove_list_element (ELEMENT_LIST *list,
                               const ELEMENT *removed, ELEMENT *added);
-void destroy_node_spec (NODE_SPEC_EXTRA *nse);
 void destroy_key_pair_value (KEY_PAIR *k_pair);
 void destroy_associated_info (ASSOCIATED_INFO *a);
 void free_element_source_mark_list (ELEMENT *e);

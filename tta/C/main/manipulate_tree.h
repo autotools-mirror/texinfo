@@ -48,7 +48,7 @@ size_t relocate_source_marks (SOURCE_MARK_LIST *source_mark_list, ELEMENT *new_e
 
 
 
-NODE_SPEC_EXTRA *parse_node_manual (ELEMENT *node, int modify_node);
+int parse_node_manual (ELEMENT *node, NODE_SPEC_EXTRA *manual_node);
 
 
 
