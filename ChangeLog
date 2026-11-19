@@ -1,3 +1,12 @@
+2026-11-19  Gavin Smith <gavinsmith0123@gmail.com>
+
+	* doc/texinfo.texi (Internationalization, Setting the language)
+	(Invoking @command{texi2any}):
+	Change "main language" to "language" as it unnecessarily
+	complexifies the picture of language setting to include the
+	concept of language sub-variants.  Only keep the phrasing "main
+	language" where language variants are specifically being discussed.
+
 2026-11-18  Patrice Dumas  <pertusus@free.fr>
 
 	* tta/C/main/manipulate_tree.c (parse_node_manual),
