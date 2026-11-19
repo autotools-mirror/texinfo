@@ -1,5 +1,16 @@
 2026-11-19  Gavin Smith <gavinsmith0123@gmail.com>
 
+	* doc/texinfo.texi (Inserting Accents):
+	Edit.  Explain syntax of accent commands in a factual way before
+	discussing use of encoded characters as an alternative.
+	Avoid use of term "floating accent".
+	Remove explanation of why omitting braces around accents makes
+	inserting accents "as convenient as possible", as this rationale
+	is obsoleted by the possibility of non-ASCII character encoding
+	in Texinfo input.
+
+2026-11-19  Gavin Smith <gavinsmith0123@gmail.com>
+
 	* doc/texinfo.texi (Setting the language): Refer to "latin"
 	and "cyrillic" as "well-known synonyms" of ISO-15924 script codes,
 	instead of "well-known aliases".  This gives these names

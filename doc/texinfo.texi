@@ -9522,19 +9522,13 @@ here.  @xref{Not Ending a Sentence}.
 @cindex Accents, inserting
 @cindex Floating accents, inserting
 
-In general, accented and other non-ASCII characters commonly used in languages
-based on the Latin alphabet can be input directly as encoded characters in
-Texinfo (@pxref{@code{@@documentencoding}}).  However, @@-commands are also
-available for some characters, in particular if a 7-bit ASCII Texinfo source is
-desired.
+Texinfo provides commands for adding accents to characters.
+They all need an argument, the character to accent, which can either be
+given in braces (@code{@@'@{e@}}), or, as a special case, without braces
+(@code{@@'e}), in which case the argument is the next character.
 
-Here is a table with the commands Texinfo provides for inserting
-floating accents.  They all need an argument, the character to accent,
-which can either be given in braces as usual (@code{@@'@{e@}}), or, as
-a special case, the braces can be omitted, in which case the argument
-is the next character (@code{@@'e}).  This is to make the source as
-convenient as possible to type and read, since accented characters are
-very common in some languages.
+(Exception: the argument to @code{@@tieaccent} must be enclosed in
+braces, since it is two characters instead of one.)
 
 If the command is alphabetic, such as @code{@@dotaccent}, then there
 must be a space between the command name and argument if braces are
@@ -9542,14 +9536,8 @@ not used.  If the command is non-alphabetic, such as @code{@@'}, then
 there must @emph{not} be a space; the argument is the very next
 character.
 
-Exception: the argument to @code{@@tieaccent} must be enclosed in
-braces (since it is two characters instead of one).
-
-In Info and plain text output, accent constructs are output as the true
-accented characters if the document encoding supports the required characters,
-unless the option @option{--disable-encoding} is given to @command{texi2any}
-(@pxref{@code{@@documentencoding}}).  ASCII transliterations are used if the
-encoded characters are not output.
+Here is a table with the commands Texinfo provides for inserting
+accents:
 
 @findex " @r{(umlaut accent)}
 @cindex Umlaut accent
@@ -9616,6 +9604,18 @@ encoded characters are not output.
 @item @t{@@udotaccent@{o@}} @tab @udotaccent{o} @tab underdot accent
 @item @t{@@v@{o@}}          @tab @v{o}          @tab caron/hacek/check accent
 @end multitable
+
+In Info and plain text output, accent constructs are output as the true
+accented characters if the document encoding supports the required characters,
+unless the option @option{--disable-encoding} is given to @command{texi2any}
+(@pxref{@code{@@documentencoding}}).  ASCII transliterations are used if the
+encoded characters are not output.
+
+In general, accented characters (and other non-ASCII characters commonly
+used in languages based on the Latin alphabet) can be input directly as
+encoded characters in Texinfo (@pxref{@code{@@documentencoding}}).
+However, you may wish to use the accent @@-commands and other character
+insertion commands to keep your Texinfo source in 7-bit ASCII.
 
 This table lists the Texinfo commands for inserting other characters
 commonly used in languages other than English.
