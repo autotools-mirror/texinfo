@@ -837,7 +837,6 @@ after}}
 \\label{anchor:in-chap-empty-name}%
 
 Empty namedanchor
-\\label{anchor:}%
 .
 
 \\label{anchor:normal}%

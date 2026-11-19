@@ -3392,6 +3392,7 @@ sub _convert($$) {
       return $result;
     # commands with braces
     } elsif (exists($Texinfo::Commands::brace_commands{$cmdname})) {
+      my $args = Texinfo::Common::get_non_empty_brace_args($element);
       if ($Texinfo::Commands::brace_commands{$cmdname} eq 'accent') {
         if ($self->{'output_characters'}) {
           my $encoding = $self->{'output_encoding_name'};
@@ -3406,14 +3407,14 @@ sub _convert($$) {
               $LaTeX_accent_commands{$command_format_context}->{$cmdname})) {
             $result
            .= "\\$LaTeX_accent_commands{$command_format_context}->{$cmdname}\{";
-            if (exists($element->{'contents'})) {
-              $accent_arg = _convert($self, $element->{'contents'}->[0]);
+            if (defined($args) and defined($args->[0])) {
+              $accent_arg = _convert($self, $args->[0]);
             }
             $result .= $accent_arg;
             $result .= '}';
           } elsif ($cmdname eq 'dotless') {
-            if (exists($element->{'contents'})) {
-              $accent_arg = _convert($self, $element->{'contents'}->[0]);
+            if (defined($args) and defined($args->[0])) {
+              $accent_arg = _convert($self, $args->[0]);
             }
             if ($accent_arg eq 'i' or $accent_arg eq 'j') {
               if ($command_format_context eq 'cmd_math') {
@@ -3433,10 +3434,10 @@ sub _convert($$) {
             $result
                .= "\\textsl{\\$LaTeX_accent_commands{'cmd_text'}->{$cmdname}\{";
             # we do not want accents within to be math accents
-            if (exists($element->{'contents'})) {
+            if (defined($args) and defined($args->[0])) {
               push @{$self->{'formatting_context'}->[-1]->{'text_context'}},
                    'ctx_text';
-              $accent_arg = _convert($self, $element->{'contents'}->[0]);
+              $accent_arg = _convert($self, $args->[0]);
               my $old_context
                 = pop @{$self->{'formatting_context'}->[-1]->{'text_context'}};
             }
@@ -3486,8 +3487,8 @@ sub _convert($$) {
           }
           $result .= "$LaTeX_style_command\{";
         }
-        if ($element->{'contents'}) {
-          $result .= _convert($self, $element->{'contents'}->[0]);
+        if (defined($args) and defined($args->[0])) {
+          $result .= _convert($self, $args->[0]);
         }
         if ($LaTeX_style_brace_commands{$command_format_context}
                                                    ->{$formatted_cmdname}) {
@@ -3504,8 +3505,8 @@ sub _convert($$) {
         $result = _restart_embrac_if_needed($self, $result, $did_stop_embrac);
       } elsif ($cmdname eq 'dmn') {
         $result .= '\\thinspace ';
-        if ($element->{'contents'}) {
-          $result .= _convert($self, $element->{'contents'}->[0]);
+        if (defined($args) and defined($args->[0])) {
+          $result .= _convert($self, $args->[0]);
         }
       } elsif ($cmdname eq 'verb') {
         # NOTE \verb is forbidden in other macros in LaTeX.  We do
@@ -3525,8 +3526,8 @@ sub _convert($$) {
         my @lines;
 
         push @{$self->{'formatting_context'}->[-1]->{'text_context'}}, 'ctx_raw';
-        if ($element->{'contents'}) {
-          $contents = _convert($self, $element->{'contents'}->[0]);
+        if (defined($args) and defined($args->[0])) {
+          $contents = _convert($self, $args->[0]);
           @lines = split /\n/, $contents, -1;
         }
         my $old_context
@@ -3551,9 +3552,7 @@ sub _convert($$) {
         }
         $result .= join "\\\\\n", @lines_out;
       } elsif ($cmdname eq 'image') {
-        if (exists($element->{'contents'})
-            and !Texinfo::Common::empty_spaces_argument(
-                                    $element->{'contents'}->[0])) {
+        if (defined($args) and defined($args->[0])) {
           # distinguish text basefile used to find the file and
           # converted basefile with special characters escaped
           Texinfo::Convert::Text::set_options_code(
@@ -3561,7 +3560,7 @@ sub _convert($$) {
           Texinfo::Convert::Text::set_options_encoding_if_not_ascii($self,
                                     $self->{'convert_text_options'});
           my $basefile = Texinfo::Convert::Text::convert_to_text(
-                                          $element->{'contents'}->[0],
+                                          $args->[0],
                                       $self->{'convert_text_options'});
           Texinfo::Convert::Text::reset_options_code(
                                    $self->{'convert_text_options'});
@@ -3604,10 +3603,10 @@ sub _convert($$) {
           my $image_file = $converted_basefile;
 
           my @image_options;
-          if (scalar(@{$element->{'contents'}}) >= 2) {
+          if (scalar(@$args) >= 2 and defined($args->[1])) {
             push @{$self->{'formatting_context'}->[-1]->{'text_context'}},
                  'ctx_raw';
-            my $width = _convert($self, $element->{'contents'}->[1]);
+            my $width = _convert($self, $args->[1]);
             my $old_context
               = pop @{$self->{'formatting_context'}->[-1]->{'text_context'}};
             die if ($old_context ne 'ctx_raw');
@@ -3615,10 +3614,10 @@ sub _convert($$) {
               push @image_options, "width=$width";
             }
           }
-          if (scalar(@{$element->{'contents'}}) >= 3) {
+          if (scalar(@$args) >= 3 and defined($args->[2])) {
             push @{$self->{'formatting_context'}->[-1]->{'text_context'}},
                  'ctx_raw';
-            my $height = _convert($self, $element->{'contents'}->[2]);
+            my $height = _convert($self, $args->[2]);
             my $old_context
                = pop @{$self->{'formatting_context'}->[-1]->{'text_context'}};
             die if ($old_context ne 'ctx_raw');
@@ -3626,11 +3625,9 @@ sub _convert($$) {
               push @image_options, "height=$height";
             }
           }
-          if (scalar(@{$element->{'contents'}}) >= 4
-              and !Texinfo::Common::empty_spaces_argument(
-                                   $element->{'contents'}->[3])) {
+          if (scalar(@$args) >= 4 and defined($args->[3])) {
             my $alt_text = Texinfo::Convert::Text::convert_to_text(
-                                    $element->{'contents'}->[3],
+                                      $args->[3],
                                       $self->{'convert_text_options'});
             if ($alt_text =~ /\S/) {
               # in {} in PDF attributes, [] do not need to be escaped, and the
@@ -3654,20 +3651,17 @@ sub _convert($$) {
           $result .= "{$image_file}";
         }
       } elsif ($cmdname eq 'email') {
-        if (exists($element->{'contents'})) {
+        if (defined($args)) {
           my $name;
           my $converted_name;
           my $email_arg;
           my $email_text;
-          if (scalar(@{$element->{'contents'}}) == 2
-              and not Texinfo::Common::empty_spaces_argument(
-                                       $element->{'contents'}->[1])) {
-            $name = $element->{'contents'}->[1];
+          if (scalar(@$args) == 2 and defined($args->[1])) {
+            $name = $args->[1];
             $converted_name = _convert($self, $name);
           }
-          if (not Texinfo::Common::empty_spaces_argument(
-                                    $element->{'contents'}->[0])) {
-            $email_arg = $element->{'contents'}->[0];
+          if (defined($args->[0])) {
+            $email_arg = $args->[0];
             Texinfo::Convert::Text::set_options_code(
                             $self->{'convert_text_options'});
             $email_text
@@ -3686,15 +3680,11 @@ sub _convert($$) {
           }
         }
       } elsif ($cmdname eq 'uref' or $cmdname eq 'url') {
-        if ($element->{'contents'}) {
-          if (scalar(@{$element->{'contents'}}) == 3
-               and not Texinfo::Common::empty_spaces_argument(
-                                       $element->{'contents'}->[2])) {
-            unshift @{$self->{'current_contents'}->[-1]},
-                       $element->{'contents'}->[2];
-          } elsif (not Texinfo::Common::empty_spaces_argument(
-                                $element->{'contents'}->[0])) {
-            my $url_arg = $element->{'contents'}->[0];
+        if (defined($args)) {
+          if (scalar(@{$args}) == 3 and defined($args->[2])) {
+            unshift @{$self->{'current_contents'}->[-1]}, $args->[2];
+          } elsif (defined($args->[0])) {
+            my $url_arg = $args->[0];
             Texinfo::Convert::Text::set_options_code(
                                      $self->{'convert_text_options'});
             my $url_text = _protect_url($self,
@@ -3702,48 +3692,37 @@ sub _convert($$) {
                                    $self->{'convert_text_options'}));
             Texinfo::Convert::Text::reset_options_code(
                                      $self->{'convert_text_options'});
-            if (scalar(@{$element->{'contents'}}) == 2
-                and not Texinfo::Common::empty_spaces_argument(
-                                    $element->{'contents'}->[1])) {
-              my $description_text = _convert($self, $element->{'contents'}->[1]);
+            if (scalar(@$args) == 2 and defined($args->[1])) {
+              my $description_text = _convert($self, $args->[1]);
               my $text = $self->cdt_string('{text} ({url})',
                 {'text' => $description_text, 'url' => "\\nolinkurl{$url_text}"});
               $result .= "\\href{$url_text}{$text}";
             } else {
               $result .= "\\url{$url_text}";
             }
-          } elsif (scalar(@{$element->{'contents'}}) == 2
-                   and not Texinfo::Common::empty_spaces_argument(
-                           $element->{'contents'}->[1])) {
+          } elsif (scalar(@{$args}) == 2 and defined($args->[1])) {
             unshift @{$self->{'current_contents'}->[-1]},
-              {'contents' => $element->{'contents'}->[1]->{'contents'}};
+                            {'contents' => $args->[1]->{'contents'}};
           }
         }
       } elsif ($cmdname eq 'footnote') {
         _push_new_context($self, 'footnote');
         $result .= '\footnote{';
-        if ($element->{'contents'}) {
-          $result .= _convert($self, $element->{'contents'}->[0]);
+        if (defined($args) and defined($args->[0])) {
+          $result .= _convert($self, $args->[0]);
         }
         $result .= '}';
         _pop_context($self);
       } elsif ($cmdname eq 'anchor' or $cmdname eq 'namedanchor') {
-        if (exists($element->{'contents'})) {
+        if (defined($args) and defined($args->[0])) {
           my $anchor_label
-             = _tree_anchor_label($element->{'contents'}->[0]);
+             = _tree_anchor_label($args->[0]);
           $result .= "\\label{$anchor_label}%\n";
         }
       } elsif ($ref_commands{$cmdname}) {
-        if ($element->{'contents'}) {
-          my @args;
-          foreach my $arg (@{$element->{'contents'}}) {
-            if (Texinfo::Common::empty_spaces_argument($arg)) {
-              push @args, undef;
-            } else {
-              push @args, $arg;
-            }
-          }
-          my $node_arg = $element->{'contents'}->[0];
+        if (defined($args)) {
+          my @args = @$args;
+          my $node_arg = $args->[0];
           if (($cmdname eq 'link' or $cmdname eq 'inforef')
               and scalar(@args) == 3) {
             $args[3] = $args[2]; # use as the manual argument
@@ -3771,7 +3750,7 @@ sub _convert($$) {
           }
 
           if ($cmdname ne 'inforef' and $book eq '' and $filename eq ''
-              and $node_arg and $node_arg->{'extra'}
+              and defined($node_arg) and $node_arg->{'extra'}
               and defined($node_arg->{'extra'}->{'normalized'})
               and $identifiers_target
               and $identifiers_target->{$node_arg->{'extra'}->{'normalized'}}) {
@@ -4052,27 +4031,22 @@ sub _convert($$) {
           }
         }
       } elsif ($explained_commands{$cmdname}) {
-        if (exists($element->{'contents'})
-            and not Texinfo::Common::empty_spaces_argument(
-                                    $element->{'contents'}->[0])) {
+        if (defined($args) and defined($args->[0])) {
           # in abbr spaces never end a sentence.
           my $argument;
           if ($cmdname eq 'abbr') {
             $argument
               = Texinfo::TreeElement::new({'type' => '_dot_not_end_sentence',
-                                  'contents' => [$element->{'contents'}->[0]]});
+                                  'contents' => [$args->[0]]});
           } else {
           # TODO in TeX, acronym is in a smaller font (1pt less).
-            $argument = $element->{'contents'}->[0];
+            $argument = $args->[0];
           }
-          if (scalar (@{$element->{'contents'}}) == 2
-              and not Texinfo::Common::empty_spaces_argument(
-                                          $element->{'contents'}->[1])) {
+          if (scalar (@$args) == 2 and defined($args->[1])) {
             my $prepended
              = $self->cdt('{abbr_or_acronym} ({explanation})',
                           {'abbr_or_acronym' => $argument,
-                           'explanation'
-                                     => $element->{'contents'}->[1]});
+                           'explanation' => $args->[1]});
             $result .= _convert($self, $prepended);
           } else {
             $result .= _convert($self, $argument);
@@ -4086,13 +4060,13 @@ sub _convert($$) {
                                         ->{$element->{'extra'}->{'format'}})) {
           $arg_index = 2;
         }
-        if (scalar(@{$element->{'contents'}}) > $arg_index
-           and exists($element->{'contents'}->[$arg_index]->{'contents'})) {
+        if (scalar(@$args) > $arg_index and defined($args->[$arg_index])
+           and exists($args->[$arg_index]->{'contents'})) {
           if ($cmdname eq 'inlineraw') {
             push @{$self->{'formatting_context'}->[-1]->{'text_context'}},
                  'ctx_raw';
           }
-          $result .= _convert($self, $element->{'contents'}->[$arg_index]);
+          $result .= _convert($self, $args->[$arg_index]);
           if ($cmdname eq 'inlineraw') {
             my $old_context
                 = pop @{$self->{'formatting_context'}->[-1]->{'text_context'}};
@@ -4103,9 +4077,9 @@ sub _convert($$) {
         push @{$self->{'formatting_context'}->[-1]->{'text_context'}}, 'ctx_math';
         push @{$self->{'formatting_context'}->[-1]->{'math_style'}}, 'one-line';
         if ($cmdname eq 'math') {
-          if (exists($element->{'contents'})) {
+          if (defined($args) and defined($args->[0])) {
             $result .= '$';
-            $result .= _convert($self, $element->{'contents'}->[0]);
+            $result .= _convert($self, $args->[0]);
             $result .= '$';
           }
         }
@@ -4141,9 +4115,9 @@ sub _convert($$) {
           }
         }
         my $caption_text = '';
-        if (exists($element->{'contents'})) {
+        if (defined($args) and defined($args->[0])) {
           _push_new_context($self, 'latex_caption');
-          $caption_text = _convert($self, $element->{'contents'}->[0]);
+          $caption_text = _convert($self, $args->[0]);
           _pop_context($self);
         }
 
@@ -4176,9 +4150,9 @@ sub _convert($$) {
       } elsif ($cmdname eq 'titlefont') {
         $result .= _title_font($self, $element);
       } elsif ($cmdname eq 'U') {
-        if (exists($element->{'contents'})) {
+        if (defined($args) and defined($args->[0])) {
           my ($arg_text, $surplus_arg)
-            = Texinfo::Common::simple_arg_text($element->{'contents'}->[0]);
+            = Texinfo::Common::simple_arg_text($args->[0]);
           if (defined($arg_text) and $arg_text ne '') {
             # Syntactic checks on the value were already done in Parser.pm,
             # but we have one more thing to test: since this is the one
@@ -4212,8 +4186,7 @@ sub _convert($$) {
         }
       } elsif ($cmdname eq 'value') {
         my $expansion = $self->cdt('@{No value for `{value}\'@}',
-                                 {'value'
-                                    => $element->{'contents'}->[0]});
+                                 {'value' => $args->[0]});
         $expansion = {'type' => 'paragraph',
                       'contents' => [$expansion]};
         $result .= _convert($self, $expansion);
