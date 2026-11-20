@@ -1533,7 +1533,8 @@ html_convert_tree_append (CONVERTER *self, const ELEMENT *element,
               || cmd == CM_cartouche)
             {
               const ELEMENT_LIST *arguments_list;
-              size_t arg_idx;
+              size_t i;
+              size_t arg_idx = 0;
 
               if (element->e.c->contents.list[0]->type == ET_arguments_line)
                 arguments_list
@@ -1553,16 +1554,20 @@ html_convert_tree_append (CONVERTER *self, const ELEMENT *element,
               memset (args_formatted->args, 0,
                       args_formatted->number * sizeof (HTML_ARG_FORMATTED));
 
-              for (arg_idx = 0; arg_idx < arguments_list->number; arg_idx++)
+              for (i = 0; i < arguments_list->number; i++)
                 {
                   char *explanation;
                   unsigned long arg_flags = 0;
-                  const ELEMENT *arg = arguments_list->list[arg_idx];
+                  const ELEMENT *arg = arguments_list->list[i];
                   HTML_ARG_FORMATTED *arg_formatted
                      = &args_formatted->args[arg_idx];
 
+                  if (arg->type == ET_spaces_after_cmd_before_arg)
+                    continue;
+
                   if (empty_spaces_argument (arg))
                     {
+                      arg_idx++;
                       continue;
                     }
                   /* NOTE that commands with F_AFT_none as only flag do not
@@ -1720,6 +1725,7 @@ html_convert_tree_append (CONVERTER *self, const ELEMENT *element,
                       arg_formatted->formatted[AFT_type_raw]
                         = strdup (formatted_arg.text);
                     }
+                  arg_idx++;
                 }
               free (formatted_arg.text);
             }

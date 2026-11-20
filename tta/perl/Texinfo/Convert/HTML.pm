@@ -8786,6 +8786,10 @@ sub _convert($$;$) {
         my $spec_nr = scalar(@args_specification);
         my $arg_idx = -1;
         foreach my $arg (@{$arguments_list}) {
+          if (exists($arg->{'type'})
+              and $arg->{'type'} eq 'spaces_after_cmd_before_arg') {
+            next;
+          }
           $arg_idx++;
           my $arg_spec;
           if ($arg_idx < $spec_nr) {
