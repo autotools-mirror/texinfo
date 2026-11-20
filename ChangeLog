@@ -1,5 +1,10 @@
 2026-11-20  Gavin Smith <gavinsmith0123@gmail.com>
 
+	* doc/texinfo.texi (Info Format Local Variables):
+	Grammar fixes.
+
+2026-11-20  Gavin Smith <gavinsmith0123@gmail.com>
+
 	* doc/texinfo.texi,
 	(Inserting Accents): Change period to colon.
 	(Internationalization): Edit.  Remove explanation as to why Texinfo

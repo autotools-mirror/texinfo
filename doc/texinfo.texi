@@ -25476,9 +25476,9 @@ End:
 @ref{@code{@@documentlanguage}}. @samp{<script>} document script
 correspond to @code{@@documentscript} in Texinfo. The language variants
 are separated by @samp{-}.   @xref{Setting the language}.
-Only one language, script and variants list can be specified
-in the local variables section even if the corresponding commands such as
-@code{@@documentlanguage} occurs several times in a Texinfo document.
+Only one language, script and list of variants can be specified
+in the local variables section, even if the corresponding commands such as
+@code{@@documentlanguage} occur several times in a Texinfo document.
 
 
 @node Info Format Regular Nodes
