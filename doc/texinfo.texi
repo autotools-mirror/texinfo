@@ -3304,26 +3304,8 @@ to have the `Next', `Previous' and `Up' pointers lead to nodes that
 do not correspond, even loosely, to the next, previous and up node.
 
 A @code{@@node} command is conventionally followed by a sectioning
-command.  Sectioning commands are often followed by
-indexing commands.  (As shown in the example above, you may follow the
-@code{@@node} line with a comment line, e.g., to show which pointer is
-which if explicit pointers are used.)  The Texinfo processors use this
-construct to determine the relationships between nodes and sectioning
-commands.
-
-Here is the beginning of the chapter in this manual called ``Ending a
-Texinfo File''.  This shows a @code{@@node} line followed by a
-@code{@@chapter} line, and then by indexing lines.
-
-@example
-@group
-@@node Ending a File
-@@chapter Ending a Texinfo File
-@@cindex Ending a Texinfo file
-@@cindex Texinfo file ending
-@@cindex File ending
-@end group
-@end example
+command.  The Texinfo processors use this construct to determine the
+relationships between nodes and sectioning commands.
 
 
 @node Unstructured Nodes
@@ -8404,21 +8386,6 @@ the current page number or node name as the reference.
 An index entry consists of an indexing command at the beginning of a
 line followed, on the rest of the line, by the entry.
 
-For example, this section begins with the following five entries for
-the concept index:
-
-@example
-@@cindex Defining indexing entries
-@@cindex Index entries, defining
-@@cindex Entries for an index
-@@cindex Specifying index entries
-@@cindex Creating index entries
-@end example
-
-Each predefined index has its own indexing command---@code{@@cindex}
-for the concept index, @code{@@findex} for the function index, and so
-on, as listed in the previous section.
-
 Index entries should precede the visible material that is being
 indexed.  For instance:
 
@@ -8430,6 +8397,25 @@ Hello, there!
 @noindent Among other reasons, that way following indexing links (in
 whatever context) ends up before the material, where readers want to
 be, instead of after.
+
+Indexing commands often follow sectioning commands.  For example,
+here is the beginning of the chapter in this manual called ``Ending a
+Texinfo File''.  This shows a @code{@@node} line followed by a
+@code{@@chapter} line, and then by indexing lines.
+
+@example
+@group
+@@node Ending a File
+@@chapter Ending a Texinfo File
+@@cindex Ending a Texinfo file
+@@cindex Texinfo file ending
+@@cindex File ending
+@end group
+@end example
+
+Each predefined index has its own indexing command---@code{@@cindex}
+for the concept index, @code{@@findex} for the function index, and so
+on, as listed in the previous section.
 
 In Info, an index is usually formatted as a menu.  Try to avoid using
 a colon in index entries, as this may confuse some Info readers.
