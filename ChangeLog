@@ -1,5 +1,19 @@
 2026-11-20  Gavin Smith <gavinsmith0123@gmail.com>
 
+	Nodes/menus documentation edits
+
+	* doc/texinfo.texi (Menus): Edit.  Explain when you would want
+	to use automatically generated menus before getting into the
+	details of when this happens.  Describe menu entries as listing
+	subordinate nodes as just one possibility.
+	(Writing a Menu): State that the syntax of @menu is the same
+	as that in the Info format for menus.
+	(Writing a Node): Remove superfluous advice about "immediately
+	writing" a section command after you insert a @node command.
+	We discuss this in the top-level "Nodes" node.
+
+2026-11-20  Gavin Smith <gavinsmith0123@gmail.com>
+
 	* doc/texinfo.texi (Menu Parts): Grammar fix.
 
 2026-11-20  Gavin Smith <gavinsmith0123@gmail.com>
