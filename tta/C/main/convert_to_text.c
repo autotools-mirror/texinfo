@@ -713,93 +713,93 @@ convert_to_text_internal (const ELEMENT *element, TEXT_OPTIONS *text_options,
         }
       else if (command_data[data_cmd].flags & CF_brace)
         {
-          if (element->e.c->contents.number <= 0)
-            return;
+          CONST_ELEMENT_LIST *args = get_non_empty_brace_args (element);
+          if (args->number <= 0)
+            {
+              destroy_const_element_list (args);
+              return;
+            }
+
           if (data_cmd == CM_image)
             {
-              text_options->code_state++;
-              convert_to_text_internal (element->e.c->contents.list[0],
-                                        text_options, result);
-              text_options->code_state--;
+              if (args->list[0])
+                {
+                  text_options->code_state++;
+                  convert_to_text_internal (args->list[0],
+                                            text_options, result);
+                  text_options->code_state--;
+                }
             }
           else if (data_cmd == CM_email)
             {
-              if (element->e.c->contents.number >= 2)
+              TEXT replacement;
+              text_init (&replacement);
+              if (args->number >= 2 && args->list[1])
                 {
-                  TEXT replacement;
-                  text_init (&replacement);
-                  convert_to_text_internal (element->e.c->contents.list[1],
+                  convert_to_text_internal (args->list[1],
                                             text_options, &replacement);
-                  if (replacement.end > 0)
-                    {
-                      ADD(replacement.text);
-                      free (replacement.text);
-                      return;
-                    }
                 }
-
-              if (element->e.c->contents.number > 0)
+              if (replacement.end > 0)
+                {
+                  ADD(replacement.text);
+                  free (replacement.text);
+                }
+              else if (args->list[0])
                 {
                   text_options->code_state++;
-                  convert_to_text_internal (element->e.c->contents.list[0],
+                  convert_to_text_internal (args->list[0],
                                             text_options, result);
                   text_options->code_state--;
                 }
             }
           else if (data_cmd == CM_uref || data_cmd == CM_url)
             {
-              TEXT url_text;
+              TEXT replacement;
+              text_init (&replacement);
 
-              if (element->e.c->contents.number >= 3)
+              if (args->number >= 3 && args->list[2])
                 {
-                  TEXT replacement;
-                  text_init (&replacement);
-                  convert_to_text_internal (element->e.c->contents.list[2],
+                  convert_to_text_internal (args->list[2],
                                             text_options, &replacement);
-                  if (replacement.end > 0)
-                    {
-                      ADD(replacement.text);
-                      free (replacement.text);
-                      return;
-                    }
                 }
-
-              text_init (&url_text);
-              text_append (&url_text, "");
-              text_options->code_state++;
-              convert_to_text_internal (element->e.c->contents.list[0],
-                                        text_options, &url_text);
-              text_options->code_state--;
-              if (element->e.c->contents.number >= 2)
+              if (replacement.end > 0)
                 {
-                  TEXT text;
-                  text_init (&text);
-                  convert_to_text_internal (element->e.c->contents.list[1],
-                                            text_options, &text);
-                  if (text.end > 0)
-                    {
-                      text_printf (result, "%s (%s)", url_text.text, text.text);
-                      free (text.text);
-                      free (url_text.text);
-                      return;
-                    }
+                  ADD(replacement.text);
+                  free (replacement.text);
                 }
-
-              if (url_text.text)
+              else
                 {
-                  ADD(url_text.text);
-                  free (url_text.text);
+                  if (args->list[0])
+                    {
+                      text_options->code_state++;
+                      convert_to_text_internal (args->list[0],
+                                                text_options, result);
+                      text_options->code_state--;
+                    }
+                  if (args->number >= 2 && args->list[1])
+                    {
+                      TEXT text;
+                      text_init (&text);
+                      convert_to_text_internal (args->list[1],
+                                                text_options, &text);
+                      if (text.end > 0)
+                        {
+                          text_printf (result, " (%s)", text.text);
+                          free (text.text);
+                        }
+                    }
                 }
             }
           else if (command_data[data_cmd].other_flags & CF_explained)
             {
-              convert_to_text_internal (element->e.c->contents.list[0],
-                                        text_options, result);
-              if (element->e.c->contents.number >= 2)
+              if (args->list[0])
+                convert_to_text_internal (args->list[0],
+                                          text_options, result);
+              if (args->number >= 2 && args->list[1])
                 {
                   TEXT explanation;
                   text_init (&explanation);
-                  convert_to_text_internal (element->e.c->contents.list[1],
+                  convert_to_text_internal (args->list[1],
                                             text_options, &explanation);
 
                   if (explanation.end > 0)
@@ -824,8 +824,8 @@ convert_to_text_internal (const ELEMENT *element, TEXT_OPTIONS *text_options,
                     arg_index = 2;
                 }
 
-              if (element->e.c->contents.number > arg_index)
-                convert_to_text_internal (element->e.c->contents.list[arg_index],
+              if (args->number > arg_index && args->list[arg_index])
+                convert_to_text_internal (args->list[arg_index],
                                           text_options, result);
 
               if (data_cmd == CM_inlineraw)
@@ -833,37 +833,40 @@ convert_to_text_internal (const ELEMENT *element, TEXT_OPTIONS *text_options,
             }
           else if (data_cmd == CM_U)
             {
-              int surplus_arg;
-              const TEXT *arg_text
-                = simple_arg_text (element->e.c->contents.list[0],
-                                   &surplus_arg);
-              if (arg_text && strcmp (arg_text->text, ""))
+              if (args->list[0])
                 {
-                  int conversion_done = 0;
-                  if (text_options->encoding
-                      && !strcasecmp (text_options->encoding, "utf-8"))
+                  int surplus_arg;
+                  const TEXT *arg_text
+                    = simple_arg_text (args->list[0],
+                                       &surplus_arg);
+                  if (arg_text && strcmp (arg_text->text, ""))
                     {
-                      int len;
-                      char *U_result
-                            = hex_string_to_utf8_char (arg_text->text,
-                                             text_options->DEBUG, &len);
-
-                      if (U_result)
+                      int conversion_done = 0;
+                      if (text_options->encoding
+                          && !strcasecmp (text_options->encoding, "utf-8"))
                         {
-                          text_append_n (result, U_result, len);
-                          free (U_result);
-                          conversion_done = 1;
-                        }
-                    }
+                          int len;
+                          char *U_result
+                                = hex_string_to_utf8_char (arg_text->text,
+                                                 text_options->DEBUG, &len);
 
-                  if (!conversion_done)
-                    {
-                      text_append_n (result, "U+", 2);
-                      text_append_n (result, arg_text->text, arg_text->end);
+                          if (U_result)
+                            {
+                              text_append_n (result, U_result, len);
+                              free (U_result);
+                              conversion_done = 1;
+                            }
+                        }
+
+                      if (!conversion_done)
+                        {
+                          text_append_n (result, "U+", 2);
+                          text_append_n (result, arg_text->text, arg_text->end);
+                        }
                     }
                 }
             }
-          else
+          else if (args->list[0])
             {
               int in_code = 0;
               if (data_cmd == CM_sc)
@@ -875,7 +878,7 @@ convert_to_text_internal (const ELEMENT *element, TEXT_OPTIONS *text_options,
 
               if (in_code)
                 text_options->code_state++;
-              convert_to_text_internal (element->e.c->contents.list[0],
+              convert_to_text_internal (args->list[0],
                                         text_options, result);
               if (in_code)
                 text_options->code_state--;
@@ -883,6 +886,7 @@ convert_to_text_internal (const ELEMENT *element, TEXT_OPTIONS *text_options,
               if (data_cmd == CM_sc)
                 text_options->set_case--;
             }
+          destroy_const_element_list (args);
           return;
         }
       /* block commands */

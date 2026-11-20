@@ -620,54 +620,56 @@ sub _convert($$) {
                              $options->{'set_case'});
       return $result;
     } elsif (exists($Texinfo::Commands::brace_commands{$cmdname})) {
-      if (!exists($element->{'contents'})) {
+      my $args = Texinfo::Common::get_non_empty_brace_args($element);
+      if (!defined($args)) {
         return '';
       }
+      $result = '';
       if ($cmdname eq 'image') {
-        $options->{'_code_state'}++;
-        $result = _convert($options, $element->{'contents'}->[0]);
+        if (defined($args->[0])) {
+          $options->{'_code_state'}++;
+          $result = _convert($options, $args->[0]);
           $options->{'_code_state'}--;
+        }
       } elsif ($cmdname eq 'email') {
         my $text;
-        $text = _convert($options, $element->{'contents'}->[1])
-           if (defined($element->{'contents'}->[1]));
+        $text = _convert($options, $args->[1])
+           if (defined($args->[1]));
         if (defined($text) and ($text ne '')) {
           $result = $text;
-        } else {
+        } elsif (defined($args->[0])) {
           $options->{'_code_state'}++;
-          my $mail = _convert($options, $element->{'contents'}->[0]);
+          $result = _convert($options, $args->[0]);
           $options->{'_code_state'}--;
-          $result = $mail;
         }
       } elsif ($cmdname eq 'uref' or $cmdname eq 'url') {
         my $replacement;
-        $replacement = _convert($options, $element->{'contents'}->[2])
-          if (defined($element->{'contents'}->[2]));
+        $replacement = _convert($options, $args->[2])
+          if (defined($args->[2]));
         if (defined($replacement) and $replacement ne '') {
           $result = $replacement;
         } else {
-          my $text;
-          $text = _convert($options, $element->{'contents'}->[1])
-            if (defined($element->{'contents'}->[1]));
-          $options->{'_code_state'}++;
-          my $url = _convert($options, $element->{'contents'}->[0]);
-          $options->{'_code_state'}--;
-          if (defined($text) and $text ne '') {
-            $result = "$url ($text)";
-          } else {
-            $result = $url;
+          if (defined($args->[0])) {
+            $options->{'_code_state'}++;
+            $result = _convert($options, $args->[0]);
+            $options->{'_code_state'}--;
+          }
+          if (defined($args->[1])) {
+            my $text = _convert($options, $args->[1]);
+            if ($text ne '') {
+              $result .= " ($text)";
+            }
           }
         }
       } elsif (exists($Texinfo::Commands::explained_commands{$cmdname})) {
-        my $explanation = '';
-        if (scalar(@{$element->{'contents'}}) >= 2) {
-          $explanation = _convert($options, $element->{'contents'}->[1]);
+        if (defined($args->[0])) {
+          $result = _convert($options, $args->[0]);
         }
-        if ($explanation ne '') {
-          $result = _convert($options, $element->{'contents'}->[0])
-                                                    ." ($explanation)";
-        } else {
-          $result = _convert($options, $element->{'contents'}->[0]);
+        if (scalar(@$args) >= 2 and defined($args->[1])) {
+          my $explanation = _convert($options, $args->[1]);
+          if ($explanation ne '') {
+            $result .= " ($explanation)";
+          }
         }
       } elsif ($Texinfo::Commands::brace_commands{$cmdname} eq 'inline') {
         if ($cmdname eq 'inlineraw') {
@@ -682,36 +684,38 @@ sub _convert($$) {
                                    ->{$element->{'extra'}->{'format'}})) {
           $arg_index = 2;
         }
-        if (scalar(@{$element->{'contents'}}) > $arg_index) {
-          $result = _convert($options, $element->{'contents'}->[$arg_index]);
+        if (scalar(@$args) > $arg_index and defined($args->[$arg_index])) {
+          $result = _convert($options, $args->[$arg_index]);
         }
         if ($cmdname eq 'inlineraw') {
           $options->{'_raw_state'}--;
         }
       } elsif ($cmdname eq 'U') {
-        my ($arg_text, $surplus_arg)
-          = Texinfo::Common::simple_arg_text($element->{'contents'}->[0]);
-        if (defined($arg_text) and $arg_text ne '') {
-          # Syntactic checks on the value were already done in Parser.pm,
-          # but we have one more thing to test: since this is the one
-          # place where we might output actual UTF-8 binary bytes, we have
-          # to check that it is possible.  If not, silently fall back to
-          # plain text, on the theory that the user wants something.
-          if (defined($options->{'enabled_encoding'})
-              and lc($options->{'enabled_encoding'}) eq 'utf-8') {
-            my $possible_conversion
-                = Texinfo::Convert::Unicode::check_unicode_point_conversion(
-                   $arg_text, $options->{'DEBUG'});
-            if ($possible_conversion) {
-              $result = chr(hex($arg_text)); # ok to call chr
+        if (defined($args->[0])) {
+          my ($arg_text, $surplus_arg)
+            = Texinfo::Common::simple_arg_text($args->[0]);
+          if (defined($arg_text) and $arg_text ne '') {
+            # Syntactic checks on the value were already done in Parser.pm,
+            # but we have one more thing to test: since this is the one
+            # place where we might output actual UTF-8 binary bytes, we have
+            # to check that it is possible.  If not, silently fall back to
+            # plain text, on the theory that the user wants something.
+            if (defined($options->{'enabled_encoding'})
+                and lc($options->{'enabled_encoding'}) eq 'utf-8') {
+              my $possible_conversion
+                  = Texinfo::Convert::Unicode::check_unicode_point_conversion(
+                     $arg_text, $options->{'DEBUG'});
+              if ($possible_conversion) {
+                $result = chr(hex($arg_text)); # ok to call chr
+              } else {
+                $result = "U+$arg_text";
+              }
             } else {
               $result = "U+$arg_text";
             }
-          } else {
-            $result = "U+$arg_text";
           }
         }
-      } else {
+      } elsif (defined($args->[0])) {
         my $in_code;
 
         $options->{'set_case'}++ if ($cmdname eq 'sc');
@@ -720,7 +724,7 @@ sub _convert($$) {
           $in_code = 1;
         }
         $options->{'_code_state'}++ if ($in_code);
-        $result = _convert($options, $element->{'contents'}->[0]);
+        $result = _convert($options, $args->[0]);
         $options->{'_code_state'}-- if ($in_code);
         $options->{'set_case'}-- if ($cmdname eq 'sc');
       }
