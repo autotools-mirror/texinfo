@@ -702,17 +702,20 @@ convert_to_text_internal (const ELEMENT *element, TEXT_OPTIONS *text_options,
           free (brace_no_args_text);
           return;
         }
+      else if (command_data[data_cmd].flags & CF_brace
+               && command_data[data_cmd].data == BRACE_accent)
+        {
+          char *text = text_accents (element, text_options->encoding,
+                                     text_options->set_case);
+          ADD(text);
+          free (text);
+          return;
+        }
       else if (command_data[data_cmd].flags & CF_brace)
         {
-          if (command_data[data_cmd].data == BRACE_accent)
-            {
-              char *text = text_accents (element, text_options->encoding,
-                                         text_options->set_case);
-              ADD(text);
-              free (text);
-            }
-          else if (element->e.c->contents.number <= 0) {}
-          else if (data_cmd == CM_image)
+          if (element->e.c->contents.number <= 0)
+            return;
+          if (data_cmd == CM_image)
             {
               text_options->code_state++;
               convert_to_text_internal (element->e.c->contents.list[0],

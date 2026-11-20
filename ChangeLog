@@ -1,6 +1,13 @@
 2026-11-19  Patrice Dumas  <pertusus@free.fr>
 
 	* tta/C/main/convert_to_text.c (convert_to_text_internal),
+	tta/perl/Texinfo/Convert/Text.pm (_convert): separate brace accent
+	commands from other brace commands as missing arguments are handled
+	differently.
+
+2026-11-19  Patrice Dumas  <pertusus@free.fr>
+
+	* tta/C/main/convert_to_text.c (convert_to_text_internal),
 	tta/perl/Texinfo/Convert/Text.pm (_convert): rearrange brace commands
 	code in a condition.  Use the same $result variable in Perl.  Check
 	that there are arguments once and avoid returns for each of the

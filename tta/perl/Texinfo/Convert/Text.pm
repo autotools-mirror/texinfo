@@ -614,13 +614,16 @@ sub _convert($$) {
                 $options->{'enabled_encoding'}, $options->{'ASCII_GLYPH'},
                 $options->{'sort_string'}, $options->{'set_case'});
     # commands with braces
+    } elsif (exists($Texinfo::Commands::brace_commands{$cmdname})
+             and $Texinfo::Commands::brace_commands{$cmdname} eq 'accent') {
+      $result = text_accents($element, $options->{'enabled_encoding'},
+                             $options->{'set_case'});
+      return $result;
     } elsif (exists($Texinfo::Commands::brace_commands{$cmdname})) {
-      if ($Texinfo::Commands::brace_commands{$cmdname} eq 'accent') {
-        $result = text_accents($element, $options->{'enabled_encoding'},
-                                  $options->{'set_case'});
-      } elsif (!exists($element->{'contents'})) {
+      if (!exists($element->{'contents'})) {
         return '';
-      } elsif ($cmdname eq 'image') {
+      }
+      if ($cmdname eq 'image') {
         $options->{'_code_state'}++;
         $result = _convert($options, $element->{'contents'}->[0]);
           $options->{'_code_state'}--;
