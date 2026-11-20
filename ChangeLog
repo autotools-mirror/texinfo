@@ -1,5 +1,13 @@
 2026-11-20  Patrice Dumas  <pertusus@free.fr>
 
+	* tta/C/main/convert_to_texinfo.c (convert_to_texinfo_internal),
+	tta/perl/Texinfo/Convert/Texinfo.pm (_convert_to_texinfo): loop over
+	brace commands arguments in _convert_to_texinfo and insert brace when
+	the argument type is not following_arg and the argument number is 0.
+	Also ignore spaces_after_cmd_before_arg for the argument number count.
+
+2026-11-20  Patrice Dumas  <pertusus@free.fr>
+
 	* tta/C/convert/convert_to_plaintext.c
 	(convert_to_plaintext_internal), tta/C/main/floats.c
 	(print_caption_shortcaption),

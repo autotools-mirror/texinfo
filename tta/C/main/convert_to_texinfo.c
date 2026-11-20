@@ -116,25 +116,46 @@ convert_to_texinfo_internal (const ELEMENT *e, TEXT *result)
                    || command_data[cmd].flags & CF_INFOENCLOSE
                    || e->type == ET_macro_call || e->type == ET_rmacro_call)
             {
-              int braces;
-
        /* contents may not be set for a command without braces.  In that
           case it is better if the command is considered as a command without
           argument. */
               if (e->e.c->contents.number == 0)
                 return;
 
-              braces = !(e->e.c->contents.list[0]->type == ET_following_arg);
-              if (braces)
-                ADD("{");
+              size_t i;
+              int braces = 0;
 
-              if (cmd == CM_verb)
+              size_t arg_nr = 0;
+
+              for (i = 0; i < e->e.c->contents.number; i++)
                 {
-                  const char *delimiter = e->e.c->string_info[sit_delimiter];
-                  ADD(delimiter);
+                  const ELEMENT *arg = e->e.c->contents.list[i];
+                  if (arg->flags & EF_inserted)
+                    continue;
+
+                  if (arg->type != ET_spaces_after_cmd_before_arg)
+                    {
+                      if (arg->type != ET_following_arg)
+                        {
+                          if (arg_nr == 0)
+                            {
+                              ADD("{");
+                              if (cmd == CM_verb)
+                                {
+                                  const char *delimiter
+                                    = e->e.c->string_info[sit_delimiter];
+                                  ADD(delimiter);
+                                }
+                              braces = 1;
+                            }
+                          else
+                            ADD(",");
+                        }
+                      arg_nr++;
+                    }
+                  convert_to_texinfo_internal (arg, result);
                 }
 
-              convert_args (e, result);
 
               if (cmd == CM_verb)
                 {

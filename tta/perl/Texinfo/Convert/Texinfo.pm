@@ -270,13 +270,26 @@ sub _convert_to_texinfo($) {
         # case it is better if the command is considered as a command without
         # argument.
         return $result if (!exists($element->{'contents'}));
-        my $braces = 1;
-        $braces = 0 if ($element->{'contents'}->[0]->{'type'} eq 'following_arg');
-        $result .= '{' if ($braces);
-        if ($cmdname eq 'verb') {
-          $result .= $element->{'info'}->{'delimiter'};
+        my $arg_nr = 0;
+        my $braces = 0;
+        foreach my $arg (@{$element->{'contents'}}) {
+          next if ($arg->{'info'} and $arg->{'info'}->{'inserted'});
+          if ($arg->{'type'} ne 'spaces_after_cmd_before_arg') {
+            if ($arg->{'type'} ne 'following_arg') {
+              if ($arg_nr) {
+                $result .= ',';
+              } else {
+                $result .= '{';
+                if ($cmdname eq 'verb') {
+                  $result .= $element->{'info'}->{'delimiter'};
+                }
+                $braces = 1;
+              }
+            }
+            $arg_nr++;
+          }
+          $result .= _convert_to_texinfo($arg);
         }
-        $result .= _convert_args($element);
         if ($cmdname eq 'verb') {
           $result .= $element->{'info'}->{'delimiter'};
         }
