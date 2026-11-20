@@ -3391,61 +3391,11 @@ sub _convert($$) {
       }
       return $result;
     # commands with braces
-    } elsif (exists($Texinfo::Commands::brace_commands{$cmdname})) {
+    } elsif (exists($Texinfo::Commands::brace_commands{$cmdname})
+             or (exists($element->{'type'})
+               and $element->{'type'} eq 'definfoenclose_command')) {
       my $args = Texinfo::Common::get_non_empty_brace_args($element);
-      if ($Texinfo::Commands::brace_commands{$cmdname} eq 'accent') {
-        if ($self->{'output_characters'}) {
-          my $encoding = $self->{'output_encoding_name'};
-          my $sc;
-          my $accented_text
-             = Texinfo::Convert::Text::text_accents($element, $encoding, $sc);
-          $result .= _protect_text($self, $accented_text);
-        } else {
-          my $accent_arg = '';
-
-          if (exists(
-              $LaTeX_accent_commands{$command_format_context}->{$cmdname})) {
-            $result
-           .= "\\$LaTeX_accent_commands{$command_format_context}->{$cmdname}\{";
-            if (defined($args) and defined($args->[0])) {
-              $accent_arg = _convert($self, $args->[0]);
-            }
-            $result .= $accent_arg;
-            $result .= '}';
-          } elsif ($cmdname eq 'dotless') {
-            if (defined($args) and defined($args->[0])) {
-              $accent_arg = _convert($self, $args->[0]);
-            }
-            if ($accent_arg eq 'i' or $accent_arg eq 'j') {
-              if ($command_format_context eq 'cmd_math') {
-                $result .= "\\${accent_arg}math{}";
-              } else {
-                $result .= "\\${accent_arg}{}";
-              }
-            } else {
-              # should be an error, but we do not care, it is better if it is
-              # handled during parsing
-              $result .= _protect_text($self, $accent_arg);
-            }
-            return $result;
-          # accent without math mode command, use slanted text
-          } elsif ($command_format_context eq 'cmd_math'
-                   and exists($LaTeX_accent_commands{'cmd_text'}->{$cmdname})) {
-            $result
-               .= "\\textsl{\\$LaTeX_accent_commands{'cmd_text'}->{$cmdname}\{";
-            # we do not want accents within to be math accents
-            if (defined($args) and defined($args->[0])) {
-              push @{$self->{'formatting_context'}->[-1]->{'text_context'}},
-                   'ctx_text';
-              $accent_arg = _convert($self, $args->[0]);
-              my $old_context
-                = pop @{$self->{'formatting_context'}->[-1]->{'text_context'}};
-            }
-            $result .= $accent_arg;
-            $result .= '}}';
-          }
-        }
-      } elsif (exists($LaTeX_style_brace_commands{'cmd_text'}->{$cmdname})
+      if (exists($LaTeX_style_brace_commands{'cmd_text'}->{$cmdname})
            or (exists($element->{'type'})
                and $element->{'type'} eq 'definfoenclose_command')) {
         my $did_stop_embrac = 0;
@@ -3503,6 +3453,58 @@ sub _convert($$) {
           pop @{$self->{'formatting_context'}->[-1]->{'code'}};
         }
         $result = _restart_embrac_if_needed($self, $result, $did_stop_embrac);
+      } elsif ($Texinfo::Commands::brace_commands{$cmdname} eq 'accent') {
+        if ($self->{'output_characters'}) {
+          my $encoding = $self->{'output_encoding_name'};
+          my $sc;
+          my $accented_text
+             = Texinfo::Convert::Text::text_accents($element, $encoding, $sc);
+          $result .= _protect_text($self, $accented_text);
+        } else {
+          my $accent_arg = '';
+
+          if (exists(
+              $LaTeX_accent_commands{$command_format_context}->{$cmdname})) {
+            $result
+           .= "\\$LaTeX_accent_commands{$command_format_context}->{$cmdname}\{";
+            if (defined($args) and defined($args->[0])) {
+              $accent_arg = _convert($self, $args->[0]);
+            }
+            $result .= $accent_arg;
+            $result .= '}';
+          } elsif ($cmdname eq 'dotless') {
+            if (defined($args) and defined($args->[0])) {
+              $accent_arg = _convert($self, $args->[0]);
+            }
+            if ($accent_arg eq 'i' or $accent_arg eq 'j') {
+              if ($command_format_context eq 'cmd_math') {
+                $result .= "\\${accent_arg}math{}";
+              } else {
+                $result .= "\\${accent_arg}{}";
+              }
+            } else {
+              # should be an error, but we do not care, it is better if it is
+              # handled during parsing
+              $result .= _protect_text($self, $accent_arg);
+            }
+            return $result;
+          # accent without math mode command, use slanted text
+          } elsif ($command_format_context eq 'cmd_math'
+                   and exists($LaTeX_accent_commands{'cmd_text'}->{$cmdname})) {
+            $result
+               .= "\\textsl{\\$LaTeX_accent_commands{'cmd_text'}->{$cmdname}\{";
+            # we do not want accents within to be math accents
+            if (defined($args) and defined($args->[0])) {
+              push @{$self->{'formatting_context'}->[-1]->{'text_context'}},
+                   'ctx_text';
+              $accent_arg = _convert($self, $args->[0]);
+              my $old_context
+                = pop @{$self->{'formatting_context'}->[-1]->{'text_context'}};
+            }
+            $result .= $accent_arg;
+            $result .= '}}';
+          }
+        }
       } elsif ($cmdname eq 'dmn') {
         $result .= '\\thinspace ';
         if (defined($args) and defined($args->[0])) {

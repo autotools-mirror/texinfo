@@ -1,5 +1,11 @@
 2026-11-20  Patrice Dumas  <pertusus@free.fr>
 
+	* tta/perl/Texinfo/Convert/LaTeX.pm (_convert): select definfoenclose
+	with brace commands.  Handle style and definfoenclose before accent
+	commands.
+
+2026-11-20  Patrice Dumas  <pertusus@free.fr>
+
 	* tta/C/api_for_swig/swig_interface.c
 	(txi_ext_element_list_element_by_index): fix sign of negaive index.
 
