@@ -2290,7 +2290,7 @@ in the text, like the one above.  They also provide information for
 generating the table of contents (@pxref{Contents,, Generating a Table
 of Contents}).
 
-Texinfo also has @dfn{heading-only} commands, which print headings,
+Texinfo also has @dfn{heading} commands, which print headings,
 but do not generate entries in the table of contents.
 
 Finally, the @code{@@part} command creates a division of the manual above
@@ -2312,7 +2312,7 @@ command, as follows:
 @@chapter Chapter 2
 @end example
 
-The sectioning commands, @code{@@part}, and heading-only commands are
+The sectioning commands, @code{@@part}, and heading commands are
 described in the sections that follow.  The @code{@@node} command is
 described in the next chapter (@pxref{Nodes}).
 
@@ -3346,7 +3346,7 @@ sections, sections superior to sub-sections and so on.
 @c style of documentation is known as @dfn{topic-oriented documentation},
 @c notably used by the DITA and Mallard systems.
 
-To do this, follow the @code{@@node} line with one of the heading-only
+To do this, follow the @code{@@node} line with one of the heading
 commands.  For example:
 
 @example

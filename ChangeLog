@@ -1,5 +1,11 @@
 2026-11-20  Gavin Smith <gavinsmith0123@gmail.com>
 
+	* doc/texinfo.texi:
+	Change "heading-only" to "heading" in three places, as it would
+	be hard to consistently use the former term.
+
+2026-11-20  Gavin Smith <gavinsmith0123@gmail.com>
+
 	Nodes/menus documentation edits
 
 	* doc/texinfo.texi (Menus): Edit.  Explain when you would want
