@@ -645,7 +645,7 @@ appearing before a @code{@@subentry} on an index command line).
 @anchor{Texinfo@asis{::}Parser spaces_after_cmd_before_arg text}
 
 Spaces following an @@-command before that argument (for accent commands)
-or before the opening brace.  Not directly in the tree.
+or before the opening brace.
 
 @item spaces_before_argument text
 @anchor{Texinfo@asis{::}Parser spaces_before_argument text}
@@ -1051,23 +1051,6 @@ and @code{@@itemx}, in a @emph{table_term}.
 Set if the element is not in the Texinfo input code, but is inserted
 as a default for @@-command argument or as a definition command automatically
 inserted category (for example @emph{Function} for @code{@@defun}).
-
-@item spaces_after_cmd_before_arg
-@anchor{Texinfo@asis{::}Parser spaces_after_cmd_before_arg}
-
-For accent commands with spaces following the @@-command, like:
-
-@verbatim
- @ringaccent A
- @^ u
-@end verbatim
-
-there is a @emph{spaces_after_cmd_before_arg} key linking to an element
-containing the spaces appearing after the command in @emph{text}.
-
-Space between a brace @@-command name and its opening brace also
-ends up in @emph{spaces_after_cmd_before_arg}.  It is not recommended
-to leave space between an @@-command name and its opening brace.
 
 @end table
 

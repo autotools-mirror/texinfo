@@ -64,8 +64,6 @@ convert_args (const ELEMENT *element, TEXT *result)
 static void
 convert_to_texinfo_internal (const ELEMENT *e, TEXT *result)
 {
-  const ELEMENT *elt;
-
   if (e->flags & EF_inserted || e->type == ET_arguments_line)
     {}
   else if (type_data[e->type].flags & TF_text)
@@ -86,13 +84,6 @@ convert_to_texinfo_internal (const ELEMENT *e, TEXT *result)
           enum command_id cmd = element_builtin_data_cmd (e);
 
           ADD("@");  ADD(cmdname);
-
-          if (type_data[e->type].elt_info_number > eit_spaces_after_cmd_before_arg)
-            {
-              elt = e->elt_info[eit_spaces_after_cmd_before_arg];
-              if (elt)
-                ADD((char *)elt->e.text->text);
-            }
 
           if (command_data[cmd].flags & CF_nobrace)
             {

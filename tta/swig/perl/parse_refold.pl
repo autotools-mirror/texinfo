@@ -492,6 +492,7 @@ sub _convert($$$;$) {
           }
         }
 
+        # TODO not useful since interface_version 1 2026
         my $spaces_cmd_before_arg
           = Texinfo::element_attribute_element($element,
                                  'spaces_after_cmd_before_arg');

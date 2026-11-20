@@ -1010,6 +1010,7 @@ element_to_perl_hash (ELEMENT *e, int avoid_recursion)
     }
 
   /* process elt_info array */
+  /* currently 0 for all the elements */
   if (type_data[e->type].elt_info_number > 0)
     {
       int i;

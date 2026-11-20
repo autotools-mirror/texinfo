@@ -1,5 +1,24 @@
 2026-11-20  Patrice Dumas  <pertusus@free.fr>
 
+	* tta/C/main/convert_to_texinfo.c (convert_to_texinfo_internal),
+	tta/perl/Texinfo/Convert/Texinfo.pm (_convert_to_texinfo): update for
+	removal of spaces_after_cmd_before_arg from info.
+
+	* tta/C/main/element_types.awk: no more element info for brace types.
+
+	* tta/C/main/tree_types.h (AI_KEYS_LIST),
+	tta/perl/Texinfo/ManipulateTree.pm (@elt_info_names): remove
+	spaces_after_cmd_before_arg.  Also comment out enum elt_info_type.
+
+	* tta/perl/Texinfo/ManipulateTree.pm: move _print_tree_elements_ref
+	later in file.
+
+	* tta/perl/Texinfo/ManipulateTree.pm (_print_tree_elements_ref)
+	(tree_remove_parents, _element_remove_references): use
+	@elt_info_names.
+
+2026-11-20  Patrice Dumas  <pertusus@free.fr>
+
 	put spaces_after_cmd_before_arg directly in tree before argument
 
 	* tta/C/main/utils.c (block_line_argument_command)

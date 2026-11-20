@@ -626,7 +626,7 @@ appearing before a C<@subentry> on an index command line).
 =item spaces_after_cmd_before_arg text
 
 Spaces following an @-command before that argument (for accent commands)
-or before the opening brace.  Not directly in the tree.
+or before the opening brace.
 
 =item spaces_before_argument text
 
@@ -963,20 +963,6 @@ C<@verb> delimiter is in I<delimiter>.
 Set if the element is not in the Texinfo input code, but is inserted
 as a default for @-command argument or as a definition command automatically
 inserted category (for example I<Function> for C<@defun>).
-
-=item spaces_after_cmd_before_arg
-
-For accent commands with spaces following the @-command, like:
-
- @ringaccent A
- @^ u
-
-there is a I<spaces_after_cmd_before_arg> key linking to an element
-containing the spaces appearing after the command in I<text>.
-
-Space between a brace @-command name and its opening brace also
-ends up in I<spaces_after_cmd_before_arg>.  It is not recommended
-to leave space between an @-command name and its opening brace.
 
 =back
 

@@ -1350,7 +1350,7 @@ sub _place_source_mark($$$) {
     if (!exists($element->{'contents'})) {
       push @{$element->{'contents'}},
        Texinfo::TreeElement::new({'text' => '',
-                                     'type' => 'spaces_after_cmd_before_arg'});
+                                  'type' => 'spaces_after_cmd_before_arg'});
       $add_element_string = 'add';
     } else {
       $source_mark->{'position'}
@@ -7541,13 +7541,6 @@ sub _process_remaining_on_line($$$$) {
   # @-command was found.  This means that the $current->{'cmdname'}
   # argument (an opening brace, or a character after spaces for
   # accent commands) was not found and there is already a new command.
-  #
-  # NOTE the ->{'info'}->{'spaces_after_cmd_before_arg'} element
-  # in the current command holds the spaces before the opening brace.
-  # It could be possible to accept an @comment here and put it in this
-  # element.  It would not necessarily be a good idea, as it would mean
-  # having an element in info that holds something more complex
-  # than text and source marks.
   if ($command
       and exists($current->{'cmdname'})
       and defined($self->{'brace_commands'}->{$current->{'cmdname'}})) {

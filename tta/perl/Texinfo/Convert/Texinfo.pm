@@ -245,12 +245,6 @@ sub _convert_to_texinfo($) {
 
       $result .= '@'.$cmdname;
 
-      if (exists($element->{'info'})
-          and exists($element->{'info'}->{'spaces_after_cmd_before_arg'})) {
-          $result
-           .= $element->{'info'}->{'spaces_after_cmd_before_arg'}->{'text'};
-      }
-
       if (exists($nobrace_commands{$data_cmdname})) {
         # the spaces following a command are put in a text element in the
         # tree, not associated to the command element.

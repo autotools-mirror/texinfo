@@ -38,7 +38,6 @@
 
 /* to be kept in sync with enum elt_info_type */
 const char *elt_info_names[] = {
-  "spaces_after_cmd_before_arg",
 };
 
 const ASSOCIATED_INFO_DATA associated_info_table[] = {

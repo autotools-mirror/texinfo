@@ -379,50 +379,8 @@ sub copy_contents($;$) {
 
 
 
-# for debugging
-sub _print_tree_elements_ref($$);
-sub _print_tree_elements_ref($$)
-{
-  my ($element, $level) = @_;
-
-  my $parent;
-  if (exists($element->{'parent'})) {
-    $parent = ' (p)';
-  } else {
-    $parent = '';
-  }
-
-  my $reference_count = SvREFCNT($element, -1);
-  my $object_count = Devel::Refcount::refcount($element);
-
-  print STDERR "". (' ' x $level) . $element
-     . Texinfo::Common::debug_print_element($element)
-       . "${parent}{$reference_count;$object_count}\n";
-
-  if (exists($element->{'source_marks'})) {
-    foreach my $source_mark (@{$element->{'source_marks'}}) {
-      if (exists($source_mark->{'element'})) {
-        _print_tree_elements_ref($source_mark->{'element'}, $level+3);
-      }
-    }
-  }
-
-  return if (exists($element->{'text'}));
-
-  if (exists($element->{'info'})) {
-    foreach my $info_elt_key ('spaces_after_cmd_before_arg') {
-      if (exists($element->{'info'}->{$info_elt_key})) {
-        _print_tree_elements_ref($element->{'info'}->{$info_elt_key}, $level+2);
-      }
-    }
-  }
-
-  if (exists($element->{'contents'})) {
-    for (my $i = 0; $i < scalar(@{$element->{'contents'}}); $i++) {
-      _print_tree_elements_ref($element->{'contents'}->[$i], $level+1);
-    }
-  }
-}
+# keep in sync with elt_info_names in C/main/tree.c
+my @elt_info_names = ();
 
 sub tree_remove_parents($);
 
@@ -450,7 +408,7 @@ sub tree_remove_parents($) {
   delete $element->{'parent'};
 
   if (exists($element->{'info'})) {
-    foreach my $info_elt_key ('spaces_after_cmd_before_arg') {
+    foreach my $info_elt_key (@elt_info_names) {
       # for spaces_* parents can only be in source marks
       if (exists($element->{'info'}->{$info_elt_key})) {
         tree_remove_parents($element->{'info'}->{$info_elt_key});
@@ -490,7 +448,7 @@ sub _element_remove_references($;$$) {
 
   if (!exists($element->{'text'})) {
     if (exists($element->{'info'})) {
-      foreach my $info_elt_key ('spaces_after_cmd_before_arg') {
+      foreach my $info_elt_key (@elt_info_names) {
         if (exists($element->{'info'}->{$info_elt_key})) {
           _element_remove_references($element->{'info'}->{$info_elt_key},
                                  $check_refcount, $silent_refcount);
@@ -693,9 +651,6 @@ sub _print_element_add_prepend_info($$$$;$$) {
 #my @extra_out_of_tree = ('def_index_element', 'def_index_ref_element');
 my @extra_out_of_tree = ();
 
-# keep in sync with elt_info_names in C/main/tree.c
-my @elt_info_names = ('spaces_after_cmd_before_arg');
-
 my %out_of_tree_element_name;
 foreach my $name (@extra_out_of_tree, @elt_info_names) {
   $out_of_tree_element_name{$name} = 1;
@@ -768,7 +723,6 @@ sub _debug_protect_eol($) {
 }
 
 # currently no element ARRAY
-# and out_of_tree_element_name (only for spaces_after_cmd_before_arg),
 # therefore no call to element_number_or_error
 sub _print_element_associated_info($$$$$;$$) {
   my ($associated_info, $header, $level, $prepended, $current_nr,
@@ -1040,6 +994,53 @@ sub remove_element_tree_numbers($) {
   if (exists($element->{'contents'})) {
     foreach my $content (@{$element->{'contents'}}) {
       remove_element_tree_numbers($content);
+    }
+  }
+}
+
+
+
+# for debugging
+sub _print_tree_elements_ref($$);
+sub _print_tree_elements_ref($$)
+{
+  my ($element, $level) = @_;
+
+  my $parent;
+  if (exists($element->{'parent'})) {
+    $parent = ' (p)';
+  } else {
+    $parent = '';
+  }
+
+  my $reference_count = SvREFCNT($element, -1);
+  my $object_count = Devel::Refcount::refcount($element);
+
+  print STDERR "". (' ' x $level) . $element
+     . Texinfo::Common::debug_print_element($element)
+       . "${parent}{$reference_count;$object_count}\n";
+
+  if (exists($element->{'source_marks'})) {
+    foreach my $source_mark (@{$element->{'source_marks'}}) {
+      if (exists($source_mark->{'element'})) {
+        _print_tree_elements_ref($source_mark->{'element'}, $level+3);
+      }
+    }
+  }
+
+  return if (exists($element->{'text'}));
+
+  if (exists($element->{'info'})) {
+    foreach my $info_elt_key (@elt_info_names) {
+      if (exists($element->{'info'}->{$info_elt_key})) {
+        _print_tree_elements_ref($element->{'info'}->{$info_elt_key}, $level+2);
+      }
+    }
+  }
+
+  if (exists($element->{'contents'})) {
+    for (my $i = 0; $i < scalar(@{$element->{'contents'}}); $i++) {
+      _print_tree_elements_ref($element->{'contents'}->[$i], $level+1);
     }
   }
 }

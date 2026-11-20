@@ -89,9 +89,11 @@ enum extra_type {
 
 /* indices in ELEMENT elt_info */
 /* to be kept in sync with elt_info_names in main/tree.c */
+/*
 enum elt_info_type {
-   eit_spaces_after_cmd_before_arg, /* types with braces flag */
+   eit_....,
 };
+ */
 
 /* indices in ELEMENT string_info */
 enum string_info_type {
@@ -165,8 +167,6 @@ enum string_info_type {
   ai_key(indent, flag, EF_indent) \
   ai_key(noindent, flag, EF_noindent) \
   ai_key(isindex, flag, EF_isindex) \
-  \
-  ai_key(spaces_after_cmd_before_arg, element_info, eit_spaces_after_cmd_before_arg) \
   \
   ai_key(alias_of, string_info, sit_alias_of) \
   ai_key(delimiter, string_info, sit_delimiter) \

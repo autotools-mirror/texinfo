@@ -59,10 +59,6 @@ END {
         t = types[line_idx]
         flags_str = ""
         elt_info_number = 0;
-        # spaces_after_cmd_before_arg
-        if (type_flags[t] != "" && match(type_flags[t], /braces/)) {
-          elt_info_number += 1;
-        }
         if (type_flags[t] != "") {
           split(type_flags[t], flags_array, ",")
           flags_str = "";
