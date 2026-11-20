@@ -175,7 +175,7 @@ txi_ext_element_list_element_by_index (ELEMENT_LIST *element_list, int index)
     return 0;
 
   if (index < 0)
-    index = (int) element_list->number - index;
+    index = (int) element_list->number + index;
 
   if (index < 0 || (size_t) index >= element_list->number)
     return 0;
