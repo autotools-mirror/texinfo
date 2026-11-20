@@ -1,5 +1,12 @@
 2026-11-20  Gavin Smith <gavinsmith0123@gmail.com>
 
+	* info/scan.c (scan_node_contents):
+	Only skip "* Menu:" marker if it is followed by a newline.
+	This makes it possible to reference a node named "Menu" in
+	a menu.
+
+2026-11-20  Gavin Smith <gavinsmith0123@gmail.com>
+
 	Nodes/menus documentation edits
 
 	* doc/texinfo.texi (Node Menu Illustration): Remove

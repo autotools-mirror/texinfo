@@ -1598,7 +1598,7 @@ scan_node_contents (NODE *node, FILE_BUFFER *fb, TAG **tag_ptr)
           /* Create REFERENCE entity. */
           entry = info_new_reference (0, 0);
 
-          if (in_menu && looking_at_string (match, INFO_MENU_LABEL))
+          if (in_menu && looking_at_string (match, INFO_MENU_LABEL "\n"))
             {
               /* Skip repeated menu marker in node. */
               copy_input_to_output (strlen (INFO_MENU_LABEL));
