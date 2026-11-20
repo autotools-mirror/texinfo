@@ -3802,7 +3802,7 @@ Due to the syntax of a menu entry described in this and the next
 subsection, you cannot reliably use a colon character in
 @var{menu-entry-name}, or a period, comma or colon in @var{node-name}.
 (@xref{Info Node Names Constraints}.)
-@command{texi2any} warns and protect names when the text of a menu item
+@command{texi2any} warns and protects names when the text of a menu item
 contains a problematic construct that could interfere with its parsing
 in Info (@pxref{Info Format Menu}, and see @ref{Info Format Cross
 Reference}).

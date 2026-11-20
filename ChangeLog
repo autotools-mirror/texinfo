@@ -1,5 +1,9 @@
 2026-11-20  Gavin Smith <gavinsmith0123@gmail.com>
 
+	* doc/texinfo.texi (Menu Parts): Grammar fix.
+
+2026-11-20  Gavin Smith <gavinsmith0123@gmail.com>
+
 	* doc/texinfo.texi (Info Format Local Variables):
 	Grammar fixes.
 
