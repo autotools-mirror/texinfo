@@ -1,3 +1,12 @@
+2026-11-20  Gavin Smith <gavinsmith0123@gmail.com>
+
+	* doc/texinfo.texi,
+	(Inserting Accents): Change period to colon.
+	(Internationalization): Edit.  Remove explanation as to why Texinfo
+	manuals would be written in English.
+	(Internationalization, Setting the language): Edit.
+	(Command List): Add hyphen in "four-letter".
+
 2026-11-19  Gavin Smith <gavinsmith0123@gmail.com>
 
 	* doc/texinfo.texi (Inserting Accents):
