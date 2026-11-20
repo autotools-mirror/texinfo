@@ -172,10 +172,8 @@ $result_tree_text{'accentenc'} = '*document_root C3
     *brace_container C1
      {e}
    { }
-   *@H C1 l28
-   |INFO
-   |spaces_after_cmd_before_arg:
-    |{spaces_after_cmd_before_arg: }
+   *@H C2 l28
+    {spaces_after_cmd_before_arg: }
     *following_arg C1
      {e}
    {\\n}
@@ -186,10 +184,8 @@ $result_tree_text{'accentenc'} = '*document_root C3
     *brace_container C1
      {e}
    { }
-   *@dotaccent C1 l30
-   |INFO
-   |spaces_after_cmd_before_arg:
-    |{spaces_after_cmd_before_arg: }
+   *@dotaccent C2 l30
+    {spaces_after_cmd_before_arg: }
     *following_arg C1
      {e}
    {\\n}
@@ -200,10 +196,8 @@ $result_tree_text{'accentenc'} = '*document_root C3
     *brace_container C1
      {e}
    { }
-   *@ringaccent C1 l32
-   |INFO
-   |spaces_after_cmd_before_arg:
-    |{spaces_after_cmd_before_arg: }
+   *@ringaccent C2 l32
+    {spaces_after_cmd_before_arg: }
     *following_arg C1
      {e}
    {\\n}
@@ -221,10 +215,8 @@ $result_tree_text{'accentenc'} = '*document_root C3
     *brace_container C1
      {e}
    { }
-   *@u C1 l36
-   |INFO
-   |spaces_after_cmd_before_arg:
-    |{spaces_after_cmd_before_arg: }
+   *@u C2 l36
+    {spaces_after_cmd_before_arg: }
     *following_arg C1
      {e}
    {\\n}
@@ -235,10 +227,8 @@ $result_tree_text{'accentenc'} = '*document_root C3
     *brace_container C1
      {e}
    { }
-   *@ubaraccent C1 l38
-   |INFO
-   |spaces_after_cmd_before_arg:
-    |{spaces_after_cmd_before_arg: }
+   *@ubaraccent C2 l38
+    {spaces_after_cmd_before_arg: }
     *following_arg C1
      {e}
    {\\n}
@@ -249,10 +239,8 @@ $result_tree_text{'accentenc'} = '*document_root C3
     *brace_container C1
      {e}
    { }
-   *@udotaccent C1 l40
-   |INFO
-   |spaces_after_cmd_before_arg:
-    |{spaces_after_cmd_before_arg: }
+   *@udotaccent C2 l40
+    {spaces_after_cmd_before_arg: }
     *following_arg C1
      {e}
    {\\n}
@@ -263,10 +251,8 @@ $result_tree_text{'accentenc'} = '*document_root C3
     *brace_container C1
      {e}
    { }
-   *@v C1 l42
-   |INFO
-   |spaces_after_cmd_before_arg:
-    |{spaces_after_cmd_before_arg: }
+   *@v C2 l42
+    {spaces_after_cmd_before_arg: }
     *following_arg C1
      {e}
    {\\n}
@@ -277,10 +263,8 @@ $result_tree_text{'accentenc'} = '*document_root C3
     *brace_container C1
      {a}
    { }
-   *@ogonek C1 l44
-   |INFO
-   |spaces_after_cmd_before_arg:
-    |{spaces_after_cmd_before_arg: }
+   *@ogonek C2 l44
+    {spaces_after_cmd_before_arg: }
     *following_arg C1
      {a}
    {\\n}
@@ -291,10 +275,8 @@ $result_tree_text{'accentenc'} = '*document_root C3
     *brace_container C1
      {e}
    { }
-   *@ogonek C1 l46
-   |INFO
-   |spaces_after_cmd_before_arg:
-    |{spaces_after_cmd_before_arg: }
+   *@ogonek C2 l46
+    {spaces_after_cmd_before_arg: }
     *following_arg C1
      {e}
    {\\n}
@@ -826,25 +808,25 @@ $result_converted{'xml'}->{'accentenc'} = '<documentencoding encoding="ISO-8859-
 </para>
 <para>should be e=: <accent type="macr">e</accent> <accent type="macr" bracketed="off">e</accent>
 </para>
-<para>should be e<w>&textrsquo;</w>&textrsquo;: <accent type="dblac">e</accent> <accent type="dblac" spacesaftercmd=" " bracketed="off">e</accent>
+<para>should be e<w>&textrsquo;</w>&textrsquo;: <accent type="dblac">e</accent> <accent type="dblac" bracketed="off"> </accent>
 </para>
-<para>should be e.: <accent type="dot">e</accent> <accent type="dot" spacesaftercmd=" " bracketed="off">e</accent>
+<para>should be e.: <accent type="dot">e</accent> <accent type="dot" bracketed="off"> </accent>
 </para>
-<para>should be e*: <accent type="ring">e</accent> <accent type="ring" spacesaftercmd=" " bracketed="off">e</accent>
+<para>should be e*: <accent type="ring">e</accent> <accent type="ring" bracketed="off"> </accent>
 </para>
 <para>should be ee[: <accent type="tieaccent">ee</accent>
 </para>
-<para>should be e(: <accent type="breve">e</accent> <accent type="breve" spacesaftercmd=" " bracketed="off">e</accent>
+<para>should be e(: <accent type="breve">e</accent> <accent type="breve" bracketed="off"> </accent>
 </para>
-<para>should be e_: <accent type="ubaraccent">e</accent> <accent type="ubaraccent" spacesaftercmd=" " bracketed="off">e</accent>
+<para>should be e_: <accent type="ubaraccent">e</accent> <accent type="ubaraccent" bracketed="off"> </accent>
 </para>
-<para>should be .e: <accent type="udotaccent">e</accent> <accent type="udotaccent" spacesaftercmd=" " bracketed="off">e</accent>
+<para>should be .e: <accent type="udotaccent">e</accent> <accent type="udotaccent" bracketed="off"> </accent>
 </para>
-<para>should be e&lt;: <accent type="caron">e</accent> <accent type="caron" spacesaftercmd=" " bracketed="off">e</accent>
+<para>should be e&lt;: <accent type="caron">e</accent> <accent type="caron" bracketed="off"> </accent>
 </para>
-<para>should be a; : <accent type="ogon">a</accent> <accent type="ogon" spacesaftercmd=" " bracketed="off">a</accent>
+<para>should be a; : <accent type="ogon">a</accent> <accent type="ogon" bracketed="off"> </accent>
 </para>
-<para>should be e; : <accent type="ogon">e</accent> <accent type="ogon" spacesaftercmd=" " bracketed="off">e</accent>
+<para>should be e; : <accent type="ogon">e</accent> <accent type="ogon" bracketed="off"> </accent>
 </para>
 <para>upside down: &iquest; &iexcl;
 </para>

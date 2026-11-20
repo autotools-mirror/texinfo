@@ -27,83 +27,71 @@ $result_tree_text{'value_after_brace_command'} = '*document_root C1
      {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C12
-   *@ringaccent C1 l4
-   |INFO
-   |spaces_after_cmd_before_arg:
-    |{spaces_after_cmd_before_arg: }
-    |>SOURCEMARKS
-    |>value_expansion<start;1><p:1>{{a}}
-     |>*@value C1
-      |>*brace_container C1
-       |>{bracedletter}
+   *@ringaccent C2 l4
    >SOURCEMARKS
    >value_expansion<end;1>
+    {spaces_after_cmd_before_arg: }
+    >SOURCEMARKS
+    >value_expansion<start;1><p:1>{{a}}
+     >*@value C1
+      >*brace_container C1
+       >{bracedletter}
     *brace_container C1
      {a}
    {\\n}
-   *@ringaccent l5
-   |INFO
-   |spaces_after_cmd_before_arg:
-    |{spaces_after_cmd_before_arg: }
-    |>SOURCEMARKS
-    |>value_expansion<start;2><p:1>{@unknown}
-     |>*@value C1
-      |>*brace_container C1
-       |>{unknowncmd}
+   *@ringaccent C1 l5
    >SOURCEMARKS
    >value_expansion<end;2>
+    {spaces_after_cmd_before_arg: }
+    >SOURCEMARKS
+    >value_expansion<start;2><p:1>{@unknown}
+     >*@value C1
+      >*brace_container C1
+       >{unknowncmd}
    {\\n}
-   *@^ C1 l6
-   |INFO
-   |spaces_after_cmd_before_arg:
-    |{spaces_after_cmd_before_arg: }
-    |>SOURCEMARKS
-    |>value_expansion<start;3><p:1>{{a}}
-     |>*@value C1
-      |>*brace_container C1
-       |>{bracedletter}
+   *@^ C2 l6
    >SOURCEMARKS
    >value_expansion<end;3>
+    {spaces_after_cmd_before_arg: }
+    >SOURCEMARKS
+    >value_expansion<start;3><p:1>{{a}}
+     >*@value C1
+      >*brace_container C1
+       >{bracedletter}
     *brace_container C1
      {a}
    {\\n}
-   *@^ l7
-   |INFO
-   |spaces_after_cmd_before_arg:
-    |{spaces_after_cmd_before_arg: }
-    |>SOURCEMARKS
-    |>value_expansion<start;4><p:1>{@unknown}
-     |>*@value C1
-      |>*brace_container C1
-       |>{unknowncmd}
+   *@^ C1 l7
    >SOURCEMARKS
    >value_expansion<end;4>
+    {spaces_after_cmd_before_arg: }
+    >SOURCEMARKS
+    >value_expansion<start;4><p:1>{@unknown}
+     >*@value C1
+      >*brace_container C1
+       >{unknowncmd}
    {\\n}
-   *@code C1 l8
-   |INFO
-   |spaces_after_cmd_before_arg:
-    |{spaces_after_cmd_before_arg: }
-    |>SOURCEMARKS
-    |>value_expansion<start;5><p:1>{{a}}
-     |>*@value C1
-      |>*brace_container C1
-       |>{bracedletter}
+   *@code C2 l8
    >SOURCEMARKS
    >value_expansion<end;5>
+    {spaces_after_cmd_before_arg: }
+    >SOURCEMARKS
+    >value_expansion<start;5><p:1>{{a}}
+     >*@value C1
+      >*brace_container C1
+       >{bracedletter}
     *brace_container C1
      {a}
    {\\n}
-   *@code l9
-   |INFO
-   |spaces_after_cmd_before_arg:
-    |{spaces_after_cmd_before_arg: }
-    |>SOURCEMARKS
-    |>value_expansion<start;6><p:1>{@unknown}
-     |>*@value C1
-      |>*brace_container C1
-       |>{unknowncmd}
+   *@code C1 l9
    >SOURCEMARKS
    >value_expansion<end;6>
+    {spaces_after_cmd_before_arg: }
+    >SOURCEMARKS
+    >value_expansion<start;6><p:1>{@unknown}
+     >*@value C1
+      >*brace_container C1
+       >{unknowncmd}
    {\\n}
 ';
 

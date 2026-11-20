@@ -12,24 +12,18 @@ $result_tree_text{'no_brace_space_end_line'} = '*document_root C1
  *before_node_section C4
   *preamble_before_content
   *paragraph C2
-   *@code C1 l1
-   |INFO
-   |spaces_after_cmd_before_arg:
-    |{spaces_after_cmd_before_arg: }
+   *@code C2 l1
+    {spaces_after_cmd_before_arg: }
     *brace_container C1
      {c}
    {.\\n}
   {empty_line:\\n}
   *paragraph C4
-   *@TeX l3
-   |INFO
-   |spaces_after_cmd_before_arg:
-    |{spaces_after_cmd_before_arg:\\n}
+   *@TeX C1 l3
+    {spaces_after_cmd_before_arg:\\n}
    {text\\n}
-   *@code l5
-   |INFO
-   |spaces_after_cmd_before_arg:
-    |{spaces_after_cmd_before_arg:\\n}
+   *@code C1 l5
+    {spaces_after_cmd_before_arg:\\n}
    {Arg.}
 ';
 

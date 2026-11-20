@@ -142,10 +142,8 @@ $result_tree_text{'nodedescriptionblock_descriptions'} = '*document_root C13
      *brace_container C1
       {raw:vv somewhat}
     { }
-    *@ringaccent C1 l16
-    |INFO
-    |spaces_after_cmd_before_arg:
-     |{spaces_after_cmd_before_arg: }
+    *@ringaccent C2 l16
+     {spaces_after_cmd_before_arg: }
      *following_arg C1
       {a}
     {nexpected}
@@ -743,7 +741,7 @@ $result_converted{'xml'}->{'nodedescriptionblock_descriptions'} = '<node identif
 <node identifier="toto"><nodename> toto</nodename><nodenext automatic="on"> titi</nodenext><nodeprev automatic="on"> Top</nodeprev><nodeup automatic="on"> Top</nodeup></node>
 <chapter><sectiontitle> Toto</sectiontitle>
 
-<nodedescription> toto is there:: and the <emph>is a description</emph><w>slightly long</w> and <verb delimiter=":">vv somewhat</verb> <accent type="ring" spacesaftercmd=" " bracketed="off">a</accent>nexpected</nodedescription>
+<nodedescription> toto is there:: and the <emph>is a description</emph><w>slightly long</w> and <verb delimiter=":">vv somewhat</verb> <accent type="ring" bracketed="off"> </accent>nexpected</nodedescription>
 
 <nodedescriptionblock endspaces=" ">
 <para>Block along line node description for toto

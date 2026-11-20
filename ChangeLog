@@ -1,5 +1,54 @@
 2026-11-20  Patrice Dumas  <pertusus@free.fr>
 
+	put spaces_after_cmd_before_arg directly in tree before argument
+
+	* tta/C/main/utils.c (block_line_argument_command)
+	(block_line_command_as_argument), tta/perl/Texinfo/Common.pm
+	(block_line_argument_command, block_line_command_as_argument): rename
+	block_line_argument_command as block_line_command_as_argument,
+	re-create block_line_argument_command out of
+	block_line_command_as_argument to find the command as argument, but
+	leave out the checks on the type of command.  Also consider the
+	argument to be empty if it is only spaces_after_cmd_before_arg.
+	Update callers.
+
+	* tta/C/parsetexi/end_line.c (end_line_starting_block),
+	tta/perl/Texinfo/ParserNonXS.pm (_end_line_starting_block): check if
+	the command as argument is not an accent only if there is no command
+	as argument found.  Call block_line_argument_command to determine the
+	command as argument.
+
+	* tta/C/parsetexi/macro.c (expand_macro_arguments),
+	tta/perl/Texinfo/ParserNonXS.pm (_expand_macro_arguments): use a
+	counter for the number of arguments, not the number of elements.
+
+	* tta/C/parsetexi/macro.c (handle_macro, expand_macro_body),
+	tta/perl/Texinfo/ParserNonXS.pm (_handle_macro, _expand_macro_body):
+	pass get_non_empty_brace_args call result to expand_macro_body.
+
+	* tta/C/parsetexi/separator.c (handle_close_brace): call
+	get_non_empty_brace_args and check the args instead of the element
+	contents.
+
+	* tta/perl/Texinfo/ParserNonXS.pm (_handle_open_brace)
+	(_process_remaining_on_line): push element instead of setting the
+	whole array reference.
+
+	* tta/C/parsetexi/macro.c (handle_macro), tta/C/parsetexi/parser.c
+	(new_value_element, process_remaining_on_line),
+	tta/C/parsetexi/source_marks.c (place_source_mark),
+	tta/perl/Texinfo/ParserNonXS.pm (_place_source_mark, _new_value_element)
+	(_handle_close_brace, _process_remaining_on_line): put
+	spaces_after_cmd_before_arg directly in tree before the brace
+	containers.
+
+	* tta/swig/perl/parse_refold.pl (_convert): put verb delimiter in
+	args_stack.  Update arg_stack for all the brace containers.  output
+	an open brace when opening the brace containers when the the argument
+	number is 0.
+
+2026-11-20  Patrice Dumas  <pertusus@free.fr>
+
 	* tta/C/main/convert_to_texinfo.c (convert_to_texinfo_internal),
 	tta/perl/Texinfo/Convert/Texinfo.pm (_convert_to_texinfo): loop over
 	brace commands arguments in _convert_to_texinfo and insert brace when

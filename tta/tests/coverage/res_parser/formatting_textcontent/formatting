@@ -740,7 +740,8 @@ Invalid use of @':
 @dotless{--a} -a
 @dotless{a} a
 
-@U, without braces @U{}, with empty arg 
+@U, without braces 
+@U{}, with empty arg 
 @U{z}, with non-hex arg z
 @U{abc}, with <4 hex digits abc
 @U{FFFFFFFFFFFFFF}, value much too large FFFFFFFFFFFFFF
@@ -1597,7 +1598,8 @@ Invalid use of @':
 @dotless{--a} -a
 @dotless{a} a
 
-@U, without braces @U{}, with empty arg 
+@U, without braces 
+@U{}, with empty arg 
 @U{z}, with non-hex arg z
 @U{abc}, with <4 hex digits abc
 @U{FFFFFFFFFFFFFF}, value much too large FFFFFFFFFFFFFF
@@ -2480,7 +2482,8 @@ Invalid use of @':
 @dotless{--a} -a
 @dotless{a} a
 
-@U, without braces @U{}, with empty arg 
+@U, without braces 
+@U{}, with empty arg 
 @U{z}, with non-hex arg z
 @U{abc}, with <4 hex digits abc
 @U{FFFFFFFFFFFFFF}, value much too large FFFFFFFFFFFFFF
@@ -3332,7 +3335,8 @@ Invalid use of @':
 @dotless{--a} -a
 @dotless{a} a
 
-@U, without braces @U{}, with empty arg 
+@U, without braces 
+@U{}, with empty arg 
 @U{z}, with non-hex arg z
 @U{abc}, with <4 hex digits abc
 @U{FFFFFFFFFFFFFF}, value much too large FFFFFFFFFFFFFF

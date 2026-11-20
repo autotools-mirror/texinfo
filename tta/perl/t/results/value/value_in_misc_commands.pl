@@ -336,12 +336,10 @@ $result_tree_text{'value_in_misc_commands'} = '*document_root C5
     >*brace_container C1
      >{strong_macro}
   *paragraph C2
-   *@strong C1 l50
-   |INFO
-   |spaces_after_cmd_before_arg:
-    |{spaces_after_cmd_before_arg:}
-    |>SOURCEMARKS
-    |>value_expansion<end;12>
+   *@strong C2 l50
+    {spaces_after_cmd_before_arg:}
+    >SOURCEMARKS
+    >value_expansion<end;12>
     *brace_container C1
      {very strong}
    {\\n}
@@ -372,15 +370,13 @@ $result_tree_text{'value_in_misc_commands'} = '*document_root C5
     >*brace_container C1
      >{strong_macro}
   *paragraph C2
-   *definfoenclose_command@strong C1 l54
-   |INFO
-   |spaces_after_cmd_before_arg:
-    |{spaces_after_cmd_before_arg:}
-    |>SOURCEMARKS
-    |>value_expansion<end;15>
+   *definfoenclose_command@strong C2 l54
    |EXTRA
    |begin:{(strong:}
    |end:{:)}
+    {spaces_after_cmd_before_arg:}
+    >SOURCEMARKS
+    >value_expansion<end;15>
     *brace_container C1
      { is it really strong? }
    {\\n}

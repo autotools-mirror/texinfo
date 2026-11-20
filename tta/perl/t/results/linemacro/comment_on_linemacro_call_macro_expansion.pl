@@ -47,10 +47,8 @@ $result_tree_text{'comment_on_linemacro_call_macro_expansion'} = '*document_root
    {macro first |a|\\n}
    >SOURCEMARKS
    >macro_expansion<start;1>
-    >*macro_call@mymacro C1
-    >|INFO
-    >|spaces_after_cmd_before_arg:
-     >|{spaces_after_cmd_before_arg: }
+    >*macro_call@mymacro C2
+     >{spaces_after_cmd_before_arg: }
      >*brace_arg C2
       >{spaces_before_argument:\\n}
       >{macro_call_arg_text:@lm {a} @c in comment}

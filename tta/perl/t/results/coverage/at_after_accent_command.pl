@@ -12,10 +12,8 @@ $result_tree_text{'at_after_accent_command'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *paragraph C6
-   *@ringaccent l1
-   |INFO
-   |spaces_after_cmd_before_arg:
-    |{spaces_after_cmd_before_arg: }
+   *@ringaccent C1 l1
+    {spaces_after_cmd_before_arg: }
    *@@
    {. }
    *@^ l1
@@ -56,7 +54,7 @@ $result_converted{'html_text'}->{'at_after_accent_command'} = '<p>&#778;@. &#770
 </p>';
 
 
-$result_converted{'xml'}->{'at_after_accent_command'} = '<para><accent type="ring"></accent>&arobase;. <accent type="circ"></accent>&arobase;.
+$result_converted{'xml'}->{'at_after_accent_command'} = '<para><accent type="ring" bracketed="off"> </accent>&arobase;. <accent type="circ"></accent>&arobase;.
 </para>';
 
 

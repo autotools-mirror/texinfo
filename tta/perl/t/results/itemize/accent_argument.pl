@@ -59,10 +59,8 @@ $result_tree_text{'accent_argument'} = '*document_root C1
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     *@ringaccent C1 l9
-     |INFO
-     |spaces_after_cmd_before_arg:
-      |{spaces_after_cmd_before_arg: }
+     *@ringaccent C2 l9
+      {spaces_after_cmd_before_arg: }
       *following_arg C1
        {a}
      {spaces_after_argument:\\n}
@@ -144,8 +142,8 @@ $result_converted{'xml'}->{'accent_argument'} = '<itemize endspaces=" "><itempre
 <listitem><prepend><accent type="tilde">e</accent></prepend> <para>item
 </para></listitem></itemize>
 
-<itemize endspaces=" "><itemprepend> <accent type="ring" spacesaftercmd=" " bracketed="off">a</accent></itemprepend>
-<listitem><prepend><accent type="ring" spacesaftercmd=" " bracketed="off">a</accent></prepend> <para>item
+<itemize endspaces=" "><itemprepend> <accent type="ring" bracketed="off"> </accent></itemprepend>
+<listitem><prepend><accent type="ring" bracketed="off"> </accent></prepend> <para>item
 </para></listitem></itemize>
 ';
 

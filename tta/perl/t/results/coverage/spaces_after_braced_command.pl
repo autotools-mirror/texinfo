@@ -12,36 +12,28 @@ $result_tree_text{'spaces_after_braced_command'} = '*document_root C1
  *before_node_section C11
   *preamble_before_content
   *paragraph C2
-   *@code C1 l1
-   |INFO
-   |spaces_after_cmd_before_arg:
-    |{spaces_after_cmd_before_arg: }
+   *@code C2 l1
+    {spaces_after_cmd_before_arg: }
     *brace_container C1
      {b}
    {\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@samp C1 l3
-   |INFO
-   |spaces_after_cmd_before_arg:
-    |{spaces_after_cmd_before_arg:\\n}
+   *@samp C2 l3
+    {spaces_after_cmd_before_arg:\\n}
     *brace_container C1
      {v}
    {\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@AA C1 l6
-   |INFO
-   |spaces_after_cmd_before_arg:
-    |{spaces_after_cmd_before_arg:\\n }
+   *@AA C2 l6
+    {spaces_after_cmd_before_arg:\\n }
     *brace_container
    {\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@email C2 l9
-   |INFO
-   |spaces_after_cmd_before_arg:
-    |{spaces_after_cmd_before_arg:\\n}
+   *@email C3 l9
+    {spaces_after_cmd_before_arg:\\n}
     *brace_arg C1
      {a}
     *brace_arg C4
@@ -52,10 +44,8 @@ $result_tree_text{'spaces_after_braced_command'} = '*document_root C1
    {\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@TeX l13
-   |INFO
-   |spaces_after_cmd_before_arg:
-    |{spaces_after_cmd_before_arg:\\n}
+   *@TeX C1 l13
+    {spaces_after_cmd_before_arg:\\n}
    {\\n}
   {empty_line:\\n}
 ';
@@ -152,14 +142,15 @@ $result_converted{'html_text'}->{'spaces_after_braced_command'} = '<p><code clas
 ';
 
 
-$result_converted{'xml'}->{'spaces_after_braced_command'} = '<para><code spacesaftercmd=" ">b</code>
+$result_converted{'xml'}->{'spaces_after_braced_command'} = '<para><code> </code>
 </para>
-<para><samp spacesaftercmd="\\n">v</samp>
+<para><samp>
+</samp>
 </para>
 <para>&Aring;
 </para>
-<para><email spacesaftercmd="\\n"><emailaddress>a</emailaddress><emailname> b 
- </emailname></email>
+<para><email><emailaddress>
+</emailaddress><emailname>a</emailname></email>
 </para>
 <para>&tex;
 </para>

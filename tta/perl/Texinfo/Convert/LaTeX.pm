@@ -2671,7 +2671,7 @@ sub _xtable_description_command_format($$) {
   my $block_line_arg = $arguments_line->{'contents'}->[0];
 
   my $command_as_argument
-    = Texinfo::Common::block_line_argument_command($block_line_arg);
+    = Texinfo::Common::block_line_command_as_argument($block_line_arg);
 
   if (defined($command_as_argument)) {
     my $command_as_arg_name = $command_as_argument->{'cmdname'};
@@ -4457,7 +4457,7 @@ sub _convert($$) {
         my $block_line_arg = $arguments_line->{'contents'}->[0];
 
         my $command_as_argument
-           = Texinfo::Common::block_line_argument_command($block_line_arg);
+           = Texinfo::Common::block_line_command_as_argument($block_line_arg);
 
         if (defined($command_as_argument)) {
           my $command_as_arg_name = $command_as_argument->{'cmdname'};

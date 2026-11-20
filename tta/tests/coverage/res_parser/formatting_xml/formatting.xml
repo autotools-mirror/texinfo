@@ -2190,11 +2190,13 @@ $\frac{a &lt; b @code{tex \hbox{ code }}}{b}$ ``
 <!-- c invalid texinfo -->
 
 <para>Somehow invalid use of &arobase;,:&linebreak;
-&arobase;, <accent type="cedil"></accent>&linebreak;
+&arobase;, <accent type="cedil" bracketed="off">
+</accent>&linebreak;
 &arobase;,&arobase;&quot;u <accent type="cedil"></accent><accent type="uml" bracketed="off">u</accent>
 </para>
 <para>Invalid use of &arobase;&textrsquo;:&linebreak;
-&arobase;&textrsquo; <accent type="acute"></accent>&linebreak;
+&arobase;&textrsquo; <accent type="acute" bracketed="off">
+</accent>&linebreak;
 &arobase;&textrsquo;&arobase;&quot;u <accent type="acute"></accent><accent type="uml" bracketed="off">u</accent>
 </para>
 <!-- c should only appear in @*heading -->
@@ -2207,7 +2209,8 @@ $\frac{a &lt; b @code{tex \hbox{ code }}}{b}$ ``
 <code>&arobase;dotless&lbrace;a&rbrace;</code> <dotless>a</dotless>
 </para>
 <!-- c @U arg must be specified and within range -->
-<para>&arobase;U, without braces &arobase;U&lbrace;&rbrace;, with empty arg <U></U>
+<para>&arobase;U, without braces <U>
+</U>&arobase;U&lbrace;&rbrace;, with empty arg <U></U>
 &arobase;U&lbrace;z&rbrace;, with non-hex arg <U>z</U>
 &arobase;U&lbrace;abc&rbrace;, with &lt;4 hex digits <U>abc</U>
 &arobase;U&lbrace;FFFFFFFFFFFFFF&rbrace;, value much too large <U>FFFFFFFFFFFFFF</U>
@@ -3369,11 +3372,13 @@ $\frac{a &lt; b @code{tex \hbox{ code }}}{b}$ ``
 <!-- c invalid texinfo -->
 
 <para>Somehow invalid use of &arobase;,:&linebreak;
-&arobase;, <accent type="cedil"></accent>&linebreak;
+&arobase;, <accent type="cedil" bracketed="off">
+</accent>&linebreak;
 &arobase;,&arobase;&quot;u <accent type="cedil"></accent><accent type="uml" bracketed="off">u</accent>
 </para>
 <para>Invalid use of &arobase;&textrsquo;:&linebreak;
-&arobase;&textrsquo; <accent type="acute"></accent>&linebreak;
+&arobase;&textrsquo; <accent type="acute" bracketed="off">
+</accent>&linebreak;
 &arobase;&textrsquo;&arobase;&quot;u <accent type="acute"></accent><accent type="uml" bracketed="off">u</accent>
 </para>
 <!-- c should only appear in @*heading -->
@@ -3386,7 +3391,8 @@ $\frac{a &lt; b @code{tex \hbox{ code }}}{b}$ ``
 <code>&arobase;dotless&lbrace;a&rbrace;</code> <dotless>a</dotless>
 </para>
 <!-- c @U arg must be specified and within range -->
-<para>&arobase;U, without braces &arobase;U&lbrace;&rbrace;, with empty arg <U></U>
+<para>&arobase;U, without braces <U>
+</U>&arobase;U&lbrace;&rbrace;, with empty arg <U></U>
 &arobase;U&lbrace;z&rbrace;, with non-hex arg <U>z</U>
 &arobase;U&lbrace;abc&rbrace;, with &lt;4 hex digits <U>abc</U>
 &arobase;U&lbrace;FFFFFFFFFFFFFF&rbrace;, value much too large <U>FFFFFFFFFFFFFF</U>
@@ -4592,11 +4598,13 @@ $\frac{a &lt; b @code{tex \hbox{ code }}}{b}$ ``
 <!-- c invalid texinfo -->
 
 <para>Somehow invalid use of &arobase;,:&linebreak;
-&arobase;, <accent type="cedil"></accent>&linebreak;
+&arobase;, <accent type="cedil" bracketed="off">
+</accent>&linebreak;
 &arobase;,&arobase;&quot;u <accent type="cedil"></accent><accent type="uml" bracketed="off">u</accent>
 </para>
 <para>Invalid use of &arobase;&textrsquo;:&linebreak;
-&arobase;&textrsquo; <accent type="acute"></accent>&linebreak;
+&arobase;&textrsquo; <accent type="acute" bracketed="off">
+</accent>&linebreak;
 &arobase;&textrsquo;&arobase;&quot;u <accent type="acute"></accent><accent type="uml" bracketed="off">u</accent>
 </para>
 <!-- c should only appear in @*heading -->
@@ -4609,7 +4617,8 @@ $\frac{a &lt; b @code{tex \hbox{ code }}}{b}$ ``
 <code>&arobase;dotless&lbrace;a&rbrace;</code> <dotless>a</dotless>
 </para>
 <!-- c @U arg must be specified and within range -->
-<para>&arobase;U, without braces &arobase;U&lbrace;&rbrace;, with empty arg <U></U>
+<para>&arobase;U, without braces <U>
+</U>&arobase;U&lbrace;&rbrace;, with empty arg <U></U>
 &arobase;U&lbrace;z&rbrace;, with non-hex arg <U>z</U>
 &arobase;U&lbrace;abc&rbrace;, with &lt;4 hex digits <U>abc</U>
 &arobase;U&lbrace;FFFFFFFFFFFFFF&rbrace;, value much too large <U>FFFFFFFFFFFFFF</U>
@@ -5765,11 +5774,13 @@ $\frac{a &lt; b @code{tex \hbox{ code }}}{b}$ ``
 <!-- c invalid texinfo -->
 
 Somehow invalid use of &arobase;,:&linebreak;
-&arobase;, <accent type="cedil"></accent>&linebreak;
+&arobase;, <accent type="cedil" bracketed="off">
+</accent>&linebreak;
 &arobase;,&arobase;&quot;u <accent type="cedil"></accent><accent type="uml" bracketed="off">u</accent>
 
 Invalid use of &arobase;':&linebreak;
-&arobase;' <accent type="acute"></accent>&linebreak;
+&arobase;' <accent type="acute" bracketed="off">
+</accent>&linebreak;
 &arobase;'&arobase;&quot;u <accent type="acute"></accent><accent type="uml" bracketed="off">u</accent>
 
 <!-- c should only appear in @*heading -->
@@ -5782,7 +5793,8 @@ Invalid use of &arobase;':&linebreak;
 <code>&arobase;dotless&lbrace;a&rbrace;</code> <dotless>a</dotless>
 
 <!-- c @U arg must be specified and within range -->
-&arobase;U, without braces &arobase;U&lbrace;&rbrace;, with empty arg <U></U>
+&arobase;U, without braces <U>
+</U>&arobase;U&lbrace;&rbrace;, with empty arg <U></U>
 &arobase;U&lbrace;z&rbrace;, with non-hex arg <U>z</U>
 &arobase;U&lbrace;abc&rbrace;, with &lt;4 hex digits <U>abc</U>
 &arobase;U&lbrace;FFFFFFFFFFFFFF&rbrace;, value much too large <U>FFFFFFFFFFFFFF</U>

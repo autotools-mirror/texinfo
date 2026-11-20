@@ -70,10 +70,8 @@ $result_tree_text{'section_on_xtable_line'} = '*document_root C5
    *arguments_line C1
     *block_line_arg C2
      {spaces_before_argument: }
-     *@ringaccent l7
-     |INFO
-     |spaces_after_cmd_before_arg:
-      |{spaces_after_cmd_before_arg: }
+     *@ringaccent C1 l7
+      {spaces_after_cmd_before_arg: }
  *@section C1 l7 {fourth}
  |EXTRA
  |identifier:{fourth}

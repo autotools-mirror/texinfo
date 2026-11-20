@@ -28,13 +28,11 @@ $result_tree_text{'inlinerawspaces'} = '*document_root C1
       *brace_container
      { }
    { a.  Now html\\n}
-   *@inlineraw C2 l2
-   |INFO
-   |spaces_after_cmd_before_arg:
-    |{spaces_after_cmd_before_arg: }
+   *@inlineraw C3 l2
    |EXTRA
    |expand_index:{1}
    |format:{html}
+    {spaces_after_cmd_before_arg: }
     *brace_arg C3
      {spaces_before_argument: }
      {html}
@@ -80,7 +78,7 @@ in <i><abbr class="acronym">HTML</abbr></i>.
 
 
 $result_converted{'xml'}->{'inlinerawspaces'} = '<para>A <inlineraw><inlinerawformat> plaintext </inlinerawformat><inlinerawcontent> plaintext &textldquo; &lbracechar; </inlinerawcontent></inlineraw> a.  Now html
-<inlineraw spacesaftercmd=" "><inlinerawformat> html </inlinerawformat><inlinerawcontent> in &lt;i&gt;<acronym><acronymword>HTML</acronymword></acronym>&lt;/i&gt;</inlinerawcontent></inlineraw>.
+<inlineraw><inlinerawformat> </inlinerawformat><inlinerawcontent> html </inlinerawcontent></inlineraw>.
 </para>';
 
 

@@ -193,10 +193,8 @@ $result_tree_text{'glossary'} = '*document_root C5
    |macro_name:{expandglossary}
    >SOURCEMARKS
    >macro_expansion<start;2>
-    >*macro_call@expandglossary C1
-    >|INFO
-    >|spaces_after_cmd_before_arg:
-     >|{spaces_after_cmd_before_arg: }
+    >*macro_call@expandglossary C2
+     >{spaces_after_cmd_before_arg: }
      >*brace_arg C1
       >{macro_call_arg_text:@glossarytext{}}
     *arguments_line C1
@@ -302,10 +300,8 @@ $result_tree_text{'glossary'} = '*document_root C5
    |macro_name:{expandglossary}
    >SOURCEMARKS
    >macro_expansion<start;4>
-    >*macro_call@expandglossary C1
-    >|INFO
-    >|spaces_after_cmd_before_arg:
-     >|{spaces_after_cmd_before_arg: }
+    >*macro_call@expandglossary C2
+     >{spaces_after_cmd_before_arg: }
      >*brace_arg C1
       >{macro_call_arg_text:@glossarytext{}}
     *arguments_line C1

@@ -1295,7 +1295,7 @@ sub _convert($$;$) {
         my $command_argument;
         if ($cmdname eq 'itemize') {
           $command_argument
-            = Texinfo::Common::block_line_argument_command($block_line_arg);
+            = Texinfo::Common::block_line_command_as_argument($block_line_arg);
         } else {
           $command_argument
             = Texinfo::Common::item_line_block_line_argument_command(

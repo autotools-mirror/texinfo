@@ -454,8 +454,8 @@ sub _convert($$$;$) {
     $type = '' if (!defined($type));
 
     if ($debug) {
-      print STDERR "R [".join('|', @$args_stack)."] $category ".
-        _current_smark($current_smark)
+      print STDERR "R [".join('|', map {join(';', @$_)} @$args_stack)
+        ."] $category ". _current_smark($current_smark)
         .' '.Texinfo::element_print_details($element)."\n";
     }
 
@@ -506,21 +506,14 @@ sub _convert($$$;$) {
         if (Texinfo::element_command_is_brace($element)
             or $type eq 'definfoenclose_command'
             or $type eq 'macro_call' or $type eq 'rmacro_call') {
-          if (!defined($current_smark)) {
-            if (Texinfo::element_type(
-                  Texinfo::element_get_child($element, 0))
-                       ne 'following_arg') {
-              $$result .= '{';
-            }
-            if ($cmdname eq 'verb') {
-              $$result
-                .= _decode(
-                   Texinfo::element_attribute_string($element, 'delimiter'));
-            }
+          if ($cmdname eq 'verb') {
+            push @$args_stack, [0, _decode(
+                   Texinfo::element_attribute_string($element, 'delimiter'))];
+          } else {
+            push @$args_stack, [0, undef];
           }
-          push @$args_stack, 0;
         } elsif (!Texinfo::element_command_is_nobrace($element)) {
-          push @$args_stack, 0;
+          push @$args_stack, [0, undef];
         }
       } elsif ($category == $Texinfo::TXI_READ_ELEMENT_END) {
         if (Texinfo::element_command_is_brace($element)
@@ -533,7 +526,7 @@ sub _convert($$$;$) {
                  Texinfo::element_attribute_string($element, 'delimiter'));
             }
             if (Texinfo::element_type(
-                  Texinfo::element_get_child($element, 0))
+                  Texinfo::element_get_child($element, -1))
                        ne 'following_arg') {
               $$result .= '}';
             }
@@ -558,11 +551,19 @@ sub _convert($$$;$) {
           }
         }
         if ($type eq 'brace_arg' or $type eq 'elided_brace_command_arg'
+            or $type eq 'brace_command_context'
+            or $type eq 'brace_container'
             or $type eq 'line_arg' or $type eq 'block_line_arg') {
-          $args_stack->[-1]++;
+          $args_stack->[-1]->[0]++;
           if (!defined($current_smark)) {
-            if ($args_stack->[-1] > 1) {
+            if ($args_stack->[-1]->[0] > 1) {
               $$result .= ',';
+            } elsif ($type ne 'line_arg' and $type ne 'block_line_arg') {
+              my $verb_delimiter = $args_stack->[-1]->[1];
+              $$result .= '{';
+              if (defined($verb_delimiter)) {
+                $$result .= $verb_delimiter;
+              }
             }
           }
         }

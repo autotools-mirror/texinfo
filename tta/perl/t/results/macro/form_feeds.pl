@@ -45,10 +45,8 @@ $result_tree_text{'form_feeds'} = '*document_root C1
    {f arg1}
    >SOURCEMARKS
    >macro_expansion<start;1>
-    >*macro_call@mymacro C2
-    >|INFO
-    >|spaces_after_cmd_before_arg:
-     >|{spaces_after_cmd_before_arg:  \\f}
+    >*macro_call@mymacro C3
+     >{spaces_after_cmd_before_arg:  \\f}
      >*brace_arg C2
       >{spaces_before_argument: \\f }
       >{macro_call_arg_text:arg1\\f}

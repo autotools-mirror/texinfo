@@ -56,10 +56,8 @@ $result_tree_text{'dotless_argument_non_ascii'} = '*document_root C5
     *brace_container C1
      {ê}
    {\\n}
-   *@dotless C1 l7
-   |INFO
-   |spaces_after_cmd_before_arg:
-    |{spaces_after_cmd_before_arg: }
+   *@dotless C2 l7
+    {spaces_after_cmd_before_arg: }
     *following_arg C1
      {ê}
    {\\n}
@@ -164,7 +162,7 @@ $result_converted{'xml'}->{'dotless_argument_non_ascii'} = '<node identifier="To
 <node identifier="chap"><nodename> chap</nodename><nodeprev automatic="on"> Top</nodeprev><nodeup automatic="on"> Top</nodeup></node>
 <chapter><sectiontitle> Chapter</sectiontitle>
 <para><dotless>ê</dotless>
-<dotless spacesaftercmd=" ">ê</dotless>
+<dotless> </dotless>
 </para></chapter>
 ';
 

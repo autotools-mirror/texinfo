@@ -162,10 +162,8 @@ $result_tree_text{'accent_enable_encoding'} = '*document_root C3
     *brace_container C1
      {e}
    { }
-   *@H C1 l26
-   |INFO
-   |spaces_after_cmd_before_arg:
-    |{spaces_after_cmd_before_arg: }
+   *@H C2 l26
+    {spaces_after_cmd_before_arg: }
     *following_arg C1
      {e}
    {\\n}
@@ -176,10 +174,8 @@ $result_tree_text{'accent_enable_encoding'} = '*document_root C3
     *brace_container C1
      {e}
    { }
-   *@dotaccent C1 l28
-   |INFO
-   |spaces_after_cmd_before_arg:
-    |{spaces_after_cmd_before_arg: }
+   *@dotaccent C2 l28
+    {spaces_after_cmd_before_arg: }
     *following_arg C1
      {e}
    {\\n}
@@ -190,10 +186,8 @@ $result_tree_text{'accent_enable_encoding'} = '*document_root C3
     *brace_container C1
      {e}
    { }
-   *@ringaccent C1 l30
-   |INFO
-   |spaces_after_cmd_before_arg:
-    |{spaces_after_cmd_before_arg: }
+   *@ringaccent C2 l30
+    {spaces_after_cmd_before_arg: }
     *following_arg C1
      {e}
    {\\n}
@@ -211,10 +205,8 @@ $result_tree_text{'accent_enable_encoding'} = '*document_root C3
     *brace_container C1
      {e}
    { }
-   *@u C1 l34
-   |INFO
-   |spaces_after_cmd_before_arg:
-    |{spaces_after_cmd_before_arg: }
+   *@u C2 l34
+    {spaces_after_cmd_before_arg: }
     *following_arg C1
      {e}
    {\\n}
@@ -225,10 +217,8 @@ $result_tree_text{'accent_enable_encoding'} = '*document_root C3
     *brace_container C1
      {e}
    { }
-   *@ubaraccent C1 l36
-   |INFO
-   |spaces_after_cmd_before_arg:
-    |{spaces_after_cmd_before_arg: }
+   *@ubaraccent C2 l36
+    {spaces_after_cmd_before_arg: }
     *following_arg C1
      {e}
    {\\n}
@@ -239,10 +229,8 @@ $result_tree_text{'accent_enable_encoding'} = '*document_root C3
     *brace_container C1
      {e}
    { }
-   *@udotaccent C1 l38
-   |INFO
-   |spaces_after_cmd_before_arg:
-    |{spaces_after_cmd_before_arg: }
+   *@udotaccent C2 l38
+    {spaces_after_cmd_before_arg: }
     *following_arg C1
      {e}
    {\\n}
@@ -253,10 +241,8 @@ $result_tree_text{'accent_enable_encoding'} = '*document_root C3
     *brace_container C1
      {e}
    { }
-   *@v C1 l40
-   |INFO
-   |spaces_after_cmd_before_arg:
-    |{spaces_after_cmd_before_arg: }
+   *@v C2 l40
+    {spaces_after_cmd_before_arg: }
     *following_arg C1
      {e}
    {\\n}
@@ -267,10 +253,8 @@ $result_tree_text{'accent_enable_encoding'} = '*document_root C3
     *brace_container C1
      {a}
    { }
-   *@ogonek C1 l42
-   |INFO
-   |spaces_after_cmd_before_arg:
-    |{spaces_after_cmd_before_arg: }
+   *@ogonek C2 l42
+    {spaces_after_cmd_before_arg: }
     *following_arg C1
      {a}
    {\\n}
@@ -281,10 +265,8 @@ $result_tree_text{'accent_enable_encoding'} = '*document_root C3
     *brace_container C1
      {e}
    { }
-   *@ogonek C1 l44
-   |INFO
-   |spaces_after_cmd_before_arg:
-    |{spaces_after_cmd_before_arg: }
+   *@ogonek C2 l44
+    {spaces_after_cmd_before_arg: }
     *following_arg C1
      {e}
    {\\n}

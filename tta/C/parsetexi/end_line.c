@@ -979,33 +979,23 @@ end_line_starting_block (ELEMENT *current)
       else if (command == CM_itemize)
         {
           const ELEMENT *command_as_argument
-            = block_line_argument_command (block_line_arg);
+            = block_line_command_as_argument (block_line_arg);
 
           /* Check if command as argument isn't an accent command */
-          if (block_line_arg->e.c->contents.number > 0)
+          if (!command_as_argument)
             {
-              ARG_INDICES arg_indices;
-              int non_empty;
-              non_empty = non_leading_trailing_indices (block_line_arg,
-                                                        &arg_indices);
-              if (non_empty && arg_indices.start == arg_indices.end)
+              const ELEMENT *arg
+                = block_line_argument_command (block_line_arg);
+              if (arg)
                 {
-                  const ELEMENT *arg
-                    = block_line_arg->e.c->contents.list[arg_indices.start];
-                  if (!(type_data[arg->type].flags & TF_text)
-                      && (arg->e.c->contents.number == 0
-                          || (arg->e.c->contents.number == 1
-              && arg->e.c->contents.list[0]->e.c->contents.number == 0)))
+                  enum command_id cmd = element_builtin_cmd (arg);
+                  if (command_data[cmd].flags & CF_brace
+                      && command_data[cmd].data == BRACE_accent)
                     {
-                      enum command_id cmd = element_builtin_cmd (arg);
-                      if (command_data[cmd].flags & CF_brace
-                          && command_data[cmd].data == BRACE_accent)
-                        {
-                          command_warn (current, "accent command `@%s' "
-                            "not allowed as @%s argument",
-                            command_name(cmd),
-                            command_name(command));
-                        }
+                      command_warn (current, "accent command `@%s' "
+                        "not allowed as @%s argument",
+                        command_name(cmd),
+                        command_name(command));
                     }
                 }
             }
@@ -1023,7 +1013,7 @@ end_line_starting_block (ELEMENT *current)
       else if (parsed_command_data(command).data == BLOCK_item_line)
         {
           const ELEMENT *command_as_argument
-            = block_line_argument_command (block_line_arg);
+            = block_line_command_as_argument (block_line_arg);
 
           if (!command_as_argument)
             {

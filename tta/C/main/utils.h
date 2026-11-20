@@ -265,6 +265,8 @@ char *locate_file_in_dirs (const char *filename,
                      DEPRECATED_DIRS_LIST *deprecated_dirs_used);
 
 const ELEMENT *block_line_argument_command (const ELEMENT *block_line_arg);
+const ELEMENT *block_line_command_as_argument (
+                                            const ELEMENT *block_line_arg);
 void find_float_caption_shortcaption(const ELEMENT *float_e,
                                      const ELEMENT **result);
 int non_leading_trailing_indices (const ELEMENT *tree,

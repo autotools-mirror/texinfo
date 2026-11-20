@@ -73,10 +73,8 @@ $result_tree_text{'section_on_itemize_line'} = '*document_root C5
    *arguments_line C1
     *block_line_arg C2
      {spaces_before_argument: }
-     *@ringaccent l7
-     |INFO
-     |spaces_after_cmd_before_arg:
-      |{spaces_after_cmd_before_arg: }
+     *@ringaccent C1 l7
+      {spaces_after_cmd_before_arg: }
  *@section C1 l7 {fourth}
  |EXTRA
  |identifier:{fourth}
@@ -227,7 +225,7 @@ $result_converted{'xml'}->{'section_on_itemize_line'} = '<itemize commandarg="mi
 </section>
 <section><sectiontitle> third</sectiontitle>
 
-<itemize><itemprepend> <accent type="ring"></accent></itemprepend>
+<itemize><itemprepend> <accent type="ring" bracketed="off"> </accent></itemprepend>
 </itemize>
 </section>
 <section><sectiontitle> fourth</sectiontitle>

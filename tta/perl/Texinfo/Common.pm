@@ -1185,7 +1185,7 @@ sub multitable_columnfractions($) {
 # ALTIMP C/main/utils.c
 # there is a command as argument for a block command (@itemize or
 # @table, @vtable...) if there is only one argument on the line,
-# it is a brace command but not an accent command and it is empty.
+# it is command and it is empty.
 # TODO document?
 sub block_line_argument_command($) {
   my $block_line_arg = shift;
@@ -1197,14 +1197,32 @@ sub block_line_argument_command($) {
     if (exists($arg->{'cmdname'})
         and (!exists($arg->{'contents'})
              or (scalar(@{$arg->{'contents'}}) == 1
-                 and !exists($arg->{'contents'}->[0]->{'contents'})))) {
-      my $cmdname = $arg->{'cmdname'};
-      if ((exists($Texinfo::Commands::brace_commands{$cmdname})
-           and $Texinfo::Commands::brace_commands{$cmdname} ne 'accent')
-          or (exists($arg->{'type'})
-              and $arg->{'type'} eq 'definfoenclose_command')) {
-        return $arg;
-      }
+                 and ((exists($arg->{'contents'}->[0]->{'type'})
+                      and $arg->{'contents'}->[0]->{'type'}
+                                          eq 'spaces_after_cmd_before_arg')
+                      or !exists($arg->{'contents'}->[0]->{'contents'}))))) {
+      return $arg;
+    }
+  }
+  return undef;
+}
+
+# ALTIMP C/main/utils.c
+# there is a command as argument for a block command (@itemize or
+# @table, @vtable...) if there is only one argument on the line,
+# it is a brace command but not an accent command and it is empty.
+# TODO document?
+sub block_line_command_as_argument($) {
+  my $block_line_arg = shift;
+
+  my $arg = block_line_argument_command($block_line_arg);
+  if (defined($arg)) {
+    my $cmdname = $arg->{'cmdname'};
+    if ((exists($Texinfo::Commands::brace_commands{$cmdname})
+         and $Texinfo::Commands::brace_commands{$cmdname} ne 'accent')
+        or (exists($arg->{'type'})
+            and $arg->{'type'} eq 'definfoenclose_command')) {
+      return $arg;
     }
   }
   return undef;
@@ -1217,7 +1235,7 @@ my $default_bullet_command = Texinfo::TreeElement::new({'cmdname' => 'bullet'});
 sub itemize_line_prepended_element($) {
   my $block_line_arg = shift;
 
-  my $arg = block_line_argument_command($block_line_arg);
+  my $arg = block_line_command_as_argument($block_line_arg);
   if (defined($arg)) {
     return $arg;
   } elsif (Texinfo::Common::empty_spaces_argument($block_line_arg)) {
@@ -1243,7 +1261,7 @@ sub item_itemize_prepended($) {
 sub item_line_block_line_argument_command($) {
   my $block_line_arg = shift;
 
-  my $arg = block_line_argument_command($block_line_arg);
+  my $arg = block_line_command_as_argument($block_line_arg);
 
   if (defined($arg)) {
     my $brace_category = $Texinfo::Commands::brace_commands{$arg->{'cmdname'}};

@@ -231,8 +231,8 @@ handle_open_brace (ELEMENT *current, const char **line_inout)
    Note that this function isn't completely reliable because it
    doesn't look deep into the element tree.
  */
-int
-check_empty_expansion (ELEMENT *e)
+static int
+check_empty_expansion (const ELEMENT *e)
 {
   size_t i;
   for (i = 0; i < e->e.c->contents.number; i++)
@@ -290,22 +290,23 @@ handle_close_brace (ELEMENT *current, const char **line_inout)
 
       debug ("C|CLOSING(brace) @%s", parsed_command_data(closed_cmd).cmdname);
 
+      CONST_ELEMENT_LIST *args = get_non_empty_brace_args (brace_command);
 
       if (closed_cmd == CM_anchor || closed_cmd == CM_namedanchor)
         {
-          ELEMENT *anchor_id_element = brace_command->e.c->contents.list[0];
-          if (empty_spaces_argument (anchor_id_element))
+          if (!args->list[0])
             line_error ("empty argument in @%s",
                         command_name(closed_cmd));
           else
             {
+              ELEMENT *anchor_id_element = (ELEMENT *)args->list[0];
               check_register_target_element_label (
                                         anchor_id_element, brace_command);
               if (nesting_context.regions_stack.number > 0)
                 {
                   add_extra_string_dup (anchor_id_element,
                                         AI_key_element_region,
-                   command_name(*top_(command) (&nesting_context.regions_stack)));
+                  command_name(*top_(command) (&nesting_context.regions_stack)));
                 }
             }
         }
@@ -315,44 +316,41 @@ handle_close_brace (ELEMENT *current, const char **line_inout)
           int link_or_inforef = (closed_cmd == CM_link
                                  || closed_cmd == CM_inforef);
           if ((link_or_inforef
-               && empty_spaces_argument (ref->e.c->contents.list[0])
-               && (ref->e.c->contents.number <= 2
-                   || empty_spaces_argument (ref->e.c->contents.list[2])))
+               && !args->list[0]
+               && (args->number <= 2 || !args->list[2]))
               || (!link_or_inforef
-                   && empty_spaces_argument (ref->e.c->contents.list[0])
-                   && (ref->e.c->contents.number <= 3
-                       || empty_spaces_argument (ref->e.c->contents.list[3]))
-                   && (ref->e.c->contents.number <= 4
-                || empty_spaces_argument (ref->e.c->contents.list[4]))))
+                  && !args->list[0]
+                  && (args->number <= 3 || !args->list[3])
+                  && (args->number <= 4 || !args->list[4])))
             {
               line_warn ("command @%s missing a node or external manual "
                          "argument", command_name(closed_cmd));
             }
           else
             {
-              ELEMENT *arg_label = ref->e.c->contents.list[0];
+              ELEMENT *arg_label = (ELEMENT *)args->list[0];
               ARG_INDICES arg_indices;
 
-              int non_empty = non_leading_trailing_indices (arg_label,
-                                                            &arg_indices);
-
-              if (non_empty)
+              if (arg_label)
                 {
-                  INTEGER_LIST *node_content = new_integer_list ();
-                  add_(integer) (node_content, arg_indices.start);
-                  add_(integer) (node_content, arg_indices.end);
-                  add_extra_integer_list (arg_label, AI_key_node_content,
-                                          node_content);
+                  int non_empty = non_leading_trailing_indices (arg_label,
+                                                                &arg_indices);
+
+                  if (non_empty)
+                    {
+                      INTEGER_LIST *node_content = new_integer_list ();
+                      add_(integer) (node_content, arg_indices.start);
+                      add_(integer) (node_content, arg_indices.end);
+                      add_extra_integer_list (arg_label, AI_key_node_content,
+                                              node_content);
+                    }
                 }
               if ((!link_or_inforef
-                   && (ref->e.c->contents.number <= 3
-                       || (ref->e.c->contents.number <= 4
-                         && empty_spaces_argument (ref->e.c->contents.list[3]))
-                       || (empty_spaces_argument (ref->e.c->contents.list[3])
-                      && empty_spaces_argument (ref->e.c->contents.list[4]))))
+                   && (args->number <= 3
+                       || (args->number <= 4 && !args->list[3])
+                       || (!args->list[3] && !args->list[4])))
                   || (link_or_inforef
-                      && (ref->e.c->contents.number <= 2
-                   || empty_spaces_argument (ref->e.c->contents.list[2]))))
+                      && (args->number <= 2 || !args->list[2])))
                 {
                   /* we use the @*ref command here and not the label
                      command to have more information for messages */
@@ -361,39 +359,37 @@ handle_close_brace (ELEMENT *current, const char **line_inout)
                 }
             }
 
-          if (ref->e.c->contents.number > 1
-              && ! empty_spaces_argument (ref->e.c->contents.list[1]))
+          if (args->number > 1 && args->list[1])
             {
-              if (check_empty_expansion (ref->e.c->contents.list[1]))
+              if (check_empty_expansion (args->list[1]))
                 {
                   char *texi = 0;
-                  if (ref->e.c->contents.list[1])
+                  if (args->list[1])
                     texi
-                     = convert_contents_to_texinfo (ref->e.c->contents.list[1]);
+                     = convert_contents_to_texinfo (args->list[1]);
 
                   line_warn ("in @%s empty cross reference name "
                              "after expansion `%s'",
                              command_name(closed_cmd),
-                             ref->e.c->contents.list[1] ? texi : "");
+                             args->list[1] ? texi : "");
                   free (texi);
                 }
             }
 
           if (!link_or_inforef
-              && ref->e.c->contents.number > 2
-              && ! empty_spaces_argument (ref->e.c->contents.list[2]))
+              && args->number > 2 && args->list[2])
             {
-              if (check_empty_expansion (ref->e.c->contents.list[2]))
+              if (check_empty_expansion (args->list[2]))
                 {
                   char *texi = 0;
-                  if (ref->e.c->contents.list[2])
+                  if (args->list[2])
                     texi
-                    = convert_contents_to_texinfo (ref->e.c->contents.list[2]);
+                    = convert_contents_to_texinfo (args->list[2]);
 
                   line_warn ("in @%s empty cross reference title "
                              "after expansion `%s'",
                              command_name(closed_cmd),
-                             ref->e.c->contents.list[2] ? texi : "");
+                             args->list[2] ? texi : "");
                   free (texi);
                 }
             }
@@ -402,7 +398,7 @@ handle_close_brace (ELEMENT *current, const char **line_inout)
         {
           GLOBAL_INFO *global_info = &parsed_document->global_info;
           ELEMENT *image = brace_command;
-          if (empty_spaces_argument (image->e.c->contents.list[0]))
+          if (!args->list[0])
             {
               line_error ("@image missing filename argument");
             }
@@ -431,7 +427,7 @@ handle_close_brace (ELEMENT *current, const char **line_inout)
                || closed_cmd == CM_abbr
                || closed_cmd == CM_acronym)
         {
-          if (empty_spaces_argument (brace_command->e.c->contents.list[0]))
+          if (!args->list[0])
             {
               line_warn ("@%s missing first argument",
                          command_name(closed_cmd));
@@ -527,6 +523,7 @@ handle_close_brace (ELEMENT *current, const char **line_inout)
             }
         }
       register_global_command (brace_command, 0);
+      destroy_const_element_list (args);
 
       /* this should set current to brace_command->e.c->parent */
       current = close_brace_command (brace_command, 0, 0, 0);

@@ -12,10 +12,8 @@ $result_tree_text{'spaces_no_brace_after_braced_command'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *paragraph C2
-   *@code l1
-   |INFO
-   |spaces_after_cmd_before_arg:
-    |{spaces_after_cmd_before_arg: }
+   *@code C1 l1
+    {spaces_after_cmd_before_arg: }
    {b\\n}
 ';
 

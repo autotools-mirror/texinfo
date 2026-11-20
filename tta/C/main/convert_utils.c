@@ -1035,7 +1035,7 @@ argument_comment_end_line (const ELEMENT *element)
 const ELEMENT *
 itemize_line_prepended_element (const ELEMENT *block_line_arg)
 {
-  const ELEMENT *arg = block_line_argument_command (block_line_arg);
+  const ELEMENT *arg = block_line_command_as_argument (block_line_arg);
 
   if (arg)
     return arg;
@@ -1058,7 +1058,7 @@ item_itemize_prepended (const ELEMENT *element)
 const ELEMENT *
 item_line_block_line_argument_command (const ELEMENT *block_line_arg)
 {
-  const ELEMENT *arg = block_line_argument_command (block_line_arg);
+  const ELEMENT *arg = block_line_command_as_argument (block_line_arg);
 
   if (arg)
     {

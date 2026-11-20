@@ -308,6 +308,7 @@ expand_macro_arguments (const ELEMENT *macro, const char **line_inout,
   TEXT *arg;
   int braces_level = 1;
   size_t args_total;
+  size_t args_nr = 1;
   int whitespaces_len;
   ELEMENT *argument = new_element (ET_brace_arg);
   ELEMENT *argument_content = new_text_element (ET_macro_call_arg_text);
@@ -401,7 +402,7 @@ expand_macro_arguments (const ELEMENT *macro, const char **line_inout,
             text_append_n (arg, sep, 1);
           else
             {
-              if (current->e.c->contents.number < args_total)
+              if (args_nr < args_total)
                 {
                   const char *p = pline;
 
@@ -412,6 +413,7 @@ expand_macro_arguments (const ELEMENT *macro, const char **line_inout,
                   argument_content
                     = new_text_element (ET_macro_call_arg_text);
                   add_to_element_contents (current, argument);
+                  args_nr++;
                   arg = argument_content->e.text;
                   pline += strspn (pline, whitespace_chars);
                   if (pline - p)
@@ -440,7 +442,7 @@ expand_macro_arguments (const ELEMENT *macro, const char **line_inout,
   line = pline;
 
   if (args_total == 0
-      && (current->e.c->contents.number > 1
+      && (args_nr > 1
           || !empty_spaces_argument (current->e.c->contents.list[0])))
     {
       line_error
@@ -674,8 +676,8 @@ expand_linemacro_arguments (const ELEMENT *macro, const char **line_inout,
 /* ARGUMENTS element holds the arguments used in the macro invocation.
    EXPANDED gets the result of the expansion. */
 static void
-expand_macro_body (const MACRO *macro_record, const ELEMENT *arguments,
-                   TEXT *expanded)
+expand_macro_body (const MACRO *macro_record,
+                   const CONST_ELEMENT_LIST *arguments, TEXT *expanded)
 {
   size_t pos; /* Position, Index +1 into arguments. */
   const ELEMENT *macro;
@@ -734,17 +736,20 @@ expand_macro_body (const MACRO *macro_record, const ELEMENT *arguments,
           else
             {
               size_t index = pos -1;
-              if (index < arguments->e.c->contents.number)
+              if (index < arguments->number)
                 {
                   const ELEMENT *argument
-                    = arguments->e.c->contents.list[index];
-                  int surplus_arg;
-                  const TEXT *arg_text = simple_arg_text (argument,
+                    = arguments->list[index];
+                  if (argument)
+                    {
+                      int surplus_arg;
+                      const TEXT *arg_text = simple_arg_text (argument,
                                                           &surplus_arg);
-                /* the argument cannot have superfluous content, as it is text
-                   only, therefore a text is always returned, possibly empty.
-                 */
-                  text_append (expanded, arg_text->text);
+                  /* the argument cannot have superfluous content, as it is text
+                     only, therefore a text is always returned.
+                   */
+                      text_append (expanded, arg_text->text);
+                    }
                 }
             }
           free (name);
@@ -877,8 +882,7 @@ handle_macro (ELEMENT *current, const char **line_inout,
               ELEMENT *spaces_element
                 = new_text_element (ET_spaces_after_cmd_before_arg);
               text_append_n (spaces_element->e.text, line, p - line);
-              macro_call_element->elt_info[eit_spaces_after_cmd_before_arg]
-               = spaces_element;
+              add_to_contents_as_array (macro_call_element, spaces_element);
             }
           line = p;
           expand_macro_arguments (macro, &line, cmd, macro_call_element);
@@ -981,7 +985,9 @@ handle_macro (ELEMENT *current, const char **line_inout,
   macro_source_mark->status = SM_status_start;
 
   text_init (&expanded);
-  expand_macro_body (macro_record, macro_call_element, &expanded);
+  CONST_ELEMENT_LIST *args = get_non_empty_brace_args (macro_call_element);
+  expand_macro_body (macro_record, args, &expanded);
+  destroy_const_element_list (args);
 
   if (expanded.end > 0)
     {

@@ -1327,7 +1327,11 @@ sub _place_source_mark($$$) {
   # the element that holds the source mark
   my $mark_element;
   if (exists($element->{'contents'})
-      and scalar(@{$element->{'contents'}}) > 0) {
+      and scalar(@{$element->{'contents'}}) > 0
+      and not (scalar(@{$element->{'contents'}}) == 1
+               and exists($element->{'contents'}->[0]->{'type'})
+               and $element->{'contents'}->[0]->{'type'}
+                                     eq 'spaces_after_cmd_before_arg')) {
     my $current = $element->{'contents'}->[-1];
     if (exists($current->{'type'})
         and $current->{'type'} eq 'arguments_line') {
@@ -1343,17 +1347,16 @@ sub _place_source_mark($$$) {
   } elsif (exists($element->{'cmdname'})
            and defined($self->{'brace_commands'}->{$element->{'cmdname'}})) {
     # can only be before the opening brace
-    $element->{'info'} = {} if (!exists($element->{'info'}));
-    if (!exists($element->{'info'}->{'spaces_after_cmd_before_arg'})) {
-      $element->{'info'}->{'spaces_after_cmd_before_arg'}
-        = Texinfo::TreeElement::new({'text' => '',
+    if (!exists($element->{'contents'})) {
+      push @{$element->{'contents'}},
+       Texinfo::TreeElement::new({'text' => '',
                                      'type' => 'spaces_after_cmd_before_arg'});
       $add_element_string = 'add';
     } else {
       $source_mark->{'position'}
-       = length($element->{'info'}->{'spaces_after_cmd_before_arg'}->{'text'});
+        = length($element->{'contents'}->[0]->{'text'});
     }
-    $mark_element = $element->{'info'}->{'spaces_after_cmd_before_arg'};
+    $mark_element = $element->{'contents'}->[0];
   } else {
     # add an empty element only used for source marks
     # 'text' is here to have merge_text work as expected
@@ -2804,6 +2807,8 @@ sub _expand_macro_arguments($$$$$) {
   }
   push @{$argument->{'contents'}}, $argument_content;
 
+  my $args_nr = 1;
+
   while (1) {
     if ($line =~ s/([^\\{},]*)([\\{},])//) {
       my $separator = $2;
@@ -2830,7 +2835,7 @@ sub _expand_macro_arguments($$$$$) {
         if ($braces_level > 1) {
           $argument_content->{'text'} .= $separator;
         } else {
-          if (scalar(@{$current->{'contents'}}) < $args_total) {
+          if ($args_nr < $args_total) {
             _remove_empty_content($self, $argument);
 
             $argument
@@ -2838,6 +2843,7 @@ sub _expand_macro_arguments($$$$$) {
                                            'contents' => [],
                                            'parent' => $current});
             push @{$current->{'contents'}}, $argument;
+            $args_nr++;
             $argument_content
               = Texinfo::TreeElement::new({'text' => '',
                                            'type' => 'macro_call_arg_text'});
@@ -2884,7 +2890,7 @@ sub _expand_macro_arguments($$$$$) {
     }
   }
   if ($args_total == 0
-      and (scalar(@{$current->{'contents'}} > 1)
+      and ($args_nr > 1
            or !Texinfo::Common::empty_spaces_argument(
                                     $current->{'contents'}->[0]))) {
     _line_error($self, sprintf(__(
@@ -3080,12 +3086,13 @@ sub _expand_macro_body($$$$) {
         my $arg = $1;
         my $formal_arg_index = _lookup_macro_parameter($macro, $arg);
         if (defined($formal_arg_index)) {
-          if (exists($arguments->{'contents'})
-              and $formal_arg_index < scalar(@{$arguments->{'contents'}})) {
+          if (defined($arguments)
+              and $formal_arg_index < scalar(@$arguments)
+              and defined($arguments->[$formal_arg_index])) {
             # the argument cannot have superfluous content, as it is text
-            # only, therefore a string is always returned, possibly empty.
+            # only, therefore a string is always returned.
             my ($argument, $surplus) = Texinfo::Common::simple_arg_text(
-                             $arguments->{'contents'}->[$formal_arg_index]);
+                             $arguments->[$formal_arg_index]);
             $result .= $argument;
           }
         } else {
@@ -4601,27 +4608,21 @@ sub _end_line_starting_block($$$) {
       }
     } elsif ($command eq 'itemize') {
     # Check if command_as_argument isn't an accent command
-      if (exists($block_line_arg->{'contents'})) {
-        my ($first_idx, $end_idx)
-          = Texinfo::Common::non_leading_trailing_indices($block_line_arg);
-        if (defined($first_idx) and $end_idx == $first_idx) {
-          my $arg = $block_line_arg->{'contents'}->[$first_idx];
-          if (exists($arg->{'cmdname'})
-              and (!exists($arg->{'contents'})
-                 or (scalar(@{$arg->{'contents'}}) == 1
-                     and !exists($arg->{'contents'}->[0]->{'contents'})))) {
-            my $cmdname = $arg->{'cmdname'};
-            if (exists($brace_commands{$cmdname})
-                and $brace_commands{$cmdname} eq 'accent') {
-              _command_warn($self, $current,
-                  __("accent command `\@%s' not allowed as \@%s argument"),
-                  $cmdname, $command);
-            }
+      my $command_as_argument
+        = Texinfo::Common::block_line_command_as_argument($block_line_arg);
+      if (!defined($command_as_argument)) {
+        my $arg
+          = Texinfo::Common::block_line_argument_command($block_line_arg);
+        if (defined($arg)) {
+          my $cmdname = $arg->{'cmdname'};
+          if (exists($brace_commands{$cmdname})
+              and $brace_commands{$cmdname} eq 'accent') {
+            _command_warn($self, $current,
+                __("accent command `\@%s' not allowed as \@%s argument"),
+                $cmdname, $command);
           }
         }
       }
-      my $command_as_argument
-        = Texinfo::Common::block_line_argument_command($block_line_arg);
 
       # if the command as argument does not have braces but it is
       # not a mark (noarg) command, warn
@@ -4634,7 +4635,7 @@ sub _end_line_starting_block($$$) {
       }
     } elsif ($block_commands{$command} eq 'item_line') {
       my $command_as_argument
-        = Texinfo::Common::block_line_argument_command($block_line_arg);
+        = Texinfo::Common::block_line_command_as_argument($block_line_arg);
       if (!defined($command_as_argument)) {
         if (!Texinfo::Common::empty_spaces_argument($block_line_arg)) {
           my $texi_arg
@@ -5408,13 +5409,11 @@ sub _new_value_element($$;$$) {
   my $brace_container
     = Texinfo::TreeElement::new({'type' => 'brace_container',
                                  'contents' => [], 'parent' => $value_elt});
+  push @{$value_elt->{'contents'}}, $spaces_element
+    if (defined($spaces_element));
   push @{$value_elt->{'contents'}}, $brace_container;
   push @{$brace_container->{'contents'}},
             Texinfo::TreeElement::new({'text' => $flag,});
-  if ($spaces_element) {
-    $value_elt->{'info'} = {} if (!exists($value_elt->{'info'}));
-    $value_elt->{'info'}->{'spaces_after_cmd_before_arg'} = $spaces_element;
-  }
   return $value_elt;
 }
 
@@ -5478,10 +5477,7 @@ sub _handle_macro($$$$$$) {
       if ($line =~ s/^(\s+)//) {
         my $spaces_element = Texinfo::TreeElement::new({'text' => $1,
                                      'type' => 'spaces_after_cmd_before_arg'});
-        $macro_call_element->{'info'} = {}
-            if (!exists($macro_call_element->{'info'}));
-        $macro_call_element->{'info'}->{'spaces_after_cmd_before_arg'}
-          = $spaces_element;
+        push @{$macro_call_element->{'contents'}}, $spaces_element;
       }
       ($line, $source_info)
        = _expand_macro_arguments($self, $expanded_macro, $line, $source_info,
@@ -5540,6 +5536,7 @@ sub _handle_macro($$$$$$) {
 
   delete $macro_call_element->{'contents'}
      if (scalar(@{$macro_call_element->{'contents'}}) == 0);
+  my $args = Texinfo::Common::get_non_empty_brace_args($macro_call_element);
 
   my $sourcemark_type;
   if ($expanded_macro->{'cmdname'} eq 'linemacro') {
@@ -5563,7 +5560,7 @@ sub _handle_macro($$$$$$) {
 
   my $expanded = _expand_macro_body($self,
                             $self->{'macros'}->{$command},
-                            $macro_call_element, $source_info);
+                            $args, $source_info);
 
   my $expanded_macro_text;
   if (defined($expanded)) {
@@ -6611,7 +6608,7 @@ sub _handle_open_brace($$$$) {
     }
 
     my $arg = Texinfo::TreeElement::new({'parent' => $current});
-    $current->{'contents'} = [$arg];
+    push @{$current->{'contents'}}, $arg;
     $current = $arg;
     push @{$self->{'nesting_context'}->{'basic_inline_stack'}}, $command
       if (defined($self->{'basic_inline_commands'})
@@ -6796,13 +6793,15 @@ sub _handle_close_brace($$$) {
     print STDERR "CLOSING(brace) \@$closed_cmdname\n"
       if ($self->{'conf'}->{'DEBUG'});
 
+    my $args = Texinfo::Common::get_non_empty_brace_args($brace_command);
+
     if ($closed_cmdname eq 'anchor'
         or $closed_cmdname eq 'namedanchor') {
-      my $anchor_id_element = $brace_command->{'contents'}->[0];
-      if (Texinfo::Common::empty_spaces_argument($anchor_id_element)) {
+      if (!defined($args->[0])) {
         _line_error($self, sprintf(__("empty argument in \@%s"),
                                    $closed_cmdname), $source_info);
       } else {
+        my $anchor_id_element = $args->[0];
         _check_register_target_element_label($self, $anchor_id_element,
                                              $brace_command, $source_info);
         # the @anchor element_region information is not used in converters
@@ -6816,22 +6815,14 @@ sub _handle_close_brace($$$) {
       }
     } elsif ($ref_commands{$closed_cmdname}) {
       my $ref = $brace_command;
-      my @args;
-      foreach my $a (@{$ref->{'contents'}}) {
-        if (Texinfo::Common::empty_spaces_argument($a)) {
-          push @args, undef;
-        } else {
-          push @args, $a;
-        }
-      }
       my $link_or_inforef = ($closed_cmdname eq 'link'
                              or $closed_cmdname eq 'inforef');
 
       if ($link_or_inforef
-           and !defined($args[0]) and !defined($args[2])
+           and !defined($args->[0]) and !defined($args->[2])
           or (!$link_or_inforef
-           and !defined($args[0]) and !defined($args[3])
-           and !defined($args[4]))) {
+           and !defined($args->[0]) and !defined($args->[3])
+           and !defined($args->[4]))) {
         _line_warn($self, sprintf(__(
            "command \@%s missing a node or external manual argument"),
                               $closed_cmdname), $source_info);
@@ -6844,38 +6835,37 @@ sub _handle_close_brace($$$) {
           $arg_label->{'extra'} = {} if (!exists($arg_label->{'extra'}));
           $arg_label->{'extra'}->{'node_content'} = [$first_idx, $end_idx];
           if (!$link_or_inforef
-                and !defined($args[3]) and !defined($args[4])
-              or $link_or_inforef and !defined($args[2])) {
+                and !defined($args->[3]) and !defined($args->[4])
+              or $link_or_inforef and !defined($args->[2])) {
             # we use the @*ref command here and not the label command
             # to have more information for messages
             push @{$self->{'document'}->{'internal_references'}}, $ref;
           }
         }
       }
-      if (defined($args[1])) {
-        if (_check_empty_expansion($args[1]->{'contents'})) {
+      if (defined($args->[1])) {
+        if (_check_empty_expansion($args->[1]->{'contents'})) {
           _line_warn($self, sprintf(__(
           "in \@%s empty cross reference name after expansion `%s'"),
                 $closed_cmdname,
                 Texinfo::Convert::Texinfo::convert_contents_to_texinfo(
-                                                             $args[1])),
+                                                             $args->[1])),
                   $source_info);
         }
       }
-      if (!$link_or_inforef and defined($args[2])) {
-        if (_check_empty_expansion($args[2]->{'contents'})) {
+      if (!$link_or_inforef and defined($args->[2])) {
+        if (_check_empty_expansion($args->[2]->{'contents'})) {
           _line_warn($self, sprintf(__(
            "in \@%s empty cross reference title after expansion `%s'"),
                 $closed_cmdname,
                 Texinfo::Convert::Texinfo::convert_contents_to_texinfo(
-                                                              $args[2])),
+                                                              $args->[2])),
                   $source_info);
         }
       }
     } elsif ($closed_cmdname eq 'image') {
       my $image = $brace_command;
-      if (Texinfo::Common::empty_spaces_argument(
-                                 $image->{'contents'}->[0])) {
+      if (!defined($args->[0])) {
         _line_error($self,
            __("\@image missing filename argument"), $source_info);
       }
@@ -6900,8 +6890,7 @@ sub _handle_close_brace($$$) {
     } elsif ($explained_commands{$closed_cmdname}
              or ($brace_commands{$closed_cmdname}
                  and $brace_commands{$closed_cmdname} eq 'inline')) {
-      if (Texinfo::Common::empty_spaces_argument(
-                           $brace_command->{'contents'}->[0])) {
+      if (!defined($args->[0])) {
         _line_warn($self,
            sprintf(__("\@%s missing first argument"),
                    $closed_cmdname), $source_info);
@@ -7628,13 +7617,11 @@ sub _process_remaining_on_line($$$$) {
         }
         $additional_newline = 1;
       }
-      if (!exists($current->{'info'})
-          or !exists($current->{'info'}->{'spaces_after_cmd_before_arg'})) {
+      if (!exists($current->{'contents'})) {
         $line =~ s/^(\s+)//;
         my $spaces_after_command = $1;
-        $current->{'info'} = {} if (!exists($current->{'info'}));
-        $current->{'info'}->{'spaces_after_cmd_before_arg'}
-          = Texinfo::TreeElement::new({'text' => $spaces_after_command,
+        push @{$current->{'contents'}},
+          Texinfo::TreeElement::new({'text' => $spaces_after_command,
                                   'type' => 'spaces_after_cmd_before_arg'});
         if ($self->{'conf'}->{'DEBUG'}) {
           my $spaces_after_command_str = $spaces_after_command;
@@ -7645,8 +7632,7 @@ sub _process_remaining_on_line($$$$) {
       } else {
         # contents, at this point can only be for spaces_after_cmd_before_arg
         if ($additional_newline
-            and $current->{'info'}
-                  ->{'spaces_after_cmd_before_arg'}->{'text'} =~ /\n/) {
+            and $current->{'contents'}->[0]->{'text'} =~ /\n/) {
           # only ignore spaces and one newline, two newlines lead to
           # an empty line before the brace or argument which is incorrect.
           print STDERR "BRACE CMD before brace second newline stops spaces\n"
@@ -7656,8 +7642,7 @@ sub _process_remaining_on_line($$$$) {
           $current = $current->{'parent'};
         } else {
           $line =~ s/^(\s+)//;
-          $current->{'info'}->{'spaces_after_cmd_before_arg'}->{'text'}
-               .= $added_space;
+          $current->{'contents'}->[0]->{'text'} .= $added_space;
           print STDERR "BRACE CMD before brace add spaces '$added_space'\n"
             if $self->{'conf'}->{'DEBUG'};
         }
@@ -7674,7 +7659,7 @@ sub _process_remaining_on_line($$$$) {
       my $following_arg
         = Texinfo::TreeElement::new({'type' => 'following_arg',
                                      'parent' => $current});
-      $current->{'contents'} = [ $following_arg ];
+      push @{$current->{'contents'}}, $following_arg;
       my $accent_arg
         = Texinfo::TreeElement::new({ 'text' => $arg_char,});
       $following_arg->{'contents'} = [ $accent_arg ];

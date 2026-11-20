@@ -56,10 +56,8 @@ $result_tree_text{'spaces_after_command_in_call'} = '*document_root C1
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       *@code C1 l7:@mylinecommand
-       |INFO
-       |spaces_after_cmd_before_arg:
-        |{spaces_after_cmd_before_arg: }
+       *@code C2 l7:@mylinecommand
+        {spaces_after_cmd_before_arg: }
         *brace_container C1
          {d}
      {spaces: }
@@ -69,10 +67,8 @@ $result_tree_text{'spaces_after_command_in_call'} = '*document_root C1
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@ringaccent C1 l7:@mylinecommand
-       |INFO
-       |spaces_after_cmd_before_arg:
-        |{spaces_after_cmd_before_arg: }
+       *@ringaccent C2 l7:@mylinecommand
+        {spaces_after_cmd_before_arg: }
         *following_arg C1
          {b}
      {spaces: }

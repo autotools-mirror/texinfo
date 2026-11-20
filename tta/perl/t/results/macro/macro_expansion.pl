@@ -35,10 +35,8 @@ $result_tree_text{'macro_expansion'} = '*document_root C1
    {2 simple args. result of a macro with first arg and \\n}
    >SOURCEMARKS
    >macro_expansion<start;1><p:15>
-    >*macro_call@macroone C2
-    >|INFO
-    >|spaces_after_cmd_before_arg:
-     >|{spaces_after_cmd_before_arg: }
+    >*macro_call@macroone C3
+     >{spaces_after_cmd_before_arg: }
      >*brace_arg C1
       >{macro_call_arg_text:first arg}
      >*brace_arg C2

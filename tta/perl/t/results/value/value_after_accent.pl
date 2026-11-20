@@ -19,31 +19,27 @@ $result_tree_text{'value_after_accent'} = '*document_root C1
      {rawline_text:a_letter a}
      {spaces_after_argument:\\n}
   *paragraph C3
-   *@ringaccent C1 l2
-   |INFO
-   |spaces_after_cmd_before_arg:
-    |{spaces_after_cmd_before_arg: }
-    |>SOURCEMARKS
-    |>value_expansion<start;1><p:1>{a}
-     |>*@value C1
-      |>*brace_container C1
-       |>{a_letter}
+   *@ringaccent C2 l2
    >SOURCEMARKS
    >value_expansion<end;1>
+    {spaces_after_cmd_before_arg: }
+    >SOURCEMARKS
+    >value_expansion<start;1><p:1>{a}
+     >*@value C1
+      >*brace_container C1
+       >{a_letter}
     *following_arg C1
      {a}
    {\\n}
-   *@~ C1 l3
-   |INFO
-   |spaces_after_cmd_before_arg:
-    |{spaces_after_cmd_before_arg:}
-    |>SOURCEMARKS
-    |>value_expansion<start;2>{a}
-     |>*@value C1
-      |>*brace_container C1
-       |>{a_letter}
+   *@~ C2 l3
    >SOURCEMARKS
    >value_expansion<end;2>
+    {spaces_after_cmd_before_arg:}
+    >SOURCEMARKS
+    >value_expansion<start;2>{a}
+     >*@value C1
+      >*brace_container C1
+       >{a_letter}
     *following_arg C1
      {a}
 ';

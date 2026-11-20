@@ -12,13 +12,11 @@ $result_tree_text{'inlineifsetifclearspaces'} = '*document_root C1
  *before_node_section C10
   *preamble_before_content
   *paragraph C2
-   *@inlineifclear C2 l1
-   |INFO
-   |spaces_after_cmd_before_arg:
-    |{spaces_after_cmd_before_arg:\\n}
+   *@inlineifclear C3 l1
    |EXTRA
    |expand_index:{1}
    |format:{aaa}
+    {spaces_after_cmd_before_arg:\\n}
     *brace_arg C3
      {spaces_before_argument: }
      {aaa}
@@ -29,12 +27,10 @@ $result_tree_text{'inlineifsetifclearspaces'} = '*document_root C1
    {.\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@inlineifset C2 l4
-   |INFO
-   |spaces_after_cmd_before_arg:
-    |{spaces_after_cmd_before_arg:\\n}
+   *@inlineifset C3 l4
    |EXTRA
    |format:{aaa}
+    {spaces_after_cmd_before_arg:\\n}
     *brace_arg C3
      {spaces_before_argument: }
      {aaa}
@@ -52,12 +48,10 @@ $result_tree_text{'inlineifsetifclearspaces'} = '*document_root C1
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@inlineifclear C2 l9
-   |INFO
-   |spaces_after_cmd_before_arg:
-    |{spaces_after_cmd_before_arg: }
+   *@inlineifclear C3 l9
    |EXTRA
    |format:{aaa}
+    {spaces_after_cmd_before_arg: }
     *brace_arg C3
      {spaces_before_argument: }
      {aaa}
@@ -67,13 +61,11 @@ $result_tree_text{'inlineifsetifclearspaces'} = '*document_root C1
    {.\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@inlineifset C2 l11
-   |INFO
-   |spaces_after_cmd_before_arg:
-    |{spaces_after_cmd_before_arg: }
+   *@inlineifset C3 l11
    |EXTRA
    |expand_index:{1}
    |format:{aaa}
+    {spaces_after_cmd_before_arg: }
     *brace_arg C3
      {spaces_before_argument: }
      {aaa}
@@ -147,15 +139,17 @@ $result_converted{'html_text'}->{'inlineifsetifclearspaces'} = '<p>iclear first 
 </p>';
 
 
-$result_converted{'xml'}->{'inlineifsetifclearspaces'} = '<para><inlineifclear spacesaftercmd="\\n"><inlineifclearformat> aaa </inlineifclearformat><inlineifclearcontent> iclear first </inlineifclearcontent></inlineifclear>.
+$result_converted{'xml'}->{'inlineifsetifclearspaces'} = '<para><inlineifclear><inlineifclearformat>
+</inlineifclearformat><inlineifclearcontent> aaa </inlineifclearcontent></inlineifclear>.
 </para>
-<para><inlineifset spacesaftercmd="\\n"><inlineifsetformat> aaa </inlineifsetformat><inlineifsetcontent> ifset first </inlineifsetcontent></inlineifset>.
+<para><inlineifset><inlineifsetformat>
+</inlineifsetformat><inlineifsetcontent> aaa </inlineifsetcontent></inlineifset>.
 </para>
 <set name="aaa"> aaa</set>
 
-<para><inlineifclear spacesaftercmd=" "><inlineifclearformat> aaa </inlineifclearformat><inlineifclearcontent> ifclear second </inlineifclearcontent></inlineifclear>.
+<para><inlineifclear><inlineifclearformat> </inlineifclearformat><inlineifclearcontent> aaa </inlineifclearcontent></inlineifclear>.
 </para>
-<para><inlineifset spacesaftercmd=" "><inlineifsetformat> aaa </inlineifsetformat><inlineifsetcontent> ifset second </inlineifsetcontent></inlineifset>.
+<para><inlineifset><inlineifsetformat> </inlineifsetformat><inlineifsetcontent> aaa </inlineifsetcontent></inlineifset>.
 </para>';
 
 

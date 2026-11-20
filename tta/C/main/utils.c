@@ -2498,14 +2498,28 @@ block_line_argument_command (const ELEMENT *block_line_arg)
       if (!(type_data[arg->type].flags & TF_text)
           && (arg->e.c->contents.number == 0
               || (arg->e.c->contents.number == 1
-                  && arg->e.c->contents.list[0]->e.c->contents.number == 0)))
+                  && (arg->e.c->contents.list[0]->type
+                                           == ET_spaces_after_cmd_before_arg
+                      || arg->e.c->contents.list[0]->e.c->contents.number == 0))))
         {
-          enum command_id cmd = element_builtin_cmd (arg);
-          if (command_data[cmd].flags & CF_brace
-              && command_data[cmd].data != BRACE_accent)
-            {
-              return arg;
-            }
+          return arg;
+        }
+    }
+  return 0;
+}
+
+/* ALTIMP perl/Texinfo/Common.pm */
+const ELEMENT *
+block_line_command_as_argument (const ELEMENT *block_line_arg)
+{
+  const ELEMENT *arg = block_line_argument_command (block_line_arg);
+  if (arg)
+    {
+      enum command_id cmd = element_builtin_cmd (arg);
+      if (command_data[cmd].flags & CF_brace
+          && command_data[cmd].data != BRACE_accent)
+        {
+          return arg;
         }
     }
   return 0;

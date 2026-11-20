@@ -107,10 +107,8 @@ $result_tree_text{'two_macros_on_a_line'} = '*document_root C1
    {in with args\\n}
    >SOURCEMARKS
    >macro_expansion<start;7>
-    >*macro_call@mymacrowithargs C1
-    >|INFO
-    >|spaces_after_cmd_before_arg:
-     >|{spaces_after_cmd_before_arg: }
+    >*macro_call@mymacrowithargs C2
+     >{spaces_after_cmd_before_arg: }
      >*brace_arg C1
       >{macro_call_arg_text:an\\narg\\n\\nin macro}
    {now the arg an\\n}

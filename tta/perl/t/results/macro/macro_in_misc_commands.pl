@@ -412,12 +412,10 @@ $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
    >*macro_call@strongmacro C1
     >*brace_arg
   *paragraph C2
-   *@strong C1 l76:@strongmacro
-   |INFO
-   |spaces_after_cmd_before_arg:
-    |{spaces_after_cmd_before_arg:}
-    |>SOURCEMARKS
-    |>macro_expansion<end;15>
+   *@strong C2 l76:@strongmacro
+    {spaces_after_cmd_before_arg:}
+    >SOURCEMARKS
+    >macro_expansion<end;15>
     *brace_container C1
      {very strong}
    {\\n}
@@ -445,15 +443,13 @@ $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
    >*macro_call@strongmacro C1
     >*brace_arg
   *paragraph C2
-   *definfoenclose_command@strong C1 l80:@strongmacro
-   |INFO
-   |spaces_after_cmd_before_arg:
-    |{spaces_after_cmd_before_arg:}
-    |>SOURCEMARKS
-    |>macro_expansion<end;18>
+   *definfoenclose_command@strong C2 l80:@strongmacro
    |EXTRA
    |begin:{(strong:}
    |end:{:)}
+    {spaces_after_cmd_before_arg:}
+    >SOURCEMARKS
+    >macro_expansion<end;18>
     *brace_container C1
      { is it really strong? }
    {\\n}

@@ -1235,12 +1235,11 @@ new_value_element (enum command_id cmd, const char *flag,
   /* occasionnally considered as text in conversion, so make it normal text */
   ELEMENT *value_text = new_text_element (ET_normal_text);
 
+  if (spaces_element)
+    add_to_contents_as_array (value_elt, spaces_element);
   text_append_n (value_text->e.text, flag, flag_len);
   add_to_element_contents (value_elt, brace_container);
   add_to_contents_as_array (brace_container, value_text);
-  if (spaces_element)
-    value_elt->elt_info[eit_spaces_after_cmd_before_arg]
-      = spaces_element;
   return value_elt;
 }
 
@@ -2211,14 +2210,14 @@ process_remaining_on_line (ELEMENT **current_inout, const char **line_inout)
                  }
              }
 
-           if (!current->elt_info[eit_spaces_after_cmd_before_arg])
+           if (current->e.c->contents.number <= 0)
              {
                ELEMENT *e_spaces_after_cmd_before_arg
                  = new_text_element (ET_spaces_after_cmd_before_arg);
                text_append_n (e_spaces_after_cmd_before_arg->e.text,
                               line, whitespaces_len);
-               current->elt_info[eit_spaces_after_cmd_before_arg]
-                  = e_spaces_after_cmd_before_arg;
+               add_to_contents_as_array (current,
+                                         e_spaces_after_cmd_before_arg);
 
                debug_nonl ("C|BRACE CMD before brace init spaces '");
                debug_print_protected_string
@@ -2233,9 +2232,8 @@ process_remaining_on_line (ELEMENT **current_inout, const char **line_inout)
             /* only ignore spaces and one newline, two newlines lead to
                an empty line before the brace or argument which is incorrect. */
                char *previous_value
-                  = current->elt_info[eit_spaces_after_cmd_before_arg]
-                                                             ->e.text->text;
-               if (additional_newline && strchr ("\n", *previous_value))
+                  = current->e.c->contents.list[0]->e.text->text;
+               if (additional_newline && strchr (previous_value, '\n'))
                  {
                    debug ("C|BRACE CMD before brace second newline stops spaces");
                    line_error ("@%s expected braces",
@@ -2244,12 +2242,11 @@ process_remaining_on_line (ELEMENT **current_inout, const char **line_inout)
                  }
                else
                  {
-                   text_append_n (current
-                        ->elt_info[eit_spaces_after_cmd_before_arg]->e.text,
+                   text_append_n (current->e.c->contents.list[0]->e.text,
                                   line, whitespaces_len);
                    debug ("C|BRACE CMD before brace add spaces '%s'",
-               current->elt_info[eit_spaces_after_cmd_before_arg]->e.text->text
-   + strlen (current->elt_info[eit_spaces_after_cmd_before_arg]->e.text->text)
+                          current->e.c->contents.list[0]->e.text->text
+                          + strlen (current->e.c->contents.list[0]->e.text->text)
                                                          - whitespaces_len);
                    line += whitespaces_len;
                  }

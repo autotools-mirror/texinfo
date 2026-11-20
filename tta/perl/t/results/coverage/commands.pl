@@ -32,10 +32,8 @@ $result_tree_text{'commands'} = '*document_root C1
     *brace_container C1
      {a}
    { }
-   *@ringaccent C1 l2
-   |INFO
-   |spaces_after_cmd_before_arg:
-    |{spaces_after_cmd_before_arg: }
+   *@ringaccent C2 l2
+    {spaces_after_cmd_before_arg: }
     *following_arg C1
      {a}
    {\\n}
@@ -159,7 +157,7 @@ $result_converted{'html_text'}->{'commands'} = '<p>@ TeX &nbsp;&euml; &icirc; &a
 ';
 
 
-$result_converted{'xml'}->{'commands'} = '<para>&arobase; &tex; <spacecmd type="nl"/><accent type="uml" bracketed="off">e</accent> <accent type="circ"><dotless>i</dotless></accent> <accent type="tilde">a</accent> <accent type="ring" spacesaftercmd=" " bracketed="off">a</accent>
+$result_converted{'xml'}->{'commands'} = '<para>&arobase; &tex; <spacecmd type="nl"/><accent type="uml" bracketed="off">e</accent> <accent type="circ"><dotless>i</dotless></accent> <accent type="tilde">a</accent> <accent type="ring" bracketed="off"> </accent>
 </para>
 <para><clicksequence>File &click; Open</clicksequence>&eosperiod;
 <email><emailaddress>a</emailaddress><emailname> b</emailname></email> <code>code --- -- \'\' ``</code>

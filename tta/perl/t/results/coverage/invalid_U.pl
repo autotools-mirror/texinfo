@@ -12,10 +12,8 @@ $result_tree_text{'invalid_U'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *paragraph C19
-   *@U l1
-   |INFO
-   |spaces_after_cmd_before_arg:
-    |{spaces_after_cmd_before_arg: }
+   *@U C1 l1
+    {spaces_after_cmd_before_arg: }
    *@U C1 l1
     *brace_arg
    { }
@@ -108,7 +106,7 @@ $result_converted{'html_text'}->{'invalid_U'} = '<p> &#xz; &#xabc; &#x9999999999
 </p>';
 
 
-$result_converted{'xml'}->{'invalid_U'} = '<para><U></U> <U>z</U> <U>abc</U> <U>9999999999999</U> <U>110000</U> <U>10FFFF</U>
+$result_converted{'xml'}->{'invalid_U'} = '<para><U> </U><U></U> <U>z</U> <U>abc</U> <U>9999999999999</U> <U>110000</U> <U>10FFFF</U>
 <U> 0023 </U> <U>FFFD</U> <U> wxyz </U>
 </para>';
 

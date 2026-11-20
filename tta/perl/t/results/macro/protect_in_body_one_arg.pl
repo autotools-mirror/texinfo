@@ -30,10 +30,8 @@ $result_tree_text{'protect_in_body_one_arg'} = '*document_root C1
    {result: }
    >SOURCEMARKS
    >macro_expansion<start;1>
-    >*macro_call@macroone C1
-    >|INFO
-    >|spaces_after_cmd_before_arg:
-     >|{spaces_after_cmd_before_arg: }
+    >*macro_call@macroone C2
+     >{spaces_after_cmd_before_arg: }
      >*brace_arg C2
       >{spaces_before_argument: }
       >{macro_call_arg_text:@samp{f\\irst arg}}

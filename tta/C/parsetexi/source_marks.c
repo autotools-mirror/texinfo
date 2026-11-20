@@ -64,7 +64,9 @@ place_source_mark (ELEMENT *e, SOURCE_MARK *source_mark)
   const char *add_element_string = "no-add";
 
   source_mark->position = 0;
-  if (e->e.c->contents.number > 0)
+  if (e->e.c->contents.number > 0
+      && !(e->e.c->contents.number == 1
+           && e->e.c->contents.list[0]->type == ET_spaces_after_cmd_before_arg))
     {
       ELEMENT *last_child = last_contents_child (e);
       if (last_child->type == ET_arguments_line)
@@ -79,16 +81,16 @@ place_source_mark (ELEMENT *e, SOURCE_MARK *source_mark)
            && command_flags(e) & CF_brace)
     {
       /* can only be before the opening brace */
-      if (!e->elt_info[eit_spaces_after_cmd_before_arg])
+      if (e->e.c->contents.number <= 0)
         {
-          e->elt_info[eit_spaces_after_cmd_before_arg]
-            = new_text_element (ET_spaces_after_cmd_before_arg);
+          ELEMENT *spaces = new_text_element (ET_spaces_after_cmd_before_arg);
+          add_to_contents_as_array (e, spaces);
           add_element_string = "add";
         }
       else
         source_mark->position = count_multibyte (
-                e->elt_info[eit_spaces_after_cmd_before_arg]->e.text->text);
-      mark_element = e->elt_info[eit_spaces_after_cmd_before_arg];
+                               e->e.c->contents.list[0]->e.text->text);
+      mark_element = e->e.c->contents.list[0];
     }
   else
     {

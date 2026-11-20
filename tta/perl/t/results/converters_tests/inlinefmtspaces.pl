@@ -13,13 +13,11 @@ $result_tree_text{'inlinefmtspaces'} = '*document_root C1
   *preamble_before_content
   *paragraph C5
    {A }
-   *@inlinefmt C2 l1
-   |INFO
-   |spaces_after_cmd_before_arg:
-    |{spaces_after_cmd_before_arg: }
+   *@inlinefmt C3 l1
    |EXTRA
    |expand_index:{1}
    |format:{plaintext}
+    {spaces_after_cmd_before_arg: }
     *brace_arg C3
      {spaces_before_argument: }
      {plaintext}
@@ -79,7 +77,7 @@ in &lt;i&gt;<abbr class="acronym">HTML</abbr>&lt;/i&gt;.
 </p>';
 
 
-$result_converted{'xml'}->{'inlinefmtspaces'} = '<para>A <inlinefmt spacesaftercmd=" "><inlinefmtformat> plaintext </inlinefmtformat><inlinefmtcontent> plaintext &textldquo; &lbracechar; </inlinefmtcontent></inlinefmt> a.  Now html
+$result_converted{'xml'}->{'inlinefmtspaces'} = '<para>A <inlinefmt><inlinefmtformat> </inlinefmtformat><inlinefmtcontent> plaintext </inlinefmtcontent></inlinefmt> a.  Now html
 <inlinefmt><inlinefmtformat> html </inlinefmtformat><inlinefmtcontent> in &lt;i&gt;<acronym><acronymword>HTML</acronymword></acronym>&lt;/i&gt;</inlinefmtcontent></inlinefmt>.
 </para>';
 

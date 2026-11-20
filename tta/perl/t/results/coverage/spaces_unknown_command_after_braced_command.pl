@@ -12,17 +12,13 @@ $result_tree_text{'spaces_unknown_command_after_braced_command'} = '*document_ro
  *before_node_section C4
   *preamble_before_content
   *paragraph C2
-   *@code l1
-   |INFO
-   |spaces_after_cmd_before_arg:
-    |{spaces_after_cmd_before_arg: }
+   *@code C1 l1
+    {spaces_after_cmd_before_arg: }
    { \\n}
   {empty_line:\\n}
   *paragraph C3
-   *@~ l3
-   |INFO
-   |spaces_after_cmd_before_arg:
-    |{spaces_after_cmd_before_arg: }
+   *@~ C1 l3
+    {spaces_after_cmd_before_arg: }
    {\\n}
    { e\\n}
 ';

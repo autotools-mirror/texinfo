@@ -69,10 +69,8 @@ $result_tree_text{'no_brace_caption'} = '*document_root C5
      {spaces_after_argument:\\n}
    *paragraph C1
     {HH\\n}
-   *@caption l9
-   |INFO
-   |spaces_after_cmd_before_arg:
-    |{spaces_after_cmd_before_arg:\\n}
+   *@caption C1 l9
+    {spaces_after_cmd_before_arg:\\n}
    *@end C1 l10
    |EXTRA
    |text_arg:{float}
@@ -228,9 +226,11 @@ span:hover a.copiable-link {visibility: visible}
 
 <div class="float" id="b">
 <p>HH
-</p><div class="type-number-float"><p><strong class="strong">a 1.1: </strong></p></div></div>
+</p><div class="caption">
+</div></div>
 <dl class="listoffloats">
-<dt><a href="#b">a 1.1</a></dt><dd></dd>
+<dt><a href="#b">a 1.1</a></dt><dd class="caption-in-listoffloats">
+</dd>
 </dl>
 </div>
 </div>
@@ -251,7 +251,8 @@ $result_converted{'xml'}->{'no_brace_caption'} = '<node identifier="Top"><nodena
 
 <float identifier="b" type="a" number="1.1" endspaces=" "><floattype> a</floattype><floatname> b</floatname>
 <para>HH
-</para></float>
+</para><caption>
+</caption></float>
 
 <listoffloats type="a"> a</listoffloats>
 </chapter>
