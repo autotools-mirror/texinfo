@@ -1,5 +1,9 @@
 2026-11-20  Gavin Smith <gavinsmith0123@gmail.com>
 
+	* doc/texinfo.texi (Menus): Move section earlier in chapter.
+
+2026-11-20  Gavin Smith <gavinsmith0123@gmail.com>
+
 	* doc/texinfo.texi (Node Pointers): Update description
 	of automatic pointer creation for sectioning commands starting
 	nodes.  Document extra condition that nodes should be in a

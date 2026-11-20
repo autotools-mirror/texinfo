@@ -3313,253 +3313,6 @@ command.  The Texinfo processors use this construct to determine the
 relationships between nodes and sectioning commands.
 
 
-@node Unstructured Nodes
-@nodedescription Nodes outside the main document structure.
-@section Unstructured Nodes
-
-@cindex Unstructured nodes
-All the examples of nodes in this chapter so far have used a @code{@@node}
-line followed by a sectioning command (such as @code{@@chapter}).
-
-@c @cindex Topic-oriented documentation
-However, you can also create nodes without using a sectioning command.
-You may find this useful if you do not want your manual (or parts of
-a manual) to have a hierarchical structure, with chapters superior to
-sections, sections superior to sub-sections and so on.
-
-@c comment this out until we know if we properly support this style
-@c of documentation in Texinfo.
-@c This unstructured
-@c style of documentation is known as @dfn{topic-oriented documentation},
-@c notably used by the DITA and Mallard systems.
-
-To do this, follow the @code{@@node} line with one of the heading
-commands.  For example:
-
-@example
-@@node Topic
-@@heading All about the Topic
-@dots{}
-@end example
-
-The argument to the heading command will be printed as usual.  When
-the @code{xrefautomaticsectiontitle} flag is on
-(@pxref{@code{xrefautomaticsectiontitle}}), this argument will also be
-used as the text for any cross-references to the node.
-
-Such nodes are not part of a hierarchical document structure.  This means
-that they are not listed in any table of contents, and automatic
-node direction pointers (@samp{Next}, @samp{Prev} or @samp{Up};
-@pxref{Writing a Node}) do not link to or from these nodes.
-
-@findex xrefname
-If you wish to create an unstructured node @emph{without} printing
-a heading at the start, you can use the @code{@@xrefname} command in
-place of the heading command.  For example:
-
-@example
-@@node Topic
-@@xrefname All about the Topic
-@dots{}
-@end example
-
-The @code{@@xrefname} command provides the text for cross-references to
-the node when the @code{xrefautomaticsectiontitle} flag is on, so
-@samp{@@xref@{Topic@}} would produce output like ``See `All about the
-Topic@w{'}''.
-
-The following example is not based on the sectioning commands structure,
-but on the guide/topic structure, where guide nodes point to topic nodes that
-point back to the guide nodes they appear in.  (This example is loosely
-based on the Mallard format guides and topics.)
-
-@example
-@@node guide1
-@@chapter guide 1 for an easy use
-
-@@menu
-* topic1:: topic1 description
-* topic3:: topic3 description
-@@end menu
-
-@@node topic1, topic3
-@@heading Topic 1 title
-
-@@menu
-More information
-
-* guide1:: guide 1
-@@end menu
-
-@@node topic3, , topic1
-@@heading Topic 3 title
-
-@@menu
-More information
-
-* guide1:: guide 1
-* guide2:: guide 2
-@@end menu
-
-@@node topic4
-@@xrefname Topic 4 only gets a ref name, no title
-
-This is topic 4
-
-@@menu
-More information
-
-* guide2:: guide 2
-@@end menu
-
-@@node guide2
-@@chapter guide 2 for an in depth use
-
-@@menu
-* topic3:: topic3 description
-* topic4:: topic4 description
-@@end menu
-@end example
-
-When processing such a manual with @command{texi2any}, you may want to
-set @code{CHECK_NORMAL_MENU_STRUCTURE} to 0 to avoid warnings about
-the menu structure not following a tree structure.  The automatically
-generated master menu is likely to have redundant entries; you may want to
-avoid an automatically generated master menu by setting @code{FORMAT_MENU} to
-@samp{menu_no_detailmenu}.  @xref{Global Customization Variables}.
-
-
-@node Node Command Regions
-@section Using @code{@@node} Commands to Separate Regions
-
-You can use @code{@@node} lines to separate regions of the manual that
-hold sectioning commands that are not associated with a @code{@@node}.  In this
-case, sectioning commands without @code{@@node} lines are output as part of a
-``node'' beginning with the preceding @code{@@node} command.  This is relevant
-for Info, plaintext and split HTML output---the formats for which the
-boundaries between nodes play a role in the structure of the output.
-
-This is different from the default case, where sectioning commands not
-directly preceded by @code{@@node} are treated just as if such a command
-were present.  Note that the same Texinfo code can be interpreted
-according to these two possibilities for structuring.
-
-When explicit @code{@@node} lines are used to separate regions of
-the manual, you can split your manual at different levels in the chapter
-structuring hierarchy according to what you consider best for different parts
-of your manual.
-
-In the following example, the region of the @samp{Big section 1}
-node would include the associated section but also subsections.
-And the last node, @samp{Second chapter.  Smaller} contains a chapter
-with its sections, but also an @code{@@unnumbered} that is at
-the @code{@@chapter} level.
-
-@example
-@@node Top
-@@top top
-
-@@node First chapter
-@@chapter First chapter
-
-@@node Big section 1
-@@section Big section 1
-
-Section text.
-
-@@subsection Big section Subsection 1
-
-...
-
-@@subsection Big section Subsection 2
-
-@@node Big section 2
-@@section Big section 2
-
-@@node Second chapter.  Smaller
-@@chapter Second chapter
-
-@@section Second chapter sec 1
-
-Average length Section.
-
-@@section Second chapter sec 2
-
-@@unnumbered Addendum with little content
-@end example
-
-This option has an effect on the output only for formats
-using nodes for structuring: Info, HTML and plaintext.  Note that sectioning
-commands without a corresponding @code{@@node} line can be the target of
-cross-references in any case; see @ref{Cross Reference Targets}.
-
-This possibility is mainly relevant when splitting by node for HTML and
-plaintext (@pxref{HTML Splitting}).  You need to set the customization
-variable @code{AUTO_SECTION_NODE} to 0 to select this option instead of
-the default.  See @code{AUTO_SECTION_NODE} in @ref{Global Customization
-Variables} for more details.
-
-
-@node Node Descriptions
-@nodedescriptionblock
-@code{@@nodedescription} and @code{@@nodedescriptionblock}.
-@end nodedescriptionblock
-@section Node Descriptions
-
-@findex nodedescription
-You can provide a short description of the purpose of a node by using
-the @code{@@nodedescription} command following the @code{@@node} or
-sectioning command (such as @code{@@chapter} or @code{@@section}))
-beginning the node.  Such a description might elaborate on or extend
-the information in the node name itself.
-
-@findex nodedescriptionblock
-You can also use a @code{@@nodedescriptionblock} environment to
-provide a node description. This may be useful for longer descriptions.
-
-@command{texi2any} uses the content you provide with these commands
-when outputting menus for Info output format (and, optionally,
-for HTML).  @command{texi2any} uses the description after a menu
-entry for the node if it is generating the menu automatically, or
-if no description for the menu entry was provided in an explicit
-@code{@@menu} block. (@xref{Menus}).
-
-Here is an example of using these commands:
-
-@example
-@@chapter Tools
-
-This chapter is on different tools you can use.
-
-@@section Screwdrivers
-@@nodedescription Flathead and Phillips.
-
-This section is about screwdrivers.
-
-@@node Drills
-@@nodedescriptionblock
-Making holes in things with power screwdrivers, drill drivers, combi
-drills, impact drivers, hammer drills, breakers and demolition drills.
-@@end nodedescriptionblock
-@@section Drills: Making Holes
-
-This section is about drills.
-@end example
-
-In Info output, @command{texi2any} would output the @samp{Tools} node with
-a menu as follows:
-
-@example
-* Menu:
-
-* Screwdrivers::          Flathead and Phillips.
-* Drills::                Making holes in things with power
-                          screwdrivers, drill drivers, combi
-                          drills, impact drivers, hammer drills,
-                          breakers and demolition drills.
-@end example
-
-
 @node Menus
 @nodedescription Listing subordinate nodes.
 @section Menus
@@ -3884,6 +3637,253 @@ The GNU Emacs Texinfo mode menu updating commands only work with nodes
 within the current buffer, so you cannot use them to create menus that
 refer to other files.  You must write such menus by hand.
 @xref{Updating Nodes and Menus}.
+
+
+@node Unstructured Nodes
+@nodedescription Nodes outside the main document structure.
+@section Unstructured Nodes
+
+@cindex Unstructured nodes
+All the examples of nodes in this chapter so far have used a @code{@@node}
+line followed by a sectioning command (such as @code{@@chapter}).
+
+@c @cindex Topic-oriented documentation
+However, you can also create nodes without using a sectioning command.
+You may find this useful if you do not want your manual (or parts of
+a manual) to have a hierarchical structure, with chapters superior to
+sections, sections superior to sub-sections and so on.
+
+@c comment this out until we know if we properly support this style
+@c of documentation in Texinfo.
+@c This unstructured
+@c style of documentation is known as @dfn{topic-oriented documentation},
+@c notably used by the DITA and Mallard systems.
+
+To do this, follow the @code{@@node} line with one of the heading
+commands.  For example:
+
+@example
+@@node Topic
+@@heading All about the Topic
+@dots{}
+@end example
+
+The argument to the heading command will be printed as usual.  When
+the @code{xrefautomaticsectiontitle} flag is on
+(@pxref{@code{xrefautomaticsectiontitle}}), this argument will also be
+used as the text for any cross-references to the node.
+
+Such nodes are not part of a hierarchical document structure.  This means
+that they are not listed in any table of contents, and automatic
+node direction pointers (@samp{Next}, @samp{Prev} or @samp{Up};
+@pxref{Writing a Node}) do not link to or from these nodes.
+
+@findex xrefname
+If you wish to create an unstructured node @emph{without} printing
+a heading at the start, you can use the @code{@@xrefname} command in
+place of the heading command.  For example:
+
+@example
+@@node Topic
+@@xrefname All about the Topic
+@dots{}
+@end example
+
+The @code{@@xrefname} command provides the text for cross-references to
+the node when the @code{xrefautomaticsectiontitle} flag is on, so
+@samp{@@xref@{Topic@}} would produce output like ``See `All about the
+Topic@w{'}''.
+
+The following example is not based on the sectioning commands structure,
+but on the guide/topic structure, where guide nodes point to topic nodes that
+point back to the guide nodes they appear in.  (This example is loosely
+based on the Mallard format guides and topics.)
+
+@example
+@@node guide1
+@@chapter guide 1 for an easy use
+
+@@menu
+* topic1:: topic1 description
+* topic3:: topic3 description
+@@end menu
+
+@@node topic1, topic3
+@@heading Topic 1 title
+
+@@menu
+More information
+
+* guide1:: guide 1
+@@end menu
+
+@@node topic3, , topic1
+@@heading Topic 3 title
+
+@@menu
+More information
+
+* guide1:: guide 1
+* guide2:: guide 2
+@@end menu
+
+@@node topic4
+@@xrefname Topic 4 only gets a ref name, no title
+
+This is topic 4
+
+@@menu
+More information
+
+* guide2:: guide 2
+@@end menu
+
+@@node guide2
+@@chapter guide 2 for an in depth use
+
+@@menu
+* topic3:: topic3 description
+* topic4:: topic4 description
+@@end menu
+@end example
+
+When processing such a manual with @command{texi2any}, you may want to
+set @code{CHECK_NORMAL_MENU_STRUCTURE} to 0 to avoid warnings about
+the menu structure not following a tree structure.  The automatically
+generated master menu is likely to have redundant entries; you may want to
+avoid an automatically generated master menu by setting @code{FORMAT_MENU} to
+@samp{menu_no_detailmenu}.  @xref{Global Customization Variables}.
+
+
+@node Node Command Regions
+@section Using @code{@@node} Commands to Separate Regions
+
+You can use @code{@@node} lines to separate regions of the manual that
+hold sectioning commands that are not associated with a @code{@@node}.  In this
+case, sectioning commands without @code{@@node} lines are output as part of a
+``node'' beginning with the preceding @code{@@node} command.  This is relevant
+for Info, plaintext and split HTML output---the formats for which the
+boundaries between nodes play a role in the structure of the output.
+
+This is different from the default case, where sectioning commands not
+directly preceded by @code{@@node} are treated just as if such a command
+were present.  Note that the same Texinfo code can be interpreted
+according to these two possibilities for structuring.
+
+When explicit @code{@@node} lines are used to separate regions of
+the manual, you can split your manual at different levels in the chapter
+structuring hierarchy according to what you consider best for different parts
+of your manual.
+
+In the following example, the region of the @samp{Big section 1}
+node would include the associated section but also subsections.
+And the last node, @samp{Second chapter.  Smaller} contains a chapter
+with its sections, but also an @code{@@unnumbered} that is at
+the @code{@@chapter} level.
+
+@example
+@@node Top
+@@top top
+
+@@node First chapter
+@@chapter First chapter
+
+@@node Big section 1
+@@section Big section 1
+
+Section text.
+
+@@subsection Big section Subsection 1
+
+...
+
+@@subsection Big section Subsection 2
+
+@@node Big section 2
+@@section Big section 2
+
+@@node Second chapter.  Smaller
+@@chapter Second chapter
+
+@@section Second chapter sec 1
+
+Average length Section.
+
+@@section Second chapter sec 2
+
+@@unnumbered Addendum with little content
+@end example
+
+This option has an effect on the output only for formats
+using nodes for structuring: Info, HTML and plaintext.  Note that sectioning
+commands without a corresponding @code{@@node} line can be the target of
+cross-references in any case; see @ref{Cross Reference Targets}.
+
+This possibility is mainly relevant when splitting by node for HTML and
+plaintext (@pxref{HTML Splitting}).  You need to set the customization
+variable @code{AUTO_SECTION_NODE} to 0 to select this option instead of
+the default.  See @code{AUTO_SECTION_NODE} in @ref{Global Customization
+Variables} for more details.
+
+
+@node Node Descriptions
+@nodedescriptionblock
+@code{@@nodedescription} and @code{@@nodedescriptionblock}.
+@end nodedescriptionblock
+@section Node Descriptions
+
+@findex nodedescription
+You can provide a short description of the purpose of a node by using
+the @code{@@nodedescription} command following the @code{@@node} or
+sectioning command (such as @code{@@chapter} or @code{@@section}))
+beginning the node.  Such a description might elaborate on or extend
+the information in the node name itself.
+
+@findex nodedescriptionblock
+You can also use a @code{@@nodedescriptionblock} environment to
+provide a node description. This may be useful for longer descriptions.
+
+@command{texi2any} uses the content you provide with these commands
+when outputting menus for Info output format (and, optionally,
+for HTML).  @command{texi2any} uses the description after a menu
+entry for the node if it is generating the menu automatically, or
+if no description for the menu entry was provided in an explicit
+@code{@@menu} block. (@xref{Menus}).
+
+Here is an example of using these commands:
+
+@example
+@@chapter Tools
+
+This chapter is on different tools you can use.
+
+@@section Screwdrivers
+@@nodedescription Flathead and Phillips.
+
+This section is about screwdrivers.
+
+@@node Drills
+@@nodedescriptionblock
+Making holes in things with power screwdrivers, drill drivers, combi
+drills, impact drivers, hammer drills, breakers and demolition drills.
+@@end nodedescriptionblock
+@@section Drills: Making Holes
+
+This section is about drills.
+@end example
+
+In Info output, @command{texi2any} would output the @samp{Tools} node with
+a menu as follows:
+
+@example
+* Menu:
+
+* Screwdrivers::          Flathead and Phillips.
+* Drills::                Making holes in things with power
+                          screwdrivers, drill drivers, combi
+                          drills, impact drivers, hammer drills,
+                          breakers and demolition drills.
+@end example
 
 
 @node Cross References
