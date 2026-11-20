@@ -2939,11 +2939,16 @@ letting @code{texi2any} determine them.
 @cindex Implicit pointer creation with @code{texi2any}
 The @code{texi2any} program automatically determines node pointers
 for a hierarchically organized document.  For it to do this, each
-@code{@@node} command should be followed immediately by a sectioning command
-such as @code{@@chapter} or @code{@@section} (with possible intervening
-comment lines or ``node description'' commands).  Finally, you must follow the
-`Top' @code{@@node} line with a line beginning with @code{@@top} to mark
-the top-level node in the file.  @xref{@code{@@top} Command}.
+node should use a sectioning command (such as @code{@@chapter} or
+@code{@@section}) at the appropriate level.  Each sectioning command
+may either start the node by itself, or it may follow a @code{@@node}
+command (with possible intervening comment lines or ``node description''
+commands).  The Texinfo document should have the nodes in the order
+they would appear in the document, so a chapter node is immediately
+followed by nodes for its sections, and each section is immediately
+followed by nodes for its subsections, and so on.
+Finally, you must have a `Top' node defined with @code{@@top},
+which is the the top-level node in the file.  @xref{@code{@@top} Command}.
 
 Even when you explicitly specify all pointers, you cannot write the
 nodes in the Texinfo source file in an arbitrary order.
