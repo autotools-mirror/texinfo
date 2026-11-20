@@ -1429,9 +1429,10 @@ sub _print_caption_shortcaption($$$$$) {
   my ($element, $float, $caption_type, $type, $float_number) = @_;
 
   my $caption_texi;
-  if (exists($element->{'contents'})) {
+  my $args = Texinfo::Common::get_non_empty_brace_args($element);
+  if (defined($args) and defined($args->[0])) {
     $caption_texi = Texinfo::Convert::Texinfo::convert_contents_to_texinfo(
-                                                $element->{'contents'}->[0]);
+                                                $args->[0]);
   }
 
   my $caption_float;

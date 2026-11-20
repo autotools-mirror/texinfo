@@ -1,5 +1,14 @@
 2026-11-20  Patrice Dumas  <pertusus@free.fr>
 
+	* tta/C/convert/convert_to_plaintext.c
+	(convert_to_plaintext_internal), tta/C/main/floats.c
+	(print_caption_shortcaption),
+	tta/perl/Texinfo/Convert/PlaintextNonXS.pm (_convert),
+	tta/perl/Texinfo/ManipulateTree.pm (_print_caption_shortcaption): use
+	get_non_empty_brace_args for caption element args.
+
+2026-11-20  Patrice Dumas  <pertusus@free.fr>
+
 	* tta/C/convert/convert_html.c (html_convert_tree_append),
 	tta/perl/Texinfo/Convert/HTML.pm (_convert): ignore a
 	spaces_after_cmd_before_arg space type element in arguments.  Decouple

@@ -5853,51 +5853,54 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
                       if (!caption_element)
                         caption_element = caption_shortcaption[0];
 
-                      if (caption_element
-                          && caption_element->e.c->contents.number > 0
-                          && !empty_spaces_argument (
-                                caption_element->e.c->contents.list[0]))
+                      if (caption_element)
                         {
-                          size_t j;
-                          const ELEMENT *caption_arg
-                            = caption_element->e.c->contents.list[0];
-                          add_(command) (&self_plaintext->context, cmd);
-                          self_plaintext->multiple_pass = 1;
+                          CONST_ELEMENT_LIST *caption_element_args
+                           = get_non_empty_brace_args (caption_element);
+                          if (caption_element_args->number > 0
+                              && caption_element_args->list[0])
+                            {
+                              size_t j;
+                              const ELEMENT *caption_arg
+                                = caption_element_args->list[0];
+                              add_(command) (&self_plaintext->context, cmd);
+                              self_plaintext->multiple_pass = 1;
 
            /* we do not want to start a new paragraph formatter so
               we iterate over the contents of a paragraph rather than
               converting the paragraph itself. */
-                          for (j = 0; j < caption_arg->e.c->contents.number;
-                               j++)
-                            {
-                              const ELEMENT *content
-                                = caption_arg->e.c->contents.list[j];
-
-                              if (content->type == ET_paragraph
-                                  && content->e.c->contents.number)
+                              for (j = 0; j < caption_arg->e.c->contents.number;
+                                   j++)
                                 {
-                                  size_t l;
-                                  for (l = 0;
-                                       l < content->e.c->contents.number; l++)
+                                  const ELEMENT *content
+                                    = caption_arg->e.c->contents.list[j];
+
+                                  if (content->type == ET_paragraph
+                                      && content->e.c->contents.number)
                                     {
-                                      const ELEMENT *subelement
+                                      size_t l;
+                                      for (l = 0;
+                                       l < content->e.c->contents.number; l++)
+                                        {
+                                          const ELEMENT *subelement
                                          = content->e.c->contents.list[l];
-                                      convert_to_plaintext_internal (self,
+                                          convert_to_plaintext_internal (self,
                                                                  subelement);
+                                        }
+                                      break;
                                     }
-                                  break;
-                                }
-                              else if (content->type
+                                  else if (content->type
                                            != ET_spaces_before_argument)
-                                {
-                                  convert_to_plaintext_internal (self,
+                                    {
+                                      convert_to_plaintext_internal (self,
                                                                  content);
-                                  break;
+                                      break;
+                                    }
                                 }
+                              self_plaintext->multiple_pass = 0;
+                              pop_context (&self_plaintext->context);
                             }
-
-                          self_plaintext->multiple_pass = 0;
-                          pop_context (&self_plaintext->context);
+                          destroy_const_element_list (caption_element_args);
                         }
                       /* flush and add newline */
                       const TEXT_AND_LINE_COUNT end_result = para_end ();

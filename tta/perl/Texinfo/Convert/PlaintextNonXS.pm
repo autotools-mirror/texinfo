@@ -3935,33 +3935,35 @@ sub _convert($$) {
             $caption_element = $caption;
           }
 
-          if (defined($caption_element)
-              and exists($caption_element->{'contents'})
-              and !Texinfo::Common::empty_spaces_argument(
-                          $caption_element->{'contents'}->[0])) {
-            push @{$self->{'context'}}, 'listoffloats';
-            $self->{'multiple_pass'} = 1;
-            my $caption_arg = $caption_element->{'contents'}->[0];
+          if (defined($caption_element)) {
+            my $caption_element_args
+             = Texinfo::Common::get_non_empty_brace_args($caption_element);
+            if (defined($caption_element_args)
+                and defined($caption_element_args->[0])) {
+              push @{$self->{'context'}}, 'listoffloats';
+              $self->{'multiple_pass'} = 1;
+              my $caption_arg = $caption_element_args->[0];
 
-            # we do not want to start a new paragraph formatter so
-            # we iterate over the contents of a paragraph rather than
-            # converting the paragraph itself.
-            foreach my $content (@{$caption_arg->{'contents'}}) {
-              if (exists($content->{'type'})
-                  and $content->{'type'} eq 'paragraph'
-                  and exists($content->{'contents'})) {
-                foreach my $subelement (@{$content->{'contents'}}) {
-                  _convert($self, $subelement);
+              # we do not want to start a new paragraph formatter so
+              # we iterate over the contents of a paragraph rather than
+              # converting the paragraph itself.
+              foreach my $content (@{$caption_arg->{'contents'}}) {
+                if (exists($content->{'type'})
+                    and $content->{'type'} eq 'paragraph'
+                    and exists($content->{'contents'})) {
+                  foreach my $subelement (@{$content->{'contents'}}) {
+                    _convert($self, $subelement);
+                  }
+                  last;
+                } elsif (!defined($content->{'type'})
+                         or $content->{'type'} ne 'spaces_before_argument') {
+                  _convert($self, $content);
+                  last;
                 }
-                last;
-              } elsif (!defined($content->{'type'})
-                       or $content->{'type'} ne 'spaces_before_argument') {
-                _convert($self, $content);
-                last;
               }
+              delete $self->{'multiple_pass'};
+              my $old_context = pop @{$self->{'context'}};
             }
-            delete $self->{'multiple_pass'};
-            my $old_context = pop @{$self->{'context'}};
           }
           # flush and add newline
           my ($result_text, $count)

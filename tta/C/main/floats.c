@@ -20,6 +20,7 @@
 
 #include "text.h"
 #include "tree_types.h"
+#include "tree.h"
 #include "extra.h"
 #include "builtin_commands.h"
 /* for fatal called from def_list_fns */
@@ -190,9 +191,11 @@ print_caption_shortcaption (const ELEMENT *element, const ELEMENT *float_e,
 {
   char *caption_texi = 0;
   const ELEMENT *caption_float;
+  CONST_ELEMENT_LIST *args = get_non_empty_brace_args (element);
 
-  if (element->e.c->contents.number > 0)
-    caption_texi = convert_contents_to_texinfo (element->e.c->contents.list[0]);
+  if (args->number > 0 && args->list[0])
+    caption_texi = convert_contents_to_texinfo (args->list[0]);
+  destroy_const_element_list (args);
 
   caption_float = element->e.c->parent;
   if (!caption_float || caption_float != float_e)
