@@ -178,11 +178,6 @@ build_element_attribute (const ELEMENT *element, const char *attribute,
           int idx = associated_info_table[key].data;
           switch (key)
             {
-            case AI_key_delimiter:
-              if (element->e.c->cmd == CM_verb
-                  && element->e.c->string_info[idx])
-                return newSVpv_utf8 (element->e.c->string_info[idx], 0);
-              break;
             case AI_key_alias_of:
               if ((element->e.c->cmd
                    || type_data[element->type].flags & TF_with_command)

@@ -286,9 +286,7 @@ copy_tree_internal (ELEMENT* current, ELEMENT_LIST *other_trees)
     {
       int j;
       int string_info_nr = 1;
-      if (current->type == ET_definfoenclose_command
-          || current->type == ET_index_entry_command
-          || current->e.c->cmd == CM_verb)
+      if (type_data[current->type].flags & TF_with_command)
         string_info_nr = 2;
       for (j = 0; j < string_info_nr; j++)
         if (current->e.c->string_info[j])

@@ -88,8 +88,7 @@ new_command_element (enum element_type type, enum command_id cmd)
 
   e->e.c->cmd = cmd;
 
-  if (type_data[type].flags & TF_with_command
-      || cmd == CM_verb)
+  if (type_data[type].flags & TF_with_command)
     string_info_nr = 2;
 
   e->e.c->string_info = (char **) malloc (string_info_nr * sizeof (char *));
@@ -312,11 +311,8 @@ destroy_element (ELEMENT *e)
           destroy_element_and_children (e->elt_info[i]);
       free (e->elt_info);
 
-      if (e->e.c->cmd == CM_verb
-          || type_data[e->type].flags & TF_with_command)
-        {
-          string_info_nr = 2;
-        }
+      if (type_data[e->type].flags & TF_with_command)
+        string_info_nr = 2;
       else if (e->e.c->cmd != CM_NONE)
         string_info_nr = 1;
 
