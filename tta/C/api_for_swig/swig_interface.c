@@ -359,11 +359,6 @@ txi_ext_element_attribute_string (const ELEMENT *element,
           int idx = associated_info_table[key].data;
           switch (key)
             {
-            case AI_key_delimiter:
-              if (element->e.c->cmd == CM_verb
-                  && element->e.c->string_info[idx])
-                return element->e.c->string_info[idx];
-              break;
             case AI_key_alias_of:
               if ((element->e.c->cmd
                    || type_data[element->type].flags & TF_with_command)
@@ -556,17 +551,6 @@ txi_ext_set_element_attribute_string (ELEMENT *element, const char *attribute,
           int idx = associated_info_table[key].data;
           switch (key)
             {
-            case AI_key_delimiter:
-              if (element->e.c->cmd == CM_verb)
-                {
-                  free (element->e.c->string_info[idx]);
-                  if (value)
-                    element->e.c->string_info[idx] = strdup (value);
-                  else
-                    element->e.c->string_info[idx] = 0;
-                  return 1;
-                }
-              break;
             case AI_key_alias_of:
               if (element->e.c->cmd
                   || type_data[element->type].flags & TF_with_command)

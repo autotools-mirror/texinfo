@@ -98,7 +98,6 @@ enum elt_info_type {
 /* indices in ELEMENT string_info */
 enum string_info_type {
    sit_alias_of,  /* every @-command + macro_call */
-   sit_delimiter, /* CM_verb */
    sit_command_name = 1, /* ET_definfoenclose_command, ET_index_entry_command
                             and macro_call.  Not in Perl info, in Perl cmdname
                             can be used instead. */
@@ -169,7 +168,6 @@ enum string_info_type {
   ai_key(isindex, flag, EF_isindex) \
   \
   ai_key(alias_of, string_info, sit_alias_of) \
-  ai_key(delimiter, string_info, sit_delimiter) \
 
 
 /* Keys used in ASSOCIATED_INFO and other associated info structures. */

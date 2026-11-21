@@ -701,6 +701,11 @@ English text added by the parser that may need to be translated
 during conversion.  Happens for definition line @@-commands aliases that
 leads to prepending text such as ``Function''.
 
+@item verb_delimiter
+@anchor{Texinfo@asis{::}Parser verb_delimiter}
+
+Delimiter character used to quote @code{@@verb} argument.
+
 @end table
 
 @node Texinfo@asis{::}Parser Tree container elements
@@ -1044,11 +1049,6 @@ and @code{@@itemx}, in a @emph{table_term}.
 @subsection Information available in the @code{info} key
 
 @table @asis
-@item delimiter
-@anchor{Texinfo@asis{::}Parser delimiter 1}
-
-@code{@@verb} delimiter is in @emph{delimiter}.
-
 @item inserted
 @anchor{Texinfo@asis{::}Parser inserted}
 

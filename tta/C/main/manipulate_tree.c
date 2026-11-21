@@ -1411,11 +1411,6 @@ print_element_info (ELEMENT *element, int level,
       if (element->e.c->string_info[sit_alias_of])
         add_info_name_string_value (&info_strings, "alias_of",
                       element->e.c->string_info[sit_alias_of]);
-      if (element->e.c->cmd == CM_verb
-               && element->e.c->contents.number > 0
-               && element->e.c->string_info[sit_delimiter])
-        add_info_name_string_value (&info_strings, "delimiter",
-                          element->e.c->string_info[sit_delimiter]);
     }
 
   print_info_strings (&info_strings, level, prepended, result, "INFO");

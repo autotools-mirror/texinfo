@@ -674,6 +674,10 @@ English text added by the parser that may need to be translated
 during conversion.  Happens for definition line @-commands aliases that
 leads to prepending text such as ``Function''.
 
+=item verb_delimiter
+
+Delimiter character used to quote C<@verb> argument.
+
 =back
 
 =head3 Tree container elements
@@ -957,10 +961,6 @@ and C<@itemx>, in a I<table_term>.
 =head2 Information available in the C<info> key
 
 =over
-
-=item delimiter
-
-C<@verb> delimiter is in I<delimiter>.
 
 =item inserted
 

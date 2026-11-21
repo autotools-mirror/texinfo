@@ -1003,10 +1003,6 @@ element_to_perl_hash (ELEMENT *e, int avoid_recursion)
     {
       store_info_string (e, e->e.c->string_info[sit_alias_of],
                          "alias_of", &info_hv);
-
-      if (e->e.c->cmd == CM_verb && e->e.c->contents.number > 0)
-        store_info_string (e, e->e.c->string_info[sit_delimiter],
-                           "delimiter", &info_hv);
     }
 
   /* process elt_info array */
