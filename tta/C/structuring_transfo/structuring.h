@@ -12,6 +12,8 @@ struct CONVERTER_CACHE_TRANSLATE;
 void associate_internal_references (DOCUMENT *document);
 void sectioning_structure (DOCUMENT *document);
 void sectioning_targets (DOCUMENT *document, int warn_duplicate_section_target);
+void insert_nodes_for_sectioning_commands (DOCUMENT *document,
+                                      int warn_duplicate_section_target);
 void construct_nodes_tree (DOCUMENT *document);
 CONST_NODE_RELATIONS_LIST *get_node_node_childs_from_sectioning (
                                   const NODE_RELATIONS *node_relations);

@@ -32,6 +32,7 @@
 /* for CONVERTER_CACHE_TRANSLATE */
 #include "converter_types.h"
 #include "types_data.h"
+#include "hashmap.h"
 #include "tree.h"
 #include "extra.h"
 #include "builtin_commands.h"
@@ -41,7 +42,11 @@
    xasprintf */
 #include "utils.h"
 /* for copy_element_tree copy_contents parse_node_manual
-   protect_colon_in_tree reference_to_arg_in_tree */
+   protect_colon_in_tree new_asis_command_with_text
+   protect_comma_in_tree protect_first_parenthesis
+   protect_node_after_label_in_tree
+   reference_to_arg_in_tree
+ */
 #include "manipulate_tree.h"
 #include "command_stack.h"
 #include "node_name_normalization.h"
@@ -49,8 +54,6 @@
 #include "structure_list.h"
 #include "targets.h"
 #include "translations.h"
-/* for protect_first_parenthesis */
-#include "transformations.h"
 #include "structuring.h"
 
 void
@@ -508,6 +511,710 @@ sectioning_targets (DOCUMENT *document, int warn_duplicate_section_target)
 
       register_label_element (document, content, error_messages);
     }
+}
+
+static const NODE_RELATIONS *
+section_direction_associated_node (const SECTION_RELATIONS *section_relations,
+                                   enum directions direction)
+{
+  size_t i;
+  static const SECTION_RELATIONS * const *direction_bases[2];
+  direction_bases[0] = section_relations->section_directions;
+  direction_bases[1] = section_relations->toplevel_directions;
+  for (i = 0; i < sizeof (direction_bases) / sizeof (direction_bases[0]);
+       i++)
+    {
+      const SECTION_RELATIONS * const *directions
+        = direction_bases[i];
+      if (directions && directions[direction])
+        {
+          const SECTION_RELATIONS *direction_relation = directions[direction];
+          if (direction_bases[i] != section_relations->toplevel_directions
+              || direction == D_up
+              || direction_relation->element->e.c->cmd != CM_top)
+            {
+              if (direction_relation->associated_node)
+                return direction_relation->associated_node;
+            }
+        }
+    }
+  return 0;
+}
+
+/* ALTIMP Texinfo/ManipulateTreeNonXS.pm */
+/* ERROR_MESSAGES is not actually useful, as the code checks that
+   the new node target label does not exist already.
+   node_tree is actually used as an element list, but we use an
+   element to be able to do the transformations in new_node.
+ */
+static ELEMENT *
+new_node (ERROR_MESSAGE_LIST *error_messages, ELEMENT *node_tree,
+          DOCUMENT *document, const ELEMENT *associated_command,
+          int starting_appended)
+{
+  const C_HASHMAP *identifiers_target = &document->identifiers_target;
+  int empty_node = 0;
+  int appended_number;
+  int new_line_at_end = 0;
+  TEXT spaces_after_argument;
+  ELEMENT *last_content;
+  ELEMENT *comment_at_end = 0;
+  ELEMENT *tree_spaces_after = 0;
+  ELEMENT *tree_spaces_before = 0;
+  ELEMENT *node = 0;
+  char *normalized;
+  char *normalized_reference = 0;
+  /*
+   We protect for all the contexts, as the node name should be
+   the same in the different contexts, even if some protections
+   are not needed for the parsing.  Also, this way the node tree
+   can be directly reused in the menus for example, without
+   additional protection, some parts could be double protected
+   otherwise, those that are protected with @asis.
+
+   needed in nodes lines, @*ref and in menus with a label
+   */
+  node_tree = protect_comma_in_tree (node_tree);
+  /* always */
+  protect_first_parenthesis (node_tree);
+  /* in menu entry without label */
+  node_tree = protect_colon_in_tree (node_tree);
+  /* in menu entry with label */
+  node_tree = protect_node_after_label_in_tree (node_tree);
+  node_tree = reference_to_arg_in_tree (node_tree, document);
+
+  if (node_tree->e.c->contents.number <= 0)
+    {
+      ELEMENT *empty_text = new_text_element (ET_normal_text);
+      add_to_contents_as_array (node_tree, empty_text);
+      empty_node = 1;
+    }
+  else if (node_tree->e.c->contents.list[0]->type == ET_spaces_before_argument)
+    tree_spaces_before = remove_from_contents (node_tree, 0);
+
+  last_content = last_contents_child (node_tree);
+  if (!(type_data[last_content->type].flags & TF_text)
+      && (last_content->e.c->cmd == CM_c
+          || last_content->e.c->cmd == CM_comment))
+    {
+      comment_at_end = pop_element_from_contents (node_tree);
+      last_content = last_contents_child (node_tree);
+    }
+
+  text_init (&spaces_after_argument);
+  text_append (&spaces_after_argument, "");
+  if (last_content && last_content->type == ET_spaces_after_argument)
+    {
+      tree_spaces_after = pop_element_from_contents (node_tree);
+    }
+  else if (last_content && last_content->type == ET_normal_text
+           && last_content->e.text->end > 0)
+    {
+      int end = last_content->e.text->end;
+      char *p = last_content->e.text->text + end-1;
+      for (; p >= last_content->e.text->text; p--)
+        {
+          if (!strchr (whitespace_chars, *p))
+            break;
+          if (*p == '\n')
+            new_line_at_end = 1;
+          end--;
+        }
+      text_append (&spaces_after_argument, p+1);
+      last_content->e.text->end = end;
+      last_content->e.text->text[end] = '\0';
+    }
+  if (!new_line_at_end && !comment_at_end)
+    text_append (&spaces_after_argument, "\n");
+
+  appended_number = 0+starting_appended;
+  if (appended_number == 0)
+    appended_number += empty_node;
+
+  while (1)
+    {
+      size_t i;
+      const char *non_hyphen_char;
+      const ELEMENT *target = 0;
+      ELEMENT *appended_text = 0;
+      ELEMENT *arguments_line = new_element (ET_arguments_line);
+      ELEMENT *node_line_arg = new_element (ET_line_arg);
+      ELEMENT *spaces_before;
+      ELEMENT *spaces_after;
+
+      if (tree_spaces_after)
+        spaces_after = tree_spaces_after;
+      else
+        {
+          spaces_after = new_text_element (ET_spaces_after_argument);
+          text_append (spaces_after->e.text, spaces_after_argument.text);
+        }
+
+      if (tree_spaces_before)
+        spaces_before = tree_spaces_before;
+      else
+        {
+          spaces_before = new_text_element (ET_spaces_before_argument);
+          text_append (spaces_before->e.text, " ");
+        }
+
+      node = new_command_element (ET_line_command, CM_node);
+      add_to_element_contents (node, arguments_line);
+      add_to_element_contents (arguments_line, node_line_arg);
+
+      add_to_contents_as_array (node_line_arg, spaces_before);
+
+      insert_slice_into_contents (node_line_arg, 1, node_tree, 0,
+                                  node_tree->e.c->contents.number);
+
+      for (i = 0; i < node_line_arg->e.c->contents.number; i++)
+        {
+          ELEMENT *content = node_line_arg->e.c->contents.list[i];
+          if (!(type_data[content->type].flags & TF_text))
+            content->e.c->parent = node_line_arg;
+        }
+
+      if (appended_number)
+        {
+          appended_text = new_text_element (ET_normal_text);
+          text_printf (appended_text->e.text, " [+%d+]", appended_number);
+          add_to_contents_as_array (node_line_arg, appended_text);
+        }
+
+      add_to_contents_as_array (node_line_arg, spaces_after);
+      if (comment_at_end)
+        add_to_element_contents (node_line_arg, comment_at_end);
+
+      normalized = convert_contents_to_node_identifier (node_line_arg);
+
+      if (!appended_number)
+        normalized_reference = strdup (normalized);
+
+      non_hyphen_char = normalized + strspn (normalized, "-");
+      if (*non_hyphen_char)
+        {
+          if (identifiers_target_number (identifiers_target))
+            {
+              target = find_identifier_target (identifiers_target,
+                                               normalized);
+            }
+          if (!target)
+            break;
+        }
+
+      free (normalized);
+      if (!tree_spaces_after)
+        destroy_element (spaces_after);
+      if (!tree_spaces_before)
+        destroy_element (spaces_before);
+      destroy_element (node_line_arg);
+      destroy_element (arguments_line);
+      if (appended_text)
+        destroy_element (appended_text);
+      destroy_element (node);
+      appended_number++;
+    }
+
+  add_extra_string (node, AI_key_identifier, normalized);
+  node->flags |= EF_added;
+
+  if (associated_command)
+    node->e.c->source_info = associated_command->e.c->source_info;
+
+  if (associated_command && normalized_reference
+      && strcmp (normalized_reference, normalized)
+      && identifiers_target_number (identifiers_target))
+    {
+      const ELEMENT *existing_target
+        = find_identifier_target (identifiers_target, normalized_reference);
+      if (existing_target && (existing_target->flags & EF_added))
+        {
+          int status;
+          const NODE_RELATIONS_LIST *nodes_list = &document->nodes_list;
+          size_t existing_node_number
+            = lookup_extra_integer (existing_target,
+                                    AI_key_node_number, &status);
+          const NODE_RELATIONS *existing_node_relations
+             = nodes_list->list[existing_node_number -1];
+          const ELEMENT *existing_section
+             = existing_node_relations->associated_section->element;
+          const ELEMENT *registered_section_label
+             = get_label_element (associated_command);
+          char *registered_section_texinfo
+             = convert_contents_to_texinfo (registered_section_label);
+
+          message_list_command_warn (error_messages,
+            (document->options && document->options->DEBUG.o.integer > 0),
+            associated_command, 0,
+            "@%s `%s' already added node",
+            builtin_command_name (associated_command->e.c->cmd),
+            registered_section_texinfo);
+          message_list_command_warn (error_messages,
+            (document->options && document->options->DEBUG.o.integer > 0),
+                      existing_section, 1,
+                     "added for @%s",
+                      builtin_command_name (existing_section->e.c->cmd));
+
+          free (registered_section_texinfo);
+        }
+    }
+
+  free (normalized_reference);
+
+  register_label_element (document, node, error_messages);
+
+  free (spaces_after_argument.text);
+
+  return node;
+}
+
+/* ALTIMP Texinfo/ManipulateTreeNonXS.pm */
+ELEMENT_LIST *
+reassociate_to_node (const char *type, ELEMENT *current, void *argument)
+{
+  NODE_RELATIONS_LIST *new_previous = (NODE_RELATIONS_LIST *) argument;
+  NODE_RELATIONS *new_node_relations = new_previous->list[0];
+  NODE_RELATIONS *previous_node_relations = new_previous->list[1];
+  ELEMENT *added_node = new_node_relations->element;
+
+  if (!(type_data[current->type].flags & TF_text))
+    {
+      if (current->e.c->cmd == CM_menu)
+        {
+          if (previous_node_relations)
+            {
+              CONST_ELEMENT_LIST *menus = previous_node_relations->menus;
+              size_t previous_nr = 0;
+              if (menus)
+                {
+                  size_t i;
+                  for (i = 0; i < menus->number; i++)
+                    {
+                      if (menus->list[i] == current)
+                        {
+                          previous_nr = i + 1;
+                          break;
+                        }
+                    }
+                }
+              if (previous_nr == 0)
+                fprintf (stderr, "BUG: menu %p not in previous node %p\n",
+                                 current, previous_node_relations->element);
+              else
+                {
+                  size_t previous_idx = previous_nr -1;
+                  /* removed element should be current */
+                  remove_from_const_element_list (menus, previous_idx);
+                  if (menus->number <= 0)
+                    {
+                      destroy_const_element_list (menus);
+                      previous_node_relations->menus = 0;
+                    }
+                }
+            }
+          if (!new_node_relations->menus)
+            new_node_relations->menus = new_const_element_list ();
+          add_to_const_element_list (new_node_relations->menus, current);
+        }
+           /* following for index entries */
+      else if (current->e.c->cmd == CM_item || current->e.c->cmd == CM_itemx
+               || current->type == ET_index_entry_command
+               || (current->e.c->parent
+                   && current->e.c->parent->flags & EF_def_line))
+        {
+          const char *element_node
+            = lookup_extra_string (current, AI_key_element_node);
+          if (element_node && previous_node_relations)
+            {
+              const char *new_normalized
+                = lookup_extra_string (added_node, AI_key_identifier);
+              const ELEMENT *previous_node = previous_node_relations->element;
+              const char *previous_normalized
+                = lookup_extra_string (previous_node, AI_key_identifier);
+              if (strcmp(element_node, previous_normalized))
+                {
+                  char *element_debug = print_element_debug (current, 0);
+                  char *previous_node_texi
+                    = root_heading_command_to_texinfo (previous_node);
+                  fprintf (stderr,
+                       "BUG: element %p not in previous node %p; %s\n"
+                       "  previous node: %s\n"
+                       "  current node identifier: %s\n", current,
+                       previous_node, element_debug, previous_node_texi,
+                       element_node);
+                  free (element_debug);
+                  free (previous_node_texi);
+                }
+
+              add_extra_string_dup (current, AI_key_element_node,
+                                    new_normalized);
+            }
+        }
+      else if (current->e.c->cmd == CM_nodedescription)
+        {
+          if (!new_node_relations->node_descriptions)
+            new_node_relations->node_descriptions
+              = new_const_element_list ();
+          add_to_const_element_list (new_node_relations->node_descriptions,
+                                     current);
+
+          if (previous_node_relations
+              && previous_node_relations->node_descriptions)
+            {
+              size_t j;
+              for (j = 0;
+                   j < previous_node_relations->node_descriptions->number;
+                   j++)
+                {
+                  if (previous_node_relations->node_descriptions->list[j]
+                         == current)
+                    remove_from_const_element_list (
+                             previous_node_relations->node_descriptions, j);
+                }
+              if (!previous_node_relations->node_descriptions->number)
+                {
+                  destroy_const_element_list (
+                    previous_node_relations->node_descriptions);
+                  previous_node_relations->node_descriptions = 0;
+                }
+            }
+        }
+      else if (current->e.c->cmd == CM_nodedescriptionblock)
+        {
+          if (!new_node_relations->node_long_descriptions)
+            new_node_relations->node_long_descriptions
+              = new_const_element_list ();
+          add_to_const_element_list (new_node_relations->node_long_descriptions,
+                                     current);
+
+          if (previous_node_relations
+              && previous_node_relations->node_long_descriptions)
+            {
+              size_t j;
+              for (j = 0;
+                   j < previous_node_relations->node_long_descriptions->number;
+                   j++)
+                {
+                  if (previous_node_relations->node_long_descriptions->list[j]
+                         == current)
+                    remove_from_const_element_list (
+                        previous_node_relations->node_long_descriptions, j);
+                }
+              if (!previous_node_relations->node_long_descriptions->number)
+                {
+                  destroy_const_element_list (
+                    previous_node_relations->node_long_descriptions);
+                  previous_node_relations->node_long_descriptions = 0;
+                }
+            }
+        }
+    }
+  return 0;
+}
+
+typedef struct ELEMENT_WITH_ADDED_INFO {
+    ELEMENT *new_node_tree;
+    char *normalized;
+} ELEMENT_WITH_ADDED_INFO;
+
+/* ALTIMP Texinfo/ManipulateTreeNonXS.pm */
+/* This should be called after structuring.c sectioning_structure */
+void
+insert_nodes_for_sectioning_commands (DOCUMENT *document,
+                                      int warn_duplicate_section_target)
+{
+  const SECTION_RELATIONS_LIST *sections_list = &document->sections_list;
+
+  ELEMENT *root = document->tree;
+  size_t idx;
+  NODE_RELATIONS *previous_node_relations = 0;
+  size_t node_idx = 0;
+  C_HASHMAP *first_normalized = 0;
+  const C_HASHMAP *identifiers_target = 0;
+  ERROR_MESSAGE_LIST *error_messages = &document->error_messages;
+  OPTIONS *options = document->options;
+  int warn_debug = (options && options->DEBUG.o.integer > 0);
+
+  /* associate normalized reference added name to the number of
+     section commands with such a normalized name. */
+  C_HASHMAP *normalized_nr = new_c_hashmap (sections_list->number);
+
+  if (warn_duplicate_section_target > 0)
+    {
+      first_normalized = new_c_hashmap (sections_list->number);
+    }
+
+  /* cache information to avoid redoing the computations and avoid
+     duplicating code. */
+  ELEMENT_WITH_ADDED_INFO *elements_with_added = (ELEMENT_WITH_ADDED_INFO *)
+     malloc (sizeof (ELEMENT_WITH_ADDED_INFO) * sections_list->number);
+
+  /* First determine the number of sections for a given normalized name
+     to know which one are ambiguous */
+  for (idx = 0; idx < root->e.c->contents.number; idx++)
+    {
+      ELEMENT *content = root->e.c->contents.list[idx];
+      enum command_id data_cmd = element_builtin_data_cmd (content);
+      unsigned long flags = command_data[data_cmd].flags;
+
+      if (data_cmd && data_cmd != CM_node && data_cmd != CM_part
+          && flags & CF_root)
+        {
+          int status;
+          size_t section_number
+            = lookup_extra_integer (content,
+                                    AI_key_section_number, &status);
+          SECTION_RELATIONS *section_relations
+            = sections_list->list[section_number -1];
+
+          if (!section_relations->associated_node)
+            {
+              /* NOTE new_node_tree content is copied in new_node */
+              ELEMENT *new_node_tree;
+              char *normalized;
+              int found;
+              uintptr_t normalized_nr_count;
+
+              document->modified_information
+                             |= F_DOCM_tree | F_DOCM_nodes_list;
+
+              if (content->e.c->cmd == CM_top)
+                {
+                  ELEMENT *top_node_text = new_text_element (ET_normal_text);
+                  new_node_tree = new_element (ET_NONE);
+                  text_append (top_node_text->e.text, "Top");
+                  add_to_contents_as_array (new_node_tree, top_node_text);
+                }
+              else
+                {
+                  const ELEMENT *arguments_line
+                    = content->e.c->contents.list[0];
+                  const ELEMENT *line_arg
+                    = arguments_line->e.c->contents.list[0];
+                  new_node_tree = copy_contents (line_arg, 0, ET_NONE);
+                }
+              normalized = convert_to_node_identifier (new_node_tree);
+
+              normalized_nr_count
+                 = (uintptr_t)c_hashmap_value (normalized_nr, normalized,
+                                               &found);
+              if (found)
+                {
+                  normalized_nr_count++;
+                  c_hashmap_set_value (normalized_nr,
+                           normalized, (const void *)normalized_nr_count);
+
+                  if (warn_duplicate_section_target > 0)
+                    {
+                      int target_found;
+                      const ELEMENT *existing_target
+                        = c_hashmap_value (first_normalized, normalized,
+                                           &target_found);
+
+                      if (target_found)
+                        {
+                          char *section_texinfo
+                            = convert_contents_to_texinfo (new_node_tree);
+                          /* section argument missing */
+                          if (!section_texinfo)
+                            section_texinfo = strdup ("");
+                          message_list_command_warn (error_messages, warn_debug,
+                                  content, 0, "@%s `%s' already found target",
+                                  builtin_command_name (content->e.c->cmd),
+                                  section_texinfo);
+                          free (section_texinfo);
+                          message_list_command_warn (error_messages, warn_debug,
+                                  existing_target, 1, "found @%s",
+                            builtin_command_name (existing_target->e.c->cmd));
+                        }
+                    }
+                }
+              else
+                {
+                  normalized_nr_count = 1;
+                  c_hashmap_register (normalized_nr,
+                           normalized, (const void *)normalized_nr_count);
+
+                  if (warn_duplicate_section_target > 0)
+                    {
+                      const ELEMENT *target = 0;
+                      if (identifiers_target_number (identifiers_target))
+                        {
+                          target = find_identifier_target (identifiers_target,
+                                                           normalized);
+
+                        }
+                      if (!target)
+                        c_hashmap_register (first_normalized,
+                                            normalized, content);
+                    }
+                }
+
+              elements_with_added[section_number -1].normalized = normalized;
+              elements_with_added[section_number -1].new_node_tree
+                = new_node_tree;
+            }
+        }
+    }
+
+  if (warn_duplicate_section_target > 0)
+    {
+      clear_c_hashmap (first_normalized);
+      free (first_normalized);
+    }
+
+  /* add the nodes */
+  for (idx = 0; idx < root->e.c->contents.number; idx++)
+    {
+      ELEMENT *content = root->e.c->contents.list[idx];
+      enum command_id data_cmd = element_builtin_data_cmd (content);
+      unsigned long flags = command_data[data_cmd].flags;
+
+      if (data_cmd && data_cmd != CM_node && data_cmd != CM_part
+          && flags & CF_root)
+        {
+          int status;
+          size_t section_number
+            = lookup_extra_integer (content,
+                                    AI_key_section_number, &status);
+          SECTION_RELATIONS *section_relations
+            = sections_list->list[section_number -1];
+
+          if (!section_relations->associated_node)
+            {
+              ELEMENT *added_node;
+              char *normalized
+                = elements_with_added[section_number -1].normalized;
+              ELEMENT *new_node_tree
+                = elements_with_added[section_number -1].new_node_tree;
+              int found;
+              uintptr_t normalized_nr_count
+                 = (uintptr_t)c_hashmap_value (normalized_nr, normalized,
+                                               &found);
+
+              free (normalized);
+
+              added_node = new_node (&document->error_messages, new_node_tree,
+                                     document, content,
+                                     (normalized_nr_count > 1 ? 1 : 0));
+              if (added_node)
+                {
+                  NODE_RELATIONS_LIST new_previous;
+                  memset (&new_previous, 0, sizeof (NODE_RELATIONS_LIST));
+                  reallocate_node_relations_for (2, &new_previous);
+
+                  NODE_RELATIONS *new_node_relations;
+                  insert_into_contents (root, added_node, idx);
+                  idx++;
+                  new_node_relations
+                    = insert_node_into_node_relations_list (
+                                                       &document->nodes_list,
+                                                       added_node, node_idx);
+                  new_node_relations->associated_section = section_relations;
+                  node_idx++;
+                  add_extra_integer (added_node, AI_key_node_number,
+                                     node_idx);
+                  section_relations->associated_node = new_node_relations;
+                  added_node->e.c->parent = content->e.c->parent;
+                  /* reassociate index entries and menus that are
+                     in the sectioning command contents */
+                  new_previous.list[0] = new_node_relations;
+                  new_previous.list[1] = previous_node_relations;
+                  modify_tree (content, &reassociate_to_node,
+                               (void *)&new_previous);
+                  free (new_previous.list);
+
+     /* if the up node of the new node do not have a menu and has automatic
+        direction, the new node will not appear in any menu.  In that case,
+        remove the up node automatic directions to get a correct automatic
+        menu.
+      */
+                  if (section_relations->section_directions
+                      && section_relations->section_directions[D_up])
+                    {
+                      const SECTION_RELATIONS *section_relation_up
+                        = section_relations->section_directions[D_up];
+                      if (section_relation_up->associated_node)
+                        {
+                          const NODE_RELATIONS *up_node_relations
+                           = section_relation_up->associated_node;
+                          const ELEMENT *up_node = up_node_relations->element;
+                          if (!up_node_relations->menus
+                              || up_node_relations->menus->number <= 0)
+                            {
+                              ELEMENT *up_node_arguments_line
+                                = up_node->e.c->contents.list[0];
+                              if (
+                           up_node_arguments_line->e.c->contents.number > 1)
+                                {
+                                  ELEMENT *node_name_arg
+                               = up_node_arguments_line->e.c->contents.list[0];
+                                  char *up_node_texinfo
+                                 = convert_contents_to_texinfo (node_name_arg);
+                                  char *section_texinfo
+                                 = convert_contents_to_texinfo (new_node_tree);
+                                  /* section argument missing */
+                                  if (!section_texinfo)
+                                    section_texinfo = strdup ("");
+                                  message_list_command_warn (error_messages,
+                                   warn_debug, content, 0,
+                        "modifying node relations of `%s' to reference `%s'",
+                                   up_node_texinfo, section_texinfo);
+                                  free (section_texinfo);
+                                  free (up_node_texinfo);
+
+                                  /* remove explicit directions */
+                                  while (up_node_arguments_line->e.c
+                                                   ->contents.number > 1)
+                                    {
+                                      ELEMENT *popped_e
+                                       = pop_element_from_contents(
+                                                up_node_arguments_line);
+                                      destroy_element_and_children (popped_e);
+                                    }
+                                  /* readd end of line */
+                                  ELEMENT *spaces_after_arg
+                                = new_text_element (ET_spaces_after_argument);
+                                  text_append_n (spaces_after_arg->e.text,
+                                                 "\n", 1);
+                                  add_to_contents_as_array (node_name_arg,
+                                                            spaces_after_arg);
+                                }
+                            }
+                        }
+                      else if (section_relation_up->element->e.c->cmd != CM_part)
+                        {
+                          char *section_up_texi
+                            = root_heading_command_to_texinfo (
+                                                section_relation_up->element);
+                          fprintf (stderr,
+            "BUG: Unexpected up section without associated node: %s\n",
+                                   section_up_texi);
+                          free (section_up_texi);
+                        }
+                    }
+                }
+              destroy_element (new_node_tree);
+            }
+        }
+      if (content->e.c->cmd == CM_node)
+        {
+          int is_target = (content->flags & EF_is_target);
+          if (is_target)
+            {
+              previous_node_relations = document->nodes_list.list[node_idx];
+              node_idx++;
+              /* reset node index taking into account the added nodes */
+              add_extra_integer (content, AI_key_node_number,
+                                 node_idx);
+            }
+        }
+    }
+
+  clear_c_hashmap (normalized_nr);
+  free (normalized_nr);
+
+  free (elements_with_added);
 }
 
 void
@@ -1247,34 +1954,6 @@ complete_node_tree_with_menus (DOCUMENT *document)
             }
         }
     }
-}
-
-static const NODE_RELATIONS *
-section_direction_associated_node (const SECTION_RELATIONS *section_relations,
-                                   enum directions direction)
-{
-  size_t i;
-  static const SECTION_RELATIONS * const *direction_bases[2];
-  direction_bases[0] = section_relations->section_directions;
-  direction_bases[1] = section_relations->toplevel_directions;
-  for (i = 0; i < sizeof (direction_bases) / sizeof (direction_bases[0]);
-       i++)
-    {
-      const SECTION_RELATIONS * const *directions
-        = direction_bases[i];
-      if (directions && directions[direction])
-        {
-          const SECTION_RELATIONS *direction_relation = directions[direction];
-          if (direction_bases[i] != section_relations->toplevel_directions
-              || direction == D_up
-              || direction_relation->element->e.c->cmd != CM_top)
-            {
-              if (direction_relation->associated_node)
-                return direction_relation->associated_node;
-            }
-        }
-    }
-  return 0;
 }
 
 /* Checks on structure related to menus. */

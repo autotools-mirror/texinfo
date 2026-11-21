@@ -2160,6 +2160,89 @@ protect_node_after_label_in_document (DOCUMENT *document)
   document->modified_information |= F_DOCM_tree;
 }
 
+/* ALTIMP Texinfo/ManipulateTree.pm */
+void
+protect_first_parenthesis (ELEMENT *element)
+{
+  size_t i;
+
+  if (element->e.c->contents.number <= 0)
+    return;
+  for (i = 0; i < element->e.c->contents.number; i++)
+    {
+      ELEMENT *content = element->e.c->contents.list[i];
+      const char *p;
+      if (!(type_data[content->type].flags & TF_text))
+        return;
+
+      if (content->type == ET_spaces_before_argument
+          || content->e.text->end == 0)
+        continue;
+
+      p = content->e.text->text;
+      if (*p == '(')
+        {
+          ELEMENT *new_command
+           = new_asis_command_with_text ("(", element, content->type);
+          ELEMENT *removed = 0;
+          /* count UTF-8 encoded Unicode characters for source marks locations */
+          uint8_t *u8_text = 0;
+          size_t current_position;
+          uint8_t *u8_p;
+          size_t u8_len;
+
+          if (content->source_mark_list)
+            {
+              u8_text = utf8_from_string (p);
+              u8_p = u8_text;
+
+              current_position = 0;
+
+              u8_len = u8_mbsnlen (u8_p, 1);
+              u8_p += u8_len;
+
+              current_position
+                = relocate_source_marks (content->source_mark_list,
+                    new_command->e.c->contents.list[0]->e.c->contents.list[0],
+                                     current_position, u8_len);
+              destroy_element_empty_source_mark_list (content);
+            }
+
+          if (!*(p+1))
+            /* should be the same as content */
+            removed = remove_from_contents (element, i);
+          else
+            {
+              /* remove leading open brace */
+              text_reset (content->e.text);
+              text_append (content->e.text, p+1);
+
+              if (u8_text && content->source_mark_list)
+                {
+                  SOURCE_MARK_LIST *source_mark_list = content->source_mark_list;
+                  content->source_mark_list = 0;
+
+                  u8_len = u8_mbsnlen (u8_p, u8_strlen (u8_p));
+                  u8_p += u8_len;
+
+                  current_position
+                    = relocate_source_marks (source_mark_list,
+                       content, current_position, u8_len);
+                  free (source_mark_list->list);
+                  free (source_mark_list);
+               }
+            }
+          insert_into_contents (element, new_command, i);
+          free (u8_text);
+          /* could destroy children too, but it should only be text, no
+             children */
+          if (removed)
+            destroy_element (removed);
+        }
+      return;
+    }
+}
+
 /*
  This converts a reference @-command to simple text using one of the
  arguments.  This is used to remove reference @-command from

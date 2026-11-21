@@ -88,6 +88,7 @@ ELEMENT *protect_node_after_label_in_tree (ELEMENT *tree);
 void protect_colon_in_document (DOCUMENT *document);
 void protect_comma_in_document (DOCUMENT *document);
 void protect_node_after_label_in_document (DOCUMENT *document);
+void protect_first_parenthesis (ELEMENT *element);
 
 ELEMENT *reference_to_arg_in_tree (ELEMENT *tree, DOCUMENT *document);
 

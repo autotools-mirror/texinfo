@@ -58,8 +58,6 @@ void complete_tree_nodes_menus_in_document (DOCUMENT *document,
                                             int use_sections);
 void complete_tree_nodes_missing_menu (DOCUMENT *document, int use_sections);
 int regenerate_master_menu (DOCUMENT *document, int use_sections);
-void insert_nodes_for_sectioning_commands (DOCUMENT *document,
-                                      int warn_duplicate_section_target);
 ELEMENT *protect_hashchar_at_line_beginning (ELEMENT *tree,
                                              DOCUMENT *document);
 void protect_hashchar_at_line_beginning_in_document (DOCUMENT *document);
