@@ -65,15 +65,11 @@ END {
           for (flag_idx in flags_array) {
             # ignore flags that are useful to determine the size of the
             # elements info array but are not directly used in code.
-            if (flags_array[flag_idx] != "braces" \
-                && flags_array[flag_idx] != "spaces_before" \
-                && flags_array[flag_idx] != "spaces_after") {
-              if (flags_str == "") {
-                flags_str = flags_array[flag_idx]
-              } else {
-                old_str = flags_str
-                flags_str = old_str "," flags_array[flag_idx]
-              }
+            if (flags_str == "") {
+              flags_str = flags_array[flag_idx]
+            } else {
+              old_str = flags_str
+              flags_str = old_str "," flags_array[flag_idx]
             }
           }
         }

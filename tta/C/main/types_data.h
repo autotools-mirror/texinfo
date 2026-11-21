@@ -24,16 +24,12 @@ typedef struct types_struct {
 
 extern const TYPE_DATA type_data[];
 
-/* also change swig_element_data.h when changing the flags here if needed */
+/* update swig_element_types.h TXI_TY_FLAGS_LIST if needed */
 #define TF_text               0x0001
-/* Used to determine elt_info_number in generated TYPE_DATA generated,
-   but not directly used in code
-#define TF_braces             0x0002
- */
-#define TF_with_command       0x0010
-#define TF_c_only             0x0020
-#define TF_leading_space      0x0040
-#define TF_trailing_space     0x0080
-#define TF_ignorable_text     0x0100
+#define TF_with_command       0x0002
+#define TF_c_only             0x0004
+#define TF_leading_space      0x0008
+#define TF_trailing_space     0x0010
+#define TF_ignorable_text     0x0020
 
 #endif
