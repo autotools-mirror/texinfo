@@ -4562,7 +4562,7 @@ sub _convert($$) {
                 or defined($element->{'extra'}->{'float_number'})))
            or $caption or $shortcaption) {
         _add_newline_if_needed($self);
-        my ($caption, $prepended)
+        my ($caption_element, $prepended)
           = Texinfo::Convert::Converter::float_name_caption($self, $element);
         if (defined($prepended)) {
           $prepended->{'type'} = '_frenchspacing';
@@ -4571,12 +4571,14 @@ sub _convert($$) {
           my $width = $self->convert_line($prepended);
           $self->{'text_element_context'}->[-1]->{'counter'} += $width;
         }
-        if (defined($caption)) {
+        if (defined($caption_element)) {
+          my $caption_element_args
+           = Texinfo::Common::get_non_empty_brace_args($caption_element);
           $self->{'format_context'}->[-1]->{'paragraph_count'} = 0;
           # no argument can only happen with bogus command without braces
-          if (exists($caption->{'contents'})) {
-            my $tree = $caption->{'contents'}->[0];
-            _convert($self, $tree);
+          if (defined($caption_element_args)
+              and defined($caption_element_args->[0])) {
+            _convert($self, $caption_element_args->[0]);
           }
         }
       }

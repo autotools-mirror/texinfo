@@ -6927,10 +6927,14 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
                   FORMAT_CONTEXT *top_format_context
                    = top_(format_context) (&self_plaintext->format_context);
                   top_format_context->paragraph_count = 0;
+                  CONST_ELEMENT_LIST *caption_element_args
+                           = get_non_empty_brace_args (caption_element);
         /* no argument can only happen with bogus command without braces */
-                  if (caption_element->e.c->contents.number)
+                  if (caption_element_args->number > 0
+                      && caption_element_args->list[0])
                     convert_to_plaintext_internal (self,
-                                   caption_element->e.c->contents.list[0]);
+                                           caption_element_args->list[0]);
+                  destroy_const_element_list (caption_element_args);
                 }
             }
         }
