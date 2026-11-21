@@ -354,22 +354,6 @@ txi_ext_element_attribute_string (const ELEMENT *element,
             return k->k.string;
           break;
           }
-        case extra_string_info:
-          {
-          int idx = associated_info_table[key].data;
-          switch (key)
-            {
-            case AI_key_alias_of:
-              if ((element->e.c->cmd
-                   || type_data[element->type].flags & TF_with_command)
-                  && element->e.c->string_info[idx])
-                return element->e.c->string_info[idx];
-              break;
-            default:
-              break;
-            }
-          break;
-          }
         default:
           break;
         }
@@ -544,28 +528,6 @@ txi_ext_set_element_attribute_string (ELEMENT *element, const char *attribute,
           {
           add_extra_string_dup (element, key, value);
           return 1;
-          break;
-          }
-        case extra_string_info:
-          {
-          int idx = associated_info_table[key].data;
-          switch (key)
-            {
-            case AI_key_alias_of:
-              if (element->e.c->cmd
-                  || type_data[element->type].flags & TF_with_command)
-                {
-                  free (element->e.c->string_info[idx]);
-                  if (value)
-                    element->e.c->string_info[idx] = strdup (value);
-                  else
-                    element->e.c->string_info[idx] = 0;
-                  return 1;
-                }
-              break;
-            default:
-              break;
-            }
           break;
           }
         default:

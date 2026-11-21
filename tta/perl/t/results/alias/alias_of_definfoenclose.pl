@@ -29,9 +29,8 @@ $result_tree_text{'alias_of_definfoenclose'} = '*document_root C1
    {empty_line:\\n}
   *paragraph C2
    *definfoenclose_command@phoo C1 l5
-   |INFO
-   |alias_of:{new}
    |EXTRA
+   |alias_of:{new}
    |begin:{;}
    |end:{:}
     *brace_container C1

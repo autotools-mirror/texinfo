@@ -1640,7 +1640,7 @@ end_line_misc_line (ELEMENT *current)
     {
       if (command_flags(current) & CF_index_entry_command)
         {
-          current->e.c->string_info[sit_command_name]
+          current->e.c->command_name
             = strdup (command_name(current->e.c->cmd));
         }
       /* All the other "line" commands. Check they have an argument. Empty

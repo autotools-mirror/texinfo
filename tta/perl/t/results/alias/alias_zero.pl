@@ -20,7 +20,7 @@ $result_tree_text{'alias_zero'} = '*document_root C1
      {spaces_after_argument:\\n}
   *paragraph C2
    *@strong C1 l2
-   |INFO
+   |EXTRA
    |alias_of:{0}
     *brace_container C1
      {g}

@@ -199,7 +199,6 @@ copy_associated_info (ASSOCIATED_INFO *info, ASSOCIATED_INFO *new_info,
         case extra_none:
         case extra_flag:
         case extra_element_info:
-        case extra_string_info:
           break;
         default:
           fatal ("copy_associated_info: unknown extra type");
@@ -282,15 +281,9 @@ copy_tree_internal (ELEMENT* current, ELEMENT_LIST *other_trees)
           }
     }
 
-  if (current->e.c->string_info)
+  if (current->e.c->command_name)
     {
-      int j;
-      int string_info_nr = 1;
-      if (type_data[current->type].flags & TF_with_command)
-        string_info_nr = 2;
-      for (j = 0; j < string_info_nr; j++)
-        if (current->e.c->string_info[j])
-          new->e.c->string_info[j] = strdup (current->e.c->string_info[j]);
+      new->e.c->command_name = strdup (current->e.c->command_name);
     }
 
   copy_associated_info (&current->e.c->extra_info, &new->e.c->extra_info,
@@ -1374,7 +1367,6 @@ print_element_info (ELEMENT *element, int level,
   int i;
   TEXT info_e_text;
   ADDITIONAL_INFO_NAME_VAL_LIST info_strings;
-  const char *cmdname;
 
   memset (&info_strings, 0, sizeof (ADDITIONAL_INFO_NAME_VAL_LIST));
 
@@ -1399,14 +1391,6 @@ print_element_info (ELEMENT *element, int level,
         }
     }
   free (info_e_text.text);
-
-  cmdname = element_command_name (element);
-  if (cmdname)
-    {
-      if (element->e.c->string_info[sit_alias_of])
-        add_info_name_string_value (&info_strings, "alias_of",
-                      element->e.c->string_info[sit_alias_of]);
-    }
 
   print_info_strings (&info_strings, level, prepended, result, "INFO");
 

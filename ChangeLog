@@ -1,5 +1,37 @@
 2026-11-21  Patrice Dumas  <pertusus@free.fr>
 
+	alias_of in extra, command_name separate, remove string_info
+
+	* tta/C/api_for_swig/swig_interface.c
+	(txi_ext_element_attribute_string)
+	(txi_ext_set_element_attribute_string), tta/C/main/build_perl_info.c
+	(element_to_perl_hash), tta/C/main/manipulate_tree.c
+	(print_element_info), tta/C/main/tree_types.h (AI_KEYS_LIST),
+	tta/C/parsetexi/macro.c (handle_macro), tta/C/parsetexi/parser.c
+	(process_remaining_on_line),
+	tta/C/tree_elements/build_perl_tree_elements.c
+	(build_element_attribute), tta/perl/Texinfo/ParserNonXS.pm
+	(_handle_macro, _process_remaining_on_line): store alias_of in extra,
+	not in info.  Remove store_info_string.
+
+	* tta/C/main/builtin_commands.c (element_command_name),
+	tta/C/main/convert_utils.c (table_item_content_tree),
+	tta/C/main/manipulate_tree.c (copy_tree_internal), tta/C/main/tree.c
+	(new_command_element, destroy_element), tta/C/main/tree_types.h
+	(CONTAINER), tta/C/main/utils.c (new_element_from_names),
+	tta/C/parsetexi/end_line.c (end_line_misc_line),
+	tta/C/parsetexi/handle_commands.c (handle_brace_command),
+	tta/C/parsetexi/macro.c (handle_macro): add command_name field in
+	CONTAINER and use it for the command_name of elements that have a
+	command name dynamically generated instead of string_info
+	sit_command_name.  Remove string_info from CONTAINER.
+
+	* tta/C/main/manipulate_tree.c (copy_associated_info),
+	tta/C/main/tree_types.h (enum extra_type): remove enum
+	string_info_type. Remove extra_string_info.
+
+2026-11-21  Patrice Dumas  <pertusus@free.fr>
+
 	inserted in extra or as inserted_text
 
 	* tta/perl/Texinfo/Convert/LaTeX.pm (_convert): remove condition with

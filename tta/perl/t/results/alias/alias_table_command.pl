@@ -24,7 +24,7 @@ $result_tree_text{'alias_table_command'} = '*document_root C1
     *block_line_arg C3
      {spaces_before_argument: }
      *@code l3
-     |INFO
+     |EXTRA
      |alias_of:{myalias}
      {spaces_after_argument:\\n}
    *table_entry C1

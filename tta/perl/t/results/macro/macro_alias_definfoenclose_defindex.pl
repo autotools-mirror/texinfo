@@ -101,7 +101,7 @@ $result_tree_text{'macro_alias_definfoenclose_defindex'} = '*document_root C5
     {spaces_after_argument:\\n}
   *paragraph C2
    *@strong C1 l16
-   |INFO
+   |EXTRA
    |alias_of:{phooindex}
     *brace_container C1
      {acc}
@@ -212,7 +212,7 @@ $result_tree_text{'macro_alias_definfoenclose_defindex'} = '*document_root C5
     {spaces_after_argument:\\n}
   *paragraph C2
    *@strong C1 l38
-   |INFO
+   |EXTRA
    |alias_of:{phooindex}
     *brace_container C1
      {aii}
@@ -259,7 +259,7 @@ $result_tree_text{'macro_alias_definfoenclose_defindex'} = '*document_root C5
     {spaces_after_argument:\\n}
   *paragraph C2
    *@strong C1 l47
-   |INFO
+   |EXTRA
    |alias_of:{phooindex}
     *brace_container C1
      {all}

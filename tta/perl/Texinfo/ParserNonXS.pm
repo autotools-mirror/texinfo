@@ -5477,9 +5477,9 @@ sub _handle_macro($$$$$$) {
                         'contents' => []});
 
   if ($from_alias) {
-    $macro_call_element->{'info'} = {}
-       if (!exists($macro_call_element->{'info'}));
-    $macro_call_element->{'info'}->{'alias_of'} = $from_alias;
+    $macro_call_element->{'extra'} = {}
+       if (!exists($macro_call_element->{'extra'}));
+    $macro_call_element->{'extra'}->{'alias_of'} = $from_alias;
   }
 
   if ($expanded_macro->{'cmdname'} eq 'linemacro') {
@@ -7875,8 +7875,9 @@ sub _process_remaining_on_line($$$$) {
     }
 
     if (defined($from_alias) and $command_element) {
-      $command_element->{'info'} = {} if (!exists($command_element->{'info'}));
-      $command_element->{'info'}->{'alias_of'} = $from_alias;
+      $command_element->{'extra'} = {}
+        if (!exists($command_element->{'extra'}));
+      $command_element->{'extra'}->{'alias_of'} = $from_alias;
     }
   } elsif ($open_brace) {
     substr($line, 0, 1) = '';

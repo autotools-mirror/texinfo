@@ -1131,14 +1131,14 @@ table_item_content_tree (CONVERTER *self, const ELEMENT *element)
           const char *end = lookup_extra_string (command_as_argument,
                                                  AI_key_end);
           const char *command_name
-            = command_as_argument->e.c->string_info[sit_command_name];
+            = command_as_argument->e.c->command_name;
 
           if (begin)
             add_extra_string_dup (command, AI_key_begin, begin);
           if (end)
             add_extra_string_dup (command, AI_key_end, end);
           if (command_name)
-            command->e.c->string_info[sit_command_name] = strdup (command_name);
+            command->e.c->command_name = strdup (command_name);
         }
       if (command_data[data_cmd].data == BRACE_context)
         {

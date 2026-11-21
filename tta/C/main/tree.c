@@ -84,15 +84,8 @@ ELEMENT *
 new_command_element (enum element_type type, enum command_id cmd)
 {
   ELEMENT *e = new_element (type);
-  int string_info_nr = 1;
 
   e->e.c->cmd = cmd;
-
-  if (type_data[type].flags & TF_with_command)
-    string_info_nr = 2;
-
-  e->e.c->string_info = (char **) malloc (string_info_nr * sizeof (char *));
-  memset (e->e.c->string_info, 0, string_info_nr * sizeof (char *));
 
   return e;
 }
@@ -300,7 +293,6 @@ destroy_element (ELEMENT *e)
   else
     {
       int i;
-      int string_info_nr = 0;
   /* Note the pointers in the list are not themselves freed. */
       free (e->e.c->contents.list);
 
@@ -311,14 +303,7 @@ destroy_element (ELEMENT *e)
           destroy_element_and_children (e->elt_info[i]);
       free (e->elt_info);
 
-      if (type_data[e->type].flags & TF_with_command)
-        string_info_nr = 2;
-      else if (e->e.c->cmd != CM_NONE)
-        string_info_nr = 1;
-
-      for (i = 0; i < string_info_nr; i++)
-        free (e->e.c->string_info[i]);
-      free (e->e.c->string_info);
+      free (e->e.c->command_name);
 
       free (e->e.c);
     }

@@ -961,8 +961,8 @@ handle_macro (ELEMENT *current, const char **line_inout,
      approximate. */
 
   if (from_alias != CM_NONE)
-     macro_call_element->e.c->string_info[sit_alias_of]
-       = strdup (command_name (from_alias));
+     add_extra_string_dup (macro_call_element, AI_key_alias_of,
+                           command_name (from_alias));
 
   if (macro->e.c->cmd == CM_linemacro)
     macro_source_mark = new_source_mark (SM_type_linemacro_expansion);
@@ -971,8 +971,7 @@ handle_macro (ELEMENT *current, const char **line_inout,
   macro_source_mark->element = macro_call_element;
   register_source_mark (current, macro_source_mark);
 
-  macro_call_element->e.c->string_info[sit_command_name]
-    = strdup (command_name(cmd));
+  macro_call_element->e.c->command_name = strdup (command_name(cmd));
 
   if (error)
     {

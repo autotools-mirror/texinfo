@@ -48,9 +48,8 @@ $result_tree_text{'alias_of_added_index'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@sliindex C1 l8
-  |INFO
-  |alias_of:{new}
   |EXTRA
+  |alias_of:{new}
   |element_node:{Top}
   |index_entry:I{sli,1}
    *line_arg C3

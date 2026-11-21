@@ -78,9 +78,9 @@ element_command_name (const ELEMENT *e)
       && e->e.c->cmd != CM_index_entry_command
       && e->e.c->cmd != CM_definfoenclose_command)
     return command_data[e->e.c->cmd].cmdname;
-  else if (type_data[e->type].flags & TF_with_command)
+  else if (e->e.c->command_name)
     {
-      const char *cmdname = e->e.c->string_info[sit_command_name];
+      const char *cmdname = e->e.c->command_name;
       return cmdname;
     }
 

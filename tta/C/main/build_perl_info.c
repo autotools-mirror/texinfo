@@ -776,20 +776,6 @@ setup_info_hv (ELEMENT *e, HV **info_hv)
 }
 
 static void
-store_info_string (ELEMENT *e, const char *string,
-                   const char *key, HV **info_hv)
-{
-  dTHX;
-
-  if (!string)
-    return;
-
-  setup_info_hv (e, info_hv);
-  hv_store (*info_hv, key, strlen (key),
-            newSVpv_utf8 (string, strlen (string)), 0);
-}
-
-static void
 store_extra_flag (ELEMENT *e, const char *key, HV **extra_hv)
 {
   dTHX;
@@ -894,7 +880,6 @@ element_to_perl_hash (ELEMENT *e, int avoid_recursion)
   HV *info_hv = 0;
   HV *extra_hv = 0;
   HV *element_hv;
-  const char *cmdname;
 
   dTHX;
 
@@ -990,14 +975,6 @@ element_to_perl_hash (ELEMENT *e, int avoid_recursion)
   store_flag(inserted)
 
 #undef store_flag
-
-  cmdname = element_command_name (e);
-  /* process info_string array */
-  if (cmdname)
-    {
-      store_info_string (e, e->e.c->string_info[sit_alias_of],
-                         "alias_of", &info_hv);
-    }
 
   /* process elt_info array */
   /* currently 0 for all the elements */

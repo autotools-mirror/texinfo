@@ -1122,7 +1122,7 @@ new_element_from_names (const char *type_name, const char *command_name,
       if (type_data[e_type].flags & TF_with_command)
         {
           ELEMENT *e = new_command_element (e_type, CM_NONE);
-          e->e.c->string_info[sit_command_name] = strdup (command_name);
+          e->e.c->command_name = strdup (command_name);
           return e;
         }
 

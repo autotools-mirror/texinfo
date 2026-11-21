@@ -39,7 +39,7 @@ $result_tree_text{'texinfo_command_alias'} = '*document_root C1
    >SOURCEMARKS
    >macro_expansion<start;1>
     >*macro_call@mystrong C1
-    >|INFO
+    >|EXTRA
     >|alias_of:{strong}
      >*brace_arg C1
       >{macro_call_arg_text:aa}
@@ -55,9 +55,8 @@ $result_tree_text{'texinfo_command_alias'} = '*document_root C1
   {empty_line:\\n}
   *paragraph C2
    *definfoenclose_command@mystrong C1 l11
-   |INFO
-   |alias_of:{strong}
    |EXTRA
+   |alias_of:{strong}
    |begin:{;}
    |end:{:}
     *brace_container C1

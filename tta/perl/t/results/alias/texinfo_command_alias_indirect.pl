@@ -47,7 +47,7 @@ $result_tree_text{'texinfo_command_alias_indirect'} = '*document_root C1
    >SOURCEMARKS
    >macro_expansion<start;1>
     >*macro_call@mystrong C1
-    >|INFO
+    >|EXTRA
     >|alias_of:{new}
      >*brace_arg C1
       >{macro_call_arg_text:aa}

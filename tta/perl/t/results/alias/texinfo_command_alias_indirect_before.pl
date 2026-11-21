@@ -44,7 +44,7 @@ $result_tree_text{'texinfo_command_alias_indirect_before'} = '*document_root C1
    {empty_line:\\n}
   *paragraph C2
    *@strong C1 l9
-   |INFO
+   |EXTRA
    |alias_of:{new}
     *brace_container C1
      {aa}

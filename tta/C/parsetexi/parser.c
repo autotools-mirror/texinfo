@@ -2583,8 +2583,8 @@ process_remaining_on_line (ELEMENT **current_inout, const char **line_inout)
         }
       if (from_alias != CM_NONE && command_element)
         {
-          command_element->e.c->string_info[sit_alias_of]
-            = strdup (command_name (from_alias));
+          add_extra_string_dup (command_element, AI_key_alias_of,
+                                command_name (from_alias));
         }
     }
   /* "Separator" characters */

@@ -28,8 +28,7 @@
 #  with_command: type corresponding to @-command with name determined dynamically.
 #                Index commands (that can be added with defindex, for
 #                example), definfoenclose'd commands, user-defined macro calls.
-#                Used in C specific code for memory management and when
-#                passing to Perl, but also to get the command name string.
+#                Used in C when passing from Perl.
 #  c_only: element type associated to @-commands appearing only in C, needed
 #          because each could correspond to a different need for associated info
 #          element or strings.  Flag only used to avoid passing to Perl and from

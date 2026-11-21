@@ -59,8 +59,6 @@ enum extra_type {
 
    /* ELEMENT elt_info */
    extra_element_info,
-   /* CONTAINER string_info */
-   extra_string_info,
 };
 
 /* tree element flags */
@@ -95,14 +93,6 @@ enum elt_info_type {
 };
  */
 
-/* indices in ELEMENT string_info */
-enum string_info_type {
-   sit_alias_of,  /* every @-command + macro_call */
-   sit_command_name = 1, /* ET_definfoenclose_command, ET_index_entry_command
-                            and macro_call.  Not in Perl info, in Perl cmdname
-                            can be used instead. */
-};
-
 /* sync string_list with Texinfo/ManipulateTree.pm
    _print_element_associated_info list for ARRAY ref
    and element_oot with @extra_out_of_tree (currently none)
@@ -125,6 +115,7 @@ enum string_info_type {
   ai_key(heading_number, integer, 0) \
   ai_key(section_number, integer, 0) \
   \
+  ai_key(alias_of, string, 0) \
   ai_key(begin, string, 0) \
   ai_key(def_command, string, 0) \
   ai_key(documentlanguage, string, 0) \
@@ -166,9 +157,6 @@ enum string_info_type {
   ai_key(indent, flag, EF_indent) \
   ai_key(noindent, flag, EF_noindent) \
   ai_key(isindex, flag, EF_isindex) \
-  \
-  ai_key(alias_of, string_info, sit_alias_of) \
-
 
 /* Keys used in ASSOCIATED_INFO and other associated info structures. */
 enum ai_key_name {
@@ -245,8 +233,10 @@ typedef struct CONTAINER {
 
     ASSOCIATED_INFO extra_info;
     struct OUTPUT_UNIT *associated_unit;
-    /* depends on the element */
-    char **string_info;
+   /* ET_definfoenclose_command, ET_index_entry_command
+      and macro_call.  Not in Perl, in Perl cmdname
+      can be used instead. */
+    char *command_name;
     enum command_id cmd;
 } CONTAINER;
 

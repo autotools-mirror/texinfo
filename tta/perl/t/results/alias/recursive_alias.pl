@@ -37,7 +37,7 @@ $result_tree_text{'recursive_alias'} = '*document_root C1
    {empty_line:\\n}
   *paragraph C2
    *@strong C1 l7
-   |INFO
+   |EXTRA
    |alias_of:{other}
     *brace_container C1
      {aa}

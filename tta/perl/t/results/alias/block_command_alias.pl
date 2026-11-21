@@ -20,7 +20,7 @@ $result_tree_text{'block_command_alias'} = '*document_root C1
      {spaces_after_argument:\\n}
    {empty_line:\\n}
   *@lisp C2 l3
-  |INFO
+  |EXTRA
   |alias_of:{lang}
    *arguments_line C1
     *block_line_arg C1

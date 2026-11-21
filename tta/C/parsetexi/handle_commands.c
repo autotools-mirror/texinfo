@@ -1387,8 +1387,7 @@ handle_brace_command (ELEMENT *current, const char **line_inout,
               add_extra_string_dup (command_e, AI_key_begin, ie->begin);
               add_extra_string_dup (command_e, AI_key_end, ie->end);
             }
-          command_e->e.c->string_info[sit_command_name]
-            = strdup (command_name(cmd));
+          command_e->e.c->command_name = strdup (command_name(cmd));
         }
       else if (cmd == CM_kbd)
         {
