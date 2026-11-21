@@ -1,5 +1,10 @@
 2026-11-21  Patrice Dumas  <pertusus@free.fr>
 
+	* tta/C/main/types_data.h (TYPE_DATA), tta/C/main/element_types.awk:
+	remove elt_info_number field of TYPE_DATA.
+
+2026-11-21  Patrice Dumas  <pertusus@free.fr>
+
 	Remove info associated info
 
 	* tta/C/main/manipulate_tree.c (copy_tree_internal)

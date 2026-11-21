@@ -19,7 +19,6 @@
 typedef struct types_struct {
   char *name;
   unsigned long flags;
-  int elt_info_number; /* Number of needed elt_info elements */
 } TYPE_DATA;
 
 extern const TYPE_DATA type_data[];

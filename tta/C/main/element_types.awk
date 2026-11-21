@@ -58,7 +58,6 @@ END {
     for (line_idx in types) {
         t = types[line_idx]
         flags_str = ""
-        elt_info_number = 0;
         if (type_flags[t] != "") {
           split(type_flags[t], flags_array, ",")
           flags_str = "";
@@ -79,7 +78,7 @@ END {
             flags = "TF_" flags_str
             gsub (/,/, " | TF_", flags)
         }
-        print "{\"" t "\", " flags ", " elt_info_number "}," > TDC
+        print "{\"" t "\", " flags "}," > TDC
     }
     print "};" > TDC
 }
