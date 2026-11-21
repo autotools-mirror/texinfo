@@ -59,6 +59,7 @@ foreach my $type (
             'spaces_after_close_brace',
             'spaces_before_argument',
             'spaces_after_argument',
+            'verb_delimiter',
     ) {
   $ignored_types{$type} = 1;
 }

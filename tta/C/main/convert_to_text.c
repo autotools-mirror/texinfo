@@ -521,6 +521,7 @@ convert_to_text_internal (const ELEMENT *element, TEXT_OPTIONS *text_options,
           || element->type == ET_spaces_after_close_brace
           || element->type == ET_spaces_before_argument
           || element->type == ET_spaces_after_argument
+          || element->type == ET_verb_delimiter
          )
         return;
 

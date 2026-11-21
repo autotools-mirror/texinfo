@@ -39,14 +39,14 @@ $result_tree_text{'verb_with_brace_in_macro_call'} = '*document_root C1
       >{macro_call_arg_text:verb :}
   *paragraph C1
    *@verb C1 l6:@mycommand
-   |INFO
-   |delimiter:{:}
-    *brace_container C3
+    *brace_container C5
+     {verb_delimiter::}
      {raw: in }|verb :|}
      >SOURCEMARKS
      >macro_expansion<end;1><p:13>
      {raw:, other, last}\\n}
      {raw:\\n}
+     {verb_delimiter::}
 ';
 
 

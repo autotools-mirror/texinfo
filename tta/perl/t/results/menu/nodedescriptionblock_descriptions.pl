@@ -137,10 +137,10 @@ $result_tree_text{'nodedescriptionblock_descriptions'} = '*document_root C13
       {slightly long}
     { and }
     *@verb C1 l16
-    |INFO
-    |delimiter:{:}
-     *brace_container C1
+     *brace_container C3
+      {verb_delimiter::}
       {raw:vv somewhat}
+      {verb_delimiter::}
     { }
     *@ringaccent C2 l16
      {spaces_after_cmd_before_arg: }

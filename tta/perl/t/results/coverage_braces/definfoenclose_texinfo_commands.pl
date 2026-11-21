@@ -42,10 +42,10 @@ $result_tree_text{'definfoenclose_texinfo_commands'} = '*document_root C1
    {empty_line:\\n}
   *paragraph C2
    *@verb C1 l6
-   |INFO
-   |delimiter:{*}
-    *brace_container C1
+    *brace_container C3
+     {verb_delimiter:*}
      {raw:aaa}
+     {verb_delimiter:*}
    {.\\n}
   {empty_line:\\n}
   *paragraph C4

@@ -14,8 +14,6 @@ $result_tree_text{'verb_at_end_of_line_not_closed'} = '*document_root C1
   *paragraph C2
    {verb at end of line }
    *@verb C1 l1
-   |INFO
-   |delimiter:{}
     *brace_container C2
      {raw:\\n}
      {raw:\\n}

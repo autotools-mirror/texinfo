@@ -1995,7 +1995,8 @@ protect_text (ELEMENT *current, const char *to_protect)
      only text elements */
   if (type_data[current->type].flags & TF_text
       && current->e.text->end > 0 && !(current->type == ET_raw
-                                    || current->type == ET_rawline_text)
+                                       || current->type == ET_rawline_text
+                                       || current->type == ET_verb_delimiter)
       && strpbrk (current->e.text->text, to_protect))
     {
       ELEMENT_LIST *container = new_list ();

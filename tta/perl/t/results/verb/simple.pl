@@ -13,10 +13,10 @@ $result_tree_text{'simple'} = '*document_root C1
   *preamble_before_content
   *paragraph C1
    *@verb C1 l1
-   |INFO
-   |delimiter:{.}
-    *brace_container C1
+    *brace_container C3
+     {verb_delimiter:.}
      {raw:  }   .  }
+     {verb_delimiter:.}
 ';
 
 

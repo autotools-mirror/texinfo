@@ -29,13 +29,13 @@ $result_tree_text{'verb_in_xref'} = '*document_root C1
     *brace_arg C2
      {spaces_before_argument: }
      *@verb C1 l3
-     |INFO
-     |delimiter:{*}
-      *brace_container C4
+      *brace_container C6
+       {verb_delimiter:*}
        {raw:with\\n}
        {raw:verb\\n}
        {raw:\\n}
        {raw:ggg }
+       {verb_delimiter:*}
    {.\\n}
 ';
 

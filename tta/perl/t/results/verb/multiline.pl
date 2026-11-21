@@ -13,12 +13,12 @@ $result_tree_text{'multiline'} = '*document_root C1
   *preamble_before_content
   *paragraph C2
    *@verb C1 l1
-   |INFO
-   |delimiter:{@}
-    *brace_container C3
+    *brace_container C5
+     {verb_delimiter:@}
      {raw:\\n}
      {raw:qdsqsddqsdsq\\n}
      {raw:\\n}
+     {verb_delimiter:@}
    {after verb.}
 ';
 

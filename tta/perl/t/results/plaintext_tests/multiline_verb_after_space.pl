@@ -14,11 +14,11 @@ $result_tree_text{'multiline_verb_after_space'} = '*document_root C1
   *paragraph C3
    {AA }
    *@verb C1 l1
-   |INFO
-   |delimiter:{*}
-    *brace_container C2
+    *brace_container C4
+     {verb_delimiter:*}
      {raw:aa\\n}
      {raw:bb}
+     {verb_delimiter:*}
    {.\\n}
 ';
 

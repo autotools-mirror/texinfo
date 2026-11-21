@@ -47,10 +47,10 @@ $result_tree_text{'nested_in_sc'} = '*document_root C1
          {expl}
        {, \\n}
        *@verb C1 l2
-       |INFO
-       |delimiter:{:}
-        *brace_container C1
+        *brace_container C3
+         {verb_delimiter::}
          {raw:in verb}
+         {verb_delimiter::}
    {\\n}
 ';
 

@@ -51,10 +51,10 @@ $result_tree_text{'one_argument_leading_trailing_spaces'} = '*document_root C1
      { w }
    { }
    *@verb C1 l3
-   |INFO
-   |delimiter:{:}
-    *brace_container C1
+    *brace_container C3
+     {verb_delimiter::}
      {raw: verb }
+     {verb_delimiter::}
    {.\\n}
    *@^ C1 l4
     *brace_container C1

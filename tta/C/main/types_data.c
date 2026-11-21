@@ -26,6 +26,7 @@ const TYPE_DATA type_data[] = {
 {"spaces_after_argument", TF_text | TF_ignorable_text, 0},
 {"spaces_before_argument", TF_text | TF_leading_space | TF_ignorable_text, 0},
 {"spaces_after_cmd_before_arg", TF_text | TF_ignorable_text, 0},
+{"verb_delimiter", TF_text | TF_ignorable_text, 0},
 {"document_root", 0, 0},
 {"root_line", 0, 0},
 {"before_node_section", 0, 0},

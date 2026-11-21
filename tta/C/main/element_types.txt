@@ -74,8 +74,8 @@ other_text                                text
 # before and after arguments, to be ignored
 spaces_after_argument                     text,ignorable_text
 spaces_before_argument                    text,leading_space,ignorable_text
-# in info text elements of the same name
 spaces_after_cmd_before_arg               text,ignorable_text
+verb_delimiter                            text,ignorable_text
 
 # Containers
 document_root

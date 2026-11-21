@@ -1830,25 +1830,26 @@ void
 process_verb_contents (ELEMENT *current, const char **line_inout)
 {
   const char *q;
-  const char *delimiter
-    = current->e.c->parent->e.c->string_info[sit_delimiter];
+  const TEXT *delimiter = 0;
   const char *line = *line_inout;
 
-  int delimiter_len = strlen (delimiter);
+  if (current->e.c->contents.number > 0
+      && current->e.c->contents.list[0]->type == ET_verb_delimiter)
+    delimiter = current->e.c->contents.list[0]->e.text;
 
   while (1)
     {
-      if (delimiter_len)
+      if (delimiter)
         {
           /* Look forward for the delimiter character followed by a close
              brace. */
           q = line;
           while (1)
             {
-              q = strstr (q, delimiter);
-              if (!q || q[delimiter_len] == '}')
+              q = strstr (q, delimiter->text);
+              if (!q || q[delimiter->end] == '}')
                 break;
-              q += delimiter_len;
+              q += delimiter->end;
             }
         }
       else
@@ -1867,7 +1868,15 @@ process_verb_contents (ELEMENT *current, const char **line_inout)
               add_to_contents_as_array (current, e);
             }
           debug ("C|END VERB");
-          line = q + delimiter_len;
+          line = q;
+          if (delimiter)
+            {
+              line += delimiter->end;
+              ELEMENT *verb_delimiter_e = new_text_element (ET_verb_delimiter);
+              text_append_n (verb_delimiter_e->e.text, delimiter->text,
+                             delimiter->end);
+              add_to_contents_as_array (current, verb_delimiter_e);
+            }
           /* The '}' will close the @verb command in handle_separator. */
           break;
         }

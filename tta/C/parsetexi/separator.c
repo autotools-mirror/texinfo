@@ -41,6 +41,7 @@
 #include "commands.h"
 #include "debug_parser.h"
 #include "errors_parser.h"
+#include "source_marks.h"
 #include "context_stack.h"
 #include "input.h"
 /* check_register_target_element_label */
@@ -84,22 +85,28 @@ handle_open_brace (ELEMENT *current, const char **line_inout)
               if (!line)
                 line = "";
             }
-          /* Save the deliminating character in 'delimiter'. */
           if (!*line || *line == '\n')
             {
               line_error ("@verb without associated character");
-              current->e.c->parent->e.c->string_info[sit_delimiter]
-                = strdup ("");
             }
           else
             {
+              ELEMENT *verb_delimiter_e = new_text_element (ET_verb_delimiter);
               /* Count any UTF-8 continuation bytes. */
               int char_len = 1;
               while ((line[char_len] & 0xC0) == 0x80)
                 char_len++;
-              current->e.c->parent->e.c->string_info[sit_delimiter]
-                = strndup (line, char_len);
+              text_append_n (verb_delimiter_e->e.text, line, char_len);
               line += char_len;
+              /* if there is already an element it can only be an element added
+                 by _next_text for source mark. */
+              while (current->e.c->contents.number > 0)
+                {
+                  ELEMENT *sm_element = remove_from_contents (current, 0);
+                  transfer_source_marks (sm_element, verb_delimiter_e, 0);
+                  destroy_element (sm_element);
+                }
+              add_to_contents_as_array (current, verb_delimiter_e);
             }
         }
       else if (parsed_command_data(cmd).data == BRACE_context)

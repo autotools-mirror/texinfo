@@ -26,12 +26,12 @@ T}}
     {spaces_before_argument: }
     {in section }
     *@verb C1 l1
-    |INFO
-    |delimiter:{T}
-     *brace_container C3
+     *brace_container C5
+      {verb_delimiter:T}
       {raw:ruc\\n}
       {raw:\\n}
       {raw:Now text.\\n}
+      {verb_delimiter:T}
 ';
 
 

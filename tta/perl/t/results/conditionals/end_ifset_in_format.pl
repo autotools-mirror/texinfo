@@ -93,11 +93,11 @@ $result_tree_text{'end_ifset_in_format'} = '*document_root C1
       >{spaces_after_argument:\\n}
   *paragraph C2
    *@verb C1 l18
-   |INFO
-   |delimiter:{%}
-    *brace_container C2
+    *brace_container C4
+     {verb_delimiter:%}
      {raw:\\n}
      {raw:@end ifset\\n}
+     {verb_delimiter:%}
    {\\n}
    >SOURCEMARKS
    >expanded_conditional_command<end;3><p:1>

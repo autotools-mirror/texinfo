@@ -71,10 +71,10 @@ $result_tree_text{'complex_argument'} = '*document_root C1
       >>macro_arg_escape_backslash<3><p:280>
   *paragraph C11
    *@verb C1 l38:@macrothree
-   |INFO
-   |delimiter:{%}
-    *brace_container C1
+    *brace_container C3
+     {verb_delimiter:%}
      {raw: @macrotwo }
+     {verb_delimiter:%}
    {\\n}
    *@c C1
     *line_arg C3

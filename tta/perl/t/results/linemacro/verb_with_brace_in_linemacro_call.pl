@@ -40,10 +40,10 @@ $result_tree_text{'verb_with_brace_in_linemacro_call'} = '*document_root C1
       >{macro_call_arg_text::} other last}
   *paragraph C2
    *@verb C1 l5:@mycommand
-   |INFO
-   |delimiter:{:}
-    *brace_container C1
+    *brace_container C3
+     {verb_delimiter::}
      {raw: in }, verb }
+     {verb_delimiter::}
    { other last\\n}
    >SOURCEMARKS
    >linemacro_expansion<end;1><p:11>

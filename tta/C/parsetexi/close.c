@@ -51,7 +51,7 @@ close_brace_command (ELEMENT *current,
                      enum command_id interrupting_cmd,
                      int missing_brace)
 {
-  const char *delimiter;
+  const TEXT *verb_delimiter = 0;
 
   counter_pop (&count_remaining_args);
 
@@ -79,14 +79,36 @@ close_brace_command (ELEMENT *current,
   if (command_flags(current) & CF_contain_basic_inline)
     (void) pop_(command) (&nesting_context.basic_inline_stack);
 
-  if (current->e.c->cmd != CM_verb)
-    goto yes;
-  delimiter = current->e.c->string_info[sit_delimiter];
-  if (!delimiter || !*delimiter)
-    goto yes;
-  if (0)
+  if (current->e.c->cmd == CM_verb)
+    verb_delimiter = get_verb_delimiter (current);
+
+  if (verb_delimiter)
     {
-  yes:
+      if (missing_brace)
+        {
+          size_t i;
+          for (i = 0; i < current->e.c->contents.number; i++)
+            {
+              ELEMENT *content = current->e.c->contents.list[i];
+              if (content->type == ET_brace_container)
+                {
+                  ELEMENT *verb_delimiter_e
+                    = new_text_element (ET_verb_delimiter);
+                  text_append_n (verb_delimiter_e->e.text,
+                                 verb_delimiter->text,
+                                 verb_delimiter->end);
+                  add_to_contents_as_array (content, verb_delimiter_e);
+                }
+            }
+
+          command_error (current,
+                      "@%s missing closing delimiter sequence: %s}",
+                      command_name(current->e.c->cmd),
+                      verb_delimiter->text);
+        }
+    }
+  else
+    {
       if (closed_block_cmd)
         command_error (current,
                         "@end %s seen before @%s closing brace",
@@ -101,13 +123,6 @@ close_brace_command (ELEMENT *current,
          command_error (current,
                         "@%s missing closing brace",
                         command_name(current->e.c->cmd));
-    }
-  else if (missing_brace)
-    {
-      command_error (current,
-                      "@%s missing closing delimiter sequence: %s}",
-                      command_name(current->e.c->cmd),
-                      delimiter);
     }
   current = current->e.c->parent;
   return current;

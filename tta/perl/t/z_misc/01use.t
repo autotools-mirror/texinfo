@@ -63,15 +63,16 @@ my $manual_tree =
                                                   'contents' => [
                                                     Texinfo::TreeElement::new({
                                                                'contents' => [
+                                                     Texinfo::TreeElement::new({ 'text' => ':',
+                                                                    'type' => 'verb_delimiter'}),
                                                                     # {
                                                      Texinfo::TreeElement::new({ 'text' => ' in verb } ',
-                                                                    'type' => 'raw' })
+                                                                    'type' => 'raw' }),
+                                                     Texinfo::TreeElement::new({ 'text' => ':',
+                                                                    'type' => 'verb_delimiter'}),
                                                                 ],
                                                                 'type' => 'brace_container',
                                                             }) ],
-                                                  'info' => {
-                                                    'delimiter' => ':'
-                                                  }
                                                 }),
                              Texinfo::TreeElement::new({ 'cmdname' => '@'}),
                              Texinfo::TreeElement::new({ 'text' => ".\n"}),

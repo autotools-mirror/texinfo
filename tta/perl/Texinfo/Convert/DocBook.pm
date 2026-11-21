@@ -241,6 +241,7 @@ foreach my $text_type (
             'spaces_at_end',
             'spaces_before_argument',
             'spaces_after_argument',
+            'verb_delimiter',
     ) {
   $ignored_text_types{$text_type} = 1;
 }

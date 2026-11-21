@@ -34,14 +34,14 @@ $result_tree_text{'verb_not_closed'} = '*document_root C1
       >{macro_call_arg_text:@verb{: in verb\\n\\n}
   *paragraph C1
    *@verb C1 l6:@mycommand
-   |INFO
-   |delimiter:{:}
-    *brace_container C3
+    *brace_container C5
+     {verb_delimiter::}
      {raw: in verb\\n}
      {raw:\\n}
      {raw:,  }
      >SOURCEMARKS
      >linemacro_expansion<end;1><p:3>
+     {verb_delimiter::}
 ';
 
 

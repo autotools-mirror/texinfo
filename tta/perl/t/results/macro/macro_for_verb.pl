@@ -32,15 +32,14 @@ $result_tree_text{'macro_for_verb'} = '*document_root C1
      >*brace_arg
   *paragraph C2
    *@verb C1 l5:@verbopen
-   |INFO
-   |delimiter:{@}
-    *brace_container C4
-     {}
+    *brace_container C5
+     {verb_delimiter:@}
      >SOURCEMARKS
      >macro_expansion<end;1>
      {raw: some text\\n}
      {raw:\\n}
      {raw:@code\\n}
+     {verb_delimiter:@}
    {\\n}
 ';
 

@@ -82,6 +82,7 @@ convert_to_normalized_internal (const ELEMENT *e, TEXT *result)
           && e->type != ET_spaces_after_close_brace
           && e->type != ET_spaces_before_argument
           && e->type != ET_spaces_after_argument
+          && e->type != ET_verb_delimiter
           && e->e.text->end > 0)
         {
           char *text_norm_spaces = collapse_spaces (e->e.text->text);

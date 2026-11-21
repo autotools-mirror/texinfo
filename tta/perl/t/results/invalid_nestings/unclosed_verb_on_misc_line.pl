@@ -18,10 +18,10 @@ $result_tree_text{'unclosed_verb_on_misc_line'} = '*document_root C1
      {spaces_before_argument: }
      {name }
      *@verb C1 l1
-     |INFO
-     |delimiter:{f}
-      *brace_container C1
+      *brace_container C3
+       {verb_delimiter:f}
        {raw:ile.texi}
+       {verb_delimiter:f}
 ';
 
 

@@ -131,12 +131,6 @@ convert_to_texinfo_internal (const ELEMENT *e, TEXT *result)
                           if (arg_nr == 0)
                             {
                               ADD("{");
-                              if (cmd == CM_verb)
-                                {
-                                  const char *delimiter
-                                    = e->e.c->string_info[sit_delimiter];
-                                  ADD(delimiter);
-                                }
                               braces = 1;
                             }
                           else
@@ -145,13 +139,6 @@ convert_to_texinfo_internal (const ELEMENT *e, TEXT *result)
                       arg_nr++;
                     }
                   convert_to_texinfo_internal (arg, result);
-                }
-
-
-              if (cmd == CM_verb)
-                {
-                  const char *delimiter = e->e.c->string_info[sit_delimiter];
-                  ADD(delimiter);
                 }
 
               if (braces)

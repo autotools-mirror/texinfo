@@ -1080,6 +1080,7 @@ sub non_trailing_tree($) {
   return $result;
 }
 
+# ALTIMP C/main/utils.c
 sub get_non_empty_brace_args($) {
   my $element = shift;
 
@@ -1101,6 +1102,25 @@ sub get_non_empty_brace_args($) {
   } else {
     return \@args;
   }
+}
+
+# ALTIMP C/main/utils.c
+sub get_verb_delimiter($) {
+  my $element = shift;
+
+  if (exists($element->{'contents'})) {
+    foreach my $content (@{$element->{'contents'}}) {
+      if (exists($content->{'type'})
+          and $content->{'type'} eq 'brace_container'
+          and exists($content->{'contents'})
+          and exists($content->{'contents'}->[0]->{'type'})
+          and $content->{'contents'}->[0]->{'type'} eq 'verb_delimiter') {
+        return $content->{'contents'}->[0]->{'text'};
+      }
+    }
+  }
+
+  return undef;
 }
 
 # ALTIMP C/main/utils.c

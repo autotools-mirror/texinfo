@@ -13,11 +13,11 @@ $result_tree_text{'comments'} = '*document_root C1
   *preamble_before_content
   *paragraph C2
    *@verb C1 l1
-   |INFO
-   |delimiter:{a}
-    *brace_container C2
+    *brace_container C4
+     {verb_delimiter:a}
      {raw: comment @c comment\\n}
      {raw:in a verb }
+     {verb_delimiter:a}
    *@c C1
     *line_arg C3
      {spaces_before_argument: }
@@ -27,10 +27,10 @@ $result_tree_text{'comments'} = '*document_root C1
   *paragraph C4
    {something }
    *@verb C1 l4
-   |INFO
-   |delimiter:{,}
-    *brace_container C1
+    *brace_container C3
+     {verb_delimiter:,}
      {raw: in verb}
+     {verb_delimiter:,}
    { }
    *@c C1
     *line_arg C2

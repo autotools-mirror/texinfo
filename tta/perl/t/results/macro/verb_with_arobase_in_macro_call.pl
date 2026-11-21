@@ -38,19 +38,19 @@ $result_tree_text{'verb_with_arobase_in_macro_call'} = '*document_root C1
       >{spaces_before_argument: }
       >{macro_call_arg_text:@verb{@ arobase @}}
    *@verb C1 l6:@showarg
-   |INFO
-   |delimiter:{,}
-    *brace_container C1
+    *brace_container C3
+     {verb_delimiter:,}
      {raw: commas }
+     {verb_delimiter:,}
    {\\n}
    {second: }
    *@verb C1 l6:@showarg
-   |INFO
-   |delimiter:{@}
    >SOURCEMARKS
    >macro_expansion<end;1>
-    *brace_container C1
+    *brace_container C3
+     {verb_delimiter:@}
      {raw: arobase }
+     {verb_delimiter:@}
    {\\n}
 ';
 

@@ -1,5 +1,46 @@
 2026-11-21  Patrice Dumas  <pertusus@free.fr>
 
+	put @verb delimiter in the tree
+
+	* tta/C/main/element_types.txt: add verb_delimiter.
+
+	* tta/C/main/utils.c (get_verb_delimiter), tta/perl/Texinfo/Common.pm
+	(get_verb_delimiter): add.
+
+	* tta/C/parsetexi/close.c (close_brace_command),
+	tta/C/parsetexi/parser.c (process_verb_contents),
+	tta/C/parsetexi/separator.c (handle_open_brace),
+	tta/perl/Texinfo/ParserNonXS.pm (_close_brace_command)
+	(_handle_open_brace, _process_remaining_on_line): put @verb delimiter
+	in the tree in the verb_delimiter text type, at the beginning and end
+	of the brace_container, not in info associated information.
+
+	* tta/C/main/convert_to_texinfo.c (convert_to_texinfo_internal),
+	tta/C/main/manipulate_tree.c (protect_text),
+	tta/C/main/node_name_normalization.c (convert_to_normalized_internal),
+	tta/perl/Texinfo/Convert/NodeNameNormalization.pm
+	(%ignored_text_types), tta/perl/Texinfo/Convert/Texinfo.pm
+	(_convert_to_texinfo), tta/perl/Texinfo/ManipulateTree.pm
+	(_protect_text): update for removal of verb delimiter in info
+	and added verb_delimiter.
+
+	* tta/C/convert/convert_to_plaintext.c
+	(convert_to_plaintext_internal),
+	tta/C/convert/html_prepare_converter.c (ignored_types),
+	tta/C/main/convert_to_text.c (convert_to_text_internal),
+	tta/perl/Texinfo/Convert/DocBook.pm (%ignored_text_types),
+	tta/perl/Texinfo/Convert/HTML.pm, tta/perl/Texinfo/Convert/LaTeX.pm
+	(%ignorable_space_types, _convert),
+	tta/perl/Texinfo/Convert/PlaintextNonXS.pm (%ignorable_space_types),
+	tta/perl/Texinfo/Convert/Text.pm (%ignored_text_types),
+	tta/perl/Texinfo/Convert/TextContent.pm (%ignored_types),
+	tta/perl/Texinfo/Example/TexinfoMarkup.pm (_convert): update for
+	change in tree, mainly by ignoring verb_delimiter.
+
+	* tta/perl/t/z_misc/01use.t: update.
+
+2026-11-21  Patrice Dumas  <pertusus@free.fr>
+
 	* tta/perl/Texinfo/ManipulateTreeNonXS.pm
 	(section_direction_associated_node),
 	tta/perl/Texinfo/StructuringNonXS.pm: move

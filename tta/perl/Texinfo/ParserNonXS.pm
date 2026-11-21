@@ -1606,8 +1606,27 @@ sub _close_brace_command($$$;$$$) {
     }
   }
 
-  if ($current->{'cmdname'} ne 'verb'
-      or $current->{'info'}->{'delimiter'} eq '') {
+  my $verb_delimiter;
+  if ($current->{'cmdname'} eq 'verb') {
+    $verb_delimiter = Texinfo::Common::get_verb_delimiter($current);
+  }
+
+  if (defined($verb_delimiter)) {
+    if ($missing_brace) {
+      foreach my $content (@{$current->{'contents'}}) {
+        if (exists($content->{'type'})
+            and $content->{'type'} eq 'brace_container') {
+          push @{$content->{'contents'}},
+            Texinfo::TreeElement::new({'text' => $verb_delimiter,
+                                    'type' => 'verb_delimiter'});
+        }
+      }
+
+      _command_error($self, $current,
+         __("\@%s missing closing delimiter sequence: %s}"),
+            $current->{'cmdname'}, $verb_delimiter);
+    }
+  } else {
     if (defined($closed_block_command)) {
       _command_error($self, $current,
         __("\@end %s seen before \@%s closing brace"),
@@ -1620,10 +1639,6 @@ sub _close_brace_command($$$;$$$) {
       _command_error($self, $current,
         __("\@%s missing closing brace"), $current->{'cmdname'});
     }
-  } elsif ($missing_brace) {
-    _command_error($self, $current,
-       __("\@%s missing closing delimiter sequence: %s}"),
-       $current->{'cmdname'}, $current->{'info'}->{'delimiter'});
   }
   $current = $current->{'parent'};
   return $current;
@@ -6615,8 +6630,6 @@ sub _handle_open_brace($$$$) {
           and $self->{'basic_inline_commands'}->{$command});
     if ($command eq 'verb') {
       $current->{'type'} = 'brace_container';
-      $current->{'parent'}->{'info'} = {}
-         if (!exists($current->{'parent'}->{'info'}));
       while ($line eq '') {
         # the delimiter may be in macro expansion
         ($line, $source_info) = _next_text($self, $current);
@@ -6627,12 +6640,21 @@ sub _handle_open_brace($$$$) {
         }
       }
       if ($line =~ /^$/) {
-        $current->{'parent'}->{'info'}->{'delimiter'} = '';
         _line_error($self,
             __("\@verb without associated character"), $source_info);
       } else {
         $line =~ s/^(.)//;
-        $current->{'parent'}->{'info'}->{'delimiter'} = $1;
+        my $delimiter_element = Texinfo::TreeElement::new({'text' => $1,
+                                            'type' => 'verb_delimiter'});
+        # if there is already an element it can only be an element added
+        # by _next_text for source mark.
+        if (exists($current->{'contents'})) {
+          foreach my $content (@{$current->{'contents'}}) {
+            _transfer_source_marks($content, $delimiter_element);
+          }
+          $current->{'contents'} = [];
+        }
+        push @{$current->{'contents'}}, $delimiter_element;
       }
     } elsif ($self->{'brace_commands'}->{$command} eq 'context') {
       $current->{'type'} = 'brace_command_context';
@@ -6694,6 +6716,7 @@ sub _handle_open_brace($$$$) {
       .(defined($current->{'parent'}->{'remaining_args'})
           ? $current->{'parent'}->{'remaining_args'} : '0')
       .' '.Texinfo::Common::debug_print_element($current)."\n"
+      #.Texinfo::ManipulateTree::tree_print_details($current)."\n"
        if ($self->{'conf'}->{'DEBUG'});
   } elsif (exists($current->{'parent'})
            and
@@ -6736,7 +6759,7 @@ sub _handle_open_brace($$$$) {
     push @{$current->{'contents'}}, $balanced_braces;
     $current = $balanced_braces;
     my $open_brace
-      = Texinfo::TreeElement::new({'text' => '{'});
+      = Texinfo::TreeElement::new({'text' => '{'});#}
     push @{$current->{'contents'}}, $open_brace;
     print STDERR "BALANCED BRACES in math/rawpreformatted/inlineraw\n"
        if ($self->{'conf'}->{'DEBUG'});
@@ -7863,17 +7886,31 @@ sub _process_remaining_on_line($$$$) {
     if (exists($current->{'parent'})
         and exists($current->{'parent'}->{'cmdname'})
         and $current->{'parent'}->{'cmdname'} eq 'verb') {
-      my $char = quotemeta($current->{'parent'}->{'info'}->{'delimiter'});
+      my $verb_delimiter;
+      my $char;
+      if (exists($current->{'contents'})
+          and exists($current->{'contents'}->[0]->{'type'})
+          and $current->{'contents'}->[0]->{'type'} eq 'verb_delimiter') {
+        $verb_delimiter = $current->{'contents'}->[0]->{'text'};
+        $char = quotemeta($verb_delimiter);
+      } else {
+        $char = '';
+      }
       while (1) {
         if ($line =~ s/^(.*?)$char\}/\}/) {
           push @{$current->{'contents'}},
-            Texinfo::TreeElement::new({ 'text' => $1, 'type' => 'raw'})
+            Texinfo::TreeElement::new({'text' => $1, 'type' => 'raw'})
               if ($1 ne '');
+          if (defined($verb_delimiter)) {
+            push @{$current->{'contents'}},
+              Texinfo::TreeElement::new({'text' => $verb_delimiter,
+                                         'type' => 'verb_delimiter'});
+          }
           print STDERR "END VERB\n" if ($self->{'conf'}->{'DEBUG'});
           last;
         }
         push @{$current->{'contents'}},
-          Texinfo::TreeElement::new({ 'text' => $line, 'type' => 'raw'});
+          Texinfo::TreeElement::new({'text' => $line, 'type' => 'raw'});
         print STDERR "LINE VERB: "._debug_protect_eol($line)."\n"
               if ($self->{'conf'}->{'DEBUG'});
         ($line, $source_info) = _next_text($self, $current);

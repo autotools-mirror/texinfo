@@ -14,12 +14,12 @@ $result_tree_text{'verb_and_char_end_of_line_not_closed'} = '*document_root C1
   *paragraph C2
    {verb, not  closed }
    *@verb C1 l1
-   |INFO
-   |delimiter:{*}
-    *brace_container C3
+    *brace_container C5
+     {verb_delimiter:*}
      {raw:\\n}
      {raw:\\n}
      {raw:@bye\\n}
+     {verb_delimiter:*}
 ';
 
 

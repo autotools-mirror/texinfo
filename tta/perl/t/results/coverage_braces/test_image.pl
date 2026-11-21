@@ -53,10 +53,10 @@ $result_tree_text{'test_image'} = '*document_root C3
        {<"%}
        *@@
        *@verb C1 l9:@files-char
-       |INFO
-       |delimiter:{:}
-        *brace_container C1
+        *brace_container C3
+         {verb_delimiter::}
          {raw:  < & @ % " }
+         {verb_delimiter::}
        {spaces_after_argument: }
       *brace_arg
       *brace_arg
@@ -73,10 +73,10 @@ $result_tree_text{'test_image'} = '*document_root C3
        {<"%}
        *@@
        *@verb C1 l9:@files-char
-       |INFO
-       |delimiter:{:}
-        *brace_container C1
+        *brace_container C3
+         {verb_delimiter::}
          {raw:  < & @ % " }
+         {verb_delimiter::}
      {\\n}
     {empty_line:\\n}
     *paragraph C3
@@ -96,10 +96,10 @@ $result_tree_text{'test_image'} = '*document_root C3
        {<"%}
        *@@
        *@verb C1 l9:@files-char
-       |INFO
-       |delimiter:{:}
-        *brace_container C1
+        *brace_container C3
+         {verb_delimiter::}
          {raw:  < & @ % " }
+         {verb_delimiter::}
        {spaces_after_argument: }
       *brace_arg C1
        {1in}
@@ -125,10 +125,10 @@ $result_tree_text{'test_image'} = '*document_root C3
        {<"%}
        *@@
        *@verb C1 l9:@files-char
-       |INFO
-       |delimiter:{:}
-        *brace_container C1
+        *brace_container C3
+         {verb_delimiter::}
          {raw:  < & @ % " }
+         {verb_delimiter::}
        {spaces_after_argument:  }
       *brace_arg C11
        {.ext}
@@ -142,10 +142,10 @@ $result_tree_text{'test_image'} = '*document_root C3
        {<"%}
        *@@
        *@verb C1 l9:@files-char
-       |INFO
-       |delimiter:{:}
-        *brace_container C1
+        *brace_container C3
+         {verb_delimiter::}
          {raw:  < & @ % " }
+         {verb_delimiter::}
      {.\\n}
      >SOURCEMARKS
      >macro_expansion<end;1><p:1>
@@ -197,10 +197,10 @@ $result_tree_text{'test_image'} = '*document_root C3
     {<"%}
     *@@
     *@verb C1 l15:@files-char
-    |INFO
-    |delimiter:{:}
-     *brace_container C1
+     *brace_container C3
+      {verb_delimiter::}
       {raw:  < & @ % " }
+      {verb_delimiter::}
     {spaces_after_argument: }
    *brace_arg
    *brace_arg
@@ -217,10 +217,10 @@ $result_tree_text{'test_image'} = '*document_root C3
     {<"%}
     *@@
     *@verb C1 l15:@files-char
-    |INFO
-    |delimiter:{:}
-     *brace_container C1
+     *brace_container C3
+      {verb_delimiter::}
       {raw:  < & @ % " }
+      {verb_delimiter::}
   {\\n}
   {empty_line:\\n}
   *paragraph C3
@@ -240,10 +240,10 @@ $result_tree_text{'test_image'} = '*document_root C3
      {<"%}
      *@@
      *@verb C1 l15:@files-char
-     |INFO
-     |delimiter:{:}
-      *brace_container C1
+      *brace_container C3
+       {verb_delimiter::}
        {raw:  < & @ % " }
+       {verb_delimiter::}
      {spaces_after_argument: }
     *brace_arg C1
      {1in}
@@ -269,10 +269,10 @@ $result_tree_text{'test_image'} = '*document_root C3
      {<"%}
      *@@
      *@verb C1 l15:@files-char
-     |INFO
-     |delimiter:{:}
-      *brace_container C1
+      *brace_container C3
+       {verb_delimiter::}
        {raw:  < & @ % " }
+       {verb_delimiter::}
      {spaces_after_argument:  }
     *brace_arg C11
      {.ext}
@@ -286,10 +286,10 @@ $result_tree_text{'test_image'} = '*document_root C3
      {<"%}
      *@@
      *@verb C1 l15:@files-char
-     |INFO
-     |delimiter:{:}
-      *brace_container C1
+      *brace_container C3
+       {verb_delimiter::}
        {raw:  < & @ % " }
+       {verb_delimiter::}
    {.\\n}
    >SOURCEMARKS
    >macro_expansion<end;2><p:1>
@@ -327,10 +327,10 @@ $result_tree_text{'test_image'} = '*document_root C3
       {<"%}
       *@@
       *@verb C1 l21:@files-char
-      |INFO
-      |delimiter:{:}
-       *brace_container C1
+       *brace_container C3
+        {verb_delimiter::}
         {raw:  < & @ % " }
+        {verb_delimiter::}
       {spaces_after_argument: }
      *brace_arg
      *brace_arg
@@ -347,10 +347,10 @@ $result_tree_text{'test_image'} = '*document_root C3
       {<"%}
       *@@
       *@verb C1 l21:@files-char
-      |INFO
-      |delimiter:{:}
-       *brace_container C1
+       *brace_container C3
+        {verb_delimiter::}
         {raw:  < & @ % " }
+        {verb_delimiter::}
     {\\n}
     {empty_line:\\n}
     {In text }
@@ -369,10 +369,10 @@ $result_tree_text{'test_image'} = '*document_root C3
       {<"%}
       *@@
       *@verb C1 l21:@files-char
-      |INFO
-      |delimiter:{:}
-       *brace_container C1
+       *brace_container C3
+        {verb_delimiter::}
         {raw:  < & @ % " }
+        {verb_delimiter::}
       {spaces_after_argument: }
      *brace_arg C1
       {1in}
@@ -398,10 +398,10 @@ $result_tree_text{'test_image'} = '*document_root C3
       {<"%}
       *@@
       *@verb C1 l21:@files-char
-      |INFO
-      |delimiter:{:}
-       *brace_container C1
+       *brace_container C3
+        {verb_delimiter::}
         {raw:  < & @ % " }
+        {verb_delimiter::}
       {spaces_after_argument:  }
      *brace_arg C11
       {.ext}
@@ -415,10 +415,10 @@ $result_tree_text{'test_image'} = '*document_root C3
       {<"%}
       *@@
       *@verb C1 l21:@files-char
-      |INFO
-      |delimiter:{:}
-       *brace_container C1
+       *brace_container C3
+        {verb_delimiter::}
         {raw:  < & @ % " }
+        {verb_delimiter::}
     {.\\n}
     >SOURCEMARKS
     >macro_expansion<end;3><p:1>
@@ -464,10 +464,10 @@ $result_tree_text{'test_image'} = '*document_root C3
      {<"%}
      *@@
      *@verb C1 l25:@files-char
-     |INFO
-     |delimiter:{:}
-      *brace_container C1
+      *brace_container C3
+       {verb_delimiter::}
        {raw:  < & @ % " }
+       {verb_delimiter::}
      {spaces_after_argument: }
     *brace_arg
     *brace_arg
@@ -484,10 +484,10 @@ $result_tree_text{'test_image'} = '*document_root C3
      {<"%}
      *@@
      *@verb C1 l25:@files-char
-     |INFO
-     |delimiter:{:}
-      *brace_container C1
+      *brace_container C3
+       {verb_delimiter::}
        {raw:  < & @ % " }
+       {verb_delimiter::}
    {\\n}
    {empty_line:\\n}
    *paragraph C3
@@ -507,10 +507,10 @@ $result_tree_text{'test_image'} = '*document_root C3
       {<"%}
       *@@
       *@verb C1 l25:@files-char
-      |INFO
-      |delimiter:{:}
-       *brace_container C1
+       *brace_container C3
+        {verb_delimiter::}
         {raw:  < & @ % " }
+        {verb_delimiter::}
       {spaces_after_argument: }
      *brace_arg C1
       {1in}
@@ -536,10 +536,10 @@ $result_tree_text{'test_image'} = '*document_root C3
       {<"%}
       *@@
       *@verb C1 l25:@files-char
-      |INFO
-      |delimiter:{:}
-       *brace_container C1
+       *brace_container C3
+        {verb_delimiter::}
         {raw:  < & @ % " }
+        {verb_delimiter::}
       {spaces_after_argument:  }
      *brace_arg C11
       {.ext}
@@ -553,10 +553,10 @@ $result_tree_text{'test_image'} = '*document_root C3
       {<"%}
       *@@
       *@verb C1 l25:@files-char
-      |INFO
-      |delimiter:{:}
-       *brace_container C1
+       *brace_container C3
+        {verb_delimiter::}
         {raw:  < & @ % " }
+        {verb_delimiter::}
     {.\\n}
     >SOURCEMARKS
     >macro_expansion<end;4><p:1>
@@ -583,10 +583,10 @@ $result_tree_text{'test_image'} = '*document_root C3
        {<"%}
        *@@
        *@verb C1 l27:@files-char
-       |INFO
-       |delimiter:{:}
-        *brace_container C1
+        *brace_container C3
+         {verb_delimiter::}
          {raw:  < & @ % " }
+         {verb_delimiter::}
        {spaces_after_argument: }
       *brace_arg
       *brace_arg
@@ -603,10 +603,10 @@ $result_tree_text{'test_image'} = '*document_root C3
        {<"%}
        *@@
        *@verb C1 l27:@files-char
-       |INFO
-       |delimiter:{:}
-        *brace_container C1
+        *brace_container C3
+         {verb_delimiter::}
          {raw:  < & @ % " }
+         {verb_delimiter::}
      {\\n}
      {empty_line:\\n}
      *paragraph C3
@@ -626,10 +626,10 @@ $result_tree_text{'test_image'} = '*document_root C3
         {<"%}
         *@@
         *@verb C1 l27:@files-char
-        |INFO
-        |delimiter:{:}
-         *brace_container C1
+         *brace_container C3
+          {verb_delimiter::}
           {raw:  < & @ % " }
+          {verb_delimiter::}
         {spaces_after_argument: }
        *brace_arg C1
         {1in}
@@ -655,10 +655,10 @@ $result_tree_text{'test_image'} = '*document_root C3
         {<"%}
         *@@
         *@verb C1 l27:@files-char
-        |INFO
-        |delimiter:{:}
-         *brace_container C1
+         *brace_container C3
+          {verb_delimiter::}
           {raw:  < & @ % " }
+          {verb_delimiter::}
         {spaces_after_argument:  }
        *brace_arg C11
         {.ext}
@@ -672,10 +672,10 @@ $result_tree_text{'test_image'} = '*document_root C3
         {<"%}
         *@@
         *@verb C1 l27:@files-char
-        |INFO
-        |delimiter:{:}
-         *brace_container C1
+         *brace_container C3
+          {verb_delimiter::}
           {raw:  < & @ % " }
+          {verb_delimiter::}
       {.}
       >SOURCEMARKS
       >macro_expansion<end;5><p:1>

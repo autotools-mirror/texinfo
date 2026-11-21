@@ -1150,7 +1150,8 @@ sub _protect_text($$) {
   if (exists($current->{'text'}) and $current->{'text'} =~ /$to_protect/
       and !(exists($current->{'type'})
             and ($current->{'type'} eq 'raw'
-                 or $current->{'type'} eq 'rawline_text'))) {
+                 or $current->{'type'} eq 'rawline_text'
+                 or $current->{'type'} eq 'verb_delimiter'))) {
     my @result = ();
     my $remaining_text = $current->{'text'};
 

@@ -225,10 +225,10 @@ $result_tree_text{'complex_float'} = '*document_root C5
       {and}
     { }
     *@verb C1 l49
-    |INFO
-    |delimiter:{!}
-     *brace_container C1
+     *brace_container C3
+      {verb_delimiter:!}
       {raw:it is @verb}
+      {verb_delimiter:!}
     { }
     *@ 
     {a wo}
@@ -430,10 +430,10 @@ $result_tree_text{'complex_float'} = '*document_root C5
         {and}
       { }
       *@verb C1 l84
-      |INFO
-      |delimiter:{!}
-       *brace_container C1
+       *brace_container C3
+        {verb_delimiter:!}
         {raw:it is @verb}
+        {verb_delimiter:!}
       { }
       *@ 
       {a wo}
@@ -475,10 +475,10 @@ $result_tree_text{'complex_float'} = '*document_root C5
         {and}
       { }
       *@verb C1 l87
-      |INFO
-      |delimiter:{!}
-       *brace_container C1
+       *brace_container C3
+        {verb_delimiter:!}
         {raw:it is @verb}
+        {verb_delimiter:!}
       { }
       *@ 
       {a wo}
@@ -729,10 +729,10 @@ $result_tree_text{'complex_float'} = '*document_root C5
         {and}
       { }
       *@verb C1 l131
-      |INFO
-      |delimiter:{!}
-       *brace_container C1
+       *brace_container C3
+        {verb_delimiter:!}
         {raw:it is @verb}
+        {verb_delimiter:!}
       { }
       *@ 
       {a wo}

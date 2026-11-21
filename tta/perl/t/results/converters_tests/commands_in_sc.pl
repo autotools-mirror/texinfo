@@ -107,10 +107,10 @@ $result_tree_text{'commands_in_sc'} = '*document_root C5
        {raw:}
       *brace_arg C1
        *@verb C1 l8
-       |INFO
-       |delimiter:{!}
-        *brace_container C1
+        *brace_container C3
+         {verb_delimiter:!}
          {raw:inverb}
+         {verb_delimiter:!}
      { }
      *@anchor C1 l8
      |EXTRA

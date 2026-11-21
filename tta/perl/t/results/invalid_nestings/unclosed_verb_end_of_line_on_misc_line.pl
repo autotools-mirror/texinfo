@@ -18,8 +18,6 @@ $result_tree_text{'unclosed_verb_end_of_line_on_misc_line'} = '*document_root C1
      {spaces_before_argument: }
      {name }
      *@verb C1 l1
-     |INFO
-     |delimiter:{}
       *brace_container C1
        {raw:\\n}
 ';

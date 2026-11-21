@@ -627,13 +627,16 @@ sub _convert($$;$) {
     }
     my $result = '';
     my $text_element;
-    if (exists($element->{'type'})
-       and defined($type_elements{$element->{'type'}})) {
-      $text_element = $type_elements{$element->{'type'}};
-      $result .= $self->txi_markup_open_element($text_element);
+    if (exists($element->{'type'})) {
+      if (defined($type_elements{$element->{'type'}})) {
+        $text_element = $type_elements{$element->{'type'}};
+        $result .= $self->txi_markup_open_element($text_element);
+      } elsif ($element->{'type'} eq 'verb_delimiter') {
+        return $result;
+      }
     }
     $result .= $self->txi_markup_convert_text($element);
-    if ($text_element) {
+    if (defined($text_element)) {
       $result .= $self->txi_markup_close_element($text_element);
     }
     return $result;
@@ -1118,7 +1121,9 @@ sub _convert($$;$) {
       # first argument
       my $attribute = [];
       if ($cmdname eq 'verb') {
-        push @$attribute, ['delimiter', $element->{'info'}->{'delimiter'}];
+        my $verb_delimiter = Texinfo::Common::get_verb_delimiter($element);
+        $verb_delimiter = '' if (!defined($verb_delimiter));
+        push @$attribute, ['delimiter', $verb_delimiter];
       } elsif ($cmdname eq 'anchor'
                or $cmdname eq 'namedanchor') {
         my $anchor_name;

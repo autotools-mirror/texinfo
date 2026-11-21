@@ -274,18 +274,12 @@ sub _convert_to_texinfo($) {
                 $result .= ',';
               } else {
                 $result .= '{';
-                if ($cmdname eq 'verb') {
-                  $result .= $element->{'info'}->{'delimiter'};
-                }
                 $braces = 1;
               }
             }
             $arg_nr++;
           }
           $result .= _convert_to_texinfo($arg);
-        }
-        if ($cmdname eq 'verb') {
-          $result .= $element->{'info'}->{'delimiter'};
         }
         $result .= '}' if ($braces);
         return $result;

@@ -126,7 +126,8 @@ foreach my $type ('ignorable_spaces_after_command',
             'spaces_before_paragraph',
             'spaces_after_close_brace',
             'spaces_before_argument',
-            'spaces_after_argument'
+            'spaces_after_argument',
+            'verb_delimiter',
     ) {
   $ignored_text_types{$type} = 1;
 }

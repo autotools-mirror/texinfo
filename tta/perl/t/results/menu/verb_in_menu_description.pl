@@ -48,11 +48,11 @@ $result_tree_text{'verb_in_menu_description'} = '*document_root C3
      *preformatted C3
       {\\n}
       *@verb C1 l6
-      |INFO
-      |delimiter:{:}
-       *brace_container C2
+       *brace_container C4
+        {verb_delimiter::}
         {raw: in verb\\n}
         {raw:\\n}
+        {verb_delimiter::}
       {\\n}
    *menu_comment C1
     *preformatted C1

@@ -1297,6 +1297,7 @@ simple_arg_text (const ELEMENT *element, int *surplus_arg)
   return &empty_text;
 }
 
+/* ALTIMP perl/Texinfo/Common.pm */
 CONST_ELEMENT_LIST *
 get_non_empty_brace_args (const ELEMENT *element)
 {
@@ -1314,6 +1315,25 @@ get_non_empty_brace_args (const ELEMENT *element)
         add_(const_element) (args, arg);
     }
   return args;
+}
+
+/* ALTIMP perl/Texinfo/Common.pm */
+/* the caller should make sure that the argument is a verb command
+   (or at least not a text element)
+ */
+const TEXT *
+get_verb_delimiter (const ELEMENT *element)
+{
+  size_t i;
+  for (i = 0; i < element->e.c->contents.number; i++)
+    {
+      const ELEMENT *content = element->e.c->contents.list[i];
+      if (content->type == ET_brace_container
+          && content->e.c->contents.number > 0
+          && content->e.c->contents.list[0]->type == ET_verb_delimiter)
+        return content->e.c->contents.list[0]->e.text;
+    }
+  return 0;
 }
 
 

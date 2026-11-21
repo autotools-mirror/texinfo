@@ -176,11 +176,11 @@ $result_tree_text{'cpp_lines'} = '*document_root C4
   {empty_line:\\n}
   *paragraph C2
    *@verb C1 g_f:l77
-   |INFO
-   |delimiter:{:}
-    *brace_container C2
+    *brace_container C4
+     {verb_delimiter::}
      {raw:\\n}
      {raw:#line 5 "in verb"\\n}
+     {verb_delimiter::}
    {\\n}
   {empty_line:\\n}
   *paragraph C2

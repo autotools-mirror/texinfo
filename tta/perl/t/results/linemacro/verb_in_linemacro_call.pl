@@ -53,17 +53,17 @@ $result_tree_text{'verb_in_linemacro_call'} = '*document_root C1
         >{macro_call_arg_text:other {j}}
      {second }
      *@verb C1 l9:@mycommand
-     |INFO
-     |delimiter:{:}
-      *brace_container C1
+      *brace_container C3
+       {verb_delimiter::}
        {raw: in verb }
+       {verb_delimiter::}
      {\\n}
      {third A }
      *@verb C1 l9:@mycommand
-     |INFO
-     |delimiter:{|}
-      *brace_container C1
+      *brace_container C3
+       {verb_delimiter:|}
        {raw: in bracketed }
+       {verb_delimiter:|}
      { \\n}
    *@defline C1 l9:@mycommand
    |EXTRA

@@ -631,7 +631,8 @@ foreach my $type (
             #'space_at_end_menu_node',
             'spaces_after_close_brace',
             'spaces_before_argument',
-            'spaces_after_argument'
+            'spaces_after_argument',
+            'verb_delimiter',
     ) {
   $ignorable_space_types{$type} = 1;
 }
@@ -3516,11 +3517,8 @@ sub _convert($$) {
         # whether we are in another LaTeX macro would probably be a pain.
         # It should be ok, though, as it is described as an error in the manual:
         #   It is not reliable to use @verb inside other Texinfo constructs
-        my $delim;
-        if ($element->{'info'}
-            and defined($element->{'info'}->{'delimiter'})) {
-          $delim = $element->{'info'}->{'delimiter'};
-        } else {
+        my $delim = Texinfo::Common::get_verb_delimiter($element);
+        if (!defined($delim)) {
           # delimiter also tried below
           $delim = '|';
         }

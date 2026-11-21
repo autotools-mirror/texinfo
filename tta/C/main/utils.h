@@ -184,6 +184,7 @@ void normalize_top_node_name_text (TEXT *node_name);
 int empty_spaces_argument (const ELEMENT *element);
 const TEXT *simple_arg_text (const ELEMENT *element, int *surplus_arg);
 CONST_ELEMENT_LIST *get_non_empty_brace_args (const ELEMENT *element);
+const TEXT *get_verb_delimiter (const ELEMENT *element);
 INDEX *indices_info_index_by_name (const INDEX_LIST *indices_information,
                                    const char *name);
 INDEX *ultimate_index (INDEX *index);

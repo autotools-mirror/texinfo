@@ -53,10 +53,10 @@ $result_tree_text{'verb_delimiter_not_ascii'} = '*document_root C5
     {spaces_after_argument:\\n}
   *paragraph C2
    *@verb C1 l6
-   |INFO
-   |delimiter:{ê}
-    *brace_container C1
+    *brace_container C3
+     {verb_delimiter:ê}
      {raw: some text }
+     {verb_delimiter:ê}
    {\\n}
 ';
 

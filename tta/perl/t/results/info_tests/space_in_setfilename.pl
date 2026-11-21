@@ -16,10 +16,10 @@ $result_tree_text{'space_in_setfilename'} = '*document_root C2
      {spaces_before_argument: }
      *@ 
      *@verb C1 l1
-     |INFO
-     |delimiter:{:}
-      *brace_container C1
+      *brace_container C3
+       {verb_delimiter::}
        {raw: name }
+       {verb_delimiter::}
      *@ 
      {spaces_after_argument:\\n}
    {empty_line:\\n}

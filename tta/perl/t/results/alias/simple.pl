@@ -46,9 +46,10 @@ $result_tree_text{'simple'} = '*document_root C1
    *@verb C1 l7
    |INFO
    |alias_of:{o-theralias}
-   |delimiter:{!}
-    *brace_container C1
+    *brace_container C3
+     {verb_delimiter:!}
      {raw:verb}
+     {verb_delimiter:!}
    {\\n}
 ';
 

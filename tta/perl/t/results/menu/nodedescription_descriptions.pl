@@ -162,10 +162,10 @@ $result_tree_text{'nodedescription_descriptions'} = '*document_root C17
       {slightly long}
     { and }
     *@verb C1 l18
-    |INFO
-    |delimiter:{:}
-     *brace_container C1
+     *brace_container C3
+      {verb_delimiter::}
       {raw:vv somewhat}
+      {verb_delimiter::}
     { }
     *@ringaccent C2 l18
      {spaces_after_cmd_before_arg: }

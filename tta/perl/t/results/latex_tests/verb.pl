@@ -13,35 +13,35 @@ $result_tree_text{'verb'} = '*document_root C1
   *preamble_before_content
   *paragraph C2
    *@verb C1 l1
-   |INFO
-   |delimiter:{!}
-    *brace_container C1
+    *brace_container C3
+     {verb_delimiter:!}
      {raw:a}
+     {verb_delimiter:!}
    {\\n}
   {empty_line:\\n}
   *paragraph C2
    *@verb C1 l3
-   |INFO
-   |delimiter:{!}
-    *brace_container C1
+    *brace_container C3
+     {verb_delimiter:!}
      {raw:a!a}
+     {verb_delimiter:!}
    {\\n}
   {empty_line:\\n}
   *paragraph C2
    *@verb C1 l5
-   |INFO
-   |delimiter:{!}
-    *brace_container C2
+    *brace_container C4
+     {verb_delimiter:!}
      {raw:a\\n}
      {raw:b}
+     {verb_delimiter:!}
    {\\n}
   {empty_line:\\n}
   *paragraph C2
    *@verb C1 l8
-   |INFO
-   |delimiter:{%}
-    *brace_container C1
+    *brace_container C3
+     {verb_delimiter:%}
      {raw:a%|!:@b}
+     {verb_delimiter:%}
    {\\n}
 ';
 

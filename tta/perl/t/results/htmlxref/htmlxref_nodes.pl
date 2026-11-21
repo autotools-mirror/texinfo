@@ -68,10 +68,10 @@ $result_tree_text{'htmlxref_nodes'} = '*document_root C9
   {empty_line:\\n}
   *paragraph C5
    *@verb C1 test_refs.texi:l12
-   |INFO
-   |delimiter:{:}
-    *brace_container C1
+    *brace_container C3
+     {verb_delimiter::}
      {raw: a  node }
+     {verb_delimiter::}
    { }
    *@ref C4 test_refs.texi:l12
     *brace_arg C3
@@ -104,10 +104,10 @@ $result_tree_text{'htmlxref_nodes'} = '*document_root C9
   {empty_line:\\n}
   *paragraph C4
    *@verb C1 test_refs.texi:l18
-   |INFO
-   |delimiter:{;}
-    *brace_container C1
+    *brace_container C3
+     {verb_delimiter:;}
      {raw::}
+     {verb_delimiter:;}
    { }
    *@ref C4 test_refs.texi:l18
     *brace_arg C1
@@ -136,10 +136,10 @@ $result_tree_text{'htmlxref_nodes'} = '*document_root C9
   {empty_line:\\n}
   *paragraph C5
    *@verb C1 test_refs.texi:l24
-   |INFO
-   |delimiter:{:}
-    *brace_container C1
+    *brace_container C3
+     {verb_delimiter::}
      {raw:Top}
+     {verb_delimiter::}
    { }
    *@ref C4 test_refs.texi:l24
     *brace_arg C3
@@ -181,10 +181,10 @@ $result_tree_text{'htmlxref_nodes'} = '*document_root C9
   {empty_line:\\n}
   *paragraph C5
    *@verb C1 test_refs.texi:l32
-   |INFO
-   |delimiter:{:}
-    *brace_container C1
+    *brace_container C3
+     {verb_delimiter::}
      {raw:../manual/doc.texi}
+     {verb_delimiter::}
    { }
    *@ref C4 test_refs.texi:l32
     *brace_arg C1
@@ -224,10 +224,10 @@ $result_tree_text{'htmlxref_nodes'} = '*document_root C9
   {empty_line:\\n}
   *paragraph C4
    *@verb C1 test_refs.texi:l40
-   |INFO
-   |delimiter:{:}
-    *brace_container C1
+    *brace_container C3
+     {verb_delimiter::}
      {raw:!_"#$%&\'()*+-.}
+     {verb_delimiter::}
    { }
    *@ref C1 test_refs.texi:l40
     *brace_arg C1
@@ -252,10 +252,10 @@ $result_tree_text{'htmlxref_nodes'} = '*document_root C9
   {empty_line:\\n}
   *paragraph C5
    *@verb C1 test_refs.texi:l45
-   |INFO
-   |delimiter:{:}
-    *brace_container C1
+    *brace_container C3
+     {verb_delimiter::}
      {raw:/;<=>?[\\]^_`|~}
+     {verb_delimiter::}
    { }
    *@ref C1 test_refs.texi:l45
     *brace_arg C1
@@ -281,10 +281,10 @@ $result_tree_text{'htmlxref_nodes'} = '*document_root C9
   {empty_line:\\n}
   *paragraph C4
    *@verb C1 test_refs.texi:l50
-   |INFO
-   |delimiter:{:}
-    *brace_container C1
+    *brace_container C3
+     {verb_delimiter::}
      {raw:Top}
+     {verb_delimiter::}
    { }
    *@ref C1 test_refs.texi:l50
     *brace_arg C2
@@ -310,10 +310,10 @@ $result_tree_text{'htmlxref_nodes'} = '*document_root C9
   {empty_line:\\n}
   *paragraph C4
    *@verb C1 test_refs.texi:l55
-   |INFO
-   |delimiter:{:}
-    *brace_container C1
+    *brace_container C3
+     {verb_delimiter::}
      {raw: local   node}
+     {verb_delimiter::}
    { }
    *@ref C1 test_refs.texi:l55
     *brace_arg C2
@@ -344,10 +344,10 @@ $result_tree_text{'htmlxref_nodes'} = '*document_root C9
     {spaces_after_argument:\\n}
   *paragraph C4
    *@verb C1 test_refs.texi:l61
-   |INFO
-   |delimiter:{:}
-    *brace_container C1
+    *brace_container C3
+     {verb_delimiter::}
      {raw:(mtexinfo)Cross References}
+     {verb_delimiter::}
    { }
    *@ref C1 test_refs.texi:l61
     *brace_arg C1
@@ -433,10 +433,10 @@ $result_tree_text{'htmlxref_nodes'} = '*document_root C9
   {empty_line:\\n}
   *paragraph C4
    *@verb C1 test_refs.texi:l75
-   |INFO
-   |delimiter:{:}
-    *brace_container C1
+    *brace_container C3
+     {verb_delimiter::}
      {raw:Top}
+     {verb_delimiter::}
    { }
    *@ref C1 test_refs.texi:l75
     *brace_arg C2

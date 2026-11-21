@@ -201,6 +201,7 @@ static const enum command_id informative_global_commands[]
                 CM_deftypefnnewline, 0};
 
 static enum element_type ignored_types[] = {
+    ET_arguments_line,
     ET_ignorable_spaces_after_command,
     ET_postamble_after_end,
     ET_preamble_before_beginning,
@@ -210,7 +211,8 @@ static enum element_type ignored_types[] = {
     ET_spaces_after_close_brace,
     ET_spaces_before_argument,
     ET_spaces_after_argument,
-    ET_arguments_line, 0
+    ET_verb_delimiter,
+    0
 };
 
 HTML_COMMAND_STRUCT html_commands_data[BUILTIN_CMD_NUMBER];

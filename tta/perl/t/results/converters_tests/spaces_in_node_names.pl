@@ -47,10 +47,10 @@ $result_tree_text{'spaces_in_node_names'} = '*document_root C5
     |normalized:{b-}
      {b}
      *@verb C1 l5
-     |INFO
-     |delimiter:{:}
-      *brace_container C1
+      *brace_container C3
+       {verb_delimiter::}
        {raw:  }
+       {verb_delimiter::}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
@@ -98,10 +98,10 @@ $result_tree_text{'spaces_in_node_names'} = '*document_root C5
     {spaces_before_argument: }
     {b}
     *@verb C1 l11
-    |INFO
-    |delimiter:{:}
-     *brace_container C1
+     *brace_container C3
+      {verb_delimiter::}
       {raw:  }
+      {verb_delimiter::}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C7 l13 {c@w{  }}
@@ -137,10 +137,10 @@ $result_tree_text{'spaces_in_node_names'} = '*document_root C5
     |normalized:{b-}
      {b}
      *@verb C1 l17
-     |INFO
-     |delimiter:{:}
-      *brace_container C1
+      *brace_container C3
+       {verb_delimiter::}
        {raw:  }
+       {verb_delimiter::}
    {\\n}
   {empty_line:\\n}
   *paragraph C2

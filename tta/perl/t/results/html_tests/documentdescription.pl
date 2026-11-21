@@ -28,10 +28,10 @@ $result_tree_text{'documentdescription'} = '*document_root C2
       *brace_container
      { }
      *@verb C1 l2
-     |INFO
-     |delimiter:{:}
-      *brace_container C1
+      *brace_container C3
+       {verb_delimiter::}
        {raw:"verb}
+       {verb_delimiter::}
      { }
      *@aa C1 l2
       *brace_container

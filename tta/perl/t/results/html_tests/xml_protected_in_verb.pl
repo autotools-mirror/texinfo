@@ -26,10 +26,10 @@ $result_tree_text{'xml_protected_in_verb'} = '*document_root C1
   {empty_line:\\n}
   *paragraph C2
    *@verb C1 l5
-   |INFO
-   |delimiter:{.}
-    *brace_container C1
+    *brace_container C3
+     {verb_delimiter:.}
      {raw: <i> }
+     {verb_delimiter:.}
    {.\\n}
   {empty_line:\\n}
   *@verbatiminclude C1 l7

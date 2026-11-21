@@ -14,8 +14,6 @@ $result_tree_text{'end_of_line'} = '*document_root C1
   *paragraph C3
    {verb at end of line }
    *@verb C1 l1
-   |INFO
-   |delimiter:{}
     *brace_container C4
      {raw:\\n}
      {raw:\\n}

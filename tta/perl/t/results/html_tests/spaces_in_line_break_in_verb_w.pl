@@ -20,11 +20,11 @@ $result_tree_text{'spaces_in_line_break_in_verb_w'} = '*document_root C1
   {empty_line:\\n}
   *paragraph C2
    *@verb C1 l4
-   |INFO
-   |delimiter:{|}
-    *brace_container C2
+    *brace_container C4
+     {verb_delimiter:|}
      {raw:aaa  bb\\n}
      {raw:ccc}
+     {verb_delimiter:|}
    {\\n}
 ';
 

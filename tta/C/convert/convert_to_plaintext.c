@@ -4038,7 +4038,9 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
                /* || type == ET_space_at_end_menu_node */
                || type == ET_spaces_after_close_brace
                || type == ET_spaces_before_argument
-               || type == ET_spaces_after_argument)
+               || type == ET_spaces_after_argument
+               || type == ET_verb_delimiter
+              )
         {
           if (type == ET_spaces_after_close_brace
               && strchr (element->e.text->text, '\f'))

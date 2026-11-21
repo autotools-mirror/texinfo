@@ -535,10 +535,10 @@ $result_tree_text{'at_commands_in_refs_utf8'} = '*document_root C55
     |node_content:A{0|0}
     |normalized:{-_0040-_007b_007d-_002e-}
      *@verb C1 l26
-     |INFO
-     |delimiter:{.}
-      *brace_container C1
+      *brace_container C3
+       {verb_delimiter:.}
        {raw: @ {} . }
+       {verb_delimiter:.}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
@@ -1711,10 +1711,10 @@ $result_tree_text{'at_commands_in_refs_utf8'} = '*document_root C55
        >{spaces_before_argument:\\n}
     {spaces_before_argument: }
     *@verb C1 l94
-    |INFO
-    |delimiter:{.}
-     *brace_container C1
+     *brace_container C3
+      {verb_delimiter:.}
       {raw: @ {} . }
+      {verb_delimiter:.}
     {spaces_after_argument:\\n}
  *@chapter C2 l96 {@verb{. @ {} . .}}
  |EXTRA
@@ -1734,10 +1734,10 @@ $result_tree_text{'at_commands_in_refs_utf8'} = '*document_root C55
       >{spaces_after_argument:\\n}
     {spaces_before_argument: }
     *@verb C1 l96
-    |INFO
-    |delimiter:{.}
-     *brace_container C1
+     *brace_container C3
+      {verb_delimiter:.}
       {raw: @ {} . }
+      {verb_delimiter:.}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l99 {@cite{cite @asis{asis}} @w{in @@w @b{b}} @r{in r} @sc{sc} @strong{str} @t{t} @var{var} @dfn{dfn} @i{i}}
@@ -2563,10 +2563,10 @@ $result_tree_text{'at_commands_in_refs_utf8'} = '*document_root C55
     |node_content:A{0|0}
     |normalized:{-_0040-_007b_007d-_002e-}
      *@verb C1 l159
-     |INFO
-     |delimiter:{.}
-      *brace_container C1
+      *brace_container C3
+       {verb_delimiter:.}
        {raw: @ {} . }
+       {verb_delimiter:.}
    {\\n}
    >SOURCEMARKS
    >expanded_conditional_command<end;5><p:1>
