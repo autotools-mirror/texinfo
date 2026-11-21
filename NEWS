@@ -50,7 +50,10 @@ X.Y ()
         or is an absolute file name.
       . add <span> with a class for output of @expansion{}, @arrow{},
         @point{}, @print{} and @result{}, to allow use of CSS styling
-  Info and plaintext output:
+  . Info output:
+      . create images in subdirectory for INFO_MATH_IMAGES and reference
+        this in the Info file.
+  . Info and plaintext output:
       . C converters.
       . partial redesign of conversion.
 
