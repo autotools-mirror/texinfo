@@ -547,7 +547,7 @@ X<C<labels_information>>
 I<$identifier_target> is a hash reference whose keys are normalized
 labels, and the associated value is the corresponding @-command.
 
-=item $labels_list = labels_list ($document)
+=item $labels_list = labels_list($document)
 X<C<labels_list>>
 
 I<$labels_list> is a list of Texinfo tree command elements that
@@ -685,7 +685,7 @@ up the I<$document> (or calling the function). The returned
 I<$error_warnings_list> is an array of hash references
 one for each error, warning or error line continuation.  The format of
 these hash references is described
-L<Texinfo::Report::count_errors|Texinfo::Report/$error_count  = count_errors ($error_messages)>.
+L<Texinfo::Report::count_errors|Texinfo::Report/$error_count = count_errors($error_messages)>.
 
 =back
 
@@ -715,7 +715,7 @@ Some information can be registered in the document.
 
 =over
 
-=item register_document_options ($document, $options)
+=item register_document_options($document, $options)
 X<C<register_document_options>>
 
 The I<$options> hash reference holds options for the document. These options

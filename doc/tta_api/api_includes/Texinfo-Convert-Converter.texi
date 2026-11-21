@@ -506,7 +506,7 @@ the line is a continuation line of a message.
 Return a reference on an array containing the error or warning messages
 registered in the converter.  Error and warning messages are hash references as
 described in @ref{Texinfo@asis{::}Report $error_count
- = count_errors ($error_messages),, Texinfo::Report::count_errors}.
+ = count_errors($error_messages),, Texinfo::Report::count_errors}.
 
 @end table
 

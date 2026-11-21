@@ -176,8 +176,8 @@ normalized labels and the association with @@-commands is available through
 @emph{$identifier_target} is a hash reference whose keys are normalized
 labels, and the associated value is the corresponding @@-command.
 
-@item $labels_list = labels_list ($document)
-@anchor{Texinfo@asis{::}Document $labels_list = labels_list ($document)}
+@item $labels_list = labels_list($document)
+@anchor{Texinfo@asis{::}Document $labels_list = labels_list($document)}
 @cindex @code{labels_list}
 
 @emph{$labels_list} is a list of Texinfo tree command elements that
@@ -326,7 +326,7 @@ up the @emph{$document} (or calling the function). The returned
 @emph{$error_warnings_list} is an array of hash references
 one for each error, warning or error line continuation.  The format of
 these hash references is described
-@ref{Texinfo@asis{::}Report $error_count  = count_errors ($error_messages),, Texinfo::Report::count_errors}.
+@ref{Texinfo@asis{::}Report $error_count = count_errors($error_messages),, Texinfo::Report::count_errors}.
 
 @end table
 
@@ -357,8 +357,8 @@ or @code{undef}.
 Some information can be registered in the document.
 
 @table @asis
-@item register_document_options ($document, $options)
-@anchor{Texinfo@asis{::}Document register_document_options ($document@comma{} $options)}
+@item register_document_options($document, $options)
+@anchor{Texinfo@asis{::}Document register_document_options($document@comma{} $options)}
 @cindex @code{register_document_options}
 
 The @emph{$options} hash reference holds options for the document. These options

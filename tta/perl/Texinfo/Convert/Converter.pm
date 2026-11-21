@@ -2562,7 +2562,7 @@ X<C<get_converter_errors>>
 Return a reference on an array containing the error or warning messages
 registered in the converter.  Error and warning messages are hash references as
 described in L<Texinfo::Report::count_errors|Texinfo::Report/$error_count
- = count_errors ($error_messages)>.
+ = count_errors($error_messages)>.
 
 =back
 

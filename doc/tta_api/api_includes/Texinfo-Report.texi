@@ -89,11 +89,11 @@ No method is exported in the default case.
 You call the following functions to set up a message hash:
 
 @table @asis
-@item $message = line_warn ($text, $error_location_info, $continuation, $debug, $silent)
-@anchor{Texinfo@asis{::}Report $message = line_warn ($text@comma{} $error_location_info@comma{} $continuation@comma{} $debug@comma{} $silent)}
+@item $message = line_warn($text, $error_location_info, $continuation, $debug, $silent)
+@anchor{Texinfo@asis{::}Report $message = line_warn($text@comma{} $error_location_info@comma{} $continuation@comma{} $debug@comma{} $silent)}
 
-@item $message = line_error ($text, $error_location_info, $continuation, $debug, $silent)
-@anchor{Texinfo@asis{::}Report $message = line_error ($text@comma{} $error_location_info@comma{} $continuation@comma{} $debug@comma{} $silent)}
+@item $message = line_error($text, $error_location_info, $continuation, $debug, $silent)
+@anchor{Texinfo@asis{::}Report $message = line_error($text@comma{} $error_location_info@comma{} $continuation@comma{} $debug@comma{} $silent)}
 @cindex @code{line_warn}
 @cindex @code{line_error}
 
@@ -116,11 +116,11 @@ a message that is output immediatly if debugging is set.
 The @emph{source_info} key of Texinfo tree elements is described
 in more details in @ref{Texinfo@asis{::}Parser source_info}.
 
-@item $message = document_warn ($text, $program_name, $continuation)
-@anchor{Texinfo@asis{::}Report $message = document_warn ($text@comma{} $program_name@comma{} $continuation)}
+@item $message = document_warn($text, $program_name, $continuation)
+@anchor{Texinfo@asis{::}Report $message = document_warn($text@comma{} $program_name@comma{} $continuation)}
 
-@item $message = document_error ($text, $program_name, $continuation)
-@anchor{Texinfo@asis{::}Report $message = document_error ($text@comma{} $program_name@comma{} $continuation)}
+@item $message = document_error($text, $program_name, $continuation)
+@anchor{Texinfo@asis{::}Report $message = document_error($text@comma{} $program_name@comma{} $continuation)}
 @cindex @code{document_warn}
 @cindex @code{document_error}
 
@@ -134,8 +134,8 @@ line is a continuation line of a message.
 To count errors in an array of messages hash:
 
 @table @asis
-@item $error_count = count_errors ($error_messages)
-@anchor{Texinfo@asis{::}Report $error_count = count_errors ($error_messages)}
+@item $error_count = count_errors($error_messages)
+@anchor{Texinfo@asis{::}Report $error_count = count_errors($error_messages)}
 
 Returns as @emph{$error_count} the count of errors in
 @emph{$error_warnings_list} (as opposed to warnings).

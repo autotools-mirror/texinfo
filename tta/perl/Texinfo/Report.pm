@@ -335,9 +335,9 @@ You call the following functions to set up a message hash:
 
 =over
 
-=item $message = line_warn ($text, $error_location_info, $continuation, $debug, $silent)
+=item $message = line_warn($text, $error_location_info, $continuation, $debug, $silent)
 
-=item $message = line_error ($text, $error_location_info, $continuation, $debug, $silent)
+=item $message = line_error($text, $error_location_info, $continuation, $debug, $silent)
 X<C<line_warn>>
 X<C<line_error>>
 
@@ -360,9 +360,9 @@ a message that is output immediatly if debugging is set.
 The I<source_info> key of Texinfo tree elements is described
 in more details in L<Texinfo::Parser/source_info>.
 
-=item $message = document_warn ($text, $program_name, $continuation)
+=item $message = document_warn($text, $program_name, $continuation)
 
-=item $message = document_error ($text, $program_name, $continuation)
+=item $message = document_error($text, $program_name, $continuation)
 X<C<document_warn>>
 X<C<document_error>>
 
@@ -377,7 +377,7 @@ To count errors in an array of messages hash:
 
 =over
 
-=item $error_count = count_errors ($error_messages)
+=item $error_count = count_errors($error_messages)
 
 Returns as I<$error_count> the count of errors in
 I<$error_warnings_list> (as opposed to warnings).
