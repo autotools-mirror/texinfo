@@ -47,7 +47,11 @@
 #include "list_macros.h"
 #include "manipulate_tree.h"
 
-/* To do the copy, we do two pass.  First with copy_tree_internal, the tree is
+/* The design was setup when there could be reference to other elements
+   of the tree.  This is not the case anymore, it could be possible to
+   do one pass only and remove elt_info.
+
+   To do the copy, we do two pass.  First with copy_tree_internal, the tree is
    copied and a flag and reference to the copy is put in all the elements,
    taking care that each element is processed once only.
    Then, remove_element_copy_info goes through the tree again and remove
@@ -139,9 +143,8 @@ copy_associated_info (ASSOCIATED_INFO *info, ASSOCIATED_INFO *new_info,
           break;
           }
         case extra_container:
-          { /* node_content and node_manual
-               Keep them in the tree in any case as they are used in
-               output and should be in the elements they refer to
+          { /* meant for elements with contents pointing to elements
+               in the tree in the same part of the tree.
              */
             ELEMENT *f = k_ref->k.element;
             KEY_PAIR *k = get_associated_info_key (new_info, key);
@@ -268,7 +271,7 @@ copy_tree_internal (ELEMENT* current, ELEMENT_LIST *other_trees)
     }
 
   if (elt_info_nr > 0)
-    {
+    {/* never happens currently */
       int j;
       for (j = 0; j < elt_info_nr; j++)
         if (current->elt_info[j])

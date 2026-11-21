@@ -109,6 +109,10 @@ if (Texinfo::XSLoader::XS_modules_enabled()
 
 # copy a Texinfo tree.
 
+# The design was setup when there could be reference to other elements
+# of the tree.  This is not the case anymore, it could be possible to
+# do one pass only.
+
 # To do the copy, we do two pass.  First with _copy_tree, the tree is
 # copied and a reference to the copy is put in all the elements,
 # taking care that each element is processed once only.
@@ -134,9 +138,10 @@ sub _copy_tree($;$);
 sub _copy_tree($;$) {
   my ($current, $other_trees) = @_;
 
-  # either a duplicate in a tree (should be rare/avoided) or an
+  # Previously could have been either a duplicate
+  # in a tree (although this was rare/avoided) or an
   # element referred to in extra/info, either directly or
-  # (probably rare) in the extra element tree that has already
+  # (probably rare) in the extra element tree that had already
   # been seen in the tree
   if (exists($current->{'_copy'})) {
     #print STDERR "RCT $current ".debug_print_element($current)
@@ -216,6 +221,7 @@ sub _copy_tree($;$) {
                                                      .ref($value->[0])."\n";
         }
       } elsif (ref($value) eq 'HASH' or ref($value) eq 'Texinfo::TreeElement') {
+        # currently no key associated to a hash reference
         #print STDERR "II HASH $key $value\n";
         if (not $other_trees
             and ($info_type eq 'extra'

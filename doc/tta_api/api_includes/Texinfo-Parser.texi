@@ -375,6 +375,10 @@ do not.
 @node Texinfo@asis{::}Parser Brace commands
 @subsubsection Brace commands
 
+The first content of brace commands can be a @emph{spaces_after_cmd_before_arg}
+text element that holds the spaces between the @@-command and the opening brace
+or the accent command argument.
+
 @code{@@footnote} and @code{@@caption} @@-command elements that start a new context and
 contain paragraphs and block commands contain a @emph{brace_command_context}
 container.  The @emph{brace_command_context} container contains @emph{paragraph},
@@ -382,8 +386,8 @@ line command and block command elements, much like node, sectioning and block
 command elements.
 
 For commands taking arguments surrounded by braces when the whole text in the
-braces is in the argument, such as @code{@@u} or @code{@@code} the first and only
-@code{contents} element is a @emph{brace_container}.
+braces is in the argument, such as @code{@@u} or @code{@@code} the element in @code{contents}
+is a @emph{brace_container}.
 Other brace commands, in particular brace commands with arguments separated
 by commas contain @emph{brace_arg} containers, one for each of the arguments.
 The @emph{brace_container} and @emph{brace_arg} containers contain directly text
@@ -1067,7 +1071,7 @@ inserted category (for example @emph{Function} for @code{@@defun}).
 
 Normalized argument of @code{@@documentencoding}.  For @code{@@documentencoding}
 itself, and also for @@-command arguments that name a file, which could make
-use of the document encoding at the localtion they are defined.
+use of the document encoding at the location they are defined.
 
 @item element_node
 @anchor{Texinfo@asis{::}Parser element_node}
@@ -1151,8 +1155,8 @@ The first argument normalized is in @emph{normalized}.
 
 @@-commands that are targets for cross-references have an @emph{identifier} key for
 the normalized label, built as specified in the Texinfo documentation in the
-@emph{HTML Xref} node.  There is also a @emph{node_content} key for an element holding
-the corresponding content.
+@emph{HTML Xref} node.  There is also a @emph{node_content} key with the indices of the
+beginning and end of the node name elements in the label contents.
 
 @item @code{def_line}
 @anchor{Texinfo@asis{::}Parser @code{def_line} 1}
@@ -1287,11 +1291,14 @@ The key @emph{max_columns} holds the maximal number of columns.
 Node name and explicit directions labels information are available
 as @emph{line_arg} tree element arguments of the @code{@@node} line.
 Each @emph{line_arg} argument element @code{extra} hash @emph{node_content} key value is an
-element holding the contents corresponding to the node name.  The node name
-argument has an @emph{identifier} key for the node identifier.
-Node directions arguments also have a @emph{manual_content} key if there is an
-associated external manual name, and a @emph{normalized} key for the normalized
-label, built as specified in the @emph{HTML Xref} Texinfo documentation node.
+array holding the indices of the beginning and end of the contents
+corresponding to the node name.  The node name argument has an @emph{identifier}
+key for the node identifier.  Node directions arguments also have a
+@emph{manual_content} key if there is an associated external manual name holding
+the indices of the beginning and end of the contents corresponding to the
+manual name, excluding the parentheses, and a @emph{normalized} key for the
+normalized label, built as specified in the @emph{HTML Xref} Texinfo documentation
+node.
 
 The first node containing a @code{@@printindex} @@-command has the @emph{isindex}
 key set.

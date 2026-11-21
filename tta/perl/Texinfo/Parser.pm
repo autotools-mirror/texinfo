@@ -396,6 +396,10 @@ do not.
 
 =head3 Brace commands
 
+The first content of brace commands can be a I<spaces_after_cmd_before_arg>
+text element that holds the spaces between the @-command and the opening brace
+or the accent command argument.
+
 C<@footnote> and C<@caption> @-command elements that start a new context and
 contain paragraphs and block commands contain a I<brace_command_context>
 container.  The I<brace_command_context> container contains I<paragraph>,
@@ -403,8 +407,8 @@ line command and block command elements, much like node, sectioning and block
 command elements.
 
 For commands taking arguments surrounded by braces when the whole text in the
-braces is in the argument, such as C<@u> or C<@code> the first and only
-C<contents> element is a I<brace_container>.
+braces is in the argument, such as C<@u> or C<@code> the element in C<contents>
+is a I<brace_container>.
 Other brace commands, in particular brace commands with arguments separated
 by commas contain I<brace_arg> containers, one for each of the arguments.
 The I<brace_container> and I<brace_arg> containers contain directly text
@@ -977,7 +981,7 @@ X<Texinfo tree element extra key>
 
 Normalized argument of C<@documentencoding>.  For C<@documentencoding>
 itself, and also for @-command arguments that name a file, which could make
-use of the document encoding at the localtion they are defined.
+use of the document encoding at the location they are defined.
 
 =item element_node
 
@@ -1049,8 +1053,8 @@ The first argument normalized is in I<normalized>.
 
 @-commands that are targets for cross-references have an I<identifier> key for
 the normalized label, built as specified in the Texinfo documentation in the
-I<HTML Xref> node.  There is also a I<node_content> key for an element holding
-the corresponding content.
+I<HTML Xref> node.  There is also a I<node_content> key with the indices of the
+beginning and end of the node name elements in the label contents.
 
 =item C<def_line>
 
@@ -1162,11 +1166,14 @@ The key I<max_columns> holds the maximal number of columns.
 Node name and explicit directions labels information are available
 as I<line_arg> tree element arguments of the C<@node> line.
 Each I<line_arg> argument element C<extra> hash I<node_content> key value is an
-element holding the contents corresponding to the node name.  The node name
-argument has an I<identifier> key for the node identifier.
-Node directions arguments also have a I<manual_content> key if there is an
-associated external manual name, and a I<normalized> key for the normalized
-label, built as specified in the I<HTML Xref> Texinfo documentation node.
+array holding the indices of the beginning and end of the contents
+corresponding to the node name.  The node name argument has an I<identifier>
+key for the node identifier.  Node directions arguments also have a
+I<manual_content> key if there is an associated external manual name holding
+the indices of the beginning and end of the contents corresponding to the
+manual name, excluding the parentheses, and a I<normalized> key for the
+normalized label, built as specified in the I<HTML Xref> Texinfo documentation
+node.
 
 =begin comment
 

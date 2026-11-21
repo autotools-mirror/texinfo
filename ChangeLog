@@ -1,5 +1,9 @@
 2026-11-20  Patrice Dumas  <pertusus@free.fr>
 
+	update comments and Pod documentation
+
+2026-11-20  Patrice Dumas  <pertusus@free.fr>
+
 	* tta/C/main/convert_to_texinfo.c (convert_to_texinfo_internal),
 	tta/perl/Texinfo/Convert/Texinfo.pm (_convert_to_texinfo): update for
 	removal of spaces_after_cmd_before_arg from info.
