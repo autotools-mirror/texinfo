@@ -1,5 +1,22 @@
 2026-11-21  Patrice Dumas  <pertusus@free.fr>
 
+	* tta/perl/Texinfo/ManipulateTreeNonXS.pm
+	(section_direction_associated_node),
+	tta/perl/Texinfo/StructuringNonXS.pm: move
+	section_direction_associated_node to ManipulateTreeNonXS.pm.
+
+	* tta/C/structuring_transfo/structuring.c
+	(insert_nodes_for_sectioning_commands),
+	tta/perl/Texinfo/ManipulateTreeNonXS.pm
+	(insert_nodes_for_sectioning_commands): find up node with
+	section_direction_associated_node such as to go through part.
+
+	* tta/perl/t/info_tests.t (auto_with_part_up_explicit),
+	tta/perl/t/test_files_generated_list.txt: add test with chapter
+	without node but with part and explicit directions for Top node.
+
+2026-11-21  Patrice Dumas  <pertusus@free.fr>
+
 	* tta/C/main/manipulate_tree.c (protect_first_parenthesis),
 	tta/C/structuring_transfo/transformations.c: move
 	protect_first_parenthesis to manipulate_tree.c.
@@ -309,7 +326,7 @@
 
 	manual_content and node_content as indices of element contents not elements
 
-	* tta/C/main/command_stack.c, tta/C/main/converter_types.h, 
+	* tta/C/main/command_stack.c, tta/C/main/converter_types.h,
 	tta/C/main/tree_types.h (INTEGER_LIST), tta/C/main/utils.c
 	(new_integer_list): rename INTEGER_STACK as INTEGER_LIST.  Move
 	type definition to tree_types.h and functions definitions to

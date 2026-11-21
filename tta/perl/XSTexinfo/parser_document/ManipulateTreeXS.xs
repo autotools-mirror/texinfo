@@ -32,6 +32,8 @@
 #include "xs_utils.h"
 /* new_document */
 #include "document.h"
+/* insert_nodes_for_sectioning_commands */
+#include "structuring.h"
 /* relate_index_entries_to_table_items_in_document
    move_index_entries_after_items_in_document */
 #include "transformations.h"

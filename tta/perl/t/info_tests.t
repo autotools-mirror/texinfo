@@ -1519,6 +1519,16 @@ AA.
 @chapter Titles (headers, footers)
 
 ', {'AUTO_SECTION_NODE' => 1}],
+['auto_with_part_up_explicit',
+'@node Top, , chap, (dir)
+@top sec top
+
+@part PRT
+
+@chapter chap
+',
+  {'AUTO_SECTION_NODE' => 1,},
+],
 ['index_string_in_node_no_index',
 '@node Top
 @top t

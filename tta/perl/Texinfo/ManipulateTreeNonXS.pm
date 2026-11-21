@@ -592,6 +592,32 @@ sub _new_node($$;$$) {
   return $node;
 }
 
+# determine node found through section directions, usually
+# from section_directions.  It could also be from
+# toplevel_directions if going through parts, except for @top
+# prev and next.
+# TODO document?
+sub section_direction_associated_node($$) {
+  my ($section_relations, $direction) = @_;
+
+  foreach my $direction_base ('section', 'toplevel') {
+    if (exists($section_relations->{$direction_base.'_directions'})
+        and exists($section_relations->{$direction_base.'_directions'}
+                                                             ->{$direction})
+        and ($direction_base ne 'toplevel'
+             or $direction eq 'up'
+             or $section_relations->{$direction_base.'_directions'}->{$direction}
+                                          ->{'element'}->{'cmdname'} ne 'top')) {
+       my $direction_relation
+         = $section_relations->{$direction_base.'_directions'}->{$direction};
+       if (exists($direction_relation->{'associated_node'})) {
+        return $direction_relation->{'associated_node'};
+      }
+    }
+  }
+  return undef;
+}
+
 sub insert_nodes_for_sectioning_commands($;$) {
   my ($document, $warn_duplicated) = @_;
 
@@ -700,49 +726,48 @@ sub insert_nodes_for_sectioning_commands($;$) {
         # direction, the new node will not appear in any menu.  In that case,
         # remove the up node automatic directions to get a correct automatic
         # menu.
-        if (exists($section_relations->{'section_directions'})
-            and exists($section_relations->{'section_directions'}->{'up'})) {
-          my $section_relation_up
-            = $section_relations->{'section_directions'}->{'up'};
-          if ($section_relation_up->{'associated_node'}) {
-            my $up_node_relations = $section_relation_up->{'associated_node'};
-            my $up_node = $up_node_relations->{'element'};
-            if (!exists($up_node_relations->{'menus'})) {
-              my $up_node_arguments_line = $up_node->{'contents'}->[0];
-              if (scalar(@{$up_node_arguments_line->{'contents'}}) > 1) {
-                my $debug = $document->get_conf('DEBUG');
-                my $error_messages = $document->{'error_messages'};
+        my $up_node_relations
+          = section_direction_associated_node($section_relations, 'up');
+        if (defined($up_node_relations)) {
+          my $up_node = $up_node_relations->{'element'};
+          if (!exists($up_node_relations->{'menus'})) {
+            my $up_node_arguments_line = $up_node->{'contents'}->[0];
+            if (scalar(@{$up_node_arguments_line->{'contents'}}) > 1) {
+              my $debug = $document->get_conf('DEBUG');
+              my $error_messages = $document->{'error_messages'};
 
-                my $section_texinfo
+              my $section_texinfo
       = Texinfo::Convert::Texinfo::convert_contents_to_texinfo($new_node_tree);
-                # section argument missing
-                $section_texinfo = '' if (!defined($section_texinfo));
-                my $node_name_arg = $up_node_arguments_line->{'contents'}->[0];
-                my $up_node_texinfo
-                  = Texinfo::Convert::Texinfo::convert_contents_to_texinfo(
+              # section argument missing
+              $section_texinfo = '' if (!defined($section_texinfo));
+              my $node_name_arg = $up_node_arguments_line->{'contents'}->[0];
+              my $up_node_texinfo
+                = Texinfo::Convert::Texinfo::convert_contents_to_texinfo(
                                                             $node_name_arg);
-                push @$error_messages, Texinfo::Report::line_warn(
-              sprintf(__("modifying node relations of `%s' to reference `%s'"),
+              push @$error_messages, Texinfo::Report::line_warn(
+          sprintf(__("modifying node relations of `%s' to reference `%s'"),
                            $up_node_texinfo, $section_texinfo),
                            $content->{'source_info'}, 0, $debug);
 
-                # remove explicit directions
-                foreach my $removed_e (
-                      splice(@{$up_node_arguments_line->{'contents'}}, 1)) {
-                  # remove cycles to release the removed elements
-                  tree_remove_parents($removed_e);
-                }
-                # readd end of line
-                push @{$node_name_arg->{'contents'}},
-                  Texinfo::TreeElement::new({'text' => "\n",
-                                             'type' => 'spaces_after_argument'});
+              # remove explicit directions
+              foreach my $removed_e (
+                    splice(@{$up_node_arguments_line->{'contents'}}, 1)) {
+                # remove cycles to release the removed elements
+                tree_remove_parents($removed_e);
               }
+              # readd end of line
+              push @{$node_name_arg->{'contents'}},
+                Texinfo::TreeElement::new({'text' => "\n",
+                                           'type' => 'spaces_after_argument'});
             }
-          } else {
-            print STDERR "BUG: Unexpected up section without associated node: "
-                . Texinfo::Convert::Texinfo::root_heading_command_to_texinfo(
-                        $section_relation_up->{'element'})."\n"; 
           }
+        } elsif (exists($section_relations->{'section_directions'})
+             and exists($section_relations->{'section_directions'}->{'up'})) {
+          my $section_relation_up
+            = $section_relations->{'section_directions'}->{'up'};
+          print STDERR "BUG: Unexpected up section without associated node: "
+              . Texinfo::Convert::Texinfo::root_heading_command_to_texinfo(
+                      $section_relation_up->{'element'})."\n";
         }
       }
     }

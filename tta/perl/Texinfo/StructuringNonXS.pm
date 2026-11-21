@@ -47,7 +47,8 @@ use Texinfo::TreeElement;
 
 use Texinfo::Common;
 
-use Texinfo::ManipulateTree qw(normalized_entry_associated_internal_node);
+use Texinfo::ManipulateTree qw(normalized_entry_associated_internal_node
+                               section_direction_associated_node);
 
 # for error messages
 use Texinfo::Convert::Texinfo qw(target_element_to_texi_label);
@@ -71,6 +72,11 @@ sub sectioning_structure($) {
 
   my $customization_information = $document;
 
+  # Document sectioning root, hash reference with the section_children
+  # key with value an array reference of the top level sectioning commands
+  # relations.
+  # Also hold section_root_level used internally in this function and
+  # compared in tests.
   my $sec_root;
   my $previous_section_relations;
   my $previous_toplevel_relations;
@@ -172,6 +178,7 @@ sub sectioning_structure($) {
             }
           }
         }
+        # Start of appendix cancels the association with a part
         if (exists($appendix_commands{$content->{'cmdname'}}) and !$in_appendix
             and $level <= $number_top_level
             and $up and exists($up->{'cmdname'})
@@ -716,31 +723,6 @@ sub complete_node_tree_with_menus($) {
   }
 }
 
-# determine node found through section directions, usually
-# from section_directions.  It could also be from
-# toplevel_directions if going through parts, except for @top
-# as prev or next.
-sub _section_direction_associated_node($$) {
-  my ($section_relations, $direction) = @_;
-
-  foreach my $direction_base ('section', 'toplevel') {
-    if (exists($section_relations->{$direction_base.'_directions'})
-        and exists($section_relations->{$direction_base.'_directions'}
-                                                             ->{$direction})
-        and ($direction_base ne 'toplevel'
-             or $direction eq 'up'
-             or $section_relations->{$direction_base.'_directions'}->{$direction}
-                                          ->{'element'}->{'cmdname'} ne 'top')) {
-       my $direction_relation
-         = $section_relations->{$direction_base.'_directions'}->{$direction};
-       if (exists($direction_relation->{'associated_node'})) {
-        return $direction_relation->{'associated_node'};
-      }
-    }
-  }
-  return undef;
-}
-
 # Checks on structure related to menus.
 sub check_node_tree_menu_structure($) {
   my $document = shift;
@@ -781,7 +763,7 @@ sub check_node_tree_menu_structure($) {
               next if (!_node_automatic_directions($menu_node));
 
               my $section_up_node
-                = _section_direction_associated_node($section_relations,'up');
+                = section_direction_associated_node($section_relations, 'up');
               if (!defined($section_up_node)) {
                 $document->document_line_warn(
     sprintf(__("node `%s' in menu in `%s' but not under it in sectioning"),
@@ -1212,7 +1194,7 @@ sub construct_nodes_tree($) {
             }
 
             my $direction_associated_node
-              = _section_direction_associated_node($direction_relation,
+              = section_direction_associated_node($direction_relation,
                                                    $direction);
             if ($direction_associated_node) {
               $node_relations->{'node_directions'} = {}

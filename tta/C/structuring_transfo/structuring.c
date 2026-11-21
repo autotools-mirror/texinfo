@@ -1129,69 +1129,65 @@ insert_nodes_for_sectioning_commands (DOCUMENT *document,
         remove the up node automatic directions to get a correct automatic
         menu.
       */
-                  if (section_relations->section_directions
-                      && section_relations->section_directions[D_up])
+                  const NODE_RELATIONS *up_node_relations
+                    = section_direction_associated_node (section_relations,
+                                                         D_up);
+                  if (up_node_relations)
                     {
-                      const SECTION_RELATIONS *section_relation_up
-                        = section_relations->section_directions[D_up];
-                      if (section_relation_up->associated_node)
+                      const ELEMENT *up_node = up_node_relations->element;
+                      if (!up_node_relations->menus
+                          || up_node_relations->menus->number <= 0)
                         {
-                          const NODE_RELATIONS *up_node_relations
-                           = section_relation_up->associated_node;
-                          const ELEMENT *up_node = up_node_relations->element;
-                          if (!up_node_relations->menus
-                              || up_node_relations->menus->number <= 0)
+                          ELEMENT *up_node_arguments_line
+                            = up_node->e.c->contents.list[0];
+                          if (up_node_arguments_line->e.c->contents.number > 1)
                             {
-                              ELEMENT *up_node_arguments_line
-                                = up_node->e.c->contents.list[0];
-                              if (
-                           up_node_arguments_line->e.c->contents.number > 1)
-                                {
-                                  ELEMENT *node_name_arg
+                              ELEMENT *node_name_arg
                                = up_node_arguments_line->e.c->contents.list[0];
-                                  char *up_node_texinfo
+                              char *up_node_texinfo
                                  = convert_contents_to_texinfo (node_name_arg);
-                                  char *section_texinfo
+                              char *section_texinfo
                                  = convert_contents_to_texinfo (new_node_tree);
-                                  /* section argument missing */
-                                  if (!section_texinfo)
-                                    section_texinfo = strdup ("");
-                                  message_list_command_warn (error_messages,
+                              /* section argument missing */
+                              if (!section_texinfo)
+                                section_texinfo = strdup ("");
+                              message_list_command_warn (error_messages,
                                    warn_debug, content, 0,
                         "modifying node relations of `%s' to reference `%s'",
                                    up_node_texinfo, section_texinfo);
-                                  free (section_texinfo);
-                                  free (up_node_texinfo);
+                              free (section_texinfo);
+                              free (up_node_texinfo);
 
                                   /* remove explicit directions */
-                                  while (up_node_arguments_line->e.c
+                              while (up_node_arguments_line->e.c
                                                    ->contents.number > 1)
-                                    {
-                                      ELEMENT *popped_e
-                                       = pop_element_from_contents(
+                                {
+                                  ELEMENT *popped_e
+                                   = pop_element_from_contents(
                                                 up_node_arguments_line);
-                                      destroy_element_and_children (popped_e);
-                                    }
-                                  /* readd end of line */
-                                  ELEMENT *spaces_after_arg
-                                = new_text_element (ET_spaces_after_argument);
-                                  text_append_n (spaces_after_arg->e.text,
-                                                 "\n", 1);
-                                  add_to_contents_as_array (node_name_arg,
-                                                            spaces_after_arg);
+                                  destroy_element_and_children (popped_e);
                                 }
+                              /* readd end of line */
+                              ELEMENT *spaces_after_arg
+                                = new_text_element (ET_spaces_after_argument);
+                              text_append_n (spaces_after_arg->e.text, "\n", 1);
+                              add_to_contents_as_array (node_name_arg,
+                                                        spaces_after_arg);
                             }
                         }
-                      else if (section_relation_up->element->e.c->cmd != CM_part)
-                        {
-                          char *section_up_texi
-                            = root_heading_command_to_texinfo (
+                    }
+                  else if (section_relations->section_directions
+                           && section_relations->section_directions[D_up])
+                    {
+                      const SECTION_RELATIONS *section_relation_up
+                        = section_relations->section_directions[D_up];
+                      char *section_up_texi
+                        = root_heading_command_to_texinfo (
                                                 section_relation_up->element);
-                          fprintf (stderr,
+                      fprintf (stderr,
             "BUG: Unexpected up section without associated node: %s\n",
-                                   section_up_texi);
-                          free (section_up_texi);
-                        }
+                               section_up_texi);
+                      free (section_up_texi);
                     }
                 }
               destroy_element (new_node_tree);
@@ -2044,8 +2040,9 @@ check_node_tree_menu_structure (DOCUMENT *document)
                                   continue;
 
                                 const NODE_RELATIONS *section_up_node;
-                                section_up_node = section_direction_associated_node
-                                  (menu_section_relations, D_up);
+                                section_up_node
+                                  = section_direction_associated_node(
+                                              menu_section_relations, D_up);
                                 if (!section_up_node)
                                   {
                                     char *menu_node_texi

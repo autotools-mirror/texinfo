@@ -75,6 +75,7 @@ protect_first_parenthesis
 protect_node_after_label_in_tree
 reference_to_arg_in_tree
 relate_index_entries_to_table_items_in_document
+section_direction_associated_node
 );
 
 BEGIN {
