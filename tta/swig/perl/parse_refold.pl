@@ -454,7 +454,7 @@ sub _convert($$$;$) {
     $type = '' if (!defined($type));
 
     if ($debug) {
-      print STDERR "R [".join('|', map {join(';', @$_)} @$args_stack)
+      print STDERR "R [".join('|', @$args_stack)
         ."] $category ". _current_smark($current_smark)
         .' '.Texinfo::element_print_details($element)."\n";
     }
@@ -491,41 +491,17 @@ sub _convert($$$;$) {
             $$result .= $cmdname;
           }
         }
-
-        # TODO not useful since interface_version 1 2026
-        my $spaces_cmd_before_arg
-          = Texinfo::element_attribute_element($element,
-                                 'spaces_after_cmd_before_arg');
-        if (defined($spaces_cmd_before_arg)) {
-          ($result, $current_smark)
-           = _convert($spaces_cmd_before_arg, $document,
-                      $inputs, $current_smark);
-        }
       }
 
       if ($category == $Texinfo::TXI_READ_ELEMENT_START) {
-        if (Texinfo::element_command_is_brace($element)
-            or $type eq 'definfoenclose_command'
-            or $type eq 'macro_call' or $type eq 'rmacro_call') {
-          if ($cmdname eq 'verb') {
-            push @$args_stack, [0, _decode(
-                   Texinfo::element_attribute_string($element, 'delimiter'))];
-          } else {
-            push @$args_stack, [0, undef];
-          }
-        } elsif (!Texinfo::element_command_is_nobrace($element)) {
-          push @$args_stack, [0, undef];
+        if (!Texinfo::element_command_is_nobrace($element)) {
+          push @$args_stack, 0;
         }
       } elsif ($category == $Texinfo::TXI_READ_ELEMENT_END) {
         if (Texinfo::element_command_is_brace($element)
             or $type eq 'definfoenclose_command',
             or $type eq 'macro_call' or $type eq 'rmacro_call') {
           if (!defined($current_smark)) {
-            if ($cmdname eq 'verb') {
-              $$result
-               .= _decode(
-                 Texinfo::element_attribute_string($element, 'delimiter'));
-            }
             if (Texinfo::element_type(
                   Texinfo::element_get_child($element, -1))
                        ne 'following_arg') {
@@ -555,43 +531,19 @@ sub _convert($$$;$) {
             or $type eq 'brace_command_context'
             or $type eq 'brace_container'
             or $type eq 'line_arg' or $type eq 'block_line_arg') {
-          $args_stack->[-1]->[0]++;
+          $args_stack->[-1]++;
           if (!defined($current_smark)) {
-            if ($args_stack->[-1]->[0] > 1) {
+            if ($args_stack->[-1] > 1) {
               $$result .= ',';
             } elsif ($type ne 'line_arg' and $type ne 'block_line_arg') {
-              my $verb_delimiter = $args_stack->[-1]->[1];
               $$result .= '{';
-              if (defined($verb_delimiter)) {
-                $$result .= $verb_delimiter;
-              }
             }
           }
         }
       }
     }
-    if ($category == $Texinfo::TXI_READ_ELEMENT_START
-        or $category == $Texinfo::TXI_READ_EMPTY) {
-      my $spaces_before_argument
-        = Texinfo::element_attribute_element($element,
-                               'spaces_before_argument');
-      if (defined($spaces_before_argument)) {
-        ($result, $current_smark)
-           = _convert($spaces_before_argument, $document,
-                      $inputs, $current_smark);
-      }
-    }
     if ($category == $Texinfo::TXI_READ_EMPTY
         or $category == $Texinfo::TXI_READ_ELEMENT_END) {
-      my $spaces_after_argument
-        = Texinfo::element_attribute_element($element,
-                               'spaces_after_argument');
-      if (defined($spaces_after_argument)) {
-        ($result, $current_smark)
-           = _convert($spaces_after_argument, $document,
-                      $inputs, $current_smark);
-      }
-
       if ($type eq 'line_arg' or $type eq 'block_line_arg') {
         my $comment_e = Texinfo::element_attribute_element($element,
                                            'comment_at_end');

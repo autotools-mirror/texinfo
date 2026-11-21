@@ -1,5 +1,10 @@
 2026-11-21  Patrice Dumas  <pertusus@free.fr>
 
+	* tta/swig/perl/parse_refold.pl (_convert): update for the changes in
+	the Texinfo tree.
+
+2026-11-21  Patrice Dumas  <pertusus@free.fr>
+
 	* tta/C/api_for_swig/swig_interface.c
 	(txi_ext_element_attribute_string)
 	(txi_ext_set_element_attribute_string), tta/C/main/build_perl_info.c
