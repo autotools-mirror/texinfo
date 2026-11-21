@@ -196,8 +196,8 @@ the type of command. Also for content appearing within a block @@-command,
 within a container, or within a @code{@@node} or sectioning @@-command.  Text
 fragments do not have children.
 
-The @code{extra} and @code{info} keys are associated to hash references and hold
-information gathered during the parsing.
+The @code{extra} key is associated to a hash reference and hold information
+gathered during the parsing.
 
 @node Texinfo@asis{::}Parser Texinfo tree structure
 @subsection Texinfo tree structure
@@ -489,20 +489,20 @@ The user macro name the @@-command is expanded from.
 
 @end table
 
-@item info
-@anchor{Texinfo@asis{::}Parser info}
-
-A hash reference holding any other information that cannot be
-obtained otherwise from the tree.
-See @ref{Texinfo@asis{::}Parser Information available in the @code{info} key,, Information available in the @code{info} key}.
-
 @item extra
 @anchor{Texinfo@asis{::}Parser extra}
 
-A hash reference holding information that could also be obtained
-from the tree, but is directly associated to the element to simplify
-downstream code.
+A hash reference holding information associated to the element.
+Not present for text elements.
 See @ref{Texinfo@asis{::}Parser Information available in the @code{extra} key,, Information available in the @code{extra} key}.
+
+@item inserted_text
+@anchor{Texinfo@asis{::}Parser inserted_text}
+
+Only for text elements.  Exists if the text is not in the Texinfo input code,
+but is inserted as a default for @@-command argument or as part of having a
+definition command automatically inserted category (for example @emph{Function} for
+@code{@@defun}).
 
 @end table
 
@@ -1045,19 +1045,6 @@ and @code{@@itemx}, in a @emph{table_term}.
 
 @end table
 
-@node Texinfo@asis{::}Parser Information available in the @code{info} key
-@subsection Information available in the @code{info} key
-
-@table @asis
-@item inserted
-@anchor{Texinfo@asis{::}Parser inserted}
-
-Set if the element is not in the Texinfo input code, but is inserted
-as a default for @@-command argument or as a definition command automatically
-inserted category (for example @emph{Function} for @code{@@defun}).
-
-@end table
-
 @node Texinfo@asis{::}Parser Information available in the @code{extra} key
 @subsection Information available in the @code{extra} key
 @cindex Texinfo tree element extra key
@@ -1072,6 +1059,13 @@ inserted category (for example @emph{Function} for @code{@@defun}).
 Normalized argument of @code{@@documentencoding}.  For @code{@@documentencoding}
 itself, and also for @@-command arguments that name a file, which could make
 use of the document encoding at the location they are defined.
+
+@item inserted
+@anchor{Texinfo@asis{::}Parser inserted}
+
+Set if the element is not in the Texinfo input code, but is inserted
+as a default for @@-command argument or as a definition command automatically
+inserted category (for example @emph{Function} for @code{@@defun}).
 
 @item element_node
 @anchor{Texinfo@asis{::}Parser element_node}

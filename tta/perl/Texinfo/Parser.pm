@@ -226,8 +226,8 @@ the type of command. Also for content appearing within a block @-command,
 within a container, or within a C<@node> or sectioning @-command.  Text
 fragments do not have children.
 
-The C<extra> and C<info> keys are associated to hash references and hold
-information gathered during the parsing.
+The C<extra> key is associated to a hash reference and hold information
+gathered during the parsing.
 
 =head2 Texinfo tree structure
 
@@ -495,18 +495,18 @@ The user macro name the @-command is expanded from.
 
 =back
 
-=item info
-
-A hash reference holding any other information that cannot be
-obtained otherwise from the tree.
-See L</Information available in the C<info> key>.
-
 =item extra
 
-A hash reference holding information that could also be obtained
-from the tree, but is directly associated to the element to simplify
-downstream code.
+A hash reference holding information associated to the element.
+Not present for text elements.
 See L</Information available in the C<extra> key>.
+
+=item inserted_text
+
+Only for text elements.  Exists if the text is not in the Texinfo input code,
+but is inserted as a default for @-command argument or as part of having a
+definition command automatically inserted category (for example I<Function> for
+C<@defun>).
 
 =back
 
@@ -958,18 +958,6 @@ and C<@itemx>, in a I<table_term>.
 
 =back
 
-=head2 Information available in the C<info> key
-
-=over
-
-=item inserted
-
-Set if the element is not in the Texinfo input code, but is inserted
-as a default for @-command argument or as a definition command automatically
-inserted category (for example I<Function> for C<@defun>).
-
-=back
-
 =head2 Information available in the C<extra> key
 X<Texinfo tree element extra key>
 
@@ -982,6 +970,12 @@ X<Texinfo tree element extra key>
 Normalized argument of C<@documentencoding>.  For C<@documentencoding>
 itself, and also for @-command arguments that name a file, which could make
 use of the document encoding at the location they are defined.
+
+=item inserted
+
+Set if the element is not in the Texinfo input code, but is inserted
+as a default for @-command argument or as a definition command automatically
+inserted category (for example I<Function> for C<@defun>).
 
 =item element_node
 

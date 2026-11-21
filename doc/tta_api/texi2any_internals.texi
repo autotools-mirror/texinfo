@@ -110,7 +110,6 @@ TEXINFO TREE
 * Texinfo@asis{::}Parser Texinfo tree structure::
 * Texinfo@asis{::}Parser Element keys::
 * Texinfo@asis{::}Parser Element types::
-* Texinfo@asis{::}Parser Information available in the @code{info} key::
 * Texinfo@asis{::}Parser Information available in the @code{extra} key::
 
 Texinfo tree structure

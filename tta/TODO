@@ -67,15 +67,14 @@ Tree documentation
 
 Document the tree in texi2any_api instead of ParserNonXS.pm.
 
-Document extra and info together as 'arguments' as in the SWIG interface
-instead of separately?
+Document extra as 'arguments' as in the SWIG interface?
 
 Document the tree by showing the relations of inclusion?
 
 elided_rawpreformatted, elided_brace_command_arg types.
 linemacro_arg
 
-alias_of in info hash
+alias_of in extra hash
 
 source marks.
 
