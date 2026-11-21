@@ -3436,7 +3436,7 @@ sub _split_element_def_args($$$$) {
   if (exists($element->{'type'})
       and ($element->{'type'} eq 'spaces'
            or $element->{'type'} eq 'spaces_before_argument')
-      and exists($element->{'info'}) and $element->{'info'}->{'inserted'}) {
+      and exists($element->{'inserted_text'})) {
     return $element;
   } elsif (exists($element->{'text'})) {
     my @elements;
@@ -3591,7 +3591,7 @@ sub _parse_def($$$$) {
     unshift @$contents,
      Texinfo::TreeElement::new({ 'text' => ' ',
                                  'type' => 'spaces_before_argument',
-                                 'info' => {'inserted' => 1},
+                                 'inserted_text' => 1,
                                }),
             $def_line_arg;
 
@@ -3635,7 +3635,7 @@ sub _parse_def($$$$) {
     }
   }
   if ($inserted_category) {
-    $current->{'contents'}->[1]->{'info'} = {'inserted' => 1};
+    $current->{'contents'}->[1]->{'extra'} = {'inserted' => 1};
   }
 
   my @args_results = map (_split_element_delimiters($self, $_, $current,

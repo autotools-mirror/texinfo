@@ -25,7 +25,7 @@ $result_tree_text{'deftypefnnewline_for_copying_after'} = '*document_root C5
       *block_line_arg C9
        (i){spaces_before_argument: }
        *def_category C1
-       |INFO
+       |EXTRA
        |inserted:{1}
         *def_line_arg C1
          {Function}
@@ -132,7 +132,7 @@ $result_tree_text{'deftypefnnewline_for_copying_after'} = '*document_root C5
     *block_line_arg C9
      (i){spaces_before_argument: }
      *def_category C1
-     |INFO
+     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {Function}

@@ -64,7 +64,7 @@ enum extra_type {
 };
 
 /* tree element flags */
-/* in info in Perl */
+/* for text is inserted_text in Perl */
 #define EF_inserted                      0x0001
 /* transiently needed for tree element copy */
 #define EF_copy                          0x0002

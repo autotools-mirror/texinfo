@@ -52,7 +52,7 @@ $result_tree_text{'documentlanguage_selection_accented_region'} = '*document_roo
     *block_line_arg C9
      (i){spaces_before_argument: }
      *def_category C1
-     |INFO
+     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {Instance Variable}

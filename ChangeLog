@@ -1,5 +1,29 @@
 2026-11-21  Patrice Dumas  <pertusus@free.fr>
 
+	inserted in extra or as inserted_text
+
+	* tta/perl/Texinfo/Convert/LaTeX.pm (_convert): remove condition with
+	inserted in item as that does not happen anymore.
+
+	* tta/C/main/convert_to_texinfo.c (convert_args)
+	(convert_to_texinfo_internal), tta/perl/Texinfo/Convert/Texinfo.pm
+	(_convert_args, _convert_to_texinfo): do not check inserted in
+	loops over arguments, as it is not useful.
+
+	* tta/C/main/build_perl_info.c (HSH_inserted_text, build_base_element)
+	(element_to_perl_hash), tta/C/main/manipulate_tree.c
+	(print_element_info), tta/perl/Texinfo/ManipulateTree.pm (_copy_tree)
+	(_print_text_element), tta/perl/Texinfo/ParserNonXS.pm
+	(_split_element_def_args, _parse_def): use inserted_text instead of
+	info inserted for text elements in Perl.  Update building to Perl.
+	Set, build and print inserted for def_category in extra and not info.
+	Remove store_info_integer.
+
+	* tta/perl/Texinfo/Example/TexinfoMarkup.pm (_convert): remove info
+	attribues not existing anymore.
+
+2026-11-21  Patrice Dumas  <pertusus@free.fr>
+
 	* tta/C/main/element_types.awk, tta/C/main/element_types.txt: remove
 	the braces flag, that is not used anymore, and code for other flags
 	that do not exist anymore.

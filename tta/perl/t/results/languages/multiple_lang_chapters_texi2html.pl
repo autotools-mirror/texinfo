@@ -192,7 +192,7 @@ $result_tree_text{'multiple_lang_chapters_texi2html'} = '*document_root C13
     *block_line_arg C9
      (i){spaces_before_argument: }
      *def_category C1
-     |INFO
+     |EXTRA
      |inserted:{1}
       *untranslated_def_line_arg C1
       |EXTRA
@@ -269,7 +269,7 @@ $result_tree_text{'multiple_lang_chapters_texi2html'} = '*document_root C13
     *block_line_arg C9
      (i){spaces_before_argument: }
      *def_category C1
-     |INFO
+     |EXTRA
      |inserted:{1}
       *untranslated_def_line_arg C1
       |EXTRA
@@ -337,7 +337,7 @@ $result_tree_text{'multiple_lang_chapters_texi2html'} = '*document_root C13
     *block_line_arg C9
      (i){spaces_before_argument: }
      *def_category C1
-     |INFO
+     |EXTRA
      |inserted:{1}
       *untranslated_def_line_arg C1
       |EXTRA

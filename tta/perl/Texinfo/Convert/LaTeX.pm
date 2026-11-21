@@ -3188,13 +3188,6 @@ sub _convert($$) {
   my $cmdname = $element->{'cmdname'};
 
   if ((defined($type) and exists($self->{'ignored_types'}->{$type}))
-      # ignore command as argument inserted in order to use the default
-      # setting for @itemize if there is no argument
-      or (exists($element->{'info'}) and $element->{'info'}->{'inserted'}
-          and exists($element->{'parent'})
-          and exists($element->{'parent'}->{'parent'})
-          and exists($element->{'parent'}->{'parent'}->{'cmdname'})
-          and $element->{'parent'}->{'parent'}->{'cmdname'} eq 'itemize')
        or (defined($cmdname)
             and (exists($self->{'ignored_commands'}->{$cmdname})
                  or (exists($Texinfo::Commands::brace_commands{$cmdname})

@@ -35,7 +35,7 @@ $result_tree_text{'printindex_index_entry_in_copying_no_insertcopying'} = '*docu
       *block_line_arg C7
        (i){spaces_before_argument: }
        *def_category C1
-       |INFO
+       |EXTRA
        |inserted:{1}
         *def_line_arg C1
          {Function}
@@ -57,7 +57,7 @@ $result_tree_text{'printindex_index_entry_in_copying_no_insertcopying'} = '*docu
       *line_arg C7
        (i){spaces_before_argument: }
        *def_category C1
-       |INFO
+       |EXTRA
        |inserted:{1}
         *def_line_arg C1
          {Function}

@@ -359,6 +359,7 @@ static U32 HSH_type = 0;
 static U32 HSH_cmdname = 0;
 static U32 HSH_contents = 0;
 static U32 HSH_text = 0;
+static U32 HSH_inserted_text = 0;
 static U32 HSH_extra = 0;
 static U32 HSH_info = 0;
 static U32 HSH_source_info = 0;
@@ -789,17 +790,6 @@ store_info_string (ELEMENT *e, const char *string,
 }
 
 static void
-store_info_integer (ELEMENT *e, int value,
-                     const char *key, HV **info_hv)
-{
-  dTHX;
-
-  setup_info_hv (e, info_hv);
-  hv_store (*info_hv, key, strlen (key), newSViv (value), 0);
-}
-
-
-static void
 store_extra_flag (ELEMENT *e, const char *key, HV **extra_hv)
 {
   dTHX;
@@ -854,6 +844,10 @@ build_base_element (ELEMENT *e, HV *hv)
         }
       sv = newSVpv_utf8 (e->e.text->text, e->e.text->end);
       STORE("text", sv, HSH_text);
+
+      if (e->flags & EF_inserted)
+        STORE("inserted_text", newSViv (1), HSH_inserted_text);
+
       return;
     }
 
@@ -930,6 +924,7 @@ element_to_perl_hash (ELEMENT *e, int avoid_recursion)
       PERL_HASH(HSH_cmdname, "cmdname", strlen ("cmdname"));
       PERL_HASH(HSH_contents, "contents", strlen ("contents"));
       PERL_HASH(HSH_text, "text", strlen ("text"));
+      PERL_HASH(HSH_inserted_text, "inserted_text", strlen ("inserted_text"));
       PERL_HASH(HSH_extra, "extra", strlen ("extra"));
       PERL_HASH(HSH_info, "info", strlen ("info"));
       PERL_HASH(HSH_source_info, "source_info", strlen ("source_info"));
@@ -938,9 +933,6 @@ element_to_perl_hash (ELEMENT *e, int avoid_recursion)
       PERL_HASH(HSH_line_nr, "line_nr", strlen ("line_nr"));
       PERL_HASH(HSH_macro, "macro", strlen ("macro"));
     }
-
-  if (e->flags & EF_inserted)
-    store_info_integer (e, 1, "inserted", &info_hv);
 
   build_base_element (e, element_hv);
 
@@ -994,6 +986,8 @@ element_to_perl_hash (ELEMENT *e, int avoid_recursion)
   store_flag(indent)
   /* ET_paragraph */
   store_flag(noindent)
+  /* ET_def_category */
+  store_flag(inserted)
 
 #undef store_flag
 

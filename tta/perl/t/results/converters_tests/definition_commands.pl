@@ -206,7 +206,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *block_line_arg C21
      (i){spaces_before_argument: }
      *def_category C1
-     |INFO
+     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {Special Form}
@@ -250,7 +250,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *line_arg C20
      (i){spaces_before_argument: }
      *def_category C1
-     |INFO
+     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {Special Form}
@@ -305,7 +305,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *line_arg C20
      (i){spaces_before_argument: }
      *def_category C1
-     |INFO
+     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {Special Form}
@@ -360,7 +360,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *line_arg C20
      (i){spaces_before_argument: }
      *def_category C1
-     |INFO
+     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {Special Form}
@@ -415,7 +415,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *line_arg C20
      (i){spaces_before_argument: }
      *def_category C1
-     |INFO
+     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {Special Form}
@@ -470,7 +470,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *line_arg C20
      (i){spaces_before_argument: }
      *def_category C1
-     |INFO
+     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {Special Form}
@@ -525,7 +525,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *line_arg C20
      (i){spaces_before_argument: }
      *def_category C1
-     |INFO
+     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {Special Form}
@@ -586,7 +586,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *line_arg C20
      (i){spaces_before_argument: }
      *def_category C1
-     |INFO
+     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {Special Form}
@@ -647,7 +647,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *line_arg C20
      (i){spaces_before_argument: }
      *def_category C1
-     |INFO
+     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {Special Form}
@@ -708,7 +708,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *line_arg C20
      (i){spaces_before_argument: }
      *def_category C1
-     |INFO
+     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {Special Form}
@@ -769,7 +769,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *line_arg C20
      (i){spaces_before_argument: }
      *def_category C1
-     |INFO
+     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {Special Form}
@@ -830,7 +830,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *line_arg C20
      (i){spaces_before_argument: }
      *def_category C1
-     |INFO
+     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {Special Form}
@@ -891,7 +891,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *line_arg C20
      (i){spaces_before_argument: }
      *def_category C1
-     |INFO
+     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {Special Form}
@@ -952,7 +952,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *line_arg C20
      (i){spaces_before_argument: }
      *def_category C1
-     |INFO
+     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {Special Form}
@@ -1013,7 +1013,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *line_arg C20
      (i){spaces_before_argument: }
      *def_category C1
-     |INFO
+     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {Special Form}
@@ -1086,7 +1086,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *block_line_arg C9
      (i){spaces_before_argument: }
      *def_category C1
-     |INFO
+     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {Special Form}
@@ -1112,7 +1112,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *line_arg C9
      (i){spaces_before_argument: }
      *def_category C1
-     |INFO
+     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {Special Form}
@@ -1140,7 +1140,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *line_arg C9
      (i){spaces_before_argument: }
      *def_category C1
-     |INFO
+     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {Special Form}
@@ -1168,7 +1168,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *line_arg C9
      (i){spaces_before_argument: }
      *def_category C1
-     |INFO
+     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {Special Form}
@@ -1196,7 +1196,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *line_arg C9
      (i){spaces_before_argument: }
      *def_category C1
-     |INFO
+     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {Special Form}
@@ -1224,7 +1224,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *line_arg C9
      (i){spaces_before_argument: }
      *def_category C1
-     |INFO
+     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {Special Form}
@@ -1252,7 +1252,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *line_arg C9
      (i){spaces_before_argument: }
      *def_category C1
-     |INFO
+     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {Special Form}
@@ -1282,7 +1282,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *line_arg C9
      (i){spaces_before_argument: }
      *def_category C1
-     |INFO
+     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {Special Form}
@@ -1312,7 +1312,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *line_arg C9
      (i){spaces_before_argument: }
      *def_category C1
-     |INFO
+     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {Special Form}
@@ -1342,7 +1342,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *line_arg C9
      (i){spaces_before_argument: }
      *def_category C1
-     |INFO
+     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {Special Form}
@@ -1372,7 +1372,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *line_arg C9
      (i){spaces_before_argument: }
      *def_category C1
-     |INFO
+     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {Special Form}
@@ -1402,7 +1402,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *line_arg C9
      (i){spaces_before_argument: }
      *def_category C1
-     |INFO
+     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {Special Form}
@@ -1432,7 +1432,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *line_arg C9
      (i){spaces_before_argument: }
      *def_category C1
-     |INFO
+     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {Special Form}
@@ -1462,7 +1462,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *line_arg C9
      (i){spaces_before_argument: }
      *def_category C1
-     |INFO
+     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {Special Form}
@@ -1492,7 +1492,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *line_arg C9
      (i){spaces_before_argument: }
      *def_category C1
-     |INFO
+     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {Special Form}
@@ -1718,7 +1718,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *block_line_arg C59
      (i){spaces_before_argument: }
      *def_category C1
-     |INFO
+     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {Special Form}
@@ -1916,7 +1916,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *line_arg C22
      (i){spaces_before_argument: }
      *def_category C1
-     |INFO
+     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {Special Form}
@@ -2289,7 +2289,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *block_line_arg C11
      (i){spaces_before_argument: }
      *def_category C1
-     |INFO
+     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {Function}
@@ -2342,7 +2342,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *block_line_arg C11
      (i){spaces_before_argument: }
      *def_category C1
-     |INFO
+     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {Function}

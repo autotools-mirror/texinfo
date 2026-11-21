@@ -513,7 +513,7 @@ $result_tree_text{'all_commands'} = '*document_root C1
     *block_line_arg C7
      (i){spaces_before_argument: }
      *def_category C1
-     |INFO
+     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {Function}
@@ -546,7 +546,7 @@ $result_tree_text{'all_commands'} = '*document_root C1
     *block_line_arg C7
      (i){spaces_before_argument: }
      *def_category C1
-     |INFO
+     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {Macro}
@@ -579,7 +579,7 @@ $result_tree_text{'all_commands'} = '*document_root C1
     *block_line_arg C7
      (i){spaces_before_argument: }
      *def_category C1
-     |INFO
+     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {Special Form}
@@ -612,7 +612,7 @@ $result_tree_text{'all_commands'} = '*document_root C1
     *block_line_arg C5
      (i){spaces_before_argument: }
      *def_category C1
-     |INFO
+     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {Variable}
@@ -641,7 +641,7 @@ $result_tree_text{'all_commands'} = '*document_root C1
     *block_line_arg C9
      (i){spaces_before_argument: }
      *def_category C1
-     |INFO
+     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {Variable}
@@ -678,7 +678,7 @@ $result_tree_text{'all_commands'} = '*document_root C1
     *block_line_arg C5
      (i){spaces_before_argument: }
      *def_category C1
-     |INFO
+     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {User Option}
@@ -707,7 +707,7 @@ $result_tree_text{'all_commands'} = '*document_root C1
     *block_line_arg C9
      (i){spaces_before_argument: }
      *def_category C1
-     |INFO
+     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {Function}
@@ -744,7 +744,7 @@ $result_tree_text{'all_commands'} = '*document_root C1
     *block_line_arg C7
      (i){spaces_before_argument: }
      *def_category C1
-     |INFO
+     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {Variable}
@@ -777,7 +777,7 @@ $result_tree_text{'all_commands'} = '*document_root C1
     *block_line_arg C7
      (i){spaces_before_argument: }
      *def_category C1
-     |INFO
+     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {Instance Variable}
@@ -810,7 +810,7 @@ $result_tree_text{'all_commands'} = '*document_root C1
     *block_line_arg C9
      (i){spaces_before_argument: }
      *def_category C1
-     |INFO
+     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {Instance Variable}
@@ -847,7 +847,7 @@ $result_tree_text{'all_commands'} = '*document_root C1
     *block_line_arg C9
      (i){spaces_before_argument: }
      *def_category C1
-     |INFO
+     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {Method}
@@ -884,7 +884,7 @@ $result_tree_text{'all_commands'} = '*document_root C1
     *block_line_arg C11
      (i){spaces_before_argument: }
      *def_category C1
-     |INFO
+     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {Method}

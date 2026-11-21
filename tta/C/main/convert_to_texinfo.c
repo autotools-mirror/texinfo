@@ -51,8 +51,6 @@ convert_args (const ELEMENT *element, TEXT *result)
   for (i = 0; i < element->e.c->contents.number; i++)
     {
       const ELEMENT *arg = element->e.c->contents.list[i];
-      if (arg->flags & EF_inserted)
-        continue;
 
       if (arg_nr)
         ADD(",");
@@ -121,8 +119,6 @@ convert_to_texinfo_internal (const ELEMENT *e, TEXT *result)
               for (i = 0; i < e->e.c->contents.number; i++)
                 {
                   const ELEMENT *arg = e->e.c->contents.list[i];
-                  if (arg->flags & EF_inserted)
-                    continue;
 
                   if (arg->type != ET_spaces_after_cmd_before_arg)
                     {

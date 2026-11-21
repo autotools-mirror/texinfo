@@ -190,7 +190,6 @@ sub _convert_args($) {
   my $result = '';
   my $arg_nr = 0;
   foreach my $arg (@{$element->{'contents'}}) {
-    next if ($arg->{'info'} and $arg->{'info'}->{'inserted'});
     $result .= ',' if ($arg_nr);
     $arg_nr++;
     $result .= _convert_to_texinfo($arg);
@@ -216,12 +215,13 @@ sub _convert_to_texinfo($) {
     }
   }
 
-  return '' if ((exists($element->{'info'})
-                 and $element->{'info'}->{'inserted'})
+  return '' if ((exists($element->{'extra'})
+                 and $element->{'extra'}->{'inserted'})
                 or (exists($element->{'type'})
                     and $element->{'type'} eq 'arguments_line'));
 
   if (exists($element->{'text'})) {
+    return '' if (exists($element->{'inserted_text'}));
     if (exists($element->{'type'})
         and $element->{'type'} eq 'bracketed_linemacro_arg') {
       $result .= '{';
@@ -267,7 +267,6 @@ sub _convert_to_texinfo($) {
         my $arg_nr = 0;
         my $braces = 0;
         foreach my $arg (@{$element->{'contents'}}) {
-          next if ($arg->{'info'} and $arg->{'info'}->{'inserted'});
           if ($arg->{'type'} ne 'spaces_after_cmd_before_arg') {
             if ($arg->{'type'} ne 'following_arg') {
               if ($arg_nr) {

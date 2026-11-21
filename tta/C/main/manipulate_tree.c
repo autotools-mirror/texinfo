@@ -1378,9 +1378,6 @@ print_element_info (ELEMENT *element, int level,
 
   memset (&info_strings, 0, sizeof (ADDITIONAL_INFO_NAME_VAL_LIST));
 
-  if (element->flags & EF_inserted)
-    add_info_name_string_value (&info_strings, "inserted", "1");
-
   text_init (&info_e_text);
 
   for (i = 0; i < type_data[element->type].elt_info_number; i++)
@@ -1521,6 +1518,10 @@ print_element_extra (ELEMENT *element, int level,
   store_flag(indent)
   /* ET_paragraph */
   store_flag(noindent)
+  /* ET_def_category */
+  store_flag(inserted)
+
+  #undef store_flag
 
   for (i = 0; i < a->info_number; i++)
     {

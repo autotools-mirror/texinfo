@@ -668,11 +668,6 @@ sub _convert($$;$) {
           $arg = '';
         } else {
           $arg = $self->_convert($element->{'contents'}->[0]);
-          if (exists($element->{'info'})
-              and exists($element->{'info'}->{'spaces_after_cmd_before_arg'})) {
-            push @$attributes, ['spacesaftercmd',
-               $element->{'info'}->{'spaces_after_cmd_before_arg'}->{'text'}];
-          }
           if ($element->{'contents'}->[0]->{'type'} ne 'brace_container'
               and $element->{'contents'}->[0]->{'type'} ne 'brace_arg') {
             push @$attributes, ['bracketed', 'off'];
@@ -1135,13 +1130,6 @@ sub _convert($$;$) {
         push @$attribute, ['identifier', $anchor_name];
       }
 
-      my $space_after_command_attribute;
-      if ($element->{'info'}
-          and $element->{'info'}->{'spaces_after_cmd_before_arg'}) {
-        $space_after_command_attribute = ['spacesaftercmd',
-                $element->{'info'}->{'spaces_after_cmd_before_arg'}->{'text'}];
-      }
-
       my @format_elements;
       my $main_cmdname;
       if ($commands_args_elements{$cmdname}) {
@@ -1155,8 +1143,6 @@ sub _convert($$;$) {
         @format_elements = ($cmdname);
         # leading spaces are directly associated to the @-command for @-command
         # in context brace_commands
-        push @$attribute, $space_after_command_attribute
-           if (defined($space_after_command_attribute));
       }
 
       if ($Texinfo::Commands::brace_commands{$cmdname} eq 'context') {
@@ -1219,8 +1205,6 @@ sub _convert($$;$) {
       }
       # This is for the main command
       $attribute = [];
-      push @$attribute, $space_after_command_attribute
-           if (defined($space_after_command_attribute));
       if ($cmdname eq 'image') {
         if (Texinfo::Common::element_is_inline($element)) {
           push @$attribute, ['where', 'inline'];

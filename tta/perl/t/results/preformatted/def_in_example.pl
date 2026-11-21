@@ -24,7 +24,7 @@ $result_tree_text{'def_in_example'} = '*document_root C1
      *block_line_arg C7
       (i){spaces_before_argument: }
       *def_category C1
-      |INFO
+      |EXTRA
       |inserted:{1}
        *def_line_arg C1
         {Function}

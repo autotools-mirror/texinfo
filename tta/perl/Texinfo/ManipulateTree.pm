@@ -158,9 +158,8 @@ sub _copy_tree($;$) {
   $current->{'_copy'} = $new;
 
   if (exists($current->{'text'})) {
-    if (exists($current->{'info'})
-        and exists($current->{'info'}->{'inserted'})) {
-      $new->{'info'} = {'inserted' => $current->{'info'}->{'inserted'}};
+    if (exists($current->{'inserted_text'})) {
+      $new->{'inserted_text'} = 1;
     }
     return $new;
   }
@@ -617,7 +616,7 @@ sub _print_text_element($$$;$$) {
   my ($element, $level, $prepended, $fname_encoding, $use_filename) = @_;
 
   my $result = '';
-  if (exists($element->{'info'}) and $element->{'info'}->{'inserted'}) {
+  if (exists($element->{'inserted_text'})) {
     $result .= '(i)';
   }
 

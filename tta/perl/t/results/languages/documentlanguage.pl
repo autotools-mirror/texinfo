@@ -176,7 +176,7 @@ $result_tree_text{'documentlanguage'} = '*document_root C6
     *block_line_arg C11
      (i){spaces_before_argument: }
      *def_category C1
-     |INFO
+     |EXTRA
      |inserted:{1}
       *untranslated_def_line_arg C1
       |EXTRA

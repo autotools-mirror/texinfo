@@ -20,7 +20,7 @@ $result_tree_text{'empty_deftype'} = '*document_root C1
     *block_line_arg C15
      (i){spaces_before_argument: }
      *def_category C1
-     |INFO
+     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {Function}
@@ -66,7 +66,7 @@ $result_tree_text{'empty_deftype'} = '*document_root C1
     *block_line_arg C13
      (i){spaces_before_argument: }
      *def_category C1
-     |INFO
+     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {Function}
@@ -109,7 +109,7 @@ $result_tree_text{'empty_deftype'} = '*document_root C1
     *block_line_arg C17
      (i){spaces_before_argument: }
      *def_category C1
-     |INFO
+     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {Method}
@@ -159,7 +159,7 @@ $result_tree_text{'empty_deftype'} = '*document_root C1
     *block_line_arg C15
      (i){spaces_before_argument: }
      *def_category C1
-     |INFO
+     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {Method}
