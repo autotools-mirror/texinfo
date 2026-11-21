@@ -194,7 +194,7 @@ sub _copy_tree($;$) {
     }
   }
 
-  foreach my $info_type ('info', 'extra') {
+  foreach my $info_type ('extra') {
     next if (!exists($current->{$info_type}));
     $new->{$info_type} = {};
     foreach my $key (sort(keys(%{$current->{$info_type}}))) {
@@ -296,7 +296,7 @@ sub _remove_element_copy_info($;$$) {
     }
   }
 
-  foreach my $info_type ('info', 'extra') {
+  foreach my $info_type ('extra') {
     next if (!exists($current->{$info_type}));
     foreach my $key (sort(keys(%{$current->{$info_type}}))) {
       my $value = $current->{$info_type}->{$key};
@@ -385,9 +385,6 @@ sub copy_contents($;$) {
 
 
 
-# keep in sync with elt_info_names in C/main/tree.c
-my @elt_info_names = ();
-
 sub tree_remove_parents($);
 
 # TODO add documentation?
@@ -412,15 +409,6 @@ sub tree_remove_parents($) {
   return if (exists($element->{'text'}));
 
   delete $element->{'parent'};
-
-  if (exists($element->{'info'})) {
-    foreach my $info_elt_key (@elt_info_names) {
-      # for spaces_* parents can only be in source marks
-      if (exists($element->{'info'}->{$info_elt_key})) {
-        tree_remove_parents($element->{'info'}->{$info_elt_key});
-      }
-    }
-  }
 
   if (exists($element->{'contents'})) {
     foreach my $content (@{$element->{'contents'}}) {
@@ -453,16 +441,6 @@ sub _element_remove_references($;$$) {
   }
 
   if (!exists($element->{'text'})) {
-    if (exists($element->{'info'})) {
-      foreach my $info_elt_key (@elt_info_names) {
-        if (exists($element->{'info'}->{$info_elt_key})) {
-          _element_remove_references($element->{'info'}->{$info_elt_key},
-                                 $check_refcount, $silent_refcount);
-          delete $element->{'info'}->{$info_elt_key};
-        }
-      }
-    }
-
     if (exists($element->{'contents'})) {
       if (exists($element->{'extra'})) {
         # if there were out of tree elements, they would be recursed into
@@ -658,7 +636,7 @@ sub _print_element_add_prepend_info($$$$;$$) {
 my @extra_out_of_tree = ();
 
 my %out_of_tree_element_name;
-foreach my $name (@extra_out_of_tree, @elt_info_names) {
+foreach my $name (@extra_out_of_tree) {
   $out_of_tree_element_name{$name} = 1;
 }
 
@@ -907,22 +885,6 @@ sub print_element_details($$$$;$$) {
     return ($current_nr, $result);
   }
 
-  if (exists($element->{'info'})) {
-    my $info = $element->{'info'};
-    my $result_info;
-    foreach my $info_oot (@elt_info_names) {
-      if (exists($info->{$info_oot})) {
-        $current_nr = set_element_tree_numbers($info->{$info_oot},
-                                               $current_nr);
-      }
-    }
-    ($current_nr, $result_info)
-      = _print_element_associated_info($info, 'INFO', $level,
-                                       $prepended, $current_nr,
-                                       $fname_encoding, $use_filename);
-    $result .= $result_info;
-  }
-
   if (exists($element->{'extra'})) {
     my $result_info;
     my $extra = $element->{'extra'};
@@ -1035,14 +997,6 @@ sub _print_tree_elements_ref($$)
   }
 
   return if (exists($element->{'text'}));
-
-  if (exists($element->{'info'})) {
-    foreach my $info_elt_key (@elt_info_names) {
-      if (exists($element->{'info'}->{$info_elt_key})) {
-        _print_tree_elements_ref($element->{'info'}->{$info_elt_key}, $level+2);
-      }
-    }
-  }
 
   if (exists($element->{'contents'})) {
     for (my $i = 0; $i < scalar(@{$element->{'contents'}}); $i++) {

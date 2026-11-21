@@ -56,9 +56,6 @@ enum extra_type {
 
    /* ELEMENT flags */
    extra_flag,
-
-   /* ELEMENT elt_info */
-   extra_element_info,
 };
 
 /* tree element flags */
@@ -84,14 +81,6 @@ enum extra_type {
 /* an added element, not in the initial tree.  Not systematically set,
    only when useful */
 #define EF_added                         0x2000
-
-/* indices in ELEMENT elt_info */
-/* to be kept in sync with elt_info_names in main/tree.c */
-/*
-enum elt_info_type {
-   eit_....,
-};
- */
 
 /* sync string_list with Texinfo/ManipulateTree.pm
    _print_element_associated_info list for ARRAY ref
@@ -250,13 +239,12 @@ typedef struct ELEMENT {
     } e;
 
     uint16_t flags; /* can hold up to 16 flags, could use uint32_t for more */
-    /* currently no element with elt_info.
-       Need to be kept as it is used transiently during a copy, although
+    /* used transiently during a copy, although
        this is not currently useful, as it is only needed if there are
        references to other elements (in extra information), this is not the
        case as can be seen in AI_KEYS_LIST.
      */
-    struct ELEMENT **elt_info;
+    struct ELEMENT *elt_copy;
     /* Used when building Perl tree only. This should be SV *sv,
        but we don't want to include the Perl headers everywhere; */
     void *sv;

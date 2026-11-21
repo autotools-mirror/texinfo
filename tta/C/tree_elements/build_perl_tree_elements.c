@@ -133,18 +133,6 @@ build_element_attribute (const ELEMENT *element, const char *attribute,
             return newSViv (1);
           break;
           }
-        case extra_element_info:
-          {
-          int idx = associated_info_table[key].data;
-          if (idx < type_data[element->type].elt_info_number
-              && element->elt_info[idx])
-            {
-              ELEMENT *info_element = element->elt_info[idx];
-              register_element_handle_in_sv (info_element, document);
-              return newSVsv ((SV *)info_element->sv);
-            }
-          break;
-          }
         case extra_misc_args:
           {
           const KEY_PAIR *k = lookup_extra (element, key);

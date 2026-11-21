@@ -12,9 +12,6 @@
 /* Array of "associated info" key names, extra type and data. */
 extern const ASSOCIATED_INFO_DATA associated_info_table[];
 
-/* Array of elt_info key names.  Currently empty */
-extern const char *elt_info_names[];
-
 ASSOCIATED_INFO *new_associated_info (void);
 ELEMENT *new_element (enum element_type type);
 ELEMENT *new_command_element (enum element_type type, enum command_id cmd);

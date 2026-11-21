@@ -36,10 +36,6 @@
 #include "api_to_perl.h"
 #include "tree.h"
 
-/* to be kept in sync with enum elt_info_type */
-const char *elt_info_names[] = {
-};
-
 const ASSOCIATED_INFO_DATA associated_info_table[] = {
   #define ai_key(name, type, data) \
  {AI_key_ ## name, extra_##type, #name, data}, \
@@ -68,14 +64,6 @@ new_element (enum element_type type)
 
   e->e.c = (CONTAINER *) malloc (sizeof (CONTAINER));
   memset (e->e.c, 0, sizeof (CONTAINER));
-
-  if (type_data[type].elt_info_number > 0)
-    {
-      e->elt_info = (ELEMENT **)
-        malloc (sizeof (ELEMENT *) * type_data[type].elt_info_number);
-      memset (e->elt_info, 0,
-         sizeof (ELEMENT *) * type_data[type].elt_info_number);
-    }
 
   return e;
 }
@@ -292,16 +280,10 @@ destroy_element (ELEMENT *e)
     }
   else
     {
-      int i;
   /* Note the pointers in the list are not themselves freed. */
       free (e->e.c->contents.list);
 
       destroy_associated_info (&e->e.c->extra_info);
-
-      for (i = 0; i < type_data[e->type].elt_info_number; i++)
-        if (e->elt_info[i])
-          destroy_element_and_children (e->elt_info[i]);
-      free (e->elt_info);
 
       free (e->e.c->command_name);
 

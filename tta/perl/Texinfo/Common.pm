@@ -2341,12 +2341,6 @@ sub debug_print_reference_key_val_info($;$) {
       $string .= "  $key: $current->{'extra'}->{$key}\n";
     }
   }
-  if (exists($current->{'info'})) {
-    $string .= " INFO\n";
-    foreach my $key (keys (%{$current->{'info'}})) {
-      $string .= "  $key: $current->{'info'}->{$key}\n";
-    }
-  }
   return $string;
 }
 
@@ -2391,7 +2385,7 @@ sub debug_hash {
 use Data::Dumper;
 
 my @kept_keys = ('contents', 'cmdname', 'type', 'text',
-  'extra', 'info', 'index_entry'
+  'extra', 'index_entry', 'inserted_text',
 );
 my %kept_keys;
 foreach my $key (@kept_keys) {

@@ -70,8 +70,7 @@
 #include "xs_utils.h"
 /* fatal */
 #include "base_utils.h"
-/* for associated_info_table elt_info_names
-   add_to_element_list */
+/* for associated_info_table add_to_element_list */
 #include "tree.h"
 /* for element_command_name */
 #include "builtin_commands.h"
@@ -762,20 +761,6 @@ store_source_mark_list (const ELEMENT *e)
 
 
 static void
-setup_info_hv (ELEMENT *e, HV **info_hv)
-{
-  dTHX;
-
-  if (*info_hv == 0)
-    {
-      HV *element_hv = (HV *) SvRV ((SV*) e->sv);
-      *info_hv = (HV *) newHV ();
-      hv_store (element_hv, "info", strlen ("info"),
-                newRV_noinc ((SV *)*info_hv), HSH_info);
-    }
-}
-
-static void
 store_extra_flag (ELEMENT *e, const char *key, HV **extra_hv)
 {
   dTHX;
@@ -877,7 +862,6 @@ void
 element_to_perl_hash (ELEMENT *e, int avoid_recursion)
 {
   SV *sv;
-  HV *info_hv = 0;
   HV *extra_hv = 0;
   HV *element_hv;
 
@@ -975,28 +959,6 @@ element_to_perl_hash (ELEMENT *e, int avoid_recursion)
   store_flag(inserted)
 
 #undef store_flag
-
-  /* process elt_info array */
-  /* currently 0 for all the elements */
-  if (type_data[e->type].elt_info_number > 0)
-    {
-      int i;
-      for (i = 0; i < type_data[e->type].elt_info_number; i++)
-        {
-          ELEMENT *info_element = e->elt_info[i];
-          if (info_element)
-            {
-              if (!info_element->sv || !avoid_recursion)
-                element_to_perl_hash (info_element, avoid_recursion);
-
-              setup_info_hv (e, &info_hv);
-
-              hv_store (info_hv, elt_info_names[i],
-                        strlen (elt_info_names[i]),
-                        newSVsv ((SV *)info_element->sv), 0);
-            }
-        }
-    }
 
   if (e->e.c->contents.number > 0)
     {

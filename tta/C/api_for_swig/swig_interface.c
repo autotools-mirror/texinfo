@@ -382,17 +382,6 @@ txi_ext_element_attribute_element (const ELEMENT *element,
             return k->k.element;
           break;
           }
-        case extra_element_info:
-          {
-          int idx = associated_info_table[key].data;
-          if (idx < type_data[element->type].elt_info_number
-              && element->elt_info[idx])
-            {
-              ELEMENT *info_element = element->elt_info[idx];
-              return info_element;
-            }
-          break;
-          }
         default:
           break;
         }
@@ -560,17 +549,6 @@ txi_ext_set_element_attribute_element (ELEMENT *element, const char *attribute,
           {
           add_extra_container (element, key, value);
           return 1;
-          break;
-          }
-        case extra_element_info:
-          {
-          int idx = associated_info_table[key].data;
-          if (idx < type_data[element->type].elt_info_number)
-            {
-              free (element->elt_info[idx]);
-              element->elt_info[idx] = value;
-              return 1;
-            }
           break;
           }
         default:

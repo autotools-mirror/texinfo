@@ -1,5 +1,37 @@
 2026-11-21  Patrice Dumas  <pertusus@free.fr>
 
+	Remove info associated info
+
+	* tta/C/main/manipulate_tree.c (copy_tree_internal)
+	(remove_element_copy_info, unused_set_element_tree_numbers)
+	(element_number_or_error, print_element_details)
+	(remove_element_tree_numbers), tta/C/main/tree_types.h (ELEMENT): add
+	elt_copy field to ELEMENT.  Use elt_copy instead of adding a member in
+	elt_info for (unused) numbering elements.
+
+	* tta/C/api_for_swig/swig_interface.c
+	(txi_ext_element_attribute_element)
+	(txi_ext_set_element_attribute_element), tta/C/main/manipulate_tree.c
+	(copy_associated_info, copy_tree_internal, remove_element_copy_info)
+	(tree_remove_parents, print_element_details), tta/C/main/tree.c
+	(new_element, destroy_element), tta/C/main/tree_types.h
+	(enum extra_type), tta/C/tree_elements/build_perl_tree_elements.c
+	(build_element_attribute), tta/perl/Texinfo/Common.pm
+	(debug_print_reference_key_val_info),
+	tta/perl/Texinfo/ManipulateTree.pm (_copy_tree)
+	(_remove_element_copy_info, tree_remove_parents)
+	(_element_remove_references, print_element_details)
+	(_print_tree_elements_ref): remove extra_element_info and elt_info.
+	Remove print_element_info.  Remove @elt_info_names.  Do not print info
+	associated info.
+
+	* tta/C/main/build_perl_info.c (element_to_perl_hash): do not build
+	info associated info anymore.  Remove setup_info_hv.
+
+	* tta/C/main/tree.c: remove elt_info_names.
+
+2026-11-21  Patrice Dumas  <pertusus@free.fr>
+
 	alias_of in extra, command_name separate, remove string_info
 
 	* tta/C/api_for_swig/swig_interface.c

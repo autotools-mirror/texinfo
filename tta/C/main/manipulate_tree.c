@@ -49,7 +49,7 @@
 
 /* The design was setup when there could be reference to other elements
    of the tree.  This is not the case anymore, it could be possible to
-   do one pass only and remove elt_info.
+   do one pass only and remove elt_copy.
 
    To do the copy, we do two pass.  First with copy_tree_internal, the tree is
    copied and a flag and reference to the copy is put in all the elements,
@@ -198,7 +198,6 @@ copy_associated_info (ASSOCIATED_INFO *info, ASSOCIATED_INFO *new_info,
           }
         case extra_none:
         case extra_flag:
-        case extra_element_info:
           break;
         default:
           fatal ("copy_associated_info: unknown extra type");
@@ -218,12 +217,10 @@ copy_tree_internal (ELEMENT* current, ELEMENT_LIST *other_trees)
 {
   ELEMENT *new;
   size_t i;
-  int elt_info_nr = type_data[current->type].elt_info_number;
-
   if (current->flags & EF_copy)
     {
-    /* the reference to the copy element is last in elt_info */
-      return current->elt_info[elt_info_nr];
+    /* the reference to the copy element */
+      return current->elt_copy;
     }
 
   /* not already copied, do the copy */
@@ -239,13 +236,7 @@ copy_tree_internal (ELEMENT* current, ELEMENT_LIST *other_trees)
   /* set that flag to mark that a copy of the element exists */
   current->flags |= EF_copy;
 
-  /* point to the copy at the end of elt_info after the regular information */
-  current->elt_info = (ELEMENT **) realloc (current->elt_info,
-                               sizeof (ELEMENT *) * (elt_info_nr + 1));
-  if (!current->elt_info)
-    fatal ("realloc failed");
-
-  current->elt_info[elt_info_nr] = new;
+  current->elt_copy = new;
 
   /*
   fprintf (stderr, "CTNEW %p %s %p\n", current,
@@ -267,18 +258,6 @@ copy_tree_internal (ELEMENT* current, ELEMENT_LIST *other_trees)
         add_element_to_element_contents (new, added);
       else
         add_to_contents_as_array (new, added);
-    }
-
-  if (elt_info_nr > 0)
-    {/* never happens currently */
-      int j;
-      for (j = 0; j < elt_info_nr; j++)
-        if (current->elt_info[j])
-          {
-            ELEMENT *copy = copy_tree_internal (current->elt_info[j],
-                                                other_trees);
-            new->elt_info[j] = copy;
-          }
     }
 
   if (current->e.c->command_name)
@@ -375,15 +354,13 @@ static void
 remove_element_copy_info (ELEMENT *current, ELEMENT_LIST *added_root_elements)
 {
   size_t i;
-  int elt_info_nr;
   ELEMENT *new_elt;
 
   if (! (current->flags & EF_copy))
     /* already done or extra element not copied */
     return;
 
-  elt_info_nr = type_data[current->type].elt_info_number;
-  new_elt = current->elt_info[elt_info_nr];
+  new_elt = current->elt_copy;
   /* new element without parent is recorded as an added root element */
   if (!(type_data[new_elt->type].flags & TF_text) && !new_elt->e.c->parent)
     {
@@ -405,20 +382,9 @@ remove_element_copy_info (ELEMENT *current, ELEMENT_LIST *added_root_elements)
       */
     }
 
-  /* mark as copied by unsetting the flag and deallocate pointer to the copy */
+  /* mark as copied by unsetting the flag and removing pointer to the copy */
   current->flags &= ~EF_copy;
-  if (elt_info_nr > 0)
-    {
-      current->elt_info = (ELEMENT **) realloc (current->elt_info,
-                               sizeof (ELEMENT *) * elt_info_nr);
-      if (!current->elt_info)
-        fatal ("realloc failed");
-    }
-  else
-    {
-      free (current->elt_info);
-      current->elt_info = 0;
-    }
+  current->elt_copy = 0;
 
   if (! (type_data[current->type].flags & TF_text))
     {
@@ -426,18 +392,6 @@ remove_element_copy_info (ELEMENT *current, ELEMENT_LIST *added_root_elements)
         remove_element_copy_info (current->e.c->contents.list[i],
                                   added_root_elements);
 
-      if (type_data[current->type].elt_info_number > 0)
-        {
-          int j;
-          for (j = 0; j < type_data[current->type].elt_info_number; j++)
-            {
-              if (current->elt_info[j])
-                {
-                  ELEMENT *f = current->elt_info[j];
-                  remove_element_copy_info (f, added_root_elements);
-                }
-            }
-        }
       remove_associated_copy_info (&current->e.c->extra_info,
                                    added_root_elements);
     }
@@ -586,16 +540,6 @@ tree_remove_parents (ELEMENT *element)
     return;
 
   element->e.c->parent = 0;
-
-  if (type_data[element->type].elt_info_number > 0)
-    {
-      int j;
-      for (j = 0; j < type_data[element->type].elt_info_number; j++)
-        {
-          if (element->elt_info[j])
-            tree_remove_parents (element->elt_info[j]);
-        }
-    }
 
   if (element->e.c->contents.number > 0)
     {
@@ -1059,8 +1003,6 @@ uintptr_t
 unused_set_element_tree_numbers (ELEMENT *element, uintptr_t current_nr)
 {
   size_t i;
-  int elt_info_nr = type_data[element->type].elt_info_number;
-
   if (type_data[element->type].flags & TF_text)
     return current_nr;
 
@@ -1075,7 +1017,6 @@ unused_set_element_tree_numbers (ELEMENT *element, uintptr_t current_nr)
        */
     {
 
-       /* Avoid clobbering elt_info_nr + 1 */
       if (element->flags & EF_copy || element->flags & EF_numbered)
         {
           char *debug_str = print_element_debug (element, 1);
@@ -1083,27 +1024,23 @@ unused_set_element_tree_numbers (ELEMENT *element, uintptr_t current_nr)
             fprintf (stderr, "WARNING: can't number, copy is set: %p '%s'\n",
                              element, debug_str);
           /* NOTE not possible for now, but this has happened in tests in
-             the past.  It may have been because of a bug
-             where the element was numbered instead of the elt_info.
+             the past.  It may have been because of a bug.
              If/when this code can be tested again, it should be checked
              if this bug is still there and if yes, it should be fixed.
           else
             fprintf (stderr, "WARNING: already numbered: %p E%"
                                  PRIuPTR " '%s'\n", element,
-                   (uintptr_t) element->elt_info[elt_info_nr], debug_str);
+                   (uintptr_t) element->elt_copy, debug_str);
            */
           free (debug_str);
         }
       else
         {
-      /* put number at the end of elt_info after the regular information */
-          element->elt_info = (ELEMENT **) realloc (element->elt_info,
-                                   sizeof (ELEMENT *) * (elt_info_nr + 1));
-
       /* set that flag to mark that a number is stored */
         element->flags |= EF_numbered;
 
-        element->elt_info[elt_info_nr] = (ELEMENT *)current_nr;
+      /* put number in elt_copy */
+        element->elt_copy = (ELEMENT *)current_nr;
 
         current_nr++;
       }
@@ -1358,45 +1295,6 @@ print_element_add_prepend_info (ELEMENT *element, int level,
 }
 
 
-static uintptr_t
-print_element_info (ELEMENT *element, int level,
-                    const char *prepended, uintptr_t current_nr,
-                    TEXT *result, const char *fname_encoding,
-                    int use_filename, int show_element_pointer)
-{
-  int i;
-  TEXT info_e_text;
-  ADDITIONAL_INFO_NAME_VAL_LIST info_strings;
-
-  memset (&info_strings, 0, sizeof (ADDITIONAL_INFO_NAME_VAL_LIST));
-
-  text_init (&info_e_text);
-
-  for (i = 0; i < type_data[element->type].elt_info_number; i++)
-    {
-      ELEMENT *info_element = element->elt_info[i];
-      if (info_element)
-        {
-          text_append (&info_e_text, "");
-          current_nr = set_element_tree_numbers (info_element, current_nr);
-
-          current_nr = print_element_add_prepend_info (info_element,
-                              level+1, prepended, current_nr, &info_e_text,
-                              fname_encoding, use_filename,
-                              show_element_pointer);
-
-          add_info_name_value (&info_strings, elt_info_names[i],
-                               info_e_text.text, 1);
-          text_reset (&info_e_text);
-        }
-    }
-  free (info_e_text.text);
-
-  print_info_strings (&info_strings, level, prepended, result, "INFO");
-
-  return current_nr;
-}
-
 /* not called for now as there are no extra element, content, direction
  */
 char *
@@ -1405,8 +1303,7 @@ element_number_or_error (const ELEMENT *element)
   char *result;
   if (element->flags & EF_numbered)
     {
-      int elt_info_nr = type_data[element->type].elt_info_number;
-      xasprintf (&result, "E%" PRIuPTR, element->elt_info[elt_info_nr]);
+      xasprintf (&result, "E%" PRIuPTR, element->elt_copy);
     }
   else
     {
@@ -1698,8 +1595,7 @@ print_element_details (ELEMENT *element, int level, const char *prepended,
 
   if (element->flags & EF_numbered)
     {
-      int elt_info_nr = type_data[element->type].elt_info_number;
-      text_printf (result, "%" PRIuPTR " ", element->elt_info[elt_info_nr]);
+      text_printf (result, "%" PRIuPTR " ", element->elt_copy);
     }
 
   if (element->type
@@ -1747,10 +1643,6 @@ print_element_details (ELEMENT *element, int level, const char *prepended,
     }
 
   text_append_n (result, "\n", 1);
-
-  current_nr = print_element_info (element, level, prepended,
-                                   current_nr, result, fname_encoding,
-                                   use_filename, show_element_pointer);
 
   current_nr = print_element_extra (element, level, prepended,
                                     current_nr, result, fname_encoding,
@@ -1804,21 +1696,7 @@ remove_element_tree_numbers (ELEMENT *element)
 
   if (element->flags & EF_numbered)
     {
-      int elt_info_nr = type_data[element->type].elt_info_number;
-
-      if (elt_info_nr > 0)
-        {
-          element->elt_info = (ELEMENT **) realloc (element->elt_info,
-                               sizeof (ELEMENT *) * elt_info_nr);
-          if (!element->elt_info)
-            fatal ("realloc failed");
-        }
-      else
-        {
-          free (element->elt_info);
-          element->elt_info = 0;
-        }
-
+      element->elt_copy = 0;
       element->flags &= ~EF_numbered;
     }
 
