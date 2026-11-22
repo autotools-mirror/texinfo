@@ -917,6 +917,14 @@ ccc|}
 undef, {'test_file' => 'maketitle_documentinfo_publication.texi'},
 {'SHOW_TITLE' => 1},
 ],
+# check that the node is not emitted as a heading
+['auto_top_section',
+'@top Test manual
+
+In top node
+
+', {'AUTO_SECTION_NODE' => 1,},
+],
 );
 
 my $test_accents_sc_no_brace_commands_quotes = '@u{--a}

@@ -716,6 +716,18 @@ sub insert_nodes_for_sectioning_commands($;$) {
         $node_idx++;
         $new_node->{'extra'}->{'node_number'} = $node_idx;
         $section_relations->{'associated_node'} = $new_node_relations;
+        if (exists($section_relations->{'associated_anchor_command'})) {
+          my $section_texinfo
+      = Texinfo::Convert::Texinfo::convert_contents_to_texinfo($new_node_tree);
+          # section argument missing
+          $section_texinfo = '' if (!defined($section_texinfo));
+          print STDERR "BUG? unexpected anchor_command without associated node"
+                       ." for $section_texinfo\n";
+        } else {
+          $section_relations->{'associated_anchor_command'}
+            = $new_node_relations;
+          $new_node_relations->{'associated_title_command'} = $content;
+        }
         $new_node->{'parent'} = $content->{'parent'}
           if (exists($content->{'parent'}));
         # reassociate index entries and menus

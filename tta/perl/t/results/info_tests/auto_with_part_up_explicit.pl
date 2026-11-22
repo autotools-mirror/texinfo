@@ -98,6 +98,7 @@ $result_nodes_list{'auto_with_part_up_explicit'} = '1|Top
   next->chap
 2|chap
  associated_section: 1 chap
+ associated_title_command: 1 chap
  node_directions:
   prev->Top
   up->Top
@@ -117,6 +118,7 @@ $result_sections_list{'auto_with_part_up_explicit'} = '1|sec top
  section_children:
   1|chap
 3|chap
+ associated_anchor_command: chap
  associated_node: chap
  associated_part: PRT
  section_directions:

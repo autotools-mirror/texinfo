@@ -181,6 +181,7 @@ $result_nodes_list{'test_insert_nodes_reallocated_nodedescriptionblock'} = '1|To
   up->Top
 3|Sec
  associated_section: 1.1 Sec
+ associated_title_command: 1.1 Sec
  node_long_descriptions:
   @nodedescriptionblock l8
   @nodedescriptionblock l12
@@ -188,6 +189,7 @@ $result_nodes_list{'test_insert_nodes_reallocated_nodedescriptionblock'} = '1|To
   up->chap
 4|Subsec
  associated_section: 1.1.1 Subsec
+ associated_title_command: 1.1.1 Subsec
  node_directions:
   up->Sec
 ';
@@ -210,12 +212,14 @@ $result_sections_list{'test_insert_nodes_reallocated_nodedescriptionblock'} = '1
  section_children:
   1|Sec
 3|Sec
+ associated_anchor_command: Sec
  associated_node: Sec
  section_directions:
   up->Chap
  section_children:
   1|Subsec
 4|Subsec
+ associated_anchor_command: Subsec
  associated_node: Subsec
  section_directions:
   up->Sec
@@ -293,7 +297,6 @@ Sec
 <div class="section-level-extent" id="Sec">
 <p class="nav-panel">
 <span class="nav-button"><span class="nav-label">Up: </span><span class="nav-link"><a href="#chap" accesskey="u" rel="up">Chap</a></span></span><span class="nav-button"> &nbsp; </span></p>
-<h4 class="node"><span>Sec<a class="copiable-link" href="#Sec"> &para;</a></span></h4>
 <h3 class="section" id="Sec-1"><span>1.1 Sec<a class="copiable-link" href="#Sec-1"> &para;</a></span></h3>
 
 
@@ -305,7 +308,6 @@ Sec
 <div class="subsection-level-extent" id="Subsec">
 <p class="nav-panel">
 <span class="nav-button"><span class="nav-label">Up: </span><span class="nav-link"><a href="#Sec" accesskey="u" rel="up">Sec</a></span></span><span class="nav-button"> &nbsp; </span></p>
-<h4 class="node"><span>Subsec<a class="copiable-link" href="#Subsec"> &para;</a></span></h4>
 <h4 class="subsection" id="Subsec-1"><span>1.1.1 Subsec<a class="copiable-link" href="#Subsec-1"> &para;</a></span></h4>
 
 </div>

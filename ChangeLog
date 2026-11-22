@@ -1,3 +1,18 @@
+2026-11-22  Patrice Dumas  <pertusus@free.fr>
+
+	title command and anchor command for node added for sectioning
+
+	* tta/C/structuring_transfo/structuring.c
+	(insert_nodes_for_sectioning_commands),
+	tta/perl/Texinfo/ManipulateTreeNonXS.pm
+	(insert_nodes_for_sectioning_commands): associate newly created node
+	to the sectioning command as title_command and associate node as
+	anchor_command.  Report and analysis by Gavin.
+
+	* tta/perl/t/html_tests.t (auto_top_section),
+	tta/perl/t/test_files_generated_list.txt: new test based on Gavin
+	code.
+
 2026-11-21  Patrice Dumas  <pertusus@free.fr>
 
 	* tta/C/main/types_data.h (TYPE_DATA), tta/C/main/element_types.awk:
@@ -307,12 +322,12 @@
 2026-11-20  Patrice Dumas  <pertusus@free.fr>
 
 	* tta/C/api_for_swig/swig_interface.c
-	(txi_ext_element_list_element_by_index): fix sign of negaive index.
+	(txi_ext_element_list_element_by_index): fix sign of negative index.
 
 2026-11-20  Patrice Dumas  <pertusus@free.fr>
 
 	* tta/C/main/convert_to_text.c (convert_to_text_internal),
-	tta/perl/Texinfo/Convert/HTML.pm (_convert): use
+	tta/perl/Texinfo/Convert/Text.pm (_convert): use
 	get_non_empty_brace_args for brace arg commands. Use arguments
 	returned by get_non_empty_brace_args instead of element contents.
 

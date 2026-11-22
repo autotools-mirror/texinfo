@@ -351,10 +351,12 @@ $result_errors{'insert_nodes_for_sectioning_commands'} = '* W l21|@unnumbered mi
 
 $result_nodes_list{'insert_nodes_for_sectioning_commands'} = '1|Top
  associated_section: top section
+ associated_title_command: top section
  node_directions:
   next->chap@comma{} @code{a chap}
 2|chap@comma{} @code{a chap}
  associated_section: 1 chap, @code{a chap}
+ associated_title_command: 1 chap, @code{a chap}
  node_directions:
   next-> [+1+]
   prev->Top
@@ -367,43 +369,51 @@ $result_nodes_list{'insert_nodes_for_sectioning_commands'} = '1|Top
   up->chap@comma{} @code{a chap}
 4|truc
  associated_section: 1.2 truc
+ associated_title_command: 1.2 truc
  node_directions:
   next->section [+1+]
   prev->a node
   up->chap@comma{} @code{a chap}
 5|sub1
  associated_section: 1.2.1 sub1
+ associated_title_command: 1.2.1 sub1
  node_directions:
   next->sub2
   up->truc
 6|sub2
  associated_section: 1.2.2 sub2
+ associated_title_command: 1.2.2 sub2
  node_directions:
   prev->sub1
   up->truc
 7|section [+1+]
  associated_section: 1.3 section
+ associated_title_command: 1.3 section
  node_directions:
   next->section [+2+]
   prev->truc
   up->chap@comma{} @code{a chap}
 8|section [+2+]
  associated_section: 1.4 section
+ associated_title_command: 1.4 section
  node_directions:
   prev->section [+1+]
   up->chap@comma{} @code{a chap}
 9| [+1+]
  associated_section
+ associated_title_command
  node_directions:
   prev->chap@comma{} @code{a chap}
   up->Top
 10|@asis{} [+2+]
  associated_section: @asis{}
+ associated_title_command: @asis{}
  node_directions:
   up-> [+1+]
 ';
 
 $result_sections_list{'insert_nodes_for_sectioning_commands'} = '1|top section
+ associated_anchor_command: Top
  associated_node: Top
  section_directions:
   next->part
@@ -417,6 +427,7 @@ $result_sections_list{'insert_nodes_for_sectioning_commands'} = '1|top section
   1|chap, @code{a chap}
   2|
 3|chap, @code{a chap}
+ associated_anchor_command: chap@comma{} @code{a chap}
  associated_node: chap@comma{} @code{a chap}
  associated_part: part
  section_directions:
@@ -438,6 +449,7 @@ $result_sections_list{'insert_nodes_for_sectioning_commands'} = '1|top section
   next->truc
   up->chap, @code{a chap}
 5|truc
+ associated_anchor_command: truc
  associated_node: truc
  section_directions:
   next->section
@@ -447,27 +459,32 @@ $result_sections_list{'insert_nodes_for_sectioning_commands'} = '1|top section
   1|sub1
   2|sub2
 6|sub1
+ associated_anchor_command: sub1
  associated_node: sub1
  section_directions:
   next->sub2
   up->truc
 7|sub2
+ associated_anchor_command: sub2
  associated_node: sub2
  section_directions:
   prev->sub1
   up->truc
 8|section
+ associated_anchor_command: section [+1+]
  associated_node: section [+1+]
  section_directions:
   next->section
   prev->truc
   up->chap, @code{a chap}
 9|section
+ associated_anchor_command: section [+2+]
  associated_node: section [+2+]
  section_directions:
   prev->section
   up->chap, @code{a chap}
 10
+ associated_anchor_command:  [+1+]
  associated_node:  [+1+]
  section_directions:
   prev->chap, @code{a chap}
@@ -478,6 +495,7 @@ $result_sections_list{'insert_nodes_for_sectioning_commands'} = '1|top section
  section_children:
   1|@asis{}
 11|@asis{}
+ associated_anchor_command: @asis{} [+2+]
  associated_node: @asis{} [+2+]
  section_directions:
   up->

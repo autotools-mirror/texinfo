@@ -223,6 +223,7 @@ $result_nodes_list{'parenthesis_in_node_name_explicit_refs'} = '1|Top
   up->Top
 3|@asis{(}Two)
  associated_section: 2 (Two)
+ associated_title_command: 2 (Two)
  node_directions:
   prev->One:
   up->Top
@@ -247,6 +248,7 @@ $result_sections_list{'parenthesis_in_node_name_explicit_refs'} = '1
   prev->
   up->
 3|(Two)
+ associated_anchor_command: @asis{(}Two)
  associated_node: @asis{(}Two)
  section_directions:
   prev->One:

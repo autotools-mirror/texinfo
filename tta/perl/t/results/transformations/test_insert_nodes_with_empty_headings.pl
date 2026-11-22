@@ -177,38 +177,45 @@ $result_errors{'test_insert_nodes_with_empty_headings'} = '* W l5|@section missi
 
 $result_nodes_list{'test_insert_nodes_with_empty_headings'} = '1|Top
  associated_section: top
+ associated_title_command: top
  node_directions:
   next->Chap
 2|Chap
  associated_section: 1 Chap
+ associated_title_command: 1 Chap
  node_directions:
   prev->Top
   up->Top
 3| [+1+]
  associated_section: 1.1
+ associated_title_command: 1.1
  node_directions:
   next-> [+2+]
   up->Chap
 4| [+2+]
  associated_section: 1.2
+ associated_title_command: 1.2
  node_directions:
   next->@strong{} [+3+]
   prev-> [+1+]
   up->Chap
 5|@strong{} [+3+]
  associated_section: 1.3 @strong{}
+ associated_title_command: 1.3 @strong{}
  node_directions:
   prev-> [+2+]
   up->Chap
 ';
 
 $result_sections_list{'test_insert_nodes_with_empty_headings'} = '1|top
+ associated_anchor_command: Top
  associated_node: Top
  toplevel_directions:
   next->Chap
  section_children:
   1|Chap
 2|Chap
+ associated_anchor_command: Chap
  associated_node: Chap
  section_directions:
   up->top
@@ -220,17 +227,20 @@ $result_sections_list{'test_insert_nodes_with_empty_headings'} = '1|top
   2|
   3|@strong{}
 3
+ associated_anchor_command:  [+1+]
  associated_node:  [+1+]
  section_directions:
   next->
   up->Chap
 4
+ associated_anchor_command:  [+2+]
  associated_node:  [+2+]
  section_directions:
   next->@strong{}
   prev->
   up->Chap
 5|@strong{}
+ associated_anchor_command: @strong{} [+3+]
  associated_node: @strong{} [+3+]
  section_directions:
   prev->

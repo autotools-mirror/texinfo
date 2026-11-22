@@ -174,6 +174,7 @@ $result_nodes_list{'explicit_directions_no_menu_automatic_node_up'} = '1|Top
   next->Introduction
 2|Introduction
  associated_section: Introduction
+ associated_title_command: Introduction
  menus:
   Location
  node_directions:
@@ -197,6 +198,7 @@ $result_sections_list{'explicit_directions_no_menu_automatic_node_up'} = '1|The 
   1|Introduction
   2|Where to get
 2|Introduction
+ associated_anchor_command: Introduction
  associated_node: Introduction
  section_directions:
   next->Where to get

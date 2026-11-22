@@ -107,12 +107,14 @@ $result_nodes_list{'no_node_with_section_split'} = '1|Top
   next->one
 2|one
  associated_section: 1 one
+ associated_title_command: 1 one
  node_directions:
   next->two
   prev->Top
   up->Top
 3|two
  associated_section: 2 two
+ associated_title_command: 2 two
  node_directions:
   prev->one
   up->Top
@@ -127,6 +129,7 @@ $result_sections_list{'no_node_with_section_split'} = '1|aa
   1|one
   2|two
 2|one
+ associated_anchor_command: one
  associated_node: one
  section_directions:
   next->two
@@ -136,6 +139,7 @@ $result_sections_list{'no_node_with_section_split'} = '1|aa
   prev->aa
   up->aa
 3|two
+ associated_anchor_command: two
  associated_node: two
  section_directions:
   prev->one

@@ -492,52 +492,62 @@ $result_errors{'various_added_nodes_and_refs'} = '* W l25|@ref should not appear
 
 $result_nodes_list{'various_added_nodes_and_refs'} = '1|Top
  associated_section: otp
+ associated_title_command: otp
  node_directions:
   next->a node [+1+]
 2|a node [+1+]
  associated_section: 1 a node
+ associated_title_command: 1 a node
  node_directions:
   next->a node @code{in code}
   prev->Top
   up->Top
 3|a node @code{in code}
  associated_section: 2 a node @code{in code}
+ associated_title_command: 2 a node @code{in code}
  node_directions:
   next->a@asis{::}b@asis{	} c
   prev->a node [+1+]
   up->Top
 4|a @comma{}@comma{} node @code{a@comma{}b@comma{}}
  associated_section: 2.1 a ,, node @code{a,b,}
+ associated_title_command: 2.1 a ,, node @code{a,b,}
  node_directions:
   next->@asis{(}in paren(too  aaa
   up->a node @code{in code}
 5|@asis{(}in paren(too  aaa
  associated_section: 2.2 (in paren(too  aaa
+ associated_title_command: 2.2 (in paren(too  aaa
  node_directions:
   prev->a @comma{}@comma{} node @code{a@comma{}b@comma{}}
   up->a node @code{in code}
 6|changed @code{node} and (@samp{file})
  associated_section: 2.2.1 changed @ref{ @code{node}} and (@pxref{ ,, , @samp{file}})
+ associated_title_command: 2.2.1 changed @ref{ @code{node}} and (@pxref{ ,, , @samp{file}})
  node_directions:
   next->@asis{} [+1+]
   up->@asis{(}in paren(too  aaa
 7|@asis{} [+1+]
  associated_section: 2.2.2 @asis{}
+ associated_title_command: 2.2.2 @asis{}
  node_directions:
   prev->changed @code{node} and (@samp{file})
   up->@asis{(}in paren(too  aaa
 8|a@asis{::}b@asis{	} c
  associated_section: 3 a::b	 c
+ associated_title_command: 3 a::b	 c
  node_directions:
   prev->a node @code{in code}
   up->Top
 9|a node [+2+]
  associated_section: 3.1 a node
+ associated_title_command: 3.1 a node
  node_directions:
   up->a@asis{::}b@asis{	} c
 ';
 
 $result_sections_list{'various_added_nodes_and_refs'} = '1|otp
+ associated_anchor_command: Top
  associated_node: Top
  toplevel_directions:
   next->a node
@@ -546,6 +556,7 @@ $result_sections_list{'various_added_nodes_and_refs'} = '1|otp
   2|a node @code{in code}
   3|a::b	 c
 2|a node
+ associated_anchor_command: a node [+1+]
  associated_node: a node [+1+]
  section_directions:
   next->a node @code{in code}
@@ -555,6 +566,7 @@ $result_sections_list{'various_added_nodes_and_refs'} = '1|otp
   prev->otp
   up->otp
 3|a node @code{in code}
+ associated_anchor_command: a node @code{in code}
  associated_node: a node @code{in code}
  section_directions:
   next->a::b	 c
@@ -568,11 +580,13 @@ $result_sections_list{'various_added_nodes_and_refs'} = '1|otp
   1|a ,, node @code{a,b,}
   2|(in paren(too  aaa
 4|a ,, node @code{a,b,}
+ associated_anchor_command: a @comma{}@comma{} node @code{a@comma{}b@comma{}}
  associated_node: a @comma{}@comma{} node @code{a@comma{}b@comma{}}
  section_directions:
   next->(in paren(too  aaa
   up->a node @code{in code}
 5|(in paren(too  aaa
+ associated_anchor_command: @asis{(}in paren(too  aaa
  associated_node: @asis{(}in paren(too  aaa
  section_directions:
   prev->a ,, node @code{a,b,}
@@ -581,16 +595,19 @@ $result_sections_list{'various_added_nodes_and_refs'} = '1|otp
   1|changed @ref{ @code{node}} and (@pxref{ ,, , @samp{file}})
   2|@asis{}
 6|changed @ref{ @code{node}} and (@pxref{ ,, , @samp{file}})
+ associated_anchor_command: changed @code{node} and (@samp{file})
  associated_node: changed @code{node} and (@samp{file})
  section_directions:
   next->@asis{}
   up->(in paren(too  aaa
 7|@asis{}
+ associated_anchor_command: @asis{} [+1+]
  associated_node: @asis{} [+1+]
  section_directions:
   prev->changed @ref{ @code{node}} and (@pxref{ ,, , @samp{file}})
   up->(in paren(too  aaa
 8|a::b	 c
+ associated_anchor_command: a@asis{::}b@asis{	} c
  associated_node: a@asis{::}b@asis{	} c
  section_directions:
   prev->a node @code{in code}
@@ -601,6 +618,7 @@ $result_sections_list{'various_added_nodes_and_refs'} = '1|otp
  section_children:
   1|a node
 9|a node
+ associated_anchor_command: a node [+2+]
  associated_node: a node [+2+]
  section_directions:
   up->a::b	 c

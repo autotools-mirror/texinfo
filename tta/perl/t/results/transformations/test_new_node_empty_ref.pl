@@ -157,30 +157,36 @@ $result_errors{'test_new_node_empty_ref'} = '* W l3|command @ref missing a node 
 
 $result_nodes_list{'test_new_node_empty_ref'} = '1|Top
  associated_section: top
+ associated_title_command: top
  node_directions:
   next->aa  g
 2|aa  g
  associated_section: 1 aa @ref{ , , , } g
+ associated_title_command: 1 aa @ref{ , , , } g
  node_directions:
   prev->Top
   up->Top
 3|b
  associated_section: 1.1 b @ref{}
+ associated_title_command: 1.1 b @ref{}
  node_directions:
   up->aa  g
 4| [+1+]
  associated_section: 1.1.1 @ref
+ associated_title_command: 1.1.1 @ref
  node_directions:
   up->b
 ';
 
 $result_sections_list{'test_new_node_empty_ref'} = '1|top
+ associated_anchor_command: Top
  associated_node: Top
  toplevel_directions:
   next->aa @ref{ , , , } g
  section_children:
   1|aa @ref{ , , , } g
 2|aa @ref{ , , , } g
+ associated_anchor_command: aa  g
  associated_node: aa  g
  section_directions:
   up->top
@@ -190,12 +196,14 @@ $result_sections_list{'test_new_node_empty_ref'} = '1|top
  section_children:
   1|b @ref{}
 3|b @ref{}
+ associated_anchor_command: b
  associated_node: b
  section_directions:
   up->aa @ref{ , , , } g
  section_children:
   1|@ref
 4|@ref
+ associated_anchor_command:  [+1+]
  associated_node:  [+1+]
  section_directions:
   up->b @ref{}

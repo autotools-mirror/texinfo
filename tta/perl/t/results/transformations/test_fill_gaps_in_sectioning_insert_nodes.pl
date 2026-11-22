@@ -158,34 +158,41 @@ $result_errors{'test_fill_gaps_in_sectioning_insert_nodes'} = '';
 
 $result_nodes_list{'test_fill_gaps_in_sectioning_insert_nodes'} = '1|Top
  associated_section: top
+ associated_title_command: top
  node_directions:
   next->Chap
 2|Chap
  associated_section: 1 Chap
+ associated_title_command: 1 Chap
  node_directions:
   prev->Top
   up->Top
 3|Section
  associated_section: 1.1 Section
+ associated_title_command: 1.1 Section
  node_directions:
   up->Chap
 4|@asis{} [+1+]
  associated_section: @asis{}
+ associated_title_command: @asis{}
  node_directions:
   up->Section
 5|There
  associated_section: There
+ associated_title_command: There
  node_directions:
   up->@asis{} [+1+]
 ';
 
 $result_sections_list{'test_fill_gaps_in_sectioning_insert_nodes'} = '1|top
+ associated_anchor_command: Top
  associated_node: Top
  toplevel_directions:
   next->Chap
  section_children:
   1|Chap
 2|Chap
+ associated_anchor_command: Chap
  associated_node: Chap
  section_directions:
   up->top
@@ -195,18 +202,21 @@ $result_sections_list{'test_fill_gaps_in_sectioning_insert_nodes'} = '1|top
  section_children:
   1|Section
 3|Section
+ associated_anchor_command: Section
  associated_node: Section
  section_directions:
   up->Chap
  section_children:
   1|@asis{}
 4|@asis{}
+ associated_anchor_command: @asis{} [+1+]
  associated_node: @asis{} [+1+]
  section_directions:
   up->Section
  section_children:
   1|There
 5|There
+ associated_anchor_command: There
  associated_node: There
  section_directions:
   up->@asis{}

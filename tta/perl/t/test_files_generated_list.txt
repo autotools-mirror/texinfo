@@ -788,6 +788,7 @@ t/results/html_tests/acronym_in_node_and_section.pl
 t/results/html_tests/anchor_in_menu_on_sectioning_command_line.pl
 t/results/html_tests/anchor_on_node_line.pl
 t/results/html_tests/anchor_on_vtable_item.pl
+t/results/html_tests/auto_top_section.pl
 t/results/html_tests/automatic_menus.pl
 t/results/html_tests/automatic_menus_format_menu_no_detailmenu.pl
 t/results/html_tests/base_for_css_info_in_init_test.pl

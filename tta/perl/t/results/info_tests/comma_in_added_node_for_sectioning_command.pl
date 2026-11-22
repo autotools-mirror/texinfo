@@ -81,22 +81,26 @@ $result_errors{'comma_in_added_node_for_sectioning_command'} = '';
 
 $result_nodes_list{'comma_in_added_node_for_sectioning_command'} = '1|Top
  associated_section: top
+ associated_title_command: top
  node_directions:
   next->Titles (headers@comma{} footers)
 2|Titles (headers@comma{} footers)
  associated_section: 1 Titles (headers, footers)
+ associated_title_command: 1 Titles (headers, footers)
  node_directions:
   prev->Top
   up->Top
 ';
 
 $result_sections_list{'comma_in_added_node_for_sectioning_command'} = '1|top
+ associated_anchor_command: Top
  associated_node: Top
  toplevel_directions:
   next->Titles (headers, footers)
  section_children:
   1|Titles (headers, footers)
 2|Titles (headers, footers)
+ associated_anchor_command: Titles (headers@comma{} footers)
  associated_node: Titles (headers@comma{} footers)
  section_directions:
   up->top

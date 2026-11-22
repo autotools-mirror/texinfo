@@ -1115,6 +1115,26 @@ insert_nodes_for_sectioning_commands (DOCUMENT *document,
                   add_extra_integer (added_node, AI_key_node_number,
                                      node_idx);
                   section_relations->associated_node = new_node_relations;
+
+                  if (section_relations->associated_anchor_command)
+                    {
+                      char *section_texinfo
+                         = convert_contents_to_texinfo (new_node_tree);
+                      /* section argument missing */
+                      if (!section_texinfo)
+                        section_texinfo = strdup ("");
+                      fprintf (stderr,
+          "BUG? unexpected anchor_command without associated node for %s\n",
+                               section_texinfo);
+                      free (section_texinfo);
+                    }
+                  else
+                    {
+                      section_relations->associated_anchor_command
+                       = new_node_relations;
+                      new_node_relations->associated_title_command = content;
+                    }
+
                   added_node->e.c->parent = content->e.c->parent;
                   /* reassociate index entries and menus that are
                      in the sectioning command contents */

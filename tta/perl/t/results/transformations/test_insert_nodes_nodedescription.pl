@@ -155,17 +155,20 @@ $result_errors{'test_insert_nodes_nodedescription'} = '* W l8|multiple node @nod
 
 $result_nodes_list{'test_insert_nodes_nodedescription'} = '1|Top
  associated_section: top
+ associated_title_command: top
  node_descriptions:
   @nodedescription D1
  node_directions:
   next->Chap
 2|Chap
  associated_section: 1 Chap
+ associated_title_command: 1 Chap
  node_directions:
   prev->Top
   up->Top
 3|Sec
  associated_section: 1.1 Sec
+ associated_title_command: 1.1 Sec
  node_descriptions:
   @nodedescription D2
   @nodedescription D3
@@ -173,17 +176,20 @@ $result_nodes_list{'test_insert_nodes_nodedescription'} = '1|Top
   up->Chap
 4|Subsec
  associated_section: 1.1.1 Subsec
+ associated_title_command: 1.1.1 Subsec
  node_directions:
   up->Sec
 ';
 
 $result_sections_list{'test_insert_nodes_nodedescription'} = '1|top
+ associated_anchor_command: Top
  associated_node: Top
  toplevel_directions:
   next->Chap
  section_children:
   1|Chap
 2|Chap
+ associated_anchor_command: Chap
  associated_node: Chap
  section_directions:
   up->top
@@ -193,12 +199,14 @@ $result_sections_list{'test_insert_nodes_nodedescription'} = '1|top
  section_children:
   1|Sec
 3|Sec
+ associated_anchor_command: Sec
  associated_node: Sec
  section_directions:
   up->Chap
  section_children:
   1|Subsec
 4|Subsec
+ associated_anchor_command: Subsec
  associated_node: Subsec
  section_directions:
   up->Sec
@@ -242,7 +250,6 @@ th.menu-comment {text-align:left}
 <div class="top-level-extent" id="Top">
 <p class="nav-panel">
 <span class="nav-button"><span class="nav-label">Next: </span><span class="nav-link"><a href="#Chap" accesskey="n" rel="next">Chap</a></span></span><span class="nav-button"> &nbsp; </span></p>
-<h1 class="node"><span>Top<a class="copiable-link" href="#Top"> &para;</a></span></h1>
 <h1 class="top" id="top"><span>top<a class="copiable-link" href="#top"> &para;</a></span></h1>
 
 <table class="menu">
@@ -266,7 +273,6 @@ Sec
 <div class="chapter-level-extent" id="Chap">
 <p class="nav-panel">
 <span class="nav-button"><span class="nav-label">Previous: </span><span class="nav-link"><a href="#Top" accesskey="p" rel="prev">top</a></span></span>, <span class="nav-button"><span class="nav-label">Up: </span><span class="nav-link"><a href="#Top" accesskey="u" rel="up">top</a></span></span><span class="nav-button"> &nbsp; </span></p>
-<h4 class="node"><span>Chap<a class="copiable-link" href="#Chap"> &para;</a></span></h4>
 <h2 class="chapter" id="Chap-1"><span>1 Chap<a class="copiable-link" href="#Chap-1"> &para;</a></span></h2>
 
 <table class="menu">
@@ -276,7 +282,6 @@ Sec
 <div class="section-level-extent" id="Sec">
 <p class="nav-panel">
 <span class="nav-button"><span class="nav-label">Up: </span><span class="nav-link"><a href="#Chap" accesskey="u" rel="up">Chap</a></span></span><span class="nav-button"> &nbsp; </span></p>
-<h4 class="node"><span>Sec<a class="copiable-link" href="#Sec"> &para;</a></span></h4>
 <h3 class="section" id="Sec-1"><span>1.1 Sec<a class="copiable-link" href="#Sec-1"> &para;</a></span></h3>
 
 <table class="menu">
@@ -287,7 +292,6 @@ Sec
 <div class="subsection-level-extent" id="Subsec">
 <p class="nav-panel">
 <span class="nav-button"><span class="nav-label">Up: </span><span class="nav-link"><a href="#Sec" accesskey="u" rel="up">Sec</a></span></span><span class="nav-button"> &nbsp; </span></p>
-<h4 class="node"><span>Subsec<a class="copiable-link" href="#Subsec"> &para;</a></span></h4>
 <h4 class="subsection" id="Subsec-1"><span>1.1.1 Subsec<a class="copiable-link" href="#Subsec-1"> &para;</a></span></h4>
 
 </div>
