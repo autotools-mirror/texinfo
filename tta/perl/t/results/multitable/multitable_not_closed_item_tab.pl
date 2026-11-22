@@ -18,10 +18,10 @@ $result_tree_text{'multitable_not_closed_item_tab'} = '*document_root C1
     *block_line_arg C5
      {spaces_before_argument: }
      *bracketed_arg C1 l1
-      {r}
-     { }
+      {normal_text:r}
+     {normal_text: }
      *bracketed_arg C1 l1
-      {t}
+      {normal_text:t}
      {spaces_after_argument:\\n}
    *multitable_body C1
     *row C2
@@ -32,13 +32,13 @@ $result_tree_text{'multitable_not_closed_item_tab'} = '*document_root C1
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {rt }
+       {normal_text:rt }
      *@tab C2 l2
      |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {ds\\n}
+       {normal_text:ds\\n}
 ';
 
 

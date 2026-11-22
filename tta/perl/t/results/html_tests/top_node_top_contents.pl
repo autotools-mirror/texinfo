@@ -25,7 +25,7 @@ $result_tree_text{'top_node_top_contents'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C1 l4 {Texinfo modules documentation}
  |EXTRA
@@ -34,7 +34,7 @@ $result_tree_text{'top_node_top_contents'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Texinfo modules documentation}
+    {normal_text:Texinfo modules documentation}
     {spaces_after_argument:\\n}
 ';
 

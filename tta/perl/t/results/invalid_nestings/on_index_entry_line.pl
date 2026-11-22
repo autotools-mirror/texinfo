@@ -22,25 +22,25 @@ $result_tree_text{'on_index_entry_line'} = '*document_root C1
     |EXTRA
     |global_command_number:{1}
      *brace_container C1
-      {in titlefont}
-    { }
+      {normal_text:in titlefont}
+    {normal_text: }
     *@anchor C1 l1
     |EXTRA
     |identifier:{in-anchor}
     |is_target:{1}
      *brace_arg C1
-      {in anchor}
+      {normal_text:in anchor}
     *@footnote C1 l1
     |EXTRA
     |global_command_number:{1}
      *brace_command_context C1
       *paragraph C1
-       {footnote}
-    { }
+       {normal_text:footnote}
+    {normal_text: }
     *@exdent C1 l1
      *line_arg C3
       {spaces_before_argument: }
-      {exdent}
+      {normal_text:exdent}
       {spaces_after_argument:\\n}
 ';
 

@@ -23,7 +23,7 @@ $result_tree_text{'empty_end'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C2
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
 ';
 
 

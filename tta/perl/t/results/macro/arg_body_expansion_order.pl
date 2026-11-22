@@ -25,7 +25,7 @@ $result_tree_text{'arg_body_expansion_order'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@macro C7 l6
@@ -44,7 +44,7 @@ $result_tree_text{'arg_body_expansion_order'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    >SOURCEMARKS
@@ -71,10 +71,10 @@ $result_tree_text{'arg_body_expansion_order'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
   *paragraph C1
-   {different\\n}
+   {normal_text:different\\n}
    >SOURCEMARKS
    >macro_expansion<start;2>
     >*macro_call@othermacro C1

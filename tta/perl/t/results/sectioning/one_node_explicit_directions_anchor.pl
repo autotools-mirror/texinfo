@@ -19,38 +19,38 @@ $result_tree_text{'one_node_explicit_directions_anchor'} = '*document_root C2
   *arguments_line C4
    *line_arg C2
     {spaces_before_argument: }
-    {one node}
+    {normal_text:one node}
    *line_arg
    *line_arg
    *line_arg C4
    |EXTRA
    |manual_content:A{1|1}
-    {(}
-    {dir}
-    {)}
+    {normal_text:(}
+    {normal_text:dir}
+    {normal_text:)}
     {spaces_after_argument:\\n}
   *paragraph C1
-   {Top node\\n}
+   {normal_text:Top node\\n}
   {empty_line:\\n}
   *paragraph C3
-   {anchor ref }
+   {normal_text:anchor ref }
    *@anchor C1 l4
    |EXTRA
    |identifier:{ref}
    |is_target:{1}
     *brace_arg C1
-     {ref}
-   {.\\n}
+     {normal_text:ref}
+   {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C3
-   {ref to ref }
+   {normal_text:ref to ref }
    *@ref C1 l6
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{ref}
-     {ref}
-   {.\\n}
+     {normal_text:ref}
+   {normal_text:.\\n}
 ';
 
 

@@ -17,13 +17,13 @@ $result_tree_text{'paragraph_indent_asis'} = '*document_root C1
    |misc_args:A{asis}
     *line_arg C3
      {spaces_before_argument: }
-     {asis}
+     {normal_text:asis}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
    {spaces_before_paragraph:  }
   *paragraph C2
-   {para\\n}
-   {  fff\\n}
+   {normal_text:para\\n}
+   {normal_text:  fff\\n}
   {empty_line:\\n}
   *@quotation C4 l6
    *arguments_line C1
@@ -31,13 +31,13 @@ $result_tree_text{'paragraph_indent_asis'} = '*document_root C1
      {spaces_before_argument:\\n}
    {spaces_before_paragraph:  }
    *paragraph C1
-    {in quotation\\n}
+    {normal_text:in quotation\\n}
    *@end C1 l8
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }
-     {quotation}
+     {normal_text:quotation}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
 ';

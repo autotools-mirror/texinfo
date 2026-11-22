@@ -19,20 +19,20 @@ $result_tree_text{'title_and_itemx_before_item'} = '*document_root C1
      {spaces_after_argument:\\n}
    *before_item C1
     *paragraph C1
-     {Title\\n}
+     {normal_text:Title\\n}
    *table_entry C1
     *table_term C1
      *@itemx C1 l3
       *line_arg C3
        {spaces_before_argument: }
-       {in itemx}
+       {normal_text:in itemx}
        {spaces_after_argument:\\n}
    *@end C1 l4
    |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
-     {table}
+     {normal_text:table}
      {spaces_after_argument:\\n}
 ';
 

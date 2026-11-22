@@ -12,25 +12,25 @@ $result_tree_text{'paragraph_in_style_command'} = '*document_root C1
  *before_node_section C8
   *preamble_before_content
   *paragraph C2
-   {a 2 paragraphs sample }
+   {normal_text:a 2 paragraphs sample }
    *@samp C1 l1
     *brace_container C2
-     {in first paragraph\\n}
+     {normal_text:in first paragraph\\n}
      {empty_line:\\n}
   *paragraph C1
-   {in second.\\n}
+   {normal_text:in second.\\n}
   {empty_line:\\n}
   *paragraph C2
-   {a 3 paragraphs sample }
+   {normal_text:a 3 paragraphs sample }
    *@samp C1 l5
     *brace_container C2
-     {in first paragraph\\n}
+     {normal_text:in first paragraph\\n}
      {empty_line:\\n}
   *paragraph C1
-   {in second\\n}
+   {normal_text:in second\\n}
   {empty_line:\\n}
   *paragraph C1
-   {in third.\\n}
+   {normal_text:in third.\\n}
 ';
 
 

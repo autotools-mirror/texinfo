@@ -19,7 +19,7 @@ $result_tree_text{'no_node_with_section_split'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l2 {aa}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'no_node_with_section_split'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {aa}
+    {normal_text:aa}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l4 {one}
@@ -40,7 +40,7 @@ $result_tree_text{'no_node_with_section_split'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {one}
+    {normal_text:one}
     {spaces_after_argument:\\n}
  *@chapter C2 l4 {one}
  |EXTRA
@@ -50,7 +50,7 @@ $result_tree_text{'no_node_with_section_split'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {one}
+    {normal_text:one}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l6 {two}
@@ -62,7 +62,7 @@ $result_tree_text{'no_node_with_section_split'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {two}
+    {normal_text:two}
     {spaces_after_argument:\\n}
  *@chapter C1 l6 {two}
  |EXTRA
@@ -72,7 +72,7 @@ $result_tree_text{'no_node_with_section_split'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {two}
+    {normal_text:two}
     {spaces_after_argument:\\n}
 ';
 

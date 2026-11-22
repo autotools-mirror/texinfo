@@ -18,7 +18,7 @@ $result_tree_text{'weird_accents'} = '*document_root C5
    |text_arg:{ISO-8859-1}
     *line_arg C3
      {spaces_before_argument: }
-     {ISO-8859-1}
+     {normal_text:ISO-8859-1}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *@node C1 l3 {Top}
@@ -29,7 +29,7 @@ $result_tree_text{'weird_accents'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l4 {top}
  |EXTRA
@@ -38,7 +38,7 @@ $result_tree_text{'weird_accents'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l6 {chap}
@@ -49,7 +49,7 @@ $result_tree_text{'weird_accents'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
  *@chapter C11 l7 {Chapter}
  |EXTRA
@@ -59,7 +59,7 @@ $result_tree_text{'weird_accents'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chapter}
+    {normal_text:Chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
@@ -69,8 +69,8 @@ $result_tree_text{'weird_accents'} = '*document_root C5
       *brace_container C1
        *@dotless C1 l9
         *brace_container C1
-         {i}
-   {\\n}
+         {normal_text:i}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
    *@= C1 l11
@@ -79,16 +79,16 @@ $result_tree_text{'weird_accents'} = '*document_root C5
       *brace_container C1
        *@~ C1 l11
         *brace_container C1
-         {n}
-   {\\n}
+         {normal_text:n}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
    *@= C1 l13
     *brace_container C1
      *@ubaraccent C1 l13
       *brace_container C1
-       {a}
-   {\\n}
+       {normal_text:a}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
    *@^ C1 l15
@@ -97,8 +97,8 @@ $result_tree_text{'weird_accents'} = '*document_root C5
       *brace_container C1
        *@` C1 l15
         *following_arg C1
-         {r}
-   {\\n}
+         {normal_text:r}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
    *@= C1 l17
@@ -107,8 +107,8 @@ $result_tree_text{'weird_accents'} = '*document_root C5
       *brace_container C1
        *@` C1 l17
         *brace_container C1
-         {r}
-   {\\n}
+         {normal_text:r}
+   {normal_text:\\n}
 ';
 
 

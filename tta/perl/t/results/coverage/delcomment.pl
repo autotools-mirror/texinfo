@@ -29,7 +29,7 @@ $result_tree_text{'delcomment'} = '*document_root C2
    >SOURCEMARKS
    >delcomment<1>{ this is a comment.\\n}
   *paragraph C1
-   {This line is the only output.\\n}
+   {normal_text:This line is the only output.\\n}
   {empty_line:\\n}
  *@bye C1
   *line_arg C1

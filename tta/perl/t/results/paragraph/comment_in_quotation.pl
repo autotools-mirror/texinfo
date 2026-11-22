@@ -18,7 +18,7 @@ $result_tree_text{'comment_in_quotation'} = '*document_root C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C2
-    {Quotation }
+    {normal_text:Quotation }
     *@c C1
      *line_arg C2
       {rawline_text:}
@@ -28,7 +28,7 @@ $result_tree_text{'comment_in_quotation'} = '*document_root C1
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }
-     {quotation}
+     {normal_text:quotation}
      {spaces_after_argument: \\n}
   {empty_line:\\n}
   *@quotation C3 l6
@@ -36,7 +36,7 @@ $result_tree_text{'comment_in_quotation'} = '*document_root C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C2
-    {Quotation no space}
+    {normal_text:Quotation no space}
     *@c C1
      *line_arg C2
       {rawline_text:}
@@ -46,7 +46,7 @@ $result_tree_text{'comment_in_quotation'} = '*document_root C1
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }
-     {quotation}
+     {normal_text:quotation}
      {spaces_after_argument: \\n}
 ';
 

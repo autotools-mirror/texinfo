@@ -34,12 +34,12 @@ $result_tree_text{'kbdinputstyle'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C2
    *@@
-   {kbdinputstyle code\\n}
+   {normal_text:kbdinputstyle code\\n}
   {empty_line:\\n}
   *@kbdinputstyle C1 l18
   |EXTRA
@@ -47,7 +47,7 @@ $result_tree_text{'kbdinputstyle'} = '*document_root C1
   |misc_args:A{code}
    *line_arg C3
     {spaces_before_argument: }
-    {code}
+    {normal_text:code}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   >SOURCEMARKS
@@ -57,41 +57,41 @@ $result_tree_text{'kbdinputstyle'} = '*document_root C1
   *paragraph C8
    *@code C1 l20:@codekbdmacro
     *brace_container C2
-     {in code out of example }
+     {normal_text:in code out of example }
      *@code C1 l20:@codekbdmacro
       *brace_container C1
-       {in nested code}
-   {.\\n}
+       {normal_text:in nested code}
+   {normal_text:.\\n}
    *@kbd C1 l20:@codekbdmacro
    |EXTRA
    |code:{1}
     *brace_container C1
-     {kbd out of example}
-   {.\\n}
+     {normal_text:kbd out of example}
+   {normal_text:.\\n}
    *@code C1 l20:@codekbdmacro
     *brace_container C2
-     {kbd }
+     {normal_text:kbd }
      *@kbd C1 l20:@codekbdmacro
      |EXTRA
      |code:{1}
       *brace_container C1
-       {in code}
-   {.\\n}
+       {normal_text:in code}
+   {normal_text:.\\n}
    *@code C1 l20:@codekbdmacro
     *brace_container C2
-     {for nesting }
+     {normal_text:for nesting }
      *@r C1 l20:@codekbdmacro
       *brace_container C2
-       {r in code }
+       {normal_text:r in code }
        *@kbd C1 l20:@codekbdmacro
        |EXTRA
        |code:{1}
         *brace_container C1
-         {in r in code}
-   {\\n}
+         {normal_text:in r in code}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {in example\\n}
+   {normal_text:in example\\n}
   *@example C3 l20:@codekbdmacro
    *arguments_line C1
     *block_line_arg C1
@@ -99,52 +99,52 @@ $result_tree_text{'kbdinputstyle'} = '*document_root C1
    *preformatted C8
     *@code C1 l20:@codekbdmacro
      *brace_container C2
-      {in code in example }
+      {normal_text:in code in example }
       *@code C1 l20:@codekbdmacro
        *brace_container C1
-        {in nested code}
-    {.\\n}
+        {normal_text:in nested code}
+    {normal_text:.\\n}
     *@kbd C1 l20:@codekbdmacro
     |EXTRA
     |code:{1}
      *brace_container C1
-      {kbd in example}
-    {.\\n}
+      {normal_text:kbd in example}
+    {normal_text:.\\n}
     *@code C1 l20:@codekbdmacro
      *brace_container C3
-      {kbd }
+      {normal_text:kbd }
       *@kbd C1 l20:@codekbdmacro
       |EXTRA
       |code:{1}
        *brace_container C1
-        {in code}
-      { in example}
-    {.\\n}
+        {normal_text:in code}
+      {normal_text: in example}
+    {normal_text:.\\n}
     *@code C1 l20:@codekbdmacro
      *brace_container C2
-      {for nesting in example }
+      {normal_text:for nesting in example }
       *@r C1 l20:@codekbdmacro
        *brace_container C2
-        {r in code in example }
+        {normal_text:r in code in example }
         *@kbd C1 l20:@codekbdmacro
         |EXTRA
         |code:{1}
          *brace_container C1
-          {in r in code in example}
-    {\\n}
+          {normal_text:in r in code in example}
+    {normal_text:\\n}
    *@end C1 l20:@codekbdmacro
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      >SOURCEMARKS
      >macro_expansion<end;1><p:7>
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
    *@@
-   {kbdinputstyle example\\n}
+   {normal_text:kbdinputstyle example\\n}
   {empty_line:\\n}
   *@kbdinputstyle C1 l24
   |EXTRA
@@ -152,7 +152,7 @@ $result_tree_text{'kbdinputstyle'} = '*document_root C1
   |misc_args:A{example}
    *line_arg C3
     {spaces_before_argument: }
-    {example}
+    {normal_text:example}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   >SOURCEMARKS
@@ -162,41 +162,41 @@ $result_tree_text{'kbdinputstyle'} = '*document_root C1
   *paragraph C8
    *@code C1 l26:@codekbdmacro
     *brace_container C2
-     {in code out of example }
+     {normal_text:in code out of example }
      *@code C1 l26:@codekbdmacro
       *brace_container C1
-       {in nested code}
-   {.\\n}
+       {normal_text:in nested code}
+   {normal_text:.\\n}
    *@kbd C1 l26:@codekbdmacro
    |EXTRA
    |code:{1}
     *brace_container C1
-     {kbd out of example}
-   {.\\n}
+     {normal_text:kbd out of example}
+   {normal_text:.\\n}
    *@code C1 l26:@codekbdmacro
     *brace_container C2
-     {kbd }
+     {normal_text:kbd }
      *@kbd C1 l26:@codekbdmacro
      |EXTRA
      |code:{1}
       *brace_container C1
-       {in code}
-   {.\\n}
+       {normal_text:in code}
+   {normal_text:.\\n}
    *@code C1 l26:@codekbdmacro
     *brace_container C2
-     {for nesting }
+     {normal_text:for nesting }
      *@r C1 l26:@codekbdmacro
       *brace_container C2
-       {r in code }
+       {normal_text:r in code }
        *@kbd C1 l26:@codekbdmacro
        |EXTRA
        |code:{1}
         *brace_container C1
-         {in r in code}
-   {\\n}
+         {normal_text:in r in code}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {in example\\n}
+   {normal_text:in example\\n}
   *@example C3 l26:@codekbdmacro
    *arguments_line C1
     *block_line_arg C1
@@ -204,46 +204,46 @@ $result_tree_text{'kbdinputstyle'} = '*document_root C1
    *preformatted C8
     *@code C1 l26:@codekbdmacro
      *brace_container C2
-      {in code in example }
+      {normal_text:in code in example }
       *@code C1 l26:@codekbdmacro
        *brace_container C1
-        {in nested code}
-    {.\\n}
+        {normal_text:in nested code}
+    {normal_text:.\\n}
     *@kbd C1 l26:@codekbdmacro
      *brace_container C1
-      {kbd in example}
-    {.\\n}
+      {normal_text:kbd in example}
+    {normal_text:.\\n}
     *@code C1 l26:@codekbdmacro
      *brace_container C3
-      {kbd }
+      {normal_text:kbd }
       *@kbd C1 l26:@codekbdmacro
        *brace_container C1
-        {in code}
-      { in example}
-    {.\\n}
+        {normal_text:in code}
+      {normal_text: in example}
+    {normal_text:.\\n}
     *@code C1 l26:@codekbdmacro
      *brace_container C2
-      {for nesting in example }
+      {normal_text:for nesting in example }
       *@r C1 l26:@codekbdmacro
        *brace_container C2
-        {r in code in example }
+        {normal_text:r in code in example }
         *@kbd C1 l26:@codekbdmacro
          *brace_container C1
-          {in r in code in example}
-    {\\n}
+          {normal_text:in r in code in example}
+    {normal_text:\\n}
    *@end C1 l26:@codekbdmacro
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      >SOURCEMARKS
      >macro_expansion<end;2><p:7>
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
    *@@
-   {kbdinputstyle distinct\\n}
+   {normal_text:kbdinputstyle distinct\\n}
   {empty_line:\\n}
   *@kbdinputstyle C1 l30
   |EXTRA
@@ -251,7 +251,7 @@ $result_tree_text{'kbdinputstyle'} = '*document_root C1
   |misc_args:A{distinct}
    *line_arg C3
     {spaces_before_argument: }
-    {distinct}
+    {normal_text:distinct}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   >SOURCEMARKS
@@ -261,35 +261,35 @@ $result_tree_text{'kbdinputstyle'} = '*document_root C1
   *paragraph C8
    *@code C1 l32:@codekbdmacro
     *brace_container C2
-     {in code out of example }
+     {normal_text:in code out of example }
      *@code C1 l32:@codekbdmacro
       *brace_container C1
-       {in nested code}
-   {.\\n}
+       {normal_text:in nested code}
+   {normal_text:.\\n}
    *@kbd C1 l32:@codekbdmacro
     *brace_container C1
-     {kbd out of example}
-   {.\\n}
+     {normal_text:kbd out of example}
+   {normal_text:.\\n}
    *@code C1 l32:@codekbdmacro
     *brace_container C2
-     {kbd }
+     {normal_text:kbd }
      *@kbd C1 l32:@codekbdmacro
       *brace_container C1
-       {in code}
-   {.\\n}
+       {normal_text:in code}
+   {normal_text:.\\n}
    *@code C1 l32:@codekbdmacro
     *brace_container C2
-     {for nesting }
+     {normal_text:for nesting }
      *@r C1 l32:@codekbdmacro
       *brace_container C2
-       {r in code }
+       {normal_text:r in code }
        *@kbd C1 l32:@codekbdmacro
         *brace_container C1
-         {in r in code}
-   {\\n}
+         {normal_text:in r in code}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {in example\\n}
+   {normal_text:in example\\n}
   *@example C3 l32:@codekbdmacro
    *arguments_line C1
     *block_line_arg C1
@@ -297,39 +297,39 @@ $result_tree_text{'kbdinputstyle'} = '*document_root C1
    *preformatted C8
     *@code C1 l32:@codekbdmacro
      *brace_container C2
-      {in code in example }
+      {normal_text:in code in example }
       *@code C1 l32:@codekbdmacro
        *brace_container C1
-        {in nested code}
-    {.\\n}
+        {normal_text:in nested code}
+    {normal_text:.\\n}
     *@kbd C1 l32:@codekbdmacro
      *brace_container C1
-      {kbd in example}
-    {.\\n}
+      {normal_text:kbd in example}
+    {normal_text:.\\n}
     *@code C1 l32:@codekbdmacro
      *brace_container C3
-      {kbd }
+      {normal_text:kbd }
       *@kbd C1 l32:@codekbdmacro
        *brace_container C1
-        {in code}
-      { in example}
-    {.\\n}
+        {normal_text:in code}
+      {normal_text: in example}
+    {normal_text:.\\n}
     *@code C1 l32:@codekbdmacro
      *brace_container C2
-      {for nesting in example }
+      {normal_text:for nesting in example }
       *@r C1 l32:@codekbdmacro
        *brace_container C2
-        {r in code in example }
+        {normal_text:r in code in example }
         *@kbd C1 l32:@codekbdmacro
          *brace_container C1
-          {in r in code in example}
-    {\\n}
+          {normal_text:in r in code in example}
+    {normal_text:\\n}
    *@end C1 l32:@codekbdmacro
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      >SOURCEMARKS
      >macro_expansion<end;3><p:7>
      {spaces_after_argument:\\n}

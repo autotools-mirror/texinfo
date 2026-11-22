@@ -19,7 +19,7 @@ $result_tree_text{'command_in_node_redirection'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C4 l2 {t @r{in r}}
  |EXTRA
@@ -28,10 +28,10 @@ $result_tree_text{'command_in_node_redirection'} = '*document_root C3
   *arguments_line C1
    *line_arg C4
     {spaces_before_argument: }
-    {t }
+    {normal_text:t }
     *@r C1 l2
      *brace_container C1
-      {in r}
+      {normal_text:in r}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@anchor C1 l4
@@ -39,7 +39,7 @@ $result_tree_text{'command_in_node_redirection'} = '*document_root C3
   |identifier:{yyyy}
   |is_target:{1}
    *brace_arg C1
-    {yyyy}
+    {normal_text:yyyy}
   {spaces_after_close_brace:\\n}
 ';
 

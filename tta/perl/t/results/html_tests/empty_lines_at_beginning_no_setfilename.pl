@@ -29,7 +29,7 @@ $result_tree_text{'empty_lines_at_beginning_no_setfilename'} = '*document_root C
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 empty_lines_at_beginning_no_setfilename.texi:l7 {top}
  |EXTRA
@@ -38,7 +38,7 @@ $result_tree_text{'empty_lines_at_beginning_no_setfilename'} = '*document_root C
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@bye C1

@@ -12,21 +12,21 @@ $result_tree_text{'image_in_paragraph'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *paragraph C3
-   {Para. }
+   {normal_text:Para. }
    *@image C5 l1
    |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C1
-     {aa}
+     {normal_text:aa}
     *brace_arg C1
-     {bb}
+     {normal_text:bb}
     *brace_arg C1
-     {cc}
+     {normal_text:cc}
     *brace_arg C1
-     {dd}
+     {normal_text:dd}
     *brace_arg C1
-     {.ee}
-   {. After image.\\n}
+     {normal_text:.ee}
+   {normal_text:. After image.\\n}
 ';
 
 

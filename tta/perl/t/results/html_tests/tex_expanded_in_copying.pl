@@ -20,20 +20,20 @@ $result_tree_text{'tex_expanded_in_copying'} = '*document_root C1
       *block_line_arg C1
        {spaces_before_argument:\\n}
      *rawpreformatted C1
-      {aa\\n}
+      {normal_text:aa\\n}
      *@end C1 l4
      |EXTRA
      |text_arg:{tex}
       *line_arg C3
        {spaces_before_argument: }
-       {tex}
+       {normal_text:tex}
        {spaces_after_argument:\\n}
     *@end C1 l5
     |EXTRA
     |text_arg:{copying}
      *line_arg C3
       {spaces_before_argument: }
-      {copying}
+      {normal_text:copying}
       {spaces_after_argument:\\n}
 ';
 

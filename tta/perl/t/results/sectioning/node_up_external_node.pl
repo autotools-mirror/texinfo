@@ -25,7 +25,7 @@ NodeForward: [U1]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C3 l3
@@ -38,17 +38,17 @@ NodeForward: [U1]
     |EXTRA
     |node_content:A{0|0}
     |normalized:{chap-first}
-     {chap first}
+     {normal_text:chap first}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l5
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
 U1 unit{C1}{N:chap first}
@@ -69,29 +69,29 @@ NodeBack: [U0]
   *arguments_line C4
    *line_arg C2
     {spaces_before_argument: }
-    {chap first}
+    {normal_text:chap first}
    *line_arg C4
    |EXTRA
    |manual_content:A{2|2}
     {spaces_before_argument: }
-    {(}
-    {manual1}
-    {)}
+    {normal_text:(}
+    {normal_text:manual1}
+    {normal_text:)}
    *line_arg C5
    |EXTRA
    |manual_content:A{2|2}
     {spaces_before_argument: }
-    {(}
-    {manual2}
-    {)}
+    {normal_text:(}
+    {normal_text:manual2}
+    {normal_text:)}
     {spaces_after_argument: }
    *line_arg C5
    |EXTRA
    |manual_content:A{2|2}
     {spaces_before_argument: }
-    {(}
-    {manual3}
-    {)}
+    {normal_text:(}
+    {normal_text:manual3}
+    {normal_text:)}
     {spaces_after_argument:\\n}
 ';
 

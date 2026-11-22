@@ -19,18 +19,18 @@ $result_tree_text{'inline_in_node'} = '*document_root C5
      |expand_index:{1}
      |format:{html}
       *brace_arg C1
-       {html}
+       {normal_text:html}
       *brace_arg C1
-       {<strong class="ttitle">}
-     {Title}
+       {normal_text:<strong class="ttitle">}
+     {normal_text:Title}
      *@inlineraw C2 l1
      |EXTRA
      |expand_index:{1}
      |format:{html}
       *brace_arg C1
-       {html}
+       {normal_text:html}
       *brace_arg C1
-       {</strong>}
+       {normal_text:</strong>}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *@node C1 l3 {Top}
@@ -41,7 +41,7 @@ $result_tree_text{'inline_in_node'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l4
  |EXTRA
@@ -64,18 +64,18 @@ $result_tree_text{'inline_in_node'} = '*document_root C5
     |expand_index:{1}
     |format:{html}
      *brace_arg C1
-      {html}
+      {normal_text:html}
      *brace_arg C1
-      {<code class="tnode">}
-    {One}
+      {normal_text:<code class="tnode">}
+    {normal_text:One}
     *@inlineraw C2 l6
     |EXTRA
     |expand_index:{1}
     |format:{html}
      *brace_arg C1
-      {html}
+      {normal_text:html}
      *brace_arg C1
-      {</code>}
+      {normal_text:</code>}
     {spaces_after_argument:\\n}
  *@chapter C2 l7 {@inlineraw{html,<span class="test">}One@inlineraw{html,</span>}}
  |EXTRA
@@ -90,18 +90,18 @@ $result_tree_text{'inline_in_node'} = '*document_root C5
     |expand_index:{1}
     |format:{html}
      *brace_arg C1
-      {html}
+      {normal_text:html}
      *brace_arg C1
-      {<span class="test">}
-    {One}
+      {normal_text:<span class="test">}
+    {normal_text:One}
     *@inlineraw C2 l7
     |EXTRA
     |expand_index:{1}
     |format:{html}
      *brace_arg C1
-      {html}
+      {normal_text:html}
      *brace_arg C1
-      {</span>}
+      {normal_text:</span>}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
 ';

@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'include_comment'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C1
-   {}
+   {normal_text:}
    >SOURCEMARKS
    >include<start;1>
     >*@include C1 l1
@@ -19,13 +19,13 @@ $result_tree_text{'include_comment'} = '*document_root C1
     >|text_arg:{inc_file.texi}
      >*line_arg C3
       >{spaces_before_argument: }
-      >{inc_file.texi}
+      >{normal_text:inc_file.texi}
       >*@c C1
        >*line_arg C2
         >{spaces_before_argument: }
         >{rawline_text:comment}
   *paragraph C1
-   {In included file.\\n}
+   {normal_text:In included file.\\n}
    >SOURCEMARKS
    >include<end;1><p:18>
 ';

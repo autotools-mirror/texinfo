@@ -16,7 +16,7 @@ $result_tree_text{'no_titlepage_and_setchapternewpage_on'} = '*document_root C1
    |misc_args:A{on}
     *line_arg C3
      {spaces_before_argument: }
-     {on}
+     {normal_text:on}
      {spaces_after_argument:\\n}
 ';
 

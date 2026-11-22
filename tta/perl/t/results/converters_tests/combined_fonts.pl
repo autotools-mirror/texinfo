@@ -16,7 +16,7 @@ $result_tree_text{'combined_fonts'} = '*document_root C5
    |text_arg:{combined_fonts.info}
     *line_arg C3
      {spaces_before_argument: }
-     {combined_fonts.info}
+     {normal_text:combined_fonts.info}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *@node C1 l3 {Top}
@@ -27,7 +27,7 @@ $result_tree_text{'combined_fonts'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l4 {top section}
  |EXTRA
@@ -36,7 +36,7 @@ $result_tree_text{'combined_fonts'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top section}
+    {normal_text:top section}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l6 {chapter}
@@ -47,7 +47,7 @@ $result_tree_text{'combined_fonts'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter}
+    {normal_text:chapter}
     {spaces_after_argument:\\n}
  *@chapter C15 l7 {chapter}
  |EXTRA
@@ -57,160 +57,160 @@ $result_tree_text{'combined_fonts'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter}
+    {normal_text:chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C12
    *@code C1 l9
     *brace_container C1
-     {c--ode}
-   {, }
+     {normal_text:c--ode}
+   {normal_text:, }
    *@dfn C1 l9
     *brace_container C1
-     {d--fn}
-   {, }
+     {normal_text:d--fn}
+   {normal_text:, }
    *@var C1 l9
     *brace_container C1
-     {v--ar}
-   {, }
+     {normal_text:v--ar}
+   {normal_text:, }
    *@strong C1 l9
     *brace_container C1
-     {s--trong}
-   {, }
+     {normal_text:s--trong}
+   {normal_text:, }
    *@kbd C1 l9
     *brace_container C1
-     {k--bd}
-   {, }
+     {normal_text:k--bd}
+   {normal_text:, }
    *@samp C1 l9
     *brace_container C1
-     {s--amp}
-   {.\\n}
+     {normal_text:s--amp}
+   {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C12
    *@code C1 l11
     *brace_container C1
      *@dfn C1 l11
       *brace_container C1
-       {d--fn in code}
-   {\\n}
+       {normal_text:d--fn in code}
+   {normal_text:\\n}
    *@var C1 l12
     *brace_container C1
      *@code C1 l12
       *brace_container C1
-       {c--ode in var}
-   {\\n}
+       {normal_text:c--ode in var}
+   {normal_text:\\n}
    *@code C1 l13
     *brace_container C1
      *@var C1 l13
       *brace_container C1
-       {v--ar in code}
-   {\\n}
+       {normal_text:v--ar in code}
+   {normal_text:\\n}
    *@strong C1 l14
     *brace_container C1
      *@kbd C1 l14
       *brace_container C1
-       {k--bd in strong}
-   {\\n}
+       {normal_text:k--bd in strong}
+   {normal_text:\\n}
    *@samp C1 l15
     *brace_container C1
      *@strong C1 l15
       *brace_container C1
-       {s--trong in samp}
-   {\\n}
+       {normal_text:s--trong in samp}
+   {normal_text:\\n}
    *@strong C1 l16
     *brace_container C1
      *@samp C1 l16
       *brace_container C1
-       {s--amp in strong}
-   {\\n}
+       {normal_text:s--amp in strong}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
    *@cite C1 l18
     *brace_container C1
-     {c--ite}
-   {\\n}
+     {normal_text:c--ite}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C4
    *@code C1 l20
     *brace_container C1
      *@cite C1 l20
       *brace_container C1
-       {c--ite in code}
-   {\\n}
+       {normal_text:c--ite in code}
+   {normal_text:\\n}
    *@cite C1 l21
     *brace_container C1
      *@code C1 l21
       *brace_container C1
-       {c--ode in cite}
-   {\\n}
+       {normal_text:c--ode in cite}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C8
    *@code C1 l23
     *brace_container C1
-     {c--ode}
-   { }
+     {normal_text:c--ode}
+   {normal_text: }
    *@slanted C1 l23
     *brace_container C1
-     {s--lanted}
-   { }
+     {normal_text:s--lanted}
+   {normal_text: }
    *@b C1 l23
     *brace_container C1
-     {b--}
-   { }
+     {normal_text:b--}
+   {normal_text: }
    *@t C1 l23
     *brace_container C1
-     {t--}
-   {\\n}
+     {normal_text:t--}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C16
    *@code C1 l25
     *brace_container C1
      *@slanted C1 l25
       *brace_container C1
-       {s--lanted in code}
-   {\\n}
+       {normal_text:s--lanted in code}
+   {normal_text:\\n}
    *@slanted C1 l26
     *brace_container C1
      *@code C1 l26
       *brace_container C1
-       {c--ode in slanted}
-   {\\n}
+       {normal_text:c--ode in slanted}
+   {normal_text:\\n}
    *@b C1 l27
     *brace_container C1
      *@slanted C1 l27
       *brace_container C1
-       {s--lanted in b}
-   {\\n}
+       {normal_text:s--lanted in b}
+   {normal_text:\\n}
    *@slanted C1 l28
     *brace_container C1
      *@b C1 l28
       *brace_container C1
-       {b-- in slanted}
-   {\\n}
+       {normal_text:b-- in slanted}
+   {normal_text:\\n}
    *@t C1 l29
     *brace_container C1
      *@slanted C1 l29
       *brace_container C1
-       {s--lanted in t}
-   {\\n}
+       {normal_text:s--lanted in t}
+   {normal_text:\\n}
    *@slanted C1 l30
     *brace_container C1
      *@t C1 l30
       *brace_container C1
-       {t-- in slanted}
-   {\\n}
+       {normal_text:t-- in slanted}
+   {normal_text:\\n}
    *@t C1 l31
     *brace_container C1
      *@var C1 l31
       *brace_container C1
-       {v--ar in t}
-   {\\n}
+       {normal_text:v--ar in t}
+   {normal_text:\\n}
    *@var C1 l32
     *brace_container C1
      *@t C1 l32
       *brace_container C1
-       {t-- in var}
-   {\\n}
+       {normal_text:t-- in var}
+   {normal_text:\\n}
   {empty_line:\\n}
   *@example C3 l34
    *arguments_line C1
@@ -219,18 +219,18 @@ $result_tree_text{'combined_fonts'} = '*document_root C5
    *preformatted C4
     *@var C1 l35
      *brace_container C1
-      {v--ar in example}
-    {\\n}
+      {normal_text:v--ar in example}
+    {normal_text:\\n}
     *@cite C1 l36
      *brace_container C1
-      {c--ite in example}
-    {\\n}
+      {normal_text:c--ite in example}
+    {normal_text:\\n}
    *@end C1 l37
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
 ';
 

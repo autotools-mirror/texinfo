@@ -19,7 +19,7 @@ $result_tree_text{'anchor_in_footnote'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C6 l2 {Top}
  |EXTRA
@@ -28,25 +28,25 @@ $result_tree_text{'anchor_in_footnote'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C3
-   {In top node}
+   {normal_text:In top node}
    *@footnote C1 l4
    |EXTRA
    |global_command_number:{1}
     *brace_command_context C1
      *paragraph C3
-      {in footnote\\n}
+      {normal_text:in footnote\\n}
       *@anchor C1 l5
       |EXTRA
       |identifier:{Anchor-in-footnote}
       |is_target:{1}
        *brace_arg C1
-        {Anchor in footnote}
-      {.\\n}
-   {\\n}
+        {normal_text:Anchor in footnote}
+      {normal_text:.\\n}
+   {normal_text:\\n}
   {empty_line:\\n}
   *@menu C3 l8
    *arguments_line C1
@@ -58,17 +58,17 @@ $result_tree_text{'anchor_in_footnote'} = '*document_root C5
     |EXTRA
     |node_content:A{0|0}
     |normalized:{chapter}
-     {chapter}
+     {normal_text:chapter}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l10
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l12 {chapter}
@@ -79,7 +79,7 @@ $result_tree_text{'anchor_in_footnote'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter}
+    {normal_text:chapter}
     {spaces_after_argument:\\n}
  *@chapter C3 l13 {Chap}
  |EXTRA
@@ -89,7 +89,7 @@ $result_tree_text{'anchor_in_footnote'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chap}
+    {normal_text:Chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
@@ -98,8 +98,8 @@ $result_tree_text{'anchor_in_footnote'} = '*document_root C5
     |EXTRA
     |node_content:A{0|0}
     |normalized:{Anchor-in-footnote}
-     {Anchor in footnote}
-   {.\\n}
+     {normal_text:Anchor in footnote}
+   {normal_text:.\\n}
 ';
 
 

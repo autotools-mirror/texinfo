@@ -16,16 +16,16 @@ $result_tree_text{'command_in_end_expanded_raw_two_char_not_in_command'} = '*doc
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *rawpreformatted C2
-     {In TeX\\n}
+     {normal_text:In TeX\\n}
      *@end C1 l3
      |EXTRA
      |text_arg:{te}
       *line_arg C4
        {spaces_before_argument: }
-       {te}
+       {normal_text:te}
        *@asis C1 l3
         *brace_container C1
-         {x}
+         {normal_text:x}
        {spaces_after_argument:\\n}
 ';
 

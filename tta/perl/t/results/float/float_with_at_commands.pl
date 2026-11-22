@@ -21,46 +21,46 @@ $result_tree_text{'float_with_at_commands'} = '*document_root C1
    *arguments_line C2
     *block_line_arg C4
      {spaces_before_argument: }
-     {entr}
+     {normal_text:entr}
      *@\' C1 l1
       *following_arg C1
-       {e}
-     {e}
+       {normal_text:e}
+     {normal_text:e}
     *block_line_arg C7
      {spaces_before_argument: }
-     {premi}
+     {normal_text:premi}
      *@` C1 l1
       *following_arg C1
-       {e}
-     {re entr}
+       {normal_text:e}
+     {normal_text:re entr}
      *@\' C1 l1
       *following_arg C1
-       {e}
-     {e}
+       {normal_text:e}
+     {normal_text:e}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
    *paragraph C5
-    {Ceci est notre premi}
+    {normal_text:Ceci est notre premi}
     *@` C1 l3
      *following_arg C1
-      {e}
-    {re entr}
+      {normal_text:e}
+    {normal_text:re entr}
     *@\' C1 l3
      *following_arg C1
-      {e}
-    {e.\\n}
+      {normal_text:e}
+    {normal_text:e.\\n}
    *@caption C1 l4
     *brace_command_context C1
      *paragraph C5
-      {La premi}
+      {normal_text:La premi}
       *@` C1 l4
        *following_arg C1
-        {e}
-      {re entr}
+        {normal_text:e}
+      {normal_text:re entr}
       *@\' C1 l4
        *following_arg C1
-        {e}
-      {e est importante}
+        {normal_text:e}
+      {normal_text:e est importante}
    {spaces_after_close_brace:\\n}
    {empty_line:\\n}
    *@end C1 l6
@@ -68,7 +68,7 @@ $result_tree_text{'float_with_at_commands'} = '*document_root C1
    |text_arg:{float}
     *line_arg C3
      {spaces_before_argument: }
-     {float}
+     {normal_text:float}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   {empty_line:\\n}
@@ -78,11 +78,11 @@ $result_tree_text{'float_with_at_commands'} = '*document_root C1
   |global_command_number:{1}
    *line_arg C5
     {spaces_before_argument: }
-    {entr}
+    {normal_text:entr}
     *@\' C1 l9
      *following_arg C1
-      {e}
-    {e}
+      {normal_text:e}
+    {normal_text:e}
     {spaces_after_argument:\\n}
 ';
 

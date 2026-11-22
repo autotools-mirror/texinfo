@@ -19,7 +19,7 @@ $result_tree_text{'printindex_set_direction'} = '*document_root C11
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l2 {top}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'printindex_set_direction'} = '*document_root C11
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l4 {Chapter}
@@ -39,7 +39,7 @@ $result_tree_text{'printindex_set_direction'} = '*document_root C11
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chapter}
+    {normal_text:Chapter}
     {spaces_after_argument:\\n}
  *@chapter C6 l5 {chap}
  |EXTRA
@@ -49,7 +49,7 @@ $result_tree_text{'printindex_set_direction'} = '*document_root C11
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 l7
@@ -58,7 +58,7 @@ $result_tree_text{'printindex_set_direction'} = '*document_root C11
   |index_entry:I{cp,1}
    *line_arg C3
     {spaces_before_argument: }
-    {CC}
+    {normal_text:CC}
     {spaces_after_argument:\\n}
   *index_entry_command@vindex C1 l8
   |EXTRA
@@ -66,7 +66,7 @@ $result_tree_text{'printindex_set_direction'} = '*document_root C11
   |index_entry:I{vr,1}
    *line_arg C3
     {spaces_before_argument: }
-    {VV}
+    {normal_text:VV}
     {spaces_after_argument:\\n}
   *index_entry_command@findex C1 l9
   |EXTRA
@@ -74,7 +74,7 @@ $result_tree_text{'printindex_set_direction'} = '*document_root C11
   |index_entry:I{fn,1}
    *line_arg C3
     {spaces_before_argument: }
-    {FF}
+    {normal_text:FF}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l11 {Vindex}
@@ -86,7 +86,7 @@ $result_tree_text{'printindex_set_direction'} = '*document_root C11
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Vindex}
+    {normal_text:Vindex}
     {spaces_after_argument:\\n}
  *@appendix C4 l12 {Vindex}
  |EXTRA
@@ -96,7 +96,7 @@ $result_tree_text{'printindex_set_direction'} = '*document_root C11
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Vindex}
+    {normal_text:Vindex}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@printindex C1 l14
@@ -105,7 +105,7 @@ $result_tree_text{'printindex_set_direction'} = '*document_root C11
   |misc_args:A{vr}
    *line_arg C3
     {spaces_before_argument: }
-    {vr}
+    {normal_text:vr}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l16 {Cindex}
@@ -117,7 +117,7 @@ $result_tree_text{'printindex_set_direction'} = '*document_root C11
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Cindex}
+    {normal_text:Cindex}
     {spaces_after_argument:\\n}
  *@appendix C4 l17 {Cindex}
  |EXTRA
@@ -127,7 +127,7 @@ $result_tree_text{'printindex_set_direction'} = '*document_root C11
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Cindex}
+    {normal_text:Cindex}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@printindex C1 l19
@@ -136,7 +136,7 @@ $result_tree_text{'printindex_set_direction'} = '*document_root C11
   |misc_args:A{cp}
    *line_arg C3
     {spaces_before_argument: }
-    {cp}
+    {normal_text:cp}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l21 {Findex}
@@ -148,7 +148,7 @@ $result_tree_text{'printindex_set_direction'} = '*document_root C11
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Findex}
+    {normal_text:Findex}
     {spaces_after_argument:\\n}
  *@appendix C3 l22 {Findex}
  |EXTRA
@@ -158,7 +158,7 @@ $result_tree_text{'printindex_set_direction'} = '*document_root C11
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Findex}
+    {normal_text:Findex}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@printindex C1 l24
@@ -167,7 +167,7 @@ $result_tree_text{'printindex_set_direction'} = '*document_root C11
   |misc_args:A{fn}
    *line_arg C3
     {spaces_before_argument: }
-    {fn}
+    {normal_text:fn}
     {spaces_after_argument:\\n}
 ';
 

@@ -23,7 +23,7 @@ $result_tree_text{'space_macro_after_end_verbatim'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *@verbatim C3 l5
@@ -36,7 +36,7 @@ $result_tree_text{'space_macro_after_end_verbatim'} = '*document_root C1
    |text_arg:{verbatim}
     *line_arg C3
      {spaces_before_argument: }
-     {verbatim}
+     {normal_text:verbatim}
      {spaces_after_argument: }
      >SOURCEMARKS
      >macro_expansion<start;1><p:1>

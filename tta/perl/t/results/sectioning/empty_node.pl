@@ -25,19 +25,19 @@ $result_tree_text{'empty_node'} = '*document_root C3
    |node_content:A{1|1}
    |normalized:{next}
     {spaces_before_argument: }
-    {next}
+    {normal_text:next}
    *line_arg C2
    |EXTRA
    |node_content:A{1|1}
    |normalized:{prev}
     {spaces_before_argument: }
-    {prev}
+    {normal_text:prev}
    *line_arg C3
    |EXTRA
    |node_content:A{1|1}
    |normalized:{up}
     {spaces_before_argument: }
-    {up}
+    {normal_text:up}
     {spaces_after_argument:\\n}
 ';
 

@@ -33,7 +33,7 @@ $result_tree_text{'macro_in_ifset_set'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    >SOURCEMARKS
@@ -42,7 +42,7 @@ $result_tree_text{'macro_in_ifset_set'} = '*document_root C1
      >*arguments_line C1
       >*block_line_arg C3
        >{spaces_before_argument: }
-       >{a}
+       >{normal_text:a}
        >{spaces_after_argument:\\n}
    *@unmacro C1
    |EXTRA
@@ -62,7 +62,7 @@ $result_tree_text{'macro_in_ifset_set'} = '*document_root C1
     >|text_arg:{ifset}
      >*line_arg C3
       >{spaces_before_argument: }
-      >{ifset}
+      >{normal_text:ifset}
       >{spaces_after_argument:\\n}
     *arguments_line C1
      {macro_line: truc{}\\n}
@@ -72,11 +72,11 @@ $result_tree_text{'macro_in_ifset_set'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C1
-   {in ifset\\n}
+   {normal_text:in ifset\\n}
    >SOURCEMARKS
    >macro_expansion<start;1>
     >*macro_call@truc C1

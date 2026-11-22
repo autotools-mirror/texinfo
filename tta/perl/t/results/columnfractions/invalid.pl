@@ -20,14 +20,14 @@ $result_tree_text{'invalid'} = '*document_root C1
      *@columnfractions C1 l1
       *line_arg C3
        {spaces_before_argument: }
-       {2x.2 2.23x}
+       {normal_text:2x.2 2.23x}
        {spaces_after_argument:\\n}
    *@end C1 l2
    |EXTRA
    |text_arg:{multitable}
     *line_arg C2
      {spaces_before_argument: }
-     {multitable}
+     {normal_text:multitable}
 ';
 
 

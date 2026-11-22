@@ -26,7 +26,7 @@ $result_tree_text{'comment_index_before_defline'} = '*document_root C1
     |index_entry:I{cp,1}
      *line_arg C3
       {spaces_before_argument: }
-      {entry}
+      {normal_text:entry}
       {spaces_after_argument:\\n}
     *@comment C1
      *line_arg C3
@@ -42,26 +42,26 @@ $result_tree_text{'comment_index_before_defline'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {a}
+       {normal_text:a}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {b}
+       {normal_text:b}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {c}
+       {normal_text:c}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {d}
+       {normal_text:d}
      {spaces_after_argument:\\n}
    *@end C1 l7
    |EXTRA
    |text_arg:{defblock}
     *line_arg C3
      {spaces_before_argument: }
-     {defblock}
+     {normal_text:defblock}
      {spaces_after_argument:\\n}
 ';
 

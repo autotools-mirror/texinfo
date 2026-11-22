@@ -18,7 +18,7 @@ $result_tree_text{'only_documentencoding'} = '*document_root C1
    |text_arg:{ISO-8859-1}
     *line_arg C2
      {spaces_before_argument: }
-     {ISO-8859-1}
+     {normal_text:ISO-8859-1}
 ';
 
 

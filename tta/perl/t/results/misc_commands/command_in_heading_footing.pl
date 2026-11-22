@@ -14,25 +14,25 @@ $result_tree_text{'command_in_heading_footing'} = '*document_root C1
    *@everyheading C1 l1
     *line_arg C6
      {spaces_before_argument: }
-     {something }
+     {normal_text:something }
      *@thispage
-     { }
+     {normal_text: }
      *@thischapternum
      {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C5
-   {In text }
+   {normal_text:In text }
    *@thispage
-   { }
+   {normal_text: }
    *@thischapternum
-   { text.\\n}
+   {normal_text: text.\\n}
   {empty_line:\\n}
   *paragraph C3
-   {In code }
+   {normal_text:In code }
    *@code C1 l5
     *brace_container C1
      *@thissection
-   {.\\n}
+   {normal_text:.\\n}
 ';
 
 

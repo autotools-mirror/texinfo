@@ -12,26 +12,26 @@ $result_tree_text{'close_paragraph_command'} = '*document_root C1
  *before_node_section C8
   *preamble_before_content
   *paragraph C1
-   {para }
+   {normal_text:para }
   *@titlefont C1 l1
   |EXTRA
   |global_command_number:{1}
    *brace_container C1
-    {in titlefont}
+    {normal_text:in titlefont}
   *paragraph C1
-   { after titlefont.\\n}
+   {normal_text: after titlefont.\\n}
   {empty_line:\\n}
   *paragraph C1
-   {p before sp\\n}
+   {normal_text:p before sp\\n}
   *@sp C1 l4
   |EXTRA
   |misc_args:A{4}
    *line_arg C3
     {spaces_before_argument: }
-    {4}
+    {normal_text:4}
     {spaces_after_argument:\\n}
   *paragraph C1
-   {inew p after sp}
+   {normal_text:inew p after sp}
 ';
 
 

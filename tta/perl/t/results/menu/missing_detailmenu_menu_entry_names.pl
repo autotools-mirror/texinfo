@@ -19,7 +19,7 @@ $result_tree_text{'missing_detailmenu_menu_entry_names'} = '*document_root C15
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C4 l2 {top}
  |EXTRA
@@ -28,11 +28,11 @@ $result_tree_text{'missing_detailmenu_menu_entry_names'} = '*document_root C15
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {text\\n}
+   {normal_text:text\\n}
   {empty_line:\\n}
  *@node C1 l6 {C1}
  |EXTRA
@@ -42,7 +42,7 @@ $result_tree_text{'missing_detailmenu_menu_entry_names'} = '*document_root C15
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {C1}
+    {normal_text:C1}
     {spaces_after_argument:\\n}
  *@chapter C4 l7 {C1}
  |EXTRA
@@ -52,7 +52,7 @@ $result_tree_text{'missing_detailmenu_menu_entry_names'} = '*document_root C15
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {C1}
+    {normal_text:C1}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C5 l9
@@ -65,22 +65,22 @@ $result_tree_text{'missing_detailmenu_menu_entry_names'} = '*document_root C15
     |EXTRA
     |node_content:A{0|0}
     |normalized:{C1-Sec1}
-     {C1 Sec1}
+     {normal_text:C1 Sec1}
     {menu_entry_separator:::   }
     *menu_entry_description C1
      *preformatted C1
-      {desc 1\\n}
+      {normal_text:desc 1\\n}
    *menu_entry C4 l11
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{C1-Sec2}
-     {C1 Sec2}
+     {normal_text:C1 Sec2}
     {menu_entry_separator:::   }
     *menu_entry_description C1
      *preformatted C1
-      {desc 2\\n}
+      {normal_text:desc 2\\n}
    *menu_comment C1
     *preformatted C1
      {after_menu_description_line:\\n}
@@ -89,7 +89,7 @@ $result_tree_text{'missing_detailmenu_menu_entry_names'} = '*document_root C15
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l15 {C1 Sec1}
@@ -100,7 +100,7 @@ $result_tree_text{'missing_detailmenu_menu_entry_names'} = '*document_root C15
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {C1 Sec1}
+    {normal_text:C1 Sec1}
     {spaces_after_argument:\\n}
  *@section C2 l16 {C1 Sec1}
  |EXTRA
@@ -110,7 +110,7 @@ $result_tree_text{'missing_detailmenu_menu_entry_names'} = '*document_root C15
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {C1 Sec1}
+    {normal_text:C1 Sec1}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l18 {C1 Sec2}
@@ -121,7 +121,7 @@ $result_tree_text{'missing_detailmenu_menu_entry_names'} = '*document_root C15
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {C1 Sec2}
+    {normal_text:C1 Sec2}
     {spaces_after_argument:\\n}
  *@section C2 l19 {C1 Sec2}
  |EXTRA
@@ -131,7 +131,7 @@ $result_tree_text{'missing_detailmenu_menu_entry_names'} = '*document_root C15
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {C1 Sec2}
+    {normal_text:C1 Sec2}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l21 {C2}
@@ -142,7 +142,7 @@ $result_tree_text{'missing_detailmenu_menu_entry_names'} = '*document_root C15
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {C2}
+    {normal_text:C2}
     {spaces_after_argument:\\n}
  *@chapter C4 l22 {C2}
  |EXTRA
@@ -152,7 +152,7 @@ $result_tree_text{'missing_detailmenu_menu_entry_names'} = '*document_root C15
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {C2}
+    {normal_text:C2}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C5 l24
@@ -162,28 +162,28 @@ $result_tree_text{'missing_detailmenu_menu_entry_names'} = '*document_root C15
    *menu_entry C6 l25
     {menu_entry_leading_text:* }
     *menu_entry_name C1
-     {Sec1}
+     {normal_text:Sec1}
     {menu_entry_separator:: }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{C2-Sec1}
-     {C2 Sec1}
+     {normal_text:C2 Sec1}
     {menu_entry_separator:.   }
     *menu_entry_description C1
      *preformatted C1
-      {dont re-use this entry for master menu\\n}
+      {normal_text:dont re-use this entry for master menu\\n}
    *menu_entry C4 l26
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{C2-Sec2}
-     {C2 Sec2}
+     {normal_text:C2 Sec2}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_comment C1
     *preformatted C1
      {after_menu_description_line:\\n}
@@ -192,7 +192,7 @@ $result_tree_text{'missing_detailmenu_menu_entry_names'} = '*document_root C15
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l30 {C2 Sec1}
@@ -203,7 +203,7 @@ $result_tree_text{'missing_detailmenu_menu_entry_names'} = '*document_root C15
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {C2 Sec1}
+    {normal_text:C2 Sec1}
     {spaces_after_argument:\\n}
  *@section C2 l31 {C2 Sec1}
  |EXTRA
@@ -213,7 +213,7 @@ $result_tree_text{'missing_detailmenu_menu_entry_names'} = '*document_root C15
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {C2 Sec1}
+    {normal_text:C2 Sec1}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l33 {C2 Sec2}
@@ -224,7 +224,7 @@ $result_tree_text{'missing_detailmenu_menu_entry_names'} = '*document_root C15
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {C2 Sec2}
+    {normal_text:C2 Sec2}
     {spaces_after_argument:\\n}
  *@section C1 l34 {C2 Sec2}
  |EXTRA
@@ -234,7 +234,7 @@ $result_tree_text{'missing_detailmenu_menu_entry_names'} = '*document_root C15
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {C2 Sec2}
+    {normal_text:C2 Sec2}
     {spaces_after_argument:\\n}
 ';
 

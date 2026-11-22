@@ -19,7 +19,7 @@ $result_tree_text{'cartouche_and_paragraph_indentation'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
  *@top C2 l2 {top}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'cartouche_and_paragraph_indentation'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l4 {chap}
@@ -39,7 +39,7 @@ $result_tree_text{'cartouche_and_paragraph_indentation'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
  *@chapter C8 l5 {chap}
  |EXTRA
@@ -49,34 +49,34 @@ $result_tree_text{'cartouche_and_paragraph_indentation'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {aa\\n}
+   {normal_text:aa\\n}
   {empty_line:\\n}
   *paragraph C1
-   {bb\\n}
+   {normal_text:bb\\n}
   {empty_line:\\n}
   *@cartouche C7 l11
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     {toto}
+     {normal_text:toto}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
    *paragraph C1
-    {cc\\n}
+    {normal_text:cc\\n}
    {empty_line:\\n}
    *paragraph C1
-    {dd\\n}
+    {normal_text:dd\\n}
    {empty_line:\\n}
    *@end C1 l17
    |EXTRA
    |text_arg:{cartouche}
     *line_arg C3
      {spaces_before_argument: }
-     {cartouche}
+     {normal_text:cartouche}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l19 {chap2}
@@ -87,7 +87,7 @@ $result_tree_text{'cartouche_and_paragraph_indentation'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap2}
+    {normal_text:chap2}
     {spaces_after_argument:\\n}
  *@chapter C6 l20 {c2}
  |EXTRA
@@ -97,32 +97,32 @@ $result_tree_text{'cartouche_and_paragraph_indentation'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {c2}
+    {normal_text:c2}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@cartouche C7 l22
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     {titi}
+     {normal_text:titi}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
    *paragraph C1
-    {ll m\\n}
+    {normal_text:ll m\\n}
    {empty_line:\\n}
    *paragraph C1
-    {mm\\n}
+    {normal_text:mm\\n}
    {empty_line:\\n}
    *@end C1 l28
    |EXTRA
    |text_arg:{cartouche}
     *line_arg C3
      {spaces_before_argument: }
-     {cartouche}
+     {normal_text:cartouche}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {oo\\n}
+   {normal_text:oo\\n}
   {empty_line:\\n}
 ';
 

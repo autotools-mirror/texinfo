@@ -16,10 +16,10 @@ $result_tree_text{'center'} = '*document_root C1
   *@center C1 l2
    *line_arg C4
     {spaces_before_argument:  }
-    {in center }
+    {normal_text:in center }
     *@code C1 l2
      *brace_container C1
-      {in code}
+      {normal_text:in code}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
 ';

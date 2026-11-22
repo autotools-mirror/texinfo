@@ -17,7 +17,7 @@ $result_tree_text{'exampleindent_zero'} = '*document_root C1
    |misc_args:A{asis}
     *line_arg C3
      {spaces_before_argument: }
-     {asis}
+     {normal_text:asis}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
   *@example C3 l3
@@ -25,13 +25,13 @@ $result_tree_text{'exampleindent_zero'} = '*document_root C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C1
-    {EXAMPLE INDENT asis\\n}
+    {normal_text:EXAMPLE INDENT asis\\n}
    *@end C1 l5
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@exampleindent C1 l7
@@ -40,7 +40,7 @@ $result_tree_text{'exampleindent_zero'} = '*document_root C1
   |misc_args:A{0}
    *line_arg C3
     {spaces_before_argument: }
-    {0}
+    {normal_text:0}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@example C3 l9
@@ -48,13 +48,13 @@ $result_tree_text{'exampleindent_zero'} = '*document_root C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C1
-    {EXAMPLE INDENT 0\\n}
+    {normal_text:EXAMPLE INDENT 0\\n}
    *@end C1 l11
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
 ';
 

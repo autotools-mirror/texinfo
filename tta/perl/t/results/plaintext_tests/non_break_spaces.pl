@@ -18,7 +18,7 @@ $result_tree_text{'non_break_spaces'} = '*document_root C2
    |text_arg:{utf-8}
     *line_arg C3
      {spaces_before_argument: }
-     {utf-8}
+     {normal_text:utf-8}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *@node C3 non_break_spaces.texi:l3 {Top}
@@ -29,12 +29,12 @@ $result_tree_text{'non_break_spaces'} = '*document_root C2
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
-   {NO-BREAK SPACE: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa bbbbbbbbbbbbbbbbbbbbb\\n}
-   {NARROW NO-BREAK SPACE: ccccccccccccccccccccccccccccccccccccccccccccccccccccccccc dddddddddddddddddddd\\n}
+   {normal_text:NO-BREAK SPACE: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa bbbbbbbbbbbbbbbbbbbbb\\n}
+   {normal_text:NARROW NO-BREAK SPACE: ccccccccccccccccccccccccccccccccccccccccccccccccccccccccc dddddddddddddddddddd\\n}
 ';
 
 

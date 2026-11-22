@@ -20,7 +20,7 @@ $result_tree_text{'sections_test'} = '*document_root C12
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@chapter C2 l3 {chapter}
@@ -33,7 +33,7 @@ $result_tree_text{'sections_test'} = '*document_root C12
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter}
+    {normal_text:chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@section C2 l5 {section}
@@ -46,7 +46,7 @@ $result_tree_text{'sections_test'} = '*document_root C12
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {section}
+    {normal_text:section}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@subsection C2 l7 {subsection}
@@ -59,7 +59,7 @@ $result_tree_text{'sections_test'} = '*document_root C12
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {subsection}
+    {normal_text:subsection}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@subsubsection C2 l9 {subsubsection}
@@ -72,7 +72,7 @@ $result_tree_text{'sections_test'} = '*document_root C12
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {subsubsection}
+    {normal_text:subsubsection}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@part C2 l11 {part}
@@ -83,7 +83,7 @@ $result_tree_text{'sections_test'} = '*document_root C12
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {part}
+    {normal_text:part}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@chapter C2 l13 {chapter in part}
@@ -96,7 +96,7 @@ $result_tree_text{'sections_test'} = '*document_root C12
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter in part}
+    {normal_text:chapter in part}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@chapter C2 l15 {second chapter in part}
@@ -109,7 +109,7 @@ $result_tree_text{'sections_test'} = '*document_root C12
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {second chapter in part}
+    {normal_text:second chapter in part}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@unnumbered C2 l17 {unnumbered}
@@ -121,7 +121,7 @@ $result_tree_text{'sections_test'} = '*document_root C12
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {unnumbered}
+    {normal_text:unnumbered}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@appendix C2 l19 {appendix}
@@ -134,7 +134,7 @@ $result_tree_text{'sections_test'} = '*document_root C12
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {appendix}
+    {normal_text:appendix}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@appendixsec C1 l21 {appendixsec}
@@ -147,7 +147,7 @@ $result_tree_text{'sections_test'} = '*document_root C12
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {appendixsec}
+    {normal_text:appendixsec}
     {spaces_after_argument:\\n}
 ';
 

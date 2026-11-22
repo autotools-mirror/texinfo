@@ -16,24 +16,24 @@ $result_tree_text{'documentlanguagevariant_arguments'} = '*document_root C1
    |global_command_number:{1}
     *line_arg C3
      {spaces_before_argument: }
-     {arg}
+     {normal_text:arg}
      {spaces_after_argument:\\n}
    *@documentlanguagevariant C2 l2
    |EXTRA
    |global_command_number:{2}
     *line_arg C2
      {spaces_before_argument: }
-     {one}
+     {normal_text:one}
     *line_arg C3
      {spaces_before_argument: }
-     {two}
+     {normal_text:two}
      {spaces_after_argument:\\n}
    *@documentlanguagevariant C2 l3
    |EXTRA
    |global_command_number:{3}
     *line_arg C3
      {spaces_before_argument: }
-     {before comma}
+     {normal_text:before comma}
      {spaces_after_argument: }
     *line_arg C1
      {spaces_before_argument:\\n}
@@ -47,17 +47,17 @@ $result_tree_text{'documentlanguagevariant_arguments'} = '*document_root C1
    |global_command_number:{5}
     *line_arg C3
      {spaces_before_argument: }
-     {first}
+     {normal_text:first}
      {spaces_after_argument: }
     *line_arg C2
      {spaces_before_argument: }
-     {second}
+     {normal_text:second}
     *line_arg C3
      {spaces_before_argument: }
-     {third}
+     {normal_text:third}
      {spaces_after_argument: }
     *line_arg C1
-     {fourth}
+     {normal_text:fourth}
     *line_arg C1
      {spaces_before_argument:   \\n}
    *@documentlanguagevariant C1 l6

@@ -23,11 +23,11 @@ $result_tree_text{'recursive_call_in_argument'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C1
-   {a\\n}
+   {normal_text:a\\n}
    >SOURCEMARKS
    >macro_expansion<start;1>
     >*macro_call@anorecurse C1

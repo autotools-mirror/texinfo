@@ -19,22 +19,22 @@ $result_tree_text{'titlepage_no_title'} = '*document_root C5
     |EXTRA
     |global_command_number:{1}
      *brace_container C1
-      {Some manual tested}
-    {\\n}
+      {normal_text:Some manual tested}
+    {normal_text:\\n}
     {empty_line:\\n}
     *@author C1 l4
     |EXTRA
     |global_command_number:{1}
      *line_arg C3
       {spaces_before_argument: }
-      {Some Author}
+      {normal_text:Some Author}
       {spaces_after_argument:\\n}
     *@end C1 l5
     |EXTRA
     |text_arg:{titlepage}
      *line_arg C3
       {spaces_before_argument: }
-      {titlepage}
+      {normal_text:titlepage}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
  *@node C1 l7 {Top}
@@ -45,7 +45,7 @@ $result_tree_text{'titlepage_no_title'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l8 {section top}
  |EXTRA
@@ -54,7 +54,7 @@ $result_tree_text{'titlepage_no_title'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {section top}
+    {normal_text:section top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l10 {chapter}
@@ -65,7 +65,7 @@ $result_tree_text{'titlepage_no_title'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter}
+    {normal_text:chapter}
     {spaces_after_argument:\\n}
  *@chapter C3 l11 {Chapter}
  |EXTRA
@@ -75,11 +75,11 @@ $result_tree_text{'titlepage_no_title'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chapter}
+    {normal_text:Chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {In chapter\\n}
+   {normal_text:In chapter\\n}
 ';
 
 

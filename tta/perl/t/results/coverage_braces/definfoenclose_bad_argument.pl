@@ -14,7 +14,7 @@ $result_tree_text{'definfoenclose_bad_argument'} = '*document_root C1
    *@definfoenclose C1 l1
     *line_arg C2
      {spaces_before_argument: }
-     {#phoo,;,:}
+     {normal_text:#phoo,;,:}
 ';
 
 

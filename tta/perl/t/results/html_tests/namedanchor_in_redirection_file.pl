@@ -19,7 +19,7 @@ $result_tree_text{'namedanchor_in_redirection_file'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l2 {top}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'namedanchor_in_redirection_file'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l4 {chap}
@@ -39,7 +39,7 @@ $result_tree_text{'namedanchor_in_redirection_file'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
  *@chapter C7 l5 {Chap}
  |EXTRA
@@ -49,7 +49,7 @@ $result_tree_text{'namedanchor_in_redirection_file'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chap}
+    {normal_text:Chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@anchor C1 l7
@@ -57,7 +57,7 @@ $result_tree_text{'namedanchor_in_redirection_file'} = '*document_root C5
   |identifier:{notitle}
   |is_target:{1}
    *brace_arg C1
-    {notitle}
+    {normal_text:notitle}
   {spaces_after_close_brace:\\n}
   {empty_line:\\n}
   *@namedanchor C2 l9
@@ -65,10 +65,10 @@ $result_tree_text{'namedanchor_in_redirection_file'} = '*document_root C5
   |identifier:{the-spot}
   |is_target:{1}
    *brace_arg C1
-    {the spot}
+    {normal_text:the spot}
    *brace_arg C2
     {spaces_before_argument: }
-    {named in a way}
+    {normal_text:named in a way}
   {spaces_after_close_brace:\\n}
 ';
 

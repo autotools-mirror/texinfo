@@ -21,42 +21,42 @@ $result_tree_text{'code_in_def'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {Function}
+       {normal_text:Function}
      {spaces: }
      *def_type C1
       *def_line_arg C1
-       {int}
+       {normal_text:int}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {foo}
+       {normal_text:foo}
      {spaces: }
      {delimiter:(}
      *def_typearg C1
       *def_line_arg C1
        *@code C1 l1
         *brace_container C2
-         {const std::vector<int>}
+         {normal_text:const std::vector<int>}
          *@&
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {bar}
+       {normal_text:bar}
      {delimiter:)}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C3
-     {Documentation of }
+     {normal_text:Documentation of }
      *@code C1 l2
       *brace_container C1
-       {foo}
-     {.\\n}
+       {normal_text:foo}
+     {normal_text:.\\n}
    *@end C1 l3
    |EXTRA
    |text_arg:{deftypefn}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypefn}
+     {normal_text:deftypefn}
      {spaces_after_argument:\\n}
 ';
 

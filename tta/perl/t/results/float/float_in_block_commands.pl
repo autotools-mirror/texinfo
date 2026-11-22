@@ -25,31 +25,31 @@ $result_tree_text{'float_in_block_commands'} = '*document_root C1
     *arguments_line C2
      *block_line_arg C2
       {spaces_before_argument: }
-      {Text}
+      {normal_text:Text}
      *block_line_arg C3
       {spaces_before_argument: }
-      {in example}
+      {normal_text:in example}
       {spaces_after_argument:\\n}
     *@caption C1 l3
      *brace_command_context C1
       *paragraph C1
-       {float in example}
+       {normal_text:float in example}
     {spaces_after_close_brace:}
     *preformatted C1
-     {\\n}
+     {normal_text:\\n}
     *@end C1 l4
     |EXTRA
     |text_arg:{float}
      *line_arg C3
       {spaces_before_argument: }
-      {float}
+      {normal_text:float}
       {spaces_after_argument:\\n}
    *@end C1 l5
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@quotation C3 l7
@@ -66,29 +66,29 @@ $result_tree_text{'float_in_block_commands'} = '*document_root C1
     *arguments_line C2
      *block_line_arg C2
       {spaces_before_argument: }
-      {Text}
+      {normal_text:Text}
      *block_line_arg C3
       {spaces_before_argument: }
-      {in quotation}
+      {normal_text:in quotation}
       {spaces_after_argument:\\n}
     *@caption C1 l9
      *brace_command_context C1
       *paragraph C1
-       {float in quotation}
+       {normal_text:float in quotation}
     {spaces_after_close_brace:\\n}
     *@end C1 l10
     |EXTRA
     |text_arg:{float}
      *line_arg C3
       {spaces_before_argument: }
-      {float}
+      {normal_text:float}
       {spaces_after_argument:\\n}
    *@end C1 l11
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }
-     {quotation}
+     {normal_text:quotation}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@cartouche C3 l13
@@ -105,29 +105,29 @@ $result_tree_text{'float_in_block_commands'} = '*document_root C1
     *arguments_line C2
      *block_line_arg C2
       {spaces_before_argument: }
-      {Text}
+      {normal_text:Text}
      *block_line_arg C3
       {spaces_before_argument: }
-      {in cartouche}
+      {normal_text:in cartouche}
       {spaces_after_argument:\\n}
     *@caption C1 l15
      *brace_command_context C1
       *paragraph C1
-       {float in cartouche}
+       {normal_text:float in cartouche}
     {spaces_after_close_brace:\\n}
     *@end C1 l16
     |EXTRA
     |text_arg:{float}
      *line_arg C3
       {spaces_before_argument: }
-      {float}
+      {normal_text:float}
       {spaces_after_argument:\\n}
    *@end C1 l17
    |EXTRA
    |text_arg:{cartouche}
     *line_arg C3
      {spaces_before_argument: }
-     {cartouche}
+     {normal_text:cartouche}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
 ';

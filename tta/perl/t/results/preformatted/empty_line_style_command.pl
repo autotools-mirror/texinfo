@@ -16,19 +16,19 @@ $result_tree_text{'empty_line_style_command'} = '*document_root C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C3
-    {example }
+    {normal_text:example }
     *@samp C1 l2
      *brace_container C3
-      {in samp\\n}
+      {normal_text:in samp\\n}
       {empty_line:\\n}
-      {after empty}
-    { line\\n}
+      {normal_text:after empty}
+    {normal_text: line\\n}
    *@end C1 l5
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
 ';
 

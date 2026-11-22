@@ -54,7 +54,7 @@ spaces_after_close_brace                  text,leading_space,ignorable_text
 spaces_before_paragraph                   text
 text_after_end                            text
 text_before_beginning                     text
-normal_text                               text,c_only
+normal_text                               text
 # text not in the regular converted tree elements.
 # Could be part of informative command arguments, for added separators...
 other_text                                text

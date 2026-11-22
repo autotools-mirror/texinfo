@@ -19,7 +19,7 @@ $result_tree_text{'link'} = '*document_root C4
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {One}
+    {normal_text:One}
     {spaces_after_argument:\\n}
  *@chapter C4 l2 {ONEX}
  |EXTRA
@@ -29,11 +29,11 @@ $result_tree_text{'link'} = '*document_root C4
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {ONEX}
+    {normal_text:ONEX}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {target node\\n}
+   {normal_text:target node\\n}
   {empty_line:\\n}
  *@node C19 l6 {Two}
  |EXTRA
@@ -43,18 +43,18 @@ $result_tree_text{'link'} = '*document_root C4
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Two}
+    {normal_text:Two}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
-   {xrefautomaticsectiontitle off\\n}
+   {normal_text:xrefautomaticsectiontitle off\\n}
    *@xrefautomaticsectiontitle C1 l9
    |EXTRA
    |global_command_number:{1}
    |misc_args:A{off}
     *line_arg C3
      {spaces_before_argument: }
-     {off}
+     {normal_text:off}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
@@ -63,8 +63,8 @@ $result_tree_text{'link'} = '*document_root C4
     |EXTRA
     |node_content:A{0|0}
     |normalized:{One}
-     {One}
-   {\\n}
+     {normal_text:One}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
    *@link C2 l13
@@ -72,21 +72,21 @@ $result_tree_text{'link'} = '*document_root C4
     |EXTRA
     |node_content:A{0|0}
     |normalized:{One}
-     {One}
+     {normal_text:One}
     *brace_arg C2
      {spaces_before_argument: }
-     {label}
-   {\\n}
+     {normal_text:label}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
-   {xrefautomaticsectiontitle on\\n}
+   {normal_text:xrefautomaticsectiontitle on\\n}
    *@xrefautomaticsectiontitle C1 l16
    |EXTRA
    |global_command_number:{2}
    |misc_args:A{on}
     *line_arg C3
      {spaces_before_argument: }
-     {on}
+     {normal_text:on}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
@@ -95,8 +95,8 @@ $result_tree_text{'link'} = '*document_root C4
     |EXTRA
     |node_content:A{0|0}
     |normalized:{One}
-     {One}
-   {\\n}
+     {normal_text:One}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
    *@link C2 l20
@@ -104,37 +104,37 @@ $result_tree_text{'link'} = '*document_root C4
     |EXTRA
     |node_content:A{0|0}
     |normalized:{One}
-     {One}
+     {normal_text:One}
     *brace_arg C2
      {spaces_before_argument: }
-     {label}
-   {\\n}
+     {normal_text:label}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {external link\\n}
+   {normal_text:external link\\n}
   {empty_line:\\n}
   *paragraph C2
    *@link C3 l24
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
-     {Introduction}
+     {normal_text:Introduction}
     *brace_arg
     *brace_arg C1
-     {bash}
-   {\\n}
+     {normal_text:bash}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
    *@link C3 l26
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
-     {Introduction}
+     {normal_text:Introduction}
     *brace_arg C1
-     {Bash}
+     {normal_text:Bash}
     *brace_arg C1
-     {bash}
-   {\\n}
+     {normal_text:bash}
+   {normal_text:\\n}
 ';
 
 

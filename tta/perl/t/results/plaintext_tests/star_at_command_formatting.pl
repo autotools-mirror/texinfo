@@ -34,70 +34,70 @@ $result_tree_text{'star_at_command_formatting'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C8
-   {Some text }
+   {normal_text:Some text }
    >SOURCEMARKS
    >macro_expansion<start;1>
     >*macro_call@mymacro C1
      >*brace_arg
    *@*
-   {\\n}
-   {more text. }
+   {normal_text:\\n}
+   {normal_text:more text. }
    *@\\n
-   {Even more text. }
+   {normal_text:Even more text. }
    *@*
-   { not at eol.\\n}
+   {normal_text: not at eol.\\n}
   {empty_line:\\n}
   *paragraph C40
-   {Now followed by }
+   {normal_text:Now followed by }
    *@@
-   { : followed}
+   {normal_text: : followed}
    *@*
    *@ 
-   {\\n}
-   {And now followed by a space and }
+   {normal_text:\\n}
+   {normal_text:And now followed by a space and }
    *@@
-   { : follow }
+   {normal_text: : follow }
    *@*
-   { }
+   {normal_text: }
    *@ 
-   {\\n}
-   {And now followed by a space and }
+   {normal_text:\\n}
+   {normal_text:And now followed by a space and }
    *@@
-   { and text: follow }
+   {normal_text: and text: follow }
    *@*
-   { }
+   {normal_text: }
    *@ 
-   {text\\n}
-   {Followed by empty asis and a space }
+   {normal_text:text\\n}
+   {normal_text:Followed by empty asis and a space }
    *@asis C1 l16:@mymacro
     *brace_container
-   { \\n}
-   {Followed by asis with space and a space }
+   {normal_text: \\n}
+   {normal_text:Followed by asis with space and a space }
    *@asis C1 l16:@mymacro
     *brace_container C1
-     { }
-   { \\n}
-   {And now with * empty }
+     {normal_text: }
+   {normal_text: \\n}
+   {normal_text:And now with * empty }
    *@@
-   {asis: }
+   {normal_text:asis: }
    *@*
    *@asis C1 l16:@mymacro
     *brace_container
-   { \\n}
-   {And now with * asis with space }
+   {normal_text: \\n}
+   {normal_text:And now with * asis with space }
    *@@
-   {asis: }
+   {normal_text:asis: }
    *@*
-   { }
+   {normal_text: }
    *@asis C1 l16:@mymacro
     *brace_container C1
-     { }
-   {\\n}
-   {And end para.\\n}
+     {normal_text: }
+   {normal_text:\\n}
+   {normal_text:And end para.\\n}
    >SOURCEMARKS
    >macro_expansion<end;1><p:13>
   {empty_line:\\n}
@@ -106,66 +106,66 @@ $result_tree_text{'star_at_command_formatting'} = '*document_root C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C50
-    {Example\\n}
-    {Some text }
+    {normal_text:Example\\n}
+    {normal_text:Some text }
     >SOURCEMARKS
     >macro_expansion<start;2>
      >*macro_call@mymacro C1
       >*brace_arg
     *@*
-    {\\n}
-    {more text. }
+    {normal_text:\\n}
+    {normal_text:more text. }
     *@\\n
-    {Even more text. }
+    {normal_text:Even more text. }
     *@*
-    { not at eol.\\n}
+    {normal_text: not at eol.\\n}
     {empty_line:\\n}
-    {Now followed by }
+    {normal_text:Now followed by }
     *@@
-    { : followed}
+    {normal_text: : followed}
     *@*
     *@ 
-    {\\n}
-    {And now followed by a space and }
+    {normal_text:\\n}
+    {normal_text:And now followed by a space and }
     *@@
-    { : follow }
+    {normal_text: : follow }
     *@*
-    { }
+    {normal_text: }
     *@ 
-    {\\n}
-    {And now followed by a space and }
+    {normal_text:\\n}
+    {normal_text:And now followed by a space and }
     *@@
-    { and text: follow }
+    {normal_text: and text: follow }
     *@*
-    { }
+    {normal_text: }
     *@ 
-    {text\\n}
-    {Followed by empty asis and a space }
+    {normal_text:text\\n}
+    {normal_text:Followed by empty asis and a space }
     *@asis C1 l20:@mymacro
      *brace_container
-    { \\n}
-    {Followed by asis with space and a space }
+    {normal_text: \\n}
+    {normal_text:Followed by asis with space and a space }
     *@asis C1 l20:@mymacro
      *brace_container C1
-      { }
-    { \\n}
-    {And now with * empty }
+      {normal_text: }
+    {normal_text: \\n}
+    {normal_text:And now with * empty }
     *@@
-    {asis: }
+    {normal_text:asis: }
     *@*
     *@asis C1 l20:@mymacro
      *brace_container
-    { \\n}
-    {And now with * asis with space }
+    {normal_text: \\n}
+    {normal_text:And now with * asis with space }
     *@@
-    {asis: }
+    {normal_text:asis: }
     *@*
-    { }
+    {normal_text: }
     *@asis C1 l20:@mymacro
      *brace_container C1
-      { }
-    {\\n}
-    {And end para.\\n}
+      {normal_text: }
+    {normal_text:\\n}
+    {normal_text:And end para.\\n}
     >SOURCEMARKS
     >macro_expansion<end;2><p:13>
    *@end C1 l21
@@ -173,7 +173,7 @@ $result_tree_text{'star_at_command_formatting'} = '*document_root C1
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@quotation C5 l23
@@ -181,67 +181,67 @@ $result_tree_text{'star_at_command_formatting'} = '*document_root C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C9
-    {Quotation\\n}
-    {Some text }
+    {normal_text:Quotation\\n}
+    {normal_text:Some text }
     >SOURCEMARKS
     >macro_expansion<start;3>
      >*macro_call@mymacro C1
       >*brace_arg
     *@*
-    {\\n}
-    {more text. }
+    {normal_text:\\n}
+    {normal_text:more text. }
     *@\\n
-    {Even more text. }
+    {normal_text:Even more text. }
     *@*
-    { not at eol.\\n}
+    {normal_text: not at eol.\\n}
    {empty_line:\\n}
    *paragraph C40
-    {Now followed by }
+    {normal_text:Now followed by }
     *@@
-    { : followed}
+    {normal_text: : followed}
     *@*
     *@ 
-    {\\n}
-    {And now followed by a space and }
+    {normal_text:\\n}
+    {normal_text:And now followed by a space and }
     *@@
-    { : follow }
+    {normal_text: : follow }
     *@*
-    { }
+    {normal_text: }
     *@ 
-    {\\n}
-    {And now followed by a space and }
+    {normal_text:\\n}
+    {normal_text:And now followed by a space and }
     *@@
-    { and text: follow }
+    {normal_text: and text: follow }
     *@*
-    { }
+    {normal_text: }
     *@ 
-    {text\\n}
-    {Followed by empty asis and a space }
+    {normal_text:text\\n}
+    {normal_text:Followed by empty asis and a space }
     *@asis C1 l25:@mymacro
      *brace_container
-    { \\n}
-    {Followed by asis with space and a space }
+    {normal_text: \\n}
+    {normal_text:Followed by asis with space and a space }
     *@asis C1 l25:@mymacro
      *brace_container C1
-      { }
-    { \\n}
-    {And now with * empty }
+      {normal_text: }
+    {normal_text: \\n}
+    {normal_text:And now with * empty }
     *@@
-    {asis: }
+    {normal_text:asis: }
     *@*
     *@asis C1 l25:@mymacro
      *brace_container
-    { \\n}
-    {And now with * asis with space }
+    {normal_text: \\n}
+    {normal_text:And now with * asis with space }
     *@@
-    {asis: }
+    {normal_text:asis: }
     *@*
-    { }
+    {normal_text: }
     *@asis C1 l25:@mymacro
      *brace_container C1
-      { }
-    {\\n}
-    {And end para.\\n}
+      {normal_text: }
+    {normal_text:\\n}
+    {normal_text:And end para.\\n}
     >SOURCEMARKS
     >macro_expansion<end;3><p:13>
    *@end C1 l26
@@ -249,7 +249,7 @@ $result_tree_text{'star_at_command_formatting'} = '*document_root C1
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }
-     {quotation}
+     {normal_text:quotation}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
 ';

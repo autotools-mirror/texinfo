@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'ifnot_format_conditional'} = '*document_root C1
  *before_node_section C4
   *preamble_before_content C1
-   {}
+   {normal_text:}
    >SOURCEMARKS
    >expanded_conditional_command<start;1>
     >*@ifnottex C1 l1
@@ -19,7 +19,7 @@ $result_tree_text{'ifnot_format_conditional'} = '*document_root C1
       >*block_line_arg C1
        >{spaces_before_argument:\\n}
   *paragraph C1
-   {not tex\\n}
+   {normal_text:not tex\\n}
    >SOURCEMARKS
    >expanded_conditional_command<end;1><p:8>
     >*@end C1 l3
@@ -27,11 +27,11 @@ $result_tree_text{'ifnot_format_conditional'} = '*document_root C1
     >|text_arg:{ifnottex}
      >*line_arg C3
       >{spaces_before_argument: }
-      >{ifnottex}
+      >{normal_text:ifnottex}
       >{spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {After.}
+   {normal_text:After.}
 ';
 
 

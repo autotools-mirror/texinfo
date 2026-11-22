@@ -19,7 +19,7 @@ $result_tree_text{'menu_pointing_to_anchor_nodes'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C11 l2 {top}
  |EXTRA
@@ -28,28 +28,28 @@ $result_tree_text{'menu_pointing_to_anchor_nodes'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {Text\\n}
+   {normal_text:Text\\n}
   {empty_line:\\n}
   *@anchor C1 l6
   |EXTRA
   |identifier:{An-anchor}
   |is_target:{1}
    *brace_arg C1
-    {An anchor}
+    {normal_text:An anchor}
   {spaces_after_close_brace:\\n}
   *@namedanchor C2 l7
   |EXTRA
   |identifier:{_0021Named_0021}
   |is_target:{1}
    *brace_arg C1
-    {!Named!}
+    {normal_text:!Named!}
    *brace_arg C2
     {spaces_before_argument: }
-    {named title}
+    {normal_text:named title}
   {spaces_after_close_brace:\\n}
   {empty_line:\\n}
   *@menu C5 l9
@@ -62,39 +62,39 @@ $result_tree_text{'menu_pointing_to_anchor_nodes'} = '*document_root C5
     |EXTRA
     |node_content:A{0|0}
     |normalized:{An-anchor}
-     {An anchor}
+     {normal_text:An anchor}
     {menu_entry_separator:::                }
     *menu_entry_description C1
      *preformatted C1
-      {menu entry pointing to the anchor.\\n}
+      {normal_text:menu entry pointing to the anchor.\\n}
    *menu_entry C4 l11
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{chap}
-     {chap}
+     {normal_text:chap}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 l12
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{_0021Named_0021}
-     {!Named!}
+     {normal_text:!Named!}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l13
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l15 {chap}
@@ -105,7 +105,7 @@ $result_tree_text{'menu_pointing_to_anchor_nodes'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
  *@chapter C2 l16 {chap}
  |EXTRA
@@ -115,7 +115,7 @@ $result_tree_text{'menu_pointing_to_anchor_nodes'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
 ';

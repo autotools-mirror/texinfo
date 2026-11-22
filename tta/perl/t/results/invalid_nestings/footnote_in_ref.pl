@@ -19,26 +19,26 @@ $result_tree_text{'footnote_in_ref'} = '*document_root C2
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {first}
+    {normal_text:first}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
    *@xref C2 l3
     *brace_arg C1
-     {first}
+     {normal_text:first}
     *brace_arg C4
      {spaces_before_argument: }
-     {Text}
+     {normal_text:Text}
      *@footnote C1 l3
      |EXTRA
      |global_command_number:{1}
       *brace_command_context C3
        *paragraph C1
-        {First para\\n}
+        {normal_text:First para\\n}
        {empty_line:\\n}
        *paragraph C1
-        {seond para}
-     {.}
+        {normal_text:seond para}
+     {normal_text:.}
 ';
 
 

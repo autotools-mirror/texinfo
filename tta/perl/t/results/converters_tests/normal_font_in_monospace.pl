@@ -16,33 +16,33 @@ $result_tree_text{'normal_font_in_monospace'} = '*document_root C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C3
-    {in example }
+    {normal_text:in example }
     *@r C1 l2
      *brace_container C2
-      {in r---now }
+      {normal_text:in r---now }
       *@code C1 l2
        *brace_container C1
-        {in co---de}
-    {\\n}
+        {normal_text:in co---de}
+    {normal_text:\\n}
    *@end C1 l3
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
    *@command C1 l5
     *brace_container C2
-     {in command---c }
+     {normal_text:in command---c }
      *@r C1 l5
       *brace_container C2
-       {in r---r }
+       {normal_text:in r---r }
        *@file C1 l5
         *brace_container C1
-         {in file---}
-   {.\\n}
+         {normal_text:in file---}
+   {normal_text:.\\n}
 ';
 
 

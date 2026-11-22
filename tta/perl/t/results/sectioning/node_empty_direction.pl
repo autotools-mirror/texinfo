@@ -19,7 +19,7 @@ $result_tree_text{'node_empty_direction'} = '*document_root C2
   *arguments_line C2
    *line_arg C2
     {spaces_before_argument: }
-    {name}
+    {normal_text:name}
    *line_arg C1
     {spaces_before_argument: }
 ';

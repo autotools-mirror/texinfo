@@ -21,7 +21,7 @@ $result_tree_text{'char_latin1_latin1_in_refs'} = '*document_root C14
    |text_arg:{ISO-8859-1}
     *line_arg C3
      {spaces_before_argument: }
-     {ISO-8859-1}
+     {normal_text:ISO-8859-1}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *@node C1 char_latin1_latin1_in_refs.texi:l5 {Top}
@@ -33,7 +33,7 @@ $result_tree_text{'char_latin1_latin1_in_refs'} = '*document_root C14
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C6 char_latin1_latin1_in_refs.texi:l6 {accented char in latin1 in refs}
  |EXTRA
@@ -42,7 +42,7 @@ $result_tree_text{'char_latin1_latin1_in_refs'} = '*document_root C14
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {accented char in latin1 in refs}
+    {normal_text:accented char in latin1 in refs}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@printindex C1 char_latin1_latin1_in_refs.texi:l8
@@ -51,7 +51,7 @@ $result_tree_text{'char_latin1_latin1_in_refs'} = '*document_root C14
   |misc_args:A{cp}
    *line_arg C3
     {spaces_before_argument: }
-    {cp}
+    {normal_text:cp}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C7 char_latin1_latin1_in_refs.texi:l10
@@ -64,61 +64,61 @@ $result_tree_text{'char_latin1_latin1_in_refs'} = '*document_root C14
     |EXTRA
     |node_content:A{0|0}
     |normalized:{_00e4-_00eb-_00ef-_00f6-_00fc-_00ff-_00c4-_00cb-_00cf-_00d6-_00dc}
-     {ä ë ï ö ü ÿ Ä Ë Ï Ö Ü}
+     {normal_text:ä ë ï ö ü ÿ Ä Ë Ï Ö Ü}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 char_latin1_latin1_in_refs.texi:l12
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{_00e9}
-     {é}
+     {normal_text:é}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 char_latin1_latin1_in_refs.texi:l13
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{_00e0-_00e8-_00f9}
-     {à è ù}
+     {normal_text:à è ù}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 char_latin1_latin1_in_refs.texi:l14
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{_00e2-_00ea-_00ee-_00f4-_00fb-_00c2-_00ca-_00ce-_00d4-_00db}
-     {â ê î ô û Â Ê Î Ô Û}
+     {normal_text:â ê î ô û Â Ê Î Ô Û}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 char_latin1_latin1_in_refs.texi:l15
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{_00e7}
-     {ç}
+     {normal_text:ç}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 char_latin1_latin1_in_refs.texi:l16
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 char_latin1_latin1_in_refs.texi:l18 {ä ë ï ö ü ÿ Ä Ë Ï Ö Ü}
@@ -129,7 +129,7 @@ $result_tree_text{'char_latin1_latin1_in_refs'} = '*document_root C14
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {ä ë ï ö ü ÿ Ä Ë Ï Ö Ü}
+    {normal_text:ä ë ï ö ü ÿ Ä Ë Ï Ö Ü}
     {spaces_after_argument:\\n}
  *@chapter C2 char_latin1_latin1_in_refs.texi:l19 {ä ë ï ö ü ÿ Ä Ë Ï Ö Ü}
  |EXTRA
@@ -139,7 +139,7 @@ $result_tree_text{'char_latin1_latin1_in_refs'} = '*document_root C14
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {ä ë ï ö ü ÿ Ä Ë Ï Ö Ü}
+    {normal_text:ä ë ï ö ü ÿ Ä Ë Ï Ö Ü}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 char_latin1_latin1_in_refs.texi:l21 {é}
@@ -150,7 +150,7 @@ $result_tree_text{'char_latin1_latin1_in_refs'} = '*document_root C14
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {é}
+    {normal_text:é}
     {spaces_after_argument:\\n}
  *@chapter C2 char_latin1_latin1_in_refs.texi:l22 {é}
  |EXTRA
@@ -160,7 +160,7 @@ $result_tree_text{'char_latin1_latin1_in_refs'} = '*document_root C14
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {é}
+    {normal_text:é}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 char_latin1_latin1_in_refs.texi:l24 {à è ù}
@@ -171,7 +171,7 @@ $result_tree_text{'char_latin1_latin1_in_refs'} = '*document_root C14
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {à è ù}
+    {normal_text:à è ù}
     {spaces_after_argument:\\n}
  *@chapter C2 char_latin1_latin1_in_refs.texi:l25 {à è ù}
  |EXTRA
@@ -181,7 +181,7 @@ $result_tree_text{'char_latin1_latin1_in_refs'} = '*document_root C14
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {à è ù}
+    {normal_text:à è ù}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 char_latin1_latin1_in_refs.texi:l27 {â ê î ô û Â Ê Î Ô Û}
@@ -192,7 +192,7 @@ $result_tree_text{'char_latin1_latin1_in_refs'} = '*document_root C14
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {â ê î ô û Â Ê Î Ô Û}
+    {normal_text:â ê î ô û Â Ê Î Ô Û}
     {spaces_after_argument:\\n}
  *@chapter C2 char_latin1_latin1_in_refs.texi:l28 {â ê î ô û Â Ê Î Ô Û}
  |EXTRA
@@ -202,7 +202,7 @@ $result_tree_text{'char_latin1_latin1_in_refs'} = '*document_root C14
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {â ê î ô û Â Ê Î Ô Û}
+    {normal_text:â ê î ô û Â Ê Î Ô Û}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 char_latin1_latin1_in_refs.texi:l30 {ç}
@@ -213,7 +213,7 @@ $result_tree_text{'char_latin1_latin1_in_refs'} = '*document_root C14
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {ç}
+    {normal_text:ç}
     {spaces_after_argument:\\n}
  *@chapter C11 char_latin1_latin1_in_refs.texi:l31 {ç}
  |EXTRA
@@ -223,7 +223,7 @@ $result_tree_text{'char_latin1_latin1_in_refs'} = '*document_root C14
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {ç}
+    {normal_text:ç}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C10
@@ -232,36 +232,36 @@ $result_tree_text{'char_latin1_latin1_in_refs'} = '*document_root C14
     |EXTRA
     |node_content:A{0|0}
     |normalized:{_00e4-_00eb-_00ef-_00f6-_00fc-_00ff-_00c4-_00cb-_00cf-_00d6-_00dc}
-     {ä ë ï ö ü ÿ Ä Ë Ï Ö Ü}
-   {\\n}
+     {normal_text:ä ë ï ö ü ÿ Ä Ë Ï Ö Ü}
+   {normal_text:\\n}
    *@ref C1 char_latin1_latin1_in_refs.texi:l34
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{_00e9}
-     {é}
-   {\\n}
+     {normal_text:é}
+   {normal_text:\\n}
    *@ref C1 char_latin1_latin1_in_refs.texi:l35
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{_00e0-_00e8-_00f9}
-     {à è ù}
-   {\\n}
+     {normal_text:à è ù}
+   {normal_text:\\n}
    *@ref C1 char_latin1_latin1_in_refs.texi:l36
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{_00e2-_00ea-_00ee-_00f4-_00fb-_00c2-_00ca-_00ce-_00d4-_00db}
-     {â ê î ô û Â Ê Î Ô Û}
-   {\\n}
+     {normal_text:â ê î ô û Â Ê Î Ô Û}
+   {normal_text:\\n}
    *@ref C1 char_latin1_latin1_in_refs.texi:l37
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{_00e7}
-     {ç}
-   {\\n}
+     {normal_text:ç}
+   {normal_text:\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 char_latin1_latin1_in_refs.texi:l39
   |EXTRA
@@ -269,7 +269,7 @@ $result_tree_text{'char_latin1_latin1_in_refs'} = '*document_root C14
   |index_entry:I{cp,1}
    *line_arg C3
     {spaces_before_argument: }
-    {ä ë ï ö ü ÿ}
+    {normal_text:ä ë ï ö ü ÿ}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 char_latin1_latin1_in_refs.texi:l40
   |EXTRA
@@ -277,7 +277,7 @@ $result_tree_text{'char_latin1_latin1_in_refs'} = '*document_root C14
   |index_entry:I{cp,2}
    *line_arg C3
     {spaces_before_argument: }
-    {Ä Ë Ï Ö Ü}
+    {normal_text:Ä Ë Ï Ö Ü}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 char_latin1_latin1_in_refs.texi:l41
   |EXTRA
@@ -285,7 +285,7 @@ $result_tree_text{'char_latin1_latin1_in_refs'} = '*document_root C14
   |index_entry:I{cp,3}
    *line_arg C3
     {spaces_before_argument: }
-    {é}
+    {normal_text:é}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 char_latin1_latin1_in_refs.texi:l42
   |EXTRA
@@ -293,7 +293,7 @@ $result_tree_text{'char_latin1_latin1_in_refs'} = '*document_root C14
   |index_entry:I{cp,4}
    *line_arg C3
     {spaces_before_argument: }
-    {è}
+    {normal_text:è}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 char_latin1_latin1_in_refs.texi:l43
   |EXTRA
@@ -301,7 +301,7 @@ $result_tree_text{'char_latin1_latin1_in_refs'} = '*document_root C14
   |index_entry:I{cp,5}
    *line_arg C3
     {spaces_before_argument: }
-    {â ê î ô û Â Ê Î Ô Û}
+    {normal_text:â ê î ô û Â Ê Î Ô Û}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 char_latin1_latin1_in_refs.texi:l44
   |EXTRA
@@ -309,7 +309,7 @@ $result_tree_text{'char_latin1_latin1_in_refs'} = '*document_root C14
   |index_entry:I{cp,6}
    *line_arg C3
     {spaces_before_argument: }
-    {ç}
+    {normal_text:ç}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@bye C1

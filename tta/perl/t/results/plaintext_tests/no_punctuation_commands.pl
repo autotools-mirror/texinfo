@@ -14,73 +14,73 @@ $result_tree_text{'no_punctuation_commands'} = '*document_root C1
    {text_before_beginning:\\n}
   *preamble_before_content
   *paragraph C13
-   {Dot.}
+   {normal_text:Dot.}
    *@:
-   { Exclam!}
+   {normal_text: Exclam!}
    *@:
-   { Question?}
+   {normal_text: Question?}
    *@:
-   { Dot.}
+   {normal_text: Dot.}
    *@:
-   {  Exclam!}
+   {normal_text:  Exclam!}
    *@:
-   {  Question?}
+   {normal_text:  Question?}
    *@:
-   {  GAAA.\\n}
+   {normal_text:  GAAA.\\n}
   {empty_line:\\n}
   *paragraph C10
-   {End of lines Dot.}
+   {normal_text:End of lines Dot.}
    *@:
-   {\\n}
-   {Exclam!}
+   {normal_text:\\n}
+   {normal_text:Exclam!}
    *@:
-   {\\n}
-   {Question?}
+   {normal_text:\\n}
+   {normal_text:Question?}
    *@:
-   {\\n}
-   {End.\\n}
+   {normal_text:\\n}
+   {normal_text:End.\\n}
   {empty_line:\\n}
   *paragraph C11
-   {End of lines and spaces\\n}
-   {Dot.}
+   {normal_text:End of lines and spaces\\n}
+   {normal_text:Dot.}
    *@:
-   {\\n}
-   {Exclam!}
+   {normal_text:\\n}
+   {normal_text:Exclam!}
    *@:
-   {\\n}
-   {Question?}
+   {normal_text:\\n}
+   {normal_text:Question?}
    *@:
-   {\\n}
-   {End.\\n}
+   {normal_text:\\n}
+   {normal_text:End.\\n}
   {empty_line:\\n}
   *paragraph C9
-   {With paren.}
+   {normal_text:With paren.}
    *@:
-   {) paren.}
+   {normal_text:) paren.}
    *@:
-   {)  Symb.}
+   {normal_text:)  Symb.}
    *@:
-   {)"\'] Symb.}
+   {normal_text:)"\'] Symb.}
    *@:
-   {)"\']  End.\\n}
+   {normal_text:)"\']  End.\\n}
   {empty_line:\\n}
   *paragraph C7
-   {End of lines paren.}
+   {normal_text:End of lines paren.}
    *@:
-   {)\\n}
-   {Symb.}
+   {normal_text:)\\n}
+   {normal_text:Symb.}
    *@:
-   {)"\']\\n}
-   {End.\\n}
+   {normal_text:)"\']\\n}
+   {normal_text:End.\\n}
   {empty_line:\\n}
   *paragraph C7
-   {End of lines and spaces paren.}
+   {normal_text:End of lines and spaces paren.}
    *@:
-   {)\\n}
-   {Symb.}
+   {normal_text:)\\n}
+   {normal_text:Symb.}
    *@:
-   {)"\']\\n}
-   {End.\\n}
+   {normal_text:)"\']\\n}
+   {normal_text:End.\\n}
 ';
 
 

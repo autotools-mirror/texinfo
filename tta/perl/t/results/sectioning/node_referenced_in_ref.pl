@@ -19,7 +19,7 @@ $result_tree_text{'node_referenced_in_ref'} = '*document_root C4
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C3 l3
@@ -32,17 +32,17 @@ $result_tree_text{'node_referenced_in_ref'} = '*document_root C4
     |EXTRA
     |node_content:A{0|0}
     |normalized:{chap-first-level-node}
-     {chap first level node}
+     {normal_text:chap first level node}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l5
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
@@ -51,8 +51,8 @@ $result_tree_text{'node_referenced_in_ref'} = '*document_root C4
     |EXTRA
     |node_content:A{0|0}
     |normalized:{second-level-node}
-     {second level node}
-   {.\\n}
+     {normal_text:second level node}
+   {normal_text:.\\n}
   {empty_line:\\n}
  *@node C2 l9 {chap first level node}
  |EXTRA
@@ -62,7 +62,7 @@ $result_tree_text{'node_referenced_in_ref'} = '*document_root C4
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap first level node}
+    {normal_text:chap first level node}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l11 {second level node}
@@ -73,7 +73,7 @@ $result_tree_text{'node_referenced_in_ref'} = '*document_root C4
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {second level node}
+    {normal_text:second level node}
     {spaces_after_argument:\\n}
 ';
 

@@ -20,7 +20,7 @@ $result_tree_text{'test_new_node_empty_ref'} = '*document_root C9
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l1 {top}
  |EXTRA
@@ -29,7 +29,7 @@ $result_tree_text{'test_new_node_empty_ref'} = '*document_root C9
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l3 {aa  g}
@@ -41,8 +41,8 @@ $result_tree_text{'test_new_node_empty_ref'} = '*document_root C9
   *arguments_line C1
    *line_arg C4
     {spaces_before_argument: }
-    {aa }
-    { g}
+    {normal_text:aa }
+    {normal_text: g}
     {spaces_after_argument:\\n}
  *@chapter C2 l3 {aa @ref{ , , , } g}
  |EXTRA
@@ -52,7 +52,7 @@ $result_tree_text{'test_new_node_empty_ref'} = '*document_root C9
   *arguments_line C1
    *line_arg C5
     {spaces_before_argument: }
-    {aa }
+    {normal_text:aa }
     *@ref C4 l3
      *brace_arg C1
       {spaces_before_argument: }
@@ -62,7 +62,7 @@ $result_tree_text{'test_new_node_empty_ref'} = '*document_root C9
       {spaces_before_argument: }
      *brace_arg C1
       {spaces_before_argument: }
-    { g}
+    {normal_text: g}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l5 {b}
@@ -74,7 +74,7 @@ $result_tree_text{'test_new_node_empty_ref'} = '*document_root C9
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {b}
+    {normal_text:b}
     {spaces_after_argument: \\n}
  *@section C2 l5 {b @ref{}}
  |EXTRA
@@ -84,7 +84,7 @@ $result_tree_text{'test_new_node_empty_ref'} = '*document_root C9
   *arguments_line C1
    *line_arg C4
     {spaces_before_argument: }
-    {b }
+    {normal_text:b }
     *@ref C1 l5
      *brace_arg
     {spaces_after_argument:\\n}
@@ -98,8 +98,8 @@ $result_tree_text{'test_new_node_empty_ref'} = '*document_root C9
   *arguments_line C1
    *line_arg C4
     {spaces_before_argument: }
-    {}
-    { [+1+]}
+    {normal_text:}
+    {normal_text: [+1+]}
     {spaces_after_argument:\\n}
  *@subsection C2 l7 {@ref}
  |EXTRA

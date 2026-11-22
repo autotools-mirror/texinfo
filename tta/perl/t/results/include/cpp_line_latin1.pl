@@ -21,7 +21,7 @@ $result_tree_text{'cpp_line_latin1'} = '*document_root C5
    |text_arg:{ISO-8859-1}
     *line_arg C3
      {spaces_before_argument: }
-     {ISO-8859-1}
+     {normal_text:ISO-8859-1}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *@node C1 cpp_line_latin1.texi:l5 {Top}
@@ -32,7 +32,7 @@ $result_tree_text{'cpp_line_latin1'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 cpp_line_latin1.texi:l6
  |EXTRA
@@ -50,7 +50,7 @@ $result_tree_text{'cpp_line_latin1'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   >SOURCEMARKS
@@ -59,7 +59,7 @@ $result_tree_text{'cpp_line_latin1'} = '*document_root C5
   {empty_line:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {aaa\\n}
+   {normal_text:aaa\\n}
   {empty_line:\\n}
  *@bye C1
   *line_arg C1

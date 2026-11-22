@@ -476,21 +476,25 @@ sub _convert_def_line($$) {
   if (defined($parsed_definition_category)) {
     my $converted_element = Texinfo::TreeElement::new(
        {'contents' => [$parsed_definition_category,
-                       Texinfo::TreeElement::new({'text' => ': '})]});
+                       Texinfo::TreeElement::new({'text' => ': ',
+                                                  'type' => 'normal_text'})]});
     my $contents = $converted_element->{'contents'};
     if (defined($type_element)) {
       push @$contents, ($type_element,
-          Texinfo::TreeElement::new({'text' => ' '}));
+          Texinfo::TreeElement::new({'text' => ' ',
+                                     'type' => 'normal_text'}));
     }
     if (defined($name_element)) {
       push @$contents, $name_element;
     }
 
     if (defined($arguments)) {
-      push @$contents, (Texinfo::TreeElement::new({'text' => ' '}),
+      push @$contents, (Texinfo::TreeElement::new({'text' => ' ',
+                                                   'type' => 'normal_text'}),
                         $arguments);
     }
-    push @$contents, Texinfo::TreeElement::new({'text' => "\n"});
+    push @$contents, Texinfo::TreeElement::new({'text' => "\n",
+                                                'type' => 'normal_text'});
     $options->{'_code_state'}++;
     $result = _convert($options, $converted_element);
     $options->{'_code_state'}--;

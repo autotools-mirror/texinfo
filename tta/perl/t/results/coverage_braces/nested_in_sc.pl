@@ -16,42 +16,42 @@ $result_tree_text{'nested_in_sc'} = '*document_root C1
     *brace_container C1
      *@sc C1 l1
       *brace_container C14
-       {aaa }
+       {normal_text:aaa }
        *@~ C1 l1
         *following_arg C1
-         {n}
-       { }
+         {normal_text:n}
+       {normal_text: }
        *@aa C1 l1
         *brace_container
-       { }
+       {normal_text: }
        *@TeX C1 l1
         *brace_container
-       { }
+       {normal_text: }
        *@~ C1 l1
         *brace_container C1
          *@aa C1 l1
           *brace_container
-       { }
+       {normal_text: }
        *@footnote C1 l1
        |EXTRA
        |global_command_number:{1}
         *brace_command_context C1
          *paragraph C1
-          {In footnote}
-       {, }
+          {normal_text:In footnote}
+       {normal_text:, }
        *@abbr C2 l1
         *brace_arg C1
-         {ABr}
+         {normal_text:ABr}
         *brace_arg C2
          {spaces_before_argument: }
-         {expl}
-       {, \\n}
+         {normal_text:expl}
+       {normal_text:, \\n}
        *@verb C1 l2
         *brace_container C3
          {verb_delimiter::}
          {raw:in verb}
          {verb_delimiter::}
-   {\\n}
+   {normal_text:\\n}
 ';
 
 

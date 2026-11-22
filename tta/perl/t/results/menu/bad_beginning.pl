@@ -17,20 +17,20 @@ $result_tree_text{'bad_beginning'} = '*document_root C1
      {spaces_before_argument:\\n}
    *menu_comment C1
     *preformatted C6
-     {*   \\n}
-     {*\\n}
-     {*something::\\n}
-     {*}
+     {normal_text:*   \\n}
+     {normal_text:*\\n}
+     {normal_text:*something::\\n}
+     {normal_text:*}
      *@code C1 l5
       *brace_container C1
-       {in code}
-     {::\\n}
+       {normal_text:in code}
+     {normal_text:::\\n}
    *@end C1 l6
    |EXTRA
    |text_arg:{menu}
     *line_arg C2
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
 ';
 
 

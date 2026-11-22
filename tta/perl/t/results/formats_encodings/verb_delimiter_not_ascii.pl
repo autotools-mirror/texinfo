@@ -19,7 +19,7 @@ $result_tree_text{'verb_delimiter_not_ascii'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l2 {top}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'verb_delimiter_not_ascii'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l4 {chap}
@@ -39,7 +39,7 @@ $result_tree_text{'verb_delimiter_not_ascii'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
  *@chapter C2 l5 {Chapter}
  |EXTRA
@@ -49,7 +49,7 @@ $result_tree_text{'verb_delimiter_not_ascii'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chapter}
+    {normal_text:Chapter}
     {spaces_after_argument:\\n}
   *paragraph C2
    *@verb C1 l6
@@ -57,7 +57,7 @@ $result_tree_text{'verb_delimiter_not_ascii'} = '*document_root C5
      {verb_delimiter:ê}
      {raw: some text }
      {verb_delimiter:ê}
-   {\\n}
+   {normal_text:\\n}
 ';
 
 

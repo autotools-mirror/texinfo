@@ -41,7 +41,7 @@ $result_tree_text{'empty_nodes_with_commands'} = '*document_root C5
     {spaces_before_argument: }
     *@asis C1 l6
      *brace_container C1
-      { }
+      {normal_text: }
     {spaces_after_argument:\\n}
 ';
 

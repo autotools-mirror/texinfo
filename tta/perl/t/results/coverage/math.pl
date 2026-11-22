@@ -12,78 +12,78 @@ $result_tree_text{'math'} = '*document_root C1
  *before_node_section C11
   *preamble_before_content
   *paragraph C3
-   {Simple math\\n}
+   {normal_text:Simple math\\n}
    *@math C1 l2
     *brace_arg C4
-     {--}
+     {normal_text:--}
      *balanced_braces C1 l2
-      {{x^i}}
-     {\\over}
+      {normal_text:{x^i}}
+     {normal_text:\\over}
      *balanced_braces C1 l2
-      {{\\tan y}}
-   {\\n}
+      {normal_text:{\\tan y}}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C5
-   {Math with }
+   {normal_text:Math with }
    *@@
-   {-command\\n}
+   {normal_text:-command\\n}
    *@math C1 l5
     *brace_arg C5
      *@code C1 l5
       *brace_container C1
-       {math code}
-     { a < b \\sum}
+       {normal_text:math code}
+     {normal_text: a < b \\sum}
      *@sub C1 l5
       *brace_container C1
-       {i}
-     { q}
+       {normal_text:i}
+     {normal_text: q}
      *@sup C1 l5
       *brace_container C1
-       {2}
-   {\\n}
+       {normal_text:2}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C3
-   {Complex\\n}
+   {normal_text:Complex\\n}
    *@math C1 l8
     *brace_arg C8
      {spaces_before_argument: }
-     {\\underline}
+     {normal_text:\\underline}
      *balanced_braces C3 l8
-      {{}
+      {normal_text:{}
       *@code C1 l8
        *brace_container C2
-        {math \\hbox}
+        {normal_text:math \\hbox}
         *balanced_braces C1 l8
-         {{ code }}
-      {}}
-     { }
+         {normal_text:{ code }}
+      {normal_text:}}
+     {normal_text: }
      *@\\
-     {i \\sum_}
+     {normal_text:i \\sum_}
      *balanced_braces C1 l8
-      {{i}}
+      {normal_text:{i}}
      *balanced_braces C3 l8
-      {{\\underline}
+      {normal_text:{\\underline}
       *balanced_braces C1 l8
-       {{f}}
-      {}}
-   {\\n}
+       {normal_text:{f}}
+      {normal_text:}}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C4
    *@@
-   {\\ outside of math\\n}
+   {normal_text:\\ outside of math\\n}
    *@\\
-   {\\n}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C5
-   {The 3}
+   {normal_text:The 3}
    *@sup C1 l13
     *brace_container C1
-     {rd}
-   {is the I}
+     {normal_text:rd}
+   {normal_text:is the I}
    *@sub C1 l13
     *brace_container C1
-     {r}
-   {.\\n}
+     {normal_text:r}
+   {normal_text:.\\n}
   {empty_line:\\n}
 ';
 

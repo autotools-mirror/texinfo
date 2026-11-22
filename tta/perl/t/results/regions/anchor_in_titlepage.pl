@@ -23,14 +23,14 @@ $result_tree_text{'anchor_in_titlepage'} = '*document_root C5
      *brace_arg C1
      |EXTRA
      |element_region:{titlepage}
-      {in titlepage}
+      {normal_text:in titlepage}
     {spaces_after_close_brace:\\n}
     *@end C1 l4
     |EXTRA
     |text_arg:{titlepage}
      *line_arg C3
       {spaces_before_argument: }
-      {titlepage}
+      {normal_text:titlepage}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
  *@top C1 l6 {top}
@@ -40,7 +40,7 @@ $result_tree_text{'anchor_in_titlepage'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
  *@node C2 l7 {Top}
  |EXTRA
@@ -50,7 +50,7 @@ $result_tree_text{'anchor_in_titlepage'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@chapter C1 l9 {Chapter}
@@ -61,7 +61,7 @@ $result_tree_text{'anchor_in_titlepage'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chapter}
+    {normal_text:Chapter}
     {spaces_after_argument:\\n}
  *@node C3 l10 {nchap}
  |EXTRA
@@ -71,7 +71,7 @@ $result_tree_text{'anchor_in_titlepage'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {nchap}
+    {normal_text:nchap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
@@ -80,8 +80,8 @@ $result_tree_text{'anchor_in_titlepage'} = '*document_root C5
     |EXTRA
     |node_content:A{0|0}
     |normalized:{in-titlepage}
-     {in titlepage}
-   {.\\n}
+     {normal_text:in titlepage}
+   {normal_text:.\\n}
 ';
 
 

@@ -24,7 +24,7 @@ $result_tree_text{'last_argument_with_braces'} = '*document_root C1
     |text_arg:{linemacro}
      *line_arg C3
       {spaces_before_argument: }
-      {linemacro}
+      {normal_text:linemacro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *@defblock C10 l6
@@ -48,19 +48,19 @@ $result_tree_text{'last_argument_with_braces'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {my}
+       {normal_text:my}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {foo}
+       {normal_text:foo}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {f}
+       {normal_text:f}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {r}
+       {normal_text:r}
      {spaces_after_argument:\\n}
    *@defline C1 l7:@defbuiltin
    |EXTRA
@@ -70,35 +70,35 @@ $result_tree_text{'last_argument_with_braces'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {expand}
+       {normal_text:expand}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {Builtin}
+       {normal_text:Builtin}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {and}
+       {normal_text:and}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {a}
+       {normal_text:a}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {last}
+       {normal_text:last}
      {spaces: }
      *def_arg C1
       *bracketed_arg l7:@defbuiltin
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {arg}
+       {normal_text:arg}
      *def_arg C1
       *bracketed_arg C1 l7:@defbuiltin
       >SOURCEMARKS
       >linemacro_expansion<end;1>
-       {ument}
+       {normal_text:ument}
      {spaces_after_argument:\\n}
    *def_item C1
     {empty_line:\\n}
@@ -119,19 +119,19 @@ $result_tree_text{'last_argument_with_braces'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {my}
+       {normal_text:my}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {foo}
+       {normal_text:foo}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {f}
+       {normal_text:f}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {r}
+       {normal_text:r}
      {spaces_after_argument:\\n}
    *@defline C1 l9:@defbuiltin
    |EXTRA
@@ -141,15 +141,15 @@ $result_tree_text{'last_argument_with_braces'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {expand}
+       {normal_text:expand}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {Builtin}
+       {normal_text:Builtin}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {and}
+       {normal_text:and}
      {spaces: }
      *def_arg C1
       *bracketed_arg l9:@defbuiltin
@@ -178,19 +178,19 @@ $result_tree_text{'last_argument_with_braces'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {my}
+       {normal_text:my}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {foo}
+       {normal_text:foo}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {f}
+       {normal_text:f}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {r}
+       {normal_text:r}
      {spaces_after_argument:\\n}
    *@defline C1 l11:@defbuiltin
    |EXTRA
@@ -200,40 +200,40 @@ $result_tree_text{'last_argument_with_braces'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {expand}
+       {normal_text:expand}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {Builtin}
+       {normal_text:Builtin}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {and}
+       {normal_text:and}
      {spaces: }
      *def_arg C1
       *bracketed_arg C1 l11:@defbuiltin
-       {second arg}
+       {normal_text:second arg}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {remaining}
+       {normal_text:remaining}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {on}
+       {normal_text:on}
      {spaces: }
      *def_arg C1
       *bracketed_arg C1 l11:@defbuiltin
       >SOURCEMARKS
       >linemacro_expansion<end;3>
-       {line}
+       {normal_text:line}
      {spaces_after_argument:\\n}
    *@end C1 l12
    |EXTRA
    |text_arg:{defblock}
     *line_arg C3
      {spaces_before_argument: }
-     {defblock}
+     {normal_text:defblock}
      {spaces_after_argument:\\n}
 ';
 

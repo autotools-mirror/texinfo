@@ -20,7 +20,7 @@ $result_tree_text{'master_menu_fr'} = '*document_root C7
    |text_arg:{fr}
     *line_arg C3
      {spaces_before_argument: }
-     {fr}
+     {normal_text:fr}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *@node C1 no_master_menu_fr.texi:l5 {Top}
@@ -31,7 +31,7 @@ $result_tree_text{'master_menu_fr'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C4 no_master_menu_fr.texi:l6 {max}
  |EXTRA
@@ -40,7 +40,7 @@ $result_tree_text{'master_menu_fr'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {max}
+    {normal_text:max}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C5 no_master_menu_fr.texi:l8
@@ -53,11 +53,11 @@ $result_tree_text{'master_menu_fr'} = '*document_root C7
     |EXTRA
     |node_content:A{0|0}
     |normalized:{chap}
-     {chap}
+     {normal_text:chap}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_comment C1
     *preformatted C1
      {after_menu_description_line:\\n}
@@ -67,21 +67,21 @@ $result_tree_text{'master_menu_fr'} = '*document_root C7
       {spaces_before_argument:\\n}
     *menu_comment C1
      *preformatted C12
-      { --- Liste d}
+      {normal_text: --- Liste d}
       *@\' C1
        *following_arg C1
-        {e}
-      {taill}
+        {normal_text:e}
+      {normal_text:taill}
       *@\' C1
        *following_arg C1
-        {e}
-      {e des n}
+        {normal_text:e}
+      {normal_text:e des n}
       *@oe C1
        *brace_container
-      {uds ---}
-      {\\n}
+      {normal_text:uds ---}
+      {normal_text:\\n}
       {empty_line:\\n}
-      {chap}
+      {normal_text:chap}
       {empty_line:\\n}
       {empty_line:\\n}
     *menu_entry C4
@@ -90,24 +90,24 @@ $result_tree_text{'master_menu_fr'} = '*document_root C7
      |EXTRA
      |node_content:A{0|0}
      |normalized:{section}
-      {section}
+      {normal_text:section}
      {menu_entry_separator:::}
      *menu_entry_description C1
       *preformatted C1
-       {\\n}
+       {normal_text:\\n}
     *@end C1
     |EXTRA
     |text_arg:{detailmenu}
      *line_arg C3
       {spaces_before_argument: }
-      {detailmenu}
+      {normal_text:detailmenu}
       {spaces_after_argument:\\n}
    *@end C1 no_master_menu_fr.texi:l10
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 no_master_menu_fr.texi:l12 {chap}
@@ -118,7 +118,7 @@ $result_tree_text{'master_menu_fr'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
  *@chapter C4 no_master_menu_fr.texi:l13 {chap}
  |EXTRA
@@ -128,7 +128,7 @@ $result_tree_text{'master_menu_fr'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C3 no_master_menu_fr.texi:l15
@@ -141,17 +141,17 @@ $result_tree_text{'master_menu_fr'} = '*document_root C7
     |EXTRA
     |node_content:A{0|0}
     |normalized:{section}
-     {section}
+     {normal_text:section}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 no_master_menu_fr.texi:l17
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 no_master_menu_fr.texi:l19 {section}
@@ -162,7 +162,7 @@ $result_tree_text{'master_menu_fr'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {section}
+    {normal_text:section}
     {spaces_after_argument:\\n}
  *@section C1 no_master_menu_fr.texi:l20 {sec}
  |EXTRA
@@ -172,7 +172,7 @@ $result_tree_text{'master_menu_fr'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {sec}
+    {normal_text:sec}
     {spaces_after_argument:\\n}
 ';
 

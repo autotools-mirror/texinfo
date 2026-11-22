@@ -23,7 +23,7 @@ $result_tree_text{'all_empty_def'} = '*document_root C1
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
-     {deffn}
+     {normal_text:deffn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@defvr C2 l4
@@ -38,7 +38,7 @@ $result_tree_text{'all_empty_def'} = '*document_root C1
    |text_arg:{defvr}
     *line_arg C3
      {spaces_before_argument: }
-     {defvr}
+     {normal_text:defvr}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypefn C2 l7
@@ -53,7 +53,7 @@ $result_tree_text{'all_empty_def'} = '*document_root C1
    |text_arg:{deftypefn}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypefn}
+     {normal_text:deftypefn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypeop C2 l10
@@ -68,7 +68,7 @@ $result_tree_text{'all_empty_def'} = '*document_root C1
    |text_arg:{deftypeop}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypeop}
+     {normal_text:deftypeop}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypevr C2 l13
@@ -83,7 +83,7 @@ $result_tree_text{'all_empty_def'} = '*document_root C1
    |text_arg:{deftypevr}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypevr}
+     {normal_text:deftypevr}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@defcv C2 l16
@@ -98,7 +98,7 @@ $result_tree_text{'all_empty_def'} = '*document_root C1
    |text_arg:{defcv}
     *line_arg C3
      {spaces_before_argument: }
-     {defcv}
+     {normal_text:defcv}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypecv C2 l19
@@ -113,7 +113,7 @@ $result_tree_text{'all_empty_def'} = '*document_root C1
    |text_arg:{deftypecv}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypecv}
+     {normal_text:deftypecv}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@defop C2 l22
@@ -128,7 +128,7 @@ $result_tree_text{'all_empty_def'} = '*document_root C1
    |text_arg:{defop}
     *line_arg C3
      {spaces_before_argument: }
-     {defop}
+     {normal_text:defop}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftp C2 l25
@@ -143,7 +143,7 @@ $result_tree_text{'all_empty_def'} = '*document_root C1
    |text_arg:{deftp}
     *line_arg C3
      {spaces_before_argument: }
-     {deftp}
+     {normal_text:deftp}
      {spaces_after_argument:\\n}
 ';
 

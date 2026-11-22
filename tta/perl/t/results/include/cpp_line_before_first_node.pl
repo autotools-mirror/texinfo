@@ -20,7 +20,7 @@ $result_tree_text{'cpp_line_before_first_node'} = '*document_root C2
    {empty_line:\\n}
    {empty_line:\\n}
   *paragraph C1
-   {aaa\\n}
+   {normal_text:aaa\\n}
   {empty_line:\\n}
  *@bye C1
   *line_arg C1

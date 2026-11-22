@@ -23,11 +23,11 @@ $result_tree_text{'begin_conditional_in_linemacro'} = '*document_root C1
     |text_arg:{linemacro}
      *line_arg C3
       {spaces_before_argument: }
-      {linemacro}
+      {normal_text:linemacro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C1
-   {b \\n}
+   {normal_text:b \\n}
    >SOURCEMARKS
    >linemacro_expansion<start;1>
     >*linemacro_call@lm C1
@@ -39,7 +39,7 @@ $result_tree_text{'begin_conditional_in_linemacro'} = '*document_root C1
      >*arguments_line C1
       >*block_line_arg C3
        >{spaces_before_argument: }
-       >{a}
+       >{normal_text:a}
        >>SOURCEMARKS
        >>linemacro_expansion<end;1><p:1>
        >{spaces_after_argument:\\n}
@@ -49,11 +49,11 @@ $result_tree_text{'begin_conditional_in_linemacro'} = '*document_root C1
      >|text_arg:{ifset}
       >*line_arg C3
        >{spaces_before_argument: }
-       >{ifset}
+       >{normal_text:ifset}
        >{spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
-   {b \\n}
+   {normal_text:b \\n}
    >SOURCEMARKS
    >linemacro_expansion<start;2>
     >*linemacro_call@lm C1
@@ -65,11 +65,11 @@ $result_tree_text{'begin_conditional_in_linemacro'} = '*document_root C1
      >*arguments_line C1
       >*block_line_arg C3
        >{spaces_before_argument: }
-       >{a}
+       >{normal_text:a}
        >>SOURCEMARKS
        >>linemacro_expansion<end;2><p:1>
        >{spaces_after_argument:\\n}
-   {in ifclear\\n}
+   {normal_text:in ifclear\\n}
    >SOURCEMARKS
    >expanded_conditional_command<end;1><p:11>
     >*@end C1 l13
@@ -77,7 +77,7 @@ $result_tree_text{'begin_conditional_in_linemacro'} = '*document_root C1
     >|text_arg:{ifclear}
      >*line_arg C3
       >{spaces_before_argument: }
-      >{ifclear}
+      >{normal_text:ifclear}
       >{spaces_after_argument:\\n}
 ';
 

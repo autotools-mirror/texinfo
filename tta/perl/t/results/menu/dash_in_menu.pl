@@ -20,31 +20,31 @@ $result_tree_text{'dash_in_menu'} = '*document_root C1
    *menu_entry C6 l3
     {menu_entry_leading_text:* }
     *menu_entry_name C1
-     {entry---in}
+     {normal_text:entry---in}
     {menu_entry_separator:: }
     *menu_entry_node C4
     |EXTRA
     |manual_content:A{1|1}
     |node_content:A{3|3}
     |normalized:{n_002d_002d_002dode}
-     {(}
-     {manual}
-     {)}
-     {n---ode}
+     {normal_text:(}
+     {normal_text:manual}
+     {normal_text:)}
+     {normal_text:n---ode}
     {menu_entry_separator:.         }
     *menu_entry_description C1
      *preformatted C1
-      {description --- in.\\n}
+      {normal_text:description --- in.\\n}
    *menu_comment C1
     *preformatted C2
      {after_menu_description_line:\\n}
-     {comment --- in.\\n}
+     {normal_text:comment --- in.\\n}
    *@end C1 l6
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
 ';
 

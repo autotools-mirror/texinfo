@@ -19,7 +19,7 @@ $result_tree_text{'detailmenu_unknown_node'} = '*document_root C2
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C3 l3
@@ -38,24 +38,24 @@ $result_tree_text{'detailmenu_unknown_node'} = '*document_root C2
      |EXTRA
      |node_content:A{0|0}
      |normalized:{unknown}
-      {unknown}
+      {normal_text:unknown}
      {menu_entry_separator:::}
      *menu_entry_description C1
       *preformatted C1
-       {\\n}
+       {normal_text:\\n}
     *@end C1 l6
     |EXTRA
     |text_arg:{detailmenu}
      *line_arg C3
       {spaces_before_argument: }
-      {detailmenu}
+      {normal_text:detailmenu}
       {spaces_after_argument:\\n}
    *@end C1 l7
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
 ';
 

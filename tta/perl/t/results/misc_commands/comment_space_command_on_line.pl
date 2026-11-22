@@ -14,7 +14,7 @@ $result_tree_text{'comment_space_command_on_line'} = '*document_root C6
    *@settitle C1 l1
     *line_arg C4
      {spaces_before_argument: }
-     {Settitle }
+     {normal_text:Settitle }
      *@ 
      *@c C1
       *line_arg C3
@@ -30,7 +30,7 @@ $result_tree_text{'comment_space_command_on_line'} = '*document_root C6
   *arguments_line C1
    *line_arg C4
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:  }
     *@comment C1
      *line_arg C3
@@ -44,7 +44,7 @@ $result_tree_text{'comment_space_command_on_line'} = '*document_root C6
   *arguments_line C1
    *line_arg C5
     {spaces_before_argument: }
-    {top element}
+    {normal_text:top element}
     *@ 
     {spaces_after_argument: }
     *@comment C1
@@ -62,7 +62,7 @@ $result_tree_text{'comment_space_command_on_line'} = '*document_root C6
   *arguments_line C1
    *line_arg C4
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument: }
     *@comment C1
      *line_arg C3
@@ -77,7 +77,7 @@ $result_tree_text{'comment_space_command_on_line'} = '*document_root C6
   *arguments_line C1
    *line_arg C5
     {spaces_before_argument: }
-    {Chapter}
+    {normal_text:Chapter}
     *@ 
     {spaces_after_argument: }
     *@comment C1
@@ -92,7 +92,7 @@ $result_tree_text{'comment_space_command_on_line'} = '*document_root C6
   |misc_args:A{on}
    *line_arg C4
     {spaces_before_argument: }
-    {on}
+    {normal_text:on}
     {spaces_after_argument: }
     *@c C1
      *line_arg C3
@@ -106,7 +106,7 @@ $result_tree_text{'comment_space_command_on_line'} = '*document_root C6
   |misc_args:A{off}
    *line_arg C3
     {spaces_before_argument: }
-    {off}
+    {normal_text:off}
     *@c C1
      *line_arg C3
       {spaces_before_argument: }
@@ -119,7 +119,7 @@ $result_tree_text{'comment_space_command_on_line'} = '*document_root C6
   |index_entry:I{cp,1}
    *line_arg C5
     {spaces_before_argument: }
-    {index entry }
+    {normal_text:index entry }
     *@ 
     {spaces_after_argument: }
     *@c C1
@@ -134,7 +134,7 @@ $result_tree_text{'comment_space_command_on_line'} = '*document_root C6
   |heading_number:{1}
    *line_arg C5
     {spaces_before_argument: }
-    {Heading }
+    {normal_text:Heading }
     *@ 
     {spaces_after_argument:    }
     *@c C1
@@ -149,7 +149,7 @@ $result_tree_text{'comment_space_command_on_line'} = '*document_root C6
   |misc_args:A{cp}
    *line_arg C4
     {spaces_before_argument: }
-    {cp}
+    {normal_text:cp}
     {spaces_after_argument: }
     *@c C1
      *line_arg C3
@@ -167,19 +167,19 @@ $result_tree_text{'comment_space_command_on_line'} = '*document_root C6
    *arguments_line C2
     *block_line_arg C2
      {spaces_before_argument: }
-     {Text}
+     {normal_text:Text}
     *block_line_arg C3
      {spaces_before_argument: }
-     {label}
+     {normal_text:label}
      {spaces_after_argument:\\n}
    *paragraph C1
-    {float\\n}
+    {normal_text:float\\n}
    *@end C1 l21
    |EXTRA
    |text_arg:{float}
     *line_arg C4
      {spaces_before_argument: }
-     {float}
+     {normal_text:float}
      {spaces_after_argument: }
      *@c C1
       *line_arg C3
@@ -193,7 +193,7 @@ $result_tree_text{'comment_space_command_on_line'} = '*document_root C6
   |global_command_number:{1}
    *line_arg C4
     {spaces_before_argument: }
-    {Text }
+    {normal_text:Text }
     *@ 
     *@c C1
      *line_arg C3

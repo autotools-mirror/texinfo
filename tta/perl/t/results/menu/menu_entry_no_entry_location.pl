@@ -20,47 +20,47 @@ $result_tree_text{'menu_entry_no_entry_location'} = '*document_root C1
     *menu_entry_node C3
     |EXTRA
     |manual_content:A{1|1}
-     {(}
-     {manual}
-     {)}
+     {normal_text:(}
+     {normal_text:manual}
+     {normal_text:)}
     {menu_entry_separator::: }
     *menu_entry_description C1
      *preformatted C2
-      {begin description\\n}
-      {* not an entry ?\\n}
+      {normal_text:begin description\\n}
+      {normal_text:* not an entry ?\\n}
    *menu_entry C4 l4
     {menu_entry_leading_text:* }
     *menu_entry_node C3
     |EXTRA
     |manual_content:A{1|1}
-     {(}
-     {manual}
-     {)}
+     {normal_text:(}
+     {normal_text:manual}
+     {normal_text:)}
     {menu_entry_separator::: }
     *menu_entry_description C1
      *preformatted C4
-      {an entry\\n}
-      {  in description\\n}
-      {* and here ?\\n}
-      {with text.\\n}
+      {normal_text:an entry\\n}
+      {normal_text:  in description\\n}
+      {normal_text:* and here ?\\n}
+      {normal_text:with text.\\n}
    *menu_entry C4 l8
     {menu_entry_leading_text:* }
     *menu_entry_node C3
     |EXTRA
     |manual_content:A{1|1}
-     {(}
-     {last manual}
-     {)}
+     {normal_text:(}
+     {normal_text:last manual}
+     {normal_text:)}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l9
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
 ';
 

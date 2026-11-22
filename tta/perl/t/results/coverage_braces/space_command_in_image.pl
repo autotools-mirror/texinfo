@@ -15,17 +15,17 @@ $result_tree_text{'space_command_in_image'} = '*document_root C1
   |EXTRA
   |input_encoding_name:{utf-8}
    *brace_arg C1
-    {f--ile}
+    {normal_text:f--ile}
    *brace_arg
    *brace_arg
    *brace_arg C1
     *@ 
-  { }
+  {normal_text: }
   *@image C4 l1
   |EXTRA
   |input_encoding_name:{utf-8}
    *brace_arg C1
-    {f--ile}
+    {normal_text:f--ile}
    *brace_arg
    *brace_arg
    *brace_arg C1

@@ -14,19 +14,19 @@ $result_tree_text{'email_possibilities'} = '*document_root C1
   *paragraph C6
    *@email C2 l1
     *brace_arg C1
-     {--a}
+     {normal_text:--a}
     *brace_arg C1
-     {--b}
-   {\\n}
+     {normal_text:--b}
+   {normal_text:\\n}
    *@email C2 l2
     *brace_arg
     *brace_arg C1
-     {--b}
-   {\\n}
+     {normal_text:--b}
+   {normal_text:\\n}
    *@email C1 l3
     *brace_arg C1
-     {--a}
-   {\\n}
+     {normal_text:--a}
+   {normal_text:\\n}
 ';
 
 

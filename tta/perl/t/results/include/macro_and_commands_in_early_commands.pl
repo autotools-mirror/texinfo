@@ -23,7 +23,7 @@ $result_tree_text{'macro_and_commands_in_early_commands'} = '*document_root C4
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *preamble_before_content C8
@@ -36,11 +36,11 @@ $result_tree_text{'macro_and_commands_in_early_commands'} = '*document_root C4
      >macro_expansion<start;1><p:1>
       >*macro_call@begin-file C1
        >*brace_arg
-     {macro_i--n_pass}
+     {normal_text:macro_i--n_pass}
      *@@
      >SOURCEMARKS
      >macro_expansion<end;1>
-     {texi_commands.info}
+     {normal_text:texi_commands.info}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@macro C3 l7
@@ -55,7 +55,7 @@ $result_tree_text{'macro_and_commands_in_early_commands'} = '*document_root C4
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@documentencoding C1 l11
@@ -69,7 +69,7 @@ $result_tree_text{'macro_and_commands_in_early_commands'} = '*document_root C4
      >macro_expansion<start;2><p:1>
       >*macro_call@latin1 C1
        >*brace_arg
-     {ISO-8859-1}
+     {normal_text:ISO-8859-1}
      *@@
      >SOURCEMARKS
      >macro_expansion<end;2>
@@ -88,7 +88,7 @@ $result_tree_text{'macro_and_commands_in_early_commands'} = '*document_root C4
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
  *@node C1 l18 {Top}
@@ -99,7 +99,7 @@ $result_tree_text{'macro_and_commands_in_early_commands'} = '*document_root C4
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l19 {top}
  |EXTRA
@@ -108,7 +108,7 @@ $result_tree_text{'macro_and_commands_in_early_commands'} = '*document_root C4
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C8 l21 {chap}
@@ -119,7 +119,7 @@ $result_tree_text{'macro_and_commands_in_early_commands'} = '*document_root C4
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   >SOURCEMARKS
@@ -132,7 +132,7 @@ $result_tree_text{'macro_and_commands_in_early_commands'} = '*document_root C4
      >>SOURCEMARKS
      >>macro_expansion<start;3><p:1>
       >>*macro_call@multiinclude
-     >{macro_included.texi}
+     >{normal_text:macro_included.texi}
      >{spaces_after_argument:\\n}
   *@macro C3 macro_included.texi:l1
   |EXTRA
@@ -146,9 +146,9 @@ $result_tree_text{'macro_and_commands_in_early_commands'} = '*document_root C4
    >|text_arg:{inc_@f--ile.texi}
     >*line_arg C5
      >{spaces_before_argument: }
-     >{inc_}
+     >{normal_text:inc_}
      >*@@
-     >{f--ile.texi}
+     >{normal_text:f--ile.texi}
      >>SOURCEMARKS
      >>macro_expansion<end;3><p:11>
      >{spaces_after_argument:\\n}
@@ -160,15 +160,15 @@ $result_tree_text{'macro_and_commands_in_early_commands'} = '*document_root C4
    |text_arg:{macro}
     *line_arg C3
      {spaces_before_argument: }
-     {macro}
+     {normal_text:macro}
      {spaces_after_argument:\\n}
   *paragraph C1
-   {In included file.\\n}
+   {normal_text:In included file.\\n}
    >SOURCEMARKS
    >include<end;2><p:18>
   {empty_line:\\n}
   *paragraph C1
-   {in themacro\\n}
+   {normal_text:in themacro\\n}
    >SOURCEMARKS
    >macro_expansion<start;4>
     >*macro_call@themacro C1
@@ -181,9 +181,9 @@ $result_tree_text{'macro_and_commands_in_early_commands'} = '*document_root C4
   |text_arg:{inc_@f--ile.texi}
    *line_arg C5
     {spaces_before_argument: }
-    {inc_}
+    {normal_text:inc_}
     *@@
-    {f--ile.texi}
+    {normal_text:f--ile.texi}
     {spaces_after_argument:\\n}
 ';
 

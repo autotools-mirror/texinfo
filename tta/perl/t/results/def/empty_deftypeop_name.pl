@@ -20,31 +20,31 @@ $result_tree_text{'empty_deftypeop_name'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C2
-       {Command}
+       {normal_text:Command}
        *@code C1 l1
         *brace_container C1
-         {com}
+         {normal_text:com}
      {spaces: }
      *def_class C1
       *bracketed_arg C2 l1
-       {Window}
+       {normal_text:Window}
        *@code C1 l1
         *brace_container C1
-         {int}
+         {normal_text:int}
      {spaces: }
      *def_type C1
       *def_line_arg C2
-       {expose}
+       {normal_text:expose}
        *@var C1 l1
         *brace_container C1
-         {exp}
+         {normal_text:exp}
      {spaces_after_argument:\\n}
    *@end C1 l2
    |EXTRA
    |text_arg:{deftypeop}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypeop}
+     {normal_text:deftypeop}
      {spaces_after_argument:\\n}
 ';
 

@@ -16,12 +16,12 @@ $result_tree_text{'wrong_synindex'} = '*document_root C1
    |misc_args:A{aaa}
     *line_arg C3
      {spaces_before_argument: }
-     {aaa}
+     {normal_text:aaa}
      {spaces_after_argument:\\n}
    *@synindex C1 l2
     *line_arg C2
      {spaces_before_argument: }
-     {aaa aaa}
+     {normal_text:aaa aaa}
 ';
 
 

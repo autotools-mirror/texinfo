@@ -15,14 +15,14 @@ $result_tree_text{'empty_quotation_with_arg_followed_by_quotation'} = '*document
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     {something}
+     {normal_text:something}
      {spaces_after_argument:\\n}
    *@end C1 l2
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }
-     {quotation}
+     {normal_text:quotation}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@quotation C3 l4
@@ -30,13 +30,13 @@ $result_tree_text{'empty_quotation_with_arg_followed_by_quotation'} = '*document
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C1
-    {In quotation\\n}
+    {normal_text:In quotation\\n}
    *@end C1 l6
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }
-     {quotation}
+     {normal_text:quotation}
      {spaces_after_argument:\\n}
 ';
 

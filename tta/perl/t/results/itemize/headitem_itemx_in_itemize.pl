@@ -20,21 +20,21 @@ $result_tree_text{'headitem_itemx_in_itemize'} = '*document_root C1
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
-     {item\\n}
+     {normal_text:item\\n}
     *@itemx C1 l3
      *line_arg C3
       {spaces_before_argument: }
-      {itemx}
+      {normal_text:itemx}
       {spaces_after_argument:\\n}
     {ignorable_spaces_after_command: }
     *paragraph C1
-     {headitem\\n}
+     {normal_text:headitem\\n}
    *@end C1 l5
    |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }
-     {itemize}
+     {normal_text:itemize}
      {spaces_after_argument:\\n}
 ';
 

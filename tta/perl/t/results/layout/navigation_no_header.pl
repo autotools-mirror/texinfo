@@ -22,7 +22,7 @@ $result_tree_text{'navigation_no_header'} = '*document_root C10
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C4 navigation.texi:l4 {File used for navigation testing}
  |EXTRA
@@ -31,7 +31,7 @@ $result_tree_text{'navigation_no_header'} = '*document_root C10
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {File used for navigation testing}
+    {normal_text:File used for navigation testing}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C3 navigation.texi:l6
@@ -44,17 +44,17 @@ $result_tree_text{'navigation_no_header'} = '*document_root C10
     |EXTRA
     |node_content:A{0|0}
     |normalized:{chapter}
-     {chapter}
+     {normal_text:chapter}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 navigation.texi:l8
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 navigation.texi:l10 {chapter}
@@ -65,7 +65,7 @@ $result_tree_text{'navigation_no_header'} = '*document_root C10
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter}
+    {normal_text:chapter}
     {spaces_after_argument:\\n}
  *@chapter C4 navigation.texi:l11 {First chapter}
  |EXTRA
@@ -75,7 +75,7 @@ $result_tree_text{'navigation_no_header'} = '*document_root C10
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {First chapter}
+    {normal_text:First chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C3 navigation.texi:l13
@@ -88,17 +88,17 @@ $result_tree_text{'navigation_no_header'} = '*document_root C10
     |EXTRA
     |node_content:A{0|0}
     |normalized:{section}
-     {section}
+     {normal_text:section}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 navigation.texi:l15
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 navigation.texi:l17 {section}
@@ -109,7 +109,7 @@ $result_tree_text{'navigation_no_header'} = '*document_root C10
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {section}
+    {normal_text:section}
     {spaces_after_argument:\\n}
  *@section C30 navigation.texi:l18 {Section in chapter}
  |EXTRA
@@ -119,48 +119,48 @@ $result_tree_text{'navigation_no_header'} = '*document_root C10
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Section in chapter}
+    {normal_text:Section in chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {AAAA\\n}
+   {normal_text:AAAA\\n}
   {empty_line:\\n}
   *paragraph C1
-   {AAAA\\n}
+   {normal_text:AAAA\\n}
   {empty_line:\\n}
   *paragraph C1
-   {AAAA\\n}
+   {normal_text:AAAA\\n}
   {empty_line:\\n}
   *paragraph C1
-   {AAAA\\n}
+   {normal_text:AAAA\\n}
   {empty_line:\\n}
   *paragraph C1
-   {AAAA\\n}
+   {normal_text:AAAA\\n}
   {empty_line:\\n}
   *paragraph C1
-   {AAAA\\n}
+   {normal_text:AAAA\\n}
   {empty_line:\\n}
   *paragraph C1
-   {AAAA\\n}
+   {normal_text:AAAA\\n}
   {empty_line:\\n}
   *paragraph C1
-   {AAAA\\n}
+   {normal_text:AAAA\\n}
   {empty_line:\\n}
   *paragraph C1
-   {AAAA\\n}
+   {normal_text:AAAA\\n}
   {empty_line:\\n}
   *paragraph C1
-   {AAAA\\n}
+   {normal_text:AAAA\\n}
   {empty_line:\\n}
   *paragraph C1
-   {AAAA\\n}
+   {normal_text:AAAA\\n}
   {empty_line:\\n}
   *paragraph C1
-   {AAAA\\n}
+   {normal_text:AAAA\\n}
   {empty_line:\\n}
   *paragraph C2
-   {b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b \\n}
-   {b b b b b b b b b b b b b b b b  b b b b b bb b b b b b b  bb  b bb.\\n}
+   {normal_text:b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b \\n}
+   {normal_text:b b b b b b b b b b b b b b b b  b b b b b bb b b b b b b  bb  b bb.\\n}
   {empty_line:\\n}
   *@menu C3 navigation.texi:l47
    *arguments_line C1
@@ -172,17 +172,17 @@ $result_tree_text{'navigation_no_header'} = '*document_root C10
     |EXTRA
     |node_content:A{0|0}
     |normalized:{subsection}
-     {subsection}
+     {normal_text:subsection}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 navigation.texi:l49
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 navigation.texi:l51 {subsection}
@@ -193,7 +193,7 @@ $result_tree_text{'navigation_no_header'} = '*document_root C10
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {subsection}
+    {normal_text:subsection}
     {spaces_after_argument:\\n}
  *@subsection C4 navigation.texi:l52 {Sub section in section}
  |EXTRA
@@ -203,7 +203,7 @@ $result_tree_text{'navigation_no_header'} = '*document_root C10
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Sub section in section}
+    {normal_text:Sub section in section}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@contents C1 navigation.texi:l54

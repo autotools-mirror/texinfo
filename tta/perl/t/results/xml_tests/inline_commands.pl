@@ -17,19 +17,19 @@ $result_tree_text{'inline_commands'} = '*document_root C1
    |expand_index:{1}
    |format:{xml}
     *brace_arg C1
-     {xml}
+     {normal_text:xml}
     *brace_arg C2
      {spaces_before_argument: }
-     {<sc>xml inlineraw</sc>}
-   {\\n}
+     {normal_text:<sc>xml inlineraw</sc>}
+   {normal_text:\\n}
    *@inlineraw C2 l2
    |EXTRA
    |format:{html}
     *brace_arg C1
-     {html}
+     {normal_text:html}
     *elided_brace_command_arg C1
      {raw: <code>html</code>}
-   {\\n}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C4
    *@inlinefmt C2 l4
@@ -37,22 +37,22 @@ $result_tree_text{'inline_commands'} = '*document_root C1
    |expand_index:{1}
    |format:{xml}
     *brace_arg C1
-     {xml}
+     {normal_text:xml}
     *brace_arg C3
      {spaces_before_argument: }
      *@env C1 l4
       *brace_container C1
-       {inlinefmt}
-     {, xml}
-   {\\n}
+       {normal_text:inlinefmt}
+     {normal_text:, xml}
+   {normal_text:\\n}
    *@inlinefmt C2 l5
    |EXTRA
    |format:{html}
     *brace_arg C1
-     {html}
+     {normal_text:html}
     *elided_brace_command_arg C1
      {raw: @env{inlinefmt}, html}
-   {\\n}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C4
    *@inlinefmtifelse C3 l7
@@ -60,28 +60,28 @@ $result_tree_text{'inline_commands'} = '*document_root C1
    |expand_index:{1}
    |format:{xml}
     *brace_arg C1
-     {xml}
+     {normal_text:xml}
     *brace_arg C3
      {spaces_before_argument: }
-     {xml }
+     {normal_text:xml }
      *@code C1 l7
       *brace_container C1
-       {inlinefmtifelse}
+       {normal_text:inlinefmtifelse}
     *elided_brace_command_arg C1
      {raw: else xml}
-   {\\n}
+   {normal_text:\\n}
    *@inlinefmtifelse C3 l8
    |EXTRA
    |expand_index:{2}
    |format:{html}
     *brace_arg C1
-     {html}
+     {normal_text:html}
     *elided_brace_command_arg C1
      {raw: html @var{inlinefmtifelse}}
     *brace_arg C2
      {spaces_before_argument: }
-     {else html}
-   {\\n}
+     {normal_text:else html}
+   {normal_text:\\n}
 ';
 
 

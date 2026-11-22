@@ -19,7 +19,7 @@ $result_tree_text{'htmlxref_no_urlprefix_first'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
  *@top C2 l2 {top}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'htmlxref_no_urlprefix_first'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l4 {chap}
@@ -39,7 +39,7 @@ $result_tree_text{'htmlxref_no_urlprefix_first'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
  *@chapter C6 l5 {Chap}
  |EXTRA
@@ -49,7 +49,7 @@ $result_tree_text{'htmlxref_no_urlprefix_first'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chap}
+    {normal_text:Chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
@@ -58,8 +58,8 @@ $result_tree_text{'htmlxref_no_urlprefix_first'} = '*document_root C5
     *brace_arg
     *brace_arg
     *brace_arg C1
-     {manual}
-   {.\\n}
+     {normal_text:manual}
+   {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C2
    *@xref C4 l9
@@ -67,8 +67,8 @@ $result_tree_text{'htmlxref_no_urlprefix_first'} = '*document_root C5
     *brace_arg
     *brace_arg
     *brace_arg C1
-     {manual2}
-   {.\\n}
+     {normal_text:manual2}
+   {normal_text:.\\n}
   {empty_line:\\n}
 ';
 

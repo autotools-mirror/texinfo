@@ -22,7 +22,7 @@ $result_tree_text{'fractions_rounding'} = '*document_root C1
      |misc_args:A{.19|.30|.29|.22}
       *line_arg C3
        {spaces_before_argument: }
-       {.19 .30 .29 .22}
+       {normal_text:.19 .30 .29 .22}
        {spaces_after_argument:\\n}
    *multitable_body C2
     *row C4
@@ -33,25 +33,25 @@ $result_tree_text{'fractions_rounding'} = '*document_root C1
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {In contents            }
+       {normal_text:In contents            }
      *@tab C2 l2
      |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {In contents                  }
+       {normal_text:In contents                  }
      *@tab C2 l2
      |EXTRA
      |cell_number:{3}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {In contents           }
+       {normal_text:In contents           }
      *@tab C2 l2
      |EXTRA
      |cell_number:{4}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {Not in contents\\n}
+       {normal_text:Not in contents\\n}
     *row C4
     |EXTRA
     |row_number:{2}
@@ -63,8 +63,8 @@ $result_tree_text{'fractions_rounding'} = '*document_root C1
        *@code C1 l3
         *brace_container C2
          *@@
-         {chapter}
-       {       }
+         {normal_text:chapter}
+       {normal_text:       }
      *@tab C2 l3
      |EXTRA
      |cell_number:{2}
@@ -73,8 +73,8 @@ $result_tree_text{'fractions_rounding'} = '*document_root C1
        *@code C1 l3
         *brace_container C2
          *@@
-         {unnumbered}
-       {          }
+         {normal_text:unnumbered}
+       {normal_text:          }
      *@tab C2 l3
      |EXTRA
      |cell_number:{3}
@@ -83,8 +83,8 @@ $result_tree_text{'fractions_rounding'} = '*document_root C1
        *@code C1 l3
         *brace_container C2
          *@@
-         {appendix}
-       { }
+         {normal_text:appendix}
+       {normal_text: }
      *@tab C2 l3
      |EXTRA
      |cell_number:{4}
@@ -93,14 +93,14 @@ $result_tree_text{'fractions_rounding'} = '*document_root C1
        *@code C1 l3
         *brace_container C2
          *@@
-         {chapheading}
-       {\\n}
+         {normal_text:chapheading}
+       {normal_text:\\n}
    *@end C1 l4
    |EXTRA
    |text_arg:{multitable}
     *line_arg C3
      {spaces_before_argument: }
-     {multitable}
+     {normal_text:multitable}
      {spaces_after_argument:\\n}
 ';
 

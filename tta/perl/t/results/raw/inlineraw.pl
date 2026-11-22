@@ -12,34 +12,34 @@ $result_tree_text{'inlineraw'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *paragraph C5
-   {A }
+   {normal_text:A }
    *@inlineraw C2 l1
    |EXTRA
    |expand_index:{1}
    |format:{plaintext}
     *brace_arg C1
-     {plaintext}
+     {normal_text:plaintext}
     *brace_arg C4
      {spaces_before_argument: }
-     {plaintext `` }
+     {normal_text:plaintext `` }
      *@lbracechar C1 l1
       *brace_container
-     { }
-   { a.  Now html\\n}
+     {normal_text: }
+   {normal_text: a.  Now html\\n}
    *@inlineraw C2 l2
    |EXTRA
    |expand_index:{1}
    |format:{html}
     *brace_arg C1
-     {html}
+     {normal_text:html}
     *brace_arg C4
      {spaces_before_argument: }
-     {in <i>}
+     {normal_text:in <i>}
      *@acronym C1 l2
       *brace_arg C1
-       {HTML}
-     {</i>}
-   {.\\n}
+       {normal_text:HTML}
+     {normal_text:</i>}
+   {normal_text:.\\n}
 ';
 
 

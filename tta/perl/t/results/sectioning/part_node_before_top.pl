@@ -24,19 +24,19 @@ NodeBack: [U0]
   *arguments_line C4
    *line_arg C2
     {spaces_before_argument: }
-    {part node before top}
+    {normal_text:part node before top}
    *line_arg C2
    |EXTRA
    |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
    *line_arg
    *line_arg C2
    |EXTRA
    |node_content:A{0|0}
    |normalized:{Top}
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@part C2 l2 {part}
  |EXTRA
@@ -46,7 +46,7 @@ NodeBack: [U0]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {part}
+    {normal_text:part}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l4 {Top}
@@ -57,7 +57,7 @@ NodeBack: [U0]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C3 l5 {top}
  |EXTRA
@@ -66,7 +66,7 @@ NodeBack: [U0]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C3 l7
@@ -79,17 +79,17 @@ NodeBack: [U0]
     |EXTRA
     |node_content:A{0|0}
     |normalized:{part-node-before-top}
-     {part node before top}
+     {normal_text:part node before top}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l9
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
 ';
 

@@ -22,7 +22,7 @@ $result_tree_text{'empty_headitem'} = '*document_root C1
      |misc_args:A{.1|.1|.1}
       *line_arg C3
        {spaces_before_argument: }
-       {.1 .1 .1}
+       {normal_text:.1 .1 .1}
        {spaces_after_argument:\\n}
    *multitable_head C1
     *row C3
@@ -37,13 +37,13 @@ $result_tree_text{'empty_headitem'} = '*document_root C1
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {Index }
+       {normal_text:Index }
      *@tab C2 l2
      |EXTRA
      |cell_number:{3}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {Value\\n}
+       {normal_text:Value\\n}
    *multitable_body C1
     *row C3
     |EXTRA
@@ -59,8 +59,8 @@ $result_tree_text{'empty_headitem'} = '*document_root C1
       *paragraph C2
        *@code C1 l3
         *brace_container C1
-         {3}
-       { }
+         {normal_text:3}
+       {normal_text: }
      *@tab C2 l3
      |EXTRA
      |cell_number:{3}
@@ -68,14 +68,14 @@ $result_tree_text{'empty_headitem'} = '*document_root C1
       *paragraph C2
        *@code C1 l3
         *brace_container C1
-         {30}
-       {\\n}
+         {normal_text:30}
+       {normal_text:\\n}
    *@end C1 l4
    |EXTRA
    |text_arg:{multitable}
     *line_arg C3
      {spaces_before_argument: }
-     {multitable}
+     {normal_text:multitable}
      {spaces_after_argument:\\n}
 ';
 

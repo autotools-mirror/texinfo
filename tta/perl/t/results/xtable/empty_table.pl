@@ -22,7 +22,7 @@ $result_tree_text{'empty_table'} = '*document_root C1
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
-     {table}
+     {normal_text:table}
      {spaces_after_argument:\\n}
 ';
 

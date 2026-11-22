@@ -25,7 +25,7 @@ FastForward: [U1]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
 U1 unit{C1}{S:@chapter 1 chap}
@@ -46,7 +46,7 @@ Up: [U0]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
 U2 unit{C1}{S:@section 1.1 sec}
@@ -66,7 +66,7 @@ Up: [U1]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {sec}
+    {normal_text:sec}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 l7
@@ -74,7 +74,7 @@ Up: [U1]
   |index_entry:I{cp,1}
    *line_arg C3
     {spaces_before_argument: }
-    {entry}
+    {normal_text:entry}
     {spaces_after_argument:\\n}
   *@printindex C1 l8
   |EXTRA
@@ -82,7 +82,7 @@ Up: [U1]
   |misc_args:A{cp}
    *line_arg C3
     {spaces_before_argument: }
-    {cp}
+    {normal_text:cp}
     {spaces_after_argument:\\n}
 ';
 

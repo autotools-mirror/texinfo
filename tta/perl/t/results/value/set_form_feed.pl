@@ -36,24 +36,24 @@ $result_tree_text{'set_form_feed'} = '*document_root C1
   *paragraph C2
    *@code C1 l5
     *brace_container C1
-     {a\\a\\f\\\\. . }
+     {normal_text:a\\a\\f\\\\. . }
      >SOURCEMARKS
      >value_expansion<start;1>{a\\a\\f\\\\}
       >*@value C1
        >*brace_container C1
-        >{gg}
+        >{normal_text:gg}
      >value_expansion<end;1><p:7>
      >value_expansion<start;2><p:9>{}
       >*@value C1
        >*brace_container C1
-        >{hh}
+        >{normal_text:hh}
      >value_expansion<end;2><p:9>
      >value_expansion<start;3><p:11>{}
       >*@value C1
        >*brace_container C1
-        >{ll}
+        >{normal_text:ll}
      >value_expansion<end;3><p:11>
-   {.\\n}
+   {normal_text:.\\n}
 ';
 
 

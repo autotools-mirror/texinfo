@@ -21,22 +21,22 @@ $result_tree_text{'def_groupings_args'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {a}
+       {normal_text:a}
      {spaces: }
      *def_name C1
       *def_line_arg C3
-       {b}
+       {normal_text:b}
        *@code C1 l1
         *brace_container C1
-         {aa}
-       {c}
+         {normal_text:aa}
+       {normal_text:c}
      {spaces_after_argument:\\n}
    *@end C1 l2
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
-     {deffn}
+     {normal_text:deffn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deffn C2 l4
@@ -48,17 +48,17 @@ $result_tree_text{'def_groupings_args'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C2
-       {a}
+       {normal_text:a}
        *@samp C1 l4
         *brace_container C1
-         {g1}
+         {normal_text:g1}
      {spaces_after_argument:\\n}
    *@end C1 l5
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
-     {deffn}
+     {normal_text:deffn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deffn C2 l7
@@ -73,24 +73,24 @@ $result_tree_text{'def_groupings_args'} = '*document_root C1
       *def_line_arg C2
        *@var C1 l7
         *brace_container C1
-         {var}
-       {c}
+         {normal_text:var}
+       {normal_text:c}
      {spaces: }
      *def_name C1
       *bracketed_arg C2 l7
-       {br }
+       {normal_text:br }
        *@samp C1 l7
         *brace_container C1
-         {s}
+         {normal_text:s}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {c}
+       {normal_text:c}
      *def_arg C1
       *def_line_arg C1
        *@code C1 l7
         *brace_container C1
-         {arg}
+         {normal_text:arg}
      {delimiter:)}
      {spaces_after_argument:\\n}
    *@end C1 l8
@@ -98,7 +98,7 @@ $result_tree_text{'def_groupings_args'} = '*document_root C1
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
-     {deffn}
+     {normal_text:deffn}
      {spaces_after_argument:\\n}
 ';
 

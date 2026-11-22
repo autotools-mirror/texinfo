@@ -21,7 +21,7 @@ $result_tree_text{'reference_to_only_special_spaces_node_transliterate'} = '*doc
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 reference_to_only_special_spaces_node.texi:l3 {top}
  |EXTRA
@@ -30,7 +30,7 @@ $result_tree_text{'reference_to_only_special_spaces_node_transliterate'} = '*doc
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 reference_to_only_special_spaces_node.texi:l5 {   }
@@ -41,7 +41,7 @@ $result_tree_text{'reference_to_only_special_spaces_node_transliterate'} = '*doc
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {   }
+    {normal_text:   }
     {spaces_after_argument:\\n}
  *@chapter C4 reference_to_only_special_spaces_node.texi:l6 {EN QUAD| | EM QUAD| | EN SPACE| |}
  |EXTRA
@@ -51,7 +51,7 @@ $result_tree_text{'reference_to_only_special_spaces_node_transliterate'} = '*doc
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {EN QUAD| | EM QUAD| | EN SPACE| |}
+    {normal_text:EN QUAD| | EM QUAD| | EN SPACE| |}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
@@ -61,11 +61,11 @@ $result_tree_text{'reference_to_only_special_spaces_node_transliterate'} = '*doc
     |node_content:A{1|1}
     |normalized:{_2002_2003_2002}
      {spaces_before_argument: }
-     {   }
+     {normal_text:   }
     *brace_arg C2
      {spaces_before_argument: }
-     {   }
-   {.\\n}
+     {normal_text:   }
+   {normal_text:.\\n}
   {empty_line:\\n}
  *@node C1 reference_to_only_special_spaces_node.texi:l10 {@code{   }}
  |EXTRA
@@ -76,7 +76,7 @@ $result_tree_text{'reference_to_only_special_spaces_node_transliterate'} = '*doc
     {spaces_before_argument: }
     *@code C1 reference_to_only_special_spaces_node.texi:l10
      *brace_container C1
-      {   }
+      {normal_text:   }
     {spaces_after_argument:\\n}
  *@chapter C5 reference_to_only_special_spaces_node.texi:l11 {@code{EN QUAD| | EM QUAD| | EN SPACE| |}}
  |EXTRA
@@ -88,7 +88,7 @@ $result_tree_text{'reference_to_only_special_spaces_node_transliterate'} = '*doc
     {spaces_before_argument: }
     *@code C1 reference_to_only_special_spaces_node.texi:l11
      *brace_container C1
-      {EN QUAD| | EM QUAD| | EN SPACE| |}
+      {normal_text:EN QUAD| | EM QUAD| | EN SPACE| |}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
@@ -99,13 +99,13 @@ $result_tree_text{'reference_to_only_special_spaces_node_transliterate'} = '*doc
     |normalized:{_2002_2003_2002}
      *@code C1 reference_to_only_special_spaces_node.texi:l13
       *brace_container C1
-       {   }
+       {normal_text:   }
     *brace_arg C2
      {spaces_before_argument: }
      *@code C1 reference_to_only_special_spaces_node.texi:l13
       *brace_container C1
-       {   }
-   {.\\n}
+       {normal_text:   }
+   {normal_text:.\\n}
   {empty_line:\\n}
   {empty_line:\\n}
  *@bye C1

@@ -25,7 +25,7 @@ $result_tree_text{'cpp_directives_after_macros'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@macro C3 cpp_directives_after_macros.texi:l6
@@ -40,7 +40,7 @@ $result_tree_text{'cpp_directives_after_macros'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    >SOURCEMARKS
@@ -53,12 +53,12 @@ $result_tree_text{'cpp_directives_after_macros'} = '*document_root C1
      >*brace_arg
    >macro_expansion<end;1><p:2>
   *paragraph C1
-   {#line 46 "a_file_after_macro_call"\\n}
+   {normal_text:#line 46 "a_file_after_macro_call"\\n}
   {empty_line:\\n}
   {empty_line:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {#line 75 "a_file_after_macro_call_no_spaces"\\n}
+   {normal_text:#line 75 "a_file_after_macro_call_no_spaces"\\n}
    >SOURCEMARKS
    >macro_expansion<start;2>
     >*macro_call@emptyexpansion C1

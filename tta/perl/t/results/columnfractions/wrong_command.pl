@@ -22,14 +22,14 @@ $result_tree_text{'wrong_command'} = '*document_root C1
        {spaces_before_argument: }
        *@b C1 l1
         *brace_container C1
-         {3.4}
+         {normal_text:3.4}
        {spaces_after_argument: \\n}
    *@end C1 l2
    |EXTRA
    |text_arg:{multitable}
     *line_arg C2
      {spaces_before_argument: }
-     {multitable}
+     {normal_text:multitable}
 ';
 
 

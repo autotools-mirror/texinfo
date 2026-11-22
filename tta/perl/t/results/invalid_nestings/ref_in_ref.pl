@@ -19,7 +19,7 @@ $result_tree_text{'ref_in_ref'} = '*document_root C2
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {first}
+    {normal_text:first}
     {spaces_after_argument:\\n}
   *paragraph C1
    *@ref C1 l2
@@ -32,7 +32,7 @@ $result_tree_text{'ref_in_ref'} = '*document_root C2
       |EXTRA
       |node_content:A{0|0}
       |normalized:{first}
-       {first}
+       {normal_text:first}
 ';
 
 

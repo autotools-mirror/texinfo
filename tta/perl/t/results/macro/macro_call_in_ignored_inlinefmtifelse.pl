@@ -23,20 +23,20 @@ $result_tree_text{'macro_call_in_ignored_inlinefmtifelse'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C3
-   {Toto }
+   {normal_text:Toto }
    *@inlinefmtifelse C2 l5
    |EXTRA
    |expand_index:{2}
    |format:{tex}
     *brace_arg C1
-     {tex}
+     {normal_text:tex}
     *elided_brace_command_arg C1
      {raw: here @commafmt{} finish}
-   { done.\\n}
+   {normal_text: done.\\n}
 ';
 
 

@@ -14,13 +14,13 @@ $result_tree_text{'commands_in_email'} = '*document_root C1
   *paragraph C1
    *@email C1 l1
     *brace_arg C4
-     {endots }
+     {normal_text:endots }
      *@enddots C1 l1
       *brace_container
-     { }
+     {normal_text: }
      *@code C1 l1
       *brace_container C1
-       {in code}
+       {normal_text:in code}
 ';
 
 

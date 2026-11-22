@@ -14,14 +14,14 @@ $result_tree_text{'commands_in_abbr'} = '*document_root C1
   *paragraph C2
    *@abbr C2 l1
     *brace_arg C1
-     {A}
+     {normal_text:A}
     *brace_arg C3
      {spaces_before_argument: }
      *@b C1 l1
       *brace_container C1
-       {abbr}
-     { -- b}
-   {.\\n}
+       {normal_text:abbr}
+     {normal_text: -- b}
+   {normal_text:.\\n}
   {empty_line:\\n}
   *@example C3 l3
    *arguments_line C1
@@ -30,20 +30,20 @@ $result_tree_text{'commands_in_abbr'} = '*document_root C1
    *preformatted C2
     *@abbr C2 l4
      *brace_arg C1
-      {A}
+      {normal_text:A}
      *brace_arg C3
       {spaces_before_argument: }
       *@b C1 l4
        *brace_container C1
-        {abbr}
-      { -- b}
-    {.\\n}
+        {normal_text:abbr}
+      {normal_text: -- b}
+    {normal_text:.\\n}
    *@end C1 l5
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
 ';
 

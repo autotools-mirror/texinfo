@@ -19,7 +19,7 @@ $result_tree_text{'chapter_between_nodes_texi2html'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C5 l2 {top section}
  |EXTRA
@@ -28,10 +28,10 @@ $result_tree_text{'chapter_between_nodes_texi2html'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top section}
+    {normal_text:top section}
     {spaces_after_argument:\\n}
   *paragraph C1
-   {Top node\\n}
+   {normal_text:Top node\\n}
   {empty_line:\\n}
   *@menu C3 l5
    *arguments_line C1
@@ -43,17 +43,17 @@ $result_tree_text{'chapter_between_nodes_texi2html'} = '*document_root C6
     |EXTRA
     |node_content:A{0|0}
     |normalized:{section-node}
-     {section node}
+     {normal_text:section node}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l7
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@chapter C4 l9 {Chapter}
@@ -66,11 +66,11 @@ $result_tree_text{'chapter_between_nodes_texi2html'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chapter}
+    {normal_text:Chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {In chapter\\n}
+   {normal_text:In chapter\\n}
   {empty_line:\\n}
  *@node C1 l13 {section node}
  |EXTRA
@@ -80,14 +80,14 @@ $result_tree_text{'chapter_between_nodes_texi2html'} = '*document_root C6
   *arguments_line C4
    *line_arg C2
     {spaces_before_argument: }
-    {section node}
+    {normal_text:section node}
    *line_arg
    *line_arg
    *line_arg C2
    |EXTRA
    |node_content:A{0|0}
    |normalized:{Top}
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@section C5 l14 {section}
  |EXTRA
@@ -97,11 +97,11 @@ $result_tree_text{'chapter_between_nodes_texi2html'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {section}
+    {normal_text:section}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {section.\\n}
+   {normal_text:section.\\n}
   {empty_line:\\n}
   *@contents C1 l18
   |EXTRA

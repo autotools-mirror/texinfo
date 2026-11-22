@@ -19,7 +19,7 @@ $result_tree_text{'base_for_css_info_in_init_test'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C8 l2 {top}
  |EXTRA
@@ -28,29 +28,29 @@ $result_tree_text{'base_for_css_info_in_init_test'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
    *@sansserif C1 l4
     *brace_container C1
-     {SSSSSSSSSSs ssss}
-   {.\\n}
+     {normal_text:SSSSSSSSSSs ssss}
+   {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C2
    *@code C1 l6
     *brace_container C1
      *@r C1 l6
       *brace_container C1
-       {in r in code}
-   {\\n}
+       {normal_text:in r in code}
+   {normal_text:\\n}
   {empty_line:\\n}
   *@titlefont C1 l8
   |EXTRA
   |global_command_number:{1}
    *brace_container C1
-    {in a new heading}
-  {\\n}
+    {normal_text:in a new heading}
+  {normal_text:\\n}
 ';
 
 

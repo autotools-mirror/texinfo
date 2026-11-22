@@ -16,7 +16,7 @@ $result_tree_text{'simple'} = '*document_root C1
    |misc_args:A{myalias|code}
     *line_arg C3
      {spaces_before_argument: }
-     {myalias = code}
+     {normal_text:myalias = code}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@alias C1 l3
@@ -24,7 +24,7 @@ $result_tree_text{'simple'} = '*document_root C1
    |misc_args:A{o-theralias|verb}
     *line_arg C4
      {spaces_before_argument: }
-     {o-theralias=verb}
+     {normal_text:o-theralias=verb}
      {spaces_after_argument: }
      *@c C1
       *line_arg C3
@@ -33,16 +33,16 @@ $result_tree_text{'simple'} = '*document_root C1
        {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C3
-   {Should be code: }
+   {normal_text:Should be code: }
    *@code C1 l5
    |EXTRA
    |alias_of:{myalias}
     *brace_container C1
-     {code}
-   {\\n}
+     {normal_text:code}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C3
-   {Should be verb: }
+   {normal_text:Should be verb: }
    *@verb C1 l7
    |EXTRA
    |alias_of:{o-theralias}
@@ -50,7 +50,7 @@ $result_tree_text{'simple'} = '*document_root C1
      {verb_delimiter:!}
      {raw:verb}
      {verb_delimiter:!}
-   {\\n}
+   {normal_text:\\n}
 ';
 
 

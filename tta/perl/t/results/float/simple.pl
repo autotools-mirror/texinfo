@@ -21,25 +21,25 @@ $result_tree_text{'simple'} = '*document_root C1
    *arguments_line C2
     *block_line_arg C2
      {spaces_before_argument: }
-     {Type}
+     {normal_text:Type}
     *block_line_arg C3
      {spaces_before_argument: }
-     {Label}
+     {normal_text:Label}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
    *paragraph C1
-    {In float.\\n}
+    {normal_text:In float.\\n}
    *@caption C1 l4
     *brace_command_context C1
      *paragraph C1
-      {Caption.}
+      {normal_text:Caption.}
    {spaces_after_close_brace:\\n}
    *@end C1 l5
    |EXTRA
    |text_arg:{float}
     *line_arg C2
      {spaces_before_argument: }
-     {float}
+     {normal_text:float}
 ';
 
 

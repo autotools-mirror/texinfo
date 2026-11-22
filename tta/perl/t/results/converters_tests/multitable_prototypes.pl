@@ -18,22 +18,22 @@ $result_tree_text{'multitable_prototypes'} = '*document_root C1
     *block_line_arg C10
      {spaces_before_argument:  }
      *bracketed_arg C1 l1
-      {aa b}
-     {  }
+      {normal_text:aa b}
+     {normal_text:  }
      *bracketed_arg C1 l1
-      { r }
-     { }
+      {normal_text: r }
+     {normal_text: }
      *bracketed_arg C3 l1
-      {j }
+      {normal_text:j }
       *@code C1 l1
        *brace_container C1
-        {some code}
-      { }
-     { }
+        {normal_text:some code}
+      {normal_text: }
+     {normal_text: }
      *@var C1 l1
       *brace_container C1
-       {cmd}
-     {gg hh j}
+       {normal_text:cmd}
+     {normal_text:gg hh j}
      {spaces_after_argument: \\n}
    *multitable_body C1
     *row C3
@@ -44,32 +44,32 @@ $result_tree_text{'multitable_prototypes'} = '*document_root C1
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {cc d\\n}
+       {normal_text:cc d\\n}
      *@tab C2 l3
      |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {s\\n}
+       {normal_text:s\\n}
      *@tab C4 l4
      |EXTRA
      |cell_number:{3}
       {ignorable_spaces_after_command: }
       *paragraph C3
-       {k }
+       {normal_text:k }
        *@samp C1 l4
         *brace_container C1
-         {same samp}
-       {\\n}
+         {normal_text:same samp}
+       {normal_text:\\n}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {Invalid tab\\n}
+       {normal_text:Invalid tab\\n}
    *@end C1 l6
    |EXTRA
    |text_arg:{multitable}
     *line_arg C3
      {spaces_before_argument: }
-     {multitable}
+     {normal_text:multitable}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
 ';

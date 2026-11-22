@@ -24,7 +24,7 @@ T}}
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {in section }
+    {normal_text:in section }
     *@verb C1 l1
      *brace_container C5
       {verb_delimiter:T}

@@ -17,7 +17,7 @@ $result_tree_text{'ignored_in_ifset'} = '*document_root C1
     >*arguments_line C1
      >*block_line_arg C3
       >{spaces_before_argument: }
-      >{notset}
+      >{normal_text:notset}
       >{spaces_after_argument:\\n}
     >{raw:@ignore\\n}
     >*@end C1 l4
@@ -25,12 +25,12 @@ $result_tree_text{'ignored_in_ifset'} = '*document_root C1
     >|text_arg:{ifset}
      >*line_arg C3
       >{spaces_before_argument: }
-      >{ifset}
+      >{normal_text:ifset}
       >{spaces_after_argument:\\n}
    {text_before_beginning:\\n}
   *preamble_before_content
   *paragraph C1
-   {text\\n}
+   {normal_text:text\\n}
   {empty_line:\\n}
   >SOURCEMARKS
   >ignored_conditional_block<2><p:1>
@@ -38,7 +38,7 @@ $result_tree_text{'ignored_in_ifset'} = '*document_root C1
     >*arguments_line C1
      >*block_line_arg C3
       >{spaces_before_argument: }
-      >{notset}
+      >{normal_text:notset}
       >{spaces_after_argument:\\n}
     >{raw:@verbatim\\n}
     >*@end C1 l11
@@ -46,7 +46,7 @@ $result_tree_text{'ignored_in_ifset'} = '*document_root C1
     >|text_arg:{ifset}
      >*line_arg C3
       >{spaces_before_argument: }
-      >{ifset}
+      >{normal_text:ifset}
       >{spaces_after_argument:\\n}
   {empty_line:\\n}
   >SOURCEMARKS
@@ -55,7 +55,7 @@ $result_tree_text{'ignored_in_ifset'} = '*document_root C1
     >*arguments_line C1
      >*block_line_arg C3
       >{spaces_before_argument: }
-      >{notset}
+      >{normal_text:notset}
       >{spaces_after_argument:\\n}
     >{raw:@verb{%\\n}
     >*@end C1 l17
@@ -63,10 +63,10 @@ $result_tree_text{'ignored_in_ifset'} = '*document_root C1
     >|text_arg:{ifset}
      >*line_arg C3
       >{spaces_before_argument: }
-      >{ifset}
+      >{normal_text:ifset}
       >{spaces_after_argument:\\n}
   *paragraph C1
-   {%\\n}
+   {normal_text:%\\n}
 ';
 
 

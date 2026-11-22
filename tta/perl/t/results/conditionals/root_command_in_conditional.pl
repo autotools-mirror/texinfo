@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'root_command_in_conditional'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content C1
-   {}
+   {normal_text:}
    >SOURCEMARKS
    >expanded_conditional_command<start;1>
     >*@ifnottex C1 l1
@@ -26,19 +26,19 @@ $result_tree_text{'root_command_in_conditional'} = '*document_root C2
   *arguments_line C4
    *line_arg C2
     {spaces_before_argument: }
-    {Getting Started}
+    {normal_text:Getting Started}
    *line_arg C2
    |EXTRA
    |node_content:A{1|1}
    |normalized:{Tutorial}
     {spaces_before_argument: }
-    {Tutorial}
+    {normal_text:Tutorial}
    *line_arg C2
    |EXTRA
    |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
    *line_arg C3
    |EXTRA
    |node_content:A{1|1}
@@ -50,10 +50,10 @@ $result_tree_text{'root_command_in_conditional'} = '*document_root C2
     >|text_arg:{ifnottex}
      >*line_arg C3
       >{spaces_before_argument: }
-      >{ifnottex}
+      >{normal_text:ifnottex}
       >{spaces_after_argument:\\n}
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
 ';
 

@@ -16,13 +16,13 @@ $result_tree_text{'incorrect_allowcodebreaks_argument'} = '*document_root C1
    |global_command_number:{1}
     *line_arg C3
      {spaces_before_argument: }
-     {_arg}
+     {normal_text:_arg}
      {spaces_after_argument:\\n}
   *paragraph C2
    *@code C1 l2
     *brace_container C1
-     {b a}
-   {\\n}
+     {normal_text:b a}
+   {normal_text:\\n}
 ';
 
 

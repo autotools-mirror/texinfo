@@ -14,7 +14,7 @@ $result_tree_text{'section_in_footnote'} = '*document_root C2
    {text_before_beginning:\\n}
   *preamble_before_content
   *paragraph C2
-   {Text}
+   {normal_text:Text}
    *@footnote C1 l2
     *brace_command_context C2
      {spaces_before_argument:\\n}
@@ -29,7 +29,7 @@ $result_tree_text{'section_in_footnote'} = '*document_root C2
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {a section}
+    {normal_text:a section}
     {spaces_after_argument:\\n}
 ';
 

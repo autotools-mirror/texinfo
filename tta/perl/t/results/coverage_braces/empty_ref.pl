@@ -16,25 +16,25 @@ $result_tree_text{'empty_ref'} = '*document_root C1
   *paragraph C9
    *@ref C1 l2
     *brace_arg
-   { }
+   {normal_text: }
    *@xref C3 l2
     *brace_arg
     *brace_arg
     *brace_arg C1
-     {something}
-   {. }
+     {normal_text:something}
+   {normal_text:. }
    *@inforef C1 l2
     *brace_arg C1
      {spaces_before_argument: }
-   {\\n}
-   { }
+   {normal_text:\\n}
+   {normal_text: }
    *@inforef C2 l3
     *brace_arg C1
      {spaces_before_argument: }
     *brace_arg C2
      {spaces_before_argument: }
-     {arg}
-   {.\\n}
+     {normal_text:arg}
+   {normal_text:.\\n}
 ';
 
 

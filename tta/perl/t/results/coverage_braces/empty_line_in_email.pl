@@ -17,10 +17,10 @@ $result_tree_text{'empty_line_in_email'} = '*document_root C1
      {spaces_before_argument: \\n}
      {spaces_before_argument:\\n}
   *paragraph C1
-   {mail,\\n}
+   {normal_text:mail,\\n}
   {empty_line:\\n}
   *paragraph C1
-   {text\\n}
+   {normal_text:text\\n}
 ';
 
 

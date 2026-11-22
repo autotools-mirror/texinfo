@@ -19,7 +19,7 @@ $result_tree_text{'file_name_conflict_with_user_defined'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l2 {top}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'file_name_conflict_with_user_defined'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l4 {Chapter 1}
@@ -39,7 +39,7 @@ $result_tree_text{'file_name_conflict_with_user_defined'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chapter 1}
+    {normal_text:Chapter 1}
     {spaces_after_argument:\\n}
  *@chapter C5 l5 {Chap 1}
  |EXTRA
@@ -49,7 +49,7 @@ $result_tree_text{'file_name_conflict_with_user_defined'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chap 1}
+    {normal_text:Chap 1}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@anchor C1 l7
@@ -57,7 +57,7 @@ $result_tree_text{'file_name_conflict_with_user_defined'} = '*document_root C7
   |identifier:{myanchor}
   |is_target:{1}
    *brace_arg C1
-    {myanchor}
+    {normal_text:myanchor}
   {spaces_after_close_brace:\\n}
   {empty_line:\\n}
  *@node C1 l9 {Chapter 2}
@@ -68,7 +68,7 @@ $result_tree_text{'file_name_conflict_with_user_defined'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chapter 2}
+    {normal_text:Chapter 2}
     {spaces_after_argument:\\n}
  *@chapter C1 l10 {Chap 2}
  |EXTRA
@@ -78,7 +78,7 @@ $result_tree_text{'file_name_conflict_with_user_defined'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chap 2}
+    {normal_text:Chap 2}
     {spaces_after_argument:\\n}
 ';
 

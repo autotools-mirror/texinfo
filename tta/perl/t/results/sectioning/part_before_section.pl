@@ -21,7 +21,7 @@ This: [U0]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {part}
+    {normal_text:part}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@section C1 l3 {section}
@@ -34,7 +34,7 @@ This: [U0]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {section}
+    {normal_text:section}
     {spaces_after_argument: \\n}
 ';
 

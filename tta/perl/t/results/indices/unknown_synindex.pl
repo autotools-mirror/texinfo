@@ -14,7 +14,7 @@ $result_tree_text{'unknown_synindex'} = '*document_root C1
    *@synindex C1 l1
     *line_arg C2
      {spaces_before_argument: }
-     {c truc}
+     {normal_text:c truc}
 ';
 
 

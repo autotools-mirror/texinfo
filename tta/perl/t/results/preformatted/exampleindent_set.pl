@@ -17,7 +17,7 @@ $result_tree_text{'exampleindent_set'} = '*document_root C1
    |misc_args:A{2}
     *line_arg C3
      {spaces_before_argument: }
-     {2}
+     {normal_text:2}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
   *@example C3 l3
@@ -25,13 +25,13 @@ $result_tree_text{'exampleindent_set'} = '*document_root C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C1
-    {EXAMPLE INDENT\\n}
+    {normal_text:EXAMPLE INDENT\\n}
    *@end C1 l5
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
 ';
 

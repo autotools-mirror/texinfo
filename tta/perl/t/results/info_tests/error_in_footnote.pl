@@ -21,7 +21,7 @@ $result_tree_text{'error_in_footnote'} = '*document_root C2
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@float C7 l4
@@ -34,46 +34,46 @@ $result_tree_text{'error_in_footnote'} = '*document_root C2
    *arguments_line C2
     *block_line_arg C2
      {spaces_before_argument: }
-     {Text}
+     {normal_text:Text}
     *block_line_arg C3
      {spaces_before_argument: }
-     {label}
+     {normal_text:label}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
    *paragraph C1
-    {Float text1\\n}
+    {normal_text:Float text1\\n}
    {empty_line:\\n}
    *@caption C1 l8
     *brace_command_context C1
      *paragraph C8
-      {Caption. }
+      {normal_text:Caption. }
       *@TeX l8
-      {. \\n}
-      {In caption }
+      {normal_text:. \\n}
+      {normal_text:In caption }
       *@strong C1 l9
        *brace_container C1
-        {note caption}
-      {.  \\n}
-      {Now footnote}
+        {normal_text:note caption}
+      {normal_text:.  \\n}
+      {normal_text:Now footnote}
       *@footnote C1 l10
       |EXTRA
       |global_command_number:{1}
        *brace_command_context C1
         *paragraph C5
          *@LaTeX l10
-         {. \\n}
-         {and strong }
+         {normal_text:. \\n}
+         {normal_text:and strong }
          *@strong C1 l11
           *brace_container C1
-           {Note footnote}
-         {.}
+           {normal_text:Note footnote}
+         {normal_text:.}
    {spaces_after_close_brace:\\n}
    *@end C1 l12
    |EXTRA
    |text_arg:{float}
     *line_arg C3
      {spaces_before_argument: }
-     {float}
+     {normal_text:float}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@listoffloats C1 l14
@@ -82,7 +82,7 @@ $result_tree_text{'error_in_footnote'} = '*document_root C2
   |global_command_number:{1}
    *line_arg C3
     {spaces_before_argument: }
-    {Text}
+    {normal_text:Text}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@listoffloats C1 l16
@@ -91,7 +91,7 @@ $result_tree_text{'error_in_footnote'} = '*document_root C2
   |global_command_number:{2}
    *line_arg C3
     {spaces_before_argument: }
-    {Text}
+    {normal_text:Text}
     {spaces_after_argument:\\n}
 ';
 

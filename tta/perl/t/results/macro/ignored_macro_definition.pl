@@ -23,7 +23,7 @@ $result_tree_text{'ignored_macro_definition'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    {empty_line:\\n}
@@ -32,13 +32,13 @@ $result_tree_text{'ignored_macro_definition'} = '*document_root C1
    |EXTRA
    |format:{tex}
     *brace_arg C1
-     {tex}
+     {normal_text:tex}
     *elided_brace_command_arg C1
      {raw:\\n@unmacro mymacro\\n@macro mymacro{}\\nin inlinefmt tex\\n@end macro\\n}
-   {\\n}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {outside.\\n}
+   {normal_text:outside.\\n}
    >SOURCEMARKS
    >macro_expansion<start;1>
     >*macro_call@mymacro C1

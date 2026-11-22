@@ -12,7 +12,7 @@ $result_tree_text{'no_nodes'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *paragraph C1
-   {Text.}
+   {normal_text:Text.}
 ';
 
 

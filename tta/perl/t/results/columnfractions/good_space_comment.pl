@@ -22,7 +22,7 @@ $result_tree_text{'good_space_comment'} = '*document_root C1
      |misc_args:A{0|1}
       *line_arg C4
        {spaces_before_argument: }
-       {0 1}
+       {normal_text:0 1}
        {spaces_after_argument:  }
        *@c C1
         *line_arg C3
@@ -34,7 +34,7 @@ $result_tree_text{'good_space_comment'} = '*document_root C1
    |text_arg:{multitable}
     *line_arg C2
      {spaces_before_argument: }
-     {multitable}
+     {normal_text:multitable}
 ';
 
 

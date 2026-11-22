@@ -22,7 +22,7 @@ This: [U0]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {before nodes}
+    {normal_text:before nodes}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C5 l3 {Top}
@@ -33,17 +33,17 @@ This: [U0]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
   *paragraph C1
-   {Top node\\n}
+   {normal_text:Top node\\n}
   {empty_line:\\n}
   *@titlefont C1 l6
   |EXTRA
   |global_command_number:{1}
    *brace_container C1
-    {Title titlefont}
-  {\\n}
+    {normal_text:Title titlefont}
+  {normal_text:\\n}
 ';
 
 

@@ -26,11 +26,11 @@ $result_tree_text{'simple_imbricated_macro'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C2
-   {truc.\\n}
+   {normal_text:truc.\\n}
    >SOURCEMARKS
    >macro_expansion<start;1>
     >*macro_call@truc C1
@@ -47,13 +47,13 @@ $result_tree_text{'simple_imbricated_macro'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       >SOURCEMARKS
       >macro_expansion<end;1><p:5>
       {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {bidule.\\n}
+   {normal_text:bidule.\\n}
    >SOURCEMARKS
    >macro_expansion<start;2>
     >*macro_call@bidule C1

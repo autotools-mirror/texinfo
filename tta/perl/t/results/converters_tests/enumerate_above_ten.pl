@@ -15,20 +15,20 @@ $result_tree_text{'enumerate_above_ten'} = '*document_root C1
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     {14}
+     {normal_text:14}
      {spaces_after_argument:\\n}
    *@item C2 l2
    |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
-     {a\\n}
+     {normal_text:a\\n}
    *@end C1 l3
    |EXTRA
    |text_arg:{enumerate}
     *line_arg C3
      {spaces_before_argument: }
-     {enumerate}
+     {normal_text:enumerate}
      {spaces_after_argument:\\n}
 ';
 

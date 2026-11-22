@@ -13,7 +13,7 @@ $result_tree_text{'anchor_not_closed'} = '*document_root C1
   *preamble_before_content
   *@anchor C1 l1
    *brace_arg C3
-    {my anchor}
+    {normal_text:my anchor}
     {spaces_after_argument:\\n}
     {empty_line:\\n}
 ';

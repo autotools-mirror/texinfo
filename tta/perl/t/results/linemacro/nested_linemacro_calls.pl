@@ -23,7 +23,7 @@ $result_tree_text{'nested_linemacro_calls'} = '*document_root C1
     |text_arg:{linemacro}
      *line_arg C3
       {spaces_before_argument: }
-      {linemacro}
+      {normal_text:linemacro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@linemacro C4 l5
@@ -39,7 +39,7 @@ $result_tree_text{'nested_linemacro_calls'} = '*document_root C1
     |text_arg:{linemacro}
      *line_arg C3
       {spaces_before_argument: }
-      {linemacro}
+      {normal_text:linemacro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *@defblock C4 l10
@@ -66,11 +66,11 @@ $result_tree_text{'nested_linemacro_calls'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {type}
+       {normal_text:type}
      {spaces: }
      *def_name C1
       *bracketed_arg C1 l11:@outside
-       {inside X operator Y}
+       {normal_text:inside X operator Y}
        >SOURCEMARKS
        >linemacro_expansion<start;2>
         >*linemacro_call@inside C2
@@ -85,16 +85,16 @@ $result_tree_text{'nested_linemacro_calls'} = '*document_root C1
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {remaining}
+       {normal_text:remaining}
      {delimiter:,}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {type}
+       {normal_text:type}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {typed}
+       {normal_text:typed}
      {spaces: }
      {delimiter:)}
      >SOURCEMARKS
@@ -117,7 +117,7 @@ $result_tree_text{'nested_linemacro_calls'} = '*document_root C1
          >{bracketed_linemacro_arg:Y}
          >>SOURCEMARKS
          >>linemacro_expansion<end;1><p:3>
-      {inside X operator Y}
+      {normal_text:inside X operator Y}
       >SOURCEMARKS
       >linemacro_expansion<end;3><p:19>
       {spaces_after_argument:\\n}
@@ -126,7 +126,7 @@ $result_tree_text{'nested_linemacro_calls'} = '*document_root C1
    |text_arg:{defblock}
     *line_arg C3
      {spaces_before_argument: }
-     {defblock}
+     {normal_text:defblock}
      {spaces_after_argument:\\n}
 ';
 

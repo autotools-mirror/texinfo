@@ -20,7 +20,7 @@ $result_tree_text{'top_no_argument_and_content'} = '*document_root C2
     {spaces_before_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {A.\\n}
+   {normal_text:A.\\n}
 ';
 
 

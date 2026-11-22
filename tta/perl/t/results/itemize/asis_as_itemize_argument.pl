@@ -22,13 +22,13 @@ $result_tree_text{'asis_as_itemize_argument'} = '*document_root C1
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
-     {as is\\n}
+     {normal_text:as is\\n}
    *@end C1 l3
    |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }
-     {itemize}
+     {normal_text:itemize}
      {spaces_after_argument:\\n}
 ';
 

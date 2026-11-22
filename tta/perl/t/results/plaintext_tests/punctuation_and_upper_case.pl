@@ -12,8 +12,8 @@ $result_tree_text{'punctuation_and_upper_case'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *paragraph C2
-   {Question?  GAAA.\\n}
-   {BBB. b\\n}
+   {normal_text:Question?  GAAA.\\n}
+   {normal_text:BBB. b\\n}
 ';
 
 

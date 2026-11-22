@@ -12,7 +12,7 @@ $result_tree_text{'no_eol_in_included_file'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *paragraph C3
-   {Some thing.\\n}
+   {normal_text:Some thing.\\n}
    >SOURCEMARKS
    >include<start;1><p:12>
     >*@include C1 l2
@@ -20,12 +20,12 @@ $result_tree_text{'no_eol_in_included_file'} = '*document_root C1
     >|text_arg:{include_noeol.texi}
      >*line_arg C3
       >{spaces_before_argument: }
-      >{include_noeol.texi}
+      >{normal_text:include_noeol.texi}
       >{spaces_after_argument:\\n}
-   {AA\\n}
+   {normal_text:AA\\n}
    >SOURCEMARKS
    >include<end;1><p:3>
-   {Following\\n}
+   {normal_text:Following\\n}
 ';
 
 

@@ -23,11 +23,11 @@ $result_tree_text{'text_arguments'} = '*document_root C1
     |text_arg:{linemacro}
      *line_arg C3
       {spaces_before_argument: }
-      {linemacro}
+      {normal_text:linemacro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C5
-   {Z}
+   {normal_text:Z}
    >SOURCEMARKS
    >linemacro_expansion<start;1>
     >*linemacro_call@nospace C3
@@ -42,10 +42,10 @@ $result_tree_text{'text_arguments'} = '*document_root C1
       >{macro_call_arg_text:Z}
    *@bullet C1 l5:@nospace
     *brace_container
-   {Y}
+   {normal_text:Y}
    *@minus C1 l5:@nospace
     *brace_container
-   {X\\n}
+   {normal_text:X\\n}
    >SOURCEMARKS
    >linemacro_expansion<end;1><p:1>
 ';

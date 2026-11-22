@@ -19,7 +19,7 @@ $result_tree_text{'block_commands_in_table'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l2 {Element}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'block_commands_in_table'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Element}
+    {normal_text:Element}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l4 {chap}
@@ -39,7 +39,7 @@ $result_tree_text{'block_commands_in_table'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
  *@chapter C10 l5 {Chapter}
  |EXTRA
@@ -49,7 +49,7 @@ $result_tree_text{'block_commands_in_table'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chapter}
+    {normal_text:Chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@table C7 l7
@@ -63,24 +63,24 @@ $result_tree_text{'block_commands_in_table'} = '*document_root C5
      *@item C1 l8
       *line_arg C3
        {spaces_before_argument: }
-       {first item}
+       {normal_text:first item}
        {spaces_after_argument:\\n}
      *@itemx C1 l9
       *line_arg C3
        {spaces_before_argument: }
-       {second itemx}
+       {normal_text:second itemx}
        {spaces_after_argument:\\n}
     *table_definition C3
      {empty_line:\\n}
      *paragraph C1
-      {Text.\\n}
+      {normal_text:Text.\\n}
      {empty_line:\\n}
    *table_entry C2
     *table_term C1
      *@item C1 l13
       *line_arg C3
        {spaces_before_argument: }
-       {example}
+       {normal_text:example}
        {spaces_after_argument:\\n}
     *table_definition C1
      *@example C3 l14
@@ -88,33 +88,33 @@ $result_tree_text{'block_commands_in_table'} = '*document_root C5
        *block_line_arg C1
         {spaces_before_argument:\\n}
       *preformatted C3
-       {In example\\n}
+       {normal_text:In example\\n}
        {empty_line:\\n}
-       {end example.\\n}
+       {normal_text:end example.\\n}
       *@end C1 l18
       |EXTRA
       |text_arg:{example}
        *line_arg C3
         {spaces_before_argument: }
-        {example}
+        {normal_text:example}
         {spaces_after_argument:\\n}
    *table_entry C2
     *table_term C1
      *@item C1 l19
       *line_arg C3
        {spaces_before_argument: }
-       {empty line}
+       {normal_text:empty line}
        {spaces_after_argument:\\n}
     *table_definition C2
      {empty_line:\\n}
      *paragraph C1
-      {empty line.\\n}
+      {normal_text:empty line.\\n}
    *table_entry C2
     *table_term C1
      *@item C1 l22
       *line_arg C3
        {spaces_before_argument: }
-       {quotation}
+       {normal_text:quotation}
        {spaces_after_argument:\\n}
     *table_definition C2
      *@quotation C3 l23
@@ -122,13 +122,13 @@ $result_tree_text{'block_commands_in_table'} = '*document_root C5
        *block_line_arg C1
         {spaces_before_argument:\\n}
       *paragraph C1
-       {Quotation\\n}
+       {normal_text:Quotation\\n}
       *@end C1 l25
       |EXTRA
       |text_arg:{quotation}
        *line_arg C3
         {spaces_before_argument: }
-        {quotation}
+        {normal_text:quotation}
         {spaces_after_argument:\\n}
      {empty_line:\\n}
    *table_entry C2
@@ -136,7 +136,7 @@ $result_tree_text{'block_commands_in_table'} = '*document_root C5
      *@item C1 l27
       *line_arg C3
        {spaces_before_argument: }
-       {quotation after a blank line}
+       {normal_text:quotation after a blank line}
        {spaces_after_argument:\\n}
     *table_definition C2
      {empty_line:\\n}
@@ -145,20 +145,20 @@ $result_tree_text{'block_commands_in_table'} = '*document_root C5
        *block_line_arg C1
         {spaces_before_argument:\\n}
       *paragraph C1
-       {quotation after a blank line\\n}
+       {normal_text:quotation after a blank line\\n}
       *@end C1 l31
       |EXTRA
       |text_arg:{quotation}
        *line_arg C3
         {spaces_before_argument: }
-        {quotation}
+        {normal_text:quotation}
         {spaces_after_argument:\\n}
    *@end C1 l32
    |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
-     {table}
+     {normal_text:table}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@vtable C3 l34
@@ -175,7 +175,7 @@ $result_tree_text{'block_commands_in_table'} = '*document_root C5
      |index_entry:I{vr,1}
       *line_arg C3
        {spaces_before_argument: }
-       {item before ignored lines}
+       {normal_text:item before ignored lines}
        {spaces_after_argument:\\n}
      *inter_item C1
       *@c C1
@@ -189,7 +189,7 @@ $result_tree_text{'block_commands_in_table'} = '*document_root C5
      |index_entry:I{vr,2}
       *line_arg C3
        {spaces_before_argument: }
-       {vindex}
+       {normal_text:vindex}
        {spaces_after_argument:\\n}
      *@itemx C1 l38
      |EXTRA
@@ -197,18 +197,18 @@ $result_tree_text{'block_commands_in_table'} = '*document_root C5
      |index_entry:I{vr,3}
       *line_arg C3
        {spaces_before_argument: }
-       {itemx now}
+       {normal_text:itemx now}
        {spaces_after_argument:\\n}
     *table_definition C2
      {empty_line:\\n}
      *paragraph C1
-      {Description\\n}
+      {normal_text:Description\\n}
    *@end C1 l41
    |EXTRA
    |text_arg:{vtable}
     *line_arg C3
      {spaces_before_argument: }
-     {vtable}
+     {normal_text:vtable}
      {spaces_after_argument:\\n}
   *@vtable C3 l42
    *arguments_line C1
@@ -224,7 +224,7 @@ $result_tree_text{'block_commands_in_table'} = '*document_root C5
      |index_entry:I{vr,4}
       *line_arg C3
        {spaces_before_argument: }
-       {item}
+       {normal_text:item}
        {spaces_after_argument:\\n}
      *inter_item C1
       {empty_line:\\n}
@@ -234,23 +234,23 @@ $result_tree_text{'block_commands_in_table'} = '*document_root C5
      |index_entry:I{vr,5}
       *line_arg C3
        {spaces_before_argument: }
-       {itemx after an empty line}
+       {normal_text:itemx after an empty line}
        {spaces_after_argument:\\n}
     *table_definition C3
      {empty_line:\\n}
      *paragraph C1
-      {Description.\\n}
+      {normal_text:Description.\\n}
      {empty_line:\\n}
    *@end C1 l49
    |EXTRA
    |text_arg:{vtable}
     *line_arg C3
      {spaces_before_argument: }
-     {vtable}
+     {normal_text:vtable}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {Something.\\n}
+   {normal_text:Something.\\n}
   *@table C4 l52
    *arguments_line C1
     *block_line_arg C3
@@ -262,30 +262,30 @@ $result_tree_text{'block_commands_in_table'} = '*document_root C5
      *@item C1 l53
       *line_arg C3
        {spaces_before_argument: }
-       {in item}
+       {normal_text:in item}
        {spaces_after_argument:\\n}
     *table_definition C1
      *paragraph C1
-      {Text without blank line\\n}
+      {normal_text:Text without blank line\\n}
    *table_entry C2
     *table_term C1
      *@item C1 l55
       *line_arg C3
        {spaces_before_argument: }
-       {second item}
+       {normal_text:second item}
        {spaces_after_argument:\\n}
     *table_definition C1
      *paragraph C1
-      {Text without blank line 2\\n}
+      {normal_text:Text without blank line 2\\n}
    *@end C1 l57
    |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
-     {table}
+     {normal_text:table}
      {spaces_after_argument:\\n}
   *paragraph C1
-   {After table.\\n}
+   {normal_text:After table.\\n}
 ';
 
 

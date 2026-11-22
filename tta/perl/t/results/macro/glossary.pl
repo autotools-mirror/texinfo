@@ -20,7 +20,7 @@ $result_tree_text{'glossary'} = '*document_root C5
    |text_arg:{glossary}
     *line_arg C3
      {spaces_before_argument: }
-     {glossary}
+     {normal_text:glossary}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@macro C3 glossary.texi:l5
@@ -35,7 +35,7 @@ $result_tree_text{'glossary'} = '*document_root C5
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@macro C5 glossary.texi:l9
@@ -52,7 +52,7 @@ $result_tree_text{'glossary'} = '*document_root C5
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@macro C19 glossary.texi:l15
@@ -83,7 +83,7 @@ $result_tree_text{'glossary'} = '*document_root C5
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
  *@node C1 glossary.texi:l35 {Top}
@@ -94,7 +94,7 @@ $result_tree_text{'glossary'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C6 glossary.texi:l36 {Top}
  |EXTRA
@@ -103,7 +103,7 @@ $result_tree_text{'glossary'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C3 glossary.texi:l38
@@ -116,21 +116,21 @@ $result_tree_text{'glossary'} = '*document_root C5
     |EXTRA
     |node_content:A{0|0}
     |normalized:{glossary}
-     {glossary}
+     {normal_text:glossary}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 glossary.texi:l40
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C15
-   {The }
+   {normal_text:The }
    >SOURCEMARKS
    >macro_expansion<start;1><p:4>
     >*macro_call@gentry C3
@@ -154,10 +154,10 @@ $result_tree_text{'glossary'} = '*document_root C5
     |EXTRA
     |node_content:A{0|0}
     |normalized:{id1}
-     {id1}
+     {normal_text:id1}
     *brace_arg C1
-     {name1}
-   {\\n}
+     {normal_text:name1}
+   {normal_text:\\n}
    >SOURCEMARKS
    >expanded_conditional_command<end;1><p:1>
     >*@end C1 glossary.texi:l42:@gentry
@@ -165,7 +165,7 @@ $result_tree_text{'glossary'} = '*document_root C5
     >|text_arg:{ifhtml}
      >*line_arg C3
       >{spaces_before_argument: }
-      >{ifhtml}
+      >{normal_text:ifhtml}
       >{spaces_after_argument:\\n}
    >ignored_conditional_block<1><p:1>
     >*@ifnothtml C3 glossary.texi:l42:@gentry
@@ -178,7 +178,7 @@ $result_tree_text{'glossary'} = '*document_root C5
      >|text_arg:{ifnothtml}
       >*line_arg C3
        >{spaces_before_argument: }
-       >{ifnothtml}
+       >{normal_text:ifnothtml}
        >{spaces_after_argument:\\n}
    *@unmacro C1
    |EXTRA
@@ -210,7 +210,7 @@ $result_tree_text{'glossary'} = '*document_root C5
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    *@unmacro C1
    |EXTRA
@@ -235,11 +235,11 @@ $result_tree_text{'glossary'} = '*document_root C5
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       >SOURCEMARKS
       >macro_expansion<end;2><p:5>
       {spaces_after_argument:\\n}
-   { is used in many cases while\\n}
+   {normal_text: is used in many cases while\\n}
    >SOURCEMARKS
    >macro_expansion<start;3><p:29>
     >*macro_call@gentry C3
@@ -261,10 +261,10 @@ $result_tree_text{'glossary'} = '*document_root C5
     |EXTRA
     |node_content:A{0|0}
     |normalized:{id2}
-     {id2}
+     {normal_text:id2}
     *brace_arg C1
-     {name2}
-   {\\n}
+     {normal_text:name2}
+   {normal_text:\\n}
    >SOURCEMARKS
    >expanded_conditional_command<end;2><p:1>
     >*@end C1 glossary.texi:l43:@gentry
@@ -272,7 +272,7 @@ $result_tree_text{'glossary'} = '*document_root C5
     >|text_arg:{ifhtml}
      >*line_arg C3
       >{spaces_before_argument: }
-      >{ifhtml}
+      >{normal_text:ifhtml}
       >{spaces_after_argument:\\n}
    >ignored_conditional_block<2><p:1>
     >*@ifnothtml C3 glossary.texi:l43:@gentry
@@ -285,7 +285,7 @@ $result_tree_text{'glossary'} = '*document_root C5
      >|text_arg:{ifnothtml}
       >*line_arg C3
        >{spaces_before_argument: }
-       >{ifnothtml}
+       >{normal_text:ifnothtml}
        >{spaces_after_argument:\\n}
    *@unmacro C1
    |EXTRA
@@ -317,7 +317,7 @@ $result_tree_text{'glossary'} = '*document_root C5
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    *@unmacro C1
    |EXTRA
@@ -342,11 +342,11 @@ $result_tree_text{'glossary'} = '*document_root C5
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       >SOURCEMARKS
       >macro_expansion<end;4><p:5>
       {spaces_after_argument:\\n}
-   { is quite specific\\n}
+   {normal_text: is quite specific\\n}
   {empty_line:\\n}
  *@node C1 glossary.texi:l45 {glossary}
  |EXTRA
@@ -356,7 +356,7 @@ $result_tree_text{'glossary'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {glossary}
+    {normal_text:glossary}
     {spaces_after_argument:\\n}
  *@chapter C6 glossary.texi:l46 {glossary}
  |EXTRA
@@ -366,7 +366,7 @@ $result_tree_text{'glossary'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {glossary}
+    {normal_text:glossary}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   >SOURCEMARKS
@@ -382,15 +382,15 @@ $result_tree_text{'glossary'} = '*document_root C5
   *paragraph C4
   >SOURCEMARKS
   >macro_expansion<end;5>
-   {name2 }
+   {normal_text:name2 }
    *@anchor C1 glossary.texi:l47:@glossarytext
    |EXTRA
    |identifier:{id2}
    |is_target:{1}
     *brace_arg C1
-     {id2}
+     {normal_text:id2}
    {spaces_after_close_brace:\\n}
-   {text2\\n}
+   {normal_text:text2\\n}
    >SOURCEMARKS
    >macro_expansion<end;6><p:5>
   {empty_line:\\n}

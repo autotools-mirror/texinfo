@@ -28,7 +28,7 @@ $result_tree_text{'epub_conditionals'} = '*document_root C5
       >|text_arg:{ifepub}
        >*line_arg C3
         >{spaces_before_argument: }
-        >{ifepub}
+        >{normal_text:ifepub}
         >{spaces_after_argument:\\n}
     >expanded_conditional_command<start;1>
      >*@ifnotepub C1 l6
@@ -37,7 +37,7 @@ $result_tree_text{'epub_conditionals'} = '*document_root C5
         >{spaces_before_argument:\\n}
      *line_arg C3
       {spaces_before_argument: }
-      {title}
+      {normal_text:title}
       {spaces_after_argument:\\n}
     *@subtitle C1 l7
     |EXTRA
@@ -49,18 +49,18 @@ $result_tree_text{'epub_conditionals'} = '*document_root C5
      >|text_arg:{ifnotepub}
       >*line_arg C3
        >{spaces_before_argument: }
-       >{ifnotepub}
+       >{normal_text:ifnotepub}
        >{spaces_after_argument:\\n}
      *line_arg C3
       {spaces_before_argument: }
-      {Online}
+      {normal_text:Online}
       {spaces_after_argument:\\n}
     *@end C1 l9
     |EXTRA
     |text_arg:{documentinfo}
      *line_arg C3
       {spaces_before_argument: }
-      {documentinfo}
+      {normal_text:documentinfo}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *@maketitle C1 l11
@@ -75,7 +75,7 @@ $result_tree_text{'epub_conditionals'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l14 {top}
  |EXTRA
@@ -84,7 +84,7 @@ $result_tree_text{'epub_conditionals'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l16 {chapter}
@@ -95,7 +95,7 @@ $result_tree_text{'epub_conditionals'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter}
+    {normal_text:chapter}
     {spaces_after_argument:\\n}
  *@chapter C7 l17 {Chap}
  |EXTRA
@@ -105,7 +105,7 @@ $result_tree_text{'epub_conditionals'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chap}
+    {normal_text:Chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   >SOURCEMARKS
@@ -122,11 +122,11 @@ $result_tree_text{'epub_conditionals'} = '*document_root C5
     >|text_arg:{ifepub}
      >*line_arg C3
       >{spaces_before_argument: }
-      >{ifepub}
+      >{normal_text:ifepub}
       >{spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {Some content\\n}
+   {normal_text:Some content\\n}
   {empty_line:\\n}
   >SOURCEMARKS
   >ignored_conditional_block<3><p:1>
@@ -142,28 +142,28 @@ $result_tree_text{'epub_conditionals'} = '*document_root C5
     >|text_arg:{ifepub}
      >*line_arg C3
       >{spaces_before_argument: }
-      >{ifepub}
+      >{normal_text:ifepub}
       >{spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C6
-   {Text }
+   {normal_text:Text }
    *@inlinefmt C2 l33
    |EXTRA
    |format:{epub}
     *brace_arg C1
-     {epub}
+     {normal_text:epub}
     *elided_brace_command_arg C1
      {raw: here if EPUB}
-   {.\\n}
-   {Format }
+   {normal_text:.\\n}
+   {normal_text:Format }
    *@inlineraw C2 l34
    |EXTRA
    |format:{epub}
     *brace_arg C1
-     {epub}
+     {normal_text:epub}
     *elided_brace_command_arg C1
      {raw: <section>raw EPUB</section>}
-   {.\\n}
+   {normal_text:.\\n}
 ';
 
 

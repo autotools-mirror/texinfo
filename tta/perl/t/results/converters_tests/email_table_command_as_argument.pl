@@ -22,19 +22,19 @@ $result_tree_text{'email_table_command_as_argument'} = '*document_root C1
      *@item C1 l2
       *line_arg C5
        {spaces_before_argument: }
-       {www-discuss}
+       {normal_text:www-discuss}
        *@@
-       {gnu.org}
+       {normal_text:gnu.org}
        {spaces_after_argument:\\n}
     *table_definition C1
      *paragraph C1
-      {discussion\\n}
+      {normal_text:discussion\\n}
    *@end C1 l4
    |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
-     {table}
+     {normal_text:table}
      {spaces_after_argument:\\n}
 ';
 

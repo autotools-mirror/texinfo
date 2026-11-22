@@ -19,7 +19,7 @@ $result_tree_text{'conversion_with_undef_customization'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C5 l2 {top}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'conversion_with_undef_customization'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@contents C1 l4
@@ -50,10 +50,10 @@ $result_tree_text{'conversion_with_undef_customization'} = '*document_root C7
   *arguments_line C1
    *line_arg C4
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     *@^ C1 l7
      *following_arg C1
-      {e}
+      {normal_text:e}
     {spaces_after_argument:\\n}
  *@chapter C6 l8 {Chap@^e}
  |EXTRA
@@ -63,24 +63,24 @@ $result_tree_text{'conversion_with_undef_customization'} = '*document_root C7
   *arguments_line C1
    *line_arg C4
     {spaces_before_argument: }
-    {Chap}
+    {normal_text:Chap}
     *@^ C1 l8
      *following_arg C1
-      {e}
+      {normal_text:e}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C3
-   {Text}
+   {normal_text:Text}
    *@footnote C1 l10
    |EXTRA
    |global_command_number:{1}
     *brace_command_context C1
      *paragraph C2
-      {Go }
+      {normal_text:Go }
       *@samp C1 l10
        *brace_container C1
-        {s}
-   {\\n}
+        {normal_text:s}
+   {normal_text:\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 l12
   |EXTRA
@@ -88,7 +88,7 @@ $result_tree_text{'conversion_with_undef_customization'} = '*document_root C7
   |index_entry:I{cp,1}
    *line_arg C3
     {spaces_before_argument: }
-    {entry}
+    {normal_text:entry}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l14 {sec}
@@ -100,7 +100,7 @@ $result_tree_text{'conversion_with_undef_customization'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {sec}
+    {normal_text:sec}
     {spaces_after_argument:\\n}
  *@section C5 l15 {Section}
  |EXTRA
@@ -110,7 +110,7 @@ $result_tree_text{'conversion_with_undef_customization'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Section}
+    {normal_text:Section}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@printindex C1 l17
@@ -119,7 +119,7 @@ $result_tree_text{'conversion_with_undef_customization'} = '*document_root C7
   |misc_args:A{cp}
    *line_arg C3
     {spaces_before_argument: }
-    {cp}
+    {normal_text:cp}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypefn C3 l19
@@ -133,37 +133,37 @@ $result_tree_text{'conversion_with_undef_customization'} = '*document_root C7
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {category}
+       {normal_text:category}
      {spaces: }
      *def_type C1
       *def_line_arg C1
-       {type}
+       {normal_text:type}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {name}
+       {normal_text:name}
      {spaces: }
      *def_typearg C1
       *def_line_arg C1
-       {something}
+       {normal_text:something}
      {spaces: }
      {delimiter:(}
      {spaces: }
      *def_typearg C1
       *def_line_arg C1
-       {aa}
+       {normal_text:aa}
      {spaces: }
      {delimiter:)}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {A def.\\n}
+     {normal_text:A def.\\n}
    *@end C1 l21
    |EXTRA
    |text_arg:{deftypefn}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypefn}
+     {normal_text:deftypefn}
      {spaces_after_argument:\\n}
 ';
 

@@ -19,7 +19,7 @@ $result_tree_text{'menu_pointing_to_anchor'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C8 l2 {top}
  |EXTRA
@@ -28,18 +28,18 @@ $result_tree_text{'menu_pointing_to_anchor'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {Text\\n}
+   {normal_text:Text\\n}
   {empty_line:\\n}
   *@anchor C1 l6
   |EXTRA
   |identifier:{An-anchor}
   |is_target:{1}
    *brace_arg C1
-    {An anchor}
+    {normal_text:An anchor}
   {spaces_after_close_brace:\\n}
   {empty_line:\\n}
   *@menu C3 l8
@@ -52,17 +52,17 @@ $result_tree_text{'menu_pointing_to_anchor'} = '*document_root C3
     |EXTRA
     |node_content:A{0|0}
     |normalized:{An-anchor}
-     {An anchor}
+     {normal_text:An anchor}
     {menu_entry_separator:::                }
     *menu_entry_description C1
      *preformatted C1
-      {menu entry pointing to the anchor.\\n}
+      {normal_text:menu entry pointing to the anchor.\\n}
    *@end C1 l10
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
 ';
 

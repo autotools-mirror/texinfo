@@ -25,7 +25,7 @@ $result_tree_text{'call_macro_in_linemacro_body'} = '*document_root C1
     |text_arg:{linemacro}
      *line_arg C3
       {spaces_before_argument: }
-      {linemacro}
+      {normal_text:linemacro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@macro C5 l7
@@ -42,7 +42,7 @@ $result_tree_text{'call_macro_in_linemacro_body'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    >SOURCEMARKS
@@ -72,26 +72,26 @@ $result_tree_text{'call_macro_in_linemacro_body'} = '*document_root C1
     *paragraph C3
      *@var C1 l14:@mymacro
       *brace_container C1
-       {something}
-     {\\n}
-     {now second arg: gg \\n}
+       {normal_text:something}
+     {normal_text:\\n}
+     {normal_text:now second arg: gg \\n}
    *table_entry C2
     *table_term C1
      *@item C1 l14:@mymacro
       *line_arg C3
        {spaces_before_argument: }
-       {yy}
+       {normal_text:yy}
        {spaces_after_argument: \\n}
     *table_definition C2
      {spaces_before_paragraph:  }
      *paragraph C1
-      {zz\\n}
+      {normal_text:zz\\n}
    *@end C1 l14:@mymacro
    |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
-     {table}
+     {normal_text:table}
      >SOURCEMARKS
      >macro_expansion<end;1><p:5>
      >linemacro_expansion<end;1><p:5>

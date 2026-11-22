@@ -17,7 +17,7 @@ $result_tree_text{'latex_tagged_pdf_customized'} = '*document_root C5
    |text_arg:{sr}
     *line_arg C3
      {spaces_before_argument: }
-     {sr}
+     {normal_text:sr}
      {spaces_after_argument:\\n}
    *@documentscript C1 l2
    |EXTRA
@@ -25,7 +25,7 @@ $result_tree_text{'latex_tagged_pdf_customized'} = '*document_root C5
    |text_arg:{Latn}
     *line_arg C3
      {spaces_before_argument: }
-     {Latn}
+     {normal_text:Latn}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *@node C1 l4 {Top}
@@ -36,7 +36,7 @@ $result_tree_text{'latex_tagged_pdf_customized'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l5 {top}
  |EXTRA
@@ -45,7 +45,7 @@ $result_tree_text{'latex_tagged_pdf_customized'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l7 {chap}
@@ -56,7 +56,7 @@ $result_tree_text{'latex_tagged_pdf_customized'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
  *@chapter C2 l8 {Chap}
  |EXTRA
@@ -66,7 +66,7 @@ $result_tree_text{'latex_tagged_pdf_customized'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chap}
+    {normal_text:Chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
 ';

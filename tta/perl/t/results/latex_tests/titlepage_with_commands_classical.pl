@@ -16,13 +16,13 @@ $result_tree_text{'titlepage_with_commands_classical'} = '*document_root C5
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *paragraph C1
-     {in Copying\\n}
+     {normal_text:in Copying\\n}
     *@end C1 l3
     |EXTRA
     |text_arg:{copying}
      *line_arg C3
       {spaces_before_argument: }
-      {copying}
+      {normal_text:copying}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@titlepage C12 l5
@@ -32,71 +32,71 @@ $result_tree_text{'titlepage_with_commands_classical'} = '*document_root C5
     *@title C1 l6
      *line_arg C5
       {spaces_before_argument: }
-      {Some manual }
+      {normal_text:Some manual }
       *@*
-      { tested}
+      {normal_text: tested}
       {spaces_after_argument:\\n}
     *@subtitle C1 l7
     |EXTRA
     |global_command_number:{1}
      *line_arg C5
       {spaces_before_argument: }
-      {Subtitle manual }
+      {normal_text:Subtitle manual }
       *@*
-      { tested}
+      {normal_text: tested}
       {spaces_after_argument:\\n}
     *@subtitle C1 l8
     |EXTRA
     |global_command_number:{2}
      *line_arg C5
       {spaces_before_argument: }
-      {Subtitle 2 manual }
+      {normal_text:Subtitle 2 manual }
       *@*
-      { tested}
+      {normal_text: tested}
       {spaces_after_argument:\\n}
     *@author C1 l9
     |EXTRA
     |global_command_number:{1}
      *line_arg C5
       {spaces_before_argument: }
-      {First }
+      {normal_text:First }
       *@*
-      { author}
+      {normal_text: author}
       {spaces_after_argument:\\n}
     *@author C1 l10
     |EXTRA
     |global_command_number:{2}
      *line_arg C6
       {spaces_before_argument: }
-      {Second }
+      {normal_text:Second }
       *@*
-      { author}
+      {normal_text: author}
       *@footnote C1 l10
       |EXTRA
       |global_command_number:{1}
        *brace_command_context C4
         *paragraph C2
-         {Something\\n}
-         {about the address of author.\\n}
+         {normal_text:Something\\n}
+         {normal_text:about the address of author.\\n}
         {empty_line:\\n}
         *paragraph C1
-         {Something about the life. \\n}
+         {normal_text:Something about the life. \\n}
         *@displaymath C6 l14
          *arguments_line C1
           *block_line_arg C1
            {spaces_before_argument:\\n}
-         {\\frac}
+         {normal_text:\\frac}
          *balanced_braces C1 l15
-          {{a}}
+          {normal_text:{a}}
          *balanced_braces C1 l15
-          {{b}}
-         {\\n}
+          {normal_text:{b}}
+         {normal_text:\\n}
          *@end C1 l16
          |EXTRA
          |text_arg:{displaymath}
           *line_arg C3
            {spaces_before_argument: }
-           {displaymath}
+           {normal_text:displaymath}
            {spaces_after_argument:\\n}
       {spaces_after_argument:\\n}
     *@page C1
@@ -125,7 +125,7 @@ $result_tree_text{'titlepage_with_commands_classical'} = '*document_root C5
     |text_arg:{titlepage}
      *line_arg C3
       {spaces_before_argument: }
-      {titlepage}
+      {normal_text:titlepage}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
  *@node C1 l25 {Top}
@@ -136,7 +136,7 @@ $result_tree_text{'titlepage_with_commands_classical'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l26 {section top}
  |EXTRA
@@ -145,7 +145,7 @@ $result_tree_text{'titlepage_with_commands_classical'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {section top}
+    {normal_text:section top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l28 {chapter}
@@ -156,7 +156,7 @@ $result_tree_text{'titlepage_with_commands_classical'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter}
+    {normal_text:chapter}
     {spaces_after_argument:\\n}
  *@chapter C4 l29 {Chapter}
  |EXTRA
@@ -166,11 +166,11 @@ $result_tree_text{'titlepage_with_commands_classical'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chapter}
+    {normal_text:Chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {In chapter\\n}
+   {normal_text:In chapter\\n}
   {empty_line:\\n}
 ';
 

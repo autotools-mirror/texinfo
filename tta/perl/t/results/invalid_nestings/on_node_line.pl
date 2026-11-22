@@ -23,52 +23,52 @@ $result_tree_text{'on_node_line'} = '*document_root C2
      *brace_arg C1
      |EXTRA
      |node_content:A{0|0}
-      {a}
+      {normal_text:a}
      *brace_arg C2
       {spaces_before_argument: }
-      {b}
+      {normal_text:b}
      *brace_arg C2
       {spaces_before_argument: }
-      {c}
+      {normal_text:c}
      *brace_arg C2
       {spaces_before_argument: }
-      {filename}
+      {normal_text:filename}
    *line_arg C9
    |EXTRA
    |manual_content:A{2|2}
    |node_content:A{5|8}
    |normalized:{-}
     {spaces_before_argument: }
-    {(}
+    {normal_text:(}
     *@pxref C4 l1
      *brace_arg C1
      |EXTRA
      |node_content:A{0|0}
-      {Top}
+      {normal_text:Top}
      *brace_arg
      *brace_arg
      *brace_arg C2
       {spaces_before_argument: }
-      {somemanual}
-    {)}
-    { }
+      {normal_text:somemanual}
+    {normal_text:)}
+    {normal_text: }
     *@anchor C1 l1
     |EXTRA
     |identifier:{in-anchor}
     |is_target:{1}
      *brace_arg C1
-      {in anchor}
+      {normal_text:in anchor}
     *@footnote C1 l1
     |EXTRA
     |global_command_number:{1}
      *brace_command_context C1
       *paragraph C1
-       {footnote}
-    { }
+       {normal_text:footnote}
+    {normal_text: }
     *@exdent C1 l1
      *line_arg C3
       {spaces_before_argument: }
-      {exdent}
+      {normal_text:exdent}
       {spaces_after_argument:\\n}
 ';
 

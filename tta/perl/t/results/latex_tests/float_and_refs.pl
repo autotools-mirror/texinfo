@@ -19,7 +19,7 @@ $result_tree_text{'float_and_refs'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l2 {top}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'float_and_refs'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l4 {chapter}
@@ -39,7 +39,7 @@ $result_tree_text{'float_and_refs'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter}
+    {normal_text:chapter}
     {spaces_after_argument:\\n}
  *@chapter C8 l5 {chapter}
  |EXTRA
@@ -49,7 +49,7 @@ $result_tree_text{'float_and_refs'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter}
+    {normal_text:chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@float C7 l7
@@ -64,26 +64,26 @@ $result_tree_text{'float_and_refs'} = '*document_root C7
      {spaces_before_argument: }
     *block_line_arg C3
      {spaces_before_argument: }
-     {no type}
+     {normal_text:no type}
      {spaces_after_argument:\\n}
    *paragraph C1
-    {no type\\n}
+    {normal_text:no type\\n}
    *@caption C1 l9
     *brace_command_context C1
      *paragraph C1
-      {no type float}
+      {normal_text:no type float}
    {spaces_after_close_brace:\\n}
    *@shortcaption C1 l10
     *brace_command_context C1
      *paragraph C1
-      {short no type float}
+      {normal_text:short no type float}
    {spaces_after_close_brace:\\n}
    *@end C1 l11
    |EXTRA
    |text_arg:{float}
     *line_arg C3
      {spaces_before_argument: }
-     {float}
+     {normal_text:float}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@float C7 l13
@@ -96,29 +96,29 @@ $result_tree_text{'float_and_refs'} = '*document_root C7
    *arguments_line C2
     *block_line_arg C2
      {spaces_before_argument: }
-     {Thing}
+     {normal_text:Thing}
     *block_line_arg C3
      {spaces_before_argument: }
-     {with type}
+     {normal_text:with type}
      {spaces_after_argument:\\n}
    *paragraph C1
-    {Something with\\n}
+    {normal_text:Something with\\n}
    *@caption C1 l15
     *brace_command_context C1
      *paragraph C1
-      {with type float}
+      {normal_text:with type float}
    {spaces_after_close_brace:\\n}
    *@shortcaption C1 l16
     *brace_command_context C1
      *paragraph C1
-      {short with type float}
+      {normal_text:short with type float}
    {spaces_after_close_brace:\\n}
    *@end C1 l17
    |EXTRA
    |text_arg:{float}
     *line_arg C3
      {spaces_before_argument: }
-     {float}
+     {normal_text:float}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@float C7 l19
@@ -131,29 +131,29 @@ $result_tree_text{'float_and_refs'} = '*document_root C7
    *arguments_line C2
     *block_line_arg C2
      {spaces_before_argument: }
-     {Figure}
+     {normal_text:Figure}
     *block_line_arg C3
      {spaces_before_argument: }
-     {my figure}
+     {normal_text:my figure}
      {spaces_after_argument:\\n}
    *paragraph C1
-    {In figure\\n}
+    {normal_text:In figure\\n}
    *@caption C1 l21
     *brace_command_context C1
      *paragraph C1
-      {caption for figure}
+      {normal_text:caption for figure}
    {spaces_after_close_brace:\\n}
    *@shortcaption C1 l22
     *brace_command_context C1
      *paragraph C1
-      {short caption for figure}
+      {normal_text:short caption for figure}
    {spaces_after_close_brace:\\n}
    *@end C1 l23
    |EXTRA
    |text_arg:{float}
     *line_arg C3
      {spaces_before_argument: }
-     {float}
+     {normal_text:float}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@chapter C8 l25 {refs}
@@ -166,7 +166,7 @@ $result_tree_text{'float_and_refs'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {refs}
+    {normal_text:refs}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C10
@@ -175,64 +175,64 @@ $result_tree_text{'float_and_refs'} = '*document_root C7
     |EXTRA
     |node_content:A{0|0}
     |normalized:{no-type}
-     {no type}
-   {.\\n}
+     {normal_text:no type}
+   {normal_text:.\\n}
    *@xref C2 l28
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{no-type}
-     {no type}
+     {normal_text:no type}
     *brace_arg C2
      {spaces_before_argument: }
-     {two}
-   {.\\n}
+     {normal_text:two}
+   {normal_text:.\\n}
    *@xref C3 l29
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{no-type}
-     {no type}
+     {normal_text:no type}
     *brace_arg C2
      {spaces_before_argument: }
-     {two}
+     {normal_text:two}
     *brace_arg C2
      {spaces_before_argument: }
-     {three}
-   {.\\n}
+     {normal_text:three}
+   {normal_text:.\\n}
    *@xref C4 l30
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
-     {no type}
+     {normal_text:no type}
     *brace_arg C2
      {spaces_before_argument: }
-     {two}
+     {normal_text:two}
     *brace_arg C2
      {spaces_before_argument: }
-     {three}
+     {normal_text:three}
     *brace_arg C2
      {spaces_before_argument: }
-     {four}
-   {.\\n}
+     {normal_text:four}
+   {normal_text:.\\n}
    *@xref C5 l31
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
-     {no type}
+     {normal_text:no type}
     *brace_arg C2
      {spaces_before_argument: }
-     {two}
+     {normal_text:two}
     *brace_arg C2
      {spaces_before_argument: }
-     {three}
+     {normal_text:three}
     *brace_arg C2
      {spaces_before_argument: }
-     {four}
+     {normal_text:four}
     *brace_arg C2
      {spaces_before_argument: }
-     {five}
-   {.\\n}
+     {normal_text:five}
+   {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C10
    *@xref C1 l33
@@ -240,64 +240,64 @@ $result_tree_text{'float_and_refs'} = '*document_root C7
     |EXTRA
     |node_content:A{0|0}
     |normalized:{with-type}
-     {with type}
-   {.\\n}
+     {normal_text:with type}
+   {normal_text:.\\n}
    *@xref C2 l34
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{with-type}
-     {with type}
+     {normal_text:with type}
     *brace_arg C2
      {spaces_before_argument: }
-     {two}
-   {.\\n}
+     {normal_text:two}
+   {normal_text:.\\n}
    *@xref C3 l35
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{with-type}
-     {with type}
+     {normal_text:with type}
     *brace_arg C2
      {spaces_before_argument: }
-     {two}
+     {normal_text:two}
     *brace_arg C2
      {spaces_before_argument: }
-     {three}
-   {.\\n}
+     {normal_text:three}
+   {normal_text:.\\n}
    *@xref C4 l36
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
-     {with type}
+     {normal_text:with type}
     *brace_arg C2
      {spaces_before_argument: }
-     {two}
+     {normal_text:two}
     *brace_arg C2
      {spaces_before_argument: }
-     {three}
+     {normal_text:three}
     *brace_arg C2
      {spaces_before_argument: }
-     {four}
-   {.\\n}
+     {normal_text:four}
+   {normal_text:.\\n}
    *@xref C5 l37
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
-     {with type}
+     {normal_text:with type}
     *brace_arg C2
      {spaces_before_argument: }
-     {two}
+     {normal_text:two}
     *brace_arg C2
      {spaces_before_argument: }
-     {three}
+     {normal_text:three}
     *brace_arg C2
      {spaces_before_argument: }
-     {four}
+     {normal_text:four}
     *brace_arg C2
      {spaces_before_argument: }
-     {five}
-   {.\\n}
+     {normal_text:five}
+   {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C10
    *@xref C1 l39
@@ -305,64 +305,64 @@ $result_tree_text{'float_and_refs'} = '*document_root C7
     |EXTRA
     |node_content:A{0|0}
     |normalized:{my-figure}
-     {my figure}
-   {.\\n}
+     {normal_text:my figure}
+   {normal_text:.\\n}
    *@xref C2 l40
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{my-figure}
-     {my figure}
+     {normal_text:my figure}
     *brace_arg C2
      {spaces_before_argument: }
-     {two}
-   {.\\n}
+     {normal_text:two}
+   {normal_text:.\\n}
    *@xref C3 l41
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{my-figure}
-     {my figure}
+     {normal_text:my figure}
     *brace_arg C2
      {spaces_before_argument: }
-     {two}
+     {normal_text:two}
     *brace_arg C2
      {spaces_before_argument: }
-     {three}
-   {.\\n}
+     {normal_text:three}
+   {normal_text:.\\n}
    *@xref C4 l42
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
-     {my figure}
+     {normal_text:my figure}
     *brace_arg C2
      {spaces_before_argument: }
-     {two}
+     {normal_text:two}
     *brace_arg C2
      {spaces_before_argument: }
-     {three}
+     {normal_text:three}
     *brace_arg C2
      {spaces_before_argument: }
-     {four}
-   {.\\n}
+     {normal_text:four}
+   {normal_text:.\\n}
    *@xref C5 l43
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
-     {my figure}
+     {normal_text:my figure}
     *brace_arg C2
      {spaces_before_argument: }
-     {two}
+     {normal_text:two}
     *brace_arg C2
      {spaces_before_argument: }
-     {three}
+     {normal_text:three}
     *brace_arg C2
      {spaces_before_argument: }
-     {four}
+     {normal_text:four}
     *brace_arg C2
      {spaces_before_argument: }
-     {five}
-   {.\\n}
+     {normal_text:five}
+   {normal_text:.\\n}
   {empty_line:\\n}
  *@chapter C6 l45 {lists}
  |EXTRA
@@ -374,7 +374,7 @@ $result_tree_text{'float_and_refs'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {lists}
+    {normal_text:lists}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@listoffloats C1 l47
@@ -389,7 +389,7 @@ $result_tree_text{'float_and_refs'} = '*document_root C7
   |global_command_number:{2}
    *line_arg C3
     {spaces_before_argument: }
-    {Figure}
+    {normal_text:Figure}
     {spaces_after_argument:\\n}
   *@listoffloats C1 l49
   |EXTRA
@@ -397,7 +397,7 @@ $result_tree_text{'float_and_refs'} = '*document_root C7
   |global_command_number:{3}
    *line_arg C3
     {spaces_before_argument: }
-    {Thing}
+    {normal_text:Thing}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
 ';

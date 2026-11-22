@@ -25,13 +25,13 @@ $result_tree_text{'comments'} = '*document_root C1
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C4
-   {something }
+   {normal_text:something }
    *@verb C1 l4
     *brace_container C3
      {verb_delimiter:,}
      {raw: in verb}
      {verb_delimiter:,}
-   { }
+   {normal_text: }
    *@c C1
     *line_arg C2
      {spaces_before_argument: }

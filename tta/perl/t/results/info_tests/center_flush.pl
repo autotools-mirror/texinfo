@@ -14,7 +14,7 @@ $result_tree_text{'center_flush'} = '*document_root C1
   *@center C1 l1
    *line_arg C3
     {spaces_before_argument: }
-    {centered}
+    {normal_text:centered}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@flushleft C10 l3
@@ -22,33 +22,33 @@ $result_tree_text{'center_flush'} = '*document_root C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C2
-    {left and\\n}
-    {left2\\n}
+    {normal_text:left and\\n}
+    {normal_text:left2\\n}
    {empty_line:\\n}
    *paragraph C1
-    {left3.\\n}
+    {normal_text:left3.\\n}
    {empty_line:\\n}
    {empty_line:\\n}
    *paragraph C2
-    {left Last\\n}
-    {  with space.\\n}
+    {normal_text:left Last\\n}
+    {normal_text:  with space.\\n}
    {empty_line:\\n}
    *paragraph C4
-    {Now anchor\\n}
+    {normal_text:Now anchor\\n}
     *@anchor C1 l14
     |EXTRA
     |identifier:{anchor-in-flushleft}
     |is_target:{1}
      *brace_arg C1
-      {anchor in flushleft}
+      {normal_text:anchor in flushleft}
     {spaces_after_close_brace:\\n}
-    {after anchor\\n}
+    {normal_text:after anchor\\n}
    *@end C1 l16
    |EXTRA
    |text_arg:{flushleft}
     *line_arg C3
      {spaces_before_argument: }
-     {flushleft}
+     {normal_text:flushleft}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@flushright C10 l18
@@ -56,42 +56,42 @@ $result_tree_text{'center_flush'} = '*document_root C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C2
-    {right and\\n}
-    {right2\\n}
+    {normal_text:right and\\n}
+    {normal_text:right2\\n}
    {empty_line:\\n}
    *paragraph C1
-    {Right3\\n}
+    {normal_text:Right3\\n}
    {empty_line:\\n}
    {empty_line:\\n}
    *paragraph C2
-    {Right last\\n}
-    {  with space.     \\n}
+    {normal_text:Right last\\n}
+    {normal_text:  with space.     \\n}
    {empty_line:\\n}
    *paragraph C8
-    {Now anchor\\n}
+    {normal_text:Now anchor\\n}
     *@anchor C1 l29
     |EXTRA
     |identifier:{anchor-in-flushright}
     |is_target:{1}
      *brace_arg C1
-      {anchor in flushright}
+      {normal_text:anchor in flushright}
     {spaces_after_close_brace:\\n}
-    {after anchor\\n}
-    {Second anchor in text }
+    {normal_text:after anchor\\n}
+    {normal_text:Second anchor in text }
     *@anchor C1 l31
     |EXTRA
     |identifier:{second-anchor-in-flushright}
     |is_target:{1}
      *brace_arg C1
-      {second anchor in flushright}
+      {normal_text:second anchor in flushright}
     {spaces_after_close_brace: }
-    {after anchor.\\n}
+    {normal_text:after anchor.\\n}
    *@end C1 l32
    |EXTRA
    |text_arg:{flushright}
     *line_arg C3
      {spaces_before_argument: }
-     {flushright}
+     {normal_text:flushright}
      {spaces_after_argument:\\n}
 ';
 

@@ -17,14 +17,14 @@ $result_tree_text{'anchor_in_copying_in_footnote'} = '*document_root C3
       {spaces_before_argument:\\n}
     {empty_line:\\n}
     *paragraph C3
-     {Copying}
+     {normal_text:Copying}
      *@footnote C1 l3
      |EXTRA
      |global_command_number:{1}
       *brace_command_context C2
        {spaces_before_argument:\\n}
        *paragraph C3
-        {In footnote.\\n}
+        {normal_text:In footnote.\\n}
         *@anchor C1 l5
         |EXTRA
         |identifier:{Copying-footnote}
@@ -32,16 +32,16 @@ $result_tree_text{'anchor_in_copying_in_footnote'} = '*document_root C3
          *brace_arg C1
          |EXTRA
          |element_region:{copying}
-          {Copying footnote}
+          {normal_text:Copying footnote}
         {spaces_after_close_brace:\\n}
-     {.\\n}
+     {normal_text:.\\n}
     {empty_line:\\n}
     *@end C1 l8
     |EXTRA
     |text_arg:{copying}
      *line_arg C3
       {spaces_before_argument: }
-      {copying}
+      {normal_text:copying}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
  *@node C2 l10 {Top}
@@ -52,7 +52,7 @@ $result_tree_text{'anchor_in_copying_in_footnote'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C8 l12 {chap}
@@ -63,7 +63,7 @@ $result_tree_text{'anchor_in_copying_in_footnote'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@insertcopying C1 l14
@@ -84,8 +84,8 @@ $result_tree_text{'anchor_in_copying_in_footnote'} = '*document_root C3
     |EXTRA
     |node_content:A{0|0}
     |normalized:{Copying-footnote}
-     {Copying footnote}
-   {.\\n}
+     {normal_text:Copying footnote}
+   {normal_text:.\\n}
   {empty_line:\\n}
 ';
 

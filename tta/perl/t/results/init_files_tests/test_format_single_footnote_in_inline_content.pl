@@ -19,7 +19,7 @@ $result_tree_text{'test_format_single_footnote_in_inline_content'} = '*document_
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l2 {top}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'test_format_single_footnote_in_inline_content'} = '*document_
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l4 {chap}
@@ -39,7 +39,7 @@ $result_tree_text{'test_format_single_footnote_in_inline_content'} = '*document_
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
  *@chapter C9 l5 {Chap}
  |EXTRA
@@ -49,21 +49,21 @@ $result_tree_text{'test_format_single_footnote_in_inline_content'} = '*document_
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chap}
+    {normal_text:Chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C3
-   {a}
+   {normal_text:a}
    *@footnote C1 l7
    |EXTRA
    |global_command_number:{1}
     *brace_command_context C1
      *paragraph C1
-      {In the footnote}
-   {.\\n}
+      {normal_text:In the footnote}
+   {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C3
-   {b}
+   {normal_text:b}
    *@footnote C1 l9
    |EXTRA
    |global_command_number:{2}
@@ -79,29 +79,29 @@ $result_tree_text{'test_format_single_footnote_in_inline_content'} = '*document_
        *block_line_arg C1
         {spaces_before_argument:\\n}
       *preformatted C1
-       {in    example\\n}
+       {normal_text:in    example\\n}
       *@end C1 l13
       |EXTRA
       |text_arg:{example}
        *line_arg C3
         {spaces_before_argument: }
-        {example}
+        {normal_text:example}
         {spaces_after_argument:\\n}
-   {\\n}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C3
-   {c}
+   {normal_text:c}
    *@footnote C1 l16
    |EXTRA
    |global_command_number:{3}
     *brace_command_context C3
      {spaces_before_argument:\\n}
      *@*
-     {\\n}
-   {\\n}
+     {normal_text:\\n}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C3
-   {d}
+   {normal_text:d}
    *@footnote C1 l20
    |EXTRA
    |global_command_number:{4}
@@ -111,25 +111,25 @@ $result_tree_text{'test_format_single_footnote_in_inline_content'} = '*document_
       *arguments_line C1
        *block_line_arg C3
         {spaces_before_argument: }
-        {qtitle}
+        {normal_text:qtitle}
         {spaces_after_argument:\\n}
       *@author C1 l22
       |EXTRA
       |global_command_number:{1}
        *line_arg C3
         {spaces_before_argument: }
-        {Me}
+        {normal_text:Me}
         {spaces_after_argument:\\n}
       *paragraph C1
-       {In quotation\\n}
+       {normal_text:In quotation\\n}
       *@end C1 l24
       |EXTRA
       |text_arg:{quotation}
        *line_arg C3
         {spaces_before_argument: }
-        {quotation}
+        {normal_text:quotation}
         {spaces_after_argument:\\n}
-   {\\n}
+   {normal_text:\\n}
 ';
 
 

@@ -16,7 +16,7 @@ $result_tree_text{'top_is_an_anchor'} = '*document_root C1
    |text_arg:{top_is_an_anchor.info}
     *line_arg C3
      {spaces_before_argument: }
-     {top_is_an_anchor.info}
+     {normal_text:top_is_an_anchor.info}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
   *@anchor C1 l3
@@ -24,7 +24,7 @@ $result_tree_text{'top_is_an_anchor'} = '*document_root C1
   |identifier:{Top}
   |is_target:{1}
    *brace_arg C1
-    {Top}
+    {normal_text:Top}
   {spaces_after_close_brace:\\n}
 ';
 

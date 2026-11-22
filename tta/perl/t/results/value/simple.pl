@@ -24,18 +24,18 @@ $result_tree_text{'simple'} = '*document_root C1
        {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C3
-   {the value }
+   {normal_text:the value }
    >SOURCEMARKS
    >value_expansion<start;1>{the value @b{b}}
     >*@value C1
      >*brace_container C1
-      >{a-_5b}
+      >{normal_text:a-_5b}
    *@b C1 l3
    >SOURCEMARKS
    >value_expansion<end;1>
     *brace_container C1
-     {b}
-   { After value.\\n}
+     {normal_text:b}
+   {normal_text: After value.\\n}
 ';
 
 

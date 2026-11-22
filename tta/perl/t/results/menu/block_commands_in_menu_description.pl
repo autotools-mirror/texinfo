@@ -19,7 +19,7 @@ $result_tree_text{'block_commands_in_menu_description'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {first}
+    {normal_text:first}
     {spaces_after_argument:\\n}
  *@top C3 l2 {top}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'block_commands_in_menu_description'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C3 l4
@@ -40,13 +40,13 @@ $result_tree_text{'block_commands_in_menu_description'} = '*document_root C3
     *menu_entry_node C3
     |EXTRA
     |manual_content:A{1|1}
-     {(}
-     {manual}
-     {)}
+     {normal_text:(}
+     {normal_text:manual}
+     {normal_text:)}
     {menu_entry_separator:::}
     *menu_entry_description C5
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
      *@itemize C4 l6
       *arguments_line C1
        *block_line_arg C1
@@ -59,14 +59,14 @@ $result_tree_text{'block_commands_in_menu_description'} = '*document_root C3
       |item_number:{1}
        *preformatted C3
         {ignorable_spaces_after_command: }
-        {in item\\n}
+        {normal_text:in item\\n}
         {empty_line:\\n}
       *@end C1 l10
       |EXTRA
       |text_arg:{itemize}
        *line_arg C3
         {spaces_before_argument: }
-        {itemize}
+        {normal_text:itemize}
         {spaces_after_argument:\\n}
      *@table C4 l11
       *arguments_line C1
@@ -82,19 +82,19 @@ $result_tree_text{'block_commands_in_menu_description'} = '*document_root C3
         *@item C1 l13
          *line_arg C3
           {spaces_before_argument: }
-          {table item}
+          {normal_text:table item}
           {spaces_after_argument:\\n}
        *table_definition C1
         *preformatted C3
          {empty_line:\\n}
-         {Text.\\n}
+         {normal_text:Text.\\n}
          {empty_line:\\n}
       *@end C1 l17
       |EXTRA
       |text_arg:{table}
        *line_arg C3
         {spaces_before_argument: }
-        {table}
+        {normal_text:table}
         {spaces_after_argument:\\n}
      *preformatted C1
       *@html C3 l18
@@ -103,14 +103,14 @@ $result_tree_text{'block_commands_in_menu_description'} = '*document_root C3
          {spaces_before_argument:\\n}
        *rawpreformatted C3
         {empty_line:\\n}
-        {<b> in html </b>\\n}
+        {normal_text:<b> in html </b>\\n}
         {empty_line:\\n}
        *@end C1 l22
        |EXTRA
        |text_arg:{html}
         *line_arg C3
          {spaces_before_argument: }
-         {html}
+         {normal_text:html}
          {spaces_after_argument:\\n}
      *@verbatim C3 l23
       *arguments_line C1
@@ -122,14 +122,14 @@ $result_tree_text{'block_commands_in_menu_description'} = '*document_root C3
       |text_arg:{verbatim}
        *line_arg C3
         {spaces_before_argument: }
-        {verbatim}
+        {normal_text:verbatim}
         {spaces_after_argument:\\n}
    *@end C1 l26
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
 ';
 

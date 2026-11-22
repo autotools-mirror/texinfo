@@ -18,9 +18,9 @@ $result_tree_text{'titlepage_long_title'} = '*document_root C5
     *@title C1 l2
      *line_arg C5
       {spaces_before_argument: }
-      {a title than is long, very long, veeeeeeeeeeeeeeeeery long, it seems to never stop and it is not so interesting only very long oh an end of line }
+      {normal_text:a title than is long, very long, veeeeeeeeeeeeeeeeery long, it seems to never stop and it is not so interesting only very long oh an end of line }
       *@*
-      { and the title continue and keep on being unfinished until it is the end}
+      {normal_text: and the title continue and keep on being unfinished until it is the end}
       {spaces_after_argument:\\n}
     {empty_line:\\n}
     *@end C1 l4
@@ -28,7 +28,7 @@ $result_tree_text{'titlepage_long_title'} = '*document_root C5
     |text_arg:{titlepage}
      *line_arg C3
       {spaces_before_argument: }
-      {titlepage}
+      {normal_text:titlepage}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
  *@node C1 l6 {Top}
@@ -39,7 +39,7 @@ $result_tree_text{'titlepage_long_title'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l7 {section top}
  |EXTRA
@@ -48,7 +48,7 @@ $result_tree_text{'titlepage_long_title'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {section top}
+    {normal_text:section top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l9 {chapter}
@@ -59,7 +59,7 @@ $result_tree_text{'titlepage_long_title'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter}
+    {normal_text:chapter}
     {spaces_after_argument:\\n}
  *@chapter C3 l10 {Chapter}
  |EXTRA
@@ -69,11 +69,11 @@ $result_tree_text{'titlepage_long_title'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chapter}
+    {normal_text:Chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {In chapter\\n}
+   {normal_text:In chapter\\n}
 ';
 
 

@@ -18,13 +18,13 @@ $result_tree_text{'U_with_utf8_enable_encoding'} = '*document_root C1
    |text_arg:{utf-8}
     *line_arg C3
      {spaces_before_argument: }
-     {utf-8}
+     {normal_text:utf-8}
      {spaces_after_argument:\\n}
   *paragraph C2
    *@U C1 l2
     *brace_arg C1
-     {00FF}
-   { (should be a real y-dieresis in UTF-8).\\n}
+     {normal_text:00FF}
+   {normal_text: (should be a real y-dieresis in UTF-8).\\n}
 ';
 
 

@@ -15,7 +15,7 @@ $result_tree_text{'comment_on_quotation_line'} = '*document_root C1
    *arguments_line C1
     *block_line_arg C4
      {spaces_before_argument: }
-     {truc}
+     {normal_text:truc}
      *@ 
      *@c C1
       *line_arg C3
@@ -23,13 +23,13 @@ $result_tree_text{'comment_on_quotation_line'} = '*document_root C1
        {rawline_text:quotation }
        {spaces_after_argument:\\n}
    *paragraph C1
-    {In quotation\\n}
+    {normal_text:In quotation\\n}
    *@end C1 l3
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }
-     {quotation}
+     {normal_text:quotation}
      {spaces_after_argument:\\n}
 ';
 

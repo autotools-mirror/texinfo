@@ -26,7 +26,7 @@ NodeForward: [U1]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l2 {top}
  |EXTRA
@@ -35,7 +35,7 @@ NodeForward: [U1]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
 U1 unit{C2}{N:chap f}{s:@chapter 1 Chapter f}
@@ -61,7 +61,7 @@ NodeBack: [U0]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap f}
+    {normal_text:chap f}
     {spaces_after_argument:\\n}
  *@chapter C4 l5 {Chapter f}
  |EXTRA
@@ -71,7 +71,7 @@ NodeBack: [U0]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chapter f}
+    {normal_text:Chapter f}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
@@ -80,8 +80,8 @@ NodeBack: [U0]
    |global_command_number:{1}
     *brace_command_context C1
      *paragraph C1
-      {in fchap 1}
-   {\\n}
+      {normal_text:in fchap 1}
+   {normal_text:\\n}
   {empty_line:\\n}
 U2 unit{C2}{N:chap s}{s:@chapter 2 Chapter s}
 unit_directions:D[prev->[U1]]
@@ -102,7 +102,7 @@ NodeBack: [U1]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap s}
+    {normal_text:chap s}
     {spaces_after_argument:\\n}
  *@chapter C5 l10 {Chapter s}
  |EXTRA
@@ -112,7 +112,7 @@ NodeBack: [U1]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chapter s}
+    {normal_text:Chapter s}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
@@ -121,15 +121,15 @@ NodeBack: [U1]
    |global_command_number:{2}
     *brace_command_context C1
      *paragraph C1
-      {in fchap 2}
-   {\\n}
+      {normal_text:in fchap 2}
+   {normal_text:\\n}
   {empty_line:\\n}
   *@footnotestyle C1 l14
   |EXTRA
   |misc_args:A{separate}
    *line_arg C3
     {spaces_before_argument: }
-    {separate}
+    {normal_text:separate}
     {spaces_after_argument:\\n}
 ';
 

@@ -23,21 +23,21 @@ $result_tree_text{'defline_no_params'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {Builtin}
+       {normal_text:Builtin}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {truc}
+       {normal_text:truc}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {Description of truc\\n}
+     {normal_text:Description of truc\\n}
    *@end C1 l4
    |EXTRA
    |text_arg:{defblock}
     *line_arg C3
      {spaces_before_argument: }
-     {defblock}
+     {normal_text:defblock}
      {spaces_after_argument:\\n}
 ';
 

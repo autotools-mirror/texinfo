@@ -16,16 +16,16 @@ $result_tree_text{'end_bad_end_argument_and_superfluous_arg'} = '*document_root 
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C2
-    {In quotation\\n}
+    {normal_text:In quotation\\n}
     *@end C1 l3
     |EXTRA
     |text_arg:{: }
      *line_arg C4
       {spaces_before_argument: }
-      {: }
+      {normal_text:: }
       *@code C1 l3
        *brace_container C1
-        {in c}
+        {normal_text:in c}
       {spaces_after_argument:\\n}
 ';
 

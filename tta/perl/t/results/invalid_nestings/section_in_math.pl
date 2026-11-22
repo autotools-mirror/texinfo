@@ -14,14 +14,14 @@ $result_tree_text{'section_in_math'} = '*document_root C3
    {text_before_beginning:\\n}
   *preamble_before_content
   *paragraph C2
-   {Some }
+   {normal_text:Some }
    *@math C1 l2
     *brace_arg C2
-     {aa }
+     {normal_text:aa }
      *balanced_braces C3 l2
-      {{x^2\\n}
+      {normal_text:{x^2\\n}
       {empty_line:\\n}
-      {}}
+      {normal_text:}}
  *@section C3 l4 {sec1}
  |EXTRA
  |identifier:{sec1}
@@ -32,15 +32,15 @@ $result_tree_text{'section_in_math'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {sec1}
+    {normal_text:sec1}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
-   {More }
+   {normal_text:More }
    *@math C1 l6
     *brace_arg C4
      {spaces_before_argument: }
-     {in math}
+     {normal_text:in math}
      {spaces_after_argument:\\n}
      {empty_line:\\n}
  *@section C1 l8 {sec2}
@@ -53,7 +53,7 @@ $result_tree_text{'section_in_math'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {sec2}
+    {normal_text:sec2}
     {spaces_after_argument:\\n}
 ';
 

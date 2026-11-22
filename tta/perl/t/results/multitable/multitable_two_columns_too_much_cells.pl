@@ -22,7 +22,7 @@ $result_tree_text{'multitable_two_columns_too_much_cells'} = '*document_root C1
      |misc_args:A{0.4|0.6}
       *line_arg C3
        {spaces_before_argument: }
-       {0.4 0.6}
+       {normal_text:0.4 0.6}
        {spaces_after_argument:\\n}
    *multitable_body C3
     *row C2
@@ -33,22 +33,22 @@ $result_tree_text{'multitable_two_columns_too_much_cells'} = '*document_root C1
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {first }
+       {normal_text:first }
      *@tab C8 l2
      |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {second }
+       {normal_text:second }
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {first out }
+       {normal_text:first out }
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {second out }
+       {normal_text:second out }
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {third out\\n}
+       {normal_text:third out\\n}
     *row C1
     |EXTRA
     |row_number:{2}
@@ -57,7 +57,7 @@ $result_tree_text{'multitable_two_columns_too_much_cells'} = '*document_root C1
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {first1 \\n}
+       {normal_text:first1 \\n}
     *row C2
     |EXTRA
     |row_number:{3}
@@ -66,22 +66,22 @@ $result_tree_text{'multitable_two_columns_too_much_cells'} = '*document_root C1
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {first2 }
+       {normal_text:first2 }
      *@tab C4 l4
      |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {second2 }
+       {normal_text:second2 }
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {first2 out\\n}
+       {normal_text:first2 out\\n}
    *@end C1 l5
    |EXTRA
    |text_arg:{multitable}
     *line_arg C3
      {spaces_before_argument: }
-     {multitable}
+     {normal_text:multitable}
      {spaces_after_argument:\\n}
 ';
 

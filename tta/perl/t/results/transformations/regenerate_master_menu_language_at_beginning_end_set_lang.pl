@@ -20,7 +20,7 @@ $result_tree_text{'regenerate_master_menu_language_at_beginning_end_set_lang'} =
    |text_arg:{sr}
     *line_arg C3
      {spaces_before_argument: }
-     {sr}
+     {normal_text:sr}
      {spaces_after_argument:\\n}
    *@c C1
     *line_arg C3
@@ -33,7 +33,7 @@ $result_tree_text{'regenerate_master_menu_language_at_beginning_end_set_lang'} =
    |text_arg:{latin}
     *line_arg C3
      {spaces_before_argument: }
-     {latin}
+     {normal_text:latin}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *@node C1 no_detailmenu_lang_at_begin_end.texi:l7 {Top}
@@ -44,7 +44,7 @@ $result_tree_text{'regenerate_master_menu_language_at_beginning_end_set_lang'} =
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C4 no_detailmenu_lang_at_begin_end.texi:l8 {top}
  |EXTRA
@@ -53,7 +53,7 @@ $result_tree_text{'regenerate_master_menu_language_at_beginning_end_set_lang'} =
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C5 no_detailmenu_lang_at_begin_end.texi:l10
@@ -66,11 +66,11 @@ $result_tree_text{'regenerate_master_menu_language_at_beginning_end_set_lang'} =
     |EXTRA
     |node_content:A{0|0}
     |normalized:{chap}
-     {chap}
+     {normal_text:chap}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_comment C1
     *preformatted C1
      {after_menu_description_line:\\n}
@@ -80,10 +80,10 @@ $result_tree_text{'regenerate_master_menu_language_at_beginning_end_set_lang'} =
       {spaces_before_argument:\\n}
     *menu_comment C1
      *preformatted C6
-      { --- Szczegółowa lista węzłów ---}
-      {\\n}
+      {normal_text: --- Szczegółowa lista węzłów ---}
+      {normal_text:\\n}
       {empty_line:\\n}
-      {Chapter}
+      {normal_text:Chapter}
       {empty_line:\\n}
       {empty_line:\\n}
     *menu_entry C4
@@ -92,24 +92,24 @@ $result_tree_text{'regenerate_master_menu_language_at_beginning_end_set_lang'} =
      |EXTRA
      |node_content:A{0|0}
      |normalized:{sec}
-      {sec}
+      {normal_text:sec}
      {menu_entry_separator:::}
      *menu_entry_description C1
       *preformatted C1
-       {\\n}
+       {normal_text:\\n}
     *@end C1
     |EXTRA
     |text_arg:{detailmenu}
      *line_arg C3
       {spaces_before_argument: }
-      {detailmenu}
+      {normal_text:detailmenu}
       {spaces_after_argument:\\n}
    *@end C1 no_detailmenu_lang_at_begin_end.texi:l12
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 no_detailmenu_lang_at_begin_end.texi:l14 {chap}
@@ -120,7 +120,7 @@ $result_tree_text{'regenerate_master_menu_language_at_beginning_end_set_lang'} =
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
  *@chapter C4 no_detailmenu_lang_at_begin_end.texi:l15 {Chapter}
  |EXTRA
@@ -130,7 +130,7 @@ $result_tree_text{'regenerate_master_menu_language_at_beginning_end_set_lang'} =
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chapter}
+    {normal_text:Chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C3 no_detailmenu_lang_at_begin_end.texi:l17
@@ -143,17 +143,17 @@ $result_tree_text{'regenerate_master_menu_language_at_beginning_end_set_lang'} =
     |EXTRA
     |node_content:A{0|0}
     |normalized:{sec}
-     {sec}
+     {normal_text:sec}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 no_detailmenu_lang_at_begin_end.texi:l19
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 no_detailmenu_lang_at_begin_end.texi:l21 {sec}
@@ -164,7 +164,7 @@ $result_tree_text{'regenerate_master_menu_language_at_beginning_end_set_lang'} =
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {sec}
+    {normal_text:sec}
     {spaces_after_argument:\\n}
  *@section C4 no_detailmenu_lang_at_begin_end.texi:l22 {Sec}
  |EXTRA
@@ -174,7 +174,7 @@ $result_tree_text{'regenerate_master_menu_language_at_beginning_end_set_lang'} =
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Sec}
+    {normal_text:Sec}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@documentlanguage C1 no_detailmenu_lang_at_begin_end.texi:l24
@@ -183,7 +183,7 @@ $result_tree_text{'regenerate_master_menu_language_at_beginning_end_set_lang'} =
   |text_arg:{fr}
    *line_arg C3
     {spaces_before_argument: }
-    {fr}
+    {normal_text:fr}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
 ';

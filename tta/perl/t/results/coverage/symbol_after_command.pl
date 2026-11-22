@@ -21,20 +21,20 @@ $result_tree_text{'symbol_after_command'} = '*document_root C1
     *table_term C1
      *@item C1 l2
       *line_arg C2
-       {. dot}
+       {normal_text:. dot}
        {spaces_after_argument:\\n}
    *table_entry C1
     *table_term C1
      *@item C1 l3
       *line_arg C2
-       {, comma}
+       {normal_text:, comma}
        {spaces_after_argument:\\n}
    *table_entry C1
     *table_term C1
      *@item C1 l4
       *line_arg C4
        *@@
-       { }
+       {normal_text: }
        *@@
        {spaces_after_argument:\\n}
    *table_entry C1
@@ -42,54 +42,54 @@ $result_tree_text{'symbol_after_command'} = '*document_root C1
      *@item C1 l5
       *line_arg C4
        *@{
-       { }
+       {normal_text: }
        *@{
        {spaces_after_argument:\\n}
    *table_entry C1
     *table_term C1
      *@item C1 l6
       *line_arg C2
-       {! exclam}
+       {normal_text:! exclam}
        {spaces_after_argument:\\n}
    *table_entry C1
     *table_term C1
      *@item C1 l7
       *line_arg C2
-       {\'\' quotes}
+       {normal_text:\'\' quotes}
        {spaces_after_argument:\\n}
    *table_entry C1
     *table_term C1
      *@item C1 l8
       *line_arg C2
-       {: colon}
+       {normal_text:: colon}
        {spaces_after_argument:\\n}
    *@end C1 l9
    |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
-     {table}
+     {normal_text:table}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C18
    *@@
-   {. }
+   {normal_text:. }
    *@{
-   {, }
+   {normal_text:, }
    *@@
    *@@
-   { }
+   {normal_text: }
    *@?
-   {, }
+   {normal_text:, }
    *@!
-   {: }
+   {normal_text:: }
    *@@
    *@{
-   { }
+   {normal_text: }
    *@@
-   {\'\' }
+   {normal_text:\'\' }
    *@@
-   {:\\n}
+   {normal_text::\\n}
 ';
 
 

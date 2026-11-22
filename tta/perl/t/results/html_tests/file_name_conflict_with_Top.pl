@@ -19,7 +19,7 @@ $result_tree_text{'file_name_conflict_with_Top'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l2 {top}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'file_name_conflict_with_Top'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l4 {Chapter}
@@ -39,7 +39,7 @@ $result_tree_text{'file_name_conflict_with_Top'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chapter}
+    {normal_text:Chapter}
     {spaces_after_argument:\\n}
  *@chapter C4 l5 {Chap}
  |EXTRA
@@ -49,7 +49,7 @@ $result_tree_text{'file_name_conflict_with_Top'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chap}
+    {normal_text:Chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@anchor C1 l7
@@ -57,7 +57,7 @@ $result_tree_text{'file_name_conflict_with_Top'} = '*document_root C5
   |identifier:{index}
   |is_target:{1}
    *brace_arg C1
-    {index}
+    {normal_text:index}
   {spaces_after_close_brace:\\n}
 ';
 

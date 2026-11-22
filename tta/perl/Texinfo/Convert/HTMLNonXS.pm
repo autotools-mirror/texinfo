@@ -955,7 +955,8 @@ sub _internal_command_tree($$$) {
             # target elements such as @anchor.
             my $substituted_strings
               = {'number' =>
-                  Texinfo::TreeElement::new({'text' => $section_number}),
+                  Texinfo::TreeElement::new({'text' => $section_number,
+                                             'type' => 'normal_text'}),
                  'section_title'
                 => Texinfo::ManipulateTree::copy_element_tree($line_arg)};
 

@@ -25,18 +25,18 @@ $result_tree_text{'protect_hashchar_at_line_beginning_source_mark'} = '*document
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C3
-   {}
+   {normal_text:}
    >SOURCEMARKS
    >macro_expansion<start;1>
     >*macro_call@vvv C1
      >*brace_arg
    *@hashchar C1
     *brace_container
-   {line 30 "toto"\\n}
+   {normal_text:line 30 "toto"\\n}
    >SOURCEMARKS
    >macro_expansion<end;1><p:14>
   {empty_line:\\n}
@@ -52,11 +52,11 @@ $result_tree_text{'protect_hashchar_at_line_beginning_source_mark'} = '*document
    |text_arg:{macro}
     *line_arg C3
      {spaces_before_argument: }
-     {macro}
+     {normal_text:macro}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C3
-   {}
+   {normal_text:}
    >SOURCEMARKS
    >macro_expansion<start;2>
     >*macro_call@machash C1
@@ -65,7 +65,7 @@ $result_tree_text{'protect_hashchar_at_line_beginning_source_mark'} = '*document
    >SOURCEMARKS
    >macro_expansion<end;2>
     *brace_container
-   { 130\\n}
+   {normal_text: 130\\n}
   {empty_line:\\n}
   *@macro C3 cpp_directives_line_value_macro.texi:l14
   |EXTRA
@@ -79,13 +79,13 @@ $result_tree_text{'protect_hashchar_at_line_beginning_source_mark'} = '*document
    |text_arg:{macro}
     *line_arg C3
      {spaces_before_argument: }
-     {macro}
+     {normal_text:macro}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
    *@hashchar C1
     *brace_container
-   { 900 "titi" 3900\\n}
+   {normal_text: 900 "titi" 3900\\n}
    >SOURCEMARKS
    >macro_expansion<start;3><p:1>
     >*macro_call@numberfileflag C1
@@ -102,17 +102,17 @@ $result_tree_text{'protect_hashchar_at_line_beginning_source_mark'} = '*document
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C3
-   {}
+   {normal_text:}
    >SOURCEMARKS
    >value_expansion<start;1>{#}
     >*@value C1
      >*brace_container C1
-      >{hash}
+      >{normal_text:hash}
    *@hashchar C1
    >SOURCEMARKS
    >value_expansion<end;1>
     *brace_container
-   {line 71 "example.c"\\n}
+   {normal_text:line 71 "example.c"\\n}
   {empty_line:\\n}
   {empty_line:\\n}
 ';

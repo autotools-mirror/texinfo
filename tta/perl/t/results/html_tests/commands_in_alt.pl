@@ -15,15 +15,15 @@ $result_tree_text{'commands_in_alt'} = '*document_root C1
   |EXTRA
   |input_encoding_name:{utf-8}
    *brace_arg C1
-    {f--ile}
+    {normal_text:f--ile}
    *brace_arg
    *brace_arg
    *brace_arg C2
-    {alt -- }
+    {normal_text:alt -- }
     *@b C1 l1
      *brace_container C1
-      {in b}
-  {\\n}
+      {normal_text:in b}
+  {normal_text:\\n}
   {empty_line:\\n}
   *@example C3 l3
    *arguments_line C1
@@ -34,21 +34,21 @@ $result_tree_text{'commands_in_alt'} = '*document_root C1
     |EXTRA
     |input_encoding_name:{utf-8}
      *brace_arg C1
-      {f--ile}
+      {normal_text:f--ile}
      *brace_arg
      *brace_arg
      *brace_arg C2
-      {alt -- }
+      {normal_text:alt -- }
       *@b C1 l4
        *brace_container C1
-        {in b}
-    {\\n}
+        {normal_text:in b}
+    {normal_text:\\n}
    *@end C1 l5
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
 ';
 

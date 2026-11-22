@@ -16,28 +16,28 @@ $result_tree_text{'placed_things_before_element_no_use_node'} = '*document_root 
   |identifier:{An-anchor}
   |is_target:{1}
    *brace_arg C1
-    {An anchor}
+    {normal_text:An anchor}
   {spaces_after_close_brace:\\n}
   {empty_line:\\n}
   *paragraph C3
-   {Ref to the anchor:\\n}
+   {normal_text:Ref to the anchor:\\n}
    *@ref C1 l4
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{An-anchor}
-     {An anchor}
-   {\\n}
+     {normal_text:An anchor}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C3
-   {Ref to the anchor in footnote:\\n}
+   {normal_text:Ref to the anchor in footnote:\\n}
    *@ref C1 l7
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{Anchor-in-footnote}
-     {Anchor in footnote}
-   {.\\n}
+     {normal_text:Anchor in footnote}
+   {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C2
    *@footnote C1 l9
@@ -45,26 +45,26 @@ $result_tree_text{'placed_things_before_element_no_use_node'} = '*document_root 
    |global_command_number:{1}
     *brace_command_context C6
      *paragraph C1
-      {In footnote.\\n}
+      {normal_text:In footnote.\\n}
      {empty_line:\\n}
      *@anchor C1 l11
      |EXTRA
      |identifier:{Anchor-in-footnote}
      |is_target:{1}
       *brace_arg C1
-       {Anchor in footnote}
+       {normal_text:Anchor in footnote}
      {spaces_after_close_brace:\\n}
      {empty_line:\\n}
      *paragraph C3
-      {Ref to main text anchor\\n}
+      {normal_text:Ref to main text anchor\\n}
       *@ref C1 l14
        *brace_arg C1
        |EXTRA
        |node_content:A{0|0}
        |normalized:{An-anchor}
-        {An anchor}
-      {\\n}
-   {\\n}
+        {normal_text:An anchor}
+      {normal_text:\\n}
+   {normal_text:\\n}
   {empty_line:\\n}
   *@float C3 l17
   |EXTRA
@@ -78,27 +78,27 @@ $result_tree_text{'placed_things_before_element_no_use_node'} = '*document_root 
      {spaces_before_argument: }
     *block_line_arg C3
      {spaces_before_argument: }
-     {float anchor}
+     {normal_text:float anchor}
      {spaces_after_argument:\\n}
    *paragraph C1
-    {In float\\n}
+    {normal_text:In float\\n}
    *@end C1 l19
    |EXTRA
    |text_arg:{float}
     *line_arg C3
      {spaces_before_argument: }
-     {float}
+     {normal_text:float}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C3
-   {Ref to float\\n}
+   {normal_text:Ref to float\\n}
    *@ref C1 l22
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{float-anchor}
-     {float anchor}
-   {.\\n}
+     {normal_text:float anchor}
+   {normal_text:.\\n}
   {empty_line:\\n}
   *@menu C3 l24
    *arguments_line C1
@@ -110,17 +110,17 @@ $result_tree_text{'placed_things_before_element_no_use_node'} = '*document_root 
     |EXTRA
     |node_content:A{0|0}
     |normalized:{An-anchor}
-     {An anchor}
+     {normal_text:An anchor}
     {menu_entry_separator:::                }
     *menu_entry_description C1
      *preformatted C1
-      {menu entry pointing to the anchor.\\n}
+      {normal_text:menu entry pointing to the anchor.\\n}
    *@end C1 l26
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 l28
@@ -128,7 +128,7 @@ $result_tree_text{'placed_things_before_element_no_use_node'} = '*document_root 
   |index_entry:I{cp,1}
    *line_arg C3
     {spaces_before_argument: }
-    {index entry}
+    {normal_text:index entry}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@section C5 l30 {section}
@@ -141,28 +141,28 @@ $result_tree_text{'placed_things_before_element_no_use_node'} = '*document_root 
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {section}
+    {normal_text:section}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C3
-   {Ref to anchor\\n}
+   {normal_text:Ref to anchor\\n}
    *@ref C1 l33
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{An-anchor}
-     {An anchor}
-   {\\n}
+     {normal_text:An anchor}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C3
-   {Ref to footnote anchor\\n}
+   {normal_text:Ref to footnote anchor\\n}
    *@ref C1 l36
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{Anchor-in-footnote}
-     {Anchor in footnote}
-   {\\n}
+     {normal_text:Anchor in footnote}
+   {normal_text:\\n}
 ';
 
 

@@ -16,7 +16,7 @@ $result_tree_text{'alias_of_definfoenclose_before_definfoenclose'} = '*document_
    |misc_args:A{new|phoo}
     *line_arg C3
      {spaces_before_argument: }
-     {new = phoo}
+     {normal_text:new = phoo}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@definfoenclose C1 l3
@@ -24,7 +24,7 @@ $result_tree_text{'alias_of_definfoenclose_before_definfoenclose'} = '*document_
    |misc_args:A{phoo|;|:}
     *line_arg C3
      {spaces_before_argument: }
-     {phoo,;,:}
+     {normal_text:phoo,;,:}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C2
@@ -34,8 +34,8 @@ $result_tree_text{'alias_of_definfoenclose_before_definfoenclose'} = '*document_
    |begin:{;}
    |end:{:}
     *brace_container C1
-     {aa}
-   {\\n}
+     {normal_text:aa}
+   {normal_text:\\n}
 ';
 
 

@@ -23,7 +23,7 @@ $result_tree_text{'node_in_copying'} = '*document_root C2
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {node}
+    {normal_text:node}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
 ';

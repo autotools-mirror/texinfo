@@ -19,30 +19,30 @@ $result_tree_text{'commands_in_math'} = '*document_root C1
      {spaces_before_argument:\\n}
    *@strong C1 l3
     *brace_container C1
-     {``simple-double--three---four----\'\'}
-   { }
+     {normal_text:``simple-double--three---four----\'\'}
+   {normal_text: }
    *@w C1 l3
     *brace_container C1
-     {aa}
-   {\\n}
-   {`}
+     {normal_text:aa}
+   {normal_text:\\n}
+   {normal_text:`}
    *@w C1 l4
     *brace_container
-   {`simple-double-}
+   {normal_text:`simple-double-}
    *@w C1 l4
     *brace_container
-   {-three---four----\'}
+   {normal_text:-three---four----\'}
    *@w C1 l4
     *brace_container
-   {\'}
+   {normal_text:\'}
    *@*
-   {\\n}
+   {normal_text:\\n}
    *@end C1 l5
    |EXTRA
    |text_arg:{displaymath}
     *line_arg C3
      {spaces_before_argument: }
-     {displaymath}
+     {normal_text:displaymath}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@displaymath C81 l7
@@ -51,147 +51,147 @@ $result_tree_text{'commands_in_math'} = '*document_root C1
      {spaces_before_argument:\\n}
    *@" C1 l8
     *following_arg C1
-     {u}
-   { }
+     {normal_text:u}
+   {normal_text: }
    *@" C1 l8
     *brace_container C1
-     {U}
-   { }
+     {normal_text:U}
+   {normal_text: }
    *@~ C1 l8
     *following_arg C1
-     {n}
-   { }
+     {normal_text:n}
+   {normal_text: }
    *@^ C1 l8
     *following_arg C1
-     {a}
-   { }
+     {normal_text:a}
+   {normal_text: }
    *@\' C1 l8
     *following_arg C1
-     {e}
-   { }
+     {normal_text:e}
+   {normal_text: }
    *@= C1 l8
     *following_arg C1
-     {o}
-   { }
+     {normal_text:o}
+   {normal_text: }
    *@` C1 l8
     *following_arg C1
-     {i}
-   { }
+     {normal_text:i}
+   {normal_text: }
    *@\' C1 l8
     *brace_container C1
-     {e}
-   { }
+     {normal_text:e}
+   {normal_text: }
    *@dotless C1 l8
     *brace_container C1
-     {i}
-   { }
+     {normal_text:i}
+   {normal_text: }
    *@dotless C1 l8
     *brace_container C1
-     {j}
-   { }
+     {normal_text:j}
+   {normal_text: }
    *@` C1 l8
     *brace_container C1
      *@= C1 l8
       *following_arg C1
-       {E}
-   {\\n}
+       {normal_text:E}
+   {normal_text:\\n}
    *@l C1 l9
     *brace_container
-   { }
+   {normal_text: }
    *@, C1 l9
     *brace_container C1
      *@\' C1 l9
       *following_arg C1
-       {C}
-   { }
+       {normal_text:C}
+   {normal_text: }
    *@, C1 l9
     *brace_container C1
      *@\' C1 l9
       *following_arg C1
-       {C}
-   { }
+       {normal_text:C}
+   {normal_text: }
    *@, C1 l9
     *following_arg C1
-     {c}
-   { }
+     {normal_text:c}
+   {normal_text: }
    *@H C1 l9
     *brace_container C1
-     {a}
-   { }
+     {normal_text:a}
+   {normal_text: }
    *@dotaccent C1 l9
     *brace_container C1
-     {a}
-   { }
+     {normal_text:a}
+   {normal_text: }
    *@ringaccent C1 l9
     *brace_container C1
-     {a}
-   { }
+     {normal_text:a}
+   {normal_text: }
    *@tieaccent C1 l9
     *brace_container C1
-     {a}
-   {\\n}
+     {normal_text:a}
+   {normal_text:\\n}
    *@u C1 l10
     *brace_container C1
-     {a}
-   { }
+     {normal_text:a}
+   {normal_text: }
    *@ubaraccent C1 l10
     *brace_container C1
-     {a}
-   { }
+     {normal_text:a}
+   {normal_text: }
    *@udotaccent C1 l10
     *brace_container C1
-     {a}
-   { }
+     {normal_text:a}
+   {normal_text: }
    *@v C1 l10
     *brace_container C1
-     {a}
-   { }
+     {normal_text:a}
+   {normal_text: }
    *@ogonek C1 l10
     *brace_container C1
-     {a}
-   { a}
+     {normal_text:a}
+   {normal_text: a}
    *@sup C1 l10
     *brace_container C1
-     {h}
+     {normal_text:h}
    *@sub C1 l10
     *brace_container C1
-     {l}
-   {\\n}
+     {normal_text:l}
+   {normal_text:\\n}
    *@*
-   { }
+   {normal_text: }
    *@ 
    *@ 
-   { }
+   {normal_text: }
    *@\\n
    *@-
-   { }
+   {normal_text: }
    *@|
-   { }
+   {normal_text: }
    *@:
-   { }
+   {normal_text: }
    *@!
-   { }
+   {normal_text: }
    *@?
-   { }
+   {normal_text: }
    *@.
-   { }
+   {normal_text: }
    *@@
-   { }
+   {normal_text: }
    *@}
-   { }
+   {normal_text: }
    *@{
-   { }
+   {normal_text: }
    *@/
-   {\\n}
+   {normal_text:\\n}
    *@today C1 l13
     *brace_container
-   {\\n}
+   {normal_text:\\n}
    *@end C1 l14
    |EXTRA
    |text_arg:{displaymath}
     *line_arg C3
      {spaces_before_argument: }
-     {displaymath}
+     {normal_text:displaymath}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@displaymath C76 l16
@@ -200,122 +200,122 @@ $result_tree_text{'commands_in_math'} = '*document_root C1
      {spaces_before_argument:\\n}
    *@click C1 l17
     *brace_container
-   {\\n}
+   {normal_text:\\n}
    *@U C1 l18
     *brace_arg C1
-     {0075}
-   {\\n}
+     {normal_text:0075}
+   {normal_text:\\n}
    *@TeX C1 l19
     *brace_container
-   { }
+   {normal_text: }
    *@LaTeX C1 l19
     *brace_container
-   { }
+   {normal_text: }
    *@bullet C1 l19
     *brace_container
-   { }
+   {normal_text: }
    *@copyright C1 l19
     *brace_container
-   { }
+   {normal_text: }
    *@dots C1 l19
     *brace_container
-   { }
+   {normal_text: }
    *@enddots C1 l19
     *brace_container
-   { }
+   {normal_text: }
    *@equiv C1 l19
     *brace_container
-   {\\n}
+   {normal_text:\\n}
    *@error C1 l20
     *brace_container
-   { }
+   {normal_text: }
    *@expansion C1 l20
     *brace_container
-   { }
+   {normal_text: }
    *@minus C1 l20
     *brace_container
-   { }
+   {normal_text: }
    *@point C1 l20
     *brace_container
-   { }
+   {normal_text: }
    *@print C1 l20
     *brace_container
-   { }
+   {normal_text: }
    *@result C1 l20
     *brace_container
-   {\\n}
+   {normal_text:\\n}
    *@aa C1 l21
     *brace_container
-   { }
+   {normal_text: }
    *@AA C1 l21
     *brace_container
-   { }
+   {normal_text: }
    *@ae C1 l21
     *brace_container
-   { }
+   {normal_text: }
    *@oe C1 l21
     *brace_container
-   { }
+   {normal_text: }
    *@AE C1 l21
     *brace_container
-   { }
+   {normal_text: }
    *@OE C1 l21
     *brace_container
-   { }
+   {normal_text: }
    *@o C1 l21
     *brace_container
-   { }
+   {normal_text: }
    *@O C1 l21
     *brace_container
-   { }
+   {normal_text: }
    *@ss C1 l21
     *brace_container
-   { }
+   {normal_text: }
    *@l C1 l21
     *brace_container
-   { }
+   {normal_text: }
    *@L C1 l21
     *brace_container
-   { }
+   {normal_text: }
    *@DH C1 l21
     *brace_container
-   {\\n}
+   {normal_text:\\n}
    *@TH C1 l22
     *brace_container
-   { }
+   {normal_text: }
    *@dh C1 l22
     *brace_container
-   { }
+   {normal_text: }
    *@th C1 l22
     *brace_container
-   { }
+   {normal_text: }
    *@exclamdown C1 l22
     *brace_container
-   { }
+   {normal_text: }
    *@questiondown C1 l22
     *brace_container
-   { }
+   {normal_text: }
    *@pounds C1 l22
     *brace_container
-   {\\n}
+   {normal_text:\\n}
    *@registeredsymbol C1 l23
     *brace_container
-   { }
+   {normal_text: }
    *@ordf C1 l23
     *brace_container
-   { }
+   {normal_text: }
    *@ordm C1 l23
     *brace_container
-   { }
+   {normal_text: }
    *@comma C1 l23
     *brace_container
-   { \\n}
+   {normal_text: \\n}
    *@end C1 l24
    |EXTRA
    |text_arg:{displaymath}
     *line_arg C3
      {spaces_before_argument: }
-     {displaymath}
+     {normal_text:displaymath}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@displaymath C36 l26
@@ -324,61 +324,61 @@ $result_tree_text{'commands_in_math'} = '*document_root C1
      {spaces_before_argument:\\n}
    *@quotedblleft C1 l27
     *brace_container
-   { }
+   {normal_text: }
    *@quotedblright C1 l27
     *brace_container
-   {\\n}
+   {normal_text:\\n}
    *@quoteleft C1 l28
     *brace_container
-   { }
+   {normal_text: }
    *@quoteright C1 l28
     *brace_container
-   { }
+   {normal_text: }
    *@quotedblbase C1 l28
     *brace_container
-   { }
+   {normal_text: }
    *@quotesinglbase C1 l28
     *brace_container
-   { }
+   {normal_text: }
    *@guillemetleft C1 l28
     *brace_container
-   {\\n}
+   {normal_text:\\n}
    *@guillemetright C1 l29
     *brace_container
-   { }
+   {normal_text: }
    *@guillemotleft C1 l29
     *brace_container
-   { }
+   {normal_text: }
    *@guillemotright C1 l29
     *brace_container
-   { }
+   {normal_text: }
    *@guilsinglleft C1 l29
     *brace_container
-   {\\n}
+   {normal_text:\\n}
    *@guilsinglright C1 l30
     *brace_container
-   { }
+   {normal_text: }
    *@textdegree C1 l30
     *brace_container
-   { }
+   {normal_text: }
    *@euro C1 l30
     *brace_container
-   { }
+   {normal_text: }
    *@arrow C1 l30
     *brace_container
-   { }
+   {normal_text: }
    *@leq C1 l30
     *brace_container
-   { }
+   {normal_text: }
    *@geq C1 l30
     *brace_container
-   {\\n}
+   {normal_text:\\n}
    *@end C1 l31
    |EXTRA
    |text_arg:{displaymath}
     *line_arg C3
      {spaces_before_argument: }
-     {displaymath}
+     {normal_text:displaymath}
      {spaces_after_argument:\\n}
 ';
 

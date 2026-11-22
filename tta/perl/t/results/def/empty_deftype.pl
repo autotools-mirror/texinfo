@@ -23,38 +23,38 @@ $result_tree_text{'empty_deftype'} = '*document_root C1
      |EXTRA
      |inserted:{1}
       *def_line_arg C1
-       {Function}
+       {normal_text:Function}
      {spaces: }
      *def_type C1
       *bracketed_arg l1
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {f}
+       {normal_text:f}
      {spaces: }
      {delimiter:(}
      *def_typearg C1
       *def_line_arg C1
-       {const}
+       {normal_text:const}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {type&}
+       {normal_text:type&}
      {spaces: }
      *def_typearg C1
       *def_line_arg C1
-       {x}
+       {normal_text:x}
      {delimiter:)}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {Deftypefun.\\n}
+     {normal_text:Deftypefun.\\n}
    *@end C1 l3
    |EXTRA
    |text_arg:{deftypefun}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypefun}
+     {normal_text:deftypefun}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@defun C3 l5
@@ -69,35 +69,35 @@ $result_tree_text{'empty_deftype'} = '*document_root C1
      |EXTRA
      |inserted:{1}
       *def_line_arg C1
-       {Function}
+       {normal_text:Function}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {f}
+       {normal_text:f}
      {spaces: }
      {delimiter:(}
      *def_arg C1
       *def_line_arg C1
-       {const}
+       {normal_text:const}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {type&}
+       {normal_text:type&}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {x}
+       {normal_text:x}
      {delimiter:)}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {Defun.\\n}
+     {normal_text:Defun.\\n}
    *@end C1 l7
    |EXTRA
    |text_arg:{defun}
     *line_arg C3
      {spaces_before_argument: }
-     {defun}
+     {normal_text:defun}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypemethod C3 l9
@@ -112,42 +112,42 @@ $result_tree_text{'empty_deftype'} = '*document_root C1
      |EXTRA
      |inserted:{1}
       *def_line_arg C1
-       {Method}
+       {normal_text:Method}
      {spaces: }
      *def_class C1
       *def_line_arg C1
-       {c}
+       {normal_text:c}
      {spaces: }
      *def_type C1
       *bracketed_arg l9
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {f}
+       {normal_text:f}
      {spaces: }
      {delimiter:(}
      *def_typearg C1
       *def_line_arg C1
-       {const}
+       {normal_text:const}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {type&}
+       {normal_text:type&}
      {spaces: }
      *def_typearg C1
       *def_line_arg C1
-       {x}
+       {normal_text:x}
      {delimiter:)}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {Deftypemethod.\\n}
+     {normal_text:Deftypemethod.\\n}
    *@end C1 l11
    |EXTRA
    |text_arg:{deftypemethod}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypemethod}
+     {normal_text:deftypemethod}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@defmethod C3 l13
@@ -162,39 +162,39 @@ $result_tree_text{'empty_deftype'} = '*document_root C1
      |EXTRA
      |inserted:{1}
       *def_line_arg C1
-       {Method}
+       {normal_text:Method}
      {spaces: }
      *def_class C1
       *def_line_arg C1
-       {c}
+       {normal_text:c}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {f}
+       {normal_text:f}
      {spaces: }
      {delimiter:(}
      *def_arg C1
       *def_line_arg C1
-       {const}
+       {normal_text:const}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {type&}
+       {normal_text:type&}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {x}
+       {normal_text:x}
      {delimiter:)}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {Defmethod.\\n}
+     {normal_text:Defmethod.\\n}
    *@end C1 l15
    |EXTRA
    |text_arg:{defmethod}
     *line_arg C3
      {spaces_before_argument: }
-     {defmethod}
+     {normal_text:defmethod}
      {spaces_after_argument:\\n}
 ';
 

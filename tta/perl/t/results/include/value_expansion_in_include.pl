@@ -54,7 +54,7 @@ $result_tree_text{'value_expansion_in_include'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@node C18 l11 {chap}
  |EXTRA
@@ -64,11 +64,11 @@ $result_tree_text{'value_expansion_in_include'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C4
-   {testvar include: }
+   {normal_text:testvar include: }
    >SOURCEMARKS
    >include<start;1><p:17>
     >*@include C1 l13
@@ -80,21 +80,21 @@ $result_tree_text{'value_expansion_in_include'} = '*document_root C3
       >>value_expansion<start;1><p:1>{incl-incl.txi}
        >>*@value C1
         >>*brace_container C1
-         >>{testvar}
-      >{incl-incl.txi}
+         >>{normal_text:testvar}
+      >{normal_text:incl-incl.txi}
       >>SOURCEMARKS
       >>value_expansion<end;1><p:13>
       >{spaces_after_argument:\\n}
-   {This is the }
+   {normal_text:This is the }
    *@emph C1 incl-incl.txi:l1
     *brace_container C1
-     {included}
-   { file (include-value2.txi) <> ---. \\n}
+     {normal_text:included}
+   {normal_text: file (include-value2.txi) <> ---. \\n}
    >SOURCEMARKS
    >include<end;1><p:36>
   {empty_line:\\n}
   *paragraph C1
-   {testvar verbatiminclude: }
+   {normal_text:testvar verbatiminclude: }
   *@verbatiminclude C1 l15
   |EXTRA
   |input_encoding_name:{utf-8}
@@ -105,15 +105,15 @@ $result_tree_text{'value_expansion_in_include'} = '*document_root C3
     >value_expansion<start;2><p:1>{incl-incl.txi}
      >*@value C1
       >*brace_container C1
-       >{testvar}
-    {incl-incl.txi}
+       >{normal_text:testvar}
+    {normal_text:incl-incl.txi}
     >SOURCEMARKS
     >value_expansion<end;2><p:13>
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   {empty_line:\\n}
   *paragraph C4
-   {test-var include: }
+   {normal_text:test-var include: }
    >SOURCEMARKS
    >include<start;2><p:18>
     >*@include C1 l18
@@ -125,21 +125,21 @@ $result_tree_text{'value_expansion_in_include'} = '*document_root C3
       >>value_expansion<start;3><p:1>{incl-incl.tx}
        >>*@value C1
         >>*brace_container C1
-         >>{test-var}
-      >{incl-incl.txi}
+         >>{normal_text:test-var}
+      >{normal_text:incl-incl.txi}
       >>SOURCEMARKS
       >>value_expansion<end;3><p:12>
       >{spaces_after_argument:\\n}
-   {This is the }
+   {normal_text:This is the }
    *@emph C1 incl-incl.txi:l1
     *brace_container C1
-     {included}
-   { file (include-value2.txi) <> ---. \\n}
+     {normal_text:included}
+   {normal_text: file (include-value2.txi) <> ---. \\n}
    >SOURCEMARKS
    >include<end;2><p:36>
   {empty_line:\\n}
   *paragraph C1
-   {test-var verbatiminclude: }
+   {normal_text:test-var verbatiminclude: }
   *@verbatiminclude C1 l20
   |EXTRA
   |input_encoding_name:{utf-8}
@@ -150,15 +150,15 @@ $result_tree_text{'value_expansion_in_include'} = '*document_root C3
     >value_expansion<start;4><p:1>{incl-incl.tx}
      >*@value C1
       >*brace_container C1
-       >{test-var}
-    {incl-incl.txi}
+       >{normal_text:test-var}
+    {normal_text:incl-incl.txi}
     >SOURCEMARKS
     >value_expansion<end;4><p:12>
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   {empty_line:\\n}
   *paragraph C4
-   {test_var include: }
+   {normal_text:test_var include: }
    >SOURCEMARKS
    >include<start;3><p:18>
     >*@include C1 l23
@@ -166,36 +166,36 @@ $result_tree_text{'value_expansion_in_include'} = '*document_root C3
     >|text_arg:{incl-incl.txi}
      >*line_arg C3
       >{spaces_before_argument: }
-      >{incl-incl.txi}
+      >{normal_text:incl-incl.txi}
       >>SOURCEMARKS
       >>value_expansion<start;5><p:1>{ncl-incl.tx}
        >>*@value C1
         >>*brace_container C1
-         >>{test_var}
+         >>{normal_text:test_var}
       >>value_expansion<end;5><p:12>
       >{spaces_after_argument:\\n}
-   {This is the }
+   {normal_text:This is the }
    *@emph C1 incl-incl.txi:l1
     *brace_container C1
-     {included}
-   { file (include-value2.txi) <> ---. \\n}
+     {normal_text:included}
+   {normal_text: file (include-value2.txi) <> ---. \\n}
    >SOURCEMARKS
    >include<end;3><p:36>
   {empty_line:\\n}
   *paragraph C1
-   {test_var verbatiminclude: }
+   {normal_text:test_var verbatiminclude: }
   *@verbatiminclude C1 l25
   |EXTRA
   |input_encoding_name:{utf-8}
   |text_arg:{incl-incl.txi}
    *line_arg C3
     {spaces_before_argument: }
-    {incl-incl.txi}
+    {normal_text:incl-incl.txi}
     >SOURCEMARKS
     >value_expansion<start;6><p:1>{ncl-incl.tx}
      >*@value C1
       >*brace_container C1
-       >{test_var}
+       >{normal_text:test_var}
     >value_expansion<end;6><p:12>
     {spaces_after_argument:\\n}
 ';

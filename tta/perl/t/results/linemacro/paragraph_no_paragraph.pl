@@ -23,11 +23,11 @@ $result_tree_text{'paragraph_no_paragraph'} = '*document_root C1
     |text_arg:{linemacro}
      *line_arg C3
       {spaces_before_argument: }
-      {linemacro}
+      {normal_text:linemacro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@*
-   { }
+   {normal_text: }
    >SOURCEMARKS
    >linemacro_expansion<start;1><p:1>
     >*linemacro_call@mycommand C3
@@ -45,18 +45,18 @@ $result_tree_text{'paragraph_no_paragraph'} = '*document_root C1
   |identifier:{aa}
   |is_target:{1}
    *brace_arg C1
-    {aa}
+    {normal_text:aa}
   *paragraph C3
-   {, definite and }
+   {normal_text:, definite and }
    *@code C1 l5:@mycommand
    >SOURCEMARKS
    >linemacro_expansion<end;1>
     *brace_container C1
-     {more}
-   {\\n}
+     {normal_text:more}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C5
-   {Some text a\\n}
+   {normal_text:Some text a\\n}
    >SOURCEMARKS
    >linemacro_expansion<start;2><p:10>
     >*linemacro_call@mycommand C3
@@ -69,15 +69,15 @@ $result_tree_text{'paragraph_no_paragraph'} = '*document_root C1
      >*linemacro_arg C2
       >{spaces_before_argument: }
       >{macro_call_arg_text:@var{the\\n call}}
-   {  protected, in }
+   {normal_text:  protected, in }
    *@var C1 l9:@mycommand
    >SOURCEMARKS
    >linemacro_expansion<end;2>
     *brace_container C2
-     {the\\n}
-     { call}
-   {\\n}
-   {and after.\\n}
+     {normal_text:the\\n}
+     {normal_text: call}
+   {normal_text:\\n}
+   {normal_text:and after.\\n}
 ';
 
 

@@ -17,10 +17,10 @@ $result_tree_text{'space_in_anchor'} = '*document_root C1
   |is_target:{1}
    *brace_arg C3
     {spaces_before_argument:   }
-    {anchor  name}
+    {normal_text:anchor  name}
     {spaces_after_argument:   }
   *paragraph C1
-   {.\\n}
+   {normal_text:.\\n}
 ';
 
 

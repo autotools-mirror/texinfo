@@ -16,11 +16,11 @@ $result_tree_text{'include_at_end_line'} = '*document_root C1
    |text_arg:{inc_file.texi}
     *line_arg C3
      {spaces_before_argument: }
-     {inc_file.texi}
+     {normal_text:inc_file.texi}
      *@\\n
    {empty_line:\\n}
   *paragraph C1
-   {After.}
+   {normal_text:After.}
 ';
 
 

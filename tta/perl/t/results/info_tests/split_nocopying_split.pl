@@ -22,7 +22,7 @@ $result_tree_text{'split_nocopying_split'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C6 split_nocopying.texi:l4 {Test file used to test split Info without @@copying}
  |EXTRA
@@ -31,13 +31,13 @@ $result_tree_text{'split_nocopying_split'} = '*document_root C6
   *arguments_line C1
    *line_arg C5
     {spaces_before_argument: }
-    {Test file used to test split Info without }
+    {normal_text:Test file used to test split Info without }
     *@@
-    {copying}
+    {normal_text:copying}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {This is the top node.\\n}
+   {normal_text:This is the top node.\\n}
   {empty_line:\\n}
   *@menu C3 split_nocopying.texi:l8
    *arguments_line C1
@@ -49,17 +49,17 @@ $result_tree_text{'split_nocopying_split'} = '*document_root C6
     |EXTRA
     |node_content:A{0|0}
     |normalized:{Ch1}
-     {Ch1}
+     {normal_text:Ch1}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 split_nocopying.texi:l10
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 split_nocopying.texi:l12 {Ch1}
@@ -70,7 +70,7 @@ $result_tree_text{'split_nocopying_split'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Ch1}
+    {normal_text:Ch1}
     {spaces_after_argument:\\n}
  *@chapter C4 split_nocopying.texi:l13 {Ch1}
  |EXTRA
@@ -80,11 +80,11 @@ $result_tree_text{'split_nocopying_split'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Ch1}
+    {normal_text:Ch1}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {First chapter.\\n}
+   {normal_text:First chapter.\\n}
   {empty_line:\\n}
  *@bye C1
   *line_arg C1

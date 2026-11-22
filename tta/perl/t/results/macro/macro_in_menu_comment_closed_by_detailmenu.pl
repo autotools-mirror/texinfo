@@ -23,7 +23,7 @@ $result_tree_text{'macro_in_menu_comment_closed_by_detailmenu'} = '*document_roo
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *@menu C4 l5
@@ -48,24 +48,24 @@ $result_tree_text{'macro_in_menu_comment_closed_by_detailmenu'} = '*document_roo
      |EXTRA
      |node_content:A{0|0}
      |normalized:{second}
-      {second}
+      {normal_text:second}
      {menu_entry_separator:::}
      *menu_entry_description C1
       *preformatted C1
-       {\\n}
+       {normal_text:\\n}
     *@end C1 l8
     |EXTRA
     |text_arg:{detailmenu}
      *line_arg C3
       {spaces_before_argument: }
-      {detailmenu}
+      {normal_text:detailmenu}
       {spaces_after_argument:\\n}
    *@end C1 l9
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
 ';
 

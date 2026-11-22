@@ -12,15 +12,15 @@ $result_tree_text{'punctuation_in_sc'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *paragraph C5
-   {one }
+   {normal_text:one }
    *@sc C1 l1
     *brace_container C1
-     {two.}
-   { three }
+     {normal_text:two.}
+   {normal_text: three }
    *@sc C1 l1
     *brace_container C1
-     {FOUR.}
-   { five}
+     {normal_text:FOUR.}
+   {normal_text: five}
 ';
 
 

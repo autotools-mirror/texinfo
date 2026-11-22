@@ -16,55 +16,55 @@ $result_tree_text{'inline_in_example'} = '*document_root C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C9
-    {A }
+    {normal_text:A }
     *@inlineraw C2 l2
     |EXTRA
     |expand_index:{1}
     |format:{plaintext}
      *brace_arg C1
-      {plaintext}
+      {normal_text:plaintext}
      *brace_arg C6
       {spaces_before_argument: }
-      {plaintext \\n}
+      {normal_text:plaintext \\n}
       {empty_line:\\n}
-      {`` }
+      {normal_text:`` }
       *@lbracechar C1 l4
        *brace_container
-      { }
-    { a.\\n}
+      {normal_text: }
+    {normal_text: a.\\n}
     *@inlinefmt C2 l5
     |EXTRA
     |expand_index:{1}
     |format:{plaintext}
      *brace_arg C1
-      {plaintext}
+      {normal_text:plaintext}
      *brace_arg C2
       {spaces_before_argument: }
-      {`` }
-    {.\\n}
+      {normal_text:`` }
+    {normal_text:.\\n}
     {empty_line:\\n}
-    {  Now html\\n}
+    {normal_text:  Now html\\n}
     *@inlineraw C2 l8
     |EXTRA
     |expand_index:{1}
     |format:{html}
      *brace_arg C1
-      {html}
+      {normal_text:html}
      *brace_arg C5
       {spaces_before_argument: \\n}
       {spaces_before_argument:\\n}
-      {in <i>}
+      {normal_text:in <i>}
       *@acronym C1 l10
        *brace_arg C1
-        {HTML}
-      {</i>}
-    {.\\n}
+        {normal_text:HTML}
+      {normal_text:</i>}
+    {normal_text:.\\n}
    *@end C1 l11
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
 ';
 

@@ -16,7 +16,7 @@ $result_tree_text{'block_command_alias'} = '*document_root C1
    |misc_args:A{lang|lisp}
     *line_arg C3
      {spaces_before_argument: }
-     {lang=lisp}
+     {normal_text:lang=lisp}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
   *@lisp C2 l3
@@ -26,13 +26,13 @@ $result_tree_text{'block_command_alias'} = '*document_root C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C2
-    {in lang\\n}
+    {normal_text:in lang\\n}
     *@end C1 l5
     |EXTRA
     |text_arg:{lang}
      *line_arg C3
       {spaces_before_argument: }
-      {lang}
+      {normal_text:lang}
       {spaces_after_argument:\\n}
 ';
 

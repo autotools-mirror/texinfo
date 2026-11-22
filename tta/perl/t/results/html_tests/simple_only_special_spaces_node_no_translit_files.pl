@@ -19,7 +19,7 @@ $result_tree_text{'simple_only_special_spaces_node_no_translit_files'} = '*docum
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 simple_only_special_spaces_node.texi:l2 {top}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'simple_only_special_spaces_node_no_translit_files'} = '*docum
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 simple_only_special_spaces_node.texi:l4 {  }
@@ -39,7 +39,7 @@ $result_tree_text{'simple_only_special_spaces_node_no_translit_files'} = '*docum
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {  }
+    {normal_text:  }
     {spaces_after_argument:\\n}
  *@chapter C2 simple_only_special_spaces_node.texi:l5 {EN QUAD| |}
  |EXTRA
@@ -49,7 +49,7 @@ $result_tree_text{'simple_only_special_spaces_node_no_translit_files'} = '*docum
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {EN QUAD| |}
+    {normal_text:EN QUAD| |}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 simple_only_special_spaces_node.texi:l7
@@ -66,7 +66,7 @@ $result_tree_text{'simple_only_special_spaces_node_no_translit_files'} = '*docum
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {CARRIAGE RETURN|'."\r".'|}
+    {normal_text:CARRIAGE RETURN|'."\r".'|}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 simple_only_special_spaces_node.texi:l10 {  }
@@ -77,7 +77,7 @@ $result_tree_text{'simple_only_special_spaces_node_no_translit_files'} = '*docum
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {  }
+    {normal_text:  }
     {spaces_after_argument:\\n}
  *@chapter C2 simple_only_special_spaces_node.texi:l11 {THREE-PER-EM SPACE}
  |EXTRA
@@ -87,7 +87,7 @@ $result_tree_text{'simple_only_special_spaces_node_no_translit_files'} = '*docum
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {THREE-PER-EM SPACE}
+    {normal_text:THREE-PER-EM SPACE}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
 ';

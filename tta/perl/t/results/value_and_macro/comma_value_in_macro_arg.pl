@@ -31,11 +31,11 @@ $result_tree_text{'comma_value_in_macro_arg'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C5
-   {result: }
+   {normal_text:result: }
    >SOURCEMARKS
    >macro_expansion<start;1>
     >*macro_call@macro1 C2
@@ -45,19 +45,19 @@ $result_tree_text{'comma_value_in_macro_arg'} = '*document_root C1
       >{macro_call_arg_text:arg1 @value{comma} arg2 }
    *@emph C1 l7:@macro1
     *brace_container C1
-     {arg1 , arg2 }
+     {normal_text:arg1 , arg2 }
      >SOURCEMARKS
      >value_expansion<start;1><p:5>{,}
       >*@value C1
        >*brace_container C1
-        >{comma}
+        >{normal_text:comma}
      >value_expansion<end;1><p:6>
-   { protected \\ -> \\arg1\\ }
+   {normal_text: protected \\ -> \\arg1\\ }
    *@emph C1 l7:@macro1
    >SOURCEMARKS
    >macro_expansion<end;1>
     *brace_container
-   {\\n}
+   {normal_text:\\n}
 ';
 
 

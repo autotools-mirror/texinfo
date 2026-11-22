@@ -25,7 +25,7 @@ $result_tree_text{'spaces_after_macro_linemacro_commands_in_call'} = '*document_
     |text_arg:{linemacro}
      *line_arg C3
       {spaces_before_argument: }
-      {linemacro}
+      {normal_text:linemacro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@macro C3 l7
@@ -40,7 +40,7 @@ $result_tree_text{'spaces_after_macro_linemacro_commands_in_call'} = '*document_
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@linemacro C3 l11
@@ -55,7 +55,7 @@ $result_tree_text{'spaces_after_macro_linemacro_commands_in_call'} = '*document_
     |text_arg:{linemacro}
      *line_arg C3
       {spaces_before_argument: }
-      {linemacro}
+      {normal_text:linemacro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    >SOURCEMARKS
@@ -82,7 +82,7 @@ $result_tree_text{'spaces_after_macro_linemacro_commands_in_call'} = '*document_
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {category}
+       {normal_text:category}
      {spaces: }
      *def_name C1
       *bracketed_arg C3 l15:@mylinecommand
@@ -91,19 +91,19 @@ $result_tree_text{'spaces_after_macro_linemacro_commands_in_call'} = '*document_
        >macro_expansion<start;1>
         >*macro_call_line@mymac C1
          >*line_arg C1
-          >{} A aa B @mymac {bb}}
+          >{normal_text:} A aa B @mymac {bb}}
        *@samp C1 l15:@mymac
        >SOURCEMARKS
        >macro_expansion<end;1>
         *brace_container C1
-         {arg1}
+         {normal_text:arg1}
        {spaces_after_argument:\\n}
    *@end C1 l15:@mylinecommand
    |EXTRA
    |text_arg:{defblock}
     *line_arg C3
      {spaces_before_argument: }
-     {defblock}
+     {normal_text:defblock}
      >SOURCEMARKS
      >linemacro_expansion<end;1><p:8>
      {spaces_after_argument:\\n}
@@ -132,7 +132,7 @@ $result_tree_text{'spaces_after_macro_linemacro_commands_in_call'} = '*document_
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {category}
+       {normal_text:category}
      {spaces: }
      *def_name C1
       *bracketed_arg C1 l17:@mylinecommand
@@ -148,27 +148,27 @@ $result_tree_text{'spaces_after_macro_linemacro_commands_in_call'} = '*document_
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {A}
+       {normal_text:A}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {Fun}
+       {normal_text:Fun}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {B}
+       {normal_text:B}
      {spaces: }
      *def_arg C1
       *bracketed_arg C1 l17:@mylinemac
-       {other}
+       {normal_text:other}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {and}
+       {normal_text:and}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {remaining}
+       {normal_text:remaining}
        >SOURCEMARKS
        >linemacro_expansion<end;3><p:9>
      {spaces_after_argument:\\n}
@@ -177,7 +177,7 @@ $result_tree_text{'spaces_after_macro_linemacro_commands_in_call'} = '*document_
    |text_arg:{defblock}
     *line_arg C3
      {spaces_before_argument: }
-     {defblock}
+     {normal_text:defblock}
      >SOURCEMARKS
      >linemacro_expansion<end;2><p:8>
      {spaces_after_argument:\\n}

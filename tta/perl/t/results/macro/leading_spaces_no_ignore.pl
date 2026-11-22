@@ -24,7 +24,7 @@ $result_tree_text{'leading_spaces_no_ignore'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    {spaces_before_paragraph:  }
@@ -33,8 +33,8 @@ $result_tree_text{'leading_spaces_no_ignore'} = '*document_root C1
     >*macro_call@mymacro C1
      >*brace_arg
   *paragraph C2
-   {Some  here\\n}
-   {  text\\n}
+   {normal_text:Some  here\\n}
+   {normal_text:  text\\n}
    >SOURCEMARKS
    >macro_expansion<end;1><p:6>
 ';

@@ -21,30 +21,30 @@ $result_tree_text{'wrong_braces_simple'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {truc}
+       {normal_text:truc}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {machin}
+       {normal_text:machin}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {bidule}
+       {normal_text:bidule}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {chose}
+       {normal_text:chose}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {and}
+       {normal_text:and}
      {spaces_after_argument: \\n}
    *@end C1 l2
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
-     {deffn}
+     {normal_text:deffn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deffn C2 l4
@@ -57,34 +57,34 @@ $result_tree_text{'wrong_braces_simple'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {truc}
+       {normal_text:truc}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {machin}
+       {normal_text:machin}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {bidule}
+       {normal_text:bidule}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {chose}
+       {normal_text:chose}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {and}
+       {normal_text:and}
      {spaces:  }
      *def_arg C1
       *def_line_arg C1
-       {after}
+       {normal_text:after}
      {spaces_after_argument:\\n}
    *@end C1 l5
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
-     {deffn}
+     {normal_text:deffn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deffn C2 l7
@@ -97,23 +97,23 @@ $result_tree_text{'wrong_braces_simple'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {truc}
+       {normal_text:truc}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {machin}
+       {normal_text:machin}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {bidule}
+       {normal_text:bidule}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {chose}
+       {normal_text:chose}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {and}
+       {normal_text:and}
      {spaces: }
      *def_arg C1
       *bracketed_arg C1 l7
@@ -123,7 +123,7 @@ $result_tree_text{'wrong_braces_simple'} = '*document_root C1
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
-     {deffn}
+     {normal_text:deffn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deffn C2 l10
@@ -136,35 +136,35 @@ $result_tree_text{'wrong_braces_simple'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {truc}
+       {normal_text:truc}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {machin}
+       {normal_text:machin}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {bidule}
+       {normal_text:bidule}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {chose}
+       {normal_text:chose}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {and}
+       {normal_text:and}
      {spaces: }
      *def_arg C1
       *bracketed_arg C3 l10
        {spaces_before_argument: }
-       {and after}
+       {normal_text:and after}
        {spaces_after_argument:\\n}
    *@end C1 l11
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
-     {deffn}
+     {normal_text:deffn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deffn C6 l13
@@ -177,23 +177,23 @@ $result_tree_text{'wrong_braces_simple'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {a}
+       {normal_text:a}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {b}
+       {normal_text:b}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {c}
+       {normal_text:c}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {d}
+       {normal_text:d}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {e}
+       {normal_text:e}
      {spaces_after_argument:\\n}
    *@deffnx C1 l14
    |EXTRA
@@ -204,23 +204,23 @@ $result_tree_text{'wrong_braces_simple'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {truc}
+       {normal_text:truc}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {machin}
+       {normal_text:machin}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {bidule}
+       {normal_text:bidule}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {chose}
+       {normal_text:chose}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {and}
+       {normal_text:and}
      {spaces_after_argument: \\n}
    *@deffnx C1 l15
    |EXTRA
@@ -231,27 +231,27 @@ $result_tree_text{'wrong_braces_simple'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {truc}
+       {normal_text:truc}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {machin}
+       {normal_text:machin}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {bidule}
+       {normal_text:bidule}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {chose}
+       {normal_text:chose}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {and}
+       {normal_text:and}
      {spaces:  }
      *def_arg C1
       *def_line_arg C1
-       {after}
+       {normal_text:after}
      {spaces_after_argument:\\n}
    *@deffnx C1 l16
    |EXTRA
@@ -262,23 +262,23 @@ $result_tree_text{'wrong_braces_simple'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {truc}
+       {normal_text:truc}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {machin}
+       {normal_text:machin}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {bidule}
+       {normal_text:bidule}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {chose}
+       {normal_text:chose}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {and}
+       {normal_text:and}
      {spaces: }
      *def_arg C1
       *bracketed_arg C1 l16
@@ -292,35 +292,35 @@ $result_tree_text{'wrong_braces_simple'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {truc}
+       {normal_text:truc}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {machin}
+       {normal_text:machin}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {bidule}
+       {normal_text:bidule}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {chose}
+       {normal_text:chose}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {and}
+       {normal_text:and}
      {spaces: }
      *def_arg C1
       *bracketed_arg C3 l17
        {spaces_before_argument: }
-       {and after}
+       {normal_text:and after}
        {spaces_after_argument:\\n}
    *@end C1 l18
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
-     {deffn}
+     {normal_text:deffn}
      {spaces_after_argument:\\n}
 ';
 

@@ -17,7 +17,7 @@ $result_tree_text{'simple_documentlanguage'} = '*document_root C3
    |text_arg:{fr}
     *line_arg C3
      {spaces_before_argument: }
-     {fr}
+     {normal_text:fr}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *@node C1 l3 {Top}
@@ -28,7 +28,7 @@ $result_tree_text{'simple_documentlanguage'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@node C3 l4 {chap}
  |EXTRA
@@ -38,7 +38,7 @@ $result_tree_text{'simple_documentlanguage'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@defivar C2 l6
@@ -62,22 +62,22 @@ $result_tree_text{'simple_documentlanguage'} = '*document_root C3
      {spaces: }
      *def_class C1
       *def_line_arg C1
-       {AAA}
+       {normal_text:AAA}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {BBB}
+       {normal_text:BBB}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {CCC}
+       {normal_text:CCC}
      {spaces_after_argument:\\n}
    *@end C1 l7
    |EXTRA
    |text_arg:{defivar}
     *line_arg C3
      {spaces_before_argument: }
-     {defivar}
+     {normal_text:defivar}
      {spaces_after_argument:\\n}
 ';
 

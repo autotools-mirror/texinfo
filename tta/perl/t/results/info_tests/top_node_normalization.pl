@@ -19,7 +19,7 @@ $result_tree_text{'top_node_normalization'} = '*document_root C2
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {ToP}
+    {normal_text:ToP}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C4
@@ -28,15 +28,15 @@ $result_tree_text{'top_node_normalization'} = '*document_root C2
     |EXTRA
     |node_content:A{0|0}
     |normalized:{Top}
-     {TOP}
-   {. }
+     {normal_text:TOP}
+   {normal_text:. }
    *@xref C1 l3
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{Top}
-     {tOP}
-   {.\\n}
+     {normal_text:tOP}
+   {normal_text:.\\n}
   {empty_line:\\n}
   *@menu C3 l5
    *arguments_line C1
@@ -48,17 +48,17 @@ $result_tree_text{'top_node_normalization'} = '*document_root C2
     |EXTRA
     |node_content:A{0|0}
     |normalized:{Top}
-     {tOP}
+     {normal_text:tOP}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l7
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
 ';
 

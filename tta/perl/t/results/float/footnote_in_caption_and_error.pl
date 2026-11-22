@@ -19,7 +19,7 @@ $result_tree_text{'footnote_in_caption_and_error'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@node C5 l2 {chap}
  |EXTRA
@@ -29,7 +29,7 @@ $result_tree_text{'footnote_in_caption_and_error'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@listoffloats C1 l4
@@ -38,7 +38,7 @@ $result_tree_text{'footnote_in_caption_and_error'} = '*document_root C3
   |global_command_number:{1}
    *line_arg C3
     {spaces_before_argument: }
-    {fl}
+    {normal_text:fl}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@float C5 l6
@@ -51,23 +51,23 @@ $result_tree_text{'footnote_in_caption_and_error'} = '*document_root C3
    *arguments_line C2
     *block_line_arg C2
      {spaces_before_argument: }
-     {fl}
+     {normal_text:fl}
     *block_line_arg C3
      {spaces_before_argument: }
-     {label}
+     {normal_text:label}
      {spaces_after_argument:\\n}
    *paragraph C1
-    {In float.\\n}
+    {normal_text:In float.\\n}
    *@caption C1 l8
     *brace_command_context C1
      *paragraph C2
-      {in caption}
+      {normal_text:in caption}
       *@footnote C1 l8
       |EXTRA
       |global_command_number:{1}
        *brace_command_context C1
         *paragraph C2
-         {in footnote }
+         {normal_text:in footnote }
          *@error l8
    {spaces_after_close_brace:\\n}
    *@end C1 l9
@@ -75,7 +75,7 @@ $result_tree_text{'footnote_in_caption_and_error'} = '*document_root C3
    |text_arg:{float}
     *line_arg C3
      {spaces_before_argument: }
-     {float}
+     {normal_text:float}
      {spaces_after_argument:\\n}
 ';
 

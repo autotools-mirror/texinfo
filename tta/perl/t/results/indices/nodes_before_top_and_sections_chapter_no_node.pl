@@ -23,21 +23,21 @@ $result_tree_text{'nodes_before_top_and_sections_chapter_no_node'} = '*document_
   *arguments_line C4
    *line_arg C2
     {spaces_before_argument: }
-    {first before top}
+    {normal_text:first before top}
    *line_arg C2
    |EXTRA
    |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
    *line_arg C1
     {spaces_before_argument: }
    *line_arg C4
    |EXTRA
    |manual_content:A{1|1}
-    {(}
-    {dir}
-    {)}
+    {normal_text:(}
+    {normal_text:dir}
+    {normal_text:)}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 nodes_before_top_and_sections.texi:l4
   |EXTRA
@@ -45,31 +45,31 @@ $result_tree_text{'nodes_before_top_and_sections_chapter_no_node'} = '*document_
   |index_entry:I{cp,1}
    *line_arg C3
     {spaces_before_argument: }
-    {first before top}
+    {normal_text:first before top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {in first node before printindex\\n}
+   {normal_text:in first node before printindex\\n}
   *@printindex C1 nodes_before_top_and_sections.texi:l7
   |EXTRA
   |global_command_number:{1}
   |misc_args:A{cp}
    *line_arg C3
     {spaces_before_argument: }
-    {cp}
+    {normal_text:cp}
     {spaces_after_argument:\\n}
   *paragraph C1
-   {in first node\\n}
+   {normal_text:in first node\\n}
   *@printindex C1 nodes_before_top_and_sections.texi:l9
   |EXTRA
   |global_command_number:{2}
   |misc_args:A{cp}
    *line_arg C3
     {spaces_before_argument: }
-    {cp}
+    {normal_text:cp}
     {spaces_after_argument:\\n}
   *paragraph C1
-   {after second printindex in first node\\n}
+   {normal_text:after second printindex in first node\\n}
   *@menu C3 nodes_before_top_and_sections.texi:l11
    *arguments_line C1
     *block_line_arg C1
@@ -80,17 +80,17 @@ $result_tree_text{'nodes_before_top_and_sections_chapter_no_node'} = '*document_
     |EXTRA
     |node_content:A{0|0}
     |normalized:{node-in-menu-before-top}
-     {node in menu before top}
+     {normal_text:node in menu before top}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 nodes_before_top_and_sections.texi:l13
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C10 nodes_before_top_and_sections.texi:l15 {node in menu before top}
@@ -102,14 +102,14 @@ $result_tree_text{'nodes_before_top_and_sections_chapter_no_node'} = '*document_
   *arguments_line C4
    *line_arg C2
     {spaces_before_argument: }
-    {node in menu before top}
+    {normal_text:node in menu before top}
    *line_arg
    *line_arg
    *line_arg C2
    |EXTRA
    |node_content:A{0|0}
    |normalized:{first-before-top}
-    {first before top}
+    {normal_text:first before top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 nodes_before_top_and_sections.texi:l17
@@ -118,20 +118,20 @@ $result_tree_text{'nodes_before_top_and_sections_chapter_no_node'} = '*document_
   |index_entry:I{cp,2}
    *line_arg C3
     {spaces_before_argument: }
-    {node in menu before top}
+    {normal_text:node in menu before top}
     {spaces_after_argument:\\n}
   *paragraph C1
-   {between node in menu before top and printindex\\n}
+   {normal_text:between node in menu before top and printindex\\n}
   *@printindex C1 nodes_before_top_and_sections.texi:l19
   |EXTRA
   |global_command_number:{3}
   |misc_args:A{cp}
    *line_arg C3
     {spaces_before_argument: }
-    {cp}
+    {normal_text:cp}
     {spaces_after_argument:\\n}
   *paragraph C1
-   {node in menu before top text after printindex\\n}
+   {normal_text:node in menu before top text after printindex\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 nodes_before_top_and_sections.texi:l22
   |EXTRA
@@ -139,7 +139,7 @@ $result_tree_text{'nodes_before_top_and_sections_chapter_no_node'} = '*document_
   |index_entry:I{cp,3}
    *line_arg C3
     {spaces_before_argument: }
-    {printindex node in menu before top}
+    {normal_text:printindex node in menu before top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   {empty_line:\\n}
@@ -152,14 +152,14 @@ $result_tree_text{'nodes_before_top_and_sections_chapter_no_node'} = '*document_
   *arguments_line C3
    *line_arg C2
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
    *line_arg C1
     {spaces_before_argument: }
    *line_arg C2
    |EXTRA
    |node_content:A{0|0}
    |normalized:{first-before-top}
-    {first before top}
+    {normal_text:first before top}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 nodes_before_top_and_sections.texi:l26
   |EXTRA
@@ -167,17 +167,17 @@ $result_tree_text{'nodes_before_top_and_sections_chapter_no_node'} = '*document_
   |index_entry:I{cp,4}
    *line_arg C3
     {spaces_before_argument: }
-    {entry a}
+    {normal_text:entry a}
     {spaces_after_argument:\\n}
   *paragraph C1
-   {in top node.\\n}
+   {normal_text:in top node.\\n}
   *@printindex C1 nodes_before_top_and_sections.texi:l28
   |EXTRA
   |global_command_number:{4}
   |misc_args:A{cp}
    *line_arg C3
     {spaces_before_argument: }
-    {cp}
+    {normal_text:cp}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@printindex C1 nodes_before_top_and_sections.texi:l30
@@ -186,11 +186,11 @@ $result_tree_text{'nodes_before_top_and_sections_chapter_no_node'} = '*document_
   |misc_args:A{fn}
    *line_arg C3
     {spaces_before_argument: }
-    {fn}
+    {normal_text:fn}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {And one more index in top node\\n}
+   {normal_text:And one more index in top node\\n}
   {empty_line:\\n}
   *@printindex C1 nodes_before_top_and_sections.texi:l34
   |EXTRA
@@ -198,7 +198,7 @@ $result_tree_text{'nodes_before_top_and_sections_chapter_no_node'} = '*document_
   |misc_args:A{cp}
    *line_arg C3
     {spaces_before_argument: }
-    {cp}
+    {normal_text:cp}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@top C7 nodes_before_top_and_sections.texi:l36 {top section}
@@ -208,7 +208,7 @@ $result_tree_text{'nodes_before_top_and_sections_chapter_no_node'} = '*document_
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top section}
+    {normal_text:top section}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 nodes_before_top_and_sections.texi:l37
   |EXTRA
@@ -216,11 +216,11 @@ $result_tree_text{'nodes_before_top_and_sections_chapter_no_node'} = '*document_
   |index_entry:I{cp,5}
    *line_arg C3
     {spaces_before_argument: }
-    {top section}
+    {normal_text:top section}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {in top section\\n}
+   {normal_text:in top section\\n}
   {empty_line:\\n}
   *@menu C5 nodes_before_top_and_sections.texi:l41
    *arguments_line C1
@@ -232,39 +232,39 @@ $result_tree_text{'nodes_before_top_and_sections_chapter_no_node'} = '*document_
     |EXTRA
     |node_content:A{0|0}
     |normalized:{first}
-     {first}
+     {normal_text:first}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 nodes_before_top_and_sections.texi:l43
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{chapter}
-     {chapter}
+     {normal_text:chapter}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 nodes_before_top_and_sections.texi:l44
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{node-in-chapter}
-     {node in chapter}
+     {normal_text:node in chapter}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 nodes_before_top_and_sections.texi:l45
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C7 nodes_before_top_and_sections.texi:l47 {first}
@@ -276,29 +276,29 @@ $result_tree_text{'nodes_before_top_and_sections_chapter_no_node'} = '*document_
   *arguments_line C4
    *line_arg C2
     {spaces_before_argument: }
-    {first}
+    {normal_text:first}
    *line_arg
    *line_arg C1
    |EXTRA
    |node_content:A{0|0}
    |normalized:{Top}
-    {Top}
+    {normal_text:Top}
    *line_arg C3
    |EXTRA
    |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
   *paragraph C4
-   {Text and then index entries\\n}
+   {normal_text:Text and then index entries\\n}
    *index_entry_command@cindex C1 nodes_before_top_and_sections.texi:l49
    |EXTRA
    |element_node:{first}
    |index_entry:I{cp,6}
     *line_arg C3
      {spaces_before_argument: }
-     {! entry in node}
+     {normal_text:! entry in node}
      {spaces_after_argument:\\n}
    *index_entry_command@findex C1 nodes_before_top_and_sections.texi:l50
    |EXTRA
@@ -306,7 +306,7 @@ $result_tree_text{'nodes_before_top_and_sections_chapter_no_node'} = '*document_
    |index_entry:I{fn,1}
     *line_arg C3
      {spaces_before_argument: }
-     {fun in node}
+     {normal_text:fun in node}
      {spaces_after_argument:\\n}
    *index_entry_command@cindex C1 nodes_before_top_and_sections.texi:l51
    |EXTRA
@@ -314,7 +314,7 @@ $result_tree_text{'nodes_before_top_and_sections_chapter_no_node'} = '*document_
    |index_entry:I{cp,7}
     *line_arg C3
      {spaces_before_argument: }
-     {entry in node}
+     {normal_text:entry in node}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@printindex C1 nodes_before_top_and_sections.texi:l53
@@ -323,7 +323,7 @@ $result_tree_text{'nodes_before_top_and_sections_chapter_no_node'} = '*document_
   |misc_args:A{cp}
    *line_arg C3
     {spaces_before_argument: }
-    {cp}
+    {normal_text:cp}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C3 nodes_before_top_and_sections.texi:l55
@@ -336,17 +336,17 @@ $result_tree_text{'nodes_before_top_and_sections_chapter_no_node'} = '*document_
     |EXTRA
     |node_content:A{0|0}
     |normalized:{second}
-     {second}
+     {normal_text:second}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 nodes_before_top_and_sections.texi:l57
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C5 nodes_before_top_and_sections.texi:l59 {second}
@@ -358,14 +358,14 @@ $result_tree_text{'nodes_before_top_and_sections_chapter_no_node'} = '*document_
   *arguments_line C4
    *line_arg C2
     {spaces_before_argument: }
-    {second}
+    {normal_text:second}
    *line_arg
    *line_arg
    *line_arg C2
    |EXTRA
    |node_content:A{0|0}
    |normalized:{first}
-    {first}
+    {normal_text:first}
     {spaces_after_argument:\\n}
   *@menu C4 nodes_before_top_and_sections.texi:l60
    *arguments_line C1
@@ -377,28 +377,28 @@ $result_tree_text{'nodes_before_top_and_sections_chapter_no_node'} = '*document_
     |EXTRA
     |node_content:A{0|0}
     |normalized:{a-node}
-     {a node}
+     {normal_text:a node}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 nodes_before_top_and_sections.texi:l62
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{another}
-     {another}
+     {normal_text:another}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 nodes_before_top_and_sections.texi:l63
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@printindex C1 nodes_before_top_and_sections.texi:l65
@@ -407,7 +407,7 @@ $result_tree_text{'nodes_before_top_and_sections_chapter_no_node'} = '*document_
   |misc_args:A{fn}
    *line_arg C3
     {spaces_before_argument: }
-    {fn}
+    {normal_text:fn}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C6 nodes_before_top_and_sections.texi:l67 {another}
@@ -418,7 +418,7 @@ $result_tree_text{'nodes_before_top_and_sections_chapter_no_node'} = '*document_
   *arguments_line C4
    *line_arg C2
     {spaces_before_argument: }
-    {another}
+    {normal_text:another}
    *line_arg C1
     {spaces_before_argument: }
    *line_arg C2
@@ -426,13 +426,13 @@ $result_tree_text{'nodes_before_top_and_sections_chapter_no_node'} = '*document_
    |node_content:A{1|1}
    |normalized:{a-node}
     {spaces_before_argument: }
-    {a node}
+    {normal_text:a node}
    *line_arg C3
    |EXTRA
    |node_content:A{1|1}
    |normalized:{second}
     {spaces_before_argument: }
-    {second}
+    {normal_text:second}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 nodes_before_top_and_sections.texi:l69
@@ -441,7 +441,7 @@ $result_tree_text{'nodes_before_top_and_sections_chapter_no_node'} = '*document_
   |index_entry:I{cp,8}
    *line_arg C3
     {spaces_before_argument: }
-    {something}
+    {normal_text:something}
     {spaces_after_argument:\\n}
   *index_entry_command@findex C1 nodes_before_top_and_sections.texi:l70
   |EXTRA
@@ -449,7 +449,7 @@ $result_tree_text{'nodes_before_top_and_sections_chapter_no_node'} = '*document_
   |index_entry:I{fn,2}
    *line_arg C3
     {spaces_before_argument: }
-    {somewhere}
+    {normal_text:somewhere}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 nodes_before_top_and_sections.texi:l71
   |EXTRA
@@ -457,7 +457,7 @@ $result_tree_text{'nodes_before_top_and_sections_chapter_no_node'} = '*document_
   |index_entry:I{cp,9}
    *line_arg C3
     {spaces_before_argument: }
-    {another}
+    {normal_text:another}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C10 nodes_before_top_and_sections.texi:l73 {a node}
@@ -469,20 +469,20 @@ $result_tree_text{'nodes_before_top_and_sections_chapter_no_node'} = '*document_
   *arguments_line C4
    *line_arg C2
     {spaces_before_argument: }
-    {a node}
+    {normal_text:a node}
    *line_arg C2
    |EXTRA
    |node_content:A{1|1}
    |normalized:{another}
     {spaces_before_argument: }
-    {another}
+    {normal_text:another}
    *line_arg C1
     {spaces_before_argument: }
    *line_arg C2
    |EXTRA
    |node_content:A{0|0}
    |normalized:{second}
-    {second}
+    {normal_text:second}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 nodes_before_top_and_sections.texi:l74
   |EXTRA
@@ -490,7 +490,7 @@ $result_tree_text{'nodes_before_top_and_sections_chapter_no_node'} = '*document_
   |index_entry:I{cp,10}
    *line_arg C3
     {spaces_before_argument: }
-    {entry after printindex}
+    {normal_text:entry after printindex}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@printindex C1 nodes_before_top_and_sections.texi:l76
@@ -499,7 +499,7 @@ $result_tree_text{'nodes_before_top_and_sections_chapter_no_node'} = '*document_
   |misc_args:A{cp}
    *line_arg C3
     {spaces_before_argument: }
-    {cp}
+    {normal_text:cp}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@findex C1 nodes_before_top_and_sections.texi:l78
@@ -508,7 +508,7 @@ $result_tree_text{'nodes_before_top_and_sections_chapter_no_node'} = '*document_
   |index_entry:I{fn,3}
    *line_arg C3
     {spaces_before_argument: }
-    {a function}
+    {normal_text:a function}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 nodes_before_top_and_sections.texi:l79
   |EXTRA
@@ -516,7 +516,7 @@ $result_tree_text{'nodes_before_top_and_sections_chapter_no_node'} = '*document_
   |index_entry:I{cp,11}
    *line_arg C3
     {spaces_before_argument: }
-    {a concept a node}
+    {normal_text:a concept a node}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@printindex C1 nodes_before_top_and_sections.texi:l81
@@ -525,7 +525,7 @@ $result_tree_text{'nodes_before_top_and_sections_chapter_no_node'} = '*document_
   |misc_args:A{cp}
    *line_arg C3
     {spaces_before_argument: }
-    {cp}
+    {normal_text:cp}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 nodes_before_top_and_sections.texi:l83 {chapter}
@@ -537,18 +537,18 @@ $result_tree_text{'nodes_before_top_and_sections_chapter_no_node'} = '*document_
   *arguments_line C4
    *line_arg C2
     {spaces_before_argument: }
-    {chapter}
+    {normal_text:chapter}
    *line_arg C1
    |EXTRA
    |node_content:A{0|0}
    |normalized:{node-in-chapter}
-    {node in chapter}
+    {normal_text:node in chapter}
    *line_arg
    *line_arg C2
    |EXTRA
    |node_content:A{0|0}
    |normalized:{Top}
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@chapter C4 nodes_before_top_and_sections.texi:l84 {A chapter}
  |EXTRA
@@ -558,7 +558,7 @@ $result_tree_text{'nodes_before_top_and_sections_chapter_no_node'} = '*document_
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {A chapter}
+    {normal_text:A chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@printindex C1 nodes_before_top_and_sections.texi:l86
@@ -567,7 +567,7 @@ $result_tree_text{'nodes_before_top_and_sections_chapter_no_node'} = '*document_
   |misc_args:A{cp}
    *line_arg C3
     {spaces_before_argument: }
-    {cp}
+    {normal_text:cp}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C4 nodes_before_top_and_sections.texi:l88 {node in chapter}
@@ -578,19 +578,19 @@ $result_tree_text{'nodes_before_top_and_sections_chapter_no_node'} = '*document_
   *arguments_line C4
    *line_arg C2
     {spaces_before_argument: }
-    {node in chapter}
+    {normal_text:node in chapter}
    *line_arg
    *line_arg C2
    |EXTRA
    |node_content:A{1|1}
    |normalized:{chapter}
     {spaces_before_argument: }
-    {chapter}
+    {normal_text:chapter}
    *line_arg C2
    |EXTRA
    |node_content:A{0|0}
    |normalized:{Top}
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 nodes_before_top_and_sections.texi:l90
@@ -599,7 +599,7 @@ $result_tree_text{'nodes_before_top_and_sections_chapter_no_node'} = '*document_
   |index_entry:I{cp,12}
    *line_arg C3
     {spaces_before_argument: }
-    {node in chapter}
+    {normal_text:node in chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@bye C1

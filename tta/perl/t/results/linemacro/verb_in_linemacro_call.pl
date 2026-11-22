@@ -26,7 +26,7 @@ $result_tree_text{'verb_in_linemacro_call'} = '*document_root C1
     |text_arg:{linemacro}
      *line_arg C3
       {spaces_before_argument: }
-      {linemacro}
+      {normal_text:linemacro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *@defblock C4 l8
@@ -35,7 +35,7 @@ $result_tree_text{'verb_in_linemacro_call'} = '*document_root C1
      {spaces_before_argument:\\n}
    *before_defline C1
     *paragraph C7
-     {first Name\\n}
+     {normal_text:first Name\\n}
      >SOURCEMARKS
      >linemacro_expansion<start;1>
       >*linemacro_call@mycommand C4
@@ -51,20 +51,20 @@ $result_tree_text{'verb_in_linemacro_call'} = '*document_root C1
        >*linemacro_arg C2
         >{spaces_before_argument: }
         >{macro_call_arg_text:other {j}}
-     {second }
+     {normal_text:second }
      *@verb C1 l9:@mycommand
       *brace_container C3
        {verb_delimiter::}
        {raw: in verb }
        {verb_delimiter::}
-     {\\n}
-     {third A }
+     {normal_text:\\n}
+     {normal_text:third A }
      *@verb C1 l9:@mycommand
       *brace_container C3
        {verb_delimiter:|}
        {raw: in bracketed }
        {verb_delimiter:|}
-     { \\n}
+     {normal_text: \\n}
    *@defline C1 l9:@mycommand
    |EXTRA
    |def_command:{defline}
@@ -73,24 +73,24 @@ $result_tree_text{'verb_in_linemacro_call'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {Name}
+       {normal_text:Name}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {other}
+       {normal_text:other}
      {spaces: }
      *def_arg C1
       *bracketed_arg C1 l9:@mycommand
       >SOURCEMARKS
       >linemacro_expansion<end;1>
-       {j}
+       {normal_text:j}
      {spaces_after_argument:\\n}
    *@end C1 l10
    |EXTRA
    |text_arg:{defblock}
     *line_arg C3
      {spaces_before_argument: }
-     {defblock}
+     {normal_text:defblock}
      {spaces_after_argument:\\n}
 ';
 

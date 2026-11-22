@@ -16,13 +16,13 @@ $result_tree_text{'bye_on_end_command_line'} = '*document_root C2
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C1
-    {in cartouche.\\n}
+    {normal_text:in cartouche.\\n}
    *@end C1 l3
    |EXTRA
    |text_arg:{cartouche}
     *line_arg C2
      {spaces_before_argument: }
-     {cartouche}
+     {normal_text:cartouche}
  *@bye C1
   *line_arg C1
    {spaces_before_argument:\\n}

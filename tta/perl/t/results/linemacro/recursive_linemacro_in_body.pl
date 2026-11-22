@@ -23,7 +23,7 @@ $result_tree_text{'recursive_linemacro_in_body'} = '*document_root C1
     |text_arg:{linemacro}
      *line_arg C3
       {spaces_before_argument: }
-      {linemacro}
+      {normal_text:linemacro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    {empty_line:\\n}

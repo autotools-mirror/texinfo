@@ -25,18 +25,18 @@ NodeForward: [U1]
   *arguments_line C4
    *line_arg C2
     {spaces_before_argument: }
-    {first}
+    {normal_text:first}
    *line_arg
    *line_arg
    *line_arg C4
    |EXTRA
    |manual_content:A{1|1}
-    {(}
-    {dir}
-    {)}
+    {normal_text:(}
+    {normal_text:dir}
+    {normal_text:)}
     {spaces_after_argument:\\n}
   *paragraph C1
-   {first node\\n}
+   {normal_text:first node\\n}
   {empty_line:\\n}
   *@menu C3 l4
    *arguments_line C1
@@ -48,17 +48,17 @@ NodeForward: [U1]
     |EXTRA
     |node_content:A{0|0}
     |normalized:{second-node}
-     {second node}
+     {normal_text:second node}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l6
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
 U1 unit{C1}{N:second node}
@@ -77,21 +77,21 @@ NodeBack: [U0]
   *arguments_line C4
    *line_arg C2
     {spaces_before_argument: }
-    {second node}
+    {normal_text:second node}
    *line_arg
    *line_arg C1
    |EXTRA
    |node_content:A{0|0}
    |normalized:{first}
-    {first}
+    {normal_text:first}
    *line_arg C2
    |EXTRA
    |node_content:A{0|0}
    |normalized:{first}
-    {first}
+    {normal_text:first}
     {spaces_after_argument:\\n}
   *paragraph C1
-   {second node\\n}
+   {normal_text:second node\\n}
 ';
 
 

@@ -20,7 +20,7 @@ $result_tree_text{'section_below_unnumbered_no_top'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {U}
+    {normal_text:U}
     {spaces_after_argument:\\n}
  *@section C1 l2 {S}
  |EXTRA
@@ -31,7 +31,7 @@ $result_tree_text{'section_below_unnumbered_no_top'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {S}
+    {normal_text:S}
     {spaces_after_argument:\\n}
 ';
 

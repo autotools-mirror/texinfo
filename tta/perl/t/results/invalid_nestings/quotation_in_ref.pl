@@ -19,13 +19,13 @@ $result_tree_text{'quotation_in_ref'} = '*document_root C2
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {first}
+    {normal_text:first}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
    *@xref C2 l3
     *brace_arg C1
-     {first}
+     {normal_text:first}
     *brace_arg C1
      {spaces_before_argument:\\n}
   *@quotation C3 l4
@@ -33,16 +33,16 @@ $result_tree_text{'quotation_in_ref'} = '*document_root C2
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C1
-    {quotation in ref\\n}
+    {normal_text:quotation in ref\\n}
    *@end C1 l6
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }
-     {quotation}
+     {normal_text:quotation}
      {spaces_after_argument:\\n}
   *paragraph C1
-   {.\\n}
+   {normal_text:.\\n}
 ';
 
 

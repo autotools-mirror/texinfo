@@ -57,12 +57,12 @@ $result_tree_text{'bad_syntax'} = '*document_root C1
      {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C1
-   {gurgl\\n}
+   {normal_text:gurgl\\n}
   {empty_line:\\n}
   *@value C1
    *brace_container C1
-    {unknown}
-  {\\n}
+    {normal_text:unknown}
+  {normal_text:\\n}
 ';
 
 

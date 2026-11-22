@@ -17,16 +17,16 @@ $result_tree_text{'indentedblock'} = '*document_root C1
      {spaces_before_argument:\\n}
    {spaces_before_paragraph:  }
    *paragraph C1
-    {indented block\\n}
+    {normal_text:indented block\\n}
    {empty_line:\\n}
    *paragraph C1
-    {Text\\n}
+    {normal_text:Text\\n}
    *@end C1 l5
    |EXTRA
    |text_arg:{indentedblock}
     *line_arg C3
      {spaces_before_argument: }
-     {indentedblock}
+     {normal_text:indentedblock}
      {spaces_after_argument:\\n}
 ';
 

@@ -20,13 +20,13 @@ $result_tree_text{'cartouche_in_example_with_title'} = '*document_root C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *preformatted C1
-     {first no heading\\n}
+     {normal_text:first no heading\\n}
     *@end C1 l4
     |EXTRA
     |text_arg:{cartouche}
      *line_arg C3
       {spaces_before_argument: }
-      {cartouche}
+      {normal_text:cartouche}
       {spaces_after_argument:\\n}
    *preformatted C1
     {empty_line:\\n}
@@ -34,26 +34,26 @@ $result_tree_text{'cartouche_in_example_with_title'} = '*document_root C1
     *arguments_line C1
      *block_line_arg C4
       {spaces_before_argument: }
-      {Tit--le }
+      {normal_text:Tit--le }
       *@emph C1 l6
        *brace_container C1
-        {of box}
+        {normal_text:of box}
       {spaces_after_argument:\\n}
     *preformatted C1
-     {With title c--artouche\\n}
+     {normal_text:With title c--artouche\\n}
     *@end C1 l8
     |EXTRA
     |text_arg:{cartouche}
      *line_arg C3
       {spaces_before_argument: }
-      {cartouche}
+      {normal_text:cartouche}
       {spaces_after_argument:\\n}
    *@end C1 l9
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
 ';
 

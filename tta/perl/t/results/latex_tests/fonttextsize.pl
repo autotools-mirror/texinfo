@@ -16,7 +16,7 @@ $result_tree_text{'fonttextsize'} = '*document_root C10
    |misc_args:A{10}
     *line_arg C3
      {spaces_before_argument: }
-     {10}
+     {normal_text:10}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *@node C1 l3 {Top}
@@ -27,7 +27,7 @@ $result_tree_text{'fonttextsize'} = '*document_root C10
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l4 {section top}
  |EXTRA
@@ -36,7 +36,7 @@ $result_tree_text{'fonttextsize'} = '*document_root C10
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {section top}
+    {normal_text:section top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l6 {chapter}
@@ -47,7 +47,7 @@ $result_tree_text{'fonttextsize'} = '*document_root C10
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter}
+    {normal_text:chapter}
     {spaces_after_argument:\\n}
  *@chapter C2 l7 {Chapter}
  |EXTRA
@@ -57,7 +57,7 @@ $result_tree_text{'fonttextsize'} = '*document_root C10
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chapter}
+    {normal_text:Chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@section C2 l9 {section}
@@ -70,7 +70,7 @@ $result_tree_text{'fonttextsize'} = '*document_root C10
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {section}
+    {normal_text:section}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@subsection C4 l11 {Subsection 10pts}
@@ -83,17 +83,17 @@ $result_tree_text{'fonttextsize'} = '*document_root C10
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Subsection 10pts}
+    {normal_text:Subsection 10pts}
     {spaces_after_argument:\\n}
   *paragraph C1
-   {In 10pts\\n}
+   {normal_text:In 10pts\\n}
   {empty_line:\\n}
   *@fonttextsize C1 l14
   |EXTRA
   |misc_args:A{11}
    *line_arg C3
     {spaces_before_argument: }
-    {11}
+    {normal_text:11}
     {spaces_after_argument:\\n}
  *@subsection C5 l15 {Subsection 11pts}
  |EXTRA
@@ -105,16 +105,16 @@ $result_tree_text{'fonttextsize'} = '*document_root C10
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Subsection 11pts}
+    {normal_text:Subsection 11pts}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {In 11pts\\n}
+   {normal_text:In 11pts\\n}
   {empty_line:\\n}
   *@fonttextsize C1 l19
    *line_arg C3
     {spaces_before_argument: }
-    {8}
+    {normal_text:8}
     {spaces_after_argument:\\n}
  *@subsection C5 l20 {Subsection 8pts}
  |EXTRA
@@ -126,16 +126,16 @@ $result_tree_text{'fonttextsize'} = '*document_root C10
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Subsection 8pts}
+    {normal_text:Subsection 8pts}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {In 8pts\\n}
+   {normal_text:In 8pts\\n}
   {empty_line:\\n}
   *@fonttextsize C1 l24
    *line_arg C3
     {spaces_before_argument: }
-    {15}
+    {normal_text:15}
     {spaces_after_argument:\\n}
  *@subsection C3 l25 {Subsection 15pts}
  |EXTRA
@@ -147,11 +147,11 @@ $result_tree_text{'fonttextsize'} = '*document_root C10
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Subsection 15pts}
+    {normal_text:Subsection 15pts}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {In 15pts\\n}
+   {normal_text:In 15pts\\n}
 ';
 
 

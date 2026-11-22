@@ -808,11 +808,9 @@ build_base_element (ELEMENT *e, HV *hv)
 
   if (type_data[e->type].flags & TF_text)
     {
-      if (e->type != ET_normal_text)
-        {
-          sv = newSVpv (type_data[e->type].name, 0);
-          STORE("type", sv, HSH_type);
-        }
+      sv = newSVpv (type_data[e->type].name, 0);
+      STORE("type", sv, HSH_type);
+
       sv = newSVpv_utf8 (e->e.text->text, e->e.text->end);
       STORE("text", sv, HSH_text);
 

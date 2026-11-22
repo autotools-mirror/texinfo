@@ -14,7 +14,7 @@ $result_tree_text{'accent_no_closed_comment'} = '*document_root C1
   *paragraph C1
    *@~ C1 l1
     *brace_container C2
-     {e }
+     {normal_text:e }
      *@c C1
       *line_arg C3
        {spaces_before_argument: }

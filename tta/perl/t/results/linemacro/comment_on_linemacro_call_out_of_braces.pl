@@ -25,11 +25,11 @@ $result_tree_text{'comment_on_linemacro_call_out_of_braces'} = '*document_root C
     |text_arg:{linemacro}
      *line_arg C3
       {spaces_before_argument: }
-      {linemacro}
+      {normal_text:linemacro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C4
-   {first |something protected|\\n}
+   {normal_text:first |something protected|\\n}
    >SOURCEMARKS
    >linemacro_expansion<start;1>
     >*linemacro_call@lm C2
@@ -39,8 +39,8 @@ $result_tree_text{'comment_on_linemacro_call_out_of_braces'} = '*document_root C
      >*linemacro_arg C2
       >{spaces_before_argument: }
       >{macro_call_arg_text:}
-   {second ||\\n}
-   {third ||}
+   {normal_text:second ||\\n}
+   {normal_text:third ||}
    >SOURCEMARKS
    >linemacro_expansion<end;1><p:8>
    *@c C1
@@ -50,14 +50,14 @@ $result_tree_text{'comment_on_linemacro_call_out_of_braces'} = '*document_root C
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C4
-   {first ||\\n}
+   {normal_text:first ||\\n}
    >SOURCEMARKS
    >linemacro_expansion<start;2>
     >*linemacro_call@lm C1
      >*linemacro_arg C1
       >{macro_call_arg_text:}
-   {second ||\\n}
-   {third ||}
+   {normal_text:second ||\\n}
+   {normal_text:third ||}
    >SOURCEMARKS
    >linemacro_expansion<end;2><p:8>
    *@c C1
@@ -67,7 +67,7 @@ $result_tree_text{'comment_on_linemacro_call_out_of_braces'} = '*document_root C
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C5
-   {first |aaa\\n}
+   {normal_text:first |aaa\\n}
    >SOURCEMARKS
    >linemacro_expansion<start;3>
     >*linemacro_call@lm C3
@@ -80,9 +80,9 @@ $result_tree_text{'comment_on_linemacro_call_out_of_braces'} = '*document_root C
      >*linemacro_arg C2
       >{spaces_before_argument: }
       >{macro_call_arg_text:}
-   {  |\\n}
-   {second |rest|\\n}
-   {third ||}
+   {normal_text:  |\\n}
+   {normal_text:second |rest|\\n}
+   {normal_text:third ||}
    >SOURCEMARKS
    >linemacro_expansion<end;3><p:8>
    *@comment C1

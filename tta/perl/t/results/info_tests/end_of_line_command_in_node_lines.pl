@@ -19,7 +19,7 @@ $result_tree_text{'end_of_line_command_in_node_lines'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C4 l2 {top}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'end_of_line_command_in_node_lines'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C4 l4
@@ -41,32 +41,32 @@ $result_tree_text{'end_of_line_command_in_node_lines'} = '*document_root C7
     |EXTRA
     |node_content:A{0|4}
     |normalized:{chap-f-nl-Something_003f-After-punct}
-     {chap }
+     {normal_text:chap }
      *@*
-     { f     nl Something? }
+     {normal_text: f     nl Something? }
      *@*
-     { After punct}
+     {normal_text: After punct}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 l6
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{new-n}
-     {new n}
+     {normal_text:new n}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l7
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l9 {chap @* f     nl Something? @* After punct}
@@ -78,11 +78,11 @@ $result_tree_text{'end_of_line_command_in_node_lines'} = '*document_root C7
   *arguments_line C1
    *line_arg C7
     {spaces_before_argument: }
-    {chap }
+    {normal_text:chap }
     *@*
-    { f     nl Something? }
+    {normal_text: f     nl Something? }
     *@*
-    { After punct}
+    {normal_text: After punct}
     {spaces_after_argument:\\n}
  *@chapter C11 l10 {Chap}
  |EXTRA
@@ -92,7 +92,7 @@ $result_tree_text{'end_of_line_command_in_node_lines'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chap}
+    {normal_text:Chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@anchor C1 l12
@@ -100,17 +100,17 @@ $result_tree_text{'end_of_line_command_in_node_lines'} = '*document_root C7
   |identifier:{ankh-p}
   |is_target:{1}
    *brace_arg C3
-    {ankh }
+    {normal_text:ankh }
     *@*
-    { p}
+    {normal_text: p}
   {spaces_after_close_brace:\\n}
   {empty_line:\\n}
   *paragraph C5
-   {text }
+   {normal_text:text }
    *@*
-   { f     nl Something? }
+   {normal_text: f     nl Something? }
    *@*
-   { After punct\\n}
+   {normal_text: After punct\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 l16
   |EXTRA
@@ -118,9 +118,9 @@ $result_tree_text{'end_of_line_command_in_node_lines'} = '*document_root C7
   |index_entry:I{cp,1}
    *line_arg C5
     {spaces_before_argument: }
-    {a }
+    {normal_text:a }
     *@*
-    { b}
+    {normal_text: b}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@printindex C1 l18
@@ -129,7 +129,7 @@ $result_tree_text{'end_of_line_command_in_node_lines'} = '*document_root C7
   |misc_args:A{cp}
    *line_arg C3
     {spaces_before_argument: }
-    {cp}
+    {normal_text:cp}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l20 {new n}
@@ -140,7 +140,7 @@ $result_tree_text{'end_of_line_command_in_node_lines'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {new n}
+    {normal_text:new n}
     {spaces_after_argument:\\n}
  *@chapter C9 l21 {Ochap}
  |EXTRA
@@ -150,7 +150,7 @@ $result_tree_text{'end_of_line_command_in_node_lines'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Ochap}
+    {normal_text:Ochap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
@@ -159,12 +159,12 @@ $result_tree_text{'end_of_line_command_in_node_lines'} = '*document_root C7
     |EXTRA
     |node_content:A{0|4}
     |normalized:{chap-f-nl-Something_003f-After-punct}
-     {chap }
+     {normal_text:chap }
      *@*
-     { f     nl Something? }
+     {normal_text: f     nl Something? }
      *@*
-     { After punct}
-   {.\\n}
+     {normal_text: After punct}
+   {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C2
    *@xref C1 l25
@@ -172,10 +172,10 @@ $result_tree_text{'end_of_line_command_in_node_lines'} = '*document_root C7
     |EXTRA
     |node_content:A{0|2}
     |normalized:{ankh-p}
-     {ankh }
+     {normal_text:ankh }
      *@*
-     { p}
-   {.\\n}
+     {normal_text: p}
+   {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C2
    *@xref C2 l27
@@ -183,15 +183,15 @@ $result_tree_text{'end_of_line_command_in_node_lines'} = '*document_root C7
     |EXTRA
     |node_content:A{0|2}
     |normalized:{ankh-p}
-     {ankh }
+     {normal_text:ankh }
      *@*
-     { p}
+     {normal_text: p}
     *brace_arg C4
      {spaces_before_argument: }
-     {addll}
+     {normal_text:addll}
      *@*
-     {gg}
-   {.\\n}
+     {normal_text:gg}
+   {normal_text:.\\n}
   {empty_line:\\n}
   *@menu C5 l29
    *arguments_line C1
@@ -203,53 +203,53 @@ $result_tree_text{'end_of_line_command_in_node_lines'} = '*document_root C7
     |EXTRA
     |node_content:A{0|2}
     |normalized:{ankh-p}
-     {ankh }
+     {normal_text:ankh }
      *@*
-     { p}
+     {normal_text: p}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C6 l31
     {menu_entry_leading_text:* }
     *menu_entry_name C3
-     {what }
+     {normal_text:what }
      *@*
-     { is}
+     {normal_text: is}
     {menu_entry_separator:: }
     *menu_entry_node C3
     |EXTRA
     |node_content:A{0|2}
     |normalized:{ankh-p}
-     {ankh }
+     {normal_text:ankh }
      *@*
-     { p}
+     {normal_text: p}
     {menu_entry_separator:.}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C6 l32
     {menu_entry_leading_text:* }
     *menu_entry_name C3
-     {what }
+     {normal_text:what }
      *@*
-     { is}
+     {normal_text: is}
     {menu_entry_separator:: }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{ankh-p}
-     {ankh p}
+     {normal_text:ankh p}
     {menu_entry_separator:.}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l33
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
 ';
 

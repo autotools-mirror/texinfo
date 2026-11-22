@@ -23,11 +23,11 @@ $result_tree_text{'protect_colon_source_mark'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C3
-   {There is some text }
+   {normal_text:There is some text }
    >SOURCEMARKS
    >macro_expansion<start;1><p:9>
     >*macro_call@klm C1
@@ -35,8 +35,8 @@ $result_tree_text{'protect_colon_source_mark'} = '*document_root C1
       >{macro_call_arg_text:nop}
    *@asis C1
     *brace_container C1
-     {:}
-   { nop then more and after.\\n}
+     {normal_text::}
+   {normal_text: nop then more and after.\\n}
    >SOURCEMARKS
    >macro_expansion<end;1><p:14>
 ';

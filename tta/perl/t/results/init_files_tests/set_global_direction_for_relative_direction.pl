@@ -19,7 +19,7 @@ $result_tree_text{'set_global_direction_for_relative_direction'} = '*document_ro
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l2 {top}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'set_global_direction_for_relative_direction'} = '*document_ro
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l4 {chap}
@@ -39,7 +39,7 @@ $result_tree_text{'set_global_direction_for_relative_direction'} = '*document_ro
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
  *@chapter C2 l5 {Chap}
  |EXTRA
@@ -49,7 +49,7 @@ $result_tree_text{'set_global_direction_for_relative_direction'} = '*document_ro
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chap}
+    {normal_text:Chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l7 {chap2}
@@ -60,7 +60,7 @@ $result_tree_text{'set_global_direction_for_relative_direction'} = '*document_ro
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap2}
+    {normal_text:chap2}
     {spaces_after_argument:\\n}
  *@chapter C2 l8 {Chap 2}
  |EXTRA
@@ -70,7 +70,7 @@ $result_tree_text{'set_global_direction_for_relative_direction'} = '*document_ro
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chap 2}
+    {normal_text:Chap 2}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l10 {sec1}
@@ -81,7 +81,7 @@ $result_tree_text{'set_global_direction_for_relative_direction'} = '*document_ro
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {sec1}
+    {normal_text:sec1}
     {spaces_after_argument:\\n}
  *@section C2 l11 {Sec 1}
  |EXTRA
@@ -91,7 +91,7 @@ $result_tree_text{'set_global_direction_for_relative_direction'} = '*document_ro
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Sec 1}
+    {normal_text:Sec 1}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l13 {sec2}
@@ -102,7 +102,7 @@ $result_tree_text{'set_global_direction_for_relative_direction'} = '*document_ro
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {sec2}
+    {normal_text:sec2}
     {spaces_after_argument:\\n}
  *@section C2 l14 {Sec 2}
  |EXTRA
@@ -112,7 +112,7 @@ $result_tree_text{'set_global_direction_for_relative_direction'} = '*document_ro
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Sec 2}
+    {normal_text:Sec 2}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l16 {sec3}
@@ -123,7 +123,7 @@ $result_tree_text{'set_global_direction_for_relative_direction'} = '*document_ro
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {sec3}
+    {normal_text:sec3}
     {spaces_after_argument:\\n}
  *@section C1 l17 {Sec 3}
  |EXTRA
@@ -133,7 +133,7 @@ $result_tree_text{'set_global_direction_for_relative_direction'} = '*document_ro
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Sec 3}
+    {normal_text:Sec 3}
     {spaces_after_argument:\\n}
 ';
 

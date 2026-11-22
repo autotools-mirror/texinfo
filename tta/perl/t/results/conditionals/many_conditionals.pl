@@ -16,13 +16,13 @@ $result_tree_text{'many_conditionals'} = '*document_root C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *rawpreformatted C1
-     {This is html text.\\n}
+     {normal_text:This is html text.\\n}
     *@end C1 l3
     |EXTRA
     |text_arg:{html}
      *line_arg C3
       {spaces_before_argument: }
-      {html}
+      {normal_text:html}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    >SOURCEMARKS
@@ -32,7 +32,7 @@ $result_tree_text{'many_conditionals'} = '*document_root C1
       >*block_line_arg C1
        >{spaces_before_argument:\\n}
   *paragraph C1
-   {This is ifhtml text.\\n}
+   {normal_text:This is ifhtml text.\\n}
    >SOURCEMARKS
    >expanded_conditional_command<end;1><p:21>
     >*@end C1 l7
@@ -40,7 +40,7 @@ $result_tree_text{'many_conditionals'} = '*document_root C1
     >|text_arg:{ifhtml}
      >*line_arg C3
       >{spaces_before_argument: }
-      >{ifhtml}
+      >{normal_text:ifhtml}
       >{spaces_after_argument:\\n}
   {empty_line:\\n}
   >SOURCEMARKS
@@ -55,7 +55,7 @@ $result_tree_text{'many_conditionals'} = '*document_root C1
     >|text_arg:{ifnothtml}
      >*line_arg C3
       >{spaces_before_argument: }
-      >{ifnothtml}
+      >{normal_text:ifnothtml}
       >{spaces_after_argument:\\n}
   {empty_line:\\n}
   {empty_line:\\n}
@@ -66,7 +66,7 @@ $result_tree_text{'many_conditionals'} = '*document_root C1
      >*block_line_arg C1
       >{spaces_before_argument:\\n}
   *paragraph C1
-   {This is ifinfo text.\\n}
+   {normal_text:This is ifinfo text.\\n}
    >SOURCEMARKS
    >expanded_conditional_command<end;2><p:21>
     >*@end C1 l16
@@ -74,7 +74,7 @@ $result_tree_text{'many_conditionals'} = '*document_root C1
     >|text_arg:{ifinfo}
      >*line_arg C3
       >{spaces_before_argument: }
-      >{ifinfo}
+      >{normal_text:ifinfo}
       >{spaces_after_argument:\\n}
   {empty_line:\\n}
   >SOURCEMARKS
@@ -89,7 +89,7 @@ $result_tree_text{'many_conditionals'} = '*document_root C1
     >|text_arg:{ifnotinfo}
      >*line_arg C3
       >{spaces_before_argument: }
-      >{ifnotinfo}
+      >{normal_text:ifnotinfo}
       >{spaces_after_argument:\\n}
   {empty_line:\\n}
   {empty_line:\\n}
@@ -104,7 +104,7 @@ $result_tree_text{'many_conditionals'} = '*document_root C1
    |text_arg:{tex}
     *line_arg C3
      {spaces_before_argument: }
-     {tex}
+     {normal_text:tex}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   >SOURCEMARKS
@@ -119,7 +119,7 @@ $result_tree_text{'many_conditionals'} = '*document_root C1
     >|text_arg:{iftex}
      >*line_arg C3
       >{spaces_before_argument: }
-      >{iftex}
+      >{normal_text:iftex}
       >{spaces_after_argument:\\n}
   {empty_line:\\n}
   >SOURCEMARKS
@@ -129,7 +129,7 @@ $result_tree_text{'many_conditionals'} = '*document_root C1
      >*block_line_arg C1
       >{spaces_before_argument:\\n}
   *paragraph C1
-   {This is ifnottex text.\\n}
+   {normal_text:This is ifnottex text.\\n}
    >SOURCEMARKS
    >expanded_conditional_command<end;3><p:23>
     >*@end C1 l33
@@ -137,7 +137,7 @@ $result_tree_text{'many_conditionals'} = '*document_root C1
     >|text_arg:{ifnottex}
      >*line_arg C3
       >{spaces_before_argument: }
-      >{ifnottex}
+      >{normal_text:ifnottex}
       >{spaces_after_argument:\\n}
 ';
 

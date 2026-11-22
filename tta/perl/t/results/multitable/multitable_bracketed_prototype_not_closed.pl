@@ -21,14 +21,14 @@ $result_tree_text{'multitable_bracketed_prototype_not_closed'} = '*document_root
      {spaces_before_argument: }
      *bracketed_arg C3 l2
       {spaces_before_argument: }
-      {a}
+      {normal_text:a}
       {spaces_after_argument:\\n}
    *@end C1 l3
    |EXTRA
    |text_arg:{multitable}
     *line_arg C3
      {spaces_before_argument: }
-     {multitable}
+     {normal_text:multitable}
      {spaces_after_argument:\\n}
 ';
 

@@ -16,29 +16,29 @@ $result_tree_text{'raw'} = '*document_root C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *rawpreformatted C1
-     {in <tex>\\n}
+     {normal_text:in <tex>\\n}
     *@end C1 l3
     |EXTRA
     |text_arg:{tex}
      *line_arg C3
       {spaces_before_argument: }
-      {tex}
+      {normal_text:tex}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C2
-   {Para\\n}
+   {normal_text:Para\\n}
    *@xml C3 l6
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *rawpreformatted C1
-     {<in />\\n}
+     {normal_text:<in />\\n}
     *@end C1 l8
     |EXTRA
     |text_arg:{xml}
      *line_arg C3
       {spaces_before_argument: }
-      {xml}
+      {normal_text:xml}
       {spaces_after_argument:\\n}
 ';
 

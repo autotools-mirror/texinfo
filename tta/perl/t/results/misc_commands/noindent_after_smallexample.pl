@@ -12,27 +12,27 @@ $result_tree_text{'noindent_after_smallexample'} = '*document_root C1
  *before_node_section C6
   *preamble_before_content
   *paragraph C1
-   {To obtain.\\n}
+   {normal_text:To obtain.\\n}
   *@smallexample C3 l2
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C2
-    {$ wget \'http://savannah.gnu.org/cgi-bin/viewcvs/config/config/config.guess?rev=HEAD&content-type=text/plain\'\\n}
-    {$ wget \'http://savannah.gnu.org/cgi-bin/viewcvs/config/config/config.sub?rev=HEAD&content-type=text/plain\'\\n}
+    {normal_text:$ wget \'http://savannah.gnu.org/cgi-bin/viewcvs/config/config/config.guess?rev=HEAD&content-type=text/plain\'\\n}
+    {normal_text:$ wget \'http://savannah.gnu.org/cgi-bin/viewcvs/config/config/config.sub?rev=HEAD&content-type=text/plain\'\\n}
    *@end C1 l5
    |EXTRA
    |text_arg:{smallexample}
     *line_arg C3
      {spaces_before_argument: }
-     {smallexample}
+     {normal_text:smallexample}
      {spaces_after_argument:\\n}
   *@noindent l6
   {ignorable_spaces_after_command:\\n}
   *paragraph C1
   |EXTRA
   |noindent:{1}
-   {Less recent versions are also present.\\n}
+   {normal_text:Less recent versions are also present.\\n}
 ';
 
 

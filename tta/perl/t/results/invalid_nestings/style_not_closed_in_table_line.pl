@@ -22,28 +22,28 @@ $result_tree_text{'style_not_closed_in_table_line'} = '*document_root C1
      *@item C1 l2
       *line_arg C3
        {spaces_before_argument: }
-       {first item}
+       {normal_text:first item}
        {spaces_after_argument:\\n}
     *table_definition C1
      *paragraph C3
-      {line\\n}
-      {line }
+      {normal_text:line\\n}
+      {normal_text:line }
       *@code C1 l4
        *brace_container C1
-        {in code }
+        {normal_text:in code }
    *table_entry C1
     *table_term C1
      *@item C1 l4
       *line_arg C3
        {spaces_before_argument: }
-       {in item}
+       {normal_text:in item}
        {spaces_after_argument:\\n}
    *@end C1 l5
    |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
-     {table}
+     {normal_text:table}
      {spaces_after_argument:\\n}
 ';
 

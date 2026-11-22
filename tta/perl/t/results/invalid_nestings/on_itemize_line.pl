@@ -21,54 +21,54 @@ $result_tree_text{'on_itemize_line'} = '*document_root C1
      |EXTRA
      |global_command_number:{1}
       *brace_container C1
-       {in titlefont}
-     { }
+       {normal_text:in titlefont}
+     {normal_text: }
      *@anchor C1 l1
      |EXTRA
      |identifier:{in-anchor}
      |is_target:{1}
       *brace_arg C1
-       {in anchor}
+       {normal_text:in anchor}
      *@footnote C1 l1
      |EXTRA
      |global_command_number:{1}
       *brace_command_context C1
        *paragraph C1
-        {footnote}
-     { }
+        {normal_text:footnote}
+     {normal_text: }
      *@exdent C1 l1
       *line_arg C3
        {spaces_before_argument: }
-       {exdent}
+       {normal_text:exdent}
        {spaces_after_argument:\\n}
    *@item C2 l2
    |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
-     {in item.\\n}
+     {normal_text:in item.\\n}
    *@end C1 l3
    |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }
-     {itemize}
+     {normal_text:itemize}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@itemize C2 l5
    *arguments_line C1
     *block_line_arg C5
      {spaces_before_argument: }
-     {on line }
+     {normal_text:on line }
      {ignorable_spaces_after_command: }
-     {in item}
+     {normal_text:in item}
      {spaces_after_argument:\\n}
    *@end C1 l6
    |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }
-     {itemize}
+     {normal_text:itemize}
      {spaces_after_argument:\\n}
 ';
 

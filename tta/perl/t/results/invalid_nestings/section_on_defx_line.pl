@@ -21,19 +21,19 @@ $result_tree_text{'section_on_defx_line'} = '*document_root C2
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {h}
+       {normal_text:h}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {j}
+       {normal_text:j}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {k}
+       {normal_text:k}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {l}
+       {normal_text:l}
      {spaces_after_argument: \\n}
    *@deffnx C1 l2
    |EXTRA
@@ -44,11 +44,11 @@ $result_tree_text{'section_on_defx_line'} = '*document_root C2
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {a}
+       {normal_text:a}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {b}
+       {normal_text:b}
      {spaces_after_argument: }
  *@section C4 l2 {s}
  |EXTRA
@@ -60,11 +60,11 @@ $result_tree_text{'section_on_defx_line'} = '*document_root C2
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {s}
+    {normal_text:s}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {Something\\n}
+   {normal_text:Something\\n}
   {empty_line:\\n}
 ';
 

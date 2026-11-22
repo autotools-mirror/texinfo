@@ -12,76 +12,76 @@ $result_tree_text{'kbd'} = '*document_root C1
  *before_node_section C14
   *preamble_before_content
   *paragraph C3
-   {kbd: }
+   {normal_text:kbd: }
    *@code C1 l1
     *brace_container C1
-     {in kbd}
-   {.\\n}
+     {normal_text:in kbd}
+   {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C3
-   {kbd in code: }
+   {normal_text:kbd in code: }
    *@code C1 l3
     *brace_container C2
-     {in first }
+     {normal_text:in first }
      *@kbd C1 l3
       *brace_container C1
-       {in nested kbd}
-   {.\\n}
+       {normal_text:in nested kbd}
+   {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C3
-   {kbd in kbd: }
+   {normal_text:kbd in kbd: }
    *@kbd C1 l5
     *brace_container C2
-     {in top kbd }
+     {normal_text:in top kbd }
      *@kbd C1 l5
       *brace_container C1
-       {in nested kbd}
-   {.\\n}
+       {normal_text:in nested kbd}
+   {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C3
-   {kbd in }
+   {normal_text:kbd in }
    *@@
-   {example:\\n}
+   {normal_text:example:\\n}
   {empty_line:\\n}
   *@example C3 l9
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument: \\n}
    *preformatted C3
-    {in example\\n}
+    {normal_text:in example\\n}
     *@code C1 l11
      *brace_container C1
-      {in example in kbd}
-    {.\\n}
+      {normal_text:in example in kbd}
+    {normal_text:.\\n}
    *@end C1 l12
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C3
-   {kbd in }
+   {normal_text:kbd in }
    *@@
-   {format:\\n}
+   {normal_text:format:\\n}
   {empty_line:\\n}
   *@format C3 l16
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument: \\n}
    *preformatted C3
-    {in format\\n}
+    {normal_text:in format\\n}
     *@code C1 l18
      *brace_container C1
-      {in format in kbd}
-    {.\\n}
+      {normal_text:in format in kbd}
+    {normal_text:.\\n}
    *@end C1 l19
    |EXTRA
    |text_arg:{format}
     *line_arg C3
      {spaces_before_argument: }
-     {format}
+     {normal_text:format}
      {spaces_after_argument:\\n}
 ';
 

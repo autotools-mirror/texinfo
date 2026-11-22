@@ -14,7 +14,7 @@ $result_tree_text{'spaces_no_brace_after_braced_command'} = '*document_root C1
   *paragraph C2
    *@code C1 l1
     {spaces_after_cmd_before_arg: }
-   {b\\n}
+   {normal_text:b\\n}
 ';
 
 

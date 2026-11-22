@@ -18,7 +18,7 @@ $result_tree_text{'all_spaces'} = '*document_root C3
    |text_arg:{utf-8}
     *line_arg C3
      {spaces_before_argument: }
-     {utf-8}
+     {normal_text:utf-8}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *@node C1 all_spaces.texi:l3 {Top}
@@ -29,7 +29,7 @@ $result_tree_text{'all_spaces'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@node C58 all_spaces.texi:l4 {chap}
  |EXTRA
@@ -39,83 +39,75 @@ $result_tree_text{'all_spaces'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {CHARACTER TABULATION: |\\t|\\n}
+   {normal_text:CHARACTER TABULATION: |\\t|\\n}
   {empty_line:\\n}
   *paragraph C2
-   {LINE FEED (LF): |\\n}
-   {|\\n}
+   {normal_text:LINE FEED (LF): |\\n}
+   {normal_text:|\\n}
   {empty_line:\\n}
   *paragraph C1
-   {LINE TABULATION: ||\\n}
+   {normal_text:LINE TABULATION: ||\\n}
   {empty_line:\\n}
   *paragraph C1
-   {FORM FEED (FF): |}
+   {normal_text:FORM FEED (FF): |}
   {empty_line:\\f}
   *paragraph C1
-   {|\\n}
+   {normal_text:|\\n}
   {empty_line:\\n}
   *paragraph C1
-   {CARRIAGE RETURN (CR): |'."\r".'|\\n}
+   {normal_text:CARRIAGE RETURN (CR): |'."\r".'|\\n}
   {empty_line:\\n}
   *paragraph C1
-   {SPACE: | |\\n}
+   {normal_text:SPACE: | |\\n}
   {empty_line:\\n}
   *paragraph C1
-   {NEXT LINE (NEL): ||\\n}
+   {normal_text:NEXT LINE (NEL): ||\\n}
   {empty_line:\\n}
   *paragraph C1
-   {NO-BREAK SPACE: | |\\n}
+   {normal_text:NO-BREAK SPACE: | |\\n}
   {empty_line:\\n}
   *paragraph C1
-   {OGHAM SPACE MARK: | |\\n}
+   {normal_text:OGHAM SPACE MARK: | |\\n}
   {empty_line:\\n}
   *paragraph C1
-   {MONGOLIAN VOWEL SEPARATOR: |᠎|\\n}
+   {normal_text:MONGOLIAN VOWEL SEPARATOR: |᠎|\\n}
   {empty_line:\\n}
   *paragraph C1
-   {EN QUAD: | |\\n}
+   {normal_text:EN QUAD: | |\\n}
   {empty_line:\\n}
   *paragraph C1
-   {EM QUAD: | |\\n}
+   {normal_text:EM QUAD: | |\\n}
   {empty_line:\\n}
   *paragraph C1
-   {EN SPACE: | |\\n}
+   {normal_text:EN SPACE: | |\\n}
   {empty_line:\\n}
   *paragraph C1
-   {EM SPACE: | |\\n}
+   {normal_text:EM SPACE: | |\\n}
   {empty_line:\\n}
   *paragraph C1
-   {THREE-PER-EM SPACE: | |\\n}
+   {normal_text:THREE-PER-EM SPACE: | |\\n}
   {empty_line:\\n}
   *paragraph C1
-   {FOUR-PER-EM SPACE: | |\\n}
+   {normal_text:FOUR-PER-EM SPACE: | |\\n}
   {empty_line:\\n}
   *paragraph C1
-   {SIX-PER-EM SPACE: | |\\n}
+   {normal_text:SIX-PER-EM SPACE: | |\\n}
   {empty_line:\\n}
   *paragraph C1
-   {FIGURE SPACE: | |\\n}
+   {normal_text:FIGURE SPACE: | |\\n}
   {empty_line:\\n}
   *paragraph C1
-   {PUNCTUATION SPACE: | |\\n}
+   {normal_text:PUNCTUATION SPACE: | |\\n}
   {empty_line:\\n}
   *paragraph C1
-   {THIN SPACE: | |\\n}
+   {normal_text:THIN SPACE: | |\\n}
   {empty_line:\\n}
   *paragraph C1
-   {HAIR SPACE: | |\\n}
-  {empty_line:\\n}
-  *@c C1
-   *line_arg C3
-    {spaces_before_argument: }
-    {rawline_text:Perl and C code give different width.}
-    {spaces_after_argument:\\n}
-  *paragraph C1
-   {LINE SEPARATOR: | |\\n}
+   {normal_text:HAIR SPACE: | |\\n}
   {empty_line:\\n}
   *@c C1
    *line_arg C3
@@ -123,16 +115,24 @@ $result_tree_text{'all_spaces'} = '*document_root C3
     {rawline_text:Perl and C code give different width.}
     {spaces_after_argument:\\n}
   *paragraph C1
-   {PARAGRAPH SEPARATOR: | |\\n}
+   {normal_text:LINE SEPARATOR: | |\\n}
+  {empty_line:\\n}
+  *@c C1
+   *line_arg C3
+    {spaces_before_argument: }
+    {rawline_text:Perl and C code give different width.}
+    {spaces_after_argument:\\n}
+  *paragraph C1
+   {normal_text:PARAGRAPH SEPARATOR: | |\\n}
   {empty_line:\\n}
   *paragraph C1
-   {NARROW NO-BREAK SPACE: | |\\n}
+   {normal_text:NARROW NO-BREAK SPACE: | |\\n}
   {empty_line:\\n}
   *paragraph C1
-   {MEDIUM MATHEMATICAL SPACE: | |\\n}
+   {normal_text:MEDIUM MATHEMATICAL SPACE: | |\\n}
   {empty_line:\\n}
   *paragraph C1
-   {IDEOGRAPHIC SPACE: |　|\\n}
+   {normal_text:IDEOGRAPHIC SPACE: |　|\\n}
   {empty_line:\\n}
 ';
 

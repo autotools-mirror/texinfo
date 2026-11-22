@@ -22,7 +22,7 @@ $result_tree_text{'punctuation_in_line_commands'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {node! After punc}
+    {normal_text:node! After punc}
     {spaces_after_argument:\\n}
  *@top C25 l3 {top! After punc}
  |EXTRA
@@ -31,7 +31,7 @@ $result_tree_text{'punctuation_in_line_commands'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top! After punc}
+    {normal_text:top! After punc}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@table C3 l5
@@ -45,35 +45,35 @@ $result_tree_text{'punctuation_in_line_commands'} = '*document_root C3
      *@item C1 l6
       *line_arg C3
        {spaces_before_argument: }
-       {item! After punc}
+       {normal_text:item! After punc}
        {spaces_after_argument:\\n}
    *@end C1 l7
    |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
-     {table}
+     {normal_text:table}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@quotation C4 l9
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     {quotation arg! After punc}
+     {normal_text:quotation arg! After punc}
      {spaces_after_argument:\\n}
    *paragraph C1
-    {In quotation\\n}
+    {normal_text:In quotation\\n}
    *@exdent C1 l11
     *line_arg C3
      {spaces_before_argument: }
-     {exdent quotation! After punc}
+     {normal_text:exdent quotation! After punc}
      {spaces_after_argument:\\n}
    *@end C1 l12
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }
-     {quotation}
+     {normal_text:quotation}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@float C5 l14
@@ -86,24 +86,24 @@ $result_tree_text{'punctuation_in_line_commands'} = '*document_root C3
    *arguments_line C2
     *block_line_arg C2
      {spaces_before_argument: }
-     {float type! After punc}
+     {normal_text:float type! After punc}
     *block_line_arg C3
      {spaces_before_argument: }
-     {float label! After punc}
+     {normal_text:float label! After punc}
      {spaces_after_argument:\\n}
    *paragraph C1
-    {In float\\n}
+    {normal_text:In float\\n}
    *@shortcaption C1 l16
     *brace_command_context C1
      *paragraph C1
-      {shortcaption! After punc}
+      {normal_text:shortcaption! After punc}
    {spaces_after_close_brace:\\n}
    *@end C1 l17
    |EXTRA
    |text_arg:{float}
     *line_arg C3
      {spaces_before_argument: }
-     {float}
+     {normal_text:float}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@float C5 l19
@@ -116,24 +116,24 @@ $result_tree_text{'punctuation_in_line_commands'} = '*document_root C3
    *arguments_line C2
     *block_line_arg C2
      {spaces_before_argument: }
-     {float type! After punc}
+     {normal_text:float type! After punc}
     *block_line_arg C3
      {spaces_before_argument: }
-     {label with caption}
+     {normal_text:label with caption}
      {spaces_after_argument:\\n}
    *paragraph C1
-    {In float with caption.\\n}
+    {normal_text:In float with caption.\\n}
    *@caption C1 l21
     *brace_command_context C1
      *paragraph C1
-      {caption! After punc}
+      {normal_text:caption! After punc}
    {spaces_after_close_brace:\\n}
    *@end C1 l22
    |EXTRA
    |text_arg:{float}
     *line_arg C3
      {spaces_before_argument: }
-     {float}
+     {normal_text:float}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@listoffloats C1 l24
@@ -142,7 +142,7 @@ $result_tree_text{'punctuation_in_line_commands'} = '*document_root C3
   |global_command_number:{1}
    *line_arg C3
     {spaces_before_argument: }
-    {float type! After punc}
+    {normal_text:float type! After punc}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 l26
@@ -151,7 +151,7 @@ $result_tree_text{'punctuation_in_line_commands'} = '*document_root C3
   |index_entry:I{cp,1}
    *line_arg C3
     {spaces_before_argument: }
-    {index! After punc}
+    {normal_text:index! After punc}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@heading C1 l28
@@ -160,20 +160,20 @@ $result_tree_text{'punctuation_in_line_commands'} = '*document_root C3
   |heading_number:{1}
    *line_arg C3
     {spaces_before_argument: }
-    {heading! After punc}
+    {normal_text:heading! After punc}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@titlefont C1 l30
   |EXTRA
   |global_command_number:{1}
    *brace_container C1
-    {titlefont! After punc}
-  {\\n}
+    {normal_text:titlefont! After punc}
+  {normal_text:\\n}
   {empty_line:\\n}
   *@center C1 l32
    *line_arg C3
     {spaces_before_argument: }
-    {center! After punc}
+    {normal_text:center! After punc}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@printindex C1 l34
@@ -182,7 +182,7 @@ $result_tree_text{'punctuation_in_line_commands'} = '*document_root C3
   |misc_args:A{cp}
    *line_arg C3
     {spaces_before_argument: }
-    {cp}
+    {normal_text:cp}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@contents C1 l36

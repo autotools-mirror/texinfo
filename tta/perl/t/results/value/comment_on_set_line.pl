@@ -53,27 +53,27 @@ $result_tree_text{'comment_on_set_line'} = '*document_root C1
        {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C1
-   {!!, !!, !g!, !a vv!\\n}
+   {normal_text:!!, !!, !g!, !a vv!\\n}
    >SOURCEMARKS
    >value_expansion<start;1><p:1>{}
     >*@value C1
      >*brace_container C1
-      >{x}
+      >{normal_text:x}
    >value_expansion<end;1><p:1>
    >value_expansion<start;2><p:5>{}
     >*@value C1
      >*brace_container C1
-      >{y}
+      >{normal_text:y}
    >value_expansion<end;2><p:5>
    >value_expansion<start;3><p:9>{g}
     >*@value C1
      >*brace_container C1
-      >{z}
+      >{normal_text:z}
    >value_expansion<end;3><p:10>
    >value_expansion<start;4><p:14>{a vv}
     >*@value C1
      >*brace_container C1
-      >{t}
+      >{normal_text:t}
    >value_expansion<end;4><p:18>
 ';
 

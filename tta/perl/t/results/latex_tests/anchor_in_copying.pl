@@ -16,7 +16,7 @@ $result_tree_text{'anchor_in_copying'} = '*document_root C5
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *paragraph C3
-     {Cop. }
+     {normal_text:Cop. }
      *@anchor C1 l2
      |EXTRA
      |identifier:{a-in-copying}
@@ -24,14 +24,14 @@ $result_tree_text{'anchor_in_copying'} = '*document_root C5
       *brace_arg C1
       |EXTRA
       |element_region:{copying}
-       {a in copying}
-     {. Ying.\\n}
+       {normal_text:a in copying}
+     {normal_text:. Ying.\\n}
     *@end C1 l3
     |EXTRA
     |text_arg:{copying}
      *line_arg C3
       {spaces_before_argument: }
-      {copying}
+      {normal_text:copying}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
  *@node C1 l5 {Top}
@@ -42,7 +42,7 @@ $result_tree_text{'anchor_in_copying'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l6 {top}
  |EXTRA
@@ -51,7 +51,7 @@ $result_tree_text{'anchor_in_copying'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l8 {Chapter}
@@ -62,7 +62,7 @@ $result_tree_text{'anchor_in_copying'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chapter}
+    {normal_text:Chapter}
     {spaces_after_argument:\\n}
  *@chapter C3 l9 {Chap}
  |EXTRA
@@ -72,7 +72,7 @@ $result_tree_text{'anchor_in_copying'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chap}
+    {normal_text:Chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
@@ -81,8 +81,8 @@ $result_tree_text{'anchor_in_copying'} = '*document_root C5
     |EXTRA
     |node_content:A{0|0}
     |normalized:{a-in-copying}
-     {a in copying}
-   {\\n}
+     {normal_text:a in copying}
+   {normal_text:\\n}
 ';
 
 

@@ -23,7 +23,7 @@ $result_tree_text{'macro_in_end_argument'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *@cartouche C2 l5
@@ -39,7 +39,7 @@ $result_tree_text{'macro_in_end_argument'} = '*document_root C1
      >macro_expansion<start;1><p:1>
       >*macro_call@acartouche C1
        >*brace_arg
-     {cartouche}
+     {normal_text:cartouche}
      >SOURCEMARKS
      >macro_expansion<end;1><p:9>
      {spaces_after_argument:\\n}

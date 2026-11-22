@@ -2061,8 +2061,9 @@ sub _convert_value_command($$$$) {
   my ($self, $cmdname, $command, $args) = @_;
 
   return $self->convert_tree($self->cdt('@{No value for `{value}\'@}',
-          {'value' => Texinfo::TreeElement::new(
-                        {'text' => $args->[0]->{'monospacestring'}}) }),
+          {'value' => Texinfo::TreeElement::new({
+                         'text' => $args->[0]->{'monospacestring'},
+                         'type' => 'normal_text'}) }),
                              'Tr missing value');
 }
 
@@ -4684,9 +4685,11 @@ sub _convert_xref_command($$$$) {
     if (defined($file)) {
       $label_element = Texinfo::TreeElement::new(
        {'extra' => {'manual_content' => [1, 1]},
-       'contents' => [Texinfo::TreeElement::new({'text' => '('}),
+       'contents' => [Texinfo::TreeElement::new({'text' => '(',
+                                               'type' => 'normal_text'}),
                       $file_arg->{'arg_tree'},
-                      Texinfo::TreeElement::new({'text' => ')'})]
+                      Texinfo::TreeElement::new({'text' => ')',
+                                                 'type' => 'normal_text'})]
       });
     }
     my $node_element;
@@ -4695,7 +4698,8 @@ sub _convert_xref_command($$$$) {
       $node_element = $arg_node;
 
       if (!defined($label_element)) {
-        $label_element = Texinfo::TreeElement::new({'contents' => []});
+        $label_element = Texinfo::TreeElement::new({'contents' => [],
+                                                    'extra' => {}});
       }
       my ($begin, $end) = @{$arg_node->{'extra'}->{'node_content'}};
       my $len = scalar(@{$label_element->{'contents'}});
@@ -4905,7 +4909,8 @@ sub _convert_printindex_command($$$$) {
     } else {
       my $normalized_letter =
         Texinfo::Convert::NodeNameNormalization::convert_to_identifier(
-              Texinfo::TreeElement::new({'text' => $letter}));
+              Texinfo::TreeElement::new({'text' => $letter,
+                                         'type' => 'normal_text'}));
       $identifier = $index_element_id
                        . "_${index_name}_letter-${normalized_letter}";
     }
@@ -7273,10 +7278,12 @@ sub _default_format_program_string($) {
       and defined($self->get_conf('PACKAGE_URL'))) {
     return $self->convert_tree(
       $self->cdt('This document was generated on @emph{@today{}} using @uref{{program_homepage}, @emph{{program}}}.',
-         { 'program_homepage' => Texinfo::TreeElement::new(
-                {'text' => $self->get_conf('PACKAGE_URL')}),
-           'program' => Texinfo::TreeElement::new(
-                      {'text' => $self->get_conf('PROGRAM')}) }),
+         { 'program_homepage' => Texinfo::TreeElement::new({
+                 'text' => $self->get_conf('PACKAGE_URL'),
+                 'type' => 'normal_text'}),
+           'program' => Texinfo::TreeElement::new({
+                              'text' => $self->get_conf('PROGRAM'),
+                              'type' => 'normal_text'}) }),
                               'Tr program string program');
   } else {
     return $self->convert_tree(

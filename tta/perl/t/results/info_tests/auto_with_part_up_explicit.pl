@@ -19,7 +19,7 @@ $result_tree_text{'auto_with_part_up_explicit'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l2 {sec top}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'auto_with_part_up_explicit'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {sec top}
+    {normal_text:sec top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@part C2 l4 {PRT}
@@ -39,7 +39,7 @@ $result_tree_text{'auto_with_part_up_explicit'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {PRT}
+    {normal_text:PRT}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l6 {chap}
@@ -51,7 +51,7 @@ $result_tree_text{'auto_with_part_up_explicit'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
  *@chapter C1 l6 {chap}
  |EXTRA
@@ -61,7 +61,7 @@ $result_tree_text{'auto_with_part_up_explicit'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
 ';
 

@@ -25,7 +25,7 @@ $result_tree_text{'error_in_sectioning_command'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l4 {top section}
  |EXTRA
@@ -34,7 +34,7 @@ $result_tree_text{'error_in_sectioning_command'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top section}
+    {normal_text:top section}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l6 {@code{@@error@{@}} (@error{}): Indicating an Error Message}
@@ -48,13 +48,13 @@ $result_tree_text{'error_in_sectioning_command'} = '*document_root C5
     *@code C1 l6
      *brace_container C4
       *@@
-      {error}
+      {normal_text:error}
       *@{
       *@}
-    { (}
+    {normal_text: (}
     *@error C1 l6
      *brace_container
-    {): Indicating an Error Message}
+    {normal_text:): Indicating an Error Message}
     {spaces_after_argument:\\n}
  *@chapter C3 l7 {@code{@@error@{@}} (@error{}): Indicating an Error Message}
  |EXTRA
@@ -67,20 +67,20 @@ $result_tree_text{'error_in_sectioning_command'} = '*document_root C5
     *@code C1 l7
      *brace_container C4
       *@@
-      {error}
+      {normal_text:error}
       *@{
       *@}
-    { (}
+    {normal_text: (}
     *@error C1 l7
      *brace_container
-    {): Indicating an Error Message}
+    {normal_text:): Indicating an Error Message}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C3
-   {Describe }
+   {normal_text:Describe }
    *@error C1 l9
     *brace_container
-   {.\\n}
+   {normal_text:.\\n}
 ';
 
 

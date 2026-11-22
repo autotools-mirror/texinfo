@@ -21,7 +21,7 @@ $result_tree_text{'some_at_commands_in_ref_nodes_transliterate'} = '*document_ro
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C4 l3 {Top}
  |EXTRA
@@ -30,7 +30,7 @@ $result_tree_text{'some_at_commands_in_ref_nodes_transliterate'} = '*document_ro
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C3 l5
@@ -43,57 +43,57 @@ $result_tree_text{'some_at_commands_in_ref_nodes_transliterate'} = '*document_ro
     |EXTRA
     |node_content:A{0|13}
     |normalized:{A-sc-_00f1-_00e5-TeX-node-_00ef-_00ef-_1e14-_0142-_1e08-_00a1}
-     {A }
+     {normal_text:A }
      *@sc C1 l6
       *brace_container C6
-       {sc }
+       {normal_text:sc }
        *@~ C1 l6
         *following_arg C1
-         {n}
-       { }
+         {normal_text:n}
+       {normal_text: }
        *@aa C1 l6
         *brace_container
-       { }
+       {normal_text: }
        *@TeX C1 l6
         *brace_container
-     { node }
+     {normal_text: node }
      *@" C1 l6
       *following_arg C1
-       {i}
-     { }
+       {normal_text:i}
+     {normal_text: }
      *@" C1 l6
       *brace_container C1
        *@dotless C1 l6
         *brace_container C1
-         {i}
-     { }
+         {normal_text:i}
+     {normal_text: }
      *@` C1 l6
       *brace_container C1
        *@= C1 l6
         *following_arg C1
-         {E}
-     { }
+         {normal_text:E}
+     {normal_text: }
      *@l C1 l6
       *brace_container
-     { }
+     {normal_text: }
      *@, C1 l6
       *brace_container C1
        *@\' C1 l6
         *following_arg C1
-         {C}
-     { }
+         {normal_text:C}
+     {normal_text: }
      *@exclamdown C1 l6
       *brace_container
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l7
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l9 {A @sc{sc @~n @aa{} @TeX{}} node @"i @"{@dotless{i}} @`{@=E} @l{} @,{@\'C} @exclamdown{}}
@@ -104,45 +104,45 @@ $result_tree_text{'some_at_commands_in_ref_nodes_transliterate'} = '*document_ro
   *arguments_line C1
    *line_arg C16
     {spaces_before_argument: }
-    {A }
+    {normal_text:A }
     *@sc C1 l9
      *brace_container C6
-      {sc }
+      {normal_text:sc }
       *@~ C1 l9
        *following_arg C1
-        {n}
-      { }
+        {normal_text:n}
+      {normal_text: }
       *@aa C1 l9
        *brace_container
-      { }
+      {normal_text: }
       *@TeX C1 l9
        *brace_container
-    { node }
+    {normal_text: node }
     *@" C1 l9
      *following_arg C1
-      {i}
-    { }
+      {normal_text:i}
+    {normal_text: }
     *@" C1 l9
      *brace_container C1
       *@dotless C1 l9
        *brace_container C1
-        {i}
-    { }
+        {normal_text:i}
+    {normal_text: }
     *@` C1 l9
      *brace_container C1
       *@= C1 l9
        *following_arg C1
-        {E}
-    { }
+        {normal_text:E}
+    {normal_text: }
     *@l C1 l9
      *brace_container
-    { }
+    {normal_text: }
     *@, C1 l9
      *brace_container C1
       *@\' C1 l9
        *following_arg C1
-        {C}
-    { }
+        {normal_text:C}
+    {normal_text: }
     *@exclamdown C1 l9
      *brace_container
     {spaces_after_argument:\\n}
@@ -154,82 +154,82 @@ $result_tree_text{'some_at_commands_in_ref_nodes_transliterate'} = '*document_ro
   *arguments_line C1
    *line_arg C16
     {spaces_before_argument:  }
-    {A }
+    {normal_text:A }
     *@sc C1 l10
      *brace_container C1
-      {sc}
-    { node }
+      {normal_text:sc}
+    {normal_text: node }
     *@" C1 l10
      *following_arg C1
-      {i}
-    { }
+      {normal_text:i}
+    {normal_text: }
     *@" C1 l10
      *brace_container C1
       *@dotless C1 l10
        *brace_container C1
-        {i}
-    { }
+        {normal_text:i}
+    {normal_text: }
     *@` C1 l10
      *brace_container C1
       *@= C1 l10
        *following_arg C1
-        {E}
-    { }
+        {normal_text:E}
+    {normal_text: }
     *@l C1 l10
      *brace_container
-    { }
+    {normal_text: }
     *@, C1 l10
      *brace_container C1
       *@\' C1 l10
        *following_arg C1
-        {C}
-    { }
+        {normal_text:C}
+    {normal_text: }
     *@exclamdown C1 l10
      *brace_container
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C3
-   {see }
+   {normal_text:see }
    *@ref C4 l12
     *brace_arg C14
     |EXTRA
     |node_content:A{0|13}
-     {a }
+     {normal_text:a }
      *@strong C1 l12
       *brace_container C1
-       {strong}
-     { ref with }
+       {normal_text:strong}
+     {normal_text: ref with }
      *@sc C1 l12
       *brace_container C1
-       {sc}
+       {normal_text:sc}
      *@comma C1 l12
       *brace_container
-     { a i trema }
+     {normal_text: a i trema }
      *@" C1 l12
       *following_arg C1
-       {i}
+       {normal_text:i}
      *@comma C1 l12
       *brace_container
-     { a dotless i trema }
+     {normal_text: a dotless i trema }
      *@" C1 l12
       *brace_container C1
        *@dotless C1 l12
         *brace_container C1
-         {i}
-     { }
+         {normal_text:i}
+     {normal_text: }
      *@` C1 l12
       *brace_container C1
        *@= C1 l12
         *following_arg C1
-         {E}
-     { and exclamdown }
+         {normal_text:E}
+     {normal_text: and exclamdown }
      *@exclamdown C1 l12
       *brace_container
     *brace_arg
     *brace_arg
     *brace_arg C1
-     {manual}
-   {.\\n}
+     {normal_text:manual}
+   {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C2
    *@xref C1 l14
@@ -237,48 +237,48 @@ $result_tree_text{'some_at_commands_in_ref_nodes_transliterate'} = '*document_ro
     |EXTRA
     |node_content:A{0|13}
     |normalized:{A-sc-_00f1-_00e5-TeX-node-_00ef-_00ef-_1e14-_0142-_1e08-_00a1}
-     {A }
+     {normal_text:A }
      *@sc C1 l14
       *brace_container C6
-       {sc }
+       {normal_text:sc }
        *@~ C1 l14
         *following_arg C1
-         {n}
-       { }
+         {normal_text:n}
+       {normal_text: }
        *@aa C1 l14
         *brace_container
-       { }
+       {normal_text: }
        *@TeX C1 l14
         *brace_container
-     { node }
+     {normal_text: node }
      *@" C1 l14
       *following_arg C1
-       {i}
-     { }
+       {normal_text:i}
+     {normal_text: }
      *@" C1 l14
       *brace_container C1
        *@dotless C1 l14
         *brace_container C1
-         {i}
-     { }
+         {normal_text:i}
+     {normal_text: }
      *@` C1 l14
       *brace_container C1
        *@= C1 l14
         *following_arg C1
-         {E}
-     { }
+         {normal_text:E}
+     {normal_text: }
      *@l C1 l14
       *brace_container
-     { }
+     {normal_text: }
      *@, C1 l14
       *brace_container C1
        *@\' C1 l14
         *following_arg C1
-         {C}
-     { }
+         {normal_text:C}
+     {normal_text: }
      *@exclamdown C1 l14
       *brace_container
-   {.\\n}
+   {normal_text:.\\n}
 ';
 
 

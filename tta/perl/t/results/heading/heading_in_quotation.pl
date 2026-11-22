@@ -22,12 +22,12 @@ $result_tree_text{'heading_in_quotation'} = '*document_root C1
    |heading_number:{1}
     *line_arg C6
      {spaces_before_argument: }
-     {in quotation }
+     {normal_text:in quotation }
      *@@
-     { }
+     {normal_text: }
      *@emph C1 l3
       *brace_container C1
-       {heading}
+       {normal_text:heading}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@end C1 l5
@@ -35,7 +35,7 @@ $result_tree_text{'heading_in_quotation'} = '*document_root C1
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }
-     {quotation}
+     {normal_text:quotation}
      {spaces_after_argument:\\n}
 ';
 

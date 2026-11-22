@@ -12,13 +12,13 @@ $result_tree_text{'comment_between_text'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *paragraph C3
-   {text\\n}
+   {normal_text:text\\n}
    *@c C1
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:comment}
      {spaces_after_argument:\\n}
-   {end para}
+   {normal_text:end para}
 ';
 
 

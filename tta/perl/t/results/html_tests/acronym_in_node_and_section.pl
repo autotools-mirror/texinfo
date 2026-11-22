@@ -19,7 +19,7 @@ $result_tree_text{'acronym_in_node_and_section'} = '*document_root C9
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
  *@top C2 l2 {top}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'acronym_in_node_and_section'} = '*document_root C9
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l4 {chap}
@@ -39,7 +39,7 @@ $result_tree_text{'acronym_in_node_and_section'} = '*document_root C9
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
  *@chapter C2 l5 {chap}
  |EXTRA
@@ -49,7 +49,7 @@ $result_tree_text{'acronym_in_node_and_section'} = '*document_root C9
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l7 {sec define}
@@ -60,7 +60,7 @@ $result_tree_text{'acronym_in_node_and_section'} = '*document_root C9
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {sec define}
+    {normal_text:sec define}
     {spaces_after_argument:\\n}
  *@section C4 l8 {define}
  |EXTRA
@@ -70,17 +70,17 @@ $result_tree_text{'acronym_in_node_and_section'} = '*document_root C9
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {define}
+    {normal_text:define}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
    *@acronym C2 l10
     *brace_arg C1
-     {GHJ}
+     {normal_text:GHJ}
     *brace_arg C2
      {spaces_before_argument: }
-     {Good Hypo Jolly}
-   {\\n}
+     {normal_text:Good Hypo Jolly}
+   {normal_text:\\n}
   {empty_line:\\n}
  *@node C1 l12 {sec here is @acronym{GHJ}}
  |EXTRA
@@ -90,10 +90,10 @@ $result_tree_text{'acronym_in_node_and_section'} = '*document_root C9
   *arguments_line C1
    *line_arg C4
     {spaces_before_argument: }
-    {sec here is }
+    {normal_text:sec here is }
     *@acronym C1 l12
      *brace_arg C1
-      {GHJ}
+      {normal_text:GHJ}
     {spaces_after_argument:\\n}
  *@section C3 l13 {here is @acronym{GHJ}}
  |EXTRA
@@ -103,18 +103,18 @@ $result_tree_text{'acronym_in_node_and_section'} = '*document_root C9
   *arguments_line C1
    *line_arg C4
     {spaces_before_argument: }
-    {here is }
+    {normal_text:here is }
     *@acronym C1 l13
      *brace_arg C1
-      {GHJ}
+      {normal_text:GHJ}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C3
-   {In text }
+   {normal_text:In text }
    *@acronym C1 l15
     *brace_arg C1
-     {GHJ}
-   {.\\n}
+     {normal_text:GHJ}
+   {normal_text:.\\n}
 ';
 
 

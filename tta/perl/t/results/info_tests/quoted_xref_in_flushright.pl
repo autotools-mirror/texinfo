@@ -19,7 +19,7 @@ $result_tree_text{'quoted_xref_in_flushright'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l2 {top}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'quoted_xref_in_flushright'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l4 {a:@comma{}b}
@@ -39,10 +39,10 @@ $result_tree_text{'quoted_xref_in_flushright'} = '*document_root C5
   *arguments_line C1
    *line_arg C5
     {spaces_before_argument: }
-    {a:}
+    {normal_text:a:}
     *@comma C1 l4
      *brace_container
-    {b}
+    {normal_text:b}
     {spaces_after_argument:\\n}
  *@chapter C3 l5 {a:@comma{}b}
  |EXTRA
@@ -52,10 +52,10 @@ $result_tree_text{'quoted_xref_in_flushright'} = '*document_root C5
   *arguments_line C1
    *line_arg C5
     {spaces_before_argument: }
-    {a:}
+    {normal_text:a:}
     *@comma C1 l5
      *brace_container
-    {b}
+    {normal_text:b}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@flushright C3 l7
@@ -63,25 +63,25 @@ $result_tree_text{'quoted_xref_in_flushright'} = '*document_root C5
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C5
-    {before\\n}
-    {Some }
+    {normal_text:before\\n}
+    {normal_text:Some }
     *@ref C1 l9
      *brace_arg C3
      |EXTRA
      |node_content:A{0|2}
      |normalized:{a_003a_002cb}
-      {a:}
+      {normal_text:a:}
       *@comma C1 l9
        *brace_container
-      {b}
-    { after\\n}
-    {more text\\n}
+      {normal_text:b}
+    {normal_text: after\\n}
+    {normal_text:more text\\n}
    *@end C1 l11
    |EXTRA
    |text_arg:{flushright}
     *line_arg C3
      {spaces_before_argument: }
-     {flushright}
+     {normal_text:flushright}
      {spaces_after_argument:\\n}
 ';
 

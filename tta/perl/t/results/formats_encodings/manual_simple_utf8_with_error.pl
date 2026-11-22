@@ -22,7 +22,7 @@ $result_tree_text{'manual_simple_utf8_with_error'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 manual_simple_utf8_with_error.texi:l4 {Testé}
  |EXTRA
@@ -31,7 +31,7 @@ $result_tree_text{'manual_simple_utf8_with_error'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Testé}
+    {normal_text:Testé}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C2 manual_simple_utf8_with_error.texi:l6 {ésseulé}
@@ -42,7 +42,7 @@ $result_tree_text{'manual_simple_utf8_with_error'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {ésseulé}
+    {normal_text:ésseulé}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 manual_simple_utf8_with_error.texi:l8 {Chapitré}
@@ -53,7 +53,7 @@ $result_tree_text{'manual_simple_utf8_with_error'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chapitré}
+    {normal_text:Chapitré}
     {spaces_after_argument:\\n}
  *@chapter C4 manual_simple_utf8_with_error.texi:l9 {Chapitré}
  |EXTRA
@@ -63,13 +63,13 @@ $result_tree_text{'manual_simple_utf8_with_error'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chapitré}
+    {normal_text:Chapitré}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@value C1
    *brace_container C1
-    {non_connùe}
-  {\\n}
+    {normal_text:non_connùe}
+  {normal_text:\\n}
 ';
 
 

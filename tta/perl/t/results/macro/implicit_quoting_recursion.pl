@@ -23,11 +23,11 @@ $result_tree_text{'implicit_quoting_recursion'} = '*document_root C1
     |text_arg:{rmacro}
      *line_arg C3
       {spaces_before_argument: }
-      {rmacro}
+      {normal_text:rmacro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C1
-   {natopocotuototam\\n}
+   {normal_text:natopocotuototam\\n}
    >SOURCEMARKS
    >macro_expansion<start;1>
     >*rmacro_call@cat C2

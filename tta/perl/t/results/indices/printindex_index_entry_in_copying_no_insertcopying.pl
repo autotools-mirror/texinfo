@@ -22,7 +22,7 @@ $result_tree_text{'printindex_index_entry_in_copying_no_insertcopying'} = '*docu
     |index_entry:I{fn,1}
      *line_arg C3
       {spaces_before_argument: }
-      {Copying this document}
+      {normal_text:Copying this document}
       {spaces_after_argument:\\n}
     {empty_line:\\n}
     *@defun C4 l5
@@ -38,15 +38,15 @@ $result_tree_text{'printindex_index_entry_in_copying_no_insertcopying'} = '*docu
        |EXTRA
        |inserted:{1}
         *def_line_arg C1
-         {Function}
+         {normal_text:Function}
        {spaces: }
        *def_name C1
         *def_line_arg C1
-         {fun}
+         {normal_text:fun}
        {spaces: }
        *def_arg C1
         *def_line_arg C1
-         {arg}
+         {normal_text:arg}
        {spaces_after_argument:\\n}
      *@defunx C1 l6
      |EXTRA
@@ -60,25 +60,25 @@ $result_tree_text{'printindex_index_entry_in_copying_no_insertcopying'} = '*docu
        |EXTRA
        |inserted:{1}
         *def_line_arg C1
-         {Function}
+         {normal_text:Function}
        {spaces: }
        *def_name C1
         *def_line_arg C1
-         {xf}
+         {normal_text:xf}
        {spaces: }
        *def_arg C1
         *def_line_arg C1
-         {arg}
+         {normal_text:arg}
        {spaces_after_argument:\\n}
      *def_item C1
       *paragraph C1
-       {Defun\\n}
+       {normal_text:Defun\\n}
      *@end C1 l8
      |EXTRA
      |text_arg:{defun}
       *line_arg C3
        {spaces_before_argument: }
-       {defun}
+       {normal_text:defun}
        {spaces_after_argument:\\n}
     {empty_line:\\n}
     *@ftable C3 l10
@@ -95,7 +95,7 @@ $result_tree_text{'printindex_index_entry_in_copying_no_insertcopying'} = '*docu
        |index_entry:I{fn,4}
         *line_arg C3
          {spaces_before_argument: }
-         {ftable item}
+         {normal_text:ftable item}
          {spaces_after_argument:\\n}
        *@itemx C1 l12
        |EXTRA
@@ -103,14 +103,14 @@ $result_tree_text{'printindex_index_entry_in_copying_no_insertcopying'} = '*docu
        |index_entry:I{fn,5}
         *line_arg C3
          {spaces_before_argument: }
-         {xftable xitem}
+         {normal_text:xftable xitem}
          {spaces_after_argument:\\n}
      *@end C1 l13
      |EXTRA
      |text_arg:{ftable}
       *line_arg C3
        {spaces_before_argument: }
-       {ftable}
+       {normal_text:ftable}
        {spaces_after_argument:\\n}
     {empty_line:\\n}
     *@printindex C1 l15
@@ -119,7 +119,7 @@ $result_tree_text{'printindex_index_entry_in_copying_no_insertcopying'} = '*docu
     |misc_args:A{fn}
      *line_arg C3
       {spaces_before_argument: }
-      {fn}
+      {normal_text:fn}
       {spaces_after_argument:\\n}
     {empty_line:\\n}
     *@end C1 l17
@@ -127,7 +127,7 @@ $result_tree_text{'printindex_index_entry_in_copying_no_insertcopying'} = '*docu
     |text_arg:{copying}
      *line_arg C3
       {spaces_before_argument: }
-      {copying}
+      {normal_text:copying}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
  *@node C1 l19 {Top}
@@ -138,7 +138,7 @@ $result_tree_text{'printindex_index_entry_in_copying_no_insertcopying'} = '*docu
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C6 l20 {top}
  |EXTRA
@@ -147,11 +147,11 @@ $result_tree_text{'printindex_index_entry_in_copying_no_insertcopying'} = '*docu
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {Top.\\n}
+   {normal_text:Top.\\n}
   {empty_line:\\n}
   *@menu C3 l24
    *arguments_line C1
@@ -163,17 +163,17 @@ $result_tree_text{'printindex_index_entry_in_copying_no_insertcopying'} = '*docu
     |EXTRA
     |node_content:A{0|0}
     |normalized:{chapter}
-     {chapter}
+     {normal_text:chapter}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l26
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l28 {chapter}
@@ -184,7 +184,7 @@ $result_tree_text{'printindex_index_entry_in_copying_no_insertcopying'} = '*docu
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter}
+    {normal_text:chapter}
     {spaces_after_argument:\\n}
  *@chapter C4 l29 {Chapter}
  |EXTRA
@@ -194,7 +194,7 @@ $result_tree_text{'printindex_index_entry_in_copying_no_insertcopying'} = '*docu
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chapter}
+    {normal_text:Chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   {empty_line:\\n}

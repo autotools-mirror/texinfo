@@ -20,7 +20,7 @@ $result_tree_text{'empty_item_itemx'} = '*document_root C1
    *before_item C3
     {empty_line:\\n}
     *paragraph C1
-     {VTable\\n}
+     {normal_text:VTable\\n}
     {empty_line:\\n}
    *table_entry C1
     *table_term C3
@@ -29,7 +29,7 @@ $result_tree_text{'empty_item_itemx'} = '*document_root C1
      |index_entry:I{vr,1}
       *line_arg C3
        {spaces_before_argument: }
-       {first item}
+       {normal_text:first item}
        {spaces_after_argument:\\n}
      *@itemx C1 l6
       *line_arg C1
@@ -39,7 +39,7 @@ $result_tree_text{'empty_item_itemx'} = '*document_root C1
      |index_entry:I{vr,2}
       *line_arg C3
        {spaces_before_argument: }
-       {after an empty itemx, before an empty item}
+       {normal_text:after an empty itemx, before an empty item}
        {spaces_after_argument:\\n}
    *table_entry C1
     *table_term C1
@@ -53,14 +53,14 @@ $result_tree_text{'empty_item_itemx'} = '*document_root C1
      |index_entry:I{vr,3}
       *line_arg C3
        {spaces_before_argument: }
-       {in item before end table}
+       {normal_text:in item before end table}
        {spaces_after_argument:\\n}
    *@end C1 l10
    |EXTRA
    |text_arg:{vtable}
     *line_arg C3
      {spaces_before_argument: }
-     {vtable}
+     {normal_text:vtable}
      {spaces_after_argument:\\n}
 ';
 

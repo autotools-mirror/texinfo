@@ -23,7 +23,7 @@ $result_tree_text{'protect_comma_source_mark'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@set C1
@@ -35,7 +35,7 @@ $result_tree_text{'protect_comma_source_mark'} = '*document_root C1
      {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C8
-   {There is some text }
+   {normal_text:There is some text }
    >SOURCEMARKS
    >macro_expansion<start;1><p:9>
     >*macro_call@vvv C1
@@ -51,7 +51,7 @@ $result_tree_text{'protect_comma_source_mark'} = '*document_root C1
    >value_expansion<start;1>{,,}
     >*@value C1
      >*brace_container C1
-      >{punct}
+      >{normal_text:punct}
     *brace_container
    *@comma C1
     *brace_container
@@ -61,7 +61,7 @@ $result_tree_text{'protect_comma_source_mark'} = '*document_root C1
     *brace_container
    *@comma C1
     *brace_container
-   { and after.\\n}
+   {normal_text: and after.\\n}
 ';
 
 

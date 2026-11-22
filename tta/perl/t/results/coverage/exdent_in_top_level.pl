@@ -14,7 +14,7 @@ $result_tree_text{'exdent_in_top_level'} = '*document_root C1
   *@exdent C1 l1
    *line_arg C3
     {spaces_before_argument: }
-    {in exdented not in block command}
+    {normal_text:in exdented not in block command}
     {spaces_after_argument:\\n}
 ';
 

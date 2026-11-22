@@ -23,16 +23,16 @@ $result_tree_text{'adjacent_defline'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {Funoid}
+       {normal_text:Funoid}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {foo}
+       {normal_text:foo}
      {spaces: }
      {delimiter:(}
      *def_arg C1
       *def_line_arg C1
-       {bar}
+       {normal_text:bar}
      {delimiter:)}
      {spaces_after_argument:\\n}
    *@defline C1 l3
@@ -43,32 +43,32 @@ $result_tree_text{'adjacent_defline'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {Funnyoid}
+       {normal_text:Funnyoid}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {foo2}
+       {normal_text:foo2}
      {spaces: }
      {delimiter:(}
      *def_arg C1
       *def_line_arg C1
-       {bar2}
+       {normal_text:bar2}
      {delimiter:,}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {baz2}
+       {normal_text:baz2}
      {delimiter:)}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {description\\n}
+     {normal_text:description\\n}
    *@end C1 l5
    |EXTRA
    |text_arg:{defblock}
     *line_arg C3
      {spaces_before_argument: }
-     {defblock}
+     {normal_text:defblock}
      {spaces_after_argument:\\n}
 ';
 

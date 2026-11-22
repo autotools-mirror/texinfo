@@ -14,13 +14,13 @@ $result_tree_text{'empty_line_in_braces_in_math_at_begin_line'} = '*document_roo
   *paragraph C1
    *@math C1 l1
     *brace_arg C5
-     {a\\n}
+     {normal_text:a\\n}
      {empty_line:\\n}
      *balanced_braces C3 l3
-      {{b\\n}
+      {normal_text:{b\\n}
       {empty_line:\\n}
-      {}}
-     { c}
+      {normal_text:}}
+     {normal_text: c}
      {spaces_after_argument:\\n}
 ';
 

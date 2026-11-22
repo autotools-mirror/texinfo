@@ -12,8 +12,8 @@ $result_tree_text{'line_begin_upper_case_letter_punctuation_space'} = '*document
  *before_node_section C2
   *preamble_before_content
   *paragraph C2
-   {it read and process the user configuration file and connects to to the\\n}
-   { MTA. Of course, the client is not able to.\\n}
+   {normal_text:it read and process the user configuration file and connects to to the\\n}
+   {normal_text: MTA. Of course, the client is not able to.\\n}
 ';
 
 

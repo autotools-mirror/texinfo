@@ -17,14 +17,14 @@ $result_tree_text{'shorttitlepage'} = '*document_root C3
     *line_arg C7
      {spaces_before_argument: }
      *@@
-     {title }
+     {normal_text:title }
      *@sc C1 l2
       *brace_container C1
-       {html}
-     { }
+       {normal_text:html}
+     {normal_text: }
      *@code C1 l2
       *brace_container C1
-       {test}
+       {normal_text:test}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *@node C1 l4 {Top}
@@ -35,7 +35,7 @@ $result_tree_text{'shorttitlepage'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C5 l5 {Top of @@title @sc{html} @code{test}}
  |EXTRA
@@ -44,23 +44,23 @@ $result_tree_text{'shorttitlepage'} = '*document_root C3
   *arguments_line C1
    *line_arg C8
     {spaces_before_argument: }
-    {Top of }
+    {normal_text:Top of }
     *@@
-    {title }
+    {normal_text:title }
     *@sc C1 l5
      *brace_container C1
-      {html}
-    { }
+      {normal_text:html}
+    {normal_text: }
     *@code C1 l5
      *brace_container C1
-      {test}
+      {normal_text:test}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {Top.\\n}
+   {normal_text:Top.\\n}
   {empty_line:\\n}
   *paragraph C1
-   {Second paragraph.\\n}
+   {normal_text:Second paragraph.\\n}
 ';
 
 

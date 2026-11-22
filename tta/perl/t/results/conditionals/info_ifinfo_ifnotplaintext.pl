@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'info_ifinfo_ifnotplaintext'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C1
-   {}
+   {normal_text:}
    >SOURCEMARKS
    >expanded_conditional_command<start;1>
     >*@ifinfo C1 l1
@@ -24,7 +24,7 @@ $result_tree_text{'info_ifinfo_ifnotplaintext'} = '*document_root C1
       >*block_line_arg C1
        >{spaces_before_argument:\\n}
   *paragraph C1
-   {This will be in Info, but not plain text.\\n}
+   {normal_text:This will be in Info, but not plain text.\\n}
    >SOURCEMARKS
    >expanded_conditional_command<end;2><p:42>
     >*@end C1 l4
@@ -32,7 +32,7 @@ $result_tree_text{'info_ifinfo_ifnotplaintext'} = '*document_root C1
     >|text_arg:{ifnotplaintext}
      >*line_arg C3
       >{spaces_before_argument: }
-      >{ifnotplaintext}
+      >{normal_text:ifnotplaintext}
       >{spaces_after_argument:\\n}
    >expanded_conditional_command<end;1><p:42>
     >*@end C1 l5
@@ -40,7 +40,7 @@ $result_tree_text{'info_ifinfo_ifnotplaintext'} = '*document_root C1
     >|text_arg:{ifinfo}
      >*line_arg C3
       >{spaces_before_argument: }
-      >{ifinfo}
+      >{normal_text:ifinfo}
       >{spaces_after_argument:\\n}
 ';
 

@@ -12,7 +12,7 @@ $result_tree_text{'lone_end_table'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *paragraph C1
-   {Text.\\n}
+   {normal_text:Text.\\n}
 ';
 
 

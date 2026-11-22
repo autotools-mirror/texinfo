@@ -14,30 +14,30 @@ $result_tree_text{'accent_with_text'} = '*document_root C1
   *paragraph C10
    *@u C1 l1
     *brace_container C1
-     {--a}
-   { }
+     {normal_text:--a}
+   {normal_text: }
    *@dotless C1 l1
     *brace_container C1
-     {--b}
-   { }
+     {normal_text:--b}
+   {normal_text: }
    *@^ C1 l1
     *brace_container C2
-     {--}
+     {normal_text:--}
      *@dotless C1 l1
       *brace_container C1
-       {i}
-   { }
+       {normal_text:i}
+   {normal_text: }
    *@^ C1 l1
     *brace_container C2
-     {--}
+     {normal_text:--}
      *@dotless C1 l1
       *brace_container C1
-       {j}
-   { }
+       {normal_text:j}
+   {normal_text: }
    *@^ C1 l1
     *brace_container C1
-     {--a}
-   {\\n}
+     {normal_text:--a}
+   {normal_text:\\n}
 ';
 
 

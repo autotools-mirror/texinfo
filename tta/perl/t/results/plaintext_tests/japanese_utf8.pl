@@ -20,7 +20,7 @@ $result_tree_text{'japanese_utf8'} = '*document_root C8
    |text_arg:{UTF-8}
     *line_arg C3
      {spaces_before_argument: }
-     {UTF-8}
+     {normal_text:UTF-8}
      {spaces_after_argument:\\n}
   *preamble_before_content C5
    *@setfilename C1 japanese_utf8.texi:l3
@@ -28,12 +28,12 @@ $result_tree_text{'japanese_utf8'} = '*document_root C8
    |text_arg:{japanese_utf8.info}
     *line_arg C3
      {spaces_before_argument: }
-     {japanese_utf8.info}
+     {normal_text:japanese_utf8.info}
      {spaces_after_argument:\\n}
    *@settitle C1 japanese_utf8.texi:l4
     *line_arg C3
      {spaces_before_argument: }
-     {GNU LilyPond -- Manuel d\'initiation japanese}
+     {normal_text:GNU LilyPond -- Manuel d\'initiation japanese}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@documentlanguage C1 japanese_utf8.texi:l6
@@ -42,7 +42,7 @@ $result_tree_text{'japanese_utf8'} = '*document_root C8
    |text_arg:{ja}
     *line_arg C3
      {spaces_before_argument: }
-     {ja}
+     {normal_text:ja}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *@node C1 japanese_utf8.texi:l8 {Top}
@@ -53,7 +53,7 @@ $result_tree_text{'japanese_utf8'} = '*document_root C8
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C9 japanese_utf8.texi:l9 {GNU LilyPond --- 学習マニュアル}
  |EXTRA
@@ -62,7 +62,7 @@ $result_tree_text{'japanese_utf8'} = '*document_root C8
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {GNU LilyPond --- 学習マニュアル}
+    {normal_text:GNU LilyPond --- 学習マニュアル}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@copying C7 japanese_utf8.texi:l11
@@ -70,36 +70,36 @@ $result_tree_text{'japanese_utf8'} = '*document_root C8
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C3
-    {Copyright }
+    {normal_text:Copyright }
     *@copyright C1 japanese_utf8.texi:l12
      *brace_container
-    { 1999--2008 著作者一同\\n}
+    {normal_text: 1999--2008 著作者一同\\n}
    {empty_line:\\n}
    *paragraph C2
     *@emph C1 japanese_utf8.texi:l14
      *brace_container C3
-      {The translation of the following copyright notice is provided\\n}
-      {for courtesy to non-English speakers, but only the notice in English\\n}
-      {legally counts.}
-    {\\n}
+      {normal_text:The translation of the following copyright notice is provided\\n}
+      {normal_text:for courtesy to non-English speakers, but only the notice in English\\n}
+      {normal_text:legally counts.}
+    {normal_text:\\n}
    {empty_line:\\n}
    *paragraph C2
     *@emph C1 japanese_utf8.texi:l18
      *brace_container C2
-      {以下は英語を話さない人々のための著作権についての注意書きです。しかしながら、\\n}
-      {英語で書かれた注意書きだけが法的に有効です。}
-    {\\n}
+      {normal_text:以下は英語を話さない人々のための著作権についての注意書きです。しかしながら、\\n}
+      {normal_text:英語で書かれた注意書きだけが法的に有効です。}
+    {normal_text:\\n}
    *@end C1 japanese_utf8.texi:l20
    |EXTRA
    |text_arg:{copying}
     *line_arg C3
      {spaces_before_argument: }
-     {copying}
+     {normal_text:copying}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {これは GNU LilyPond バージョン \\n}
+   {normal_text:これは GNU LilyPond バージョン \\n}
   {empty_line:\\n}
   *@menu C4 japanese_utf8.texi:l25
    *arguments_line C1
@@ -111,28 +111,28 @@ $result_tree_text{'japanese_utf8'} = '*document_root C8
     |EXTRA
     |node_content:A{0|0}
     |normalized:{Preface}
-     {Preface}
+     {normal_text:Preface}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 japanese_utf8.texi:l27
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{Introduction}
-     {Introduction}
+     {normal_text:Introduction}
     {menu_entry_separator:::                   }
     *menu_entry_description C1
      *preformatted C1
-      {LilyPond とは何なのか、なぜ LilyPond を使うのか、どうやって LilyPond を使うのか\\n}
+      {normal_text:LilyPond とは何なのか、なぜ LilyPond を使うのか、どうやって LilyPond を使うのか\\n}
    *@end C1 japanese_utf8.texi:l28
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 japanese_utf8.texi:l30 {Preface}
@@ -143,7 +143,7 @@ $result_tree_text{'japanese_utf8'} = '*document_root C8
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Preface}
+    {normal_text:Preface}
     {spaces_after_argument:\\n}
  *@chapter C5 japanese_utf8.texi:l31 {Preface}
  |EXTRA
@@ -153,11 +153,11 @@ $result_tree_text{'japanese_utf8'} = '*document_root C8
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Preface}
+    {normal_text:Preface}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {それは 1995 年のある日の EJE (Eindhoven Youth Orchestra) のリハーサル中のできごとでした − ある変わり者のバイオリン奏者であるジャンは同じく変わり者のフレンチホルン奏者のハン-ウェンに彼がかかわっている新しい大きなプロジェクトのことを話しました。それは音楽を出版するための自動化されたシステムです (正確には、それは MPP − MusiXTeX のプリプロセッサです)。それを聞いてハン-ウェンはすぐに楽譜からいくつかの部分をプリントアウトしたいと思い、彼はそのためのソフトウェアを探し始め、すぐにその虜になってしまいました。それが MPP の終わりを決定付けました。多くの哲学的考察を含み白熱した email の交換の後、ハン-ウェンは 1996 年に LilyPond の製作を開始しました。この時、ジャンはハン-ウェンの新しいプロジェクトに引きずり込まれました。\\n}
+   {normal_text:それは 1995 年のある日の EJE (Eindhoven Youth Orchestra) のリハーサル中のできごとでした − ある変わり者のバイオリン奏者であるジャンは同じく変わり者のフレンチホルン奏者のハン-ウェンに彼がかかわっている新しい大きなプロジェクトのことを話しました。それは音楽を出版するための自動化されたシステムです (正確には、それは MPP − MusiXTeX のプリプロセッサです)。それを聞いてハン-ウェンはすぐに楽譜からいくつかの部分をプリントアウトしたいと思い、彼はそのためのソフトウェアを探し始め、すぐにその虜になってしまいました。それが MPP の終わりを決定付けました。多くの哲学的考察を含み白熱した email の交換の後、ハン-ウェンは 1996 年に LilyPond の製作を開始しました。この時、ジャンはハン-ウェンの新しいプロジェクトに引きずり込まれました。\\n}
   {empty_line:\\n}
   {empty_line:\\n}
  *@node C1 japanese_utf8.texi:l36 {Introduction}
@@ -168,7 +168,7 @@ $result_tree_text{'japanese_utf8'} = '*document_root C8
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Introduction}
+    {normal_text:Introduction}
     {spaces_after_argument:\\n}
  *@chapter C4 japanese_utf8.texi:l37 {Introduction}
  |EXTRA
@@ -178,11 +178,11 @@ $result_tree_text{'japanese_utf8'} = '*document_root C8
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Introduction}
+    {normal_text:Introduction}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {この章では読者に LilyPond とこのドキュメントについての紹介を行います。\\n}
+   {normal_text:この章では読者に LilyPond とこのドキュメントについての紹介を行います。\\n}
   {empty_line:\\n}
  *@bye C1
   *line_arg C1

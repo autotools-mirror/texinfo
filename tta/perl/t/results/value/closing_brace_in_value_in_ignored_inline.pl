@@ -27,24 +27,24 @@ $result_tree_text{'closing_brace_in_value_in_ignored_inline'} = '*document_root 
    >SOURCEMARKS
    >value_expansion<end;1>
     *brace_arg C1
-     {html}
+     {normal_text:html}
     *brace_arg C2
      {spaces_before_argument:\\n}
-     {truc }
+     {normal_text:truc }
      >SOURCEMARKS
      >value_expansion<start;1><p:5>{}}
       >*@value C1
        >*brace_container C1
-        >{closebrace}
-   {\\n}
-   {machin\\n}
+        >{normal_text:closebrace}
+   {normal_text:\\n}
+   {normal_text:machin\\n}
   {empty_line:\\n}
   *paragraph C1
    *@inlinefmt C2 l7
    |EXTRA
    |format:{tex}
     *brace_arg C1
-     {tex}
+     {normal_text:tex}
     *elided_brace_command_arg C1
      {raw:\\nbidule @value{closebrace}\\nafter\\n}
 ';

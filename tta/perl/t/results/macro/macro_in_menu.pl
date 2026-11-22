@@ -25,7 +25,7 @@ $result_tree_text{'macro_in_menu'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@macro C3 l6
@@ -40,7 +40,7 @@ $result_tree_text{'macro_in_menu'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@macro C3 l10
@@ -55,7 +55,7 @@ $result_tree_text{'macro_in_menu'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@macro C3 l14
@@ -70,7 +70,7 @@ $result_tree_text{'macro_in_menu'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@macro C3 l18
@@ -85,7 +85,7 @@ $result_tree_text{'macro_in_menu'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@macro C3 l22
@@ -100,7 +100,7 @@ $result_tree_text{'macro_in_menu'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *@menu C8 l26
@@ -117,7 +117,7 @@ $result_tree_text{'macro_in_menu'} = '*document_root C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{menu-entry}
-     {menu entry}
+     {normal_text:menu entry}
      >SOURCEMARKS
      >macro_expansion<end;1>
      >macro_expansion<start;2><p:10>
@@ -128,7 +128,7 @@ $result_tree_text{'macro_in_menu'} = '*document_root C1
     >macro_expansion<end;2><p:2>
     *menu_entry_description C1
      *preformatted C1
-      {description\\n}
+      {normal_text:description\\n}
    *menu_comment C1
     *preformatted C2
      {after_menu_description_line:  \\n}
@@ -137,7 +137,7 @@ $result_tree_text{'macro_in_menu'} = '*document_root C1
       >*macro_call@spaces C1
        >*brace_arg
      >macro_expansion<end;3><p:2>
-     {menu comment\\n}
+     {normal_text:menu comment\\n}
    *menu_entry C4 l30
     {menu_entry_leading_text:* }
     >SOURCEMARKS
@@ -149,11 +149,11 @@ $result_tree_text{'macro_in_menu'} = '*document_root C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{node}
-     {node}
+     {normal_text:node}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 l31
     {menu_entry_leading_text:* }
     >SOURCEMARKS
@@ -168,20 +168,20 @@ $result_tree_text{'macro_in_menu'} = '*document_root C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{other-node}
-     {other node}
+     {normal_text:other node}
      >SOURCEMARKS
      >macro_expansion<end;6>
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 l32
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{node-colon-macro}
-     {node colon macro}
+     {normal_text:node colon macro}
      >SOURCEMARKS
      >macro_expansion<start;7><p:16>
       >*macro_call@acolon C1
@@ -199,17 +199,17 @@ $result_tree_text{'macro_in_menu'} = '*document_root C1
     >macro_expansion<end;9><p:3>
     *menu_entry_description C1
      *preformatted C1
-      {description\\n}
+      {normal_text:description\\n}
    *menu_entry C6 l33
     {menu_entry_leading_text:* }
     *menu_entry_name C1
-     {3rd node}
+     {normal_text:3rd node}
     {menu_entry_separator:: }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{entry}
-     {entry}
+     {normal_text:entry}
     {menu_entry_separator:. }
     >SOURCEMARKS
     >macro_expansion<start;10><p:1>
@@ -218,13 +218,13 @@ $result_tree_text{'macro_in_menu'} = '*document_root C1
     >macro_expansion<end;10><p:2>
     *menu_entry_description C1
      *preformatted C1
-      {description\\n}
+      {normal_text:description\\n}
    *@end C1 l34
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
 ';
 

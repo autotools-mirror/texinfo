@@ -15,36 +15,36 @@ $result_tree_text{'empty_commands'} = '*document_root C1
   |EXTRA
   |global_command_number:{1}
    *brace_container
-  {\\n}
+  {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C15
    *@uref C1 l3
     *brace_arg
-   { }
+   {normal_text: }
    *@abbr C1 l3
     *brace_arg
-   { }
+   {normal_text: }
    *@email C1 l3
     *brace_arg
-   { }
+   {normal_text: }
    *@code C1 l3
     *brace_container
    *@footnote C1 l3
    |EXTRA
    |global_command_number:{1}
     *brace_command_context
-   { }
+   {normal_text: }
    *@~ C1 l3
     *brace_container
-   { }
+   {normal_text: }
    *@dotless C1 l3
     *brace_container
-   { }
+   {normal_text: }
    *@verb C1 l3
     *brace_container C2
      {verb_delimiter:;}
      {verb_delimiter:;}
-   {\\n}
+   {normal_text:\\n}
 ';
 
 
@@ -104,7 +104,7 @@ $result_converted{'latex_text'}->{'empty_commands'} = '\\begin{document}
 
 $result_converted{'docbook'}->{'empty_commands'} = '
 
-<para><ulink url=""></ulink>   <literal></literal><footnote></footnote> &#771;  <literal></literal>
+<para><ulink url=""></ulink>    &#771;  <literal></literal>
 </para>';
 
 1;

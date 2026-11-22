@@ -21,7 +21,7 @@ $result_tree_text{'sc_in_menu'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {first}
+    {normal_text:first}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C4 l4
@@ -33,7 +33,7 @@ $result_tree_text{'sc_in_menu'} = '*document_root C3
     *menu_entry_name C1
      *@sc C1 l5
       *brace_container C1
-       {value}
+       {normal_text:value}
     {menu_entry_separator::}
     *menu_entry_node C1
     |EXTRA
@@ -41,58 +41,58 @@ $result_tree_text{'sc_in_menu'} = '*document_root C3
     |normalized:{node}
      *@sc C1 l5
       *brace_container C1
-       {node}
+       {normal_text:node}
     {menu_entry_separator:.   }
     *menu_entry_description C1
      *preformatted C2
       *@sc C1 l5
        *brace_container C1
-        {descrip tion}
-      {\\n}
+        {normal_text:descrip tion}
+      {normal_text:\\n}
    *menu_comment C2
     *preformatted C4
      {after_menu_description_line:\\n}
      *@sc C1 l7
       *brace_container C1
-       {menu comment}
-     {\\n}
+       {normal_text:menu comment}
+     {normal_text:\\n}
      {empty_line:\\n}
     *@example C3 l9
      *arguments_line C1
       *block_line_arg C1
        {spaces_before_argument:\\n}
      *preformatted C10
-      {* }
+      {normal_text:* }
       *@sc C1 l10
        *brace_container C1
-        {menu-example value}
-      {:(dir)}
+        {normal_text:menu-example value}
+      {normal_text::(dir)}
       *@sc C1 l10
        *brace_container C1
-        {menu-example node}
-      {.   }
+        {normal_text:menu-example node}
+      {normal_text:.   }
       *@sc C1 l10
        *brace_container C1
-        {menu-example descrip tion}
-      {\\n}
+        {normal_text:menu-example descrip tion}
+      {normal_text:\\n}
       {empty_line:\\n}
       *@sc C1 l12
        *brace_container C1
-        {menu-example comment}
-      {\\n}
+        {normal_text:menu-example comment}
+      {normal_text:\\n}
      *@end C1 l13
      |EXTRA
      |text_arg:{example}
       *line_arg C3
        {spaces_before_argument: }
-       {example}
+       {normal_text:example}
        {spaces_after_argument:\\n}
    *@end C1 l14
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C4 l16 {@sc{node}}
@@ -105,7 +105,7 @@ $result_tree_text{'sc_in_menu'} = '*document_root C3
     {spaces_before_argument: }
     *@sc C1 l16
      *brace_container C1
-      {node}
+      {normal_text:node}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@example C3 l18
@@ -121,46 +121,46 @@ $result_tree_text{'sc_in_menu'} = '*document_root C3
      *menu_entry_name C1
       *@sc C1 l20
        *brace_container C1
-        {example value}
+        {normal_text:example value}
      {menu_entry_separator::}
      *menu_entry_node C4
      |EXTRA
      |manual_content:A{1|1}
      |node_content:A{3|3}
      |normalized:{example-node}
-      {(}
-      {dir}
-      {)}
+      {normal_text:(}
+      {normal_text:dir}
+      {normal_text:)}
       *@sc C1 l20
        *brace_container C1
-        {example node}
+        {normal_text:example node}
      {menu_entry_separator:.   }
      *menu_entry_description C1
       *preformatted C2
        *@sc C1 l20
         *brace_container C1
-         {example descrip tion}
-       {\\n}
+         {normal_text:example descrip tion}
+       {normal_text:\\n}
     *menu_comment C1
      *preformatted C3
       {after_menu_description_line:\\n}
       *@sc C1 l22
        *brace_container C1
-        {example comment}
-      {\\n}
+        {normal_text:example comment}
+      {normal_text:\\n}
     *@end C1 l23
     |EXTRA
     |text_arg:{menu}
      *line_arg C3
       {spaces_before_argument: }
-      {menu}
+      {normal_text:menu}
       {spaces_after_argument:\\n}
    *@end C1 l24
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
 ';

@@ -19,7 +19,7 @@ $result_tree_text{'empty_string_index_entry'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@node C9 l2 {chap}
  |EXTRA
@@ -30,7 +30,7 @@ $result_tree_text{'empty_string_index_entry'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@findex C1 l4
@@ -65,7 +65,7 @@ $result_tree_text{'empty_string_index_entry'} = '*document_root C3
    |text_arg:{ftable}
     *line_arg C3
      {spaces_before_argument: }
-     {ftable}
+     {normal_text:ftable}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@defun C3 l10
@@ -81,7 +81,7 @@ $result_tree_text{'empty_string_index_entry'} = '*document_root C3
      |EXTRA
      |inserted:{1}
       *def_line_arg C1
-       {Function}
+       {normal_text:Function}
      {spaces: }
      *def_name C1
       *bracketed_arg C1 l10
@@ -106,7 +106,7 @@ $result_tree_text{'empty_string_index_entry'} = '*document_root C3
      |EXTRA
      |inserted:{1}
       *def_line_arg C1
-       {Function}
+       {normal_text:Function}
      {spaces: }
      *def_name C1
       *bracketed_arg C1 l11
@@ -124,7 +124,7 @@ $result_tree_text{'empty_string_index_entry'} = '*document_root C3
    |text_arg:{defun}
     *line_arg C3
      {spaces_before_argument: }
-     {defun}
+     {normal_text:defun}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@printindex C1 l14
@@ -133,7 +133,7 @@ $result_tree_text{'empty_string_index_entry'} = '*document_root C3
   |misc_args:A{fn}
    *line_arg C3
     {spaces_before_argument: }
-    {fn}
+    {normal_text:fn}
     {spaces_after_argument:\\n}
 ';
 

@@ -14,9 +14,9 @@ $result_tree_text{'spaces_in_line_break_in_verb_w'} = '*document_root C1
   *paragraph C2
    *@w C1 l1
     *brace_container C2
-     {aaa  bb\\n}
-     {ccc}
-   {\\n}
+     {normal_text:aaa  bb\\n}
+     {normal_text:ccc}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
    *@verb C1 l4
@@ -25,7 +25,7 @@ $result_tree_text{'spaces_in_line_break_in_verb_w'} = '*document_root C1
      {raw:aaa  bb\\n}
      {raw:ccc}
      {verb_delimiter:|}
-   {\\n}
+   {normal_text:\\n}
 ';
 
 

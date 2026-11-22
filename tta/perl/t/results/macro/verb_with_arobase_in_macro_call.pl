@@ -24,11 +24,11 @@ $result_tree_text{'verb_with_arobase_in_macro_call'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C6
-   {first: }
+   {normal_text:first: }
    >SOURCEMARKS
    >macro_expansion<start;1>
     >*macro_call@showarg C2
@@ -42,8 +42,8 @@ $result_tree_text{'verb_with_arobase_in_macro_call'} = '*document_root C1
      {verb_delimiter:,}
      {raw: commas }
      {verb_delimiter:,}
-   {\\n}
-   {second: }
+   {normal_text:\\n}
+   {normal_text:second: }
    *@verb C1 l6:@showarg
    >SOURCEMARKS
    >macro_expansion<end;1>
@@ -51,7 +51,7 @@ $result_tree_text{'verb_with_arobase_in_macro_call'} = '*document_root C1
      {verb_delimiter:@}
      {raw: arobase }
      {verb_delimiter:@}
-   {\\n}
+   {normal_text:\\n}
 ';
 
 

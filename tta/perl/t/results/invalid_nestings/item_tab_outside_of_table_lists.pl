@@ -14,15 +14,15 @@ $result_tree_text{'item_tab_outside_of_table_lists'} = '*document_root C1
   *@itemx C1 l1
    *line_arg C3
     {spaces_before_argument: }
-    {itemx outside.}
+    {normal_text:itemx outside.}
     {spaces_after_argument:\\n}
   {ignorable_spaces_after_command: }
   *paragraph C2
-   {headitem outside.\\n}
-   { someitem outside.\\n}
+   {normal_text:headitem outside.\\n}
+   {normal_text: someitem outside.\\n}
   {ignorable_spaces_after_command: }
   *paragraph C1
-   {tab outside\\n}
+   {normal_text:tab outside\\n}
 ';
 
 

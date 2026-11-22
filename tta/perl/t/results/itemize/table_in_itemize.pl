@@ -22,7 +22,7 @@ $result_tree_text{'table_in_itemize'} = '*document_root C1
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
-     {item one\\n}
+     {normal_text:item one\\n}
    *@item C2 l3
    |EXTRA
    |item_number:{2}
@@ -38,46 +38,46 @@ $result_tree_text{'table_in_itemize'} = '*document_root C1
        *@item C1 l5
         *line_arg C3
          {spaces_before_argument: }
-         {table one}
+         {normal_text:table one}
          {spaces_after_argument:\\n}
       *table_definition C3
        *paragraph C1
-        {aaaaa\\n}
+        {normal_text:aaaaa\\n}
        {empty_line:\\n}
        *paragraph C1
-        {New para.\\n}
+        {normal_text:New para.\\n}
      *table_entry C2
       *table_term C1
        *@item C1 l9
         *line_arg C3
          {spaces_before_argument: }
-         {table two}
+         {normal_text:table two}
          {spaces_after_argument:\\n}
       *table_definition C3
        *paragraph C1
-        {Five\\n}
+        {normal_text:Five\\n}
        {empty_line:\\n}
        *paragraph C1
-        {New para.\\n}
+        {normal_text:New para.\\n}
      *@end C1 l13
      |EXTRA
      |text_arg:{table}
       *line_arg C3
        {spaces_before_argument: }
-       {table}
+       {normal_text:table}
        {spaces_after_argument:\\n}
    *@item C2 l14
    |EXTRA
    |item_number:{3}
     {ignorable_spaces_after_command: }
     *paragraph C1
-     {item three\\n}
+     {normal_text:item three\\n}
    *@end C1 l15
    |EXTRA
    |text_arg:{itemize}
     *line_arg C2
      {spaces_before_argument: }
-     {itemize}
+     {normal_text:itemize}
 ';
 
 

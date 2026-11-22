@@ -18,7 +18,7 @@ $result_tree_text{'double_include'} = '*document_root C1
    >|text_arg:{inc_file.texi}
     >*line_arg C3
      >{spaces_before_argument: }
-     >{inc_file.texi}
+     >{normal_text:inc_file.texi}
      >{spaces_after_argument: }
      >>SOURCEMARKS
      >>include<start;1><p:1>
@@ -27,15 +27,15 @@ $result_tree_text{'double_include'} = '*document_root C1
       >>|text_arg:{inc_file.texi}
        >>*line_arg C3
         >>{spaces_before_argument: }
-        >>{inc_file.texi}
+        >>{normal_text:inc_file.texi}
         >>{spaces_after_argument:\\n}
    {text_before_beginning:\\n}
   *preamble_before_content
   *paragraph C2
-   {In included file.\\n}
+   {normal_text:In included file.\\n}
    >SOURCEMARKS
    >include<end;2><p:18>
-   {In included file.\\n}
+   {normal_text:In included file.\\n}
    >SOURCEMARKS
    >include<end;1><p:18>
 ';

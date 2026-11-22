@@ -12,27 +12,27 @@ $result_tree_text{'no_paragraph_commands'} = '*document_root C1
  *before_node_section C5
   *preamble_before_content C2
    *@*
-   {\\n}
+   {normal_text:\\n}
   *@titlefont C1 l2
   |EXTRA
   |global_command_number:{1}
    *brace_container C1
-    {title font}
-  {\\n}
+    {normal_text:title font}
+  {normal_text:\\n}
   *@image C5 l3
   |EXTRA
   |input_encoding_name:{utf-8}
    *brace_arg C1
-    {aa}
+    {normal_text:aa}
    *brace_arg C1
-    {bb}
+    {normal_text:bb}
    *brace_arg C1
-    {cc}
+    {normal_text:cc}
    *brace_arg C1
-    {dd}
+    {normal_text:dd}
    *brace_arg C1
-    {.ee}
-  {\\n}
+    {normal_text:.ee}
+  {normal_text:\\n}
 ';
 
 

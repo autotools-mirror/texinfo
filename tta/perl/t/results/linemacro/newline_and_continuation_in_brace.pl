@@ -25,7 +25,7 @@ $result_tree_text{'newline_and_continuation_in_brace'} = '*document_root C1
     |text_arg:{linemacro}
      *line_arg C3
       {spaces_before_argument: }
-      {linemacro}
+      {normal_text:linemacro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *@defblock C3 l6
@@ -52,39 +52,39 @@ $result_tree_text{'newline_and_continuation_in_brace'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {category}
+       {normal_text:category}
      {spaces: }
      *def_name C1
       *def_line_arg C3
-       {a}
+       {normal_text:a}
        *@code C1 l9:@mylinecommand
         *brace_container C1
-         {b c}
-       {d}
+         {normal_text:b c}
+       {normal_text:d}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {some}
+       {normal_text:some}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {arg}
+       {normal_text:arg}
      {spaces:    }
      >SOURCEMARKS
      >defline_continuation<1><p:1>
      *def_arg C1
       *def_line_arg C1
-       {b}
+       {normal_text:b}
      {spaces: }
      *def_arg C1
       *bracketed_arg C1 l9:@mylinecommand
-       {next    last}
+       {normal_text:next    last}
        >SOURCEMARKS
        >defline_continuation<2><p:5>
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {line}
+       {normal_text:line}
        >SOURCEMARKS
        >linemacro_expansion<end;1><p:4>
      {spaces_after_argument:\\n}
@@ -93,7 +93,7 @@ $result_tree_text{'newline_and_continuation_in_brace'} = '*document_root C1
    |text_arg:{defblock}
     *line_arg C3
      {spaces_before_argument: }
-     {defblock}
+     {normal_text:defblock}
      {spaces_after_argument:\\n}
 ';
 

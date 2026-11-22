@@ -19,7 +19,7 @@ $result_tree_text{'equivalent_nodes'} = '*document_root C3
   *arguments_line C2
    *line_arg C2
     {spaces_before_argument: }
-    {first}
+    {normal_text:first}
    *line_arg C3
    |EXTRA
    |node_content:A{1|1}
@@ -27,7 +27,7 @@ $result_tree_text{'equivalent_nodes'} = '*document_root C3
     {spaces_before_argument: }
     *@emph C1 l1
      *brace_container C1
-      {node}
+      {normal_text:node}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C3 l3
@@ -42,17 +42,17 @@ $result_tree_text{'equivalent_nodes'} = '*document_root C3
     |normalized:{node}
      *@strong C1 l4
       *brace_container C1
-       {node}
+       {normal_text:node}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l5
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C3 l7 {@samp{node}}
@@ -65,7 +65,7 @@ $result_tree_text{'equivalent_nodes'} = '*document_root C3
     {spaces_before_argument: }
     *@samp C1 l7
      *brace_container C1
-      {node}
+      {normal_text:node}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
@@ -74,8 +74,8 @@ $result_tree_text{'equivalent_nodes'} = '*document_root C3
     |EXTRA
     |node_content:A{0|0}
     |normalized:{node}
-     {node}
-   {.\\n}
+     {normal_text:node}
+   {normal_text:.\\n}
 ';
 
 

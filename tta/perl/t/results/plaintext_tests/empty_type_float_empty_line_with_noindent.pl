@@ -19,20 +19,20 @@ $result_tree_text{'empty_type_float_empty_line_with_noindent'} = '*document_root
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C1
-    {toto\\n}
+    {normal_text:toto\\n}
    *@end C1 l3
    |EXTRA
    |text_arg:{float}
     *line_arg C3
      {spaces_before_argument: }
-     {float}
+     {normal_text:float}
      {spaces_after_argument:\\n}
   *@noindent l4
   {ignorable_spaces_after_command:\\n}
   *paragraph C1
   |EXTRA
   |noindent:{1}
-   {Titi\\n}
+   {normal_text:Titi\\n}
   {empty_line:\\n}
 ';
 

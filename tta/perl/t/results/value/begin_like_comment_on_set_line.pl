@@ -25,16 +25,16 @@ $result_tree_text{'begin_like_comment_on_set_line'} = '*document_root C1
      {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C3
-   {!}
+   {normal_text:!}
    *@value C1
     *brace_container C1
-     {x}
-   {! !some thing  is it!\\n}
+     {normal_text:x}
+   {normal_text:! !some thing  is it!\\n}
    >SOURCEMARKS
    >value_expansion<start;1><p:3>{some thing @commentary is it}
     >*@value C1
      >*brace_container C1
-      >{y}
+      >{normal_text:y}
    >value_expansion<end;1><p:20>
 ';
 

@@ -21,7 +21,7 @@ $result_tree_text{'ref_to_top'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {ToP}
+    {normal_text:ToP}
     {spaces_after_argument:\\n}
  *@top C3 l3 {top}
  |EXTRA
@@ -30,7 +30,7 @@ $result_tree_text{'ref_to_top'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
@@ -39,8 +39,8 @@ $result_tree_text{'ref_to_top'} = '*document_root C3
     |EXTRA
     |node_content:A{0|0}
     |normalized:{Top}
-     {TOP}
-   {.\\n}
+     {normal_text:TOP}
+   {normal_text:.\\n}
 ';
 
 

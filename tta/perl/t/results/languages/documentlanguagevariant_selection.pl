@@ -30,33 +30,33 @@ $result_tree_text{'documentlanguagevariant_selection'} = '*document_root C5
        |EXTRA
        |inserted:{1}
         *def_line_arg C1
-         {Instance Variable}
+         {normal_text:Instance Variable}
        {spaces: }
        *def_class C1
         *def_line_arg C1
-         {SSS}
+         {normal_text:SSS}
        {spaces: }
        *def_name C1
         *def_line_arg C1
-         {BBB}
+         {normal_text:BBB}
        {spaces: }
        *def_arg C1
         *def_line_arg C1
-         {CCC}
+         {normal_text:CCC}
        {spaces_after_argument:\\n}
      *@end C1 l4
      |EXTRA
      |text_arg:{defivar}
       *line_arg C3
        {spaces_before_argument: }
-       {defivar}
+       {normal_text:defivar}
        {spaces_after_argument:\\n}
     *@end C1 l5
     |EXTRA
     |text_arg:{copying}
      *line_arg C3
       {spaces_before_argument: }
-      {copying}
+      {normal_text:copying}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@documentlanguage C1 l7
@@ -65,23 +65,23 @@ $result_tree_text{'documentlanguagevariant_selection'} = '*document_root C5
    |text_arg:{sr}
     *line_arg C3
      {spaces_before_argument: }
-     {sr}
+     {normal_text:sr}
      {spaces_after_argument:\\n}
    *@documentlanguagevariant C3 l8
    |EXTRA
    |global_command_number:{1}
     *line_arg C4
      {spaces_before_argument: }
-     {1959acad}
+     {normal_text:1959acad}
      *@^ C1 l8
       *following_arg C1
-       {e}
+       {normal_text:e}
      {spaces_after_argument: }
     *line_arg C1
      {spaces_before_argument: }
     *line_arg C3
      {spaces_before_argument: }
-     {1694acad}
+     {normal_text:1694acad}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *@node C1 l10 {Top}
@@ -92,7 +92,7 @@ $result_tree_text{'documentlanguagevariant_selection'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l11 {top}
  |EXTRA
@@ -101,7 +101,7 @@ $result_tree_text{'documentlanguagevariant_selection'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument: \\n}
   {empty_line:\\n}
  *@node C1 l13 {chap}
@@ -112,7 +112,7 @@ $result_tree_text{'documentlanguagevariant_selection'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
  *@chapter C16 l14 {Chap}
  |EXTRA
@@ -122,7 +122,7 @@ $result_tree_text{'documentlanguagevariant_selection'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chap}
+    {normal_text:Chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@defivar C2 l16
@@ -148,22 +148,22 @@ $result_tree_text{'documentlanguagevariant_selection'} = '*document_root C5
      {spaces: }
      *def_class C1
       *def_line_arg C1
-       {some}
+       {normal_text:some}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {other}
+       {normal_text:other}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {ivar}
+       {normal_text:ivar}
      {spaces_after_argument:\\n}
    *@end C1 l17
    |EXTRA
    |text_arg:{defivar}
     *line_arg C3
      {spaces_before_argument: }
-     {defivar}
+     {normal_text:defivar}
      {spaces_after_argument: \\n}
   {empty_line:\\n}
   *@documentlanguagevariant C1 l19
@@ -193,22 +193,22 @@ $result_tree_text{'documentlanguagevariant_selection'} = '*document_root C5
      {spaces: }
      *def_class C1
       *def_line_arg C1
-       {after}
+       {normal_text:after}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {reset}
+       {normal_text:reset}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {ivar}
+       {normal_text:ivar}
      {spaces_after_argument:\\n}
    *@end C1 l22
    |EXTRA
    |text_arg:{defivar}
     *line_arg C3
      {spaces_before_argument: }
-     {defivar}
+     {normal_text:defivar}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@documentlanguagevariant C3 l24
@@ -216,10 +216,10 @@ $result_tree_text{'documentlanguagevariant_selection'} = '*document_root C5
   |global_command_number:{3}
    *line_arg C2
     {spaces_before_argument: }
-    {abl1943 s}
+    {normal_text:abl1943 s}
    *line_arg C2
     {spaces_before_argument: }
-    {1901}
+    {normal_text:1901}
    *line_arg C1
     {spaces_before_argument: \\n}
   *@documentlanguage C1 l25
@@ -228,7 +228,7 @@ $result_tree_text{'documentlanguagevariant_selection'} = '*document_root C5
   |text_arg:{az}
    *line_arg C3
     {spaces_before_argument: }
-    {az}
+    {normal_text:az}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@defivar C2 l27
@@ -252,22 +252,22 @@ $result_tree_text{'documentlanguagevariant_selection'} = '*document_root C5
      {spaces: }
      *def_class C1
       *def_line_arg C1
-       {script}
+       {normal_text:script}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {before}
+       {normal_text:before}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {change}
+       {normal_text:change}
      {spaces_after_argument:\\n}
    *@end C1 l28
    |EXTRA
    |text_arg:{defivar}
     *line_arg C3
      {spaces_before_argument: }
-     {defivar}
+     {normal_text:defivar}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@documentlanguagevariant C3 l30
@@ -275,10 +275,10 @@ $result_tree_text{'documentlanguagevariant_selection'} = '*document_root C5
   |global_command_number:{4}
    *line_arg C2
     {spaces_before_argument: }
-    {akhmimic c}
+    {normal_text:akhmimic c}
    *line_arg C2
     {spaces_before_argument: }
-    {aluku}
+    {normal_text:aluku}
    *line_arg C1
     {spaces_before_argument:\\n}
   {empty_line:\\n}
@@ -305,22 +305,22 @@ $result_tree_text{'documentlanguagevariant_selection'} = '*document_root C5
      {spaces: }
      *def_class C1
       *def_line_arg C1
-       {one}
+       {normal_text:one}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {after}
+       {normal_text:after}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {change}
+       {normal_text:change}
      {spaces_after_argument:\\n}
    *@end C1 l33
    |EXTRA
    |text_arg:{defivar}
     *line_arg C3
      {spaces_before_argument: }
-     {defivar}
+     {normal_text:defivar}
      {spaces_after_argument:\\n}
 ';
 

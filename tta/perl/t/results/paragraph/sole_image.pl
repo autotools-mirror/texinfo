@@ -15,11 +15,11 @@ $result_tree_text{'sole_image'} = '*document_root C1
   |EXTRA
   |input_encoding_name:{utf-8}
    *brace_arg C1
-    {aa}
-  {\\n}
+    {normal_text:aa}
+  {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {next para\\n}
+   {normal_text:next para\\n}
 ';
 
 

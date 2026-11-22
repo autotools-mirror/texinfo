@@ -12,224 +12,224 @@ $result_tree_text{'many_lines'} = '*document_root C1
  *before_node_section C10
   *preamble_before_content
   *paragraph C21
-   {pagesizes }
+   {normal_text:pagesizes }
    *@pagesizes C1 l1
     *line_arg C5
      {spaces_before_argument: }
-     {200mm,150mm following }
+     {normal_text:200mm,150mm following }
      *@@
-     {pagesizes arg}
+     {normal_text:pagesizes arg}
      {spaces_after_argument:\\n}
-   {afourpaper }
+   {normal_text:afourpaper }
    *@afourpaper C1 l2
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:on line following afourpaper}
      {spaces_after_argument:\\n}
-   {smallbook }
+   {normal_text:smallbook }
    *@smallbook C1 l3
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:on line following smallbook}
      {spaces_after_argument:\\n}
-   {headings }
+   {normal_text:headings }
    *@headings C1 l4
    |EXTRA
    |global_command_number:{1}
     *line_arg C3
      {spaces_before_argument: }
-     {on line following headings}
+     {normal_text:on line following headings}
      {spaces_after_argument:\\n}
-   {oddfooting }
+   {normal_text:oddfooting }
    *@oddfooting C1 l5
     *line_arg C3
      {spaces_before_argument: }
-     {on line following oddfooting}
+     {normal_text:on line following oddfooting}
      {spaces_after_argument:\\n}
-   {everyheading }
+   {normal_text:everyheading }
    *@everyheading C1 l6
     *line_arg C3
      {spaces_before_argument: }
-     {on line following everyheading}
+     {normal_text:on line following everyheading}
      {spaces_after_argument:\\n}
-   {everyfooting }
+   {normal_text:everyfooting }
    *@everyfooting C1 l7
     *line_arg C3
      {spaces_before_argument: }
-     {on line following everyfooting}
+     {normal_text:on line following everyfooting}
      {spaces_after_argument:\\n}
-   {evenheading }
+   {normal_text:evenheading }
    *@evenheading C1 l8
     *line_arg C3
      {spaces_before_argument: }
-     {on line following evenheading}
+     {normal_text:on line following evenheading}
      {spaces_after_argument:\\n}
-   {evenfooting }
+   {normal_text:evenfooting }
    *@evenfooting C1 l9
     *line_arg C3
      {spaces_before_argument: }
-     {on line following evenfooting}
+     {normal_text:on line following evenfooting}
      {spaces_after_argument:\\n}
-   {oddheading }
+   {normal_text:oddheading }
    *@oddheading C1 l10
     *line_arg C3
      {spaces_before_argument: }
-     {on line following}
+     {normal_text:on line following}
      {spaces_after_argument:\\n}
-   {need }
+   {normal_text:need }
   *@need C1 l11
    *line_arg C3
     {spaces_before_argument: }
-    {0.1 on line following}
+    {normal_text:0.1 on line following}
     {spaces_after_argument:\\n}
   *paragraph C1
-   {need }
+   {normal_text:need }
   *@need C1 l12
   |EXTRA
   |misc_args:A{0.1}
    *line_arg C3
     {spaces_before_argument: }
-    {0.1}
+    {normal_text:0.1}
     {spaces_after_argument:\\n}
   *paragraph C47
-   {setchapternewpage }
+   {normal_text:setchapternewpage }
    *@setchapternewpage C1 l13
     *line_arg C3
      {spaces_before_argument: }
-     {on line following setchapternewpage}
+     {normal_text:on line following setchapternewpage}
      {spaces_after_argument:\\n}
-   {raisesections }
+   {normal_text:raisesections }
    *@raisesections C1
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:on line following raisesections}
      {spaces_after_argument:\\n}
-   {lowersections }
+   {normal_text:lowersections }
    *@lowersections C1
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:on line following lowersections}
      {spaces_after_argument:\\n}
-   {kbdinputstyle code }
+   {normal_text:kbdinputstyle code }
    *@kbdinputstyle C1 l16
    |EXTRA
    |global_command_number:{1}
     *line_arg C3
      {spaces_before_argument: }
-     {code something}
+     {normal_text:code something}
      {spaces_after_argument:\\n}
-   {afourpaper }
+   {normal_text:afourpaper }
    *@afourpaper C1 l17
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:on line following afourpaper}
      {spaces_after_argument:\\n}
-   {afourlatex }
+   {normal_text:afourlatex }
    *@afourlatex C1 l18
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:on line following afourlatex}
      {spaces_after_argument:\\n}
-   {afourwide }
+   {normal_text:afourwide }
    *@afourwide C1 l19
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:on line following afourwide}
      {spaces_after_argument:\\n}
-   {paragraphindent asis }
+   {normal_text:paragraphindent asis }
    *@paragraphindent C1 l20
    |EXTRA
    |global_command_number:{1}
    |misc_args:A{asis}
     *line_arg C3
      {spaces_before_argument: }
-     {asis}
+     {normal_text:asis}
      {spaces_after_argument:\\n}
-   {paragraphindent 0 }
+   {normal_text:paragraphindent 0 }
    *@paragraphindent C1 l21
    |EXTRA
    |global_command_number:{2}
    |misc_args:A{0}
     *line_arg C3
      {spaces_before_argument: }
-     {0}
+     {normal_text:0}
      {spaces_after_argument:\\n}
-   {paragraphindent none }
+   {normal_text:paragraphindent none }
    *@paragraphindent C1 l22
    |EXTRA
    |global_command_number:{3}
    |misc_args:A{none}
     *line_arg C3
      {spaces_before_argument: }
-     {none}
+     {normal_text:none}
      {spaces_after_argument:\\n}
-   {paragraphindent 4 }
+   {normal_text:paragraphindent 4 }
    *@paragraphindent C1 l23
    |EXTRA
    |global_command_number:{4}
    |misc_args:A{4}
     *line_arg C3
      {spaces_before_argument: }
-     {4}
+     {normal_text:4}
      {spaces_after_argument:\\n}
-   {firstparagraphindent insert }
+   {normal_text:firstparagraphindent insert }
    *@firstparagraphindent C1 l24
    |EXTRA
    |global_command_number:{1}
    |misc_args:A{insert}
     *line_arg C3
      {spaces_before_argument: }
-     {insert}
+     {normal_text:insert}
      {spaces_after_argument:\\n}
-   {firstparagraphindent 3 }
+   {normal_text:firstparagraphindent 3 }
    *@firstparagraphindent C1 l25
    |EXTRA
    |global_command_number:{2}
     *line_arg C3
      {spaces_before_argument: }
-     {3}
+     {normal_text:3}
      {spaces_after_argument:\\n}
-   {exampleindent 6 }
+   {normal_text:exampleindent 6 }
    *@exampleindent C1 l26
    |EXTRA
    |global_command_number:{1}
     *line_arg C3
      {spaces_before_argument: }
-     {6 on line following exampleindent}
+     {normal_text:6 on line following exampleindent}
      {spaces_after_argument:\\n}
-   {exampleindent 6 }
+   {normal_text:exampleindent 6 }
    *@exampleindent C1 l27
    |EXTRA
    |global_command_number:{2}
    |misc_args:A{6}
     *line_arg C3
      {spaces_before_argument: }
-     {6}
+     {normal_text:6}
      {spaces_after_argument:\\n}
-   {footnotestyle }
+   {normal_text:footnotestyle }
    *@footnotestyle C1 l28
    |EXTRA
    |misc_args:A{end}
     *line_arg C3
      {spaces_before_argument: }
-     {end}
+     {normal_text:end}
      {spaces_after_argument: \\n}
-   {footnotestyle }
+   {normal_text:footnotestyle }
    *@footnotestyle C1 l29
    |EXTRA
    |misc_args:A{separate}
     *line_arg C3
      {spaces_before_argument: }
-     {separate}
+     {normal_text:separate}
      {spaces_after_argument: \\n}
-   {documentencoding }
+   {normal_text:documentencoding }
    *@documentencoding C1 l30
    |EXTRA
    |global_command_number:{1}
    |text_arg:{US-ascii encoding name}
     *line_arg C3
      {spaces_before_argument: }
-     {US-ascii encoding name}
+     {normal_text:US-ascii encoding name}
      {spaces_after_argument:\\n}
    *@documentencoding C1 l31
    |EXTRA
@@ -238,39 +238,39 @@ $result_tree_text{'many_lines'} = '*document_root C1
    |text_arg:{ISO-8859-1}
     *line_arg C3
      {spaces_before_argument: }
-     {ISO-8859-1}
+     {normal_text:ISO-8859-1}
      {spaces_after_argument:\\n}
-   {frenchspacing }
+   {normal_text:frenchspacing }
    *@frenchspacing C1 l32
    |EXTRA
    |global_command_number:{1}
    |misc_args:A{on}
     *line_arg C3
      {spaces_before_argument: }
-     {on}
+     {normal_text:on}
      {spaces_after_argument:\\n}
-   {frenchspacing }
+   {normal_text:frenchspacing }
    *@frenchspacing C1 l33
    |EXTRA
    |global_command_number:{2}
    |misc_args:A{off}
     *line_arg C3
      {spaces_before_argument: }
-     {off}
+     {normal_text:off}
      {spaces_after_argument:\\n}
-   {fonttextsize }
+   {normal_text:fonttextsize }
    *@fonttextsize C1 l34
    |EXTRA
    |misc_args:A{10}
     *line_arg C3
      {spaces_before_argument: }
-     {10}
+     {normal_text:10}
      {spaces_after_argument:\\n}
-   {everyheadingmarks }
+   {normal_text:everyheadingmarks }
    *@everyheadingmarks C1 l35
     *line_arg C3
      {spaces_before_argument: }
-     {bottom on line following everyheadingmarks}
+     {normal_text:bottom on line following everyheadingmarks}
      {spaces_after_argument:\\n}
    *@allowcodebreaks C1 l36
    |EXTRA
@@ -278,7 +278,7 @@ $result_tree_text{'many_lines'} = '*document_root C1
    |misc_args:A{false}
     *line_arg C3
      {spaces_before_argument: }
-     {false}
+     {normal_text:false}
      {spaces_after_argument:\\n}
    *@allowcodebreaks C1 l37
    |EXTRA
@@ -286,31 +286,31 @@ $result_tree_text{'many_lines'} = '*document_root C1
    |misc_args:A{true}
     *line_arg C3
      {spaces_before_argument: }
-     {true}
+     {normal_text:true}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C6
-   {Text line followed by finalout on the same line and another below }
+   {normal_text:Text line followed by finalout on the same line and another below }
    *@finalout C1
     *line_arg C1
      {spaces_before_argument:\\n}
    *@finalout C1
     *line_arg C1
      {spaces_before_argument:\\n}
-   {Text line after the finalout followed by a fianlout }
+   {normal_text:Text line after the finalout followed by a fianlout }
    *@finalout C1
     *line_arg C1
      {spaces_before_argument:\\n}
-   {Text line after the text line followed by the finalout.\\n}
+   {normal_text:Text line after the text line followed by the finalout.\\n}
   {empty_line:\\n}
   *paragraph C3
-   {Test text after finalout\\n}
+   {normal_text:Test text after finalout\\n}
    *@finalout C1
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:a word after finalout}
      {spaces_after_argument:\\n}
-   {Line after finalout\\n}
+   {normal_text:Line after finalout\\n}
 ';
 
 

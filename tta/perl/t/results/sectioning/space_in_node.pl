@@ -21,7 +21,7 @@ $result_tree_text{'space_in_node'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C5 l4
@@ -34,43 +34,43 @@ $result_tree_text{'space_in_node'} = '*document_root C5
     |EXTRA
     |node_content:A{0|0}
     |normalized:{Chap-first-here}
-     {Chap    first here}
+     {normal_text:Chap    first here}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C6 l6
     {menu_entry_leading_text:* }
     *menu_entry_name C1
-     {Test    title   }
+     {normal_text:Test    title   }
     {menu_entry_separator::}
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{Test-title}
-     {Test   title}
+     {normal_text:Test   title}
     {menu_entry_separator:.}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 l7
     {menu_entry_leading_text:*   }
     *menu_entry_node C2
     |EXTRA
     |node_content:A{0|1}
     |normalized:{Last-with-spaces}
-     {Last with spaces}
+     {normal_text:Last with spaces}
      {space_at_end_menu_node:    }
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l8
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C2 l10 {Chap first  here}
@@ -81,7 +81,7 @@ $result_tree_text{'space_in_node'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument:  }
-    {Chap first  here}
+    {normal_text:Chap first  here}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C2 l12 {Test               title}
@@ -92,7 +92,7 @@ $result_tree_text{'space_in_node'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Test               title}
+    {normal_text:Test               title}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l14 {Last with spaces}
@@ -103,7 +103,7 @@ $result_tree_text{'space_in_node'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument:   }
-    {Last with spaces}
+    {normal_text:Last with spaces}
     {spaces_after_argument: \\n}
 ';
 

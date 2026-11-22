@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'include_with_setfilename'} = '*document_root C1
  *before_node_section C2
   *preamble_before_setfilename C3
-   {}
+   {normal_text:}
    >SOURCEMARKS
    >include<start;1>
     >*@include C1 l1
@@ -19,7 +19,7 @@ $result_tree_text{'include_with_setfilename'} = '*document_root C1
     >|text_arg:{included_file_with_setfilename.texi}
      >*line_arg C3
       >{spaces_before_argument: }
-      >{included_file_with_setfilename.texi}
+      >{normal_text:included_file_with_setfilename.texi}
       >{spaces_after_argument: \\n}
    >setfilename<1>
     >*@setfilename C1 included_file_with_setfilename.texi:l1
@@ -27,11 +27,11 @@ $result_tree_text{'include_with_setfilename'} = '*document_root C1
     >|text_arg:{included_file.info}
      >*line_arg C3
       >{spaces_before_argument: }
-      >{included_file.info}
+      >{normal_text:included_file.info}
       >{spaces_after_argument:\\n}
    {empty_line:\\n}
    *paragraph C1
-    {In included file.\\n}
+    {normal_text:In included file.\\n}
     >SOURCEMARKS
     >include<end;1><p:18>
   *preamble_before_content C1
@@ -40,7 +40,7 @@ $result_tree_text{'include_with_setfilename'} = '*document_root C1
    |text_arg:{include_with_setfilename.info}
     *line_arg C3
      {spaces_before_argument: }
-     {include_with_setfilename.info}
+     {normal_text:include_with_setfilename.info}
      {spaces_after_argument:\\n}
 ';
 

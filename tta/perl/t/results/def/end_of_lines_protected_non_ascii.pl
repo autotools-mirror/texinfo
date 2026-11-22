@@ -23,35 +23,35 @@ $result_tree_text{'end_of_lines_protected_non_ascii'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {catégorie}
+       {normal_text:catégorie}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {deffn_nùme}
+       {normal_text:deffn_nùme}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {àrguments}
+       {normal_text:àrguments}
      {spaces:    }
      >SOURCEMARKS
      >defline_continuation<1><p:1>
      *def_arg C1
       *def_line_arg C1
-       {more}
+       {normal_text:more}
      {spaces: }
      *def_arg C1
       *bracketed_arg C1 end_of_lines_protected_non_ascii.texi:l3
-       {àrgs   with end ôf line within}
+       {normal_text:àrgs   with end ôf line within}
        >SOURCEMARKS
        >defline_continuation<2><p:5>
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {with}
+       {normal_text:with}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {3}
+       {normal_text:3}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
@@ -65,17 +65,17 @@ $result_tree_text{'end_of_lines_protected_non_ascii'} = '*document_root C1
      {spaces: }
      *def_arg C1
       *bracketed_arg C1 end_of_lines_protected_non_ascii.texi:l5
-       {one last arg}
+       {normal_text:one last arg}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {deffn\\n}
+     {normal_text:deffn\\n}
    *@end C1 end_of_lines_protected_non_ascii.texi:l7
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
-     {deffn}
+     {normal_text:deffn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
 ';

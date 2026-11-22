@@ -26,7 +26,7 @@ $result_tree_text{'inter_item_commands_in_table_in_example'} = '*document_root C
       *@item C1 l3
        *line_arg C3
         {spaces_before_argument: }
-        {a--b}
+        {normal_text:a--b}
         {spaces_after_argument:\\n}
       *inter_item C1
        *preformatted C3
@@ -35,7 +35,7 @@ $result_tree_text{'inter_item_commands_in_table_in_example'} = '*document_root C
         |index_entry:I{cp,1}
          *line_arg C3
           {spaces_before_argument: }
-          {index entry between item and itemx}
+          {normal_text:index entry between item and itemx}
           {spaces_after_argument:\\n}
         *@c C1
          *line_arg C3
@@ -50,7 +50,7 @@ $result_tree_text{'inter_item_commands_in_table_in_example'} = '*document_root C
       *@itemx C1 l7
        *line_arg C3
         {spaces_before_argument: }
-        {b}
+        {normal_text:b}
         {spaces_after_argument:\\n}
       *inter_item C1
        *preformatted C1
@@ -58,31 +58,31 @@ $result_tree_text{'inter_item_commands_in_table_in_example'} = '*document_root C
       *@itemx C1 l9
        *line_arg C3
         {spaces_before_argument: }
-        {c}
+        {normal_text:c}
         {spaces_after_argument:\\n}
      *table_definition C1
       *preformatted C1
-       {l--ine\\n}
+       {normal_text:l--ine\\n}
     *table_entry C1
      *table_term C1
       *@item C1 l11
        *line_arg C3
         {spaces_before_argument: }
-        {d}
+        {normal_text:d}
         {spaces_after_argument:\\n}
     *@end C1 l12
     |EXTRA
     |text_arg:{table}
      *line_arg C3
       {spaces_before_argument: }
-      {table}
+      {normal_text:table}
       {spaces_after_argument:\\n}
    *@end C1 l13
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
 ';
 

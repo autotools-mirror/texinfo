@@ -19,14 +19,14 @@ $result_tree_text{'section_before_top'} = '*document_root C5
   *arguments_line C4
    *line_arg C2
     {spaces_before_argument: }
-    {section node}
+    {normal_text:section node}
    *line_arg
    *line_arg
    *line_arg C2
    |EXTRA
    |node_content:A{0|0}
    |normalized:{Top}
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@section C2 l2 {section}
  |EXTRA
@@ -36,7 +36,7 @@ $result_tree_text{'section_before_top'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {section}
+    {normal_text:section}
     {spaces_after_argument: \\n}
   {empty_line:\\n}
  *@node C1 l4 {Top}
@@ -47,7 +47,7 @@ $result_tree_text{'section_before_top'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C3 l5 {top}
  |EXTRA
@@ -56,7 +56,7 @@ $result_tree_text{'section_before_top'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C3 l7
@@ -69,17 +69,17 @@ $result_tree_text{'section_before_top'} = '*document_root C5
     |EXTRA
     |node_content:A{0|0}
     |normalized:{section-node}
-     {section node}
+     {normal_text:section node}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l9
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
 ';
 

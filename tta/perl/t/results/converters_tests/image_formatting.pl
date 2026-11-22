@@ -19,7 +19,7 @@ $result_tree_text{'image_formatting'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l2 {top}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'image_formatting'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l4 {chap}
@@ -39,7 +39,7 @@ $result_tree_text{'image_formatting'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
  *@chapter C10 l5 {Chapter}
  |EXTRA
@@ -49,212 +49,212 @@ $result_tree_text{'image_formatting'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chapter}
+    {normal_text:Chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C40
    *@code C1 l7
     *brace_container C5
      *@@
-     {image}
+     {normal_text:image}
      *@{
-     {f--ile}
+     {normal_text:f--ile}
      *@}
-   { }
+   {normal_text: }
    *@image C1 l7
    |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C1
-     {f--ile}
-   {\\n}
+     {normal_text:f--ile}
+   {normal_text:\\n}
    *@code C1 l8
     *brace_container C5
      *@@
-     {image}
+     {normal_text:image}
      *@{
-     {f--ile,l--i}
+     {normal_text:f--ile,l--i}
      *@}
-   { }
+   {normal_text: }
    *@image C2 l8
    |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C1
-     {f--ile}
+     {normal_text:f--ile}
     *brace_arg C1
-     {l--i}
-   {\\n}
+     {normal_text:l--i}
+   {normal_text:\\n}
    *@code C1 l9
     *brace_container C5
      *@@
-     {image}
+     {normal_text:image}
      *@{
-     {f--ile,,l--e}
+     {normal_text:f--ile,,l--e}
      *@}
-   { }
+   {normal_text: }
    *@image C3 l9
    |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C1
-     {f--ile}
+     {normal_text:f--ile}
     *brace_arg
     *brace_arg C1
-     {l--e}
-   {\\n}
+     {normal_text:l--e}
+   {normal_text:\\n}
    *@code C1 l10
     *brace_container C5
      *@@
-     {image}
+     {normal_text:image}
      *@{
-     {f--ile,,,alt}
+     {normal_text:f--ile,,,alt}
      *@}
-   { }
+   {normal_text: }
    *@image C4 l10
    |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C1
-     {f--ile}
+     {normal_text:f--ile}
     *brace_arg
     *brace_arg
     *brace_arg C1
-     {alt}
-   {\\n}
+     {normal_text:alt}
+   {normal_text:\\n}
    *@code C1 l11
     *brace_container C5
      *@@
-     {image}
+     {normal_text:image}
      *@{
-     {f--ile,,,,e-d-xt}
+     {normal_text:f--ile,,,,e-d-xt}
      *@}
-   { }
+   {normal_text: }
    *@image C5 l11
    |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C1
-     {f--ile}
+     {normal_text:f--ile}
     *brace_arg
     *brace_arg
     *brace_arg
     *brace_arg C1
-     {e--xt}
-   {\\n}
+     {normal_text:e--xt}
+   {normal_text:\\n}
    *@code C1 l12
     *brace_container C5
      *@@
-     {image}
+     {normal_text:image}
      *@{
-     {f--ile,aze,az,alt,e--xt}
+     {normal_text:f--ile,aze,az,alt,e--xt}
      *@}
-   { }
+   {normal_text: }
    *@image C5 l12
    |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C1
-     {f--ile}
+     {normal_text:f--ile}
     *brace_arg C1
-     {aze}
+     {normal_text:aze}
     *brace_arg C1
-     {az}
+     {normal_text:az}
     *brace_arg C1
-     {alt}
+     {normal_text:alt}
     *brace_arg C1
-     {e--xt}
-   {\\n}
+     {normal_text:e--xt}
+   {normal_text:\\n}
    *@code C1 l13
     *brace_container C4
      *@@
-     {image}
+     {normal_text:image}
      *@{
-     {f--ile,aze,az,alt,}
-   { }
+     {normal_text:f--ile,aze,az,alt,}
+   {normal_text: }
    *@image C5 l13
    |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C1
-     {f--ile}
+     {normal_text:f--ile}
     *brace_arg C1
-     {aze}
+     {normal_text:aze}
     *brace_arg C1
-     {az}
+     {normal_text:az}
     *brace_arg C1
-     {alt}
+     {normal_text:alt}
     *brace_arg
-   {\\n}
+   {normal_text:\\n}
    *@code C1 l14
     *brace_container C5
      *@@
-     {image}
+     {normal_text:image}
      *@{
-     {f-ile,aze,,a--lt}
+     {normal_text:f-ile,aze,,a--lt}
      *@}
-   { }
+   {normal_text: }
    *@image C4 l14
    |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C1
-     {f-ile}
+     {normal_text:f-ile}
     *brace_arg C1
-     {aze}
+     {normal_text:aze}
     *brace_arg
     *brace_arg C1
-     {a--lt}
-   {\\n}
+     {normal_text:a--lt}
+   {normal_text:\\n}
    *@code C1 l15
     *brace_container C20
      *@@
-     {image}
+     {normal_text:image}
      *@{
      *@@
-     {file}
+     {normal_text:file}
      *@{
-     {f--ile}
+     {normal_text:f--ile}
      *@}
      *@@
      *@@
      *@@
-     {.,aze,az,alt,}
+     {normal_text:.,aze,az,alt,}
      *@@
-     {file}
+     {normal_text:file}
      *@{
-     {file ext}
+     {normal_text:file ext}
      *@}
-     { e--xt}
+     {normal_text: e--xt}
      *@@
      *@}
-   { }
+   {normal_text: }
    *@image C5 l15
    |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C3
      *@file C1 l15
       *brace_container C1
-       {f--ile}
+       {normal_text:f--ile}
      *@@
      *@.
     *brace_arg C1
-     {aze}
+     {normal_text:aze}
     *brace_arg C1
-     {az}
+     {normal_text:az}
     *brace_arg C1
-     {alt}
+     {normal_text:alt}
     *brace_arg C3
      *@file C1 l15
       *brace_container C1
-       {file ext}
-     { e--xt}
+       {normal_text:file ext}
+     {normal_text: e--xt}
      *@}
-   {\\n}
+   {normal_text:\\n}
    *@image C1 l16
    |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C1
-     {image}
-   { }
+     {normal_text:image}
+   {normal_text: }
    *@image C1 l16
    |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C1
-     {image}
-   {\\n}
+     {normal_text:image}
+   {normal_text:\\n}
   {empty_line:\\n}
   *@example C3 l18
    *arguments_line C1
@@ -264,216 +264,216 @@ $result_tree_text{'image_formatting'} = '*document_root C5
     *@code C1 l19
      *brace_container C5
       *@@
-      {image}
+      {normal_text:image}
       *@{
-      {f--ile}
+      {normal_text:f--ile}
       *@}
-    { }
+    {normal_text: }
     *@image C1 l19
     |EXTRA
     |input_encoding_name:{utf-8}
      *brace_arg C1
-      {f--ile}
-    {\\n}
+      {normal_text:f--ile}
+    {normal_text:\\n}
     *@code C1 l20
      *brace_container C5
       *@@
-      {image}
+      {normal_text:image}
       *@{
-      {f--ile,l--i}
+      {normal_text:f--ile,l--i}
       *@}
-    { }
+    {normal_text: }
     *@image C2 l20
     |EXTRA
     |input_encoding_name:{utf-8}
      *brace_arg C1
-      {f--ile}
+      {normal_text:f--ile}
      *brace_arg C1
-      {l--i}
-    {\\n}
+      {normal_text:l--i}
+    {normal_text:\\n}
     *@code C1 l21
      *brace_container C5
       *@@
-      {image}
+      {normal_text:image}
       *@{
-      {f--ile,,l--e}
+      {normal_text:f--ile,,l--e}
       *@}
-    { }
+    {normal_text: }
     *@image C3 l21
     |EXTRA
     |input_encoding_name:{utf-8}
      *brace_arg C1
-      {f--ile}
+      {normal_text:f--ile}
      *brace_arg
      *brace_arg C1
-      {l--e}
-    {\\n}
+      {normal_text:l--e}
+    {normal_text:\\n}
     *@code C1 l22
      *brace_container C5
       *@@
-      {image}
+      {normal_text:image}
       *@{
-      {f--ile,,,alt}
+      {normal_text:f--ile,,,alt}
       *@}
-    { }
+    {normal_text: }
     *@image C4 l22
     |EXTRA
     |input_encoding_name:{utf-8}
      *brace_arg C1
-      {f--ile}
+      {normal_text:f--ile}
      *brace_arg
      *brace_arg
      *brace_arg C1
-      {alt}
-    {\\n}
+      {normal_text:alt}
+    {normal_text:\\n}
     *@code C1 l23
      *brace_container C5
       *@@
-      {image}
+      {normal_text:image}
       *@{
-      {f--ile,,,,e-d-xt}
+      {normal_text:f--ile,,,,e-d-xt}
       *@}
-    { }
+    {normal_text: }
     *@image C5 l23
     |EXTRA
     |input_encoding_name:{utf-8}
      *brace_arg C1
-      {f--ile}
+      {normal_text:f--ile}
      *brace_arg
      *brace_arg
      *brace_arg
      *brace_arg C1
-      {e--xt}
-    {\\n}
+      {normal_text:e--xt}
+    {normal_text:\\n}
     *@code C1 l24
      *brace_container C5
       *@@
-      {image}
+      {normal_text:image}
       *@{
-      {f--ile,aze,az,alt,e--xt}
+      {normal_text:f--ile,aze,az,alt,e--xt}
       *@}
-    { }
+    {normal_text: }
     *@image C5 l24
     |EXTRA
     |input_encoding_name:{utf-8}
      *brace_arg C1
-      {f--ile}
+      {normal_text:f--ile}
      *brace_arg C1
-      {aze}
+      {normal_text:aze}
      *brace_arg C1
-      {az}
+      {normal_text:az}
      *brace_arg C1
-      {alt}
+      {normal_text:alt}
      *brace_arg C1
-      {e--xt}
-    {\\n}
+      {normal_text:e--xt}
+    {normal_text:\\n}
     *@code C1 l25
      *brace_container C5
       *@@
-      {image}
+      {normal_text:image}
       *@{
-      {f-ile,aze,,a--lt}
+      {normal_text:f-ile,aze,,a--lt}
       *@}
-    { }
+    {normal_text: }
     *@image C4 l25
     |EXTRA
     |input_encoding_name:{utf-8}
      *brace_arg C1
-      {f-ile}
+      {normal_text:f-ile}
      *brace_arg C1
-      {aze}
+      {normal_text:aze}
      *brace_arg
      *brace_arg C1
-      {a--lt}
-    {\\n}
+      {normal_text:a--lt}
+    {normal_text:\\n}
     *@code C1 l26
      *brace_container C20
       *@@
-      {image}
+      {normal_text:image}
       *@{
       *@@
-      {file}
+      {normal_text:file}
       *@{
-      {f--ile}
+      {normal_text:f--ile}
       *@}
       *@@
       *@@
       *@@
-      {.,aze,az,alt,}
+      {normal_text:.,aze,az,alt,}
       *@@
-      {file}
+      {normal_text:file}
       *@{
-      {file ext}
+      {normal_text:file ext}
       *@}
-      { e--xt}
+      {normal_text: e--xt}
       *@@
       *@}
-    { }
+    {normal_text: }
     *@image C5 l26
     |EXTRA
     |input_encoding_name:{utf-8}
      *brace_arg C3
       *@file C1 l26
        *brace_container C1
-        {f--ile}
+        {normal_text:f--ile}
       *@@
       *@.
      *brace_arg C1
-      {aze}
+      {normal_text:aze}
      *brace_arg C1
-      {az}
+      {normal_text:az}
      *brace_arg C1
-      {alt}
+      {normal_text:alt}
      *brace_arg C3
       *@file C1 l26
        *brace_container C1
-        {file ext}
-      { e--xt}
+        {normal_text:file ext}
+      {normal_text: e--xt}
       *@}
-    {\\n}
+    {normal_text:\\n}
     *@image C1 l27
     |EXTRA
     |input_encoding_name:{utf-8}
      *brace_arg C1
-      {image}
-    { }
+      {normal_text:image}
+    {normal_text: }
     *@image C1 l27
     |EXTRA
     |input_encoding_name:{utf-8}
      *brace_arg C1
-      {image}
-    {\\n}
+      {normal_text:image}
+    {normal_text:\\n}
    *@end C1 l28
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@image C4 l30
   |EXTRA
   |input_encoding_name:{utf-8}
    *brace_arg C1
-    {f--ile}
+    {normal_text:f--ile}
    *brace_arg
    *brace_arg
    *brace_arg C1
-    {a very long alt argument that could span more than one line who knows}
-  {\\n}
+    {normal_text:a very long alt argument that could span more than one line who knows}
+  {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C3
-   {in para\\n}
+   {normal_text:in para\\n}
    *@image C4 l33
    |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C1
-     {f--ile}
+     {normal_text:f--ile}
     *brace_arg
     *brace_arg
     *brace_arg C1
-     {a very long alt argument that could span more than one line who knows}
-   {.\\n}
+     {normal_text:a very long alt argument that could span more than one line who knows}
+   {normal_text:.\\n}
 ';
 
 

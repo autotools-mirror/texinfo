@@ -22,7 +22,7 @@ $result_tree_text{'paragraph_and_macro'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@macro C3 l4
@@ -37,7 +37,7 @@ $result_tree_text{'paragraph_and_macro'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@macro C3 l8
@@ -52,7 +52,7 @@ $result_tree_text{'paragraph_and_macro'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    {empty_line:\\n}
@@ -76,7 +76,7 @@ $result_tree_text{'paragraph_and_macro'} = '*document_root C1
      >*brace_arg
    >macro_expansion<end;3>
   *paragraph C1
-   {text after empty.\\n}
+   {normal_text:text after empty.\\n}
   {empty_line:\\n}
   {empty_line:   \\n}
   >SOURCEMARKS
@@ -99,7 +99,7 @@ $result_tree_text{'paragraph_and_macro'} = '*document_root C1
     >*brace_arg
   >macro_expansion<end;6><p:3>
   *paragraph C1
-   {text after space.\\n}
+   {normal_text:text after space.\\n}
 ';
 
 

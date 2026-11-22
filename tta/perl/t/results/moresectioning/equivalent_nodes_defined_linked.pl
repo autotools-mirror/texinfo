@@ -19,7 +19,7 @@ $result_tree_text{'equivalent_nodes_defined_linked'} = '*document_root C3
   *arguments_line C2
    *line_arg C2
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
    *line_arg C3
    |EXTRA
    |node_content:A{1|1}
@@ -27,7 +27,7 @@ $result_tree_text{'equivalent_nodes_defined_linked'} = '*document_root C3
     {spaces_before_argument: }
     *@asis C1 l1
      *brace_container C1
-      {chap}
+      {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C3 l3
@@ -42,17 +42,17 @@ $result_tree_text{'equivalent_nodes_defined_linked'} = '*document_root C3
     |normalized:{chap}
      *@strong C1 l4
       *brace_container C1
-       {chap}
+       {normal_text:chap}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l5
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C9 l7 {chap}
@@ -63,7 +63,7 @@ $result_tree_text{'equivalent_nodes_defined_linked'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@float C3 l9
@@ -75,21 +75,21 @@ $result_tree_text{'equivalent_nodes_defined_linked'} = '*document_root C3
    *arguments_line C2
     *block_line_arg C2
      {spaces_before_argument: }
-     {Figure}
+     {normal_text:Figure}
     *block_line_arg C3
      {spaces_before_argument: }
      *@samp C1 l9
       *brace_container C1
-       {chap}
+       {normal_text:chap}
      {spaces_after_argument:\\n}
    *paragraph C1
-    {A figure\\n}
+    {normal_text:A figure\\n}
    *@end C1 l11
    |EXTRA
    |text_arg:{float}
     *line_arg C3
      {spaces_before_argument: }
-     {float}
+     {normal_text:float}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@listoffloats C1 l13
@@ -98,27 +98,27 @@ $result_tree_text{'equivalent_nodes_defined_linked'} = '*document_root C3
   |global_command_number:{1}
    *line_arg C3
     {spaces_before_argument: }
-    {Figure}
+    {normal_text:Figure}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C3
-   {Ref to node }
+   {normal_text:Ref to node }
    *@ref C1 l15
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{chap}
-     {chap}
-   {.\\n}
+     {normal_text:chap}
+   {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C9
-   {Ref to }
+   {normal_text:Ref to }
    *@@
-   {samp}
+   {normal_text:samp}
    *@{
-   {chap}
+   {normal_text:chap}
    *@}
-   { }
+   {normal_text: }
    *@ref C1 l17
     *brace_arg C1
     |EXTRA
@@ -126,8 +126,8 @@ $result_tree_text{'equivalent_nodes_defined_linked'} = '*document_root C3
     |normalized:{chap}
      *@samp C1 l17
       *brace_container C1
-       {chap}
-   {.\\n}
+       {normal_text:chap}
+   {normal_text:.\\n}
 ';
 
 

@@ -23,7 +23,7 @@ $result_tree_text{'macro_replaced_by_definfoenclose'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@definfoenclose C1 l5
@@ -31,7 +31,7 @@ $result_tree_text{'macro_replaced_by_definfoenclose'} = '*document_root C1
    |misc_args:A{phoo|;|:}
     *line_arg C3
      {spaces_before_argument: }
-     {phoo,;,:}
+     {normal_text:phoo,;,:}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C2
@@ -40,8 +40,8 @@ $result_tree_text{'macro_replaced_by_definfoenclose'} = '*document_root C1
    |begin:{;}
    |end:{:}
     *brace_container C1
-     {aa}
-   {\\n}
+     {normal_text:aa}
+   {normal_text:\\n}
 ';
 
 

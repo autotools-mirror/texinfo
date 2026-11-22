@@ -24,33 +24,33 @@ $result_tree_text{'tab_in_table_in_example'} = '*document_root C1
     *before_item C1
      *preformatted C2
       {ignorable_spaces_after_command: }
-      {in tab\\n}
+      {normal_text:in tab\\n}
     *table_entry C2
      *table_term C1
       *@item C1 l4
        *line_arg C3
         {spaces_before_argument: }
-        {table item}
+        {normal_text:table item}
         {spaces_after_argument:\\n}
      *table_definition C2
       *preformatted C1
-       {T\\n}
+       {normal_text:T\\n}
       *preformatted C2
        {ignorable_spaces_after_command: }
-       {other tab\\n}
+       {normal_text:other tab\\n}
     *@end C1 l7
     |EXTRA
     |text_arg:{table}
      *line_arg C3
       {spaces_before_argument: }
-      {table}
+      {normal_text:table}
       {spaces_after_argument:\\n}
    *@end C1 l8
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
 ';
 

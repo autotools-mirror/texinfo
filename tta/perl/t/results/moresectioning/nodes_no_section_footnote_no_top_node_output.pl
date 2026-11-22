@@ -19,7 +19,7 @@ $result_tree_text{'nodes_no_section_footnote_no_top_node_output'} = '*document_r
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@node C3 l2 {chap}
  |EXTRA
@@ -29,18 +29,18 @@ $result_tree_text{'nodes_no_section_footnote_no_top_node_output'} = '*document_r
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C3
-   {a}
+   {normal_text:a}
    *@footnote C1 l4
    |EXTRA
    |global_command_number:{1}
     *brace_command_context C1
      *paragraph C1
-      {my feet}
-   {\\n}
+      {normal_text:my feet}
+   {normal_text:\\n}
 ';
 
 

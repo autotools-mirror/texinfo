@@ -16,18 +16,18 @@ $result_tree_text{'empty_line_in_example_end'} = '*document_root C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C2
-    {in example\\n}
+    {normal_text:in example\\n}
     {empty_line:\\n}
    *@end C1 l4
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {After line\\n}
+   {normal_text:After line\\n}
 ';
 
 

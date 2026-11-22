@@ -23,12 +23,12 @@ $result_tree_text{'indent_with_text_after_without_space'} = '*document_root C1
   *paragraph C1
   |EXTRA
   |indent:{1}
-   {a b\\n}
+   {normal_text:a b\\n}
    >SOURCEMARKS
    >value_expansion<start;1>{a}
     >*@value C1
      >*brace_container C1
-      >{myvalue}
+      >{normal_text:myvalue}
    >value_expansion<end;1><p:1>
 ';
 

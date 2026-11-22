@@ -16,7 +16,7 @@ $result_tree_text{'redefined_need'} = '*document_root C1
   |misc_args:A{0.1}
    *line_arg C3
     {spaces_before_argument: }
-    {0.1}
+    {normal_text:0.1}
     {spaces_after_argument:\\n}
 ';
 

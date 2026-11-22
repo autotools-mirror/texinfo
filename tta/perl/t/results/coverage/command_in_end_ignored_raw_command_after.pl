@@ -22,10 +22,10 @@ $result_tree_text{'command_in_end_ignored_raw_command_after'} = '*document_root 
     |text_arg:{html}
      *line_arg C4
       {spaces_before_argument: }
-      {html}
+      {normal_text:html}
       *@asis C1 l3
        *brace_container C1
-        {asis}
+        {normal_text:asis}
       {spaces_after_argument:\\n}
 ';
 

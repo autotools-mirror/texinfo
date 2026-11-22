@@ -18,10 +18,10 @@ $result_tree_text{'multitable_figure_space'} = '*document_root C1
     *block_line_arg C5
      {spaces_before_argument: }
      *bracketed_arg C1 l1
-      {999999999}
-     { }
+      {normal_text:999999999}
+     {normal_text: }
      *bracketed_arg C1 l1
-      {xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}
+      {normal_text:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}
      {spaces_after_argument:\\n}
    *multitable_body C3
     *row C2
@@ -32,13 +32,13 @@ $result_tree_text{'multitable_figure_space'} = '*document_root C1
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {   55 }
+       {normal_text:   55 }
      *@tab C2 l2
      |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {explanation\\n}
+       {normal_text:explanation\\n}
     *row C2
     |EXTRA
     |row_number:{2}
@@ -47,13 +47,13 @@ $result_tree_text{'multitable_figure_space'} = '*document_root C1
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {  535 }
+       {normal_text:  535 }
      *@tab C2 l3
      |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {explanation\\n}
+       {normal_text:explanation\\n}
     *row C2
     |EXTRA
     |row_number:{3}
@@ -62,19 +62,19 @@ $result_tree_text{'multitable_figure_space'} = '*document_root C1
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {49303 }
+       {normal_text:49303 }
      *@tab C2 l4
      |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {explanation\\n}
+       {normal_text:explanation\\n}
    *@end C1 l5
    |EXTRA
    |text_arg:{multitable}
     *line_arg C3
      {spaces_before_argument: }
-     {multitable}
+     {normal_text:multitable}
      {spaces_after_argument:\\n}
 ';
 

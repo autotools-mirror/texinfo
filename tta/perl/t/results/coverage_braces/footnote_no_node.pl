@@ -20,18 +20,18 @@ $result_tree_text{'footnote_no_node'} = '*document_root C2
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C3
-   {F}
+   {normal_text:F}
    *@footnote C1 l3
    |EXTRA
    |global_command_number:{1}
     *brace_command_context C1
      *paragraph C1
-      {In footnote}
-   {.\\n}
+      {normal_text:In footnote}
+   {normal_text:.\\n}
 ';
 
 

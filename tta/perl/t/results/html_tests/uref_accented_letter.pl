@@ -14,14 +14,14 @@ $result_tree_text{'uref_accented_letter'} = '*document_root C1
   *paragraph C2
    *@uref C1 l1
     *brace_arg C3
-     {http://example.com/acc_}
+     {normal_text:http://example.com/acc_}
      *@" C1 l1
       *following_arg C1
-       {a}
+       {normal_text:a}
      *@ogonek C1 l1
       *brace_container C1
-       {a}
-   {\\n}
+       {normal_text:a}
+   {normal_text:\\n}
 ';
 
 

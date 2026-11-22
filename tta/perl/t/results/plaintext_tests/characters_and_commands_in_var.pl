@@ -14,69 +14,69 @@ $result_tree_text{'characters_and_commands_in_var'} = '*document_root C1
   *paragraph C8
    *@var C1 l1
     *brace_container C1
-     {aaa}
-   {. }
+     {normal_text:aaa}
+   {normal_text:. }
    *@var C1 l1
     *brace_container C1
-     {dlksfjf ) }
-   {. }
+     {normal_text:dlksfjf ) }
+   {normal_text:. }
    *@var C1 l1
     *brace_container C1
-     {(fdfdsfsd}
-   {. }
+     {normal_text:(fdfdsfsd}
+   {normal_text:. }
    *@var C1 l1
     *brace_container C1
-     {sqdq,qdsdsq}
-   {.\\n}
+     {normal_text:sqdq,qdsdsq}
+   {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C2
    *@var C1 l3
     *brace_container C3
-     {somethingf  }
+     {normal_text:somethingf  }
      *@c C1
       *line_arg C3
        {spaces_before_argument: }
        {rawline_text:]}
        {spaces_after_argument:\\n}
-     {vvar}
-   {.\\n}
+     {normal_text:vvar}
+   {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C2
    *@var C1 l6
     *brace_container C8
-     {AA}
+     {normal_text:AA}
      *@, C1 l6
       *following_arg C1
-       {c}
-     { }
+       {normal_text:c}
+     {normal_text: }
      *@u C1 l6
       *brace_container C1
-       {r}
-     { }
+       {normal_text:r}
+     {normal_text: }
      *@` C1 l6
       *following_arg C1
-       {e}
-     { }
+       {normal_text:e}
+     {normal_text: }
      *@aa C1 l6
       *brace_container
-   {.\\n}
+   {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C3
-   {AAA}
+   {normal_text:AAA}
    *@footnote C1 l8
    |EXTRA
    |global_command_number:{1}
     *brace_command_context C1
      *paragraph C6
-      {jdhfmqsdf\\n}
-      {dsf\\n}
-      {ds }
+      {normal_text:jdhfmqsdf\\n}
+      {normal_text:dsf\\n}
+      {normal_text:ds }
       *@var C1 l10
        *brace_container C1
-        {rrrr , azeeaz}
-      {\\n}
-      {end footnote}
-   {\\n}
+        {normal_text:rrrr , azeeaz}
+      {normal_text:\\n}
+      {normal_text:end footnote}
+   {normal_text:\\n}
 ';
 
 

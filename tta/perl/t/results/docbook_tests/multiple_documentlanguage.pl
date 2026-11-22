@@ -17,7 +17,7 @@ $result_tree_text{'multiple_documentlanguage'} = '*document_root C11
    |text_arg:{ja}
     *line_arg C3
      {spaces_before_argument: }
-     {ja}
+     {normal_text:ja}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *@node C1 l3 {Top}
@@ -28,7 +28,7 @@ $result_tree_text{'multiple_documentlanguage'} = '*document_root C11
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l4 {top}
  |EXTRA
@@ -37,7 +37,7 @@ $result_tree_text{'multiple_documentlanguage'} = '*document_root C11
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l6 {chap}
@@ -48,7 +48,7 @@ $result_tree_text{'multiple_documentlanguage'} = '*document_root C11
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
  *@chapter C3 l7 {Chap no new language}
  |EXTRA
@@ -58,7 +58,7 @@ $result_tree_text{'multiple_documentlanguage'} = '*document_root C11
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chap no new language}
+    {normal_text:Chap no new language}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@documentlanguage C1 l9
@@ -67,7 +67,7 @@ $result_tree_text{'multiple_documentlanguage'} = '*document_root C11
   |text_arg:{fr}
    *line_arg C3
     {spaces_before_argument: }
-    {fr}
+    {normal_text:fr}
     {spaces_after_argument:\\n}
  *@node C1 l10 {chapter fr}
  |EXTRA
@@ -77,7 +77,7 @@ $result_tree_text{'multiple_documentlanguage'} = '*document_root C11
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter fr}
+    {normal_text:chapter fr}
     {spaces_after_argument:\\n}
  *@chapter C3 l11 {chapter fr}
  |EXTRA
@@ -87,7 +87,7 @@ $result_tree_text{'multiple_documentlanguage'} = '*document_root C11
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter fr}
+    {normal_text:chapter fr}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@documentlanguage C1 l13
@@ -96,7 +96,7 @@ $result_tree_text{'multiple_documentlanguage'} = '*document_root C11
   |text_arg:{pt}
    *line_arg C3
     {spaces_before_argument: }
-    {pt}
+    {normal_text:pt}
     {spaces_after_argument:\\n}
  *@node C1 l14 {subnode pt}
  |EXTRA
@@ -106,7 +106,7 @@ $result_tree_text{'multiple_documentlanguage'} = '*document_root C11
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {subnode pt}
+    {normal_text:subnode pt}
     {spaces_after_argument:\\n}
  *@section C3 l15 {section pt}
  |EXTRA
@@ -116,7 +116,7 @@ $result_tree_text{'multiple_documentlanguage'} = '*document_root C11
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {section pt}
+    {normal_text:section pt}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@documentlanguage C1 l17
@@ -125,7 +125,7 @@ $result_tree_text{'multiple_documentlanguage'} = '*document_root C11
   |text_arg:{fr}
    *line_arg C3
     {spaces_before_argument: }
-    {fr}
+    {normal_text:fr}
     {spaces_after_argument:\\n}
  *@node C1 l18 {subnode fr}
  |EXTRA
@@ -135,7 +135,7 @@ $result_tree_text{'multiple_documentlanguage'} = '*document_root C11
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {subnode fr}
+    {normal_text:subnode fr}
     {spaces_after_argument:\\n}
  *@section C2 l19 {section fr}
  |EXTRA
@@ -145,7 +145,7 @@ $result_tree_text{'multiple_documentlanguage'} = '*document_root C11
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {section fr}
+    {normal_text:section fr}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
 ';

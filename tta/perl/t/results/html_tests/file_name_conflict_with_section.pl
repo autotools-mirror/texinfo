@@ -19,7 +19,7 @@ $result_tree_text{'file_name_conflict_with_section'} = '*document_root C4
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C4 l2 {top}
  |EXTRA
@@ -28,14 +28,14 @@ $result_tree_text{'file_name_conflict_with_section'} = '*document_root C4
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   *@anchor C1 l3
   |EXTRA
   |identifier:{Chap}
   |is_target:{1}
    *brace_arg C1
-    {Chap}
+    {normal_text:Chap}
   {spaces_after_close_brace:\\n}
   {empty_line:\\n}
  *@chapter C1 l5 {Chap}
@@ -46,7 +46,7 @@ $result_tree_text{'file_name_conflict_with_section'} = '*document_root C4
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chap}
+    {normal_text:Chap}
     {spaces_after_argument:\\n}
 ';
 

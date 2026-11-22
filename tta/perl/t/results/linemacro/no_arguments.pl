@@ -23,11 +23,11 @@ $result_tree_text{'no_arguments'} = '*document_root C1
     |text_arg:{linemacro}
      *line_arg C3
       {spaces_before_argument: }
-      {linemacro}
+      {normal_text:linemacro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C1
-   {Body.\\n}
+   {normal_text:Body.\\n}
    >SOURCEMARKS
    >linemacro_expansion<start;1>
     >*linemacro_call@noarg C1
@@ -36,7 +36,7 @@ $result_tree_text{'no_arguments'} = '*document_root C1
    >linemacro_expansion<end;1><p:5>
   {empty_line:\\n}
   *paragraph C1
-   {Body.\\n}
+   {normal_text:Body.\\n}
    >SOURCEMARKS
    >linemacro_expansion<start;2>
     >*linemacro_call@noarg C1
@@ -46,7 +46,7 @@ $result_tree_text{'no_arguments'} = '*document_root C1
    >linemacro_expansion<end;2><p:5>
   {empty_line:\\n}
   *paragraph C1
-   {Body.\\n}
+   {normal_text:Body.\\n}
    >SOURCEMARKS
    >linemacro_expansion<start;3>
     >*linemacro_call@noarg C1

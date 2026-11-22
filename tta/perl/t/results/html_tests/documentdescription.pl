@@ -16,45 +16,45 @@ $result_tree_text{'documentdescription'} = '*document_root C2
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *paragraph C15
-     {in }
+     {normal_text:in }
      *@code C1 l2
       *brace_container C1
-       {documentdescri---ption}
-     { --- }
+       {normal_text:documentdescri---ption}
+     {normal_text: --- }
      *@bullet C1 l2
       *brace_container
-     { }
+     {normal_text: }
      *@enddots C1 l2
       *brace_container
-     { }
+     {normal_text: }
      *@verb C1 l2
       *brace_container C3
        {verb_delimiter::}
        {raw:"verb}
        {verb_delimiter::}
-     { }
+     {normal_text: }
      *@aa C1 l2
       *brace_container
-     { }
+     {normal_text: }
      *@^ C1 l2
       *brace_container C1
        *@dotless C1 l2
         *brace_container C1
-         {i}
-     { }
+         {normal_text:i}
+     {normal_text: }
      *@email C1 l2
       *brace_arg C2
        *@code C1 l2
         *brace_container C1
-         {some}
-       {body}
-     {\\n}
+         {normal_text:some}
+       {normal_text:body}
+     {normal_text:\\n}
     *@end C1 l3
     |EXTRA
     |text_arg:{documentdescription}
      *line_arg C3
       {spaces_before_argument: }
-      {documentdescription}
+      {normal_text:documentdescription}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
  *@top C1 l5 {top}
@@ -66,7 +66,7 @@ $result_tree_text{'documentdescription'} = '*document_root C2
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
 ';
 

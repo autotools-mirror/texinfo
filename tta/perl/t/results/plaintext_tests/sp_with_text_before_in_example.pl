@@ -18,21 +18,21 @@ $result_tree_text{'sp_with_text_before_in_example'} = '*document_root C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C3
-    {sp}
+    {normal_text:sp}
     *@sp C1 l3
     |EXTRA
     |misc_args:A{4}
      *line_arg C3
       {spaces_before_argument: }
-      {4}
+      {normal_text:4}
       {spaces_after_argument:\\n}
-    {text\\n}
+    {normal_text:text\\n}
    *@end C1 l5
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
 ';
 

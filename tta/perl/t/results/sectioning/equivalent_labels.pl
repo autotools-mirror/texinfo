@@ -19,7 +19,7 @@ $result_tree_text{'equivalent_labels'} = '*document_root C2
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {first}
+    {normal_text:first}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@anchor C1 l3
@@ -29,9 +29,9 @@ $result_tree_text{'equivalent_labels'} = '*document_root C2
    *brace_arg C1
     *@samp C1 l3
      *brace_container C1
-      {anch}
+      {normal_text:anch}
   *paragraph C1
-   {.\\n}
+   {normal_text:.\\n}
   {empty_line:\\n}
   *@float C3 l5
   |EXTRA
@@ -43,19 +43,19 @@ $result_tree_text{'equivalent_labels'} = '*document_root C2
    *arguments_line C2
     *block_line_arg C2
      {spaces_before_argument: }
-     {truc}
+     {normal_text:truc}
     *block_line_arg C3
      {spaces_before_argument: }
-     {floa}
+     {normal_text:floa}
      {spaces_after_argument:\\n}
    *paragraph C1
-    {In float\\n}
+    {normal_text:In float\\n}
    *@end C1 l7
    |EXTRA
    |text_arg:{float}
     *line_arg C3
      {spaces_before_argument: }
-     {float}
+     {normal_text:float}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C4 l9
@@ -68,11 +68,11 @@ $result_tree_text{'equivalent_labels'} = '*document_root C2
     |EXTRA
     |node_content:A{0|0}
     |normalized:{anch}
-     {anch}
+     {normal_text:anch}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 l11
     {menu_entry_leading_text:* }
     *menu_entry_node C1
@@ -81,17 +81,17 @@ $result_tree_text{'equivalent_labels'} = '*document_root C2
     |normalized:{floa}
      *@code C1 l11
       *brace_container C1
-       {floa}
+       {normal_text:floa}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l12
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
 ';
 

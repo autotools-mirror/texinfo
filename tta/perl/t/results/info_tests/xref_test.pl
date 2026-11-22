@@ -21,7 +21,7 @@ $result_tree_text{'xref_test'} = '*document_root C2
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C10
@@ -29,61 +29,61 @@ $result_tree_text{'xref_test'} = '*document_root C2
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
-     {in xref}
+     {normal_text:in xref}
     *brace_arg
     *brace_arg
     *brace_arg C2
      {spaces_before_argument: }
-     {m}
-   {. }
+     {normal_text:m}
+   {normal_text:. }
    *@xref C4 l4
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
-     {bad xref}
+     {normal_text:bad xref}
     *brace_arg
     *brace_arg
     *brace_arg C2
      {spaces_before_argument: }
-     {m}
-   { after xref.\\n}
+     {normal_text:m}
+   {normal_text: after xref.\\n}
    *@code C1 l5
     *brace_container C1
      *@xref C4 l5
       *brace_arg C1
       |EXTRA
       |node_content:A{0|0}
-       {bad nested xref}
+       {normal_text:bad nested xref}
       *brace_arg
       *brace_arg
       *brace_arg C2
        {spaces_before_argument: }
-       {m}
-   {.\\n}
+       {normal_text:m}
+   {normal_text:.\\n}
    *@xref C4 l6
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
-     {in ref ending with a dot.}
+     {normal_text:in ref ending with a dot.}
     *brace_arg C2
      {spaces_before_argument: }
-     {name}
+     {normal_text:name}
     *brace_arg
     *brace_arg C2
      {spaces_before_argument: }
-     {m}
-   { ! after xref and dot inside.\\n}
+     {normal_text:m}
+   {normal_text: ! after xref and dot inside.\\n}
    *@xref C3 l7
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{in-ref-followed-by-symbol}
-     {in ref followed by symbol}
+     {normal_text:in ref followed by symbol}
     *brace_arg
     *brace_arg C2
      {spaces_before_argument: }
-     {m}
-   {# g.\\n}
+     {normal_text:m}
+   {normal_text:# g.\\n}
 ';
 
 

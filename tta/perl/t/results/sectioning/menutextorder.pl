@@ -21,28 +21,28 @@ $result_tree_text{'menutextorder'} = '*document_root C15
     |EXTRA
     |node_content:A{0|0}
     |normalized:{foo}
-     {foo}
+     {normal_text:foo}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 l3
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{bar}
-     {bar}
+     {normal_text:bar}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l4
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l6 {bar}
@@ -53,7 +53,7 @@ $result_tree_text{'menutextorder'} = '*document_root C15
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {bar}
+    {normal_text:bar}
     {spaces_after_argument:\\n}
  *@chapter C4 l7 {bar}
  |EXTRA
@@ -63,7 +63,7 @@ $result_tree_text{'menutextorder'} = '*document_root C15
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {bar}
+    {normal_text:bar}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C3 l9
@@ -76,17 +76,17 @@ $result_tree_text{'menutextorder'} = '*document_root C15
     |EXTRA
     |node_content:A{0|0}
     |normalized:{onesub2}
-     {onesub2}
+     {normal_text:onesub2}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l11
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l13 {onesub1}
@@ -97,7 +97,7 @@ $result_tree_text{'menutextorder'} = '*document_root C15
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {onesub1}
+    {normal_text:onesub1}
     {spaces_after_argument:\\n}
  *@section C2 l14 {One sub 1}
  |EXTRA
@@ -107,7 +107,7 @@ $result_tree_text{'menutextorder'} = '*document_root C15
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {One sub 1}
+    {normal_text:One sub 1}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l16 {onesub2}
@@ -118,7 +118,7 @@ $result_tree_text{'menutextorder'} = '*document_root C15
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {onesub2}
+    {normal_text:onesub2}
     {spaces_after_argument:\\n}
  *@section C3 l17 {One sub 2}
  |EXTRA
@@ -128,7 +128,7 @@ $result_tree_text{'menutextorder'} = '*document_root C15
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {One sub 2}
+    {normal_text:One sub 2}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   {empty_line:\\n}
@@ -140,7 +140,7 @@ $result_tree_text{'menutextorder'} = '*document_root C15
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {foo}
+    {normal_text:foo}
     {spaces_after_argument:\\n}
  *@chapter C4 l21 {foo}
  |EXTRA
@@ -150,7 +150,7 @@ $result_tree_text{'menutextorder'} = '*document_root C15
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {foo}
+    {normal_text:foo}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C5 l23
@@ -163,39 +163,39 @@ $result_tree_text{'menutextorder'} = '*document_root C15
     |EXTRA
     |node_content:A{0|0}
     |normalized:{sub1}
-     {sub1}
+     {normal_text:sub1}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 l25
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{sub3}
-     {sub3}
+     {normal_text:sub3}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 l26
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{sub2}
-     {sub2}
+     {normal_text:sub2}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l27
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l29 {sub1}
@@ -206,7 +206,7 @@ $result_tree_text{'menutextorder'} = '*document_root C15
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {sub1}
+    {normal_text:sub1}
     {spaces_after_argument:\\n}
  *@section C2 l30 {Sub1}
  |EXTRA
@@ -216,7 +216,7 @@ $result_tree_text{'menutextorder'} = '*document_root C15
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Sub1}
+    {normal_text:Sub1}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l32 {sub2}
@@ -227,7 +227,7 @@ $result_tree_text{'menutextorder'} = '*document_root C15
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {sub2}
+    {normal_text:sub2}
     {spaces_after_argument:\\n}
  *@section C2 l33 {Sub2}
  |EXTRA
@@ -237,7 +237,7 @@ $result_tree_text{'menutextorder'} = '*document_root C15
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Sub2}
+    {normal_text:Sub2}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l35 {sub3}
@@ -248,7 +248,7 @@ $result_tree_text{'menutextorder'} = '*document_root C15
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {sub3}
+    {normal_text:sub3}
     {spaces_after_argument:\\n}
  *@section C1 l36 {Sub3}
  |EXTRA
@@ -258,7 +258,7 @@ $result_tree_text{'menutextorder'} = '*document_root C15
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Sub3}
+    {normal_text:Sub3}
     {spaces_after_argument:\\n}
 ';
 

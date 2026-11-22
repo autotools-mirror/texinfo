@@ -14,7 +14,7 @@ $result_tree_text{'simple'} = '*document_root C1
    {text_before_beginning:\\n}
   *preamble_before_content
   *paragraph C1
-   {Before menu.\\n}
+   {normal_text:Before menu.\\n}
   {empty_line:\\n}
   *@menu C9 l4
    *arguments_line C1
@@ -22,85 +22,85 @@ $result_tree_text{'simple'} = '*document_root C1
      {spaces_before_argument:\\n}
    *menu_comment C1
     *preformatted C1
-     {comment\\n}
+     {normal_text:comment\\n}
    *menu_entry C6 l6
     {menu_entry_leading_text:* }
     *menu_entry_name C1
-     {menu entry name }
+     {normal_text:menu entry name }
     {menu_entry_separator:: }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{node}
-     {node}
+     {normal_text:node}
     {menu_entry_separator:.    }
     *menu_entry_description C1
      *preformatted C1
-      {description\\n}
+      {normal_text:description\\n}
    *menu_entry C4 l7
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{node-name}
-     {node name}
+     {normal_text:node name}
     {menu_entry_separator:::                }
     *menu_entry_description C1
      *preformatted C1
-      {description new\\n}
+      {normal_text:description new\\n}
    *menu_entry C6 l8
     {menu_entry_leading_text:* }
     *menu_entry_name C1
-     {other entry}
+     {normal_text:other entry}
     {menu_entry_separator:: }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{node}
-     {node}
+     {normal_text:node}
     {menu_entry_separator:,    }
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 l9
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{last}
-     {last}
+     {normal_text:last}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C3
-      {\\n}
-      {                 description next line\\n}
-      {                 still description\\n}
+      {normal_text:\\n}
+      {normal_text:                 description next line\\n}
+      {normal_text:                 still description\\n}
    *menu_comment C1
     *preformatted C2
      {after_menu_description_line:\\n}
-     {new comment\\n}
+     {normal_text:new comment\\n}
    *menu_entry C4 l14
     {menu_entry_leading_text:* }
     *menu_entry_node C2
     |EXTRA
     |node_content:A{0|1}
     |normalized:{last-node-entry}
-     {last node entry}
+     {normal_text:last node entry}
      {space_at_end_menu_node: }
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l15
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {After menu.\\n}
+   {normal_text:After menu.\\n}
 ';
 
 

@@ -18,10 +18,10 @@ $result_tree_text{'multitable'} = '*document_root C1
     *block_line_arg C5
      {spaces_before_argument: }
      *bracketed_arg C1 l1
-      {truc}
-     {    }
+      {normal_text:truc}
+     {normal_text:    }
      *bracketed_arg C1 l1
-      {bidule}
+      {normal_text:bidule}
      {spaces_after_argument:\\n}
    *multitable_body C2
     *row C2
@@ -32,13 +32,13 @@ $result_tree_text{'multitable'} = '*document_root C1
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {truc }
+       {normal_text:truc }
      *@tab C2 l2
      |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {bidule\\n}
+       {normal_text:bidule\\n}
     *row C2
     |EXTRA
     |row_number:{2}
@@ -47,19 +47,19 @@ $result_tree_text{'multitable'} = '*document_root C1
      |cell_number:{1}
       {ignorable_spaces_after_command:   }
       *paragraph C1
-       {truc2     }
+       {normal_text:truc2     }
      *@tab C2 l3
      |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {bidule2\\n}
+       {normal_text:bidule2\\n}
    *@end C1 l4
    |EXTRA
    |text_arg:{multitable}
     *line_arg C3
      {spaces_before_argument: }
-     {multitable}
+     {normal_text:multitable}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@multitable C4 l6
@@ -69,10 +69,10 @@ $result_tree_text{'multitable'} = '*document_root C1
     *block_line_arg C5
      {spaces_before_argument: }
      *bracketed_arg C1 l6
-      {t}
-     {    }
+      {normal_text:t}
+     {normal_text:    }
      *bracketed_arg C1 l6
-      {b}
+      {normal_text:b}
      {spaces_after_argument:\\n}
    *multitable_body C13
     *row C2
@@ -83,13 +83,13 @@ $result_tree_text{'multitable'} = '*document_root C1
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {AAAAAAAAAAAA }
+       {normal_text:AAAAAAAAAAAA }
      *@tab C2 l7
      |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {BBBBBBBBBBBBBBB\\n}
+       {normal_text:BBBBBBBBBBBBBBB\\n}
     *row C2
     |EXTRA
     |row_number:{2}
@@ -98,13 +98,13 @@ $result_tree_text{'multitable'} = '*document_root C1
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {A }
+       {normal_text:A }
      *@tab C2 l8
      |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {B\\n}
+       {normal_text:B\\n}
     *row C2
     |EXTRA
     |row_number:{3}
@@ -113,13 +113,13 @@ $result_tree_text{'multitable'} = '*document_root C1
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {AA }
+       {normal_text:AA }
      *@tab C2 l9
      |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {BB\\n}
+       {normal_text:BB\\n}
     *row C2
     |EXTRA
     |row_number:{4}
@@ -128,13 +128,13 @@ $result_tree_text{'multitable'} = '*document_root C1
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {AAA }
+       {normal_text:AAA }
      *@tab C2 l10
      |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {BBB\\n}
+       {normal_text:BBB\\n}
     *row C2
     |EXTRA
     |row_number:{5}
@@ -143,13 +143,13 @@ $result_tree_text{'multitable'} = '*document_root C1
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {AAAA }
+       {normal_text:AAAA }
      *@tab C2 l11
      |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {BBBB\\n}
+       {normal_text:BBBB\\n}
     *row C2
     |EXTRA
     |row_number:{6}
@@ -158,13 +158,13 @@ $result_tree_text{'multitable'} = '*document_root C1
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {1 1 }
+       {normal_text:1 1 }
      *@tab C2 l12
      |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {1 2B\\n}
+       {normal_text:1 2B\\n}
     *row C2
     |EXTRA
     |row_number:{7}
@@ -173,13 +173,13 @@ $result_tree_text{'multitable'} = '*document_root C1
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {1 3BB }
+       {normal_text:1 3BB }
      *@tab C2 l13
      |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {1 4BBB\\n}
+       {normal_text:1 4BBB\\n}
     *row C2
     |EXTRA
     |row_number:{8}
@@ -188,13 +188,13 @@ $result_tree_text{'multitable'} = '*document_root C1
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {2A 1 }
+       {normal_text:2A 1 }
      *@tab C2 l14
      |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {AA AA\\n}
+       {normal_text:AA AA\\n}
     *row C2
     |EXTRA
     |row_number:{9}
@@ -203,13 +203,13 @@ $result_tree_text{'multitable'} = '*document_root C1
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {2A 3BB }
+       {normal_text:2A 3BB }
      *@tab C2 l15
      |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {2A 4BBB\\n}
+       {normal_text:2A 4BBB\\n}
     *row C2
     |EXTRA
     |row_number:{10}
@@ -218,13 +218,13 @@ $result_tree_text{'multitable'} = '*document_root C1
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {3AA 1 }
+       {normal_text:3AA 1 }
      *@tab C2 l16
      |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {3AA 2B\\n}
+       {normal_text:3AA 2B\\n}
     *row C2
     |EXTRA
     |row_number:{11}
@@ -233,13 +233,13 @@ $result_tree_text{'multitable'} = '*document_root C1
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {3AA 3BB }
+       {normal_text:3AA 3BB }
      *@tab C2 l17
      |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {3AA 4BBB\\n}
+       {normal_text:3AA 4BBB\\n}
     *row C2
     |EXTRA
     |row_number:{12}
@@ -248,13 +248,13 @@ $result_tree_text{'multitable'} = '*document_root C1
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {4AAA 1 }
+       {normal_text:4AAA 1 }
      *@tab C2 l18
      |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {4AAA 2B\\n}
+       {normal_text:4AAA 2B\\n}
     *row C2
     |EXTRA
     |row_number:{13}
@@ -263,13 +263,13 @@ $result_tree_text{'multitable'} = '*document_root C1
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {4AAA 3BB }
+       {normal_text:4AAA 3BB }
      *@tab C2 l19
      |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {4AAA 4BBB\\n}
+       {normal_text:4AAA 4BBB\\n}
    *multitable_head C1
     *row C2
     |EXTRA
@@ -279,19 +279,19 @@ $result_tree_text{'multitable'} = '*document_root C1
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {he }
+       {normal_text:he }
      *@tab C2 l20
      |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {th\\n}
+       {normal_text:th\\n}
    *@end C1 l21
    |EXTRA
    |text_arg:{multitable}
     *line_arg C3
      {spaces_before_argument: }
-     {multitable}
+     {normal_text:multitable}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@multitable C3 l23
@@ -301,10 +301,10 @@ $result_tree_text{'multitable'} = '*document_root C1
     *block_line_arg C5
      {spaces_before_argument: }
      *bracketed_arg C1 l23
-      {AA}
-     { }
+      {normal_text:AA}
+     {normal_text: }
      *bracketed_arg C1 l23
-      {BB}
+      {normal_text:BB}
      {spaces_after_argument:\\n}
    *multitable_body C3
     *row C2
@@ -315,13 +315,13 @@ $result_tree_text{'multitable'} = '*document_root C1
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {a b }
+       {normal_text:a b }
      *@tab C2 l24
      |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {AA BB\\n}
+       {normal_text:AA BB\\n}
     *row C2
     |EXTRA
     |row_number:{2}
@@ -330,13 +330,13 @@ $result_tree_text{'multitable'} = '*document_root C1
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {aa b }
+       {normal_text:aa b }
      *@tab C2 l25
      |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {AA B\\n}
+       {normal_text:AA B\\n}
     *row C2
     |EXTRA
     |row_number:{3}
@@ -345,19 +345,19 @@ $result_tree_text{'multitable'} = '*document_root C1
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {aaa b }
+       {normal_text:aaa b }
      *@tab C2 l26
      |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {A BB\\n}
+       {normal_text:A BB\\n}
    *@end C1 l27
    |EXTRA
    |text_arg:{multitable}
     *line_arg C3
      {spaces_before_argument: }
-     {multitable}
+     {normal_text:multitable}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@multitable C3 l29
@@ -367,7 +367,7 @@ $result_tree_text{'multitable'} = '*document_root C1
     *block_line_arg C3
      {spaces_before_argument: }
      *bracketed_arg C1 l29
-      {A}
+      {normal_text:A}
      {spaces_after_argument:\\n}
    *multitable_body C2
     *row C1
@@ -378,8 +378,8 @@ $result_tree_text{'multitable'} = '*document_root C1
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C2
-       {A\\n}
-       {B\\n}
+       {normal_text:A\\n}
+       {normal_text:B\\n}
     *row C1
     |EXTRA
     |row_number:{2}
@@ -388,13 +388,13 @@ $result_tree_text{'multitable'} = '*document_root C1
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {a b\\n}
+       {normal_text:a b\\n}
    *@end C1 l33
    |EXTRA
    |text_arg:{multitable}
     *line_arg C3
      {spaces_before_argument: }
-     {multitable}
+     {normal_text:multitable}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@multitable C3 l35
@@ -404,10 +404,10 @@ $result_tree_text{'multitable'} = '*document_root C1
     *block_line_arg C5
      {spaces_before_argument: }
      *bracketed_arg C1 l35
-      {A}
-     { }
+      {normal_text:A}
+     {normal_text: }
      *bracketed_arg C1 l35
-      {B}
+      {normal_text:B}
      {spaces_after_argument:\\n}
    *multitable_body C2
     *row C2
@@ -418,15 +418,15 @@ $result_tree_text{'multitable'} = '*document_root C1
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C2
-       {U\\n}
-       {V\\n}
+       {normal_text:U\\n}
+       {normal_text:V\\n}
      *@tab C2 l38
      |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C2
-       {u\\n}
-       {v\\n}
+       {normal_text:u\\n}
+       {normal_text:v\\n}
     *row C2
     |EXTRA
     |row_number:{2}
@@ -435,19 +435,19 @@ $result_tree_text{'multitable'} = '*document_root C1
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {a b\\n}
+       {normal_text:a b\\n}
      *@tab C2 l41
      |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {A B\\n}
+       {normal_text:A B\\n}
    *@end C1 l42
    |EXTRA
    |text_arg:{multitable}
     *line_arg C3
      {spaces_before_argument: }
-     {multitable}
+     {normal_text:multitable}
      {spaces_after_argument:\\n}
 ';
 

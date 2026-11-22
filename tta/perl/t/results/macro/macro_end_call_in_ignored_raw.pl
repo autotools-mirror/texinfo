@@ -24,7 +24,7 @@ $result_tree_text{'macro_end_call_in_ignored_raw'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    >SOURCEMARKS
@@ -45,7 +45,7 @@ $result_tree_text{'macro_end_call_in_ignored_raw'} = '*document_root C1
     |text_arg:{tex}
      *line_arg C3
       {spaces_before_argument: }
-      {tex}
+      {normal_text:tex}
       {spaces_after_argument:\\n}
 ';
 

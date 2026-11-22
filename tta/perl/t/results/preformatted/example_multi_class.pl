@@ -15,54 +15,54 @@ $result_tree_text{'example_multi_class'} = '*document_root C1
    *arguments_line C4
     *block_line_arg C3
      {spaces_before_argument: }
-     {C++}
+     {normal_text:C++}
      {spaces_after_argument: }
     *block_line_arg C2
      {spaces_before_argument: }
-     {gothic}
+     {normal_text:gothic}
     *block_line_arg C2
      {spaces_before_argument: }
-     {purple}
+     {normal_text:purple}
     *block_line_arg C3
      {spaces_before_argument: }
-     {embed}
+     {normal_text:embed}
      {spaces_after_argument:\\n}
    *preformatted C29
-    {void StateManager::deallocate() }
+    {normal_text:void StateManager::deallocate() }
     *@{
-    {\\n}
-    {    if(buffer) }
+    {normal_text:\\n}
+    {normal_text:    if(buffer) }
     *@{
-    {\\n}
-    {        delete [] buffer;\\n}
-    {        buffer = NULL;\\n}
-    {    }
+    {normal_text:\\n}
+    {normal_text:        delete [] buffer;\\n}
+    {normal_text:        buffer = NULL;\\n}
+    {normal_text:    }
     *@}
-    {\\n}
-    {    if(tmp_state) }
+    {normal_text:\\n}
+    {normal_text:    if(tmp_state) }
     *@{
-    {\\n}
-    {        delete [] tmp_state;\\n}
-    {        tmp_state = NULL;\\n}
-    {    }
+    {normal_text:\\n}
+    {normal_text:        delete [] tmp_state;\\n}
+    {normal_text:        tmp_state = NULL;\\n}
+    {normal_text:    }
     *@}
-    {\\n}
-    {    if(in_state) }
+    {normal_text:\\n}
+    {normal_text:    if(in_state) }
     *@{
-    {\\n}
-    {        delete [] in_state;\\n}
-    {        in_state = NULL;\\n}
-    {    }
+    {normal_text:\\n}
+    {normal_text:        delete [] in_state;\\n}
+    {normal_text:        in_state = NULL;\\n}
+    {normal_text:    }
     *@}
-    {\\n}
+    {normal_text:\\n}
     *@}
-    {\\n}
+    {normal_text:\\n}
    *@end C1 l16
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
 ';
 

@@ -16,43 +16,43 @@ $result_tree_text{'invalid_U'} = '*document_root C1
     {spaces_after_cmd_before_arg: }
    *@U C1 l1
     *brace_arg
-   { }
+   {normal_text: }
    *@U C1 l1
     *brace_arg C1
-     {z}
-   { }
+     {normal_text:z}
+   {normal_text: }
    *@U C1 l1
     *brace_arg C1
-     {abc}
-   { }
+     {normal_text:abc}
+   {normal_text: }
    *@U C1 l1
     *brace_arg C1
-     {9999999999999}
-   { }
+     {normal_text:9999999999999}
+   {normal_text: }
    *@U C1 l1
     *brace_arg C1
-     {110000}
-   { }
+     {normal_text:110000}
+   {normal_text: }
    *@U C1 l1
     *brace_arg C1
-     {10FFFF}
-   {\\n}
+     {normal_text:10FFFF}
+   {normal_text:\\n}
    *@U C1 l2
     *brace_arg C3
      {spaces_before_argument: }
-     {0023}
+     {normal_text:0023}
      {spaces_after_argument: }
-   { }
+   {normal_text: }
    *@U C1 l2
     *brace_arg C1
-     {FFFD}
-   { }
+     {normal_text:FFFD}
+   {normal_text: }
    *@U C1 l2
     *brace_arg C3
      {spaces_before_argument: }
-     {wxyz}
+     {normal_text:wxyz}
      {spaces_after_argument: }
-   {\\n}
+   {normal_text:\\n}
 ';
 
 

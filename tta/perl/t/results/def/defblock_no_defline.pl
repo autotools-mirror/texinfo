@@ -17,13 +17,13 @@ $result_tree_text{'defblock_no_defline'} = '*document_root C1
      {spaces_before_argument:\\n}
    *before_defline C1
     *paragraph C1
-     {misc text inside\\n}
+     {normal_text:misc text inside\\n}
    *@end C1 l3
    |EXTRA
    |text_arg:{defblock}
     *line_arg C3
      {spaces_before_argument: }
-     {defblock}
+     {normal_text:defblock}
      {spaces_after_argument:\\n}
 ';
 

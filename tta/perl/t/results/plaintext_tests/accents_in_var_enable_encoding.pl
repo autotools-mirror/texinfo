@@ -18,25 +18,25 @@ $result_tree_text{'accents_in_var_enable_encoding'} = '*document_root C1
    |text_arg:{utf-8}
     *line_arg C3
      {spaces_before_argument: }
-     {utf-8}
+     {normal_text:utf-8}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C2
    *@var C1 l3
     *brace_container C6
-     {AA}
+     {normal_text:AA}
      *@, C1 l3
       *following_arg C1
-       {c}
-     { }
+       {normal_text:c}
+     {normal_text: }
      *@u C1 l3
       *brace_container C1
-       {r}
-     { }
+       {normal_text:r}
+     {normal_text: }
      *@` C1 l3
       *following_arg C1
-       {e}
-   {.\\n}
+       {normal_text:e}
+   {normal_text:.\\n}
 ';
 
 

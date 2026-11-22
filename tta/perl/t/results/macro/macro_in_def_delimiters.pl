@@ -23,7 +23,7 @@ $result_tree_text{'macro_in_def_delimiters'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *@deffn C1 l5
@@ -36,19 +36,19 @@ $result_tree_text{'macro_in_def_delimiters'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {Command}
+       {normal_text:Command}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {forward-word}
+       {normal_text:forward-word}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {count}
+       {normal_text:count}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {argaa}
+       {normal_text:argaa}
        >SOURCEMARKS
        >macro_expansion<start;1><p:3>
         >*macro_call@string C1
@@ -56,18 +56,18 @@ $result_tree_text{'macro_in_def_delimiters'} = '*document_root C1
      {delimiter:(}
      *def_arg C1
       *def_line_arg C1
-       {b}
+       {normal_text:b}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {*c}
+       {normal_text:*c}
      {delimiter:)}
      >SOURCEMARKS
      >macro_expansion<end;1><p:1>
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {a}
+       {normal_text:a}
      {spaces: }
      {delimiter:(}
      >SOURCEMARKS
@@ -76,22 +76,22 @@ $result_tree_text{'macro_in_def_delimiters'} = '*document_root C1
        >*brace_arg
      *def_arg C1
       *def_line_arg C1
-       {aa}
+       {normal_text:aa}
      {delimiter:(}
      *def_arg C1
       *def_line_arg C1
-       {b}
+       {normal_text:b}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {*c}
+       {normal_text:*c}
      {delimiter:)}
      >SOURCEMARKS
      >macro_expansion<end;2><p:1>
      {delimiter:(}
      *def_arg C1
       *def_line_arg C1
-       {bbaa}
+       {normal_text:bbaa}
        >SOURCEMARKS
        >macro_expansion<start;3><p:2>
         >*macro_call@string C1
@@ -99,11 +99,11 @@ $result_tree_text{'macro_in_def_delimiters'} = '*document_root C1
      {delimiter:(}
      *def_arg C1
       *def_line_arg C1
-       {b}
+       {normal_text:b}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {*c}
+       {normal_text:*c}
      {delimiter:)}
      >SOURCEMARKS
      >macro_expansion<end;3><p:1>
@@ -114,22 +114,22 @@ $result_tree_text{'macro_in_def_delimiters'} = '*document_root C1
        >*brace_arg
      *def_arg C1
       *def_line_arg C1
-       {aa}
+       {normal_text:aa}
      {delimiter:(}
      *def_arg C1
       *def_line_arg C1
-       {b}
+       {normal_text:b}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {*c}
+       {normal_text:*c}
      {delimiter:)}
      >SOURCEMARKS
      >macro_expansion<end;4><p:1>
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {a}
+       {normal_text:a}
      {spaces_after_argument:\\n}
 ';
 

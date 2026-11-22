@@ -26,7 +26,7 @@ $result_tree_text{'no_argument_and_contents'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {for example}
+    {normal_text:for example}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@chapter C2 l5 {@asis{}}

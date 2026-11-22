@@ -36,13 +36,13 @@ $result_tree_text{'value_on_ifset'} = '*document_root C1
        >>value_expansion<start;1><p:1>{x}
         >>*@value C1
          >>*brace_container C1
-          >>{xval}
-       >{x}
+          >>{normal_text:xval}
+       >{normal_text:x}
        >>SOURCEMARKS
        >>value_expansion<end;1><p:1>
        >{spaces_after_argument:\\n}
   *paragraph C1
-   {XVAL SET\\n}
+   {normal_text:XVAL SET\\n}
    >SOURCEMARKS
    >expanded_conditional_command<end;1><p:9>
     >*@end C1 l6
@@ -50,7 +50,7 @@ $result_tree_text{'value_on_ifset'} = '*document_root C1
     >|text_arg:{ifset}
      >*line_arg C3
       >{spaces_before_argument: }
-      >{ifset}
+      >{normal_text:ifset}
       >{spaces_after_argument:\\n}
   {empty_line:\\n}
   >SOURCEMARKS
@@ -59,7 +59,7 @@ $result_tree_text{'value_on_ifset'} = '*document_root C1
     >*arguments_line C1
      >*block_line_arg C3
       >{spaces_before_argument: }
-      >{b}
+      >{normal_text:b}
       >{spaces_after_argument:\\n}
     >{raw:@ifset @value{xval}\\n}
     >{raw:INTERNALXV\\n}
@@ -69,7 +69,7 @@ $result_tree_text{'value_on_ifset'} = '*document_root C1
     >|text_arg:{ifset}
      >*line_arg C3
       >{spaces_before_argument: }
-      >{ifset}
+      >{normal_text:ifset}
       >{spaces_after_argument:\\n}
 ';
 

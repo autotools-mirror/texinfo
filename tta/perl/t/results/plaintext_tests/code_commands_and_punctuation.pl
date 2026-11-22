@@ -14,12 +14,12 @@ $result_tree_text{'code_commands_and_punctuation'} = '*document_root C1
   *paragraph C4
    *@code C1 l1
     *brace_container C1
-     {AA}
-   {. }
+     {normal_text:AA}
+   {normal_text:. }
    *@samp C1 l1
     *brace_container C1
-     {aa}
-   {. After.\\n}
+     {normal_text:aa}
+   {normal_text:. After.\\n}
 ';
 
 

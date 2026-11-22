@@ -16,16 +16,16 @@ $result_tree_text{'two_paragraphindent_in_preamble'} = '*document_root C5
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *paragraph C1
-     {In copying.\\n}
+     {normal_text:In copying.\\n}
     {empty_line:\\n}
     *paragraph C1
-     {Copying second para.\\n}
+     {normal_text:Copying second para.\\n}
     *@end C1 l5
     |EXTRA
     |text_arg:{copying}
      *line_arg C3
       {spaces_before_argument: }
-      {copying}
+      {normal_text:copying}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@paragraphindent C1 l7
@@ -34,7 +34,7 @@ $result_tree_text{'two_paragraphindent_in_preamble'} = '*document_root C5
    |misc_args:A{1}
     *line_arg C3
      {spaces_before_argument: }
-     {1}
+     {normal_text:1}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@paragraphindent C1 l9
@@ -43,11 +43,11 @@ $result_tree_text{'two_paragraphindent_in_preamble'} = '*document_root C5
    |misc_args:A{6}
     *line_arg C3
      {spaces_before_argument: }
-     {6}
+     {normal_text:6}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C1
-   {After two paragraphindent.\\n}
+   {normal_text:After two paragraphindent.\\n}
   {empty_line:\\n}
  *@node C1 l13 {Top}
  |EXTRA
@@ -57,7 +57,7 @@ $result_tree_text{'two_paragraphindent_in_preamble'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C6 l14 {test @@paragraphindent in preamble effect in preamble}
  |EXTRA
@@ -66,16 +66,16 @@ $result_tree_text{'two_paragraphindent_in_preamble'} = '*document_root C5
   *arguments_line C1
    *line_arg C5
     {spaces_before_argument: }
-    {test }
+    {normal_text:test }
     *@@
-    {paragraphindent in preamble effect in preamble}
+    {normal_text:paragraphindent in preamble effect in preamble}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {First para.\\n}
+   {normal_text:First para.\\n}
   {empty_line:\\n}
   *paragraph C1
-   {Second para.\\n}
+   {normal_text:Second para.\\n}
   {empty_line:\\n}
  *@bye C1
   *line_arg C1

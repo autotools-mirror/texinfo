@@ -22,34 +22,34 @@ $result_tree_text{'item_in_ref'} = '*document_root C1
      *@item C1 l2
       *line_arg C3
        {spaces_before_argument: }
-       {first item}
+       {normal_text:first item}
        {spaces_after_argument:\\n}
     *table_definition C3
      *paragraph C1
-      {First item text\\n}
+      {normal_text:First item text\\n}
      {empty_line:\\n}
      *paragraph C1
       *@ref C3 l5
        *brace_arg C1
-        {Top}
+        {normal_text:Top}
        *brace_arg
        *brace_arg C3
         {spaces_before_argument: }
-        {title in first item}
+        {normal_text:title in first item}
         {spaces_after_argument:\\n}
    *table_entry C1
     *table_term C1
      *@item C1 l6
       *line_arg C3
        {spaces_before_argument: }
-       {second item}
+       {normal_text:second item}
        {spaces_after_argument:\\n}
    *@end C1 l7
    |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
-     {table}
+     {normal_text:table}
      {spaces_after_argument:\\n}
 ';
 

@@ -14,7 +14,7 @@ $result_tree_text{'text_before_top_and_summarycontents_after_title'} = '*documen
    {text_before_beginning:\\n}
   *preamble_before_content
   *paragraph C1
-   {Some text before top\\n}
+   {normal_text:Some text before top\\n}
   {empty_line:\\n}
  *@node C1 l4 {Top}
  |EXTRA
@@ -24,7 +24,7 @@ $result_tree_text{'text_before_top_and_summarycontents_after_title'} = '*documen
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C4 l5 {top}
  |EXTRA
@@ -33,11 +33,11 @@ $result_tree_text{'text_before_top_and_summarycontents_after_title'} = '*documen
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {In top.\\n}
+   {normal_text:In top.\\n}
   {empty_line:\\n}
  *@chapter C4 l9 {the chap}
  |EXTRA
@@ -49,7 +49,7 @@ $result_tree_text{'text_before_top_and_summarycontents_after_title'} = '*documen
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {the chap}
+    {normal_text:the chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@summarycontents C1 l11

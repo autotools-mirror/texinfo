@@ -22,24 +22,24 @@ $result_tree_text{'accent_on_table_line'} = '*document_root C1
      *@item C1 l2
       *line_arg C3
        {spaces_before_argument: }
-       {first item}
+       {normal_text:first item}
        {spaces_after_argument:\\n}
    *table_entry C1
     *table_term C1
      *@item C1 l3
       *line_arg C4
        {spaces_before_argument: }
-       {no at-command }
+       {normal_text:no at-command }
        *@code C1 l3
         *brace_container C1
-         {code}
+         {normal_text:code}
        {spaces_after_argument:\\n}
    *@end C1 l4
    |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
-     {table}
+     {normal_text:table}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@table C4 l6
@@ -54,24 +54,24 @@ $result_tree_text{'accent_on_table_line'} = '*document_root C1
      *@item C1 l7
       *line_arg C3
        {spaces_before_argument: }
-       {acc brace first item}
+       {normal_text:acc brace first item}
        {spaces_after_argument:\\n}
    *table_entry C1
     *table_term C1
      *@item C1 l8
       *line_arg C4
        {spaces_before_argument: }
-       {no at-command }
+       {normal_text:no at-command }
        *@code C1 l8
         *brace_container C1
-         {code acc brace}
+         {normal_text:code acc brace}
        {spaces_after_argument:\\n}
    *@end C1 l9
    |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
-     {table}
+     {normal_text:table}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@table C3 l11
@@ -88,14 +88,14 @@ $result_tree_text{'accent_on_table_line'} = '*document_root C1
      *@item C1 l12
       *line_arg C3
        {spaces_before_argument: }
-       {acc comment first item}
+       {normal_text:acc comment first item}
        {spaces_after_argument:\\n}
    *@end C1 l13
    |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
-     {table}
+     {normal_text:table}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@table C3 l15
@@ -109,14 +109,14 @@ $result_tree_text{'accent_on_table_line'} = '*document_root C1
      *@item C1 l16
       *line_arg C3
        {spaces_before_argument: }
-       {acc space first item}
+       {normal_text:acc space first item}
        {spaces_after_argument:\\n}
    *@end C1 l17
    |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
-     {table}
+     {normal_text:table}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@table C3 l19
@@ -130,14 +130,14 @@ $result_tree_text{'accent_on_table_line'} = '*document_root C1
      *@item C1 l20
       *line_arg C3
        {spaces_before_argument: }
-       {cmdacc first item}
+       {normal_text:cmdacc first item}
        {spaces_after_argument:\\n}
    *@end C1 l21
    |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
-     {table}
+     {normal_text:table}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@table C3 l23
@@ -152,14 +152,14 @@ $result_tree_text{'accent_on_table_line'} = '*document_root C1
      *@item C1 l24
       *line_arg C3
        {spaces_before_argument: }
-       {cmdacc braces first item}
+       {normal_text:cmdacc braces first item}
        {spaces_after_argument:\\n}
    *@end C1 l25
    |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
-     {table}
+     {normal_text:table}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@table C3 l27
@@ -168,21 +168,21 @@ $result_tree_text{'accent_on_table_line'} = '*document_root C1
      {spaces_before_argument: }
      *@ringaccent C1 l27
       *brace_container C1
-       {a}
+       {normal_text:a}
      {spaces_after_argument:\\n}
    *table_entry C1
     *table_term C1
      *@item C1 l28
       *line_arg C3
        {spaces_before_argument: }
-       {cmdacc braces arg first item}
+       {normal_text:cmdacc braces arg first item}
        {spaces_after_argument:\\n}
    *@end C1 l29
    |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
-     {table}
+     {normal_text:table}
      {spaces_after_argument:\\n}
 ';
 

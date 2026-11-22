@@ -28,13 +28,13 @@ $result_tree_text{'formats_not_closed_in_example'} = '*document_root C1
       *@item C1 l4
        *line_arg C3
         {spaces_before_argument: }
-        {item}
+        {normal_text:item}
         {spaces_after_argument:\\n}
      *table_definition C2
       *preformatted C3
-       {table line\\n}
+       {normal_text:table line\\n}
        {empty_line:\\n}
-       {Some text.\\n}
+       {normal_text:Some text.\\n}
       *@enumerate C4 l8
        *arguments_line C1
         *block_line_arg C1
@@ -47,20 +47,20 @@ $result_tree_text{'formats_not_closed_in_example'} = '*document_root C1
        |item_number:{1}
         *preformatted C2
          {ignorable_spaces_after_command: }
-         {first item\\n}
+         {normal_text:first item\\n}
        *@item C1 l11
        |EXTRA
        |item_number:{2}
         *preformatted C3
          {ignorable_spaces_after_command: }
-         {an item\\n}
+         {normal_text:an item\\n}
          {empty_line:\\n}
    *@end C1 l13
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
 ';
 

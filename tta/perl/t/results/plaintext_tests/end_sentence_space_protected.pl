@@ -12,9 +12,9 @@ $result_tree_text{'end_sentence_space_protected'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *paragraph C3
-   {Some text. }
+   {normal_text:Some text. }
    *@\\n
-   {Next sentence.\\n}
+   {normal_text:Next sentence.\\n}
 ';
 
 

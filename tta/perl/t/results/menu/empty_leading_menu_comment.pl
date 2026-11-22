@@ -19,7 +19,7 @@ $result_tree_text{'empty_leading_menu_comment'} = '*document_root C2
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {first}
+    {normal_text:first}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C4 l3
@@ -36,20 +36,20 @@ $result_tree_text{'empty_leading_menu_comment'} = '*document_root C2
     |manual_content:A{1|1}
     |node_content:A{3|3}
     |normalized:{b}
-     {(}
-     {f}
-     {)}
-     {b}
+     {normal_text:(}
+     {normal_text:f}
+     {normal_text:)}
+     {normal_text:b}
     {menu_entry_separator::: }
     *menu_entry_description C1
      *preformatted C1
-      {desc\\n}
+      {normal_text:desc\\n}
    *@end C1 l6
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
 ';
 

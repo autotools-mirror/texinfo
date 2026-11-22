@@ -24,11 +24,11 @@ $result_tree_text{'comment_in_linemacro_call'} = '*document_root C1
     |text_arg:{linemacro}
      *line_arg C3
       {spaces_before_argument: }
-      {linemacro}
+      {normal_text:linemacro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C4
-   {c }
+   {normal_text:c }
    >SOURCEMARKS
    >linemacro_expansion<start;1>
     >*linemacro_call@lm C2
@@ -40,18 +40,18 @@ $result_tree_text{'comment_in_linemacro_call'} = '*document_root C1
       >{macro_call_arg_text:out}
    *@code C1 l7:@lm
     *brace_container C4
-     {\\n}
-     {something }
+     {normal_text:\\n}
+     {normal_text:something }
      *@comment C1
       *line_arg C3
        {spaces_before_argument: }
        {rawline_text:in} d}
        {spaces_after_argument:\\n}
-     {out\\n}
+     {normal_text:out\\n}
      >SOURCEMARKS
      >linemacro_expansion<end;1><p:3>
-   {\\n}
-   {next\\n}
+   {normal_text:\\n}
+   {normal_text:next\\n}
 ';
 
 

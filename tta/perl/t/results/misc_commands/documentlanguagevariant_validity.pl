@@ -16,37 +16,37 @@ $result_tree_text{'documentlanguagevariant_validity'} = '*document_root C1
    |global_command_number:{1}
     *line_arg C2
      {spaces_before_argument: }
-     {a%v}
+     {normal_text:a%v}
     *line_arg C3
      {spaces_before_argument: }
-     {1606nict}
+     {normal_text:1606nict}
      {spaces_after_argument:\\n}
    *@documentlanguagevariant C1 l2
    |EXTRA
    |global_command_number:{2}
     *line_arg C4
      {spaces_before_argument: }
-     {1901}
+     {normal_text:1901}
      *@code C1 l2
       *brace_container C1
-       {something}
+       {normal_text:something}
      {spaces_after_argument:\\n}
    *@documentlanguagevariant C1 l3
    |EXTRA
    |global_command_number:{3}
     *line_arg C4
      {spaces_before_argument: }
-     {1959acad}
+     {normal_text:1959acad}
      *@^ C1 l3
       *following_arg C1
-       {e}
+       {normal_text:e}
      {spaces_after_argument:\\n}
    *@documentlanguagevariant C1 l4
    |EXTRA
    |global_command_number:{4}
     *line_arg C4
      {spaces_before_argument: }
-     {unknown}
+     {normal_text:unknown}
      *@TeX C1 l4
       *brace_container
      {spaces_after_argument:\\n}
@@ -55,21 +55,21 @@ $result_tree_text{'documentlanguagevariant_validity'} = '*document_root C1
    |global_command_number:{5}
     *line_arg C3
      {spaces_before_argument: }
-     {1694acad}
+     {normal_text:1694acad}
      {spaces_after_argument: }
     *line_arg C3
      {spaces_before_argument: }
-     {a b}
+     {normal_text:a b}
      {spaces_after_argument:\\n}
    *@documentlanguagevariant C2 l6
    |EXTRA
    |global_command_number:{6}
     *line_arg C2
      {spaces_before_argument: }
-     {abl1943 s}
+     {normal_text:abl1943 s}
     *line_arg C3
      {spaces_before_argument: }
-     {!l}
+     {normal_text:!l}
      {spaces_after_argument:\\n}
    *@documentlanguagevariant C1 l7
    |EXTRA
@@ -84,14 +84,14 @@ $result_tree_text{'documentlanguagevariant_validity'} = '*document_root C1
    |global_command_number:{8}
     *line_arg C3
      {spaces_before_argument: }
-     {aùbc}
+     {normal_text:aùbc}
      {spaces_after_argument:\\n}
    *@documentlanguagevariant C1 l9
    |EXTRA
    |global_command_number:{9}
     *line_arg C3
      {spaces_before_argument: }
-     {M让}
+     {normal_text:M让}
      {spaces_after_argument:\\n}
 ';
 

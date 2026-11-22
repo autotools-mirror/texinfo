@@ -20,13 +20,13 @@ $result_tree_text{'def_not_closed_in_menu_description'} = '*document_root C1
     *menu_entry_node C3
     |EXTRA
     |manual_content:A{1|1}
-     {(}
-     {info}
-     {)}
+     {normal_text:(}
+     {normal_text:info}
+     {normal_text:)}
     {menu_entry_separator::: }
     *menu_entry_description C2
      *preformatted C1
-      {before deff }
+      {normal_text:before deff }
      *@deffn C2 l2
       *def_line C1 l2
       |EXTRA
@@ -37,26 +37,26 @@ $result_tree_text{'def_not_closed_in_menu_description'} = '*document_root C1
         {spaces_before_argument: }
         *def_category C1
          *def_line_arg C1
-          {bidule}
+          {normal_text:bidule}
         {spaces: }
         *def_name C1
          *def_line_arg C1
-          {truc}
+          {normal_text:truc}
         {spaces: }
         *def_arg C1
          *def_line_arg C1
-          {chose}
+          {normal_text:chose}
         {spaces_after_argument:\\n}
       *def_item C1
        *preformatted C2
         {empty_line:\\n}
-        {deffn text\\n}
+        {normal_text:deffn text\\n}
    *@end C1 l5
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
 ';
 

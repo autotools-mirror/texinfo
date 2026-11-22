@@ -27,10 +27,10 @@ $result_tree_text{'value_after_accent'} = '*document_root C1
     >value_expansion<start;1><p:1>{a}
      >*@value C1
       >*brace_container C1
-       >{a_letter}
+       >{normal_text:a_letter}
     *following_arg C1
-     {a}
-   {\\n}
+     {normal_text:a}
+   {normal_text:\\n}
    *@~ C2 l3
    >SOURCEMARKS
    >value_expansion<end;2>
@@ -39,9 +39,9 @@ $result_tree_text{'value_after_accent'} = '*document_root C1
     >value_expansion<start;2>{a}
      >*@value C1
       >*brace_container C1
-       >{a_letter}
+       >{normal_text:a_letter}
     *following_arg C1
-     {a}
+     {normal_text:a}
 ';
 
 

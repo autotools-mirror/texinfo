@@ -13,7 +13,7 @@ $result_tree_text{'unknown_value'} = '*document_root C1
   *preamble_before_content
   *@value C1
    *brace_container C1
-    {unknown}
+    {normal_text:unknown}
 ';
 
 

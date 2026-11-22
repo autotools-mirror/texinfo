@@ -19,7 +19,7 @@ $result_tree_text{'informative_commands_in_top_node'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C7 l2 {top sectionning}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'informative_commands_in_top_node'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top sectionning}
+    {normal_text:top sectionning}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@paragraphindent C1 l4
@@ -37,22 +37,22 @@ $result_tree_text{'informative_commands_in_top_node'} = '*document_root C5
   |misc_args:A{5}
    *line_arg C3
     {spaces_before_argument: }
-    {5}
+    {normal_text:5}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@evenfooting C1 l6
    *line_arg C13
     {spaces_before_argument: }
     *@thischapter
-    { }
+    {normal_text: }
     *@thistitle
-    { }
+    {normal_text: }
     *@|
-    { }
+    {normal_text: }
     *@thisfile
-    { }
+    {normal_text: }
     *@|
-    { }
+    {normal_text: }
     *@code C1 l6
      *brace_container C1
       *@thischaptername
@@ -63,7 +63,7 @@ $result_tree_text{'informative_commands_in_top_node'} = '*document_root C5
   |misc_args:A{2}
    *line_arg C3
     {spaces_before_argument: }
-    {2}
+    {normal_text:2}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l9 {next node}
@@ -74,7 +74,7 @@ $result_tree_text{'informative_commands_in_top_node'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {next node}
+    {normal_text:next node}
     {spaces_after_argument:\\n}
  *@chapter C3 l10 {chap}
  |EXTRA
@@ -84,11 +84,11 @@ $result_tree_text{'informative_commands_in_top_node'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {In chapter\\n}
+   {normal_text:In chapter\\n}
 ';
 
 

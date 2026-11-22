@@ -16,7 +16,7 @@ $result_tree_text{'author_outside_titlepage_quotation'} = '*document_root C1
   |global_command_number:{1}
    *line_arg C3
     {spaces_before_argument: }
-    {Some One}
+    {normal_text:Some One}
     {spaces_after_argument:\\n}
 ';
 

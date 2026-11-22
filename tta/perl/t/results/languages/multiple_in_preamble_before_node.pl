@@ -17,7 +17,7 @@ $result_tree_text{'multiple_in_preamble_before_node'} = '*document_root C5
    |text_arg:{fr}
     *line_arg C3
      {spaces_before_argument: }
-     {fr}
+     {normal_text:fr}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@copying C3 l3
@@ -45,34 +45,34 @@ $result_tree_text{'multiple_in_preamble_before_node'} = '*document_root C5
        {spaces: }
        *def_class C1
         *def_line_arg C1
-         {copying}
+         {normal_text:copying}
        {spaces: }
        *def_name C1
         *def_line_arg C1
-         {a}
+         {normal_text:a}
        {spaces: }
        *def_arg C1
         *def_line_arg C1
-         {b}
+         {normal_text:b}
        {spaces_after_argument:\\n}
      *def_item C1
       *paragraph C2
        *@error C1 l5
         *brace_container
-       {\\n}
+       {normal_text:\\n}
      *@end C1 l6
      |EXTRA
      |text_arg:{defivar}
       *line_arg C3
        {spaces_before_argument: }
-       {defivar}
+       {normal_text:defivar}
        {spaces_after_argument:\\n}
     *@end C1 l7
     |EXTRA
     |text_arg:{copying}
      *line_arg C3
       {spaces_before_argument: }
-      {copying}
+      {normal_text:copying}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@documentlanguage C1 l9
@@ -81,11 +81,11 @@ $result_tree_text{'multiple_in_preamble_before_node'} = '*document_root C5
    |text_arg:{hr}
     *line_arg C3
      {spaces_before_argument: }
-     {hr}
+     {normal_text:hr}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C1
-   {Text ending the preamble\\n}
+   {normal_text:Text ending the preamble\\n}
   {empty_line:\\n}
   *@documentlanguage C1 l13
   |EXTRA
@@ -93,7 +93,7 @@ $result_tree_text{'multiple_in_preamble_before_node'} = '*document_root C5
   |text_arg:{de}
    *line_arg C3
     {spaces_before_argument: }
-    {de}
+    {normal_text:de}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l15 {Top}
@@ -104,7 +104,7 @@ $result_tree_text{'multiple_in_preamble_before_node'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l16 {top section}
  |EXTRA
@@ -113,7 +113,7 @@ $result_tree_text{'multiple_in_preamble_before_node'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top section}
+    {normal_text:top section}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l18 {chapter}
@@ -124,7 +124,7 @@ $result_tree_text{'multiple_in_preamble_before_node'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter}
+    {normal_text:chapter}
     {spaces_after_argument:\\n}
  *@chapter C3 l19 {chap}
  |EXTRA
@@ -134,7 +134,7 @@ $result_tree_text{'multiple_in_preamble_before_node'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@defivar C3 l21
@@ -158,27 +158,27 @@ $result_tree_text{'multiple_in_preamble_before_node'} = '*document_root C5
      {spaces: }
      *def_class C1
       *def_line_arg C1
-       {c}
+       {normal_text:c}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {BBB}
+       {normal_text:BBB}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {CCC}
+       {normal_text:CCC}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C2
      *@error C1 l22
       *brace_container
-     {\\n}
+     {normal_text:\\n}
    *@end C1 l23
    |EXTRA
    |text_arg:{defivar}
     *line_arg C3
      {spaces_before_argument: }
-     {defivar}
+     {normal_text:defivar}
      {spaces_after_argument:\\n}
 ';
 

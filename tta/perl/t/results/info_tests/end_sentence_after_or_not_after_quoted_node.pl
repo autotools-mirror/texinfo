@@ -19,7 +19,7 @@ $result_tree_text{'end_sentence_after_or_not_after_quoted_node'} = '*document_ro
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C14 l2 {top}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'end_sentence_after_or_not_after_quoted_node'} = '*document_ro
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C4
@@ -37,21 +37,21 @@ $result_tree_text{'end_sentence_after_or_not_after_quoted_node'} = '*document_ro
     |EXTRA
     |node_content:A{0|0}
     |normalized:{aaa}
-     {aaa}
+     {normal_text:aaa}
     *brace_arg C2
      {spaces_before_argument: }
-     {n}
-   {. b.\\n}
+     {normal_text:n}
+   {normal_text:. b.\\n}
    *@ref C2 l5
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{aaB}
-     {aaB}
+     {normal_text:aaB}
     *brace_arg C2
      {spaces_before_argument: }
-     {n}
-   {. b.\\n}
+     {normal_text:n}
+   {normal_text:. b.\\n}
   {empty_line:\\n}
   *paragraph C4
    *@ref C2 l7
@@ -59,49 +59,49 @@ $result_tree_text{'end_sentence_after_or_not_after_quoted_node'} = '*document_ro
     |EXTRA
     |node_content:A{0|0}
     |normalized:{c_002edd}
-     {c.dd}
+     {normal_text:c.dd}
     *brace_arg C2
      {spaces_before_argument: }
-     {n}
-   {. v.\\n}
+     {normal_text:n}
+   {normal_text:. v.\\n}
    *@ref C2 l8
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{c_002edD}
-     {c.dD}
+     {normal_text:c.dD}
     *brace_arg C2
      {spaces_before_argument: }
-     {n}
-   {. v.\\n}
+     {normal_text:n}
+   {normal_text:. v.\\n}
   {empty_line:\\n}
   *@anchor C1 l10
   |EXTRA
   |identifier:{aaa}
   |is_target:{1}
    *brace_arg C1
-    {aaa}
+    {normal_text:aaa}
   {spaces_after_close_brace:\\n}
   *@anchor C1 l11
   |EXTRA
   |identifier:{aaB}
   |is_target:{1}
    *brace_arg C1
-    {aaB}
+    {normal_text:aaB}
   {spaces_after_close_brace:\\n}
   *@anchor C1 l12
   |EXTRA
   |identifier:{c_002edd}
   |is_target:{1}
    *brace_arg C1
-    {c.dd}
+    {normal_text:c.dd}
   {spaces_after_close_brace:\\n}
   *@anchor C1 l13
   |EXTRA
   |identifier:{c_002edD}
   |is_target:{1}
    *brace_arg C1
-    {c.dD}
+    {normal_text:c.dD}
   {spaces_after_close_brace:\\n}
 ';
 

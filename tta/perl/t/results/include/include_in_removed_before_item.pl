@@ -27,7 +27,7 @@ $result_tree_text{'include_in_removed_before_item'} = '*document_root C1
       >|text_arg:{only_comment.texi}
        >*line_arg C3
         >{spaces_before_argument: }
-        >{only_comment.texi}
+        >{normal_text:only_comment.texi}
         >{spaces_after_argument:\\n}
       *line_arg C3
        {spaces_before_argument: }
@@ -43,14 +43,14 @@ $result_tree_text{'include_in_removed_before_item'} = '*document_root C1
      *@item C1 l4
       *line_arg C3
        {spaces_before_argument: }
-       {FOO}
+       {normal_text:FOO}
        {spaces_after_argument:\\n}
    *@end C1 l5
    |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
-     {table}
+     {normal_text:table}
      {spaces_after_argument:\\n}
 ';
 

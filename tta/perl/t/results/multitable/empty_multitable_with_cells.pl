@@ -20,22 +20,22 @@ $result_tree_text{'empty_multitable_with_cells'} = '*document_root C1
    *before_item C8
     {ignorable_spaces_after_command: }
     *paragraph C1
-     {item in empty multitable }
+     {normal_text:item in empty multitable }
     {ignorable_spaces_after_command: }
     *paragraph C1
-     {tab in empty m }
+     {normal_text:tab in empty m }
     {ignorable_spaces_after_command: }
     *paragraph C1
-     {second tab in empty m\\n}
+     {normal_text:second tab in empty m\\n}
     {ignorable_spaces_after_command: }
     *paragraph C1
-     {item in empty m\\n}
+     {normal_text:item in empty m\\n}
    *@end C1 l4
    |EXTRA
    |text_arg:{multitable}
     *line_arg C3
      {spaces_before_argument: }
-     {multitable}
+     {normal_text:multitable}
      {spaces_after_argument:\\n}
 ';
 

@@ -12,19 +12,19 @@ $result_tree_text{'comments_in_example'} = '*document_root C1
  *before_node_section C9
   *preamble_before_content
   *paragraph C1
-   {Example with comments 2 lines\\n}
+   {normal_text:Example with comments 2 lines\\n}
   *@example C3 l2
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument: \\n}
    *preformatted C4
-    {line }
+    {normal_text:line }
     *@c C1
      *line_arg C3
       {spaces_before_argument: }
       {rawline_text:comment}
       {spaces_after_argument:\\n}
-    {second line }
+    {normal_text:second line }
     *@c C1
      *line_arg C3
       {spaces_before_argument: }
@@ -35,17 +35,17 @@ $result_tree_text{'comments_in_example'} = '*document_root C1
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {Example with comments 1 line\\n}
+   {normal_text:Example with comments 1 line\\n}
   *@example C3 l8
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C2
-    {line }
+    {normal_text:line }
     *@c C1
      *line_arg C3
       {spaces_before_argument: }
@@ -56,30 +56,30 @@ $result_tree_text{'comments_in_example'} = '*document_root C1
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {Example with newline after comment\\n}
+   {normal_text:Example with newline after comment\\n}
   *@example C3 l13
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C4
-    {line }
+    {normal_text:line }
     *@c C1
      *line_arg C3
       {spaces_before_argument: }
       {rawline_text:comment}
       {spaces_after_argument:\\n}
     {empty_line:\\n}
-    {second line\\n}
+    {normal_text:second line\\n}
    *@end C1 l17
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
 ';
 

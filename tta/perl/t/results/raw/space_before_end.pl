@@ -16,14 +16,14 @@ $result_tree_text{'space_before_end'} = '*document_root C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *rawpreformatted C2
-     {in tex\\n}
-     {    }
+     {normal_text:in tex\\n}
+     {normal_text:    }
     *@end C1 l3
     |EXTRA
     |text_arg:{tex}
      *line_arg C3
       {spaces_before_argument:  }
-      {tex}
+      {normal_text:tex}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *@verbatim C4 l5
@@ -37,7 +37,7 @@ $result_tree_text{'space_before_end'} = '*document_root C1
    |text_arg:{verbatim}
     *line_arg C3
      {spaces_before_argument:  }
-     {verbatim}
+     {normal_text:verbatim}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@html C4 l9
@@ -46,13 +46,13 @@ $result_tree_text{'space_before_end'} = '*document_root C1
      {spaces_before_argument:\\n}
    *elided_rawpreformatted C1
     {raw:in html\\n}
-   {   }
+   {normal_text:   }
    *@end C1 l11
    |EXTRA
    |text_arg:{html}
     *line_arg C3
      {spaces_before_argument: }
-     {html}
+     {normal_text:html}
      {spaces_after_argument:\\n}
 ';
 

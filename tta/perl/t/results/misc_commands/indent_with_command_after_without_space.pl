@@ -17,7 +17,7 @@ $result_tree_text{'indent_with_command_after_without_space'} = '*document_root C
   |indent:{1}
    *@AA C1 l1
     *brace_container
-   { b\\n}
+   {normal_text: b\\n}
 ';
 
 

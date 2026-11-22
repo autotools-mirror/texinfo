@@ -19,7 +19,7 @@ $result_tree_text{'anchor_in_empty_center'} = '*document_root C2
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@center C1 l3
@@ -32,11 +32,11 @@ $result_tree_text{'anchor_in_empty_center'} = '*document_root C2
     |identifier:{toto}
     |is_target:{1}
      *brace_arg C1
-      {toto}
+      {normal_text:toto}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {a\\n}
+   {normal_text:a\\n}
   {empty_line:\\n}
   *@center C1 l7
    *line_arg C5
@@ -48,7 +48,7 @@ $result_tree_text{'anchor_in_empty_center'} = '*document_root C2
     |identifier:{titi}
     |is_target:{1}
      *brace_arg C1
-      {titi}
+      {normal_text:titi}
     *@w C1 l7
      *brace_container
     {spaces_after_argument:\\n}

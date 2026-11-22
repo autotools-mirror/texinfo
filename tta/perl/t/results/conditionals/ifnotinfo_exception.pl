@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'ifnotinfo_exception'} = '*document_root C1
  *before_node_section C1
   *preamble_before_content C1
-   {}
+   {normal_text:}
    >SOURCEMARKS
    >ignored_conditional_block<1>
     >*@ifnotinfo C3 l1
@@ -24,7 +24,7 @@ $result_tree_text{'ifnotinfo_exception'} = '*document_root C1
      >|text_arg:{ifnotinfo}
       >*line_arg C3
        >{spaces_before_argument: }
-       >{ifnotinfo}
+       >{normal_text:ifnotinfo}
        >{spaces_after_argument:\\n}
 ';
 

@@ -21,7 +21,7 @@ $result_tree_text{'only_special_spaces_node'} = '*document_root C16
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 only_special_spaces_node.texi:l3 {top}
  |EXTRA
@@ -30,7 +30,7 @@ $result_tree_text{'only_special_spaces_node'} = '*document_root C16
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 only_special_spaces_node.texi:l5 {   }
@@ -41,7 +41,7 @@ $result_tree_text{'only_special_spaces_node'} = '*document_root C16
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {   }
+    {normal_text:   }
     {spaces_after_argument:\\n}
  *@chapter C2 only_special_spaces_node.texi:l6 {EN QUAD| | EM QUAD| | EN SPACE| |}
  |EXTRA
@@ -51,7 +51,7 @@ $result_tree_text{'only_special_spaces_node'} = '*document_root C16
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {EN QUAD| | EM QUAD| | EN SPACE| |}
+    {normal_text:EN QUAD| | EM QUAD| | EN SPACE| |}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 only_special_spaces_node.texi:l8
@@ -68,7 +68,7 @@ $result_tree_text{'only_special_spaces_node'} = '*document_root C16
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {CHARACTER TABULATION|\\t| FORM FEED|\\f| LINE TABULATION||}
+    {normal_text:CHARACTER TABULATION|\\t| FORM FEED|\\f| LINE TABULATION||}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 only_special_spaces_node.texi:l11
@@ -85,7 +85,7 @@ $result_tree_text{'only_special_spaces_node'} = '*document_root C16
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {CARRIAGE RETURN|'."\r".'|}
+    {normal_text:CARRIAGE RETURN|'."\r".'|}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 only_special_spaces_node.texi:l14 {  }
@@ -96,7 +96,7 @@ $result_tree_text{'only_special_spaces_node'} = '*document_root C16
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {  }
+    {normal_text:  }
     {spaces_after_argument:\\n}
  *@chapter C4 only_special_spaces_node.texi:l15 {NO-BREAK SPACE| |}
  |EXTRA
@@ -106,7 +106,7 @@ $result_tree_text{'only_special_spaces_node'} = '*document_root C16
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {NO-BREAK SPACE| |}
+    {normal_text:NO-BREAK SPACE| |}
     {spaces_after_argument:\\n}
   *@c C1
    *line_arg C3
@@ -127,7 +127,7 @@ $result_tree_text{'only_special_spaces_node'} = '*document_root C16
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {᠎ }
+    {normal_text:᠎ }
     {spaces_after_argument:\\n}
  *@chapter C4 only_special_spaces_node.texi:l20 {EM SPACE| |}
  |EXTRA
@@ -137,7 +137,7 @@ $result_tree_text{'only_special_spaces_node'} = '*document_root C16
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {EM SPACE| |}
+    {normal_text:EM SPACE| |}
     {spaces_after_argument:\\n}
   *@c C1
    *line_arg C3
@@ -158,7 +158,7 @@ $result_tree_text{'only_special_spaces_node'} = '*document_root C16
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {         　}
+    {normal_text:         　}
     {spaces_after_argument:\\n}
  *@chapter C8 only_special_spaces_node.texi:l25 {THREE-PER-EM SPACE| | FOUR-PER-EM SPACE| | SIX-PER-EM SPACE| | PUNCTUATION SPACE| | THIN SPACE| | HAIR SPACE| | NARROW NO-BREAK SPACE| | IDEOGRAPHIC SPACE|　|}
  |EXTRA
@@ -168,7 +168,7 @@ $result_tree_text{'only_special_spaces_node'} = '*document_root C16
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {THREE-PER-EM SPACE| | FOUR-PER-EM SPACE| | SIX-PER-EM SPACE| | PUNCTUATION SPACE| | THIN SPACE| | HAIR SPACE| | NARROW NO-BREAK SPACE| | IDEOGRAPHIC SPACE|　|}
+    {normal_text:THREE-PER-EM SPACE| | FOUR-PER-EM SPACE| | SIX-PER-EM SPACE| | PUNCTUATION SPACE| | THIN SPACE| | HAIR SPACE| | NARROW NO-BREAK SPACE| | IDEOGRAPHIC SPACE|　|}
     {spaces_after_argument:\\n}
   *@c C1
    *line_arg C3

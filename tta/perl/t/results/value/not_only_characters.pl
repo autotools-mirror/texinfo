@@ -20,12 +20,12 @@ $result_tree_text{'not_only_characters'} = '*document_root C1
      {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C1
-   {Say hh.\\n}
+   {normal_text:Say hh.\\n}
    >SOURCEMARKS
    >value_expansion<start;1><p:4>{hh}
     >*@value C1
      >*brace_container C1
-      >{-e_\'::;}
+      >{normal_text:-e_\'::;}
    >value_expansion<end;1><p:6>
 ';
 

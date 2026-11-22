@@ -23,7 +23,7 @@ $result_tree_text{'api_doc_with_linemacro'} = '*document_root C1
     |text_arg:{linemacro}
      *line_arg C3
       {spaces_before_argument: }
-      {linemacro}
+      {normal_text:linemacro}
       {spaces_after_argument:\\n}
    *@linemacro C3 l4
    |EXTRA
@@ -37,7 +37,7 @@ $result_tree_text{'api_doc_with_linemacro'} = '*document_root C1
     |text_arg:{linemacro}
      *line_arg C3
       {spaces_before_argument: }
-      {linemacro}
+      {normal_text:linemacro}
       {spaces_after_argument:\\n}
    *@linemacro C3 l7
    |EXTRA
@@ -51,7 +51,7 @@ $result_tree_text{'api_doc_with_linemacro'} = '*document_root C1
     |text_arg:{linemacro}
      *line_arg C3
       {spaces_before_argument: }
-      {linemacro}
+      {normal_text:linemacro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@set C1
@@ -82,51 +82,51 @@ $result_tree_text{'api_doc_with_linemacro'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {Function}
+       {normal_text:Function}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {fft.fft}
+       {normal_text:fft.fft}
      {spaces: }
      {delimiter:(}
      *def_arg C1
       *def_line_arg C1
-       {a}
+       {normal_text:a}
      {delimiter:,}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {n=}
+       {normal_text:n=}
      *def_arg C1
       *def_line_arg C1
        *@code C1 l15
         *brace_container C1
-         {None}
+         {normal_text:None}
      {delimiter:,}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {axis=}
+       {normal_text:axis=}
      *def_arg C1
       *def_line_arg C1
        *@code C1 l15
         *brace_container C1
-         {-1}
+         {normal_text:-1}
      {delimiter:,}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {norm=}
+       {normal_text:norm=}
      *def_arg C1
       *def_line_arg C1
        *@code C1 l15
         *brace_container C1
-         {None}
+         {normal_text:None}
      {delimiter:)}
      {spaces_after_argument:\\n}
    *def_item C4
     *paragraph C1
-     {Compute the one-dimensional discrete Fourier Transform.\\n}
+     {normal_text:Compute the one-dimensional discrete Fourier Transform.\\n}
     {empty_line:\\n}
     *@defblock C12 l18
      *arguments_line C1
@@ -150,13 +150,13 @@ $result_tree_text{'api_doc_with_linemacro'} = '*document_root C1
        {spaces_before_argument: }
        *def_category C1
         *def_line_arg C1
-         {Parameter}
+         {normal_text:Parameter}
        {spaces: }
        *def_name C1
         *def_line_arg C1
          *@var C1 l19:@param
           *brace_container C1
-           {a}
+           {normal_text:a}
        {spaces: }
        *def_arg C1
         *def_line_arg C1
@@ -164,11 +164,11 @@ $result_tree_text{'api_doc_with_linemacro'} = '*document_root C1
          >SOURCEMARKS
          >linemacro_expansion<end;1>
           *brace_container C1
-           { : array_like}
+           {normal_text: : array_like}
        {spaces_after_argument:\\n}
      *def_item C2
       *paragraph C1
-       {Input array, can be complex.\\n}
+       {normal_text:Input array, can be complex.\\n}
       {empty_line:\\n}
       >SOURCEMARKS
       >linemacro_expansion<start;2><p:1>
@@ -188,13 +188,13 @@ $result_tree_text{'api_doc_with_linemacro'} = '*document_root C1
        {spaces_before_argument: }
        *def_category C1
         *def_line_arg C1
-         {Parameter}
+         {normal_text:Parameter}
        {spaces: }
        *def_name C1
         *def_line_arg C1
          *@var C1 l22:@param
           *brace_container C1
-           {n}
+           {normal_text:n}
        {spaces: }
        *def_arg C1
         *def_line_arg C1
@@ -202,16 +202,16 @@ $result_tree_text{'api_doc_with_linemacro'} = '*document_root C1
          >SOURCEMARKS
          >linemacro_expansion<end;2>
           *brace_container C1
-           { : int, optional}
+           {normal_text: : int, optional}
        {spaces_after_argument:\\n}
      *def_item C2
       *paragraph C4
-       {Length of the transformed axis of the output.\\n}
-       {If }
+       {normal_text:Length of the transformed axis of the output.\\n}
+       {normal_text:If }
        *@var C1 l24
         *brace_container C1
-         {n}
-       { is smaller than the length of the input, the input is cropped.\\n}
+         {normal_text:n}
+       {normal_text: is smaller than the length of the input, the input is cropped.\\n}
       {empty_line:\\n}
       >SOURCEMARKS
       >linemacro_expansion<start;3><p:1>
@@ -231,13 +231,13 @@ $result_tree_text{'api_doc_with_linemacro'} = '*document_root C1
        {spaces_before_argument: }
        *def_category C1
         *def_line_arg C1
-         {Parameter}
+         {normal_text:Parameter}
        {spaces: }
        *def_name C1
         *def_line_arg C1
          *@var C1 l26:@param
           *brace_container C1
-           {axis}
+           {normal_text:axis}
        {spaces: }
        *def_arg C1
         *def_line_arg C1
@@ -245,11 +245,11 @@ $result_tree_text{'api_doc_with_linemacro'} = '*document_root C1
          >SOURCEMARKS
          >linemacro_expansion<end;3>
           *brace_container C1
-           { : int, optional}
+           {normal_text: : int, optional}
        {spaces_after_argument:\\n}
      *def_item C2
       *paragraph C1
-       {Axis over which to compute the FFT.\\n}
+       {normal_text:Axis over which to compute the FFT.\\n}
       {empty_line:\\n}
       >SOURCEMARKS
       >linemacro_expansion<start;4><p:1>
@@ -269,13 +269,13 @@ $result_tree_text{'api_doc_with_linemacro'} = '*document_root C1
        {spaces_before_argument: }
        *def_category C1
         *bracketed_arg C1 l29:@returns
-         {Return Value}
+         {normal_text:Return Value}
        {spaces: }
        *def_name C1
         *def_line_arg C1
          *@var C1 l29:@returns
           *brace_container C1
-           {out}
+           {normal_text:out}
        {spaces: }
        *def_arg C1
         *def_line_arg C1
@@ -283,11 +283,11 @@ $result_tree_text{'api_doc_with_linemacro'} = '*document_root C1
          >SOURCEMARKS
          >linemacro_expansion<end;4>
           *brace_container C1
-           { : complex ndarray}
+           {normal_text: : complex ndarray}
        {spaces_after_argument:\\n}
      *def_item C2
       *paragraph C1
-       {The truncated or zero-padded input.\\n}
+       {normal_text:The truncated or zero-padded input.\\n}
       {empty_line:\\n}
       >SOURCEMARKS
       >linemacro_expansion<start;5><p:1>
@@ -304,32 +304,32 @@ $result_tree_text{'api_doc_with_linemacro'} = '*document_root C1
        {spaces_before_argument: }
        *def_category C1
         *bracketed_arg C1 l32:@raises
-         {Exception}
+         {normal_text:Exception}
        {spaces: }
        *def_name C1
         *def_line_arg C1
-         {IndexError}
+         {normal_text:IndexError}
          >SOURCEMARKS
          >linemacro_expansion<end;5><p:10>
        {spaces_after_argument:\\n}
      *def_item C2
       *paragraph C5
-       {If }
+       {normal_text:If }
        *@var C1 l33
         *brace_container C1
-         {axis}
-       { is not a valid axis of }
+         {normal_text:axis}
+       {normal_text: is not a valid axis of }
        *@var C1 l33
         *brace_container C1
-         {a}
-       {.\\n}
+         {normal_text:a}
+       {normal_text:.\\n}
       {empty_line:\\n}
      *@end C1 l35
      |EXTRA
      |text_arg:{defblock}
       *line_arg C3
        {spaces_before_argument: }
-       {defblock}
+       {normal_text:defblock}
        {spaces_after_argument:\\n}
     {empty_line:\\n}
    *@end C1 l37
@@ -337,7 +337,7 @@ $result_tree_text{'api_doc_with_linemacro'} = '*document_root C1
    |text_arg:{defblock}
     *line_arg C3
      {spaces_before_argument: }
-     {defblock}
+     {normal_text:defblock}
      {spaces_after_argument:\\n}
 ';
 

@@ -16,16 +16,16 @@ $result_tree_text{'bad_line'} = '*document_root C1
    *@alias C1 l2
     *line_arg C3
      {spaces_before_argument: }
-     {garbage-on-line =cmd garbage}
+     {normal_text:garbage-on-line =cmd garbage}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@alias C1 l4
     *line_arg C4
      {spaces_before_argument: }
-     {garbage-on-line =cmd }
+     {normal_text:garbage-on-line =cmd }
      *@code C1 l4
       *brace_container C1
-       {in code}
+       {normal_text:in code}
      {spaces_after_argument:\\n}
 ';
 

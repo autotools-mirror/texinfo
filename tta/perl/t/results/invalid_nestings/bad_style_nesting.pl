@@ -14,19 +14,19 @@ $result_tree_text{'bad_style_nesting'} = '*document_root C1
   *paragraph C1
    *@code C1 l1
     *brace_container C1
-     {\\n}
+     {normal_text:\\n}
   *@quotation C3 l2
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C1
-    {in quotation\\n}
+    {normal_text:in quotation\\n}
    *@end C1 l4
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }
-     {quotation}
+     {normal_text:quotation}
      {spaces_after_argument:\\n}
 ';
 

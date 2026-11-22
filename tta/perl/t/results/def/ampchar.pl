@@ -21,22 +21,22 @@ $result_tree_text{'ampchar'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *bracketed_arg C1 l1
-       {Constructor}
+       {normal_text:Constructor}
      {spaces: }
      *def_class C1
       *def_line_arg C1
-       {a}
+       {normal_text:a}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {b}
+       {normal_text:b}
      {spaces: }
      {delimiter:(}
      *def_arg C1
       *def_line_arg C1
        *@code C1 l1
         *brace_container C2
-         {const std::vector<int>}
+         {normal_text:const std::vector<int>}
          *@&
      {delimiter:)}
      {spaces_after_argument:\\n}
@@ -45,21 +45,21 @@ $result_tree_text{'ampchar'} = '*document_root C1
    |text_arg:{defop}
     *line_arg C3
      {spaces_before_argument: }
-     {defop}
+     {normal_text:defop}
      {spaces_after_argument:\\n}
   *paragraph C11
-   {& }
+   {normal_text:& }
    *@&
-   { }
+   {normal_text: }
    *@ampchar C1 l3
     *brace_container
-   { }
+   {normal_text: }
    *@{
-   { }
+   {normal_text: }
    *@}
-   { }
+   {normal_text: }
    *@@
-   {\\n}
+   {normal_text:\\n}
 ';
 
 

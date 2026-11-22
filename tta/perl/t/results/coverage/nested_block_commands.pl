@@ -16,26 +16,26 @@ $result_tree_text{'nested_block_commands'} = '*document_root C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C1
-    {In group\\n}
+    {normal_text:In group\\n}
    *@quotation C3 l3
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *paragraph C1
-     {in quotation\\n}
+     {normal_text:in quotation\\n}
     *@end C1 l5
     |EXTRA
     |text_arg:{quotation}
      *line_arg C3
       {spaces_before_argument: }
-      {quotation}
+      {normal_text:quotation}
       {spaces_after_argument:\\n}
    *@end C1 l6
    |EXTRA
    |text_arg:{group}
     *line_arg C3
      {spaces_before_argument: }
-     {group}
+     {normal_text:group}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@group C3 l8
@@ -47,20 +47,20 @@ $result_tree_text{'nested_block_commands'} = '*document_root C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *paragraph C1
-     {in quotation\\n}
+     {normal_text:in quotation\\n}
     *@end C1 l11
     |EXTRA
     |text_arg:{quotation}
      *line_arg C3
       {spaces_before_argument: }
-      {quotation}
+      {normal_text:quotation}
       {spaces_after_argument:\\n}
    *@end C1 l12
    |EXTRA
    |text_arg:{group}
     *line_arg C3
      {spaces_before_argument: }
-     {group}
+     {normal_text:group}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@group C5 l14
@@ -68,28 +68,28 @@ $result_tree_text{'nested_block_commands'} = '*document_root C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C1
-    {In group\\n}
+    {normal_text:In group\\n}
    *@quotation C3 l16
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *paragraph C1
-     {in quotation\\n}
+     {normal_text:in quotation\\n}
     *@end C1 l18
     |EXTRA
     |text_arg:{quotation}
      *line_arg C3
       {spaces_before_argument: }
-      {quotation}
+      {normal_text:quotation}
       {spaces_after_argument:\\n}
    *paragraph C1
-    {after quotation\\n}
+    {normal_text:after quotation\\n}
    *@end C1 l20
    |EXTRA
    |text_arg:{group}
     *line_arg C3
      {spaces_before_argument: }
-     {group}
+     {normal_text:group}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@group C5 l22
@@ -98,26 +98,26 @@ $result_tree_text{'nested_block_commands'} = '*document_root C1
      {spaces_before_argument:\\n}
    {empty_line:\\n}
    *paragraph C1
-    {In group sp b\\n}
+    {normal_text:In group sp b\\n}
    *@quotation C3 l25
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *paragraph C1
-     {in quotation\\n}
+     {normal_text:in quotation\\n}
     *@end C1 l27
     |EXTRA
     |text_arg:{quotation}
      *line_arg C3
       {spaces_before_argument: }
-      {quotation}
+      {normal_text:quotation}
       {spaces_after_argument:\\n}
    *@end C1 l28
    |EXTRA
    |text_arg:{group}
     *line_arg C3
      {spaces_before_argument: }
-     {group}
+     {normal_text:group}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@group C6 l30
@@ -126,27 +126,27 @@ $result_tree_text{'nested_block_commands'} = '*document_root C1
      {spaces_before_argument:\\n}
    {empty_line:\\n}
    *paragraph C1
-    {In group sp b a\\n}
+    {normal_text:In group sp b a\\n}
    {empty_line:\\n}
    *@quotation C3 l34
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *paragraph C1
-     {in quotation\\n}
+     {normal_text:in quotation\\n}
     *@end C1 l36
     |EXTRA
     |text_arg:{quotation}
      *line_arg C3
       {spaces_before_argument: }
-      {quotation}
+      {normal_text:quotation}
       {spaces_after_argument:\\n}
    *@end C1 l37
    |EXTRA
    |text_arg:{group}
     *line_arg C3
      {spaces_before_argument: }
-     {group}
+     {normal_text:group}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@group C5 l39
@@ -154,27 +154,27 @@ $result_tree_text{'nested_block_commands'} = '*document_root C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C1
-    {In group sp a\\n}
+    {normal_text:In group sp a\\n}
    {empty_line:\\n}
    *@quotation C3 l42
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *paragraph C1
-     {in quotation\\n}
+     {normal_text:in quotation\\n}
     *@end C1 l44
     |EXTRA
     |text_arg:{quotation}
      *line_arg C3
       {spaces_before_argument: }
-      {quotation}
+      {normal_text:quotation}
       {spaces_after_argument:\\n}
    *@end C1 l45
    |EXTRA
    |text_arg:{group}
     *line_arg C3
      {spaces_before_argument: }
-     {group}
+     {normal_text:group}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@group C3 l47
@@ -187,20 +187,20 @@ $result_tree_text{'nested_block_commands'} = '*document_root C1
       {spaces_before_argument:\\n}
     {empty_line:\\n}
     *paragraph C1
-     {in quotation sp b\\n}
+     {normal_text:in quotation sp b\\n}
     *@end C1 l51
     |EXTRA
     |text_arg:{quotation}
      *line_arg C3
       {spaces_before_argument: }
-      {quotation}
+      {normal_text:quotation}
       {spaces_after_argument:\\n}
    *@end C1 l52
    |EXTRA
    |text_arg:{group}
     *line_arg C3
      {spaces_before_argument: }
-     {group}
+     {normal_text:group}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@group C3 l54
@@ -213,21 +213,21 @@ $result_tree_text{'nested_block_commands'} = '*document_root C1
       {spaces_before_argument:\\n}
     {empty_line:\\n}
     *paragraph C1
-     {in quotation sp b a\\n}
+     {normal_text:in quotation sp b a\\n}
     {empty_line:\\n}
     *@end C1 l59
     |EXTRA
     |text_arg:{quotation}
      *line_arg C3
       {spaces_before_argument: }
-      {quotation}
+      {normal_text:quotation}
       {spaces_after_argument:\\n}
    *@end C1 l60
    |EXTRA
    |text_arg:{group}
     *line_arg C3
      {spaces_before_argument: }
-     {group}
+     {normal_text:group}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@group C3 l62
@@ -239,21 +239,21 @@ $result_tree_text{'nested_block_commands'} = '*document_root C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *paragraph C1
-     {in quotation sp a\\n}
+     {normal_text:in quotation sp a\\n}
     {empty_line:\\n}
     *@end C1 l66
     |EXTRA
     |text_arg:{quotation}
      *line_arg C3
       {spaces_before_argument: }
-      {quotation}
+      {normal_text:quotation}
       {spaces_after_argument:\\n}
    *@end C1 l67
    |EXTRA
    |text_arg:{group}
     *line_arg C3
      {spaces_before_argument: }
-     {group}
+     {normal_text:group}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@group C5 l69
@@ -265,23 +265,23 @@ $result_tree_text{'nested_block_commands'} = '*document_root C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *paragraph C1
-     {in quotation\\n}
+     {normal_text:in quotation\\n}
     *@end C1 l72
     |EXTRA
     |text_arg:{quotation}
      *line_arg C3
       {spaces_before_argument: }
-      {quotation}
+      {normal_text:quotation}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *paragraph C1
-    {After quotation sp b\\n}
+    {normal_text:After quotation sp b\\n}
    *@end C1 l75
    |EXTRA
    |text_arg:{group}
     *line_arg C3
      {spaces_before_argument: }
-     {group}
+     {normal_text:group}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@group C5 l77
@@ -293,23 +293,23 @@ $result_tree_text{'nested_block_commands'} = '*document_root C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *paragraph C1
-     {in quotation\\n}
+     {normal_text:in quotation\\n}
     *@end C1 l80
     |EXTRA
     |text_arg:{quotation}
      *line_arg C3
       {spaces_before_argument: }
-      {quotation}
+      {normal_text:quotation}
       {spaces_after_argument:\\n}
    *paragraph C1
-    {After quotation sp a\\n}
+    {normal_text:After quotation sp a\\n}
    {empty_line:\\n}
    *@end C1 l83
    |EXTRA
    |text_arg:{group}
     *line_arg C3
      {spaces_before_argument: }
-     {group}
+     {normal_text:group}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@group C6 l85
@@ -321,24 +321,24 @@ $result_tree_text{'nested_block_commands'} = '*document_root C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *paragraph C1
-     {in quotation\\n}
+     {normal_text:in quotation\\n}
     *@end C1 l88
     |EXTRA
     |text_arg:{quotation}
      *line_arg C3
       {spaces_before_argument: }
-      {quotation}
+      {normal_text:quotation}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *paragraph C1
-    {After quotation sp b a\\n}
+    {normal_text:After quotation sp b a\\n}
    {empty_line:\\n}
    *@end C1 l92
    |EXTRA
    |text_arg:{group}
     *line_arg C3
      {spaces_before_argument: }
-     {group}
+     {normal_text:group}
      {spaces_after_argument:\\n}
 ';
 

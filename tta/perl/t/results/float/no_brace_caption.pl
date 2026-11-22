@@ -19,7 +19,7 @@ $result_tree_text{'no_brace_caption'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l2 {top}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'no_brace_caption'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l4 {chap}
@@ -39,7 +39,7 @@ $result_tree_text{'no_brace_caption'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
  *@chapter C5 l5 {Chap}
  |EXTRA
@@ -49,7 +49,7 @@ $result_tree_text{'no_brace_caption'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chap}
+    {normal_text:Chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@float C4 l7
@@ -62,13 +62,13 @@ $result_tree_text{'no_brace_caption'} = '*document_root C5
    *arguments_line C2
     *block_line_arg C2
      {spaces_before_argument: }
-     {a}
+     {normal_text:a}
     *block_line_arg C3
      {spaces_before_argument: }
-     {b}
+     {normal_text:b}
      {spaces_after_argument:\\n}
    *paragraph C1
-    {HH\\n}
+    {normal_text:HH\\n}
    *@caption C1 l9
     {spaces_after_cmd_before_arg:\\n}
    *@end C1 l10
@@ -76,7 +76,7 @@ $result_tree_text{'no_brace_caption'} = '*document_root C5
    |text_arg:{float}
     *line_arg C3
      {spaces_before_argument: }
-     {float}
+     {normal_text:float}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@listoffloats C1 l12
@@ -85,7 +85,7 @@ $result_tree_text{'no_brace_caption'} = '*document_root C5
   |global_command_number:{1}
    *line_arg C3
     {spaces_before_argument: }
-    {a}
+    {normal_text:a}
     {spaces_after_argument:\\n}
 ';
 

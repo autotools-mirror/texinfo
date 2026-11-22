@@ -26,14 +26,14 @@ $result_tree_text{'table_command_comment'} = '*document_root C1
      *@item C1 l2
       *line_arg C3
        {spaces_before_argument: }
-       {item}
+       {normal_text:item}
        {spaces_after_argument:\\n}
    *@end C1 l3
    |EXTRA
    |text_arg:{table}
     *line_arg C2
      {spaces_before_argument: }
-     {table}
+     {normal_text:table}
 ';
 
 

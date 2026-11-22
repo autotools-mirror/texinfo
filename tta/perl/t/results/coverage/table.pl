@@ -24,23 +24,23 @@ $result_tree_text{'table'} = '*document_root C1
      *@item C1 l3
       *line_arg C3
        {spaces_before_argument: }
-       {table item}
+       {normal_text:table item}
        {spaces_after_argument:\\n}
      *@itemx C1 l4
       *line_arg C3
        {spaces_before_argument: }
-       {table itemx}
+       {normal_text:table itemx}
        {spaces_after_argument:\\n}
     *table_definition C2
      {empty_line:\\n}
      *paragraph C1
-      {In table\\n}
+      {normal_text:In table\\n}
    *@end C1 l7
    |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
-     {table}
+     {normal_text:table}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@vtable C4 l9
@@ -64,7 +64,7 @@ $result_tree_text{'table'} = '*document_root C1
     |index_entry:I{cp,1}
      *line_arg C3
       {spaces_before_argument: }
-      {index entry}
+      {normal_text:index entry}
       {spaces_after_argument:\\n}
     {empty_line:\\n}
    *table_entry C2
@@ -74,7 +74,7 @@ $result_tree_text{'table'} = '*document_root C1
      |index_entry:I{vr,1}
       *line_arg C3
        {spaces_before_argument: }
-       {vtable item}
+       {normal_text:vtable item}
        {spaces_after_argument:\\n}
      *inter_item C1
       *@c C1
@@ -87,14 +87,14 @@ $result_tree_text{'table'} = '*document_root C1
      |index_entry:I{ky,1}
       *line_arg C3
        {spaces_before_argument: }
-       {key}
+       {normal_text:key}
        {spaces_after_argument:\\n}
      *@itemx C1 l16
      |EXTRA
      |index_entry:I{vr,2}
       *line_arg C4
        {spaces_before_argument: }
-       {itemx vtable}
+       {normal_text:itemx vtable}
        {spaces_after_argument: }
        *@comment C1
         *line_arg C3
@@ -108,7 +108,7 @@ $result_tree_text{'table'} = '*document_root C1
    |text_arg:{vtable}
     *line_arg C3
      {spaces_before_argument: }
-     {vtable}
+     {normal_text:vtable}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@table C3 l20
@@ -122,14 +122,14 @@ $result_tree_text{'table'} = '*document_root C1
      *@item C1 l21
       *line_arg C3
        {spaces_before_argument: }
-       {unknown command after indicating command}
+       {normal_text:unknown command after indicating command}
        {spaces_after_argument:\\n}
    *@end C1 l22
    |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
-     {table}
+     {normal_text:table}
      {spaces_after_argument:\\n}
 ';
 

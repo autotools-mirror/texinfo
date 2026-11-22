@@ -25,13 +25,13 @@ $result_tree_text{'novalidate'} = '*document_root C2
   *arguments_line C2
    *line_arg C2
     {spaces_before_argument: }
-    {first}
+    {normal_text:first}
    *line_arg C3
    |EXTRA
    |node_content:A{1|1}
    |normalized:{unknown-node}
     {spaces_before_argument: }
-    {unknown node}
+    {normal_text:unknown node}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C3 l6
@@ -44,17 +44,17 @@ $result_tree_text{'novalidate'} = '*document_root C2
     |EXTRA
     |node_content:A{0|0}
     |normalized:{not-a-node}
-     {not a node}
+     {normal_text:not a node}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l8
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
@@ -63,8 +63,8 @@ $result_tree_text{'novalidate'} = '*document_root C2
     |EXTRA
     |node_content:A{0|0}
     |normalized:{unknown-ref}
-     {unknown ref}
-   {.\\n}
+     {normal_text:unknown ref}
+   {normal_text:.\\n}
 ';
 
 

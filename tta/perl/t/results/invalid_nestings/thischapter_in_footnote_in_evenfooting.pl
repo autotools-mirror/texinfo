@@ -16,26 +16,26 @@ $result_tree_text{'thischapter_in_footnote_in_evenfooting'} = '*document_root C1
    *@evenfooting C1 l2
     *line_arg C8
      {spaces_before_argument: }
-     {aa }
+     {normal_text:aa }
      *@strong C1 l2
       *brace_container C2
-       {GG}
+       {normal_text:GG}
        *@footnote C1 l2
        |EXTRA
        |global_command_number:{1}
         *brace_command_context C1
          *paragraph C2
-          {bb }
+          {normal_text:bb }
           *@thischapter
-     { }
+     {normal_text: }
      *@|
-     { }
+     {normal_text: }
      *@footnote C1 l2
      |EXTRA
      |global_command_number:{2}
       *brace_command_context C1
        *paragraph C2
-        {cc }
+        {normal_text:cc }
         *@thissection
      {spaces_after_argument:\\n}
 ';

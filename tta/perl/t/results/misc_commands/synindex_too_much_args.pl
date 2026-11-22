@@ -14,7 +14,7 @@ $result_tree_text{'synindex_too_much_args'} = '*document_root C1
    *@syncodeindex C1 l1
     *line_arg C3
      {spaces_before_argument: }
-     {cp fn    truc}
+     {normal_text:cp fn    truc}
      {spaces_after_argument:\\n}
 ';
 

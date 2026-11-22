@@ -20,16 +20,16 @@ $result_tree_text{'multitable_bracketed_no_inter_space_prototype'} = '*document_
     *block_line_arg C4
      {spaces_before_argument: }
      *bracketed_arg C1 l2
-      {a}
+      {normal_text:a}
      *bracketed_arg C1 l2
-      {b}
+      {normal_text:b}
      {spaces_after_argument:\\n}
    *@end C1 l3
    |EXTRA
    |text_arg:{multitable}
     *line_arg C3
      {spaces_before_argument: }
-     {multitable}
+     {normal_text:multitable}
      {spaces_after_argument:\\n}
 ';
 

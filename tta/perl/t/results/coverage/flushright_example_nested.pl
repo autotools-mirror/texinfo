@@ -20,21 +20,21 @@ $result_tree_text{'flushright_example_nested'} = '*document_root C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *preformatted C2
-     {in   --- flushright\\n}
+     {normal_text:in   --- flushright\\n}
      {empty_line:\\n}
     *@end C1 l5
     |EXTRA
     |text_arg:{flushright}
      *line_arg C3
       {spaces_before_argument: }
-      {flushright}
+      {normal_text:flushright}
       {spaces_after_argument:\\n}
    *@end C1 l6
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@flushright C3 l8
@@ -46,22 +46,22 @@ $result_tree_text{'flushright_example_nested'} = '*document_root C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *preformatted C3
-     {in   --- example\\n}
+     {normal_text:in   --- example\\n}
      {empty_line:\\n}
-     {flush then example\\n}
+     {normal_text:flush then example\\n}
     *@end C1 l13
     |EXTRA
     |text_arg:{example}
      *line_arg C3
       {spaces_before_argument: }
-      {example}
+      {normal_text:example}
       {spaces_after_argument:\\n}
    *@end C1 l14
    |EXTRA
    |text_arg:{flushright}
     *line_arg C3
      {spaces_before_argument: }
-     {flushright}
+     {normal_text:flushright}
      {spaces_after_argument:\\n}
 ';
 

@@ -21,7 +21,7 @@ $result_tree_text{'float_without_type'} = '*document_root C2
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@float C3 l4
@@ -31,17 +31,17 @@ $result_tree_text{'float_without_type'} = '*document_root C2
    *arguments_line C2
     *block_line_arg C2
      {spaces_before_argument: }
-     {a}
+     {normal_text:a}
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C1
-    {aa\\n}
+    {normal_text:aa\\n}
    *@end C1 l6
    |EXTRA
    |text_arg:{float}
     *line_arg C3
      {spaces_before_argument: }
-     {float}
+     {normal_text:float}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@listoffloats C1 l8
@@ -50,7 +50,7 @@ $result_tree_text{'float_without_type'} = '*document_root C2
   |global_command_number:{1}
    *line_arg C3
     {spaces_before_argument: }
-    {a}
+    {normal_text:a}
     {spaces_after_argument:\\n}
 ';
 

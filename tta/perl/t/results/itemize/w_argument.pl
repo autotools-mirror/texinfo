@@ -25,8 +25,8 @@ $result_tree_text{'w_argument'} = '*document_root C1
     *paragraph C2
      *@option C1 l2
       *brace_container C1
-       {--build=}
-     { platform on which the program is compiled,\\n}
+       {normal_text:--build=}
+     {normal_text: platform on which the program is compiled,\\n}
    *@item C2 l3
    |EXTRA
    |item_number:{2}
@@ -34,14 +34,14 @@ $result_tree_text{'w_argument'} = '*document_root C1
     *paragraph C2
      *@option C1 l3
       *brace_container C1
-       {--target=}
-     { target platform on which the program is processed.\\n}
+       {normal_text:--target=}
+     {normal_text: target platform on which the program is processed.\\n}
    *@end C1 l4
    |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }
-     {itemize}
+     {normal_text:itemize}
      {spaces_after_argument:\\n}
 ';
 

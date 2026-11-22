@@ -22,7 +22,7 @@ $result_tree_text{'table_on_item_line'} = '*document_root C1
      *@item C1 l2
       *line_arg C3
        {spaces_before_argument: }
-       {item }
+       {normal_text:item }
        *@table C1 l2
         *arguments_line C1
          *block_line_arg C3
@@ -36,22 +36,22 @@ $result_tree_text{'table_on_item_line'} = '*document_root C1
      *@item C1 l3
       *line_arg C3
        {spaces_before_argument: }
-       {in nested table item}
+       {normal_text:in nested table item}
        {spaces_after_argument:\\n}
     *table_definition C2
      {spaces_before_paragraph:   }
      *paragraph C2
-      {in nested table line\\n}
-      {   }
+      {normal_text:in nested table line\\n}
+      {normal_text:   }
    *@end C1 l5
    |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
-     {table}
+     {normal_text:table}
      {spaces_after_argument:\\n}
   *paragraph C1
-   {in table line\\n}
+   {normal_text:in table line\\n}
 ';
 
 

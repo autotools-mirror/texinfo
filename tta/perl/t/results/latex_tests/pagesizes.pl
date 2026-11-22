@@ -14,7 +14,7 @@ $result_tree_text{'pagesizes'} = '*document_root C6
    *@pagesizes C1 l1
     *line_arg C3
      {spaces_before_argument: }
-     {200mm,150mm}
+     {normal_text:200mm,150mm}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *@node C1 l3 {Top}
@@ -25,7 +25,7 @@ $result_tree_text{'pagesizes'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l4 {section top}
  |EXTRA
@@ -34,7 +34,7 @@ $result_tree_text{'pagesizes'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {section top}
+    {normal_text:section top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l6 {chapter}
@@ -45,7 +45,7 @@ $result_tree_text{'pagesizes'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter}
+    {normal_text:chapter}
     {spaces_after_argument:\\n}
  *@chapter C4 l7 {Chapter}
  |EXTRA
@@ -55,13 +55,13 @@ $result_tree_text{'pagesizes'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chapter}
+    {normal_text:Chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@pagesizes C1 l9
    *line_arg C3
     {spaces_before_argument: }
-    {11.5in}
+    {normal_text:11.5in}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@chapter C5 l11 {other pagesizes}
@@ -74,19 +74,19 @@ $result_tree_text{'pagesizes'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {other pagesizes}
+    {normal_text:other pagesizes}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@pagesizes C1 l13
    *line_arg C3
     {spaces_before_argument: }
-    {, 130mm}
+    {normal_text:, 130mm}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@pagesizes C1 l15
    *line_arg C3
     {spaces_before_argument: }
-    {,}
+    {normal_text:,}
     {spaces_after_argument: \\n}
 ';
 

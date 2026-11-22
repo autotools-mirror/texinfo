@@ -21,7 +21,7 @@ $result_tree_text{'customize_informative_commands'} = '*document_root C2
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
 ';
 

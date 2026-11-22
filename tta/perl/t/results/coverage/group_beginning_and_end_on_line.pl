@@ -15,14 +15,14 @@ $result_tree_text{'group_beginning_and_end_on_line'} = '*document_root C1
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     {within}
+     {normal_text:within}
      {spaces_after_argument: }
    *@end C1 l1
    |EXTRA
    |text_arg:{group}
     *line_arg C3
      {spaces_before_argument: }
-     {group}
+     {normal_text:group}
      {spaces_after_argument:\\n}
 ';
 

@@ -25,14 +25,14 @@ $result_tree_text{'verbatim_in_smallformat'} = '*document_root C1
     |text_arg:{verbatim}
      *line_arg C3
       {spaces_before_argument: }
-      {verbatim}
+      {normal_text:verbatim}
       {spaces_after_argument:\\n}
    *@end C1 l5
    |EXTRA
    |text_arg:{smallformat}
     *line_arg C3
      {spaces_before_argument: }
-     {smallformat}
+     {normal_text:smallformat}
      {spaces_after_argument:\\n}
 ';
 

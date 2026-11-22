@@ -12,26 +12,26 @@ $result_tree_text{'test_sp'} = '*document_root C1
  *before_node_section C16
   *preamble_before_content
   *paragraph C1
-   {Para\\n}
+   {normal_text:Para\\n}
   *@sp C1 l2
   |EXTRA
   |misc_args:A{1}
    *line_arg C3
     {spaces_before_argument: }
-    {1}
+    {normal_text:1}
     {spaces_after_argument:\\n}
   *paragraph C4
-   {other para\\n}
-   {Now lone }
+   {normal_text:other para\\n}
+   {normal_text:Now lone }
    *@@
-   {sp:\\n}
+   {normal_text:sp:\\n}
   {empty_line:\\n}
   *@sp C1 l6
   |EXTRA
   |misc_args:A{1}
    *line_arg C3
     {spaces_before_argument: }
-    {1}
+    {normal_text:1}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@sp C1 l8
@@ -39,31 +39,31 @@ $result_tree_text{'test_sp'} = '*document_root C1
   |misc_args:A{2}
    *line_arg C3
     {spaces_before_argument: }
-    {2}
+    {normal_text:2}
     {spaces_after_argument:\\n}
   *paragraph C1
-   {Para after sp\\n}
+   {normal_text:Para after sp\\n}
   {empty_line:\\n}
   *paragraph C1
-   {A\\n}
+   {normal_text:A\\n}
   *@sp C1 l12
   |EXTRA
   |misc_args:A{2}
    *line_arg C3
     {spaces_before_argument: }
-    {2}
+    {normal_text:2}
     {spaces_after_argument:\\n}
   *paragraph C1
-   {B\\n}
+   {normal_text:B\\n}
   {empty_line:\\n}
   *paragraph C1
-   {sp after para\\n}
+   {normal_text:sp after para\\n}
   *@sp C1 l16
   |EXTRA
   |misc_args:A{1}
    *line_arg C3
     {spaces_before_argument: }
-    {1}
+    {normal_text:1}
     {spaces_after_argument:\\n}
 ';
 

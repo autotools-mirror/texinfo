@@ -12,7 +12,7 @@ $result_tree_text{'text'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *paragraph C1
-   {text}
+   {normal_text:text}
 ';
 
 

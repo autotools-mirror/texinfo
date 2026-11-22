@@ -1,5 +1,22 @@
 2026-11-22  Patrice Dumas  <pertusus@free.fr>
 
+	use normal_text for normal text element type in Perl as in C
+
+	* tta/C/main/build_perl_info.c (build_base_element),
+	tta/C/main/element_types.txt, tta/C/main/manipulate_tree.c
+	(print_text_element): pass and show normal_text type.
+
+	* tta/perl/*.pm, tta/perl/tta/perl/Convert/*.pm,
+	tta/perl/t/init/documentation_examples.pm, tta/perl/t/z_misc/01use.t:
+	set normal_text as type for normal text without type.
+
+	* tta/perl/Texinfo/Convert/HTML.pm (_convert_xref_command),
+	tta/perl/Texinfo/Convert/DocBook.pm (_convert),
+	tta/perl/Texinfo/Convert/PlaintextNonXS.pm (_convert): avoid
+	autovivification.
+
+2026-11-22  Patrice Dumas  <pertusus@free.fr>
+
 	* tta/C/main/convert_utils.c (new_command_element_added)
 	(table_item_content_tree), tta/C/main/tree.c
 	(new_command_type_element), tta/C/main/manipulate_tree.c

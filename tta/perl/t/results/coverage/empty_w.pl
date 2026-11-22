@@ -14,14 +14,14 @@ $result_tree_text{'empty_w'} = '*document_root C1
   *paragraph C4
    *@w C1 l1
     *brace_container
-   { }
+   {normal_text: }
    *@w C1 l1
     *brace_container C1
-     {a b}
-   {.\\n}
+     {normal_text:a b}
+   {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C2
-   {para     }
+   {normal_text:para     }
    *@w C1 l3
     *brace_container
 ';

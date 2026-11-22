@@ -23,11 +23,11 @@ $result_tree_text{'macro_end_call_in_ignored_inlineraw'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C3
-   {Para }
+   {normal_text:Para }
    >SOURCEMARKS
    >macro_expansion<start;1>
     >*macro_call@startraw C1
@@ -36,12 +36,12 @@ $result_tree_text{'macro_end_call_in_ignored_inlineraw'} = '*document_root C1
    |EXTRA
    |format:{tex}
     *brace_arg C1
-     {tex}
+     {normal_text:tex}
     *elided_brace_command_arg C1
      {raw: in@something\\nstill ignored}
      >SOURCEMARKS
      >macro_expansion<end;1><p:13>
-   {. After.\\n}
+   {normal_text:. After.\\n}
 ';
 
 

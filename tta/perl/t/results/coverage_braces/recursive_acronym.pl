@@ -14,14 +14,14 @@ $result_tree_text{'recursive_acronym'} = '*document_root C1
   *paragraph C2
    *@acronym C2 l1
     *brace_arg C1
-     {GNU}
+     {normal_text:GNU}
     *brace_arg C3
      {spaces_before_argument: }
      *@acronym C1 l1
       *brace_arg C1
-       {GNU}
-     {\'s Not Unix}
-   {\\n}
+       {normal_text:GNU}
+     {normal_text:\'s Not Unix}
+   {normal_text:\\n}
 ';
 
 

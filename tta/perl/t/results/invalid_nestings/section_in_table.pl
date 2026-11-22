@@ -22,7 +22,7 @@ $result_tree_text{'section_in_table'} = '*document_root C2
      *@item C1 l2
       *line_arg C3
        {spaces_before_argument: }
-       {Before}
+       {normal_text:Before}
        {spaces_after_argument:\\n}
     *table_definition C1
      {empty_line:\\n}
@@ -36,12 +36,12 @@ $result_tree_text{'section_in_table'} = '*document_root C2
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Subsection}
+    {normal_text:Subsection}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   {ignorable_spaces_after_command: }
   *paragraph C1
-   {After\\n}
+   {normal_text:After\\n}
   {empty_line:\\n}
 ';
 

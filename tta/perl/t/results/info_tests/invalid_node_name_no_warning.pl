@@ -21,7 +21,7 @@ $result_tree_text{'invalid_node_name_no_warning'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C5 l4
@@ -33,7 +33,7 @@ $result_tree_text{'invalid_node_name_no_warning'} = '*document_root C5
     *menu_entry_name C1
      *@asis C1 l5
       *brace_container C1
-       {truc:}
+       {normal_text:truc:}
     {menu_entry_separator:: }
     *menu_entry_node C2
     |EXTRA
@@ -41,25 +41,25 @@ $result_tree_text{'invalid_node_name_no_warning'} = '*document_root C5
     |normalized:{nodename_002e-a}
      *@asis C1 l5
       *brace_container C1
-       {nodename. a}
+       {normal_text:nodename. a}
      {space_at_end_menu_node:\\n}
    *menu_entry C6 l6
     {menu_entry_leading_text:* }
     *menu_entry_name C1
-     {machin}
+     {normal_text:machin}
     {menu_entry_separator:: }
     *menu_entry_node C3
     |EXTRA
     |node_content:A{0|2}
     |normalized:{node_002ccomma}
-     {node}
+     {normal_text:node}
      *@comma C1 l6
       *brace_container
-     {comma}
+     {normal_text:comma}
     {menu_entry_separator:, }
     *menu_entry_description C1
      *preformatted C1
-      {def\\n}
+      {normal_text:def\\n}
    *menu_entry C4 l7
     {menu_entry_leading_text:* }
     *menu_entry_node C1
@@ -68,17 +68,17 @@ $result_tree_text{'invalid_node_name_no_warning'} = '*document_root C5
     |normalized:{bidule_003a}
      *@asis C1 l7
       *brace_container C1
-       {bidule:}
+       {normal_text:bidule:}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l8
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C2 l10 {@asis{nodename. a}}
@@ -91,7 +91,7 @@ $result_tree_text{'invalid_node_name_no_warning'} = '*document_root C5
     {spaces_before_argument: }
     *@asis C1 l10
      *brace_container C1
-      {nodename. a}
+      {normal_text:nodename. a}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C2 l12 {node@comma{}comma}
@@ -102,10 +102,10 @@ $result_tree_text{'invalid_node_name_no_warning'} = '*document_root C5
   *arguments_line C1
    *line_arg C5
     {spaces_before_argument: }
-    {node}
+    {normal_text:node}
     *@comma C1 l12
      *brace_container
-    {comma}
+    {normal_text:comma}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C3 l14 {@asis{bidule:}}
@@ -118,7 +118,7 @@ $result_tree_text{'invalid_node_name_no_warning'} = '*document_root C5
     {spaces_before_argument: }
     *@asis C1 l14
      *brace_container C1
-      {bidule:}
+      {normal_text:bidule:}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C6
@@ -129,26 +129,26 @@ $result_tree_text{'invalid_node_name_no_warning'} = '*document_root C5
     |normalized:{nodename_002e-a}
      *@asis C1 l16
       *brace_container C1
-       {nodename. a}
+       {normal_text:nodename. a}
     *brace_arg C2
      {spaces_before_argument: }
      *@asis C1 l16
       *brace_container C1
-       {truc:}
-   {. }
+       {normal_text:truc:}
+   {normal_text:. }
    *@ref C2 l16
     *brace_arg C3
     |EXTRA
     |node_content:A{0|2}
     |normalized:{node_002ccomma}
-     {node}
+     {normal_text:node}
      *@comma C1 l16
       *brace_container
-     {comma}
+     {normal_text:comma}
     *brace_arg C2
      {spaces_before_argument: }
-     {machin}
-   {.\\n}
+     {normal_text:machin}
+   {normal_text:.\\n}
    *@ref C1 l17
     *brace_arg C1
     |EXTRA
@@ -156,8 +156,8 @@ $result_tree_text{'invalid_node_name_no_warning'} = '*document_root C5
     |normalized:{bidule_003a}
      *@asis C1 l17
       *brace_container C1
-       {bidule:}
-   {.\\n}
+       {normal_text:bidule:}
+   {normal_text:.\\n}
 ';
 
 

@@ -14,117 +14,117 @@ $result_tree_text{'test_w'} = '*document_root C1
   *paragraph C2
    *@w C1 l1
     *brace_container C2
-     {aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa bbbbbbbbbbbbb bbbbb bbb b b b b b b b b b bb .\\n}
-     {ccc dddd}
-   {.\\n}
+     {normal_text:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa bbbbbbbbbbbbb bbbbb bbb b b b b b b b b b bb .\\n}
+     {normal_text:ccc dddd}
+   {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C3
-   {a a a a a a a a a a a a a a a a a a a a a a a a a a a a  }
+   {normal_text:a a a a a a a a a a a a a a a a a a a a a a a a a a a a  }
    *@w C1 l4
     *brace_container C1
-     {b a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a}
-   {\\n}
+     {normal_text:b a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a}
+   {normal_text:\\n}
   {empty_line:\\n}
   {empty_line:\\n}
   *paragraph C2
    *@w C1 l7
     *brace_container
-   {\\n}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
    *@w C1 l9
     *brace_container C2
-     { a rr   \\n}
-     {  ggg.}
-   {\\n}
+     {normal_text: a rr   \\n}
+     {normal_text:  ggg.}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C3
-   {AA}
+   {normal_text:AA}
    *@w C1 l12
     *brace_container
-   {bbb.\\n}
+   {normal_text:bbb.\\n}
   {empty_line:\\n}
   *paragraph C3
-   {FF}
+   {normal_text:FF}
    *@w C1 l14
     *brace_container C1
-     {d}
-   {nnn.\\n}
+     {normal_text:d}
+   {normal_text:nnn.\\n}
   {empty_line:\\n}
   *paragraph C3
-   {aa}
+   {normal_text:aa}
    *@w C1 l16
     *brace_container C1
-     {  f  f}
-   {ggg.\\n}
+     {normal_text:  f  f}
+   {normal_text:ggg.\\n}
   {empty_line:\\n}
   *paragraph C3
-   {aa2}
+   {normal_text:aa2}
    *@w C1 l18
     *brace_container C1
-     {  f  f }
-   {ggg2.\\n}
+     {normal_text:  f  f }
+   {normal_text:ggg2.\\n}
   {empty_line:\\n}
   {empty_line:\\n}
   *paragraph C3
-   {aa3 }
+   {normal_text:aa3 }
    *@w C1 l21
     *brace_container C1
-     {  f  f }
-   {ggg3.\\n}
+     {normal_text:  f  f }
+   {normal_text:ggg3.\\n}
   {empty_line:\\n}
   {empty_line:\\n}
   *paragraph C3
-   {aa4 }
+   {normal_text:aa4 }
    *@w C1 l24
     *brace_container C1
-     {  f  f }
-   { ggg4.\\n}
+     {normal_text:  f  f }
+   {normal_text: ggg4.\\n}
   {empty_line:\\n}
   *paragraph C3
-   {aa5 }
+   {normal_text:aa5 }
    *@w C1 l26
     *brace_container
-   { ggg5.\\n}
+   {normal_text: ggg5.\\n}
   {empty_line:\\n}
   *paragraph C3
-   {aa6 }
+   {normal_text:aa6 }
    *@w C1 l28
     *brace_container
-   {ggg6.\\n}
+   {normal_text:ggg6.\\n}
   {empty_line:\\n}
   *paragraph C3
-   {aa6}
+   {normal_text:aa6}
    *@w C1 l30
     *brace_container
-   { ggg6.\\n}
+   {normal_text: ggg6.\\n}
   {empty_line:\\n}
   *paragraph C3
-   {aaf }
+   {normal_text:aaf }
    *@w C1 l32
     *brace_container C1
-     { }
-   { bbb.\\n}
+     {normal_text: }
+   {normal_text: bbb.\\n}
   {empty_line:\\n}
   *paragraph C5
-   {begin and end quotations: }
+   {normal_text:begin and end quotations: }
    *@w C1 l34
     *brace_container C1
      *@t C1 l34
       *brace_container C7
-       {`}
+       {normal_text:`}
        *@w C1 l34
         *brace_container
-       {`}
+       {normal_text:`}
        *@dots C1 l34
         *brace_container
-       {\'}
+       {normal_text:\'}
        *@w C1 l34
         *brace_container
-       {\'}
-   {.  This\\n}
-   {convention should be followed in Texinfo files.  TeX converts\\n}
-   {two single quotes to left- and right-hand doubled.\\n}
+       {normal_text:\'}
+   {normal_text:.  This\\n}
+   {normal_text:convention should be followed in Texinfo files.  TeX converts\\n}
+   {normal_text:two single quotes to left- and right-hand doubled.\\n}
 ';
 
 

@@ -40,7 +40,7 @@ $result_tree_text{'defcondx_Dbar'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {deffnx inside conditional}
+    {normal_text:deffnx inside conditional}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deffn C5 defxcond.texi:l10
@@ -52,7 +52,7 @@ $result_tree_text{'defcondx_Dbar'} = '*document_root C3
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {foo}
+       {normal_text:foo}
      {spaces_after_argument:\\n}
    *inter_def_item C1
     {empty_line:\\n}
@@ -62,7 +62,7 @@ $result_tree_text{'defcondx_Dbar'} = '*document_root C3
       >*arguments_line C1
        >*block_line_arg C3
         >{spaces_before_argument: }
-        >{bar}
+        >{normal_text:bar}
         >{spaces_after_argument:\\n}
    *@deffnx C1 defxcond.texi:l13
    |EXTRA
@@ -75,25 +75,25 @@ $result_tree_text{'defcondx_Dbar'} = '*document_root C3
     >|text_arg:{ifset}
      >*line_arg C3
       >{spaces_before_argument: }
-      >{ifset}
+      >{normal_text:ifset}
       >{spaces_after_argument:\\n}
     *line_arg C3
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {bar}
+       {normal_text:bar}
      {spaces_after_argument:\\n}
    *def_item C3
     {empty_line:\\n}
     *paragraph C1
-     {Documentation.\\n}
+     {normal_text:Documentation.\\n}
     {empty_line:\\n}
    *@end C1 defxcond.texi:l18
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
-     {deffn}
+     {normal_text:deffn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@bye C1

@@ -27,7 +27,7 @@ $result_tree_text{'section_on_multitable_line'} = '*document_root C4
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {first}
+    {normal_text:first}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@multitable C1 l3
@@ -38,7 +38,7 @@ $result_tree_text{'section_on_multitable_line'} = '*document_root C4
      {spaces_before_argument: }
      *@code C1 l3
       *brace_container C1
-       {this}
+       {normal_text:this}
      {spaces_after_argument: }
  *@section C3 l3 {second}
  |EXTRA
@@ -50,7 +50,7 @@ $result_tree_text{'section_on_multitable_line'} = '*document_root C4
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {second}
+    {normal_text:second}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@multitable C1 l5
@@ -60,10 +60,10 @@ $result_tree_text{'section_on_multitable_line'} = '*document_root C4
     *block_line_arg C5
      {spaces_before_argument: }
      *bracketed_arg C1 l5
-      {aaa}
-     { }
+      {normal_text:aaa}
+     {normal_text: }
      *bracketed_arg C1 l5
-      {bbb}
+      {normal_text:bbb}
      {spaces_after_argument: }
  *@section C1 l5 {third}
  |EXTRA
@@ -75,7 +75,7 @@ $result_tree_text{'section_on_multitable_line'} = '*document_root C4
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {third}
+    {normal_text:third}
     {spaces_after_argument:\\n}
 ';
 

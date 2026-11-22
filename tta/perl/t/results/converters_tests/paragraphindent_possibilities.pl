@@ -19,7 +19,7 @@ $result_tree_text{'paragraphindent_possibilities'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l2 {top}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'paragraphindent_possibilities'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l4 {chapter}
@@ -39,7 +39,7 @@ $result_tree_text{'paragraphindent_possibilities'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter}
+    {normal_text:chapter}
     {spaces_after_argument:\\n}
  *@chapter C42 l5 {chap}
  |EXTRA
@@ -49,16 +49,16 @@ $result_tree_text{'paragraphindent_possibilities'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   {spaces_before_paragraph: }
   *paragraph C1
-   {default first para\\n}
+   {normal_text:default first para\\n}
   {empty_line:\\n}
   {spaces_before_paragraph: }
   *paragraph C1
-   {default para\\n}
+   {normal_text:default para\\n}
   {empty_line:\\n}
   *@paragraphindent C1 l11
   |EXTRA
@@ -66,12 +66,12 @@ $result_tree_text{'paragraphindent_possibilities'} = '*document_root C5
   |misc_args:A{asis}
    *line_arg C3
     {spaces_before_argument: }
-    {asis}
+    {normal_text:asis}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   {spaces_before_paragraph:       }
   *paragraph C1
-   {para asis (7)\\n}
+   {normal_text:para asis (7)\\n}
   {empty_line:\\n}
   *@paragraphindent C1 l15
   |EXTRA
@@ -79,12 +79,12 @@ $result_tree_text{'paragraphindent_possibilities'} = '*document_root C5
   |misc_args:A{none}
    *line_arg C3
     {spaces_before_argument: }
-    {none}
+    {normal_text:none}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   {spaces_before_paragraph:     }
   *paragraph C1
-   {para none\\n}
+   {normal_text:para none\\n}
   {empty_line:\\n}
   *@paragraphindent C1 l19
   |EXTRA
@@ -92,12 +92,12 @@ $result_tree_text{'paragraphindent_possibilities'} = '*document_root C5
   |misc_args:A{23}
    *line_arg C3
     {spaces_before_argument: }
-    {23}
+    {normal_text:23}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   {spaces_before_paragraph:    }
   *paragraph C1
-   {para 23\\n}
+   {normal_text:para 23\\n}
   {empty_line:\\n}
   *@paragraphindent C1 l23
   |EXTRA
@@ -105,12 +105,12 @@ $result_tree_text{'paragraphindent_possibilities'} = '*document_root C5
   |misc_args:A{-2}
    *line_arg C3
     {spaces_before_argument: }
-    {-2}
+    {normal_text:-2}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   {spaces_before_paragraph:       }
   *paragraph C1
-   {para -2 (7)\\n}
+   {normal_text:para -2 (7)\\n}
   {empty_line:\\n}
   *@paragraphindent C1 l27
   |EXTRA
@@ -118,36 +118,36 @@ $result_tree_text{'paragraphindent_possibilities'} = '*document_root C5
   |misc_args:A{0}
    *line_arg C3
     {spaces_before_argument: }
-    {0}
+    {normal_text:0}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   {spaces_before_paragraph:  }
   *paragraph C1
-   {para 0\\n}
+   {normal_text:para 0\\n}
   {empty_line:\\n}
   *@paragraphindent C1 l31
   |EXTRA
   |global_command_number:{6}
    *line_arg C3
     {spaces_before_argument: }
-    {-4}
+    {normal_text:-4}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   {spaces_before_paragraph:  }
   *paragraph C1
-   {para incorrect -4\\n}
+   {normal_text:para incorrect -4\\n}
   {empty_line:\\n}
   *@paragraphindent C1 l35
   |EXTRA
   |global_command_number:{7}
    *line_arg C3
     {spaces_before_argument: }
-    {something}
+    {normal_text:something}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   {spaces_before_paragraph:  }
   *paragraph C1
-   {para incorrect something\\n}
+   {normal_text:para incorrect something\\n}
 ';
 
 

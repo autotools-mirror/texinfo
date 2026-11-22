@@ -21,7 +21,7 @@ $result_tree_text{'protected_brace'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {c}
+       {normal_text:c}
      {spaces: }
      *def_name C1
       *def_line_arg C1
@@ -32,7 +32,7 @@ $result_tree_text{'protected_brace'} = '*document_root C1
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
-     {deffn}
+     {normal_text:deffn}
      {spaces_after_argument:\\n}
 ';
 

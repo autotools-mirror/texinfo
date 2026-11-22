@@ -19,7 +19,7 @@ $result_tree_text{'automatic_menu_with_heading'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C6 l2 {top}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'automatic_menu_with_heading'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@xrefautomaticsectiontitle C1 l4
@@ -37,7 +37,7 @@ $result_tree_text{'automatic_menu_with_heading'} = '*document_root C5
   |misc_args:A{on}
    *line_arg C3
     {spaces_before_argument: }
-    {on}
+    {normal_text:on}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
@@ -46,8 +46,8 @@ $result_tree_text{'automatic_menu_with_heading'} = '*document_root C5
     |EXTRA
     |node_content:A{0|0}
     |normalized:{heading-or-chapter}
-     {heading or chapter}
-   {.\\n}
+     {normal_text:heading or chapter}
+   {normal_text:.\\n}
   {empty_line:\\n}
  *@node C3 l8 {heading or chapter}
  |EXTRA
@@ -57,7 +57,7 @@ $result_tree_text{'automatic_menu_with_heading'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {heading or chapter}
+    {normal_text:heading or chapter}
     {spaces_after_argument:\\n}
   *@heading C1 l9
   |EXTRA
@@ -65,7 +65,7 @@ $result_tree_text{'automatic_menu_with_heading'} = '*document_root C5
   |heading_number:{1}
    *line_arg C3
     {spaces_before_argument: }
-    {Heading}
+    {normal_text:Heading}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@chapter C2 l11 {Chapter}
@@ -76,7 +76,7 @@ $result_tree_text{'automatic_menu_with_heading'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chapter}
+    {normal_text:Chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
 ';

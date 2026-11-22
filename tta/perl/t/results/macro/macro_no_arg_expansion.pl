@@ -23,11 +23,11 @@ $result_tree_text{'macro_no_arg_expansion'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C1
-   {res1 abc\\n}
+   {normal_text:res1 abc\\n}
    >SOURCEMARKS
    >macro_expansion<start;1>
     >*macro_call@testone C1

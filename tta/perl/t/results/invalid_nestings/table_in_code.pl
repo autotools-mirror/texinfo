@@ -14,8 +14,8 @@ $result_tree_text{'table_in_code'} = '*document_root C1
   *paragraph C1
    *@code C1 l1
     *brace_container C2
-     {\\n}
-     {in code\\n}
+     {normal_text:\\n}
+     {normal_text:in code\\n}
   *@table C3 l3
    *arguments_line C1
     *block_line_arg C3
@@ -27,17 +27,17 @@ $result_tree_text{'table_in_code'} = '*document_root C1
      *@item C1 l4
       *line_arg C3
        {spaces_before_argument: }
-       {line}
+       {normal_text:line}
        {spaces_after_argument:\\n}
     *table_definition C1
      *paragraph C1
-      {text\\n}
+      {normal_text:text\\n}
    *@end C1 l6
    |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
-     {table}
+     {normal_text:table}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
 ';

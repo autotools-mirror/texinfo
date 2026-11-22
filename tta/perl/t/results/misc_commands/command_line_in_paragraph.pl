@@ -12,16 +12,16 @@ $result_tree_text{'command_line_in_paragraph'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *paragraph C3
-   {documentlanguage on its line\\n}
+   {normal_text:documentlanguage on its line\\n}
    *@documentlanguage C1 l2
    |EXTRA
    |global_command_number:{1}
    |text_arg:{en}
     *line_arg C3
      {spaces_before_argument:  }
-     {en}
+     {normal_text:en}
      {spaces_after_argument:  \\n}
-   {line following documentlanguage\\n}
+   {normal_text:line following documentlanguage\\n}
 ';
 
 

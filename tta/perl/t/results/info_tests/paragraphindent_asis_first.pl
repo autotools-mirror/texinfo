@@ -15,7 +15,7 @@ $result_tree_text{'paragraphindent_asis_first'} = '*document_root C1
   *preamble_before_content C1
    {spaces_before_paragraph:     }
   *paragraph C1
-   {bbb\\n}
+   {normal_text:bbb\\n}
   {empty_line:\\n}
   *@paragraphindent C1 l4
   |EXTRA
@@ -23,11 +23,11 @@ $result_tree_text{'paragraphindent_asis_first'} = '*document_root C1
   |misc_args:A{asis}
    *line_arg C3
     {spaces_before_argument: }
-    {asis}
+    {normal_text:asis}
     {spaces_after_argument:\\n}
   {spaces_before_paragraph:     }
   *paragraph C1
-   {ccc\\n}
+   {normal_text:ccc\\n}
 ';
 
 

@@ -16,13 +16,13 @@ $result_tree_text{'raw_html'} = '*document_root C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *rawpreformatted C1
-     {<i>\\n}
+     {normal_text:<i>\\n}
     *@end C1 l3
     |EXTRA
     |text_arg:{html}
      *line_arg C3
       {spaces_before_argument: }
-      {html}
+      {normal_text:html}
       {spaces_after_argument:\\n}
 ';
 

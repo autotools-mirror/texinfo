@@ -28,7 +28,7 @@ $result_tree_text{'contents_at_document_begin_inline'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C6 contents_at_document_begin.texi:l6 {Contents at beginning}
  |EXTRA
@@ -37,11 +37,11 @@ $result_tree_text{'contents_at_document_begin_inline'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Contents at beginning}
+    {normal_text:Contents at beginning}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {Content at the beginning.\\n}
+   {normal_text:Content at the beginning.\\n}
   {empty_line:\\n}
   *@menu C3 contents_at_document_begin.texi:l10
    *arguments_line C1
@@ -53,17 +53,17 @@ $result_tree_text{'contents_at_document_begin_inline'} = '*document_root C6
     |EXTRA
     |node_content:A{0|0}
     |normalized:{chapter}
-     {chapter}
+     {normal_text:chapter}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 contents_at_document_begin.texi:l12
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 contents_at_document_begin.texi:l14 {chapter}
@@ -74,7 +74,7 @@ $result_tree_text{'contents_at_document_begin_inline'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter}
+    {normal_text:chapter}
     {spaces_after_argument:\\n}
  *@chapter C4 contents_at_document_begin.texi:l15 {Chapter 1}
  |EXTRA
@@ -84,11 +84,11 @@ $result_tree_text{'contents_at_document_begin_inline'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chapter 1}
+    {normal_text:Chapter 1}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {The chapter\\n}
+   {normal_text:The chapter\\n}
   {empty_line:\\n}
  *@bye C1
   *line_arg C1

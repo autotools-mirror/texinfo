@@ -16,15 +16,15 @@ $result_tree_text{'heading_commands_in_center'} = '*document_root C1
     {spaces_before_argument: }
     *@code C1 l1
      *brace_container C2
-      {aaa }
+      {normal_text:aaa }
       *@thischapter
-    { }
+    {normal_text: }
     *@|
-    { a }
+    {normal_text: a }
     *@thissection
-    { }
+    {normal_text: }
     *@|
-    { b}
+    {normal_text: b}
     {spaces_after_argument:\\n}
 ';
 

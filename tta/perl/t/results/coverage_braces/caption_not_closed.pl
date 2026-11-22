@@ -18,28 +18,28 @@ $result_tree_text{'caption_not_closed'} = '*document_root C2
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     {Text}
+     {normal_text:Text}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@caption C1 l3
     *brace_command_context C4
      *paragraph C1
-      {Not closed caption\\n}
+      {normal_text:Not closed caption\\n}
      {empty_line:\\n}
      *paragraph C6
-      {The caption is closed as soon as }
+      {normal_text:The caption is closed as soon as }
       *@@
-      {end float is encountered, since\\n}
-      {as much as possible is closed in order to find the }
+      {normal_text:end float is encountered, since\\n}
+      {normal_text:as much as possible is closed in order to find the }
       *@@
-      {float beginning.\\n}
+      {normal_text:float beginning.\\n}
      {empty_line:\\n}
    *@end C1 l8
    |EXTRA
    |text_arg:{float}
     *line_arg C3
      {spaces_before_argument: }
-     {float}
+     {normal_text:float}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@bye C1

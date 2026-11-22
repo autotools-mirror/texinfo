@@ -16,16 +16,16 @@ $result_tree_text{'empty_arguments'} = '*document_root C1
   *paragraph C6
    *@strong C1 l2
     *brace_container
-   {\\n}
+   {normal_text:\\n}
    *@uref C2 l3
     *brace_arg
     *brace_arg
-   {\\n}
+   {normal_text:\\n}
    *@abbr C2 l4
     *brace_arg C1
-     {a}
+     {normal_text:a}
     *brace_arg
-   {\\n}
+   {normal_text:\\n}
 ';
 
 

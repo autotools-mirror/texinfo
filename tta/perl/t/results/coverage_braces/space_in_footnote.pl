@@ -12,14 +12,14 @@ $result_tree_text{'space_in_footnote'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *paragraph C2
-   {text}
+   {normal_text:text}
    *@footnote C1 l1
    |EXTRA
    |global_command_number:{1}
     *brace_command_context C2
      {spaces_before_argument: }
      *paragraph C1
-      {in footnote.}
+      {normal_text:in footnote.}
 ';
 
 

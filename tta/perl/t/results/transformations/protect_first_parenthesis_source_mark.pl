@@ -23,7 +23,7 @@ $result_tree_text{'protect_first_parenthesis_source_mark'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *@anchor C1 l5
@@ -33,16 +33,16 @@ $result_tree_text{'protect_first_parenthesis_source_mark'} = '*document_root C1
    *brace_arg C2
     *@asis C1
      *brace_container C1
-      {(}
+      {normal_text:(}
       >SOURCEMARKS
       >macro_expansion<start;1>
        >*macro_call@vvv C1
         >*brace_arg
-    {some text) aa,,}
+    {normal_text:some text) aa,,}
     >SOURCEMARKS
     >macro_expansion<end;1><p:15>
   *paragraph C1
-   {.\\n}
+   {normal_text:.\\n}
 ';
 
 

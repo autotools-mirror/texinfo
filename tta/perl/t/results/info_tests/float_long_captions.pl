@@ -19,7 +19,7 @@ $result_tree_text{'float_long_captions'} = '*document_root C2
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@float C4 l3
@@ -32,22 +32,22 @@ $result_tree_text{'float_long_captions'} = '*document_root C2
    *arguments_line C2
     *block_line_arg C2
      {spaces_before_argument: }
-     {Text}
+     {normal_text:Text}
     *block_line_arg C3
      {spaces_before_argument: }
-     {text1}
+     {normal_text:text1}
      {spaces_after_argument:\\n}
    *@caption C1 l4
     *brace_command_context C1
      *paragraph C1
-      {AAAAAAAAAAAAAAAA BBBBB CCCCCCCCCCC}
+      {normal_text:AAAAAAAAAAAAAAAA BBBBB CCCCCCCCCCC}
    {spaces_after_close_brace:\\n}
    *@end C1 l5
    |EXTRA
    |text_arg:{float}
     *line_arg C3
      {spaces_before_argument: }
-     {float}
+     {normal_text:float}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@float C4 l7
@@ -60,22 +60,22 @@ $result_tree_text{'float_long_captions'} = '*document_root C2
    *arguments_line C2
     *block_line_arg C2
      {spaces_before_argument: }
-     {Text}
+     {normal_text:Text}
     *block_line_arg C3
      {spaces_before_argument: }
-     {text2}
+     {normal_text:text2}
      {spaces_after_argument:\\n}
    *@caption C1 l8
     *brace_command_context C1
      *paragraph C1
-      {AAAAAAAAAAAAAAAA BBBBBB CCCCCCCCCCC}
+      {normal_text:AAAAAAAAAAAAAAAA BBBBBB CCCCCCCCCCC}
    {spaces_after_close_brace:\\n}
    *@end C1 l9
    |EXTRA
    |text_arg:{float}
     *line_arg C3
      {spaces_before_argument: }
-     {float}
+     {normal_text:float}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@listoffloats C1 l11
@@ -84,7 +84,7 @@ $result_tree_text{'float_long_captions'} = '*document_root C2
   |global_command_number:{1}
    *line_arg C3
     {spaces_before_argument: }
-    {Text}
+    {normal_text:Text}
     {spaces_after_argument:\\n}
 ';
 

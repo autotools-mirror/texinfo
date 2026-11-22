@@ -16,19 +16,19 @@ $result_tree_text{'include_setfilename_on_setfilename_line'} = '*document_root C
    |text_arg:{file }
     *line_arg C3
      {spaces_before_argument: }
-     {file }
+     {normal_text:file }
      *@setfilename C1 l1
      |EXTRA
      |text_arg:{other file }
       *line_arg C3
        {spaces_before_argument: }
-       {other file }
+       {normal_text:other file }
        *@include C1 l1
        |EXTRA
        |text_arg:{are you joking!}
         *line_arg C3
          {spaces_before_argument: }
-         {are you joking!}
+         {normal_text:are you joking!}
          {spaces_after_argument:\\n}
 ';
 

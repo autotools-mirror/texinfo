@@ -17,7 +17,7 @@ $result_tree_text{'section_in_copying'} = '*document_root C2
       {spaces_before_argument:\\n}
     {empty_line:\\n}
     *paragraph C1
-     {in copying\\n}
+     {normal_text:in copying\\n}
     {empty_line:\\n}
  *@section C1 l5 {section}
  |EXTRA
@@ -29,7 +29,7 @@ $result_tree_text{'section_in_copying'} = '*document_root C2
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {section}
+    {normal_text:section}
     {spaces_after_argument:\\n}
 ';
 

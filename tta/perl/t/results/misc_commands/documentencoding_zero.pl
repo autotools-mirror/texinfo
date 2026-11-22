@@ -17,7 +17,7 @@ $result_tree_text{'documentencoding_zero'} = '*document_root C1
    |text_arg:{0}
     *line_arg C3
      {spaces_before_argument: }
-     {0}
+     {normal_text:0}
      {spaces_after_argument:\\n}
 ';
 

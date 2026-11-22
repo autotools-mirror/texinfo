@@ -15,14 +15,14 @@ $result_tree_text{'not_i_j_in_dotless'} = '*document_root C1
    *@dotless C2 l1
     {spaces_after_cmd_before_arg: }
     *following_arg C1
-     {a}
-   { bc, }
+     {normal_text:a}
+   {normal_text: bc, }
    *@^ C1 l1
     *brace_container C1
      *@dotless C1 l1
       *brace_container C1
-       {q}
-   {.}
+       {normal_text:q}
+   {normal_text:.}
 ';
 
 

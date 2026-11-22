@@ -16,7 +16,7 @@ $result_tree_text{'nested_footnotes_separate'} = '*document_root C2
    |misc_args:A{separate}
     *line_arg C3
      {spaces_before_argument: }
-     {separate}
+     {normal_text:separate}
      {spaces_after_argument:\\n}
  *@node C3 l2 {Top}
  |EXTRA
@@ -26,28 +26,28 @@ $result_tree_text{'nested_footnotes_separate'} = '*document_root C2
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C3
-   {F}
+   {normal_text:F}
    *@footnote C1 l4
    |EXTRA
    |global_command_number:{2}
     *brace_command_context C3
      *paragraph C1
-      {F1\\n}
+      {normal_text:F1\\n}
      {empty_line:\\n}
      *paragraph C3
-      {V}
+      {normal_text:V}
       *@footnote C1 l6
       |EXTRA
       |global_command_number:{1}
        *brace_command_context C1
         *paragraph C1
-         {F2}
-      {\\n}
-   {\\n}
+         {normal_text:F2}
+      {normal_text:\\n}
+   {normal_text:\\n}
 ';
 
 

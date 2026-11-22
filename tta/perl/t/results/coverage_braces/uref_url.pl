@@ -14,61 +14,61 @@ $result_tree_text{'uref_url'} = '*document_root C1
   *paragraph C18
    *@uref C2 l1
     *brace_arg C1
-     {--a}
+     {normal_text:--a}
     *brace_arg C1
-     {--b}
-   {\\n}
+     {normal_text:--b}
+   {normal_text:\\n}
    *@uref C1 l2
     *brace_arg C1
-     {--c}
-   {\\n}
+     {normal_text:--c}
+   {normal_text:\\n}
    *@uref C2 l3
     *brace_arg
     *brace_arg C1
-     {--d}
-   {\\n}
+     {normal_text:--d}
+   {normal_text:\\n}
    *@uref C3 l4
     *brace_arg C1
-     {--e}
+     {normal_text:--e}
     *brace_arg C1
-     {--f}
+     {normal_text:--f}
     *brace_arg C1
-     {--g}
-   {\\n}
+     {normal_text:--g}
+   {normal_text:\\n}
    *@uref C3 l5
     *brace_arg
     *brace_arg C1
-     {--h}
+     {normal_text:--h}
     *brace_arg C1
-     {--i}
-   {\\n}
+     {normal_text:--i}
+   {normal_text:\\n}
    *@uref C3 l6
     *brace_arg C1
-     {--j}
+     {normal_text:--j}
     *brace_arg
     *brace_arg C1
-     {--k}
-   {\\n}
+     {normal_text:--k}
+   {normal_text:\\n}
    *@uref C3 l7
     *brace_arg
     *brace_arg
     *brace_arg C1
-     {--l}
-   {\\n}
+     {normal_text:--l}
+   {normal_text:\\n}
    *@url C2 l8
     *brace_arg C1
-     {--m}
+     {normal_text:--m}
     *brace_arg C1
-     {--n}
-   {\\n}
+     {normal_text:--n}
+   {normal_text:\\n}
    *@url C3 l9
     *brace_arg C1
-     {--o}
+     {normal_text:--o}
     *brace_arg C1
-     {--p}
+     {normal_text:--p}
     *brace_arg C1
-     {--q}
-   {\\n}
+     {normal_text:--q}
+   {normal_text:\\n}
 ';
 
 

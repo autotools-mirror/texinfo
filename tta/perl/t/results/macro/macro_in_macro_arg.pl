@@ -25,7 +25,7 @@ $result_tree_text{'macro_in_macro_arg'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@macro C3 l6
@@ -40,7 +40,7 @@ $result_tree_text{'macro_in_macro_arg'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@macro C4 l10
@@ -56,11 +56,11 @@ $result_tree_text{'macro_in_macro_arg'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C2
-   {a, hello text for macro2 after arg\\n}
+   {normal_text:a, hello text for macro2 after arg\\n}
    >SOURCEMARKS
    >macro_expansion<start;1>
     >*macro_call@macrothree C1
@@ -72,11 +72,11 @@ $result_tree_text{'macro_in_macro_arg'} = '*document_root C1
    >macro_expansion<start;3><p:3>
     >*macro_call_line@macrotwo C1
      >*line_arg C1
-      >{text for macro2}
+      >{normal_text:text for macro2}
       >>SOURCEMARKS
       >>macro_expansion<end;2>
    >macro_expansion<end;3><p:34>
-   {&&&& \\n}
+   {normal_text:&&&& \\n}
    >SOURCEMARKS
    >macro_expansion<end;1><p:5>
 ';

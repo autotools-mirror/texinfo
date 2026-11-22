@@ -19,7 +19,7 @@ $result_tree_text{'empty_menu_description'} = '*document_root C2
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {first}
+    {normal_text:first}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C4 l3
@@ -29,17 +29,17 @@ $result_tree_text{'empty_menu_description'} = '*document_root C2
    *menu_entry C5 l4
     {menu_entry_leading_text:* }
     *menu_entry_name C1
-     {a}
+     {normal_text:a}
     {menu_entry_separator::}
     *menu_entry_node C5
     |EXTRA
     |manual_content:A{1|1}
     |node_content:A{3|4}
     |normalized:{b}
-     {(}
-     {f}
-     {)}
-     {b}
+     {normal_text:(}
+     {normal_text:f}
+     {normal_text:)}
+     {normal_text:b}
      {space_at_end_menu_node:\\n}
     *menu_entry_description
    *menu_comment C1
@@ -50,7 +50,7 @@ $result_tree_text{'empty_menu_description'} = '*document_root C2
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
 ';
 

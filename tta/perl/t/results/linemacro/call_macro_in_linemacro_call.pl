@@ -24,7 +24,7 @@ $result_tree_text{'call_macro_in_linemacro_call'} = '*document_root C1
     |text_arg:{linemacro}
      *line_arg C3
       {spaces_before_argument: }
-      {linemacro}
+      {normal_text:linemacro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@macro C5 l6
@@ -41,7 +41,7 @@ $result_tree_text{'call_macro_in_linemacro_call'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    >SOURCEMARKS
@@ -57,7 +57,7 @@ $result_tree_text{'call_macro_in_linemacro_call'} = '*document_root C1
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     {aa}
+     {normal_text:aa}
      {spaces_after_argument:\\n}
    {spaces_before_paragraph:  }
    >SOURCEMARKS
@@ -79,25 +79,25 @@ $result_tree_text{'call_macro_in_linemacro_call'} = '*document_root C1
       *@item C1 l14:@mymacro
        *line_arg C3
         {spaces_before_argument:    }
-        {ggg}
+        {normal_text:ggg}
         {spaces_after_argument:\\n}
     *@end C1 l14:@mymacro
     |EXTRA
     |text_arg:{table}
      *line_arg C3
       {spaces_before_argument: }
-      {table}
+      {normal_text:table}
       >SOURCEMARKS
       >macro_expansion<end;1><p:5>
       {spaces_after_argument: \\n}
    *paragraph C3
-    {now second arg: jj }
+    {normal_text:now second arg: jj }
     *@var C1 l14:@lm
     >SOURCEMARKS
     >linemacro_expansion<end;1>
      *brace_container C1
-      {T}
-    {\\n}
+      {normal_text:T}
+    {normal_text:\\n}
    {empty_line: \\n}
    {empty_line:\\n}
    *@end C1 l17
@@ -105,7 +105,7 @@ $result_tree_text{'call_macro_in_linemacro_call'} = '*document_root C1
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }
-     {quotation}
+     {normal_text:quotation}
      {spaces_after_argument:\\n}
 ';
 

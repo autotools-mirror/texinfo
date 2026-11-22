@@ -15,10 +15,10 @@ $result_tree_text{'at_after_accent_command'} = '*document_root C1
    *@ringaccent C1 l1
     {spaces_after_cmd_before_arg: }
    *@@
-   {. }
+   {normal_text:. }
    *@^ l1
    *@@
-   {.\\n}
+   {normal_text:.\\n}
 ';
 
 

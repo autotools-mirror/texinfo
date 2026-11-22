@@ -19,7 +19,7 @@ $result_tree_text{'space_and_commands_in_menu_node'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C4 l2 {top}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'space_and_commands_in_menu_node'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C11 l4
@@ -41,128 +41,128 @@ $result_tree_text{'space_and_commands_in_menu_node'} = '*document_root C5
     |EXTRA
     |node_content:A{0|0}
     |normalized:{chap-b}
-     {chap  b}
+     {normal_text:chap  b}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 l6
     {menu_entry_leading_text:* }
     *menu_entry_node C3
     |EXTRA
     |node_content:A{0|2}
     |normalized:{chap-b}
-     {chap }
+     {normal_text:chap }
      *@:
-     { b}
+     {normal_text: b}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 l7
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{chap-b}
-     {chap b}
+     {normal_text:chap b}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 l8
     {menu_entry_leading_text:* }
     *menu_entry_node C4
     |EXTRA
     |node_content:A{0|3}
     |normalized:{chap-b}
-     {chap}
+     {normal_text:chap}
      *@ 
      *@ 
-     {b}
+     {normal_text:b}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 l9
     {menu_entry_leading_text:* }
     *menu_entry_node C3
     |EXTRA
     |node_content:A{0|2}
     |normalized:{chap-b}
-     {chap}
+     {normal_text:chap}
      *@ 
-     { b}
+     {normal_text: b}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 l10
     {menu_entry_leading_text:* }
     *menu_entry_node C3
     |EXTRA
     |node_content:A{0|2}
     |normalized:{chap-b}
-     {chap }
+     {normal_text:chap }
      *@ 
-     {b}
+     {normal_text:b}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C6 l11
     {menu_entry_leading_text:* }
     *menu_entry_name C1
-     {label}
+     {normal_text:label}
     {menu_entry_separator:: }
     *menu_entry_node C3
     |EXTRA
     |node_content:A{0|2}
     |normalized:{chap-b}
-     {chap }
+     {normal_text:chap }
      *@:
-     { b}
+     {normal_text: b}
     {menu_entry_separator:.}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C6 l12
     {menu_entry_leading_text:* }
     *menu_entry_name C1
-     {label}
+     {normal_text:label}
     {menu_entry_separator:: }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{chap-b}
-     {chap b}
+     {normal_text:chap b}
     {menu_entry_separator:.}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C6 l13
     {menu_entry_leading_text:* }
     *menu_entry_name C1
-     {label}
+     {normal_text:label}
     {menu_entry_separator:: }
     *menu_entry_node C4
     |EXTRA
     |node_content:A{0|3}
     |normalized:{chap-b}
-     {chap }
+     {normal_text:chap }
      *@ 
      *@ 
-     {b}
+     {normal_text:b}
     {menu_entry_separator:.}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l14
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l16 {chap @: b}
@@ -173,9 +173,9 @@ $result_tree_text{'space_and_commands_in_menu_node'} = '*document_root C5
   *arguments_line C1
    *line_arg C5
     {spaces_before_argument: }
-    {chap }
+    {normal_text:chap }
     *@:
-    { b}
+    {normal_text: b}
     {spaces_after_argument:\\n}
  *@chapter C1 l17 {Chap}
  |EXTRA
@@ -185,7 +185,7 @@ $result_tree_text{'space_and_commands_in_menu_node'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chap}
+    {normal_text:Chap}
     {spaces_after_argument:\\n}
 ';
 

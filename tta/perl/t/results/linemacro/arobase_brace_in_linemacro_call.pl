@@ -24,11 +24,11 @@ $result_tree_text{'arobase_brace_in_linemacro_call'} = '*document_root C1
     |text_arg:{linemacro}
      *line_arg C3
       {spaces_before_argument: }
-      {linemacro}
+      {normal_text:linemacro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C6
-   {first:  }
+   {normal_text:first:  }
    >SOURCEMARKS
    >linemacro_expansion<start;1>
     >*linemacro_call@simplemac C2
@@ -38,15 +38,15 @@ $result_tree_text{'arobase_brace_in_linemacro_call'} = '*document_root C1
       >{spaces_before_argument: }
       >{bracketed_linemacro_arg: @} }
    *@{
-   { |\\n}
-   {second:  }
+   {normal_text: |\\n}
+   {normal_text:second:  }
    *@}
-   { |\\n}
+   {normal_text: |\\n}
    >SOURCEMARKS
    >linemacro_expansion<end;1><p:2>
   {empty_line:\\n}
   *paragraph C6
-   {first:  }
+   {normal_text:first:  }
    >SOURCEMARKS
    >linemacro_expansion<start;2>
     >*linemacro_call@simplemac C2
@@ -56,10 +56,10 @@ $result_tree_text{'arobase_brace_in_linemacro_call'} = '*document_root C1
       >{spaces_before_argument: }
       >{bracketed_linemacro_arg: @{ }
    *@}
-   { |\\n}
-   {second:  }
+   {normal_text: |\\n}
+   {normal_text:second:  }
    *@{
-   { |\\n}
+   {normal_text: |\\n}
    >SOURCEMARKS
    >linemacro_expansion<end;2><p:2>
 ';

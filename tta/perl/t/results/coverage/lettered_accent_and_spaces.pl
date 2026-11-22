@@ -15,57 +15,57 @@ $result_tree_text{'lettered_accent_and_spaces'} = '*document_root C1
    *@ringaccent C2 l1
     {spaces_after_cmd_before_arg:    }
     *following_arg C1
-     {a}
-   {\\n}
+     {normal_text:a}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
    *@ringaccent C2 l3
     {spaces_after_cmd_before_arg:\\n}
     *brace_container C1
-     {a}
-   {\\n}
+     {normal_text:a}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
    *@ringaccent C2 l6
     {spaces_after_cmd_before_arg:\\n}
     *following_arg C1
-     {a}
-   {\\n}
+     {normal_text:a}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
    *@ringaccent C2 l9
     {spaces_after_cmd_before_arg:\\n  }
     *following_arg C1
-     {a}
-   {\\n}
+     {normal_text:a}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
    *@^ C2 l12
     {spaces_after_cmd_before_arg: }
     *following_arg C1
-     {a}
-   {\\n}
+     {normal_text:a}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
    *@^ C2 l14
     {spaces_after_cmd_before_arg:\\n}
     *following_arg C1
-     {a}
-   {\\n}
+     {normal_text:a}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
    *@^ C2 l17
     {spaces_after_cmd_before_arg:\\n }
     *following_arg C1
-     {a}
-   {\\n}
+     {normal_text:a}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
    *@^ C2 l20
     {spaces_after_cmd_before_arg: }
     *brace_container C1
-     {a\\n}
-   {\\n}
+     {normal_text:a\\n}
+   {normal_text:\\n}
   {empty_line:\\n}
 ';
 

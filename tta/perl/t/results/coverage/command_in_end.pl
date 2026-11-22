@@ -16,13 +16,13 @@ $result_tree_text{'command_in_end'} = '*document_root C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C2
-    {In quotation\\n}
+    {normal_text:In quotation\\n}
     *@end C1 l3
      *line_arg C3
       {spaces_before_argument: }
       *@code C1 l3
        *brace_container C1
-        {quotation}
+        {normal_text:quotation}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@quotation C4 l5
@@ -30,16 +30,16 @@ $result_tree_text{'command_in_end'} = '*document_root C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *paragraph C2
-     {In quotation\\n}
+     {normal_text:In quotation\\n}
      *@end C1 l7
      |EXTRA
      |text_arg:{q}
       *line_arg C4
        {spaces_before_argument: }
-       {q}
+       {normal_text:q}
        *@code C1 l7
         *brace_container C1
-         {uotation}
+         {normal_text:uotation}
        {spaces_after_argument:\\n}
     {empty_line:\\n}
     *@quotation C4 l9
@@ -47,16 +47,16 @@ $result_tree_text{'command_in_end'} = '*document_root C1
       *block_line_arg C1
        {spaces_before_argument:\\n}
      *paragraph C2
-      {In quotation\\n}
+      {normal_text:In quotation\\n}
       *@end C1 l11
       |EXTRA
       |text_arg:{qu}
        *line_arg C4
         {spaces_before_argument: }
-        {qu}
+        {normal_text:qu}
         *@code C1 l11
          *brace_container C1
-          {otation}
+          {normal_text:otation}
         {spaces_after_argument:\\n}
      {empty_line:\\n}
      *@quotation C10 l13
@@ -64,17 +64,17 @@ $result_tree_text{'command_in_end'} = '*document_root C1
        *block_line_arg C1
         {spaces_before_argument:\\n}
       *paragraph C2
-       {In quotation\\n}
+       {normal_text:In quotation\\n}
        *@end C1 l15
        |EXTRA
        |text_arg:{quotn}
         *line_arg C5
          {spaces_before_argument: }
-         {quot}
+         {normal_text:quot}
          *@asis C1 l15
           *brace_container C1
-           {atio}
-         {n}
+           {normal_text:atio}
+         {normal_text:n}
          {spaces_after_argument:\\n}
       {empty_line:\\n}
       *@quotation C3 l17
@@ -82,16 +82,16 @@ $result_tree_text{'command_in_end'} = '*document_root C1
         *block_line_arg C1
          {spaces_before_argument:\\n}
        *paragraph C1
-        {In quotation\\n}
+        {normal_text:In quotation\\n}
        *@end C1 l19
        |EXTRA
        |text_arg:{quotation}
         *line_arg C5
          {spaces_before_argument: }
-         {q}
+         {normal_text:q}
          *@asis C1 l19
           *brace_container
-         {uotation}
+         {normal_text:uotation}
          {spaces_after_argument:\\n}
       {empty_line:\\n}
       *@quotation C3 l21
@@ -99,16 +99,16 @@ $result_tree_text{'command_in_end'} = '*document_root C1
         *block_line_arg C1
          {spaces_before_argument:\\n}
        *paragraph C1
-        {In quotation\\n}
+        {normal_text:In quotation\\n}
        *@end C1 l23
        |EXTRA
        |text_arg:{quotation}
         *line_arg C5
          {spaces_before_argument: }
-         {qu}
+         {normal_text:qu}
          *@asis C1 l23
           *brace_container
-         {otation}
+         {normal_text:otation}
          {spaces_after_argument:\\n}
       {empty_line:\\n}
       *@quotation C3 l25
@@ -116,16 +116,16 @@ $result_tree_text{'command_in_end'} = '*document_root C1
         *block_line_arg C1
          {spaces_before_argument:\\n}
        *paragraph C1
-        {In quotation\\n}
+        {normal_text:In quotation\\n}
        *@end C1 l27
        |EXTRA
        |text_arg:{quotation}
         *line_arg C5
          {spaces_before_argument: }
-         {quot}
+         {normal_text:quot}
          *@asis C1 l27
           *brace_container
-         {ation}
+         {normal_text:ation}
          {spaces_after_argument:\\n}
       {empty_line:\\n}
       *@verbatim C3 l29

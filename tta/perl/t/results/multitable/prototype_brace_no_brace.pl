@@ -18,15 +18,15 @@ $result_tree_text{'prototype_brace_no_brace'} = '*document_root C1
     *block_line_arg C4
      {spaces_before_argument: }
      *bracketed_arg C1 l1
-      {aa}
-     { bb}
+      {normal_text:aa}
+     {normal_text: bb}
      {spaces_after_argument:\\n}
    *@end C1 l2
    |EXTRA
    |text_arg:{multitable}
     *line_arg C3
      {spaces_before_argument: }
-     {multitable}
+     {normal_text:multitable}
      {spaces_after_argument:\\n}
 ';
 

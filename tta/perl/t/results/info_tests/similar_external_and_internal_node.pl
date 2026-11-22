@@ -19,17 +19,17 @@ $result_tree_text{'similar_external_and_internal_node'} = '*document_root C2
   *arguments_line C2
    *line_arg C2
     {spaces_before_argument: }
-    {aa}
+    {normal_text:aa}
    *line_arg C6
    |EXTRA
    |manual_content:A{2|2}
    |node_content:A{4|4}
    |normalized:{bb}
     {spaces_before_argument: }
-    {(}
-    {toto}
-    {)}
-    {bb}
+    {normal_text:(}
+    {normal_text:toto}
+    {normal_text:)}
+    {normal_text:bb}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C8
@@ -39,25 +39,25 @@ $result_tree_text{'similar_external_and_internal_node'} = '*document_root C2
     |node_content:A{0|0}
      *@emph C1 l3
       *brace_container C1
-       {aa}
+       {normal_text:aa}
     *brace_arg
     *brace_arg
     *brace_arg C1
-     {ext}
-   {.\\n}
+     {normal_text:ext}
+   {normal_text:.\\n}
    *@xref C5 l4
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
      *@var C1 l4
       *brace_container C1
-       {aa}
+       {normal_text:aa}
     *brace_arg
     *brace_arg
     *brace_arg
     *brace_arg C1
-     {Book}
-   {.\\n}
+     {normal_text:Book}
+   {normal_text:.\\n}
    *@xref C1 l5
     *brace_arg C1
     |EXTRA
@@ -65,8 +65,8 @@ $result_tree_text{'similar_external_and_internal_node'} = '*document_root C2
     |normalized:{aa}
      *@emph C1 l5
       *brace_container C1
-       {aa}
-   {.\\n}
+       {normal_text:aa}
+   {normal_text:.\\n}
    *@xref C1 l6
     *brace_arg C1
     |EXTRA
@@ -74,8 +74,8 @@ $result_tree_text{'similar_external_and_internal_node'} = '*document_root C2
     |normalized:{aa}
      *@var C1 l6
       *brace_container C1
-       {aa}
-   {.\\n}
+       {normal_text:aa}
+   {normal_text:.\\n}
 ';
 
 

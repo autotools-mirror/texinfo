@@ -12,13 +12,13 @@ $result_tree_text{'invalid_kbdinputstyle'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *paragraph C2
-   {kbdinputstyle }
+   {normal_text:kbdinputstyle }
    *@kbdinputstyle C1 l1
    |EXTRA
    |global_command_number:{1}
     *line_arg C3
      {spaces_before_argument: }
-     {wrong arg on line following kbdinputstyle}
+     {normal_text:wrong arg on line following kbdinputstyle}
      {spaces_after_argument:\\n}
 ';
 

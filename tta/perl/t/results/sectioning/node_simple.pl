@@ -19,7 +19,7 @@ $result_tree_text{'node_simple'} = '*document_root C2
   *arguments_line C1
    *line_arg C2
     {spaces_before_argument: }
-    {first}
+    {normal_text:first}
 ';
 
 

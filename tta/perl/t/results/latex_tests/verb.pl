@@ -17,7 +17,7 @@ $result_tree_text{'verb'} = '*document_root C1
      {verb_delimiter:!}
      {raw:a}
      {verb_delimiter:!}
-   {\\n}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
    *@verb C1 l3
@@ -25,7 +25,7 @@ $result_tree_text{'verb'} = '*document_root C1
      {verb_delimiter:!}
      {raw:a!a}
      {verb_delimiter:!}
-   {\\n}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
    *@verb C1 l5
@@ -34,7 +34,7 @@ $result_tree_text{'verb'} = '*document_root C1
      {raw:a\\n}
      {raw:b}
      {verb_delimiter:!}
-   {\\n}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
    *@verb C1 l8
@@ -42,7 +42,7 @@ $result_tree_text{'verb'} = '*document_root C1
      {verb_delimiter:%}
      {raw:a%|!:@b}
      {verb_delimiter:%}
-   {\\n}
+   {normal_text:\\n}
 ';
 
 

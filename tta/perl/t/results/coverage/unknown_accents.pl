@@ -14,114 +14,114 @@ $result_tree_text{'unknown_accents'} = '*document_root C1
   *paragraph C8
    *@" C1 l1
     *following_arg C1
-     {X}
-   { }
+     {normal_text:X}
+   {normal_text: }
    *@" C1 l1
     *following_arg C1
-     {x}
-   { }
+     {normal_text:x}
+   {normal_text: }
    *@" C1 l1
     *following_arg C1
-     {Q}
-   { }
+     {normal_text:Q}
+   {normal_text: }
    *@" C1 l1
     *following_arg C1
-     {Y}
-   {\\n}
+     {normal_text:Y}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C12
    *@\' C1 l3
     *following_arg C1
-     {z}
-   { }
+     {normal_text:z}
+   {normal_text: }
    *@\' C1 l3
     *following_arg C1
-     {q}
-   { }
+     {normal_text:q}
+   {normal_text: }
    *@\' C1 l3
     *following_arg C1
-     {r}
-   {\\n}
+     {normal_text:r}
+   {normal_text:\\n}
    *@\' C1 l4
     *following_arg C1
-     {Z}
-   { }
+     {normal_text:Z}
+   {normal_text: }
    *@\' C1 l4
     *following_arg C1
-     {Q}
-   { }
+     {normal_text:Q}
+   {normal_text: }
    *@\' C1 l4
     *following_arg C1
-     {R}
-   {\\n}
+     {normal_text:R}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C4
    *@, C1 l6
     *brace_container C1
-     {H}
-   { }
+     {normal_text:H}
+   {normal_text: }
    *@, C1 l6
     *brace_container C1
-     {h}
-   {\\n}
+     {normal_text:h}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C16
    *@^ C1 l8
     *following_arg C1
-     {z}
-   { }
+     {normal_text:z}
+   {normal_text: }
    *@^ C1 l8
     *following_arg C1
-     {r}
-   { }
+     {normal_text:r}
+   {normal_text: }
    *@^ C1 l8
     *following_arg C1
-     {t}
-   { }
+     {normal_text:t}
+   {normal_text: }
    *@^ C1 l8
     *following_arg C1
-     {k}
-   {\\n}
+     {normal_text:k}
+   {normal_text:\\n}
    *@^ C1 l9
     *following_arg C1
-     {Z}
-   { }
+     {normal_text:Z}
+   {normal_text: }
    *@^ C1 l9
     *following_arg C1
-     {R}
-   { }
+     {normal_text:R}
+   {normal_text: }
    *@^ C1 l9
     *following_arg C1
-     {T}
-   { }
+     {normal_text:T}
+   {normal_text: }
    *@^ C1 l9
     *following_arg C1
-     {K}
-   {\\n}
+     {normal_text:K}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C6
    *@` C1 l11
     *following_arg C1
-     {z}
-   { }
+     {normal_text:z}
+   {normal_text: }
    *@` C1 l11
     *following_arg C1
-     {m}
-   { }
+     {normal_text:m}
+   {normal_text: }
    *@` C1 l11
     *following_arg C1
-     {p}
-   {\\n}
+     {normal_text:p}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C4
    *@~ C1 l13
     *following_arg C1
-     {Z}
-   { }
+     {normal_text:Z}
+   {normal_text: }
    *@~ C1 l13
     *following_arg C1
-     {s}
-   {\\n}
+     {normal_text:s}
+   {normal_text:\\n}
 ';
 
 

@@ -17,7 +17,7 @@ $result_tree_text{'flushright_not_closed'} = '*document_root C1
      {spaces_before_argument:\\n}
    {empty_line:\\n}
    *paragraph C1
-    {text flushed right\\n}
+    {normal_text:text flushed right\\n}
 ';
 
 

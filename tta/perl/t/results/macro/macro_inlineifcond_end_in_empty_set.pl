@@ -23,16 +23,16 @@ $result_tree_text{'macro_inlineifcond_end_in_empty_set'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
   *paragraph C3
-   {Toto }
+   {normal_text:Toto }
    *@inlineifclear C2 l4
    |EXTRA
    |expand_index:{1}
    |format:{flag}
     *brace_arg C1
-     {flag}
+     {normal_text:flag}
      >SOURCEMARKS
      >macro_expansion<start;1><p:2>
       >*macro_call@clearargendignored C1
@@ -41,16 +41,16 @@ $result_tree_text{'macro_inlineifcond_end_in_empty_set'} = '*document_root C1
      {spaces_before_argument:}
      >SOURCEMARKS
      >macro_expansion<end;1>
-   {. After.\\n}
+   {normal_text:. After.\\n}
   {empty_line:\\n}
   *paragraph C3
-   {Again with space }
+   {normal_text:Again with space }
    *@inlineifclear C2 l6
    |EXTRA
    |expand_index:{1}
    |format:{flag}
     *brace_arg C1
-     {flag}
+     {normal_text:flag}
      >SOURCEMARKS
      >macro_expansion<start;2><p:2>
       >*macro_call@clearargendignored C1
@@ -59,7 +59,7 @@ $result_tree_text{'macro_inlineifcond_end_in_empty_set'} = '*document_root C1
      {spaces_before_argument: }
      >SOURCEMARKS
      >macro_expansion<end;2>
-   {. After.\\n}
+   {normal_text:. After.\\n}
 ';
 
 

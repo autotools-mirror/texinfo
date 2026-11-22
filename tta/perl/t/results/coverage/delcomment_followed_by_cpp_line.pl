@@ -26,7 +26,7 @@ $result_tree_text{'delcomment_followed_by_cpp_line'} = '*document_root C2
      {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C1
-   {#line 46 "a_file_after_del_comment"\\n}
+   {normal_text:#line 46 "a_file_after_del_comment"\\n}
    >SOURCEMARKS
    >delcomment<1>{ this is a comment.\\n}
   {empty_line:\\n}
@@ -36,13 +36,13 @@ $result_tree_text{'delcomment_followed_by_cpp_line'} = '*document_root C2
   >SOURCEMARKS
   >delcomment<2><p:2>{ this is a comment.\\n}
   *paragraph C1
-   {#line 106 "a_file_after_space_del_comment"\\n}
+   {normal_text:#line 106 "a_file_after_space_del_comment"\\n}
   {empty_line:\\n}
   {empty_line:\\n}
   {empty_line:\\n}
   {spaces_before_paragraph: }
   *paragraph C1
-   {a #line 206 "a_file_after_text_space_del_comment"\\n}
+   {normal_text:a #line 206 "a_file_after_text_space_del_comment"\\n}
    >SOURCEMARKS
    >delcomment<3><p:2>{ this is a comment.\\n}
   {empty_line:\\n}

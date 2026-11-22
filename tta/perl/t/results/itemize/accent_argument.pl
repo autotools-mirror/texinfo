@@ -17,20 +17,20 @@ $result_tree_text{'accent_argument'} = '*document_root C1
      {spaces_before_argument: }
      *@~ C1 l1
       *following_arg C1
-       {e}
+       {normal_text:e}
      {spaces_after_argument:\\n}
    *@item C2 l2
    |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
-     {item\\n}
+     {normal_text:item\\n}
    *@end C1 l3
    |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }
-     {itemize}
+     {normal_text:itemize}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@itemize C3 l5
@@ -39,20 +39,20 @@ $result_tree_text{'accent_argument'} = '*document_root C1
      {spaces_before_argument: }
      *@~ C1 l5
       *brace_container C1
-       {e}
+       {normal_text:e}
      {spaces_after_argument:\\n}
    *@item C2 l6
    |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
-     {item\\n}
+     {normal_text:item\\n}
    *@end C1 l7
    |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }
-     {itemize}
+     {normal_text:itemize}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@itemize C3 l9
@@ -62,20 +62,20 @@ $result_tree_text{'accent_argument'} = '*document_root C1
      *@ringaccent C2 l9
       {spaces_after_cmd_before_arg: }
       *following_arg C1
-       {a}
+       {normal_text:a}
      {spaces_after_argument:\\n}
    *@item C2 l10
    |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
-     {item\\n}
+     {normal_text:item\\n}
    *@end C1 l11
    |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }
-     {itemize}
+     {normal_text:itemize}
      {spaces_after_argument:\\n}
 ';
 

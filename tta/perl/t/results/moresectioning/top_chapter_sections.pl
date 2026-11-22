@@ -25,7 +25,7 @@ FastForward: [U1]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
 U1 unit{C1}{S:@unnumbered unnumbered}
@@ -47,7 +47,7 @@ Up: [U0]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {unnumbered}
+    {normal_text:unnumbered}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
 U2 unit{C1}{S:@chapter 1 First chapter}
@@ -71,7 +71,7 @@ Up: [U0]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {First chapter}
+    {normal_text:First chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
 U3 unit{C1}{S:@section 1.1 second}
@@ -93,7 +93,7 @@ Up: [U2]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {second}
+    {normal_text:second}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
 U4 unit{C1}{S:@chapter 2 Chapter}
@@ -117,7 +117,7 @@ Up: [U0]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chapter}
+    {normal_text:Chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
 U5 unit{C1}{S:@section 2.1 Section of chapter}
@@ -139,7 +139,7 @@ Up: [U4]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Section of chapter}
+    {normal_text:Section of chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
 U6 unit{C1}{S:@subsection 2.1.1 subsection 1}
@@ -162,7 +162,7 @@ Up: [U5]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {subsection 1}
+    {normal_text:subsection 1}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
 U7 unit{C1}{S:@subsection 2.1.2 subsection 2}
@@ -185,7 +185,7 @@ Up: [U5]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {subsection 2}
+    {normal_text:subsection 2}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
 U8 unit{C1}{S:@chapter 3 Chapter 2}
@@ -206,7 +206,7 @@ Up: [U0]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chapter 2}
+    {normal_text:Chapter 2}
     {spaces_after_argument:\\n}
 ';
 

@@ -20,7 +20,7 @@ $result_tree_text{'various_added_nodes_and_refs'} = '*document_root C19
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l1 {otp}
  |EXTRA
@@ -29,7 +29,7 @@ $result_tree_text{'various_added_nodes_and_refs'} = '*document_root C19
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {otp}
+    {normal_text:otp}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l3 {a node [+1+]}
@@ -41,8 +41,8 @@ $result_tree_text{'various_added_nodes_and_refs'} = '*document_root C19
   *arguments_line C1
    *line_arg C4
     {spaces_before_argument: }
-    {a node}
-    { [+1+]}
+    {normal_text:a node}
+    {normal_text: [+1+]}
     {spaces_after_argument:\\n}
  *@chapter C2 l3 {a node}
  |EXTRA
@@ -52,7 +52,7 @@ $result_tree_text{'various_added_nodes_and_refs'} = '*document_root C19
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {a node}
+    {normal_text:a node}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l5 {a node @code{in code}}
@@ -64,10 +64,10 @@ $result_tree_text{'various_added_nodes_and_refs'} = '*document_root C19
   *arguments_line C1
    *line_arg C4
     {spaces_before_argument: }
-    {a node }
+    {normal_text:a node }
     *@code C1
      *brace_container C1
-      {in code}
+      {normal_text:in code}
     {spaces_after_argument:\\n}
  *@chapter C2 l5 {a node @code{in code}}
  |EXTRA
@@ -77,10 +77,10 @@ $result_tree_text{'various_added_nodes_and_refs'} = '*document_root C19
   *arguments_line C1
    *line_arg C5
     {spaces_before_argument: }
-    {a node }
+    {normal_text:a node }
     *@code C1 l5
      *brace_container C1
-      {in code}
+      {normal_text:in code}
     {spaces_after_argument: }
     *@c C1
      *line_arg C3
@@ -97,18 +97,18 @@ $result_tree_text{'various_added_nodes_and_refs'} = '*document_root C19
   *arguments_line C1
    *line_arg C7
     {spaces_before_argument: }
-    {a }
+    {normal_text:a }
     *@comma C1
      *brace_container
     *@comma C1
      *brace_container
-    { node }
+    {normal_text: node }
     *@code C1
      *brace_container C4
-      {a}
+      {normal_text:a}
       *@comma C1
        *brace_container
-      {b}
+      {normal_text:b}
       *@comma C1
        *brace_container
     {spaces_after_argument:\\n}
@@ -120,10 +120,10 @@ $result_tree_text{'various_added_nodes_and_refs'} = '*document_root C19
   *arguments_line C1
    *line_arg C4
     {spaces_before_argument: }
-    {a ,, node }
+    {normal_text:a ,, node }
     *@code C1 l7
      *brace_container C1
-      {a,b,}
+      {normal_text:a,b,}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l9 {@asis{(}in paren(too  aaa}
@@ -137,8 +137,8 @@ $result_tree_text{'various_added_nodes_and_refs'} = '*document_root C19
     {spaces_before_argument: }
     *@asis C1
      *brace_container C1
-      {(}
-    {in paren(too  aaa}
+      {normal_text:(}
+    {normal_text:in paren(too  aaa}
     {spaces_after_argument:\\n}
  *@section C2 l9 {(in paren(too  aaa}
  |EXTRA
@@ -148,7 +148,7 @@ $result_tree_text{'various_added_nodes_and_refs'} = '*document_root C19
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {(in paren(too  aaa}
+    {normal_text:(in paren(too  aaa}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l11 {changed @code{node} and (@samp{file})}
@@ -160,17 +160,17 @@ $result_tree_text{'various_added_nodes_and_refs'} = '*document_root C19
   *arguments_line C1
    *line_arg C7
     {spaces_before_argument: }
-    {changed }
+    {normal_text:changed }
     * C1
      *@code C1
       *brace_container C1
-       {node}
-    { and (}
+       {normal_text:node}
+    {normal_text: and (}
     * C1
      *@samp C1
       *brace_container C1
-       {file}
-    {)}
+       {normal_text:file}
+    {normal_text:)}
     {spaces_after_argument:\\n}
  *@subsection C2 l11 {changed @ref{ @code{node}} and (@pxref{ ,, , @samp{file}})}
  |EXTRA
@@ -180,7 +180,7 @@ $result_tree_text{'various_added_nodes_and_refs'} = '*document_root C19
   *arguments_line C1
    *line_arg C7
     {spaces_before_argument: }
-    {changed }
+    {normal_text:changed }
     *@ref C1 l11
      *brace_arg C2
      |EXTRA
@@ -189,8 +189,8 @@ $result_tree_text{'various_added_nodes_and_refs'} = '*document_root C19
       {spaces_before_argument: }
       *@code C1 l11
        *brace_container C1
-        {node}
-    { and (}
+        {normal_text:node}
+    {normal_text: and (}
     *@pxref C4 l11
      *brace_arg C1
       {spaces_before_argument: }
@@ -201,8 +201,8 @@ $result_tree_text{'various_added_nodes_and_refs'} = '*document_root C19
       {spaces_before_argument: }
       *@samp C1 l11
        *brace_container C1
-        {file}
-    {)}
+        {normal_text:file}
+    {normal_text:)}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l13 {@asis{} [+1+]}
@@ -216,7 +216,7 @@ $result_tree_text{'various_added_nodes_and_refs'} = '*document_root C19
     {spaces_before_argument: }
     *@asis C1
      *brace_container
-    { [+1+]}
+    {normal_text: [+1+]}
     {spaces_after_argument:\\n}
  *@subsection C2 l13 {@asis{}}
  |EXTRA
@@ -239,15 +239,15 @@ $result_tree_text{'various_added_nodes_and_refs'} = '*document_root C19
   *arguments_line C1
    *line_arg C7
     {spaces_before_argument: }
-    {a}
+    {normal_text:a}
     *@asis C1
      *brace_container C1
-      {::}
-    {b}
+      {normal_text:::}
+    {normal_text:b}
     *@asis C1
      *brace_container C1
-      {\\t}
-    { c}
+      {normal_text:\\t}
+    {normal_text: c}
     {spaces_after_argument:\\n}
  *@chapter C2 l15 {a::b	 c}
  |EXTRA
@@ -257,7 +257,7 @@ $result_tree_text{'various_added_nodes_and_refs'} = '*document_root C19
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {a::b\\t c}
+    {normal_text:a::b\\t c}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l17 {a node [+2+]}
@@ -269,8 +269,8 @@ $result_tree_text{'various_added_nodes_and_refs'} = '*document_root C19
   *arguments_line C1
    *line_arg C4
     {spaces_before_argument: }
-    {a node}
-    { [+2+]}
+    {normal_text:a node}
+    {normal_text: [+2+]}
     {spaces_after_argument:\\n}
  *@section C6 l17 {a node}
  |EXTRA
@@ -280,7 +280,7 @@ $result_tree_text{'various_added_nodes_and_refs'} = '*document_root C19
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {a node}
+    {normal_text:a node}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   {empty_line:\\n}
@@ -290,52 +290,52 @@ $result_tree_text{'various_added_nodes_and_refs'} = '*document_root C19
     |EXTRA
     |node_content:A{0|0}
     |normalized:{a-node}
-     {a node}
-   {\\n}
+     {normal_text:a node}
+   {normal_text:\\n}
    *@ref C1 l21
     *brace_arg C4
     |EXTRA
     |node_content:A{0|1}
     |normalized:{a-node-in-code}
-     {a node }
+     {normal_text:a node }
      *@code C1 l21
       *brace_container C1
-       {in code}
+       {normal_text:in code}
      {spaces_after_argument: }
      *@c C1
       *line_arg C3
        {spaces_before_argument: }
        {rawline_text:comment}
        {spaces_after_argument:\\n}
-   {\\n}
+   {normal_text:\\n}
    *@ref C3 l23
     *brace_arg C2
     |EXTRA
     |node_content:A{0|0}
     |normalized:{a}
-     {a}
+     {normal_text:a}
      {spaces_after_argument: }
     *brace_arg
     *brace_arg C3
      {spaces_before_argument: }
-     {node }
+     {normal_text:node }
      *@code C1 l23
       *brace_container C1
-       {a,b,}
-   {\\n}
+       {normal_text:a,b,}
+   {normal_text:\\n}
    *@ref C1 l24
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{_0028in-paren_0028too-aaa}
-     {(in paren(too  aaa}
-   {\\n}
+     {normal_text:(in paren(too  aaa}
+   {normal_text:\\n}
    *@ref C1 l25
     *brace_arg C5
     |EXTRA
     |node_content:A{0|4}
     |normalized:{changed-node-and-_0028file_0029}
-     {changed }
+     {normal_text:changed }
      *@ref C1 l25
       *brace_arg C2
       |EXTRA
@@ -344,8 +344,8 @@ $result_tree_text{'various_added_nodes_and_refs'} = '*document_root C19
        {spaces_before_argument: }
        *@code C1 l25
         *brace_container C1
-         {node}
-     { and (}
+         {normal_text:node}
+     {normal_text: and (}
      *@pxref C4 l25
       *brace_arg C1
        {spaces_before_argument: }
@@ -356,23 +356,23 @@ $result_tree_text{'various_added_nodes_and_refs'} = '*document_root C19
        {spaces_before_argument: }
        *@samp C1 l25
         *brace_container C1
-         {file}
-     {)}
-   {\\n}
+         {normal_text:file}
+     {normal_text:)}
+   {normal_text:\\n}
    *@ref C1 l26
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
      *@asis C1 l26
       *brace_container
-   {\\n}
+   {normal_text:\\n}
    *@ref C1 l27
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{a_003a_003ab-c}
-     {a::b\\t c}
-   {\\n}
+     {normal_text:a::b\\t c}
+   {normal_text:\\n}
   {empty_line:\\n}
   {empty_line:\\n}
 ';

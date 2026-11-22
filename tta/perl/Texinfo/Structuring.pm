@@ -275,7 +275,8 @@ sub new_node_menu_entry($;$) {
                                  'parent' => $description,
                                  'contents' => []});
   $description->{'contents'}->[0]->{'contents'}->[0]
-    = Texinfo::TreeElement::new({'text' => "\n"});
+    = Texinfo::TreeElement::new({'text' => "\n",
+                                 'type' => 'normal_text'});
   $description->{'parent'} = $entry;
 
   if ($use_sections) {
@@ -350,7 +351,8 @@ sub new_block_command($$) {
   $end->{'contents'} = [$end_args];
 
   my $command_name_text
-    = Texinfo::TreeElement::new({'text' => $command_name,});
+    = Texinfo::TreeElement::new({'text' => $command_name,
+                                 'type' => 'normal_text'});
   push @{$end_args->{'contents'}},
                      Texinfo::TreeElement::new({'text' => ' ',
                                  'type' => 'spaces_before_argument'}),
@@ -521,7 +523,8 @@ sub new_detailmenu($$$$$$;$$) {
                                  unless(exists($content->{'text'}));
     }
     push @master_menu_title_contents, @{$master_menu_title->{'contents'}},
-                                Texinfo::TreeElement::new({'text' => "\n"});
+                                Texinfo::TreeElement::new({'text' => "\n",
+                                                    'type' => 'normal_text'});
     unshift @{$first_preformatted->{'contents'}}, @master_menu_title_contents;
     foreach my $content (@{$new_detailmenu->{'contents'}}) {
       # menu_entry or menu_comment

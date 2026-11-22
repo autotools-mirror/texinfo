@@ -14,13 +14,13 @@ $result_tree_text{'nested'} = '*document_root C1
   *paragraph C1
    *@b C1 l1
     *brace_container C3
-     {in b }
+     {normal_text:in b }
      *@verb C1 l1
       *brace_container C3
        {verb_delimiter:/}
        {raw: in verb { } }
        {verb_delimiter:/}
-     { in b end}
+     {normal_text: in b end}
 ';
 
 

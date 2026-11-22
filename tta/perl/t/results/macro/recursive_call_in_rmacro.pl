@@ -25,7 +25,7 @@ $result_tree_text{'recursive_call_in_rmacro'} = '*document_root C1
     |text_arg:{rmacro}
      *line_arg C3
       {spaces_before_argument: }
-      {rmacro}
+      {normal_text:rmacro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    {empty_line:\\n}

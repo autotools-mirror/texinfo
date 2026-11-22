@@ -22,7 +22,7 @@ $result_tree_text{'multitable_with_empty_item_tab'} = '*document_root C1
      |misc_args:A{0.3|0.7}
       *line_arg C3
        {spaces_before_argument: }
-       {0.3 0.7}
+       {normal_text:0.3 0.7}
        {spaces_after_argument:\\n}
    *multitable_body C3
     *row C2
@@ -33,13 +33,13 @@ $result_tree_text{'multitable_with_empty_item_tab'} = '*document_root C1
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {1-1 }
+       {normal_text:1-1 }
      *@tab C2 l2
      |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {1-2 }
+       {normal_text:1-2 }
     *row C2
     |EXTRA
     |row_number:{2}
@@ -57,19 +57,19 @@ $result_tree_text{'multitable_with_empty_item_tab'} = '*document_root C1
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {3-1 }
+       {normal_text:3-1 }
      *@tab C2 l2
      |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {3-2\\n}
+       {normal_text:3-2\\n}
    *@end C1 l3
    |EXTRA
    |text_arg:{multitable}
     *line_arg C3
      {spaces_before_argument: }
-     {multitable}
+     {normal_text:multitable}
      {spaces_after_argument:\\n}
 ';
 

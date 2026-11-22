@@ -23,7 +23,7 @@ $result_tree_text{'macro_in_brace_command'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@macro C3 l5
@@ -38,7 +38,7 @@ $result_tree_text{'macro_in_brace_command'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *@itemize C3 l9
@@ -54,7 +54,7 @@ $result_tree_text{'macro_in_brace_command'} = '*document_root C1
     *paragraph C3
      *@email C1 l10
       *brace_arg C3
-       {foo-expansion}
+       {normal_text:foo-expansion}
        >SOURCEMARKS
        >macro_expansion<start;1>
         >*macro_call@foo C1
@@ -65,17 +65,17 @@ $result_tree_text{'macro_in_brace_command'} = '*document_root C1
        >macro_expansion<start;2>
         >*macro_call@abar C1
          >*brace_arg
-       {bar-expansion}
+       {normal_text:bar-expansion}
        >SOURCEMARKS
        >macro_expansion<end;2><p:13>
-     {,\\n}
-     {  also helped.\\n}
+     {normal_text:,\\n}
+     {normal_text:  also helped.\\n}
    *@end C1 l12
    |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }
-     {itemize}
+     {normal_text:itemize}
      {spaces_after_argument:\\n}
 ';
 

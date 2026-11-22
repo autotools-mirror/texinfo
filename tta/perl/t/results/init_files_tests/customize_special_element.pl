@@ -32,7 +32,7 @@ $result_tree_text{'customize_special_element'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l6 {top}
  |EXTRA
@@ -41,7 +41,7 @@ $result_tree_text{'customize_special_element'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l8 {Chapter}
@@ -52,7 +52,7 @@ $result_tree_text{'customize_special_element'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chapter}
+    {normal_text:Chapter}
     {spaces_after_argument:\\n}
  *@chapter C3 l9 {chap}
  |EXTRA
@@ -62,7 +62,7 @@ $result_tree_text{'customize_special_element'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@documentlanguage C1 l11
@@ -71,7 +71,7 @@ $result_tree_text{'customize_special_element'} = '*document_root C7
   |text_arg:{fr}
    *line_arg C3
     {spaces_before_argument: }
-    {fr}
+    {normal_text:fr}
     {spaces_after_argument:\\n}
  *@node C1 l12 {Chapter fr}
  |EXTRA
@@ -81,7 +81,7 @@ $result_tree_text{'customize_special_element'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chapter fr}
+    {normal_text:Chapter fr}
     {spaces_after_argument:\\n}
  *@chapter C3 l13 {chap fr}
  |EXTRA
@@ -91,18 +91,18 @@ $result_tree_text{'customize_special_element'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap fr}
+    {normal_text:chap fr}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C3
-   {Text}
+   {normal_text:Text}
    *@footnote C1 l15
    |EXTRA
    |global_command_number:{1}
     *brace_command_context C1
      *paragraph C1
-      {In footnote}
-   {.\\n}
+      {normal_text:In footnote}
+   {normal_text:.\\n}
 ';
 
 

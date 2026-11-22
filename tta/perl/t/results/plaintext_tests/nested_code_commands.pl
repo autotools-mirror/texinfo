@@ -14,60 +14,60 @@ $result_tree_text{'nested_code_commands'} = '*document_root C1
   *paragraph C16
    *@code C1 l1
     *brace_container C2
-     {aA }
+     {normal_text:aA }
      *@kbd C1 l1
       *brace_container C1
-       {fg}
-   {.\\n}
+       {normal_text:fg}
+   {normal_text:.\\n}
    *@code C1 l2
     *brace_container C2
-     {cc }
+     {normal_text:cc }
      *@code C1 l2
       *brace_container C1
-       {gg}
-   {.\\n}
+       {normal_text:gg}
+   {normal_text:.\\n}
    *@command C1 l3
     *brace_container C2
-     {in command }
+     {normal_text:in command }
      *@kbd C1 l3
       *brace_container C1
-       {fg}
-   {\\n}
+       {normal_text:fg}
+   {normal_text:\\n}
    *@code C1 l4
     *brace_container C2
-     {in code }
+     {normal_text:in code }
      *@command C1 l4
       *brace_container C1
-       {in command}
-   {\\n}
+       {normal_text:in command}
+   {normal_text:\\n}
    *@samp C1 l5
     *brace_container C2
-     {in samp }
+     {normal_text:in samp }
      *@code C1 l5
       *brace_container C1
-       {in code}
-   {\\n}
+       {normal_text:in code}
+   {normal_text:\\n}
    *@code C1 l6
     *brace_container C2
-     {in code }
+     {normal_text:in code }
      *@samp C1 l6
       *brace_container C1
-       {in samp}
-   {\\n}
+       {normal_text:in samp}
+   {normal_text:\\n}
    *@var C1 l7
     *brace_container C2
-     {in var }
+     {normal_text:in var }
      *@code C1 l7
       *brace_container C1
-       {in code}
-   {\\n}
+       {normal_text:in code}
+   {normal_text:\\n}
    *@code C1 l8
     *brace_container C2
-     {in code }
+     {normal_text:in code }
      *@var C1 l8
       *brace_container C1
-       {in var}
-   {\\n}
+       {normal_text:in var}
+   {normal_text:\\n}
   {empty_line:\\n}
   *@example C3 l10
    *arguments_line C1
@@ -76,67 +76,67 @@ $result_tree_text{'nested_code_commands'} = '*document_root C1
    *preformatted C18
     *@code C1 l11
      *brace_container C1
-      {in code}
-    {\\n}
+      {normal_text:in code}
+    {normal_text:\\n}
     *@code C1 l12
      *brace_container C2
-      {aA }
+      {normal_text:aA }
       *@kbd C1 l12
        *brace_container C1
-        {fg}
-    {\\n}
+        {normal_text:fg}
+    {normal_text:\\n}
     *@kbd C1 l13
      *brace_container C1
-      {hh}
-    {\\n}
+      {normal_text:hh}
+    {normal_text:\\n}
     *@command C1 l14
      *brace_container C2
-      {in command }
+      {normal_text:in command }
       *@kbd C1 l14
        *brace_container C1
-        {fg}
-    {\\n}
+        {normal_text:fg}
+    {normal_text:\\n}
     *@code C1 l15
      *brace_container C2
-      {in code }
+      {normal_text:in code }
       *@command C1 l15
        *brace_container C1
-        {in command}
-    {\\n}
+        {normal_text:in command}
+    {normal_text:\\n}
     *@samp C1 l16
      *brace_container C2
-      {in samp }
+      {normal_text:in samp }
       *@code C1 l16
        *brace_container C1
-        {in code}
-    {\\n}
+        {normal_text:in code}
+    {normal_text:\\n}
     *@code C1 l17
      *brace_container C2
-      {in code }
+      {normal_text:in code }
       *@samp C1 l17
        *brace_container C1
-        {in samp}
-    {\\n}
+        {normal_text:in samp}
+    {normal_text:\\n}
     *@var C1 l18
      *brace_container C2
-      {in var }
+      {normal_text:in var }
       *@code C1 l18
        *brace_container C1
-        {in code}
-    {\\n}
+        {normal_text:in code}
+    {normal_text:\\n}
     *@code C1 l19
      *brace_container C2
-      {in code }
+      {normal_text:in code }
       *@var C1 l19
        *brace_container C1
-        {in var}
-    {\\n}
+        {normal_text:in var}
+    {normal_text:\\n}
    *@end C1 l20
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@display C3 l22
@@ -146,63 +146,63 @@ $result_tree_text{'nested_code_commands'} = '*document_root C1
    *preformatted C16
     *@kbd C1 l23
      *brace_container C1
-      {in disp}
-    {\\n}
+      {normal_text:in disp}
+    {normal_text:\\n}
     *@code C1 l24
      *brace_container C2
-      {aA }
+      {normal_text:aA }
       *@kbd C1 l24
        *brace_container C1
-        {fg}
-    {\\n}
+        {normal_text:fg}
+    {normal_text:\\n}
     *@command C1 l25
      *brace_container C2
-      {in command }
+      {normal_text:in command }
       *@kbd C1 l25
        *brace_container C1
-        {fg}
-    {\\n}
+        {normal_text:fg}
+    {normal_text:\\n}
     *@code C1 l26
      *brace_container C2
-      {in code }
+      {normal_text:in code }
       *@command C1 l26
        *brace_container C1
-        {in command}
-    {\\n}
+        {normal_text:in command}
+    {normal_text:\\n}
     *@samp C1 l27
      *brace_container C2
-      {in samp }
+      {normal_text:in samp }
       *@code C1 l27
        *brace_container C1
-        {in code}
-    {\\n}
+        {normal_text:in code}
+    {normal_text:\\n}
     *@code C1 l28
      *brace_container C2
-      {in code }
+      {normal_text:in code }
       *@samp C1 l28
        *brace_container C1
-        {in samp}
-    {\\n}
+        {normal_text:in samp}
+    {normal_text:\\n}
     *@var C1 l29
      *brace_container C2
-      {in var }
+      {normal_text:in var }
       *@code C1 l29
        *brace_container C1
-        {in code}
-    {\\n}
+        {normal_text:in code}
+    {normal_text:\\n}
     *@code C1 l30
      *brace_container C2
-      {in code }
+      {normal_text:in code }
       *@var C1 l30
        *brace_container C1
-        {in var}
-    {\\n}
+        {normal_text:in var}
+    {normal_text:\\n}
    *@end C1 l31
    |EXTRA
    |text_arg:{display}
     *line_arg C3
      {spaces_before_argument: }
-     {display}
+     {normal_text:display}
      {spaces_after_argument:\\n}
 ';
 

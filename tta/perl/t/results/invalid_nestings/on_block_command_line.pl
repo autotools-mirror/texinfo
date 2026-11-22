@@ -23,13 +23,13 @@ $result_tree_text{'on_block_command_line'} = '*document_root C1
       |identifier:{in-anchor}
       |is_target:{1}
        *brace_arg C1
-        {in anchor}
-     { }
+        {normal_text:in anchor}
+     {normal_text: }
      *@titlefont C1 l1
      |EXTRA
      |global_command_number:{1}
       *brace_container C1
-       {in titlefont}
+       {normal_text:in titlefont}
      {spaces_after_argument:\\n}
    *multitable_body C1
     *row C1
@@ -43,14 +43,14 @@ $result_tree_text{'on_block_command_line'} = '*document_root C1
       |EXTRA
       |global_command_number:{2}
        *brace_container C1
-        {in titlefont}
-      {\\n}
+        {normal_text:in titlefont}
+      {normal_text:\\n}
    *@end C1 l3
    |EXTRA
    |text_arg:{multitable}
     *line_arg C3
      {spaces_before_argument: }
-     {multitable}
+     {normal_text:multitable}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@quotation C2 l5
@@ -63,32 +63,32 @@ $result_tree_text{'on_block_command_line'} = '*document_root C1
      |EXTRA
      |global_command_number:{3}
       *brace_container C1
-       {in titlefont}
-     { }
+       {normal_text:in titlefont}
+     {normal_text: }
      *@anchor C1 l5
      |EXTRA
      |identifier:{in-quotation-anchor}
      |is_target:{1}
       *brace_arg C1
-       {in quotation anchor}
+       {normal_text:in quotation anchor}
      *@footnote C1 l5
      |EXTRA
      |global_command_number:{1}
       *brace_command_context C1
        *paragraph C1
-        {footnote}
-     { }
+        {normal_text:footnote}
+     {normal_text: }
      *@exdent C1 l5
       *line_arg C3
        {spaces_before_argument: }
-       {exdent}
+       {normal_text:exdent}
        {spaces_after_argument:\\n}
    *@end C1 l6
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }
-     {quotation}
+     {normal_text:quotation}
      {spaces_after_argument:\\n}
 ';
 

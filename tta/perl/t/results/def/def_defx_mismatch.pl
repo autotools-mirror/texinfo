@@ -23,21 +23,21 @@ $result_tree_text{'def_defx_mismatch'} = '*document_root C1
      |EXTRA
      |inserted:{1}
       *def_line_arg C1
-       {Function}
+       {normal_text:Function}
      {spaces: }
      *def_name C1
       *bracketed_arg C1 l1
-       {my def}
+       {normal_text:my def}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {args}
+       {normal_text:args}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@var C1 l1
         *brace_container C1
-         {arg}
+         {normal_text:arg}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
@@ -54,39 +54,39 @@ $result_tree_text{'def_defx_mismatch'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *bracketed_arg C1 l2
-       {type}
+       {normal_text:type}
      {spaces: }
      *def_name C1
       *bracketed_arg C1 l2
-       {name}
+       {normal_text:name}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {and}
+       {normal_text:and}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {now}
+       {normal_text:now}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {the}
+       {normal_text:the}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {args}
+       {normal_text:args}
      {spaces_after_argument:\\n}
    *def_item C3
     {empty_line:\\n}
     *paragraph C1
-     {In defun.\\n}
+     {normal_text:In defun.\\n}
     {empty_line:\\n}
    *@end C1 l6
    |EXTRA
    |text_arg:{defun}
     *line_arg C3
      {spaces_before_argument: }
-     {defun}
+     {normal_text:defun}
      {spaces_after_argument:\\n}
 ';
 

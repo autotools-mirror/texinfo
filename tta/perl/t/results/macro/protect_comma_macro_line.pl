@@ -26,21 +26,21 @@ $result_tree_text{'protect_comma_macro_line'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C2
-   {we get arg,  comma \\, and another arg,  comma \\,\\n}
+   {normal_text:we get arg,  comma \\, and another arg,  comma \\,\\n}
    >SOURCEMARKS
    >macro_expansion<start;1>
     >*macro_call_line@macrotwo C1
      >*line_arg C2
       >{spaces_before_argument:  }
-      >{arg,  comma \\,}
-   {and another one on another line arg,  comma \\,\\n}
+      >{normal_text:arg,  comma \\,}
+   {normal_text:and another one on another line arg,  comma \\,\\n}
   {empty_line:\\n}
   *paragraph C1
-   {and a last in another paragraph\\n}
+   {normal_text:and a last in another paragraph\\n}
    >SOURCEMARKS
    >macro_expansion<end;1><p:31>
 ';

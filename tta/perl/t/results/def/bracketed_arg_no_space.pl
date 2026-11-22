@@ -22,37 +22,37 @@ $result_tree_text{'bracketed_arg_no_space'} = '*document_root C1
      *def_category C1
       *def_line_arg C2
        *bracketed_arg C1 l1
-        {a b}
+        {normal_text:a b}
        *bracketed_arg C1 l1
-        {c d}
+        {normal_text:c d}
      {spaces: }
      *def_name C1
       *def_line_arg C2
        *bracketed_arg C1 l1
-        {e g}
-       {h}
+        {normal_text:e g}
+       {normal_text:h}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {m}
+       {normal_text:m}
      *def_arg C1
       *bracketed_arg C2 l1
-       {ll}
+       {normal_text:ll}
        {spaces_after_argument: }
      {spaces: }
      *def_arg C1
       *bracketed_arg C1 l1
-       {rest}
+       {normal_text:rest}
      *def_arg C1
       *bracketed_arg C1 l1
-       {and more}
+       {normal_text:and more}
      {spaces_after_argument:\\n}
    *@end C1 l2
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
-     {deffn}
+     {normal_text:deffn}
      {spaces_after_argument:\\n}
 ';
 

@@ -17,7 +17,7 @@ $result_tree_text{'double_titlepage_not_closed'} = '*document_root C1
       {spaces_before_argument:\\n}
     {empty_line:\\n}
     *paragraph C1
-     {This is in title page\\n}
+     {normal_text:This is in title page\\n}
     {empty_line:\\n}
     {empty_line:\\n}
     *@titlepage C3 l6
@@ -26,7 +26,7 @@ $result_tree_text{'double_titlepage_not_closed'} = '*document_root C1
        {spaces_before_argument:\\n}
      {empty_line:\\n}
      *paragraph C1
-      {And still in title page\\n}
+      {normal_text:And still in title page\\n}
 ';
 
 

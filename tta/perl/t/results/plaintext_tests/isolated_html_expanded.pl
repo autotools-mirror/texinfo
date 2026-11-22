@@ -18,13 +18,13 @@ $result_tree_text{'isolated_html_expanded'} = '*document_root C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *rawpreformatted C1
-     {html\\n}
+     {normal_text:html\\n}
     *@end C1 l4
     |EXTRA
     |text_arg:{html}
      *line_arg C3
       {spaces_before_argument: }
-      {html}
+      {normal_text:html}
       {spaces_after_argument:\\n}
 ';
 

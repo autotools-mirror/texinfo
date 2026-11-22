@@ -15,96 +15,96 @@ $result_tree_text{'standard_quotations'} = '*document_root C1
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     {Note}
+     {normal_text:Note}
      {spaces_after_argument:\\n}
    *paragraph C1
-    {A Note\\n}
+    {normal_text:A Note\\n}
    *@end C1 l3
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }
-     {quotation}
+     {normal_text:quotation}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@quotation C3 l5
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     {note}
+     {normal_text:note}
      {spaces_after_argument:\\n}
    *paragraph C1
-    {A note\\n}
+    {normal_text:A note\\n}
    *@end C1 l7
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }
-     {quotation}
+     {normal_text:quotation}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@quotation C3 l9
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     {Caution}
+     {normal_text:Caution}
      {spaces_after_argument:\\n}
    *paragraph C1
-    {Caution\\n}
+    {normal_text:Caution\\n}
    *@end C1 l11
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }
-     {quotation}
+     {normal_text:quotation}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@quotation C3 l13
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     {Important}
+     {normal_text:Important}
      {spaces_after_argument:\\n}
    *paragraph C1
-    {Important\\n}
+    {normal_text:Important\\n}
    *@end C1 l15
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }
-     {quotation}
+     {normal_text:quotation}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@quotation C3 l17
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     {Tip}
+     {normal_text:Tip}
      {spaces_after_argument:\\n}
    *paragraph C1
-    {a Tip\\n}
+    {normal_text:a Tip\\n}
    *@end C1 l19
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }
-     {quotation}
+     {normal_text:quotation}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@quotation C3 l21
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     {Warning}
+     {normal_text:Warning}
      {spaces_after_argument:\\n}
    *paragraph C1
-    {a Warning.\\n}
+    {normal_text:a Warning.\\n}
    *@end C1 l23
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }
-     {quotation}
+     {normal_text:quotation}
      {spaces_after_argument:\\n}
 ';
 

@@ -14,18 +14,18 @@ $result_tree_text{'sc_formatting_with_css'} = '*document_root C1
    *@settitle C1 l1
     *line_arg C5
      {spaces_before_argument: }
-     {In title }
+     {normal_text:In title }
      *@sc C1 l1
       *brace_container C1
-       {my string}
-     { NEXT}
+       {normal_text:my string}
+     {normal_text: NEXT}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C2
    *@sc C1 l3
     *brace_container C1
-     {in sc}
-   {. OUT.\\n}
+     {normal_text:in sc}
+   {normal_text:. OUT.\\n}
   {empty_line:\\n}
   *@example C3 l5
    *arguments_line C1
@@ -34,14 +34,14 @@ $result_tree_text{'sc_formatting_with_css'} = '*document_root C1
    *preformatted C2
     *@sc C1 l6
      *brace_container C1
-      {small case in example}
-    { MORE text.\\n}
+      {normal_text:small case in example}
+    {normal_text: MORE text.\\n}
    *@end C1 l7
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
 ';

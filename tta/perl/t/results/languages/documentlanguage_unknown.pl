@@ -111,7 +111,7 @@ $result_tree_text{'documentlanguage_unknown'} = '*document_root C6
    |text_arg:{pt}
     *line_arg C3
      {spaces_before_argument: }
-     {pt}
+     {normal_text:pt}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *@node C1 documentlanguage.texi:l24 {Top}
@@ -122,7 +122,7 @@ $result_tree_text{'documentlanguage_unknown'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 documentlanguage.texi:l25 {top section}
  |EXTRA
@@ -131,7 +131,7 @@ $result_tree_text{'documentlanguage_unknown'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top section}
+    {normal_text:top section}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 documentlanguage.texi:l27 {chapter}
@@ -143,7 +143,7 @@ $result_tree_text{'documentlanguage_unknown'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter}
+    {normal_text:chapter}
     {spaces_after_argument:\\n}
  *@chapter C8 documentlanguage.texi:l28 {Chapter}
  |EXTRA
@@ -153,7 +153,7 @@ $result_tree_text{'documentlanguage_unknown'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chapter}
+    {normal_text:Chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
@@ -162,8 +162,8 @@ $result_tree_text{'documentlanguage_unknown'} = '*document_root C6
     |EXTRA
     |node_content:A{0|0}
     |normalized:{chapter}
-     {chapter}
-   {.\\n}
+     {normal_text:chapter}
+   {normal_text:.\\n}
   {empty_line:\\n}
   *@deftypemethod C3 documentlanguage.texi:l32
    *def_line C1 documentlanguage.texi:l32
@@ -186,29 +186,29 @@ $result_tree_text{'documentlanguage_unknown'} = '*document_root C6
      {spaces: }
      *def_class C1
       *def_line_arg C1
-       {class}
+       {normal_text:class}
      {spaces: }
      *def_type C1
       *def_line_arg C1
-       {data-type}
+       {normal_text:data-type}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {name}
+       {normal_text:name}
      {spaces: }
      *def_typearg C1
       *def_line_arg C1
-       {arguments}
+       {normal_text:arguments}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {Some text.\\n}
+     {normal_text:Some text.\\n}
    *@end C1 documentlanguage.texi:l34
    |EXTRA
    |text_arg:{deftypemethod}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypemethod}
+     {normal_text:deftypemethod}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@printindex C1 documentlanguage.texi:l36
@@ -217,7 +217,7 @@ $result_tree_text{'documentlanguage_unknown'} = '*document_root C6
   |misc_args:A{fn}
    *line_arg C3
     {spaces_before_argument: }
-    {fn}
+    {normal_text:fn}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@bye C1

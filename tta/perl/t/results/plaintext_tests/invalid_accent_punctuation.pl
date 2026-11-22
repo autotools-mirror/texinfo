@@ -12,7 +12,7 @@ $result_tree_text{'invalid_accent_punctuation'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *paragraph C3
-   {a. }
+   {normal_text:a. }
    *@^ l1
    *@@
 ';

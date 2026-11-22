@@ -14,8 +14,8 @@ $result_tree_text{'unknown_value_after_spaces'} = '*document_root C1
    {spaces_before_paragraph:  }
   *@value C1
    *brace_container C1
-    {unknown}
-  {  }
+    {normal_text:unknown}
+  {normal_text:  }
 ';
 
 

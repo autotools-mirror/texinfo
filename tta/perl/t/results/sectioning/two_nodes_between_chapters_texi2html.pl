@@ -19,7 +19,7 @@ $result_tree_text{'two_nodes_between_chapters_texi2html'} = '*document_root C8
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C4 l2 {top}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'two_nodes_between_chapters_texi2html'} = '*document_root C8
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C5 l4
@@ -41,39 +41,39 @@ $result_tree_text{'two_nodes_between_chapters_texi2html'} = '*document_root C8
     |EXTRA
     |node_content:A{0|0}
     |normalized:{chapter-1}
-     {chapter 1}
+     {normal_text:chapter 1}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 l6
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{node-between-chapters}
-     {node between chapters}
+     {normal_text:node between chapters}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 l7
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{chapter-2}
-     {chapter 2}
+     {normal_text:chapter 2}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l8
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l10 {chapter 1}
@@ -84,25 +84,25 @@ $result_tree_text{'two_nodes_between_chapters_texi2html'} = '*document_root C8
   *arguments_line C4
    *line_arg C2
     {spaces_before_argument: }
-    {chapter 1}
+    {normal_text:chapter 1}
    *line_arg C2
    |EXTRA
    |node_content:A{1|1}
    |normalized:{node-between-chapters}
     {spaces_before_argument: }
-    {node between chapters}
+    {normal_text:node between chapters}
    *line_arg C2
    |EXTRA
    |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
    *line_arg C3
    |EXTRA
    |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@chapter C2 l11 {chapter c1}
  |EXTRA
@@ -112,7 +112,7 @@ $result_tree_text{'two_nodes_between_chapters_texi2html'} = '*document_root C8
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter c1}
+    {normal_text:chapter c1}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C2 l13 {node between chapters}
@@ -123,7 +123,7 @@ $result_tree_text{'two_nodes_between_chapters_texi2html'} = '*document_root C8
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {node between chapters}
+    {normal_text:node between chapters}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l15 {chapter 2}
@@ -134,7 +134,7 @@ $result_tree_text{'two_nodes_between_chapters_texi2html'} = '*document_root C8
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter 2}
+    {normal_text:chapter 2}
     {spaces_after_argument:\\n}
  *@chapter C1 l16 {chapter c2}
  |EXTRA
@@ -144,7 +144,7 @@ $result_tree_text{'two_nodes_between_chapters_texi2html'} = '*document_root C8
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter c2}
+    {normal_text:chapter c2}
     {spaces_after_argument:\\n}
 ';
 

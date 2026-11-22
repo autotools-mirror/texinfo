@@ -21,7 +21,7 @@ $result_tree_text{'one_subsection'} = '*document_root C2
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {The subsection}
+    {normal_text:The subsection}
     {spaces_after_argument:\\n}
 ';
 

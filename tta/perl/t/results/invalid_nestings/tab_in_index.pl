@@ -18,10 +18,10 @@ $result_tree_text{'tab_in_index'} = '*document_root C1
     *block_line_arg C5
      {spaces_before_argument: }
      *bracketed_arg C1 l1
-      {one nonlettered character}
-     { }
+      {normal_text:one nonlettered character}
+     {normal_text: }
      *bracketed_arg C1 l1
-      {normal text}
+      {normal_text:normal text}
      {spaces_after_argument:\\n}
    *multitable_body C1
     *row C2
@@ -32,28 +32,28 @@ $result_tree_text{'tab_in_index'} = '*document_root C1
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {one nonlettered character }
+       {normal_text:one nonlettered character }
      *@tab C2 l2
      |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C2
-       {aaa\\n}
+       {normal_text:aaa\\n}
        *index_entry_command@vindex C1 l3
        |EXTRA
        |index_entry:I{vr,1}
         *line_arg C5
          {spaces_before_argument: }
-         {in index entry }
+         {normal_text:in index entry }
          {ignorable_spaces_after_command: }
-         {in tab}
+         {normal_text:in tab}
          {spaces_after_argument:\\n}
    *@end C1 l4
    |EXTRA
    |text_arg:{multitable}
     *line_arg C3
      {spaces_before_argument: }
-     {multitable}
+     {normal_text:multitable}
      {spaces_after_argument:\\n}
 ';
 

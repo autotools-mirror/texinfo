@@ -21,7 +21,7 @@ $result_tree_text{'protected_node_parentheses'} = '*document_root C4
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {first}
+    {normal_text:first}
     {spaces_after_argument:\\n}
  *@top C4 l3 {top}
  |EXTRA
@@ -30,7 +30,7 @@ $result_tree_text{'protected_node_parentheses'} = '*document_root C4
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C3 l5
@@ -45,18 +45,18 @@ $result_tree_text{'protected_node_parentheses'} = '*document_root C4
     |normalized:{_0028manual_0029-name}
      *@asis C1 l6
       *brace_container C1
-       {(}
-     {manual) name}
+       {normal_text:(}
+     {normal_text:manual) name}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l7
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C8 l9 {@asis{(}manual) name}
@@ -69,8 +69,8 @@ $result_tree_text{'protected_node_parentheses'} = '*document_root C4
     {spaces_before_argument: }
     *@asis C1 l9
      *brace_container C1
-      {(}
-    {manual) name}
+      {normal_text:(}
+    {normal_text:manual) name}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@anchor C1 l11
@@ -80,8 +80,8 @@ $result_tree_text{'protected_node_parentheses'} = '*document_root C4
    *brace_arg C2
     *@asis C1 l11
      *brace_container C1
-      {(}
-    {manual2) name2}
+      {normal_text:(}
+    {normal_text:manual2) name2}
   {spaces_after_close_brace:\\n}
   {empty_line:\\n}
   *paragraph C2
@@ -92,9 +92,9 @@ $result_tree_text{'protected_node_parentheses'} = '*document_root C4
     |normalized:{_0028manual2_0029-name2}
      *@asis C1 l13
       *brace_container C1
-       {(}
-     {manual2) name2}
-   {.\\n}
+       {normal_text:(}
+     {normal_text:manual2) name2}
+   {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C2
    *@ref C1 l15
@@ -104,9 +104,9 @@ $result_tree_text{'protected_node_parentheses'} = '*document_root C4
     |normalized:{_0028manual_0029-name}
      *@asis C1 l15
       *brace_container C1
-       {(}
-     {manual) name}
-   {.\\n}
+       {normal_text:(}
+     {normal_text:manual) name}
+   {normal_text:.\\n}
 ';
 
 

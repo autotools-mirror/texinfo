@@ -23,13 +23,13 @@ $result_tree_text{'misc_raw_comments'} = '*document_root C1
         {rawline_text:comment space}
         {spaces_after_argument:\\n}
     *rawpreformatted C1
-     {in html }
+     {normal_text:in html }
     *@end C1 l3
     |EXTRA
     |text_arg:{html}
      *line_arg C3
       {spaces_before_argument: }
-      {html}
+      {normal_text:html}
       *@c C1
        *line_arg C3
         {spaces_before_argument: }
@@ -40,14 +40,14 @@ $result_tree_text{'misc_raw_comments'} = '*document_root C1
     *arguments_line C1
      *block_line_arg C3
       {spaces_before_argument: }
-      {in tex}
+      {normal_text:in tex}
       {spaces_after_argument:\\n}
     *@end C1 l6
     |EXTRA
     |text_arg:{tex}
      *line_arg C4
       {spaces_before_argument: }
-      {tex}
+      {normal_text:tex}
       {spaces_after_argument:    }
       *@c C1
        *line_arg C3
@@ -66,7 +66,7 @@ $result_tree_text{'misc_raw_comments'} = '*document_root C1
    |text_arg:{verbatim}
     *line_arg C3
      {spaces_before_argument: }
-     {verbatim}
+     {normal_text:verbatim}
      {spaces_after_argument:\\n}
 ';
 

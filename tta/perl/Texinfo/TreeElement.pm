@@ -32,6 +32,8 @@ our $VERSION = '7.3dev';
 # check that autovivification do not happen incorrectly.
 #no autovivification qw(fetch delete exists store strict);
 
+use Carp qw(cluck);
+
 sub new($) {
   my $element = shift;
 

@@ -15,38 +15,38 @@ $result_tree_text{'spaces_after_braced_command'} = '*document_root C1
    *@code C2 l1
     {spaces_after_cmd_before_arg: }
     *brace_container C1
-     {b}
-   {\\n}
+     {normal_text:b}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
    *@samp C2 l3
     {spaces_after_cmd_before_arg:\\n}
     *brace_container C1
-     {v}
-   {\\n}
+     {normal_text:v}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
    *@AA C2 l6
     {spaces_after_cmd_before_arg:\\n }
     *brace_container
-   {\\n}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
    *@email C3 l9
     {spaces_after_cmd_before_arg:\\n}
     *brace_arg C1
-     {a}
+     {normal_text:a}
     *brace_arg C4
      {spaces_before_argument: }
-     {b}
+     {normal_text:b}
      {spaces_after_argument: \\n}
      {spaces_after_argument: }
-   {\\n}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
    *@TeX C1 l13
     {spaces_after_cmd_before_arg:\\n}
-   {\\n}
+   {normal_text:\\n}
   {empty_line:\\n}
 ';
 

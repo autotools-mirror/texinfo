@@ -14,10 +14,10 @@ $result_tree_text{'accent_no_closed_paragraph'} = '*document_root C1
   *paragraph C1
    *@~ C1 l1
     *brace_container C2
-     {e\\n}
+     {normal_text:e\\n}
      {empty_line:\\n}
   *paragraph C1
-   {other para.\\n}
+   {normal_text:other para.\\n}
 ';
 
 

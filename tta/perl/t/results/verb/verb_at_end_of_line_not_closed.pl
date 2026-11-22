@@ -12,7 +12,7 @@ $result_tree_text{'verb_at_end_of_line_not_closed'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *paragraph C2
-   {verb at end of line }
+   {normal_text:verb at end of line }
    *@verb C1 l1
     *brace_container C2
      {raw:\\n}

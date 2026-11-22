@@ -16,28 +16,28 @@ $result_tree_text{'definfoenclose_texinfo_commands'} = '*document_root C1
    |misc_args:A{verb|;;|!!}
     *line_arg C3
      {spaces_before_argument: }
-     {verb,;;,!!}
+     {normal_text:verb,;;,!!}
      {spaces_after_argument:\\n}
    *@definfoenclose C1 l2
    |EXTRA
    |misc_args:A{TeX|aa|bb}
     *line_arg C3
      {spaces_before_argument: }
-     {TeX,aa,bb}
+     {normal_text:TeX,aa,bb}
      {spaces_after_argument:\\n}
    *@definfoenclose C1 l3
    |EXTRA
    |misc_args:A{strong|(|)}
     *line_arg C3
      {spaces_before_argument: }
-     {strong,(,)}
+     {normal_text:strong,(,)}
      {spaces_after_argument:\\n}
    *@definfoenclose C1 l4
    |EXTRA
    |misc_args:A{quotation|q|e}
     *line_arg C3
      {spaces_before_argument: }
-     {quotation,q,e}
+     {normal_text:quotation,q,e}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C2
@@ -46,34 +46,34 @@ $result_tree_text{'definfoenclose_texinfo_commands'} = '*document_root C1
      {verb_delimiter:*}
      {raw:aaa}
      {verb_delimiter:*}
-   {.\\n}
+   {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C4
    *@TeX C1 l8
     *brace_container
-   {. }
+   {normal_text:. }
    *definfoenclose_command@strong C1 l8
    |EXTRA
    |begin:{(}
    |end:{)}
     *brace_container C1
-     {in strong}
-   {.\\n}
+     {normal_text:in strong}
+   {normal_text:.\\n}
   {empty_line:\\n}
   *@quotation C3 l10
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     {important}
+     {normal_text:important}
      {spaces_after_argument:\\n}
    *paragraph C1
-    {in quotation\\n}
+    {normal_text:in quotation\\n}
    *@end C1 l12
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }
-     {quotation}
+     {normal_text:quotation}
      {spaces_after_argument:\\n}
 ';
 

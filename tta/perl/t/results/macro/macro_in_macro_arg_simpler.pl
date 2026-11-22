@@ -23,7 +23,7 @@ $result_tree_text{'macro_in_macro_arg_simpler'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@macro C4 l5
@@ -39,11 +39,11 @@ $result_tree_text{'macro_in_macro_arg_simpler'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C2
-   {a, macro2text for macro2\\n}
+   {normal_text:a, macro2text for macro2\\n}
    >SOURCEMARKS
    >macro_expansion<start;1>
     >*macro_call@macrothree C1
@@ -53,7 +53,7 @@ $result_tree_text{'macro_in_macro_arg_simpler'} = '*document_root C1
     >*macro_call@macrooneone C1
      >*brace_arg
    >macro_expansion<end;2><p:9>
-   {&&&& \\n}
+   {normal_text:&&&& \\n}
    >SOURCEMARKS
    >macro_expansion<end;1><p:5>
 ';

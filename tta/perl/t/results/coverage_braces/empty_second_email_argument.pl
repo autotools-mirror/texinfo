@@ -15,9 +15,9 @@ $result_tree_text{'empty_second_email_argument'} = '*document_root C1
    *@email C2 l1
     *brace_arg C4
      {spaces_before_argument: }
-     {a}
+     {normal_text:a}
      *@@
-     {b.c}
+     {normal_text:b.c}
     *brace_arg C1
      {spaces_before_argument: }
 ';

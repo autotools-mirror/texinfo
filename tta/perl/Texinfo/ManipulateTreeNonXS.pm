@@ -431,7 +431,8 @@ sub _new_node($$;$$) {
 
   my $empty_node = 0;
   if (!exists($node_tree->{'contents'})) {
-    $node_tree->{'contents'} = [Texinfo::TreeElement::new({'text' => ''})];
+    $node_tree->{'contents'} = [Texinfo::TreeElement::new({'text' => '',
+                                                 'type' => 'normal_text'})];
     $empty_node = 1;
   } elsif (exists($node_tree->{'contents'}->[0]->{'type'})
            and $node_tree->{'contents'}->[0]->{'type'}
@@ -513,7 +514,7 @@ sub _new_node($$;$$) {
     } else {
       $space_before
         = Texinfo::TreeElement::new({'text' => ' ',
-                                      'type' => 'spaces_before_argument'});
+                                     'type' => 'spaces_before_argument'});
     }
 
     @{$node_line_arg->{'contents'}} = ($space_before,
@@ -521,7 +522,8 @@ sub _new_node($$;$$) {
 
     if ($appended_number) {
       push @{$node_line_arg->{'contents'}},
-            Texinfo::TreeElement::new({'text' => " [+$appended_number+]"});
+            Texinfo::TreeElement::new({'text' => " [+$appended_number+]",
+                                       'type' => 'normal_text'});
     }
     foreach my $content (@{$node_line_arg->{'contents'}}) {
       $content->{'parent'} = $node_line_arg if (exists($content->{'parent'}));
@@ -655,7 +657,8 @@ sub insert_nodes_for_sectioning_commands($;$) {
       if ($content->{'cmdname'} eq 'top') {
         $new_node_tree
          = Texinfo::TreeElement::new({'contents' => [
-                      Texinfo::TreeElement::new({'text' => 'Top'})]});
+                      Texinfo::TreeElement::new({'text' => 'Top',
+                                                 'type' => 'normal_text'})]});
       } else {
         my $arguments_line = $content->{'contents'}->[0];
         my $line_arg = $arguments_line->{'contents'}->[0];

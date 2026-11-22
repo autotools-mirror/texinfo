@@ -19,7 +19,7 @@ $result_tree_text{'part_appendix_in_generated_menu'} = '*document_root C12
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C3 l2 {top}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'part_appendix_in_generated_menu'} = '*document_root C12
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   {empty_line:\\n}
@@ -40,7 +40,7 @@ $result_tree_text{'part_appendix_in_generated_menu'} = '*document_root C12
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter}
+    {normal_text:chapter}
     {spaces_after_argument:\\n}
  *@chapter C2 l6 {Chap}
  |EXTRA
@@ -50,7 +50,7 @@ $result_tree_text{'part_appendix_in_generated_menu'} = '*document_root C12
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chap}
+    {normal_text:Chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l8 {sec}
@@ -61,7 +61,7 @@ $result_tree_text{'part_appendix_in_generated_menu'} = '*document_root C12
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {sec}
+    {normal_text:sec}
     {spaces_after_argument:\\n}
  *@appendixsec C2 l9 {Sec}
  |EXTRA
@@ -71,7 +71,7 @@ $result_tree_text{'part_appendix_in_generated_menu'} = '*document_root C12
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Sec}
+    {normal_text:Sec}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@part C2 l11 {P1}
@@ -82,7 +82,7 @@ $result_tree_text{'part_appendix_in_generated_menu'} = '*document_root C12
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {P1}
+    {normal_text:P1}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l13 {chap2}
@@ -93,7 +93,7 @@ $result_tree_text{'part_appendix_in_generated_menu'} = '*document_root C12
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap2}
+    {normal_text:chap2}
     {spaces_after_argument:\\n}
  *@chapter C2 l14 {Chap 2}
  |EXTRA
@@ -103,7 +103,7 @@ $result_tree_text{'part_appendix_in_generated_menu'} = '*document_root C12
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chap 2}
+    {normal_text:Chap 2}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l16 {app}
@@ -114,7 +114,7 @@ $result_tree_text{'part_appendix_in_generated_menu'} = '*document_root C12
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {app}
+    {normal_text:app}
     {spaces_after_argument:\\n}
  *@appendix C1 l17 {GGG}
  |EXTRA
@@ -124,7 +124,7 @@ $result_tree_text{'part_appendix_in_generated_menu'} = '*document_root C12
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {GGG}
+    {normal_text:GGG}
     {spaces_after_argument:\\n}
 ';
 

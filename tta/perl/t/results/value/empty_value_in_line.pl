@@ -20,16 +20,16 @@ $result_tree_text{'empty_value_in_line'} = '*document_root C1
      {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C1
-   {1 \\n}
+   {normal_text:1 \\n}
   {empty_line: \\n}
   >SOURCEMARKS
   >value_expansion<start;1>{}
    >*@value C1
     >*brace_container C1
-     >{myspace}
+     >{normal_text:myspace}
   >value_expansion<end;1>
   *paragraph C1
-   {1\\n}
+   {normal_text:1\\n}
 ';
 
 

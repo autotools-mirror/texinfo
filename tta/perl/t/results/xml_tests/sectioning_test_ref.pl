@@ -19,7 +19,7 @@ $result_tree_text{'sectioning_test_ref'} = '*document_root C9
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C4 l2 {top}
  |EXTRA
@@ -28,11 +28,11 @@ $result_tree_text{'sectioning_test_ref'} = '*document_root C9
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {In T.\\n}
+   {normal_text:In T.\\n}
   {empty_line:\\n}
  *@node C1 l6 {chap}
  |EXTRA
@@ -42,7 +42,7 @@ $result_tree_text{'sectioning_test_ref'} = '*document_root C9
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
  *@chapter C4 l7 {Chap1}
  |EXTRA
@@ -52,11 +52,11 @@ $result_tree_text{'sectioning_test_ref'} = '*document_root C9
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chap1}
+    {normal_text:Chap1}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {In c1.\\n}
+   {normal_text:In c1.\\n}
   {empty_line:\\n}
  *@node C1 l11 {sec}
  |EXTRA
@@ -66,7 +66,7 @@ $result_tree_text{'sectioning_test_ref'} = '*document_root C9
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {sec}
+    {normal_text:sec}
     {spaces_after_argument:\\n}
  *@section C4 l12 {sec1}
  |EXTRA
@@ -76,11 +76,11 @@ $result_tree_text{'sectioning_test_ref'} = '*document_root C9
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {sec1}
+    {normal_text:sec1}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {In s1.1.\\n}
+   {normal_text:In s1.1.\\n}
   {empty_line:\\n}
  *@node C1 l16 {chap2}
  |EXTRA
@@ -90,7 +90,7 @@ $result_tree_text{'sectioning_test_ref'} = '*document_root C9
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap2}
+    {normal_text:chap2}
     {spaces_after_argument:\\n}
  *@chapter C3 l17 {Chap2}
  |EXTRA
@@ -100,11 +100,11 @@ $result_tree_text{'sectioning_test_ref'} = '*document_root C9
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chap2}
+    {normal_text:Chap2}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {In c2.\\n}
+   {normal_text:In c2.\\n}
 ';
 
 

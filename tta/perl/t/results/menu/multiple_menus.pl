@@ -19,7 +19,7 @@ $result_tree_text{'multiple_menus'} = '*document_root C2
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C3 l3
@@ -33,20 +33,20 @@ $result_tree_text{'multiple_menus'} = '*document_root C2
     |manual_content:A{1|1}
     |node_content:A{3|3}
     |normalized:{a}
-     {(}
-     {a}
-     {)}
-     {a}
+     {normal_text:(}
+     {normal_text:a}
+     {normal_text:)}
+     {normal_text:a}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l5
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C3 l7
@@ -60,20 +60,20 @@ $result_tree_text{'multiple_menus'} = '*document_root C2
     |manual_content:A{1|1}
     |node_content:A{3|3}
     |normalized:{b}
-     {(}
-     {b}
-     {)}
-     {b}
+     {normal_text:(}
+     {normal_text:b}
+     {normal_text:)}
+     {normal_text:b}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l9
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
 ';
 

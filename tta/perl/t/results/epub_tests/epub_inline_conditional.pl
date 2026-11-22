@@ -21,7 +21,7 @@ $result_tree_text{'epub_inline_conditional'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l3 {top}
  |EXTRA
@@ -30,7 +30,7 @@ $result_tree_text{'epub_inline_conditional'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l5 {chapter}
@@ -41,7 +41,7 @@ $result_tree_text{'epub_inline_conditional'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter}
+    {normal_text:chapter}
     {spaces_after_argument:\\n}
  *@chapter C3 l6 {Chap}
  |EXTRA
@@ -51,32 +51,32 @@ $result_tree_text{'epub_inline_conditional'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chap}
+    {normal_text:Chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C6
-   {Text }
+   {normal_text:Text }
    *@inlinefmt C2 l8
    |EXTRA
    |expand_index:{1}
    |format:{epub}
     *brace_arg C1
-     {epub}
+     {normal_text:epub}
     *brace_arg C2
      {spaces_before_argument: }
-     {here if EPUB}
-   {.\\n}
-   {Format }
+     {normal_text:here if EPUB}
+   {normal_text:.\\n}
+   {normal_text:Format }
    *@inlineraw C2 l9
    |EXTRA
    |expand_index:{1}
    |format:{epub}
     *brace_arg C1
-     {epub}
+     {normal_text:epub}
     *brace_arg C2
      {spaces_before_argument: }
-     {<section>raw EPUB</section>}
-   {.\\n}
+     {normal_text:<section>raw EPUB</section>}
+   {normal_text:.\\n}
 ';
 
 

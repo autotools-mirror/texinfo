@@ -25,22 +25,22 @@ $result_tree_text{'quotation_author_in_example'} = '*document_root C1
      |global_command_number:{1}
       *line_arg C3
        {spaces_before_argument: }
-       {Some One}
+       {normal_text:Some One}
        {spaces_after_argument:\\n}
-     {A quot---ation\\n}
+     {normal_text:A quot---ation\\n}
     *@end C1 l5
     |EXTRA
     |text_arg:{quotation}
      *line_arg C3
       {spaces_before_argument: }
-      {quotation}
+      {normal_text:quotation}
       {spaces_after_argument:\\n}
    *@end C1 l6
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
 ';
 

@@ -1139,8 +1139,7 @@ print_text_element (ELEMENT *element, int level, const char *prepended,
   if (element->flags & EF_inserted)
     text_append_n (result, "(i)", 3);
 
-  if (element->type != ET_normal_text)
-    type = type_data[element->type].name;
+  type = type_data[element->type].name;
   if (type)
     text_printf (result, "{%s:%s}\n", type, element_text);
   else

@@ -12,17 +12,17 @@ $result_tree_text{'commands_and_punctuation'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *paragraph C9
-   {SomthingA}
+   {normal_text:SomthingA}
    *@.
-   {   and now inhibit.}
+   {normal_text:   and now inhibit.}
    *@:
-   { Now dots }
+   {normal_text: Now dots }
    *@dots C1 l1
     *brace_container
-   { and enddots }
+   {normal_text: and enddots }
    *@enddots C1 l1
     *brace_container
-   { and}
+   {normal_text: and}
 ';
 
 

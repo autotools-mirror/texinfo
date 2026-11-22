@@ -18,55 +18,55 @@ $result_tree_text{'inline_expand_tex'} = '*document_root C1
    |EXTRA
    |format:{html}
     *brace_arg C1
-     {html}
+     {normal_text:html}
     *elided_brace_command_arg C1
      {raw: <blink>html</blink> ``}
-   {, \\n}
+   {normal_text:, \\n}
    *@inlinefmt C2 l3
    |EXTRA
    |format:{plaintext}
     *brace_arg C1
-     {plaintext}
+     {normal_text:plaintext}
     *elided_brace_command_arg C1
      {raw: plaintext ``}
-   {, \\n}
+   {normal_text:, \\n}
    *@inlinefmt C2 l4
    |EXTRA
    |format:{xml}
     *brace_arg C1
-     {xml}
+     {normal_text:xml}
     *elided_brace_command_arg C1
      {raw: <para>xml</para> ``}
-   {,\\n}
+   {normal_text:,\\n}
    *@inlinefmt C2 l5
    |EXTRA
    |format:{docbook}
     *brace_arg C1
-     {docbook}
+     {normal_text:docbook}
     *elided_brace_command_arg C1
      {raw: <emphasis>docbook</emphasis> ``}
-   {, \\n}
+   {normal_text:, \\n}
    *@inlinefmt C2 l6
    |EXTRA
    |expand_index:{1}
    |format:{tex}
     *brace_arg C1
-     {tex}
+     {normal_text:tex}
     *brace_arg C3
      {spaces_before_argument: }
-     {$\\underlinea < b }
+     {normal_text:$\\underlinea < b }
      *@code C1 l6
       *brace_container C1
-       {tex \\hbox code }
-   {$ ``\\n}
+       {normal_text:tex \\hbox code }
+   {normal_text:$ ``\\n}
    *@inlinefmt C2 l7
    |EXTRA
    |format:{latex}
     *brace_arg C1
-     {latex}
+     {normal_text:latex}
     *elided_brace_command_arg C1
      {raw: @math{\\frac{a < b @code{tex \\hbox{ code }}}{b}} ``}
-   {\\n}
+   {normal_text:\\n}
   {empty_line:\\n}
   {empty_line:\\n}
   *paragraph C12
@@ -74,61 +74,61 @@ $result_tree_text{'inline_expand_tex'} = '*document_root C1
    |EXTRA
    |format:{html}
     *brace_arg C1
-     {html}
+     {normal_text:html}
     *elided_brace_command_arg C1
      {raw: raw <blink>html</blink> ``}
-   {, \\n}
+   {normal_text:, \\n}
    *@inlineraw C2 l11
    |EXTRA
    |format:{plaintext}
     *brace_arg C1
-     {plaintext}
+     {normal_text:plaintext}
     *elided_brace_command_arg C1
      {raw: raw plaintext ``}
-   {, \\n}
+   {normal_text:, \\n}
    *@inlineraw C2 l12
    |EXTRA
    |format:{xml}
     *brace_arg C1
-     {xml}
+     {normal_text:xml}
     *elided_brace_command_arg C1
      {raw: raw <para>xml</para> ``}
-   {,\\n}
+   {normal_text:,\\n}
    *@inlineraw C2 l13
    |EXTRA
    |format:{docbook}
     *brace_arg C1
-     {docbook}
+     {normal_text:docbook}
     *elided_brace_command_arg C1
      {raw: raw <emphasis>docbook</emphasis> ``}
-   {, \\n}
+   {normal_text:, \\n}
    *@inlineraw C2 l14
    |EXTRA
    |expand_index:{1}
    |format:{tex}
     *brace_arg C1
-     {tex}
+     {normal_text:tex}
     *brace_arg C4
      {spaces_before_argument: }
-     {raw $\\underline}
+     {normal_text:raw $\\underline}
      *balanced_braces C3 l14
-      {{a < b }
+      {normal_text:{a < b }
       *@code C1 l14
        *brace_container C2
-        {tex \\hbox}
+        {normal_text:tex \\hbox}
         *balanced_braces C1 l14
-         {{ code }}
-      {}}
-     {$ ``}
-   {\\n}
+         {normal_text:{ code }}
+      {normal_text:}}
+     {normal_text:$ ``}
+   {normal_text:\\n}
    *@inlineraw C2 l15
    |EXTRA
    |format:{latex}
     *brace_arg C1
-     {latex}
+     {normal_text:latex}
     *elided_brace_command_arg C1
      {raw: raw $\\frac{a < b @code{tex \\hbox{ code }}}{b}$ ``}
-   {\\n}
+   {normal_text:\\n}
 ';
 
 

@@ -12,37 +12,37 @@ $result_tree_text{'inlinefmt_with_empty_line'} = '*document_root C1
  *before_node_section C4
   *preamble_before_content
   *paragraph C2
-   {A }
+   {normal_text:A }
    *@inlinefmt C2 l1
    |EXTRA
    |expand_index:{1}
    |format:{plaintext}
     *brace_arg C1
-     {plaintext}
+     {normal_text:plaintext}
     *brace_arg C3
      {spaces_before_argument: }
-     {plaintext `` \\n}
+     {normal_text:plaintext `` \\n}
      {empty_line:\\n}
   *paragraph C3
    *@lbracechar C1 l3
     *brace_container
-   {  a.  Now html\\n}
+   {normal_text:  a.  Now html\\n}
    *@inlinefmt C2 l4
    |EXTRA
    |expand_index:{1}
    |format:{html}
     *brace_arg C1
-     {html}
+     {normal_text:html}
     *brace_arg C3
      {spaces_before_argument: }
-     {in \\n}
+     {normal_text:in \\n}
      {empty_line:\\n}
   *paragraph C3
-   {<i>}
+   {normal_text:<i>}
    *@acronym C1 l6
     *brace_arg C1
-     {HTML}
-   {</i>.\\n}
+     {normal_text:HTML}
+   {normal_text:</i>.\\n}
 ';
 
 

@@ -24,7 +24,7 @@ $result_tree_text{'macro_expansion_end_in_ignored_ifset_content'} = '*document_r
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    >SOURCEMARKS
@@ -36,7 +36,7 @@ $result_tree_text{'macro_expansion_end_in_ignored_ifset_content'} = '*document_r
      >*arguments_line C1
       >*block_line_arg C3
        >{spaces_before_argument: }
-       >{a}
+       >{normal_text:a}
        >{spaces_after_argument:\\n}
      >{raw:going }
      >>SOURCEMARKS
@@ -47,7 +47,7 @@ $result_tree_text{'macro_expansion_end_in_ignored_ifset_content'} = '*document_r
      >|text_arg:{ifset}
       >*line_arg C3
        >{spaces_before_argument: }
-       >{ifset}
+       >{normal_text:ifset}
        >{spaces_after_argument:\\n}
 ';
 

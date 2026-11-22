@@ -18,56 +18,56 @@ $result_tree_text{'punctuation_and_code_style_commands_utf8'} = '*document_root 
    |text_arg:{utf-8}
     *line_arg C3
      {spaces_before_argument: }
-     {utf-8}
+     {normal_text:utf-8}
      {spaces_after_argument:\\n}
   *paragraph C18
    *@command C1 l2
     *brace_container C1
-     {aaa}
-   {. }
+     {normal_text:aaa}
+   {normal_text:. }
    *@code C1 l2
     *brace_container C1
      *@~ C1 l2
       *following_arg C1
-       {e}
-   {. }
+       {normal_text:e}
+   {normal_text:. }
    *@samp C1 l2
     *brace_container C1
      *@aa C1 l2
       *brace_container
-   {.\\n}
+   {normal_text:.\\n}
    *@command C1 l3
     *brace_container C1
-     {AAA}
-   {. }
+     {normal_text:AAA}
+   {normal_text:. }
    *@code C1 l3
     *brace_container C1
      *@~ C1 l3
       *following_arg C1
-       {E}
-   {. }
+       {normal_text:E}
+   {normal_text:. }
    *@samp C1 l3
     *brace_container C1
      *@AA C1 l3
       *brace_container
-   {.\\n}
+   {normal_text:.\\n}
    *@command C1 l4
     *brace_container C1
-     {double AAA}
-   {.  }
+     {normal_text:double AAA}
+   {normal_text:.  }
    *@code C1 l4
     *brace_container C2
-     {double }
+     {normal_text:double }
      *@~ C1 l4
       *following_arg C1
-       {E}
-   {. }
+       {normal_text:E}
+   {normal_text:. }
    *@samp C1 l4
     *brace_container C2
-     {double }
+     {normal_text:double }
      *@AA C1 l4
       *brace_container
-   {.  End.\\n}
+   {normal_text:.  End.\\n}
 ';
 
 

@@ -21,35 +21,35 @@ $result_tree_text{'end_of_lines_protected'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {category}
+       {normal_text:category}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {deffn_name}
+       {normal_text:deffn_name}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {arguments}
+       {normal_text:arguments}
      {spaces:    }
      >SOURCEMARKS
      >defline_continuation<1><p:1>
      *def_arg C1
       *def_line_arg C1
-       {more}
+       {normal_text:more}
      {spaces: }
      *def_arg C1
       *bracketed_arg C1 l2
-       {args   with end of line within}
+       {normal_text:args   with end of line within}
        >SOURCEMARKS
        >defline_continuation<2><p:5>
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {with}
+       {normal_text:with}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {3}
+       {normal_text:3}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
@@ -63,17 +63,17 @@ $result_tree_text{'end_of_lines_protected'} = '*document_root C1
      {spaces: }
      *def_arg C1
       *bracketed_arg C1 l4
-       {one last arg}
+       {normal_text:one last arg}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {deffn\\n}
+     {normal_text:deffn\\n}
    *@end C1 l6
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
-     {deffn}
+     {normal_text:deffn}
      {spaces_after_argument:\\n}
 ';
 

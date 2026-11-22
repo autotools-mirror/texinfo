@@ -24,7 +24,7 @@ $result_tree_text{'comment_on_linemacro_call_macro_expansion'} = '*document_root
     |text_arg:{linemacro}
      *line_arg C3
       {spaces_before_argument: }
-      {linemacro}
+      {normal_text:linemacro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@macro C4 l6
@@ -40,11 +40,11 @@ $result_tree_text{'comment_on_linemacro_call_macro_expansion'} = '*document_root
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C4
-   {macro first |a|\\n}
+   {normal_text:macro first |a|\\n}
    >SOURCEMARKS
    >macro_expansion<start;1>
     >*macro_call@mymacro C2
@@ -60,7 +60,7 @@ $result_tree_text{'comment_on_linemacro_call_macro_expansion'} = '*document_root
      >*linemacro_arg C2
       >{spaces_before_argument: }
       >{macro_call_arg_text:}
-   {second ||}
+   {normal_text:second ||}
    >SOURCEMARKS
    >linemacro_expansion<end;1><p:9>
    *@c C1
@@ -68,7 +68,7 @@ $result_tree_text{'comment_on_linemacro_call_macro_expansion'} = '*document_root
      {spaces_before_argument: }
      {rawline_text:in comment text}
      {spaces_after_argument:\\n}
-   {after arg\\n}
+   {normal_text:after arg\\n}
    >SOURCEMARKS
    >macro_expansion<end;1><p:9>
 ';

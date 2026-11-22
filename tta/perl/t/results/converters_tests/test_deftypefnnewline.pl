@@ -16,7 +16,7 @@ $result_tree_text{'test_deftypefnnewline'} = '*document_root C5
    |text_arg:{test_deftypefnnewline.info}
     *line_arg C3
      {spaces_before_argument: }
-     {test_deftypefnnewline.info}
+     {normal_text:test_deftypefnnewline.info}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@deftypefnnewline C1 l3
@@ -25,7 +25,7 @@ $result_tree_text{'test_deftypefnnewline'} = '*document_root C5
    |misc_args:A{on}
     *line_arg C3
      {spaces_before_argument: }
-     {on}
+     {normal_text:on}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *@node C1 l5 {Top}
@@ -36,7 +36,7 @@ $result_tree_text{'test_deftypefnnewline'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l6 {top}
  |EXTRA
@@ -45,7 +45,7 @@ $result_tree_text{'test_deftypefnnewline'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l8 {chapter}
@@ -56,7 +56,7 @@ $result_tree_text{'test_deftypefnnewline'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter}
+    {normal_text:chapter}
     {spaces_after_argument:\\n}
  *@chapter C31 l9 {chap}
  |EXTRA
@@ -66,7 +66,7 @@ $result_tree_text{'test_deftypefnnewline'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypefun C3 l11
@@ -82,29 +82,29 @@ $result_tree_text{'test_deftypefnnewline'} = '*document_root C5
      |EXTRA
      |inserted:{1}
       *def_line_arg C1
-       {Function}
+       {normal_text:Function}
      {spaces: }
      *def_type C1
       *def_line_arg C1
-       {data-type}
+       {normal_text:data-type}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {name}
+       {normal_text:name}
      {spaces: }
      *def_typearg C1
       *def_line_arg C1
-       {arguments...}
+       {normal_text:arguments...}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {aaa\\n}
+     {normal_text:aaa\\n}
    *@end C1 l13
    |EXTRA
    |text_arg:{deftypefun}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypefun}
+     {normal_text:deftypefun}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypefn C3 l15
@@ -118,25 +118,25 @@ $result_tree_text{'test_deftypefnnewline'} = '*document_root C5
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {c--ategory}
+       {normal_text:c--ategory}
      {spaces: }
      *def_type C1
       *def_line_arg C1
-       {t--ype}
+       {normal_text:t--ype}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {d--eftypefn_name}
+       {normal_text:d--eftypefn_name}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {d--eftypefn no arg\\n}
+     {normal_text:d--eftypefn no arg\\n}
    *@end C1 l17
    |EXTRA
    |text_arg:{deftypefn}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypefn}
+     {normal_text:deftypefn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypeop C3 l19
@@ -150,33 +150,33 @@ $result_tree_text{'test_deftypefnnewline'} = '*document_root C5
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {c--ategory}
+       {normal_text:c--ategory}
      {spaces: }
      *def_class C1
       *def_line_arg C1
-       {c--lass}
+       {normal_text:c--lass}
      {spaces: }
      *def_type C1
       *def_line_arg C1
-       {t--ype}
+       {normal_text:t--ype}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {d--eftypeop_name}
+       {normal_text:d--eftypeop_name}
      {spaces: }
      *def_typearg C1
       *def_line_arg C1
-       {a--rguments...}
+       {normal_text:a--rguments...}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {d--eftypeop\\n}
+     {normal_text:d--eftypeop\\n}
    *@end C1 l21
    |EXTRA
    |text_arg:{deftypeop}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypeop}
+     {normal_text:deftypeop}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypeop C3 l23
@@ -190,29 +190,29 @@ $result_tree_text{'test_deftypefnnewline'} = '*document_root C5
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {c--ategory}
+       {normal_text:c--ategory}
      {spaces: }
      *def_class C1
       *def_line_arg C1
-       {c--lass}
+       {normal_text:c--lass}
      {spaces: }
      *def_type C1
       *def_line_arg C1
-       {t--ype}
+       {normal_text:t--ype}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {d--eftypeop_name}
+       {normal_text:d--eftypeop_name}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {d--eftypeop no arg\\n}
+     {normal_text:d--eftypeop no arg\\n}
    *@end C1 l25
    |EXTRA
    |text_arg:{deftypeop}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypeop}
+     {normal_text:deftypeop}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypecv C3 l27
@@ -226,29 +226,29 @@ $result_tree_text{'test_deftypefnnewline'} = '*document_root C5
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {c--ategory}
+       {normal_text:c--ategory}
      {spaces: }
      *def_class C1
       *def_line_arg C1
-       {c--lass}
+       {normal_text:c--lass}
      {spaces: }
      *def_type C1
       *def_line_arg C1
-       {t--ype}
+       {normal_text:t--ype}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {d--eftypecv_name}
+       {normal_text:d--eftypecv_name}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {d--eftypecv\\n}
+     {normal_text:d--eftypecv\\n}
    *@end C1 l29
    |EXTRA
    |text_arg:{deftypecv}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypecv}
+     {normal_text:deftypecv}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypecv C3 l31
@@ -262,33 +262,33 @@ $result_tree_text{'test_deftypefnnewline'} = '*document_root C5
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {c--ategory}
+       {normal_text:c--ategory}
      {spaces: }
      *def_class C1
       *def_line_arg C1
-       {c--lass}
+       {normal_text:c--lass}
      {spaces: }
      *def_type C1
       *def_line_arg C1
-       {t--ype}
+       {normal_text:t--ype}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {d--eftypecv_name}
+       {normal_text:d--eftypecv_name}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {a--rguments...}
+       {normal_text:a--rguments...}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {d--eftypecv with arguments\\n}
+     {normal_text:d--eftypecv with arguments\\n}
    *@end C1 l33
    |EXTRA
    |text_arg:{deftypecv}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypecv}
+     {normal_text:deftypecv}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deffn C3 l35
@@ -302,21 +302,21 @@ $result_tree_text{'test_deftypefnnewline'} = '*document_root C5
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {fun}
+       {normal_text:fun}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {arg}
+       {normal_text:arg}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {fff\\n}
+     {normal_text:fff\\n}
    *@end C1 l37
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
-     {deffn}
+     {normal_text:deffn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypefnnewline C1 l39
@@ -325,7 +325,7 @@ $result_tree_text{'test_deftypefnnewline'} = '*document_root C5
   |misc_args:A{off}
    *line_arg C3
     {spaces_before_argument: }
-    {off}
+    {normal_text:off}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypefun C3 l41
@@ -341,29 +341,29 @@ $result_tree_text{'test_deftypefnnewline'} = '*document_root C5
      |EXTRA
      |inserted:{1}
       *def_line_arg C1
-       {Function}
+       {normal_text:Function}
      {spaces: }
      *def_type C1
       *def_line_arg C1
-       {data-type2}
+       {normal_text:data-type2}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {name2}
+       {normal_text:name2}
      {spaces: }
      *def_typearg C1
       *def_line_arg C1
-       {arguments2...}
+       {normal_text:arguments2...}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {aaa2\\n}
+     {normal_text:aaa2\\n}
    *@end C1 l43
    |EXTRA
    |text_arg:{deftypefun}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypefun}
+     {normal_text:deftypefun}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypefn C3 l45
@@ -377,25 +377,25 @@ $result_tree_text{'test_deftypefnnewline'} = '*document_root C5
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {c--ategory2}
+       {normal_text:c--ategory2}
      {spaces: }
      *def_type C1
       *def_line_arg C1
-       {t--ype2}
+       {normal_text:t--ype2}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {d--eftypefn_name2}
+       {normal_text:d--eftypefn_name2}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {d--eftypefn no arg2\\n}
+     {normal_text:d--eftypefn no arg2\\n}
    *@end C1 l47
    |EXTRA
    |text_arg:{deftypefn}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypefn}
+     {normal_text:deftypefn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypeop C3 l49
@@ -409,33 +409,33 @@ $result_tree_text{'test_deftypefnnewline'} = '*document_root C5
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {c--ategory2}
+       {normal_text:c--ategory2}
      {spaces: }
      *def_class C1
       *def_line_arg C1
-       {c--lass2}
+       {normal_text:c--lass2}
      {spaces: }
      *def_type C1
       *def_line_arg C1
-       {t--ype2}
+       {normal_text:t--ype2}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {d--eftypeop_name2}
+       {normal_text:d--eftypeop_name2}
      {spaces: }
      *def_typearg C1
       *def_line_arg C1
-       {a--rguments2...}
+       {normal_text:a--rguments2...}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {d--eftypeop2\\n}
+     {normal_text:d--eftypeop2\\n}
    *@end C1 l51
    |EXTRA
    |text_arg:{deftypeop}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypeop}
+     {normal_text:deftypeop}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypeop C3 l53
@@ -449,29 +449,29 @@ $result_tree_text{'test_deftypefnnewline'} = '*document_root C5
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {c--ategory2}
+       {normal_text:c--ategory2}
      {spaces: }
      *def_class C1
       *def_line_arg C1
-       {c--lass2}
+       {normal_text:c--lass2}
      {spaces: }
      *def_type C1
       *def_line_arg C1
-       {t--ype2}
+       {normal_text:t--ype2}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {d--eftypeop_name2}
+       {normal_text:d--eftypeop_name2}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {d--eftypeop no arg2\\n}
+     {normal_text:d--eftypeop no arg2\\n}
    *@end C1 l55
    |EXTRA
    |text_arg:{deftypeop}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypeop}
+     {normal_text:deftypeop}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypecv C3 l57
@@ -485,29 +485,29 @@ $result_tree_text{'test_deftypefnnewline'} = '*document_root C5
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {c--ategory2}
+       {normal_text:c--ategory2}
      {spaces: }
      *def_class C1
       *def_line_arg C1
-       {c--lass2}
+       {normal_text:c--lass2}
      {spaces: }
      *def_type C1
       *def_line_arg C1
-       {t--ype2}
+       {normal_text:t--ype2}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {d--eftypecv_name2}
+       {normal_text:d--eftypecv_name2}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {d--eftypecv2\\n}
+     {normal_text:d--eftypecv2\\n}
    *@end C1 l59
    |EXTRA
    |text_arg:{deftypecv}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypecv}
+     {normal_text:deftypecv}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypecv C3 l61
@@ -521,33 +521,33 @@ $result_tree_text{'test_deftypefnnewline'} = '*document_root C5
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {c--ategory2}
+       {normal_text:c--ategory2}
      {spaces: }
      *def_class C1
       *def_line_arg C1
-       {c--lass2}
+       {normal_text:c--lass2}
      {spaces: }
      *def_type C1
       *def_line_arg C1
-       {t--ype2}
+       {normal_text:t--ype2}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {d--eftypecv_name2}
+       {normal_text:d--eftypecv_name2}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {a--rguments2...}
+       {normal_text:a--rguments2...}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {d--eftypecv with arguments2\\n}
+     {normal_text:d--eftypecv with arguments2\\n}
    *@end C1 l63
    |EXTRA
    |text_arg:{deftypecv}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypecv}
+     {normal_text:deftypecv}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deffn C3 l65
@@ -561,21 +561,21 @@ $result_tree_text{'test_deftypefnnewline'} = '*document_root C5
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {fun2}
+       {normal_text:fun2}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {arg2}
+       {normal_text:arg2}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {fff2\\n}
+     {normal_text:fff2\\n}
    *@end C1 l67
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
-     {deffn}
+     {normal_text:deffn}
      {spaces_after_argument:\\n}
 ';
 

@@ -22,7 +22,7 @@ $result_tree_text{'bad_argument'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@rmacro C3 l5
@@ -38,7 +38,7 @@ $result_tree_text{'bad_argument'} = '*document_root C1
     |text_arg:{rmacro}
      *line_arg C3
       {spaces_before_argument: }
-      {rmacro}
+      {normal_text:rmacro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@macro C3 l9
@@ -54,7 +54,7 @@ $result_tree_text{'bad_argument'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@macro C3 l13
@@ -68,7 +68,7 @@ $result_tree_text{'bad_argument'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
 ';
 

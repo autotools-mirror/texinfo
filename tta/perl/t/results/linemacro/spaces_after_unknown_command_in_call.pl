@@ -25,7 +25,7 @@ $result_tree_text{'spaces_after_unknown_command_in_call'} = '*document_root C1
     |text_arg:{linemacro}
      *line_arg C3
       {spaces_before_argument: }
-      {linemacro}
+      {normal_text:linemacro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    >SOURCEMARKS
@@ -52,37 +52,37 @@ $result_tree_text{'spaces_after_unknown_command_in_call'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {category}
+       {normal_text:category}
      {spaces:  }
      *def_name C1
       *def_line_arg C1
-       {A}
+       {normal_text:A}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {d}
+       {normal_text:d}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {B}
+       {normal_text:B}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@ringaccent C2 l7:@mylinecommand
         {spaces_after_cmd_before_arg: }
         *following_arg C1
-         {b}
+         {normal_text:b}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {rest}
+       {normal_text:rest}
      {spaces_after_argument:\\n}
    *@end C1 l7:@mylinecommand
    |EXTRA
    |text_arg:{defblock}
     *line_arg C3
      {spaces_before_argument: }
-     {defblock}
+     {normal_text:defblock}
      >SOURCEMARKS
      >linemacro_expansion<end;1><p:8>
      {spaces_after_argument:\\n}

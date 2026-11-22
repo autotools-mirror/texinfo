@@ -17,7 +17,7 @@ $result_tree_text{'inlineiffmtifelse_not_closed'} = '*document_root C1
    |expand_index:{2}
    |format:{html}
     *brace_arg C1
-     {html}
+     {normal_text:html}
     *elided_brace_command_arg C1
      {raw:\\n}
 ';

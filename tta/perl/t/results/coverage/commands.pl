@@ -13,63 +13,63 @@ $result_tree_text{'commands'} = '*document_root C1
   *preamble_before_content
   *paragraph C13
    *@@
-   { }
+   {normal_text: }
    *@TeX C1 l1
     *brace_container
-   { }
+   {normal_text: }
    *@\\n
    *@" C1 l2
     *following_arg C1
-     {e}
-   { }
+     {normal_text:e}
+   {normal_text: }
    *@^ C1 l2
     *brace_container C1
      *@dotless C1 l2
       *brace_container C1
-       {i}
-   { }
+       {normal_text:i}
+   {normal_text: }
    *@~ C1 l2
     *brace_container C1
-     {a}
-   { }
+     {normal_text:a}
+   {normal_text: }
    *@ringaccent C2 l2
     {spaces_after_cmd_before_arg: }
     *following_arg C1
-     {a}
-   {\\n}
+     {normal_text:a}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C10
    *@clicksequence C1 l4
     *brace_container C3
-     {File }
+     {normal_text:File }
      *@click C1 l4
       *brace_container
-     { Open}
+     {normal_text: Open}
    *@.
-   {\\n}
+   {normal_text:\\n}
    *@email C2 l5
     *brace_arg C1
-     {a}
+     {normal_text:a}
     *brace_arg C2
      {spaces_before_argument: }
-     {b}
-   { }
+     {normal_text:b}
+   {normal_text: }
    *@code C1 l5
     *brace_container C1
-     {code --- -- \'\' ``}
-   {\\n}
-   {--- -- \'\' ``. }
+     {normal_text:code --- -- \'\' ``}
+   {normal_text:\\n}
+   {normal_text:--- -- \'\' ``. }
    *@sc C1 l6
     *brace_container C1
-     {small caps}
-   {.\\n}
+     {normal_text:small caps}
+   {normal_text:.\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 l8
   |EXTRA
   |index_entry:I{cp,1}
    *line_arg C4
     {spaces_before_argument: }
-    {index entry ``in text\'\' }
+    {normal_text:index entry ``in text\'\' }
     *@LaTeX C1 l8
      *brace_container
     {spaces_after_argument:\\n}
@@ -80,10 +80,10 @@ $result_tree_text{'commands'} = '*document_root C1
   |heading_number:{1}
    *line_arg C4
     {spaces_before_argument: }
-    {majorheading }
+    {normal_text:majorheading }
     *@b C1 l10
      *brace_container C1
-      {in b}
+      {normal_text:in b}
     {spaces_after_argument:\\n}
 ';
 

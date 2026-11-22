@@ -19,7 +19,7 @@ $result_tree_text{'empty_menu_entry_name'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {first}
+    {normal_text:first}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C4 l3
@@ -33,13 +33,13 @@ $result_tree_text{'empty_menu_entry_name'} = '*document_root C3
     *menu_entry_node C3
     |EXTRA
     |manual_content:A{1|1}
-     {(}
-     {vvv}
-     {)}
+     {normal_text:(}
+     {normal_text:vvv}
+     {normal_text:)}
     {menu_entry_separator:. }
     *menu_entry_description C1
      *preformatted C1
-      {fff\\n}
+      {normal_text:fff\\n}
    *menu_entry C6 l5
     {menu_entry_leading_text:* }
     *menu_entry_name
@@ -48,17 +48,17 @@ $result_tree_text{'empty_menu_entry_name'} = '*document_root C3
     |EXTRA
     |node_content:A{0|0}
     |normalized:{aaa}
-     {aaa}
+     {normal_text:aaa}
     {menu_entry_separator:,}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l6
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l8 {aaa}
@@ -69,7 +69,7 @@ $result_tree_text{'empty_menu_entry_name'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {aaa}
+    {normal_text:aaa}
     {spaces_after_argument:\\n}
 ';
 

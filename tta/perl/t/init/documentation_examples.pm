@@ -263,10 +263,12 @@ sub my_email_formatting_function {
 
   my $tree = $converter->cdt('Generated @emph{@today{}} using '
                    .'@uref{{homepage}, @emph{{program}}}.',
-           { 'homepage' => Texinfo::TreeElement::new(
-               { 'text' => $converter->get_conf('PACKAGE_URL') }),
-             'program' => Texinfo::TreeElement::new(
-               { 'text' => $converter->get_conf('PROGRAM') }) });
+           { 'homepage' => Texinfo::TreeElement::new({
+                  'text' => $converter->get_conf('PACKAGE_URL'),
+                  'type' => 'normal_text'}),
+             'program' => Texinfo::TreeElement::new({
+                   'text' => $converter->get_conf('PROGRAM'),
+                    'type' => 'normal_text'}) });
   my $translated1 = $converter->convert_tree($tree);
 
   my $explanation_result;
@@ -341,7 +343,8 @@ sub my_tree_element_convert_paragraph_type($$$$) {
   }
 
   my @contents = @{$element->{'contents'}};
-  push @contents, Texinfo::TreeElement::new({'text' => ' HTML text '});
+  push @contents, Texinfo::TreeElement::new({'text' => ' HTML text ',
+                                             'type' => 'normal_text'});
   my $new_element = Texinfo::TreeElement::new({'contents' => \@contents});
   my $result = $converter->set_context_convert_tree($new_element,
                                 $Texinfo::Convert::HTML::CTXF_code);
@@ -361,7 +364,8 @@ sub my_final_convert_paragraph_type($$$$) {
   }
 
   my @contents = @{$element->{'contents'}};
-  push @contents, Texinfo::TreeElement::new({'text' => ' HTML text '});
+  push @contents, Texinfo::TreeElement::new({'text' => ' HTML text ',
+                                             'type' => 'normal_text'});
   my $new_element = Texinfo::TreeElement::new({'contents' => \@contents});
   my $result = $converter->set_context_convert_tree($new_element,
                                 $Texinfo::Convert::HTML::CTXF_code);

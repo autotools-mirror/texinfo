@@ -15,20 +15,20 @@ $result_tree_text{'cartouche_title_and_content'} = '*document_root C1
    *arguments_line C1
     *block_line_arg C4
      {spaces_before_argument: }
-     {Box title on }
+     {normal_text:Box title on }
      *@emph C1 l1
       *brace_container C1
-       {documentation}
+       {normal_text:documentation}
      {spaces_after_argument:\\n}
    *paragraph C2
-    {Text on documentation explaining something important out of the main\\n}
-    {flow of the text.\\n}
+    {normal_text:Text on documentation explaining something important out of the main\\n}
+    {normal_text:flow of the text.\\n}
    *@end C1 l4
    |EXTRA
    |text_arg:{cartouche}
     *line_arg C3
      {spaces_before_argument: }
-     {cartouche}
+     {normal_text:cartouche}
      {spaces_after_argument:\\n}
 ';
 

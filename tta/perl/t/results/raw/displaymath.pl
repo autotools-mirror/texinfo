@@ -15,43 +15,43 @@ $result_tree_text{'displaymath'} = '*document_root C1
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
-   {\\int_D (}
+   {normal_text:\\int_D (}
    *balanced_braces C1 l2
-    {{\\nabla\\cdot}}
-   { F)dV=\\int_}
+    {normal_text:{\\nabla\\cdot}}
+   {normal_text: F)dV=\\int_}
    *balanced_braces C1 l2
-    {{\\partial D}}
-   { F\\cdot ndS\\n}
+    {normal_text:{\\partial D}}
+   {normal_text: F\\cdot ndS\\n}
    *@end C1 l3
    |EXTRA
    |text_arg:{displaymath}
     *line_arg C3
      {spaces_before_argument: }
-     {displaymath}
+     {normal_text:displaymath}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {before\\n}
+   {normal_text:before\\n}
   *@displaymath C7 l6
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
-   {\\int_D (}
+   {normal_text:\\int_D (}
    *balanced_braces C1 l7
-    {{\\nabla\\cdot}}
-   { F)dV=\\int_}
+    {normal_text:{\\nabla\\cdot}}
+   {normal_text: F)dV=\\int_}
    *balanced_braces C1 l7
-    {{\\partial D}}
-   { F\\cdot ndS\\n}
+    {normal_text:{\\partial D}}
+   {normal_text: F\\cdot ndS\\n}
    *@end C1 l8
    |EXTRA
    |text_arg:{displaymath}
     *line_arg C3
      {spaces_before_argument: }
-     {displaymath}
+     {normal_text:displaymath}
      {spaces_after_argument:\\n}
   *paragraph C1
-   {after\\n}
+   {normal_text:after\\n}
 ';
 
 

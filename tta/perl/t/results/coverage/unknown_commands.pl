@@ -13,7 +13,7 @@ $result_tree_text{'unknown_commands'} = '*document_root C1
   *preamble_before_content C1
    {empty_line:\\n}
   *paragraph C1
-   {#\\n}
+   {normal_text:#\\n}
 ';
 
 

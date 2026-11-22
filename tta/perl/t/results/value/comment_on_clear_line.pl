@@ -75,25 +75,25 @@ $result_tree_text{'comment_on_clear_line'} = '*document_root C1
      {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C5
-   {!}
+   {normal_text:!}
    *@value C1
     *brace_container C1
-     {x}
-   {!, !}
+     {normal_text:x}
+   {normal_text:!, !}
    *@value C1
     *brace_container C1
-     {y}
-   {!, !g!, !a vv!\\n}
+     {normal_text:y}
+   {normal_text:!, !g!, !a vv!\\n}
    >SOURCEMARKS
    >value_expansion<start;1><p:4>{g}
     >*@value C1
      >*brace_container C1
-      >{z}
+      >{normal_text:z}
    >value_expansion<end;1><p:5>
    >value_expansion<start;2><p:9>{a vv}
     >*@value C1
      >*brace_container C1
-      >{t}
+      >{normal_text:t}
    >value_expansion<end;2><p:13>
 ';
 

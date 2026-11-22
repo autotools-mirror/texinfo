@@ -25,11 +25,11 @@ $result_tree_text{'cpp_directives_in_macro'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C1
-   {#line 100 "in_arg_file"\\n}
+   {normal_text:#line 100 "in_arg_file"\\n}
    >SOURCEMARKS
    >macro_expansion<start;1>
     >*macro_call@simplemacro C1

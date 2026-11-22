@@ -22,14 +22,14 @@ $result_tree_text{'menu_entry_node'} = '*document_root C1
     |manual_content:A{1|1}
     |node_content:A{3|3}
     |normalized:{a1}
-     {(}
-     {f}
-     {)}
-     {a1}
+     {normal_text:(}
+     {normal_text:f}
+     {normal_text:)}
+     {normal_text:a1}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 l3
     {menu_entry_leading_text:* }
     *menu_entry_node C4
@@ -37,14 +37,14 @@ $result_tree_text{'menu_entry_node'} = '*document_root C1
     |manual_content:A{1|1}
     |node_content:A{3|3}
     |normalized:{a2}
-     {(}
-     {f}
-     {)}
-     {a2}
+     {normal_text:(}
+     {normal_text:f}
+     {normal_text:)}
+     {normal_text:a2}
     {menu_entry_separator:::  }
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 l4
     {menu_entry_leading_text:* }
     *menu_entry_node C4
@@ -52,14 +52,14 @@ $result_tree_text{'menu_entry_node'} = '*document_root C1
     |manual_content:A{1|1}
     |node_content:A{3|3}
     |normalized:{a3}
-     {(}
-     {f}
-     {)}
-     {a3}
+     {normal_text:(}
+     {normal_text:f}
+     {normal_text:)}
+     {normal_text:a3}
     {menu_entry_separator:::         }
     *menu_entry_description C1
      *preformatted C1
-      {d\\n}
+      {normal_text:d\\n}
    *menu_entry C4 l5
     {menu_entry_leading_text:* }
     *menu_entry_node C6
@@ -67,22 +67,22 @@ $result_tree_text{'menu_entry_node'} = '*document_root C1
     |manual_content:A{1|1}
     |node_content:A{3|5}
     |normalized:{_0040a}
-     {(}
-     {f}
-     {)}
+     {normal_text:(}
+     {normal_text:f}
+     {normal_text:)}
      *@@
-     {a}
+     {normal_text:a}
      *@:
     {menu_entry_separator::: }
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l6
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
 ';
 

@@ -26,7 +26,7 @@ FastForward: [U4]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter}
+    {normal_text:chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
 U1 unit{C1}{S:@section 1.1 section}
@@ -48,7 +48,7 @@ Up: [U0]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {section}
+    {normal_text:section}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
 U2 unit{C1}{S:@subsection 1.1.1 subsection}
@@ -70,7 +70,7 @@ Up: [U1]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {subsection}
+    {normal_text:subsection}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
 U3 unit{C1}{S:@subsubsection 1.1.1.1 subsubsection}
@@ -92,7 +92,7 @@ Up: [U2]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {subsubsection}
+    {normal_text:subsubsection}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
 U4 unit{C2}{S:@chapter 2 chapter in part}
@@ -112,7 +112,7 @@ Next: [U5]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {part}
+    {normal_text:part}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@chapter C2 l11 {chapter in part}
@@ -125,7 +125,7 @@ Next: [U5]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter in part}
+    {normal_text:chapter in part}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
 U5 unit{C1}{S:@chapter 3 second chapter in part}
@@ -149,7 +149,7 @@ Up: [U4]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {second chapter in part}
+    {normal_text:second chapter in part}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
 U6 unit{C1}{S:@unnumbered unnumbered}
@@ -171,7 +171,7 @@ Up: [U4]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {unnumbered}
+    {normal_text:unnumbered}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
 U7 unit{C1}{S:@appendix A appendix}
@@ -192,7 +192,7 @@ Prev: [U4]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {appendix}
+    {normal_text:appendix}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
 U8 unit{C1}{S:@appendixsec A.1 appendixsec}
@@ -212,7 +212,7 @@ Up: [U7]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {appendixsec}
+    {normal_text:appendixsec}
     {spaces_after_argument:\\n}
 ';
 

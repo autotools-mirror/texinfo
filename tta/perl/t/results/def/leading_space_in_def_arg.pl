@@ -21,23 +21,23 @@ $result_tree_text{'leading_space_in_def_arg'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {category}
+       {normal_text:category}
      {spaces: }
      *def_name C1
       *bracketed_arg C2 l1
        {spaces_before_argument: }
-       {name}
+       {normal_text:name}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {arg}
+       {normal_text:arg}
      {spaces_after_argument:\\n}
    *@end C1 l2
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
-     {deffn}
+     {normal_text:deffn}
      {spaces_after_argument:\\n}
 ';
 

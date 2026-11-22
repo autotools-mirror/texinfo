@@ -18,10 +18,10 @@ $result_tree_text{'w_in_multitable'} = '*document_root C1
     *block_line_arg C5
      {spaces_before_argument: }
      *bracketed_arg C1 l1
-      {aaaaaaaaa}
-     { }
+      {normal_text:aaaaaaaaa}
+     {normal_text: }
      *bracketed_arg C1 l1
-      {bbbbbbbbbbb}
+      {normal_text:bbbbbbbbbbb}
      {spaces_after_argument:\\n}
    *multitable_body C1
     *row C2
@@ -34,21 +34,21 @@ $result_tree_text{'w_in_multitable'} = '*document_root C1
       *paragraph C2
        *@w C1 l2
         *brace_container C2
-         {aaaaaaaa\\n}
-         {bbbbbbbbbb}
-       {\\n}
+         {normal_text:aaaaaaaa\\n}
+         {normal_text:bbbbbbbbbb}
+       {normal_text:\\n}
      *@tab C2 l4
      |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {gg\\n}
+       {normal_text:gg\\n}
    *@end C1 l5
    |EXTRA
    |text_arg:{multitable}
     *line_arg C3
      {spaces_before_argument: }
-     {multitable}
+     {normal_text:multitable}
      {spaces_after_argument:\\n}
 ';
 

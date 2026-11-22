@@ -19,7 +19,7 @@ $result_tree_text{'no_top_node'} = '*document_root C2
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {node Top not Top node}
+    {normal_text:node Top not Top node}
     {spaces_after_argument:\\n}
 ';
 

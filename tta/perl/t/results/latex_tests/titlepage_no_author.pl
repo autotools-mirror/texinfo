@@ -18,14 +18,14 @@ $result_tree_text{'titlepage_no_author'} = '*document_root C5
     *@title C1 l2
      *line_arg C3
       {spaces_before_argument: }
-      {Some manual tested}
+      {normal_text:Some manual tested}
       {spaces_after_argument:\\n}
     *@end C1 l3
     |EXTRA
     |text_arg:{titlepage}
      *line_arg C3
       {spaces_before_argument: }
-      {titlepage}
+      {normal_text:titlepage}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
  *@node C1 l5 {Top}
@@ -36,7 +36,7 @@ $result_tree_text{'titlepage_no_author'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l6 {section top}
  |EXTRA
@@ -45,7 +45,7 @@ $result_tree_text{'titlepage_no_author'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {section top}
+    {normal_text:section top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l8 {chapter}
@@ -56,7 +56,7 @@ $result_tree_text{'titlepage_no_author'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter}
+    {normal_text:chapter}
     {spaces_after_argument:\\n}
  *@chapter C3 l9 {Chapter}
  |EXTRA
@@ -66,11 +66,11 @@ $result_tree_text{'titlepage_no_author'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chapter}
+    {normal_text:Chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {In chapter\\n}
+   {normal_text:In chapter\\n}
 ';
 
 

@@ -15,34 +15,34 @@ $result_tree_text{'custom_headings_and_comments'} = '*document_root C7
     *line_arg C17
      {spaces_before_argument: }
      *@thispage
-     { }
+     {normal_text: }
      *@thissectionname
-     { }
+     {normal_text: }
      *@|
-     { }
+     {normal_text: }
      *@thissectionnum
-     { }
+     {normal_text: }
      *@thissection
-     { }
+     {normal_text: }
      *@|
-     { }
+     {normal_text: }
      *@thischaptername
-     { }
+     {normal_text: }
      *@thischapternum
      {spaces_after_argument:  \\n}
    *@evenfooting C1 l2
     *line_arg C14
      {spaces_before_argument:   }
      *@thischapter
-     { }
+     {normal_text: }
      *@thistitle
-     { }
+     {normal_text: }
      *@|
-     { }
+     {normal_text: }
      *@thisfile
-     { }
+     {normal_text: }
      *@|
-     {   }
+     {normal_text:   }
      *@code C1 l2
       *brace_container C1
        *@thischaptername
@@ -61,7 +61,7 @@ $result_tree_text{'custom_headings_and_comments'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l5 {top sectionning}
  |EXTRA
@@ -70,7 +70,7 @@ $result_tree_text{'custom_headings_and_comments'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top sectionning}
+    {normal_text:top sectionning}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l7 {chapter}
@@ -81,7 +81,7 @@ $result_tree_text{'custom_headings_and_comments'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter}
+    {normal_text:chapter}
     {spaces_after_argument:\\n}
  *@chapter C10 l8 {ch--ap}
  |EXTRA
@@ -91,7 +91,7 @@ $result_tree_text{'custom_headings_and_comments'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {ch--ap}
+    {normal_text:ch--ap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@page C1
@@ -99,14 +99,14 @@ $result_tree_text{'custom_headings_and_comments'} = '*document_root C7
     {spaces_before_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {after ch--ap first page\\n}
+   {normal_text:after ch--ap first page\\n}
   {empty_line:\\n}
   *@page C1
    *line_arg C1
     {spaces_before_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {after ch--ap second page\\n}
+   {normal_text:after ch--ap second page\\n}
   {empty_line:\\n}
  *@section C2 l18 {sec1}
  |EXTRA
@@ -118,7 +118,7 @@ $result_tree_text{'custom_headings_and_comments'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {sec1}
+    {normal_text:sec1}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@chapter C2 l20 {chap 2}
@@ -131,7 +131,7 @@ $result_tree_text{'custom_headings_and_comments'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap 2}
+    {normal_text:chap 2}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
 ';

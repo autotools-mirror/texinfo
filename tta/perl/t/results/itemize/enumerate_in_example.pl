@@ -26,28 +26,28 @@ $result_tree_text{'enumerate_in_example'} = '*document_root C1
     |item_number:{1}
      *preformatted C2
       {ignorable_spaces_after_command: }
-      {first item\\n}
+      {normal_text:first item\\n}
     *@item C1 l5
     |EXTRA
     |item_number:{2}
      *preformatted C4
       {ignorable_spaces_after_command: }
-      {second  item\\n}
+      {normal_text:second  item\\n}
       {empty_line:\\n}
-      {still second\\n}
+      {normal_text:still second\\n}
     *@end C1 l8
     |EXTRA
     |text_arg:{enumerate}
      *line_arg C3
       {spaces_before_argument: }
-      {enumerate}
+      {normal_text:enumerate}
       {spaces_after_argument:\\n}
    *@end C1 l9
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
 ';
 

@@ -12,7 +12,7 @@ $result_tree_text{'no_empty_line_after_section'} = '*document_root C5
  *before_node_section C2
   *preamble_before_content
   *paragraph C1
-   {Text\\n}
+   {normal_text:Text\\n}
  *@top C3 l2 {top}
  |EXTRA
  |identifier:{Top}
@@ -22,10 +22,10 @@ $result_tree_text{'no_empty_line_after_section'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   *paragraph C1
-   {Other text\\n}
+   {normal_text:Other text\\n}
   {empty_line:\\n}
  *@chapter C4 l5 {chap}
  |EXTRA
@@ -37,7 +37,7 @@ $result_tree_text{'no_empty_line_after_section'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
   *@c C1
    *line_arg C3
@@ -46,7 +46,7 @@ $result_tree_text{'no_empty_line_after_section'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
-   {Para\\n}
+   {normal_text:Para\\n}
    *@comment C1
     *line_arg C3
      {spaces_before_argument: }
@@ -62,20 +62,20 @@ $result_tree_text{'no_empty_line_after_section'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {sec}
+    {normal_text:sec}
     {spaces_after_argument:\\n}
   *paragraph C2
    *@uref C1 l11
     *brace_arg C1
-     {url}
-   { A.\\n}
+     {normal_text:url}
+   {normal_text: A.\\n}
   {empty_line:\\n}
   *@sp C1 l13
   |EXTRA
   |misc_args:A{3}
    *line_arg C3
     {spaces_before_argument: }
-    {3}
+    {normal_text:3}
     {spaces_after_argument:\\n}
  *@section C5 l14 {after sp}
  |EXTRA
@@ -87,14 +87,14 @@ $result_tree_text{'no_empty_line_after_section'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {after sp}
+    {normal_text:after sp}
     {spaces_after_argument:\\n}
   *@indent l15
   {ignorable_spaces_after_command:\\n}
   *paragraph C1
   |EXTRA
   |indent:{1}
-   {Para indented.\\n}
+   {normal_text:Para indented.\\n}
   {empty_line:\\n}
 ';
 

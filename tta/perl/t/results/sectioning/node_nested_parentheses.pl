@@ -19,7 +19,7 @@ $result_tree_text{'node_nested_parentheses'} = '*document_root C2
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {first}
+    {normal_text:first}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C6 l3
@@ -31,13 +31,13 @@ $result_tree_text{'node_nested_parentheses'} = '*document_root C2
     *menu_entry_node C3
     |EXTRA
     |manual_content:A{1|1}
-     {(}
-     {(some) file}
-     {)}
+     {normal_text:(}
+     {normal_text:(some) file}
+     {normal_text:)}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 l5
     {menu_entry_leading_text:* }
     *menu_entry_node C4
@@ -45,14 +45,14 @@ $result_tree_text{'node_nested_parentheses'} = '*document_root C2
     |manual_content:A{1|1}
     |node_content:A{3|3}
     |normalized:{node-name}
-     {(}
-     {other (file)}
-     {)}
-     {node name}
+     {normal_text:(}
+     {normal_text:other (file)}
+     {normal_text:)}
+     {normal_text:node name}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 l6
     {menu_entry_leading_text:* }
     *menu_entry_node C5
@@ -60,38 +60,38 @@ $result_tree_text{'node_nested_parentheses'} = '*document_root C2
     |manual_content:A{1|1}
     |node_content:A{4|4}
     |normalized:{close_0029}
-     {(}
+     {normal_text:(}
      *@code C1 l6
       *brace_container C1
-       {open(}
-     {)}
-     { }
-     {close)}
+       {normal_text:open(}
+     {normal_text:)}
+     {normal_text: }
+     {normal_text:close)}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 l7
     {menu_entry_leading_text:* }
     *menu_entry_node C3
     |EXTRA
     |node_content:A{0|2}
     |normalized:{_0028_0029_0029_0029-error}
-     {(}
+     {normal_text:(}
      *@code C1 l7
       *brace_container C1
-       {)))}
-     { error}
+       {normal_text:)))}
+     {normal_text: error}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l8
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
 ';
 

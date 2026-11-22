@@ -19,7 +19,7 @@ $result_tree_text{'top_file_name_and_node_name_collision'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {my node}
+    {normal_text:my node}
     {spaces_after_argument:\\n}
  *@chapter C2 l2 {chap my node}
  |EXTRA
@@ -29,7 +29,7 @@ $result_tree_text{'top_file_name_and_node_name_collision'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap my node}
+    {normal_text:chap my node}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l4 {other node}
@@ -40,7 +40,7 @@ $result_tree_text{'top_file_name_and_node_name_collision'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {other node}
+    {normal_text:other node}
     {spaces_after_argument:\\n}
  *@chapter C2 l5 {chapter}
  |EXTRA
@@ -50,7 +50,7 @@ $result_tree_text{'top_file_name_and_node_name_collision'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter}
+    {normal_text:chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@top C2 l7 {top}
@@ -62,7 +62,7 @@ $result_tree_text{'top_file_name_and_node_name_collision'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
 ';

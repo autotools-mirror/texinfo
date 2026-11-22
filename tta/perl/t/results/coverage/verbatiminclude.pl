@@ -19,7 +19,7 @@ $result_tree_text{'verbatiminclude'} = '*document_root C1
   |text_arg:{incl-incl.txi}
    *line_arg C3
     {spaces_before_argument: }
-    {incl-incl.txi}
+    {normal_text:incl-incl.txi}
     {spaces_after_argument:\\n}
 ';
 

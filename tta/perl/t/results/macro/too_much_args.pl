@@ -24,11 +24,11 @@ $result_tree_text{'too_much_args'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C2
-   {first arg: one\\n}
+   {normal_text:first arg: one\\n}
    >SOURCEMARKS
    >macro_expansion<start;1>
     >*macro_call@twoargs C2
@@ -37,7 +37,7 @@ $result_tree_text{'too_much_args'} = '*document_root C1
      >*brace_arg C2
       >{spaces_before_argument: }
       >{macro_call_arg_text:two, three}
-   {second arg: two, three.\\n}
+   {normal_text:second arg: two, three.\\n}
    >SOURCEMARKS
    >macro_expansion<end;1><p:22>
 ';

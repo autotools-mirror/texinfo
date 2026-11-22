@@ -22,7 +22,7 @@ $result_tree_text{'multitable_in_example_extraneous_tab'} = '*document_root C1
      *block_line_arg C3
       {spaces_before_argument: }
       *bracketed_arg C1 l2
-       {a}
+       {normal_text:a}
       {spaces_after_argument:\\n}
     *multitable_body C2
      *row C1
@@ -33,10 +33,10 @@ $result_tree_text{'multitable_in_example_extraneous_tab'} = '*document_root C1
       |cell_number:{1}
        *preformatted C2
         {ignorable_spaces_after_command: }
-        {ita }
+        {normal_text:ita }
        *preformatted C2
         {ignorable_spaces_after_command: }
-        {tmp\\n}
+        {normal_text:tmp\\n}
      *row C1
      |EXTRA
      |row_number:{2}
@@ -45,7 +45,7 @@ $result_tree_text{'multitable_in_example_extraneous_tab'} = '*document_root C1
       |cell_number:{1}
        *preformatted C2
         {ignorable_spaces_after_command: }
-        {secit }
+        {normal_text:secit }
        *preformatted C1
         {ignorable_spaces_after_command:\\n}
     *@end C1 l5
@@ -53,14 +53,14 @@ $result_tree_text{'multitable_in_example_extraneous_tab'} = '*document_root C1
     |text_arg:{multitable}
      *line_arg C3
       {spaces_before_argument: }
-      {multitable}
+      {normal_text:multitable}
       {spaces_after_argument:\\n}
    *@end C1 l6
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
 ';
 

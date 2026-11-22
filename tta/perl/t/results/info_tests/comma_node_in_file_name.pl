@@ -16,7 +16,7 @@ $result_tree_text{'comma_node_in_file_name'} = '*document_root C5
    |text_arg:{before_comma, Node: after_node.info}
     *line_arg C3
      {spaces_before_argument: }
-     {before_comma, Node: after_node.info}
+     {normal_text:before_comma, Node: after_node.info}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *@node C1 l3 {Top}
@@ -27,7 +27,7 @@ $result_tree_text{'comma_node_in_file_name'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C4 l4 {top}
  |EXTRA
@@ -36,7 +36,7 @@ $result_tree_text{'comma_node_in_file_name'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
@@ -45,8 +45,8 @@ $result_tree_text{'comma_node_in_file_name'} = '*document_root C5
     |EXTRA
     |node_content:A{0|0}
     |normalized:{chap}
-     {chap}
-   {\\n}
+     {normal_text:chap}
+   {normal_text:\\n}
   {empty_line:\\n}
  *@node C1 l8 {chap}
  |EXTRA
@@ -56,7 +56,7 @@ $result_tree_text{'comma_node_in_file_name'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
  *@chapter C3 l9 {Chap}
  |EXTRA
@@ -66,11 +66,11 @@ $result_tree_text{'comma_node_in_file_name'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chap}
+    {normal_text:Chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {Arrived in Chapter.\\n}
+   {normal_text:Arrived in Chapter.\\n}
 ';
 
 

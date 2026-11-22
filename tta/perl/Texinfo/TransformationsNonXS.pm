@@ -73,8 +73,8 @@ sub _correct_level($$;$) {
       my $line_args
         = Texinfo::TreeElement::new({'type' => 'line_arg',
                             'contents' => [
-             Texinfo::TreeElement::new(
-                 {'type' => 'spaces_before_argument', 'text' => "\n"}),
+             Texinfo::TreeElement::new({'type' => 'spaces_before_argument',
+                                        'text' => "\n"}),
                                           ],
                          'parent' => $element});
       push @{$element->{'contents'}}, $line_args;

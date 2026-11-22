@@ -23,7 +23,7 @@ $result_tree_text{'blockitem_no_item'} = '*document_root C1
     |text_arg:{linemacro}
      *line_arg C3
       {spaces_before_argument: }
-      {linemacro}
+      {normal_text:linemacro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *@itemize C3 l5
@@ -32,8 +32,8 @@ $result_tree_text{'blockitem_no_item'} = '*document_root C1
      {spaces_before_argument:\\n}
    *before_item C1
     *paragraph C3
-     {AA\\n}
-     {d, e f }
+     {normal_text:AA\\n}
+     {normal_text:d, e f }
      >SOURCEMARKS
      >linemacro_expansion<start;1>
       >*linemacro_call@mycommand C3
@@ -52,7 +52,7 @@ $result_tree_text{'blockitem_no_item'} = '*document_root C1
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }
-     {itemize}
+     {normal_text:itemize}
      >SOURCEMARKS
      >linemacro_expansion<end;1><p:7>
      {spaces_after_argument:\\n}

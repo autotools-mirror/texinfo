@@ -22,7 +22,7 @@ $result_tree_text{'invalid_documentencoding'} = '*document_root C1
    |text_arg:{us-ascii}
     *line_arg C4
      {spaces_before_argument: }
-     {us-ascii}
+     {normal_text:us-ascii}
      *@asis C1 l2
       *brace_container
      {spaces_after_argument:\\n}
@@ -33,10 +33,10 @@ $result_tree_text{'invalid_documentencoding'} = '*document_root C1
    |text_arg:{latin1}
     *line_arg C4
      {spaces_before_argument: }
-     {latin1}
+     {normal_text:latin1}
      *@asis C1 l4
       *brace_container C1
-       {a}
+       {normal_text:a}
      {spaces_after_argument:\\n}
    *@documentencoding C1 l5
    |EXTRA
@@ -44,18 +44,18 @@ $result_tree_text{'invalid_documentencoding'} = '*document_root C1
    |text_arg:{YS-ASCII}
     *line_arg C3
      {spaces_before_argument: }
-     {YS-ASCII}
+     {normal_text:YS-ASCII}
      {spaces_after_argument:\\n}
   *paragraph C8
    *@@
-   {documentencoding }
+   {normal_text:documentencoding }
    *@documentencoding C1 l6
    |EXTRA
    |global_command_number:{4}
    |text_arg:{bad encoding name}
     *line_arg C3
      {spaces_before_argument: }
-     {bad encoding name}
+     {normal_text:bad encoding name}
      {spaces_after_argument:\\n}
    *@documentencoding C1 l7
    |EXTRA
@@ -63,7 +63,7 @@ $result_tree_text{'invalid_documentencoding'} = '*document_root C1
    |text_arg:{1}
     *line_arg C3
      {spaces_before_argument: }
-     {1}
+     {normal_text:1}
      {spaces_after_argument:\\n}
    *@documentencoding C1 l8
    |EXTRA
@@ -71,7 +71,7 @@ $result_tree_text{'invalid_documentencoding'} = '*document_root C1
    |text_arg:{%}
     *line_arg C3
      {spaces_before_argument: }
-     {%}
+     {normal_text:%}
      {spaces_after_argument:\\n}
    *@documentencoding C1 l9
    |EXTRA
@@ -87,7 +87,7 @@ $result_tree_text{'invalid_documentencoding'} = '*document_root C1
    |text_arg:{AAA}
     *line_arg C4
      {spaces_before_argument: }
-     {AAA}
+     {normal_text:AAA}
      *@TeX C1 l10
       *brace_container
      {spaces_after_argument:\\n}
@@ -97,10 +97,10 @@ $result_tree_text{'invalid_documentencoding'} = '*document_root C1
    |text_arg:{BBB}
     *line_arg C4
      {spaces_before_argument: }
-     {BBB}
+     {normal_text:BBB}
      *@\' C1 l11
       *following_arg C1
-       {e}
+       {normal_text:e}
      {spaces_after_argument:\\n}
 ';
 

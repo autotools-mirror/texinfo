@@ -19,7 +19,7 @@ $result_tree_text{'command_in_node_redirection_multiple'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C13 l2 {t @r{in r}}
  |EXTRA
@@ -28,10 +28,10 @@ $result_tree_text{'command_in_node_redirection_multiple'} = '*document_root C3
   *arguments_line C1
    *line_arg C4
     {spaces_before_argument: }
-    {t }
+    {normal_text:t }
     *@r C1 l2
      *brace_container C1
-      {in r}
+      {normal_text:in r}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@anchor C1 l4
@@ -39,7 +39,7 @@ $result_tree_text{'command_in_node_redirection_multiple'} = '*document_root C3
   |identifier:{yyyy}
   |is_target:{1}
    *brace_arg C1
-    {yyyy}
+    {normal_text:yyyy}
   {spaces_after_close_brace:\\n}
   {empty_line:\\n}
   *@anchor C1 l6
@@ -49,7 +49,7 @@ $result_tree_text{'command_in_node_redirection_multiple'} = '*document_root C3
    *brace_arg C1
     *@sansserif C1 l6
      *brace_container C1
-      {gg}
+      {normal_text:gg}
   {spaces_after_close_brace:\\n}
   {empty_line:\\n}
   *@anchor C1 l8
@@ -59,7 +59,7 @@ $result_tree_text{'command_in_node_redirection_multiple'} = '*document_root C3
    *brace_arg C1
     *@r C1 l8
      *brace_container C1
-      {ancher}
+      {normal_text:ancher}
   {spaces_after_close_brace:\\n}
   {empty_line:\\n}
   *@anchor C1 l10
@@ -69,11 +69,11 @@ $result_tree_text{'command_in_node_redirection_multiple'} = '*document_root C3
    *brace_arg C3
     *@sansserif C1 l10
      *brace_container C1
-      {ll}
-    { }
+      {normal_text:ll}
+    {normal_text: }
     *@r C1 l10
      *brace_container C1
-      {jj}
+      {normal_text:jj}
   {spaces_after_close_brace:\\n}
 ';
 

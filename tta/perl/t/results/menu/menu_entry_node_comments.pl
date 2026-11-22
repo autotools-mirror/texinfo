@@ -22,10 +22,10 @@ $result_tree_text{'menu_entry_node_comments'} = '*document_root C1
     |manual_content:A{1|1}
     |node_content:A{3|3}
     |normalized:{a1c}
-     {(}
-     {f}
-     {)}
-     {a1c}
+     {normal_text:(}
+     {normal_text:f}
+     {normal_text:)}
+     {normal_text:a1c}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
@@ -41,10 +41,10 @@ $result_tree_text{'menu_entry_node_comments'} = '*document_root C1
     |manual_content:A{1|1}
     |node_content:A{3|3}
     |normalized:{a2c}
-     {(}
-     {f}
-     {)}
-     {a2c}
+     {normal_text:(}
+     {normal_text:f}
+     {normal_text:)}
+     {normal_text:a2c}
     {menu_entry_separator:::  }
     *menu_entry_description C1
      *preformatted C1
@@ -60,14 +60,14 @@ $result_tree_text{'menu_entry_node_comments'} = '*document_root C1
     |manual_content:A{1|1}
     |node_content:A{3|3}
     |normalized:{a3c}
-     {(}
-     {f}
-     {)}
-     {a3c}
+     {normal_text:(}
+     {normal_text:f}
+     {normal_text:)}
+     {normal_text:a3c}
     {menu_entry_separator:::         }
     *menu_entry_description C1
      *preformatted C2
-      {d}
+      {normal_text:d}
       *@c C1
        *line_arg C3
         {spaces_before_argument: }
@@ -80,11 +80,11 @@ $result_tree_text{'menu_entry_node_comments'} = '*document_root C1
     |manual_content:A{1|1}
     |node_content:A{4|5}
     |normalized:{a4}
-     {(}
-     {f}
-     {)}
-     { }
-     {a4}
+     {normal_text:(}
+     {normal_text:f}
+     {normal_text:)}
+     {normal_text: }
+     {normal_text:a4}
      {space_at_end_menu_node: }
     {menu_entry_separator:::   }
     *menu_entry_description C1
@@ -99,7 +99,7 @@ $result_tree_text{'menu_entry_node_comments'} = '*document_root C1
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
 ';
 

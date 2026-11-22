@@ -16,20 +16,20 @@ $result_tree_text{'flushright_not_closed_and_format'} = '*document_root C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C1
-    {flushright\\n}
+    {normal_text:flushright\\n}
    {empty_line:\\n}
    *@quotation C3 l4
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument: \\n}
     *paragraph C1
-     {A quot---ation\\n}
+     {normal_text:A quot---ation\\n}
     *@end C1 l6
     |EXTRA
     |text_arg:{quotation}
      *line_arg C3
       {spaces_before_argument: }
-      {quotation}
+      {normal_text:quotation}
       {spaces_after_argument:\\n}
 ';
 

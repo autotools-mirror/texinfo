@@ -19,7 +19,7 @@ $result_tree_text{'anchor_in_chapter_and_contents'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C4 l2 {top}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'anchor_in_chapter_and_contents'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@contents C1 l4
@@ -45,7 +45,7 @@ $result_tree_text{'anchor_in_chapter_and_contents'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
  *@chapter C1 l7 {Chapter @anchor{point} after anchor}
  |EXTRA
@@ -55,15 +55,15 @@ $result_tree_text{'anchor_in_chapter_and_contents'} = '*document_root C5
   *arguments_line C1
    *line_arg C6
     {spaces_before_argument: }
-    {Chapter }
+    {normal_text:Chapter }
     *@anchor C1 l7
     |EXTRA
     |identifier:{point}
     |is_target:{1}
      *brace_arg C1
-      {point}
+      {normal_text:point}
     {spaces_after_close_brace: }
-    {after anchor}
+    {normal_text:after anchor}
     {spaces_after_argument:\\n}
 ';
 

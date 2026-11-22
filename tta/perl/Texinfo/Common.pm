@@ -826,11 +826,13 @@ sub parse_node_manual($;$) {
     if ($first->{'text'} ne '(') {
       if ($content_indices) {
         $opening_brace
-          = Texinfo::TreeElement::new({'text' => '('});
+          = Texinfo::TreeElement::new({'text' => '(',
+                                       'type' => 'normal_text'});
       }
       my $brace_text = $first->{'text'};
       $brace_text =~ s/^\(//;
-      $new_first = Texinfo::TreeElement::new({'text' => $brace_text});
+      $new_first = Texinfo::TreeElement::new({'text' => $brace_text,
+                                              'type' => 'normal_text'});
     } else {
       # first element is "(", it is not part of the manual, keep it
       $idx++;
@@ -885,7 +887,8 @@ sub parse_node_manual($;$) {
           if ($before ne '') {
             # text before ), part of the manual name
             my $last_manual_element
-              = Texinfo::TreeElement::new({ 'text' => $before });
+              = Texinfo::TreeElement::new({'text' => $before,
+                                           'type' => 'normal_text'});
             $manual_count++;
             if ($content_indices) {
               splice(@$contents, $idx, 0, $last_manual_element);
@@ -897,7 +900,8 @@ sub parse_node_manual($;$) {
           }
           if ($content_indices) {
             my $closing_brace
-              = Texinfo::TreeElement::new({'text' => ')'});
+              = Texinfo::TreeElement::new({'text' => ')',
+                                           'type' => 'normal_text'});
             splice(@$contents, $idx, 0, $closing_brace);
             $idx++;
             $current_position = relocate_source_marks(
@@ -908,7 +912,8 @@ sub parse_node_manual($;$) {
           my $spaces_after = $1;
           if ($spaces_after and $content_indices) {
             my $spaces_element
-              = Texinfo::TreeElement::new({'text' => $spaces_after,});
+              = Texinfo::TreeElement::new({'text' => $spaces_after,
+                                           'type' => 'normal_text'});
             splice(@$contents, $idx, 0, $spaces_element);
             $idx++;
             $current_position = relocate_source_marks(
@@ -918,7 +923,8 @@ sub parse_node_manual($;$) {
           if ($after ne '') {
             # text after ), part of the node name.
             my $leading_node_content
-              = Texinfo::TreeElement::new({'text' => $after});
+              = Texinfo::TreeElement::new({'text' => $after,
+                                           'type' => 'normal_text'});
             $node_content_count++;
             if ($content_indices) {
               splice(@$contents, $idx, 0, $leading_node_content);

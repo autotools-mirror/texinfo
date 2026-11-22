@@ -19,7 +19,7 @@ $result_tree_text{'formats_in_menu'} = '*document_root C2
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {first}
+    {normal_text:first}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C8 l3
@@ -31,13 +31,13 @@ $result_tree_text{'formats_in_menu'} = '*document_root C2
     *menu_entry_node C3
     |EXTRA
     |manual_content:A{1|1}
-     {(}
-     {gcc}
-     {)}
+     {normal_text:(}
+     {normal_text:gcc}
+     {normal_text:)}
     {menu_entry_separator::: }
     *menu_entry_description C2
      *preformatted C1
-      {text\\n}
+      {normal_text:text\\n}
      *@table C3 l5
       *arguments_line C1
        *block_line_arg C3
@@ -49,17 +49,17 @@ $result_tree_text{'formats_in_menu'} = '*document_root C2
         *@item C1 l6
          *line_arg C3
           {spaces_before_argument: }
-          {item}
+          {normal_text:item}
           {spaces_after_argument:\\n}
        *table_definition C1
         *preformatted C1
-         {* table line::\\n}
+         {normal_text:* table line::\\n}
       *@end C1 l8
       |EXTRA
       |text_arg:{table}
        *line_arg C3
         {spaces_before_argument: }
-        {table}
+        {normal_text:table}
         {spaces_after_argument:\\n}
    *menu_comment C1
     *preformatted C1
@@ -69,13 +69,13 @@ $result_tree_text{'formats_in_menu'} = '*document_root C2
     *menu_entry_node C3
     |EXTRA
     |manual_content:A{1|1}
-     {(}
-     {info}
-     {)}
+     {normal_text:(}
+     {normal_text:info}
+     {normal_text:)}
     {menu_entry_separator:::}
     *menu_entry_description C2
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
      *@verbatim C4 l11
       *arguments_line C1
        *block_line_arg C1
@@ -87,51 +87,51 @@ $result_tree_text{'formats_in_menu'} = '*document_root C2
       |text_arg:{verbatim}
        *line_arg C3
         {spaces_before_argument: }
-        {verbatim}
+        {normal_text:verbatim}
         {spaces_after_argument:\\n}
    *menu_entry C4 l15
     {menu_entry_leading_text:* }
     *menu_entry_node C3
     |EXTRA
     |manual_content:A{1|1}
-     {(}
-     {manual2}
-     {)}
+     {normal_text:(}
+     {normal_text:manual2}
+     {normal_text:)}
     {menu_entry_separator::: }
     *menu_entry_description C1
      *preformatted C3
-      {%\\n}
+      {normal_text:%\\n}
       *@html C3 l16
        *arguments_line C1
         *block_line_arg C1
          {spaces_before_argument:\\n}
        *rawpreformatted C2
         {empty_line:\\n}
-        {<i></i>\\n}
+        {normal_text:<i></i>\\n}
        *@end C1 l19
        |EXTRA
        |text_arg:{html}
         *line_arg C3
          {spaces_before_argument: }
-         {html}
+         {normal_text:html}
          {spaces_after_argument:\\n}
-      {Log$\\n}
+      {normal_text:Log$\\n}
    *menu_entry C4 l21
     {menu_entry_leading_text:* }
     *menu_entry_node C3
     |EXTRA
     |manual_content:A{1|1}
-     {(}
-     {truc}
-     {)}
+     {normal_text:(}
+     {normal_text:truc}
+     {normal_text:)}
     {menu_entry_separator::: }
     *menu_entry_description C1
      *preformatted C2
       *@acronym C1 l21
        *brace_arg C2
-        {description\\n}
-        {* acronym::}
-      {\\n}
+        {normal_text:description\\n}
+        {normal_text:* acronym::}
+      {normal_text:\\n}
    *menu_comment C3
     *preformatted C1
      {after_menu_description_line:\\n}
@@ -140,14 +140,14 @@ $result_tree_text{'formats_in_menu'} = '*document_root C2
       *block_line_arg C1
        {spaces_before_argument:\\n}
      *preformatted C2
-      {* subsubsection::\\n}
-      {Menu comment\\n}
+      {normal_text:* subsubsection::\\n}
+      {normal_text:Menu comment\\n}
      *@end C1 l27
      |EXTRA
      |text_arg:{example}
       *line_arg C3
        {spaces_before_argument: }
-       {example}
+       {normal_text:example}
        {spaces_after_argument:\\n}
     *preformatted C1
      {empty_line:\\n}
@@ -156,7 +156,7 @@ $result_tree_text{'formats_in_menu'} = '*document_root C2
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
 ';
 

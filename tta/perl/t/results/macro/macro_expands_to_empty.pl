@@ -23,7 +23,7 @@ $result_tree_text{'macro_expands_to_empty'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    {empty_line:\\n}
@@ -33,7 +33,7 @@ $result_tree_text{'macro_expands_to_empty'} = '*document_root C1
      >*brace_arg
    >macro_expansion<end;1>
   *paragraph C1
-   {aa\\n}
+   {normal_text:aa\\n}
    >SOURCEMARKS
    >macro_expansion<start;2>
     >*macro_call@foo C1

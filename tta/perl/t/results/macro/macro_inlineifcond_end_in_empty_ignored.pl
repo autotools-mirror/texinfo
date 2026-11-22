@@ -23,15 +23,15 @@ $result_tree_text{'macro_inlineifcond_end_in_empty_ignored'} = '*document_root C
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
   *paragraph C3
-   {Toto }
+   {normal_text:Toto }
    *@inlineifset C2 l4
    |EXTRA
    |format:{flag}
     *brace_arg C1
-     {flag}
+     {normal_text:flag}
      >SOURCEMARKS
      >macro_expansion<start;1><p:2>
       >*macro_call@setargendignored C1
@@ -40,15 +40,15 @@ $result_tree_text{'macro_inlineifcond_end_in_empty_ignored'} = '*document_root C
      {raw:}
      >SOURCEMARKS
      >macro_expansion<end;1>
-   {. After.\\n}
+   {normal_text:. After.\\n}
   {empty_line:\\n}
   *paragraph C3
-   {Again with space }
+   {normal_text:Again with space }
    *@inlineifset C2 l6
    |EXTRA
    |format:{flag}
     *brace_arg C1
-     {flag}
+     {normal_text:flag}
      >SOURCEMARKS
      >macro_expansion<start;2><p:2>
       >*macro_call@setargendignored C1
@@ -57,7 +57,7 @@ $result_tree_text{'macro_inlineifcond_end_in_empty_ignored'} = '*document_root C
      {raw: }
      >SOURCEMARKS
      >macro_expansion<end;2>
-   {. After.\\n}
+   {normal_text:. After.\\n}
 ';
 
 

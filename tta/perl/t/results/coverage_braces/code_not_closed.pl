@@ -14,7 +14,7 @@ $result_tree_text{'code_not_closed'} = '*document_root C1
   *paragraph C1
    *@code C1 l1
     *brace_container C1
-     {in code}
+     {normal_text:in code}
 ';
 
 

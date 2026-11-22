@@ -27,32 +27,32 @@ $result_tree_text{'def_in_example'} = '*document_root C1
       |EXTRA
       |inserted:{1}
        *def_line_arg C1
-        {Function}
+        {normal_text:Function}
       {spaces: }
       *def_name C1
        *def_line_arg C1
-        {name}
+        {normal_text:name}
       {spaces: }
       *def_arg C1
        *def_line_arg C1
-        {arg}
+        {normal_text:arg}
       {spaces_after_argument:\\n}
     *def_item C1
      *preformatted C1
-      {in defun\\n}
+      {normal_text:in defun\\n}
     *@end C1 l4
     |EXTRA
     |text_arg:{defun}
      *line_arg C3
       {spaces_before_argument: }
-      {defun}
+      {normal_text:defun}
       {spaces_after_argument:\\n}
    *@end C1 l5
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
 ';
 

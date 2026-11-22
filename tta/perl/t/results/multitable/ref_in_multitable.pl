@@ -21,9 +21,9 @@ $result_tree_text{'ref_in_multitable'} = '*document_root C1
     |EXTRA
     |node_content:A{0|1}
     |normalized:{XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XX}
-     {XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XX XXX XXX XXX XXX \\n}
-     {XXX XXX XXX XXX XXX XXX XXX XXX XX}
-   {.\\n}
+     {normal_text:XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XX XXX XXX XXX XXX \\n}
+     {normal_text:XXX XXX XXX XXX XXX XXX XXX XXX XX}
+   {normal_text:.\\n}
   {empty_line:\\n}
   *@multitable C3 l6
   |EXTRA
@@ -36,7 +36,7 @@ $result_tree_text{'ref_in_multitable'} = '*document_root C1
      |misc_args:A{.35|.65}
       *line_arg C3
        {spaces_before_argument: }
-       {.35 .65}
+       {normal_text:.35 .65}
        {spaces_after_argument:\\n}
    *multitable_body C3
     *row C2
@@ -47,20 +47,20 @@ $result_tree_text{'ref_in_multitable'} = '*document_root C1
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XX\\n}
+       {normal_text:XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XX\\n}
      *@tab C2 l8
      |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C3
-       {See }
+       {normal_text:See }
        *@ref C1 l8
         *brace_arg C1
         |EXTRA
         |node_content:A{0|0}
         |normalized:{RRR-RRR-RRR-RRR-RRR-RRR-RRR-RRR-RRR-RRRR}
-         {RRR RRR RRR RRR RRR RRR RRR RRR RRR RRRR}
-       {.\\n}
+         {normal_text:RRR RRR RRR RRR RRR RRR RRR RRR RRR RRRR}
+       {normal_text:.\\n}
     *row C2
     |EXTRA
     |row_number:{2}
@@ -69,20 +69,20 @@ $result_tree_text{'ref_in_multitable'} = '*document_root C1
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XX\\n}
+       {normal_text:XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XX\\n}
      *@tab C2 l10
      |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C3
-       {See }
+       {normal_text:See }
        *@ref C1 l10
         *brace_arg C1
         |EXTRA
         |node_content:A{0|0}
         |normalized:{SSS-SSS-SSS-SSS-SSS-SSS-SSS-SSS-SSS-SSS-SSS-SSS-SSSSS}
-         {SSS SSS SSS SSS SSS SSS SSS SSS SSS SSS SSS SSS SSSSS}
-       {.\\n}
+         {normal_text:SSS SSS SSS SSS SSS SSS SSS SSS SSS SSS SSS SSS SSSSS}
+       {normal_text:.\\n}
     *row C2
     |EXTRA
     |row_number:{3}
@@ -91,7 +91,7 @@ $result_tree_text{'ref_in_multitable'} = '*document_root C1
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C3
-       {adsf}
+       {normal_text:adsf}
        *@footnote C1 l11
        |EXTRA
        |global_command_number:{1}
@@ -102,21 +102,21 @@ $result_tree_text{'ref_in_multitable'} = '*document_root C1
            |EXTRA
            |node_content:A{0|1}
            |normalized:{XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XX}
-            {XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XX \\n}
-            {XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XX}
-       { }
+            {normal_text:XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XX \\n}
+            {normal_text:XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XX}
+       {normal_text: }
      *@tab C2 l12
      |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: \\n}
       *paragraph C1
-       {second column\\n}
+       {normal_text:second column\\n}
    *@end C1 l14
    |EXTRA
    |text_arg:{multitable}
     *line_arg C3
      {spaces_before_argument: }
-     {multitable}
+     {normal_text:multitable}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
@@ -125,9 +125,9 @@ $result_tree_text{'ref_in_multitable'} = '*document_root C1
     |EXTRA
     |node_content:A{0|1}
     |normalized:{XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XX}
-     {XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XX XXX XXX XXX XXX \\n}
-     {XXX XXX XXX XXX XXX XXX XXX XXX XX}
-   {.\\n}
+     {normal_text:XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XX XXX XXX XXX XXX \\n}
+     {normal_text:XXX XXX XXX XXX XXX XXX XXX XXX XX}
+   {normal_text:.\\n}
 ';
 
 

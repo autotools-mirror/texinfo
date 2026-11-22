@@ -12,56 +12,56 @@ $result_tree_text{'punctuation_in_command_end_line'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *paragraph C27
-   {Text. Email }
+   {normal_text:Text. Email }
    *@email C2 l1
     *brace_arg C1
-     {.}
+     {normal_text:.}
     *brace_arg C1
-     {.}
-   {\\n}
-   {dmn }
+     {normal_text:.}
+   {normal_text:\\n}
+   {normal_text:dmn }
    *@dmn C1 l2
     *brace_container C1
-     {1.}
-   {\\n}
-   {and text. indicateurl }
+     {normal_text:1.}
+   {normal_text:\\n}
+   {normal_text:and text. indicateurl }
    *@indicateurl C1 l3
     *brace_container C1
-     {.}
-   {\\n}
-   {and then kbd }
+     {normal_text:.}
+   {normal_text:\\n}
+   {normal_text:and then kbd }
    *@kbd C1 l4
     *brace_container C1
-     {.}
-   {\\n}
-   {and math }
+     {normal_text:.}
+   {normal_text:\\n}
+   {normal_text:and math }
    *@math C1 l5
     *brace_arg C1
-     {.}
-   {\\n}
-   {and cite }
+     {normal_text:.}
+   {normal_text:\\n}
+   {normal_text:and cite }
    *@cite C1 l6
     *brace_container C1
-     {.}
-   {\\n}
-   {and emph }
+     {normal_text:.}
+   {normal_text:\\n}
+   {normal_text:and emph }
    *@emph C1 l7
     *brace_container C1
-     {.}
-   {\\n}
-   {text. asis in code }
+     {normal_text:.}
+   {normal_text:\\n}
+   {normal_text:text. asis in code }
    *@code C1 l8
     *brace_container C1
      *@asis C1 l8
       *brace_container C1
-       {.}
-   {\\n}
-   {text. a dot before a emph open .}
+       {normal_text:.}
+   {normal_text:\\n}
+   {normal_text:text. a dot before a emph open .}
    *@emph C1 l9
     *brace_container C2
-     {\\n}
-     {and in emph.}
-   {\\n}
+     {normal_text:\\n}
+     {normal_text:and in emph.}
+   {normal_text:\\n}
 ';
 
 

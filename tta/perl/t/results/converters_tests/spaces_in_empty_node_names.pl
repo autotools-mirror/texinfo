@@ -19,7 +19,7 @@ $result_tree_text{'spaces_in_empty_node_names'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C5 l3
@@ -37,7 +37,7 @@ $result_tree_text{'spaces_in_empty_node_names'} = '*document_root C5
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 l5
     {menu_entry_leading_text:* }
     *menu_entry_node C1
@@ -52,7 +52,7 @@ $result_tree_text{'spaces_in_empty_node_names'} = '*document_root C5
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 l6
     {menu_entry_leading_text:* }
     *menu_entry_node C1
@@ -63,13 +63,13 @@ $result_tree_text{'spaces_in_empty_node_names'} = '*document_root C5
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l7
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C2 l9 {@ @ }
@@ -97,7 +97,7 @@ $result_tree_text{'spaces_in_empty_node_names'} = '*document_root C5
     {spaces_before_argument: }
     *@w C1 l13
      *brace_container C1
-      {  }
+      {normal_text:  }
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
@@ -108,7 +108,7 @@ $result_tree_text{'spaces_in_empty_node_names'} = '*document_root C5
     |normalized:{-}
      *@ 
      *@ 
-   {\\n}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
    *@ref C1 l17
@@ -121,7 +121,7 @@ $result_tree_text{'spaces_in_empty_node_names'} = '*document_root C5
        {verb_delimiter::}
        {raw:  }
        {verb_delimiter::}
-   {\\n}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
    *@ref C1 l19
@@ -131,8 +131,8 @@ $result_tree_text{'spaces_in_empty_node_names'} = '*document_root C5
     |normalized:{-}
      *@w C1 l19
       *brace_container C1
-       {  }
-   {\\n}
+       {normal_text:  }
+   {normal_text:\\n}
 ';
 
 

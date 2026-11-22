@@ -14,7 +14,7 @@ $result_tree_text{'accent_and_dash'} = '*document_root C1
   *paragraph C1
    *@^ C1 l1
     *brace_container C1
-     {a--}
+     {normal_text:a--}
 ';
 
 

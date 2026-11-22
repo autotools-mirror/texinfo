@@ -19,12 +19,12 @@ $result_tree_text{'inlineifsetifclearspaces'} = '*document_root C1
     {spaces_after_cmd_before_arg:\\n}
     *brace_arg C3
      {spaces_before_argument: }
-     {aaa}
+     {normal_text:aaa}
      {spaces_after_argument: }
     *brace_arg C2
      {spaces_before_argument: }
-     {iclear first }
-   {.\\n}
+     {normal_text:iclear first }
+   {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C2
    *@inlineifset C3 l4
@@ -33,11 +33,11 @@ $result_tree_text{'inlineifsetifclearspaces'} = '*document_root C1
     {spaces_after_cmd_before_arg:\\n}
     *brace_arg C3
      {spaces_before_argument: }
-     {aaa}
+     {normal_text:aaa}
      {spaces_after_argument: }
     *elided_brace_command_arg C1
      {raw: ifset first }
-   {.\\n}
+   {normal_text:.\\n}
   {empty_line:\\n}
   *@set C1
   |EXTRA
@@ -54,11 +54,11 @@ $result_tree_text{'inlineifsetifclearspaces'} = '*document_root C1
     {spaces_after_cmd_before_arg: }
     *brace_arg C3
      {spaces_before_argument: }
-     {aaa}
+     {normal_text:aaa}
      {spaces_after_argument: }
     *elided_brace_command_arg C1
      {raw: ifclear second }
-   {.\\n}
+   {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C2
    *@inlineifset C3 l11
@@ -68,12 +68,12 @@ $result_tree_text{'inlineifsetifclearspaces'} = '*document_root C1
     {spaces_after_cmd_before_arg: }
     *brace_arg C3
      {spaces_before_argument: }
-     {aaa}
+     {normal_text:aaa}
      {spaces_after_argument: }
     *brace_arg C2
      {spaces_before_argument: }
-     {ifset second }
-   {.\\n}
+     {normal_text:ifset second }
+   {normal_text:.\\n}
 ';
 
 

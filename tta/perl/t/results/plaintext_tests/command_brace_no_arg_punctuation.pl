@@ -14,16 +14,16 @@ $result_tree_text{'command_brace_no_arg_punctuation'} = '*document_root C1
   *paragraph C8
    *@TeX C1 l1
     *brace_container
-   {. And }
+   {normal_text:. And }
    *@LaTeX C1 l1
     *brace_container
-   {. }
+   {normal_text:. }
    *@copyright C1 l1
     *brace_container
-   {. }
+   {normal_text:. }
    *@registeredsymbol C1 l1
     *brace_container
-   {. End.\\n}
+   {normal_text:. End.\\n}
 ';
 
 

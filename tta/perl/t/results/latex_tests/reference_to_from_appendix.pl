@@ -19,7 +19,7 @@ $result_tree_text{'reference_to_from_appendix'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l2 {top}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'reference_to_from_appendix'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l4 {chap}
@@ -39,7 +39,7 @@ $result_tree_text{'reference_to_from_appendix'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
  *@chapter C4 l5 {Chapter}
  |EXTRA
@@ -49,7 +49,7 @@ $result_tree_text{'reference_to_from_appendix'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chapter}
+    {normal_text:Chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
@@ -58,8 +58,8 @@ $result_tree_text{'reference_to_from_appendix'} = '*document_root C7
     |EXTRA
     |node_content:A{0|0}
     |normalized:{appendix}
-     {appendix}
-   {.\\n}
+     {normal_text:appendix}
+   {normal_text:.\\n}
   {empty_line:\\n}
  *@node C1 l9 {appendix}
  |EXTRA
@@ -69,7 +69,7 @@ $result_tree_text{'reference_to_from_appendix'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {appendix}
+    {normal_text:appendix}
     {spaces_after_argument:\\n}
  *@appendix C3 l10 {Appendix}
  |EXTRA
@@ -79,7 +79,7 @@ $result_tree_text{'reference_to_from_appendix'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Appendix}
+    {normal_text:Appendix}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
@@ -88,8 +88,8 @@ $result_tree_text{'reference_to_from_appendix'} = '*document_root C7
     |EXTRA
     |node_content:A{0|0}
     |normalized:{chap}
-     {chap}
-   {.\\n}
+     {normal_text:chap}
+   {normal_text:.\\n}
 ';
 
 

@@ -17,8 +17,8 @@ $result_tree_text{'ref_to_unknown_node'} = '*document_root C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{unknown-node}
-     {unknown node}
-   {.}
+     {normal_text:unknown node}
+   {normal_text:.}
 ';
 
 

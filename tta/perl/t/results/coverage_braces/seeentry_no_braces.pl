@@ -19,7 +19,7 @@ $result_tree_text{'seeentry_no_braces'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l2 {top}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'seeentry_no_braces'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l4 {chap}
@@ -40,7 +40,7 @@ $result_tree_text{'seeentry_no_braces'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
  *@chapter C5 l5 {chap}
  |EXTRA
@@ -50,7 +50,7 @@ $result_tree_text{'seeentry_no_braces'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@printindex C1 l7
@@ -59,7 +59,7 @@ $result_tree_text{'seeentry_no_braces'} = '*document_root C5
   |misc_args:A{cp}
    *line_arg C3
     {spaces_before_argument: }
-    {cp}
+    {normal_text:cp}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 l9
@@ -68,7 +68,7 @@ $result_tree_text{'seeentry_no_braces'} = '*document_root C5
   |index_entry:I{cp,1}
    *line_arg C4
     {spaces_before_argument: }
-    {aa}
+    {normal_text:aa}
     {spaces_at_end: }
     *@seeentry l9
 ';

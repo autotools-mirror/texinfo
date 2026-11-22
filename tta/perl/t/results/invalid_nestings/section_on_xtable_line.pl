@@ -25,7 +25,7 @@ $result_tree_text{'section_on_xtable_line'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {first}
+    {normal_text:first}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@table C1 l3
@@ -44,7 +44,7 @@ $result_tree_text{'section_on_xtable_line'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {second}
+    {normal_text:second}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@table C1 l5
@@ -63,7 +63,7 @@ $result_tree_text{'section_on_xtable_line'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {third}
+    {normal_text:third}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@ftable C1 l7
@@ -82,7 +82,7 @@ $result_tree_text{'section_on_xtable_line'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {fourth}
+    {normal_text:fourth}
     {spaces_after_argument:\\n}
 ';
 

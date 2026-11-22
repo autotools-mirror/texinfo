@@ -19,59 +19,59 @@ $result_tree_text{'pxref_test'} = '*document_root C2
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C9
-   {Hey (}
+   {normal_text:Hey (}
    *@pxref C4 l3
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
-     {in pxref}
+     {normal_text:in pxref}
     *brace_arg
     *brace_arg
     *brace_arg C2
      {spaces_before_argument: }
-     {m}
-   {) and continue (}
+     {normal_text:m}
+   {normal_text:) and continue (}
    *@pxref C4 l3
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
-     {in pxref}
+     {normal_text:in pxref}
     *brace_arg C2
      {spaces_before_argument: }
-     {name}
+     {normal_text:name}
     *brace_arg
     *brace_arg C2
      {spaces_before_argument: }
-     {m}
-   {) and end.\\n}
+     {normal_text:m}
+   {normal_text:) and end.\\n}
    *@pxref C4 l4
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
-     {n}
+     {normal_text:n}
     *brace_arg
     *brace_arg
     *brace_arg C2
      {spaces_before_argument: }
-     {m}
-   {. }
+     {normal_text:m}
+   {normal_text:. }
    *@pxref C4 l4
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
-     {n}
+     {normal_text:n}
     *brace_arg C2
      {spaces_before_argument: }
-     {name}
+     {normal_text:name}
     *brace_arg
     *brace_arg C2
      {spaces_before_argument: }
-     {m}
-   {.\\n}
+     {normal_text:m}
+   {normal_text:.\\n}
 ';
 
 

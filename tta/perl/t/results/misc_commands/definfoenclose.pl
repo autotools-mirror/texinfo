@@ -14,13 +14,13 @@ $result_tree_text{'definfoenclose'} = '*document_root C1
    {text_before_beginning:\\n}
   *preamble_before_content
   *paragraph C2
-   {definfoenclose phoo,//,\\  }
+   {normal_text:definfoenclose phoo,//,\\  }
    *@definfoenclose C1 l2
    |EXTRA
    |misc_args:A{phoo|//|\\}
     *line_arg C3
      {spaces_before_argument: }
-     {phoo,//,\\}
+     {normal_text:phoo,//,\\}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
@@ -29,17 +29,17 @@ $result_tree_text{'definfoenclose'} = '*document_root C1
    |begin:{//}
    |end:{\\}
     *brace_container C1
-     {bar}
-   {\\n}
+     {normal_text:bar}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
-   {definfoenclose phi,:,:  }
+   {normal_text:definfoenclose phi,:,:  }
    *@definfoenclose C1 l6
    |EXTRA
    |misc_args:A{phi|:|:}
     *line_arg C3
      {spaces_before_argument: }
-     {phi,:,:}
+     {normal_text:phi,:,:}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
@@ -48,21 +48,21 @@ $result_tree_text{'definfoenclose'} = '*document_root C1
    |begin:{:}
    |end:{:}
     *brace_container C1
-     {bar}
-   {\\n}
+     {normal_text:bar}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
    *@strong C1 l10
     *brace_container C1
-     {very strong}
-   {\\n}
+     {normal_text:very strong}
+   {normal_text:\\n}
   {empty_line:\\n}
   *@definfoenclose C1 l12
   |EXTRA
   |misc_args:A{strong|(strong:|:)}
    *line_arg C3
     {spaces_before_argument: }
-    {strong,(strong:,:)}
+    {normal_text:strong,(strong:,:)}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
@@ -71,8 +71,8 @@ $result_tree_text{'definfoenclose'} = '*document_root C1
    |begin:{(strong:}
    |end:{:)}
     *brace_container C1
-     { is it really strong? }
-   {\\n}
+     {normal_text: is it really strong? }
+   {normal_text:\\n}
 ';
 
 

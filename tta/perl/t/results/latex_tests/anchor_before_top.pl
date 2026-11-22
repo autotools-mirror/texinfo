@@ -18,7 +18,7 @@ $result_tree_text{'anchor_before_top'} = '*document_root C5
   |identifier:{a-before-Top}
   |is_target:{1}
    *brace_arg C1
-    {a before Top}
+    {normal_text:a before Top}
   {spaces_after_close_brace:\\n}
   {empty_line:\\n}
  *@node C1 l4 {Top}
@@ -29,7 +29,7 @@ $result_tree_text{'anchor_before_top'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l5 {top}
  |EXTRA
@@ -38,7 +38,7 @@ $result_tree_text{'anchor_before_top'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l7 {Chapter}
@@ -49,7 +49,7 @@ $result_tree_text{'anchor_before_top'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chapter}
+    {normal_text:Chapter}
     {spaces_after_argument:\\n}
  *@chapter C3 l8 {Chap}
  |EXTRA
@@ -59,7 +59,7 @@ $result_tree_text{'anchor_before_top'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chap}
+    {normal_text:Chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
@@ -68,8 +68,8 @@ $result_tree_text{'anchor_before_top'} = '*document_root C5
     |EXTRA
     |node_content:A{0|0}
     |normalized:{a-before-Top}
-     {a before Top}
-   {\\n}
+     {normal_text:a before Top}
+   {normal_text:\\n}
 ';
 
 

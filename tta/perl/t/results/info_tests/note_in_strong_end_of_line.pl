@@ -19,23 +19,23 @@ $result_tree_text{'note_in_strong_end_of_line'} = '*document_root C2
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C3
-   {bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb vvvvvvvvvvvvvvvv }
+   {normal_text:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb vvvvvvvvvvvvvvvv }
    *@strong C1 l3
     *brace_container C1
-     {note a}
-   {\\n}
+     {normal_text:note a}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C3
-   {bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb vvvvvvvvvvvvvvvv }
+   {normal_text:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb vvvvvvvvvvvvvvvv }
    *@strong C1 l5
     *brace_container C2
-     {note\\n}
-     {a}
-   {\\n}
+     {normal_text:note\\n}
+     {normal_text:a}
+   {normal_text:\\n}
 ';
 
 

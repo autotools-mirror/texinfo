@@ -13,13 +13,13 @@ $result_tree_text{'raw_epub'} = '*document_root C1
   *preamble_before_content C1
    {empty_line:\\n}
   *paragraph C2
-   {in EPUB\\n}
+   {normal_text:in EPUB\\n}
    *@end C1 l3
    |EXTRA
    |text_arg:{epub}
     *line_arg C3
      {spaces_before_argument: }
-     {epub}
+     {normal_text:epub}
      {spaces_after_argument:\\n}
 ';
 

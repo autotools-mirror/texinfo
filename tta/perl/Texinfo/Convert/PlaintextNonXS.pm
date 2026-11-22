@@ -1703,7 +1703,8 @@ sub _section_element_heading($$$$) {
       and defined($section_element->{'extra'}->{'section_heading_number'})
       and ($numbered or !defined($numbered))) {
     my $number = Texinfo::TreeElement::new({
-              'text' => $section_element->{'extra'}->{'section_heading_number'}});
+              'text' => $section_element->{'extra'}->{'section_heading_number'},
+              'type' => 'normal_text'});
 
     if ($section_element->{'cmdname'} eq 'appendix'
         and $section_element->{'extra'}->{'section_level'} == 1) {
@@ -2367,7 +2368,8 @@ sub format_ref($$$$) {
       } else {
         # case of a completely empty @*ref.
         my $substrings = {'node'
-                           => Texinfo::TreeElement::new({'text' => 'Top'})};
+                       => Texinfo::TreeElement::new({'text' => 'Top',
+                                                     'type' => 'normal_text'})};
         if ($cmdname eq 'xref' or $cmdname eq 'inforef') {
           $tree = $self->cdt('See {node}', $substrings);
         } elsif ($cmdname eq 'pxref') {
@@ -2606,7 +2608,8 @@ sub _convert_def_line($$) {
       $formatted_name
        = Texinfo::TreeElement::new({'type' => '_code', 'contents' => [$name]});
     } else {
-      $formatted_name = Texinfo::TreeElement::new({'text' => ''});
+      $formatted_name = Texinfo::TreeElement::new({'text' => '',
+                                                   'type' => 'normal_text'});
     }
     my $formatted_arguments;
     if (defined($arguments)) {
@@ -2937,7 +2940,7 @@ sub _convert($$) {
       }
     # ignore text outside of any format, but warn if ignored text not empty
     } else {
-      if (defined($type)) {
+      if ($type ne 'normal_text') {
         $self->present_bug_message("unexpected text element type: $type",
                                    $element);
       }
@@ -3387,6 +3390,7 @@ sub _convert($$) {
           $arg_index = 2;
         }
         if (scalar(@$args) > $arg_index
+            and defined($args->[$arg_index])
             and exists($args->[$arg_index]->{'contents'})) {
           my $arg = $args->[$arg_index];
           my $argument;
@@ -3762,7 +3766,8 @@ sub _convert($$) {
           = Texinfo::Common::item_itemize_prepended($element);
         # this is the text prepended to items.
         _convert($self, $prepended_element);
-        _convert($self, Texinfo::TreeElement::new({ 'text' => ' ' }));
+        _convert($self, Texinfo::TreeElement::new({ 'text' => ' ',
+                                                    'type' => 'normal_text' }));
       }
       my ($result_text, $count)
         = Texinfo::Convert::Paragraph::end($line->{'container'});

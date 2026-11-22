@@ -24,12 +24,12 @@ $result_tree_text{'missing_formal_arg'} = '*document_root C1
     |text_arg:{linemacro}
      *line_arg C3
       {spaces_before_argument: }
-      {linemacro}
+      {normal_text:linemacro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    {spaces_before_paragraph: }
   *paragraph C1
-   {one two three\\n}
+   {normal_text:one two three\\n}
 ';
 
 

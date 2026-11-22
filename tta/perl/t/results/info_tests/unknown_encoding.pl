@@ -19,7 +19,7 @@ $result_tree_text{'unknown_encoding'} = '*document_root C2
    |text_arg:{ggg}
     *line_arg C3
      {spaces_before_argument: }
-     {ggg}
+     {normal_text:ggg}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *@node C2 l4 {Top}
@@ -30,7 +30,7 @@ $result_tree_text{'unknown_encoding'} = '*document_root C2
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
 ';

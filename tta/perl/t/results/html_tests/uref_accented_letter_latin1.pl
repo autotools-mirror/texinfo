@@ -18,20 +18,20 @@ $result_tree_text{'uref_accented_letter_latin1'} = '*document_root C1
    |text_arg:{ISO-8859-1}
     *line_arg C3
      {spaces_before_argument: }
-     {ISO-8859-1}
+     {normal_text:ISO-8859-1}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C2
    *@uref C1 l3
     *brace_arg C3
-     {http://example.com/acc_}
+     {normal_text:http://example.com/acc_}
      *@" C1 l3
       *following_arg C1
-       {a}
+       {normal_text:a}
      *@ogonek C1 l3
       *brace_container C1
-       {a}
-   {\\n}
+       {normal_text:a}
+   {normal_text:\\n}
 ';
 
 

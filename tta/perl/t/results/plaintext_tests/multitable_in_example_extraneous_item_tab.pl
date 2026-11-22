@@ -21,18 +21,18 @@ $result_tree_text{'multitable_in_example_extraneous_item_tab'} = '*document_root
     *arguments_line C1
      *block_line_arg C3
       {spaces_before_argument: }
-      {a}
+      {normal_text:a}
       {spaces_after_argument:\\n}
     *before_item C4
      *preformatted C2
       {ignorable_spaces_after_command: }
-      {ita }
+      {normal_text:ita }
      *preformatted C2
       {ignorable_spaces_after_command: }
-      {tmp\\n}
+      {normal_text:tmp\\n}
      *preformatted C2
       {ignorable_spaces_after_command: }
-      {secit }
+      {normal_text:secit }
      *preformatted C1
       {ignorable_spaces_after_command:\\n}
     *@end C1 l5
@@ -40,14 +40,14 @@ $result_tree_text{'multitable_in_example_extraneous_item_tab'} = '*document_root
     |text_arg:{multitable}
      *line_arg C3
       {spaces_before_argument: }
-      {multitable}
+      {normal_text:multitable}
       {spaces_after_argument:\\n}
    *@end C1 l6
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
 ';
 

@@ -17,13 +17,13 @@ $result_tree_text{'formats_only_titles'} = '*document_root C1
      {spaces_before_argument:\\n}
    *before_item C1
     *paragraph C1
-     {before first itemize\\n}
+     {normal_text:before first itemize\\n}
    *@end C1 l3
    |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }
-     {itemize}
+     {normal_text:itemize}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@enumerate C3 l5
@@ -32,13 +32,13 @@ $result_tree_text{'formats_only_titles'} = '*document_root C1
      {spaces_before_argument:\\n}
    *before_item C1
     *paragraph C1
-     {before first enumerate\\n}
+     {normal_text:before first enumerate\\n}
    *@end C1 l7
    |EXTRA
    |text_arg:{enumerate}
     *line_arg C3
      {spaces_before_argument: }
-     {enumerate}
+     {normal_text:enumerate}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@table C3 l9
@@ -49,13 +49,13 @@ $result_tree_text{'formats_only_titles'} = '*document_root C1
      {spaces_after_argument:\\n}
    *before_item C1
     *paragraph C1
-     {before first table\\n}
+     {normal_text:before first table\\n}
    *@end C1 l11
    |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
-     {table}
+     {normal_text:table}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@vtable C3 l13
@@ -66,13 +66,13 @@ $result_tree_text{'formats_only_titles'} = '*document_root C1
      {spaces_after_argument:\\n}
    *before_item C1
     *paragraph C1
-     {before first vtable\\n}
+     {normal_text:before first vtable\\n}
    *@end C1 l15
    |EXTRA
    |text_arg:{vtable}
     *line_arg C3
      {spaces_before_argument: }
-     {vtable}
+     {normal_text:vtable}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@multitable C3 l17
@@ -86,17 +86,17 @@ $result_tree_text{'formats_only_titles'} = '*document_root C1
      |misc_args:A{0.5|0.5}
       *line_arg C3
        {spaces_before_argument: }
-       {0.5 0.5}
+       {normal_text:0.5 0.5}
        {spaces_after_argument:\\n}
    *before_item C1
     *paragraph C1
-     {before first multitable\\n}
+     {normal_text:before first multitable\\n}
    *@end C1 l19
    |EXTRA
    |text_arg:{multitable}
     *line_arg C3
      {spaces_before_argument: }
-     {multitable}
+     {normal_text:multitable}
      {spaces_after_argument:\\n}
 ';
 

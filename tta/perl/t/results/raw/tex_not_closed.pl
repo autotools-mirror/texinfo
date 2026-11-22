@@ -17,7 +17,7 @@ $result_tree_text{'tex_not_closed'} = '*document_root C1
       {spaces_before_argument:\\n}
     *rawpreformatted C2
      {empty_line:\\n}
-     {This is some \\LaTeX{}\\n}
+     {normal_text:This is some \\LaTeX{}\\n}
 ';
 
 

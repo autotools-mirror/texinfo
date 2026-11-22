@@ -17,15 +17,15 @@ $result_tree_text{'inlinefmtifelse_nesting'} = '*document_root C1
    |expand_index:{2}
    |format:{info}
     *brace_arg C1
-     {info}
+     {normal_text:info}
     *elided_brace_command_arg C1
      {raw: @footnote{See.}}
     *brace_arg C2
      {spaces_before_argument: }
      *@emph C1 l1
       *brace_container C1
-       {text}
-   {\\n}
+       {normal_text:text}
+   {normal_text:\\n}
 ';
 
 

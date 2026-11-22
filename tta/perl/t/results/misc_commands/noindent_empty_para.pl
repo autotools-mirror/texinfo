@@ -15,7 +15,7 @@ $result_tree_text{'noindent_empty_para'} = '*document_root C1
    {ignorable_spaces_after_command:\\n}
    {empty_line:\\n}
   *paragraph C1
-   {aaa\\n}
+   {normal_text:aaa\\n}
 ';
 
 

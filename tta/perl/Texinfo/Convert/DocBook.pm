@@ -1299,6 +1299,16 @@ sub _convert($$;$) {
       }
 
       if ($style_commands_formatting{$cmdname}) {
+
+        if (!defined($args->[0])) {
+          if ($cmdname eq 'w') {
+    # special case to ensure that @w leads to something even if empty
+            return $w_command_mark;
+          } else {
+            return '';
+          }
+        }
+
         if ($brace_commands{$cmdname} eq 'context'
             or exists($Texinfo::Commands::math_commands{$cmdname})) {
           _new_document_context($self);
@@ -1515,12 +1525,14 @@ sub _convert($$;$) {
         } else {
           my $linkend = '';
           my $node_arg = $args->[0];
-          if (exists($node_arg->{'extra'})
+          if (defined($node_arg)
+              and exists($node_arg->{'extra'})
               and defined($node_arg->{'extra'}->{'normalized'})) {
             $linkend = " linkend=\"$node_arg->{'extra'}->{'normalized'}\"";
           }
           my $link_text = $section_name;
           $link_text = $node_name if (! defined($link_text));
+          $link_text = '' if (! defined($link_text));
           my $argument = "<link${linkend}>".$link_text."</link>";
           if ($cmdname eq 'ref' or $cmdname eq 'link') {
             $result = _convert($self,

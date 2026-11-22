@@ -16,7 +16,7 @@ $result_tree_text{'definfoenclose_replaced_by_macro'} = '*document_root C1
    |misc_args:A{phoo|;|:}
     *line_arg C3
      {spaces_before_argument: }
-     {phoo,;,:}
+     {normal_text:phoo,;,:}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@macro C3 l3
@@ -31,11 +31,11 @@ $result_tree_text{'definfoenclose_replaced_by_macro'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C1
-   {||aa||\\n}
+   {normal_text:||aa||\\n}
    >SOURCEMARKS
    >macro_expansion<start;1>
     >*macro_call@phoo C1

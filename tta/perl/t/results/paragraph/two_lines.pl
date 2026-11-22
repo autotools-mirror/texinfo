@@ -12,8 +12,8 @@ $result_tree_text{'two_lines'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *paragraph C2
-   {text l 1\\n}
-   {text l 2\\n}
+   {normal_text:text l 1\\n}
+   {normal_text:text l 2\\n}
 ';
 
 

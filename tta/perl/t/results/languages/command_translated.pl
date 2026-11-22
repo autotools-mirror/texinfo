@@ -17,7 +17,7 @@ $result_tree_text{'command_translated'} = '*document_root C5
    |text_arg:{fr}
     *line_arg C3
      {spaces_before_argument: }
-     {fr}
+     {normal_text:fr}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *@node C1 l3 {Top}
@@ -28,7 +28,7 @@ $result_tree_text{'command_translated'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C4 l4 {top @error{}}
  |EXTRA
@@ -37,7 +37,7 @@ $result_tree_text{'command_translated'} = '*document_root C5
   *arguments_line C1
    *line_arg C4
     {spaces_before_argument: }
-    {top }
+    {normal_text:top }
     *@error C1 l4
      *brace_container
     {spaces_after_argument:\\n}
@@ -45,7 +45,7 @@ $result_tree_text{'command_translated'} = '*document_root C5
   *paragraph C2
    *@error C1 l6
     *brace_container
-   {\\n}
+   {normal_text:\\n}
   {empty_line:\\n}
  *@node C1 l8 {chapter @error{}}
  |EXTRA
@@ -55,7 +55,7 @@ $result_tree_text{'command_translated'} = '*document_root C5
   *arguments_line C1
    *line_arg C4
     {spaces_before_argument: }
-    {chapter }
+    {normal_text:chapter }
     *@error C1 l8
      *brace_container
     {spaces_after_argument:\\n}
@@ -67,7 +67,7 @@ $result_tree_text{'command_translated'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chapter}
+    {normal_text:Chapter}
     {spaces_after_argument:\\n}
 ';
 

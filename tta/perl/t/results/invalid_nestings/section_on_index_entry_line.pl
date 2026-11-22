@@ -16,7 +16,7 @@ $result_tree_text{'section_on_index_entry_line'} = '*document_root C2
   |index_entry:I{cp,1}
    *line_arg C3
     {spaces_before_argument: }
-    {a}
+    {normal_text:a}
     {spaces_after_argument: }
  *@section C3 l1 {b}
  |EXTRA
@@ -28,11 +28,11 @@ $result_tree_text{'section_on_index_entry_line'} = '*document_root C2
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {b}
+    {normal_text:b}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {Somethin\\n}
+   {normal_text:Somethin\\n}
 ';
 
 

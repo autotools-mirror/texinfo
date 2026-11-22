@@ -14,13 +14,13 @@ $result_tree_text{'backslash_math'} = '*document_root C1
   *paragraph C2
    *@math C1 l1
     *brace_arg C5
-     {a }
+     {normal_text:a }
      *@\\
-     { b }
+     {normal_text: b }
      *@backslashchar C1 l1
       *brace_container
-     { c}
-   {.\\n}
+     {normal_text: c}
+   {normal_text:.\\n}
 ';
 
 

@@ -20,7 +20,7 @@ $result_tree_text{'documentinfo_with_empty_line'} = '*document_root C5
     *@title C1 l3
      *line_arg C3
       {spaces_before_argument: }
-      {yup}
+      {normal_text:yup}
       {spaces_after_argument:\\n}
     {empty_line:\\n}
     *@author C1 l5
@@ -28,14 +28,14 @@ $result_tree_text{'documentinfo_with_empty_line'} = '*document_root C5
     |global_command_number:{1}
      *line_arg C3
       {spaces_before_argument: }
-      {Toto}
+      {normal_text:Toto}
       {spaces_after_argument:\\n}
     *@end C1 l6
     |EXTRA
     |text_arg:{documentinfo}
      *line_arg C3
       {spaces_before_argument: }
-      {documentinfo}
+      {normal_text:documentinfo}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
  *@node C1 l8 {Top}
@@ -46,7 +46,7 @@ $result_tree_text{'documentinfo_with_empty_line'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l9 {top}
  |EXTRA
@@ -55,7 +55,7 @@ $result_tree_text{'documentinfo_with_empty_line'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l11 {chapter}
@@ -66,7 +66,7 @@ $result_tree_text{'documentinfo_with_empty_line'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter}
+    {normal_text:chapter}
     {spaces_after_argument:\\n}
  *@chapter C1 l12 {Chap}
  |EXTRA
@@ -76,7 +76,7 @@ $result_tree_text{'documentinfo_with_empty_line'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chap}
+    {normal_text:Chap}
     {spaces_after_argument:\\n}
 ';
 

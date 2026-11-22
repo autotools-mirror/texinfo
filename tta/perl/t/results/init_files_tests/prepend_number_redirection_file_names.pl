@@ -19,7 +19,7 @@ $result_tree_text{'prepend_number_redirection_file_names'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l2 {top}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'prepend_number_redirection_file_names'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l4 {Chap}
@@ -39,7 +39,7 @@ $result_tree_text{'prepend_number_redirection_file_names'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chap}
+    {normal_text:Chap}
     {spaces_after_argument:\\n}
  *@chapter C5 l5 {The chapt}
  |EXTRA
@@ -49,7 +49,7 @@ $result_tree_text{'prepend_number_redirection_file_names'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {The chapt}
+    {normal_text:The chapt}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@anchor C1 l7
@@ -57,7 +57,7 @@ $result_tree_text{'prepend_number_redirection_file_names'} = '*document_root C7
   |identifier:{Up-and-Down}
   |is_target:{1}
    *brace_arg C1
-    {Up and Down}
+    {normal_text:Up and Down}
   {spaces_after_close_brace:\\n}
   {empty_line:\\n}
  *@node C1 l9 {4 section}
@@ -68,7 +68,7 @@ $result_tree_text{'prepend_number_redirection_file_names'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {4 section}
+    {normal_text:4 section}
     {spaces_after_argument:\\n}
  *@section C6 l10 {Sect}
  |EXTRA
@@ -78,7 +78,7 @@ $result_tree_text{'prepend_number_redirection_file_names'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Sect}
+    {normal_text:Sect}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@anchor C1 l12
@@ -86,7 +86,7 @@ $result_tree_text{'prepend_number_redirection_file_names'} = '*document_root C7
   |identifier:{12-lowerc}
   |is_target:{1}
    *brace_arg C1
-    {12 lowerc}
+    {normal_text:12 lowerc}
   {spaces_after_close_brace:\\n}
   {empty_line:\\n}
   *paragraph C8
@@ -95,29 +95,29 @@ $result_tree_text{'prepend_number_redirection_file_names'} = '*document_root C7
     |EXTRA
     |node_content:A{0|0}
     |normalized:{Up-and-Down}
-     {Up and Down}
-   {.\\n}
+     {normal_text:Up and Down}
+   {normal_text:.\\n}
    *@xref C1 l15
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{Chap}
-     {Chap}
-   {.\\n}
+     {normal_text:Chap}
+   {normal_text:.\\n}
    *@xref C1 l16
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{4-section}
-     {4 section}
-   {.\\n}
+     {normal_text:4 section}
+   {normal_text:.\\n}
    *@xref C1 l17
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{12-lowerc}
-     {12 lowerc}
-   {.\\n}
+     {normal_text:12 lowerc}
+   {normal_text:.\\n}
 ';
 
 

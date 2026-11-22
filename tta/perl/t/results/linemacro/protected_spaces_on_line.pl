@@ -25,7 +25,7 @@ $result_tree_text{'protected_spaces_on_line'} = '*document_root C1
     |text_arg:{linemacro}
      *line_arg C3
       {spaces_before_argument: }
-      {linemacro}
+      {normal_text:linemacro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    >SOURCEMARKS
@@ -47,42 +47,42 @@ $result_tree_text{'protected_spaces_on_line'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {Function}
+       {normal_text:Function}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {foo}
+       {normal_text:foo}
      {spaces: }
      {delimiter:(}
      *def_arg C1
       *def_line_arg C1
-       {bar}
+       {normal_text:bar}
      {delimiter:,}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {baz}
+       {normal_text:baz}
      {delimiter:)}
      >SOURCEMARKS
      >defline_continuation<1><p:1>
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {continuation}
+       {normal_text:continuation}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {line}
+       {normal_text:line}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {something\\n}
+     {normal_text:something\\n}
    *@end C1 l8:@test
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
-     {deffn}
+     {normal_text:deffn}
      >SOURCEMARKS
      >linemacro_expansion<end;1><p:5>
      {spaces_after_argument:\\n}
@@ -106,48 +106,48 @@ $result_tree_text{'protected_spaces_on_line'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {Function}
+       {normal_text:Function}
      {spaces: }
      *def_name C1
       *def_line_arg C3
-       {foo}
+       {normal_text:foo}
        *@ 
-       {b}
+       {normal_text:b}
      {spaces: }
      {delimiter:(}
      *def_arg C1
       *def_line_arg C1
-       {bar}
+       {normal_text:bar}
      {delimiter:,}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {baz}
+       {normal_text:baz}
      {delimiter:)}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {rest}
+       {normal_text:rest}
      *def_arg C1
       *def_line_arg C1
        *@ 
      *def_arg C1
       *def_line_arg C1
-       {and}
+       {normal_text:and}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {more}
+       {normal_text:more}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {something\\n}
+     {normal_text:something\\n}
    *@end C1 l10:@test
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
-     {deffn}
+     {normal_text:deffn}
      >SOURCEMARKS
      >linemacro_expansion<end;2><p:5>
      {spaces_after_argument:\\n}
@@ -171,21 +171,21 @@ $result_tree_text{'protected_spaces_on_line'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {Function}
+       {normal_text:Function}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {foo}
+       {normal_text:foo}
      {spaces: }
      {delimiter:(}
      *def_arg C1
       *def_line_arg C1
-       {bar}
+       {normal_text:bar}
      {delimiter:,}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {baz}
+       {normal_text:baz}
      {delimiter:)}
      *def_arg C1
       *def_line_arg C1
@@ -193,19 +193,19 @@ $result_tree_text{'protected_spaces_on_line'} = '*document_root C1
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {something\\n}
+     {normal_text:something\\n}
    *@end C1 l12:@test
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
-     {deffn}
+     {normal_text:deffn}
      >SOURCEMARKS
      >linemacro_expansion<end;3><p:5>
      {spaces_after_argument:\\n}
   {spaces_before_paragraph: }
   *paragraph C1
-   {another with double at\\n}
+   {normal_text:another with double at\\n}
   {empty_line:\\n}
 ';
 

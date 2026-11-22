@@ -39,12 +39,12 @@ $result_tree_text{'kbdinputstyle_in_table'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C2
    *@@
-   {kbdinputstyle code\\n}
+   {normal_text:kbdinputstyle code\\n}
   {empty_line:\\n}
   *@kbdinputstyle C1 l23
   |EXTRA
@@ -52,7 +52,7 @@ $result_tree_text{'kbdinputstyle_in_table'} = '*document_root C1
   |misc_args:A{code}
    *line_arg C3
     {spaces_before_argument: }
-    {code}
+    {normal_text:code}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   >SOURCEMARKS
@@ -74,14 +74,14 @@ $result_tree_text{'kbdinputstyle_in_table'} = '*document_root C1
      *@item C1 l25:@codekbdmacro
       *line_arg C3
        {spaces_before_argument: }
-       {i--tem out of example}
+       {normal_text:i--tem out of example}
        {spaces_after_argument:\\n}
    *@end C1 l25:@codekbdmacro
    |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
-     {table}
+     {normal_text:table}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@table C3 l25:@codekbdmacro
@@ -100,18 +100,18 @@ $result_tree_text{'kbdinputstyle_in_table'} = '*document_root C1
      *@item C1 l25:@codekbdmacro
       *line_arg C3
        {spaces_before_argument: }
-       {braced i--tem out of example}
+       {normal_text:braced i--tem out of example}
        {spaces_after_argument:\\n}
    *@end C1 l25:@codekbdmacro
    |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
-     {table}
+     {normal_text:table}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {in example\\n}
+   {normal_text:in example\\n}
   *@example C4 l25:@codekbdmacro
    *arguments_line C1
     *block_line_arg C1
@@ -131,14 +131,14 @@ $result_tree_text{'kbdinputstyle_in_table'} = '*document_root C1
       *@item C1 l25:@codekbdmacro
        *line_arg C3
         {spaces_before_argument: }
-        {i--tem in example}
+        {normal_text:i--tem in example}
         {spaces_after_argument:\\n}
     *@end C1 l25:@codekbdmacro
     |EXTRA
     |text_arg:{table}
      *line_arg C3
       {spaces_before_argument: }
-      {table}
+      {normal_text:table}
       {spaces_after_argument:\\n}
    *@table C3 l25:@codekbdmacro
    |EXTRA
@@ -156,28 +156,28 @@ $result_tree_text{'kbdinputstyle_in_table'} = '*document_root C1
       *@item C1 l25:@codekbdmacro
        *line_arg C3
         {spaces_before_argument: }
-        {braced i--tem in example}
+        {normal_text:braced i--tem in example}
         {spaces_after_argument:\\n}
     *@end C1 l25:@codekbdmacro
     |EXTRA
     |text_arg:{table}
      *line_arg C3
       {spaces_before_argument: }
-      {table}
+      {normal_text:table}
       {spaces_after_argument:\\n}
    *@end C1 l25:@codekbdmacro
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      >SOURCEMARKS
      >macro_expansion<end;1><p:7>
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
    *@@
-   {kbdinputstyle example\\n}
+   {normal_text:kbdinputstyle example\\n}
   {empty_line:\\n}
   *@kbdinputstyle C1 l29
   |EXTRA
@@ -185,7 +185,7 @@ $result_tree_text{'kbdinputstyle_in_table'} = '*document_root C1
   |misc_args:A{example}
    *line_arg C3
     {spaces_before_argument: }
-    {example}
+    {normal_text:example}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   >SOURCEMARKS
@@ -207,14 +207,14 @@ $result_tree_text{'kbdinputstyle_in_table'} = '*document_root C1
      *@item C1 l31:@codekbdmacro
       *line_arg C3
        {spaces_before_argument: }
-       {i--tem out of example}
+       {normal_text:i--tem out of example}
        {spaces_after_argument:\\n}
    *@end C1 l31:@codekbdmacro
    |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
-     {table}
+     {normal_text:table}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@table C3 l31:@codekbdmacro
@@ -233,18 +233,18 @@ $result_tree_text{'kbdinputstyle_in_table'} = '*document_root C1
      *@item C1 l31:@codekbdmacro
       *line_arg C3
        {spaces_before_argument: }
-       {braced i--tem out of example}
+       {normal_text:braced i--tem out of example}
        {spaces_after_argument:\\n}
    *@end C1 l31:@codekbdmacro
    |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
-     {table}
+     {normal_text:table}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {in example\\n}
+   {normal_text:in example\\n}
   *@example C4 l31:@codekbdmacro
    *arguments_line C1
     *block_line_arg C1
@@ -260,14 +260,14 @@ $result_tree_text{'kbdinputstyle_in_table'} = '*document_root C1
       *@item C1 l31:@codekbdmacro
        *line_arg C3
         {spaces_before_argument: }
-        {i--tem in example}
+        {normal_text:i--tem in example}
         {spaces_after_argument:\\n}
     *@end C1 l31:@codekbdmacro
     |EXTRA
     |text_arg:{table}
      *line_arg C3
       {spaces_before_argument: }
-      {table}
+      {normal_text:table}
       {spaces_after_argument:\\n}
    *@table C3 l31:@codekbdmacro
     *arguments_line C1
@@ -281,28 +281,28 @@ $result_tree_text{'kbdinputstyle_in_table'} = '*document_root C1
       *@item C1 l31:@codekbdmacro
        *line_arg C3
         {spaces_before_argument: }
-        {braced i--tem in example}
+        {normal_text:braced i--tem in example}
         {spaces_after_argument:\\n}
     *@end C1 l31:@codekbdmacro
     |EXTRA
     |text_arg:{table}
      *line_arg C3
       {spaces_before_argument: }
-      {table}
+      {normal_text:table}
       {spaces_after_argument:\\n}
    *@end C1 l31:@codekbdmacro
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      >SOURCEMARKS
      >macro_expansion<end;2><p:7>
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
    *@@
-   {kbdinputstyle distinct\\n}
+   {normal_text:kbdinputstyle distinct\\n}
   {empty_line:\\n}
   *@kbdinputstyle C1 l35
   |EXTRA
@@ -310,7 +310,7 @@ $result_tree_text{'kbdinputstyle_in_table'} = '*document_root C1
   |misc_args:A{distinct}
    *line_arg C3
     {spaces_before_argument: }
-    {distinct}
+    {normal_text:distinct}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   >SOURCEMARKS
@@ -328,14 +328,14 @@ $result_tree_text{'kbdinputstyle_in_table'} = '*document_root C1
      *@item C1 l37:@codekbdmacro
       *line_arg C3
        {spaces_before_argument: }
-       {i--tem out of example}
+       {normal_text:i--tem out of example}
        {spaces_after_argument:\\n}
    *@end C1 l37:@codekbdmacro
    |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
-     {table}
+     {normal_text:table}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@table C3 l37:@codekbdmacro
@@ -350,18 +350,18 @@ $result_tree_text{'kbdinputstyle_in_table'} = '*document_root C1
      *@item C1 l37:@codekbdmacro
       *line_arg C3
        {spaces_before_argument: }
-       {braced i--tem out of example}
+       {normal_text:braced i--tem out of example}
        {spaces_after_argument:\\n}
    *@end C1 l37:@codekbdmacro
    |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
-     {table}
+     {normal_text:table}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {in example\\n}
+   {normal_text:in example\\n}
   *@example C4 l37:@codekbdmacro
    *arguments_line C1
     *block_line_arg C1
@@ -377,14 +377,14 @@ $result_tree_text{'kbdinputstyle_in_table'} = '*document_root C1
       *@item C1 l37:@codekbdmacro
        *line_arg C3
         {spaces_before_argument: }
-        {i--tem in example}
+        {normal_text:i--tem in example}
         {spaces_after_argument:\\n}
     *@end C1 l37:@codekbdmacro
     |EXTRA
     |text_arg:{table}
      *line_arg C3
       {spaces_before_argument: }
-      {table}
+      {normal_text:table}
       {spaces_after_argument:\\n}
    *@table C3 l37:@codekbdmacro
     *arguments_line C1
@@ -398,21 +398,21 @@ $result_tree_text{'kbdinputstyle_in_table'} = '*document_root C1
       *@item C1 l37:@codekbdmacro
        *line_arg C3
         {spaces_before_argument: }
-        {braced i--tem in example}
+        {normal_text:braced i--tem in example}
         {spaces_after_argument:\\n}
     *@end C1 l37:@codekbdmacro
     |EXTRA
     |text_arg:{table}
      *line_arg C3
       {spaces_before_argument: }
-      {table}
+      {normal_text:table}
       {spaces_after_argument:\\n}
    *@end C1 l37:@codekbdmacro
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      >SOURCEMARKS
      >macro_expansion<end;3><p:7>
      {spaces_after_argument:\\n}

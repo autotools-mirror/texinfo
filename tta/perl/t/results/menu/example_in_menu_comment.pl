@@ -21,11 +21,11 @@ $result_tree_text{'example_in_menu_comment'} = '*document_root C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{entry}
-     {entry}
+     {normal_text:entry}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_comment C3
     *preformatted C1
      {after_menu_description_line:\\n}
@@ -34,26 +34,26 @@ $result_tree_text{'example_in_menu_comment'} = '*document_root C1
       *block_line_arg C1
        {spaces_before_argument:\\n}
      *preformatted C3
-      {in \\n}
+      {normal_text:in \\n}
       {empty_line:\\n}
-      {example\\n}
+      {normal_text:example\\n}
      *@end C1 l8
      |EXTRA
      |text_arg:{example}
       *line_arg C3
        {spaces_before_argument: }
-       {example}
+       {normal_text:example}
        {spaces_after_argument:\\n}
     *preformatted C3
      {empty_line:\\n}
-     {menu comment.\\n}
+     {normal_text:menu comment.\\n}
      {empty_line:\\n}
    *@end C1 l12
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
 ';
 

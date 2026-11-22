@@ -18,29 +18,29 @@ $result_tree_text{'block_commands'} = '*document_root C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C1
-    {in group\\n}
+    {normal_text:in group\\n}
    *@end C1 l4
    |EXTRA
    |text_arg:{group}
     *line_arg C3
      {spaces_before_argument: }
-     {group}
+     {normal_text:group}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@quotation C3 l6
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     {warning}
+     {normal_text:warning}
      {spaces_after_argument:\\n}
    *paragraph C1
-    {in quotation\\n}
+    {normal_text:in quotation\\n}
    *@end C1 l8
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }
-     {quotation}
+     {normal_text:quotation}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@float C7 l10
@@ -53,29 +53,29 @@ $result_tree_text{'block_commands'} = '*document_root C1
    *arguments_line C2
     *block_line_arg C2
      {spaces_before_argument: }
-     {a float}
+     {normal_text:a float}
     *block_line_arg C3
      {spaces_before_argument: }
-     {b float}
+     {normal_text:b float}
      {spaces_after_argument:\\n}
    *paragraph C1
-    {In float\\n}
+    {normal_text:In float\\n}
    {empty_line:\\n}
    {empty_line:\\n}
    *@caption C1 l14
     *brace_command_context C3
      *paragraph C1
-      {in caption\\n}
+      {normal_text:in caption\\n}
      {empty_line:\\n}
      *paragraph C1
-      {in caption}
+      {normal_text:in caption}
    {spaces_after_close_brace:\\n}
    *@end C1 l17
    |EXTRA
    |text_arg:{float}
     *line_arg C3
      {spaces_before_argument: }
-     {float}
+     {normal_text:float}
      {spaces_after_argument:\\n}
 ';
 

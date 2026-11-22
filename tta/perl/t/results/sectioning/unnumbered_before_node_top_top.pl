@@ -26,11 +26,11 @@ Next: [U1]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {before nodes}
+    {normal_text:before nodes}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {in unnumbered\\n}
+   {normal_text:in unnumbered\\n}
   {empty_line:\\n}
 U1 unit{C2}{S:@top top section}{n:Top}
 unit_directions:D[prev->[U0]]
@@ -47,7 +47,7 @@ Prev: [U0]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l6 {top section}
  |EXTRA
@@ -56,10 +56,10 @@ Prev: [U0]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top section}
+    {normal_text:top section}
     {spaces_after_argument:\\n}
   *paragraph C1
-   {Top node\\n}
+   {normal_text:Top node\\n}
 ';
 
 

@@ -16,15 +16,15 @@ $result_tree_text{'alias_zero'} = '*document_root C1
    |misc_args:A{0|strong}
     *line_arg C3
      {spaces_before_argument: }
-     {0 = strong}
+     {normal_text:0 = strong}
      {spaces_after_argument:\\n}
   *paragraph C2
    *@strong C1 l2
    |EXTRA
    |alias_of:{0}
     *brace_container C1
-     {g}
-   {.\\n}
+     {normal_text:g}
+   {normal_text:.\\n}
 ';
 
 

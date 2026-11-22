@@ -14,7 +14,7 @@ $result_tree_text{'modified_translation'} = '*document_root C1
   *paragraph C2
    *@error C1 l1
     *brace_container
-   {.\\n}
+   {normal_text:.\\n}
   {empty_line:\\n}
   *@documentlanguage C1 l3
   |EXTRA
@@ -22,14 +22,14 @@ $result_tree_text{'modified_translation'} = '*document_root C1
   |text_arg:{fr}
    *line_arg C3
     {spaces_before_argument: }
-    {fr}
+    {normal_text:fr}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C3
-   {fr }
+   {normal_text:fr }
    *@error C1 l5
     *brace_container
-   {.\\n}
+   {normal_text:.\\n}
   {empty_line:\\n}
   *@documentlanguage C1 l7
   |EXTRA
@@ -37,14 +37,14 @@ $result_tree_text{'modified_translation'} = '*document_root C1
   |text_arg:{pt}
    *line_arg C3
     {spaces_before_argument: }
-    {pt}
+    {normal_text:pt}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C3
-   {pt }
+   {normal_text:pt }
    *@error C1 l9
     *brace_container
-   {.\\n}
+   {normal_text:.\\n}
   {empty_line:\\n}
 ';
 

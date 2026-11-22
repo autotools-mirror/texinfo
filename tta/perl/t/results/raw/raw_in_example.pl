@@ -21,20 +21,20 @@ $result_tree_text{'raw_in_example'} = '*document_root C1
       *block_line_arg C1
        {spaces_before_argument:\\n}
      *rawpreformatted C1
-      {in html\\n}
+      {normal_text:in html\\n}
      *@end C1 l4
      |EXTRA
      |text_arg:{html}
       *line_arg C3
        {spaces_before_argument: }
-       {html}
+       {normal_text:html}
        {spaces_after_argument:\\n}
    *@end C1 l5
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@example C3 l7
@@ -49,14 +49,14 @@ $result_tree_text{'raw_in_example'} = '*document_root C1
        {spaces_before_argument:\\n}
      *rawpreformatted C3
       {empty_line:\\n}
-      {Some html <code>some code</code>.\\n}
+      {normal_text:Some html <code>some code</code>.\\n}
       {empty_line:\\n}
      *@end C1 l13
      |EXTRA
      |text_arg:{html}
       *line_arg C3
        {spaces_before_argument: }
-       {html}
+       {normal_text:html}
        {spaces_after_argument:\\n}
     {empty_line:\\n}
     *@tex C3 l15
@@ -65,18 +65,18 @@ $result_tree_text{'raw_in_example'} = '*document_root C1
        {spaces_before_argument:\\n}
      *rawpreformatted C7
       {empty_line:\\n}
-      {$$ \\n}
-      {\\chi^2 = \\sum_{i=1}^N\\n}
-      {\\left(y_i - (a + b x_i)\\n}
-      {\\over \\sigma_i\\right)^2 \\n}
-      {$$\\n}
+      {normal_text:$$ \\n}
+      {normal_text:\\chi^2 = \\sum_{i=1}^N\\n}
+      {normal_text:\\left(y_i - (a + b x_i)\\n}
+      {normal_text:\\over \\sigma_i\\right)^2 \\n}
+      {normal_text:$$\\n}
       {empty_line:\\n}
      *@end C1 l23
      |EXTRA
      |text_arg:{tex}
       *line_arg C3
        {spaces_before_argument: }
-       {tex}
+       {normal_text:tex}
        {spaces_after_argument:\\n}
     {empty_line:\\n}
    *@end C1 l25
@@ -84,7 +84,7 @@ $result_tree_text{'raw_in_example'} = '*document_root C1
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
 ';

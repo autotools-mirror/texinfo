@@ -25,7 +25,7 @@ Forward: [U1]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter}
+    {normal_text:chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
 U1 unit{C1}{S:@part part}
@@ -41,7 +41,7 @@ Back: [U0]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {part}
+    {normal_text:part}
     {spaces_after_argument:\\n}
 ';
 

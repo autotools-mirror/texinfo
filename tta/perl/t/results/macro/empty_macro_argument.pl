@@ -23,11 +23,11 @@ $result_tree_text{'empty_macro_argument'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C1
-   {text text text text\\n}
+   {normal_text:text text text text\\n}
    >SOURCEMARKS
    >macro_expansion<start;1>
     >*macro_call@mymacro C1
@@ -62,11 +62,11 @@ $result_tree_text{'empty_macro_argument'} = '*document_root C1
    |text_arg:{macro}
     *line_arg C3
      {spaces_before_argument: }
-     {macro}
+     {normal_text:macro}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {XX XX XX XxX}
+   {normal_text:XX XX XX XxX}
    >SOURCEMARKS
    >macro_expansion<start;5>
     >*macro_call@mytwo C1

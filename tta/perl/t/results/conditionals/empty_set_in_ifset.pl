@@ -25,15 +25,15 @@ $result_tree_text{'empty_set_in_ifset'} = '*document_root C1
      >*arguments_line C1
       >*block_line_arg C3
        >{spaces_before_argument: }
-       >{a}
+       >{normal_text:a}
        >{spaces_after_argument:\\n}
   *paragraph C1
-   {a is set to:||.\\n}
+   {normal_text:a is set to:||.\\n}
    >SOURCEMARKS
    >value_expansion<start;1><p:13>{}
     >*@value C1
      >*brace_container C1
-      >{a}
+      >{normal_text:a}
    >value_expansion<end;1><p:13>
    >expanded_conditional_command<end;1><p:16>
     >*@end C1 l5
@@ -41,7 +41,7 @@ $result_tree_text{'empty_set_in_ifset'} = '*document_root C1
     >|text_arg:{ifset}
      >*line_arg C2
       >{spaces_before_argument: }
-      >{ifset}
+      >{normal_text:ifset}
 ';
 
 

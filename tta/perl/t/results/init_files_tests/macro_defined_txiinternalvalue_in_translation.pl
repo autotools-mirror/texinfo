@@ -16,7 +16,7 @@ $result_tree_text{'macro_defined_txiinternalvalue_in_translation'} = '*document_
   |misc_args:A{1}
    *line_arg C3
     {spaces_before_argument: }
-    {1}
+    {normal_text:1}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@sp C1 l3
@@ -24,7 +24,7 @@ $result_tree_text{'macro_defined_txiinternalvalue_in_translation'} = '*document_
   |misc_args:A{2}
    *line_arg C3
     {spaces_before_argument: }
-    {2}
+    {normal_text:2}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
 ';

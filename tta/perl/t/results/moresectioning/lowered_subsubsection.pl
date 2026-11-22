@@ -19,7 +19,7 @@ $result_tree_text{'lowered_subsubsection'} = '*document_root C16
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C4 l2
  |EXTRA
@@ -39,17 +39,17 @@ $result_tree_text{'lowered_subsubsection'} = '*document_root C16
     |EXTRA
     |node_content:A{0|0}
     |normalized:{Chapter}
-     {Chapter}
+     {normal_text:Chapter}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l6
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l8 {Chapter}
@@ -60,7 +60,7 @@ $result_tree_text{'lowered_subsubsection'} = '*document_root C16
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chapter}
+    {normal_text:Chapter}
     {spaces_after_argument:\\n}
  *@chapter C4 l9 {Chapter}
  |EXTRA
@@ -70,7 +70,7 @@ $result_tree_text{'lowered_subsubsection'} = '*document_root C16
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chapter}
+    {normal_text:Chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C3 l11
@@ -83,17 +83,17 @@ $result_tree_text{'lowered_subsubsection'} = '*document_root C16
     |EXTRA
     |node_content:A{0|0}
     |normalized:{Section}
-     {Section}
+     {normal_text:Section}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l13
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l15 {Section}
@@ -104,7 +104,7 @@ $result_tree_text{'lowered_subsubsection'} = '*document_root C16
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Section}
+    {normal_text:Section}
     {spaces_after_argument:\\n}
  *@section C4 l16 {Section}
  |EXTRA
@@ -114,7 +114,7 @@ $result_tree_text{'lowered_subsubsection'} = '*document_root C16
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Section}
+    {normal_text:Section}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C3 l18
@@ -127,17 +127,17 @@ $result_tree_text{'lowered_subsubsection'} = '*document_root C16
     |EXTRA
     |node_content:A{0|0}
     |normalized:{Subsection}
-     {Subsection}
+     {normal_text:Subsection}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l20
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l22 {Subsection}
@@ -148,7 +148,7 @@ $result_tree_text{'lowered_subsubsection'} = '*document_root C16
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Subsection}
+    {normal_text:Subsection}
     {spaces_after_argument:\\n}
  *@subsection C4 l23 {Subsection}
  |EXTRA
@@ -158,7 +158,7 @@ $result_tree_text{'lowered_subsubsection'} = '*document_root C16
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Subsection}
+    {normal_text:Subsection}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C4 l25
@@ -171,28 +171,28 @@ $result_tree_text{'lowered_subsubsection'} = '*document_root C16
     |EXTRA
     |node_content:A{0|0}
     |normalized:{Subsubsection}
-     {Subsubsection}
+     {normal_text:Subsubsection}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 l27
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{Lowered-subsec}
-     {Lowered subsec}
+     {normal_text:Lowered subsec}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l28
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l30 {Subsubsection}
@@ -203,7 +203,7 @@ $result_tree_text{'lowered_subsubsection'} = '*document_root C16
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Subsubsection}
+    {normal_text:Subsubsection}
     {spaces_after_argument:\\n}
  *@subsubsection C3 l31 {Subsubsection}
  |EXTRA
@@ -213,7 +213,7 @@ $result_tree_text{'lowered_subsubsection'} = '*document_root C16
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Subsubsection}
+    {normal_text:Subsubsection}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@lowersections C1
@@ -227,7 +227,7 @@ $result_tree_text{'lowered_subsubsection'} = '*document_root C16
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Lowered subsec}
+    {normal_text:Lowered subsec}
     {spaces_after_argument:\\n}
  *@subsection C4 l35 {Lowered subsec}
  |EXTRA
@@ -238,7 +238,7 @@ $result_tree_text{'lowered_subsubsection'} = '*document_root C16
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Lowered subsec}
+    {normal_text:Lowered subsec}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C3 l37
@@ -251,17 +251,17 @@ $result_tree_text{'lowered_subsubsection'} = '*document_root C16
     |EXTRA
     |node_content:A{0|0}
     |normalized:{Lowered-subsubsection}
-     {Lowered subsubsection}
+     {normal_text:Lowered subsubsection}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l39
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l41 {Lowered subsubsection}
@@ -272,7 +272,7 @@ $result_tree_text{'lowered_subsubsection'} = '*document_root C16
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Lowered subsubsection}
+    {normal_text:Lowered subsubsection}
     {spaces_after_argument:\\n}
  *@subsubsection C4 l42 {Lowered subsubsection}
  |EXTRA
@@ -283,7 +283,7 @@ $result_tree_text{'lowered_subsubsection'} = '*document_root C16
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Lowered subsubsection}
+    {normal_text:Lowered subsubsection}
     {spaces_after_argument:\\n}
   *@raisesections C1
    *line_arg C1

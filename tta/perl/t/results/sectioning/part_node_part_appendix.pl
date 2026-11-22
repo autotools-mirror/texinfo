@@ -27,7 +27,7 @@ NodeForward: [U1]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C4 l2 {top}
  |EXTRA
@@ -36,7 +36,7 @@ NodeForward: [U1]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C3 l4
@@ -49,17 +49,17 @@ NodeForward: [U1]
     |EXTRA
     |node_content:A{0|0}
     |normalized:{chapter-node}
-     {chapter node}
+     {normal_text:chapter node}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l6
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
 U1 unit{C3}{S:@chapter 1 chapter}{n:chapter node}
@@ -81,7 +81,7 @@ NodeBack: [U0]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Part 1}
+    {normal_text:Part 1}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l10 {chapter node}
@@ -92,7 +92,7 @@ NodeBack: [U0]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter node}
+    {normal_text:chapter node}
     {spaces_after_argument:\\n}
  *@chapter C2 l11 {chapter}
  |EXTRA
@@ -102,7 +102,7 @@ NodeBack: [U0]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter}
+    {normal_text:chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
 U2 unit{C2}{S:@appendix A Appendix}
@@ -119,7 +119,7 @@ FastBack: [U1]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Part Appendix}
+    {normal_text:Part Appendix}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@appendix C1 l15 {Appendix}
@@ -132,7 +132,7 @@ FastBack: [U1]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Appendix}
+    {normal_text:Appendix}
     {spaces_after_argument:\\n}
 ';
 

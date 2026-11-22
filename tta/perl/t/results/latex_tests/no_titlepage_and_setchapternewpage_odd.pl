@@ -16,7 +16,7 @@ $result_tree_text{'no_titlepage_and_setchapternewpage_odd'} = '*document_root C1
    |misc_args:A{odd}
     *line_arg C3
      {spaces_before_argument: }
-     {odd}
+     {normal_text:odd}
      {spaces_after_argument:\\n}
 ';
 

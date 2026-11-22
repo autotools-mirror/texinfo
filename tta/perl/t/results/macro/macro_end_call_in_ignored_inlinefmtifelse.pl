@@ -23,11 +23,11 @@ $result_tree_text{'macro_end_call_in_ignored_inlinefmtifelse'} = '*document_root
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C3
-   {Toto }
+   {normal_text:Toto }
    >SOURCEMARKS
    >macro_expansion<start;1>
     >*macro_call@inlinefirstfmt C1
@@ -37,15 +37,15 @@ $result_tree_text{'macro_end_call_in_ignored_inlinefmtifelse'} = '*document_root
    |expand_index:{2}
    |format:{tex}
     *brace_arg C1
-     {tex}
+     {normal_text:tex}
     *elided_brace_command_arg C1
      {raw: before comma}
      >SOURCEMARKS
      >macro_expansion<end;1><p:7>
     *brace_arg C2
      {spaces_before_argument: }
-     {finish}
-   { done.\\n}
+     {normal_text:finish}
+   {normal_text: done.\\n}
 ';
 
 

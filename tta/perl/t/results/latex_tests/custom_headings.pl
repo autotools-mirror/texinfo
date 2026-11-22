@@ -17,34 +17,34 @@ $result_tree_text{'custom_headings'} = '*document_root C8
     *line_arg C17
      {spaces_before_argument: }
      *@thispage
-     { }
+     {normal_text: }
      *@thissectionname
-     { }
+     {normal_text: }
      *@|
-     { }
+     {normal_text: }
      *@thissectionnum
-     { }
+     {normal_text: }
      *@thissection
-     { }
+     {normal_text: }
      *@|
-     { }
+     {normal_text: }
      *@thischaptername
-     { }
+     {normal_text: }
      *@thischapternum
      {spaces_after_argument:\\n}
    *@evenfooting C1 l3
     *line_arg C13
      {spaces_before_argument: }
      *@thischapter
-     { }
+     {normal_text: }
      *@thistitle
-     { }
+     {normal_text: }
      *@|
-     { }
+     {normal_text: }
      *@thisfile
-     { }
+     {normal_text: }
      *@|
-     { }
+     {normal_text: }
      *@code C1 l3
       *brace_container C1
        *@thischaptername
@@ -58,7 +58,7 @@ $result_tree_text{'custom_headings'} = '*document_root C8
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l6 {top sectionning}
  |EXTRA
@@ -67,7 +67,7 @@ $result_tree_text{'custom_headings'} = '*document_root C8
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top sectionning}
+    {normal_text:top sectionning}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l8 {chapter}
@@ -78,7 +78,7 @@ $result_tree_text{'custom_headings'} = '*document_root C8
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter}
+    {normal_text:chapter}
     {spaces_after_argument:\\n}
  *@chapter C10 l9 {ch--ap}
  |EXTRA
@@ -88,7 +88,7 @@ $result_tree_text{'custom_headings'} = '*document_root C8
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {ch--ap}
+    {normal_text:ch--ap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@page C1
@@ -96,14 +96,14 @@ $result_tree_text{'custom_headings'} = '*document_root C8
     {spaces_before_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {after ch--ap first page\\n}
+   {normal_text:after ch--ap first page\\n}
   {empty_line:\\n}
   *@page C1
    *line_arg C1
     {spaces_before_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {after ch--ap second page\\n}
+   {normal_text:after ch--ap second page\\n}
   {empty_line:\\n}
  *@section C2 l19 {sec1}
  |EXTRA
@@ -115,7 +115,7 @@ $result_tree_text{'custom_headings'} = '*document_root C8
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {sec1}
+    {normal_text:sec1}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@chapter C12 l21 {chap 2}
@@ -128,15 +128,15 @@ $result_tree_text{'custom_headings'} = '*document_root C8
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap 2}
+    {normal_text:chap 2}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@everyheading C1 l23
    *line_arg C5
     {spaces_before_argument: }
-    {toto }
+    {normal_text:toto }
     *@|
-    { titi}
+    {normal_text: titi}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@page C1
@@ -144,14 +144,14 @@ $result_tree_text{'custom_headings'} = '*document_root C8
     {spaces_before_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {after everyheading before chap 3 first page\\n}
+   {normal_text:after everyheading before chap 3 first page\\n}
   {empty_line:\\n}
   *@page C1
    *line_arg C1
     {spaces_before_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {after everyheading before chap 3 second page\\n}
+   {normal_text:after everyheading before chap 3 second page\\n}
   {empty_line:\\n}
  *@chapter C6 l33 {chap 3}
  |EXTRA
@@ -163,7 +163,7 @@ $result_tree_text{'custom_headings'} = '*document_root C8
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap 3}
+    {normal_text:chap 3}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@page C1
@@ -173,13 +173,13 @@ $result_tree_text{'custom_headings'} = '*document_root C8
   *@everyfooting C1 l37
    *line_arg C9
     {spaces_before_argument: }
-    {aa }
+    {normal_text:aa }
     *@|
-    { bb }
+    {normal_text: bb }
     *@|
-    { cc }
+    {normal_text: cc }
     *@|
-    { dd}
+    {normal_text: dd}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
 ';

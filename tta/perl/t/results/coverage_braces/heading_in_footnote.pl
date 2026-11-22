@@ -12,32 +12,32 @@ $result_tree_text{'heading_in_footnote'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *paragraph C3
-   {T}
+   {normal_text:T}
    *@footnote C1 l1
    |EXTRA
    |global_command_number:{1}
     *brace_command_context C5
      {spaces_before_argument:\\n}
      *paragraph C1
-      {AAA\\n}
+      {normal_text:AAA\\n}
      *@heading C1 l3
      |EXTRA
      |global_command_number:{1}
      |heading_number:{1}
       *line_arg C3
        {spaces_before_argument: }
-       {H1}
+       {normal_text:H1}
        {spaces_after_argument:\\n}
      *index_entry_command@cindex C1 l4
      |EXTRA
      |index_entry:I{cp,1}
       *line_arg C3
        {spaces_before_argument: }
-       {ind e}
+       {normal_text:ind e}
        {spaces_after_argument:\\n}
      *paragraph C1
-      {BBB\\n}
-   {\\n}
+      {normal_text:BBB\\n}
+   {normal_text:\\n}
 ';
 
 

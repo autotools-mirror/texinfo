@@ -17,8 +17,8 @@ $result_tree_text{'raw_not_closed'} = '*document_root C1
       {spaces_before_argument:\\n}
     *rawpreformatted C3
      {empty_line:\\n}
-     {This is some html\\n}
-     {<address> my address </address>\\n}
+     {normal_text:This is some html\\n}
+     {normal_text:<address> my address </address>\\n}
 ';
 
 

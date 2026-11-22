@@ -27,7 +27,7 @@ NodeForward: [U2]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C4 l2 {top}
  |EXTRA
@@ -36,7 +36,7 @@ NodeForward: [U2]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C3 l4
@@ -49,17 +49,17 @@ NodeForward: [U2]
     |EXTRA
     |node_content:A{0|0}
     |normalized:{node-chapter}
-     {node chapter}
+     {normal_text:node chapter}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l6
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
 U1 unit{C1}{S:@part part first}
@@ -79,11 +79,11 @@ Prev: [U0]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {part first}
+    {normal_text:part first}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {Text part first.\\n}
+   {normal_text:Text part first.\\n}
 U2 unit{C3}{S:@chapter 1 chapter after 2 parts}{n:node chapter}
 unit_directions:D[prev->[U1]|page->[U2]]
 UNIT_DIRECTIONS
@@ -101,10 +101,10 @@ NodeBack: [U0]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {part second}
+    {normal_text:part second}
     {spaces_after_argument:\\n}
   *paragraph C1
-   {Text part second.\\n}
+   {normal_text:Text part second.\\n}
   {empty_line:\\n}
  *@node C1 l14 {node chapter}
  |EXTRA
@@ -114,7 +114,7 @@ NodeBack: [U0]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {node chapter}
+    {normal_text:node chapter}
     {spaces_after_argument:\\n}
  *@chapter C2 l15 {chapter after 2 parts}
  |EXTRA
@@ -124,7 +124,7 @@ NodeBack: [U0]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter after 2 parts}
+    {normal_text:chapter after 2 parts}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
 ';

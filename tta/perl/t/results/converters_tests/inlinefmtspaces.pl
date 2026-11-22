@@ -12,7 +12,7 @@ $result_tree_text{'inlinefmtspaces'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *paragraph C5
-   {A }
+   {normal_text:A }
    *@inlinefmt C3 l1
    |EXTRA
    |expand_index:{1}
@@ -20,31 +20,31 @@ $result_tree_text{'inlinefmtspaces'} = '*document_root C1
     {spaces_after_cmd_before_arg: }
     *brace_arg C3
      {spaces_before_argument: }
-     {plaintext}
+     {normal_text:plaintext}
      {spaces_after_argument: }
     *brace_arg C4
      {spaces_before_argument: }
-     {plaintext `` }
+     {normal_text:plaintext `` }
      *@lbracechar C1 l1
       *brace_container
-     { }
-   { a.  Now html\\n}
+     {normal_text: }
+   {normal_text: a.  Now html\\n}
    *@inlinefmt C2 l2
    |EXTRA
    |expand_index:{1}
    |format:{html}
     *brace_arg C3
      {spaces_before_argument: }
-     {html}
+     {normal_text:html}
      {spaces_after_argument: }
     *brace_arg C4
      {spaces_before_argument: }
-     {in <i>}
+     {normal_text:in <i>}
      *@acronym C1 l2
       *brace_arg C1
-       {HTML}
-     {</i>}
-   {.\\n}
+       {normal_text:HTML}
+     {normal_text:</i>}
+   {normal_text:.\\n}
 ';
 
 

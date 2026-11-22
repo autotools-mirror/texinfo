@@ -43,11 +43,11 @@ $result_tree_text{'table_nested'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C1
-   {Quotation\\n}
+   {normal_text:Quotation\\n}
   *@quotation C7 l26
    *arguments_line C1
     *block_line_arg C1
@@ -69,19 +69,19 @@ $result_tree_text{'table_nested'} = '*document_root C1
       |index_entry:I{vr,1}
        *line_arg C3
         {spaces_before_argument: }
-        {first item}
+        {normal_text:first item}
         {spaces_after_argument:\\n}
       *@itemx C1 l27:@myvtable
       |EXTRA
       |index_entry:I{vr,2}
        *line_arg C3
         {spaces_before_argument: }
-        {second itemx}
+        {normal_text:second itemx}
         {spaces_after_argument:\\n}
      *table_definition C3
       {empty_line:\\n}
       *paragraph C1
-       {Text.\\n}
+       {normal_text:Text.\\n}
       {empty_line:\\n}
     *table_entry C2
      *table_term C1
@@ -90,12 +90,12 @@ $result_tree_text{'table_nested'} = '*document_root C1
       |index_entry:I{vr,3}
        *line_arg C3
         {spaces_before_argument: }
-        {second item}
+        {normal_text:second item}
         {spaces_after_argument:\\n}
      *table_definition C3
       {empty_line:\\n}
       *paragraph C1
-       {Text 2\\n}
+       {normal_text:Text 2\\n}
       {empty_line:\\n}
     *table_entry C1
      *table_term C1
@@ -104,18 +104,18 @@ $result_tree_text{'table_nested'} = '*document_root C1
       |index_entry:I{vr,4}
        *line_arg C3
         {spaces_before_argument: }
-        {last}
+        {normal_text:last}
         {spaces_after_argument:\\n}
     *@end C1 l27:@myvtable
     |EXTRA
     |text_arg:{vtable}
      *line_arg C3
       {spaces_before_argument: }
-      {vtable}
+      {normal_text:vtable}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *paragraph C1
-    {Something.\\n}
+    {normal_text:Something.\\n}
    *@table C4 l27:@myvtable
     *arguments_line C1
      *block_line_arg C3
@@ -127,30 +127,30 @@ $result_tree_text{'table_nested'} = '*document_root C1
       *@item C1 l27:@myvtable
        *line_arg C3
         {spaces_before_argument: }
-        {in item}
+        {normal_text:in item}
         {spaces_after_argument:\\n}
      *table_definition C1
       *paragraph C1
-       {Text without blank line\\n}
+       {normal_text:Text without blank line\\n}
     *table_entry C2
      *table_term C1
       *@item C1 l27:@myvtable
        *line_arg C3
         {spaces_before_argument: }
-        {second item}
+        {normal_text:second item}
         {spaces_after_argument:\\n}
      *table_definition C1
       *paragraph C1
-       {Text without blank line 2\\n}
+       {normal_text:Text without blank line 2\\n}
     *@end C1 l27:@myvtable
     |EXTRA
     |text_arg:{table}
      *line_arg C3
       {spaces_before_argument: }
-      {table}
+      {normal_text:table}
       {spaces_after_argument:\\n}
    *paragraph C1
-    {After table.\\n}
+    {normal_text:After table.\\n}
     >SOURCEMARKS
     >macro_expansion<end;1><p:12>
    *@end C1 l28
@@ -158,11 +158,11 @@ $result_tree_text{'table_nested'} = '*document_root C1
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }
-     {quotation}
+     {normal_text:quotation}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {Example\\n}
+   {normal_text:Example\\n}
   *@example C7 l31
    *arguments_line C1
     *block_line_arg C1
@@ -185,19 +185,19 @@ $result_tree_text{'table_nested'} = '*document_root C1
       |index_entry:I{vr,5}
        *line_arg C3
         {spaces_before_argument: }
-        {first item}
+        {normal_text:first item}
         {spaces_after_argument:\\n}
       *@itemx C1 l32:@myvtable
       |EXTRA
       |index_entry:I{vr,6}
        *line_arg C3
         {spaces_before_argument: }
-        {second itemx}
+        {normal_text:second itemx}
         {spaces_after_argument:\\n}
      *table_definition C1
       *preformatted C3
        {empty_line:\\n}
-       {Text.\\n}
+       {normal_text:Text.\\n}
        {empty_line:\\n}
     *table_entry C2
      *table_term C1
@@ -206,12 +206,12 @@ $result_tree_text{'table_nested'} = '*document_root C1
       |index_entry:I{vr,7}
        *line_arg C3
         {spaces_before_argument: }
-        {second item}
+        {normal_text:second item}
         {spaces_after_argument:\\n}
      *table_definition C1
       *preformatted C3
        {empty_line:\\n}
-       {Text 2\\n}
+       {normal_text:Text 2\\n}
        {empty_line:\\n}
     *table_entry C1
      *table_term C1
@@ -220,18 +220,18 @@ $result_tree_text{'table_nested'} = '*document_root C1
       |index_entry:I{vr,8}
        *line_arg C3
         {spaces_before_argument: }
-        {last}
+        {normal_text:last}
         {spaces_after_argument:\\n}
     *@end C1 l32:@myvtable
     |EXTRA
     |text_arg:{vtable}
      *line_arg C3
       {spaces_before_argument: }
-      {vtable}
+      {normal_text:vtable}
       {spaces_after_argument:\\n}
    *preformatted C2
     {empty_line:\\n}
-    {Something.\\n}
+    {normal_text:Something.\\n}
    *@table C4 l32:@myvtable
     *arguments_line C1
      *block_line_arg C3
@@ -243,30 +243,30 @@ $result_tree_text{'table_nested'} = '*document_root C1
       *@item C1 l32:@myvtable
        *line_arg C3
         {spaces_before_argument: }
-        {in item}
+        {normal_text:in item}
         {spaces_after_argument:\\n}
      *table_definition C1
       *preformatted C1
-       {Text without blank line\\n}
+       {normal_text:Text without blank line\\n}
     *table_entry C2
      *table_term C1
       *@item C1 l32:@myvtable
        *line_arg C3
         {spaces_before_argument: }
-        {second item}
+        {normal_text:second item}
         {spaces_after_argument:\\n}
      *table_definition C1
       *preformatted C1
-       {Text without blank line 2\\n}
+       {normal_text:Text without blank line 2\\n}
     *@end C1 l32:@myvtable
     |EXTRA
     |text_arg:{table}
      *line_arg C3
       {spaces_before_argument: }
-      {table}
+      {normal_text:table}
       {spaces_after_argument:\\n}
    *preformatted C1
-    {After table.\\n}
+    {normal_text:After table.\\n}
     >SOURCEMARKS
     >macro_expansion<end;2><p:12>
    *@end C1 l33
@@ -274,11 +274,11 @@ $result_tree_text{'table_nested'} = '*document_root C1
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {Double quotation\\n}
+   {normal_text:Double quotation\\n}
   *@quotation C3 l36
    *arguments_line C1
     *block_line_arg C1
@@ -304,19 +304,19 @@ $result_tree_text{'table_nested'} = '*document_root C1
        |index_entry:I{vr,9}
         *line_arg C3
          {spaces_before_argument: }
-         {first item}
+         {normal_text:first item}
          {spaces_after_argument:\\n}
        *@itemx C1 l38:@myvtable
        |EXTRA
        |index_entry:I{vr,10}
         *line_arg C3
          {spaces_before_argument: }
-         {second itemx}
+         {normal_text:second itemx}
          {spaces_after_argument:\\n}
       *table_definition C3
        {empty_line:\\n}
        *paragraph C1
-        {Text.\\n}
+        {normal_text:Text.\\n}
        {empty_line:\\n}
      *table_entry C2
       *table_term C1
@@ -325,12 +325,12 @@ $result_tree_text{'table_nested'} = '*document_root C1
        |index_entry:I{vr,11}
         *line_arg C3
          {spaces_before_argument: }
-         {second item}
+         {normal_text:second item}
          {spaces_after_argument:\\n}
       *table_definition C3
        {empty_line:\\n}
        *paragraph C1
-        {Text 2\\n}
+        {normal_text:Text 2\\n}
        {empty_line:\\n}
      *table_entry C1
       *table_term C1
@@ -339,18 +339,18 @@ $result_tree_text{'table_nested'} = '*document_root C1
        |index_entry:I{vr,12}
         *line_arg C3
          {spaces_before_argument: }
-         {last}
+         {normal_text:last}
          {spaces_after_argument:\\n}
      *@end C1 l38:@myvtable
      |EXTRA
      |text_arg:{vtable}
       *line_arg C3
        {spaces_before_argument: }
-       {vtable}
+       {normal_text:vtable}
        {spaces_after_argument:\\n}
     {empty_line:\\n}
     *paragraph C1
-     {Something.\\n}
+     {normal_text:Something.\\n}
     *@table C4 l38:@myvtable
      *arguments_line C1
       *block_line_arg C3
@@ -362,30 +362,30 @@ $result_tree_text{'table_nested'} = '*document_root C1
        *@item C1 l38:@myvtable
         *line_arg C3
          {spaces_before_argument: }
-         {in item}
+         {normal_text:in item}
          {spaces_after_argument:\\n}
       *table_definition C1
        *paragraph C1
-        {Text without blank line\\n}
+        {normal_text:Text without blank line\\n}
      *table_entry C2
       *table_term C1
        *@item C1 l38:@myvtable
         *line_arg C3
          {spaces_before_argument: }
-         {second item}
+         {normal_text:second item}
          {spaces_after_argument:\\n}
       *table_definition C1
        *paragraph C1
-        {Text without blank line 2\\n}
+        {normal_text:Text without blank line 2\\n}
      *@end C1 l38:@myvtable
      |EXTRA
      |text_arg:{table}
       *line_arg C3
        {spaces_before_argument: }
-       {table}
+       {normal_text:table}
        {spaces_after_argument:\\n}
     *paragraph C1
-     {After table.\\n}
+     {normal_text:After table.\\n}
      >SOURCEMARKS
      >macro_expansion<end;3><p:12>
     *@end C1 l39
@@ -393,14 +393,14 @@ $result_tree_text{'table_nested'} = '*document_root C1
     |text_arg:{quotation}
      *line_arg C3
       {spaces_before_argument: }
-      {quotation}
+      {normal_text:quotation}
       {spaces_after_argument:\\n}
    *@end C1 l40
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }
-     {quotation}
+     {normal_text:quotation}
      {spaces_after_argument:\\n}
 ';
 

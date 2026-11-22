@@ -14,9 +14,9 @@ $result_tree_text{'empty_line_in_math'} = '*document_root C1
   *paragraph C1
    *@math C1 l1
     *brace_arg C3
-     {a\\n}
+     {normal_text:a\\n}
      {empty_line:\\n}
-     {b}
+     {normal_text:b}
 ';
 
 

@@ -16,7 +16,7 @@ $result_tree_text{'inlineifset_false_not_closed'} = '*document_root C1
    |EXTRA
    |format:{aaa}
     *brace_arg C1
-     {aaa}
+     {normal_text:aaa}
     *elided_brace_command_arg C1
      {raw: bbb\\n}
 ';

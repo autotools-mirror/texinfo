@@ -19,7 +19,7 @@ $result_tree_text{'parenthesis_in_node_name_implicit_refs'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C4 l2
  |EXTRA
@@ -30,7 +30,7 @@ $result_tree_text{'parenthesis_in_node_name_implicit_refs'} = '*document_root C7
     {spaces_before_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {in top.\\n}
+   {normal_text:in top.\\n}
   {empty_line:\\n}
  *@node C1 l6 {One:}
  |EXTRA
@@ -40,7 +40,7 @@ $result_tree_text{'parenthesis_in_node_name_implicit_refs'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {One:}
+    {normal_text:One:}
     {spaces_after_argument:\\n}
  *@chapter C4 l7 {One:}
  |EXTRA
@@ -50,11 +50,11 @@ $result_tree_text{'parenthesis_in_node_name_implicit_refs'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {One:}
+    {normal_text:One:}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {AA.\\n}
+   {normal_text:AA.\\n}
   {empty_line:\\n}
  *@node C1 l11 {@asis{(}Two)}
  |EXTRA
@@ -67,8 +67,8 @@ $result_tree_text{'parenthesis_in_node_name_implicit_refs'} = '*document_root C7
     {spaces_before_argument: }
     *@asis C1
      *brace_container C1
-      {(}
-    {Two)}
+      {normal_text:(}
+    {normal_text:Two)}
     {spaces_after_argument:\\n}
  *@chapter C3 l11 {(Two)}
  |EXTRA
@@ -78,11 +78,11 @@ $result_tree_text{'parenthesis_in_node_name_implicit_refs'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {(Two)}
+    {normal_text:(Two)}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {AA.\\n}
+   {normal_text:AA.\\n}
 ';
 
 

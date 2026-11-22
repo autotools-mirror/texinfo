@@ -19,7 +19,7 @@ $result_tree_text{'reference_for_formatting_customizations'} = '*document_root C
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 formatting_customizations_input.texi:l2 {top}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'reference_for_formatting_customizations'} = '*document_root C
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 formatting_customizations_input.texi:l4 {chapt}
@@ -39,7 +39,7 @@ $result_tree_text{'reference_for_formatting_customizations'} = '*document_root C
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapt}
+    {normal_text:chapt}
     {spaces_after_argument:\\n}
  *@chapter C4 formatting_customizations_input.texi:l5 {Chap}
  |EXTRA
@@ -49,21 +49,21 @@ $result_tree_text{'reference_for_formatting_customizations'} = '*document_root C
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chap}
+    {normal_text:Chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C8
    *@AA C1 formatting_customizations_input.texi:l7
     *brace_container
-   { }
+   {normal_text: }
    *@equiv C1 formatting_customizations_input.texi:l7
     *brace_container
-   { }
+   {normal_text: }
    *@@
-   { }
+   {normal_text: }
    *@copyright C1 formatting_customizations_input.texi:l7
     *brace_container
-   {\\n}
+   {normal_text:\\n}
   {empty_line:\\n}
 ';
 

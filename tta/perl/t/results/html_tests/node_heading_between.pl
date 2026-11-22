@@ -14,7 +14,7 @@ $result_tree_text{'node_heading_between'} = '*document_root C6
    *@settitle C1 l1
     *line_arg C3
      {spaces_before_argument: }
-     {node heading between}
+     {normal_text:node heading between}
      {spaces_after_argument:\\n}
  *@node C1 l2 {Chapter}
  |EXTRA
@@ -24,7 +24,7 @@ $result_tree_text{'node_heading_between'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chapter}
+    {normal_text:Chapter}
     {spaces_after_argument:\\n}
  *@chapter C2 l3 {Chapter}
  |EXTRA
@@ -34,7 +34,7 @@ $result_tree_text{'node_heading_between'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chapter}
+    {normal_text:Chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C3 l5 {Topic}
@@ -45,7 +45,7 @@ $result_tree_text{'node_heading_between'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Topic}
+    {normal_text:Topic}
     {spaces_after_argument:\\n}
   *@subsubheading C1 l6
   |EXTRA
@@ -53,7 +53,7 @@ $result_tree_text{'node_heading_between'} = '*document_root C6
   |heading_number:{1}
    *line_arg C3
     {spaces_before_argument: }
-    {Topic}
+    {normal_text:Topic}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l8 {Section}
@@ -64,7 +64,7 @@ $result_tree_text{'node_heading_between'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Section}
+    {normal_text:Section}
     {spaces_after_argument:\\n}
  *@section C3 l9 {Section}
  |EXTRA
@@ -74,7 +74,7 @@ $result_tree_text{'node_heading_between'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Section}
+    {normal_text:Section}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
@@ -83,8 +83,8 @@ $result_tree_text{'node_heading_between'} = '*document_root C6
     |EXTRA
     |node_content:A{0|0}
     |normalized:{Topic}
-     {Topic}
-   {\\n}
+     {normal_text:Topic}
+   {normal_text:\\n}
 ';
 
 

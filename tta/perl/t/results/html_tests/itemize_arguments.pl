@@ -17,40 +17,40 @@ $result_tree_text{'itemize_arguments'} = '*document_root C1
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     {---}
+     {normal_text:---}
      {spaces_after_argument:\\n}
    *@item C2 l3
    |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
-     {item ---\\n}
+     {normal_text:item ---\\n}
    *@end C1 l4
    |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }
-     {itemize}
+     {normal_text:itemize}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@itemize C3 l6
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     {a\'\'b\'c}
+     {normal_text:a\'\'b\'c}
      {spaces_after_argument:\\n}
    *@item C2 l7
    |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
-     {item a\'\'b\'c\\n}
+     {normal_text:item a\'\'b\'c\\n}
    *@end C1 l8
    |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }
-     {itemize}
+     {normal_text:itemize}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@itemize C3 l10
@@ -59,84 +59,84 @@ $result_tree_text{'itemize_arguments'} = '*document_root C1
      {spaces_before_argument: }
      *@code C1 l10
       *brace_container C1
-       {a\'\'b\'c}
+       {normal_text:a\'\'b\'c}
      {spaces_after_argument:\\n}
    *@item C2 l11
    |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C3
-     {item code }
+     {normal_text:item code }
      *@code C1 l11
       *brace_container C1
-       {a\'\'b\'c}
-     {\\n}
+       {normal_text:a\'\'b\'c}
+     {normal_text:\\n}
    *@end C1 l12
    |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }
-     {itemize}
+     {normal_text:itemize}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@itemize C3 l14
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     {a``b`c}
+     {normal_text:a``b`c}
      {spaces_after_argument:\\n}
    *@item C2 l15
    |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
-     {item a``b`c\\n}
+     {normal_text:item a``b`c\\n}
    *@end C1 l16
    |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }
-     {itemize}
+     {normal_text:itemize}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@itemize C3 l18
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     {a\'"}
+     {normal_text:a\'"}
      {spaces_after_argument:\\n}
    *@item C2 l19
    |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
-     {item a\'"\\n}
+     {normal_text:item a\'"\\n}
    *@end C1 l20
    |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }
-     {itemize}
+     {normal_text:itemize}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@itemize C3 l22
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     {b\\<&}
+     {normal_text:b\\<&}
      {spaces_after_argument:\\n}
    *@item C2 l23
    |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
-     {item b\\<&\\n}
+     {normal_text:item b\\<&\\n}
    *@end C1 l24
    |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }
-     {itemize}
+     {normal_text:itemize}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@itemize C3 l26
@@ -150,16 +150,16 @@ $result_tree_text{'itemize_arguments'} = '*document_root C1
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C3
-     {item today }
+     {normal_text:item today }
      *@today C1 l27
       *brace_container
-     {\\n}
+     {normal_text:\\n}
    *@end C1 l28
    |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }
-     {itemize}
+     {normal_text:itemize}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@itemize C3 l30
@@ -168,7 +168,7 @@ $result_tree_text{'itemize_arguments'} = '*document_root C1
      {spaces_before_argument: }
      *@aa C1 l30
       *brace_container
-     { }
+     {normal_text: }
      *@sc C1 l30
       *brace_container C1
        *@aa C1 l30
@@ -179,21 +179,21 @@ $result_tree_text{'itemize_arguments'} = '*document_root C1
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C5
-     {item aa }
+     {normal_text:item aa }
      *@aa C1 l31
       *brace_container
-     { }
+     {normal_text: }
      *@sc C1 l31
       *brace_container C1
        *@aa C1 l31
         *brace_container
-     {\\n}
+     {normal_text:\\n}
    *@end C1 l32
    |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }
-     {itemize}
+     {normal_text:itemize}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@itemize C3 l34
@@ -208,16 +208,16 @@ $result_tree_text{'itemize_arguments'} = '*document_root C1
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C3
-     {item tie }
+     {normal_text:item tie }
      *@tie C1 l35
       *brace_container
-     {\\n}
+     {normal_text:\\n}
    *@end C1 l36
    |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }
-     {itemize}
+     {normal_text:itemize}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@itemize C3 l38
@@ -226,23 +226,23 @@ $result_tree_text{'itemize_arguments'} = '*document_root C1
      {spaces_before_argument: }
      *@tie C1 l38
       *brace_container
-     { a}
+     {normal_text: a}
      {spaces_after_argument:\\n}
    *@item C2 l39
    |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C3
-     {item tie }
+     {normal_text:item tie }
      *@tie C1 l39
       *brace_container
-     { a\\n}
+     {normal_text: a\\n}
    *@end C1 l40
    |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }
-     {itemize}
+     {normal_text:itemize}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@itemize C3 l42
@@ -256,13 +256,13 @@ $result_tree_text{'itemize_arguments'} = '*document_root C1
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
-     {item atchar\\n}
+     {normal_text:item atchar\\n}
    *@end C1 l44
    |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }
-     {itemize}
+     {normal_text:itemize}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@itemize C3 l46
@@ -271,23 +271,23 @@ $result_tree_text{'itemize_arguments'} = '*document_root C1
      {spaces_before_argument: }
      *@atchar C1 l46
       *brace_container
-     { a}
+     {normal_text: a}
      {spaces_after_argument:\\n}
    *@item C2 l47
    |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C3
-     {item atchar }
+     {normal_text:item atchar }
      *@atchar C1 l47
       *brace_container
-     { a\\n}
+     {normal_text: a\\n}
    *@end C1 l48
    |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }
-     {itemize}
+     {normal_text:itemize}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@itemize C3 l50
@@ -301,15 +301,15 @@ $result_tree_text{'itemize_arguments'} = '*document_root C1
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C3
-     {item * }
+     {normal_text:item * }
      *@*
-     {\\n}
+     {normal_text:\\n}
    *@end C1 l52
    |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }
-     {itemize}
+     {normal_text:itemize}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@itemize C3 l54
@@ -323,15 +323,15 @@ $result_tree_text{'itemize_arguments'} = '*document_root C1
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C3
-     {item }
+     {normal_text:item }
      *@{
-     {\\n}
+     {normal_text:\\n}
    *@end C1 l56
    |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }
-     {itemize}
+     {normal_text:itemize}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@itemize C3 l58
@@ -345,15 +345,15 @@ $result_tree_text{'itemize_arguments'} = '*document_root C1
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C3
-     {item }
+     {normal_text:item }
      *@&
-     {\\n}
+     {normal_text:\\n}
    *@end C1 l60
    |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }
-     {itemize}
+     {normal_text:itemize}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@itemize C3 l62
@@ -367,16 +367,16 @@ $result_tree_text{'itemize_arguments'} = '*document_root C1
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C3
-     {item }
+     {normal_text:item }
      *@ampchar C1 l63
       *brace_container
-     {\\n}
+     {normal_text:\\n}
    *@end C1 l64
    |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }
-     {itemize}
+     {normal_text:itemize}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@itemize C3 l66
@@ -384,22 +384,22 @@ $result_tree_text{'itemize_arguments'} = '*document_root C1
     *block_line_arg C4
      {spaces_before_argument: }
      *@&
-     { a}
+     {normal_text: a}
      {spaces_after_argument:\\n}
    *@item C2 l67
    |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C3
-     {item }
+     {normal_text:item }
      *@&
-     { a\\n}
+     {normal_text: a\\n}
    *@end C1 l68
    |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }
-     {itemize}
+     {normal_text:itemize}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@itemize C3 l70
@@ -408,23 +408,23 @@ $result_tree_text{'itemize_arguments'} = '*document_root C1
      {spaces_before_argument: }
      *@ampchar C1 l70
       *brace_container
-     { a}
+     {normal_text: a}
      {spaces_after_argument:\\n}
    *@item C2 l71
    |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C3
-     {item }
+     {normal_text:item }
      *@ampchar C1 l71
       *brace_container
-     { a\\n}
+     {normal_text: a\\n}
    *@end C1 l72
    |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }
-     {itemize}
+     {normal_text:itemize}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@itemize C3 l74
@@ -439,16 +439,16 @@ $result_tree_text{'itemize_arguments'} = '*document_root C1
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C3
-     {item registeredsymbol }
+     {normal_text:item registeredsymbol }
      *@registeredsymbol C1 l75
       *brace_container
-     {\\n}
+     {normal_text:\\n}
    *@end C1 l76
    |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }
-     {itemize}
+     {normal_text:itemize}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@itemize C3 l78
@@ -457,23 +457,23 @@ $result_tree_text{'itemize_arguments'} = '*document_root C1
      {spaces_before_argument: }
      *@registeredsymbol C1 l78
       *brace_container
-     { a}
+     {normal_text: a}
      {spaces_after_argument:\\n}
    *@item C2 l79
    |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C3
-     {item registeredsymbol }
+     {normal_text:item registeredsymbol }
      *@registeredsymbol C1 l79
       *brace_container
-     { a\\n}
+     {normal_text: a\\n}
    *@end C1 l80
    |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }
-     {itemize}
+     {normal_text:itemize}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@itemize C3 l82
@@ -488,16 +488,16 @@ $result_tree_text{'itemize_arguments'} = '*document_root C1
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C3
-     {item dots }
+     {normal_text:item dots }
      *@enddots C1 l83
       *brace_container
-     {\\n}
+     {normal_text:\\n}
    *@end C1 l84
    |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }
-     {itemize}
+     {normal_text:itemize}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@itemize C3 l86
@@ -506,23 +506,23 @@ $result_tree_text{'itemize_arguments'} = '*document_root C1
      {spaces_before_argument: }
      *@enddots C1 l86
       *brace_container
-     { a}
+     {normal_text: a}
      {spaces_after_argument:\\n}
    *@item C2 l87
    |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C3
-     {item dots }
+     {normal_text:item dots }
      *@enddots C1 l87
       *brace_container
-     { a\\n}
+     {normal_text: a\\n}
    *@end C1 l88
    |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }
-     {itemize}
+     {normal_text:itemize}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@itemize C3 l90
@@ -531,36 +531,36 @@ $result_tree_text{'itemize_arguments'} = '*document_root C1
      {spaces_before_argument: }
      *@^ C1 l90
       *following_arg C1
-       {e}
-     { }
+       {normal_text:e}
+     {normal_text: }
      *@sc C1 l90
       *brace_container C1
        *@^ C1 l90
         *following_arg C1
-         {e}
+         {normal_text:e}
      {spaces_after_argument:\\n}
    *@item C2 l91
    |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C5
-     {item e }
+     {normal_text:item e }
      *@^ C1 l91
       *following_arg C1
-       {e}
-     { }
+       {normal_text:e}
+     {normal_text: }
      *@sc C1 l91
       *brace_container C1
        *@^ C1 l91
         *following_arg C1
-         {e}
-     {\\n}
+         {normal_text:e}
+     {normal_text:\\n}
    *@end C1 l92
    |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }
-     {itemize}
+     {normal_text:itemize}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@itemize C3 l94
@@ -569,36 +569,36 @@ $result_tree_text{'itemize_arguments'} = '*document_root C1
      {spaces_before_argument: }
      *@^ C1 l94
       *following_arg C1
-       {E}
-     { }
+       {normal_text:E}
+     {normal_text: }
      *@sc C1 l94
       *brace_container C1
        *@^ C1 l94
         *following_arg C1
-         {E}
+         {normal_text:E}
      {spaces_after_argument:\\n}
    *@item C2 l95
    |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C5
-     {item E }
+     {normal_text:item E }
      *@^ C1 l95
       *following_arg C1
-       {E}
-     { }
+       {normal_text:E}
+     {normal_text: }
      *@sc C1 l95
       *brace_container C1
        *@^ C1 l95
         *following_arg C1
-         {E}
-     {\\n}
+         {normal_text:E}
+     {normal_text:\\n}
    *@end C1 l96
    |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }
-     {itemize}
+     {normal_text:itemize}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@itemize C3 l98
@@ -609,58 +609,58 @@ $result_tree_text{'itemize_arguments'} = '*document_root C1
       *brace_container C1
        *@dotless C1 l98
         *brace_container C1
-         {i}
-     { }
+         {normal_text:i}
+     {normal_text: }
      *@dotless C1 l98
       *brace_container C1
-       {i}
-     { }
+       {normal_text:i}
+     {normal_text: }
      *@sc C1 l98
       *brace_container C3
        *@~ C1 l98
         *brace_container C1
          *@dotless C1 l98
           *brace_container C1
-           {i}
-       { }
+           {normal_text:i}
+       {normal_text: }
        *@dotless C1 l98
         *brace_container C1
-         {i}
+         {normal_text:i}
      {spaces_after_argument:\\n}
    *@item C2 l99
    |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C7
-     {item dotless }
+     {normal_text:item dotless }
      *@~ C1 l99
       *brace_container C1
        *@dotless C1 l99
         *brace_container C1
-         {i}
-     { }
+         {normal_text:i}
+     {normal_text: }
      *@dotless C1 l99
       *brace_container C1
-       {i}
-     { }
+       {normal_text:i}
+     {normal_text: }
      *@sc C1 l99
       *brace_container C3
        *@~ C1 l99
         *brace_container C1
          *@dotless C1 l99
           *brace_container C1
-           {i}
-       { }
+           {normal_text:i}
+       {normal_text: }
        *@dotless C1 l99
         *brace_container C1
-         {i}
-     {\\n}
+         {normal_text:i}
+     {normal_text:\\n}
    *@end C1 l100
    |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }
-     {itemize}
+     {normal_text:itemize}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@itemize C3 l102
@@ -669,60 +669,60 @@ $result_tree_text{'itemize_arguments'} = '*document_root C1
      {spaces_before_argument: }
      *@udotaccent C1 l102
       *brace_container C1
-       {r}
-     { }
+       {normal_text:r}
+     {normal_text: }
      *@v C1 l102
       *brace_container C1
        *@\' C1 l102
         *brace_container C1
-         {r}
-     { }
+         {normal_text:r}
+     {normal_text: }
      *@sc C1 l102
       *brace_container C3
        *@udotaccent C1 l102
         *brace_container C1
-         {r}
-       { }
+         {normal_text:r}
+       {normal_text: }
        *@v C1 l102
         *brace_container C1
          *@\' C1 l102
           *brace_container C1
-           {r}
+           {normal_text:r}
      {spaces_after_argument:\\n}
    *@item C2 l103
    |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C7
-     {item complex a }
+     {normal_text:item complex a }
      *@udotaccent C1 l103
       *brace_container C1
-       {r}
-     { }
+       {normal_text:r}
+     {normal_text: }
      *@v C1 l103
       *brace_container C1
        *@\' C1 l103
         *brace_container C1
-         {r}
-     { }
+         {normal_text:r}
+     {normal_text: }
      *@sc C1 l103
       *brace_container C3
        *@udotaccent C1 l103
         *brace_container C1
-         {r}
-       { }
+         {normal_text:r}
+       {normal_text: }
        *@v C1 l103
         *brace_container C1
          *@\' C1 l103
           *brace_container C1
-           {r}
-     {\\n}
+           {normal_text:r}
+     {normal_text:\\n}
    *@end C1 l104
    |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }
-     {itemize}
+     {normal_text:itemize}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@itemize C3 l106
@@ -735,50 +735,50 @@ $result_tree_text{'itemize_arguments'} = '*document_root C1
         *brace_container C1
          *@~ C1 l106
           *brace_container C1
-           {n}
-     { }
+           {normal_text:n}
+     {normal_text: }
      *@sc C1 l106
       *brace_container C2
-       { }
+       {normal_text: }
        *@= C1 l106
         *brace_container C1
          *@, C1 l106
           *brace_container C1
            *@~ C1 l106
             *brace_container C1
-             {n}
+             {normal_text:n}
      {spaces_after_argument:\\n}
    *@item C2 l107
    |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C5
-     {item complex n }
+     {normal_text:item complex n }
      *@= C1 l107
       *brace_container C1
        *@, C1 l107
         *brace_container C1
          *@~ C1 l107
           *brace_container C1
-           {n}
-     { }
+           {normal_text:n}
+     {normal_text: }
      *@sc C1 l107
       *brace_container C2
-       { }
+       {normal_text: }
        *@= C1 l107
         *brace_container C1
          *@, C1 l107
           *brace_container C1
            *@~ C1 l107
             *brace_container C1
-             {n}
-     {\\n}
+             {normal_text:n}
+     {normal_text:\\n}
    *@end C1 l108
    |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }
-     {itemize}
+     {normal_text:itemize}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@itemize C3 l110
@@ -792,16 +792,16 @@ $result_tree_text{'itemize_arguments'} = '*document_root C1
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C3
-     {item asis }
+     {normal_text:item asis }
      *@asis C1 l111
       *brace_container
-     {\\n}
+     {normal_text:\\n}
    *@end C1 l112
    |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }
-     {itemize}
+     {normal_text:itemize}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@itemize C3 l114
@@ -816,16 +816,16 @@ $result_tree_text{'itemize_arguments'} = '*document_root C1
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C3
-     {item click }
+     {normal_text:item click }
      *@click C1 l115
       *brace_container
-     {\\n}
+     {normal_text:\\n}
    *@end C1 l116
    |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }
-     {itemize}
+     {normal_text:itemize}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@itemize C3 l118
@@ -834,23 +834,23 @@ $result_tree_text{'itemize_arguments'} = '*document_root C1
      {spaces_before_argument: }
      *@click C1 l118
       *brace_container
-     { a}
+     {normal_text: a}
      {spaces_after_argument:\\n}
    *@item C2 l119
    |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C3
-     {item click }
+     {normal_text:item click }
      *@click C1 l119
       *brace_container
-     { a\\n}
+     {normal_text: a\\n}
    *@end C1 l120
    |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }
-     {itemize}
+     {normal_text:itemize}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@itemize C3 l122
@@ -865,16 +865,16 @@ $result_tree_text{'itemize_arguments'} = '*document_root C1
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C3
-     {item error }
+     {normal_text:item error }
      *@error C1 l123
       *brace_container
-     {\\n}
+     {normal_text:\\n}
    *@end C1 l124
    |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }
-     {itemize}
+     {normal_text:itemize}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@itemize C3 l126
@@ -883,23 +883,23 @@ $result_tree_text{'itemize_arguments'} = '*document_root C1
      {spaces_before_argument: }
      *@error C1 l126
       *brace_container
-     { a}
+     {normal_text: a}
      {spaces_after_argument:\\n}
    *@item C2 l127
    |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C3
-     {item error }
+     {normal_text:item error }
      *@error C1 l127
       *brace_container
-     { a\\n}
+     {normal_text: a\\n}
    *@end C1 l128
    |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }
-     {itemize}
+     {normal_text:itemize}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@documentlanguage C1 l130
@@ -908,7 +908,7 @@ $result_tree_text{'itemize_arguments'} = '*document_root C1
   |text_arg:{fr}
    *line_arg C3
     {spaces_before_argument: }
-    {fr}
+    {normal_text:fr}
     {spaces_after_argument:\\n}
   *@itemize C3 l131
    *arguments_line C1
@@ -922,16 +922,16 @@ $result_tree_text{'itemize_arguments'} = '*document_root C1
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C3
-     {item fr error }
+     {normal_text:item fr error }
      *@error C1 l132
       *brace_container
-     {\\n}
+     {normal_text:\\n}
    *@end C1 l133
    |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }
-     {itemize}
+     {normal_text:itemize}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@itemize C3 l135
@@ -940,23 +940,23 @@ $result_tree_text{'itemize_arguments'} = '*document_root C1
      {spaces_before_argument: }
      *@error C1 l135
       *brace_container
-     { a}
+     {normal_text: a}
      {spaces_after_argument:\\n}
    *@item C2 l136
    |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C3
-     {item fr error }
+     {normal_text:item fr error }
      *@error C1 l136
       *brace_container
-     { a\\n}
+     {normal_text: a\\n}
    *@end C1 l137
    |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }
-     {itemize}
+     {normal_text:itemize}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
 ';

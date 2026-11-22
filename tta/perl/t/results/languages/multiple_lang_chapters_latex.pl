@@ -20,7 +20,7 @@ $result_tree_text{'multiple_lang_chapters_latex'} = '*document_root C13
    |text_arg:{utf-8}
     *line_arg C3
      {spaces_before_argument: }
-     {utf-8}
+     {normal_text:utf-8}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@c C1
@@ -36,7 +36,7 @@ $result_tree_text{'multiple_lang_chapters_latex'} = '*document_root C13
      >|text_arg:{iftex}
       >*line_arg C3
        >{spaces_before_argument: }
-       >{iftex}
+       >{normal_text:iftex}
        >{spaces_after_argument:\\n}
    >expanded_conditional_command<start;1>
     >*@iflatex C1 l8
@@ -58,11 +58,11 @@ $result_tree_text{'multiple_lang_chapters_latex'} = '*document_root C13
     >|text_arg:{iflatex}
      >*line_arg C3
       >{spaces_before_argument: }
-      >{iflatex}
+      >{normal_text:iflatex}
       >{spaces_after_argument:\\n}
     *line_arg C3
      {spaces_before_argument: }
-     {ja}
+     {normal_text:ja}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *@node C1 l12 {Top}
@@ -73,7 +73,7 @@ $result_tree_text{'multiple_lang_chapters_latex'} = '*document_root C13
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C5 l13 {Multi language file}
  |EXTRA
@@ -82,7 +82,7 @@ $result_tree_text{'multiple_lang_chapters_latex'} = '*document_root C13
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Multi language file}
+    {normal_text:Multi language file}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C7 l15
@@ -95,61 +95,61 @@ $result_tree_text{'multiple_lang_chapters_latex'} = '*document_root C13
     |EXTRA
     |node_content:A{0|0}
     |normalized:{chapter-ja}
-     {chapter ja}
+     {normal_text:chapter ja}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 l17
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{chapter-en}
-     {chapter en}
+     {normal_text:chapter en}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 l18
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{chapter-fr_005fFR}
-     {chapter fr_FR}
+     {normal_text:chapter fr_FR}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 l19
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{chapter-de}
-     {chapter de}
+     {normal_text:chapter de}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 l20
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{chapter-pt_005fBR}
-     {chapter pt_BR}
+     {normal_text:chapter pt_BR}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l21
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@documentlanguage C1 l23
@@ -158,7 +158,7 @@ $result_tree_text{'multiple_lang_chapters_latex'} = '*document_root C13
   |text_arg:{ja}
    *line_arg C3
     {spaces_before_argument: }
-    {ja}
+    {normal_text:ja}
     {spaces_after_argument:\\n}
  *@node C1 l24 {chapter ja}
  |EXTRA
@@ -168,7 +168,7 @@ $result_tree_text{'multiple_lang_chapters_latex'} = '*document_root C13
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter ja}
+    {normal_text:chapter ja}
     {spaces_after_argument:\\n}
  *@chapter C6 l25 {ja}
  |EXTRA
@@ -178,18 +178,18 @@ $result_tree_text{'multiple_lang_chapters_latex'} = '*document_root C13
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {ja}
+    {normal_text:ja}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C3
-   {In japanese. }
+   {normal_text:In japanese. }
    *@xref C1 l27
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{chapter-ja}
-     {chapter ja}
-   {.\\n}
+     {normal_text:chapter ja}
+   {normal_text:.\\n}
   *@defivar C2 l28
    *def_line C1 l28
    |EXTRA
@@ -211,22 +211,22 @@ $result_tree_text{'multiple_lang_chapters_latex'} = '*document_root C13
      {spaces: }
      *def_class C1
       *def_line_arg C1
-       {AAA}
+       {normal_text:AAA}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {BBB}
+       {normal_text:BBB}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {CCC}
+       {normal_text:CCC}
      {spaces_after_argument:\\n}
    *@end C1 l29
    |EXTRA
    |text_arg:{defivar}
     *line_arg C3
      {spaces_before_argument: }
-     {defivar}
+     {normal_text:defivar}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@documentlanguage C1 l31
@@ -235,7 +235,7 @@ $result_tree_text{'multiple_lang_chapters_latex'} = '*document_root C13
   |text_arg:{en}
    *line_arg C3
     {spaces_before_argument: }
-    {en}
+    {normal_text:en}
     {spaces_after_argument:\\n}
  *@node C1 l32 {chapter en}
  |EXTRA
@@ -245,7 +245,7 @@ $result_tree_text{'multiple_lang_chapters_latex'} = '*document_root C13
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter en}
+    {normal_text:chapter en}
     {spaces_after_argument:\\n}
  *@chapter C6 l33 {en}
  |EXTRA
@@ -255,18 +255,18 @@ $result_tree_text{'multiple_lang_chapters_latex'} = '*document_root C13
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {en}
+    {normal_text:en}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C3
-   {In english. }
+   {normal_text:In english. }
    *@xref C1 l35
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{chapter-ja}
-     {chapter ja}
-   {.\\n}
+     {normal_text:chapter ja}
+   {normal_text:.\\n}
   *@defivar C2 l36
    *def_line C1 l36
    |EXTRA
@@ -288,22 +288,22 @@ $result_tree_text{'multiple_lang_chapters_latex'} = '*document_root C13
      {spaces: }
      *def_class C1
       *def_line_arg C1
-       {AAA}
+       {normal_text:AAA}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {BBB}
+       {normal_text:BBB}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {CCC}
+       {normal_text:CCC}
      {spaces_after_argument:\\n}
    *@end C1 l37
    |EXTRA
    |text_arg:{defivar}
     *line_arg C3
      {spaces_before_argument: }
-     {defivar}
+     {normal_text:defivar}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@documentlanguage C1 l39
@@ -312,7 +312,7 @@ $result_tree_text{'multiple_lang_chapters_latex'} = '*document_root C13
   |text_arg:{fr_FR}
    *line_arg C3
     {spaces_before_argument: }
-    {fr_FR}
+    {normal_text:fr_FR}
     {spaces_after_argument:\\n}
  *@node C1 l40 {chapter fr_FR}
  |EXTRA
@@ -322,7 +322,7 @@ $result_tree_text{'multiple_lang_chapters_latex'} = '*document_root C13
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter fr_FR}
+    {normal_text:chapter fr_FR}
     {spaces_after_argument:\\n}
  *@chapter C5 l41 {fr_FR}
  |EXTRA
@@ -332,7 +332,7 @@ $result_tree_text{'multiple_lang_chapters_latex'} = '*document_root C13
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {fr_FR}
+    {normal_text:fr_FR}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@defivar C2 l43
@@ -356,22 +356,22 @@ $result_tree_text{'multiple_lang_chapters_latex'} = '*document_root C13
      {spaces: }
      *def_class C1
       *def_line_arg C1
-       {AAA}
+       {normal_text:AAA}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {BBB}
+       {normal_text:BBB}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {CCC}
+       {normal_text:CCC}
      {spaces_after_argument:\\n}
    *@end C1 l44
    |EXTRA
    |text_arg:{defivar}
     *line_arg C3
      {spaces_before_argument: }
-     {defivar}
+     {normal_text:defivar}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@documentlanguage C1 l46
@@ -380,7 +380,7 @@ $result_tree_text{'multiple_lang_chapters_latex'} = '*document_root C13
   |text_arg:{de}
    *line_arg C3
     {spaces_before_argument: }
-    {de}
+    {normal_text:de}
     {spaces_after_argument:\\n}
  *@node C1 l47 {chapter de}
  |EXTRA
@@ -390,7 +390,7 @@ $result_tree_text{'multiple_lang_chapters_latex'} = '*document_root C13
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter de}
+    {normal_text:chapter de}
     {spaces_after_argument:\\n}
  *@chapter C3 l48 {de}
  |EXTRA
@@ -400,7 +400,7 @@ $result_tree_text{'multiple_lang_chapters_latex'} = '*document_root C13
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {de}
+    {normal_text:de}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@documentlanguage C1 l50
@@ -409,7 +409,7 @@ $result_tree_text{'multiple_lang_chapters_latex'} = '*document_root C13
   |text_arg:{pt_BR}
    *line_arg C3
     {spaces_before_argument: }
-    {pt_BR}
+    {normal_text:pt_BR}
     {spaces_after_argument:\\n}
  *@node C1 l51 {chapter pt_BR}
  |EXTRA
@@ -419,7 +419,7 @@ $result_tree_text{'multiple_lang_chapters_latex'} = '*document_root C13
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter pt_BR}
+    {normal_text:chapter pt_BR}
     {spaces_after_argument:\\n}
  *@chapter C3 l52 {pt_bR}
  |EXTRA
@@ -429,18 +429,18 @@ $result_tree_text{'multiple_lang_chapters_latex'} = '*document_root C13
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {pt_bR}
+    {normal_text:pt_bR}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C3
-   {In brazilian. }
+   {normal_text:In brazilian. }
    *@xref C1 l54
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{chapter-ja}
-     {chapter ja}
-   {.\\n}
+     {normal_text:chapter ja}
+   {normal_text:.\\n}
 ';
 
 

@@ -23,7 +23,7 @@ $result_tree_text{'protect_node_after_label_source_mark_in_protected'} = '*docum
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@set C1
@@ -35,26 +35,26 @@ $result_tree_text{'protect_node_after_label_source_mark_in_protected'} = '*docum
      {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C5
-   {There is some text }
+   {normal_text:There is some text }
    >SOURCEMARKS
    >macro_expansion<start;1><p:9>
     >*macro_call@vvv C1
      >*brace_arg
    *@asis C1
     *brace_container C1
-     {.,,,..}
+     {normal_text:.,,,..}
      >SOURCEMARKS
      >macro_expansion<end;1><p:2>
      >value_expansion<start;1><p:3>{,.}
       >*@value C1
        >*brace_container C1
-        >{punct}
+        >{normal_text:punct}
      >value_expansion<end;1><p:5>
-   { and after}
+   {normal_text: and after}
    *@asis C1
     *brace_container C1
-     {.}
-   {\\n}
+     {normal_text:.}
+   {normal_text:\\n}
 ';
 
 

@@ -16,26 +16,26 @@ $result_tree_text{'recursive_synindex'} = '*document_root C1
    |misc_args:A{aaa}
     *line_arg C3
      {spaces_before_argument: }
-     {aaa}
+     {normal_text:aaa}
      {spaces_after_argument:\\n}
    *@defindex C1 l2
    |EXTRA
    |misc_args:A{bbb}
     *line_arg C3
      {spaces_before_argument: }
-     {bbb}
+     {normal_text:bbb}
      {spaces_after_argument:\\n}
    *@synindex C1 l3
    |EXTRA
    |misc_args:A{aaa|bbb}
     *line_arg C3
      {spaces_before_argument: }
-     {aaa bbb}
+     {normal_text:aaa bbb}
      {spaces_after_argument:\\n}
    *@synindex C1 l4
     *line_arg C2
      {spaces_before_argument: }
-     {bbb aaa}
+     {normal_text:bbb aaa}
 ';
 
 

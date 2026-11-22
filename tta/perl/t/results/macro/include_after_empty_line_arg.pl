@@ -23,7 +23,7 @@ $result_tree_text{'include_after_empty_line_arg'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    >SOURCEMARKS
@@ -36,7 +36,7 @@ $result_tree_text{'include_after_empty_line_arg'} = '*document_root C1
    >SOURCEMARKS
    >macro_expansion<end;1>
     *brace_container
-   {\\n}
+   {normal_text:\\n}
    >SOURCEMARKS
    >include<start;1><p:1>
     >*@include C1 l6
@@ -44,9 +44,9 @@ $result_tree_text{'include_after_empty_line_arg'} = '*document_root C1
     >|text_arg:{inc_file.texi}
      >*line_arg C3
       >{spaces_before_argument: }
-      >{inc_file.texi}
+      >{normal_text:inc_file.texi}
       >{spaces_after_argument:\\n}
-   {In included file.\\n}
+   {normal_text:In included file.\\n}
    >SOURCEMARKS
    >include<end;1><p:18>
 ';

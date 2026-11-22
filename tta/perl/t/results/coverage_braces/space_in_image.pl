@@ -16,29 +16,29 @@ $result_tree_text{'space_in_image'} = '*document_root C1
   |input_encoding_name:{utf-8}
    *brace_arg C3
     {spaces_before_argument: }
-    {a}
+    {normal_text:a}
     {spaces_after_argument: }
    *brace_arg C1
-    {bb}
+    {normal_text:bb}
    *brace_arg C2
     {spaces_before_argument: }
-    {cc}
+    {normal_text:cc}
    *brace_arg C2
-    {dd}
+    {normal_text:dd}
     {spaces_after_argument: }
    *brace_arg C2
-    {.e}
+    {normal_text:.e}
     {spaces_after_argument: }
   *paragraph C3
-   {. }
+   {normal_text:. }
    *@image C1 l1
    |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C3
      {spaces_before_argument: }
-     {f}
+     {normal_text:f}
      {spaces_after_argument: }
-   {.}
+   {normal_text:.}
 ';
 
 

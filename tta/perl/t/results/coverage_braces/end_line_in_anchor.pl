@@ -16,8 +16,8 @@ $result_tree_text{'end_line_in_anchor'} = '*document_root C1
   |identifier:{an-anchor}
   |is_target:{1}
    *brace_arg C2
-    {an\\n}
-    {anchor}
+    {normal_text:an\\n}
+    {normal_text:anchor}
   {spaces_after_close_brace:\\n}
 ';
 

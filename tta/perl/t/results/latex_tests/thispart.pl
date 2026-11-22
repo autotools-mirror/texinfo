@@ -15,13 +15,13 @@ $result_tree_text{'thispart'} = '*document_root C11
     *line_arg C11
      {spaces_before_argument: }
      *@thispage
-     { }
+     {normal_text: }
      *@|
-     { }
+     {normal_text: }
      *@thisfile
-     { }
+     {normal_text: }
      *@|
-     { }
+     {normal_text: }
      *@thispart
      {spaces_after_argument:\\n}
    {empty_line:\\n}
@@ -33,7 +33,7 @@ $result_tree_text{'thispart'} = '*document_root C11
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l4 {top}
  |EXTRA
@@ -42,7 +42,7 @@ $result_tree_text{'thispart'} = '*document_root C11
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@part C1 l6 {Part I:@* The beginning}
@@ -53,9 +53,9 @@ $result_tree_text{'thispart'} = '*document_root C11
   *arguments_line C1
    *line_arg C5
     {spaces_before_argument: }
-    {Part I:}
+    {normal_text:Part I:}
     *@*
-    { The beginning}
+    {normal_text: The beginning}
     {spaces_after_argument:\\n}
  *@node C1 l7 {first}
  |EXTRA
@@ -65,7 +65,7 @@ $result_tree_text{'thispart'} = '*document_root C11
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {first}
+    {normal_text:first}
     {spaces_after_argument:\\n}
  *@chapter C4 l8 {Chap1}
  |EXTRA
@@ -75,11 +75,11 @@ $result_tree_text{'thispart'} = '*document_root C11
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chap1}
+    {normal_text:Chap1}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {In chap1\\n}
+   {normal_text:In chap1\\n}
   {empty_line:\\n}
  *@part C1 l12 {Part II}
  |EXTRA
@@ -89,7 +89,7 @@ $result_tree_text{'thispart'} = '*document_root C11
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Part II}
+    {normal_text:Part II}
     {spaces_after_argument:\\n}
  *@node C1 l13 {second}
  |EXTRA
@@ -99,7 +99,7 @@ $result_tree_text{'thispart'} = '*document_root C11
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {second}
+    {normal_text:second}
     {spaces_after_argument:\\n}
  *@chapter C4 l14 {chap2}
  |EXTRA
@@ -109,11 +109,11 @@ $result_tree_text{'thispart'} = '*document_root C11
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap2}
+    {normal_text:chap2}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {In chap2\\n}
+   {normal_text:In chap2\\n}
   {empty_line:\\n}
  *@part C2 l18 {App}
  |EXTRA
@@ -123,7 +123,7 @@ $result_tree_text{'thispart'} = '*document_root C11
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {App}
+    {normal_text:App}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@appendix C3 l20 {Appendix}
@@ -136,11 +136,11 @@ $result_tree_text{'thispart'} = '*document_root C11
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Appendix}
+    {normal_text:Appendix}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {In appendix\\n}
+   {normal_text:In appendix\\n}
 ';
 
 

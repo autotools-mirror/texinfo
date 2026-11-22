@@ -19,7 +19,7 @@ $result_tree_text{'node_too_much_args'} = '*document_root C2
   *arguments_line C4
    *line_arg C2
     {spaces_before_argument: }
-    {first}
+    {normal_text:first}
    *line_arg C1
     {spaces_before_argument: }
    *line_arg C1
@@ -28,9 +28,9 @@ $result_tree_text{'node_too_much_args'} = '*document_root C2
    |EXTRA
    |manual_content:A{2|2}
     {spaces_before_argument:  }
-    {(}
-    {dir}
-    {)}
+    {normal_text:(}
+    {normal_text:dir}
+    {normal_text:)}
 ';
 
 

@@ -17,21 +17,21 @@ $result_tree_text{'not_letters_in_prototype'} = '*document_root C1
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument:  }
-     {1.3  5-6}
+     {normal_text:1.3  5-6}
      {spaces_after_argument:\\n}
    *before_item C4
     {ignorable_spaces_after_command: }
     *paragraph C1
-     {1.3 }
+     {normal_text:1.3 }
     {ignorable_spaces_after_command: }
     *paragraph C1
-     {5-6\\n}
+     {normal_text:5-6\\n}
    *@end C1 l3
    |EXTRA
    |text_arg:{multitable}
     *line_arg C3
      {spaces_before_argument: }
-     {multitable}
+     {normal_text:multitable}
      {spaces_after_argument:\\n}
 ';
 

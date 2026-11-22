@@ -19,7 +19,7 @@ $result_tree_text{'command_in_node_redirection_other_command'} = '*document_root
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C4 l2 {t @r{in r}}
  |EXTRA
@@ -28,10 +28,10 @@ $result_tree_text{'command_in_node_redirection_other_command'} = '*document_root
   *arguments_line C1
    *line_arg C4
     {spaces_before_argument: }
-    {t }
+    {normal_text:t }
     *@r C1 l2
      *brace_container C1
-      {in r}
+      {normal_text:in r}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@anchor C1 l4
@@ -41,7 +41,7 @@ $result_tree_text{'command_in_node_redirection_other_command'} = '*document_root
    *brace_arg C1
     *@sansserif C1 l4
      *brace_container C1
-      {gg}
+      {normal_text:gg}
   {spaces_after_close_brace:\\n}
 ';
 

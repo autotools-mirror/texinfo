@@ -19,174 +19,174 @@ $result_tree_text{'image_and_spaces_formatting'} = '*document_root C2
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@image C1 l3
   |EXTRA
   |input_encoding_name:{utf-8}
    *brace_arg C1
-    {words}
-  { }
+    {normal_text:words}
+  {normal_text: }
   *@image C1 l3
   |EXTRA
   |input_encoding_name:{utf-8}
    *brace_arg C1
-    {words}
-  { }
+    {normal_text:words}
+  {normal_text: }
   *@image C1 l3
   |EXTRA
   |input_encoding_name:{utf-8}
    *brace_arg C1
-    {words}
-  { }
+    {normal_text:words}
+  {normal_text: }
   *@image C1 l3
   |EXTRA
   |input_encoding_name:{utf-8}
    *brace_arg C1
-    {words}
-  { }
+    {normal_text:words}
+  {normal_text: }
   *@image C1 l3
   |EXTRA
   |input_encoding_name:{utf-8}
    *brace_arg C1
-    {words}
-  { }
+    {normal_text:words}
+  {normal_text: }
   *@image C1 l3
   |EXTRA
   |input_encoding_name:{utf-8}
    *brace_arg C1
-    {words}
-  { }
+    {normal_text:words}
+  {normal_text: }
   *@image C1 l3
   |EXTRA
   |input_encoding_name:{utf-8}
    *brace_arg C1
-    {words}
-  {\\n}
+    {normal_text:words}
+  {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C15
-   {Some text }
+   {normal_text:Some text }
    *@image C1 l5
    |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C1
-     {words}
-   { }
+     {normal_text:words}
+   {normal_text: }
    *@image C1 l5
    |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C1
-     {words}
-   { }
+     {normal_text:words}
+   {normal_text: }
    *@image C1 l5
    |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C1
-     {words}
-   { }
+     {normal_text:words}
+   {normal_text: }
    *@image C1 l5
    |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C1
-     {words}
-   { }
+     {normal_text:words}
+   {normal_text: }
    *@image C1 l5
    |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C1
-     {words}
-   { }
+     {normal_text:words}
+   {normal_text: }
    *@image C1 l5
    |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C1
-     {words}
-   { }
+     {normal_text:words}
+   {normal_text: }
    *@image C1 l5
    |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C1
-     {words}
-   {.\\n}
+     {normal_text:words}
+   {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C15
-   {Some text }
+   {normal_text:Some text }
    *@image C1 l7
    |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C1
-     {words}
-   { text aaaaaaaaa }
+     {normal_text:words}
+   {normal_text: text aaaaaaaaa }
    *@image C1 l7
    |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C1
-     {words}
-   { text bbbbbbbbbbb }
+     {normal_text:words}
+   {normal_text: text bbbbbbbbbbb }
    *@image C1 l7
    |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C1
-     {words}
-   { text ccccccccccccc }
+     {normal_text:words}
+   {normal_text: text ccccccccccccc }
    *@image C1 l7
    |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C1
-     {words}
-   { text ddddddddddddd }
+     {normal_text:words}
+   {normal_text: text ddddddddddddd }
    *@image C1 l7
    |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C1
-     {words}
-   { text eeeeeeeeeeeeeee }
+     {normal_text:words}
+   {normal_text: text eeeeeeeeeeeeeee }
    *@image C1 l7
    |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C1
-     {words}
-   { text fffffffffff }
+     {normal_text:words}
+   {normal_text: text fffffffffff }
    *@image C1 l7
    |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C1
-     {words}
-   {.\\n}
+     {normal_text:words}
+   {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C3
-   {AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA }
+   {normal_text:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA }
    *@image C1 l9
    |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C1
-     {words}
-   {\\n}
+     {normal_text:words}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C3
-   {AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABBBBBBBB }
+   {normal_text:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABBBBBBBB }
    *@image C1 l11
    |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C1
-     {words}
-   {\\n}
+     {normal_text:words}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C5
-   {Text. }
+   {normal_text:Text. }
    *@image C1 l13
    |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C1
-     {words}
-   {       }
+     {normal_text:words}
+   {normal_text:       }
    *@image C1 l13
    |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C1
-     {words}
-   {.\\n}
+     {normal_text:words}
+   {normal_text:.\\n}
   {empty_line:\\n}
 ';
 

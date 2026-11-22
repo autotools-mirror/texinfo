@@ -20,14 +20,14 @@ $result_tree_text{'empty_main_def_arguments'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {NNN}
+       {normal_text:NNN}
      {spaces_after_argument:\\n}
    *@end C1 l2
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
-     {deffn}
+     {normal_text:deffn}
      {spaces_after_argument:\\n}
 ';
 

@@ -32,11 +32,11 @@ $result_tree_text{'value_in_macro_formal_arg'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C1
-   {macro_arg1\\n}
+   {normal_text:macro_arg1\\n}
 ';
 
 

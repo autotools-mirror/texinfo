@@ -24,7 +24,7 @@ $result_tree_text{'epub_metadata'} = '*document_root C5
         >{spaces_before_argument:\\n}
      *line_arg C3
       {spaces_before_argument: }
-      {The Title}
+      {normal_text:The Title}
       {spaces_after_argument:\\n}
     *@html C3 l4
     >SOURCEMARKS
@@ -34,7 +34,7 @@ $result_tree_text{'epub_metadata'} = '*document_root C5
      >|text_arg:{ifepub}
       >*line_arg C3
        >{spaces_before_argument: }
-       >{ifepub}
+       >{normal_text:ifepub}
        >{spaces_after_argument:\\n}
     >ignored_conditional_block<1>
      >*@ifnotepub C5 l18
@@ -49,36 +49,36 @@ $result_tree_text{'epub_metadata'} = '*document_root C5
       >|text_arg:{ifnotepub}
        >*line_arg C3
         >{spaces_before_argument: }
-        >{ifnotepub}
+        >{normal_text:ifnotepub}
         >{spaces_after_argument:\\n}
      *arguments_line C1
       *block_line_arg C1
        {spaces_before_argument:\\n}
      *rawpreformatted C11
-      {   <dc:creator\\n}
-      {       id="creator">\\n}
-      {      Some Body\\n}
-      {   </dc:creator>\\n}
-      {   <meta\\n}
-      {       refines="#creator"\\n}
-      {       property="role"\\n}
-      {       scheme="marc:relators"\\n}
-      {       id="role">\\n}
-      {      aut\\n}
-      {   </meta>\\n}
+      {normal_text:   <dc:creator\\n}
+      {normal_text:       id="creator">\\n}
+      {normal_text:      Some Body\\n}
+      {normal_text:   </dc:creator>\\n}
+      {normal_text:   <meta\\n}
+      {normal_text:       refines="#creator"\\n}
+      {normal_text:       property="role"\\n}
+      {normal_text:       scheme="marc:relators"\\n}
+      {normal_text:       id="role">\\n}
+      {normal_text:      aut\\n}
+      {normal_text:   </meta>\\n}
      *@end C1 l16
      |EXTRA
      |text_arg:{html}
       *line_arg C3
        {spaces_before_argument: }
-       {html}
+       {normal_text:html}
        {spaces_after_argument:\\n}
     *@end C1 l23
     |EXTRA
     |text_arg:{documentinfo}
      *line_arg C3
       {spaces_before_argument: }
-      {documentinfo}
+      {normal_text:documentinfo}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
  *@node C1 l25 {Top}
@@ -89,7 +89,7 @@ $result_tree_text{'epub_metadata'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l26 {top}
  |EXTRA
@@ -98,7 +98,7 @@ $result_tree_text{'epub_metadata'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l28 {chapter}
@@ -109,7 +109,7 @@ $result_tree_text{'epub_metadata'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter}
+    {normal_text:chapter}
     {spaces_after_argument:\\n}
  *@chapter C1 l29 {Chap}
  |EXTRA
@@ -119,7 +119,7 @@ $result_tree_text{'epub_metadata'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chap}
+    {normal_text:Chap}
     {spaces_after_argument:\\n}
 ';
 

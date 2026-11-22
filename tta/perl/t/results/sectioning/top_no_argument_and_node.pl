@@ -19,7 +19,7 @@ $result_tree_text{'top_no_argument_and_node'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {start}
+    {normal_text:start}
     {spaces_after_argument:\\n}
  *@top C1 l2
  |EXTRA

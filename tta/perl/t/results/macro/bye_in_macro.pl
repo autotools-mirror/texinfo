@@ -26,11 +26,11 @@ $result_tree_text{'bye_in_macro'} = '*document_root C3
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C1
-   {Text\\n}
+   {normal_text:Text\\n}
    >SOURCEMARKS
    >macro_expansion<start;1>
     >*macro_call@byeinmacro

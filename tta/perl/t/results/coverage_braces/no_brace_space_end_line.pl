@@ -15,16 +15,16 @@ $result_tree_text{'no_brace_space_end_line'} = '*document_root C1
    *@code C2 l1
     {spaces_after_cmd_before_arg: }
     *brace_container C1
-     {c}
-   {.\\n}
+     {normal_text:c}
+   {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C4
    *@TeX C1 l3
     {spaces_after_cmd_before_arg:\\n}
-   {text\\n}
+   {normal_text:text\\n}
    *@code C1 l5
     {spaces_after_cmd_before_arg:\\n}
-   {Arg.}
+   {normal_text:Arg.}
 ';
 
 

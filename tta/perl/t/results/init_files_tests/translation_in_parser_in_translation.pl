@@ -17,7 +17,7 @@ $result_tree_text{'translation_in_parser_in_translation'} = '*document_root C5
    |text_arg:{fr}
     *line_arg C3
      {spaces_before_argument: }
-     {fr}
+     {normal_text:fr}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *@node C1 l3 {Top}
@@ -28,7 +28,7 @@ $result_tree_text{'translation_in_parser_in_translation'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l4 {top}
  |EXTRA
@@ -37,7 +37,7 @@ $result_tree_text{'translation_in_parser_in_translation'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l6 {chap}
@@ -48,7 +48,7 @@ $result_tree_text{'translation_in_parser_in_translation'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
  *@chapter C4 l7 {Chap}
  |EXTRA
@@ -58,7 +58,7 @@ $result_tree_text{'translation_in_parser_in_translation'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chap}
+    {normal_text:Chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypeop C3 l9
@@ -73,33 +73,33 @@ $result_tree_text{'translation_in_parser_in_translation'} = '*document_root C5
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {da}
+       {normal_text:da}
      {spaces: }
      *def_class C1
       *def_line_arg C1
-       {db}
+       {normal_text:db}
      {spaces: }
      *def_type C1
       *def_line_arg C1
-       {dc}
+       {normal_text:dc}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {dd}
+       {normal_text:dd}
      {spaces: }
      *def_typearg C1
       *def_line_arg C1
-       {de}
+       {normal_text:de}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {DOC\\n}
+     {normal_text:DOC\\n}
    *@end C1 l11
    |EXTRA
    |text_arg:{deftypeop}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypeop}
+     {normal_text:deftypeop}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
 ';

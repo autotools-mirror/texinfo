@@ -19,7 +19,7 @@ $result_tree_text{'next_in_menu_is_below'} = '*document_root C9
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C4 l2 {top}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'next_in_menu_is_below'} = '*document_root C9
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C3 l4
@@ -41,17 +41,17 @@ $result_tree_text{'next_in_menu_is_below'} = '*document_root C9
     |EXTRA
     |node_content:A{0|0}
     |normalized:{chapter}
-     {chapter}
+     {normal_text:chapter}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l6
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l8 {chapter}
@@ -62,7 +62,7 @@ $result_tree_text{'next_in_menu_is_below'} = '*document_root C9
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter}
+    {normal_text:chapter}
     {spaces_after_argument:\\n}
  *@chapter C4 l9 {chapter}
  |EXTRA
@@ -72,7 +72,7 @@ $result_tree_text{'next_in_menu_is_below'} = '*document_root C9
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter}
+    {normal_text:chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C4 l11
@@ -85,28 +85,28 @@ $result_tree_text{'next_in_menu_is_below'} = '*document_root C9
     |EXTRA
     |node_content:A{0|0}
     |normalized:{section}
-     {section}
+     {normal_text:section}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 l13
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{subsection}
-     {subsection}
+     {normal_text:subsection}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l14
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l16 {section}
@@ -117,7 +117,7 @@ $result_tree_text{'next_in_menu_is_below'} = '*document_root C9
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {section}
+    {normal_text:section}
     {spaces_after_argument:\\n}
  *@section C4 l17 {section}
  |EXTRA
@@ -127,7 +127,7 @@ $result_tree_text{'next_in_menu_is_below'} = '*document_root C9
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {section}
+    {normal_text:section}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C3 l19
@@ -140,17 +140,17 @@ $result_tree_text{'next_in_menu_is_below'} = '*document_root C9
     |EXTRA
     |node_content:A{0|0}
     |normalized:{subsection}
-     {subsection}
+     {normal_text:subsection}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l21
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l23 {subsection}
@@ -161,7 +161,7 @@ $result_tree_text{'next_in_menu_is_below'} = '*document_root C9
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {subsection}
+    {normal_text:subsection}
     {spaces_after_argument:\\n}
  *@subsection C1 l24 {subsection}
  |EXTRA
@@ -171,7 +171,7 @@ $result_tree_text{'next_in_menu_is_below'} = '*document_root C9
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {subsection}
+    {normal_text:subsection}
     {spaces_after_argument:\\n}
 ';
 

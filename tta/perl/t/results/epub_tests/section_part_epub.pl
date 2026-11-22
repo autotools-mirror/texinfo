@@ -19,7 +19,7 @@ $result_tree_text{'section_part_epub'} = '*document_root C4
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@section C2 l2 {section}
  |EXTRA
@@ -29,7 +29,7 @@ $result_tree_text{'section_part_epub'} = '*document_root C4
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {section}
+    {normal_text:section}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@part C1 l4 {part}
@@ -40,7 +40,7 @@ $result_tree_text{'section_part_epub'} = '*document_root C4
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {part}
+    {normal_text:part}
     {spaces_after_argument:\\n}
 ';
 

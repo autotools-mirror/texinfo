@@ -19,7 +19,7 @@ $result_tree_text{'next_no_prev_to_node'} = '*document_root C4
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C4 l3
@@ -32,28 +32,28 @@ $result_tree_text{'next_no_prev_to_node'} = '*document_root C4
     |EXTRA
     |node_content:A{0|0}
     |normalized:{chap-first-node}
-     {chap first node}
+     {normal_text:chap first node}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 l5
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{no-return}
-     {no return}
+     {normal_text:no return}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l6
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C2 l8 {chap first node}
@@ -64,20 +64,20 @@ $result_tree_text{'next_no_prev_to_node'} = '*document_root C4
   *arguments_line C4
    *line_arg C2
     {spaces_before_argument: }
-    {chap first node}
+    {normal_text:chap first node}
    *line_arg C2
    |EXTRA
    |node_content:A{1|1}
    |normalized:{no-return}
     {spaces_before_argument: }
-    {no return}
+    {normal_text:no return}
    *line_arg
    *line_arg C3
    |EXTRA
    |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l10 {no return}
@@ -88,7 +88,7 @@ $result_tree_text{'next_no_prev_to_node'} = '*document_root C4
   *arguments_line C4
    *line_arg C2
     {spaces_before_argument: }
-    {no return}
+    {normal_text:no return}
    *line_arg
    *line_arg
    *line_arg C3
@@ -96,7 +96,7 @@ $result_tree_text{'next_no_prev_to_node'} = '*document_root C4
    |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument: \\n}
 ';
 

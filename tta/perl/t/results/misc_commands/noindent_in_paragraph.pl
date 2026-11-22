@@ -12,16 +12,16 @@ $result_tree_text{'noindent_in_paragraph'} = '*document_root C1
  *before_node_section C4
   *preamble_before_content
   *paragraph C4
-   {Begin para\\n}
+   {normal_text:Begin para\\n}
    *@noindent l2
    {ignorable_spaces_after_command:\\n}
-   {after noindent.\\n}
+   {normal_text:after noindent.\\n}
   {empty_line:\\n}
   *paragraph C4
-   {Begin para2\\n}
+   {normal_text:Begin para2\\n}
    *@noindent l6
    {ignorable_spaces_after_command:\\n}
-   {after noindent2.\\n}
+   {normal_text:after noindent2.\\n}
 ';
 
 

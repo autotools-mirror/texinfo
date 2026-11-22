@@ -25,7 +25,7 @@ $result_tree_text{'spaces_in_call'} = '*document_root C1
     |text_arg:{linemacro}
      *line_arg C3
       {spaces_before_argument: }
-      {linemacro}
+      {normal_text:linemacro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    >SOURCEMARKS
@@ -45,31 +45,31 @@ $result_tree_text{'spaces_in_call'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {category}
+       {normal_text:category}
      {spaces: }
      *def_name C1
       *def_line_arg C3
        *bracketed_arg C1 l7:@mylinecommand
-        {a b}
+        {normal_text:a b}
        *bracketed_arg C1 l7:@mylinecommand
-        {c d}
+        {normal_text:c d}
        *bracketed_arg C1 l7:@mylinecommand
-        {rest}
+        {normal_text:rest}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {A}
+       {normal_text:A}
      {spaces:  }
      *def_arg C1
       *def_line_arg C1
-       {B}
+       {normal_text:B}
      {spaces_after_argument: \\n}
    *@end C1 l7:@mylinecommand
    |EXTRA
    |text_arg:{defblock}
     *line_arg C3
      {spaces_before_argument: }
-     {defblock}
+     {normal_text:defblock}
      >SOURCEMARKS
      >linemacro_expansion<end;1><p:8>
      {spaces_after_argument:\\n}

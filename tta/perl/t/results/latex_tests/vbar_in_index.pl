@@ -16,14 +16,14 @@ $result_tree_text{'vbar_in_index'} = '*document_root C1
   |index_entry:I{fn,1}
    *line_arg C3
     {spaces_before_argument: }
-    {A|B}
+    {normal_text:A|B}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 l2
   |EXTRA
   |index_entry:I{cp,1}
    *line_arg C3
     {spaces_before_argument: }
-    {C|D}
+    {normal_text:C|D}
     {spaces_after_argument:\\n}
 ';
 

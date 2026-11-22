@@ -23,7 +23,7 @@ $result_tree_text{'command_conditionals_user_defined'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@defindex C1 l5
@@ -31,7 +31,7 @@ $result_tree_text{'command_conditionals_user_defined'} = '*document_root C1
    |misc_args:A{auth}
     *line_arg C3
      {spaces_before_argument: }
-     {auth}
+     {normal_text:auth}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@definfoenclose C1 l7
@@ -39,7 +39,7 @@ $result_tree_text{'command_conditionals_user_defined'} = '*document_root C1
    |misc_args:A{infoencl|:|:}
     *line_arg C3
      {spaces_before_argument: }
-     {infoencl, :,:}
+     {normal_text:infoencl, :,:}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@alias C1 l9
@@ -47,7 +47,7 @@ $result_tree_text{'command_conditionals_user_defined'} = '*document_root C1
    |misc_args:A{strongalias|strong}
     *line_arg C3
      {spaces_before_argument: }
-     {strongalias = strong}
+     {normal_text:strongalias = strong}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
    >SOURCEMARKS
@@ -56,11 +56,11 @@ $result_tree_text{'command_conditionals_user_defined'} = '*document_root C1
      >*arguments_line C1
       >*block_line_arg C3
        >{spaces_before_argument: }
-       >{truc}
+       >{normal_text:truc}
        >{spaces_after_argument:\\n}
   *paragraph C2
    *@@
-   {macro truc is defined.\\n}
+   {normal_text:macro truc is defined.\\n}
    >SOURCEMARKS
    >expanded_conditional_command<end;1><p:23>
     >*@end C1 l13
@@ -68,14 +68,14 @@ $result_tree_text{'command_conditionals_user_defined'} = '*document_root C1
     >|text_arg:{ifcommanddefined}
      >*line_arg C3
       >{spaces_before_argument: }
-      >{ifcommanddefined}
+      >{normal_text:ifcommanddefined}
       >{spaces_after_argument:\\n}
    >ignored_conditional_block<1><p:23>
     >*@ifcommandnotdefined C3 l14
      >*arguments_line C1
       >*block_line_arg C3
        >{spaces_before_argument: }
-       >{truc}
+       >{normal_text:truc}
        >{spaces_after_argument:\\n}
      >{raw:@@macro truc is wrongly not defined\\n}
      >*@end C1 l16
@@ -83,7 +83,7 @@ $result_tree_text{'command_conditionals_user_defined'} = '*document_root C1
      >|text_arg:{ifcommandnotdefined}
       >*line_arg C3
        >{spaces_before_argument: }
-       >{ifcommandnotdefined}
+       >{normal_text:ifcommandnotdefined}
        >{spaces_after_argument:\\n}
   {empty_line:\\n}
   >SOURCEMARKS
@@ -92,12 +92,12 @@ $result_tree_text{'command_conditionals_user_defined'} = '*document_root C1
     >*arguments_line C1
      >*block_line_arg C3
       >{spaces_before_argument: }
-      >{authindex}
+      >{normal_text:authindex}
       >{spaces_after_argument:\\n}
   *paragraph C3
-   {index command }
+   {normal_text:index command }
    *@@
-   {authindex is defined.\\n}
+   {normal_text:authindex is defined.\\n}
    >SOURCEMARKS
    >expanded_conditional_command<end;2><p:22>
     >*@end C1 l20
@@ -105,14 +105,14 @@ $result_tree_text{'command_conditionals_user_defined'} = '*document_root C1
     >|text_arg:{ifcommanddefined}
      >*line_arg C3
       >{spaces_before_argument: }
-      >{ifcommanddefined}
+      >{normal_text:ifcommanddefined}
       >{spaces_after_argument:\\n}
    >ignored_conditional_block<2><p:22>
     >*@ifcommandnotdefined C3 l21
      >*arguments_line C1
       >*block_line_arg C3
        >{spaces_before_argument: }
-       >{authindex}
+       >{normal_text:authindex}
        >{spaces_after_argument:\\n}
      >{raw:index command @@authindex is wrongly not defined\\n}
      >*@end C1 l23
@@ -120,7 +120,7 @@ $result_tree_text{'command_conditionals_user_defined'} = '*document_root C1
      >|text_arg:{ifcommandnotdefined}
       >*line_arg C3
        >{spaces_before_argument: }
-       >{ifcommandnotdefined}
+       >{normal_text:ifcommandnotdefined}
        >{spaces_after_argument:\\n}
   {empty_line:\\n}
   >SOURCEMARKS
@@ -129,12 +129,12 @@ $result_tree_text{'command_conditionals_user_defined'} = '*document_root C1
     >*arguments_line C1
      >*block_line_arg C3
       >{spaces_before_argument: }
-      >{infoencl}
+      >{normal_text:infoencl}
       >{spaces_after_argument:\\n}
   *paragraph C3
-   {definfoenclose }
+   {normal_text:definfoenclose }
    *@@
-   {infoencl is defined.\\n}
+   {normal_text:infoencl is defined.\\n}
    >SOURCEMARKS
    >expanded_conditional_command<end;3><p:21>
     >*@end C1 l27
@@ -142,14 +142,14 @@ $result_tree_text{'command_conditionals_user_defined'} = '*document_root C1
     >|text_arg:{ifcommanddefined}
      >*line_arg C3
       >{spaces_before_argument: }
-      >{ifcommanddefined}
+      >{normal_text:ifcommanddefined}
       >{spaces_after_argument:\\n}
    >ignored_conditional_block<3><p:21>
     >*@ifcommandnotdefined C3 l28
      >*arguments_line C1
       >*block_line_arg C3
        >{spaces_before_argument: }
-       >{infoencl}
+       >{normal_text:infoencl}
        >{spaces_after_argument:\\n}
      >{raw:definfoenclose @@infoencl is wrongly not defined\\n}
      >*@end C1 l30
@@ -157,7 +157,7 @@ $result_tree_text{'command_conditionals_user_defined'} = '*document_root C1
      >|text_arg:{ifcommandnotdefined}
       >*line_arg C3
        >{spaces_before_argument: }
-       >{ifcommandnotdefined}
+       >{normal_text:ifcommandnotdefined}
        >{spaces_after_argument:\\n}
   {empty_line:\\n}
   >SOURCEMARKS
@@ -166,12 +166,12 @@ $result_tree_text{'command_conditionals_user_defined'} = '*document_root C1
     >*arguments_line C1
      >*block_line_arg C3
       >{spaces_before_argument: }
-      >{strongalias}
+      >{normal_text:strongalias}
       >{spaces_after_argument:\\n}
   *paragraph C3
-   {strongalias }
+   {normal_text:strongalias }
    *@@
-   {alias is defined.\\n}
+   {normal_text:alias is defined.\\n}
    >SOURCEMARKS
    >expanded_conditional_command<end;4><p:18>
     >*@end C1 l34
@@ -179,14 +179,14 @@ $result_tree_text{'command_conditionals_user_defined'} = '*document_root C1
     >|text_arg:{ifcommanddefined}
      >*line_arg C3
       >{spaces_before_argument: }
-      >{ifcommanddefined}
+      >{normal_text:ifcommanddefined}
       >{spaces_after_argument:\\n}
    >ignored_conditional_block<4><p:18>
     >*@ifcommandnotdefined C3 l35
      >*arguments_line C1
       >*block_line_arg C3
        >{spaces_before_argument: }
-       >{strongalias}
+       >{normal_text:strongalias}
        >{spaces_after_argument:\\n}
      >{raw:strongalias @@alias is wrongly not defined\\n}
      >*@end C1 l37
@@ -194,7 +194,7 @@ $result_tree_text{'command_conditionals_user_defined'} = '*document_root C1
      >|text_arg:{ifcommandnotdefined}
       >*line_arg C3
        >{spaces_before_argument: }
-       >{ifcommandnotdefined}
+       >{normal_text:ifcommandnotdefined}
        >{spaces_after_argument:\\n}
 ';
 

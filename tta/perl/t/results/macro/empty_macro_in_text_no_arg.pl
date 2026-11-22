@@ -22,12 +22,12 @@ $result_tree_text{'empty_macro_in_text_no_arg'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    {spaces_before_paragraph: }
   *paragraph C1
-   {This.  It.\\n}
+   {normal_text:This.  It.\\n}
    >SOURCEMARKS
    >macro_expansion<start;1><p:5>
     >*macro_call@texnl
@@ -44,11 +44,11 @@ $result_tree_text{'empty_macro_in_text_no_arg'} = '*document_root C1
    |text_arg:{macro}
     *line_arg C3
      {spaces_before_argument: }
-     {macro}
+     {normal_text:macro}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {This 2 see.  A.\\n}
+   {normal_text:This 2 see.  A.\\n}
    >SOURCEMARKS
    >macro_expansion<start;2><p:11>
     >*macro_call@texnltwo

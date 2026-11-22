@@ -18,13 +18,13 @@ $result_tree_text{'raggedright'} = '*document_root C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C1
-    {in raggedright\\n}
+    {normal_text:in raggedright\\n}
    *@end C1 l4
    |EXTRA
    |text_arg:{raggedright}
     *line_arg C3
      {spaces_before_argument: }
-     {raggedright}
+     {normal_text:raggedright}
      {spaces_after_argument:\\n}
 ';
 

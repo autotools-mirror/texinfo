@@ -19,7 +19,7 @@ $result_tree_text{'style_not_closed_root_commands'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C5 l2 {top}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'style_not_closed_root_commands'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C3 l4
@@ -41,23 +41,23 @@ $result_tree_text{'style_not_closed_root_commands'} = '*document_root C6
     |EXTRA
     |node_content:A{0|0}
     |normalized:{chapter}
-     {chapter}
+     {normal_text:chapter}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l6
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
    *@code C1 l8
     *brace_container C2
-     {not closed\\n}
+     {normal_text:not closed\\n}
      {empty_line:\\n}
  *@node C1 l10 {chapter}
  |EXTRA
@@ -67,7 +67,7 @@ $result_tree_text{'style_not_closed_root_commands'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter}
+    {normal_text:chapter}
     {spaces_after_argument:\\n}
  *@chapter C3 l11 {chapter}
  |EXTRA
@@ -77,13 +77,13 @@ $result_tree_text{'style_not_closed_root_commands'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter}
+    {normal_text:chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
    *@code C1 l13
     *brace_container C2
-     {still not closed\\n}
+     {normal_text:still not closed\\n}
      {empty_line:\\n}
  *@bye C1
   *line_arg C1

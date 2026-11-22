@@ -19,7 +19,7 @@ $result_tree_text{'contents_at_end_document_after_node'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C4 l2 {contents at end document after node}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'contents_at_end_document_after_node'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {contents at end document after node}
+    {normal_text:contents at end document after node}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C3 l4
@@ -41,17 +41,17 @@ $result_tree_text{'contents_at_end_document_after_node'} = '*document_root C5
     |EXTRA
     |node_content:A{0|0}
     |normalized:{a-node}
-     {a node}
+     {normal_text:a node}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l6
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@chapter C2 l8 {chap}
@@ -64,7 +64,7 @@ $result_tree_text{'contents_at_end_document_after_node'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C3 l10 {a node}
@@ -75,14 +75,14 @@ $result_tree_text{'contents_at_end_document_after_node'} = '*document_root C5
   *arguments_line C4
    *line_arg C2
     {spaces_before_argument: }
-    {a node}
+    {normal_text:a node}
    *line_arg
    *line_arg
    *line_arg C2
    |EXTRA
    |node_content:A{0|0}
    |normalized:{Top}
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@contents C1 l12

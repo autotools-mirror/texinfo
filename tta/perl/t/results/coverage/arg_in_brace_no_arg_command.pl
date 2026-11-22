@@ -14,8 +14,8 @@ $result_tree_text{'arg_in_brace_no_arg_command'} = '*document_root C1
   *paragraph C2
    *@TeX C1 l1
     *brace_container C1
-     {in tex}
-   {\\n}
+     {normal_text:in tex}
+   {normal_text:\\n}
 ';
 
 

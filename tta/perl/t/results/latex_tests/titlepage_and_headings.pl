@@ -16,13 +16,13 @@ $result_tree_text{'titlepage_and_headings'} = '*document_root C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *paragraph C1
-     {in titlepage\\n}
+     {normal_text:in titlepage\\n}
     *@end C1 l3
     |EXTRA
     |text_arg:{titlepage}
      *line_arg C3
       {spaces_before_argument: }
-      {titlepage}
+      {normal_text:titlepage}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
 ';

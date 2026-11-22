@@ -21,7 +21,7 @@ $result_tree_text{'test_accents_sc_enable_encoding_to_utf8_latin1'} = '*document
    |text_arg:{ISO-8859-1}
     *line_arg C3
      {spaces_before_argument: }
-     {ISO-8859-1}
+     {normal_text:ISO-8859-1}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *@node C1 punctuation_small_case_accents_latin1.texi:l5 {top}
@@ -32,7 +32,7 @@ $result_tree_text{'test_accents_sc_enable_encoding_to_utf8_latin1'} = '*document
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
  *@top C2 punctuation_small_case_accents_latin1.texi:l6 {top section}
  |EXTRA
@@ -41,7 +41,7 @@ $result_tree_text{'test_accents_sc_enable_encoding_to_utf8_latin1'} = '*document
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top section}
+    {normal_text:top section}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 punctuation_small_case_accents_latin1.texi:l8 {node chap}
@@ -52,7 +52,7 @@ $result_tree_text{'test_accents_sc_enable_encoding_to_utf8_latin1'} = '*document
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {node chap}
+    {normal_text:node chap}
     {spaces_after_argument:\\n}
  *@chapter C11 punctuation_small_case_accents_latin1.texi:l9 {chapter}
  |EXTRA
@@ -62,181 +62,181 @@ $result_tree_text{'test_accents_sc_enable_encoding_to_utf8_latin1'} = '*document
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter}
+    {normal_text:chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {``in double q\'\'. `in simple q\'.\\n}
+   {normal_text:``in double q\'\'. `in simple q\'.\\n}
   {empty_line:\\n}
   *paragraph C14
    *@\' C1 punctuation_small_case_accents_latin1.texi:l13
     *following_arg C1
-     {e}
-   {, --- }
+     {normal_text:e}
+   {normal_text:, --- }
    *@dfn C1 punctuation_small_case_accents_latin1.texi:l13
     *brace_container C1
-     {def}
-   { -- }
+     {normal_text:def}
+   {normal_text: -- }
    *@code C1 punctuation_small_case_accents_latin1.texi:l13
     *brace_container C1
-     {in code}
-   {. }
+     {normal_text:in code}
+   {normal_text:. }
    *@samp C1 punctuation_small_case_accents_latin1.texi:l13
     *brace_container C1
-     {in samp}
-   { aé. }
+     {normal_text:in samp}
+   {normal_text: aé. }
    *@comma C1 punctuation_small_case_accents_latin1.texi:l13
     *brace_container
-   { }
+   {normal_text: }
    *@exclamdown C1 punctuation_small_case_accents_latin1.texi:l13
     *brace_container
-   {. }
+   {normal_text:. }
    *@dots C1 punctuation_small_case_accents_latin1.texi:l13
     *brace_container
-   {\\n}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C26
    *@geq C1 punctuation_small_case_accents_latin1.texi:l15
     *brace_container
-   { }
+   {normal_text: }
    *@enddots C1 punctuation_small_case_accents_latin1.texi:l15
     *brace_container
-   { }
+   {normal_text: }
    *@AA C1 punctuation_small_case_accents_latin1.texi:l15
     *brace_container
-   { }
+   {normal_text: }
    *@\' C1 punctuation_small_case_accents_latin1.texi:l15
     *following_arg C1
-     {e}
-   { }
+     {normal_text:e}
+   {normal_text: }
    *@dotaccent C1 punctuation_small_case_accents_latin1.texi:l15
     *brace_container C1
-     {A}
-   { }
+     {normal_text:A}
+   {normal_text: }
    *@l C1 punctuation_small_case_accents_latin1.texi:l15
     *brace_container
-   {. }
+   {normal_text:. }
    *@copyright C1 punctuation_small_case_accents_latin1.texi:l15
     *brace_container
-   {. }
+   {normal_text:. }
    *@error C1 punctuation_small_case_accents_latin1.texi:l15
     *brace_container
-   {.\\n}
+   {normal_text:.\\n}
    *@quotedblleft C1 punctuation_small_case_accents_latin1.texi:l16
     *brace_container
-   { in quotes }
+   {normal_text: in quotes }
    *@quotedblright C1 punctuation_small_case_accents_latin1.texi:l16
     *brace_container
-   {. }
+   {normal_text:. }
    *@expansion C1 punctuation_small_case_accents_latin1.texi:l16
     *brace_container
-   {\\n}
+   {normal_text:\\n}
    *@minus C1 punctuation_small_case_accents_latin1.texi:l17
     *brace_container
-   { }
+   {normal_text: }
    *@registeredsymbol C1 punctuation_small_case_accents_latin1.texi:l17
     *brace_container
-   {\\n}
+   {normal_text:\\n}
   {empty_line:\\n}
   {empty_line:\\n}
   *paragraph C26
    *@u C1 punctuation_small_case_accents_latin1.texi:l20
     *brace_container C1
-     {--a}
-   {\\n}
+     {normal_text:--a}
+   {normal_text:\\n}
    *@^ C1 punctuation_small_case_accents_latin1.texi:l21
     *brace_container C1
-     {--a}
-   {\\n}
+     {normal_text:--a}
+   {normal_text:\\n}
    *@aa C1 punctuation_small_case_accents_latin1.texi:l22
     *brace_container
-   { }
+   {normal_text: }
    *@AA C1 punctuation_small_case_accents_latin1.texi:l22
     *brace_container
-   { }
+   {normal_text: }
    *@^ C1 punctuation_small_case_accents_latin1.texi:l22
     *following_arg C1
-     {e}
-   { }
+     {normal_text:e}
+   {normal_text: }
    *@^ C1 punctuation_small_case_accents_latin1.texi:l22
     *following_arg C1
-     {E}
-   { }
+     {normal_text:E}
+   {normal_text: }
    *@~ C1 punctuation_small_case_accents_latin1.texi:l22
     *brace_container C1
      *@dotless C1 punctuation_small_case_accents_latin1.texi:l22
       *brace_container C1
-       {i}
-   { }
+       {normal_text:i}
+   {normal_text: }
    *@dotless C1 punctuation_small_case_accents_latin1.texi:l22
     *brace_container C1
-     {i}
-   { }
+     {normal_text:i}
+   {normal_text: }
    *@udotaccent C1 punctuation_small_case_accents_latin1.texi:l22
     *brace_container C1
-     {r}
-   { }
+     {normal_text:r}
+   {normal_text: }
    *@v C1 punctuation_small_case_accents_latin1.texi:l22
     *brace_container C1
      *@\' C1 punctuation_small_case_accents_latin1.texi:l22
       *brace_container C1
-       {r}
-   { }
+       {normal_text:r}
+   {normal_text: }
    *@= C1 punctuation_small_case_accents_latin1.texi:l22
     *brace_container C1
      *@, C1 punctuation_small_case_accents_latin1.texi:l22
       *brace_container C1
        *@~ C1 punctuation_small_case_accents_latin1.texi:l22
         *brace_container C1
-         {n}
-   {.\\n}
+         {normal_text:n}
+   {normal_text:.\\n}
    *@equiv C1 punctuation_small_case_accents_latin1.texi:l23
     *brace_container
-   {\\n}
+   {normal_text:\\n}
    *@sc C1 punctuation_small_case_accents_latin1.texi:l24
     *brace_container C17
      *@aa C1 punctuation_small_case_accents_latin1.texi:l24
       *brace_container
-     { }
+     {normal_text: }
      *@AA C1 punctuation_small_case_accents_latin1.texi:l24
       *brace_container
-     { }
+     {normal_text: }
      *@^ C1 punctuation_small_case_accents_latin1.texi:l24
       *following_arg C1
-       {e}
-     { }
+       {normal_text:e}
+     {normal_text: }
      *@^ C1 punctuation_small_case_accents_latin1.texi:l24
       *following_arg C1
-       {E}
-     { é }
+       {normal_text:E}
+     {normal_text: é }
      *@~ C1 punctuation_small_case_accents_latin1.texi:l24
       *brace_container C1
        *@dotless C1 punctuation_small_case_accents_latin1.texi:l24
         *brace_container C1
-         {i}
-     { }
+         {normal_text:i}
+     {normal_text: }
      *@dotless C1 punctuation_small_case_accents_latin1.texi:l24
       *brace_container C1
-       {i}
-     { }
+       {normal_text:i}
+     {normal_text: }
      *@udotaccent C1 punctuation_small_case_accents_latin1.texi:l24
       *brace_container C1
-       {r}
-     { }
+       {normal_text:r}
+     {normal_text: }
      *@v C1 punctuation_small_case_accents_latin1.texi:l24
       *brace_container C1
        *@\' C1 punctuation_small_case_accents_latin1.texi:l24
         *brace_container C1
-         {r}
-     { }
+         {normal_text:r}
+     {normal_text: }
      *@= C1 punctuation_small_case_accents_latin1.texi:l24
       *brace_container C1
        *@, C1 punctuation_small_case_accents_latin1.texi:l24
         *brace_container C1
          *@~ C1 punctuation_small_case_accents_latin1.texi:l24
           *brace_container C1
-           {n}
-   {.\\n}
+           {normal_text:n}
+   {normal_text:.\\n}
   {empty_line:\\n}
 ';
 

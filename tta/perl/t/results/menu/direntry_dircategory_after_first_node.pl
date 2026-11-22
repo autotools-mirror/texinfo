@@ -19,7 +19,7 @@ $result_tree_text{'direntry_dircategory_after_first_node'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C4 l2 {direntry direcategory after first node}
  |EXTRA
@@ -28,13 +28,13 @@ $result_tree_text{'direntry_dircategory_after_first_node'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {direntry direcategory after first node}
+    {normal_text:direntry direcategory after first node}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@dircategory C1 l4
    *line_arg C3
     {spaces_before_argument: }
-    {Cat}
+    {normal_text:Cat}
     {spaces_after_argument:\\n}
   *@direntry C3 l5
    *arguments_line C1
@@ -43,24 +43,24 @@ $result_tree_text{'direntry_dircategory_after_first_node'} = '*document_root C3
    *menu_entry C6 l6
     {menu_entry_leading_text:* }
     *menu_entry_name C1
-     {in text}
+     {normal_text:in text}
     {menu_entry_separator:: }
     *menu_entry_node C3
     |EXTRA
     |manual_content:A{1|1}
-     {(}
-     {in_text}
-     {)}
+     {normal_text:(}
+     {normal_text:in_text}
+     {normal_text:)}
     {menu_entry_separator:. }
     *menu_entry_description C1
      *preformatted C1
-      {in text\\n}
+      {normal_text:in text\\n}
    *@end C1 l7
    |EXTRA
    |text_arg:{direntry}
     *line_arg C3
      {spaces_before_argument: }
-     {direntry}
+     {normal_text:direntry}
      {spaces_after_argument:\\n}
 ';
 

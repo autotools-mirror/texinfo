@@ -19,7 +19,7 @@ $result_tree_text{'various_vtable_command_as_argument'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l2 {top}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'various_vtable_command_as_argument'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l4 {chap}
@@ -39,7 +39,7 @@ $result_tree_text{'various_vtable_command_as_argument'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
  *@chapter C16 l5 {Chap}
  |EXTRA
@@ -49,7 +49,7 @@ $result_tree_text{'various_vtable_command_as_argument'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chap}
+    {normal_text:Chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@vtable C5 l7
@@ -66,7 +66,7 @@ $result_tree_text{'various_vtable_command_as_argument'} = '*document_root C7
      |index_entry:I{vr,1}
       *line_arg C3
        {spaces_before_argument: }
-       {html}
+       {normal_text:html}
        {spaces_after_argument:\\n}
    *table_entry C1
     *table_term C1
@@ -76,7 +76,7 @@ $result_tree_text{'various_vtable_command_as_argument'} = '*document_root C7
      |index_entry:I{vr,2}
       *line_arg C3
        {spaces_before_argument: }
-       {docbook}
+       {normal_text:docbook}
        {spaces_after_argument:\\n}
    *table_entry C1
     *table_term C1
@@ -86,14 +86,14 @@ $result_tree_text{'various_vtable_command_as_argument'} = '*document_root C7
      |index_entry:I{vr,3}
       *line_arg C3
        {spaces_before_argument: }
-       {titi}
+       {normal_text:titi}
        {spaces_after_argument:\\n}
    *@end C1 l11
    |EXTRA
    |text_arg:{vtable}
     *line_arg C3
      {spaces_before_argument: }
-     {vtable}
+     {normal_text:vtable}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@vtable C3 l13
@@ -110,7 +110,7 @@ $result_tree_text{'various_vtable_command_as_argument'} = '*document_root C7
      |index_entry:I{vr,4}
       *line_arg C3
        {spaces_before_argument: }
-       {first}
+       {normal_text:first}
        {spaces_after_argument:\\n}
      *@itemx C1 l15
      |EXTRA
@@ -118,14 +118,14 @@ $result_tree_text{'various_vtable_command_as_argument'} = '*document_root C7
      |index_entry:I{vr,5}
       *line_arg C3
        {spaces_before_argument: }
-       {second}
+       {normal_text:second}
        {spaces_after_argument:\\n}
    *@end C1 l16
    |EXTRA
    |text_arg:{vtable}
     *line_arg C3
      {spaces_before_argument: }
-     {vtable}
+     {normal_text:vtable}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@vtable C3 l18
@@ -142,7 +142,7 @@ $result_tree_text{'various_vtable_command_as_argument'} = '*document_root C7
      |index_entry:I{vr,6}
       *line_arg C3
        {spaces_before_argument: }
-       {aa}
+       {normal_text:aa}
        {spaces_after_argument:\\n}
      *@itemx C1 l20
      |EXTRA
@@ -150,14 +150,14 @@ $result_tree_text{'various_vtable_command_as_argument'} = '*document_root C7
      |index_entry:I{vr,7}
       *line_arg C3
        {spaces_before_argument: }
-       {bb}
+       {normal_text:bb}
        {spaces_after_argument:\\n}
    *@end C1 l21
    |EXTRA
    |text_arg:{vtable}
     *line_arg C3
      {spaces_before_argument: }
-     {vtable}
+     {normal_text:vtable}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@vtable C3 l23
@@ -174,7 +174,7 @@ $result_tree_text{'various_vtable_command_as_argument'} = '*document_root C7
      |index_entry:I{vr,8}
       *line_arg C3
        {spaces_before_argument: }
-       {caa}
+       {normal_text:caa}
        {spaces_after_argument:\\n}
      *@itemx C1 l25
      |EXTRA
@@ -182,14 +182,14 @@ $result_tree_text{'various_vtable_command_as_argument'} = '*document_root C7
      |index_entry:I{vr,9}
       *line_arg C3
        {spaces_before_argument: }
-       {cbb}
+       {normal_text:cbb}
        {spaces_after_argument:\\n}
    *@end C1 l26
    |EXTRA
    |text_arg:{vtable}
     *line_arg C3
      {spaces_before_argument: }
-     {vtable}
+     {normal_text:vtable}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@vtable C4 l28
@@ -206,7 +206,7 @@ $result_tree_text{'various_vtable_command_as_argument'} = '*document_root C7
      |index_entry:I{vr,10}
       *line_arg C3
        {spaces_before_argument: }
-       {a + b}
+       {normal_text:a + b}
        {spaces_after_argument:\\n}
    *table_entry C1
     *table_term C1
@@ -216,17 +216,17 @@ $result_tree_text{'various_vtable_command_as_argument'} = '*document_root C7
      |index_entry:I{vr,11}
       *line_arg C4
        {spaces_before_argument: }
-       {a}
+       {normal_text:a}
        *@sup C1 l30
         *brace_container C1
-         {c}
+         {normal_text:c}
        {spaces_after_argument:\\n}
    *@end C1 l31
    |EXTRA
    |text_arg:{vtable}
     *line_arg C3
      {spaces_before_argument: }
-     {vtable}
+     {normal_text:vtable}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@vtable C3 l33
@@ -243,7 +243,7 @@ $result_tree_text{'various_vtable_command_as_argument'} = '*document_root C7
      |index_entry:I{vr,12}
       *line_arg C3
        {spaces_before_argument: }
-       {anchor 1}
+       {normal_text:anchor 1}
        {spaces_after_argument:\\n}
      *@itemx C1 l35
      |EXTRA
@@ -251,14 +251,14 @@ $result_tree_text{'various_vtable_command_as_argument'} = '*document_root C7
      |index_entry:I{vr,13}
       *line_arg C3
        {spaces_before_argument: }
-       {anchor 2}
+       {normal_text:anchor 2}
        {spaces_after_argument:\\n}
    *@end C1 l36
    |EXTRA
    |text_arg:{vtable}
     *line_arg C3
      {spaces_before_argument: }
-     {vtable}
+     {normal_text:vtable}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@vtable C3 l38
@@ -275,7 +275,7 @@ $result_tree_text{'various_vtable_command_as_argument'} = '*document_root C7
      |index_entry:I{vr,14}
       *line_arg C3
        {spaces_before_argument: }
-       {:uu:}
+       {normal_text::uu:}
        {spaces_after_argument:\\n}
      *@itemx C1 l40
      |EXTRA
@@ -283,14 +283,14 @@ $result_tree_text{'various_vtable_command_as_argument'} = '*document_root C7
      |index_entry:I{vr,15}
       *line_arg C3
        {spaces_before_argument: }
-       {?nn?}
+       {normal_text:?nn?}
        {spaces_after_argument:\\n}
    *@end C1 l41
    |EXTRA
    |text_arg:{vtable}
     *line_arg C3
      {spaces_before_argument: }
-     {vtable}
+     {normal_text:vtable}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l43 {Indices}
@@ -302,7 +302,7 @@ $result_tree_text{'various_vtable_command_as_argument'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Indices}
+    {normal_text:Indices}
     {spaces_after_argument:\\n}
  *@appendix C3 l44 {Print the index}
  |EXTRA
@@ -312,7 +312,7 @@ $result_tree_text{'various_vtable_command_as_argument'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Print the index}
+    {normal_text:Print the index}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@printindex C1 l46
@@ -321,7 +321,7 @@ $result_tree_text{'various_vtable_command_as_argument'} = '*document_root C7
   |misc_args:A{vr}
    *line_arg C3
     {spaces_before_argument: }
-    {vr}
+    {normal_text:vr}
     {spaces_after_argument:\\n}
 ';
 

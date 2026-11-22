@@ -19,7 +19,7 @@ $result_tree_text{'menu_in_example'} = '*document_root C2
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@example C3 l3
@@ -35,25 +35,25 @@ $result_tree_text{'menu_in_example'} = '*document_root C2
      *menu_entry_node C3
      |EXTRA
      |manual_content:A{1|1}
-      {(}
-      {entry}
-      {)}
+      {normal_text:(}
+      {normal_text:entry}
+      {normal_text:)}
      {menu_entry_separator:::}
      *menu_entry_description C2
       *preformatted C1
-       {\\n}
+       {normal_text:\\n}
       *@cartouche C3 l6
        *arguments_line C1
         *block_line_arg C1
          {spaces_before_argument:\\n}
        *preformatted C1
-        {in cartouche in description in menu in example\\n}
+        {normal_text:in cartouche in description in menu in example\\n}
        *@end C1 l8
        |EXTRA
        |text_arg:{cartouche}
         *line_arg C3
          {spaces_before_argument: }
-         {cartouche}
+         {normal_text:cartouche}
          {spaces_after_argument:\\n}
     *menu_comment C3
      *preformatted C1
@@ -63,13 +63,13 @@ $result_tree_text{'menu_in_example'} = '*document_root C2
        *block_line_arg C1
         {spaces_before_argument:\\n}
       *preformatted C1
-       {in cartouche in menu comment in menu in example\\n}
+       {normal_text:in cartouche in menu comment in menu in example\\n}
       *@end C1 l12
       |EXTRA
       |text_arg:{cartouche}
        *line_arg C3
         {spaces_before_argument: }
-        {cartouche}
+        {normal_text:cartouche}
         {spaces_after_argument:\\n}
      *preformatted C1
       {empty_line:\\n}
@@ -80,47 +80,47 @@ $result_tree_text{'menu_in_example'} = '*document_root C2
      |manual_content:A{1|1}
      |node_content:A{4|4}
      |normalized:{menu}
-      {(}
-      {node}
-      {)}
-      { }
-      {menu}
+      {normal_text:(}
+      {normal_text:node}
+      {normal_text:)}
+      {normal_text: }
+      {normal_text:menu}
      {menu_entry_separator:::      }
      *menu_entry_description C1
       *preformatted C1
-       {a node in menu\\n}
+       {normal_text:a node in menu\\n}
     *menu_entry C6 l15
      {menu_entry_leading_text:* }
      *menu_entry_name C1
-      {a menu name}
+      {normal_text:a menu name}
      {menu_entry_separator::}
      *menu_entry_node C5
      |EXTRA
      |manual_content:A{1|1}
      |node_content:A{4|4}
      |normalized:{node}
-      {(}
-      {other}
-      {)}
-      { }
-      {node}
+      {normal_text:(}
+      {normal_text:other}
+      {normal_text:)}
+      {normal_text: }
+      {normal_text:node}
      {menu_entry_separator:.}
      *menu_entry_description C1
       *preformatted C1
-       {\\n}
+       {normal_text:\\n}
     *@end C1 l16
     |EXTRA
     |text_arg:{menu}
      *line_arg C3
       {spaces_before_argument: }
-      {menu}
+      {normal_text:menu}
       {spaces_after_argument:\\n}
    *@end C1 l17
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
 ';
 

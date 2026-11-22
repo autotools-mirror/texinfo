@@ -19,7 +19,7 @@ $result_tree_text{'end_sentence_upper_case_in_ref'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C6 l2 {top}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'end_sentence_upper_case_in_ref'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@anchor C1 l4
@@ -36,18 +36,18 @@ $result_tree_text{'end_sentence_upper_case_in_ref'} = '*document_root C3
   |identifier:{LINKS}
   |is_target:{1}
    *brace_arg C1
-    {LINKS}
+    {normal_text:LINKS}
   {spaces_after_close_brace:\\n}
   {empty_line:\\n}
   *paragraph C3
-   {Some text known to work correctly, define function is available cut }
+   {normal_text:Some text known to work correctly, define function is available cut }
    *@ref C1 l6
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{LINKS}
-     {LINKS}
-   {.  Something more.\\n}
+     {normal_text:LINKS}
+   {normal_text:.  Something more.\\n}
 ';
 
 

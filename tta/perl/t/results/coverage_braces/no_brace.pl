@@ -14,13 +14,13 @@ $result_tree_text{'no_brace'} = '*document_root C1
   *paragraph C6
    *@TeX C1 l1
     {spaces_after_cmd_before_arg: }
-   {and }
+   {normal_text:and }
    *@code C1 l1
     {spaces_after_cmd_before_arg: }
-   {code and }
+   {normal_text:code and }
    *@footnote C1 l1
     {spaces_after_cmd_before_arg: }
-   {footnote }
+   {normal_text:footnote }
 ';
 
 

@@ -17,20 +17,20 @@ $result_tree_text{'something_before_columnfractions'} = '*document_root C1
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     {aaa }
+     {normal_text:aaa }
      *@columnfractions C1 l1
      |EXTRA
      |misc_args:A{0.3|0.7}
       *line_arg C3
        {spaces_before_argument: }
-       {0.3 0.7}
+       {normal_text:0.3 0.7}
        {spaces_after_argument:\\n}
    *@end C1 l2
    |EXTRA
    |text_arg:{multitable}
     *line_arg C2
      {spaces_before_argument: }
-     {multitable}
+     {normal_text:multitable}
 ';
 
 

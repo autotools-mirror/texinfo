@@ -24,30 +24,30 @@ $result_tree_text{'index_command_before_end_table'} = '*document_root C1
      *@item C1 l3
       *line_arg C3
        {spaces_before_argument: }
-       {in item}
+       {normal_text:in item}
        {spaces_after_argument:\\n}
      *@itemx C1 l4
       *line_arg C3
        {spaces_before_argument: }
-       {in itemx}
+       {normal_text:in itemx}
        {spaces_after_argument:\\n}
     *table_definition C3
      *paragraph C1
-      {aaaaa\\n}
+      {normal_text:aaaaa\\n}
      {empty_line:\\n}
      *index_entry_command@vindex C1 l7
      |EXTRA
      |index_entry:I{vr,1}
       *line_arg C3
        {spaces_before_argument: }
-       {var}
+       {normal_text:var}
        {spaces_after_argument:\\n}
    *@end C1 l8
    |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
-     {table}
+     {normal_text:table}
      {spaces_after_argument:\\n}
 ';
 

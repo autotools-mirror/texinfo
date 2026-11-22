@@ -19,7 +19,7 @@ $result_tree_text{'documentscript_before_documentlanguage'} = '*document_root C5
    |text_arg:{Latn}
     *line_arg C3
      {spaces_before_argument: }
-     {Latn}
+     {normal_text:Latn}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@documentlanguage C1 l4
@@ -28,7 +28,7 @@ $result_tree_text{'documentscript_before_documentlanguage'} = '*document_root C5
    |text_arg:{sr}
     *line_arg C3
      {spaces_before_argument: }
-     {sr}
+     {normal_text:sr}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *@node C1 l6 {Top}
@@ -39,7 +39,7 @@ $result_tree_text{'documentscript_before_documentlanguage'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l7 {top}
  |EXTRA
@@ -48,7 +48,7 @@ $result_tree_text{'documentscript_before_documentlanguage'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l9 {chap}
@@ -59,7 +59,7 @@ $result_tree_text{'documentscript_before_documentlanguage'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
  *@chapter C3 l10 {Chap}
  |EXTRA
@@ -69,7 +69,7 @@ $result_tree_text{'documentscript_before_documentlanguage'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chap}
+    {normal_text:Chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@defivar C2 l12
@@ -93,22 +93,22 @@ $result_tree_text{'documentscript_before_documentlanguage'} = '*document_root C5
      {spaces: }
      *def_class C1
       *def_line_arg C1
-       {some}
+       {normal_text:some}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {other}
+       {normal_text:other}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {ivar}
+       {normal_text:ivar}
      {spaces_after_argument:\\n}
    *@end C1 l13
    |EXTRA
    |text_arg:{defivar}
     *line_arg C3
      {spaces_before_argument: }
-     {defivar}
+     {normal_text:defivar}
      {spaces_after_argument:\\n}
 ';
 

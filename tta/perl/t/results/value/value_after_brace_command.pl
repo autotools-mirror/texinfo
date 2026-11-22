@@ -35,10 +35,10 @@ $result_tree_text{'value_after_brace_command'} = '*document_root C1
     >value_expansion<start;1><p:1>{{a}}
      >*@value C1
       >*brace_container C1
-       >{bracedletter}
+       >{normal_text:bracedletter}
     *brace_container C1
-     {a}
-   {\\n}
+     {normal_text:a}
+   {normal_text:\\n}
    *@ringaccent C1 l5
    >SOURCEMARKS
    >value_expansion<end;2>
@@ -47,8 +47,8 @@ $result_tree_text{'value_after_brace_command'} = '*document_root C1
     >value_expansion<start;2><p:1>{@unknown}
      >*@value C1
       >*brace_container C1
-       >{unknowncmd}
-   {\\n}
+       >{normal_text:unknowncmd}
+   {normal_text:\\n}
    *@^ C2 l6
    >SOURCEMARKS
    >value_expansion<end;3>
@@ -57,10 +57,10 @@ $result_tree_text{'value_after_brace_command'} = '*document_root C1
     >value_expansion<start;3><p:1>{{a}}
      >*@value C1
       >*brace_container C1
-       >{bracedletter}
+       >{normal_text:bracedletter}
     *brace_container C1
-     {a}
-   {\\n}
+     {normal_text:a}
+   {normal_text:\\n}
    *@^ C1 l7
    >SOURCEMARKS
    >value_expansion<end;4>
@@ -69,8 +69,8 @@ $result_tree_text{'value_after_brace_command'} = '*document_root C1
     >value_expansion<start;4><p:1>{@unknown}
      >*@value C1
       >*brace_container C1
-       >{unknowncmd}
-   {\\n}
+       >{normal_text:unknowncmd}
+   {normal_text:\\n}
    *@code C2 l8
    >SOURCEMARKS
    >value_expansion<end;5>
@@ -79,10 +79,10 @@ $result_tree_text{'value_after_brace_command'} = '*document_root C1
     >value_expansion<start;5><p:1>{{a}}
      >*@value C1
       >*brace_container C1
-       >{bracedletter}
+       >{normal_text:bracedletter}
     *brace_container C1
-     {a}
-   {\\n}
+     {normal_text:a}
+   {normal_text:\\n}
    *@code C1 l9
    >SOURCEMARKS
    >value_expansion<end;6>
@@ -91,8 +91,8 @@ $result_tree_text{'value_after_brace_command'} = '*document_root C1
     >value_expansion<start;6><p:1>{@unknown}
      >*@value C1
       >*brace_container C1
-       >{unknowncmd}
-   {\\n}
+       >{normal_text:unknowncmd}
+   {normal_text:\\n}
 ';
 
 

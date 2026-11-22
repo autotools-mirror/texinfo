@@ -19,7 +19,7 @@ $result_tree_text{'multiple_captions'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l2 {top}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'multiple_captions'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l4 {chap}
@@ -39,7 +39,7 @@ $result_tree_text{'multiple_captions'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
  *@chapter C5 l5 {chap}
  |EXTRA
@@ -49,7 +49,7 @@ $result_tree_text{'multiple_captions'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@float C6 l7
@@ -62,27 +62,27 @@ $result_tree_text{'multiple_captions'} = '*document_root C5
    *arguments_line C2
     *block_line_arg C2
      {spaces_before_argument: }
-     {a}
+     {normal_text:a}
     *block_line_arg C3
      {spaces_before_argument: }
-     {b}
+     {normal_text:b}
      {spaces_after_argument:\\n}
    *@caption C1 l8
     *brace_command_context C1
      *paragraph C1
-      {caption 1}
+      {normal_text:caption 1}
    {spaces_after_close_brace:\\n}
    *@caption C1 l9
     *brace_command_context C1
      *paragraph C1
-      {multiple}
+      {normal_text:multiple}
    {spaces_after_close_brace:\\n}
    *@end C1 l10
    |EXTRA
    |text_arg:{float}
     *line_arg C3
      {spaces_before_argument: }
-     {float}
+     {normal_text:float}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@float C11 l12
@@ -95,36 +95,36 @@ $result_tree_text{'multiple_captions'} = '*document_root C5
    *arguments_line C2
     *block_line_arg C2
      {spaces_before_argument: }
-     {c}
+     {normal_text:c}
     *block_line_arg C3
      {spaces_before_argument: }
-     {d}
+     {normal_text:d}
      {spaces_after_argument:\\n}
    *@shortcaption C1 l13
     *brace_command_context C1
      *paragraph C1
-      {shortcaption 1}
+      {normal_text:shortcaption 1}
    {spaces_after_close_brace:\\n}
    *@shortcaption C1 l14
     *brace_command_context C1
      *paragraph C1
-      {multiple shortc 1}
+      {normal_text:multiple shortc 1}
    {spaces_after_close_brace:\\n}
    {empty_line:\\n}
    *paragraph C1
-    {Something.\\n}
+    {normal_text:Something.\\n}
    {empty_line:\\n}
    *@shortcaption C1 l18
     *brace_command_context C1
      *paragraph C1
-      {another}
+      {normal_text:another}
    {spaces_after_close_brace:\\n}
    *@end C1 l19
    |EXTRA
    |text_arg:{float}
     *line_arg C3
      {spaces_before_argument: }
-     {float}
+     {normal_text:float}
      {spaces_after_argument:\\n}
 ';
 

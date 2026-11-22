@@ -23,15 +23,15 @@ $result_tree_text{'end_of_line_protect_at_end'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {category2}
+       {normal_text:category2}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {deffn_name2}
+       {normal_text:deffn_name2}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {arguments2}
+       {normal_text:arguments2}
      {spaces_after_argument: }
 ';
 

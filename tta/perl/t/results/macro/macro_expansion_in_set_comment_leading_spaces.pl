@@ -23,7 +23,7 @@ $result_tree_text{'macro_expansion_in_set_comment_leading_spaces'} = '*document_
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    >SOURCEMARKS

@@ -23,13 +23,13 @@ $result_tree_text{'flushleft_flushright_in_quotation'} = '*document_root C1
       {spaces_before_argument:\\n}
     {spaces_before_paragraph:   }
     *paragraph C1
-     {f l\\n}
+     {normal_text:f l\\n}
     *@end C1 l5
     |EXTRA
     |text_arg:{flushleft}
      *line_arg C3
       {spaces_before_argument: }
-      {flushleft}
+      {normal_text:flushleft}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@flushright C4 l7
@@ -38,20 +38,20 @@ $result_tree_text{'flushleft_flushright_in_quotation'} = '*document_root C1
       {spaces_before_argument:\\n}
     {spaces_before_paragraph:  }
     *paragraph C1
-     {f r\\n}
+     {normal_text:f r\\n}
     *@end C1 l9
     |EXTRA
     |text_arg:{flushright}
      *line_arg C3
       {spaces_before_argument: }
-      {flushright}
+      {normal_text:flushright}
       {spaces_after_argument:\\n}
    *@end C1 l10
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }
-     {quotation}
+     {normal_text:quotation}
      {spaces_after_argument:\\n}
 ';
 

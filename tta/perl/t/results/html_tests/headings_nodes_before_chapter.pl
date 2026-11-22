@@ -14,7 +14,7 @@ $result_tree_text{'headings_nodes_before_chapter'} = '*document_root C7
    *@settitle C1 l1
     *line_arg C3
      {spaces_before_argument: }
-     {headings nodes before chapter}
+     {normal_text:headings nodes before chapter}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *@node C3 l3 {Node 1}
@@ -25,7 +25,7 @@ $result_tree_text{'headings_nodes_before_chapter'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Node 1}
+    {normal_text:Node 1}
     {spaces_after_argument:\\n}
   *@heading C1 l4
   |EXTRA
@@ -33,7 +33,7 @@ $result_tree_text{'headings_nodes_before_chapter'} = '*document_root C7
   |heading_number:{1}
    *line_arg C3
     {spaces_before_argument: }
-    {Topic One}
+    {normal_text:Topic One}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C3 l6 {Node 2}
@@ -44,7 +44,7 @@ $result_tree_text{'headings_nodes_before_chapter'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Node 2}
+    {normal_text:Node 2}
     {spaces_after_argument:\\n}
   *@heading C1 l7
   |EXTRA
@@ -52,7 +52,7 @@ $result_tree_text{'headings_nodes_before_chapter'} = '*document_root C7
   |heading_number:{2}
    *line_arg C3
     {spaces_before_argument: }
-    {Topic Two}
+    {normal_text:Topic Two}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l9 {Cap 1}
@@ -63,7 +63,7 @@ $result_tree_text{'headings_nodes_before_chapter'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Cap 1}
+    {normal_text:Cap 1}
     {spaces_after_argument:\\n}
  *@chapter C4 l10 {Chapter One}
  |EXTRA
@@ -73,7 +73,7 @@ $result_tree_text{'headings_nodes_before_chapter'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chapter One}
+    {normal_text:Chapter One}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C4 l12
@@ -86,28 +86,28 @@ $result_tree_text{'headings_nodes_before_chapter'} = '*document_root C7
     |EXTRA
     |node_content:A{0|0}
     |normalized:{Node-1}
-     {Node 1}
+     {normal_text:Node 1}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 l14
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{Node-2}
-     {Node 2}
+     {normal_text:Node 2}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l15
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l17 {Cap 2}
@@ -118,7 +118,7 @@ $result_tree_text{'headings_nodes_before_chapter'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Cap 2}
+    {normal_text:Cap 2}
     {spaces_after_argument:\\n}
  *@chapter C1 l18 {Chapter Two}
  |EXTRA
@@ -128,7 +128,7 @@ $result_tree_text{'headings_nodes_before_chapter'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chapter Two}
+    {normal_text:Chapter Two}
     {spaces_after_argument:\\n}
 ';
 

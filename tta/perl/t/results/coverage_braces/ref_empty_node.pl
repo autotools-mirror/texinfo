@@ -19,8 +19,8 @@ $result_tree_text{'ref_empty_node'} = '*document_root C1
     *brace_arg
     *brace_arg
     *brace_arg C1
-     {manual}
-   { }
+     {normal_text:manual}
+   {normal_text: }
    *@ref C5 l2
     *brace_arg
     *brace_arg
@@ -29,30 +29,30 @@ $result_tree_text{'ref_empty_node'} = '*document_root C1
      {spaces_before_argument: }
     *brace_arg C2
      {spaces_before_argument: }
-     {Manual}
-   { }
+     {normal_text:Manual}
+   {normal_text: }
    *@inforef C3 l2
     *brace_arg
     *brace_arg
     *brace_arg C1
-     {imanual}
-   {\\n}
+     {normal_text:imanual}
+   {normal_text:\\n}
    *@xref C5 l3
     *brace_arg C1
      {spaces_before_argument: }
     *brace_arg C2
      {spaces_before_argument: }
-     {Bidule}
+     {normal_text:Bidule}
     *brace_arg C2
      {spaces_before_argument: }
-     {Truc}
+     {normal_text:Truc}
     *brace_arg C2
      {spaces_before_argument: }
-     {file}
+     {normal_text:file}
     *brace_arg C2
      {spaces_before_argument: }
-     {Printed}
-   {.\\n}
+     {normal_text:Printed}
+   {normal_text:.\\n}
 ';
 
 

@@ -19,7 +19,7 @@ $result_tree_text{'inter_item_commands_in_itemize'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l2 {top}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'inter_item_commands_in_itemize'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l4 {chapter}
@@ -39,7 +39,7 @@ $result_tree_text{'inter_item_commands_in_itemize'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter}
+    {normal_text:chapter}
     {spaces_after_argument:\\n}
  *@chapter C7 l5 {chap}
  |EXTRA
@@ -49,7 +49,7 @@ $result_tree_text{'inter_item_commands_in_itemize'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@itemize C4 l7
@@ -70,20 +70,20 @@ $result_tree_text{'inter_item_commands_in_itemize'} = '*document_root C5
     |index_entry:I{cp,1}
      *line_arg C3
       {spaces_before_argument: }
-      {also a cindex in itemize}
+      {normal_text:also a cindex in itemize}
       {spaces_after_argument:\\n}
    *@item C2 l10
    |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
-     {e--mph item\\n}
+     {normal_text:e--mph item\\n}
    *@end C1 l11
    |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }
-     {itemize}
+     {normal_text:itemize}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@itemize C5 l13
@@ -99,14 +99,14 @@ $result_tree_text{'inter_item_commands_in_itemize'} = '*document_root C5
     |index_entry:I{cp,2}
      *line_arg C3
       {spaces_before_argument: }
-      {index entry within itemize}
+      {normal_text:index entry within itemize}
       {spaces_after_argument:\\n}
    *@item C2 l15
    |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
-     {i--tem 1\\n}
+     {normal_text:i--tem 1\\n}
    *@item C3 l16
    |EXTRA
    |item_number:{2}
@@ -117,18 +117,18 @@ $result_tree_text{'inter_item_commands_in_itemize'} = '*document_root C5
     |index_entry:I{cp,3}
      *line_arg C5
       {spaces_before_argument: }
-      {index entry right after }
+      {normal_text:index entry right after }
       *@@
-      {item}
+      {normal_text:item}
       {spaces_after_argument:\\n}
     *paragraph C1
-     {i--tem 2\\n}
+     {normal_text:i--tem 2\\n}
    *@end C1 l18
    |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }
-     {itemize}
+     {normal_text:itemize}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@itemize C4 l20
@@ -142,27 +142,27 @@ $result_tree_text{'inter_item_commands_in_itemize'} = '*document_root C5
       {rawline_text:comment in itemize}
       {spaces_after_argument:\\n}
     *paragraph C2
-     {T--ext before items.\\n}
+     {normal_text:T--ext before items.\\n}
      *index_entry_command@cindex C1 l23
      |EXTRA
      |element_node:{chapter}
      |index_entry:I{cp,4}
       *line_arg C3
        {spaces_before_argument: }
-       {also a cindex in itemize}
+       {normal_text:also a cindex in itemize}
        {spaces_after_argument:\\n}
    *@item C2 l24
    |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
-     {bullet item\\n}
+     {normal_text:bullet item\\n}
    *@end C1 l25
    |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }
-     {itemize}
+     {normal_text:itemize}
      {spaces_after_argument:\\n}
 ';
 

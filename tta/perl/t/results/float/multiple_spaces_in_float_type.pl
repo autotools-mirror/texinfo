@@ -21,19 +21,19 @@ $result_tree_text{'multiple_spaces_in_float_type'} = '*document_root C1
    *arguments_line C2
     *block_line_arg C2
      {spaces_before_argument: }
-     {Type  of  \\f  Float}
+     {normal_text:Type  of  \\f  Float}
     *block_line_arg C3
      {spaces_before_argument: }
-     {myfloat}
+     {normal_text:myfloat}
      {spaces_after_argument:\\n}
    *paragraph C1
-    {inside\\n}
+    {normal_text:inside\\n}
    *@end C1 l3
    |EXTRA
    |text_arg:{float}
     *line_arg C3
      {spaces_before_argument: }
-     {float}
+     {normal_text:float}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@listoffloats C1 l5
@@ -42,7 +42,7 @@ $result_tree_text{'multiple_spaces_in_float_type'} = '*document_root C1
   |global_command_number:{1}
    *line_arg C3
     {spaces_before_argument: }
-    {Type of Float}
+    {normal_text:Type of Float}
     {spaces_after_argument:\\n}
 ';
 

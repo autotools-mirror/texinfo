@@ -23,7 +23,7 @@ $result_tree_text{'alias_of_macro'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@alias C1 l5
@@ -31,11 +31,11 @@ $result_tree_text{'alias_of_macro'} = '*document_root C1
    |misc_args:A{new|mymacro}
     *line_arg C3
      {spaces_before_argument: }
-     {new = mymacro}
+     {normal_text:new = mymacro}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C1
-   {||thearg||\\n}
+   {normal_text:||thearg||\\n}
    >SOURCEMARKS
    >macro_expansion<start;1>
     >*macro_call@mymacro C1

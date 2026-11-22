@@ -19,7 +19,7 @@ $result_tree_text{'inlineraw_in_menu_description'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {first}
+    {normal_text:first}
     {spaces_after_argument:\\n}
  *@top C3 l2 {top}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'inlineraw_in_menu_description'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C4 l4
@@ -40,25 +40,25 @@ $result_tree_text{'inlineraw_in_menu_description'} = '*document_root C3
     *menu_entry_node C3
     |EXTRA
     |manual_content:A{1|1}
-     {(}
-     {manual}
-     {)}
+     {normal_text:(}
+     {normal_text:manual}
+     {normal_text:)}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C3
-      {\\n}
+      {normal_text:\\n}
       *@inlineraw C2 l6
       |EXTRA
       |expand_index:{1}
       |format:{html}
        *brace_arg C1
-        {html}
+        {normal_text:html}
        *brace_arg C4
         {spaces_before_argument: }
-        {in inline raw\\n}
+        {normal_text:in inline raw\\n}
         {empty_line:\\n}
-        {end inlineraw}
-      {\\n}
+        {normal_text:end inlineraw}
+      {normal_text:\\n}
    *menu_comment C1
     *preformatted C1
      {after_menu_description_line:\\n}
@@ -67,7 +67,7 @@ $result_tree_text{'inlineraw_in_menu_description'} = '*document_root C3
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
 ';
 

@@ -16,7 +16,7 @@ $result_tree_text{'def_syn_indices'} = '*document_root C5
    |misc_args:A{cp|fn}
     *line_arg C3
      {spaces_before_argument: }
-     {cp fn}
+     {normal_text:cp fn}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *@node C1 l3 {Top}
@@ -27,7 +27,7 @@ $result_tree_text{'def_syn_indices'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l4 {top}
  |EXTRA
@@ -36,7 +36,7 @@ $result_tree_text{'def_syn_indices'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l6 {Chapter index}
@@ -48,7 +48,7 @@ $result_tree_text{'def_syn_indices'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chapter index}
+    {normal_text:Chapter index}
     {spaces_after_argument:\\n}
  *@chapter C55 l7 {Index}
  |EXTRA
@@ -58,19 +58,19 @@ $result_tree_text{'def_syn_indices'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Index}
+    {normal_text:Index}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C3
-   {definedx truc\\n}
+   {normal_text:definedx truc\\n}
    *@defindex C1 l10
    |EXTRA
    |misc_args:A{truc}
     *line_arg C3
      {spaces_before_argument: }
-     {truc}
+     {normal_text:truc}
      {spaces_after_argument:\\n}
-   {after\\n}
+   {normal_text:after\\n}
   {empty_line:\\n}
   *index_entry_command@trucindex C1 l13
   |EXTRA
@@ -78,7 +78,7 @@ $result_tree_text{'def_syn_indices'} = '*document_root C5
   |index_entry:I{truc,1}
    *line_arg C3
     {spaces_before_argument: }
-    {index truc}
+    {normal_text:index truc}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@defcodeindex C1 l15
@@ -86,7 +86,7 @@ $result_tree_text{'def_syn_indices'} = '*document_root C5
   |misc_args:A{codeidx}
    *line_arg C3
     {spaces_before_argument: }
-    {codeidx}
+    {normal_text:codeidx}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@codeidxindex C1 l17
@@ -95,20 +95,20 @@ $result_tree_text{'def_syn_indices'} = '*document_root C5
   |index_entry:I{codeidx,1}
    *line_arg C8
     {spaces_before_argument: }
-    {a }
+    {normal_text:a }
     *@var C1 l17
      *brace_container C1
-      {index entry}
-    { t}
+      {normal_text:index entry}
+    {normal_text: t}
     *@~ C1 l17
      *following_arg C1
-      {e}
-    { }
+      {normal_text:e}
+    {normal_text: }
     *@^ C1 l17
      *brace_container C1
       *@dotless C1 l17
        *brace_container C1
-        {i}
+        {normal_text:i}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 l19
@@ -117,7 +117,7 @@ $result_tree_text{'def_syn_indices'} = '*document_root C5
   |index_entry:I{cp,1}
    *line_arg C3
     {spaces_before_argument: }
-    {cindex entry}
+    {normal_text:cindex entry}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@syncodeindex C1 l21
@@ -125,7 +125,7 @@ $result_tree_text{'def_syn_indices'} = '*document_root C5
   |misc_args:A{ky|pg}
    *line_arg C3
     {spaces_before_argument: }
-    {ky pg}
+    {normal_text:ky pg}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@kindex C1 l23
@@ -134,7 +134,7 @@ $result_tree_text{'def_syn_indices'} = '*document_root C5
   |index_entry:I{ky,1}
    *line_arg C3
     {spaces_before_argument: }
-    {truc kindex}
+    {normal_text:truc kindex}
     {spaces_after_argument:\\n}
   *index_entry_command@pindex C1 l24
   |EXTRA
@@ -142,7 +142,7 @@ $result_tree_text{'def_syn_indices'} = '*document_root C5
   |index_entry:I{pg,1}
    *line_arg C3
     {spaces_before_argument: }
-    {pindex codeidx}
+    {normal_text:pindex codeidx}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@synindex C1 l26
@@ -150,7 +150,7 @@ $result_tree_text{'def_syn_indices'} = '*document_root C5
   |misc_args:A{truc|cp}
    *line_arg C3
     {spaces_before_argument: }
-    {truc cp}
+    {normal_text:truc cp}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@defindex C1 l28
@@ -158,14 +158,14 @@ $result_tree_text{'def_syn_indices'} = '*document_root C5
   |misc_args:A{abc}
    *line_arg C3
     {spaces_before_argument: }
-    {abc}
+    {normal_text:abc}
     {spaces_after_argument:\\n}
   *@defindex C1 l29
   |EXTRA
   |misc_args:A{defg}
    *line_arg C3
     {spaces_before_argument: }
-    {defg}
+    {normal_text:defg}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@synindex C1 l31
@@ -173,14 +173,14 @@ $result_tree_text{'def_syn_indices'} = '*document_root C5
   |misc_args:A{abc|defg}
    *line_arg C3
     {spaces_before_argument: }
-    {abc defg}
+    {normal_text:abc defg}
     {spaces_after_argument:\\n}
   *@synindex C1 l32
   |EXTRA
   |misc_args:A{defg|ky}
    *line_arg C3
     {spaces_before_argument: }
-    {defg ky}
+    {normal_text:defg ky}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@defgindex C1 l34
@@ -189,7 +189,7 @@ $result_tree_text{'def_syn_indices'} = '*document_root C5
   |index_entry:I{defg,1}
    *line_arg C3
     {spaces_before_argument: }
-    {defg index entry}
+    {normal_text:defg index entry}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@abcindex C1 l36
@@ -198,106 +198,106 @@ $result_tree_text{'def_syn_indices'} = '*document_root C5
   |index_entry:I{abc,1}
    *line_arg C3
     {spaces_before_argument: }
-    {abc index entry}
+    {normal_text:abc index entry}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {pg\\n}
+   {normal_text:pg\\n}
   *@printindex C1 l39
   |EXTRA
   |global_command_number:{1}
   |misc_args:A{pg}
    *line_arg C3
     {spaces_before_argument: }
-    {pg}
+    {normal_text:pg}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {ky\\n}
+   {normal_text:ky\\n}
   *@printindex C1 l42
   |EXTRA
   |global_command_number:{2}
   |misc_args:A{ky}
    *line_arg C3
     {spaces_before_argument: }
-    {ky}
+    {normal_text:ky}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {truc\\n}
+   {normal_text:truc\\n}
   *@printindex C1 l45
   |EXTRA
   |global_command_number:{3}
   |misc_args:A{truc}
    *line_arg C3
     {spaces_before_argument: }
-    {truc}
+    {normal_text:truc}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {value truc\\n}
+   {normal_text:value truc\\n}
   *@printindex C1 l48
   |EXTRA
   |global_command_number:{4}
   |misc_args:A{truc}
    *line_arg C3
     {spaces_before_argument: }
-    {truc}
+    {normal_text:truc}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {cp\\n}
+   {normal_text:cp\\n}
   *@printindex C1 l51
   |EXTRA
   |global_command_number:{5}
   |misc_args:A{cp}
    *line_arg C3
     {spaces_before_argument: }
-    {cp}
+    {normal_text:cp}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {value cp\\n}
+   {normal_text:value cp\\n}
   *@printindex C1 l54
   |EXTRA
   |global_command_number:{6}
   |misc_args:A{cp}
    *line_arg C3
     {spaces_before_argument: }
-    {cp}
+    {normal_text:cp}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {defg\\n}
+   {normal_text:defg\\n}
   *@printindex C1 l57
   |EXTRA
   |global_command_number:{7}
   |misc_args:A{defg}
    *line_arg C3
     {spaces_before_argument: }
-    {defg}
+    {normal_text:defg}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {abc\\n}
+   {normal_text:abc\\n}
   *@printindex C1 l60
   |EXTRA
   |global_command_number:{8}
   |misc_args:A{abc}
    *line_arg C3
     {spaces_before_argument: }
-    {abc}
+    {normal_text:abc}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {fn\\n}
+   {normal_text:fn\\n}
   *@printindex C1 l63
   |EXTRA
   |global_command_number:{9}
   |misc_args:A{fn}
    *line_arg C3
     {spaces_before_argument: }
-    {fn}
+    {normal_text:fn}
     {spaces_after_argument:\\n}
 ';
 

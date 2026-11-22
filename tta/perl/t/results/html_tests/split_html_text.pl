@@ -26,7 +26,7 @@ NodeForward: [U1]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C3 l2 {top}
  |EXTRA
@@ -35,10 +35,10 @@ NodeForward: [U1]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   *paragraph C1
-   {In top\\n}
+   {normal_text:In top\\n}
   {empty_line:\\n}
 U1 unit{C2}{N:chap}{s:@chapter 1 Chap}
 unit_directions:D[prev->[U0]]
@@ -58,7 +58,7 @@ NodeBack: [U0]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
  *@chapter C1 l6 {Chap}
  |EXTRA
@@ -68,7 +68,7 @@ NodeBack: [U0]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chap}
+    {normal_text:Chap}
     {spaces_after_argument:\\n}
 ';
 

@@ -25,7 +25,7 @@ $result_tree_text{'macro_in_value'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@set C1
@@ -37,17 +37,17 @@ $result_tree_text{'macro_in_value'} = '*document_root C1
      {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C1
-   {flagab: a\\n}
+   {normal_text:flagab: a\\n}
    >SOURCEMARKS
    >value_expansion<start;1><p:8>{@ab}
     >*@value C1
      >*brace_container C1
-      >{flagab}
+      >{normal_text:flagab}
    >macro_expansion<start;1><p:8>
     >*macro_call@ab
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
    >SOURCEMARKS
    >macro_expansion<end;1><p:1>
    >value_expansion<end;1><p:1>

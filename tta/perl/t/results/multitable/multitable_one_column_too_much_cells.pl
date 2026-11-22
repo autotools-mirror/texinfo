@@ -18,7 +18,7 @@ $result_tree_text{'multitable_one_column_too_much_cells'} = '*document_root C1
     *block_line_arg C3
      {spaces_before_argument: }
      *bracketed_arg C1 l1
-      {a}
+      {normal_text:a}
      {spaces_after_argument:\\n}
    *multitable_body C4
     *row C1
@@ -29,16 +29,16 @@ $result_tree_text{'multitable_one_column_too_much_cells'} = '*document_root C1
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {a }
+       {normal_text:a }
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {additional tab }
+       {normal_text:additional tab }
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {other additional tab }
+       {normal_text:other additional tab }
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {3rd  additiona tab\\n}
+       {normal_text:3rd  additiona tab\\n}
     *row C1
     |EXTRA
     |row_number:{2}
@@ -47,7 +47,7 @@ $result_tree_text{'multitable_one_column_too_much_cells'} = '*document_root C1
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {a1\\n}
+       {normal_text:a1\\n}
     *row C1
     |EXTRA
     |row_number:{3}
@@ -56,16 +56,16 @@ $result_tree_text{'multitable_one_column_too_much_cells'} = '*document_root C1
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {a2 }
+       {normal_text:a2 }
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {additional tab2 }
+       {normal_text:additional tab2 }
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {other additional tab2 }
+       {normal_text:other additional tab2 }
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {3rd  additional tab2\\n}
+       {normal_text:3rd  additional tab2\\n}
     *row C1
     |EXTRA
     |row_number:{4}
@@ -74,16 +74,16 @@ $result_tree_text{'multitable_one_column_too_much_cells'} = '*document_root C1
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {a3 }
+       {normal_text:a3 }
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {one additional tab\\n}
+       {normal_text:one additional tab\\n}
    *@end C1 l6
    |EXTRA
    |text_arg:{multitable}
     *line_arg C3
      {spaces_before_argument: }
-     {multitable}
+     {normal_text:multitable}
      {spaces_after_argument:\\n}
 ';
 

@@ -16,13 +16,13 @@ $result_tree_text{'heading_command_in_commands'} = '*document_root C1
   *paragraph C2
    *@code C1 l2
     *brace_container C2
-     {\\n}
+     {normal_text:\\n}
      *@everyheading C1 l3
       *line_arg C3
        {spaces_before_argument: }
-       {in code}
+       {normal_text:in code}
        {spaces_after_argument:\\n}
-   {\\n}
+   {normal_text:\\n}
   {empty_line:\\n}
   *@example C3 l6
    *arguments_line C1
@@ -32,14 +32,14 @@ $result_tree_text{'heading_command_in_commands'} = '*document_root C1
     *@everyheading C1 l7
      *line_arg C3
       {spaces_before_argument: }
-      {in example}
+      {normal_text:in example}
       {spaces_after_argument:\\n}
    *@end C1 l8
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@quotation C3 l10
@@ -49,14 +49,14 @@ $result_tree_text{'heading_command_in_commands'} = '*document_root C1
    *@everyheading C1 l11
     *line_arg C3
      {spaces_before_argument: }
-     {in quotation}
+     {normal_text:in quotation}
      {spaces_after_argument:\\n}
    *@end C1 l12
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }
-     {quotation}
+     {normal_text:quotation}
      {spaces_after_argument:\\n}
 ';
 

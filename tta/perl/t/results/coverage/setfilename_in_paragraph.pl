@@ -12,14 +12,14 @@ $result_tree_text{'setfilename_in_paragraph'} = '*document_root C1
  *before_node_section C2
   *preamble_before_setfilename C1
    *paragraph C1
-    {Some text\\n}
+    {normal_text:Some text\\n}
   *preamble_before_content C1
    *@setfilename C1 l2
    |EXTRA
    |text_arg:{setfilename_in_paragraph.info}
     *line_arg C3
      {spaces_before_argument: }
-     {setfilename_in_paragraph.info}
+     {normal_text:setfilename_in_paragraph.info}
      {spaces_after_argument:\\n}
 ';
 

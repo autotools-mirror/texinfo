@@ -18,29 +18,29 @@ $result_tree_text{'noindent_indent'} = '*document_root C1
   *paragraph C1
   |EXTRA
   |indent:{1}
-   {First para\\n}
+   {normal_text:First para\\n}
   {empty_line:\\n}
   *@noindent l5
   {ignorable_spaces_after_command:\\n}
   *paragraph C2
   |EXTRA
   |noindent:{1}
-   {qsddsqkdsqkkmljsqjsqodmmdsqdsmqj dqs sdq sqd sdq dsq sdq sqd sqd sdq sdq \\n}
-   {qsd dsq sdq dsq dssdq sdq sdq sdq dsq sdq dsq dsq sdq dsq sdqsd q\\n}
+   {normal_text:qsddsqkdsqkkmljsqjsqodmmdsqdsmqj dqs sdq sqd sdq dsq sdq sqd sqd sdq sdq \\n}
+   {normal_text:qsd dsq sdq dsq dssdq sdq sdq sdq dsq sdq dsq dsq sdq dsq sdqsd q\\n}
   {empty_line:\\n}
   *@noindent l9
   {ignorable_spaces_after_command: }
   *paragraph C1
   |EXTRA
   |noindent:{1}
-   {noindent in para.\\n}
+   {normal_text:noindent in para.\\n}
   {empty_line:\\n}
   *@indent l11
   {ignorable_spaces_after_command: }
   *paragraph C1
   |EXTRA
   |indent:{1}
-   {unneeded indent\\n}
+   {normal_text:unneeded indent\\n}
 ';
 
 

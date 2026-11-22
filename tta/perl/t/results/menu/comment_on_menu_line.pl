@@ -19,7 +19,7 @@ $result_tree_text{'comment_on_menu_line'} = '*document_root C4
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C3 l3
@@ -36,17 +36,17 @@ $result_tree_text{'comment_on_menu_line'} = '*document_root C4
     |EXTRA
     |node_content:A{0|0}
     |normalized:{first}
-     {first}
+     {normal_text:first}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l5
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@chapter C1 l7 {first}
@@ -57,7 +57,7 @@ $result_tree_text{'comment_on_menu_line'} = '*document_root C4
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {first}
+    {normal_text:first}
     {spaces_after_argument:\\n}
  *@node C1 l8 {first}
  |EXTRA
@@ -67,7 +67,7 @@ $result_tree_text{'comment_on_menu_line'} = '*document_root C4
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {first}
+    {normal_text:first}
     {spaces_after_argument:\\n}
 ';
 

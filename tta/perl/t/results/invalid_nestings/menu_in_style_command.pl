@@ -19,13 +19,13 @@ $result_tree_text{'menu_in_style_command'} = '*document_root C2
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {first}
+    {normal_text:first}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
    *@code C1 l3
     *brace_container C1
-     {\\n}
+     {normal_text:\\n}
   *@menu C3 l4
    *arguments_line C1
     *block_line_arg C1
@@ -35,19 +35,19 @@ $result_tree_text{'menu_in_style_command'} = '*document_root C2
     *menu_entry_node C3
     |EXTRA
     |manual_content:A{1|1}
-     {(}
-     {truc}
-     {)}
+     {normal_text:(}
+     {normal_text:truc}
+     {normal_text:)}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l6
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
 ';
 

@@ -16,7 +16,7 @@ $result_tree_text{'alias_table_command'} = '*document_root C1
    |misc_args:A{myalias|code}
     *line_arg C3
      {spaces_before_argument: }
-     {myalias = code}
+     {normal_text:myalias = code}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
   *@table C3 l3
@@ -32,14 +32,14 @@ $result_tree_text{'alias_table_command'} = '*document_root C1
      *@item C1 l4
       *line_arg C3
        {spaces_before_argument: }
-       {table item (code)}
+       {normal_text:table item (code)}
        {spaces_after_argument:\\n}
    *@end C1 l5
    |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
-     {table}
+     {normal_text:table}
      {spaces_after_argument:\\n}
 ';
 

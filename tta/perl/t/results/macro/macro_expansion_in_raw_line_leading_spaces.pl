@@ -23,7 +23,7 @@ $result_tree_text{'macro_expansion_in_raw_line_leading_spaces'} = '*document_roo
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    >SOURCEMARKS
@@ -52,7 +52,7 @@ $result_tree_text{'macro_expansion_in_raw_line_leading_spaces'} = '*document_roo
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    >SOURCEMARKS

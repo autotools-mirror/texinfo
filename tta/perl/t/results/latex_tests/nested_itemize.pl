@@ -22,14 +22,14 @@ $result_tree_text{'nested_itemize'} = '*document_root C1
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C2
-     {First level item\\n}
-     {   }
+     {normal_text:First level item\\n}
+     {normal_text:   }
    *@item C3 l3
    |EXTRA
    |item_number:{2}
     {ignorable_spaces_after_command: }
     *paragraph C1
-     {First level item\\n}
+     {normal_text:First level item\\n}
     *@itemize C5 l4
      *arguments_line C1
       *block_line_arg C1
@@ -41,14 +41,14 @@ $result_tree_text{'nested_itemize'} = '*document_root C1
      |item_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C2
-       {Second level item\\n}
-       {     }
+       {normal_text:Second level item\\n}
+       {normal_text:     }
      *@item C3 l6
      |EXTRA
      |item_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {Second level item\\n}
+       {normal_text:Second level item\\n}
       *@itemize C5 l7
        *arguments_line C1
         *block_line_arg C1
@@ -60,14 +60,14 @@ $result_tree_text{'nested_itemize'} = '*document_root C1
        |item_number:{1}
         {ignorable_spaces_after_command: }
         *paragraph C2
-         {Third level item\\n}
-         {       }
+         {normal_text:Third level item\\n}
+         {normal_text:       }
        *@item C3 l9
        |EXTRA
        |item_number:{2}
         {ignorable_spaces_after_command: }
         *paragraph C1
-         {Third level item\\n}
+         {normal_text:Third level item\\n}
         *@itemize C5 l10
          *arguments_line C1
           *block_line_arg C1
@@ -79,41 +79,41 @@ $result_tree_text{'nested_itemize'} = '*document_root C1
          |item_number:{1}
           {ignorable_spaces_after_command: }
           *paragraph C2
-           {Fourth level item\\n}
-           {         }
+           {normal_text:Fourth level item\\n}
+           {normal_text:         }
          *@item C2 l12
          |EXTRA
          |item_number:{2}
           {ignorable_spaces_after_command: }
           *paragraph C1
-           {Fourth level item\\n}
+           {normal_text:Fourth level item\\n}
          *@end C1 l13
          |EXTRA
          |text_arg:{itemize}
           *line_arg C3
            {spaces_before_argument: }
-           {itemize}
+           {normal_text:itemize}
            {spaces_after_argument:\\n}
        *@end C1 l14
        |EXTRA
        |text_arg:{itemize}
         *line_arg C3
          {spaces_before_argument: }
-         {itemize}
+         {normal_text:itemize}
          {spaces_after_argument:\\n}
      *@end C1 l15
      |EXTRA
      |text_arg:{itemize}
       *line_arg C3
        {spaces_before_argument: }
-       {itemize}
+       {normal_text:itemize}
        {spaces_after_argument:\\n}
    *@end C1 l16
    |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }
-     {itemize}
+     {normal_text:itemize}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
 ';

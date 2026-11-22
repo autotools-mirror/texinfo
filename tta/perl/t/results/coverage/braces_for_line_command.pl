@@ -13,11 +13,11 @@ $result_tree_text{'braces_for_line_command'} = '*document_root C1
   *preamble_before_content C1
    *@settitle C1 l1
     *line_arg C4
-     {In title }
+     {normal_text:In title }
      *@sc C1 l1
       *brace_container C1
-       {my string}
-     { NEXT}
+       {normal_text:my string}
+     {normal_text: NEXT}
      {spaces_after_argument:\\n}
 ';
 

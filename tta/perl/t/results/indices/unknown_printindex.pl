@@ -16,7 +16,7 @@ $result_tree_text{'unknown_printindex'} = '*document_root C1
   |global_command_number:{1}
    *line_arg C2
     {spaces_before_argument: }
-    {bidule}
+    {normal_text:bidule}
 ';
 
 

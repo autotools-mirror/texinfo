@@ -25,7 +25,7 @@ $result_tree_text{'ifclear_in_macro'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    >SOURCEMARKS
@@ -39,10 +39,10 @@ $result_tree_text{'ifclear_in_macro'} = '*document_root C1
      >*arguments_line C1
       >*block_line_arg C3
        >{spaces_before_argument: }
-       >{notes}
+       >{normal_text:notes}
        >{spaces_after_argument: \\n}
   *paragraph C1
-   {arg\\n}
+   {normal_text:arg\\n}
   {empty_line:\\n}
   >SOURCEMARKS
   >expanded_conditional_command<end;1><p:1>
@@ -51,7 +51,7 @@ $result_tree_text{'ifclear_in_macro'} = '*document_root C1
    >|text_arg:{ifclear}
     >*line_arg C3
      >{spaces_before_argument: }
-     >{ifclear}
+     >{normal_text:ifclear}
      >>SOURCEMARKS
      >>macro_expansion<end;1><p:7>
      >{spaces_after_argument:\\n}

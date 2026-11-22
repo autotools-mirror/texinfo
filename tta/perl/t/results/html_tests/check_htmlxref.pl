@@ -21,27 +21,27 @@ $result_tree_text{'check_htmlxref'} = '*document_root C6
   *arguments_line C4
    *line_arg C2
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
    *line_arg C4
    |EXTRA
    |manual_content:A{2|2}
     {spaces_before_argument: }
-    {(}
-    {../there/no_existing_no_manual_direction}
-    {)}
+    {normal_text:(}
+    {normal_text:../there/no_existing_no_manual_direction}
+    {normal_text:)}
    *line_arg C2
    |EXTRA
    |node_content:A{1|1}
    |normalized:{first}
     {spaces_before_argument: }
-    {first}
+    {normal_text:first}
    *line_arg C5
    |EXTRA
    |manual_content:A{2|2}
     {spaces_before_argument: }
-    {(}
-    {dir}
-    {)}
+    {normal_text:(}
+    {normal_text:dir}
+    {normal_text:)}
     {spaces_after_argument:\\n}
  *@top C6 l3 {top}
  |EXTRA
@@ -50,7 +50,7 @@ $result_tree_text{'check_htmlxref'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C4
@@ -58,32 +58,32 @@ $result_tree_text{'check_htmlxref'} = '*document_root C6
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
-     {a}
+     {normal_text:a}
     *brace_arg C2
      {spaces_before_argument: }
-     {b}
+     {normal_text:b}
     *brace_arg C2
      {spaces_before_argument: }
-     {c}
+     {normal_text:c}
     *brace_arg C2
      {spaces_before_argument: }
-     {no_existing_no_manual.info}
-   {\\n}
+     {normal_text:no_existing_no_manual.info}
+   {normal_text:\\n}
    *@ref C4 l6
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
-     {a}
+     {normal_text:a}
     *brace_arg C2
      {spaces_before_argument: }
-     {b}
+     {normal_text:b}
     *brace_arg C2
      {spaces_before_argument: }
-     {c}
+     {normal_text:c}
     *brace_arg C2
      {spaces_before_argument: }
-     {no_existing_no_manual.info}
-   {\\n}
+     {normal_text:no_existing_no_manual.info}
+   {normal_text:\\n}
   {empty_line:\\n}
   *@menu C5 l8
    *arguments_line C1
@@ -95,40 +95,40 @@ $result_tree_text{'check_htmlxref'} = '*document_root C6
     |EXTRA
     |node_content:A{0|0}
     |normalized:{first}
-     {first}
+     {normal_text:first}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 l10
     {menu_entry_leading_text:* }
     *menu_entry_node C3
     |EXTRA
     |manual_content:A{1|1}
-     {(}
-     {other_no_existing_no_manual}
-     {)}
+     {normal_text:(}
+     {normal_text:other_no_existing_no_manual}
+     {normal_text:)}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 l11
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{chapter}
-     {chapter}
+     {normal_text:chapter}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l12
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C2 l14 {first}
@@ -139,14 +139,14 @@ $result_tree_text{'check_htmlxref'} = '*document_root C6
   *arguments_line C2
    *line_arg C2
     {spaces_before_argument: }
-    {first}
+    {normal_text:first}
    *line_arg C5
    |EXTRA
    |manual_content:A{2|2}
     {spaces_before_argument: }
-    {(}
-    {no_existing_no_manual.info}
-    {)}
+    {normal_text:(}
+    {normal_text:no_existing_no_manual.info}
+    {normal_text:)}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l16 {chapter}
@@ -157,24 +157,24 @@ $result_tree_text{'check_htmlxref'} = '*document_root C6
   *arguments_line C3
    *line_arg C2
     {spaces_before_argument: }
-    {chapter}
+    {normal_text:chapter}
    *line_arg C4
    |EXTRA
    |manual_content:A{2|2}
     {spaces_before_argument: }
-    {(}
-    {chap_not_existing}
-    {)}
+    {normal_text:(}
+    {normal_text:chap_not_existing}
+    {normal_text:)}
    *line_arg C6
    |EXTRA
    |manual_content:A{2|2}
    |node_content:A{4|4}
    |normalized:{node-in-dir}
     {spaces_before_argument: }
-    {(}
-    {dir}
-    {)}
-    {node in dir}
+    {normal_text:(}
+    {normal_text:dir}
+    {normal_text:)}
+    {normal_text:node in dir}
     {spaces_after_argument:\\n}
  *@chapter C3 l17 {Chapter}
  |EXTRA
@@ -184,7 +184,7 @@ $result_tree_text{'check_htmlxref'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chapter}
+    {normal_text:Chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
@@ -192,13 +192,13 @@ $result_tree_text{'check_htmlxref'} = '*document_root C6
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
-     {aa}
+     {normal_text:aa}
     *brace_arg
     *brace_arg
     *brace_arg C2
      {spaces_before_argument: }
-     {some_name_inf.inf}
-   {.\\n}
+     {normal_text:some_name_inf.inf}
+   {normal_text:.\\n}
 ';
 
 

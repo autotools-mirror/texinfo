@@ -19,7 +19,7 @@ $result_tree_text{'text_before_node'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C5 l2 {top}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'text_before_node'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C3 l4
@@ -41,21 +41,21 @@ $result_tree_text{'text_before_node'} = '*document_root C5
     |EXTRA
     |node_content:A{0|0}
     |normalized:{chapter-node}
-     {chapter node}
+     {normal_text:chapter node}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l6
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {text.\\n}
+   {normal_text:text.\\n}
  *@node C1 l9 {chapter node}
  |EXTRA
  |identifier:{chapter-node}
@@ -64,7 +64,7 @@ $result_tree_text{'text_before_node'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter node}
+    {normal_text:chapter node}
     {spaces_after_argument:\\n}
  *@chapter C1 l10 {chapter}
  |EXTRA
@@ -74,7 +74,7 @@ $result_tree_text{'text_before_node'} = '*document_root C5
   *arguments_line C1
    *line_arg C2
     {spaces_before_argument: }
-    {chapter}
+    {normal_text:chapter}
 ';
 
 

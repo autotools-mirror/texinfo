@@ -14,19 +14,19 @@ $result_tree_text{'example_in_style_command'} = '*document_root C1
   *paragraph C1
    *@code C1 l1
     *brace_container C1
-     {\\n}
+     {normal_text:\\n}
   *@example C3 l2
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C1
-    {example\\n}
+    {normal_text:example\\n}
    *@end C1 l4
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
 ';
 

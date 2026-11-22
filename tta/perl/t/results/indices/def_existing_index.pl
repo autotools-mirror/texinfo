@@ -14,7 +14,7 @@ $result_tree_text{'def_existing_index'} = '*document_root C1
    *@defcodeindex C1 l1
     *line_arg C3
      {spaces_before_argument: }
-     {cp}
+     {normal_text:cp}
      {spaces_after_argument:\\n}
 ';
 

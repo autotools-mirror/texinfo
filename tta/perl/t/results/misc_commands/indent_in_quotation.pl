@@ -20,13 +20,13 @@ $result_tree_text{'indent_in_quotation'} = '*document_root C1
    *paragraph C1
    |EXTRA
    |indent:{1}
-    {indent in quotation\\n}
+    {normal_text:indent in quotation\\n}
    *@end C1 l4
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }
-     {quotation}
+     {normal_text:quotation}
      {spaces_after_argument:\\n}
 ';
 

@@ -25,7 +25,7 @@ $result_tree_text{'button_replacement_for_special_unit_direction'} = '*document_
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l4 {top}
  |EXTRA
@@ -34,7 +34,7 @@ $result_tree_text{'button_replacement_for_special_unit_direction'} = '*document_
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l6 {chapter}
@@ -45,7 +45,7 @@ $result_tree_text{'button_replacement_for_special_unit_direction'} = '*document_
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter}
+    {normal_text:chapter}
     {spaces_after_argument:\\n}
  *@chapter C1 l7 {chap}
  |EXTRA
@@ -55,7 +55,7 @@ $result_tree_text{'button_replacement_for_special_unit_direction'} = '*document_
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
 ';
 

@@ -14,7 +14,7 @@ $result_tree_text{'defindex_too_much_args'} = '*document_root C1
    *@defindex C1 l1
     *line_arg C2
      {spaces_before_argument: }
-     {chose    machin}
+     {normal_text:chose    machin}
 ';
 
 

@@ -17,10 +17,10 @@ $result_tree_text{'inlineraw_not_closed'} = '*document_root C2
    |expand_index:{1}
    |format:{html}
     *brace_arg C1
-     {html}
+     {normal_text:html}
     *brace_arg C2
      {spaces_before_argument: }
-     {aa\\n}
+     {normal_text:aa\\n}
  *@section C1 l2 {sec}
  |EXTRA
  |identifier:{sec}
@@ -31,7 +31,7 @@ $result_tree_text{'inlineraw_not_closed'} = '*document_root C2
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {sec}
+    {normal_text:sec}
     {spaces_after_argument:\\n}
 ';
 

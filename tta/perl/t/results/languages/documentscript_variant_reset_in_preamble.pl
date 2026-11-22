@@ -17,7 +17,7 @@ $result_tree_text{'documentscript_variant_reset_in_preamble'} = '*document_root 
    |text_arg:{sr}
     *line_arg C3
      {spaces_before_argument: }
-     {sr}
+     {normal_text:sr}
      {spaces_after_argument:\\n}
    *@documentscript C1 l2
    |EXTRA
@@ -25,14 +25,14 @@ $result_tree_text{'documentscript_variant_reset_in_preamble'} = '*document_root 
    |text_arg:{Latn}
     *line_arg C3
      {spaces_before_argument: }
-     {Latn}
+     {normal_text:Latn}
      {spaces_after_argument:\\n}
    *@documentlanguagevariant C1 l3
    |EXTRA
    |global_command_number:{1}
     *line_arg C3
      {spaces_before_argument: }
-     {ekavsk}
+     {normal_text:ekavsk}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@documentlanguage C1 l5
@@ -41,7 +41,7 @@ $result_tree_text{'documentscript_variant_reset_in_preamble'} = '*document_root 
    |text_arg:{sr}
     *line_arg C3
      {spaces_before_argument: }
-     {sr}
+     {normal_text:sr}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *@node C1 l7 {Top}
@@ -52,7 +52,7 @@ $result_tree_text{'documentscript_variant_reset_in_preamble'} = '*document_root 
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l8 {top}
  |EXTRA
@@ -61,7 +61,7 @@ $result_tree_text{'documentscript_variant_reset_in_preamble'} = '*document_root 
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l10 {chap}
@@ -72,7 +72,7 @@ $result_tree_text{'documentscript_variant_reset_in_preamble'} = '*document_root 
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
  *@chapter C6 l11 {chap}
  |EXTRA
@@ -82,7 +82,7 @@ $result_tree_text{'documentscript_variant_reset_in_preamble'} = '*document_root 
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@defivar C2 l13
@@ -106,26 +106,26 @@ $result_tree_text{'documentscript_variant_reset_in_preamble'} = '*document_root 
      {spaces: }
      *def_class C1
       *def_line_arg C1
-       {used}
+       {normal_text:used}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {by}
+       {normal_text:by}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {test}
+       {normal_text:test}
      {spaces:  }
      *def_arg C1
       *def_line_arg C1
-       {ivar}
+       {normal_text:ivar}
      {spaces_after_argument:\\n}
    *@end C1 l14
    |EXTRA
    |text_arg:{defivar}
     *line_arg C3
      {spaces_before_argument: }
-     {defivar}
+     {normal_text:defivar}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C4
@@ -134,18 +134,18 @@ $result_tree_text{'documentscript_variant_reset_in_preamble'} = '*document_root 
     |EXTRA
     |node_content:A{0|0}
     |normalized:{Top}
-     {Top}
+     {normal_text:Top}
     *brace_arg C2
      {spaces_before_argument: }
-     {t}
-   {.\\n}
+     {normal_text:t}
+   {normal_text:.\\n}
    *@abbr C2 l17
     *brace_arg C1
-     {C}
+     {normal_text:C}
     *brace_arg C2
      {spaces_before_argument: }
-     {Ckl}
-   {\\n}
+     {normal_text:Ckl}
+   {normal_text:\\n}
   {empty_line:\\n}
 ';
 

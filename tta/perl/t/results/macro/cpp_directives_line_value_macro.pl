@@ -25,11 +25,11 @@ $result_tree_text{'cpp_directives_line_value_macro'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C1
-   {#line 30 "toto"\\n}
+   {normal_text:#line 30 "toto"\\n}
    >SOURCEMARKS
    >macro_expansion<start;1>
     >*macro_call@vvv C1
@@ -48,11 +48,11 @@ $result_tree_text{'cpp_directives_line_value_macro'} = '*document_root C1
    |text_arg:{macro}
     *line_arg C3
      {spaces_before_argument: }
-     {macro}
+     {normal_text:macro}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {# 130\\n}
+   {normal_text:# 130\\n}
    >SOURCEMARKS
    >macro_expansion<start;2>
     >*macro_call@machash C1
@@ -71,11 +71,11 @@ $result_tree_text{'cpp_directives_line_value_macro'} = '*document_root C1
    |text_arg:{macro}
     *line_arg C3
      {spaces_before_argument: }
-     {macro}
+     {normal_text:macro}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {# 900 "titi" 3900\\n}
+   {normal_text:# 900 "titi" 3900\\n}
    >SOURCEMARKS
    >macro_expansion<start;3><p:2>
     >*macro_call@numberfileflag C1
@@ -92,12 +92,12 @@ $result_tree_text{'cpp_directives_line_value_macro'} = '*document_root C1
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {#line 71 "example.c"\\n}
+   {normal_text:#line 71 "example.c"\\n}
    >SOURCEMARKS
    >value_expansion<start;1>{#}
     >*@value C1
      >*brace_container C1
-      >{hash}
+      >{normal_text:hash}
    >value_expansion<end;1><p:1>
   {empty_line:\\n}
   {empty_line:\\n}

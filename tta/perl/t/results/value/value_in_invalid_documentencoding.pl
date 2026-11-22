@@ -28,8 +28,8 @@ $result_tree_text{'value_in_invalid_documentencoding'} = '*document_root C1
      >value_expansion<start;1><p:1>{bad}
       >*@value C1
        >*brace_container C1
-        >{badvalue}
-     {bad}
+        >{normal_text:badvalue}
+     {normal_text:bad}
      >SOURCEMARKS
      >value_expansion<end;1><p:3>
      {spaces_after_argument:\\n}

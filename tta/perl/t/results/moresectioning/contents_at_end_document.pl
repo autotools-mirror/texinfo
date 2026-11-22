@@ -19,7 +19,7 @@ $result_tree_text{'contents_at_end_document'} = '*document_root C4
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l2 {contents at end document}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'contents_at_end_document'} = '*document_root C4
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {contents at end document}
+    {normal_text:contents at end document}
     {spaces_after_argument: \\n}
   {empty_line:\\n}
  *@chapter C3 l4 {chap}
@@ -41,7 +41,7 @@ $result_tree_text{'contents_at_end_document'} = '*document_root C4
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@contents C1 l6

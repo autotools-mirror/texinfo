@@ -17,30 +17,30 @@ $result_tree_text{'menu_entry_no_entry'} = '*document_root C1
      {spaces_before_argument:\\n}
    *menu_comment C1
     *preformatted C13
-     {* a1:\\n}
-     {* a2:  \\n}
-     {* a1c:}
+     {normal_text:* a1:\\n}
+     {normal_text:* a2:  \\n}
+     {normal_text:* a1c:}
      *@c C1
       *line_arg C3
        {spaces_before_argument: }
        {rawline_text:c}
        {spaces_after_argument:\\n}
-     {* a2c:  }
+     {normal_text:* a2c:  }
      *@c C1
       *line_arg C3
        {spaces_before_argument: }
        {rawline_text:c}
        {spaces_after_argument:\\n}
-     {* a4}
+     {normal_text:* a4}
      *@b C1 l6
       *brace_container C1
-       {a}
-     {: \\n}
-     {* a5}
+       {normal_text:a}
+     {normal_text:: \\n}
+     {normal_text:* a5}
      *@b C1 l7
       *brace_container C1
-       {b}
-     {: }
+       {normal_text:b}
+     {normal_text:: }
      *@c C1
       *line_arg C3
        {spaces_before_argument: }
@@ -51,7 +51,7 @@ $result_tree_text{'menu_entry_no_entry'} = '*document_root C1
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
 ';
 

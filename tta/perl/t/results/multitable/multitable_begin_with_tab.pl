@@ -18,21 +18,21 @@ $result_tree_text{'multitable_begin_with_tab'} = '*document_root C1
     *block_line_arg C5
      {spaces_before_argument: }
      *bracketed_arg C1 l1
-      {a}
-     { }
+      {normal_text:a}
+     {normal_text: }
      *bracketed_arg C1 l1
-      {b}
+      {normal_text:b}
      {spaces_after_argument:\\n}
    *before_item C2
     {ignorable_spaces_after_command: }
     *paragraph C1
-     {t\\n}
+     {normal_text:t\\n}
    *@end C1 l3
    |EXTRA
    |text_arg:{multitable}
     *line_arg C3
      {spaces_before_argument: }
-     {multitable}
+     {normal_text:multitable}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@multitable C4 l5
@@ -42,15 +42,15 @@ $result_tree_text{'multitable_begin_with_tab'} = '*document_root C1
     *block_line_arg C5
      {spaces_before_argument: }
      *bracketed_arg C1 l5
-      {c}
-     { }
+      {normal_text:c}
+     {normal_text: }
      *bracketed_arg C1 l5
-      {d}
+      {normal_text:d}
      {spaces_after_argument:\\n}
    *before_item C2
     {ignorable_spaces_after_command: }
     *paragraph C1
-     {t2\\n}
+     {normal_text:t2\\n}
    *multitable_body C1
     *row C1
     |EXTRA
@@ -60,13 +60,13 @@ $result_tree_text{'multitable_begin_with_tab'} = '*document_root C1
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {it\\n}
+       {normal_text:it\\n}
    *@end C1 l8
    |EXTRA
    |text_arg:{multitable}
     *line_arg C3
      {spaces_before_argument: }
-     {multitable}
+     {normal_text:multitable}
      {spaces_after_argument:\\n}
 ';
 

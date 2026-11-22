@@ -14,7 +14,7 @@ $result_tree_text{'form_feeds_in_preamble'} = '*document_root C3
    *@settitle C1 l1
     *line_arg C3
      {spaces_before_argument: }
-     {A manual}
+     {normal_text:A manual}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
    {empty_line:\\f\\n}
@@ -36,7 +36,7 @@ $result_tree_text{'form_feeds_in_preamble'} = '*document_root C3
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    {empty_line:\\f\\n}
@@ -49,7 +49,7 @@ $result_tree_text{'form_feeds_in_preamble'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C1 l13 {The}
  |EXTRA
@@ -58,7 +58,7 @@ $result_tree_text{'form_feeds_in_preamble'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {The}
+    {normal_text:The}
     {spaces_after_argument:\\n}
 ';
 

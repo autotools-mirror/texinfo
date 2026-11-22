@@ -23,7 +23,7 @@ $result_tree_text{'texinfo_command_alias_indirect_before'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@alias C1 l5
@@ -31,7 +31,7 @@ $result_tree_text{'texinfo_command_alias_indirect_before'} = '*document_root C1
    |misc_args:A{new|strong}
     *line_arg C3
      {spaces_before_argument: }
-     {new = strong}
+     {normal_text:new = strong}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@alias C1 l7
@@ -39,7 +39,7 @@ $result_tree_text{'texinfo_command_alias_indirect_before'} = '*document_root C1
    |misc_args:A{strong|mystrong}
     *line_arg C3
      {spaces_before_argument: }
-     {strong = mystrong}
+     {normal_text:strong = mystrong}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C2
@@ -47,8 +47,8 @@ $result_tree_text{'texinfo_command_alias_indirect_before'} = '*document_root C1
    |EXTRA
    |alias_of:{new}
     *brace_container C1
-     {aa}
-   {\\n}
+     {normal_text:aa}
+   {normal_text:\\n}
 ';
 
 

@@ -21,19 +21,19 @@ $result_tree_text{'heading_in_example'} = '*document_root C1
    |heading_number:{1}
     *line_arg C6
      {spaces_before_argument: }
-     {in example }
+     {normal_text:in example }
      *@@
-     { }
+     {normal_text: }
      *@emph C1 l2
       *brace_container C1
-       {heading}
+       {normal_text:heading}
      {spaces_after_argument:\\n}
    *@end C1 l3
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
 ';
 

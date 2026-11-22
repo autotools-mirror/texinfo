@@ -19,7 +19,7 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@node C105 l2 {chap}
  |EXTRA
@@ -30,7 +30,7 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
   *@xrefname C1 l3
   |EXTRA
@@ -38,7 +38,7 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
   |heading_number:{1}
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deffn C2 l5
@@ -52,91 +52,91 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {Command}
+       {normal_text:Command}
      {spaces: }
      *def_name C1
       *def_line_arg C1
        *@var C1 l5
         *brace_container C1
-         {forward--char}
+         {normal_text:forward--char}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@var C1 l5
         *brace_container C1
-         {nchars}
+         {normal_text:nchars}
      {spaces: }
      *def_arg C1
       *bracketed_arg C1 l5
-       {argument2}
+       {normal_text:argument2}
      {spaces: }
      *def_arg C1
       *bracketed_arg C1 l5
-       {argument3}
+       {normal_text:argument3}
      {spaces:         }
      >SOURCEMARKS
      >defline_continuation<1><p:1>
      {delimiter:(}
      *def_arg C1
       *def_line_arg C1
-       {arg}
+       {normal_text:arg}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {in}
+       {normal_text:in}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {brace}
+       {normal_text:brace}
      {delimiter:,}
      {spaces: }
      {delimiter:[}
      *def_arg C1
       *def_line_arg C1
-       {something}
+       {normal_text:something}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@var C1 l6
         *brace_container C1
-         {in v--ar}
+         {normal_text:in v--ar}
      {delimiter:,}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@b C1 l6
         *brace_container C1
-         {in, b}
+         {normal_text:in, b}
      {spaces: }
      *def_arg C1
       *bracketed_arg C1 l6
-       {, comma}
+       {normal_text:, comma}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {a}
+       {normal_text:a}
      *def_arg C1
       *def_line_arg C1
        *@var C1 l6
         *brace_container C1
-         {pref}
+         {normal_text:pref}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {p}
+       {normal_text:p}
      {delimiter:]}
      {delimiter:)}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {last}
+       {normal_text:last}
      {spaces_after_argument:\\n}
    *@end C1 l7
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
-     {deffn}
+     {normal_text:deffn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@defvr C2 l9
@@ -150,83 +150,83 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {Variable}
+       {normal_text:Variable}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {fill-column}
+       {normal_text:fill-column}
      {spaces: }
      *def_arg C1
       *bracketed_arg C1 l9
-       {argument1}
+       {normal_text:argument1}
      {spaces: }
      *def_arg C1
       *bracketed_arg C1 l9
-       {argument2}
+       {normal_text:argument2}
      {spaces:         }
      >SOURCEMARKS
      >defline_continuation<2><p:1>
      {delimiter:(}
      *def_arg C1
       *def_line_arg C1
-       {arg}
+       {normal_text:arg}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {in}
+       {normal_text:in}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {brace}
+       {normal_text:brace}
      {delimiter:,}
      {spaces: }
      {delimiter:[}
      *def_arg C1
       *def_line_arg C1
-       {something}
+       {normal_text:something}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@var C1 l10
         *brace_container C1
-         {in v--ar}
+         {normal_text:in v--ar}
      {delimiter:,}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@b C1 l10
         *brace_container C1
-         {in, b}
+         {normal_text:in, b}
      {spaces: }
      *def_arg C1
       *bracketed_arg C1 l10
-       {, comma}
+       {normal_text:, comma}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {a}
+       {normal_text:a}
      *def_arg C1
       *def_line_arg C1
        *@var C1 l10
         *brace_container C1
-         {pref}
+         {normal_text:pref}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {p}
+       {normal_text:p}
      {delimiter:]}
      {delimiter:)}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {last}
+       {normal_text:last}
      {spaces_after_argument:\\n}
    *@end C1 l11
    |EXTRA
    |text_arg:{defvr}
     *line_arg C3
      {spaces_before_argument: }
-     {defvr}
+     {normal_text:defvr}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypefn C2 l13
@@ -240,37 +240,37 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
      {spaces_before_argument: }
      *def_category C1
       *bracketed_arg C1 l13
-       {Library Function}
+       {normal_text:Library Function}
      {spaces: }
      *def_type C1
       *def_line_arg C1
-       {int}
+       {normal_text:int}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {foobar}
+       {normal_text:foobar}
      {spaces: }
      {delimiter:(}
      *def_typearg C1
       *def_line_arg C1
-       {int}
+       {normal_text:int}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@var C1 l13
         *brace_container C1
-         {foo}
+         {normal_text:foo}
      {delimiter:,}
      {spaces: }
      *def_typearg C1
       *def_line_arg C1
-       {float}
+       {normal_text:float}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@var C1 l13
         *brace_container C1
-         {bar}
+         {normal_text:bar}
      {delimiter:)}
      {spaces_after_argument:\\n}
    *@end C1 l14
@@ -278,7 +278,7 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
    |text_arg:{deftypefn}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypefn}
+     {normal_text:deftypefn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypefn C2 l16
@@ -292,37 +292,37 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
      {spaces_before_argument: }
      *def_category C1
       *bracketed_arg C1 l16
-       {Library Function}
+       {normal_text:Library Function}
      {spaces: }
      *def_type C1
       *def_line_arg C1
-       {int}
+       {normal_text:int}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {foobar}
+       {normal_text:foobar}
      {spaces: }
      {delimiter:(}
      *def_typearg C1
       *def_line_arg C1
-       {int}
+       {normal_text:int}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@var C1 l16
         *brace_container C1
-         {foo}
+         {normal_text:foo}
      {delimiter:,}
      {spaces: }
      *def_typearg C1
       *def_line_arg C1
-       {float}
+       {normal_text:float}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@var C1 l16
         *brace_container C1
-         {bar}
+         {normal_text:bar}
      {delimiter:)}
      {spaces:         }
      >SOURCEMARKS
@@ -330,56 +330,56 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
      {delimiter:(}
      *def_typearg C1
       *def_line_arg C1
-       {arg}
+       {normal_text:arg}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {in}
+       {normal_text:in}
      {spaces: }
      *def_typearg C1
       *def_line_arg C1
-       {brace}
+       {normal_text:brace}
      {delimiter:,}
      {spaces: }
      *def_typearg C1
       *bracketed_arg C1 l17
-       {[something}
+       {normal_text:[something}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@var C1 l17
         *brace_container C1
-         {in v--ar}
+         {normal_text:in v--ar}
      {delimiter:,}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@b C1 l17
         *brace_container C1
-         {in, b}
+         {normal_text:in, b}
      {spaces: }
      *def_typearg C1
       *bracketed_arg C1 l17
-       {, comma}
+       {normal_text:, comma}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {a}
+       {normal_text:a}
      *def_arg C1
       *def_line_arg C1
        *@var C1 l17
         *brace_container C1
-         {pref}
+         {normal_text:pref}
      {spaces: }
      *def_typearg C1
       *def_line_arg C1
-       {p}
+       {normal_text:p}
      {delimiter:]}
      {delimiter:)}
      {spaces: }
      *def_typearg C1
       *def_line_arg C1
-       {ct}
+       {normal_text:ct}
      *def_arg C1
       *def_line_arg C1
        *@*
@@ -389,14 +389,14 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
      {spaces: }
      *def_typearg C1
       *def_line_arg C1
-       {last}
+       {normal_text:last}
      {spaces_after_argument:\\n}
    *@end C1 l18
    |EXTRA
    |text_arg:{deftypefn}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypefn}
+     {normal_text:deftypefn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypefn C2 l20
@@ -410,26 +410,26 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
      {spaces_before_argument: }
      *def_category C1
       *bracketed_arg C1 l20
-       {Library Function}
+       {normal_text:Library Function}
      {spaces: }
      *def_type C1
       *def_line_arg C1
-       {int}
+       {normal_text:int}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {foobug}
+       {normal_text:foobug}
      {spaces: }
      *def_typearg C1
       *bracketed_arg C1 l20
-       {[something}
+       {normal_text:[something}
      {spaces_after_argument:\\n}
    *@end C1 l21
    |EXTRA
    |text_arg:{deftypefn}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypefn}
+     {normal_text:deftypefn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypefn C2 l23
@@ -443,33 +443,33 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {stacks}
+       {normal_text:stacks}
      {spaces: }
      *def_type C1
       *def_line_arg C1
-       {private}
+       {normal_text:private}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {push}
+       {normal_text:push}
      {spaces: }
      {delimiter:(}
      *def_arg C1
       *def_line_arg C1
        *@var C1 l23
         *brace_container C1
-         {s}
+         {normal_text:s}
      *def_typearg C1
       *def_line_arg C1
-       {:in}
+       {normal_text::in}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {out}
+       {normal_text:out}
      {spaces: }
      *def_typearg C1
       *def_line_arg C1
-       {stack;}
+       {normal_text:stack;}
      {spaces:                  }
      >SOURCEMARKS
      >defline_continuation<4><p:1>
@@ -477,42 +477,42 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
       *def_line_arg C1
        *@var C1 l24
         *brace_container C1
-         {n}
+         {normal_text:n}
      *def_typearg C1
       *def_line_arg C1
-       {:in}
+       {normal_text::in}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {integer}
+       {normal_text:integer}
      {delimiter:)}
      {spaces: }
      *def_typearg C1
       *def_line_arg C1
-       {;}
+       {normal_text:;}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {;barg}
+       {normal_text:;barg}
      {spaces: }
      *def_typearg C1
       *def_line_arg C1
-       {aarg;}
+       {normal_text:aarg;}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {;}
+       {normal_text:;}
      {spaces: }
      *def_typearg C1
       *def_line_arg C1
-       {end}
+       {normal_text:end}
      {spaces_after_argument:\\n}
    *@end C1 l25
    |EXTRA
    |text_arg:{deftypefn}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypefn}
+     {normal_text:deftypefn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypevr C2 l27
@@ -526,79 +526,79 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
      {spaces_before_argument: }
      *def_category C1
       *bracketed_arg C1 l27
-       {Global Flag}
+       {normal_text:Global Flag}
      {spaces: }
      *def_type C1
       *def_line_arg C1
-       {int}
+       {normal_text:int}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {enable}
+       {normal_text:enable}
      {spaces:         }
      >SOURCEMARKS
      >defline_continuation<5><p:1>
      {delimiter:(}
      *def_arg C1
       *def_line_arg C1
-       {arg}
+       {normal_text:arg}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {in}
+       {normal_text:in}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {brace}
+       {normal_text:brace}
      {delimiter:,}
      {spaces: }
      {delimiter:[}
      *def_arg C1
       *def_line_arg C1
-       {something}
+       {normal_text:something}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@var C1 l28
         *brace_container C1
-         {in v--ar}
+         {normal_text:in v--ar}
      {delimiter:,}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@b C1 l28
         *brace_container C1
-         {in, b}
+         {normal_text:in, b}
      {spaces: }
      *def_arg C1
       *bracketed_arg C1 l28
-       {, comma}
+       {normal_text:, comma}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {a}
+       {normal_text:a}
      *def_arg C1
       *def_line_arg C1
        *@var C1 l28
         *brace_container C1
-         {pref}
+         {normal_text:pref}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {p}
+       {normal_text:p}
      {delimiter:]}
      {delimiter:)}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {last}
+       {normal_text:last}
      {spaces_after_argument:\\n}
    *@end C1 l29
    |EXTRA
    |text_arg:{deftypevr}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypevr}
+     {normal_text:deftypevr}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftp C2 l31
@@ -612,83 +612,83 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
      {spaces_before_argument: }
      *def_category C1
       *bracketed_arg C1 l31
-       {Data type}
+       {normal_text:Data type}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {pair}
+       {normal_text:pair}
      {spaces: }
      *def_typearg C1
       *def_line_arg C1
-       {car}
+       {normal_text:car}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {cdr}
+       {normal_text:cdr}
      {spaces:         }
      >SOURCEMARKS
      >defline_continuation<6><p:1>
      {delimiter:(}
      *def_typearg C1
       *def_line_arg C1
-       {arg}
+       {normal_text:arg}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {in}
+       {normal_text:in}
      {spaces: }
      *def_typearg C1
       *def_line_arg C1
-       {brace}
+       {normal_text:brace}
      {delimiter:,}
      {spaces: }
      {delimiter:[}
      *def_typearg C1
       *def_line_arg C1
-       {something}
+       {normal_text:something}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@var C1 l32
         *brace_container C1
-         {in v--ar}
+         {normal_text:in v--ar}
      {delimiter:,}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@b C1 l32
         *brace_container C1
-         {in, b}
+         {normal_text:in, b}
      {spaces: }
      *def_typearg C1
       *bracketed_arg C1 l32
-       {, comma}
+       {normal_text:, comma}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {a}
+       {normal_text:a}
      *def_arg C1
       *def_line_arg C1
        *@var C1 l32
         *brace_container C1
-         {pref}
+         {normal_text:pref}
      {spaces: }
      *def_typearg C1
       *def_line_arg C1
-       {p}
+       {normal_text:p}
      {delimiter:]}
      {delimiter:)}
      {spaces: }
      *def_typearg C1
       *def_line_arg C1
-       {last}
+       {normal_text:last}
      {spaces_after_argument:\\n}
    *@end C1 l33
    |EXTRA
    |text_arg:{deftp}
     *line_arg C3
      {spaces_before_argument: }
-     {deftp}
+     {normal_text:deftp}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@defcv C2 l35
@@ -702,79 +702,79 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
      {spaces_before_argument: }
      *def_category C1
       *bracketed_arg C1 l35
-       {Class Option}
+       {normal_text:Class Option}
      {spaces: }
      *def_class C1
       *def_line_arg C1
-       {Window}
+       {normal_text:Window}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {border-pattern}
+       {normal_text:border-pattern}
      {spaces:         }
      >SOURCEMARKS
      >defline_continuation<7><p:1>
      {delimiter:(}
      *def_arg C1
       *def_line_arg C1
-       {arg}
+       {normal_text:arg}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {in}
+       {normal_text:in}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {brace}
+       {normal_text:brace}
      {delimiter:,}
      {spaces: }
      {delimiter:[}
      *def_arg C1
       *def_line_arg C1
-       {something}
+       {normal_text:something}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@var C1 l36
         *brace_container C1
-         {in v--ar}
+         {normal_text:in v--ar}
      {delimiter:,}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@b C1 l36
         *brace_container C1
-         {in, b}
+         {normal_text:in, b}
      {spaces: }
      *def_arg C1
       *bracketed_arg C1 l36
-       {, comma}
+       {normal_text:, comma}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {a}
+       {normal_text:a}
      *def_arg C1
       *def_line_arg C1
        *@var C1 l36
         *brace_container C1
-         {pref}
+         {normal_text:pref}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {p}
+       {normal_text:p}
      {delimiter:]}
      {delimiter:)}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {last}
+       {normal_text:last}
      {spaces_after_argument:\\n}
    *@end C1 l37
    |EXTRA
    |text_arg:{defcv}
     *line_arg C3
      {spaces_before_argument: }
-     {defcv}
+     {normal_text:defcv}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypecv C2 l39
@@ -788,85 +788,85 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
      {spaces_before_argument: }
      *def_category C1
       *bracketed_arg C1 l39
-       {Class Option2}
+       {normal_text:Class Option2}
      {spaces: }
      *def_class C1
       *def_line_arg C1
-       {Window}
+       {normal_text:Window}
      {spaces: }
      *def_type C1
       *def_line_arg C1
        *@code C1 l39
         *brace_container C1
-         {int}
+         {normal_text:int}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {border-pattern}
+       {normal_text:border-pattern}
      {spaces:         }
      >SOURCEMARKS
      >defline_continuation<8><p:1>
      {delimiter:(}
      *def_arg C1
       *def_line_arg C1
-       {arg}
+       {normal_text:arg}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {in}
+       {normal_text:in}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {brace}
+       {normal_text:brace}
      {delimiter:,}
      {spaces: }
      {delimiter:[}
      *def_arg C1
       *def_line_arg C1
-       {something}
+       {normal_text:something}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@var C1 l40
         *brace_container C1
-         {in v--ar}
+         {normal_text:in v--ar}
      {delimiter:,}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@b C1 l40
         *brace_container C1
-         {in, b}
+         {normal_text:in, b}
      {spaces: }
      *def_arg C1
       *bracketed_arg C1 l40
-       {, comma}
+       {normal_text:, comma}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {a}
+       {normal_text:a}
      *def_arg C1
       *def_line_arg C1
        *@var C1 l40
         *brace_container C1
-         {pref}
+         {normal_text:pref}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {p}
+       {normal_text:p}
      {delimiter:]}
      {delimiter:)}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {last}
+       {normal_text:last}
      {spaces_after_argument:\\n}
    *@end C1 l41
    |EXTRA
    |text_arg:{deftypecv}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypecv}
+     {normal_text:deftypecv}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@defop C2 l43
@@ -880,79 +880,79 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {Operation}
+       {normal_text:Operation}
      {spaces: }
      *def_class C1
       *def_line_arg C1
-       {windows}
+       {normal_text:windows}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {expose}
+       {normal_text:expose}
      {spaces:         }
      >SOURCEMARKS
      >defline_continuation<9><p:1>
      {delimiter:(}
      *def_arg C1
       *def_line_arg C1
-       {arg}
+       {normal_text:arg}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {in}
+       {normal_text:in}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {brace}
+       {normal_text:brace}
      {delimiter:,}
      {spaces: }
      {delimiter:[}
      *def_arg C1
       *def_line_arg C1
-       {something}
+       {normal_text:something}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@var C1 l44
         *brace_container C1
-         {in v--ar}
+         {normal_text:in v--ar}
      {delimiter:,}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@b C1 l44
         *brace_container C1
-         {in, b}
+         {normal_text:in, b}
      {spaces: }
      *def_arg C1
       *bracketed_arg C1 l44
-       {, comma}
+       {normal_text:, comma}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {a}
+       {normal_text:a}
      *def_arg C1
       *def_line_arg C1
        *@var C1 l44
         *brace_container C1
-         {pref}
+         {normal_text:pref}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {p}
+       {normal_text:p}
      {delimiter:]}
      {delimiter:)}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {last}
+       {normal_text:last}
      {spaces_after_argument:\\n}
    *@end C1 l45
    |EXTRA
    |text_arg:{defop}
     *line_arg C3
      {spaces_before_argument: }
-     {defop}
+     {normal_text:defop}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypeop C2 l47
@@ -966,85 +966,85 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {Operation2}
+       {normal_text:Operation2}
      {spaces: }
      *def_class C1
       *def_line_arg C1
-       {W,indow}
+       {normal_text:W,indow}
      {spaces: }
      *def_type C1
       *def_line_arg C1
        *@code C1 l47
         *brace_container C1
-         {int}
+         {normal_text:int}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {expose}
+       {normal_text:expose}
      {spaces:         }
      >SOURCEMARKS
      >defline_continuation<10><p:1>
      {delimiter:(}
      *def_typearg C1
       *def_line_arg C1
-       {arg}
+       {normal_text:arg}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {in}
+       {normal_text:in}
      {spaces: }
      *def_typearg C1
       *def_line_arg C1
-       {brace}
+       {normal_text:brace}
      {delimiter:,}
      {spaces: }
      {delimiter:[}
      *def_typearg C1
       *def_line_arg C1
-       {something}
+       {normal_text:something}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@var C1 l48
         *brace_container C1
-         {in v--ar}
+         {normal_text:in v--ar}
      {delimiter:,}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@b C1 l48
         *brace_container C1
-         {in, b}
+         {normal_text:in, b}
      {spaces: }
      *def_typearg C1
       *bracketed_arg C1 l48
-       {, comma}
+       {normal_text:, comma}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {a}
+       {normal_text:a}
      *def_arg C1
       *def_line_arg C1
        *@var C1 l48
         *brace_container C1
-         {pref}
+         {normal_text:pref}
      {spaces: }
      *def_typearg C1
       *def_line_arg C1
-       {p}
+       {normal_text:p}
      {delimiter:]}
      {delimiter:)}
      {spaces: }
      *def_typearg C1
       *def_line_arg C1
-       {last}
+       {normal_text:last}
      {spaces_after_argument:\\n}
    *@end C1 l49
    |EXTRA
    |text_arg:{deftypeop}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypeop}
+     {normal_text:deftypeop}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypeop C2 l51
@@ -1058,36 +1058,36 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {Operation5}
+       {normal_text:Operation5}
      {spaces: }
      *def_class C1
       *def_line_arg C1
-       {Window}
+       {normal_text:Window}
      {spaces: }
      *def_type C1
       *def_line_arg C1
        *@code C1 l51
         *brace_container C1
-         {int}
+         {normal_text:int}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {expose}
+       {normal_text:expose}
      {spaces: }
      *def_typearg C1
       *def_line_arg C1
-       {type}
+       {normal_text:type}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {arg}
+       {normal_text:arg}
      {spaces_after_argument:\\n}
    *@end C1 l52
    |EXTRA
    |text_arg:{deftypeop}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypeop}
+     {normal_text:deftypeop}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypeop C2 l54
@@ -1101,36 +1101,36 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {Operation3}
+       {normal_text:Operation3}
      {spaces: }
      *def_class C1
       *bracketed_arg C1 l54
-       {W,indow}
+       {normal_text:W,indow}
      {spaces: }
      *def_type C1
       *def_line_arg C1
        *@code C1 l54
         *brace_container C1
-         {int}
+         {normal_text:int}
      {spaces: }
      *def_name C1
       *bracketed_arg C1 l54
-       {e,xpose}
+       {normal_text:e,xpose}
      {spaces: }
      *def_typearg C1
       *def_line_arg C1
-       {type}
+       {normal_text:type}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {arg}
+       {normal_text:arg}
      {spaces_after_argument:\\n}
    *@end C1 l55
    |EXTRA
    |text_arg:{deftypeop}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypeop}
+     {normal_text:deftypeop}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypeop C2 l57
@@ -1144,36 +1144,36 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {Operation4}
+       {normal_text:Operation4}
      {spaces: }
      *def_class C1
       *bracketed_arg C1 l57
-       {,Window}
+       {normal_text:,Window}
      {spaces: }
      *def_type C1
       *def_line_arg C1
        *@code C1 l57
         *brace_container C1
-         {int}
+         {normal_text:int}
      {spaces: }
      *def_name C1
       *bracketed_arg C1 l57
-       {,expose}
+       {normal_text:,expose}
      {spaces: }
      *def_typearg C1
       *def_line_arg C1
-       {type}
+       {normal_text:type}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {arg}
+       {normal_text:arg}
      {spaces_after_argument:\\n}
    *@end C1 l58
    |EXTRA
    |text_arg:{deftypeop}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypeop}
+     {normal_text:deftypeop}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypeop C2 l60
@@ -1187,36 +1187,36 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {Operation6}
+       {normal_text:Operation6}
      {spaces: }
      *def_class C1
       *def_line_arg C1
-       {W,indow}
+       {normal_text:W,indow}
      {spaces: }
      *def_type C1
       *def_line_arg C1
        *@code C1 l60
         *brace_container C1
-         {int}
+         {normal_text:int}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {e,xpose}
+       {normal_text:e,xpose}
      {spaces: }
      *def_typearg C1
       *def_line_arg C1
-       {type}
+       {normal_text:type}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {arg}
+       {normal_text:arg}
      {spaces_after_argument:\\n}
    *@end C1 l61
    |EXTRA
    |text_arg:{deftypeop}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypeop}
+     {normal_text:deftypeop}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypeop C2 l63
@@ -1230,36 +1230,36 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {Operation7}
+       {normal_text:Operation7}
      {spaces: }
      *def_class C1
       *def_line_arg C1
-       {,Window}
+       {normal_text:,Window}
      {spaces: }
      *def_type C1
       *def_line_arg C1
        *@code C1 l63
         *brace_container C1
-         {int}
+         {normal_text:int}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {,expose}
+       {normal_text:,expose}
      {spaces: }
      *def_typearg C1
       *def_line_arg C1
-       {type}
+       {normal_text:type}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {arg}
+       {normal_text:arg}
      {spaces_after_argument:\\n}
    *@end C1 l64
    |EXTRA
    |text_arg:{deftypeop}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypeop}
+     {normal_text:deftypeop}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypeop C2 l66
@@ -1273,36 +1273,36 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {Operation13}
+       {normal_text:Operation13}
      {spaces: }
      *def_class C1
       *bracketed_arg C1 l66
-       {W)indow}
+       {normal_text:W)indow}
      {spaces: }
      *def_type C1
       *def_line_arg C1
        *@code C1 l66
         *brace_container C1
-         {int}
+         {normal_text:int}
      {spaces: }
      *def_name C1
       *bracketed_arg C1 l66
-       {e)xpose}
+       {normal_text:e)xpose}
      {spaces: }
      *def_typearg C1
       *def_line_arg C1
-       {type}
+       {normal_text:type}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {arg}
+       {normal_text:arg}
      {spaces_after_argument:\\n}
    *@end C1 l67
    |EXTRA
    |text_arg:{deftypeop}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypeop}
+     {normal_text:deftypeop}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypeop C2 l69
@@ -1316,36 +1316,36 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {Operation14}
+       {normal_text:Operation14}
      {spaces: }
      *def_class C1
       *bracketed_arg C1 l69
-       {)Window}
+       {normal_text:)Window}
      {spaces: }
      *def_type C1
       *def_line_arg C1
        *@code C1 l69
         *brace_container C1
-         {int}
+         {normal_text:int}
      {spaces: }
      *def_name C1
       *bracketed_arg C1 l69
-       {)expose}
+       {normal_text:)expose}
      {spaces: }
      *def_typearg C1
       *def_line_arg C1
-       {type}
+       {normal_text:type}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {arg}
+       {normal_text:arg}
      {spaces_after_argument:\\n}
    *@end C1 l70
    |EXTRA
    |text_arg:{deftypeop}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypeop}
+     {normal_text:deftypeop}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypeop C2 l72
@@ -1359,36 +1359,36 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {Operation16}
+       {normal_text:Operation16}
      {spaces: }
      *def_class C1
       *def_line_arg C1
-       {W)indow}
+       {normal_text:W)indow}
      {spaces: }
      *def_type C1
       *def_line_arg C1
        *@code C1 l72
         *brace_container C1
-         {int}
+         {normal_text:int}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {e)xpose}
+       {normal_text:e)xpose}
      {spaces: }
      *def_typearg C1
       *def_line_arg C1
-       {type}
+       {normal_text:type}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {arg}
+       {normal_text:arg}
      {spaces_after_argument:\\n}
    *@end C1 l73
    |EXTRA
    |text_arg:{deftypeop}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypeop}
+     {normal_text:deftypeop}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypeop C2 l75
@@ -1402,36 +1402,36 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {Operation17}
+       {normal_text:Operation17}
      {spaces: }
      *def_class C1
       *def_line_arg C1
-       {)Window}
+       {normal_text:)Window}
      {spaces: }
      *def_type C1
       *def_line_arg C1
        *@code C1 l75
         *brace_container C1
-         {int}
+         {normal_text:int}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {)expose}
+       {normal_text:)expose}
      {spaces: }
      *def_typearg C1
       *def_line_arg C1
-       {type}
+       {normal_text:type}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {arg}
+       {normal_text:arg}
      {spaces_after_argument:\\n}
    *@end C1 l76
    |EXTRA
    |text_arg:{deftypeop}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypeop}
+     {normal_text:deftypeop}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypeop C2 l78
@@ -1445,36 +1445,36 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {Operation18}
+       {normal_text:Operation18}
      {spaces: }
      *def_class C1
       *bracketed_arg C1 l78
-       {W;indow}
+       {normal_text:W;indow}
      {spaces: }
      *def_type C1
       *def_line_arg C1
        *@code C1 l78
         *brace_container C1
-         {int}
+         {normal_text:int}
      {spaces: }
      *def_name C1
       *bracketed_arg C1 l78
-       {e;xpose}
+       {normal_text:e;xpose}
      {spaces: }
      *def_typearg C1
       *def_line_arg C1
-       {type}
+       {normal_text:type}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {arg}
+       {normal_text:arg}
      {spaces_after_argument:\\n}
    *@end C1 l79
    |EXTRA
    |text_arg:{deftypeop}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypeop}
+     {normal_text:deftypeop}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypeop C2 l81
@@ -1488,36 +1488,36 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {Operation19}
+       {normal_text:Operation19}
      {spaces: }
      *def_class C1
       *bracketed_arg C1 l81
-       {;Window}
+       {normal_text:;Window}
      {spaces: }
      *def_type C1
       *def_line_arg C1
        *@code C1 l81
         *brace_container C1
-         {int}
+         {normal_text:int}
      {spaces: }
      *def_name C1
       *bracketed_arg C1 l81
-       {;expose}
+       {normal_text:;expose}
      {spaces: }
      *def_typearg C1
       *def_line_arg C1
-       {type}
+       {normal_text:type}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {arg}
+       {normal_text:arg}
      {spaces_after_argument:\\n}
    *@end C1 l82
    |EXTRA
    |text_arg:{deftypeop}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypeop}
+     {normal_text:deftypeop}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypeop C2 l84
@@ -1531,36 +1531,36 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {Operation20}
+       {normal_text:Operation20}
      {spaces: }
      *def_class C1
       *def_line_arg C1
-       {W;indow}
+       {normal_text:W;indow}
      {spaces: }
      *def_type C1
       *def_line_arg C1
        *@code C1 l84
         *brace_container C1
-         {int}
+         {normal_text:int}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {e;xpose}
+       {normal_text:e;xpose}
      {spaces: }
      *def_typearg C1
       *def_line_arg C1
-       {type}
+       {normal_text:type}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {arg}
+       {normal_text:arg}
      {spaces_after_argument:\\n}
    *@end C1 l85
    |EXTRA
    |text_arg:{deftypeop}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypeop}
+     {normal_text:deftypeop}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypeop C2 l87
@@ -1574,36 +1574,36 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {Operation21}
+       {normal_text:Operation21}
      {spaces: }
      *def_class C1
       *def_line_arg C1
-       {;Window}
+       {normal_text:;Window}
      {spaces: }
      *def_type C1
       *def_line_arg C1
        *@code C1 l87
         *brace_container C1
-         {int}
+         {normal_text:int}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {;expose}
+       {normal_text:;expose}
      {spaces: }
      *def_typearg C1
       *def_line_arg C1
-       {type}
+       {normal_text:type}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {arg}
+       {normal_text:arg}
      {spaces_after_argument:\\n}
    *@end C1 l88
    |EXTRA
    |text_arg:{deftypeop}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypeop}
+     {normal_text:deftypeop}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypeop C2 l90
@@ -1617,35 +1617,35 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C2
-       {Command}
+       {normal_text:Command}
        *@code C1 l90
         *brace_container C1
-         {com}
+         {normal_text:com}
      {spaces: }
      *def_class C1
       *bracketed_arg C2 l90
-       {Window}
+       {normal_text:Window}
        *@code C1 l90
         *brace_container C1
-         {int}
+         {normal_text:int}
      {spaces: }
      *def_type C1
       *def_line_arg C2
-       {expose}
+       {normal_text:expose}
        *@var C1 l90
         *brace_container C1
-         {exp}
+         {normal_text:exp}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {name}
+       {normal_text:name}
      {spaces_after_argument:\\n}
    *@end C1 l91
    |EXTRA
    |text_arg:{deftypeop}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypeop}
+     {normal_text:deftypeop}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@defun C2 l93
@@ -1661,30 +1661,30 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
      |EXTRA
      |inserted:{1}
       *def_line_arg C1
-       {Function}
+       {normal_text:Function}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {apply}
+       {normal_text:apply}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {function}
+       {normal_text:function}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {&rest}
+       {normal_text:&rest}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {arguments}
+       {normal_text:arguments}
      {spaces_after_argument:\\n}
    *@end C1 l94
    |EXTRA
    |text_arg:{defun}
     *line_arg C3
      {spaces_before_argument: }
-     {defun}
+     {normal_text:defun}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deffn C2 l96
@@ -1700,32 +1700,32 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
       *def_line_arg C1
        *@var C1 l96
         *brace_container C1
-         {A1}
+         {normal_text:A1}
      {spaces: }
      *def_name C1
       *def_line_arg C1
        *@var C1 l96
         *brace_container C1
-         {A2}
+         {normal_text:A2}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@var C1 l96
         *brace_container C1
-         {A3}
+         {normal_text:A3}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@var C1 l96
         *brace_container C1
-         {A4}
+         {normal_text:A4}
      {spaces_after_argument:\\n}
    *@end C1 l97
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
-     {deffn}
+     {normal_text:deffn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deffn C2 l99
@@ -1741,32 +1741,32 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
       *def_line_arg C1
        *@code C1 l99
         *brace_container C1
-         {A1}
+         {normal_text:A1}
      {spaces: }
      *def_name C1
       *def_line_arg C1
        *@code C1 l99
         *brace_container C1
-         {A2}
+         {normal_text:A2}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@code C1 l99
         *brace_container C1
-         {A3}
+         {normal_text:A3}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@code C1 l99
         *brace_container C1
-         {A4}
+         {normal_text:A4}
      {spaces_after_argument:\\n}
    *@end C1 l100
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
-     {deffn}
+     {normal_text:deffn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@defvr C2 l102
@@ -1782,32 +1782,32 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
       *def_line_arg C1
        *@var C1 l102
         *brace_container C1
-         {A1}
+         {normal_text:A1}
      {spaces: }
      *def_name C1
       *def_line_arg C1
        *@var C1 l102
         *brace_container C1
-         {A2}
+         {normal_text:A2}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@var C1 l102
         *brace_container C1
-         {A3}
+         {normal_text:A3}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@var C1 l102
         *brace_container C1
-         {A4}
+         {normal_text:A4}
      {spaces_after_argument:\\n}
    *@end C1 l103
    |EXTRA
    |text_arg:{defvr}
     *line_arg C3
      {spaces_before_argument: }
-     {defvr}
+     {normal_text:defvr}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@defvr C2 l105
@@ -1823,32 +1823,32 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
       *def_line_arg C1
        *@code C1 l105
         *brace_container C1
-         {A1}
+         {normal_text:A1}
      {spaces: }
      *def_name C1
       *def_line_arg C1
        *@code C1 l105
         *brace_container C1
-         {A2}
+         {normal_text:A2}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@code C1 l105
         *brace_container C1
-         {A3}
+         {normal_text:A3}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@code C1 l105
         *brace_container C1
-         {A4}
+         {normal_text:A4}
      {spaces_after_argument:\\n}
    *@end C1 l106
    |EXTRA
    |text_arg:{defvr}
     *line_arg C3
      {spaces_before_argument: }
-     {defvr}
+     {normal_text:defvr}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypefn C2 l108
@@ -1864,38 +1864,38 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
       *def_line_arg C1
        *@var C1 l108
         *brace_container C1
-         {A1}
+         {normal_text:A1}
      {spaces: }
      *def_type C1
       *def_line_arg C1
        *@var C1 l108
         *brace_container C1
-         {A2}
+         {normal_text:A2}
      {spaces: }
      *def_name C1
       *def_line_arg C1
        *@var C1 l108
         *brace_container C1
-         {A3}
+         {normal_text:A3}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@var C1 l108
         *brace_container C1
-         {A4}
+         {normal_text:A4}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@var C1 l108
         *brace_container C1
-         {A5}
+         {normal_text:A5}
      {spaces_after_argument:\\n}
    *@end C1 l109
    |EXTRA
    |text_arg:{deftypefn}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypefn}
+     {normal_text:deftypefn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypefn C2 l111
@@ -1911,38 +1911,38 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
       *def_line_arg C1
        *@code C1 l111
         *brace_container C1
-         {A1}
+         {normal_text:A1}
      {spaces: }
      *def_type C1
       *def_line_arg C1
        *@code C1 l111
         *brace_container C1
-         {A2}
+         {normal_text:A2}
      {spaces: }
      *def_name C1
       *def_line_arg C1
        *@code C1 l111
         *brace_container C1
-         {A3}
+         {normal_text:A3}
      {spaces: }
      *def_typearg C1
       *def_line_arg C1
        *@code C1 l111
         *brace_container C1
-         {A4}
+         {normal_text:A4}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@code C1 l111
         *brace_container C1
-         {A5}
+         {normal_text:A5}
      {spaces_after_argument:\\n}
    *@end C1 l112
    |EXTRA
    |text_arg:{deftypefn}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypefn}
+     {normal_text:deftypefn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypevr C2 l114
@@ -1958,38 +1958,38 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
       *def_line_arg C1
        *@var C1 l114
         *brace_container C1
-         {A1}
+         {normal_text:A1}
      {spaces: }
      *def_type C1
       *def_line_arg C1
        *@var C1 l114
         *brace_container C1
-         {A2}
+         {normal_text:A2}
      {spaces: }
      *def_name C1
       *def_line_arg C1
        *@var C1 l114
         *brace_container C1
-         {A3}
+         {normal_text:A3}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@var C1 l114
         *brace_container C1
-         {A4}
+         {normal_text:A4}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@var C1 l114
         *brace_container C1
-         {A5}
+         {normal_text:A5}
      {spaces_after_argument:\\n}
    *@end C1 l115
    |EXTRA
    |text_arg:{deftypevr}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypevr}
+     {normal_text:deftypevr}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypevr C2 l117
@@ -2005,38 +2005,38 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
       *def_line_arg C1
        *@code C1 l117
         *brace_container C1
-         {A1}
+         {normal_text:A1}
      {spaces: }
      *def_type C1
       *def_line_arg C1
        *@t C1 l117
         *brace_container C1
-         {A2}
+         {normal_text:A2}
      {spaces: }
      *def_name C1
       *def_line_arg C1
        *@code C1 l117
         *brace_container C1
-         {A3}
+         {normal_text:A3}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@code C1 l117
         *brace_container C1
-         {A4}
+         {normal_text:A4}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@code C1 l117
         *brace_container C1
-         {A5}
+         {normal_text:A5}
      {spaces_after_argument:\\n}
    *@end C1 l118
    |EXTRA
    |text_arg:{deftypevr}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypevr}
+     {normal_text:deftypevr}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftp C2 l120
@@ -2052,32 +2052,32 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
       *def_line_arg C1
        *@var C1 l120
         *brace_container C1
-         {A1}
+         {normal_text:A1}
      {spaces: }
      *def_name C1
       *def_line_arg C1
        *@var C1 l120
         *brace_container C1
-         {A2}
+         {normal_text:A2}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@var C1 l120
         *brace_container C1
-         {A3}
+         {normal_text:A3}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@var C1 l120
         *brace_container C1
-         {A4}
+         {normal_text:A4}
      {spaces_after_argument:\\n}
    *@end C1 l121
    |EXTRA
    |text_arg:{deftp}
     *line_arg C3
      {spaces_before_argument: }
-     {deftp}
+     {normal_text:deftp}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftp C2 l123
@@ -2093,32 +2093,32 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
       *def_line_arg C1
        *@code C1 l123
         *brace_container C1
-         {A1}
+         {normal_text:A1}
      {spaces: }
      *def_name C1
       *def_line_arg C1
        *@code C1 l123
         *brace_container C1
-         {A2}
+         {normal_text:A2}
      {spaces: }
      *def_typearg C1
       *def_line_arg C1
        *@code C1 l123
         *brace_container C1
-         {A3}
+         {normal_text:A3}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@code C1 l123
         *brace_container C1
-         {A4}
+         {normal_text:A4}
      {spaces_after_argument:\\n}
    *@end C1 l124
    |EXTRA
    |text_arg:{deftp}
     *line_arg C3
      {spaces_before_argument: }
-     {deftp}
+     {normal_text:deftp}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@defcv C2 l126
@@ -2134,38 +2134,38 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
       *def_line_arg C1
        *@var C1 l126
         *brace_container C1
-         {A1}
+         {normal_text:A1}
      {spaces: }
      *def_class C1
       *def_line_arg C1
        *@var C1 l126
         *brace_container C1
-         {A2}
+         {normal_text:A2}
      {spaces: }
      *def_name C1
       *def_line_arg C1
        *@var C1 l126
         *brace_container C1
-         {A3}
+         {normal_text:A3}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@var C1 l126
         *brace_container C1
-         {A4}
+         {normal_text:A4}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@var C1 l126
         *brace_container C1
-         {A5}
+         {normal_text:A5}
      {spaces_after_argument:\\n}
    *@end C1 l127
    |EXTRA
    |text_arg:{defcv}
     *line_arg C3
      {spaces_before_argument: }
-     {defcv}
+     {normal_text:defcv}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftp C2 l129
@@ -2181,38 +2181,38 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
       *def_line_arg C1
        *@code C1 l129
         *brace_container C1
-         {A1}
+         {normal_text:A1}
      {spaces: }
      *def_name C1
       *def_line_arg C1
        *@code C1 l129
         *brace_container C1
-         {A2}
+         {normal_text:A2}
      {spaces: }
      *def_typearg C1
       *def_line_arg C1
        *@code C1 l129
         *brace_container C1
-         {A3}
+         {normal_text:A3}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@code C1 l129
         *brace_container C1
-         {A4}
+         {normal_text:A4}
      {spaces: }
      *def_typearg C1
       *def_line_arg C1
        *@code C1 l129
         *brace_container C1
-         {A5}
+         {normal_text:A5}
      {spaces_after_argument:\\n}
    *@end C1 l130
    |EXTRA
    |text_arg:{deftp}
     *line_arg C3
      {spaces_before_argument: }
-     {deftp}
+     {normal_text:deftp}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypecv C2 l132
@@ -2228,44 +2228,44 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
       *def_line_arg C1
        *@var C1 l132
         *brace_container C1
-         {A1}
+         {normal_text:A1}
      {spaces: }
      *def_class C1
       *def_line_arg C1
        *@var C1 l132
         *brace_container C1
-         {A2}
+         {normal_text:A2}
      {spaces: }
      *def_type C1
       *def_line_arg C1
        *@var C1 l132
         *brace_container C1
-         {A3}
+         {normal_text:A3}
      {spaces: }
      *def_name C1
       *def_line_arg C1
        *@var C1 l132
         *brace_container C1
-         {A4}
+         {normal_text:A4}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@var C1 l132
         *brace_container C1
-         {A5}
+         {normal_text:A5}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@var C1 l132
         *brace_container C1
-         {A6}
+         {normal_text:A6}
      {spaces_after_argument:\\n}
    *@end C1 l133
    |EXTRA
    |text_arg:{deftypecv}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypecv}
+     {normal_text:deftypecv}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypecv C2 l135
@@ -2281,44 +2281,44 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
       *def_line_arg C1
        *@code C1 l135
         *brace_container C1
-         {A1}
+         {normal_text:A1}
      {spaces: }
      *def_class C1
       *def_line_arg C1
        *@code C1 l135
         *brace_container C1
-         {A2}
+         {normal_text:A2}
      {spaces: }
      *def_type C1
       *def_line_arg C1
        *@option C1 l135
         *brace_container C1
-         {A3}
+         {normal_text:A3}
      {spaces: }
      *def_name C1
       *def_line_arg C1
        *@code C1 l135
         *brace_container C1
-         {A4}
+         {normal_text:A4}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@code C1 l135
         *brace_container C1
-         {A5}
+         {normal_text:A5}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@code C1 l135
         *brace_container C1
-         {A6}
+         {normal_text:A6}
      {spaces_after_argument:\\n}
    *@end C1 l136
    |EXTRA
    |text_arg:{deftypecv}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypecv}
+     {normal_text:deftypecv}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@defop C2 l138
@@ -2334,38 +2334,38 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
       *def_line_arg C1
        *@var C1 l138
         *brace_container C1
-         {A1}
+         {normal_text:A1}
      {spaces: }
      *def_class C1
       *def_line_arg C1
        *@var C1 l138
         *brace_container C1
-         {A2}
+         {normal_text:A2}
      {spaces: }
      *def_name C1
       *def_line_arg C1
        *@var C1 l138
         *brace_container C1
-         {A3}
+         {normal_text:A3}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@var C1 l138
         *brace_container C1
-         {A4}
+         {normal_text:A4}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@var C1 l138
         *brace_container C1
-         {A5}
+         {normal_text:A5}
      {spaces_after_argument:\\n}
    *@end C1 l139
    |EXTRA
    |text_arg:{defop}
     *line_arg C3
      {spaces_before_argument: }
-     {defop}
+     {normal_text:defop}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@defop C2 l141
@@ -2381,38 +2381,38 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
       *def_line_arg C1
        *@code C1 l141
         *brace_container C1
-         {A1}
+         {normal_text:A1}
      {spaces: }
      *def_class C1
       *def_line_arg C1
        *@code C1 l141
         *brace_container C1
-         {A2}
+         {normal_text:A2}
      {spaces: }
      *def_name C1
       *def_line_arg C1
        *@code C1 l141
         *brace_container C1
-         {A3}
+         {normal_text:A3}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@code C1 l141
         *brace_container C1
-         {A4}
+         {normal_text:A4}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@code C1 l141
         *brace_container C1
-         {A5}
+         {normal_text:A5}
      {spaces_after_argument:\\n}
    *@end C1 l142
    |EXTRA
    |text_arg:{defop}
     *line_arg C3
      {spaces_before_argument: }
-     {defop}
+     {normal_text:defop}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypeop C2 l144
@@ -2428,44 +2428,44 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
       *def_line_arg C1
        *@var C1 l144
         *brace_container C1
-         {A1}
+         {normal_text:A1}
      {spaces: }
      *def_class C1
       *def_line_arg C1
        *@var C1 l144
         *brace_container C1
-         {A2}
+         {normal_text:A2}
      {spaces: }
      *def_type C1
       *def_line_arg C1
        *@var C1 l144
         *brace_container C1
-         {A3}
+         {normal_text:A3}
      {spaces: }
      *def_name C1
       *def_line_arg C1
        *@var C1 l144
         *brace_container C1
-         {A4}
+         {normal_text:A4}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@var C1 l144
         *brace_container C1
-         {A5}
+         {normal_text:A5}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@var C1 l144
         *brace_container C1
-         {A6}
+         {normal_text:A6}
      {spaces_after_argument:\\n}
    *@end C1 l145
    |EXTRA
    |text_arg:{deftypeop}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypeop}
+     {normal_text:deftypeop}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypeop C2 l147
@@ -2481,44 +2481,44 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
       *def_line_arg C1
        *@code C1 l147
         *brace_container C1
-         {A1}
+         {normal_text:A1}
      {spaces: }
      *def_class C1
       *def_line_arg C1
        *@code C1 l147
         *brace_container C1
-         {A2}
+         {normal_text:A2}
      {spaces: }
      *def_type C1
       *def_line_arg C1
        *@code C1 l147
         *brace_container C1
-         {A3}
+         {normal_text:A3}
      {spaces: }
      *def_name C1
       *def_line_arg C1
        *@code C1 l147
         *brace_container C1
-         {A4}
+         {normal_text:A4}
      {spaces: }
      *def_typearg C1
       *def_line_arg C1
        *@code C1 l147
         *brace_container C1
-         {A5}
+         {normal_text:A5}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@code C1 l147
         *brace_container C1
-         {A6}
+         {normal_text:A6}
      {spaces_after_argument:\\n}
    *@end C1 l148
    |EXTRA
    |text_arg:{deftypeop}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypeop}
+     {normal_text:deftypeop}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypefn C2 l150
@@ -2532,46 +2532,46 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
      {spaces_before_argument: }
      *def_category C1
       *bracketed_arg C1 l150
-       {code then var}
+       {normal_text:code then var}
      {spaces: }
      *def_type C1
       *bracketed_arg C1 l150
-       {ret_type}
+       {normal_text:ret_type}
      {spaces: }
      *def_name C1
       *bracketed_arg C1 l150
-       {fun_name}
+       {normal_text:fun_name}
      {spaces: }
      *def_typearg C1
       *def_line_arg C1
        *@code C1 l150
         *brace_container C1
-         {A1}
+         {normal_text:A1}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@var C1 l150
         *brace_container C1
-         {A2}
+         {normal_text:A2}
      {spaces: }
      *def_typearg C1
       *def_line_arg C1
        *@code C1 l150
         *brace_container C1
-         {A3}
+         {normal_text:A3}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@var C1 l150
         *brace_container C1
-         {A4}
+         {normal_text:A4}
      {spaces_after_argument:\\n}
    *@end C1 l151
    |EXTRA
    |text_arg:{deftypefn}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypefn}
+     {normal_text:deftypefn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypefn C2 l153
@@ -2585,46 +2585,46 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
      {spaces_before_argument: }
      *def_category C1
       *bracketed_arg C1 l153
-       {var then code}
+       {normal_text:var then code}
      {spaces: }
      *def_type C1
       *bracketed_arg C1 l153
-       {ret_type1}
+       {normal_text:ret_type1}
      {spaces: }
      *def_name C1
       *bracketed_arg C1 l153
-       {fun_name1}
+       {normal_text:fun_name1}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@var C1 l153
         *brace_container C1
-         {A1}
+         {normal_text:A1}
      {spaces: }
      *def_typearg C1
       *def_line_arg C1
        *@code C1 l153
         *brace_container C1
-         {A2}
+         {normal_text:A2}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@var C1 l153
         *brace_container C1
-         {A3}
+         {normal_text:A3}
      {spaces: }
      *def_typearg C1
       *def_line_arg C1
        *@code C1 l153
         *brace_container C1
-         {A4}
+         {normal_text:A4}
      {spaces_after_argument:\\n}
    *@end C1 l154
    |EXTRA
    |text_arg:{deftypefn}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypefn}
+     {normal_text:deftypefn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@heading C1 l156
@@ -2633,7 +2633,7 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
   |heading_number:{2}
    *line_arg C3
     {spaces_before_argument: }
-    {Functions}
+    {normal_text:Functions}
     {spaces_after_argument:\\n}
   *@printindex C1 l157
   |EXTRA
@@ -2641,7 +2641,7 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
   |misc_args:A{fn}
    *line_arg C3
     {spaces_before_argument: }
-    {fn}
+    {normal_text:fn}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@heading C1 l159
@@ -2650,7 +2650,7 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
   |heading_number:{3}
    *line_arg C3
     {spaces_before_argument: }
-    {Types}
+    {normal_text:Types}
     {spaces_after_argument:\\n}
   *@printindex C1 l160
   |EXTRA
@@ -2658,7 +2658,7 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
   |misc_args:A{tp}
    *line_arg C3
     {spaces_before_argument: }
-    {tp}
+    {normal_text:tp}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@heading C1 l162
@@ -2667,7 +2667,7 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
   |heading_number:{4}
    *line_arg C3
     {spaces_before_argument: }
-    {Variables}
+    {normal_text:Variables}
     {spaces_after_argument:\\n}
   *@printindex C1 l163
   |EXTRA
@@ -2675,7 +2675,7 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
   |misc_args:A{vr}
    *line_arg C3
     {spaces_before_argument: }
-    {vr}
+    {normal_text:vr}
     {spaces_after_argument:\\n}
 ';
 

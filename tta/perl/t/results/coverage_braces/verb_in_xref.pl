@@ -16,7 +16,7 @@ $result_tree_text{'verb_in_xref'} = '*document_root C1
   |identifier:{point}
   |is_target:{1}
    *brace_arg C1
-    {point}
+    {normal_text:point}
   {spaces_after_close_brace:\\n}
   {empty_line:\\n}
   *paragraph C2
@@ -25,7 +25,7 @@ $result_tree_text{'verb_in_xref'} = '*document_root C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{point}
-     {point}
+     {normal_text:point}
     *brace_arg C2
      {spaces_before_argument: }
      *@verb C1 l3
@@ -36,7 +36,7 @@ $result_tree_text{'verb_in_xref'} = '*document_root C1
        {raw:\\n}
        {raw:ggg }
        {verb_delimiter:*}
-   {.\\n}
+   {normal_text:.\\n}
 ';
 
 

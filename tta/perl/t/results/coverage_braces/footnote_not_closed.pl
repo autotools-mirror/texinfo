@@ -12,15 +12,15 @@ $result_tree_text{'footnote_not_closed'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *paragraph C2
-   {AAA}
+   {normal_text:AAA}
    *@footnote C1 l1
     *brace_command_context C4
      {spaces_before_argument: }
      *paragraph C1
-      {in footnote\\n}
+      {normal_text:in footnote\\n}
      {empty_line:\\n}
      *paragraph C1
-      {Second paragraph.\\n}
+      {normal_text:Second paragraph.\\n}
 ';
 
 

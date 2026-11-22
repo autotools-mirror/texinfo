@@ -23,7 +23,7 @@ $result_tree_text{'form_feeds'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@macro C3 l5
@@ -38,11 +38,11 @@ $result_tree_text{'form_feeds'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C1
-   {f arg1}
+   {normal_text:f arg1}
    >SOURCEMARKS
    >macro_expansion<start;1>
     >*macro_call@mymacro C3
@@ -56,20 +56,20 @@ $result_tree_text{'form_feeds'} = '*document_root C1
   {empty_line:\\f}
   {spaces_before_paragraph: }
   *paragraph C1
-   {n arg2\\n}
+   {normal_text:n arg2\\n}
    >SOURCEMARKS
    >macro_expansion<end;1><p:6>
   {empty_line:\\n}
   *paragraph C3
-   {g a}
+   {normal_text:g a}
    >SOURCEMARKS
    >macro_expansion<start;2>
     >*macro_call_line@oneargmacro C1
      >*line_arg C2
       >{spaces_before_argument: \\f \\f }
-      >{a@{rgline}
+      >{normal_text:a@{rgline}
    *@{
-   {rgline v\\n}
+   {normal_text:rgline v\\n}
    >SOURCEMARKS
    >macro_expansion<end;2><p:8>
   {empty_line:\\n}

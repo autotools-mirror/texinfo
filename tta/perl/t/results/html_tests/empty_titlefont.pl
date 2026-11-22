@@ -17,7 +17,7 @@ $result_tree_text{'empty_titlefont'} = '*document_root C1
   |EXTRA
   |global_command_number:{1}
    *brace_container
-  {\\n}
+  {normal_text:\\n}
 ';
 
 

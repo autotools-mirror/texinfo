@@ -23,7 +23,7 @@ $result_tree_text{'redefine_texinfo_macro'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    >SOURCEMARKS
@@ -36,8 +36,8 @@ $result_tree_text{'redefine_texinfo_macro'} = '*document_root C1
    >SOURCEMARKS
    >macro_expansion<end;1>
     *brace_container C1
-     {code}
-   {\\n}
+     {normal_text:code}
+   {normal_text:\\n}
 ';
 
 

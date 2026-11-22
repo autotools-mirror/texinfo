@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'conditional_not_closed'} = '*document_root C1
  *before_node_section C1
   *preamble_before_content C1
-   {}
+   {normal_text:}
    >SOURCEMARKS
    >ignored_conditional_block<1>
     >*@ifhtml C2 l1

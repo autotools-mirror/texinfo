@@ -12,21 +12,21 @@ $result_tree_text{'html_expanded'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *paragraph C3
-   {Before\\n}
+   {normal_text:Before\\n}
    *@html C3 l2
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *rawpreformatted C1
-     {html\\n}
+     {normal_text:html\\n}
     *@end C1 l4
     |EXTRA
     |text_arg:{html}
      *line_arg C3
       {spaces_before_argument: }
-      {html}
+      {normal_text:html}
       {spaces_after_argument:\\n}
-   {after.\\n}
+   {normal_text:after.\\n}
 ';
 
 

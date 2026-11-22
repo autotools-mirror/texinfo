@@ -19,7 +19,7 @@ $result_tree_text{'in_menu_only_special_ascii_spaces_node'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C4 in_menu_only_special_ascii_spaces_node.texi:l2 {top}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'in_menu_only_special_ascii_spaces_node'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C4 in_menu_only_special_ascii_spaces_node.texi:l4
@@ -41,20 +41,20 @@ $result_tree_text{'in_menu_only_special_ascii_spaces_node'} = '*document_root C7
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 in_menu_only_special_ascii_spaces_node.texi:l6
     {menu_entry_leading_text:* \\t\\f}
     *menu_entry_node
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 in_menu_only_special_ascii_spaces_node.texi:l7
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 in_menu_only_special_ascii_spaces_node.texi:l9
@@ -71,7 +71,7 @@ $result_tree_text{'in_menu_only_special_ascii_spaces_node'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {CARRIAGE RETURN|'."\r".'|}
+    {normal_text:CARRIAGE RETURN|'."\r".'|}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 in_menu_only_special_ascii_spaces_node.texi:l12
@@ -88,7 +88,7 @@ $result_tree_text{'in_menu_only_special_ascii_spaces_node'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {CHARACTER TABULATION|\\t| FORM FEED|\\f|}
+    {normal_text:CHARACTER TABULATION|\\t| FORM FEED|\\f|}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
 ';

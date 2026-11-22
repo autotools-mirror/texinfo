@@ -14,17 +14,17 @@ $result_tree_text{'indicateurl_end_lines'} = '*document_root C1
   *paragraph C2
    *@indicateurl C1 l1
     *brace_container C2
-     {http://begin\\n}
-     {continue on other line}
-   {\\n}
+     {normal_text:http://begin\\n}
+     {normal_text:continue on other line}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C1
    *@indicateurl C1 l4
     *brace_container C2
-     {http://begin2\\n}
+     {normal_text:http://begin2\\n}
      {empty_line:\\n}
   *paragraph C1
-   {cut by blank line\\n}
+   {normal_text:cut by blank line\\n}
 ';
 
 

@@ -18,17 +18,17 @@ $result_tree_text{'braces_in_tex'} = '*document_root C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *rawpreformatted C5
-     {$$ \\n}
-     {\\chi^2 = \\sum_{i=1}^N\\n}
-     {\\left(y_i - (a + b x_i)\\n}
-     {\\over \\sigma_i\\right)^2 \\n}
-     {$$\\n}
+     {normal_text:$$ \\n}
+     {normal_text:\\chi^2 = \\sum_{i=1}^N\\n}
+     {normal_text:\\left(y_i - (a + b x_i)\\n}
+     {normal_text:\\over \\sigma_i\\right)^2 \\n}
+     {normal_text:$$\\n}
     *@end C1 l8
     |EXTRA
     |text_arg:{tex}
      *line_arg C3
       {spaces_before_argument: }
-      {tex}
+      {normal_text:tex}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    {empty_line:\\n}
@@ -42,24 +42,24 @@ $result_tree_text{'braces_in_tex'} = '*document_root C1
       *block_line_arg C1
        {spaces_before_argument:\\n}
      *rawpreformatted C5
-      {$$ \\n}
-      {\\chi^2 = \\sum_{i=1}^N\\n}
-      {\\left(y_i - (a + b x_i)\\n}
-      {\\over \\sigma_i\\right)^2 \\n}
-      {$$\\n}
+      {normal_text:$$ \\n}
+      {normal_text:\\chi^2 = \\sum_{i=1}^N\\n}
+      {normal_text:\\left(y_i - (a + b x_i)\\n}
+      {normal_text:\\over \\sigma_i\\right)^2 \\n}
+      {normal_text:$$\\n}
      *@end C1 l18
      |EXTRA
      |text_arg:{tex}
       *line_arg C3
        {spaces_before_argument: }
-       {tex}
+       {normal_text:tex}
        {spaces_after_argument:\\n}
    *@end C1 l19
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
 ';

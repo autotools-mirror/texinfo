@@ -19,28 +19,28 @@ $result_tree_text{'top_node_up_explicit'} = '*document_root C5
   *arguments_line C4
    *line_arg C2
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
    *line_arg C4
    |EXTRA
    |manual_content:A{2|2}
     {spaces_before_argument: }
-    {(}
-    {dir}
-    {)}
+    {normal_text:(}
+    {normal_text:dir}
+    {normal_text:)}
    *line_arg C4
    |EXTRA
    |manual_content:A{2|2}
     {spaces_before_argument: }
-    {(}
-    {weird}
-    {)}
+    {normal_text:(}
+    {normal_text:weird}
+    {normal_text:)}
    *line_arg C5
    |EXTRA
    |manual_content:A{2|2}
     {spaces_before_argument: }
-    {(}
-    {dir}
-    {)}
+    {normal_text:(}
+    {normal_text:dir}
+    {normal_text:)}
     {spaces_after_argument:\\n}
  *@top C6 l2 {The top}
  |EXTRA
@@ -49,11 +49,11 @@ $result_tree_text{'top_node_up_explicit'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {The top}
+    {normal_text:The top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {Just a top node.\\n}
+   {normal_text:Just a top node.\\n}
   {empty_line:\\n}
   *@menu C3 l6
    *arguments_line C1
@@ -65,17 +65,17 @@ $result_tree_text{'top_node_up_explicit'} = '*document_root C5
     |EXTRA
     |node_content:A{0|0}
     |normalized:{Chap}
-     {Chap}
+     {normal_text:Chap}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l8
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l10 {Chap}
@@ -86,7 +86,7 @@ $result_tree_text{'top_node_up_explicit'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chap}
+    {normal_text:Chap}
     {spaces_after_argument:\\n}
  *@chapter C3 l11 {A chapter}
  |EXTRA
@@ -96,11 +96,11 @@ $result_tree_text{'top_node_up_explicit'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {A chapter}
+    {normal_text:A chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {Without the chapter, no up node from top is generated.\\n}
+   {normal_text:Without the chapter, no up node from top is generated.\\n}
 ';
 
 

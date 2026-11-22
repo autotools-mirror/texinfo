@@ -20,7 +20,7 @@ $result_tree_text{'split_chapter_index'} = '*document_root C10
    |text_arg:{split_chapter_index}
     *line_arg C3
      {spaces_before_argument: }
-     {split_chapter_index}
+     {normal_text:split_chapter_index}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *@node C1 split_chapter_index.texi:l5 {Top}
@@ -31,7 +31,7 @@ $result_tree_text{'split_chapter_index'} = '*document_root C10
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C8 split_chapter_index.texi:l6 {split indices}
  |EXTRA
@@ -40,7 +40,7 @@ $result_tree_text{'split_chapter_index'} = '*document_root C10
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {split indices}
+    {normal_text:split indices}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 split_chapter_index.texi:l7
   |EXTRA
@@ -48,11 +48,11 @@ $result_tree_text{'split_chapter_index'} = '*document_root C10
   |index_entry:I{cp,1}
    *line_arg C3
     {spaces_before_argument: }
-    {entry a}
+    {normal_text:entry a}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {Text in top.\\n}
+   {normal_text:Text in top.\\n}
   {empty_line:\\n}
   {empty_line:\\n}
   *@menu C3 split_chapter_index.texi:l12
@@ -65,17 +65,17 @@ $result_tree_text{'split_chapter_index'} = '*document_root C10
     |EXTRA
     |node_content:A{0|0}
     |normalized:{first}
-     {first}
+     {normal_text:first}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 split_chapter_index.texi:l14
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 split_chapter_index.texi:l16 {first}
@@ -87,7 +87,7 @@ $result_tree_text{'split_chapter_index'} = '*document_root C10
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {first}
+    {normal_text:first}
     {spaces_after_argument:\\n}
  *@chapter C14 split_chapter_index.texi:l17 {First chapter}
  |EXTRA
@@ -97,18 +97,18 @@ $result_tree_text{'split_chapter_index'} = '*document_root C10
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {First chapter}
+    {normal_text:First chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C5
-   {Text and then index entries\\n}
+   {normal_text:Text and then index entries\\n}
    *index_entry_command@cindex C1 split_chapter_index.texi:l20
    |EXTRA
    |element_node:{first}
    |index_entry:I{cp,2}
     *line_arg C3
      {spaces_before_argument: }
-     {entry in node}
+     {normal_text:entry in node}
      {spaces_after_argument:\\n}
    *index_entry_command@cindex C1 split_chapter_index.texi:l21
    |EXTRA
@@ -116,7 +116,7 @@ $result_tree_text{'split_chapter_index'} = '*document_root C10
    |index_entry:I{cp,3}
     *line_arg C3
      {spaces_before_argument: }
-     {! entry in node}
+     {normal_text:! entry in node}
      {spaces_after_argument:\\n}
    *index_entry_command@findex C1 split_chapter_index.texi:l22
    |EXTRA
@@ -124,7 +124,7 @@ $result_tree_text{'split_chapter_index'} = '*document_root C10
    |index_entry:I{fn,1}
     *line_arg C3
      {spaces_before_argument: }
-     {fun in node}
+     {normal_text:fun in node}
      {spaces_after_argument:\\n}
    *index_entry_command@cindex C1 split_chapter_index.texi:l23
    |EXTRA
@@ -132,7 +132,7 @@ $result_tree_text{'split_chapter_index'} = '*document_root C10
    |index_entry:I{cp,4}
     *line_arg C3
      {spaces_before_argument: }
-     {entry in node}
+     {normal_text:entry in node}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@printindex C1 split_chapter_index.texi:l25
@@ -141,7 +141,7 @@ $result_tree_text{'split_chapter_index'} = '*document_root C10
   |misc_args:A{cp}
    *line_arg C3
     {spaces_before_argument: }
-    {cp}
+    {normal_text:cp}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 split_chapter_index.texi:l27
@@ -150,7 +150,7 @@ $result_tree_text{'split_chapter_index'} = '*document_root C10
   |index_entry:I{cp,5}
    *line_arg C3
     {spaces_before_argument: }
-    {entry after printindex}
+    {normal_text:entry after printindex}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@findex C1 split_chapter_index.texi:l29
@@ -159,7 +159,7 @@ $result_tree_text{'split_chapter_index'} = '*document_root C10
   |index_entry:I{fn,2}
    *line_arg C3
     {spaces_before_argument: }
-    {a function}
+    {normal_text:a function}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 split_chapter_index.texi:l30
   |EXTRA
@@ -167,7 +167,7 @@ $result_tree_text{'split_chapter_index'} = '*document_root C10
   |index_entry:I{cp,6}
    *line_arg C3
     {spaces_before_argument: }
-    {a concept in first}
+    {normal_text:a concept in first}
     {spaces_after_argument:\\n}
   *index_entry_command@findex C1 split_chapter_index.texi:l31
   |EXTRA
@@ -175,7 +175,7 @@ $result_tree_text{'split_chapter_index'} = '*document_root C10
   |index_entry:I{fn,3}
    *line_arg C3
     {spaces_before_argument: }
-    {somewhere}
+    {normal_text:somewhere}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C3 split_chapter_index.texi:l33
@@ -188,17 +188,17 @@ $result_tree_text{'split_chapter_index'} = '*document_root C10
     |EXTRA
     |node_content:A{0|0}
     |normalized:{section-1}
-     {section 1}
+     {normal_text:section 1}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 split_chapter_index.texi:l35
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 split_chapter_index.texi:l37 {section 1}
@@ -209,7 +209,7 @@ $result_tree_text{'split_chapter_index'} = '*document_root C10
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {section 1}
+    {normal_text:section 1}
     {spaces_after_argument:\\n}
  *@section C8 split_chapter_index.texi:l38 {Section 1}
  |EXTRA
@@ -219,7 +219,7 @@ $result_tree_text{'split_chapter_index'} = '*document_root C10
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Section 1}
+    {normal_text:Section 1}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C3 split_chapter_index.texi:l40
@@ -232,17 +232,17 @@ $result_tree_text{'split_chapter_index'} = '*document_root C10
     |EXTRA
     |node_content:A{0|0}
     |normalized:{subsection-1}
-     {subsection 1}
+     {normal_text:subsection 1}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 split_chapter_index.texi:l42
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 split_chapter_index.texi:l44
@@ -251,7 +251,7 @@ $result_tree_text{'split_chapter_index'} = '*document_root C10
   |index_entry:I{cp,7}
    *line_arg C3
     {spaces_before_argument: }
-    {something}
+    {normal_text:something}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 split_chapter_index.texi:l46
@@ -260,7 +260,7 @@ $result_tree_text{'split_chapter_index'} = '*document_root C10
   |index_entry:I{cp,8}
    *line_arg C3
     {spaces_before_argument: }
-    {another}
+    {normal_text:another}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 split_chapter_index.texi:l48 {subsection 1}
@@ -271,7 +271,7 @@ $result_tree_text{'split_chapter_index'} = '*document_root C10
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {subsection 1}
+    {normal_text:subsection 1}
     {spaces_after_argument:\\n}
  *@subsection C6 split_chapter_index.texi:l49 {Subsection 1}
  |EXTRA
@@ -281,11 +281,11 @@ $result_tree_text{'split_chapter_index'} = '*document_root C10
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Subsection 1}
+    {normal_text:Subsection 1}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {In subsection 1\\n}
+   {normal_text:In subsection 1\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 split_chapter_index.texi:l53
   |EXTRA
@@ -293,7 +293,7 @@ $result_tree_text{'split_chapter_index'} = '*document_root C10
   |index_entry:I{cp,9}
    *line_arg C3
     {spaces_before_argument: }
-    {printindex subsection 2}
+    {normal_text:printindex subsection 2}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@bye C1

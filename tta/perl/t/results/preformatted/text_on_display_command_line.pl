@@ -15,30 +15,30 @@ $result_tree_text{'text_on_display_command_line'} = '*document_root C1
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     {text on line}
+     {normal_text:text on line}
      {spaces_after_argument:\\n}
    *@end C1 l2
    |EXTRA
    |text_arg:{display}
     *line_arg C3
      {spaces_before_argument: }
-     {display}
+     {normal_text:display}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@display C3 l4
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     {text on line followed by text}
+     {normal_text:text on line followed by text}
      {spaces_after_argument:\\n}
    *preformatted C1
-    {normal text\\n}
+    {normal_text:normal text\\n}
    *@end C1 l6
    |EXTRA
    |text_arg:{display}
     *line_arg C3
      {spaces_before_argument: }
-     {display}
+     {normal_text:display}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@display C3 l8
@@ -46,13 +46,13 @@ $result_tree_text{'text_on_display_command_line'} = '*document_root C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C1
-    {in display\\n}
+    {normal_text:in display\\n}
    *@end C1 l10
    |EXTRA
    |text_arg:{display text after end}
     *line_arg C3
      {spaces_before_argument: }
-     {display text after end}
+     {normal_text:display text after end}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@display C3 l12
@@ -68,14 +68,14 @@ $result_tree_text{'text_on_display_command_line'} = '*document_root C1
     |text_arg:{display text after end display nested in display}
      *line_arg C3
       {spaces_before_argument: }
-      {display text after end display nested in display}
+      {normal_text:display text after end display nested in display}
       {spaces_after_argument:\\n}
    *@end C1 l15
    |EXTRA
    |text_arg:{display}
     *line_arg C3
      {spaces_before_argument: }
-     {display}
+     {normal_text:display}
      {spaces_after_argument:\\n}
 ';
 

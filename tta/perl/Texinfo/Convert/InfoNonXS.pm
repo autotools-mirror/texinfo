@@ -681,7 +681,8 @@ sub format_footnotes($;$) {
       my $footnotes_node_arg
             = Texinfo::TreeElement::new({'type' => 'line_arg',
                              'contents' => [$label_element,
-                        Texinfo::TreeElement::new({'text' => '-Footnotes'})]});
+                        Texinfo::TreeElement::new({'text' => '-Footnotes',
+                                                    'type' => 'normal_text'})]});
       my $footnotes_node = Texinfo::TreeElement::new({
         'cmdname' => 'node',
         'contents' => [Texinfo::TreeElement::new({'type' => 'arguments_line',
@@ -716,7 +717,8 @@ sub format_footnotes($;$) {
           = Texinfo::Common::non_leading_trailing_tree($label_element);
         $footnote_anchor_arg->{'type'} = 'brace_arg';
         push @{$footnote_anchor_arg->{'contents'}},
-               Texinfo::TreeElement::new({'text' => $footnote_anchor_postfix});
+               Texinfo::TreeElement::new({'text' => $footnote_anchor_postfix,
+                                           'type' => 'normal_text'});
         my $footnote_anchor = Texinfo::TreeElement::new({'cmdname' => 'anchor',
                                     'contents' => [$footnote_anchor_arg],
                                     'extra' => {'is_target' => 1,
@@ -753,19 +755,22 @@ sub format_reference_to_footnote($) {
     my $arguments_line = $self->{'current_node'}->{'contents'}->[0];
     my $line_arg = $arguments_line->{'contents'}->[0];
     $self->_convert(Texinfo::TreeElement::new({'contents' =>
-           [Texinfo::TreeElement::new({'text' => ' ('}),
+           [Texinfo::TreeElement::new({'text' => ' (',
+                                       'type' => 'normal_text'}),
             Texinfo::TreeElement::new({'cmdname' => 'pxref',
              'contents' => [
                Texinfo::TreeElement::new({'type' => 'brace_arg',
                 'contents' => [
                    $line_arg,
                    Texinfo::TreeElement::new(
-                        {'text' => "-Footnote-$self->{'footnote_index'}"})
+                        {'text' => "-Footnote-$self->{'footnote_index'}",
+                         'type' => 'normal_text'})
                 ]
                })
              ]
             }),
-            Texinfo::TreeElement::new({'text' => ')'})],
+            Texinfo::TreeElement::new({'text' => ')',
+                                       'type' => 'normal_text'})],
       }));
   }
 }
@@ -878,9 +883,11 @@ sub format_ref($$$$) {
 
   my $note_element;
   if ($cmdname eq 'xref') {
-    $note_element = Texinfo::TreeElement::new({'text' => '*Note '});
+    $note_element = Texinfo::TreeElement::new({'text' => '*Note ',
+                                               'type' => 'normal_text'});
   } else {
-    $note_element = Texinfo::TreeElement::new({'text' => '*note '});
+    $note_element = Texinfo::TreeElement::new({'text' => '*note ',
+                                               'type' => 'normal_text'});
   }
 
   $self->_convert(Texinfo::TreeElement::new(
@@ -921,19 +928,22 @@ sub format_ref($$$$) {
   my $has_file = 0;
   if (defined($args->[3])) {
     my $file = Texinfo::TreeElement::new({'contents' => [
-               Texinfo::TreeElement::new({'text' => '('}),
+               Texinfo::TreeElement::new({'text' => '(',
+                                          'type' => 'normal_text'}),
                Texinfo::TreeElement::new({'type' => '_stop_upper_case',
                   'contents' => [Texinfo::TreeElement::new(
                                   {'type' => '_code',
                                    'contents' => [$args->[3]]})],}),
-               Texinfo::TreeElement::new({'text' => ')'}),]});
+               Texinfo::TreeElement::new({'text' => ')',
+                                          'type' => 'normal_text'}),]});
     $self->_convert($file);
     $has_file = 1;
   } elsif (defined($args->[4])) {
     # add a () such that the node is considered to be external,
     # even though the manual name is not known.  This should only
     # happen if a book argument is given, but no manual name.
-    $self->_convert(Texinfo::TreeElement::new({'text' => '()'}));
+    $self->_convert(Texinfo::TreeElement::new({'text' => '()',
+                                               'type' => 'normal_text'}));
     $has_file = 1;
   }
 
@@ -1164,9 +1174,11 @@ sub format_node($$;$) {
         my $file_formatted = Texinfo::TreeElement::new(
                          {'type' => '_code',
                           'contents' => [
-                        Texinfo::TreeElement::new({'text' => '('}),
+                        Texinfo::TreeElement::new({'text' => '(',
+                                                   'type' => 'normal_text'}),
                 @{$node_direction->{'contents'}}[$begin_manual .. $end_manual],
-                               Texinfo::TreeElement::new({'text' => ')'})]});
+                               Texinfo::TreeElement::new({'text' => ')',
+                                                 'type' => 'normal_text'})]});
         $self->convert_line($file_formatted, undef, 1);
       }
 

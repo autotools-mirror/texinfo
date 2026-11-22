@@ -12,114 +12,114 @@ $result_tree_text{'sp_empty_lines_1_no_arg_zero'} = '*document_root C1
  *before_node_section C40
   *preamble_before_content
   *paragraph C1
-   {A\\n}
+   {normal_text:A\\n}
   {empty_line:\\n}
   *paragraph C1
-   {A010\\n}
+   {normal_text:A010\\n}
   *@sp C1 l4
   |EXTRA
   |misc_args:A{1}
    *line_arg C3
     {spaces_before_argument: }
-    {1}
+    {normal_text:1}
     {spaces_after_argument:\\n}
   *paragraph C1
-   {A110\\n}
+   {normal_text:A110\\n}
   {empty_line:\\n}
   *@sp C1 l7
   |EXTRA
   |misc_args:A{1}
    *line_arg C3
     {spaces_before_argument: }
-    {1}
+    {normal_text:1}
     {spaces_after_argument:\\n}
   *paragraph C1
-   {A011\\n}
+   {normal_text:A011\\n}
   {empty_line:\\n}
   *@sp C1 l10
   |EXTRA
   |misc_args:A{1}
    *line_arg C3
     {spaces_before_argument: }
-    {1}
+    {normal_text:1}
     {spaces_after_argument:\\n}
   *paragraph C1
-   {A111\\n}
+   {normal_text:A111\\n}
   {empty_line:\\n}
   *@sp C1 l13
   |EXTRA
   |misc_args:A{1}
    *line_arg C3
     {spaces_before_argument: }
-    {1}
+    {normal_text:1}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {A000\\n}
+   {normal_text:A000\\n}
   *@sp C1 l16
   |EXTRA
   |misc_args:A{0}
    *line_arg C3
     {spaces_before_argument: }
-    {0}
+    {normal_text:0}
     {spaces_after_argument:\\n}
   *paragraph C1
-   {A100\\n}
+   {normal_text:A100\\n}
   {empty_line:\\n}
   *@sp C1 l19
   |EXTRA
   |misc_args:A{0}
    *line_arg C3
     {spaces_before_argument: }
-    {0}
+    {normal_text:0}
     {spaces_after_argument:\\n}
   *paragraph C1
-   {A001\\n}
+   {normal_text:A001\\n}
   {empty_line:\\n}
   *@sp C1 l22
   |EXTRA
   |misc_args:A{0}
    *line_arg C3
     {spaces_before_argument: }
-    {0}
+    {normal_text:0}
     {spaces_after_argument:\\n}
   *paragraph C1
-   {A101\\n}
+   {normal_text:A101\\n}
   {empty_line:\\n}
   *@sp C1 l25
   |EXTRA
   |misc_args:A{0}
    *line_arg C3
     {spaces_before_argument: }
-    {0}
+    {normal_text:0}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {A0 0\\n}
+   {normal_text:A0 0\\n}
   *@sp C1 l28
    *line_arg C1
     {spaces_before_argument:\\n}
   *paragraph C1
-   {A1 0\\n}
+   {normal_text:A1 0\\n}
   {empty_line:\\n}
   *@sp C1 l31
    *line_arg C1
     {spaces_before_argument: \\n}
   *paragraph C1
-   {A0 1\\n}
+   {normal_text:A0 1\\n}
   {empty_line:\\n}
   *@sp C1 l34
    *line_arg C1
     {spaces_before_argument:\\n}
   *paragraph C1
-   {A1 1\\n}
+   {normal_text:A1 1\\n}
   {empty_line:\\n}
   *@sp C1 l37
    *line_arg C1
     {spaces_before_argument: \\n}
   {empty_line:\\n}
   *paragraph C1
-   {B}
+   {normal_text:B}
 ';
 
 

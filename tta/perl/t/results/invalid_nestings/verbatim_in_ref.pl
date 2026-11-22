@@ -19,13 +19,13 @@ $result_tree_text{'verbatim_in_ref'} = '*document_root C2
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {first}
+    {normal_text:first}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
    *@xref C2 l3
     *brace_arg C1
-     {first}
+     {normal_text:first}
     *brace_arg C1
      {spaces_before_argument: \\n}
   *@verbatim C3 l4
@@ -38,11 +38,11 @@ $result_tree_text{'verbatim_in_ref'} = '*document_root C2
    |text_arg:{verbatim}
     *line_arg C3
      {spaces_before_argument: }
-     {verbatim}
+     {normal_text:verbatim}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {.}
+   {normal_text:.}
 ';
 
 

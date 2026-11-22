@@ -25,7 +25,7 @@ $result_tree_text{'index_special_region_titlepage_no_nodes'} = '*document_root C
     |index_entry:I{cp,1}
      *line_arg C3
       {spaces_before_argument: }
-      {Copying this document}
+      {normal_text:Copying this document}
       {spaces_after_argument:\\n}
     *@anchor C1 index_special_region.texi:l6
     |EXTRA
@@ -34,12 +34,12 @@ $result_tree_text{'index_special_region_titlepage_no_nodes'} = '*document_root C
      *brace_arg C1
      |EXTRA
      |element_region:{copying}
-      {Copying information}
+      {normal_text:Copying information}
     {spaces_after_close_brace:\\n}
     {empty_line:\\n}
     *paragraph C4
-     {This is a test manual, trivially and explicitly in the public\\n}
-     {domain}
+     {normal_text:This is a test manual, trivially and explicitly in the public\\n}
+     {normal_text:domain}
      *@footnote C1 index_special_region.texi:l9
      |EXTRA
      |global_command_number:{1}
@@ -51,11 +51,11 @@ $result_tree_text{'index_special_region_titlepage_no_nodes'} = '*document_root C
         *brace_arg C1
         |EXTRA
         |element_region:{copying}
-         {Public domain reference}
+         {normal_text:Public domain reference}
        {spaces_after_close_brace: }
        *paragraph C2
-        {The public\\n}
-        {domain is something you should allready know\\n}
+        {normal_text:The public\\n}
+        {normal_text:domain is something you should allready know\\n}
        {empty_line:\\n}
        *index_entry_command@cindex C1 index_special_region.texi:l12
        |EXTRA
@@ -63,9 +63,9 @@ $result_tree_text{'index_special_region_titlepage_no_nodes'} = '*document_root C
        |index_entry:I{cp,2}
         *line_arg C3
          {spaces_before_argument: }
-         {Public domain}
+         {normal_text:Public domain}
          {spaces_after_argument:\\n}
-     {.\\n}
+     {normal_text:.\\n}
     {empty_line:\\n}
     *@printindex C1 index_special_region.texi:l15
     |EXTRA
@@ -73,7 +73,7 @@ $result_tree_text{'index_special_region_titlepage_no_nodes'} = '*document_root C
     |misc_args:A{cp}
      *line_arg C3
       {spaces_before_argument: }
-      {cp}
+      {normal_text:cp}
       {spaces_after_argument:\\n}
     {empty_line:\\n}
     *@end C1 index_special_region.texi:l17
@@ -81,7 +81,7 @@ $result_tree_text{'index_special_region_titlepage_no_nodes'} = '*document_root C
     |text_arg:{copying}
      *line_arg C3
       {spaces_before_argument: }
-      {copying}
+      {normal_text:copying}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@titlepage C10 index_special_region.texi:l19
@@ -95,7 +95,7 @@ $result_tree_text{'index_special_region_titlepage_no_nodes'} = '*document_root C
     |index_entry:I{cp,3}
      *line_arg C3
       {spaces_before_argument: }
-      {Titlepage index}
+      {normal_text:Titlepage index}
       {spaces_after_argument:\\n}
     *@anchor C1 index_special_region.texi:l22
     |EXTRA
@@ -104,11 +104,11 @@ $result_tree_text{'index_special_region_titlepage_no_nodes'} = '*document_root C
      *brace_arg C1
      |EXTRA
      |element_region:{titlepage}
-      {Titlepage anchor}
+      {normal_text:Titlepage anchor}
     {spaces_after_close_brace:\\n}
     {empty_line:\\n}
     *paragraph C3
-     {This is the titlepage}
+     {normal_text:This is the titlepage}
      *@footnote C1 index_special_region.texi:l24
      |EXTRA
      |global_command_number:{2}
@@ -120,10 +120,10 @@ $result_tree_text{'index_special_region_titlepage_no_nodes'} = '*document_root C
         *brace_arg C1
         |EXTRA
         |element_region:{titlepage}
-         {Titlepage footnote anchor}
+         {normal_text:Titlepage footnote anchor}
        {spaces_after_close_brace:\\n}
        *paragraph C1
-        {This is a fine document.\\n}
+        {normal_text:This is a fine document.\\n}
        {empty_line:\\n}
        *index_entry_command@cindex C1 index_special_region.texi:l27
        |EXTRA
@@ -131,9 +131,9 @@ $result_tree_text{'index_special_region_titlepage_no_nodes'} = '*document_root C
        |index_entry:I{cp,4}
         *line_arg C3
          {spaces_before_argument: }
-         {Titlepage footnote}
+         {normal_text:Titlepage footnote}
          {spaces_after_argument:\\n}
-     {\\n}
+     {normal_text:\\n}
     {empty_line:\\n}
     *@insertcopying C1 index_special_region.texi:l30
     |EXTRA
@@ -145,7 +145,7 @@ $result_tree_text{'index_special_region_titlepage_no_nodes'} = '*document_root C
     |text_arg:{titlepage}
      *line_arg C3
       {spaces_before_argument: }
-      {titlepage}
+      {normal_text:titlepage}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
  *@node C1 index_special_region.texi:l33 {Top}
@@ -156,7 +156,7 @@ $result_tree_text{'index_special_region_titlepage_no_nodes'} = '*document_root C
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C1 index_special_region.texi:l34 {Top}
  |EXTRA
@@ -165,7 +165,7 @@ $result_tree_text{'index_special_region_titlepage_no_nodes'} = '*document_root C
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@chapter C15 index_special_region.texi:l35 {Chapter}
  |EXTRA
@@ -177,7 +177,7 @@ $result_tree_text{'index_special_region_titlepage_no_nodes'} = '*document_root C
   *arguments_line C1
    *line_arg C4
     {spaces_before_argument: }
-    {Chapter}
+    {normal_text:Chapter}
     {spaces_after_argument:  }
     *@c C1
      *line_arg C3
@@ -192,12 +192,12 @@ $result_tree_text{'index_special_region_titlepage_no_nodes'} = '*document_root C
     {spaces_before_argument:\\n}
   {empty_line:\\n}
   *paragraph C6
-   {This test demonstrates }
+   {normal_text:This test demonstrates }
    *@@
-   {anchor and indices in }
+   {normal_text:anchor and indices in }
    *@@
-   {copying\\n}
-   {and titlepage, and various wrong index entries.\\n}
+   {normal_text:copying\\n}
+   {normal_text:and titlepage, and various wrong index entries.\\n}
   {empty_line:\\n}
   *index_entry_command@findex C1 index_special_region.texi:l42
   |EXTRA
@@ -205,7 +205,7 @@ $result_tree_text{'index_special_region_titlepage_no_nodes'} = '*document_root C
   |index_entry:I{fn,1}
    *line_arg C3
     {spaces_before_argument: }
-    {findex entry}
+    {normal_text:findex entry}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 index_special_region.texi:l44
@@ -219,7 +219,7 @@ $result_tree_text{'index_special_region_titlepage_no_nodes'} = '*document_root C
     *block_line_arg C4
      *def_category C1
       *bracketed_arg C1 index_special_region.texi:l45
-       {truc}
+       {normal_text:truc}
      {spaces: }
      *def_name C1
       *bracketed_arg C1 index_special_region.texi:l45
@@ -232,7 +232,7 @@ $result_tree_text{'index_special_region_titlepage_no_nodes'} = '*document_root C
     *line_arg C2
      *def_category C1
       *bracketed_arg C1 index_special_region.texi:l46
-       {truc}
+       {normal_text:truc}
      {spaces_after_argument:\\n}
    *@deffnx C1 index_special_region.texi:l47
    |EXTRA
@@ -250,7 +250,7 @@ $result_tree_text{'index_special_region_titlepage_no_nodes'} = '*document_root C
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
-     {deffn}
+     {normal_text:deffn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@ftable C4 index_special_region.texi:l50
@@ -270,14 +270,14 @@ $result_tree_text{'index_special_region_titlepage_no_nodes'} = '*document_root C
      |index_entry:I{fn,2}
       *line_arg C3
        {spaces_before_argument: }
-       {fun}
+       {normal_text:fun}
        {spaces_after_argument:\\n}
    *@end C1 index_special_region.texi:l53
    |EXTRA
    |text_arg:{ftable}
     *line_arg C3
      {spaces_before_argument: }
-     {ftable}
+     {normal_text:ftable}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C3 index_special_region.texi:l55
@@ -290,17 +290,17 @@ $result_tree_text{'index_special_region_titlepage_no_nodes'} = '*document_root C
     |EXTRA
     |node_content:A{0|0}
     |normalized:{Copying-and-indices}
-     {Copying and indices}
+     {normal_text:Copying and indices}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 index_special_region.texi:l57
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 index_special_region.texi:l59 {Copying and indices}
@@ -312,7 +312,7 @@ $result_tree_text{'index_special_region_titlepage_no_nodes'} = '*document_root C
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Copying and indices}
+    {normal_text:Copying and indices}
     {spaces_after_argument:\\n}
  *@appendix C18 index_special_region.texi:l60 {Copying and indices}
  |EXTRA
@@ -322,11 +322,11 @@ $result_tree_text{'index_special_region_titlepage_no_nodes'} = '*document_root C
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Copying and indices}
+    {normal_text:Copying and indices}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {In the appendix, we print the indices and references.\\n}
+   {normal_text:In the appendix, we print the indices and references.\\n}
   {empty_line:\\n}
   *index_entry_command@findex C1 index_special_region.texi:l64
   |EXTRA
@@ -334,7 +334,7 @@ $result_tree_text{'index_special_region_titlepage_no_nodes'} = '*document_root C
   |index_entry:I{fn,3}
    *line_arg C3
     {spaces_before_argument: }
-    {another fun}
+    {normal_text:another fun}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 index_special_region.texi:l66
@@ -343,7 +343,7 @@ $result_tree_text{'index_special_region_titlepage_no_nodes'} = '*document_root C
   |index_entry:I{cp,5}
    *line_arg C3
     {spaces_before_argument: }
-    {Copying appendix}
+    {normal_text:Copying appendix}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C4
@@ -352,15 +352,15 @@ $result_tree_text{'index_special_region_titlepage_no_nodes'} = '*document_root C
     |EXTRA
     |node_content:A{0|0}
     |normalized:{Copying-information}
-     {Copying information}
-   { for the copying information.\\n}
+     {normal_text:Copying information}
+   {normal_text: for the copying information.\\n}
    *@ref C1 index_special_region.texi:l69
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{Public-domain-reference}
-     {Public domain reference}
-   { for reference on the licence.\\n}
+     {normal_text:Public domain reference}
+   {normal_text: for reference on the licence.\\n}
   {empty_line:\\n}
   *paragraph C4
    *@ref C1 index_special_region.texi:l71
@@ -368,15 +368,15 @@ $result_tree_text{'index_special_region_titlepage_no_nodes'} = '*document_root C
     |EXTRA
     |node_content:A{0|0}
     |normalized:{Titlepage-anchor}
-     {Titlepage anchor}
-   { for the titlepage.\\n}
+     {normal_text:Titlepage anchor}
+   {normal_text: for the titlepage.\\n}
    *@ref C1 index_special_region.texi:l72
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{Titlepage-footnote-anchor}
-     {Titlepage footnote anchor}
-   { for reference on the titlepage.\\n}
+     {normal_text:Titlepage footnote anchor}
+   {normal_text: for reference on the titlepage.\\n}
   {empty_line:\\n}
   *@insertcopying C1 index_special_region.texi:l74
   |EXTRA
@@ -390,7 +390,7 @@ $result_tree_text{'index_special_region_titlepage_no_nodes'} = '*document_root C
   |misc_args:A{cp}
    *line_arg C3
     {spaces_before_argument: }
-    {cp}
+    {normal_text:cp}
     {spaces_after_argument:\\n}
   *@printindex C1 index_special_region.texi:l77
   |EXTRA
@@ -398,7 +398,7 @@ $result_tree_text{'index_special_region_titlepage_no_nodes'} = '*document_root C
   |misc_args:A{fn}
    *line_arg C3
     {spaces_before_argument: }
-    {fn}
+    {normal_text:fn}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@contents C1 index_special_region.texi:l79

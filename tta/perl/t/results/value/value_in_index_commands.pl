@@ -40,21 +40,21 @@ $result_tree_text{'value_in_index_commands'} = '*document_root C3
    >value_expansion<start;3>{@syncodeindex}
     >*@value C1
      >*brace_container C1
-      >{syncodeindex_command}
+      >{normal_text:syncodeindex_command}
     *line_arg C3
      {spaces_before_argument: }
      >SOURCEMARKS
      >value_expansion<start;1><p:1>{cp}
       >*@value C1
        >*brace_container C1
-        >{cp}
-     {cp fn}
+        >{normal_text:cp}
+     {normal_text:cp fn}
      >SOURCEMARKS
      >value_expansion<end;1><p:2>
      >value_expansion<start;2><p:3>{fn}
       >*@value C1
        >*brace_container C1
-        >{fn}
+        >{normal_text:fn}
      >value_expansion<end;2><p:5>
      {spaces_after_argument:\\n}
    *@syncodeindex C1 l6
@@ -64,7 +64,7 @@ $result_tree_text{'value_in_index_commands'} = '*document_root C3
      {spaces_before_argument: }
      >SOURCEMARKS
      >value_expansion<end;3>
-     {cp fn}
+     {normal_text:cp fn}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@set C1
@@ -76,7 +76,7 @@ $result_tree_text{'value_in_index_commands'} = '*document_root C3
      {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C3
-   {definedx truc\\n}
+   {normal_text:definedx truc\\n}
    *@defindex C1 l11
    |EXTRA
    |misc_args:A{truc}
@@ -86,12 +86,12 @@ $result_tree_text{'value_in_index_commands'} = '*document_root C3
      >value_expansion<start;4><p:1>{truc}
       >*@value C1
        >*brace_container C1
-        >{truc}
-     {truc}
+        >{normal_text:truc}
+     {normal_text:truc}
      >SOURCEMARKS
      >value_expansion<end;4><p:4>
      {spaces_after_argument:\\n}
-   {after\\n}
+   {normal_text:after\\n}
   {empty_line:\\n}
   *@set C1
   |EXTRA
@@ -118,8 +118,8 @@ $result_tree_text{'value_in_index_commands'} = '*document_root C3
     >value_expansion<start;5><p:1>{codeidx}
      >*@value C1
       >*brace_container C1
-       >{codeidx}
-    {codeidx}
+       >{normal_text:codeidx}
+    {normal_text:codeidx}
     >SOURCEMARKS
     >value_expansion<end;5><p:7>
     {spaces_after_argument:\\n}
@@ -140,7 +140,7 @@ $result_tree_text{'value_in_index_commands'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@node C14 l23 {chap}
  |EXTRA
@@ -151,14 +151,14 @@ $result_tree_text{'value_in_index_commands'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   >SOURCEMARKS
   >value_expansion<start;6><p:1>{@trucindex}
    >*@value C1
     >*brace_container C1
-     >{trucindex_command}
+     >{normal_text:trucindex_command}
   *index_entry_command@trucindex C1 l25
   |EXTRA
   |element_node:{chap}
@@ -167,7 +167,7 @@ $result_tree_text{'value_in_index_commands'} = '*document_root C3
     {spaces_before_argument: }
     >SOURCEMARKS
     >value_expansion<end;6>
-    {index truc}
+    {normal_text:index truc}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@codeidxindex C1 l27
@@ -180,23 +180,23 @@ $result_tree_text{'value_in_index_commands'} = '*document_root C3
     >value_expansion<start;7><p:1>{a @var{index entry} t@\'e @^{@dotless{i}}}
      >*@value C1
       >*brace_container C1
-       >{defcodeindex_entry}
-    {a }
+       >{normal_text:defcodeindex_entry}
+    {normal_text:a }
     *@var C1 l27
      *brace_container C1
-      {index entry}
-    { t}
+      {normal_text:index entry}
+    {normal_text: t}
     *@\' C1 l27
      *following_arg C1
-      {e}
-    { }
+      {normal_text:e}
+    {normal_text: }
     *@^ C1 l27
     >SOURCEMARKS
     >value_expansion<end;7>
      *brace_container C1
       *@dotless C1 l27
        *brace_container C1
-        {i}
+        {normal_text:i}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@kindex C1 l29
@@ -209,8 +209,8 @@ $result_tree_text{'value_in_index_commands'} = '*document_root C3
     >value_expansion<start;8><p:1>{truc}
      >*@value C1
       >*brace_container C1
-       >{truc}
-    {truc kindex}
+       >{normal_text:truc}
+    {normal_text:truc kindex}
     >SOURCEMARKS
     >value_expansion<end;8><p:4>
     {spaces_after_argument:\\n}
@@ -220,17 +220,17 @@ $result_tree_text{'value_in_index_commands'} = '*document_root C3
   |index_entry:I{pg,1}
    *line_arg C3
     {spaces_before_argument: }
-    {pindex codeidx}
+    {normal_text:pindex codeidx}
     >SOURCEMARKS
     >value_expansion<start;9><p:7>{codeidx}
      >*@value C1
       >*brace_container C1
-       >{codeidx}
+       >{normal_text:codeidx}
     >value_expansion<end;9><p:14>
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {value truc\\n}
+   {normal_text:value truc\\n}
   *@printindex C1 l33
   |EXTRA
   |global_command_number:{1}
@@ -241,14 +241,14 @@ $result_tree_text{'value_in_index_commands'} = '*document_root C3
     >value_expansion<start;10><p:1>{truc}
      >*@value C1
       >*brace_container C1
-       >{truc}
-    {truc}
+       >{normal_text:truc}
+    {normal_text:truc}
     >SOURCEMARKS
     >value_expansion<end;10><p:4>
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {value cp\\n}
+   {normal_text:value cp\\n}
   *@printindex C1 l36
   |EXTRA
   |global_command_number:{2}
@@ -259,8 +259,8 @@ $result_tree_text{'value_in_index_commands'} = '*document_root C3
     >value_expansion<start;11><p:1>{cp}
      >*@value C1
       >*brace_container C1
-       >{cp}
-    {cp}
+       >{normal_text:cp}
+    {normal_text:cp}
     >SOURCEMARKS
     >value_expansion<end;11><p:2>
     {spaces_after_argument:\\n}

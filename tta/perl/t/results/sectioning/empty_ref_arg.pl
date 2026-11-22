@@ -19,7 +19,7 @@ $result_tree_text{'empty_ref_arg'} = '*document_root C2
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {first}
+    {normal_text:first}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C8
@@ -28,42 +28,42 @@ $result_tree_text{'empty_ref_arg'} = '*document_root C2
     |EXTRA
     |node_content:A{0|0}
     |normalized:{first}
-     {first}
+     {normal_text:first}
     *brace_arg C2
      {spaces_before_argument: }
      *@ 
-   {\\n}
+   {normal_text:\\n}
    *@ref C3 l4
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{first}
-     {first}
+     {normal_text:first}
     *brace_arg C1
      {spaces_before_argument: }
     *brace_arg C2
      {spaces_before_argument: }
      *@ 
-   {\\n}
+   {normal_text:\\n}
    *@ref C3 l5
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{first}
-     {first}
+     {normal_text:first}
     *brace_arg C2
      {spaces_before_argument: }
      *@ 
     *brace_arg C2
      {spaces_before_argument: }
      *@:
-   {\\n}
+   {normal_text:\\n}
    *@ref C3 l6
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{first}
-     {first}
+     {normal_text:first}
     *brace_arg C6
      {spaces_before_argument: }
      *@c C1
@@ -90,7 +90,7 @@ $result_tree_text{'empty_ref_arg'} = '*document_root C2
       *line_arg C2
        {rawline_text:}
        {spaces_after_argument:\\n}
-   {\\n}
+   {normal_text:\\n}
 ';
 
 

@@ -14,11 +14,11 @@ $result_tree_text{'empty_anchor'} = '*document_root C1
   *@anchor C1 l1
    *brace_arg
   *paragraph C3
-   {. \\n}
+   {normal_text:. \\n}
    *@anchor C1 l2
     *brace_arg C1
      {spaces_before_argument:   }
-   {.\\n}
+   {normal_text:.\\n}
 ';
 
 

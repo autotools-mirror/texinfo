@@ -16,28 +16,28 @@ $result_tree_text{'cartouche_in_example'} = '*document_root C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C1
-    {In example\\n}
+    {normal_text:In example\\n}
    *@cartouche C3 l3
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *preformatted C1
-     {In cartouche in example\\n}
+     {normal_text:In cartouche in example\\n}
     *@end C1 l5
     |EXTRA
     |text_arg:{cartouche}
      *line_arg C3
       {spaces_before_argument: }
-      {cartouche}
+      {normal_text:cartouche}
       {spaces_after_argument:\\n}
    *preformatted C1
-    {end example\\n}
+    {normal_text:end example\\n}
    *@end C1 l7
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
 ';
 

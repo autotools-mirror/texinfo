@@ -15,42 +15,42 @@ $result_tree_text{'example_at_commands_arguments'} = '*document_root C1
    *arguments_line C3
     *block_line_arg C14
      {spaces_before_argument: }
-     {some  thing }
+     {normal_text:some  thing }
      *@^ C1 l1
       *following_arg C1
-       {e}
-     { }
+       {normal_text:e}
+     {normal_text: }
      *@TeX C1 l1
       *brace_container
-     { }
+     {normal_text: }
      *@exclamdown C1 l1
       *brace_container
-     { }
+     {normal_text: }
      *@code C1 l1
       *brace_container C1
-       {---}
-     { }
+       {normal_text:---}
+     {normal_text: }
      *@enddots C1 l1
       *brace_container
-     { !_- _---_ < " & }
+     {normal_text: !_- _---_ < " & }
      *@ 
      *@comma C1 l1
       *brace_container
     *block_line_arg C1
      *@@
     *block_line_arg C2
-     {0}
+     {normal_text:0}
      {spaces_after_argument:\\n}
    *preformatted C3
-    {example with }
+    {normal_text:example with }
     *@@
-    {-commands and other special characters\\n}
+    {normal_text:-commands and other special characters\\n}
    *@end C1 l3
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
 ';
 

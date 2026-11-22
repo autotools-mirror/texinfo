@@ -20,13 +20,13 @@ $result_tree_text{'simplest_no_node_section'} = '*document_root C2
    |text_arg:{simplest_no_node_section.info}
     *line_arg C3
      {spaces_before_argument: }
-     {simplest_no_node_section.info}
+     {normal_text:simplest_no_node_section.info}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C3
-   {This is a very simple texi manual }
+   {normal_text:This is a very simple texi manual }
    *@ 
-   { <>.\\n}
+   {normal_text: <>.\\n}
   {empty_line:\\n}
  *@bye C1
   *line_arg C1

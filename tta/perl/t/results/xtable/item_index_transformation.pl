@@ -19,7 +19,7 @@ $result_tree_text{'item_index_transformation'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
  *@chapter C9 l2 {Chapter}
  |EXTRA
@@ -29,7 +29,7 @@ $result_tree_text{'item_index_transformation'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chapter}
+    {normal_text:Chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@table C4 l4
@@ -46,7 +46,7 @@ $result_tree_text{'item_index_transformation'} = '*document_root C3
      |index_entry:I{cp,2}
       *line_arg C3
        {spaces_before_argument: }
-       {After1}
+       {normal_text:After1}
        {spaces_after_argument:\\n}
      *index_entry_command@cindex C1 l10
      |EXTRA
@@ -54,7 +54,7 @@ $result_tree_text{'item_index_transformation'} = '*document_root C3
      |index_entry:I{cp,3}
       *line_arg C3
        {spaces_before_argument: }
-       {After2}
+       {normal_text:After2}
        {spaces_after_argument:\\n}
      *index_entry_command@cindex C1 l5
      |EXTRA
@@ -62,44 +62,44 @@ $result_tree_text{'item_index_transformation'} = '*document_root C3
      |index_entry:I{cp,1}
       *line_arg C3
        {spaces_before_argument: }
-       {Before1}
+       {normal_text:Before1}
        {spaces_after_argument:\\n}
      *@item C1 l6
      |EXTRA
      |associated_index_entry:I{cp,2}
       *line_arg C3
        {spaces_before_argument: }
-       {one}
+       {normal_text:one}
        {spaces_after_argument:\\n}
      *@itemx C1 l7
       *line_arg C3
        {spaces_before_argument: }
-       {onex}
+       {normal_text:onex}
        {spaces_after_argument:\\n}
      *@itemx C1 l8
       *line_arg C3
        {spaces_before_argument: }
-       {oney}
+       {normal_text:oney}
        {spaces_after_argument:\\n}
     *table_definition C1
      *paragraph C1
-      {AAA\\n}
+      {normal_text:AAA\\n}
    *table_entry C2
     *table_term C1
      *@item C1 l12
       *line_arg C3
        {spaces_before_argument: }
-       {two}
+       {normal_text:two}
        {spaces_after_argument:\\n}
     *table_definition C1
      *paragraph C1
-      {BBB\\n}
+      {normal_text:BBB\\n}
    *@end C1 l14
    |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
-     {table}
+     {normal_text:table}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@table C4 l16
@@ -116,7 +116,7 @@ $result_tree_text{'item_index_transformation'} = '*document_root C3
      |index_entry:I{cp,4}
       *line_arg C3
        {spaces_before_argument: }
-       {after1}
+       {normal_text:after1}
        {spaces_after_argument:\\n}
      *index_entry_command@cindex C1 l21
      |EXTRA
@@ -124,44 +124,44 @@ $result_tree_text{'item_index_transformation'} = '*document_root C3
      |index_entry:I{cp,5}
       *line_arg C3
        {spaces_before_argument: }
-       {after2}
+       {normal_text:after2}
        {spaces_after_argument:\\n}
      *@item C1 l17
      |EXTRA
      |associated_index_entry:I{cp,4}
       *line_arg C3
        {spaces_before_argument: }
-       {three}
+       {normal_text:three}
        {spaces_after_argument:\\n}
      *@itemx C1 l18
       *line_arg C3
        {spaces_before_argument: }
-       {threex}
+       {normal_text:threex}
        {spaces_after_argument:\\n}
      *@itemx C1 l19
       *line_arg C3
        {spaces_before_argument: }
-       {zzzz}
+       {normal_text:zzzz}
        {spaces_after_argument:\\n}
     *table_definition C1
      *paragraph C1
-      {CCCC\\n}
+      {normal_text:CCCC\\n}
    *table_entry C2
     *table_term C1
      *@item C1 l23
       *line_arg C3
        {spaces_before_argument: }
-       {zzzz2}
+       {normal_text:zzzz2}
        {spaces_after_argument:\\n}
     *table_definition C1
      *paragraph C1
-      {DDDDD\\n}
+      {normal_text:DDDDD\\n}
    *@end C1 l25
    |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
-     {table}
+     {normal_text:table}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@table C4 l27
@@ -178,7 +178,7 @@ $result_tree_text{'item_index_transformation'} = '*document_root C3
      |index_entry:I{cp,6}
       *line_arg C3
        {spaces_before_argument: }
-       {before1}
+       {normal_text:before1}
        {spaces_after_argument:\\n}
      *index_entry_command@cindex C1 l29
      |EXTRA
@@ -186,39 +186,39 @@ $result_tree_text{'item_index_transformation'} = '*document_root C3
      |index_entry:I{cp,7}
       *line_arg C3
        {spaces_before_argument: }
-       {before2}
+       {normal_text:before2}
        {spaces_after_argument:\\n}
      *@item C1 l30
      |EXTRA
      |associated_index_entry:I{cp,6}
       *line_arg C3
        {spaces_before_argument: }
-       {four}
+       {normal_text:four}
        {spaces_after_argument:\\n}
      *@itemx C1 l31
       *line_arg C3
        {spaces_before_argument: }
-       {fourx}
+       {normal_text:fourx}
        {spaces_after_argument:\\n}
     *table_definition C1
      *paragraph C1
-      {EEEE\\n}
+      {normal_text:EEEE\\n}
    *table_entry C2
     *table_term C1
      *@item C1 l33
       *line_arg C3
        {spaces_before_argument: }
-       {foour}
+       {normal_text:foour}
        {spaces_after_argument:\\n}
     *table_definition C1
      *paragraph C1
-      {FFFFf\\n}
+      {normal_text:FFFFf\\n}
    *@end C1 l35
    |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
-     {table}
+     {normal_text:table}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@table C4 l37
@@ -232,11 +232,11 @@ $result_tree_text{'item_index_transformation'} = '*document_root C3
      *@item C1 l38
       *line_arg C3
        {spaces_before_argument: }
-       {five}
+       {normal_text:five}
        {spaces_after_argument:\\n}
     *table_definition C1
      *paragraph C1
-      {GGGG\\n}
+      {normal_text:GGGG\\n}
    *table_entry C2
     *table_term C4
      *index_entry_command@cindex C1 l42
@@ -245,7 +245,7 @@ $result_tree_text{'item_index_transformation'} = '*document_root C3
      |index_entry:I{cp,8}
       *line_arg C3
        {spaces_before_argument: }
-       {after6}
+       {normal_text:after6}
        {spaces_after_argument:\\n}
      *index_entry_command@cindex C1 l43
      |EXTRA
@@ -253,29 +253,29 @@ $result_tree_text{'item_index_transformation'} = '*document_root C3
      |index_entry:I{cp,9}
       *line_arg C3
        {spaces_before_argument: }
-       {after7}
+       {normal_text:after7}
        {spaces_after_argument:\\n}
      *@item C1 l40
      |EXTRA
      |associated_index_entry:I{cp,8}
       *line_arg C3
        {spaces_before_argument: }
-       {six}
+       {normal_text:six}
        {spaces_after_argument:\\n}
      *@itemx C1 l41
       *line_arg C3
        {spaces_before_argument: }
-       {sixx}
+       {normal_text:sixx}
        {spaces_after_argument:\\n}
     *table_definition C1
      *paragraph C1
-      {HHHHHH\\n}
+      {normal_text:HHHHHH\\n}
    *@end C1 l45
    |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
-     {table}
+     {normal_text:table}
      {spaces_after_argument:\\n}
 ';
 

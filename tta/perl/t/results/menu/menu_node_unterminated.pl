@@ -19,7 +19,7 @@ $result_tree_text{'menu_node_unterminated'} = '*document_root C2
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {first}
+    {normal_text:first}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C3 l3
@@ -29,20 +29,20 @@ $result_tree_text{'menu_node_unterminated'} = '*document_root C2
    *menu_entry C4 l4
     {menu_entry_leading_text:* }
     *menu_entry_name C1
-     {Example}
+     {normal_text:Example}
     {menu_entry_separator:: }
     *menu_entry_node C2
     |EXTRA
     |node_content:A{0|1}
     |normalized:{Examples-of-Login-Verification-Functions}
-     {Examples of Login Verification Functions}
+     {normal_text:Examples of Login Verification Functions}
      {space_at_end_menu_node:\\n}
    *@end C1 l5
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
 ';
 

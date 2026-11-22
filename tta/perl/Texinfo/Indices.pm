@@ -204,10 +204,12 @@ sub get_index_content_info_element($;$) {
 
         if (exists($Texinfo::Commands::def_class_method_commands{
                                                    $def_command})) {
-          $text_element = Texinfo::TreeElement::new({'text' => ' on '});
+          $text_element = Texinfo::TreeElement::new({'text' => ' on ',
+                                                  'type' => 'normal_text'});
         } elsif (exists($Texinfo::Commands::def_class_variable_commands{
                                                        $def_command})) {
-          $text_element = Texinfo::TreeElement::new({'text' => ' of '});
+          $text_element = Texinfo::TreeElement::new({'text' => ' of ',
+                                                   'type' => 'normal_text'});
         }
 
         $index_entry_normalized->{'contents'}

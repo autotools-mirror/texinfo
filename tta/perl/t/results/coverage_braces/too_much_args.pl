@@ -14,10 +14,10 @@ $result_tree_text{'too_much_args'} = '*document_root C1
   *paragraph C1
    *@abbr C2 l1
     *brace_arg C1
-     {AZE}
+     {normal_text:AZE}
     *brace_arg C2
      {spaces_before_argument: }
-     {A truc Z b, E eep}
+     {normal_text:A truc Z b, E eep}
 ';
 
 

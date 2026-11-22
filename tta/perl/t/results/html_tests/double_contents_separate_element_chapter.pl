@@ -28,7 +28,7 @@ $result_tree_text{'double_contents_separate_element_chapter'} = '*document_root 
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C6 double_contents.texi:l6 {Double contents}
  |EXTRA
@@ -37,11 +37,11 @@ $result_tree_text{'double_contents_separate_element_chapter'} = '*document_root 
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Double contents}
+    {normal_text:Double contents}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {Double contents.\\n}
+   {normal_text:Double contents.\\n}
   {empty_line:\\n}
   *@menu C3 double_contents.texi:l10
    *arguments_line C1
@@ -53,17 +53,17 @@ $result_tree_text{'double_contents_separate_element_chapter'} = '*document_root 
     |EXTRA
     |node_content:A{0|0}
     |normalized:{chapter}
-     {chapter}
+     {normal_text:chapter}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 double_contents.texi:l12
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 double_contents.texi:l14 {chapter}
@@ -74,7 +74,7 @@ $result_tree_text{'double_contents_separate_element_chapter'} = '*document_root 
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter}
+    {normal_text:chapter}
     {spaces_after_argument:\\n}
  *@chapter C7 double_contents.texi:l15 {Chapter 1}
  |EXTRA
@@ -84,7 +84,7 @@ $result_tree_text{'double_contents_separate_element_chapter'} = '*document_root 
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chapter 1}
+    {normal_text:Chapter 1}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@contents C1 double_contents.texi:l17
@@ -93,7 +93,7 @@ $result_tree_text{'double_contents_separate_element_chapter'} = '*document_root 
    *line_arg C1
     {spaces_before_argument:\\n}
   *paragraph C1
-   {The chapter\\n}
+   {normal_text:The chapter\\n}
   {empty_line:\\n}
   *@menu C3 double_contents.texi:l20
    *arguments_line C1
@@ -105,17 +105,17 @@ $result_tree_text{'double_contents_separate_element_chapter'} = '*document_root 
     |EXTRA
     |node_content:A{0|0}
     |normalized:{section}
-     {section}
+     {normal_text:section}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 double_contents.texi:l22
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 double_contents.texi:l24 {section}
@@ -126,7 +126,7 @@ $result_tree_text{'double_contents_separate_element_chapter'} = '*document_root 
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {section}
+    {normal_text:section}
     {spaces_after_argument:\\n}
  *@section C3 double_contents.texi:l25 {section with contents}
  |EXTRA
@@ -136,7 +136,7 @@ $result_tree_text{'double_contents_separate_element_chapter'} = '*document_root 
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {section with contents}
+    {normal_text:section with contents}
     {spaces_after_argument:\\n}
   *@contents C1 double_contents.texi:l26
   |EXTRA

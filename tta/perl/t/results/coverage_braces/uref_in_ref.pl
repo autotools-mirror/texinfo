@@ -16,40 +16,40 @@ $result_tree_text{'uref_in_ref'} = '*document_root C1
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
-     {(file)node}
+     {normal_text:(file)node}
     *brace_arg C3
      {spaces_before_argument: }
-     {cross ref with uref }
+     {normal_text:cross ref with uref }
      *@uref C2 l1
       *brace_arg C1
-       {href://http/myhost.com/index.html}
+       {normal_text:href://http/myhost.com/index.html}
       *brace_arg C1
-       {uref1}
+       {normal_text:uref1}
     *brace_arg C3
      {spaces_before_argument: }
-     {title with uref2 }
+     {normal_text:title with uref2 }
      *@uref C2 l1
       *brace_arg C1
-       {href://http/myhost.com/index2.html}
+       {normal_text:href://http/myhost.com/index2.html}
       *brace_arg C1
-       {uref2}
+       {normal_text:uref2}
     *brace_arg C3
      {spaces_before_argument: }
-     {info file with uref3 }
+     {normal_text:info file with uref3 }
      *@uref C2 l1
       *brace_arg C1
-       {href://http/myhost.com/index3.html}
+       {normal_text:href://http/myhost.com/index3.html}
       *brace_arg C1
-       {uref3}
+       {normal_text:uref3}
     *brace_arg C3
      {spaces_before_argument: }
-     {printed manual with uref4 }
+     {normal_text:printed manual with uref4 }
      *@uref C2 l1
       *brace_arg C1
-       {href://http/myhost.com/index4.html}
+       {normal_text:href://http/myhost.com/index4.html}
       *brace_arg C1
-       {uref4}
-   {\\n}
+       {normal_text:uref4}
+   {normal_text:\\n}
 ';
 
 

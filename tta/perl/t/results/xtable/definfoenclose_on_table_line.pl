@@ -16,7 +16,7 @@ $result_tree_text{'definfoenclose_on_table_line'} = '*document_root C1
    |misc_args:A{phi|:|:}
     *line_arg C3
      {spaces_before_argument: }
-     {phi,:,:}
+     {normal_text:phi,:,:}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
   *@table C3 l3
@@ -33,23 +33,23 @@ $result_tree_text{'definfoenclose_on_table_line'} = '*document_root C1
      *@item C1 l4
       *line_arg C3
        {spaces_before_argument: }
-       {item}
+       {normal_text:item}
        {spaces_after_argument:\\n}
      *@itemx C1 l5
       *line_arg C3
        {spaces_before_argument: }
-       {item x}
+       {normal_text:item x}
        {spaces_after_argument:\\n}
     *table_definition C2
      {empty_line:\\n}
      *paragraph C1
-      {table content.\\n}
+      {normal_text:table content.\\n}
    *@end C1 l8
    |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
-     {table}
+     {normal_text:table}
      {spaces_after_argument:\\n}
 ';
 

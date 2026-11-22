@@ -16,7 +16,7 @@ $result_tree_text{'definfoenclose_nestings'} = '*document_root C1
    |misc_args:A{phoo|//|\\}
     *line_arg C3
      {spaces_before_argument: }
-     {phoo,//,\\}
+     {normal_text:phoo,//,\\}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C2
@@ -27,8 +27,8 @@ $result_tree_text{'definfoenclose_nestings'} = '*document_root C1
      |begin:{//}
      |end:{\\}
       *brace_container C1
-       {in phoo in code}
-   {.\\n}
+       {normal_text:in phoo in code}
+   {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C2
    *definfoenclose_command@phoo C1 l5
@@ -38,8 +38,8 @@ $result_tree_text{'definfoenclose_nestings'} = '*document_root C1
     *brace_container C1
      *@code C1 l5
       *brace_container C1
-       {in code in phoo}
-   {.\\n}
+       {normal_text:in code in phoo}
+   {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C1
    *definfoenclose_command@phoo C1 l7
@@ -47,11 +47,11 @@ $result_tree_text{'definfoenclose_nestings'} = '*document_root C1
    |begin:{//}
    |end:{\\}
     *brace_container C1
-     {\\n}
+     {normal_text:\\n}
   *@center C1 l8
    *line_arg C3
     {spaces_before_argument: }
-    {in center in phoo}
+    {normal_text:in center in phoo}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
 ';

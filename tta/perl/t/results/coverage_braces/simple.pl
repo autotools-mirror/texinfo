@@ -14,8 +14,8 @@ $result_tree_text{'simple'} = '*document_root C1
   *paragraph C2
    *@b C1 l1
     *brace_container C1
-     {in  b}
-   {.}
+     {normal_text:in  b}
+   {normal_text:.}
 ';
 
 

@@ -30,7 +30,7 @@ $result_tree_text{'multitable_bracketed_prototype_empty_not_closed_comment'} = '
    |text_arg:{multitable}
     *line_arg C3
      {spaces_before_argument: }
-     {multitable}
+     {normal_text:multitable}
      {spaces_after_argument:\\n}
 ';
 

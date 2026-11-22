@@ -17,7 +17,7 @@ $result_tree_text{'hyphenation'} = '*document_root C1
    |EXTRA
    |global_command_number:{1}
     *brace_arg C2
-     {some-where}
+     {normal_text:some-where}
      {spaces_after_argument: }
    {spaces_after_close_brace:\\n}
    {empty_line:\\n}

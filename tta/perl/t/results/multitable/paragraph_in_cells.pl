@@ -18,10 +18,10 @@ $result_tree_text{'paragraph_in_cells'} = '*document_root C1
     *block_line_arg C5
      {spaces_before_argument: }
      *bracketed_arg C1 l1
-      {AAA}
-     {  }
+      {normal_text:AAA}
+     {normal_text:  }
      *bracketed_arg C1 l1
-      {BBB}
+      {normal_text:BBB}
      {spaces_after_argument:\\n}
    *multitable_body C2
     *row C2
@@ -32,13 +32,13 @@ $result_tree_text{'paragraph_in_cells'} = '*document_root C1
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {truc }
+       {normal_text:truc }
      *@tab C2 l2
      |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {bidule\\n}
+       {normal_text:bidule\\n}
     *row C2
     |EXTRA
     |row_number:{2}
@@ -47,26 +47,26 @@ $result_tree_text{'paragraph_in_cells'} = '*document_root C1
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {begin item\\n}
+       {normal_text:begin item\\n}
       {empty_line:\\n}
       *paragraph C1
-       {new paragraph in item.\\n}
+       {normal_text:new paragraph in item.\\n}
       {empty_line:\\n}
      *@tab C4 l7
      |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {begin tab\\n}
+       {normal_text:begin tab\\n}
       {empty_line:\\n}
       *paragraph C1
-       {new paragraph in tab.\\n}
+       {normal_text:new paragraph in tab.\\n}
    *@end C1 l10
    |EXTRA
    |text_arg:{multitable}
     *line_arg C2
      {spaces_before_argument: }
-     {multitable}
+     {normal_text:multitable}
 ';
 
 

@@ -18,8 +18,8 @@ $result_tree_text{'prototype_brace_no_brace_comment'} = '*document_root C1
     *block_line_arg C4
      {spaces_before_argument: }
      *bracketed_arg C1 l1
-      {aa}
-     { bb}
+      {normal_text:aa}
+     {normal_text: bb}
      *@comment C1
       *line_arg C3
        {spaces_before_argument: }
@@ -30,7 +30,7 @@ $result_tree_text{'prototype_brace_no_brace_comment'} = '*document_root C1
    |text_arg:{multitable}
     *line_arg C3
      {spaces_before_argument: }
-     {multitable}
+     {normal_text:multitable}
      {spaces_after_argument:\\n}
 ';
 

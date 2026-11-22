@@ -14,7 +14,7 @@ $result_tree_text{'text_line'} = '*document_root C1
    {text_before_beginning:\\n}
   *preamble_before_content
   *paragraph C1
-   {text\\n}
+   {normal_text:text\\n}
   {empty_line:\\n}
 ';
 

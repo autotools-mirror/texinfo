@@ -19,23 +19,23 @@ $result_tree_text{'a_comma_after_node'} = '*document_root C2
   *arguments_line C3
    *line_arg C2
     {spaces_before_argument: }
-    {Commands}
+    {normal_text:Commands}
    *line_arg C2
    |EXTRA
    |node_content:A{1|1}
    |normalized:{Requirements}
     {spaces_before_argument: }
-    {Requirements}
+    {normal_text:Requirements}
    *line_arg C3
    |EXTRA
    |node_content:A{1|1}
    |normalized:{Nodes-and-Menus}
     {spaces_before_argument: }
-    {Nodes and Menus}
+    {normal_text:Nodes and Menus}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {A comma in text, end.\\n}
+   {normal_text:A comma in text, end.\\n}
 ';
 
 

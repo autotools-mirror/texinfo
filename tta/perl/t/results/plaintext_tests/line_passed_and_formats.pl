@@ -19,37 +19,37 @@ $result_tree_text{'line_passed_and_formats'} = '*document_root C2
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@quotation C4 l3
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     {special}
+     {normal_text:special}
      {spaces_after_argument:\\n}
    *paragraph C1
-    {Quotation special.\\n}
+    {normal_text:Quotation special.\\n}
    *@quotation C3 l5
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument: \\n}
     *paragraph C2
-     {Nested quotation sdflkmsfdlkmfsdqmlkfsdq mlfdsqlkmfdsqmlkfdsq klm fsqdlkmfdsq\\n}
-     {fdsfsdqmlkfsqd m lqlkmf qskmlfq sklm fqds\\n}
+     {normal_text:Nested quotation sdflkmsfdlkmfsdqmlkfsdq mlfdsqlkmfdsqmlkfdsq klm fsqdlkmfdsq\\n}
+     {normal_text:fdsfsdqmlkfsqd m lqlkmf qskmlfq sklm fqds\\n}
     *@end C1 l8
     |EXTRA
     |text_arg:{quotation}
      *line_arg C3
       {spaces_before_argument: }
-      {quotation}
+      {normal_text:quotation}
       {spaces_after_argument:\\n}
    *@end C1 l9
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }
-     {quotation}
+     {normal_text:quotation}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@quotation C4 l11
@@ -57,26 +57,26 @@ $result_tree_text{'line_passed_and_formats'} = '*document_root C2
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C1
-    {quotation  text\\n}
+    {normal_text:quotation  text\\n}
    *@example C3 l13
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *preformatted C1
-     {example in   quotation\\n}
+     {normal_text:example in   quotation\\n}
     *@end C1 l15
     |EXTRA
     |text_arg:{example}
      *line_arg C3
       {spaces_before_argument: }
-      {example}
+      {normal_text:example}
       {spaces_after_argument:\\n}
    *@end C1 l16
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }
-     {quotation}
+     {normal_text:quotation}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@example C4 l18
@@ -84,26 +84,26 @@ $result_tree_text{'line_passed_and_formats'} = '*document_root C2
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C1
-    { In  example.\\n}
+    {normal_text: In  example.\\n}
    *@quotation C3 l20
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *preformatted C1
-     {   In quotation   in example\\n}
+     {normal_text:   In quotation   in example\\n}
     *@end C1 l22
     |EXTRA
     |text_arg:{quotation}
      *line_arg C3
       {spaces_before_argument: }
-      {quotation}
+      {normal_text:quotation}
       {spaces_after_argument:\\n}
    *@end C1 l23
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@example C3 l25
@@ -111,26 +111,26 @@ $result_tree_text{'line_passed_and_formats'} = '*document_root C2
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C1
-    {In 1 example\\n}
+    {normal_text:In 1 example\\n}
    *@end C1 l27
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
   *@example C3 l28
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C1
-    {In 2 example\\n}
+    {normal_text:In 2 example\\n}
    *@end C1 l30
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@quotation C3 l32
@@ -138,26 +138,26 @@ $result_tree_text{'line_passed_and_formats'} = '*document_root C2
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C1
-    {In 1 quotation\\n}
+    {normal_text:In 1 quotation\\n}
    *@end C1 l34
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }
-     {quotation}
+     {normal_text:quotation}
      {spaces_after_argument:\\n}
   *@quotation C3 l35
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C1
-    {In 2 quotation\\n}
+    {normal_text:In 2 quotation\\n}
    *@end C1 l37
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }
-     {quotation}
+     {normal_text:quotation}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@quotation C5 l39
@@ -165,28 +165,28 @@ $result_tree_text{'line_passed_and_formats'} = '*document_root C2
     *block_line_arg C1
      {spaces_before_argument: \\n}
    *paragraph C1
-    {Quotation\\n}
+    {normal_text:Quotation\\n}
    *@quotation C3 l41
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument: \\n}
     *paragraph C1
-     {Nested quotation\\n}
+     {normal_text:Nested quotation\\n}
     *@end C1 l43
     |EXTRA
     |text_arg:{quotation}
      *line_arg C3
       {spaces_before_argument: }
-      {quotation}
+      {normal_text:quotation}
       {spaces_after_argument:\\n}
    *paragraph C1
-    {Quotation 2\\n}
+    {normal_text:Quotation 2\\n}
    *@end C1 l45
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }
-     {quotation}
+     {normal_text:quotation}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@example C5 l47
@@ -194,28 +194,28 @@ $result_tree_text{'line_passed_and_formats'} = '*document_root C2
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C1
-    {In  example.\\n}
+    {normal_text:In  example.\\n}
    *@quotation C3 l49
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *preformatted C1
-     {In quotation   in example\\n}
+     {normal_text:In quotation   in example\\n}
     *@end C1 l51
     |EXTRA
     |text_arg:{quotation}
      *line_arg C3
       {spaces_before_argument: }
-      {quotation}
+      {normal_text:quotation}
       {spaces_after_argument:\\n}
    *preformatted C1
-    {In  example 2.\\n}
+    {normal_text:In  example 2.\\n}
    *@end C1 l53
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@quotation C5 l55
@@ -223,111 +223,111 @@ $result_tree_text{'line_passed_and_formats'} = '*document_root C2
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C1
-    {quotation  text\\n}
+    {normal_text:quotation  text\\n}
    *@example C3 l57
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *preformatted C1
-     {example in   quotation\\n}
+     {normal_text:example in   quotation\\n}
     *@end C1 l59
     |EXTRA
     |text_arg:{example}
      *line_arg C3
       {spaces_before_argument: }
-      {example}
+      {normal_text:example}
       {spaces_after_argument:\\n}
    *paragraph C1
-    {quotation  text 2\\n}
+    {normal_text:quotation  text 2\\n}
    *@end C1 l61
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }
-     {quotation}
+     {normal_text:quotation}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {Before quotation\\n}
+   {normal_text:Before quotation\\n}
   *@quotation C3 l64
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C1
-    {quotation  text\\n}
+    {normal_text:quotation  text\\n}
    *@end C1 l66
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }
-     {quotation}
+     {normal_text:quotation}
      {spaces_after_argument:\\n}
   *paragraph C1
-   {after end\\n}
+   {normal_text:after end\\n}
   {empty_line:\\n}
   *paragraph C1
-   {Before example\\n}
+   {normal_text:Before example\\n}
   *@example C3 l70
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C1
-    {In example\\n}
+    {normal_text:In example\\n}
    *@end C1 l72
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
   *paragraph C1
-   {After example\\n}
+   {normal_text:After example\\n}
   {empty_line:\\n}
   *paragraph C1
-   {Before quotation and empty line\\n}
+   {normal_text:Before quotation and empty line\\n}
   *@quotation C5 l76
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    {empty_line:\\n}
    *paragraph C1
-    {In quotation\\n}
+    {normal_text:In quotation\\n}
    {empty_line:\\n}
    *@end C1 l80
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }
-     {quotation}
+     {normal_text:quotation}
      {spaces_after_argument:\\n}
   *paragraph C1
-   {After quotation\\n}
+   {normal_text:After quotation\\n}
   {empty_line:\\n}
   *paragraph C1
-   {Before example and empty line\\n}
+   {normal_text:Before example and empty line\\n}
   *@example C3 l84
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C3
     {empty_line:\\n}
-    {In example\\n}
+    {normal_text:In example\\n}
     {empty_line:\\n}
    *@end C1 l88
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
   *paragraph C1
-   {After example\\n}
+   {normal_text:After example\\n}
   {empty_line:\\n}
   *paragraph C1
-   {Nested and empty lines\\n}
+   {normal_text:Nested and empty lines\\n}
   {empty_line:\\n}
   *paragraph C1
-   {Quotation empty out, spaces inside\\n}
+   {normal_text:Quotation empty out, spaces inside\\n}
   *@quotation C5 l94
    *arguments_line C1
     *block_line_arg C1
@@ -339,14 +339,14 @@ $result_tree_text{'line_passed_and_formats'} = '*document_root C2
       {spaces_before_argument:\\n}
     {empty_line:\\n}
     *paragraph C1
-     {In nested\\n}
+     {normal_text:In nested\\n}
     {empty_line:\\n}
     *@end C1 l100
     |EXTRA
     |text_arg:{quotation}
      *line_arg C3
       {spaces_before_argument: }
-      {quotation}
+      {normal_text:quotation}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@end C1 l102
@@ -354,11 +354,11 @@ $result_tree_text{'line_passed_and_formats'} = '*document_root C2
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }
-     {quotation}
+     {normal_text:quotation}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {Quotation empty out, no spaces inside\\n}
+   {normal_text:Quotation empty out, no spaces inside\\n}
   *@quotation C5 l105
    *arguments_line C1
     *block_line_arg C1
@@ -369,13 +369,13 @@ $result_tree_text{'line_passed_and_formats'} = '*document_root C2
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *paragraph C1
-     {In nested\\n}
+     {normal_text:In nested\\n}
     *@end C1 l109
     |EXTRA
     |text_arg:{quotation}
      *line_arg C3
       {spaces_before_argument: }
-      {quotation}
+      {normal_text:quotation}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@end C1 l111
@@ -383,11 +383,11 @@ $result_tree_text{'line_passed_and_formats'} = '*document_root C2
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }
-     {quotation}
+     {normal_text:quotation}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {Example empty out, spaces inside\\n}
+   {normal_text:Example empty out, spaces inside\\n}
   *@example C5 l114
    *arguments_line C1
     *block_line_arg C1
@@ -400,14 +400,14 @@ $result_tree_text{'line_passed_and_formats'} = '*document_root C2
       {spaces_before_argument:\\n}
     *preformatted C3
      {empty_line:\\n}
-     {In nested\\n}
+     {normal_text:In nested\\n}
      {empty_line:\\n}
     *@end C1 l120
     |EXTRA
     |text_arg:{example}
      *line_arg C3
       {spaces_before_argument: }
-      {example}
+      {normal_text:example}
       {spaces_after_argument:\\n}
    *preformatted C1
     {empty_line:\\n}
@@ -416,11 +416,11 @@ $result_tree_text{'line_passed_and_formats'} = '*document_root C2
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {Example empty out, no spaces inside\\n}
+   {normal_text:Example empty out, no spaces inside\\n}
   *@example C5 l125
    *arguments_line C1
     *block_line_arg C1
@@ -432,13 +432,13 @@ $result_tree_text{'line_passed_and_formats'} = '*document_root C2
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *preformatted C1
-     {In nested\\n}
+     {normal_text:In nested\\n}
     *@end C1 l129
     |EXTRA
     |text_arg:{example}
      *line_arg C3
       {spaces_before_argument: }
-      {example}
+      {normal_text:example}
       {spaces_after_argument:\\n}
    *preformatted C1
     {empty_line:\\n}
@@ -447,11 +447,11 @@ $result_tree_text{'line_passed_and_formats'} = '*document_root C2
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {menu\\n}
+   {normal_text:menu\\n}
   *@menu C3 l134
    *arguments_line C1
     *block_line_arg C1
@@ -463,23 +463,23 @@ $result_tree_text{'line_passed_and_formats'} = '*document_root C2
     |manual_content:A{1|1}
     |node_content:A{3|3}
     |normalized:{node}
-     {(}
-     {manual}
-     {)}
-     {node}
+     {normal_text:(}
+     {normal_text:manual}
+     {normal_text:)}
+     {normal_text:node}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l136
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   *paragraph C1
-   {end menu\\n}
+   {normal_text:end menu\\n}
 ';
 
 

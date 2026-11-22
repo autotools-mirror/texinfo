@@ -16,11 +16,11 @@ $result_tree_text{'alias_non_existing_command'} = '*document_root C1
    |misc_args:A{myalias|userdefined}
     *line_arg C3
      {spaces_before_argument: }
-     {myalias = userdefined}
+     {normal_text:myalias = userdefined}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C1
-   {hh.\\n}
+   {normal_text:hh.\\n}
 ';
 
 

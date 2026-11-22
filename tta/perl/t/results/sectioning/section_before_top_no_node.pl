@@ -21,7 +21,7 @@ $result_tree_text{'section_before_top_no_node'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {section}
+    {normal_text:section}
     {spaces_after_argument: \\n}
   {empty_line:\\n}
  *@top C1 l3 {top}
@@ -33,7 +33,7 @@ $result_tree_text{'section_before_top_no_node'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
 ';
 

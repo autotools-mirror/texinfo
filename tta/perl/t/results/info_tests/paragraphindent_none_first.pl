@@ -15,11 +15,11 @@ $result_tree_text{'paragraphindent_none_first'} = '*document_root C1
   *preamble_before_content C1
    {spaces_before_paragraph:      }
   *paragraph C1
-   {first\\n}
+   {normal_text:first\\n}
   {empty_line:\\n}
   {spaces_before_paragraph:      }
   *paragraph C1
-   {second\\n}
+   {normal_text:second\\n}
   {empty_line:\\n}
   *@paragraphindent C1 l6
   |EXTRA
@@ -27,12 +27,12 @@ $result_tree_text{'paragraphindent_none_first'} = '*document_root C1
   |misc_args:A{none}
    *line_arg C3
     {spaces_before_argument: }
-    {none}
+    {normal_text:none}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   {spaces_before_paragraph:      }
   *paragraph C1
-   {after none\\n}
+   {normal_text:after none\\n}
 ';
 
 

@@ -19,53 +19,53 @@ $result_tree_text{'anchor_in_math'} = '*document_root C2
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C3
-   {Some }
+   {normal_text:Some }
    *@math C1 l3
     *brace_arg C2
-     {A + B }
+     {normal_text:A + B }
      *@anchor C1 l3
      |EXTRA
      |identifier:{in-math}
      |is_target:{1}
       *brace_arg C1
-       {in math}
-   { and after.\\n}
+       {normal_text:in math}
+   {normal_text: and after.\\n}
   {empty_line:\\n}
   *@displaymath C11 l5
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
-   {f(x) = }
+   {normal_text:f(x) = }
    *@anchor C1 l6
    |EXTRA
    |identifier:{equal-point}
    |is_target:{1}
     *brace_arg C1
-     {equal point}
+     {normal_text:equal point}
    {spaces_after_close_brace: }
-   {\\frac}
+   {normal_text:\\frac}
    *balanced_braces C1 l6
-    {{a}}
+    {normal_text:{a}}
    *balanced_braces C1 l6
-    {{b}}
-   { }
+    {normal_text:{b}}
+   {normal_text: }
    *@anchor C1 l6
    |EXTRA
    |identifier:{displm-point}
    |is_target:{1}
     *brace_arg C1
-     {displm point}
+     {normal_text:displm point}
    {spaces_after_close_brace:\\n}
    *@end C1 l7
    |EXTRA
    |text_arg:{displaymath}
     *line_arg C3
      {spaces_before_argument: }
-     {displaymath}
+     {normal_text:displaymath}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
 ';

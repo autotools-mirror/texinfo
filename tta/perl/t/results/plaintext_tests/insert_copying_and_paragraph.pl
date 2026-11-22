@@ -16,17 +16,17 @@ $result_tree_text{'insert_copying_and_paragraph'} = '*document_root C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *paragraph C1
-     {In copying.\\n}
+     {normal_text:In copying.\\n}
     *@end C1 l3
     |EXTRA
     |text_arg:{copying}
      *line_arg C3
       {spaces_before_argument: }
-      {copying}
+      {normal_text:copying}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C1
-   {Insertcopying\\n}
+   {normal_text:Insertcopying\\n}
   *@insertcopying C1 l6
   |EXTRA
   |global_command_number:{1}

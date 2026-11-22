@@ -16,20 +16,20 @@ $result_tree_text{'space_at_commands_end_quotation_line'} = '*document_root C1
     *block_line_arg C4
      {spaces_before_argument: }
      *@@
-     { at the end of line }
+     {normal_text: at the end of line }
      *@\\n
    *paragraph C5
-    {A }
+    {normal_text:A }
     *@@
-    { at the end of the }
+    {normal_text: at the end of the }
     *@@
-    {quotation line.\\n}
+    {normal_text:quotation line.\\n}
    *@end C1 l3
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }
-     {quotation}
+     {normal_text:quotation}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@quotation C3 l5
@@ -38,22 +38,22 @@ $result_tree_text{'space_at_commands_end_quotation_line'} = '*document_root C1
      {spaces_before_argument: }
      *@@
      *@ 
-     { at the end of line }
+     {normal_text: at the end of line }
      *@ 
      {spaces_after_argument:\\n}
    *paragraph C6
-    {A }
+    {normal_text:A }
     *@@
     *@ 
-    { at the end of the }
+    {normal_text: at the end of the }
     *@@
-    {quotation line.\\n}
+    {normal_text:quotation line.\\n}
    *@end C1 l7
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }
-     {quotation}
+     {normal_text:quotation}
      {spaces_after_argument:\\n}
 ';
 

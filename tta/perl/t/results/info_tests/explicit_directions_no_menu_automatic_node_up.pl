@@ -19,7 +19,7 @@ $result_tree_text{'explicit_directions_no_menu_automatic_node_up'} = '*document_
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C4 l2 {The doc}
  |EXTRA
@@ -28,11 +28,11 @@ $result_tree_text{'explicit_directions_no_menu_automatic_node_up'} = '*document_
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {The doc}
+    {normal_text:The doc}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {This is the documentation.\\n}
+   {normal_text:This is the documentation.\\n}
   {empty_line:\\n}
  *@node C1 l6 {Introduction}
  |EXTRA
@@ -43,7 +43,7 @@ $result_tree_text{'explicit_directions_no_menu_automatic_node_up'} = '*document_
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Introduction}
+    {normal_text:Introduction}
     {spaces_after_argument:\\n}
  *@unnumbered C6 l6 {Introduction}
  |EXTRA
@@ -52,10 +52,10 @@ $result_tree_text{'explicit_directions_no_menu_automatic_node_up'} = '*document_
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Introduction}
+    {normal_text:Introduction}
     {spaces_after_argument:\\n}
   *paragraph C1
-   {A collection of tools\\n}
+   {normal_text:A collection of tools\\n}
   {empty_line:\\n}
   *@menu C3 l9
    *arguments_line C1
@@ -67,17 +67,17 @@ $result_tree_text{'explicit_directions_no_menu_automatic_node_up'} = '*document_
     |EXTRA
     |node_content:A{0|0}
     |normalized:{Location}
-     {Location}
+     {normal_text:Location}
     {menu_entry_separator:::          }
     *menu_entry_description C1
      *preformatted C1
-      {Where to find\\n}
+      {normal_text:Where to find\\n}
    *@end C1 l11
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   {empty_line:\\n}
@@ -89,20 +89,20 @@ $result_tree_text{'explicit_directions_no_menu_automatic_node_up'} = '*document_
   *arguments_line C4
    *line_arg C2
     {spaces_before_argument: }
-    {Location}
+    {normal_text:Location}
    *line_arg
    *line_arg C2
    |EXTRA
    |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
    *line_arg C3
    |EXTRA
    |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@chapter C3 l15 {Where to get}
  |EXTRA
@@ -112,11 +112,11 @@ $result_tree_text{'explicit_directions_no_menu_automatic_node_up'} = '*document_
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Where to get}
+    {normal_text:Where to get}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {Here.\\n}
+   {normal_text:Here.\\n}
 ';
 
 

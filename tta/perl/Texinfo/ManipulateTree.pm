@@ -1075,7 +1075,7 @@ sub protect_comma_in_tree($) {
   return modify_tree($tree, \&_protect_comma);
 }
 
-sub _new_asis_command_with_text($$;$) {
+sub _new_asis_command_with_text($$$) {
   my ($text, $parent, $text_type) = @_;
 
   my $new_command = Texinfo::TreeElement::new({'cmdname' => 'asis'});
@@ -1088,10 +1088,7 @@ sub _new_asis_command_with_text($$;$) {
         Texinfo::TreeElement::new({'type' => 'brace_container',
                                    'parent' => $new_command});
   push @{$new_command->{'contents'}->[0]->{'contents'}},
-    Texinfo::TreeElement::new({'text' => $text,});
-  if (defined($text_type)) {
-    $new_command->{'contents'}->[0]->{'contents'}->[0]->{'type'} = $text_type;
-  }
+    Texinfo::TreeElement::new({'text' => $text, 'type' => $text_type});
   return $new_command;
 }
 
@@ -1101,10 +1098,9 @@ sub _protect_text($$) {
   #print STDERR "_protect_text: $to_protect: $current "
   #                         .debug_print_element($current, 1)."\n";
   if (exists($current->{'text'}) and $current->{'text'} =~ /$to_protect/
-      and !(exists($current->{'type'})
-            and ($current->{'type'} eq 'raw'
-                 or $current->{'type'} eq 'rawline_text'
-                 or $current->{'type'} eq 'verb_delimiter'))) {
+      and !($current->{'type'} eq 'raw'
+            or $current->{'type'} eq 'rawline_text'
+            or $current->{'type'} eq 'verb_delimiter')) {
     my @result = ();
     my $remaining_text = $current->{'text'};
 
@@ -1114,8 +1110,8 @@ sub _protect_text($$) {
         # Note that it includes for completeness the case of $1 eq ''
         # although it is unclear that source marks may happen in that case
         # as they are rather associated to the previous element.
-        my $e = Texinfo::TreeElement::new({'text' => $1,});
-        $e->{'type'} = $current->{'type'} if (exists($current->{'type'}));
+        my $e = Texinfo::TreeElement::new({'text' => $1,
+                                          'type' => $current->{'type'}});
         $current_position = Texinfo::Common::relocate_source_marks(
                                         $current->{'source_marks'}, $e,
                                         $current_position, length($1));
@@ -1144,8 +1140,8 @@ sub _protect_text($$) {
           push @result, $new_asis;
         }
       } else {
-        my $e = Texinfo::TreeElement::new({'text' => $remaining_text,});
-        $e->{'type'} = $current->{'type'} if (exists($current->{'type'}));
+        my $e = Texinfo::TreeElement::new({'text' => $remaining_text,
+                                           'type' => $current->{'type'}});
         $current_position = Texinfo::Common::relocate_source_marks(
                                       $current->{'source_marks'}, $e,
                                       $current_position, length($remaining_text));

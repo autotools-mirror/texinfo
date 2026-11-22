@@ -16,25 +16,25 @@ $result_tree_text{'sp_in_example'} = '*document_root C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C18
-    {Para\\n}
+    {normal_text:Para\\n}
     *@sp C1 l3
     |EXTRA
     |misc_args:A{1}
      *line_arg C3
       {spaces_before_argument: }
-      {1}
+      {normal_text:1}
       {spaces_after_argument:\\n}
-    {other para\\n}
-    {Now lone }
+    {normal_text:other para\\n}
+    {normal_text:Now lone }
     *@@
-    {sp:\\n}
+    {normal_text:sp:\\n}
     {empty_line:\\n}
     *@sp C1 l7
     |EXTRA
     |misc_args:A{1}
      *line_arg C3
       {spaces_before_argument: }
-      {1}
+      {normal_text:1}
       {spaces_after_argument:\\n}
     {empty_line:\\n}
     *@sp C1 l9
@@ -42,34 +42,34 @@ $result_tree_text{'sp_in_example'} = '*document_root C1
     |misc_args:A{2}
      *line_arg C3
       {spaces_before_argument: }
-      {2}
+      {normal_text:2}
       {spaces_after_argument:\\n}
-    {Para after sp\\n}
+    {normal_text:Para after sp\\n}
     {empty_line:\\n}
-    {A\\n}
+    {normal_text:A\\n}
     *@sp C1 l13
     |EXTRA
     |misc_args:A{2}
      *line_arg C3
       {spaces_before_argument: }
-      {2}
+      {normal_text:2}
       {spaces_after_argument:\\n}
-    {B\\n}
+    {normal_text:B\\n}
     {empty_line:\\n}
-    {sp after para\\n}
+    {normal_text:sp after para\\n}
     *@sp C1 l17
     |EXTRA
     |misc_args:A{1}
      *line_arg C3
       {spaces_before_argument: }
-      {1}
+      {normal_text:1}
       {spaces_after_argument:\\n}
    *@end C1 l18
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
 ';
 

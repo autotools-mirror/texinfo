@@ -23,7 +23,7 @@ $result_tree_text{'info_ifplaintext'} = '*document_root C1
     >|text_arg:{ifplaintext}
      >*line_arg C3
       >{spaces_before_argument: }
-      >{ifplaintext}
+      >{normal_text:ifplaintext}
       >{spaces_after_argument:\\n}
    {text_before_beginning:\\n}
   *preamble_before_content

@@ -14,72 +14,72 @@ $result_tree_text{'one_argument_leading_trailing_spaces'} = '*document_root C1
   *paragraph C30
    *@code C1 l1
     *brace_container C1
-     { in code }
-   { }
+     {normal_text: in code }
+   {normal_text: }
    *@slanted C1 l1
     *brace_container C1
-     { in slanted }
-   { }
+     {normal_text: in slanted }
+   {normal_text: }
    *@var C1 l1
     *brace_container C1
-     { var }
-   { }
+     {normal_text: var }
+   {normal_text: }
    *@sub C1 l1
     *brace_container C1
-     { sub }
-   {\\n}
+     {normal_text: sub }
+   {normal_text:\\n}
    *@hyphenation C1 l2
    |EXTRA
    |global_command_number:{1}
     *brace_arg C3
      {spaces_before_argument: }
-     {a-b c-d}
+     {normal_text:a-b c-d}
      {spaces_after_argument: }
    {spaces_after_close_brace:\\n}
    *@indicateurl C1 l3
     *brace_container C1
-     { http://example.com }
-   { }
+     {normal_text: http://example.com }
+   {normal_text: }
    *@U C1 l3
     *brace_arg C3
      {spaces_before_argument: }
-     {1234}
+     {normal_text:1234}
      {spaces_after_argument: }
-   { }
+   {normal_text: }
    *@w C1 l3
     *brace_container C1
-     { w }
-   { }
+     {normal_text: w }
+   {normal_text: }
    *@verb C1 l3
     *brace_container C3
      {verb_delimiter::}
      {raw: verb }
      {verb_delimiter::}
-   {.\\n}
+   {normal_text:.\\n}
    *@^ C1 l4
     *brace_container C1
-     { e }
-   { }
+     {normal_text: e }
+   {normal_text: }
    *@ringaccent C1 l4
     *brace_container C1
-     { a }
-   { }
+     {normal_text: a }
+   {normal_text: }
    *@dotless C1 l4
     *brace_container C1
-     { i }
-   { }
+     {normal_text: i }
+   {normal_text: }
    *@tieaccent C1 l4
     *brace_container C1
-     { bb }
-   {\\n}
+     {normal_text: bb }
+   {normal_text:\\n}
    *@aa C1 l5
     *brace_container C1
-     { i }
-   { }
+     {normal_text: i }
+   {normal_text: }
    *@enddots C1 l5
     *brace_container C1
-     { ei }
-   {\\n}
+     {normal_text: ei }
+   {normal_text:\\n}
 ';
 
 

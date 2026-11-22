@@ -26,7 +26,7 @@ NodeForward: [U1]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C4 l2 {the top}
  |EXTRA
@@ -35,7 +35,7 @@ NodeForward: [U1]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {the top}
+    {normal_text:the top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C5 l4
@@ -65,28 +65,28 @@ NodeForward: [U1]
     |EXTRA
     |node_content:A{0|0}
     |normalized:{umlaut}
-     {umlaut}
+     {normal_text:umlaut}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 l9
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{circumflex}
-     {circumflex}
+     {normal_text:circumflex}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l10
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
 U1 unit{C4}{S:@chapter 1 umlaut}{n:umlaut}
@@ -112,7 +112,7 @@ NodeBack: [U0]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {umlaut}
+    {normal_text:umlaut}
     {spaces_after_argument:\\n}
  *@chapter C4 l13 {umlaut}
  |EXTRA
@@ -122,7 +122,7 @@ NodeBack: [U0]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {umlaut}
+    {normal_text:umlaut}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C4 l15
@@ -137,11 +137,11 @@ NodeBack: [U0]
     |normalized:{_00ef}
      *@" C1 l16
       *following_arg C1
-       {i}
+       {normal_text:i}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 l17
     {menu_entry_leading_text:* }
     *menu_entry_node C1
@@ -152,17 +152,17 @@ NodeBack: [U0]
       *brace_container C1
        *@dotless C1 l17
         *brace_container C1
-         {i}
+         {normal_text:i}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l18
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C2 l20 {@"i}
@@ -175,7 +175,7 @@ NodeBack: [U0]
     {spaces_before_argument: }
     *@" C1 l20
      *following_arg C1
-      {i}
+      {normal_text:i}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C2 l22 {@~{@dotless{i}}}
@@ -190,7 +190,7 @@ NodeBack: [U0]
      *brace_container C1
       *@dotless C1 l22
        *brace_container C1
-        {i}
+        {normal_text:i}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
 U2 unit{C3}{S:@chapter 2 circumflex}{n:circumflex}
@@ -213,7 +213,7 @@ NodeBack: [U2]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {circumflex}
+    {normal_text:circumflex}
     {spaces_after_argument:\\n}
  *@chapter C4 l25 {circumflex}
  |EXTRA
@@ -223,7 +223,7 @@ NodeBack: [U2]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {circumflex}
+    {normal_text:circumflex}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C3 l27
@@ -238,17 +238,17 @@ NodeBack: [U2]
     |normalized:{_00ee}
      *@^ C1 l28
       *following_arg C1
-       {i}
+       {normal_text:i}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l29
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l31 {@^i}
@@ -261,7 +261,7 @@ NodeBack: [U2]
     {spaces_before_argument: }
     *@^ C1 l31
      *following_arg C1
-      {i}
+      {normal_text:i}
     {spaces_after_argument:\\n}
 ';
 

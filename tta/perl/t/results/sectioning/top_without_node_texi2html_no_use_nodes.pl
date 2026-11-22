@@ -20,10 +20,10 @@ $result_tree_text{'top_without_node_texi2html_no_use_nodes'} = '*document_root C
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top section}
+    {normal_text:top section}
     {spaces_after_argument:\\n}
   *paragraph C1
-   {Top section\\n}
+   {normal_text:Top section\\n}
   {empty_line:\\n}
  *@node C1 l4 {second}
  |EXTRA
@@ -33,15 +33,15 @@ $result_tree_text{'top_without_node_texi2html_no_use_nodes'} = '*document_root C
   *arguments_line C4
    *line_arg C2
     {spaces_before_argument: }
-    {second}
+    {normal_text:second}
    *line_arg
    *line_arg
    *line_arg C4
    |EXTRA
    |manual_content:A{1|1}
-    {(}
-    {dir}
-    {)}
+    {normal_text:(}
+    {normal_text:dir}
+    {normal_text:)}
     {spaces_after_argument:\\n}
  *@chapter C3 l5 {Chapter}
  |EXTRA
@@ -51,11 +51,11 @@ $result_tree_text{'top_without_node_texi2html_no_use_nodes'} = '*document_root C
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chapter}
+    {normal_text:Chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {Text of chapter\\n}
+   {normal_text:Text of chapter\\n}
 ';
 
 

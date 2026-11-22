@@ -15,28 +15,28 @@ $result_tree_text{'bad_enumerate_arguments'} = '*document_root C1
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     {a b}
+     {normal_text:a b}
      {spaces_after_argument:\\n}
    *@end C1 l2
    |EXTRA
    |text_arg:{enumerate}
     *line_arg C3
      {spaces_before_argument: }
-     {enumerate}
+     {normal_text:enumerate}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@enumerate C2 l4
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     {!}
+     {normal_text:!}
      {spaces_after_argument:\\n}
    *@end C1 l5
    |EXTRA
    |text_arg:{enumerate}
     *line_arg C3
      {spaces_before_argument: }
-     {enumerate}
+     {normal_text:enumerate}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@enumerate C2 l7
@@ -45,21 +45,21 @@ $result_tree_text{'bad_enumerate_arguments'} = '*document_root C1
      {spaces_before_argument: }
      *@code C1 l7
       *brace_container C1
-       {a}
+       {normal_text:a}
      {spaces_after_argument:\\n}
    *@end C1 l8
    |EXTRA
    |text_arg:{enumerate}
     *line_arg C3
      {spaces_before_argument: }
-     {enumerate}
+     {normal_text:enumerate}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@enumerate C2 l10
    *arguments_line C1
     *block_line_arg C4
      {spaces_before_argument: }
-     {a}
+     {normal_text:a}
      *@@
      {spaces_after_argument:\\n}
    *@end C1 l11
@@ -67,21 +67,21 @@ $result_tree_text{'bad_enumerate_arguments'} = '*document_root C1
    |text_arg:{enumerate}
     *line_arg C3
      {spaces_before_argument: }
-     {enumerate}
+     {normal_text:enumerate}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@enumerate C2 l13
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     {a0}
+     {normal_text:a0}
      {spaces_after_argument:\\n}
    *@end C1 l14
    |EXTRA
    |text_arg:{enumerate}
     *line_arg C3
      {spaces_before_argument: }
-     {enumerate}
+     {normal_text:enumerate}
      {spaces_after_argument:\\n}
 ';
 

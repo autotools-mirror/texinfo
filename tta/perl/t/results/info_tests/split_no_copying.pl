@@ -19,7 +19,7 @@ $result_tree_text{'split_no_copying'} = '*document_root C7
    |text_arg:{split_no_copying.info}
     *line_arg C3
      {spaces_before_argument: }
-     {split_no_copying.info}
+     {normal_text:split_no_copying.info}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *@node C1 l4 {Top}
@@ -30,7 +30,7 @@ $result_tree_text{'split_no_copying'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C6 l5 {Top}
  |EXTRA
@@ -39,11 +39,11 @@ $result_tree_text{'split_no_copying'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {This is the top node.\\n}
+   {normal_text:This is the top node.\\n}
   {empty_line:\\n}
   *@menu C3 l9
    *arguments_line C1
@@ -55,17 +55,17 @@ $result_tree_text{'split_no_copying'} = '*document_root C7
     |EXTRA
     |node_content:A{0|0}
     |normalized:{Ch1}
-     {Ch1}
+     {normal_text:Ch1}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l11
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l13 {Ch1}
@@ -76,7 +76,7 @@ $result_tree_text{'split_no_copying'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Ch1}
+    {normal_text:Ch1}
     {spaces_after_argument:\\n}
  *@chapter C4 l14 {Ch1}
  |EXTRA
@@ -86,11 +86,11 @@ $result_tree_text{'split_no_copying'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Ch1}
+    {normal_text:Ch1}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {First chapter.\\n}
+   {normal_text:First chapter.\\n}
   {empty_line:\\n}
  *@bye C1
   *line_arg C1

@@ -12,7 +12,7 @@ $result_tree_text{'format_on_first_footnote_line'} = '*document_root C1
  *before_node_section C4
   *preamble_before_content
   *paragraph C3
-   {Texte}
+   {normal_text:Texte}
    *@footnote C1 l1
    |EXTRA
    |global_command_number:{1}
@@ -22,18 +22,18 @@ $result_tree_text{'format_on_first_footnote_line'} = '*document_root C1
        *block_line_arg C1
         {spaces_before_argument:\\n}
       *paragraph C1
-       {in quotation on the first footnote line\\n}
+       {normal_text:in quotation on the first footnote line\\n}
       *@end C1 l3
       |EXTRA
       |text_arg:{quotation}
        *line_arg C3
         {spaces_before_argument: }
-        {quotation}
+        {normal_text:quotation}
         {spaces_after_argument:\\n}
-   {.\\n}
+   {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C3
-   {Last text }
+   {normal_text:Last text }
    *@footnote C1 l6
    |EXTRA
    |global_command_number:{2}
@@ -43,16 +43,16 @@ $result_tree_text{'format_on_first_footnote_line'} = '*document_root C1
        *block_line_arg C1
         {spaces_before_argument:\\n}
       *preformatted C1
-       {in example\\n}
+       {normal_text:in example\\n}
       *@end C1 l8
       |EXTRA
       |text_arg:{example}
        *line_arg C3
         {spaces_before_argument: }
-        {example}
+        {normal_text:example}
         {spaces_after_argument:\\n}
      {empty_line:\\n}
-   {\\n}
+   {normal_text:\\n}
 ';
 
 

@@ -19,7 +19,7 @@ $result_tree_text{'U_in_contain_plain_text'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l2 {top}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'U_in_contain_plain_text'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l4 {chap}
@@ -40,7 +40,7 @@ $result_tree_text{'U_in_contain_plain_text'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
  *@chapter C8 l5 {chap}
  |EXTRA
@@ -50,24 +50,24 @@ $result_tree_text{'U_in_contain_plain_text'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C7
-   {TT }
+   {normal_text:TT }
    *@U C1 l7
     *brace_arg C1
-     {2021}
-   { a}
+     {normal_text:2021}
+   {normal_text: a}
    *@tie C1 l7
     *brace_container
-   {b }
+   {normal_text:b }
    *@^ C1 l7
     *brace_container C1
      *@U C1 l7
       *brace_arg C1
-       {1E2B}
-   {.\\n}
+       {normal_text:1E2B}
+   {normal_text:.\\n}
   {empty_line:\\n}
   *index_entry_command@findex C1 l9
   |EXTRA
@@ -76,22 +76,22 @@ $result_tree_text{'U_in_contain_plain_text'} = '*document_root C5
   |sortas:{ ab }
    *line_arg C5
     {spaces_before_argument: }
-    {aa}
+    {normal_text:aa}
     {spaces_at_end: }
     *@sortas C1 l9
      *brace_arg C5
       *@U C1 l9
        *brace_arg C1
-        {2021}
-      { a}
+        {normal_text:2021}
+      {normal_text: a}
       *@tie C1 l9
        *brace_container
-      {b }
+      {normal_text:b }
       *@^ C1 l9
        *brace_container C1
         *@U C1 l9
          *brace_arg C1
-          {1E2B}
+          {normal_text:1E2B}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@printindex C1 l11
@@ -100,7 +100,7 @@ $result_tree_text{'U_in_contain_plain_text'} = '*document_root C5
   |misc_args:A{fn}
    *line_arg C3
     {spaces_before_argument: }
-    {fn}
+    {normal_text:fn}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
 ';

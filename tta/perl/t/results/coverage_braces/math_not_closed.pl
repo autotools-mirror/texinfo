@@ -14,7 +14,7 @@ $result_tree_text{'math_not_closed'} = '*document_root C1
   *paragraph C1
    *@math C1 l1
     *brace_arg C1
-     {\\delta + 2}
+     {normal_text:\\delta + 2}
 ';
 
 

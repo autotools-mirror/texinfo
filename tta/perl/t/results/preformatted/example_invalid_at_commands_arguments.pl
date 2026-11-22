@@ -19,14 +19,14 @@ $result_tree_text{'example_invalid_at_commands_arguments'} = '*document_root C1
       *brace_arg C1
       |EXTRA
       |node_content:A{0|0}
-       {a}
+       {normal_text:a}
       *brace_arg C1
-       {b}
+       {normal_text:b}
       *brace_arg C1
-       {c}
+       {normal_text:c}
       *brace_arg C1
-       {d}
-     { fa}
+       {normal_text:d}
+     {normal_text: fa}
     *block_line_arg C4
      {spaces_before_argument: }
      *@anchor C1 l1
@@ -34,22 +34,22 @@ $result_tree_text{'example_invalid_at_commands_arguments'} = '*document_root C1
      |identifier:{an-anchor}
      |is_target:{1}
       *brace_arg C1
-       {an anchor}
+       {normal_text:an anchor}
      {spaces_after_close_brace: }
-     {on example line}
+     {normal_text:on example line}
     *block_line_arg C2
      {spaces_before_argument: }
      *@center C1 l1
       *line_arg C3
        {spaces_before_argument: }
-       {in center}
+       {normal_text:in center}
        {spaces_after_argument:\\n}
    *@end C1 l2
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
 ';
 

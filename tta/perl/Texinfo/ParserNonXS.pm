@@ -1361,7 +1361,7 @@ sub _place_source_mark($$$) {
     # add an empty element only used for source marks
     # 'text' is here to have merge_text work as expected
     $mark_element
-      = Texinfo::TreeElement::new({'text' => ''});
+      = Texinfo::TreeElement::new({'text' => '', 'type' => 'normal_text'});
     $element->{'contents'} = [] unless (exists($element->{'contents'}));
     push @{$element->{'contents'}}, $mark_element;
     $add_element_string = 'add';
@@ -2333,7 +2333,7 @@ sub _close_current($$$;$$) {
       # do not want to modify
       #$current = _merge_text($self, $current, '}');
       my $close_brace
-       = Texinfo::TreeElement::new({'text' => '}'});
+       = Texinfo::TreeElement::new({'text' => '}', 'type' => 'normal_text'});
       push @{$current->{'contents'}}, $close_brace;
       $current = $current->{'parent'};
     } elsif ($current->{'type'} eq 'line_arg') {
@@ -2438,7 +2438,8 @@ sub _merge_text($$$;$) {
   # or menu_entry_name, otherwise there is always some kind of element
   # leading added for leading spaces when the element is created
   if (!exists($current->{'contents'})) {
-    my $new_element = Texinfo::TreeElement::new({'text' => $text});
+    my $new_element = Texinfo::TreeElement::new({'text' => $text,
+                                                 'type' => 'normal_text'});
     _transfer_source_marks($transfer_marks_element, $new_element)
       if ($transfer_marks_element);
     $current->{'contents'} = [];
@@ -2473,7 +2474,7 @@ sub _merge_text($$$;$) {
           # afterwards adding a new element if there are source marks:
           # we avoid an empty element being added by reusing.
           my $popped_element = _pop_element_from_contents($self, $current);
-          delete $popped_element->{'type'};
+          $popped_element->{'type'} = 'normal_text';
           $popped_element->{'text'} = $text;
           if (_in_begin_paragraph($self, $current)) {
             $current = _begin_paragraph($self, $current);
@@ -2498,7 +2499,7 @@ sub _merge_text($$$;$) {
             $current = $paragraph;
           } else {
             # in that case, we can merge
-            delete $last_element->{'type'};
+            $last_element->{'type'} = 'normal_text';
           }
         } else {
           # other special spaces, in general in paragraph begin context
@@ -2539,7 +2540,8 @@ sub _merge_text($$$;$) {
          if ($self->{'conf'}->{'DEBUG'});
     $last_element->{'text'} .= $text;
   } else {
-    my $new_element = Texinfo::TreeElement::new({'text' => $text});
+    my $new_element = Texinfo::TreeElement::new({'text' => $text,
+                                                 'type' => 'normal_text'});
     _transfer_source_marks($transfer_marks_element, $new_element)
       if (defined($transfer_marks_element));
     if (!exists($current->{'contents'})) {
@@ -3151,7 +3153,7 @@ sub _set_non_ignored_space_in_index_before_command($) {
                       or (exists($element->{'type'})
                    and $element->{'type'} eq 'spaces_after_close_brace'))
              and (! _check_empty_expansion([$element]))) {
-      delete $pending_spaces_element->{'type'};
+      $pending_spaces_element->{'type'} = 'normal_text';
       $pending_spaces_element = 0;
     }
     if (exists($element->{'cmdname'})
@@ -3218,7 +3220,7 @@ sub _abort_empty_line($$) {
                       and $type_without_paragraph{$current->{'type'}})) {
             $last_element->{'type'} = 'spaces_before_paragraph';
           } else {
-            delete $last_element->{'type'};
+            $last_element->{'type'} = 'normal_text';
           }
         }
       }
@@ -3232,10 +3234,9 @@ sub _isolate_trailing_spaces_element($;$) {
   my $new_space_element;
 
   if ($element->{'text'} =~ s/(\s+)$//) {
-    $new_space_element = Texinfo::TreeElement::new({'text' => $1});
-    if (defined($type)) {
-      $new_space_element->{'type'} = $type;
-    }
+    $type = 'normal_text' if (!defined($type));
+    $new_space_element = Texinfo::TreeElement::new({'text' => $1,
+                                                  'type' => $type});
     if (exists($element->{'source_marks'})) {
       my $current_position = length($element->{'text'});
       Texinfo::Common::relocate_source_marks(
@@ -3396,7 +3397,8 @@ sub _split_element_delimiters($$$$) {
         my $new = Texinfo::TreeElement::new({'type' => 'def_line_arg',
                                            'parent' => $current});
         $new->{'contents'} = [
-             Texinfo::TreeElement::new({'text' => $1})];
+             Texinfo::TreeElement::new({'text' => $1,
+                                        'type' => 'normal_text'})];
         push @elements, $new;
         $current_position = Texinfo::Common::relocate_source_marks(
                               $element->{'source_marks'},
@@ -3452,16 +3454,18 @@ sub _split_element_def_args($$$$) {
     }
     my $current_position = 0;
     foreach my $t (@split_text) {
-      my $e = Texinfo::TreeElement::new({'text' => $t});
-      $current_position = Texinfo::Common::relocate_source_marks(
-                               $element->{'source_marks'}, $e,
-                               $current_position, length($t));
+      my $e_type;
       if (defined($type)) {
-        $e->{'type'} = $type;
+        $e_type = $type;
         $type = undef;
       } else {
         $type = 'spaces';
+        $e_type = 'normal_text';
       }
+      my $e = Texinfo::TreeElement::new({'text' => $t, 'type' => $e_type});
+      $current_position = Texinfo::Common::relocate_source_marks(
+                               $element->{'source_marks'}, $e,
+                               $current_position, length($t));
       push @elements, $e;
     }
     if (exists($element->{'source_marks'})) {
@@ -3568,12 +3572,12 @@ sub _parse_def($$$$) {
     my $def_line_arg
       = Texinfo::TreeElement::new({'type' => 'def_line_arg',
                                    'parent' => $current});
-    my $content = Texinfo::TreeElement::new({'text' => $category});
+    my $inserted_type;
     # the category string is an english string (such as Function).  If
     # documentlanguage is set it needs to be translated during the conversion.
     if (defined($self->{'documentlanguage'})) {
       $def_line_arg->{'type'} = 'untranslated_def_line_arg';
-      $content->{'type'} = 'untranslated';
+      $inserted_type = 'untranslated';
       $def_line_arg->{'extra'} = {};
       foreach my $translation_cmdname (@translation_commands) {
         if (exists($self->{$translation_cmdname})) {
@@ -3585,7 +3589,11 @@ sub _parse_def($$$$) {
         $def_line_arg->{'extra'}->{'translation_context'}
           = $translation_context;
       }
+    } else {
+      $inserted_type = 'normal_text';
     }
+    my $content = Texinfo::TreeElement::new({'text' => $category,
+                                              'type' => $inserted_type});
     @{$def_line_arg->{'contents'}} = ($content);
 
     unshift @$contents,
@@ -5428,7 +5436,8 @@ sub _new_value_element($$;$$) {
     if (defined($spaces_element));
   push @{$value_elt->{'contents'}}, $brace_container;
   push @{$brace_container->{'contents'}},
-            Texinfo::TreeElement::new({'text' => $flag,});
+            Texinfo::TreeElement::new({'text' => $flag,
+                                       'type' => 'normal_text'});
   return $value_elt;
 }
 
@@ -5524,7 +5533,8 @@ sub _handle_macro($$$$$$) {
             # the text element with be empty, and become an empty
             # spaces_before_argument after trimming leading spaces.
             push @{$arg_elt->{'contents'}},
-                  Texinfo::TreeElement::new({'text' => $line,});
+                  Texinfo::TreeElement::new({'text' => $line,
+                                             'type' => 'normal_text'});
           } else {
             $arg_elt->{'contents'}->[0]->{'text'} .= $line;
           }
@@ -5646,7 +5656,7 @@ sub _handle_menu_entry_separators($$$$$$) {
     if ($$line_ref !~ /^\s+/) {
       print STDERR "ABORT MENU STAR before: "
           ._debug_protect_eol($$line_ref)."\n" if ($self->{'conf'}->{'DEBUG'});
-      delete $last_element->{'type'};
+      $last_element->{'type'} = 'normal_text';
     } else {
       print STDERR "MENU ENTRY (certainly)\n" if ($self->{'conf'}->{'DEBUG'});
       # this is the menu star collected previously
@@ -5956,7 +5966,8 @@ sub _new_element_at_begin_reloc($$;$) {
     $new_e = Texinfo::TreeElement::new({'text' => $spaces_text,
                                         'type' => $type});
   } else {
-    $new_e = Texinfo::TreeElement::new({'text' => $spaces_text});
+    $new_e = Texinfo::TreeElement::new({'text' => $spaces_text,
+                                        'type' => 'normal_text'});
   }
   if (exists($text_element->{'source_marks'})) {
     my $remaining_source_marks = $text_element->{'source_marks'};
@@ -6759,7 +6770,7 @@ sub _handle_open_brace($$$$) {
     push @{$current->{'contents'}}, $balanced_braces;
     $current = $balanced_braces;
     my $open_brace
-      = Texinfo::TreeElement::new({'text' => '{'});#}
+      = Texinfo::TreeElement::new({'text' => '{', 'type' => 'normal_text'});#}
     push @{$current->{'contents'}}, $open_brace;
     print STDERR "BALANCED BRACES in math/rawpreformatted/inlineraw\n"
        if ($self->{'conf'}->{'DEBUG'});
@@ -7041,7 +7052,7 @@ sub _handle_comma($$$$) {
       # and put it in extra format
       if (exists($current->{'contents'})) {
         foreach my $content (@{$current->{'contents'}}) {
-          if (exists($content->{'text'}) and !exists($content->{'type'})) {
+          if (exists($content->{'text'}) and $content->{'type'} eq 'normal_text') {
             $inline_type = $content->{'text'};
             last;
           }
@@ -7677,7 +7688,8 @@ sub _process_remaining_on_line($$$$) {
                                      'parent' => $current});
       push @{$current->{'contents'}}, $following_arg;
       my $accent_arg
-        = Texinfo::TreeElement::new({ 'text' => $arg_char,});
+        = Texinfo::TreeElement::new({'text' => $arg_char,
+                                     'type' => 'normal_text'});
       $following_arg->{'contents'} = [ $accent_arg ];
 
       if ($current->{'cmdname'} eq 'dotless'

@@ -16,11 +16,11 @@ $result_tree_text{'double_style_paragraph'} = '*document_root C1
     *brace_container C1
      *@strong C1 l1
       *brace_container C3
-       {\\n}
-       {First para.\\n}
+       {normal_text:\\n}
+       {normal_text:First para.\\n}
        {empty_line:\\n}
   *paragraph C1
-   {Second para.\\n}
+   {normal_text:Second para.\\n}
   {empty_line:\\n}
   {empty_line:\\n}
 ';

@@ -16,58 +16,58 @@ $result_tree_text{'brace_commands_spaces_end_of_lines'} = '*document_root C1
   |input_encoding_name:{utf-8}
    *brace_arg C2
     {spaces_before_argument:\\n}
-    {a}
-  {\\n}
+    {normal_text:a}
+  {normal_text:\\n}
   {empty_line:\\n}
   *@image C1 l4
   |EXTRA
   |input_encoding_name:{utf-8}
    *brace_arg C2
     {spaces_before_argument: \\n}
-    {a}
-  {\\n}
+    {normal_text:a}
+  {normal_text:\\n}
   {empty_line:\\n}
   *@image C2 l7
   |EXTRA
   |input_encoding_name:{utf-8}
    *brace_arg C1
-    {a}
+    {normal_text:a}
    *brace_arg C2
     {spaces_before_argument:\\n}
-    {b}
-  {\\n}
+    {normal_text:b}
+  {normal_text:\\n}
   {empty_line:\\n}
   *@image C2 l10
   |EXTRA
   |input_encoding_name:{utf-8}
    *brace_arg C1
-    {a}
+    {normal_text:a}
    *brace_arg C2
     {spaces_before_argument: \\n}
-    {b}
-  {\\n}
+    {normal_text:b}
+  {normal_text:\\n}
   {empty_line:\\n}
   *@image C2 l13
   |EXTRA
   |input_encoding_name:{utf-8}
    *brace_arg C1
-    {a}
+    {normal_text:a}
    *brace_arg C3
     {spaces_before_argument:\\n}
     {spaces_before_argument: }
-    {b}
-  {\\n}
+    {normal_text:b}
+  {normal_text:\\n}
   {empty_line:\\n}
   *@image C2 l16
   |EXTRA
   |input_encoding_name:{utf-8}
    *brace_arg C1
-    {a}
+    {normal_text:a}
    *brace_arg C3
     {spaces_before_argument: \\n}
     {spaces_before_argument: }
-    {b}
-  {\\n}
+    {normal_text:b}
+  {normal_text:\\n}
 ';
 
 

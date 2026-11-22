@@ -17,12 +17,12 @@ $result_tree_text{'lone_braces_in_inlineraw'} = '*document_root C1
    |expand_index:{1}
    |format:{plaintext}
     *brace_arg C1
-     {plaintext}
+     {normal_text:plaintext}
     *brace_arg C2
      {spaces_before_argument: }
      *balanced_braces C1 l1
-      {{truc}}
-   {.\\n}
+      {normal_text:{truc}}
+   {normal_text:.\\n}
 ';
 
 

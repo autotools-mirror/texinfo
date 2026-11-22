@@ -16,30 +16,30 @@ $result_tree_text{'line_breaks'} = '*document_root C5
      *block_line_arg C1
       {spaces_before_argument: \\n}
     *paragraph C3
-     {a document }
+     {normal_text:a document }
      *@*
-     { yes!\\n}
+     {normal_text: yes!\\n}
     *@end C1 l3
     |EXTRA
     |text_arg:{documentdescription}
      *line_arg C3
       {spaces_before_argument: }
-      {documentdescription}
+      {normal_text:documentdescription}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@settitle C1 l5
     *line_arg C5
      {spaces_before_argument: }
-     {the manual }
+     {normal_text:the manual }
      *@*
-     { new version}
+     {normal_text: new version}
      {spaces_after_argument:\\n}
   *@title C1 l6
    *line_arg C5
     {spaces_before_argument: }
-    {AWK As A Major Systems Programming }
+    {normal_text:AWK As A Major Systems Programming }
     *@*
-    { Language---Revisited}
+    {normal_text: Language---Revisited}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l8 {Top}
@@ -50,7 +50,7 @@ $result_tree_text{'line_breaks'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l9 {a @* top}
  |EXTRA
@@ -59,9 +59,9 @@ $result_tree_text{'line_breaks'} = '*document_root C5
   *arguments_line C1
    *line_arg C5
     {spaces_before_argument: }
-    {a }
+    {normal_text:a }
     *@*
-    { top}
+    {normal_text: top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l11 {a @* new node}
@@ -72,9 +72,9 @@ $result_tree_text{'line_breaks'} = '*document_root C5
   *arguments_line C1
    *line_arg C5
     {spaces_before_argument: }
-    {a }
+    {normal_text:a }
     *@*
-    { new node}
+    {normal_text: new node}
     {spaces_after_argument:\\n}
  *@chapter C11 l12 {a @* chapter}
  |EXTRA
@@ -84,17 +84,17 @@ $result_tree_text{'line_breaks'} = '*document_root C5
   *arguments_line C1
    *line_arg C5
     {spaces_before_argument: }
-    {a }
+    {normal_text:a }
     *@*
-    { chapter}
+    {normal_text: chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@center C1 l14
    *line_arg C5
     {spaces_before_argument: }
-    {in center }
+    {normal_text:in center }
     *@*
-    { line break}
+    {normal_text: line break}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@table C3 l16
@@ -108,58 +108,58 @@ $result_tree_text{'line_breaks'} = '*document_root C5
      *@item C1 l17
       *line_arg C5
        {spaces_before_argument: }
-       {with break }
+       {normal_text:with break }
        *@*
-       { after}
+       {normal_text: after}
        {spaces_after_argument:\\n}
      *@itemx C1 l18
       *line_arg C5
        {spaces_before_argument: }
-       {withx breakx }
+       {normal_text:withx breakx }
        *@*
-       { afterx}
+       {normal_text: afterx}
        {spaces_after_argument:\\n}
     *table_definition C1
      *paragraph C3
-      {Text, }
+      {normal_text:Text, }
       *@ref C2 l19
        *brace_arg C3
        |EXTRA
        |node_content:A{0|2}
        |normalized:{a-new-node}
-        {a }
+        {normal_text:a }
         *@*
-        { new node}
+        {normal_text: new node}
        *brace_arg C4
         {spaces_before_argument: }
-        {a }
+        {normal_text:a }
         *@*
-        { something}
-      {.\\n}
+        {normal_text: something}
+      {normal_text:.\\n}
    *@end C1 l20
    |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
-     {table}
+     {normal_text:table}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@quotation C3 l22
    *arguments_line C1
     *block_line_arg C5
      {spaces_before_argument: }
-     {Q}
+     {normal_text:Q}
      *@*
-     { uotation}
+     {normal_text: uotation}
      {spaces_after_argument:\\n}
    *paragraph C1
-    {T\\n}
+    {normal_text:T\\n}
    *@end C1 l24
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }
-     {quotation}
+     {normal_text:quotation}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@example C3 l26
@@ -167,15 +167,15 @@ $result_tree_text{'line_breaks'} = '*document_root C5
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C3
-    {in }
+    {normal_text:in }
     *@*
-    { example\\n}
+    {normal_text: example\\n}
    *@end C1 l28
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@flushright C5 l30
@@ -183,9 +183,9 @@ $result_tree_text{'line_breaks'} = '*document_root C5
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C3
-    {in }
+    {normal_text:in }
     *@*
-    { flushright\\n}
+    {normal_text: flushright\\n}
    {empty_line:\\n}
    *paragraph C2
     *@xref C1 l33
@@ -193,16 +193,16 @@ $result_tree_text{'line_breaks'} = '*document_root C5
      |EXTRA
      |node_content:A{0|2}
      |normalized:{a-new-node}
-      {a }
+      {normal_text:a }
       *@*
-      { new node}
-    {.\\n}
+      {normal_text: new node}
+    {normal_text:.\\n}
    *@end C1 l34
    |EXTRA
    |text_arg:{flushright}
     *line_arg C3
      {spaces_before_argument: }
-     {flushright}
+     {normal_text:flushright}
      {spaces_after_argument:\\n}
 ';
 

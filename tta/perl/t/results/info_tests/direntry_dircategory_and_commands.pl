@@ -14,11 +14,11 @@ $result_tree_text{'direntry_dircategory_and_commands'} = '*document_root C3
    *@dircategory C1 l1
     *line_arg C5
      {spaces_before_argument: }
-     {``category---}
+     {normal_text:``category---}
      *@var C1 l1
       *brace_container C1
-       {th  ere}
-     {?\'\'}
+       {normal_text:th  ere}
+     {normal_text:?\'\'}
      {spaces_after_argument:\\n}
    *@direntry C3 l2
     *arguments_line C1
@@ -27,34 +27,34 @@ $result_tree_text{'direntry_dircategory_and_commands'} = '*document_root C3
     *menu_entry C6 l3
      {menu_entry_leading_text:* }
      *menu_entry_name C1
-      {foo}
+      {normal_text:foo}
      {menu_entry_separator:: }
      *menu_entry_node C3
      |EXTRA
      |manual_content:A{1|1}
-      {(}
-      {foo}
-      {)}
+      {normal_text:(}
+      {normal_text:foo}
+      {normal_text:)}
      {menu_entry_separator:.   }
      *menu_entry_description C1
       *preformatted C3
-       {``hello---}
+       {normal_text:``hello---}
        *@var C1 l3
         *brace_container C1
-         {there}
-       {?\'\'\\n}
+         {normal_text:there}
+       {normal_text:?\'\'\\n}
     *@end C1 l4
     |EXTRA
     |text_arg:{direntry}
      *line_arg C3
       {spaces_before_argument: }
-      {direntry}
+      {normal_text:direntry}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@dircategory C1 l6
     *line_arg C3
      {spaces_before_argument: }
-     {cat2}
+     {normal_text:cat2}
      {spaces_after_argument:\\n}
    *@direntry C4 l7
     *arguments_line C1
@@ -66,23 +66,23 @@ $result_tree_text{'direntry_dircategory_and_commands'} = '*document_root C3
      |EXTRA
      |node_content:A{0|1}
      |normalized:{aaa}
-      {aaa}
+      {normal_text:aaa}
       {space_at_end_menu_node: }
      {menu_entry_separator:::               }
      *menu_entry_description C1
       *preformatted C2
-       {aaaa\\n}
-       {                   bbbbb\\n}
+       {normal_text:aaaa\\n}
+       {normal_text:                   bbbbb\\n}
     *menu_comment C1
      *preformatted C2
       {after_menu_description_line:\\n}
-      {menutitle\\n}
+      {normal_text:menutitle\\n}
     *@end C1 l12
     |EXTRA
     |text_arg:{direntry}
      *line_arg C3
       {spaces_before_argument: }
-      {direntry}
+      {normal_text:direntry}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    {empty_line:\\n}
@@ -94,7 +94,7 @@ $result_tree_text{'direntry_dircategory_and_commands'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C3 l16 {Test dircategory and direntry}
  |EXTRA
@@ -103,11 +103,11 @@ $result_tree_text{'direntry_dircategory_and_commands'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Test dircategory and direntry}
+    {normal_text:Test dircategory and direntry}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {Text\\n}
+   {normal_text:Text\\n}
 ';
 
 

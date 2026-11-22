@@ -22,22 +22,22 @@ $result_tree_text{'text_between_item_itemx'} = '*document_root C1
      *@item C1 l2
       *line_arg C3
        {spaces_before_argument: }
-       {in item}
+       {normal_text:in item}
        {spaces_after_argument:\\n}
      *inter_item C1
       *paragraph C1
-       {text\\n}
+       {normal_text:text\\n}
      *@itemx C1 l4
       *line_arg C3
        {spaces_before_argument: }
-       {in itemx}
+       {normal_text:in itemx}
        {spaces_after_argument:\\n}
    *@end C1 l5
    |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
-     {table}
+     {normal_text:table}
      {spaces_after_argument:\\n}
 ';
 

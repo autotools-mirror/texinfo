@@ -15,7 +15,7 @@ $result_tree_text{'empty_images'} = '*document_root C1
   |EXTRA
   |input_encoding_name:{utf-8}
    *brace_arg
-  {\\n}
+  {normal_text:\\n}
   {empty_line:\\n}
   *@image C5 l3
   |EXTRA
@@ -23,15 +23,15 @@ $result_tree_text{'empty_images'} = '*document_root C1
    *brace_arg C1
     {spaces_before_argument: }
    *brace_arg C1
-    {aa}
+    {normal_text:aa}
    *brace_arg C1
-    {bb}
+    {normal_text:bb}
    *brace_arg C2
-    {cc}
+    {normal_text:cc}
     {spaces_after_argument: }
    *brace_arg C1
-    {dd}
-  {\\n}
+    {normal_text:dd}
+  {normal_text:\\n}
   {empty_line:\\n}
   *@image C4 l5
   |EXTRA
@@ -41,7 +41,7 @@ $result_tree_text{'empty_images'} = '*document_root C1
    *brace_arg
    *brace_arg C1
     *@ 
-  {\\n}
+  {normal_text:\\n}
   *@image C4 l6
   |EXTRA
   |input_encoding_name:{utf-8}
@@ -50,7 +50,7 @@ $result_tree_text{'empty_images'} = '*document_root C1
    *brace_arg
    *brace_arg C1
     *@:
-  {\\n}
+  {normal_text:\\n}
 ';
 
 

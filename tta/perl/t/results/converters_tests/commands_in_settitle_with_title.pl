@@ -16,42 +16,42 @@ $result_tree_text{'commands_in_settitle_with_title'} = '*document_root C5
      {spaces_before_argument: }
      *@sc C1 l1
       *brace_container C6
-       {sc }
+       {normal_text:sc }
        *@~ C1 l1
         *following_arg C1
-         {n}
-       { }
+         {normal_text:n}
+       {normal_text: }
        *@aa C1 l1
         *brace_container
-       { }
+       {normal_text: }
        *@TeX C1 l1
         *brace_container
-     { node }
+     {normal_text: node }
      *@" C1 l1
       *following_arg C1
-       {i}
-     { }
+       {normal_text:i}
+     {normal_text: }
      *@" C1 l1
       *brace_container C1
        *@dotless C1 l1
         *brace_container C1
-         {i}
-     { }
+         {normal_text:i}
+     {normal_text: }
      *@` C1 l1
       *brace_container C1
        *@= C1 l1
         *following_arg C1
-         {E}
-     { }
+         {normal_text:E}
+     {normal_text: }
      *@l C1 l1
       *brace_container
-     { }
+     {normal_text: }
      *@, C1 l1
       *brace_container C1
        *@\' C1 l1
         *following_arg C1
-         {C}
-     { }
+         {normal_text:C}
+     {normal_text: }
      *@exclamdown C1 l1
       *brace_container
      {spaces_after_argument:\\n}
@@ -64,7 +64,7 @@ $result_tree_text{'commands_in_settitle_with_title'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l4 {top}
  |EXTRA
@@ -73,7 +73,7 @@ $result_tree_text{'commands_in_settitle_with_title'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l6 {chapter}
@@ -84,7 +84,7 @@ $result_tree_text{'commands_in_settitle_with_title'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter}
+    {normal_text:chapter}
     {spaces_after_argument:\\n}
  *@chapter C4 l7 {Chap}
  |EXTRA
@@ -94,11 +94,11 @@ $result_tree_text{'commands_in_settitle_with_title'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chap}
+    {normal_text:Chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {Document.\\n}
+   {normal_text:Document.\\n}
   {empty_line:\\n}
 ';
 

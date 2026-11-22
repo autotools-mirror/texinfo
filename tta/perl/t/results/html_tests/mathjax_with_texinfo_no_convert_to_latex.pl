@@ -15,48 +15,48 @@ $result_tree_text{'mathjax_with_texinfo_no_convert_to_latex'} = '*document_root 
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
-   {a}
+   {normal_text:a}
    *@sup C1 l2
     *brace_container C3
-     {b - \\frac}
+     {normal_text:b - \\frac}
      *balanced_braces C1 l2
-      {{\\xi}}
+      {normal_text:{\\xi}}
      *balanced_braces C3 l2
-      {{phi }
+      {normal_text:{phi }
       *@copyright C1 l2
        *brace_container
-      {}}
-   { }
+      {normal_text:}}
+   {normal_text: }
    *@dotless C1 l2
     *brace_container C1
-     {i}
-   {\\n}
+     {normal_text:i}
+   {normal_text:\\n}
    *@end C1 l3
    |EXTRA
    |text_arg:{displaymath}
     *line_arg C3
      {spaces_before_argument: }
-     {displaymath}
+     {normal_text:displaymath}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C3
-   {Some }
+   {normal_text:Some }
    *@math C1 l5
     *brace_arg C8
-     {a }
+     {normal_text:a }
      *@minus C1 l5
       *brace_container
-     { b }
+     {normal_text: b }
      *@geq C1 l5
       *brace_container
-     { }
+     {normal_text: }
      *@AA C1 l5
       *brace_container
-     { }
+     {normal_text: }
      *@^ C1 l5
       *following_arg C1
-       {e}
-   {.\\n}
+       {normal_text:e}
+   {normal_text:.\\n}
 ';
 
 

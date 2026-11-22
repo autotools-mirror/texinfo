@@ -21,29 +21,29 @@ $result_tree_text{'quotation_author'} = '*document_root C1
    |global_command_number:{1}
     *line_arg C3
      {spaces_before_argument: }
-     {First Author}
+     {normal_text:First Author}
      {spaces_after_argument:\\n}
    *paragraph C3
-    {quotation\\n}
+    {normal_text:quotation\\n}
     *@author C1 l5
     |EXTRA
     |global_command_number:{2}
      *line_arg C5
       {spaces_before_argument: }
-      {S}
+      {normal_text:S}
       *@~ C1 l5
        *following_arg C1
-        {e}
-      {cond author}
+        {normal_text:e}
+      {normal_text:cond author}
       {spaces_after_argument:\\n}
-    {quotation continues.\\n}
+    {normal_text:quotation continues.\\n}
    {empty_line:\\n}
    *@end C1 l8
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }
-     {quotation}
+     {normal_text:quotation}
      {spaces_after_argument:\\n}
 ';
 

@@ -23,7 +23,7 @@ $result_tree_text{'macro_name_with_digit'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@macro C3 l5
@@ -38,17 +38,17 @@ $result_tree_text{'macro_name_with_digit'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C1
-   {expand some thing macro1\\n}
+   {normal_text:expand some thing macro1\\n}
    >SOURCEMARKS
    >macro_expansion<start;1>
     >*macro_call_line@macro11 C1
      >*line_arg C2
       >{spaces_before_argument: }
-      >{some thing @macro1{}}
+      >{normal_text:some thing @macro1{}}
    >macro_expansion<start;2><p:18>
     >*macro_call@macro1 C1
      >*brace_arg

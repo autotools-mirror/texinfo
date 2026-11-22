@@ -16,15 +16,15 @@ $result_tree_text{'empty_line'} = '*document_root C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C3
-    {example\\n}
+    {normal_text:example\\n}
     {empty_line:\\n}
-    {after empty line\\n}
+    {normal_text:after empty line\\n}
    *@end C1 l5
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
 ';
 

@@ -21,13 +21,13 @@ $result_tree_text{'format_in_titlepage'} = '*document_root C3
       *block_line_arg C1
        {spaces_before_argument:\\n}
      *preformatted C1
-      {Published\\n}
+      {normal_text:Published\\n}
      *@end C1 l5
      |EXTRA
      |text_arg:{format}
       *line_arg C3
        {spaces_before_argument: }
-       {format}
+       {normal_text:format}
        {spaces_after_argument:\\n}
     {empty_line:\\n}
     *@end C1 l7
@@ -35,7 +35,7 @@ $result_tree_text{'format_in_titlepage'} = '*document_root C3
     |text_arg:{titlepage}
      *line_arg C3
       {spaces_before_argument: }
-      {titlepage}
+      {normal_text:titlepage}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
  *@node C1 l9 {Top}
@@ -46,7 +46,7 @@ $result_tree_text{'format_in_titlepage'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@node C2 l10 {chap}
  |EXTRA
@@ -56,7 +56,7 @@ $result_tree_text{'format_in_titlepage'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
 ';

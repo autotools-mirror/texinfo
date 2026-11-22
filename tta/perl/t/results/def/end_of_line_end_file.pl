@@ -21,15 +21,15 @@ $result_tree_text{'end_of_line_end_file'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {category}
+       {normal_text:category}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {deffn_name}
+       {normal_text:deffn_name}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {arguments}
+       {normal_text:arguments}
      {spaces_after_argument: }
      >SOURCEMARKS
      >defline_continuation<1><p:1>

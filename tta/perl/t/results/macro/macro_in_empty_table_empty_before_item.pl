@@ -22,7 +22,7 @@ $result_tree_text{'macro_in_empty_table_empty_before_item'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *@table C3 l4
@@ -42,7 +42,7 @@ $result_tree_text{'macro_in_empty_table_empty_before_item'} = '*document_root C1
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
-     {table}
+     {normal_text:table}
      {spaces_after_argument:\\n}
 ';
 

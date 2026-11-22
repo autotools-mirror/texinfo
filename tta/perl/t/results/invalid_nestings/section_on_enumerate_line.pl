@@ -15,7 +15,7 @@ $result_tree_text{'section_on_enumerate_line'} = '*document_root C3
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     {something}
+     {normal_text:something}
      {spaces_after_argument: }
  *@section C3 l1 {first}
  |EXTRA
@@ -27,14 +27,14 @@ $result_tree_text{'section_on_enumerate_line'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {first}
+    {normal_text:first}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@enumerate C1 l3
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     {4}
+     {normal_text:4}
      {spaces_after_argument: }
  *@section C1 l3 {second}
  |EXTRA
@@ -46,7 +46,7 @@ $result_tree_text{'section_on_enumerate_line'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {second}
+    {normal_text:second}
     {spaces_after_argument:\\n}
 ';
 

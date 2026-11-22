@@ -16,7 +16,7 @@ $result_tree_text{'alias_of_added_index_before_added_index'} = '*document_root C
    |misc_args:A{new|sliindex}
     *line_arg C3
      {spaces_before_argument: }
-     {new = sliindex}
+     {normal_text:new = sliindex}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@defindex C1 l3
@@ -24,7 +24,7 @@ $result_tree_text{'alias_of_added_index_before_added_index'} = '*document_root C
    |misc_args:A{sli}
     *line_arg C3
      {spaces_before_argument: }
-     {sli}
+     {normal_text:sli}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *@node C1 l5 {Top}
@@ -35,7 +35,7 @@ $result_tree_text{'alias_of_added_index_before_added_index'} = '*document_root C
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C4 l6 {top}
  |EXTRA
@@ -44,7 +44,7 @@ $result_tree_text{'alias_of_added_index_before_added_index'} = '*document_root C
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@sliindex C1 l8
@@ -54,7 +54,7 @@ $result_tree_text{'alias_of_added_index_before_added_index'} = '*document_root C
   |index_entry:I{sli,1}
    *line_arg C3
     {spaces_before_argument: }
-    {entry}
+    {normal_text:entry}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l10 {chap}
@@ -66,7 +66,7 @@ $result_tree_text{'alias_of_added_index_before_added_index'} = '*document_root C
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
  *@chapter C3 l11 {Chapter}
  |EXTRA
@@ -76,7 +76,7 @@ $result_tree_text{'alias_of_added_index_before_added_index'} = '*document_root C
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chapter}
+    {normal_text:Chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@printindex C1 l13
@@ -85,7 +85,7 @@ $result_tree_text{'alias_of_added_index_before_added_index'} = '*document_root C
   |misc_args:A{sli}
    *line_arg C3
     {spaces_before_argument: }
-    {sli}
+    {normal_text:sli}
     {spaces_after_argument:\\n}
 ';
 

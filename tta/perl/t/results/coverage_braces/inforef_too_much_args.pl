@@ -19,7 +19,7 @@ $result_tree_text{'inforef_too_much_args'} = '*document_root C2
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter}
+    {normal_text:chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
@@ -27,14 +27,14 @@ $result_tree_text{'inforef_too_much_args'} = '*document_root C2
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
-     {chapter}
+     {normal_text:chapter}
     *brace_arg C2
      {spaces_before_argument: }
-     {cross ref name}
+     {normal_text:cross ref name}
     *brace_arg C2
      {spaces_before_argument: }
-     {file name, spurious arg}
-   {\\n}
+     {normal_text:file name, spurious arg}
+   {normal_text:\\n}
 ';
 
 

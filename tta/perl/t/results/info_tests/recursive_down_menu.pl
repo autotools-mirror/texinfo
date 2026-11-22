@@ -19,7 +19,7 @@ $result_tree_text{'recursive_down_menu'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l2 {top}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'recursive_down_menu'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l4 {chapN}
@@ -39,7 +39,7 @@ $result_tree_text{'recursive_down_menu'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapN}
+    {normal_text:chapN}
     {spaces_after_argument:\\n}
  *@chapter C3 l5 {Intro}
  |EXTRA
@@ -49,7 +49,7 @@ $result_tree_text{'recursive_down_menu'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Intro}
+    {normal_text:Intro}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C3 l7
@@ -62,17 +62,17 @@ $result_tree_text{'recursive_down_menu'} = '*document_root C5
     |EXTRA
     |node_content:A{0|0}
     |normalized:{chapN}
-     {chapN}
+     {normal_text:chapN}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l9
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
 ';
 

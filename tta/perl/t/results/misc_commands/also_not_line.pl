@@ -15,31 +15,31 @@ $result_tree_text{'also_not_line'} = '*document_root C1
    {text_before_beginning:\\n}
   *preamble_before_content
   *paragraph C1
-   {page }
+   {normal_text:page }
   *@page C1
    *line_arg C1
     {spaces_before_argument: \\n}
   *paragraph C6
-   {noindent }
+   {normal_text:noindent }
    *@noindent l4
    {ignorable_spaces_after_command: }
-   {refill }
+   {normal_text:refill }
    *@refill
-   { something\\n}
+   {normal_text: something\\n}
   {empty_line:\\n}
   *@noindent l6
   {ignorable_spaces_after_command:     }
   *paragraph C8
   |EXTRA
   |noindent:{1}
-   {noindent at beginning of line\\n}
+   {normal_text:noindent at beginning of line\\n}
    *@noindent l7
    {ignorable_spaces_after_command:  \\n}
-   {noindent on the preceding line\\n}
-   {  }
+   {normal_text:noindent on the preceding line\\n}
+   {normal_text:  }
    *@noindent l9
    {ignorable_spaces_after_command:    }
-   {noindent after space at beginning of line\\n}
+   {normal_text:noindent after space at beginning of line\\n}
   *@page C1
    *line_arg C3
     {spaces_before_argument:         }
@@ -49,21 +49,21 @@ $result_tree_text{'also_not_line'} = '*document_root C1
    *line_arg C1
     {spaces_before_argument:\\n}
   *paragraph C1
-   {After page on its own line.\\n}
+   {normal_text:After page on its own line.\\n}
   {empty_line:\\n}
   *paragraph C1
-   {page }
+   {normal_text:page }
   *@page C1
    *line_arg C1
     {spaces_before_argument:   \\n}
   *paragraph C8
-   {noindent }
+   {normal_text:noindent }
    *@noindent l15
    {ignorable_spaces_after_command:    }
-   {refill }
+   {normal_text:refill }
    *@refill
-   { \\n}
-   {novalidate }
+   {normal_text: \\n}
+   {normal_text:novalidate }
    *@novalidate C1 l16
     *line_arg C3
      {spaces_before_argument: }
@@ -76,22 +76,22 @@ $result_tree_text{'also_not_line'} = '*document_root C1
   |heading_number:{1}
    *line_arg C3
     {spaces_before_argument: }
-    {special}
+    {normal_text:special}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C3
-   {Only valid between iftex:\\n}
-   {vskip }
+   {normal_text:Only valid between iftex:\\n}
+   {normal_text:vskip }
    *@vskip C1
     *line_arg C1
      {spaces_before_argument: \\n}
   {empty_line:\\n}
   *paragraph C1
-   {exdent }
+   {normal_text:exdent }
   *@exdent C1 l23
    *line_arg C3
     {spaces_before_argument: }
-    {line after exdent}
+    {normal_text:line after exdent}
     {spaces_after_argument:\\n}
 ';
 

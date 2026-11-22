@@ -21,13 +21,13 @@ $result_tree_text{'empty_caption'} = '*document_root C1
    *arguments_line C2
     *block_line_arg C2
      {spaces_before_argument: }
-     {a}
+     {normal_text:a}
     *block_line_arg C3
      {spaces_before_argument: }
-     {b}
+     {normal_text:b}
      {spaces_after_argument:\\n}
    *paragraph C1
-    {In float A, B\\n}
+    {normal_text:In float A, B\\n}
    *@caption C1 l3
     *brace_command_context
    {spaces_after_close_brace:\\n}
@@ -36,7 +36,7 @@ $result_tree_text{'empty_caption'} = '*document_root C1
    |text_arg:{float}
     *line_arg C3
      {spaces_before_argument: }
-     {float}
+     {normal_text:float}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@float C5 l6
@@ -51,10 +51,10 @@ $result_tree_text{'empty_caption'} = '*document_root C1
      {spaces_before_argument: }
     *block_line_arg C3
      {spaces_before_argument: }
-     {c}
+     {normal_text:c}
      {spaces_after_argument:\\n}
    *paragraph C1
-    {In float , C\\n}
+    {normal_text:In float , C\\n}
    *@shortcaption C1 l8
     *brace_command_context
    {spaces_after_close_brace:\\n}
@@ -63,7 +63,7 @@ $result_tree_text{'empty_caption'} = '*document_root C1
    |text_arg:{float}
     *line_arg C3
      {spaces_before_argument: }
-     {float}
+     {normal_text:float}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@float C7 l11
@@ -74,7 +74,7 @@ $result_tree_text{'empty_caption'} = '*document_root C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C1
-    {In float\\n}
+    {normal_text:In float\\n}
    *@shortcaption C1 l13
     *brace_command_context
    {spaces_after_close_brace:\\n}
@@ -86,7 +86,7 @@ $result_tree_text{'empty_caption'} = '*document_root C1
    |text_arg:{float}
     *line_arg C3
      {spaces_before_argument: }
-     {float}
+     {normal_text:float}
      {spaces_after_argument:\\n}
 ';
 

@@ -19,7 +19,7 @@ $result_tree_text{'test_index'} = '*document_root C13
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C12 l2 {Element top}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'test_index'} = '*document_root C13
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Element top}
+    {normal_text:Element top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
@@ -37,18 +37,18 @@ $result_tree_text{'test_index'} = '*document_root C13
     |EXTRA
     |node_content:A{0|0}
     |normalized:{a-counting-anchor}
-     {a counting anchor}
-   {.\\n}
+     {normal_text:a counting anchor}
+   {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C5
-   {before menu.\\n}
+   {normal_text:before menu.\\n}
    *index_entry_command@cindex C1 l7
    |EXTRA
    |element_node:{Top}
    |index_entry:I{cp,1}
     *line_arg C3
      {spaces_before_argument: }
-     {in Top}
+     {normal_text:in Top}
      {spaces_after_argument:\\n}
    *index_entry_command@cindex C1 l8
    |EXTRA
@@ -73,7 +73,7 @@ $result_tree_text{'test_index'} = '*document_root C13
    |index_entry:I{cp,4}
     *line_arg C3
      {spaces_before_argument: }
-     {"}
+     {normal_text:"}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deffn C4 l12
@@ -87,21 +87,21 @@ $result_tree_text{'test_index'} = '*document_root C13
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {fset}
+       {normal_text:fset}
      {spaces: }
      *def_name C1
       *def_line_arg C1
        *@var C1 l12
         *brace_container C1
-         {i}
+         {normal_text:i}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {a}
+       {normal_text:a}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {g}
+       {normal_text:g}
      {spaces_after_argument:\\n}
    *@deffnx C1 l13
    |EXTRA
@@ -113,19 +113,19 @@ $result_tree_text{'test_index'} = '*document_root C13
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {truc}
+       {normal_text:truc}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {machin}
+       {normal_text:machin}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {bidule}
+       {normal_text:bidule}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {chose}
+       {normal_text:chose}
      {spaces_after_argument:\\n}
    *def_item C1
     {empty_line:\\n}
@@ -134,7 +134,7 @@ $result_tree_text{'test_index'} = '*document_root C13
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
-     {deffn}
+     {normal_text:deffn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@ftable C4 l17
@@ -151,11 +151,11 @@ $result_tree_text{'test_index'} = '*document_root C13
      |index_entry:I{fn,3}
       *line_arg C3
        {spaces_before_argument: }
-       {a fun}
+       {normal_text:a fun}
        {spaces_after_argument:\\n}
     *table_definition C2
      *paragraph C1
-      {Var text\\n}
+      {normal_text:Var text\\n}
      {empty_line:\\n}
    *table_entry C2
     *table_term C2
@@ -165,7 +165,7 @@ $result_tree_text{'test_index'} = '*document_root C13
      |index_entry:I{fn,4}
       *line_arg C3
        {spaces_before_argument: }
-       {second fun}
+       {normal_text:second fun}
        {spaces_after_argument:\\n}
      *@itemx C1 l22
      |EXTRA
@@ -173,7 +173,7 @@ $result_tree_text{'test_index'} = '*document_root C13
      |index_entry:I{fn,5}
       *line_arg C3
        {spaces_before_argument: }
-       {itemx fun}
+       {normal_text:itemx fun}
        {spaces_after_argument:\\n}
     *table_definition C1
      {empty_line:\\n}
@@ -182,7 +182,7 @@ $result_tree_text{'test_index'} = '*document_root C13
    |text_arg:{ftable}
     *line_arg C3
      {spaces_before_argument: }
-     {ftable}
+     {normal_text:ftable}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C4 l26
@@ -195,28 +195,28 @@ $result_tree_text{'test_index'} = '*document_root C13
     |EXTRA
     |node_content:A{0|0}
     |normalized:{name}
-     {name}
+     {normal_text:name}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 l28
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{name1-looooooooooooooooooooooooooooooooooooooooooooooooooooooooong}
-     {name1 looooooooooooooooooooooooooooooooooooooooooooooooooooooooong}
+     {normal_text:name1 looooooooooooooooooooooooooooooooooooooooooooooooooooooooong}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l29
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l31 {name}
@@ -227,7 +227,7 @@ $result_tree_text{'test_index'} = '*document_root C13
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {name}
+    {normal_text:name}
     {spaces_after_argument:\\n}
  *@chapter C171 l32 {A chapter}
  |EXTRA
@@ -237,7 +237,7 @@ $result_tree_text{'test_index'} = '*document_root C13
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {A chapter}
+    {normal_text:A chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 l34
@@ -246,7 +246,7 @@ $result_tree_text{'test_index'} = '*document_root C13
   |index_entry:I{cp,5}
    *line_arg C3
     {spaces_before_argument: }
-    {index entry looooooooooooooooooooooooooooooooooooooooooooooooooooooooong}
+    {normal_text:index entry looooooooooooooooooooooooooooooooooooooooooooooooooooooooong}
     {spaces_after_argument:\\n}
   *index_entry_command@findex C1 l35
   |EXTRA
@@ -254,35 +254,35 @@ $result_tree_text{'test_index'} = '*document_root C13
   |index_entry:I{fn,6}
    *line_arg C3
     {spaces_before_argument: }
-    {function index entry}
+    {normal_text:function index entry}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C3
-   {A paragraph \\n}
+   {normal_text:A paragraph \\n}
    *index_entry_command@findex C1 l38
    |EXTRA
    |element_node:{name}
    |index_entry:I{fn,7}
     *line_arg C3
      {spaces_before_argument: }
-     {other function}
+     {normal_text:other function}
      {spaces_after_argument:\\n}
-   {end paragraph\\n}
+   {normal_text:end paragraph\\n}
   {empty_line:\\n}
   *paragraph C1
-   {a\\n}
+   {normal_text:a\\n}
   {empty_line:\\n}
   *paragraph C1
-   {a\\n}
+   {normal_text:a\\n}
   {empty_line:\\n}
   *paragraph C1
-   {a\\n}
+   {normal_text:a\\n}
   {empty_line:\\n}
   *paragraph C1
-   {a\\n}
+   {normal_text:a\\n}
   {empty_line:\\n}
   *paragraph C1
-   {a\\n}
+   {normal_text:a\\n}
   {empty_line:\\n}
   *index_entry_command@findex C1 l51
   |EXTRA
@@ -290,233 +290,233 @@ $result_tree_text{'test_index'} = '*document_root C13
   |index_entry:I{fn,8}
    *line_arg C3
     {spaces_before_argument: }
-    {after lines.}
+    {normal_text:after lines.}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *paragraph C1
-   {b\\n}
+   {normal_text:b\\n}
   {empty_line:\\n}
   *index_entry_command@findex C1 l203
   |EXTRA
@@ -524,7 +524,7 @@ $result_tree_text{'test_index'} = '*document_root C13
   |index_entry:I{fn,9}
    *line_arg C3
     {spaces_before_argument: }
-    {after more than 100 lines}
+    {normal_text:after more than 100 lines}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l205 {name1 looooooooooooooooooooooooooooooooooooooooooooooooooooooooong}
@@ -536,7 +536,7 @@ $result_tree_text{'test_index'} = '*document_root C13
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {name1 looooooooooooooooooooooooooooooooooooooooooooooooooooooooong}
+    {normal_text:name1 looooooooooooooooooooooooooooooooooooooooooooooooooooooooong}
     {spaces_after_argument:\\n}
  *@appendix C13 l206 {Index}
  |EXTRA
@@ -546,7 +546,7 @@ $result_tree_text{'test_index'} = '*document_root C13
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Index}
+    {normal_text:Index}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 l208
@@ -555,20 +555,20 @@ $result_tree_text{'test_index'} = '*document_root C13
   |index_entry:I{cp,6}
    *line_arg C3
     {spaces_before_argument: }
-    {index entry in appendix before para}
+    {normal_text:index entry in appendix before para}
     {spaces_after_argument:\\n}
   *paragraph C1
-   {Para.\\n}
+   {normal_text:Para.\\n}
   {empty_line:\\n}
   *paragraph C1
-   {Concept index\\n}
+   {normal_text:Concept index\\n}
   *@printindex C1 l212
   |EXTRA
   |global_command_number:{1}
   |misc_args:A{cp}
    *line_arg C3
     {spaces_before_argument: }
-    {cp}
+    {normal_text:cp}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@findex C1 l214
@@ -577,18 +577,18 @@ $result_tree_text{'test_index'} = '*document_root C13
   |index_entry:I{fn,10}
    *line_arg C3
     {spaces_before_argument: }
-    {index entry between indices}
+    {normal_text:index entry between indices}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {Functions index\\n}
+   {normal_text:Functions index\\n}
   *@printindex C1 l217
   |EXTRA
   |global_command_number:{2}
   |misc_args:A{fn}
    *line_arg C3
     {spaces_before_argument: }
-    {fn}
+    {normal_text:fn}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@appendixsec C2 l219 {appendixsec}
@@ -601,7 +601,7 @@ $result_tree_text{'test_index'} = '*document_root C13
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {appendixsec}
+    {normal_text:appendixsec}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@appendixsubsec C2 l221 {appendixsubsec}
@@ -614,7 +614,7 @@ $result_tree_text{'test_index'} = '*document_root C13
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {appendixsubsec}
+    {normal_text:appendixsubsec}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@appendixsubsubsec C4 l223 {appendixsubsubsec}
@@ -627,7 +627,7 @@ $result_tree_text{'test_index'} = '*document_root C13
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {appendixsubsubsec}
+    {normal_text:appendixsubsubsec}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@chapheading C1 l225
@@ -636,7 +636,7 @@ $result_tree_text{'test_index'} = '*document_root C13
   |heading_number:{1}
    *line_arg C3
     {spaces_before_argument: }
-    {chapheading}
+    {normal_text:chapheading}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@centerchap C2 l227 {centerchap}
@@ -648,7 +648,7 @@ $result_tree_text{'test_index'} = '*document_root C13
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {centerchap}
+    {normal_text:centerchap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@chapter C7 l229 {chapter end}
@@ -661,7 +661,7 @@ $result_tree_text{'test_index'} = '*document_root C13
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter end}
+    {normal_text:chapter end}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 l231
@@ -670,7 +670,7 @@ $result_tree_text{'test_index'} = '*document_root C13
   |index_entry:I{cp,7}
    *line_arg C3
     {spaces_before_argument: }
-    {index in chapter end}
+    {normal_text:index in chapter end}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@anchor C1 l233
@@ -678,7 +678,7 @@ $result_tree_text{'test_index'} = '*document_root C13
   |identifier:{a-counting-anchor}
   |is_target:{1}
    *brace_arg C1
-    {a counting anchor}
+    {normal_text:a counting anchor}
   {spaces_after_close_brace:\\n}
   {empty_line:\\n}
  *@bye C1

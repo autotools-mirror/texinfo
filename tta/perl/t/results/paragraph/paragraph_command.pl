@@ -13,38 +13,38 @@ $result_tree_text{'paragraph_command'} = '*document_root C1
   *preamble_before_content
   *paragraph C2
    *@@
-   {\\n}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
    *@b C1 l3
     *brace_container C1
-     {aaa}
-   {.\\n}
+     {normal_text:aaa}
+   {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C2
    *@dotless C1 l5
     *brace_container C1
-     {i}
-   { also dotless i.\\n}
+     {normal_text:i}
+   {normal_text: also dotless i.\\n}
   {empty_line:\\n}
   *paragraph C2
    *@U C1 l7
     *brace_arg C1
-     {0075}
-   { also U+0075.\\n}
+     {normal_text:0075}
+   {normal_text: also U+0075.\\n}
   {empty_line:\\n}
   *paragraph C2
    *@email C1 l9
     *brace_arg C1
-     {m1}
-   { email.\\n}
+     {normal_text:m1}
+   {normal_text: email.\\n}
   {empty_line:\\n}
   *@definfoenclose C1 l11
   |EXTRA
   |misc_args:A{foo|\\|//}
    *line_arg C3
     {spaces_before_argument: }
-    {foo,\\,//}
+    {normal_text:foo,\\,//}
     {spaces_after_argument:\\n}
   *paragraph C2
    *definfoenclose_command@foo C1 l12
@@ -53,8 +53,8 @@ $result_tree_text{'paragraph_command'} = '*document_root C1
    |end:{//}
     *brace_container C2
      *@@
-     {definfoenclose}
-   { should work at the beginning of a new paragraph.\\n}
+     {normal_text:definfoenclose}
+   {normal_text: should work at the beginning of a new paragraph.\\n}
   {empty_line:\\n}
   *paragraph C2
    *@footnote C1 l14
@@ -62,8 +62,8 @@ $result_tree_text{'paragraph_command'} = '*document_root C1
    |global_command_number:{1}
     *brace_command_context C1
      *paragraph C1
-      {lone footnote}
-   {.\\n}
+      {normal_text:lone footnote}
+   {normal_text:.\\n}
   {empty_line:\\n}
 ';
 

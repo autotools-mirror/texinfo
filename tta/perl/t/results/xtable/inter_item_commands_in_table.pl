@@ -19,7 +19,7 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l2 {top}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l4 {chapter}
@@ -39,7 +39,7 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter}
+    {normal_text:chapter}
     {spaces_after_argument:\\n}
  *@chapter C27 l5 {chap}
  |EXTRA
@@ -49,7 +49,7 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@vtable C3 l7
@@ -71,17 +71,17 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
      |index_entry:I{vr,1}
       *line_arg C3
        {spaces_before_argument: }
-       {acode--b}
+       {normal_text:acode--b}
        {spaces_after_argument:\\n}
     *table_definition C1
      *paragraph C1
-      {l--ine\\n}
+      {normal_text:l--ine\\n}
    *@end C1 l11
    |EXTRA
    |text_arg:{vtable}
     *line_arg C3
      {spaces_before_argument: }
-     {vtable}
+     {normal_text:vtable}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@vtable C3 l13
@@ -98,7 +98,7 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
      |index_entry:I{vr,2}
       *line_arg C3
        {spaces_before_argument: }
-       {aasis--b}
+       {normal_text:aasis--b}
        {spaces_after_argument:\\n}
      *inter_item C1
       *@c C1
@@ -112,17 +112,17 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
      |index_entry:I{vr,3}
       *line_arg C3
        {spaces_before_argument: }
-       {b}
+       {normal_text:b}
        {spaces_after_argument:\\n}
     *table_definition C1
      *paragraph C1
-      {l--ine\\n}
+      {normal_text:l--ine\\n}
    *@end C1 l18
    |EXTRA
    |text_arg:{vtable}
     *line_arg C3
      {spaces_before_argument: }
-     {vtable}
+     {normal_text:vtable}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@ftable C4 l20
@@ -139,7 +139,7 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
      |index_entry:I{fn,1}
       *line_arg C3
        {spaces_before_argument: }
-       {avar--b}
+       {normal_text:avar--b}
        {spaces_after_argument:\\n}
      *inter_item C3
       *index_entry_command@cindex C1 l22
@@ -148,7 +148,7 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
       |index_entry:I{cp,1}
        *line_arg C3
         {spaces_before_argument: }
-        {index entry between item and itemx}
+        {normal_text:index entry between item and itemx}
         {spaces_after_argument:\\n}
       *@c C1
        *line_arg C3
@@ -166,11 +166,11 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
      |index_entry:I{fn,2}
       *line_arg C3
        {spaces_before_argument: }
-       {b}
+       {normal_text:b}
        {spaces_after_argument:\\n}
     *table_definition C1
      *paragraph C1
-      {l--ine\\n}
+      {normal_text:l--ine\\n}
    *table_entry C2
     *table_term C3
      *@item C1 l27
@@ -179,7 +179,7 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
      |index_entry:I{fn,3}
       *line_arg C3
        {spaces_before_argument: }
-       {c}
+       {normal_text:c}
        {spaces_after_argument:\\n}
      *inter_item C3
       {empty_line:\\n}
@@ -195,7 +195,7 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
      |index_entry:I{fn,4}
       *line_arg C3
        {spaces_before_argument: }
-       {d}
+       {normal_text:d}
        {spaces_after_argument:\\n}
     *table_definition C2
      {empty_line:\\n}
@@ -209,7 +209,7 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
    |text_arg:{ftable}
     *line_arg C3
      {spaces_before_argument: }
-     {ftable}
+     {normal_text:ftable}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@ftable C3 l36
@@ -226,7 +226,7 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
      |index_entry:I{fn,5}
       *line_arg C3
        {spaces_before_argument: }
-       {a}
+       {normal_text:a}
        {spaces_after_argument:\\n}
      *inter_item C1
       *index_entry_command@cindex C1 l38
@@ -235,7 +235,7 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
       |index_entry:I{cp,2}
        *line_arg C3
         {spaces_before_argument: }
-        {index entry between item and itemx}
+        {normal_text:index entry between item and itemx}
         {spaces_after_argument:\\n}
      *@itemx C1 l39
      |EXTRA
@@ -243,17 +243,17 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
      |index_entry:I{fn,6}
       *line_arg C3
        {spaces_before_argument: }
-       {b}
+       {normal_text:b}
        {spaces_after_argument:\\n}
     *table_definition C1
      *paragraph C1
-      {l--ine\\n}
+      {normal_text:l--ine\\n}
    *@end C1 l41
    |EXTRA
    |text_arg:{ftable}
     *line_arg C3
      {spaces_before_argument: }
-     {ftable}
+     {normal_text:ftable}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@table C3 l43
@@ -270,7 +270,7 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
      |index_entry:I{cp,3}
       *line_arg C3
        {spaces_before_argument: }
-       {cindex in table}
+       {normal_text:cindex in table}
        {spaces_after_argument: \\n}
      *@c C1
       *line_arg C3
@@ -280,17 +280,17 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
      *@item C1 l46
       *line_arg C3
        {spaces_before_argument: }
-       {abb}
+       {normal_text:abb}
        {spaces_after_argument:\\n}
     *table_definition C1
      *paragraph C1
-      {l--ine\\n}
+      {normal_text:l--ine\\n}
    *@end C1 l48
    |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
-     {table}
+     {normal_text:table}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@table C4 l50
@@ -306,23 +306,23 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
     |index_entry:I{cp,4}
      *line_arg C3
       {spaces_before_argument: }
-      {cindex in table}
+      {normal_text:cindex in table}
       {spaces_after_argument: \\n}
     *paragraph C1
-     {Texte before first item.\\n}
+     {normal_text:Texte before first item.\\n}
    *table_entry C1
     *table_term C1
      *@item C1 l53
       *line_arg C3
        {spaces_before_argument: }
-       {abb}
+       {normal_text:abb}
        {spaces_after_argument:\\n}
    *@end C1 l54
    |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
-     {table}
+     {normal_text:table}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@table C3 l56
@@ -339,7 +339,7 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
      |index_entry:I{cp,5}
       *line_arg C3
        {spaces_before_argument: }
-       {samp cindex in table}
+       {normal_text:samp cindex in table}
        {spaces_after_argument: \\n}
      *@c C1
       *line_arg C3
@@ -349,17 +349,17 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
      *@item C1 l59
       *line_arg C3
        {spaces_before_argument: }
-       {asamp--bb}
+       {normal_text:asamp--bb}
        {spaces_after_argument:\\n}
     *table_definition C1
      *paragraph C1
-      {l--ine samp\\n}
+      {normal_text:l--ine samp\\n}
    *@end C1 l61
    |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
-     {table}
+     {normal_text:table}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@table C4 l63
@@ -375,23 +375,23 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
     |index_entry:I{cp,6}
      *line_arg C3
       {spaces_before_argument: }
-      {samp cindex in table}
+      {normal_text:samp cindex in table}
       {spaces_after_argument: \\n}
     *paragraph C1
-     {Texte before first item samp.\\n}
+     {normal_text:Texte before first item samp.\\n}
    *table_entry C1
     *table_term C1
      *@item C1 l66
       *line_arg C3
        {spaces_before_argument: }
-       {asamp--bb}
+       {normal_text:asamp--bb}
        {spaces_after_argument:\\n}
    *@end C1 l67
    |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
-     {table}
+     {normal_text:table}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@table C4 l69
@@ -408,7 +408,7 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
     |index_entry:I{cp,7}
      *line_arg C3
       {spaces_before_argument: }
-      {cindex between lines}
+      {normal_text:cindex between lines}
       {spaces_after_argument:\\n}
     {empty_line:\\n}
    *table_entry C1
@@ -416,14 +416,14 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
      *@item C1 l73
       *line_arg C3
        {spaces_before_argument: }
-       {asamp--bb1}
+       {normal_text:asamp--bb1}
        {spaces_after_argument:\\n}
    *@end C1 l74
    |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
-     {table}
+     {normal_text:table}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@table C4 l76
@@ -439,7 +439,7 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
     |index_entry:I{cp,8}
      *line_arg C3
       {spaces_before_argument: }
-      {cindex before line}
+      {normal_text:cindex before line}
       {spaces_after_argument:\\n}
     {empty_line:\\n}
    *table_entry C1
@@ -447,14 +447,14 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
      *@item C1 l79
       *line_arg C3
        {spaces_before_argument: }
-       {asamp--bb2}
+       {normal_text:asamp--bb2}
        {spaces_after_argument:\\n}
    *@end C1 l80
    |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
-     {table}
+     {normal_text:table}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@table C4 l82
@@ -473,19 +473,19 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
      |index_entry:I{cp,9}
       *line_arg C3
        {spaces_before_argument: }
-       {cindex after line}
+       {normal_text:cindex after line}
        {spaces_after_argument:\\n}
      *@item C1 l85
       *line_arg C3
        {spaces_before_argument: }
-       {asamp--bb2}
+       {normal_text:asamp--bb2}
        {spaces_after_argument:\\n}
    *@end C1 l86
    |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
-     {table}
+     {normal_text:table}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@table C3 l88
@@ -502,7 +502,7 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
      |index_entry:I{cp,10}
       *line_arg C3
        {spaces_before_argument: }
-       {cindex first}
+       {normal_text:cindex first}
        {spaces_after_argument:\\n}
      *@c C1
       *line_arg C3
@@ -515,7 +515,7 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
      |index_entry:I{cp,11}
       *line_arg C3
        {spaces_before_argument: }
-       {second}
+       {normal_text:second}
        {spaces_after_argument:\\n}
      *index_entry_command@cindex C1 l92
      |EXTRA
@@ -523,19 +523,19 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
      |index_entry:I{cp,12}
       *line_arg C3
        {spaces_before_argument: }
-       {third}
+       {normal_text:third}
        {spaces_after_argument:\\n}
      *@item C1 l93
       *line_arg C3
        {spaces_before_argument: }
-       {asamp--bb2}
+       {normal_text:asamp--bb2}
        {spaces_after_argument:\\n}
    *@end C1 l94
    |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
-     {table}
+     {normal_text:table}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   {empty_line:\\n}

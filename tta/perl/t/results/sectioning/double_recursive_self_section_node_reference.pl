@@ -19,7 +19,7 @@ $result_tree_text{'double_recursive_self_section_node_reference'} = '*document_r
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l2 {top}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'double_recursive_self_section_node_reference'} = '*document_r
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l4 {node1}
@@ -39,7 +39,7 @@ $result_tree_text{'double_recursive_self_section_node_reference'} = '*document_r
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {node1}
+    {normal_text:node1}
     {spaces_after_argument:\\n}
  *@chapter C2 l5 {@ref{to node1}}
  |EXTRA
@@ -54,7 +54,7 @@ $result_tree_text{'double_recursive_self_section_node_reference'} = '*document_r
      |EXTRA
      |node_content:A{0|0}
      |normalized:{to-node1}
-      {to node1}
+      {normal_text:to node1}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l7 {to @ref{node1}}
@@ -65,13 +65,13 @@ $result_tree_text{'double_recursive_self_section_node_reference'} = '*document_r
   *arguments_line C1
    *line_arg C4
     {spaces_before_argument: }
-    {to }
+    {normal_text:to }
     *@ref C1 l7
      *brace_arg C1
      |EXTRA
      |node_content:A{0|0}
      |normalized:{node1}
-      {node1}
+      {normal_text:node1}
     {spaces_after_argument:\\n}
 ';
 

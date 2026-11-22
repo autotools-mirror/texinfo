@@ -20,13 +20,13 @@ $result_tree_text{'table_not_closed_in_menu_description'} = '*document_root C1
     *menu_entry_node C3
     |EXTRA
     |manual_content:A{1|1}
-     {(}
-     {gcc}
-     {)}
+     {normal_text:(}
+     {normal_text:gcc}
+     {normal_text:)}
     {menu_entry_separator::: }
     *menu_entry_description C2
      *preformatted C1
-      {text }
+      {normal_text:text }
      *@table C2 l2
       *arguments_line C1
        *block_line_arg C3
@@ -38,17 +38,17 @@ $result_tree_text{'table_not_closed_in_menu_description'} = '*document_root C1
         *@item C1 l3
          *line_arg C3
           {spaces_before_argument: }
-          {item}
+          {normal_text:item}
           {spaces_after_argument:\\n}
        *table_definition C1
         *preformatted C1
-         {table line\\n}
+         {normal_text:table line\\n}
    *@end C1 l5
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
 ';
 

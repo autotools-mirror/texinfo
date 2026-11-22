@@ -19,7 +19,7 @@ $result_tree_text{'file_name_case_insensitive_conflict_redirections'} = '*docume
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l2 {top section}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'file_name_case_insensitive_conflict_redirections'} = '*docume
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top section}
+    {normal_text:top section}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@chapter C7 l4 {Chapter}
@@ -41,7 +41,7 @@ $result_tree_text{'file_name_case_insensitive_conflict_redirections'} = '*docume
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chapter}
+    {normal_text:Chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@table C5 l6
@@ -57,7 +57,7 @@ $result_tree_text{'file_name_case_insensitive_conflict_redirections'} = '*docume
      *@item C1 l8
       *line_arg C3
        {spaces_before_argument: }
-       {foo}
+       {normal_text:foo}
        {spaces_after_argument:\\n}
     *table_definition C4
      *@anchor C1 l9
@@ -65,21 +65,21 @@ $result_tree_text{'file_name_case_insensitive_conflict_redirections'} = '*docume
      |identifier:{foo}
      |is_target:{1}
       *brace_arg C1
-       {foo}
+       {normal_text:foo}
      {spaces_after_close_brace:\\n}
      *paragraph C3
-      {Some text about }
+      {normal_text:Some text about }
       *@samp C1 l10
        *brace_container C1
-        {foo}
-      {\\n}
+        {normal_text:foo}
+      {normal_text:\\n}
      {empty_line:\\n}
    *table_entry C2
     *table_term C1
      *@item C1 l12
       *line_arg C3
        {spaces_before_argument: }
-       {Foo}
+       {normal_text:Foo}
        {spaces_after_argument:\\n}
     *table_definition C4
      *@anchor C1 l13
@@ -87,21 +87,21 @@ $result_tree_text{'file_name_case_insensitive_conflict_redirections'} = '*docume
      |identifier:{Foo}
      |is_target:{1}
       *brace_arg C1
-       {Foo}
+       {normal_text:Foo}
      {spaces_after_close_brace:\\n}
      *paragraph C3
-      {Some text about }
+      {normal_text:Some text about }
       *@samp C1 l14
        *brace_container C1
-        {Foo}
-      {\\n}
+        {normal_text:Foo}
+      {normal_text:\\n}
      {empty_line:\\n}
    *@end C1 l16
    |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
-     {table}
+     {normal_text:table}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
@@ -110,8 +110,8 @@ $result_tree_text{'file_name_case_insensitive_conflict_redirections'} = '*docume
     |EXTRA
     |node_content:A{0|0}
     |normalized:{foo}
-     {foo}
-   {\\n}
+     {normal_text:foo}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
    *@xref C1 l20
@@ -119,8 +119,8 @@ $result_tree_text{'file_name_case_insensitive_conflict_redirections'} = '*docume
     |EXTRA
     |node_content:A{0|0}
     |normalized:{Foo}
-     {Foo}
-   {\\n}
+     {normal_text:Foo}
+   {normal_text:\\n}
 ';
 
 

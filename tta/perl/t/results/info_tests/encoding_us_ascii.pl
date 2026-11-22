@@ -20,7 +20,7 @@ $result_tree_text{'encoding_us_ascii'} = '*document_root C2
    |text_arg:{US-ASCII}
     *line_arg C3
      {spaces_before_argument: }
-     {US-ASCII}
+     {normal_text:US-ASCII}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *@node C2 l4 {Top}
@@ -31,7 +31,7 @@ $result_tree_text{'encoding_us_ascii'} = '*document_root C2
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
 ';

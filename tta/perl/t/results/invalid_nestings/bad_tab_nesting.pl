@@ -18,10 +18,10 @@ $result_tree_text{'bad_tab_nesting'} = '*document_root C1
     *block_line_arg C5
      {spaces_before_argument: }
      *bracketed_arg C1 l1
-      {truc}
-     { }
+      {normal_text:truc}
+     {normal_text: }
      *bracketed_arg C1 l1
-      {bidule}
+      {normal_text:bidule}
      {spaces_after_argument:\\n}
    *multitable_body C1
     *row C2
@@ -32,7 +32,7 @@ $result_tree_text{'bad_tab_nesting'} = '*document_root C1
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C2
-       {truc\\n}
+       {normal_text:truc\\n}
        *@code C1 l3
         *brace_container
      *@tab C2 l3
@@ -40,13 +40,13 @@ $result_tree_text{'bad_tab_nesting'} = '*document_root C1
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {bidule\\n}
+       {normal_text:bidule\\n}
    *@end C1 l4
    |EXTRA
    |text_arg:{multitable}
     *line_arg C3
      {spaces_before_argument: }
-     {multitable}
+     {normal_text:multitable}
      {spaces_after_argument:\\n}
 ';
 

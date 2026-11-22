@@ -16,34 +16,34 @@ $result_tree_text{'double_exdent'} = '*document_root C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C1
-    {Example   Hoho.\\n}
+    {normal_text:Example   Hoho.\\n}
    *@example C4 l3
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *preformatted C1
-     {Nested Other line\\n}
+     {normal_text:Nested Other line\\n}
     *@exdent C1 l5
      *line_arg C2
       {spaces_before_argument: }
       *@exdent C1 l5
        *line_arg C3
         {spaces_before_argument: }
-        {double  exdented nested other line}
+        {normal_text:double  exdented nested other line}
         {spaces_after_argument:\\n}
     *@end C1 l6
     |EXTRA
     |text_arg:{example}
      *line_arg C3
       {spaces_before_argument: }
-      {example}
+      {normal_text:example}
       {spaces_after_argument:\\n}
    *@end C1 l7
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
 ';
 

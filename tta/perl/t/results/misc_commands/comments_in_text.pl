@@ -20,7 +20,7 @@ $result_tree_text{'comments_in_text'} = '*document_root C1
      {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C6
-   {Text line followed by a comment on the same line and another below }
+   {normal_text:Text line followed by a comment on the same line and another below }
    *@c C1
     *line_arg C3
      {spaces_before_argument: }
@@ -31,16 +31,16 @@ $result_tree_text{'comments_in_text'} = '*document_root C1
      {spaces_before_argument: }
      {rawline_text:comment}
      {spaces_after_argument:\\n}
-   {Text line after the comment followed by a comment }
+   {normal_text:Text line after the comment followed by a comment }
    *@comment C1
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:c}
      {spaces_after_argument:\\n}
-   {Text line after the text line followed by the comment.\\n}
+   {normal_text:Text line after the text line followed by the comment.\\n}
   {empty_line:\\n}
   *paragraph C2
-   {Comment at the end of the line }
+   {normal_text:Comment at the end of the line }
    *@c C1
     *line_arg C3
      {spaces_before_argument: }

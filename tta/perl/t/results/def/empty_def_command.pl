@@ -21,18 +21,18 @@ $result_tree_text{'empty_def_command'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {empty}
+       {normal_text:empty}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {deffn}
+       {normal_text:deffn}
      {spaces_after_argument:\\n}
    *@end C1 l2
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
-     {deffn}
+     {normal_text:deffn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deffn C3 l4
@@ -45,19 +45,19 @@ $result_tree_text{'empty_def_command'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {empty}
+       {normal_text:empty}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {deffn}
+       {normal_text:deffn}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {with}
+       {normal_text:with}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {deffnx}
+       {normal_text:deffnx}
      {spaces_after_argument:\\n}
    *@deffnx C1 l5
    |EXTRA
@@ -68,18 +68,18 @@ $result_tree_text{'empty_def_command'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {empty}
+       {normal_text:empty}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {deffnx}
+       {normal_text:deffnx}
      {spaces_after_argument:\\n}
    *@end C1 l6
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
-     {deffn}
+     {normal_text:deffn}
      {spaces_after_argument:\\n}
 ';
 

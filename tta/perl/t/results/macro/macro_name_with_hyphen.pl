@@ -23,11 +23,11 @@ $result_tree_text{'macro_name_with_hyphen'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C3
-   {This blah and that }
+   {normal_text:This blah and that }
    >SOURCEMARKS
    >macro_expansion<start;1>
     >*macro_call@macro-one C2
@@ -38,8 +38,8 @@ $result_tree_text{'macro_name_with_hyphen'} = '*document_root C1
       >{macro_call_arg_text:@code{bli-bli}}
    *@code C1 l5:@macro-one
     *brace_container C1
-     {bli-bli}
-   {.\\n}
+     {normal_text:bli-bli}
+   {normal_text:.\\n}
    >SOURCEMARKS
    >macro_expansion<end;1><p:1>
 ';

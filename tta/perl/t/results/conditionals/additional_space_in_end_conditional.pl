@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'additional_space_in_end_conditional'} = '*document_root C1
  *before_node_section C1
   *preamble_before_content C1
-   {}
+   {normal_text:}
    >SOURCEMARKS
    >ignored_conditional_block<1>
     >*@ifnothtml C3 l1
@@ -24,7 +24,7 @@ $result_tree_text{'additional_space_in_end_conditional'} = '*document_root C1
      >|text_arg:{ifnothtml}
       >*line_arg C3
        >{spaces_before_argument:  }
-       >{ifnothtml}
+       >{normal_text:ifnothtml}
        >{spaces_after_argument:\\n}
 ';
 

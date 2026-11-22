@@ -23,7 +23,7 @@ $result_tree_text{'macro_in_accent'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@macro C3 l5
@@ -38,7 +38,7 @@ $result_tree_text{'macro_in_accent'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C8
@@ -51,8 +51,8 @@ $result_tree_text{'macro_in_accent'} = '*document_root C1
      >*macro_call@aletter C1
       >*brace_arg
     *following_arg C1
-     {a}
-   {.\\n}
+     {normal_text:a}
+   {normal_text:.\\n}
    *@ringaccent C2 l10
    >SOURCEMARKS
    >macro_expansion<end;2>
@@ -62,8 +62,8 @@ $result_tree_text{'macro_in_accent'} = '*document_root C1
      >*macro_call@aletter C1
       >*brace_arg
     *following_arg C1
-     {a}
-   {.\\n}
+     {normal_text:a}
+   {normal_text:.\\n}
    *@~ C2 l11
    >SOURCEMARKS
    >macro_expansion<end;3>
@@ -73,17 +73,17 @@ $result_tree_text{'macro_in_accent'} = '*document_root C1
      >*macro_call@aletter C1
       >*brace_arg
     *following_arg C1
-     {a}
-   {.\\n}
+     {normal_text:a}
+   {normal_text:.\\n}
    *@~ C1 l12
     *brace_container C1
-     {a}
+     {normal_text:a}
      >SOURCEMARKS
      >macro_expansion<start;4>
       >*macro_call@aletter C1
        >*brace_arg
      >macro_expansion<end;4><p:1>
-   {.\\n}
+   {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C2
    *@ringaccent C2 l14
@@ -99,8 +99,8 @@ $result_tree_text{'macro_in_accent'} = '*document_root C1
      >*macro_call@aletter C1
       >*brace_arg
     *following_arg C1
-     {a}
-   {.\\n}
+     {normal_text:a}
+   {normal_text:.\\n}
 ';
 
 

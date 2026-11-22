@@ -27,14 +27,14 @@ $result_tree_text{'ifclear_in_ifset_set'} = '*document_root C1
      >*arguments_line C1
       >*block_line_arg C3
        >{spaces_before_argument: }
-       >{a}
+       >{normal_text:a}
        >{spaces_after_argument:\\n}
    >expanded_conditional_command<start;2><p:1>
     >*@ifclear C1 l5
      >*arguments_line C1
       >*block_line_arg C4
        >{spaces_before_argument: }
-       >{ok}
+       >{normal_text:ok}
        >{spaces_after_argument: }
        >*@c C1
         >*line_arg C3
@@ -46,7 +46,7 @@ $result_tree_text{'ifclear_in_ifset_set'} = '*document_root C1
    |text_arg:{junky   - ok, ignored}
     *line_arg C3
      {spaces_before_argument: }
-     {junky   - ok, ignored}
+     {normal_text:junky   - ok, ignored}
      {spaces_after_argument:\\n}
    *@c C1
     *line_arg C3

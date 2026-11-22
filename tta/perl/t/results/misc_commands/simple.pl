@@ -16,7 +16,7 @@ $result_tree_text{'simple'} = '*document_root C1
    |misc_args:A{idx}
     *line_arg C2
      {spaces_before_argument: }
-     {idx}
+     {normal_text:idx}
 ';
 
 

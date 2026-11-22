@@ -177,7 +177,8 @@ sub _protect_hashchar_at_line_beginning($$$) {
 
           $current->{'text'} =~ s/^(\s*)#//;
 
-          my $e = Texinfo::TreeElement::new({'text' => $1,});
+          my $e = Texinfo::TreeElement::new({'text' => $1,
+                                             'type' => 'normal_text'});
           $current_position = Texinfo::Common::relocate_source_marks(
                                       $remaining_source_marks, $e,
                                       $current_position, length($1));

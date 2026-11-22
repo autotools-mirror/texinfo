@@ -22,7 +22,7 @@ $result_tree_text{'macro_in_table_empty_before_item'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *@table C4 l4
@@ -32,7 +32,7 @@ $result_tree_text{'macro_in_table_empty_before_item'} = '*document_root C1
      *@code l4
      {spaces_after_argument:\\n}
    *before_item C1
-    {}
+    {normal_text:}
     >SOURCEMARKS
     >macro_expansion<start;1>
      >*macro_call@emptymacro C1
@@ -43,14 +43,14 @@ $result_tree_text{'macro_in_table_empty_before_item'} = '*document_root C1
      *@item C1 l5
       *line_arg C3
        {spaces_before_argument: }
-       {citem}
+       {normal_text:citem}
        {spaces_after_argument:\\n}
    *@end C1 l6
    |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
-     {table}
+     {normal_text:table}
      {spaces_after_argument:\\n}
 ';
 

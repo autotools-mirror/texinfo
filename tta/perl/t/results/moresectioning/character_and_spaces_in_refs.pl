@@ -19,7 +19,7 @@ $result_tree_text{'character_and_spaces_in_refs'} = '*document_root C11
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C4 character_and_spaces_in_refs_text.texi:l2 {Test refs}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'character_and_spaces_in_refs'} = '*document_root C11
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Test refs}
+    {normal_text:Test refs}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C4 character_and_spaces_in_refs_text.texi:l4
@@ -41,28 +41,28 @@ $result_tree_text{'character_and_spaces_in_refs'} = '*document_root C11
     |EXTRA
     |node_content:A{0|0}
     |normalized:{node-to-avoid-DocBook-or-LaTeX-ignored}
-     {node to avoid DocBook or LaTeX ignored}
+     {normal_text:node to avoid DocBook or LaTeX ignored}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 character_and_spaces_in_refs_text.texi:l6
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{other-nodes}
-     {other nodes}
+     {normal_text:other nodes}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 character_and_spaces_in_refs_text.texi:l7
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 character_and_spaces_in_refs_text.texi:l9 {node to avoid DocBook or LaTeX ignored}
@@ -73,7 +73,7 @@ $result_tree_text{'character_and_spaces_in_refs'} = '*document_root C11
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {node to avoid DocBook or LaTeX ignored}
+    {normal_text:node to avoid DocBook or LaTeX ignored}
     {spaces_after_argument:\\n}
  *@chapter C13 character_and_spaces_in_refs_text.texi:l10 {first chapter}
  |EXTRA
@@ -83,7 +83,7 @@ $result_tree_text{'character_and_spaces_in_refs'} = '*document_root C11
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {first chapter}
+    {normal_text:first chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@subheading C1 character_and_spaces_in_refs_text.texi:l12
@@ -92,7 +92,7 @@ $result_tree_text{'character_and_spaces_in_refs'} = '*document_root C11
   |heading_number:{1}
    *line_arg C3
     {spaces_before_argument: }
-    {Testing distant nodes}
+    {normal_text:Testing distant nodes}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C8
@@ -101,48 +101,48 @@ $result_tree_text{'character_and_spaces_in_refs'} = '*document_root C11
     |EXTRA
     |node_content:A{1|1}
      {spaces_before_argument: }
-     {a  node}
+     {normal_text:a  node}
      {spaces_after_argument: }
     *brace_arg
     *brace_arg
     *brace_arg C2
      {spaces_before_argument: }
-     {manual}
-   {\\n}
+     {normal_text:manual}
+   {normal_text:\\n}
    *@ref C4 character_and_spaces_in_refs_text.texi:l15
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
-     {:}
+     {normal_text::}
     *brace_arg
     *brace_arg
     *brace_arg C1
-     {manual}
-   {\\n}
+     {normal_text:manual}
+   {normal_text:\\n}
    *@ref C4 character_and_spaces_in_refs_text.texi:l16
     *brace_arg C3
     |EXTRA
     |node_content:A{1|1}
      {spaces_before_argument: }
-     {top}
+     {normal_text:top}
      {spaces_after_argument: }
     *brace_arg
     *brace_arg
     *brace_arg C2
      {spaces_before_argument: }
-     {manual}
-   {\\n}
+     {normal_text:manual}
+   {normal_text:\\n}
    *@ref C4 character_and_spaces_in_refs_text.texi:l17
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
-     {node}
+     {normal_text:node}
     *brace_arg
     *brace_arg
     *brace_arg C2
      {spaces_before_argument: }
-     {../manual/doc}
-   {\\n}
+     {normal_text:../manual/doc}
+   {normal_text:\\n}
   {empty_line:\\n}
   *@subheading C1 character_and_spaces_in_refs_text.texi:l19
   |EXTRA
@@ -150,7 +150,7 @@ $result_tree_text{'character_and_spaces_in_refs'} = '*document_root C11
   |heading_number:{2}
    *line_arg C3
     {spaces_before_argument: }
-    {Testing local nodes}
+    {normal_text:Testing local nodes}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C10
@@ -159,45 +159,45 @@ $result_tree_text{'character_and_spaces_in_refs'} = '*document_root C11
     |EXTRA
     |node_content:A{0|0}
     |normalized:{_0021_005f_0022_0023_0024_0025_0026_0027_0028_0029_002a_002b_002d_002e}
-     {!_"#$%&\'()*+-.}
-   {\\n}
+     {normal_text:!_"#$%&\'()*+-.}
+   {normal_text:\\n}
    *@ref C1 character_and_spaces_in_refs_text.texi:l22
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{_002f_003b_003c_003d_003e_003f_005b_005c_005d_005e_005f_0060_007c_007e}
-     {/;<=>?[\\]^_`|~}
-   {\\n}
+     {normal_text:/;<=>?[\\]^_`|~}
+   {normal_text:\\n}
    *@ref C1 character_and_spaces_in_refs_text.texi:l23
     *brace_arg C2
     |EXTRA
     |node_content:A{1|1}
     |normalized:{Top}
      {spaces_before_argument: }
-     {Top}
-   {\\n}
+     {normal_text:Top}
+   {normal_text:\\n}
    *@ref C1 character_and_spaces_in_refs_text.texi:l24
     *brace_arg C2
     |EXTRA
     |node_content:A{1|1}
     |normalized:{local-node}
      {spaces_before_argument:  }
-     {local   node}
-   {\\n}
+     {normal_text:local   node}
+   {normal_text:\\n}
    *@ref C1 character_and_spaces_in_refs_text.texi:l25
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{_0028texinfo_0029Cross-References}
-     {(texinfo)Cross References}
-   {\\n}
+     {normal_text:(texinfo)Cross References}
+   {normal_text:\\n}
   {empty_line:\\n}
   *@anchor C1 character_and_spaces_in_refs_text.texi:l27
   |EXTRA
   |identifier:{_0028texinfo_0029Cross-References}
   |is_target:{1}
    *brace_arg C1
-    {(texinfo)Cross References}
+    {normal_text:(texinfo)Cross References}
   {spaces_after_close_brace:\\n}
   {empty_line:\\n}
  *@node C1 character_and_spaces_in_refs_text.texi:l29 {other nodes}
@@ -208,25 +208,25 @@ $result_tree_text{'character_and_spaces_in_refs'} = '*document_root C11
   *arguments_line C4
    *line_arg C2
     {spaces_before_argument: }
-    {other nodes}
+    {normal_text:other nodes}
    *line_arg C2
    |EXTRA
    |node_content:A{1|1}
    |normalized:{_0021_005f_0022_0023_0024_0025_0026_0027_0028_0029_002a_002b_002d_002e}
     {spaces_before_argument: }
-    {!_"#$%&\'()*+-.}
+    {normal_text:!_"#$%&\'()*+-.}
    *line_arg C2
    |EXTRA
    |node_content:A{1|1}
    |normalized:{node-to-avoid-DocBook-or-LaTeX-ignored}
     {spaces_before_argument: }
-    {node to avoid DocBook or LaTeX ignored}
+    {normal_text:node to avoid DocBook or LaTeX ignored}
    *line_arg C3
    |EXTRA
    |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@chapter C4 character_and_spaces_in_refs_text.texi:l30 {Chapter with nodes}
  |EXTRA
@@ -236,7 +236,7 @@ $result_tree_text{'character_and_spaces_in_refs'} = '*document_root C11
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chapter with nodes}
+    {normal_text:Chapter with nodes}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C5 character_and_spaces_in_refs_text.texi:l32
@@ -249,39 +249,39 @@ $result_tree_text{'character_and_spaces_in_refs'} = '*document_root C11
     |EXTRA
     |node_content:A{0|0}
     |normalized:{_0021_005f_0022_0023_0024_0025_0026_0027_0028_0029_002a_002b_002d_002e}
-     {!_"#$%&\'()*+-.}
+     {normal_text:!_"#$%&\'()*+-.}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 character_and_spaces_in_refs_text.texi:l34
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{_002f_003b_003c_003d_003e_003f_005b_005c_005d_005e_005f_0060_007c_007e}
-     {/;<=>?[\\]^_`|~}
+     {normal_text:/;<=>?[\\]^_`|~}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 character_and_spaces_in_refs_text.texi:l35
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{local-node}
-     {local node}
+     {normal_text:local node}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 character_and_spaces_in_refs_text.texi:l36
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C2 character_and_spaces_in_refs_text.texi:l38 {!_"#$%&\'()*+-.}
@@ -292,25 +292,25 @@ $result_tree_text{'character_and_spaces_in_refs'} = '*document_root C11
   *arguments_line C4
    *line_arg C2
     {spaces_before_argument: }
-    {!_"#$%&\'()*+-.}
+    {normal_text:!_"#$%&\'()*+-.}
    *line_arg C2
    |EXTRA
    |node_content:A{1|1}
    |normalized:{_002f_003b_003c_003d_003e_003f_005b_005c_005d_005e_005f_0060_007c_007e}
     {spaces_before_argument: }
-    {/;<=>?[\\]^_`|~}
+    {normal_text:/;<=>?[\\]^_`|~}
    *line_arg C2
    |EXTRA
    |node_content:A{1|1}
    |normalized:{other-nodes}
     {spaces_before_argument: }
-    {other nodes}
+    {normal_text:other nodes}
    *line_arg C3
    |EXTRA
    |node_content:A{1|1}
    |normalized:{other-nodes}
     {spaces_before_argument: }
-    {other nodes}
+    {normal_text:other nodes}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C2 character_and_spaces_in_refs_text.texi:l40 {/;<=>?[\\]^_`|~}
@@ -321,23 +321,23 @@ $result_tree_text{'character_and_spaces_in_refs'} = '*document_root C11
   *arguments_line C4
    *line_arg C2
     {spaces_before_argument: }
-    {/;<=>?[\\]^_`|~}
+    {normal_text:/;<=>?[\\]^_`|~}
    *line_arg C1
    |EXTRA
    |node_content:A{0|0}
    |normalized:{local-node}
-    {local   node}
+    {normal_text:local   node}
    *line_arg C1
    |EXTRA
    |node_content:A{0|0}
    |normalized:{_0021_005f_0022_0023_0024_0025_0026_0027_0028_0029_002a_002b_002d_002e}
-    {!_"#$%&\'()*+-.}
+    {normal_text:!_"#$%&\'()*+-.}
    *line_arg C3
    |EXTRA
    |node_content:A{1|1}
    |normalized:{other-nodes}
     {spaces_before_argument: }
-    {other nodes}
+    {normal_text:other nodes}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C2 character_and_spaces_in_refs_text.texi:l42 {local   node}
@@ -348,18 +348,18 @@ $result_tree_text{'character_and_spaces_in_refs'} = '*document_root C11
   *arguments_line C4
    *line_arg C2
     {spaces_before_argument:  }
-    {local   node}
+    {normal_text:local   node}
    *line_arg
    *line_arg C1
    |EXTRA
    |node_content:A{0|0}
    |normalized:{_002f_003b_003c_003d_003e_003f_005b_005c_005d_005e_005f_0060_007c_007e}
-    {/;<=>?[\\]^_`|~}
+    {normal_text:/;<=>?[\\]^_`|~}
    *line_arg C2
    |EXTRA
    |node_content:A{0|0}
    |normalized:{other-nodes}
-    {other nodes}
+    {normal_text:other nodes}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@bye C1

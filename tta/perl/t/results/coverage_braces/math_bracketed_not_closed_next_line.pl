@@ -14,11 +14,11 @@ $result_tree_text{'math_bracketed_not_closed_next_line'} = '*document_root C1
   *paragraph C1
    *@math C1 l1
     *brace_arg C2
-     {aa }
+     {normal_text:aa }
      *balanced_braces C3 l1
-      {{\\n}
+      {normal_text:{\\n}
       {empty_line:\\n}
-      {}}
+      {normal_text:}}
 ';
 
 

@@ -16,7 +16,7 @@ $result_tree_text{'unknown_macro_on_line_command'} = '*document_root C1
    |text_arg:{file}
     *line_arg C2
      {spaces_before_argument: }
-     {file}
+     {normal_text:file}
 ';
 
 

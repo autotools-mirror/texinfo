@@ -21,21 +21,21 @@ $result_tree_text{'nested_formats'} = '*document_root C1
       {spaces_before_argument:\\n}
     *preformatted C3
      {empty_line:\\n}
-     {in -- format/example\\n}
+     {normal_text:in -- format/example\\n}
      {empty_line:\\n}
     *@end C1 l6
     |EXTRA
     |text_arg:{example}
      *line_arg C3
       {spaces_before_argument: }
-      {example}
+      {normal_text:example}
       {spaces_after_argument:\\n}
    *@end C1 l7
    |EXTRA
    |text_arg:{format}
     *line_arg C3
      {spaces_before_argument: }
-     {format}
+     {normal_text:format}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@example C3 l9
@@ -48,21 +48,21 @@ $result_tree_text{'nested_formats'} = '*document_root C1
       {spaces_before_argument:\\n}
     *preformatted C3
      {empty_line:\\n}
-     {in -- example/format\\n}
+     {normal_text:in -- example/format\\n}
      {empty_line:\\n}
     *@end C1 l14
     |EXTRA
     |text_arg:{format}
      *line_arg C3
       {spaces_before_argument: }
-      {format}
+      {normal_text:format}
       {spaces_after_argument:\\n}
    *@end C1 l15
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
 ';
 

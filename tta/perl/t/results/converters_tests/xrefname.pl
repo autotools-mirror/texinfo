@@ -19,7 +19,7 @@ $result_tree_text{'xrefname'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C3 l2 {top}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'xrefname'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   {empty_line:\\n}
@@ -40,7 +40,7 @@ $result_tree_text{'xrefname'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {ntiti}
+    {normal_text:ntiti}
     {spaces_after_argument:\\n}
   *@xrefname C1 l6
   |EXTRA
@@ -48,7 +48,7 @@ $result_tree_text{'xrefname'} = '*document_root C7
   |heading_number:{1}
    *line_arg C3
     {spaces_before_argument: }
-    {titi}
+    {normal_text:titi}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@chapter C2 l8 {chap}
@@ -59,7 +59,7 @@ $result_tree_text{'xrefname'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l10 {chip}
@@ -70,7 +70,7 @@ $result_tree_text{'xrefname'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chip}
+    {normal_text:chip}
     {spaces_after_argument:\\n}
  *@appendix C9 l11 {app}
  |EXTRA
@@ -80,7 +80,7 @@ $result_tree_text{'xrefname'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {app}
+    {normal_text:app}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@xrefautomaticsectiontitle C1 l13
@@ -89,7 +89,7 @@ $result_tree_text{'xrefname'} = '*document_root C7
   |misc_args:A{off}
    *line_arg C3
     {spaces_before_argument: }
-    {off}
+    {normal_text:off}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
@@ -98,8 +98,8 @@ $result_tree_text{'xrefname'} = '*document_root C7
     |EXTRA
     |node_content:A{0|0}
     |normalized:{ntiti}
-     {ntiti}
-   {\\n}
+     {normal_text:ntiti}
+   {normal_text:\\n}
   {empty_line:\\n}
   *@xrefautomaticsectiontitle C1 l17
   |EXTRA
@@ -107,18 +107,18 @@ $result_tree_text{'xrefname'} = '*document_root C7
   |misc_args:A{on}
    *line_arg C3
     {spaces_before_argument: }
-    {on}
+    {normal_text:on}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C3
-   {xrefautomaticsectiontitle on }
+   {normal_text:xrefautomaticsectiontitle on }
    *@ref C1 l19
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{ntiti}
-     {ntiti}
-   {.\\n}
+     {normal_text:ntiti}
+   {normal_text:.\\n}
 ';
 
 

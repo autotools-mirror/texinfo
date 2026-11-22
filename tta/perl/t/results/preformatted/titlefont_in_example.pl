@@ -19,16 +19,16 @@ $result_tree_text{'titlefont_in_example'} = '*document_root C1
    |EXTRA
    |global_command_number:{1}
     *brace_container C1
-     {Title}
+     {normal_text:Title}
    *preformatted C2
-    {\\n}
-    {Text.\\n}
+    {normal_text:\\n}
+    {normal_text:Text.\\n}
    *@end C1 l4
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
 ';
 

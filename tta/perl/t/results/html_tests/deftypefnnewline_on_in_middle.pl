@@ -19,7 +19,7 @@ $result_tree_text{'deftypefnnewline_on_in_middle'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l2 {top}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'deftypefnnewline_on_in_middle'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l4 {chap}
@@ -39,7 +39,7 @@ $result_tree_text{'deftypefnnewline_on_in_middle'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
  *@chapter C7 l5 {Chapter}
  |EXTRA
@@ -49,7 +49,7 @@ $result_tree_text{'deftypefnnewline_on_in_middle'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chapter}
+    {normal_text:Chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypefun C3 l7
@@ -65,29 +65,29 @@ $result_tree_text{'deftypefnnewline_on_in_middle'} = '*document_root C5
      |EXTRA
      |inserted:{1}
       *def_line_arg C1
-       {Function}
+       {normal_text:Function}
      {spaces: }
      *def_type C1
       *def_line_arg C1
-       {void}
+       {normal_text:void}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {something}
+       {normal_text:something}
      {spaces: }
      *def_typearg C1
       *def_line_arg C1
-       {input}
+       {normal_text:input}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {do something with input\\n}
+     {normal_text:do something with input\\n}
    *@end C1 l9
    |EXTRA
    |text_arg:{deftypefun}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypefun}
+     {normal_text:deftypefun}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypefnnewline C1 l11
@@ -96,7 +96,7 @@ $result_tree_text{'deftypefnnewline_on_in_middle'} = '*document_root C5
   |misc_args:A{on}
    *line_arg C3
     {spaces_before_argument: }
-    {on}
+    {normal_text:on}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypefun C3 l13
@@ -112,29 +112,29 @@ $result_tree_text{'deftypefnnewline_on_in_middle'} = '*document_root C5
      |EXTRA
      |inserted:{1}
       *def_line_arg C1
-       {Function}
+       {normal_text:Function}
      {spaces: }
      *def_type C1
       *def_line_arg C1
-       {TYPE}
+       {normal_text:TYPE}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {NAME}
+       {normal_text:NAME}
      {spaces: }
      *def_typearg C1
       *def_line_arg C1
-       {ARGUMENTS...}
+       {normal_text:ARGUMENTS...}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {BODY-OF-DESCRIPTION\\n}
+     {normal_text:BODY-OF-DESCRIPTION\\n}
    *@end C1 l15
    |EXTRA
    |text_arg:{deftypefun}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypefun}
+     {normal_text:deftypefun}
      {spaces_after_argument:\\n}
 ';
 

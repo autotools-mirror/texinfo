@@ -14,7 +14,7 @@ $result_tree_text{'def_in_style_command'} = '*document_root C1
   *paragraph C1
    *@code C1 l1
     *brace_container C1
-     {\\n}
+     {normal_text:\\n}
   *@defun C3 l2
    *def_line C1 l2
    |EXTRA
@@ -27,25 +27,25 @@ $result_tree_text{'def_in_style_command'} = '*document_root C1
      |EXTRA
      |inserted:{1}
       *def_line_arg C1
-       {Function}
+       {normal_text:Function}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {name}
+       {normal_text:name}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {args...}
+       {normal_text:args...}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {text\\n}
+     {normal_text:text\\n}
    *@end C1 l4
    |EXTRA
    |text_arg:{defun}
     *line_arg C3
      {spaces_before_argument: }
-     {defun}
+     {normal_text:defun}
      {spaces_after_argument:\\n}
 ';
 

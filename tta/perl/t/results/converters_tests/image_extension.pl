@@ -15,13 +15,13 @@ $result_tree_text{'image_extension'} = '*document_root C1
   |EXTRA
   |input_encoding_name:{utf-8}
    *brace_arg C1
-    {f---ile}
+    {normal_text:f---ile}
    *brace_arg
    *brace_arg
    *brace_arg
    *brace_arg C1
-    {.gr--a}
-  {\\n}
+    {normal_text:.gr--a}
+  {normal_text:\\n}
 ';
 
 

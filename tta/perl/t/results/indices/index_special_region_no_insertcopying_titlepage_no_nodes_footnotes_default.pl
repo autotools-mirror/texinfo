@@ -25,7 +25,7 @@ $result_tree_text{'index_special_region_no_insertcopying_titlepage_no_nodes_foot
     |index_entry:I{cp,1}
      *line_arg C3
       {spaces_before_argument: }
-      {Copying this document}
+      {normal_text:Copying this document}
       {spaces_after_argument:\\n}
     *@anchor C1 index_special_region_no_insertcopying.texi:l6
     |EXTRA
@@ -34,12 +34,12 @@ $result_tree_text{'index_special_region_no_insertcopying_titlepage_no_nodes_foot
      *brace_arg C1
      |EXTRA
      |element_region:{copying}
-      {Copying information}
+      {normal_text:Copying information}
     {spaces_after_close_brace:\\n}
     {empty_line:\\n}
     *paragraph C4
-     {This is a test manual, trivially and explicitly in the public\\n}
-     {domain}
+     {normal_text:This is a test manual, trivially and explicitly in the public\\n}
+     {normal_text:domain}
      *@footnote C1 index_special_region_no_insertcopying.texi:l9
      |EXTRA
      |global_command_number:{1}
@@ -51,11 +51,11 @@ $result_tree_text{'index_special_region_no_insertcopying_titlepage_no_nodes_foot
         *brace_arg C1
         |EXTRA
         |element_region:{copying}
-         {Public domain reference}
+         {normal_text:Public domain reference}
        {spaces_after_close_brace: }
        *paragraph C2
-        {The public\\n}
-        {domain is something you should allready know\\n}
+        {normal_text:The public\\n}
+        {normal_text:domain is something you should allready know\\n}
        {empty_line:\\n}
        *index_entry_command@cindex C1 index_special_region_no_insertcopying.texi:l12
        |EXTRA
@@ -63,9 +63,9 @@ $result_tree_text{'index_special_region_no_insertcopying_titlepage_no_nodes_foot
        |index_entry:I{cp,2}
         *line_arg C3
          {spaces_before_argument: }
-         {Public domain}
+         {normal_text:Public domain}
          {spaces_after_argument:\\n}
-     {.\\n}
+     {normal_text:.\\n}
     {empty_line:\\n}
     *@printindex C1 index_special_region_no_insertcopying.texi:l15
     |EXTRA
@@ -73,7 +73,7 @@ $result_tree_text{'index_special_region_no_insertcopying_titlepage_no_nodes_foot
     |misc_args:A{cp}
      *line_arg C3
       {spaces_before_argument: }
-      {cp}
+      {normal_text:cp}
       {spaces_after_argument:\\n}
     {empty_line:\\n}
     *@printindex C1 index_special_region_no_insertcopying.texi:l17
@@ -82,7 +82,7 @@ $result_tree_text{'index_special_region_no_insertcopying_titlepage_no_nodes_foot
     |misc_args:A{cp}
      *line_arg C3
       {spaces_before_argument: }
-      {cp}
+      {normal_text:cp}
       {spaces_after_argument:\\n}
     *@printindex C1 index_special_region_no_insertcopying.texi:l18
     |EXTRA
@@ -90,7 +90,7 @@ $result_tree_text{'index_special_region_no_insertcopying_titlepage_no_nodes_foot
     |misc_args:A{fn}
      *line_arg C3
       {spaces_before_argument: }
-      {fn}
+      {normal_text:fn}
       {spaces_after_argument:\\n}
     {empty_line:\\n}
     *@end C1 index_special_region_no_insertcopying.texi:l20
@@ -98,7 +98,7 @@ $result_tree_text{'index_special_region_no_insertcopying_titlepage_no_nodes_foot
     |text_arg:{copying}
      *line_arg C3
       {spaces_before_argument: }
-      {copying}
+      {normal_text:copying}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@titlepage C10 index_special_region_no_insertcopying.texi:l22
@@ -112,7 +112,7 @@ $result_tree_text{'index_special_region_no_insertcopying_titlepage_no_nodes_foot
     |index_entry:I{cp,3}
      *line_arg C3
       {spaces_before_argument: }
-      {Titlepage index}
+      {normal_text:Titlepage index}
       {spaces_after_argument:\\n}
     *@anchor C1 index_special_region_no_insertcopying.texi:l25
     |EXTRA
@@ -121,11 +121,11 @@ $result_tree_text{'index_special_region_no_insertcopying_titlepage_no_nodes_foot
      *brace_arg C1
      |EXTRA
      |element_region:{titlepage}
-      {Titlepage anchor}
+      {normal_text:Titlepage anchor}
     {spaces_after_close_brace:\\n}
     {empty_line:\\n}
     *paragraph C3
-     {This is the titlepage}
+     {normal_text:This is the titlepage}
      *@footnote C1 index_special_region_no_insertcopying.texi:l27
      |EXTRA
      |global_command_number:{2}
@@ -137,10 +137,10 @@ $result_tree_text{'index_special_region_no_insertcopying_titlepage_no_nodes_foot
         *brace_arg C1
         |EXTRA
         |element_region:{titlepage}
-         {Titlepage footnote anchor}
+         {normal_text:Titlepage footnote anchor}
        {spaces_after_close_brace:\\n}
        *paragraph C1
-        {This is a fine document.\\n}
+        {normal_text:This is a fine document.\\n}
        {empty_line:\\n}
        *index_entry_command@cindex C1 index_special_region_no_insertcopying.texi:l30
        |EXTRA
@@ -148,9 +148,9 @@ $result_tree_text{'index_special_region_no_insertcopying_titlepage_no_nodes_foot
        |index_entry:I{cp,4}
         *line_arg C3
          {spaces_before_argument: }
-         {Titlepage footnote}
+         {normal_text:Titlepage footnote}
          {spaces_after_argument:\\n}
-     {\\n}
+     {normal_text:\\n}
     {empty_line:\\n}
     *@insertcopying C1 index_special_region_no_insertcopying.texi:l33
     |EXTRA
@@ -162,7 +162,7 @@ $result_tree_text{'index_special_region_no_insertcopying_titlepage_no_nodes_foot
     |text_arg:{titlepage}
      *line_arg C3
       {spaces_before_argument: }
-      {titlepage}
+      {normal_text:titlepage}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
  *@node C1 index_special_region_no_insertcopying.texi:l36 {Top}
@@ -173,7 +173,7 @@ $result_tree_text{'index_special_region_no_insertcopying_titlepage_no_nodes_foot
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C1 index_special_region_no_insertcopying.texi:l37 {Top}
  |EXTRA
@@ -182,7 +182,7 @@ $result_tree_text{'index_special_region_no_insertcopying_titlepage_no_nodes_foot
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@chapter C15 index_special_region_no_insertcopying.texi:l38 {Chapter}
  |EXTRA
@@ -194,7 +194,7 @@ $result_tree_text{'index_special_region_no_insertcopying_titlepage_no_nodes_foot
   *arguments_line C1
    *line_arg C4
     {spaces_before_argument: }
-    {Chapter}
+    {normal_text:Chapter}
     {spaces_after_argument:  }
     *@c C1
      *line_arg C3
@@ -209,12 +209,12 @@ $result_tree_text{'index_special_region_no_insertcopying_titlepage_no_nodes_foot
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C6
-   {This test demonstrates }
+   {normal_text:This test demonstrates }
    *@@
-   {anchor and indices in }
+   {normal_text:anchor and indices in }
    *@@
-   {copying\\n}
-   {and titlepage, and various wrong index entries.\\n}
+   {normal_text:copying\\n}
+   {normal_text:and titlepage, and various wrong index entries.\\n}
   {empty_line:\\n}
   *index_entry_command@findex C1 index_special_region_no_insertcopying.texi:l45
   |EXTRA
@@ -222,7 +222,7 @@ $result_tree_text{'index_special_region_no_insertcopying_titlepage_no_nodes_foot
   |index_entry:I{fn,1}
    *line_arg C3
     {spaces_before_argument: }
-    {findex entry}
+    {normal_text:findex entry}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 index_special_region_no_insertcopying.texi:l47
@@ -236,7 +236,7 @@ $result_tree_text{'index_special_region_no_insertcopying_titlepage_no_nodes_foot
     *block_line_arg C4
      *def_category C1
       *bracketed_arg C1 index_special_region_no_insertcopying.texi:l48
-       {truc}
+       {normal_text:truc}
      {spaces: }
      *def_name C1
       *bracketed_arg C1 index_special_region_no_insertcopying.texi:l48
@@ -249,7 +249,7 @@ $result_tree_text{'index_special_region_no_insertcopying_titlepage_no_nodes_foot
     *line_arg C2
      *def_category C1
       *bracketed_arg C1 index_special_region_no_insertcopying.texi:l49
-       {truc}
+       {normal_text:truc}
      {spaces_after_argument:\\n}
    *@deffnx C1 index_special_region_no_insertcopying.texi:l50
    |EXTRA
@@ -267,7 +267,7 @@ $result_tree_text{'index_special_region_no_insertcopying_titlepage_no_nodes_foot
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
-     {deffn}
+     {normal_text:deffn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@ftable C4 index_special_region_no_insertcopying.texi:l53
@@ -287,14 +287,14 @@ $result_tree_text{'index_special_region_no_insertcopying_titlepage_no_nodes_foot
      |index_entry:I{fn,2}
       *line_arg C3
        {spaces_before_argument: }
-       {fun}
+       {normal_text:fun}
        {spaces_after_argument:\\n}
    *@end C1 index_special_region_no_insertcopying.texi:l56
    |EXTRA
    |text_arg:{ftable}
     *line_arg C3
      {spaces_before_argument: }
-     {ftable}
+     {normal_text:ftable}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C3 index_special_region_no_insertcopying.texi:l58
@@ -307,17 +307,17 @@ $result_tree_text{'index_special_region_no_insertcopying_titlepage_no_nodes_foot
     |EXTRA
     |node_content:A{0|0}
     |normalized:{Copying-and-indices}
-     {Copying and indices}
+     {normal_text:Copying and indices}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 index_special_region_no_insertcopying.texi:l60
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 index_special_region_no_insertcopying.texi:l62 {Copying and indices}
@@ -328,7 +328,7 @@ $result_tree_text{'index_special_region_no_insertcopying_titlepage_no_nodes_foot
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Copying and indices}
+    {normal_text:Copying and indices}
     {spaces_after_argument:\\n}
  *@appendix C15 index_special_region_no_insertcopying.texi:l63 {Copying and indices}
  |EXTRA
@@ -338,11 +338,11 @@ $result_tree_text{'index_special_region_no_insertcopying_titlepage_no_nodes_foot
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Copying and indices}
+    {normal_text:Copying and indices}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {In the appendix, we print the indices and references.\\n}
+   {normal_text:In the appendix, we print the indices and references.\\n}
   {empty_line:\\n}
   *index_entry_command@findex C1 index_special_region_no_insertcopying.texi:l67
   |EXTRA
@@ -350,7 +350,7 @@ $result_tree_text{'index_special_region_no_insertcopying_titlepage_no_nodes_foot
   |index_entry:I{fn,3}
    *line_arg C3
     {spaces_before_argument: }
-    {another fun}
+    {normal_text:another fun}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 index_special_region_no_insertcopying.texi:l69
@@ -359,7 +359,7 @@ $result_tree_text{'index_special_region_no_insertcopying_titlepage_no_nodes_foot
   |index_entry:I{cp,5}
    *line_arg C3
     {spaces_before_argument: }
-    {Copying appendix}
+    {normal_text:Copying appendix}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C4
@@ -368,15 +368,15 @@ $result_tree_text{'index_special_region_no_insertcopying_titlepage_no_nodes_foot
     |EXTRA
     |node_content:A{0|0}
     |normalized:{Copying-information}
-     {Copying information}
-   { for the copying information.\\n}
+     {normal_text:Copying information}
+   {normal_text: for the copying information.\\n}
    *@ref C1 index_special_region_no_insertcopying.texi:l72
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{Public-domain-reference}
-     {Public domain reference}
-   { for reference on the licence.\\n}
+     {normal_text:Public domain reference}
+   {normal_text: for reference on the licence.\\n}
   {empty_line:\\n}
   *paragraph C4
    *@ref C1 index_special_region_no_insertcopying.texi:l74
@@ -384,15 +384,15 @@ $result_tree_text{'index_special_region_no_insertcopying_titlepage_no_nodes_foot
     |EXTRA
     |node_content:A{0|0}
     |normalized:{Titlepage-anchor}
-     {Titlepage anchor}
-   { for the titlepage.\\n}
+     {normal_text:Titlepage anchor}
+   {normal_text: for the titlepage.\\n}
    *@ref C1 index_special_region_no_insertcopying.texi:l75
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{Titlepage-footnote-anchor}
-     {Titlepage footnote anchor}
-   { for reference on the titlepage.\\n}
+     {normal_text:Titlepage footnote anchor}
+   {normal_text: for reference on the titlepage.\\n}
   {empty_line:\\n}
   *@c C1
    *line_arg C3

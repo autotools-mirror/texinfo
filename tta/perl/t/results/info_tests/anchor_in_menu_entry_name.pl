@@ -19,7 +19,7 @@ $result_tree_text{'anchor_in_menu_entry_name'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C3 l3
@@ -29,31 +29,31 @@ $result_tree_text{'anchor_in_menu_entry_name'} = '*document_root C3
    *menu_entry C6 l4
     {menu_entry_leading_text:* }
     *menu_entry_name C4
-     {name }
+     {normal_text:name }
      *@anchor C1 l4
      |EXTRA
      |identifier:{point}
      |is_target:{1}
       *brace_arg C1
-       {point}
+       {normal_text:point}
      {spaces_after_close_brace: }
-     {after anchor}
+     {normal_text:after anchor}
     {menu_entry_separator:: }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{first}
-     {first}
+     {normal_text:first}
     {menu_entry_separator:.}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l5
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l7 {first}
@@ -64,7 +64,7 @@ $result_tree_text{'anchor_in_menu_entry_name'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {first}
+    {normal_text:first}
     {spaces_after_argument:\\n}
 ';
 

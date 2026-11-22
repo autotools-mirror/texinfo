@@ -19,20 +19,20 @@ $result_tree_text{'ref_to_top_in_anchor'} = '*document_root C2
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
   *@anchor C1 l2
   |EXTRA
   |identifier:{TOP-Top}
   |is_target:{1}
    *brace_arg C2
-    {TOP }
+    {normal_text:TOP }
     *@ref C1 l2
      *brace_arg C1
      |EXTRA
      |node_content:A{0|0}
      |normalized:{Top}
-      {Top}
+      {normal_text:Top}
 ';
 
 

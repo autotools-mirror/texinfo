@@ -16,26 +16,26 @@ $result_tree_text{'nested_indentedblock'} = '*document_root C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C1
-    {in example\\n}
+    {normal_text:in example\\n}
    *@indentedblock C3 l3
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *preformatted C1
-     {   f  f  f``g\\n}
+     {normal_text:   f  f  f``g\\n}
     *@end C1 l5
     |EXTRA
     |text_arg:{indentedblock}
      *line_arg C3
       {spaces_before_argument: }
-      {indentedblock}
+      {normal_text:indentedblock}
       {spaces_after_argument:\\n}
    *@end C1 l6
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@indentedblock C5 l8
@@ -44,26 +44,26 @@ $result_tree_text{'nested_indentedblock'} = '*document_root C1
      {spaces_before_argument:\\n}
    {spaces_before_paragraph:   }
    *paragraph C1
-    {v  v  v``a\\n}
+    {normal_text:v  v  v``a\\n}
    *@example C3 l10
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *preformatted C1
-     {in example\\n}
+     {normal_text:in example\\n}
     *@end C1 l12
     |EXTRA
     |text_arg:{example}
      *line_arg C3
       {spaces_before_argument: }
-      {example}
+      {normal_text:example}
       {spaces_after_argument:\\n}
    *@end C1 l13
    |EXTRA
    |text_arg:{indentedblock}
     *line_arg C3
      {spaces_before_argument: }
-     {indentedblock}
+     {normal_text:indentedblock}
      {spaces_after_argument:\\n}
 ';
 

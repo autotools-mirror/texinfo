@@ -24,18 +24,18 @@ $result_tree_text{'macro_after_paragraph'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C1
-   {In text.\\n}
+   {normal_text:In text.\\n}
   {empty_line:\\n}
   >SOURCEMARKS
   >macro_expansion<start;1>
    >*macro_call@mymacro C1
     >*brace_arg
   *paragraph C1
-   {after end of line\\n}
+   {normal_text:after end of line\\n}
    >SOURCEMARKS
    >macro_expansion<end;1><p:17>
 ';

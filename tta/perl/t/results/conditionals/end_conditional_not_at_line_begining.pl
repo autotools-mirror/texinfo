@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'end_conditional_not_at_line_begining'} = '*document_root C1
  *before_node_section C1
   *preamble_before_content C1
-   {}
+   {normal_text:}
    >SOURCEMARKS
    >ignored_conditional_block<1>
     >*@ifhtml C4 l1
@@ -25,7 +25,7 @@ $result_tree_text{'end_conditional_not_at_line_begining'} = '*document_root C1
      >|text_arg:{ifhtml}
       >*line_arg C3
        >{spaces_before_argument: }
-       >{ifhtml}
+       >{normal_text:ifhtml}
        >{spaces_after_argument:\\n}
 ';
 

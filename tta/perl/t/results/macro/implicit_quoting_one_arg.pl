@@ -25,7 +25,7 @@ $result_tree_text{'implicit_quoting_one_arg'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    >SOURCEMARKS
@@ -38,8 +38,8 @@ $result_tree_text{'implicit_quoting_one_arg'} = '*document_root C1
    >SOURCEMARKS
    >macro_expansion<end;1>
     *brace_container C1
-     {FIXAME: Many arguments, separated by commas, are processed here}
-   {\\n}
+     {normal_text:FIXAME: Many arguments, separated by commas, are processed here}
+   {normal_text:\\n}
 ';
 
 

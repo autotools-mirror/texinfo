@@ -27,28 +27,28 @@ $result_tree_text{'value_in_node'} = '*document_root C6
   *arguments_line C4
    *line_arg C2
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
    *line_arg C4
    |EXTRA
    |manual_content:A{2|2}
     {spaces_before_argument: }
-    {(}
-    {dir}
-    {)}
+    {normal_text:(}
+    {normal_text:dir}
+    {normal_text:)}
    *line_arg C4
    |EXTRA
    |manual_content:A{2|2}
     {spaces_before_argument: }
-    {(}
-    {dir}
-    {)}
+    {normal_text:(}
+    {normal_text:dir}
+    {normal_text:)}
    *line_arg C5
    |EXTRA
    |manual_content:A{2|2}
     {spaces_before_argument: }
-    {(}
-    {dir}
-    {)}
+    {normal_text:(}
+    {normal_text:dir}
+    {normal_text:)}
     {spaces_after_argument:\\n}
  *@top C4 l4 {Expansion in Node Names}
  |EXTRA
@@ -57,7 +57,7 @@ $result_tree_text{'value_in_node'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Expansion in Node Names}
+    {normal_text:Expansion in Node Names}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C3 l6
@@ -70,24 +70,24 @@ $result_tree_text{'value_in_node'} = '*document_root C6
     |EXTRA
     |node_content:A{0|1}
     |normalized:{Node-1}
-     {Node 1}
+     {normal_text:Node 1}
      >SOURCEMARKS
      >value_expansion<start;1>{Node 1}
       >*@value C1
        >*brace_container C1
-        >{node1}
+        >{normal_text:node1}
      >value_expansion<end;1><p:6>
      {space_at_end_menu_node:  }
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l8
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l10 {Node 1}
@@ -102,8 +102,8 @@ $result_tree_text{'value_in_node'} = '*document_root C6
     >value_expansion<start;2><p:1>{Node 1}
      >*@value C1
       >*brace_container C1
-       >{node1}
-    {Node 1}
+       >{normal_text:node1}
+    {normal_text:Node 1}
     >SOURCEMARKS
     >value_expansion<end;2><p:6>
    *line_arg
@@ -112,13 +112,13 @@ $result_tree_text{'value_in_node'} = '*document_root C6
    |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
    *line_arg C3
    |EXTRA
    |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@chapter C6 l11 {Chapter 1}
  |EXTRA
@@ -128,7 +128,7 @@ $result_tree_text{'value_in_node'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chapter 1}
+    {normal_text:Chapter 1}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@set C1
@@ -149,23 +149,23 @@ $result_tree_text{'value_in_node'} = '*document_root C6
     |EXTRA
     |node_content:A{0|0}
     |normalized:{Section-1_002e1}
-     {Section 1.1}
+     {normal_text:Section 1.1}
      >SOURCEMARKS
      >value_expansion<start;3>{Section 1.1}
       >*@value C1
        >*brace_container C1
-        >{sec1}
+        >{normal_text:sec1}
      >value_expansion<end;3><p:11>
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l17
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C3 l19 {Section 1.1}
@@ -176,7 +176,7 @@ $result_tree_text{'value_in_node'} = '*document_root C6
   *arguments_line C4
    *line_arg C2
     {spaces_before_argument: }
-    {Section 1.1}
+    {normal_text:Section 1.1}
    *line_arg C1
     {spaces_before_argument: }
    *line_arg C2
@@ -184,13 +184,13 @@ $result_tree_text{'value_in_node'} = '*document_root C6
    |node_content:A{1|1}
    |normalized:{Node-1}
     {spaces_before_argument: }
-    {Node 1}
+    {normal_text:Node 1}
    *line_arg C3
    |EXTRA
    |node_content:A{1|1}
    |normalized:{Node-1}
     {spaces_before_argument: }
-    {Node 1}
+    {normal_text:Node 1}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
@@ -199,14 +199,14 @@ $result_tree_text{'value_in_node'} = '*document_root C6
     |EXTRA
     |node_content:A{0|0}
     |normalized:{Node-1}
-     {Node 1}
+     {normal_text:Node 1}
      >SOURCEMARKS
      >value_expansion<start;4>{Node 1}
       >*@value C1
        >*brace_container C1
-        >{node1}
+        >{normal_text:node1}
      >value_expansion<end;4><p:6>
-   {.\\n}
+   {normal_text:.\\n}
 ';
 
 

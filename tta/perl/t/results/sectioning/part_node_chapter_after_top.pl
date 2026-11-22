@@ -27,7 +27,7 @@ NodeForward: [U1]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C4 l2 {top}
  |EXTRA
@@ -36,7 +36,7 @@ NodeForward: [U1]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C4 l4
@@ -49,28 +49,28 @@ NodeForward: [U1]
     |EXTRA
     |node_content:A{0|0}
     |normalized:{a-node-after-part}
-     {a node after part}
+     {normal_text:a node after part}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 l6
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{chapter}
-     {chapter}
+     {normal_text:chapter}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l7
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
 U1 unit{C4}{S:@chapter 1 chapter}{n:chapter}
@@ -91,7 +91,7 @@ NodeBack: [U0]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {part}
+    {normal_text:part}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C3 l11 {a node after part}
@@ -102,28 +102,28 @@ NodeBack: [U0]
   *arguments_line C4
    *line_arg C2
     {spaces_before_argument: }
-    {a node after part}
+    {normal_text:a node after part}
    *line_arg C2
    |EXTRA
    |node_content:A{1|1}
    |normalized:{chapter}
     {spaces_before_argument: }
-    {chapter}
+    {normal_text:chapter}
    *line_arg C2
    |EXTRA
    |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
    *line_arg C3
    |EXTRA
    |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
   *paragraph C1
-   {After a node after part\\n}
+   {normal_text:After a node after part\\n}
   {empty_line:\\n}
  *@node C1 l14 {chapter}
  |EXTRA
@@ -133,20 +133,20 @@ NodeBack: [U0]
   *arguments_line C4
    *line_arg C2
     {spaces_before_argument: }
-    {chapter}
+    {normal_text:chapter}
    *line_arg C2
    |EXTRA
    |node_content:A{1|1}
    |normalized:{a-node-after-part}
     {spaces_before_argument: }
-    {a node after part}
+    {normal_text:a node after part}
    *line_arg
    *line_arg C3
    |EXTRA
    |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@chapter C1 l15 {chapter}
  |EXTRA
@@ -156,7 +156,7 @@ NodeBack: [U0]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter}
+    {normal_text:chapter}
     {spaces_after_argument: \\n}
 ';
 

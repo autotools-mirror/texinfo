@@ -18,7 +18,7 @@ $result_tree_text{'empty_label_no_space_comment'} = '*document_root C1
    *arguments_line C2
     *block_line_arg C2
      {spaces_before_argument: }
-     {Type}
+     {normal_text:Type}
     *block_line_arg C1
      *@c C1
       *line_arg C3
@@ -30,7 +30,7 @@ $result_tree_text{'empty_label_no_space_comment'} = '*document_root C1
    |text_arg:{float}
     *line_arg C3
      {spaces_before_argument: }
-     {float}
+     {normal_text:float}
      {spaces_after_argument:\\n}
 ';
 

@@ -19,7 +19,7 @@ $result_tree_text{'filenameconflictwithspecialelement'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C4 l2 {top}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'filenameconflictwithspecialelement'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
@@ -37,8 +37,8 @@ $result_tree_text{'filenameconflictwithspecialelement'} = '*document_root C5
    |global_command_number:{1}
     *brace_command_context C1
      *paragraph C1
-      {a footnote}
-   {\\n}
+      {normal_text:a footnote}
+   {normal_text:\\n}
   {empty_line:\\n}
  *@node C1 l6 {chap}
  |EXTRA
@@ -48,7 +48,7 @@ $result_tree_text{'filenameconflictwithspecialelement'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
  *@chapter C7 l7 {chap}
  |EXTRA
@@ -58,18 +58,18 @@ $result_tree_text{'filenameconflictwithspecialelement'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {Need 2 elements for separate footnotes.\\n}
+   {normal_text:Need 2 elements for separate footnotes.\\n}
   {empty_line:\\n}
   *@anchor C1 l11
   |EXTRA
   |identifier:{filenameconflictwithspecialelement-fot}
   |is_target:{1}
    *brace_arg C1
-    {filenameconflictwithspecialelement fot}
+    {normal_text:filenameconflictwithspecialelement fot}
   {spaces_after_close_brace:\\n}
   {empty_line:\\n}
 ';

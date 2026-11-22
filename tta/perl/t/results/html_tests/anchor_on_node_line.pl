@@ -19,7 +19,7 @@ $result_tree_text{'anchor_on_node_line'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l2 {top}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'anchor_on_node_line'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C2 l4 {lone node @anchor{iln} a}
@@ -39,15 +39,15 @@ $result_tree_text{'anchor_on_node_line'} = '*document_root C6
   *arguments_line C1
    *line_arg C6
     {spaces_before_argument: }
-    {lone node }
+    {normal_text:lone node }
     *@anchor C1 l4
     |EXTRA
     |identifier:{iln}
     |is_target:{1}
      *brace_arg C1
-      {iln}
+      {normal_text:iln}
     {spaces_after_close_brace: }
-    {a}
+    {normal_text:a}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l6 {chapter node @anchor{cnl} b}
@@ -58,15 +58,15 @@ $result_tree_text{'anchor_on_node_line'} = '*document_root C6
   *arguments_line C1
    *line_arg C6
     {spaces_before_argument: }
-    {chapter node }
+    {normal_text:chapter node }
     *@anchor C1 l6
     |EXTRA
     |identifier:{cnl}
     |is_target:{1}
      *brace_arg C1
-      {cnl}
+      {normal_text:cnl}
     {spaces_after_close_brace: }
-    {b}
+    {normal_text:b}
     {spaces_after_argument:\\n}
  *@chapter C6 l7 {chap}
  |EXTRA
@@ -76,7 +76,7 @@ $result_tree_text{'anchor_on_node_line'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
@@ -85,8 +85,8 @@ $result_tree_text{'anchor_on_node_line'} = '*document_root C6
     |EXTRA
     |node_content:A{0|0}
     |normalized:{iln}
-     {iln}
-   {.\\n}
+     {normal_text:iln}
+   {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C2
    *@xref C1 l11
@@ -94,8 +94,8 @@ $result_tree_text{'anchor_on_node_line'} = '*document_root C6
     |EXTRA
     |node_content:A{0|0}
     |normalized:{cnl}
-     {cnl}
-   {\\n}
+     {normal_text:cnl}
+   {normal_text:\\n}
   {empty_line:\\n}
 ';
 

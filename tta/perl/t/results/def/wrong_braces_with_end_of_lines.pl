@@ -21,34 +21,34 @@ $result_tree_text{'wrong_braces_with_end_of_lines'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {category}
+       {normal_text:category}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {name}
+       {normal_text:name}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {args}
+       {normal_text:args}
      {spaces: }
      *def_arg C1
       *bracketed_arg C3 l1
        {spaces_before_argument:   }
        >SOURCEMARKS
        >defline_continuation<1><p:1>
-       {more args}
+       {normal_text:more args}
        {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C3
-     {deffn with }
+     {normal_text:deffn with }
      *@{
-     {\\n}
+     {normal_text:\\n}
    *@end C1 l4
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
-     {deffn}
+     {normal_text:deffn}
      {spaces_after_argument: \\n}
   {empty_line:\\n}
   *@deffn C3 l6
@@ -61,37 +61,37 @@ $result_tree_text{'wrong_braces_with_end_of_lines'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {category}
+       {normal_text:category}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {name}
+       {normal_text:name}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {args}
+       {normal_text:args}
      {spaces:    }
      >SOURCEMARKS
      >defline_continuation<2><p:2>
      *def_arg C1
       *def_line_arg C1
-       {more}
+       {normal_text:more}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {args}
+       {normal_text:args}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C3
-     {deffn with }
+     {normal_text:deffn with }
      *@}
-     {\\n}
+     {normal_text:\\n}
    *@end C1 l9
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
-     {deffn}
+     {normal_text:deffn}
      {spaces_after_argument: \\n}
 ';
 

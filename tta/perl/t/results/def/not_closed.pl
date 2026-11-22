@@ -21,15 +21,15 @@ $result_tree_text{'not_closed'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {truc}
+       {normal_text:truc}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {bidule}
+       {normal_text:bidule}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {machin}
+       {normal_text:machin}
      {spaces_after_argument:\\n}
    *@deffnx C1 l2
    |EXTRA
@@ -40,15 +40,15 @@ $result_tree_text{'not_closed'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {truc}
+       {normal_text:truc}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {chose}
+       {normal_text:chose}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {args}
+       {normal_text:args}
      {spaces_after_argument:\\n}
    *def_item C1
     *@defvar C1 l3
@@ -63,19 +63,19 @@ $result_tree_text{'not_closed'} = '*document_root C1
        |EXTRA
        |inserted:{1}
         *def_line_arg C1
-         {Variable}
+         {normal_text:Variable}
        {spaces: }
        *def_name C1
         *def_line_arg C1
-         {type1}
+         {normal_text:type1}
        {spaces: }
        *def_arg C1
         *def_line_arg C1
-         {var}
+         {normal_text:var}
        {spaces: }
        *def_arg C1
         *def_line_arg C1
-         {bidule}
+         {normal_text:bidule}
        {spaces_after_argument:\\n}
 ';
 

@@ -16,7 +16,7 @@ $result_tree_text{'nodes_before_after_top_xref'} = '*document_root C7
    |text_arg:{nodes_before_after_top_xref.info}
     *line_arg C3
      {spaces_before_argument: }
-     {nodes_before_after_top_xref.info}
+     {normal_text:nodes_before_after_top_xref.info}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *@node C4 l3 {node before}
@@ -27,11 +27,11 @@ $result_tree_text{'nodes_before_after_top_xref'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {node before}
+    {normal_text:node before}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {In node before\\n}
+   {normal_text:In node before\\n}
   {empty_line:\\n}
  *@node C1 l7 {Top}
  |EXTRA
@@ -41,7 +41,7 @@ $result_tree_text{'nodes_before_after_top_xref'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C4 l8 {top sectionning}
  |EXTRA
@@ -50,11 +50,11 @@ $result_tree_text{'nodes_before_after_top_xref'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top sectionning}
+    {normal_text:top sectionning}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {in node Top\\n}
+   {normal_text:in node Top\\n}
   {empty_line:\\n}
  *@node C4 l12 {after}
  |EXTRA
@@ -64,11 +64,11 @@ $result_tree_text{'nodes_before_after_top_xref'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {after}
+    {normal_text:after}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {in node after\\n}
+   {normal_text:in node after\\n}
   {empty_line:\\n}
  *@node C1 l16 {chap}
  |EXTRA
@@ -78,7 +78,7 @@ $result_tree_text{'nodes_before_after_top_xref'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
  *@chapter C10 l17 {chap}
  |EXTRA
@@ -88,11 +88,11 @@ $result_tree_text{'nodes_before_after_top_xref'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {in chap\\n}
+   {normal_text:in chap\\n}
   {empty_line:\\n}
   *@xrefautomaticsectiontitle C1 l21
   |EXTRA
@@ -100,7 +100,7 @@ $result_tree_text{'nodes_before_after_top_xref'} = '*document_root C7
   |misc_args:A{on}
    *line_arg C3
     {spaces_before_argument: }
-    {on}
+    {normal_text:on}
     {spaces_after_argument:\\n}
   *paragraph C4
    *@xref C1 l22
@@ -108,15 +108,15 @@ $result_tree_text{'nodes_before_after_top_xref'} = '*document_root C7
     |EXTRA
     |node_content:A{0|0}
     |normalized:{node-before}
-     {node before}
-   {.\\n}
+     {normal_text:node before}
+   {normal_text:.\\n}
    *@xref C1 l23
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{after}
-     {after}
-   {.\\n}
+     {normal_text:after}
+   {normal_text:.\\n}
   {empty_line:\\n}
   *@xrefautomaticsectiontitle C1 l25
   |EXTRA
@@ -124,7 +124,7 @@ $result_tree_text{'nodes_before_after_top_xref'} = '*document_root C7
   |misc_args:A{off}
    *line_arg C3
     {spaces_before_argument: }
-    {off}
+    {normal_text:off}
     {spaces_after_argument:\\n}
   *paragraph C4
    *@xref C1 l26
@@ -132,15 +132,15 @@ $result_tree_text{'nodes_before_after_top_xref'} = '*document_root C7
     |EXTRA
     |node_content:A{0|0}
     |normalized:{node-before}
-     {node before}
-   {.\\n}
+     {normal_text:node before}
+   {normal_text:.\\n}
    *@xref C1 l27
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{after}
-     {after}
-   {.\\n}
+     {normal_text:after}
+   {normal_text:.\\n}
   {empty_line:\\n}
 ';
 

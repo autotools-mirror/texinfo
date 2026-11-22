@@ -17,15 +17,15 @@ $result_tree_text{'listoffloats_with_commands'} = '*document_root C1
   |global_command_number:{1}
    *line_arg C7
     {spaces_before_argument: }
-    {th}
+    {normal_text:th}
     *@\' C1 l1
      *following_arg C1
-      {e}
-    {or}
+      {normal_text:e}
+    {normal_text:or}
     *@` C1 l1
      *following_arg C1
-      {e}
-    {me}
+      {normal_text:e}
+    {normal_text:me}
     {spaces_after_argument:\\n}
 ';
 

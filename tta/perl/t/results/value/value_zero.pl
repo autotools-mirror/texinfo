@@ -19,13 +19,13 @@ $result_tree_text{'value_zero'} = '*document_root C1
      {rawline_text:zero 0}
      {spaces_after_argument:\\n}
   *paragraph C2
-   {Value\\n}
-   {0}
+   {normal_text:Value\\n}
+   {normal_text:0}
    >SOURCEMARKS
    >value_expansion<start;1>{0}
     >*@value C1
      >*brace_container C1
-      >{zero}
+      >{normal_text:zero}
    >value_expansion<end;1><p:1>
 ';
 

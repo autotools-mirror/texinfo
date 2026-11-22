@@ -12,23 +12,23 @@ $result_tree_text{'unknown_command_with_braces'} = '*document_root C1
  *before_node_section C13
   *preamble_before_content
   *paragraph C1
-   {Unknown thing \\n}
+   {normal_text:Unknown thing \\n}
   {empty_line:\\n}
   *paragraph C1
-   {Unknown macro  first paragraph\\n}
+   {normal_text:Unknown macro  first paragraph\\n}
   {empty_line:\\n}
   *paragraph C1
-   {second paragraph\\n}
+   {normal_text:second paragraph\\n}
   {empty_line:\\n}
   {spaces_before_paragraph: }
   *paragraph C1
-   {first paragraph\\n}
+   {normal_text:first paragraph\\n}
   {empty_line:\\n}
   *paragraph C1
-   {second paragraph\\n}
+   {normal_text:second paragraph\\n}
   {empty_line:\\n}
   *paragraph C1
-   {third\\n}
+   {normal_text:third\\n}
 ';
 
 

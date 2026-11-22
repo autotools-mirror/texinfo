@@ -25,7 +25,7 @@ $result_tree_text{'directions_buttons_buttons'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l4 {top}
  |EXTRA
@@ -34,7 +34,7 @@ $result_tree_text{'directions_buttons_buttons'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l6 {chapter}
@@ -46,7 +46,7 @@ $result_tree_text{'directions_buttons_buttons'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter}
+    {normal_text:chapter}
     {spaces_after_argument:\\n}
  *@chapter C4 l7 {chap}
  |EXTRA
@@ -56,7 +56,7 @@ $result_tree_text{'directions_buttons_buttons'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@printindex C1 l9
@@ -65,7 +65,7 @@ $result_tree_text{'directions_buttons_buttons'} = '*document_root C7
   |misc_args:A{cp}
    *line_arg C3
     {spaces_before_argument: }
-    {cp}
+    {normal_text:cp}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l11 {@code{append}ix}
@@ -78,8 +78,8 @@ $result_tree_text{'directions_buttons_buttons'} = '*document_root C7
     {spaces_before_argument: }
     *@code C1 l11
      *brace_container C1
-      {append}
-    {ix}
+      {normal_text:append}
+    {normal_text:ix}
     {spaces_after_argument:\\n}
  *@appendix C3 l12 {App}
  |EXTRA
@@ -89,7 +89,7 @@ $result_tree_text{'directions_buttons_buttons'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {App}
+    {normal_text:App}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 l14
@@ -98,7 +98,7 @@ $result_tree_text{'directions_buttons_buttons'} = '*document_root C7
   |index_entry:I{cp,1}
    *line_arg C3
     {spaces_before_argument: }
-    {Here}
+    {normal_text:Here}
     {spaces_after_argument:\\n}
 ';
 

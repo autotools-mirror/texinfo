@@ -23,7 +23,7 @@ $result_tree_text{'end_conditional_in_linemacro'} = '*document_root C1
     |text_arg:{linemacro}
      *line_arg C3
       {spaces_before_argument: }
-      {linemacro}
+      {normal_text:linemacro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    >SOURCEMARKS
@@ -32,17 +32,17 @@ $result_tree_text{'end_conditional_in_linemacro'} = '*document_root C1
      >*arguments_line C1
       >*block_line_arg C3
        >{spaces_before_argument: }
-       >{aa}
+       >{normal_text:aa}
        >{spaces_after_argument:\\n}
   *paragraph C2
-   {text\\n}
+   {normal_text:text\\n}
    >SOURCEMARKS
    >linemacro_expansion<start;1>
     >*linemacro_call@lm C1
      >*linemacro_arg C2
       >{spaces_before_argument: }
       >{bracketed_linemacro_arg:text\\n  @end ifclear}
-   {  }
+   {normal_text:  }
    >SOURCEMARKS
    >expanded_conditional_command<end;1><p:2>
     >*@end C1 l7:@lm
@@ -50,7 +50,7 @@ $result_tree_text{'end_conditional_in_linemacro'} = '*document_root C1
     >|text_arg:{ifclear}
      >*line_arg C3
       >{spaces_before_argument: }
-      >{ifclear}
+      >{normal_text:ifclear}
       >>SOURCEMARKS
       >>linemacro_expansion<end;1><p:7>
       >{spaces_after_argument:\\n}
@@ -61,7 +61,7 @@ $result_tree_text{'end_conditional_in_linemacro'} = '*document_root C1
     >*arguments_line C1
      >*block_line_arg C3
       >{spaces_before_argument: }
-      >{b}
+      >{normal_text:b}
       >{spaces_after_argument:\\n}
     >{raw:@lm {text\\n}
     >*@end C1 l11
@@ -69,7 +69,7 @@ $result_tree_text{'end_conditional_in_linemacro'} = '*document_root C1
     >|text_arg:{ifset}
      >*line_arg C3
       >{spaces_before_argument: }
-      >{ifset}
+      >{normal_text:ifset}
       >{spaces_after_argument:\\n}
   {empty_line:\\n}
 ';

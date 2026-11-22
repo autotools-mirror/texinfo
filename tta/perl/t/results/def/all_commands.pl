@@ -21,21 +21,21 @@ $result_tree_text{'all_commands'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {c--ategory}
+       {normal_text:c--ategory}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {d--efvr_name}
+       {normal_text:d--efvr_name}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {d--efvr\\n}
+     {normal_text:d--efvr\\n}
    *@end C1 l3
    |EXTRA
    |text_arg:{defvr}
     *line_arg C3
      {spaces_before_argument: }
-     {defvr}
+     {normal_text:defvr}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deffn C3 l5
@@ -48,25 +48,25 @@ $result_tree_text{'all_commands'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {c--ategory}
+       {normal_text:c--ategory}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {n--ame}
+       {normal_text:n--ame}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {a--rguments...}
+       {normal_text:a--rguments...}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {d--effn\\n}
+     {normal_text:d--effn\\n}
    *@end C1 l7
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
-     {deffn}
+     {normal_text:deffn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deffn C3 l9
@@ -79,21 +79,21 @@ $result_tree_text{'all_commands'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {c--ategory}
+       {normal_text:c--ategory}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {n--ame}
+       {normal_text:n--ame}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {d--effn no arg\\n}
+     {normal_text:d--effn no arg\\n}
    *@end C1 l11
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
-     {deffn}
+     {normal_text:deffn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypefn C3 l13
@@ -106,29 +106,29 @@ $result_tree_text{'all_commands'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {c--ategory}
+       {normal_text:c--ategory}
      {spaces: }
      *def_type C1
       *def_line_arg C1
-       {t--ype}
+       {normal_text:t--ype}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {d--eftypefn_name}
+       {normal_text:d--eftypefn_name}
      {spaces: }
      *def_typearg C1
       *def_line_arg C1
-       {a--rguments...}
+       {normal_text:a--rguments...}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {d--eftypefn\\n}
+     {normal_text:d--eftypefn\\n}
    *@end C1 l15
    |EXTRA
    |text_arg:{deftypefn}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypefn}
+     {normal_text:deftypefn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypefn C3 l17
@@ -141,25 +141,25 @@ $result_tree_text{'all_commands'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {c--ategory}
+       {normal_text:c--ategory}
      {spaces: }
      *def_type C1
       *def_line_arg C1
-       {t--ype}
+       {normal_text:t--ype}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {d--eftypefn_name}
+       {normal_text:d--eftypefn_name}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {d--eftypefn no arg\\n}
+     {normal_text:d--eftypefn no arg\\n}
    *@end C1 l19
    |EXTRA
    |text_arg:{deftypefn}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypefn}
+     {normal_text:deftypefn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypeop C3 l21
@@ -172,33 +172,33 @@ $result_tree_text{'all_commands'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {c--ategory}
+       {normal_text:c--ategory}
      {spaces: }
      *def_class C1
       *def_line_arg C1
-       {c--lass}
+       {normal_text:c--lass}
      {spaces: }
      *def_type C1
       *def_line_arg C1
-       {t--ype}
+       {normal_text:t--ype}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {d--eftypeop_name}
+       {normal_text:d--eftypeop_name}
      {spaces: }
      *def_typearg C1
       *def_line_arg C1
-       {a--rguments...}
+       {normal_text:a--rguments...}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {d--eftypeop\\n}
+     {normal_text:d--eftypeop\\n}
    *@end C1 l23
    |EXTRA
    |text_arg:{deftypeop}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypeop}
+     {normal_text:deftypeop}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypeop C3 l25
@@ -211,29 +211,29 @@ $result_tree_text{'all_commands'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {c--ategory}
+       {normal_text:c--ategory}
      {spaces: }
      *def_class C1
       *def_line_arg C1
-       {c--lass}
+       {normal_text:c--lass}
      {spaces: }
      *def_type C1
       *def_line_arg C1
-       {t--ype}
+       {normal_text:t--ype}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {d--eftypeop_name}
+       {normal_text:d--eftypeop_name}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {d--eftypeop no arg\\n}
+     {normal_text:d--eftypeop no arg\\n}
    *@end C1 l27
    |EXTRA
    |text_arg:{deftypeop}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypeop}
+     {normal_text:deftypeop}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypevr C3 l29
@@ -246,25 +246,25 @@ $result_tree_text{'all_commands'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {c--ategory}
+       {normal_text:c--ategory}
      {spaces: }
      *def_type C1
       *def_line_arg C1
-       {t--ype}
+       {normal_text:t--ype}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {d--eftypevr_name}
+       {normal_text:d--eftypevr_name}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {d--eftypevr\\n}
+     {normal_text:d--eftypevr\\n}
    *@end C1 l31
    |EXTRA
    |text_arg:{deftypevr}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypevr}
+     {normal_text:deftypevr}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@defcv C3 l33
@@ -277,25 +277,25 @@ $result_tree_text{'all_commands'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {c--ategory}
+       {normal_text:c--ategory}
      {spaces: }
      *def_class C1
       *def_line_arg C1
-       {c--lass}
+       {normal_text:c--lass}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {d--efcv_name}
+       {normal_text:d--efcv_name}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {d--efcv\\n}
+     {normal_text:d--efcv\\n}
    *@end C1 l35
    |EXTRA
    |text_arg:{defcv}
     *line_arg C3
      {spaces_before_argument: }
-     {defcv}
+     {normal_text:defcv}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@defcv C3 l37
@@ -308,29 +308,29 @@ $result_tree_text{'all_commands'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {c--ategory}
+       {normal_text:c--ategory}
      {spaces: }
      *def_class C1
       *def_line_arg C1
-       {c--lass}
+       {normal_text:c--lass}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {d--efcv_name}
+       {normal_text:d--efcv_name}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {a--rguments...}
+       {normal_text:a--rguments...}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {d--efcv with arguments\\n}
+     {normal_text:d--efcv with arguments\\n}
    *@end C1 l39
    |EXTRA
    |text_arg:{defcv}
     *line_arg C3
      {spaces_before_argument: }
-     {defcv}
+     {normal_text:defcv}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypecv C3 l41
@@ -343,29 +343,29 @@ $result_tree_text{'all_commands'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {c--ategory}
+       {normal_text:c--ategory}
      {spaces: }
      *def_class C1
       *def_line_arg C1
-       {c--lass}
+       {normal_text:c--lass}
      {spaces: }
      *def_type C1
       *def_line_arg C1
-       {t--ype}
+       {normal_text:t--ype}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {d--eftypecv_name}
+       {normal_text:d--eftypecv_name}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {d--eftypecv\\n}
+     {normal_text:d--eftypecv\\n}
    *@end C1 l43
    |EXTRA
    |text_arg:{deftypecv}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypecv}
+     {normal_text:deftypecv}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypecv C3 l45
@@ -378,33 +378,33 @@ $result_tree_text{'all_commands'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {c--ategory}
+       {normal_text:c--ategory}
      {spaces: }
      *def_class C1
       *def_line_arg C1
-       {c--lass}
+       {normal_text:c--lass}
      {spaces: }
      *def_type C1
       *def_line_arg C1
-       {t--ype}
+       {normal_text:t--ype}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {d--eftypecv_name}
+       {normal_text:d--eftypecv_name}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {a--rguments...}
+       {normal_text:a--rguments...}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {d--eftypecv with arguments\\n}
+     {normal_text:d--eftypecv with arguments\\n}
    *@end C1 l47
    |EXTRA
    |text_arg:{deftypecv}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypecv}
+     {normal_text:deftypecv}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@defop C3 l49
@@ -417,29 +417,29 @@ $result_tree_text{'all_commands'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {c--ategory}
+       {normal_text:c--ategory}
      {spaces: }
      *def_class C1
       *def_line_arg C1
-       {c--lass}
+       {normal_text:c--lass}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {d--efop_name}
+       {normal_text:d--efop_name}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {a--rguments...}
+       {normal_text:a--rguments...}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {d--efop\\n}
+     {normal_text:d--efop\\n}
    *@end C1 l51
    |EXTRA
    |text_arg:{defop}
     *line_arg C3
      {spaces_before_argument: }
-     {defop}
+     {normal_text:defop}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@defop C3 l53
@@ -452,25 +452,25 @@ $result_tree_text{'all_commands'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {c--ategory}
+       {normal_text:c--ategory}
      {spaces: }
      *def_class C1
       *def_line_arg C1
-       {c--lass}
+       {normal_text:c--lass}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {d--efop_name}
+       {normal_text:d--efop_name}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {d--efop no arg\\n}
+     {normal_text:d--efop no arg\\n}
    *@end C1 l55
    |EXTRA
    |text_arg:{defop}
     *line_arg C3
      {spaces_before_argument: }
-     {defop}
+     {normal_text:defop}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftp C3 l57
@@ -483,25 +483,25 @@ $result_tree_text{'all_commands'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {c--ategory}
+       {normal_text:c--ategory}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {d--eftp_name}
+       {normal_text:d--eftp_name}
      {spaces: }
      *def_typearg C1
       *def_line_arg C1
-       {a--ttributes...}
+       {normal_text:a--ttributes...}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {d--eftp\\n}
+     {normal_text:d--eftp\\n}
    *@end C1 l59
    |EXTRA
    |text_arg:{deftp}
     *line_arg C3
      {spaces_before_argument: }
-     {deftp}
+     {normal_text:deftp}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@defun C3 l61
@@ -516,25 +516,25 @@ $result_tree_text{'all_commands'} = '*document_root C1
      |EXTRA
      |inserted:{1}
       *def_line_arg C1
-       {Function}
+       {normal_text:Function}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {d--efun_name}
+       {normal_text:d--efun_name}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {a--rguments...}
+       {normal_text:a--rguments...}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {d--efun\\n}
+     {normal_text:d--efun\\n}
    *@end C1 l63
    |EXTRA
    |text_arg:{defun}
     *line_arg C3
      {spaces_before_argument: }
-     {defun}
+     {normal_text:defun}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@defmac C3 l65
@@ -549,25 +549,25 @@ $result_tree_text{'all_commands'} = '*document_root C1
      |EXTRA
      |inserted:{1}
       *def_line_arg C1
-       {Macro}
+       {normal_text:Macro}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {d--efmac_name}
+       {normal_text:d--efmac_name}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {a--rguments...}
+       {normal_text:a--rguments...}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {d--efmac\\n}
+     {normal_text:d--efmac\\n}
    *@end C1 l67
    |EXTRA
    |text_arg:{defmac}
     *line_arg C3
      {spaces_before_argument: }
-     {defmac}
+     {normal_text:defmac}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@defspec C3 l69
@@ -582,25 +582,25 @@ $result_tree_text{'all_commands'} = '*document_root C1
      |EXTRA
      |inserted:{1}
       *def_line_arg C1
-       {Special Form}
+       {normal_text:Special Form}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {d--efspec_name}
+       {normal_text:d--efspec_name}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {a--rguments...}
+       {normal_text:a--rguments...}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {d--efspec\\n}
+     {normal_text:d--efspec\\n}
    *@end C1 l71
    |EXTRA
    |text_arg:{defspec}
     *line_arg C3
      {spaces_before_argument: }
-     {defspec}
+     {normal_text:defspec}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@defvar C3 l73
@@ -615,21 +615,21 @@ $result_tree_text{'all_commands'} = '*document_root C1
      |EXTRA
      |inserted:{1}
       *def_line_arg C1
-       {Variable}
+       {normal_text:Variable}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {d--efvar_name}
+       {normal_text:d--efvar_name}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {d--efvar\\n}
+     {normal_text:d--efvar\\n}
    *@end C1 l75
    |EXTRA
    |text_arg:{defvar}
     *line_arg C3
      {spaces_before_argument: }
-     {defvar}
+     {normal_text:defvar}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@defvar C3 l77
@@ -644,29 +644,29 @@ $result_tree_text{'all_commands'} = '*document_root C1
      |EXTRA
      |inserted:{1}
       *def_line_arg C1
-       {Variable}
+       {normal_text:Variable}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {d--efvar_name}
+       {normal_text:d--efvar_name}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {arg--var}
+       {normal_text:arg--var}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {arg--var1}
+       {normal_text:arg--var1}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {d--efvar with args\\n}
+     {normal_text:d--efvar with args\\n}
    *@end C1 l79
    |EXTRA
    |text_arg:{defvar}
     *line_arg C3
      {spaces_before_argument: }
-     {defvar}
+     {normal_text:defvar}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@defopt C3 l81
@@ -681,21 +681,21 @@ $result_tree_text{'all_commands'} = '*document_root C1
      |EXTRA
      |inserted:{1}
       *def_line_arg C1
-       {User Option}
+       {normal_text:User Option}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {d--efopt_name}
+       {normal_text:d--efopt_name}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {d--efopt\\n}
+     {normal_text:d--efopt\\n}
    *@end C1 l83
    |EXTRA
    |text_arg:{defopt}
     *line_arg C3
      {spaces_before_argument: }
-     {defopt}
+     {normal_text:defopt}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypefun C3 l85
@@ -710,29 +710,29 @@ $result_tree_text{'all_commands'} = '*document_root C1
      |EXTRA
      |inserted:{1}
       *def_line_arg C1
-       {Function}
+       {normal_text:Function}
      {spaces: }
      *def_type C1
       *def_line_arg C1
-       {t--ype}
+       {normal_text:t--ype}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {d--eftypefun_name}
+       {normal_text:d--eftypefun_name}
      {spaces: }
      *def_typearg C1
       *def_line_arg C1
-       {a--rguments...}
+       {normal_text:a--rguments...}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {d--eftypefun\\n}
+     {normal_text:d--eftypefun\\n}
    *@end C1 l87
    |EXTRA
    |text_arg:{deftypefun}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypefun}
+     {normal_text:deftypefun}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypevar C3 l89
@@ -747,25 +747,25 @@ $result_tree_text{'all_commands'} = '*document_root C1
      |EXTRA
      |inserted:{1}
       *def_line_arg C1
-       {Variable}
+       {normal_text:Variable}
      {spaces: }
      *def_type C1
       *def_line_arg C1
-       {t--ype}
+       {normal_text:t--ype}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {d--eftypevar_name}
+       {normal_text:d--eftypevar_name}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {d--eftypevar\\n}
+     {normal_text:d--eftypevar\\n}
    *@end C1 l91
    |EXTRA
    |text_arg:{deftypevar}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypevar}
+     {normal_text:deftypevar}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@defivar C3 l93
@@ -780,25 +780,25 @@ $result_tree_text{'all_commands'} = '*document_root C1
      |EXTRA
      |inserted:{1}
       *def_line_arg C1
-       {Instance Variable}
+       {normal_text:Instance Variable}
      {spaces: }
      *def_class C1
       *def_line_arg C1
-       {c--lass}
+       {normal_text:c--lass}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {d--efivar_name}
+       {normal_text:d--efivar_name}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {d--efivar\\n}
+     {normal_text:d--efivar\\n}
    *@end C1 l95
    |EXTRA
    |text_arg:{defivar}
     *line_arg C3
      {spaces_before_argument: }
-     {defivar}
+     {normal_text:defivar}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypeivar C3 l97
@@ -813,29 +813,29 @@ $result_tree_text{'all_commands'} = '*document_root C1
      |EXTRA
      |inserted:{1}
       *def_line_arg C1
-       {Instance Variable}
+       {normal_text:Instance Variable}
      {spaces: }
      *def_class C1
       *def_line_arg C1
-       {c--lass}
+       {normal_text:c--lass}
      {spaces: }
      *def_type C1
       *def_line_arg C1
-       {t--ype}
+       {normal_text:t--ype}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {d--eftypeivar_name}
+       {normal_text:d--eftypeivar_name}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {d--eftypeivar\\n}
+     {normal_text:d--eftypeivar\\n}
    *@end C1 l99
    |EXTRA
    |text_arg:{deftypeivar}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypeivar}
+     {normal_text:deftypeivar}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@defmethod C3 l101
@@ -850,29 +850,29 @@ $result_tree_text{'all_commands'} = '*document_root C1
      |EXTRA
      |inserted:{1}
       *def_line_arg C1
-       {Method}
+       {normal_text:Method}
      {spaces: }
      *def_class C1
       *def_line_arg C1
-       {c--lass}
+       {normal_text:c--lass}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {d--efmethod_name}
+       {normal_text:d--efmethod_name}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {a--rguments...}
+       {normal_text:a--rguments...}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {d--efmethod\\n}
+     {normal_text:d--efmethod\\n}
    *@end C1 l103
    |EXTRA
    |text_arg:{defmethod}
     *line_arg C3
      {spaces_before_argument: }
-     {defmethod}
+     {normal_text:defmethod}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deftypemethod C3 l105
@@ -887,33 +887,33 @@ $result_tree_text{'all_commands'} = '*document_root C1
      |EXTRA
      |inserted:{1}
       *def_line_arg C1
-       {Method}
+       {normal_text:Method}
      {spaces: }
      *def_class C1
       *def_line_arg C1
-       {c--lass}
+       {normal_text:c--lass}
      {spaces: }
      *def_type C1
       *def_line_arg C1
-       {t--ype}
+       {normal_text:t--ype}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {d--eftypemethod_name}
+       {normal_text:d--eftypemethod_name}
      {spaces: }
      *def_typearg C1
       *def_line_arg C1
-       {a--rguments...}
+       {normal_text:a--rguments...}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {d--eftypemethod\\n}
+     {normal_text:d--eftypemethod\\n}
    *@end C1 l107
    |EXTRA
    |text_arg:{deftypemethod}
     *line_arg C3
      {spaces_before_argument: }
-     {deftypemethod}
+     {normal_text:deftypemethod}
      {spaces_after_argument:\\n}
 ';
 

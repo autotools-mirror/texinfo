@@ -12,15 +12,15 @@ $result_tree_text{'end_of_line_in_uref'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *paragraph C3
-   {See the }
+   {normal_text:See the }
    *@uref C2 l1
     *brace_arg C2
-     {https://gcc.gnu.org/codingconventions.html#Spelling\\n}
-     {Spelling}
+     {normal_text:https://gcc.gnu.org/codingconventions.html#Spelling\\n}
+     {normal_text:Spelling}
     *brace_arg C2
      {spaces_before_argument: }
-     {terminology and markup}
-   { section.}
+     {normal_text:terminology and markup}
+   {normal_text: section.}
 ';
 
 

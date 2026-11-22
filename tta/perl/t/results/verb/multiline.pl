@@ -19,7 +19,7 @@ $result_tree_text{'multiline'} = '*document_root C1
      {raw:qdsqsddqsdsq\\n}
      {raw:\\n}
      {verb_delimiter:@}
-   {after verb.}
+   {normal_text:after verb.}
 ';
 
 

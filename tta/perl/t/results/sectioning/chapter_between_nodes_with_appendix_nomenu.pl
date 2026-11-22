@@ -19,7 +19,7 @@ $result_tree_text{'chapter_between_nodes_with_appendix_nomenu'} = '*document_roo
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C1 l2 {top section}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'chapter_between_nodes_with_appendix_nomenu'} = '*document_roo
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top section}
+    {normal_text:top section}
     {spaces_after_argument:\\n}
  *@chapter C5 l3 {Main}
  |EXTRA
@@ -40,10 +40,10 @@ $result_tree_text{'chapter_between_nodes_with_appendix_nomenu'} = '*document_roo
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Main}
+    {normal_text:Main}
     {spaces_after_argument:\\n}
   *paragraph C1
-   {Top node\\n}
+   {normal_text:Top node\\n}
   {empty_line:\\n}
   *@menu C3 l6
    *arguments_line C1
@@ -55,17 +55,17 @@ $result_tree_text{'chapter_between_nodes_with_appendix_nomenu'} = '*document_roo
     |EXTRA
     |node_content:A{0|0}
     |normalized:{Additional}
-     {Additional}
+     {normal_text:Additional}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l8
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l10 {Additional}
@@ -76,7 +76,7 @@ $result_tree_text{'chapter_between_nodes_with_appendix_nomenu'} = '*document_roo
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Additional}
+    {normal_text:Additional}
     {spaces_after_argument:\\n}
  *@appendix C1 l11 {Annex}
  |EXTRA
@@ -86,7 +86,7 @@ $result_tree_text{'chapter_between_nodes_with_appendix_nomenu'} = '*document_roo
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Annex}
+    {normal_text:Annex}
     {spaces_after_argument:\\n}
 ';
 

@@ -16,7 +16,7 @@ $result_tree_text{'definfoenclose_no_braces'} = '*document_root C1
    |misc_args:A{phoo|;|:}
     *line_arg C3
      {spaces_before_argument: }
-     {phoo,;,:}
+     {normal_text:phoo,;,:}
      {spaces_after_argument:\\n}
   *paragraph C1
    *definfoenclose_command@phoo l2

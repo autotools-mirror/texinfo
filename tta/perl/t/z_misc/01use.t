@@ -27,26 +27,29 @@ my $manual_tree =
                                         'text' => ' '}),
              Texinfo::TreeElement::new({ 'type' => 'bracketed_arg',
                'contents' => [
-                               Texinfo::TreeElement::new({'text' => 'aaaa'}),
+                               Texinfo::TreeElement::new({'text' => 'aaaa',
+                                                          'type' => 'normal_text'}),
                             ]
              }),
-             Texinfo::TreeElement::new({ 'text' => ' ' }),
+             Texinfo::TreeElement::new({ 'text' => ' ', 'type' => 'normal_text'}),
              Texinfo::TreeElement::new({ 'type' => 'bracketed_arg',
                'contents' => [
-                               Texinfo::TreeElement::new({'text' => 'xx'}),
+                               Texinfo::TreeElement::new({'text' => 'xx',
+                                                   'type' => 'normal_text'}),
                                Texinfo::TreeElement::new({'cmdname' => 'b',
                                 'contents' => [
                                       Texinfo::TreeElement::new({
                                               'type' => 'brace_container',
                                               'contents' => [
-                                  Texinfo::TreeElement::new({ 'text' => 'rr' })
+                                  Texinfo::TreeElement::new({ 'text' => 'rr',
+                                                              'type' => 'normal_text' })
                                                          ]
                                             })
                                           ]
                                })
                             ]
              }),
-             Texinfo::TreeElement::new({'text' => ' ccc'}),
+             Texinfo::TreeElement::new({'text' => ' ccc', 'type' => 'normal_text'}),
              Texinfo::TreeElement::new({'type' => 'spaces_after_argument',
                                         'text' => '
 '
@@ -58,7 +61,8 @@ my $manual_tree =
              'contents' => [
                              Texinfo::TreeElement::new({ 'type' => 'paragraph',
                                'contents' => [
-                             Texinfo::TreeElement::new({ 'text' => 'title' }),
+                             Texinfo::TreeElement::new({ 'text' => 'title',
+                                                        'type' => 'normal_text' }),
                              Texinfo::TreeElement::new({ 'cmdname' => 'verb',
                                                   'contents' => [
                                                     Texinfo::TreeElement::new({
@@ -75,7 +79,8 @@ my $manual_tree =
                                                             }) ],
                                                 }),
                              Texinfo::TreeElement::new({ 'cmdname' => '@'}),
-                             Texinfo::TreeElement::new({ 'text' => ".\n"}),
+                             Texinfo::TreeElement::new({ 'text' => ".\n",
+                                                     'type' => 'normal_text'}),
                                              ]
                              })
                            ]
@@ -91,7 +96,8 @@ my $manual_tree =
                                                  'cmdname' => 'item',
                                                  'extra' => {'cell_number' => 1,},
                                                  'contents' => [
-                                   Texinfo::TreeElement::new({'text' => " \n" }) ]
+                                   Texinfo::TreeElement::new({'text' => " \n",
+                                                     'type' => 'normal_text' }) ]
                                                })
                                              ]
                              }),
@@ -109,7 +115,7 @@ my $manual_tree =
                     Texinfo::TreeElement::new({'type' => 'spaces_before_argument',
                                                'text' => ' '}),
                     Texinfo::TreeElement::new({
-                      'text' => 'multitable'
+                      'text' => 'multitable', 'type' => 'normal_text'
                     }),
                     Texinfo::TreeElement::new({'type' => 'spaces_after_argument',
                                                'text' => '

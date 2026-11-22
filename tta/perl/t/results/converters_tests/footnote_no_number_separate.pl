@@ -19,7 +19,7 @@ $result_tree_text{'footnote_no_number_separate'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l2 {top}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'footnote_no_number_separate'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l4 {chap}
@@ -39,7 +39,7 @@ $result_tree_text{'footnote_no_number_separate'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
  *@chapter C5 l5 {Chapter}
  |EXTRA
@@ -49,28 +49,28 @@ $result_tree_text{'footnote_no_number_separate'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chapter}
+    {normal_text:Chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C3
-   {Para}
+   {normal_text:Para}
    *@footnote C1 l7
    |EXTRA
    |global_command_number:{1}
     *brace_command_context C1
      *paragraph C1
-      {Footnote 1.}
-   {.\\n}
+      {normal_text:Footnote 1.}
+   {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C3
-   {Para2}
+   {normal_text:Para2}
    *@footnote C1 l9
    |EXTRA
    |global_command_number:{2}
     *brace_command_context C1
      *paragraph C1
-      {Footnote 2.}
-   {.\\n}
+      {normal_text:Footnote 2.}
+   {normal_text:.\\n}
 ';
 
 

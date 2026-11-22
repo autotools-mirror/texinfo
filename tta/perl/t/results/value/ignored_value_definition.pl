@@ -24,18 +24,18 @@ $result_tree_text{'ignored_value_definition'} = '*document_root C1
    |EXTRA
    |format:{tex}
     *brace_arg C1
-     {tex}
+     {normal_text:tex}
     *elided_brace_command_arg C1
      {raw:\\n@set aa in inlinefmt tex\\n}
-   {\\n}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {outside.\\n}
+   {normal_text:outside.\\n}
    >SOURCEMARKS
    >value_expansion<start;1>{outside}
     >*@value C1
      >*brace_container C1
-      >{aa}
+      >{normal_text:aa}
    >value_expansion<end;1><p:7>
 ';
 

@@ -34,14 +34,14 @@ $result_tree_text{'set_on_item_line'} = '*document_root C1
            {spaces_after_argument:\\n}
     *table_definition C1
      *paragraph C2
-      {item text\\n}
-      {in item\\n}
+      {normal_text:item text\\n}
+      {normal_text:in item\\n}
    *table_entry C2
     *table_term C1
      *@item C1 l5
       *line_arg C3
        {spaces_before_argument: }
-       {cjj }
+       {normal_text:cjj }
        *@set C1
        |EXTRA
        |misc_args:A{cj|}
@@ -54,13 +54,13 @@ $result_tree_text{'set_on_item_line'} = '*document_root C1
            {spaces_after_argument:\\n}
     *table_definition C1
      *paragraph C1
-      {line\\n}
+      {normal_text:line\\n}
    *table_entry C1
     *table_term C1
      *@item C1 l7
       *line_arg C3
        {spaces_before_argument: }
-       {cvvv }
+       {normal_text:cvvv }
        *@set C1
        |EXTRA
        |misc_args:A{cg|}
@@ -76,7 +76,7 @@ $result_tree_text{'set_on_item_line'} = '*document_root C1
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
-     {table}
+     {normal_text:table}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@table C5 l10
@@ -99,14 +99,14 @@ $result_tree_text{'set_on_item_line'} = '*document_root C1
          {spaces_after_argument:\\n}
     *table_definition C1
      *paragraph C2
-      {item text\\n}
-      {in item\\n}
+      {normal_text:item text\\n}
+      {normal_text:in item\\n}
    *table_entry C2
     *table_term C1
      *@item C1 l14
       *line_arg C3
        {spaces_before_argument: }
-       {jj }
+       {normal_text:jj }
        *@set C1
        |EXTRA
        |misc_args:A{j|}
@@ -116,13 +116,13 @@ $result_tree_text{'set_on_item_line'} = '*document_root C1
          {spaces_after_argument:\\n}
     *table_definition C1
      *paragraph C1
-      {line\\n}
+      {normal_text:line\\n}
    *table_entry C1
     *table_term C1
      *@item C1 l16
       *line_arg C3
        {spaces_before_argument: }
-       {vvv }
+       {normal_text:vvv }
        *@set C1
        |EXTRA
        |misc_args:A{g|}
@@ -135,7 +135,7 @@ $result_tree_text{'set_on_item_line'} = '*document_root C1
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
-     {table}
+     {normal_text:table}
      {spaces_after_argument:\\n}
 ';
 

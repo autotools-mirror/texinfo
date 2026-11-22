@@ -18,11 +18,11 @@ $result_tree_text{'empty_lines_at_beginning_no_setfilename_no_element'} = '*docu
   *@center C1 empty_lines_at_beginning_no_setfilename_no_element.texi:l4
    *line_arg C3
     {spaces_before_argument: }
-    {centered}
+    {normal_text:centered}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {Some text.\\n}
+   {normal_text:Some text.\\n}
   {empty_line:\\n}
  *@bye C1
   *line_arg C1

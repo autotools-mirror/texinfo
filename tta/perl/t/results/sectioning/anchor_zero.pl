@@ -19,7 +19,7 @@ $result_tree_text{'anchor_zero'} = '*document_root C2
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@anchor C1 l3
@@ -27,9 +27,9 @@ $result_tree_text{'anchor_zero'} = '*document_root C2
   |identifier:{0}
   |is_target:{1}
    *brace_arg C1
-    {0}
+    {normal_text:0}
   *paragraph C1
-   {.\\n}
+   {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C2
    *@xref C1 l5
@@ -37,8 +37,8 @@ $result_tree_text{'anchor_zero'} = '*document_root C2
     |EXTRA
     |node_content:A{0|0}
     |normalized:{0}
-     {0}
-   {.\\n}
+     {normal_text:0}
+   {normal_text:.\\n}
 ';
 
 

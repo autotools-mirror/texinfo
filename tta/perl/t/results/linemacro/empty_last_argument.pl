@@ -16,7 +16,7 @@ $result_tree_text{'empty_last_argument'} = '*document_root C1
    |misc_args:A{BI}
     *line_arg C3
      {spaces_before_argument: }
-     {BI}
+     {normal_text:BI}
      {spaces_after_argument:\\n}
    *@linemacro C4 l2
    |EXTRA
@@ -31,7 +31,7 @@ $result_tree_text{'empty_last_argument'} = '*document_root C1
     |text_arg:{linemacro}
      *line_arg C3
       {spaces_before_argument: }
-      {linemacro}
+      {normal_text:linemacro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *@defblock C8 l7
@@ -53,7 +53,7 @@ $result_tree_text{'empty_last_argument'} = '*document_root C1
     |index_entry:I{BI,1}
      *line_arg C3
       {spaces_before_argument: }
-      {foo}
+      {normal_text:foo}
       {spaces_after_argument:\\n}
    *@defline C1 l8:@defbuiltin
    |EXTRA
@@ -63,11 +63,11 @@ $result_tree_text{'empty_last_argument'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {Builtin}
+       {normal_text:Builtin}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {foo}
+       {normal_text:foo}
      {spaces_after_argument: \\n}
      >SOURCEMARKS
      >linemacro_expansion<end;1><p:1>
@@ -84,7 +84,7 @@ $result_tree_text{'empty_last_argument'} = '*document_root C1
     |index_entry:I{BI,2}
      *line_arg C3
       {spaces_before_argument: }
-      {foo}
+      {normal_text:foo}
       {spaces_after_argument:\\n}
    *@defline C1 l10:@defbuiltin
    |EXTRA
@@ -94,11 +94,11 @@ $result_tree_text{'empty_last_argument'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {Builtin}
+       {normal_text:Builtin}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {foo}
+       {normal_text:foo}
      {spaces_after_argument: \\n}
      >SOURCEMARKS
      >linemacro_expansion<end;2><p:1>
@@ -118,7 +118,7 @@ $result_tree_text{'empty_last_argument'} = '*document_root C1
     |index_entry:I{BI,3}
      *line_arg C3
       {spaces_before_argument: }
-      {foo}
+      {normal_text:foo}
       {spaces_after_argument:\\n}
    *@defline C1 l12:@defbuiltin
    |EXTRA
@@ -128,11 +128,11 @@ $result_tree_text{'empty_last_argument'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {Builtin}
+       {normal_text:Builtin}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {foo}
+       {normal_text:foo}
      {spaces: }
      *def_arg C1
       *bracketed_arg l12:@defbuiltin
@@ -144,7 +144,7 @@ $result_tree_text{'empty_last_argument'} = '*document_root C1
    |text_arg:{defblock}
     *line_arg C3
      {spaces_before_argument: }
-     {defblock}
+     {normal_text:defblock}
      {spaces_after_argument:\\n}
 ';
 

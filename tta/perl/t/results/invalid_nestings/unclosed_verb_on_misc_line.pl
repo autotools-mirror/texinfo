@@ -16,7 +16,7 @@ $result_tree_text{'unclosed_verb_on_misc_line'} = '*document_root C1
    |text_arg:{name }
     *line_arg C3
      {spaces_before_argument: }
-     {name }
+     {normal_text:name }
      *@verb C1 l1
       *brace_container C3
        {verb_delimiter:f}

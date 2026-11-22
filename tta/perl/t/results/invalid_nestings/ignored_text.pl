@@ -19,7 +19,7 @@ $result_tree_text{'ignored_text'} = '*document_root C2
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {before ignore}
+    {normal_text:before ignore}
     {spaces_after_argument: }
     >SOURCEMARKS
     >ignored_conditional_block<1><p:1>
@@ -28,7 +28,7 @@ $result_tree_text{'ignored_text'} = '*document_root C2
        >*block_line_arg C1
         >{spaces_before_argument:\\n}
   *paragraph C1
-   {in ifinfo\\n}
+   {normal_text:in ifinfo\\n}
 ';
 
 

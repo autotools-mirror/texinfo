@@ -19,7 +19,7 @@ $result_tree_text{'node_up_direction_for_top_with_manual'} = '*document_root C2
   *arguments_line C4
    *line_arg C2
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
    *line_arg
    *line_arg
    *line_arg C5
@@ -27,10 +27,10 @@ $result_tree_text{'node_up_direction_for_top_with_manual'} = '*document_root C2
    |manual_content:A{1|1}
    |node_content:A{3|3}
    |normalized:{Top}
-    {(}
-    {dir}
-    {)}
-    {top}
+    {normal_text:(}
+    {normal_text:dir}
+    {normal_text:)}
+    {normal_text:top}
     {spaces_after_argument:\\n}
 ';
 

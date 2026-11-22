@@ -19,7 +19,7 @@ $result_tree_text{'omit_def_space'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C5 l3 {chap}
@@ -30,7 +30,7 @@ $result_tree_text{'omit_def_space'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@set C1
@@ -55,21 +55,21 @@ $result_tree_text{'omit_def_space'} = '*document_root C3
      |EXTRA
      |inserted:{1}
       *def_line_arg C1
-       {Function}
+       {normal_text:Function}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {function}
+       {normal_text:function}
      {spaces: }
      {delimiter:(}
      *def_arg C1
       *def_line_arg C1
-       {arg1}
+       {normal_text:arg1}
      {delimiter:,}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {arg2}
+       {normal_text:arg2}
      {delimiter:)}
      {spaces_after_argument:\\n}
    *@defunx C1 l8
@@ -85,27 +85,27 @@ $result_tree_text{'omit_def_space'} = '*document_root C3
      |EXTRA
      |inserted:{1}
       *def_line_arg C1
-       {Function}
+       {normal_text:Function}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {another}
+       {normal_text:another}
      {spaces: }
      {delimiter:(}
      *def_arg C1
       *def_line_arg C1
-       {aarg}
+       {normal_text:aarg}
      {delimiter:)}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {explain\\n}
+     {normal_text:explain\\n}
    *@end C1 l10
    |EXTRA
    |text_arg:{defun}
     *line_arg C3
      {spaces_before_argument: }
-     {defun}
+     {normal_text:defun}
      {spaces_after_argument:\\n}
 ';
 

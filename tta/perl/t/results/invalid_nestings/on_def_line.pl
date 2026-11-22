@@ -26,7 +26,7 @@ $result_tree_text{'on_def_line'} = '*document_root C1
        |identifier:{in-anchor}
        |is_target:{1}
         *brace_arg C1
-         {in anchor}
+         {normal_text:in anchor}
      {spaces: }
      *def_name C1
       *def_line_arg C1
@@ -34,7 +34,7 @@ $result_tree_text{'on_def_line'} = '*document_root C1
        |EXTRA
        |global_command_number:{1}
         *brace_container C1
-         {in titlefont}
+         {normal_text:in titlefont}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
@@ -43,14 +43,14 @@ $result_tree_text{'on_def_line'} = '*document_root C1
        |global_command_number:{1}
         *brace_command_context C1
          *paragraph C1
-          {footnote}
+          {normal_text:footnote}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@exdent C1 l1
         *line_arg C3
          {spaces_before_argument: }
-         {exdent}
+         {normal_text:exdent}
          {spaces_after_argument:\\n}
    *@deffnx C1 l2
    |EXTRA
@@ -66,7 +66,7 @@ $result_tree_text{'on_def_line'} = '*document_root C1
        |identifier:{in-anchorx}
        |is_target:{1}
         *brace_arg C1
-         {in anchorx}
+         {normal_text:in anchorx}
      {spaces: }
      *def_name C1
       *def_line_arg C1
@@ -74,7 +74,7 @@ $result_tree_text{'on_def_line'} = '*document_root C1
        |EXTRA
        |global_command_number:{2}
         *brace_container C1
-         {in titlefontx}
+         {normal_text:in titlefontx}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
@@ -83,21 +83,21 @@ $result_tree_text{'on_def_line'} = '*document_root C1
        |global_command_number:{2}
         *brace_command_context C1
          *paragraph C1
-          {footnotex}
+          {normal_text:footnotex}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@exdent C1 l2
         *line_arg C3
          {spaces_before_argument: }
-         {exdentx}
+         {normal_text:exdentx}
          {spaces_after_argument:\\n}
    *@end C1 l3
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
-     {deffn}
+     {normal_text:deffn}
      {spaces_after_argument:\\n}
 ';
 

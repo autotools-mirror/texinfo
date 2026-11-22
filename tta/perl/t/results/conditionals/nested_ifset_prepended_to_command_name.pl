@@ -11,14 +11,14 @@ use Encode;
 $result_tree_text{'nested_ifset_prepended_to_command_name'} = '*document_root C1
  *before_node_section C1
   *preamble_before_content C1
-   {}
+   {normal_text:}
    >SOURCEMARKS
    >ignored_conditional_block<1>
     >*@ifset C4 l1
      >*arguments_line C1
       >*block_line_arg C3
        >{spaces_before_argument: }
-       >{a}
+       >{normal_text:a}
        >{spaces_after_argument:\\n}
      >{raw:@ifsettoto b\\n}
      >{raw:GG\\n}
@@ -27,7 +27,7 @@ $result_tree_text{'nested_ifset_prepended_to_command_name'} = '*document_root C1
      >|text_arg:{ifset}
       >*line_arg C3
        >{spaces_before_argument: }
-       >{ifset}
+       >{normal_text:ifset}
        >{spaces_after_argument:\\n}
 ';
 

@@ -20,7 +20,7 @@ $result_tree_text{'test_fill_gaps_in_sectioning'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@chapter C2 l3 {Chap}
@@ -33,7 +33,7 @@ $result_tree_text{'test_fill_gaps_in_sectioning'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chap}
+    {normal_text:Chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@section C2 l5 {Section}
@@ -46,7 +46,7 @@ $result_tree_text{'test_fill_gaps_in_sectioning'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Section}
+    {normal_text:Section}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@unnumberedsubsec C2 {@asis{}}
@@ -69,7 +69,7 @@ $result_tree_text{'test_fill_gaps_in_sectioning'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {There}
+    {normal_text:There}
     {spaces_after_argument:\\n}
 ';
 

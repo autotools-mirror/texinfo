@@ -14,14 +14,14 @@ $result_tree_text{'unmatched_brace'} = '*document_root C1
   *paragraph C4
    *@samp C1 l1
     *brace_container C1
-     {Closing}
-   { }
+     {normal_text:Closing}
+   {normal_text: }
    *@samp C1 l1
     *brace_container C3
-     { }
+     {normal_text: }
      *@}
-     { without opening macro }
-   {.}
+     {normal_text: without opening macro }
+   {normal_text:.}
 ';
 
 

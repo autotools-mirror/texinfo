@@ -23,13 +23,13 @@ $result_tree_text{'example_empty_arguments'} = '*document_root C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C1
-    {example with empty args\\n}
+    {normal_text:example with empty args\\n}
    *@end C1 l3
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@example C3 l5
@@ -46,13 +46,13 @@ $result_tree_text{'example_empty_arguments'} = '*document_root C1
     *block_line_arg C1
      {spaces_before_argument: \\n}
    *preformatted C1
-    {example with empty args with spaces\\n}
+    {normal_text:example with empty args with spaces\\n}
    *@end C1 l7
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@example C3 l9
@@ -62,19 +62,19 @@ $result_tree_text{'example_empty_arguments'} = '*document_root C1
     *block_line_arg
     *block_line_arg
     *block_line_arg C1
-     {nonempty}
+     {normal_text:nonempty}
     *block_line_arg
     *block_line_arg
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C1
-    {example with empty and non empty args mix\\n}
+    {normal_text:example with empty and non empty args mix\\n}
    *@end C1 l11
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
 ';
 

@@ -19,13 +19,13 @@ $result_tree_text{'page_in_example'} = '*document_root C1
     *line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C1
-    {text\\n}
+    {normal_text:text\\n}
    *@end C1 l4
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
 ';
 

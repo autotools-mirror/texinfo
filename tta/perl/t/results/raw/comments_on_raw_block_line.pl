@@ -26,7 +26,7 @@ $result_tree_text{'comments_on_raw_block_line'} = '*document_root C1
     |text_arg:{html}
      *line_arg C3
       {spaces_before_argument: }
-      {html}
+      {normal_text:html}
       *@c C1
        *line_arg C3
         {spaces_before_argument: }
@@ -42,13 +42,13 @@ $result_tree_text{'comments_on_raw_block_line'} = '*document_root C1
         {rawline_text:Tcomment}
         {spaces_after_argument:\\n}
     *rawpreformatted C1
-     {In TeX\\n}
+     {normal_text:In TeX\\n}
     *@end C1 l7
     |EXTRA
     |text_arg:{tex}
      *line_arg C3
       {spaces_before_argument: }
-      {tex}
+      {normal_text:tex}
       *@c C1
        *line_arg C3
         {spaces_before_argument: }

@@ -20,13 +20,13 @@ $result_tree_text{'menu_no_closed_after_empty_line'} = '*document_root C1
     *menu_entry_node C3
     |EXTRA
     |manual_content:A{1|1}
-     {(}
-     {manual_in_menu}
-     {)}
+     {normal_text:(}
+     {normal_text:manual_in_menu}
+     {normal_text:)}
     {menu_entry_separator::: }
     *menu_entry_description C1
      *preformatted C1
-      {desc2\\n}
+      {normal_text:desc2\\n}
    *menu_comment C1
     *preformatted C2
      {after_menu_description_line:\\n}

@@ -12,23 +12,23 @@ $result_tree_text{'expanded_tex'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *paragraph C3
-   {aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\\n}
+   {normal_text:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\\n}
    *@tex C3 l2
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *rawpreformatted C3
-     {TTT\\n}
-     {GGG\\n}
-     {HHH\\n}
+     {normal_text:TTT\\n}
+     {normal_text:GGG\\n}
+     {normal_text:HHH\\n}
     *@end C1 l6
     |EXTRA
     |text_arg:{tex}
      *line_arg C3
       {spaces_before_argument: }
-      {tex}
+      {normal_text:tex}
       {spaces_after_argument:\\n}
-   {bbbbbbbbb1 bbbbbbbbbbb2 bbbbbbbbbb3 bbbbbbbbbbbbbb4.\\n}
+   {normal_text:bbbbbbbbb1 bbbbbbbbbbb2 bbbbbbbbbb3 bbbbbbbbbbbbbb4.\\n}
 ';
 
 

@@ -22,11 +22,11 @@ $result_tree_text{'non_ascii_in_macro_name'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C1
-   {èvee\\n}
+   {normal_text:èvee\\n}
 ';
 
 

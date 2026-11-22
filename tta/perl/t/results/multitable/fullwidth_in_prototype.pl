@@ -18,13 +18,13 @@ $result_tree_text{'fullwidth_in_prototype'} = '*document_root C1
     *block_line_arg C7
      {spaces_before_argument: }
      *bracketed_arg C1 l1
-      {éééé éééé éééé éééé}
-     { }
+      {normal_text:éééé éééé éééé éééé}
+     {normal_text: }
      *bracketed_arg C1 l1
-      {xxxx xxxx xxxx xxxx}
-     { }
+      {normal_text:xxxx xxxx xxxx xxxx}
+     {normal_text: }
      *bracketed_arg C1 l1
-      {人人 人人 人人 人人}
+      {normal_text:人人 人人 人人 人人}
      {spaces_after_argument:\\n}
    *multitable_body C1
     *row C3
@@ -35,40 +35,40 @@ $result_tree_text{'fullwidth_in_prototype'} = '*document_root C1
      |cell_number:{1}
       {ignorable_spaces_after_command:\\n}
       *paragraph C6
-       {aaa aà aaa aa aaa aa\\n}
-       {aaa aà aaa aa aaa aa\\n}
-       {aaa aà aaa aa aaa aa\\n}
-       {aaa aà aaa aa aaa aa\\n}
-       {aaa aà aaa aa aaa aa\\n}
-       {aaa aà aaa aa aaa aa\\n}
+       {normal_text:aaa aà aaa aa aaa aa\\n}
+       {normal_text:aaa aà aaa aa aaa aa\\n}
+       {normal_text:aaa aà aaa aa aaa aa\\n}
+       {normal_text:aaa aà aaa aa aaa aa\\n}
+       {normal_text:aaa aà aaa aa aaa aa\\n}
+       {normal_text:aaa aà aaa aa aaa aa\\n}
      *@tab C2 l9
      |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command:\\n}
       *paragraph C6
-       {aaa aà aaa aa aaa aa\\n}
-       {aaa aà aaa aa aaa aa\\n}
-       {aaa aà aaa aa aaa aa\\n}
-       {aaa aà aaa aa aaa aa\\n}
-       {aaa aà aaa aa aaa aa\\n}
-       {aaa aà aaa aa aaa aa\\n}
+       {normal_text:aaa aà aaa aa aaa aa\\n}
+       {normal_text:aaa aà aaa aa aaa aa\\n}
+       {normal_text:aaa aà aaa aa aaa aa\\n}
+       {normal_text:aaa aà aaa aa aaa aa\\n}
+       {normal_text:aaa aà aaa aa aaa aa\\n}
+       {normal_text:aaa aà aaa aa aaa aa\\n}
      *@tab C2 l16
      |EXTRA
      |cell_number:{3}
       {ignorable_spaces_after_command:\\n}
       *paragraph C6
-       {aaa aà aaa aa aaa aa\\n}
-       {aaa aà aaa aa aaa aa\\n}
-       {aaa aà aaa aa aaa aa\\n}
-       {aaa aà aaa aa aaa aa\\n}
-       {aaa aà aaa aa aaa aa\\n}
-       {aaa aà aaa aa aaa aa\\n}
+       {normal_text:aaa aà aaa aa aaa aa\\n}
+       {normal_text:aaa aà aaa aa aaa aa\\n}
+       {normal_text:aaa aà aaa aa aaa aa\\n}
+       {normal_text:aaa aà aaa aa aaa aa\\n}
+       {normal_text:aaa aà aaa aa aaa aa\\n}
+       {normal_text:aaa aà aaa aa aaa aa\\n}
    *@end C1 l23
    |EXTRA
    |text_arg:{multitable}
     *line_arg C3
      {spaces_before_argument: }
-     {multitable}
+     {normal_text:multitable}
      {spaces_after_argument:\\n}
 ';
 

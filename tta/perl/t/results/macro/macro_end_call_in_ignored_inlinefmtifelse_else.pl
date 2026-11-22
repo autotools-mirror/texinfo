@@ -23,20 +23,20 @@ $result_tree_text{'macro_end_call_in_ignored_inlinefmtifelse_else'} = '*document
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C3
-   {Toto }
+   {normal_text:Toto }
    *@inlinefmtifelse C3 l5
    |EXTRA
    |expand_index:{1}
    |format:{html}
     *brace_arg C1
-     {html}
+     {normal_text:html}
     *brace_arg C2
      {spaces_before_argument: }
-     {before shown}
+     {normal_text:before shown}
      >SOURCEMARKS
      >macro_expansion<start;1><p:9>
       >*macro_call@endcallinignoredinlineelse C1
@@ -45,7 +45,7 @@ $result_tree_text{'macro_end_call_in_ignored_inlinefmtifelse_else'} = '*document
      {raw: ignored after}
      >SOURCEMARKS
      >macro_expansion<end;1><p:8>
-   { done.\\n}
+   {normal_text: done.\\n}
 ';
 
 

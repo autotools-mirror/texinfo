@@ -15,14 +15,14 @@ $result_tree_text{'quotation_beginning_and_end_on_line'} = '*document_root C1
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     {in quotation}
+     {normal_text:in quotation}
      {spaces_after_argument: }
    *@end C1 l1
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }
-     {quotation}
+     {normal_text:quotation}
      {spaces_after_argument:\\n}
 ';
 

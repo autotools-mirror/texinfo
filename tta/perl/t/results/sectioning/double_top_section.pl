@@ -20,11 +20,11 @@ $result_tree_text{'double_top_section'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {First top}
+    {normal_text:First top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {First top.\\n}
+   {normal_text:First top.\\n}
   {empty_line:\\n}
  *@top C3 l5 {Second top}
  |EXTRA
@@ -35,11 +35,11 @@ $result_tree_text{'double_top_section'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Second top}
+    {normal_text:Second top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {Second top.\\n}
+   {normal_text:Second top.\\n}
 ';
 
 

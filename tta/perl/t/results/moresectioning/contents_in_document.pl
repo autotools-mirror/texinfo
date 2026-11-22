@@ -19,7 +19,7 @@ $result_tree_text{'contents_in_document'} = '*document_root C4
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C4 l2 {contents in document}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'contents_in_document'} = '*document_root C4
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {contents in document}
+    {normal_text:contents in document}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@contents C1 l4
@@ -47,7 +47,7 @@ $result_tree_text{'contents_in_document'} = '*document_root C4
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
 ';
 

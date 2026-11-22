@@ -11,21 +11,21 @@ use Encode;
 $result_tree_text{'ifset_nonalpha'} = '*document_root C1
  *before_node_section C1
   *preamble_before_content C1
-   {}
+   {normal_text:}
    >SOURCEMARKS
    >ignored_conditional_block<1>
     >*@ifset C2 l1
      >*arguments_line C1
       >*block_line_arg C3
        >{spaces_before_argument: }
-       >{A/B}
+       >{normal_text:A/B}
        >{spaces_after_argument:\\n}
      >*@end C1 l2
      >|EXTRA
      >|text_arg:{ifset}
       >*line_arg C3
        >{spaces_before_argument: }
-       >{ifset}
+       >{normal_text:ifset}
        >{spaces_after_argument:\\n}
 ';
 

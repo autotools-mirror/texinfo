@@ -19,7 +19,7 @@ $result_tree_text{'part_section_part'} = '*document_root C4
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Part1}
+    {normal_text:Part1}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@section C2 l3 {section 1}
@@ -32,7 +32,7 @@ $result_tree_text{'part_section_part'} = '*document_root C4
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {section 1}
+    {normal_text:section 1}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@part C1 l5 {Part 2}
@@ -43,7 +43,7 @@ $result_tree_text{'part_section_part'} = '*document_root C4
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Part 2}
+    {normal_text:Part 2}
     {spaces_after_argument:\\n}
 ';
 

@@ -15,8 +15,8 @@ $result_tree_text{'titlefont_for_docbook'} = '*document_root C1
   |EXTRA
   |global_command_number:{1}
    *brace_container C1
-    {Reference Manual}
-  {\\n}
+    {normal_text:Reference Manual}
+  {normal_text:\\n}
 ';
 
 

@@ -23,7 +23,7 @@ $result_tree_text{'macro_for_dot_in_menu_not_separator'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *@menu C3 l5
@@ -33,13 +33,13 @@ $result_tree_text{'macro_for_dot_in_menu_not_separator'} = '*document_root C1
    *menu_entry C6 l6
     {menu_entry_leading_text:* }
     *menu_entry_name C1
-     {ref}
+     {normal_text:ref}
     {menu_entry_separator:: }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{name_002eafter}
-     {name.after}
+     {normal_text:name.after}
      >SOURCEMARKS
      >macro_expansion<start;1><p:4>
       >*macro_call@macrodot C1
@@ -53,13 +53,13 @@ $result_tree_text{'macro_for_dot_in_menu_not_separator'} = '*document_root C1
     >macro_expansion<end;2><p:1>
     *menu_entry_description C1
      *preformatted C1
-      {desc\\n}
+      {normal_text:desc\\n}
    *@end C1 l7
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
 ';
 

@@ -20,7 +20,7 @@ $result_tree_text{'test_fill_gaps_in_sectioning_insert_nodes'} = '*document_root
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l1 {top}
  |EXTRA
@@ -29,7 +29,7 @@ $result_tree_text{'test_fill_gaps_in_sectioning_insert_nodes'} = '*document_root
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l3 {Chap}
@@ -41,7 +41,7 @@ $result_tree_text{'test_fill_gaps_in_sectioning_insert_nodes'} = '*document_root
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chap}
+    {normal_text:Chap}
     {spaces_after_argument:\\n}
  *@chapter C2 l3 {Chap}
  |EXTRA
@@ -51,7 +51,7 @@ $result_tree_text{'test_fill_gaps_in_sectioning_insert_nodes'} = '*document_root
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chap}
+    {normal_text:Chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l5 {Section}
@@ -63,7 +63,7 @@ $result_tree_text{'test_fill_gaps_in_sectioning_insert_nodes'} = '*document_root
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Section}
+    {normal_text:Section}
     {spaces_after_argument:\\n}
  *@section C2 l5 {Section}
  |EXTRA
@@ -73,7 +73,7 @@ $result_tree_text{'test_fill_gaps_in_sectioning_insert_nodes'} = '*document_root
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Section}
+    {normal_text:Section}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 {@asis{} [+1+]}
@@ -87,7 +87,7 @@ $result_tree_text{'test_fill_gaps_in_sectioning_insert_nodes'} = '*document_root
     {spaces_before_argument: }
     *@asis C1
      *brace_container
-    { [+1+]}
+    {normal_text: [+1+]}
     {spaces_after_argument:\\n}
  *@unnumberedsubsec C2 {@asis{}}
  |EXTRA
@@ -109,7 +109,7 @@ $result_tree_text{'test_fill_gaps_in_sectioning_insert_nodes'} = '*document_root
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {There}
+    {normal_text:There}
     {spaces_after_argument:\\n}
  *@subsubsection C1 l7 {There}
  |EXTRA
@@ -118,7 +118,7 @@ $result_tree_text{'test_fill_gaps_in_sectioning_insert_nodes'} = '*document_root
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {There}
+    {normal_text:There}
     {spaces_after_argument:\\n}
 ';
 

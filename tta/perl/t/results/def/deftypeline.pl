@@ -23,50 +23,50 @@ $result_tree_text{'deftypeline'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {Function}
+       {normal_text:Function}
      {spaces: }
      *def_type C1
       *bracketed_arg C1 l2
-       {long int}
+       {normal_text:long int}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {foo}
+       {normal_text:foo}
      {spaces: }
      {delimiter:(}
      *def_typearg C1
       *def_line_arg C1
-       {int}
+       {normal_text:int}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@var C1 l2
         *brace_container C1
-         {bar}
+         {normal_text:bar}
      {delimiter:,}
      {spaces: }
      *def_typearg C1
       *def_line_arg C1
-       {int}
+       {normal_text:int}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
        *@var C1 l2
         *brace_container C1
-         {baz}
+         {normal_text:baz}
      {delimiter:)}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C2
      *@dots C1 l3
       *brace_container
-     {\\n}
+     {normal_text:\\n}
    *@end C1 l4
    |EXTRA
    |text_arg:{defblock}
     *line_arg C3
      {spaces_before_argument: }
-     {defblock}
+     {normal_text:defblock}
      {spaces_after_argument:\\n}
 ';
 

@@ -19,7 +19,7 @@ $result_tree_text{'ref_in_center'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l2 {top}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'ref_in_center'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l4 {chap}
@@ -39,7 +39,7 @@ $result_tree_text{'ref_in_center'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
  *@chapter C6 l5 {Chapter}
  |EXTRA
@@ -49,7 +49,7 @@ $result_tree_text{'ref_in_center'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chapter}
+    {normal_text:Chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@center C1 l7
@@ -60,7 +60,7 @@ $result_tree_text{'ref_in_center'} = '*document_root C5
      |EXTRA
      |node_content:A{0|0}
      |normalized:{Top}
-      {Top}
+      {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@center C1 l9
@@ -68,13 +68,13 @@ $result_tree_text{'ref_in_center'} = '*document_root C5
     {spaces_before_argument: }
     *@ref C3 l9
      *brace_arg C1
-      {Top}
+      {normal_text:Top}
      *brace_arg C1
       {spaces_before_argument: }
      *brace_arg C1
-      {title\\n}
+      {normal_text:title\\n}
   *paragraph C1
-   {very long\\n}
+   {normal_text:very long\\n}
 ';
 
 

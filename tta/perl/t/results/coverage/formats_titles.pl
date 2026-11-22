@@ -17,19 +17,19 @@ $result_tree_text{'formats_titles'} = '*document_root C1
      {spaces_before_argument:\\n}
    *before_item C1
     *paragraph C1
-     {before first itemize\\n}
+     {normal_text:before first itemize\\n}
    *@item C2 l3
    |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
-     {item\\n}
+     {normal_text:item\\n}
    *@end C1 l4
    |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }
-     {itemize}
+     {normal_text:itemize}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@enumerate C4 l6
@@ -38,19 +38,19 @@ $result_tree_text{'formats_titles'} = '*document_root C1
      {spaces_before_argument:\\n}
    *before_item C1
     *paragraph C1
-     {before first enumerate\\n}
+     {normal_text:before first enumerate\\n}
    *@item C2 l8
    |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
-     {enum\\n}
+     {normal_text:enum\\n}
    *@end C1 l9
    |EXTRA
    |text_arg:{enumerate}
     *line_arg C3
      {spaces_before_argument: }
-     {enumerate}
+     {normal_text:enumerate}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@table C4 l11
@@ -61,20 +61,20 @@ $result_tree_text{'formats_titles'} = '*document_root C1
      {spaces_after_argument:\\n}
    *before_item C1
     *paragraph C1
-     {before first table\\n}
+     {normal_text:before first table\\n}
    *table_entry C1
     *table_term C1
      *@item C1 l13
       *line_arg C3
        {spaces_before_argument: }
-       {tab}
+       {normal_text:tab}
        {spaces_after_argument:\\n}
    *@end C1 l14
    |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
-     {table}
+     {normal_text:table}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@vtable C4 l16
@@ -85,7 +85,7 @@ $result_tree_text{'formats_titles'} = '*document_root C1
      {spaces_after_argument:\\n}
    *before_item C1
     *paragraph C1
-     {before first vtable\\n}
+     {normal_text:before first vtable\\n}
    *table_entry C1
     *table_term C1
      *@item C1 l18
@@ -93,14 +93,14 @@ $result_tree_text{'formats_titles'} = '*document_root C1
      |index_entry:I{vr,1}
       *line_arg C3
        {spaces_before_argument: }
-       {vtab}
+       {normal_text:vtab}
        {spaces_after_argument:\\n}
    *@end C1 l19
    |EXTRA
    |text_arg:{vtable}
     *line_arg C3
      {spaces_before_argument: }
-     {vtable}
+     {normal_text:vtable}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@multitable C4 l21
@@ -114,11 +114,11 @@ $result_tree_text{'formats_titles'} = '*document_root C1
      |misc_args:A{0.5|0.5}
       *line_arg C3
        {spaces_before_argument: }
-       {0.5 0.5}
+       {normal_text:0.5 0.5}
        {spaces_after_argument:\\n}
    *before_item C1
     *paragraph C1
-     {before first multitable\\n}
+     {normal_text:before first multitable\\n}
    *multitable_body C1
     *row C2
     |EXTRA
@@ -128,19 +128,19 @@ $result_tree_text{'formats_titles'} = '*document_root C1
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {item multit }
+       {normal_text:item multit }
      *@tab C2 l23
      |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {tab multit\\n}
+       {normal_text:tab multit\\n}
    *@end C1 l24
    |EXTRA
    |text_arg:{multitable}
     *line_arg C3
      {spaces_before_argument: }
-     {multitable}
+     {normal_text:multitable}
      {spaces_after_argument:\\n}
 ';
 

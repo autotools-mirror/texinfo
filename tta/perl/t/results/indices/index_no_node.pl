@@ -20,7 +20,7 @@ $result_tree_text{'index_no_node'} = '*document_root C7
    |text_arg:{index_no_node}
     *line_arg C3
      {spaces_before_argument: }
-     {index_no_node}
+     {normal_text:index_no_node}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
   *index_entry_command@cindex C1 index_no_node.texi:l5
@@ -28,17 +28,17 @@ $result_tree_text{'index_no_node'} = '*document_root C7
   |index_entry:I{cp,1}
    *line_arg C3
     {spaces_before_argument: }
-    {truc}
+    {normal_text:truc}
     {spaces_after_argument:\\n}
   *paragraph C1
-   {Garbage\\n}
+   {normal_text:Garbage\\n}
   *@printindex C1 index_no_node.texi:l7
   |EXTRA
   |global_command_number:{1}
   |misc_args:A{cp}
    *line_arg C3
     {spaces_before_argument: }
-    {cp}
+    {normal_text:cp}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   {empty_line:\\n}
@@ -51,14 +51,14 @@ $result_tree_text{'index_no_node'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {unnumbered}
+    {normal_text:unnumbered}
     {spaces_after_argument:\\n}
   *@printindex C1 index_no_node.texi:l11
   |EXTRA
   |global_command_number:{2}
    *line_arg C3
     {spaces_before_argument: }
-    {bidule}
+    {normal_text:bidule}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 index_no_node.texi:l13
@@ -66,16 +66,16 @@ $result_tree_text{'index_no_node'} = '*document_root C7
   |index_entry:I{cp,2}
    *line_arg C3
     {spaces_before_argument: }
-    {unnumbered}
+    {normal_text:unnumbered}
     {spaces_after_argument:\\n}
   *paragraph C2
-   {in unnumbered\\n}
+   {normal_text:in unnumbered\\n}
    *index_entry_command@cindex C1 index_no_node.texi:l15
    |EXTRA
    |index_entry:I{cp,3}
     *line_arg C3
      {spaces_before_argument: }
-     {unnumbered after text}
+     {normal_text:unnumbered after text}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@printindex C1 index_no_node.texi:l17
@@ -84,7 +84,7 @@ $result_tree_text{'index_no_node'} = '*document_root C7
   |misc_args:A{cp}
    *line_arg C3
     {spaces_before_argument: }
-    {cp}
+    {normal_text:cp}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@top C15 index_no_node.texi:l19 {top section}
@@ -96,7 +96,7 @@ $result_tree_text{'index_no_node'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top section}
+    {normal_text:top section}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 index_no_node.texi:l21
@@ -104,45 +104,45 @@ $result_tree_text{'index_no_node'} = '*document_root C7
   |index_entry:I{cp,4}
    *line_arg C3
     {spaces_before_argument: }
-    {top section}
+    {normal_text:top section}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_no_node.texi:l22
   |EXTRA
   |index_entry:I{cp,5}
    *line_arg C3
     {spaces_before_argument: }
-    {top section}
+    {normal_text:top section}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_no_node.texi:l23
   |EXTRA
   |index_entry:I{cp,6}
    *line_arg C3
     {spaces_before_argument: }
-    {top section}
+    {normal_text:top section}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_no_node.texi:l24
   |EXTRA
   |index_entry:I{cp,7}
    *line_arg C3
     {spaces_before_argument: }
-    {top section}
+    {normal_text:top section}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_no_node.texi:l25
   |EXTRA
   |index_entry:I{cp,8}
    *line_arg C3
     {spaces_before_argument: }
-    {top section}
+    {normal_text:top section}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_no_node.texi:l26
   |EXTRA
   |index_entry:I{cp,9}
    *line_arg C3
     {spaces_before_argument: }
-    {top section}
+    {normal_text:top section}
     {spaces_after_argument:\\n}
   *paragraph C1
-   {Top node\\n}
+   {normal_text:Top node\\n}
   {empty_line:\\n}
   *@printindex C1 index_no_node.texi:l29
   |EXTRA
@@ -150,7 +150,7 @@ $result_tree_text{'index_no_node'} = '*document_root C7
   |misc_args:A{cp}
    *line_arg C3
     {spaces_before_argument: }
-    {cp}
+    {normal_text:cp}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 index_no_node.texi:l31
@@ -158,7 +158,7 @@ $result_tree_text{'index_no_node'} = '*document_root C7
   |index_entry:I{cp,10}
    *line_arg C3
     {spaces_before_argument: }
-    {top section1}
+    {normal_text:top section1}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   {empty_line:\\n}
@@ -171,7 +171,7 @@ $result_tree_text{'index_no_node'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {second}
+    {normal_text:second}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@printindex C1 index_no_node.texi:l36
@@ -180,23 +180,23 @@ $result_tree_text{'index_no_node'} = '*document_root C7
   |misc_args:A{cp}
    *line_arg C3
     {spaces_before_argument: }
-    {cp}
+    {normal_text:cp}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_no_node.texi:l37
   |EXTRA
   |index_entry:I{cp,11}
    *line_arg C3
     {spaces_before_argument: }
-    {second}
+    {normal_text:second}
     {spaces_after_argument:\\n}
   *paragraph C2
-   {second node\\n}
+   {normal_text:second node\\n}
    *index_entry_command@cindex C1 index_no_node.texi:l39
    |EXTRA
    |index_entry:I{cp,12}
     *line_arg C3
      {spaces_before_argument: }
-     {second}
+     {normal_text:second}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@printindex C1 index_no_node.texi:l41
@@ -205,7 +205,7 @@ $result_tree_text{'index_no_node'} = '*document_root C7
   |misc_args:A{cp}
    *line_arg C3
     {spaces_before_argument: }
-    {cp}
+    {normal_text:cp}
     {spaces_after_argument:\\n}
  *@chapter C6 index_no_node.texi:l42 {Chapter}
  |EXTRA
@@ -217,14 +217,14 @@ $result_tree_text{'index_no_node'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chapter}
+    {normal_text:Chapter}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_no_node.texi:l43
   |EXTRA
   |index_entry:I{cp,13}
    *line_arg C3
     {spaces_before_argument: }
-    {chapter}
+    {normal_text:chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@printindex C1 index_no_node.texi:l45
@@ -233,16 +233,16 @@ $result_tree_text{'index_no_node'} = '*document_root C7
   |misc_args:A{cp}
    *line_arg C3
     {spaces_before_argument: }
-    {cp}
+    {normal_text:cp}
     {spaces_after_argument:\\n}
   *paragraph C2
-   {Text of chapter\\n}
+   {normal_text:Text of chapter\\n}
    *index_entry_command@cindex C1 index_no_node.texi:l47
    |EXTRA
    |index_entry:I{cp,14}
     *line_arg C3
      {spaces_before_argument: }
-     {Chapter2}
+     {normal_text:Chapter2}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@chapter C4 index_no_node.texi:l49 {Chapter 2}
@@ -255,11 +255,11 @@ $result_tree_text{'index_no_node'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chapter 2}
+    {normal_text:Chapter 2}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {In chapter 2\\n}
+   {normal_text:In chapter 2\\n}
   {empty_line:\\n}
  *@bye C1
   *line_arg C1

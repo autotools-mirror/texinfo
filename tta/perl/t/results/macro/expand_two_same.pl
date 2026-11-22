@@ -24,11 +24,11 @@ $result_tree_text{'expand_two_same'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
   *paragraph C7
-   {Call macro2\\n}
-   {With a doubles arg a simple }
+   {normal_text:Call macro2\\n}
+   {normal_text:With a doubles arg a simple }
    >SOURCEMARKS
    >macro_expansion<start;1>
     >*macro_call@macrotwo C2
@@ -38,22 +38,22 @@ $result_tree_text{'expand_two_same'} = '*document_root C1
       >{macro_call_arg_text:a simple @code{\\narg}\\n}
    *@code C1 l8:@macrotwo
     *brace_container C2
-     {\\n}
-     {arg}
-   {\\n}
-   { and re a simple }
+     {normal_text:\\n}
+     {normal_text:arg}
+   {normal_text:\\n}
+   {normal_text: and re a simple }
    *@code C1 l8:@macrotwo
     *brace_container C2
-     {\\n}
-     {arg}
-   {\\n}
+     {normal_text:\\n}
+     {normal_text:arg}
+   {normal_text:\\n}
   {empty_line:\\n}
   >SOURCEMARKS
   >macro_expansion<end;1><p:1>
   {empty_line:\\n}
   *paragraph C2
-   {Call macro2 with 2 args\\n}
-   {With a doubles arg arg with comma , here  and re arg with comma , here \\n}
+   {normal_text:Call macro2 with 2 args\\n}
+   {normal_text:With a doubles arg arg with comma , here  and re arg with comma , here \\n}
    >SOURCEMARKS
    >macro_expansion<start;2>
     >*macro_call@macrotwo C2

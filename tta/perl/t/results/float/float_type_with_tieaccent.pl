@@ -21,33 +21,33 @@ $result_tree_text{'float_type_with_tieaccent'} = '*document_root C1
    *arguments_line C2
     *block_line_arg C7
      {spaces_before_argument: }
-     {A }
+     {normal_text:A }
      *@tieaccent C1 l1
       *brace_container C1
-       {1a}
-     { }
+       {normal_text:1a}
+     {normal_text: }
      *@tieaccent C1 l1
       *brace_container C1
-       {第H}
-     { }
+       {normal_text:第H}
+     {normal_text: }
      *@tieaccent C1 l1
       *brace_container C2
        *@^ C1 l1
         *following_arg C1
-         {e}
-       {一 and text}
+         {normal_text:e}
+       {normal_text:一 and text}
     *block_line_arg C3
      {spaces_before_argument: }
-     {label}
+     {normal_text:label}
      {spaces_after_argument:\\n}
    *paragraph C1
-    {inside\\n}
+    {normal_text:inside\\n}
    *@end C1 l3
    |EXTRA
    |text_arg:{float}
     *line_arg C3
      {spaces_before_argument: }
-     {float}
+     {normal_text:float}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@listoffloats C1 l5
@@ -56,21 +56,21 @@ $result_tree_text{'float_type_with_tieaccent'} = '*document_root C1
   |global_command_number:{1}
    *line_arg C8
     {spaces_before_argument: }
-    {A }
+    {normal_text:A }
     *@tieaccent C1 l5
      *brace_container C1
-      {1a}
-    { }
+      {normal_text:1a}
+    {normal_text: }
     *@tieaccent C1 l5
      *brace_container C1
-      {第H}
-    { }
+      {normal_text:第H}
+    {normal_text: }
     *@tieaccent C1 l5
      *brace_container C2
       *@^ C1 l5
        *following_arg C1
-        {e}
-      {一 and text}
+        {normal_text:e}
+      {normal_text:一 and text}
     {spaces_after_argument:\\n}
 ';
 

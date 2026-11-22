@@ -23,7 +23,7 @@ $result_tree_text{'index_nodes'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_nodes.texi:l4
   |EXTRA
@@ -31,7 +31,7 @@ $result_tree_text{'index_nodes'} = '*document_root C7
   |index_entry:I{cp,1}
    *line_arg C3
     {spaces_before_argument: }
-    {entry a}
+    {normal_text:entry a}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@printindex C1 index_nodes.texi:l6
@@ -40,7 +40,7 @@ $result_tree_text{'index_nodes'} = '*document_root C7
   |misc_args:A{cp}
    *line_arg C3
     {spaces_before_argument: }
-    {cp}
+    {normal_text:cp}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@printindex C1 index_nodes.texi:l8
@@ -49,11 +49,11 @@ $result_tree_text{'index_nodes'} = '*document_root C7
   |misc_args:A{fn}
    *line_arg C3
     {spaces_before_argument: }
-    {fn}
+    {normal_text:fn}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {And one one more index\\n}
+   {normal_text:And one one more index\\n}
   {empty_line:\\n}
   *@printindex C1 index_nodes.texi:l12
   |EXTRA
@@ -61,7 +61,7 @@ $result_tree_text{'index_nodes'} = '*document_root C7
   |misc_args:A{cp}
    *line_arg C3
     {spaces_before_argument: }
-    {cp}
+    {normal_text:cp}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C3 index_nodes.texi:l14
@@ -74,17 +74,17 @@ $result_tree_text{'index_nodes'} = '*document_root C7
     |EXTRA
     |node_content:A{0|0}
     |normalized:{chap-first}
-     {chap first}
+     {normal_text:chap first}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 index_nodes.texi:l16
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C7 index_nodes.texi:l18 {chap first}
@@ -96,29 +96,29 @@ $result_tree_text{'index_nodes'} = '*document_root C7
   *arguments_line C4
    *line_arg C2
     {spaces_before_argument: }
-    {chap first}
+    {normal_text:chap first}
    *line_arg
    *line_arg C1
    |EXTRA
    |node_content:A{0|0}
    |normalized:{Top}
-    {Top}
+    {normal_text:Top}
    *line_arg C3
    |EXTRA
    |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
   *paragraph C5
-   {Text and then index entries\\n}
+   {normal_text:Text and then index entries\\n}
    *index_entry_command@cindex C1 index_nodes.texi:l20
    |EXTRA
    |element_node:{chap-first}
    |index_entry:I{cp,2}
     *line_arg C3
      {spaces_before_argument: }
-     {entry in node}
+     {normal_text:entry in node}
      {spaces_after_argument:\\n}
    *index_entry_command@cindex C1 index_nodes.texi:l21
    |EXTRA
@@ -126,7 +126,7 @@ $result_tree_text{'index_nodes'} = '*document_root C7
    |index_entry:I{cp,3}
     *line_arg C3
      {spaces_before_argument: }
-     {! entry in node}
+     {normal_text:! entry in node}
      {spaces_after_argument:\\n}
    *index_entry_command@findex C1 index_nodes.texi:l22
    |EXTRA
@@ -134,7 +134,7 @@ $result_tree_text{'index_nodes'} = '*document_root C7
    |index_entry:I{fn,1}
     *line_arg C3
      {spaces_before_argument: }
-     {fun in node}
+     {normal_text:fun in node}
      {spaces_after_argument:\\n}
    *index_entry_command@cindex C1 index_nodes.texi:l23
    |EXTRA
@@ -142,7 +142,7 @@ $result_tree_text{'index_nodes'} = '*document_root C7
    |index_entry:I{cp,4}
     *line_arg C3
      {spaces_before_argument: }
-     {entry in node}
+     {normal_text:entry in node}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@printindex C1 index_nodes.texi:l25
@@ -151,7 +151,7 @@ $result_tree_text{'index_nodes'} = '*document_root C7
   |misc_args:A{cp}
    *line_arg C3
     {spaces_before_argument: }
-    {cp}
+    {normal_text:cp}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C3 index_nodes.texi:l27
@@ -164,17 +164,17 @@ $result_tree_text{'index_nodes'} = '*document_root C7
     |EXTRA
     |node_content:A{0|0}
     |normalized:{second}
-     {second}
+     {normal_text:second}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 index_nodes.texi:l29
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C5 index_nodes.texi:l31 {second}
@@ -186,14 +186,14 @@ $result_tree_text{'index_nodes'} = '*document_root C7
   *arguments_line C4
    *line_arg C2
     {spaces_before_argument: }
-    {second}
+    {normal_text:second}
    *line_arg
    *line_arg
    *line_arg C2
    |EXTRA
    |node_content:A{0|0}
    |normalized:{chap-first}
-    {chap first}
+    {normal_text:chap first}
     {spaces_after_argument:\\n}
   *@menu C4 index_nodes.texi:l32
    *arguments_line C1
@@ -205,28 +205,28 @@ $result_tree_text{'index_nodes'} = '*document_root C7
     |EXTRA
     |node_content:A{0|0}
     |normalized:{a-node}
-     {a node}
+     {normal_text:a node}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 index_nodes.texi:l34
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{another}
-     {another}
+     {normal_text:another}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 index_nodes.texi:l35
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@printindex C1 index_nodes.texi:l37
@@ -235,7 +235,7 @@ $result_tree_text{'index_nodes'} = '*document_root C7
   |misc_args:A{fn}
    *line_arg C3
     {spaces_before_argument: }
-    {fn}
+    {normal_text:fn}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C6 index_nodes.texi:l39 {another}
@@ -246,7 +246,7 @@ $result_tree_text{'index_nodes'} = '*document_root C7
   *arguments_line C4
    *line_arg C2
     {spaces_before_argument: }
-    {another}
+    {normal_text:another}
    *line_arg C1
     {spaces_before_argument: }
    *line_arg C2
@@ -254,13 +254,13 @@ $result_tree_text{'index_nodes'} = '*document_root C7
    |node_content:A{1|1}
    |normalized:{a-node}
     {spaces_before_argument: }
-    {a node}
+    {normal_text:a node}
    *line_arg C3
    |EXTRA
    |node_content:A{1|1}
    |normalized:{second}
     {spaces_before_argument: }
-    {second}
+    {normal_text:second}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 index_nodes.texi:l41
@@ -269,7 +269,7 @@ $result_tree_text{'index_nodes'} = '*document_root C7
   |index_entry:I{cp,5}
    *line_arg C3
     {spaces_before_argument: }
-    {something}
+    {normal_text:something}
     {spaces_after_argument:\\n}
   *index_entry_command@findex C1 index_nodes.texi:l42
   |EXTRA
@@ -277,7 +277,7 @@ $result_tree_text{'index_nodes'} = '*document_root C7
   |index_entry:I{fn,2}
    *line_arg C3
     {spaces_before_argument: }
-    {somewhere}
+    {normal_text:somewhere}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_nodes.texi:l43
   |EXTRA
@@ -285,7 +285,7 @@ $result_tree_text{'index_nodes'} = '*document_root C7
   |index_entry:I{cp,6}
    *line_arg C3
     {spaces_before_argument: }
-    {another}
+    {normal_text:another}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C10 index_nodes.texi:l45 {a node}
@@ -297,20 +297,20 @@ $result_tree_text{'index_nodes'} = '*document_root C7
   *arguments_line C4
    *line_arg C2
     {spaces_before_argument: }
-    {a node}
+    {normal_text:a node}
    *line_arg C2
    |EXTRA
    |node_content:A{1|1}
    |normalized:{another}
     {spaces_before_argument: }
-    {another}
+    {normal_text:another}
    *line_arg C1
     {spaces_before_argument: }
    *line_arg C2
    |EXTRA
    |node_content:A{0|0}
    |normalized:{second}
-    {second}
+    {normal_text:second}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_nodes.texi:l46
   |EXTRA
@@ -318,7 +318,7 @@ $result_tree_text{'index_nodes'} = '*document_root C7
   |index_entry:I{cp,7}
    *line_arg C3
     {spaces_before_argument: }
-    {entry after printindex}
+    {normal_text:entry after printindex}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@printindex C1 index_nodes.texi:l48
@@ -327,7 +327,7 @@ $result_tree_text{'index_nodes'} = '*document_root C7
   |misc_args:A{cp}
    *line_arg C3
     {spaces_before_argument: }
-    {cp}
+    {normal_text:cp}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@findex C1 index_nodes.texi:l50
@@ -336,7 +336,7 @@ $result_tree_text{'index_nodes'} = '*document_root C7
   |index_entry:I{fn,3}
    *line_arg C3
     {spaces_before_argument: }
-    {a function}
+    {normal_text:a function}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_nodes.texi:l51
   |EXTRA
@@ -344,7 +344,7 @@ $result_tree_text{'index_nodes'} = '*document_root C7
   |index_entry:I{cp,8}
    *line_arg C3
     {spaces_before_argument: }
-    {a concept a node}
+    {normal_text:a concept a node}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@printindex C1 index_nodes.texi:l53
@@ -353,7 +353,7 @@ $result_tree_text{'index_nodes'} = '*document_root C7
   |misc_args:A{cp}
    *line_arg C3
     {spaces_before_argument: }
-    {cp}
+    {normal_text:cp}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@bye C1

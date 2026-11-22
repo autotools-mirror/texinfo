@@ -19,7 +19,7 @@ $result_tree_text{'empty_cindex_entry'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@node C2 l2 {chap}
  |EXTRA
@@ -29,7 +29,7 @@ $result_tree_text{'empty_cindex_entry'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 l3
    *line_arg C1

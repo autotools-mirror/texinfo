@@ -22,23 +22,23 @@ $result_tree_text{'long_item'} = '*document_root C1
      *@item C1 l2
       *line_arg C3
        {spaces_before_argument: }
-       {first item      aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaa}
+       {normal_text:first item      aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaa}
        {spaces_after_argument:\\n}
      *@itemx C1 l3
       *line_arg C3
        {spaces_before_argument: }
-       {second itemx bbbbbbbbbbbbbbbbbbbbbbbbbbbbb b b b b b b b b b b b b b}
+       {normal_text:second itemx bbbbbbbbbbbbbbbbbbbbbbbbbbbbb b b b b b b b b b b b b b}
        {spaces_after_argument:\\n}
     *table_definition C2
      {empty_line:\\n}
      *paragraph C1
-      {Text.\\n}
+      {normal_text:Text.\\n}
    *@end C1 l6
    |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
-     {table}
+     {normal_text:table}
      {spaces_after_argument:\\n}
 ';
 

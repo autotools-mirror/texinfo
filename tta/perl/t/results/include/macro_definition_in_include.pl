@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'macro_definition_in_include'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C3
-   {}
+   {normal_text:}
    >SOURCEMARKS
    >include<start;1>
     >*@include C1 l1
@@ -19,7 +19,7 @@ $result_tree_text{'macro_definition_in_include'} = '*document_root C1
     >|text_arg:{macro_included.texi}
      >*line_arg C3
       >{spaces_before_argument: }
-      >{macro_included.texi}
+      >{normal_text:macro_included.texi}
       >{spaces_after_argument:\\n}
    *@macro C3 macro_included.texi:l1
    |EXTRA
@@ -35,12 +35,12 @@ $result_tree_text{'macro_definition_in_include'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C2
-   {Call macro\\n}
-   {in themacro\\n}
+   {normal_text:Call macro\\n}
+   {normal_text:in themacro\\n}
    >SOURCEMARKS
    >macro_expansion<start;1>
     >*macro_call@themacro C1

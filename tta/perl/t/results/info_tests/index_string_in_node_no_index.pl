@@ -19,7 +19,7 @@ $result_tree_text{'index_string_in_node_no_index'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l2 {t}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'index_string_in_node_no_index'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {t}
+    {normal_text:t}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l4 {chap indeXaa}
@@ -39,7 +39,7 @@ $result_tree_text{'index_string_in_node_no_index'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap indeXaa}
+    {normal_text:chap indeXaa}
     {spaces_after_argument:\\n}
  *@chapter C2 l5 {chap}
  |EXTRA
@@ -49,7 +49,7 @@ $result_tree_text{'index_string_in_node_no_index'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
 ';

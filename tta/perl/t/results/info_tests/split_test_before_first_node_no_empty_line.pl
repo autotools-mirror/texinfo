@@ -16,11 +16,11 @@ $result_tree_text{'split_test_before_first_node_no_empty_line'} = '*document_roo
    |text_arg:{split_test_before_first_node_no_empty_line.info}
     *line_arg C3
      {spaces_before_argument: }
-     {split_test_before_first_node_no_empty_line.info}
+     {normal_text:split_test_before_first_node_no_empty_line.info}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C1
-   {truc machin et reuc machin  ze aze zea zae eaz eaz zae\\n}
+   {normal_text:truc machin et reuc machin  ze aze zea zae eaz eaz zae\\n}
  *@node C1 l4 {Top}
  |EXTRA
  |identifier:{Top}
@@ -29,7 +29,7 @@ $result_tree_text{'split_test_before_first_node_no_empty_line'} = '*document_roo
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C6 l5 {top}
  |EXTRA
@@ -38,11 +38,11 @@ $result_tree_text{'split_test_before_first_node_no_empty_line'} = '*document_roo
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {In top node\\n}
+   {normal_text:In top node\\n}
   {empty_line:\\n}
   *@menu C3 l9
    *arguments_line C1
@@ -54,17 +54,17 @@ $result_tree_text{'split_test_before_first_node_no_empty_line'} = '*document_roo
     |EXTRA
     |node_content:A{0|0}
     |normalized:{chap1}
-     {chap1}
+     {normal_text:chap1}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l11
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l13 {chap1}
@@ -75,7 +75,7 @@ $result_tree_text{'split_test_before_first_node_no_empty_line'} = '*document_roo
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap1}
+    {normal_text:chap1}
     {spaces_after_argument:\\n}
  *@chapter C4 l14 {chap}
  |EXTRA
@@ -85,11 +85,11 @@ $result_tree_text{'split_test_before_first_node_no_empty_line'} = '*document_roo
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {In chap1.\\n}
+   {normal_text:In chap1.\\n}
   {empty_line:\\n}
 ';
 

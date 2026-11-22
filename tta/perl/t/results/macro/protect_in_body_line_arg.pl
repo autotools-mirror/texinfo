@@ -23,26 +23,26 @@ $result_tree_text{'protect_in_body_line_arg'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C7
-   {result: }
+   {normal_text:result: }
    >SOURCEMARKS
    >macro_expansion<start;1>
     >*macro_call@macroone
    *@emph C1 l5:@macroone
     *brace_container
-   { protected \\ -> \\arg1\\ }
+   {normal_text: protected \\ -> \\arg1\\ }
    *@emph C1 l5:@macroone
    >SOURCEMARKS
    >macro_expansion<end;1>
     *brace_container
-   { }
+   {normal_text: }
    *@samp C1 l5
     *brace_container C1
-     {f\\irst arg}
-   {, second arg\\n}
+     {normal_text:f\\irst arg}
+   {normal_text:, second arg\\n}
 ';
 
 

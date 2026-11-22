@@ -21,12 +21,12 @@ $result_tree_text{'set_flag_command_equivalent'} = '*document_root C1
      {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C1
-   {.\\n}
+   {normal_text:.\\n}
    >SOURCEMARKS
    >value_expansion<start;1>{}
     >*@value C1
      >*brace_container C1
-      >{txicodequoteundirected}
+      >{normal_text:txicodequoteundirected}
    >value_expansion<end;1>
   {empty_line:\\n}
   *@clear C1 l5

@@ -17,7 +17,7 @@ $result_tree_text{'copying_not_closed'} = '*document_root C1
       {spaces_before_argument:\\n}
     {empty_line:\\n}
     *paragraph C1
-     {This is a copyright notice\\n}
+     {normal_text:This is a copyright notice\\n}
 ';
 
 

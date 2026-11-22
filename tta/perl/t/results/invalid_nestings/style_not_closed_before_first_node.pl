@@ -14,7 +14,7 @@ $result_tree_text{'style_not_closed_before_first_node'} = '*document_root C2
   *paragraph C1
    *@code C1 l1
     *brace_container C2
-     {in code\\n}
+     {normal_text:in code\\n}
      {empty_line:\\n}
  *@node C2 l3 {Top}
  |EXTRA
@@ -24,10 +24,10 @@ $result_tree_text{'style_not_closed_before_first_node'} = '*document_root C2
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
   *paragraph C1
-   {In node\\n}
+   {normal_text:In node\\n}
 ';
 
 

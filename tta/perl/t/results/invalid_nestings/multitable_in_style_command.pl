@@ -14,8 +14,8 @@ $result_tree_text{'multitable_in_style_command'} = '*document_root C1
   *paragraph C1
    *@code C1 l1
     *brace_container C2
-     {\\n}
-     {Multitable\\n}
+     {normal_text:\\n}
+     {normal_text:Multitable\\n}
   *@multitable C3 l3
   |EXTRA
   |max_columns:{2}
@@ -23,10 +23,10 @@ $result_tree_text{'multitable_in_style_command'} = '*document_root C1
     *block_line_arg C5
      {spaces_before_argument: }
      *bracketed_arg C1 l3
-      {truc}
-     { }
+      {normal_text:truc}
+     {normal_text: }
      *bracketed_arg C1 l3
-      {machin}
+      {normal_text:machin}
      {spaces_after_argument:\\n}
    *multitable_body C1
     *row C2
@@ -37,19 +37,19 @@ $result_tree_text{'multitable_in_style_command'} = '*document_root C1
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {truc }
+       {normal_text:truc }
      *@tab C2 l4
      |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C1
-       {machin\\n}
+       {normal_text:machin\\n}
    *@end C1 l5
    |EXTRA
    |text_arg:{multitable}
     *line_arg C3
      {spaces_before_argument: }
-     {multitable}
+     {normal_text:multitable}
      {spaces_after_argument:\\n}
 ';
 

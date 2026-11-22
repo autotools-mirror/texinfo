@@ -18,7 +18,7 @@ $result_tree_text{'node_on_index_entry_line'} = '*document_root C2
   |index_entry:I{cp,1}
    *line_arg C3
     {spaces_before_argument: }
-    {entry}
+    {normal_text:entry}
     {spaces_after_argument: }
  *@node C3 l2 {a}
  |EXTRA
@@ -28,41 +28,41 @@ $result_tree_text{'node_on_index_entry_line'} = '*document_root C2
   *arguments_line C4
    *line_arg C2
     {spaces_before_argument: }
-    {a}
+    {normal_text:a}
    *line_arg C5
    |EXTRA
    |manual_content:A{2|2}
    |node_content:A{4|4}
    |normalized:{b}
     {spaces_before_argument: }
-    {(}
-    {m}
-    {)}
-    {b}
+    {normal_text:(}
+    {normal_text:m}
+    {normal_text:)}
+    {normal_text:b}
    *line_arg C5
    |EXTRA
    |manual_content:A{2|2}
    |node_content:A{4|4}
    |normalized:{c}
     {spaces_before_argument: }
-    {(}
-    {m}
-    {)}
-    {c}
+    {normal_text:(}
+    {normal_text:m}
+    {normal_text:)}
+    {normal_text:c}
    *line_arg C6
    |EXTRA
    |manual_content:A{2|2}
    |node_content:A{4|4}
    |normalized:{d}
     {spaces_before_argument: }
-    {(}
-    {h}
-    {)}
-    {d}
+    {normal_text:(}
+    {normal_text:h}
+    {normal_text:)}
+    {normal_text:d}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {Content\\n}
+   {normal_text:Content\\n}
 ';
 
 

@@ -22,12 +22,12 @@ $result_tree_text{'itemx_in_itemize_enumerate_in_table'} = '*document_root C1
      *@item C1 l2
       *line_arg C3
        {spaces_before_argument: }
-       {item}
+       {normal_text:item}
        {spaces_after_argument:\\n}
     *table_definition C6
      {empty_line:\\n}
      *paragraph C1
-      {In item, nested itemize\\n}
+      {normal_text:In item, nested itemize\\n}
      *@itemize C3 l5
       *arguments_line C1
        *block_line_arg C1
@@ -36,14 +36,14 @@ $result_tree_text{'itemx_in_itemize_enumerate_in_table'} = '*document_root C1
        *@itemx C1 l6
         *line_arg C3
          {spaces_before_argument: }
-         {in nested itemize itemx}
+         {normal_text:in nested itemize itemx}
          {spaces_after_argument:\\n}
       *@end C1 l7
       |EXTRA
       |text_arg:{itemize}
        *line_arg C3
         {spaces_before_argument: }
-        {itemize}
+        {normal_text:itemize}
         {spaces_after_argument:\\n}
      {empty_line:\\n}
      *@enumerate C3 l9
@@ -54,14 +54,14 @@ $result_tree_text{'itemx_in_itemize_enumerate_in_table'} = '*document_root C1
        *@itemx C1 l10
         *line_arg C3
          {spaces_before_argument: }
-         {in nested enumerate itemx}
+         {normal_text:in nested enumerate itemx}
          {spaces_after_argument:\\n}
       *@end C1 l11
       |EXTRA
       |text_arg:{enumerate}
        *line_arg C3
         {spaces_before_argument: }
-        {enumerate}
+        {normal_text:enumerate}
         {spaces_after_argument:\\n}
      {empty_line:\\n}
    *@end C1 l13
@@ -69,7 +69,7 @@ $result_tree_text{'itemx_in_itemize_enumerate_in_table'} = '*document_root C1
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
-     {table}
+     {normal_text:table}
      {spaces_after_argument:\\n}
 ';
 

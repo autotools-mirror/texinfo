@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'consecutive_conditionals'} = '*document_root C1
  *before_node_section C1
   *preamble_before_content C4
-   {}
+   {normal_text:}
    >SOURCEMARKS
    >ignored_conditional_block<1>
     >*@ifinfo C3 l1
@@ -24,7 +24,7 @@ $result_tree_text{'consecutive_conditionals'} = '*document_root C1
      >|text_arg:{ifinfo}
       >*line_arg C3
        >{spaces_before_argument: }
-       >{ifinfo}
+       >{normal_text:ifinfo}
        >{spaces_after_argument:\\n}
    >ignored_conditional_block<2>
     >*@iftex C3 l4
@@ -37,7 +37,7 @@ $result_tree_text{'consecutive_conditionals'} = '*document_root C1
      >|text_arg:{iftex}
       >*line_arg C3
        >{spaces_before_argument: }
-       >{iftex}
+       >{normal_text:iftex}
        >{spaces_after_argument:\\n}
    {empty_line:\\n}
    *@set C1
@@ -54,7 +54,7 @@ $result_tree_text{'consecutive_conditionals'} = '*document_root C1
      >*arguments_line C1
       >*block_line_arg C3
        >{spaces_before_argument: }
-       >{b}
+       >{normal_text:b}
        >{spaces_after_argument:\\n}
      >{raw:in ifclear\\n}
      >*@end C1 l12
@@ -62,14 +62,14 @@ $result_tree_text{'consecutive_conditionals'} = '*document_root C1
      >|text_arg:{ifclear}
       >*line_arg C3
        >{spaces_before_argument: }
-       >{ifclear}
+       >{normal_text:ifclear}
        >{spaces_after_argument:\\n}
    >ignored_conditional_block<4><p:1>
     >*@ifset C3 l13
      >*arguments_line C1
       >*block_line_arg C3
        >{spaces_before_argument: }
-       >{a}
+       >{normal_text:a}
        >{spaces_after_argument:\\n}
      >{raw:in ifset\\n}
      >*@end C1 l15
@@ -77,7 +77,7 @@ $result_tree_text{'consecutive_conditionals'} = '*document_root C1
      >|text_arg:{ifset}
       >*line_arg C3
        >{spaces_before_argument: }
-       >{ifset}
+       >{normal_text:ifset}
        >{spaces_after_argument:\\n}
 ';
 

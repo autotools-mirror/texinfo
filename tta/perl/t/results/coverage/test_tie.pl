@@ -12,10 +12,10 @@ $result_tree_text{'test_tie'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *paragraph C3
-   {AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA}
+   {normal_text:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA}
    *@tie C1 l1
     *brace_container
-   {BBBBBBBBBBB\\n}
+   {normal_text:BBBBBBBBBBB\\n}
 ';
 
 

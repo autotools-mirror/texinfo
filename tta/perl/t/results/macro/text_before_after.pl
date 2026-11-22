@@ -12,7 +12,7 @@ $result_tree_text{'text_before_after'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *paragraph C2
-   {before }
+   {normal_text:before }
    *@macro C3 l1
    |EXTRA
    |formal_args:A{}
@@ -25,7 +25,7 @@ $result_tree_text{'text_before_after'} = '*document_root C1
     |text_arg:{macro after}
      *line_arg C3
       {spaces_before_argument: }
-      {macro after}
+      {normal_text:macro after}
       {spaces_after_argument:\\n}
 ';
 

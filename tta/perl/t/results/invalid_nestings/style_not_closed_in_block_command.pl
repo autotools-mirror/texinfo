@@ -16,16 +16,16 @@ $result_tree_text{'style_not_closed_in_block_command'} = '*document_root C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C2
-    {cartouche }
+    {normal_text:cartouche }
     *@code C1 l2
      *brace_container C1
-      {in code \\n}
+      {normal_text:in code \\n}
    *@end C1 l3
    |EXTRA
    |text_arg:{cartouche}
     *line_arg C3
      {spaces_before_argument: }
-     {cartouche}
+     {normal_text:cartouche}
      {spaces_after_argument:\\n}
 ';
 

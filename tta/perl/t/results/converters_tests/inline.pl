@@ -19,70 +19,70 @@ $result_tree_text{'inline'} = '*document_root C1
    |expand_index:{1}
    |format:{html}
     *brace_arg C1
-     {html}
+     {normal_text:html}
     *brace_arg C2
      {spaces_before_argument: }
-     {<blink>html</blink> ``}
-   {, \\n}
+     {normal_text:<blink>html</blink> ``}
+   {normal_text:, \\n}
    *@inlinefmt C2 l3
    |EXTRA
    |expand_index:{1}
    |format:{plaintext}
     *brace_arg C1
-     {plaintext}
+     {normal_text:plaintext}
     *brace_arg C2
      {spaces_before_argument: }
-     {plaintext ``}
-   {, \\n}
+     {normal_text:plaintext ``}
+   {normal_text:, \\n}
    *@inlinefmt C2 l4
    |EXTRA
    |format:{xml}
     *brace_arg C1
-     {xml}
+     {normal_text:xml}
     *elided_brace_command_arg C1
      {raw: <para>xml</para> ``}
-   {,\\n}
+   {normal_text:,\\n}
    *@inlinefmt C2 l5
    |EXTRA
    |expand_index:{1}
    |format:{docbook}
     *brace_arg C1
-     {docbook}
+     {normal_text:docbook}
     *brace_arg C2
      {spaces_before_argument: }
-     {<emphasis>docbook</emphasis> ``}
-   {, \\n}
+     {normal_text:<emphasis>docbook</emphasis> ``}
+   {normal_text:, \\n}
    *@inlinefmt C2 l6
    |EXTRA
    |format:{tex}
     *brace_arg C1
-     {tex}
+     {normal_text:tex}
     *elided_brace_command_arg C1
      {raw: $\\underline{a < b @code{tex \\hbox{ code }}}$ ``}
-   {\\n}
+   {normal_text:\\n}
    *@inlinefmt C2 l7
    |EXTRA
    |expand_index:{1}
    |format:{latex}
     *brace_arg C1
-     {latex}
+     {normal_text:latex}
     *brace_arg C3
      {spaces_before_argument: }
      *@math C1 l7
       *brace_arg C3
-       {\\frac}
+       {normal_text:\\frac}
        *balanced_braces C3 l7
-        {{a < b }
+        {normal_text:{a < b }
         *@code C1 l7
          *brace_container C2
-          {tex \\hbox}
+          {normal_text:tex \\hbox}
           *balanced_braces C1 l7
-           {{ code }}
-        {}}
+           {normal_text:{ code }}
+        {normal_text:}}
        *balanced_braces C1 l7
-        {{b}}
-     { ``}
-   {\\n}
+        {normal_text:{b}}
+     {normal_text: ``}
+   {normal_text:\\n}
   {empty_line:\\n}
   {empty_line:\\n}
   *paragraph C12
@@ -91,68 +91,68 @@ $result_tree_text{'inline'} = '*document_root C1
    |expand_index:{1}
    |format:{html}
     *brace_arg C1
-     {html}
+     {normal_text:html}
     *brace_arg C2
      {spaces_before_argument: }
-     {raw <blink>html</blink> ``}
-   {, \\n}
+     {normal_text:raw <blink>html</blink> ``}
+   {normal_text:, \\n}
    *@inlineraw C2 l11
    |EXTRA
    |expand_index:{1}
    |format:{plaintext}
     *brace_arg C1
-     {plaintext}
+     {normal_text:plaintext}
     *brace_arg C2
      {spaces_before_argument: }
-     {raw plaintext ``}
-   {, \\n}
+     {normal_text:raw plaintext ``}
+   {normal_text:, \\n}
    *@inlineraw C2 l12
    |EXTRA
    |format:{xml}
     *brace_arg C1
-     {xml}
+     {normal_text:xml}
     *elided_brace_command_arg C1
      {raw: raw <para>xml</para> ``}
-   {,\\n}
+   {normal_text:,\\n}
    *@inlineraw C2 l13
    |EXTRA
    |expand_index:{1}
    |format:{docbook}
     *brace_arg C1
-     {docbook}
+     {normal_text:docbook}
     *brace_arg C2
      {spaces_before_argument: }
-     {raw <emphasis>docbook</emphasis> ``}
-   {, \\n}
+     {normal_text:raw <emphasis>docbook</emphasis> ``}
+   {normal_text:, \\n}
    *@inlineraw C2 l14
    |EXTRA
    |format:{tex}
     *brace_arg C1
-     {tex}
+     {normal_text:tex}
     *elided_brace_command_arg C1
      {raw: raw $\\underline{a < b @code{tex \\hbox{ code }}}$ ``}
-   {\\n}
+   {normal_text:\\n}
    *@inlineraw C2 l15
    |EXTRA
    |expand_index:{1}
    |format:{latex}
     *brace_arg C1
-     {latex}
+     {normal_text:latex}
     *brace_arg C5
      {spaces_before_argument: }
-     {raw $\\frac}
+     {normal_text:raw $\\frac}
      *balanced_braces C3 l15
-      {{a < b }
+      {normal_text:{a < b }
       *@code C1 l15
        *brace_container C2
-        {tex \\hbox}
+        {normal_text:tex \\hbox}
         *balanced_braces C1 l15
-         {{ code }}
-      {}}
+         {normal_text:{ code }}
+      {normal_text:}}
      *balanced_braces C1 l15
-      {{b}}
-     {$ ``}
-   {\\n}
+      {normal_text:{b}}
+     {normal_text:$ ``}
+   {normal_text:\\n}
 ';
 
 

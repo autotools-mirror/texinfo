@@ -18,13 +18,13 @@ $result_tree_text{'maketitle_documentinfo_publication'} = '*document_root C8
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *paragraph C1
-     {C\'est toto\\n}
+     {normal_text:C\'est toto\\n}
     *@end C1 maketitle_documentinfo_publication.texi:l4
     |EXTRA
     |text_arg:{publication}
      *line_arg C3
       {spaces_before_argument: }
-      {publication}
+      {normal_text:publication}
       {spaces_after_argument:\\n}
    {empty_line: \\n}
    *@documentinfo C8 maketitle_documentinfo_publication.texi:l6
@@ -36,42 +36,42 @@ $result_tree_text{'maketitle_documentinfo_publication'} = '*document_root C8
     |global_command_number:{1}
      *line_arg C3
       {spaces_before_argument: }
-      {SOme ONe}
+      {normal_text:SOme ONe}
       {spaces_after_argument:\\n}
     *@title C1 maketitle_documentinfo_publication.texi:l8
      *line_arg C3
       {spaces_before_argument: }
-      {TTT}
+      {normal_text:TTT}
       {spaces_after_argument:\\n}
     *@author C1 maketitle_documentinfo_publication.texi:l9
     |EXTRA
     |global_command_number:{2}
      *line_arg C3
       {spaces_before_argument: }
-      {Gàther Person}
+      {normal_text:Gàther Person}
       {spaces_after_argument:\\n}
     *@subtitle C1 maketitle_documentinfo_publication.texi:l10
     |EXTRA
     |global_command_number:{1}
      *line_arg C3
       {spaces_before_argument: }
-      {ST1}
+      {normal_text:ST1}
       {spaces_after_argument:\\n}
     *@subtitle C1 maketitle_documentinfo_publication.texi:l11
     |EXTRA
     |global_command_number:{2}
      *line_arg C3
       {spaces_before_argument: }
-      {ST2}
+      {normal_text:ST2}
       {spaces_after_argument:\\n}
     *paragraph C1
-     {Toto\\n}
+     {normal_text:Toto\\n}
     *@end C1 maketitle_documentinfo_publication.texi:l13
     |EXTRA
     |text_arg:{documentinfo}
      *line_arg C3
       {spaces_before_argument: }
-      {documentinfo}
+      {normal_text:documentinfo}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@copying C3 maketitle_documentinfo_publication.texi:l15
@@ -79,13 +79,13 @@ $result_tree_text{'maketitle_documentinfo_publication'} = '*document_root C8
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *paragraph C1
-     {You shoukd\\n}
+     {normal_text:You shoukd\\n}
     *@end C1 maketitle_documentinfo_publication.texi:l17
     |EXTRA
     |text_arg:{copying}
      *line_arg C3
       {spaces_before_argument: }
-      {copying}
+      {normal_text:copying}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@contents C1 maketitle_documentinfo_publication.texi:l19
@@ -106,7 +106,7 @@ $result_tree_text{'maketitle_documentinfo_publication'} = '*document_root C8
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
  *@top C4 maketitle_documentinfo_publication.texi:l24 {top}
  |EXTRA
@@ -115,11 +115,11 @@ $result_tree_text{'maketitle_documentinfo_publication'} = '*document_root C8
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line: \\n}
   *paragraph C1
-   {aaa\\n}
+   {normal_text:aaa\\n}
   {empty_line: \\n}
  *@node C1 maketitle_documentinfo_publication.texi:l28 {chùpter}
  |EXTRA
@@ -129,7 +129,7 @@ $result_tree_text{'maketitle_documentinfo_publication'} = '*document_root C8
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chùpter}
+    {normal_text:chùpter}
     {spaces_after_argument:\\n}
  *@chapter C2 maketitle_documentinfo_publication.texi:l29 {chap}
  |EXTRA
@@ -139,7 +139,7 @@ $result_tree_text{'maketitle_documentinfo_publication'} = '*document_root C8
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line: \\n}
  *@node C1 maketitle_documentinfo_publication.texi:l31 {section}
@@ -150,7 +150,7 @@ $result_tree_text{'maketitle_documentinfo_publication'} = '*document_root C8
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {section}
+    {normal_text:section}
     {spaces_after_argument:\\n}
  *@section C2 maketitle_documentinfo_publication.texi:l32 {Sec}
  |EXTRA
@@ -160,7 +160,7 @@ $result_tree_text{'maketitle_documentinfo_publication'} = '*document_root C8
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Sec}
+    {normal_text:Sec}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@bye C1

@@ -21,21 +21,21 @@ $result_tree_text{'inter_item_commands_in_def'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {fset}
+       {normal_text:fset}
      {spaces: }
      *def_name C1
       *def_line_arg C1
        *@var C1 l1
         *brace_container C1
-         {i}
+         {normal_text:i}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {a}
+       {normal_text:a}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {g}
+       {normal_text:g}
      {spaces_after_argument:\\n}
    *inter_def_item C2
     *@c C1
@@ -53,12 +53,12 @@ $result_tree_text{'inter_item_commands_in_def'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {Command}
+       {normal_text:Command}
      {spaces: }
      *def_name C1
       *bracketed_arg C2 l4
        {spaces_before_argument: }
-       {log trap1}
+       {normal_text:log trap1}
      {spaces: }
      *def_arg C1
       *bracketed_arg l4
@@ -69,7 +69,7 @@ $result_tree_text{'inter_item_commands_in_def'} = '*document_root C1
     |index_entry:I{cp,1}
      *line_arg C3
       {spaces_before_argument: }
-      {between deffnx}
+      {normal_text:between deffnx}
       {spaces_after_argument:\\n}
    *@deffnx C1 l6
    |EXTRA
@@ -80,21 +80,21 @@ $result_tree_text{'inter_item_commands_in_def'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {cmde2}
+       {normal_text:cmde2}
      {spaces: }
      *def_name C1
       *def_line_arg C1
        *@b C1 l6
         *brace_container C3
-         {id }
+         {normal_text:id }
          *@samp C1 l6
           *brace_container C1
-           {i}
-         { ule}
+           {normal_text:i}
+         {normal_text: ule}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {truc}
+       {normal_text:truc}
      {spaces_after_argument:\\n}
    *def_item C3
     *index_entry_command@cindex C1 l7
@@ -102,17 +102,17 @@ $result_tree_text{'inter_item_commands_in_def'} = '*document_root C1
     |index_entry:I{cp,2}
      *line_arg C3
       {spaces_before_argument: }
-      {cindex in deff item}
+      {normal_text:cindex in deff item}
       {spaces_after_argument:\\n}
     {empty_line:\\n}
     *paragraph C1
-     {In deff item.\\n}
+     {normal_text:In deff item.\\n}
    *@end C1 l10
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
-     {deffn}
+     {normal_text:deffn}
      {spaces_after_argument:\\n}
 ';
 

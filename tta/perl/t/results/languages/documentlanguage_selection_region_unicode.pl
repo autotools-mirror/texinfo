@@ -19,7 +19,7 @@ $result_tree_text{'documentlanguage_selection_region_unicode'} = '*document_root
    |text_arg:{fr_M让}
     *line_arg C3
      {spaces_before_argument: }
-     {fr_M让}
+     {normal_text:fr_M让}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *@node C1 l4 {Top}
@@ -30,7 +30,7 @@ $result_tree_text{'documentlanguage_selection_region_unicode'} = '*document_root
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C4 l5 {top}
  |EXTRA
@@ -39,7 +39,7 @@ $result_tree_text{'documentlanguage_selection_region_unicode'} = '*document_root
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@defivar C2 l7
@@ -55,26 +55,26 @@ $result_tree_text{'documentlanguage_selection_region_unicode'} = '*document_root
      |EXTRA
      |inserted:{1}
       *def_line_arg C1
-       {Instance Variable}
+       {normal_text:Instance Variable}
      {spaces: }
      *def_class C1
       *def_line_arg C1
-       {Which}
+       {normal_text:Which}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {Language}
+       {normal_text:Language}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {Selected?}
+       {normal_text:Selected?}
      {spaces_after_argument:\\n}
    *@end C1 l8
    |EXTRA
    |text_arg:{defivar}
     *line_arg C3
      {spaces_before_argument: }
-     {defivar}
+     {normal_text:defivar}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
 ';

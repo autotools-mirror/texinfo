@@ -21,31 +21,31 @@ $result_tree_text{'double_command'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {func}
+       {normal_text:func}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {plot}
+       {normal_text:plot}
      {spaces: }
      {delimiter:(}
      *def_arg C1
       *def_line_arg C1
-       {a}
+       {normal_text:a}
      {delimiter:,}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {b}
+       {normal_text:b}
      {delimiter:,}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {c}
+       {normal_text:c}
      {delimiter:,}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {...}
+       {normal_text:...}
      {delimiter:)}
      {spaces: }
      *def_arg C1
@@ -60,47 +60,47 @@ $result_tree_text{'double_command'} = '*document_root C1
          {spaces_before_argument: }
          *def_category C1
           *def_line_arg C1
-           {func}
+           {normal_text:func}
          {spaces: }
          *def_name C1
           *def_line_arg C1
-           {plot2}
+           {normal_text:plot2}
          {spaces: }
          {delimiter:(}
          *def_arg C1
           *def_line_arg C1
-           {a}
+           {normal_text:a}
          {delimiter:,}
          {spaces: }
          *def_arg C1
           *def_line_arg C1
-           {b}
+           {normal_text:b}
          {delimiter:,}
          {spaces: }
          *def_arg C1
           *def_line_arg C1
-           {c}
+           {normal_text:c}
          {delimiter:,}
          {spaces: }
          *def_arg C1
           *def_line_arg C1
-           {...}
+           {normal_text:...}
          {delimiter:,}
          {spaces: }
          *def_arg C1
           *def_line_arg C1
-           {d}
+           {normal_text:d}
          {delimiter:)}
          {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {aaa\\n}
+     {normal_text:aaa\\n}
    *@end C1 l3
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
-     {deffn}
+     {normal_text:deffn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deffn C3 l5
@@ -113,15 +113,15 @@ $result_tree_text{'double_command'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {func}
+       {normal_text:func}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {aaaa}
+       {normal_text:aaaa}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {args}
+       {normal_text:args}
      {spaces:  }
      *def_arg C1
       *def_line_arg C1
@@ -135,21 +135,21 @@ $result_tree_text{'double_command'} = '*document_root C1
           {spaces_before_argument: }
           *def_category C1
            *def_line_arg C1
-            {c--ategory}
+            {normal_text:c--ategory}
           {spaces: }
           *def_name C1
            *def_line_arg C1
-            {d--efvr_name}
+            {normal_text:d--efvr_name}
           {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {bbb\\n}
+     {normal_text:bbb\\n}
    *@end C1 l7
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
-     {deffn}
+     {normal_text:deffn}
      {spaces_after_argument:\\n}
 ';
 

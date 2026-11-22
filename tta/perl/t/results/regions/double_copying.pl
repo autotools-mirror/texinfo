@@ -17,27 +17,27 @@ $result_tree_text{'double_copying'} = '*document_root C1
       {spaces_before_argument:\\n}
     {empty_line:\\n}
     *paragraph C1
-     {This is a copyright notice\\n}
+     {normal_text:This is a copyright notice\\n}
     {empty_line:\\n}
     *@copying C3 l5
      *arguments_line C1
       *block_line_arg C1
        {spaces_before_argument:\\n}
      *paragraph C1
-      {And a second one (?)\\n}
+      {normal_text:And a second one (?)\\n}
      *@end C1 l7
      |EXTRA
      |text_arg:{copying}
       *line_arg C3
        {spaces_before_argument: }
-       {copying}
+       {normal_text:copying}
        {spaces_after_argument:\\n}
     *@end C1 l8
     |EXTRA
     |text_arg:{copying}
      *line_arg C3
       {spaces_before_argument: }
-      {copying}
+      {normal_text:copying}
       {spaces_after_argument:\\n}
 ';
 

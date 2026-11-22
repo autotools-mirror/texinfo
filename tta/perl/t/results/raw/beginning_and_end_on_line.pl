@@ -17,42 +17,42 @@ $result_tree_text{'beginning_and_end_on_line'} = '*document_root C1
     *arguments_line C1
      *block_line_arg C3
       {spaces_before_argument: }
-      {in tex}
+      {normal_text:in tex}
       {spaces_after_argument: }
     *@end C1 l2
     |EXTRA
     |text_arg:{tex}
      *line_arg C3
       {spaces_before_argument: }
-      {tex}
+      {normal_text:tex}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *@verbatim C2 l4
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     {in verbatim}
+     {normal_text:in verbatim}
      {spaces_after_argument: }
    *@end C1 l4
    |EXTRA
    |text_arg:{verbatim}
     *line_arg C3
      {spaces_before_argument: }
-     {verbatim}
+     {normal_text:verbatim}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@html C2 l6
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     {in html}
+     {normal_text:in html}
      {spaces_after_argument: }
    *@end C1 l6
    |EXTRA
    |text_arg:{html}
     *line_arg C3
      {spaces_before_argument: }
-     {html}
+     {normal_text:html}
      {spaces_after_argument:\\n}
 ';
 

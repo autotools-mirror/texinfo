@@ -23,7 +23,7 @@ $result_tree_text{'brace_command_not_closed'} = '*document_root C1
     |text_arg:{linemacro}
      *line_arg C3
       {spaces_before_argument: }
-      {linemacro}
+      {normal_text:linemacro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    >SOURCEMARKS
@@ -35,10 +35,10 @@ $result_tree_text{'brace_command_not_closed'} = '*document_root C1
   *paragraph C1
    *@code C1 l6:@mycommand
     *brace_container C2
-     {in code\\n}
+     {normal_text:in code\\n}
      {empty_line:\\n}
   *paragraph C1
-   {,  }
+   {normal_text:,  }
    >SOURCEMARKS
    >linemacro_expansion<end;1><p:3>
 ';

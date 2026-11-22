@@ -14,36 +14,36 @@ $result_tree_text{'no_documentencoding_and_insertions'} = '*document_root C1
    {text_before_beginning:\\n}
   *preamble_before_content
   *paragraph C5
-   {-- --- \'\' `` ` \' }
+   {normal_text:-- --- \'\' `` ` \' }
    *@code C1 l2
     *brace_container C1
-     {in code}
-   {. }
+     {normal_text:in code}
+   {normal_text:. }
    *@~ C1 l2
     *following_arg C1
-     {e}
-   {.\\n}
+     {normal_text:e}
+   {normal_text:.\\n}
   {empty_line:\\n}
   *@example C3 l4
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C5
-    {-- --- \'\' `` ` \' }
+    {normal_text:-- --- \'\' `` ` \' }
     *@code C1 l5
      *brace_container C1
-      {in code}
-    {. }
+      {normal_text:in code}
+    {normal_text:. }
     *@~ C1 l5
      *following_arg C1
-      {e}
-    {.\\n}
+      {normal_text:e}
+    {normal_text:.\\n}
    *@end C1 l6
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
 ';
 

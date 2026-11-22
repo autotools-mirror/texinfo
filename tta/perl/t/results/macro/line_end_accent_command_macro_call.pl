@@ -23,7 +23,7 @@ $result_tree_text{'line_end_accent_command_macro_call'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    >SOURCEMARKS
@@ -33,7 +33,7 @@ $result_tree_text{'line_end_accent_command_macro_call'} = '*document_root C1
   *@center C1 l5:@expand
    *line_arg C4
     {spaces_before_argument: }
-    {A }
+    {normal_text:A }
     *@ringaccent C1 l5:@expand
      {spaces_after_cmd_before_arg: }
      >SOURCEMARKS
@@ -41,7 +41,7 @@ $result_tree_text{'line_end_accent_command_macro_call'} = '*document_root C1
     {spaces_after_argument:\\n}
   {spaces_before_paragraph: }
   *paragraph C1
-   {a\\n}
+   {normal_text:a\\n}
   {empty_line:\\n}
   *@macro C3 l8
   |EXTRA
@@ -55,7 +55,7 @@ $result_tree_text{'line_end_accent_command_macro_call'} = '*document_root C1
    |text_arg:{macro}
     *line_arg C3
      {spaces_before_argument: }
-     {macro}
+     {normal_text:macro}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   >SOURCEMARKS
@@ -65,7 +65,7 @@ $result_tree_text{'line_end_accent_command_macro_call'} = '*document_root C1
   *@center C1 l12:@nospace
    *line_arg C4
     {spaces_before_argument: }
-    {B }
+    {normal_text:B }
     *@ringaccent C1 l12:@nospace
      {spaces_after_cmd_before_arg:}
      >SOURCEMARKS
@@ -73,7 +73,7 @@ $result_tree_text{'line_end_accent_command_macro_call'} = '*document_root C1
     {spaces_after_argument:\\n}
   {spaces_before_paragraph: }
   *paragraph C1
-   {A\\n}
+   {normal_text:A\\n}
   {empty_line:\\n}
 ';
 

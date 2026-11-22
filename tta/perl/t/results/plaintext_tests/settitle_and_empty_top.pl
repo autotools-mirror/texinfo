@@ -14,7 +14,7 @@ $result_tree_text{'settitle_and_empty_top'} = '*document_root C2
    *@settitle C1 l1
     *line_arg C3
      {spaces_before_argument: }
-     {Title}
+     {normal_text:Title}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *@top C2 l3

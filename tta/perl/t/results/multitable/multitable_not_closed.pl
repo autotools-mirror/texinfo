@@ -18,10 +18,10 @@ $result_tree_text{'multitable_not_closed'} = '*document_root C1
     *block_line_arg C5
      {spaces_before_argument: }
      *bracketed_arg C1 l1
-      {r}
-     { }
+      {normal_text:r}
+     {normal_text: }
      *bracketed_arg C1 l1
-      {t}
+      {normal_text:t}
      {spaces_after_argument:\\n}
 ';
 

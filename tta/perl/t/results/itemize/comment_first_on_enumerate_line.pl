@@ -25,13 +25,13 @@ $result_tree_text{'comment_first_on_enumerate_line'} = '*document_root C1
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
-     {first\\n}
+     {normal_text:first\\n}
    *@end C1 l3
    |EXTRA
    |text_arg:{enumerate}
     *line_arg C3
      {spaces_before_argument: }
-     {enumerate}
+     {normal_text:enumerate}
      {spaces_after_argument:\\n}
 ';
 

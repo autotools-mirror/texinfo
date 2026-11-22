@@ -30,7 +30,7 @@ $result_tree_text{'empty_line_in_command_in_expanded_not_expanded'} = '*document
     |text_arg:{tex}
      *line_arg C3
       {spaces_before_argument: }
-      {tex}
+      {normal_text:tex}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@html C3 l12
@@ -43,23 +43,23 @@ $result_tree_text{'empty_line_in_command_in_expanded_not_expanded'} = '*document
      |identifier:{ha-hb}
      |is_target:{1}
       *brace_arg C3
-       {ha\\n}
+       {normal_text:ha\\n}
        {empty_line:\\n}
-       {hb}
-     {.\\n}
+       {normal_text:hb}
+     {normal_text:.\\n}
      {empty_line:\\n}
      *@code C1 l17
       *brace_container C3
-       {hv\\n}
+       {normal_text:hv\\n}
        {empty_line:\\n}
-       {hn}
-     {\\n}
+       {normal_text:hn}
+     {normal_text:\\n}
     *@end C1 l20
     |EXTRA
     |text_arg:{html}
      *line_arg C3
       {spaces_before_argument: }
-      {html}
+      {normal_text:html}
       {spaces_after_argument:\\n}
 ';
 

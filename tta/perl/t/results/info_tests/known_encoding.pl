@@ -20,7 +20,7 @@ $result_tree_text{'known_encoding'} = '*document_root C2
    |text_arg:{latin1}
     *line_arg C3
      {spaces_before_argument: }
-     {latin1}
+     {normal_text:latin1}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *@node C2 l4 {Top}
@@ -31,7 +31,7 @@ $result_tree_text{'known_encoding'} = '*document_root C2
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
 ';

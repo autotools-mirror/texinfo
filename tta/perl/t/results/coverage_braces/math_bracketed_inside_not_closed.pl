@@ -15,10 +15,10 @@ $result_tree_text{'math_bracketed_inside_not_closed'} = '*document_root C1
    *@math C1 l1
     *brace_arg C3
      *balanced_braces C1 l1
-      {{x^i}}
-     {\\over}
+      {normal_text:{x^i}}
+     {normal_text:\\over}
      *balanced_braces C1 l1
-      {{\\tan}}
+      {normal_text:{\\tan}}
 ';
 
 

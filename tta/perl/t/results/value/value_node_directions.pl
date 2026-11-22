@@ -27,7 +27,7 @@ $result_tree_text{'value_node_directions'} = '*document_root C7
   *arguments_line C4
    *line_arg C2
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
    *line_arg C2
    |EXTRA
    |node_content:A{1|1}
@@ -37,24 +37,24 @@ $result_tree_text{'value_node_directions'} = '*document_root C7
     >value_expansion<start;1><p:1>{bar}
      >*@value C1
       >*brace_container C1
-       >{a--foo}
-    {bar}
+       >{normal_text:a--foo}
+    {normal_text:bar}
     >SOURCEMARKS
     >value_expansion<end;1><p:3>
    *line_arg C4
    |EXTRA
    |manual_content:A{2|2}
     {spaces_before_argument: }
-    {(}
-    {dir}
-    {)}
+    {normal_text:(}
+    {normal_text:dir}
+    {normal_text:)}
    *line_arg C5
    |EXTRA
    |manual_content:A{2|2}
     {spaces_before_argument: }
-    {(}
-    {dir}
-    {)}
+    {normal_text:(}
+    {normal_text:dir}
+    {normal_text:)}
     {spaces_after_argument:\\n}
  *@top C3 l4 {Var bar}
  |EXTRA
@@ -63,21 +63,21 @@ $result_tree_text{'value_node_directions'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Var bar}
+    {normal_text:Var bar}
     >SOURCEMARKS
     >value_expansion<start;2><p:4>{bar}
      >*@value C1
       >*brace_container C1
-       >{a--foo}
+       >{normal_text:a--foo}
     >value_expansion<end;2><p:7>
     {spaces_after_argument:\\n}
   *paragraph C1
-   {bar\\n}
+   {normal_text:bar\\n}
    >SOURCEMARKS
    >value_expansion<start;3>{bar}
     >*@value C1
      >*brace_container C1
-      >{a--foo}
+      >{normal_text:a--foo}
    >value_expansion<end;3><p:3>
   {empty_line:\\n}
  *@node C1 l7 {bar}
@@ -92,8 +92,8 @@ $result_tree_text{'value_node_directions'} = '*document_root C7
     >value_expansion<start;4><p:1>{bar}
      >*@value C1
       >*brace_container C1
-       >{a--foo}
-    {bar}
+       >{normal_text:a--foo}
+    {normal_text:bar}
     >SOURCEMARKS
     >value_expansion<end;4><p:3>
    *line_arg C2
@@ -101,20 +101,20 @@ $result_tree_text{'value_node_directions'} = '*document_root C7
    |node_content:A{1|1}
    |normalized:{BarFoo}
     {spaces_before_argument: }
-    {BarFoo}
+    {normal_text:BarFoo}
    *line_arg C2
    |EXTRA
    |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
    *line_arg C5
    |EXTRA
    |manual_content:A{2|2}
     {spaces_before_argument: }
-    {(}
-    {dir}
-    {)}
+    {normal_text:(}
+    {normal_text:dir}
+    {normal_text:)}
     {spaces_after_argument:\\n}
  *@chapter C2 l8 {BarFoo}
  |EXTRA
@@ -124,7 +124,7 @@ $result_tree_text{'value_node_directions'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {BarFoo}
+    {normal_text:BarFoo}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l10 {BarFoo}
@@ -135,7 +135,7 @@ $result_tree_text{'value_node_directions'} = '*document_root C7
   *arguments_line C4
    *line_arg C2
     {spaces_before_argument: }
-    {BarFoo}
+    {normal_text:BarFoo}
    *line_arg C1
     {spaces_before_argument: }
    *line_arg C2
@@ -147,17 +147,17 @@ $result_tree_text{'value_node_directions'} = '*document_root C7
     >value_expansion<start;5><p:1>{bar}
      >*@value C1
       >*brace_container C1
-       >{a--foo}
-    {bar}
+       >{normal_text:a--foo}
+    {normal_text:bar}
     >SOURCEMARKS
     >value_expansion<end;5><p:3>
    *line_arg C5
    |EXTRA
    |manual_content:A{2|2}
     {spaces_before_argument: }
-    {(}
-    {dir}
-    {)}
+    {normal_text:(}
+    {normal_text:dir}
+    {normal_text:)}
     {spaces_after_argument:\\n}
  *@chapter C1 l11 {bar}
  |EXTRA
@@ -167,7 +167,7 @@ $result_tree_text{'value_node_directions'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {bar}
+    {normal_text:bar}
     {spaces_after_argument:\\n}
 ';
 

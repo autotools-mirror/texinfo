@@ -18,13 +18,13 @@ $result_tree_text{'today_in_copying'} = '*document_root C4
     *paragraph C2
      *@today C1 l2
       *brace_container
-     {.\\n}
+     {normal_text:.\\n}
     *@end C1 l3
     |EXTRA
     |text_arg:{copying}
      *line_arg C3
       {spaces_before_argument: }
-      {copying}
+      {normal_text:copying}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
  *@node C1 l5 {Top}
@@ -35,7 +35,7 @@ $result_tree_text{'today_in_copying'} = '*document_root C4
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l6 {top}
  |EXTRA
@@ -44,7 +44,7 @@ $result_tree_text{'today_in_copying'} = '*document_root C4
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C3 l8 {chap}
@@ -55,7 +55,7 @@ $result_tree_text{'today_in_copying'} = '*document_root C4
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@insertcopying C1 l10

@@ -21,21 +21,21 @@ $result_tree_text{'defx_after_empty_line'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {fset}
+       {normal_text:fset}
      {spaces: }
      *def_name C1
       *def_line_arg C1
        *@var C1 l1
         *brace_container C1
-         {i}
+         {normal_text:i}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {a}
+       {normal_text:a}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {g}
+       {normal_text:g}
      {spaces_after_argument:\\n}
    *inter_def_item C1
     {empty_line:\\n}
@@ -48,22 +48,22 @@ $result_tree_text{'defx_after_empty_line'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *bracketed_arg C1 l3
-       {truc}
+       {normal_text:truc}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {bidulr}
+       {normal_text:bidulr}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {machin...}
+       {normal_text:machin...}
      {spaces_after_argument:\\n}
    *@end C1 l4
    |EXTRA
    |text_arg:{deffn}
     *line_arg C2
      {spaces_before_argument: }
-     {deffn}
+     {normal_text:deffn}
 ';
 
 

@@ -14,9 +14,9 @@ $result_tree_text{'shorttitlepage'} = '*document_root C5
    *@shorttitlepage C1 l1
     *line_arg C5
      {spaces_before_argument: }
-     {the title with shorttitlepage }
+     {normal_text:the title with shorttitlepage }
      *@*
-     { it can be long}
+     {normal_text: it can be long}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *@node C1 l3 {Top}
@@ -27,7 +27,7 @@ $result_tree_text{'shorttitlepage'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l4 {section top}
  |EXTRA
@@ -36,7 +36,7 @@ $result_tree_text{'shorttitlepage'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {section top}
+    {normal_text:section top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l6 {chapter}
@@ -47,7 +47,7 @@ $result_tree_text{'shorttitlepage'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter}
+    {normal_text:chapter}
     {spaces_after_argument:\\n}
  *@chapter C3 l7 {Chapter}
  |EXTRA
@@ -57,11 +57,11 @@ $result_tree_text{'shorttitlepage'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chapter}
+    {normal_text:Chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {In chapter\\n}
+   {normal_text:In chapter\\n}
 ';
 
 

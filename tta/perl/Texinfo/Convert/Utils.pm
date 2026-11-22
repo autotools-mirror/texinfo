@@ -425,7 +425,8 @@ sub expand_today($;$$$) {
   my ($test, $lang_translations, $debug, $converter) = @_;
 
   if ($test) {
-    return Texinfo::TreeElement::new({'text' => 'a sunny day'});
+    return Texinfo::TreeElement::new({'text' => 'a sunny day',
+                                      'type' => 'normal_text'});
   }
 
   my ($sec, $min, $hour, $mday, $mon, $year, $wday, $yday, $isdst)
@@ -442,8 +443,10 @@ sub expand_today($;$$$) {
     $tree = $converter->cdt('{month} {day}, {year}',
           { 'month' => $converter->cdt(
                           $Texinfo::Convert::Utils::month_name[$mon]),
-            'day' => Texinfo::TreeElement::new({'text' => $mday}),
-            'year' => Texinfo::TreeElement::new({'text' => $year}) });
+            'day' => Texinfo::TreeElement::new({'text' => $mday,
+                                                'type' => 'normal_text'}),
+            'year' => Texinfo::TreeElement::new({'text' => $year,
+                                                 'type' => 'normal_text'}) });
   } elsif (defined($lang_translations)) {
     my $month_tree
       = Texinfo::Translations::gdt($Texinfo::Convert::Utils::month_name[$mon],
@@ -451,12 +454,15 @@ sub expand_today($;$$$) {
     $tree = Texinfo::Translations::gdt('{month} {day}, {year}',
           $lang_translations,
           { 'month' => $month_tree,
-            'day' => Texinfo::TreeElement::new({'text' => $mday}),
-            'year' => Texinfo::TreeElement::new({'text' => $year}) },
+            'day' => Texinfo::TreeElement::new({'text' => $mday,
+                                                'type' => 'normal_text'}),
+            'year' => Texinfo::TreeElement::new({'text' => $year,
+                                                 'type' => 'normal_text'}) },
            undef, $debug);
   } else {
     $tree = Texinfo::TreeElement::new({'text' =>
-             "$Texinfo::Convert::Utils::month_name[$mon] $mday, $year"});
+             "$Texinfo::Convert::Utils::month_name[$mon] $mday, $year",
+                                       'type' => 'normal_text'});
   }
   return $tree;
 }

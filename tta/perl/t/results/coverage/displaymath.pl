@@ -12,90 +12,90 @@ $result_tree_text{'displaymath'} = '*document_root C1
  *before_node_section C12
   *preamble_before_content
   *paragraph C1
-   {Simple\\n}
+   {normal_text:Simple\\n}
   *@displaymath C7 l2
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
-   {--}
+   {normal_text:--}
    *balanced_braces C1 l3
-    {{x^i}}
-   {\\over}
+    {normal_text:{x^i}}
+   {normal_text:\\over}
    *balanced_braces C1 l3
-    {{\\tan y}}
-   {\\n}
+    {normal_text:{\\tan y}}
+   {normal_text:\\n}
    *@end C1 l4
    |EXTRA
    |text_arg:{displaymath}
     *line_arg C3
      {spaces_before_argument: }
-     {displaymath}
+     {normal_text:displaymath}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C3
-   {Math with }
+   {normal_text:Math with }
    *@@
-   {-command\\n}
+   {normal_text:-command\\n}
   *@displaymath C8 l7
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *@code C1 l8
     *brace_container C1
-     {math code}
-   { a < b \\sum}
+     {normal_text:math code}
+   {normal_text: a < b \\sum}
    *@sub C1 l8
     *brace_container C1
-     {i}
-   { q}
+     {normal_text:i}
+   {normal_text: q}
    *@sup C1 l8
     *brace_container C1
-     {2}
-   {\\n}
+     {normal_text:2}
+   {normal_text:\\n}
    *@end C1 l9
    |EXTRA
    |text_arg:{displaymath}
     *line_arg C3
      {spaces_before_argument: }
-     {displaymath}
+     {normal_text:displaymath}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {Complex\\n}
+   {normal_text:Complex\\n}
   *@displaymath C10 l12
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
-   { \\underline}
+   {normal_text: \\underline}
    *balanced_braces C3 l13
-    {{}
+    {normal_text:{}
     *@code C1 l13
      *brace_container C2
-      {math \\hbox}
+      {normal_text:math \\hbox}
       *balanced_braces C1 l13
-       {{ code }}
-    {}}
-   { }
+       {normal_text:{ code }}
+    {normal_text:}}
+   {normal_text: }
    *@\\
-   {i \\sum_}
+   {normal_text:i \\sum_}
    *balanced_braces C1 l13
-    {{i}}
+    {normal_text:{i}}
    *balanced_braces C3 l13
-    {{\\underline}
+    {normal_text:{\\underline}
     *balanced_braces C1 l13
-     {{f}}
-    {}}
-   {\\n}
+     {normal_text:{f}}
+    {normal_text:}}
+   {normal_text:\\n}
    *@end C1 l14
    |EXTRA
    |text_arg:{displaymath}
     *line_arg C3
      {spaces_before_argument: }
-     {displaymath}
+     {normal_text:displaymath}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {With a comment\\n}
+   {normal_text:With a comment\\n}
   *@displaymath C4 l17
    *arguments_line C1
     *block_line_arg C1
@@ -105,13 +105,13 @@ $result_tree_text{'displaymath'} = '*document_root C1
      {spaces_before_argument: }
      {rawline_text:comment in displaymath}
      {spaces_after_argument:\\n}
-   {a/2\\n}
+   {normal_text:a/2\\n}
    *@end C1 l20
    |EXTRA
    |text_arg:{displaymath}
     *line_arg C3
      {spaces_before_argument: }
-     {displaymath}
+     {normal_text:displaymath}
      {spaces_after_argument:\\n}
 ';
 

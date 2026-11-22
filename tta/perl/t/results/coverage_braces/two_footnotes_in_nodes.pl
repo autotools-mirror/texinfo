@@ -19,7 +19,7 @@ $result_tree_text{'two_footnotes_in_nodes'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C8 l2 {2 footnotes in 2 nodes}
  |EXTRA
@@ -28,34 +28,34 @@ $result_tree_text{'two_footnotes_in_nodes'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {2 footnotes in 2 nodes}
+    {normal_text:2 footnotes in 2 nodes}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C3
-   {A}
+   {normal_text:A}
    *@footnote C1 l4
    |EXTRA
    |global_command_number:{1}
     *brace_command_context C3
      *paragraph C1
-      {Footnote Top/1\\n}
+      {normal_text:Footnote Top/1\\n}
      {empty_line:\\n}
      *paragraph C1
-      {para2}
-   {\\n}
+      {normal_text:para2}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C3
-   {B}
+   {normal_text:B}
    *@footnote C1 l8
    |EXTRA
    |global_command_number:{2}
     *brace_command_context C3
      *paragraph C1
-      {Footnote Top/2\\n}
+      {normal_text:Footnote Top/2\\n}
      {empty_line:\\n}
      *paragraph C1
-      {para2}
-   {\\n}
+      {normal_text:para2}
+   {normal_text:\\n}
   {empty_line:\\n}
   *@menu C3 l12
    *arguments_line C1
@@ -67,17 +67,17 @@ $result_tree_text{'two_footnotes_in_nodes'} = '*document_root C5
     |EXTRA
     |node_content:A{0|0}
     |normalized:{chapter}
-     {chapter}
+     {normal_text:chapter}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l14
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l16 {chapter}
@@ -88,7 +88,7 @@ $result_tree_text{'two_footnotes_in_nodes'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter}
+    {normal_text:chapter}
     {spaces_after_argument:\\n}
  *@chapter C6 l17 {chapter}
  |EXTRA
@@ -98,34 +98,34 @@ $result_tree_text{'two_footnotes_in_nodes'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter}
+    {normal_text:chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C3
-   {C}
+   {normal_text:C}
    *@footnote C1 l19
    |EXTRA
    |global_command_number:{3}
     *brace_command_context C3
      *paragraph C1
-      {Footnote chapter/1\\n}
+      {normal_text:Footnote chapter/1\\n}
      {empty_line:\\n}
      *paragraph C1
-      {para2}
-   {\\n}
+      {normal_text:para2}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C3
-   {D}
+   {normal_text:D}
    *@footnote C1 l23
    |EXTRA
    |global_command_number:{4}
     *brace_command_context C3
      *paragraph C1
-      {Footnote chapter/2\\n}
+      {normal_text:Footnote chapter/2\\n}
      {empty_line:\\n}
      *paragraph C1
-      {para2}
-   {\\n}
+      {normal_text:para2}
+   {normal_text:\\n}
   {empty_line:\\n}
 ';
 

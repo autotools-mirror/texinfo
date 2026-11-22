@@ -12,24 +12,24 @@ $result_tree_text{'test_errormsg'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *paragraph C5
-   {Some text\\n}
+   {normal_text:Some text\\n}
    *@errormsg C1 l2
     *brace_arg C4
-     {Text }
+     {normal_text:Text }
      *@~ C1 l2
       *following_arg C1
-       {e}
-     { }
+       {normal_text:e}
+     {normal_text: }
      *@code C1 l2
       *brace_container C1
-       {code}
-   {\\n}
+       {normal_text:code}
+   {normal_text:\\n}
    *@errormsg C1 l3
     *brace_arg C3
      {spaces_before_argument:  }
-     {with surrounding spaces}
+     {normal_text:with surrounding spaces}
      {spaces_after_argument:   }
-   {\\n}
+   {normal_text:\\n}
 ';
 
 

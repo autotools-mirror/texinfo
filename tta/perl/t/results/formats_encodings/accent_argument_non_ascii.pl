@@ -19,7 +19,7 @@ $result_tree_text{'accent_argument_non_ascii'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l2 {top}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'accent_argument_non_ascii'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l4 {chap}
@@ -39,7 +39,7 @@ $result_tree_text{'accent_argument_non_ascii'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
  *@chapter C2 l5 {Chapter}
  |EXTRA
@@ -49,17 +49,17 @@ $result_tree_text{'accent_argument_non_ascii'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chapter}
+    {normal_text:Chapter}
     {spaces_after_argument:\\n}
   *paragraph C4
    *@\' C1 l6
     *brace_container C1
-     {ê}
-   {\\n}
+     {normal_text:ê}
+   {normal_text:\\n}
    *@\' C1 l7
     *following_arg C1
-     {ê}
-   {\\n}
+     {normal_text:ê}
+   {normal_text:\\n}
 ';
 
 

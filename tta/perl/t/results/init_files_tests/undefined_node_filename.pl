@@ -19,7 +19,7 @@ $result_tree_text{'undefined_node_filename'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l3 {chap Other}
@@ -30,7 +30,7 @@ $result_tree_text{'undefined_node_filename'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap Other}
+    {normal_text:chap Other}
     {spaces_after_argument:\\n}
 ';
 

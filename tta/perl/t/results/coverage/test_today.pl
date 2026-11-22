@@ -14,7 +14,7 @@ $result_tree_text{'test_today'} = '*document_root C1
   *paragraph C2
    *@today C1 l1
     *brace_container
-   {.}
+   {normal_text:.}
 ';
 
 

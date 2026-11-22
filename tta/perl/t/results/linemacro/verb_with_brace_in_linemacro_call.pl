@@ -23,7 +23,7 @@ $result_tree_text{'verb_with_brace_in_linemacro_call'} = '*document_root C1
     |text_arg:{linemacro}
      *line_arg C3
       {spaces_before_argument: }
-      {linemacro}
+      {normal_text:linemacro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    >SOURCEMARKS
@@ -44,7 +44,7 @@ $result_tree_text{'verb_with_brace_in_linemacro_call'} = '*document_root C1
      {verb_delimiter::}
      {raw: in }, verb }
      {verb_delimiter::}
-   { other last\\n}
+   {normal_text: other last\\n}
    >SOURCEMARKS
    >linemacro_expansion<end;1><p:11>
   {empty_line:\\n}

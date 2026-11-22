@@ -17,23 +17,23 @@ $result_tree_text{'inlinefmtifelse'} = '*document_root C1
    |expand_index:{2}
    |format:{html}
     *brace_arg C1
-     {html}
+     {normal_text:html}
     *elided_brace_command_arg C1
      {raw:}
     *brace_arg C1
-     {else html no if}
-   {.\\n}
+     {normal_text:else html no if}
+   {normal_text:.\\n}
    *@inlinefmtifelse C3 l2
    |EXTRA
    |expand_index:{2}
    |format:{html}
     *brace_arg C1
-     {html}
+     {normal_text:html}
     *elided_brace_command_arg C1
      {raw:if html}
     *brace_arg C1
-     {else html}
-   {.\\n}
+     {normal_text:else html}
+   {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C4
    *@inlinefmtifelse C2 l4
@@ -41,21 +41,21 @@ $result_tree_text{'inlinefmtifelse'} = '*document_root C1
    |expand_index:{2}
    |format:{plaintext}
     *brace_arg C1
-     {plaintext}
+     {normal_text:plaintext}
     *elided_brace_command_arg C1
      {raw:if plaintext no second arg}
-   {.\\n}
+   {normal_text:.\\n}
    *@inlinefmtifelse C3 l5
    |EXTRA
    |expand_index:{2}
    |format:{plaintext}
     *brace_arg C1
-     {plaintext}
+     {normal_text:plaintext}
     *elided_brace_command_arg C1
      {raw:if plaintext}
     *brace_arg C1
-     {else plaintext}
-   {.\\n}
+     {normal_text:else plaintext}
+   {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C2
    *@inlinefmtifelse C3 l7
@@ -63,11 +63,11 @@ $result_tree_text{'inlinefmtifelse'} = '*document_root C1
    |expand_index:{2}
    |format:{xml}
     *brace_arg C1
-     {xml}
+     {normal_text:xml}
     *elided_brace_command_arg C1
      {raw:if xml empty second arg}
     *brace_arg
-   {.\\n}
+   {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C2
    *@inlinefmtifelse C3 l9
@@ -76,14 +76,14 @@ $result_tree_text{'inlinefmtifelse'} = '*document_root C1
    |format:{docbook}
     *brace_arg C3
      {spaces_before_argument: }
-     {docbook}
+     {normal_text:docbook}
      {spaces_after_argument: }
     *elided_brace_command_arg C1
      {raw: if docbook spaces }
     *brace_arg C2
      {spaces_before_argument: }
-     {else docbook spaces }
-   {.\\n}
+     {normal_text:else docbook spaces }
+   {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C2
    *@inlinefmtifelse C3 l11
@@ -92,14 +92,14 @@ $result_tree_text{'inlinefmtifelse'} = '*document_root C1
    |format:{tex}
     *brace_arg C3
      {spaces_before_argument: }
-     {tex}
+     {normal_text:tex}
      {spaces_after_argument: }
     *elided_brace_command_arg C1
      {raw: if tex spaces }
     *brace_arg C2
      {spaces_before_argument: }
-     {else tex spaces }
-   {.\\n}
+     {normal_text:else tex spaces }
+   {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C2
    *@inlinefmtifelse C3 l13
@@ -107,12 +107,12 @@ $result_tree_text{'inlinefmtifelse'} = '*document_root C1
    |expand_index:{2}
    |format:{docbook}
     *brace_arg C1
-     {docbook}
+     {normal_text:docbook}
     *elided_brace_command_arg C1
      {raw:if docbook}
     *brace_arg C1
-     {else docbook}
-   {.\\n}
+     {normal_text:else docbook}
+   {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C2
    *@inlinefmtifelse C3 l15
@@ -120,12 +120,12 @@ $result_tree_text{'inlinefmtifelse'} = '*document_root C1
    |expand_index:{2}
    |format:{tex}
     *brace_arg C1
-     {tex}
+     {normal_text:tex}
     *elided_brace_command_arg C1
      {raw:if tex}
     *brace_arg C1
-     {else tex}
-   {.\\n}
+     {normal_text:else tex}
+   {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C2
    *@inlinefmtifelse C3 l17
@@ -133,12 +133,12 @@ $result_tree_text{'inlinefmtifelse'} = '*document_root C1
    |expand_index:{2}
    |format:{latex}
     *brace_arg C1
-     {latex}
+     {normal_text:latex}
     *elided_brace_command_arg C1
      {raw:if latex}
     *brace_arg C1
-     {else latex}
-   {.\\n}
+     {normal_text:else latex}
+   {normal_text:.\\n}
 ';
 
 

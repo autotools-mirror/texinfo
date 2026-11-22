@@ -25,21 +25,21 @@ $result_tree_text{'defx_in_example'} = '*document_root C1
       {spaces_before_argument: }
       *def_category C1
        *def_line_arg C1
-        {fset}
+        {normal_text:fset}
       {spaces: }
       *def_name C1
        *def_line_arg C1
         *@var C1 l2
          *brace_container C1
-          {i}
+          {normal_text:i}
       {spaces: }
       *def_arg C1
        *def_line_arg C1
-        {a}
+        {normal_text:a}
       {spaces: }
       *def_arg C1
        *def_line_arg C1
-        {g}
+        {normal_text:g}
       {spaces_after_argument:\\n}
     *@deffnx C1 l3
     |EXTRA
@@ -50,29 +50,29 @@ $result_tree_text{'defx_in_example'} = '*document_root C1
       {spaces_before_argument: }
       *def_category C1
        *bracketed_arg C1 l3
-        {truc}
+        {normal_text:truc}
       {spaces: }
       *def_name C1
        *def_line_arg C1
-        {bidulr}
+        {normal_text:bidulr}
       {spaces: }
       *def_arg C1
        *def_line_arg C1
-        {machin...}
+        {normal_text:machin...}
       {spaces_after_argument:\\n}
     *@end C1 l4
     |EXTRA
     |text_arg:{deffn}
      *line_arg C3
       {spaces_before_argument: }
-      {deffn}
+      {normal_text:deffn}
       {spaces_after_argument:\\n}
    *@end C1 l5
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
 ';
 

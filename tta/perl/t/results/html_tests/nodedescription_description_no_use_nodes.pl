@@ -19,7 +19,7 @@ $result_tree_text{'nodedescription_description_no_use_nodes'} = '*document_root 
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l2 {test of descriptions with nodedescription*}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'nodedescription_description_no_use_nodes'} = '*document_root 
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {test of descriptions with nodedescription*}
+    {normal_text:test of descriptions with nodedescription*}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l4 {toto}
@@ -39,7 +39,7 @@ $result_tree_text{'nodedescription_description_no_use_nodes'} = '*document_root 
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {toto}
+    {normal_text:toto}
     {spaces_after_argument:\\n}
  *@chapter C6 l5 {Toto}
  |EXTRA
@@ -49,31 +49,31 @@ $result_tree_text{'nodedescription_description_no_use_nodes'} = '*document_root 
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Toto}
+    {normal_text:Toto}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@nodedescription C1 l7
    *line_arg C10
     {spaces_before_argument: }
-    {toto is there:: and the }
+    {normal_text:toto is there:: and the }
     *@emph C1 l7
      *brace_container C1
-      {is a description}
+      {normal_text:is a description}
     *@w C1 l7
      *brace_container C1
-      {slightly long}
-    { and }
+      {normal_text:slightly long}
+    {normal_text: and }
     *@verb C1 l7
      *brace_container C3
       {verb_delimiter::}
       {raw:vv somewhat}
       {verb_delimiter::}
-    { }
+    {normal_text: }
     *@ringaccent C2 l7
      {spaces_after_cmd_before_arg: }
      *following_arg C1
-      {a}
-    {nexpected}
+      {normal_text:a}
+    {normal_text:nexpected}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@nodedescriptionblock C3 l9
@@ -81,13 +81,13 @@ $result_tree_text{'nodedescription_description_no_use_nodes'} = '*document_root 
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C1
-    {Block along line node description for toto\\n}
+    {normal_text:Block along line node description for toto\\n}
    *@end C1 l11
    |EXTRA
    |text_arg:{nodedescriptionblock}
     *line_arg C3
      {spaces_before_argument: }
-     {nodedescriptionblock}
+     {normal_text:nodedescriptionblock}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l13 {titi}
@@ -98,7 +98,7 @@ $result_tree_text{'nodedescription_description_no_use_nodes'} = '*document_root 
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {titi}
+    {normal_text:titi}
     {spaces_after_argument:\\n}
  *@chapter C4 l14 {Titi}
  |EXTRA
@@ -108,7 +108,7 @@ $result_tree_text{'nodedescription_description_no_use_nodes'} = '*document_root 
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Titi}
+    {normal_text:Titi}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@nodedescriptionblock C3 l16
@@ -116,13 +116,13 @@ $result_tree_text{'nodedescription_description_no_use_nodes'} = '*document_root 
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C1
-    {description of titi in block\\n}
+    {normal_text:description of titi in block\\n}
    *@end C1 l18
    |EXTRA
    |text_arg:{nodedescriptionblock}
     *line_arg C3
      {spaces_before_argument: }
-     {nodedescriptionblock}
+     {normal_text:nodedescriptionblock}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l20 {other}
@@ -133,7 +133,7 @@ $result_tree_text{'nodedescription_description_no_use_nodes'} = '*document_root 
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {other}
+    {normal_text:other}
     {spaces_after_argument:\\n}
  *@chapter C3 l21 {Other}
  |EXTRA
@@ -143,13 +143,13 @@ $result_tree_text{'nodedescription_description_no_use_nodes'} = '*document_root 
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Other}
+    {normal_text:Other}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@nodedescription C1 l23
    *line_arg C3
     {spaces_before_argument: }
-    {other comes here}
+    {normal_text:other comes here}
     {spaces_after_argument:\\n}
 ';
 

@@ -25,7 +25,7 @@ $result_tree_text{'empty'} = '*document_root C1
    |text_arg:{multitable}
     *line_arg C2
      {spaces_before_argument: }
-     {multitable}
+     {normal_text:multitable}
 ';
 
 

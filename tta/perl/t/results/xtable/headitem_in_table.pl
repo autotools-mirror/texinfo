@@ -20,24 +20,24 @@ $result_tree_text{'headitem_in_table'} = '*document_root C1
    *before_item C5
     {ignorable_spaces_after_command: }
     *paragraph C1
-     {headitem in table\\n}
+     {normal_text:headitem in table\\n}
     {empty_line:\\n}
     *paragraph C1
-     {headitem In table text.\\n}
+     {normal_text:headitem In table text.\\n}
     {empty_line:\\n}
    *table_entry C1
     *table_term C1
      *@item C1 l6
       *line_arg C3
        {spaces_before_argument: }
-       {item}
+       {normal_text:item}
        {spaces_after_argument:\\n}
    *@end C1 l7
    |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
-     {table}
+     {normal_text:table}
      {spaces_after_argument:\\n}
 ';
 

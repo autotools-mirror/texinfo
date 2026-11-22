@@ -23,7 +23,7 @@ $result_tree_text{'protection_of_end_of_line_by_command'} = '*document_root C1
     |text_arg:{linemacro}
      *line_arg C3
       {spaces_before_argument: }
-      {linemacro}
+      {normal_text:linemacro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    >SOURCEMARKS
@@ -34,7 +34,7 @@ $result_tree_text{'protection_of_end_of_line_by_command'} = '*document_root C1
       >{macro_call_arg_text:@\\n}
   *paragraph C2
    *@\\n
-   {bullet\\n}
+   {normal_text:bullet\\n}
    >SOURCEMARKS
    >linemacro_expansion<end;1><p:6>
 ';

@@ -23,25 +23,25 @@ $result_tree_text{'def'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *bracketed_arg C1 l2
-       {c--ategory}
+       {normal_text:c--ategory}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {d--effn_name}
+       {normal_text:d--effn_name}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {a--rguments...}
+       {normal_text:a--rguments...}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {d--effn\\n}
+     {normal_text:d--effn\\n}
    *@end C1 l4
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
-     {deffn}
+     {normal_text:deffn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deffn C3 l6
@@ -54,25 +54,25 @@ $result_tree_text{'def'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {cate--gory}
+       {normal_text:cate--gory}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {de--ffn_name}
+       {normal_text:de--ffn_name}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {ar--guments}
+       {normal_text:ar--guments}
      {spaces:    }
      >SOURCEMARKS
      >defline_continuation<1><p:1>
      *def_arg C1
       *def_line_arg C1
-       {more}
+       {normal_text:more}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {args}
+       {normal_text:args}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
@@ -80,25 +80,25 @@ $result_tree_text{'def'} = '*document_root C1
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {even}
+       {normal_text:even}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {more}
+       {normal_text:more}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {so}
+       {normal_text:so}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {def--fn\\n}
+     {normal_text:def--fn\\n}
    *@end C1 l9
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
-     {deffn}
+     {normal_text:deffn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deffn C17 l11
@@ -111,21 +111,21 @@ $result_tree_text{'def'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {fset}
+       {normal_text:fset}
      {spaces: }
      *def_name C1
       *def_line_arg C1
        *@var C1 l11
         *brace_container C1
-         {i}
+         {normal_text:i}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {a}
+       {normal_text:a}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {g}
+       {normal_text:g}
      {spaces_after_argument:\\n}
    *@deffnx C1 l12
    |EXTRA
@@ -136,11 +136,11 @@ $result_tree_text{'def'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *bracketed_arg C1 l12
-       {cmde}
+       {normal_text:cmde}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {truc}
+       {normal_text:truc}
      {spaces: }
      *def_arg C1
       *bracketed_arg l12
@@ -154,11 +154,11 @@ $result_tree_text{'def'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {Command}
+       {normal_text:Command}
      {spaces: }
      *def_name C1
       *bracketed_arg C1 l13
-       {log trap}
+       {normal_text:log trap}
      {spaces: }
      *def_arg C1
       *bracketed_arg l13
@@ -172,12 +172,12 @@ $result_tree_text{'def'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {Command}
+       {normal_text:Command}
      {spaces: }
      *def_name C1
       *bracketed_arg C2 l14
        {spaces_before_argument: }
-       {log trap1}
+       {normal_text:log trap1}
      {spaces: }
      *def_arg C1
       *bracketed_arg l14
@@ -191,11 +191,11 @@ $result_tree_text{'def'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {Command}
+       {normal_text:Command}
      {spaces: }
      *def_name C1
       *bracketed_arg C2 l15
-       {log trap2}
+       {normal_text:log trap2}
        {spaces_after_argument: }
      {spaces: }
      *def_arg C1
@@ -210,17 +210,17 @@ $result_tree_text{'def'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {cmde}
+       {normal_text:cmde}
      {spaces: }
      *def_name C1
       *def_line_arg C1
        *@b C1 l16
         *brace_container C1
-         {id ule}
+         {normal_text:id ule}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {truc}
+       {normal_text:truc}
      {spaces_after_argument:\\n}
    *@deffnx C1 l17
    |EXTRA
@@ -231,21 +231,21 @@ $result_tree_text{'def'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {cmde2}
+       {normal_text:cmde2}
      {spaces: }
      *def_name C1
       *def_line_arg C1
        *@b C1 l17
         *brace_container C3
-         {id }
+         {normal_text:id }
          *@samp C1 l17
           *brace_container C1
-           {i}
-         { ule}
+           {normal_text:i}
+         {normal_text: ule}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {truc}
+       {normal_text:truc}
      {spaces_after_argument:\\n}
    *@deffnx C1 l18
    |EXTRA
@@ -258,7 +258,7 @@ $result_tree_text{'def'} = '*document_root C1
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {machin}
+       {normal_text:machin}
      {spaces_after_argument:\\n}
    *@deffnx C1 l19
    |EXTRA
@@ -271,7 +271,7 @@ $result_tree_text{'def'} = '*document_root C1
      {spaces: }
      *def_name C1
       *bracketed_arg C1 l19
-       {bidule machin}
+       {normal_text:bidule machin}
      {spaces_after_argument:\\n}
    *@deffnx C1 l20
    |EXTRA
@@ -281,11 +281,11 @@ $result_tree_text{'def'} = '*document_root C1
     *line_arg C4
      *def_category C1
       *bracketed_arg C1 l20
-       {truc}
+       {normal_text:truc}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {machin}
+       {normal_text:machin}
      {spaces_after_argument:\\n}
    *@deffnx C1 l21
    |EXTRA
@@ -296,23 +296,23 @@ $result_tree_text{'def'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *bracketed_arg C1 l21
-       {truc}
+       {normal_text:truc}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {followed}
+       {normal_text:followed}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {by}
+       {normal_text:by}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {a}
+       {normal_text:a}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {comment}
+       {normal_text:comment}
      {spaces_after_argument:\\n}
    *inter_def_item C1
     *@c C1
@@ -329,23 +329,23 @@ $result_tree_text{'def'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *bracketed_arg C1 l23
-       {truc}
+       {normal_text:truc}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {after}
+       {normal_text:after}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {a}
+       {normal_text:a}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {deff}
+       {normal_text:deff}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {item}
+       {normal_text:item}
      {spaces_after_argument:\\n}
    *inter_def_item C1
     *@c C1
@@ -362,33 +362,33 @@ $result_tree_text{'def'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *bracketed_arg C1 l25
-       {truc}
+       {normal_text:truc}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {deffnx}
+       {normal_text:deffnx}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {before}
+       {normal_text:before}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {end}
+       {normal_text:end}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {deffn}
+       {normal_text:deffn}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {Various deff lines\\n}
+     {normal_text:Various deff lines\\n}
    *@end C1 l27
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
-     {deffn}
+     {normal_text:deffn}
      {spaces_after_argument:\\n}
 ';
 

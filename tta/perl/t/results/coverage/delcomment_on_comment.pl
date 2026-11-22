@@ -15,7 +15,7 @@ $result_tree_text{'delcomment_on_comment'} = '*document_root C2
    {text_before_beginning:\\n}
   *preamble_before_content
   *paragraph C2
-   {some text }
+   {normal_text:some text }
    *@c C1
     *line_arg C3
      {spaces_before_argument: }

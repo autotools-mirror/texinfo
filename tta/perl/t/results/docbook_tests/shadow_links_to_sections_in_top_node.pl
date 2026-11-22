@@ -19,7 +19,7 @@ $result_tree_text{'shadow_links_to_sections_in_top_node'} = '*document_root C10
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C4 l2 {Shadow}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'shadow_links_to_sections_in_top_node'} = '*document_root C10
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Shadow}
+    {normal_text:Shadow}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
@@ -37,8 +37,8 @@ $result_tree_text{'shadow_links_to_sections_in_top_node'} = '*document_root C10
     |EXTRA
     |node_content:A{0|0}
     |normalized:{two}
-     {two}
-   {. --- goes to one of the section named two\\n}
+     {normal_text:two}
+   {normal_text:. --- goes to one of the section named two\\n}
   {empty_line:\\n}
  *@chapter C4 l6 {foo}
  |EXTRA
@@ -48,18 +48,18 @@ $result_tree_text{'shadow_links_to_sections_in_top_node'} = '*document_root C10
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {foo}
+    {normal_text:foo}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C3
-   {Aaaaaaaaaa.  }
+   {normal_text:Aaaaaaaaaa.  }
    *@xref C1 l8
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{bar}
-     {bar}
-   {.\\n}
+     {normal_text:bar}
+   {normal_text:.\\n}
   {empty_line:\\n}
  *@chapter C4 l10 {bar}
  |EXTRA
@@ -71,18 +71,18 @@ $result_tree_text{'shadow_links_to_sections_in_top_node'} = '*document_root C10
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {bar}
+    {normal_text:bar}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C3
-   {Bbbbbbbbbbb.  }
+   {normal_text:Bbbbbbbbbbb.  }
    *@xref C1 l12
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{foo}
-     {foo}
-   {. -- goes to baz chapter.\\n}
+     {normal_text:foo}
+   {normal_text:. -- goes to baz chapter.\\n}
   {empty_line:\\n}
  *@section C6 l14 {two}
  |EXTRA
@@ -94,11 +94,11 @@ $result_tree_text{'shadow_links_to_sections_in_top_node'} = '*document_root C10
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {two}
+    {normal_text:two}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {CCCCCCC.\\n}
+   {normal_text:CCCCCCC.\\n}
   {empty_line:\\n}
   *paragraph C2
    *@xref C1 l18
@@ -106,8 +106,8 @@ $result_tree_text{'shadow_links_to_sections_in_top_node'} = '*document_root C10
     |EXTRA
     |node_content:A{0|0}
     |normalized:{baz}
-     {baz}
-   {. --- fails\\n}
+     {normal_text:baz}
+   {normal_text:. --- fails\\n}
   {empty_line:\\n}
  *@node C1 l20 {foo}
  |EXTRA
@@ -117,7 +117,7 @@ $result_tree_text{'shadow_links_to_sections_in_top_node'} = '*document_root C10
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {foo}
+    {normal_text:foo}
     {spaces_after_argument:\\n}
  *@chapter C4 l21 {baz}
  |EXTRA
@@ -127,11 +127,11 @@ $result_tree_text{'shadow_links_to_sections_in_top_node'} = '*document_root C10
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {baz}
+    {normal_text:baz}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {LLLLLLLLLLL.\\n}
+   {normal_text:LLLLLLLLLLL.\\n}
   {empty_line:\\n}
  *@section C4 l25 {two}
  |EXTRA
@@ -141,11 +141,11 @@ $result_tree_text{'shadow_links_to_sections_in_top_node'} = '*document_root C10
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {two}
+    {normal_text:two}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {DDDDDDDDD.\\n}
+   {normal_text:DDDDDDDDD.\\n}
   {empty_line:\\n}
  *@section C5 l29 {with @ref{foo, b} after}
  |EXTRA
@@ -157,17 +157,17 @@ $result_tree_text{'shadow_links_to_sections_in_top_node'} = '*document_root C10
   *arguments_line C1
    *line_arg C5
     {spaces_before_argument: }
-    {with }
+    {normal_text:with }
     *@ref C2 l29
      *brace_arg C1
      |EXTRA
      |node_content:A{0|0}
      |normalized:{foo}
-      {foo}
+      {normal_text:foo}
      *brace_arg C2
       {spaces_before_argument: }
-      {b}
-    { after}
+      {normal_text:b}
+    {normal_text: after}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C4
@@ -176,10 +176,10 @@ $result_tree_text{'shadow_links_to_sections_in_top_node'} = '*document_root C10
     |EXTRA
     |node_content:A{0|0}
     |normalized:{with-foo-after}
-     {with foo after}
-   {. --- link to section with }
+     {normal_text:with foo after}
+   {normal_text:. --- link to section with }
    *@@
-   {ref in name\\n}
+   {normal_text:ref in name\\n}
   {empty_line:\\n}
   *paragraph C2
    *@xref C1 l33
@@ -187,8 +187,8 @@ $result_tree_text{'shadow_links_to_sections_in_top_node'} = '*document_root C10
     |EXTRA
     |node_content:A{0|0}
     |normalized:{two}
-     {two}
-   {. --- another link to a section named two.\\n}
+     {normal_text:two}
+   {normal_text:. --- another link to a section named two.\\n}
 ';
 
 

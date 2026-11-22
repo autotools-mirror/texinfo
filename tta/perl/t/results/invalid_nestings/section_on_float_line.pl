@@ -21,10 +21,10 @@ $result_tree_text{'section_on_float_line'} = '*document_root C2
    *arguments_line C2
     *block_line_arg C2
      {spaces_before_argument: }
-     {t}
+     {normal_text:t}
     *block_line_arg C3
      {spaces_before_argument: }
-     {l}
+     {normal_text:l}
      {spaces_after_argument: }
  *@section C1 l1 {first}
  |EXTRA
@@ -36,7 +36,7 @@ $result_tree_text{'section_on_float_line'} = '*document_root C2
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {first}
+    {normal_text:first}
     {spaces_after_argument:\\n}
 ';
 

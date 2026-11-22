@@ -14,7 +14,7 @@ $result_tree_text{'verbatim_in_brace_command'} = '*document_root C1
   *paragraph C1
    *@samp C1 l1
     *brace_container C1
-     {\\n}
+     {normal_text:\\n}
   *@verbatim C3 l2
    *arguments_line C1
     *block_line_arg C1
@@ -25,7 +25,7 @@ $result_tree_text{'verbatim_in_brace_command'} = '*document_root C1
    |text_arg:{verbatim}
     *line_arg C3
      {spaces_before_argument: }
-     {verbatim}
+     {normal_text:verbatim}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
 ';

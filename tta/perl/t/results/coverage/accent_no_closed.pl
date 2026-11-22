@@ -14,7 +14,7 @@ $result_tree_text{'accent_no_closed'} = '*document_root C1
   *paragraph C1
    *@~ C1 l1
     *brace_container C1
-     {e}
+     {normal_text:e}
 ';
 
 

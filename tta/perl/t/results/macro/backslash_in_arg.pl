@@ -19,7 +19,7 @@ $result_tree_text{'backslash_in_arg'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@node C9 l2 {chap}
  |EXTRA
@@ -30,7 +30,7 @@ $result_tree_text{'backslash_in_arg'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@macro C3 l4
@@ -45,7 +45,7 @@ $result_tree_text{'backslash_in_arg'} = '*document_root C3
    |text_arg:{macro}
     *line_arg C3
      {spaces_before_argument: }
-     {macro}
+     {normal_text:macro}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   >SOURCEMARKS
@@ -53,7 +53,7 @@ $result_tree_text{'backslash_in_arg'} = '*document_root C3
    >*macro_call_line@funindex C1
     >*line_arg C2
      >{spaces_before_argument: }
-     >{\\\\q}
+     >{normal_text:\\\\q}
   *index_entry_command@findex C1 l8:@funindex
   |EXTRA
   |element_node:{chap}
@@ -67,7 +67,7 @@ $result_tree_text{'backslash_in_arg'} = '*document_root C3
      >>macro_arg_escape_backslash<1>
    *line_arg C3
     {spaces_before_argument: }
-    {\\\\q}
+    {normal_text:\\\\q}
     >SOURCEMARKS
     >macro_expansion<end;1><p:3>
     {spaces_after_argument:\\n}
@@ -80,10 +80,10 @@ $result_tree_text{'backslash_in_arg'} = '*document_root C3
    >*macro_call_line@funindex C1
     >*line_arg C2
      >{spaces_before_argument: }
-     >{\\q}
+     >{normal_text:\\q}
    *line_arg C3
     {spaces_before_argument: }
-    {\\r}
+    {normal_text:\\r}
     >SOURCEMARKS
     >macro_expansion<end;2><p:2>
     {spaces_after_argument:\\n}
@@ -98,7 +98,7 @@ $result_tree_text{'backslash_in_arg'} = '*document_root C3
      >{macro_call_arg_text:\\r}
    *line_arg C3
     {spaces_before_argument: }
-    {\\q}
+    {normal_text:\\q}
     >SOURCEMARKS
     >macro_expansion<end;3><p:2>
     {spaces_after_argument:\\n}
@@ -108,7 +108,7 @@ $result_tree_text{'backslash_in_arg'} = '*document_root C3
   |index_entry:I{fn,4}
    *line_arg C3
     {spaces_before_argument: }
-    {\\r}
+    {normal_text:\\r}
     >SOURCEMARKS
     >macro_expansion<end;4><p:2>
     {spaces_after_argument:\\n}
@@ -118,7 +118,7 @@ $result_tree_text{'backslash_in_arg'} = '*document_root C3
   |misc_args:A{fn}
    *line_arg C3
     {spaces_before_argument: }
-    {fn}
+    {normal_text:fn}
     {spaces_after_argument:\\n}
 ';
 

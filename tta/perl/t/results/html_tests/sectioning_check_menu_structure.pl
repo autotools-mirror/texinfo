@@ -22,18 +22,18 @@ $result_tree_text{'sectioning_check_menu_structure'} = '*document_root C29
   *arguments_line C3
    *line_arg C2
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
    *line_arg C1
    |EXTRA
    |node_content:A{0|0}
    |normalized:{First-node}
-    {First node}
+    {normal_text:First node}
    *line_arg C4
    |EXTRA
    |manual_content:A{1|1}
-    {(}
-    {dir}
-    {)}
+    {normal_text:(}
+    {normal_text:dir}
+    {normal_text:)}
     {spaces_after_argument:\\n}
  *@top C3 sectioning.texi:l4
  |EXTRA
@@ -52,61 +52,61 @@ $result_tree_text{'sectioning_check_menu_structure'} = '*document_root C29
     |EXTRA
     |node_content:A{0|0}
     |normalized:{First-node}
-     {First node}
+     {normal_text:First node}
     {menu_entry_separator:::    }
     *menu_entry_description C1
      *preformatted C9
-      {node 1\\n}
-      {  explaination no heading ?\\n}
-      {* and here ?\\n}
-      {With command }
+      {normal_text:node 1\\n}
+      {normal_text:  explaination no heading ?\\n}
+      {normal_text:* and here ?\\n}
+      {normal_text:With command }
       *@^ C1 sectioning.texi:l9
        *brace_container C1
         *@dotless C1 sectioning.texi:l9
          *brace_container C1
-          {i}
-      { and\\n}
-      {a }
+          {normal_text:i}
+      {normal_text: and\\n}
+      {normal_text:a }
       *@cite C1 sectioning.texi:l10
        *brace_container C1
-        {me}
-      {.\\n}
+        {normal_text:me}
+      {normal_text:.\\n}
    *menu_comment C1
     *preformatted C2
      {after_menu_description_line:\\n}
-     {heading\\n}
+     {normal_text:heading\\n}
    *menu_entry C4 sectioning.texi:l13
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{between-node}
-     {between node}
+     {normal_text:between node}
     {menu_entry_separator::: }
     *menu_entry_description C1
      *preformatted C2
-      {\\n}
-      {node in between\\n}
+      {normal_text:\\n}
+      {normal_text:node in between\\n}
    *menu_comment C1
     *preformatted C3
      {after_menu_description_line:\\n}
-     {heading \\n}
-     {or not ?\\n}
+     {normal_text:heading \\n}
+     {normal_text:or not ?\\n}
    *menu_entry C4 sectioning.texi:l18
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{Second-node}
-     {Second node}
+     {normal_text:Second node}
     {menu_entry_separator:::   }
     *menu_entry_description C1
      *preformatted C1
-      {node 2\\n}
+      {normal_text:node 2\\n}
    *menu_comment C1
     *preformatted C3
      {after_menu_description_line:\\n}
-     {heading with spaces around\\n}
+     {normal_text:heading with spaces around\\n}
      {empty_line:\\n}
    *menu_entry C4 sectioning.texi:l22
     {menu_entry_leading_text:* }
@@ -114,33 +114,33 @@ $result_tree_text{'sectioning_check_menu_structure'} = '*document_root C29
     |EXTRA
     |node_content:A{0|0}
     |normalized:{Third-node-unnumbered}
-     {Third node unnumbered}
+     {normal_text:Third node unnumbered}
     {menu_entry_separator::: }
     *menu_entry_description C1
      *preformatted C1
-      {unnumbered in Top menu\\n}
+      {normal_text:unnumbered in Top menu\\n}
    *menu_entry C4 sectioning.texi:l23
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{Last-node-no-description}
-     {Last node no description}
+     {normal_text:Last node no description}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_comment C1
     *preformatted C3
      {after_menu_description_line:\\n}
-     {description here\\n}
+     {normal_text:description here\\n}
      {empty_line:\\n}
    *@end C1 sectioning.texi:l27
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 sectioning.texi:l29 {First node}
@@ -151,18 +151,18 @@ $result_tree_text{'sectioning_check_menu_structure'} = '*document_root C29
   *arguments_line C4
    *line_arg C2
     {spaces_before_argument: }
-    {First node}
+    {normal_text:First node}
    *line_arg
    *line_arg C1
    |EXTRA
    |node_content:A{0|0}
    |normalized:{Top}
-    {Top}
+    {normal_text:Top}
    *line_arg C2
    |EXTRA
    |node_content:A{0|0}
    |normalized:{Top}
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@chapter C5 sectioning.texi:l30 {first node chapter}
  |EXTRA
@@ -172,11 +172,11 @@ $result_tree_text{'sectioning_check_menu_structure'} = '*document_root C29
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {first node chapter}
+    {normal_text:first node chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {first node chapter text\\n}
+   {normal_text:first node chapter text\\n}
   *@menu C6 sectioning.texi:l33
    *arguments_line C1
     *block_line_arg C1
@@ -187,33 +187,33 @@ $result_tree_text{'sectioning_check_menu_structure'} = '*document_root C29
     |EXTRA
     |node_content:A{0|0}
     |normalized:{unnumbered}
-     {unnumbered}
+     {normal_text:unnumbered}
     {menu_entry_separator::: }
     *menu_entry_description C1
      *preformatted C1
-      {un\\n}
+      {normal_text:un\\n}
    *menu_entry C4 sectioning.texi:l35
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{unnumbered2}
-     {unnumbered2}
+     {normal_text:unnumbered2}
     {menu_entry_separator::: }
     *menu_entry_description C1
      *preformatted C1
-      {un2\\n}
+      {normal_text:un2\\n}
    *menu_entry C4 sectioning.texi:l36
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{numbered}
-     {numbered}
+     {normal_text:numbered}
     {menu_entry_separator::: }
     *menu_entry_description C1
      *preformatted C1
-      {nu\\n}
+      {normal_text:nu\\n}
    *menu_comment C1
     *preformatted C1
      {after_menu_description_line:\\n}
@@ -222,7 +222,7 @@ $result_tree_text{'sectioning_check_menu_structure'} = '*document_root C29
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 sectioning.texi:l40 {unnumbered}
@@ -233,7 +233,7 @@ $result_tree_text{'sectioning_check_menu_structure'} = '*document_root C29
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {unnumbered}
+    {normal_text:unnumbered}
     {spaces_after_argument:\\n}
  *@unnumberedsec C4 sectioning.texi:l41 {unnumbered section}
  |EXTRA
@@ -242,7 +242,7 @@ $result_tree_text{'sectioning_check_menu_structure'} = '*document_root C29
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {unnumbered section}
+    {normal_text:unnumbered section}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C6 sectioning.texi:l43
@@ -255,50 +255,50 @@ $result_tree_text{'sectioning_check_menu_structure'} = '*document_root C29
     |EXTRA
     |node_content:A{0|0}
     |normalized:{unnumbered-sub}
-     {unnumbered sub}
+     {normal_text:unnumbered sub}
     {menu_entry_separator::: }
     *menu_entry_description C1
      *preformatted C1
-      {un\\n}
+      {normal_text:un\\n}
    *menu_entry C4 sectioning.texi:l45
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{numbered-sub}
-     {numbered sub}
+     {normal_text:numbered sub}
     {menu_entry_separator::: }
     *menu_entry_description C1
      *preformatted C1
-      {nu\\n}
+      {normal_text:nu\\n}
    *menu_entry C4 sectioning.texi:l46
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{unnumbered-sub2}
-     {unnumbered sub2}
+     {normal_text:unnumbered sub2}
     {menu_entry_separator::: }
     *menu_entry_description C1
      *preformatted C1
-      {un2\\n}
+      {normal_text:un2\\n}
    *menu_entry C4 sectioning.texi:l47
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{numbered-sub2}
-     {numbered sub2}
+     {normal_text:numbered sub2}
     {menu_entry_separator::: }
     *menu_entry_description C1
      *preformatted C1
-      {nu2\\n}
+      {normal_text:nu2\\n}
    *@end C1 sectioning.texi:l48
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 sectioning.texi:l50 {unnumbered sub}
@@ -309,7 +309,7 @@ $result_tree_text{'sectioning_check_menu_structure'} = '*document_root C29
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {unnumbered sub}
+    {normal_text:unnumbered sub}
     {spaces_after_argument:\\n}
  *@unnumberedsubsec C2 sectioning.texi:l51 {unnumbered subsection}
  |EXTRA
@@ -318,7 +318,7 @@ $result_tree_text{'sectioning_check_menu_structure'} = '*document_root C29
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {unnumbered subsection}
+    {normal_text:unnumbered subsection}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 sectioning.texi:l53 {numbered sub}
@@ -329,7 +329,7 @@ $result_tree_text{'sectioning_check_menu_structure'} = '*document_root C29
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {numbered sub}
+    {normal_text:numbered sub}
     {spaces_after_argument:\\n}
  *@subsection C2 sectioning.texi:l54 {numbered subsection}
  |EXTRA
@@ -338,7 +338,7 @@ $result_tree_text{'sectioning_check_menu_structure'} = '*document_root C29
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {numbered subsection}
+    {normal_text:numbered subsection}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 sectioning.texi:l56 {unnumbered sub2}
@@ -349,7 +349,7 @@ $result_tree_text{'sectioning_check_menu_structure'} = '*document_root C29
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {unnumbered sub2}
+    {normal_text:unnumbered sub2}
     {spaces_after_argument:\\n}
  *@unnumberedsubsec C2 sectioning.texi:l57 {unnumbered subsection2}
  |EXTRA
@@ -358,7 +358,7 @@ $result_tree_text{'sectioning_check_menu_structure'} = '*document_root C29
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {unnumbered subsection2}
+    {normal_text:unnumbered subsection2}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 sectioning.texi:l59 {numbered sub2}
@@ -369,7 +369,7 @@ $result_tree_text{'sectioning_check_menu_structure'} = '*document_root C29
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {numbered sub2}
+    {normal_text:numbered sub2}
     {spaces_after_argument:\\n}
  *@subsection C2 sectioning.texi:l60 {numbered subsection2}
  |EXTRA
@@ -378,7 +378,7 @@ $result_tree_text{'sectioning_check_menu_structure'} = '*document_root C29
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {numbered subsection2}
+    {normal_text:numbered subsection2}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 sectioning.texi:l62 {unnumbered2}
@@ -389,7 +389,7 @@ $result_tree_text{'sectioning_check_menu_structure'} = '*document_root C29
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {unnumbered2}
+    {normal_text:unnumbered2}
     {spaces_after_argument:\\n}
  *@unnumberedsec C4 sectioning.texi:l63 {unnumbered section2}
  |EXTRA
@@ -398,7 +398,7 @@ $result_tree_text{'sectioning_check_menu_structure'} = '*document_root C29
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {unnumbered section2}
+    {normal_text:unnumbered section2}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C3 sectioning.texi:l65
@@ -411,17 +411,17 @@ $result_tree_text{'sectioning_check_menu_structure'} = '*document_root C29
     |EXTRA
     |node_content:A{0|0}
     |normalized:{numbered-sub3}
-     {numbered sub3}
+     {normal_text:numbered sub3}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 sectioning.texi:l67
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 sectioning.texi:l69 {numbered sub3}
@@ -432,7 +432,7 @@ $result_tree_text{'sectioning_check_menu_structure'} = '*document_root C29
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {numbered sub3}
+    {normal_text:numbered sub3}
     {spaces_after_argument:\\n}
  *@subsection C3 sectioning.texi:l70 {numbered subsection3}
  |EXTRA
@@ -441,7 +441,7 @@ $result_tree_text{'sectioning_check_menu_structure'} = '*document_root C29
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {numbered subsection3}
+    {normal_text:numbered subsection3}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   {empty_line:\\n}
@@ -453,7 +453,7 @@ $result_tree_text{'sectioning_check_menu_structure'} = '*document_root C29
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {numbered}
+    {normal_text:numbered}
     {spaces_after_argument:\\n}
  *@section C2 sectioning.texi:l74 {numbered section}
  |EXTRA
@@ -463,7 +463,7 @@ $result_tree_text{'sectioning_check_menu_structure'} = '*document_root C29
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument:  }
-    {numbered section}
+    {normal_text:numbered section}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C4 sectioning.texi:l76 {between node}
@@ -474,18 +474,18 @@ $result_tree_text{'sectioning_check_menu_structure'} = '*document_root C29
   *arguments_line C4
    *line_arg C2
     {spaces_before_argument: }
-    {between node}
+    {normal_text:between node}
    *line_arg
    *line_arg
    *line_arg C2
    |EXTRA
    |node_content:A{0|0}
    |normalized:{Top}
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {between node, node without sectioning node\\n}
+   {normal_text:between node, node without sectioning node\\n}
   {empty_line:\\n}
  *@node C4 sectioning.texi:l80 {Second node}
  |EXTRA
@@ -495,22 +495,22 @@ $result_tree_text{'sectioning_check_menu_structure'} = '*document_root C29
   *arguments_line C4
    *line_arg C2
     {spaces_before_argument: }
-    {Second node}
+    {normal_text:Second node}
    *line_arg C1
    |EXTRA
    |node_content:A{0|0}
    |normalized:{Third-node-unnumbered}
-    {Third node unnumbered}
+    {normal_text:Third node unnumbered}
    *line_arg
    *line_arg C2
    |EXTRA
    |node_content:A{0|0}
    |normalized:{Top}
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {Second node text\\n}
+   {normal_text:Second node text\\n}
   {empty_line:\\n}
  *@chapter C4 sectioning.texi:l84 {second node chapter}
  |EXTRA
@@ -520,11 +520,11 @@ $result_tree_text{'sectioning_check_menu_structure'} = '*document_root C29
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {second node chapter}
+    {normal_text:second node chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {second node chapter text.\\n}
+   {normal_text:second node chapter text.\\n}
   {empty_line:\\n}
  *@node C1 sectioning.texi:l88 {Third node unnumbered}
  |EXTRA
@@ -534,7 +534,7 @@ $result_tree_text{'sectioning_check_menu_structure'} = '*document_root C29
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Third node unnumbered}
+    {normal_text:Third node unnumbered}
     {spaces_after_argument:\\n}
  *@unnumbered C5 sectioning.texi:l89 {unnumbered chapter}
  |EXTRA
@@ -543,11 +543,11 @@ $result_tree_text{'sectioning_check_menu_structure'} = '*document_root C29
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {unnumbered chapter}
+    {normal_text:unnumbered chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {unnumbered chapter text.\\n}
+   {normal_text:unnumbered chapter text.\\n}
   {empty_line:\\n}
   {empty_line:\\n}
  *@node C3 sectioning.texi:l94 {Last node no description}
@@ -558,18 +558,18 @@ $result_tree_text{'sectioning_check_menu_structure'} = '*document_root C29
   *arguments_line C4
    *line_arg C2
     {spaces_before_argument: }
-    {Last node no description}
+    {normal_text:Last node no description}
    *line_arg
    *line_arg C1
    |EXTRA
    |node_content:A{0|0}
    |normalized:{Third-node-unnumbered}
-    {Third node unnumbered}
+    {normal_text:Third node unnumbered}
    *line_arg C2
    |EXTRA
    |node_content:A{0|0}
    |normalized:{Top}
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@contents C1 sectioning.texi:l96

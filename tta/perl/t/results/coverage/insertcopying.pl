@@ -16,31 +16,31 @@ $result_tree_text{'insertcopying'} = '*document_root C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *paragraph C1
-     {License.\\n}
+     {normal_text:License.\\n}
     {empty_line:\\n}
     *@quotation C3 l4
      *arguments_line C1
       *block_line_arg C1
        {spaces_before_argument: \\n}
      *paragraph C1
-      {You are not allowed.\\n}
+      {normal_text:You are not allowed.\\n}
      *@end C1 l6
      |EXTRA
      |text_arg:{quotation}
       *line_arg C3
        {spaces_before_argument: }
-       {quotation}
+       {normal_text:quotation}
        {spaces_after_argument:\\n}
     *@end C1 l7
     |EXTRA
     |text_arg:{copying}
      *line_arg C3
       {spaces_before_argument: }
-      {copying}
+      {normal_text:copying}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C1
-   {License:\\n}
+   {normal_text:License:\\n}
   {empty_line:\\n}
   *@insertcopying C1 l11
   |EXTRA

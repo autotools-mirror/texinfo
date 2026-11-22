@@ -21,7 +21,7 @@ $result_tree_text{'sections'} = '*document_root C2
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {a chapter}
+    {normal_text:a chapter}
     {spaces_after_argument:\\n}
 ';
 

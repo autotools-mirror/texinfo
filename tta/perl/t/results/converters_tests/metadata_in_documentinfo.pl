@@ -40,7 +40,7 @@ $result_tree_text{'metadata_in_documentinfo'} = '*document_root C5
       >|text_arg:{ifepub}
        >*line_arg C3
         >{spaces_before_argument: }
-        >{ifepub}
+        >{normal_text:ifepub}
         >{spaces_after_argument:\\n}
     >expanded_conditional_command<start;1>
      >*@ifnotepub C1 l18
@@ -49,7 +49,7 @@ $result_tree_text{'metadata_in_documentinfo'} = '*document_root C5
         >{spaces_before_argument:\\n}
      *line_arg C3
       {spaces_before_argument: }
-      {The Title}
+      {normal_text:The Title}
       {spaces_after_argument:\\n}
     *@html C3 l19
     >SOURCEMARKS
@@ -59,63 +59,63 @@ $result_tree_text{'metadata_in_documentinfo'} = '*document_root C5
      >|text_arg:{ifnotepub}
       >*line_arg C3
        >{spaces_before_argument: }
-       >{ifnotepub}
+       >{normal_text:ifnotepub}
        >{spaces_after_argument:\\n}
      *arguments_line C1
       *block_line_arg C1
        {spaces_before_argument:\\n}
      *rawpreformatted C1
-      {<meta name="creator" content="Some Body" />\\n}
+      {normal_text:<meta name="creator" content="Some Body" />\\n}
      *@end C1 l21
      |EXTRA
      |text_arg:{html}
       *line_arg C3
        {spaces_before_argument: }
-       {html}
+       {normal_text:html}
        {spaces_after_argument:\\n}
     *@docbook C3 l23
      *arguments_line C1
       *block_line_arg C1
        {spaces_before_argument:\\n}
      *rawpreformatted C25
-      {<authorgroup>\\n}
-      {  <author>\\n}
-      {    <honorific>Dr.</honorific>\\n}
-      {    <firstname>Lois</firstname>\\n}
-      {    <surname>Common-Demoninator</surname>\\n}
-      {    <affiliation>\\n}
-      {      <shortaffil>Director, M. Behn School of Coop. Eng.</shortaffil>\\n}
-      {      <jobtitle>Director of Cooperative Efforts</jobtitle>\\n}
-      {      <orgname>The Marguerite Behn International School of\\n}
-      {               Cooperative Engineering</orgname>\\n}
-      {    </affiliation>\\n}
-      {  </author>\\n}
+      {normal_text:<authorgroup>\\n}
+      {normal_text:  <author>\\n}
+      {normal_text:    <honorific>Dr.</honorific>\\n}
+      {normal_text:    <firstname>Lois</firstname>\\n}
+      {normal_text:    <surname>Common-Demoninator</surname>\\n}
+      {normal_text:    <affiliation>\\n}
+      {normal_text:      <shortaffil>Director, M. Behn School of Coop. Eng.</shortaffil>\\n}
+      {normal_text:      <jobtitle>Director of Cooperative Efforts</jobtitle>\\n}
+      {normal_text:      <orgname>The Marguerite Behn International School of\\n}
+      {normal_text:               Cooperative Engineering</orgname>\\n}
+      {normal_text:    </affiliation>\\n}
+      {normal_text:  </author>\\n}
       {empty_line:\\n}
-      {  <editor>\\n}
-      {    <firstname>Peter</firstname>\\n}
-      {    <surname>Parker</surname>\\n}
-      {    <lineage>Sr.</lineage>\\n}
-      {    <othername>Spiderman</othername>\\n}
-      {    <authorblurb>\\n}
-      {      <para>\\n}
-      {      Peter is a super hero in his spare time.\\n}
-      {      </para>\\n}
-      {    </authorblurb>\\n}
-      {  </editor>\\n}
-      {</authorgroup>\\n}
+      {normal_text:  <editor>\\n}
+      {normal_text:    <firstname>Peter</firstname>\\n}
+      {normal_text:    <surname>Parker</surname>\\n}
+      {normal_text:    <lineage>Sr.</lineage>\\n}
+      {normal_text:    <othername>Spiderman</othername>\\n}
+      {normal_text:    <authorblurb>\\n}
+      {normal_text:      <para>\\n}
+      {normal_text:      Peter is a super hero in his spare time.\\n}
+      {normal_text:      </para>\\n}
+      {normal_text:    </authorblurb>\\n}
+      {normal_text:  </editor>\\n}
+      {normal_text:</authorgroup>\\n}
      *@end C1 l49
      |EXTRA
      |text_arg:{docbook}
       *line_arg C3
        {spaces_before_argument: }
-       {docbook}
+       {normal_text:docbook}
        {spaces_after_argument:\\n}
     *@end C1 l50
     |EXTRA
     |text_arg:{documentinfo}
      *line_arg C3
       {spaces_before_argument: }
-      {documentinfo}
+      {normal_text:documentinfo}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
  *@node C1 l52 {Top}
@@ -126,7 +126,7 @@ $result_tree_text{'metadata_in_documentinfo'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l53 {top}
  |EXTRA
@@ -135,7 +135,7 @@ $result_tree_text{'metadata_in_documentinfo'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l55 {chapter}
@@ -146,7 +146,7 @@ $result_tree_text{'metadata_in_documentinfo'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter}
+    {normal_text:chapter}
     {spaces_after_argument:\\n}
  *@chapter C1 l56 {Chap}
  |EXTRA
@@ -156,7 +156,7 @@ $result_tree_text{'metadata_in_documentinfo'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chap}
+    {normal_text:Chap}
     {spaces_after_argument:\\n}
 ';
 

@@ -15,23 +15,23 @@ $result_tree_text{'footnote_in_quotation_with_arg'} = '*document_root C1
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     {lean}
+     {normal_text:lean}
      {spaces_after_argument:\\n}
    *paragraph C3
-    {A}
+    {normal_text:A}
     *@footnote C1 l2
     |EXTRA
     |global_command_number:{1}
      *brace_command_context C1
       *paragraph C1
-       {My feet}
-    { b.\\n}
+       {normal_text:My feet}
+    {normal_text: b.\\n}
    *@end C1 l3
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }
-     {quotation}
+     {normal_text:quotation}
      {spaces_after_argument:\\n}
 ';
 

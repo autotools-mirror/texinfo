@@ -20,13 +20,13 @@ $result_tree_text{'spaces_before_value'} = '*document_root C1
      {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C1
-   {val\\n}
+   {normal_text:val\\n}
    >SOURCEMARKS
    >value_expansion<start;1>{val}
     >*@value C2
      >{spaces_after_cmd_before_arg:  }
      >*brace_container C1
-      >{var}
+      >{normal_text:var}
    >value_expansion<end;1><p:3>
 ';
 

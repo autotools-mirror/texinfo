@@ -21,7 +21,7 @@ $result_tree_text{'character_and_spaces_in_node'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@node C1 l3 {chap nodes}
  |EXTRA
@@ -31,25 +31,25 @@ $result_tree_text{'character_and_spaces_in_node'} = '*document_root C6
   *arguments_line C4
    *line_arg C2
     {spaces_before_argument: }
-    {chap nodes}
+    {normal_text:chap nodes}
    *line_arg C2
    |EXTRA
    |node_content:A{1|1}
    |normalized:{_0021_005f_0022_0023_0024_0025_0026_0027_0028_0029_002a_002b_002d_002e}
     {spaces_before_argument: }
-    {!_"#$%&\'()*+-.}
+    {normal_text:!_"#$%&\'()*+-.}
    *line_arg C2
    |EXTRA
    |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
    *line_arg C3
    |EXTRA
    |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@node C1 l4 {!_"#$%&\'()*+-.}
  |EXTRA
@@ -59,25 +59,25 @@ $result_tree_text{'character_and_spaces_in_node'} = '*document_root C6
   *arguments_line C4
    *line_arg C2
     {spaces_before_argument: }
-    {!_"#$%&\'()*+-.}
+    {normal_text:!_"#$%&\'()*+-.}
    *line_arg C2
    |EXTRA
    |node_content:A{1|1}
    |normalized:{_002f_003b_003c_003d_003e_003f_005b_005c_005d_005e_005f_0060_007c_007e}
     {spaces_before_argument: }
-    {/;<=>?[\\]^_`|~}
+    {normal_text:/;<=>?[\\]^_`|~}
    *line_arg C2
    |EXTRA
    |node_content:A{1|1}
    |normalized:{chap-nodes}
     {spaces_before_argument: }
-    {chap nodes}
+    {normal_text:chap nodes}
    *line_arg C3
    |EXTRA
    |node_content:A{1|1}
    |normalized:{chap-nodes}
     {spaces_before_argument: }
-    {chap nodes}
+    {normal_text:chap nodes}
     {spaces_after_argument:\\n}
  *@node C1 l5 {/;<=>?[\\]^_`|~}
  |EXTRA
@@ -87,23 +87,23 @@ $result_tree_text{'character_and_spaces_in_node'} = '*document_root C6
   *arguments_line C4
    *line_arg C2
     {spaces_before_argument: }
-    {/;<=>?[\\]^_`|~}
+    {normal_text:/;<=>?[\\]^_`|~}
    *line_arg C1
    |EXTRA
    |node_content:A{0|0}
    |normalized:{local-node}
-    {local   node}
+    {normal_text:local   node}
    *line_arg C1
    |EXTRA
    |node_content:A{0|0}
    |normalized:{_0021_005f_0022_0023_0024_0025_0026_0027_0028_0029_002a_002b_002d_002e}
-    {!_"#$%&\'()*+-.}
+    {normal_text:!_"#$%&\'()*+-.}
    *line_arg C3
    |EXTRA
    |node_content:A{1|1}
    |normalized:{chap-nodes}
     {spaces_before_argument: }
-    {chap nodes}
+    {normal_text:chap nodes}
     {spaces_after_argument:\\n}
  *@node C1 l6 {local   node}
  |EXTRA
@@ -113,18 +113,18 @@ $result_tree_text{'character_and_spaces_in_node'} = '*document_root C6
   *arguments_line C4
    *line_arg C2
     {spaces_before_argument:  }
-    {local   node}
+    {normal_text:local   node}
    *line_arg
    *line_arg C1
    |EXTRA
    |node_content:A{0|0}
    |normalized:{_002f_003b_003c_003d_003e_003f_005b_005c_005d_005e_005f_0060_007c_007e}
-    {/;<=>?[\\]^_`|~}
+    {normal_text:/;<=>?[\\]^_`|~}
    *line_arg C2
    |EXTRA
    |node_content:A{0|0}
    |normalized:{chap-nodes}
-    {chap nodes}
+    {normal_text:chap nodes}
     {spaces_after_argument:\\n}
 ';
 

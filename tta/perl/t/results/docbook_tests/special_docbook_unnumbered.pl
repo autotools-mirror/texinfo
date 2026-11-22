@@ -19,7 +19,7 @@ $result_tree_text{'special_docbook_unnumbered'} = '*document_root C11
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C6 l2 {top}
  |EXTRA
@@ -28,11 +28,11 @@ $result_tree_text{'special_docbook_unnumbered'} = '*document_root C11
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {This is the top.\\n}
+   {normal_text:This is the top.\\n}
   {empty_line:\\n}
   *@menu C6 l6
    *arguments_line C1
@@ -44,50 +44,50 @@ $result_tree_text{'special_docbook_unnumbered'} = '*document_root C11
     |EXTRA
     |node_content:A{0|0}
     |normalized:{Dedication}
-     {Dedication}
+     {normal_text:Dedication}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 l8
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{preface}
-     {preface}
+     {normal_text:preface}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 l9
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{colophon}
-     {colophon}
+     {normal_text:colophon}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 l10
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{acknowledgements}
-     {acknowledgements}
+     {normal_text:acknowledgements}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l11
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l13 {Dedication}
@@ -98,7 +98,7 @@ $result_tree_text{'special_docbook_unnumbered'} = '*document_root C11
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Dedication}
+    {normal_text:Dedication}
     {spaces_after_argument:\\n}
  *@unnumbered C4 l14 {a dedication}
  |EXTRA
@@ -107,11 +107,11 @@ $result_tree_text{'special_docbook_unnumbered'} = '*document_root C11
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {a dedication}
+    {normal_text:a dedication}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {Dedicated\\n}
+   {normal_text:Dedicated\\n}
   {empty_line:\\n}
  *@node C1 l18 {preface}
  |EXTRA
@@ -121,7 +121,7 @@ $result_tree_text{'special_docbook_unnumbered'} = '*document_root C11
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {preface}
+    {normal_text:preface}
     {spaces_after_argument:\\n}
  *@unnumbered C4 l19 {The Preface}
  |EXTRA
@@ -130,11 +130,11 @@ $result_tree_text{'special_docbook_unnumbered'} = '*document_root C11
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {The Preface}
+    {normal_text:The Preface}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {Preface.\\n}
+   {normal_text:Preface.\\n}
   {empty_line:\\n}
  *@node C1 l23 {colophon}
  |EXTRA
@@ -144,7 +144,7 @@ $result_tree_text{'special_docbook_unnumbered'} = '*document_root C11
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {colophon}
+    {normal_text:colophon}
     {spaces_after_argument:\\n}
  *@unnumbered C4 l24 {A colophon}
  |EXTRA
@@ -153,11 +153,11 @@ $result_tree_text{'special_docbook_unnumbered'} = '*document_root C11
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {A colophon}
+    {normal_text:A colophon}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {Glossary\\n}
+   {normal_text:Glossary\\n}
   {empty_line:\\n}
  *@node C1 l28 {acknowledgements}
  |EXTRA
@@ -167,7 +167,7 @@ $result_tree_text{'special_docbook_unnumbered'} = '*document_root C11
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {acknowledgements}
+    {normal_text:acknowledgements}
     {spaces_after_argument:\\n}
  *@chapter C3 l29 {A chapter Acnkowledgements}
  |EXTRA
@@ -177,11 +177,11 @@ $result_tree_text{'special_docbook_unnumbered'} = '*document_root C11
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {A chapter Acnkowledgements}
+    {normal_text:A chapter Acnkowledgements}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {Ack!\\n}
+   {normal_text:Ack!\\n}
 ';
 
 

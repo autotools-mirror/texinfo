@@ -19,7 +19,7 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter}
+    {normal_text:chapter}
     {spaces_after_argument:\\n}
  *@chapter C7 l2 {chapter}
  |EXTRA
@@ -29,640 +29,640 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter}
+    {normal_text:chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C56
    *@code C1 l4
     *brace_container C5
      *@@
-     {ref}
+     {normal_text:ref}
      *@{
-     {chapter,cross ref name}
+     {normal_text:chapter,cross ref name}
      *@}
-   { }
+   {normal_text: }
    *@ref C2 l4
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{chapter}
-     {chapter}
+     {normal_text:chapter}
     *brace_arg C1
-     {cross ref name}
-   {\\n}
+     {normal_text:cross ref name}
+   {normal_text:\\n}
    *@code C1 l5
     *brace_container C5
      *@@
-     {ref}
+     {normal_text:ref}
      *@{
-     {chapter,,title}
+     {normal_text:chapter,,title}
      *@}
-   { }
+   {normal_text: }
    *@ref C3 l5
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{chapter}
-     {chapter}
+     {normal_text:chapter}
     *brace_arg
     *brace_arg C1
-     {title}
-   {\\n}
+     {normal_text:title}
+   {normal_text:\\n}
    *@code C1 l6
     *brace_container C5
      *@@
-     {ref}
+     {normal_text:ref}
      *@{
-     {chapter,,,file name}
+     {normal_text:chapter,,,file name}
      *@}
-   { }
+   {normal_text: }
    *@ref C4 l6
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
-     {chapter}
+     {normal_text:chapter}
     *brace_arg
     *brace_arg
     *brace_arg C1
-     {file name}
-   {\\n}
+     {normal_text:file name}
+   {normal_text:\\n}
    *@code C1 l7
     *brace_container C5
      *@@
-     {ref}
+     {normal_text:ref}
      *@{
-     {chapter,,,,manual}
+     {normal_text:chapter,,,,manual}
      *@}
-   { }
+   {normal_text: }
    *@ref C5 l7
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
-     {chapter}
+     {normal_text:chapter}
     *brace_arg
     *brace_arg
     *brace_arg
     *brace_arg C1
-     {manual}
-   {\\n}
+     {normal_text:manual}
+   {normal_text:\\n}
    *@code C1 l8
     *brace_container C5
      *@@
-     {ref}
+     {normal_text:ref}
      *@{
-     {chapter,cross ref name,title,}
+     {normal_text:chapter,cross ref name,title,}
      *@}
-   { }
+   {normal_text: }
    *@ref C4 l8
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{chapter}
-     {chapter}
+     {normal_text:chapter}
     *brace_arg C1
-     {cross ref name}
+     {normal_text:cross ref name}
     *brace_arg C1
-     {title}
+     {normal_text:title}
     *brace_arg
-   {\\n}
+   {normal_text:\\n}
    *@code C1 l9
     *brace_container C5
      *@@
-     {ref}
+     {normal_text:ref}
      *@{
-     {chapter,cross ref name,,file name}
+     {normal_text:chapter,cross ref name,,file name}
      *@}
-   { }
+   {normal_text: }
    *@ref C4 l9
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
-     {chapter}
+     {normal_text:chapter}
     *brace_arg C1
-     {cross ref name}
+     {normal_text:cross ref name}
     *brace_arg
     *brace_arg C1
-     {file name}
-   {\\n}
+     {normal_text:file name}
+   {normal_text:\\n}
    *@code C1 l10
     *brace_container C5
      *@@
-     {ref}
+     {normal_text:ref}
      *@{
-     {chapter,cross ref name,,,manual}
+     {normal_text:chapter,cross ref name,,,manual}
      *@}
-   { }
+   {normal_text: }
    *@ref C5 l10
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
-     {chapter}
+     {normal_text:chapter}
     *brace_arg C1
-     {cross ref name}
+     {normal_text:cross ref name}
     *brace_arg
     *brace_arg
     *brace_arg C1
-     {manual}
-   {\\n}
+     {normal_text:manual}
+   {normal_text:\\n}
    *@code C1 l11
     *brace_container C5
      *@@
-     {ref}
+     {normal_text:ref}
      *@{
-     {chapter,cross ref name,title,file name}
+     {normal_text:chapter,cross ref name,title,file name}
      *@}
-   { }
+   {normal_text: }
    *@ref C4 l11
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
-     {chapter}
+     {normal_text:chapter}
     *brace_arg C1
-     {cross ref name}
+     {normal_text:cross ref name}
     *brace_arg C1
-     {title}
+     {normal_text:title}
     *brace_arg C1
-     {file name}
-   {\\n}
+     {normal_text:file name}
+   {normal_text:\\n}
    *@code C1 l12
     *brace_container C5
      *@@
-     {ref}
+     {normal_text:ref}
      *@{
-     {chapter,cross ref name,title,,manual}
+     {normal_text:chapter,cross ref name,title,,manual}
      *@}
-   { }
+   {normal_text: }
    *@ref C5 l12
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
-     {chapter}
+     {normal_text:chapter}
     *brace_arg C1
-     {cross ref name}
+     {normal_text:cross ref name}
     *brace_arg C1
-     {title}
+     {normal_text:title}
     *brace_arg
     *brace_arg C1
-     {manual}
-   {\\n}
+     {normal_text:manual}
+   {normal_text:\\n}
    *@code C1 l13
     *brace_container C5
      *@@
-     {ref}
+     {normal_text:ref}
      *@{
-     {chapter,cross ref name,title, file name, manual}
+     {normal_text:chapter,cross ref name,title, file name, manual}
      *@}
-   { }
+   {normal_text: }
    *@ref C5 l13
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
-     {chapter}
+     {normal_text:chapter}
     *brace_arg C1
-     {cross ref name}
+     {normal_text:cross ref name}
     *brace_arg C1
-     {title}
+     {normal_text:title}
     *brace_arg C2
      {spaces_before_argument: }
-     {file name}
+     {normal_text:file name}
     *brace_arg C2
      {spaces_before_argument: }
-     {manual}
-   {\\n}
+     {normal_text:manual}
+   {normal_text:\\n}
    *@code C1 l14
     *brace_container C5
      *@@
-     {ref}
+     {normal_text:ref}
      *@{
-     {chapter,,title,file name}
+     {normal_text:chapter,,title,file name}
      *@}
-   { }
+   {normal_text: }
    *@ref C4 l14
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
-     {chapter}
+     {normal_text:chapter}
     *brace_arg
     *brace_arg C1
-     {title}
+     {normal_text:title}
     *brace_arg C1
-     {file name}
-   {\\n}
+     {normal_text:file name}
+   {normal_text:\\n}
    *@code C1 l15
     *brace_container C5
      *@@
-     {ref}
+     {normal_text:ref}
      *@{
-     {chapter,,title,,manual}
+     {normal_text:chapter,,title,,manual}
      *@}
-   { }
+   {normal_text: }
    *@ref C5 l15
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
-     {chapter}
+     {normal_text:chapter}
     *brace_arg
     *brace_arg C1
-     {title}
+     {normal_text:title}
     *brace_arg
     *brace_arg C1
-     {manual}
-   {\\n}
+     {normal_text:manual}
+   {normal_text:\\n}
    *@code C1 l16
     *brace_container C5
      *@@
-     {ref}
+     {normal_text:ref}
      *@{
-     {chapter,,title, file name, manual}
+     {normal_text:chapter,,title, file name, manual}
      *@}
-   { }
+   {normal_text: }
    *@ref C5 l16
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
-     {chapter}
+     {normal_text:chapter}
     *brace_arg
     *brace_arg C1
-     {title}
+     {normal_text:title}
     *brace_arg C2
      {spaces_before_argument: }
-     {file name}
+     {normal_text:file name}
     *brace_arg C2
      {spaces_before_argument: }
-     {manual}
-   {\\n}
+     {normal_text:manual}
+   {normal_text:\\n}
    *@code C1 l17
     *brace_container C5
      *@@
-     {ref}
+     {normal_text:ref}
      *@{
-     {chapter,,,file name,manual}
+     {normal_text:chapter,,,file name,manual}
      *@}
-   { }
+   {normal_text: }
    *@ref C5 l17
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
-     {chapter}
+     {normal_text:chapter}
     *brace_arg
     *brace_arg
     *brace_arg C1
-     {file name}
+     {normal_text:file name}
     *brace_arg C1
-     {manual}
-   {\\n}
+     {normal_text:manual}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C56
    *@code C1 l19
     *brace_container C5
      *@@
-     {ref}
+     {normal_text:ref}
      *@{
-     {(pman)anode,cross ref name}
+     {normal_text:(pman)anode,cross ref name}
      *@}
-   { }
+   {normal_text: }
    *@ref C2 l19
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{_0028pman_0029anode}
-     {(pman)anode}
+     {normal_text:(pman)anode}
     *brace_arg C1
-     {cross ref name}
-   {\\n}
+     {normal_text:cross ref name}
+   {normal_text:\\n}
    *@code C1 l20
     *brace_container C5
      *@@
-     {ref}
+     {normal_text:ref}
      *@{
-     {(pman)anode,,title}
+     {normal_text:(pman)anode,,title}
      *@}
-   { }
+   {normal_text: }
    *@ref C3 l20
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{_0028pman_0029anode}
-     {(pman)anode}
+     {normal_text:(pman)anode}
     *brace_arg
     *brace_arg C1
-     {title}
-   {\\n}
+     {normal_text:title}
+   {normal_text:\\n}
    *@code C1 l21
     *brace_container C5
      *@@
-     {ref}
+     {normal_text:ref}
      *@{
-     {(pman)anode,,,file name}
+     {normal_text:(pman)anode,,,file name}
      *@}
-   { }
+   {normal_text: }
    *@ref C4 l21
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
-     {(pman)anode}
+     {normal_text:(pman)anode}
     *brace_arg
     *brace_arg
     *brace_arg C1
-     {file name}
-   {\\n}
+     {normal_text:file name}
+   {normal_text:\\n}
    *@code C1 l22
     *brace_container C5
      *@@
-     {ref}
+     {normal_text:ref}
      *@{
-     {(pman)anode,,,,manual}
+     {normal_text:(pman)anode,,,,manual}
      *@}
-   { }
+   {normal_text: }
    *@ref C5 l22
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
-     {(pman)anode}
+     {normal_text:(pman)anode}
     *brace_arg
     *brace_arg
     *brace_arg
     *brace_arg C1
-     {manual}
-   {\\n}
+     {normal_text:manual}
+   {normal_text:\\n}
    *@code C1 l23
     *brace_container C5
      *@@
-     {ref}
+     {normal_text:ref}
      *@{
-     {(pman)anode,cross ref name,title,}
+     {normal_text:(pman)anode,cross ref name,title,}
      *@}
-   { }
+   {normal_text: }
    *@ref C4 l23
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{_0028pman_0029anode}
-     {(pman)anode}
+     {normal_text:(pman)anode}
     *brace_arg C1
-     {cross ref name}
+     {normal_text:cross ref name}
     *brace_arg C1
-     {title}
+     {normal_text:title}
     *brace_arg
-   {\\n}
+   {normal_text:\\n}
    *@code C1 l24
     *brace_container C5
      *@@
-     {ref}
+     {normal_text:ref}
      *@{
-     {(pman)anode,cross ref name,,file name}
+     {normal_text:(pman)anode,cross ref name,,file name}
      *@}
-   { }
+   {normal_text: }
    *@ref C4 l24
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
-     {(pman)anode}
+     {normal_text:(pman)anode}
     *brace_arg C1
-     {cross ref name}
+     {normal_text:cross ref name}
     *brace_arg
     *brace_arg C1
-     {file name}
-   {\\n}
+     {normal_text:file name}
+   {normal_text:\\n}
    *@code C1 l25
     *brace_container C5
      *@@
-     {ref}
+     {normal_text:ref}
      *@{
-     {(pman)anode,cross ref name,,,manual}
+     {normal_text:(pman)anode,cross ref name,,,manual}
      *@}
-   { }
+   {normal_text: }
    *@ref C5 l25
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
-     {(pman)anode}
+     {normal_text:(pman)anode}
     *brace_arg C1
-     {cross ref name}
+     {normal_text:cross ref name}
     *brace_arg
     *brace_arg
     *brace_arg C1
-     {manual}
-   {\\n}
+     {normal_text:manual}
+   {normal_text:\\n}
    *@code C1 l26
     *brace_container C5
      *@@
-     {ref}
+     {normal_text:ref}
      *@{
-     {(pman)anode,cross ref name,title,file name}
+     {normal_text:(pman)anode,cross ref name,title,file name}
      *@}
-   { }
+   {normal_text: }
    *@ref C4 l26
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
-     {(pman)anode}
+     {normal_text:(pman)anode}
     *brace_arg C1
-     {cross ref name}
+     {normal_text:cross ref name}
     *brace_arg C1
-     {title}
+     {normal_text:title}
     *brace_arg C1
-     {file name}
-   {\\n}
+     {normal_text:file name}
+   {normal_text:\\n}
    *@code C1 l27
     *brace_container C5
      *@@
-     {ref}
+     {normal_text:ref}
      *@{
-     {(pman)anode,cross ref name,title,,manual}
+     {normal_text:(pman)anode,cross ref name,title,,manual}
      *@}
-   { }
+   {normal_text: }
    *@ref C5 l27
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
-     {(pman)anode}
+     {normal_text:(pman)anode}
     *brace_arg C1
-     {cross ref name}
+     {normal_text:cross ref name}
     *brace_arg C1
-     {title}
+     {normal_text:title}
     *brace_arg
     *brace_arg C1
-     {manual}
-   {\\n}
+     {normal_text:manual}
+   {normal_text:\\n}
    *@code C1 l28
     *brace_container C5
      *@@
-     {ref}
+     {normal_text:ref}
      *@{
-     {(pman)anode,cross ref name,title, file name, manual}
+     {normal_text:(pman)anode,cross ref name,title, file name, manual}
      *@}
-   { }
+   {normal_text: }
    *@ref C5 l28
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
-     {(pman)anode}
+     {normal_text:(pman)anode}
     *brace_arg C1
-     {cross ref name}
+     {normal_text:cross ref name}
     *brace_arg C1
-     {title}
+     {normal_text:title}
     *brace_arg C2
      {spaces_before_argument: }
-     {file name}
+     {normal_text:file name}
     *brace_arg C2
      {spaces_before_argument: }
-     {manual}
-   {\\n}
+     {normal_text:manual}
+   {normal_text:\\n}
    *@code C1 l29
     *brace_container C5
      *@@
-     {ref}
+     {normal_text:ref}
      *@{
-     {(pman)anode,,title,file name}
+     {normal_text:(pman)anode,,title,file name}
      *@}
-   { }
+   {normal_text: }
    *@ref C4 l29
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
-     {(pman)anode}
+     {normal_text:(pman)anode}
     *brace_arg
     *brace_arg C1
-     {title}
+     {normal_text:title}
     *brace_arg C1
-     {file name}
-   {\\n}
+     {normal_text:file name}
+   {normal_text:\\n}
    *@code C1 l30
     *brace_container C5
      *@@
-     {ref}
+     {normal_text:ref}
      *@{
-     {(pman)anode,,title,,manual}
+     {normal_text:(pman)anode,,title,,manual}
      *@}
-   { }
+   {normal_text: }
    *@ref C5 l30
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
-     {(pman)anode}
+     {normal_text:(pman)anode}
     *brace_arg
     *brace_arg C1
-     {title}
+     {normal_text:title}
     *brace_arg
     *brace_arg C1
-     {manual}
-   {\\n}
+     {normal_text:manual}
+   {normal_text:\\n}
    *@code C1 l31
     *brace_container C5
      *@@
-     {ref}
+     {normal_text:ref}
      *@{
-     {(pman)anode,,title, file name, manual}
+     {normal_text:(pman)anode,,title, file name, manual}
      *@}
-   { }
+   {normal_text: }
    *@ref C5 l31
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
-     {(pman)anode}
+     {normal_text:(pman)anode}
     *brace_arg
     *brace_arg C1
-     {title}
+     {normal_text:title}
     *brace_arg C2
      {spaces_before_argument: }
-     {file name}
+     {normal_text:file name}
     *brace_arg C2
      {spaces_before_argument: }
-     {manual}
-   {\\n}
+     {normal_text:manual}
+   {normal_text:\\n}
    *@code C1 l32
     *brace_container C5
      *@@
-     {ref}
+     {normal_text:ref}
      *@{
-     {(pman)anode,,,file name,manual}
+     {normal_text:(pman)anode,,,file name,manual}
      *@}
-   { }
+   {normal_text: }
    *@ref C5 l32
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
-     {(pman)anode}
+     {normal_text:(pman)anode}
     *brace_arg
     *brace_arg
     *brace_arg C1
-     {file name}
+     {normal_text:file name}
     *brace_arg C1
-     {manual}
-   {\\n}
+     {normal_text:manual}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C16
    *@code C1 l34
     *brace_container C5
      *@@
-     {inforef}
+     {normal_text:inforef}
      *@{
-     {chapter, cross ref name, file name}
+     {normal_text:chapter, cross ref name, file name}
      *@}
-   { }
+   {normal_text: }
    *@inforef C3 l34
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
-     {chapter}
+     {normal_text:chapter}
     *brace_arg C2
      {spaces_before_argument: }
-     {cross ref name}
+     {normal_text:cross ref name}
     *brace_arg C2
      {spaces_before_argument: }
-     {file name}
-   {\\n}
+     {normal_text:file name}
+   {normal_text:\\n}
    *@code C1 l35
     *brace_container C5
      *@@
-     {inforef}
+     {normal_text:inforef}
      *@{
-     {chapter}
+     {normal_text:chapter}
      *@}
-   { }
+   {normal_text: }
    *@inforef C1 l35
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{chapter}
-     {chapter}
-   {\\n}
+     {normal_text:chapter}
+   {normal_text:\\n}
    *@code C1 l36
     *brace_container C5
      *@@
-     {inforef}
+     {normal_text:inforef}
      *@{
-     {chapter, cross ref name}
+     {normal_text:chapter, cross ref name}
      *@}
-   { }
+   {normal_text: }
    *@inforef C2 l36
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{chapter}
-     {chapter}
+     {normal_text:chapter}
     *brace_arg C2
      {spaces_before_argument: }
-     {cross ref name}
-   {\\n}
+     {normal_text:cross ref name}
+   {normal_text:\\n}
    *@code C1 l37
     *brace_container C5
      *@@
-     {inforef}
+     {normal_text:inforef}
      *@{
-     {chapter,,file name}
+     {normal_text:chapter,,file name}
      *@}
-   { }
+   {normal_text: }
    *@inforef C3 l37
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
-     {chapter}
+     {normal_text:chapter}
     *brace_arg
     *brace_arg C1
-     {file name}
-   {\\n}
+     {normal_text:file name}
+   {normal_text:\\n}
 ';
 
 

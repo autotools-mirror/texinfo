@@ -23,7 +23,7 @@ $result_tree_text{'texinfo_command_alias'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@alias C1 l5
@@ -31,11 +31,11 @@ $result_tree_text{'texinfo_command_alias'} = '*document_root C1
    |misc_args:A{strong|mystrong}
     *line_arg C3
      {spaces_before_argument: }
-     {strong = mystrong}
+     {normal_text:strong = mystrong}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C1
-   {!!aa!!\\n}
+   {normal_text:!!aa!!\\n}
    >SOURCEMARKS
    >macro_expansion<start;1>
     >*macro_call@mystrong C1
@@ -50,7 +50,7 @@ $result_tree_text{'texinfo_command_alias'} = '*document_root C1
   |misc_args:A{mystrong|;|:}
    *line_arg C3
     {spaces_before_argument: }
-    {mystrong,;,:}
+    {normal_text:mystrong,;,:}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
@@ -60,8 +60,8 @@ $result_tree_text{'texinfo_command_alias'} = '*document_root C1
    |begin:{;}
    |end:{:}
     *brace_container C1
-     {bb}
-   {\\n}
+     {normal_text:bb}
+   {normal_text:\\n}
   {empty_line:\\n}
 ';
 

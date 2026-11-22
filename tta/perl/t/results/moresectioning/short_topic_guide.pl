@@ -22,7 +22,7 @@ $result_tree_text{'short_topic_guide'} = '*document_root C11
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 short_topic_guide.texi:l4 {A short example of guide topic}
  |EXTRA
@@ -31,7 +31,7 @@ $result_tree_text{'short_topic_guide'} = '*document_root C11
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {A short example of guide topic}
+    {normal_text:A short example of guide topic}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 short_topic_guide.texi:l6 {guide1}
@@ -42,7 +42,7 @@ $result_tree_text{'short_topic_guide'} = '*document_root C11
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {guide1}
+    {normal_text:guide1}
     {spaces_after_argument:\\n}
  *@chapter C4 short_topic_guide.texi:l7 {guide 1 for an easy use}
  |EXTRA
@@ -52,7 +52,7 @@ $result_tree_text{'short_topic_guide'} = '*document_root C11
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {guide 1 for an easy use}
+    {normal_text:guide 1 for an easy use}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C4 short_topic_guide.texi:l9
@@ -65,28 +65,28 @@ $result_tree_text{'short_topic_guide'} = '*document_root C11
     |EXTRA
     |node_content:A{0|0}
     |normalized:{topic1}
-     {topic1}
+     {normal_text:topic1}
     {menu_entry_separator::: }
     *menu_entry_description C1
      *preformatted C1
-      {topic1 description\\n}
+      {normal_text:topic1 description\\n}
    *menu_entry C4 short_topic_guide.texi:l11
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{topic3}
-     {topic3}
+     {normal_text:topic3}
     {menu_entry_separator::: }
     *menu_entry_description C1
      *preformatted C1
-      {topic3 description\\n}
+      {normal_text:topic3 description\\n}
    *@end C1 short_topic_guide.texi:l12
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C5 short_topic_guide.texi:l14 {topic1}
@@ -97,13 +97,13 @@ $result_tree_text{'short_topic_guide'} = '*document_root C11
   *arguments_line C2
    *line_arg C2
     {spaces_before_argument: }
-    {topic1}
+    {normal_text:topic1}
    *line_arg C3
    |EXTRA
    |node_content:A{1|1}
    |normalized:{topic3}
     {spaces_before_argument: }
-    {topic3}
+    {normal_text:topic3}
     {spaces_after_argument:\\n}
   *@heading C1 short_topic_guide.texi:l15
   |EXTRA
@@ -111,7 +111,7 @@ $result_tree_text{'short_topic_guide'} = '*document_root C11
   |heading_number:{1}
    *line_arg C3
     {spaces_before_argument: }
-    {Topic 1 title}
+    {normal_text:Topic 1 title}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C4 short_topic_guide.texi:l17
@@ -120,7 +120,7 @@ $result_tree_text{'short_topic_guide'} = '*document_root C11
      {spaces_before_argument:\\n}
    *menu_comment C1
     *preformatted C2
-     {More information\\n}
+     {normal_text:More information\\n}
      {empty_line:\\n}
    *menu_entry C4 short_topic_guide.texi:l20
     {menu_entry_leading_text:* }
@@ -128,17 +128,17 @@ $result_tree_text{'short_topic_guide'} = '*document_root C11
     |EXTRA
     |node_content:A{0|0}
     |normalized:{guide1}
-     {guide1}
+     {normal_text:guide1}
     {menu_entry_separator::: }
     *menu_entry_description C1
      *preformatted C1
-      {guide 1\\n}
+      {normal_text:guide 1\\n}
    *@end C1 short_topic_guide.texi:l21
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C5 short_topic_guide.texi:l23 {topic3}
@@ -149,7 +149,7 @@ $result_tree_text{'short_topic_guide'} = '*document_root C11
   *arguments_line C3
    *line_arg C2
     {spaces_before_argument: }
-    {topic3}
+    {normal_text:topic3}
    *line_arg C1
     {spaces_before_argument: }
    *line_arg C3
@@ -157,7 +157,7 @@ $result_tree_text{'short_topic_guide'} = '*document_root C11
    |node_content:A{1|1}
    |normalized:{topic1}
     {spaces_before_argument: }
-    {topic1}
+    {normal_text:topic1}
     {spaces_after_argument:\\n}
   *@heading C1 short_topic_guide.texi:l24
   |EXTRA
@@ -165,7 +165,7 @@ $result_tree_text{'short_topic_guide'} = '*document_root C11
   |heading_number:{2}
    *line_arg C3
     {spaces_before_argument: }
-    {Topic 3 title}
+    {normal_text:Topic 3 title}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C5 short_topic_guide.texi:l26
@@ -174,7 +174,7 @@ $result_tree_text{'short_topic_guide'} = '*document_root C11
      {spaces_before_argument:\\n}
    *menu_comment C1
     *preformatted C2
-     {More information\\n}
+     {normal_text:More information\\n}
      {empty_line:\\n}
    *menu_entry C4 short_topic_guide.texi:l29
     {menu_entry_leading_text:* }
@@ -182,28 +182,28 @@ $result_tree_text{'short_topic_guide'} = '*document_root C11
     |EXTRA
     |node_content:A{0|0}
     |normalized:{guide1}
-     {guide1}
+     {normal_text:guide1}
     {menu_entry_separator::: }
     *menu_entry_description C1
      *preformatted C1
-      {guide 1\\n}
+      {normal_text:guide 1\\n}
    *menu_entry C4 short_topic_guide.texi:l30
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{guide2}
-     {guide2}
+     {normal_text:guide2}
     {menu_entry_separator::: }
     *menu_entry_description C1
      *preformatted C1
-      {guide 2\\n}
+      {normal_text:guide 2\\n}
    *@end C1 short_topic_guide.texi:l31
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C7 short_topic_guide.texi:l33 {topic4}
@@ -214,7 +214,7 @@ $result_tree_text{'short_topic_guide'} = '*document_root C11
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {topic4}
+    {normal_text:topic4}
     {spaces_after_argument:\\n}
   *@xrefname C1 short_topic_guide.texi:l34
   |EXTRA
@@ -222,11 +222,11 @@ $result_tree_text{'short_topic_guide'} = '*document_root C11
   |heading_number:{3}
    *line_arg C3
     {spaces_before_argument: }
-    {Topic 4 only gets a ref name, no title}
+    {normal_text:Topic 4 only gets a ref name, no title}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {This is topic 4\\n}
+   {normal_text:This is topic 4\\n}
   {empty_line:\\n}
   *@menu C4 short_topic_guide.texi:l38
    *arguments_line C1
@@ -234,7 +234,7 @@ $result_tree_text{'short_topic_guide'} = '*document_root C11
      {spaces_before_argument:\\n}
    *menu_comment C1
     *preformatted C2
-     {More information\\n}
+     {normal_text:More information\\n}
      {empty_line:\\n}
    *menu_entry C4 short_topic_guide.texi:l41
     {menu_entry_leading_text:* }
@@ -242,17 +242,17 @@ $result_tree_text{'short_topic_guide'} = '*document_root C11
     |EXTRA
     |node_content:A{0|0}
     |normalized:{guide2}
-     {guide2}
+     {normal_text:guide2}
     {menu_entry_separator::: }
     *menu_entry_description C1
      *preformatted C1
-      {guide 2\\n}
+      {normal_text:guide 2\\n}
    *@end C1 short_topic_guide.texi:l42
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 short_topic_guide.texi:l44 {guide2}
@@ -263,7 +263,7 @@ $result_tree_text{'short_topic_guide'} = '*document_root C11
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {guide2}
+    {normal_text:guide2}
     {spaces_after_argument:\\n}
  *@chapter C4 short_topic_guide.texi:l45 {guide 2 for an in depth use}
  |EXTRA
@@ -273,7 +273,7 @@ $result_tree_text{'short_topic_guide'} = '*document_root C11
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {guide 2 for an in depth use}
+    {normal_text:guide 2 for an in depth use}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C4 short_topic_guide.texi:l47
@@ -286,28 +286,28 @@ $result_tree_text{'short_topic_guide'} = '*document_root C11
     |EXTRA
     |node_content:A{0|0}
     |normalized:{topic3}
-     {topic3}
+     {normal_text:topic3}
     {menu_entry_separator::: }
     *menu_entry_description C1
      *preformatted C1
-      {topic3 description\\n}
+      {normal_text:topic3 description\\n}
    *menu_entry C4 short_topic_guide.texi:l49
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{topic4}
-     {topic4}
+     {normal_text:topic4}
     {menu_entry_separator::: }
     *menu_entry_description C1
      *preformatted C1
-      {topic4 description\\n}
+      {normal_text:topic4 description\\n}
    *@end C1 short_topic_guide.texi:l50
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@bye C1

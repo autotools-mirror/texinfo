@@ -18,14 +18,14 @@ $result_tree_text{'quote_dash_in_example'} = '*document_root C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C2
-    {and now -- yes---now and ``so\'\'.\\n}
+    {normal_text:and now -- yes---now and ``so\'\'.\\n}
     {empty_line:\\n}
    *@end C1 l5
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
 ';
 

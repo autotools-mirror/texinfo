@@ -19,52 +19,52 @@ $result_tree_text{'note_in_strong'} = '*document_root C2
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C3
-   {3 One }
+   {normal_text:3 One }
    *@strong C1 l3
     *brace_container C1
-     {Note}
-   {.\\n}
+     {normal_text:Note}
+   {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C3
-   {5 }
+   {normal_text:5 }
    *@strong C1 l5
     *brace_container C1
-     {Note a}
-   {.\\n}
+     {normal_text:Note a}
+   {normal_text:.\\n}
   {empty_line:\\n}
   {empty_line:\\n}
   {empty_line:\\n}
   *paragraph C3
-   {9 }
+   {normal_text:9 }
    *@strong C1 l9
     *brace_container C1
-     {note}
-   {.\\n}
+     {normal_text:note}
+   {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C3
-   {11 }
+   {normal_text:11 }
    *@strong C1 l11
     *brace_container C1
-     {note b}
-   {.\\n}
+     {normal_text:note b}
+   {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C3
-   {13 }
+   {normal_text:13 }
    *@strong C1 l13
     *brace_container C1
-     { note}
-   {.\\n}
+     {normal_text: note}
+   {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C3
-   {15 }
+   {normal_text:15 }
    *@strong C1 l15
     *brace_container C1
-     {note-bbb}
-   {.\\n}
+     {normal_text:note-bbb}
+   {normal_text:.\\n}
 ';
 
 

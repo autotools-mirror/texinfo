@@ -16,7 +16,7 @@ $result_tree_text{'comments_on_misc_command_line'} = '*document_root C1
    |text_arg:{comments_on_misc_command_line.info}
     *line_arg C4
      {spaces_before_argument:  }
-     {comments_on_misc_command_line.info}
+     {normal_text:comments_on_misc_command_line.info}
      {spaces_after_argument:  }
      *@c C1
       *line_arg C3
@@ -28,7 +28,7 @@ $result_tree_text{'comments_on_misc_command_line'} = '*document_root C1
    |misc_args:A{phoo|;|:}
     *line_arg C4
      {spaces_before_argument: }
-     {phoo,;,:}
+     {normal_text:phoo,;,:}
      {spaces_after_argument:  }
      *@c C1
       *line_arg C3
@@ -41,7 +41,7 @@ $result_tree_text{'comments_on_misc_command_line'} = '*document_root C1
    |misc_args:A{none}
     *line_arg C4
      {spaces_before_argument: }
-     {none}
+     {normal_text:none}
      {spaces_after_argument: }
      *@c C1
       *line_arg C3
@@ -69,7 +69,7 @@ $result_tree_text{'comments_on_misc_command_line'} = '*document_root C1
   *@pagesizes C1 l6
    *line_arg C4
     {spaces_before_argument: }
-    {200mm}
+    {normal_text:200mm}
     {spaces_after_argument: }
     *@c C1
      *line_arg C3
@@ -80,9 +80,9 @@ $result_tree_text{'comments_on_misc_command_line'} = '*document_root C1
    *line_arg C7
     {spaces_before_argument: }
     *@thispage
-    { }
+    {normal_text: }
     *@|
-    { aaa}
+    {normal_text: aaa}
     {spaces_after_argument: }
     *@c C1
      *line_arg C3
@@ -100,7 +100,7 @@ $result_tree_text{'comments_on_misc_command_line'} = '*document_root C1
   *paragraph C1
   |EXTRA
   |indent:{1}
-   {Para.\\n}
+   {normal_text:Para.\\n}
 ';
 
 

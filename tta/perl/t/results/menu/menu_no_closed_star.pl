@@ -17,7 +17,7 @@ $result_tree_text{'menu_no_closed_star'} = '*document_root C1
      {spaces_before_argument:\\n}
    *menu_comment C1
     *preformatted C1
-     {* }
+     {normal_text:* }
 ';
 
 

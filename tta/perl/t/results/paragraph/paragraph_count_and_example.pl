@@ -16,17 +16,17 @@ $result_tree_text{'paragraph_count_and_example'} = '*document_root C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C1
-    {in example\\n}
+    {normal_text:in example\\n}
    *@end C1 l3
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {After.\\n}
+   {normal_text:After.\\n}
 ';
 
 

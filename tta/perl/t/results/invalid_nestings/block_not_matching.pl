@@ -16,7 +16,7 @@ $result_tree_text{'block_not_matching'} = '*document_root C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C1
-    {A quotation\\n}
+    {normal_text:A quotation\\n}
   {empty_line:\\n}
   *@deffn C2 l5
    *def_line C1 l5
@@ -28,19 +28,19 @@ $result_tree_text{'block_not_matching'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *bracketed_arg C1 l5
-       {Function Reference}
+       {normal_text:Function Reference}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {print_navigation}
+       {normal_text:print_navigation}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {$filehandle}
+       {normal_text:$filehandle}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {Text\\n}
+     {normal_text:Text\\n}
   {empty_line:\\n}
   *@table C2 l9
    *arguments_line C1
@@ -53,11 +53,11 @@ $result_tree_text{'block_not_matching'} = '*document_root C1
      *@item C1 l10
       *line_arg C3
        {spaces_before_argument: }
-       {item}
+       {normal_text:item}
        {spaces_after_argument:\\n}
     *table_definition C1
      *paragraph C1
-      {line\\n}
+      {normal_text:line\\n}
   {empty_line:\\n}
   *@table C2 l14
    *arguments_line C1
@@ -70,7 +70,7 @@ $result_tree_text{'block_not_matching'} = '*document_root C1
      *@item C1 l15
       *line_arg C3
        {spaces_before_argument: }
-       {ref}
+       {normal_text:ref}
        {spaces_after_argument:\\n}
     *table_definition C1
      *@example C2 l16
@@ -78,35 +78,35 @@ $result_tree_text{'block_not_matching'} = '*document_root C1
        *block_line_arg C1
         {spaces_before_argument:\\n}
       *preformatted C1
-       {example\\n}
+       {normal_text:example\\n}
   {empty_line:\\n}
   *@group C2 l21
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C1
-    {in group\\n}
+    {normal_text:in group\\n}
   {empty_line:\\n}
   *@group C2 l25
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C1
-    {in group 2\\n}
+    {normal_text:in group 2\\n}
   {empty_line:\\n}
   *@cartouche C2 l29
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C1
-    {cartouche\\n}
+    {normal_text:cartouche\\n}
   {empty_line:\\n}
   *@cartouche C2 l33
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C1
-    {carouche\\n}
+    {normal_text:carouche\\n}
 ';
 
 

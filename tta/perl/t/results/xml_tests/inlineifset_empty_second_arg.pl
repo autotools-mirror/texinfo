@@ -12,26 +12,26 @@ $result_tree_text{'inlineifset_empty_second_arg'} = '*document_root C1
  *before_node_section C4
   *preamble_before_content
   *paragraph C3
-   {Toto }
+   {normal_text:Toto }
    *@inlineifset C2 l1
    |EXTRA
    |format:{flag}
     *brace_arg C1
-     {flag}
+     {normal_text:flag}
     *elided_brace_command_arg C1
      {raw:}
-   {. After.\\n}
+   {normal_text:. After.\\n}
   {empty_line:\\n}
   *paragraph C3
-   {Again with space }
+   {normal_text:Again with space }
    *@inlineifset C2 l3
    |EXTRA
    |format:{flag}
     *brace_arg C1
-     {flag}
+     {normal_text:flag}
     *elided_brace_command_arg C1
      {raw: }
-   {. After.\\n}
+   {normal_text:. After.\\n}
 ';
 
 

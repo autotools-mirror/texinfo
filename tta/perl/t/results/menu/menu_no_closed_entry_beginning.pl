@@ -17,7 +17,7 @@ $result_tree_text{'menu_no_closed_entry_beginning'} = '*document_root C1
      {spaces_before_argument:\\n}
    *menu_comment C1
     *preformatted C1
-     {* node}
+     {normal_text:* node}
 ';
 
 

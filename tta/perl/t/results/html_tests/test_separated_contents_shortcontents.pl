@@ -25,7 +25,7 @@ $result_tree_text{'test_separated_contents_shortcontents'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l4 {top}
  |EXTRA
@@ -34,7 +34,7 @@ $result_tree_text{'test_separated_contents_shortcontents'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l6 {chap}
@@ -45,7 +45,7 @@ $result_tree_text{'test_separated_contents_shortcontents'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
  *@chapter C2 l7 {chapter}
  |EXTRA
@@ -55,7 +55,7 @@ $result_tree_text{'test_separated_contents_shortcontents'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter}
+    {normal_text:chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l9 {app}
@@ -66,7 +66,7 @@ $result_tree_text{'test_separated_contents_shortcontents'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {app}
+    {normal_text:app}
     {spaces_after_argument:\\n}
  *@appendix C3 l10 {appendix}
  |EXTRA
@@ -76,7 +76,7 @@ $result_tree_text{'test_separated_contents_shortcontents'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {appendix}
+    {normal_text:appendix}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@shortcontents C1 l12

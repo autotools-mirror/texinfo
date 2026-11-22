@@ -68,7 +68,7 @@ new_element (enum element_type type)
   return e;
 }
 
-/* for commands with dynamically generated command name, with type
+/* For commands with dynamically generated command name, with type
    determining the command category.  For definfoenclose'd, macro
    call and index commands */
 ELEMENT *
@@ -100,6 +100,11 @@ new_text_element (enum element_type type)
 {
   ELEMENT *e;
   e = alloc_element ();
+
+  /*
+  if (type == ET_NONE)
+    abort ();
+   */
   e->type = type;
 
   e->e.text = (TEXT *) malloc (sizeof (TEXT));

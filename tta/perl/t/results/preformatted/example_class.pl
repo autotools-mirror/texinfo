@@ -15,36 +15,36 @@ $result_tree_text{'example_class'} = '*document_root C1
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     {perl}
+     {normal_text:perl}
      {spaces_after_argument:\\n}
    *preformatted C21
-    {foreach my $unclosed_file (keys(%unclosed_files)) }
+    {normal_text:foreach my $unclosed_file (keys(%unclosed_files)) }
     *@{
-    {\\n}
-    {  if (!close($unclosed_files}
+    {normal_text:\\n}
+    {normal_text:  if (!close($unclosed_files}
     *@{
-    {$unclosed_file}
+    {normal_text:$unclosed_file}
     *@}
-    {)) }
+    {normal_text:)) }
     *@{
-    {\\n}
-    {    warn(sprintf("%s: error on closing %s: %s\\n",\\n}
-    {                     $real_command_name, $unclosed_file, $!));\\n}
-    {    $error_count++;\\n}
-    {    _exit($error_count, \\}
+    {normal_text:\\n}
+    {normal_text:    warn(sprintf("%s: error on closing %s: %s\\n",\\n}
+    {normal_text:                     $real_command_name, $unclosed_file, $!));\\n}
+    {normal_text:    $error_count++;\\n}
+    {normal_text:    _exit($error_count, \\}
     *@@
-    {opened_files);\\n}
-    {  }
+    {normal_text:opened_files);\\n}
+    {normal_text:  }
     *@}
-    {\\n}
+    {normal_text:\\n}
     *@}
-    {\\n}
+    {normal_text:\\n}
    *@end C1 l10
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
 ';
 

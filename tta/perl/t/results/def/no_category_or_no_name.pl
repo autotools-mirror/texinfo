@@ -20,13 +20,13 @@ $result_tree_text{'no_category_or_no_name'} = '*document_root C1
      {spaces_before_argument:\\n}
    *def_item C1
     *paragraph C1
-     {no category no name\\n}
+     {normal_text:no category no name\\n}
    *@end C1 l3
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
-     {deffn}
+     {normal_text:deffn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deffn C3 l5
@@ -38,17 +38,17 @@ $result_tree_text{'no_category_or_no_name'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *bracketed_arg C1 l5
-       {only category}
+       {normal_text:only category}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
-     {no name\\n}
+     {normal_text:no name\\n}
    *@end C1 l7
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
-     {deffn}
+     {normal_text:deffn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deffn C5 l9
@@ -61,19 +61,19 @@ $result_tree_text{'no_category_or_no_name'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {a}
+       {normal_text:a}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {b}
+       {normal_text:b}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {c}
+       {normal_text:c}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {d}
+       {normal_text:d}
      {spaces_after_argument: \\n}
    *@deffnx C1 l10
    |EXTRA
@@ -83,7 +83,7 @@ $result_tree_text{'no_category_or_no_name'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {deffnx_category}
+       {normal_text:deffnx_category}
      {spaces_after_argument:\\n}
    *@deffnx C1 l11
    |EXTRA
@@ -93,13 +93,13 @@ $result_tree_text{'no_category_or_no_name'} = '*document_root C1
      {spaces_before_argument: \\n}
    *def_item C1
     *paragraph C1
-     {with deffnx missing category or name\\n}
+     {normal_text:with deffnx missing category or name\\n}
    *@end C1 l13
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
-     {deffn}
+     {normal_text:deffn}
      {spaces_after_argument:\\n}
 ';
 

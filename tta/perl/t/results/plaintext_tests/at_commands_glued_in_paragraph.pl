@@ -12,93 +12,93 @@ $result_tree_text{'at_commands_glued_in_paragraph'} = '*document_root C1
  *before_node_section C4
   *preamble_before_content
   *paragraph C35
-   {at}
+   {normal_text:at}
    *@@
-   {.\\n}
-   {TeX}
+   {normal_text:.\\n}
+   {normal_text:TeX}
    *@TeX C1 l2
     *brace_container
-   {TeX.\\n}
-   {code}
+   {normal_text:TeX.\\n}
+   {normal_text:code}
    *@code C1 l3
     *brace_container C1
-     {in code}
-   {code.\\n}
-   {acronym}
+     {normal_text:in code}
+   {normal_text:code.\\n}
+   {normal_text:acronym}
    *@acronym C2 l4
     *brace_arg C1
-     {ABC}
+     {normal_text:ABC}
     *brace_arg C2
      {spaces_before_argument: }
-     {aaa bb cc}
-   {acronym.\\n}
-   {acronym2}
+     {normal_text:aaa bb cc}
+   {normal_text:acronym.\\n}
+   {normal_text:acronym2}
    *@acronym C1 l5
     *brace_arg C1
-     {ABC}
-   {acronym.\\n}
-   {email}
+     {normal_text:ABC}
+   {normal_text:acronym.\\n}
+   {normal_text:email}
    *@email C2 l6
     *brace_arg C1
-     {somebody}
+     {normal_text:somebody}
     *brace_arg C2
      {spaces_before_argument: }
-     {mali}
-   {email.\\n}
-   {ref}
+     {normal_text:mali}
+   {normal_text:email.\\n}
+   {normal_text:ref}
    *@ref C1 l7
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{Top}
-     {Top}
-   {ref.\\n}
-   {Foornote}
+     {normal_text:Top}
+   {normal_text:ref.\\n}
+   {normal_text:Foornote}
    *@footnote C1 l8
    |EXTRA
    |global_command_number:{1}
     *brace_command_context C1
      *paragraph C1
-      {in footnote}
-   {after footnote.\\n}
-   {accent}
+      {normal_text:in footnote}
+   {normal_text:after footnote.\\n}
+   {normal_text:accent}
    *@^ C1 l9
     *brace_container C1
      *@dotless C1 l9
       *brace_container C1
-       {i}
-   {accent.\\n}
-   {and star}
+       {normal_text:i}
+   {normal_text:accent.\\n}
+   {normal_text:and star}
    *@*
-   {star.\\n}
-   {noindent}
+   {normal_text:star.\\n}
+   {normal_text:noindent}
    *@noindent l11
    {ignorable_spaces_after_command: }
-   {after noindent\\n}
-   {sp}
+   {normal_text:after noindent\\n}
+   {normal_text:sp}
   *@sp C1 l12
   |EXTRA
   |misc_args:A{4}
    *line_arg C3
     {spaces_before_argument: }
-    {4}
+    {normal_text:4}
     {spaces_after_argument:\\n}
   *paragraph C5
-   {anchor}
+   {normal_text:anchor}
    *@anchor C1 l13
    |EXTRA
    |identifier:{anchor}
    |is_target:{1}
     *brace_arg C1
-     {anchor}
-   {anchor\\n}
-   {index}
+     {normal_text:anchor}
+   {normal_text:anchor\\n}
+   {normal_text:index}
    *index_entry_command@cindex C1 l14
    |EXTRA
    |index_entry:I{cp,1}
     *line_arg C3
      {spaces_before_argument: }
-     {index}
+     {normal_text:index}
      {spaces_after_argument:\\n}
 ';
 

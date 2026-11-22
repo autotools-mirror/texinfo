@@ -19,7 +19,7 @@ $result_tree_text{'index_entry_in_preformatted'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l2 {top}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'index_entry_in_preformatted'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l4 {chap}
@@ -39,7 +39,7 @@ $result_tree_text{'index_entry_in_preformatted'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
  *@chapter C3 l5 {Chapter}
  |EXTRA
@@ -49,7 +49,7 @@ $result_tree_text{'index_entry_in_preformatted'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chapter}
+    {normal_text:Chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@example C3 l7
@@ -63,9 +63,9 @@ $result_tree_text{'index_entry_in_preformatted'} = '*document_root C5
     |index_entry:I{cp,1}
      *line_arg C3
       {spaces_before_argument: }
-      {first}
+      {normal_text:first}
       {spaces_after_argument:\\n}
-    {text\\n}
+    {normal_text:text\\n}
     {empty_line:\\n}
     *index_entry_command@cindex C1 l11
     |EXTRA
@@ -73,28 +73,28 @@ $result_tree_text{'index_entry_in_preformatted'} = '*document_root C5
     |index_entry:I{cp,2}
      *line_arg C4
       {spaces_before_argument: }
-      {other}
+      {normal_text:other}
       {spaces_after_argument: }
       *@c C1
        *line_arg C3
         {spaces_before_argument: }
         {rawline_text:comment}
         {spaces_after_argument:\\n}
-    {text2\\n}
+    {normal_text:text2\\n}
     *index_entry_command@cindex C1 l13
     |EXTRA
     |element_node:{chap}
     |index_entry:I{cp,3}
      *line_arg C3
       {spaces_before_argument: }
-      {last}
+      {normal_text:last}
       {spaces_after_argument:\\n}
    *@end C1 l14
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
 ';
 

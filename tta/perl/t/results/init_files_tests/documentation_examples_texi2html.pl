@@ -18,20 +18,20 @@ $result_tree_text{'documentation_examples_texi2html'} = '*document_root C11
      {spaces_before_argument: }
      *@email C2 l2
       *brace_arg C3
-       {someone}
+       {normal_text:someone}
        *@@
-       {example.com}
+       {normal_text:example.com}
       *brace_arg C2
        {spaces_before_argument: }
-       {me}
-     { }
+       {normal_text:me}
+     {normal_text: }
      *@sansserif C1 l2
       *brace_container C1
-       {in--title}
-     { }
+       {normal_text:in--title}
+     {normal_text: }
      *@error C1 l2
       *brace_container
-     { }
+     {normal_text: }
      *@equiv C1 l2
       *brace_container
      {spaces_after_argument:\\n}
@@ -50,7 +50,7 @@ $result_tree_text{'documentation_examples_texi2html'} = '*document_root C11
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l7 {top}
  |EXTRA
@@ -59,7 +59,7 @@ $result_tree_text{'documentation_examples_texi2html'} = '*document_root C11
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l9 {chapter}
@@ -70,7 +70,7 @@ $result_tree_text{'documentation_examples_texi2html'} = '*document_root C11
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter}
+    {normal_text:chapter}
     {spaces_after_argument:\\n}
  *@chapter C28 l10 {Chapter}
  |EXTRA
@@ -80,82 +80,82 @@ $result_tree_text{'documentation_examples_texi2html'} = '*document_root C11
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chapter}
+    {normal_text:Chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C11
    *@sansserif C1 l12
     *brace_container C1
-     {in--text}
-   { }
+     {normal_text:in--text}
+   {normal_text: }
    *@-
-   { p--n. }
+   {normal_text: p--n. }
    *@error C1 l12
     *brace_container
-   { }
+   {normal_text: }
    *@equiv C1 l12
     *brace_container
-   {\\n}
+   {normal_text:\\n}
    *@xref C1 l13
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{my-node}
-     {my node}
+     {normal_text:my node}
    *@footnote C1 l13
    |EXTRA
    |global_command_number:{1}
     *brace_command_context C1
      *paragraph C1
-      {in footnote}
-   {.\\n}
+      {normal_text:in footnote}
+   {normal_text:.\\n}
   *@titlefont C1 l14
   |EXTRA
   |global_command_number:{1}
    *brace_container C1
-    {in titlefont}
-  {\\n}
+    {normal_text:in titlefont}
+  {normal_text:\\n}
   *paragraph C8
    *@email C2 l15
     *brace_arg C3
-     {a}
+     {normal_text:a}
      *@@
-     {b.c}
+     {normal_text:b.c}
     *brace_arg C2
      {spaces_before_argument: }
-     {someone}
-   {\\n}
+     {normal_text:someone}
+   {normal_text:\\n}
    *@sc C1 l16
     *brace_container C1
-     {in Sc}
-   {\\n}
+     {normal_text:in Sc}
+   {normal_text:\\n}
    *@var C1 l17
     *brace_container C1
-     {in var}
-   {\\n}
+     {normal_text:in var}
+   {normal_text:\\n}
    *@slanted C1 l18
     *brace_container C2
-     {``slant--}
+     {normal_text:``slant--}
      *@code C1 l18
       *brace_container C1
-       {this}
-   {\\n}
+       {normal_text:this}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
    *@math C1 l20
     *brace_arg C7
      *@sansserif C1 l20
       *brace_container C1
-       {in--math}
-     { }
+       {normal_text:in--math}
+     {normal_text: }
      *@-
-     { a=b }
+     {normal_text: a=b }
      *@error C1 l20
       *brace_container
-     { }
+     {normal_text: }
      *@equiv C1 l20
       *brace_container
-   {\\n}
+   {normal_text:\\n}
   {empty_line:\\n}
   *@indentedblock C3 l22
    *arguments_line C1
@@ -168,35 +168,35 @@ $result_tree_text{'documentation_examples_texi2html'} = '*document_root C11
     *preformatted C10
      *@sansserif C1 l24
       *brace_container C1
-       {in--example}
-     { }
+       {normal_text:in--example}
+     {normal_text: }
      *@-
-     { c. }
+     {normal_text: c. }
      *@error C1 l24
       *brace_container
-     { }
+     {normal_text: }
      *@equiv C1 l24
       *brace_container
-     {\\n}
+     {normal_text:\\n}
      *@email C1 l25
       *brace_arg C3
-       {a}
+       {normal_text:a}
        *@@
-       {example}
-     {\\n}
+       {normal_text:example}
+     {normal_text:\\n}
     *@end C1 l26
     |EXTRA
     |text_arg:{example}
      *line_arg C3
       {spaces_before_argument: }
-      {example}
+      {normal_text:example}
       {spaces_after_argument:\\n}
    *@end C1 l27
    |EXTRA
    |text_arg:{indentedblock}
     *line_arg C3
      {spaces_before_argument: }
-     {indentedblock}
+     {normal_text:indentedblock}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@display C3 l29
@@ -206,43 +206,43 @@ $result_tree_text{'documentation_examples_texi2html'} = '*document_root C11
    *preformatted C2
     *@email C1 l30
      *brace_arg C3
-      {a}
+      {normal_text:a}
       *@@
-      {display}
-    {\\n}
+      {normal_text:display}
+    {normal_text:\\n}
    *@end C1 l31
    |EXTRA
    |text_arg:{display}
     *line_arg C3
      {spaces_before_argument: }
-     {display}
+     {normal_text:display}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@displaymath C9 l33
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
-   {\\frac}
+   {normal_text:\\frac}
    *balanced_braces C1 l34
-    {{h}}
+    {normal_text:{h}}
    *balanced_braces C3 l34
-    {{j}
+    {normal_text:{j}
     *@sup C1 l34
      *brace_container C1
-      {2}
-    {}}
-   { \\dv[n]}
+      {normal_text:2}
+    {normal_text:}}
+   {normal_text: \\dv[n]}
    *balanced_braces C1 l34
-    {{f}}
+    {normal_text:{f}}
    *balanced_braces C1 l34
-    {{x}}
-   {\\n}
+    {normal_text:{x}}
+   {normal_text:\\n}
    *@end C1 l35
    |EXTRA
    |text_arg:{displaymath}
     *line_arg C3
      {spaces_before_argument: }
-     {displaymath}
+     {normal_text:displaymath}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 l37
@@ -253,7 +253,7 @@ $result_tree_text{'documentation_examples_texi2html'} = '*document_root C11
     {spaces_before_argument: }
     *@file C1 l37
      *brace_container C1
-      {e1}
+      {normal_text:e1}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 l38
   |EXTRA
@@ -261,7 +261,7 @@ $result_tree_text{'documentation_examples_texi2html'} = '*document_root C11
   |index_entry:I{cp,2}
    *line_arg C3
     {spaces_before_argument: }
-    {i2}
+    {normal_text:i2}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@vindex C1 l40
@@ -274,18 +274,18 @@ $result_tree_text{'documentation_examples_texi2html'} = '*document_root C11
   |text_arg:{fr}
    *line_arg C3
     {spaces_before_argument: }
-    {fr}
+    {normal_text:fr}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
    *@error C1 l44
     *brace_container
-   {.\\n}
+   {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C2
    *@equiv C1 l46
     *brace_container
-   {\\n}
+   {normal_text:\\n}
   {empty_line:\\n}
   *@contents C1 l48
   |EXTRA
@@ -301,7 +301,7 @@ $result_tree_text{'documentation_examples_texi2html'} = '*document_root C11
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {my node}
+    {normal_text:my node}
     {spaces_after_argument:\\n}
  *@chapter C8 l51 {New node}
  |EXTRA
@@ -311,7 +311,7 @@ $result_tree_text{'documentation_examples_texi2html'} = '*document_root C11
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {New node}
+    {normal_text:New node}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@documentlanguage C1 l53
@@ -320,18 +320,18 @@ $result_tree_text{'documentation_examples_texi2html'} = '*document_root C11
   |text_arg:{pl}
    *line_arg C3
     {spaces_before_argument: }
-    {pl}
+    {normal_text:pl}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
    *@error C1 l55
     *brace_container
-   {.\\n}
+   {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C2
    *@equiv C1 l57
     *brace_container
-   {\\n}
+   {normal_text:\\n}
   {empty_line:\\n}
  *@node C1 l59 {Index}
  |EXTRA
@@ -342,7 +342,7 @@ $result_tree_text{'documentation_examples_texi2html'} = '*document_root C11
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Index}
+    {normal_text:Index}
     {spaces_after_argument:\\n}
  *@appendix C4 l60 {Index}
  |EXTRA
@@ -352,7 +352,7 @@ $result_tree_text{'documentation_examples_texi2html'} = '*document_root C11
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Index}
+    {normal_text:Index}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@printindex C1 l62
@@ -361,7 +361,7 @@ $result_tree_text{'documentation_examples_texi2html'} = '*document_root C11
   |misc_args:A{cp}
    *line_arg C3
     {spaces_before_argument: }
-    {cp}
+    {normal_text:cp}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l64 {Second appendix}
@@ -372,7 +372,7 @@ $result_tree_text{'documentation_examples_texi2html'} = '*document_root C11
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Second appendix}
+    {normal_text:Second appendix}
     {spaces_after_argument:\\n}
  *@appendix C2 l65 {Second appendix}
  |EXTRA
@@ -382,7 +382,7 @@ $result_tree_text{'documentation_examples_texi2html'} = '*document_root C11
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Second appendix}
+    {normal_text:Second appendix}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
 ';

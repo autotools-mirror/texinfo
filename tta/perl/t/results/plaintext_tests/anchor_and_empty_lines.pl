@@ -12,18 +12,18 @@ $result_tree_text{'anchor_and_empty_lines'} = '*document_root C1
  *before_node_section C7
   *preamble_before_content
   *paragraph C1
-   {text 1.\\n}
+   {normal_text:text 1.\\n}
   {empty_line:\\n}
   *@anchor C1 l3
   |EXTRA
   |identifier:{in-anchor}
   |is_target:{1}
    *brace_arg C1
-    {in anchor}
+    {normal_text:in anchor}
   {spaces_after_close_brace:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {text 2.\\n}
+   {normal_text:text 2.\\n}
 ';
 
 

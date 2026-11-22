@@ -19,7 +19,7 @@ $result_tree_text{'space_at_menu_end'} = '*document_root C2
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C4 l3
@@ -31,13 +31,13 @@ $result_tree_text{'space_at_menu_end'} = '*document_root C2
     *menu_entry_node C3
     |EXTRA
     |manual_content:A{1|1}
-     {(}
-     {out}
-     {)}
+     {normal_text:(}
+     {normal_text:out}
+     {normal_text:)}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_comment C1
     *preformatted C1
      {after_menu_description_line:\\n}
@@ -46,11 +46,11 @@ $result_tree_text{'space_at_menu_end'} = '*document_root C2
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {A para.\\n}
+   {normal_text:A para.\\n}
 ';
 
 

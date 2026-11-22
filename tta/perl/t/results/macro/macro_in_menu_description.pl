@@ -23,7 +23,7 @@ $result_tree_text{'macro_in_menu_description'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *@menu C4 l5
@@ -36,11 +36,11 @@ $result_tree_text{'macro_in_menu_description'} = '*document_root C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{Copying-Conditions}
-     {Copying Conditions}
+     {normal_text:Copying Conditions}
     {menu_entry_separator:::          }
     *menu_entry_description C1
      *preformatted C1
-      {Your rights.\\n}
+      {normal_text:Your rights.\\n}
    *menu_comment C1
     *preformatted C1
      {after_menu_description_line:\\n}
@@ -54,7 +54,7 @@ $result_tree_text{'macro_in_menu_description'} = '*document_root C1
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
 ';
 

@@ -19,7 +19,7 @@ $result_tree_text{'dot_and_dot_space_in_node_menu_entry'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C3 l3
@@ -29,24 +29,24 @@ $result_tree_text{'dot_and_dot_space_in_node_menu_entry'} = '*document_root C3
    *menu_entry C4 l4
     {menu_entry_leading_text:* }
     *menu_entry_name C1
-     {name}
+     {normal_text:name}
     {menu_entry_separator:: }
     *menu_entry_node C4
     |EXTRA
     |node_content:A{0|3}
     |normalized:{aa_002ebb_002e-c}
-     {aa.bb}
+     {normal_text:aa.bb}
      *@asis C1 l4
       *brace_container C1
-       {. }
-     {c}
+       {normal_text:. }
+     {normal_text:c}
      {space_at_end_menu_node:\\n}
    *@end C1 l5
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l7 {aa.bb@asis{. }c}
@@ -57,11 +57,11 @@ $result_tree_text{'dot_and_dot_space_in_node_menu_entry'} = '*document_root C3
   *arguments_line C1
    *line_arg C5
     {spaces_before_argument: }
-    {aa.bb}
+    {normal_text:aa.bb}
     *@asis C1 l7
      *brace_container C1
-      {. }
-    {c}
+      {normal_text:. }
+    {normal_text:c}
     {spaces_after_argument:\\n}
 ';
 

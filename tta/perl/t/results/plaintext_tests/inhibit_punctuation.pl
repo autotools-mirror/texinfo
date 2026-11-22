@@ -12,29 +12,29 @@ $result_tree_text{'inhibit_punctuation'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *paragraph C23
-   {foo vs.}
+   {normal_text:foo vs.}
    *@:
-   { bar.\\n}
-   {colon :}
+   {normal_text: bar.\\n}
+   {normal_text:colon :}
    *@:
-   {And something else.\\n}
-   {semi colon ;}
+   {normal_text:And something else.\\n}
+   {normal_text:semi colon ;}
    *@:
-   {.\\n}
-   {And ? ?}
+   {normal_text:.\\n}
+   {normal_text:And ? ?}
    *@:
-   {. ?}
+   {normal_text:. ?}
    *@:
-   {\\n}
-   {Now ! !}
+   {normal_text:\\n}
+   {normal_text:Now ! !}
    *@:
    *@@
-   { !}
+   {normal_text: !}
    *@:
-   {\\n}
-   {but , ,}
+   {normal_text:\\n}
+   {normal_text:but , ,}
    *@:
-   {\\n}
+   {normal_text:\\n}
 ';
 
 

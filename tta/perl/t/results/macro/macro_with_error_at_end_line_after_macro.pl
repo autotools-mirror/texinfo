@@ -23,7 +23,7 @@ $result_tree_text{'macro_with_error_at_end_line_after_macro'} = '*document_root 
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    >SOURCEMARKS

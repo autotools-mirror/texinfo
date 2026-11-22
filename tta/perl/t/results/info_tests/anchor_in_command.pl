@@ -19,36 +19,36 @@ $result_tree_text{'anchor_in_command'} = '*document_root C2
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
    *@strong C1 l3
     *brace_container C8
-     {aaa }
+     {normal_text:aaa }
      *@TeX C1 l3
       *brace_container
-     { }
+     {normal_text: }
      *@emph C1 l3
       *brace_container C1
-       {in emph}
-     { after \\n}
+       {normal_text:in emph}
+     {normal_text: after \\n}
      *@c C1
       *line_arg C3
        {spaces_before_argument: }
        {rawline_text:emph @emph{emph2 @anchor{anchor in emph} }}.}
        {spaces_after_argument:\\n}
-     {emph }
+     {normal_text:emph }
      *@emph C1 l5
       *brace_container C2
-       {emph2 }
+       {normal_text:emph2 }
        *@anchor C1 l5
        |EXTRA
        |identifier:{anchor-in-emph}
        |is_target:{1}
         *brace_arg C1
-         {anchor in emph}
-   {.\\n}
+         {normal_text:anchor in emph}
+   {normal_text:.\\n}
 ';
 
 

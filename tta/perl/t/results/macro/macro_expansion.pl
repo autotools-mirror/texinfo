@@ -28,11 +28,11 @@ $result_tree_text{'macro_expansion'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C1
-   {2 simple args. result of a macro with first arg and \\n}
+   {normal_text:2 simple args. result of a macro with first arg and \\n}
    >SOURCEMARKS
    >macro_expansion<start;1><p:15>
     >*macro_call@macroone C3
@@ -52,13 +52,13 @@ $result_tree_text{'macro_expansion'} = '*document_root C1
    |text_arg:{verbatim.}
     *line_arg C3
      {spaces_before_argument: }
-     {verbatim.}
+     {normal_text:verbatim.}
      >SOURCEMARKS
      >macro_expansion<end;1><p:8>
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C3
-   {comma in command. result of a macro with aaa }
+   {normal_text:comma in command. result of a macro with aaa }
    >SOURCEMARKS
    >macro_expansion<start;2><p:18>
     >*macro_call@macroone C1
@@ -66,8 +66,8 @@ $result_tree_text{'macro_expansion'} = '*document_root C1
       >{macro_call_arg_text:aaa @samp{a macro , } bbb}
    *@samp C1 l11:@macroone
     *brace_container C1
-     {a macro , }
-   { bbb and \\n}
+     {normal_text:a macro , }
+   {normal_text: bbb and \\n}
   *@verbatim C3 l11:@macroone
    *arguments_line C1
     *block_line_arg C1
@@ -78,13 +78,13 @@ $result_tree_text{'macro_expansion'} = '*document_root C1
    |text_arg:{verbatim.}
     *line_arg C3
      {spaces_before_argument: }
-     {verbatim.}
+     {normal_text:verbatim.}
      >SOURCEMARKS
      >macro_expansion<end;2><p:8>
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {call on the line. result of a macro with  and \\n}
+   {normal_text:call on the line. result of a macro with  and \\n}
    >SOURCEMARKS
    >macro_expansion<start;3><p:18>
     >*macro_call@macroone
@@ -98,13 +98,13 @@ $result_tree_text{'macro_expansion'} = '*document_root C1
    |text_arg:{verbatim my arg.}
     *line_arg C3
      {spaces_before_argument: }
-     {verbatim my arg.}
+     {normal_text:verbatim my arg.}
      >SOURCEMARKS
      >macro_expansion<end;3><p:8>
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {recursive call. result of a macro with first arg and \\n}
+   {normal_text:recursive call. result of a macro with first arg and \\n}
    >SOURCEMARKS
    >macro_expansion<start;4><p:16>
     >*macro_call@macroone C2
@@ -123,13 +123,13 @@ $result_tree_text{'macro_expansion'} = '*document_root C1
    |text_arg:{verbatim.}
     *line_arg C3
      {spaces_before_argument: }
-     {verbatim.}
+     {normal_text:verbatim.}
      >SOURCEMARKS
      >macro_expansion<end;4><p:8>
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {protect stuff. result of a macro with first , arg and \\n}
+   {normal_text:protect stuff. result of a macro with first , arg and \\n}
    >SOURCEMARKS
    >macro_expansion<start;5><p:15>
     >*macro_call@macroone C2
@@ -154,13 +154,13 @@ $result_tree_text{'macro_expansion'} = '*document_root C1
    |text_arg:{verbatim.}
     *line_arg C3
      {spaces_before_argument: }
-     {verbatim.}
+     {normal_text:verbatim.}
      >SOURCEMARKS
      >macro_expansion<end;5><p:8>
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {multi-line arg. result of a macro with arg 1\\n}
+   {normal_text:multi-line arg. result of a macro with arg 1\\n}
    >SOURCEMARKS
    >macro_expansion<start;6><p:16>
     >*macro_call@macroone C2
@@ -171,7 +171,7 @@ $result_tree_text{'macro_expansion'} = '*document_root C1
       >{macro_call_arg_text:arg3\\n\\n}
   {empty_line:\\n}
   *paragraph C1
-   {now and \\n}
+   {normal_text:now and \\n}
   *@verbatim C5 l23:@macroone
    *arguments_line C1
     *block_line_arg C1
@@ -184,7 +184,7 @@ $result_tree_text{'macro_expansion'} = '*document_root C1
    |text_arg:{verbatim.}
     *line_arg C2
      {spaces_before_argument: }
-     {verbatim.}
+     {normal_text:verbatim.}
      >SOURCEMARKS
      >macro_expansion<end;6><p:8>
 ';

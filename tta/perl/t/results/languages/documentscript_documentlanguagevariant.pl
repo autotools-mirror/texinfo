@@ -17,20 +17,20 @@ $result_tree_text{'documentscript_documentlanguagevariant'} = '*document_root C1
    |text_arg:{Latn}
     *line_arg C3
      {spaces_before_argument: }
-     {Latn}
+     {normal_text:Latn}
      {spaces_after_argument:\\n}
    *@documentlanguagevariant C1 l2
    |EXTRA
    |global_command_number:{1}
     *line_arg C3
      {spaces_before_argument: }
-     {1901}
+     {normal_text:1901}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C2
    *@error C1 l4
     *brace_container
-   {.\\n}
+   {normal_text:.\\n}
 ';
 
 

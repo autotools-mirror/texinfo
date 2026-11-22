@@ -14,8 +14,8 @@ $result_tree_text{'accent_command_punctuation'} = '*document_root C1
   *paragraph C2
    *@dotaccent C1 l1
     *brace_container C1
-     {e}
-   { after}
+     {normal_text:e}
+   {normal_text: after}
 ';
 
 

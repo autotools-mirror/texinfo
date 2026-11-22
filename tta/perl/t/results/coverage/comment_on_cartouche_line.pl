@@ -21,13 +21,13 @@ $result_tree_text{'comment_on_cartouche_line'} = '*document_root C1
        {rawline_text:comment}
        {spaces_after_argument:\\n}
    *paragraph C1
-    {in cartouche.\\n}
+    {normal_text:in cartouche.\\n}
    *@end C1 l3
    |EXTRA
    |text_arg:{cartouche}
     *line_arg C3
      {spaces_before_argument: }
-     {cartouche}
+     {normal_text:cartouche}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@cartouche C3 l5
@@ -36,7 +36,7 @@ $result_tree_text{'comment_on_cartouche_line'} = '*document_root C1
      {spaces_before_argument: }
      *@emph C1 l5
       *brace_container C1
-       {Title of box}
+       {normal_text:Title of box}
      {spaces_after_argument: }
      *@c C1
       *line_arg C3
@@ -44,13 +44,13 @@ $result_tree_text{'comment_on_cartouche_line'} = '*document_root C1
        {rawline_text:comment}
        {spaces_after_argument:\\n}
    *paragraph C1
-    {Out of main text\\n}
+    {normal_text:Out of main text\\n}
    *@end C1 l7
    |EXTRA
    |text_arg:{cartouche}
     *line_arg C3
      {spaces_before_argument: }
-     {cartouche}
+     {normal_text:cartouche}
      {spaces_after_argument:\\n}
 ';
 

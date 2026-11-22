@@ -22,10 +22,10 @@ $result_tree_text{'multitable_in_example'} = '*document_root C1
      *block_line_arg C5
       {spaces_before_argument: }
       *bracketed_arg C1 l2
-       {AAA}
-      {  }
+       {normal_text:AAA}
+      {normal_text:  }
       *bracketed_arg C1 l2
-       {BBB}
+       {normal_text:BBB}
       {spaces_after_argument:\\n}
     *multitable_body C2
      *row C2
@@ -36,13 +36,13 @@ $result_tree_text{'multitable_in_example'} = '*document_root C1
       |cell_number:{1}
        *preformatted C2
         {ignorable_spaces_after_command: }
-        {truc }
+        {normal_text:truc }
       *@tab C1 l3
       |EXTRA
       |cell_number:{2}
        *preformatted C2
         {ignorable_spaces_after_command: }
-        {bidule example\\n}
+        {normal_text:bidule example\\n}
      *row C2
      |EXTRA
      |row_number:{2}
@@ -51,31 +51,31 @@ $result_tree_text{'multitable_in_example'} = '*document_root C1
       |cell_number:{1}
        *preformatted C5
         {ignorable_spaces_after_command: }
-        {begin item example\\n}
+        {normal_text:begin item example\\n}
         {empty_line:\\n}
-        {new paragraph in item. example\\n}
+        {normal_text:new paragraph in item. example\\n}
         {empty_line:\\n}
       *@tab C1 l8
       |EXTRA
       |cell_number:{2}
        *preformatted C4
         {ignorable_spaces_after_command: }
-        {begin tab example\\n}
+        {normal_text:begin tab example\\n}
         {empty_line:\\n}
-        {new paragraph in tab. example\\n}
+        {normal_text:new paragraph in tab. example\\n}
     *@end C1 l11
     |EXTRA
     |text_arg:{multitable}
      *line_arg C3
       {spaces_before_argument: }
-      {multitable}
+      {normal_text:multitable}
       {spaces_after_argument:\\n}
    *@end C1 l12
    |EXTRA
    |text_arg:{example}
     *line_arg C2
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
 ';
 
 

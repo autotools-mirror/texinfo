@@ -19,7 +19,7 @@ $result_tree_text{'two_nodes_at_the_end_nodes'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C4 l2 {top}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'two_nodes_at_the_end_nodes'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C5 l4
@@ -41,39 +41,39 @@ $result_tree_text{'two_nodes_at_the_end_nodes'} = '*document_root C7
     |EXTRA
     |node_content:A{0|0}
     |normalized:{chapter-1}
-     {chapter 1}
+     {normal_text:chapter 1}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 l6
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{node-after-chapter-1}
-     {node after chapter 1}
+     {normal_text:node after chapter 1}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 l7
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{last-node-in-chapter-1}
-     {last node in chapter 1}
+     {normal_text:last node in chapter 1}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l8
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l10 {chapter 1}
@@ -84,25 +84,25 @@ $result_tree_text{'two_nodes_at_the_end_nodes'} = '*document_root C7
   *arguments_line C4
    *line_arg C2
     {spaces_before_argument: }
-    {chapter 1}
+    {normal_text:chapter 1}
    *line_arg C2
    |EXTRA
    |node_content:A{1|1}
    |normalized:{node-after-chapter-1}
     {spaces_before_argument: }
-    {node after chapter 1}
+    {normal_text:node after chapter 1}
    *line_arg C2
    |EXTRA
    |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
    *line_arg C3
    |EXTRA
    |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@chapter C2 l11 {chapter c1}
  |EXTRA
@@ -112,7 +112,7 @@ $result_tree_text{'two_nodes_at_the_end_nodes'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter c1}
+    {normal_text:chapter c1}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C4 l13 {node after chapter 1}
@@ -123,11 +123,11 @@ $result_tree_text{'two_nodes_at_the_end_nodes'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {node after chapter 1}
+    {normal_text:node after chapter 1}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {in node after chapter 1\\n}
+   {normal_text:in node after chapter 1\\n}
   {empty_line:\\n}
  *@node C1 l17 {last node in chapter 1}
  |EXTRA
@@ -137,7 +137,7 @@ $result_tree_text{'two_nodes_at_the_end_nodes'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {last node in chapter 1}
+    {normal_text:last node in chapter 1}
     {spaces_after_argument:\\n}
 ';
 

@@ -16,19 +16,19 @@ $result_tree_text{'second_level_lone_braces_in_html'} = '*document_root C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *rawpreformatted C3
-     {{a}
+     {normal_text:{a}
      *@code C1 l2
       *brace_container C1
        *balanced_braces C2 l2
-        {{\\n}
-        {}}
-     {\\n}
+        {normal_text:{\\n}
+        {normal_text:}}
+     {normal_text:\\n}
     *@end C1 l4
     |EXTRA
     |text_arg:{html}
      *line_arg C3
       {spaces_before_argument: }
-      {html}
+      {normal_text:html}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@html C3 l6
@@ -36,20 +36,20 @@ $result_tree_text{'second_level_lone_braces_in_html'} = '*document_root C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *rawpreformatted C3
-     {{b}
+     {normal_text:{b}
      *@code C1 l7
       *brace_container C3
-       {\\n}
+       {normal_text:\\n}
        *balanced_braces C1 l8
-        {{c d}}
-       {\\n}
-     {\\n}
+        {normal_text:{c d}}
+       {normal_text:\\n}
+     {normal_text:\\n}
     *@end C1 l10
     |EXTRA
     |text_arg:{html}
      *line_arg C3
       {spaces_before_argument: }
-      {html}
+      {normal_text:html}
       {spaces_after_argument:\\n}
 ';
 

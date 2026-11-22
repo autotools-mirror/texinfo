@@ -29,7 +29,7 @@ NodeForward: [U1]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 transliterated_names_conflicts.texi:l4 {Same transliterated names}
  |EXTRA
@@ -38,7 +38,7 @@ NodeForward: [U1]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Same transliterated names}
+    {normal_text:Same transliterated names}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
 U1 unit{C2}{N:Prés}{s:@chapter 1 Prés}
@@ -64,7 +64,7 @@ NodeBack: [U0]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Prés}
+    {normal_text:Prés}
     {spaces_after_argument:\\n}
  *@chapter C2 transliterated_names_conflicts.texi:l7 {Prés}
  |EXTRA
@@ -74,7 +74,7 @@ NodeBack: [U0]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Prés}
+    {normal_text:Prés}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
 U2 unit{C3}{N:Other node}{s:@chapter 2 Other chapter}
@@ -96,7 +96,7 @@ NodeBack: [U1]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Other node}
+    {normal_text:Other node}
     {spaces_after_argument:\\n}
  *@chapter C7 transliterated_names_conflicts.texi:l10 {Other chapter}
  |EXTRA
@@ -106,7 +106,7 @@ NodeBack: [U1]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Other chapter}
+    {normal_text:Other chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@anchor C1 transliterated_names_conflicts.texi:l12
@@ -114,7 +114,7 @@ NodeBack: [U1]
   |identifier:{Pr_00eas}
   |is_target:{1}
    *brace_arg C1
-    {Prês}
+    {normal_text:Prês}
   {spaces_after_close_brace:\\n}
   {empty_line:\\n}
   *@float C3 transliterated_names_conflicts.texi:l14
@@ -127,19 +127,19 @@ NodeBack: [U1]
    *arguments_line C2
     *block_line_arg C2
      {spaces_before_argument: }
-     {Figure}
+     {normal_text:Figure}
     *block_line_arg C3
      {spaces_before_argument: }
-     {Près}
+     {normal_text:Près}
      {spaces_after_argument:\\n}
    *paragraph C1
-    {In figure\\n}
+    {normal_text:In figure\\n}
    *@end C1 transliterated_names_conflicts.texi:l16
    |EXTRA
    |text_arg:{float}
     *line_arg C3
      {spaces_before_argument: }
-     {float}
+     {normal_text:float}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@bye C1

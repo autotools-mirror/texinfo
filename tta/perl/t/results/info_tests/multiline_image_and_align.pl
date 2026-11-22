@@ -18,41 +18,41 @@ $result_tree_text{'multiline_image_and_align'} = '*document_root C1
     |EXTRA
     |input_encoding_name:{utf-8}
      *brace_arg C1
-      {figure}
+      {normal_text:figure}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@center C1 l3
    *line_arg C4
     {spaces_before_argument: }
-    {CCCC }
+    {normal_text:CCCC }
     *@image C1 l3
     |EXTRA
     |input_encoding_name:{utf-8}
      *brace_arg C1
-      {figure}
+      {normal_text:figure}
     {spaces_after_argument: \\n}
   {empty_line:\\n}
   *@center C1 l5
    *line_arg C4
     {spaces_before_argument: }
-    {fffffffffffffffffffffffffffffffffffffff }
+    {normal_text:fffffffffffffffffffffffffffffffffffffff }
     *@image C1 l5
     |EXTRA
     |input_encoding_name:{utf-8}
      *brace_arg C1
-      {figure}
+      {normal_text:figure}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@center C1 l7
    *line_arg C5
     {spaces_before_argument: }
-    {dddd }
+    {normal_text:dddd }
     *@image C1 l7
     |EXTRA
     |input_encoding_name:{utf-8}
      *brace_arg C1
-      {figure}
-    { iiiii}
+      {normal_text:figure}
+    {normal_text: iiiii}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@flushright C7 l9
@@ -60,43 +60,43 @@ $result_tree_text{'multiline_image_and_align'} = '*document_root C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C3
-    {AAA\\n}
+    {normal_text:AAA\\n}
     *@image C1 l11
     |EXTRA
     |input_encoding_name:{utf-8}
      *brace_arg C1
-      {figure}
-    {\\n}
+      {normal_text:figure}
+    {normal_text:\\n}
    {empty_line:\\n}
    *paragraph C5
-    {BBB }
+    {normal_text:BBB }
     *@image C1 l13
     |EXTRA
     |input_encoding_name:{utf-8}
      *brace_arg C1
-      {figure}
-    { gggg }
+      {normal_text:figure}
+    {normal_text: gggg }
     *@image C1 l13
     |EXTRA
     |input_encoding_name:{utf-8}
      *brace_arg C1
-      {figure}
-    {\\n}
+      {normal_text:figure}
+    {normal_text:\\n}
    {empty_line:\\n}
    *paragraph C3
-    {HHH\\n}
+    {normal_text:HHH\\n}
     *@image C1 l16
     |EXTRA
     |input_encoding_name:{utf-8}
      *brace_arg C1
-      {figure}
-    { JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ\\n}
+      {normal_text:figure}
+    {normal_text: JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ\\n}
    *@end C1 l17
    |EXTRA
    |text_arg:{flushright}
     *line_arg C3
      {spaces_before_argument: }
-     {flushright}
+     {normal_text:flushright}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@center C1 l19
@@ -106,7 +106,7 @@ $result_tree_text{'multiline_image_and_align'} = '*document_root C1
     |EXTRA
     |input_encoding_name:{utf-8}
      *brace_arg C1
-      {figure}
+      {normal_text:figure}
      *brace_arg C1
       {spaces_before_argument: }
      *brace_arg C1
@@ -114,18 +114,18 @@ $result_tree_text{'multiline_image_and_align'} = '*document_root C1
      *brace_arg C1
       {spaces_before_argument: }
      *brace_arg C1
-      {txt}
+      {normal_text:txt}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@center C1 l21
    *line_arg C4
     {spaces_before_argument: }
-    {CCCC }
+    {normal_text:CCCC }
     *@image C5 l21
     |EXTRA
     |input_encoding_name:{utf-8}
      *brace_arg C1
-      {figure}
+      {normal_text:figure}
      *brace_arg C1
       {spaces_before_argument: }
      *brace_arg C1
@@ -133,18 +133,18 @@ $result_tree_text{'multiline_image_and_align'} = '*document_root C1
      *brace_arg C1
       {spaces_before_argument: }
      *brace_arg C1
-      {txt}
+      {normal_text:txt}
     {spaces_after_argument: \\n}
   {empty_line:  \\n}
   *@center C1 l23
    *line_arg C4
     {spaces_before_argument: }
-    {fffffffffffffffffffffffffffffffffffffff }
+    {normal_text:fffffffffffffffffffffffffffffffffffffff }
     *@image C5 l23
     |EXTRA
     |input_encoding_name:{utf-8}
      *brace_arg C1
-      {figure}
+      {normal_text:figure}
      *brace_arg C1
       {spaces_before_argument: }
      *brace_arg C1
@@ -152,18 +152,18 @@ $result_tree_text{'multiline_image_and_align'} = '*document_root C1
      *brace_arg C1
       {spaces_before_argument: }
      *brace_arg C1
-      {txt}
+      {normal_text:txt}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@center C1 l25
    *line_arg C5
     {spaces_before_argument: }
-    {dddd }
+    {normal_text:dddd }
     *@image C5 l25
     |EXTRA
     |input_encoding_name:{utf-8}
      *brace_arg C1
-      {figure}
+      {normal_text:figure}
      *brace_arg C1
       {spaces_before_argument: }
      *brace_arg C1
@@ -171,8 +171,8 @@ $result_tree_text{'multiline_image_and_align'} = '*document_root C1
      *brace_arg C1
       {spaces_before_argument: }
      *brace_arg C1
-      {txt}
-    { iiiii}
+      {normal_text:txt}
+    {normal_text: iiiii}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@flushright C7 l27
@@ -180,12 +180,12 @@ $result_tree_text{'multiline_image_and_align'} = '*document_root C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C3
-    {AAA\\n}
+    {normal_text:AAA\\n}
     *@image C5 l29
     |EXTRA
     |input_encoding_name:{utf-8}
      *brace_arg C1
-      {figure}
+      {normal_text:figure}
      *brace_arg C1
       {spaces_before_argument: }
      *brace_arg C1
@@ -193,16 +193,16 @@ $result_tree_text{'multiline_image_and_align'} = '*document_root C1
      *brace_arg C1
       {spaces_before_argument: }
      *brace_arg C1
-      {txt}
-    {\\n}
+      {normal_text:txt}
+    {normal_text:\\n}
    {empty_line:\\n}
    *paragraph C5
-    {BBB }
+    {normal_text:BBB }
     *@image C5 l31
     |EXTRA
     |input_encoding_name:{utf-8}
      *brace_arg C1
-      {figure}
+      {normal_text:figure}
      *brace_arg C1
       {spaces_before_argument: }
      *brace_arg C1
@@ -210,13 +210,13 @@ $result_tree_text{'multiline_image_and_align'} = '*document_root C1
      *brace_arg C1
       {spaces_before_argument: }
      *brace_arg C1
-      {txt}
-    { gggg }
+      {normal_text:txt}
+    {normal_text: gggg }
     *@image C5 l31
     |EXTRA
     |input_encoding_name:{utf-8}
      *brace_arg C1
-      {figure}
+      {normal_text:figure}
      *brace_arg C1
       {spaces_before_argument: }
      *brace_arg C1
@@ -224,16 +224,16 @@ $result_tree_text{'multiline_image_and_align'} = '*document_root C1
      *brace_arg C1
       {spaces_before_argument: }
      *brace_arg C1
-      {txt}
-    {\\n}
+      {normal_text:txt}
+    {normal_text:\\n}
    {empty_line:\\n}
    *paragraph C3
-    {HHH\\n}
+    {normal_text:HHH\\n}
     *@image C5 l34
     |EXTRA
     |input_encoding_name:{utf-8}
      *brace_arg C1
-      {figure}
+      {normal_text:figure}
      *brace_arg C1
       {spaces_before_argument: }
      *brace_arg C1
@@ -241,14 +241,14 @@ $result_tree_text{'multiline_image_and_align'} = '*document_root C1
      *brace_arg C1
       {spaces_before_argument: }
      *brace_arg C1
-      {txt}
-    { JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ\\n}
+      {normal_text:txt}
+    {normal_text: JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ\\n}
    *@end C1 l35
    |EXTRA
    |text_arg:{flushright}
     *line_arg C3
      {spaces_before_argument: }
-     {flushright}
+     {normal_text:flushright}
      {spaces_after_argument:\\n}
 ';
 

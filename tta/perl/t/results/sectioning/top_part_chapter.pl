@@ -26,7 +26,7 @@ Next: [U1]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
 U1 unit{C2}{S:@chapter 1 chapter}
@@ -43,7 +43,7 @@ FastBack: [U0]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {part}
+    {normal_text:part}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@chapter C1 l5 {chapter}
@@ -56,7 +56,7 @@ FastBack: [U0]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter}
+    {normal_text:chapter}
     {spaces_after_argument: \\n}
 ';
 

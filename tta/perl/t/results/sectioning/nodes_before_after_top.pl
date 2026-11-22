@@ -19,11 +19,11 @@ $result_tree_text{'nodes_before_after_top'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {node before}
+    {normal_text:node before}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {In node before\\n}
+   {normal_text:In node before\\n}
   {empty_line:\\n}
  *@node C1 l5 {Top}
  |EXTRA
@@ -33,7 +33,7 @@ $result_tree_text{'nodes_before_after_top'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C4 l6 {top sectionning}
  |EXTRA
@@ -42,11 +42,11 @@ $result_tree_text{'nodes_before_after_top'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top sectionning}
+    {normal_text:top sectionning}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {in node Top\\n}
+   {normal_text:in node Top\\n}
   {empty_line:\\n}
  *@node C4 l10 {after}
  |EXTRA
@@ -56,11 +56,11 @@ $result_tree_text{'nodes_before_after_top'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {after}
+    {normal_text:after}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {in node after\\n}
+   {normal_text:in node after\\n}
   {empty_line:\\n}
  *@node C1 l14 {chap}
  |EXTRA
@@ -70,7 +70,7 @@ $result_tree_text{'nodes_before_after_top'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
  *@chapter C3 l15 {chap}
  |EXTRA
@@ -80,11 +80,11 @@ $result_tree_text{'nodes_before_after_top'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {in chap\\n}
+   {normal_text:in chap\\n}
 ';
 
 

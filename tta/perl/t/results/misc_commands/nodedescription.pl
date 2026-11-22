@@ -14,7 +14,7 @@ $result_tree_text{'nodedescription'} = '*document_root C5
   *@nodedescription C1 l1
    *line_arg C3
     {spaces_before_argument: }
-    {out of any node}
+    {normal_text:out of any node}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l3 {Top}
@@ -25,7 +25,7 @@ $result_tree_text{'nodedescription'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l4 {top}
  |EXTRA
@@ -34,7 +34,7 @@ $result_tree_text{'nodedescription'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l6 {chap}
@@ -45,7 +45,7 @@ $result_tree_text{'nodedescription'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
  *@chapter C7 l7 {Chapter}
  |EXTRA
@@ -55,7 +55,7 @@ $result_tree_text{'nodedescription'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chapter}
+    {normal_text:Chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@nodedescription C1 l9
@@ -63,18 +63,18 @@ $result_tree_text{'nodedescription'} = '*document_root C5
     {spaces_before_argument: }
     *@emph C1 l9
      *brace_container C1
-      {first description}
-    { of chapter}
+      {normal_text:first description}
+    {normal_text: of chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@nodedescription C1 l11
    *line_arg C3
     {spaces_before_argument: }
-    {second description }
+    {normal_text:second description }
     *@\\n
   {spaces_before_paragraph:  }
   *paragraph C1
-   {of chapter\\n}
+   {normal_text:of chapter\\n}
 ';
 
 

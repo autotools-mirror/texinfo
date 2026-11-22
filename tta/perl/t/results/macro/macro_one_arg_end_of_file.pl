@@ -23,11 +23,11 @@ $result_tree_text{'macro_one_arg_end_of_file'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C1
-   {Arg .}
+   {normal_text:Arg .}
    >SOURCEMARKS
    >macro_expansion<start;1>
     >*macro_call_line@onearg C1

@@ -14,112 +14,112 @@ $result_tree_text{'punctuation_and_footnotes'} = '*document_root C1
    {text_before_beginning:\\n}
   *preamble_before_content
   *paragraph C8
-   {Text.}
+   {normal_text:Text.}
    *@footnote C1 l2
    |EXTRA
    |global_command_number:{1}
     *brace_command_context C1
      *paragraph C1
-      {after period}
-   { Sentence \\n}
-   {end.}
+      {normal_text:after period}
+   {normal_text: Sentence \\n}
+   {normal_text:end.}
    *@footnote C1 l3
    |EXTRA
    |global_command_number:{2}
     *brace_command_context C1
      *paragraph C1
-      {after period double}
-   {  S2.}
+      {normal_text:after period double}
+   {normal_text:  S2.}
    *@footnote C1 l3
    |EXTRA
    |global_command_number:{3}
     *brace_command_context C1
      *paragraph C1
-      {after period triple}
-   {   S3.\\n}
+      {normal_text:after period triple}
+   {normal_text:   S3.\\n}
   {empty_line:\\n}
   *paragraph C8
-   {No PERIOD.}
+   {normal_text:No PERIOD.}
    *@footnote C1 l5
    |EXTRA
    |global_command_number:{4}
     *brace_command_context C1
      *paragraph C1
-      {no period}
-   { worD.}
+      {normal_text:no period}
+   {normal_text: worD.}
    *@footnote C1 l5
    |EXTRA
    |global_command_number:{5}
     *brace_command_context C1
      *paragraph C1
-      {no period double}
-   {  w2 \\n}
-   {wW.}
+      {normal_text:no period double}
+   {normal_text:  w2 \\n}
+   {normal_text:wW.}
    *@footnote C1 l6
    |EXTRA
    |global_command_number:{6}
     *brace_command_context C1
      *paragraph C1
-      {no period triple}
-   {   S3.\\n}
+      {normal_text:no period triple}
+   {normal_text:   S3.\\n}
   {empty_line:\\n}
   *paragraph C12
-   {Force PERIOD}
+   {normal_text:Force PERIOD}
    *@.
    *@footnote C1 l8
    |EXTRA
    |global_command_number:{7}
     *brace_command_context C1
      *paragraph C1
-      {after forced period}
-   { Sentence \\n}
-   {W}
+      {normal_text:after forced period}
+   {normal_text: Sentence \\n}
+   {normal_text:W}
    *@.
    *@footnote C1 l9
    |EXTRA
    |global_command_number:{8}
     *brace_command_context C1
      *paragraph C1
-      {after forced period double}
-   {  S2 \\n}
-   {W}
+      {normal_text:after forced period double}
+   {normal_text:  S2 \\n}
+   {normal_text:W}
    *@.
    *@footnote C1 l10
    |EXTRA
    |global_command_number:{9}
     *brace_command_context C1
      *paragraph C1
-      {after forced period triple}
-   {   S3.\\n}
+      {normal_text:after forced period triple}
+   {normal_text:   S3.\\n}
   {empty_line:\\n}
   *paragraph C12
-   {Force no period.}
+   {normal_text:Force no period.}
    *@:
    *@footnote C1 l12
    |EXTRA
    |global_command_number:{10}
     *brace_command_context C1
      *paragraph C1
-      {after forced no period}
-   { Sentence \\n}
-   {w.}
+      {normal_text:after forced no period}
+   {normal_text: Sentence \\n}
+   {normal_text:w.}
    *@:
    *@footnote C1 l13
    |EXTRA
    |global_command_number:{11}
     *brace_command_context C1
      *paragraph C1
-      {after forced no period double}
-   {  S2 \\n}
-   {w.}
+      {normal_text:after forced no period double}
+   {normal_text:  S2 \\n}
+   {normal_text:w.}
    *@:
    *@footnote C1 l14
    |EXTRA
    |global_command_number:{12}
     *brace_command_context C1
      *paragraph C1
-      {after forced no period triple}
-   {   S3.\\n}
+      {normal_text:after forced no period triple}
+   {normal_text:   S3.\\n}
 ';
 
 

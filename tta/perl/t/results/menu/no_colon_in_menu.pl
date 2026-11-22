@@ -19,7 +19,7 @@ $result_tree_text{'no_colon_in_menu'} = '*document_root C2
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {first}
+    {normal_text:first}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C3 l3
@@ -28,13 +28,13 @@ $result_tree_text{'no_colon_in_menu'} = '*document_root C2
      {spaces_before_argument:\\n}
    *menu_comment C1
     *preformatted C1
-     {* a\\n}
+     {normal_text:* a\\n}
    *@end C1 l5
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
 ';
 

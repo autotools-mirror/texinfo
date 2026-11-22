@@ -27,7 +27,7 @@ $result_tree_text{'pagetype'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l6 {section top}
  |EXTRA
@@ -36,7 +36,7 @@ $result_tree_text{'pagetype'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {section top}
+    {normal_text:section top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l8 {chapter}
@@ -47,7 +47,7 @@ $result_tree_text{'pagetype'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter}
+    {normal_text:chapter}
     {spaces_after_argument:\\n}
  *@chapter C11 l9 {Chapter}
  |EXTRA
@@ -57,7 +57,7 @@ $result_tree_text{'pagetype'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chapter}
+    {normal_text:Chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@smallbook C1 l11
@@ -66,16 +66,16 @@ $result_tree_text{'pagetype'} = '*document_root C6
   {empty_line:\\n}
   {spaces_before_paragraph: }
   *paragraph C1
-   {In smallbook\\n}
+   {normal_text:In smallbook\\n}
   {empty_line:\\n}
   *paragraph C2
-   {In smallbook\\n}
+   {normal_text:In smallbook\\n}
    *@afourpaper C1 l16
     *line_arg C1
      {spaces_before_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {After afourpaper\\n}
+   {normal_text:After afourpaper\\n}
   {empty_line:\\n}
  *@chapter C3 l20 {afourpaper reset}
  |EXTRA
@@ -87,11 +87,11 @@ $result_tree_text{'pagetype'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {afourpaper reset}
+    {normal_text:afourpaper reset}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {In afourpaper reset\\n}
+   {normal_text:In afourpaper reset\\n}
 ';
 
 

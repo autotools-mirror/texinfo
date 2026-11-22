@@ -18,18 +18,18 @@ $result_tree_text{'flushleft_flushright'} = '*document_root C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C3
-    {aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb ccccccccccccccc\\n}
-    {ldskf dsflj\\n}
-    {     lklsdlv l    lll. Bbb.\\n}
+    {normal_text:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb ccccccccccccccc\\n}
+    {normal_text:ldskf dsflj\\n}
+    {normal_text:     lklsdlv l    lll. Bbb.\\n}
    {empty_line:\\n}
    *paragraph C1
-    {lhds\\n}
+    {normal_text:lhds\\n}
    *@end C1 l8
    |EXTRA
    |text_arg:{flushleft}
     *line_arg C3
      {spaces_before_argument: }
-     {flushleft}
+     {normal_text:flushleft}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@flushright C5 l10
@@ -37,18 +37,18 @@ $result_tree_text{'flushleft_flushright'} = '*document_root C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C3
-    {aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb ccccccccccccccc\\n}
-    {ldskf dsflj\\n}
-    {     lklsdlv l    lll. Bbb.\\n}
+    {normal_text:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb ccccccccccccccc\\n}
+    {normal_text:ldskf dsflj\\n}
+    {normal_text:     lklsdlv l    lll. Bbb.\\n}
    {empty_line:\\n}
    *paragraph C1
-    {lhds\\n}
+    {normal_text:lhds\\n}
    *@end C1 l16
    |EXTRA
    |text_arg:{flushright}
     *line_arg C3
      {spaces_before_argument: }
-     {flushright}
+     {normal_text:flushright}
      {spaces_after_argument:\\n}
 ';
 

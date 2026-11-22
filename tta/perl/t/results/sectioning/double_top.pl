@@ -19,13 +19,13 @@ $result_tree_text{'double_top'} = '*document_root C3
   *arguments_line C2
    *line_arg C2
     {spaces_before_argument: }
-    {ToP}
+    {normal_text:ToP}
    *line_arg C3
    |EXTRA
    |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C4 l3 {top}
@@ -35,27 +35,27 @@ $result_tree_text{'double_top'} = '*document_root C3
   *arguments_line C4
    *line_arg C2
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
    *line_arg
    *line_arg C1
    |EXTRA
    |node_content:A{0|0}
    |normalized:{Top}
-    {ToP}
+    {normal_text:ToP}
    *line_arg C2
    |EXTRA
    |node_content:A{0|0}
    |normalized:{Top}
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@anchor C1 l5
   |EXTRA
   |identifier:{Top}
    *brace_arg C1
-    {TOP}
+    {normal_text:TOP}
   *paragraph C1
-   {.\\n}
+   {normal_text:.\\n}
 ';
 
 

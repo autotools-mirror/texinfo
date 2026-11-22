@@ -12,7 +12,7 @@ $result_tree_text{'test_two_include'} = '*document_root C1
  *before_node_section C10
   *preamble_before_content
   *paragraph C5
-   {Include version\\n}
+   {normal_text:Include version\\n}
    >SOURCEMARKS
    >include<start;1><p:16>
     >*@include C1 l2
@@ -20,7 +20,7 @@ $result_tree_text{'test_two_include'} = '*document_root C1
     >|text_arg:{version.texi}
      >*line_arg C3
       >{spaces_before_argument: }
-      >{version.texi}
+      >{normal_text:version.texi}
       >{spaces_after_argument:\\n}
    *@set C1
    |EXTRA
@@ -76,7 +76,7 @@ $result_tree_text{'test_two_include'} = '*document_root C1
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
-   {include inc_file\\n}
+   {normal_text:include inc_file\\n}
    >SOURCEMARKS
    >include<start;2><p:17>
     >*@include C1 l5
@@ -84,14 +84,14 @@ $result_tree_text{'test_two_include'} = '*document_root C1
     >|text_arg:{inc_file.texi}
      >*line_arg C3
       >{spaces_before_argument: }
-      >{inc_file.texi}
+      >{normal_text:inc_file.texi}
       >{spaces_after_argument:\\n}
-   {In included file.\\n}
+   {normal_text:In included file.\\n}
    >SOURCEMARKS
    >include<end;2><p:18>
   {empty_line:\\n}
   *paragraph C1
-   {After inclusion.\\n}
+   {normal_text:After inclusion.\\n}
 ';
 
 

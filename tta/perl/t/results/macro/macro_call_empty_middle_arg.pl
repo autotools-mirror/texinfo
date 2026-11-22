@@ -25,11 +25,11 @@ $result_tree_text{'macro_call_empty_middle_arg'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C3
-   {first j,\\n}
+   {normal_text:first j,\\n}
    >SOURCEMARKS
    >macro_expansion<start;1>
     >*macro_call@threea C3
@@ -41,13 +41,13 @@ $result_tree_text{'macro_call_empty_middle_arg'} = '*document_root C1
      >*brace_arg C2
       >{spaces_before_argument: }
       >{macro_call_arg_text:l}
-   {second k,\\n}
-   {third l,\\n}
+   {normal_text:second k,\\n}
+   {normal_text:third l,\\n}
    >SOURCEMARKS
    >macro_expansion<end;1><p:8>
   {empty_line:\\n}
   *paragraph C3
-   {first m,\\n}
+   {normal_text:first m,\\n}
    >SOURCEMARKS
    >macro_expansion<start;2>
     >*macro_call@threea C3
@@ -58,13 +58,13 @@ $result_tree_text{'macro_call_empty_middle_arg'} = '*document_root C1
      >*brace_arg C2
       >{spaces_before_argument: }
       >{macro_call_arg_text:n}
-   {second ,\\n}
-   {third n,\\n}
+   {normal_text:second ,\\n}
+   {normal_text:third n,\\n}
    >SOURCEMARKS
    >macro_expansion<end;2><p:8>
   {empty_line:\\n}
   *paragraph C3
-   {first o,\\n}
+   {normal_text:first o,\\n}
    >SOURCEMARKS
    >macro_expansion<start;3>
     >*macro_call@threea C3
@@ -73,8 +73,8 @@ $result_tree_text{'macro_call_empty_middle_arg'} = '*document_root C1
      >*brace_arg
      >*brace_arg C1
       >{macro_call_arg_text:p}
-   {second ,\\n}
-   {third p,\\n}
+   {normal_text:second ,\\n}
+   {normal_text:third p,\\n}
    >SOURCEMARKS
    >macro_expansion<end;3><p:8>
 ';

@@ -15,16 +15,16 @@ $result_tree_text{'spaces_info_lost'} = '*document_root C1
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument:  }
-     {text on display line}
+     {normal_text:text on display line}
      {spaces_after_argument: \\n}
    *preformatted C1
-    {in bad display\\n}
+    {normal_text:in bad display\\n}
    *@end C1 l3
    |EXTRA
    |text_arg:{display}
     *line_arg C3
      {spaces_before_argument:  }
-     {display}
+     {normal_text:display}
      {spaces_after_argument: \\n}
   {empty_line:\\n}
   *@verbatim C3 l5
@@ -37,7 +37,7 @@ $result_tree_text{'spaces_info_lost'} = '*document_root C1
    |text_arg:{verbatim}
     *line_arg C3
      {spaces_before_argument:  }
-     {verbatim}
+     {normal_text:verbatim}
      {spaces_after_argument: \\n}
 ';
 

@@ -19,7 +19,7 @@ $result_tree_text{'top_node_no_menu_direction'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C4 l3
@@ -32,28 +32,28 @@ $result_tree_text{'top_node_no_menu_direction'} = '*document_root C3
     |EXTRA
     |node_content:A{0|0}
     |normalized:{chap-node}
-     {chap node}
+     {normal_text:chap node}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 l5
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{Top}
-     {TOP}
+     {normal_text:TOP}
     {menu_entry_separator::: }
     *menu_entry_description C1
      *preformatted C1
-      {myself\\n}
+      {normal_text:myself\\n}
    *@end C1 l6
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l8 {chap node}
@@ -64,18 +64,18 @@ $result_tree_text{'top_node_no_menu_direction'} = '*document_root C3
   *arguments_line C4
    *line_arg C2
     {spaces_before_argument: }
-    {chap node}
+    {normal_text:chap node}
    *line_arg
    *line_arg C1
    |EXTRA
    |node_content:A{0|0}
    |normalized:{Top}
-    {top}
+    {normal_text:top}
    *line_arg C2
    |EXTRA
    |node_content:A{0|0}
    |normalized:{Top}
-    {TOP}
+    {normal_text:TOP}
     {spaces_after_argument:\\n}
 ';
 

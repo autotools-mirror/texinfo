@@ -20,15 +20,15 @@ $result_tree_text{'invalid_command_and_brace_in_table'} = '*document_root C1
    *before_item C2
     {spaces_before_paragraph: }
     *paragraph C3
-     {,, title\\n}
-     {long title\\n}
-     {Item line\\n}
+     {normal_text:,, title\\n}
+     {normal_text:long title\\n}
+     {normal_text:Item line\\n}
    *@end C1 l5
    |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
-     {table}
+     {normal_text:table}
      {spaces_after_argument:\\n}
 ';
 

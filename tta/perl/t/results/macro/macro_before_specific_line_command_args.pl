@@ -23,7 +23,7 @@ $result_tree_text{'macro_before_specific_line_command_args'} = '*document_root C
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *@syncodeindex C1 l5
@@ -35,7 +35,7 @@ $result_tree_text{'macro_before_specific_line_command_args'} = '*document_root C
      >macro_expansion<start;1>
       >*macro_call@cpfn C1
        >*brace_arg
-     {cp fn}
+     {normal_text:cp fn}
      >SOURCEMARKS
      >macro_expansion<end;1><p:5>
      {spaces_after_argument:\\n}

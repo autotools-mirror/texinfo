@@ -22,13 +22,13 @@ $result_tree_text{'simplest_test_prefix'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C3
-   {This is a very simple texi manual }
+   {normal_text:This is a very simple texi manual }
    *@ 
-   { <>.\\n}
+   {normal_text: <>.\\n}
   {empty_line:\\n}
  *@bye C1
   *line_arg C1

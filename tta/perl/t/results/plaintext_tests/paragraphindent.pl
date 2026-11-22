@@ -12,11 +12,11 @@ $result_tree_text{'paragraphindent'} = '*document_root C1
  *before_node_section C20
   *preamble_before_content
   *paragraph C1
-   {First\\n}
+   {normal_text:First\\n}
   {empty_line:\\n}
   {spaces_before_paragraph:           }
   *paragraph C1
-   {aaa b default\\n}
+   {normal_text:aaa b default\\n}
   {empty_line:\\n}
   *@paragraphindent C1 l5
   |EXTRA
@@ -24,12 +24,12 @@ $result_tree_text{'paragraphindent'} = '*document_root C1
   |misc_args:A{asis}
    *line_arg C3
     {spaces_before_argument: }
-    {asis}
+    {normal_text:asis}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   {spaces_before_paragraph:           }
   *paragraph C1
-   {aaa b asis\\n}
+   {normal_text:aaa b asis\\n}
   {empty_line:\\n}
   *@paragraphindent C1 l9
   |EXTRA
@@ -37,12 +37,12 @@ $result_tree_text{'paragraphindent'} = '*document_root C1
   |misc_args:A{0}
    *line_arg C3
     {spaces_before_argument: }
-    {0}
+    {normal_text:0}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   {spaces_before_paragraph:           }
   *paragraph C1
-   {aaa b 0\\n}
+   {normal_text:aaa b 0\\n}
   {empty_line:\\n}
   *@paragraphindent C1 l13
   |EXTRA
@@ -50,12 +50,12 @@ $result_tree_text{'paragraphindent'} = '*document_root C1
   |misc_args:A{7}
    *line_arg C3
     {spaces_before_argument: }
-    {7}
+    {normal_text:7}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   {spaces_before_paragraph:           }
   *paragraph C1
-   {aaa b 7\\n}
+   {normal_text:aaa b 7\\n}
 ';
 
 

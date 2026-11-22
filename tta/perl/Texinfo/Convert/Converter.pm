@@ -1625,7 +1625,8 @@ sub float_type_number($$) {
       $tree = $self->cdt("{float_type} {float_number}",
                          {'float_type' => $type_element,
                           'float_number' =>
-                      Texinfo::TreeElement::new({'text' => $float_number})});
+                      Texinfo::TreeElement::new({'text' => $float_number,
+                                                 'type' => 'normal_text'})});
     } else {
       $tree = $self->cdt("{float_type}",
                          {'float_type' => $type_element});
@@ -1633,7 +1634,8 @@ sub float_type_number($$) {
   } elsif (defined($float_number)) {
     $tree = $self->cdt("{float_number}",
                        {'float_number' =>
-                    Texinfo::TreeElement::new({'text' => $float_number})});
+                    Texinfo::TreeElement::new({'text' => $float_number,
+                                               'type' => 'normal_text'})});
   }
   return $tree;
 }
@@ -1664,7 +1666,8 @@ sub float_name_caption($$) {
   if (exists($element->{'extra'})
       and defined($element->{'extra'}->{'float_number'})) {
     $float_number_element = Texinfo::TreeElement::new(
-       {'text' => $element->{'extra'}->{'float_number'}});
+       {'text' => $element->{'extra'}->{'float_number'},
+        'type' => 'normal_text'});
     $substrings->{'float_number'} = $float_number_element;
   }
 

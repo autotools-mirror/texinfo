@@ -19,7 +19,7 @@ $result_tree_text{'lone_chapter_between_nodes'} = '*document_root C8
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C4 l2 {Top}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'lone_chapter_between_nodes'} = '*document_root C8
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C4 l4
@@ -41,28 +41,28 @@ $result_tree_text{'lone_chapter_between_nodes'} = '*document_root C8
     |EXTRA
     |node_content:A{0|0}
     |normalized:{1}
-     {1}
+     {normal_text:1}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 l6
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{3}
-     {3}
+     {normal_text:3}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l7
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l9 {1}
@@ -73,7 +73,7 @@ $result_tree_text{'lone_chapter_between_nodes'} = '*document_root C8
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {1}
+    {normal_text:1}
     {spaces_after_argument:\\n}
  *@chapter C2 l10 {1}
  |EXTRA
@@ -83,7 +83,7 @@ $result_tree_text{'lone_chapter_between_nodes'} = '*document_root C8
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {1}
+    {normal_text:1}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@chapter C2 l12 {2}
@@ -96,7 +96,7 @@ $result_tree_text{'lone_chapter_between_nodes'} = '*document_root C8
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {2}
+    {normal_text:2}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l14 {3}
@@ -107,7 +107,7 @@ $result_tree_text{'lone_chapter_between_nodes'} = '*document_root C8
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {3}
+    {normal_text:3}
     {spaces_after_argument:\\n}
  *@chapter C1 l15 {3}
  |EXTRA
@@ -117,7 +117,7 @@ $result_tree_text{'lone_chapter_between_nodes'} = '*document_root C8
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {3}
+    {normal_text:3}
     {spaces_after_argument:\\n}
 ';
 

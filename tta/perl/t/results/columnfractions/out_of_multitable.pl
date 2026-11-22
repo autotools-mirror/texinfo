@@ -16,7 +16,7 @@ $result_tree_text{'out_of_multitable'} = '*document_root C1
    |misc_args:A{0.6|0.4}
     *line_arg C2
      {spaces_before_argument: }
-     {0.6 0.4 aaa}
+     {normal_text:0.6 0.4 aaa}
 ';
 
 

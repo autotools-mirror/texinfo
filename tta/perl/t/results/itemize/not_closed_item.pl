@@ -20,7 +20,7 @@ $result_tree_text{'not_closed_item'} = '*document_root C1
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
-     {in item\\n}
+     {normal_text:in item\\n}
 ';
 
 

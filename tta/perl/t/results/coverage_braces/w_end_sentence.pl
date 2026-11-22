@@ -12,10 +12,10 @@ $result_tree_text{'w_end_sentence'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *paragraph C2
-   {a. }
+   {normal_text:a. }
    *@w C1 l1
     *brace_container C1
-     {b}
+     {normal_text:b}
 ';
 
 

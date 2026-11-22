@@ -25,7 +25,7 @@ $result_tree_text{'macro_imbricated_with_beginning_command_name'} = '*document_r
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
 ';

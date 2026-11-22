@@ -11,14 +11,14 @@ use Encode;
 $result_tree_text{'text_on_conditional_line'} = '*document_root C1
  *before_node_section C1
   *preamble_before_content C1
-   {}
+   {normal_text:}
    >SOURCEMARKS
    >ignored_conditional_block<1>
     >*@ifnothtml C3 l1
      >*arguments_line C1
       >*block_line_arg C3
        >{spaces_before_argument: }
-       >{text following ifnothtml,}
+       >{normal_text:text following ifnothtml,}
        >{spaces_after_argument:\\n}
      >{raw:a\\n}
      >*@end C1 l3
@@ -26,7 +26,7 @@ $result_tree_text{'text_on_conditional_line'} = '*document_root C1
      >|text_arg:{ifnothtml}
       >*line_arg C3
        >{spaces_before_argument: }
-       >{ifnothtml}
+       >{normal_text:ifnothtml}
        >{spaces_after_argument:\\n}
 ';
 

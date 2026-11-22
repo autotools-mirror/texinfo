@@ -25,18 +25,18 @@ $result_tree_text{'line_after_recursive_call'} = '*document_root C1
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
   *paragraph C3
-   {ggg\\n}
+   {normal_text:ggg\\n}
    >SOURCEMARKS
    >macro_expansion<start;1>
     >*macro_call@mac
-   { xxx\\n}
+   {normal_text: xxx\\n}
    >SOURCEMARKS
    >macro_expansion<2>
     >*macro_call@mac
-   {fff}
+   {normal_text:fff}
    >SOURCEMARKS
    >macro_expansion<end;1><p:3>
 ';

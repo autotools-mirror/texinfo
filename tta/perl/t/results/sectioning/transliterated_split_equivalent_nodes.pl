@@ -25,7 +25,7 @@ NodeForward: [U1]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C5 l3
@@ -40,22 +40,22 @@ NodeForward: [U1]
     |normalized:{_00e3}
      *@~ C1 l4
       *following_arg C1
-       {a}
+       {normal_text:a}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 l5
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{n}
-     {n}
+     {normal_text:n}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 l6
     {menu_entry_leading_text:* }
     *menu_entry_node C1
@@ -64,17 +64,17 @@ NodeForward: [U1]
     |normalized:{_00e2}
      *@^ C1 l6
       *following_arg C1
-       {a}
+       {normal_text:a}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l7
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
 U1 unit{C2}{N:@~a}{s:@unnumbered @~a}
@@ -98,7 +98,7 @@ NodeBack: [U0]
     {spaces_before_argument: }
     *@~ C1 l9
      *following_arg C1
-      {a}
+      {normal_text:a}
     {spaces_after_argument:\\n}
  *@unnumbered C2 l10 {@~a}
  |EXTRA
@@ -109,7 +109,7 @@ NodeBack: [U0]
     {spaces_before_argument: }
     *@~ C1 l10
      *following_arg C1
-      {a}
+      {normal_text:a}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
 U2 unit{C1}{N:n}
@@ -132,7 +132,7 @@ NodeBack: [U1]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {n}
+    {normal_text:n}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
 U3 unit{C1}{N:@^a}
@@ -154,7 +154,7 @@ NodeBack: [U2]
     {spaces_before_argument: }
     *@^ C1 l14
      *following_arg C1
-      {a}
+      {normal_text:a}
     {spaces_after_argument:\\n}
 ';
 

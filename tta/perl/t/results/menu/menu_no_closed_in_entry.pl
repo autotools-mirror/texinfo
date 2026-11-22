@@ -18,7 +18,7 @@ $result_tree_text{'menu_no_closed_in_entry'} = '*document_root C1
    *menu_entry C3
     {menu_entry_leading_text:* }
     *menu_entry_name C1
-     {a1}
+     {normal_text:a1}
     {menu_entry_separator::}
 ';
 

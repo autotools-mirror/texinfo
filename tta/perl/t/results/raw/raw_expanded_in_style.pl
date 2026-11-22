@@ -14,19 +14,19 @@ $result_tree_text{'raw_expanded_in_style'} = '*document_root C1
   *paragraph C1
    *@code C1 l1
     *brace_container C2
-     {\\n}
+     {normal_text:\\n}
      *@html C3 l2
       *arguments_line C1
        *block_line_arg C1
         {spaces_before_argument:\\n}
       *rawpreformatted C1
-       {in html\\n}
+       {normal_text:in html\\n}
       *@end C1 l4
       |EXTRA
       |text_arg:{html}
        *line_arg C3
         {spaces_before_argument: }
-        {html}
+        {normal_text:html}
         {spaces_after_argument:\\n}
 ';
 

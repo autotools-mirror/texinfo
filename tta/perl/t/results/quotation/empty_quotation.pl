@@ -20,21 +20,21 @@ $result_tree_text{'empty_quotation'} = '*document_root C1
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }
-     {quotation}
+     {normal_text:quotation}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@quotation C2 l4
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     {Empty}
+     {normal_text:Empty}
      {spaces_after_argument:\\n}
    *@end C1 l5
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }
-     {quotation}
+     {normal_text:quotation}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@quotation C2 l7
@@ -49,7 +49,7 @@ $result_tree_text{'empty_quotation'} = '*document_root C1
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }
-     {quotation}
+     {normal_text:quotation}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@quotation C2 l10
@@ -63,7 +63,7 @@ $result_tree_text{'empty_quotation'} = '*document_root C1
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }
-     {quotation}
+     {normal_text:quotation}
      {spaces_after_argument:\\n}
 ';
 

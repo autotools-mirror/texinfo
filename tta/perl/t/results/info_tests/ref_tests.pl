@@ -21,7 +21,7 @@ $result_tree_text{'ref_tests'} = '*document_root C2
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C6
@@ -29,37 +29,37 @@ $result_tree_text{'ref_tests'} = '*document_root C2
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
-     {in ref followed by comma}
+     {normal_text:in ref followed by comma}
     *brace_arg
     *brace_arg
     *brace_arg C2
      {spaces_before_argument: }
-     {m}
-   {, \\n}
+     {normal_text:m}
+   {normal_text:, \\n}
    *@ref C4 l5
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
-     {in ref not followed by comma}
+     {normal_text:in ref not followed by comma}
     *brace_arg
     *brace_arg
     *brace_arg C2
      {spaces_before_argument: }
-     {m}
-   { after ref.\\n}
+     {normal_text:m}
+   {normal_text: after ref.\\n}
    *@code C1 l6
     *brace_container C1
      *@ref C4 l6
       *brace_arg C1
       |EXTRA
       |node_content:A{0|0}
-       {in ref followed by end command}
+       {normal_text:in ref followed by end command}
       *brace_arg
       *brace_arg
       *brace_arg C2
        {spaces_before_argument: }
-       {m}
-   {.\\n}
+       {normal_text:m}
+   {normal_text:.\\n}
   {empty_line:\\n}
   {empty_line:\\n}
   *paragraph C8
@@ -67,56 +67,56 @@ $result_tree_text{'ref_tests'} = '*document_root C2
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
-     {in ref followed by comma}
+     {normal_text:in ref followed by comma}
     *brace_arg C2
      {spaces_before_argument: }
-     {name}
+     {normal_text:name}
     *brace_arg
     *brace_arg C2
      {spaces_before_argument: }
-     {m}
-   {,\\n}
+     {normal_text:m}
+   {normal_text:,\\n}
    *@ref C4 l10
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
-     {in ref not followed by comma}
+     {normal_text:in ref not followed by comma}
     *brace_arg C2
      {spaces_before_argument: }
-     {name}
+     {normal_text:name}
     *brace_arg
     *brace_arg C2
      {spaces_before_argument: }
-     {m}
-   { after ref.\\n}
+     {normal_text:m}
+   {normal_text: after ref.\\n}
    *@code C1 l11
     *brace_container C1
      *@ref C4 l11
       *brace_arg C1
       |EXTRA
       |node_content:A{0|0}
-       {in ref followed by end command}
+       {normal_text:in ref followed by end command}
       *brace_arg C2
        {spaces_before_argument: }
-       {name}
+       {normal_text:name}
       *brace_arg
       *brace_arg C2
        {spaces_before_argument: }
-       {m}
-   {.\\n}
+       {normal_text:m}
+   {normal_text:.\\n}
    *@ref C4 l12
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
-     {in ref ending with a dot.}
+     {normal_text:in ref ending with a dot.}
     *brace_arg C2
      {spaces_before_argument: }
-     {name}
+     {normal_text:name}
     *brace_arg
     *brace_arg C2
      {spaces_before_argument: }
-     {m}
-   { after ref.\\n}
+     {normal_text:m}
+   {normal_text: after ref.\\n}
   {empty_line:\\n}
 ';
 

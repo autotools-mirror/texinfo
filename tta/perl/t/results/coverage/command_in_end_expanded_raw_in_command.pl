@@ -16,13 +16,13 @@ $result_tree_text{'command_in_end_expanded_raw_in_command'} = '*document_root C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *rawpreformatted C2
-     {In TeX\\n}
+     {normal_text:In TeX\\n}
      *@end C1 l3
       *line_arg C3
        {spaces_before_argument: }
        *@code C1 l3
         *brace_container C1
-         {tex}
+         {normal_text:tex}
        {spaces_after_argument:\\n}
 ';
 

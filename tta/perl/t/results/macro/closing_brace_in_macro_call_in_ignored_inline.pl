@@ -23,7 +23,7 @@ $result_tree_text{'closing_brace_in_macro_call_in_ignored_inline'} = '*document_
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
-      {macro}
+      {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C3
@@ -34,23 +34,23 @@ $result_tree_text{'closing_brace_in_macro_call_in_ignored_inline'} = '*document_
    >SOURCEMARKS
    >macro_expansion<end;1>
     *brace_arg C1
-     {html}
+     {normal_text:html}
     *brace_arg C2
      {spaces_before_argument:\\n}
-     {truc }
+     {normal_text:truc }
      >SOURCEMARKS
      >macro_expansion<start;1><p:5>
       >*macro_call@closebrace C1
        >*brace_arg
-   {\\n}
-   {machin\\n}
+   {normal_text:\\n}
+   {normal_text:machin\\n}
   {empty_line:\\n}
   *paragraph C1
    *@inlinefmt C2 l9
    |EXTRA
    |format:{tex}
     *brace_arg C1
-     {tex}
+     {normal_text:tex}
     *elided_brace_command_arg C1
      {raw:\\nbidule @closebrace\\nafter\\n}
 ';

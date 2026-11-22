@@ -20,7 +20,7 @@ $result_tree_text{'multitable_bracketed_prototype_not_closed_comment'} = '*docum
     *block_line_arg C2
      {spaces_before_argument: }
      *bracketed_arg C2 l2
-      {a}
+      {normal_text:a}
       *@c C1
        *line_arg C3
         {spaces_before_argument: }
@@ -31,7 +31,7 @@ $result_tree_text{'multitable_bracketed_prototype_not_closed_comment'} = '*docum
    |text_arg:{multitable}
     *line_arg C3
      {spaces_before_argument: }
-     {multitable}
+     {normal_text:multitable}
      {spaces_after_argument:\\n}
 ';
 

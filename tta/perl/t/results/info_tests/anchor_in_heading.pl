@@ -19,7 +19,7 @@ $result_tree_text{'anchor_in_heading'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C3 l2 {top}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'anchor_in_heading'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@heading C1 l4
@@ -37,15 +37,15 @@ $result_tree_text{'anchor_in_heading'} = '*document_root C3
   |heading_number:{1}
    *line_arg C6
     {spaces_before_argument: }
-    {Heading }
+    {normal_text:Heading }
     *@anchor C1 l4
     |EXTRA
     |identifier:{point}
     |is_target:{1}
      *brace_arg C1
-      {point}
+      {normal_text:point}
     {spaces_after_close_brace: }
-    {after anchor}
+    {normal_text:after anchor}
     {spaces_after_argument:\\n}
 ';
 

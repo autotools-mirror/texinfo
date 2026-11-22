@@ -19,7 +19,7 @@ $result_tree_text{'no_menu'} = '*document_root C9
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l2
  |EXTRA
@@ -37,7 +37,7 @@ $result_tree_text{'no_menu'} = '*document_root C9
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {c1}
+    {normal_text:c1}
     {spaces_after_argument:\\n}
  *@chapter C2 l5 {c1}
  |EXTRA
@@ -47,7 +47,7 @@ $result_tree_text{'no_menu'} = '*document_root C9
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {c1}
+    {normal_text:c1}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l7 {c2}
@@ -58,7 +58,7 @@ $result_tree_text{'no_menu'} = '*document_root C9
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {c2}
+    {normal_text:c2}
     {spaces_after_argument:\\n}
  *@chapter C2 l8 {c2}
  |EXTRA
@@ -68,7 +68,7 @@ $result_tree_text{'no_menu'} = '*document_root C9
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {c2}
+    {normal_text:c2}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l10 {c3}
@@ -79,7 +79,7 @@ $result_tree_text{'no_menu'} = '*document_root C9
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {c3}
+    {normal_text:c3}
     {spaces_after_argument:\\n}
  *@chapter C1 l11 {c3}
  |EXTRA
@@ -89,7 +89,7 @@ $result_tree_text{'no_menu'} = '*document_root C9
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {c3}
+    {normal_text:c3}
     {spaces_after_argument:\\n}
 ';
 

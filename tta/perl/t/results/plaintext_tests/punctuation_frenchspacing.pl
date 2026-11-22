@@ -17,37 +17,37 @@ $result_tree_text{'punctuation_frenchspacing'} = '*document_root C1
    |misc_args:A{on}
     *line_arg C3
      {spaces_before_argument: }
-     {on}
+     {normal_text:on}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C1
-   {Dot. Exclam! Question? Dot.  Exclam!  Question?  GAAA.\\n}
+   {normal_text:Dot. Exclam! Question? Dot.  Exclam!  Question?  GAAA.\\n}
   {empty_line:\\n}
   *paragraph C4
-   {End of lines Dot.\\n}
-   {Exclam!\\n}
-   {Question?\\n}
-   {End.\\n}
+   {normal_text:End of lines Dot.\\n}
+   {normal_text:Exclam!\\n}
+   {normal_text:Question?\\n}
+   {normal_text:End.\\n}
   {empty_line:\\n}
   *paragraph C5
-   {End of lines and spaces\\n}
-   {Dot.\\n}
-   {Exclam!\\n}
-   {Question?\\n}
-   {End.\\n}
+   {normal_text:End of lines and spaces\\n}
+   {normal_text:Dot.\\n}
+   {normal_text:Exclam!\\n}
+   {normal_text:Question?\\n}
+   {normal_text:End.\\n}
   {empty_line:\\n}
   *paragraph C1
-   {With paren.) paren.)  Symb.)"\'] Symb.)"\']  End.\\n}
+   {normal_text:With paren.) paren.)  Symb.)"\'] Symb.)"\']  End.\\n}
   {empty_line:\\n}
   *paragraph C3
-   {End of lines paren.)\\n}
-   {Symb.)"\']\\n}
-   {End.\\n}
+   {normal_text:End of lines paren.)\\n}
+   {normal_text:Symb.)"\']\\n}
+   {normal_text:End.\\n}
   {empty_line:\\n}
   *paragraph C3
-   {End of lines and spaces paren.)\\n}
-   {Symb.)"\']\\n}
-   {End.\\n}
+   {normal_text:End of lines and spaces paren.)\\n}
+   {normal_text:Symb.)"\']\\n}
+   {normal_text:End.\\n}
 ';
 
 

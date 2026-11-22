@@ -18,13 +18,13 @@ $result_tree_text{'sc_with_utf8_enable_encoding'} = '*document_root C1
    |text_arg:{utf-8}
     *line_arg C3
      {spaces_before_argument: }
-     {utf-8}
+     {normal_text:utf-8}
      {spaces_after_argument:\\n}
   *paragraph C2
    *@sc C1 l2
     *brace_container C1
-     {in sc}
-   {.\\n}
+     {normal_text:in sc}
+   {normal_text:.\\n}
 ';
 
 

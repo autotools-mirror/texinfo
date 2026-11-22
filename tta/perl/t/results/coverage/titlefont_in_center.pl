@@ -20,7 +20,7 @@ $result_tree_text{'titlefont_in_center'} = '*document_root C1
     |EXTRA
     |global_command_number:{1}
      *brace_container C1
-      {A manual}
+      {normal_text:A manual}
     {spaces_after_argument:\\n}
 ';
 

@@ -16,7 +16,7 @@ $result_tree_text{'definfoenclose_command_on_section_line'} = '*document_root C3
    |misc_args:A{somed|!|:}
     *line_arg C3
      {spaces_before_argument: }
-     {somed,!,:}
+     {normal_text:somed,!,:}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *@node C1 l3 {top}
@@ -27,7 +27,7 @@ $result_tree_text{'definfoenclose_command_on_section_line'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
  *@top C1 l4 {A @somed{next}}
  |EXTRA
@@ -36,13 +36,13 @@ $result_tree_text{'definfoenclose_command_on_section_line'} = '*document_root C3
   *arguments_line C1
    *line_arg C4
     {spaces_before_argument: }
-    {A }
+    {normal_text:A }
     *definfoenclose_command@somed C1 l4
     |EXTRA
     |begin:{!}
     |end:{:}
      *brace_container C1
-      {next}
+      {normal_text:next}
     {spaces_after_argument:\\n}
 ';
 

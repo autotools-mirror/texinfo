@@ -19,7 +19,7 @@ $result_tree_text{'invalid_info_menu_entry'} = '*document_root C2
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C7 l3
@@ -33,102 +33,102 @@ $result_tree_text{'invalid_info_menu_entry'} = '*document_root C2
     |manual_content:A{1|1}
     |node_content:A{3|3}
     |normalized:{a_003a}
-     {(}
-     {f}
-     {)}
+     {normal_text:(}
+     {normal_text:f}
+     {normal_text:)}
      *@asis C1 l4
       *brace_container C1
-       {a:}
+       {normal_text:a:}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C6 l5
     {menu_entry_leading_text:* }
     *menu_entry_name C1
      *@asis C1 l5
       *brace_container C1
-       {name:}
+       {normal_text:name:}
     {menu_entry_separator:: }
     *menu_entry_node C4
     |EXTRA
     |manual_content:A{1|1}
     |node_content:A{3|3}
     |normalized:{node}
-     {(}
-     {f}
-     {)}
-     {node}
+     {normal_text:(}
+     {normal_text:f}
+     {normal_text:)}
+     {normal_text:node}
     {menu_entry_separator:.}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C6 l6
     {menu_entry_leading_text:* }
     *menu_entry_name C1
-     {name}
+     {normal_text:name}
     {menu_entry_separator:: }
     *menu_entry_node C4
     |EXTRA
     |manual_content:A{1|1}
     |node_content:A{3|3}
     |normalized:{node_002e-}
-     {(}
-     {f}
-     {)}
+     {normal_text:(}
+     {normal_text:f}
+     {normal_text:)}
      *@asis C1 l6
       *brace_container C1
-       {node. }
+       {normal_text:node. }
     {menu_entry_separator:. }
     *menu_entry_description C1
      *preformatted C1
-      {d\\n}
+      {normal_text:d\\n}
    *menu_entry C6 l7
     {menu_entry_leading_text:* }
     *menu_entry_name C1
-     {name}
+     {normal_text:name}
     {menu_entry_separator:: }
     *menu_entry_node C4
     |EXTRA
     |manual_content:A{1|1}
     |node_content:A{3|3}
     |normalized:{node_002cn}
-     {(}
-     {f}
-     {)}
+     {normal_text:(}
+     {normal_text:f}
+     {normal_text:)}
      *@asis C1 l7
       *brace_container C1
-       {node,n}
+       {normal_text:node,n}
     {menu_entry_separator:. }
     *menu_entry_description C1
      *preformatted C1
-      {d2\\n}
+      {normal_text:d2\\n}
    *menu_entry C6 l8
     {menu_entry_leading_text:* }
     *menu_entry_name C1
-     {name}
+     {normal_text:name}
     {menu_entry_separator:: }
     *menu_entry_node C4
     |EXTRA
     |manual_content:A{1|1}
     |node_content:A{3|3}
     |normalized:{node-n}
-     {(}
-     {f}
-     {)}
+     {normal_text:(}
+     {normal_text:f}
+     {normal_text:)}
      *@asis C1 l8
       *brace_container C1
-       {node\\tn}
+       {normal_text:node\\tn}
     {menu_entry_separator:. }
     *menu_entry_description C1
      *preformatted C1
-      {d3\\n}
+      {normal_text:d3\\n}
    *@end C1 l9
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
 ';
 

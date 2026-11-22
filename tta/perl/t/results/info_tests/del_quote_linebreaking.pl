@@ -12,106 +12,106 @@ $result_tree_text{'del_quote_linebreaking'} = '*document_root C1
  *before_node_section C17
   *preamble_before_content
   *paragraph C1
-   {first para\\n}
+   {normal_text:first para\\n}
   {empty_line:\\n}
   *paragraph C3
-   {xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx }
+   {normal_text:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx }
    *@xref C5 l3
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
-     {noxde}
+     {normal_text:noxde}
     *brace_arg
     *brace_arg
     *brace_arg C2
      {spaces_before_argument: }
-     {manual}
+     {normal_text:manual}
     *brace_arg C1
-     {Manual}
-   {\\n}
+     {normal_text:Manual}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C3
-   {xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx }
+   {normal_text:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx }
    *@xref C5 l5
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
-     {noxde}
+     {normal_text:noxde}
     *brace_arg
     *brace_arg
     *brace_arg C2
      {spaces_before_argument: }
-     {manual}
+     {normal_text:manual}
     *brace_arg C1
-     {Manual}
-   {\\n}
+     {normal_text:Manual}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C3
-   {xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx }
+   {normal_text:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx }
    *@xref C5 l7
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
-     {noxde}
+     {normal_text:noxde}
     *brace_arg
     *brace_arg
     *brace_arg C2
      {spaces_before_argument: }
-     {manual}
+     {normal_text:manual}
     *brace_arg C1
-     {Manual}
-   {\\n}
+     {normal_text:Manual}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {%\\n}
+   {normal_text:%\\n}
   {empty_line:\\n}
   *paragraph C3
-   {xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx }
+   {normal_text:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx }
    *@xref C5 l11
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
-     {no:de}
+     {normal_text:no:de}
     *brace_arg
     *brace_arg
     *brace_arg C2
      {spaces_before_argument: }
-     {manual}
+     {normal_text:manual}
     *brace_arg C1
-     {Manual}
-   {\\n}
+     {normal_text:Manual}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C3
-   {xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx }
+   {normal_text:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx }
    *@xref C5 l13
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
-     {no:de}
+     {normal_text:no:de}
     *brace_arg
     *brace_arg
     *brace_arg C2
      {spaces_before_argument: }
-     {manual}
+     {normal_text:manual}
     *brace_arg C1
-     {Manual}
-   {\\n}
+     {normal_text:Manual}
+   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C3
-   {xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx }
+   {normal_text:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx }
    *@xref C5 l15
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
-     {no:de}
+     {normal_text:no:de}
     *brace_arg
     *brace_arg
     *brace_arg C2
      {spaces_before_argument: }
-     {manual}
+     {normal_text:manual}
     *brace_arg C1
-     {Manual}
-   {\\n}
+     {normal_text:Manual}
+   {normal_text:\\n}
   {empty_line:\\n}
 ';
 

@@ -19,7 +19,7 @@ $result_tree_text{'anchor_on_vtable_item'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l2 {top}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'anchor_on_vtable_item'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l4 {chap}
@@ -39,7 +39,7 @@ $result_tree_text{'anchor_on_vtable_item'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
  *@chapter C4 l5 {Chap}
  |EXTRA
@@ -49,7 +49,7 @@ $result_tree_text{'anchor_on_vtable_item'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chap}
+    {normal_text:Chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@vtable C6 l7
@@ -73,12 +73,12 @@ $result_tree_text{'anchor_on_vtable_item'} = '*document_root C7
        |identifier:{label1}
        |is_target:{1}
         *brace_arg C1
-         {label1}
-       {label1}
+         {normal_text:label1}
+       {normal_text:label1}
        {spaces_after_argument:\\n}
     *table_definition C2
      *paragraph C1
-      {Text1\\n}
+      {normal_text:Text1\\n}
      {empty_line:\\n}
    *table_entry C2
     *table_term C1
@@ -93,13 +93,13 @@ $result_tree_text{'anchor_on_vtable_item'} = '*document_root C7
        |identifier:{label2}
        |is_target:{1}
         *brace_arg C1
-         {label2}
+         {normal_text:label2}
        {spaces_after_close_brace: }
-       {label2}
+       {normal_text:label2}
        {spaces_after_argument:\\n}
     *table_definition C2
      *paragraph C1
-      {Text2\\n}
+      {normal_text:Text2\\n}
      {empty_line:\\n}
    *table_entry C2
     *table_term C1
@@ -109,7 +109,7 @@ $result_tree_text{'anchor_on_vtable_item'} = '*document_root C7
      |index_entry:I{vr,3}
       *line_arg C3
        {spaces_before_argument: }
-       {lab3}
+       {normal_text:lab3}
        {spaces_after_argument:\\n}
     *table_definition C1
      {empty_line:\\n}
@@ -118,7 +118,7 @@ $result_tree_text{'anchor_on_vtable_item'} = '*document_root C7
    |text_arg:{vtable}
     *line_arg C3
      {spaces_before_argument: }
-     {vtable}
+     {normal_text:vtable}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l19 {Idx}
@@ -130,7 +130,7 @@ $result_tree_text{'anchor_on_vtable_item'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Idx}
+    {normal_text:Idx}
     {spaces_after_argument:\\n}
  *@chapter C5 l20 {Idx}
  |EXTRA
@@ -140,7 +140,7 @@ $result_tree_text{'anchor_on_vtable_item'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Idx}
+    {normal_text:Idx}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@printindex C1 l22
@@ -149,7 +149,7 @@ $result_tree_text{'anchor_on_vtable_item'} = '*document_root C7
   |misc_args:A{vr}
    *line_arg C3
     {spaces_before_argument: }
-    {vr}
+    {normal_text:vr}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
@@ -158,8 +158,8 @@ $result_tree_text{'anchor_on_vtable_item'} = '*document_root C7
     |EXTRA
     |node_content:A{0|0}
     |normalized:{label1}
-     {label1}
-   {.\\n}
+     {normal_text:label1}
+   {normal_text:.\\n}
 ';
 
 

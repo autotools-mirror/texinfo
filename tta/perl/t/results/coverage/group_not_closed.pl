@@ -17,7 +17,7 @@ $result_tree_text{'group_not_closed'} = '*document_root C1
      {spaces_before_argument:\\n}
    {empty_line:\\n}
    *paragraph C1
-    {text in group\\n}
+    {normal_text:text in group\\n}
 ';
 
 

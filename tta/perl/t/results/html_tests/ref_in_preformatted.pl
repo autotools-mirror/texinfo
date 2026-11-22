@@ -19,7 +19,7 @@ $result_tree_text{'ref_in_preformatted'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C3 l3
@@ -32,17 +32,17 @@ $result_tree_text{'ref_in_preformatted'} = '*document_root C3
     |EXTRA
     |node_content:A{0|0}
     |normalized:{chap-nnn-the-node-name}
-     {chap nnn the node name}
+     {normal_text:chap nnn the node name}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l5
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@example C3 l7
@@ -50,21 +50,21 @@ $result_tree_text{'ref_in_preformatted'} = '*document_root C3
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C3
-    {Now }
+    {normal_text:Now }
     *@ref C1 l8
      *brace_arg C2
      |EXTRA
      |node_content:A{0|1}
      |normalized:{chap-nnn-the-node-name}
-      {chap nnn the\\n}
-      {node name}
-    {\\n}
+      {normal_text:chap nnn the\\n}
+      {normal_text:node name}
+    {normal_text:\\n}
    *@end C1 l10
    |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
-     {example}
+     {normal_text:example}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l12 {chap nnn the node name}
@@ -75,7 +75,7 @@ $result_tree_text{'ref_in_preformatted'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap nnn the node name}
+    {normal_text:chap nnn the node name}
     {spaces_after_argument:\\n}
 ';
 

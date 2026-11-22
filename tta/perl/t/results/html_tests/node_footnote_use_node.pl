@@ -28,7 +28,7 @@ $result_tree_text{'node_footnote_use_node'} = '*document_root C8
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C6 node_footnote.texi:l7
@@ -43,11 +43,11 @@ $result_tree_text{'node_footnote_use_node'} = '*document_root C8
     |normalized:{_00e1}
      *@\' C1 node_footnote.texi:l8
       *following_arg C1
-       {a}
+       {normal_text:a}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 node_footnote.texi:l9
     {menu_entry_leading_text:* }
     *menu_entry_node C1
@@ -56,22 +56,22 @@ $result_tree_text{'node_footnote_use_node'} = '*document_root C8
     |normalized:{_00e2}
      *@^ C1 node_footnote.texi:l9
       *following_arg C1
-       {a}
+       {normal_text:a}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 node_footnote.texi:l10
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{chapter}
-     {chapter}
+     {normal_text:chapter}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 node_footnote.texi:l11
     {menu_entry_leading_text:* }
     *menu_entry_node C1
@@ -80,17 +80,17 @@ $result_tree_text{'node_footnote_use_node'} = '*document_root C8
     |normalized:{_00e0}
      *@` C1 node_footnote.texi:l11
       *following_arg C1
-       {a}
+       {normal_text:a}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 node_footnote.texi:l12
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C4 node_footnote.texi:l14 {@\'a}
@@ -103,26 +103,26 @@ $result_tree_text{'node_footnote_use_node'} = '*document_root C8
     {spaces_before_argument: }
     *@\' C1 node_footnote.texi:l14
      *following_arg C1
-      {a}
+      {normal_text:a}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C6
-   {node }
+   {normal_text:node }
    *@\' C1 node_footnote.texi:l16
     *following_arg C1
-     {a}
-   {,\\n}
-   {Footnote 1}
+     {normal_text:a}
+   {normal_text:,\\n}
+   {normal_text:Footnote 1}
    *@footnote C1 node_footnote.texi:l17
    |EXTRA
    |global_command_number:{1}
     *brace_command_context C1
      *paragraph C2
-      {foot 1 }
+      {normal_text:foot 1 }
       *@\' C1 node_footnote.texi:l17
        *following_arg C1
-        {a}
-   {.\\n}
+        {normal_text:a}
+   {normal_text:.\\n}
   {empty_line:\\n}
  *@node C4 node_footnote.texi:l19 {@^a}
  |EXTRA
@@ -134,26 +134,26 @@ $result_tree_text{'node_footnote_use_node'} = '*document_root C8
     {spaces_before_argument: }
     *@^ C1 node_footnote.texi:l19
      *following_arg C1
-      {a}
+      {normal_text:a}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C6
-   {node }
+   {normal_text:node }
    *@^ C1 node_footnote.texi:l21
     *following_arg C1
-     {a}
-   {,\\n}
-   {Footnote 2}
+     {normal_text:a}
+   {normal_text:,\\n}
+   {normal_text:Footnote 2}
    *@footnote C1 node_footnote.texi:l22
    |EXTRA
    |global_command_number:{2}
     *brace_command_context C1
      *paragraph C2
-      {foot 2 }
+      {normal_text:foot 2 }
       *@^ C1 node_footnote.texi:l22
        *following_arg C1
-        {a}
-   {.\\n}
+        {normal_text:a}
+   {normal_text:.\\n}
   {empty_line:\\n}
  *@node C1 node_footnote.texi:l24 {chapter}
  |EXTRA
@@ -163,7 +163,7 @@ $result_tree_text{'node_footnote_use_node'} = '*document_root C8
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter}
+    {normal_text:chapter}
     {spaces_after_argument:\\n}
  *@chapter C4 node_footnote.texi:l25 {chapter}
  |EXTRA
@@ -173,7 +173,7 @@ $result_tree_text{'node_footnote_use_node'} = '*document_root C8
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter}
+    {normal_text:chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C3 node_footnote.texi:l27
@@ -188,17 +188,17 @@ $result_tree_text{'node_footnote_use_node'} = '*document_root C8
     |normalized:{_00e0}
      *@` C1 node_footnote.texi:l28
       *following_arg C1
-       {a}
+       {normal_text:a}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 node_footnote.texi:l29
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C4 node_footnote.texi:l31 {@`a}
@@ -211,26 +211,26 @@ $result_tree_text{'node_footnote_use_node'} = '*document_root C8
     {spaces_before_argument: }
     *@` C1 node_footnote.texi:l31
      *following_arg C1
-      {a}
+      {normal_text:a}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C6
-   {node }
+   {normal_text:node }
    *@` C1 node_footnote.texi:l33
     *following_arg C1
-     {a}
-   {,\\n}
-   {Footnote 3}
+     {normal_text:a}
+   {normal_text:,\\n}
+   {normal_text:Footnote 3}
    *@footnote C1 node_footnote.texi:l34
    |EXTRA
    |global_command_number:{3}
     *brace_command_context C1
      *paragraph C2
-      {foot 3 }
+      {normal_text:foot 3 }
       *@` C1 node_footnote.texi:l34
        *following_arg C1
-        {a}
-   {.\\n}
+        {normal_text:a}
+   {normal_text:.\\n}
   {empty_line:\\n}
  *@bye C1
   *line_arg C1

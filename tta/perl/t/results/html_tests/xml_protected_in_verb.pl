@@ -21,7 +21,7 @@ $result_tree_text{'xml_protected_in_verb'} = '*document_root C1
    |text_arg:{verbatim}
     *line_arg C3
      {spaces_before_argument: }
-     {verbatim}
+     {normal_text:verbatim}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
@@ -30,7 +30,7 @@ $result_tree_text{'xml_protected_in_verb'} = '*document_root C1
      {verb_delimiter:.}
      {raw: <i> }
      {verb_delimiter:.}
-   {.\\n}
+   {normal_text:.\\n}
   {empty_line:\\n}
   *@verbatiminclude C1 l7
   |EXTRA
@@ -38,7 +38,7 @@ $result_tree_text{'xml_protected_in_verb'} = '*document_root C1
   |text_arg:{file_with_xml_chars.texi}
    *line_arg C3
     {spaces_before_argument: }
-    {file_with_xml_chars.texi}
+    {normal_text:file_with_xml_chars.texi}
     {spaces_after_argument:\\n}
 ';
 

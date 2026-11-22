@@ -19,10 +19,10 @@ $result_tree_text{'nodes_after_top_before_section_texi2html_chapter'} = '*docume
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
   *paragraph C1
-   {Top node\\n}
+   {normal_text:Top node\\n}
   *@menu C4 l3
    *arguments_line C1
     *block_line_arg C1
@@ -33,28 +33,28 @@ $result_tree_text{'nodes_after_top_before_section_texi2html_chapter'} = '*docume
     |EXTRA
     |node_content:A{0|0}
     |normalized:{chap-node}
-     {chap node}
+     {normal_text:chap node}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 l5
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{third-node}
-     {third node}
+     {normal_text:third node}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l6
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C4 l8 {chap node}
@@ -65,27 +65,27 @@ $result_tree_text{'nodes_after_top_before_section_texi2html_chapter'} = '*docume
   *arguments_line C4
    *line_arg C2
     {spaces_before_argument: }
-    {chap node}
+    {normal_text:chap node}
    *line_arg C2
    |EXTRA
    |node_content:A{1|1}
    |normalized:{third-node}
     {spaces_before_argument: }
-    {third node}
+    {normal_text:third node}
    *line_arg C1
    |EXTRA
    |node_content:A{0|0}
    |normalized:{Top}
-    {Top}
+    {normal_text:Top}
    *line_arg C2
    |EXTRA
    |node_content:A{0|0}
    |normalized:{Top}
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   {second node\\n}
+   {normal_text:second node\\n}
   {empty_line:\\n}
  *@node C1 l12 {third node}
  |EXTRA
@@ -95,18 +95,18 @@ $result_tree_text{'nodes_after_top_before_section_texi2html_chapter'} = '*docume
   *arguments_line C4
    *line_arg C2
     {spaces_before_argument: }
-    {third node}
+    {normal_text:third node}
    *line_arg
    *line_arg C1
    |EXTRA
    |node_content:A{0|0}
    |normalized:{chap-node}
-    {chap node}
+    {normal_text:chap node}
    *line_arg C2
    |EXTRA
    |node_content:A{0|0}
    |normalized:{Top}
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@subsection C1 l13 {subsection}
  |EXTRA
@@ -116,7 +116,7 @@ $result_tree_text{'nodes_after_top_before_section_texi2html_chapter'} = '*docume
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {subsection}
+    {normal_text:subsection}
     {spaces_after_argument:\\n}
 ';
 

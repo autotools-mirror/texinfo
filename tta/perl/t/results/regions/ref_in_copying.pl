@@ -21,14 +21,14 @@ $result_tree_text{'ref_in_copying'} = '*document_root C5
       |EXTRA
       |node_content:A{0|0}
       |normalized:{GFDL}
-       {GFDL}
-     {\\n}
+       {normal_text:GFDL}
+     {normal_text:\\n}
     *@end C1 l3
     |EXTRA
     |text_arg:{copying}
      *line_arg C3
       {spaces_before_argument: }
-      {copying}
+      {normal_text:copying}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
  *@node C1 l5 {Top}
@@ -39,7 +39,7 @@ $result_tree_text{'ref_in_copying'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C6 l6 {top}
  |EXTRA
@@ -48,7 +48,7 @@ $result_tree_text{'ref_in_copying'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@insertcopying C1 l8
@@ -67,17 +67,17 @@ $result_tree_text{'ref_in_copying'} = '*document_root C5
     |EXTRA
     |node_content:A{0|0}
     |normalized:{GFDL}
-     {GFDL}
+     {normal_text:GFDL}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l12
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l14 {GFDL}
@@ -88,7 +88,7 @@ $result_tree_text{'ref_in_copying'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {GFDL}
+    {normal_text:GFDL}
     {spaces_after_argument:\\n}
  *@chapter C2 l15 {GFDL}
  |EXTRA
@@ -98,7 +98,7 @@ $result_tree_text{'ref_in_copying'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {GFDL}
+    {normal_text:GFDL}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
 ';

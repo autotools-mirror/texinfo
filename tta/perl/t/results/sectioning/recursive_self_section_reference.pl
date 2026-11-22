@@ -19,7 +19,7 @@ $result_tree_text{'recursive_self_section_reference'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {sharp}
+    {normal_text:sharp}
     {spaces_after_argument:\\n}
  *@chapter C1 l2 {@ref{sharp} tuple}
  |EXTRA
@@ -34,8 +34,8 @@ $result_tree_text{'recursive_self_section_reference'} = '*document_root C3
      |EXTRA
      |node_content:A{0|0}
      |normalized:{sharp}
-      {sharp}
-    { tuple}
+      {normal_text:sharp}
+    {normal_text: tuple}
     {spaces_after_argument:\\n}
 ';
 

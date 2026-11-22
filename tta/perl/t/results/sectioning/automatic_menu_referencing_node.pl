@@ -19,7 +19,7 @@ $result_tree_text{'automatic_menu_referencing_node'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l2 {top}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'automatic_menu_referencing_node'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l4 {Chapter}
@@ -39,7 +39,7 @@ $result_tree_text{'automatic_menu_referencing_node'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chapter}
+    {normal_text:Chapter}
     {spaces_after_argument:\\n}
  *@chapter C2 l5 {chap}
  |EXTRA
@@ -49,7 +49,7 @@ $result_tree_text{'automatic_menu_referencing_node'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l7 {section}
@@ -60,7 +60,7 @@ $result_tree_text{'automatic_menu_referencing_node'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {section}
+    {normal_text:section}
     {spaces_after_argument:\\n}
  *@section C1 l8 {sec}
  |EXTRA
@@ -70,7 +70,7 @@ $result_tree_text{'automatic_menu_referencing_node'} = '*document_root C7
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {sec}
+    {normal_text:sec}
     {spaces_after_argument:\\n}
 ';
 

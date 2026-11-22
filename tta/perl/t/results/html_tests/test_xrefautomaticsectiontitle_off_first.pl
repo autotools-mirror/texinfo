@@ -19,7 +19,7 @@ $result_tree_text{'test_xrefautomaticsectiontitle_off_first'} = '*document_root 
    |misc_args:A{off}
     *line_arg C3
      {spaces_before_argument: }
-     {off}
+     {normal_text:off}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *@node C1 l4 {Top}
@@ -30,7 +30,7 @@ $result_tree_text{'test_xrefautomaticsectiontitle_off_first'} = '*document_root 
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C4 l5 {top}
  |EXTRA
@@ -39,7 +39,7 @@ $result_tree_text{'test_xrefautomaticsectiontitle_off_first'} = '*document_root 
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C3 l7
@@ -52,17 +52,17 @@ $result_tree_text{'test_xrefautomaticsectiontitle_off_first'} = '*document_root 
     |EXTRA
     |node_content:A{0|0}
     |normalized:{chap}
-     {chap}
+     {normal_text:chap}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l9
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l11 {chap}
@@ -73,7 +73,7 @@ $result_tree_text{'test_xrefautomaticsectiontitle_off_first'} = '*document_root 
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
  *@chapter C7 l12 {chapter}
  |EXTRA
@@ -83,7 +83,7 @@ $result_tree_text{'test_xrefautomaticsectiontitle_off_first'} = '*document_root 
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter}
+    {normal_text:chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
@@ -92,8 +92,8 @@ $result_tree_text{'test_xrefautomaticsectiontitle_off_first'} = '*document_root 
     |EXTRA
     |node_content:A{0|0}
     |normalized:{chap}
-     {chap}
-   {.\\n}
+     {normal_text:chap}
+   {normal_text:.\\n}
   {empty_line:\\n}
   *@xrefautomaticsectiontitle C1 l16
   |EXTRA
@@ -101,7 +101,7 @@ $result_tree_text{'test_xrefautomaticsectiontitle_off_first'} = '*document_root 
   |misc_args:A{on}
    *line_arg C3
     {spaces_before_argument: }
-    {on}
+    {normal_text:on}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
@@ -110,8 +110,8 @@ $result_tree_text{'test_xrefautomaticsectiontitle_off_first'} = '*document_root 
     |EXTRA
     |node_content:A{0|0}
     |normalized:{chap}
-     {chap}
-   {.\\n}
+     {normal_text:chap}
+   {normal_text:.\\n}
 ';
 
 

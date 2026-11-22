@@ -20,14 +20,14 @@ $result_tree_text{'indent_before_macro_definition_and_other'} = '*document_root 
   |global_command_number:{1}
    *line_arg C3
     {spaces_before_argument: }
-    {someone}
+    {normal_text:someone}
     {spaces_after_argument:\\n}
   *@image C1 l4
   |EXTRA
   |input_encoding_name:{utf-8}
    *brace_arg C1
-    {my_image}
-  {\\n}
+    {normal_text:my_image}
+  {normal_text:\\n}
   *@vskip C1
    *line_arg C3
     {spaces_before_argument: }
@@ -46,40 +46,40 @@ $result_tree_text{'indent_before_macro_definition_and_other'} = '*document_root 
     >|text_arg:{ifnothtml}
      >*line_arg C3
       >{spaces_before_argument: }
-      >{ifnothtml}
+      >{normal_text:ifnothtml}
       >{spaces_after_argument:\\n}
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *rawpreformatted C1
-    {<code>in c</code>\\n}
+    {normal_text:<code>in c</code>\\n}
    *@end C1 l8
    |EXTRA
    |text_arg:{html}
     *line_arg C3
      {spaces_before_argument: }
-     {html}
+     {normal_text:html}
      {spaces_after_argument:\\n}
   *@setchapternewpage C1 l12
   |EXTRA
   |misc_args:A{on}
    *line_arg C3
     {spaces_before_argument: }
-    {on}
+    {normal_text:on}
     {spaces_after_argument:\\n}
   *@anchor C1 l13
   |EXTRA
   |identifier:{spot}
   |is_target:{1}
    *brace_arg C1
-    {spot}
+    {normal_text:spot}
   {spaces_after_close_brace:\\n}
   *index_entry_command@cpindex C1 l14
   |EXTRA
   |index_entry:I{cp,1}
    *line_arg C3
     {spaces_before_argument: }
-    {ei}
+    {normal_text:ei}
     {spaces_after_argument:\\n}
   *@macro C3 l15
   |EXTRA
@@ -93,12 +93,12 @@ $result_tree_text{'indent_before_macro_definition_and_other'} = '*document_root 
    |text_arg:{macro}
     *line_arg C3
      {spaces_before_argument: }
-     {macro}
+     {normal_text:macro}
      {spaces_after_argument:\\n}
   *paragraph C1
   |EXTRA
   |indent:{1}
-   {HHERE\\n}
+   {normal_text:HHERE\\n}
 ';
 
 

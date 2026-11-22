@@ -12,25 +12,25 @@ $result_tree_text{'protected_space_end_line'} = '*document_root C1
  *before_node_section C8
   *preamble_before_content
   *paragraph C1
-   {First para\\n}
+   {normal_text:First para\\n}
   {empty_line:\\n}
   *paragraph C5
-   {This is a very simple texi manual followed by tab a <>.\\n}
-   {followed by }
+   {normal_text:This is a very simple texi manual followed by tab a <>.\\n}
+   {normal_text:followed by }
    *@ 
    *@ 
-   {newline.\\n}
+   {normal_text:newline.\\n}
   {empty_line:\\n}
   *paragraph C6
-   {This is a very simple texi manual followed by tab a <>.\\n}
-   {followed }
+   {normal_text:This is a very simple texi manual followed by tab a <>.\\n}
+   {normal_text:followed }
    *@ 
    *@ 
    *@ 
-   {newline.\\n}
+   {normal_text:newline.\\n}
   {empty_line:\\n}
   *paragraph C12
-   {This is a very simple texi manual followed by tab a <>. }
+   {normal_text:This is a very simple texi manual followed by tab a <>. }
    *@ 
    *@ 
    *@ 
@@ -41,7 +41,7 @@ $result_tree_text{'protected_space_end_line'} = '*document_root C1
    *@ 
    *@ 
    *@\\n
-   {text.\\n}
+   {normal_text:text.\\n}
 ';
 
 

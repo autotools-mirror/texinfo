@@ -19,7 +19,7 @@ $result_tree_text{'empty_index_entry'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C5 l3 {chap}
@@ -31,7 +31,7 @@ $result_tree_text{'empty_index_entry'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@deffn C2 l5
@@ -53,7 +53,7 @@ $result_tree_text{'empty_index_entry'} = '*document_root C3
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
-     {deffn}
+     {normal_text:deffn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@printindex C1 l8
@@ -62,7 +62,7 @@ $result_tree_text{'empty_index_entry'} = '*document_root C3
   |misc_args:A{fn}
    *line_arg C3
     {spaces_before_argument: }
-    {fn}
+    {normal_text:fn}
     {spaces_after_argument:\\n}
 ';
 

@@ -17,7 +17,7 @@ $result_tree_text{'appendix_translated'} = '*document_root C4
    |text_arg:{es}
     *line_arg C3
      {spaces_before_argument: }
-     {es}
+     {normal_text:es}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *@node C1 l3 {Top}
@@ -28,7 +28,7 @@ $result_tree_text{'appendix_translated'} = '*document_root C4
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l4 {top}
  |EXTRA
@@ -37,7 +37,7 @@ $result_tree_text{'appendix_translated'} = '*document_root C4
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@appendix C3 l6 {dernier}
@@ -50,7 +50,7 @@ $result_tree_text{'appendix_translated'} = '*document_root C4
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {dernier}
+    {normal_text:dernier}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@contents C1 l8

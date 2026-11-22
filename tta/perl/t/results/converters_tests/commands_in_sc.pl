@@ -19,7 +19,7 @@ $result_tree_text{'commands_in_sc'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C2 l2 {commands in sc}
  |EXTRA
@@ -28,7 +28,7 @@ $result_tree_text{'commands_in_sc'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {commands in sc}
+    {normal_text:commands in sc}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C1 l4 {chap}
@@ -39,7 +39,7 @@ $result_tree_text{'commands_in_sc'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
  *@chapter C3 l5 {chap}
  |EXTRA
@@ -49,60 +49,60 @@ $result_tree_text{'commands_in_sc'} = '*document_root C5
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chap}
+    {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
    *@sc C1 l7
     *brace_container C38
-     {a }
+     {normal_text:a }
      *@~ C1 l7
       *following_arg C1
-       {n}
-     { }
+       {normal_text:n}
+     {normal_text: }
      *@aa C1 l7
       *brace_container
-     { }
+     {normal_text: }
      *@TeX C1 l7
       *brace_container
-     { }
+     {normal_text: }
      *@image C1 l7
      |EXTRA
      |input_encoding_name:{utf-8}
       *brace_arg C1
-       {myimage}
-     { }
+       {normal_text:myimage}
+     {normal_text: }
      *@ref C1 l7
       *brace_arg C1
       |EXTRA
       |node_content:A{0|0}
       |normalized:{chap}
-       {chap}
-     { }
+       {normal_text:chap}
+     {normal_text: }
      *@xref C1 l7
       *brace_arg C1
       |EXTRA
       |node_content:A{0|0}
       |normalized:{_0028f_0029node}
-       {(f)node}
-     {\\n}
+       {normal_text:(f)node}
+     {normal_text:\\n}
      *@ref C4 l8
       *brace_arg C1
       |EXTRA
       |node_content:A{0|0}
-       {ext}
+       {normal_text:ext}
       *brace_arg
       *brace_arg C1
-       {name}
+       {normal_text:name}
       *brace_arg C1
-       {argf}
-     { }
+       {normal_text:argf}
+     {normal_text: }
      *@inlinefmtifelse C3 l8
      |EXTRA
      |expand_index:{2}
      |format:{latex}
       *brace_arg C1
-       {latex}
+       {normal_text:latex}
       *elided_brace_command_arg C1
        {raw:}
       *brace_arg C1
@@ -111,72 +111,72 @@ $result_tree_text{'commands_in_sc'} = '*document_root C5
          {verb_delimiter:!}
          {raw:inverb}
          {verb_delimiter:!}
-     { }
+     {normal_text: }
      *@anchor C1 l8
      |EXTRA
      |identifier:{inanchor}
      |is_target:{1}
       *brace_arg C1
-       {inanchor}
+       {normal_text:inanchor}
      {spaces_after_close_brace: }
      *@hyphenation C1 l8
      |EXTRA
      |global_command_number:{1}
       *brace_arg C1
-       {hyphena-te}
+       {normal_text:hyphena-te}
      {spaces_after_close_brace:\\n}
      *@U C1 l9
       *brace_arg C1
-       {00ff}
-     { }
+       {normal_text:00ff}
+     {normal_text: }
      *@math C1 l9
       *brace_arg C1
-       {ma+th}
-     { }
+       {normal_text:ma+th}
+     {normal_text: }
      *@footnote C1 l9
      |EXTRA
      |global_command_number:{1}
       *brace_command_context C1
        *paragraph C1
-        {infootnote}
-     { }
+        {normal_text:infootnote}
+     {normal_text: }
      *@url C1 l9
       *brace_arg C1
-       {la}
-     { }
+       {normal_text:la}
+     {normal_text: }
      *@url C2 l9
       *brace_arg C1
-       {a}
+       {normal_text:a}
       *brace_arg C1
-       {b}
-     { }
+       {normal_text:b}
+     {normal_text: }
      *@url C2 l9
       *brace_arg C1
        {spaces_before_argument: }
       *brace_arg C1
-       {lb}
-     {\\n}
+       {normal_text:lb}
+     {normal_text:\\n}
      *@url C3 l10
       *brace_arg
       *brace_arg
       *brace_arg C1
-       {c}
-     { }
+       {normal_text:c}
+     {normal_text: }
      *@email C2 l10
       *brace_arg C3
-       {a}
+       {normal_text:a}
        *@@
-       {c}
+       {normal_text:c}
       *brace_arg C2
        {spaces_before_argument: }
-       {e}
-     { }
+       {normal_text:e}
+     {normal_text: }
      *@abbr C2 l10
       *brace_arg C1
-       {ab}
+       {normal_text:ab}
       *brace_arg C2
        {spaces_before_argument: }
-       {d}
+       {normal_text:d}
 ';
 
 

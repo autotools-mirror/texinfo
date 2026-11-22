@@ -27,7 +27,7 @@ NodeForward: [U1]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Top}
+    {normal_text:Top}
     {spaces_after_argument:\\n}
  *@top C4 l2 {top}
  |EXTRA
@@ -36,7 +36,7 @@ NodeForward: [U1]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {top}
+    {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@menu C4 l4
@@ -49,28 +49,28 @@ NodeForward: [U1]
     |EXTRA
     |node_content:A{0|0}
     |normalized:{chapter-node}
-     {chapter node}
+     {normal_text:chapter node}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *menu_entry C4 l6
     {menu_entry_leading_text:* }
     *menu_entry_node C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{part-chapter-node}
-     {part chapter node}
+     {normal_text:part chapter node}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
-      {\\n}
+      {normal_text:\\n}
    *@end C1 l7
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
-     {menu}
+     {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
 U1 unit{C2}{S:@chapter 1 chapter node}{n:chapter node}
@@ -95,7 +95,7 @@ NodeBack: [U0]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter node}
+    {normal_text:chapter node}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@chapter C2 l11 {chapter node}
@@ -106,7 +106,7 @@ NodeBack: [U0]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter node}
+    {normal_text:chapter node}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
 U2 unit{C3}{S:@chapter 2 chapter with part node}{n:part chapter node}
@@ -126,7 +126,7 @@ NodeBack: [U1]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {part chapter node}
+    {normal_text:part chapter node}
     {spaces_after_argument:\\n}
  *@part C2 l14 {part}
  |EXTRA
@@ -136,7 +136,7 @@ NodeBack: [U1]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {part}
+    {normal_text:part}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@chapter C3 l16 {chapter with part node}
@@ -147,7 +147,7 @@ NodeBack: [U1]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {chapter with part node}
+    {normal_text:chapter with part node}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@contents C1 l18

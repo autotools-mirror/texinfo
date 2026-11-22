@@ -19,12 +19,12 @@ $result_tree_text{'ref_in_style_command'} = '*document_root C1
       |EXTRA
       |node_content:A{0|0}
       |normalized:{other-node}
-       {other node}
+       {normal_text:other node}
       *brace_arg
       *brace_arg C2
        {spaces_before_argument: }
-       {manula}
-   {.}
+       {normal_text:manula}
+   {normal_text:.}
 ';
 
 

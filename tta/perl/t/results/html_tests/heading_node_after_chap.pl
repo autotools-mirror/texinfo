@@ -14,7 +14,7 @@ $result_tree_text{'heading_node_after_chap'} = '*document_root C6
    *@settitle C1 l1
     *line_arg C3
      {spaces_before_argument: }
-     {heading node after chap}
+     {normal_text:heading node after chap}
      {spaces_after_argument:\\n}
  *@node C1 l2 {Cap 1}
  |EXTRA
@@ -24,7 +24,7 @@ $result_tree_text{'heading_node_after_chap'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Cap 1}
+    {normal_text:Cap 1}
     {spaces_after_argument:\\n}
  *@chapter C5 l3 {Chapter One}
  |EXTRA
@@ -34,7 +34,7 @@ $result_tree_text{'heading_node_after_chap'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chapter One}
+    {normal_text:Chapter One}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@c C1
@@ -48,8 +48,8 @@ $result_tree_text{'heading_node_after_chap'} = '*document_root C6
     |EXTRA
     |node_content:A{0|0}
     |normalized:{Node-1}
-     {Node 1}
-   {\\n}
+     {normal_text:Node 1}
+   {normal_text:\\n}
   {empty_line:\\n}
  *@node C1 l8 {Cap 2}
  |EXTRA
@@ -59,7 +59,7 @@ $result_tree_text{'heading_node_after_chap'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Cap 2}
+    {normal_text:Cap 2}
     {spaces_after_argument:\\n}
  *@chapter C2 l9 {Chapter Two}
  |EXTRA
@@ -69,7 +69,7 @@ $result_tree_text{'heading_node_after_chap'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Chapter Two}
+    {normal_text:Chapter Two}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *@node C2 l11 {Node 1}
@@ -80,7 +80,7 @@ $result_tree_text{'heading_node_after_chap'} = '*document_root C6
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    {Node 1}
+    {normal_text:Node 1}
     {spaces_after_argument:\\n}
   *@heading C1 l12
   |EXTRA
@@ -88,7 +88,7 @@ $result_tree_text{'heading_node_after_chap'} = '*document_root C6
   |heading_number:{1}
    *line_arg C3
     {spaces_before_argument: }
-    {Topic}
+    {normal_text:Topic}
     {spaces_after_argument:\\n}
 ';
 

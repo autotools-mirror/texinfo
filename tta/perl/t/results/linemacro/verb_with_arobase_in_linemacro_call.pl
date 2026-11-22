@@ -23,7 +23,7 @@ $result_tree_text{'verb_with_arobase_in_linemacro_call'} = '*document_root C1
     |text_arg:{linemacro}
      *line_arg C3
       {spaces_before_argument: }
-      {linemacro}
+      {normal_text:linemacro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    >SOURCEMARKS
@@ -38,8 +38,8 @@ $result_tree_text{'verb_with_arobase_in_linemacro_call'} = '*document_root C1
      {verb_delimiter:@}
      {raw: in verb }
      {verb_delimiter:@}
-   { and next\\n}
-   {,  }
+   {normal_text: and next\\n}
+   {normal_text:,  }
    >SOURCEMARKS
    >linemacro_expansion<end;1><p:3>
 ';

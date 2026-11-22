@@ -25,16 +25,16 @@ $result_tree_text{'empty_listoffloats_with_floats'} = '*document_root C1
      {spaces_before_argument: }
     *block_line_arg C3
      {spaces_before_argument: }
-     {label1}
+     {normal_text:label1}
      {spaces_after_argument:\\n}
    *paragraph C1
-    {Label no caption.\\n}
+    {normal_text:Label no caption.\\n}
    *@end C1 l4
    |EXTRA
    |text_arg:{float}
     *line_arg C3
      {spaces_before_argument: }
-     {float}
+     {normal_text:float}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@float C5 l6
@@ -49,21 +49,21 @@ $result_tree_text{'empty_listoffloats_with_floats'} = '*document_root C1
      {spaces_before_argument: }
     *block_line_arg C3
      {spaces_before_argument: }
-     {label2}
+     {normal_text:label2}
      {spaces_after_argument:\\n}
    *paragraph C1
-    {Label and caption.\\n}
+    {normal_text:Label and caption.\\n}
    *@caption C1 l8
     *brace_command_context C1
      *paragraph C1
-      {caption with label}
+      {normal_text:caption with label}
    {spaces_after_close_brace:\\n}
    *@end C1 l9
    |EXTRA
    |text_arg:{float}
     *line_arg C3
      {spaces_before_argument: }
-     {float}
+     {normal_text:float}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@float C3 l11
@@ -74,13 +74,13 @@ $result_tree_text{'empty_listoffloats_with_floats'} = '*document_root C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C1
-    {no label no caption\\n}
+    {normal_text:no label no caption\\n}
    *@end C1 l13
    |EXTRA
    |text_arg:{float}
     *line_arg C3
      {spaces_before_argument: }
-     {float}
+     {normal_text:float}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@float C5 l15
@@ -91,18 +91,18 @@ $result_tree_text{'empty_listoffloats_with_floats'} = '*document_root C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C1
-    {no label caption\\n}
+    {normal_text:no label caption\\n}
    *@caption C1 l17
     *brace_command_context C1
      *paragraph C1
-      {caption no label}
+      {normal_text:caption no label}
    {spaces_after_close_brace:\\n}
    *@end C1 l18
    |EXTRA
    |text_arg:{float}
     *line_arg C3
      {spaces_before_argument: }
-     {float}
+     {normal_text:float}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *@listoffloats C1 l20

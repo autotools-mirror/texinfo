@@ -23,22 +23,22 @@ $result_tree_text{'multiple_defline'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {Funoid}
+       {normal_text:Funoid}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {foo}
+       {normal_text:foo}
      {spaces: }
      {delimiter:(}
      *def_arg C1
       *def_line_arg C1
-       {bar}
+       {normal_text:bar}
      {delimiter:)}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C2
-     {description1 description1 description1 description1 description1\\n}
-     {description1 description1 description1 description1 description1\\n}
+     {normal_text:description1 description1 description1 description1 description1\\n}
+     {normal_text:description1 description1 description1 description1 description1\\n}
    *@defline C1 l5
    |EXTRA
    |def_command:{defline}
@@ -47,33 +47,33 @@ $result_tree_text{'multiple_defline'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C1
-       {Funnyoid}
+       {normal_text:Funnyoid}
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       {foo2}
+       {normal_text:foo2}
      {spaces: }
      {delimiter:(}
      *def_arg C1
       *def_line_arg C1
-       {bar2}
+       {normal_text:bar2}
      {delimiter:,}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       {baz2}
+       {normal_text:baz2}
      {delimiter:)}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C2
-     {description2 description2 description2 description2 description2\\n}
-     {description2 description2 description2 description2 description2\\n}
+     {normal_text:description2 description2 description2 description2 description2\\n}
+     {normal_text:description2 description2 description2 description2 description2\\n}
    *@end C1 l8
    |EXTRA
    |text_arg:{defblock}
     *line_arg C3
      {spaces_before_argument: }
-     {defblock}
+     {normal_text:defblock}
      {spaces_after_argument:\\n}
 ';
 
