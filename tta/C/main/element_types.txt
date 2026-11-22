@@ -40,8 +40,7 @@ index_entry_command                    with_command
 definfoenclose_command                 with_command
 
 # only in C.  These types should only be used in code to set the
-# type at the element creation, except maybe to help with the handling
-# of C specific data
+# type at the element creation.
 nobrace_command                        c_only
 line_command                           c_only
 block_command                          c_only

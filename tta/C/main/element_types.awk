@@ -32,7 +32,7 @@ BEGIN {
     print "#include \"types_data.h\""                                    > TDC
     print ""                                                             > TDC
     print "const TYPE_DATA type_data[] = {"                              > TDC
-    print "{0, 0, 0},"                                                   > TDC
+    print "{0, 0},"                                                   > TDC
 }
 
 !/^$/ && !/^#/ {

@@ -3,7 +3,7 @@
 #include "types_data.h"
 
 const TYPE_DATA type_data[] = {
-{0, 0, 0},
+{0, 0},
 {"index_entry_command", TF_with_command},
 {"definfoenclose_command", TF_with_command},
 {"nobrace_command", TF_c_only},
