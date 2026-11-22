@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'comma_value_in_macro_arg'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C4
-   *@set C1
+   *normal_command@set C1
    |EXTRA
    |misc_args:A{comma|,}
     *line_arg C3
@@ -19,14 +19,14 @@ $result_tree_text{'comma_value_in_macro_arg'} = '*document_root C1
      {rawline_text:comma ,}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@macro C3 l3
+   *normal_command@macro C3 l3
    |EXTRA
    |formal_args:A{arg1|arg2}
    |macro_name:{macro1}
     *arguments_line C1
      {macro_line: macro1 { arg1 , arg2 }\\n}
     {raw:result: @emph{\\arg1\\} protected \\\\ -> \\\\arg1\\\\ @emph{\\arg2\\}\\n}
-    *@end C1 l5
+    *normal_command@end C1 l5
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -43,17 +43,17 @@ $result_tree_text{'comma_value_in_macro_arg'} = '*document_root C1
      >*brace_arg C2
       >{spaces_before_argument: }
       >{macro_call_arg_text:arg1 @value{comma} arg2 }
-   *@emph C1 l7:@macro1
+   *normal_command@emph C1 l7:@macro1
     *brace_container C1
      {normal_text:arg1 , arg2 }
      >SOURCEMARKS
      >value_expansion<start;1><p:5>{,}
-      >*@value C1
+      >*normal_command@value C1
        >*brace_container C1
         >{normal_text:comma}
      >value_expansion<end;1><p:6>
    {normal_text: protected \\ -> \\arg1\\ }
-   *@emph C1 l7:@macro1
+   *normal_command@emph C1 l7:@macro1
    >SOURCEMARKS
    >macro_expansion<end;1>
     *brace_container

@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'example_class'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@example C3 l1
+  *normal_command@example C3 l1
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
@@ -19,27 +19,27 @@ $result_tree_text{'example_class'} = '*document_root C1
      {spaces_after_argument:\\n}
    *preformatted C21
     {normal_text:foreach my $unclosed_file (keys(%unclosed_files)) }
-    *@{
+    *normal_command@{
     {normal_text:\\n}
     {normal_text:  if (!close($unclosed_files}
-    *@{
+    *normal_command@{
     {normal_text:$unclosed_file}
-    *@}
+    *normal_command@}
     {normal_text:)) }
-    *@{
+    *normal_command@{
     {normal_text:\\n}
     {normal_text:    warn(sprintf("%s: error on closing %s: %s\\n",\\n}
     {normal_text:                     $real_command_name, $unclosed_file, $!));\\n}
     {normal_text:    $error_count++;\\n}
     {normal_text:    _exit($error_count, \\}
-    *@@
+    *normal_command@@
     {normal_text:opened_files);\\n}
     {normal_text:  }
-    *@}
+    *normal_command@}
     {normal_text:\\n}
-    *@}
+    *normal_command@}
     {normal_text:\\n}
-   *@end C1 l10
+   *normal_command@end C1 l10
    |EXTRA
    |text_arg:{example}
     *line_arg C3

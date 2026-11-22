@@ -14,7 +14,7 @@ $result_tree_text{'include_with_setfilename'} = '*document_root C1
    {normal_text:}
    >SOURCEMARKS
    >include<start;1>
-    >*@include C1 l1
+    >*normal_command@include C1 l1
     >|EXTRA
     >|text_arg:{included_file_with_setfilename.texi}
      >*line_arg C3
@@ -22,7 +22,7 @@ $result_tree_text{'include_with_setfilename'} = '*document_root C1
       >{normal_text:included_file_with_setfilename.texi}
       >{spaces_after_argument: \\n}
    >setfilename<1>
-    >*@setfilename C1 included_file_with_setfilename.texi:l1
+    >*normal_command@setfilename C1 included_file_with_setfilename.texi:l1
     >|EXTRA
     >|text_arg:{included_file.info}
      >*line_arg C3
@@ -35,7 +35,7 @@ $result_tree_text{'include_with_setfilename'} = '*document_root C1
     >SOURCEMARKS
     >include<end;1><p:18>
   *preamble_before_content C1
-   *@setfilename C1 l2
+   *normal_command@setfilename C1 l2
    |EXTRA
    |text_arg:{include_with_setfilename.info}
     *line_arg C3

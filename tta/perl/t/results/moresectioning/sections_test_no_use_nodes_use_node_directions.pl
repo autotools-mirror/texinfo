@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'sections_test_no_use_nodes_use_node_directions'} = '*document_root C12
  *before_node_section C1
   *preamble_before_content
- *@top C2 l1 {top}
+ *normal_command@top C2 l1 {top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -23,7 +23,7 @@ $result_tree_text{'sections_test_no_use_nodes_use_node_directions'} = '*document
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@chapter C2 l3 {chapter}
+ *normal_command@chapter C2 l3 {chapter}
  |EXTRA
  |identifier:{chapter}
  |is_target:{1}
@@ -36,7 +36,7 @@ $result_tree_text{'sections_test_no_use_nodes_use_node_directions'} = '*document
     {normal_text:chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@section C2 l5 {section}
+ *normal_command@section C2 l5 {section}
  |EXTRA
  |identifier:{section}
  |is_target:{1}
@@ -49,7 +49,7 @@ $result_tree_text{'sections_test_no_use_nodes_use_node_directions'} = '*document
     {normal_text:section}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@subsection C2 l7 {subsection}
+ *normal_command@subsection C2 l7 {subsection}
  |EXTRA
  |identifier:{subsection}
  |is_target:{1}
@@ -62,7 +62,7 @@ $result_tree_text{'sections_test_no_use_nodes_use_node_directions'} = '*document
     {normal_text:subsection}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@subsubsection C2 l9 {subsubsection}
+ *normal_command@subsubsection C2 l9 {subsubsection}
  |EXTRA
  |identifier:{subsubsection}
  |is_target:{1}
@@ -75,7 +75,7 @@ $result_tree_text{'sections_test_no_use_nodes_use_node_directions'} = '*document
     {normal_text:subsubsection}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@part C2 l11 {part}
+ *normal_command@part C2 l11 {part}
  |EXTRA
  |global_command_number:{1}
  |section_level:{0}
@@ -86,7 +86,7 @@ $result_tree_text{'sections_test_no_use_nodes_use_node_directions'} = '*document
     {normal_text:part}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@chapter C2 l13 {chapter in part}
+ *normal_command@chapter C2 l13 {chapter in part}
  |EXTRA
  |identifier:{chapter-in-part}
  |is_target:{1}
@@ -99,7 +99,7 @@ $result_tree_text{'sections_test_no_use_nodes_use_node_directions'} = '*document
     {normal_text:chapter in part}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@chapter C2 l15 {second chapter in part}
+ *normal_command@chapter C2 l15 {second chapter in part}
  |EXTRA
  |identifier:{second-chapter-in-part}
  |is_target:{1}
@@ -112,7 +112,7 @@ $result_tree_text{'sections_test_no_use_nodes_use_node_directions'} = '*document
     {normal_text:second chapter in part}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@unnumbered C2 l17 {unnumbered}
+ *normal_command@unnumbered C2 l17 {unnumbered}
  |EXTRA
  |identifier:{unnumbered}
  |is_target:{1}
@@ -124,7 +124,7 @@ $result_tree_text{'sections_test_no_use_nodes_use_node_directions'} = '*document
     {normal_text:unnumbered}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@appendix C2 l19 {appendix}
+ *normal_command@appendix C2 l19 {appendix}
  |EXTRA
  |identifier:{appendix}
  |is_target:{1}
@@ -137,7 +137,7 @@ $result_tree_text{'sections_test_no_use_nodes_use_node_directions'} = '*document
     {normal_text:appendix}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@appendixsec C1 l21 {appendixsec}
+ *normal_command@appendixsec C1 l21 {appendixsec}
  |EXTRA
  |identifier:{appendixsec}
  |is_target:{1}

@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'contain_plain_text_nestings'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'contain_plain_text_nestings'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l2 {top}
+ *normal_command@top C2 l2 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -31,7 +31,7 @@ $result_tree_text{'contain_plain_text_nestings'} = '*document_root C5
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l4 {chap}
+ *normal_command@node C1 l4 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -42,7 +42,7 @@ $result_tree_text{'contain_plain_text_nestings'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:chap}
     {spaces_after_argument:\\n}
- *@chapter C8 l5 {Chap}
+ *normal_command@chapter C8 l5 {Chap}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -55,25 +55,25 @@ $result_tree_text{'contain_plain_text_nestings'} = '*document_root C5
   {empty_line:\\n}
   *paragraph C8
    {normal_text:Text }
-   *@w C1 l7
+   *normal_command@w C1 l7
     *brace_container C2
-     *@code C1 l7
+     *normal_command@code C1 l7
       *brace_container C1
        {normal_text:code in w}
      {normal_text: text}
    {normal_text:.\\n}
-   *@hyphenation C1 l8
+   *normal_command@hyphenation C1 l8
    |EXTRA
    |global_command_number:{1}
     *brace_arg C2
-     *@code C1 l8
+     *normal_command@code C1 l8
       *brace_container C1
        {normal_text:code in hyphenation}
      {normal_text: text}
    {spaces_after_close_brace:\\n}
-   *@key C1 l9
+   *normal_command@key C1 l9
     *brace_container C2
-     *@code C1 l9
+     *normal_command@code C1 l9
       *brace_container C1
        {normal_text:code in key}
      {normal_text: text}
@@ -87,24 +87,24 @@ $result_tree_text{'contain_plain_text_nestings'} = '*document_root C5
      {spaces_before_argument: }
      {normal_text:ii}
      {spaces_at_end: }
-     *@sortas C1 l10
+     *normal_command@sortas C1 l10
       *brace_arg C2
-       *@code C1 l10
+       *normal_command@code C1 l10
         *brace_container C1
          {normal_text:code in sortas}
        {normal_text: text}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@c C1
+  *normal_command@c C1
    *line_arg C3
     {spaces_before_argument: }
     {rawline_text:no warning for @ref in @w}
     {spaces_after_argument:\\n}
   *paragraph C8
    {normal_text:Text }
-   *@w C1 l13
+   *normal_command@w C1 l13
     *brace_container C2
-     *@ref C2 l13
+     *normal_command@ref C2 l13
       *brace_arg C1
       |EXTRA
       |node_content:A{0|0}
@@ -115,11 +115,11 @@ $result_tree_text{'contain_plain_text_nestings'} = '*document_root C5
        {normal_text:cross in w}
      {normal_text: text}
    {normal_text:.\\n}
-   *@hyphenation C1 l14
+   *normal_command@hyphenation C1 l14
    |EXTRA
    |global_command_number:{2}
     *brace_arg C2
-     *@ref C2 l14
+     *normal_command@ref C2 l14
       *brace_arg C1
       |EXTRA
       |node_content:A{0|0}
@@ -130,9 +130,9 @@ $result_tree_text{'contain_plain_text_nestings'} = '*document_root C5
        {normal_text:cross in hyphenation}
      {normal_text: text}
    {spaces_after_close_brace:\\n}
-   *@key C1 l15
+   *normal_command@key C1 l15
     *brace_container C2
-     *@ref C2 l15
+     *normal_command@ref C2 l15
       *brace_arg C1
       |EXTRA
       |node_content:A{0|0}
@@ -152,9 +152,9 @@ $result_tree_text{'contain_plain_text_nestings'} = '*document_root C5
      {spaces_before_argument: }
      {normal_text:ii}
      {spaces_at_end: }
-     *@sortas C1 l16
+     *normal_command@sortas C1 l16
       *brace_arg C2
-       *@ref C2 l16
+       *normal_command@ref C2 l16
         *brace_arg C1
         |EXTRA
         |node_content:A{0|0}
@@ -166,7 +166,7 @@ $result_tree_text{'contain_plain_text_nestings'} = '*document_root C5
        {normal_text: text}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@printindex C1 l18
+  *normal_command@printindex C1 l18
   |EXTRA
   |global_command_number:{1}
   |misc_args:A{cp}

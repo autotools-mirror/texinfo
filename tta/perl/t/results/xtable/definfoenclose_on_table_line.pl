@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'definfoenclose_on_table_line'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C2
-   *@definfoenclose C1 l1
+   *normal_command@definfoenclose C1 l1
    |EXTRA
    |misc_args:A{phi|:|:}
     *line_arg C3
@@ -19,7 +19,7 @@ $result_tree_text{'definfoenclose_on_table_line'} = '*document_root C1
      {normal_text:phi,:,:}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
-  *@table C3 l3
+  *normal_command@table C3 l3
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
@@ -30,12 +30,12 @@ $result_tree_text{'definfoenclose_on_table_line'} = '*document_root C1
      {spaces_after_argument:\\n}
    *table_entry C2
     *table_term C2
-     *@item C1 l4
+     *normal_command@item C1 l4
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:item}
        {spaces_after_argument:\\n}
-     *@itemx C1 l5
+     *normal_command@itemx C1 l5
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:item x}
@@ -44,7 +44,7 @@ $result_tree_text{'definfoenclose_on_table_line'} = '*document_root C1
      {empty_line:\\n}
      *paragraph C1
       {normal_text:table content.\\n}
-   *@end C1 l8
+   *normal_command@end C1 l8
    |EXTRA
    |text_arg:{table}
     *line_arg C3

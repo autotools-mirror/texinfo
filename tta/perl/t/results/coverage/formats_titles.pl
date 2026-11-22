@@ -11,20 +11,20 @@ use Encode;
 $result_tree_text{'formats_titles'} = '*document_root C1
  *before_node_section C10
   *preamble_before_content
-  *@itemize C4 l1
+  *normal_command@itemize C4 l1
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *before_item C1
     *paragraph C1
      {normal_text:before first itemize\\n}
-   *@item C2 l3
+   *normal_command@item C2 l3
    |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:item\\n}
-   *@end C1 l4
+   *normal_command@end C1 l4
    |EXTRA
    |text_arg:{itemize}
     *line_arg C3
@@ -32,20 +32,20 @@ $result_tree_text{'formats_titles'} = '*document_root C1
      {normal_text:itemize}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@enumerate C4 l6
+  *normal_command@enumerate C4 l6
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *before_item C1
     *paragraph C1
      {normal_text:before first enumerate\\n}
-   *@item C2 l8
+   *normal_command@item C2 l8
    |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:enum\\n}
-   *@end C1 l9
+   *normal_command@end C1 l9
    |EXTRA
    |text_arg:{enumerate}
     *line_arg C3
@@ -53,23 +53,23 @@ $result_tree_text{'formats_titles'} = '*document_root C1
      {normal_text:enumerate}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@table C4 l11
+  *normal_command@table C4 l11
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     *@emph l11
+     *normal_command@emph l11
      {spaces_after_argument:\\n}
    *before_item C1
     *paragraph C1
      {normal_text:before first table\\n}
    *table_entry C1
     *table_term C1
-     *@item C1 l13
+     *normal_command@item C1 l13
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:tab}
        {spaces_after_argument:\\n}
-   *@end C1 l14
+   *normal_command@end C1 l14
    |EXTRA
    |text_arg:{table}
     *line_arg C3
@@ -77,25 +77,25 @@ $result_tree_text{'formats_titles'} = '*document_root C1
      {normal_text:table}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@vtable C4 l16
+  *normal_command@vtable C4 l16
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     *@asis l16
+     *normal_command@asis l16
      {spaces_after_argument:\\n}
    *before_item C1
     *paragraph C1
      {normal_text:before first vtable\\n}
    *table_entry C1
     *table_term C1
-     *@item C1 l18
+     *normal_command@item C1 l18
      |EXTRA
      |index_entry:I{vr,1}
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:vtab}
        {spaces_after_argument:\\n}
-   *@end C1 l19
+   *normal_command@end C1 l19
    |EXTRA
    |text_arg:{vtable}
     *line_arg C3
@@ -103,13 +103,13 @@ $result_tree_text{'formats_titles'} = '*document_root C1
      {normal_text:vtable}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@multitable C4 l21
+  *normal_command@multitable C4 l21
   |EXTRA
   |max_columns:{2}
    *arguments_line C1
     *block_line_arg C2
      {spaces_before_argument: }
-     *@columnfractions C1 l21
+     *normal_command@columnfractions C1 l21
      |EXTRA
      |misc_args:A{0.5|0.5}
       *line_arg C3
@@ -123,19 +123,19 @@ $result_tree_text{'formats_titles'} = '*document_root C1
     *row C2
     |EXTRA
     |row_number:{1}
-     *@item C2 l23
+     *normal_command@item C2 l23
      |EXTRA
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
        {normal_text:item multit }
-     *@tab C2 l23
+     *normal_command@tab C2 l23
      |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C1
        {normal_text:tab multit\\n}
-   *@end C1 l24
+   *normal_command@end C1 l24
    |EXTRA
    |text_arg:{multitable}
     *line_arg C3

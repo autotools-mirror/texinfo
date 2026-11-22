@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'undefined_node_filename'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content
- *@node C2 l1 {Top}
+ *normal_command@node C2 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -22,7 +22,7 @@ $result_tree_text{'undefined_node_filename'} = '*document_root C3
     {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l3 {chap Other}
+ *normal_command@node C1 l3 {chap Other}
  |EXTRA
  |identifier:{chap-Other}
  |is_target:{1}

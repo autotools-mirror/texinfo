@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'menu_entry_no_entry'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@menu C3 l1
+  *normal_command@menu C3 l1
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -20,33 +20,33 @@ $result_tree_text{'menu_entry_no_entry'} = '*document_root C1
      {normal_text:* a1:\\n}
      {normal_text:* a2:  \\n}
      {normal_text:* a1c:}
-     *@c C1
+     *normal_command@c C1
       *line_arg C3
        {spaces_before_argument: }
        {rawline_text:c}
        {spaces_after_argument:\\n}
      {normal_text:* a2c:  }
-     *@c C1
+     *normal_command@c C1
       *line_arg C3
        {spaces_before_argument: }
        {rawline_text:c}
        {spaces_after_argument:\\n}
      {normal_text:* a4}
-     *@b C1 l6
+     *normal_command@b C1 l6
       *brace_container C1
        {normal_text:a}
      {normal_text:: \\n}
      {normal_text:* a5}
-     *@b C1 l7
+     *normal_command@b C1 l7
       *brace_container C1
        {normal_text:b}
      {normal_text:: }
-     *@c C1
+     *normal_command@c C1
       *line_arg C3
        {spaces_before_argument: }
        {rawline_text:c}
        {spaces_after_argument:\\n}
-   *@end C1 l8
+   *normal_command@end C1 l8
    |EXTRA
    |text_arg:{menu}
     *line_arg C3

@@ -13,27 +13,27 @@ $result_tree_text{'accents'} = '*document_root C1
   *preamble_before_content
   *paragraph C5
    {normal_text:Valid\\n}
-   *@~ C1 l2
+   *normal_command@~ C1 l2
     *brace_container C1
-     *@TeX C1 l2
+     *normal_command@TeX C1 l2
       *brace_container
    {normal_text:. }
-   *@~ C1 l2
+   *normal_command@~ C1 l2
     *brace_container C1
-     *@@
+     *normal_command@@
    {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C5
    {normal_text:Invalid\\n}
-   *@~ C1 l5
+   *normal_command@~ C1 l5
     *brace_container C1
-     *@code C1 l5
+     *normal_command@code C1 l5
       *brace_container C1
        {normal_text:a}
    {normal_text:.  }
-   *@^ C1 l5
+   *normal_command@^ C1 l5
     *brace_container C1
-     *@anchor C1 l5
+     *normal_command@anchor C1 l5
      |EXTRA
      |identifier:{truc}
      |is_target:{1}

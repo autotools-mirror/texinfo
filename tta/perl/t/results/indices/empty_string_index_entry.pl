@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'empty_string_index_entry'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'empty_string_index_entry'} = '*document_root C3
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@node C9 l2 {chap}
+ *normal_command@node C9 l2 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -39,28 +39,28 @@ $result_tree_text{'empty_string_index_entry'} = '*document_root C3
   |index_entry:I{fn,1}
    *line_arg C3
     {spaces_before_argument: }
-    *@w C1 l4
+    *normal_command@w C1 l4
      *brace_container
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@ftable C3 l6
+  *normal_command@ftable C3 l6
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     *@code l6
+     *normal_command@code l6
      {spaces_after_argument:\\n}
    *table_entry C1
     *table_term C1
-     *@item C1 l7
+     *normal_command@item C1 l7
      |EXTRA
      |element_node:{chap}
      |index_entry:I{fn,2}
       *line_arg C3
        {spaces_before_argument: }
-       *@w C1 l7
+       *normal_command@w C1 l7
         *brace_container
        {spaces_after_argument:\\n}
-   *@end C1 l8
+   *normal_command@end C1 l8
    |EXTRA
    |text_arg:{ftable}
     *line_arg C3
@@ -68,7 +68,7 @@ $result_tree_text{'empty_string_index_entry'} = '*document_root C3
      {normal_text:ftable}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@defun C3 l10
+  *normal_command@defun C3 l10
    *def_line C1 l10
    |EXTRA
    |def_command:{defun}
@@ -85,7 +85,7 @@ $result_tree_text{'empty_string_index_entry'} = '*document_root C3
      {spaces: }
      *def_name C1
       *bracketed_arg C1 l10
-       *@w C1 l10
+       *normal_command@w C1 l10
         *brace_container
      {spaces: }
      *def_arg C1
@@ -94,7 +94,7 @@ $result_tree_text{'empty_string_index_entry'} = '*document_root C3
      *def_arg C1
       *bracketed_arg l10
      {spaces_after_argument:\\n}
-   *@defunx C1 l11
+   *normal_command@defunx C1 l11
    |EXTRA
    |def_command:{defun}
    |element_node:{chap}
@@ -110,7 +110,7 @@ $result_tree_text{'empty_string_index_entry'} = '*document_root C3
      {spaces: }
      *def_name C1
       *bracketed_arg C1 l11
-       *@w C1 l11
+       *normal_command@w C1 l11
         *brace_container
      {spaces: }
      *def_arg C1
@@ -119,7 +119,7 @@ $result_tree_text{'empty_string_index_entry'} = '*document_root C3
      *def_arg C1
       *bracketed_arg l11
      {spaces_after_argument:\\n}
-   *@end C1 l12
+   *normal_command@end C1 l12
    |EXTRA
    |text_arg:{defun}
     *line_arg C3
@@ -127,7 +127,7 @@ $result_tree_text{'empty_string_index_entry'} = '*document_root C3
      {normal_text:defun}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@printindex C1 l14
+  *normal_command@printindex C1 l14
   |EXTRA
   |global_command_number:{1}
   |misc_args:A{fn}

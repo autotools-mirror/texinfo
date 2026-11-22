@@ -13,7 +13,7 @@ $result_tree_text{'text_before_and_after_bye'} = '*document_root C3
   *preamble_before_content
   *paragraph C1
    {normal_text:Before bye }
- *@bye C1
+ *normal_command@bye C1
   *line_arg C3
    {spaces_before_argument: }
    {rawline_text:on bye line}

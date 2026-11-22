@@ -14,7 +14,7 @@ $result_tree_text{'char_utf8_latin1_in_refs'} = '*document_root C14
    {text_before_beginning:\\input texinfo\\n}
    {text_before_beginning:\\n}
   *preamble_before_content C2
-   *@documentencoding C1 char_utf8_latin1_in_refs.texi:l3
+   *normal_command@documentencoding C1 char_utf8_latin1_in_refs.texi:l3
    |EXTRA
    |global_command_number:{1}
    |input_encoding_name:{utf-8}
@@ -24,7 +24,7 @@ $result_tree_text{'char_utf8_latin1_in_refs'} = '*document_root C14
      {normal_text:utf-8}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@node C1 char_utf8_latin1_in_refs.texi:l5 {Top}
+ *normal_command@node C1 char_utf8_latin1_in_refs.texi:l5 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -35,7 +35,7 @@ $result_tree_text{'char_utf8_latin1_in_refs'} = '*document_root C14
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C6 char_utf8_latin1_in_refs.texi:l6 {accented char in latin1 in refs}
+ *normal_command@top C6 char_utf8_latin1_in_refs.texi:l6 {accented char in latin1 in refs}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -45,7 +45,7 @@ $result_tree_text{'char_utf8_latin1_in_refs'} = '*document_root C14
     {normal_text:accented char in latin1 in refs}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@printindex C1 char_utf8_latin1_in_refs.texi:l8
+  *normal_command@printindex C1 char_utf8_latin1_in_refs.texi:l8
   |EXTRA
   |global_command_number:{1}
   |misc_args:A{cp}
@@ -54,7 +54,7 @@ $result_tree_text{'char_utf8_latin1_in_refs'} = '*document_root C14
     {normal_text:cp}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C7 char_utf8_latin1_in_refs.texi:l10
+  *normal_command@menu C7 char_utf8_latin1_in_refs.texi:l10
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -113,7 +113,7 @@ $result_tree_text{'char_utf8_latin1_in_refs'} = '*document_root C14
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 char_utf8_latin1_in_refs.texi:l16
+   *normal_command@end C1 char_utf8_latin1_in_refs.texi:l16
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -121,7 +121,7 @@ $result_tree_text{'char_utf8_latin1_in_refs'} = '*document_root C14
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 char_utf8_latin1_in_refs.texi:l18 {ä ë ï ö ü ÿ Ä Ë Ï Ö Ü}
+ *normal_command@node C1 char_utf8_latin1_in_refs.texi:l18 {ä ë ï ö ü ÿ Ä Ë Ï Ö Ü}
  |EXTRA
  |identifier:{_00e4-_00eb-_00ef-_00f6-_00fc-_00ff-_00c4-_00cb-_00cf-_00d6-_00dc}
  |is_target:{1}
@@ -131,7 +131,7 @@ $result_tree_text{'char_utf8_latin1_in_refs'} = '*document_root C14
     {spaces_before_argument: }
     {normal_text:ä ë ï ö ü ÿ Ä Ë Ï Ö Ü}
     {spaces_after_argument:\\n}
- *@chapter C2 char_utf8_latin1_in_refs.texi:l19 {ä ë ï ö ü ÿ Ä Ë Ï Ö Ü}
+ *normal_command@chapter C2 char_utf8_latin1_in_refs.texi:l19 {ä ë ï ö ü ÿ Ä Ë Ï Ö Ü}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -142,7 +142,7 @@ $result_tree_text{'char_utf8_latin1_in_refs'} = '*document_root C14
     {normal_text:ä ë ï ö ü ÿ Ä Ë Ï Ö Ü}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 char_utf8_latin1_in_refs.texi:l21 {é}
+ *normal_command@node C1 char_utf8_latin1_in_refs.texi:l21 {é}
  |EXTRA
  |identifier:{_00e9}
  |is_target:{1}
@@ -152,7 +152,7 @@ $result_tree_text{'char_utf8_latin1_in_refs'} = '*document_root C14
     {spaces_before_argument: }
     {normal_text:é}
     {spaces_after_argument:\\n}
- *@chapter C2 char_utf8_latin1_in_refs.texi:l22 {é}
+ *normal_command@chapter C2 char_utf8_latin1_in_refs.texi:l22 {é}
  |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
@@ -163,7 +163,7 @@ $result_tree_text{'char_utf8_latin1_in_refs'} = '*document_root C14
     {normal_text:é}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 char_utf8_latin1_in_refs.texi:l24 {à è ù}
+ *normal_command@node C1 char_utf8_latin1_in_refs.texi:l24 {à è ù}
  |EXTRA
  |identifier:{_00e0-_00e8-_00f9}
  |is_target:{1}
@@ -173,7 +173,7 @@ $result_tree_text{'char_utf8_latin1_in_refs'} = '*document_root C14
     {spaces_before_argument: }
     {normal_text:à è ù}
     {spaces_after_argument:\\n}
- *@chapter C2 char_utf8_latin1_in_refs.texi:l25 {à è ù}
+ *normal_command@chapter C2 char_utf8_latin1_in_refs.texi:l25 {à è ù}
  |EXTRA
  |section_heading_number:{3}
  |section_level:{1}
@@ -184,7 +184,7 @@ $result_tree_text{'char_utf8_latin1_in_refs'} = '*document_root C14
     {normal_text:à è ù}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 char_utf8_latin1_in_refs.texi:l27 {â ê î ô û Â Ê Î Ô Û}
+ *normal_command@node C1 char_utf8_latin1_in_refs.texi:l27 {â ê î ô û Â Ê Î Ô Û}
  |EXTRA
  |identifier:{_00e2-_00ea-_00ee-_00f4-_00fb-_00c2-_00ca-_00ce-_00d4-_00db}
  |is_target:{1}
@@ -194,7 +194,7 @@ $result_tree_text{'char_utf8_latin1_in_refs'} = '*document_root C14
     {spaces_before_argument: }
     {normal_text:â ê î ô û Â Ê Î Ô Û}
     {spaces_after_argument:\\n}
- *@chapter C2 char_utf8_latin1_in_refs.texi:l28 {â ê î ô û Â Ê Î Ô Û}
+ *normal_command@chapter C2 char_utf8_latin1_in_refs.texi:l28 {â ê î ô û Â Ê Î Ô Û}
  |EXTRA
  |section_heading_number:{4}
  |section_level:{1}
@@ -205,7 +205,7 @@ $result_tree_text{'char_utf8_latin1_in_refs'} = '*document_root C14
     {normal_text:â ê î ô û Â Ê Î Ô Û}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 char_utf8_latin1_in_refs.texi:l30 {ç}
+ *normal_command@node C1 char_utf8_latin1_in_refs.texi:l30 {ç}
  |EXTRA
  |identifier:{_00e7}
  |is_target:{1}
@@ -215,7 +215,7 @@ $result_tree_text{'char_utf8_latin1_in_refs'} = '*document_root C14
     {spaces_before_argument: }
     {normal_text:ç}
     {spaces_after_argument:\\n}
- *@chapter C11 char_utf8_latin1_in_refs.texi:l31 {ç}
+ *normal_command@chapter C11 char_utf8_latin1_in_refs.texi:l31 {ç}
  |EXTRA
  |section_heading_number:{5}
  |section_level:{1}
@@ -227,35 +227,35 @@ $result_tree_text{'char_utf8_latin1_in_refs'} = '*document_root C14
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C10
-   *@ref C1 char_utf8_latin1_in_refs.texi:l33
+   *normal_command@ref C1 char_utf8_latin1_in_refs.texi:l33
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{_00e4-_00eb-_00ef-_00f6-_00fc-_00ff-_00c4-_00cb-_00cf-_00d6-_00dc}
      {normal_text:ä ë ï ö ü ÿ Ä Ë Ï Ö Ü}
    {normal_text:\\n}
-   *@ref C1 char_utf8_latin1_in_refs.texi:l34
+   *normal_command@ref C1 char_utf8_latin1_in_refs.texi:l34
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{_00e9}
      {normal_text:é}
    {normal_text:\\n}
-   *@ref C1 char_utf8_latin1_in_refs.texi:l35
+   *normal_command@ref C1 char_utf8_latin1_in_refs.texi:l35
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{_00e0-_00e8-_00f9}
      {normal_text:à è ù}
    {normal_text:\\n}
-   *@ref C1 char_utf8_latin1_in_refs.texi:l36
+   *normal_command@ref C1 char_utf8_latin1_in_refs.texi:l36
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{_00e2-_00ea-_00ee-_00f4-_00fb-_00c2-_00ca-_00ce-_00d4-_00db}
      {normal_text:â ê î ô û Â Ê Î Ô Û}
    {normal_text:\\n}
-   *@ref C1 char_utf8_latin1_in_refs.texi:l37
+   *normal_command@ref C1 char_utf8_latin1_in_refs.texi:l37
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -312,7 +312,7 @@ $result_tree_text{'char_utf8_latin1_in_refs'} = '*document_root C14
     {normal_text:ç}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@bye C1
+ *normal_command@bye C1
   *line_arg C1
    {spaces_before_argument:\\n}
 ';

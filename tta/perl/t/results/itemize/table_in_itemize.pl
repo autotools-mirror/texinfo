@@ -11,31 +11,31 @@ use Encode;
 $result_tree_text{'table_in_itemize'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@itemize C5 l1
+  *normal_command@itemize C5 l1
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     *@bullet l1
+     *normal_command@bullet l1
      {spaces_after_argument:\\n}
-   *@item C2 l2
+   *normal_command@item C2 l2
    |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:item one\\n}
-   *@item C2 l3
+   *normal_command@item C2 l3
    |EXTRA
    |item_number:{2}
     {ignorable_spaces_after_command:\\n}
-    *@table C4 l4
+    *normal_command@table C4 l4
      *arguments_line C1
       *block_line_arg C3
        {spaces_before_argument: }
-       *@asis l4
+       *normal_command@asis l4
        {spaces_after_argument:\\n}
      *table_entry C2
       *table_term C1
-       *@item C1 l5
+       *normal_command@item C1 l5
         *line_arg C3
          {spaces_before_argument: }
          {normal_text:table one}
@@ -48,7 +48,7 @@ $result_tree_text{'table_in_itemize'} = '*document_root C1
         {normal_text:New para.\\n}
      *table_entry C2
       *table_term C1
-       *@item C1 l9
+       *normal_command@item C1 l9
         *line_arg C3
          {spaces_before_argument: }
          {normal_text:table two}
@@ -59,20 +59,20 @@ $result_tree_text{'table_in_itemize'} = '*document_root C1
        {empty_line:\\n}
        *paragraph C1
         {normal_text:New para.\\n}
-     *@end C1 l13
+     *normal_command@end C1 l13
      |EXTRA
      |text_arg:{table}
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:table}
        {spaces_after_argument:\\n}
-   *@item C2 l14
+   *normal_command@item C2 l14
    |EXTRA
    |item_number:{3}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:item three\\n}
-   *@end C1 l15
+   *normal_command@end C1 l15
    |EXTRA
    |text_arg:{itemize}
     *line_arg C2

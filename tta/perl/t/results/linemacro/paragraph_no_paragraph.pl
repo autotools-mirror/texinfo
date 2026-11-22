@@ -11,14 +11,14 @@ use Encode;
 $result_tree_text{'paragraph_no_paragraph'} = '*document_root C1
  *before_node_section C5
   *preamble_before_content C4
-   *@linemacro C3 l1
+   *normal_command@linemacro C3 l1
    |EXTRA
    |formal_args:A{a|b|c}
    |macro_name:{mycommand}
     *arguments_line C1
      {macro_line: mycommand {a, b, c}\\n}
     {raw:\\a\\, \\b\\ \\c\\\\n}
-    *@end C1 l3
+    *normal_command@end C1 l3
     |EXTRA
     |text_arg:{linemacro}
      *line_arg C3
@@ -26,7 +26,7 @@ $result_tree_text{'paragraph_no_paragraph'} = '*document_root C1
       {normal_text:linemacro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@*
+   *normal_command@*
    {normal_text: }
    >SOURCEMARKS
    >linemacro_expansion<start;1><p:1>
@@ -40,7 +40,7 @@ $result_tree_text{'paragraph_no_paragraph'} = '*document_root C1
      >*linemacro_arg C2
       >{spaces_before_argument: }
       >{macro_call_arg_text:and @code{more}}
-  *@anchor C1 l5:@mycommand
+  *normal_command@anchor C1 l5:@mycommand
   |EXTRA
   |identifier:{aa}
   |is_target:{1}
@@ -48,7 +48,7 @@ $result_tree_text{'paragraph_no_paragraph'} = '*document_root C1
     {normal_text:aa}
   *paragraph C3
    {normal_text:, definite and }
-   *@code C1 l5:@mycommand
+   *normal_command@code C1 l5:@mycommand
    >SOURCEMARKS
    >linemacro_expansion<end;1>
     *brace_container C1
@@ -70,7 +70,7 @@ $result_tree_text{'paragraph_no_paragraph'} = '*document_root C1
       >{spaces_before_argument: }
       >{macro_call_arg_text:@var{the\\n call}}
    {normal_text:  protected, in }
-   *@var C1 l9:@mycommand
+   *normal_command@var C1 l9:@mycommand
    >SOURCEMARKS
    >linemacro_expansion<end;2>
     *brace_container C2

@@ -11,19 +11,19 @@ use Encode;
 $result_tree_text{'set_in_item_missing_line'} = '*document_root C1
  *before_node_section C4
   *preamble_before_content
-  *@table C4 l1
+  *normal_command@table C4 l1
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     *@code l1
+     *normal_command@code l1
      {spaces_after_argument:\\n}
    *table_entry C1
     *table_term C1
-     *@item C1 l2
+     *normal_command@item C1 l2
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:xx }
-       *@set C1
+       *normal_command@set C1
        |EXTRA
        |misc_args:A{n|}
         *line_arg C3
@@ -32,12 +32,12 @@ $result_tree_text{'set_in_item_missing_line'} = '*document_root C1
          {spaces_after_argument:\\n}
    *table_entry C1
     *table_term C1
-     *@item C1 l3
+     *normal_command@item C1 l3
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:jj}
        {spaces_after_argument:\\n}
-   *@end C1 l4
+   *normal_command@end C1 l4
    |EXTRA
    |text_arg:{table}
     *line_arg C3
@@ -45,36 +45,36 @@ $result_tree_text{'set_in_item_missing_line'} = '*document_root C1
      {normal_text:table}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@table C4 l6
+  *normal_command@table C4 l6
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     *@code l6
+     *normal_command@code l6
      {spaces_after_argument:\\n}
    *table_entry C1
     *table_term C1
-     *@item C1 l7
+     *normal_command@item C1 l7
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:cxx }
-       *@set C1
+       *normal_command@set C1
        |EXTRA
        |misc_args:A{cn|}
         *line_arg C3
          {spaces_before_argument: }
          {rawline_text:cn}
-         *@c C1
+         *normal_command@c C1
           *line_arg C2
            {rawline_text:}
            {spaces_after_argument:\\n}
    *table_entry C1
     *table_term C1
-     *@item C1 l8
+     *normal_command@item C1 l8
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:jj}
        {spaces_after_argument:\\n}
-   *@end C1 l9
+   *normal_command@end C1 l9
    |EXTRA
    |text_arg:{table}
     *line_arg C3

@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'sectioning_test_ref'} = '*document_root C9
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'sectioning_test_ref'} = '*document_root C9
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C4 l2 {top}
+ *normal_command@top C4 l2 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -34,7 +34,7 @@ $result_tree_text{'sectioning_test_ref'} = '*document_root C9
   *paragraph C1
    {normal_text:In T.\\n}
   {empty_line:\\n}
- *@node C1 l6 {chap}
+ *normal_command@node C1 l6 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -44,7 +44,7 @@ $result_tree_text{'sectioning_test_ref'} = '*document_root C9
     {spaces_before_argument: }
     {normal_text:chap}
     {spaces_after_argument:\\n}
- *@chapter C4 l7 {Chap1}
+ *normal_command@chapter C4 l7 {Chap1}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -58,7 +58,7 @@ $result_tree_text{'sectioning_test_ref'} = '*document_root C9
   *paragraph C1
    {normal_text:In c1.\\n}
   {empty_line:\\n}
- *@node C1 l11 {sec}
+ *normal_command@node C1 l11 {sec}
  |EXTRA
  |identifier:{sec}
  |is_target:{1}
@@ -68,7 +68,7 @@ $result_tree_text{'sectioning_test_ref'} = '*document_root C9
     {spaces_before_argument: }
     {normal_text:sec}
     {spaces_after_argument:\\n}
- *@section C4 l12 {sec1}
+ *normal_command@section C4 l12 {sec1}
  |EXTRA
  |section_heading_number:{1.1}
  |section_level:{2}
@@ -82,7 +82,7 @@ $result_tree_text{'sectioning_test_ref'} = '*document_root C9
   *paragraph C1
    {normal_text:In s1.1.\\n}
   {empty_line:\\n}
- *@node C1 l16 {chap2}
+ *normal_command@node C1 l16 {chap2}
  |EXTRA
  |identifier:{chap2}
  |is_target:{1}
@@ -92,7 +92,7 @@ $result_tree_text{'sectioning_test_ref'} = '*document_root C9
     {spaces_before_argument: }
     {normal_text:chap2}
     {spaces_after_argument:\\n}
- *@chapter C3 l17 {Chap2}
+ *normal_command@chapter C3 l17 {Chap2}
  |EXTRA
  |section_heading_number:{2}
  |section_level:{1}

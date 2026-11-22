@@ -11,14 +11,14 @@ use Encode;
 $result_tree_text{'macro_in_brace_command'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C4
-   *@macro C3 l1
+   *normal_command@macro C3 l1
    |EXTRA
    |formal_args:A{}
    |macro_name:{foo}
     *arguments_line C1
      {macro_line: foo\\n}
     {raw:foo-expansion\\n}
-    *@end C1 l3
+    *normal_command@end C1 l3
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -26,14 +26,14 @@ $result_tree_text{'macro_in_brace_command'} = '*document_root C1
       {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@macro C3 l5
+   *normal_command@macro C3 l5
    |EXTRA
    |formal_args:A{}
    |macro_name:{abar}
     *arguments_line C1
      {macro_line: abar\\n}
     {raw:bar-expansion\\n}
-    *@end C1 l7
+    *normal_command@end C1 l7
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -41,18 +41,18 @@ $result_tree_text{'macro_in_brace_command'} = '*document_root C1
       {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-  *@itemize C3 l9
+  *normal_command@itemize C3 l9
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     *@bullet l9
+     *normal_command@bullet l9
      {spaces_after_argument:\\n}
-   *@item C2 l10
+   *normal_command@item C2 l10
    |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C3
-     *@email C1 l10
+     *normal_command@email C1 l10
       *brace_arg C3
        {normal_text:foo-expansion}
        >SOURCEMARKS
@@ -60,7 +60,7 @@ $result_tree_text{'macro_in_brace_command'} = '*document_root C1
         >*macro_call@foo C1
          >*brace_arg
        >macro_expansion<end;1><p:13>
-       *@@
+       *normal_command@@
        >SOURCEMARKS
        >macro_expansion<start;2>
         >*macro_call@abar C1
@@ -70,7 +70,7 @@ $result_tree_text{'macro_in_brace_command'} = '*document_root C1
        >macro_expansion<end;2><p:13>
      {normal_text:,\\n}
      {normal_text:  also helped.\\n}
-   *@end C1 l12
+   *normal_command@end C1 l12
    |EXTRA
    |text_arg:{itemize}
     *line_arg C3

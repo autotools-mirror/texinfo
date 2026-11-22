@@ -12,22 +12,22 @@ $result_tree_text{'brace_in_index'} = '*document_root C1
  *before_node_section C14
   *preamble_before_content
   *paragraph C2
-   *@{
+   *normal_command@{
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@math C1 l3
+   *normal_command@math C1 l3
     *brace_arg C1
-     *@{
+     *normal_command@{
    {normal_text:\\n}
   {empty_line:\\n}
-  *@displaymath C4 l5
+  *normal_command@displaymath C4 l5
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
-   *@{
+   *normal_command@{
    {normal_text:\\n}
-   *@end C1 l7
+   *normal_command@end C1 l7
    |EXTRA
    |text_arg:{displaymath}
     *line_arg C3
@@ -40,7 +40,7 @@ $result_tree_text{'brace_in_index'} = '*document_root C1
   |index_entry:I{cp,1}
    *line_arg C3
     {spaces_before_argument: }
-    *@{
+    *normal_command@{
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 l11
@@ -48,9 +48,9 @@ $result_tree_text{'brace_in_index'} = '*document_root C1
   |index_entry:I{cp,2}
    *line_arg C3
     {spaces_before_argument: }
-    *@math C1 l11
+    *normal_command@math C1 l11
      *brace_arg C1
-      *@{
+      *normal_command@{
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 l13
@@ -58,12 +58,12 @@ $result_tree_text{'brace_in_index'} = '*document_root C1
   |index_entry:I{cp,3}
    *line_arg C3
     {spaces_before_argument: }
-    *@samp C1 l13
+    *normal_command@samp C1 l13
      *brace_container C1
-      *@{
+      *normal_command@{
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@defun C3 l15
+  *normal_command@defun C3 l15
    *def_line C1 l15
    |EXTRA
    |def_command:{defun}
@@ -80,7 +80,7 @@ $result_tree_text{'brace_in_index'} = '*document_root C1
      *def_name C1
       *def_line_arg C3
        {normal_text:A}
-       *@{
+       *normal_command@{
        {normal_text:A}
      {spaces: }
      {delimiter:(}
@@ -92,7 +92,7 @@ $result_tree_text{'brace_in_index'} = '*document_root C1
    *def_item C1
     *paragraph C1
      {normal_text:CCC\\n}
-   *@end C1 l17
+   *normal_command@end C1 l17
    |EXTRA
    |text_arg:{defun}
     *line_arg C3

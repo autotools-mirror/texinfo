@@ -13,7 +13,7 @@ $result_tree_text{'text_before_line_command'} = '*document_root C3
   *preamble_before_content
   *paragraph C2
    {normal_text:before title }
-   *@title C1 l1
+   *normal_command@title C1 l1
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:the title}
@@ -21,7 +21,7 @@ $result_tree_text{'text_before_line_command'} = '*document_root C3
   {empty_line:\\n}
   *paragraph C1
    {normal_text:i}
- *@node C2 l3 {LD Version Scripts}
+ *normal_command@node C2 l3 {LD Version Scripts}
  |EXTRA
  |identifier:{LD-Version-Scripts}
  |is_target:{1}
@@ -33,7 +33,7 @@ $result_tree_text{'text_before_line_command'} = '*document_root C3
     {spaces_after_argument:\\n}
   *paragraph C1
    {normal_text:--- }
- *@chapter C6 l4 {LD Version Scripts}
+ *normal_command@chapter C6 l4 {LD Version Scripts}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -46,19 +46,19 @@ $result_tree_text{'text_before_line_command'} = '*document_root C3
   {empty_line:\\n}
   *paragraph C1
    {normal_text:ddd }
-  *@contents C1 l6
+  *normal_command@contents C1 l6
   |EXTRA
   |global_command_number:{1}
    *line_arg C1
     {spaces_before_argument:\\n}
   {empty_line:\\n}
-  *@quotation C3 l8
+  *normal_command@quotation C3 l8
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C3
     {normal_text:aaa }
-    *@author C1 l9
+    *normal_command@author C1 l9
     |EXTRA
     |global_command_number:{1}
      *line_arg C3
@@ -66,7 +66,7 @@ $result_tree_text{'text_before_line_command'} = '*document_root C3
       {normal_text:quotation author}
       {spaces_after_argument:\\n}
     {normal_text:quotation\\n}
-   *@end C1 l11
+   *normal_command@end C1 l11
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3

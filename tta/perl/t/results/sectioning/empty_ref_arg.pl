@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'empty_ref_arg'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
- *@node C3 l1 {first}
+ *normal_command@node C3 l1 {first}
  |EXTRA
  |identifier:{first}
  |is_target:{1}
@@ -23,7 +23,7 @@ $result_tree_text{'empty_ref_arg'} = '*document_root C2
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C8
-   *@ref C2 l3
+   *normal_command@ref C2 l3
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -31,9 +31,9 @@ $result_tree_text{'empty_ref_arg'} = '*document_root C2
      {normal_text:first}
     *brace_arg C2
      {spaces_before_argument: }
-     *@ 
+     *normal_command@ 
    {normal_text:\\n}
-   *@ref C3 l4
+   *normal_command@ref C3 l4
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -43,9 +43,9 @@ $result_tree_text{'empty_ref_arg'} = '*document_root C2
      {spaces_before_argument: }
     *brace_arg C2
      {spaces_before_argument: }
-     *@ 
+     *normal_command@ 
    {normal_text:\\n}
-   *@ref C3 l5
+   *normal_command@ref C3 l5
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -53,12 +53,12 @@ $result_tree_text{'empty_ref_arg'} = '*document_root C2
      {normal_text:first}
     *brace_arg C2
      {spaces_before_argument: }
-     *@ 
+     *normal_command@ 
     *brace_arg C2
      {spaces_before_argument: }
-     *@:
+     *normal_command@:
    {normal_text:\\n}
-   *@ref C3 l6
+   *normal_command@ref C3 l6
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -66,27 +66,27 @@ $result_tree_text{'empty_ref_arg'} = '*document_root C2
      {normal_text:first}
     *brace_arg C6
      {spaces_before_argument: }
-     *@c C1
+     *normal_command@c C1
       *line_arg C3
        {spaces_before_argument: }
        {rawline_text:aaa}
        {spaces_after_argument:\\n}
      {spaces_before_argument: }
-     *@ 
+     *normal_command@ 
      {spaces_after_argument:\\n}
-     *@c C1
+     *normal_command@c C1
       *line_arg C3
        {spaces_before_argument: }
        {rawline_text:ggg}
        {spaces_after_argument:\\n}
     *brace_arg C3
      {spaces_before_argument: }
-     *@c C1
+     *normal_command@c C1
       *line_arg C3
        {spaces_before_argument: }
        {rawline_text:fff}
        {spaces_after_argument:\\n}
-     *@c C1
+     *normal_command@c C1
       *line_arg C2
        {rawline_text:}
        {spaces_after_argument:\\n}

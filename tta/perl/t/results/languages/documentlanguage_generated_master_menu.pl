@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'documentlanguage_generated_master_menu'} = '*document_root C11
  *before_node_section C1
   *preamble_before_content C4
-   *@documentlanguage C1 l1
+   *normal_command@documentlanguage C1 l1
    |EXTRA
    |global_command_number:{1}
    |text_arg:{pt}
@@ -20,7 +20,7 @@ $result_tree_text{'documentlanguage_generated_master_menu'} = '*document_root C1
      {normal_text:pt}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@documentlanguage C1 l3
+   *normal_command@documentlanguage C1 l3
    |EXTRA
    |global_command_number:{2}
    |text_arg:{de}
@@ -29,7 +29,7 @@ $result_tree_text{'documentlanguage_generated_master_menu'} = '*document_root C1
      {normal_text:de}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@node C1 l5 {Top}
+ *normal_command@node C1 l5 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -39,7 +39,7 @@ $result_tree_text{'documentlanguage_generated_master_menu'} = '*document_root C1
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l6 {top}
+ *normal_command@top C2 l6 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -49,7 +49,7 @@ $result_tree_text{'documentlanguage_generated_master_menu'} = '*document_root C1
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@part C2 l8 {Part I}
+ *normal_command@part C2 l8 {Part I}
  |EXTRA
  |global_command_number:{1}
  |section_level:{0}
@@ -60,7 +60,7 @@ $result_tree_text{'documentlanguage_generated_master_menu'} = '*document_root C1
     {normal_text:Part I}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l10 {chapter}
+ *normal_command@node C1 l10 {chapter}
  |EXTRA
  |identifier:{chapter}
  |is_target:{1}
@@ -70,7 +70,7 @@ $result_tree_text{'documentlanguage_generated_master_menu'} = '*document_root C1
     {spaces_before_argument: }
     {normal_text:chapter}
     {spaces_after_argument:\\n}
- *@chapter C4 l11 {Chap}
+ *normal_command@chapter C4 l11 {Chap}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -81,7 +81,7 @@ $result_tree_text{'documentlanguage_generated_master_menu'} = '*document_root C1
     {normal_text:Chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@documentlanguage C1 l13
+  *normal_command@documentlanguage C1 l13
   |EXTRA
   |global_command_number:{3}
   |text_arg:{fr}
@@ -90,7 +90,7 @@ $result_tree_text{'documentlanguage_generated_master_menu'} = '*document_root C1
     {normal_text:fr}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@part C2 l15 {Part II}
+ *normal_command@part C2 l15 {Part II}
  |EXTRA
  |global_command_number:{2}
  |section_level:{0}
@@ -101,7 +101,7 @@ $result_tree_text{'documentlanguage_generated_master_menu'} = '*document_root C1
     {normal_text:Part II}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l17 {other chap}
+ *normal_command@node C1 l17 {other chap}
  |EXTRA
  |identifier:{other-chap}
  |is_target:{1}
@@ -111,7 +111,7 @@ $result_tree_text{'documentlanguage_generated_master_menu'} = '*document_root C1
     {spaces_before_argument: }
     {normal_text:other chap}
     {spaces_after_argument:\\n}
- *@chapter C4 l18 {Other chap}
+ *normal_command@chapter C4 l18 {Other chap}
  |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
@@ -122,7 +122,7 @@ $result_tree_text{'documentlanguage_generated_master_menu'} = '*document_root C1
     {normal_text:Other chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@documentlanguage C1 l20
+  *normal_command@documentlanguage C1 l20
   |EXTRA
   |global_command_number:{4}
   |text_arg:{hr}
@@ -131,7 +131,7 @@ $result_tree_text{'documentlanguage_generated_master_menu'} = '*document_root C1
     {normal_text:hr}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l22 {appendix}
+ *normal_command@node C1 l22 {appendix}
  |EXTRA
  |identifier:{appendix}
  |is_target:{1}
@@ -141,7 +141,7 @@ $result_tree_text{'documentlanguage_generated_master_menu'} = '*document_root C1
     {spaces_before_argument: }
     {normal_text:appendix}
     {spaces_after_argument:\\n}
- *@appendix C1 l23 {App}
+ *normal_command@appendix C1 l23 {App}
  |EXTRA
  |section_heading_number:{A}
  |section_level:{1}

@@ -11,46 +11,46 @@ use Encode;
 $result_tree_text{'setfilename'} = '*document_root C1
  *before_node_section C1
   *preamble_before_content C5
-   *@setfilename C1 l1
+   *normal_command@setfilename C1 l1
    |EXTRA
    |text_arg:{file_comment}
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:file_comment}
-     *@c C1
+     *normal_command@c C1
       *line_arg C3
        {spaces_before_argument: }
        {rawline_text:comment}
        {spaces_after_argument:\\n}
-   *@setfilename C1 l2
+   *normal_command@setfilename C1 l2
    |EXTRA
    |text_arg:{file_and_spaces}
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:file_and_spaces}
      {spaces_after_argument:   \\n}
-   *@setfilename C1 l3
+   *normal_command@setfilename C1 l3
    |EXTRA
    |text_arg:{file_space_comment}
     *line_arg C4
      {spaces_before_argument: }
      {normal_text:file_space_comment}
      {spaces_after_argument: }
-     *@c C1
+     *normal_command@c C1
       *line_arg C3
        {spaces_before_argument: }
        {rawline_text:comment}
        {spaces_after_argument:\\n}
-   *@setfilename C1 l4
+   *normal_command@setfilename C1 l4
     *line_arg C5
      {spaces_before_argument: }
-     *@ 
-     *@verb C1 l4
+     *normal_command@ 
+     *normal_command@verb C1 l4
       *brace_container C3
        {verb_delimiter::}
        {raw: name }
        {verb_delimiter::}
-     *@ 
+     *normal_command@ 
      {spaces_after_argument:\\n}
    {empty_line:\\n}
 ';

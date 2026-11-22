@@ -13,7 +13,7 @@ UNIT_DIRECTIONS
 This: [U0]
  *before_node_section C1
   *preamble_before_content
- *@part C2 l1 {part}
+ *normal_command@part C2 l1 {part}
  |EXTRA
  |global_command_number:{1}
  |section_level:{0}
@@ -24,7 +24,7 @@ This: [U0]
     {normal_text:part}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@section C1 l3 {section}
+ *normal_command@section C1 l3 {section}
  |EXTRA
  |identifier:{section}
  |is_target:{1}

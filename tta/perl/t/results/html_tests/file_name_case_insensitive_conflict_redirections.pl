@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'file_name_case_insensitive_conflict_redirections'} = '*document_root C4
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'file_name_case_insensitive_conflict_redirections'} = '*docume
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l2 {top section}
+ *normal_command@top C2 l2 {top section}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -31,7 +31,7 @@ $result_tree_text{'file_name_case_insensitive_conflict_redirections'} = '*docume
     {normal_text:top section}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@chapter C7 l4 {Chapter}
+ *normal_command@chapter C7 l4 {Chapter}
  |EXTRA
  |identifier:{Chapter}
  |is_target:{1}
@@ -44,23 +44,23 @@ $result_tree_text{'file_name_case_insensitive_conflict_redirections'} = '*docume
     {normal_text:Chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@table C5 l6
+  *normal_command@table C5 l6
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     *@samp l6
+     *normal_command@samp l6
      {spaces_after_argument:\\n}
    *before_item C1
     {empty_line:\\n}
    *table_entry C2
     *table_term C1
-     *@item C1 l8
+     *normal_command@item C1 l8
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:foo}
        {spaces_after_argument:\\n}
     *table_definition C4
-     *@anchor C1 l9
+     *normal_command@anchor C1 l9
      |EXTRA
      |identifier:{foo}
      |is_target:{1}
@@ -69,20 +69,20 @@ $result_tree_text{'file_name_case_insensitive_conflict_redirections'} = '*docume
      {spaces_after_close_brace:\\n}
      *paragraph C3
       {normal_text:Some text about }
-      *@samp C1 l10
+      *normal_command@samp C1 l10
        *brace_container C1
         {normal_text:foo}
       {normal_text:\\n}
      {empty_line:\\n}
    *table_entry C2
     *table_term C1
-     *@item C1 l12
+     *normal_command@item C1 l12
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:Foo}
        {spaces_after_argument:\\n}
     *table_definition C4
-     *@anchor C1 l13
+     *normal_command@anchor C1 l13
      |EXTRA
      |identifier:{Foo}
      |is_target:{1}
@@ -91,12 +91,12 @@ $result_tree_text{'file_name_case_insensitive_conflict_redirections'} = '*docume
      {spaces_after_close_brace:\\n}
      *paragraph C3
       {normal_text:Some text about }
-      *@samp C1 l14
+      *normal_command@samp C1 l14
        *brace_container C1
         {normal_text:Foo}
       {normal_text:\\n}
      {empty_line:\\n}
-   *@end C1 l16
+   *normal_command@end C1 l16
    |EXTRA
    |text_arg:{table}
     *line_arg C3
@@ -105,7 +105,7 @@ $result_tree_text{'file_name_case_insensitive_conflict_redirections'} = '*docume
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@xref C1 l18
+   *normal_command@xref C1 l18
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -114,7 +114,7 @@ $result_tree_text{'file_name_case_insensitive_conflict_redirections'} = '*docume
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@xref C1 l20
+   *normal_command@xref C1 l20
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}

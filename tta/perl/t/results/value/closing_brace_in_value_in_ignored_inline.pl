@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'closing_brace_in_value_in_ignored_inline'} = '*document_root C1
  *before_node_section C4
   *preamble_before_content C2
-   *@set C1
+   *normal_command@set C1
    |EXTRA
    |misc_args:A{closebrace|}}
     *line_arg C3
@@ -20,7 +20,7 @@ $result_tree_text{'closing_brace_in_value_in_ignored_inline'} = '*document_root 
      {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C3
-   *@inlinefmt C2 l3
+   *normal_command@inlinefmt C2 l3
    |EXTRA
    |expand_index:{1}
    |format:{html}
@@ -33,14 +33,14 @@ $result_tree_text{'closing_brace_in_value_in_ignored_inline'} = '*document_root 
      {normal_text:truc }
      >SOURCEMARKS
      >value_expansion<start;1><p:5>{}}
-      >*@value C1
+      >*normal_command@value C1
        >*brace_container C1
         >{normal_text:closebrace}
    {normal_text:\\n}
    {normal_text:machin\\n}
   {empty_line:\\n}
   *paragraph C1
-   *@inlinefmt C2 l7
+   *normal_command@inlinefmt C2 l7
    |EXTRA
    |format:{tex}
     *brace_arg C1

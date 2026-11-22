@@ -11,11 +11,11 @@ use Encode;
 $result_tree_text{'defx_after_comment_in_example'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@example C3 l1
+  *normal_command@example C3 l1
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
-   *@deffn C4 l2
+   *normal_command@deffn C4 l2
     *def_line C1 l2
     |EXTRA
     |def_command:{deffn}
@@ -29,7 +29,7 @@ $result_tree_text{'defx_after_comment_in_example'} = '*document_root C1
       {spaces: }
       *def_name C1
        *def_line_arg C1
-        *@var C1 l2
+        *normal_command@var C1 l2
          *brace_container C1
           {normal_text:i}
       {spaces: }
@@ -43,12 +43,12 @@ $result_tree_text{'defx_after_comment_in_example'} = '*document_root C1
       {spaces_after_argument:\\n}
     *inter_def_item C1
      *preformatted C1
-      *@c C1
+      *normal_command@c C1
        *line_arg C3
         {spaces_before_argument: }
         {rawline_text:comment}
         {spaces_after_argument:\\n}
-    *@deffnx C1 l4
+    *normal_command@deffnx C1 l4
     |EXTRA
     |def_command:{deffn}
     |index_entry:I{fn,2}
@@ -67,14 +67,14 @@ $result_tree_text{'defx_after_comment_in_example'} = '*document_root C1
        *def_line_arg C1
         {normal_text:machin...}
       {spaces_after_argument:\\n}
-    *@end C1 l5
+    *normal_command@end C1 l5
     |EXTRA
     |text_arg:{deffn}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:deffn}
       {spaces_after_argument:\\n}
-   *@end C1 l6
+   *normal_command@end C1 l6
    |EXTRA
    |text_arg:{example}
     *line_arg C3

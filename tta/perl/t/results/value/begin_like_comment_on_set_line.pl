@@ -11,12 +11,12 @@ use Encode;
 $result_tree_text{'begin_like_comment_on_set_line'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C3
-   *@set C1
+   *normal_command@set C1
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:x@come with me}
      {spaces_after_argument:\\n}
-   *@set C1
+   *normal_command@set C1
    |EXTRA
    |misc_args:A{y|some thing @commentary is it}
     *line_arg C3
@@ -26,13 +26,13 @@ $result_tree_text{'begin_like_comment_on_set_line'} = '*document_root C1
    {empty_line:\\n}
   *paragraph C3
    {normal_text:!}
-   *@value C1
+   *normal_command@value C1
     *brace_container C1
      {normal_text:x}
    {normal_text:! !some thing  is it!\\n}
    >SOURCEMARKS
    >value_expansion<start;1><p:3>{some thing @commentary is it}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:y}
    >value_expansion<end;1><p:20>

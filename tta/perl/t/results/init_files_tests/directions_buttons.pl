@@ -11,13 +11,13 @@ use Encode;
 $result_tree_text{'directions_buttons'} = '*document_root C7
  *before_node_section C1
   *preamble_before_content C2
-   *@contents C1 l1
+   *normal_command@contents C1 l1
    |EXTRA
    |global_command_number:{1}
     *line_arg C1
      {spaces_before_argument:\\n}
    {empty_line:\\n}
- *@node C1 l3 {Top}
+ *normal_command@node C1 l3 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -27,7 +27,7 @@ $result_tree_text{'directions_buttons'} = '*document_root C7
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l4 {top}
+ *normal_command@top C2 l4 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -37,7 +37,7 @@ $result_tree_text{'directions_buttons'} = '*document_root C7
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l6 {chapter}
+ *normal_command@node C1 l6 {chapter}
  |EXTRA
  |identifier:{chapter}
  |is_target:{1}
@@ -48,7 +48,7 @@ $result_tree_text{'directions_buttons'} = '*document_root C7
     {spaces_before_argument: }
     {normal_text:chapter}
     {spaces_after_argument:\\n}
- *@chapter C4 l7 {chap}
+ *normal_command@chapter C4 l7 {chap}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -59,7 +59,7 @@ $result_tree_text{'directions_buttons'} = '*document_root C7
     {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@printindex C1 l9
+  *normal_command@printindex C1 l9
   |EXTRA
   |global_command_number:{1}
   |misc_args:A{cp}
@@ -68,7 +68,7 @@ $result_tree_text{'directions_buttons'} = '*document_root C7
     {normal_text:cp}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l11 {@code{append}ix}
+ *normal_command@node C1 l11 {@code{append}ix}
  |EXTRA
  |identifier:{appendix}
  |is_target:{1}
@@ -76,12 +76,12 @@ $result_tree_text{'directions_buttons'} = '*document_root C7
   *arguments_line C1
    *line_arg C4
     {spaces_before_argument: }
-    *@code C1 l11
+    *normal_command@code C1 l11
      *brace_container C1
       {normal_text:append}
     {normal_text:ix}
     {spaces_after_argument:\\n}
- *@appendix C3 l12 {App}
+ *normal_command@appendix C3 l12 {App}
  |EXTRA
  |section_heading_number:{A}
  |section_level:{1}

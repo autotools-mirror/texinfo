@@ -12,7 +12,7 @@ $result_tree_text{'math_no_braces'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *paragraph C1
-   *@math l1
+   *normal_command@math l1
 ';
 
 

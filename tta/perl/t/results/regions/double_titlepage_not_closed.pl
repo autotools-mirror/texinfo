@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'double_titlepage_not_closed'} = '*document_root C1
  *before_node_section C1
   *preamble_before_content C1
-   *@titlepage C6 l1
+   *normal_command@titlepage C6 l1
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
@@ -20,7 +20,7 @@ $result_tree_text{'double_titlepage_not_closed'} = '*document_root C1
      {normal_text:This is in title page\\n}
     {empty_line:\\n}
     {empty_line:\\n}
-    *@titlepage C3 l6
+    *normal_command@titlepage C3 l6
      *arguments_line C1
       *block_line_arg C1
        {spaces_before_argument:\\n}

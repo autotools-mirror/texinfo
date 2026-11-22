@@ -11,11 +11,11 @@ use Encode;
 $result_tree_text{'section_on_xtable_line'} = '*document_root C5
  *before_node_section C2
   *preamble_before_content
-  *@vtable C1 l1
+  *normal_command@vtable C1 l1
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument: }
- *@section C3 l1 {first}
+ *normal_command@section C3 l1 {first}
  |EXTRA
  |identifier:{first}
  |is_target:{1}
@@ -28,13 +28,13 @@ $result_tree_text{'section_on_xtable_line'} = '*document_root C5
     {normal_text:first}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@table C1 l3
+  *normal_command@table C1 l3
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     *@TeX l3
+     *normal_command@TeX l3
      {spaces_after_argument: }
- *@section C3 l3 {second}
+ *normal_command@section C3 l3 {second}
  |EXTRA
  |identifier:{second}
  |is_target:{1}
@@ -47,13 +47,13 @@ $result_tree_text{'section_on_xtable_line'} = '*document_root C5
     {normal_text:second}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@table C1 l5
+  *normal_command@table C1 l5
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     *@code l5
+     *normal_command@code l5
      {spaces_after_argument: }
- *@section C3 l5 {third}
+ *normal_command@section C3 l5 {third}
  |EXTRA
  |identifier:{third}
  |is_target:{1}
@@ -66,13 +66,13 @@ $result_tree_text{'section_on_xtable_line'} = '*document_root C5
     {normal_text:third}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@ftable C1 l7
+  *normal_command@ftable C1 l7
    *arguments_line C1
     *block_line_arg C2
      {spaces_before_argument: }
-     *@ringaccent C1 l7
+     *normal_command@ringaccent C1 l7
       {spaces_after_cmd_before_arg: }
- *@section C1 l7 {fourth}
+ *normal_command@section C1 l7 {fourth}
  |EXTRA
  |identifier:{fourth}
  |is_target:{1}

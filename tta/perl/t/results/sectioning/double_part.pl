@@ -19,7 +19,7 @@ NodeNext: [U2]
 NodeForward: [U2]
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -29,7 +29,7 @@ NodeForward: [U2]
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C4 l2 {top}
+ *normal_command@top C4 l2 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -39,7 +39,7 @@ NodeForward: [U2]
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C3 l4
+  *normal_command@menu C3 l4
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -54,7 +54,7 @@ NodeForward: [U2]
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l6
+   *normal_command@end C1 l6
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -71,7 +71,7 @@ Back: [U0]
 FastForward: [U2]
 Next: [U2]
 Prev: [U0]
- *@part C3 l8 {part first}
+ *normal_command@part C3 l8 {part first}
  |EXTRA
  |global_command_number:{1}
  |section_level:{0}
@@ -93,7 +93,7 @@ FastBack: [U1]
 NodePrev: [U0]
 NodeUp: [U0]
 NodeBack: [U0]
- *@part C3 l11 {part second}
+ *normal_command@part C3 l11 {part second}
  |EXTRA
  |global_command_number:{2}
  |section_level:{0}
@@ -106,7 +106,7 @@ NodeBack: [U0]
   *paragraph C1
    {normal_text:Text part second.\\n}
   {empty_line:\\n}
- *@node C1 l14 {node chapter}
+ *normal_command@node C1 l14 {node chapter}
  |EXTRA
  |identifier:{node-chapter}
  |is_target:{1}
@@ -116,7 +116,7 @@ NodeBack: [U0]
     {spaces_before_argument: }
     {normal_text:node chapter}
     {spaces_after_argument:\\n}
- *@chapter C2 l15 {chapter after 2 parts}
+ *normal_command@chapter C2 l15 {chapter after 2 parts}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}

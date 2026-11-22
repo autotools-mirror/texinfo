@@ -11,15 +11,15 @@ use Encode;
 $result_tree_text{'item_in_ref'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@table C4 l1
+  *normal_command@table C4 l1
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     *@asis l1
+     *normal_command@asis l1
      {spaces_after_argument:\\n}
    *table_entry C2
     *table_term C1
-     *@item C1 l2
+     *normal_command@item C1 l2
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:first item}
@@ -29,7 +29,7 @@ $result_tree_text{'item_in_ref'} = '*document_root C1
       {normal_text:First item text\\n}
      {empty_line:\\n}
      *paragraph C1
-      *@ref C3 l5
+      *normal_command@ref C3 l5
        *brace_arg C1
         {normal_text:Top}
        *brace_arg
@@ -39,12 +39,12 @@ $result_tree_text{'item_in_ref'} = '*document_root C1
         {spaces_after_argument:\\n}
    *table_entry C1
     *table_term C1
-     *@item C1 l6
+     *normal_command@item C1 l6
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:second item}
        {spaces_after_argument:\\n}
-   *@end C1 l7
+   *normal_command@end C1 l7
    |EXTRA
    |text_arg:{table}
     *line_arg C3

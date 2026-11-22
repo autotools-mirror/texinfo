@@ -13,7 +13,7 @@ $result_tree_text{'dash_in_menu'} = '*document_root C1
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content
-  *@menu C4 l2
+  *normal_command@menu C4 l2
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -39,7 +39,7 @@ $result_tree_text{'dash_in_menu'} = '*document_root C1
     *preformatted C2
      {after_menu_description_line:\\n}
      {normal_text:comment --- in.\\n}
-   *@end C1 l6
+   *normal_command@end C1 l6
    |EXTRA
    |text_arg:{menu}
     *line_arg C3

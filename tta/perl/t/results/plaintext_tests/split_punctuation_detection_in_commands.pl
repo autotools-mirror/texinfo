@@ -13,20 +13,20 @@ $result_tree_text{'split_punctuation_detection_in_commands'} = '*document_root C
   *preamble_before_content
   *paragraph C8
    {normal_text:Before }
-   *@asis C1 l1
+   *normal_command@asis C1 l1
     *brace_container C1
      {normal_text:B}
-   *@asis C1 l1
+   *normal_command@asis C1 l1
     *brace_container C1
      {normal_text:)}
-   *@asis C1 l1
+   *normal_command@asis C1 l1
     *brace_container C1
      {normal_text:.}
    {normal_text:]]? Afte}
-   *@strong C1 l1
+   *normal_command@strong C1 l1
     *brace_container C1
      {normal_text:R}
-   *@emph C1 l1
+   *normal_command@emph C1 l1
     *brace_container C1
      {normal_text:"!}
    {normal_text:\'? Last}

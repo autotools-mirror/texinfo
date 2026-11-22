@@ -11,42 +11,42 @@ use Encode;
 $result_tree_text{'api_doc_with_linemacro'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C7
-   *@linemacro C3 l1
+   *normal_command@linemacro C3 l1
    |EXTRA
    |formal_args:A{param|type}
    |macro_name:{param}
     *arguments_line C1
      {macro_line: param {param, type}\\n}
     {raw:@defline Parameter @var{\\param\\} @code{ : \\type\\}\\n}
-    *@end C1 l3
+    *normal_command@end C1 l3
     |EXTRA
     |text_arg:{linemacro}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:linemacro}
       {spaces_after_argument:\\n}
-   *@linemacro C3 l4
+   *normal_command@linemacro C3 l4
    |EXTRA
    |formal_args:A{param|type}
    |macro_name:{returns}
     *arguments_line C1
      {macro_line: returns {param, type}\\n}
     {raw:@defline {Return Value} @var{\\param\\} @code{ : \\type\\}\\n}
-    *@end C1 l6
+    *normal_command@end C1 l6
     |EXTRA
     |text_arg:{linemacro}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:linemacro}
       {spaces_after_argument:\\n}
-   *@linemacro C3 l7
+   *normal_command@linemacro C3 l7
    |EXTRA
    |formal_args:A{exception}
    |macro_name:{raises}
     *arguments_line C1
      {macro_line: raises {exception}\\n}
     {raw:@defline {Exception} \\exception\\\\n}
-    *@end C1 l9
+    *normal_command@end C1 l9
     |EXTRA
     |text_arg:{linemacro}
      *line_arg C3
@@ -54,14 +54,14 @@ $result_tree_text{'api_doc_with_linemacro'} = '*document_root C1
       {normal_text:linemacro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@set C1
+   *normal_command@set C1
    |EXTRA
    |misc_args:A{txidefnamenospace|}
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:txidefnamenospace}
      {spaces_after_argument:\\n}
-   *@clear C1
+   *normal_command@clear C1
    |EXTRA
    |misc_args:A{txicodevaristt}
     *line_arg C3
@@ -69,11 +69,11 @@ $result_tree_text{'api_doc_with_linemacro'} = '*document_root C1
      {rawline_text:txicodevaristt}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
-  *@defblock C4 l14
+  *normal_command@defblock C4 l14
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
-   *@defline C1 l15
+   *normal_command@defline C1 l15
    |EXTRA
    |def_command:{defline}
    |omit_def_name_space:{1}
@@ -99,7 +99,7 @@ $result_tree_text{'api_doc_with_linemacro'} = '*document_root C1
        {normal_text:n=}
      *def_arg C1
       *def_line_arg C1
-       *@code C1 l15
+       *normal_command@code C1 l15
         *brace_container C1
          {normal_text:None}
      {delimiter:,}
@@ -109,7 +109,7 @@ $result_tree_text{'api_doc_with_linemacro'} = '*document_root C1
        {normal_text:axis=}
      *def_arg C1
       *def_line_arg C1
-       *@code C1 l15
+       *normal_command@code C1 l15
         *brace_container C1
          {normal_text:-1}
      {delimiter:,}
@@ -119,7 +119,7 @@ $result_tree_text{'api_doc_with_linemacro'} = '*document_root C1
        {normal_text:norm=}
      *def_arg C1
       *def_line_arg C1
-       *@code C1 l15
+       *normal_command@code C1 l15
         *brace_container C1
          {normal_text:None}
      {delimiter:)}
@@ -128,7 +128,7 @@ $result_tree_text{'api_doc_with_linemacro'} = '*document_root C1
     *paragraph C1
      {normal_text:Compute the one-dimensional discrete Fourier Transform.\\n}
     {empty_line:\\n}
-    *@defblock C12 l18
+    *normal_command@defblock C12 l18
      *arguments_line C1
       *block_line_arg C1
       >SOURCEMARKS
@@ -141,7 +141,7 @@ $result_tree_text{'api_doc_with_linemacro'} = '*document_root C1
          >{spaces_before_argument: }
          >{macro_call_arg_text:array_like}
        {spaces_before_argument:\\n}
-     *@defline C1 l19:@param
+     *normal_command@defline C1 l19:@param
      |EXTRA
      |def_command:{defline}
      |omit_def_name_space:{1}
@@ -154,13 +154,13 @@ $result_tree_text{'api_doc_with_linemacro'} = '*document_root C1
        {spaces: }
        *def_name C1
         *def_line_arg C1
-         *@var C1 l19:@param
+         *normal_command@var C1 l19:@param
           *brace_container C1
            {normal_text:a}
        {spaces: }
        *def_arg C1
         *def_line_arg C1
-         *@code C1 l19:@param
+         *normal_command@code C1 l19:@param
          >SOURCEMARKS
          >linemacro_expansion<end;1>
           *brace_container C1
@@ -179,7 +179,7 @@ $result_tree_text{'api_doc_with_linemacro'} = '*document_root C1
         >*linemacro_arg C2
          >{spaces_before_argument: }
          >{macro_call_arg_text:int, optional}
-     *@defline C1 l22:@param
+     *normal_command@defline C1 l22:@param
      |EXTRA
      |def_command:{defline}
      |omit_def_name_space:{1}
@@ -192,13 +192,13 @@ $result_tree_text{'api_doc_with_linemacro'} = '*document_root C1
        {spaces: }
        *def_name C1
         *def_line_arg C1
-         *@var C1 l22:@param
+         *normal_command@var C1 l22:@param
           *brace_container C1
            {normal_text:n}
        {spaces: }
        *def_arg C1
         *def_line_arg C1
-         *@code C1 l22:@param
+         *normal_command@code C1 l22:@param
          >SOURCEMARKS
          >linemacro_expansion<end;2>
           *brace_container C1
@@ -208,7 +208,7 @@ $result_tree_text{'api_doc_with_linemacro'} = '*document_root C1
       *paragraph C4
        {normal_text:Length of the transformed axis of the output.\\n}
        {normal_text:If }
-       *@var C1 l24
+       *normal_command@var C1 l24
         *brace_container C1
          {normal_text:n}
        {normal_text: is smaller than the length of the input, the input is cropped.\\n}
@@ -222,7 +222,7 @@ $result_tree_text{'api_doc_with_linemacro'} = '*document_root C1
         >*linemacro_arg C2
          >{spaces_before_argument: }
          >{macro_call_arg_text:int, optional}
-     *@defline C1 l26:@param
+     *normal_command@defline C1 l26:@param
      |EXTRA
      |def_command:{defline}
      |omit_def_name_space:{1}
@@ -235,13 +235,13 @@ $result_tree_text{'api_doc_with_linemacro'} = '*document_root C1
        {spaces: }
        *def_name C1
         *def_line_arg C1
-         *@var C1 l26:@param
+         *normal_command@var C1 l26:@param
           *brace_container C1
            {normal_text:axis}
        {spaces: }
        *def_arg C1
         *def_line_arg C1
-         *@code C1 l26:@param
+         *normal_command@code C1 l26:@param
          >SOURCEMARKS
          >linemacro_expansion<end;3>
           *brace_container C1
@@ -260,7 +260,7 @@ $result_tree_text{'api_doc_with_linemacro'} = '*document_root C1
         >*linemacro_arg C2
          >{spaces_before_argument: }
          >{macro_call_arg_text:complex ndarray}
-     *@defline C1 l29:@returns
+     *normal_command@defline C1 l29:@returns
      |EXTRA
      |def_command:{defline}
      |omit_def_name_space:{1}
@@ -273,13 +273,13 @@ $result_tree_text{'api_doc_with_linemacro'} = '*document_root C1
        {spaces: }
        *def_name C1
         *def_line_arg C1
-         *@var C1 l29:@returns
+         *normal_command@var C1 l29:@returns
           *brace_container C1
            {normal_text:out}
        {spaces: }
        *def_arg C1
         *def_line_arg C1
-         *@code C1 l29:@returns
+         *normal_command@code C1 l29:@returns
          >SOURCEMARKS
          >linemacro_expansion<end;4>
           *brace_container C1
@@ -295,7 +295,7 @@ $result_tree_text{'api_doc_with_linemacro'} = '*document_root C1
         >*linemacro_arg C2
          >{spaces_before_argument: }
          >{macro_call_arg_text:IndexError}
-     *@defline C1 l32:@raises
+     *normal_command@defline C1 l32:@raises
      |EXTRA
      |def_command:{defline}
      |omit_def_name_space:{1}
@@ -315,16 +315,16 @@ $result_tree_text{'api_doc_with_linemacro'} = '*document_root C1
      *def_item C2
       *paragraph C5
        {normal_text:If }
-       *@var C1 l33
+       *normal_command@var C1 l33
         *brace_container C1
          {normal_text:axis}
        {normal_text: is not a valid axis of }
-       *@var C1 l33
+       *normal_command@var C1 l33
         *brace_container C1
          {normal_text:a}
        {normal_text:.\\n}
       {empty_line:\\n}
-     *@end C1 l35
+     *normal_command@end C1 l35
      |EXTRA
      |text_arg:{defblock}
       *line_arg C3
@@ -332,7 +332,7 @@ $result_tree_text{'api_doc_with_linemacro'} = '*document_root C1
        {normal_text:defblock}
        {spaces_after_argument:\\n}
     {empty_line:\\n}
-   *@end C1 l37
+   *normal_command@end C1 l37
    |EXTRA
    |text_arg:{defblock}
     *line_arg C3

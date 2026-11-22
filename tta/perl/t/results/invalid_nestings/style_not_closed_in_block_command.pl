@@ -11,16 +11,16 @@ use Encode;
 $result_tree_text{'style_not_closed_in_block_command'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@cartouche C3 l1
+  *normal_command@cartouche C3 l1
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C2
     {normal_text:cartouche }
-    *@code C1 l2
+    *normal_command@code C1 l2
      *brace_container C1
       {normal_text:in code \\n}
-   *@end C1 l3
+   *normal_command@end C1 l3
    |EXTRA
    |text_arg:{cartouche}
     *line_arg C3

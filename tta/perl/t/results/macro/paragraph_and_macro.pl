@@ -11,13 +11,13 @@ use Encode;
 $result_tree_text{'paragraph_and_macro'} = '*document_root C1
  *before_node_section C9
   *preamble_before_content C11
-   *@macro C2 l1
+   *normal_command@macro C2 l1
    |EXTRA
    |formal_args:A{}
    |macro_name:{aempty}
     *arguments_line C1
      {macro_line: aempty\\n}
-    *@end C1 l2
+    *normal_command@end C1 l2
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -25,14 +25,14 @@ $result_tree_text{'paragraph_and_macro'} = '*document_root C1
       {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@macro C3 l4
+   *normal_command@macro C3 l4
    |EXTRA
    |formal_args:A{}
    |macro_name:{aspace}
     *arguments_line C1
      {macro_line: aspace\\n}
     {raw:   \\n}
-    *@end C1 l6
+    *normal_command@end C1 l6
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -40,14 +40,14 @@ $result_tree_text{'paragraph_and_macro'} = '*document_root C1
       {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@macro C3 l8
+   *normal_command@macro C3 l8
    |EXTRA
    |formal_args:A{}
    |macro_name:{word}
     *arguments_line C1
      {macro_line: word\\n}
     {raw:a word\\n}
-    *@end C1 l10
+    *normal_command@end C1 l10
     |EXTRA
     |text_arg:{macro}
      *line_arg C3

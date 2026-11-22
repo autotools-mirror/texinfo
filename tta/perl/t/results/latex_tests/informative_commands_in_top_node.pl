@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'informative_commands_in_top_node'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'informative_commands_in_top_node'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C7 l2 {top sectionning}
+ *normal_command@top C7 l2 {top sectionning}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -31,7 +31,7 @@ $result_tree_text{'informative_commands_in_top_node'} = '*document_root C5
     {normal_text:top sectionning}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@paragraphindent C1 l4
+  *normal_command@paragraphindent C1 l4
   |EXTRA
   |global_command_number:{1}
   |misc_args:A{5}
@@ -40,24 +40,24 @@ $result_tree_text{'informative_commands_in_top_node'} = '*document_root C5
     {normal_text:5}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@evenfooting C1 l6
+  *normal_command@evenfooting C1 l6
    *line_arg C13
     {spaces_before_argument: }
-    *@thischapter
+    *normal_command@thischapter
     {normal_text: }
-    *@thistitle
+    *normal_command@thistitle
     {normal_text: }
-    *@|
+    *normal_command@|
     {normal_text: }
-    *@thisfile
+    *normal_command@thisfile
     {normal_text: }
-    *@|
+    *normal_command@|
     {normal_text: }
-    *@code C1 l6
+    *normal_command@code C1 l6
      *brace_container C1
-      *@thischaptername
+      *normal_command@thischaptername
     {spaces_after_argument:\\n}
-  *@paragraphindent C1 l7
+  *normal_command@paragraphindent C1 l7
   |EXTRA
   |global_command_number:{2}
   |misc_args:A{2}
@@ -66,7 +66,7 @@ $result_tree_text{'informative_commands_in_top_node'} = '*document_root C5
     {normal_text:2}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l9 {next node}
+ *normal_command@node C1 l9 {next node}
  |EXTRA
  |identifier:{next-node}
  |is_target:{1}
@@ -76,7 +76,7 @@ $result_tree_text{'informative_commands_in_top_node'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:next node}
     {spaces_after_argument:\\n}
- *@chapter C3 l10 {chap}
+ *normal_command@chapter C3 l10 {chap}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}

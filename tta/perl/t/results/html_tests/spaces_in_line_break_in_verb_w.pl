@@ -12,14 +12,14 @@ $result_tree_text{'spaces_in_line_break_in_verb_w'} = '*document_root C1
  *before_node_section C4
   *preamble_before_content
   *paragraph C2
-   *@w C1 l1
+   *normal_command@w C1 l1
     *brace_container C2
      {normal_text:aaa  bb\\n}
      {normal_text:ccc}
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@verb C1 l4
+   *normal_command@verb C1 l4
     *brace_container C4
      {verb_delimiter:|}
      {raw:aaa  bb\\n}

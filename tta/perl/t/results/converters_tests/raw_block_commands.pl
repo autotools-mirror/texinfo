@@ -13,13 +13,13 @@ $result_tree_text{'raw_block_commands'} = '*document_root C1
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content C9
-   *@html C3 l2
+   *normal_command@html C3 l2
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *rawpreformatted C1
      {normal_text:<blink>html</blink> ``}\\n}
-    *@end C1 l4
+    *normal_command@end C1 l4
     |EXTRA
     |text_arg:{html}
      *line_arg C3
@@ -27,13 +27,13 @@ $result_tree_text{'raw_block_commands'} = '*document_root C1
       {normal_text:html}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@xml C3 l6
+   *normal_command@xml C3 l6
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *rawpreformatted C1
      {normal_text:<para>xml</para> ``}\\n}
-    *@end C1 l8
+    *normal_command@end C1 l8
     |EXTRA
     |text_arg:{xml}
      *line_arg C3
@@ -41,13 +41,13 @@ $result_tree_text{'raw_block_commands'} = '*document_root C1
       {normal_text:xml}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@docbook C3 l10
+   *normal_command@docbook C3 l10
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *rawpreformatted C1
      {normal_text:<emphasis>docbook</emphasis> ``}\\n}
-    *@end C1 l12
+    *normal_command@end C1 l12
     |EXTRA
     |text_arg:{docbook}
      *line_arg C3
@@ -55,19 +55,19 @@ $result_tree_text{'raw_block_commands'} = '*document_root C1
       {normal_text:docbook}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@tex C3 l14
+   *normal_command@tex C3 l14
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *rawpreformatted C3
      {normal_text:$\\underline{a < b }
-     *@code C1 l15
+     *normal_command@code C1 l15
       *brace_container C2
        {normal_text:tex \\hbox}
        *balanced_braces C1 l15
         {normal_text:{ code }}
      {normal_text:}$ ``\\n}
-    *@end C1 l16
+    *normal_command@end C1 l16
     |EXTRA
     |text_arg:{tex}
      *line_arg C3
@@ -75,19 +75,19 @@ $result_tree_text{'raw_block_commands'} = '*document_root C1
       {normal_text:tex}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@latex C3 l18
+   *normal_command@latex C3 l18
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *rawpreformatted C3
      {normal_text:$\\frac{a < b }
-     *@code C1 l19
+     *normal_command@code C1 l19
       *brace_container C2
        {normal_text:tex \\hbox}
        *balanced_braces C1 l19
         {normal_text:{ code }}
      {normal_text:}{b}$ ``\\n}
-    *@end C1 l20
+    *normal_command@end C1 l20
     |EXTRA
     |text_arg:{latex}
      *line_arg C3

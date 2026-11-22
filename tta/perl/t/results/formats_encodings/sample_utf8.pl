@@ -13,25 +13,25 @@ $result_tree_text{'sample_utf8'} = '*document_root C10
   *preamble_before_setfilename C2
    *preamble_before_beginning C1
     {text_before_beginning:\\input texinfo   @c -*-texinfo-*-\\n}
-   *@c C1
+   *normal_command@c C1
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:%**start of header}
      {spaces_after_argument:\\n}
   *preamble_before_content C12
-   *@setfilename C1 sample_utf8.texi:l3
+   *normal_command@setfilename C1 sample_utf8.texi:l3
    |EXTRA
    |text_arg:{sample_utf8.info}
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:sample_utf8.info}
      {spaces_after_argument:\\n}
-   *@settitle C1 sample_utf8.texi:l4
+   *normal_command@settitle C1 sample_utf8.texi:l4
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:Sample 示例 ĄĘ ù}
      {spaces_after_argument:\\n}
-   *@documentencoding C1 sample_utf8.texi:l5
+   *normal_command@documentencoding C1 sample_utf8.texi:l5
    |EXTRA
    |global_command_number:{1}
    |input_encoding_name:{utf-8}
@@ -40,13 +40,13 @@ $result_tree_text{'sample_utf8'} = '*document_root C10
      {spaces_before_argument: }
      {normal_text:UTF-8}
      {spaces_after_argument:\\n}
-   *@c C1
+   *normal_command@c C1
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:%**end of header}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@copying C5 sample_utf8.texi:l8
+   *normal_command@copying C5 sample_utf8.texi:l8
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
@@ -56,7 +56,7 @@ $result_tree_text{'sample_utf8'} = '*document_root C10
     *paragraph C2
      {normal_text:Copyright (C) 2005 Someone.\\n}
      {normal_text:Texinfo中文示例\\n}
-    *@end C1 sample_utf8.texi:l13
+    *normal_command@end C1 sample_utf8.texi:l13
     |EXTRA
     |text_arg:{copying}
      *line_arg C3
@@ -64,31 +64,31 @@ $result_tree_text{'sample_utf8'} = '*document_root C10
       {normal_text:copying}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@titlepage C6 sample_utf8.texi:l15
+   *normal_command@titlepage C6 sample_utf8.texi:l15
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
-    *@title C1 sample_utf8.texi:l16
+    *normal_command@title C1 sample_utf8.texi:l16
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:标题示例 ĄĘ ae ąę Â ù}
       {spaces_after_argument:\\n}
-    *@page C1
+    *normal_command@page C1
      *line_arg C1
       {spaces_before_argument:\\n}
     *paragraph C2
      {normal_text:Texinfo中文示例\\n}
-     *@vskip C1
+     *normal_command@vskip C1
       *line_arg C3
        {spaces_before_argument: }
        {rawline_text:0pt plus 1filll}
        {spaces_after_argument:\\n}
-    *@insertcopying C1 sample_utf8.texi:l20
+    *normal_command@insertcopying C1 sample_utf8.texi:l20
     |EXTRA
     |global_command_number:{1}
      *line_arg C1
       {spaces_before_argument:\\n}
-    *@end C1 sample_utf8.texi:l21
+    *normal_command@end C1 sample_utf8.texi:l21
     |EXTRA
     |text_arg:{titlepage}
      *line_arg C3
@@ -96,12 +96,12 @@ $result_tree_text{'sample_utf8'} = '*document_root C10
       {normal_text:titlepage}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@c C1
+   *normal_command@c C1
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:Output the table of the contents at the beginning.}
      {spaces_after_argument:\\n}
-   *@contents C1 sample_utf8.texi:l24
+   *normal_command@contents C1 sample_utf8.texi:l24
    |EXTRA
    |global_command_number:{1}
     *line_arg C1
@@ -109,11 +109,11 @@ $result_tree_text{'sample_utf8'} = '*document_root C10
    {empty_line:\\n}
    >SOURCEMARKS
    >expanded_conditional_command<start;1><p:1>
-    >*@ifnottex C1 sample_utf8.texi:l26
+    >*normal_command@ifnottex C1 sample_utf8.texi:l26
      >*arguments_line C1
       >*block_line_arg C1
        >{spaces_before_argument:\\n}
- *@node C1 sample_utf8.texi:l27 {Top}
+ *normal_command@node C1 sample_utf8.texi:l27 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -123,7 +123,7 @@ $result_tree_text{'sample_utf8'} = '*document_root C10
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C7 sample_utf8.texi:l28 {Texinfo中文示例}
+ *normal_command@top C7 sample_utf8.texi:l28 {Texinfo中文示例}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -133,12 +133,12 @@ $result_tree_text{'sample_utf8'} = '*document_root C10
     {normal_text:Texinfo中文示例}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@insertcopying C1 sample_utf8.texi:l30
+  *normal_command@insertcopying C1 sample_utf8.texi:l30
   |EXTRA
   |global_command_number:{2}
   >SOURCEMARKS
   >expanded_conditional_command<end;1>
-   >*@end C1 sample_utf8.texi:l31
+   >*normal_command@end C1 sample_utf8.texi:l31
    >|EXTRA
    >|text_arg:{ifnottex}
     >*line_arg C3
@@ -148,7 +148,7 @@ $result_tree_text{'sample_utf8'} = '*document_root C10
    *line_arg C1
     {spaces_before_argument:\\n}
   {empty_line:\\n}
-  *@menu C5 sample_utf8.texi:l33
+  *normal_command@menu C5 sample_utf8.texi:l33
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -186,7 +186,7 @@ $result_tree_text{'sample_utf8'} = '*document_root C10
     *menu_entry_description C1
      *preformatted C1
       {normal_text:Complete index.\\n}
-   *@end C1 sample_utf8.texi:l38
+   *normal_command@end C1 sample_utf8.texi:l38
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -195,7 +195,7 @@ $result_tree_text{'sample_utf8'} = '*document_root C10
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   {empty_line:\\n}
- *@node C1 sample_utf8.texi:l41 {第一章（First Chapter）}
+ *normal_command@node C1 sample_utf8.texi:l41 {第一章（First Chapter）}
  |EXTRA
  |identifier:{_7b2c_4e00_7ae0_ff08First-Chapter_ff09}
  |is_target:{1}
@@ -205,7 +205,7 @@ $result_tree_text{'sample_utf8'} = '*document_root C10
     {spaces_before_argument: }
     {normal_text:第一章（First Chapter）}
     {spaces_after_argument:\\n}
- *@chapter C10 sample_utf8.texi:l42 {第一章（First Chapter）}
+ *normal_command@chapter C10 sample_utf8.texi:l42 {第一章（First Chapter）}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -255,11 +255,11 @@ $result_tree_text{'sample_utf8'} = '*document_root C10
   *paragraph C1
    {normal_text:Here is a numbered list.\\n}
   {empty_line:\\n}
-  *@enumerate C4 sample_utf8.texi:l53
+  *normal_command@enumerate C4 sample_utf8.texi:l53
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
-   *@item C3 sample_utf8.texi:l54
+   *normal_command@item C3 sample_utf8.texi:l54
    |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
@@ -267,14 +267,14 @@ $result_tree_text{'sample_utf8'} = '*document_root C10
      {normal_text:第\\n}
      {normal_text:This is the first item.\\n}
     {empty_line:\\n}
-   *@item C2 sample_utf8.texi:l57
+   *normal_command@item C2 sample_utf8.texi:l57
    |EXTRA
    |item_number:{2}
     {ignorable_spaces_after_command: }
     *paragraph C2
      {normal_text:ĄĘ\\n}
      {normal_text:This is the second item.\\n}
-   *@end C1 sample_utf8.texi:l59
+   *normal_command@end C1 sample_utf8.texi:l59
    |EXTRA
    |text_arg:{enumerate}
     *line_arg C3
@@ -282,7 +282,7 @@ $result_tree_text{'sample_utf8'} = '*document_root C10
      {normal_text:enumerate}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 sample_utf8.texi:l61 {Second Chapter AE ĄĘ ae ąę}
+ *normal_command@node C1 sample_utf8.texi:l61 {Second Chapter AE ĄĘ ae ąę}
  |EXTRA
  |identifier:{Second-Chapter-AE-_0104_0118-ae-_0105_0119}
  |is_target:{1}
@@ -292,7 +292,7 @@ $result_tree_text{'sample_utf8'} = '*document_root C10
     {spaces_before_argument: }
     {normal_text:Second Chapter AE ĄĘ ae ąę}
     {spaces_after_argument:\\n}
- *@chapter C4 sample_utf8.texi:l62 {Chapter 2 AE ĄĘ ae ąę}
+ *normal_command@chapter C4 sample_utf8.texi:l62 {Chapter 2 AE ĄĘ ae ąę}
  |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
@@ -306,7 +306,7 @@ $result_tree_text{'sample_utf8'} = '*document_root C10
   *paragraph C1
    {normal_text:Zażółć gęślą jaźń!\\n}
   {empty_line:\\n}
- *@node C1 sample_utf8.texi:l66 {Index node}
+ *normal_command@node C1 sample_utf8.texi:l66 {Index node}
  |EXTRA
  |identifier:{Index-node}
  |is_target:{1}
@@ -317,7 +317,7 @@ $result_tree_text{'sample_utf8'} = '*document_root C10
     {spaces_before_argument: }
     {normal_text:Index node}
     {spaces_after_argument:\\n}
- *@unnumbered C4 sample_utf8.texi:l67 {Index}
+ *normal_command@unnumbered C4 sample_utf8.texi:l67 {Index}
  |EXTRA
  |section_level:{1}
  |section_number:{4}
@@ -327,7 +327,7 @@ $result_tree_text{'sample_utf8'} = '*document_root C10
     {normal_text:Index}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@printindex C1 sample_utf8.texi:l69
+  *normal_command@printindex C1 sample_utf8.texi:l69
   |EXTRA
   |global_command_number:{1}
   |misc_args:A{cp}
@@ -336,7 +336,7 @@ $result_tree_text{'sample_utf8'} = '*document_root C10
     {normal_text:cp}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@bye C1
+ *normal_command@bye C1
   *line_arg C1
    {spaces_before_argument:\\n}
 ';

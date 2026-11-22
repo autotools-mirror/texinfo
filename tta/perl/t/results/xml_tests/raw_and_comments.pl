@@ -11,25 +11,25 @@ use Encode;
 $result_tree_text{'raw_and_comments'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C2
-   *@tex C3 l1
+   *normal_command@tex C3 l1
     *arguments_line C1
      *block_line_arg C2
       {spaces_before_argument:  }
-      *@c C1
+      *normal_command@c C1
        *line_arg C3
         {spaces_before_argument: }
         {rawline_text:comment}
         {spaces_after_argument:\\n}
     *rawpreformatted C1
      {normal_text:in <tex>\\n}
-    *@end C1 l3
+    *normal_command@end C1 l3
     |EXTRA
     |text_arg:{tex}
      *line_arg C4
       {spaces_before_argument: }
       {normal_text:tex}
       {spaces_after_argument:  }
-      *@comment C1
+      *normal_command@comment C1
        *line_arg C3
         {spaces_before_argument: }
         {rawline_text:other comment}
@@ -37,25 +37,25 @@ $result_tree_text{'raw_and_comments'} = '*document_root C1
    {empty_line:\\n}
   *paragraph C2
    {normal_text:Para\\n}
-   *@xml C3 l6
+   *normal_command@xml C3 l6
     *arguments_line C1
      *block_line_arg C2
       {spaces_before_argument: }
-      *@c C1
+      *normal_command@c C1
        *line_arg C3
         {spaces_before_argument: }
         {rawline_text:in xml comment}
         {spaces_after_argument:\\n}
     *rawpreformatted C1
      {normal_text:<in />\\n}
-    *@end C1 l8
+    *normal_command@end C1 l8
     |EXTRA
     |text_arg:{xml}
      *line_arg C4
       {spaces_before_argument: }
       {normal_text:xml}
       {spaces_after_argument:  }
-      *@comment C1
+      *normal_command@comment C1
        *line_arg C3
         {spaces_before_argument: }
         {rawline_text:end xml comment}

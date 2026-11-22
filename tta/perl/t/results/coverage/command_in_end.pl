@@ -11,124 +11,124 @@ use Encode;
 $result_tree_text{'command_in_end'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@quotation C4 l1
+  *normal_command@quotation C4 l1
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C2
     {normal_text:In quotation\\n}
-    *@end C1 l3
+    *normal_command@end C1 l3
      *line_arg C3
       {spaces_before_argument: }
-      *@code C1 l3
+      *normal_command@code C1 l3
        *brace_container C1
         {normal_text:quotation}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@quotation C4 l5
+   *normal_command@quotation C4 l5
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *paragraph C2
      {normal_text:In quotation\\n}
-     *@end C1 l7
+     *normal_command@end C1 l7
      |EXTRA
      |text_arg:{q}
       *line_arg C4
        {spaces_before_argument: }
        {normal_text:q}
-       *@code C1 l7
+       *normal_command@code C1 l7
         *brace_container C1
          {normal_text:uotation}
        {spaces_after_argument:\\n}
     {empty_line:\\n}
-    *@quotation C4 l9
+    *normal_command@quotation C4 l9
      *arguments_line C1
       *block_line_arg C1
        {spaces_before_argument:\\n}
      *paragraph C2
       {normal_text:In quotation\\n}
-      *@end C1 l11
+      *normal_command@end C1 l11
       |EXTRA
       |text_arg:{qu}
        *line_arg C4
         {spaces_before_argument: }
         {normal_text:qu}
-        *@code C1 l11
+        *normal_command@code C1 l11
          *brace_container C1
           {normal_text:otation}
         {spaces_after_argument:\\n}
      {empty_line:\\n}
-     *@quotation C10 l13
+     *normal_command@quotation C10 l13
       *arguments_line C1
        *block_line_arg C1
         {spaces_before_argument:\\n}
       *paragraph C2
        {normal_text:In quotation\\n}
-       *@end C1 l15
+       *normal_command@end C1 l15
        |EXTRA
        |text_arg:{quotn}
         *line_arg C5
          {spaces_before_argument: }
          {normal_text:quot}
-         *@asis C1 l15
+         *normal_command@asis C1 l15
           *brace_container C1
            {normal_text:atio}
          {normal_text:n}
          {spaces_after_argument:\\n}
       {empty_line:\\n}
-      *@quotation C3 l17
+      *normal_command@quotation C3 l17
        *arguments_line C1
         *block_line_arg C1
          {spaces_before_argument:\\n}
        *paragraph C1
         {normal_text:In quotation\\n}
-       *@end C1 l19
+       *normal_command@end C1 l19
        |EXTRA
        |text_arg:{quotation}
         *line_arg C5
          {spaces_before_argument: }
          {normal_text:q}
-         *@asis C1 l19
+         *normal_command@asis C1 l19
           *brace_container
          {normal_text:uotation}
          {spaces_after_argument:\\n}
       {empty_line:\\n}
-      *@quotation C3 l21
+      *normal_command@quotation C3 l21
        *arguments_line C1
         *block_line_arg C1
          {spaces_before_argument:\\n}
        *paragraph C1
         {normal_text:In quotation\\n}
-       *@end C1 l23
+       *normal_command@end C1 l23
        |EXTRA
        |text_arg:{quotation}
         *line_arg C5
          {spaces_before_argument: }
          {normal_text:qu}
-         *@asis C1 l23
+         *normal_command@asis C1 l23
           *brace_container
          {normal_text:otation}
          {spaces_after_argument:\\n}
       {empty_line:\\n}
-      *@quotation C3 l25
+      *normal_command@quotation C3 l25
        *arguments_line C1
         *block_line_arg C1
          {spaces_before_argument:\\n}
        *paragraph C1
         {normal_text:In quotation\\n}
-       *@end C1 l27
+       *normal_command@end C1 l27
        |EXTRA
        |text_arg:{quotation}
         *line_arg C5
          {spaces_before_argument: }
          {normal_text:quot}
-         *@asis C1 l27
+         *normal_command@asis C1 l27
           *brace_container
          {normal_text:ation}
          {spaces_after_argument:\\n}
       {empty_line:\\n}
-      *@verbatim C3 l29
+      *normal_command@verbatim C3 l29
        *arguments_line C1
         *block_line_arg C1
          {spaces_before_argument:\\n}

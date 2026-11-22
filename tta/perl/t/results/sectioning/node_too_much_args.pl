@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'node_too_much_args'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {first}
+ *normal_command@node C1 l1 {first}
  |EXTRA
  |identifier:{first}
  |is_target:{1}

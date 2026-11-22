@@ -11,14 +11,14 @@ use Encode;
 $result_tree_text{'macro_before_specific_line_command_args'} = '*document_root C1
  *before_node_section C1
   *preamble_before_content C3
-   *@macro C3 l1
+   *normal_command@macro C3 l1
    |EXTRA
    |formal_args:A{}
    |macro_name:{cpfn}
     *arguments_line C1
      {macro_line: cpfn\\n}
     {raw: cp fn\\n}
-    *@end C1 l3
+    *normal_command@end C1 l3
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -26,7 +26,7 @@ $result_tree_text{'macro_before_specific_line_command_args'} = '*document_root C
       {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@syncodeindex C1 l5
+   *normal_command@syncodeindex C1 l5
    |EXTRA
    |misc_args:A{cp|fn}
     *line_arg C3

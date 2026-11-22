@@ -13,7 +13,7 @@ $result_tree_text{'multitable_empty_bracketed_prototype'} = '*document_root C1
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content
-  *@multitable C2 l2
+  *normal_command@multitable C2 l2
   |EXTRA
   |max_columns:{2}
    *arguments_line C1
@@ -24,7 +24,7 @@ $result_tree_text{'multitable_empty_bracketed_prototype'} = '*document_root C1
      *bracketed_arg C1 l2
       {normal_text:a}
      {spaces_after_argument:\\n}
-   *@end C1 l3
+   *normal_command@end C1 l3
    |EXTRA
    |text_arg:{multitable}
     *line_arg C3

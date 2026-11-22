@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'section_on_float_line'} = '*document_root C2
  *before_node_section C2
   *preamble_before_content
-  *@float C1 l1
+  *normal_command@float C1 l1
   |EXTRA
   |float_number:{1}
   |float_type:{t}
@@ -26,7 +26,7 @@ $result_tree_text{'section_on_float_line'} = '*document_root C2
      {spaces_before_argument: }
      {normal_text:l}
      {spaces_after_argument: }
- *@section C1 l1 {first}
+ *normal_command@section C1 l1 {first}
  |EXTRA
  |identifier:{first}
  |is_target:{1}

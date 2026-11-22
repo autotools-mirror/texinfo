@@ -16,7 +16,7 @@ $result_tree_text{'text_before_top_and_contents_after_title'} = '*document_root 
   *paragraph C1
    {normal_text:Some text before top\\n}
   {empty_line:\\n}
- *@node C1 l4 {Top}
+ *normal_command@node C1 l4 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -26,7 +26,7 @@ $result_tree_text{'text_before_top_and_contents_after_title'} = '*document_root 
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C4 l5 {top}
+ *normal_command@top C4 l5 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -39,7 +39,7 @@ $result_tree_text{'text_before_top_and_contents_after_title'} = '*document_root 
   *paragraph C1
    {normal_text:In top.\\n}
   {empty_line:\\n}
- *@chapter C4 l9 {the chap}
+ *normal_command@chapter C4 l9 {the chap}
  |EXTRA
  |identifier:{the-chap}
  |is_target:{1}
@@ -52,7 +52,7 @@ $result_tree_text{'text_before_top_and_contents_after_title'} = '*document_root 
     {normal_text:the chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@contents C1 l11
+  *normal_command@contents C1 l11
   |EXTRA
   |global_command_number:{1}
    *line_arg C1

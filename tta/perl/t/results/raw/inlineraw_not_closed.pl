@@ -12,7 +12,7 @@ $result_tree_text{'inlineraw_not_closed'} = '*document_root C2
  *before_node_section C2
   *preamble_before_content
   *paragraph C1
-   *@inlineraw C2 l1
+   *normal_command@inlineraw C2 l1
    |EXTRA
    |expand_index:{1}
    |format:{html}
@@ -21,7 +21,7 @@ $result_tree_text{'inlineraw_not_closed'} = '*document_root C2
     *brace_arg C2
      {spaces_before_argument: }
      {normal_text:aa\\n}
- *@section C1 l2 {sec}
+ *normal_command@section C1 l2 {sec}
  |EXTRA
  |identifier:{sec}
  |is_target:{1}

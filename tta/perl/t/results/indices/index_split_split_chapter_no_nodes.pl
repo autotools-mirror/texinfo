@@ -14,7 +14,7 @@ $result_tree_text{'index_split_split_chapter_no_nodes'} = '*document_root C21
    {text_before_beginning:\\input texinfo @c -*-texinfo-*-\\n}
    {text_before_beginning:\\n}
   *preamble_before_content
- *@node C1 index_split.texi:l3 {Top}
+ *normal_command@node C1 index_split.texi:l3 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -25,7 +25,7 @@ $result_tree_text{'index_split_split_chapter_no_nodes'} = '*document_root C21
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C13 index_split.texi:l4 {split indices}
+ *normal_command@top C13 index_split.texi:l4 {split indices}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -43,7 +43,7 @@ $result_tree_text{'index_split_split_chapter_no_nodes'} = '*document_root C21
     {normal_text:entry a}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@printindex C1 index_split.texi:l7
+  *normal_command@printindex C1 index_split.texi:l7
   |EXTRA
   |global_command_number:{1}
   |misc_args:A{cp}
@@ -52,7 +52,7 @@ $result_tree_text{'index_split_split_chapter_no_nodes'} = '*document_root C21
     {normal_text:cp}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@printindex C1 index_split.texi:l9
+  *normal_command@printindex C1 index_split.texi:l9
   |EXTRA
   |global_command_number:{2}
   |misc_args:A{fn}
@@ -64,7 +64,7 @@ $result_tree_text{'index_split_split_chapter_no_nodes'} = '*document_root C21
   *paragraph C1
    {normal_text:And one one more index\\n}
   {empty_line:\\n}
-  *@printindex C1 index_split.texi:l13
+  *normal_command@printindex C1 index_split.texi:l13
   |EXTRA
   |global_command_number:{3}
   |misc_args:A{cp}
@@ -73,7 +73,7 @@ $result_tree_text{'index_split_split_chapter_no_nodes'} = '*document_root C21
     {normal_text:cp}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C5 index_split.texi:l15
+  *normal_command@menu C5 index_split.texi:l15
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -110,7 +110,7 @@ $result_tree_text{'index_split_split_chapter_no_nodes'} = '*document_root C21
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 index_split.texi:l19
+   *normal_command@end C1 index_split.texi:l19
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -118,7 +118,7 @@ $result_tree_text{'index_split_split_chapter_no_nodes'} = '*document_root C21
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C10 index_split.texi:l21 {first}
+ *normal_command@node C10 index_split.texi:l21 {first}
  |EXTRA
  |identifier:{first}
  |is_target:{1}
@@ -165,7 +165,7 @@ $result_tree_text{'index_split_split_chapter_no_nodes'} = '*document_root C21
      {normal_text:entry in node}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@printindex C1 index_split.texi:l29
+  *normal_command@printindex C1 index_split.texi:l29
   |EXTRA
   |global_command_number:{4}
   |misc_args:A{cp}
@@ -174,7 +174,7 @@ $result_tree_text{'index_split_split_chapter_no_nodes'} = '*document_root C21
     {normal_text:cp}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@printindex C1 index_split.texi:l31
+  *normal_command@printindex C1 index_split.texi:l31
   |EXTRA
   |global_command_number:{5}
   |misc_args:A{fn}
@@ -192,7 +192,7 @@ $result_tree_text{'index_split_split_chapter_no_nodes'} = '*document_root C21
     {normal_text:entry after printindex}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@chapter C7 index_split.texi:l35 {First chapter}
+ *normal_command@chapter C7 index_split.texi:l35 {First chapter}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -227,7 +227,7 @@ $result_tree_text{'index_split_split_chapter_no_nodes'} = '*document_root C21
     {normal_text:somewhere}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C8 index_split.texi:l40
+  *normal_command@menu C8 index_split.texi:l40
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -297,7 +297,7 @@ $result_tree_text{'index_split_split_chapter_no_nodes'} = '*document_root C21
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 index_split.texi:l47
+   *normal_command@end C1 index_split.texi:l47
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -305,7 +305,7 @@ $result_tree_text{'index_split_split_chapter_no_nodes'} = '*document_root C21
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 index_split.texi:l49 {section 1}
+ *normal_command@node C1 index_split.texi:l49 {section 1}
  |EXTRA
  |identifier:{section-1}
  |is_target:{1}
@@ -316,7 +316,7 @@ $result_tree_text{'index_split_split_chapter_no_nodes'} = '*document_root C21
     {spaces_before_argument: }
     {normal_text:section 1}
     {spaces_after_argument:\\n}
- *@section C11 index_split.texi:l50 {Section 1}
+ *normal_command@section C11 index_split.texi:l50 {Section 1}
  |EXTRA
  |section_heading_number:{1.1}
  |section_level:{2}
@@ -336,7 +336,7 @@ $result_tree_text{'index_split_split_chapter_no_nodes'} = '*document_root C21
     {normal_text:something}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C4 index_split.texi:l54
+  *normal_command@menu C4 index_split.texi:l54
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument: \\n}
@@ -362,7 +362,7 @@ $result_tree_text{'index_split_split_chapter_no_nodes'} = '*document_root C21
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 index_split.texi:l57
+   *normal_command@end C1 index_split.texi:l57
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -372,7 +372,7 @@ $result_tree_text{'index_split_split_chapter_no_nodes'} = '*document_root C21
   *paragraph C1
    {normal_text:The index once more\\n}
   {empty_line:\\n}
-  *@printindex C1 index_split.texi:l60
+  *normal_command@printindex C1 index_split.texi:l60
   |EXTRA
   |global_command_number:{6}
   |misc_args:A{cp}
@@ -390,7 +390,7 @@ $result_tree_text{'index_split_split_chapter_no_nodes'} = '*document_root C21
     {normal_text:another}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 index_split.texi:l64 {subsection 1}
+ *normal_command@node C1 index_split.texi:l64 {subsection 1}
  |EXTRA
  |identifier:{subsection-1}
  |is_target:{1}
@@ -400,7 +400,7 @@ $result_tree_text{'index_split_split_chapter_no_nodes'} = '*document_root C21
     {spaces_before_argument: }
     {normal_text:subsection 1}
     {spaces_after_argument:\\n}
- *@subsection C4 index_split.texi:l65 {Subsection 1}
+ *normal_command@subsection C4 index_split.texi:l65 {Subsection 1}
  |EXTRA
  |section_heading_number:{1.1.1}
  |section_level:{3}
@@ -414,7 +414,7 @@ $result_tree_text{'index_split_split_chapter_no_nodes'} = '*document_root C21
   *paragraph C1
    {normal_text:In subsection 1\\n}
   {empty_line:\\n}
- *@node C1 index_split.texi:l69 {subsection 2}
+ *normal_command@node C1 index_split.texi:l69 {subsection 2}
  |EXTRA
  |identifier:{subsection-2}
  |is_target:{1}
@@ -425,7 +425,7 @@ $result_tree_text{'index_split_split_chapter_no_nodes'} = '*document_root C21
     {spaces_before_argument: }
     {normal_text:subsection 2}
     {spaces_after_argument:\\n}
- *@subsection C10 index_split.texi:l70 {Subsection 2}
+ *normal_command@subsection C10 index_split.texi:l70 {Subsection 2}
  |EXTRA
  |section_heading_number:{1.1.2}
  |section_level:{3}
@@ -448,7 +448,7 @@ $result_tree_text{'index_split_split_chapter_no_nodes'} = '*document_root C21
     {normal_text:subsection 2}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@printindex C1 index_split.texi:l76
+  *normal_command@printindex C1 index_split.texi:l76
   |EXTRA
   |global_command_number:{7}
   |misc_args:A{cp}
@@ -466,7 +466,7 @@ $result_tree_text{'index_split_split_chapter_no_nodes'} = '*document_root C21
     {normal_text:printindex subsection 2}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 index_split.texi:l80 {section 2}
+ *normal_command@node C1 index_split.texi:l80 {section 2}
  |EXTRA
  |identifier:{section-2}
  |is_target:{1}
@@ -476,7 +476,7 @@ $result_tree_text{'index_split_split_chapter_no_nodes'} = '*document_root C21
     {spaces_before_argument: }
     {normal_text:section 2}
     {spaces_after_argument:\\n}
- *@section C4 index_split.texi:l81 {Section 2}
+ *normal_command@section C4 index_split.texi:l81 {Section 2}
  |EXTRA
  |section_heading_number:{1.2}
  |section_level:{2}
@@ -490,7 +490,7 @@ $result_tree_text{'index_split_split_chapter_no_nodes'} = '*document_root C21
   *paragraph C1
    {normal_text:Section 2\\n}
   {empty_line:\\n}
- *@node C1 index_split.texi:l85 {section 3}
+ *normal_command@node C1 index_split.texi:l85 {section 3}
  |EXTRA
  |identifier:{section-3}
  |is_target:{1}
@@ -501,7 +501,7 @@ $result_tree_text{'index_split_split_chapter_no_nodes'} = '*document_root C21
     {spaces_before_argument: }
     {normal_text:section 3}
     {spaces_after_argument:\\n}
- *@section C6 index_split.texi:l86 {Section 3}
+ *normal_command@section C6 index_split.texi:l86 {Section 3}
  |EXTRA
  |section_heading_number:{1.3}
  |section_level:{2}
@@ -521,7 +521,7 @@ $result_tree_text{'index_split_split_chapter_no_nodes'} = '*document_root C21
     {normal_text:section 3}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@printindex C1 index_split.texi:l90
+  *normal_command@printindex C1 index_split.texi:l90
   |EXTRA
   |global_command_number:{8}
   |misc_args:A{cp}
@@ -530,7 +530,7 @@ $result_tree_text{'index_split_split_chapter_no_nodes'} = '*document_root C21
     {normal_text:cp}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C5 index_split.texi:l92 {node in section 3}
+ *normal_command@node C5 index_split.texi:l92 {node in section 3}
  |EXTRA
  |identifier:{node-in-section-3}
  |is_target:{1}
@@ -563,7 +563,7 @@ $result_tree_text{'index_split_split_chapter_no_nodes'} = '*document_root C21
   *paragraph C1
    {normal_text:Text for the node in section 3\\n}
   {empty_line:\\n}
- *@node C13 index_split.texi:l97 {node 2 in section 3}
+ *normal_command@node C13 index_split.texi:l97 {node 2 in section 3}
  |EXTRA
  |identifier:{node-2-in-section-3}
  |is_target:{1}
@@ -593,7 +593,7 @@ $result_tree_text{'index_split_split_chapter_no_nodes'} = '*document_root C21
   *paragraph C1
    {normal_text:Text for the node 2 in section 3\\n}
   {empty_line:\\n}
-  *@printindex C1 index_split.texi:l102
+  *normal_command@printindex C1 index_split.texi:l102
   |EXTRA
   |global_command_number:{9}
   |misc_args:A{cp}
@@ -611,7 +611,7 @@ $result_tree_text{'index_split_split_chapter_no_nodes'} = '*document_root C21
     {normal_text:between printindex node in section 3}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@printindex C1 index_split.texi:l106
+  *normal_command@printindex C1 index_split.texi:l106
   |EXTRA
   |global_command_number:{10}
   |misc_args:A{cp}
@@ -629,7 +629,7 @@ $result_tree_text{'index_split_split_chapter_no_nodes'} = '*document_root C21
     {normal_text:after second printindex node in section 3}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C4 index_split.texi:l110 {node 3 in section 3}
+ *normal_command@node C4 index_split.texi:l110 {node 3 in section 3}
  |EXTRA
  |identifier:{node-3-in-section-3}
  |is_target:{1}
@@ -656,7 +656,7 @@ $result_tree_text{'index_split_split_chapter_no_nodes'} = '*document_root C21
     {normal_text:node 3 in section 3}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 index_split.texi:l114 {second chapter}
+ *normal_command@node C1 index_split.texi:l114 {second chapter}
  |EXTRA
  |identifier:{second-chapter}
  |is_target:{1}
@@ -666,7 +666,7 @@ $result_tree_text{'index_split_split_chapter_no_nodes'} = '*document_root C21
     {spaces_before_argument: }
     {normal_text:second chapter}
     {spaces_after_argument:\\n}
- *@chapter C4 index_split.texi:l115 {Second chapter}
+ *normal_command@chapter C4 index_split.texi:l115 {Second chapter}
  |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
@@ -680,7 +680,7 @@ $result_tree_text{'index_split_split_chapter_no_nodes'} = '*document_root C21
   *paragraph C1
    {normal_text:Second chapter\\n}
   {empty_line:\\n}
- *@bye C1
+ *normal_command@bye C1
   *line_arg C1
    {spaces_before_argument:\\n}
 ';

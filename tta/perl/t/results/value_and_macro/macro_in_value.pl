@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'macro_in_value'} = '*document_root C1
  *before_node_section C4
   *preamble_before_content C4
-   *@macro C5 l1
+   *normal_command@macro C5 l1
    |EXTRA
    |formal_args:A{}
    |macro_name:{ab}
@@ -20,7 +20,7 @@ $result_tree_text{'macro_in_value'} = '*document_root C1
     {raw:a\\n}
     {raw:\\n}
     {raw:b\\n}
-    *@end C1 l5
+    *normal_command@end C1 l5
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -28,7 +28,7 @@ $result_tree_text{'macro_in_value'} = '*document_root C1
       {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@set C1
+   *normal_command@set C1
    |EXTRA
    |misc_args:A{flagab|@ab}
     *line_arg C3
@@ -40,7 +40,7 @@ $result_tree_text{'macro_in_value'} = '*document_root C1
    {normal_text:flagab: a\\n}
    >SOURCEMARKS
    >value_expansion<start;1><p:8>{@ab}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:flagab}
    >macro_expansion<start;1><p:8>

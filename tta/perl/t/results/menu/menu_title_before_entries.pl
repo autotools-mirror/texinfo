@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'menu_title_before_entries'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content
- *@node C4 l1 {Top}
+ *normal_command@node C4 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -22,7 +22,7 @@ $result_tree_text{'menu_title_before_entries'} = '*document_root C3
     {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C4 l3
+  *normal_command@menu C4 l3
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -40,7 +40,7 @@ $result_tree_text{'menu_title_before_entries'} = '*document_root C3
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l6
+   *normal_command@end C1 l6
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -48,7 +48,7 @@ $result_tree_text{'menu_title_before_entries'} = '*document_root C3
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l8 {chap subnode}
+ *normal_command@node C1 l8 {chap subnode}
  |EXTRA
  |identifier:{chap-subnode}
  |is_target:{1}

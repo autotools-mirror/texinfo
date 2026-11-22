@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'empty_listoffloats'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@listoffloats C1 l1
+  *normal_command@listoffloats C1 l1
   |EXTRA
   |float_type:{}
   |global_command_number:{1}

@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'loop_nodes'} = '*document_root C6
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'loop_nodes'} = '*document_root C6
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C4 l2 {top}
+ *normal_command@top C4 l2 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -31,7 +31,7 @@ $result_tree_text{'loop_nodes'} = '*document_root C6
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C3 l4
+  *normal_command@menu C3 l4
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -46,7 +46,7 @@ $result_tree_text{'loop_nodes'} = '*document_root C6
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l6
+   *normal_command@end C1 l6
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -54,7 +54,7 @@ $result_tree_text{'loop_nodes'} = '*document_root C6
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C4 l8 {chap node up}
+ *normal_command@node C4 l8 {chap node up}
  |EXTRA
  |identifier:{chap-node-up}
  |is_target:{1}
@@ -72,7 +72,7 @@ $result_tree_text{'loop_nodes'} = '*document_root C6
     {normal_text:node down}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C3 l10
+  *normal_command@menu C3 l10
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -87,7 +87,7 @@ $result_tree_text{'loop_nodes'} = '*document_root C6
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l12
+   *normal_command@end C1 l12
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -95,7 +95,7 @@ $result_tree_text{'loop_nodes'} = '*document_root C6
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C4 l14 {node middle}
+ *normal_command@node C4 l14 {node middle}
  |EXTRA
  |identifier:{node-middle}
  |is_target:{1}
@@ -113,7 +113,7 @@ $result_tree_text{'loop_nodes'} = '*document_root C6
     {normal_text:chap node up}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C3 l16
+  *normal_command@menu C3 l16
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -128,7 +128,7 @@ $result_tree_text{'loop_nodes'} = '*document_root C6
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l18
+   *normal_command@end C1 l18
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -136,7 +136,7 @@ $result_tree_text{'loop_nodes'} = '*document_root C6
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l20 {node down}
+ *normal_command@node C1 l20 {node down}
  |EXTRA
  |identifier:{node-down}
  |is_target:{1}

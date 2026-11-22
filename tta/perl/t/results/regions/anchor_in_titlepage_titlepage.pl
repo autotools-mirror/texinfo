@@ -11,12 +11,12 @@ use Encode;
 $result_tree_text{'anchor_in_titlepage_titlepage'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content C2
-   *@titlepage C5 l1
+   *normal_command@titlepage C5 l1
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     {empty_line:\\n}
-    *@anchor C1 l3
+    *normal_command@anchor C1 l3
     |EXTRA
     |identifier:{in-titlepage}
     |is_target:{1}
@@ -25,7 +25,7 @@ $result_tree_text{'anchor_in_titlepage_titlepage'} = '*document_root C5
      |element_region:{titlepage}
       {normal_text:in titlepage}
     {spaces_after_close_brace:\\n}
-    *@end C1 l4
+    *normal_command@end C1 l4
     |EXTRA
     |text_arg:{titlepage}
      *line_arg C3
@@ -33,7 +33,7 @@ $result_tree_text{'anchor_in_titlepage_titlepage'} = '*document_root C5
       {normal_text:titlepage}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@top C1 l6 {top}
+ *normal_command@top C1 l6 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -42,7 +42,7 @@ $result_tree_text{'anchor_in_titlepage_titlepage'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:top}
     {spaces_after_argument:\\n}
- *@node C2 l7 {Top}
+ *normal_command@node C2 l7 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -53,7 +53,7 @@ $result_tree_text{'anchor_in_titlepage_titlepage'} = '*document_root C5
     {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@chapter C1 l9 {Chapter}
+ *normal_command@chapter C1 l9 {Chapter}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -63,7 +63,7 @@ $result_tree_text{'anchor_in_titlepage_titlepage'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Chapter}
     {spaces_after_argument:\\n}
- *@node C3 l10 {nchap}
+ *normal_command@node C3 l10 {nchap}
  |EXTRA
  |identifier:{nchap}
  |is_target:{1}
@@ -75,7 +75,7 @@ $result_tree_text{'anchor_in_titlepage_titlepage'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@xref C1 l12
+   *normal_command@xref C1 l12
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}

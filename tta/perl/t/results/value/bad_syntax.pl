@@ -13,44 +13,44 @@ $result_tree_text{'bad_syntax'} = '*document_root C1
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content C11
-   *@set C1
+   *normal_command@set C1
     *line_arg C1
      {spaces_before_argument:\\n}
-   *@set C1
+   *normal_command@set C1
     *line_arg C1
      {spaces_before_argument: \\n}
-   *@set C1
+   *normal_command@set C1
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:?}
      {spaces_after_argument:\\n}
-   *@set C1
+   *normal_command@set C1
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text::-/ hey!}
      {spaces_after_argument:\\n}
-   *@set C1
+   *normal_command@set C1
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:a@b}
      {spaces_after_argument:\\n}
-   *@set C1
+   *normal_command@set C1
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text::-" bad}
      {spaces_after_argument:\\n}
-   *@set C1
+   *normal_command@set C1
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:} no}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@clear C1
+   *normal_command@clear C1
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:aaa ggg}
      {spaces_after_argument:\\n}
-   *@clear C1
+   *normal_command@clear C1
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:and{other}
@@ -59,7 +59,7 @@ $result_tree_text{'bad_syntax'} = '*document_root C1
   *paragraph C1
    {normal_text:gurgl\\n}
   {empty_line:\\n}
-  *@value C1
+  *normal_command@value C1
    *brace_container C1
     {normal_text:unknown}
   {normal_text:\\n}

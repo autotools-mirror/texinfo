@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'regenerate_master_menu_with_menu_comment'} = '*document_root C7
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'regenerate_master_menu_with_menu_comment'} = '*document_root 
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C4 l2 {top}
+ *normal_command@top C4 l2 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -31,7 +31,7 @@ $result_tree_text{'regenerate_master_menu_with_menu_comment'} = '*document_root 
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C5 l4
+  *normal_command@menu C5 l4
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -51,7 +51,7 @@ $result_tree_text{'regenerate_master_menu_with_menu_comment'} = '*document_root 
      {after_menu_description_line:\\n}
      {normal_text:A MC.\\n}
      {empty_line:\\n}
-   *@detailmenu C4
+   *normal_command@detailmenu C4
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
@@ -74,14 +74,14 @@ $result_tree_text{'regenerate_master_menu_with_menu_comment'} = '*document_root 
      *menu_entry_description C1
       *preformatted C1
        {normal_text:\\n}
-    *@end C1
+    *normal_command@end C1
     |EXTRA
     |text_arg:{detailmenu}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:detailmenu}
       {spaces_after_argument:\\n}
-   *@end C1 l8
+   *normal_command@end C1 l8
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -89,7 +89,7 @@ $result_tree_text{'regenerate_master_menu_with_menu_comment'} = '*document_root 
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l10 {chap}
+ *normal_command@node C1 l10 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -99,7 +99,7 @@ $result_tree_text{'regenerate_master_menu_with_menu_comment'} = '*document_root 
     {spaces_before_argument: }
     {normal_text:chap}
     {spaces_after_argument:\\n}
- *@chapter C2 l11 {Chapter}
+ *normal_command@chapter C2 l11 {Chapter}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -110,7 +110,7 @@ $result_tree_text{'regenerate_master_menu_with_menu_comment'} = '*document_root 
     {normal_text:Chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l13 {sec}
+ *normal_command@node C1 l13 {sec}
  |EXTRA
  |identifier:{sec}
  |is_target:{1}
@@ -120,7 +120,7 @@ $result_tree_text{'regenerate_master_menu_with_menu_comment'} = '*document_root 
     {spaces_before_argument: }
     {normal_text:sec}
     {spaces_after_argument:\\n}
- *@section C1 l14 {Sec}
+ *normal_command@section C1 l14 {Sec}
  |EXTRA
  |section_heading_number:{1.1}
  |section_level:{2}

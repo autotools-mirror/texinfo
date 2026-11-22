@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'fonttextsize'} = '*document_root C10
  *before_node_section C1
   *preamble_before_content C2
-   *@fonttextsize C1 l1
+   *normal_command@fonttextsize C1 l1
    |EXTRA
    |misc_args:A{10}
     *line_arg C3
@@ -19,7 +19,7 @@ $result_tree_text{'fonttextsize'} = '*document_root C10
      {normal_text:10}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@node C1 l3 {Top}
+ *normal_command@node C1 l3 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -29,7 +29,7 @@ $result_tree_text{'fonttextsize'} = '*document_root C10
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l4 {section top}
+ *normal_command@top C2 l4 {section top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -39,7 +39,7 @@ $result_tree_text{'fonttextsize'} = '*document_root C10
     {normal_text:section top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l6 {chapter}
+ *normal_command@node C1 l6 {chapter}
  |EXTRA
  |identifier:{chapter}
  |is_target:{1}
@@ -49,7 +49,7 @@ $result_tree_text{'fonttextsize'} = '*document_root C10
     {spaces_before_argument: }
     {normal_text:chapter}
     {spaces_after_argument:\\n}
- *@chapter C2 l7 {Chapter}
+ *normal_command@chapter C2 l7 {Chapter}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -60,7 +60,7 @@ $result_tree_text{'fonttextsize'} = '*document_root C10
     {normal_text:Chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@section C2 l9 {section}
+ *normal_command@section C2 l9 {section}
  |EXTRA
  |identifier:{section}
  |is_target:{1}
@@ -73,7 +73,7 @@ $result_tree_text{'fonttextsize'} = '*document_root C10
     {normal_text:section}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@subsection C4 l11 {Subsection 10pts}
+ *normal_command@subsection C4 l11 {Subsection 10pts}
  |EXTRA
  |identifier:{Subsection-10pts}
  |is_target:{1}
@@ -88,14 +88,14 @@ $result_tree_text{'fonttextsize'} = '*document_root C10
   *paragraph C1
    {normal_text:In 10pts\\n}
   {empty_line:\\n}
-  *@fonttextsize C1 l14
+  *normal_command@fonttextsize C1 l14
   |EXTRA
   |misc_args:A{11}
    *line_arg C3
     {spaces_before_argument: }
     {normal_text:11}
     {spaces_after_argument:\\n}
- *@subsection C5 l15 {Subsection 11pts}
+ *normal_command@subsection C5 l15 {Subsection 11pts}
  |EXTRA
  |identifier:{Subsection-11pts}
  |is_target:{1}
@@ -111,12 +111,12 @@ $result_tree_text{'fonttextsize'} = '*document_root C10
   *paragraph C1
    {normal_text:In 11pts\\n}
   {empty_line:\\n}
-  *@fonttextsize C1 l19
+  *normal_command@fonttextsize C1 l19
    *line_arg C3
     {spaces_before_argument: }
     {normal_text:8}
     {spaces_after_argument:\\n}
- *@subsection C5 l20 {Subsection 8pts}
+ *normal_command@subsection C5 l20 {Subsection 8pts}
  |EXTRA
  |identifier:{Subsection-8pts}
  |is_target:{1}
@@ -132,12 +132,12 @@ $result_tree_text{'fonttextsize'} = '*document_root C10
   *paragraph C1
    {normal_text:In 8pts\\n}
   {empty_line:\\n}
-  *@fonttextsize C1 l24
+  *normal_command@fonttextsize C1 l24
    *line_arg C3
     {spaces_before_argument: }
     {normal_text:15}
     {spaces_after_argument:\\n}
- *@subsection C3 l25 {Subsection 15pts}
+ *normal_command@subsection C3 l25 {Subsection 15pts}
  |EXTRA
  |identifier:{Subsection-15pts}
  |is_target:{1}

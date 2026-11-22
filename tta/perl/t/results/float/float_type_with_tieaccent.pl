@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'float_type_with_tieaccent'} = '*document_root C1
  *before_node_section C4
   *preamble_before_content
-  *@float C3 l1
+  *normal_command@float C3 l1
   |EXTRA
   |float_number:{1}
   |float_type:{A 1͡a 第͡H ê͡一 and text}
@@ -22,17 +22,17 @@ $result_tree_text{'float_type_with_tieaccent'} = '*document_root C1
     *block_line_arg C7
      {spaces_before_argument: }
      {normal_text:A }
-     *@tieaccent C1 l1
+     *normal_command@tieaccent C1 l1
       *brace_container C1
        {normal_text:1a}
      {normal_text: }
-     *@tieaccent C1 l1
+     *normal_command@tieaccent C1 l1
       *brace_container C1
        {normal_text:第H}
      {normal_text: }
-     *@tieaccent C1 l1
+     *normal_command@tieaccent C1 l1
       *brace_container C2
-       *@^ C1 l1
+       *normal_command@^ C1 l1
         *following_arg C1
          {normal_text:e}
        {normal_text:一 and text}
@@ -42,7 +42,7 @@ $result_tree_text{'float_type_with_tieaccent'} = '*document_root C1
      {spaces_after_argument:\\n}
    *paragraph C1
     {normal_text:inside\\n}
-   *@end C1 l3
+   *normal_command@end C1 l3
    |EXTRA
    |text_arg:{float}
     *line_arg C3
@@ -50,24 +50,24 @@ $result_tree_text{'float_type_with_tieaccent'} = '*document_root C1
      {normal_text:float}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@listoffloats C1 l5
+  *normal_command@listoffloats C1 l5
   |EXTRA
   |float_type:{A 1͡a 第͡H ê͡一 and text}
   |global_command_number:{1}
    *line_arg C8
     {spaces_before_argument: }
     {normal_text:A }
-    *@tieaccent C1 l5
+    *normal_command@tieaccent C1 l5
      *brace_container C1
       {normal_text:1a}
     {normal_text: }
-    *@tieaccent C1 l5
+    *normal_command@tieaccent C1 l5
      *brace_container C1
       {normal_text:第H}
     {normal_text: }
-    *@tieaccent C1 l5
+    *normal_command@tieaccent C1 l5
      *brace_container C2
-      *@^ C1 l5
+      *normal_command@^ C1 l5
        *following_arg C1
         {normal_text:e}
       {normal_text:一 and text}

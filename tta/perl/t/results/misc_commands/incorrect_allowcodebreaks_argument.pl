@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'incorrect_allowcodebreaks_argument'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C1
-   *@allowcodebreaks C1 l1
+   *normal_command@allowcodebreaks C1 l1
    |EXTRA
    |global_command_number:{1}
     *line_arg C3
@@ -19,7 +19,7 @@ $result_tree_text{'incorrect_allowcodebreaks_argument'} = '*document_root C1
      {normal_text:_arg}
      {spaces_after_argument:\\n}
   *paragraph C2
-   *@code C1 l2
+   *normal_command@code C1 l2
     *brace_container C1
      {normal_text:b a}
    {normal_text:\\n}

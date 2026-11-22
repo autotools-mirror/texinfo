@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'equivalent_nodes_defined_linked'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content
- *@node C4 l1 {Top}
+ *normal_command@node C4 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -25,12 +25,12 @@ $result_tree_text{'equivalent_nodes_defined_linked'} = '*document_root C3
    |node_content:A{1|1}
    |normalized:{chap}
     {spaces_before_argument: }
-    *@asis C1 l1
+    *normal_command@asis C1 l1
      *brace_container C1
       {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C3 l3
+  *normal_command@menu C3 l3
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -40,14 +40,14 @@ $result_tree_text{'equivalent_nodes_defined_linked'} = '*document_root C3
     |EXTRA
     |node_content:A{0|0}
     |normalized:{chap}
-     *@strong C1 l4
+     *normal_command@strong C1 l4
       *brace_container C1
        {normal_text:chap}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l5
+   *normal_command@end C1 l5
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -55,7 +55,7 @@ $result_tree_text{'equivalent_nodes_defined_linked'} = '*document_root C3
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C9 l7 {chap}
+ *normal_command@node C9 l7 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -66,7 +66,7 @@ $result_tree_text{'equivalent_nodes_defined_linked'} = '*document_root C3
     {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@float C3 l9
+  *normal_command@float C3 l9
   |EXTRA
   |float_number:{1}
   |float_type:{Figure}
@@ -78,13 +78,13 @@ $result_tree_text{'equivalent_nodes_defined_linked'} = '*document_root C3
      {normal_text:Figure}
     *block_line_arg C3
      {spaces_before_argument: }
-     *@samp C1 l9
+     *normal_command@samp C1 l9
       *brace_container C1
        {normal_text:chap}
      {spaces_after_argument:\\n}
    *paragraph C1
     {normal_text:A figure\\n}
-   *@end C1 l11
+   *normal_command@end C1 l11
    |EXTRA
    |text_arg:{float}
     *line_arg C3
@@ -92,7 +92,7 @@ $result_tree_text{'equivalent_nodes_defined_linked'} = '*document_root C3
      {normal_text:float}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@listoffloats C1 l13
+  *normal_command@listoffloats C1 l13
   |EXTRA
   |float_type:{Figure}
   |global_command_number:{1}
@@ -103,7 +103,7 @@ $result_tree_text{'equivalent_nodes_defined_linked'} = '*document_root C3
   {empty_line:\\n}
   *paragraph C3
    {normal_text:Ref to node }
-   *@ref C1 l15
+   *normal_command@ref C1 l15
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -113,18 +113,18 @@ $result_tree_text{'equivalent_nodes_defined_linked'} = '*document_root C3
   {empty_line:\\n}
   *paragraph C9
    {normal_text:Ref to }
-   *@@
+   *normal_command@@
    {normal_text:samp}
-   *@{
+   *normal_command@{
    {normal_text:chap}
-   *@}
+   *normal_command@}
    {normal_text: }
-   *@ref C1 l17
+   *normal_command@ref C1 l17
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{chap}
-     *@samp C1 l17
+     *normal_command@samp C1 l17
       *brace_container C1
        {normal_text:chap}
    {normal_text:.\\n}

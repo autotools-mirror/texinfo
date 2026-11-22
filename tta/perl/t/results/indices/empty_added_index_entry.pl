@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'empty_added_index_entry'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content C2
-   *@defindex C1 l1
+   *normal_command@defindex C1 l1
    |EXTRA
    |misc_args:A{my}
     *line_arg C3
@@ -19,7 +19,7 @@ $result_tree_text{'empty_added_index_entry'} = '*document_root C3
      {normal_text:my}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@node C1 l3 {Top}
+ *normal_command@node C1 l3 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -29,7 +29,7 @@ $result_tree_text{'empty_added_index_entry'} = '*document_root C3
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@node C3 l4 {chap}
+ *normal_command@node C3 l4 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}

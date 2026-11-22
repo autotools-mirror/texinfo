@@ -11,15 +11,15 @@ use Encode;
 $result_tree_text{'settitle_and_headings'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content C4
-   *@settitle C1 l1
+   *normal_command@settitle C1 l1
     *line_arg C5
      {spaces_before_argument: }
      {normal_text:Title }
-     *@*
+     *normal_command@*
      {normal_text: for a manual}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@headings C1 l3
+   *normal_command@headings C1 l3
    |EXTRA
    |global_command_number:{1}
    |misc_args:A{double}
@@ -28,7 +28,7 @@ $result_tree_text{'settitle_and_headings'} = '*document_root C2
      {normal_text:double}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@chapter C9 l5 {chap}
+ *normal_command@chapter C9 l5 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -41,14 +41,14 @@ $result_tree_text{'settitle_and_headings'} = '*document_root C2
     {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@page C1
+  *normal_command@page C1
    *line_arg C1
     {spaces_before_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
    {normal_text:More text\\n}
   {empty_line:\\n}
-  *@page C1
+  *normal_command@page C1
    *line_arg C1
     {spaces_before_argument:\\n}
   {empty_line:\\n}

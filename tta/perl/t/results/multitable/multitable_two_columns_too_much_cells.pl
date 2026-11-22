@@ -11,13 +11,13 @@ use Encode;
 $result_tree_text{'multitable_two_columns_too_much_cells'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@multitable C3 l1
+  *normal_command@multitable C3 l1
   |EXTRA
   |max_columns:{2}
    *arguments_line C1
     *block_line_arg C2
      {spaces_before_argument: }
-     *@columnfractions C1 l1
+     *normal_command@columnfractions C1 l1
      |EXTRA
      |misc_args:A{0.4|0.6}
       *line_arg C3
@@ -28,13 +28,13 @@ $result_tree_text{'multitable_two_columns_too_much_cells'} = '*document_root C1
     *row C2
     |EXTRA
     |row_number:{1}
-     *@item C2 l2
+     *normal_command@item C2 l2
      |EXTRA
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
        {normal_text:first }
-     *@tab C8 l2
+     *normal_command@tab C8 l2
      |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
@@ -52,7 +52,7 @@ $result_tree_text{'multitable_two_columns_too_much_cells'} = '*document_root C1
     *row C1
     |EXTRA
     |row_number:{2}
-     *@item C2 l3
+     *normal_command@item C2 l3
      |EXTRA
      |cell_number:{1}
       {ignorable_spaces_after_command: }
@@ -61,13 +61,13 @@ $result_tree_text{'multitable_two_columns_too_much_cells'} = '*document_root C1
     *row C2
     |EXTRA
     |row_number:{3}
-     *@item C2 l4
+     *normal_command@item C2 l4
      |EXTRA
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
        {normal_text:first2 }
-     *@tab C4 l4
+     *normal_command@tab C4 l4
      |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
@@ -76,7 +76,7 @@ $result_tree_text{'multitable_two_columns_too_much_cells'} = '*document_root C1
       {ignorable_spaces_after_command: }
       *paragraph C1
        {normal_text:first2 out\\n}
-   *@end C1 l5
+   *normal_command@end C1 l5
    |EXTRA
    |text_arg:{multitable}
     *line_arg C3

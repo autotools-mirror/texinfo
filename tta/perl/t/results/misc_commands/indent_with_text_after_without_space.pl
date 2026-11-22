@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'indent_with_text_after_without_space'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C3
-   *@set C1
+   *normal_command@set C1
    |EXTRA
    |misc_args:A{myvalue|a}
     *line_arg C3
@@ -19,14 +19,14 @@ $result_tree_text{'indent_with_text_after_without_space'} = '*document_root C1
      {rawline_text:myvalue a}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@indent l3
+   *normal_command@indent l3
   *paragraph C1
   |EXTRA
   |indent:{1}
    {normal_text:a b\\n}
    >SOURCEMARKS
    >value_expansion<start;1>{a}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:myvalue}
    >value_expansion<end;1><p:1>

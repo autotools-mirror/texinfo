@@ -11,23 +11,23 @@ use Encode;
 $result_tree_text{'verbatim_in_smallformat'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@smallformat C3 l1
+  *normal_command@smallformat C3 l1
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
-   *@verbatim C3 l2
+   *normal_command@verbatim C3 l2
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     {raw:... still verbatim, but in a smaller font ...\\n}
-    *@end C1 l4
+    *normal_command@end C1 l4
     |EXTRA
     |text_arg:{verbatim}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:verbatim}
       {spaces_after_argument:\\n}
-   *@end C1 l5
+   *normal_command@end C1 l5
    |EXTRA
    |text_arg:{smallformat}
     *line_arg C3

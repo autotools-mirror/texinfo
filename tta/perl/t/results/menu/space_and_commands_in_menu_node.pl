@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'space_and_commands_in_menu_node'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'space_and_commands_in_menu_node'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C4 l2 {top}
+ *normal_command@top C4 l2 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -31,7 +31,7 @@ $result_tree_text{'space_and_commands_in_menu_node'} = '*document_root C5
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C11 l4
+  *normal_command@menu C11 l4
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -53,7 +53,7 @@ $result_tree_text{'space_and_commands_in_menu_node'} = '*document_root C5
     |node_content:A{0|2}
     |normalized:{chap-b}
      {normal_text:chap }
-     *@:
+     *normal_command@:
      {normal_text: b}
     {menu_entry_separator:::}
     *menu_entry_description C1
@@ -77,8 +77,8 @@ $result_tree_text{'space_and_commands_in_menu_node'} = '*document_root C5
     |node_content:A{0|3}
     |normalized:{chap-b}
      {normal_text:chap}
-     *@ 
-     *@ 
+     *normal_command@ 
+     *normal_command@ 
      {normal_text:b}
     {menu_entry_separator:::}
     *menu_entry_description C1
@@ -91,7 +91,7 @@ $result_tree_text{'space_and_commands_in_menu_node'} = '*document_root C5
     |node_content:A{0|2}
     |normalized:{chap-b}
      {normal_text:chap}
-     *@ 
+     *normal_command@ 
      {normal_text: b}
     {menu_entry_separator:::}
     *menu_entry_description C1
@@ -104,7 +104,7 @@ $result_tree_text{'space_and_commands_in_menu_node'} = '*document_root C5
     |node_content:A{0|2}
     |normalized:{chap-b}
      {normal_text:chap }
-     *@ 
+     *normal_command@ 
      {normal_text:b}
     {menu_entry_separator:::}
     *menu_entry_description C1
@@ -120,7 +120,7 @@ $result_tree_text{'space_and_commands_in_menu_node'} = '*document_root C5
     |node_content:A{0|2}
     |normalized:{chap-b}
      {normal_text:chap }
-     *@:
+     *normal_command@:
      {normal_text: b}
     {menu_entry_separator:.}
     *menu_entry_description C1
@@ -150,14 +150,14 @@ $result_tree_text{'space_and_commands_in_menu_node'} = '*document_root C5
     |node_content:A{0|3}
     |normalized:{chap-b}
      {normal_text:chap }
-     *@ 
-     *@ 
+     *normal_command@ 
+     *normal_command@ 
      {normal_text:b}
     {menu_entry_separator:.}
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l14
+   *normal_command@end C1 l14
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -165,7 +165,7 @@ $result_tree_text{'space_and_commands_in_menu_node'} = '*document_root C5
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l16 {chap @: b}
+ *normal_command@node C1 l16 {chap @: b}
  |EXTRA
  |identifier:{chap-b}
  |is_target:{1}
@@ -174,10 +174,10 @@ $result_tree_text{'space_and_commands_in_menu_node'} = '*document_root C5
    *line_arg C5
     {spaces_before_argument: }
     {normal_text:chap }
-    *@:
+    *normal_command@:
     {normal_text: b}
     {spaces_after_argument:\\n}
- *@chapter C1 l17 {Chap}
+ *normal_command@chapter C1 l17 {Chap}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}

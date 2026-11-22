@@ -13,7 +13,7 @@ $result_tree_text{'nested_ifset_ifclear'} = '*document_root C1
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content C4
-   *@macro C10 l2
+   *normal_command@macro C10 l2
    |EXTRA
    |formal_args:A{}
    |macro_name:{conditionals}
@@ -27,7 +27,7 @@ $result_tree_text{'nested_ifset_ifclear'} = '*document_root C1
     {raw:Somevar is set, anothervar is not.\\n}
     {raw:@end ifclear\\n}
     {raw:@end ifset\\n}
-    *@end C1 l11
+    *normal_command@end C1 l11
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -35,14 +35,14 @@ $result_tree_text{'nested_ifset_ifclear'} = '*document_root C1
       {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@set C1
+   *normal_command@set C1
    |EXTRA
    |misc_args:A{somevar|}
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:somevar}
      {spaces_after_argument:\\n}
-   *@set C1
+   *normal_command@set C1
    |EXTRA
    |misc_args:A{anothervar|}
    >SOURCEMARKS
@@ -50,14 +50,14 @@ $result_tree_text{'nested_ifset_ifclear'} = '*document_root C1
     >*macro_call@conditionals C1
      >*brace_arg
    >expanded_conditional_command<start;1>
-    >*@ifset C1 l15:@conditionals
+    >*normal_command@ifset C1 l15:@conditionals
      >*arguments_line C1
       >*block_line_arg C3
        >{spaces_before_argument: }
        >{normal_text:somevar}
        >{spaces_after_argument:\\n}
    >expanded_conditional_command<start;2>
-    >*@ifset C1 l15:@conditionals
+    >*normal_command@ifset C1 l15:@conditionals
      >*arguments_line C1
       >*block_line_arg C3
        >{spaces_before_argument: }
@@ -71,7 +71,7 @@ $result_tree_text{'nested_ifset_ifclear'} = '*document_root C1
    {normal_text:Both somevar and anothervar are set.\\n}
    >SOURCEMARKS
    >expanded_conditional_command<end;2><p:37>
-    >*@end C1 l15:@conditionals
+    >*normal_command@end C1 l15:@conditionals
     >|EXTRA
     >|text_arg:{ifset}
      >*line_arg C3
@@ -79,14 +79,14 @@ $result_tree_text{'nested_ifset_ifclear'} = '*document_root C1
       >{normal_text:ifset}
       >{spaces_after_argument:\\n}
    >ignored_conditional_block<1><p:37>
-    >*@ifclear C3 l15:@conditionals
+    >*normal_command@ifclear C3 l15:@conditionals
      >*arguments_line C1
       >*block_line_arg C3
        >{spaces_before_argument: }
        >{normal_text:anothervar}
        >{spaces_after_argument:\\n}
      >{raw:Somevar is set, anothervar is not.\\n}
-     >*@end C1 l15:@conditionals
+     >*normal_command@end C1 l15:@conditionals
      >|EXTRA
      >|text_arg:{ifclear}
       >*line_arg C3
@@ -94,7 +94,7 @@ $result_tree_text{'nested_ifset_ifclear'} = '*document_root C1
        >{normal_text:ifclear}
        >{spaces_after_argument:\\n}
    >expanded_conditional_command<end;1><p:37>
-    >*@end C1 l15:@conditionals
+    >*normal_command@end C1 l15:@conditionals
     >|EXTRA
     >|text_arg:{ifset}
      >*line_arg C3
@@ -104,14 +104,14 @@ $result_tree_text{'nested_ifset_ifclear'} = '*document_root C1
       >>macro_expansion<end;1><p:5>
       >{spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@set C1
+  *normal_command@set C1
   |EXTRA
   |misc_args:A{somevar|}
    *line_arg C3
     {spaces_before_argument: }
     {rawline_text:somevar}
     {spaces_after_argument:\\n}
-  *@clear C1
+  *normal_command@clear C1
   |EXTRA
   |misc_args:A{anothervar}
   >SOURCEMARKS
@@ -119,21 +119,21 @@ $result_tree_text{'nested_ifset_ifclear'} = '*document_root C1
    >*macro_call@conditionals C1
     >*brace_arg
   >expanded_conditional_command<start;3>
-   >*@ifset C1 l19:@conditionals
+   >*normal_command@ifset C1 l19:@conditionals
     >*arguments_line C1
      >*block_line_arg C3
       >{spaces_before_argument: }
       >{normal_text:somevar}
       >{spaces_after_argument:\\n}
   >ignored_conditional_block<2>
-   >*@ifset C3 l19:@conditionals
+   >*normal_command@ifset C3 l19:@conditionals
     >*arguments_line C1
      >*block_line_arg C3
       >{spaces_before_argument: }
       >{normal_text:anothervar}
       >{spaces_after_argument:\\n}
     >{raw:Both somevar and anothervar are set.\\n}
-    >*@end C1 l19:@conditionals
+    >*normal_command@end C1 l19:@conditionals
     >|EXTRA
     >|text_arg:{ifset}
      >*line_arg C3
@@ -141,7 +141,7 @@ $result_tree_text{'nested_ifset_ifclear'} = '*document_root C1
       >{normal_text:ifset}
       >{spaces_after_argument:\\n}
   >expanded_conditional_command<start;4>
-   >*@ifclear C1 l19:@conditionals
+   >*normal_command@ifclear C1 l19:@conditionals
     >*arguments_line C1
      >*block_line_arg C3
       >{spaces_before_argument: }
@@ -155,7 +155,7 @@ $result_tree_text{'nested_ifset_ifclear'} = '*document_root C1
    {normal_text:Somevar is set, anothervar is not.\\n}
    >SOURCEMARKS
    >expanded_conditional_command<end;4><p:35>
-    >*@end C1 l19:@conditionals
+    >*normal_command@end C1 l19:@conditionals
     >|EXTRA
     >|text_arg:{ifclear}
      >*line_arg C3
@@ -163,7 +163,7 @@ $result_tree_text{'nested_ifset_ifclear'} = '*document_root C1
       >{normal_text:ifclear}
       >{spaces_after_argument:\\n}
    >expanded_conditional_command<end;3><p:35>
-    >*@end C1 l19:@conditionals
+    >*normal_command@end C1 l19:@conditionals
     >|EXTRA
     >|text_arg:{ifset}
      >*line_arg C3
@@ -173,14 +173,14 @@ $result_tree_text{'nested_ifset_ifclear'} = '*document_root C1
       >>macro_expansion<end;2><p:5>
       >{spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@clear C1
+  *normal_command@clear C1
   |EXTRA
   |misc_args:A{somevar}
    *line_arg C3
     {spaces_before_argument: }
     {rawline_text:somevar}
     {spaces_after_argument:\\n}
-  *@set C1
+  *normal_command@set C1
   |EXTRA
   |misc_args:A{anothervar|}
   >SOURCEMARKS
@@ -188,7 +188,7 @@ $result_tree_text{'nested_ifset_ifclear'} = '*document_root C1
    >*macro_call@conditionals C1
     >*brace_arg
   >ignored_conditional_block<3>
-   >*@ifset C8 l23:@conditionals
+   >*normal_command@ifset C8 l23:@conditionals
     >*arguments_line C1
      >*block_line_arg C3
       >{spaces_before_argument: }
@@ -200,7 +200,7 @@ $result_tree_text{'nested_ifset_ifclear'} = '*document_root C1
     >{raw:@ifclear anothervar\\n}
     >{raw:Somevar is set, anothervar is not.\\n}
     >{raw:@end ifclear\\n}
-    >*@end C1 l23:@conditionals
+    >*normal_command@end C1 l23:@conditionals
     >|EXTRA
     >|text_arg:{ifset}
      >*line_arg C3
@@ -214,14 +214,14 @@ $result_tree_text{'nested_ifset_ifclear'} = '*document_root C1
     {rawline_text:anothervar}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@clear C1
+  *normal_command@clear C1
   |EXTRA
   |misc_args:A{somevar}
    *line_arg C3
     {spaces_before_argument: }
     {rawline_text:somevar}
     {spaces_after_argument:\\n}
-  *@clear C1
+  *normal_command@clear C1
   |EXTRA
   |misc_args:A{anothervar}
   >SOURCEMARKS
@@ -229,7 +229,7 @@ $result_tree_text{'nested_ifset_ifclear'} = '*document_root C1
    >*macro_call@conditionals C1
     >*brace_arg
   >ignored_conditional_block<4>
-   >*@ifset C8 l27:@conditionals
+   >*normal_command@ifset C8 l27:@conditionals
     >*arguments_line C1
      >*block_line_arg C3
       >{spaces_before_argument: }
@@ -241,7 +241,7 @@ $result_tree_text{'nested_ifset_ifclear'} = '*document_root C1
     >{raw:@ifclear anothervar\\n}
     >{raw:Somevar is set, anothervar is not.\\n}
     >{raw:@end ifclear\\n}
-    >*@end C1 l27:@conditionals
+    >*normal_command@end C1 l27:@conditionals
     >|EXTRA
     >|text_arg:{ifset}
      >*line_arg C3

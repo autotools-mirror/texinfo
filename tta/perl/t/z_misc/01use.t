@@ -17,6 +17,7 @@ ok(1, 'modules loading');
 # change, so it generally uses obsolete constructs.
 my $manual_tree =
   Texinfo::TreeElement::new({ 'cmdname' => 'multitable',
+  'type' => 'normal_command',
   'extra' => { 'max_columns' => 3, },
   'contents' => [
      Texinfo::TreeElement::new({'type' => 'arguments_line',
@@ -37,6 +38,7 @@ my $manual_tree =
                                Texinfo::TreeElement::new({'text' => 'xx',
                                                    'type' => 'normal_text'}),
                                Texinfo::TreeElement::new({'cmdname' => 'b',
+                                'type' => 'normal_command',
                                 'contents' => [
                                       Texinfo::TreeElement::new({
                                               'type' => 'brace_container',
@@ -64,6 +66,7 @@ my $manual_tree =
                              Texinfo::TreeElement::new({ 'text' => 'title',
                                                         'type' => 'normal_text' }),
                              Texinfo::TreeElement::new({ 'cmdname' => 'verb',
+                                                  'type' => 'normal_command',
                                                   'contents' => [
                                                     Texinfo::TreeElement::new({
                                                                'contents' => [
@@ -78,7 +81,8 @@ my $manual_tree =
                                                                 'type' => 'brace_container',
                                                             }) ],
                                                 }),
-                             Texinfo::TreeElement::new({ 'cmdname' => '@'}),
+                             Texinfo::TreeElement::new({ 'cmdname' => '@',
+                                                  'type' => 'normal_command'}),
                              Texinfo::TreeElement::new({ 'text' => ".\n",
                                                      'type' => 'normal_text'}),
                                              ]
@@ -94,6 +98,7 @@ my $manual_tree =
                                'contents' => [
                                                Texinfo::TreeElement::new({
                                                  'cmdname' => 'item',
+                                                 'type' => 'normal_command',
                                                  'extra' => {'cell_number' => 1,},
                                                  'contents' => [
                                    Texinfo::TreeElement::new({'text' => " \n",
@@ -105,6 +110,7 @@ my $manual_tree =
            }),
            Texinfo::TreeElement::new({
              'cmdname' => 'end',
+             'type' => 'normal_command',
              'extra' => {
                          'text_arg' => 'multitable',
                         },

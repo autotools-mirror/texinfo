@@ -11,13 +11,13 @@ use Encode;
 $result_tree_text{'button_replacement_direction_strings_customization'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content C2
-   *@contents C1 l1
+   *normal_command@contents C1 l1
    |EXTRA
    |global_command_number:{1}
     *line_arg C1
      {spaces_before_argument:\\n}
    {empty_line:\\n}
- *@node C1 l3 {Top}
+ *normal_command@node C1 l3 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -27,7 +27,7 @@ $result_tree_text{'button_replacement_direction_strings_customization'} = '*docu
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l4 {top}
+ *normal_command@top C2 l4 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -37,7 +37,7 @@ $result_tree_text{'button_replacement_direction_strings_customization'} = '*docu
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l6 {chapter}
+ *normal_command@node C1 l6 {chapter}
  |EXTRA
  |identifier:{chapter}
  |is_target:{1}
@@ -47,7 +47,7 @@ $result_tree_text{'button_replacement_direction_strings_customization'} = '*docu
     {spaces_before_argument: }
     {normal_text:chapter}
     {spaces_after_argument:\\n}
- *@chapter C1 l7 {chap}
+ *normal_command@chapter C1 l7 {chap}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}

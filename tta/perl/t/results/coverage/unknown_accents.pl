@@ -12,113 +12,113 @@ $result_tree_text{'unknown_accents'} = '*document_root C1
  *before_node_section C12
   *preamble_before_content
   *paragraph C8
-   *@" C1 l1
+   *normal_command@" C1 l1
     *following_arg C1
      {normal_text:X}
    {normal_text: }
-   *@" C1 l1
+   *normal_command@" C1 l1
     *following_arg C1
      {normal_text:x}
    {normal_text: }
-   *@" C1 l1
+   *normal_command@" C1 l1
     *following_arg C1
      {normal_text:Q}
    {normal_text: }
-   *@" C1 l1
+   *normal_command@" C1 l1
     *following_arg C1
      {normal_text:Y}
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C12
-   *@\' C1 l3
+   *normal_command@\' C1 l3
     *following_arg C1
      {normal_text:z}
    {normal_text: }
-   *@\' C1 l3
+   *normal_command@\' C1 l3
     *following_arg C1
      {normal_text:q}
    {normal_text: }
-   *@\' C1 l3
+   *normal_command@\' C1 l3
     *following_arg C1
      {normal_text:r}
    {normal_text:\\n}
-   *@\' C1 l4
+   *normal_command@\' C1 l4
     *following_arg C1
      {normal_text:Z}
    {normal_text: }
-   *@\' C1 l4
+   *normal_command@\' C1 l4
     *following_arg C1
      {normal_text:Q}
    {normal_text: }
-   *@\' C1 l4
+   *normal_command@\' C1 l4
     *following_arg C1
      {normal_text:R}
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C4
-   *@, C1 l6
+   *normal_command@, C1 l6
     *brace_container C1
      {normal_text:H}
    {normal_text: }
-   *@, C1 l6
+   *normal_command@, C1 l6
     *brace_container C1
      {normal_text:h}
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C16
-   *@^ C1 l8
+   *normal_command@^ C1 l8
     *following_arg C1
      {normal_text:z}
    {normal_text: }
-   *@^ C1 l8
+   *normal_command@^ C1 l8
     *following_arg C1
      {normal_text:r}
    {normal_text: }
-   *@^ C1 l8
+   *normal_command@^ C1 l8
     *following_arg C1
      {normal_text:t}
    {normal_text: }
-   *@^ C1 l8
+   *normal_command@^ C1 l8
     *following_arg C1
      {normal_text:k}
    {normal_text:\\n}
-   *@^ C1 l9
+   *normal_command@^ C1 l9
     *following_arg C1
      {normal_text:Z}
    {normal_text: }
-   *@^ C1 l9
+   *normal_command@^ C1 l9
     *following_arg C1
      {normal_text:R}
    {normal_text: }
-   *@^ C1 l9
+   *normal_command@^ C1 l9
     *following_arg C1
      {normal_text:T}
    {normal_text: }
-   *@^ C1 l9
+   *normal_command@^ C1 l9
     *following_arg C1
      {normal_text:K}
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C6
-   *@` C1 l11
+   *normal_command@` C1 l11
     *following_arg C1
      {normal_text:z}
    {normal_text: }
-   *@` C1 l11
+   *normal_command@` C1 l11
     *following_arg C1
      {normal_text:m}
    {normal_text: }
-   *@` C1 l11
+   *normal_command@` C1 l11
     *following_arg C1
      {normal_text:p}
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C4
-   *@~ C1 l13
+   *normal_command@~ C1 l13
     *following_arg C1
      {normal_text:Z}
    {normal_text: }
-   *@~ C1 l13
+   *normal_command@~ C1 l13
     *following_arg C1
      {normal_text:s}
    {normal_text:\\n}

@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'not_closed_itemize'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@itemize C1 l1
+  *normal_command@itemize C1 l1
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}

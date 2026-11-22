@@ -11,14 +11,14 @@ use Encode;
 $result_tree_text{'value_on_ifset'} = '*document_root C1
  *before_node_section C3
   *preamble_before_content C3
-   *@set C1
+   *normal_command@set C1
    |EXTRA
    |misc_args:A{xval|x}
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:xval x}
      {spaces_after_argument:\\n}
-   *@set C1
+   *normal_command@set C1
    |EXTRA
    |misc_args:A{x|1}
     *line_arg C3
@@ -28,13 +28,13 @@ $result_tree_text{'value_on_ifset'} = '*document_root C1
    {empty_line:\\n}
    >SOURCEMARKS
    >expanded_conditional_command<start;1><p:1>
-    >*@ifset C1 l4
+    >*normal_command@ifset C1 l4
      >*arguments_line C1
       >*block_line_arg C3
        >{spaces_before_argument: }
        >>SOURCEMARKS
        >>value_expansion<start;1><p:1>{x}
-        >>*@value C1
+        >>*normal_command@value C1
          >>*brace_container C1
           >>{normal_text:xval}
        >{normal_text:x}
@@ -45,7 +45,7 @@ $result_tree_text{'value_on_ifset'} = '*document_root C1
    {normal_text:XVAL SET\\n}
    >SOURCEMARKS
    >expanded_conditional_command<end;1><p:9>
-    >*@end C1 l6
+    >*normal_command@end C1 l6
     >|EXTRA
     >|text_arg:{ifset}
      >*line_arg C3
@@ -55,7 +55,7 @@ $result_tree_text{'value_on_ifset'} = '*document_root C1
   {empty_line:\\n}
   >SOURCEMARKS
   >ignored_conditional_block<1><p:1>
-   >*@ifset C5 l8
+   >*normal_command@ifset C5 l8
     >*arguments_line C1
      >*block_line_arg C3
       >{spaces_before_argument: }
@@ -64,7 +64,7 @@ $result_tree_text{'value_on_ifset'} = '*document_root C1
     >{raw:@ifset @value{xval}\\n}
     >{raw:INTERNALXV\\n}
     >{raw:@end ifset\\n}
-    >*@end C1 l12
+    >*normal_command@end C1 l12
     >|EXTRA
     >|text_arg:{ifset}
      >*line_arg C3

@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'block_commands_in_table'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'block_commands_in_table'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l2 {Element}
+ *normal_command@top C2 l2 {Element}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -31,7 +31,7 @@ $result_tree_text{'block_commands_in_table'} = '*document_root C5
     {normal_text:Element}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l4 {chap}
+ *normal_command@node C1 l4 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -41,7 +41,7 @@ $result_tree_text{'block_commands_in_table'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:chap}
     {spaces_after_argument:\\n}
- *@chapter C10 l5 {Chapter}
+ *normal_command@chapter C10 l5 {Chapter}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -52,20 +52,20 @@ $result_tree_text{'block_commands_in_table'} = '*document_root C5
     {normal_text:Chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@table C7 l7
+  *normal_command@table C7 l7
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     *@emph l7
+     *normal_command@emph l7
      {spaces_after_argument:\\n}
    *table_entry C2
     *table_term C2
-     *@item C1 l8
+     *normal_command@item C1 l8
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:first item}
        {spaces_after_argument:\\n}
-     *@itemx C1 l9
+     *normal_command@itemx C1 l9
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:second itemx}
@@ -77,13 +77,13 @@ $result_tree_text{'block_commands_in_table'} = '*document_root C5
      {empty_line:\\n}
    *table_entry C2
     *table_term C1
-     *@item C1 l13
+     *normal_command@item C1 l13
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:example}
        {spaces_after_argument:\\n}
     *table_definition C1
-     *@example C3 l14
+     *normal_command@example C3 l14
       *arguments_line C1
        *block_line_arg C1
         {spaces_before_argument:\\n}
@@ -91,7 +91,7 @@ $result_tree_text{'block_commands_in_table'} = '*document_root C5
        {normal_text:In example\\n}
        {empty_line:\\n}
        {normal_text:end example.\\n}
-      *@end C1 l18
+      *normal_command@end C1 l18
       |EXTRA
       |text_arg:{example}
        *line_arg C3
@@ -100,7 +100,7 @@ $result_tree_text{'block_commands_in_table'} = '*document_root C5
         {spaces_after_argument:\\n}
    *table_entry C2
     *table_term C1
-     *@item C1 l19
+     *normal_command@item C1 l19
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:empty line}
@@ -111,19 +111,19 @@ $result_tree_text{'block_commands_in_table'} = '*document_root C5
       {normal_text:empty line.\\n}
    *table_entry C2
     *table_term C1
-     *@item C1 l22
+     *normal_command@item C1 l22
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:quotation}
        {spaces_after_argument:\\n}
     *table_definition C2
-     *@quotation C3 l23
+     *normal_command@quotation C3 l23
       *arguments_line C1
        *block_line_arg C1
         {spaces_before_argument:\\n}
       *paragraph C1
        {normal_text:Quotation\\n}
-      *@end C1 l25
+      *normal_command@end C1 l25
       |EXTRA
       |text_arg:{quotation}
        *line_arg C3
@@ -133,27 +133,27 @@ $result_tree_text{'block_commands_in_table'} = '*document_root C5
      {empty_line:\\n}
    *table_entry C2
     *table_term C1
-     *@item C1 l27
+     *normal_command@item C1 l27
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:quotation after a blank line}
        {spaces_after_argument:\\n}
     *table_definition C2
      {empty_line:\\n}
-     *@quotation C3 l29
+     *normal_command@quotation C3 l29
       *arguments_line C1
        *block_line_arg C1
         {spaces_before_argument:\\n}
       *paragraph C1
        {normal_text:quotation after a blank line\\n}
-      *@end C1 l31
+      *normal_command@end C1 l31
       |EXTRA
       |text_arg:{quotation}
        *line_arg C3
         {spaces_before_argument: }
         {normal_text:quotation}
         {spaces_after_argument:\\n}
-   *@end C1 l32
+   *normal_command@end C1 l32
    |EXTRA
    |text_arg:{table}
     *line_arg C3
@@ -161,15 +161,15 @@ $result_tree_text{'block_commands_in_table'} = '*document_root C5
      {normal_text:table}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@vtable C3 l34
+  *normal_command@vtable C3 l34
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     *@strong l34
+     *normal_command@strong l34
      {spaces_after_argument:\\n}
    *table_entry C2
     *table_term C4
-     *@item C1 l35
+     *normal_command@item C1 l35
      |EXTRA
      |element_node:{chap}
      |index_entry:I{vr,1}
@@ -178,7 +178,7 @@ $result_tree_text{'block_commands_in_table'} = '*document_root C5
        {normal_text:item before ignored lines}
        {spaces_after_argument:\\n}
      *inter_item C1
-      *@c C1
+      *normal_command@c C1
        *line_arg C3
         {spaces_before_argument: }
         {rawline_text:comment}
@@ -191,7 +191,7 @@ $result_tree_text{'block_commands_in_table'} = '*document_root C5
        {spaces_before_argument: }
        {normal_text:vindex}
        {spaces_after_argument:\\n}
-     *@itemx C1 l38
+     *normal_command@itemx C1 l38
      |EXTRA
      |element_node:{chap}
      |index_entry:I{vr,3}
@@ -203,22 +203,22 @@ $result_tree_text{'block_commands_in_table'} = '*document_root C5
      {empty_line:\\n}
      *paragraph C1
       {normal_text:Description\\n}
-   *@end C1 l41
+   *normal_command@end C1 l41
    |EXTRA
    |text_arg:{vtable}
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:vtable}
      {spaces_after_argument:\\n}
-  *@vtable C3 l42
+  *normal_command@vtable C3 l42
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     *@r l42
+     *normal_command@r l42
      {spaces_after_argument:\\n}
    *table_entry C2
     *table_term C3
-     *@item C1 l43
+     *normal_command@item C1 l43
      |EXTRA
      |element_node:{chap}
      |index_entry:I{vr,4}
@@ -228,7 +228,7 @@ $result_tree_text{'block_commands_in_table'} = '*document_root C5
        {spaces_after_argument:\\n}
      *inter_item C1
       {empty_line:\\n}
-     *@itemx C1 l45
+     *normal_command@itemx C1 l45
      |EXTRA
      |element_node:{chap}
      |index_entry:I{vr,5}
@@ -241,7 +241,7 @@ $result_tree_text{'block_commands_in_table'} = '*document_root C5
      *paragraph C1
       {normal_text:Description.\\n}
      {empty_line:\\n}
-   *@end C1 l49
+   *normal_command@end C1 l49
    |EXTRA
    |text_arg:{vtable}
     *line_arg C3
@@ -251,15 +251,15 @@ $result_tree_text{'block_commands_in_table'} = '*document_root C5
   {empty_line:\\n}
   *paragraph C1
    {normal_text:Something.\\n}
-  *@table C4 l52
+  *normal_command@table C4 l52
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     *@emph l52
+     *normal_command@emph l52
      {spaces_after_argument:\\n}
    *table_entry C2
     *table_term C1
-     *@item C1 l53
+     *normal_command@item C1 l53
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:in item}
@@ -269,7 +269,7 @@ $result_tree_text{'block_commands_in_table'} = '*document_root C5
       {normal_text:Text without blank line\\n}
    *table_entry C2
     *table_term C1
-     *@item C1 l55
+     *normal_command@item C1 l55
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:second item}
@@ -277,7 +277,7 @@ $result_tree_text{'block_commands_in_table'} = '*document_root C5
     *table_definition C1
      *paragraph C1
       {normal_text:Text without blank line 2\\n}
-   *@end C1 l57
+   *normal_command@end C1 l57
    |EXTRA
    |text_arg:{table}
     *line_arg C3

@@ -13,7 +13,7 @@ $result_tree_text{'unknown_encoding'} = '*document_root C2
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content C2
-   *@documentencoding C1 l2
+   *normal_command@documentencoding C1 l2
    |EXTRA
    |global_command_number:{1}
    |text_arg:{ggg}
@@ -22,7 +22,7 @@ $result_tree_text{'unknown_encoding'} = '*document_root C2
      {normal_text:ggg}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@node C2 l4 {Top}
+ *normal_command@node C2 l4 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}

@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'commands_in_var'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'commands_in_var'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l2 {commands in var}
+ *normal_command@top C2 l2 {commands in var}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -31,7 +31,7 @@ $result_tree_text{'commands_in_var'} = '*document_root C5
     {normal_text:commands in var}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l4 {chap}
+ *normal_command@node C1 l4 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -41,7 +41,7 @@ $result_tree_text{'commands_in_var'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:chap}
     {spaces_after_argument:\\n}
- *@chapter C3 l5 {chap}
+ *normal_command@chapter C3 l5 {chap}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -53,40 +53,40 @@ $result_tree_text{'commands_in_var'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   *@var C1 l7
+   *normal_command@var C1 l7
     *brace_container C38
      {normal_text:a }
-     *@~ C1 l7
+     *normal_command@~ C1 l7
       *following_arg C1
        {normal_text:n}
      {normal_text: }
-     *@aa C1 l7
+     *normal_command@aa C1 l7
       *brace_container
      {normal_text: }
-     *@TeX C1 l7
+     *normal_command@TeX C1 l7
       *brace_container
      {normal_text: }
-     *@image C1 l7
+     *normal_command@image C1 l7
      |EXTRA
      |input_encoding_name:{utf-8}
       *brace_arg C1
        {normal_text:myimage}
      {normal_text: }
-     *@ref C1 l7
+     *normal_command@ref C1 l7
       *brace_arg C1
       |EXTRA
       |node_content:A{0|0}
       |normalized:{chap}
        {normal_text:chap}
      {normal_text: }
-     *@xref C1 l7
+     *normal_command@xref C1 l7
       *brace_arg C1
       |EXTRA
       |node_content:A{0|0}
       |normalized:{_0028f_0029node}
        {normal_text:(f)node}
      {normal_text:\\n}
-     *@ref C4 l8
+     *normal_command@ref C4 l8
       *brace_arg C1
       |EXTRA
       |node_content:A{0|0}
@@ -97,7 +97,7 @@ $result_tree_text{'commands_in_var'} = '*document_root C5
       *brace_arg C1
        {normal_text:argf}
      {normal_text: }
-     *@inlinefmtifelse C3 l8
+     *normal_command@inlinefmtifelse C3 l8
      |EXTRA
      |expand_index:{2}
      |format:{latex}
@@ -106,72 +106,72 @@ $result_tree_text{'commands_in_var'} = '*document_root C5
       *elided_brace_command_arg C1
        {raw:}
       *brace_arg C1
-       *@verb C1 l8
+       *normal_command@verb C1 l8
         *brace_container C3
          {verb_delimiter:!}
          {raw:inverb}
          {verb_delimiter:!}
      {normal_text: }
-     *@anchor C1 l8
+     *normal_command@anchor C1 l8
      |EXTRA
      |identifier:{inanchor}
      |is_target:{1}
       *brace_arg C1
        {normal_text:inanchor}
      {spaces_after_close_brace: }
-     *@hyphenation C1 l8
+     *normal_command@hyphenation C1 l8
      |EXTRA
      |global_command_number:{1}
       *brace_arg C1
        {normal_text:hyphena-te}
      {spaces_after_close_brace:\\n}
-     *@U C1 l9
+     *normal_command@U C1 l9
       *brace_arg C1
        {normal_text:00ff}
      {normal_text: }
-     *@math C1 l9
+     *normal_command@math C1 l9
       *brace_arg C1
        {normal_text:ma+th}
      {normal_text: }
-     *@footnote C1 l9
+     *normal_command@footnote C1 l9
      |EXTRA
      |global_command_number:{1}
       *brace_command_context C1
        *paragraph C1
         {normal_text:infootnote}
      {normal_text: }
-     *@url C1 l9
+     *normal_command@url C1 l9
       *brace_arg C1
        {normal_text:la}
      {normal_text: }
-     *@url C2 l9
+     *normal_command@url C2 l9
       *brace_arg C1
        {normal_text:a}
       *brace_arg C1
        {normal_text:b}
      {normal_text: }
-     *@url C2 l9
+     *normal_command@url C2 l9
       *brace_arg C1
        {spaces_before_argument: }
       *brace_arg C1
        {normal_text:lb}
      {normal_text:\\n}
-     *@url C3 l10
+     *normal_command@url C3 l10
       *brace_arg
       *brace_arg
       *brace_arg C1
        {normal_text:c}
      {normal_text: }
-     *@email C2 l10
+     *normal_command@email C2 l10
       *brace_arg C3
        {normal_text:a}
-       *@@
+       *normal_command@@
        {normal_text:c}
       *brace_arg C2
        {spaces_before_argument: }
        {normal_text:e}
      {normal_text: }
-     *@abbr C2 l10
+     *normal_command@abbr C2 l10
       *brace_arg C1
        {normal_text:ab}
       *brace_arg C2

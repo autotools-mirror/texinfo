@@ -14,7 +14,7 @@ $result_tree_text{'no_monolithic_only_toc_out'} = '*document_root C6
    {text_before_beginning:\\input texinfo @c -*-texinfo-*-\\n}
    {text_before_beginning:\\n}
   *preamble_before_content
- *@node C1 no_monolithic.texi:l3 {Top}
+ *normal_command@node C1 no_monolithic.texi:l3 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -24,7 +24,7 @@ $result_tree_text{'no_monolithic_only_toc_out'} = '*document_root C6
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C8 no_monolithic.texi:l4 {Not monolithic}
+ *normal_command@top C8 no_monolithic.texi:l4 {Not monolithic}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -36,7 +36,7 @@ $result_tree_text{'no_monolithic_only_toc_out'} = '*document_root C6
   {empty_line:\\n}
   *paragraph C3
    {normal_text:Not monolitic manual}
-   *@footnote C1 no_monolithic.texi:l6
+   *normal_command@footnote C1 no_monolithic.texi:l6
    |EXTRA
    |global_command_number:{1}
     *brace_command_context C1
@@ -53,7 +53,7 @@ $result_tree_text{'no_monolithic_only_toc_out'} = '*document_root C6
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C3 no_monolithic.texi:l10
+  *normal_command@menu C3 no_monolithic.texi:l10
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -68,7 +68,7 @@ $result_tree_text{'no_monolithic_only_toc_out'} = '*document_root C6
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 no_monolithic.texi:l12
+   *normal_command@end C1 no_monolithic.texi:l12
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -76,7 +76,7 @@ $result_tree_text{'no_monolithic_only_toc_out'} = '*document_root C6
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 no_monolithic.texi:l14 {chapter}
+ *normal_command@node C1 no_monolithic.texi:l14 {chapter}
  |EXTRA
  |identifier:{chapter}
  |is_target:{1}
@@ -87,7 +87,7 @@ $result_tree_text{'no_monolithic_only_toc_out'} = '*document_root C6
     {spaces_before_argument: }
     {normal_text:chapter}
     {spaces_after_argument:\\n}
- *@chapter C8 no_monolithic.texi:l15 {Chapter}
+ *normal_command@chapter C8 no_monolithic.texi:l15 {Chapter}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -101,18 +101,18 @@ $result_tree_text{'no_monolithic_only_toc_out'} = '*document_root C6
   *paragraph C1
    {normal_text:Chapter.\\n}
   {empty_line:\\n}
-  *@contents C1 no_monolithic.texi:l19
+  *normal_command@contents C1 no_monolithic.texi:l19
   |EXTRA
   |global_command_number:{1}
    *line_arg C1
     {spaces_before_argument:\\n}
-  *@shortcontents C1 no_monolithic.texi:l20
+  *normal_command@shortcontents C1 no_monolithic.texi:l20
   |EXTRA
   |global_command_number:{1}
    *line_arg C1
     {spaces_before_argument:\\n}
   {empty_line:\\n}
-  *@printindex C1 no_monolithic.texi:l22
+  *normal_command@printindex C1 no_monolithic.texi:l22
   |EXTRA
   |global_command_number:{1}
   |misc_args:A{cp}
@@ -120,7 +120,7 @@ $result_tree_text{'no_monolithic_only_toc_out'} = '*document_root C6
     {spaces_before_argument: }
     {normal_text:cp}
     {spaces_after_argument:\\n}
- *@bye C1
+ *normal_command@bye C1
   *line_arg C1
    {spaces_before_argument:\\n}
 ';

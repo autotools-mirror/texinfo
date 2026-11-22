@@ -20,7 +20,7 @@ NodeForward: [U0]
 NodeBack: [U0]
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -30,7 +30,7 @@ NodeBack: [U0]
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C4 l2 {top}
+ *normal_command@top C4 l2 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -40,7 +40,7 @@ NodeBack: [U0]
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C3 l4
+  *normal_command@menu C3 l4
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -55,7 +55,7 @@ NodeBack: [U0]
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l6
+   *normal_command@end C1 l6
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -63,7 +63,7 @@ NodeBack: [U0]
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l8 {chap part node after top}
+ *normal_command@node C1 l8 {chap part node after top}
  |EXTRA
  |identifier:{chap-part-node-after-top}
  |is_target:{1}
@@ -80,7 +80,7 @@ This: [U1]
 Back: [U0]
 FastBack: [U0]
 Prev: [U0]
- *@part C1 l9 {part}
+ *normal_command@part C1 l9 {part}
  |EXTRA
  |global_command_number:{1}
  |section_level:{0}

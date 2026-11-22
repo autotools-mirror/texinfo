@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'value_node_directions'} = '*document_root C7
  *before_node_section C1
   *preamble_before_content C2
-   *@set C1
+   *normal_command@set C1
    |EXTRA
    |misc_args:A{a--foo|bar}
     *line_arg C3
@@ -19,7 +19,7 @@ $result_tree_text{'value_node_directions'} = '*document_root C7
      {rawline_text:a--foo bar}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@node C1 l3 {Top}
+ *normal_command@node C1 l3 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -35,7 +35,7 @@ $result_tree_text{'value_node_directions'} = '*document_root C7
     {spaces_before_argument: }
     >SOURCEMARKS
     >value_expansion<start;1><p:1>{bar}
-     >*@value C1
+     >*normal_command@value C1
       >*brace_container C1
        >{normal_text:a--foo}
     {normal_text:bar}
@@ -56,7 +56,7 @@ $result_tree_text{'value_node_directions'} = '*document_root C7
     {normal_text:dir}
     {normal_text:)}
     {spaces_after_argument:\\n}
- *@top C3 l4 {Var bar}
+ *normal_command@top C3 l4 {Var bar}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -66,7 +66,7 @@ $result_tree_text{'value_node_directions'} = '*document_root C7
     {normal_text:Var bar}
     >SOURCEMARKS
     >value_expansion<start;2><p:4>{bar}
-     >*@value C1
+     >*normal_command@value C1
       >*brace_container C1
        >{normal_text:a--foo}
     >value_expansion<end;2><p:7>
@@ -75,12 +75,12 @@ $result_tree_text{'value_node_directions'} = '*document_root C7
    {normal_text:bar\\n}
    >SOURCEMARKS
    >value_expansion<start;3>{bar}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:a--foo}
    >value_expansion<end;3><p:3>
   {empty_line:\\n}
- *@node C1 l7 {bar}
+ *normal_command@node C1 l7 {bar}
  |EXTRA
  |identifier:{bar}
  |is_target:{1}
@@ -90,7 +90,7 @@ $result_tree_text{'value_node_directions'} = '*document_root C7
     {spaces_before_argument: }
     >SOURCEMARKS
     >value_expansion<start;4><p:1>{bar}
-     >*@value C1
+     >*normal_command@value C1
       >*brace_container C1
        >{normal_text:a--foo}
     {normal_text:bar}
@@ -116,7 +116,7 @@ $result_tree_text{'value_node_directions'} = '*document_root C7
     {normal_text:dir}
     {normal_text:)}
     {spaces_after_argument:\\n}
- *@chapter C2 l8 {BarFoo}
+ *normal_command@chapter C2 l8 {BarFoo}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -127,7 +127,7 @@ $result_tree_text{'value_node_directions'} = '*document_root C7
     {normal_text:BarFoo}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l10 {BarFoo}
+ *normal_command@node C1 l10 {BarFoo}
  |EXTRA
  |identifier:{BarFoo}
  |is_target:{1}
@@ -145,7 +145,7 @@ $result_tree_text{'value_node_directions'} = '*document_root C7
     {spaces_before_argument: }
     >SOURCEMARKS
     >value_expansion<start;5><p:1>{bar}
-     >*@value C1
+     >*normal_command@value C1
       >*brace_container C1
        >{normal_text:a--foo}
     {normal_text:bar}
@@ -159,7 +159,7 @@ $result_tree_text{'value_node_directions'} = '*document_root C7
     {normal_text:dir}
     {normal_text:)}
     {spaces_after_argument:\\n}
- *@chapter C1 l11 {bar}
+ *normal_command@chapter C1 l11 {bar}
  |EXTRA
  |section_heading_number:{2}
  |section_level:{1}

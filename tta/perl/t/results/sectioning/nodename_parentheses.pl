@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'nodename_parentheses'} = '*document_root C9
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'nodename_parentheses'} = '*document_root C9
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C4 l2 {The top node}
+ *normal_command@top C4 l2 {The top node}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -31,7 +31,7 @@ $result_tree_text{'nodename_parentheses'} = '*document_root C9
     {normal_text:The top node}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C5 l4
+  *normal_command@menu C5 l4
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -72,7 +72,7 @@ $result_tree_text{'nodename_parentheses'} = '*document_root C9
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l8
+   *normal_command@end C1 l8
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -80,7 +80,7 @@ $result_tree_text{'nodename_parentheses'} = '*document_root C9
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l10 {Node (with parentheses)}
+ *normal_command@node C1 l10 {Node (with parentheses)}
  |EXTRA
  |identifier:{Node-_0028with-parentheses_0029}
  |is_target:{1}
@@ -90,7 +90,7 @@ $result_tree_text{'nodename_parentheses'} = '*document_root C9
     {spaces_before_argument: }
     {normal_text:Node (with parentheses)}
     {spaces_after_argument:\\n}
- *@chapter C4 l11 {Section (nodename with parentheses)}
+ *normal_command@chapter C4 l11 {Section (nodename with parentheses)}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -104,7 +104,7 @@ $result_tree_text{'nodename_parentheses'} = '*document_root C9
   *paragraph C1
    {normal_text:Dummy section\\n}
   {empty_line:\\n}
- *@node C1 l15 {Other node}
+ *normal_command@node C1 l15 {Other node}
  |EXTRA
  |identifier:{Other-node}
  |is_target:{1}
@@ -114,7 +114,7 @@ $result_tree_text{'nodename_parentheses'} = '*document_root C9
     {spaces_before_argument: }
     {normal_text:Other node}
     {spaces_after_argument:\\n}
- *@chapter C6 l16 {Section (nodename without parentheses)}
+ *normal_command@chapter C6 l16 {Section (nodename without parentheses)}
  |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
@@ -127,7 +127,7 @@ $result_tree_text{'nodename_parentheses'} = '*document_root C9
   {empty_line:\\n}
   *paragraph C3
    {normal_text:Dummy link to }
-   *@ref C1 l18
+   *normal_command@ref C1 l18
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -137,7 +137,7 @@ $result_tree_text{'nodename_parentheses'} = '*document_root C9
   {empty_line:\\n}
   *paragraph C3
    {normal_text:Dummy link to }
-   *@ref C1 l20
+   *normal_command@ref C1 l20
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -145,7 +145,7 @@ $result_tree_text{'nodename_parentheses'} = '*document_root C9
      {normal_text:(manual)node}
    {normal_text:.\\n}
   {empty_line:\\n}
- *@node C1 l22 {(manual)node}
+ *normal_command@node C1 l22 {(manual)node}
  |EXTRA
  |identifier:{_0028manual_0029node}
  |is_target:{1}
@@ -155,7 +155,7 @@ $result_tree_text{'nodename_parentheses'} = '*document_root C9
     {spaces_before_argument: }
     {normal_text:(manual)node}
     {spaces_after_argument:\\n}
- *@chapter C7 l23 {(manual)node}
+ *normal_command@chapter C7 l23 {(manual)node}
  |EXTRA
  |section_heading_number:{3}
  |section_level:{1}
@@ -169,7 +169,7 @@ $result_tree_text{'nodename_parentheses'} = '*document_root C9
   *paragraph C1
    {normal_text:Dummy section with (manual)node node syntax.\\n}
   {empty_line:\\n}
-  *@anchor C1 l27
+  *normal_command@anchor C1 l27
   |EXTRA
   |identifier:{_0028manual_0029anchor}
   |is_target:{1}

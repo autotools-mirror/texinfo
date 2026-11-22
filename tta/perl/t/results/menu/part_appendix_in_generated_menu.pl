@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'part_appendix_in_generated_menu'} = '*document_root C12
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'part_appendix_in_generated_menu'} = '*document_root C12
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C3 l2 {top}
+ *normal_command@top C3 l2 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -32,7 +32,7 @@ $result_tree_text{'part_appendix_in_generated_menu'} = '*document_root C12
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   {empty_line:\\n}
- *@node C1 l5 {chapter}
+ *normal_command@node C1 l5 {chapter}
  |EXTRA
  |identifier:{chapter}
  |is_target:{1}
@@ -42,7 +42,7 @@ $result_tree_text{'part_appendix_in_generated_menu'} = '*document_root C12
     {spaces_before_argument: }
     {normal_text:chapter}
     {spaces_after_argument:\\n}
- *@chapter C2 l6 {Chap}
+ *normal_command@chapter C2 l6 {Chap}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -53,7 +53,7 @@ $result_tree_text{'part_appendix_in_generated_menu'} = '*document_root C12
     {normal_text:Chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l8 {sec}
+ *normal_command@node C1 l8 {sec}
  |EXTRA
  |identifier:{sec}
  |is_target:{1}
@@ -63,7 +63,7 @@ $result_tree_text{'part_appendix_in_generated_menu'} = '*document_root C12
     {spaces_before_argument: }
     {normal_text:sec}
     {spaces_after_argument:\\n}
- *@appendixsec C2 l9 {Sec}
+ *normal_command@appendixsec C2 l9 {Sec}
  |EXTRA
  |section_heading_number:{1.1}
  |section_level:{2}
@@ -74,7 +74,7 @@ $result_tree_text{'part_appendix_in_generated_menu'} = '*document_root C12
     {normal_text:Sec}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@part C2 l11 {P1}
+ *normal_command@part C2 l11 {P1}
  |EXTRA
  |global_command_number:{1}
  |section_level:{0}
@@ -85,7 +85,7 @@ $result_tree_text{'part_appendix_in_generated_menu'} = '*document_root C12
     {normal_text:P1}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l13 {chap2}
+ *normal_command@node C1 l13 {chap2}
  |EXTRA
  |identifier:{chap2}
  |is_target:{1}
@@ -95,7 +95,7 @@ $result_tree_text{'part_appendix_in_generated_menu'} = '*document_root C12
     {spaces_before_argument: }
     {normal_text:chap2}
     {spaces_after_argument:\\n}
- *@chapter C2 l14 {Chap 2}
+ *normal_command@chapter C2 l14 {Chap 2}
  |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
@@ -106,7 +106,7 @@ $result_tree_text{'part_appendix_in_generated_menu'} = '*document_root C12
     {normal_text:Chap 2}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l16 {app}
+ *normal_command@node C1 l16 {app}
  |EXTRA
  |identifier:{app}
  |is_target:{1}
@@ -116,7 +116,7 @@ $result_tree_text{'part_appendix_in_generated_menu'} = '*document_root C12
     {spaces_before_argument: }
     {normal_text:app}
     {spaces_after_argument:\\n}
- *@appendix C1 l17 {GGG}
+ *normal_command@appendix C1 l17 {GGG}
  |EXTRA
  |section_heading_number:{A}
  |section_level:{1}

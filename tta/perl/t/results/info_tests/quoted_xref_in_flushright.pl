@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'quoted_xref_in_flushright'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'quoted_xref_in_flushright'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l2 {top}
+ *normal_command@top C2 l2 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -31,7 +31,7 @@ $result_tree_text{'quoted_xref_in_flushright'} = '*document_root C5
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l4 {a:@comma{}b}
+ *normal_command@node C1 l4 {a:@comma{}b}
  |EXTRA
  |identifier:{a_003a_002cb}
  |is_target:{1}
@@ -40,11 +40,11 @@ $result_tree_text{'quoted_xref_in_flushright'} = '*document_root C5
    *line_arg C5
     {spaces_before_argument: }
     {normal_text:a:}
-    *@comma C1 l4
+    *normal_command@comma C1 l4
      *brace_container
     {normal_text:b}
     {spaces_after_argument:\\n}
- *@chapter C3 l5 {a:@comma{}b}
+ *normal_command@chapter C3 l5 {a:@comma{}b}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -53,30 +53,30 @@ $result_tree_text{'quoted_xref_in_flushright'} = '*document_root C5
    *line_arg C5
     {spaces_before_argument: }
     {normal_text:a:}
-    *@comma C1 l5
+    *normal_command@comma C1 l5
      *brace_container
     {normal_text:b}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@flushright C3 l7
+  *normal_command@flushright C3 l7
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C5
     {normal_text:before\\n}
     {normal_text:Some }
-    *@ref C1 l9
+    *normal_command@ref C1 l9
      *brace_arg C3
      |EXTRA
      |node_content:A{0|2}
      |normalized:{a_003a_002cb}
       {normal_text:a:}
-      *@comma C1 l9
+      *normal_command@comma C1 l9
        *brace_container
       {normal_text:b}
     {normal_text: after\\n}
     {normal_text:more text\\n}
-   *@end C1 l11
+   *normal_command@end C1 l11
    |EXTRA
    |text_arg:{flushright}
     *line_arg C3

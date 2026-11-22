@@ -13,24 +13,24 @@ $result_tree_text{'documentinfo_with_empty_line'} = '*document_root C5
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content C2
-   *@documentinfo C5 l2
+   *normal_command@documentinfo C5 l2
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
-    *@title C1 l3
+    *normal_command@title C1 l3
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:yup}
       {spaces_after_argument:\\n}
     {empty_line:\\n}
-    *@author C1 l5
+    *normal_command@author C1 l5
     |EXTRA
     |global_command_number:{1}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:Toto}
       {spaces_after_argument:\\n}
-    *@end C1 l6
+    *normal_command@end C1 l6
     |EXTRA
     |text_arg:{documentinfo}
      *line_arg C3
@@ -38,7 +38,7 @@ $result_tree_text{'documentinfo_with_empty_line'} = '*document_root C5
       {normal_text:documentinfo}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@node C1 l8 {Top}
+ *normal_command@node C1 l8 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -48,7 +48,7 @@ $result_tree_text{'documentinfo_with_empty_line'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l9 {top}
+ *normal_command@top C2 l9 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -58,7 +58,7 @@ $result_tree_text{'documentinfo_with_empty_line'} = '*document_root C5
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l11 {chapter}
+ *normal_command@node C1 l11 {chapter}
  |EXTRA
  |identifier:{chapter}
  |is_target:{1}
@@ -68,7 +68,7 @@ $result_tree_text{'documentinfo_with_empty_line'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:chapter}
     {spaces_after_argument:\\n}
- *@chapter C1 l12 {Chap}
+ *normal_command@chapter C1 l12 {Chap}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}

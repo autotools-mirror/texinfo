@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'anchor_after_text_in_flushright'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
- *@node C3 l1 {Top}
+ *normal_command@node C3 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -22,13 +22,13 @@ $result_tree_text{'anchor_after_text_in_flushright'} = '*document_root C2
     {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@flushright C4 l3
+  *normal_command@flushright C4 l3
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C3
     {normal_text:something\\n}
-    *@anchor C1 l5
+    *normal_command@anchor C1 l5
     |EXTRA
     |identifier:{point}
     |is_target:{1}
@@ -36,7 +36,7 @@ $result_tree_text{'anchor_after_text_in_flushright'} = '*document_root C2
       {normal_text:point}
     {spaces_after_close_brace:\\n}
    {empty_line:\\n}
-   *@end C1 l7
+   *normal_command@end C1 l7
    |EXTRA
    |text_arg:{flushright}
     *line_arg C3

@@ -1593,8 +1593,7 @@ print_element_details (ELEMENT *element, int level, const char *prepended,
       text_printf (result, "%" PRIuPTR " ", element->elt_copy);
     }
 
-  if (element->type
-      && !(type_data[element->type].flags & TF_c_only))
+  if (element->type)
     text_append (result, type_data[element->type].name);
 
   cmdname = debug_element_command_name (element);

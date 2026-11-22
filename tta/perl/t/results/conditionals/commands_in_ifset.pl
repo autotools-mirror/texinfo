@@ -13,7 +13,7 @@ $result_tree_text{'commands_in_ifset'} = '*document_root C1
   *preamble_before_beginning C1
   >SOURCEMARKS
   >ignored_conditional_block<1>
-   >*@ifset C6 l2
+   >*normal_command@ifset C6 l2
     >*arguments_line C1
      >*block_line_arg C3
       >{spaces_before_argument: }
@@ -23,7 +23,7 @@ $result_tree_text{'commands_in_ifset'} = '*document_root C1
     >{raw:@documentencoding ISO-8859-1\\n}
     >{raw:@end ifsettruc\\n}
     >{raw:open { \\n}
-    >*@end C1 l7
+    >*normal_command@end C1 l7
     >|EXTRA
     >|text_arg:{ifset}
      >*line_arg C3
@@ -35,7 +35,7 @@ $result_tree_text{'commands_in_ifset'} = '*document_root C1
    {empty_line:\\n}
    >SOURCEMARKS
    >ignored_conditional_block<2><p:1>
-    >*@ifset C7 l9
+    >*normal_command@ifset C7 l9
      >*arguments_line C1
       >*block_line_arg C3
        >{spaces_before_argument: }
@@ -46,7 +46,7 @@ $result_tree_text{'commands_in_ifset'} = '*document_root C1
      >{raw:@itemize\\n}
      >{raw:@table\\n}
      >{raw:@bye\\n}
-     >*@end C1 l15
+     >*normal_command@end C1 l15
      >|EXTRA
      >|text_arg:{ifset}
       >*line_arg C3

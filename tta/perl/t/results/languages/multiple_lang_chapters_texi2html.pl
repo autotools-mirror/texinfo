@@ -13,7 +13,7 @@ $result_tree_text{'multiple_lang_chapters_texi2html'} = '*document_root C13
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content C4
-   *@documentencoding C1 l2
+   *normal_command@documentencoding C1 l2
    |EXTRA
    |global_command_number:{1}
    |input_encoding_name:{utf-8}
@@ -23,15 +23,15 @@ $result_tree_text{'multiple_lang_chapters_texi2html'} = '*document_root C13
      {normal_text:utf-8}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@c C1
+   *normal_command@c C1
    >SOURCEMARKS
    >ignored_conditional_block<1>
-    >*@iftex C3 l5
+    >*normal_command@iftex C3 l5
      >*arguments_line C1
       >*block_line_arg C1
        >{spaces_before_argument:\\n}
      >{raw:@documentlanguage ja\\n}
-     >*@end C1 l7
+     >*normal_command@end C1 l7
      >|EXTRA
      >|text_arg:{iftex}
       >*line_arg C3
@@ -39,12 +39,12 @@ $result_tree_text{'multiple_lang_chapters_texi2html'} = '*document_root C13
        >{normal_text:iftex}
        >{spaces_after_argument:\\n}
    >ignored_conditional_block<2>
-    >*@iflatex C3 l8
+    >*normal_command@iflatex C3 l8
      >*arguments_line C1
       >*block_line_arg C1
        >{spaces_before_argument:\\n}
      >{raw:@documentlanguage ja\\n}
-     >*@end C1 l10
+     >*normal_command@end C1 l10
      >|EXTRA
      >|text_arg:{iflatex}
       >*line_arg C3
@@ -56,7 +56,7 @@ $result_tree_text{'multiple_lang_chapters_texi2html'} = '*document_root C13
      {rawline_text:@node Top is ignored in TeX and LaTeX, so switch here}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@node C1 l12 {Top}
+ *normal_command@node C1 l12 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -66,7 +66,7 @@ $result_tree_text{'multiple_lang_chapters_texi2html'} = '*document_root C13
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C5 l13 {Multi language file}
+ *normal_command@top C5 l13 {Multi language file}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -76,7 +76,7 @@ $result_tree_text{'multiple_lang_chapters_texi2html'} = '*document_root C13
     {normal_text:Multi language file}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C7 l15
+  *normal_command@menu C7 l15
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -135,7 +135,7 @@ $result_tree_text{'multiple_lang_chapters_texi2html'} = '*document_root C13
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l21
+   *normal_command@end C1 l21
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -143,7 +143,7 @@ $result_tree_text{'multiple_lang_chapters_texi2html'} = '*document_root C13
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@documentlanguage C1 l23
+  *normal_command@documentlanguage C1 l23
   |EXTRA
   |global_command_number:{1}
   |text_arg:{ja}
@@ -151,7 +151,7 @@ $result_tree_text{'multiple_lang_chapters_texi2html'} = '*document_root C13
     {spaces_before_argument: }
     {normal_text:ja}
     {spaces_after_argument:\\n}
- *@node C1 l24 {chapter ja}
+ *normal_command@node C1 l24 {chapter ja}
  |EXTRA
  |identifier:{chapter-ja}
  |is_target:{1}
@@ -161,7 +161,7 @@ $result_tree_text{'multiple_lang_chapters_texi2html'} = '*document_root C13
     {spaces_before_argument: }
     {normal_text:chapter ja}
     {spaces_after_argument:\\n}
- *@chapter C6 l25 {ja}
+ *normal_command@chapter C6 l25 {ja}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -174,14 +174,14 @@ $result_tree_text{'multiple_lang_chapters_texi2html'} = '*document_root C13
   {empty_line:\\n}
   *paragraph C3
    {normal_text:In japanese. }
-   *@xref C1 l27
+   *normal_command@xref C1 l27
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{chapter-ja}
      {normal_text:chapter ja}
    {normal_text:.\\n}
-  *@defivar C2 l28
+  *normal_command@defivar C2 l28
    *def_line C1 l28
    |EXTRA
    |def_command:{defivar}
@@ -212,7 +212,7 @@ $result_tree_text{'multiple_lang_chapters_texi2html'} = '*document_root C13
       *def_line_arg C1
        {normal_text:CCC}
      {spaces_after_argument:\\n}
-   *@end C1 l29
+   *normal_command@end C1 l29
    |EXTRA
    |text_arg:{defivar}
     *line_arg C3
@@ -220,7 +220,7 @@ $result_tree_text{'multiple_lang_chapters_texi2html'} = '*document_root C13
      {normal_text:defivar}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@documentlanguage C1 l31
+  *normal_command@documentlanguage C1 l31
   |EXTRA
   |global_command_number:{2}
   |text_arg:{en}
@@ -228,7 +228,7 @@ $result_tree_text{'multiple_lang_chapters_texi2html'} = '*document_root C13
     {spaces_before_argument: }
     {normal_text:en}
     {spaces_after_argument:\\n}
- *@node C1 l32 {chapter en}
+ *normal_command@node C1 l32 {chapter en}
  |EXTRA
  |identifier:{chapter-en}
  |is_target:{1}
@@ -238,7 +238,7 @@ $result_tree_text{'multiple_lang_chapters_texi2html'} = '*document_root C13
     {spaces_before_argument: }
     {normal_text:chapter en}
     {spaces_after_argument:\\n}
- *@chapter C6 l33 {en}
+ *normal_command@chapter C6 l33 {en}
  |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
@@ -251,14 +251,14 @@ $result_tree_text{'multiple_lang_chapters_texi2html'} = '*document_root C13
   {empty_line:\\n}
   *paragraph C3
    {normal_text:In english. }
-   *@xref C1 l35
+   *normal_command@xref C1 l35
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{chapter-ja}
      {normal_text:chapter ja}
    {normal_text:.\\n}
-  *@defivar C2 l36
+  *normal_command@defivar C2 l36
    *def_line C1 l36
    |EXTRA
    |def_command:{defivar}
@@ -289,7 +289,7 @@ $result_tree_text{'multiple_lang_chapters_texi2html'} = '*document_root C13
       *def_line_arg C1
        {normal_text:CCC}
      {spaces_after_argument:\\n}
-   *@end C1 l37
+   *normal_command@end C1 l37
    |EXTRA
    |text_arg:{defivar}
     *line_arg C3
@@ -297,7 +297,7 @@ $result_tree_text{'multiple_lang_chapters_texi2html'} = '*document_root C13
      {normal_text:defivar}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@documentlanguage C1 l39
+  *normal_command@documentlanguage C1 l39
   |EXTRA
   |global_command_number:{3}
   |text_arg:{fr_FR}
@@ -305,7 +305,7 @@ $result_tree_text{'multiple_lang_chapters_texi2html'} = '*document_root C13
     {spaces_before_argument: }
     {normal_text:fr_FR}
     {spaces_after_argument:\\n}
- *@node C1 l40 {chapter fr_FR}
+ *normal_command@node C1 l40 {chapter fr_FR}
  |EXTRA
  |identifier:{chapter-fr_005fFR}
  |is_target:{1}
@@ -315,7 +315,7 @@ $result_tree_text{'multiple_lang_chapters_texi2html'} = '*document_root C13
     {spaces_before_argument: }
     {normal_text:chapter fr_FR}
     {spaces_after_argument:\\n}
- *@chapter C5 l41 {fr_FR}
+ *normal_command@chapter C5 l41 {fr_FR}
  |EXTRA
  |section_heading_number:{3}
  |section_level:{1}
@@ -326,7 +326,7 @@ $result_tree_text{'multiple_lang_chapters_texi2html'} = '*document_root C13
     {normal_text:fr_FR}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@defivar C2 l43
+  *normal_command@defivar C2 l43
    *def_line C1 l43
    |EXTRA
    |def_command:{defivar}
@@ -357,7 +357,7 @@ $result_tree_text{'multiple_lang_chapters_texi2html'} = '*document_root C13
       *def_line_arg C1
        {normal_text:CCC}
      {spaces_after_argument:\\n}
-   *@end C1 l44
+   *normal_command@end C1 l44
    |EXTRA
    |text_arg:{defivar}
     *line_arg C3
@@ -365,7 +365,7 @@ $result_tree_text{'multiple_lang_chapters_texi2html'} = '*document_root C13
      {normal_text:defivar}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@documentlanguage C1 l46
+  *normal_command@documentlanguage C1 l46
   |EXTRA
   |global_command_number:{4}
   |text_arg:{de}
@@ -373,7 +373,7 @@ $result_tree_text{'multiple_lang_chapters_texi2html'} = '*document_root C13
     {spaces_before_argument: }
     {normal_text:de}
     {spaces_after_argument:\\n}
- *@node C1 l47 {chapter de}
+ *normal_command@node C1 l47 {chapter de}
  |EXTRA
  |identifier:{chapter-de}
  |is_target:{1}
@@ -383,7 +383,7 @@ $result_tree_text{'multiple_lang_chapters_texi2html'} = '*document_root C13
     {spaces_before_argument: }
     {normal_text:chapter de}
     {spaces_after_argument:\\n}
- *@chapter C3 l48 {de}
+ *normal_command@chapter C3 l48 {de}
  |EXTRA
  |section_heading_number:{4}
  |section_level:{1}
@@ -394,7 +394,7 @@ $result_tree_text{'multiple_lang_chapters_texi2html'} = '*document_root C13
     {normal_text:de}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@documentlanguage C1 l50
+  *normal_command@documentlanguage C1 l50
   |EXTRA
   |global_command_number:{5}
   |text_arg:{pt_BR}
@@ -402,7 +402,7 @@ $result_tree_text{'multiple_lang_chapters_texi2html'} = '*document_root C13
     {spaces_before_argument: }
     {normal_text:pt_BR}
     {spaces_after_argument:\\n}
- *@node C1 l51 {chapter pt_BR}
+ *normal_command@node C1 l51 {chapter pt_BR}
  |EXTRA
  |identifier:{chapter-pt_005fBR}
  |is_target:{1}
@@ -412,7 +412,7 @@ $result_tree_text{'multiple_lang_chapters_texi2html'} = '*document_root C13
     {spaces_before_argument: }
     {normal_text:chapter pt_BR}
     {spaces_after_argument:\\n}
- *@chapter C3 l52 {pt_bR}
+ *normal_command@chapter C3 l52 {pt_bR}
  |EXTRA
  |section_heading_number:{5}
  |section_level:{1}
@@ -425,7 +425,7 @@ $result_tree_text{'multiple_lang_chapters_texi2html'} = '*document_root C13
   {empty_line:\\n}
   *paragraph C3
    {normal_text:In brazilian. }
-   *@xref C1 l54
+   *normal_command@xref C1 l54
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}

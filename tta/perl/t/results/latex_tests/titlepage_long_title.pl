@@ -11,19 +11,19 @@ use Encode;
 $result_tree_text{'titlepage_long_title'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content C2
-   *@titlepage C4 l1
+   *normal_command@titlepage C4 l1
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
-    *@title C1 l2
+    *normal_command@title C1 l2
      *line_arg C5
       {spaces_before_argument: }
       {normal_text:a title than is long, very long, veeeeeeeeeeeeeeeeery long, it seems to never stop and it is not so interesting only very long oh an end of line }
-      *@*
+      *normal_command@*
       {normal_text: and the title continue and keep on being unfinished until it is the end}
       {spaces_after_argument:\\n}
     {empty_line:\\n}
-    *@end C1 l4
+    *normal_command@end C1 l4
     |EXTRA
     |text_arg:{titlepage}
      *line_arg C3
@@ -31,7 +31,7 @@ $result_tree_text{'titlepage_long_title'} = '*document_root C5
       {normal_text:titlepage}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@node C1 l6 {Top}
+ *normal_command@node C1 l6 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -41,7 +41,7 @@ $result_tree_text{'titlepage_long_title'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l7 {section top}
+ *normal_command@top C2 l7 {section top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -51,7 +51,7 @@ $result_tree_text{'titlepage_long_title'} = '*document_root C5
     {normal_text:section top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l9 {chapter}
+ *normal_command@node C1 l9 {chapter}
  |EXTRA
  |identifier:{chapter}
  |is_target:{1}
@@ -61,7 +61,7 @@ $result_tree_text{'titlepage_long_title'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:chapter}
     {spaces_after_argument:\\n}
- *@chapter C3 l10 {Chapter}
+ *normal_command@chapter C3 l10 {Chapter}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}

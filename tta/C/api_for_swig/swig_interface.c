@@ -138,15 +138,7 @@ const char *
 txi_ext_element_type (ELEMENT *element)
 {
   if (element->type)
-    {
-      if (type_data[element->type].flags & TF_text)
-        {
-          if (element->type != ET_normal_text)
-            return type_data[element->type].name;
-        }
-      else if (!(type_data[element->type].flags & TF_c_only))
-        return type_data[element->type].name;
-    }
+    return type_data[element->type].name;
   return "";
 }
 
@@ -439,10 +431,9 @@ txi_ext_element_formal_args (ELEMENT *element)
 
 ELEMENT *
 txi_ext_store_new_element (DOCUMENT *document, const char *type_name,
-                           const char *command_name, int is_text_element)
+                           const char *command_name)
 {
-  ELEMENT *e = new_element_from_names (type_name, command_name,
-                                       is_text_element);
+  ELEMENT *e = new_element_from_names (type_name, command_name);
 
   if (e)
     add_to_element_list (&document->additional_elements, e);

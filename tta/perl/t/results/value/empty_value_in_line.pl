@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'empty_value_in_line'} = '*document_root C1
  *before_node_section C4
   *preamble_before_content C2
-   *@set C1
+   *normal_command@set C1
    |EXTRA
    |misc_args:A{myspace|}
     *line_arg C3
@@ -24,7 +24,7 @@ $result_tree_text{'empty_value_in_line'} = '*document_root C1
   {empty_line: \\n}
   >SOURCEMARKS
   >value_expansion<start;1>{}
-   >*@value C1
+   >*normal_command@value C1
     >*brace_container C1
      >{normal_text:myspace}
   >value_expansion<end;1>

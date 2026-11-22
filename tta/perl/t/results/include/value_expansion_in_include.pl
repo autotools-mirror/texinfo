@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'value_expansion_in_include'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content C9
-   *@set C1
+   *normal_command@set C1
    |EXTRA
    |misc_args:A{testvar|incl-incl.txi}
     *line_arg C3
@@ -19,12 +19,12 @@ $result_tree_text{'value_expansion_in_include'} = '*document_root C3
      {rawline_text:testvar incl-incl.txi}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@c C1
+   *normal_command@c C1
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:test - in the variable name, and concatenation of text after.}
      {spaces_after_argument:\\n}
-   *@set C1
+   *normal_command@set C1
    |EXTRA
    |misc_args:A{test-var|incl-incl.tx}
     *line_arg C3
@@ -32,12 +32,12 @@ $result_tree_text{'value_expansion_in_include'} = '*document_root C3
      {rawline_text:test-var incl-incl.tx}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@c C1
+   *normal_command@c C1
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:test - in the variable name, and concatenation of text before and after.}
      {spaces_after_argument:\\n}
-   *@set C1
+   *normal_command@set C1
    |EXTRA
    |misc_args:A{test_var|ncl-incl.tx}
     *line_arg C3
@@ -46,7 +46,7 @@ $result_tree_text{'value_expansion_in_include'} = '*document_root C3
      {spaces_after_argument:\\n}
    {empty_line:\\n}
    {empty_line:\\n}
- *@node C1 l10 {Top}
+ *normal_command@node C1 l10 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -56,7 +56,7 @@ $result_tree_text{'value_expansion_in_include'} = '*document_root C3
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@node C18 l11 {chap}
+ *normal_command@node C18 l11 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -71,14 +71,14 @@ $result_tree_text{'value_expansion_in_include'} = '*document_root C3
    {normal_text:testvar include: }
    >SOURCEMARKS
    >include<start;1><p:17>
-    >*@include C1 l13
+    >*normal_command@include C1 l13
     >|EXTRA
     >|text_arg:{incl-incl.txi}
      >*line_arg C3
       >{spaces_before_argument: }
       >>SOURCEMARKS
       >>value_expansion<start;1><p:1>{incl-incl.txi}
-       >>*@value C1
+       >>*normal_command@value C1
         >>*brace_container C1
          >>{normal_text:testvar}
       >{normal_text:incl-incl.txi}
@@ -86,7 +86,7 @@ $result_tree_text{'value_expansion_in_include'} = '*document_root C3
       >>value_expansion<end;1><p:13>
       >{spaces_after_argument:\\n}
    {normal_text:This is the }
-   *@emph C1 incl-incl.txi:l1
+   *normal_command@emph C1 incl-incl.txi:l1
     *brace_container C1
      {normal_text:included}
    {normal_text: file (include-value2.txi) <> ---. \\n}
@@ -95,7 +95,7 @@ $result_tree_text{'value_expansion_in_include'} = '*document_root C3
   {empty_line:\\n}
   *paragraph C1
    {normal_text:testvar verbatiminclude: }
-  *@verbatiminclude C1 l15
+  *normal_command@verbatiminclude C1 l15
   |EXTRA
   |input_encoding_name:{utf-8}
   |text_arg:{incl-incl.txi}
@@ -103,7 +103,7 @@ $result_tree_text{'value_expansion_in_include'} = '*document_root C3
     {spaces_before_argument: }
     >SOURCEMARKS
     >value_expansion<start;2><p:1>{incl-incl.txi}
-     >*@value C1
+     >*normal_command@value C1
       >*brace_container C1
        >{normal_text:testvar}
     {normal_text:incl-incl.txi}
@@ -116,14 +116,14 @@ $result_tree_text{'value_expansion_in_include'} = '*document_root C3
    {normal_text:test-var include: }
    >SOURCEMARKS
    >include<start;2><p:18>
-    >*@include C1 l18
+    >*normal_command@include C1 l18
     >|EXTRA
     >|text_arg:{incl-incl.txi}
      >*line_arg C3
       >{spaces_before_argument: }
       >>SOURCEMARKS
       >>value_expansion<start;3><p:1>{incl-incl.tx}
-       >>*@value C1
+       >>*normal_command@value C1
         >>*brace_container C1
          >>{normal_text:test-var}
       >{normal_text:incl-incl.txi}
@@ -131,7 +131,7 @@ $result_tree_text{'value_expansion_in_include'} = '*document_root C3
       >>value_expansion<end;3><p:12>
       >{spaces_after_argument:\\n}
    {normal_text:This is the }
-   *@emph C1 incl-incl.txi:l1
+   *normal_command@emph C1 incl-incl.txi:l1
     *brace_container C1
      {normal_text:included}
    {normal_text: file (include-value2.txi) <> ---. \\n}
@@ -140,7 +140,7 @@ $result_tree_text{'value_expansion_in_include'} = '*document_root C3
   {empty_line:\\n}
   *paragraph C1
    {normal_text:test-var verbatiminclude: }
-  *@verbatiminclude C1 l20
+  *normal_command@verbatiminclude C1 l20
   |EXTRA
   |input_encoding_name:{utf-8}
   |text_arg:{incl-incl.txi}
@@ -148,7 +148,7 @@ $result_tree_text{'value_expansion_in_include'} = '*document_root C3
     {spaces_before_argument: }
     >SOURCEMARKS
     >value_expansion<start;4><p:1>{incl-incl.tx}
-     >*@value C1
+     >*normal_command@value C1
       >*brace_container C1
        >{normal_text:test-var}
     {normal_text:incl-incl.txi}
@@ -161,7 +161,7 @@ $result_tree_text{'value_expansion_in_include'} = '*document_root C3
    {normal_text:test_var include: }
    >SOURCEMARKS
    >include<start;3><p:18>
-    >*@include C1 l23
+    >*normal_command@include C1 l23
     >|EXTRA
     >|text_arg:{incl-incl.txi}
      >*line_arg C3
@@ -169,13 +169,13 @@ $result_tree_text{'value_expansion_in_include'} = '*document_root C3
       >{normal_text:incl-incl.txi}
       >>SOURCEMARKS
       >>value_expansion<start;5><p:1>{ncl-incl.tx}
-       >>*@value C1
+       >>*normal_command@value C1
         >>*brace_container C1
          >>{normal_text:test_var}
       >>value_expansion<end;5><p:12>
       >{spaces_after_argument:\\n}
    {normal_text:This is the }
-   *@emph C1 incl-incl.txi:l1
+   *normal_command@emph C1 incl-incl.txi:l1
     *brace_container C1
      {normal_text:included}
    {normal_text: file (include-value2.txi) <> ---. \\n}
@@ -184,7 +184,7 @@ $result_tree_text{'value_expansion_in_include'} = '*document_root C3
   {empty_line:\\n}
   *paragraph C1
    {normal_text:test_var verbatiminclude: }
-  *@verbatiminclude C1 l25
+  *normal_command@verbatiminclude C1 l25
   |EXTRA
   |input_encoding_name:{utf-8}
   |text_arg:{incl-incl.txi}
@@ -193,7 +193,7 @@ $result_tree_text{'value_expansion_in_include'} = '*document_root C3
     {normal_text:incl-incl.txi}
     >SOURCEMARKS
     >value_expansion<start;6><p:1>{ncl-incl.tx}
-     >*@value C1
+     >*normal_command@value C1
       >*brace_container C1
        >{normal_text:test_var}
     >value_expansion<end;6><p:12>

@@ -13,7 +13,7 @@ UNIT_DIRECTIONS
 This: [U0]
  *before_node_section C1
   *preamble_before_content
- *@unnumbered C2 l1 {before nodes}
+ *normal_command@unnumbered C2 l1 {before nodes}
  |EXTRA
  |identifier:{before-nodes}
  |is_target:{1}
@@ -25,7 +25,7 @@ This: [U0]
     {normal_text:before nodes}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C5 l3 {Top}
+ *normal_command@node C5 l3 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -38,7 +38,7 @@ This: [U0]
   *paragraph C1
    {normal_text:Top node\\n}
   {empty_line:\\n}
-  *@titlefont C1 l6
+  *normal_command@titlefont C1 l6
   |EXTRA
   |global_command_number:{1}
    *brace_container C1

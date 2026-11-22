@@ -12,7 +12,7 @@ $result_tree_text{'lone_braces_in_inlineraw'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *paragraph C2
-   *@inlineraw C2 l1
+   *normal_command@inlineraw C2 l1
    |EXTRA
    |expand_index:{1}
    |format:{plaintext}

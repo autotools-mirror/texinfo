@@ -12,16 +12,16 @@ $result_tree_text{'cartouche_in_style_command'} = '*document_root C1
  *before_node_section C4
   *preamble_before_content
   *paragraph C1
-   *@code C1 l1
+   *normal_command@code C1 l1
     *brace_container C1
      {normal_text:\\n}
-  *@cartouche C3 l2
+  *normal_command@cartouche C3 l2
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C1
     {normal_text:cartouche\\n}
-   *@end C1 l4
+   *normal_command@end C1 l4
    |EXTRA
    |text_arg:{cartouche}
     *line_arg C3

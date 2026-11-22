@@ -13,13 +13,13 @@ $result_tree_text{'noindent_in_paragraph'} = '*document_root C1
   *preamble_before_content
   *paragraph C4
    {normal_text:Begin para\\n}
-   *@noindent l2
+   *normal_command@noindent l2
    {ignorable_spaces_after_command:\\n}
    {normal_text:after noindent.\\n}
   {empty_line:\\n}
   *paragraph C4
    {normal_text:Begin para2\\n}
-   *@noindent l6
+   *normal_command@noindent l6
    {ignorable_spaces_after_command:\\n}
    {normal_text:after noindent2.\\n}
 ';

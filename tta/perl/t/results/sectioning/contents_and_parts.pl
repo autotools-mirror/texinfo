@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'contents_and_parts'} = '*document_root C11
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'contents_and_parts'} = '*document_root C11
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C4 l2 {top}
+ *normal_command@top C4 l2 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -31,7 +31,7 @@ $result_tree_text{'contents_and_parts'} = '*document_root C11
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C5 l4
+  *normal_command@menu C5 l4
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -68,7 +68,7 @@ $result_tree_text{'contents_and_parts'} = '*document_root C11
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l8
+   *normal_command@end C1 l8
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -76,7 +76,7 @@ $result_tree_text{'contents_and_parts'} = '*document_root C11
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@part C2 l10 {part 1: part 1}
+ *normal_command@part C2 l10 {part 1: part 1}
  |EXTRA
  |global_command_number:{1}
  |section_level:{0}
@@ -87,7 +87,7 @@ $result_tree_text{'contents_and_parts'} = '*document_root C11
     {normal_text:part 1: part 1}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l12 {chapter 1 node}
+ *normal_command@node C1 l12 {chapter 1 node}
  |EXTRA
  |identifier:{chapter-1-node}
  |is_target:{1}
@@ -97,7 +97,7 @@ $result_tree_text{'contents_and_parts'} = '*document_root C11
     {spaces_before_argument: }
     {normal_text:chapter 1 node}
     {spaces_after_argument:\\n}
- *@chapter C2 l13 {chapter 1}
+ *normal_command@chapter C2 l13 {chapter 1}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -108,7 +108,7 @@ $result_tree_text{'contents_and_parts'} = '*document_root C11
     {normal_text:chapter 1}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l15 {chapter 2 node}
+ *normal_command@node C1 l15 {chapter 2 node}
  |EXTRA
  |identifier:{chapter-2-node}
  |is_target:{1}
@@ -118,7 +118,7 @@ $result_tree_text{'contents_and_parts'} = '*document_root C11
     {spaces_before_argument: }
     {normal_text:chapter 2 node}
     {spaces_after_argument:\\n}
- *@chapter C2 l16 {chapter 2}
+ *normal_command@chapter C2 l16 {chapter 2}
  |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
@@ -129,7 +129,7 @@ $result_tree_text{'contents_and_parts'} = '*document_root C11
     {normal_text:chapter 2}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@part C2 l18 {part2: part2}
+ *normal_command@part C2 l18 {part2: part2}
  |EXTRA
  |global_command_number:{2}
  |section_level:{0}
@@ -140,7 +140,7 @@ $result_tree_text{'contents_and_parts'} = '*document_root C11
     {normal_text:part2: part2}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l20 {chapter 3 node}
+ *normal_command@node C1 l20 {chapter 3 node}
  |EXTRA
  |identifier:{chapter-3-node}
  |is_target:{1}
@@ -150,7 +150,7 @@ $result_tree_text{'contents_and_parts'} = '*document_root C11
     {spaces_before_argument: }
     {normal_text:chapter 3 node}
     {spaces_after_argument:\\n}
- *@chapter C4 l21 {chapter 3}
+ *normal_command@chapter C4 l21 {chapter 3}
  |EXTRA
  |section_heading_number:{3}
  |section_level:{1}
@@ -161,12 +161,12 @@ $result_tree_text{'contents_and_parts'} = '*document_root C11
     {normal_text:chapter 3}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@contents C1 l23
+  *normal_command@contents C1 l23
   |EXTRA
   |global_command_number:{1}
    *line_arg C1
     {spaces_before_argument:\\n}
-  *@shortcontents C1 l24
+  *normal_command@shortcontents C1 l24
   |EXTRA
   |global_command_number:{1}
    *line_arg C1

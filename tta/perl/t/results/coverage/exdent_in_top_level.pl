@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'exdent_in_top_level'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@exdent C1 l1
+  *normal_command@exdent C1 l1
    *line_arg C3
     {spaces_before_argument: }
     {normal_text:in exdented not in block command}

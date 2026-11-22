@@ -21,7 +21,7 @@ NodeForward: [U1]
    {text_before_beginning:\\input texinfo.tex\\n}
    {text_before_beginning:\\n}
   *preamble_before_content
- *@node C1 transliterated_names_conflicts.texi:l3 {Top}
+ *normal_command@node C1 transliterated_names_conflicts.texi:l3 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -31,7 +31,7 @@ NodeForward: [U1]
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 transliterated_names_conflicts.texi:l4 {Same transliterated names}
+ *normal_command@top C2 transliterated_names_conflicts.texi:l4 {Same transliterated names}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -56,7 +56,7 @@ NodePrev: [U0]
 NodeUp: [U0]
 NodeForward: [U2]
 NodeBack: [U0]
- *@node C1 transliterated_names_conflicts.texi:l6 {Prés}
+ *normal_command@node C1 transliterated_names_conflicts.texi:l6 {Prés}
  |EXTRA
  |identifier:{Pr_00e9s}
  |is_target:{1}
@@ -66,7 +66,7 @@ NodeBack: [U0]
     {spaces_before_argument: }
     {normal_text:Prés}
     {spaces_after_argument:\\n}
- *@chapter C2 transliterated_names_conflicts.texi:l7 {Prés}
+ *normal_command@chapter C2 transliterated_names_conflicts.texi:l7 {Prés}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -88,7 +88,7 @@ Up: [U0]
 NodePrev: [U1]
 NodeUp: [U0]
 NodeBack: [U1]
- *@node C1 transliterated_names_conflicts.texi:l9 {Other node}
+ *normal_command@node C1 transliterated_names_conflicts.texi:l9 {Other node}
  |EXTRA
  |identifier:{Other-node}
  |is_target:{1}
@@ -98,7 +98,7 @@ NodeBack: [U1]
     {spaces_before_argument: }
     {normal_text:Other node}
     {spaces_after_argument:\\n}
- *@chapter C7 transliterated_names_conflicts.texi:l10 {Other chapter}
+ *normal_command@chapter C7 transliterated_names_conflicts.texi:l10 {Other chapter}
  |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
@@ -109,7 +109,7 @@ NodeBack: [U1]
     {normal_text:Other chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@anchor C1 transliterated_names_conflicts.texi:l12
+  *normal_command@anchor C1 transliterated_names_conflicts.texi:l12
   |EXTRA
   |identifier:{Pr_00eas}
   |is_target:{1}
@@ -117,7 +117,7 @@ NodeBack: [U1]
     {normal_text:Prês}
   {spaces_after_close_brace:\\n}
   {empty_line:\\n}
-  *@float C3 transliterated_names_conflicts.texi:l14
+  *normal_command@float C3 transliterated_names_conflicts.texi:l14
   |EXTRA
   |float_number:{2.1}
   |float_type:{Figure}
@@ -134,7 +134,7 @@ NodeBack: [U1]
      {spaces_after_argument:\\n}
    *paragraph C1
     {normal_text:In figure\\n}
-   *@end C1 transliterated_names_conflicts.texi:l16
+   *normal_command@end C1 transliterated_names_conflicts.texi:l16
    |EXTRA
    |text_arg:{float}
     *line_arg C3
@@ -142,7 +142,7 @@ NodeBack: [U1]
      {normal_text:float}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@bye C1
+ *normal_command@bye C1
   *line_arg C1
    {spaces_before_argument:\\n}
 ';

@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'file_name_conflict_with_user_defined'} = '*document_root C7
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'file_name_conflict_with_user_defined'} = '*document_root C7
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l2 {top}
+ *normal_command@top C2 l2 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -31,7 +31,7 @@ $result_tree_text{'file_name_conflict_with_user_defined'} = '*document_root C7
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l4 {Chapter 1}
+ *normal_command@node C1 l4 {Chapter 1}
  |EXTRA
  |identifier:{Chapter-1}
  |is_target:{1}
@@ -41,7 +41,7 @@ $result_tree_text{'file_name_conflict_with_user_defined'} = '*document_root C7
     {spaces_before_argument: }
     {normal_text:Chapter 1}
     {spaces_after_argument:\\n}
- *@chapter C5 l5 {Chap 1}
+ *normal_command@chapter C5 l5 {Chap 1}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -52,7 +52,7 @@ $result_tree_text{'file_name_conflict_with_user_defined'} = '*document_root C7
     {normal_text:Chap 1}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@anchor C1 l7
+  *normal_command@anchor C1 l7
   |EXTRA
   |identifier:{myanchor}
   |is_target:{1}
@@ -60,7 +60,7 @@ $result_tree_text{'file_name_conflict_with_user_defined'} = '*document_root C7
     {normal_text:myanchor}
   {spaces_after_close_brace:\\n}
   {empty_line:\\n}
- *@node C1 l9 {Chapter 2}
+ *normal_command@node C1 l9 {Chapter 2}
  |EXTRA
  |identifier:{Chapter-2}
  |is_target:{1}
@@ -70,7 +70,7 @@ $result_tree_text{'file_name_conflict_with_user_defined'} = '*document_root C7
     {spaces_before_argument: }
     {normal_text:Chapter 2}
     {spaces_after_argument:\\n}
- *@chapter C1 l10 {Chap 2}
+ *normal_command@chapter C1 l10 {Chap 2}
  |EXTRA
  |section_heading_number:{2}
  |section_level:{1}

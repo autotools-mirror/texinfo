@@ -13,14 +13,14 @@ $result_tree_text{'bad_ifclear_argument'} = '*document_root C1
   *preamble_before_beginning C1
   >SOURCEMARKS
   >ignored_conditional_block<1>
-   >*@ifclear C3 l2
+   >*normal_command@ifclear C3 l2
     >*arguments_line C1
      >*block_line_arg C3
       >{spaces_before_argument: }
       >{normal_text:#something}
       >{spaces_after_argument:\\n}
     >{raw:R#something\\n}
-    >*@end C1 l4
+    >*normal_command@end C1 l4
     >|EXTRA
     >|text_arg:{ifclear}
      >*line_arg C3

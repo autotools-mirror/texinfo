@@ -13,10 +13,10 @@ $result_tree_text{'nested'} = '*document_root C1
   *preamble_before_content
   *paragraph C3
    {normal_text:type the characters }
-   *@kbd C1 l1
+   *normal_command@kbd C1 l1
     *brace_container C2
      {normal_text:l o g o u t }
-     *@key C1 l1
+     *normal_command@key C1 l1
       *brace_container C1
        {normal_text:RET}
    {normal_text:.}

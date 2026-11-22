@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'email_in_node'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {@email{ a } @email{c , d} @email{ , e}}
+ *normal_command@node C1 l1 {@email{ a } @email{c , d} @email{ , e}}
  |EXTRA
  |identifier:{a-c-}
  |is_target:{1}
@@ -19,13 +19,13 @@ $result_tree_text{'email_in_node'} = '*document_root C2
   *arguments_line C1
    *line_arg C7
     {spaces_before_argument: }
-    *@email C1 l1
+    *normal_command@email C1 l1
      *brace_arg C3
       {spaces_before_argument: }
       {normal_text:a}
       {spaces_after_argument: }
     {normal_text: }
-    *@email C2 l1
+    *normal_command@email C2 l1
      *brace_arg C2
       {normal_text:c}
       {spaces_after_argument: }
@@ -33,7 +33,7 @@ $result_tree_text{'email_in_node'} = '*document_root C2
       {spaces_before_argument: }
       {normal_text:d}
     {normal_text: }
-    *@email C2 l1
+    *normal_command@email C2 l1
      *brace_arg C1
       {spaces_before_argument: }
      *brace_arg C2

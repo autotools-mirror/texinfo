@@ -13,44 +13,44 @@ $result_tree_text{'custom_headings'} = '*document_root C8
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content C3
-   *@evenheading C1 l2
+   *normal_command@evenheading C1 l2
     *line_arg C17
      {spaces_before_argument: }
-     *@thispage
+     *normal_command@thispage
      {normal_text: }
-     *@thissectionname
+     *normal_command@thissectionname
      {normal_text: }
-     *@|
+     *normal_command@|
      {normal_text: }
-     *@thissectionnum
+     *normal_command@thissectionnum
      {normal_text: }
-     *@thissection
+     *normal_command@thissection
      {normal_text: }
-     *@|
+     *normal_command@|
      {normal_text: }
-     *@thischaptername
+     *normal_command@thischaptername
      {normal_text: }
-     *@thischapternum
+     *normal_command@thischapternum
      {spaces_after_argument:\\n}
-   *@evenfooting C1 l3
+   *normal_command@evenfooting C1 l3
     *line_arg C13
      {spaces_before_argument: }
-     *@thischapter
+     *normal_command@thischapter
      {normal_text: }
-     *@thistitle
+     *normal_command@thistitle
      {normal_text: }
-     *@|
+     *normal_command@|
      {normal_text: }
-     *@thisfile
+     *normal_command@thisfile
      {normal_text: }
-     *@|
+     *normal_command@|
      {normal_text: }
-     *@code C1 l3
+     *normal_command@code C1 l3
       *brace_container C1
-       *@thischaptername
+       *normal_command@thischaptername
      {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@node C1 l5 {Top}
+ *normal_command@node C1 l5 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -60,7 +60,7 @@ $result_tree_text{'custom_headings'} = '*document_root C8
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l6 {top sectionning}
+ *normal_command@top C2 l6 {top sectionning}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -70,7 +70,7 @@ $result_tree_text{'custom_headings'} = '*document_root C8
     {normal_text:top sectionning}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l8 {chapter}
+ *normal_command@node C1 l8 {chapter}
  |EXTRA
  |identifier:{chapter}
  |is_target:{1}
@@ -80,7 +80,7 @@ $result_tree_text{'custom_headings'} = '*document_root C8
     {spaces_before_argument: }
     {normal_text:chapter}
     {spaces_after_argument:\\n}
- *@chapter C10 l9 {ch--ap}
+ *normal_command@chapter C10 l9 {ch--ap}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -91,21 +91,21 @@ $result_tree_text{'custom_headings'} = '*document_root C8
     {normal_text:ch--ap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@page C1
+  *normal_command@page C1
    *line_arg C1
     {spaces_before_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
    {normal_text:after ch--ap first page\\n}
   {empty_line:\\n}
-  *@page C1
+  *normal_command@page C1
    *line_arg C1
     {spaces_before_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
    {normal_text:after ch--ap second page\\n}
   {empty_line:\\n}
- *@section C2 l19 {sec1}
+ *normal_command@section C2 l19 {sec1}
  |EXTRA
  |identifier:{sec1}
  |is_target:{1}
@@ -118,7 +118,7 @@ $result_tree_text{'custom_headings'} = '*document_root C8
     {normal_text:sec1}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@chapter C12 l21 {chap 2}
+ *normal_command@chapter C12 l21 {chap 2}
  |EXTRA
  |identifier:{chap-2}
  |is_target:{1}
@@ -131,29 +131,29 @@ $result_tree_text{'custom_headings'} = '*document_root C8
     {normal_text:chap 2}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@everyheading C1 l23
+  *normal_command@everyheading C1 l23
    *line_arg C5
     {spaces_before_argument: }
     {normal_text:toto }
-    *@|
+    *normal_command@|
     {normal_text: titi}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@page C1
+  *normal_command@page C1
    *line_arg C1
     {spaces_before_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
    {normal_text:after everyheading before chap 3 first page\\n}
   {empty_line:\\n}
-  *@page C1
+  *normal_command@page C1
    *line_arg C1
     {spaces_before_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
    {normal_text:after everyheading before chap 3 second page\\n}
   {empty_line:\\n}
- *@chapter C6 l33 {chap 3}
+ *normal_command@chapter C6 l33 {chap 3}
  |EXTRA
  |identifier:{chap-3}
  |is_target:{1}
@@ -166,19 +166,19 @@ $result_tree_text{'custom_headings'} = '*document_root C8
     {normal_text:chap 3}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@page C1
+  *normal_command@page C1
    *line_arg C1
     {spaces_before_argument:\\n}
   {empty_line:\\n}
-  *@everyfooting C1 l37
+  *normal_command@everyfooting C1 l37
    *line_arg C9
     {spaces_before_argument: }
     {normal_text:aa }
-    *@|
+    *normal_command@|
     {normal_text: bb }
-    *@|
+    *normal_command@|
     {normal_text: cc }
-    *@|
+    *normal_command@|
     {normal_text: dd}
     {spaces_after_argument:\\n}
   {empty_line:\\n}

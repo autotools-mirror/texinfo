@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'recursive_copying'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C2
-   *@copying C5 l1
+   *normal_command@copying C5 l1
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
@@ -19,7 +19,7 @@ $result_tree_text{'recursive_copying'} = '*document_root C1
     *paragraph C1
      {normal_text:In copying.\\n}
     {empty_line:\\n}
-    *@end C1 l6
+    *normal_command@end C1 l6
     |EXTRA
     |text_arg:{copying}
      *line_arg C3
@@ -27,7 +27,7 @@ $result_tree_text{'recursive_copying'} = '*document_root C1
       {normal_text:copying}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-  *@insertcopying C1 l8
+  *normal_command@insertcopying C1 l8
   |EXTRA
   |global_command_number:{1}
    *line_arg C1

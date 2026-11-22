@@ -11,18 +11,18 @@ use Encode;
 $result_tree_text{'comment_on_cartouche_line'} = '*document_root C1
  *before_node_section C4
   *preamble_before_content
-  *@cartouche C3 l1
+  *normal_command@cartouche C3 l1
    *arguments_line C1
     *block_line_arg C2
      {spaces_before_argument: }
-     *@c C1
+     *normal_command@c C1
       *line_arg C3
        {spaces_before_argument: }
        {rawline_text:comment}
        {spaces_after_argument:\\n}
    *paragraph C1
     {normal_text:in cartouche.\\n}
-   *@end C1 l3
+   *normal_command@end C1 l3
    |EXTRA
    |text_arg:{cartouche}
     *line_arg C3
@@ -30,22 +30,22 @@ $result_tree_text{'comment_on_cartouche_line'} = '*document_root C1
      {normal_text:cartouche}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@cartouche C3 l5
+  *normal_command@cartouche C3 l5
    *arguments_line C1
     *block_line_arg C4
      {spaces_before_argument: }
-     *@emph C1 l5
+     *normal_command@emph C1 l5
       *brace_container C1
        {normal_text:Title of box}
      {spaces_after_argument: }
-     *@c C1
+     *normal_command@c C1
       *line_arg C3
        {spaces_before_argument: }
        {rawline_text:comment}
        {spaces_after_argument:\\n}
    *paragraph C1
     {normal_text:Out of main text\\n}
-   *@end C1 l7
+   *normal_command@end C1 l7
    |EXTRA
    |text_arg:{cartouche}
     *line_arg C3

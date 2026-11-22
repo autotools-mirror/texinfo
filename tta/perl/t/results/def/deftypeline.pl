@@ -11,11 +11,11 @@ use Encode;
 $result_tree_text{'deftypeline'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@defblock C4 l1
+  *normal_command@defblock C4 l1
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
-   *@deftypeline C1 l2
+   *normal_command@deftypeline C1 l2
    |EXTRA
    |def_command:{deftypeline}
    |original_def_cmdname:{deftypeline}
@@ -40,7 +40,7 @@ $result_tree_text{'deftypeline'} = '*document_root C1
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l2
+       *normal_command@var C1 l2
         *brace_container C1
          {normal_text:bar}
      {delimiter:,}
@@ -51,17 +51,17 @@ $result_tree_text{'deftypeline'} = '*document_root C1
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l2
+       *normal_command@var C1 l2
         *brace_container C1
          {normal_text:baz}
      {delimiter:)}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C2
-     *@dots C1 l3
+     *normal_command@dots C1 l3
       *brace_container
      {normal_text:\\n}
-   *@end C1 l4
+   *normal_command@end C1 l4
    |EXTRA
    |text_arg:{defblock}
     *line_arg C3

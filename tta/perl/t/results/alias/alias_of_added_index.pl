@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'alias_of_added_index'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content C4
-   *@defindex C1 l1
+   *normal_command@defindex C1 l1
    |EXTRA
    |misc_args:A{sli}
     *line_arg C3
@@ -19,7 +19,7 @@ $result_tree_text{'alias_of_added_index'} = '*document_root C5
      {normal_text:sli}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@alias C1 l3
+   *normal_command@alias C1 l3
    |EXTRA
    |misc_args:A{new|sliindex}
     *line_arg C3
@@ -27,7 +27,7 @@ $result_tree_text{'alias_of_added_index'} = '*document_root C5
      {normal_text:new = sliindex}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@node C1 l5 {Top}
+ *normal_command@node C1 l5 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -37,7 +37,7 @@ $result_tree_text{'alias_of_added_index'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C4 l6 {top}
+ *normal_command@top C4 l6 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -57,7 +57,7 @@ $result_tree_text{'alias_of_added_index'} = '*document_root C5
     {normal_text:entry}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l10 {chap}
+ *normal_command@node C1 l10 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -68,7 +68,7 @@ $result_tree_text{'alias_of_added_index'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:chap}
     {spaces_after_argument:\\n}
- *@chapter C3 l11 {Chapter}
+ *normal_command@chapter C3 l11 {Chapter}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -79,7 +79,7 @@ $result_tree_text{'alias_of_added_index'} = '*document_root C5
     {normal_text:Chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@printindex C1 l13
+  *normal_command@printindex C1 l13
   |EXTRA
   |global_command_number:{1}
   |misc_args:A{sli}

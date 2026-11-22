@@ -13,12 +13,12 @@ $result_tree_text{'raw_in_para'} = '*document_root C1
   *preamble_before_content
   *paragraph C1
    {normal_text:para\\n}
-  *@verbatim C3 l2
+  *normal_command@verbatim C3 l2
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    {raw:in verbatim\\n}
-   *@end C1 l4
+   *normal_command@end C1 l4
    |EXTRA
    |text_arg:{verbatim}
     *line_arg C3
@@ -28,13 +28,13 @@ $result_tree_text{'raw_in_para'} = '*document_root C1
   {empty_line:\\n}
   *paragraph C3
    {normal_text:para b html\\n}
-   *@html C3 l7
+   *normal_command@html C3 l7
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *rawpreformatted C1
      {normal_text:in html\\n}
-    *@end C1 l9
+    *normal_command@end C1 l9
     |EXTRA
     |text_arg:{html}
      *line_arg C3
@@ -45,7 +45,7 @@ $result_tree_text{'raw_in_para'} = '*document_root C1
   {empty_line:\\n}
   *paragraph C2
    {normal_text:para b tex\\n}
-   *@tex C3 l13
+   *normal_command@tex C3 l13
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
@@ -53,7 +53,7 @@ $result_tree_text{'raw_in_para'} = '*document_root C1
      {normal_text:in tex1\\n}
      {empty_line:\\n}
      {normal_text:in tex2\\n}
-    *@end C1 l17
+    *normal_command@end C1 l17
     |EXTRA
     |text_arg:{tex}
      *line_arg C3

@@ -11,13 +11,13 @@ use Encode;
 $result_tree_text{'test_separated_contents_shortcontents'} = '*document_root C7
  *before_node_section C1
   *preamble_before_content C2
-   *@contents C1 l1
+   *normal_command@contents C1 l1
    |EXTRA
    |global_command_number:{1}
     *line_arg C1
      {spaces_before_argument:\\n}
    {empty_line:\\n}
- *@node C1 l3 {Top}
+ *normal_command@node C1 l3 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -27,7 +27,7 @@ $result_tree_text{'test_separated_contents_shortcontents'} = '*document_root C7
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l4 {top}
+ *normal_command@top C2 l4 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -37,7 +37,7 @@ $result_tree_text{'test_separated_contents_shortcontents'} = '*document_root C7
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l6 {chap}
+ *normal_command@node C1 l6 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -47,7 +47,7 @@ $result_tree_text{'test_separated_contents_shortcontents'} = '*document_root C7
     {spaces_before_argument: }
     {normal_text:chap}
     {spaces_after_argument:\\n}
- *@chapter C2 l7 {chapter}
+ *normal_command@chapter C2 l7 {chapter}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -58,7 +58,7 @@ $result_tree_text{'test_separated_contents_shortcontents'} = '*document_root C7
     {normal_text:chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l9 {app}
+ *normal_command@node C1 l9 {app}
  |EXTRA
  |identifier:{app}
  |is_target:{1}
@@ -68,7 +68,7 @@ $result_tree_text{'test_separated_contents_shortcontents'} = '*document_root C7
     {spaces_before_argument: }
     {normal_text:app}
     {spaces_after_argument:\\n}
- *@appendix C3 l10 {appendix}
+ *normal_command@appendix C3 l10 {appendix}
  |EXTRA
  |section_heading_number:{A}
  |section_level:{1}
@@ -79,7 +79,7 @@ $result_tree_text{'test_separated_contents_shortcontents'} = '*document_root C7
     {normal_text:appendix}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@shortcontents C1 l12
+  *normal_command@shortcontents C1 l12
   |EXTRA
   |global_command_number:{1}
    *line_arg C1

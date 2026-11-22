@@ -11,14 +11,14 @@ use Encode;
 $result_tree_text{'nested_footnotes_separate'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content C1
-   *@footnotestyle C1 l1
+   *normal_command@footnotestyle C1 l1
    |EXTRA
    |misc_args:A{separate}
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:separate}
      {spaces_after_argument:\\n}
- *@node C3 l2 {Top}
+ *normal_command@node C3 l2 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -31,7 +31,7 @@ $result_tree_text{'nested_footnotes_separate'} = '*document_root C2
   {empty_line:\\n}
   *paragraph C3
    {normal_text:F}
-   *@footnote C1 l4
+   *normal_command@footnote C1 l4
    |EXTRA
    |global_command_number:{2}
     *brace_command_context C3
@@ -40,7 +40,7 @@ $result_tree_text{'nested_footnotes_separate'} = '*document_root C2
      {empty_line:\\n}
      *paragraph C3
       {normal_text:V}
-      *@footnote C1 l6
+      *normal_command@footnote C1 l6
       |EXTRA
       |global_command_number:{1}
        *brace_command_context C1

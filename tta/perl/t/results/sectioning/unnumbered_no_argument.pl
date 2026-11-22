@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'unnumbered_no_argument'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
- *@unnumbered C1 l1
+ *normal_command@unnumbered C1 l1
  |EXTRA
  |section_level:{1}
  |section_number:{1}

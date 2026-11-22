@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'test_xrefautomaticsectiontitle'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'test_xrefautomaticsectiontitle'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C4 l2 {top}
+ *normal_command@top C4 l2 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -31,7 +31,7 @@ $result_tree_text{'test_xrefautomaticsectiontitle'} = '*document_root C5
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C3 l4
+  *normal_command@menu C3 l4
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -46,7 +46,7 @@ $result_tree_text{'test_xrefautomaticsectiontitle'} = '*document_root C5
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l6
+   *normal_command@end C1 l6
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -54,7 +54,7 @@ $result_tree_text{'test_xrefautomaticsectiontitle'} = '*document_root C5
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l8 {chap}
+ *normal_command@node C1 l8 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -64,7 +64,7 @@ $result_tree_text{'test_xrefautomaticsectiontitle'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:chap}
     {spaces_after_argument:\\n}
- *@chapter C9 l9 {chapter}
+ *normal_command@chapter C9 l9 {chapter}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -75,7 +75,7 @@ $result_tree_text{'test_xrefautomaticsectiontitle'} = '*document_root C5
     {normal_text:chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@xrefautomaticsectiontitle C1 l11
+  *normal_command@xrefautomaticsectiontitle C1 l11
   |EXTRA
   |global_command_number:{1}
   |misc_args:A{on}
@@ -85,7 +85,7 @@ $result_tree_text{'test_xrefautomaticsectiontitle'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@xref C1 l13
+   *normal_command@xref C1 l13
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -93,7 +93,7 @@ $result_tree_text{'test_xrefautomaticsectiontitle'} = '*document_root C5
      {normal_text:chap}
    {normal_text:.\\n}
   {empty_line:\\n}
-  *@xrefautomaticsectiontitle C1 l15
+  *normal_command@xrefautomaticsectiontitle C1 l15
   |EXTRA
   |global_command_number:{2}
   |misc_args:A{off}
@@ -103,7 +103,7 @@ $result_tree_text{'test_xrefautomaticsectiontitle'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@xref C1 l17
+   *normal_command@xref C1 l17
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}

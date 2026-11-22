@@ -12,7 +12,7 @@ $result_tree_text{'test_today'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *paragraph C2
-   *@today C1 l1
+   *normal_command@today C1 l1
     *brace_container
    {normal_text:.}
 ';

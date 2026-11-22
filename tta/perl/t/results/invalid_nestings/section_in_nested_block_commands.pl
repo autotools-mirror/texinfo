@@ -11,15 +11,15 @@ use Encode;
 $result_tree_text{'section_in_nested_block_commands'} = '*document_root C2
  *before_node_section C2
   *preamble_before_content
-  *@table C2 l1
+  *normal_command@table C2 l1
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     *@strong l1
+     *normal_command@strong l1
      {spaces_after_argument:\\n}
    *table_entry C2
     *table_term C1
-     *@item C1 l2
+     *normal_command@item C1 l2
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:item}
@@ -28,7 +28,7 @@ $result_tree_text{'section_in_nested_block_commands'} = '*document_root C2
      *paragraph C1
       {normal_text:table line\\n}
      {empty_line:\\n}
-     *@quotation C4 l5
+     *normal_command@quotation C4 l5
       *arguments_line C1
        *block_line_arg C1
         {spaces_before_argument:\\n}
@@ -36,7 +36,7 @@ $result_tree_text{'section_in_nested_block_commands'} = '*document_root C2
       *paragraph C1
        {normal_text:in quotation\\n}
       {empty_line:\\n}
- *@section C1 l9 {a section}
+ *normal_command@section C1 l9 {a section}
  |EXTRA
  |identifier:{a-section}
  |is_target:{1}

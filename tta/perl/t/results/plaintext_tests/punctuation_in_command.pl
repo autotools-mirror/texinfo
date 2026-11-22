@@ -15,40 +15,40 @@ $result_tree_text{'punctuation_in_command'} = '*document_root C1
   *preamble_before_content
   *paragraph C18
    {normal_text:Text. Email }
-   *@email C2 l2
+   *normal_command@email C2 l2
     *brace_arg C1
      {normal_text:a. b}
     *brace_arg C1
      {normal_text:a. b}
    {normal_text: dmn }
-   *@dmn C1 l2
+   *normal_command@dmn C1 l2
     *brace_container C1
      {normal_text:1. 2}
    {normal_text: and text. indicateurl }
-   *@indicateurl C1 l2
+   *normal_command@indicateurl C1 l2
     *brace_container C1
      {normal_text:i. u}
    {normal_text: and then kbd }
-   *@kbd C1 l2
+   *normal_command@kbd C1 l2
     *brace_container C1
      {normal_text:k. d}
    {normal_text: and math }
-   *@math C1 l2
+   *normal_command@math C1 l2
     *brace_arg C1
      {normal_text:m. a}
    {normal_text: and cite }
-   *@cite C1 l2
+   *normal_command@cite C1 l2
     *brace_container C1
      {normal_text:c. e}
    {normal_text: and emph }
-   *@emph C1 l2
+   *normal_command@emph C1 l2
     *brace_container C1
      {normal_text:e. h}
    {normal_text: text. \\n}
    {normal_text:asis in code }
-   *@code C1 l3
+   *normal_command@code C1 l3
     *brace_container C1
-     *@asis C1 l3
+     *normal_command@asis C1 l3
       *brace_container C1
        {normal_text:a. c}
    {normal_text:\\n}

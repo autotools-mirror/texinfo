@@ -12,27 +12,27 @@ $result_tree_text{'spaces_after_braced_command'} = '*document_root C1
  *before_node_section C11
   *preamble_before_content
   *paragraph C2
-   *@code C2 l1
+   *normal_command@code C2 l1
     {spaces_after_cmd_before_arg: }
     *brace_container C1
      {normal_text:b}
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@samp C2 l3
+   *normal_command@samp C2 l3
     {spaces_after_cmd_before_arg:\\n}
     *brace_container C1
      {normal_text:v}
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@AA C2 l6
+   *normal_command@AA C2 l6
     {spaces_after_cmd_before_arg:\\n }
     *brace_container
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@email C3 l9
+   *normal_command@email C3 l9
     {spaces_after_cmd_before_arg:\\n}
     *brace_arg C1
      {normal_text:a}
@@ -44,7 +44,7 @@ $result_tree_text{'spaces_after_braced_command'} = '*document_root C1
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@TeX C1 l13
+   *normal_command@TeX C1 l13
     {spaces_after_cmd_before_arg:\\n}
    {normal_text:\\n}
   {empty_line:\\n}

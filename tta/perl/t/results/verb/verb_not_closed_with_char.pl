@@ -12,7 +12,7 @@ $result_tree_text{'verb_not_closed_with_char'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *paragraph C1
-   *@verb C1 l1
+   *normal_command@verb C1 l1
     *brace_container C7
      {verb_delimiter:*}
      {raw:\\n}

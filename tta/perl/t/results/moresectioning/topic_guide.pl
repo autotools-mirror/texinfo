@@ -14,7 +14,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
    {text_before_beginning:\\input texinfo.tex\\n}
    {text_before_beginning:\\n}
   *preamble_before_content
- *@node C1 topic_guide.texi:l3 {Top}
+ *normal_command@node C1 topic_guide.texi:l3 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -24,7 +24,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C6 topic_guide.texi:l4 {An example of guide topic based manual}
+ *normal_command@top C6 topic_guide.texi:l4 {An example of guide topic based manual}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -38,7 +38,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
    {normal_text:This is an example of guide/topic based manual inspired by the Mallard\\n}
    {normal_text:format.\\n}
   {empty_line:\\n}
-  *@menu C4 topic_guide.texi:l9
+  *normal_command@menu C4 topic_guide.texi:l9
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -64,7 +64,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
     *menu_entry_description C1
      *preformatted C1
       {normal_text:the perillous way\\n}
-   *@end C1 topic_guide.texi:l12
+   *normal_command@end C1 topic_guide.texi:l12
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -72,7 +72,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 topic_guide.texi:l14 {guide1}
+ *normal_command@node C1 topic_guide.texi:l14 {guide1}
  |EXTRA
  |identifier:{guide1}
  |is_target:{1}
@@ -82,7 +82,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
     {spaces_before_argument: }
     {normal_text:guide1}
     {spaces_after_argument:\\n}
- *@chapter C6 topic_guide.texi:l15 {guide 1}
+ *normal_command@chapter C6 topic_guide.texi:l15 {guide 1}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -96,7 +96,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
   *paragraph C1
    {normal_text:This is the guide for an easy use.\\n}
   {empty_line:\\n}
-  *@menu C5 topic_guide.texi:l19
+  *normal_command@menu C5 topic_guide.texi:l19
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -133,7 +133,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
     *menu_entry_description C1
      *preformatted C1
       {normal_text:topic5 description\\n}
-   *@end C1 topic_guide.texi:l23
+   *normal_command@end C1 topic_guide.texi:l23
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -141,7 +141,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C7 topic_guide.texi:l25 {topic1}
+ *normal_command@node C7 topic_guide.texi:l25 {topic1}
  |EXTRA
  |identifier:{topic1}
  |is_target:{1}
@@ -157,7 +157,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
     {spaces_before_argument: }
     {normal_text:topic2}
     {spaces_after_argument:\\n}
-  *@heading C1 topic_guide.texi:l26
+  *normal_command@heading C1 topic_guide.texi:l26
   |EXTRA
   |global_command_number:{1}
   |heading_number:{1}
@@ -169,7 +169,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
   *paragraph C1
    {normal_text:This is topic 1.\\n}
   {empty_line:\\n}
-  *@menu C4 topic_guide.texi:l30
+  *normal_command@menu C4 topic_guide.texi:l30
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -188,7 +188,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
     *menu_entry_description C1
      *preformatted C1
       {normal_text:guide 1\\n}
-   *@end C1 topic_guide.texi:l34
+   *normal_command@end C1 topic_guide.texi:l34
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -196,7 +196,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C7 topic_guide.texi:l36 {topic2}
+ *normal_command@node C7 topic_guide.texi:l36 {topic2}
  |EXTRA
  |identifier:{topic2}
  |is_target:{1}
@@ -218,7 +218,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
     {spaces_before_argument: }
     {normal_text:topic1}
     {spaces_after_argument:\\n}
-  *@heading C1 topic_guide.texi:l37
+  *normal_command@heading C1 topic_guide.texi:l37
   |EXTRA
   |global_command_number:{2}
   |heading_number:{2}
@@ -230,7 +230,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
   *paragraph C1
    {normal_text:This is topic 2\\n}
   {empty_line:\\n}
-  *@menu C4 topic_guide.texi:l41
+  *normal_command@menu C4 topic_guide.texi:l41
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -249,7 +249,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
     *menu_entry_description C1
      *preformatted C1
       {normal_text:guide 1\\n}
-   *@end C1 topic_guide.texi:l45
+   *normal_command@end C1 topic_guide.texi:l45
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -257,7 +257,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C7 topic_guide.texi:l47 {topic3}
+ *normal_command@node C7 topic_guide.texi:l47 {topic3}
  |EXTRA
  |identifier:{topic3}
  |is_target:{1}
@@ -279,7 +279,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
     {spaces_before_argument: }
     {normal_text:topic2}
     {spaces_after_argument:\\n}
-  *@heading C1 topic_guide.texi:l48
+  *normal_command@heading C1 topic_guide.texi:l48
   |EXTRA
   |global_command_number:{3}
   |heading_number:{3}
@@ -291,7 +291,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
   *paragraph C1
    {normal_text:This is topic 3\\n}
   {empty_line:\\n}
-  *@menu C3 topic_guide.texi:l52
+  *normal_command@menu C3 topic_guide.texi:l52
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -299,7 +299,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
     *preformatted C2
      {normal_text:More information\\n}
      {empty_line:\\n}
-   *@end C1 topic_guide.texi:l55
+   *normal_command@end C1 topic_guide.texi:l55
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -307,7 +307,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C7 topic_guide.texi:l57 {topic4}
+ *normal_command@node C7 topic_guide.texi:l57 {topic4}
  |EXTRA
  |identifier:{topic4}
  |is_target:{1}
@@ -317,7 +317,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
     {spaces_before_argument: }
     {normal_text:topic4}
     {spaces_after_argument:\\n}
-  *@xrefname C1 topic_guide.texi:l58
+  *normal_command@xrefname C1 topic_guide.texi:l58
   |EXTRA
   |global_command_number:{1}
   |heading_number:{4}
@@ -329,7 +329,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
   *paragraph C1
    {normal_text:This is topic 4\\n}
   {empty_line:\\n}
-  *@menu C4 topic_guide.texi:l62
+  *normal_command@menu C4 topic_guide.texi:l62
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -348,7 +348,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
     *menu_entry_description C1
      *preformatted C1
       {normal_text:guide 2\\n}
-   *@end C1 topic_guide.texi:l66
+   *normal_command@end C1 topic_guide.texi:l66
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -356,7 +356,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C7 topic_guide.texi:l68 {topic5}
+ *normal_command@node C7 topic_guide.texi:l68 {topic5}
  |EXTRA
  |identifier:{topic5}
  |is_target:{1}
@@ -374,7 +374,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
     {spaces_before_argument: }
     {normal_text:topic3}
     {spaces_after_argument:\\n}
-  *@heading C1 topic_guide.texi:l69
+  *normal_command@heading C1 topic_guide.texi:l69
   |EXTRA
   |global_command_number:{4}
   |heading_number:{5}
@@ -386,7 +386,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
   *paragraph C1
    {normal_text:This is topic 5\\n}
   {empty_line:\\n}
-  *@menu C5 topic_guide.texi:l73
+  *normal_command@menu C5 topic_guide.texi:l73
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -416,7 +416,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
     *menu_entry_description C1
      *preformatted C1
       {normal_text:guide 2\\n}
-   *@end C1 topic_guide.texi:l78
+   *normal_command@end C1 topic_guide.texi:l78
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -424,7 +424,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 topic_guide.texi:l80 {guide2}
+ *normal_command@node C1 topic_guide.texi:l80 {guide2}
  |EXTRA
  |identifier:{guide2}
  |is_target:{1}
@@ -434,7 +434,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
     {spaces_before_argument: }
     {normal_text:guide2}
     {spaces_after_argument:\\n}
- *@chapter C6 topic_guide.texi:l81 {guide 2}
+ *normal_command@chapter C6 topic_guide.texi:l81 {guide 2}
  |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
@@ -448,7 +448,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
   *paragraph C1
    {normal_text:This is the guide for an in depth use\\n}
   {empty_line:\\n}
-  *@menu C4 topic_guide.texi:l85
+  *normal_command@menu C4 topic_guide.texi:l85
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -474,7 +474,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
     *menu_entry_description C1
      *preformatted C1
       {normal_text:topic4 description\\n}
-   *@end C1 topic_guide.texi:l88
+   *normal_command@end C1 topic_guide.texi:l88
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -482,7 +482,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@bye C1
+ *normal_command@bye C1
   *line_arg C1
    {spaces_before_argument:\\n}
 ';

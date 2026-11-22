@@ -13,7 +13,7 @@ $result_tree_text{'end_ifset_in_format'} = '*document_root C1
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content C3
-   *@set C1
+   *normal_command@set C1
    |EXTRA
    |misc_args:A{notset|}
     *line_arg C3
@@ -23,18 +23,18 @@ $result_tree_text{'end_ifset_in_format'} = '*document_root C1
    {empty_line:\\n}
    >SOURCEMARKS
    >expanded_conditional_command<start;1><p:1>
-    >*@ifset C1 l4
+    >*normal_command@ifset C1 l4
      >*arguments_line C1
       >*block_line_arg C3
        >{spaces_before_argument: }
        >{normal_text:notset}
        >{spaces_after_argument:\\n}
-   *@ignore C3 l5
+   *normal_command@ignore C3 l5
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     {raw:@end ifset\\n}
-    *@end C1 l7
+    *normal_command@end C1 l7
     |EXTRA
     |text_arg:{ignore}
      *line_arg C3
@@ -45,7 +45,7 @@ $result_tree_text{'end_ifset_in_format'} = '*document_root C1
    {normal_text:text\\n}
    >SOURCEMARKS
    >expanded_conditional_command<end;1><p:5>
-    >*@end C1 l9
+    >*normal_command@end C1 l9
     >|EXTRA
     >|text_arg:{ifset}
      >*line_arg C3
@@ -55,16 +55,16 @@ $result_tree_text{'end_ifset_in_format'} = '*document_root C1
   {empty_line:\\n}
   >SOURCEMARKS
   >expanded_conditional_command<start;2><p:1>
-   >*@ifset C1 l11
+   >*normal_command@ifset C1 l11
     >*arguments_line C1
      >*block_line_arg C3
       >{spaces_before_argument: }
       >{normal_text:notset}
       >{spaces_after_argument:\\n}
-  *@verbatim C3 l12
+  *normal_command@verbatim C3 l12
   >SOURCEMARKS
   >expanded_conditional_command<end;2>
-   >*@end C1 l15
+   >*normal_command@end C1 l15
    >|EXTRA
    >|text_arg:{ifset}
     >*line_arg C3
@@ -75,7 +75,7 @@ $result_tree_text{'end_ifset_in_format'} = '*document_root C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    {raw:@end ifset\\n}
-   *@end C1 l14
+   *normal_command@end C1 l14
    |EXTRA
    |text_arg:{verbatim}
     *line_arg C3
@@ -85,14 +85,14 @@ $result_tree_text{'end_ifset_in_format'} = '*document_root C1
   {empty_line:\\n}
   >SOURCEMARKS
   >expanded_conditional_command<start;3><p:1>
-   >*@ifset C1 l17
+   >*normal_command@ifset C1 l17
     >*arguments_line C1
      >*block_line_arg C3
       >{spaces_before_argument: }
       >{normal_text:notset}
       >{spaces_after_argument:\\n}
   *paragraph C2
-   *@verb C1 l18
+   *normal_command@verb C1 l18
     *brace_container C4
      {verb_delimiter:%}
      {raw:\\n}
@@ -101,7 +101,7 @@ $result_tree_text{'end_ifset_in_format'} = '*document_root C1
    {normal_text:\\n}
    >SOURCEMARKS
    >expanded_conditional_command<end;3><p:1>
-    >*@end C1 l21
+    >*normal_command@end C1 l21
     >|EXTRA
     >|text_arg:{ifset}
      >*line_arg C3

@@ -11,14 +11,14 @@ use Encode;
 $result_tree_text{'wrong_synindex'} = '*document_root C1
  *before_node_section C1
   *preamble_before_content C2
-   *@defindex C1 l1
+   *normal_command@defindex C1 l1
    |EXTRA
    |misc_args:A{aaa}
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:aaa}
      {spaces_after_argument:\\n}
-   *@synindex C1 l2
+   *normal_command@synindex C1 l2
     *line_arg C2
      {spaces_before_argument: }
      {normal_text:aaa aaa}

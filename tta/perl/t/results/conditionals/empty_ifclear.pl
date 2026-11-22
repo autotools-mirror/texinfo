@@ -14,14 +14,14 @@ $result_tree_text{'empty_ifclear'} = '*document_root C1
    {normal_text:}
    >SOURCEMARKS
    >ignored_conditional_block<1>
-    >*@ifclear C5 l1
+    >*normal_command@ifclear C5 l1
      >*arguments_line C1
       >*block_line_arg C1
        >{spaces_before_argument:\\n}
      >{raw:\\n}
      >{raw:Something\\n}
      >{raw:\\n}
-     >*@end C1 l5
+     >*normal_command@end C1 l5
      >|EXTRA
      >|text_arg:{ifclear}
       >*line_arg C3

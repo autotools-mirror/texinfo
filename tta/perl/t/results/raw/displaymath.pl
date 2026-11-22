@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'displaymath'} = '*document_root C1
  *before_node_section C6
   *preamble_before_content
-  *@displaymath C7 l1
+  *normal_command@displaymath C7 l1
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -22,7 +22,7 @@ $result_tree_text{'displaymath'} = '*document_root C1
    *balanced_braces C1 l2
     {normal_text:{\\partial D}}
    {normal_text: F\\cdot ndS\\n}
-   *@end C1 l3
+   *normal_command@end C1 l3
    |EXTRA
    |text_arg:{displaymath}
     *line_arg C3
@@ -32,7 +32,7 @@ $result_tree_text{'displaymath'} = '*document_root C1
   {empty_line:\\n}
   *paragraph C1
    {normal_text:before\\n}
-  *@displaymath C7 l6
+  *normal_command@displaymath C7 l6
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -43,7 +43,7 @@ $result_tree_text{'displaymath'} = '*document_root C1
    *balanced_braces C1 l7
     {normal_text:{\\partial D}}
    {normal_text: F\\cdot ndS\\n}
-   *@end C1 l8
+   *normal_command@end C1 l8
    |EXTRA
    |text_arg:{displaymath}
     *line_arg C3

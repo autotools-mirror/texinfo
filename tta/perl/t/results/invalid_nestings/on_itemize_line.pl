@@ -11,43 +11,43 @@ use Encode;
 $result_tree_text{'on_itemize_line'} = '*document_root C1
  *before_node_section C4
   *preamble_before_content
-  *@itemize C3 l1
+  *normal_command@itemize C3 l1
    *arguments_line C1
     *block_line_arg C9
      {spaces_before_argument: }
-     *@indent l1
+     *normal_command@indent l1
      {ignorable_spaces_after_command: }
-     *@titlefont C1 l1
+     *normal_command@titlefont C1 l1
      |EXTRA
      |global_command_number:{1}
       *brace_container C1
        {normal_text:in titlefont}
      {normal_text: }
-     *@anchor C1 l1
+     *normal_command@anchor C1 l1
      |EXTRA
      |identifier:{in-anchor}
      |is_target:{1}
       *brace_arg C1
        {normal_text:in anchor}
-     *@footnote C1 l1
+     *normal_command@footnote C1 l1
      |EXTRA
      |global_command_number:{1}
       *brace_command_context C1
        *paragraph C1
         {normal_text:footnote}
      {normal_text: }
-     *@exdent C1 l1
+     *normal_command@exdent C1 l1
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:exdent}
        {spaces_after_argument:\\n}
-   *@item C2 l2
+   *normal_command@item C2 l2
    |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:in item.\\n}
-   *@end C1 l3
+   *normal_command@end C1 l3
    |EXTRA
    |text_arg:{itemize}
     *line_arg C3
@@ -55,7 +55,7 @@ $result_tree_text{'on_itemize_line'} = '*document_root C1
      {normal_text:itemize}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@itemize C2 l5
+  *normal_command@itemize C2 l5
    *arguments_line C1
     *block_line_arg C5
      {spaces_before_argument: }
@@ -63,7 +63,7 @@ $result_tree_text{'on_itemize_line'} = '*document_root C1
      {ignorable_spaces_after_command: }
      {normal_text:in item}
      {spaces_after_argument:\\n}
-   *@end C1 l6
+   *normal_command@end C1 l6
    |EXTRA
    |text_arg:{itemize}
     *line_arg C3

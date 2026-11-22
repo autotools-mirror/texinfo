@@ -11,12 +11,12 @@ use Encode;
 $result_tree_text{'xml_protected_in_verb'} = '*document_root C1
  *before_node_section C6
   *preamble_before_content
-  *@verbatim C3 l1
+  *normal_command@verbatim C3 l1
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    {raw:<a>\\n}
-   *@end C1 l3
+   *normal_command@end C1 l3
    |EXTRA
    |text_arg:{verbatim}
     *line_arg C3
@@ -25,14 +25,14 @@ $result_tree_text{'xml_protected_in_verb'} = '*document_root C1
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@verb C1 l5
+   *normal_command@verb C1 l5
     *brace_container C3
      {verb_delimiter:.}
      {raw: <i> }
      {verb_delimiter:.}
    {normal_text:.\\n}
   {empty_line:\\n}
-  *@verbatiminclude C1 l7
+  *normal_command@verbatiminclude C1 l7
   |EXTRA
   |input_encoding_name:{utf-8}
   |text_arg:{file_with_xml_chars.texi}

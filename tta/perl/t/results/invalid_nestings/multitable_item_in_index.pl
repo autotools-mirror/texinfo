@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'multitable_item_in_index'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@multitable C3 l1
+  *normal_command@multitable C3 l1
   |EXTRA
   |max_columns:{2}
    *arguments_line C1
@@ -32,7 +32,7 @@ $result_tree_text{'multitable_item_in_index'} = '*document_root C1
       {spaces_before_argument: }
       {normal_text:on item line}
       {spaces_after_argument:\\n}
-   *@end C1 l3
+   *normal_command@end C1 l3
    |EXTRA
    |text_arg:{multitable}
     *line_arg C3

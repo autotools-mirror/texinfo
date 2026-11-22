@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'section_before_after_top_node_last_node'} = '*document_root C6
  *before_node_section C1
   *preamble_before_content
- *@unnumbered C2 l1 {before}
+ *normal_command@unnumbered C2 l1 {before}
  |EXTRA
  |identifier:{before}
  |is_target:{1}
@@ -23,7 +23,7 @@ $result_tree_text{'section_before_after_top_node_last_node'} = '*document_root C
     {normal_text:before}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l3 {Top}
+ *normal_command@node C1 l3 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -33,7 +33,7 @@ $result_tree_text{'section_before_after_top_node_last_node'} = '*document_root C
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l4 {top section}
+ *normal_command@top C2 l4 {top section}
  |EXTRA
  |section_level:{1}
  |section_number:{2}
@@ -43,7 +43,7 @@ $result_tree_text{'section_before_after_top_node_last_node'} = '*document_root C
     {normal_text:top section}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@chapter C4 l6 {Chapter}
+ *normal_command@chapter C4 l6 {Chapter}
  |EXTRA
  |identifier:{Chapter}
  |is_target:{1}
@@ -59,7 +59,7 @@ $result_tree_text{'section_before_after_top_node_last_node'} = '*document_root C
   *paragraph C1
    {normal_text:in chapter\\n}
   {empty_line:\\n}
- *@node C1 l10 {node after}
+ *normal_command@node C1 l10 {node after}
  |EXTRA
  |identifier:{node-after}
  |is_target:{1}

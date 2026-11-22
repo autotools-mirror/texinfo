@@ -11,13 +11,13 @@ use Encode;
 $result_tree_text{'settitle_and_empty_top'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content C2
-   *@settitle C1 l1
+   *normal_command@settitle C1 l1
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:Title}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@top C2 l3
+ *normal_command@top C2 l3
  |EXTRA
  |section_level:{0}
  |section_number:{1}

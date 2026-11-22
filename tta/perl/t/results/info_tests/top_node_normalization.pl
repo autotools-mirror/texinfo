@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'top_node_normalization'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
- *@node C5 l1 {ToP}
+ *normal_command@node C5 l1 {ToP}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -23,14 +23,14 @@ $result_tree_text{'top_node_normalization'} = '*document_root C2
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C4
-   *@xref C1 l3
+   *normal_command@xref C1 l3
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{Top}
      {normal_text:TOP}
    {normal_text:. }
-   *@xref C1 l3
+   *normal_command@xref C1 l3
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -38,7 +38,7 @@ $result_tree_text{'top_node_normalization'} = '*document_root C2
      {normal_text:tOP}
    {normal_text:.\\n}
   {empty_line:\\n}
-  *@menu C3 l5
+  *normal_command@menu C3 l5
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -53,7 +53,7 @@ $result_tree_text{'top_node_normalization'} = '*document_root C2
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l7
+   *normal_command@end C1 l7
    |EXTRA
    |text_arg:{menu}
     *line_arg C3

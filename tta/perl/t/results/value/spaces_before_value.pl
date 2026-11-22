@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'spaces_before_value'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C2
-   *@set C1
+   *normal_command@set C1
    |EXTRA
    |misc_args:A{var|val}
     *line_arg C3
@@ -23,7 +23,7 @@ $result_tree_text{'spaces_before_value'} = '*document_root C1
    {normal_text:val\\n}
    >SOURCEMARKS
    >value_expansion<start;1>{val}
-    >*@value C2
+    >*normal_command@value C2
      >{spaces_after_cmd_before_arg:  }
      >*brace_container C1
       >{normal_text:var}

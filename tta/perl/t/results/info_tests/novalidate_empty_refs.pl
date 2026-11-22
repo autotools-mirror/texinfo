@@ -13,11 +13,11 @@ $result_tree_text{'novalidate_empty_refs'} = '*document_root C5
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content C2
-   *@novalidate C1 l2
+   *normal_command@novalidate C1 l2
     *line_arg C1
      {spaces_before_argument:\\n}
    {empty_line:\\n}
- *@node C4 l4 {Top}
+ *normal_command@node C4 l4 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -29,39 +29,39 @@ $result_tree_text{'novalidate_empty_refs'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C4
-   *@xref C1 l6
+   *normal_command@xref C1 l6
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
-     *@:
+     *normal_command@:
    {normal_text:.\\n}
-   *@xref C1 l7
+   *normal_command@xref C1 l7
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{-}
-     *@asis C1 l7
+     *normal_command@asis C1 l7
       *brace_container C1
        {normal_text: }
    {normal_text:.\\n}
   {empty_line:\\n}
- *@node C1 l9 {@
+ *normal_command@node C1 l9 {@
 }
   *arguments_line C1
    *line_arg C2
     {spaces_before_argument: }
-    *@\\n
- *@node C1 l10 {@:}
+    *normal_command@\\n
+ *normal_command@node C1 l10 {@:}
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    *@:
+    *normal_command@:
     {spaces_after_argument:\\n}
- *@node C1 l11 {@asis{ }}
+ *normal_command@node C1 l11 {@asis{ }}
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    *@asis C1 l11
+    *normal_command@asis C1 l11
      *brace_container C1
       {normal_text: }
     {spaces_after_argument:\\n}

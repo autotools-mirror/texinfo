@@ -13,14 +13,14 @@ $result_tree_text{'transparent_text'} = '*document_root C1
   *preamble_before_content
   *paragraph C5
    {normal_text:AA}
-   *@footnote C1 l1
+   *normal_command@footnote C1 l1
    |EXTRA
    |global_command_number:{1}
     *brace_command_context C1
      *paragraph C1
       {normal_text:in footnote}
    {normal_text:). B (}
-   *@emph C1 l1
+   *normal_command@emph C1 l1
     *brace_container C1
      {normal_text:C}
    {normal_text:). D.\\n}

@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'kbdinputstyle'} = '*document_root C1
  *before_node_section C27
   *preamble_before_content C2
-   *@macro C14 l1
+   *normal_command@macro C14 l1
    |EXTRA
    |formal_args:A{}
    |macro_name:{codekbdmacro}
@@ -29,7 +29,7 @@ $result_tree_text{'kbdinputstyle'} = '*document_root C1
     {raw:@code{kbd @kbd{in code} in example}.\\n}
     {raw:@code{for nesting in example @r{r in code in example @kbd{in r in code in example}}}\\n}
     {raw:@end example\\n}
-    *@end C1 l14
+    *normal_command@end C1 l14
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -38,10 +38,10 @@ $result_tree_text{'kbdinputstyle'} = '*document_root C1
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C2
-   *@@
+   *normal_command@@
    {normal_text:kbdinputstyle code\\n}
   {empty_line:\\n}
-  *@kbdinputstyle C1 l18
+  *normal_command@kbdinputstyle C1 l18
   |EXTRA
   |global_command_number:{1}
   |misc_args:A{code}
@@ -55,35 +55,35 @@ $result_tree_text{'kbdinputstyle'} = '*document_root C1
    >*macro_call@codekbdmacro C1
     >*brace_arg
   *paragraph C8
-   *@code C1 l20:@codekbdmacro
+   *normal_command@code C1 l20:@codekbdmacro
     *brace_container C2
      {normal_text:in code out of example }
-     *@code C1 l20:@codekbdmacro
+     *normal_command@code C1 l20:@codekbdmacro
       *brace_container C1
        {normal_text:in nested code}
    {normal_text:.\\n}
-   *@kbd C1 l20:@codekbdmacro
+   *normal_command@kbd C1 l20:@codekbdmacro
    |EXTRA
    |code:{1}
     *brace_container C1
      {normal_text:kbd out of example}
    {normal_text:.\\n}
-   *@code C1 l20:@codekbdmacro
+   *normal_command@code C1 l20:@codekbdmacro
     *brace_container C2
      {normal_text:kbd }
-     *@kbd C1 l20:@codekbdmacro
+     *normal_command@kbd C1 l20:@codekbdmacro
      |EXTRA
      |code:{1}
       *brace_container C1
        {normal_text:in code}
    {normal_text:.\\n}
-   *@code C1 l20:@codekbdmacro
+   *normal_command@code C1 l20:@codekbdmacro
     *brace_container C2
      {normal_text:for nesting }
-     *@r C1 l20:@codekbdmacro
+     *normal_command@r C1 l20:@codekbdmacro
       *brace_container C2
        {normal_text:r in code }
-       *@kbd C1 l20:@codekbdmacro
+       *normal_command@kbd C1 l20:@codekbdmacro
        |EXTRA
        |code:{1}
         *brace_container C1
@@ -92,47 +92,47 @@ $result_tree_text{'kbdinputstyle'} = '*document_root C1
   {empty_line:\\n}
   *paragraph C1
    {normal_text:in example\\n}
-  *@example C3 l20:@codekbdmacro
+  *normal_command@example C3 l20:@codekbdmacro
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C8
-    *@code C1 l20:@codekbdmacro
+    *normal_command@code C1 l20:@codekbdmacro
      *brace_container C2
       {normal_text:in code in example }
-      *@code C1 l20:@codekbdmacro
+      *normal_command@code C1 l20:@codekbdmacro
        *brace_container C1
         {normal_text:in nested code}
     {normal_text:.\\n}
-    *@kbd C1 l20:@codekbdmacro
+    *normal_command@kbd C1 l20:@codekbdmacro
     |EXTRA
     |code:{1}
      *brace_container C1
       {normal_text:kbd in example}
     {normal_text:.\\n}
-    *@code C1 l20:@codekbdmacro
+    *normal_command@code C1 l20:@codekbdmacro
      *brace_container C3
       {normal_text:kbd }
-      *@kbd C1 l20:@codekbdmacro
+      *normal_command@kbd C1 l20:@codekbdmacro
       |EXTRA
       |code:{1}
        *brace_container C1
         {normal_text:in code}
       {normal_text: in example}
     {normal_text:.\\n}
-    *@code C1 l20:@codekbdmacro
+    *normal_command@code C1 l20:@codekbdmacro
      *brace_container C2
       {normal_text:for nesting in example }
-      *@r C1 l20:@codekbdmacro
+      *normal_command@r C1 l20:@codekbdmacro
        *brace_container C2
         {normal_text:r in code in example }
-        *@kbd C1 l20:@codekbdmacro
+        *normal_command@kbd C1 l20:@codekbdmacro
         |EXTRA
         |code:{1}
          *brace_container C1
           {normal_text:in r in code in example}
     {normal_text:\\n}
-   *@end C1 l20:@codekbdmacro
+   *normal_command@end C1 l20:@codekbdmacro
    |EXTRA
    |text_arg:{example}
     *line_arg C3
@@ -143,10 +143,10 @@ $result_tree_text{'kbdinputstyle'} = '*document_root C1
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@@
+   *normal_command@@
    {normal_text:kbdinputstyle example\\n}
   {empty_line:\\n}
-  *@kbdinputstyle C1 l24
+  *normal_command@kbdinputstyle C1 l24
   |EXTRA
   |global_command_number:{2}
   |misc_args:A{example}
@@ -160,35 +160,35 @@ $result_tree_text{'kbdinputstyle'} = '*document_root C1
    >*macro_call@codekbdmacro C1
     >*brace_arg
   *paragraph C8
-   *@code C1 l26:@codekbdmacro
+   *normal_command@code C1 l26:@codekbdmacro
     *brace_container C2
      {normal_text:in code out of example }
-     *@code C1 l26:@codekbdmacro
+     *normal_command@code C1 l26:@codekbdmacro
       *brace_container C1
        {normal_text:in nested code}
    {normal_text:.\\n}
-   *@kbd C1 l26:@codekbdmacro
+   *normal_command@kbd C1 l26:@codekbdmacro
    |EXTRA
    |code:{1}
     *brace_container C1
      {normal_text:kbd out of example}
    {normal_text:.\\n}
-   *@code C1 l26:@codekbdmacro
+   *normal_command@code C1 l26:@codekbdmacro
     *brace_container C2
      {normal_text:kbd }
-     *@kbd C1 l26:@codekbdmacro
+     *normal_command@kbd C1 l26:@codekbdmacro
      |EXTRA
      |code:{1}
       *brace_container C1
        {normal_text:in code}
    {normal_text:.\\n}
-   *@code C1 l26:@codekbdmacro
+   *normal_command@code C1 l26:@codekbdmacro
     *brace_container C2
      {normal_text:for nesting }
-     *@r C1 l26:@codekbdmacro
+     *normal_command@r C1 l26:@codekbdmacro
       *brace_container C2
        {normal_text:r in code }
-       *@kbd C1 l26:@codekbdmacro
+       *normal_command@kbd C1 l26:@codekbdmacro
        |EXTRA
        |code:{1}
         *brace_container C1
@@ -197,41 +197,41 @@ $result_tree_text{'kbdinputstyle'} = '*document_root C1
   {empty_line:\\n}
   *paragraph C1
    {normal_text:in example\\n}
-  *@example C3 l26:@codekbdmacro
+  *normal_command@example C3 l26:@codekbdmacro
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C8
-    *@code C1 l26:@codekbdmacro
+    *normal_command@code C1 l26:@codekbdmacro
      *brace_container C2
       {normal_text:in code in example }
-      *@code C1 l26:@codekbdmacro
+      *normal_command@code C1 l26:@codekbdmacro
        *brace_container C1
         {normal_text:in nested code}
     {normal_text:.\\n}
-    *@kbd C1 l26:@codekbdmacro
+    *normal_command@kbd C1 l26:@codekbdmacro
      *brace_container C1
       {normal_text:kbd in example}
     {normal_text:.\\n}
-    *@code C1 l26:@codekbdmacro
+    *normal_command@code C1 l26:@codekbdmacro
      *brace_container C3
       {normal_text:kbd }
-      *@kbd C1 l26:@codekbdmacro
+      *normal_command@kbd C1 l26:@codekbdmacro
        *brace_container C1
         {normal_text:in code}
       {normal_text: in example}
     {normal_text:.\\n}
-    *@code C1 l26:@codekbdmacro
+    *normal_command@code C1 l26:@codekbdmacro
      *brace_container C2
       {normal_text:for nesting in example }
-      *@r C1 l26:@codekbdmacro
+      *normal_command@r C1 l26:@codekbdmacro
        *brace_container C2
         {normal_text:r in code in example }
-        *@kbd C1 l26:@codekbdmacro
+        *normal_command@kbd C1 l26:@codekbdmacro
          *brace_container C1
           {normal_text:in r in code in example}
     {normal_text:\\n}
-   *@end C1 l26:@codekbdmacro
+   *normal_command@end C1 l26:@codekbdmacro
    |EXTRA
    |text_arg:{example}
     *line_arg C3
@@ -242,10 +242,10 @@ $result_tree_text{'kbdinputstyle'} = '*document_root C1
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@@
+   *normal_command@@
    {normal_text:kbdinputstyle distinct\\n}
   {empty_line:\\n}
-  *@kbdinputstyle C1 l30
+  *normal_command@kbdinputstyle C1 l30
   |EXTRA
   |global_command_number:{3}
   |misc_args:A{distinct}
@@ -259,72 +259,72 @@ $result_tree_text{'kbdinputstyle'} = '*document_root C1
    >*macro_call@codekbdmacro C1
     >*brace_arg
   *paragraph C8
-   *@code C1 l32:@codekbdmacro
+   *normal_command@code C1 l32:@codekbdmacro
     *brace_container C2
      {normal_text:in code out of example }
-     *@code C1 l32:@codekbdmacro
+     *normal_command@code C1 l32:@codekbdmacro
       *brace_container C1
        {normal_text:in nested code}
    {normal_text:.\\n}
-   *@kbd C1 l32:@codekbdmacro
+   *normal_command@kbd C1 l32:@codekbdmacro
     *brace_container C1
      {normal_text:kbd out of example}
    {normal_text:.\\n}
-   *@code C1 l32:@codekbdmacro
+   *normal_command@code C1 l32:@codekbdmacro
     *brace_container C2
      {normal_text:kbd }
-     *@kbd C1 l32:@codekbdmacro
+     *normal_command@kbd C1 l32:@codekbdmacro
       *brace_container C1
        {normal_text:in code}
    {normal_text:.\\n}
-   *@code C1 l32:@codekbdmacro
+   *normal_command@code C1 l32:@codekbdmacro
     *brace_container C2
      {normal_text:for nesting }
-     *@r C1 l32:@codekbdmacro
+     *normal_command@r C1 l32:@codekbdmacro
       *brace_container C2
        {normal_text:r in code }
-       *@kbd C1 l32:@codekbdmacro
+       *normal_command@kbd C1 l32:@codekbdmacro
         *brace_container C1
          {normal_text:in r in code}
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C1
    {normal_text:in example\\n}
-  *@example C3 l32:@codekbdmacro
+  *normal_command@example C3 l32:@codekbdmacro
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C8
-    *@code C1 l32:@codekbdmacro
+    *normal_command@code C1 l32:@codekbdmacro
      *brace_container C2
       {normal_text:in code in example }
-      *@code C1 l32:@codekbdmacro
+      *normal_command@code C1 l32:@codekbdmacro
        *brace_container C1
         {normal_text:in nested code}
     {normal_text:.\\n}
-    *@kbd C1 l32:@codekbdmacro
+    *normal_command@kbd C1 l32:@codekbdmacro
      *brace_container C1
       {normal_text:kbd in example}
     {normal_text:.\\n}
-    *@code C1 l32:@codekbdmacro
+    *normal_command@code C1 l32:@codekbdmacro
      *brace_container C3
       {normal_text:kbd }
-      *@kbd C1 l32:@codekbdmacro
+      *normal_command@kbd C1 l32:@codekbdmacro
        *brace_container C1
         {normal_text:in code}
       {normal_text: in example}
     {normal_text:.\\n}
-    *@code C1 l32:@codekbdmacro
+    *normal_command@code C1 l32:@codekbdmacro
      *brace_container C2
       {normal_text:for nesting in example }
-      *@r C1 l32:@codekbdmacro
+      *normal_command@r C1 l32:@codekbdmacro
        *brace_container C2
         {normal_text:r in code in example }
-        *@kbd C1 l32:@codekbdmacro
+        *normal_command@kbd C1 l32:@codekbdmacro
          *brace_container C1
           {normal_text:in r in code in example}
     {normal_text:\\n}
-   *@end C1 l32:@codekbdmacro
+   *normal_command@end C1 l32:@codekbdmacro
    |EXTRA
    |text_arg:{example}
     *line_arg C3

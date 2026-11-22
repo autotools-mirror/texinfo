@@ -13,7 +13,7 @@ $result_tree_text{'check_htmlxref_menu'} = '*document_root C6
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content
- *@node C1 l2 {Top}
+ *normal_command@node C1 l2 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -43,7 +43,7 @@ $result_tree_text{'check_htmlxref_menu'} = '*document_root C6
     {normal_text:dir}
     {normal_text:)}
     {spaces_after_argument:\\n}
- *@top C6 l3 {top}
+ *normal_command@top C6 l3 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -54,7 +54,7 @@ $result_tree_text{'check_htmlxref_menu'} = '*document_root C6
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C4
-   *@ref C4 l5
+   *normal_command@ref C4 l5
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -69,7 +69,7 @@ $result_tree_text{'check_htmlxref_menu'} = '*document_root C6
      {spaces_before_argument: }
      {normal_text:no_existing_no_manual.info}
    {normal_text:\\n}
-   *@ref C4 l6
+   *normal_command@ref C4 l6
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -85,7 +85,7 @@ $result_tree_text{'check_htmlxref_menu'} = '*document_root C6
      {normal_text:no_existing_no_manual.info}
    {normal_text:\\n}
   {empty_line:\\n}
-  *@menu C5 l8
+  *normal_command@menu C5 l8
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -123,7 +123,7 @@ $result_tree_text{'check_htmlxref_menu'} = '*document_root C6
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l12
+   *normal_command@end C1 l12
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -131,7 +131,7 @@ $result_tree_text{'check_htmlxref_menu'} = '*document_root C6
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C2 l14 {first}
+ *normal_command@node C2 l14 {first}
  |EXTRA
  |identifier:{first}
  |is_target:{1}
@@ -149,7 +149,7 @@ $result_tree_text{'check_htmlxref_menu'} = '*document_root C6
     {normal_text:)}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l16 {chapter}
+ *normal_command@node C1 l16 {chapter}
  |EXTRA
  |identifier:{chapter}
  |is_target:{1}
@@ -176,7 +176,7 @@ $result_tree_text{'check_htmlxref_menu'} = '*document_root C6
     {normal_text:)}
     {normal_text:node in dir}
     {spaces_after_argument:\\n}
- *@chapter C3 l17 {Chapter}
+ *normal_command@chapter C3 l17 {Chapter}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -188,7 +188,7 @@ $result_tree_text{'check_htmlxref_menu'} = '*document_root C6
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@xref C4 l19
+   *normal_command@xref C4 l19
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}

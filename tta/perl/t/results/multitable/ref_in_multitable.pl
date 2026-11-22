@@ -11,12 +11,12 @@ use Encode;
 $result_tree_text{'ref_in_multitable'} = '*document_root C1
  *before_node_section C6
   *preamble_before_content C2
-   *@novalidate C1 l1
+   *normal_command@novalidate C1 l1
     *line_arg C1
      {spaces_before_argument:\\n}
    {empty_line:\\n}
   *paragraph C2
-   *@ref C1 l3
+   *normal_command@ref C1 l3
     *brace_arg C2
     |EXTRA
     |node_content:A{0|1}
@@ -25,13 +25,13 @@ $result_tree_text{'ref_in_multitable'} = '*document_root C1
      {normal_text:XXX XXX XXX XXX XXX XXX XXX XXX XX}
    {normal_text:.\\n}
   {empty_line:\\n}
-  *@multitable C3 l6
+  *normal_command@multitable C3 l6
   |EXTRA
   |max_columns:{2}
    *arguments_line C1
     *block_line_arg C2
      {spaces_before_argument: }
-     *@columnfractions C1 l6
+     *normal_command@columnfractions C1 l6
      |EXTRA
      |misc_args:A{.35|.65}
       *line_arg C3
@@ -42,19 +42,19 @@ $result_tree_text{'ref_in_multitable'} = '*document_root C1
     *row C2
     |EXTRA
     |row_number:{1}
-     *@item C2 l7
+     *normal_command@item C2 l7
      |EXTRA
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
        {normal_text:XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XX\\n}
-     *@tab C2 l8
+     *normal_command@tab C2 l8
      |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C3
        {normal_text:See }
-       *@ref C1 l8
+       *normal_command@ref C1 l8
         *brace_arg C1
         |EXTRA
         |node_content:A{0|0}
@@ -64,19 +64,19 @@ $result_tree_text{'ref_in_multitable'} = '*document_root C1
     *row C2
     |EXTRA
     |row_number:{2}
-     *@item C2 l9
+     *normal_command@item C2 l9
      |EXTRA
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
        {normal_text:XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XX\\n}
-     *@tab C2 l10
+     *normal_command@tab C2 l10
      |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C3
        {normal_text:See }
-       *@ref C1 l10
+       *normal_command@ref C1 l10
         *brace_arg C1
         |EXTRA
         |node_content:A{0|0}
@@ -86,18 +86,18 @@ $result_tree_text{'ref_in_multitable'} = '*document_root C1
     *row C2
     |EXTRA
     |row_number:{3}
-     *@item C2 l11
+     *normal_command@item C2 l11
      |EXTRA
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C3
        {normal_text:adsf}
-       *@footnote C1 l11
+       *normal_command@footnote C1 l11
        |EXTRA
        |global_command_number:{1}
         *brace_command_context C1
          *paragraph C1
-          *@ref C1 l11
+          *normal_command@ref C1 l11
            *brace_arg C2
            |EXTRA
            |node_content:A{0|1}
@@ -105,13 +105,13 @@ $result_tree_text{'ref_in_multitable'} = '*document_root C1
             {normal_text:XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XX \\n}
             {normal_text:XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XX}
        {normal_text: }
-     *@tab C2 l12
+     *normal_command@tab C2 l12
      |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: \\n}
       *paragraph C1
        {normal_text:second column\\n}
-   *@end C1 l14
+   *normal_command@end C1 l14
    |EXTRA
    |text_arg:{multitable}
     *line_arg C3
@@ -120,7 +120,7 @@ $result_tree_text{'ref_in_multitable'} = '*document_root C1
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@ref C1 l16
+   *normal_command@ref C1 l16
     *brace_arg C2
     |EXTRA
     |node_content:A{0|1}

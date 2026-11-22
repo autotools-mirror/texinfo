@@ -14,18 +14,18 @@ $result_tree_text{'comment_example_and_blank_lines'} = '*document_root C1
   *paragraph C1
    {normal_text:Para.\\n}
   {empty_line:\\n}
-  *@example C3 l3
+  *normal_command@example C3 l3
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C2
     {normal_text:comment, blank after }
-    *@c C1
+    *normal_command@c C1
      *line_arg C3
       {spaces_before_argument: }
       {rawline_text:comment}
       {spaces_after_argument:\\n}
-   *@end C1 l5
+   *normal_command@end C1 l5
    |EXTRA
    |text_arg:{example}
     *line_arg C3
@@ -36,18 +36,18 @@ $result_tree_text{'comment_example_and_blank_lines'} = '*document_root C1
   *paragraph C1
    {normal_text:Para.\\n}
   {empty_line:\\n}
-  *@example C3 l9
+  *normal_command@example C3 l9
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C2
     {normal_text:comment, no blank after }
-    *@c C1
+    *normal_command@c C1
      *line_arg C3
       {spaces_before_argument: }
       {rawline_text:comment}
       {spaces_after_argument:\\n}
-   *@end C1 l11
+   *normal_command@end C1 l11
    |EXTRA
    |text_arg:{example}
     *line_arg C3
@@ -57,13 +57,13 @@ $result_tree_text{'comment_example_and_blank_lines'} = '*document_root C1
   *paragraph C1
    {normal_text:Para.\\n}
   {empty_line:\\n}
-  *@example C3 l14
+  *normal_command@example C3 l14
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C1
     {normal_text:no comment, blank after\\n}
-   *@end C1 l16
+   *normal_command@end C1 l16
    |EXTRA
    |text_arg:{example}
     *line_arg C3
@@ -74,13 +74,13 @@ $result_tree_text{'comment_example_and_blank_lines'} = '*document_root C1
   *paragraph C1
    {normal_text:Para.\\n}
   {empty_line:\\n}
-  *@example C3 l20
+  *normal_command@example C3 l20
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C1
     {normal_text:no comment, no blank after\\n}
-   *@end C1 l22
+   *normal_command@end C1 l22
    |EXTRA
    |text_arg:{example}
     *line_arg C3

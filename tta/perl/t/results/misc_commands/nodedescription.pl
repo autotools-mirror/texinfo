@@ -11,13 +11,13 @@ use Encode;
 $result_tree_text{'nodedescription'} = '*document_root C5
  *before_node_section C3
   *preamble_before_content
-  *@nodedescription C1 l1
+  *normal_command@nodedescription C1 l1
    *line_arg C3
     {spaces_before_argument: }
     {normal_text:out of any node}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l3 {Top}
+ *normal_command@node C1 l3 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -27,7 +27,7 @@ $result_tree_text{'nodedescription'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l4 {top}
+ *normal_command@top C2 l4 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -37,7 +37,7 @@ $result_tree_text{'nodedescription'} = '*document_root C5
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l6 {chap}
+ *normal_command@node C1 l6 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -47,7 +47,7 @@ $result_tree_text{'nodedescription'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:chap}
     {spaces_after_argument:\\n}
- *@chapter C7 l7 {Chapter}
+ *normal_command@chapter C7 l7 {Chapter}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -58,20 +58,20 @@ $result_tree_text{'nodedescription'} = '*document_root C5
     {normal_text:Chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@nodedescription C1 l9
+  *normal_command@nodedescription C1 l9
    *line_arg C4
     {spaces_before_argument: }
-    *@emph C1 l9
+    *normal_command@emph C1 l9
      *brace_container C1
       {normal_text:first description}
     {normal_text: of chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@nodedescription C1 l11
+  *normal_command@nodedescription C1 l11
    *line_arg C3
     {spaces_before_argument: }
     {normal_text:second description }
-    *@\\n
+    *normal_command@\\n
   {spaces_before_paragraph:  }
   *paragraph C1
    {normal_text:of chapter\\n}

@@ -11,24 +11,24 @@ use Encode;
 $result_tree_text{'table_command_comment'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@table C3 l1
+  *normal_command@table C3 l1
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     *@code l1
-     *@c C1
+     *normal_command@code l1
+     *normal_command@c C1
       *line_arg C3
        {spaces_before_argument: }
        {rawline_text:in comment}
        {spaces_after_argument:\\n}
    *table_entry C1
     *table_term C1
-     *@item C1 l2
+     *normal_command@item C1 l2
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:item}
        {spaces_after_argument:\\n}
-   *@end C1 l3
+   *normal_command@end C1 l3
    |EXTRA
    |text_arg:{table}
     *line_arg C2

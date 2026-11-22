@@ -11,13 +11,13 @@ use Encode;
 $result_tree_text{'bad_enumerate_arguments'} = '*document_root C1
  *before_node_section C10
   *preamble_before_content
-  *@enumerate C2 l1
+  *normal_command@enumerate C2 l1
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
      {normal_text:a b}
      {spaces_after_argument:\\n}
-   *@end C1 l2
+   *normal_command@end C1 l2
    |EXTRA
    |text_arg:{enumerate}
     *line_arg C3
@@ -25,13 +25,13 @@ $result_tree_text{'bad_enumerate_arguments'} = '*document_root C1
      {normal_text:enumerate}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@enumerate C2 l4
+  *normal_command@enumerate C2 l4
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
      {normal_text:!}
      {spaces_after_argument:\\n}
-   *@end C1 l5
+   *normal_command@end C1 l5
    |EXTRA
    |text_arg:{enumerate}
     *line_arg C3
@@ -39,15 +39,15 @@ $result_tree_text{'bad_enumerate_arguments'} = '*document_root C1
      {normal_text:enumerate}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@enumerate C2 l7
+  *normal_command@enumerate C2 l7
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     *@code C1 l7
+     *normal_command@code C1 l7
       *brace_container C1
        {normal_text:a}
      {spaces_after_argument:\\n}
-   *@end C1 l8
+   *normal_command@end C1 l8
    |EXTRA
    |text_arg:{enumerate}
     *line_arg C3
@@ -55,14 +55,14 @@ $result_tree_text{'bad_enumerate_arguments'} = '*document_root C1
      {normal_text:enumerate}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@enumerate C2 l10
+  *normal_command@enumerate C2 l10
    *arguments_line C1
     *block_line_arg C4
      {spaces_before_argument: }
      {normal_text:a}
-     *@@
+     *normal_command@@
      {spaces_after_argument:\\n}
-   *@end C1 l11
+   *normal_command@end C1 l11
    |EXTRA
    |text_arg:{enumerate}
     *line_arg C3
@@ -70,13 +70,13 @@ $result_tree_text{'bad_enumerate_arguments'} = '*document_root C1
      {normal_text:enumerate}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@enumerate C2 l13
+  *normal_command@enumerate C2 l13
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
      {normal_text:a0}
      {spaces_after_argument:\\n}
-   *@end C1 l14
+   *normal_command@end C1 l14
    |EXTRA
    |text_arg:{enumerate}
     *line_arg C3

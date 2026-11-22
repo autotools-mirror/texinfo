@@ -13,18 +13,18 @@ $result_tree_text{'customize_special_element'} = '*document_root C7
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content C3
-   *@contents C1 l2
+   *normal_command@contents C1 l2
    |EXTRA
    |global_command_number:{1}
     *line_arg C1
      {spaces_before_argument:\\n}
-   *@shortcontents C1 l3
+   *normal_command@shortcontents C1 l3
    |EXTRA
    |global_command_number:{1}
     *line_arg C1
      {spaces_before_argument:\\n}
    {empty_line:\\n}
- *@node C1 l5 {Top}
+ *normal_command@node C1 l5 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -34,7 +34,7 @@ $result_tree_text{'customize_special_element'} = '*document_root C7
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l6 {top}
+ *normal_command@top C2 l6 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -44,7 +44,7 @@ $result_tree_text{'customize_special_element'} = '*document_root C7
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l8 {Chapter}
+ *normal_command@node C1 l8 {Chapter}
  |EXTRA
  |identifier:{Chapter}
  |is_target:{1}
@@ -54,7 +54,7 @@ $result_tree_text{'customize_special_element'} = '*document_root C7
     {spaces_before_argument: }
     {normal_text:Chapter}
     {spaces_after_argument:\\n}
- *@chapter C3 l9 {chap}
+ *normal_command@chapter C3 l9 {chap}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -65,7 +65,7 @@ $result_tree_text{'customize_special_element'} = '*document_root C7
     {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@documentlanguage C1 l11
+  *normal_command@documentlanguage C1 l11
   |EXTRA
   |global_command_number:{1}
   |text_arg:{fr}
@@ -73,7 +73,7 @@ $result_tree_text{'customize_special_element'} = '*document_root C7
     {spaces_before_argument: }
     {normal_text:fr}
     {spaces_after_argument:\\n}
- *@node C1 l12 {Chapter fr}
+ *normal_command@node C1 l12 {Chapter fr}
  |EXTRA
  |identifier:{Chapter-fr}
  |is_target:{1}
@@ -83,7 +83,7 @@ $result_tree_text{'customize_special_element'} = '*document_root C7
     {spaces_before_argument: }
     {normal_text:Chapter fr}
     {spaces_after_argument:\\n}
- *@chapter C3 l13 {chap fr}
+ *normal_command@chapter C3 l13 {chap fr}
  |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
@@ -96,7 +96,7 @@ $result_tree_text{'customize_special_element'} = '*document_root C7
   {empty_line:\\n}
   *paragraph C3
    {normal_text:Text}
-   *@footnote C1 l15
+   *normal_command@footnote C1 l15
    |EXTRA
    |global_command_number:{1}
     *brace_command_context C1

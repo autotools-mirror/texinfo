@@ -11,13 +11,13 @@ use Encode;
 $result_tree_text{'empty_quotation_with_arg_followed_by_quotation'} = '*document_root C1
  *before_node_section C4
   *preamble_before_content
-  *@quotation C2 l1
+  *normal_command@quotation C2 l1
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
      {normal_text:something}
      {spaces_after_argument:\\n}
-   *@end C1 l2
+   *normal_command@end C1 l2
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3
@@ -25,13 +25,13 @@ $result_tree_text{'empty_quotation_with_arg_followed_by_quotation'} = '*document
      {normal_text:quotation}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@quotation C3 l4
+  *normal_command@quotation C3 l4
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C1
     {normal_text:In quotation\\n}
-   *@end C1 l6
+   *normal_command@end C1 l6
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3

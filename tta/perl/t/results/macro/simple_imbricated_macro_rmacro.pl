@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'simple_imbricated_macro_rmacro'} = '*document_root C1
  *before_node_section C4
   *preamble_before_content C2
-   *@macro C6 l1
+   *normal_command@macro C6 l1
    |EXTRA
    |formal_args:A{}
    |macro_name:{truc}
@@ -21,7 +21,7 @@ $result_tree_text{'simple_imbricated_macro_rmacro'} = '*document_root C1
     {raw:@rmacro bidule {}\\n}
     {raw:bidule.\\n}
     {raw:@end rmacro\\n}
-    *@end C1 l6
+    *normal_command@end C1 l6
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -35,14 +35,14 @@ $result_tree_text{'simple_imbricated_macro_rmacro'} = '*document_root C1
    >macro_expansion<start;1>
     >*macro_call@truc C1
      >*brace_arg
-   *@rmacro C3 l8:@truc
+   *normal_command@rmacro C3 l8:@truc
    |EXTRA
    |formal_args:A{}
    |macro_name:{bidule}
     *arguments_line C1
      {macro_line: bidule {}\\n}
     {raw:bidule.\\n}
-    *@end C1 l8:@truc
+    *normal_command@end C1 l8:@truc
     |EXTRA
     |text_arg:{rmacro}
      *line_arg C3

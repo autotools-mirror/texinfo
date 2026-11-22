@@ -14,13 +14,13 @@ $result_tree_text{'end_conditional_not_at_line_begining'} = '*document_root C1
    {normal_text:}
    >SOURCEMARKS
    >ignored_conditional_block<1>
-    >*@ifhtml C4 l1
+    >*normal_command@ifhtml C4 l1
      >*arguments_line C1
       >*block_line_arg C1
        >{spaces_before_argument:\\n}
      >{raw:inhtml\\n}
      >{raw:  }
-     >*@end C1 l3
+     >*normal_command@end C1 l3
      >|EXTRA
      >|text_arg:{ifhtml}
       >*line_arg C3

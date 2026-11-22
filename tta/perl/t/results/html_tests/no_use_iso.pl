@@ -13,7 +13,7 @@ $result_tree_text{'no_use_iso'} = '*document_root C1
   *preamble_before_content
   *paragraph C3
    {normal_text:AA }
-   *@^ C1 l1
+   *normal_command@^ C1 l1
     *following_arg C1
      {normal_text:e}
    {normal_text: --- -- \'` \'\' ``}

@@ -12,19 +12,19 @@ $result_tree_text{'table_in_code'} = '*document_root C1
  *before_node_section C4
   *preamble_before_content
   *paragraph C1
-   *@code C1 l1
+   *normal_command@code C1 l1
     *brace_container C2
      {normal_text:\\n}
      {normal_text:in code\\n}
-  *@table C3 l3
+  *normal_command@table C3 l3
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     *@emph l3
+     *normal_command@emph l3
      {spaces_after_argument:\\n}
    *table_entry C2
     *table_term C1
-     *@item C1 l4
+     *normal_command@item C1 l4
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:line}
@@ -32,7 +32,7 @@ $result_tree_text{'table_in_code'} = '*document_root C1
     *table_definition C1
      *paragraph C1
       {normal_text:text\\n}
-   *@end C1 l6
+   *normal_command@end C1 l6
    |EXTRA
    |text_arg:{table}
     *line_arg C3

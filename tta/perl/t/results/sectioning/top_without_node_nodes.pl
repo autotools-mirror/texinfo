@@ -14,7 +14,7 @@ This: [U0]
 NodeUp: (dir)
  *before_node_section C1
   *preamble_before_content
- *@top C3 l1 {top section}
+ *normal_command@top C3 l1 {top section}
  |EXTRA
  |identifier:{top-section}
  |is_target:{1}
@@ -28,7 +28,7 @@ NodeUp: (dir)
   *paragraph C1
    {normal_text:Top section\\n}
   {empty_line:\\n}
- *@node C1 l4 {second}
+ *normal_command@node C1 l4 {second}
  |EXTRA
  |identifier:{second}
  |is_target:{1}
@@ -46,7 +46,7 @@ NodeUp: (dir)
     {normal_text:dir}
     {normal_text:)}
     {spaces_after_argument:\\n}
- *@chapter C3 l5 {Chapter}
+ *normal_command@chapter C3 l5 {Chapter}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}

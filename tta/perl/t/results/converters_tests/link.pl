@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'link'} = '*document_root C4
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {One}
+ *normal_command@node C1 l1 {One}
  |EXTRA
  |identifier:{One}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'link'} = '*document_root C4
     {spaces_before_argument: }
     {normal_text:One}
     {spaces_after_argument:\\n}
- *@chapter C4 l2 {ONEX}
+ *normal_command@chapter C4 l2 {ONEX}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -35,7 +35,7 @@ $result_tree_text{'link'} = '*document_root C4
   *paragraph C1
    {normal_text:target node\\n}
   {empty_line:\\n}
- *@node C19 l6 {Two}
+ *normal_command@node C19 l6 {Two}
  |EXTRA
  |identifier:{Two}
  |is_target:{1}
@@ -48,7 +48,7 @@ $result_tree_text{'link'} = '*document_root C4
   {empty_line:\\n}
   *paragraph C2
    {normal_text:xrefautomaticsectiontitle off\\n}
-   *@xrefautomaticsectiontitle C1 l9
+   *normal_command@xrefautomaticsectiontitle C1 l9
    |EXTRA
    |global_command_number:{1}
    |misc_args:A{off}
@@ -58,7 +58,7 @@ $result_tree_text{'link'} = '*document_root C4
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@link C1 l11
+   *normal_command@link C1 l11
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -67,7 +67,7 @@ $result_tree_text{'link'} = '*document_root C4
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@link C2 l13
+   *normal_command@link C2 l13
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -80,7 +80,7 @@ $result_tree_text{'link'} = '*document_root C4
   {empty_line:\\n}
   *paragraph C2
    {normal_text:xrefautomaticsectiontitle on\\n}
-   *@xrefautomaticsectiontitle C1 l16
+   *normal_command@xrefautomaticsectiontitle C1 l16
    |EXTRA
    |global_command_number:{2}
    |misc_args:A{on}
@@ -90,7 +90,7 @@ $result_tree_text{'link'} = '*document_root C4
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@link C1 l18
+   *normal_command@link C1 l18
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -99,7 +99,7 @@ $result_tree_text{'link'} = '*document_root C4
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@link C2 l20
+   *normal_command@link C2 l20
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -114,7 +114,7 @@ $result_tree_text{'link'} = '*document_root C4
    {normal_text:external link\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@link C3 l24
+   *normal_command@link C3 l24
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -125,7 +125,7 @@ $result_tree_text{'link'} = '*document_root C4
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@link C3 l26
+   *normal_command@link C3 l26
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}

@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'on_def_line'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@deffn C3 l1
+  *normal_command@deffn C3 l1
    *def_line C1 l1
    |EXTRA
    |def_command:{deffn}
@@ -21,7 +21,7 @@ $result_tree_text{'on_def_line'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *bracketed_arg C1 l1
-       *@anchor C1 l1
+       *normal_command@anchor C1 l1
        |EXTRA
        |identifier:{in-anchor}
        |is_target:{1}
@@ -30,7 +30,7 @@ $result_tree_text{'on_def_line'} = '*document_root C1
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       *@titlefont C1 l1
+       *normal_command@titlefont C1 l1
        |EXTRA
        |global_command_number:{1}
         *brace_container C1
@@ -38,7 +38,7 @@ $result_tree_text{'on_def_line'} = '*document_root C1
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@footnote C1 l1
+       *normal_command@footnote C1 l1
        |EXTRA
        |global_command_number:{1}
         *brace_command_context C1
@@ -47,12 +47,12 @@ $result_tree_text{'on_def_line'} = '*document_root C1
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@exdent C1 l1
+       *normal_command@exdent C1 l1
         *line_arg C3
          {spaces_before_argument: }
          {normal_text:exdent}
          {spaces_after_argument:\\n}
-   *@deffnx C1 l2
+   *normal_command@deffnx C1 l2
    |EXTRA
    |def_command:{deffn}
    |index_entry:I{fn,2}
@@ -61,7 +61,7 @@ $result_tree_text{'on_def_line'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *bracketed_arg C1 l2
-       *@anchor C1 l2
+       *normal_command@anchor C1 l2
        |EXTRA
        |identifier:{in-anchorx}
        |is_target:{1}
@@ -70,7 +70,7 @@ $result_tree_text{'on_def_line'} = '*document_root C1
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       *@titlefont C1 l2
+       *normal_command@titlefont C1 l2
        |EXTRA
        |global_command_number:{2}
         *brace_container C1
@@ -78,7 +78,7 @@ $result_tree_text{'on_def_line'} = '*document_root C1
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@footnote C1 l2
+       *normal_command@footnote C1 l2
        |EXTRA
        |global_command_number:{2}
         *brace_command_context C1
@@ -87,12 +87,12 @@ $result_tree_text{'on_def_line'} = '*document_root C1
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@exdent C1 l2
+       *normal_command@exdent C1 l2
         *line_arg C3
          {spaces_before_argument: }
          {normal_text:exdentx}
          {spaces_after_argument:\\n}
-   *@end C1 l3
+   *normal_command@end C1 l3
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3

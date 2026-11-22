@@ -13,20 +13,20 @@ $result_tree_text{'index_command_before_end_table'} = '*document_root C1
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content
-  *@table C3 l2
+  *normal_command@table C3 l2
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     *@code l2
+     *normal_command@code l2
      {spaces_after_argument:\\n}
    *table_entry C2
     *table_term C2
-     *@item C1 l3
+     *normal_command@item C1 l3
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:in item}
        {spaces_after_argument:\\n}
-     *@itemx C1 l4
+     *normal_command@itemx C1 l4
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:in itemx}
@@ -42,7 +42,7 @@ $result_tree_text{'index_command_before_end_table'} = '*document_root C1
        {spaces_before_argument: }
        {normal_text:var}
        {spaces_after_argument:\\n}
-   *@end C1 l8
+   *normal_command@end C1 l8
    |EXTRA
    |text_arg:{table}
     *line_arg C3

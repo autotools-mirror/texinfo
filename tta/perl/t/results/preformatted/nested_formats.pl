@@ -11,11 +11,11 @@ use Encode;
 $result_tree_text{'nested_formats'} = '*document_root C1
  *before_node_section C4
   *preamble_before_content
-  *@format C3 l1
+  *normal_command@format C3 l1
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
-   *@example C3 l2
+   *normal_command@example C3 l2
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
@@ -23,14 +23,14 @@ $result_tree_text{'nested_formats'} = '*document_root C1
      {empty_line:\\n}
      {normal_text:in -- format/example\\n}
      {empty_line:\\n}
-    *@end C1 l6
+    *normal_command@end C1 l6
     |EXTRA
     |text_arg:{example}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:example}
       {spaces_after_argument:\\n}
-   *@end C1 l7
+   *normal_command@end C1 l7
    |EXTRA
    |text_arg:{format}
     *line_arg C3
@@ -38,11 +38,11 @@ $result_tree_text{'nested_formats'} = '*document_root C1
      {normal_text:format}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@example C3 l9
+  *normal_command@example C3 l9
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
-   *@format C3 l10
+   *normal_command@format C3 l10
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
@@ -50,14 +50,14 @@ $result_tree_text{'nested_formats'} = '*document_root C1
      {empty_line:\\n}
      {normal_text:in -- example/format\\n}
      {empty_line:\\n}
-    *@end C1 l14
+    *normal_command@end C1 l14
     |EXTRA
     |text_arg:{format}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:format}
       {spaces_after_argument:\\n}
-   *@end C1 l15
+   *normal_command@end C1 l15
    |EXTRA
    |text_arg:{example}
     *line_arg C3

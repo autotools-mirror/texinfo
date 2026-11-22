@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'exampleindent_set_nestings'} = '*document_root C1
  *before_node_section C15
   *preamble_before_content C1
-   *@exampleindent C1 l1
+   *normal_command@exampleindent C1 l1
    |EXTRA
    |global_command_number:{1}
    |misc_args:A{2}
@@ -19,24 +19,24 @@ $result_tree_text{'exampleindent_set_nestings'} = '*document_root C1
      {spaces_before_argument: }
      {normal_text:2}
      {spaces_after_argument:\\n}
-  *@example C3 l2
+  *normal_command@example C3 l2
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
-   *@quotation C3 l3
+   *normal_command@quotation C3 l3
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *preformatted C1
      {normal_text:EXAMPLE INDENT in quotation\\n}
-    *@end C1 l5
+    *normal_command@end C1 l5
     |EXTRA
     |text_arg:{quotation}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:quotation}
       {spaces_after_argument:\\n}
-   *@end C1 l6
+   *normal_command@end C1 l6
    |EXTRA
    |text_arg:{example}
     *line_arg C3
@@ -44,24 +44,24 @@ $result_tree_text{'exampleindent_set_nestings'} = '*document_root C1
      {normal_text:example}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@quotation C3 l8
+  *normal_command@quotation C3 l8
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
-   *@example C3 l9
+   *normal_command@example C3 l9
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *preformatted C1
      {normal_text:quotation EXAMPLE INDENT\\n}
-    *@end C1 l11
+    *normal_command@end C1 l11
     |EXTRA
     |text_arg:{example}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:example}
       {spaces_after_argument:\\n}
-   *@end C1 l12
+   *normal_command@end C1 l12
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3
@@ -69,24 +69,24 @@ $result_tree_text{'exampleindent_set_nestings'} = '*document_root C1
      {normal_text:quotation}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@example C3 l14
+  *normal_command@example C3 l14
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
-   *@display C3 l15
+   *normal_command@display C3 l15
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *preformatted C1
      {normal_text:EXAMPLE INDENT in display\\n}
-    *@end C1 l17
+    *normal_command@end C1 l17
     |EXTRA
     |text_arg:{display}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:display}
       {spaces_after_argument:\\n}
-   *@end C1 l18
+   *normal_command@end C1 l18
    |EXTRA
    |text_arg:{example}
     *line_arg C3
@@ -94,24 +94,24 @@ $result_tree_text{'exampleindent_set_nestings'} = '*document_root C1
      {normal_text:example}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@example C3 l20
+  *normal_command@example C3 l20
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
-   *@format C3 l21
+   *normal_command@format C3 l21
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *preformatted C1
      {normal_text:EXAMPLE INDENT in format\\n}
-    *@end C1 l23
+    *normal_command@end C1 l23
     |EXTRA
     |text_arg:{format}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:format}
       {spaces_after_argument:\\n}
-   *@end C1 l24
+   *normal_command@end C1 l24
    |EXTRA
    |text_arg:{example}
     *line_arg C3
@@ -119,11 +119,11 @@ $result_tree_text{'exampleindent_set_nestings'} = '*document_root C1
      {normal_text:example}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@example C3 l26
+  *normal_command@example C3 l26
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
-   *@deffn C3 l27
+   *normal_command@deffn C3 l27
     *def_line C1 l27
     |EXTRA
     |def_command:{deffn}
@@ -142,19 +142,19 @@ $result_tree_text{'exampleindent_set_nestings'} = '*document_root C1
     *def_item C2
      *preformatted C1
       {normal_text:In deffn\\n}
-     *@exdent C1 l29
+     *normal_command@exdent C1 l29
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:EXDENT}
        {spaces_after_argument:\\n}
-    *@end C1 l30
+    *normal_command@end C1 l30
     |EXTRA
     |text_arg:{deffn}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:deffn}
       {spaces_after_argument:\\n}
-   *@end C1 l31
+   *normal_command@end C1 l31
    |EXTRA
    |text_arg:{example}
     *line_arg C3
@@ -162,36 +162,36 @@ $result_tree_text{'exampleindent_set_nestings'} = '*document_root C1
      {normal_text:example}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@example C5 l33
+  *normal_command@example C5 l33
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C1
     {normal_text:in first\\n}
-   *@exdent C1 l35
+   *normal_command@exdent C1 l35
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:exdented first}
      {spaces_after_argument:\\n}
-   *@example C4 l36
+   *normal_command@example C4 l36
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *preformatted C1
      {normal_text:in second\\n}
-    *@exdent C1 l38
+    *normal_command@exdent C1 l38
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:exdented second}
       {spaces_after_argument:\\n}
-    *@end C1 l39
+    *normal_command@end C1 l39
     |EXTRA
     |text_arg:{example}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:example}
       {spaces_after_argument:\\n}
-   *@end C1 l40
+   *normal_command@end C1 l40
    |EXTRA
    |text_arg:{example}
     *line_arg C3
@@ -199,29 +199,29 @@ $result_tree_text{'exampleindent_set_nestings'} = '*document_root C1
      {normal_text:example}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@quotation C3 l42
+  *normal_command@quotation C3 l42
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
-   *@example C4 l43
+   *normal_command@example C4 l43
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
-    *@exdent C1 l44
+    *normal_command@exdent C1 l44
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:exdent in quotation example}
       {spaces_after_argument:\\n}
     *preformatted C1
      {normal_text:AA\\n}
-    *@end C1 l46
+    *normal_command@end C1 l46
     |EXTRA
     |text_arg:{example}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:example}
       {spaces_after_argument:\\n}
-   *@end C1 l47
+   *normal_command@end C1 l47
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3

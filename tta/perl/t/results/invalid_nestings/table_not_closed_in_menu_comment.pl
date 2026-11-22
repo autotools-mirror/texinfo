@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'table_not_closed_in_menu_comment'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@menu C4 l1
+  *normal_command@menu C4 l1
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -30,15 +30,15 @@ $result_tree_text{'table_not_closed_in_menu_comment'} = '*document_root C1
    *menu_comment C2
     *preformatted C1
      {after_menu_description_line:\\n}
-    *@table C2 l4
+    *normal_command@table C2 l4
      *arguments_line C1
       *block_line_arg C3
        {spaces_before_argument: }
-       *@asis l4
+       *normal_command@asis l4
        {spaces_after_argument:\\n}
      *table_entry C2
       *table_term C1
-       *@item C1 l5
+       *normal_command@item C1 l5
         *line_arg C3
          {spaces_before_argument: }
          {normal_text:item}
@@ -47,7 +47,7 @@ $result_tree_text{'table_not_closed_in_menu_comment'} = '*document_root C1
        *preformatted C2
         {normal_text:comment\\n}
         {normal_text:* (manual2)::\\n}
-   *@end C1 l8
+   *normal_command@end C1 l8
    |EXTRA
    |text_arg:{menu}
     *line_arg C3

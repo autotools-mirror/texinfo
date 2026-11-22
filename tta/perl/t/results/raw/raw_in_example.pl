@@ -11,25 +11,25 @@ use Encode;
 $result_tree_text{'raw_in_example'} = '*document_root C1
  *before_node_section C5
   *preamble_before_content
-  *@example C3 l1
+  *normal_command@example C3 l1
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C1
-    *@html C3 l2
+    *normal_command@html C3 l2
      *arguments_line C1
       *block_line_arg C1
        {spaces_before_argument:\\n}
      *rawpreformatted C1
       {normal_text:in html\\n}
-     *@end C1 l4
+     *normal_command@end C1 l4
      |EXTRA
      |text_arg:{html}
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:html}
        {spaces_after_argument:\\n}
-   *@end C1 l5
+   *normal_command@end C1 l5
    |EXTRA
    |text_arg:{example}
     *line_arg C3
@@ -37,13 +37,13 @@ $result_tree_text{'raw_in_example'} = '*document_root C1
      {normal_text:example}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@example C3 l7
+  *normal_command@example C3 l7
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C5
     {empty_line:\\n}
-    *@html C3 l9
+    *normal_command@html C3 l9
      *arguments_line C1
       *block_line_arg C1
        {spaces_before_argument:\\n}
@@ -51,7 +51,7 @@ $result_tree_text{'raw_in_example'} = '*document_root C1
       {empty_line:\\n}
       {normal_text:Some html <code>some code</code>.\\n}
       {empty_line:\\n}
-     *@end C1 l13
+     *normal_command@end C1 l13
      |EXTRA
      |text_arg:{html}
       *line_arg C3
@@ -59,7 +59,7 @@ $result_tree_text{'raw_in_example'} = '*document_root C1
        {normal_text:html}
        {spaces_after_argument:\\n}
     {empty_line:\\n}
-    *@tex C3 l15
+    *normal_command@tex C3 l15
      *arguments_line C1
       *block_line_arg C1
        {spaces_before_argument:\\n}
@@ -71,7 +71,7 @@ $result_tree_text{'raw_in_example'} = '*document_root C1
       {normal_text:\\over \\sigma_i\\right)^2 \\n}
       {normal_text:$$\\n}
       {empty_line:\\n}
-     *@end C1 l23
+     *normal_command@end C1 l23
      |EXTRA
      |text_arg:{tex}
       *line_arg C3
@@ -79,7 +79,7 @@ $result_tree_text{'raw_in_example'} = '*document_root C1
        {normal_text:tex}
        {spaces_after_argument:\\n}
     {empty_line:\\n}
-   *@end C1 l25
+   *normal_command@end C1 l25
    |EXTRA
    |text_arg:{example}
     *line_arg C3

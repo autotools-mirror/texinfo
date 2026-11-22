@@ -13,19 +13,19 @@ $result_tree_text{'at_commands_glued_in_paragraph'} = '*document_root C1
   *preamble_before_content
   *paragraph C35
    {normal_text:at}
-   *@@
+   *normal_command@@
    {normal_text:.\\n}
    {normal_text:TeX}
-   *@TeX C1 l2
+   *normal_command@TeX C1 l2
     *brace_container
    {normal_text:TeX.\\n}
    {normal_text:code}
-   *@code C1 l3
+   *normal_command@code C1 l3
     *brace_container C1
      {normal_text:in code}
    {normal_text:code.\\n}
    {normal_text:acronym}
-   *@acronym C2 l4
+   *normal_command@acronym C2 l4
     *brace_arg C1
      {normal_text:ABC}
     *brace_arg C2
@@ -33,12 +33,12 @@ $result_tree_text{'at_commands_glued_in_paragraph'} = '*document_root C1
      {normal_text:aaa bb cc}
    {normal_text:acronym.\\n}
    {normal_text:acronym2}
-   *@acronym C1 l5
+   *normal_command@acronym C1 l5
     *brace_arg C1
      {normal_text:ABC}
    {normal_text:acronym.\\n}
    {normal_text:email}
-   *@email C2 l6
+   *normal_command@email C2 l6
     *brace_arg C1
      {normal_text:somebody}
     *brace_arg C2
@@ -46,7 +46,7 @@ $result_tree_text{'at_commands_glued_in_paragraph'} = '*document_root C1
      {normal_text:mali}
    {normal_text:email.\\n}
    {normal_text:ref}
-   *@ref C1 l7
+   *normal_command@ref C1 l7
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -54,7 +54,7 @@ $result_tree_text{'at_commands_glued_in_paragraph'} = '*document_root C1
      {normal_text:Top}
    {normal_text:ref.\\n}
    {normal_text:Foornote}
-   *@footnote C1 l8
+   *normal_command@footnote C1 l8
    |EXTRA
    |global_command_number:{1}
     *brace_command_context C1
@@ -62,21 +62,21 @@ $result_tree_text{'at_commands_glued_in_paragraph'} = '*document_root C1
       {normal_text:in footnote}
    {normal_text:after footnote.\\n}
    {normal_text:accent}
-   *@^ C1 l9
+   *normal_command@^ C1 l9
     *brace_container C1
-     *@dotless C1 l9
+     *normal_command@dotless C1 l9
       *brace_container C1
        {normal_text:i}
    {normal_text:accent.\\n}
    {normal_text:and star}
-   *@*
+   *normal_command@*
    {normal_text:star.\\n}
    {normal_text:noindent}
-   *@noindent l11
+   *normal_command@noindent l11
    {ignorable_spaces_after_command: }
    {normal_text:after noindent\\n}
    {normal_text:sp}
-  *@sp C1 l12
+  *normal_command@sp C1 l12
   |EXTRA
   |misc_args:A{4}
    *line_arg C3
@@ -85,7 +85,7 @@ $result_tree_text{'at_commands_glued_in_paragraph'} = '*document_root C1
     {spaces_after_argument:\\n}
   *paragraph C5
    {normal_text:anchor}
-   *@anchor C1 l13
+   *normal_command@anchor C1 l13
    |EXTRA
    |identifier:{anchor}
    |is_target:{1}

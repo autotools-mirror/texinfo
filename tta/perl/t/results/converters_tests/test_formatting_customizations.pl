@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'test_formatting_customizations'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content
- *@node C1 formatting_customizations_input.texi:l1 {Top}
+ *normal_command@node C1 formatting_customizations_input.texi:l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'test_formatting_customizations'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 formatting_customizations_input.texi:l2 {top}
+ *normal_command@top C2 formatting_customizations_input.texi:l2 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -31,7 +31,7 @@ $result_tree_text{'test_formatting_customizations'} = '*document_root C5
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 formatting_customizations_input.texi:l4 {chapt}
+ *normal_command@node C1 formatting_customizations_input.texi:l4 {chapt}
  |EXTRA
  |identifier:{chapt}
  |is_target:{1}
@@ -41,7 +41,7 @@ $result_tree_text{'test_formatting_customizations'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:chapt}
     {spaces_after_argument:\\n}
- *@chapter C4 formatting_customizations_input.texi:l5 {Chap}
+ *normal_command@chapter C4 formatting_customizations_input.texi:l5 {Chap}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -53,15 +53,15 @@ $result_tree_text{'test_formatting_customizations'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C8
-   *@AA C1 formatting_customizations_input.texi:l7
+   *normal_command@AA C1 formatting_customizations_input.texi:l7
     *brace_container
    {normal_text: }
-   *@equiv C1 formatting_customizations_input.texi:l7
+   *normal_command@equiv C1 formatting_customizations_input.texi:l7
     *brace_container
    {normal_text: }
-   *@@
+   *normal_command@@
    {normal_text: }
-   *@copyright C1 formatting_customizations_input.texi:l7
+   *normal_command@copyright C1 formatting_customizations_input.texi:l7
     *brace_container
    {normal_text:\\n}
   {empty_line:\\n}

@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'recursive_expansion_in_set'} = '*document_root C1
  *before_node_section C1
   *preamble_before_content C2
-   *@set C1
+   *normal_command@set C1
    |EXTRA
    |misc_args:A{V|@value{V}}
     *line_arg C3
@@ -21,403 +21,403 @@ $result_tree_text{'recursive_expansion_in_set'} = '*document_root C1
    {empty_line:\\n}
    >SOURCEMARKS
    >value_expansion<start;1>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;2>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;3>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;4>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;5>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;6>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;7>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;8>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;9>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;10>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;11>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;12>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;13>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;14>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;15>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;16>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;17>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;18>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;19>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;20>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;21>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;22>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;23>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;24>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;25>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;26>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;27>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;28>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;29>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;30>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;31>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;32>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;33>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;34>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;35>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;36>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;37>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;38>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;39>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;40>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;41>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;42>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;43>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;44>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;45>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;46>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;47>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;48>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;49>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;50>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;51>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;52>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;53>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;54>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;55>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;56>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;57>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;58>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;59>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;60>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;61>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;62>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;63>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;64>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;65>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;66>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;67>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;68>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;69>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;70>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;71>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;72>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;73>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;74>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;75>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;76>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;77>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;78>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;79>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;80>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;81>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;82>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;83>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;84>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;85>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;86>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;87>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;88>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;89>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;90>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;91>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;92>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;93>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;94>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;95>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;96>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;97>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;98>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;99>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<start;100>{@value{V}}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:V}
    >value_expansion<end;100>

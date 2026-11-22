@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'multitable_begin_with_tab'} = '*document_root C1
  *before_node_section C4
   *preamble_before_content
-  *@multitable C3 l1
+  *normal_command@multitable C3 l1
   |EXTRA
   |max_columns:{2}
    *arguments_line C1
@@ -27,7 +27,7 @@ $result_tree_text{'multitable_begin_with_tab'} = '*document_root C1
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:t\\n}
-   *@end C1 l3
+   *normal_command@end C1 l3
    |EXTRA
    |text_arg:{multitable}
     *line_arg C3
@@ -35,7 +35,7 @@ $result_tree_text{'multitable_begin_with_tab'} = '*document_root C1
      {normal_text:multitable}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@multitable C4 l5
+  *normal_command@multitable C4 l5
   |EXTRA
   |max_columns:{2}
    *arguments_line C1
@@ -55,13 +55,13 @@ $result_tree_text{'multitable_begin_with_tab'} = '*document_root C1
     *row C1
     |EXTRA
     |row_number:{1}
-     *@item C2 l7
+     *normal_command@item C2 l7
      |EXTRA
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
        {normal_text:it\\n}
-   *@end C1 l8
+   *normal_command@end C1 l8
    |EXTRA
    |text_arg:{multitable}
     *line_arg C3

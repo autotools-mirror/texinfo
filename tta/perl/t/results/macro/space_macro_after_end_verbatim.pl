@@ -11,14 +11,14 @@ use Encode;
 $result_tree_text{'space_macro_after_end_verbatim'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C2
-   *@macro C3 l1
+   *normal_command@macro C3 l1
    |EXTRA
    |formal_args:A{}
    |macro_name:{spaces}
     *arguments_line C1
      {macro_line: spaces\\n}
     {raw:\\n}
-    *@end C1 l3
+    *normal_command@end C1 l3
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -26,12 +26,12 @@ $result_tree_text{'space_macro_after_end_verbatim'} = '*document_root C1
       {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-  *@verbatim C3 l5
+  *normal_command@verbatim C3 l5
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    {raw:in verbatim\\n}
-   *@end C1 l7
+   *normal_command@end C1 l7
    |EXTRA
    |text_arg:{verbatim}
     *line_arg C3

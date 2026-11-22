@@ -14,7 +14,7 @@ $result_tree_text{'split_no_copying'} = '*document_root C7
    *preamble_before_beginning C1
     {text_before_beginning:\\input texinfo\\n}
   *preamble_before_content C2
-   *@setfilename C1 l2
+   *normal_command@setfilename C1 l2
    |EXTRA
    |text_arg:{split_no_copying.info}
     *line_arg C3
@@ -22,7 +22,7 @@ $result_tree_text{'split_no_copying'} = '*document_root C7
      {normal_text:split_no_copying.info}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@node C1 l4 {Top}
+ *normal_command@node C1 l4 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -32,7 +32,7 @@ $result_tree_text{'split_no_copying'} = '*document_root C7
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C6 l5 {Top}
+ *normal_command@top C6 l5 {Top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -45,7 +45,7 @@ $result_tree_text{'split_no_copying'} = '*document_root C7
   *paragraph C1
    {normal_text:This is the top node.\\n}
   {empty_line:\\n}
-  *@menu C3 l9
+  *normal_command@menu C3 l9
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -60,7 +60,7 @@ $result_tree_text{'split_no_copying'} = '*document_root C7
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l11
+   *normal_command@end C1 l11
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -68,7 +68,7 @@ $result_tree_text{'split_no_copying'} = '*document_root C7
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l13 {Ch1}
+ *normal_command@node C1 l13 {Ch1}
  |EXTRA
  |identifier:{Ch1}
  |is_target:{1}
@@ -78,7 +78,7 @@ $result_tree_text{'split_no_copying'} = '*document_root C7
     {spaces_before_argument: }
     {normal_text:Ch1}
     {spaces_after_argument:\\n}
- *@chapter C4 l14 {Ch1}
+ *normal_command@chapter C4 l14 {Ch1}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -92,7 +92,7 @@ $result_tree_text{'split_no_copying'} = '*document_root C7
   *paragraph C1
    {normal_text:First chapter.\\n}
   {empty_line:\\n}
- *@bye C1
+ *normal_command@bye C1
   *line_arg C1
    {spaces_before_argument:\\n}
  *postamble_after_end C1

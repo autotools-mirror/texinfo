@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'equivalent_nodes'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content
- *@node C4 l1 {first}
+ *normal_command@node C4 l1 {first}
  |EXTRA
  |identifier:{first}
  |is_target:{1}
@@ -25,12 +25,12 @@ $result_tree_text{'equivalent_nodes'} = '*document_root C3
    |node_content:A{1|1}
    |normalized:{node}
     {spaces_before_argument: }
-    *@emph C1 l1
+    *normal_command@emph C1 l1
      *brace_container C1
       {normal_text:node}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C3 l3
+  *normal_command@menu C3 l3
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -40,14 +40,14 @@ $result_tree_text{'equivalent_nodes'} = '*document_root C3
     |EXTRA
     |node_content:A{0|0}
     |normalized:{node}
-     *@strong C1 l4
+     *normal_command@strong C1 l4
       *brace_container C1
        {normal_text:node}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l5
+   *normal_command@end C1 l5
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -55,7 +55,7 @@ $result_tree_text{'equivalent_nodes'} = '*document_root C3
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C3 l7 {@samp{node}}
+ *normal_command@node C3 l7 {@samp{node}}
  |EXTRA
  |identifier:{node}
  |is_target:{1}
@@ -63,13 +63,13 @@ $result_tree_text{'equivalent_nodes'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    *@samp C1 l7
+    *normal_command@samp C1 l7
      *brace_container C1
       {normal_text:node}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@xref C1 l9
+   *normal_command@xref C1 l9
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}

@@ -13,7 +13,7 @@ $result_tree_text{'extension_undef'} = '*document_root C4
   *preamble_before_content
   *paragraph C1
    {normal_text:node Top\\n}
- *@top C2 l2 {top}
+ *normal_command@top C2 l2 {top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -25,7 +25,7 @@ $result_tree_text{'extension_undef'} = '*document_root C4
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l4 {chapter}
+ *normal_command@node C1 l4 {chapter}
  |EXTRA
  |identifier:{chapter}
  |is_target:{1}
@@ -35,7 +35,7 @@ $result_tree_text{'extension_undef'} = '*document_root C4
     {spaces_before_argument: }
     {normal_text:chapter}
     {spaces_after_argument:\\n}
- *@chapter C1 l5 {Chap}
+ *normal_command@chapter C1 l5 {Chap}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}

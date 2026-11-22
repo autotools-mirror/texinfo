@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'prototype_brace_no_brace_comment'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@multitable C2 l1
+  *normal_command@multitable C2 l1
   |EXTRA
   |max_columns:{1}
    *arguments_line C1
@@ -20,12 +20,12 @@ $result_tree_text{'prototype_brace_no_brace_comment'} = '*document_root C1
      *bracketed_arg C1 l1
       {normal_text:aa}
      {normal_text: bb}
-     *@comment C1
+     *normal_command@comment C1
       *line_arg C3
        {spaces_before_argument: }
        {rawline_text:cc}
        {spaces_after_argument:\\n}
-   *@end C1 l2
+   *normal_command@end C1 l2
    |EXTRA
    |text_arg:{multitable}
     *line_arg C3

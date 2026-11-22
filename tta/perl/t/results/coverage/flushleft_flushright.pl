@@ -13,7 +13,7 @@ $result_tree_text{'flushleft_flushright'} = '*document_root C1
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content
-  *@flushleft C5 l2
+  *normal_command@flushleft C5 l2
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -24,7 +24,7 @@ $result_tree_text{'flushleft_flushright'} = '*document_root C1
    {empty_line:\\n}
    *paragraph C1
     {normal_text:lhds\\n}
-   *@end C1 l8
+   *normal_command@end C1 l8
    |EXTRA
    |text_arg:{flushleft}
     *line_arg C3
@@ -32,7 +32,7 @@ $result_tree_text{'flushleft_flushright'} = '*document_root C1
      {normal_text:flushleft}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@flushright C5 l10
+  *normal_command@flushright C5 l10
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -43,7 +43,7 @@ $result_tree_text{'flushleft_flushright'} = '*document_root C1
    {empty_line:\\n}
    *paragraph C1
     {normal_text:lhds\\n}
-   *@end C1 l16
+   *normal_command@end C1 l16
    |EXTRA
    |text_arg:{flushright}
     *line_arg C3

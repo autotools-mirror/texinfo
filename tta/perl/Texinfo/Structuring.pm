@@ -325,11 +325,10 @@ sub new_node_menu_entry($;$) {
   return $entry;
 }
 
-sub new_block_command($$) {
-  my ($element, $command_name) = @_;
+sub new_block_command($) {
+  my $element = shift;
 
-  $element->{'cmdname'} = $command_name;
-
+  my $command_name = $element->{'cmdname'};
   my $arguments_line
     = Texinfo::TreeElement::new({'type' => 'arguments_line',
                                  'parent' => $element});
@@ -343,6 +342,7 @@ sub new_block_command($$) {
   unshift @{$element->{'contents'}}, $arguments_line;
 
   my $end = Texinfo::TreeElement::new({'cmdname' => 'end',
+                                       'type' => 'normal_command',
                                        'parent' => $element,
                                'extra' => {'text_arg' => $command_name}});
   my $end_args
@@ -410,9 +410,9 @@ sub new_complete_node_menu($;$$$) {
 
   my $associated_relations = $node_relations->{'associated_section'};
 
-  # only holds contents here, will be turned into a proper block
-  # command in new_block_command below
-  my $new_menu = Texinfo::TreeElement::new({'contents' => []});
+  my $new_menu = Texinfo::TreeElement::new({'contents' => [],
+                                            'cmdname' => 'menu',
+                                            'type' => 'normal_command'});
   foreach my $child (@node_childs) {
     my $entry = new_node_menu_entry($child, $use_sections);
     if (defined($entry)) {
@@ -470,7 +470,7 @@ sub new_complete_node_menu($;$$$) {
     }
   }
 
-  new_block_command($new_menu, 'menu');
+  new_block_command($new_menu);
 
   return $new_menu;
 }
@@ -484,7 +484,9 @@ sub new_detailmenu($$$$$$;$$) {
 
   # only holds contents here, will be turned into a proper block
   # command in new_block_command
-  my $new_detailmenu = Texinfo::TreeElement::new({'contents' => []});
+  my $new_detailmenu = Texinfo::TreeElement::new({'cmdname' => 'detailmenu',
+                                                  'type' => 'normal_command',
+                                                  'contents' => []});
   if (defined($menus) and ref($menus) ne 'ARRAY') {
     cluck();
   }
@@ -530,7 +532,7 @@ sub new_detailmenu($$$$$$;$$) {
       # menu_entry or menu_comment
       $content->{'parent'} = $new_detailmenu;
     }
-    Texinfo::Structuring::new_block_command($new_detailmenu, 'detailmenu');
+    Texinfo::Structuring::new_block_command($new_detailmenu);
     return $new_detailmenu;
   } else {
     return undef;
@@ -806,10 +808,10 @@ Find the I<$node_relations> node relations children based on the
 sectioning structure.  For the node associated with C<@top> sectioning
 command, the sections associated with parts are considered.
 
-=item new_block_command($element, $command_name)
+=item new_block_command($element)
 X<C<new_block_command>>
 
-Complete I<$element> by adding the I<$command_name>, the command line
+Complete I<$element> by adding the command line
 argument and C<@end> to turn the element to a proper block command.
 
 =item $new_menu = new_complete_node_menu($node_relations, $lang_translations, $debug_level, $use_sections)

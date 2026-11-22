@@ -11,17 +11,17 @@ use Encode;
 $result_tree_text{'cartouche_in_example_with_title'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@example C5 l1
+  *normal_command@example C5 l1
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
-   *@cartouche C3 l2
+   *normal_command@cartouche C3 l2
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *preformatted C1
      {normal_text:first no heading\\n}
-    *@end C1 l4
+    *normal_command@end C1 l4
     |EXTRA
     |text_arg:{cartouche}
      *line_arg C3
@@ -30,25 +30,25 @@ $result_tree_text{'cartouche_in_example_with_title'} = '*document_root C1
       {spaces_after_argument:\\n}
    *preformatted C1
     {empty_line:\\n}
-   *@cartouche C3 l6
+   *normal_command@cartouche C3 l6
     *arguments_line C1
      *block_line_arg C4
       {spaces_before_argument: }
       {normal_text:Tit--le }
-      *@emph C1 l6
+      *normal_command@emph C1 l6
        *brace_container C1
         {normal_text:of box}
       {spaces_after_argument:\\n}
     *preformatted C1
      {normal_text:With title c--artouche\\n}
-    *@end C1 l8
+    *normal_command@end C1 l8
     |EXTRA
     |text_arg:{cartouche}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:cartouche}
       {spaces_after_argument:\\n}
-   *@end C1 l9
+   *normal_command@end C1 l9
    |EXTRA
    |text_arg:{example}
     *line_arg C3

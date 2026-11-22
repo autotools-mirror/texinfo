@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'note_in_strong_end_of_line'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
- *@node C5 l1 {Top}
+ *normal_command@node C5 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -24,14 +24,14 @@ $result_tree_text{'note_in_strong_end_of_line'} = '*document_root C2
   {empty_line:\\n}
   *paragraph C3
    {normal_text:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb vvvvvvvvvvvvvvvv }
-   *@strong C1 l3
+   *normal_command@strong C1 l3
     *brace_container C1
      {normal_text:note a}
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C3
    {normal_text:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb vvvvvvvvvvvvvvvv }
-   *@strong C1 l5
+   *normal_command@strong C1 l5
     *brace_container C2
      {normal_text:note\\n}
      {normal_text:a}

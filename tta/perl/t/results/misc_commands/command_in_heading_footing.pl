@@ -11,27 +11,27 @@ use Encode;
 $result_tree_text{'command_in_heading_footing'} = '*document_root C1
  *before_node_section C4
   *preamble_before_content C2
-   *@everyheading C1 l1
+   *normal_command@everyheading C1 l1
     *line_arg C6
      {spaces_before_argument: }
      {normal_text:something }
-     *@thispage
+     *normal_command@thispage
      {normal_text: }
-     *@thischapternum
+     *normal_command@thischapternum
      {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C5
    {normal_text:In text }
-   *@thispage
+   *normal_command@thispage
    {normal_text: }
-   *@thischapternum
+   *normal_command@thischapternum
    {normal_text: text.\\n}
   {empty_line:\\n}
   *paragraph C3
    {normal_text:In code }
-   *@code C1 l5
+   *normal_command@code C1 l5
     *brace_container C1
-     *@thissection
+     *normal_command@thissection
    {normal_text:.\\n}
 ';
 

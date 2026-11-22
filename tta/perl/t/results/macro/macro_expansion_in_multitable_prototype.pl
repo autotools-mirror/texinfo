@@ -11,14 +11,14 @@ use Encode;
 $result_tree_text{'macro_expansion_in_multitable_prototype'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C4
-   *@macro C3 l1
+   *normal_command@macro C3 l1
    |EXTRA
    |formal_args:A{}
    |macro_name:{simple}
     *arguments_line C1
      {macro_line: simple\\n}
     {raw:ab\\n}
-    *@end C1 l3
+    *normal_command@end C1 l3
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -26,14 +26,14 @@ $result_tree_text{'macro_expansion_in_multitable_prototype'} = '*document_root C
       {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@macro C3 l5
+   *normal_command@macro C3 l5
    |EXTRA
    |formal_args:A{arg}
    |macro_name:{endbrace}
     *arguments_line C1
      {macro_line: endbrace {arg}\\n}
     {raw:c\\arg\\d}\\n}
-    *@end C1 l7
+    *normal_command@end C1 l7
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -41,7 +41,7 @@ $result_tree_text{'macro_expansion_in_multitable_prototype'} = '*document_root C
       {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-  *@multitable C3 l9
+  *normal_command@multitable C3 l9
   |EXTRA
   |max_columns:{5}
    *arguments_line C1
@@ -65,7 +65,7 @@ $result_tree_text{'macro_expansion_in_multitable_prototype'} = '*document_root C
      {normal_text: }
      *bracketed_arg C3 l9
       {normal_text:k }
-      *@emph C1 l9
+      *normal_command@emph C1 l9
        *brace_container C1
         {normal_text:s}
       {normal_text:nab}
@@ -84,7 +84,7 @@ $result_tree_text{'macro_expansion_in_multitable_prototype'} = '*document_root C
        >*macro_call@endbrace C1
         >*brace_arg C1
          >{macro_call_arg_text:@code{l}}
-      *@code C1 l9:@endbrace
+      *normal_command@code C1 l9:@endbrace
        *brace_container C1
         {normal_text:l}
       {normal_text:d}
@@ -103,37 +103,37 @@ $result_tree_text{'macro_expansion_in_multitable_prototype'} = '*document_root C
     *row C5
     |EXTRA
     |row_number:{1}
-     *@item C2 l10
+     *normal_command@item C2 l10
      |EXTRA
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
        {normal_text:l1 }
-     *@tab C2 l10
+     *normal_command@tab C2 l10
      |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C1
        {normal_text:t1 }
-     *@tab C2 l10
+     *normal_command@tab C2 l10
      |EXTRA
      |cell_number:{3}
       {ignorable_spaces_after_command: }
       *paragraph C1
        {normal_text:t2 }
-     *@tab C2 l10
+     *normal_command@tab C2 l10
      |EXTRA
      |cell_number:{4}
       {ignorable_spaces_after_command: }
       *paragraph C1
        {normal_text:t3 }
-     *@tab C2 l10
+     *normal_command@tab C2 l10
      |EXTRA
      |cell_number:{5}
       {ignorable_spaces_after_command: }
       *paragraph C1
        {normal_text:t4\\n}
-   *@end C1 l11
+   *normal_command@end C1 l11
    |EXTRA
    |text_arg:{multitable}
     *line_arg C3

@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'not_only_characters'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C2
-   *@set C1
+   *normal_command@set C1
    |EXTRA
    |misc_args:A{-e_\'::;|hh}
     *line_arg C3
@@ -23,7 +23,7 @@ $result_tree_text{'not_only_characters'} = '*document_root C1
    {normal_text:Say hh.\\n}
    >SOURCEMARKS
    >value_expansion<start;1><p:4>{hh}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:-e_\'::;}
    >value_expansion<end;1><p:6>

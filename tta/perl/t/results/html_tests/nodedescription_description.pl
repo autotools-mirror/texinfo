@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'nodedescription_description'} = '*document_root C9
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'nodedescription_description'} = '*document_root C9
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l2 {test of descriptions with nodedescription*}
+ *normal_command@top C2 l2 {test of descriptions with nodedescription*}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -31,7 +31,7 @@ $result_tree_text{'nodedescription_description'} = '*document_root C9
     {normal_text:test of descriptions with nodedescription*}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l4 {toto}
+ *normal_command@node C1 l4 {toto}
  |EXTRA
  |identifier:{toto}
  |is_target:{1}
@@ -41,7 +41,7 @@ $result_tree_text{'nodedescription_description'} = '*document_root C9
     {spaces_before_argument: }
     {normal_text:toto}
     {spaces_after_argument:\\n}
- *@chapter C6 l5 {Toto}
+ *normal_command@chapter C6 l5 {Toto}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -52,37 +52,37 @@ $result_tree_text{'nodedescription_description'} = '*document_root C9
     {normal_text:Toto}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@nodedescription C1 l7
+  *normal_command@nodedescription C1 l7
    *line_arg C10
     {spaces_before_argument: }
     {normal_text:toto is there:: and the }
-    *@emph C1 l7
+    *normal_command@emph C1 l7
      *brace_container C1
       {normal_text:is a description}
-    *@w C1 l7
+    *normal_command@w C1 l7
      *brace_container C1
       {normal_text:slightly long}
     {normal_text: and }
-    *@verb C1 l7
+    *normal_command@verb C1 l7
      *brace_container C3
       {verb_delimiter::}
       {raw:vv somewhat}
       {verb_delimiter::}
     {normal_text: }
-    *@ringaccent C2 l7
+    *normal_command@ringaccent C2 l7
      {spaces_after_cmd_before_arg: }
      *following_arg C1
       {normal_text:a}
     {normal_text:nexpected}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@nodedescriptionblock C3 l9
+  *normal_command@nodedescriptionblock C3 l9
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C1
     {normal_text:Block along line node description for toto\\n}
-   *@end C1 l11
+   *normal_command@end C1 l11
    |EXTRA
    |text_arg:{nodedescriptionblock}
     *line_arg C3
@@ -90,7 +90,7 @@ $result_tree_text{'nodedescription_description'} = '*document_root C9
      {normal_text:nodedescriptionblock}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l13 {titi}
+ *normal_command@node C1 l13 {titi}
  |EXTRA
  |identifier:{titi}
  |is_target:{1}
@@ -100,7 +100,7 @@ $result_tree_text{'nodedescription_description'} = '*document_root C9
     {spaces_before_argument: }
     {normal_text:titi}
     {spaces_after_argument:\\n}
- *@chapter C4 l14 {Titi}
+ *normal_command@chapter C4 l14 {Titi}
  |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
@@ -111,13 +111,13 @@ $result_tree_text{'nodedescription_description'} = '*document_root C9
     {normal_text:Titi}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@nodedescriptionblock C3 l16
+  *normal_command@nodedescriptionblock C3 l16
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C1
     {normal_text:description of titi in block\\n}
-   *@end C1 l18
+   *normal_command@end C1 l18
    |EXTRA
    |text_arg:{nodedescriptionblock}
     *line_arg C3
@@ -125,7 +125,7 @@ $result_tree_text{'nodedescription_description'} = '*document_root C9
      {normal_text:nodedescriptionblock}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l20 {other}
+ *normal_command@node C1 l20 {other}
  |EXTRA
  |identifier:{other}
  |is_target:{1}
@@ -135,7 +135,7 @@ $result_tree_text{'nodedescription_description'} = '*document_root C9
     {spaces_before_argument: }
     {normal_text:other}
     {spaces_after_argument:\\n}
- *@chapter C3 l21 {Other}
+ *normal_command@chapter C3 l21 {Other}
  |EXTRA
  |section_heading_number:{3}
  |section_level:{1}
@@ -146,7 +146,7 @@ $result_tree_text{'nodedescription_description'} = '*document_root C9
     {normal_text:Other}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@nodedescription C1 l23
+  *normal_command@nodedescription C1 l23
    *line_arg C3
     {spaces_before_argument: }
     {normal_text:other comes here}

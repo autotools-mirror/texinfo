@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'top_is_an_anchor'} = '*document_root C1
  *before_node_section C3
   *preamble_before_content C2
-   *@setfilename C1 l1
+   *normal_command@setfilename C1 l1
    |EXTRA
    |text_arg:{top_is_an_anchor.info}
     *line_arg C3
@@ -19,7 +19,7 @@ $result_tree_text{'top_is_an_anchor'} = '*document_root C1
      {normal_text:top_is_an_anchor.info}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
-  *@anchor C1 l3
+  *normal_command@anchor C1 l3
   |EXTRA
   |identifier:{Top}
   |is_target:{1}

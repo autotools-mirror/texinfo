@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'brace_commands_spaces_end_of_lines'} = '*document_root C1
  *before_node_section C18
   *preamble_before_content
-  *@image C1 l1
+  *normal_command@image C1 l1
   |EXTRA
   |input_encoding_name:{utf-8}
    *brace_arg C2
@@ -19,7 +19,7 @@ $result_tree_text{'brace_commands_spaces_end_of_lines'} = '*document_root C1
     {normal_text:a}
   {normal_text:\\n}
   {empty_line:\\n}
-  *@image C1 l4
+  *normal_command@image C1 l4
   |EXTRA
   |input_encoding_name:{utf-8}
    *brace_arg C2
@@ -27,7 +27,7 @@ $result_tree_text{'brace_commands_spaces_end_of_lines'} = '*document_root C1
     {normal_text:a}
   {normal_text:\\n}
   {empty_line:\\n}
-  *@image C2 l7
+  *normal_command@image C2 l7
   |EXTRA
   |input_encoding_name:{utf-8}
    *brace_arg C1
@@ -37,7 +37,7 @@ $result_tree_text{'brace_commands_spaces_end_of_lines'} = '*document_root C1
     {normal_text:b}
   {normal_text:\\n}
   {empty_line:\\n}
-  *@image C2 l10
+  *normal_command@image C2 l10
   |EXTRA
   |input_encoding_name:{utf-8}
    *brace_arg C1
@@ -47,7 +47,7 @@ $result_tree_text{'brace_commands_spaces_end_of_lines'} = '*document_root C1
     {normal_text:b}
   {normal_text:\\n}
   {empty_line:\\n}
-  *@image C2 l13
+  *normal_command@image C2 l13
   |EXTRA
   |input_encoding_name:{utf-8}
    *brace_arg C1
@@ -58,7 +58,7 @@ $result_tree_text{'brace_commands_spaces_end_of_lines'} = '*document_root C1
     {normal_text:b}
   {normal_text:\\n}
   {empty_line:\\n}
-  *@image C2 l16
+  *normal_command@image C2 l16
   |EXTRA
   |input_encoding_name:{utf-8}
    *brace_arg C1

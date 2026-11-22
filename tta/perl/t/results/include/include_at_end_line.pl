@@ -11,13 +11,13 @@ use Encode;
 $result_tree_text{'include_at_end_line'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C2
-   *@include C1 l1
+   *normal_command@include C1 l1
    |EXTRA
    |text_arg:{inc_file.texi}
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:inc_file.texi}
-     *@\\n
+     *normal_command@\\n
    {empty_line:\\n}
   *paragraph C1
    {normal_text:After.}

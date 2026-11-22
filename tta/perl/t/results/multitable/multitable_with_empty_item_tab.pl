@@ -11,13 +11,13 @@ use Encode;
 $result_tree_text{'multitable_with_empty_item_tab'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@multitable C3 l1
+  *normal_command@multitable C3 l1
   |EXTRA
   |max_columns:{2}
    *arguments_line C1
     *block_line_arg C2
      {spaces_before_argument: }
-     *@columnfractions C1 l1
+     *normal_command@columnfractions C1 l1
      |EXTRA
      |misc_args:A{0.3|0.7}
       *line_arg C3
@@ -28,13 +28,13 @@ $result_tree_text{'multitable_with_empty_item_tab'} = '*document_root C1
     *row C2
     |EXTRA
     |row_number:{1}
-     *@item C2 l2
+     *normal_command@item C2 l2
      |EXTRA
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
        {normal_text:1-1 }
-     *@tab C2 l2
+     *normal_command@tab C2 l2
      |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
@@ -43,28 +43,28 @@ $result_tree_text{'multitable_with_empty_item_tab'} = '*document_root C1
     *row C2
     |EXTRA
     |row_number:{2}
-     *@item l2
+     *normal_command@item l2
      |EXTRA
      |cell_number:{1}
-     *@tab l2
+     *normal_command@tab l2
      |EXTRA
      |cell_number:{2}
     *row C2
     |EXTRA
     |row_number:{3}
-     *@item C2 l2
+     *normal_command@item C2 l2
      |EXTRA
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
        {normal_text:3-1 }
-     *@tab C2 l2
+     *normal_command@tab C2 l2
      |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C1
        {normal_text:3-2\\n}
-   *@end C1 l3
+   *normal_command@end C1 l3
    |EXTRA
    |text_arg:{multitable}
     *line_arg C3

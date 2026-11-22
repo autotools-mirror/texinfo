@@ -1077,7 +1077,8 @@ sub protect_comma_in_tree($) {
 sub _new_asis_command_with_text($$$) {
   my ($text, $parent, $text_type) = @_;
 
-  my $new_command = Texinfo::TreeElement::new({'cmdname' => 'asis'});
+  my $new_command = Texinfo::TreeElement::new({'cmdname' => 'asis',
+                                               'type' => 'normal_command'});
 
   if (defined($parent)) {
     $new_command->{'parent'} = $parent;
@@ -1119,7 +1120,8 @@ sub _protect_text($$) {
         }
         if ($to_protect eq quotemeta(',')) {
           for (my $i = 0; $i < length($2); $i++) {
-            my $e = Texinfo::TreeElement::new({'cmdname' => 'comma'});
+            my $e = Texinfo::TreeElement::new({'cmdname' => 'comma',
+                                            'type' => 'normal_command'});
             my $brace_container
               = Texinfo::TreeElement::new({'type' => 'brace_container',
                                            'parent' => $e});

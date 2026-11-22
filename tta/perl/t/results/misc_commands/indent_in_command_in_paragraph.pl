@@ -13,16 +13,16 @@ $result_tree_text{'indent_in_command_in_paragraph'} = '*document_root C1
   *preamble_before_content
   *paragraph C5
    {normal_text:In para }
-   *@code C1 l1
+   *normal_command@code C1 l1
     *brace_container C1
-     *@indent l1
+     *normal_command@indent l1
    {normal_text:.  }
-   *@asis C1 l1
+   *normal_command@asis C1 l1
     *brace_container C1
-     *@b C1 l1
+     *normal_command@b C1 l1
       *brace_container C2
        {normal_text:in double command}
-       *@noindent l1
+       *normal_command@noindent l1
    {normal_text:.\\n}
 ';
 

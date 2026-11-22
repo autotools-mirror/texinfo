@@ -13,13 +13,13 @@ $result_tree_text{'beginning_and_end_on_line'} = '*document_root C1
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content C2
-   *@tex C2 l2
+   *normal_command@tex C2 l2
     *arguments_line C1
      *block_line_arg C3
       {spaces_before_argument: }
       {normal_text:in tex}
       {spaces_after_argument: }
-    *@end C1 l2
+    *normal_command@end C1 l2
     |EXTRA
     |text_arg:{tex}
      *line_arg C3
@@ -27,13 +27,13 @@ $result_tree_text{'beginning_and_end_on_line'} = '*document_root C1
       {normal_text:tex}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-  *@verbatim C2 l4
+  *normal_command@verbatim C2 l4
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
      {normal_text:in verbatim}
      {spaces_after_argument: }
-   *@end C1 l4
+   *normal_command@end C1 l4
    |EXTRA
    |text_arg:{verbatim}
     *line_arg C3
@@ -41,13 +41,13 @@ $result_tree_text{'beginning_and_end_on_line'} = '*document_root C1
      {normal_text:verbatim}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@html C2 l6
+  *normal_command@html C2 l6
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
      {normal_text:in html}
      {spaces_after_argument: }
-   *@end C1 l6
+   *normal_command@end C1 l6
    |EXTRA
    |text_arg:{html}
     *line_arg C3

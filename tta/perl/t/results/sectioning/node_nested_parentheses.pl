@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'node_nested_parentheses'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
- *@node C3 l1 {first}
+ *normal_command@node C3 l1 {first}
  |EXTRA
  |identifier:{first}
  |is_target:{1}
@@ -22,7 +22,7 @@ $result_tree_text{'node_nested_parentheses'} = '*document_root C2
     {normal_text:first}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C6 l3
+  *normal_command@menu C6 l3
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -61,7 +61,7 @@ $result_tree_text{'node_nested_parentheses'} = '*document_root C2
     |node_content:A{4|4}
     |normalized:{close_0029}
      {normal_text:(}
-     *@code C1 l6
+     *normal_command@code C1 l6
       *brace_container C1
        {normal_text:open(}
      {normal_text:)}
@@ -78,7 +78,7 @@ $result_tree_text{'node_nested_parentheses'} = '*document_root C2
     |node_content:A{0|2}
     |normalized:{_0028_0029_0029_0029-error}
      {normal_text:(}
-     *@code C1 l7
+     *normal_command@code C1 l7
       *brace_container C1
        {normal_text:)))}
      {normal_text: error}
@@ -86,7 +86,7 @@ $result_tree_text{'node_nested_parentheses'} = '*document_root C2
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l8
+   *normal_command@end C1 l8
    |EXTRA
    |text_arg:{menu}
     *line_arg C3

@@ -11,21 +11,21 @@ use Encode;
 $result_tree_text{'thispart'} = '*document_root C11
  *before_node_section C1
   *preamble_before_content C2
-   *@everyheading C1 l1
+   *normal_command@everyheading C1 l1
     *line_arg C11
      {spaces_before_argument: }
-     *@thispage
+     *normal_command@thispage
      {normal_text: }
-     *@|
+     *normal_command@|
      {normal_text: }
-     *@thisfile
+     *normal_command@thisfile
      {normal_text: }
-     *@|
+     *normal_command@|
      {normal_text: }
-     *@thispart
+     *normal_command@thispart
      {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@node C1 l3 {Top}
+ *normal_command@node C1 l3 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -35,7 +35,7 @@ $result_tree_text{'thispart'} = '*document_root C11
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l4 {top}
+ *normal_command@top C2 l4 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -45,7 +45,7 @@ $result_tree_text{'thispart'} = '*document_root C11
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@part C1 l6 {Part I:@* The beginning}
+ *normal_command@part C1 l6 {Part I:@* The beginning}
  |EXTRA
  |global_command_number:{1}
  |section_level:{0}
@@ -54,10 +54,10 @@ $result_tree_text{'thispart'} = '*document_root C11
    *line_arg C5
     {spaces_before_argument: }
     {normal_text:Part I:}
-    *@*
+    *normal_command@*
     {normal_text: The beginning}
     {spaces_after_argument:\\n}
- *@node C1 l7 {first}
+ *normal_command@node C1 l7 {first}
  |EXTRA
  |identifier:{first}
  |is_target:{1}
@@ -67,7 +67,7 @@ $result_tree_text{'thispart'} = '*document_root C11
     {spaces_before_argument: }
     {normal_text:first}
     {spaces_after_argument:\\n}
- *@chapter C4 l8 {Chap1}
+ *normal_command@chapter C4 l8 {Chap1}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -81,7 +81,7 @@ $result_tree_text{'thispart'} = '*document_root C11
   *paragraph C1
    {normal_text:In chap1\\n}
   {empty_line:\\n}
- *@part C1 l12 {Part II}
+ *normal_command@part C1 l12 {Part II}
  |EXTRA
  |global_command_number:{2}
  |section_level:{0}
@@ -91,7 +91,7 @@ $result_tree_text{'thispart'} = '*document_root C11
     {spaces_before_argument: }
     {normal_text:Part II}
     {spaces_after_argument:\\n}
- *@node C1 l13 {second}
+ *normal_command@node C1 l13 {second}
  |EXTRA
  |identifier:{second}
  |is_target:{1}
@@ -101,7 +101,7 @@ $result_tree_text{'thispart'} = '*document_root C11
     {spaces_before_argument: }
     {normal_text:second}
     {spaces_after_argument:\\n}
- *@chapter C4 l14 {chap2}
+ *normal_command@chapter C4 l14 {chap2}
  |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
@@ -115,7 +115,7 @@ $result_tree_text{'thispart'} = '*document_root C11
   *paragraph C1
    {normal_text:In chap2\\n}
   {empty_line:\\n}
- *@part C2 l18 {App}
+ *normal_command@part C2 l18 {App}
  |EXTRA
  |global_command_number:{3}
  |section_level:{0}
@@ -126,7 +126,7 @@ $result_tree_text{'thispart'} = '*document_root C11
     {normal_text:App}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@appendix C3 l20 {Appendix}
+ *normal_command@appendix C3 l20 {Appendix}
  |EXTRA
  |identifier:{Appendix}
  |is_target:{1}

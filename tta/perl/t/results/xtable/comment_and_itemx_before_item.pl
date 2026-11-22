@@ -11,25 +11,25 @@ use Encode;
 $result_tree_text{'comment_and_itemx_before_item'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@table C3 l1
+  *normal_command@table C3 l1
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     *@code l1
+     *normal_command@code l1
      {spaces_after_argument:\\n}
    *table_entry C1
     *table_term C2
-     *@c C1
+     *normal_command@c C1
       *line_arg C3
        {spaces_before_argument: }
        {rawline_text:comment}
        {spaces_after_argument:\\n}
-     *@itemx C1 l3
+     *normal_command@itemx C1 l3
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:in itemx}
        {spaces_after_argument:\\n}
-   *@end C1 l4
+   *normal_command@end C1 l4
    |EXTRA
    |text_arg:{table}
     *line_arg C3

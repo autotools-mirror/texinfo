@@ -12,13 +12,13 @@ $result_tree_text{'non_character_prepended_upper_case_accent'} = '*document_root
  *before_node_section C2
   *preamble_before_content
   *paragraph C4
-   *@udotaccent C1 l1
+   *normal_command@udotaccent C1 l1
     *brace_container C1
      {normal_text:R}
    {normal_text:.  A\\n}
-   *@sc C1 l2
+   *normal_command@sc C1 l2
     *brace_container C1
-     *@udotaccent C1 l2
+     *normal_command@udotaccent C1 l2
       *brace_container C1
        {normal_text:R}
    {normal_text:.  B}

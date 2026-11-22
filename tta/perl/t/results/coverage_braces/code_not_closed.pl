@@ -12,7 +12,7 @@ $result_tree_text{'code_not_closed'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *paragraph C1
-   *@code C1 l1
+   *normal_command@code C1 l1
     *brace_container C1
      {normal_text:in code}
 ';

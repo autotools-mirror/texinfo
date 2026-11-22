@@ -13,11 +13,11 @@ $result_tree_text{'unknown_documentscript_selection'} = '*document_root C5
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content C5
-   *@copying C3 l2
+   *normal_command@copying C3 l2
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
-    *@defivar C2 l3
+    *normal_command@defivar C2 l3
      *def_line C1 l3
      |EXTRA
      |def_command:{defivar}
@@ -44,14 +44,14 @@ $result_tree_text{'unknown_documentscript_selection'} = '*document_root C5
         *def_line_arg C1
          {normal_text:CCC}
        {spaces_after_argument:\\n}
-     *@end C1 l4
+     *normal_command@end C1 l4
      |EXTRA
      |text_arg:{defivar}
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:defivar}
        {spaces_after_argument:\\n}
-    *@end C1 l5
+    *normal_command@end C1 l5
     |EXTRA
     |text_arg:{copying}
      *line_arg C3
@@ -59,7 +59,7 @@ $result_tree_text{'unknown_documentscript_selection'} = '*document_root C5
       {normal_text:copying}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@documentlanguage C1 l7
+   *normal_command@documentlanguage C1 l7
    |EXTRA
    |global_command_number:{1}
    |text_arg:{sr}
@@ -67,7 +67,7 @@ $result_tree_text{'unknown_documentscript_selection'} = '*document_root C5
      {spaces_before_argument: }
      {normal_text:sr}
      {spaces_after_argument:\\n}
-   *@documentscript C1 l8
+   *normal_command@documentscript C1 l8
    |EXTRA
    |global_command_number:{1}
    |text_arg:{UkNo}
@@ -76,7 +76,7 @@ $result_tree_text{'unknown_documentscript_selection'} = '*document_root C5
      {normal_text:UkNo}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@node C1 l10 {Top}
+ *normal_command@node C1 l10 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -86,7 +86,7 @@ $result_tree_text{'unknown_documentscript_selection'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l11 {top}
+ *normal_command@top C2 l11 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -96,7 +96,7 @@ $result_tree_text{'unknown_documentscript_selection'} = '*document_root C5
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l13 {chap}
+ *normal_command@node C1 l13 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -106,7 +106,7 @@ $result_tree_text{'unknown_documentscript_selection'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:chap}
     {spaces_after_argument:\\n}
- *@chapter C17 l14 {Chap}
+ *normal_command@chapter C17 l14 {Chap}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -117,7 +117,7 @@ $result_tree_text{'unknown_documentscript_selection'} = '*document_root C5
     {normal_text:Chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@defivar C2 l16
+  *normal_command@defivar C2 l16
    *def_line C1 l16
    |EXTRA
    |def_command:{defivar}
@@ -150,7 +150,7 @@ $result_tree_text{'unknown_documentscript_selection'} = '*document_root C5
       *def_line_arg C1
        {normal_text:ivar}
      {spaces_after_argument:\\n}
-   *@end C1 l17
+   *normal_command@end C1 l17
    |EXTRA
    |text_arg:{defivar}
     *line_arg C3
@@ -158,14 +158,14 @@ $result_tree_text{'unknown_documentscript_selection'} = '*document_root C5
      {normal_text:defivar}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@documentscript C1 l19
+  *normal_command@documentscript C1 l19
   |EXTRA
   |global_command_number:{2}
   |text_arg:{}
    *line_arg C1
     {spaces_before_argument:\\n}
   {empty_line:\\n}
-  *@defivar C2 l21
+  *normal_command@defivar C2 l21
    *def_line C1 l21
    |EXTRA
    |def_command:{defivar}
@@ -196,7 +196,7 @@ $result_tree_text{'unknown_documentscript_selection'} = '*document_root C5
       *def_line_arg C1
        {normal_text:ivar}
      {spaces_after_argument:\\n}
-   *@end C1 l22
+   *normal_command@end C1 l22
    |EXTRA
    |text_arg:{defivar}
     *line_arg C3
@@ -204,7 +204,7 @@ $result_tree_text{'unknown_documentscript_selection'} = '*document_root C5
      {normal_text:defivar}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@documentscript C1 l24
+  *normal_command@documentscript C1 l24
   |EXTRA
   |global_command_number:{3}
   |text_arg:{Bad}
@@ -212,7 +212,7 @@ $result_tree_text{'unknown_documentscript_selection'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Bad}
     {spaces_after_argument:\\n}
-  *@documentlanguage C1 l25
+  *normal_command@documentlanguage C1 l25
   |EXTRA
   |global_command_number:{2}
   |text_arg:{az}
@@ -221,7 +221,7 @@ $result_tree_text{'unknown_documentscript_selection'} = '*document_root C5
     {normal_text:az}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@defivar C2 l27
+  *normal_command@defivar C2 l27
    *def_line C1 l27
    |EXTRA
    |def_command:{defivar}
@@ -252,7 +252,7 @@ $result_tree_text{'unknown_documentscript_selection'} = '*document_root C5
       *def_line_arg C1
        {normal_text:change}
      {spaces_after_argument:\\n}
-   *@end C1 l28
+   *normal_command@end C1 l28
    |EXTRA
    |text_arg:{defivar}
     *line_arg C3
@@ -260,7 +260,7 @@ $result_tree_text{'unknown_documentscript_selection'} = '*document_root C5
      {normal_text:defivar}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@documentscript C1 l30
+  *normal_command@documentscript C1 l30
   |EXTRA
   |global_command_number:{4}
   |text_arg:{wwrong}
@@ -269,7 +269,7 @@ $result_tree_text{'unknown_documentscript_selection'} = '*document_root C5
     {normal_text:wwrong}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@defivar C2 l32
+  *normal_command@defivar C2 l32
    *def_line C1 l32
    |EXTRA
    |def_command:{defivar}
@@ -302,7 +302,7 @@ $result_tree_text{'unknown_documentscript_selection'} = '*document_root C5
       *def_line_arg C1
        {normal_text:change}
      {spaces_after_argument:\\n}
-   *@end C1 l33
+   *normal_command@end C1 l33
    |EXTRA
    |text_arg:{defivar}
     *line_arg C3

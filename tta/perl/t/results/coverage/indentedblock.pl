@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'indentedblock'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@indentedblock C6 l1
+  *normal_command@indentedblock C6 l1
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -21,7 +21,7 @@ $result_tree_text{'indentedblock'} = '*document_root C1
    {empty_line:\\n}
    *paragraph C1
     {normal_text:Text\\n}
-   *@end C1 l5
+   *normal_command@end C1 l5
    |EXTRA
    |text_arg:{indentedblock}
     *line_arg C3

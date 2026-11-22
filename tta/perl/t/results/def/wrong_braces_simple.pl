@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'wrong_braces_simple'} = '*document_root C1
  *before_node_section C10
   *preamble_before_content
-  *@deffn C2 l1
+  *normal_command@deffn C2 l1
    *def_line C1 l1
    |EXTRA
    |def_command:{deffn}
@@ -39,7 +39,7 @@ $result_tree_text{'wrong_braces_simple'} = '*document_root C1
       *def_line_arg C1
        {normal_text:and}
      {spaces_after_argument: \\n}
-   *@end C1 l2
+   *normal_command@end C1 l2
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3
@@ -47,7 +47,7 @@ $result_tree_text{'wrong_braces_simple'} = '*document_root C1
      {normal_text:deffn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@deffn C2 l4
+  *normal_command@deffn C2 l4
    *def_line C1 l4
    |EXTRA
    |def_command:{deffn}
@@ -79,7 +79,7 @@ $result_tree_text{'wrong_braces_simple'} = '*document_root C1
       *def_line_arg C1
        {normal_text:after}
      {spaces_after_argument:\\n}
-   *@end C1 l5
+   *normal_command@end C1 l5
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3
@@ -87,7 +87,7 @@ $result_tree_text{'wrong_braces_simple'} = '*document_root C1
      {normal_text:deffn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@deffn C2 l7
+  *normal_command@deffn C2 l7
    *def_line C1 l7
    |EXTRA
    |def_command:{deffn}
@@ -118,7 +118,7 @@ $result_tree_text{'wrong_braces_simple'} = '*document_root C1
      *def_arg C1
       *bracketed_arg C1 l7
        {spaces_before_argument:\\n}
-   *@end C1 l8
+   *normal_command@end C1 l8
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3
@@ -126,7 +126,7 @@ $result_tree_text{'wrong_braces_simple'} = '*document_root C1
      {normal_text:deffn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@deffn C2 l10
+  *normal_command@deffn C2 l10
    *def_line C1 l10
    |EXTRA
    |def_command:{deffn}
@@ -159,7 +159,7 @@ $result_tree_text{'wrong_braces_simple'} = '*document_root C1
        {spaces_before_argument: }
        {normal_text:and after}
        {spaces_after_argument:\\n}
-   *@end C1 l11
+   *normal_command@end C1 l11
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3
@@ -167,7 +167,7 @@ $result_tree_text{'wrong_braces_simple'} = '*document_root C1
      {normal_text:deffn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@deffn C6 l13
+  *normal_command@deffn C6 l13
    *def_line C1 l13
    |EXTRA
    |def_command:{deffn}
@@ -195,7 +195,7 @@ $result_tree_text{'wrong_braces_simple'} = '*document_root C1
       *def_line_arg C1
        {normal_text:e}
      {spaces_after_argument:\\n}
-   *@deffnx C1 l14
+   *normal_command@deffnx C1 l14
    |EXTRA
    |def_command:{deffn}
    |index_entry:I{fn,6}
@@ -222,7 +222,7 @@ $result_tree_text{'wrong_braces_simple'} = '*document_root C1
       *def_line_arg C1
        {normal_text:and}
      {spaces_after_argument: \\n}
-   *@deffnx C1 l15
+   *normal_command@deffnx C1 l15
    |EXTRA
    |def_command:{deffn}
    |index_entry:I{fn,7}
@@ -253,7 +253,7 @@ $result_tree_text{'wrong_braces_simple'} = '*document_root C1
       *def_line_arg C1
        {normal_text:after}
      {spaces_after_argument:\\n}
-   *@deffnx C1 l16
+   *normal_command@deffnx C1 l16
    |EXTRA
    |def_command:{deffn}
    |index_entry:I{fn,8}
@@ -283,7 +283,7 @@ $result_tree_text{'wrong_braces_simple'} = '*document_root C1
      *def_arg C1
       *bracketed_arg C1 l16
        {spaces_before_argument:\\n}
-   *@deffnx C1 l17
+   *normal_command@deffnx C1 l17
    |EXTRA
    |def_command:{deffn}
    |index_entry:I{fn,9}
@@ -315,7 +315,7 @@ $result_tree_text{'wrong_braces_simple'} = '*document_root C1
        {spaces_before_argument: }
        {normal_text:and after}
        {spaces_after_argument:\\n}
-   *@end C1 l18
+   *normal_command@end C1 l18
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3

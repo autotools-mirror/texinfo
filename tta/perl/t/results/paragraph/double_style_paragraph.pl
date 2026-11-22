@@ -12,9 +12,9 @@ $result_tree_text{'double_style_paragraph'} = '*document_root C1
  *before_node_section C5
   *preamble_before_content
   *paragraph C1
-   *@emph C1 l1
+   *normal_command@emph C1 l1
     *brace_container C1
-     *@strong C1 l1
+     *normal_command@strong C1 l1
       *brace_container C3
        {normal_text:\\n}
        {normal_text:First para.\\n}

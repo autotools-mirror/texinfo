@@ -11,13 +11,13 @@ use Encode;
 $result_tree_text{'raw_html'} = '*document_root C1
  *before_node_section C1
   *preamble_before_content C1
-   *@html C3 l1
+   *normal_command@html C3 l1
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *rawpreformatted C1
      {normal_text:<i>\\n}
-    *@end C1 l3
+    *normal_command@end C1 l3
     |EXTRA
     |text_arg:{html}
      *line_arg C3

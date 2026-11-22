@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'expand_two_same'} = '*document_root C1
  *before_node_section C6
   *preamble_before_content C1
-   *@macro C4 l1
+   *normal_command@macro C4 l1
    |EXTRA
    |formal_args:A{arg}
    |macro_name:{macrotwo}
@@ -19,7 +19,7 @@ $result_tree_text{'expand_two_same'} = '*document_root C1
      {macro_line: macrotwo { arg }\\n}
     {raw:With a doubles arg \\arg\\ and re \\arg\\\\n}
     {raw:\\n}
-    *@end C1 l4
+    *normal_command@end C1 l4
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -36,13 +36,13 @@ $result_tree_text{'expand_two_same'} = '*document_root C1
      >*brace_arg C2
       >{spaces_before_argument: }
       >{macro_call_arg_text:a simple @code{\\narg}\\n}
-   *@code C1 l8:@macrotwo
+   *normal_command@code C1 l8:@macrotwo
     *brace_container C2
      {normal_text:\\n}
      {normal_text:arg}
    {normal_text:\\n}
    {normal_text: and re a simple }
-   *@code C1 l8:@macrotwo
+   *normal_command@code C1 l8:@macrotwo
     *brace_container C2
      {normal_text:\\n}
      {normal_text:arg}

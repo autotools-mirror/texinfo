@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'weird_accents'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content C2
-   *@documentencoding C1 l1
+   *normal_command@documentencoding C1 l1
    |EXTRA
    |global_command_number:{1}
    |input_encoding_name:{iso-8859-1}
@@ -21,7 +21,7 @@ $result_tree_text{'weird_accents'} = '*document_root C5
      {normal_text:ISO-8859-1}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@node C1 l3 {Top}
+ *normal_command@node C1 l3 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -31,7 +31,7 @@ $result_tree_text{'weird_accents'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l4 {top}
+ *normal_command@top C2 l4 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -41,7 +41,7 @@ $result_tree_text{'weird_accents'} = '*document_root C5
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l6 {chap}
+ *normal_command@node C1 l6 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -51,7 +51,7 @@ $result_tree_text{'weird_accents'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:chap}
     {spaces_after_argument:\\n}
- *@chapter C11 l7 {Chapter}
+ *normal_command@chapter C11 l7 {Chapter}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -63,49 +63,49 @@ $result_tree_text{'weird_accents'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@= C1 l9
+   *normal_command@= C1 l9
     *brace_container C1
-     *@~ C1 l9
+     *normal_command@~ C1 l9
       *brace_container C1
-       *@dotless C1 l9
+       *normal_command@dotless C1 l9
         *brace_container C1
          {normal_text:i}
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@= C1 l11
+   *normal_command@= C1 l11
     *brace_container C1
-     *@, C1 l11
+     *normal_command@, C1 l11
       *brace_container C1
-       *@~ C1 l11
+       *normal_command@~ C1 l11
         *brace_container C1
          {normal_text:n}
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@= C1 l13
+   *normal_command@= C1 l13
     *brace_container C1
-     *@ubaraccent C1 l13
+     *normal_command@ubaraccent C1 l13
       *brace_container C1
        {normal_text:a}
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@^ C1 l15
+   *normal_command@^ C1 l15
     *brace_container C1
-     *@udotaccent C1 l15
+     *normal_command@udotaccent C1 l15
       *brace_container C1
-       *@` C1 l15
+       *normal_command@` C1 l15
         *following_arg C1
          {normal_text:r}
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@= C1 l17
+   *normal_command@= C1 l17
     *brace_container C1
-     *@\' C1 l17
+     *normal_command@\' C1 l17
       *brace_container C1
-       *@` C1 l17
+       *normal_command@` C1 l17
         *brace_container C1
          {normal_text:r}
    {normal_text:\\n}

@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'paragraphindent_possibilities'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'paragraphindent_possibilities'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l2 {top}
+ *normal_command@top C2 l2 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -31,7 +31,7 @@ $result_tree_text{'paragraphindent_possibilities'} = '*document_root C5
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l4 {chapter}
+ *normal_command@node C1 l4 {chapter}
  |EXTRA
  |identifier:{chapter}
  |is_target:{1}
@@ -41,7 +41,7 @@ $result_tree_text{'paragraphindent_possibilities'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:chapter}
     {spaces_after_argument:\\n}
- *@chapter C42 l5 {chap}
+ *normal_command@chapter C42 l5 {chap}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -60,7 +60,7 @@ $result_tree_text{'paragraphindent_possibilities'} = '*document_root C5
   *paragraph C1
    {normal_text:default para\\n}
   {empty_line:\\n}
-  *@paragraphindent C1 l11
+  *normal_command@paragraphindent C1 l11
   |EXTRA
   |global_command_number:{1}
   |misc_args:A{asis}
@@ -73,7 +73,7 @@ $result_tree_text{'paragraphindent_possibilities'} = '*document_root C5
   *paragraph C1
    {normal_text:para asis (7)\\n}
   {empty_line:\\n}
-  *@paragraphindent C1 l15
+  *normal_command@paragraphindent C1 l15
   |EXTRA
   |global_command_number:{2}
   |misc_args:A{none}
@@ -86,7 +86,7 @@ $result_tree_text{'paragraphindent_possibilities'} = '*document_root C5
   *paragraph C1
    {normal_text:para none\\n}
   {empty_line:\\n}
-  *@paragraphindent C1 l19
+  *normal_command@paragraphindent C1 l19
   |EXTRA
   |global_command_number:{3}
   |misc_args:A{23}
@@ -99,7 +99,7 @@ $result_tree_text{'paragraphindent_possibilities'} = '*document_root C5
   *paragraph C1
    {normal_text:para 23\\n}
   {empty_line:\\n}
-  *@paragraphindent C1 l23
+  *normal_command@paragraphindent C1 l23
   |EXTRA
   |global_command_number:{4}
   |misc_args:A{-2}
@@ -112,7 +112,7 @@ $result_tree_text{'paragraphindent_possibilities'} = '*document_root C5
   *paragraph C1
    {normal_text:para -2 (7)\\n}
   {empty_line:\\n}
-  *@paragraphindent C1 l27
+  *normal_command@paragraphindent C1 l27
   |EXTRA
   |global_command_number:{5}
   |misc_args:A{0}
@@ -125,7 +125,7 @@ $result_tree_text{'paragraphindent_possibilities'} = '*document_root C5
   *paragraph C1
    {normal_text:para 0\\n}
   {empty_line:\\n}
-  *@paragraphindent C1 l31
+  *normal_command@paragraphindent C1 l31
   |EXTRA
   |global_command_number:{6}
    *line_arg C3
@@ -137,7 +137,7 @@ $result_tree_text{'paragraphindent_possibilities'} = '*document_root C5
   *paragraph C1
    {normal_text:para incorrect -4\\n}
   {empty_line:\\n}
-  *@paragraphindent C1 l35
+  *normal_command@paragraphindent C1 l35
   |EXTRA
   |global_command_number:{7}
    *line_arg C3

@@ -11,14 +11,14 @@ use Encode;
 $result_tree_text{'begin_conditional_in_linemacro'} = '*document_root C1
  *before_node_section C4
   *preamble_before_content C2
-   *@linemacro C3 l1
+   *normal_command@linemacro C3 l1
    |EXTRA
    |formal_args:A{a}
    |macro_name:{lm}
     *arguments_line C1
      {macro_line: lm {a}\\n}
     {raw:b \\a\\ a\\n}
-    *@end C1 l3
+    *normal_command@end C1 l3
     |EXTRA
     |text_arg:{linemacro}
      *line_arg C3
@@ -35,7 +35,7 @@ $result_tree_text{'begin_conditional_in_linemacro'} = '*document_root C1
       >{spaces_before_argument: }
       >{bracketed_linemacro_arg:\\n@ifset}
    >ignored_conditional_block<1><p:3>
-    >*@ifset C3 l6:@lm
+    >*normal_command@ifset C3 l6:@lm
      >*arguments_line C1
       >*block_line_arg C3
        >{spaces_before_argument: }
@@ -44,7 +44,7 @@ $result_tree_text{'begin_conditional_in_linemacro'} = '*document_root C1
        >>linemacro_expansion<end;1><p:1>
        >{spaces_after_argument:\\n}
      >{raw:in ifset\\n}
-     >*@end C1 l8
+     >*normal_command@end C1 l8
      >|EXTRA
      >|text_arg:{ifset}
       >*line_arg C3
@@ -61,7 +61,7 @@ $result_tree_text{'begin_conditional_in_linemacro'} = '*document_root C1
       >{spaces_before_argument: }
       >{bracketed_linemacro_arg:\\n@ifclear}
    >expanded_conditional_command<start;1><p:3>
-    >*@ifclear C1 l11:@lm
+    >*normal_command@ifclear C1 l11:@lm
      >*arguments_line C1
       >*block_line_arg C3
        >{spaces_before_argument: }
@@ -72,7 +72,7 @@ $result_tree_text{'begin_conditional_in_linemacro'} = '*document_root C1
    {normal_text:in ifclear\\n}
    >SOURCEMARKS
    >expanded_conditional_command<end;1><p:11>
-    >*@end C1 l13
+    >*normal_command@end C1 l13
     >|EXTRA
     >|text_arg:{ifclear}
      >*line_arg C3

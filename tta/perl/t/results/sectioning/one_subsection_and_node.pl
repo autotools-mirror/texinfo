@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'one_subsection_and_node'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {one node}
+ *normal_command@node C1 l1 {one node}
  |EXTRA
  |identifier:{one-node}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'one_subsection_and_node'} = '*document_root C3
     {spaces_before_argument: }
     {normal_text:one node}
     {spaces_after_argument:\\n}
- *@subsection C1 l2 {The subsection}
+ *normal_command@subsection C1 l2 {The subsection}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{3}

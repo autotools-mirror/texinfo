@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'verbatiminclude_and_encoding_latin1'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C2
-   *@documentencoding C1 l1
+   *normal_command@documentencoding C1 l1
    |EXTRA
    |global_command_number:{1}
    |input_encoding_name:{iso-8859-1}
@@ -21,7 +21,7 @@ $result_tree_text{'verbatiminclude_and_encoding_latin1'} = '*document_root C1
      {normal_text:iso-8859-1}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
-  *@verbatiminclude C1 l3
+  *normal_command@verbatiminclude C1 l3
   |EXTRA
   |input_encoding_name:{iso-8859-1}
   |text_arg:{verbatim_encoded_latin1.texi}

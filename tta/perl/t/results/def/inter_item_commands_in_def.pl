@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'inter_item_commands_in_def'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@deffn C7 l1
+  *normal_command@deffn C7 l1
    *def_line C1 l1
    |EXTRA
    |def_command:{deffn}
@@ -25,7 +25,7 @@ $result_tree_text{'inter_item_commands_in_def'} = '*document_root C1
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       *@var C1 l1
+       *normal_command@var C1 l1
         *brace_container C1
          {normal_text:i}
      {spaces: }
@@ -38,13 +38,13 @@ $result_tree_text{'inter_item_commands_in_def'} = '*document_root C1
        {normal_text:g}
      {spaces_after_argument:\\n}
    *inter_def_item C2
-    *@c C1
+    *normal_command@c C1
      *line_arg C3
       {spaces_before_argument: }
       {rawline_text:comment before first deffnx}
       {spaces_after_argument:\\n}
     {empty_line:\\n}
-   *@deffnx C1 l4
+   *normal_command@deffnx C1 l4
    |EXTRA
    |def_command:{deffn}
    |index_entry:I{fn,2}
@@ -71,7 +71,7 @@ $result_tree_text{'inter_item_commands_in_def'} = '*document_root C1
       {spaces_before_argument: }
       {normal_text:between deffnx}
       {spaces_after_argument:\\n}
-   *@deffnx C1 l6
+   *normal_command@deffnx C1 l6
    |EXTRA
    |def_command:{deffn}
    |index_entry:I{fn,3}
@@ -84,10 +84,10 @@ $result_tree_text{'inter_item_commands_in_def'} = '*document_root C1
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       *@b C1 l6
+       *normal_command@b C1 l6
         *brace_container C3
          {normal_text:id }
-         *@samp C1 l6
+         *normal_command@samp C1 l6
           *brace_container C1
            {normal_text:i}
          {normal_text: ule}
@@ -107,7 +107,7 @@ $result_tree_text{'inter_item_commands_in_def'} = '*document_root C1
     {empty_line:\\n}
     *paragraph C1
      {normal_text:In deff item.\\n}
-   *@end C1 l10
+   *normal_command@end C1 l10
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3

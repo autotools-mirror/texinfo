@@ -11,14 +11,14 @@ use Encode;
 $result_tree_text{'recursive_linemacro_in_call'} = '*document_root C1
  *before_node_section C1
   *preamble_before_content C3
-   *@linemacro C3 l1
+   *normal_command@linemacro C3 l1
    |EXTRA
    |formal_args:A{arg|other}
    |macro_name:{anorecurse}
     *arguments_line C1
      {macro_line: anorecurse {arg, other}\\n}
     {raw:\\arg\\ d \\other\\\\n}
-    *@end C1 l3
+    *normal_command@end C1 l3
     |EXTRA
     |text_arg:{linemacro}
      *line_arg C3

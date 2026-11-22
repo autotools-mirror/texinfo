@@ -13,7 +13,7 @@ $result_tree_text{'end_of_lines_protected_non_ascii'} = '*document_root C1
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content
-  *@deffn C3 end_of_lines_protected_non_ascii.texi:l2
+  *normal_command@deffn C3 end_of_lines_protected_non_ascii.texi:l2
    *def_line C1 end_of_lines_protected_non_ascii.texi:l2
    |EXTRA
    |def_command:{deffn}
@@ -55,11 +55,11 @@ $result_tree_text{'end_of_lines_protected_non_ascii'} = '*document_root C1
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@@
+       *normal_command@@
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@@
+       *normal_command@@
        >SOURCEMARKS
        >defline_continuation<3>
      {spaces: }
@@ -70,7 +70,7 @@ $result_tree_text{'end_of_lines_protected_non_ascii'} = '*document_root C1
    *def_item C1
     *paragraph C1
      {normal_text:deffn\\n}
-   *@end C1 end_of_lines_protected_non_ascii.texi:l7
+   *normal_command@end C1 end_of_lines_protected_non_ascii.texi:l7
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3

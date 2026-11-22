@@ -13,12 +13,12 @@ $result_tree_text{'info_ifplaintext'} = '*document_root C1
   *preamble_before_beginning C1
   >SOURCEMARKS
   >ignored_conditional_block<1>
-   >*@ifplaintext C3 l2
+   >*normal_command@ifplaintext C3 l2
     >*arguments_line C1
      >*block_line_arg C1
       >{spaces_before_argument:\\n}
     >{raw:this text will only appear in plain text.\\n}
-    >*@end C1 l4
+    >*normal_command@end C1 l4
     >|EXTRA
     >|text_arg:{ifplaintext}
      >*line_arg C3

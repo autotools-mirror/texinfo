@@ -1,5 +1,35 @@
 2026-11-22  Patrice Dumas  <pertusus@free.fr>
 
+	use normal_command for normal command element type in Perl as in C
+
+	* tta/C/api_for_swig/swig_interface.c (txi_ext_element_type)
+	(txi_ext_store_new_element, tta/C/convert/convert_html.c
+	(html_convert_tree_append), tta/C/main/build_perl_info.c
+	(build_base_element), tta/C/main/debug.c (print_element_debug),
+	tta/C/main/element_types.txt, tta/C/main/manipulate_tree.c
+	(print_element_details), tta/C/main/utils.c (new_element_from_names),
+	tta/C/parsetexi/debug_parser.c (print_element_debug_parser):
+	use normal_command type in debug messages, output for tests, and build
+	to Perl.  Remove is_text_element argument that is not needed anymore.
+
+	* tta/perl/Texinfo/ParserNonXS.pm (_merge_text): use type being
+	defined and type being a leading_space_types in the same condition,
+	such that if the type is defined and is not leading_space_types, a
+	paragraph is started (as in C).
+
+	* tta/perl/Texinfo/ManipulateTreeNonXS.pm,
+	tta/perl/Texinfo/ParserNonXS.pm, tta/perl/Texinfo/Structuring.pm
+	(new_block_command), tta/perl/Texinfo/Transformations.pm,
+	tta/perl/Texinfo/TransformationsNonXS.pm: add normal_command type when
+	creating an element with a command and no other type.  Do not pass the
+	command name to new_block_command as argument, set it when creating
+	the element.
+
+	* tta/perl/t/z_misc/01use.t, tta/swig/perl/t/30source_marks.t,
+	tta/swig/texinfo.i: update for changes.
+
+2026-11-22  Patrice Dumas  <pertusus@free.fr>
+
 	* tta/perl/Texinfo/Convert/HTML.pm (_convert),
 	tta/perl/Texinfo/Convert/PlaintextNonXS.pm (_convert),
 	tta/perl/Texinfo/ManipulateTree.pm (_copy_tree)
@@ -53,7 +83,7 @@
 	tta/C/main/element_types.txt, tta/C/main/utils.c
 	(new_element_from_names): add the normal_command element type and
 	remove all the more specific c_only types for commands.  Remove type
-	argument of new_command_element, always set ET_normal_command.  Updae
+	argument of new_command_element, always set ET_normal_command.  Update
 	callers.
 
 	* tta/C/main/convert_utils.c: comment out unused

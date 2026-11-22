@@ -11,11 +11,11 @@ use Encode;
 $result_tree_text{'multitable_in_example'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@example C3 l1
+  *normal_command@example C3 l1
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
-   *@multitable C3 l2
+   *normal_command@multitable C3 l2
    |EXTRA
    |max_columns:{2}
     *arguments_line C1
@@ -31,13 +31,13 @@ $result_tree_text{'multitable_in_example'} = '*document_root C1
      *row C2
      |EXTRA
      |row_number:{1}
-      *@item C1 l3
+      *normal_command@item C1 l3
       |EXTRA
       |cell_number:{1}
        *preformatted C2
         {ignorable_spaces_after_command: }
         {normal_text:truc }
-      *@tab C1 l3
+      *normal_command@tab C1 l3
       |EXTRA
       |cell_number:{2}
        *preformatted C2
@@ -46,7 +46,7 @@ $result_tree_text{'multitable_in_example'} = '*document_root C1
      *row C2
      |EXTRA
      |row_number:{2}
-      *@item C1 l4
+      *normal_command@item C1 l4
       |EXTRA
       |cell_number:{1}
        *preformatted C5
@@ -55,7 +55,7 @@ $result_tree_text{'multitable_in_example'} = '*document_root C1
         {empty_line:\\n}
         {normal_text:new paragraph in item. example\\n}
         {empty_line:\\n}
-      *@tab C1 l8
+      *normal_command@tab C1 l8
       |EXTRA
       |cell_number:{2}
        *preformatted C4
@@ -63,14 +63,14 @@ $result_tree_text{'multitable_in_example'} = '*document_root C1
         {normal_text:begin tab example\\n}
         {empty_line:\\n}
         {normal_text:new paragraph in tab. example\\n}
-    *@end C1 l11
+    *normal_command@end C1 l11
     |EXTRA
     |text_arg:{multitable}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:multitable}
       {spaces_after_argument:\\n}
-   *@end C1 l12
+   *normal_command@end C1 l12
    |EXTRA
    |text_arg:{example}
     *line_arg C2

@@ -21,7 +21,7 @@ $result_tree_text{'paragraphindent_none_first'} = '*document_root C1
   *paragraph C1
    {normal_text:second\\n}
   {empty_line:\\n}
-  *@paragraphindent C1 l6
+  *normal_command@paragraphindent C1 l6
   |EXTRA
   |global_command_number:{1}
   |misc_args:A{none}

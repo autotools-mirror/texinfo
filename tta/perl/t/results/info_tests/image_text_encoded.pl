@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'image_text_encoded'} = '*document_root C1
  *before_node_section C3
   *preamble_before_content C2
-   *@documentencoding C1 l1
+   *normal_command@documentencoding C1 l1
    |EXTRA
    |global_command_number:{1}
    |input_encoding_name:{utf-8}
@@ -21,7 +21,7 @@ $result_tree_text{'image_text_encoded'} = '*document_root C1
      {normal_text:utf-8}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
-  *@image C1 l3
+  *normal_command@image C1 l3
   |EXTRA
   |input_encoding_name:{utf-8}
    *brace_arg C1

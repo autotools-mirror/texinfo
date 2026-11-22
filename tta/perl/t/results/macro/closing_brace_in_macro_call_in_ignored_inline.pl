@@ -11,14 +11,14 @@ use Encode;
 $result_tree_text{'closing_brace_in_macro_call_in_ignored_inline'} = '*document_root C1
  *before_node_section C4
   *preamble_before_content C2
-   *@macro C3 l1
+   *normal_command@macro C3 l1
    |EXTRA
    |formal_args:A{}
    |macro_name:{closebrace}
     *arguments_line C1
      {macro_line: closebrace\\n}
     {raw:}\\n}
-    *@end C1 l3
+    *normal_command@end C1 l3
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -27,7 +27,7 @@ $result_tree_text{'closing_brace_in_macro_call_in_ignored_inline'} = '*document_
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C3
-   *@inlinefmt C2 l5
+   *normal_command@inlinefmt C2 l5
    |EXTRA
    |expand_index:{1}
    |format:{html}
@@ -46,7 +46,7 @@ $result_tree_text{'closing_brace_in_macro_call_in_ignored_inline'} = '*document_
    {normal_text:machin\\n}
   {empty_line:\\n}
   *paragraph C1
-   *@inlinefmt C2 l9
+   *normal_command@inlinefmt C2 l9
    |EXTRA
    |format:{tex}
     *brace_arg C1

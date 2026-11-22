@@ -14,7 +14,7 @@ $result_tree_text{'navigation_vertical'} = '*document_root C10
    {text_before_beginning:\\input texinfo @c -*-texinfo-*-\\n}
    {text_before_beginning:\\n}
   *preamble_before_content
- *@node C1 navigation.texi:l3 {Top}
+ *normal_command@node C1 navigation.texi:l3 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -24,7 +24,7 @@ $result_tree_text{'navigation_vertical'} = '*document_root C10
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C4 navigation.texi:l4 {File used for navigation testing}
+ *normal_command@top C4 navigation.texi:l4 {File used for navigation testing}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -34,7 +34,7 @@ $result_tree_text{'navigation_vertical'} = '*document_root C10
     {normal_text:File used for navigation testing}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C3 navigation.texi:l6
+  *normal_command@menu C3 navigation.texi:l6
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -49,7 +49,7 @@ $result_tree_text{'navigation_vertical'} = '*document_root C10
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 navigation.texi:l8
+   *normal_command@end C1 navigation.texi:l8
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -57,7 +57,7 @@ $result_tree_text{'navigation_vertical'} = '*document_root C10
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 navigation.texi:l10 {chapter}
+ *normal_command@node C1 navigation.texi:l10 {chapter}
  |EXTRA
  |identifier:{chapter}
  |is_target:{1}
@@ -67,7 +67,7 @@ $result_tree_text{'navigation_vertical'} = '*document_root C10
     {spaces_before_argument: }
     {normal_text:chapter}
     {spaces_after_argument:\\n}
- *@chapter C4 navigation.texi:l11 {First chapter}
+ *normal_command@chapter C4 navigation.texi:l11 {First chapter}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -78,7 +78,7 @@ $result_tree_text{'navigation_vertical'} = '*document_root C10
     {normal_text:First chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C3 navigation.texi:l13
+  *normal_command@menu C3 navigation.texi:l13
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -93,7 +93,7 @@ $result_tree_text{'navigation_vertical'} = '*document_root C10
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 navigation.texi:l15
+   *normal_command@end C1 navigation.texi:l15
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -101,7 +101,7 @@ $result_tree_text{'navigation_vertical'} = '*document_root C10
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 navigation.texi:l17 {section}
+ *normal_command@node C1 navigation.texi:l17 {section}
  |EXTRA
  |identifier:{section}
  |is_target:{1}
@@ -111,7 +111,7 @@ $result_tree_text{'navigation_vertical'} = '*document_root C10
     {spaces_before_argument: }
     {normal_text:section}
     {spaces_after_argument:\\n}
- *@section C30 navigation.texi:l18 {Section in chapter}
+ *normal_command@section C30 navigation.texi:l18 {Section in chapter}
  |EXTRA
  |section_heading_number:{1.1}
  |section_level:{2}
@@ -162,7 +162,7 @@ $result_tree_text{'navigation_vertical'} = '*document_root C10
    {normal_text:b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b \\n}
    {normal_text:b b b b b b b b b b b b b b b b  b b b b b bb b b b b b b  bb  b bb.\\n}
   {empty_line:\\n}
-  *@menu C3 navigation.texi:l47
+  *normal_command@menu C3 navigation.texi:l47
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -177,7 +177,7 @@ $result_tree_text{'navigation_vertical'} = '*document_root C10
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 navigation.texi:l49
+   *normal_command@end C1 navigation.texi:l49
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -185,7 +185,7 @@ $result_tree_text{'navigation_vertical'} = '*document_root C10
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 navigation.texi:l51 {subsection}
+ *normal_command@node C1 navigation.texi:l51 {subsection}
  |EXTRA
  |identifier:{subsection}
  |is_target:{1}
@@ -195,7 +195,7 @@ $result_tree_text{'navigation_vertical'} = '*document_root C10
     {spaces_before_argument: }
     {normal_text:subsection}
     {spaces_after_argument:\\n}
- *@subsection C4 navigation.texi:l52 {Sub section in section}
+ *normal_command@subsection C4 navigation.texi:l52 {Sub section in section}
  |EXTRA
  |section_heading_number:{1.1.1}
  |section_level:{3}
@@ -206,13 +206,13 @@ $result_tree_text{'navigation_vertical'} = '*document_root C10
     {normal_text:Sub section in section}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@contents C1 navigation.texi:l54
+  *normal_command@contents C1 navigation.texi:l54
   |EXTRA
   |global_command_number:{1}
    *line_arg C1
     {spaces_before_argument:\\n}
   {empty_line:\\n}
- *@bye C1
+ *normal_command@bye C1
   *line_arg C1
    {spaces_before_argument:\\n}
 ';

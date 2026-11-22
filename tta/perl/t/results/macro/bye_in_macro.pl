@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'bye_in_macro'} = '*document_root C3
  *before_node_section C2
   *preamble_before_content C2
-   *@macro C6 l1
+   *normal_command@macro C6 l1
    |EXTRA
    |formal_args:A{}
    |macro_name:{byeinmacro}
@@ -21,7 +21,7 @@ $result_tree_text{'bye_in_macro'} = '*document_root C3
     {raw:@bye\\n}
     {raw:\\n}
     {raw:after bye\\n}
-    *@end C1 l6
+    *normal_command@end C1 l6
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -34,7 +34,7 @@ $result_tree_text{'bye_in_macro'} = '*document_root C3
    >SOURCEMARKS
    >macro_expansion<start;1>
     >*macro_call@byeinmacro
- *@bye C1
+ *normal_command@bye C1
   *line_arg C1
    {spaces_before_argument:\\n}
  *postamble_after_end C5

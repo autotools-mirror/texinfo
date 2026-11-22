@@ -15,35 +15,35 @@ $result_tree_text{'test_two_include'} = '*document_root C1
    {normal_text:Include version\\n}
    >SOURCEMARKS
    >include<start;1><p:16>
-    >*@include C1 l2
+    >*normal_command@include C1 l2
     >|EXTRA
     >|text_arg:{version.texi}
      >*line_arg C3
       >{spaces_before_argument: }
       >{normal_text:version.texi}
       >{spaces_after_argument:\\n}
-   *@set C1
+   *normal_command@set C1
    |EXTRA
    |misc_args:A{UPDATED|28 March 2002}
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:UPDATED 28 March 2002}
      {spaces_after_argument:\\n}
-   *@set C1
+   *normal_command@set C1
    |EXTRA
    |misc_args:A{UPDATED-MONTH|March 2002}
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:UPDATED-MONTH March 2002}
      {spaces_after_argument:\\n}
-   *@set C1
+   *normal_command@set C1
    |EXTRA
    |misc_args:A{EDITION|4.2}
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:EDITION 4.2}
      {spaces_after_argument:\\n}
-   *@set C1
+   *normal_command@set C1
    |EXTRA
    |misc_args:A{VERSION|4.2}
     *line_arg C3
@@ -51,21 +51,21 @@ $result_tree_text{'test_two_include'} = '*document_root C1
      {rawline_text:VERSION 4.2}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@set C1
+  *normal_command@set C1
   |EXTRA
   |misc_args:A{VERSION_DATE|October 2002}
    *line_arg C3
     {spaces_before_argument: }
     {rawline_text:VERSION_DATE October 2002}
     {spaces_after_argument:\\n}
-  *@set C1
+  *normal_command@set C1
   |EXTRA
   |misc_args:A{SHORT_VERSION|2-0}
    *line_arg C3
     {spaces_before_argument: }
     {rawline_text:SHORT_VERSION 2-0}
     {spaces_after_argument:\\n}
-  *@set C1
+  *normal_command@set C1
   |EXTRA
   |misc_args:A{RPM_VERSION|2.0.4}
   >SOURCEMARKS
@@ -79,7 +79,7 @@ $result_tree_text{'test_two_include'} = '*document_root C1
    {normal_text:include inc_file\\n}
    >SOURCEMARKS
    >include<start;2><p:17>
-    >*@include C1 l5
+    >*normal_command@include C1 l5
     >|EXTRA
     >|text_arg:{inc_file.texi}
      >*line_arg C3

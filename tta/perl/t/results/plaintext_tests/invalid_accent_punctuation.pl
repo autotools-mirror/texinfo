@@ -13,8 +13,8 @@ $result_tree_text{'invalid_accent_punctuation'} = '*document_root C1
   *preamble_before_content
   *paragraph C3
    {normal_text:a. }
-   *@^ l1
-   *@@
+   *normal_command@^ l1
+   *normal_command@@
 ';
 
 

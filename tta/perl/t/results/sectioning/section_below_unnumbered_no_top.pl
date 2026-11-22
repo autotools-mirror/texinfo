@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'section_below_unnumbered_no_top'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content
- *@unnumbered C1 l1 {U}
+ *normal_command@unnumbered C1 l1 {U}
  |EXTRA
  |identifier:{U}
  |is_target:{1}
@@ -22,7 +22,7 @@ $result_tree_text{'section_below_unnumbered_no_top'} = '*document_root C3
     {spaces_before_argument: }
     {normal_text:U}
     {spaces_after_argument:\\n}
- *@section C1 l2 {S}
+ *normal_command@section C1 l2 {S}
  |EXTRA
  |identifier:{S}
  |is_target:{1}

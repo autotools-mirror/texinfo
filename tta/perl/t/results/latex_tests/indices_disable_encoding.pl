@@ -13,7 +13,7 @@ $result_tree_text{'indices_disable_encoding'} = '*document_root C5
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content C2
-   *@set C1
+   *normal_command@set C1
    |EXTRA
    |misc_args:A{txiindexbackslashignore|}
     *line_arg C3
@@ -21,7 +21,7 @@ $result_tree_text{'indices_disable_encoding'} = '*document_root C5
      {rawline_text:txiindexbackslashignore}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@node C1 l4 {Top}
+ *normal_command@node C1 l4 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -31,7 +31,7 @@ $result_tree_text{'indices_disable_encoding'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l5 {top section}
+ *normal_command@top C2 l5 {top section}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -41,7 +41,7 @@ $result_tree_text{'indices_disable_encoding'} = '*document_root C5
     {normal_text:top section}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l7 {chapter}
+ *normal_command@node C1 l7 {chapter}
  |EXTRA
  |identifier:{chapter}
  |is_target:{1}
@@ -52,7 +52,7 @@ $result_tree_text{'indices_disable_encoding'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:chapter}
     {spaces_after_argument:\\n}
- *@chapter C22 l8 {Index}
+ *normal_command@chapter C22 l8 {Index}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -70,11 +70,11 @@ $result_tree_text{'indices_disable_encoding'} = '*document_root C5
   |index_ignore_chars:{\\}
    *line_arg C5
     {spaces_before_argument: }
-    *@" C1 l10
+    *normal_command@" C1 l10
      *following_arg C1
       {normal_text:a}
     {normal_text: }
-    *@" C1 l10
+    *normal_command@" C1 l10
      *brace_container C1
       {normal_text:o}
     {spaces_after_argument:\\n}
@@ -121,7 +121,7 @@ $result_tree_text{'indices_disable_encoding'} = '*document_root C5
   |index_ignore_chars:{\\}
    *line_arg C3
     {spaces_before_argument: }
-    *@^ C1 l15
+    *normal_command@^ C1 l15
      *following_arg C1
       {normal_text:i}
     {spaces_after_argument:\\n}
@@ -133,65 +133,65 @@ $result_tree_text{'indices_disable_encoding'} = '*document_root C5
   |index_ignore_chars:{\\}
    *line_arg C10
     {spaces_before_argument: }
-    *@math C1 l17
+    *normal_command@math C1 l17
      *brace_arg C3
       {normal_text:a!"}
-      *@@
+      *normal_command@@
       {normal_text:b}
     {normal_text: "!}
-    *@@
+    *normal_command@@
     {normal_text: }
-    *@" C1 l17
+    *normal_command@" C1 l17
      *following_arg C1
       {normal_text:a}
     {normal_text: }
-    *@" C1 l17
+    *normal_command@" C1 l17
      *brace_container C1
       {normal_text:o}
     {spaces_after_argument: }
-    *@subentry C1 l17
+    *normal_command@subentry C1 l17
     |EXTRA
     |sortas:{a!"@b}
      *line_arg C14
       {spaces_before_argument: }
-      *@sortas C1 l17
+      *normal_command@sortas C1 l17
        *brace_arg C3
         {normal_text:a!"}
-        *@@
+        *normal_command@@
         {normal_text:b}
       {spaces_after_close_brace: }
       {normal_text:sub}
-      *@math C1 l17
+      *normal_command@math C1 l17
        *brace_arg C3
         {normal_text:a!"}
-        *@@
+        *normal_command@@
         {normal_text:b}
       {normal_text: sub "!}
-      *@@
+      *normal_command@@
       {normal_text: }
-      *@" C1 l17
+      *normal_command@" C1 l17
        *following_arg C1
         {normal_text:a}
       {normal_text: }
-      *@" C1 l17
+      *normal_command@" C1 l17
        *brace_container C1
         {normal_text:o}
       {spaces_at_end: }
-      *@seealso C1 l17
+      *normal_command@seealso C1 l17
        *brace_arg C7
-        *@math C1 l17
+        *normal_command@math C1 l17
          *brace_arg C3
           {normal_text:a!"}
-          *@@
+          *normal_command@@
           {normal_text:b}
         {normal_text: "!}
-        *@@
+        *normal_command@@
         {normal_text: }
-        *@" C1 l17
+        *normal_command@" C1 l17
          *following_arg C1
           {normal_text:a}
         {normal_text: }
-        *@" C1 l17
+        *normal_command@" C1 l17
          *brace_container C1
           {normal_text:o}
       {spaces_after_argument:\\n}
@@ -214,12 +214,12 @@ $result_tree_text{'indices_disable_encoding'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:totocmd}
     {spaces_at_end: }
-    *@sortas C1 l19
+    *normal_command@sortas C1 l19
      *brace_arg C1
       {normal_text:\\cmd}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@clear C1
+  *normal_command@clear C1
   |EXTRA
   |misc_args:A{txiindexbackslashignore}
    *line_arg C3
@@ -234,11 +234,11 @@ $result_tree_text{'indices_disable_encoding'} = '*document_root C5
    *line_arg C5
     {spaces_before_argument: }
     {normal_text:\\some\\command for }
-    *@file C1 l23
+    *normal_command@file C1 l23
      *brace_container C1
       {normal_text:file}
     {spaces_after_argument: }
-    *@c C1
+    *normal_command@c C1
      *line_arg C3
       {spaces_before_argument: }
       {rawline_text:comment}
@@ -251,16 +251,16 @@ $result_tree_text{'indices_disable_encoding'} = '*document_root C5
    *line_arg C6
     {spaces_before_argument: }
     {normal_text:the }
-    *@r C1 l25
+    *normal_command@r C1 l25
      *brace_container C1
       {normal_text:person}
     {normal_text: index }
-    *@file C1 l25
+    *normal_command@file C1 l25
      *brace_container C1
       {normal_text:aa}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@printindex C1 l27
+  *normal_command@printindex C1 l27
   |EXTRA
   |global_command_number:{1}
   |misc_args:A{cp}
@@ -269,7 +269,7 @@ $result_tree_text{'indices_disable_encoding'} = '*document_root C5
     {normal_text:cp}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@printindex C1 l29
+  *normal_command@printindex C1 l29
   |EXTRA
   |global_command_number:{2}
   |misc_args:A{fn}

@@ -13,7 +13,7 @@ $result_tree_text{'chapter_node_before_and_after_part'} = '*document_root C6
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content
- *@node C1 l2 {Top}
+ *normal_command@node C1 l2 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -23,7 +23,7 @@ $result_tree_text{'chapter_node_before_and_after_part'} = '*document_root C6
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@chapter C4 l3 {chapter}
+ *normal_command@chapter C4 l3 {chapter}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -34,7 +34,7 @@ $result_tree_text{'chapter_node_before_and_after_part'} = '*document_root C6
     {normal_text:chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C3 l5
+  *normal_command@menu C3 l5
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -49,7 +49,7 @@ $result_tree_text{'chapter_node_before_and_after_part'} = '*document_root C6
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l7
+   *normal_command@end C1 l7
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -57,7 +57,7 @@ $result_tree_text{'chapter_node_before_and_after_part'} = '*document_root C6
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@part C2 l9 {part}
+ *normal_command@part C2 l9 {part}
  |EXTRA
  |global_command_number:{1}
  |section_level:{0}
@@ -68,7 +68,7 @@ $result_tree_text{'chapter_node_before_and_after_part'} = '*document_root C6
     {normal_text:part}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l11 {after}
+ *normal_command@node C1 l11 {after}
  |EXTRA
  |identifier:{after}
  |is_target:{1}
@@ -78,7 +78,7 @@ $result_tree_text{'chapter_node_before_and_after_part'} = '*document_root C6
     {spaces_before_argument: }
     {normal_text:after}
     {spaces_after_argument:\\n}
- *@chapter C3 l12 {chapter 2}
+ *normal_command@chapter C3 l12 {chapter 2}
  |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
@@ -89,7 +89,7 @@ $result_tree_text{'chapter_node_before_and_after_part'} = '*document_root C6
     {normal_text:chapter 2}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@contents C1 l14
+  *normal_command@contents C1 l14
   |EXTRA
   |global_command_number:{1}
    *line_arg C1

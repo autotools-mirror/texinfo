@@ -11,20 +11,20 @@ use Encode;
 $result_tree_text{'space_at_commands_end_quotation_line'} = '*document_root C1
  *before_node_section C4
   *preamble_before_content
-  *@quotation C3 l1
+  *normal_command@quotation C3 l1
    *arguments_line C1
     *block_line_arg C4
      {spaces_before_argument: }
-     *@@
+     *normal_command@@
      {normal_text: at the end of line }
-     *@\\n
+     *normal_command@\\n
    *paragraph C5
     {normal_text:A }
-    *@@
+    *normal_command@@
     {normal_text: at the end of the }
-    *@@
+    *normal_command@@
     {normal_text:quotation line.\\n}
-   *@end C1 l3
+   *normal_command@end C1 l3
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3
@@ -32,23 +32,23 @@ $result_tree_text{'space_at_commands_end_quotation_line'} = '*document_root C1
      {normal_text:quotation}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@quotation C3 l5
+  *normal_command@quotation C3 l5
    *arguments_line C1
     *block_line_arg C6
      {spaces_before_argument: }
-     *@@
-     *@ 
+     *normal_command@@
+     *normal_command@ 
      {normal_text: at the end of line }
-     *@ 
+     *normal_command@ 
      {spaces_after_argument:\\n}
    *paragraph C6
     {normal_text:A }
-    *@@
-    *@ 
+    *normal_command@@
+    *normal_command@ 
     {normal_text: at the end of the }
-    *@@
+    *normal_command@@
     {normal_text:quotation line.\\n}
-   *@end C1 l7
+   *normal_command@end C1 l7
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3

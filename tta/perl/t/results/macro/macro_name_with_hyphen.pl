@@ -11,14 +11,14 @@ use Encode;
 $result_tree_text{'macro_name_with_hyphen'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C2
-   *@macro C3 l1
+   *normal_command@macro C3 l1
    |EXTRA
    |formal_args:A{arg-one|arg2}
    |macro_name:{macro-one}
     *arguments_line C1
      {macro_line: macro-one {arg-one, arg2}\\n}
     {raw:This \\arg-one\\ and that \\arg2\\.\\n}
-    *@end C1 l3
+    *normal_command@end C1 l3
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -36,7 +36,7 @@ $result_tree_text{'macro_name_with_hyphen'} = '*document_root C1
      >*brace_arg C2
       >{spaces_before_argument: }
       >{macro_call_arg_text:@code{bli-bli}}
-   *@code C1 l5:@macro-one
+   *normal_command@code C1 l5:@macro-one
     *brace_container C1
      {normal_text:bli-bli}
    {normal_text:.\\n}

@@ -11,30 +11,30 @@ use Encode;
 $result_tree_text{'accent_on_table_line'} = '*document_root C1
  *before_node_section C14
   *preamble_before_content
-  *@table C4 l1
+  *normal_command@table C4 l1
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     *@~ l1
+     *normal_command@~ l1
      {spaces_after_argument:\\n}
    *table_entry C1
     *table_term C1
-     *@item C1 l2
+     *normal_command@item C1 l2
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:first item}
        {spaces_after_argument:\\n}
    *table_entry C1
     *table_term C1
-     *@item C1 l3
+     *normal_command@item C1 l3
       *line_arg C4
        {spaces_before_argument: }
        {normal_text:no at-command }
-       *@code C1 l3
+       *normal_command@code C1 l3
         *brace_container C1
          {normal_text:code}
        {spaces_after_argument:\\n}
-   *@end C1 l4
+   *normal_command@end C1 l4
    |EXTRA
    |text_arg:{table}
     *line_arg C3
@@ -42,31 +42,31 @@ $result_tree_text{'accent_on_table_line'} = '*document_root C1
      {normal_text:table}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@table C4 l6
+  *normal_command@table C4 l6
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     *@~ C1 l6
+     *normal_command@~ C1 l6
       *brace_container
      {spaces_after_argument:\\n}
    *table_entry C1
     *table_term C1
-     *@item C1 l7
+     *normal_command@item C1 l7
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:acc brace first item}
        {spaces_after_argument:\\n}
    *table_entry C1
     *table_term C1
-     *@item C1 l8
+     *normal_command@item C1 l8
       *line_arg C4
        {spaces_before_argument: }
        {normal_text:no at-command }
-       *@code C1 l8
+       *normal_command@code C1 l8
         *brace_container C1
          {normal_text:code acc brace}
        {spaces_after_argument:\\n}
-   *@end C1 l9
+   *normal_command@end C1 l9
    |EXTRA
    |text_arg:{table}
     *line_arg C3
@@ -74,23 +74,23 @@ $result_tree_text{'accent_on_table_line'} = '*document_root C1
      {normal_text:table}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@table C3 l11
+  *normal_command@table C3 l11
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     *@~ l11
-     *@comment C1
+     *normal_command@~ l11
+     *normal_command@comment C1
       *line_arg C2
        {rawline_text:}
        {spaces_after_argument:\\n}
    *table_entry C1
     *table_term C1
-     *@item C1 l12
+     *normal_command@item C1 l12
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:acc comment first item}
        {spaces_after_argument:\\n}
-   *@end C1 l13
+   *normal_command@end C1 l13
    |EXTRA
    |text_arg:{table}
     *line_arg C3
@@ -98,20 +98,20 @@ $result_tree_text{'accent_on_table_line'} = '*document_root C1
      {normal_text:table}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@table C3 l15
+  *normal_command@table C3 l15
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     *@~ l15
+     *normal_command@~ l15
      {spaces_after_argument: \\n}
    *table_entry C1
     *table_term C1
-     *@item C1 l16
+     *normal_command@item C1 l16
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:acc space first item}
        {spaces_after_argument:\\n}
-   *@end C1 l17
+   *normal_command@end C1 l17
    |EXTRA
    |text_arg:{table}
     *line_arg C3
@@ -119,20 +119,20 @@ $result_tree_text{'accent_on_table_line'} = '*document_root C1
      {normal_text:table}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@table C3 l19
+  *normal_command@table C3 l19
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     *@ringaccent l19
+     *normal_command@ringaccent l19
      {spaces_after_argument:\\n}
    *table_entry C1
     *table_term C1
-     *@item C1 l20
+     *normal_command@item C1 l20
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:cmdacc first item}
        {spaces_after_argument:\\n}
-   *@end C1 l21
+   *normal_command@end C1 l21
    |EXTRA
    |text_arg:{table}
     *line_arg C3
@@ -140,21 +140,21 @@ $result_tree_text{'accent_on_table_line'} = '*document_root C1
      {normal_text:table}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@table C3 l23
+  *normal_command@table C3 l23
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     *@ringaccent C1 l23
+     *normal_command@ringaccent C1 l23
       *brace_container
      {spaces_after_argument:\\n}
    *table_entry C1
     *table_term C1
-     *@item C1 l24
+     *normal_command@item C1 l24
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:cmdacc braces first item}
        {spaces_after_argument:\\n}
-   *@end C1 l25
+   *normal_command@end C1 l25
    |EXTRA
    |text_arg:{table}
     *line_arg C3
@@ -162,22 +162,22 @@ $result_tree_text{'accent_on_table_line'} = '*document_root C1
      {normal_text:table}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@table C3 l27
+  *normal_command@table C3 l27
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     *@ringaccent C1 l27
+     *normal_command@ringaccent C1 l27
       *brace_container C1
        {normal_text:a}
      {spaces_after_argument:\\n}
    *table_entry C1
     *table_term C1
-     *@item C1 l28
+     *normal_command@item C1 l28
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:cmdacc braces arg first item}
        {spaces_after_argument:\\n}
-   *@end C1 l29
+   *normal_command@end C1 l29
    |EXTRA
    |text_arg:{table}
     *line_arg C3

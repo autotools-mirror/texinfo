@@ -11,14 +11,14 @@ use Encode;
 $result_tree_text{'value_after_brace_command'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C3
-   *@set C1
+   *normal_command@set C1
    |EXTRA
    |misc_args:A{bracedletter|{a}}
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:bracedletter {a}}
      {spaces_after_argument:\\n}
-   *@set C1
+   *normal_command@set C1
    |EXTRA
    |misc_args:A{unknowncmd|@unknown}
     *line_arg C3
@@ -27,69 +27,69 @@ $result_tree_text{'value_after_brace_command'} = '*document_root C1
      {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C12
-   *@ringaccent C2 l4
+   *normal_command@ringaccent C2 l4
    >SOURCEMARKS
    >value_expansion<end;1>
     {spaces_after_cmd_before_arg: }
     >SOURCEMARKS
     >value_expansion<start;1><p:1>{{a}}
-     >*@value C1
+     >*normal_command@value C1
       >*brace_container C1
        >{normal_text:bracedletter}
     *brace_container C1
      {normal_text:a}
    {normal_text:\\n}
-   *@ringaccent C1 l5
+   *normal_command@ringaccent C1 l5
    >SOURCEMARKS
    >value_expansion<end;2>
     {spaces_after_cmd_before_arg: }
     >SOURCEMARKS
     >value_expansion<start;2><p:1>{@unknown}
-     >*@value C1
+     >*normal_command@value C1
       >*brace_container C1
        >{normal_text:unknowncmd}
    {normal_text:\\n}
-   *@^ C2 l6
+   *normal_command@^ C2 l6
    >SOURCEMARKS
    >value_expansion<end;3>
     {spaces_after_cmd_before_arg: }
     >SOURCEMARKS
     >value_expansion<start;3><p:1>{{a}}
-     >*@value C1
+     >*normal_command@value C1
       >*brace_container C1
        >{normal_text:bracedletter}
     *brace_container C1
      {normal_text:a}
    {normal_text:\\n}
-   *@^ C1 l7
+   *normal_command@^ C1 l7
    >SOURCEMARKS
    >value_expansion<end;4>
     {spaces_after_cmd_before_arg: }
     >SOURCEMARKS
     >value_expansion<start;4><p:1>{@unknown}
-     >*@value C1
+     >*normal_command@value C1
       >*brace_container C1
        >{normal_text:unknowncmd}
    {normal_text:\\n}
-   *@code C2 l8
+   *normal_command@code C2 l8
    >SOURCEMARKS
    >value_expansion<end;5>
     {spaces_after_cmd_before_arg: }
     >SOURCEMARKS
     >value_expansion<start;5><p:1>{{a}}
-     >*@value C1
+     >*normal_command@value C1
       >*brace_container C1
        >{normal_text:bracedletter}
     *brace_container C1
      {normal_text:a}
    {normal_text:\\n}
-   *@code C1 l9
+   *normal_command@code C1 l9
    >SOURCEMARKS
    >value_expansion<end;6>
     {spaces_after_cmd_before_arg: }
     >SOURCEMARKS
     >value_expansion<start;6><p:1>{@unknown}
-     >*@value C1
+     >*normal_command@value C1
       >*brace_container C1
        >{normal_text:unknowncmd}
    {normal_text:\\n}

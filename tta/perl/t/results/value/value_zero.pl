@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'value_zero'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C1
-   *@set C1
+   *normal_command@set C1
    |EXTRA
    |misc_args:A{zero|0}
     *line_arg C3
@@ -23,7 +23,7 @@ $result_tree_text{'value_zero'} = '*document_root C1
    {normal_text:0}
    >SOURCEMARKS
    >value_expansion<start;1>{0}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:zero}
    >value_expansion<end;1><p:1>

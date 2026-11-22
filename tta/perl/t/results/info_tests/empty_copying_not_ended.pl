@@ -13,7 +13,7 @@ $result_tree_text{'empty_copying_not_ended'} = '*document_root C1
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content C1
-   *@copying C1 l2
+   *normal_command@copying C1 l2
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}

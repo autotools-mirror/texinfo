@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'verbatim_in_ref'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
- *@node C6 l1 {first}
+ *normal_command@node C6 l1 {first}
  |EXTRA
  |identifier:{first}
  |is_target:{1}
@@ -23,17 +23,17 @@ $result_tree_text{'verbatim_in_ref'} = '*document_root C2
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   *@xref C2 l3
+   *normal_command@xref C2 l3
     *brace_arg C1
      {normal_text:first}
     *brace_arg C1
      {spaces_before_argument: \\n}
-  *@verbatim C3 l4
+  *normal_command@verbatim C3 l4
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    {raw:verbat text\\n}
-   *@end C1 l6
+   *normal_command@end C1 l6
    |EXTRA
    |text_arg:{verbatim}
     *line_arg C3

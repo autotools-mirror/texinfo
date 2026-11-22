@@ -13,7 +13,7 @@ $result_tree_text{'comment_between_text'} = '*document_root C1
   *preamble_before_content
   *paragraph C3
    {normal_text:text\\n}
-   *@c C1
+   *normal_command@c C1
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:comment}

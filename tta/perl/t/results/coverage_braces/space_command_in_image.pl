@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'space_command_in_image'} = '*document_root C1
  *before_node_section C4
   *preamble_before_content
-  *@image C4 l1
+  *normal_command@image C4 l1
   |EXTRA
   |input_encoding_name:{utf-8}
    *brace_arg C1
@@ -19,9 +19,9 @@ $result_tree_text{'space_command_in_image'} = '*document_root C1
    *brace_arg
    *brace_arg
    *brace_arg C1
-    *@ 
+    *normal_command@ 
   {normal_text: }
-  *@image C4 l1
+  *normal_command@image C4 l1
   |EXTRA
   |input_encoding_name:{utf-8}
    *brace_arg C1
@@ -29,7 +29,7 @@ $result_tree_text{'space_command_in_image'} = '*document_root C1
    *brace_arg
    *brace_arg
    *brace_arg C1
-    *@:
+    *normal_command@:
 ';
 
 

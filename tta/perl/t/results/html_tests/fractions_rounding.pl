@@ -11,13 +11,13 @@ use Encode;
 $result_tree_text{'fractions_rounding'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@multitable C3 l1
+  *normal_command@multitable C3 l1
   |EXTRA
   |max_columns:{4}
    *arguments_line C1
     *block_line_arg C2
      {spaces_before_argument: }
-     *@columnfractions C1 l1
+     *normal_command@columnfractions C1 l1
      |EXTRA
      |misc_args:A{.19|.30|.29|.22}
       *line_arg C3
@@ -28,25 +28,25 @@ $result_tree_text{'fractions_rounding'} = '*document_root C1
     *row C4
     |EXTRA
     |row_number:{1}
-     *@item C2 l2
+     *normal_command@item C2 l2
      |EXTRA
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
        {normal_text:In contents            }
-     *@tab C2 l2
+     *normal_command@tab C2 l2
      |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C1
        {normal_text:In contents                  }
-     *@tab C2 l2
+     *normal_command@tab C2 l2
      |EXTRA
      |cell_number:{3}
       {ignorable_spaces_after_command: }
       *paragraph C1
        {normal_text:In contents           }
-     *@tab C2 l2
+     *normal_command@tab C2 l2
      |EXTRA
      |cell_number:{4}
       {ignorable_spaces_after_command: }
@@ -55,47 +55,47 @@ $result_tree_text{'fractions_rounding'} = '*document_root C1
     *row C4
     |EXTRA
     |row_number:{2}
-     *@item C2 l3
+     *normal_command@item C2 l3
      |EXTRA
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C2
-       *@code C1 l3
+       *normal_command@code C1 l3
         *brace_container C2
-         *@@
+         *normal_command@@
          {normal_text:chapter}
        {normal_text:       }
-     *@tab C2 l3
+     *normal_command@tab C2 l3
      |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C2
-       *@code C1 l3
+       *normal_command@code C1 l3
         *brace_container C2
-         *@@
+         *normal_command@@
          {normal_text:unnumbered}
        {normal_text:          }
-     *@tab C2 l3
+     *normal_command@tab C2 l3
      |EXTRA
      |cell_number:{3}
       {ignorable_spaces_after_command: }
       *paragraph C2
-       *@code C1 l3
+       *normal_command@code C1 l3
         *brace_container C2
-         *@@
+         *normal_command@@
          {normal_text:appendix}
        {normal_text: }
-     *@tab C2 l3
+     *normal_command@tab C2 l3
      |EXTRA
      |cell_number:{4}
       {ignorable_spaces_after_command: }
       *paragraph C2
-       *@code C1 l3
+       *normal_command@code C1 l3
         *brace_container C2
-         *@@
+         *normal_command@@
          {normal_text:chapheading}
        {normal_text:\\n}
-   *@end C1 l4
+   *normal_command@end C1 l4
    |EXTRA
    |text_arg:{multitable}
     *line_arg C3

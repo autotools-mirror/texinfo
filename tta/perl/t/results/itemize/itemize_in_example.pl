@@ -11,17 +11,17 @@ use Encode;
 $result_tree_text{'itemize_in_example'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@example C11 l1
+  *normal_command@example C11 l1
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
-   *@itemize C3 l2
+   *normal_command@itemize C3 l2
     *arguments_line C1
      *block_line_arg C3
       {spaces_before_argument: }
-      *@bullet l2
+      *normal_command@bullet l2
       {spaces_after_argument:\\n}
-    *@item C1 l3
+    *normal_command@item C1 l3
     |EXTRA
     |item_number:{1}
      *preformatted C4
@@ -29,7 +29,7 @@ $result_tree_text{'itemize_in_example'} = '*document_root C1
       {normal_text:first\\n}
       {empty_line:\\n}
       {normal_text:more.\\n}
-    *@end C1 l6
+    *normal_command@end C1 l6
     |EXTRA
     |text_arg:{itemize}
      *line_arg C3
@@ -38,19 +38,19 @@ $result_tree_text{'itemize_in_example'} = '*document_root C1
       {spaces_after_argument:\\n}
    *preformatted C1
     {empty_line:\\n}
-   *@itemize C3 l8
+   *normal_command@itemize C3 l8
     *arguments_line C1
      *block_line_arg C3
       {spaces_before_argument: }
-      *@asis l8
+      *normal_command@asis l8
       {spaces_after_argument:\\n}
-    *@item C1 l9
+    *normal_command@item C1 l9
     |EXTRA
     |item_number:{1}
      *preformatted C2
       {ignorable_spaces_after_command: }
       {normal_text:as is\\n}
-    *@end C1 l10
+    *normal_command@end C1 l10
     |EXTRA
     |text_arg:{itemize}
      *line_arg C3
@@ -59,19 +59,19 @@ $result_tree_text{'itemize_in_example'} = '*document_root C1
       {spaces_after_argument:\\n}
    *preformatted C1
     {empty_line:\\n}
-   *@itemize C3 l12
+   *normal_command@itemize C3 l12
     *arguments_line C1
      *block_line_arg C3
       {spaces_before_argument: }
       {normal_text:+}
       {spaces_after_argument:\\n}
-    *@item C1 l13
+    *normal_command@item C1 l13
     |EXTRA
     |item_number:{1}
      *preformatted C2
       {ignorable_spaces_after_command: }
       {normal_text:item +\\n}
-    *@end C1 l14
+    *normal_command@end C1 l14
     |EXTRA
     |text_arg:{itemize}
      *line_arg C3
@@ -80,19 +80,19 @@ $result_tree_text{'itemize_in_example'} = '*document_root C1
       {spaces_after_argument:\\n}
    *preformatted C1
     {empty_line:\\n}
-   *@itemize C3 l16
+   *normal_command@itemize C3 l16
     *arguments_line C1
      *block_line_arg C3
       {spaces_before_argument: }
       {normal_text:m--n}
       {spaces_after_argument:\\n}
-    *@item C1 l17
+    *normal_command@item C1 l17
     |EXTRA
     |item_number:{1}
      *preformatted C2
       {ignorable_spaces_after_command: }
       {normal_text:with m--n\\n}
-    *@end C1 l18
+    *normal_command@end C1 l18
     |EXTRA
     |text_arg:{itemize}
      *line_arg C3
@@ -101,28 +101,28 @@ $result_tree_text{'itemize_in_example'} = '*document_root C1
       {spaces_after_argument:\\n}
    *preformatted C1
     {empty_line:\\n}
-   *@itemize C3 l20
+   *normal_command@itemize C3 l20
     *arguments_line C1
      *block_line_arg C4
       {spaces_before_argument: }
-      *@bullet C1 l20
+      *normal_command@bullet C1 l20
        *brace_container
       {normal_text: a--n itemize line}
       {spaces_after_argument:\\n}
-    *@item C1 l21
+    *normal_command@item C1 l21
     |EXTRA
     |item_number:{1}
      *preformatted C2
       {ignorable_spaces_after_command: }
       {normal_text:in an itemize line\\n}
-    *@end C1 l22
+    *normal_command@end C1 l22
     |EXTRA
     |text_arg:{itemize}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:itemize}
       {spaces_after_argument:\\n}
-   *@end C1 l23
+   *normal_command@end C1 l23
    |EXTRA
    |text_arg:{example}
     *line_arg C3

@@ -12,25 +12,25 @@ $result_tree_text{'uref_with_commands_characters'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *paragraph C2
-   *@uref C2 l1
+   *normal_command@uref C2 l1
     *brace_arg C9
      {normal_text:http://my-host.com/~}
-     *@strong C1 l1
+     *normal_command@strong C1 l1
       *brace_container C1
        {normal_text:toto}
      {normal_text:%5Cs\'q"a&e?b}
-     *@}
+     *normal_command@}
      {normal_text:b}
-     *@{
+     *normal_command@{
      {normal_text:ba}
-     *@@
+     *normal_command@@
      {normal_text:s\\s p+h#aaa}
     *brace_arg C3
      {spaces_before_argument: }
      {normal_text:see that }
-     *@strong C1 l1
+     *normal_command@strong C1 l1
       *brace_container C1
-       *@LaTeX C1 l1
+       *normal_command@LaTeX C1 l1
         *brace_container
    {normal_text:\\n}
 ';

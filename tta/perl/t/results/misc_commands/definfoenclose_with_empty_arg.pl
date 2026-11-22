@@ -13,7 +13,7 @@ $result_tree_text{'definfoenclose_with_empty_arg'} = '*document_root C1
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content C2
-   *@definfoenclose C1 l2
+   *normal_command@definfoenclose C1 l2
    |EXTRA
    |misc_args:A{headword||:}
     *line_arg C3

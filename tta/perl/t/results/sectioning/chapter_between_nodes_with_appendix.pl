@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'chapter_between_nodes_with_appendix'} = '*document_root C6
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'chapter_between_nodes_with_appendix'} = '*document_root C6
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C1 l2 {top section}
+ *normal_command@top C1 l2 {top section}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -30,7 +30,7 @@ $result_tree_text{'chapter_between_nodes_with_appendix'} = '*document_root C6
     {spaces_before_argument: }
     {normal_text:top section}
     {spaces_after_argument:\\n}
- *@chapter C5 l3 {Main}
+ *normal_command@chapter C5 l3 {Main}
  |EXTRA
  |identifier:{Main}
  |is_target:{1}
@@ -45,7 +45,7 @@ $result_tree_text{'chapter_between_nodes_with_appendix'} = '*document_root C6
   *paragraph C1
    {normal_text:Top node\\n}
   {empty_line:\\n}
-  *@menu C3 l6
+  *normal_command@menu C3 l6
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -60,7 +60,7 @@ $result_tree_text{'chapter_between_nodes_with_appendix'} = '*document_root C6
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l8
+   *normal_command@end C1 l8
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -68,7 +68,7 @@ $result_tree_text{'chapter_between_nodes_with_appendix'} = '*document_root C6
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l10 {Additional}
+ *normal_command@node C1 l10 {Additional}
  |EXTRA
  |identifier:{Additional}
  |is_target:{1}
@@ -78,7 +78,7 @@ $result_tree_text{'chapter_between_nodes_with_appendix'} = '*document_root C6
     {spaces_before_argument: }
     {normal_text:Additional}
     {spaces_after_argument:\\n}
- *@appendix C1 l11 {Annex}
+ *normal_command@appendix C1 l11 {Annex}
  |EXTRA
  |section_heading_number:{A}
  |section_level:{1}

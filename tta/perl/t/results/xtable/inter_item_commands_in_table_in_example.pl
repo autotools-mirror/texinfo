@@ -11,19 +11,19 @@ use Encode;
 $result_tree_text{'inter_item_commands_in_table_in_example'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@example C3 l1
+  *normal_command@example C3 l1
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
-   *@table C4 l2
+   *normal_command@table C4 l2
     *arguments_line C1
      *block_line_arg C3
       {spaces_before_argument: }
-      *@var l2
+      *normal_command@var l2
       {spaces_after_argument:\\n}
     *table_entry C2
      *table_term C5
-      *@item C1 l3
+      *normal_command@item C1 l3
        *line_arg C3
         {spaces_before_argument: }
         {normal_text:a--b}
@@ -37,17 +37,17 @@ $result_tree_text{'inter_item_commands_in_table_in_example'} = '*document_root C
           {spaces_before_argument: }
           {normal_text:index entry between item and itemx}
           {spaces_after_argument:\\n}
-        *@c C1
+        *normal_command@c C1
          *line_arg C3
           {spaces_before_argument: }
           {rawline_text:and a comment}
           {spaces_after_argument:\\n}
-        *@comment C1
+        *normal_command@comment C1
          *line_arg C3
           {spaces_before_argument: }
           {rawline_text:and another comment}
           {spaces_after_argument:\\n}
-      *@itemx C1 l7
+      *normal_command@itemx C1 l7
        *line_arg C3
         {spaces_before_argument: }
         {normal_text:b}
@@ -55,7 +55,7 @@ $result_tree_text{'inter_item_commands_in_table_in_example'} = '*document_root C
       *inter_item C1
        *preformatted C1
         {empty_line:\\n}
-      *@itemx C1 l9
+      *normal_command@itemx C1 l9
        *line_arg C3
         {spaces_before_argument: }
         {normal_text:c}
@@ -65,19 +65,19 @@ $result_tree_text{'inter_item_commands_in_table_in_example'} = '*document_root C
        {normal_text:l--ine\\n}
     *table_entry C1
      *table_term C1
-      *@item C1 l11
+      *normal_command@item C1 l11
        *line_arg C3
         {spaces_before_argument: }
         {normal_text:d}
         {spaces_after_argument:\\n}
-    *@end C1 l12
+    *normal_command@end C1 l12
     |EXTRA
     |text_arg:{table}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:table}
       {spaces_after_argument:\\n}
-   *@end C1 l13
+   *normal_command@end C1 l13
    |EXTRA
    |text_arg:{example}
     *line_arg C3

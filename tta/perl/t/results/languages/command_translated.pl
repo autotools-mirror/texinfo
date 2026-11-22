@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'command_translated'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content C2
-   *@documentlanguage C1 l1
+   *normal_command@documentlanguage C1 l1
    |EXTRA
    |global_command_number:{1}
    |text_arg:{fr}
@@ -20,7 +20,7 @@ $result_tree_text{'command_translated'} = '*document_root C5
      {normal_text:fr}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@node C1 l3 {Top}
+ *normal_command@node C1 l3 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -30,7 +30,7 @@ $result_tree_text{'command_translated'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C4 l4 {top @error{}}
+ *normal_command@top C4 l4 {top @error{}}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -38,16 +38,16 @@ $result_tree_text{'command_translated'} = '*document_root C5
    *line_arg C4
     {spaces_before_argument: }
     {normal_text:top }
-    *@error C1 l4
+    *normal_command@error C1 l4
      *brace_container
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@error C1 l6
+   *normal_command@error C1 l6
     *brace_container
    {normal_text:\\n}
   {empty_line:\\n}
- *@node C1 l8 {chapter @error{}}
+ *normal_command@node C1 l8 {chapter @error{}}
  |EXTRA
  |identifier:{chapter-error_002d_002d_003e}
  |is_target:{1}
@@ -56,10 +56,10 @@ $result_tree_text{'command_translated'} = '*document_root C5
    *line_arg C4
     {spaces_before_argument: }
     {normal_text:chapter }
-    *@error C1 l8
+    *normal_command@error C1 l8
      *brace_container
     {spaces_after_argument:\\n}
- *@chapter C1 l9 {Chapter}
+ *normal_command@chapter C1 l9 {Chapter}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}

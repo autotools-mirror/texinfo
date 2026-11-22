@@ -13,7 +13,7 @@ $result_tree_text{'multitable_bracketed_prototype_not_closed_space_comment'} = '
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content
-  *@multitable C2 l2
+  *normal_command@multitable C2 l2
   |EXTRA
   |max_columns:{1}
    *arguments_line C1
@@ -22,12 +22,12 @@ $result_tree_text{'multitable_bracketed_prototype_not_closed_space_comment'} = '
      *bracketed_arg C3 l2
       {normal_text:a}
       {spaces_after_argument: }
-      *@c C1
+      *normal_command@c C1
        *line_arg C3
         {spaces_before_argument: }
         {rawline_text:comment}
         {spaces_after_argument:\\n}
-   *@end C1 l3
+   *normal_command@end C1 l3
    |EXTRA
    |text_arg:{multitable}
     *line_arg C3

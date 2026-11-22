@@ -14,7 +14,7 @@ $result_tree_text{'raw_epub'} = '*document_root C1
    {empty_line:\\n}
   *paragraph C2
    {normal_text:in EPUB\\n}
-   *@end C1 l3
+   *normal_command@end C1 l3
    |EXTRA
    |text_arg:{epub}
     *line_arg C3

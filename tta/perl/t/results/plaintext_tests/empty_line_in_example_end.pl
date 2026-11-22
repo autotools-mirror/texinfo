@@ -11,14 +11,14 @@ use Encode;
 $result_tree_text{'empty_line_in_example_end'} = '*document_root C1
  *before_node_section C4
   *preamble_before_content
-  *@example C3 l1
+  *normal_command@example C3 l1
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C2
     {normal_text:in example\\n}
     {empty_line:\\n}
-   *@end C1 l4
+   *normal_command@end C1 l4
    |EXTRA
    |text_arg:{example}
     *line_arg C3

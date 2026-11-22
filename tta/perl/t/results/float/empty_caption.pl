@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'empty_caption'} = '*document_root C1
  *before_node_section C6
   *preamble_before_content
-  *@float C5 l1
+  *normal_command@float C5 l1
   |EXTRA
   |float_number:{1}
   |float_type:{a}
@@ -28,10 +28,10 @@ $result_tree_text{'empty_caption'} = '*document_root C1
      {spaces_after_argument:\\n}
    *paragraph C1
     {normal_text:In float A, B\\n}
-   *@caption C1 l3
+   *normal_command@caption C1 l3
     *brace_command_context
    {spaces_after_close_brace:\\n}
-   *@end C1 l4
+   *normal_command@end C1 l4
    |EXTRA
    |text_arg:{float}
     *line_arg C3
@@ -39,7 +39,7 @@ $result_tree_text{'empty_caption'} = '*document_root C1
      {normal_text:float}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@float C5 l6
+  *normal_command@float C5 l6
   |EXTRA
   |float_number:{1}
   |float_type:{}
@@ -55,10 +55,10 @@ $result_tree_text{'empty_caption'} = '*document_root C1
      {spaces_after_argument:\\n}
    *paragraph C1
     {normal_text:In float , C\\n}
-   *@shortcaption C1 l8
+   *normal_command@shortcaption C1 l8
     *brace_command_context
    {spaces_after_close_brace:\\n}
-   *@end C1 l9
+   *normal_command@end C1 l9
    |EXTRA
    |text_arg:{float}
     *line_arg C3
@@ -66,7 +66,7 @@ $result_tree_text{'empty_caption'} = '*document_root C1
      {normal_text:float}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@float C7 l11
+  *normal_command@float C7 l11
   |EXTRA
   |float_type:{}
   |global_command_number:{3}
@@ -75,13 +75,13 @@ $result_tree_text{'empty_caption'} = '*document_root C1
      {spaces_before_argument:\\n}
    *paragraph C1
     {normal_text:In float\\n}
-   *@shortcaption C1 l13
+   *normal_command@shortcaption C1 l13
     *brace_command_context
    {spaces_after_close_brace:\\n}
-   *@caption C1 l14
+   *normal_command@caption C1 l14
     *brace_command_context
    {spaces_after_close_brace:\\n}
-   *@end C1 l15
+   *normal_command@end C1 l15
    |EXTRA
    |text_arg:{float}
     *line_arg C3

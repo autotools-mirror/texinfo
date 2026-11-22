@@ -14,12 +14,12 @@ $result_tree_text{'ifnotinfo_exception'} = '*document_root C1
    {normal_text:}
    >SOURCEMARKS
    >ignored_conditional_block<1>
-    >*@ifnotinfo C3 l1
+    >*normal_command@ifnotinfo C3 l1
      >*arguments_line C1
       >*block_line_arg C1
        >{spaces_before_argument:\\n}
      >{raw:in ifnotinfo\\n}
-     >*@end C1 l3
+     >*normal_command@end C1 l3
      >|EXTRA
      >|text_arg:{ifnotinfo}
       >*line_arg C3

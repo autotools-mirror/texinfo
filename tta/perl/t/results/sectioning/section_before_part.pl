@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'section_before_part'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content
- *@section C2 l1 {section}
+ *normal_command@section C2 l1 {section}
  |EXTRA
  |identifier:{section}
  |is_target:{1}
@@ -24,7 +24,7 @@ $result_tree_text{'section_before_part'} = '*document_root C3
     {normal_text:section}
     {spaces_after_argument: \\n}
   {empty_line:\\n}
- *@part C3 l3 {part}
+ *normal_command@part C3 l3 {part}
  |EXTRA
  |global_command_number:{1}
  |section_level:{0}
@@ -35,7 +35,7 @@ $result_tree_text{'section_before_part'} = '*document_root C3
     {normal_text:part}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@contents C1 l5
+  *normal_command@contents C1 l5
   |EXTRA
   |global_command_number:{1}
    *line_arg C1

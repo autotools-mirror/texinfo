@@ -11,12 +11,12 @@ use Encode;
 $result_tree_text{'comment_index_before_defline'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@defblock C4 l1
+  *normal_command@defblock C4 l1
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *before_defline C4
-    *@c C1
+    *normal_command@c C1
      *line_arg C3
       {spaces_before_argument: }
       {rawline_text:a comment}
@@ -28,13 +28,13 @@ $result_tree_text{'comment_index_before_defline'} = '*document_root C1
       {spaces_before_argument: }
       {normal_text:entry}
       {spaces_after_argument:\\n}
-    *@comment C1
+    *normal_command@comment C1
      *line_arg C3
       {spaces_before_argument: }
       {rawline_text:another}
       {spaces_after_argument:\\n}
     {empty_line:\\n}
-   *@defline C1 l6
+   *normal_command@defline C1 l6
    |EXTRA
    |def_command:{defline}
    |original_def_cmdname:{defline}
@@ -56,7 +56,7 @@ $result_tree_text{'comment_index_before_defline'} = '*document_root C1
       *def_line_arg C1
        {normal_text:d}
      {spaces_after_argument:\\n}
-   *@end C1 l7
+   *normal_command@end C1 l7
    |EXTRA
    |text_arg:{defblock}
     *line_arg C3

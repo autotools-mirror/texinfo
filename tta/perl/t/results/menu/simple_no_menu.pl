@@ -16,7 +16,7 @@ $result_tree_text{'simple_no_menu'} = '*document_root C1
   *paragraph C1
    {normal_text:Before menu.\\n}
   {empty_line:\\n}
-  *@menu C9 l4
+  *normal_command@menu C9 l4
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -91,7 +91,7 @@ $result_tree_text{'simple_no_menu'} = '*document_root C1
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l15
+   *normal_command@end C1 l15
    |EXTRA
    |text_arg:{menu}
     *line_arg C3

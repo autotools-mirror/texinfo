@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'next_in_menu_is_below'} = '*document_root C9
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'next_in_menu_is_below'} = '*document_root C9
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C4 l2 {top}
+ *normal_command@top C4 l2 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -31,7 +31,7 @@ $result_tree_text{'next_in_menu_is_below'} = '*document_root C9
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C3 l4
+  *normal_command@menu C3 l4
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -46,7 +46,7 @@ $result_tree_text{'next_in_menu_is_below'} = '*document_root C9
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l6
+   *normal_command@end C1 l6
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -54,7 +54,7 @@ $result_tree_text{'next_in_menu_is_below'} = '*document_root C9
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l8 {chapter}
+ *normal_command@node C1 l8 {chapter}
  |EXTRA
  |identifier:{chapter}
  |is_target:{1}
@@ -64,7 +64,7 @@ $result_tree_text{'next_in_menu_is_below'} = '*document_root C9
     {spaces_before_argument: }
     {normal_text:chapter}
     {spaces_after_argument:\\n}
- *@chapter C4 l9 {chapter}
+ *normal_command@chapter C4 l9 {chapter}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -75,7 +75,7 @@ $result_tree_text{'next_in_menu_is_below'} = '*document_root C9
     {normal_text:chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C4 l11
+  *normal_command@menu C4 l11
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -101,7 +101,7 @@ $result_tree_text{'next_in_menu_is_below'} = '*document_root C9
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l14
+   *normal_command@end C1 l14
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -109,7 +109,7 @@ $result_tree_text{'next_in_menu_is_below'} = '*document_root C9
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l16 {section}
+ *normal_command@node C1 l16 {section}
  |EXTRA
  |identifier:{section}
  |is_target:{1}
@@ -119,7 +119,7 @@ $result_tree_text{'next_in_menu_is_below'} = '*document_root C9
     {spaces_before_argument: }
     {normal_text:section}
     {spaces_after_argument:\\n}
- *@section C4 l17 {section}
+ *normal_command@section C4 l17 {section}
  |EXTRA
  |section_heading_number:{1.1}
  |section_level:{2}
@@ -130,7 +130,7 @@ $result_tree_text{'next_in_menu_is_below'} = '*document_root C9
     {normal_text:section}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C3 l19
+  *normal_command@menu C3 l19
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -145,7 +145,7 @@ $result_tree_text{'next_in_menu_is_below'} = '*document_root C9
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l21
+   *normal_command@end C1 l21
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -153,7 +153,7 @@ $result_tree_text{'next_in_menu_is_below'} = '*document_root C9
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l23 {subsection}
+ *normal_command@node C1 l23 {subsection}
  |EXTRA
  |identifier:{subsection}
  |is_target:{1}
@@ -163,7 +163,7 @@ $result_tree_text{'next_in_menu_is_below'} = '*document_root C9
     {spaces_before_argument: }
     {normal_text:subsection}
     {spaces_after_argument:\\n}
- *@subsection C1 l24 {subsection}
+ *normal_command@subsection C1 l24 {subsection}
  |EXTRA
  |section_heading_number:{1.1.1}
  |section_level:{3}

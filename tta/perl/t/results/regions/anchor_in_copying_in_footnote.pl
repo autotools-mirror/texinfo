@@ -11,21 +11,21 @@ use Encode;
 $result_tree_text{'anchor_in_copying_in_footnote'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content C2
-   *@copying C5 l1
+   *normal_command@copying C5 l1
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     {empty_line:\\n}
     *paragraph C3
      {normal_text:Copying}
-     *@footnote C1 l3
+     *normal_command@footnote C1 l3
      |EXTRA
      |global_command_number:{1}
       *brace_command_context C2
        {spaces_before_argument:\\n}
        *paragraph C3
         {normal_text:In footnote.\\n}
-        *@anchor C1 l5
+        *normal_command@anchor C1 l5
         |EXTRA
         |identifier:{Copying-footnote}
         |is_target:{1}
@@ -36,7 +36,7 @@ $result_tree_text{'anchor_in_copying_in_footnote'} = '*document_root C3
         {spaces_after_close_brace:\\n}
      {normal_text:.\\n}
     {empty_line:\\n}
-    *@end C1 l8
+    *normal_command@end C1 l8
     |EXTRA
     |text_arg:{copying}
      *line_arg C3
@@ -44,7 +44,7 @@ $result_tree_text{'anchor_in_copying_in_footnote'} = '*document_root C3
       {normal_text:copying}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@node C2 l10 {Top}
+ *normal_command@node C2 l10 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -55,7 +55,7 @@ $result_tree_text{'anchor_in_copying_in_footnote'} = '*document_root C3
     {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C8 l12 {chap}
+ *normal_command@node C8 l12 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -66,20 +66,20 @@ $result_tree_text{'anchor_in_copying_in_footnote'} = '*document_root C3
     {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@insertcopying C1 l14
+  *normal_command@insertcopying C1 l14
   |EXTRA
   |global_command_number:{1}
    *line_arg C1
     {spaces_before_argument:\\n}
   {empty_line:\\n}
-  *@insertcopying C1 l16
+  *normal_command@insertcopying C1 l16
   |EXTRA
   |global_command_number:{2}
    *line_arg C1
     {spaces_before_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@xref C1 l18
+   *normal_command@xref C1 l18
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}

@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'footnotestyle_separate_html_text_no_monolithic'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content C2
-   *@footnotestyle C1 l1
+   *normal_command@footnotestyle C1 l1
    |EXTRA
    |misc_args:A{separate}
     *line_arg C3
@@ -19,7 +19,7 @@ $result_tree_text{'footnotestyle_separate_html_text_no_monolithic'} = '*document
      {normal_text:separate}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@node C1 l3 {Top}
+ *normal_command@node C1 l3 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -29,7 +29,7 @@ $result_tree_text{'footnotestyle_separate_html_text_no_monolithic'} = '*document
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C3 l4 {top}
+ *normal_command@top C3 l4 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -40,7 +40,7 @@ $result_tree_text{'footnotestyle_separate_html_text_no_monolithic'} = '*document
     {spaces_after_argument:\\n}
   *paragraph C3
    {normal_text:In top}
-   *@footnote C1 l5
+   *normal_command@footnote C1 l5
    |EXTRA
    |global_command_number:{1}
     *brace_command_context C1
@@ -48,7 +48,7 @@ $result_tree_text{'footnotestyle_separate_html_text_no_monolithic'} = '*document
       {normal_text:Additional text}
    {normal_text:.\\n}
   {empty_line:\\n}
- *@node C1 l7 {chap}
+ *normal_command@node C1 l7 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -58,7 +58,7 @@ $result_tree_text{'footnotestyle_separate_html_text_no_monolithic'} = '*document
     {spaces_before_argument: }
     {normal_text:chap}
     {spaces_after_argument:\\n}
- *@chapter C2 l8 {Chap}
+ *normal_command@chapter C2 l8 {Chap}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}

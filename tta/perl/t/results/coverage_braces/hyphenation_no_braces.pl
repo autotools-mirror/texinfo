@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'hyphenation_no_braces'} = '*document_root C1
  *before_node_section C1
   *preamble_before_content C1
-   *@hyphenation l1
+   *normal_command@hyphenation l1
 ';
 
 

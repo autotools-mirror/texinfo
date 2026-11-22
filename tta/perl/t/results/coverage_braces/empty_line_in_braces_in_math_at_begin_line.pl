@@ -12,7 +12,7 @@ $result_tree_text{'empty_line_in_braces_in_math_at_begin_line'} = '*document_roo
  *before_node_section C2
   *preamble_before_content
   *paragraph C1
-   *@math C1 l1
+   *normal_command@math C1 l1
     *brace_arg C5
      {normal_text:a\\n}
      {empty_line:\\n}

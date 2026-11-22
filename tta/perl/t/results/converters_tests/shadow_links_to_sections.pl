@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'shadow_links_to_sections'} = '*document_root C12
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'shadow_links_to_sections'} = '*document_root C12
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l2 {Shadow}
+ *normal_command@top C2 l2 {Shadow}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -31,7 +31,7 @@ $result_tree_text{'shadow_links_to_sections'} = '*document_root C12
     {normal_text:Shadow}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l4 {first}
+ *normal_command@node C1 l4 {first}
  |EXTRA
  |identifier:{first}
  |is_target:{1}
@@ -41,7 +41,7 @@ $result_tree_text{'shadow_links_to_sections'} = '*document_root C12
     {spaces_before_argument: }
     {normal_text:first}
     {spaces_after_argument:\\n}
- *@chapter C4 l5 {First chap}
+ *normal_command@chapter C4 l5 {First chap}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -53,7 +53,7 @@ $result_tree_text{'shadow_links_to_sections'} = '*document_root C12
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@xref C1 l7
+   *normal_command@xref C1 l7
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -61,7 +61,7 @@ $result_tree_text{'shadow_links_to_sections'} = '*document_root C12
      {normal_text:two}
    {normal_text:. --- goes to one of the section named two\\n}
   {empty_line:\\n}
- *@chapter C4 l9 {foo}
+ *normal_command@chapter C4 l9 {foo}
  |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
@@ -74,7 +74,7 @@ $result_tree_text{'shadow_links_to_sections'} = '*document_root C12
   {empty_line:\\n}
   *paragraph C3
    {normal_text:Aaaaaaaaaa.  }
-   *@xref C1 l11
+   *normal_command@xref C1 l11
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -82,7 +82,7 @@ $result_tree_text{'shadow_links_to_sections'} = '*document_root C12
      {normal_text:bar}
    {normal_text:.\\n}
   {empty_line:\\n}
- *@chapter C4 l13 {bar}
+ *normal_command@chapter C4 l13 {bar}
  |EXTRA
  |identifier:{bar}
  |is_target:{1}
@@ -97,7 +97,7 @@ $result_tree_text{'shadow_links_to_sections'} = '*document_root C12
   {empty_line:\\n}
   *paragraph C3
    {normal_text:Bbbbbbbbbbb.  }
-   *@xref C1 l15
+   *normal_command@xref C1 l15
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -105,7 +105,7 @@ $result_tree_text{'shadow_links_to_sections'} = '*document_root C12
      {normal_text:foo}
    {normal_text:. -- goes to baz chapter.\\n}
   {empty_line:\\n}
- *@section C6 l17 {two}
+ *normal_command@section C6 l17 {two}
  |EXTRA
  |identifier:{two}
  |is_target:{1}
@@ -122,7 +122,7 @@ $result_tree_text{'shadow_links_to_sections'} = '*document_root C12
    {normal_text:CCCCCCC.\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@xref C1 l21
+   *normal_command@xref C1 l21
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -130,7 +130,7 @@ $result_tree_text{'shadow_links_to_sections'} = '*document_root C12
      {normal_text:baz}
    {normal_text:. --- fails\\n}
   {empty_line:\\n}
- *@node C1 l23 {foo}
+ *normal_command@node C1 l23 {foo}
  |EXTRA
  |identifier:{foo}
  |is_target:{1}
@@ -140,7 +140,7 @@ $result_tree_text{'shadow_links_to_sections'} = '*document_root C12
     {spaces_before_argument: }
     {normal_text:foo}
     {spaces_after_argument:\\n}
- *@chapter C4 l24 {baz}
+ *normal_command@chapter C4 l24 {baz}
  |EXTRA
  |section_heading_number:{4}
  |section_level:{1}
@@ -154,7 +154,7 @@ $result_tree_text{'shadow_links_to_sections'} = '*document_root C12
   *paragraph C1
    {normal_text:LLLLLLLLLLL.\\n}
   {empty_line:\\n}
- *@section C4 l28 {two}
+ *normal_command@section C4 l28 {two}
  |EXTRA
  |section_heading_number:{4.1}
  |section_level:{2}
@@ -168,7 +168,7 @@ $result_tree_text{'shadow_links_to_sections'} = '*document_root C12
   *paragraph C1
    {normal_text:DDDDDDDDD.\\n}
   {empty_line:\\n}
- *@section C5 l32 {with @ref{foo, b} after}
+ *normal_command@section C5 l32 {with @ref{foo, b} after}
  |EXTRA
  |identifier:{with-foo-after}
  |is_target:{1}
@@ -179,7 +179,7 @@ $result_tree_text{'shadow_links_to_sections'} = '*document_root C12
    *line_arg C5
     {spaces_before_argument: }
     {normal_text:with }
-    *@ref C2 l32
+    *normal_command@ref C2 l32
      *brace_arg C1
      |EXTRA
      |node_content:A{0|0}
@@ -192,18 +192,18 @@ $result_tree_text{'shadow_links_to_sections'} = '*document_root C12
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C4
-   *@xref C1 l34
+   *normal_command@xref C1 l34
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{with-foo-after}
      {normal_text:with foo after}
    {normal_text:. --- link to section with }
-   *@@
+   *normal_command@@
    {normal_text:ref in name\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@xref C1 l36
+   *normal_command@xref C1 l36
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}

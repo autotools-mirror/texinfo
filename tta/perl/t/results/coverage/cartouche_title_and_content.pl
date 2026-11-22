@@ -11,19 +11,19 @@ use Encode;
 $result_tree_text{'cartouche_title_and_content'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@cartouche C3 l1
+  *normal_command@cartouche C3 l1
    *arguments_line C1
     *block_line_arg C4
      {spaces_before_argument: }
      {normal_text:Box title on }
-     *@emph C1 l1
+     *normal_command@emph C1 l1
       *brace_container C1
        {normal_text:documentation}
      {spaces_after_argument:\\n}
    *paragraph C2
     {normal_text:Text on documentation explaining something important out of the main\\n}
     {normal_text:flow of the text.\\n}
-   *@end C1 l4
+   *normal_command@end C1 l4
    |EXTRA
    |text_arg:{cartouche}
     *line_arg C3

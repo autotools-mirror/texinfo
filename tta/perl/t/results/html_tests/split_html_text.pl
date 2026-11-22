@@ -18,7 +18,7 @@ NodeNext: [U1]
 NodeForward: [U1]
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -28,7 +28,7 @@ NodeForward: [U1]
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C3 l2 {top}
+ *normal_command@top C3 l2 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -50,7 +50,7 @@ Up: [U0]
 NodePrev: [U0]
 NodeUp: [U0]
 NodeBack: [U0]
- *@node C1 l5 {chap}
+ *normal_command@node C1 l5 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -60,7 +60,7 @@ NodeBack: [U0]
     {spaces_before_argument: }
     {normal_text:chap}
     {spaces_after_argument:\\n}
- *@chapter C1 l6 {Chap}
+ *normal_command@chapter C1 l6 {Chap}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}

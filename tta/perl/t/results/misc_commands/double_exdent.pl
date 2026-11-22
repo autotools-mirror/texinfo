@@ -11,34 +11,34 @@ use Encode;
 $result_tree_text{'double_exdent'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@example C4 l1
+  *normal_command@example C4 l1
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C1
     {normal_text:Example   Hoho.\\n}
-   *@example C4 l3
+   *normal_command@example C4 l3
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *preformatted C1
      {normal_text:Nested Other line\\n}
-    *@exdent C1 l5
+    *normal_command@exdent C1 l5
      *line_arg C2
       {spaces_before_argument: }
-      *@exdent C1 l5
+      *normal_command@exdent C1 l5
        *line_arg C3
         {spaces_before_argument: }
         {normal_text:double  exdented nested other line}
         {spaces_after_argument:\\n}
-    *@end C1 l6
+    *normal_command@end C1 l6
     |EXTRA
     |text_arg:{example}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:example}
       {spaces_after_argument:\\n}
-   *@end C1 l7
+   *normal_command@end C1 l7
    |EXTRA
    |text_arg:{example}
     *line_arg C3

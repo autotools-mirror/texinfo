@@ -11,15 +11,15 @@ use Encode;
 $result_tree_text{'shorttitlepage'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content C2
-   *@shorttitlepage C1 l1
+   *normal_command@shorttitlepage C1 l1
     *line_arg C5
      {spaces_before_argument: }
      {normal_text:the title with shorttitlepage }
-     *@*
+     *normal_command@*
      {normal_text: it can be long}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@node C1 l3 {Top}
+ *normal_command@node C1 l3 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -29,7 +29,7 @@ $result_tree_text{'shorttitlepage'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l4 {section top}
+ *normal_command@top C2 l4 {section top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -39,7 +39,7 @@ $result_tree_text{'shorttitlepage'} = '*document_root C5
     {normal_text:section top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l6 {chapter}
+ *normal_command@node C1 l6 {chapter}
  |EXTRA
  |identifier:{chapter}
  |is_target:{1}
@@ -49,7 +49,7 @@ $result_tree_text{'shorttitlepage'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:chapter}
     {spaces_after_argument:\\n}
- *@chapter C3 l7 {Chapter}
+ *normal_command@chapter C3 l7 {Chapter}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}

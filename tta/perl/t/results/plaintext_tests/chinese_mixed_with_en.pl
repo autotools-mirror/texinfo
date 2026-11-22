@@ -13,7 +13,7 @@ $result_tree_text{'chinese_mixed_with_en'} = '*document_root C6
   *preamble_before_beginning C1
    {text_before_beginning:\\input texinfo\\n}
   *preamble_before_content C3
-   *@documentencoding C1 chinese_mixed_with_en.texi:l2
+   *normal_command@documentencoding C1 chinese_mixed_with_en.texi:l2
    |EXTRA
    |global_command_number:{1}
    |input_encoding_name:{utf-8}
@@ -22,13 +22,13 @@ $result_tree_text{'chinese_mixed_with_en'} = '*document_root C6
      {spaces_before_argument: }
      {normal_text:utf-8}
      {spaces_after_argument:\\n}
-   *@settitle C1 chinese_mixed_with_en.texi:l3
+   *normal_command@settitle C1 chinese_mixed_with_en.texi:l3
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:chinese mixed with english}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@node C1 chinese_mixed_with_en.texi:l5 {Top}
+ *normal_command@node C1 chinese_mixed_with_en.texi:l5 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -38,7 +38,7 @@ $result_tree_text{'chinese_mixed_with_en'} = '*document_root C6
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C4 chinese_mixed_with_en.texi:l6 {Mixed chinese and english}
+ *normal_command@top C4 chinese_mixed_with_en.texi:l6 {Mixed chinese and english}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -51,7 +51,7 @@ $result_tree_text{'chinese_mixed_with_en'} = '*document_root C6
   *paragraph C1
    {normal_text:Example of english and chinese, chinese aligned or not.\\n}
   {empty_line:\\n}
- *@node C1 chinese_mixed_with_en.texi:l10 {Mixed english and chinese}
+ *normal_command@node C1 chinese_mixed_with_en.texi:l10 {Mixed english and chinese}
  |EXTRA
  |identifier:{Mixed-english-and-chinese}
  |is_target:{1}
@@ -61,7 +61,7 @@ $result_tree_text{'chinese_mixed_with_en'} = '*document_root C6
     {spaces_before_argument: }
     {normal_text:Mixed english and chinese}
     {spaces_after_argument:\\n}
- *@chapter C19 chinese_mixed_with_en.texi:l11 {Mixed english and chinese}
+ *normal_command@chapter C19 chinese_mixed_with_en.texi:l11 {Mixed english and chinese}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -106,7 +106,7 @@ $result_tree_text{'chinese_mixed_with_en'} = '*document_root C6
    {normal_text:overlap。\\n}
   {empty_line:\\n}
   {empty_line:\\n}
- *@bye C1
+ *normal_command@bye C1
   *line_arg C1
    {spaces_before_argument:\\n}
 ';

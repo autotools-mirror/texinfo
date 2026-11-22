@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'node_in_copying_not_closed'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content C1
-   *@copying C5 l1
+   *normal_command@copying C5 l1
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
@@ -20,7 +20,7 @@ $result_tree_text{'node_in_copying_not_closed'} = '*document_root C3
      {normal_text:This is an unterminatted copyright notice\\n}
     {empty_line:\\n}
     {empty_line:\\n}
- *@node C1 l6 {Top}
+ *normal_command@node C1 l6 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -30,7 +30,7 @@ $result_tree_text{'node_in_copying_not_closed'} = '*document_root C3
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C3 l7 {Top section}
+ *normal_command@top C3 l7 {Top section}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -40,7 +40,7 @@ $result_tree_text{'node_in_copying_not_closed'} = '*document_root C3
     {normal_text:Top section}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@insertcopying C1 l9
+  *normal_command@insertcopying C1 l9
   |EXTRA
   |global_command_number:{1}
    *line_arg C1

@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'multitable_not_closed_item_tab'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@multitable C2 l1
+  *normal_command@multitable C2 l1
   |EXTRA
   |max_columns:{2}
    *arguments_line C1
@@ -27,13 +27,13 @@ $result_tree_text{'multitable_not_closed_item_tab'} = '*document_root C1
     *row C2
     |EXTRA
     |row_number:{1}
-     *@item C2 l2
+     *normal_command@item C2 l2
      |EXTRA
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
        {normal_text:rt }
-     *@tab C2 l2
+     *normal_command@tab C2 l2
      |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }

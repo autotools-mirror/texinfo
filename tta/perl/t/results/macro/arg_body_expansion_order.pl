@@ -13,14 +13,14 @@ $result_tree_text{'arg_body_expansion_order'} = '*document_root C1
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content C6
-   *@macro C3 l2
+   *normal_command@macro C3 l2
    |EXTRA
    |formal_args:A{}
    |macro_name:{othermacro}
     *arguments_line C1
      {macro_line: othermacro\\n}
     {raw:initial\\n}
-    *@end C1 l4
+    *normal_command@end C1 l4
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -28,7 +28,7 @@ $result_tree_text{'arg_body_expansion_order'} = '*document_root C1
       {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@macro C7 l6
+   *normal_command@macro C7 l6
    |EXTRA
    |formal_args:A{arg}
    |macro_name:{redefineothermacro}
@@ -39,7 +39,7 @@ $result_tree_text{'arg_body_expansion_order'} = '*document_root C1
     {raw:different\\n}
     {raw:@end macro\\n}
     {raw:\\arg\\\\n}
-    *@end C1 l12
+    *normal_command@end C1 l12
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -52,21 +52,21 @@ $result_tree_text{'arg_body_expansion_order'} = '*document_root C1
     >*macro_call@redefineothermacro C1
      >*brace_arg C1
       >{macro_call_arg_text:@othermacro{}}
-   *@unmacro C1
+   *normal_command@unmacro C1
    |EXTRA
    |misc_args:A{othermacro}
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:othermacro}
      {spaces_after_argument:\\n}
-   *@macro C3 l14:@redefineothermacro
+   *normal_command@macro C3 l14:@redefineothermacro
    |EXTRA
    |formal_args:A{}
    |macro_name:{othermacro}
     *arguments_line C1
      {macro_line: othermacro\\n}
     {raw:different\\n}
-    *@end C1 l14:@redefineothermacro
+    *normal_command@end C1 l14:@redefineothermacro
     |EXTRA
     |text_arg:{macro}
      *line_arg C3

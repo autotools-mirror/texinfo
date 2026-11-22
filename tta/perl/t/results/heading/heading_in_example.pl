@@ -11,24 +11,24 @@ use Encode;
 $result_tree_text{'heading_in_example'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@example C3 l1
+  *normal_command@example C3 l1
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
-   *@heading C1 l2
+   *normal_command@heading C1 l2
    |EXTRA
    |global_command_number:{1}
    |heading_number:{1}
     *line_arg C6
      {spaces_before_argument: }
      {normal_text:in example }
-     *@@
+     *normal_command@@
      {normal_text: }
-     *@emph C1 l2
+     *normal_command@emph C1 l2
       *brace_container C1
        {normal_text:heading}
      {spaces_after_argument:\\n}
-   *@end C1 l3
+   *normal_command@end C1 l3
    |EXTRA
    |text_arg:{example}
     *line_arg C3

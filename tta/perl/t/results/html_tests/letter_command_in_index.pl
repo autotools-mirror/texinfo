@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'letter_command_in_index'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'letter_command_in_index'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l2 {top}
+ *normal_command@top C2 l2 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -31,7 +31,7 @@ $result_tree_text{'letter_command_in_index'} = '*document_root C5
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l4 {chap}
+ *normal_command@node C1 l4 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -42,7 +42,7 @@ $result_tree_text{'letter_command_in_index'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:chap}
     {spaces_after_argument:\\n}
- *@chapter C9 l5 {Chapter}
+ *normal_command@chapter C9 l5 {Chapter}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -59,7 +59,7 @@ $result_tree_text{'letter_command_in_index'} = '*document_root C5
   |index_entry:I{cp,1}
    *line_arg C3
     {spaces_before_argument: }
-    *@TH C1 l7
+    *normal_command@TH C1 l7
      *brace_container
     {spaces_after_argument:\\n}
   {empty_line:\\n}
@@ -69,7 +69,7 @@ $result_tree_text{'letter_command_in_index'} = '*document_root C5
   |index_entry:I{cp,2}
    *line_arg C3
     {spaces_before_argument: }
-    *@l C1 l9
+    *normal_command@l C1 l9
      *brace_container
     {spaces_after_argument:\\n}
   {empty_line:\\n}
@@ -79,12 +79,12 @@ $result_tree_text{'letter_command_in_index'} = '*document_root C5
   |index_entry:I{cp,3}
    *line_arg C3
     {spaces_before_argument: }
-    *@^ C1 l11
+    *normal_command@^ C1 l11
      *following_arg C1
       {normal_text:e}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@printindex C1 l13
+  *normal_command@printindex C1 l13
   |EXTRA
   |global_command_number:{1}
   |misc_args:A{cp}

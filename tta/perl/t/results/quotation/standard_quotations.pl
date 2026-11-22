@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'standard_quotations'} = '*document_root C1
  *before_node_section C12
   *preamble_before_content
-  *@quotation C3 l1
+  *normal_command@quotation C3 l1
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
@@ -19,7 +19,7 @@ $result_tree_text{'standard_quotations'} = '*document_root C1
      {spaces_after_argument:\\n}
    *paragraph C1
     {normal_text:A Note\\n}
-   *@end C1 l3
+   *normal_command@end C1 l3
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3
@@ -27,7 +27,7 @@ $result_tree_text{'standard_quotations'} = '*document_root C1
      {normal_text:quotation}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@quotation C3 l5
+  *normal_command@quotation C3 l5
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
@@ -35,7 +35,7 @@ $result_tree_text{'standard_quotations'} = '*document_root C1
      {spaces_after_argument:\\n}
    *paragraph C1
     {normal_text:A note\\n}
-   *@end C1 l7
+   *normal_command@end C1 l7
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3
@@ -43,7 +43,7 @@ $result_tree_text{'standard_quotations'} = '*document_root C1
      {normal_text:quotation}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@quotation C3 l9
+  *normal_command@quotation C3 l9
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
@@ -51,7 +51,7 @@ $result_tree_text{'standard_quotations'} = '*document_root C1
      {spaces_after_argument:\\n}
    *paragraph C1
     {normal_text:Caution\\n}
-   *@end C1 l11
+   *normal_command@end C1 l11
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3
@@ -59,7 +59,7 @@ $result_tree_text{'standard_quotations'} = '*document_root C1
      {normal_text:quotation}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@quotation C3 l13
+  *normal_command@quotation C3 l13
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
@@ -67,7 +67,7 @@ $result_tree_text{'standard_quotations'} = '*document_root C1
      {spaces_after_argument:\\n}
    *paragraph C1
     {normal_text:Important\\n}
-   *@end C1 l15
+   *normal_command@end C1 l15
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3
@@ -75,7 +75,7 @@ $result_tree_text{'standard_quotations'} = '*document_root C1
      {normal_text:quotation}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@quotation C3 l17
+  *normal_command@quotation C3 l17
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
@@ -83,7 +83,7 @@ $result_tree_text{'standard_quotations'} = '*document_root C1
      {spaces_after_argument:\\n}
    *paragraph C1
     {normal_text:a Tip\\n}
-   *@end C1 l19
+   *normal_command@end C1 l19
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3
@@ -91,7 +91,7 @@ $result_tree_text{'standard_quotations'} = '*document_root C1
      {normal_text:quotation}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@quotation C3 l21
+  *normal_command@quotation C3 l21
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
@@ -99,7 +99,7 @@ $result_tree_text{'standard_quotations'} = '*document_root C1
      {spaces_after_argument:\\n}
    *paragraph C1
     {normal_text:a Warning.\\n}
-   *@end C1 l23
+   *normal_command@end C1 l23
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3

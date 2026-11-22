@@ -11,11 +11,11 @@ use Encode;
 $result_tree_text{'command_not_closed_on_center_line'} = '*document_root C1
  *before_node_section C3
   *preamble_before_content
-  *@center C1 l1
+  *normal_command@center C1 l1
    *line_arg C3
     {spaces_before_argument: }
     {normal_text:c }
-    *@strong C1 l1
+    *normal_command@strong C1 l1
      *brace_container C1
       {normal_text:\\n}
   *paragraph C1

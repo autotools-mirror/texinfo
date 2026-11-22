@@ -13,13 +13,13 @@ $result_tree_text{'sp_with_text_before_in_example'} = '*document_root C1
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content
-  *@example C3 l2
+  *normal_command@example C3 l2
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C3
     {normal_text:sp}
-    *@sp C1 l3
+    *normal_command@sp C1 l3
     |EXTRA
     |misc_args:A{4}
      *line_arg C3
@@ -27,7 +27,7 @@ $result_tree_text{'sp_with_text_before_in_example'} = '*document_root C1
       {normal_text:4}
       {spaces_after_argument:\\n}
     {normal_text:text\\n}
-   *@end C1 l5
+   *normal_command@end C1 l5
    |EXTRA
    |text_arg:{example}
     *line_arg C3

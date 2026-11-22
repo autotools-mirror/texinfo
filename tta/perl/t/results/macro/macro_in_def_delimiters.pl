@@ -11,14 +11,14 @@ use Encode;
 $result_tree_text{'macro_in_def_delimiters'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C2
-   *@macro C3 l1
+   *normal_command@macro C3 l1
    |EXTRA
    |formal_args:A{}
    |macro_name:{string}
     *arguments_line C1
      {macro_line: string\\n}
     {raw:aa(b *c)\\n}
-    *@end C1 l3
+    *normal_command@end C1 l3
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -26,7 +26,7 @@ $result_tree_text{'macro_in_def_delimiters'} = '*document_root C1
       {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-  *@deffn C1 l5
+  *normal_command@deffn C1 l5
    *def_line C1 l5
    |EXTRA
    |def_command:{deffn}

@@ -11,13 +11,13 @@ use Encode;
 $result_tree_text{'enumerate_argument'} = '*document_root C1
  *before_node_section C8
   *preamble_before_content
-  *@enumerate C2 l1
+  *normal_command@enumerate C2 l1
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
      {normal_text:1}
      {spaces_after_argument:\\n}
-   *@end C1 l2
+   *normal_command@end C1 l2
    |EXTRA
    |text_arg:{enumerate}
     *line_arg C3
@@ -25,17 +25,17 @@ $result_tree_text{'enumerate_argument'} = '*document_root C1
      {normal_text:enumerate}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@enumerate C2 l4
+  *normal_command@enumerate C2 l4
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
      {normal_text:A}
-     *@c C1
+     *normal_command@c C1
       *line_arg C3
        {spaces_before_argument: }
        {rawline_text:comment}
        {spaces_after_argument:\\n}
-   *@end C1 l5
+   *normal_command@end C1 l5
    |EXTRA
    |text_arg:{enumerate}
     *line_arg C3
@@ -43,18 +43,18 @@ $result_tree_text{'enumerate_argument'} = '*document_root C1
      {normal_text:enumerate}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@enumerate C2 l7
+  *normal_command@enumerate C2 l7
    *arguments_line C1
     *block_line_arg C4
      {spaces_before_argument: }
      {normal_text:z}
      {spaces_after_argument: }
-     *@c C1
+     *normal_command@c C1
       *line_arg C3
        {spaces_before_argument: }
        {rawline_text:comment}
        {spaces_after_argument:\\n}
-   *@end C1 l8
+   *normal_command@end C1 l8
    |EXTRA
    |text_arg:{enumerate}
     *line_arg C3
@@ -62,13 +62,13 @@ $result_tree_text{'enumerate_argument'} = '*document_root C1
      {normal_text:enumerate}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@enumerate C2 l10
+  *normal_command@enumerate C2 l10
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
      {normal_text:0}
      {spaces_after_argument:\\n}
-   *@end C1 l11
+   *normal_command@end C1 l11
    |EXTRA
    |text_arg:{enumerate}
     *line_arg C3

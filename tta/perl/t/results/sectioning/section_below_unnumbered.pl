@@ -13,13 +13,13 @@ $result_tree_text{'section_below_unnumbered'} = '*document_root C8
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content C2
-   *@contents C1 l2
+   *normal_command@contents C1 l2
    |EXTRA
    |global_command_number:{1}
     *line_arg C1
      {spaces_before_argument:\\n}
    {empty_line:\\n}
- *@node C1 l4 {Top}
+ *normal_command@node C1 l4 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -29,7 +29,7 @@ $result_tree_text{'section_below_unnumbered'} = '*document_root C8
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C7 l5 {Top}
+ *normal_command@top C7 l5 {Top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -42,7 +42,7 @@ $result_tree_text{'section_below_unnumbered'} = '*document_root C8
   *paragraph C1
    {normal_text:Top node.\\n}
   {empty_line:\\n}
-  *@menu C3 l9
+  *normal_command@menu C3 l9
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -57,7 +57,7 @@ $result_tree_text{'section_below_unnumbered'} = '*document_root C8
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l11
+   *normal_command@end C1 l11
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -66,7 +66,7 @@ $result_tree_text{'section_below_unnumbered'} = '*document_root C8
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   {empty_line:\\n}
- *@node C1 l14 {Unn}
+ *normal_command@node C1 l14 {Unn}
  |EXTRA
  |identifier:{Unn}
  |is_target:{1}
@@ -76,7 +76,7 @@ $result_tree_text{'section_below_unnumbered'} = '*document_root C8
     {spaces_before_argument: }
     {normal_text:Unn}
     {spaces_after_argument:\\n}
- *@unnumbered C4 l15 {Unn}
+ *normal_command@unnumbered C4 l15 {Unn}
  |EXTRA
  |section_level:{1}
  |section_number:{2}
@@ -86,7 +86,7 @@ $result_tree_text{'section_below_unnumbered'} = '*document_root C8
     {normal_text:Unn}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C3 l17
+  *normal_command@menu C3 l17
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -101,7 +101,7 @@ $result_tree_text{'section_below_unnumbered'} = '*document_root C8
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l19
+   *normal_command@end C1 l19
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -109,7 +109,7 @@ $result_tree_text{'section_below_unnumbered'} = '*document_root C8
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l21 {Sec}
+ *normal_command@node C1 l21 {Sec}
  |EXTRA
  |identifier:{Sec}
  |is_target:{1}
@@ -119,7 +119,7 @@ $result_tree_text{'section_below_unnumbered'} = '*document_root C8
     {spaces_before_argument: }
     {normal_text:Sec}
     {spaces_after_argument:\\n}
- *@section C4 l22 {Sec}
+ *normal_command@section C4 l22 {Sec}
  |EXTRA
  |section_level:{2}
  |section_number:{3}
@@ -132,7 +132,7 @@ $result_tree_text{'section_below_unnumbered'} = '*document_root C8
   *paragraph C1
    {normal_text:Should be unnumbered.\\n}
   {empty_line:\\n}
- *@bye C1
+ *normal_command@bye C1
   *line_arg C1
    {spaces_before_argument:\\n}
 ';

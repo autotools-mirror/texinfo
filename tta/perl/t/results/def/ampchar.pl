@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'ampchar'} = '*document_root C1
  *before_node_section C3
   *preamble_before_content
-  *@defop C2 l1
+  *normal_command@defop C2 l1
    *def_line C1 l1
    |EXTRA
    |def_command:{defop}
@@ -34,13 +34,13 @@ $result_tree_text{'ampchar'} = '*document_root C1
      {delimiter:(}
      *def_arg C1
       *def_line_arg C1
-       *@code C1 l1
+       *normal_command@code C1 l1
         *brace_container C2
          {normal_text:const std::vector<int>}
-         *@&
+         *normal_command@&
      {delimiter:)}
      {spaces_after_argument:\\n}
-   *@end C1 l2
+   *normal_command@end C1 l2
    |EXTRA
    |text_arg:{defop}
     *line_arg C3
@@ -49,16 +49,16 @@ $result_tree_text{'ampchar'} = '*document_root C1
      {spaces_after_argument:\\n}
   *paragraph C11
    {normal_text:& }
-   *@&
+   *normal_command@&
    {normal_text: }
-   *@ampchar C1 l3
+   *normal_command@ampchar C1 l3
     *brace_container
    {normal_text: }
-   *@{
+   *normal_command@{
    {normal_text: }
-   *@}
+   *normal_command@}
    {normal_text: }
-   *@@
+   *normal_command@@
    {normal_text:\\n}
 ';
 

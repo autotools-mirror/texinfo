@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'double_command'} = '*document_root C1
  *before_node_section C4
   *preamble_before_content
-  *@deffn C3 l1
+  *normal_command@deffn C3 l1
    *def_line C1 l1
    |EXTRA
    |def_command:{deffn}
@@ -50,7 +50,7 @@ $result_tree_text{'double_command'} = '*document_root C1
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@deffnx C1 l1
+       *normal_command@deffnx C1 l1
        |EXTRA
        |def_command:{deffn}
        |index_entry:I{fn,1}
@@ -95,7 +95,7 @@ $result_tree_text{'double_command'} = '*document_root C1
    *def_item C1
     *paragraph C1
      {normal_text:aaa\\n}
-   *@end C1 l3
+   *normal_command@end C1 l3
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3
@@ -103,7 +103,7 @@ $result_tree_text{'double_command'} = '*document_root C1
      {normal_text:deffn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@deffn C3 l5
+  *normal_command@deffn C3 l5
    *def_line C1 l5
    |EXTRA
    |def_command:{deffn}
@@ -125,7 +125,7 @@ $result_tree_text{'double_command'} = '*document_root C1
      {spaces:  }
      *def_arg C1
       *def_line_arg C1
-       *@defvr C1 l5
+       *normal_command@defvr C1 l5
         *def_line C1 l5
         |EXTRA
         |def_command:{defvr}
@@ -144,7 +144,7 @@ $result_tree_text{'double_command'} = '*document_root C1
    *def_item C1
     *paragraph C1
      {normal_text:bbb\\n}
-   *@end C1 l7
+   *normal_command@end C1 l7
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3

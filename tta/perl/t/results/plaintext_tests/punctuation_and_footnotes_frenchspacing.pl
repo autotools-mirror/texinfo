@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'punctuation_and_footnotes_frenchspacing'} = '*document_root C1
  *before_node_section C8
   *preamble_before_content C2
-   *@frenchspacing C1 l1
+   *normal_command@frenchspacing C1 l1
    |EXTRA
    |global_command_number:{1}
    |misc_args:A{on}
@@ -22,7 +22,7 @@ $result_tree_text{'punctuation_and_footnotes_frenchspacing'} = '*document_root C
    {empty_line:\\n}
   *paragraph C8
    {normal_text:Text.}
-   *@footnote C1 l3
+   *normal_command@footnote C1 l3
    |EXTRA
    |global_command_number:{1}
     *brace_command_context C1
@@ -30,14 +30,14 @@ $result_tree_text{'punctuation_and_footnotes_frenchspacing'} = '*document_root C
       {normal_text:after period}
    {normal_text: Sentence \\n}
    {normal_text:end.}
-   *@footnote C1 l4
+   *normal_command@footnote C1 l4
    |EXTRA
    |global_command_number:{2}
     *brace_command_context C1
      *paragraph C1
       {normal_text:after period double}
    {normal_text:  S2.}
-   *@footnote C1 l4
+   *normal_command@footnote C1 l4
    |EXTRA
    |global_command_number:{3}
     *brace_command_context C1
@@ -47,14 +47,14 @@ $result_tree_text{'punctuation_and_footnotes_frenchspacing'} = '*document_root C
   {empty_line:\\n}
   *paragraph C8
    {normal_text:No PERIOD.}
-   *@footnote C1 l6
+   *normal_command@footnote C1 l6
    |EXTRA
    |global_command_number:{4}
     *brace_command_context C1
      *paragraph C1
       {normal_text:no period}
    {normal_text: worD.}
-   *@footnote C1 l6
+   *normal_command@footnote C1 l6
    |EXTRA
    |global_command_number:{5}
     *brace_command_context C1
@@ -62,7 +62,7 @@ $result_tree_text{'punctuation_and_footnotes_frenchspacing'} = '*document_root C
       {normal_text:no period double}
    {normal_text:  w2 \\n}
    {normal_text:wW.}
-   *@footnote C1 l7
+   *normal_command@footnote C1 l7
    |EXTRA
    |global_command_number:{6}
     *brace_command_context C1
@@ -72,8 +72,8 @@ $result_tree_text{'punctuation_and_footnotes_frenchspacing'} = '*document_root C
   {empty_line:\\n}
   *paragraph C12
    {normal_text:Force PERIOD}
-   *@.
-   *@footnote C1 l9
+   *normal_command@.
+   *normal_command@footnote C1 l9
    |EXTRA
    |global_command_number:{7}
     *brace_command_context C1
@@ -81,8 +81,8 @@ $result_tree_text{'punctuation_and_footnotes_frenchspacing'} = '*document_root C
       {normal_text:after forced period}
    {normal_text: Sentence \\n}
    {normal_text:W}
-   *@.
-   *@footnote C1 l10
+   *normal_command@.
+   *normal_command@footnote C1 l10
    |EXTRA
    |global_command_number:{8}
     *brace_command_context C1
@@ -90,8 +90,8 @@ $result_tree_text{'punctuation_and_footnotes_frenchspacing'} = '*document_root C
       {normal_text:after forced period double}
    {normal_text:  S2 \\n}
    {normal_text:W}
-   *@.
-   *@footnote C1 l11
+   *normal_command@.
+   *normal_command@footnote C1 l11
    |EXTRA
    |global_command_number:{9}
     *brace_command_context C1
@@ -101,8 +101,8 @@ $result_tree_text{'punctuation_and_footnotes_frenchspacing'} = '*document_root C
   {empty_line:\\n}
   *paragraph C12
    {normal_text:Force no period.}
-   *@:
-   *@footnote C1 l13
+   *normal_command@:
+   *normal_command@footnote C1 l13
    |EXTRA
    |global_command_number:{10}
     *brace_command_context C1
@@ -110,8 +110,8 @@ $result_tree_text{'punctuation_and_footnotes_frenchspacing'} = '*document_root C
       {normal_text:after forced no period}
    {normal_text: Sentence \\n}
    {normal_text:w.}
-   *@:
-   *@footnote C1 l14
+   *normal_command@:
+   *normal_command@footnote C1 l14
    |EXTRA
    |global_command_number:{11}
     *brace_command_context C1
@@ -119,8 +119,8 @@ $result_tree_text{'punctuation_and_footnotes_frenchspacing'} = '*document_root C
       {normal_text:after forced no period double}
    {normal_text:  S2 \\n}
    {normal_text:w.}
-   *@:
-   *@footnote C1 l15
+   *normal_command@:
+   *normal_command@footnote C1 l15
    |EXTRA
    |global_command_number:{12}
     *brace_command_context C1

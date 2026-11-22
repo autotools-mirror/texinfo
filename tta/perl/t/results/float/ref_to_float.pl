@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'ref_to_float'} = '*document_root C1
  *before_node_section C8
   *preamble_before_content
-  *@float C3 l1
+  *normal_command@float C3 l1
   |EXTRA
   |float_number:{1}
   |float_type:{Text}
@@ -28,7 +28,7 @@ $result_tree_text{'ref_to_float'} = '*document_root C1
      {spaces_after_argument:\\n}
    *paragraph C1
     {normal_text:Float\\n}
-   *@end C1 l3
+   *normal_command@end C1 l3
    |EXTRA
    |text_arg:{float}
     *line_arg C3
@@ -36,7 +36,7 @@ $result_tree_text{'ref_to_float'} = '*document_root C1
      {normal_text:float}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@float C3 l5
+  *normal_command@float C3 l5
   |EXTRA
   |float_number:{1}
   |float_type:{}
@@ -52,7 +52,7 @@ $result_tree_text{'ref_to_float'} = '*document_root C1
      {spaces_after_argument:\\n}
    *paragraph C1
     {normal_text:In foat 2.\\n}
-   *@end C1 l7
+   *normal_command@end C1 l7
    |EXTRA
    |text_arg:{float}
     *line_arg C3
@@ -61,7 +61,7 @@ $result_tree_text{'ref_to_float'} = '*document_root C1
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@ref C1 l9
+   *normal_command@ref C1 l9
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -70,7 +70,7 @@ $result_tree_text{'ref_to_float'} = '*document_root C1
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@ref C1 l11
+   *normal_command@ref C1 l11
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}

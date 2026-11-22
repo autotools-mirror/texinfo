@@ -11,14 +11,14 @@ use Encode;
 $result_tree_text{'all_empty_def'} = '*document_root C1
  *before_node_section C18
   *preamble_before_content
-  *@deffn C2 l1
+  *normal_command@deffn C2 l1
    *def_line C1 l1
    |EXTRA
    |def_command:{deffn}
    |original_def_cmdname:{deffn}
     *block_line_arg C1
      {spaces_before_argument:\\n}
-   *@end C1 l2
+   *normal_command@end C1 l2
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3
@@ -26,14 +26,14 @@ $result_tree_text{'all_empty_def'} = '*document_root C1
      {normal_text:deffn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@defvr C2 l4
+  *normal_command@defvr C2 l4
    *def_line C1 l4
    |EXTRA
    |def_command:{defvr}
    |original_def_cmdname:{defvr}
     *block_line_arg C1
      {spaces_before_argument:\\n}
-   *@end C1 l5
+   *normal_command@end C1 l5
    |EXTRA
    |text_arg:{defvr}
     *line_arg C3
@@ -41,14 +41,14 @@ $result_tree_text{'all_empty_def'} = '*document_root C1
      {normal_text:defvr}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@deftypefn C2 l7
+  *normal_command@deftypefn C2 l7
    *def_line C1 l7
    |EXTRA
    |def_command:{deftypefn}
    |original_def_cmdname:{deftypefn}
     *block_line_arg C1
      {spaces_before_argument:\\n}
-   *@end C1 l8
+   *normal_command@end C1 l8
    |EXTRA
    |text_arg:{deftypefn}
     *line_arg C3
@@ -56,14 +56,14 @@ $result_tree_text{'all_empty_def'} = '*document_root C1
      {normal_text:deftypefn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@deftypeop C2 l10
+  *normal_command@deftypeop C2 l10
    *def_line C1 l10
    |EXTRA
    |def_command:{deftypeop}
    |original_def_cmdname:{deftypeop}
     *block_line_arg C1
      {spaces_before_argument:\\n}
-   *@end C1 l11
+   *normal_command@end C1 l11
    |EXTRA
    |text_arg:{deftypeop}
     *line_arg C3
@@ -71,14 +71,14 @@ $result_tree_text{'all_empty_def'} = '*document_root C1
      {normal_text:deftypeop}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@deftypevr C2 l13
+  *normal_command@deftypevr C2 l13
    *def_line C1 l13
    |EXTRA
    |def_command:{deftypevr}
    |original_def_cmdname:{deftypevr}
     *block_line_arg C1
      {spaces_before_argument:\\n}
-   *@end C1 l14
+   *normal_command@end C1 l14
    |EXTRA
    |text_arg:{deftypevr}
     *line_arg C3
@@ -86,14 +86,14 @@ $result_tree_text{'all_empty_def'} = '*document_root C1
      {normal_text:deftypevr}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@defcv C2 l16
+  *normal_command@defcv C2 l16
    *def_line C1 l16
    |EXTRA
    |def_command:{defcv}
    |original_def_cmdname:{defcv}
     *block_line_arg C1
      {spaces_before_argument:\\n}
-   *@end C1 l17
+   *normal_command@end C1 l17
    |EXTRA
    |text_arg:{defcv}
     *line_arg C3
@@ -101,14 +101,14 @@ $result_tree_text{'all_empty_def'} = '*document_root C1
      {normal_text:defcv}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@deftypecv C2 l19
+  *normal_command@deftypecv C2 l19
    *def_line C1 l19
    |EXTRA
    |def_command:{deftypecv}
    |original_def_cmdname:{deftypecv}
     *block_line_arg C1
      {spaces_before_argument:\\n}
-   *@end C1 l20
+   *normal_command@end C1 l20
    |EXTRA
    |text_arg:{deftypecv}
     *line_arg C3
@@ -116,14 +116,14 @@ $result_tree_text{'all_empty_def'} = '*document_root C1
      {normal_text:deftypecv}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@defop C2 l22
+  *normal_command@defop C2 l22
    *def_line C1 l22
    |EXTRA
    |def_command:{defop}
    |original_def_cmdname:{defop}
     *block_line_arg C1
      {spaces_before_argument:\\n}
-   *@end C1 l23
+   *normal_command@end C1 l23
    |EXTRA
    |text_arg:{defop}
     *line_arg C3
@@ -131,14 +131,14 @@ $result_tree_text{'all_empty_def'} = '*document_root C1
      {normal_text:defop}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@deftp C2 l25
+  *normal_command@deftp C2 l25
    *def_line C1 l25
    |EXTRA
    |def_command:{deftp}
    |original_def_cmdname:{deftp}
     *block_line_arg C1
      {spaces_before_argument:\\n}
-   *@end C1 l26
+   *normal_command@end C1 l26
    |EXTRA
    |text_arg:{deftp}
     *line_arg C3

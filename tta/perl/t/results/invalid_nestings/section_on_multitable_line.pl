@@ -11,13 +11,13 @@ use Encode;
 $result_tree_text{'section_on_multitable_line'} = '*document_root C4
  *before_node_section C2
   *preamble_before_content
-  *@multitable C1 l1
+  *normal_command@multitable C1 l1
   |EXTRA
   |max_columns:{0}
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument: }
- *@section C3 l1 {first}
+ *normal_command@section C3 l1 {first}
  |EXTRA
  |identifier:{first}
  |is_target:{1}
@@ -30,17 +30,17 @@ $result_tree_text{'section_on_multitable_line'} = '*document_root C4
     {normal_text:first}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@multitable C1 l3
+  *normal_command@multitable C1 l3
   |EXTRA
   |max_columns:{0}
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     *@code C1 l3
+     *normal_command@code C1 l3
       *brace_container C1
        {normal_text:this}
      {spaces_after_argument: }
- *@section C3 l3 {second}
+ *normal_command@section C3 l3 {second}
  |EXTRA
  |identifier:{second}
  |is_target:{1}
@@ -53,7 +53,7 @@ $result_tree_text{'section_on_multitable_line'} = '*document_root C4
     {normal_text:second}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@multitable C1 l5
+  *normal_command@multitable C1 l5
   |EXTRA
   |max_columns:{2}
    *arguments_line C1
@@ -65,7 +65,7 @@ $result_tree_text{'section_on_multitable_line'} = '*document_root C4
      *bracketed_arg C1 l5
       {normal_text:bbb}
      {spaces_after_argument: }
- *@section C1 l5 {third}
+ *normal_command@section C1 l5 {third}
  |EXTRA
  |identifier:{third}
  |is_target:{1}

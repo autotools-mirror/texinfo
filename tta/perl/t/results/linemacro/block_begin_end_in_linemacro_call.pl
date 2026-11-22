@@ -11,14 +11,14 @@ use Encode;
 $result_tree_text{'block_begin_end_in_linemacro_call'} = '*document_root C1
  *before_node_section C18
   *preamble_before_content C2
-   *@linemacro C3 l1
+   *normal_command@linemacro C3 l1
    |EXTRA
    |formal_args:A{a}
    |macro_name:{lm}
     *arguments_line C1
      {macro_line: lm {a}\\n}
     {raw:b \\a\\ a\\n}
-    *@end C1 l3
+    *normal_command@end C1 l3
     |EXTRA
     |text_arg:{linemacro}
      *line_arg C3
@@ -34,7 +34,7 @@ $result_tree_text{'block_begin_end_in_linemacro_call'} = '*document_root C1
      >*linemacro_arg C2
       >{spaces_before_argument: }
       >{bracketed_linemacro_arg:\\n@quotation aa\\nin quotation\\n}
-  *@quotation C3 l8:@lm
+  *normal_command@quotation C3 l8:@lm
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
@@ -45,7 +45,7 @@ $result_tree_text{'block_begin_end_in_linemacro_call'} = '*document_root C1
     {normal_text: a\\n}
     >SOURCEMARKS
     >linemacro_expansion<end;1><p:2>
-   *@end C1 l9
+   *normal_command@end C1 l9
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3
@@ -53,7 +53,7 @@ $result_tree_text{'block_begin_end_in_linemacro_call'} = '*document_root C1
      {normal_text:quotation}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@quotation C3 l11
+  *normal_command@quotation C3 l11
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
@@ -67,7 +67,7 @@ $result_tree_text{'block_begin_end_in_linemacro_call'} = '*document_root C1
       >*linemacro_arg C2
        >{spaces_before_argument: }
        >{bracketed_linemacro_arg:\\n@end quotation\\n\\n}
-   *@end C1 l15:@lm
+   *normal_command@end C1 l15:@lm
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3
@@ -89,7 +89,7 @@ $result_tree_text{'block_begin_end_in_linemacro_call'} = '*document_root C1
      >*linemacro_arg C2
       >{spaces_before_argument: }
       >{bracketed_linemacro_arg:\\n@quotation}
-  *@quotation C5 l18:@lm
+  *normal_command@quotation C5 l18:@lm
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
@@ -102,7 +102,7 @@ $result_tree_text{'block_begin_end_in_linemacro_call'} = '*document_root C1
    {empty_line:\\n}
    *paragraph C1
     {normal_text:aa.\\n}
-   *@end C1 l22
+   *normal_command@end C1 l22
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3
@@ -118,7 +118,7 @@ $result_tree_text{'block_begin_end_in_linemacro_call'} = '*document_root C1
      >*linemacro_arg C2
       >{spaces_before_argument: }
       >{bracketed_linemacro_arg:\\n@ignore\\nignored }
-   *@ignore C5 l26:@lm
+   *normal_command@ignore C5 l26:@lm
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
@@ -127,7 +127,7 @@ $result_tree_text{'block_begin_end_in_linemacro_call'} = '*document_root C1
     >linemacro_expansion<end;4><p:10>
     {raw:\\n}
     {raw:still ignored\\n}
-    *@end C1 l28
+    *normal_command@end C1 l28
     |EXTRA
     |text_arg:{ignore}
      *line_arg C3
@@ -143,7 +143,7 @@ $result_tree_text{'block_begin_end_in_linemacro_call'} = '*document_root C1
      >*linemacro_arg C2
       >{spaces_before_argument: }
       >{bracketed_linemacro_arg:\\n@macro mymac {e, f}\\nargs \\e\\|\\f\\|\\n@defline @lm {\\e\\} {\\f\\}\\n}
-   *@macro C6 l34:@lm
+   *normal_command@macro C6 l34:@lm
    |EXTRA
    |formal_args:A{e|f}
    |macro_name:{mymac}
@@ -155,7 +155,7 @@ $result_tree_text{'block_begin_end_in_linemacro_call'} = '*document_root C1
     >SOURCEMARKS
     >linemacro_expansion<end;5><p:2>
     {raw:\\n}
-    *@end C1 l35
+    *normal_command@end C1 l35
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -163,7 +163,7 @@ $result_tree_text{'block_begin_end_in_linemacro_call'} = '*document_root C1
       {normal_text:macro}
       {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@defblock C5 l37
+  *normal_command@defblock C5 l37
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -178,7 +178,7 @@ $result_tree_text{'block_begin_end_in_linemacro_call'} = '*document_root C1
        >*brace_arg C2
         >{spaces_before_argument: }
         >{macro_call_arg_text:arg2}
-   *@defline C1 l38:@mymac
+   *normal_command@defline C1 l38:@mymac
    |EXTRA
    |def_command:{defline}
    |original_def_cmdname:{defline}
@@ -214,7 +214,7 @@ $result_tree_text{'block_begin_end_in_linemacro_call'} = '*document_root C1
      {normal_text:a\\n}
      >SOURCEMARKS
      >macro_expansion<end;1><p:1>
-   *@end C1 l39
+   *normal_command@end C1 l39
    |EXTRA
    |text_arg:{defblock}
     *line_arg C3

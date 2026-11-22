@@ -13,7 +13,7 @@ $result_tree_text{'end_sentence_space_protected'} = '*document_root C1
   *preamble_before_content
   *paragraph C3
    {normal_text:Some text. }
-   *@\\n
+   *normal_command@\\n
    {normal_text:Next sentence.\\n}
 ';
 

@@ -13,14 +13,14 @@ $result_tree_text{'text_before_after'} = '*document_root C1
   *preamble_before_content
   *paragraph C2
    {normal_text:before }
-   *@macro C3 l1
+   *normal_command@macro C3 l1
    |EXTRA
    |formal_args:A{}
    |macro_name:{mymacro}
     *arguments_line C1
      {macro_line: mymacro\\n}
     {raw:in macro\\n}
-    *@end C1 l3
+    *normal_command@end C1 l3
     |EXTRA
     |text_arg:{macro after}
      *line_arg C3

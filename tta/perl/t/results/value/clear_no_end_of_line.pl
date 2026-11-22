@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'clear_no_end_of_line'} = '*document_root C1
  *before_node_section C1
   *preamble_before_content C1
-   *@clear C1
+   *normal_command@clear C1
    |EXTRA
    |misc_args:A{jj}
     *line_arg C2

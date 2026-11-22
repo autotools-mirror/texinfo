@@ -13,7 +13,7 @@ $result_tree_text{'xref_test'} = '*document_root C2
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content
- *@node C3 l2 {Top}
+ *normal_command@node C3 l2 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -25,7 +25,7 @@ $result_tree_text{'xref_test'} = '*document_root C2
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C10
-   *@xref C4 l4
+   *normal_command@xref C4 l4
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -36,7 +36,7 @@ $result_tree_text{'xref_test'} = '*document_root C2
      {spaces_before_argument: }
      {normal_text:m}
    {normal_text:. }
-   *@xref C4 l4
+   *normal_command@xref C4 l4
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -47,9 +47,9 @@ $result_tree_text{'xref_test'} = '*document_root C2
      {spaces_before_argument: }
      {normal_text:m}
    {normal_text: after xref.\\n}
-   *@code C1 l5
+   *normal_command@code C1 l5
     *brace_container C1
-     *@xref C4 l5
+     *normal_command@xref C4 l5
       *brace_arg C1
       |EXTRA
       |node_content:A{0|0}
@@ -60,7 +60,7 @@ $result_tree_text{'xref_test'} = '*document_root C2
        {spaces_before_argument: }
        {normal_text:m}
    {normal_text:.\\n}
-   *@xref C4 l6
+   *normal_command@xref C4 l6
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -73,7 +73,7 @@ $result_tree_text{'xref_test'} = '*document_root C2
      {spaces_before_argument: }
      {normal_text:m}
    {normal_text: ! after xref and dot inside.\\n}
-   *@xref C3 l7
+   *normal_command@xref C3 l7
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}

@@ -14,7 +14,7 @@ $result_tree_text{'contents_in_middle_chapter'} = '*document_root C8
    {text_before_beginning:\\input texinfo @c -*-texinfo-*-\\n}
    {text_before_beginning:\\n}
   *preamble_before_content
- *@node C1 contents_in_middle_chapter.texi:l3 {Top}
+ *normal_command@node C1 contents_in_middle_chapter.texi:l3 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -24,7 +24,7 @@ $result_tree_text{'contents_in_middle_chapter'} = '*document_root C8
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C6 contents_in_middle_chapter.texi:l4 {Contents in chapter}
+ *normal_command@top C6 contents_in_middle_chapter.texi:l4 {Contents in chapter}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -37,7 +37,7 @@ $result_tree_text{'contents_in_middle_chapter'} = '*document_root C8
   *paragraph C1
    {normal_text:Content in chapter.\\n}
   {empty_line:\\n}
-  *@menu C3 contents_in_middle_chapter.texi:l8
+  *normal_command@menu C3 contents_in_middle_chapter.texi:l8
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument: \\n}
@@ -52,7 +52,7 @@ $result_tree_text{'contents_in_middle_chapter'} = '*document_root C8
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 contents_in_middle_chapter.texi:l10
+   *normal_command@end C1 contents_in_middle_chapter.texi:l10
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -60,7 +60,7 @@ $result_tree_text{'contents_in_middle_chapter'} = '*document_root C8
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 contents_in_middle_chapter.texi:l12 {chapter}
+ *normal_command@node C1 contents_in_middle_chapter.texi:l12 {chapter}
  |EXTRA
  |identifier:{chapter}
  |is_target:{1}
@@ -70,7 +70,7 @@ $result_tree_text{'contents_in_middle_chapter'} = '*document_root C8
     {spaces_before_argument: }
     {normal_text:chapter}
     {spaces_after_argument:\\n}
- *@chapter C7 contents_in_middle_chapter.texi:l13 {Chapter 1}
+ *normal_command@chapter C7 contents_in_middle_chapter.texi:l13 {Chapter 1}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -83,13 +83,13 @@ $result_tree_text{'contents_in_middle_chapter'} = '*document_root C8
   {empty_line:\\n}
   *paragraph C1
    {normal_text:The chapter with contents\\n}
-  *@contents C1 contents_in_middle_chapter.texi:l16
+  *normal_command@contents C1 contents_in_middle_chapter.texi:l16
   |EXTRA
   |global_command_number:{1}
    *line_arg C1
     {spaces_before_argument:\\n}
   {empty_line:\\n}
-  *@menu C3 contents_in_middle_chapter.texi:l18
+  *normal_command@menu C3 contents_in_middle_chapter.texi:l18
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -104,7 +104,7 @@ $result_tree_text{'contents_in_middle_chapter'} = '*document_root C8
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 contents_in_middle_chapter.texi:l20
+   *normal_command@end C1 contents_in_middle_chapter.texi:l20
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -112,7 +112,7 @@ $result_tree_text{'contents_in_middle_chapter'} = '*document_root C8
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 contents_in_middle_chapter.texi:l22 {section}
+ *normal_command@node C1 contents_in_middle_chapter.texi:l22 {section}
  |EXTRA
  |identifier:{section}
  |is_target:{1}
@@ -122,7 +122,7 @@ $result_tree_text{'contents_in_middle_chapter'} = '*document_root C8
     {spaces_before_argument: }
     {normal_text:section}
     {spaces_after_argument:\\n}
- *@section C4 contents_in_middle_chapter.texi:l23 {section}
+ *normal_command@section C4 contents_in_middle_chapter.texi:l23 {section}
  |EXTRA
  |section_heading_number:{1.1}
  |section_level:{2}
@@ -136,7 +136,7 @@ $result_tree_text{'contents_in_middle_chapter'} = '*document_root C8
   *paragraph C1
    {normal_text:Section.\\n}
   {empty_line:\\n}
- *@bye C1
+ *normal_command@bye C1
   *line_arg C1
    {spaces_before_argument:\\n}
 ';

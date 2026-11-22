@@ -11,14 +11,14 @@ use Encode;
 $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
  *before_node_section C1
   *preamble_before_content C4
-   *@macro C3 l1
+   *normal_command@macro C3 l1
    |EXTRA
    |formal_args:A{}
    |macro_name:{text}
     *arguments_line C1
      {macro_line: text \\n}
     {raw:atext\\n}
-    *@end C1 l3
+    *normal_command@end C1 l3
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -26,14 +26,14 @@ $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
       {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@macro C3 l5
+   *normal_command@macro C3 l5
    |EXTRA
    |formal_args:A{}
    |macro_name:{Top}
     *arguments_line C1
      {macro_line: Top\\n}
     {raw:Top\\n}
-    *@end C1 l7
+    *normal_command@end C1 l7
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -41,7 +41,7 @@ $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
       {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@node C1 l9 {Top}
+ *normal_command@node C1 l9 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -57,7 +57,7 @@ $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
     >SOURCEMARKS
     >macro_expansion<end;1><p:3>
     {spaces_after_argument:\\n}
- *@top C123 l10 {top atext}
+ *normal_command@top C123 l10 {top atext}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -71,7 +71,7 @@ $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
       >*brace_arg
     >macro_expansion<end;2><p:9>
     {spaces_after_argument:\\n}
-  *@subheading C1 l11
+  *normal_command@subheading C1 l11
   |EXTRA
   |global_command_number:{1}
   |heading_number:{1}
@@ -87,39 +87,39 @@ $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
   {empty_line:\\n}
   *paragraph C3
    {normal_text:Text line followed by a comment on the same line and another below }
-   *@c C1
+   *normal_command@c C1
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:comment @text{}}
      {spaces_after_argument:\\n}
-   *@c C1
+   *normal_command@c C1
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:comment @text{}}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@macro C3 l16
+  *normal_command@macro C3 l16
   |EXTRA
   |formal_args:A{}
   |macro_name:{en}
    *arguments_line C1
     {macro_line: en \\n}
    {raw:en\\n}
-   *@end C1 l18
+   *normal_command@end C1 l18
    |EXTRA
    |text_arg:{macro}
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:macro}
      {spaces_after_argument:\\n}
-  *@macro C3 l19
+  *normal_command@macro C3 l19
   |EXTRA
   |formal_args:A{}
   |macro_name:{documentlanguagecommand}
    *arguments_line C1
     {macro_line: documentlanguagecommand \\n}
    {raw:@documentlanguage\\n}
-   *@end C1 l21
+   *normal_command@end C1 l21
    |EXTRA
    |text_arg:{macro}
     *line_arg C3
@@ -129,7 +129,7 @@ $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
   {empty_line:\\n}
   *paragraph C2
    {normal_text:documentlanguage }
-   *@documentlanguage C1 l23
+   *normal_command@documentlanguage C1 l23
    |EXTRA
    |global_command_number:{1}
    |text_arg:{en}
@@ -150,7 +150,7 @@ $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
    >macro_expansion<start;5><p:29>
     >*macro_call@documentlanguagecommand C1
      >*brace_arg
-   *@documentlanguage C1 l26:@documentlanguagecommand
+   *normal_command@documentlanguage C1 l26:@documentlanguagecommand
    |EXTRA
    |global_command_number:{2}
    |text_arg:{en}
@@ -162,14 +162,14 @@ $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
      {spaces_after_argument:\\n}
    {normal_text:line following documentlanguage\\n}
   {empty_line:\\n}
-  *@macro C3 l29
+  *normal_command@macro C3 l29
   |EXTRA
   |formal_args:A{}
   |macro_name:{pagesizesarg}
    *arguments_line C1
     {macro_line: pagesizesarg\\n}
    {raw:200mm,150mm\\n}
-   *@end C1 l31
+   *normal_command@end C1 l31
    |EXTRA
    |text_arg:{macro}
     *line_arg C3
@@ -177,14 +177,14 @@ $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
      {normal_text:macro}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@macro C3 l33
+  *normal_command@macro C3 l33
   |EXTRA
   |formal_args:A{}
   |macro_name:{afourpapermacro}
    *arguments_line C1
     {macro_line: afourpapermacro \\n}
    {raw:@afourpaper\\n}
-   *@end C1 l35
+   *normal_command@end C1 l35
    |EXTRA
    |text_arg:{macro}
     *line_arg C3
@@ -192,7 +192,7 @@ $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
      {normal_text:macro}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@pagesizes C1 l37
+  *normal_command@pagesizes C1 l37
   >SOURCEMARKS
   >macro_expansion<start;7>
    >*macro_call@afourpapermacro C1
@@ -207,12 +207,12 @@ $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
     >SOURCEMARKS
     >macro_expansion<end;6><p:11>
     {spaces_after_argument:\\n}
-  *@afourpaper C1 l38:@afourpapermacro
+  *normal_command@afourpaper C1 l38:@afourpapermacro
    *line_arg C1
     {spaces_before_argument:\\n}
     >SOURCEMARKS
     >macro_expansion<end;7>
-  *@headings C1 l39
+  *normal_command@headings C1 l39
   |EXTRA
   |global_command_number:{1}
    *line_arg C3
@@ -224,7 +224,7 @@ $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
       >*brace_arg
     >macro_expansion<end;8><p:32>
     {spaces_after_argument:\\n}
-  *@oddfooting C1 l40
+  *normal_command@oddfooting C1 l40
    *line_arg C3
     {spaces_before_argument: }
     {normal_text:on line following oddfooting atext}
@@ -234,7 +234,7 @@ $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
       >*brace_arg
     >macro_expansion<end;9><p:34>
     {spaces_after_argument:\\n}
-  *@everyheading C1 l41
+  *normal_command@everyheading C1 l41
    *line_arg C3
     {spaces_before_argument: }
     {normal_text:on line following everyheading atext}
@@ -245,14 +245,14 @@ $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
     >macro_expansion<end;10><p:36>
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@macro C3 l43
+  *normal_command@macro C3 l43
   |EXTRA
   |formal_args:A{}
   |macro_name:{needarg}
    *arguments_line C1
     {macro_line: needarg\\n}
    {raw:0.1\\n}
-   *@end C1 l45
+   *normal_command@end C1 l45
    |EXTRA
    |text_arg:{macro}
     *line_arg C3
@@ -260,7 +260,7 @@ $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
      {normal_text:macro}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@need C1 l47
+  *normal_command@need C1 l47
   |EXTRA
   |misc_args:A{0.1}
    *line_arg C3
@@ -274,7 +274,7 @@ $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
     >macro_expansion<end;11><p:3>
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@macro C3 l49
+  *normal_command@macro C3 l49
   |EXTRA
   |formal_args:A{}
   |macro_name:{raisesectionsmacro}
@@ -285,19 +285,19 @@ $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
    *arguments_line C1
     {macro_line: raisesectionsmacro \\n}
    {raw:@raisesections\\n}
-   *@end C1 l51
+   *normal_command@end C1 l51
    |EXTRA
    |text_arg:{macro}
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:macro}
      {spaces_after_argument:\\n}
-  *@raisesections C1
+  *normal_command@raisesections C1
    *line_arg C1
     {spaces_before_argument:\\n}
     >SOURCEMARKS
     >macro_expansion<end;12>
-  *@macro C3 l53
+  *normal_command@macro C3 l53
   |EXTRA
   |formal_args:A{}
   |macro_name:{lowersectionsmacro}
@@ -308,23 +308,23 @@ $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
    *arguments_line C1
     {macro_line: lowersectionsmacro \\n}
    {raw:@lowersections\\n}
-   *@end C1 l55
+   *normal_command@end C1 l55
    |EXTRA
    |text_arg:{macro}
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:macro}
      {spaces_after_argument:\\n}
-  *@lowersections C1
+  *normal_command@lowersections C1
    *line_arg C1
     {spaces_before_argument:\\n}
     >SOURCEMARKS
     >macro_expansion<end;13>
   {empty_line:\\n}
   *paragraph C3
-   *@@
+   *normal_command@@
    {normal_text:definfoenclose phoo,//,\\\\  }
-   *@definfoenclose C1 l58
+   *normal_command@definfoenclose C1 l58
    |EXTRA
    |misc_args:A{phoo|//|\\\\}
     *line_arg C3
@@ -341,21 +341,21 @@ $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
      {normal_text:bar}
    {normal_text:\\n}
   {empty_line:\\n}
-  *@macro C3 l62
+  *normal_command@macro C3 l62
   |EXTRA
   |formal_args:A{}
   |macro_name:{definfoenclosename}
    *arguments_line C1
     {macro_line: definfoenclosename \\n}
    {raw:phi\\n}
-   *@end C1 l64
+   *normal_command@end C1 l64
    |EXTRA
    |text_arg:{macro}
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:macro}
      {spaces_after_argument:\\n}
-  *@definfoenclose C1 l65
+  *normal_command@definfoenclose C1 l65
   |EXTRA
   |misc_args:A{phi|:|:}
    *line_arg C3
@@ -378,28 +378,28 @@ $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
      {normal_text:bar}
    {normal_text:\\n}
   {empty_line:\\n}
-  *@macro C3 l69
+  *normal_command@macro C3 l69
   |EXTRA
   |formal_args:A{}
   |macro_name:{strongmacro}
    *arguments_line C1
     {macro_line: strongmacro \\n}
    {raw:@strong\\n}
-   *@end C1 l71
+   *normal_command@end C1 l71
    |EXTRA
    |text_arg:{macro}
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:macro}
      {spaces_after_argument:\\n}
-  *@macro C3 l72
+  *normal_command@macro C3 l72
   |EXTRA
   |formal_args:A{}
   |macro_name:{strongname}
    *arguments_line C1
     {macro_line: strongname \\n}
    {raw:strong\\n}
-   *@end C1 l74
+   *normal_command@end C1 l74
    |EXTRA
    |text_arg:{macro}
     *line_arg C3
@@ -412,7 +412,7 @@ $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
    >*macro_call@strongmacro C1
     >*brace_arg
   *paragraph C2
-   *@strong C2 l76:@strongmacro
+   *normal_command@strong C2 l76:@strongmacro
     {spaces_after_cmd_before_arg:}
     >SOURCEMARKS
     >macro_expansion<end;15>
@@ -420,7 +420,7 @@ $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
      {normal_text:very strong}
    {normal_text:\\n}
   {empty_line:\\n}
-  *@definfoenclose C1 l78
+  *normal_command@definfoenclose C1 l78
   |EXTRA
   |misc_args:A{strong|(strong:|:)}
    *line_arg C3
@@ -455,26 +455,26 @@ $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@kbd C1 l82
+   *normal_command@kbd C1 l82
     *brace_container C1
      {normal_text:something before kbdinputstyle}
    {normal_text:\\n}
   {empty_line:\\n}
-  *@macro C3 l84
+  *normal_command@macro C3 l84
   |EXTRA
   |formal_args:A{}
   |macro_name:{kbdinputstylearg}
    *arguments_line C1
     {macro_line: kbdinputstylearg \\n}
    {raw:code\\n}
-   *@end C1 l86
+   *normal_command@end C1 l86
    |EXTRA
    |text_arg:{macro}
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:macro}
      {spaces_after_argument:\\n}
-  *@kbdinputstyle C1 l87
+  *normal_command@kbdinputstyle C1 l87
   |EXTRA
   |global_command_number:{1}
   |misc_args:A{code}
@@ -490,25 +490,25 @@ $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@kbd C1 l89
+   *normal_command@kbd C1 l89
    |EXTRA
    |code:{1}
     *brace_container C1
      {normal_text:truc}
    {normal_text:\\n}
   {empty_line:\\n}
-  *@example C3 l91
+  *normal_command@example C3 l91
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C2
-    *@kbd C1 l92
+    *normal_command@kbd C1 l92
     |EXTRA
     |code:{1}
      *brace_container C1
       {normal_text:example}
     {normal_text:\\n}
-   *@end C1 l93
+   *normal_command@end C1 l93
    |EXTRA
    |text_arg:{example}
     *line_arg C3
@@ -516,70 +516,70 @@ $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
      {normal_text:example}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@macro C3 l95
+  *normal_command@macro C3 l95
   |EXTRA
   |formal_args:A{}
   |macro_name:{asisarg}
    *arguments_line C1
     {macro_line: asisarg \\n}
    {raw:asis\\n}
-   *@end C1 l97
+   *normal_command@end C1 l97
    |EXTRA
    |text_arg:{macro}
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:macro}
      {spaces_after_argument:\\n}
-  *@macro C3 l98
+  *normal_command@macro C3 l98
   |EXTRA
   |formal_args:A{}
   |macro_name:{zero}
    *arguments_line C1
     {macro_line: zero \\n}
    {raw:0\\n}
-   *@end C1 l100
+   *normal_command@end C1 l100
    |EXTRA
    |text_arg:{macro}
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:macro}
      {spaces_after_argument:\\n}
-  *@macro C3 l101
+  *normal_command@macro C3 l101
   |EXTRA
   |formal_args:A{}
   |macro_name:{nonearg}
    *arguments_line C1
     {macro_line: nonearg \\n}
    {raw:none\\n}
-   *@end C1 l103
+   *normal_command@end C1 l103
    |EXTRA
    |text_arg:{macro}
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:macro}
      {spaces_after_argument:\\n}
-  *@macro C3 l104
+  *normal_command@macro C3 l104
   |EXTRA
   |formal_args:A{}
   |macro_name:{four}
    *arguments_line C1
     {macro_line: four \\n}
    {raw:4\\n}
-   *@end C1 l106
+   *normal_command@end C1 l106
    |EXTRA
    |text_arg:{macro}
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:macro}
      {spaces_after_argument:\\n}
-  *@macro C3 l107
+  *normal_command@macro C3 l107
   |EXTRA
   |formal_args:A{}
   |macro_name:{six}
    *arguments_line C1
     {macro_line: six \\n}
    {raw:6\\n}
-   *@end C1 l109
+   *normal_command@end C1 l109
    |EXTRA
    |text_arg:{macro}
     *line_arg C3
@@ -587,7 +587,7 @@ $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
      {normal_text:macro}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@paragraphindent C1 l111
+  *normal_command@paragraphindent C1 l111
   |EXTRA
   |global_command_number:{1}
   |misc_args:A{asis}
@@ -601,7 +601,7 @@ $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
     >SOURCEMARKS
     >macro_expansion<end;20><p:4>
     {spaces_after_argument:\\n}
-  *@paragraphindent C1 l112
+  *normal_command@paragraphindent C1 l112
   |EXTRA
   |global_command_number:{2}
   |misc_args:A{0}
@@ -615,7 +615,7 @@ $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
     >SOURCEMARKS
     >macro_expansion<end;21><p:1>
     {spaces_after_argument:\\n}
-  *@paragraphindent C1 l113
+  *normal_command@paragraphindent C1 l113
   |EXTRA
   |global_command_number:{3}
   |misc_args:A{none}
@@ -629,7 +629,7 @@ $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
     >SOURCEMARKS
     >macro_expansion<end;22><p:4>
     {spaces_after_argument:\\n}
-  *@paragraphindent C1 l114
+  *normal_command@paragraphindent C1 l114
   |EXTRA
   |global_command_number:{4}
   |misc_args:A{4}
@@ -643,7 +643,7 @@ $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
     >SOURCEMARKS
     >macro_expansion<end;23><p:1>
     {spaces_after_argument:\\n}
-  *@firstparagraphindent C1 l115
+  *normal_command@firstparagraphindent C1 l115
   |EXTRA
   |global_command_number:{1}
   |misc_args:A{none}
@@ -657,7 +657,7 @@ $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
     >SOURCEMARKS
     >macro_expansion<end;24><p:4>
     {spaces_after_argument:\\n}
-  *@exampleindent C1 l116
+  *normal_command@exampleindent C1 l116
   |EXTRA
   |global_command_number:{1}
   |misc_args:A{6}
@@ -672,35 +672,35 @@ $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
     >macro_expansion<end;25><p:1>
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@macro C3 l118
+  *normal_command@macro C3 l118
   |EXTRA
   |formal_args:A{}
   |macro_name:{endarg}
    *arguments_line C1
     {macro_line: endarg \\n}
    {raw:end\\n}
-   *@end C1 l120
+   *normal_command@end C1 l120
    |EXTRA
    |text_arg:{macro}
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:macro}
      {spaces_after_argument:\\n}
-  *@macro C3 l121
+  *normal_command@macro C3 l121
   |EXTRA
   |formal_args:A{}
   |macro_name:{separatearg}
    *arguments_line C1
     {macro_line: separatearg \\n}
    {raw:separate \\n}
-   *@end C1 l123
+   *normal_command@end C1 l123
    |EXTRA
    |text_arg:{macro}
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:macro}
      {spaces_after_argument:\\n}
-  *@footnotestyle C1 l124
+  *normal_command@footnotestyle C1 l124
   |EXTRA
   |misc_args:A{end}
    *line_arg C3
@@ -713,7 +713,7 @@ $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
     >SOURCEMARKS
     >macro_expansion<end;26><p:3>
     {spaces_after_argument:\\n}
-  *@footnotestyle C1 l125
+  *normal_command@footnotestyle C1 l125
   |EXTRA
   |misc_args:A{separate}
    *line_arg C3
@@ -727,35 +727,35 @@ $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
     >SOURCEMARKS
     >macro_expansion<end;27><p:1>
   {empty_line:\\n}
-  *@macro C3 l127
+  *normal_command@macro C3 l127
   |EXTRA
   |formal_args:A{}
   |macro_name:{onarg}
    *arguments_line C1
     {macro_line: onarg \\n}
    {raw:on\\n}
-   *@end C1 l129
+   *normal_command@end C1 l129
    |EXTRA
    |text_arg:{macro}
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:macro}
      {spaces_after_argument:\\n}
-  *@macro C3 l130
+  *normal_command@macro C3 l130
   |EXTRA
   |formal_args:A{}
   |macro_name:{offarg}
    *arguments_line C1
     {macro_line: offarg \\n}
    {raw:off\\n}
-   *@end C1 l132
+   *normal_command@end C1 l132
    |EXTRA
    |text_arg:{macro}
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:macro}
      {spaces_after_argument:\\n}
-  *@frenchspacing C1 l133
+  *normal_command@frenchspacing C1 l133
   |EXTRA
   |global_command_number:{1}
   |misc_args:A{on}
@@ -769,7 +769,7 @@ $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
     >SOURCEMARKS
     >macro_expansion<end;28><p:2>
     {spaces_after_argument:\\n}
-  *@frenchspacing C1 l134
+  *normal_command@frenchspacing C1 l134
   |EXTRA
   |global_command_number:{2}
   |misc_args:A{off}
@@ -784,26 +784,26 @@ $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
     >macro_expansion<end;29><p:3>
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@c C1
+  *normal_command@c C1
    *line_arg C3
     {spaces_before_argument: }
     {rawline_text:accepts 10 or 11}
     {spaces_after_argument:\\n}
-  *@macro C3 l137
+  *normal_command@macro C3 l137
   |EXTRA
   |formal_args:A{}
   |macro_name:{ten}
    *arguments_line C1
     {macro_line: ten \\n}
    {raw:10\\n}
-   *@end C1 l139
+   *normal_command@end C1 l139
    |EXTRA
    |text_arg:{macro}
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:macro}
      {spaces_after_argument:\\n}
-  *@fonttextsize C1 l140
+  *normal_command@fonttextsize C1 l140
   |EXTRA
   |misc_args:A{10}
    *line_arg C3
@@ -816,40 +816,40 @@ $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
     >SOURCEMARKS
     >macro_expansion<end;30><p:2>
     {spaces_after_argument:\\n}
-  *@c C1
+  *normal_command@c C1
    *line_arg C3
     {spaces_before_argument: }
     {rawline_text:accept false or true}
     {spaces_after_argument:\\n}
-  *@macro C3 l142
+  *normal_command@macro C3 l142
   |EXTRA
   |formal_args:A{}
   |macro_name:{falsearg}
    *arguments_line C1
     {macro_line: falsearg \\n}
    {raw:false\\n}
-   *@end C1 l144
+   *normal_command@end C1 l144
    |EXTRA
    |text_arg:{macro}
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:macro}
      {spaces_after_argument:\\n}
-  *@macro C3 l145
+  *normal_command@macro C3 l145
   |EXTRA
   |formal_args:A{}
   |macro_name:{truearg}
    *arguments_line C1
     {macro_line: truearg\\n}
    {raw:true\\n}
-   *@end C1 l147
+   *normal_command@end C1 l147
    |EXTRA
    |text_arg:{macro}
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:macro}
      {spaces_after_argument:\\n}
-  *@allowcodebreaks C1 l148
+  *normal_command@allowcodebreaks C1 l148
   |EXTRA
   |global_command_number:{1}
   |misc_args:A{false}
@@ -864,7 +864,7 @@ $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
     >macro_expansion<end;31><p:5>
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@allowcodebreaks C1 l150
+  *normal_command@allowcodebreaks C1 l150
   |EXTRA
   |global_command_number:{2}
   |misc_args:A{true}
@@ -879,42 +879,42 @@ $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
     >macro_expansion<end;32><p:4>
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@macro C3 l152
+  *normal_command@macro C3 l152
   |EXTRA
   |formal_args:A{}
   |macro_name:{pagemacro}
    *arguments_line C1
     {macro_line: pagemacro \\n}
    {raw:@page\\n}
-   *@end C1 l154
+   *normal_command@end C1 l154
    |EXTRA
    |text_arg:{macro}
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:macro}
      {spaces_after_argument:\\n}
-  *@macro C3 l155
+  *normal_command@macro C3 l155
   |EXTRA
   |formal_args:A{}
   |macro_name:{noindentmacro}
    *arguments_line C1
     {macro_line: noindentmacro \\n}
    {raw:@noindent\\n}
-   *@end C1 l157
+   *normal_command@end C1 l157
    |EXTRA
    |text_arg:{macro}
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:macro}
      {spaces_after_argument:\\n}
-  *@macro C3 l158
+  *normal_command@macro C3 l158
   |EXTRA
   |formal_args:A{}
   |macro_name:{refillmacro}
    *arguments_line C1
     {macro_line: refillmacro \\n}
    {raw:@refill\\n}
-   *@end C1 l160
+   *normal_command@end C1 l160
    |EXTRA
    |text_arg:{macro}
     *line_arg C3
@@ -923,13 +923,13 @@ $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@@
+   *normal_command@@
    {normal_text:page }
    >SOURCEMARKS
    >macro_expansion<start;33><p:5>
     >*macro_call@pagemacro C1
      >*brace_arg
-  *@page C1
+  *normal_command@page C1
    *line_arg C3
     {spaces_before_argument: }
     >SOURCEMARKS
@@ -937,23 +937,23 @@ $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
     {rawline_text:on page line}
     {spaces_after_argument:\\n}
   *paragraph C8
-   *@@
+   *normal_command@@
    {normal_text:noindent }
    >SOURCEMARKS
    >macro_expansion<start;34><p:9>
     >*macro_call@noindentmacro C1
      >*brace_arg
-   *@noindent l163:@noindentmacro
+   *normal_command@noindent l163:@noindentmacro
    {ignorable_spaces_after_command: }
    >SOURCEMARKS
    >macro_expansion<end;34>
-   *@@
+   *normal_command@@
    {normal_text:refill }
    >SOURCEMARKS
    >macro_expansion<start;35><p:7>
     >*macro_call@refillmacro C1
      >*brace_arg
-   *@refill
+   *normal_command@refill
    >SOURCEMARKS
    >macro_expansion<end;35>
    {normal_text: something\\n}
@@ -962,7 +962,7 @@ $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
   >macro_expansion<start;36><p:1>
    >*macro_call@noindentmacro C1
     >*brace_arg
-  *@noindent l165:@noindentmacro
+  *normal_command@noindent l165:@noindentmacro
   {ignorable_spaces_after_command:     }
   >SOURCEMARKS
   >macro_expansion<end;36>
@@ -974,7 +974,7 @@ $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
    >macro_expansion<start;37><p:30>
     >*macro_call@noindentmacro C1
      >*brace_arg
-   *@noindent l166:@noindentmacro
+   *normal_command@noindent l166:@noindentmacro
    {ignorable_spaces_after_command:\\n}
    >SOURCEMARKS
    >macro_expansion<end;37>
@@ -984,7 +984,7 @@ $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
    >macro_expansion<start;38><p:2>
     >*macro_call@noindentmacro C1
      >*brace_arg
-   *@noindent l168:@noindentmacro
+   *normal_command@noindent l168:@noindentmacro
    {ignorable_spaces_after_command:    }
    >SOURCEMARKS
    >macro_expansion<end;38>
@@ -993,7 +993,7 @@ $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
    >macro_expansion<start;39><p:42>
     >*macro_call@pagemacro C1
      >*brace_arg
-  *@page C1
+  *normal_command@page C1
   >SOURCEMARKS
   >macro_expansion<start;40>
    >*macro_call@pagemacro C1
@@ -1004,7 +1004,7 @@ $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
     >macro_expansion<end;39>
     {rawline_text:page at beginning of line}
     {spaces_after_argument:\\n}
-  *@page C1
+  *normal_command@page C1
    *line_arg C1
     {spaces_before_argument:\\n}
     >SOURCEMARKS
@@ -1013,41 +1013,41 @@ $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
    {normal_text:After page on its own line.\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@@
+   *normal_command@@
    {normal_text:page }
    >SOURCEMARKS
    >macro_expansion<start;41><p:5>
     >*macro_call@pagemacro C1
      >*brace_arg
-  *@page C1
+  *normal_command@page C1
    *line_arg C1
     {spaces_before_argument:\\n}
     >SOURCEMARKS
     >macro_expansion<end;41>
   *paragraph C9
    {normal_text:two spaces   }
-   *@@
+   *normal_command@@
    {normal_text:noindent }
    >SOURCEMARKS
    >macro_expansion<start;42><p:9>
     >*macro_call@noindentmacro C1
      >*brace_arg
-   *@noindent l174:@noindentmacro
+   *normal_command@noindent l174:@noindentmacro
    {ignorable_spaces_after_command:    }
    >SOURCEMARKS
    >macro_expansion<end;42>
-   *@@
+   *normal_command@@
    {normal_text:refill }
    >SOURCEMARKS
    >macro_expansion<start;43><p:7>
     >*macro_call@refillmacro C1
      >*brace_arg
-   *@refill
+   *normal_command@refill
    >SOURCEMARKS
    >macro_expansion<end;43>
    {normal_text:\\n}
   {empty_line:\\n}
-  *@macro C3 l176
+  *normal_command@macro C3 l176
   |EXTRA
   |formal_args:A{}
   |macro_name:{contentsmacro}
@@ -1058,14 +1058,14 @@ $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
    *arguments_line C1
     {macro_line: contentsmacro \\n}
    {raw:@contents\\n}
-   *@end C1 l178
+   *normal_command@end C1 l178
    |EXTRA
    |text_arg:{macro}
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:macro}
      {spaces_after_argument:\\n}
-  *@contents C1 l179:@contentsmacro
+  *normal_command@contents C1 l179:@contentsmacro
   |EXTRA
   |global_command_number:{1}
    *line_arg C1
@@ -1073,13 +1073,13 @@ $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
     >SOURCEMARKS
     >macro_expansion<end;44>
   {empty_line:\\n}
-  *@vskip C1
+  *normal_command@vskip C1
    *line_arg C3
     {spaces_before_argument: }
     {rawline_text:@atext{}}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@macro C3 l183
+  *normal_command@macro C3 l183
   |EXTRA
   |formal_args:A{}
   |macro_name:{exdentmacro}
@@ -1090,14 +1090,14 @@ $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
    *arguments_line C1
     {macro_line: exdentmacro \\n}
    {raw:@exdent\\n}
-   *@end C1 l185
+   *normal_command@end C1 l185
    |EXTRA
    |text_arg:{macro}
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:macro}
      {spaces_after_argument:\\n}
-  *@exdent C1 l186:@exdentmacro
+  *normal_command@exdent C1 l186:@exdentmacro
    *line_arg C3
     {spaces_before_argument: }
     >SOURCEMARKS
@@ -1105,21 +1105,21 @@ $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
     {normal_text:line after exdent}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@macro C3 l188
+  *normal_command@macro C3 l188
   |EXTRA
   |formal_args:A{}
   |macro_name:{two}
    *arguments_line C1
     {macro_line: two \\n}
    {raw:2\\n}
-   *@end C1 l190
+   *normal_command@end C1 l190
    |EXTRA
    |text_arg:{macro}
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:macro}
      {spaces_after_argument:\\n}
-  *@sp C1 l191
+  *normal_command@sp C1 l191
   |EXTRA
   |misc_args:A{2}
    *line_arg C3
@@ -1133,7 +1133,7 @@ $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
     >macro_expansion<end;46><p:1>
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C3 l193
+  *normal_command@menu C3 l193
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -1153,7 +1153,7 @@ $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l195
+   *normal_command@end C1 l195
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -1161,7 +1161,7 @@ $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l197 {node atext}
+ *normal_command@node C1 l197 {node atext}
  |EXTRA
  |identifier:{node-atext}
  |is_target:{1}
@@ -1176,7 +1176,7 @@ $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
       >*brace_arg
     >macro_expansion<end;48><p:10>
     {spaces_after_argument:\\n}
- *@chapter C9 l198 {chapter}
+ *normal_command@chapter C9 l198 {chapter}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -1191,7 +1191,7 @@ $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
   >macro_expansion<start;49><p:1>
    >*macro_call@contentsmacro C1
     >*brace_arg
-  *@contents C1 l200:@contentsmacro
+  *normal_command@contents C1 l200:@contentsmacro
   |EXTRA
   |global_command_number:{2}
    *line_arg C1
@@ -1199,7 +1199,7 @@ $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
     >SOURCEMARKS
     >macro_expansion<end;49>
   {empty_line:\\n}
-  *@macro C3 l202
+  *normal_command@macro C3 l202
   |EXTRA
   |formal_args:A{}
   |macro_name:{shortcontentsmacro}
@@ -1210,14 +1210,14 @@ $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
    *arguments_line C1
     {macro_line: shortcontentsmacro \\n}
    {raw:@shortcontents\\n}
-   *@end C1 l204
+   *normal_command@end C1 l204
    |EXTRA
    |text_arg:{macro}
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:macro}
      {spaces_after_argument:\\n}
-  *@shortcontents C1 l205:@shortcontentsmacro
+  *normal_command@shortcontents C1 l205:@shortcontentsmacro
   |EXTRA
   |global_command_number:{1}
    *line_arg C1
@@ -1225,14 +1225,14 @@ $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
     >SOURCEMARKS
     >macro_expansion<end;50>
   {empty_line:\\n}
-  *@macro C3 l207
+  *normal_command@macro C3 l207
   |EXTRA
   |formal_args:A{}
   |macro_name:{byemacro}
    *arguments_line C1
     {macro_line: byemacro\\n}
    {raw:@bye\\n}
-   *@end C1 l209
+   *normal_command@end C1 l209
    |EXTRA
    |text_arg:{macro}
     *line_arg C3
@@ -1244,7 +1244,7 @@ $result_tree_text{'macro_in_misc_commands'} = '*document_root C6
   >macro_expansion<start;51><p:1>
    >*macro_call@byemacro C1
     >*brace_arg
- *@bye C1
+ *normal_command@bye C1
   *line_arg C1
    {spaces_before_argument:\\n}
    >SOURCEMARKS

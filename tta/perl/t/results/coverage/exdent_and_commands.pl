@@ -11,31 +11,31 @@ use Encode;
 $result_tree_text{'exdent_and_commands'} = '*document_root C1
  *before_node_section C4
   *preamble_before_content
-  *@quotation C7 l1
+  *normal_command@quotation C7 l1
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C1
     {normal_text:quotation1\\n}
-   *@exdent C1 l3
+   *normal_command@exdent C1 l3
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:in exdented protected eol }
-     *@\\n
+     *normal_command@\\n
    *paragraph C1
     {normal_text:following\\n}
-   *@exdent C1 l5
+   *normal_command@exdent C1 l5
     *line_arg C7
      {spaces_before_argument: }
      {normal_text:in exdented a }
-     *@@
+     *normal_command@@
      {normal_text:* }
-     *@*
+     *normal_command@*
      {normal_text: and following}
      {spaces_after_argument:\\n}
    *paragraph C1
     {normal_text:after exdented\\n}
-   *@end C1 l7
+   *normal_command@end C1 l7
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3
@@ -43,31 +43,31 @@ $result_tree_text{'exdent_and_commands'} = '*document_root C1
      {normal_text:quotation}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@example C7 l9
+  *normal_command@example C7 l9
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C1
     {normal_text:example\\n}
-   *@exdent C1 l11
+   *normal_command@exdent C1 l11
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:in exdented protected eol }
-     *@\\n
+     *normal_command@\\n
    *preformatted C1
     {normal_text:following\\n}
-   *@exdent C1 l13
+   *normal_command@exdent C1 l13
     *line_arg C7
      {spaces_before_argument: }
      {normal_text:in exdented a }
-     *@@
+     *normal_command@@
      {normal_text:* }
-     *@*
+     *normal_command@*
      {normal_text: and following}
      {spaces_after_argument:\\n}
    *preformatted C1
     {normal_text:after exdented\\n}
-   *@end C1 l15
+   *normal_command@end C1 l15
    |EXTRA
    |text_arg:{example}
     *line_arg C3

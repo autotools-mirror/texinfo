@@ -11,14 +11,14 @@ use Encode;
 $result_tree_text{'verb_not_closed'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C2
-   *@linemacro C3 l1
+   *normal_command@linemacro C3 l1
    |EXTRA
    |formal_args:A{a|b|c}
    |macro_name:{mycommand}
     *arguments_line C1
      {macro_line: mycommand {a, b, c}\\n}
     {raw:\\a\\, \\b\\ \\c\\\\n}
-    *@end C1 l3
+    *normal_command@end C1 l3
     |EXTRA
     |text_arg:{linemacro}
      *line_arg C3
@@ -33,7 +33,7 @@ $result_tree_text{'verb_not_closed'} = '*document_root C1
       >{spaces_before_argument: }
       >{macro_call_arg_text:@verb{: in verb\\n\\n}
   *paragraph C1
-   *@verb C1 l6:@mycommand
+   *normal_command@verb C1 l6:@mycommand
     *brace_container C5
      {verb_delimiter::}
      {raw: in verb\\n}

@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'def_groupings_args'} = '*document_root C1
  *before_node_section C6
   *preamble_before_content
-  *@deffn C2 l1
+  *normal_command@deffn C2 l1
    *def_line C1 l1
    |EXTRA
    |def_command:{deffn}
@@ -26,12 +26,12 @@ $result_tree_text{'def_groupings_args'} = '*document_root C1
      *def_name C1
       *def_line_arg C3
        {normal_text:b}
-       *@code C1 l1
+       *normal_command@code C1 l1
         *brace_container C1
          {normal_text:aa}
        {normal_text:c}
      {spaces_after_argument:\\n}
-   *@end C1 l2
+   *normal_command@end C1 l2
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3
@@ -39,7 +39,7 @@ $result_tree_text{'def_groupings_args'} = '*document_root C1
      {normal_text:deffn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@deffn C2 l4
+  *normal_command@deffn C2 l4
    *def_line C1 l4
    |EXTRA
    |def_command:{deffn}
@@ -49,11 +49,11 @@ $result_tree_text{'def_groupings_args'} = '*document_root C1
      *def_category C1
       *def_line_arg C2
        {normal_text:a}
-       *@samp C1 l4
+       *normal_command@samp C1 l4
         *brace_container C1
          {normal_text:g1}
      {spaces_after_argument:\\n}
-   *@end C1 l5
+   *normal_command@end C1 l5
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3
@@ -61,7 +61,7 @@ $result_tree_text{'def_groupings_args'} = '*document_root C1
      {normal_text:deffn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@deffn C2 l7
+  *normal_command@deffn C2 l7
    *def_line C1 l7
    |EXTRA
    |def_command:{deffn}
@@ -71,7 +71,7 @@ $result_tree_text{'def_groupings_args'} = '*document_root C1
      {spaces_before_argument: }
      *def_category C1
       *def_line_arg C2
-       *@var C1 l7
+       *normal_command@var C1 l7
         *brace_container C1
          {normal_text:var}
        {normal_text:c}
@@ -79,7 +79,7 @@ $result_tree_text{'def_groupings_args'} = '*document_root C1
      *def_name C1
       *bracketed_arg C2 l7
        {normal_text:br }
-       *@samp C1 l7
+       *normal_command@samp C1 l7
         *brace_container C1
          {normal_text:s}
      {spaces: }
@@ -88,12 +88,12 @@ $result_tree_text{'def_groupings_args'} = '*document_root C1
        {normal_text:c}
      *def_arg C1
       *def_line_arg C1
-       *@code C1 l7
+       *normal_command@code C1 l7
         *brace_container C1
          {normal_text:arg}
      {delimiter:)}
      {spaces_after_argument:\\n}
-   *@end C1 l8
+   *normal_command@end C1 l8
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3

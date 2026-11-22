@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'contents_at_end_document'} = '*document_root C4
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'contents_at_end_document'} = '*document_root C4
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l2 {contents at end document}
+ *normal_command@top C2 l2 {contents at end document}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -31,7 +31,7 @@ $result_tree_text{'contents_at_end_document'} = '*document_root C4
     {normal_text:contents at end document}
     {spaces_after_argument: \\n}
   {empty_line:\\n}
- *@chapter C3 l4 {chap}
+ *normal_command@chapter C3 l4 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -44,7 +44,7 @@ $result_tree_text{'contents_at_end_document'} = '*document_root C4
     {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@contents C1 l6
+  *normal_command@contents C1 l6
   |EXTRA
   |global_command_number:{1}
    *line_arg C1

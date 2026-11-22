@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'lone_chapter_between_nodes'} = '*document_root C8
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'lone_chapter_between_nodes'} = '*document_root C8
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C4 l2 {Top}
+ *normal_command@top C4 l2 {Top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -31,7 +31,7 @@ $result_tree_text{'lone_chapter_between_nodes'} = '*document_root C8
     {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C4 l4
+  *normal_command@menu C4 l4
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -57,7 +57,7 @@ $result_tree_text{'lone_chapter_between_nodes'} = '*document_root C8
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l7
+   *normal_command@end C1 l7
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -65,7 +65,7 @@ $result_tree_text{'lone_chapter_between_nodes'} = '*document_root C8
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l9 {1}
+ *normal_command@node C1 l9 {1}
  |EXTRA
  |identifier:{1}
  |is_target:{1}
@@ -75,7 +75,7 @@ $result_tree_text{'lone_chapter_between_nodes'} = '*document_root C8
     {spaces_before_argument: }
     {normal_text:1}
     {spaces_after_argument:\\n}
- *@chapter C2 l10 {1}
+ *normal_command@chapter C2 l10 {1}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -86,7 +86,7 @@ $result_tree_text{'lone_chapter_between_nodes'} = '*document_root C8
     {normal_text:1}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@chapter C2 l12 {2}
+ *normal_command@chapter C2 l12 {2}
  |EXTRA
  |identifier:{2}
  |is_target:{1}
@@ -99,7 +99,7 @@ $result_tree_text{'lone_chapter_between_nodes'} = '*document_root C8
     {normal_text:2}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l14 {3}
+ *normal_command@node C1 l14 {3}
  |EXTRA
  |identifier:{3}
  |is_target:{1}
@@ -109,7 +109,7 @@ $result_tree_text{'lone_chapter_between_nodes'} = '*document_root C8
     {spaces_before_argument: }
     {normal_text:3}
     {spaces_after_argument:\\n}
- *@chapter C1 l15 {3}
+ *normal_command@chapter C1 l15 {3}
  |EXTRA
  |section_heading_number:{3}
  |section_level:{1}

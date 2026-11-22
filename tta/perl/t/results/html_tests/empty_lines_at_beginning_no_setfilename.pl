@@ -15,13 +15,13 @@ $result_tree_text{'empty_lines_at_beginning_no_setfilename'} = '*document_root C
    {text_before_beginning:\\n}
    {text_before_beginning:\\n}
   *preamble_before_content C2
-   *@c C1
+   *normal_command@c C1
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:comment}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@node C1 empty_lines_at_beginning_no_setfilename.texi:l6 {Top}
+ *normal_command@node C1 empty_lines_at_beginning_no_setfilename.texi:l6 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -31,7 +31,7 @@ $result_tree_text{'empty_lines_at_beginning_no_setfilename'} = '*document_root C
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 empty_lines_at_beginning_no_setfilename.texi:l7 {top}
+ *normal_command@top C2 empty_lines_at_beginning_no_setfilename.texi:l7 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -41,7 +41,7 @@ $result_tree_text{'empty_lines_at_beginning_no_setfilename'} = '*document_root C
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@bye C1
+ *normal_command@bye C1
   *line_arg C1
    {spaces_before_argument:\\n}
 ';

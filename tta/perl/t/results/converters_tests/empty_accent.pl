@@ -12,7 +12,7 @@ $result_tree_text{'empty_accent'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *paragraph C2
-   *@` C1 l1
+   *normal_command@` C1 l1
     *brace_container
    {normal_text:\\n}
 ';

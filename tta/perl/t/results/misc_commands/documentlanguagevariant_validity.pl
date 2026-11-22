@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'documentlanguagevariant_validity'} = '*document_root C1
  *before_node_section C1
   *preamble_before_content C9
-   *@documentlanguagevariant C2 l1
+   *normal_command@documentlanguagevariant C2 l1
    |EXTRA
    |global_command_number:{1}
     *line_arg C2
@@ -21,36 +21,36 @@ $result_tree_text{'documentlanguagevariant_validity'} = '*document_root C1
      {spaces_before_argument: }
      {normal_text:1606nict}
      {spaces_after_argument:\\n}
-   *@documentlanguagevariant C1 l2
+   *normal_command@documentlanguagevariant C1 l2
    |EXTRA
    |global_command_number:{2}
     *line_arg C4
      {spaces_before_argument: }
      {normal_text:1901}
-     *@code C1 l2
+     *normal_command@code C1 l2
       *brace_container C1
        {normal_text:something}
      {spaces_after_argument:\\n}
-   *@documentlanguagevariant C1 l3
+   *normal_command@documentlanguagevariant C1 l3
    |EXTRA
    |global_command_number:{3}
     *line_arg C4
      {spaces_before_argument: }
      {normal_text:1959acad}
-     *@^ C1 l3
+     *normal_command@^ C1 l3
       *following_arg C1
        {normal_text:e}
      {spaces_after_argument:\\n}
-   *@documentlanguagevariant C1 l4
+   *normal_command@documentlanguagevariant C1 l4
    |EXTRA
    |global_command_number:{4}
     *line_arg C4
      {spaces_before_argument: }
      {normal_text:unknown}
-     *@TeX C1 l4
+     *normal_command@TeX C1 l4
       *brace_container
      {spaces_after_argument:\\n}
-   *@documentlanguagevariant C2 l5
+   *normal_command@documentlanguagevariant C2 l5
    |EXTRA
    |global_command_number:{5}
     *line_arg C3
@@ -61,7 +61,7 @@ $result_tree_text{'documentlanguagevariant_validity'} = '*document_root C1
      {spaces_before_argument: }
      {normal_text:a b}
      {spaces_after_argument:\\n}
-   *@documentlanguagevariant C2 l6
+   *normal_command@documentlanguagevariant C2 l6
    |EXTRA
    |global_command_number:{6}
     *line_arg C2
@@ -71,22 +71,22 @@ $result_tree_text{'documentlanguagevariant_validity'} = '*document_root C1
      {spaces_before_argument: }
      {normal_text:!l}
      {spaces_after_argument:\\n}
-   *@documentlanguagevariant C1 l7
+   *normal_command@documentlanguagevariant C1 l7
    |EXTRA
    |global_command_number:{7}
     *line_arg C3
      {spaces_before_argument: }
-     *@TeX C1 l7
+     *normal_command@TeX C1 l7
       *brace_container
      {spaces_after_argument:\\n}
-   *@documentlanguagevariant C1 l8
+   *normal_command@documentlanguagevariant C1 l8
    |EXTRA
    |global_command_number:{8}
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:aùbc}
      {spaces_after_argument:\\n}
-   *@documentlanguagevariant C1 l9
+   *normal_command@documentlanguagevariant C1 l9
    |EXTRA
    |global_command_number:{9}
     *line_arg C3

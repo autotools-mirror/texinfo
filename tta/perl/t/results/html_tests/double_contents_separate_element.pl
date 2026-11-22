@@ -14,13 +14,13 @@ $result_tree_text{'double_contents_separate_element'} = '*document_root C8
    {text_before_beginning:\\input texinfo @c -*-texinfo-*-\\n}
    {text_before_beginning:\\n}
   *preamble_before_content C2
-   *@contents C1 double_contents.texi:l3
+   *normal_command@contents C1 double_contents.texi:l3
    |EXTRA
    |global_command_number:{1}
     *line_arg C1
      {spaces_before_argument:\\n}
    {empty_line:\\n}
- *@node C1 double_contents.texi:l5 {Top}
+ *normal_command@node C1 double_contents.texi:l5 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -30,7 +30,7 @@ $result_tree_text{'double_contents_separate_element'} = '*document_root C8
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C6 double_contents.texi:l6 {Double contents}
+ *normal_command@top C6 double_contents.texi:l6 {Double contents}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -43,7 +43,7 @@ $result_tree_text{'double_contents_separate_element'} = '*document_root C8
   *paragraph C1
    {normal_text:Double contents.\\n}
   {empty_line:\\n}
-  *@menu C3 double_contents.texi:l10
+  *normal_command@menu C3 double_contents.texi:l10
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument: \\n}
@@ -58,7 +58,7 @@ $result_tree_text{'double_contents_separate_element'} = '*document_root C8
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 double_contents.texi:l12
+   *normal_command@end C1 double_contents.texi:l12
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -66,7 +66,7 @@ $result_tree_text{'double_contents_separate_element'} = '*document_root C8
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 double_contents.texi:l14 {chapter}
+ *normal_command@node C1 double_contents.texi:l14 {chapter}
  |EXTRA
  |identifier:{chapter}
  |is_target:{1}
@@ -76,7 +76,7 @@ $result_tree_text{'double_contents_separate_element'} = '*document_root C8
     {spaces_before_argument: }
     {normal_text:chapter}
     {spaces_after_argument:\\n}
- *@chapter C7 double_contents.texi:l15 {Chapter 1}
+ *normal_command@chapter C7 double_contents.texi:l15 {Chapter 1}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -87,7 +87,7 @@ $result_tree_text{'double_contents_separate_element'} = '*document_root C8
     {normal_text:Chapter 1}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@contents C1 double_contents.texi:l17
+  *normal_command@contents C1 double_contents.texi:l17
   |EXTRA
   |global_command_number:{2}
    *line_arg C1
@@ -95,7 +95,7 @@ $result_tree_text{'double_contents_separate_element'} = '*document_root C8
   *paragraph C1
    {normal_text:The chapter\\n}
   {empty_line:\\n}
-  *@menu C3 double_contents.texi:l20
+  *normal_command@menu C3 double_contents.texi:l20
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -110,7 +110,7 @@ $result_tree_text{'double_contents_separate_element'} = '*document_root C8
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 double_contents.texi:l22
+   *normal_command@end C1 double_contents.texi:l22
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -118,7 +118,7 @@ $result_tree_text{'double_contents_separate_element'} = '*document_root C8
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 double_contents.texi:l24 {section}
+ *normal_command@node C1 double_contents.texi:l24 {section}
  |EXTRA
  |identifier:{section}
  |is_target:{1}
@@ -128,7 +128,7 @@ $result_tree_text{'double_contents_separate_element'} = '*document_root C8
     {spaces_before_argument: }
     {normal_text:section}
     {spaces_after_argument:\\n}
- *@section C3 double_contents.texi:l25 {section with contents}
+ *normal_command@section C3 double_contents.texi:l25 {section with contents}
  |EXTRA
  |section_heading_number:{1.1}
  |section_level:{2}
@@ -138,13 +138,13 @@ $result_tree_text{'double_contents_separate_element'} = '*document_root C8
     {spaces_before_argument: }
     {normal_text:section with contents}
     {spaces_after_argument:\\n}
-  *@contents C1 double_contents.texi:l26
+  *normal_command@contents C1 double_contents.texi:l26
   |EXTRA
   |global_command_number:{3}
    *line_arg C1
     {spaces_before_argument:\\n}
   {empty_line:\\n}
- *@bye C1
+ *normal_command@bye C1
   *line_arg C1
    {spaces_before_argument:\\n}
 ';

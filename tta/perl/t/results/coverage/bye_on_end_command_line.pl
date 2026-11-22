@@ -11,19 +11,19 @@ use Encode;
 $result_tree_text{'bye_on_end_command_line'} = '*document_root C2
  *before_node_section C2
   *preamble_before_content
-  *@cartouche C3 l1
+  *normal_command@cartouche C3 l1
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C1
     {normal_text:in cartouche.\\n}
-   *@end C1 l3
+   *normal_command@end C1 l3
    |EXTRA
    |text_arg:{cartouche}
     *line_arg C2
      {spaces_before_argument: }
      {normal_text:cartouche}
- *@bye C1
+ *normal_command@bye C1
   *line_arg C1
    {spaces_before_argument:\\n}
 ';

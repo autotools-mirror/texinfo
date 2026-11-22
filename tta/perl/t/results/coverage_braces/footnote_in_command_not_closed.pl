@@ -13,10 +13,10 @@ $result_tree_text{'footnote_in_command_not_closed'} = '*document_root C1
   *preamble_before_content
   *paragraph C2
    {normal_text:aaa}
-   *@code C1 l1
+   *normal_command@code C1 l1
     *brace_container C2
      {normal_text:in code}
-     *@footnote C1 l1
+     *normal_command@footnote C1 l1
       *brace_command_context C1
        *paragraph C1
         {normal_text:in footnote}

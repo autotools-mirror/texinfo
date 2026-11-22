@@ -11,17 +11,17 @@ use Encode;
 $result_tree_text{'verbatim_in_multitable_in_example'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@example C3 l1
+  *normal_command@example C3 l1
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
-   *@multitable C3 l2
+   *normal_command@multitable C3 l2
    |EXTRA
    |max_columns:{2}
     *arguments_line C1
      *block_line_arg C2
       {spaces_before_argument: }
-      *@columnfractions C1 l2
+      *normal_command@columnfractions C1 l2
       |EXTRA
       |misc_args:A{0.5|0.5}
        *line_arg C3
@@ -32,13 +32,13 @@ $result_tree_text{'verbatim_in_multitable_in_example'} = '*document_root C1
      *row C2
      |EXTRA
      |row_number:{1}
-      *@item C1 l3
+      *normal_command@item C1 l3
       |EXTRA
       |cell_number:{1}
        *preformatted C2
         {ignorable_spaces_after_command: }
         {normal_text:in item\\n}
-      *@tab C1 l4
+      *normal_command@tab C1 l4
       |EXTRA
       |cell_number:{2}
        *preformatted C2
@@ -47,29 +47,29 @@ $result_tree_text{'verbatim_in_multitable_in_example'} = '*document_root C1
      *row C2
      |EXTRA
      |row_number:{2}
-      *@item C2 l5
+      *normal_command@item C2 l5
       |EXTRA
       |cell_number:{1}
        *preformatted C1
         {ignorable_spaces_after_command:\\n}
-       *@verbatim C3 l6
+       *normal_command@verbatim C3 l6
         *arguments_line C1
          *block_line_arg C1
           {spaces_before_argument:\\n}
         {raw:in first column, verbatim\\n}
-        *@end C1 l8
+        *normal_command@end C1 l8
         |EXTRA
         |text_arg:{verbatim}
          *line_arg C3
           {spaces_before_argument: }
           {normal_text:verbatim}
           {spaces_after_argument:\\n}
-      *@tab C2 l9
+      *normal_command@tab C2 l9
       |EXTRA
       |cell_number:{2}
        *preformatted C1
         {ignorable_spaces_after_command:\\n}
-       *@verbatiminclude C1 l10
+       *normal_command@verbatiminclude C1 l10
        |EXTRA
        |input_encoding_name:{utf-8}
        |text_arg:{inc_file.texi}
@@ -77,14 +77,14 @@ $result_tree_text{'verbatim_in_multitable_in_example'} = '*document_root C1
          {spaces_before_argument: }
          {normal_text:inc_file.texi}
          {spaces_after_argument:\\n}
-    *@end C1 l11
+    *normal_command@end C1 l11
     |EXTRA
     |text_arg:{multitable}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:multitable}
       {spaces_after_argument:\\n}
-   *@end C1 l12
+   *normal_command@end C1 l12
    |EXTRA
    |text_arg:{example}
     *line_arg C3

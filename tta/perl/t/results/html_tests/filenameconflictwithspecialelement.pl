@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'filenameconflictwithspecialelement'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'filenameconflictwithspecialelement'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C4 l2 {top}
+ *normal_command@top C4 l2 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -32,7 +32,7 @@ $result_tree_text{'filenameconflictwithspecialelement'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@footnote C1 l4
+   *normal_command@footnote C1 l4
    |EXTRA
    |global_command_number:{1}
     *brace_command_context C1
@@ -40,7 +40,7 @@ $result_tree_text{'filenameconflictwithspecialelement'} = '*document_root C5
       {normal_text:a footnote}
    {normal_text:\\n}
   {empty_line:\\n}
- *@node C1 l6 {chap}
+ *normal_command@node C1 l6 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -50,7 +50,7 @@ $result_tree_text{'filenameconflictwithspecialelement'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:chap}
     {spaces_after_argument:\\n}
- *@chapter C7 l7 {chap}
+ *normal_command@chapter C7 l7 {chap}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -64,7 +64,7 @@ $result_tree_text{'filenameconflictwithspecialelement'} = '*document_root C5
   *paragraph C1
    {normal_text:Need 2 elements for separate footnotes.\\n}
   {empty_line:\\n}
-  *@anchor C1 l11
+  *normal_command@anchor C1 l11
   |EXTRA
   |identifier:{filenameconflictwithspecialelement-fot}
   |is_target:{1}

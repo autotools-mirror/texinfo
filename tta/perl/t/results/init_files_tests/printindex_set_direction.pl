@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'printindex_set_direction'} = '*document_root C11
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'printindex_set_direction'} = '*document_root C11
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l2 {top}
+ *normal_command@top C2 l2 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -31,7 +31,7 @@ $result_tree_text{'printindex_set_direction'} = '*document_root C11
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l4 {Chapter}
+ *normal_command@node C1 l4 {Chapter}
  |EXTRA
  |identifier:{Chapter}
  |is_target:{1}
@@ -41,7 +41,7 @@ $result_tree_text{'printindex_set_direction'} = '*document_root C11
     {spaces_before_argument: }
     {normal_text:Chapter}
     {spaces_after_argument:\\n}
- *@chapter C6 l5 {chap}
+ *normal_command@chapter C6 l5 {chap}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -77,7 +77,7 @@ $result_tree_text{'printindex_set_direction'} = '*document_root C11
     {normal_text:FF}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l11 {Vindex}
+ *normal_command@node C1 l11 {Vindex}
  |EXTRA
  |identifier:{Vindex}
  |is_target:{1}
@@ -88,7 +88,7 @@ $result_tree_text{'printindex_set_direction'} = '*document_root C11
     {spaces_before_argument: }
     {normal_text:Vindex}
     {spaces_after_argument:\\n}
- *@appendix C4 l12 {Vindex}
+ *normal_command@appendix C4 l12 {Vindex}
  |EXTRA
  |section_heading_number:{A}
  |section_level:{1}
@@ -99,7 +99,7 @@ $result_tree_text{'printindex_set_direction'} = '*document_root C11
     {normal_text:Vindex}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@printindex C1 l14
+  *normal_command@printindex C1 l14
   |EXTRA
   |global_command_number:{1}
   |misc_args:A{vr}
@@ -108,7 +108,7 @@ $result_tree_text{'printindex_set_direction'} = '*document_root C11
     {normal_text:vr}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l16 {Cindex}
+ *normal_command@node C1 l16 {Cindex}
  |EXTRA
  |identifier:{Cindex}
  |is_target:{1}
@@ -119,7 +119,7 @@ $result_tree_text{'printindex_set_direction'} = '*document_root C11
     {spaces_before_argument: }
     {normal_text:Cindex}
     {spaces_after_argument:\\n}
- *@appendix C4 l17 {Cindex}
+ *normal_command@appendix C4 l17 {Cindex}
  |EXTRA
  |section_heading_number:{B}
  |section_level:{1}
@@ -130,7 +130,7 @@ $result_tree_text{'printindex_set_direction'} = '*document_root C11
     {normal_text:Cindex}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@printindex C1 l19
+  *normal_command@printindex C1 l19
   |EXTRA
   |global_command_number:{2}
   |misc_args:A{cp}
@@ -139,7 +139,7 @@ $result_tree_text{'printindex_set_direction'} = '*document_root C11
     {normal_text:cp}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l21 {Findex}
+ *normal_command@node C1 l21 {Findex}
  |EXTRA
  |identifier:{Findex}
  |is_target:{1}
@@ -150,7 +150,7 @@ $result_tree_text{'printindex_set_direction'} = '*document_root C11
     {spaces_before_argument: }
     {normal_text:Findex}
     {spaces_after_argument:\\n}
- *@appendix C3 l22 {Findex}
+ *normal_command@appendix C3 l22 {Findex}
  |EXTRA
  |section_heading_number:{C}
  |section_level:{1}
@@ -161,7 +161,7 @@ $result_tree_text{'printindex_set_direction'} = '*document_root C11
     {normal_text:Findex}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@printindex C1 l24
+  *normal_command@printindex C1 l24
   |EXTRA
   |global_command_number:{3}
   |misc_args:A{fn}

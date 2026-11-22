@@ -11,11 +11,11 @@ use Encode;
 $result_tree_text{'footnote_in_center'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@center C1 l1
+  *normal_command@center C1 l1
    *line_arg C5
     {spaces_before_argument: }
     {normal_text:Centered text with a footnote}
-    *@footnote C1 l1
+    *normal_command@footnote C1 l1
     |EXTRA
     |global_command_number:{1}
      *brace_command_context C3
@@ -23,19 +23,19 @@ $result_tree_text{'footnote_in_center'} = '*document_root C1
        {normal_text:This footnote\\n}
        {normal_text:shows an important feature of the centered text.\\n}
       {empty_line:\\n}
-      *@example C3 l4
+      *normal_command@example C3 l4
        *arguments_line C1
         *block_line_arg C1
          {spaces_before_argument:\\n}
-       *@table C3 l5
+       *normal_command@table C3 l5
         *arguments_line C1
          *block_line_arg C3
           {spaces_before_argument: }
-          *@asis l5
+          *normal_command@asis l5
           {spaces_after_argument:\\n}
         *table_entry C2
          *table_term C1
-          *@item C1 l6
+          *normal_command@item C1 l6
            *line_arg C3
             {spaces_before_argument: }
             {normal_text:item}
@@ -43,14 +43,14 @@ $result_tree_text{'footnote_in_center'} = '*document_root C1
          *table_definition C1
           *preformatted C1
            {normal_text:line\\n}
-        *@end C1 l8
+        *normal_command@end C1 l8
         |EXTRA
         |text_arg:{table}
          *line_arg C3
           {spaces_before_argument: }
           {normal_text:table}
           {spaces_after_argument: \\n}
-       *@end C1 l9
+       *normal_command@end C1 l9
        |EXTRA
        |text_arg:{example}
         *line_arg C3

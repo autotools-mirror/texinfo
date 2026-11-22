@@ -11,14 +11,14 @@ use Encode;
 $result_tree_text{'protection_of_end_of_line_by_command'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C2
-   *@linemacro C3 l1
+   *normal_command@linemacro C3 l1
    |EXTRA
    |formal_args:A{one}
    |macro_name:{lm}
     *arguments_line C1
      {macro_line: lm {one}\\n}
     {raw:\\one\\bullet{}\\n}
-    *@end C1 l3
+    *normal_command@end C1 l3
     |EXTRA
     |text_arg:{linemacro}
      *line_arg C3
@@ -33,7 +33,7 @@ $result_tree_text{'protection_of_end_of_line_by_command'} = '*document_root C1
       >{spaces_before_argument: }
       >{macro_call_arg_text:@\\n}
   *paragraph C2
-   *@\\n
+   *normal_command@\\n
    {normal_text:bullet\\n}
    >SOURCEMARKS
    >linemacro_expansion<end;1><p:6>

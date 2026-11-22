@@ -15,40 +15,40 @@ $result_tree_text{'punctuation_commands'} = '*document_root C1
   *preamble_before_content
   *paragraph C13
    {normal_text:Dot}
-   *@.
+   *normal_command@.
    {normal_text: Exclam}
-   *@!
+   *normal_command@!
    {normal_text: Question}
-   *@?
+   *normal_command@?
    {normal_text: Dot}
-   *@.
+   *normal_command@.
    {normal_text:  Exclam}
-   *@!
+   *normal_command@!
    {normal_text:  Question}
-   *@?
+   *normal_command@?
    {normal_text:  GAAA.\\n}
   {empty_line:\\n}
   *paragraph C5
    {normal_text:Enddots}
-   *@enddots C1 l4
+   *normal_command@enddots C1 l4
     *brace_container
    {normal_text: Enddots}
-   *@enddots C1 l4
+   *normal_command@enddots C1 l4
     *brace_container
    {normal_text:  GBBB.\\n}
   {empty_line:\\n}
   *paragraph C13
    {normal_text:End of lines Dot}
-   *@.
+   *normal_command@.
    {normal_text:\\n}
    {normal_text:Exclam}
-   *@!
+   *normal_command@!
    {normal_text:\\n}
    {normal_text:Question}
-   *@?
+   *normal_command@?
    {normal_text:\\n}
    {normal_text:Enddots}
-   *@enddots C1 l9
+   *normal_command@enddots C1 l9
     *brace_container
    {normal_text:\\n}
    {normal_text:End.\\n}
@@ -56,46 +56,46 @@ $result_tree_text{'punctuation_commands'} = '*document_root C1
   *paragraph C14
    {normal_text:End of lines and spaces\\n}
    {normal_text:Dot}
-   *@.
+   *normal_command@.
    {normal_text:\\n}
    {normal_text:Exclam}
-   *@!
+   *normal_command@!
    {normal_text:\\n}
    {normal_text:Question}
-   *@?
+   *normal_command@?
    {normal_text:\\n}
    {normal_text:Enddots}
-   *@enddots C1 l16
+   *normal_command@enddots C1 l16
     *brace_container
    {normal_text:\\n}
    {normal_text:End.\\n}
   {empty_line:\\n}
   *paragraph C9
    {normal_text:With paren}
-   *@.
+   *normal_command@.
    {normal_text:) paren}
-   *@.
+   *normal_command@.
    {normal_text:)  Symb}
-   *@.
+   *normal_command@.
    {normal_text:)"\'] Symb}
-   *@.
+   *normal_command@.
    {normal_text:)"\']  End.\\n}
   {empty_line:\\n}
   *paragraph C7
    {normal_text:End of lines paren}
-   *@.
+   *normal_command@.
    {normal_text:)\\n}
    {normal_text:Symb}
-   *@.
+   *normal_command@.
    {normal_text:)"\']\\n}
    {normal_text:End.\\n}
   {empty_line:\\n}
   *paragraph C7
    {normal_text:End of lines and spaces paren}
-   *@.
+   *normal_command@.
    {normal_text:)\\n}
    {normal_text:Symb}
-   *@.
+   *normal_command@.
    {normal_text:)"\']\\n}
    {normal_text:End.\\n}
 ';

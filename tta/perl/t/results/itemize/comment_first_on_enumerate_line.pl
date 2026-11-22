@@ -11,22 +11,22 @@ use Encode;
 $result_tree_text{'comment_first_on_enumerate_line'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@enumerate C3 l1
+  *normal_command@enumerate C3 l1
    *arguments_line C1
     *block_line_arg C2
      {spaces_before_argument: }
-     *@c C1
+     *normal_command@c C1
       *line_arg C3
        {spaces_before_argument: }
        {rawline_text:comment on enumerate line}
        {spaces_after_argument:\\n}
-   *@item C2 l2
+   *normal_command@item C2 l2
    |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:first\\n}
-   *@end C1 l3
+   *normal_command@end C1 l3
    |EXTRA
    |text_arg:{enumerate}
     *line_arg C3

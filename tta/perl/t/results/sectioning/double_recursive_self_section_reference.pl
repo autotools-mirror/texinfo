@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'double_recursive_self_section_reference'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {n1}
+ *normal_command@node C1 l1 {n1}
  |EXTRA
  |identifier:{n1}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'double_recursive_self_section_reference'} = '*document_root C
     {spaces_before_argument: }
     {normal_text:n1}
     {spaces_after_argument:\\n}
- *@chapter C2 l2 {@ref{n2}}
+ *normal_command@chapter C2 l2 {@ref{n2}}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -29,7 +29,7 @@ $result_tree_text{'double_recursive_self_section_reference'} = '*document_root C
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    *@ref C1 l2
+    *normal_command@ref C1 l2
      *brace_arg C1
      |EXTRA
      |node_content:A{0|0}
@@ -37,7 +37,7 @@ $result_tree_text{'double_recursive_self_section_reference'} = '*document_root C
       {normal_text:n2}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l4 {n2}
+ *normal_command@node C1 l4 {n2}
  |EXTRA
  |identifier:{n2}
  |is_target:{1}
@@ -47,7 +47,7 @@ $result_tree_text{'double_recursive_self_section_reference'} = '*document_root C
     {spaces_before_argument: }
     {normal_text:n2}
     {spaces_after_argument:\\n}
- *@chapter C1 l5 {@ref{n1}}
+ *normal_command@chapter C1 l5 {@ref{n1}}
  |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
@@ -55,7 +55,7 @@ $result_tree_text{'double_recursive_self_section_reference'} = '*document_root C
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    *@ref C1 l5
+    *normal_command@ref C1 l5
      *brace_arg C1
      |EXTRA
      |node_content:A{0|0}

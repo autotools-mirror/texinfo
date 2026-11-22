@@ -12,22 +12,22 @@ $result_tree_text{'heading_separator_in_accent_command'} = '*document_root C1
  *before_node_section C4
   *preamble_before_content
   *paragraph C2
-   *@, C1 l1
+   *normal_command@, C1 l1
     *brace_container C1
-     *@|
+     *normal_command@|
    {normal_text:\\n}
   {empty_line:\\n}
-  *@oddfooting C1 l3
+  *normal_command@oddfooting C1 l3
    *line_arg C9
     {spaces_before_argument: }
     {normal_text:a }
-    *@|
+    *normal_command@|
     {normal_text: }
-    *@^ C1 l3
+    *normal_command@^ C1 l3
      *brace_container C1
-      *@|
+      *normal_command@|
     {normal_text: }
-    *@|
+    *normal_command@|
     {normal_text: b}
     {spaces_after_argument:\\n}
 ';

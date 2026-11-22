@@ -13,7 +13,7 @@ $result_tree_text{'section_node_before_part'} = '*document_root C4
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content
- *@node C1 l2 {Top}
+ *normal_command@node C1 l2 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -23,7 +23,7 @@ $result_tree_text{'section_node_before_part'} = '*document_root C4
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@section C2 l3 {section}
+ *normal_command@section C2 l3 {section}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{2}
@@ -34,7 +34,7 @@ $result_tree_text{'section_node_before_part'} = '*document_root C4
     {normal_text:section}
     {spaces_after_argument: \\n}
   {empty_line:\\n}
- *@part C1 l5 {part}
+ *normal_command@part C1 l5 {part}
  |EXTRA
  |global_command_number:{1}
  |section_level:{0}

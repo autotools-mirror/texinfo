@@ -18,7 +18,7 @@ NodeNext: [U1]
 NodeForward: [U1]
  *before_node_section C1
   *preamble_before_content
- *@node C1 simple_only_special_spaces_node.texi:l1 {Top}
+ *normal_command@node C1 simple_only_special_spaces_node.texi:l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -28,7 +28,7 @@ NodeForward: [U1]
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 simple_only_special_spaces_node.texi:l2 {top}
+ *normal_command@top C2 simple_only_special_spaces_node.texi:l2 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -51,7 +51,7 @@ Up: [U0]
 NodePrev: [U0]
 NodeUp: [U0]
 NodeBack: [U0]
- *@node C1 simple_only_special_spaces_node.texi:l4 {  }
+ *normal_command@node C1 simple_only_special_spaces_node.texi:l4 {  }
  |EXTRA
  |identifier:{_2002_2003}
  |is_target:{1}
@@ -61,7 +61,7 @@ NodeBack: [U0]
     {spaces_before_argument: }
     {normal_text:  }
     {spaces_after_argument:\\n}
- *@chapter C2 simple_only_special_spaces_node.texi:l5 {EN QUAD| |}
+ *normal_command@chapter C2 simple_only_special_spaces_node.texi:l5 {EN QUAD| |}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -72,7 +72,7 @@ NodeBack: [U0]
     {normal_text:EN QUAD| |}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 simple_only_special_spaces_node.texi:l7
+ *normal_command@node C1 simple_only_special_spaces_node.texi:l7
   *arguments_line C1
    *line_arg C1
     {spaces_before_argument: '."\r".'\\n}
@@ -87,7 +87,7 @@ FastBack: [U1]
 Next: [U3]
 Prev: [U1]
 Up: [U0]
- *@chapter C2 simple_only_special_spaces_node.texi:l8 {CARRIAGE RETURN|'."\r".'|}
+ *normal_command@chapter C2 simple_only_special_spaces_node.texi:l8 {CARRIAGE RETURN|'."\r".'|}
  |EXTRA
  |identifier:{CARRIAGE-RETURN_007c-_007c}
  |is_target:{1}
@@ -109,7 +109,7 @@ FastBack: [U2]
 Prev: [U2]
 Up: [U0]
 NodeUp: [U0]
- *@node C1 simple_only_special_spaces_node.texi:l10 {  }
+ *normal_command@node C1 simple_only_special_spaces_node.texi:l10 {  }
  |EXTRA
  |identifier:{_2004_2005}
  |is_target:{1}
@@ -119,7 +119,7 @@ NodeUp: [U0]
     {spaces_before_argument: }
     {normal_text:  }
     {spaces_after_argument:\\n}
- *@chapter C2 simple_only_special_spaces_node.texi:l11 {THREE-PER-EM SPACE}
+ *normal_command@chapter C2 simple_only_special_spaces_node.texi:l11 {THREE-PER-EM SPACE}
  |EXTRA
  |section_heading_number:{3}
  |section_level:{1}

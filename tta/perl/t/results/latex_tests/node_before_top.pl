@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'node_before_top'} = '*document_root C6
  *before_node_section C1
   *preamble_before_content
- *@node C2 l1 {before Top}
+ *normal_command@node C2 l1 {before Top}
  |EXTRA
  |identifier:{before-Top}
  |is_target:{1}
@@ -22,7 +22,7 @@ $result_tree_text{'node_before_top'} = '*document_root C6
     {normal_text:before Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l3 {Top}
+ *normal_command@node C1 l3 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -32,7 +32,7 @@ $result_tree_text{'node_before_top'} = '*document_root C6
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l4 {top}
+ *normal_command@top C2 l4 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -42,7 +42,7 @@ $result_tree_text{'node_before_top'} = '*document_root C6
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l6 {Chapter}
+ *normal_command@node C1 l6 {Chapter}
  |EXTRA
  |identifier:{Chapter}
  |is_target:{1}
@@ -52,7 +52,7 @@ $result_tree_text{'node_before_top'} = '*document_root C6
     {spaces_before_argument: }
     {normal_text:Chapter}
     {spaces_after_argument:\\n}
- *@chapter C3 l7 {Chap}
+ *normal_command@chapter C3 l7 {Chap}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -64,7 +64,7 @@ $result_tree_text{'node_before_top'} = '*document_root C6
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@pxref C1 l9
+   *normal_command@pxref C1 l9
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}

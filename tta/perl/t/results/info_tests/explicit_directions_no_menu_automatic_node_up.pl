@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'explicit_directions_no_menu_automatic_node_up'} = '*document_root C7
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'explicit_directions_no_menu_automatic_node_up'} = '*document_
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C4 l2 {The doc}
+ *normal_command@top C4 l2 {The doc}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -34,7 +34,7 @@ $result_tree_text{'explicit_directions_no_menu_automatic_node_up'} = '*document_
   *paragraph C1
    {normal_text:This is the documentation.\\n}
   {empty_line:\\n}
- *@node C1 l6 {Introduction}
+ *normal_command@node C1 l6 {Introduction}
  |EXTRA
  |added:{1}
  |identifier:{Introduction}
@@ -45,7 +45,7 @@ $result_tree_text{'explicit_directions_no_menu_automatic_node_up'} = '*document_
     {spaces_before_argument: }
     {normal_text:Introduction}
     {spaces_after_argument:\\n}
- *@unnumbered C6 l6 {Introduction}
+ *normal_command@unnumbered C6 l6 {Introduction}
  |EXTRA
  |section_level:{1}
  |section_number:{2}
@@ -57,7 +57,7 @@ $result_tree_text{'explicit_directions_no_menu_automatic_node_up'} = '*document_
   *paragraph C1
    {normal_text:A collection of tools\\n}
   {empty_line:\\n}
-  *@menu C3 l9
+  *normal_command@menu C3 l9
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -72,7 +72,7 @@ $result_tree_text{'explicit_directions_no_menu_automatic_node_up'} = '*document_
     *menu_entry_description C1
      *preformatted C1
       {normal_text:Where to find\\n}
-   *@end C1 l11
+   *normal_command@end C1 l11
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -81,7 +81,7 @@ $result_tree_text{'explicit_directions_no_menu_automatic_node_up'} = '*document_
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   {empty_line:\\n}
- *@node C1 l14 {Location}
+ *normal_command@node C1 l14 {Location}
  |EXTRA
  |identifier:{Location}
  |is_target:{1}
@@ -104,7 +104,7 @@ $result_tree_text{'explicit_directions_no_menu_automatic_node_up'} = '*document_
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@chapter C3 l15 {Where to get}
+ *normal_command@chapter C3 l15 {Where to get}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}

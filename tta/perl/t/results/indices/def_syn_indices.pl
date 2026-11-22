@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'def_syn_indices'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content C2
-   *@syncodeindex C1 l1
+   *normal_command@syncodeindex C1 l1
    |EXTRA
    |misc_args:A{cp|fn}
     *line_arg C3
@@ -19,7 +19,7 @@ $result_tree_text{'def_syn_indices'} = '*document_root C5
      {normal_text:cp fn}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@node C1 l3 {Top}
+ *normal_command@node C1 l3 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -29,7 +29,7 @@ $result_tree_text{'def_syn_indices'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l4 {top}
+ *normal_command@top C2 l4 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -39,7 +39,7 @@ $result_tree_text{'def_syn_indices'} = '*document_root C5
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l6 {Chapter index}
+ *normal_command@node C1 l6 {Chapter index}
  |EXTRA
  |identifier:{Chapter-index}
  |is_target:{1}
@@ -50,7 +50,7 @@ $result_tree_text{'def_syn_indices'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Chapter index}
     {spaces_after_argument:\\n}
- *@chapter C55 l7 {Index}
+ *normal_command@chapter C55 l7 {Index}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -63,7 +63,7 @@ $result_tree_text{'def_syn_indices'} = '*document_root C5
   {empty_line:\\n}
   *paragraph C3
    {normal_text:definedx truc\\n}
-   *@defindex C1 l10
+   *normal_command@defindex C1 l10
    |EXTRA
    |misc_args:A{truc}
     *line_arg C3
@@ -81,7 +81,7 @@ $result_tree_text{'def_syn_indices'} = '*document_root C5
     {normal_text:index truc}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@defcodeindex C1 l15
+  *normal_command@defcodeindex C1 l15
   |EXTRA
   |misc_args:A{codeidx}
    *line_arg C3
@@ -96,17 +96,17 @@ $result_tree_text{'def_syn_indices'} = '*document_root C5
    *line_arg C8
     {spaces_before_argument: }
     {normal_text:a }
-    *@var C1 l17
+    *normal_command@var C1 l17
      *brace_container C1
       {normal_text:index entry}
     {normal_text: t}
-    *@~ C1 l17
+    *normal_command@~ C1 l17
      *following_arg C1
       {normal_text:e}
     {normal_text: }
-    *@^ C1 l17
+    *normal_command@^ C1 l17
      *brace_container C1
-      *@dotless C1 l17
+      *normal_command@dotless C1 l17
        *brace_container C1
         {normal_text:i}
     {spaces_after_argument:\\n}
@@ -120,7 +120,7 @@ $result_tree_text{'def_syn_indices'} = '*document_root C5
     {normal_text:cindex entry}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@syncodeindex C1 l21
+  *normal_command@syncodeindex C1 l21
   |EXTRA
   |misc_args:A{ky|pg}
    *line_arg C3
@@ -145,7 +145,7 @@ $result_tree_text{'def_syn_indices'} = '*document_root C5
     {normal_text:pindex codeidx}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@synindex C1 l26
+  *normal_command@synindex C1 l26
   |EXTRA
   |misc_args:A{truc|cp}
    *line_arg C3
@@ -153,14 +153,14 @@ $result_tree_text{'def_syn_indices'} = '*document_root C5
     {normal_text:truc cp}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@defindex C1 l28
+  *normal_command@defindex C1 l28
   |EXTRA
   |misc_args:A{abc}
    *line_arg C3
     {spaces_before_argument: }
     {normal_text:abc}
     {spaces_after_argument:\\n}
-  *@defindex C1 l29
+  *normal_command@defindex C1 l29
   |EXTRA
   |misc_args:A{defg}
    *line_arg C3
@@ -168,14 +168,14 @@ $result_tree_text{'def_syn_indices'} = '*document_root C5
     {normal_text:defg}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@synindex C1 l31
+  *normal_command@synindex C1 l31
   |EXTRA
   |misc_args:A{abc|defg}
    *line_arg C3
     {spaces_before_argument: }
     {normal_text:abc defg}
     {spaces_after_argument:\\n}
-  *@synindex C1 l32
+  *normal_command@synindex C1 l32
   |EXTRA
   |misc_args:A{defg|ky}
    *line_arg C3
@@ -203,7 +203,7 @@ $result_tree_text{'def_syn_indices'} = '*document_root C5
   {empty_line:\\n}
   *paragraph C1
    {normal_text:pg\\n}
-  *@printindex C1 l39
+  *normal_command@printindex C1 l39
   |EXTRA
   |global_command_number:{1}
   |misc_args:A{pg}
@@ -214,7 +214,7 @@ $result_tree_text{'def_syn_indices'} = '*document_root C5
   {empty_line:\\n}
   *paragraph C1
    {normal_text:ky\\n}
-  *@printindex C1 l42
+  *normal_command@printindex C1 l42
   |EXTRA
   |global_command_number:{2}
   |misc_args:A{ky}
@@ -225,7 +225,7 @@ $result_tree_text{'def_syn_indices'} = '*document_root C5
   {empty_line:\\n}
   *paragraph C1
    {normal_text:truc\\n}
-  *@printindex C1 l45
+  *normal_command@printindex C1 l45
   |EXTRA
   |global_command_number:{3}
   |misc_args:A{truc}
@@ -236,7 +236,7 @@ $result_tree_text{'def_syn_indices'} = '*document_root C5
   {empty_line:\\n}
   *paragraph C1
    {normal_text:value truc\\n}
-  *@printindex C1 l48
+  *normal_command@printindex C1 l48
   |EXTRA
   |global_command_number:{4}
   |misc_args:A{truc}
@@ -247,7 +247,7 @@ $result_tree_text{'def_syn_indices'} = '*document_root C5
   {empty_line:\\n}
   *paragraph C1
    {normal_text:cp\\n}
-  *@printindex C1 l51
+  *normal_command@printindex C1 l51
   |EXTRA
   |global_command_number:{5}
   |misc_args:A{cp}
@@ -258,7 +258,7 @@ $result_tree_text{'def_syn_indices'} = '*document_root C5
   {empty_line:\\n}
   *paragraph C1
    {normal_text:value cp\\n}
-  *@printindex C1 l54
+  *normal_command@printindex C1 l54
   |EXTRA
   |global_command_number:{6}
   |misc_args:A{cp}
@@ -269,7 +269,7 @@ $result_tree_text{'def_syn_indices'} = '*document_root C5
   {empty_line:\\n}
   *paragraph C1
    {normal_text:defg\\n}
-  *@printindex C1 l57
+  *normal_command@printindex C1 l57
   |EXTRA
   |global_command_number:{7}
   |misc_args:A{defg}
@@ -280,7 +280,7 @@ $result_tree_text{'def_syn_indices'} = '*document_root C5
   {empty_line:\\n}
   *paragraph C1
    {normal_text:abc\\n}
-  *@printindex C1 l60
+  *normal_command@printindex C1 l60
   |EXTRA
   |global_command_number:{8}
   |misc_args:A{abc}
@@ -291,7 +291,7 @@ $result_tree_text{'def_syn_indices'} = '*document_root C5
   {empty_line:\\n}
   *paragraph C1
    {normal_text:fn\\n}
-  *@printindex C1 l63
+  *normal_command@printindex C1 l63
   |EXTRA
   |global_command_number:{9}
   |misc_args:A{fn}

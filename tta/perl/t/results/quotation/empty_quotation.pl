@@ -11,11 +11,11 @@ use Encode;
 $result_tree_text{'empty_quotation'} = '*document_root C1
  *before_node_section C8
   *preamble_before_content
-  *@quotation C2 l1
+  *normal_command@quotation C2 l1
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
-   *@end C1 l2
+   *normal_command@end C1 l2
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3
@@ -23,13 +23,13 @@ $result_tree_text{'empty_quotation'} = '*document_root C1
      {normal_text:quotation}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@quotation C2 l4
+  *normal_command@quotation C2 l4
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
      {normal_text:Empty}
      {spaces_after_argument:\\n}
-   *@end C1 l5
+   *normal_command@end C1 l5
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3
@@ -37,14 +37,14 @@ $result_tree_text{'empty_quotation'} = '*document_root C1
      {normal_text:quotation}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@quotation C2 l7
+  *normal_command@quotation C2 l7
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     *@asis C1 l7
+     *normal_command@asis C1 l7
       *brace_container
      {spaces_after_argument:\\n}
-   *@end C1 l8
+   *normal_command@end C1 l8
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3
@@ -52,13 +52,13 @@ $result_tree_text{'empty_quotation'} = '*document_root C1
      {normal_text:quotation}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@quotation C2 l10
+  *normal_command@quotation C2 l10
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     *@*
+     *normal_command@*
      {spaces_after_argument:\\n}
-   *@end C1 l11
+   *normal_command@end C1 l11
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3

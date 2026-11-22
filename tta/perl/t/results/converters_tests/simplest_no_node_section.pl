@@ -15,7 +15,7 @@ $result_tree_text{'simplest_no_node_section'} = '*document_root C2
     {text_before_beginning:\\input texinfo @c -*-texinfo-*-\\n}
     {text_before_beginning:\\n}
   *preamble_before_content C2
-   *@setfilename C1 simplest_no_node_section.texi:l3
+   *normal_command@setfilename C1 simplest_no_node_section.texi:l3
    |EXTRA
    |text_arg:{simplest_no_node_section.info}
     *line_arg C3
@@ -25,10 +25,10 @@ $result_tree_text{'simplest_no_node_section'} = '*document_root C2
    {empty_line:\\n}
   *paragraph C3
    {normal_text:This is a very simple texi manual }
-   *@ 
+   *normal_command@ 
    {normal_text: <>.\\n}
   {empty_line:\\n}
- *@bye C1
+ *normal_command@bye C1
   *line_arg C1
    {spaces_before_argument:\\n}
 ';

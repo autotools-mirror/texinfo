@@ -12,51 +12,51 @@ $result_tree_text{'punctuation_and_code_style_commands'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *paragraph C18
-   *@command C1 l1
+   *normal_command@command C1 l1
     *brace_container C1
      {normal_text:aaa}
    {normal_text:. }
-   *@code C1 l1
+   *normal_command@code C1 l1
     *brace_container C1
-     *@~ C1 l1
+     *normal_command@~ C1 l1
       *following_arg C1
        {normal_text:e}
    {normal_text:. }
-   *@samp C1 l1
+   *normal_command@samp C1 l1
     *brace_container C1
-     *@aa C1 l1
+     *normal_command@aa C1 l1
       *brace_container
    {normal_text:.\\n}
-   *@command C1 l2
+   *normal_command@command C1 l2
     *brace_container C1
      {normal_text:AAA}
    {normal_text:. }
-   *@code C1 l2
+   *normal_command@code C1 l2
     *brace_container C1
-     *@~ C1 l2
+     *normal_command@~ C1 l2
       *following_arg C1
        {normal_text:E}
    {normal_text:. }
-   *@samp C1 l2
+   *normal_command@samp C1 l2
     *brace_container C1
-     *@AA C1 l2
+     *normal_command@AA C1 l2
       *brace_container
    {normal_text:.\\n}
-   *@command C1 l3
+   *normal_command@command C1 l3
     *brace_container C1
      {normal_text:double AAA}
    {normal_text:.  }
-   *@code C1 l3
+   *normal_command@code C1 l3
     *brace_container C2
      {normal_text:double }
-     *@~ C1 l3
+     *normal_command@~ C1 l3
       *following_arg C1
        {normal_text:E}
    {normal_text:. }
-   *@samp C1 l3
+   *normal_command@samp C1 l3
     *brace_container C2
      {normal_text:double }
-     *@AA C1 l3
+     *normal_command@AA C1 l3
       *brace_container
    {normal_text:.  End.\\n}
 ';

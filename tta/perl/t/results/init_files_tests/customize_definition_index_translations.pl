@@ -14,7 +14,7 @@ $result_tree_text{'customize_definition_index_translations'} = '*document_root C
    {text_before_beginning:\\input texinfo @c -*-texinfo-*-\\n}
    {text_before_beginning:\\n}
   *preamble_before_content C2
-   *@syncodeindex C1 customize_definition_index_translations.texi:l3
+   *normal_command@syncodeindex C1 customize_definition_index_translations.texi:l3
    |EXTRA
    |misc_args:A{vr|fn}
     *line_arg C3
@@ -22,7 +22,7 @@ $result_tree_text{'customize_definition_index_translations'} = '*document_root C
      {normal_text:vr fn}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@node C1 customize_definition_index_translations.texi:l5 {Top}
+ *normal_command@node C1 customize_definition_index_translations.texi:l5 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -32,7 +32,7 @@ $result_tree_text{'customize_definition_index_translations'} = '*document_root C
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 customize_definition_index_translations.texi:l6 {top}
+ *normal_command@top C2 customize_definition_index_translations.texi:l6 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -42,7 +42,7 @@ $result_tree_text{'customize_definition_index_translations'} = '*document_root C
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 customize_definition_index_translations.texi:l8 {Chapter}
+ *normal_command@node C1 customize_definition_index_translations.texi:l8 {Chapter}
  |EXTRA
  |identifier:{Chapter}
  |is_target:{1}
@@ -52,7 +52,7 @@ $result_tree_text{'customize_definition_index_translations'} = '*document_root C
     {spaces_before_argument: }
     {normal_text:Chapter}
     {spaces_after_argument:\\n}
- *@chapter C7 customize_definition_index_translations.texi:l9 {chap}
+ *normal_command@chapter C7 customize_definition_index_translations.texi:l9 {chap}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -63,7 +63,7 @@ $result_tree_text{'customize_definition_index_translations'} = '*document_root C
     {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@defcv C2 customize_definition_index_translations.texi:l11
+  *normal_command@defcv C2 customize_definition_index_translations.texi:l11
    *def_line C1 customize_definition_index_translations.texi:l11
    |EXTRA
    |def_command:{defcv}
@@ -84,7 +84,7 @@ $result_tree_text{'customize_definition_index_translations'} = '*document_root C
       *bracketed_arg C1 customize_definition_index_translations.texi:l11
        {normal_text:default}
      {spaces_after_argument:\\n}
-   *@end C1 customize_definition_index_translations.texi:l12
+   *normal_command@end C1 customize_definition_index_translations.texi:l12
    |EXTRA
    |text_arg:{defcv}
     *line_arg C3
@@ -92,7 +92,7 @@ $result_tree_text{'customize_definition_index_translations'} = '*document_root C
      {normal_text:defcv}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@defop C2 customize_definition_index_translations.texi:l14
+  *normal_command@defop C2 customize_definition_index_translations.texi:l14
    *def_line C1 customize_definition_index_translations.texi:l14
    |EXTRA
    |def_command:{defop}
@@ -113,7 +113,7 @@ $result_tree_text{'customize_definition_index_translations'} = '*document_root C
       *bracketed_arg C1 customize_definition_index_translations.texi:l14
        {normal_text:default}
      {spaces_after_argument:\\n}
-   *@end C1 customize_definition_index_translations.texi:l15
+   *normal_command@end C1 customize_definition_index_translations.texi:l15
    |EXTRA
    |text_arg:{defop}
     *line_arg C3
@@ -121,7 +121,7 @@ $result_tree_text{'customize_definition_index_translations'} = '*document_root C
      {normal_text:defop}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@documentlanguage C1 customize_definition_index_translations.texi:l17
+  *normal_command@documentlanguage C1 customize_definition_index_translations.texi:l17
   |EXTRA
   |global_command_number:{1}
   |text_arg:{fr}
@@ -129,7 +129,7 @@ $result_tree_text{'customize_definition_index_translations'} = '*document_root C
     {spaces_before_argument: }
     {normal_text:fr}
     {spaces_after_argument:\\n}
- *@node C1 customize_definition_index_translations.texi:l18 {Chapter fr}
+ *normal_command@node C1 customize_definition_index_translations.texi:l18 {Chapter fr}
  |EXTRA
  |identifier:{Chapter-fr}
  |is_target:{1}
@@ -139,7 +139,7 @@ $result_tree_text{'customize_definition_index_translations'} = '*document_root C
     {spaces_before_argument: }
     {normal_text:Chapter fr}
     {spaces_after_argument:\\n}
- *@chapter C6 customize_definition_index_translations.texi:l19 {chap fr}
+ *normal_command@chapter C6 customize_definition_index_translations.texi:l19 {chap fr}
  |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
@@ -150,7 +150,7 @@ $result_tree_text{'customize_definition_index_translations'} = '*document_root C
     {normal_text:chap fr}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@defcv C2 customize_definition_index_translations.texi:l21
+  *normal_command@defcv C2 customize_definition_index_translations.texi:l21
    *def_line C1 customize_definition_index_translations.texi:l21
    |EXTRA
    |def_command:{defcv}
@@ -172,7 +172,7 @@ $result_tree_text{'customize_definition_index_translations'} = '*document_root C
       *bracketed_arg C1 customize_definition_index_translations.texi:l21
        {normal_text:fr}
      {spaces_after_argument:\\n}
-   *@end C1 customize_definition_index_translations.texi:l22
+   *normal_command@end C1 customize_definition_index_translations.texi:l22
    |EXTRA
    |text_arg:{defcv}
     *line_arg C3
@@ -180,7 +180,7 @@ $result_tree_text{'customize_definition_index_translations'} = '*document_root C
      {normal_text:defcv}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@defop C2 customize_definition_index_translations.texi:l24
+  *normal_command@defop C2 customize_definition_index_translations.texi:l24
    *def_line C1 customize_definition_index_translations.texi:l24
    |EXTRA
    |def_command:{defop}
@@ -202,7 +202,7 @@ $result_tree_text{'customize_definition_index_translations'} = '*document_root C
       *bracketed_arg C1 customize_definition_index_translations.texi:l24
        {normal_text:fr}
      {spaces_after_argument:\\n}
-   *@end C1 customize_definition_index_translations.texi:l25
+   *normal_command@end C1 customize_definition_index_translations.texi:l25
    |EXTRA
    |text_arg:{defop}
     *line_arg C3
@@ -210,7 +210,7 @@ $result_tree_text{'customize_definition_index_translations'} = '*document_root C
      {normal_text:defop}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 customize_definition_index_translations.texi:l27 {section fr}
+ *normal_command@node C1 customize_definition_index_translations.texi:l27 {section fr}
  |EXTRA
  |identifier:{section-fr}
  |is_target:{1}
@@ -220,7 +220,7 @@ $result_tree_text{'customize_definition_index_translations'} = '*document_root C
     {spaces_before_argument: }
     {normal_text:section fr}
     {spaces_after_argument:\\n}
- *@section C3 customize_definition_index_translations.texi:l28 {sec fr}
+ *normal_command@section C3 customize_definition_index_translations.texi:l28 {sec fr}
  |EXTRA
  |section_heading_number:{2.1}
  |section_level:{2}
@@ -231,7 +231,7 @@ $result_tree_text{'customize_definition_index_translations'} = '*document_root C
     {normal_text:sec fr}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@documentlanguage C1 customize_definition_index_translations.texi:l30
+  *normal_command@documentlanguage C1 customize_definition_index_translations.texi:l30
   |EXTRA
   |global_command_number:{2}
   |text_arg:{de}
@@ -239,7 +239,7 @@ $result_tree_text{'customize_definition_index_translations'} = '*document_root C
     {spaces_before_argument: }
     {normal_text:de}
     {spaces_after_argument:\\n}
- *@node C1 customize_definition_index_translations.texi:l31 {Chapter de}
+ *normal_command@node C1 customize_definition_index_translations.texi:l31 {Chapter de}
  |EXTRA
  |identifier:{Chapter-de}
  |is_target:{1}
@@ -249,7 +249,7 @@ $result_tree_text{'customize_definition_index_translations'} = '*document_root C
     {spaces_before_argument: }
     {normal_text:Chapter de}
     {spaces_after_argument:\\n}
- *@chapter C7 customize_definition_index_translations.texi:l32 {chap de}
+ *normal_command@chapter C7 customize_definition_index_translations.texi:l32 {chap de}
  |EXTRA
  |section_heading_number:{3}
  |section_level:{1}
@@ -260,7 +260,7 @@ $result_tree_text{'customize_definition_index_translations'} = '*document_root C
     {normal_text:chap de}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@defcv C2 customize_definition_index_translations.texi:l34
+  *normal_command@defcv C2 customize_definition_index_translations.texi:l34
    *def_line C1 customize_definition_index_translations.texi:l34
    |EXTRA
    |def_command:{defcv}
@@ -282,7 +282,7 @@ $result_tree_text{'customize_definition_index_translations'} = '*document_root C
       *bracketed_arg C1 customize_definition_index_translations.texi:l34
        {normal_text:de}
      {spaces_after_argument:\\n}
-   *@end C1 customize_definition_index_translations.texi:l35
+   *normal_command@end C1 customize_definition_index_translations.texi:l35
    |EXTRA
    |text_arg:{defcv}
     *line_arg C3
@@ -290,7 +290,7 @@ $result_tree_text{'customize_definition_index_translations'} = '*document_root C
      {normal_text:defcv}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@defop C2 customize_definition_index_translations.texi:l37
+  *normal_command@defop C2 customize_definition_index_translations.texi:l37
    *def_line C1 customize_definition_index_translations.texi:l37
    |EXTRA
    |def_command:{defop}
@@ -312,7 +312,7 @@ $result_tree_text{'customize_definition_index_translations'} = '*document_root C
       *bracketed_arg C1 customize_definition_index_translations.texi:l37
        {normal_text:de}
      {spaces_after_argument:\\n}
-   *@end C1 customize_definition_index_translations.texi:l38
+   *normal_command@end C1 customize_definition_index_translations.texi:l38
    |EXTRA
    |text_arg:{defop}
     *line_arg C3
@@ -320,7 +320,7 @@ $result_tree_text{'customize_definition_index_translations'} = '*document_root C
      {normal_text:defop}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@documentlanguage C1 customize_definition_index_translations.texi:l40
+  *normal_command@documentlanguage C1 customize_definition_index_translations.texi:l40
   |EXTRA
   |global_command_number:{3}
   |text_arg:{de_AT}
@@ -328,7 +328,7 @@ $result_tree_text{'customize_definition_index_translations'} = '*document_root C
     {spaces_before_argument: }
     {normal_text:de_AT}
     {spaces_after_argument:\\n}
- *@node C1 customize_definition_index_translations.texi:l41 {Chapter de_AT}
+ *normal_command@node C1 customize_definition_index_translations.texi:l41 {Chapter de_AT}
  |EXTRA
  |identifier:{Chapter-de_005fAT}
  |is_target:{1}
@@ -338,7 +338,7 @@ $result_tree_text{'customize_definition_index_translations'} = '*document_root C
     {spaces_before_argument: }
     {normal_text:Chapter de_AT}
     {spaces_after_argument:\\n}
- *@chapter C6 customize_definition_index_translations.texi:l42 {chap de_AT}
+ *normal_command@chapter C6 customize_definition_index_translations.texi:l42 {chap de_AT}
  |EXTRA
  |section_heading_number:{4}
  |section_level:{1}
@@ -349,7 +349,7 @@ $result_tree_text{'customize_definition_index_translations'} = '*document_root C
     {normal_text:chap de_AT}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@defcv C2 customize_definition_index_translations.texi:l44
+  *normal_command@defcv C2 customize_definition_index_translations.texi:l44
    *def_line C1 customize_definition_index_translations.texi:l44
    |EXTRA
    |def_command:{defcv}
@@ -371,7 +371,7 @@ $result_tree_text{'customize_definition_index_translations'} = '*document_root C
       *bracketed_arg C1 customize_definition_index_translations.texi:l44
        {normal_text:deAT}
      {spaces_after_argument:\\n}
-   *@end C1 customize_definition_index_translations.texi:l45
+   *normal_command@end C1 customize_definition_index_translations.texi:l45
    |EXTRA
    |text_arg:{defcv}
     *line_arg C3
@@ -379,7 +379,7 @@ $result_tree_text{'customize_definition_index_translations'} = '*document_root C
      {normal_text:defcv}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@defop C2 customize_definition_index_translations.texi:l47
+  *normal_command@defop C2 customize_definition_index_translations.texi:l47
    *def_line C1 customize_definition_index_translations.texi:l47
    |EXTRA
    |def_command:{defop}
@@ -401,7 +401,7 @@ $result_tree_text{'customize_definition_index_translations'} = '*document_root C
       *bracketed_arg C1 customize_definition_index_translations.texi:l47
        {normal_text:deAT}
      {spaces_after_argument:\\n}
-   *@end C1 customize_definition_index_translations.texi:l48
+   *normal_command@end C1 customize_definition_index_translations.texi:l48
    |EXTRA
    |text_arg:{defop}
     *line_arg C3
@@ -409,7 +409,7 @@ $result_tree_text{'customize_definition_index_translations'} = '*document_root C
      {normal_text:defop}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 customize_definition_index_translations.texi:l50 {Last chapter}
+ *normal_command@node C1 customize_definition_index_translations.texi:l50 {Last chapter}
  |EXTRA
  |identifier:{Last-chapter}
  |is_target:{1}
@@ -420,7 +420,7 @@ $result_tree_text{'customize_definition_index_translations'} = '*document_root C
     {spaces_before_argument: }
     {normal_text:Last chapter}
     {spaces_after_argument:\\n}
- *@chapter C3 customize_definition_index_translations.texi:l51 {Last Chapter}
+ *normal_command@chapter C3 customize_definition_index_translations.texi:l51 {Last Chapter}
  |EXTRA
  |section_heading_number:{5}
  |section_level:{1}
@@ -431,7 +431,7 @@ $result_tree_text{'customize_definition_index_translations'} = '*document_root C
     {normal_text:Last Chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@printindex C1 customize_definition_index_translations.texi:l53
+  *normal_command@printindex C1 customize_definition_index_translations.texi:l53
   |EXTRA
   |global_command_number:{1}
   |misc_args:A{fn}
@@ -439,7 +439,7 @@ $result_tree_text{'customize_definition_index_translations'} = '*document_root C
     {spaces_before_argument: }
     {normal_text:fn}
     {spaces_after_argument:\\n}
- *@bye C1
+ *normal_command@bye C1
   *line_arg C1
    {spaces_before_argument:\\n}
 ';

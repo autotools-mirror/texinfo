@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'ref_in_center'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'ref_in_center'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l2 {top}
+ *normal_command@top C2 l2 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -31,7 +31,7 @@ $result_tree_text{'ref_in_center'} = '*document_root C5
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l4 {chap}
+ *normal_command@node C1 l4 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -41,7 +41,7 @@ $result_tree_text{'ref_in_center'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:chap}
     {spaces_after_argument:\\n}
- *@chapter C6 l5 {Chapter}
+ *normal_command@chapter C6 l5 {Chapter}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -52,10 +52,10 @@ $result_tree_text{'ref_in_center'} = '*document_root C5
     {normal_text:Chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@center C1 l7
+  *normal_command@center C1 l7
    *line_arg C3
     {spaces_before_argument: }
-    *@ref C1 l7
+    *normal_command@ref C1 l7
      *brace_arg C1
      |EXTRA
      |node_content:A{0|0}
@@ -63,10 +63,10 @@ $result_tree_text{'ref_in_center'} = '*document_root C5
       {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@center C1 l9
+  *normal_command@center C1 l9
    *line_arg C2
     {spaces_before_argument: }
-    *@ref C3 l9
+    *normal_command@ref C3 l9
      *brace_arg C1
       {normal_text:Top}
      *brace_arg C1

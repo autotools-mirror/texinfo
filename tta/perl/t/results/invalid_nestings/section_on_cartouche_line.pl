@@ -11,10 +11,10 @@ use Encode;
 $result_tree_text{'section_on_cartouche_line'} = '*document_root C3
  *before_node_section C2
   *preamble_before_content
-  *@cartouche C1 l1
+  *normal_command@cartouche C1 l1
    *arguments_line C1
     *block_line_arg
- *@section C3 l1 {first}
+ *normal_command@section C3 l1 {first}
  |EXTRA
  |identifier:{first}
  |is_target:{1}
@@ -27,11 +27,11 @@ $result_tree_text{'section_on_cartouche_line'} = '*document_root C3
     {normal_text:first}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@cartouche C1 l3
+  *normal_command@cartouche C1 l3
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument: }
- *@section C1 l3 {second spaces}
+ *normal_command@section C1 l3 {second spaces}
  |EXTRA
  |identifier:{second-spaces}
  |is_target:{1}

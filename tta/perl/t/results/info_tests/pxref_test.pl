@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'pxref_test'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
- *@node C3 l1 {Top}
+ *normal_command@node C3 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -24,7 +24,7 @@ $result_tree_text{'pxref_test'} = '*document_root C2
   {empty_line:\\n}
   *paragraph C9
    {normal_text:Hey (}
-   *@pxref C4 l3
+   *normal_command@pxref C4 l3
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -35,7 +35,7 @@ $result_tree_text{'pxref_test'} = '*document_root C2
      {spaces_before_argument: }
      {normal_text:m}
    {normal_text:) and continue (}
-   *@pxref C4 l3
+   *normal_command@pxref C4 l3
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -48,7 +48,7 @@ $result_tree_text{'pxref_test'} = '*document_root C2
      {spaces_before_argument: }
      {normal_text:m}
    {normal_text:) and end.\\n}
-   *@pxref C4 l4
+   *normal_command@pxref C4 l4
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -59,7 +59,7 @@ $result_tree_text{'pxref_test'} = '*document_root C2
      {spaces_before_argument: }
      {normal_text:m}
    {normal_text:. }
-   *@pxref C4 l4
+   *normal_command@pxref C4 l4
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}

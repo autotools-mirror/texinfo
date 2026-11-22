@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'deftypefnnewline_on_in_middle'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'deftypefnnewline_on_in_middle'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l2 {top}
+ *normal_command@top C2 l2 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -31,7 +31,7 @@ $result_tree_text{'deftypefnnewline_on_in_middle'} = '*document_root C5
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l4 {chap}
+ *normal_command@node C1 l4 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -41,7 +41,7 @@ $result_tree_text{'deftypefnnewline_on_in_middle'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:chap}
     {spaces_after_argument:\\n}
- *@chapter C7 l5 {Chapter}
+ *normal_command@chapter C7 l5 {Chapter}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -52,7 +52,7 @@ $result_tree_text{'deftypefnnewline_on_in_middle'} = '*document_root C5
     {normal_text:Chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@deftypefun C3 l7
+  *normal_command@deftypefun C3 l7
    *def_line C1 l7
    |EXTRA
    |def_command:{deftypefun}
@@ -82,7 +82,7 @@ $result_tree_text{'deftypefnnewline_on_in_middle'} = '*document_root C5
    *def_item C1
     *paragraph C1
      {normal_text:do something with input\\n}
-   *@end C1 l9
+   *normal_command@end C1 l9
    |EXTRA
    |text_arg:{deftypefun}
     *line_arg C3
@@ -90,7 +90,7 @@ $result_tree_text{'deftypefnnewline_on_in_middle'} = '*document_root C5
      {normal_text:deftypefun}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@deftypefnnewline C1 l11
+  *normal_command@deftypefnnewline C1 l11
   |EXTRA
   |global_command_number:{1}
   |misc_args:A{on}
@@ -99,7 +99,7 @@ $result_tree_text{'deftypefnnewline_on_in_middle'} = '*document_root C5
     {normal_text:on}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@deftypefun C3 l13
+  *normal_command@deftypefun C3 l13
    *def_line C1 l13
    |EXTRA
    |def_command:{deftypefun}
@@ -129,7 +129,7 @@ $result_tree_text{'deftypefnnewline_on_in_middle'} = '*document_root C5
    *def_item C1
     *paragraph C1
      {normal_text:BODY-OF-DESCRIPTION\\n}
-   *@end C1 l15
+   *normal_command@end C1 l15
    |EXTRA
    |text_arg:{deftypefun}
     *line_arg C3

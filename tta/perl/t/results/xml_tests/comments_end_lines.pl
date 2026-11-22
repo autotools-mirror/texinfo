@@ -11,136 +11,136 @@ use Encode;
 $result_tree_text{'comments_end_lines'} = '*document_root C1
  *before_node_section C20
   *preamble_before_content
-  *@itemize C3 l1
+  *normal_command@itemize C3 l1
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
-   *@item C2 l2
+   *normal_command@item C2 l2
    |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:itemize it\\n}
-   *@end C1 l3
+   *normal_command@end C1 l3
    |EXTRA
    |text_arg:{itemize}
     *line_arg C4
      {spaces_before_argument: }
      {normal_text:itemize}
      {spaces_after_argument:  }
-     *@c C1
+     *normal_command@c C1
       *line_arg C3
        {spaces_before_argument: }
        {rawline_text:comment itemize}
        {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@enumerate C2 l5
+  *normal_command@enumerate C2 l5
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
-   *@end C1 l6
+   *normal_command@end C1 l6
    |EXTRA
    |text_arg:{enumerate}
     *line_arg C4
      {spaces_before_argument: }
      {normal_text:enumerate}
      {spaces_after_argument: }
-     *@c C1
+     *normal_command@c C1
       *line_arg C3
        {spaces_before_argument: }
        {rawline_text:comm}
        {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@table C3 l8
+  *normal_command@table C3 l8
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     *@asis l8
+     *normal_command@asis l8
      {spaces_after_argument:\\n}
    *table_entry C1
     *table_term C1
-     *@item C1 l9
+     *normal_command@item C1 l9
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:it}
        {spaces_after_argument:\\n}
-   *@end C1 l10
+   *normal_command@end C1 l10
    |EXTRA
    |text_arg:{table}
     *line_arg C4
      {spaces_before_argument: }
      {normal_text:table}
      {spaces_after_argument: }
-     *@c C1
+     *normal_command@c C1
       *line_arg C3
        {spaces_before_argument: }
        {rawline_text:table}
        {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@quotation C3 l12
+  *normal_command@quotation C3 l12
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C1
     {normal_text:Quot no arg\\n}
-   *@end C1 l14
+   *normal_command@end C1 l14
    |EXTRA
    |text_arg:{quotation}
     *line_arg C4
      {spaces_before_argument: }
      {normal_text:quotation}
      {spaces_after_argument: }
-     *@c C1
+     *normal_command@c C1
       *line_arg C3
        {spaces_before_argument: }
        {rawline_text:quot no arg}
        {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@group C3 l16
+  *normal_command@group C3 l16
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C1
     {normal_text:in gr\\n}
-   *@end C1 l18
+   *normal_command@end C1 l18
    |EXTRA
    |text_arg:{group}
     *line_arg C4
      {spaces_before_argument: }
      {normal_text:group}
      {spaces_after_argument: }
-     *@c C1
+     *normal_command@c C1
       *line_arg C3
        {spaces_before_argument: }
        {rawline_text:comm}
        {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@example C3 l20
+  *normal_command@example C3 l20
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C1
     {normal_text:in ex\\n}
-   *@end C1 l22
+   *normal_command@end C1 l22
    |EXTRA
    |text_arg:{example}
     *line_arg C4
      {spaces_before_argument: }
      {normal_text:example}
      {spaces_after_argument: }
-     *@c C1
+     *normal_command@c C1
       *line_arg C3
        {spaces_before_argument: }
        {rawline_text:comm}
        {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@multitable C3 l24
+  *normal_command@multitable C3 l24
   |EXTRA
   |max_columns:{2}
    *arguments_line C1
     *block_line_arg C2
      {spaces_before_argument: }
-     *@columnfractions C1 l24
+     *normal_command@columnfractions C1 l24
      |EXTRA
      |misc_args:A{0.4|0.6}
       *line_arg C3
@@ -151,32 +151,32 @@ $result_tree_text{'comments_end_lines'} = '*document_root C1
     *row C2
     |EXTRA
     |row_number:{1}
-     *@item C2 l25
+     *normal_command@item C2 l25
      |EXTRA
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
        {normal_text:a }
-     *@tab C2 l25
+     *normal_command@tab C2 l25
      |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C1
        {normal_text:b\\n}
-   *@end C1 l26
+   *normal_command@end C1 l26
    |EXTRA
    |text_arg:{multitable}
     *line_arg C4
      {spaces_before_argument: }
      {normal_text:multitable}
      {spaces_after_argument: }
-     *@c C1
+     *normal_command@c C1
       *line_arg C3
        {spaces_before_argument: }
        {rawline_text:comm}
        {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@float C3 l28
+  *normal_command@float C3 l28
   |EXTRA
   |float_number:{1}
   |float_type:{f}
@@ -192,52 +192,52 @@ $result_tree_text{'comments_end_lines'} = '*document_root C1
      {spaces_after_argument:\\n}
    *paragraph C1
     {normal_text:In f\\n}
-   *@end C1 l30
+   *normal_command@end C1 l30
    |EXTRA
    |text_arg:{float}
     *line_arg C4
      {spaces_before_argument: }
      {normal_text:float}
      {spaces_after_argument:  }
-     *@c C1
+     *normal_command@c C1
       *line_arg C3
        {spaces_before_argument: }
        {rawline_text:comm}
        {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@flushright C3 l32
+  *normal_command@flushright C3 l32
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C1
     {normal_text:flushright\\n}
-   *@end C1 l34
+   *normal_command@end C1 l34
    |EXTRA
    |text_arg:{flushright}
     *line_arg C4
      {spaces_before_argument: }
      {normal_text:flushright}
      {spaces_after_argument: }
-     *@c C1
+     *normal_command@c C1
       *line_arg C3
        {spaces_before_argument: }
        {rawline_text:comm}
        {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@raggedright C3 l36
+  *normal_command@raggedright C3 l36
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C1
     {normal_text:raggedright\\n}
-   *@end C1 l38
+   *normal_command@end C1 l38
    |EXTRA
    |text_arg:{raggedright}
     *line_arg C4
      {spaces_before_argument: }
      {normal_text:raggedright}
      {spaces_after_argument: }
-     *@c C1
+     *normal_command@c C1
       *line_arg C3
        {spaces_before_argument: }
        {rawline_text:comm}

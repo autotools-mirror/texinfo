@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'section_before_top'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {section node}
+ *normal_command@node C1 l1 {section node}
  |EXTRA
  |identifier:{section-node}
  |is_target:{1}
@@ -28,7 +28,7 @@ $result_tree_text{'section_before_top'} = '*document_root C5
    |normalized:{Top}
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@section C2 l2 {section}
+ *normal_command@section C2 l2 {section}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{2}
@@ -39,7 +39,7 @@ $result_tree_text{'section_before_top'} = '*document_root C5
     {normal_text:section}
     {spaces_after_argument: \\n}
   {empty_line:\\n}
- *@node C1 l4 {Top}
+ *normal_command@node C1 l4 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -49,7 +49,7 @@ $result_tree_text{'section_before_top'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C3 l5 {top}
+ *normal_command@top C3 l5 {top}
  |EXTRA
  |section_level:{2}
  |section_number:{2}
@@ -59,7 +59,7 @@ $result_tree_text{'section_before_top'} = '*document_root C5
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C3 l7
+  *normal_command@menu C3 l7
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -74,7 +74,7 @@ $result_tree_text{'section_before_top'} = '*document_root C5
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l9
+   *normal_command@end C1 l9
    |EXTRA
    |text_arg:{menu}
     *line_arg C3

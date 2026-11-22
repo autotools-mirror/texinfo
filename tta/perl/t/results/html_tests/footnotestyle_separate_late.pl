@@ -18,7 +18,7 @@ NodeNext: [U1]
 NodeForward: [U1]
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -28,7 +28,7 @@ NodeForward: [U1]
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l2 {top}
+ *normal_command@top C2 l2 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -53,7 +53,7 @@ NodePrev: [U0]
 NodeUp: [U0]
 NodeForward: [U2]
 NodeBack: [U0]
- *@node C1 l4 {chap f}
+ *normal_command@node C1 l4 {chap f}
  |EXTRA
  |identifier:{chap-f}
  |is_target:{1}
@@ -63,7 +63,7 @@ NodeBack: [U0]
     {spaces_before_argument: }
     {normal_text:chap f}
     {spaces_after_argument:\\n}
- *@chapter C4 l5 {Chapter f}
+ *normal_command@chapter C4 l5 {Chapter f}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -75,7 +75,7 @@ NodeBack: [U0]
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@footnote C1 l7
+   *normal_command@footnote C1 l7
    |EXTRA
    |global_command_number:{1}
     *brace_command_context C1
@@ -94,7 +94,7 @@ Up: [U0]
 NodePrev: [U1]
 NodeUp: [U0]
 NodeBack: [U1]
- *@node C1 l9 {chap s}
+ *normal_command@node C1 l9 {chap s}
  |EXTRA
  |identifier:{chap-s}
  |is_target:{1}
@@ -104,7 +104,7 @@ NodeBack: [U1]
     {spaces_before_argument: }
     {normal_text:chap s}
     {spaces_after_argument:\\n}
- *@chapter C5 l10 {Chapter s}
+ *normal_command@chapter C5 l10 {Chapter s}
  |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
@@ -116,7 +116,7 @@ NodeBack: [U1]
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@footnote C1 l12
+   *normal_command@footnote C1 l12
    |EXTRA
    |global_command_number:{2}
     *brace_command_context C1
@@ -124,7 +124,7 @@ NodeBack: [U1]
       {normal_text:in fchap 2}
    {normal_text:\\n}
   {empty_line:\\n}
-  *@footnotestyle C1 l14
+  *normal_command@footnotestyle C1 l14
   |EXTRA
   |misc_args:A{separate}
    *line_arg C3

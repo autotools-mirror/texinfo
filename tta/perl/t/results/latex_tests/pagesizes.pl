@@ -11,13 +11,13 @@ use Encode;
 $result_tree_text{'pagesizes'} = '*document_root C6
  *before_node_section C1
   *preamble_before_content C2
-   *@pagesizes C1 l1
+   *normal_command@pagesizes C1 l1
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:200mm,150mm}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@node C1 l3 {Top}
+ *normal_command@node C1 l3 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -27,7 +27,7 @@ $result_tree_text{'pagesizes'} = '*document_root C6
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l4 {section top}
+ *normal_command@top C2 l4 {section top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -37,7 +37,7 @@ $result_tree_text{'pagesizes'} = '*document_root C6
     {normal_text:section top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l6 {chapter}
+ *normal_command@node C1 l6 {chapter}
  |EXTRA
  |identifier:{chapter}
  |is_target:{1}
@@ -47,7 +47,7 @@ $result_tree_text{'pagesizes'} = '*document_root C6
     {spaces_before_argument: }
     {normal_text:chapter}
     {spaces_after_argument:\\n}
- *@chapter C4 l7 {Chapter}
+ *normal_command@chapter C4 l7 {Chapter}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -58,13 +58,13 @@ $result_tree_text{'pagesizes'} = '*document_root C6
     {normal_text:Chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@pagesizes C1 l9
+  *normal_command@pagesizes C1 l9
    *line_arg C3
     {spaces_before_argument: }
     {normal_text:11.5in}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@chapter C5 l11 {other pagesizes}
+ *normal_command@chapter C5 l11 {other pagesizes}
  |EXTRA
  |identifier:{other-pagesizes}
  |is_target:{1}
@@ -77,13 +77,13 @@ $result_tree_text{'pagesizes'} = '*document_root C6
     {normal_text:other pagesizes}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@pagesizes C1 l13
+  *normal_command@pagesizes C1 l13
    *line_arg C3
     {spaces_before_argument: }
     {normal_text:, 130mm}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@pagesizes C1 l15
+  *normal_command@pagesizes C1 l15
    *line_arg C3
     {spaces_before_argument: }
     {normal_text:,}

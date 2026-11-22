@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'multiple_documentlanguage'} = '*document_root C11
  *before_node_section C1
   *preamble_before_content C2
-   *@documentlanguage C1 l1
+   *normal_command@documentlanguage C1 l1
    |EXTRA
    |global_command_number:{1}
    |text_arg:{ja}
@@ -20,7 +20,7 @@ $result_tree_text{'multiple_documentlanguage'} = '*document_root C11
      {normal_text:ja}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@node C1 l3 {Top}
+ *normal_command@node C1 l3 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -30,7 +30,7 @@ $result_tree_text{'multiple_documentlanguage'} = '*document_root C11
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l4 {top}
+ *normal_command@top C2 l4 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -40,7 +40,7 @@ $result_tree_text{'multiple_documentlanguage'} = '*document_root C11
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l6 {chap}
+ *normal_command@node C1 l6 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -50,7 +50,7 @@ $result_tree_text{'multiple_documentlanguage'} = '*document_root C11
     {spaces_before_argument: }
     {normal_text:chap}
     {spaces_after_argument:\\n}
- *@chapter C3 l7 {Chap no new language}
+ *normal_command@chapter C3 l7 {Chap no new language}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -61,7 +61,7 @@ $result_tree_text{'multiple_documentlanguage'} = '*document_root C11
     {normal_text:Chap no new language}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@documentlanguage C1 l9
+  *normal_command@documentlanguage C1 l9
   |EXTRA
   |global_command_number:{2}
   |text_arg:{fr}
@@ -69,7 +69,7 @@ $result_tree_text{'multiple_documentlanguage'} = '*document_root C11
     {spaces_before_argument: }
     {normal_text:fr}
     {spaces_after_argument:\\n}
- *@node C1 l10 {chapter fr}
+ *normal_command@node C1 l10 {chapter fr}
  |EXTRA
  |identifier:{chapter-fr}
  |is_target:{1}
@@ -79,7 +79,7 @@ $result_tree_text{'multiple_documentlanguage'} = '*document_root C11
     {spaces_before_argument: }
     {normal_text:chapter fr}
     {spaces_after_argument:\\n}
- *@chapter C3 l11 {chapter fr}
+ *normal_command@chapter C3 l11 {chapter fr}
  |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
@@ -90,7 +90,7 @@ $result_tree_text{'multiple_documentlanguage'} = '*document_root C11
     {normal_text:chapter fr}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@documentlanguage C1 l13
+  *normal_command@documentlanguage C1 l13
   |EXTRA
   |global_command_number:{3}
   |text_arg:{pt}
@@ -98,7 +98,7 @@ $result_tree_text{'multiple_documentlanguage'} = '*document_root C11
     {spaces_before_argument: }
     {normal_text:pt}
     {spaces_after_argument:\\n}
- *@node C1 l14 {subnode pt}
+ *normal_command@node C1 l14 {subnode pt}
  |EXTRA
  |identifier:{subnode-pt}
  |is_target:{1}
@@ -108,7 +108,7 @@ $result_tree_text{'multiple_documentlanguage'} = '*document_root C11
     {spaces_before_argument: }
     {normal_text:subnode pt}
     {spaces_after_argument:\\n}
- *@section C3 l15 {section pt}
+ *normal_command@section C3 l15 {section pt}
  |EXTRA
  |section_heading_number:{2.1}
  |section_level:{2}
@@ -119,7 +119,7 @@ $result_tree_text{'multiple_documentlanguage'} = '*document_root C11
     {normal_text:section pt}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@documentlanguage C1 l17
+  *normal_command@documentlanguage C1 l17
   |EXTRA
   |global_command_number:{4}
   |text_arg:{fr}
@@ -127,7 +127,7 @@ $result_tree_text{'multiple_documentlanguage'} = '*document_root C11
     {spaces_before_argument: }
     {normal_text:fr}
     {spaces_after_argument:\\n}
- *@node C1 l18 {subnode fr}
+ *normal_command@node C1 l18 {subnode fr}
  |EXTRA
  |identifier:{subnode-fr}
  |is_target:{1}
@@ -137,7 +137,7 @@ $result_tree_text{'multiple_documentlanguage'} = '*document_root C11
     {spaces_before_argument: }
     {normal_text:subnode fr}
     {spaces_after_argument:\\n}
- *@section C2 l19 {section fr}
+ *normal_command@section C2 l19 {section fr}
  |EXTRA
  |section_heading_number:{2.2}
  |section_level:{2}

@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'macro_alias_definfoenclose_defindex'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'macro_alias_definfoenclose_defindex'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l2 {top}
+ *normal_command@top C2 l2 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -31,7 +31,7 @@ $result_tree_text{'macro_alias_definfoenclose_defindex'} = '*document_root C5
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l4 {chap}
+ *normal_command@node C1 l4 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -42,7 +42,7 @@ $result_tree_text{'macro_alias_definfoenclose_defindex'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:chap}
     {spaces_after_argument:\\n}
- *@chapter C42 l5 {chap}
+ *normal_command@chapter C42 l5 {chap}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -53,14 +53,14 @@ $result_tree_text{'macro_alias_definfoenclose_defindex'} = '*document_root C5
     {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@macro C3 l7
+  *normal_command@macro C3 l7
   |EXTRA
   |formal_args:A{arg}
   |macro_name:{phooindex}
    *arguments_line C1
     {macro_line: phooindex {arg}\\n}
    {raw:||\\arg\\||\\n}
-   *@end C1 l9
+   *normal_command@end C1 l9
    |EXTRA
    |text_arg:{macro}
     *line_arg C3
@@ -76,7 +76,7 @@ $result_tree_text{'macro_alias_definfoenclose_defindex'} = '*document_root C5
       >{macro_call_arg_text:maa}
    >macro_expansion<end;1><p:7>
   {empty_line:\\n}
-  *@definfoenclose C1 l12
+  *normal_command@definfoenclose C1 l12
   |EXTRA
   |misc_args:A{phooindex|;|:}
    *line_arg C3
@@ -92,7 +92,7 @@ $result_tree_text{'macro_alias_definfoenclose_defindex'} = '*document_root C5
      {normal_text:dbb}
    {normal_text:\\n}
   {empty_line:\\n}
-  *@alias C1 l15
+  *normal_command@alias C1 l15
   |EXTRA
   |misc_args:A{phooindex|strong}
    *line_arg C3
@@ -100,14 +100,14 @@ $result_tree_text{'macro_alias_definfoenclose_defindex'} = '*document_root C5
     {normal_text:phooindex = strong}
     {spaces_after_argument:\\n}
   *paragraph C2
-   *@strong C1 l16
+   *normal_command@strong C1 l16
    |EXTRA
    |alias_of:{phooindex}
     *brace_container C1
      {normal_text:acc}
    {normal_text:\\n}
   {empty_line:\\n}
-  *@defindex C1 l18
+  *normal_command@defindex C1 l18
   |EXTRA
   |misc_args:A{phoo}
    *line_arg C3
@@ -123,7 +123,7 @@ $result_tree_text{'macro_alias_definfoenclose_defindex'} = '*document_root C5
     {normal_text:idd}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@definfoenclose C1 l21
+  *normal_command@definfoenclose C1 l21
   |EXTRA
   |misc_args:A{phooindex|;|:}
    *line_arg C3
@@ -139,14 +139,14 @@ $result_tree_text{'macro_alias_definfoenclose_defindex'} = '*document_root C5
      {normal_text:dee}
    {normal_text:\\n}
   {empty_line:\\n}
-  *@macro C3 l24
+  *normal_command@macro C3 l24
   |EXTRA
   |formal_args:A{arg}
   |macro_name:{phooindex}
    *arguments_line C1
     {macro_line: phooindex {arg}\\n}
    {raw:!!\\arg\\!!\\n}
-   *@end C1 l26
+   *normal_command@end C1 l26
    |EXTRA
    |text_arg:{macro}
     *line_arg C3
@@ -163,7 +163,7 @@ $result_tree_text{'macro_alias_definfoenclose_defindex'} = '*document_root C5
       >{normal_text:mff}
    >macro_expansion<end;2><p:7>
   {empty_line:\\n}
-  *@defindex C1 l29
+  *normal_command@defindex C1 l29
   |EXTRA
   |misc_args:A{phoo}
    *line_arg C3
@@ -179,14 +179,14 @@ $result_tree_text{'macro_alias_definfoenclose_defindex'} = '*document_root C5
     {normal_text:igg}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@macro C3 l32
+  *normal_command@macro C3 l32
   |EXTRA
   |formal_args:A{arg}
   |macro_name:{phooindex}
    *arguments_line C1
     {macro_line: phooindex {arg}\\n}
    {raw:!!\\arg\\!!\\n}
-   *@end C1 l34
+   *normal_command@end C1 l34
    |EXTRA
    |text_arg:{macro}
     *line_arg C3
@@ -203,7 +203,7 @@ $result_tree_text{'macro_alias_definfoenclose_defindex'} = '*document_root C5
       >{normal_text:mhh}
    >macro_expansion<end;3><p:7>
   {empty_line:\\n}
-  *@alias C1 l37
+  *normal_command@alias C1 l37
   |EXTRA
   |misc_args:A{phooindex|strong}
    *line_arg C3
@@ -211,14 +211,14 @@ $result_tree_text{'macro_alias_definfoenclose_defindex'} = '*document_root C5
     {normal_text:phooindex = strong}
     {spaces_after_argument:\\n}
   *paragraph C2
-   *@strong C1 l38
+   *normal_command@strong C1 l38
    |EXTRA
    |alias_of:{phooindex}
     *brace_container C1
      {normal_text:aii}
    {normal_text:\\n}
   {empty_line:\\n}
-  *@definfoenclose C1 l40
+  *normal_command@definfoenclose C1 l40
   |EXTRA
   |misc_args:A{phoo|;|:}
    *line_arg C3
@@ -234,7 +234,7 @@ $result_tree_text{'macro_alias_definfoenclose_defindex'} = '*document_root C5
      {normal_text:djj}
    {normal_text:\\n}
   {empty_line:\\n}
-  *@defindex C1 l43
+  *normal_command@defindex C1 l43
   |EXTRA
   |misc_args:A{phoo}
    *line_arg C3
@@ -250,7 +250,7 @@ $result_tree_text{'macro_alias_definfoenclose_defindex'} = '*document_root C5
     {normal_text:ikk}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@alias C1 l46
+  *normal_command@alias C1 l46
   |EXTRA
   |misc_args:A{phooindex|strong}
    *line_arg C3
@@ -258,21 +258,21 @@ $result_tree_text{'macro_alias_definfoenclose_defindex'} = '*document_root C5
     {normal_text:phooindex = strong}
     {spaces_after_argument:\\n}
   *paragraph C2
-   *@strong C1 l47
+   *normal_command@strong C1 l47
    |EXTRA
    |alias_of:{phooindex}
     *brace_container C1
      {normal_text:all}
    {normal_text:\\n}
   {empty_line:\\n}
-  *@macro C3 l49
+  *normal_command@macro C3 l49
   |EXTRA
   |formal_args:A{arg}
   |macro_name:{phooindex}
    *arguments_line C1
     {macro_line: phooindex {arg}\\n}
    {raw:%%\\arg\\%%\\n}
-   *@end C1 l51
+   *normal_command@end C1 l51
    |EXTRA
    |text_arg:{macro}
     *line_arg C3
@@ -288,7 +288,7 @@ $result_tree_text{'macro_alias_definfoenclose_defindex'} = '*document_root C5
       >{macro_call_arg_text:mmm}
    >macro_expansion<end;4><p:7>
   {empty_line:\\n}
-  *@printindex C1 l54
+  *normal_command@printindex C1 l54
   |EXTRA
   |global_command_number:{1}
   |misc_args:A{phoo}

@@ -14,7 +14,7 @@ $result_tree_text{'master_menu_fr'} = '*document_root C7
    {text_before_beginning:\\input texinfo.tex\\n}
    {text_before_beginning:\\n}
   *preamble_before_content C2
-   *@documentlanguage C1 no_master_menu_fr.texi:l3
+   *normal_command@documentlanguage C1 no_master_menu_fr.texi:l3
    |EXTRA
    |global_command_number:{1}
    |text_arg:{fr}
@@ -23,7 +23,7 @@ $result_tree_text{'master_menu_fr'} = '*document_root C7
      {normal_text:fr}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@node C1 no_master_menu_fr.texi:l5 {Top}
+ *normal_command@node C1 no_master_menu_fr.texi:l5 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -33,7 +33,7 @@ $result_tree_text{'master_menu_fr'} = '*document_root C7
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C4 no_master_menu_fr.texi:l6 {max}
+ *normal_command@top C4 no_master_menu_fr.texi:l6 {max}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -43,7 +43,7 @@ $result_tree_text{'master_menu_fr'} = '*document_root C7
     {normal_text:max}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C5 no_master_menu_fr.texi:l8
+  *normal_command@menu C5 no_master_menu_fr.texi:l8
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -61,22 +61,22 @@ $result_tree_text{'master_menu_fr'} = '*document_root C7
    *menu_comment C1
     *preformatted C1
      {after_menu_description_line:\\n}
-   *@detailmenu C4
+   *normal_command@detailmenu C4
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *menu_comment C1
      *preformatted C12
       {normal_text: --- Liste d}
-      *@\' C1
+      *normal_command@\' C1
        *following_arg C1
         {normal_text:e}
       {normal_text:taill}
-      *@\' C1
+      *normal_command@\' C1
        *following_arg C1
         {normal_text:e}
       {normal_text:e des n}
-      *@oe C1
+      *normal_command@oe C1
        *brace_container
       {normal_text:uds ---}
       {normal_text:\\n}
@@ -95,14 +95,14 @@ $result_tree_text{'master_menu_fr'} = '*document_root C7
      *menu_entry_description C1
       *preformatted C1
        {normal_text:\\n}
-    *@end C1
+    *normal_command@end C1
     |EXTRA
     |text_arg:{detailmenu}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:detailmenu}
       {spaces_after_argument:\\n}
-   *@end C1 no_master_menu_fr.texi:l10
+   *normal_command@end C1 no_master_menu_fr.texi:l10
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -110,7 +110,7 @@ $result_tree_text{'master_menu_fr'} = '*document_root C7
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 no_master_menu_fr.texi:l12 {chap}
+ *normal_command@node C1 no_master_menu_fr.texi:l12 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -120,7 +120,7 @@ $result_tree_text{'master_menu_fr'} = '*document_root C7
     {spaces_before_argument: }
     {normal_text:chap}
     {spaces_after_argument:\\n}
- *@chapter C4 no_master_menu_fr.texi:l13 {chap}
+ *normal_command@chapter C4 no_master_menu_fr.texi:l13 {chap}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -131,7 +131,7 @@ $result_tree_text{'master_menu_fr'} = '*document_root C7
     {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C3 no_master_menu_fr.texi:l15
+  *normal_command@menu C3 no_master_menu_fr.texi:l15
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -146,7 +146,7 @@ $result_tree_text{'master_menu_fr'} = '*document_root C7
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 no_master_menu_fr.texi:l17
+   *normal_command@end C1 no_master_menu_fr.texi:l17
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -154,7 +154,7 @@ $result_tree_text{'master_menu_fr'} = '*document_root C7
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 no_master_menu_fr.texi:l19 {section}
+ *normal_command@node C1 no_master_menu_fr.texi:l19 {section}
  |EXTRA
  |identifier:{section}
  |is_target:{1}
@@ -164,7 +164,7 @@ $result_tree_text{'master_menu_fr'} = '*document_root C7
     {spaces_before_argument: }
     {normal_text:section}
     {spaces_after_argument:\\n}
- *@section C1 no_master_menu_fr.texi:l20 {sec}
+ *normal_command@section C1 no_master_menu_fr.texi:l20 {sec}
  |EXTRA
  |section_heading_number:{1.1}
  |section_level:{2}

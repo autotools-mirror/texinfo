@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'semi_auto'} = '*document_root C9
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'semi_auto'} = '*document_root C9
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C4 l2 {Top}
+ *normal_command@top C4 l2 {Top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -31,7 +31,7 @@ $result_tree_text{'semi_auto'} = '*document_root C9
     {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C4 l4
+  *normal_command@menu C4 l4
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -57,7 +57,7 @@ $result_tree_text{'semi_auto'} = '*document_root C9
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l7
+   *normal_command@end C1 l7
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -65,7 +65,7 @@ $result_tree_text{'semi_auto'} = '*document_root C9
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l9 {Chap1}
+ *normal_command@node C1 l9 {Chap1}
  |EXTRA
  |identifier:{Chap1}
  |is_target:{1}
@@ -75,7 +75,7 @@ $result_tree_text{'semi_auto'} = '*document_root C9
     {spaces_before_argument: }
     {normal_text:Chap1}
     {spaces_after_argument:\\n}
- *@chapter C4 l10 {Chapter 1}
+ *normal_command@chapter C4 l10 {Chapter 1}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -86,7 +86,7 @@ $result_tree_text{'semi_auto'} = '*document_root C9
     {normal_text:Chapter 1}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C3 l12
+  *normal_command@menu C3 l12
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -101,7 +101,7 @@ $result_tree_text{'semi_auto'} = '*document_root C9
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l14
+   *normal_command@end C1 l14
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -109,7 +109,7 @@ $result_tree_text{'semi_auto'} = '*document_root C9
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l16 {Sec in chapter}
+ *normal_command@node C1 l16 {Sec in chapter}
  |EXTRA
  |identifier:{Sec-in-chapter}
  |is_target:{1}
@@ -119,7 +119,7 @@ $result_tree_text{'semi_auto'} = '*document_root C9
     {spaces_before_argument: }
     {normal_text:Sec in chapter}
     {spaces_after_argument:\\n}
- *@section C2 l17 {Sec in chapter}
+ *normal_command@section C2 l17 {Sec in chapter}
  |EXTRA
  |section_heading_number:{1.1}
  |section_level:{2}
@@ -130,7 +130,7 @@ $result_tree_text{'semi_auto'} = '*document_root C9
     {normal_text:Sec in chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l19 {Section non auto}
+ *normal_command@node C1 l19 {Section non auto}
  |EXTRA
  |identifier:{Section-non-auto}
  |is_target:{1}
@@ -153,7 +153,7 @@ $result_tree_text{'semi_auto'} = '*document_root C9
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@section C1 l20 {Section}
+ *normal_command@section C1 l20 {Section}
  |EXTRA
  |section_heading_number:{1.2}
  |section_level:{2}

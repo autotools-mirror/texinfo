@@ -14,7 +14,7 @@ $result_tree_text{'setfilename_in_paragraph'} = '*document_root C1
    *paragraph C1
     {normal_text:Some text\\n}
   *preamble_before_content C1
-   *@setfilename C1 l2
+   *normal_command@setfilename C1 l2
    |EXTRA
    |text_arg:{setfilename_in_paragraph.info}
     *line_arg C3

@@ -13,7 +13,7 @@ $result_tree_text{'in_errormsg'} = '*document_root C1
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content
-  *@anchor C1 l2
+  *normal_command@anchor C1 l2
   |EXTRA
   |identifier:{in-ref}
   |is_target:{1}
@@ -22,16 +22,16 @@ $result_tree_text{'in_errormsg'} = '*document_root C1
   {spaces_after_close_brace:\\n}
   *paragraph C3
    {normal_text:Text. }
-   *@errormsg C1 l3
+   *normal_command@errormsg C1 l3
     *brace_arg C3
-     *@anchor C1 l3
+     *normal_command@anchor C1 l3
      |EXTRA
      |identifier:{in-anchor}
      |is_target:{1}
       *brace_arg C1
        {normal_text:in anchor}
      {spaces_after_close_brace: }
-     *@ref C1 l3
+     *normal_command@ref C1 l3
       *brace_arg C1
       |EXTRA
       |node_content:A{0|0}
@@ -39,23 +39,23 @@ $result_tree_text{'in_errormsg'} = '*document_root C1
        {normal_text:in ref}
    {normal_text:\\n}
   {empty_line:\\n}
-  *@errormsg C1 l5
+  *normal_command@errormsg C1 l5
    *brace_arg C1
     {spaces_before_argument:\\n}
-  *@table C3 l6
+  *normal_command@table C3 l6
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     *@asis l6
+     *normal_command@asis l6
      {spaces_after_argument:\\n}
    *table_entry C1
     *table_term C1
-     *@item C1 l7
+     *normal_command@item C1 l7
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:item}
        {spaces_after_argument:\\n}
-   *@end C1 l8
+   *normal_command@end C1 l8
    |EXTRA
    |text_arg:{table}
     *line_arg C3

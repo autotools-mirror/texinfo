@@ -13,21 +13,21 @@ $result_tree_text{'titles'} = '*document_root C3
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content C2
-   *@settitle C1 l2
+   *normal_command@settitle C1 l2
     *line_arg C7
      {spaces_before_argument: }
-     *@@
+     *normal_command@@
      {normal_text:title }
-     *@sc C1 l2
+     *normal_command@sc C1 l2
       *brace_container C1
        {normal_text:html}
      {normal_text: }
-     *@code C1 l2
+     *normal_command@code C1 l2
       *brace_container C1
        {normal_text:test}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@node C1 l4 {Top}
+ *normal_command@node C1 l4 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -37,7 +37,7 @@ $result_tree_text{'titles'} = '*document_root C3
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C5 l5 {Top of @@title @sc{html} @code{test}}
+ *normal_command@top C5 l5 {Top of @@title @sc{html} @code{test}}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -45,13 +45,13 @@ $result_tree_text{'titles'} = '*document_root C3
    *line_arg C8
     {spaces_before_argument: }
     {normal_text:Top of }
-    *@@
+    *normal_command@@
     {normal_text:title }
-    *@sc C1 l5
+    *normal_command@sc C1 l5
      *brace_container C1
       {normal_text:html}
     {normal_text: }
-    *@code C1 l5
+    *normal_command@code C1 l5
      *brace_container C1
       {normal_text:test}
     {spaces_after_argument:\\n}

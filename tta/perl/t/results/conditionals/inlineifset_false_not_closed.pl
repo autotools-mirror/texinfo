@@ -12,7 +12,7 @@ $result_tree_text{'inlineifset_false_not_closed'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *paragraph C1
-   *@inlineifset C2 l1
+   *normal_command@inlineifset C2 l1
    |EXTRA
    |format:{aaa}
     *brace_arg C1

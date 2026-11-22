@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'footnote_in_ref'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
- *@node C3 l1 {first}
+ *normal_command@node C3 l1 {first}
  |EXTRA
  |identifier:{first}
  |is_target:{1}
@@ -23,13 +23,13 @@ $result_tree_text{'footnote_in_ref'} = '*document_root C2
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   *@xref C2 l3
+   *normal_command@xref C2 l3
     *brace_arg C1
      {normal_text:first}
     *brace_arg C4
      {spaces_before_argument: }
      {normal_text:Text}
-     *@footnote C1 l3
+     *normal_command@footnote C1 l3
      |EXTRA
      |global_command_number:{1}
       *brace_command_context C3

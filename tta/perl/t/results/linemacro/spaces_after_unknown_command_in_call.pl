@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'spaces_after_unknown_command_in_call'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C2
-   *@linemacro C5 l1
+   *normal_command@linemacro C5 l1
    |EXTRA
    |formal_args:A{first|second|rest}
    |macro_name:{mylinecommand}
@@ -20,7 +20,7 @@ $result_tree_text{'spaces_after_unknown_command_in_call'} = '*document_root C1
     {raw:@defblock\\n}
     {raw:@defline category \\first\\ A \\second\\ B \\rest\\\\n}
     {raw:@end defblock\\n}
-    *@end C1 l5
+    *normal_command@end C1 l5
     |EXTRA
     |text_arg:{linemacro}
      *line_arg C3
@@ -40,11 +40,11 @@ $result_tree_text{'spaces_after_unknown_command_in_call'} = '*document_root C1
      >*linemacro_arg C2
       >{spaces_before_argument: }
       >{macro_call_arg_text:@ringaccent b rest}
-  *@defblock C3 l7:@mylinecommand
+  *normal_command@defblock C3 l7:@mylinecommand
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
-   *@defline C1 l7:@mylinecommand
+   *normal_command@defline C1 l7:@mylinecommand
    |EXTRA
    |def_command:{defline}
    |original_def_cmdname:{defline}
@@ -68,7 +68,7 @@ $result_tree_text{'spaces_after_unknown_command_in_call'} = '*document_root C1
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@ringaccent C2 l7:@mylinecommand
+       *normal_command@ringaccent C2 l7:@mylinecommand
         {spaces_after_cmd_before_arg: }
         *following_arg C1
          {normal_text:b}
@@ -77,7 +77,7 @@ $result_tree_text{'spaces_after_unknown_command_in_call'} = '*document_root C1
       *def_line_arg C1
        {normal_text:rest}
      {spaces_after_argument:\\n}
-   *@end C1 l7:@mylinecommand
+   *normal_command@end C1 l7:@mylinecommand
    |EXTRA
    |text_arg:{defblock}
     *line_arg C3

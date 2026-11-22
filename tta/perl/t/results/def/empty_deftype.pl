@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'empty_deftype'} = '*document_root C1
  *before_node_section C8
   *preamble_before_content
-  *@deftypefun C3 l1
+  *normal_command@deftypefun C3 l1
    *def_line C1 l1
    |EXTRA
    |def_command:{deftypefun}
@@ -49,7 +49,7 @@ $result_tree_text{'empty_deftype'} = '*document_root C1
    *def_item C1
     *paragraph C1
      {normal_text:Deftypefun.\\n}
-   *@end C1 l3
+   *normal_command@end C1 l3
    |EXTRA
    |text_arg:{deftypefun}
     *line_arg C3
@@ -57,7 +57,7 @@ $result_tree_text{'empty_deftype'} = '*document_root C1
      {normal_text:deftypefun}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@defun C3 l5
+  *normal_command@defun C3 l5
    *def_line C1 l5
    |EXTRA
    |def_command:{defun}
@@ -92,7 +92,7 @@ $result_tree_text{'empty_deftype'} = '*document_root C1
    *def_item C1
     *paragraph C1
      {normal_text:Defun.\\n}
-   *@end C1 l7
+   *normal_command@end C1 l7
    |EXTRA
    |text_arg:{defun}
     *line_arg C3
@@ -100,7 +100,7 @@ $result_tree_text{'empty_deftype'} = '*document_root C1
      {normal_text:defun}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@deftypemethod C3 l9
+  *normal_command@deftypemethod C3 l9
    *def_line C1 l9
    |EXTRA
    |def_command:{deftypemethod}
@@ -142,7 +142,7 @@ $result_tree_text{'empty_deftype'} = '*document_root C1
    *def_item C1
     *paragraph C1
      {normal_text:Deftypemethod.\\n}
-   *@end C1 l11
+   *normal_command@end C1 l11
    |EXTRA
    |text_arg:{deftypemethod}
     *line_arg C3
@@ -150,7 +150,7 @@ $result_tree_text{'empty_deftype'} = '*document_root C1
      {normal_text:deftypemethod}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@defmethod C3 l13
+  *normal_command@defmethod C3 l13
    *def_line C1 l13
    |EXTRA
    |def_command:{defmethod}
@@ -189,7 +189,7 @@ $result_tree_text{'empty_deftype'} = '*document_root C1
    *def_item C1
     *paragraph C1
      {normal_text:Defmethod.\\n}
-   *@end C1 l15
+   *normal_command@end C1 l15
    |EXTRA
    |text_arg:{defmethod}
     *line_arg C3

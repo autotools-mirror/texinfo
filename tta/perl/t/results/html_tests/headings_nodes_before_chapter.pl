@@ -11,13 +11,13 @@ use Encode;
 $result_tree_text{'headings_nodes_before_chapter'} = '*document_root C7
  *before_node_section C1
   *preamble_before_content C2
-   *@settitle C1 l1
+   *normal_command@settitle C1 l1
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:headings nodes before chapter}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@node C3 l3 {Node 1}
+ *normal_command@node C3 l3 {Node 1}
  |EXTRA
  |identifier:{Node-1}
  |is_target:{1}
@@ -27,7 +27,7 @@ $result_tree_text{'headings_nodes_before_chapter'} = '*document_root C7
     {spaces_before_argument: }
     {normal_text:Node 1}
     {spaces_after_argument:\\n}
-  *@heading C1 l4
+  *normal_command@heading C1 l4
   |EXTRA
   |global_command_number:{1}
   |heading_number:{1}
@@ -36,7 +36,7 @@ $result_tree_text{'headings_nodes_before_chapter'} = '*document_root C7
     {normal_text:Topic One}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C3 l6 {Node 2}
+ *normal_command@node C3 l6 {Node 2}
  |EXTRA
  |identifier:{Node-2}
  |is_target:{1}
@@ -46,7 +46,7 @@ $result_tree_text{'headings_nodes_before_chapter'} = '*document_root C7
     {spaces_before_argument: }
     {normal_text:Node 2}
     {spaces_after_argument:\\n}
-  *@heading C1 l7
+  *normal_command@heading C1 l7
   |EXTRA
   |global_command_number:{2}
   |heading_number:{2}
@@ -55,7 +55,7 @@ $result_tree_text{'headings_nodes_before_chapter'} = '*document_root C7
     {normal_text:Topic Two}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l9 {Cap 1}
+ *normal_command@node C1 l9 {Cap 1}
  |EXTRA
  |identifier:{Cap-1}
  |is_target:{1}
@@ -65,7 +65,7 @@ $result_tree_text{'headings_nodes_before_chapter'} = '*document_root C7
     {spaces_before_argument: }
     {normal_text:Cap 1}
     {spaces_after_argument:\\n}
- *@chapter C4 l10 {Chapter One}
+ *normal_command@chapter C4 l10 {Chapter One}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -76,7 +76,7 @@ $result_tree_text{'headings_nodes_before_chapter'} = '*document_root C7
     {normal_text:Chapter One}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C4 l12
+  *normal_command@menu C4 l12
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -102,7 +102,7 @@ $result_tree_text{'headings_nodes_before_chapter'} = '*document_root C7
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l15
+   *normal_command@end C1 l15
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -110,7 +110,7 @@ $result_tree_text{'headings_nodes_before_chapter'} = '*document_root C7
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l17 {Cap 2}
+ *normal_command@node C1 l17 {Cap 2}
  |EXTRA
  |identifier:{Cap-2}
  |is_target:{1}
@@ -120,7 +120,7 @@ $result_tree_text{'headings_nodes_before_chapter'} = '*document_root C7
     {spaces_before_argument: }
     {normal_text:Cap 2}
     {spaces_after_argument:\\n}
- *@chapter C1 l18 {Chapter Two}
+ *normal_command@chapter C1 l18 {Chapter Two}
  |EXTRA
  |section_heading_number:{2}
  |section_level:{1}

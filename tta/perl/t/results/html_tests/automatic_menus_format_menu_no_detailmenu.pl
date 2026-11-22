@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'automatic_menus_format_menu_no_detailmenu'} = '*document_root C9
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'automatic_menus_format_menu_no_detailmenu'} = '*document_root
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l2 {top}
+ *normal_command@top C2 l2 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -31,7 +31,7 @@ $result_tree_text{'automatic_menus_format_menu_no_detailmenu'} = '*document_root
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l4 {chap}
+ *normal_command@node C1 l4 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -41,7 +41,7 @@ $result_tree_text{'automatic_menus_format_menu_no_detailmenu'} = '*document_root
     {spaces_before_argument: }
     {normal_text:chap}
     {spaces_after_argument:\\n}
- *@chapter C3 l5 {Chap}
+ *normal_command@chapter C3 l5 {Chap}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -51,13 +51,13 @@ $result_tree_text{'automatic_menus_format_menu_no_detailmenu'} = '*document_root
     {spaces_before_argument: }
     {normal_text:Chap}
     {spaces_after_argument:\\n}
-  *@nodedescription C1 l6
+  *normal_command@nodedescription C1 l6
    *line_arg C3
     {spaces_before_argument: }
     {normal_text:Here we begin}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l8 {sec}
+ *normal_command@node C1 l8 {sec}
  |EXTRA
  |identifier:{sec}
  |is_target:{1}
@@ -67,7 +67,7 @@ $result_tree_text{'automatic_menus_format_menu_no_detailmenu'} = '*document_root
     {spaces_before_argument: }
     {normal_text:sec}
     {spaces_after_argument:\\n}
- *@section C3 l9 {A section}
+ *normal_command@section C3 l9 {A section}
  |EXTRA
  |section_heading_number:{1.1}
  |section_level:{2}
@@ -77,13 +77,13 @@ $result_tree_text{'automatic_menus_format_menu_no_detailmenu'} = '*document_root
     {spaces_before_argument: }
     {normal_text:A section}
     {spaces_after_argument:\\n}
-  *@nodedescription C1 l10
+  *normal_command@nodedescription C1 l10
    *line_arg C3
     {spaces_before_argument: }
     {normal_text:Here in section}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l12 {sec after}
+ *normal_command@node C1 l12 {sec after}
  |EXTRA
  |identifier:{sec-after}
  |is_target:{1}
@@ -93,7 +93,7 @@ $result_tree_text{'automatic_menus_format_menu_no_detailmenu'} = '*document_root
     {spaces_before_argument: }
     {normal_text:sec after}
     {spaces_after_argument:\\n}
- *@section C1 l13 {Sec after}
+ *normal_command@section C1 l13 {Sec after}
  |EXTRA
  |section_heading_number:{1.2}
  |section_level:{2}

@@ -13,7 +13,7 @@ $result_tree_text{'footnote_not_closed'} = '*document_root C1
   *preamble_before_content
   *paragraph C2
    {normal_text:AAA}
-   *@footnote C1 l1
+   *normal_command@footnote C1 l1
     *brace_command_context C4
      {spaces_before_argument: }
      *paragraph C1

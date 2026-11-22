@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'end_sentence_upper_case_in_ref'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'end_sentence_upper_case_in_ref'} = '*document_root C3
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C6 l2 {top}
+ *normal_command@top C6 l2 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -31,7 +31,7 @@ $result_tree_text{'end_sentence_upper_case_in_ref'} = '*document_root C3
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@anchor C1 l4
+  *normal_command@anchor C1 l4
   |EXTRA
   |identifier:{LINKS}
   |is_target:{1}
@@ -41,7 +41,7 @@ $result_tree_text{'end_sentence_upper_case_in_ref'} = '*document_root C3
   {empty_line:\\n}
   *paragraph C3
    {normal_text:Some text known to work correctly, define function is available cut }
-   *@ref C1 l6
+   *normal_command@ref C1 l6
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}

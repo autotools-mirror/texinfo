@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'chapter_before_top_epub'} = '*document_root C6
  *before_node_section C1
   *preamble_before_content
- *@node C2 l1 {Top}
+ *normal_command@node C2 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -22,7 +22,7 @@ $result_tree_text{'chapter_before_top_epub'} = '*document_root C6
     {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l3 {chapter}
+ *normal_command@node C1 l3 {chapter}
  |EXTRA
  |identifier:{chapter}
  |is_target:{1}
@@ -32,7 +32,7 @@ $result_tree_text{'chapter_before_top_epub'} = '*document_root C6
     {spaces_before_argument: }
     {normal_text:chapter}
     {spaces_after_argument:\\n}
- *@chapter C2 l4 {chapter}
+ *normal_command@chapter C2 l4 {chapter}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -43,7 +43,7 @@ $result_tree_text{'chapter_before_top_epub'} = '*document_root C6
     {normal_text:chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@part C2 l6 {part}
+ *normal_command@part C2 l6 {part}
  |EXTRA
  |global_command_number:{1}
  |section_level:{0}
@@ -54,7 +54,7 @@ $result_tree_text{'chapter_before_top_epub'} = '*document_root C6
     {normal_text:part}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@top C1 l8 {top}
+ *normal_command@top C1 l8 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{3}

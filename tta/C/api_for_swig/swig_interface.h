@@ -54,8 +54,7 @@ INDEX *txi_ext_index_entry_index_info (DOCUMENT *document,
                                        INDEX_ENTRY *index_entry);
 
 ELEMENT *txi_ext_store_new_element (DOCUMENT *document, const char *type_name,
-                                    const char *command_name,
-                                    int is_text_element);
+                                    const char *command_name);
 
 void txi_ext_element_reset_text (ELEMENT *element);
 void txi_ext_element_append_text (ELEMENT *element, const char *text);

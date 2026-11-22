@@ -14,7 +14,7 @@ $result_tree_text{'conditional_not_closed'} = '*document_root C1
    {normal_text:}
    >SOURCEMARKS
    >ignored_conditional_block<1>
-    >*@ifhtml C2 l1
+    >*normal_command@ifhtml C2 l1
      >*arguments_line C1
       >*block_line_arg C1
        >{spaces_before_argument:\\n}

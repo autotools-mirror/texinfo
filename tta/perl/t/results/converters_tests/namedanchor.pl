@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'namedanchor'} = '*document_root C11
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'namedanchor'} = '*document_root C11
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C5 l2 {top}
+ *normal_command@top C5 l2 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -31,7 +31,7 @@ $result_tree_text{'namedanchor'} = '*document_root C11
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@namedanchor C2 l4
+  *normal_command@namedanchor C2 l4
   |EXTRA
   |identifier:{in-Top}
   |is_target:{1}
@@ -39,12 +39,12 @@ $result_tree_text{'namedanchor'} = '*document_root C11
     {normal_text:in Top}
    *brace_arg C2
     {spaces_before_argument: }
-    *@emph C1 l4
+    *normal_command@emph C1 l4
      *brace_container C1
       {normal_text:n in Top}
   {spaces_after_close_brace:\\n}
   {empty_line:\\n}
- *@node C1 l6 {chap}
+ *normal_command@node C1 l6 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -54,7 +54,7 @@ $result_tree_text{'namedanchor'} = '*document_root C11
     {spaces_before_argument: }
     {normal_text:chap}
     {spaces_after_argument:\\n}
- *@chapter C12 l7 {chapter @namedanchor{Not here!, There} after}
+ *normal_command@chapter C12 l7 {chapter @namedanchor{Not here!, There} after}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -63,7 +63,7 @@ $result_tree_text{'namedanchor'} = '*document_root C11
    *line_arg C6
     {spaces_before_argument: }
     {normal_text:chapter }
-    *@namedanchor C2 l7
+    *normal_command@namedanchor C2 l7
     |EXTRA
     |identifier:{Not-here_0021}
     |is_target:{1}
@@ -76,14 +76,14 @@ $result_tree_text{'namedanchor'} = '*document_root C11
     {normal_text:after}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@namedanchor C1 l9
+  *normal_command@namedanchor C1 l9
   |EXTRA
   |identifier:{in-chap-no-name}
   |is_target:{1}
    *brace_arg C1
     {normal_text:in chap no name}
   {spaces_after_close_brace:\\n}
-  *@namedanchor C2 l10
+  *normal_command@namedanchor C2 l10
   |EXTRA
   |identifier:{in-chap-empty-name}
   |is_target:{1}
@@ -95,12 +95,12 @@ $result_tree_text{'namedanchor'} = '*document_root C11
   {empty_line:\\n}
   *paragraph C3
    {normal_text:Empty namedanchor\\n}
-   *@namedanchor C1 l13
+   *normal_command@namedanchor C1 l13
     *brace_arg C1
      {spaces_before_argument: }
    {normal_text:.\\n}
   {empty_line:\\n}
-  *@namedanchor C2 l15
+  *normal_command@namedanchor C2 l15
   |EXTRA
   |identifier:{normal}
   |is_target:{1}
@@ -111,7 +111,7 @@ $result_tree_text{'namedanchor'} = '*document_root C11
     {normal_text:here we are}
   {spaces_after_close_brace:\\n}
   {empty_line:\\n}
- *@node C1 l17 {secc1}
+ *normal_command@node C1 l17 {secc1}
  |EXTRA
  |identifier:{secc1}
  |is_target:{1}
@@ -121,7 +121,7 @@ $result_tree_text{'namedanchor'} = '*document_root C11
     {spaces_before_argument: }
     {normal_text:secc1}
     {spaces_after_argument:\\n}
- *@section C16 l18 {secc1}
+ *normal_command@section C16 l18 {secc1}
  |EXTRA
  |section_heading_number:{1.1}
  |section_level:{2}
@@ -132,7 +132,7 @@ $result_tree_text{'namedanchor'} = '*document_root C11
     {normal_text:secc1}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@xrefautomaticsectiontitle C1 l20
+  *normal_command@xrefautomaticsectiontitle C1 l20
   |EXTRA
   |global_command_number:{1}
   |misc_args:A{off}
@@ -142,14 +142,14 @@ $result_tree_text{'namedanchor'} = '*document_root C11
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C6
-   *@xref C1 l22
+   *normal_command@xref C1 l22
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{in-chap-no-name}
      {normal_text:in chap no name}
    {normal_text:\\n}
-   *@xref C2 l23
+   *normal_command@xref C2 l23
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -159,7 +159,7 @@ $result_tree_text{'namedanchor'} = '*document_root C11
      {spaces_before_argument: }
      {normal_text:t}
    {normal_text:\\n}
-   *@xref C3 l24
+   *normal_command@xref C3 l24
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -174,14 +174,14 @@ $result_tree_text{'namedanchor'} = '*document_root C11
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C6
-   *@xref C1 l26
+   *normal_command@xref C1 l26
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{normal}
      {normal_text:normal}
    {normal_text:\\n}
-   *@xref C2 l27
+   *normal_command@xref C2 l27
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -191,7 +191,7 @@ $result_tree_text{'namedanchor'} = '*document_root C11
      {spaces_before_argument: }
      {normal_text:nt}
    {normal_text:\\n}
-   *@xref C3 l28
+   *normal_command@xref C3 l28
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -205,7 +205,7 @@ $result_tree_text{'namedanchor'} = '*document_root C11
      {normal_text:no}
    {normal_text:\\n}
   {empty_line:\\n}
-  *@xrefautomaticsectiontitle C1 l30
+  *normal_command@xrefautomaticsectiontitle C1 l30
   |EXTRA
   |global_command_number:{2}
   |misc_args:A{on}
@@ -215,14 +215,14 @@ $result_tree_text{'namedanchor'} = '*document_root C11
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C6
-   *@xref C1 l32
+   *normal_command@xref C1 l32
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{in-chap-empty-name}
      {normal_text:in chap empty name}
    {normal_text:\\n}
-   *@xref C2 l33
+   *normal_command@xref C2 l33
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -232,7 +232,7 @@ $result_tree_text{'namedanchor'} = '*document_root C11
      {spaces_before_argument: }
      {normal_text:xat on t}
    {normal_text:\\n}
-   *@xref C3 l34
+   *normal_command@xref C3 l34
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -247,14 +247,14 @@ $result_tree_text{'namedanchor'} = '*document_root C11
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C6
-   *@xref C1 l36
+   *normal_command@xref C1 l36
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{normal}
      {normal_text:normal}
    {normal_text:\\n}
-   *@xref C2 l37
+   *normal_command@xref C2 l37
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -264,7 +264,7 @@ $result_tree_text{'namedanchor'} = '*document_root C11
      {spaces_before_argument: }
      {normal_text:xat on nt}
    {normal_text:\\n}
-   *@xref C3 l38
+   *normal_command@xref C3 l38
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -279,14 +279,14 @@ $result_tree_text{'namedanchor'} = '*document_root C11
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C4
-   *@xref C1 l40
+   *normal_command@xref C1 l40
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{in-Top}
      {normal_text:in Top}
    {normal_text:\\n}
-   *@xref C1 l41
+   *normal_command@xref C1 l41
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -294,7 +294,7 @@ $result_tree_text{'namedanchor'} = '*document_root C11
      {normal_text:Not here!}
    {normal_text:\\n}
   {empty_line:\\n}
- *@node C1 l43 {chap1}
+ *normal_command@node C1 l43 {chap1}
  |EXTRA
  |identifier:{chap1}
  |is_target:{1}
@@ -304,7 +304,7 @@ $result_tree_text{'namedanchor'} = '*document_root C11
     {spaces_before_argument: }
     {normal_text:chap1}
     {spaces_after_argument:\\n}
- *@chapter C4 l44 {chap1}
+ *normal_command@chapter C4 l44 {chap1}
  |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
@@ -315,7 +315,7 @@ $result_tree_text{'namedanchor'} = '*document_root C11
     {normal_text:chap1}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C8 l46
+  *normal_command@menu C8 l46
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -385,7 +385,7 @@ $result_tree_text{'namedanchor'} = '*document_root C11
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l53
+   *normal_command@end C1 l53
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -393,7 +393,7 @@ $result_tree_text{'namedanchor'} = '*document_root C11
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l55 {secc2}
+ *normal_command@node C1 l55 {secc2}
  |EXTRA
  |identifier:{secc2}
  |is_target:{1}
@@ -403,7 +403,7 @@ $result_tree_text{'namedanchor'} = '*document_root C11
     {spaces_before_argument: }
     {normal_text:secc2}
     {spaces_after_argument:\\n}
- *@section C1 l56 {Secc2}
+ *normal_command@section C1 l56 {Secc2}
  |EXTRA
  |section_heading_number:{2.1}
  |section_level:{2}

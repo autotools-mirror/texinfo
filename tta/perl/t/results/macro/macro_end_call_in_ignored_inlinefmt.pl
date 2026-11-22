@@ -11,14 +11,14 @@ use Encode;
 $result_tree_text{'macro_end_call_in_ignored_inlinefmt'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C2
-   *@macro C3 l1
+   *normal_command@macro C3 l1
    |EXTRA
    |formal_args:A{}
    |macro_name:{startfmt}
     *arguments_line C1
      {macro_line: startfmt\\n}
     {raw:Para @inlinefmt{tex, inT\\n}
-    *@end C1 l3
+    *normal_command@end C1 l3
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -32,7 +32,7 @@ $result_tree_text{'macro_end_call_in_ignored_inlinefmt'} = '*document_root C1
    >macro_expansion<start;1>
     >*macro_call@startfmt C1
      >*brace_arg
-   *@inlinefmt C2 l5:@startfmt
+   *normal_command@inlinefmt C2 l5:@startfmt
    |EXTRA
    |format:{tex}
     *brace_arg C1

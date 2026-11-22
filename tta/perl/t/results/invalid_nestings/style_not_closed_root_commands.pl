@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'style_not_closed_root_commands'} = '*document_root C6
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'style_not_closed_root_commands'} = '*document_root C6
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C5 l2 {top}
+ *normal_command@top C5 l2 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -31,7 +31,7 @@ $result_tree_text{'style_not_closed_root_commands'} = '*document_root C6
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C3 l4
+  *normal_command@menu C3 l4
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -46,7 +46,7 @@ $result_tree_text{'style_not_closed_root_commands'} = '*document_root C6
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l6
+   *normal_command@end C1 l6
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -55,11 +55,11 @@ $result_tree_text{'style_not_closed_root_commands'} = '*document_root C6
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   *@code C1 l8
+   *normal_command@code C1 l8
     *brace_container C2
      {normal_text:not closed\\n}
      {empty_line:\\n}
- *@node C1 l10 {chapter}
+ *normal_command@node C1 l10 {chapter}
  |EXTRA
  |identifier:{chapter}
  |is_target:{1}
@@ -69,7 +69,7 @@ $result_tree_text{'style_not_closed_root_commands'} = '*document_root C6
     {spaces_before_argument: }
     {normal_text:chapter}
     {spaces_after_argument:\\n}
- *@chapter C3 l11 {chapter}
+ *normal_command@chapter C3 l11 {chapter}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -81,11 +81,11 @@ $result_tree_text{'style_not_closed_root_commands'} = '*document_root C6
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   *@code C1 l13
+   *normal_command@code C1 l13
     *brace_container C2
      {normal_text:still not closed\\n}
      {empty_line:\\n}
- *@bye C1
+ *normal_command@bye C1
   *line_arg C1
    {spaces_before_argument:\\n}
 ';

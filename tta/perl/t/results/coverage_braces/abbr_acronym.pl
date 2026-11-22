@@ -12,59 +12,59 @@ $result_tree_text{'abbr_acronym'} = '*document_root C1
  *before_node_section C4
   *preamble_before_content
   *paragraph C6
-   *@acronym C2 l1
+   *normal_command@acronym C2 l1
     *brace_arg C1
      {normal_text:--a}
     *brace_arg C1
      {normal_text:an accronym}
    {normal_text:\\n}
-   *@acronym C1 l2
+   *normal_command@acronym C1 l2
     *brace_arg C1
      {normal_text:--a}
    {normal_text:\\n}
-   *@acronym C2 l3
+   *normal_command@acronym C2 l3
     *brace_arg C1
      {normal_text:--a}
     *brace_arg C4
      {normal_text:an accronym }
-     *@comma C1 l3
+     *normal_command@comma C1 l3
       *brace_container
      {normal_text: }
-     *@enddots C1 l3
+     *normal_command@enddots C1 l3
       *brace_container
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C4
-   *@abbr C2 l5
+   *normal_command@abbr C2 l5
     *brace_arg C4
-     *@\' C1 l5
+     *normal_command@\' C1 l5
       *following_arg C1
        {normal_text:E}
      {normal_text:--a. }
-     *@comma C1 l5
+     *normal_command@comma C1 l5
       *brace_container
      {normal_text:A.}
     *brace_arg C7
      {spaces_before_argument: }
-     *@\' C1 l5
+     *normal_command@\' C1 l5
       *following_arg C1
        {normal_text:E}
      {normal_text:tude--}
-     *@comma C1 l5
+     *normal_command@comma C1 l5
       *brace_container
      {normal_text: }
-     *@b C1 l5
+     *normal_command@b C1 l5
       *brace_container C1
        {normal_text:Autonome}
      {spaces_after_argument: }
    {normal_text:\\n}
-   *@abbr C1 l6
+   *normal_command@abbr C1 l6
     *brace_arg C4
-     *@\' C1 l6
+     *normal_command@\' C1 l6
       *following_arg C1
        {normal_text:E}
      {normal_text:--a. }
-     *@comma C1 l6
+     *normal_command@comma C1 l6
       *brace_container
      {normal_text:A.}
    {normal_text:\\n}

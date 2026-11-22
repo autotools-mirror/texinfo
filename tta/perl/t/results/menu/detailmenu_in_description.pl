@@ -13,7 +13,7 @@ $result_tree_text{'detailmenu_in_description'} = '*document_root C1
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content
-  *@menu C4 l2
+  *normal_command@menu C4 l2
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -28,7 +28,7 @@ $result_tree_text{'detailmenu_in_description'} = '*document_root C1
     *menu_entry_description C1
      *preformatted C1
       {normal_text:Your rights.\\n}
-   *@detailmenu C3 l4
+   *normal_command@detailmenu C3 l4
    |EXTRA
    |global_command_number:{1}
     *arguments_line C1
@@ -45,14 +45,14 @@ $result_tree_text{'detailmenu_in_description'} = '*document_root C1
      *menu_entry_description C1
       *preformatted C1
        {normal_text:\\n}
-    *@end C1 l6
+    *normal_command@end C1 l6
     |EXTRA
     |text_arg:{detailmenu}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:detailmenu}
       {spaces_after_argument:\\n}
-   *@end C1 l7
+   *normal_command@end C1 l7
    |EXTRA
    |text_arg:{menu}
     *line_arg C3

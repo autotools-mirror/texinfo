@@ -11,13 +11,13 @@ use Encode;
 $result_tree_text{'macro_in_empty_multitable_empty_before_item'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C2
-   *@macro C2 l1
+   *normal_command@macro C2 l1
    |EXTRA
    |formal_args:A{}
    |macro_name:{emptymacro}
     *arguments_line C1
      {macro_line: emptymacro\\n}
-    *@end C1 l2
+    *normal_command@end C1 l2
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -25,13 +25,13 @@ $result_tree_text{'macro_in_empty_multitable_empty_before_item'} = '*document_ro
       {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-  *@multitable C3 l4
+  *normal_command@multitable C3 l4
   |EXTRA
   |max_columns:{3}
    *arguments_line C1
     *block_line_arg C2
      {spaces_before_argument: }
-     *@columnfractions C1 l4
+     *normal_command@columnfractions C1 l4
      |EXTRA
      |misc_args:A{0.4|.6|5.}
       *line_arg C3
@@ -44,7 +44,7 @@ $result_tree_text{'macro_in_empty_multitable_empty_before_item'} = '*document_ro
     >*macro_call@emptymacro C1
      >*brace_arg
    >macro_expansion<end;1>
-   *@end C1 l5
+   *normal_command@end C1 l5
    |EXTRA
    |text_arg:{multitable}
     *line_arg C3

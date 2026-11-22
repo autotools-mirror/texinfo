@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'nested_ignore_with_comments'} = '*document_root C1
  *before_node_section C1
   *preamble_before_content C1
-   *@ignore C30 l1
+   *normal_command@ignore C30 l1
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
@@ -43,7 +43,7 @@ $result_tree_text{'nested_ignore_with_comments'} = '*document_root C1
     {raw:Command comment\\n}
     {raw:@end ignore\\n}
     {raw:\\n}
-    *@end C1 l30
+    *normal_command@end C1 l30
     |EXTRA
     |text_arg:{ignore}
      *line_arg C3

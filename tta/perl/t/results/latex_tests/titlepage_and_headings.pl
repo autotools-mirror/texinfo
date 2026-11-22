@@ -11,13 +11,13 @@ use Encode;
 $result_tree_text{'titlepage_and_headings'} = '*document_root C1
  *before_node_section C1
   *preamble_before_content C2
-   *@titlepage C3 l1
+   *normal_command@titlepage C3 l1
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *paragraph C1
      {normal_text:in titlepage\\n}
-    *@end C1 l3
+    *normal_command@end C1 l3
     |EXTRA
     |text_arg:{titlepage}
      *line_arg C3

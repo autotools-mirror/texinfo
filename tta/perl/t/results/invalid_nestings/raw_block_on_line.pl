@@ -16,7 +16,7 @@ $result_tree_text{'raw_block_on_line'} = '*document_root C1
   |index_entry:I{cp,1}
    *line_arg C2
     {spaces_before_argument: }
-    *@tex C1 l1
+    *normal_command@tex C1 l1
      *arguments_line C1
       *block_line_arg C1
        {spaces_before_argument:\\n}

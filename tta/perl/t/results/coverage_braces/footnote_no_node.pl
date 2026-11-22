@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'footnote_no_node'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
- *@top C3 l1 {top}
+ *normal_command@top C3 l1 {top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -25,7 +25,7 @@ $result_tree_text{'footnote_no_node'} = '*document_root C2
   {empty_line:\\n}
   *paragraph C3
    {normal_text:F}
-   *@footnote C1 l3
+   *normal_command@footnote C1 l3
    |EXTRA
    |global_command_number:{1}
     *brace_command_context C1

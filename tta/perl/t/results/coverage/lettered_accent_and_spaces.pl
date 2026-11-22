@@ -12,56 +12,56 @@ $result_tree_text{'lettered_accent_and_spaces'} = '*document_root C1
  *before_node_section C17
   *preamble_before_content
   *paragraph C2
-   *@ringaccent C2 l1
+   *normal_command@ringaccent C2 l1
     {spaces_after_cmd_before_arg:    }
     *following_arg C1
      {normal_text:a}
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@ringaccent C2 l3
+   *normal_command@ringaccent C2 l3
     {spaces_after_cmd_before_arg:\\n}
     *brace_container C1
      {normal_text:a}
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@ringaccent C2 l6
+   *normal_command@ringaccent C2 l6
     {spaces_after_cmd_before_arg:\\n}
     *following_arg C1
      {normal_text:a}
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@ringaccent C2 l9
+   *normal_command@ringaccent C2 l9
     {spaces_after_cmd_before_arg:\\n  }
     *following_arg C1
      {normal_text:a}
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@^ C2 l12
+   *normal_command@^ C2 l12
     {spaces_after_cmd_before_arg: }
     *following_arg C1
      {normal_text:a}
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@^ C2 l14
+   *normal_command@^ C2 l14
     {spaces_after_cmd_before_arg:\\n}
     *following_arg C1
      {normal_text:a}
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@^ C2 l17
+   *normal_command@^ C2 l17
     {spaces_after_cmd_before_arg:\\n }
     *following_arg C1
      {normal_text:a}
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@^ C2 l20
+   *normal_command@^ C2 l20
     {spaces_after_cmd_before_arg: }
     *brace_container C1
      {normal_text:a\\n}

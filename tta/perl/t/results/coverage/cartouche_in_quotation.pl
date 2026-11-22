@@ -11,19 +11,19 @@ use Encode;
 $result_tree_text{'cartouche_in_quotation'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@quotation C5 l1
+  *normal_command@quotation C5 l1
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C1
     {normal_text:In quotation\\n}
-   *@cartouche C3 l3
+   *normal_command@cartouche C3 l3
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *paragraph C1
      {normal_text:In cartouche in quotation\\n}
-    *@end C1 l5
+    *normal_command@end C1 l5
     |EXTRA
     |text_arg:{cartouche}
      *line_arg C3
@@ -32,7 +32,7 @@ $result_tree_text{'cartouche_in_quotation'} = '*document_root C1
       {spaces_after_argument:\\n}
    *paragraph C1
     {normal_text:end quotation\\n}
-   *@end C1 l7
+   *normal_command@end C1 l7
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3

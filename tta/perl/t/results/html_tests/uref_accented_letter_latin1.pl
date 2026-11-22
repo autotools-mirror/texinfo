@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'uref_accented_letter_latin1'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C2
-   *@documentencoding C1 l1
+   *normal_command@documentencoding C1 l1
    |EXTRA
    |global_command_number:{1}
    |input_encoding_name:{iso-8859-1}
@@ -22,13 +22,13 @@ $result_tree_text{'uref_accented_letter_latin1'} = '*document_root C1
      {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C2
-   *@uref C1 l3
+   *normal_command@uref C1 l3
     *brace_arg C3
      {normal_text:http://example.com/acc_}
-     *@" C1 l3
+     *normal_command@" C1 l3
       *following_arg C1
        {normal_text:a}
-     *@ogonek C1 l3
+     *normal_command@ogonek C1 l3
       *brace_container C1
        {normal_text:a}
    {normal_text:\\n}

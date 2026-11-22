@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'comment_space_comand_in_float'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'comment_space_comand_in_float'} = '*document_root C3
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@node C5 l2 {chap}
+ *normal_command@node C5 l2 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -32,7 +32,7 @@ $result_tree_text{'comment_space_comand_in_float'} = '*document_root C3
     {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@float C3 l4
+  *normal_command@float C3 l4
   |EXTRA
   |float_number:{1}
   |float_type:{Text  }
@@ -43,19 +43,19 @@ $result_tree_text{'comment_space_comand_in_float'} = '*document_root C3
     *block_line_arg C3
      {spaces_before_argument: }
      {normal_text:Text }
-     *@ 
+     *normal_command@ 
     *block_line_arg C4
      {spaces_before_argument: }
      {normal_text:label }
-     *@ 
-     *@c C1
+     *normal_command@ 
+     *normal_command@c C1
       *line_arg C3
        {spaces_before_argument: }
        {rawline_text:float}
        {spaces_after_argument:\\n}
    *paragraph C1
     {normal_text:Float\\n}
-   *@end C1 l6
+   *normal_command@end C1 l6
    |EXTRA
    |text_arg:{float}
     *line_arg C3
@@ -63,15 +63,15 @@ $result_tree_text{'comment_space_comand_in_float'} = '*document_root C3
      {normal_text:float}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@listoffloats C1 l8
+  *normal_command@listoffloats C1 l8
   |EXTRA
   |float_type:{Text  }
   |global_command_number:{1}
    *line_arg C4
     {spaces_before_argument: }
     {normal_text:Text }
-    *@ 
-    *@c C1
+    *normal_command@ 
+    *normal_command@c C1
      *line_arg C3
       {spaces_before_argument: }
       {rawline_text:listoffloats}

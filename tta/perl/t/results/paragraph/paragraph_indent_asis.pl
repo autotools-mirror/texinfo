@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'paragraph_indent_asis'} = '*document_root C1
  *before_node_section C5
   *preamble_before_content C3
-   *@paragraphindent C1 l1
+   *normal_command@paragraphindent C1 l1
    |EXTRA
    |global_command_number:{1}
    |misc_args:A{asis}
@@ -25,14 +25,14 @@ $result_tree_text{'paragraph_indent_asis'} = '*document_root C1
    {normal_text:para\\n}
    {normal_text:  fff\\n}
   {empty_line:\\n}
-  *@quotation C4 l6
+  *normal_command@quotation C4 l6
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    {spaces_before_paragraph:  }
    *paragraph C1
     {normal_text:in quotation\\n}
-   *@end C1 l8
+   *normal_command@end C1 l8
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3

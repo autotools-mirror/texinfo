@@ -13,7 +13,7 @@ $result_tree_text{'documentlanguage_selection_region_unicode'} = '*document_root
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content C2
-   *@documentlanguage C1 l2
+   *normal_command@documentlanguage C1 l2
    |EXTRA
    |global_command_number:{1}
    |text_arg:{fr_M让}
@@ -22,7 +22,7 @@ $result_tree_text{'documentlanguage_selection_region_unicode'} = '*document_root
      {normal_text:fr_M让}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@node C1 l4 {Top}
+ *normal_command@node C1 l4 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -32,7 +32,7 @@ $result_tree_text{'documentlanguage_selection_region_unicode'} = '*document_root
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C4 l5 {top}
+ *normal_command@top C4 l5 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -42,7 +42,7 @@ $result_tree_text{'documentlanguage_selection_region_unicode'} = '*document_root
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@defivar C2 l7
+  *normal_command@defivar C2 l7
    *def_line C1 l7
    |EXTRA
    |def_command:{defivar}
@@ -69,7 +69,7 @@ $result_tree_text{'documentlanguage_selection_region_unicode'} = '*document_root
       *def_line_arg C1
        {normal_text:Selected?}
      {spaces_after_argument:\\n}
-   *@end C1 l8
+   *normal_command@end C1 l8
    |EXTRA
    |text_arg:{defivar}
     *line_arg C3

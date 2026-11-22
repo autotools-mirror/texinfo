@@ -18,7 +18,7 @@ FastBack: [U0]
 NodeUp: (dir)
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {a node}
+ *normal_command@node C1 l1 {a node}
  |EXTRA
  |identifier:{a-node}
  |is_target:{1}
@@ -36,7 +36,7 @@ NodeUp: (dir)
     {normal_text:dir}
     {normal_text:)}
     {spaces_after_argument:\\n}
- *@unnumbered C4 l2 {unnumbered}
+ *normal_command@unnumbered C4 l2 {unnumbered}
  |EXTRA
  |section_level:{1}
  |section_number:{1}
@@ -49,7 +49,7 @@ NodeUp: (dir)
   *paragraph C1
    {normal_text:in unnumbered\\n}
   {empty_line:\\n}
- *@top C3 l6 {top section}
+ *normal_command@top C3 l6 {top section}
  |EXTRA
  |identifier:{top-section}
  |is_target:{1}
@@ -70,7 +70,7 @@ This: [U1]
 Back: [U0]
 Prev: [U0]
 NodeUp: (dir)
- *@node C1 l9 {second}
+ *normal_command@node C1 l9 {second}
  |EXTRA
  |identifier:{second}
  |is_target:{1}
@@ -88,7 +88,7 @@ NodeUp: (dir)
     {normal_text:dir}
     {normal_text:)}
     {spaces_after_argument:\\n}
- *@chapter C3 l10 {Chapter}
+ *normal_command@chapter C3 l10 {Chapter}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}

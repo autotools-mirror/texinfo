@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'menu_in_documentdescription'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'menu_in_documentdescription'} = '*document_root C3
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C3 l2 {top}
+ *normal_command@top C3 l2 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -31,11 +31,11 @@ $result_tree_text{'menu_in_documentdescription'} = '*document_root C3
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@documentdescription C3 l4
+  *normal_command@documentdescription C3 l4
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
-   *@menu C3 l5
+   *normal_command@menu C3 l5
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
@@ -54,14 +54,14 @@ $result_tree_text{'menu_in_documentdescription'} = '*document_root C3
      *menu_entry_description C1
       *preformatted C1
        {normal_text:\\n}
-    *@end C1 l7
+    *normal_command@end C1 l7
     |EXTRA
     |text_arg:{menu}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:menu}
       {spaces_after_argument:\\n}
-   *@end C1 l8
+   *normal_command@end C1 l8
    |EXTRA
    |text_arg:{documentdescription}
     *line_arg C3

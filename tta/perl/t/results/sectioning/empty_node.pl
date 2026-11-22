@@ -11,12 +11,12 @@ use Encode;
 $result_tree_text{'empty_node'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content
- *@node C2 l1
+ *normal_command@node C2 l1
   *arguments_line C1
    *line_arg C1
     {spaces_before_argument:\\n}
   {empty_line:\\n}
- *@node C1 l3
+ *normal_command@node C1 l3
   *arguments_line C4
    *line_arg C1
     {spaces_before_argument: }

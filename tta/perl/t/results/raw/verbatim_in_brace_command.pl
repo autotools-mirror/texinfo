@@ -12,15 +12,15 @@ $result_tree_text{'verbatim_in_brace_command'} = '*document_root C1
  *before_node_section C4
   *preamble_before_content
   *paragraph C1
-   *@samp C1 l1
+   *normal_command@samp C1 l1
     *brace_container C1
      {normal_text:\\n}
-  *@verbatim C3 l2
+  *normal_command@verbatim C3 l2
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    {raw:in verbatim\\n}
-   *@end C1 l4
+   *normal_command@end C1 l4
    |EXTRA
    |text_arg:{verbatim}
     *line_arg C3

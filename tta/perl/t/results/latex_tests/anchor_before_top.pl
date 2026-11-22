@@ -13,7 +13,7 @@ $result_tree_text{'anchor_before_top'} = '*document_root C5
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content
-  *@anchor C1 l2
+  *normal_command@anchor C1 l2
   |EXTRA
   |identifier:{a-before-Top}
   |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'anchor_before_top'} = '*document_root C5
     {normal_text:a before Top}
   {spaces_after_close_brace:\\n}
   {empty_line:\\n}
- *@node C1 l4 {Top}
+ *normal_command@node C1 l4 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -31,7 +31,7 @@ $result_tree_text{'anchor_before_top'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l5 {top}
+ *normal_command@top C2 l5 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -41,7 +41,7 @@ $result_tree_text{'anchor_before_top'} = '*document_root C5
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l7 {Chapter}
+ *normal_command@node C1 l7 {Chapter}
  |EXTRA
  |identifier:{Chapter}
  |is_target:{1}
@@ -51,7 +51,7 @@ $result_tree_text{'anchor_before_top'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Chapter}
     {spaces_after_argument:\\n}
- *@chapter C3 l8 {Chap}
+ *normal_command@chapter C3 l8 {Chap}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -63,7 +63,7 @@ $result_tree_text{'anchor_before_top'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@pxref C1 l10
+   *normal_command@pxref C1 l10
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}

@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'value_in_macro_formal_arg'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C4
-   *@set C1
+   *normal_command@set C1
    |EXTRA
    |misc_args:A{argument|arg}
     *line_arg C3
@@ -19,7 +19,7 @@ $result_tree_text{'value_in_macro_formal_arg'} = '*document_root C1
      {rawline_text:argument arg }
      {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@macro C3 l3
+   *normal_command@macro C3 l3
    |EXTRA
    |formal_args:A{arg|the@value{argument}
    |invalid_syntax:{1}
@@ -27,7 +27,7 @@ $result_tree_text{'value_in_macro_formal_arg'} = '*document_root C1
     *arguments_line C1
      {macro_line: testvalue { arg , the@value{argument} }\\n}
     {raw:result: @emph{\\arg\\} the \\the\\ thearg \\thearg\\ with value \\the@value{argument}\\\\n}
-    *@end C1 l5
+    *normal_command@end C1 l5
     |EXTRA
     |text_arg:{macro}
      *line_arg C3

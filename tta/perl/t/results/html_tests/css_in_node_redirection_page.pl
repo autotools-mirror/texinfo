@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'css_in_node_redirection_page'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content C2
-   *@documentlanguage C1 l1
+   *normal_command@documentlanguage C1 l1
    |EXTRA
    |global_command_number:{1}
    |text_arg:{en}
@@ -20,7 +20,7 @@ $result_tree_text{'css_in_node_redirection_page'} = '*document_root C3
      {normal_text:en}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@node C1 l3 {Top}
+ *normal_command@node C1 l3 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -30,7 +30,7 @@ $result_tree_text{'css_in_node_redirection_page'} = '*document_root C3
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C3 l4 {top}
+ *normal_command@top C3 l4 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -41,11 +41,11 @@ $result_tree_text{'css_in_node_redirection_page'} = '*document_root C3
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C4
-   *@sansserif C1 l6
+   *normal_command@sansserif C1 l6
     *brace_container C1
      {normal_text:SANS}
    {normal_text:.\\n}
-   *@anchor C1 l7
+   *normal_command@anchor C1 l7
    |EXTRA
    |identifier:{spot}
    |is_target:{1}

@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'image_and_spaces_formatting'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
- *@node C27 l1 {Top}
+ *normal_command@node C27 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -22,43 +22,43 @@ $result_tree_text{'image_and_spaces_formatting'} = '*document_root C2
     {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@image C1 l3
+  *normal_command@image C1 l3
   |EXTRA
   |input_encoding_name:{utf-8}
    *brace_arg C1
     {normal_text:words}
   {normal_text: }
-  *@image C1 l3
+  *normal_command@image C1 l3
   |EXTRA
   |input_encoding_name:{utf-8}
    *brace_arg C1
     {normal_text:words}
   {normal_text: }
-  *@image C1 l3
+  *normal_command@image C1 l3
   |EXTRA
   |input_encoding_name:{utf-8}
    *brace_arg C1
     {normal_text:words}
   {normal_text: }
-  *@image C1 l3
+  *normal_command@image C1 l3
   |EXTRA
   |input_encoding_name:{utf-8}
    *brace_arg C1
     {normal_text:words}
   {normal_text: }
-  *@image C1 l3
+  *normal_command@image C1 l3
   |EXTRA
   |input_encoding_name:{utf-8}
    *brace_arg C1
     {normal_text:words}
   {normal_text: }
-  *@image C1 l3
+  *normal_command@image C1 l3
   |EXTRA
   |input_encoding_name:{utf-8}
    *brace_arg C1
     {normal_text:words}
   {normal_text: }
-  *@image C1 l3
+  *normal_command@image C1 l3
   |EXTRA
   |input_encoding_name:{utf-8}
    *brace_arg C1
@@ -67,43 +67,43 @@ $result_tree_text{'image_and_spaces_formatting'} = '*document_root C2
   {empty_line:\\n}
   *paragraph C15
    {normal_text:Some text }
-   *@image C1 l5
+   *normal_command@image C1 l5
    |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C1
      {normal_text:words}
    {normal_text: }
-   *@image C1 l5
+   *normal_command@image C1 l5
    |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C1
      {normal_text:words}
    {normal_text: }
-   *@image C1 l5
+   *normal_command@image C1 l5
    |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C1
      {normal_text:words}
    {normal_text: }
-   *@image C1 l5
+   *normal_command@image C1 l5
    |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C1
      {normal_text:words}
    {normal_text: }
-   *@image C1 l5
+   *normal_command@image C1 l5
    |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C1
      {normal_text:words}
    {normal_text: }
-   *@image C1 l5
+   *normal_command@image C1 l5
    |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C1
      {normal_text:words}
    {normal_text: }
-   *@image C1 l5
+   *normal_command@image C1 l5
    |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C1
@@ -112,43 +112,43 @@ $result_tree_text{'image_and_spaces_formatting'} = '*document_root C2
   {empty_line:\\n}
   *paragraph C15
    {normal_text:Some text }
-   *@image C1 l7
+   *normal_command@image C1 l7
    |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C1
      {normal_text:words}
    {normal_text: text aaaaaaaaa }
-   *@image C1 l7
+   *normal_command@image C1 l7
    |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C1
      {normal_text:words}
    {normal_text: text bbbbbbbbbbb }
-   *@image C1 l7
+   *normal_command@image C1 l7
    |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C1
      {normal_text:words}
    {normal_text: text ccccccccccccc }
-   *@image C1 l7
+   *normal_command@image C1 l7
    |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C1
      {normal_text:words}
    {normal_text: text ddddddddddddd }
-   *@image C1 l7
+   *normal_command@image C1 l7
    |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C1
      {normal_text:words}
    {normal_text: text eeeeeeeeeeeeeee }
-   *@image C1 l7
+   *normal_command@image C1 l7
    |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C1
      {normal_text:words}
    {normal_text: text fffffffffff }
-   *@image C1 l7
+   *normal_command@image C1 l7
    |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C1
@@ -157,7 +157,7 @@ $result_tree_text{'image_and_spaces_formatting'} = '*document_root C2
   {empty_line:\\n}
   *paragraph C3
    {normal_text:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA }
-   *@image C1 l9
+   *normal_command@image C1 l9
    |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C1
@@ -166,7 +166,7 @@ $result_tree_text{'image_and_spaces_formatting'} = '*document_root C2
   {empty_line:\\n}
   *paragraph C3
    {normal_text:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABBBBBBBB }
-   *@image C1 l11
+   *normal_command@image C1 l11
    |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C1
@@ -175,13 +175,13 @@ $result_tree_text{'image_and_spaces_formatting'} = '*document_root C2
   {empty_line:\\n}
   *paragraph C5
    {normal_text:Text. }
-   *@image C1 l13
+   *normal_command@image C1 l13
    |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C1
      {normal_text:words}
    {normal_text:       }
-   *@image C1 l13
+   *normal_command@image C1 l13
    |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C1

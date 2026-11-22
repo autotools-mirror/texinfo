@@ -12,7 +12,7 @@ $result_tree_text{'empty_line_in_email'} = '*document_root C1
  *before_node_section C5
   *preamble_before_content
   *paragraph C1
-   *@email C1 l1
+   *normal_command@email C1 l1
     *brace_arg C2
      {spaces_before_argument: \\n}
      {spaces_before_argument:\\n}

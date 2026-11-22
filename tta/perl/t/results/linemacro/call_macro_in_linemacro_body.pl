@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'call_macro_in_linemacro_body'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C4
-   *@linemacro C5 l1
+   *normal_command@linemacro C5 l1
    |EXTRA
    |formal_args:A{a|b}
    |macro_name:{lm}
@@ -20,7 +20,7 @@ $result_tree_text{'call_macro_in_linemacro_body'} = '*document_root C1
     {raw:@mymacro{@code{}\\n}
     {raw:@var{\\a\\}\\n}
     {raw:now second arg: \\b\\}\\n}
-    *@end C1 l5
+    *normal_command@end C1 l5
     |EXTRA
     |text_arg:{linemacro}
      *line_arg C3
@@ -28,7 +28,7 @@ $result_tree_text{'call_macro_in_linemacro_body'} = '*document_root C1
       {normal_text:linemacro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@macro C5 l7
+   *normal_command@macro C5 l7
    |EXTRA
    |formal_args:A{c|d}
    |macro_name:{mymacro}
@@ -37,7 +37,7 @@ $result_tree_text{'call_macro_in_linemacro_body'} = '*document_root C1
     {raw:@table \\c\\\\n}
     {raw:@item \\d\\\\n}
     {raw:@end table\\n}
-    *@end C1 l11
+    *normal_command@end C1 l11
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -61,23 +61,23 @@ $result_tree_text{'call_macro_in_linemacro_body'} = '*document_root C1
      >*brace_arg C2
       >{spaces_before_argument: }
       >{macro_call_arg_text:yy \\n  zz}
-  *@table C4 l14:@mymacro
+  *normal_command@table C4 l14:@mymacro
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     *@code C1 l14:@mymacro
+     *normal_command@code C1 l14:@mymacro
       *brace_container
      {spaces_after_argument:\\n}
    *before_item C1
     *paragraph C3
-     *@var C1 l14:@mymacro
+     *normal_command@var C1 l14:@mymacro
       *brace_container C1
        {normal_text:something}
      {normal_text:\\n}
      {normal_text:now second arg: gg \\n}
    *table_entry C2
     *table_term C1
-     *@item C1 l14:@mymacro
+     *normal_command@item C1 l14:@mymacro
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:yy}
@@ -86,7 +86,7 @@ $result_tree_text{'call_macro_in_linemacro_body'} = '*document_root C1
      {spaces_before_paragraph:  }
      *paragraph C1
       {normal_text:zz\\n}
-   *@end C1 l14:@mymacro
+   *normal_command@end C1 l14:@mymacro
    |EXTRA
    |text_arg:{table}
     *line_arg C3

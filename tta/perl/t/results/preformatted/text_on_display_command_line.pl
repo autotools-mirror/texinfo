@@ -11,13 +11,13 @@ use Encode;
 $result_tree_text{'text_on_display_command_line'} = '*document_root C1
  *before_node_section C8
   *preamble_before_content
-  *@display C2 l1
+  *normal_command@display C2 l1
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
      {normal_text:text on line}
      {spaces_after_argument:\\n}
-   *@end C1 l2
+   *normal_command@end C1 l2
    |EXTRA
    |text_arg:{display}
     *line_arg C3
@@ -25,7 +25,7 @@ $result_tree_text{'text_on_display_command_line'} = '*document_root C1
      {normal_text:display}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@display C3 l4
+  *normal_command@display C3 l4
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
@@ -33,7 +33,7 @@ $result_tree_text{'text_on_display_command_line'} = '*document_root C1
      {spaces_after_argument:\\n}
    *preformatted C1
     {normal_text:normal text\\n}
-   *@end C1 l6
+   *normal_command@end C1 l6
    |EXTRA
    |text_arg:{display}
     *line_arg C3
@@ -41,13 +41,13 @@ $result_tree_text{'text_on_display_command_line'} = '*document_root C1
      {normal_text:display}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@display C3 l8
+  *normal_command@display C3 l8
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C1
     {normal_text:in display\\n}
-   *@end C1 l10
+   *normal_command@end C1 l10
    |EXTRA
    |text_arg:{display text after end}
     *line_arg C3
@@ -55,22 +55,22 @@ $result_tree_text{'text_on_display_command_line'} = '*document_root C1
      {normal_text:display text after end}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@display C3 l12
+  *normal_command@display C3 l12
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
-   *@display C2 l13
+   *normal_command@display C2 l13
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
-    *@end C1 l14
+    *normal_command@end C1 l14
     |EXTRA
     |text_arg:{display text after end display nested in display}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:display text after end display nested in display}
       {spaces_after_argument:\\n}
-   *@end C1 l15
+   *normal_command@end C1 l15
    |EXTRA
    |text_arg:{display}
     *line_arg C3

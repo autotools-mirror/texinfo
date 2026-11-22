@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'titlepage_and_setchapternewpage_on'} = '*document_root C1
  *before_node_section C1
   *preamble_before_content C4
-   *@setchapternewpage C1 l1
+   *normal_command@setchapternewpage C1 l1
    |EXTRA
    |misc_args:A{on}
     *line_arg C3
@@ -19,13 +19,13 @@ $result_tree_text{'titlepage_and_setchapternewpage_on'} = '*document_root C1
      {normal_text:on}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@titlepage C3 l3
+   *normal_command@titlepage C3 l3
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *paragraph C1
      {normal_text:in titlepage\\n}
-    *@end C1 l5
+    *normal_command@end C1 l5
     |EXTRA
     |text_arg:{titlepage}
      *line_arg C3

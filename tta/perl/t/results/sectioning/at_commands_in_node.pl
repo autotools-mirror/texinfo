@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'at_commands_in_node'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {A @sc{sc} node @"i @"{@dotless{i}} @`{@=E} @l{} @,{@\'C} @exclamdown{}}
+ *normal_command@node C1 l1 {A @sc{sc} node @"i @"{@dotless{i}} @`{@=E} @l{} @,{@\'C} @exclamdown{}}
  |EXTRA
  |identifier:{A-sc-node-_00ef-_00ef-_1e14-_0142-_1e08-_00a1}
  |is_target:{1}
@@ -20,36 +20,36 @@ $result_tree_text{'at_commands_in_node'} = '*document_root C2
    *line_arg C15
     {spaces_before_argument: }
     {normal_text:A }
-    *@sc C1 l1
+    *normal_command@sc C1 l1
      *brace_container C1
       {normal_text:sc}
     {normal_text: node }
-    *@" C1 l1
+    *normal_command@" C1 l1
      *following_arg C1
       {normal_text:i}
     {normal_text: }
-    *@" C1 l1
+    *normal_command@" C1 l1
      *brace_container C1
-      *@dotless C1 l1
+      *normal_command@dotless C1 l1
        *brace_container C1
         {normal_text:i}
     {normal_text: }
-    *@` C1 l1
+    *normal_command@` C1 l1
      *brace_container C1
-      *@= C1 l1
+      *normal_command@= C1 l1
        *following_arg C1
         {normal_text:E}
     {normal_text: }
-    *@l C1 l1
+    *normal_command@l C1 l1
      *brace_container
     {normal_text: }
-    *@, C1 l1
+    *normal_command@, C1 l1
      *brace_container C1
-      *@\' C1 l1
+      *normal_command@\' C1 l1
        *following_arg C1
         {normal_text:C}
     {normal_text: }
-    *@exclamdown C1 l1
+    *normal_command@exclamdown C1 l1
      *brace_container
 ';
 

@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'definfoenclose_command_on_section_line'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content C2
-   *@definfoenclose C1 l1
+   *normal_command@definfoenclose C1 l1
    |EXTRA
    |misc_args:A{somed|!|:}
     *line_arg C3
@@ -19,7 +19,7 @@ $result_tree_text{'definfoenclose_command_on_section_line'} = '*document_root C3
      {normal_text:somed,!,:}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@node C1 l3 {top}
+ *normal_command@node C1 l3 {top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -29,7 +29,7 @@ $result_tree_text{'definfoenclose_command_on_section_line'} = '*document_root C3
     {spaces_before_argument: }
     {normal_text:top}
     {spaces_after_argument:\\n}
- *@top C1 l4 {A @somed{next}}
+ *normal_command@top C1 l4 {A @somed{next}}
  |EXTRA
  |section_level:{0}
  |section_number:{1}

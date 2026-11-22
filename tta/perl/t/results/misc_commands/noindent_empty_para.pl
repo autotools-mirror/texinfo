@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'noindent_empty_para'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C3
-   *@noindent l1
+   *normal_command@noindent l1
    {ignorable_spaces_after_command:\\n}
    {empty_line:\\n}
   *paragraph C1

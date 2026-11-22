@@ -13,33 +13,33 @@ $result_tree_text{'empty_nodes_with_commands'} = '*document_root C5
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content
- *@node C2 l2
+ *normal_command@node C2 l2
   *arguments_line C1
    *line_arg C2
     {spaces_before_argument: }
-    *@c C1
+    *normal_command@c C1
      *line_arg C3
       {spaces_before_argument: }
       {rawline_text:comment}
       {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l4 {@
+ *normal_command@node C1 l4 {@
 }
   *arguments_line C1
    *line_arg C2
     {spaces_before_argument: }
-    *@\\n
- *@node C1 l5 {@:}
+    *normal_command@\\n
+ *normal_command@node C1 l5 {@:}
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    *@:
+    *normal_command@:
     {spaces_after_argument:\\n}
- *@node C1 l6 {@asis{ }}
+ *normal_command@node C1 l6 {@asis{ }}
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    *@asis C1 l6
+    *normal_command@asis C1 l6
      *brace_container C1
       {normal_text: }
     {spaces_after_argument:\\n}

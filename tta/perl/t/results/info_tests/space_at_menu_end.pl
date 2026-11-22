@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'space_at_menu_end'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
- *@node C5 l1 {Top}
+ *normal_command@node C5 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -22,7 +22,7 @@ $result_tree_text{'space_at_menu_end'} = '*document_root C2
     {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C4 l3
+  *normal_command@menu C4 l3
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -41,7 +41,7 @@ $result_tree_text{'space_at_menu_end'} = '*document_root C2
    *menu_comment C1
     *preformatted C1
      {after_menu_description_line:\\n}
-   *@end C1 l6
+   *normal_command@end C1 l6
    |EXTRA
    |text_arg:{menu}
     *line_arg C3

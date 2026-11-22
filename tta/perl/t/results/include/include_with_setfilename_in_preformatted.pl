@@ -11,14 +11,14 @@ use Encode;
 $result_tree_text{'include_with_setfilename_in_preformatted'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@example C4 l1
+  *normal_command@example C4 l1
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted
    >SOURCEMARKS
    >include<start;1>
-    >*@include C1 l2
+    >*normal_command@include C1 l2
     >|EXTRA
     >|text_arg:{included_file_with_setfilename.texi}
      >*line_arg C3
@@ -26,7 +26,7 @@ $result_tree_text{'include_with_setfilename_in_preformatted'} = '*document_root 
       >{normal_text:included_file_with_setfilename.texi}
       >{spaces_after_argument:\\n}
    >setfilename<1>
-    >*@setfilename C1 included_file_with_setfilename.texi:l1
+    >*normal_command@setfilename C1 included_file_with_setfilename.texi:l1
     >|EXTRA
     >|text_arg:{included_file.info}
      >*line_arg C3
@@ -39,7 +39,7 @@ $result_tree_text{'include_with_setfilename_in_preformatted'} = '*document_root 
     >SOURCEMARKS
     >include<end;1><p:18>
     {normal_text:after include\\n}
-   *@end C1 l4
+   *normal_command@end C1 l4
    |EXTRA
    |text_arg:{example}
     *line_arg C2

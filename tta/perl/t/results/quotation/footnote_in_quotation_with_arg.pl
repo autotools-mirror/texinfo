@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'footnote_in_quotation_with_arg'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@quotation C3 l1
+  *normal_command@quotation C3 l1
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
@@ -19,14 +19,14 @@ $result_tree_text{'footnote_in_quotation_with_arg'} = '*document_root C1
      {spaces_after_argument:\\n}
    *paragraph C3
     {normal_text:A}
-    *@footnote C1 l2
+    *normal_command@footnote C1 l2
     |EXTRA
     |global_command_number:{1}
      *brace_command_context C1
       *paragraph C1
        {normal_text:My feet}
     {normal_text: b.\\n}
-   *@end C1 l3
+   *normal_command@end C1 l3
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3

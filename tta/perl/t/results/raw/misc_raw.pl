@@ -13,13 +13,13 @@ $result_tree_text{'misc_raw'} = '*document_root C1
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content C4
-   *@html C3 l2
+   *normal_command@html C3 l2
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument: \\n}
     *rawpreformatted C1
      {normal_text:in html <br> }
-    *@end C1 l3
+    *normal_command@end C1 l3
     |EXTRA
     |text_arg:{html}
      *line_arg C3
@@ -27,13 +27,13 @@ $result_tree_text{'misc_raw'} = '*document_root C1
       {normal_text:html}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@tex C2 l5
+   *normal_command@tex C2 l5
     *arguments_line C1
      *block_line_arg C3
       {spaces_before_argument: }
       {normal_text:in tex}
       {spaces_after_argument:\\n}
-    *@end C1 l6
+    *normal_command@end C1 l6
     |EXTRA
     |text_arg:{tex}
      *line_arg C3
@@ -41,13 +41,13 @@ $result_tree_text{'misc_raw'} = '*document_root C1
       {normal_text:tex}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-  *@verbatim C4 l8
+  *normal_command@verbatim C4 l8
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    {raw:in  v---erbatim`` <>\\n}
    {raw:in verbatim2\\n}
-   *@end C1 l11
+   *normal_command@end C1 l11
    |EXTRA
    |text_arg:{verbatim}
     *line_arg C3

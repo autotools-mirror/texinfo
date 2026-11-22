@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'section_part_epub'} = '*document_root C4
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'section_part_epub'} = '*document_root C4
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@section C2 l2 {section}
+ *normal_command@section C2 l2 {section}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{2}
@@ -32,7 +32,7 @@ $result_tree_text{'section_part_epub'} = '*document_root C4
     {normal_text:section}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@part C1 l4 {part}
+ *normal_command@part C1 l4 {part}
  |EXTRA
  |global_command_number:{1}
  |section_level:{0}

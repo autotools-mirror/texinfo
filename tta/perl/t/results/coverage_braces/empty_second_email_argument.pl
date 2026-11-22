@@ -12,11 +12,11 @@ $result_tree_text{'empty_second_email_argument'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *paragraph C1
-   *@email C2 l1
+   *normal_command@email C2 l1
     *brace_arg C4
      {spaces_before_argument: }
      {normal_text:a}
-     *@@
+     *normal_command@@
      {normal_text:b.c}
     *brace_arg C1
      {spaces_before_argument: }

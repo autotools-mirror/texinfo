@@ -11,19 +11,19 @@ use Encode;
 $result_tree_text{'end_bad_end_argument_and_superfluous_arg'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@quotation C2 l1
+  *normal_command@quotation C2 l1
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C2
     {normal_text:In quotation\\n}
-    *@end C1 l3
+    *normal_command@end C1 l3
     |EXTRA
     |text_arg:{: }
      *line_arg C4
       {spaces_before_argument: }
       {normal_text:: }
-      *@code C1 l3
+      *normal_command@code C1 l3
        *brace_container C1
         {normal_text:in c}
       {spaces_after_argument:\\n}

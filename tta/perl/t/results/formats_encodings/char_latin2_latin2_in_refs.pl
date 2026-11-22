@@ -14,7 +14,7 @@ $result_tree_text{'char_latin2_latin2_in_refs'} = '*document_root C6
    {text_before_beginning:\\input texinfo\\n}
    {text_before_beginning:\\n}
   *preamble_before_content C2
-   *@documentencoding C1 char_latin2_latin2_in_refs.texi:l3
+   *normal_command@documentencoding C1 char_latin2_latin2_in_refs.texi:l3
    |EXTRA
    |global_command_number:{1}
    |input_encoding_name:{iso-8859-2}
@@ -24,7 +24,7 @@ $result_tree_text{'char_latin2_latin2_in_refs'} = '*document_root C6
      {normal_text:ISO-8859-2}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@node C1 char_latin2_latin2_in_refs.texi:l5 {Top}
+ *normal_command@node C1 char_latin2_latin2_in_refs.texi:l5 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -35,7 +35,7 @@ $result_tree_text{'char_latin2_latin2_in_refs'} = '*document_root C6
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C9 char_latin2_latin2_in_refs.texi:l6 {char latin2 latin2 in refs}
+ *normal_command@top C9 char_latin2_latin2_in_refs.texi:l6 {char latin2 latin2 in refs}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -46,7 +46,7 @@ $result_tree_text{'char_latin2_latin2_in_refs'} = '*document_root C6
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@ref C1 char_latin2_latin2_in_refs.texi:l8
+   *normal_command@ref C1 char_latin2_latin2_in_refs.texi:l8
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -54,7 +54,7 @@ $result_tree_text{'char_latin2_latin2_in_refs'} = '*document_root C6
      {normal_text:Ą ą Ę ę}
    {normal_text:.\\n}
   {empty_line:\\n}
-  *@printindex C1 char_latin2_latin2_in_refs.texi:l10
+  *normal_command@printindex C1 char_latin2_latin2_in_refs.texi:l10
   |EXTRA
   |global_command_number:{1}
   |misc_args:A{cp}
@@ -63,12 +63,12 @@ $result_tree_text{'char_latin2_latin2_in_refs'} = '*document_root C6
     {normal_text:cp}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@c C1
+  *normal_command@c C1
    *line_arg C3
     {spaces_before_argument: }
     {rawline_text:Aogonek(0xa1=0241) aogonek(0xb1=0261) Eogonek(0xea=0352) eogonek}
     {spaces_after_argument:\\n}
-  *@menu C3 char_latin2_latin2_in_refs.texi:l13
+  *normal_command@menu C3 char_latin2_latin2_in_refs.texi:l13
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -83,7 +83,7 @@ $result_tree_text{'char_latin2_latin2_in_refs'} = '*document_root C6
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 char_latin2_latin2_in_refs.texi:l15
+   *normal_command@end C1 char_latin2_latin2_in_refs.texi:l15
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -91,7 +91,7 @@ $result_tree_text{'char_latin2_latin2_in_refs'} = '*document_root C6
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 char_latin2_latin2_in_refs.texi:l17 {Ą ą Ę ę}
+ *normal_command@node C1 char_latin2_latin2_in_refs.texi:l17 {Ą ą Ę ę}
  |EXTRA
  |identifier:{_0104-_0105-_0118-_0119}
  |is_target:{1}
@@ -101,7 +101,7 @@ $result_tree_text{'char_latin2_latin2_in_refs'} = '*document_root C6
     {spaces_before_argument: }
     {normal_text:Ą ą Ę ę}
     {spaces_after_argument:\\n}
- *@chapter C4 char_latin2_latin2_in_refs.texi:l18 {Ą ą Ę ę}
+ *normal_command@chapter C4 char_latin2_latin2_in_refs.texi:l18 {Ą ą Ę ę}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -121,7 +121,7 @@ $result_tree_text{'char_latin2_latin2_in_refs'} = '*document_root C6
     {normal_text:Ą ą Ę ę}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@bye C1
+ *normal_command@bye C1
   *line_arg C1
    {spaces_before_argument:\\n}
 ';

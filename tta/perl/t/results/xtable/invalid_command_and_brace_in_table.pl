@@ -11,11 +11,11 @@ use Encode;
 $result_tree_text{'invalid_command_and_brace_in_table'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@table C3 l1
+  *normal_command@table C3 l1
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     *@asis l1
+     *normal_command@asis l1
      {spaces_after_argument:\\n}
    *before_item C2
     {spaces_before_paragraph: }
@@ -23,7 +23,7 @@ $result_tree_text{'invalid_command_and_brace_in_table'} = '*document_root C1
      {normal_text:,, title\\n}
      {normal_text:long title\\n}
      {normal_text:Item line\\n}
-   *@end C1 l5
+   *normal_command@end C1 l5
    |EXTRA
    |text_arg:{table}
     *line_arg C3

@@ -17,7 +17,7 @@ NodeUp: (dir)
 NodeForward: [U1]
  *before_node_section C1
   *preamble_before_content
- *@node C5 l1 {first}
+ *normal_command@node C5 l1 {first}
  |EXTRA
  |identifier:{first}
  |is_target:{1}
@@ -38,7 +38,7 @@ NodeForward: [U1]
   *paragraph C1
    {normal_text:first node\\n}
   {empty_line:\\n}
-  *@menu C3 l4
+  *normal_command@menu C3 l4
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -53,7 +53,7 @@ NodeForward: [U1]
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l6
+   *normal_command@end C1 l6
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -69,7 +69,7 @@ Back: [U0]
 NodePrev: [U0]
 NodeUp: [U0]
 NodeBack: [U0]
- *@node C2 l8 {second node}
+ *normal_command@node C2 l8 {second node}
  |EXTRA
  |identifier:{second-node}
  |is_target:{1}

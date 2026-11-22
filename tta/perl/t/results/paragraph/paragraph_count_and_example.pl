@@ -11,13 +11,13 @@ use Encode;
 $result_tree_text{'paragraph_count_and_example'} = '*document_root C1
  *before_node_section C4
   *preamble_before_content
-  *@example C3 l1
+  *normal_command@example C3 l1
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C1
     {normal_text:in example\\n}
-   *@end C1 l3
+   *normal_command@end C1 l3
    |EXTRA
    |text_arg:{example}
     *line_arg C3

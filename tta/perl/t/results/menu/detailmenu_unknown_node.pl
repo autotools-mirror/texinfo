@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'detailmenu_unknown_node'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
- *@node C3 l1 {Top}
+ *normal_command@node C3 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -22,11 +22,11 @@ $result_tree_text{'detailmenu_unknown_node'} = '*document_root C2
     {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C3 l3
+  *normal_command@menu C3 l3
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
-   *@detailmenu C3 l4
+   *normal_command@detailmenu C3 l4
    |EXTRA
    |global_command_number:{1}
     *arguments_line C1
@@ -43,14 +43,14 @@ $result_tree_text{'detailmenu_unknown_node'} = '*document_root C2
      *menu_entry_description C1
       *preformatted C1
        {normal_text:\\n}
-    *@end C1 l6
+    *normal_command@end C1 l6
     |EXTRA
     |text_arg:{detailmenu}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:detailmenu}
       {spaces_after_argument:\\n}
-   *@end C1 l7
+   *normal_command@end C1 l7
    |EXTRA
    |text_arg:{menu}
     *line_arg C3

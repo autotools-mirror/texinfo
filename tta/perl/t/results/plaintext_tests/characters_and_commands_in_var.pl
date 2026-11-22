@@ -12,28 +12,28 @@ $result_tree_text{'characters_and_commands_in_var'} = '*document_root C1
  *before_node_section C8
   *preamble_before_content
   *paragraph C8
-   *@var C1 l1
+   *normal_command@var C1 l1
     *brace_container C1
      {normal_text:aaa}
    {normal_text:. }
-   *@var C1 l1
+   *normal_command@var C1 l1
     *brace_container C1
      {normal_text:dlksfjf ) }
    {normal_text:. }
-   *@var C1 l1
+   *normal_command@var C1 l1
     *brace_container C1
      {normal_text:(fdfdsfsd}
    {normal_text:. }
-   *@var C1 l1
+   *normal_command@var C1 l1
     *brace_container C1
      {normal_text:sqdq,qdsdsq}
    {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@var C1 l3
+   *normal_command@var C1 l3
     *brace_container C3
      {normal_text:somethingf  }
-     *@c C1
+     *normal_command@c C1
       *line_arg C3
        {spaces_before_argument: }
        {rawline_text:]}
@@ -42,28 +42,28 @@ $result_tree_text{'characters_and_commands_in_var'} = '*document_root C1
    {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@var C1 l6
+   *normal_command@var C1 l6
     *brace_container C8
      {normal_text:AA}
-     *@, C1 l6
+     *normal_command@, C1 l6
       *following_arg C1
        {normal_text:c}
      {normal_text: }
-     *@u C1 l6
+     *normal_command@u C1 l6
       *brace_container C1
        {normal_text:r}
      {normal_text: }
-     *@` C1 l6
+     *normal_command@` C1 l6
       *following_arg C1
        {normal_text:e}
      {normal_text: }
-     *@aa C1 l6
+     *normal_command@aa C1 l6
       *brace_container
    {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C3
    {normal_text:AAA}
-   *@footnote C1 l8
+   *normal_command@footnote C1 l8
    |EXTRA
    |global_command_number:{1}
     *brace_command_context C1
@@ -71,7 +71,7 @@ $result_tree_text{'characters_and_commands_in_var'} = '*document_root C1
       {normal_text:jdhfmqsdf\\n}
       {normal_text:dsf\\n}
       {normal_text:ds }
-      *@var C1 l10
+      *normal_command@var C1 l10
        *brace_container C1
         {normal_text:rrrr , azeeaz}
       {normal_text:\\n}

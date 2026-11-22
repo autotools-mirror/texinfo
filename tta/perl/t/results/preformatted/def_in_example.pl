@@ -11,11 +11,11 @@ use Encode;
 $result_tree_text{'def_in_example'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@example C3 l1
+  *normal_command@example C3 l1
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
-   *@defun C3 l2
+   *normal_command@defun C3 l2
     *def_line C1 l2
     |EXTRA
     |def_command:{defun}
@@ -40,14 +40,14 @@ $result_tree_text{'def_in_example'} = '*document_root C1
     *def_item C1
      *preformatted C1
       {normal_text:in defun\\n}
-    *@end C1 l4
+    *normal_command@end C1 l4
     |EXTRA
     |text_arg:{defun}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:defun}
       {spaces_after_argument:\\n}
-   *@end C1 l5
+   *normal_command@end C1 l5
    |EXTRA
    |text_arg:{example}
     *line_arg C3

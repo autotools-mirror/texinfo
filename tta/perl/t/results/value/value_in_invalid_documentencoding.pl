@@ -11,14 +11,14 @@ use Encode;
 $result_tree_text{'value_in_invalid_documentencoding'} = '*document_root C1
  *before_node_section C1
   *preamble_before_content C2
-   *@set C1
+   *normal_command@set C1
    |EXTRA
    |misc_args:A{badvalue|bad}
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:badvalue bad}
      {spaces_after_argument:\\n}
-   *@documentencoding C1 l2
+   *normal_command@documentencoding C1 l2
    |EXTRA
    |global_command_number:{1}
    |text_arg:{bad}
@@ -26,7 +26,7 @@ $result_tree_text{'value_in_invalid_documentencoding'} = '*document_root C1
      {spaces_before_argument: }
      >SOURCEMARKS
      >value_expansion<start;1><p:1>{bad}
-      >*@value C1
+      >*normal_command@value C1
        >*brace_container C1
         >{normal_text:badvalue}
      {normal_text:bad}

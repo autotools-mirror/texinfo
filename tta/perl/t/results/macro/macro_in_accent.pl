@@ -11,14 +11,14 @@ use Encode;
 $result_tree_text{'macro_in_accent'} = '*document_root C1
  *before_node_section C4
   *preamble_before_content C4
-   *@macro C3 l1
+   *normal_command@macro C3 l1
    |EXTRA
    |formal_args:A{}
    |macro_name:{aletter}
     *arguments_line C1
      {macro_line: aletter\\n}
     {raw:a\\n}
-    *@end C1 l3
+    *normal_command@end C1 l3
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -26,14 +26,14 @@ $result_tree_text{'macro_in_accent'} = '*document_root C1
       {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@macro C3 l5
+   *normal_command@macro C3 l5
    |EXTRA
    |formal_args:A{}
    |macro_name:{aspace}
     *arguments_line C1
      {macro_line: aspace\\n}
     {raw:  \\n}
-    *@end C1 l7
+    *normal_command@end C1 l7
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -42,7 +42,7 @@ $result_tree_text{'macro_in_accent'} = '*document_root C1
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C8
-   *@ringaccent C2 l9
+   *normal_command@ringaccent C2 l9
    >SOURCEMARKS
    >macro_expansion<end;1>
     {spaces_after_cmd_before_arg: }
@@ -53,7 +53,7 @@ $result_tree_text{'macro_in_accent'} = '*document_root C1
     *following_arg C1
      {normal_text:a}
    {normal_text:.\\n}
-   *@ringaccent C2 l10
+   *normal_command@ringaccent C2 l10
    >SOURCEMARKS
    >macro_expansion<end;2>
     {spaces_after_cmd_before_arg:}
@@ -64,7 +64,7 @@ $result_tree_text{'macro_in_accent'} = '*document_root C1
     *following_arg C1
      {normal_text:a}
    {normal_text:.\\n}
-   *@~ C2 l11
+   *normal_command@~ C2 l11
    >SOURCEMARKS
    >macro_expansion<end;3>
     {spaces_after_cmd_before_arg:}
@@ -75,7 +75,7 @@ $result_tree_text{'macro_in_accent'} = '*document_root C1
     *following_arg C1
      {normal_text:a}
    {normal_text:.\\n}
-   *@~ C1 l12
+   *normal_command@~ C1 l12
     *brace_container C1
      {normal_text:a}
      >SOURCEMARKS
@@ -86,7 +86,7 @@ $result_tree_text{'macro_in_accent'} = '*document_root C1
    {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@ringaccent C2 l14
+   *normal_command@ringaccent C2 l14
    >SOURCEMARKS
    >macro_expansion<end;6>
     {spaces_after_cmd_before_arg:  }

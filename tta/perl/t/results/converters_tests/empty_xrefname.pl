@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'empty_xrefname'} = '*document_root C8
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'empty_xrefname'} = '*document_root C8
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l2 {top}
+ *normal_command@top C2 l2 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -31,7 +31,7 @@ $result_tree_text{'empty_xrefname'} = '*document_root C8
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l4 {Chap}
+ *normal_command@node C1 l4 {Chap}
  |EXTRA
  |identifier:{Chap}
  |is_target:{1}
@@ -41,7 +41,7 @@ $result_tree_text{'empty_xrefname'} = '*document_root C8
     {spaces_before_argument: }
     {normal_text:Chap}
     {spaces_after_argument:\\n}
- *@chapter C4 l5 {Chapter}
+ *normal_command@chapter C4 l5 {Chapter}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -52,7 +52,7 @@ $result_tree_text{'empty_xrefname'} = '*document_root C8
     {normal_text:Chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C3 l7
+  *normal_command@menu C3 l7
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -67,7 +67,7 @@ $result_tree_text{'empty_xrefname'} = '*document_root C8
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l9
+   *normal_command@end C1 l9
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -75,7 +75,7 @@ $result_tree_text{'empty_xrefname'} = '*document_root C8
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C5 l11 {entiti}
+ *normal_command@node C5 l11 {entiti}
  |EXTRA
  |identifier:{entiti}
  |is_target:{1}
@@ -85,14 +85,14 @@ $result_tree_text{'empty_xrefname'} = '*document_root C8
     {spaces_before_argument: }
     {normal_text:entiti}
     {spaces_after_argument:\\n}
-  *@xrefname C1 l12
+  *normal_command@xrefname C1 l12
   |EXTRA
   |global_command_number:{1}
   |heading_number:{1}
    *line_arg C1
     {spaces_before_argument:\\n}
   {empty_line:\\n}
-  *@heading C1 l14
+  *normal_command@heading C1 l14
   |EXTRA
   |global_command_number:{1}
   |heading_number:{2}
@@ -101,7 +101,7 @@ $result_tree_text{'empty_xrefname'} = '*document_root C8
     {normal_text:after empty}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l16 {chip}
+ *normal_command@node C1 l16 {chip}
  |EXTRA
  |identifier:{chip}
  |is_target:{1}
@@ -111,7 +111,7 @@ $result_tree_text{'empty_xrefname'} = '*document_root C8
     {spaces_before_argument: }
     {normal_text:chip}
     {spaces_after_argument:\\n}
- *@chapter C9 l17 {Chip}
+ *normal_command@chapter C9 l17 {Chip}
  |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
@@ -122,7 +122,7 @@ $result_tree_text{'empty_xrefname'} = '*document_root C8
     {normal_text:Chip}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@xrefautomaticsectiontitle C1 l19
+  *normal_command@xrefautomaticsectiontitle C1 l19
   |EXTRA
   |global_command_number:{1}
   |misc_args:A{off}
@@ -132,7 +132,7 @@ $result_tree_text{'empty_xrefname'} = '*document_root C8
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@xref C1 l21
+   *normal_command@xref C1 l21
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -140,7 +140,7 @@ $result_tree_text{'empty_xrefname'} = '*document_root C8
      {normal_text:entiti}
    {normal_text:\\n}
   {empty_line:\\n}
-  *@xrefautomaticsectiontitle C1 l23
+  *normal_command@xrefautomaticsectiontitle C1 l23
   |EXTRA
   |global_command_number:{2}
   |misc_args:A{on}
@@ -151,7 +151,7 @@ $result_tree_text{'empty_xrefname'} = '*document_root C8
   {empty_line:\\n}
   *paragraph C3
    {normal_text:xrefautomaticsectiontitle on }
-   *@ref C1 l25
+   *normal_command@ref C1 l25
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}

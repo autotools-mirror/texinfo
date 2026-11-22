@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'contents_at_end_document_after_node'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'contents_at_end_document_after_node'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C4 l2 {contents at end document after node}
+ *normal_command@top C4 l2 {contents at end document after node}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -31,7 +31,7 @@ $result_tree_text{'contents_at_end_document_after_node'} = '*document_root C5
     {normal_text:contents at end document after node}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C3 l4
+  *normal_command@menu C3 l4
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -46,7 +46,7 @@ $result_tree_text{'contents_at_end_document_after_node'} = '*document_root C5
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l6
+   *normal_command@end C1 l6
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -54,7 +54,7 @@ $result_tree_text{'contents_at_end_document_after_node'} = '*document_root C5
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@chapter C2 l8 {chap}
+ *normal_command@chapter C2 l8 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -67,7 +67,7 @@ $result_tree_text{'contents_at_end_document_after_node'} = '*document_root C5
     {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C3 l10 {a node}
+ *normal_command@node C3 l10 {a node}
  |EXTRA
  |identifier:{a-node}
  |is_target:{1}
@@ -85,7 +85,7 @@ $result_tree_text{'contents_at_end_document_after_node'} = '*document_root C5
     {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@contents C1 l12
+  *normal_command@contents C1 l12
   |EXTRA
   |global_command_number:{1}
    *line_arg C1

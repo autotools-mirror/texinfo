@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'space_in_anchor'} = '*document_root C1
  *before_node_section C3
   *preamble_before_content
-  *@anchor C1 l1
+  *normal_command@anchor C1 l1
   |EXTRA
   |identifier:{anchor-name}
   |is_target:{1}

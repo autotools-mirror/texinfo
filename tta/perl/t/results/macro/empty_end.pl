@@ -11,14 +11,14 @@ use Encode;
 $result_tree_text{'empty_end'} = '*document_root C1
  *before_node_section C1
   *preamble_before_content C1
-   *@macro C3 l1
+   *normal_command@macro C3 l1
    |EXTRA
    |formal_args:A{aaa}
    |macro_name:{foo}
     *arguments_line C1
      {macro_line: foo {aaa, }\\n}
     {raw:in foo\\n}
-    *@end C1 l3
+    *normal_command@end C1 l3
     |EXTRA
     |text_arg:{macro}
      *line_arg C2

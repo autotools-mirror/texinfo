@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'alias_zero'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C1
-   *@alias C1 l1
+   *normal_command@alias C1 l1
    |EXTRA
    |misc_args:A{0|strong}
     *line_arg C3
@@ -19,7 +19,7 @@ $result_tree_text{'alias_zero'} = '*document_root C1
      {normal_text:0 = strong}
      {spaces_after_argument:\\n}
   *paragraph C2
-   *@strong C1 l2
+   *normal_command@strong C1 l2
    |EXTRA
    |alias_of:{0}
     *brace_container C1

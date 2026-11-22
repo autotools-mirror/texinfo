@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'ignore_in_xref'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
- *@node C3 l1 {first}
+ *normal_command@node C3 l1 {first}
  |EXTRA
  |identifier:{first}
  |is_target:{1}
@@ -23,7 +23,7 @@ $result_tree_text{'ignore_in_xref'} = '*document_root C2
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@xref C2 l3
+   *normal_command@xref C2 l3
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -31,12 +31,12 @@ $result_tree_text{'ignore_in_xref'} = '*document_root C2
      {normal_text:first}
     *brace_arg C2
      {spaces_before_argument:\\n}
-     *@ignore C3 l4
+     *normal_command@ignore C3 l4
       *arguments_line C1
        *block_line_arg C1
         {spaces_before_argument:\\n}
       {raw:ignore me\\n}
-      *@end C1 l6
+      *normal_command@end C1 l6
       |EXTRA
       |text_arg:{ignore}
        *line_arg C3

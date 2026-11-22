@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'one_node_explicit_directions_anchor'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
- *@node C6 l1 {one node}
+ *normal_command@node C6 l1 {one node}
  |EXTRA
  |identifier:{one-node}
  |is_target:{1}
@@ -34,7 +34,7 @@ $result_tree_text{'one_node_explicit_directions_anchor'} = '*document_root C2
   {empty_line:\\n}
   *paragraph C3
    {normal_text:anchor ref }
-   *@anchor C1 l4
+   *normal_command@anchor C1 l4
    |EXTRA
    |identifier:{ref}
    |is_target:{1}
@@ -44,7 +44,7 @@ $result_tree_text{'one_node_explicit_directions_anchor'} = '*document_root C2
   {empty_line:\\n}
   *paragraph C3
    {normal_text:ref to ref }
-   *@ref C1 l6
+   *normal_command@ref C1 l6
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}

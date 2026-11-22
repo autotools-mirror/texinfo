@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'placed_things_before_element'} = '*document_root C2
  *before_node_section C18
   *preamble_before_content
-  *@anchor C1 l1
+  *normal_command@anchor C1 l1
   |EXTRA
   |identifier:{An-anchor}
   |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'placed_things_before_element'} = '*document_root C2
   {empty_line:\\n}
   *paragraph C3
    {normal_text:Ref to the anchor:\\n}
-   *@ref C1 l4
+   *normal_command@ref C1 l4
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -31,7 +31,7 @@ $result_tree_text{'placed_things_before_element'} = '*document_root C2
   {empty_line:\\n}
   *paragraph C3
    {normal_text:Ref to the anchor in footnote:\\n}
-   *@ref C1 l7
+   *normal_command@ref C1 l7
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -40,14 +40,14 @@ $result_tree_text{'placed_things_before_element'} = '*document_root C2
    {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@footnote C1 l9
+   *normal_command@footnote C1 l9
    |EXTRA
    |global_command_number:{1}
     *brace_command_context C6
      *paragraph C1
       {normal_text:In footnote.\\n}
      {empty_line:\\n}
-     *@anchor C1 l11
+     *normal_command@anchor C1 l11
      |EXTRA
      |identifier:{Anchor-in-footnote}
      |is_target:{1}
@@ -57,7 +57,7 @@ $result_tree_text{'placed_things_before_element'} = '*document_root C2
      {empty_line:\\n}
      *paragraph C3
       {normal_text:Ref to main text anchor\\n}
-      *@ref C1 l14
+      *normal_command@ref C1 l14
        *brace_arg C1
        |EXTRA
        |node_content:A{0|0}
@@ -66,7 +66,7 @@ $result_tree_text{'placed_things_before_element'} = '*document_root C2
       {normal_text:\\n}
    {normal_text:\\n}
   {empty_line:\\n}
-  *@float C3 l17
+  *normal_command@float C3 l17
   |EXTRA
   |float_number:{1}
   |float_type:{}
@@ -82,7 +82,7 @@ $result_tree_text{'placed_things_before_element'} = '*document_root C2
      {spaces_after_argument:\\n}
    *paragraph C1
     {normal_text:In float\\n}
-   *@end C1 l19
+   *normal_command@end C1 l19
    |EXTRA
    |text_arg:{float}
     *line_arg C3
@@ -92,7 +92,7 @@ $result_tree_text{'placed_things_before_element'} = '*document_root C2
   {empty_line:\\n}
   *paragraph C3
    {normal_text:Ref to float\\n}
-   *@ref C1 l22
+   *normal_command@ref C1 l22
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -100,7 +100,7 @@ $result_tree_text{'placed_things_before_element'} = '*document_root C2
      {normal_text:float anchor}
    {normal_text:.\\n}
   {empty_line:\\n}
-  *@menu C3 l24
+  *normal_command@menu C3 l24
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -115,7 +115,7 @@ $result_tree_text{'placed_things_before_element'} = '*document_root C2
     *menu_entry_description C1
      *preformatted C1
       {normal_text:menu entry pointing to the anchor.\\n}
-   *@end C1 l26
+   *normal_command@end C1 l26
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -131,7 +131,7 @@ $result_tree_text{'placed_things_before_element'} = '*document_root C2
     {normal_text:index entry}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@section C5 l30 {section}
+ *normal_command@section C5 l30 {section}
  |EXTRA
  |identifier:{section}
  |is_target:{1}
@@ -146,7 +146,7 @@ $result_tree_text{'placed_things_before_element'} = '*document_root C2
   {empty_line:\\n}
   *paragraph C3
    {normal_text:Ref to anchor\\n}
-   *@ref C1 l33
+   *normal_command@ref C1 l33
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -156,7 +156,7 @@ $result_tree_text{'placed_things_before_element'} = '*document_root C2
   {empty_line:\\n}
   *paragraph C3
    {normal_text:Ref to footnote anchor\\n}
-   *@ref C1 l36
+   *normal_command@ref C1 l36
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}

@@ -11,25 +11,25 @@ use Encode;
 $result_tree_text{'titlepage_no_title'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content C2
-   *@titlepage C6 l1
+   *normal_command@titlepage C6 l1
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
-    *@titlefont C1 l2
+    *normal_command@titlefont C1 l2
     |EXTRA
     |global_command_number:{1}
      *brace_container C1
       {normal_text:Some manual tested}
     {normal_text:\\n}
     {empty_line:\\n}
-    *@author C1 l4
+    *normal_command@author C1 l4
     |EXTRA
     |global_command_number:{1}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:Some Author}
       {spaces_after_argument:\\n}
-    *@end C1 l5
+    *normal_command@end C1 l5
     |EXTRA
     |text_arg:{titlepage}
      *line_arg C3
@@ -37,7 +37,7 @@ $result_tree_text{'titlepage_no_title'} = '*document_root C5
       {normal_text:titlepage}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@node C1 l7 {Top}
+ *normal_command@node C1 l7 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -47,7 +47,7 @@ $result_tree_text{'titlepage_no_title'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l8 {section top}
+ *normal_command@top C2 l8 {section top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -57,7 +57,7 @@ $result_tree_text{'titlepage_no_title'} = '*document_root C5
     {normal_text:section top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l10 {chapter}
+ *normal_command@node C1 l10 {chapter}
  |EXTRA
  |identifier:{chapter}
  |is_target:{1}
@@ -67,7 +67,7 @@ $result_tree_text{'titlepage_no_title'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:chapter}
     {spaces_after_argument:\\n}
- *@chapter C3 l11 {Chapter}
+ *normal_command@chapter C3 l11 {Chapter}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}

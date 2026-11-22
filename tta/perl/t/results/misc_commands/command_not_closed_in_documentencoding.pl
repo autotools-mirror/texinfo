@@ -11,12 +11,12 @@ use Encode;
 $result_tree_text{'command_not_closed_in_documentencoding'} = '*document_root C1
  *before_node_section C1
   *preamble_before_content C1
-   *@documentencoding C1 l1
+   *normal_command@documentencoding C1 l1
    |EXTRA
    |global_command_number:{1}
     *line_arg C2
      {spaces_before_argument: }
-     *@strong l1
+     *normal_command@strong l1
 ';
 
 

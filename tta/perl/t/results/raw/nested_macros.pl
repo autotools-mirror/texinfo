@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'nested_macros'} = '*document_root C1
  *before_node_section C1
   *preamble_before_content C1
-   *@macro C8 l1
+   *normal_command@macro C8 l1
    |EXTRA
    |formal_args:A{arg|ex}
    |macro_name:{truc}
@@ -23,7 +23,7 @@ $result_tree_text{'nested_macros'} = '*document_root C1
     {raw:@end macro\\n}
     {raw:@macro\\n}
     {raw:@end macro\\n}
-    *@end C1 l8
+    *normal_command@end C1 l8
     |EXTRA
     |text_arg:{macro}
      *line_arg C3

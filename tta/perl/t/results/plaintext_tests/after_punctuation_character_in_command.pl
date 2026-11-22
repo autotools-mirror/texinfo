@@ -13,7 +13,7 @@ $result_tree_text{'after_punctuation_character_in_command'} = '*document_root C1
   *preamble_before_content
   *paragraph C3
    {normal_text:Text.}
-   *@asis C1 l1
+   *normal_command@asis C1 l1
     *brace_container C2
      {normal_text:)\\n}
      {normal_text:follows}

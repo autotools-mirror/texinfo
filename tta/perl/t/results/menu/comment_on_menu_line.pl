@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'comment_on_menu_line'} = '*document_root C4
  *before_node_section C1
   *preamble_before_content
- *@node C4 l1 {Top}
+ *normal_command@node C4 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -22,11 +22,11 @@ $result_tree_text{'comment_on_menu_line'} = '*document_root C4
     {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C3 l3
+  *normal_command@menu C3 l3
    *arguments_line C1
     *block_line_arg C2
      {spaces_before_argument:  }
-     *@c C1
+     *normal_command@c C1
       *line_arg C2
        {rawline_text:}
        {spaces_after_argument:\\n}
@@ -41,7 +41,7 @@ $result_tree_text{'comment_on_menu_line'} = '*document_root C4
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l5
+   *normal_command@end C1 l5
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -49,7 +49,7 @@ $result_tree_text{'comment_on_menu_line'} = '*document_root C4
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@chapter C1 l7 {first}
+ *normal_command@chapter C1 l7 {first}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -59,7 +59,7 @@ $result_tree_text{'comment_on_menu_line'} = '*document_root C4
     {spaces_before_argument: }
     {normal_text:first}
     {spaces_after_argument:\\n}
- *@node C1 l8 {first}
+ *normal_command@node C1 l8 {first}
  |EXTRA
  |identifier:{first}
  |is_target:{1}

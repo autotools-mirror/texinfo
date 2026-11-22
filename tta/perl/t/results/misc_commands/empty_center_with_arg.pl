@@ -11,10 +11,10 @@ use Encode;
 $result_tree_text{'empty_center_with_arg'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@center C1 l1
+  *normal_command@center C1 l1
    *line_arg C3
     {spaces_before_argument: }
-    *@w C1 l1
+    *normal_command@w C1 l1
      *brace_container
     {spaces_after_argument:\\n}
 ';

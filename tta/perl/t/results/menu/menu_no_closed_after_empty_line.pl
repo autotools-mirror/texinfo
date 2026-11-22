@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'menu_no_closed_after_empty_line'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@menu C3 l1
+  *normal_command@menu C3 l1
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}

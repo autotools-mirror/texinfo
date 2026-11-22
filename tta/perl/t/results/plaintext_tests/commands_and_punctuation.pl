@@ -13,14 +13,14 @@ $result_tree_text{'commands_and_punctuation'} = '*document_root C1
   *preamble_before_content
   *paragraph C9
    {normal_text:SomthingA}
-   *@.
+   *normal_command@.
    {normal_text:   and now inhibit.}
-   *@:
+   *normal_command@:
    {normal_text: Now dots }
-   *@dots C1 l1
+   *normal_command@dots C1 l1
     *brace_container
    {normal_text: and enddots }
-   *@enddots C1 l1
+   *normal_command@enddots C1 l1
     *brace_container
    {normal_text: and}
 ';

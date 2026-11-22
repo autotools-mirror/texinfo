@@ -12,7 +12,7 @@ $result_tree_text{'uref_in_ref'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *paragraph C2
-   *@ref C5 l1
+   *normal_command@ref C5 l1
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -20,7 +20,7 @@ $result_tree_text{'uref_in_ref'} = '*document_root C1
     *brace_arg C3
      {spaces_before_argument: }
      {normal_text:cross ref with uref }
-     *@uref C2 l1
+     *normal_command@uref C2 l1
       *brace_arg C1
        {normal_text:href://http/myhost.com/index.html}
       *brace_arg C1
@@ -28,7 +28,7 @@ $result_tree_text{'uref_in_ref'} = '*document_root C1
     *brace_arg C3
      {spaces_before_argument: }
      {normal_text:title with uref2 }
-     *@uref C2 l1
+     *normal_command@uref C2 l1
       *brace_arg C1
        {normal_text:href://http/myhost.com/index2.html}
       *brace_arg C1
@@ -36,7 +36,7 @@ $result_tree_text{'uref_in_ref'} = '*document_root C1
     *brace_arg C3
      {spaces_before_argument: }
      {normal_text:info file with uref3 }
-     *@uref C2 l1
+     *normal_command@uref C2 l1
       *brace_arg C1
        {normal_text:href://http/myhost.com/index3.html}
       *brace_arg C1
@@ -44,7 +44,7 @@ $result_tree_text{'uref_in_ref'} = '*document_root C1
     *brace_arg C3
      {spaces_before_argument: }
      {normal_text:printed manual with uref4 }
-     *@uref C2 l1
+     *normal_command@uref C2 l1
       *brace_arg C1
        {normal_text:href://http/myhost.com/index4.html}
       *brace_arg C1

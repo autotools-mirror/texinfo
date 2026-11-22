@@ -13,7 +13,7 @@ $result_tree_text{'verb_and_char_end_of_line_not_closed'} = '*document_root C1
   *preamble_before_content
   *paragraph C2
    {normal_text:verb, not  closed }
-   *@verb C1 l1
+   *normal_command@verb C1 l1
     *brace_container C5
      {verb_delimiter:*}
      {raw:\\n}

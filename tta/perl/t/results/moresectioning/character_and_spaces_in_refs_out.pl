@@ -18,7 +18,7 @@ NodeNext: [U1]
 NodeForward: [U1]
  *before_node_section C1
   *preamble_before_content
- *@node C1 character_and_spaces_in_refs_text.texi:l1 {Top}
+ *normal_command@node C1 character_and_spaces_in_refs_text.texi:l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -28,7 +28,7 @@ NodeForward: [U1]
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C4 character_and_spaces_in_refs_text.texi:l2 {Test refs}
+ *normal_command@top C4 character_and_spaces_in_refs_text.texi:l2 {Test refs}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -38,7 +38,7 @@ NodeForward: [U1]
     {normal_text:Test refs}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C4 character_and_spaces_in_refs_text.texi:l4
+  *normal_command@menu C4 character_and_spaces_in_refs_text.texi:l4
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -64,7 +64,7 @@ NodeForward: [U1]
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 character_and_spaces_in_refs_text.texi:l7
+   *normal_command@end C1 character_and_spaces_in_refs_text.texi:l7
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -87,7 +87,7 @@ NodePrev: [U0]
 NodeUp: [U0]
 NodeForward: [U2]
 NodeBack: [U0]
- *@node C1 character_and_spaces_in_refs_text.texi:l9 {node to avoid DocBook or LaTeX ignored}
+ *normal_command@node C1 character_and_spaces_in_refs_text.texi:l9 {node to avoid DocBook or LaTeX ignored}
  |EXTRA
  |identifier:{node-to-avoid-DocBook-or-LaTeX-ignored}
  |is_target:{1}
@@ -97,7 +97,7 @@ NodeBack: [U0]
     {spaces_before_argument: }
     {normal_text:node to avoid DocBook or LaTeX ignored}
     {spaces_after_argument:\\n}
- *@chapter C13 character_and_spaces_in_refs_text.texi:l10 {first chapter}
+ *normal_command@chapter C13 character_and_spaces_in_refs_text.texi:l10 {first chapter}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -108,7 +108,7 @@ NodeBack: [U0]
     {normal_text:first chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@subheading C1 character_and_spaces_in_refs_text.texi:l12
+  *normal_command@subheading C1 character_and_spaces_in_refs_text.texi:l12
   |EXTRA
   |global_command_number:{1}
   |heading_number:{1}
@@ -118,7 +118,7 @@ NodeBack: [U0]
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C8
-   *@ref C4 character_and_spaces_in_refs_text.texi:l14
+   *normal_command@ref C4 character_and_spaces_in_refs_text.texi:l14
     *brace_arg C3
     |EXTRA
     |node_content:A{1|1}
@@ -131,7 +131,7 @@ NodeBack: [U0]
      {spaces_before_argument: }
      {normal_text:manual}
    {normal_text:\\n}
-   *@ref C4 character_and_spaces_in_refs_text.texi:l15
+   *normal_command@ref C4 character_and_spaces_in_refs_text.texi:l15
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -141,7 +141,7 @@ NodeBack: [U0]
     *brace_arg C1
      {normal_text:manual}
    {normal_text:\\n}
-   *@ref C4 character_and_spaces_in_refs_text.texi:l16
+   *normal_command@ref C4 character_and_spaces_in_refs_text.texi:l16
     *brace_arg C3
     |EXTRA
     |node_content:A{1|1}
@@ -154,7 +154,7 @@ NodeBack: [U0]
      {spaces_before_argument: }
      {normal_text:manual}
    {normal_text:\\n}
-   *@ref C4 character_and_spaces_in_refs_text.texi:l17
+   *normal_command@ref C4 character_and_spaces_in_refs_text.texi:l17
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -166,7 +166,7 @@ NodeBack: [U0]
      {normal_text:../manual/doc}
    {normal_text:\\n}
   {empty_line:\\n}
-  *@subheading C1 character_and_spaces_in_refs_text.texi:l19
+  *normal_command@subheading C1 character_and_spaces_in_refs_text.texi:l19
   |EXTRA
   |global_command_number:{2}
   |heading_number:{2}
@@ -176,21 +176,21 @@ NodeBack: [U0]
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C10
-   *@ref C1 character_and_spaces_in_refs_text.texi:l21
+   *normal_command@ref C1 character_and_spaces_in_refs_text.texi:l21
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{_0021_005f_0022_0023_0024_0025_0026_0027_0028_0029_002a_002b_002d_002e}
      {normal_text:!_"#$%&\'()*+-.}
    {normal_text:\\n}
-   *@ref C1 character_and_spaces_in_refs_text.texi:l22
+   *normal_command@ref C1 character_and_spaces_in_refs_text.texi:l22
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{_002f_003b_003c_003d_003e_003f_005b_005c_005d_005e_005f_0060_007c_007e}
      {normal_text:/;<=>?[\\]^_`|~}
    {normal_text:\\n}
-   *@ref C1 character_and_spaces_in_refs_text.texi:l23
+   *normal_command@ref C1 character_and_spaces_in_refs_text.texi:l23
     *brace_arg C2
     |EXTRA
     |node_content:A{1|1}
@@ -198,7 +198,7 @@ NodeBack: [U0]
      {spaces_before_argument: }
      {normal_text:Top}
    {normal_text:\\n}
-   *@ref C1 character_and_spaces_in_refs_text.texi:l24
+   *normal_command@ref C1 character_and_spaces_in_refs_text.texi:l24
     *brace_arg C2
     |EXTRA
     |node_content:A{1|1}
@@ -206,7 +206,7 @@ NodeBack: [U0]
      {spaces_before_argument:  }
      {normal_text:local   node}
    {normal_text:\\n}
-   *@ref C1 character_and_spaces_in_refs_text.texi:l25
+   *normal_command@ref C1 character_and_spaces_in_refs_text.texi:l25
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -214,7 +214,7 @@ NodeBack: [U0]
      {normal_text:(texinfo)Cross References}
    {normal_text:\\n}
   {empty_line:\\n}
-  *@anchor C1 character_and_spaces_in_refs_text.texi:l27
+  *normal_command@anchor C1 character_and_spaces_in_refs_text.texi:l27
   |EXTRA
   |identifier:{_0028texinfo_0029Cross-References}
   |is_target:{1}
@@ -236,7 +236,7 @@ NodePrev: [U1]
 NodeUp: [U0]
 NodeForward: [U3]
 NodeBack: [U1]
- *@node C1 character_and_spaces_in_refs_text.texi:l29 {other nodes}
+ *normal_command@node C1 character_and_spaces_in_refs_text.texi:l29 {other nodes}
  |EXTRA
  |identifier:{other-nodes}
  |is_target:{1}
@@ -264,7 +264,7 @@ NodeBack: [U1]
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@chapter C4 character_and_spaces_in_refs_text.texi:l30 {Chapter with nodes}
+ *normal_command@chapter C4 character_and_spaces_in_refs_text.texi:l30 {Chapter with nodes}
  |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
@@ -275,7 +275,7 @@ NodeBack: [U1]
     {normal_text:Chapter with nodes}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C5 character_and_spaces_in_refs_text.texi:l32
+  *normal_command@menu C5 character_and_spaces_in_refs_text.texi:l32
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -312,7 +312,7 @@ NodeBack: [U1]
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 character_and_spaces_in_refs_text.texi:l36
+   *normal_command@end C1 character_and_spaces_in_refs_text.texi:l36
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -332,7 +332,7 @@ NodePrev: [U2]
 NodeUp: [U2]
 NodeForward: [U4]
 NodeBack: [U2]
- *@node C2 character_and_spaces_in_refs_text.texi:l38 {!_"#$%&\'()*+-.}
+ *normal_command@node C2 character_and_spaces_in_refs_text.texi:l38 {!_"#$%&\'()*+-.}
  |EXTRA
  |identifier:{_0021_005f_0022_0023_0024_0025_0026_0027_0028_0029_002a_002b_002d_002e}
  |is_target:{1}
@@ -373,7 +373,7 @@ NodePrev: [U3]
 NodeUp: [U2]
 NodeForward: [U5]
 NodeBack: [U3]
- *@node C2 character_and_spaces_in_refs_text.texi:l40 {/;<=>?[\\]^_`|~}
+ *normal_command@node C2 character_and_spaces_in_refs_text.texi:l40 {/;<=>?[\\]^_`|~}
  |EXTRA
  |identifier:{_002f_003b_003c_003d_003e_003f_005b_005c_005d_005e_005f_0060_007c_007e}
  |is_target:{1}
@@ -410,7 +410,7 @@ NodePrev: [U4]
 NodeUp: [U2]
 NodeForward: [U3]
 NodeBack: [U4]
- *@node C2 character_and_spaces_in_refs_text.texi:l42 {local   node}
+ *normal_command@node C2 character_and_spaces_in_refs_text.texi:l42 {local   node}
  |EXTRA
  |identifier:{local-node}
  |is_target:{1}
@@ -432,7 +432,7 @@ NodeBack: [U4]
     {normal_text:other nodes}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@bye C1
+ *normal_command@bye C1
   *line_arg C1
    {spaces_before_argument:\\n}
 ';

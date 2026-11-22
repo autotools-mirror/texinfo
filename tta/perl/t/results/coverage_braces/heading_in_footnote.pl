@@ -13,14 +13,14 @@ $result_tree_text{'heading_in_footnote'} = '*document_root C1
   *preamble_before_content
   *paragraph C3
    {normal_text:T}
-   *@footnote C1 l1
+   *normal_command@footnote C1 l1
    |EXTRA
    |global_command_number:{1}
     *brace_command_context C5
      {spaces_before_argument:\\n}
      *paragraph C1
       {normal_text:AAA\\n}
-     *@heading C1 l3
+     *normal_command@heading C1 l3
      |EXTRA
      |global_command_number:{1}
      |heading_number:{1}

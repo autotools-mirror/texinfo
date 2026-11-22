@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'anchor_in_command'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
- *@node C3 l1 {Top}
+ *normal_command@node C3 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -23,26 +23,26 @@ $result_tree_text{'anchor_in_command'} = '*document_root C2
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@strong C1 l3
+   *normal_command@strong C1 l3
     *brace_container C8
      {normal_text:aaa }
-     *@TeX C1 l3
+     *normal_command@TeX C1 l3
       *brace_container
      {normal_text: }
-     *@emph C1 l3
+     *normal_command@emph C1 l3
       *brace_container C1
        {normal_text:in emph}
      {normal_text: after \\n}
-     *@c C1
+     *normal_command@c C1
       *line_arg C3
        {spaces_before_argument: }
        {rawline_text:emph @emph{emph2 @anchor{anchor in emph} }}.}
        {spaces_after_argument:\\n}
      {normal_text:emph }
-     *@emph C1 l5
+     *normal_command@emph C1 l5
       *brace_container C2
        {normal_text:emph2 }
-       *@anchor C1 l5
+       *normal_command@anchor C1 l5
        |EXTRA
        |identifier:{anchor-in-emph}
        |is_target:{1}

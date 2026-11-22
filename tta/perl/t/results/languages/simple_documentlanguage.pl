@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'simple_documentlanguage'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content C2
-   *@documentlanguage C1 l1
+   *normal_command@documentlanguage C1 l1
    |EXTRA
    |global_command_number:{1}
    |text_arg:{fr}
@@ -20,7 +20,7 @@ $result_tree_text{'simple_documentlanguage'} = '*document_root C3
      {normal_text:fr}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@node C1 l3 {Top}
+ *normal_command@node C1 l3 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -30,7 +30,7 @@ $result_tree_text{'simple_documentlanguage'} = '*document_root C3
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@node C3 l4 {chap}
+ *normal_command@node C3 l4 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -41,7 +41,7 @@ $result_tree_text{'simple_documentlanguage'} = '*document_root C3
     {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@defivar C2 l6
+  *normal_command@defivar C2 l6
    *def_line C1 l6
    |EXTRA
    |def_command:{defivar}
@@ -72,7 +72,7 @@ $result_tree_text{'simple_documentlanguage'} = '*document_root C3
       *def_line_arg C1
        {normal_text:CCC}
      {spaces_after_argument:\\n}
-   *@end C1 l7
+   *normal_command@end C1 l7
    |EXTRA
    |text_arg:{defivar}
     *line_arg C3

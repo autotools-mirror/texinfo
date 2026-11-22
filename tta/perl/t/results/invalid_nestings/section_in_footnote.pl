@@ -15,11 +15,11 @@ $result_tree_text{'section_in_footnote'} = '*document_root C2
   *preamble_before_content
   *paragraph C2
    {normal_text:Text}
-   *@footnote C1 l2
+   *normal_command@footnote C1 l2
     *brace_command_context C2
      {spaces_before_argument:\\n}
      {empty_line:\\n}
- *@section C1 l4 {a section}
+ *normal_command@section C1 l4 {a section}
  |EXTRA
  |identifier:{a-section}
  |is_target:{1}

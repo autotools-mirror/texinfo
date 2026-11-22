@@ -13,14 +13,14 @@ $result_tree_text{'noindent_indent'} = '*document_root C1
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content C2
-   *@indent l2
+   *normal_command@indent l2
    {ignorable_spaces_after_command:\\n}
   *paragraph C1
   |EXTRA
   |indent:{1}
    {normal_text:First para\\n}
   {empty_line:\\n}
-  *@noindent l5
+  *normal_command@noindent l5
   {ignorable_spaces_after_command:\\n}
   *paragraph C2
   |EXTRA
@@ -28,14 +28,14 @@ $result_tree_text{'noindent_indent'} = '*document_root C1
    {normal_text:qsddsqkdsqkkmljsqjsqodmmdsqdsmqj dqs sdq sqd sdq dsq sdq sqd sqd sdq sdq \\n}
    {normal_text:qsd dsq sdq dsq dssdq sdq sdq sdq dsq sdq dsq dsq sdq dsq sdqsd q\\n}
   {empty_line:\\n}
-  *@noindent l9
+  *normal_command@noindent l9
   {ignorable_spaces_after_command: }
   *paragraph C1
   |EXTRA
   |noindent:{1}
    {normal_text:noindent in para.\\n}
   {empty_line:\\n}
-  *@indent l11
+  *normal_command@indent l11
   {ignorable_spaces_after_command: }
   *paragraph C1
   |EXTRA

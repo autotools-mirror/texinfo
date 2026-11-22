@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'empty_cindex_entry'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'empty_cindex_entry'} = '*document_root C3
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@node C2 l2 {chap}
+ *normal_command@node C2 l2 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}

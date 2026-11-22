@@ -11,49 +11,49 @@ use Encode;
 $result_tree_text{'custom_headings_and_comments'} = '*document_root C7
  *before_node_section C1
   *preamble_before_content C3
-   *@evenheading C1 l1
+   *normal_command@evenheading C1 l1
     *line_arg C17
      {spaces_before_argument: }
-     *@thispage
+     *normal_command@thispage
      {normal_text: }
-     *@thissectionname
+     *normal_command@thissectionname
      {normal_text: }
-     *@|
+     *normal_command@|
      {normal_text: }
-     *@thissectionnum
+     *normal_command@thissectionnum
      {normal_text: }
-     *@thissection
+     *normal_command@thissection
      {normal_text: }
-     *@|
+     *normal_command@|
      {normal_text: }
-     *@thischaptername
+     *normal_command@thischaptername
      {normal_text: }
-     *@thischapternum
+     *normal_command@thischapternum
      {spaces_after_argument:  \\n}
-   *@evenfooting C1 l2
+   *normal_command@evenfooting C1 l2
     *line_arg C14
      {spaces_before_argument:   }
-     *@thischapter
+     *normal_command@thischapter
      {normal_text: }
-     *@thistitle
+     *normal_command@thistitle
      {normal_text: }
-     *@|
+     *normal_command@|
      {normal_text: }
-     *@thisfile
+     *normal_command@thisfile
      {normal_text: }
-     *@|
+     *normal_command@|
      {normal_text:   }
-     *@code C1 l2
+     *normal_command@code C1 l2
       *brace_container C1
-       *@thischaptername
+       *normal_command@thischaptername
      {spaces_after_argument:  }
-     *@c C1
+     *normal_command@c C1
       *line_arg C3
        {spaces_before_argument: }
        {rawline_text:comment}
        {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@node C1 l4 {Top}
+ *normal_command@node C1 l4 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -63,7 +63,7 @@ $result_tree_text{'custom_headings_and_comments'} = '*document_root C7
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l5 {top sectionning}
+ *normal_command@top C2 l5 {top sectionning}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -73,7 +73,7 @@ $result_tree_text{'custom_headings_and_comments'} = '*document_root C7
     {normal_text:top sectionning}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l7 {chapter}
+ *normal_command@node C1 l7 {chapter}
  |EXTRA
  |identifier:{chapter}
  |is_target:{1}
@@ -83,7 +83,7 @@ $result_tree_text{'custom_headings_and_comments'} = '*document_root C7
     {spaces_before_argument: }
     {normal_text:chapter}
     {spaces_after_argument:\\n}
- *@chapter C10 l8 {ch--ap}
+ *normal_command@chapter C10 l8 {ch--ap}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -94,21 +94,21 @@ $result_tree_text{'custom_headings_and_comments'} = '*document_root C7
     {normal_text:ch--ap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@page C1
+  *normal_command@page C1
    *line_arg C1
     {spaces_before_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
    {normal_text:after ch--ap first page\\n}
   {empty_line:\\n}
-  *@page C1
+  *normal_command@page C1
    *line_arg C1
     {spaces_before_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
    {normal_text:after ch--ap second page\\n}
   {empty_line:\\n}
- *@section C2 l18 {sec1}
+ *normal_command@section C2 l18 {sec1}
  |EXTRA
  |identifier:{sec1}
  |is_target:{1}
@@ -121,7 +121,7 @@ $result_tree_text{'custom_headings_and_comments'} = '*document_root C7
     {normal_text:sec1}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@chapter C2 l20 {chap 2}
+ *normal_command@chapter C2 l20 {chap 2}
  |EXTRA
  |identifier:{chap-2}
  |is_target:{1}

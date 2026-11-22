@@ -12,44 +12,44 @@ $result_tree_text{'punctuation_abbr_acronym'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *paragraph C16
-   *@abbr C1 l1
+   *normal_command@abbr C1 l1
     *brace_arg C1
      {normal_text:AAA}
    {normal_text:. }
-   *@acronym C1 l1
+   *normal_command@acronym C1 l1
     *brace_arg C1
      {normal_text:BBB}
    {normal_text:. }
-   *@abbr C1 l1
+   *normal_command@abbr C1 l1
     *brace_arg C1
      {normal_text:aaa}
    {normal_text:. }
-   *@acronym C1 l1
+   *normal_command@acronym C1 l1
     *brace_arg C1
      {normal_text:bbb}
    {normal_text:. Next.\\n}
-   *@abbr C2 l2
+   *normal_command@abbr C2 l2
     *brace_arg C1
      {normal_text:AAA}
     *brace_arg C2
      {spaces_before_argument: }
      {normal_text:expL}
    {normal_text:. }
-   *@acronym C2 l2
+   *normal_command@acronym C2 l2
     *brace_arg C1
      {normal_text:BBB}
     *brace_arg C2
      {spaces_before_argument: }
      {normal_text:explA}
    {normal_text:. }
-   *@abbr C2 l2
+   *normal_command@abbr C2 l2
     *brace_arg C1
      {normal_text:aaa}
     *brace_arg C2
      {spaces_before_argument: }
      {normal_text:expl}
    {normal_text:. \\n}
-   *@acronym C2 l3
+   *normal_command@acronym C2 l3
     *brace_arg C1
      {normal_text:bbb}
     *brace_arg C2

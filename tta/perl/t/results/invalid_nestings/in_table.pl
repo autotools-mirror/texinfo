@@ -13,7 +13,7 @@ $result_tree_text{'in_table'} = '*document_root C3
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content
- *@node C1 l2 {Top}
+ *normal_command@node C1 l2 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -23,7 +23,7 @@ $result_tree_text{'in_table'} = '*document_root C3
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@node C11 l3 {chap}
+ *normal_command@node C11 l3 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -35,13 +35,13 @@ $result_tree_text{'in_table'} = '*document_root C3
     {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@table C2 l5
+  *normal_command@table C2 l5
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     *@xref l5
+     *normal_command@xref l5
      {spaces_after_argument:\\n}
-   *@end C1 l6
+   *normal_command@end C1 l6
    |EXTRA
    |text_arg:{table}
     *line_arg C3
@@ -49,39 +49,39 @@ $result_tree_text{'in_table'} = '*document_root C3
      {normal_text:table}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@table C6 l8
+  *normal_command@table C6 l8
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     *@code l8
+     *normal_command@code l8
      {spaces_after_argument:\\n}
    *table_entry C2
     *table_term C1
-     *@item C1 l9
+     *normal_command@item C1 l9
       *line_arg C9
        {spaces_before_argument: }
-       *@indent l9
+       *normal_command@indent l9
        {ignorable_spaces_after_command: }
-       *@titlefont C1 l9
+       *normal_command@titlefont C1 l9
        |EXTRA
        |global_command_number:{1}
         *brace_container C1
          {normal_text:in titlefont}
        {normal_text: }
-       *@anchor C1 l9
+       *normal_command@anchor C1 l9
        |EXTRA
        |identifier:{in-anchor}
        |is_target:{1}
         *brace_arg C1
          {normal_text:in anchor}
-       *@footnote C1 l9
+       *normal_command@footnote C1 l9
        |EXTRA
        |global_command_number:{1}
         *brace_command_context C1
          *paragraph C1
           {normal_text:footnote}
        {normal_text: }
-       *@exdent C1 l9
+       *normal_command@exdent C1 l9
         *line_arg C3
          {spaces_before_argument: }
          {normal_text:exdent}
@@ -89,7 +89,7 @@ $result_tree_text{'in_table'} = '*document_root C3
     *table_definition C1
      *paragraph C3
       {normal_text:in item}
-      *@footnote C1 l10
+      *normal_command@footnote C1 l10
       |EXTRA
       |global_command_number:{2}
        *brace_command_context C1
@@ -98,10 +98,10 @@ $result_tree_text{'in_table'} = '*document_root C3
       {normal_text:\\n}
    *table_entry C2
     *table_term C1
-     *@item C1 l11
+     *normal_command@item C1 l11
       *line_arg C2
        {spaces_before_argument: }
-       *@ref C3 l11
+       *normal_command@ref C3 l11
         *brace_arg C1
          {normal_text:Top}
         *brace_arg
@@ -112,17 +112,17 @@ $result_tree_text{'in_table'} = '*document_root C3
       {normal_text:long title\\n}
    *table_entry C1
     *table_term C1
-     *@item C1 l13
+     *normal_command@item C1 l13
       *line_arg C2
        {spaces_before_argument: }
-       *@center C1 l13
+       *normal_command@center C1 l13
         *line_arg C3
          {spaces_before_argument: }
          {normal_text:centered text in item}
          {spaces_after_argument:\\n}
    *table_entry C1
     *table_term C1
-     *@item C1 l14
+     *normal_command@item C1 l14
       *line_arg C2
        {spaces_before_argument: }
        *index_entry_command@cindex C1 l14
@@ -133,7 +133,7 @@ $result_tree_text{'in_table'} = '*document_root C3
          {spaces_before_argument: }
          {normal_text:index}
          {spaces_after_argument:\\n}
-   *@end C1 l15
+   *normal_command@end C1 l15
    |EXTRA
    |text_arg:{table}
     *line_arg C3
@@ -141,15 +141,15 @@ $result_tree_text{'in_table'} = '*document_root C3
      {normal_text:table}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@vtable C4 l17
+  *normal_command@vtable C4 l17
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     *@asis l17
+     *normal_command@asis l17
      {spaces_after_argument:\\n}
    *table_entry C2
     *table_term C1
-     *@item C1 l18
+     *normal_command@item C1 l18
      |EXTRA
      |element_node:{chap}
      |index_entry:I{vr,1}
@@ -165,14 +165,14 @@ $result_tree_text{'in_table'} = '*document_root C3
          {spaces_after_argument:\\n}
     *table_definition C1
      *paragraph C3
-      *@option C1 l19
+      *normal_command@option C1 l19
        *brace_container C1
         {normal_text:opt}
       {normal_text:\\n}
       {normal_text:More text\\n}
    *table_entry C2
     *table_term C1
-     *@item C1 l21
+     *normal_command@item C1 l21
      |EXTRA
      |element_node:{chap}
      |index_entry:I{vr,2}
@@ -188,12 +188,12 @@ $result_tree_text{'in_table'} = '*document_root C3
          {spaces_after_argument:\\n}
     *table_definition C1
      *paragraph C3
-      *@option C1 l22
+      *normal_command@option C1 l22
        *brace_container C1
         {normal_text:nopt}
       {normal_text:\\n}
       {normal_text:Even more\\n}
-   *@end C1 l24
+   *normal_command@end C1 l24
    |EXTRA
    |text_arg:{vtable}
     *line_arg C3
@@ -201,7 +201,7 @@ $result_tree_text{'in_table'} = '*document_root C3
      {normal_text:vtable}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@printindex C1 l26
+  *normal_command@printindex C1 l26
   |EXTRA
   |global_command_number:{1}
   |misc_args:A{fn}
@@ -210,7 +210,7 @@ $result_tree_text{'in_table'} = '*document_root C3
     {normal_text:fn}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@printindex C1 l28
+  *normal_command@printindex C1 l28
   |EXTRA
   |global_command_number:{2}
   |misc_args:A{cp}

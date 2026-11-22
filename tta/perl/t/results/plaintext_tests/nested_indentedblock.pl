@@ -11,26 +11,26 @@ use Encode;
 $result_tree_text{'nested_indentedblock'} = '*document_root C1
  *before_node_section C4
   *preamble_before_content
-  *@example C4 l1
+  *normal_command@example C4 l1
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C1
     {normal_text:in example\\n}
-   *@indentedblock C3 l3
+   *normal_command@indentedblock C3 l3
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *preformatted C1
      {normal_text:   f  f  f``g\\n}
-    *@end C1 l5
+    *normal_command@end C1 l5
     |EXTRA
     |text_arg:{indentedblock}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:indentedblock}
       {spaces_after_argument:\\n}
-   *@end C1 l6
+   *normal_command@end C1 l6
    |EXTRA
    |text_arg:{example}
     *line_arg C3
@@ -38,27 +38,27 @@ $result_tree_text{'nested_indentedblock'} = '*document_root C1
      {normal_text:example}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@indentedblock C5 l8
+  *normal_command@indentedblock C5 l8
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    {spaces_before_paragraph:   }
    *paragraph C1
     {normal_text:v  v  v``a\\n}
-   *@example C3 l10
+   *normal_command@example C3 l10
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *preformatted C1
      {normal_text:in example\\n}
-    *@end C1 l12
+    *normal_command@end C1 l12
     |EXTRA
     |text_arg:{example}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:example}
       {spaces_after_argument:\\n}
-   *@end C1 l13
+   *normal_command@end C1 l13
    |EXTRA
    |text_arg:{indentedblock}
     *line_arg C3

@@ -17,7 +17,7 @@ NodeNext: [U1]
 NodeForward: [U1]
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -27,7 +27,7 @@ NodeForward: [U1]
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C4 l2 {internal top node up}
+ *normal_command@top C4 l2 {internal top node up}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -37,7 +37,7 @@ NodeForward: [U1]
     {normal_text:internal top node up}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C3 l4
+  *normal_command@menu C3 l4
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -52,7 +52,7 @@ NodeForward: [U1]
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l6
+   *normal_command@end C1 l6
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -69,7 +69,7 @@ FastBack: [U0]
 NodePrev: [U0]
 NodeUp: [U0]
 NodeBack: [U0]
- *@node C1 l8 {chap}
+ *normal_command@node C1 l8 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}

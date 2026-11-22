@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'empty_section_in_chapter'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content
- *@chapter C2 l1 {chap}
+ *normal_command@chapter C2 l1 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -24,7 +24,7 @@ $result_tree_text{'empty_section_in_chapter'} = '*document_root C3
     {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@section C1 l3
+ *normal_command@section C1 l3
  |EXTRA
  |section_heading_number:{1.1}
  |section_level:{2}

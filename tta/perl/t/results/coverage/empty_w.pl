@@ -12,17 +12,17 @@ $result_tree_text{'empty_w'} = '*document_root C1
  *before_node_section C4
   *preamble_before_content
   *paragraph C4
-   *@w C1 l1
+   *normal_command@w C1 l1
     *brace_container
    {normal_text: }
-   *@w C1 l1
+   *normal_command@w C1 l1
     *brace_container C1
      {normal_text:a b}
    {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C2
    {normal_text:para     }
-   *@w C1 l3
+   *normal_command@w C1 l3
     *brace_container
 ';
 

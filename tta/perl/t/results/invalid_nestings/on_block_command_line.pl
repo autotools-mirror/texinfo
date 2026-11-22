@@ -11,21 +11,21 @@ use Encode;
 $result_tree_text{'on_block_command_line'} = '*document_root C1
  *before_node_section C4
   *preamble_before_content
-  *@multitable C3 l1
+  *normal_command@multitable C3 l1
   |EXTRA
   |max_columns:{1}
    *arguments_line C1
     *block_line_arg C5
      {spaces_before_argument: }
      *bracketed_arg C1 l1
-      *@anchor C1 l1
+      *normal_command@anchor C1 l1
       |EXTRA
       |identifier:{in-anchor}
       |is_target:{1}
        *brace_arg C1
         {normal_text:in anchor}
      {normal_text: }
-     *@titlefont C1 l1
+     *normal_command@titlefont C1 l1
      |EXTRA
      |global_command_number:{1}
       *brace_container C1
@@ -35,17 +35,17 @@ $result_tree_text{'on_block_command_line'} = '*document_root C1
     *row C1
     |EXTRA
     |row_number:{1}
-     *@item C3 l2
+     *normal_command@item C3 l2
      |EXTRA
      |cell_number:{1}
       {ignorable_spaces_after_command: }
-      *@titlefont C1 l2
+      *normal_command@titlefont C1 l2
       |EXTRA
       |global_command_number:{2}
        *brace_container C1
         {normal_text:in titlefont}
       {normal_text:\\n}
-   *@end C1 l3
+   *normal_command@end C1 l3
    |EXTRA
    |text_arg:{multitable}
     *line_arg C3
@@ -53,37 +53,37 @@ $result_tree_text{'on_block_command_line'} = '*document_root C1
      {normal_text:multitable}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@quotation C2 l5
+  *normal_command@quotation C2 l5
    *arguments_line C1
     *block_line_arg C9
      {spaces_before_argument: }
-     *@indent l5
+     *normal_command@indent l5
      {ignorable_spaces_after_command: }
-     *@titlefont C1 l5
+     *normal_command@titlefont C1 l5
      |EXTRA
      |global_command_number:{3}
       *brace_container C1
        {normal_text:in titlefont}
      {normal_text: }
-     *@anchor C1 l5
+     *normal_command@anchor C1 l5
      |EXTRA
      |identifier:{in-quotation-anchor}
      |is_target:{1}
       *brace_arg C1
        {normal_text:in quotation anchor}
-     *@footnote C1 l5
+     *normal_command@footnote C1 l5
      |EXTRA
      |global_command_number:{1}
       *brace_command_context C1
        *paragraph C1
         {normal_text:footnote}
      {normal_text: }
-     *@exdent C1 l5
+     *normal_command@exdent C1 l5
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:exdent}
        {spaces_after_argument:\\n}
-   *@end C1 l6
+   *normal_command@end C1 l6
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3

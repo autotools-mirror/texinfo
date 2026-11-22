@@ -13,7 +13,7 @@ $result_tree_text{'printindex_before_document'} = '*document_root C1
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content
-  *@printindex C1 l2
+  *normal_command@printindex C1 l2
   |EXTRA
   |global_command_number:{1}
   |misc_args:A{cp}

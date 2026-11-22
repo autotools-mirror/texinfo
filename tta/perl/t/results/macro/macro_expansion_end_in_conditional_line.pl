@@ -11,14 +11,14 @@ use Encode;
 $result_tree_text{'macro_expansion_end_in_conditional_line'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C4
-   *@macro C3 l1
+   *normal_command@macro C3 l1
    |EXTRA
    |formal_args:A{}
    |macro_name:{begincond}
     *arguments_line C1
      {macro_line: begincond\\n}
     {raw:@ifset fl\\n}
-    *@end C1 l3
+    *normal_command@end C1 l3
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -26,7 +26,7 @@ $result_tree_text{'macro_expansion_end_in_conditional_line'} = '*document_root C
       {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@set C1
+   *normal_command@set C1
    |EXTRA
    |misc_args:A{flag|1}
     *line_arg C3
@@ -39,7 +39,7 @@ $result_tree_text{'macro_expansion_end_in_conditional_line'} = '*document_root C
     >*macro_call@begincond C1
      >*brace_arg
    >expanded_conditional_command<start;1><p:1>
-    >*@ifset C1 l7:@begincond
+    >*normal_command@ifset C1 l7:@begincond
      >*arguments_line C1
       >*block_line_arg C3
        >{spaces_before_argument: }
@@ -51,7 +51,7 @@ $result_tree_text{'macro_expansion_end_in_conditional_line'} = '*document_root C
    {normal_text:Defined\\n}
    >SOURCEMARKS
    >expanded_conditional_command<end;1><p:8>
-    >*@end C1 l9
+    >*normal_command@end C1 l9
     >|EXTRA
     >|text_arg:{ifset}
      >*line_arg C3

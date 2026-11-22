@@ -17,30 +17,30 @@ $result_tree_text{'protected_space_end_line'} = '*document_root C1
   *paragraph C5
    {normal_text:This is a very simple texi manual followed by tab a <>.\\n}
    {normal_text:followed by }
-   *@ 
-   *@ 
+   *normal_command@ 
+   *normal_command@ 
    {normal_text:newline.\\n}
   {empty_line:\\n}
   *paragraph C6
    {normal_text:This is a very simple texi manual followed by tab a <>.\\n}
    {normal_text:followed }
-   *@ 
-   *@ 
-   *@ 
+   *normal_command@ 
+   *normal_command@ 
+   *normal_command@ 
    {normal_text:newline.\\n}
   {empty_line:\\n}
   *paragraph C12
    {normal_text:This is a very simple texi manual followed by tab a <>. }
-   *@ 
-   *@ 
-   *@ 
-   *@ 
-   *@ 
-   *@ 
-   *@ 
-   *@ 
-   *@ 
-   *@\\n
+   *normal_command@ 
+   *normal_command@ 
+   *normal_command@ 
+   *normal_command@ 
+   *normal_command@ 
+   *normal_command@ 
+   *normal_command@ 
+   *normal_command@ 
+   *normal_command@ 
+   *normal_command@\\n
    {normal_text:text.\\n}
 ';
 

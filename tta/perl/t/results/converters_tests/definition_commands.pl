@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'definition_commands'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l2 {top section}
+ *normal_command@top C2 l2 {top section}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -31,7 +31,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     {normal_text:top section}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l4 {chapter}
+ *normal_command@node C1 l4 {chapter}
  |EXTRA
  |identifier:{chapter}
  |is_target:{1}
@@ -41,7 +41,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:chapter}
     {spaces_after_argument:\\n}
- *@chapter C39 l5 {chapter}
+ *normal_command@chapter C39 l5 {chapter}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -52,7 +52,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     {normal_text:chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@deffn C3 l7
+  *normal_command@deffn C3 l7
    *def_line C1 l7
    |EXTRA
    |def_command:{deffn}
@@ -80,15 +80,15 @@ $result_tree_text{'definition_commands'} = '*document_root C5
    *def_item C1
     *paragraph C5
      {normal_text:deffn no var for }
-     *@var C1 l8
+     *normal_command@var C1 l8
       *brace_container C1
        {normal_text:a---rg1}
      {normal_text: and }
-     *@var C1 l8
+     *normal_command@var C1 l8
       *brace_container C1
        {normal_text:a--rg2}
      {normal_text:\\n}
-   *@end C1 l9
+   *normal_command@end C1 l9
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3
@@ -96,7 +96,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {normal_text:deffn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@deffn C3 l11
+  *normal_command@deffn C3 l11
    *def_line C1 l11
    |EXTRA
    |def_command:{deffn}
@@ -115,28 +115,28 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l11
+       *normal_command@var C1 l11
         *brace_container C1
          {normal_text:a---rg1}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l11
+       *normal_command@var C1 l11
         *brace_container C1
          {normal_text:a--rg2}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C5
      {normal_text:deffn explict var for }
-     *@var C1 l12
+     *normal_command@var C1 l12
       *brace_container C1
        {normal_text:a---rg1}
      {normal_text: and }
-     *@var C1 l12
+     *normal_command@var C1 l12
       *brace_container C1
        {normal_text:a--rg2}
      {normal_text:\\n}
-   *@end C1 l13
+   *normal_command@end C1 l13
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3
@@ -144,7 +144,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {normal_text:deffn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@deffn C3 l15
+  *normal_command@deffn C3 l15
    *def_line C1 l15
    |EXTRA
    |def_command:{deffn}
@@ -163,32 +163,32 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@r C1 l15
+       *normal_command@r C1 l15
         *brace_container C1
-         *@slanted C1 l15
+         *normal_command@slanted C1 l15
           *brace_container C1
            {normal_text:a---rg1}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@r C1 l15
+       *normal_command@r C1 l15
         *brace_container C1
-         *@slanted C1 l15
+         *normal_command@slanted C1 l15
           *brace_container C1
            {normal_text:a--rg2}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C5
      {normal_text:deffn r slanted for }
-     *@var C1 l16
+     *normal_command@var C1 l16
       *brace_container C1
        {normal_text:a---rg1}
      {normal_text: and }
-     *@var C1 l16
+     *normal_command@var C1 l16
       *brace_container C1
        {normal_text:a--rg2}
      {normal_text:\\n}
-   *@end C1 l17
+   *normal_command@end C1 l17
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3
@@ -196,7 +196,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {normal_text:deffn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@defspec C17 l19
+  *normal_command@defspec C17 l19
    *def_line C1 l19
    |EXTRA
    |def_command:{defspec}
@@ -241,7 +241,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
       *def_line_arg C1
        {normal_text:default}
      {spaces_after_argument:\\n}
-   *@defspecx C1 l20
+   *normal_command@defspecx C1 l20
    |EXTRA
    |def_command:{defspec}
    |element_node:{chapter}
@@ -266,7 +266,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@r C1 l20
+       *normal_command@r C1 l20
         *brace_container C1
          {normal_text:[}
      *def_arg C1
@@ -279,7 +279,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@r C1 l20
+       *normal_command@r C1 l20
         *brace_container C1
          {normal_text:[}
      *def_arg C1
@@ -287,7 +287,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:inc}
      *def_arg C1
       *def_line_arg C1
-       *@r C1 l20
+       *normal_command@r C1 l20
         *brace_container C1
          {normal_text:]]}
      {delimiter:)}
@@ -296,7 +296,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
       *def_line_arg C1
        {normal_text:r}
      {spaces_after_argument:\\n}
-   *@defspecx C1 l21
+   *normal_command@defspecx C1 l21
    |EXTRA
    |def_command:{defspec}
    |element_node:{chapter}
@@ -321,7 +321,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l21
+       *normal_command@var C1 l21
         *brace_container C1
          {normal_text:[}
      *def_arg C1
@@ -334,7 +334,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l21
+       *normal_command@var C1 l21
         *brace_container C1
          {normal_text:[}
      *def_arg C1
@@ -342,7 +342,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:inc}
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l21
+       *normal_command@var C1 l21
         *brace_container C1
          {normal_text:]]}
      {delimiter:)}
@@ -351,7 +351,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
       *def_line_arg C1
        {normal_text:var}
      {spaces_after_argument:\\n}
-   *@defspecx C1 l22
+   *normal_command@defspecx C1 l22
    |EXTRA
    |def_command:{defspec}
    |element_node:{chapter}
@@ -376,7 +376,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@slanted C1 l22
+       *normal_command@slanted C1 l22
         *brace_container C1
          {normal_text:[}
      *def_arg C1
@@ -389,7 +389,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@slanted C1 l22
+       *normal_command@slanted C1 l22
         *brace_container C1
          {normal_text:[}
      *def_arg C1
@@ -397,7 +397,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:inc}
      *def_arg C1
       *def_line_arg C1
-       *@slanted C1 l22
+       *normal_command@slanted C1 l22
         *brace_container C1
          {normal_text:]]}
      {delimiter:)}
@@ -406,7 +406,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
       *def_line_arg C1
        {normal_text:slanted}
      {spaces_after_argument:\\n}
-   *@defspecx C1 l23
+   *normal_command@defspecx C1 l23
    |EXTRA
    |def_command:{defspec}
    |element_node:{chapter}
@@ -431,7 +431,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@code C1 l23
+       *normal_command@code C1 l23
         *brace_container C1
          {normal_text:[}
      *def_arg C1
@@ -444,7 +444,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@code C1 l23
+       *normal_command@code C1 l23
         *brace_container C1
          {normal_text:[}
      *def_arg C1
@@ -452,7 +452,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:inc}
      *def_arg C1
       *def_line_arg C1
-       *@code C1 l23
+       *normal_command@code C1 l23
         *brace_container C1
          {normal_text:]]}
      {delimiter:)}
@@ -461,7 +461,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
       *def_line_arg C1
        {normal_text:code}
      {spaces_after_argument:\\n}
-   *@defspecx C1 l24
+   *normal_command@defspecx C1 l24
    |EXTRA
    |def_command:{defspec}
    |element_node:{chapter}
@@ -486,7 +486,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@t C1 l24
+       *normal_command@t C1 l24
         *brace_container C1
          {normal_text:[}
      *def_arg C1
@@ -499,7 +499,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@t C1 l24
+       *normal_command@t C1 l24
         *brace_container C1
          {normal_text:[}
      *def_arg C1
@@ -507,7 +507,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:inc}
      *def_arg C1
       *def_line_arg C1
-       *@t C1 l24
+       *normal_command@t C1 l24
         *brace_container C1
          {normal_text:]]}
      {delimiter:)}
@@ -516,7 +516,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
       *def_line_arg C1
        {normal_text:t}
      {spaces_after_argument:\\n}
-   *@defspecx C1 l25
+   *normal_command@defspecx C1 l25
    |EXTRA
    |def_command:{defspec}
    |element_node:{chapter}
@@ -541,9 +541,9 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@t C1 l25
+       *normal_command@t C1 l25
         *brace_container C1
-         *@b C1 l25
+         *normal_command@b C1 l25
           *brace_container C1
            {normal_text:[}
      *def_arg C1
@@ -556,9 +556,9 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@t C1 l25
+       *normal_command@t C1 l25
         *brace_container C1
-         *@b C1 l25
+         *normal_command@b C1 l25
           *brace_container C1
            {normal_text:[}
      *def_arg C1
@@ -566,9 +566,9 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:inc}
      *def_arg C1
       *def_line_arg C1
-       *@t C1 l25
+       *normal_command@t C1 l25
         *brace_container C1
-         *@b C1 l25
+         *normal_command@b C1 l25
           *brace_container C1
            {normal_text:]]}
      {delimiter:)}
@@ -577,7 +577,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
       *def_line_arg C1
        {normal_text:t:b}
      {spaces_after_argument:\\n}
-   *@defspecx C1 l26
+   *normal_command@defspecx C1 l26
    |EXTRA
    |def_command:{defspec}
    |element_node:{chapter}
@@ -602,9 +602,9 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@r C1 l26
+       *normal_command@r C1 l26
         *brace_container C1
-         *@var C1 l26
+         *normal_command@var C1 l26
           *brace_container C1
            {normal_text:[}
      *def_arg C1
@@ -617,9 +617,9 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@r C1 l26
+       *normal_command@r C1 l26
         *brace_container C1
-         *@var C1 l26
+         *normal_command@var C1 l26
           *brace_container C1
            {normal_text:[}
      *def_arg C1
@@ -627,9 +627,9 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:inc}
      *def_arg C1
       *def_line_arg C1
-       *@r C1 l26
+       *normal_command@r C1 l26
         *brace_container C1
-         *@var C1 l26
+         *normal_command@var C1 l26
           *brace_container C1
            {normal_text:]]}
      {delimiter:)}
@@ -638,7 +638,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
       *def_line_arg C1
        {normal_text:r:var}
      {spaces_after_argument:\\n}
-   *@defspecx C1 l27
+   *normal_command@defspecx C1 l27
    |EXTRA
    |def_command:{defspec}
    |element_node:{chapter}
@@ -663,9 +663,9 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@r C1 l27
+       *normal_command@r C1 l27
         *brace_container C1
-         *@slanted C1 l27
+         *normal_command@slanted C1 l27
           *brace_container C1
            {normal_text:[}
      *def_arg C1
@@ -678,9 +678,9 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@r C1 l27
+       *normal_command@r C1 l27
         *brace_container C1
-         *@slanted C1 l27
+         *normal_command@slanted C1 l27
           *brace_container C1
            {normal_text:[}
      *def_arg C1
@@ -688,9 +688,9 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:inc}
      *def_arg C1
       *def_line_arg C1
-       *@r C1 l27
+       *normal_command@r C1 l27
         *brace_container C1
-         *@slanted C1 l27
+         *normal_command@slanted C1 l27
           *brace_container C1
            {normal_text:]]}
      {delimiter:)}
@@ -699,7 +699,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
       *def_line_arg C1
        {normal_text:r:slanted}
      {spaces_after_argument:\\n}
-   *@defspecx C1 l28
+   *normal_command@defspecx C1 l28
    |EXTRA
    |def_command:{defspec}
    |element_node:{chapter}
@@ -724,9 +724,9 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@r C1 l28
+       *normal_command@r C1 l28
         *brace_container C1
-         *@code C1 l28
+         *normal_command@code C1 l28
           *brace_container C1
            {normal_text:[}
      *def_arg C1
@@ -739,9 +739,9 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@r C1 l28
+       *normal_command@r C1 l28
         *brace_container C1
-         *@code C1 l28
+         *normal_command@code C1 l28
           *brace_container C1
            {normal_text:[}
      *def_arg C1
@@ -749,9 +749,9 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:inc}
      *def_arg C1
       *def_line_arg C1
-       *@r C1 l28
+       *normal_command@r C1 l28
         *brace_container C1
-         *@code C1 l28
+         *normal_command@code C1 l28
           *brace_container C1
            {normal_text:]]}
      {delimiter:)}
@@ -760,7 +760,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
       *def_line_arg C1
        {normal_text:r:code}
      {spaces_after_argument:\\n}
-   *@defspecx C1 l29
+   *normal_command@defspecx C1 l29
    |EXTRA
    |def_command:{defspec}
    |element_node:{chapter}
@@ -785,9 +785,9 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@r C1 l29
+       *normal_command@r C1 l29
         *brace_container C1
-         *@t C1 l29
+         *normal_command@t C1 l29
           *brace_container C1
            {normal_text:[}
      *def_arg C1
@@ -800,9 +800,9 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@r C1 l29
+       *normal_command@r C1 l29
         *brace_container C1
-         *@t C1 l29
+         *normal_command@t C1 l29
           *brace_container C1
            {normal_text:[}
      *def_arg C1
@@ -810,9 +810,9 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:inc}
      *def_arg C1
       *def_line_arg C1
-       *@r C1 l29
+       *normal_command@r C1 l29
         *brace_container C1
-         *@t C1 l29
+         *normal_command@t C1 l29
           *brace_container C1
            {normal_text:]]}
      {delimiter:)}
@@ -821,7 +821,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
       *def_line_arg C1
        {normal_text:r:t}
      {spaces_after_argument:\\n}
-   *@defspecx C1 l30
+   *normal_command@defspecx C1 l30
    |EXTRA
    |def_command:{defspec}
    |element_node:{chapter}
@@ -846,9 +846,9 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@code C1 l30
+       *normal_command@code C1 l30
         *brace_container C1
-         *@var C1 l30
+         *normal_command@var C1 l30
           *brace_container C1
            {normal_text:[}
      *def_arg C1
@@ -861,9 +861,9 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@code C1 l30
+       *normal_command@code C1 l30
         *brace_container C1
-         *@var C1 l30
+         *normal_command@var C1 l30
           *brace_container C1
            {normal_text:[}
      *def_arg C1
@@ -871,9 +871,9 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:inc}
      *def_arg C1
       *def_line_arg C1
-       *@code C1 l30
+       *normal_command@code C1 l30
         *brace_container C1
-         *@var C1 l30
+         *normal_command@var C1 l30
           *brace_container C1
            {normal_text:]]}
      {delimiter:)}
@@ -882,7 +882,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
       *def_line_arg C1
        {normal_text:code:var}
      {spaces_after_argument:\\n}
-   *@defspecx C1 l31
+   *normal_command@defspecx C1 l31
    |EXTRA
    |def_command:{defspec}
    |element_node:{chapter}
@@ -907,9 +907,9 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@t C1 l31
+       *normal_command@t C1 l31
         *brace_container C1
-         *@var C1 l31
+         *normal_command@var C1 l31
           *brace_container C1
            {normal_text:[}
      *def_arg C1
@@ -922,9 +922,9 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@t C1 l31
+       *normal_command@t C1 l31
         *brace_container C1
-         *@var C1 l31
+         *normal_command@var C1 l31
           *brace_container C1
            {normal_text:[}
      *def_arg C1
@@ -932,9 +932,9 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:inc}
      *def_arg C1
       *def_line_arg C1
-       *@t C1 l31
+       *normal_command@t C1 l31
         *brace_container C1
-         *@var C1 l31
+         *normal_command@var C1 l31
           *brace_container C1
            {normal_text:]]}
      {delimiter:)}
@@ -943,7 +943,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
       *def_line_arg C1
        {normal_text:t:var}
      {spaces_after_argument:\\n}
-   *@defspecx C1 l32
+   *normal_command@defspecx C1 l32
    |EXTRA
    |def_command:{defspec}
    |element_node:{chapter}
@@ -968,9 +968,9 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@code C1 l32
+       *normal_command@code C1 l32
         *brace_container C1
-         *@slanted C1 l32
+         *normal_command@slanted C1 l32
           *brace_container C1
            {normal_text:[}
      *def_arg C1
@@ -983,9 +983,9 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@code C1 l32
+       *normal_command@code C1 l32
         *brace_container C1
-         *@slanted C1 l32
+         *normal_command@slanted C1 l32
           *brace_container C1
            {normal_text:[}
      *def_arg C1
@@ -993,9 +993,9 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:inc}
      *def_arg C1
       *def_line_arg C1
-       *@code C1 l32
+       *normal_command@code C1 l32
         *brace_container C1
-         *@slanted C1 l32
+         *normal_command@slanted C1 l32
           *brace_container C1
            {normal_text:]]}
      {delimiter:)}
@@ -1004,7 +1004,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
       *def_line_arg C1
        {normal_text:code:slanted}
      {spaces_after_argument:\\n}
-   *@defspecx C1 l33
+   *normal_command@defspecx C1 l33
    |EXTRA
    |def_command:{defspec}
    |element_node:{chapter}
@@ -1029,9 +1029,9 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@t C1 l33
+       *normal_command@t C1 l33
         *brace_container C1
-         *@slanted C1 l33
+         *normal_command@slanted C1 l33
           *brace_container C1
            {normal_text:[}
      *def_arg C1
@@ -1044,9 +1044,9 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@t C1 l33
+       *normal_command@t C1 l33
         *brace_container C1
-         *@slanted C1 l33
+         *normal_command@slanted C1 l33
           *brace_container C1
            {normal_text:[}
      *def_arg C1
@@ -1054,9 +1054,9 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:inc}
      *def_arg C1
       *def_line_arg C1
-       *@t C1 l33
+       *normal_command@t C1 l33
         *brace_container C1
-         *@slanted C1 l33
+         *normal_command@slanted C1 l33
           *brace_container C1
            {normal_text:]]}
      {delimiter:)}
@@ -1068,7 +1068,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
    *def_item C1
     *paragraph C1
      {normal_text:separators\\n}
-   *@end C1 l35
+   *normal_command@end C1 l35
    |EXTRA
    |text_arg:{defspec}
     *line_arg C3
@@ -1076,7 +1076,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {normal_text:defspec}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@defspec C17 l37
+  *normal_command@defspec C17 l37
    *def_line C1 l37
    |EXTRA
    |def_command:{defspec}
@@ -1103,7 +1103,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
       *def_line_arg C1
        {normal_text:default}
      {spaces_after_argument:\\n}
-   *@defspecx C1 l38
+   *normal_command@defspecx C1 l38
    |EXTRA
    |def_command:{defspec}
    |element_node:{chapter}
@@ -1123,7 +1123,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l38
+       *normal_command@var C1 l38
         *brace_container C1
          {normal_text:va---riable}
      {spaces: }
@@ -1131,7 +1131,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
       *def_line_arg C1
        {normal_text:var}
      {spaces_after_argument:\\n}
-   *@defspecx C1 l39
+   *normal_command@defspecx C1 l39
    |EXTRA
    |def_command:{defspec}
    |element_node:{chapter}
@@ -1151,7 +1151,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@r C1 l39
+       *normal_command@r C1 l39
         *brace_container C1
          {normal_text:va---riable}
      {spaces: }
@@ -1159,7 +1159,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
       *def_line_arg C1
        {normal_text:r}
      {spaces_after_argument:\\n}
-   *@defspecx C1 l40
+   *normal_command@defspecx C1 l40
    |EXTRA
    |def_command:{defspec}
    |element_node:{chapter}
@@ -1179,7 +1179,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@slanted C1 l40
+       *normal_command@slanted C1 l40
         *brace_container C1
          {normal_text:va---riable}
      {spaces: }
@@ -1187,7 +1187,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
       *def_line_arg C1
        {normal_text:slanted}
      {spaces_after_argument:\\n}
-   *@defspecx C1 l41
+   *normal_command@defspecx C1 l41
    |EXTRA
    |def_command:{defspec}
    |element_node:{chapter}
@@ -1207,7 +1207,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@code C1 l41
+       *normal_command@code C1 l41
         *brace_container C1
          {normal_text:va---riable}
      {spaces: }
@@ -1215,7 +1215,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
       *def_line_arg C1
        {normal_text:code}
      {spaces_after_argument:\\n}
-   *@defspecx C1 l42
+   *normal_command@defspecx C1 l42
    |EXTRA
    |def_command:{defspec}
    |element_node:{chapter}
@@ -1235,7 +1235,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@t C1 l42
+       *normal_command@t C1 l42
         *brace_container C1
          {normal_text:va---riable}
      {spaces: }
@@ -1243,7 +1243,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
       *def_line_arg C1
        {normal_text:t}
      {spaces_after_argument:\\n}
-   *@defspecx C1 l43
+   *normal_command@defspecx C1 l43
    |EXTRA
    |def_command:{defspec}
    |element_node:{chapter}
@@ -1263,9 +1263,9 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@t C1 l43
+       *normal_command@t C1 l43
         *brace_container C1
-         *@b C1 l43
+         *normal_command@b C1 l43
           *brace_container C1
            {normal_text:va---riable}
      {spaces: }
@@ -1273,7 +1273,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
       *def_line_arg C1
        {normal_text:t:b}
      {spaces_after_argument:\\n}
-   *@defspecx C1 l44
+   *normal_command@defspecx C1 l44
    |EXTRA
    |def_command:{defspec}
    |element_node:{chapter}
@@ -1293,9 +1293,9 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@r C1 l44
+       *normal_command@r C1 l44
         *brace_container C1
-         *@var C1 l44
+         *normal_command@var C1 l44
           *brace_container C1
            {normal_text:va---riable}
      {spaces: }
@@ -1303,7 +1303,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
       *def_line_arg C1
        {normal_text:r:var}
      {spaces_after_argument:\\n}
-   *@defspecx C1 l45
+   *normal_command@defspecx C1 l45
    |EXTRA
    |def_command:{defspec}
    |element_node:{chapter}
@@ -1323,9 +1323,9 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@r C1 l45
+       *normal_command@r C1 l45
         *brace_container C1
-         *@slanted C1 l45
+         *normal_command@slanted C1 l45
           *brace_container C1
            {normal_text:va---riable}
      {spaces: }
@@ -1333,7 +1333,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
       *def_line_arg C1
        {normal_text:r:slanted}
      {spaces_after_argument:\\n}
-   *@defspecx C1 l46
+   *normal_command@defspecx C1 l46
    |EXTRA
    |def_command:{defspec}
    |element_node:{chapter}
@@ -1353,9 +1353,9 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@r C1 l46
+       *normal_command@r C1 l46
         *brace_container C1
-         *@code C1 l46
+         *normal_command@code C1 l46
           *brace_container C1
            {normal_text:va---riable}
      {spaces: }
@@ -1363,7 +1363,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
       *def_line_arg C1
        {normal_text:r:code}
      {spaces_after_argument:\\n}
-   *@defspecx C1 l47
+   *normal_command@defspecx C1 l47
    |EXTRA
    |def_command:{defspec}
    |element_node:{chapter}
@@ -1383,9 +1383,9 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@r C1 l47
+       *normal_command@r C1 l47
         *brace_container C1
-         *@t C1 l47
+         *normal_command@t C1 l47
           *brace_container C1
            {normal_text:va---riable}
      {spaces: }
@@ -1393,7 +1393,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
       *def_line_arg C1
        {normal_text:r:t}
      {spaces_after_argument:\\n}
-   *@defspecx C1 l48
+   *normal_command@defspecx C1 l48
    |EXTRA
    |def_command:{defspec}
    |element_node:{chapter}
@@ -1413,9 +1413,9 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@code C1 l48
+       *normal_command@code C1 l48
         *brace_container C1
-         *@var C1 l48
+         *normal_command@var C1 l48
           *brace_container C1
            {normal_text:va---riable}
      {spaces: }
@@ -1423,7 +1423,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
       *def_line_arg C1
        {normal_text:code:var}
      {spaces_after_argument:\\n}
-   *@defspecx C1 l49
+   *normal_command@defspecx C1 l49
    |EXTRA
    |def_command:{defspec}
    |element_node:{chapter}
@@ -1443,9 +1443,9 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@t C1 l49
+       *normal_command@t C1 l49
         *brace_container C1
-         *@var C1 l49
+         *normal_command@var C1 l49
           *brace_container C1
            {normal_text:va---riable}
      {spaces: }
@@ -1453,7 +1453,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
       *def_line_arg C1
        {normal_text:t:var}
      {spaces_after_argument:\\n}
-   *@defspecx C1 l50
+   *normal_command@defspecx C1 l50
    |EXTRA
    |def_command:{defspec}
    |element_node:{chapter}
@@ -1473,9 +1473,9 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@code C1 l50
+       *normal_command@code C1 l50
         *brace_container C1
-         *@slanted C1 l50
+         *normal_command@slanted C1 l50
           *brace_container C1
            {normal_text:va---riable}
      {spaces: }
@@ -1483,7 +1483,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
       *def_line_arg C1
        {normal_text:code:slanted}
      {spaces_after_argument:\\n}
-   *@defspecx C1 l51
+   *normal_command@defspecx C1 l51
    |EXTRA
    |def_command:{defspec}
    |element_node:{chapter}
@@ -1503,9 +1503,9 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@t C1 l51
+       *normal_command@t C1 l51
         *brace_container C1
-         *@slanted C1 l51
+         *normal_command@slanted C1 l51
           *brace_container C1
            {normal_text:va---riable}
      {spaces: }
@@ -1516,7 +1516,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
    *def_item C1
     *paragraph C1
      {normal_text:name\\n}
-   *@end C1 l53
+   *normal_command@end C1 l53
    |EXTRA
    |text_arg:{defspec}
     *line_arg C3
@@ -1524,7 +1524,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {normal_text:defspec}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@deffn C7 l55
+  *normal_command@deffn C7 l55
    *def_line C1 l55
    |EXTRA
    |def_command:{deffn}
@@ -1539,21 +1539,21 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       *@t C1 l55
+       *normal_command@t C1 l55
         *brace_container C1
          {normal_text:.ft}
      {spaces: }
      {delimiter:[}
      *def_arg C1
       *def_line_arg C1
-       *@r C1 l55
+       *normal_command@r C1 l55
         *brace_container C1
-         *@slanted C1 l55
+         *normal_command@slanted C1 l55
           *brace_container C1
            {normal_text:font}
      {delimiter:]}
      {spaces_after_argument:\\n}
-   *@deffnx C1 l56
+   *normal_command@deffnx C1 l56
    |EXTRA
    |def_command:{deffn}
    |element_node:{chapter}
@@ -1564,24 +1564,24 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      *def_category C1
       *def_line_arg C3
        {normal_text:Escape}
-       *@tie C1 l56
+       *normal_command@tie C1 l56
         *brace_container
        {normal_text:sequence}
      {spaces: }
      *def_name C1
       *def_line_arg C3
-       *@t C1 l56
+       *normal_command@t C1 l56
         *brace_container C1
          {normal_text:\\f}
-       *@r C1 l56
+       *normal_command@r C1 l56
         *brace_container C1
-         *@slanted C1 l56
+         *normal_command@slanted C1 l56
           *brace_container C1
            {normal_text:f}
-       *@t C1 l56
+       *normal_command@t C1 l56
         *brace_container
      {spaces_after_argument:\\n}
-   *@deffnx C1 l57
+   *normal_command@deffnx C1 l57
    |EXTRA
    |def_command:{deffn}
    |element_node:{chapter}
@@ -1592,24 +1592,24 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      *def_category C1
       *def_line_arg C3
        {normal_text:Escape}
-       *@tie C1 l57
+       *normal_command@tie C1 l57
         *brace_container
        {normal_text:sequence}
      {spaces: }
      *def_name C1
       *def_line_arg C3
-       *@t C1 l57
+       *normal_command@t C1 l57
         *brace_container C1
          {normal_text:\\f(}
-       *@r C1 l57
+       *normal_command@r C1 l57
         *brace_container C1
-         *@slanted C1 l57
+         *normal_command@slanted C1 l57
           *brace_container C1
            {normal_text:fn}
-       *@t C1 l57
+       *normal_command@t C1 l57
         *brace_container
      {spaces_after_argument:\\n}
-   *@deffnx C1 l58
+   *normal_command@deffnx C1 l58
    |EXTRA
    |def_command:{deffn}
    |element_node:{chapter}
@@ -1620,43 +1620,43 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      *def_category C1
       *def_line_arg C3
        {normal_text:Escape}
-       *@tie C1 l58
+       *normal_command@tie C1 l58
         *brace_container
        {normal_text:sequence}
      {spaces: }
      *def_name C1
       *def_line_arg C3
-       *@t C1 l58
+       *normal_command@t C1 l58
         *brace_container C1
          {normal_text:\\f[}
-       *@r C1 l58
+       *normal_command@r C1 l58
         *brace_container C1
-         *@slanted C1 l58
+         *normal_command@slanted C1 l58
           *brace_container C1
            {normal_text:font}
-       *@t C1 l58
+       *normal_command@t C1 l58
         *brace_container C1
          {normal_text:]}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@t C1 l58
+       *normal_command@t C1 l58
         *brace_container C1
          {normal_text:\\f[}
      *def_arg C1
       *def_line_arg C1
-       *@r C1 l58
+       *normal_command@r C1 l58
         *brace_container C1
-         *@slanted C1 l58
+         *normal_command@slanted C1 l58
           *brace_container C1
            {normal_text:font}
      *def_arg C1
       *def_line_arg C1
-       *@t C1 l58
+       *normal_command@t C1 l58
         *brace_container C1
          {normal_text:]}
      {spaces_after_argument:\\n}
-   *@deffnx C1 l59
+   *normal_command@deffnx C1 l59
    |EXTRA
    |def_command:{deffn}
    |element_node:{chapter}
@@ -1670,37 +1670,37 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       *@t C1 l59
+       *normal_command@t C1 l59
         *brace_container C1
          {normal_text:\\n[.sty]}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C13
      {normal_text:The }
-     *@code C1 l60
+     *normal_command@code C1 l60
       *brace_container C1
        {normal_text:ft}
      {normal_text: request and the }
-     *@code C1 l60
+     *normal_command@code C1 l60
       *brace_container C1
        {normal_text:\\f}
      {normal_text: escape change the current font\\n}
      {normal_text:to }
-     *@var C1 l61
+     *normal_command@var C1 l61
       *brace_container C1
        {normal_text:font}
      {normal_text: (one-character name}
-     *@tie C1 l61
+     *normal_command@tie C1 l61
       *brace_container
-     *@var C1 l61
+     *normal_command@var C1 l61
       *brace_container C1
        {normal_text:f}
      {normal_text:, two-character name\\n}
-     *@var C1 l62
+     *normal_command@var C1 l62
       *brace_container C1
        {normal_text:fn}
      {normal_text:).\\n}
-   *@end C1 l63
+   *normal_command@end C1 l63
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3
@@ -1708,7 +1708,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {normal_text:deffn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@defspec C4 l65
+  *normal_command@defspec C4 l65
    *def_line C1 l65
    |EXTRA
    |def_command:{defspec}
@@ -1731,59 +1731,59 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@r C1 l65
+       *normal_command@r C1 l65
         *brace_container C1
          {normal_text:[}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@slanted C1 l65
+       *normal_command@slanted C1 l65
         *brace_container C1
          {normal_text:[}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@code C1 l65
+       *normal_command@code C1 l65
         *brace_container C1
          {normal_text:[}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@t C1 l65
+       *normal_command@t C1 l65
         *brace_container C1
          {normal_text:[}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@r C1 l65
+       *normal_command@r C1 l65
         *brace_container C1
-         *@slanted C1 l65
+         *normal_command@slanted C1 l65
           *brace_container C1
            {normal_text:[}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@r C1 l65
+       *normal_command@r C1 l65
         *brace_container C1
-         *@code C1 l65
+         *normal_command@code C1 l65
           *brace_container C1
            {normal_text:[}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@r C1 l65
+       *normal_command@r C1 l65
         *brace_container C1
-         *@code C1 l65
+         *normal_command@code C1 l65
           *brace_container C1
-           *@slanted C1 l65
+           *normal_command@slanted C1 l65
             *brace_container C1
              {normal_text:[}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@r C1 l65
+       *normal_command@r C1 l65
         *brace_container C1
-         *@t C1 l65
+         *normal_command@t C1 l65
           *brace_container C1
            {normal_text:[}
      {spaces: }
@@ -1791,59 +1791,59 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@r C1 l65
+       *normal_command@r C1 l65
         *brace_container C1
          {normal_text:,}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@slanted C1 l65
+       *normal_command@slanted C1 l65
         *brace_container C1
          {normal_text:,}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@code C1 l65
+       *normal_command@code C1 l65
         *brace_container C1
          {normal_text:,}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@t C1 l65
+       *normal_command@t C1 l65
         *brace_container C1
          {normal_text:,}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@r C1 l65
+       *normal_command@r C1 l65
         *brace_container C1
-         *@slanted C1 l65
+         *normal_command@slanted C1 l65
           *brace_container C1
            {normal_text:,}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@r C1 l65
+       *normal_command@r C1 l65
         *brace_container C1
-         *@code C1 l65
+         *normal_command@code C1 l65
           *brace_container C1
            {normal_text:,}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@r C1 l65
+       *normal_command@r C1 l65
         *brace_container C1
-         *@code C1 l65
+         *normal_command@code C1 l65
           *brace_container C1
-           *@slanted C1 l65
+           *normal_command@slanted C1 l65
             *brace_container C1
              {normal_text:,}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@r C1 l65
+       *normal_command@r C1 l65
         *brace_container C1
-         *@t C1 l65
+         *normal_command@t C1 l65
           *brace_container C1
            {normal_text:,}
      {spaces: }
@@ -1851,63 +1851,63 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@r C1 l65
+       *normal_command@r C1 l65
         *brace_container C1
          {normal_text:]}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@slanted C1 l65
+       *normal_command@slanted C1 l65
         *brace_container C1
          {normal_text:]}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@code C1 l65
+       *normal_command@code C1 l65
         *brace_container C1
          {normal_text:]}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@t C1 l65
+       *normal_command@t C1 l65
         *brace_container C1
          {normal_text:]}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@r C1 l65
+       *normal_command@r C1 l65
         *brace_container C1
-         *@slanted C1 l65
+         *normal_command@slanted C1 l65
           *brace_container C1
            {normal_text:]}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@r C1 l65
+       *normal_command@r C1 l65
         *brace_container C1
-         *@code C1 l65
+         *normal_command@code C1 l65
           *brace_container C1
            {normal_text:]}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@r C1 l65
+       *normal_command@r C1 l65
         *brace_container C1
-         *@code C1 l65
+         *normal_command@code C1 l65
           *brace_container C1
-           *@slanted C1 l65
+           *normal_command@slanted C1 l65
             *brace_container C1
              {normal_text:]}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@r C1 l65
+       *normal_command@r C1 l65
         *brace_container C1
-         *@t C1 l65
+         *normal_command@t C1 l65
           *brace_container C1
            {normal_text:]}
      {spaces_after_argument:\\n}
-   *@defspecx C1 l66
+   *normal_command@defspecx C1 l66
    |EXTRA
    |def_command:{defspec}
    |element_node:{chapter}
@@ -1930,58 +1930,58 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@r C1 l66
+       *normal_command@r C1 l66
         *brace_container C1
          {normal_text:[]}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@slanted C1 l66
+       *normal_command@slanted C1 l66
         *brace_container C1
          {normal_text:[]}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@code C1 l66
+       *normal_command@code C1 l66
         *brace_container C1
          {normal_text:[]}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@t C1 l66
+       *normal_command@t C1 l66
         *brace_container C1
          {normal_text:[]}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@r C1 l66
+       *normal_command@r C1 l66
         *brace_container C1
-         *@slanted C1 l66
+         *normal_command@slanted C1 l66
           *brace_container C1
            {normal_text:[]}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@r C1 l66
+       *normal_command@r C1 l66
         *brace_container C1
-         *@code C1 l66
+         *normal_command@code C1 l66
           *brace_container C1
            {normal_text:[]}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@r C1 l66
+       *normal_command@r C1 l66
         *brace_container C1
-         *@code C1 l66
+         *normal_command@code C1 l66
           *brace_container C1
-           *@slanted C1 l66
+           *normal_command@slanted C1 l66
             *brace_container C1
              {normal_text:[]}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
      {normal_text:test formatting of separators\\n}
-   *@end C1 l68
+   *normal_command@end C1 l68
    |EXTRA
    |text_arg:{defspec}
     *line_arg C3
@@ -1989,7 +1989,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {normal_text:defspec}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@deftypefn C3 l70
+  *normal_command@deftypefn C3 l70
    *def_line C1 l70
    |EXTRA
    |def_command:{deftypefn}
@@ -2017,7 +2017,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l70
+       *normal_command@var C1 l70
         *brace_container C1
          {normal_text:f---oo}
      {delimiter:,}
@@ -2028,25 +2028,25 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l70
+       *normal_command@var C1 l70
         *brace_container C1
          {normal_text:b--ar}
      {delimiter:)}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C6
-     *@dots C1 l71
+     *normal_command@dots C1 l71
       *brace_container
      {normal_text: with var for }
-     *@var C1 l71
+     *normal_command@var C1 l71
       *brace_container C1
        {normal_text:f---oo}
      {normal_text: and }
-     *@var C1 l71
+     *normal_command@var C1 l71
       *brace_container C1
        {normal_text:b--ar}
      {normal_text:\\n}
-   *@end C1 l72
+   *normal_command@end C1 l72
    |EXTRA
    |text_arg:{deftypefn}
     *line_arg C3
@@ -2054,7 +2054,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {normal_text:deftypefn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@deftypefn C3 l74
+  *normal_command@deftypefn C3 l74
    *def_line C1 l74
    |EXTRA
    |def_command:{deftypefn}
@@ -2082,9 +2082,9 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@r C1 l74
+       *normal_command@r C1 l74
         *brace_container C1
-         *@slanted C1 l74
+         *normal_command@slanted C1 l74
           *brace_container C1
            {normal_text:f---oo}
      {delimiter:,}
@@ -2095,27 +2095,27 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@r C1 l74
+       *normal_command@r C1 l74
         *brace_container C1
-         *@slanted C1 l74
+         *normal_command@slanted C1 l74
           *brace_container C1
            {normal_text:b--ar}
      {delimiter:)}
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C6
-     *@dots C1 l75
+     *normal_command@dots C1 l75
       *brace_container
      {normal_text: with r slanted for }
-     *@var C1 l75
+     *normal_command@var C1 l75
       *brace_container C1
        {normal_text:f---oo}
      {normal_text: and }
-     *@var C1 l75
+     *normal_command@var C1 l75
       *brace_container C1
        {normal_text:b--ar}
      {normal_text:\\n}
-   *@end C1 l76
+   *normal_command@end C1 l76
    |EXTRA
    |text_arg:{deftypefn}
     *line_arg C3
@@ -2123,13 +2123,13 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {normal_text:deftypefn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@noindent l78
+  *normal_command@noindent l78
   {ignorable_spaces_after_command: }
   *paragraph C1
   |EXTRA
   |noindent:{1}
    {normal_text:produces:\\n}
-  *@defcv C3 l79
+  *normal_command@defcv C3 l79
    *def_line C1 l79
    |EXTRA
    |def_command:{defcv}
@@ -2152,10 +2152,10 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C2
-     *@dots C1 l80
+     *normal_command@dots C1 l80
       *brace_container
      {normal_text:\\n}
-   *@end C1 l81
+   *normal_command@end C1 l81
    |EXTRA
    |text_arg:{defcv}
     *line_arg C3
@@ -2163,7 +2163,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {normal_text:defcv}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@deftypecv C3 l83
+  *normal_command@deftypecv C3 l83
    *def_line C1 l83
    |EXTRA
    |def_command:{deftypecv}
@@ -2182,7 +2182,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_type C1
       *def_line_arg C1
-       *@code C1 l83
+       *normal_command@code C1 l83
         *brace_container C1
          {normal_text:int}
      {spaces: }
@@ -2192,10 +2192,10 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C2
-     *@dots C1 l84
+     *normal_command@dots C1 l84
       *brace_container
      {normal_text:\\n}
-   *@end C1 l85
+   *normal_command@end C1 l85
    |EXTRA
    |text_arg:{deftypecv}
     *line_arg C3
@@ -2203,11 +2203,11 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {normal_text:deftypecv}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@quotation C3 l87
+  *normal_command@quotation C3 l87
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
-   *@deftypefn C3 l88
+   *normal_command@deftypefn C3 l88
     *def_line C1 l88
     |EXTRA
     |def_command:{deftypefn}
@@ -2235,7 +2235,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
       {spaces: }
       *def_arg C1
        *def_line_arg C1
-        *@var C1 l88
+        *normal_command@var C1 l88
          *brace_container C1
           {normal_text:foo}
       {delimiter:,}
@@ -2246,32 +2246,32 @@ $result_tree_text{'definition_commands'} = '*document_root C5
       {spaces: }
       *def_arg C1
        *def_line_arg C1
-        *@var C1 l88
+        *normal_command@var C1 l88
          *brace_container C1
           {normal_text:bar}
       {delimiter:)}
       {spaces_after_argument:\\n}
     *def_item C1
      *paragraph C6
-      *@dots C1 l89
+      *normal_command@dots C1 l89
        *brace_container
       {normal_text: for }
-      *@var C1 l89
+      *normal_command@var C1 l89
        *brace_container C1
         {normal_text:foo}
       {normal_text: and }
-      *@var C1 l89
+      *normal_command@var C1 l89
        *brace_container C1
         {normal_text:bar}
       {normal_text:\\n}
-    *@end C1 l90
+    *normal_command@end C1 l90
     |EXTRA
     |text_arg:{deftypefn}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:deftypefn}
       {spaces_after_argument:\\n}
-   *@end C1 l91
+   *normal_command@end C1 l91
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3
@@ -2279,7 +2279,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {normal_text:quotation}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@defun C3 l93
+  *normal_command@defun C3 l93
    *def_line C1 l93
    |EXTRA
    |def_command:{defun}
@@ -2312,19 +2312,19 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C6
-     *@code C1 l94
+     *normal_command@code C1 l94
       *brace_container C1
        {normal_text:apply}
      {normal_text: calls no var }
-     *@var C1 l94
+     *normal_command@var C1 l94
       *brace_container C1
        {normal_text:function}
      {normal_text: with }
-     *@var C1 l94
+     *normal_command@var C1 l94
       *brace_container C1
        {normal_text:arguments}
      {normal_text:\\n}
-   *@end C1 l95
+   *normal_command@end C1 l95
    |EXTRA
    |text_arg:{defun}
     *line_arg C3
@@ -2332,7 +2332,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {normal_text:defun}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@defun C3 l97
+  *normal_command@defun C3 l97
    *def_line C1 l97
    |EXTRA
    |def_command:{defun}
@@ -2357,9 +2357,9 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@r C1 l97
+       *normal_command@r C1 l97
         *brace_container C1
-         *@b C1 l97
+         *normal_command@b C1 l97
           *brace_container C1
            {normal_text:&rest}
      {spaces: }
@@ -2370,15 +2370,15 @@ $result_tree_text{'definition_commands'} = '*document_root C5
    *def_item C1
     *paragraph C5
      {normal_text:explicit keyword marking, no var }
-     *@var C1 l98
+     *normal_command@var C1 l98
       *brace_container C1
        {normal_text:function}
      {normal_text: with }
-     *@var C1 l98
+     *normal_command@var C1 l98
       *brace_container C1
        {normal_text:arguments}
      {normal_text:\\n}
-   *@end C1 l99
+   *normal_command@end C1 l99
    |EXTRA
    |text_arg:{defun}
     *line_arg C3
@@ -2386,7 +2386,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {normal_text:defun}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@deffn C3 l101
+  *normal_command@deffn C3 l101
    *def_line C1 l101
    |EXTRA
    |def_command:{deffn}
@@ -2409,19 +2409,19 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@code C1 l101
+       *normal_command@code C1 l101
         *brace_container C1
          {normal_text:int}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@code C1 l101
+       *normal_command@code C1 l101
         *brace_container C1
          {normal_text:a--b}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l101
+       *normal_command@var C1 l101
         *brace_container C1
          {normal_text:v--ar1}
      {delimiter:,}
@@ -2432,21 +2432,21 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@code C1 l101
+       *normal_command@code C1 l101
         *brace_container C1
          {normal_text:--}
      {spaces: }
      {delimiter:(}
      *def_arg C1
       *def_line_arg C1
-       *@code C1 l101
+       *normal_command@code C1 l101
         *brace_container C1
          {normal_text:type o--ther}
      {delimiter:,}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l101
+       *normal_command@var C1 l101
         *brace_container C1
          {normal_text:v---ar2}
      {spaces:  }
@@ -2455,14 +2455,14 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {delimiter:[}
      *def_arg C1
       *def_line_arg C1
-       *@code C1 l102
+       *normal_command@code C1 l102
         *brace_container C1
          {normal_text:float}
      {spaces: }
      {delimiter:[}
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l102
+       *normal_command@var C1 l102
         *brace_container C1
          {normal_text:var4}
      {delimiter:]}
@@ -2472,7 +2472,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
    *def_item C1
     *paragraph C1
      {normal_text:In deffn with code and var used\\n}
-   *@end C1 l104
+   *normal_command@end C1 l104
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3
@@ -2480,7 +2480,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {normal_text:deffn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@deftypefn C17 l106
+  *normal_command@deftypefn C17 l106
    *def_line C1 l106
    |EXTRA
    |def_command:{deftypefn}
@@ -2508,7 +2508,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l106
+       *normal_command@var C1 l106
         *brace_container C1
          {normal_text:f---oo}
      {delimiter:[}
@@ -2520,7 +2520,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l106
+       *normal_command@var C1 l106
         *brace_container C1
          {normal_text:b--ar}
      {delimiter:]}
@@ -2530,7 +2530,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
       *def_line_arg C1
        {normal_text:default}
      {spaces_after_argument:\\n}
-   *@deftypefnx C1 l107
+   *normal_command@deftypefnx C1 l107
    |EXTRA
    |def_command:{deftypefn}
    |element_node:{chapter}
@@ -2557,12 +2557,12 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l107
+       *normal_command@var C1 l107
         *brace_container C1
          {normal_text:f---oo}
      *def_arg C1
       *def_line_arg C1
-       *@r C1 l107
+       *normal_command@r C1 l107
         *brace_container C1
          {normal_text:[}
      {delimiter:,}
@@ -2573,12 +2573,12 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l107
+       *normal_command@var C1 l107
         *brace_container C1
          {normal_text:b--ar}
      *def_arg C1
       *def_line_arg C1
-       *@r C1 l107
+       *normal_command@r C1 l107
         *brace_container C1
          {normal_text:]}
      {delimiter:)}
@@ -2587,7 +2587,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
       *def_line_arg C1
        {normal_text:r}
      {spaces_after_argument:\\n}
-   *@deftypefnx C1 l108
+   *normal_command@deftypefnx C1 l108
    |EXTRA
    |def_command:{deftypefn}
    |element_node:{chapter}
@@ -2614,12 +2614,12 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l108
+       *normal_command@var C1 l108
         *brace_container C1
          {normal_text:f---oo}
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l108
+       *normal_command@var C1 l108
         *brace_container C1
          {normal_text:[}
      {delimiter:,}
@@ -2630,12 +2630,12 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l108
+       *normal_command@var C1 l108
         *brace_container C1
          {normal_text:b--ar}
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l108
+       *normal_command@var C1 l108
         *brace_container C1
          {normal_text:]}
      {delimiter:)}
@@ -2644,7 +2644,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
       *def_line_arg C1
        {normal_text:var}
      {spaces_after_argument:\\n}
-   *@deftypefnx C1 l109
+   *normal_command@deftypefnx C1 l109
    |EXTRA
    |def_command:{deftypefn}
    |element_node:{chapter}
@@ -2671,12 +2671,12 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l109
+       *normal_command@var C1 l109
         *brace_container C1
          {normal_text:f---oo}
      *def_arg C1
       *def_line_arg C1
-       *@slanted C1 l109
+       *normal_command@slanted C1 l109
         *brace_container C1
          {normal_text:[}
      {delimiter:,}
@@ -2687,12 +2687,12 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l109
+       *normal_command@var C1 l109
         *brace_container C1
          {normal_text:b--ar}
      *def_arg C1
       *def_line_arg C1
-       *@slanted C1 l109
+       *normal_command@slanted C1 l109
         *brace_container C1
          {normal_text:]}
      {delimiter:)}
@@ -2701,7 +2701,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
       *def_line_arg C1
        {normal_text:slanted}
      {spaces_after_argument:\\n}
-   *@deftypefnx C1 l110
+   *normal_command@deftypefnx C1 l110
    |EXTRA
    |def_command:{deftypefn}
    |element_node:{chapter}
@@ -2728,12 +2728,12 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l110
+       *normal_command@var C1 l110
         *brace_container C1
          {normal_text:f---oo}
      *def_typearg C1
       *def_line_arg C1
-       *@code C1 l110
+       *normal_command@code C1 l110
         *brace_container C1
          {normal_text:[}
      {delimiter:,}
@@ -2744,12 +2744,12 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l110
+       *normal_command@var C1 l110
         *brace_container C1
          {normal_text:b--ar}
      *def_typearg C1
       *def_line_arg C1
-       *@code C1 l110
+       *normal_command@code C1 l110
         *brace_container C1
          {normal_text:]}
      {delimiter:)}
@@ -2758,7 +2758,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
       *def_line_arg C1
        {normal_text:code}
      {spaces_after_argument:\\n}
-   *@deftypefnx C1 l111
+   *normal_command@deftypefnx C1 l111
    |EXTRA
    |def_command:{deftypefn}
    |element_node:{chapter}
@@ -2785,12 +2785,12 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l111
+       *normal_command@var C1 l111
         *brace_container C1
          {normal_text:f---oo}
      *def_arg C1
       *def_line_arg C1
-       *@t C1 l111
+       *normal_command@t C1 l111
         *brace_container C1
          {normal_text:[}
      {delimiter:,}
@@ -2801,12 +2801,12 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l111
+       *normal_command@var C1 l111
         *brace_container C1
          {normal_text:b--ar}
      *def_arg C1
       *def_line_arg C1
-       *@t C1 l111
+       *normal_command@t C1 l111
         *brace_container C1
          {normal_text:]}
      {delimiter:)}
@@ -2815,7 +2815,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
       *def_line_arg C1
        {normal_text:t}
      {spaces_after_argument:\\n}
-   *@deftypefnx C1 l112
+   *normal_command@deftypefnx C1 l112
    |EXTRA
    |def_command:{deftypefn}
    |element_node:{chapter}
@@ -2842,14 +2842,14 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l112
+       *normal_command@var C1 l112
         *brace_container C1
          {normal_text:f---oo}
      *def_arg C1
       *def_line_arg C1
-       *@t C1 l112
+       *normal_command@t C1 l112
         *brace_container C1
-         *@b C1 l112
+         *normal_command@b C1 l112
           *brace_container C1
            {normal_text:[}
      {delimiter:,}
@@ -2860,14 +2860,14 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l112
+       *normal_command@var C1 l112
         *brace_container C1
          {normal_text:b--ar}
      *def_arg C1
       *def_line_arg C1
-       *@t C1 l112
+       *normal_command@t C1 l112
         *brace_container C1
-         *@b C1 l112
+         *normal_command@b C1 l112
           *brace_container C1
            {normal_text:]}
      {delimiter:)}
@@ -2876,7 +2876,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
       *def_line_arg C1
        {normal_text:t:b}
      {spaces_after_argument:\\n}
-   *@deftypefnx C1 l113
+   *normal_command@deftypefnx C1 l113
    |EXTRA
    |def_command:{deftypefn}
    |element_node:{chapter}
@@ -2903,14 +2903,14 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l113
+       *normal_command@var C1 l113
         *brace_container C1
          {normal_text:f---oo}
      *def_arg C1
       *def_line_arg C1
-       *@r C1 l113
+       *normal_command@r C1 l113
         *brace_container C1
-         *@var C1 l113
+         *normal_command@var C1 l113
           *brace_container C1
            {normal_text:[}
      {delimiter:,}
@@ -2921,14 +2921,14 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l113
+       *normal_command@var C1 l113
         *brace_container C1
          {normal_text:b--ar}
      *def_arg C1
       *def_line_arg C1
-       *@r C1 l113
+       *normal_command@r C1 l113
         *brace_container C1
-         *@var C1 l113
+         *normal_command@var C1 l113
           *brace_container C1
            {normal_text:]}
      {delimiter:)}
@@ -2937,7 +2937,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
       *def_line_arg C1
        {normal_text:r:var}
      {spaces_after_argument:\\n}
-   *@deftypefnx C1 l114
+   *normal_command@deftypefnx C1 l114
    |EXTRA
    |def_command:{deftypefn}
    |element_node:{chapter}
@@ -2964,14 +2964,14 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l114
+       *normal_command@var C1 l114
         *brace_container C1
          {normal_text:f---oo}
      *def_arg C1
       *def_line_arg C1
-       *@r C1 l114
+       *normal_command@r C1 l114
         *brace_container C1
-         *@slanted C1 l114
+         *normal_command@slanted C1 l114
           *brace_container C1
            {normal_text:[}
      {delimiter:,}
@@ -2982,14 +2982,14 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l114
+       *normal_command@var C1 l114
         *brace_container C1
          {normal_text:b--ar}
      *def_arg C1
       *def_line_arg C1
-       *@r C1 l114
+       *normal_command@r C1 l114
         *brace_container C1
-         *@slanted C1 l114
+         *normal_command@slanted C1 l114
           *brace_container C1
            {normal_text:]}
      {delimiter:)}
@@ -2998,7 +2998,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
       *def_line_arg C1
        {normal_text:r:slanted}
      {spaces_after_argument:\\n}
-   *@deftypefnx C1 l115
+   *normal_command@deftypefnx C1 l115
    |EXTRA
    |def_command:{deftypefn}
    |element_node:{chapter}
@@ -3025,14 +3025,14 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l115
+       *normal_command@var C1 l115
         *brace_container C1
          {normal_text:f---oo}
      *def_arg C1
       *def_line_arg C1
-       *@r C1 l115
+       *normal_command@r C1 l115
         *brace_container C1
-         *@code C1 l115
+         *normal_command@code C1 l115
           *brace_container C1
            {normal_text:[}
      {delimiter:,}
@@ -3043,14 +3043,14 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l115
+       *normal_command@var C1 l115
         *brace_container C1
          {normal_text:b--ar}
      *def_arg C1
       *def_line_arg C1
-       *@r C1 l115
+       *normal_command@r C1 l115
         *brace_container C1
-         *@code C1 l115
+         *normal_command@code C1 l115
           *brace_container C1
            {normal_text:]}
      {delimiter:)}
@@ -3059,7 +3059,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
       *def_line_arg C1
        {normal_text:r:code}
      {spaces_after_argument:\\n}
-   *@deftypefnx C1 l116
+   *normal_command@deftypefnx C1 l116
    |EXTRA
    |def_command:{deftypefn}
    |element_node:{chapter}
@@ -3086,14 +3086,14 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l116
+       *normal_command@var C1 l116
         *brace_container C1
          {normal_text:f---oo}
      *def_arg C1
       *def_line_arg C1
-       *@r C1 l116
+       *normal_command@r C1 l116
         *brace_container C1
-         *@t C1 l116
+         *normal_command@t C1 l116
           *brace_container C1
            {normal_text:[}
      {delimiter:,}
@@ -3104,14 +3104,14 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l116
+       *normal_command@var C1 l116
         *brace_container C1
          {normal_text:b--ar}
      *def_arg C1
       *def_line_arg C1
-       *@r C1 l116
+       *normal_command@r C1 l116
         *brace_container C1
-         *@t C1 l116
+         *normal_command@t C1 l116
           *brace_container C1
            {normal_text:]}
      {delimiter:)}
@@ -3120,7 +3120,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
       *def_line_arg C1
        {normal_text:r:t}
      {spaces_after_argument:\\n}
-   *@deftypefnx C1 l117
+   *normal_command@deftypefnx C1 l117
    |EXTRA
    |def_command:{deftypefn}
    |element_node:{chapter}
@@ -3147,14 +3147,14 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l117
+       *normal_command@var C1 l117
         *brace_container C1
          {normal_text:f---oo}
      *def_typearg C1
       *def_line_arg C1
-       *@code C1 l117
+       *normal_command@code C1 l117
         *brace_container C1
-         *@var C1 l117
+         *normal_command@var C1 l117
           *brace_container C1
            {normal_text:[}
      {delimiter:,}
@@ -3165,14 +3165,14 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l117
+       *normal_command@var C1 l117
         *brace_container C1
          {normal_text:b--ar}
      *def_typearg C1
       *def_line_arg C1
-       *@code C1 l117
+       *normal_command@code C1 l117
         *brace_container C1
-         *@var C1 l117
+         *normal_command@var C1 l117
           *brace_container C1
            {normal_text:]}
      {delimiter:)}
@@ -3181,7 +3181,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
       *def_line_arg C1
        {normal_text:code:var}
      {spaces_after_argument:\\n}
-   *@deftypefnx C1 l118
+   *normal_command@deftypefnx C1 l118
    |EXTRA
    |def_command:{deftypefn}
    |element_node:{chapter}
@@ -3208,14 +3208,14 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l118
+       *normal_command@var C1 l118
         *brace_container C1
          {normal_text:f---oo}
      *def_arg C1
       *def_line_arg C1
-       *@t C1 l118
+       *normal_command@t C1 l118
         *brace_container C1
-         *@var C1 l118
+         *normal_command@var C1 l118
           *brace_container C1
            {normal_text:[}
      {delimiter:,}
@@ -3226,14 +3226,14 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l118
+       *normal_command@var C1 l118
         *brace_container C1
          {normal_text:b--ar}
      *def_arg C1
       *def_line_arg C1
-       *@t C1 l118
+       *normal_command@t C1 l118
         *brace_container C1
-         *@var C1 l118
+         *normal_command@var C1 l118
           *brace_container C1
            {normal_text:]}
      {delimiter:)}
@@ -3242,7 +3242,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
       *def_line_arg C1
        {normal_text:t:var}
      {spaces_after_argument:\\n}
-   *@deftypefnx C1 l119
+   *normal_command@deftypefnx C1 l119
    |EXTRA
    |def_command:{deftypefn}
    |element_node:{chapter}
@@ -3269,14 +3269,14 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l119
+       *normal_command@var C1 l119
         *brace_container C1
          {normal_text:f---oo}
      *def_typearg C1
       *def_line_arg C1
-       *@code C1 l119
+       *normal_command@code C1 l119
         *brace_container C1
-         *@slanted C1 l119
+         *normal_command@slanted C1 l119
           *brace_container C1
            {normal_text:[}
      {delimiter:,}
@@ -3287,14 +3287,14 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l119
+       *normal_command@var C1 l119
         *brace_container C1
          {normal_text:b--ar}
      *def_typearg C1
       *def_line_arg C1
-       *@code C1 l119
+       *normal_command@code C1 l119
         *brace_container C1
-         *@slanted C1 l119
+         *normal_command@slanted C1 l119
           *brace_container C1
            {normal_text:]}
      {delimiter:)}
@@ -3303,7 +3303,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
       *def_line_arg C1
        {normal_text:code:slanted}
      {spaces_after_argument:\\n}
-   *@deftypefnx C1 l120
+   *normal_command@deftypefnx C1 l120
    |EXTRA
    |def_command:{deftypefn}
    |element_node:{chapter}
@@ -3330,14 +3330,14 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l120
+       *normal_command@var C1 l120
         *brace_container C1
          {normal_text:f---oo}
      *def_arg C1
       *def_line_arg C1
-       *@t C1 l120
+       *normal_command@t C1 l120
         *brace_container C1
-         *@slanted C1 l120
+         *normal_command@slanted C1 l120
           *brace_container C1
            {normal_text:[}
      {delimiter:,}
@@ -3348,14 +3348,14 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l120
+       *normal_command@var C1 l120
         *brace_container C1
          {normal_text:b--ar}
      *def_arg C1
       *def_line_arg C1
-       *@t C1 l120
+       *normal_command@t C1 l120
         *brace_container C1
-         *@slanted C1 l120
+         *normal_command@slanted C1 l120
           *brace_container C1
            {normal_text:]}
      {delimiter:)}
@@ -3367,7 +3367,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
    *def_item C1
     *paragraph C1
      {normal_text:separators\\n}
-   *@end C1 l122
+   *normal_command@end C1 l122
    |EXTRA
    |text_arg:{deftypefn}
     *line_arg C3
@@ -3375,7 +3375,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {normal_text:deftypefn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@deftypefn C17 l124
+  *normal_command@deftypefn C17 l124
    *def_line C1 l124
    |EXTRA
    |def_command:{deftypefn}
@@ -3403,7 +3403,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l124
+       *normal_command@var C1 l124
         *brace_container C1
          {normal_text:f---oo}
      {delimiter:[}
@@ -3415,7 +3415,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l124
+       *normal_command@var C1 l124
         *brace_container C1
          {normal_text:b--ar}
      {delimiter:]}
@@ -3425,7 +3425,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
       *def_line_arg C1
        {normal_text:default}
      {spaces_after_argument:\\n}
-   *@deftypefnx C1 l125
+   *normal_command@deftypefnx C1 l125
    |EXTRA
    |def_command:{deftypefn}
    |element_node:{chapter}
@@ -3448,13 +3448,13 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {delimiter:(}
      *def_arg C1
       *def_line_arg C1
-       *@r C1 l125
+       *normal_command@r C1 l125
         *brace_container C1
          {normal_text:i--nt}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l125
+       *normal_command@var C1 l125
         *brace_container C1
          {normal_text:f---oo}
      {delimiter:[}
@@ -3466,7 +3466,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l125
+       *normal_command@var C1 l125
         *brace_container C1
          {normal_text:b--ar}
      {delimiter:]}
@@ -3476,7 +3476,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
       *def_line_arg C1
        {normal_text:r}
      {spaces_after_argument:\\n}
-   *@deftypefnx C1 l126
+   *normal_command@deftypefnx C1 l126
    |EXTRA
    |def_command:{deftypefn}
    |element_node:{chapter}
@@ -3499,13 +3499,13 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {delimiter:(}
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l126
+       *normal_command@var C1 l126
         *brace_container C1
          {normal_text:i--nt}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l126
+       *normal_command@var C1 l126
         *brace_container C1
          {normal_text:f---oo}
      {delimiter:[}
@@ -3517,7 +3517,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l126
+       *normal_command@var C1 l126
         *brace_container C1
          {normal_text:b--ar}
      {delimiter:]}
@@ -3527,7 +3527,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
       *def_line_arg C1
        {normal_text:var}
      {spaces_after_argument:\\n}
-   *@deftypefnx C1 l127
+   *normal_command@deftypefnx C1 l127
    |EXTRA
    |def_command:{deftypefn}
    |element_node:{chapter}
@@ -3550,13 +3550,13 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {delimiter:(}
      *def_arg C1
       *def_line_arg C1
-       *@slanted C1 l127
+       *normal_command@slanted C1 l127
         *brace_container C1
          {normal_text:i--nt}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l127
+       *normal_command@var C1 l127
         *brace_container C1
          {normal_text:f---oo}
      {delimiter:[}
@@ -3568,7 +3568,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l127
+       *normal_command@var C1 l127
         *brace_container C1
          {normal_text:b--ar}
      {delimiter:]}
@@ -3578,7 +3578,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
       *def_line_arg C1
        {normal_text:slanted}
      {spaces_after_argument:\\n}
-   *@deftypefnx C1 l128
+   *normal_command@deftypefnx C1 l128
    |EXTRA
    |def_command:{deftypefn}
    |element_node:{chapter}
@@ -3601,13 +3601,13 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {delimiter:(}
      *def_typearg C1
       *def_line_arg C1
-       *@code C1 l128
+       *normal_command@code C1 l128
         *brace_container C1
          {normal_text:i--nt}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l128
+       *normal_command@var C1 l128
         *brace_container C1
          {normal_text:f---oo}
      {delimiter:[}
@@ -3619,7 +3619,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l128
+       *normal_command@var C1 l128
         *brace_container C1
          {normal_text:b--ar}
      {delimiter:]}
@@ -3629,7 +3629,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
       *def_line_arg C1
        {normal_text:code}
      {spaces_after_argument:\\n}
-   *@deftypefnx C1 l129
+   *normal_command@deftypefnx C1 l129
    |EXTRA
    |def_command:{deftypefn}
    |element_node:{chapter}
@@ -3652,13 +3652,13 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {delimiter:(}
      *def_arg C1
       *def_line_arg C1
-       *@t C1 l129
+       *normal_command@t C1 l129
         *brace_container C1
          {normal_text:i--nt}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l129
+       *normal_command@var C1 l129
         *brace_container C1
          {normal_text:f---oo}
      {delimiter:[}
@@ -3670,7 +3670,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l129
+       *normal_command@var C1 l129
         *brace_container C1
          {normal_text:b--ar}
      {delimiter:]}
@@ -3680,7 +3680,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
       *def_line_arg C1
        {normal_text:t}
      {spaces_after_argument:\\n}
-   *@deftypefnx C1 l130
+   *normal_command@deftypefnx C1 l130
    |EXTRA
    |def_command:{deftypefn}
    |element_node:{chapter}
@@ -3703,15 +3703,15 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {delimiter:(}
      *def_arg C1
       *def_line_arg C1
-       *@t C1 l130
+       *normal_command@t C1 l130
         *brace_container C1
-         *@b C1 l130
+         *normal_command@b C1 l130
           *brace_container C1
            {normal_text:i--nt}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l130
+       *normal_command@var C1 l130
         *brace_container C1
          {normal_text:f---oo}
      {delimiter:[}
@@ -3723,7 +3723,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l130
+       *normal_command@var C1 l130
         *brace_container C1
          {normal_text:b--ar}
      {delimiter:]}
@@ -3733,7 +3733,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
       *def_line_arg C1
        {normal_text:t:b}
      {spaces_after_argument:\\n}
-   *@deftypefnx C1 l131
+   *normal_command@deftypefnx C1 l131
    |EXTRA
    |def_command:{deftypefn}
    |element_node:{chapter}
@@ -3756,15 +3756,15 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {delimiter:(}
      *def_arg C1
       *def_line_arg C1
-       *@r C1 l131
+       *normal_command@r C1 l131
         *brace_container C1
-         *@var C1 l131
+         *normal_command@var C1 l131
           *brace_container C1
            {normal_text:i--nt}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l131
+       *normal_command@var C1 l131
         *brace_container C1
          {normal_text:f---oo}
      {delimiter:[}
@@ -3776,7 +3776,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l131
+       *normal_command@var C1 l131
         *brace_container C1
          {normal_text:b--ar}
      {delimiter:]}
@@ -3786,7 +3786,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
       *def_line_arg C1
        {normal_text:r:var}
      {spaces_after_argument:\\n}
-   *@deftypefnx C1 l132
+   *normal_command@deftypefnx C1 l132
    |EXTRA
    |def_command:{deftypefn}
    |element_node:{chapter}
@@ -3809,15 +3809,15 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {delimiter:(}
      *def_arg C1
       *def_line_arg C1
-       *@r C1 l132
+       *normal_command@r C1 l132
         *brace_container C1
-         *@slanted C1 l132
+         *normal_command@slanted C1 l132
           *brace_container C1
            {normal_text:i--nt}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l132
+       *normal_command@var C1 l132
         *brace_container C1
          {normal_text:f---oo}
      {delimiter:[}
@@ -3829,7 +3829,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l132
+       *normal_command@var C1 l132
         *brace_container C1
          {normal_text:b--ar}
      {delimiter:]}
@@ -3839,7 +3839,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
       *def_line_arg C1
        {normal_text:r:slanted}
      {spaces_after_argument:\\n}
-   *@deftypefnx C1 l133
+   *normal_command@deftypefnx C1 l133
    |EXTRA
    |def_command:{deftypefn}
    |element_node:{chapter}
@@ -3862,15 +3862,15 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {delimiter:(}
      *def_arg C1
       *def_line_arg C1
-       *@r C1 l133
+       *normal_command@r C1 l133
         *brace_container C1
-         *@code C1 l133
+         *normal_command@code C1 l133
           *brace_container C1
            {normal_text:i--nt}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l133
+       *normal_command@var C1 l133
         *brace_container C1
          {normal_text:f---oo}
      {delimiter:[}
@@ -3882,7 +3882,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l133
+       *normal_command@var C1 l133
         *brace_container C1
          {normal_text:b--ar}
      {delimiter:]}
@@ -3892,7 +3892,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
       *def_line_arg C1
        {normal_text:r:code}
      {spaces_after_argument:\\n}
-   *@deftypefnx C1 l134
+   *normal_command@deftypefnx C1 l134
    |EXTRA
    |def_command:{deftypefn}
    |element_node:{chapter}
@@ -3915,15 +3915,15 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {delimiter:(}
      *def_arg C1
       *def_line_arg C1
-       *@r C1 l134
+       *normal_command@r C1 l134
         *brace_container C1
-         *@t C1 l134
+         *normal_command@t C1 l134
           *brace_container C1
            {normal_text:i--nt}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l134
+       *normal_command@var C1 l134
         *brace_container C1
          {normal_text:f---oo}
      {delimiter:[}
@@ -3935,7 +3935,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l134
+       *normal_command@var C1 l134
         *brace_container C1
          {normal_text:b--ar}
      {delimiter:]}
@@ -3945,7 +3945,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
       *def_line_arg C1
        {normal_text:r:t}
      {spaces_after_argument:\\n}
-   *@deftypefnx C1 l135
+   *normal_command@deftypefnx C1 l135
    |EXTRA
    |def_command:{deftypefn}
    |element_node:{chapter}
@@ -3968,15 +3968,15 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {delimiter:(}
      *def_typearg C1
       *def_line_arg C1
-       *@code C1 l135
+       *normal_command@code C1 l135
         *brace_container C1
-         *@var C1 l135
+         *normal_command@var C1 l135
           *brace_container C1
            {normal_text:i--nt}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l135
+       *normal_command@var C1 l135
         *brace_container C1
          {normal_text:f---oo}
      {delimiter:[}
@@ -3988,7 +3988,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l135
+       *normal_command@var C1 l135
         *brace_container C1
          {normal_text:b--ar}
      {delimiter:]}
@@ -3998,7 +3998,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
       *def_line_arg C1
        {normal_text:code:var}
      {spaces_after_argument:\\n}
-   *@deftypefnx C1 l136
+   *normal_command@deftypefnx C1 l136
    |EXTRA
    |def_command:{deftypefn}
    |element_node:{chapter}
@@ -4021,15 +4021,15 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {delimiter:(}
      *def_arg C1
       *def_line_arg C1
-       *@t C1 l136
+       *normal_command@t C1 l136
         *brace_container C1
-         *@var C1 l136
+         *normal_command@var C1 l136
           *brace_container C1
            {normal_text:i--nt}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l136
+       *normal_command@var C1 l136
         *brace_container C1
          {normal_text:f---oo}
      {delimiter:[}
@@ -4041,7 +4041,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l136
+       *normal_command@var C1 l136
         *brace_container C1
          {normal_text:b--ar}
      {delimiter:]}
@@ -4051,7 +4051,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
       *def_line_arg C1
        {normal_text:t:var}
      {spaces_after_argument:\\n}
-   *@deftypefnx C1 l137
+   *normal_command@deftypefnx C1 l137
    |EXTRA
    |def_command:{deftypefn}
    |element_node:{chapter}
@@ -4074,15 +4074,15 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {delimiter:(}
      *def_typearg C1
       *def_line_arg C1
-       *@code C1 l137
+       *normal_command@code C1 l137
         *brace_container C1
-         *@slanted C1 l137
+         *normal_command@slanted C1 l137
           *brace_container C1
            {normal_text:i--nt}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l137
+       *normal_command@var C1 l137
         *brace_container C1
          {normal_text:f---oo}
      {delimiter:[}
@@ -4094,7 +4094,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l137
+       *normal_command@var C1 l137
         *brace_container C1
          {normal_text:b--ar}
      {delimiter:]}
@@ -4104,7 +4104,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
       *def_line_arg C1
        {normal_text:code:slanted}
      {spaces_after_argument:\\n}
-   *@deftypefnx C1 l138
+   *normal_command@deftypefnx C1 l138
    |EXTRA
    |def_command:{deftypefn}
    |element_node:{chapter}
@@ -4127,15 +4127,15 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {delimiter:(}
      *def_arg C1
       *def_line_arg C1
-       *@t C1 l138
+       *normal_command@t C1 l138
         *brace_container C1
-         *@slanted C1 l138
+         *normal_command@slanted C1 l138
           *brace_container C1
            {normal_text:i--nt}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l138
+       *normal_command@var C1 l138
         *brace_container C1
          {normal_text:f---oo}
      {delimiter:[}
@@ -4147,7 +4147,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l138
+       *normal_command@var C1 l138
         *brace_container C1
          {normal_text:b--ar}
      {delimiter:]}
@@ -4160,7 +4160,7 @@ $result_tree_text{'definition_commands'} = '*document_root C5
    *def_item C1
     *paragraph C1
      {normal_text:name\\n}
-   *@end C1 l140
+   *normal_command@end C1 l140
    |EXTRA
    |text_arg:{deftypefn}
     *line_arg C3

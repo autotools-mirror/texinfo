@@ -14,19 +14,19 @@ $result_tree_text{'ifset_in_command'} = '*document_root C1
    {text_before_beginning:\\n}
   *preamble_before_content
   *paragraph C2
-   *@file C1 l2
+   *normal_command@file C1 l2
     *brace_container C2
      {normal_text:\\n}
      >SOURCEMARKS
      >ignored_conditional_block<1><p:1>
-      >*@ifset C3 l3
+      >*normal_command@ifset C3 l3
        >*arguments_line C1
         >*block_line_arg C3
          >{spaces_before_argument: }
          >{normal_text:x}
          >{spaces_after_argument:\\n}
        >{raw:xset\\n}
-       >*@end C1 l5
+       >*normal_command@end C1 l5
        >|EXTRA
        >|text_arg:{ifset}
         >*line_arg C3
@@ -34,7 +34,7 @@ $result_tree_text{'ifset_in_command'} = '*document_root C1
          >{normal_text:ifset}
          >{spaces_after_argument:\\n}
      >expanded_conditional_command<start;1><p:1>
-      >*@ifclear C1 l6
+      >*normal_command@ifclear C1 l6
        >*arguments_line C1
         >*block_line_arg C3
          >{spaces_before_argument: }
@@ -43,7 +43,7 @@ $result_tree_text{'ifset_in_command'} = '*document_root C1
      {normal_text:xclear\\n}
      >SOURCEMARKS
      >expanded_conditional_command<end;1><p:7>
-      >*@end C1 l8
+      >*normal_command@end C1 l8
       >|EXTRA
       >|text_arg:{ifclear}
        >*line_arg C3

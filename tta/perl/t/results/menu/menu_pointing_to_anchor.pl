@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'menu_pointing_to_anchor'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'menu_pointing_to_anchor'} = '*document_root C3
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C8 l2 {top}
+ *normal_command@top C8 l2 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -34,7 +34,7 @@ $result_tree_text{'menu_pointing_to_anchor'} = '*document_root C3
   *paragraph C1
    {normal_text:Text\\n}
   {empty_line:\\n}
-  *@anchor C1 l6
+  *normal_command@anchor C1 l6
   |EXTRA
   |identifier:{An-anchor}
   |is_target:{1}
@@ -42,7 +42,7 @@ $result_tree_text{'menu_pointing_to_anchor'} = '*document_root C3
     {normal_text:An anchor}
   {spaces_after_close_brace:\\n}
   {empty_line:\\n}
-  *@menu C3 l8
+  *normal_command@menu C3 l8
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -57,7 +57,7 @@ $result_tree_text{'menu_pointing_to_anchor'} = '*document_root C3
     *menu_entry_description C1
      *preformatted C1
       {normal_text:menu entry pointing to the anchor.\\n}
-   *@end C1 l10
+   *normal_command@end C1 l10
    |EXTRA
    |text_arg:{menu}
     *line_arg C3

@@ -11,43 +11,43 @@ use Encode;
 $result_tree_text{'comment_on_set_line'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C5
-   *@set C1
+   *normal_command@set C1
    |EXTRA
    |misc_args:A{x|}
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:x}
-     *@c C1
+     *normal_command@c C1
       *line_arg C2
        {rawline_text:}
        {spaces_after_argument:\\n}
-   *@set C1
+   *normal_command@set C1
    |EXTRA
    |misc_args:A{y|}
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:y }
-     *@c C1
+     *normal_command@c C1
       *line_arg C2
        {rawline_text:}
        {spaces_after_argument:\\n}
-   *@set C1
+   *normal_command@set C1
    |EXTRA
    |misc_args:A{z|g}
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:z g}
-     *@c C1
+     *normal_command@c C1
       *line_arg C2
        {rawline_text:}
        {spaces_after_argument:\\n}
-   *@set C1
+   *normal_command@set C1
    |EXTRA
    |misc_args:A{t|a vv}
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:t a vv }
-     *@comment C1
+     *normal_command@comment C1
       *line_arg C2
        {rawline_text:@ggg}
        {spaces_after_argument:\\n}
@@ -56,22 +56,22 @@ $result_tree_text{'comment_on_set_line'} = '*document_root C1
    {normal_text:!!, !!, !g!, !a vv!\\n}
    >SOURCEMARKS
    >value_expansion<start;1><p:1>{}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:x}
    >value_expansion<end;1><p:1>
    >value_expansion<start;2><p:5>{}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:y}
    >value_expansion<end;2><p:5>
    >value_expansion<start;3><p:9>{g}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:z}
    >value_expansion<end;3><p:10>
    >value_expansion<start;4><p:14>{a vv}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:t}
    >value_expansion<end;4><p:18>

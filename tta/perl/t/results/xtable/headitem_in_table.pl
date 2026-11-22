@@ -11,11 +11,11 @@ use Encode;
 $result_tree_text{'headitem_in_table'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@table C4 l1
+  *normal_command@table C4 l1
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     *@strong l1
+     *normal_command@strong l1
      {spaces_after_argument:\\n}
    *before_item C5
     {ignorable_spaces_after_command: }
@@ -27,12 +27,12 @@ $result_tree_text{'headitem_in_table'} = '*document_root C1
     {empty_line:\\n}
    *table_entry C1
     *table_term C1
-     *@item C1 l6
+     *normal_command@item C1 l6
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:item}
        {spaces_after_argument:\\n}
-   *@end C1 l7
+   *normal_command@end C1 l7
    |EXTRA
    |text_arg:{table}
     *line_arg C3

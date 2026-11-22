@@ -13,7 +13,7 @@ $result_tree_text{'ref_tests'} = '*document_root C2
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content
- *@node C7 l2 {Top}
+ *normal_command@node C7 l2 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -25,7 +25,7 @@ $result_tree_text{'ref_tests'} = '*document_root C2
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C6
-   *@ref C4 l4
+   *normal_command@ref C4 l4
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -36,7 +36,7 @@ $result_tree_text{'ref_tests'} = '*document_root C2
      {spaces_before_argument: }
      {normal_text:m}
    {normal_text:, \\n}
-   *@ref C4 l5
+   *normal_command@ref C4 l5
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -47,9 +47,9 @@ $result_tree_text{'ref_tests'} = '*document_root C2
      {spaces_before_argument: }
      {normal_text:m}
    {normal_text: after ref.\\n}
-   *@code C1 l6
+   *normal_command@code C1 l6
     *brace_container C1
-     *@ref C4 l6
+     *normal_command@ref C4 l6
       *brace_arg C1
       |EXTRA
       |node_content:A{0|0}
@@ -63,7 +63,7 @@ $result_tree_text{'ref_tests'} = '*document_root C2
   {empty_line:\\n}
   {empty_line:\\n}
   *paragraph C8
-   *@ref C4 l9
+   *normal_command@ref C4 l9
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -76,7 +76,7 @@ $result_tree_text{'ref_tests'} = '*document_root C2
      {spaces_before_argument: }
      {normal_text:m}
    {normal_text:,\\n}
-   *@ref C4 l10
+   *normal_command@ref C4 l10
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -89,9 +89,9 @@ $result_tree_text{'ref_tests'} = '*document_root C2
      {spaces_before_argument: }
      {normal_text:m}
    {normal_text: after ref.\\n}
-   *@code C1 l11
+   *normal_command@code C1 l11
     *brace_container C1
-     *@ref C4 l11
+     *normal_command@ref C4 l11
       *brace_arg C1
       |EXTRA
       |node_content:A{0|0}
@@ -104,7 +104,7 @@ $result_tree_text{'ref_tests'} = '*document_root C2
        {spaces_before_argument: }
        {normal_text:m}
    {normal_text:.\\n}
-   *@ref C4 l12
+   *normal_command@ref C4 l12
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}

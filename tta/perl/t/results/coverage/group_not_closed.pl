@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'group_not_closed'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@group C3 l1
+  *normal_command@group C3 l1
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}

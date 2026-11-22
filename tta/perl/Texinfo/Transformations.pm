@@ -189,6 +189,7 @@ sub _protect_hashchar_at_line_beginning($$$) {
           }
 
           $e = Texinfo::TreeElement::new({'cmdname' => 'hashchar',
+                                          'type' => 'normal_command',
                                           'parent' => $parent});
           my $arg = Texinfo::TreeElement::new({'type' => 'brace_container',
                                                'parent' => $e});

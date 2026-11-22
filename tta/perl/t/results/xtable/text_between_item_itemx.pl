@@ -11,15 +11,15 @@ use Encode;
 $result_tree_text{'text_between_item_itemx'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@table C3 l1
+  *normal_command@table C3 l1
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     *@strong l1
+     *normal_command@strong l1
      {spaces_after_argument:\\n}
    *table_entry C1
     *table_term C3
-     *@item C1 l2
+     *normal_command@item C1 l2
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:in item}
@@ -27,12 +27,12 @@ $result_tree_text{'text_between_item_itemx'} = '*document_root C1
      *inter_item C1
       *paragraph C1
        {normal_text:text\\n}
-     *@itemx C1 l4
+     *normal_command@itemx C1 l4
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:in itemx}
        {spaces_after_argument:\\n}
-   *@end C1 l5
+   *normal_command@end C1 l5
    |EXTRA
    |text_arg:{table}
     *line_arg C3

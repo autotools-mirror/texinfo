@@ -11,14 +11,14 @@ use Encode;
 $result_tree_text{'protect_in_body_line_arg'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C2
-   *@macro C3 l1
+   *normal_command@macro C3 l1
    |EXTRA
    |formal_args:A{arg1|arg2}
    |macro_name:{macroone}
     *arguments_line C1
      {macro_line: macroone { arg1 , arg2 }\\n}
     {raw:result: @emph{\\arg1\\} protected \\\\ -> \\\\arg1\\\\ @emph{\\arg2\\}\\n}
-    *@end C1 l3
+    *normal_command@end C1 l3
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -31,15 +31,15 @@ $result_tree_text{'protect_in_body_line_arg'} = '*document_root C1
    >SOURCEMARKS
    >macro_expansion<start;1>
     >*macro_call@macroone
-   *@emph C1 l5:@macroone
+   *normal_command@emph C1 l5:@macroone
     *brace_container
    {normal_text: protected \\ -> \\arg1\\ }
-   *@emph C1 l5:@macroone
+   *normal_command@emph C1 l5:@macroone
    >SOURCEMARKS
    >macro_expansion<end;1>
     *brace_container
    {normal_text: }
-   *@samp C1 l5
+   *normal_command@samp C1 l5
     *brace_container C1
      {normal_text:f\\irst arg}
    {normal_text:, second arg\\n}

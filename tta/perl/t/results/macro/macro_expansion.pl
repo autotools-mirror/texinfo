@@ -13,7 +13,7 @@ $result_tree_text{'macro_expansion'} = '*document_root C1
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content C2
-   *@macro C6 l2
+   *normal_command@macro C6 l2
    |EXTRA
    |formal_args:A{arg1|arg2}
    |macro_name:{macroone}
@@ -23,7 +23,7 @@ $result_tree_text{'macro_expansion'} = '*document_root C1
     {raw:@verbatim\\n}
     {raw:\\arg2\\\\n}
     {raw:@end verbatim\\n}
-    *@end C1 l7
+    *normal_command@end C1 l7
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -42,12 +42,12 @@ $result_tree_text{'macro_expansion'} = '*document_root C1
      >*brace_arg C2
       >{spaces_before_argument: }
       >{macro_call_arg_text:second arg}
-  *@verbatim C3 l9:@macroone
+  *normal_command@verbatim C3 l9:@macroone
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    {raw:second arg\\n}
-   *@end C1 l9:@macroone
+   *normal_command@end C1 l9:@macroone
    |EXTRA
    |text_arg:{verbatim.}
     *line_arg C3
@@ -64,16 +64,16 @@ $result_tree_text{'macro_expansion'} = '*document_root C1
     >*macro_call@macroone C1
      >*brace_arg C1
       >{macro_call_arg_text:aaa @samp{a macro , } bbb}
-   *@samp C1 l11:@macroone
+   *normal_command@samp C1 l11:@macroone
     *brace_container C1
      {normal_text:a macro , }
    {normal_text: bbb and \\n}
-  *@verbatim C3 l11:@macroone
+  *normal_command@verbatim C3 l11:@macroone
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    {raw:\\n}
-   *@end C1 l11:@macroone
+   *normal_command@end C1 l11:@macroone
    |EXTRA
    |text_arg:{verbatim.}
     *line_arg C3
@@ -88,12 +88,12 @@ $result_tree_text{'macro_expansion'} = '*document_root C1
    >SOURCEMARKS
    >macro_expansion<start;3><p:18>
     >*macro_call@macroone
-  *@verbatim C3 l13:@macroone
+  *normal_command@verbatim C3 l13:@macroone
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    {raw:\\n}
-   *@end C1 l13:@macroone
+   *normal_command@end C1 l13:@macroone
    |EXTRA
    |text_arg:{verbatim my arg.}
     *line_arg C3
@@ -113,12 +113,12 @@ $result_tree_text{'macro_expansion'} = '*document_root C1
      >*brace_arg C2
       >{spaces_before_argument: }
       >{macro_call_arg_text:@macroone{nested second arg}}
-  *@verbatim C3 l15:@macroone
+  *normal_command@verbatim C3 l15:@macroone
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    {raw:@macroone{nested second arg}\\n}
-   *@end C1 l15:@macroone
+   *normal_command@end C1 l15:@macroone
    |EXTRA
    |text_arg:{verbatim.}
     *line_arg C3
@@ -144,12 +144,12 @@ $result_tree_text{'macro_expansion'} = '*document_root C1
       >>macro_arg_escape_backslash<2>
       >>macro_arg_escape_backslash<3><p:1>
       >>macro_arg_escape_backslash<4><p:3>
-  *@verbatim C3 l17:@macroone
+  *normal_command@verbatim C3 l17:@macroone
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    {raw:{} \\ \\n}
-   *@end C1 l17:@macroone
+   *normal_command@end C1 l17:@macroone
    |EXTRA
    |text_arg:{verbatim.}
     *line_arg C3
@@ -172,14 +172,14 @@ $result_tree_text{'macro_expansion'} = '*document_root C1
   {empty_line:\\n}
   *paragraph C1
    {normal_text:now and \\n}
-  *@verbatim C5 l23:@macroone
+  *normal_command@verbatim C5 l23:@macroone
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    {raw:arg3\\n}
    {raw:\\n}
    {raw:\\n}
-   *@end C1 l23:@macroone
+   *normal_command@end C1 l23:@macroone
    |EXTRA
    |text_arg:{verbatim.}
     *line_arg C2

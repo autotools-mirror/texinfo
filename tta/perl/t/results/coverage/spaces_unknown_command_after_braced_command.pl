@@ -12,12 +12,12 @@ $result_tree_text{'spaces_unknown_command_after_braced_command'} = '*document_ro
  *before_node_section C4
   *preamble_before_content
   *paragraph C2
-   *@code C1 l1
+   *normal_command@code C1 l1
     {spaces_after_cmd_before_arg: }
    {normal_text: \\n}
   {empty_line:\\n}
   *paragraph C3
-   *@~ C1 l3
+   *normal_command@~ C1 l3
     {spaces_after_cmd_before_arg: }
    {normal_text:\\n}
    {normal_text: e\\n}

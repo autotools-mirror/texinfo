@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'unknown_language'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content C2
-   *@documentlanguage C1 l1
+   *normal_command@documentlanguage C1 l1
    |EXTRA
    |global_command_number:{1}
    |text_arg:{unknown}
@@ -20,7 +20,7 @@ $result_tree_text{'unknown_language'} = '*document_root C5
      {normal_text:unknown}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@node C1 l3 {Top}
+ *normal_command@node C1 l3 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -30,7 +30,7 @@ $result_tree_text{'unknown_language'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l4 {unknkown language}
+ *normal_command@top C2 l4 {unknkown language}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -40,7 +40,7 @@ $result_tree_text{'unknown_language'} = '*document_root C5
     {normal_text:unknkown language}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l6 {chapter}
+ *normal_command@node C1 l6 {chapter}
  |EXTRA
  |identifier:{chapter}
  |is_target:{1}
@@ -50,7 +50,7 @@ $result_tree_text{'unknown_language'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:chapter}
     {spaces_after_argument:\\n}
- *@chapter C7 l7 {Chapter}
+ *normal_command@chapter C7 l7 {Chapter}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -63,7 +63,7 @@ $result_tree_text{'unknown_language'} = '*document_root C5
   {empty_line:\\n}
   *paragraph C3
    {normal_text:Unknown language. }
-   *@xref C1 l9
+   *normal_command@xref C1 l9
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -71,7 +71,7 @@ $result_tree_text{'unknown_language'} = '*document_root C5
      {normal_text:Top}
    {normal_text:.\\n}
   {empty_line:\\n}
-  *@documentlanguage C1 l11
+  *normal_command@documentlanguage C1 l11
   |EXTRA
   |global_command_number:{2}
   |text_arg:{another_UNKNOWN}
@@ -82,7 +82,7 @@ $result_tree_text{'unknown_language'} = '*document_root C5
   {empty_line:\\n}
   *paragraph C3
    {normal_text:Another unknown language. }
-   *@xref C1 l13
+   *normal_command@xref C1 l13
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}

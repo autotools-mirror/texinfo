@@ -12,10 +12,10 @@ $result_tree_text{'accent_no_closed_comment'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *paragraph C1
-   *@~ C1 l1
+   *normal_command@~ C1 l1
     *brace_container C2
      {normal_text:e }
-     *@c C1
+     *normal_command@c C1
       *line_arg C3
        {spaces_before_argument: }
        {rawline_text:comment}

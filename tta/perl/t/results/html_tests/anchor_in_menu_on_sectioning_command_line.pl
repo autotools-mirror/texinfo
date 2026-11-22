@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'anchor_in_menu_on_sectioning_command_line'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {chap}
+ *normal_command@node C1 l1 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'anchor_in_menu_on_sectioning_command_line'} = '*document_root
     {spaces_before_argument: }
     {normal_text:chap}
     {spaces_after_argument:\\n}
- *@chapter C3 l2 {chapter @anchor{ggg} after}
+ *normal_command@chapter C3 l2 {chapter @anchor{ggg} after}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -30,7 +30,7 @@ $result_tree_text{'anchor_in_menu_on_sectioning_command_line'} = '*document_root
    *line_arg C6
     {spaces_before_argument: }
     {normal_text:chapter }
-    *@anchor C1 l2
+    *normal_command@anchor C1 l2
     |EXTRA
     |identifier:{ggg}
     |is_target:{1}
@@ -40,7 +40,7 @@ $result_tree_text{'anchor_in_menu_on_sectioning_command_line'} = '*document_root
     {normal_text:after}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C3 l4
+  *normal_command@menu C3 l4
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -55,7 +55,7 @@ $result_tree_text{'anchor_in_menu_on_sectioning_command_line'} = '*document_root
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l6
+   *normal_command@end C1 l6
    |EXTRA
    |text_arg:{menu}
     *line_arg C3

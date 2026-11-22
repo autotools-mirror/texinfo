@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'call_macro_in_linemacro_call'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C4
-   *@linemacro C4 l1
+   *normal_command@linemacro C4 l1
    |EXTRA
    |formal_args:A{a|b}
    |macro_name:{lm}
@@ -19,7 +19,7 @@ $result_tree_text{'call_macro_in_linemacro_call'} = '*document_root C1
      {macro_line: lm {a, b}\\n}
     {raw:@quotation \\a\\\\n}
     {raw:now second arg: \\b\\\\n}
-    *@end C1 l4
+    *normal_command@end C1 l4
     |EXTRA
     |text_arg:{linemacro}
      *line_arg C3
@@ -27,7 +27,7 @@ $result_tree_text{'call_macro_in_linemacro_call'} = '*document_root C1
       {normal_text:linemacro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@macro C5 l6
+   *normal_command@macro C5 l6
    |EXTRA
    |formal_args:A{c|d}
    |macro_name:{mymacro}
@@ -36,7 +36,7 @@ $result_tree_text{'call_macro_in_linemacro_call'} = '*document_root C1
     {raw:@table \\c\\\\n}
     {raw:@item \\d\\\\n}
     {raw:@end table\\n}
-    *@end C1 l10
+    *normal_command@end C1 l10
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -53,7 +53,7 @@ $result_tree_text{'call_macro_in_linemacro_call'} = '*document_root C1
      >*linemacro_arg C2
       >{spaces_before_argument: }
       >{macro_call_arg_text:jj @var{T}}
-  *@quotation C7 l14:@lm
+  *normal_command@quotation C7 l14:@lm
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
@@ -68,20 +68,20 @@ $result_tree_text{'call_macro_in_linemacro_call'} = '*document_root C1
      >*brace_arg C2
       >{spaces_before_argument:\\n}
       >{macro_call_arg_text:   ggg}
-   *@table C3 l14:@mymacro
+   *normal_command@table C3 l14:@mymacro
     *arguments_line C1
      *block_line_arg C3
       {spaces_before_argument: }
-      *@emph l14:@mymacro
+      *normal_command@emph l14:@mymacro
       {spaces_after_argument: \\n}
     *table_entry C1
      *table_term C1
-      *@item C1 l14:@mymacro
+      *normal_command@item C1 l14:@mymacro
        *line_arg C3
         {spaces_before_argument:    }
         {normal_text:ggg}
         {spaces_after_argument:\\n}
-    *@end C1 l14:@mymacro
+    *normal_command@end C1 l14:@mymacro
     |EXTRA
     |text_arg:{table}
      *line_arg C3
@@ -92,7 +92,7 @@ $result_tree_text{'call_macro_in_linemacro_call'} = '*document_root C1
       {spaces_after_argument: \\n}
    *paragraph C3
     {normal_text:now second arg: jj }
-    *@var C1 l14:@lm
+    *normal_command@var C1 l14:@lm
     >SOURCEMARKS
     >linemacro_expansion<end;1>
      *brace_container C1
@@ -100,7 +100,7 @@ $result_tree_text{'call_macro_in_linemacro_call'} = '*document_root C1
     {normal_text:\\n}
    {empty_line: \\n}
    {empty_line:\\n}
-   *@end C1 l17
+   *normal_command@end C1 l17
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3

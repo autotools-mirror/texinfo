@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'lone_bye'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
- *@bye C1
+ *normal_command@bye C1
   *line_arg C1
    {spaces_before_argument:\\n}
 ';

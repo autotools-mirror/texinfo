@@ -13,7 +13,7 @@ $result_tree_text{'error_in_footnote'} = '*document_root C2
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content
- *@node C7 l2 {Top}
+ *normal_command@node C7 l2 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -24,7 +24,7 @@ $result_tree_text{'error_in_footnote'} = '*document_root C2
     {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@float C7 l4
+  *normal_command@float C7 l4
   |EXTRA
   |float_number:{1}
   |float_type:{Text}
@@ -43,32 +43,32 @@ $result_tree_text{'error_in_footnote'} = '*document_root C2
    *paragraph C1
     {normal_text:Float text1\\n}
    {empty_line:\\n}
-   *@caption C1 l8
+   *normal_command@caption C1 l8
     *brace_command_context C1
      *paragraph C8
       {normal_text:Caption. }
-      *@TeX l8
+      *normal_command@TeX l8
       {normal_text:. \\n}
       {normal_text:In caption }
-      *@strong C1 l9
+      *normal_command@strong C1 l9
        *brace_container C1
         {normal_text:note caption}
       {normal_text:.  \\n}
       {normal_text:Now footnote}
-      *@footnote C1 l10
+      *normal_command@footnote C1 l10
       |EXTRA
       |global_command_number:{1}
        *brace_command_context C1
         *paragraph C5
-         *@LaTeX l10
+         *normal_command@LaTeX l10
          {normal_text:. \\n}
          {normal_text:and strong }
-         *@strong C1 l11
+         *normal_command@strong C1 l11
           *brace_container C1
            {normal_text:Note footnote}
          {normal_text:.}
    {spaces_after_close_brace:\\n}
-   *@end C1 l12
+   *normal_command@end C1 l12
    |EXTRA
    |text_arg:{float}
     *line_arg C3
@@ -76,7 +76,7 @@ $result_tree_text{'error_in_footnote'} = '*document_root C2
      {normal_text:float}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@listoffloats C1 l14
+  *normal_command@listoffloats C1 l14
   |EXTRA
   |float_type:{Text}
   |global_command_number:{1}
@@ -85,7 +85,7 @@ $result_tree_text{'error_in_footnote'} = '*document_root C2
     {normal_text:Text}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@listoffloats C1 l16
+  *normal_command@listoffloats C1 l16
   |EXTRA
   |float_type:{Text}
   |global_command_number:{2}

@@ -11,26 +11,26 @@ use Encode;
 $result_tree_text{'heading_in_quotation'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@quotation C5 l1
+  *normal_command@quotation C5 l1
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    {empty_line:\\n}
-   *@heading C1 l3
+   *normal_command@heading C1 l3
    |EXTRA
    |global_command_number:{1}
    |heading_number:{1}
     *line_arg C6
      {spaces_before_argument: }
      {normal_text:in quotation }
-     *@@
+     *normal_command@@
      {normal_text: }
-     *@emph C1 l3
+     *normal_command@emph C1 l3
       *brace_container C1
        {normal_text:heading}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@end C1 l5
+   *normal_command@end C1 l5
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3

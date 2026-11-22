@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'recursive_alias'} = '*document_root C1
  *before_node_section C4
   *preamble_before_content C6
-   *@alias C1 l1
+   *normal_command@alias C1 l1
    |EXTRA
    |misc_args:A{new|strong}
     *line_arg C3
@@ -19,7 +19,7 @@ $result_tree_text{'recursive_alias'} = '*document_root C1
      {normal_text:new = strong}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@alias C1 l3
+   *normal_command@alias C1 l3
    |EXTRA
    |misc_args:A{other|new}
     *line_arg C3
@@ -27,7 +27,7 @@ $result_tree_text{'recursive_alias'} = '*document_root C1
      {normal_text:other = new}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@alias C1 l5
+   *normal_command@alias C1 l5
    |EXTRA
    |misc_args:A{strong|other}
     *line_arg C3
@@ -36,7 +36,7 @@ $result_tree_text{'recursive_alias'} = '*document_root C1
      {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C2
-   *@strong C1 l7
+   *normal_command@strong C1 l7
    |EXTRA
    |alias_of:{other}
     *brace_container C1

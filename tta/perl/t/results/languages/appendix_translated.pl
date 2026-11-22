@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'appendix_translated'} = '*document_root C4
  *before_node_section C1
   *preamble_before_content C2
-   *@documentlanguage C1 l1
+   *normal_command@documentlanguage C1 l1
    |EXTRA
    |global_command_number:{1}
    |text_arg:{es}
@@ -20,7 +20,7 @@ $result_tree_text{'appendix_translated'} = '*document_root C4
      {normal_text:es}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@node C1 l3 {Top}
+ *normal_command@node C1 l3 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -30,7 +30,7 @@ $result_tree_text{'appendix_translated'} = '*document_root C4
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l4 {top}
+ *normal_command@top C2 l4 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -40,7 +40,7 @@ $result_tree_text{'appendix_translated'} = '*document_root C4
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@appendix C3 l6 {dernier}
+ *normal_command@appendix C3 l6 {dernier}
  |EXTRA
  |identifier:{dernier}
  |is_target:{1}
@@ -53,7 +53,7 @@ $result_tree_text{'appendix_translated'} = '*document_root C4
     {normal_text:dernier}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@contents C1 l8
+  *normal_command@contents C1 l8
   |EXTRA
   |global_command_number:{1}
    *line_arg C1

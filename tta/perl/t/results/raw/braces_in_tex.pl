@@ -13,7 +13,7 @@ $result_tree_text{'braces_in_tex'} = '*document_root C1
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content C3
-   *@tex C3 l2
+   *normal_command@tex C3 l2
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
@@ -23,7 +23,7 @@ $result_tree_text{'braces_in_tex'} = '*document_root C1
      {normal_text:\\left(y_i - (a + b x_i)\\n}
      {normal_text:\\over \\sigma_i\\right)^2 \\n}
      {normal_text:$$\\n}
-    *@end C1 l8
+    *normal_command@end C1 l8
     |EXTRA
     |text_arg:{tex}
      *line_arg C3
@@ -32,12 +32,12 @@ $result_tree_text{'braces_in_tex'} = '*document_root C1
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    {empty_line:\\n}
-  *@example C3 l11
+  *normal_command@example C3 l11
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C1
-    *@tex C3 l12
+    *normal_command@tex C3 l12
      *arguments_line C1
       *block_line_arg C1
        {spaces_before_argument:\\n}
@@ -47,14 +47,14 @@ $result_tree_text{'braces_in_tex'} = '*document_root C1
       {normal_text:\\left(y_i - (a + b x_i)\\n}
       {normal_text:\\over \\sigma_i\\right)^2 \\n}
       {normal_text:$$\\n}
-     *@end C1 l18
+     *normal_command@end C1 l18
      |EXTRA
      |text_arg:{tex}
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:tex}
        {spaces_after_argument:\\n}
-   *@end C1 l19
+   *normal_command@end C1 l19
    |EXTRA
    |text_arg:{example}
     *line_arg C3

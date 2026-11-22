@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'unknown_value'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@value C1
+  *normal_command@value C1
    *brace_container C1
     {normal_text:unknown}
 ';

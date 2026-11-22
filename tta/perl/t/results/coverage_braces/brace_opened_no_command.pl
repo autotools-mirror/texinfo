@@ -13,16 +13,16 @@ $result_tree_text{'brace_opened_no_command'} = '*document_root C2
   *preamble_before_content
   *paragraph C5
    {normal_text:anchortruc}
-   *@}
+   *normal_command@}
    {normal_text: }
-   *@anchor C1 l1
+   *normal_command@anchor C1 l1
    |EXTRA
    |identifier:{truc}
    |is_target:{1}
     *brace_arg C1
      {normal_text:truc}
    {normal_text:.\\n}
- *@bye C1
+ *normal_command@bye C1
   *line_arg C1
    {spaces_before_argument:}
 ';

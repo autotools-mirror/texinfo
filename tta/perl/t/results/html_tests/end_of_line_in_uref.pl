@@ -13,7 +13,7 @@ $result_tree_text{'end_of_line_in_uref'} = '*document_root C1
   *preamble_before_content
   *paragraph C3
    {normal_text:See the }
-   *@uref C2 l1
+   *normal_command@uref C2 l1
     *brace_arg C2
      {normal_text:https://gcc.gnu.org/codingconventions.html#Spelling\\n}
      {normal_text:Spelling}

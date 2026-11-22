@@ -11,34 +11,34 @@ use Encode;
 $result_tree_text{'invalid_documentencoding'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C5
-   *@c C1
+   *normal_command@c C1
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:this one is valid}
      {spaces_after_argument:\\n}
-   *@documentencoding C1 l2
+   *normal_command@documentencoding C1 l2
    |EXTRA
    |global_command_number:{1}
    |text_arg:{us-ascii}
     *line_arg C4
      {spaces_before_argument: }
      {normal_text:us-ascii}
-     *@asis C1 l2
+     *normal_command@asis C1 l2
       *brace_container
      {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@documentencoding C1 l4
+   *normal_command@documentencoding C1 l4
    |EXTRA
    |global_command_number:{2}
    |text_arg:{latin1}
     *line_arg C4
      {spaces_before_argument: }
      {normal_text:latin1}
-     *@asis C1 l4
+     *normal_command@asis C1 l4
       *brace_container C1
        {normal_text:a}
      {spaces_after_argument:\\n}
-   *@documentencoding C1 l5
+   *normal_command@documentencoding C1 l5
    |EXTRA
    |global_command_number:{3}
    |text_arg:{YS-ASCII}
@@ -47,9 +47,9 @@ $result_tree_text{'invalid_documentencoding'} = '*document_root C1
      {normal_text:YS-ASCII}
      {spaces_after_argument:\\n}
   *paragraph C8
-   *@@
+   *normal_command@@
    {normal_text:documentencoding }
-   *@documentencoding C1 l6
+   *normal_command@documentencoding C1 l6
    |EXTRA
    |global_command_number:{4}
    |text_arg:{bad encoding name}
@@ -57,7 +57,7 @@ $result_tree_text{'invalid_documentencoding'} = '*document_root C1
      {spaces_before_argument: }
      {normal_text:bad encoding name}
      {spaces_after_argument:\\n}
-   *@documentencoding C1 l7
+   *normal_command@documentencoding C1 l7
    |EXTRA
    |global_command_number:{5}
    |text_arg:{1}
@@ -65,7 +65,7 @@ $result_tree_text{'invalid_documentencoding'} = '*document_root C1
      {spaces_before_argument: }
      {normal_text:1}
      {spaces_after_argument:\\n}
-   *@documentencoding C1 l8
+   *normal_command@documentencoding C1 l8
    |EXTRA
    |global_command_number:{6}
    |text_arg:{%}
@@ -73,32 +73,32 @@ $result_tree_text{'invalid_documentencoding'} = '*document_root C1
      {spaces_before_argument: }
      {normal_text:%}
      {spaces_after_argument:\\n}
-   *@documentencoding C1 l9
+   *normal_command@documentencoding C1 l9
    |EXTRA
    |global_command_number:{7}
    |text_arg:{@}
     *line_arg C3
      {spaces_before_argument: }
-     *@@
+     *normal_command@@
      {spaces_after_argument:\\n}
-   *@documentencoding C1 l10
+   *normal_command@documentencoding C1 l10
    |EXTRA
    |global_command_number:{8}
    |text_arg:{AAA}
     *line_arg C4
      {spaces_before_argument: }
      {normal_text:AAA}
-     *@TeX C1 l10
+     *normal_command@TeX C1 l10
       *brace_container
      {spaces_after_argument:\\n}
-   *@documentencoding C1 l11
+   *normal_command@documentencoding C1 l11
    |EXTRA
    |global_command_number:{9}
    |text_arg:{BBB}
     *line_arg C4
      {spaces_before_argument: }
      {normal_text:BBB}
-     *@\' C1 l11
+     *normal_command@\' C1 l11
       *following_arg C1
        {normal_text:e}
      {spaces_after_argument:\\n}

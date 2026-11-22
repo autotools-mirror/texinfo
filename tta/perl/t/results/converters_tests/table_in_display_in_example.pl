@@ -16,27 +16,27 @@ $result_tree_text{'table_in_display_in_example'} = '*document_root C1
   *paragraph C1
    {normal_text:T\\n}
   {empty_line:\\n}
-  *@example C4 l4
+  *normal_command@example C4 l4
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C1
     {normal_text:Ex\\n}
-   *@display C4 l6
+   *normal_command@display C4 l6
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *preformatted C1
      {normal_text:Disp\\n}
-    *@table C3 l8
+    *normal_command@table C3 l8
      *arguments_line C1
       *block_line_arg C3
        {spaces_before_argument: }
-       *@asis l8
+       *normal_command@asis l8
        {spaces_after_argument:\\n}
      *table_entry C2
       *table_term C1
-       *@item C1 l9
+       *normal_command@item C1 l9
         *line_arg C3
          {spaces_before_argument: }
          {normal_text:item}
@@ -44,21 +44,21 @@ $result_tree_text{'table_in_display_in_example'} = '*document_root C1
       *table_definition C1
        *preformatted C1
         {normal_text:Line\\n}
-     *@end C1 l11
+     *normal_command@end C1 l11
      |EXTRA
      |text_arg:{table}
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:table}
        {spaces_after_argument:\\n}
-    *@end C1 l12
+    *normal_command@end C1 l12
     |EXTRA
     |text_arg:{display}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:display}
       {spaces_after_argument:\\n}
-   *@end C1 l13
+   *normal_command@end C1 l13
    |EXTRA
    |text_arg:{example}
     *line_arg C3

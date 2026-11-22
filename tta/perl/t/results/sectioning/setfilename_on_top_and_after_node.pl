@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'setfilename_on_top_and_after_node'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'setfilename_on_top_and_after_node'} = '*document_root C3
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C3 l2 {In top @setfilename very badly placed setfilename
+ *normal_command@top C3 l2 {In top @setfilename very badly placed setfilename
 }
  |EXTRA
  |section_level:{0}
@@ -30,7 +30,7 @@ $result_tree_text{'setfilename_on_top_and_after_node'} = '*document_root C3
    *line_arg C3
     {spaces_before_argument: }
     {normal_text:In top }
-    *@setfilename C1 l2
+    *normal_command@setfilename C1 l2
     |EXTRA
     |text_arg:{very badly placed setfilename}
      *line_arg C3
@@ -38,7 +38,7 @@ $result_tree_text{'setfilename_on_top_and_after_node'} = '*document_root C3
       {normal_text:very badly placed setfilename}
       {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@setfilename C1 l4
+  *normal_command@setfilename C1 l4
   |EXTRA
   |text_arg:{a bit too late}
    *line_arg C3

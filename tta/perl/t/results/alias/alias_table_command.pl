@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'alias_table_command'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C2
-   *@alias C1 l1
+   *normal_command@alias C1 l1
    |EXTRA
    |misc_args:A{myalias|code}
     *line_arg C3
@@ -19,22 +19,22 @@ $result_tree_text{'alias_table_command'} = '*document_root C1
      {normal_text:myalias = code}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
-  *@table C3 l3
+  *normal_command@table C3 l3
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     *@code l3
+     *normal_command@code l3
      |EXTRA
      |alias_of:{myalias}
      {spaces_after_argument:\\n}
    *table_entry C1
     *table_term C1
-     *@item C1 l4
+     *normal_command@item C1 l4
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:table item (code)}
        {spaces_after_argument:\\n}
-   *@end C1 l5
+   *normal_command@end C1 l5
    |EXTRA
    |text_arg:{table}
     *line_arg C3

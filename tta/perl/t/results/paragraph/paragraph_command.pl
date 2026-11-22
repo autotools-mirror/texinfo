@@ -12,34 +12,34 @@ $result_tree_text{'paragraph_command'} = '*document_root C1
  *before_node_section C16
   *preamble_before_content
   *paragraph C2
-   *@@
+   *normal_command@@
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@b C1 l3
+   *normal_command@b C1 l3
     *brace_container C1
      {normal_text:aaa}
    {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@dotless C1 l5
+   *normal_command@dotless C1 l5
     *brace_container C1
      {normal_text:i}
    {normal_text: also dotless i.\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@U C1 l7
+   *normal_command@U C1 l7
     *brace_arg C1
      {normal_text:0075}
    {normal_text: also U+0075.\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@email C1 l9
+   *normal_command@email C1 l9
     *brace_arg C1
      {normal_text:m1}
    {normal_text: email.\\n}
   {empty_line:\\n}
-  *@definfoenclose C1 l11
+  *normal_command@definfoenclose C1 l11
   |EXTRA
   |misc_args:A{foo|\\|//}
    *line_arg C3
@@ -52,12 +52,12 @@ $result_tree_text{'paragraph_command'} = '*document_root C1
    |begin:{\\}
    |end:{//}
     *brace_container C2
-     *@@
+     *normal_command@@
      {normal_text:definfoenclose}
    {normal_text: should work at the beginning of a new paragraph.\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@footnote C1 l14
+   *normal_command@footnote C1 l14
    |EXTRA
    |global_command_number:{1}
     *brace_command_context C1

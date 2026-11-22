@@ -11,19 +11,19 @@ use Encode;
 $result_tree_text{'formats_only_title_comments'} = '*document_root C1
  *before_node_section C10
   *preamble_before_content
-  *@itemize C3 l1
+  *normal_command@itemize C3 l1
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *before_item C2
-    *@c C1
+    *normal_command@c C1
      *line_arg C3
       {spaces_before_argument: }
       {rawline_text:comment itemize}
       {spaces_after_argument:\\n}
     *paragraph C1
      {normal_text:before first itemize\\n}
-   *@end C1 l4
+   *normal_command@end C1 l4
    |EXTRA
    |text_arg:{itemize}
     *line_arg C3
@@ -31,24 +31,24 @@ $result_tree_text{'formats_only_title_comments'} = '*document_root C1
      {normal_text:itemize}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@enumerate C3 l6
+  *normal_command@enumerate C3 l6
    *arguments_line C1
     *block_line_arg C2
      {spaces_before_argument: }
-     *@c C1
+     *normal_command@c C1
       *line_arg C3
        {spaces_before_argument: }
        {rawline_text:comment on enumerate line}
        {spaces_after_argument:\\n}
    *before_item C2
-    *@c C1
+    *normal_command@c C1
      *line_arg C3
       {spaces_before_argument: }
       {rawline_text:comment enumerate}
       {spaces_after_argument:\\n}
     *paragraph C1
      {normal_text:before first enumerate\\n}
-   *@end C1 l9
+   *normal_command@end C1 l9
    |EXTRA
    |text_arg:{enumerate}
     *line_arg C3
@@ -56,21 +56,21 @@ $result_tree_text{'formats_only_title_comments'} = '*document_root C1
      {normal_text:enumerate}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@table C3 l11
+  *normal_command@table C3 l11
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     *@emph l11
+     *normal_command@emph l11
      {spaces_after_argument:\\n}
    *before_item C2
-    *@c C1
+    *normal_command@c C1
      *line_arg C3
       {spaces_before_argument: }
       {rawline_text:comment table}
       {spaces_after_argument:\\n}
     *paragraph C1
      {normal_text:before first table\\n}
-   *@end C1 l14
+   *normal_command@end C1 l14
    |EXTRA
    |text_arg:{table}
     *line_arg C3
@@ -78,13 +78,13 @@ $result_tree_text{'formats_only_title_comments'} = '*document_root C1
      {normal_text:table}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@vtable C3 l16
+  *normal_command@vtable C3 l16
    *arguments_line C1
     *block_line_arg C4
      {spaces_before_argument: }
-     *@asis l16
+     *normal_command@asis l16
      {spaces_after_argument: }
-     *@c C1
+     *normal_command@c C1
       *line_arg C3
        {spaces_before_argument: }
        {rawline_text:comment on vtable line}
@@ -92,7 +92,7 @@ $result_tree_text{'formats_only_title_comments'} = '*document_root C1
    *before_item C1
     *paragraph C1
      {normal_text:before first vtable\\n}
-   *@end C1 l18
+   *normal_command@end C1 l18
    |EXTRA
    |text_arg:{vtable}
     *line_arg C3
@@ -100,13 +100,13 @@ $result_tree_text{'formats_only_title_comments'} = '*document_root C1
      {normal_text:vtable}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@multitable C3 l20
+  *normal_command@multitable C3 l20
   |EXTRA
   |max_columns:{2}
    *arguments_line C1
     *block_line_arg C2
      {spaces_before_argument: }
-     *@columnfractions C1 l20
+     *normal_command@columnfractions C1 l20
      |EXTRA
      |misc_args:A{0.5|0.5}
       *line_arg C3
@@ -114,14 +114,14 @@ $result_tree_text{'formats_only_title_comments'} = '*document_root C1
        {normal_text:0.5 0.5}
        {spaces_after_argument:\\n}
    *before_item C2
-    *@c C1
+    *normal_command@c C1
      *line_arg C3
       {spaces_before_argument: }
       {rawline_text:comment multitable}
       {spaces_after_argument:\\n}
     *paragraph C1
      {normal_text:before first multitable\\n}
-   *@end C1 l23
+   *normal_command@end C1 l23
    |EXTRA
    |text_arg:{multitable}
     *line_arg C3

@@ -13,7 +13,7 @@ $result_tree_text{'empty_ifset_in_ifset_set'} = '*document_root C1
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content C2
-   *@set C1
+   *normal_command@set C1
    |EXTRA
    |misc_args:A{notset|}
     *line_arg C3
@@ -23,16 +23,16 @@ $result_tree_text{'empty_ifset_in_ifset_set'} = '*document_root C1
    {empty_line:\\n}
    >SOURCEMARKS
    >expanded_conditional_command<start;1><p:1>
-    >*@ifset C1 l4
+    >*normal_command@ifset C1 l4
      >*arguments_line C1
       >*block_line_arg C3
        >{spaces_before_argument: }
        >{normal_text:notset}
        >{spaces_after_argument:\\n}
-  *@verbatim C3 l5
+  *normal_command@verbatim C3 l5
   >SOURCEMARKS
   >expanded_conditional_command<end;1>
-   >*@end C1 l8
+   >*normal_command@end C1 l8
    >|EXTRA
    >|text_arg:{ifset}
     >*line_arg C3
@@ -43,7 +43,7 @@ $result_tree_text{'empty_ifset_in_ifset_set'} = '*document_root C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    {raw:@ifset\\n}
-   *@end C1 l7
+   *normal_command@end C1 l7
    |EXTRA
    |text_arg:{verbatim}
     *line_arg C3

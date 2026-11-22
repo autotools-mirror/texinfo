@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'redefined_buttons_functions'} = '*document_root C13
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'redefined_buttons_functions'} = '*document_root C13
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l2 {top}
+ *normal_command@top C2 l2 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -31,7 +31,7 @@ $result_tree_text{'redefined_buttons_functions'} = '*document_root C13
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l4 {chap}
+ *normal_command@node C1 l4 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -41,7 +41,7 @@ $result_tree_text{'redefined_buttons_functions'} = '*document_root C13
     {spaces_before_argument: }
     {normal_text:chap}
     {spaces_after_argument:\\n}
- *@chapter C2 l5 {Chap}
+ *normal_command@chapter C2 l5 {Chap}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -52,7 +52,7 @@ $result_tree_text{'redefined_buttons_functions'} = '*document_root C13
     {normal_text:Chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l7 {chap2}
+ *normal_command@node C1 l7 {chap2}
  |EXTRA
  |identifier:{chap2}
  |is_target:{1}
@@ -62,7 +62,7 @@ $result_tree_text{'redefined_buttons_functions'} = '*document_root C13
     {spaces_before_argument: }
     {normal_text:chap2}
     {spaces_after_argument:\\n}
- *@chapter C2 l8 {Chap 2}
+ *normal_command@chapter C2 l8 {Chap 2}
  |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
@@ -73,7 +73,7 @@ $result_tree_text{'redefined_buttons_functions'} = '*document_root C13
     {normal_text:Chap 2}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l10 {sec1}
+ *normal_command@node C1 l10 {sec1}
  |EXTRA
  |identifier:{sec1}
  |is_target:{1}
@@ -83,7 +83,7 @@ $result_tree_text{'redefined_buttons_functions'} = '*document_root C13
     {spaces_before_argument: }
     {normal_text:sec1}
     {spaces_after_argument:\\n}
- *@section C2 l11 {Sec 1}
+ *normal_command@section C2 l11 {Sec 1}
  |EXTRA
  |section_heading_number:{2.1}
  |section_level:{2}
@@ -94,7 +94,7 @@ $result_tree_text{'redefined_buttons_functions'} = '*document_root C13
     {normal_text:Sec 1}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l13 {sec2}
+ *normal_command@node C1 l13 {sec2}
  |EXTRA
  |identifier:{sec2}
  |is_target:{1}
@@ -104,7 +104,7 @@ $result_tree_text{'redefined_buttons_functions'} = '*document_root C13
     {spaces_before_argument: }
     {normal_text:sec2}
     {spaces_after_argument:\\n}
- *@section C2 l14 {Sec 2}
+ *normal_command@section C2 l14 {Sec 2}
  |EXTRA
  |section_heading_number:{2.2}
  |section_level:{2}
@@ -115,7 +115,7 @@ $result_tree_text{'redefined_buttons_functions'} = '*document_root C13
     {normal_text:Sec 2}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l16 {sec3}
+ *normal_command@node C1 l16 {sec3}
  |EXTRA
  |identifier:{sec3}
  |is_target:{1}
@@ -125,7 +125,7 @@ $result_tree_text{'redefined_buttons_functions'} = '*document_root C13
     {spaces_before_argument: }
     {normal_text:sec3}
     {spaces_after_argument:\\n}
- *@section C1 l17 {Sec 3}
+ *normal_command@section C1 l17 {Sec 3}
  |EXTRA
  |section_heading_number:{2.3}
  |section_level:{2}

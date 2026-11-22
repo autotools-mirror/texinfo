@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'unclosed_verb_on_section_line'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
- *@section C1 l1 {in section @verb{Truc
+ *normal_command@section C1 l1 {in section @verb{Truc
 
 Now text.
 T}}
@@ -25,7 +25,7 @@ T}}
    *line_arg C3
     {spaces_before_argument: }
     {normal_text:in section }
-    *@verb C1 l1
+    *normal_command@verb C1 l1
      *brace_container C5
       {verb_delimiter:T}
       {raw:ruc\\n}

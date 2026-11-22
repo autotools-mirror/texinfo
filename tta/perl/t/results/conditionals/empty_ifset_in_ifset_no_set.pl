@@ -13,7 +13,7 @@ $result_tree_text{'empty_ifset_in_ifset_no_set'} = '*document_root C1
   *preamble_before_beginning C1
   >SOURCEMARKS
   >ignored_conditional_block<1>
-   >*@ifset C5 l2
+   >*normal_command@ifset C5 l2
     >*arguments_line C1
      >*block_line_arg C3
       >{spaces_before_argument: }

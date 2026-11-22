@@ -13,7 +13,7 @@ $result_tree_text{'plaintext_ifinfo'} = '*document_root C1
   *preamble_before_beginning C1
   >SOURCEMARKS
   >expanded_conditional_command<start;1>
-   >*@ifinfo C1 l2
+   >*normal_command@ifinfo C1 l2
     >*arguments_line C1
      >*block_line_arg C1
       >{spaces_before_argument:\\n}
@@ -23,7 +23,7 @@ $result_tree_text{'plaintext_ifinfo'} = '*document_root C1
    {normal_text:this text will appear only in Info and plain text.\\n}
    >SOURCEMARKS
    >expanded_conditional_command<end;1><p:51>
-    >*@end C1 l4
+    >*normal_command@end C1 l4
     >|EXTRA
     >|text_arg:{ifinfo}
      >*line_arg C3

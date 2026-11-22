@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'menu_in_style_command'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
- *@node C4 l1 {first}
+ *normal_command@node C4 l1 {first}
  |EXTRA
  |identifier:{first}
  |is_target:{1}
@@ -23,10 +23,10 @@ $result_tree_text{'menu_in_style_command'} = '*document_root C2
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
-   *@code C1 l3
+   *normal_command@code C1 l3
     *brace_container C1
      {normal_text:\\n}
-  *@menu C3 l4
+  *normal_command@menu C3 l4
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -42,7 +42,7 @@ $result_tree_text{'menu_in_style_command'} = '*document_root C2
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l6
+   *normal_command@end C1 l6
    |EXTRA
    |text_arg:{menu}
     *line_arg C3

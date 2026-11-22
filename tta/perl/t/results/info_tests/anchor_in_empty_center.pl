@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'anchor_in_empty_center'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
- *@node C7 l1 {Top}
+ *normal_command@node C7 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -22,12 +22,12 @@ $result_tree_text{'anchor_in_empty_center'} = '*document_root C2
     {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@center C1 l3
+  *normal_command@center C1 l3
    *line_arg C4
     {spaces_before_argument: }
-    *@asis C1 l3
+    *normal_command@asis C1 l3
      *brace_container
-    *@anchor C1 l3
+    *normal_command@anchor C1 l3
     |EXTRA
     |identifier:{toto}
     |is_target:{1}
@@ -38,18 +38,18 @@ $result_tree_text{'anchor_in_empty_center'} = '*document_root C2
   *paragraph C1
    {normal_text:a\\n}
   {empty_line:\\n}
-  *@center C1 l7
+  *normal_command@center C1 l7
    *line_arg C5
     {spaces_before_argument: }
-    *@asis C1 l7
+    *normal_command@asis C1 l7
      *brace_container
-    *@anchor C1 l7
+    *normal_command@anchor C1 l7
     |EXTRA
     |identifier:{titi}
     |is_target:{1}
      *brace_arg C1
       {normal_text:titi}
-    *@w C1 l7
+    *normal_command@w C1 l7
      *brace_container
     {spaces_after_argument:\\n}
 ';

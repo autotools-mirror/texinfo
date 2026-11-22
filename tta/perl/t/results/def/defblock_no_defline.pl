@@ -11,14 +11,14 @@ use Encode;
 $result_tree_text{'defblock_no_defline'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@defblock C3 l1
+  *normal_command@defblock C3 l1
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *before_defline C1
     *paragraph C1
      {normal_text:misc text inside\\n}
-   *@end C1 l3
+   *normal_command@end C1 l3
    |EXTRA
    |text_arg:{defblock}
     *line_arg C3

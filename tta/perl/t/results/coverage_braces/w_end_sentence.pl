@@ -13,7 +13,7 @@ $result_tree_text{'w_end_sentence'} = '*document_root C1
   *preamble_before_content
   *paragraph C2
    {normal_text:a. }
-   *@w C1 l1
+   *normal_command@w C1 l1
     *brace_container C1
      {normal_text:b}
 ';

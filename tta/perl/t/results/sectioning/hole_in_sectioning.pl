@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'hole_in_sectioning'} = '*document_root C6
  *before_node_section C1
   *preamble_before_content
- *@top C2 l1 {Top}
+ *normal_command@top C2 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -23,7 +23,7 @@ $result_tree_text{'hole_in_sectioning'} = '*document_root C6
     {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@chapter C2 l3 {Chapter}
+ *normal_command@chapter C2 l3 {Chapter}
  |EXTRA
  |identifier:{Chapter}
  |is_target:{1}
@@ -36,7 +36,7 @@ $result_tree_text{'hole_in_sectioning'} = '*document_root C6
     {normal_text:Chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@section C2 l5 {section}
+ *normal_command@section C2 l5 {section}
  |EXTRA
  |identifier:{section}
  |is_target:{1}
@@ -49,7 +49,7 @@ $result_tree_text{'hole_in_sectioning'} = '*document_root C6
     {normal_text:section}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@subsubsection C2 l7 {subsubsection with no subsection above}
+ *normal_command@subsubsection C2 l7 {subsubsection with no subsection above}
  |EXTRA
  |identifier:{subsubsection-with-no-subsection-above}
  |is_target:{1}
@@ -62,7 +62,7 @@ $result_tree_text{'hole_in_sectioning'} = '*document_root C6
     {normal_text:subsubsection with no subsection above}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@subsection C1 l9 {the subsection}
+ *normal_command@subsection C1 l9 {the subsection}
  |EXTRA
  |identifier:{the-subsection}
  |is_target:{1}

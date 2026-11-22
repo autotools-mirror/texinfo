@@ -11,42 +11,42 @@ use Encode;
 $result_tree_text{'macro_in_index_commands'} = '*document_root C3
  *before_node_section C11
   *preamble_before_content C9
-   *@macro C3 l1
+   *normal_command@macro C3 l1
    |EXTRA
    |formal_args:A{}
    |macro_name:{cp}
     *arguments_line C1
      {macro_line: cp\\n}
     {raw:cp\\n}
-    *@end C1 l3
+    *normal_command@end C1 l3
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:macro}
       {spaces_after_argument:\\n}
-   *@macro C3 l4
+   *normal_command@macro C3 l4
    |EXTRA
    |formal_args:A{}
    |macro_name:{fn}
     *arguments_line C1
      {macro_line: fn \\n}
     {raw:fn\\n}
-    *@end C1 l6
+    *normal_command@end C1 l6
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:macro}
       {spaces_after_argument:\\n}
-   *@macro C3 l7
+   *normal_command@macro C3 l7
    |EXTRA
    |formal_args:A{}
    |macro_name:{syncodeindexcommand}
     *arguments_line C1
      {macro_line: syncodeindexcommand \\n}
     {raw:@syncodeindex\\n}
-    *@end C1 l9
+    *normal_command@end C1 l9
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -54,7 +54,7 @@ $result_tree_text{'macro_in_index_commands'} = '*document_root C3
       {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@syncodeindex C1 l11
+   *normal_command@syncodeindex C1 l11
    |EXTRA
    |misc_args:A{cp|fn}
    >SOURCEMARKS
@@ -75,7 +75,7 @@ $result_tree_text{'macro_in_index_commands'} = '*document_root C3
        >*brace_arg
      >macro_expansion<end;2><p:5>
      {spaces_after_argument:\\n}
-   *@syncodeindex C1 l12:@syncodeindexcommand
+   *normal_command@syncodeindex C1 l12:@syncodeindexcommand
    |EXTRA
    |misc_args:A{cp|fn}
     *line_arg C3
@@ -85,14 +85,14 @@ $result_tree_text{'macro_in_index_commands'} = '*document_root C3
      {normal_text:cp fn}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@macro C3 l14
+   *normal_command@macro C3 l14
    |EXTRA
    |formal_args:A{}
    |macro_name:{truc}
     *arguments_line C1
      {macro_line: truc \\n}
     {raw:truc\\n}
-    *@end C1 l16
+    *normal_command@end C1 l16
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -102,7 +102,7 @@ $result_tree_text{'macro_in_index_commands'} = '*document_root C3
    {empty_line:\\n}
   *paragraph C3
    {normal_text:definedx truc\\n}
-   *@defindex C1 l19
+   *normal_command@defindex C1 l19
    |EXTRA
    |misc_args:A{truc}
     *line_arg C3
@@ -117,14 +117,14 @@ $result_tree_text{'macro_in_index_commands'} = '*document_root C3
      {spaces_after_argument:\\n}
    {normal_text:after\\n}
   {empty_line:\\n}
-  *@macro C3 l22
+  *normal_command@macro C3 l22
   |EXTRA
   |formal_args:A{}
   |macro_name:{trucindexcommand}
    *arguments_line C1
     {macro_line: trucindexcommand \\n}
    {raw:@trucindex\\n}
-   *@end C1 l24
+   *normal_command@end C1 l24
    |EXTRA
    |text_arg:{macro}
     *line_arg C3
@@ -132,14 +132,14 @@ $result_tree_text{'macro_in_index_commands'} = '*document_root C3
      {normal_text:macro}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@macro C3 l26
+  *normal_command@macro C3 l26
   |EXTRA
   |formal_args:A{}
   |macro_name:{codeidx}
    *arguments_line C1
     {macro_line: codeidx \\n}
    {raw:codeidx\\n}
-   *@end C1 l28
+   *normal_command@end C1 l28
    |EXTRA
    |text_arg:{macro}
     *line_arg C3
@@ -147,7 +147,7 @@ $result_tree_text{'macro_in_index_commands'} = '*document_root C3
      {normal_text:macro}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@defcodeindex C1 l30
+  *normal_command@defcodeindex C1 l30
   |EXTRA
   |misc_args:A{codeidx}
    *line_arg C3
@@ -161,14 +161,14 @@ $result_tree_text{'macro_in_index_commands'} = '*document_root C3
     >macro_expansion<end;5><p:7>
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@macro C3 l32
+  *normal_command@macro C3 l32
   |EXTRA
   |formal_args:A{}
   |macro_name:{defcodeindexentry}
    *arguments_line C1
     {macro_line: defcodeindexentry \\n}
    {raw:a @var{index entry} t@\'e @^{@dotless{i}}\\n}
-   *@end C1 l34
+   *normal_command@end C1 l34
    |EXTRA
    |text_arg:{macro}
     *line_arg C3
@@ -176,7 +176,7 @@ $result_tree_text{'macro_in_index_commands'} = '*document_root C3
      {normal_text:macro}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l36 {Top}
+ *normal_command@node C1 l36 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -186,7 +186,7 @@ $result_tree_text{'macro_in_index_commands'} = '*document_root C3
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@node C15 l37 {chap}
+ *normal_command@node C15 l37 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -224,19 +224,19 @@ $result_tree_text{'macro_in_index_commands'} = '*document_root C3
      >*macro_call@defcodeindexentry C1
       >*brace_arg
     {normal_text:a }
-    *@var C1 l41:@defcodeindexentry
+    *normal_command@var C1 l41:@defcodeindexentry
      *brace_container C1
       {normal_text:index entry}
     {normal_text: t}
-    *@\' C1 l41:@defcodeindexentry
+    *normal_command@\' C1 l41:@defcodeindexentry
      *following_arg C1
       {normal_text:e}
     {normal_text: }
-    *@^ C1 l41:@defcodeindexentry
+    *normal_command@^ C1 l41:@defcodeindexentry
     >SOURCEMARKS
     >macro_expansion<end;7>
      *brace_container C1
-      *@dotless C1 l41:@defcodeindexentry
+      *normal_command@dotless C1 l41:@defcodeindexentry
        *brace_container C1
         {normal_text:i}
     {spaces_after_argument:\\n}
@@ -271,7 +271,7 @@ $result_tree_text{'macro_in_index_commands'} = '*document_root C3
   {empty_line:\\n}
   *paragraph C1
    {normal_text:macro truc\\n}
-  *@printindex C1 l47
+  *normal_command@printindex C1 l47
   |EXTRA
   |global_command_number:{1}
   |misc_args:A{truc}
@@ -288,7 +288,7 @@ $result_tree_text{'macro_in_index_commands'} = '*document_root C3
   {empty_line:\\n}
   *paragraph C1
    {normal_text:macro cp\\n}
-  *@printindex C1 l50
+  *normal_command@printindex C1 l50
   |EXTRA
   |global_command_number:{2}
   |misc_args:A{cp}

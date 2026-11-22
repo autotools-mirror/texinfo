@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'paragraphindent_and_preamble'} = '*document_root C5
  *before_node_section C3
   *preamble_before_content C4
-   *@copying C5 l1
+   *normal_command@copying C5 l1
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
@@ -20,7 +20,7 @@ $result_tree_text{'paragraphindent_and_preamble'} = '*document_root C5
     {empty_line:\\n}
     *paragraph C1
      {normal_text:Copying second para.\\n}
-    *@end C1 l5
+    *normal_command@end C1 l5
     |EXTRA
     |text_arg:{copying}
      *line_arg C3
@@ -28,7 +28,7 @@ $result_tree_text{'paragraphindent_and_preamble'} = '*document_root C5
       {normal_text:copying}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@paragraphindent C1 l7
+   *normal_command@paragraphindent C1 l7
    |EXTRA
    |global_command_number:{1}
    |misc_args:A{1}
@@ -40,7 +40,7 @@ $result_tree_text{'paragraphindent_and_preamble'} = '*document_root C5
   *paragraph C1
    {normal_text:After paragraphindent.\\n}
   {empty_line:\\n}
- *@node C1 l11 {Top}
+ *normal_command@node C1 l11 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -50,7 +50,7 @@ $result_tree_text{'paragraphindent_and_preamble'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C6 l12 {test @@paragraphindent in preamble effect in preamble}
+ *normal_command@top C6 l12 {test @@paragraphindent in preamble effect in preamble}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -58,7 +58,7 @@ $result_tree_text{'paragraphindent_and_preamble'} = '*document_root C5
    *line_arg C5
     {spaces_before_argument: }
     {normal_text:test }
-    *@@
+    *normal_command@@
     {normal_text:paragraphindent in preamble effect in preamble}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
@@ -68,7 +68,7 @@ $result_tree_text{'paragraphindent_and_preamble'} = '*document_root C5
   *paragraph C1
    {normal_text:Second para.\\n}
   {empty_line:\\n}
- *@bye C1
+ *normal_command@bye C1
   *line_arg C1
    {spaces_before_argument:\\n}
  *postamble_after_end C1

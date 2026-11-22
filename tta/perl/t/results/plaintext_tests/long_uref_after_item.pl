@@ -11,20 +11,20 @@ use Encode;
 $result_tree_text{'long_uref_after_item'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@itemize C3 l1
+  *normal_command@itemize C3 l1
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
-   *@item C2 l2
+   *normal_command@item C2 l2
    |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command:\\n}
     *paragraph C2
-     *@uref C1 l3
+     *normal_command@uref C1 l3
       *brace_arg C1
        {normal_text:http://foo.org/some/long/url/which/goes/past/eighty/columns/and/has/no/alternative/text.html}
      {normal_text:\\n}
-   *@end C1 l4
+   *normal_command@end C1 l4
    |EXTRA
    |text_arg:{itemize}
     *line_arg C3

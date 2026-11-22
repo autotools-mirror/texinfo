@@ -12,7 +12,7 @@ $result_tree_text{'verb'} = '*document_root C1
  *before_node_section C8
   *preamble_before_content
   *paragraph C2
-   *@verb C1 l1
+   *normal_command@verb C1 l1
     *brace_container C3
      {verb_delimiter:!}
      {raw:a}
@@ -20,7 +20,7 @@ $result_tree_text{'verb'} = '*document_root C1
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@verb C1 l3
+   *normal_command@verb C1 l3
     *brace_container C3
      {verb_delimiter:!}
      {raw:a!a}
@@ -28,7 +28,7 @@ $result_tree_text{'verb'} = '*document_root C1
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@verb C1 l5
+   *normal_command@verb C1 l5
     *brace_container C4
      {verb_delimiter:!}
      {raw:a\\n}
@@ -37,7 +37,7 @@ $result_tree_text{'verb'} = '*document_root C1
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@verb C1 l8
+   *normal_command@verb C1 l8
     *brace_container C3
      {verb_delimiter:%}
      {raw:a%|!:@b}

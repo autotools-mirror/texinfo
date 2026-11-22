@@ -11,10 +11,10 @@ use Encode;
 $result_tree_text{'inline_in_node'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content C2
-   *@settitle C1 l1
+   *normal_command@settitle C1 l1
     *line_arg C5
      {spaces_before_argument: }
-     *@inlineraw C2 l1
+     *normal_command@inlineraw C2 l1
      |EXTRA
      |expand_index:{1}
      |format:{html}
@@ -23,7 +23,7 @@ $result_tree_text{'inline_in_node'} = '*document_root C5
       *brace_arg C1
        {normal_text:<strong class="ttitle">}
      {normal_text:Title}
-     *@inlineraw C2 l1
+     *normal_command@inlineraw C2 l1
      |EXTRA
      |expand_index:{1}
      |format:{html}
@@ -33,7 +33,7 @@ $result_tree_text{'inline_in_node'} = '*document_root C5
        {normal_text:</strong>}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@node C1 l3 {Top}
+ *normal_command@node C1 l3 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -43,7 +43,7 @@ $result_tree_text{'inline_in_node'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l4
+ *normal_command@top C2 l4
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -51,7 +51,7 @@ $result_tree_text{'inline_in_node'} = '*document_root C5
    *line_arg C1
     {spaces_before_argument:\\n}
   {empty_line:\\n}
- *@node C1 l6 {@inlineraw{html,<code class="tnode">}One@inlineraw{html,</code>}}
+ *normal_command@node C1 l6 {@inlineraw{html,<code class="tnode">}One@inlineraw{html,</code>}}
  |EXTRA
  |identifier:{htmlOnehtml}
  |is_target:{1}
@@ -59,7 +59,7 @@ $result_tree_text{'inline_in_node'} = '*document_root C5
   *arguments_line C1
    *line_arg C5
     {spaces_before_argument: }
-    *@inlineraw C2 l6
+    *normal_command@inlineraw C2 l6
     |EXTRA
     |expand_index:{1}
     |format:{html}
@@ -68,7 +68,7 @@ $result_tree_text{'inline_in_node'} = '*document_root C5
      *brace_arg C1
       {normal_text:<code class="tnode">}
     {normal_text:One}
-    *@inlineraw C2 l6
+    *normal_command@inlineraw C2 l6
     |EXTRA
     |expand_index:{1}
     |format:{html}
@@ -77,7 +77,7 @@ $result_tree_text{'inline_in_node'} = '*document_root C5
      *brace_arg C1
       {normal_text:</code>}
     {spaces_after_argument:\\n}
- *@chapter C2 l7 {@inlineraw{html,<span class="test">}One@inlineraw{html,</span>}}
+ *normal_command@chapter C2 l7 {@inlineraw{html,<span class="test">}One@inlineraw{html,</span>}}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -85,7 +85,7 @@ $result_tree_text{'inline_in_node'} = '*document_root C5
   *arguments_line C1
    *line_arg C5
     {spaces_before_argument: }
-    *@inlineraw C2 l7
+    *normal_command@inlineraw C2 l7
     |EXTRA
     |expand_index:{1}
     |format:{html}
@@ -94,7 +94,7 @@ $result_tree_text{'inline_in_node'} = '*document_root C5
      *brace_arg C1
       {normal_text:<span class="test">}
     {normal_text:One}
-    *@inlineraw C2 l7
+    *normal_command@inlineraw C2 l7
     |EXTRA
     |expand_index:{1}
     |format:{html}

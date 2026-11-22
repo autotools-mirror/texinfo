@@ -11,59 +11,59 @@ use Encode;
 $result_tree_text{'symbol_after_command'} = '*document_root C1
  *before_node_section C4
   *preamble_before_content
-  *@table C9 l1
+  *normal_command@table C9 l1
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     *@asis l1
+     *normal_command@asis l1
      {spaces_after_argument:\\n}
    *table_entry C1
     *table_term C1
-     *@item C1 l2
+     *normal_command@item C1 l2
       *line_arg C2
        {normal_text:. dot}
        {spaces_after_argument:\\n}
    *table_entry C1
     *table_term C1
-     *@item C1 l3
+     *normal_command@item C1 l3
       *line_arg C2
        {normal_text:, comma}
        {spaces_after_argument:\\n}
    *table_entry C1
     *table_term C1
-     *@item C1 l4
+     *normal_command@item C1 l4
       *line_arg C4
-       *@@
+       *normal_command@@
        {normal_text: }
-       *@@
+       *normal_command@@
        {spaces_after_argument:\\n}
    *table_entry C1
     *table_term C1
-     *@item C1 l5
+     *normal_command@item C1 l5
       *line_arg C4
-       *@{
+       *normal_command@{
        {normal_text: }
-       *@{
+       *normal_command@{
        {spaces_after_argument:\\n}
    *table_entry C1
     *table_term C1
-     *@item C1 l6
+     *normal_command@item C1 l6
       *line_arg C2
        {normal_text:! exclam}
        {spaces_after_argument:\\n}
    *table_entry C1
     *table_term C1
-     *@item C1 l7
+     *normal_command@item C1 l7
       *line_arg C2
        {normal_text:\'\' quotes}
        {spaces_after_argument:\\n}
    *table_entry C1
     *table_term C1
-     *@item C1 l8
+     *normal_command@item C1 l8
       *line_arg C2
        {normal_text:: colon}
        {spaces_after_argument:\\n}
-   *@end C1 l9
+   *normal_command@end C1 l9
    |EXTRA
    |text_arg:{table}
     *line_arg C3
@@ -72,23 +72,23 @@ $result_tree_text{'symbol_after_command'} = '*document_root C1
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C18
-   *@@
+   *normal_command@@
    {normal_text:. }
-   *@{
+   *normal_command@{
    {normal_text:, }
-   *@@
-   *@@
+   *normal_command@@
+   *normal_command@@
    {normal_text: }
-   *@?
+   *normal_command@?
    {normal_text:, }
-   *@!
+   *normal_command@!
    {normal_text:: }
-   *@@
-   *@{
+   *normal_command@@
+   *normal_command@{
    {normal_text: }
-   *@@
+   *normal_command@@
    {normal_text:\'\' }
-   *@@
+   *normal_command@@
    {normal_text::\\n}
 ';
 

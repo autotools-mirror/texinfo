@@ -13,7 +13,7 @@ $result_tree_text{'comments_in_text'} = '*document_root C1
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content C2
-   *@c C1
+   *normal_command@c C1
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:lone comment}
@@ -21,18 +21,18 @@ $result_tree_text{'comments_in_text'} = '*document_root C1
    {empty_line:\\n}
   *paragraph C6
    {normal_text:Text line followed by a comment on the same line and another below }
-   *@c C1
+   *normal_command@c C1
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:comment}
      {spaces_after_argument:\\n}
-   *@c C1
+   *normal_command@c C1
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:comment}
      {spaces_after_argument:\\n}
    {normal_text:Text line after the comment followed by a comment }
-   *@comment C1
+   *normal_command@comment C1
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:c}
@@ -41,7 +41,7 @@ $result_tree_text{'comments_in_text'} = '*document_root C1
   {empty_line:\\n}
   *paragraph C2
    {normal_text:Comment at the end of the line }
-   *@c C1
+   *normal_command@c C1
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:comment}

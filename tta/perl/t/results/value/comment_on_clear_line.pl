@@ -11,64 +11,64 @@ use Encode;
 $result_tree_text{'comment_on_clear_line'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C10
-   *@set C1
+   *normal_command@set C1
    |EXTRA
    |misc_args:A{x|}
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:x}
      {spaces_after_argument:\\n}
-   *@set C1
+   *normal_command@set C1
    |EXTRA
    |misc_args:A{y|}
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:y}
      {spaces_after_argument:\\n}
-   *@set C1
+   *normal_command@set C1
    |EXTRA
    |misc_args:A{z|g}
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:z g}
      {spaces_after_argument:\\n}
-   *@set C1
+   *normal_command@set C1
    |EXTRA
    |misc_args:A{t|a vv}
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:t a vv }
-     *@comment C1
+     *normal_command@comment C1
       *line_arg C2
        {rawline_text:@ggg}
        {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@clear C1
+   *normal_command@clear C1
    |EXTRA
    |misc_args:A{x}
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:x}
-     *@c C1
+     *normal_command@c C1
       *line_arg C2
        {rawline_text:}
        {spaces_after_argument:\\n}
-   *@clear C1
+   *normal_command@clear C1
    |EXTRA
    |misc_args:A{y}
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:y }
-     *@c C1
+     *normal_command@c C1
       *line_arg C2
        {rawline_text:}
        {spaces_after_argument:\\n}
-   *@clear C1
+   *normal_command@clear C1
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:z g@c}
      {spaces_after_argument:\\n}
-   *@clear C1
+   *normal_command@clear C1
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:t a vv @comment@ggg}
@@ -76,22 +76,22 @@ $result_tree_text{'comment_on_clear_line'} = '*document_root C1
    {empty_line:\\n}
   *paragraph C5
    {normal_text:!}
-   *@value C1
+   *normal_command@value C1
     *brace_container C1
      {normal_text:x}
    {normal_text:!, !}
-   *@value C1
+   *normal_command@value C1
     *brace_container C1
      {normal_text:y}
    {normal_text:!, !g!, !a vv!\\n}
    >SOURCEMARKS
    >value_expansion<start;1><p:4>{g}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:z}
    >value_expansion<end;1><p:5>
    >value_expansion<start;2><p:9>{a vv}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:t}
    >value_expansion<end;2><p:13>

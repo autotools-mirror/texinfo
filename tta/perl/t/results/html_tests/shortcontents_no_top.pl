@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'shortcontents_no_top'} = '*document_root C4
  *before_node_section C1
   *preamble_before_content
- *@chapter C2 l1 {chap}
+ *normal_command@chapter C2 l1 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -24,7 +24,7 @@ $result_tree_text{'shortcontents_no_top'} = '*document_root C4
     {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@chapter C2 l3 {chap2}
+ *normal_command@chapter C2 l3 {chap2}
  |EXTRA
  |identifier:{chap2}
  |is_target:{1}
@@ -37,7 +37,7 @@ $result_tree_text{'shortcontents_no_top'} = '*document_root C4
     {normal_text:chap2}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@section C3 l5 {sec}
+ *normal_command@section C3 l5 {sec}
  |EXTRA
  |identifier:{sec}
  |is_target:{1}
@@ -50,7 +50,7 @@ $result_tree_text{'shortcontents_no_top'} = '*document_root C4
     {normal_text:sec}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@shortcontents C1 l7
+  *normal_command@shortcontents C1 l7
   |EXTRA
   |global_command_number:{1}
    *line_arg C1

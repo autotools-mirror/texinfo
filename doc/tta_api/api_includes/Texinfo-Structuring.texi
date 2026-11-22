@@ -100,11 +100,11 @@ Find the @emph{$node_relations} node relations children based on the
 sectioning structure.  For the node associated with @code{@@top} sectioning
 command, the sections associated with parts are considered.
 
-@item new_block_command($element, $command_name)
-@anchor{Texinfo@asis{::}Structuring new_block_command($element@comma{} $command_name)}
+@item new_block_command($element)
+@anchor{Texinfo@asis{::}Structuring new_block_command($element)}
 @cindex @code{new_block_command}
 
-Complete @emph{$element} by adding the @emph{$command_name}, the command line
+Complete @emph{$element} by adding the command line
 argument and @code{@@end} to turn the element to a proper block command.
 
 @item $new_menu = new_complete_node_menu($node_relations, $lang_translations, $debug_level, $use_sections)

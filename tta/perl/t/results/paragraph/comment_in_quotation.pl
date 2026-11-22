@@ -13,17 +13,17 @@ $result_tree_text{'comment_in_quotation'} = '*document_root C1
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content
-  *@quotation C3 l2
+  *normal_command@quotation C3 l2
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C2
     {normal_text:Quotation }
-    *@c C1
+    *normal_command@c C1
      *line_arg C2
       {rawline_text:}
       {spaces_after_argument:\\n}
-   *@end C1 l4
+   *normal_command@end C1 l4
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3
@@ -31,17 +31,17 @@ $result_tree_text{'comment_in_quotation'} = '*document_root C1
      {normal_text:quotation}
      {spaces_after_argument: \\n}
   {empty_line:\\n}
-  *@quotation C3 l6
+  *normal_command@quotation C3 l6
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C2
     {normal_text:Quotation no space}
-    *@c C1
+    *normal_command@c C1
      *line_arg C2
       {rawline_text:}
       {spaces_after_argument:\\n}
-   *@end C1 l8
+   *normal_command@end C1 l8
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3

@@ -11,16 +11,16 @@ use Encode;
 $result_tree_text{'quotation_author_in_example'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@example C3 l1
+  *normal_command@example C3 l1
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
-   *@quotation C3 l2
+   *normal_command@quotation C3 l2
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument: \\n}
     *preformatted C2
-     *@author C1 l3
+     *normal_command@author C1 l3
      |EXTRA
      |global_command_number:{1}
       *line_arg C3
@@ -28,14 +28,14 @@ $result_tree_text{'quotation_author_in_example'} = '*document_root C1
        {normal_text:Some One}
        {spaces_after_argument:\\n}
      {normal_text:A quot---ation\\n}
-    *@end C1 l5
+    *normal_command@end C1 l5
     |EXTRA
     |text_arg:{quotation}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:quotation}
       {spaces_after_argument:\\n}
-   *@end C1 l6
+   *normal_command@end C1 l6
    |EXTRA
    |text_arg:{example}
     *line_arg C3

@@ -12,14 +12,14 @@ $result_tree_text{'indicateurl_end_lines'} = '*document_root C1
  *before_node_section C5
   *preamble_before_content
   *paragraph C2
-   *@indicateurl C1 l1
+   *normal_command@indicateurl C1 l1
     *brace_container C2
      {normal_text:http://begin\\n}
      {normal_text:continue on other line}
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C1
-   *@indicateurl C1 l4
+   *normal_command@indicateurl C1 l4
     *brace_container C2
      {normal_text:http://begin2\\n}
      {empty_line:\\n}

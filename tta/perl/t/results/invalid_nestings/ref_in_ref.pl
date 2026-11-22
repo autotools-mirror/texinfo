@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'ref_in_ref'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
- *@node C2 l1 {first}
+ *normal_command@node C2 l1 {first}
  |EXTRA
  |identifier:{first}
  |is_target:{1}
@@ -22,12 +22,12 @@ $result_tree_text{'ref_in_ref'} = '*document_root C2
     {normal_text:first}
     {spaces_after_argument:\\n}
   *paragraph C1
-   *@ref C1 l2
+   *normal_command@ref C1 l2
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{first}
-     *@ref C1 l2
+     *normal_command@ref C1 l2
       *brace_arg C1
       |EXTRA
       |node_content:A{0|0}

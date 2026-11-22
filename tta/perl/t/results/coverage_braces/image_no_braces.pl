@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'image_no_braces'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@image C1 l1
+  *normal_command@image C1 l1
    {spaces_after_cmd_before_arg: }
 ';
 

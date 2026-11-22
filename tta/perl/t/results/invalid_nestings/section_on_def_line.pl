@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'section_on_def_line'} = '*document_root C2
  *before_node_section C2
   *preamble_before_content
-  *@deffn C1 l1
+  *normal_command@deffn C1 l1
    *def_line C1 l1
    |EXTRA
    |def_command:{deffn}
@@ -27,7 +27,7 @@ $result_tree_text{'section_on_def_line'} = '*document_root C2
       *def_line_arg C1
        {normal_text:b}
      {spaces_after_argument: }
- *@section C4 l1 {s}
+ *normal_command@section C4 l1 {s}
  |EXTRA
  |identifier:{s}
  |is_target:{1}

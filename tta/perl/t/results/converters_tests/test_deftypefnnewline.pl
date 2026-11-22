@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'test_deftypefnnewline'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content C4
-   *@setfilename C1 l1
+   *normal_command@setfilename C1 l1
    |EXTRA
    |text_arg:{test_deftypefnnewline.info}
     *line_arg C3
@@ -19,7 +19,7 @@ $result_tree_text{'test_deftypefnnewline'} = '*document_root C5
      {normal_text:test_deftypefnnewline.info}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@deftypefnnewline C1 l3
+   *normal_command@deftypefnnewline C1 l3
    |EXTRA
    |global_command_number:{1}
    |misc_args:A{on}
@@ -28,7 +28,7 @@ $result_tree_text{'test_deftypefnnewline'} = '*document_root C5
      {normal_text:on}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@node C1 l5 {Top}
+ *normal_command@node C1 l5 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -38,7 +38,7 @@ $result_tree_text{'test_deftypefnnewline'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l6 {top}
+ *normal_command@top C2 l6 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -48,7 +48,7 @@ $result_tree_text{'test_deftypefnnewline'} = '*document_root C5
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l8 {chapter}
+ *normal_command@node C1 l8 {chapter}
  |EXTRA
  |identifier:{chapter}
  |is_target:{1}
@@ -58,7 +58,7 @@ $result_tree_text{'test_deftypefnnewline'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:chapter}
     {spaces_after_argument:\\n}
- *@chapter C31 l9 {chap}
+ *normal_command@chapter C31 l9 {chap}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -69,7 +69,7 @@ $result_tree_text{'test_deftypefnnewline'} = '*document_root C5
     {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@deftypefun C3 l11
+  *normal_command@deftypefun C3 l11
    *def_line C1 l11
    |EXTRA
    |def_command:{deftypefun}
@@ -99,7 +99,7 @@ $result_tree_text{'test_deftypefnnewline'} = '*document_root C5
    *def_item C1
     *paragraph C1
      {normal_text:aaa\\n}
-   *@end C1 l13
+   *normal_command@end C1 l13
    |EXTRA
    |text_arg:{deftypefun}
     *line_arg C3
@@ -107,7 +107,7 @@ $result_tree_text{'test_deftypefnnewline'} = '*document_root C5
      {normal_text:deftypefun}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@deftypefn C3 l15
+  *normal_command@deftypefn C3 l15
    *def_line C1 l15
    |EXTRA
    |def_command:{deftypefn}
@@ -131,7 +131,7 @@ $result_tree_text{'test_deftypefnnewline'} = '*document_root C5
    *def_item C1
     *paragraph C1
      {normal_text:d--eftypefn no arg\\n}
-   *@end C1 l17
+   *normal_command@end C1 l17
    |EXTRA
    |text_arg:{deftypefn}
     *line_arg C3
@@ -139,7 +139,7 @@ $result_tree_text{'test_deftypefnnewline'} = '*document_root C5
      {normal_text:deftypefn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@deftypeop C3 l19
+  *normal_command@deftypeop C3 l19
    *def_line C1 l19
    |EXTRA
    |def_command:{deftypeop}
@@ -171,7 +171,7 @@ $result_tree_text{'test_deftypefnnewline'} = '*document_root C5
    *def_item C1
     *paragraph C1
      {normal_text:d--eftypeop\\n}
-   *@end C1 l21
+   *normal_command@end C1 l21
    |EXTRA
    |text_arg:{deftypeop}
     *line_arg C3
@@ -179,7 +179,7 @@ $result_tree_text{'test_deftypefnnewline'} = '*document_root C5
      {normal_text:deftypeop}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@deftypeop C3 l23
+  *normal_command@deftypeop C3 l23
    *def_line C1 l23
    |EXTRA
    |def_command:{deftypeop}
@@ -207,7 +207,7 @@ $result_tree_text{'test_deftypefnnewline'} = '*document_root C5
    *def_item C1
     *paragraph C1
      {normal_text:d--eftypeop no arg\\n}
-   *@end C1 l25
+   *normal_command@end C1 l25
    |EXTRA
    |text_arg:{deftypeop}
     *line_arg C3
@@ -215,7 +215,7 @@ $result_tree_text{'test_deftypefnnewline'} = '*document_root C5
      {normal_text:deftypeop}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@deftypecv C3 l27
+  *normal_command@deftypecv C3 l27
    *def_line C1 l27
    |EXTRA
    |def_command:{deftypecv}
@@ -243,7 +243,7 @@ $result_tree_text{'test_deftypefnnewline'} = '*document_root C5
    *def_item C1
     *paragraph C1
      {normal_text:d--eftypecv\\n}
-   *@end C1 l29
+   *normal_command@end C1 l29
    |EXTRA
    |text_arg:{deftypecv}
     *line_arg C3
@@ -251,7 +251,7 @@ $result_tree_text{'test_deftypefnnewline'} = '*document_root C5
      {normal_text:deftypecv}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@deftypecv C3 l31
+  *normal_command@deftypecv C3 l31
    *def_line C1 l31
    |EXTRA
    |def_command:{deftypecv}
@@ -283,7 +283,7 @@ $result_tree_text{'test_deftypefnnewline'} = '*document_root C5
    *def_item C1
     *paragraph C1
      {normal_text:d--eftypecv with arguments\\n}
-   *@end C1 l33
+   *normal_command@end C1 l33
    |EXTRA
    |text_arg:{deftypecv}
     *line_arg C3
@@ -291,7 +291,7 @@ $result_tree_text{'test_deftypefnnewline'} = '*document_root C5
      {normal_text:deftypecv}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@deffn C3 l35
+  *normal_command@deffn C3 l35
    *def_line C1 l35
    |EXTRA
    |def_command:{deffn}
@@ -311,7 +311,7 @@ $result_tree_text{'test_deftypefnnewline'} = '*document_root C5
    *def_item C1
     *paragraph C1
      {normal_text:fff\\n}
-   *@end C1 l37
+   *normal_command@end C1 l37
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3
@@ -319,7 +319,7 @@ $result_tree_text{'test_deftypefnnewline'} = '*document_root C5
      {normal_text:deffn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@deftypefnnewline C1 l39
+  *normal_command@deftypefnnewline C1 l39
   |EXTRA
   |global_command_number:{2}
   |misc_args:A{off}
@@ -328,7 +328,7 @@ $result_tree_text{'test_deftypefnnewline'} = '*document_root C5
     {normal_text:off}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@deftypefun C3 l41
+  *normal_command@deftypefun C3 l41
    *def_line C1 l41
    |EXTRA
    |def_command:{deftypefun}
@@ -358,7 +358,7 @@ $result_tree_text{'test_deftypefnnewline'} = '*document_root C5
    *def_item C1
     *paragraph C1
      {normal_text:aaa2\\n}
-   *@end C1 l43
+   *normal_command@end C1 l43
    |EXTRA
    |text_arg:{deftypefun}
     *line_arg C3
@@ -366,7 +366,7 @@ $result_tree_text{'test_deftypefnnewline'} = '*document_root C5
      {normal_text:deftypefun}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@deftypefn C3 l45
+  *normal_command@deftypefn C3 l45
    *def_line C1 l45
    |EXTRA
    |def_command:{deftypefn}
@@ -390,7 +390,7 @@ $result_tree_text{'test_deftypefnnewline'} = '*document_root C5
    *def_item C1
     *paragraph C1
      {normal_text:d--eftypefn no arg2\\n}
-   *@end C1 l47
+   *normal_command@end C1 l47
    |EXTRA
    |text_arg:{deftypefn}
     *line_arg C3
@@ -398,7 +398,7 @@ $result_tree_text{'test_deftypefnnewline'} = '*document_root C5
      {normal_text:deftypefn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@deftypeop C3 l49
+  *normal_command@deftypeop C3 l49
    *def_line C1 l49
    |EXTRA
    |def_command:{deftypeop}
@@ -430,7 +430,7 @@ $result_tree_text{'test_deftypefnnewline'} = '*document_root C5
    *def_item C1
     *paragraph C1
      {normal_text:d--eftypeop2\\n}
-   *@end C1 l51
+   *normal_command@end C1 l51
    |EXTRA
    |text_arg:{deftypeop}
     *line_arg C3
@@ -438,7 +438,7 @@ $result_tree_text{'test_deftypefnnewline'} = '*document_root C5
      {normal_text:deftypeop}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@deftypeop C3 l53
+  *normal_command@deftypeop C3 l53
    *def_line C1 l53
    |EXTRA
    |def_command:{deftypeop}
@@ -466,7 +466,7 @@ $result_tree_text{'test_deftypefnnewline'} = '*document_root C5
    *def_item C1
     *paragraph C1
      {normal_text:d--eftypeop no arg2\\n}
-   *@end C1 l55
+   *normal_command@end C1 l55
    |EXTRA
    |text_arg:{deftypeop}
     *line_arg C3
@@ -474,7 +474,7 @@ $result_tree_text{'test_deftypefnnewline'} = '*document_root C5
      {normal_text:deftypeop}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@deftypecv C3 l57
+  *normal_command@deftypecv C3 l57
    *def_line C1 l57
    |EXTRA
    |def_command:{deftypecv}
@@ -502,7 +502,7 @@ $result_tree_text{'test_deftypefnnewline'} = '*document_root C5
    *def_item C1
     *paragraph C1
      {normal_text:d--eftypecv2\\n}
-   *@end C1 l59
+   *normal_command@end C1 l59
    |EXTRA
    |text_arg:{deftypecv}
     *line_arg C3
@@ -510,7 +510,7 @@ $result_tree_text{'test_deftypefnnewline'} = '*document_root C5
      {normal_text:deftypecv}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@deftypecv C3 l61
+  *normal_command@deftypecv C3 l61
    *def_line C1 l61
    |EXTRA
    |def_command:{deftypecv}
@@ -542,7 +542,7 @@ $result_tree_text{'test_deftypefnnewline'} = '*document_root C5
    *def_item C1
     *paragraph C1
      {normal_text:d--eftypecv with arguments2\\n}
-   *@end C1 l63
+   *normal_command@end C1 l63
    |EXTRA
    |text_arg:{deftypecv}
     *line_arg C3
@@ -550,7 +550,7 @@ $result_tree_text{'test_deftypefnnewline'} = '*document_root C5
      {normal_text:deftypecv}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@deffn C3 l65
+  *normal_command@deffn C3 l65
    *def_line C1 l65
    |EXTRA
    |def_command:{deffn}
@@ -570,7 +570,7 @@ $result_tree_text{'test_deftypefnnewline'} = '*document_root C5
    *def_item C1
     *paragraph C1
      {normal_text:fff2\\n}
-   *@end C1 l67
+   *normal_command@end C1 l67
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3

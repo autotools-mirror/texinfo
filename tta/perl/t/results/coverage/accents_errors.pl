@@ -13,39 +13,39 @@ $result_tree_text{'accents_errors'} = '*document_root C1
   *preamble_before_content
   *paragraph C10
    {normal_text:accent at end of line }
-   *@ringaccent C2 l1
+   *normal_command@ringaccent C2 l1
     {spaces_after_cmd_before_arg:\\n}
     *following_arg C1
      {normal_text:a}
    {normal_text:ccent at end of line and spaces }
-   *@ringaccent C2 l2
+   *normal_command@ringaccent C2 l2
     {spaces_after_cmd_before_arg:  \\n}
     *following_arg C1
      {normal_text:a}
    {normal_text:ccent followed by }
-   *@@
+   *normal_command@@
    {normal_text: }
-   *@ringaccent l3
-   *@.
+   *normal_command@ringaccent l3
+   *normal_command@.
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C11
    {normal_text:accent character with spaces }
-   *@~ C2 l5
+   *normal_command@~ C2 l5
     {spaces_after_cmd_before_arg: }
     *following_arg C1
      {normal_text:f}
    {normal_text:ollowing.\\n}
    {normal_text:accent character at end of line }
-   *@~ C2 l6
+   *normal_command@~ C2 l6
     {spaces_after_cmd_before_arg:\\n}
     *following_arg C1
      {normal_text:a}
    {normal_text:ccent character followed by }
-   *@@
+   *normal_command@@
    {normal_text: }
-   *@~ l7
-   *@.
+   *normal_command@~ l7
+   *normal_command@.
    {normal_text:\\n}
 ';
 

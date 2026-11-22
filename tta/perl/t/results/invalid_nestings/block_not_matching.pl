@@ -11,14 +11,14 @@ use Encode;
 $result_tree_text{'block_not_matching'} = '*document_root C1
  *before_node_section C16
   *preamble_before_content
-  *@quotation C2 l1
+  *normal_command@quotation C2 l1
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C1
     {normal_text:A quotation\\n}
   {empty_line:\\n}
-  *@deffn C2 l5
+  *normal_command@deffn C2 l5
    *def_line C1 l5
    |EXTRA
    |def_command:{deffn}
@@ -42,15 +42,15 @@ $result_tree_text{'block_not_matching'} = '*document_root C1
     *paragraph C1
      {normal_text:Text\\n}
   {empty_line:\\n}
-  *@table C2 l9
+  *normal_command@table C2 l9
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     *@asis l9
+     *normal_command@asis l9
      {spaces_after_argument:\\n}
    *table_entry C2
     *table_term C1
-     *@item C1 l10
+     *normal_command@item C1 l10
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:item}
@@ -59,49 +59,49 @@ $result_tree_text{'block_not_matching'} = '*document_root C1
      *paragraph C1
       {normal_text:line\\n}
   {empty_line:\\n}
-  *@table C2 l14
+  *normal_command@table C2 l14
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     *@emph l14
+     *normal_command@emph l14
      {spaces_after_argument:\\n}
    *table_entry C2
     *table_term C1
-     *@item C1 l15
+     *normal_command@item C1 l15
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:ref}
        {spaces_after_argument:\\n}
     *table_definition C1
-     *@example C2 l16
+     *normal_command@example C2 l16
       *arguments_line C1
        *block_line_arg C1
         {spaces_before_argument:\\n}
       *preformatted C1
        {normal_text:example\\n}
   {empty_line:\\n}
-  *@group C2 l21
+  *normal_command@group C2 l21
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C1
     {normal_text:in group\\n}
   {empty_line:\\n}
-  *@group C2 l25
+  *normal_command@group C2 l25
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C1
     {normal_text:in group 2\\n}
   {empty_line:\\n}
-  *@cartouche C2 l29
+  *normal_command@cartouche C2 l29
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C1
     {normal_text:cartouche\\n}
   {empty_line:\\n}
-  *@cartouche C2 l33
+  *normal_command@cartouche C2 l33
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}

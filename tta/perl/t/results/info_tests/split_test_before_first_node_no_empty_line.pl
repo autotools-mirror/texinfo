@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'split_test_before_first_node_no_empty_line'} = '*document_root C5
  *before_node_section C2
   *preamble_before_content C2
-   *@setfilename C1 l1
+   *normal_command@setfilename C1 l1
    |EXTRA
    |text_arg:{split_test_before_first_node_no_empty_line.info}
     *line_arg C3
@@ -21,7 +21,7 @@ $result_tree_text{'split_test_before_first_node_no_empty_line'} = '*document_roo
    {empty_line:\\n}
   *paragraph C1
    {normal_text:truc machin et reuc machin  ze aze zea zae eaz eaz zae\\n}
- *@node C1 l4 {Top}
+ *normal_command@node C1 l4 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -31,7 +31,7 @@ $result_tree_text{'split_test_before_first_node_no_empty_line'} = '*document_roo
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C6 l5 {top}
+ *normal_command@top C6 l5 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -44,7 +44,7 @@ $result_tree_text{'split_test_before_first_node_no_empty_line'} = '*document_roo
   *paragraph C1
    {normal_text:In top node\\n}
   {empty_line:\\n}
-  *@menu C3 l9
+  *normal_command@menu C3 l9
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -59,7 +59,7 @@ $result_tree_text{'split_test_before_first_node_no_empty_line'} = '*document_roo
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l11
+   *normal_command@end C1 l11
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -67,7 +67,7 @@ $result_tree_text{'split_test_before_first_node_no_empty_line'} = '*document_roo
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l13 {chap1}
+ *normal_command@node C1 l13 {chap1}
  |EXTRA
  |identifier:{chap1}
  |is_target:{1}
@@ -77,7 +77,7 @@ $result_tree_text{'split_test_before_first_node_no_empty_line'} = '*document_roo
     {spaces_before_argument: }
     {normal_text:chap1}
     {spaces_after_argument:\\n}
- *@chapter C4 l14 {chap}
+ *normal_command@chapter C4 l14 {chap}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}

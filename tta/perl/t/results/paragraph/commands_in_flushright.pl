@@ -11,18 +11,18 @@ use Encode;
 $result_tree_text{'commands_in_flushright'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@flushright C26 l1
+  *normal_command@flushright C26 l1
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    {empty_line:\\n}
-   *@group C3 l3
+   *normal_command@group C3 l3
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *paragraph C1
      {normal_text:in group\\n}
-    *@end C1 l5
+    *normal_command@end C1 l5
     |EXTRA
     |text_arg:{group}
      *line_arg C3
@@ -30,7 +30,7 @@ $result_tree_text{'commands_in_flushright'} = '*document_root C1
       {normal_text:group}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@quotation C3 l7
+   *normal_command@quotation C3 l7
     *arguments_line C1
      *block_line_arg C3
       {spaces_before_argument: }
@@ -38,7 +38,7 @@ $result_tree_text{'commands_in_flushright'} = '*document_root C1
       {spaces_after_argument:\\n}
     *paragraph C1
      {normal_text:in quotation\\n}
-    *@end C1 l9
+    *normal_command@end C1 l9
     |EXTRA
     |text_arg:{quotation}
      *line_arg C3
@@ -46,24 +46,24 @@ $result_tree_text{'commands_in_flushright'} = '*document_root C1
       {normal_text:quotation}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@enumerate C4 l11
+   *normal_command@enumerate C4 l11
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
-    *@item C3 l12
+    *normal_command@item C3 l12
     |EXTRA
     |item_number:{1}
      {ignorable_spaces_after_command: }
      *paragraph C1
       {normal_text:item\\n}
      {empty_line:\\n}
-    *@item C2 l14
+    *normal_command@item C2 l14
     |EXTRA
     |item_number:{2}
      {ignorable_spaces_after_command: }
      *paragraph C1
       {normal_text:other item\\n}
-    *@end C1 l15
+    *normal_command@end C1 l15
     |EXTRA
     |text_arg:{enumerate}
      *line_arg C3
@@ -71,20 +71,20 @@ $result_tree_text{'commands_in_flushright'} = '*document_root C1
       {normal_text:enumerate}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@table C3 l17
+   *normal_command@table C3 l17
     *arguments_line C1
      *block_line_arg C3
       {spaces_before_argument: }
-      *@emph l17
+      *normal_command@emph l17
       {spaces_after_argument:\\n}
     *table_entry C2
      *table_term C2
-      *@item C1 l18
+      *normal_command@item C1 l18
        *line_arg C3
         {spaces_before_argument: }
         {normal_text:table item}
         {spaces_after_argument:\\n}
-      *@itemx C1 l19
+      *normal_command@itemx C1 l19
        *line_arg C3
         {spaces_before_argument: }
         {normal_text:table itemx}
@@ -95,7 +95,7 @@ $result_tree_text{'commands_in_flushright'} = '*document_root C1
       {empty_line:\\n}
       *paragraph C1
        {normal_text:Text.\\n}
-    *@end C1 l23
+    *normal_command@end C1 l23
     |EXTRA
     |text_arg:{table}
      *line_arg C3
@@ -103,13 +103,13 @@ $result_tree_text{'commands_in_flushright'} = '*document_root C1
       {normal_text:table}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@multitable C3 l25
+   *normal_command@multitable C3 l25
    |EXTRA
    |max_columns:{2}
     *arguments_line C1
      *block_line_arg C2
       {spaces_before_argument: }
-      *@columnfractions C1 l25
+      *normal_command@columnfractions C1 l25
       |EXTRA
       |misc_args:A{0.5|0.5}
        *line_arg C3
@@ -120,13 +120,13 @@ $result_tree_text{'commands_in_flushright'} = '*document_root C1
      *row C2
      |EXTRA
      |row_number:{1}
-      *@item C2 l26
+      *normal_command@item C2 l26
       |EXTRA
       |cell_number:{1}
        {ignorable_spaces_after_command: }
        *paragraph C1
         {normal_text:col1 }
-      *@tab C2 l26
+      *normal_command@tab C2 l26
       |EXTRA
       |cell_number:{2}
        {ignorable_spaces_after_command: }
@@ -135,7 +135,7 @@ $result_tree_text{'commands_in_flushright'} = '*document_root C1
      *row C2
      |EXTRA
      |row_number:{2}
-      *@item C4 l27
+      *normal_command@item C4 l27
       |EXTRA
       |cell_number:{1}
        {ignorable_spaces_after_command: }
@@ -144,14 +144,14 @@ $result_tree_text{'commands_in_flushright'} = '*document_root C1
        {empty_line:\\n}
        *paragraph C1
         {normal_text:in multitable\\n}
-      *@tab C3 l30
+      *normal_command@tab C3 l30
       |EXTRA
       |cell_number:{2}
        {ignorable_spaces_after_command: \\n}
        {empty_line:\\n}
        *paragraph C1
         {normal_text:text col2\\n}
-    *@end C1 l33
+    *normal_command@end C1 l33
     |EXTRA
     |text_arg:{multitable}
      *line_arg C3
@@ -159,7 +159,7 @@ $result_tree_text{'commands_in_flushright'} = '*document_root C1
       {normal_text:multitable}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@float C7 l35
+   *normal_command@float C7 l35
    |EXTRA
    |float_number:{1}
    |float_type:{label}
@@ -178,12 +178,12 @@ $result_tree_text{'commands_in_flushright'} = '*document_root C1
     *paragraph C1
      {normal_text:in float\\n}
     {empty_line:\\n}
-    *@caption C1 l39
+    *normal_command@caption C1 l39
      *brace_command_context C1
       *paragraph C1
        {normal_text:in caption}
     {spaces_after_close_brace:\\n}
-    *@end C1 l40
+    *normal_command@end C1 l40
     |EXTRA
     |text_arg:{float}
      *line_arg C3
@@ -193,7 +193,7 @@ $result_tree_text{'commands_in_flushright'} = '*document_root C1
    {empty_line:\\n}
    *paragraph C1
     {normal_text:Sp:\\n}
-   *@sp C1 l43
+   *normal_command@sp C1 l43
    |EXTRA
    |misc_args:A{2}
     *line_arg C3
@@ -201,13 +201,13 @@ $result_tree_text{'commands_in_flushright'} = '*document_root C1
      {normal_text:2}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@smallexample C3 l45
+   *normal_command@smallexample C3 l45
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *preformatted C1
      {normal_text:in example\\n}
-    *@end C1 l47
+    *normal_command@end C1 l47
     |EXTRA
     |text_arg:{smallexample}
      *line_arg C3
@@ -215,13 +215,13 @@ $result_tree_text{'commands_in_flushright'} = '*document_root C1
       {normal_text:smallexample}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@format C3 l49
+   *normal_command@format C3 l49
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *preformatted C1
      {normal_text:in format\\n}
-    *@end C1 l51
+    *normal_command@end C1 l51
     |EXTRA
     |text_arg:{format}
      *line_arg C3
@@ -229,13 +229,13 @@ $result_tree_text{'commands_in_flushright'} = '*document_root C1
       {normal_text:format}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@flushleft C3 l53
+   *normal_command@flushleft C3 l53
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *paragraph C1
      {normal_text:in flushleft\\n}
-    *@end C1 l55
+    *normal_command@end C1 l55
     |EXTRA
     |text_arg:{flushleft}
      *line_arg C3
@@ -243,13 +243,13 @@ $result_tree_text{'commands_in_flushright'} = '*document_root C1
       {normal_text:flushleft}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@center C1 l57
+   *normal_command@center C1 l57
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:in center}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@end C1 l59
+   *normal_command@end C1 l59
    |EXTRA
    |text_arg:{flushright}
     *line_arg C3

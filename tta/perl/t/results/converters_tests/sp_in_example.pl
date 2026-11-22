@@ -11,13 +11,13 @@ use Encode;
 $result_tree_text{'sp_in_example'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@example C3 l1
+  *normal_command@example C3 l1
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C18
     {normal_text:Para\\n}
-    *@sp C1 l3
+    *normal_command@sp C1 l3
     |EXTRA
     |misc_args:A{1}
      *line_arg C3
@@ -26,10 +26,10 @@ $result_tree_text{'sp_in_example'} = '*document_root C1
       {spaces_after_argument:\\n}
     {normal_text:other para\\n}
     {normal_text:Now lone }
-    *@@
+    *normal_command@@
     {normal_text:sp:\\n}
     {empty_line:\\n}
-    *@sp C1 l7
+    *normal_command@sp C1 l7
     |EXTRA
     |misc_args:A{1}
      *line_arg C3
@@ -37,7 +37,7 @@ $result_tree_text{'sp_in_example'} = '*document_root C1
       {normal_text:1}
       {spaces_after_argument:\\n}
     {empty_line:\\n}
-    *@sp C1 l9
+    *normal_command@sp C1 l9
     |EXTRA
     |misc_args:A{2}
      *line_arg C3
@@ -47,7 +47,7 @@ $result_tree_text{'sp_in_example'} = '*document_root C1
     {normal_text:Para after sp\\n}
     {empty_line:\\n}
     {normal_text:A\\n}
-    *@sp C1 l13
+    *normal_command@sp C1 l13
     |EXTRA
     |misc_args:A{2}
      *line_arg C3
@@ -57,14 +57,14 @@ $result_tree_text{'sp_in_example'} = '*document_root C1
     {normal_text:B\\n}
     {empty_line:\\n}
     {normal_text:sp after para\\n}
-    *@sp C1 l17
+    *normal_command@sp C1 l17
     |EXTRA
     |misc_args:A{1}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:1}
       {spaces_after_argument:\\n}
-   *@end C1 l18
+   *normal_command@end C1 l18
    |EXTRA
    |text_arg:{example}
     *line_arg C3

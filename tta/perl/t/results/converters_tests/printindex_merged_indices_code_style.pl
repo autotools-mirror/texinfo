@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'printindex_merged_indices_code_style'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'printindex_merged_indices_code_style'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l2 {top}
+ *normal_command@top C2 l2 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -31,7 +31,7 @@ $result_tree_text{'printindex_merged_indices_code_style'} = '*document_root C5
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l4 {chap}
+ *normal_command@node C1 l4 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -42,7 +42,7 @@ $result_tree_text{'printindex_merged_indices_code_style'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:chap}
     {spaces_after_argument:\\n}
- *@chapter C25 l5 {Chapter}
+ *normal_command@chapter C25 l5 {Chapter}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -53,7 +53,7 @@ $result_tree_text{'printindex_merged_indices_code_style'} = '*document_root C5
     {normal_text:Chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@synindex C1 l7
+  *normal_command@synindex C1 l7
   |EXTRA
   |misc_args:A{cp|fn}
    *line_arg C3
@@ -61,7 +61,7 @@ $result_tree_text{'printindex_merged_indices_code_style'} = '*document_root C5
     {normal_text:cp fn}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@synindex C1 l9
+  *normal_command@synindex C1 l9
   |EXTRA
   |misc_args:A{vr|fn}
    *line_arg C3
@@ -96,7 +96,7 @@ $result_tree_text{'printindex_merged_indices_code_style'} = '*document_root C5
     {normal_text:f``g}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@defcodeindex C1 l17
+  *normal_command@defcodeindex C1 l17
   |EXTRA
   |misc_args:A{cdi}
    *line_arg C3
@@ -104,7 +104,7 @@ $result_tree_text{'printindex_merged_indices_code_style'} = '*document_root C5
     {normal_text:cdi}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@synindex C1 l19
+  *normal_command@synindex C1 l19
   |EXTRA
   |misc_args:A{cdi|fn}
    *line_arg C3
@@ -121,7 +121,7 @@ $result_tree_text{'printindex_merged_indices_code_style'} = '*document_root C5
     {normal_text:cdi``h}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@defindex C1 l23
+  *normal_command@defindex C1 l23
   |EXTRA
   |misc_args:A{ddi}
    *line_arg C3
@@ -129,7 +129,7 @@ $result_tree_text{'printindex_merged_indices_code_style'} = '*document_root C5
     {normal_text:ddi}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@syncodeindex C1 l25
+  *normal_command@syncodeindex C1 l25
   |EXTRA
   |misc_args:A{ddi|cp}
    *line_arg C3
@@ -146,7 +146,7 @@ $result_tree_text{'printindex_merged_indices_code_style'} = '*document_root C5
     {normal_text:ddi``g}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@printindex C1 l29
+  *normal_command@printindex C1 l29
   |EXTRA
   |global_command_number:{1}
   |misc_args:A{fn}

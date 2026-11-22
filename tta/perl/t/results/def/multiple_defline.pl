@@ -11,11 +11,11 @@ use Encode;
 $result_tree_text{'multiple_defline'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@defblock C6 l1
+  *normal_command@defblock C6 l1
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
-   *@defline C1 l2
+   *normal_command@defline C1 l2
    |EXTRA
    |def_command:{defline}
    |original_def_cmdname:{defline}
@@ -39,7 +39,7 @@ $result_tree_text{'multiple_defline'} = '*document_root C1
     *paragraph C2
      {normal_text:description1 description1 description1 description1 description1\\n}
      {normal_text:description1 description1 description1 description1 description1\\n}
-   *@defline C1 l5
+   *normal_command@defline C1 l5
    |EXTRA
    |def_command:{defline}
    |original_def_cmdname:{defline}
@@ -68,7 +68,7 @@ $result_tree_text{'multiple_defline'} = '*document_root C1
     *paragraph C2
      {normal_text:description2 description2 description2 description2 description2\\n}
      {normal_text:description2 description2 description2 description2 description2\\n}
-   *@end C1 l8
+   *normal_command@end C1 l8
    |EXTRA
    |text_arg:{defblock}
     *line_arg C3

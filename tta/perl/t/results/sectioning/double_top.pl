@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'double_top'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content
- *@node C2 l1 {ToP}
+ *normal_command@node C2 l1 {ToP}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -28,7 +28,7 @@ $result_tree_text{'double_top'} = '*document_root C3
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C4 l3 {top}
+ *normal_command@node C4 l3 {top}
  |EXTRA
  |identifier:{Top}
  |node_number:{2}
@@ -49,7 +49,7 @@ $result_tree_text{'double_top'} = '*document_root C3
     {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@anchor C1 l5
+  *normal_command@anchor C1 l5
   |EXTRA
   |identifier:{Top}
    *brace_arg C1

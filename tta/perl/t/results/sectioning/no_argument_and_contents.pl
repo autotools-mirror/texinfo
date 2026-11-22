@@ -11,13 +11,13 @@ use Encode;
 $result_tree_text{'no_argument_and_contents'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content C2
-   *@contents C1 l1
+   *normal_command@contents C1 l1
    |EXTRA
    |global_command_number:{1}
     *line_arg C1
      {spaces_before_argument:\\n}
    {empty_line:\\n}
- *@top C2 l3 {for example}
+ *normal_command@top C2 l3 {for example}
  |EXTRA
  |identifier:{for-example}
  |is_target:{1}
@@ -29,7 +29,7 @@ $result_tree_text{'no_argument_and_contents'} = '*document_root C3
     {normal_text:for example}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@chapter C2 l5 {@asis{}}
+ *normal_command@chapter C2 l5 {@asis{}}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -37,7 +37,7 @@ $result_tree_text{'no_argument_and_contents'} = '*document_root C3
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    *@asis C1 l5
+    *normal_command@asis C1 l5
      *brace_container
     {spaces_after_argument:\\n}
   {empty_line:\\n}

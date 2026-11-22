@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'command_in_end_ignored_raw_in_command'} = '*document_root C1
  *before_node_section C1
   *preamble_before_content C1
-   *@html C2 l1
+   *normal_command@html C2 l1
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}

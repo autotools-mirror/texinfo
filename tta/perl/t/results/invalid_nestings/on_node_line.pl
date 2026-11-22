@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'on_node_line'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {@ref{a, b, c, filename}}
+ *normal_command@node C1 l1 {@ref{a, b, c, filename}}
  |EXTRA
  |identifier:{a}
  |is_target:{1}
@@ -19,7 +19,7 @@ $result_tree_text{'on_node_line'} = '*document_root C2
   *arguments_line C2
    *line_arg C2
     {spaces_before_argument: }
-    *@ref C4 l1
+    *normal_command@ref C4 l1
      *brace_arg C1
      |EXTRA
      |node_content:A{0|0}
@@ -40,7 +40,7 @@ $result_tree_text{'on_node_line'} = '*document_root C2
    |normalized:{-}
     {spaces_before_argument: }
     {normal_text:(}
-    *@pxref C4 l1
+    *normal_command@pxref C4 l1
      *brace_arg C1
      |EXTRA
      |node_content:A{0|0}
@@ -52,20 +52,20 @@ $result_tree_text{'on_node_line'} = '*document_root C2
       {normal_text:somemanual}
     {normal_text:)}
     {normal_text: }
-    *@anchor C1 l1
+    *normal_command@anchor C1 l1
     |EXTRA
     |identifier:{in-anchor}
     |is_target:{1}
      *brace_arg C1
       {normal_text:in anchor}
-    *@footnote C1 l1
+    *normal_command@footnote C1 l1
     |EXTRA
     |global_command_number:{1}
      *brace_command_context C1
       *paragraph C1
        {normal_text:footnote}
     {normal_text: }
-    *@exdent C1 l1
+    *normal_command@exdent C1 l1
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:exdent}

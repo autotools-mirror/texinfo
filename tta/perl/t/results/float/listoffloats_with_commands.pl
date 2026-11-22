@@ -11,18 +11,18 @@ use Encode;
 $result_tree_text{'listoffloats_with_commands'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@listoffloats C1 l1
+  *normal_command@listoffloats C1 l1
   |EXTRA
   |float_type:{théorème}
   |global_command_number:{1}
    *line_arg C7
     {spaces_before_argument: }
     {normal_text:th}
-    *@\' C1 l1
+    *normal_command@\' C1 l1
      *following_arg C1
       {normal_text:e}
     {normal_text:or}
-    *@` C1 l1
+    *normal_command@` C1 l1
      *following_arg C1
       {normal_text:e}
     {normal_text:me}

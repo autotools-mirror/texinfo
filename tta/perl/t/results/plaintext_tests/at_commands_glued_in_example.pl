@@ -11,25 +11,25 @@ use Encode;
 $result_tree_text{'at_commands_glued_in_example'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@example C3 l1
+  *normal_command@example C3 l1
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C41
     {normal_text:at}
-    *@@
+    *normal_command@@
     {normal_text:.\\n}
     {normal_text:TeX}
-    *@TeX C1 l3
+    *normal_command@TeX C1 l3
      *brace_container
     {normal_text:TeX.\\n}
     {normal_text:code}
-    *@code C1 l4
+    *normal_command@code C1 l4
      *brace_container C1
       {normal_text:in code}
     {normal_text:code.\\n}
     {normal_text:acronym}
-    *@acronym C2 l5
+    *normal_command@acronym C2 l5
      *brace_arg C1
       {normal_text:ABC}
      *brace_arg C2
@@ -37,12 +37,12 @@ $result_tree_text{'at_commands_glued_in_example'} = '*document_root C1
       {normal_text:aaa bb cc}
     {normal_text:acronym.\\n}
     {normal_text:acronym2}
-    *@acronym C1 l6
+    *normal_command@acronym C1 l6
      *brace_arg C1
       {normal_text:ABC}
     {normal_text:acronym.\\n}
     {normal_text:email}
-    *@email C2 l7
+    *normal_command@email C2 l7
      *brace_arg C1
       {normal_text:somebody}
      *brace_arg C2
@@ -50,7 +50,7 @@ $result_tree_text{'at_commands_glued_in_example'} = '*document_root C1
       {normal_text:mali}
     {normal_text:email.\\n}
     {normal_text:ref}
-    *@ref C1 l8
+    *normal_command@ref C1 l8
      *brace_arg C1
      |EXTRA
      |node_content:A{0|0}
@@ -58,7 +58,7 @@ $result_tree_text{'at_commands_glued_in_example'} = '*document_root C1
       {normal_text:Top}
     {normal_text:ref.\\n}
     {normal_text:Foornote}
-    *@footnote C1 l9
+    *normal_command@footnote C1 l9
     |EXTRA
     |global_command_number:{1}
      *brace_command_context C1
@@ -66,21 +66,21 @@ $result_tree_text{'at_commands_glued_in_example'} = '*document_root C1
        {normal_text:in footnote}
     {normal_text:after footnote.\\n}
     {normal_text:accent}
-    *@^ C1 l10
+    *normal_command@^ C1 l10
      *brace_container C1
-      *@dotless C1 l10
+      *normal_command@dotless C1 l10
        *brace_container C1
         {normal_text:i}
     {normal_text:accent.\\n}
     {normal_text:and star}
-    *@*
+    *normal_command@*
     {normal_text:star.\\n}
     {normal_text:noindent}
-    *@noindent l12
+    *normal_command@noindent l12
     {ignorable_spaces_after_command: }
     {normal_text:after noindent\\n}
     {normal_text:sp}
-    *@sp C1 l13
+    *normal_command@sp C1 l13
     |EXTRA
     |misc_args:A{4}
      *line_arg C3
@@ -88,7 +88,7 @@ $result_tree_text{'at_commands_glued_in_example'} = '*document_root C1
       {normal_text:4}
       {spaces_after_argument:\\n}
     {normal_text:anchor}
-    *@anchor C1 l14
+    *normal_command@anchor C1 l14
     |EXTRA
     |identifier:{anchor}
     |is_target:{1}
@@ -103,7 +103,7 @@ $result_tree_text{'at_commands_glued_in_example'} = '*document_root C1
       {spaces_before_argument: }
       {normal_text:index}
       {spaces_after_argument:\\n}
-   *@end C1 l16
+   *normal_command@end C1 l16
    |EXTRA
    |text_arg:{example}
     *line_arg C3

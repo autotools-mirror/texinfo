@@ -14,12 +14,12 @@ $result_tree_text{'info_ifinfo_ifnotplaintext'} = '*document_root C1
    {normal_text:}
    >SOURCEMARKS
    >expanded_conditional_command<start;1>
-    >*@ifinfo C1 l1
+    >*normal_command@ifinfo C1 l1
      >*arguments_line C1
       >*block_line_arg C1
        >{spaces_before_argument:\\n}
    >expanded_conditional_command<start;2>
-    >*@ifnotplaintext C1 l2
+    >*normal_command@ifnotplaintext C1 l2
      >*arguments_line C1
       >*block_line_arg C1
        >{spaces_before_argument:\\n}
@@ -27,7 +27,7 @@ $result_tree_text{'info_ifinfo_ifnotplaintext'} = '*document_root C1
    {normal_text:This will be in Info, but not plain text.\\n}
    >SOURCEMARKS
    >expanded_conditional_command<end;2><p:42>
-    >*@end C1 l4
+    >*normal_command@end C1 l4
     >|EXTRA
     >|text_arg:{ifnotplaintext}
      >*line_arg C3
@@ -35,7 +35,7 @@ $result_tree_text{'info_ifinfo_ifnotplaintext'} = '*document_root C1
       >{normal_text:ifnotplaintext}
       >{spaces_after_argument:\\n}
    >expanded_conditional_command<end;1><p:42>
-    >*@end C1 l5
+    >*normal_command@end C1 l5
     >|EXTRA
     >|text_arg:{ifinfo}
      >*line_arg C3

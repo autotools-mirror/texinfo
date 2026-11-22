@@ -13,47 +13,47 @@ $result_tree_text{'kbd'} = '*document_root C1
   *preamble_before_content
   *paragraph C3
    {normal_text:kbd: }
-   *@code C1 l1
+   *normal_command@code C1 l1
     *brace_container C1
      {normal_text:in kbd}
    {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C3
    {normal_text:kbd in code: }
-   *@code C1 l3
+   *normal_command@code C1 l3
     *brace_container C2
      {normal_text:in first }
-     *@kbd C1 l3
+     *normal_command@kbd C1 l3
       *brace_container C1
        {normal_text:in nested kbd}
    {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C3
    {normal_text:kbd in kbd: }
-   *@kbd C1 l5
+   *normal_command@kbd C1 l5
     *brace_container C2
      {normal_text:in top kbd }
-     *@kbd C1 l5
+     *normal_command@kbd C1 l5
       *brace_container C1
        {normal_text:in nested kbd}
    {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C3
    {normal_text:kbd in }
-   *@@
+   *normal_command@@
    {normal_text:example:\\n}
   {empty_line:\\n}
-  *@example C3 l9
+  *normal_command@example C3 l9
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument: \\n}
    *preformatted C3
     {normal_text:in example\\n}
-    *@code C1 l11
+    *normal_command@code C1 l11
      *brace_container C1
       {normal_text:in example in kbd}
     {normal_text:.\\n}
-   *@end C1 l12
+   *normal_command@end C1 l12
    |EXTRA
    |text_arg:{example}
     *line_arg C3
@@ -63,20 +63,20 @@ $result_tree_text{'kbd'} = '*document_root C1
   {empty_line:\\n}
   *paragraph C3
    {normal_text:kbd in }
-   *@@
+   *normal_command@@
    {normal_text:format:\\n}
   {empty_line:\\n}
-  *@format C3 l16
+  *normal_command@format C3 l16
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument: \\n}
    *preformatted C3
     {normal_text:in format\\n}
-    *@code C1 l18
+    *normal_command@code C1 l18
      *brace_container C1
       {normal_text:in format in kbd}
     {normal_text:.\\n}
-   *@end C1 l19
+   *normal_command@end C1 l19
    |EXTRA
    |text_arg:{format}
     *line_arg C3

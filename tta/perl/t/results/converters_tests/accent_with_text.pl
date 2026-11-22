@@ -12,29 +12,29 @@ $result_tree_text{'accent_with_text'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *paragraph C10
-   *@u C1 l1
+   *normal_command@u C1 l1
     *brace_container C1
      {normal_text:--a}
    {normal_text: }
-   *@dotless C1 l1
+   *normal_command@dotless C1 l1
     *brace_container C1
      {normal_text:--b}
    {normal_text: }
-   *@^ C1 l1
+   *normal_command@^ C1 l1
     *brace_container C2
      {normal_text:--}
-     *@dotless C1 l1
+     *normal_command@dotless C1 l1
       *brace_container C1
        {normal_text:i}
    {normal_text: }
-   *@^ C1 l1
+   *normal_command@^ C1 l1
     *brace_container C2
      {normal_text:--}
-     *@dotless C1 l1
+     *normal_command@dotless C1 l1
       *brace_container C1
        {normal_text:j}
    {normal_text: }
-   *@^ C1 l1
+   *normal_command@^ C1 l1
     *brace_container C1
      {normal_text:--a}
    {normal_text:\\n}

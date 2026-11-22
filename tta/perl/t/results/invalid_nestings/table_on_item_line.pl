@@ -11,29 +11,29 @@ use Encode;
 $result_tree_text{'table_on_item_line'} = '*document_root C1
  *before_node_section C3
   *preamble_before_content
-  *@table C4 l1
+  *normal_command@table C4 l1
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     *@asis l1
+     *normal_command@asis l1
      {spaces_after_argument:\\n}
    *table_entry C2
     *table_term C1
-     *@item C1 l2
+     *normal_command@item C1 l2
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:item }
-       *@table C1 l2
+       *normal_command@table C1 l2
         *arguments_line C1
          *block_line_arg C3
           {spaces_before_argument: }
-          *@asis l2
+          *normal_command@asis l2
           {spaces_after_argument:\\n}
     *table_definition C1
      {spaces_before_paragraph:   }
    *table_entry C2
     *table_term C1
-     *@item C1 l3
+     *normal_command@item C1 l3
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:in nested table item}
@@ -43,7 +43,7 @@ $result_tree_text{'table_on_item_line'} = '*document_root C1
      *paragraph C2
       {normal_text:in nested table line\\n}
       {normal_text:   }
-   *@end C1 l5
+   *normal_command@end C1 l5
    |EXTRA
    |text_arg:{table}
     *line_arg C3

@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'node_up_direction_for_top_with_manual'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}

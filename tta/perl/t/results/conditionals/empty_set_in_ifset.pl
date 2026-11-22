@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'empty_set_in_ifset'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C2
-   *@set C1
+   *normal_command@set C1
    |EXTRA
    |misc_args:A{a|}
     *line_arg C3
@@ -21,7 +21,7 @@ $result_tree_text{'empty_set_in_ifset'} = '*document_root C1
    {empty_line:\\n}
    >SOURCEMARKS
    >expanded_conditional_command<start;1><p:1>
-    >*@ifset C1 l3
+    >*normal_command@ifset C1 l3
      >*arguments_line C1
       >*block_line_arg C3
        >{spaces_before_argument: }
@@ -31,12 +31,12 @@ $result_tree_text{'empty_set_in_ifset'} = '*document_root C1
    {normal_text:a is set to:||.\\n}
    >SOURCEMARKS
    >value_expansion<start;1><p:13>{}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:a}
    >value_expansion<end;1><p:13>
    >expanded_conditional_command<end;1><p:16>
-    >*@end C1 l5
+    >*normal_command@end C1 l5
     >|EXTRA
     >|text_arg:{ifset}
      >*line_arg C2

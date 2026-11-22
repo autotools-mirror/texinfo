@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'acronym_in_node_and_section'} = '*document_root C9
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {top}
+ *normal_command@node C1 l1 {top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'acronym_in_node_and_section'} = '*document_root C9
     {spaces_before_argument: }
     {normal_text:top}
     {spaces_after_argument:\\n}
- *@top C2 l2 {top}
+ *normal_command@top C2 l2 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -31,7 +31,7 @@ $result_tree_text{'acronym_in_node_and_section'} = '*document_root C9
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l4 {chap}
+ *normal_command@node C1 l4 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -41,7 +41,7 @@ $result_tree_text{'acronym_in_node_and_section'} = '*document_root C9
     {spaces_before_argument: }
     {normal_text:chap}
     {spaces_after_argument:\\n}
- *@chapter C2 l5 {chap}
+ *normal_command@chapter C2 l5 {chap}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -52,7 +52,7 @@ $result_tree_text{'acronym_in_node_and_section'} = '*document_root C9
     {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l7 {sec define}
+ *normal_command@node C1 l7 {sec define}
  |EXTRA
  |identifier:{sec-define}
  |is_target:{1}
@@ -62,7 +62,7 @@ $result_tree_text{'acronym_in_node_and_section'} = '*document_root C9
     {spaces_before_argument: }
     {normal_text:sec define}
     {spaces_after_argument:\\n}
- *@section C4 l8 {define}
+ *normal_command@section C4 l8 {define}
  |EXTRA
  |section_heading_number:{1.1}
  |section_level:{2}
@@ -74,7 +74,7 @@ $result_tree_text{'acronym_in_node_and_section'} = '*document_root C9
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@acronym C2 l10
+   *normal_command@acronym C2 l10
     *brace_arg C1
      {normal_text:GHJ}
     *brace_arg C2
@@ -82,7 +82,7 @@ $result_tree_text{'acronym_in_node_and_section'} = '*document_root C9
      {normal_text:Good Hypo Jolly}
    {normal_text:\\n}
   {empty_line:\\n}
- *@node C1 l12 {sec here is @acronym{GHJ}}
+ *normal_command@node C1 l12 {sec here is @acronym{GHJ}}
  |EXTRA
  |identifier:{sec-here-is-GHJ}
  |is_target:{1}
@@ -91,11 +91,11 @@ $result_tree_text{'acronym_in_node_and_section'} = '*document_root C9
    *line_arg C4
     {spaces_before_argument: }
     {normal_text:sec here is }
-    *@acronym C1 l12
+    *normal_command@acronym C1 l12
      *brace_arg C1
       {normal_text:GHJ}
     {spaces_after_argument:\\n}
- *@section C3 l13 {here is @acronym{GHJ}}
+ *normal_command@section C3 l13 {here is @acronym{GHJ}}
  |EXTRA
  |section_heading_number:{1.2}
  |section_level:{2}
@@ -104,14 +104,14 @@ $result_tree_text{'acronym_in_node_and_section'} = '*document_root C9
    *line_arg C4
     {spaces_before_argument: }
     {normal_text:here is }
-    *@acronym C1 l13
+    *normal_command@acronym C1 l13
      *brace_arg C1
       {normal_text:GHJ}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C3
    {normal_text:In text }
-   *@acronym C1 l15
+   *normal_command@acronym C1 l15
     *brace_arg C1
      {normal_text:GHJ}
    {normal_text:.\\n}

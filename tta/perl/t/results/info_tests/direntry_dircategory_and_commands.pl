@@ -11,16 +11,16 @@ use Encode;
 $result_tree_text{'direntry_dircategory_and_commands'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content C7
-   *@dircategory C1 l1
+   *normal_command@dircategory C1 l1
     *line_arg C5
      {spaces_before_argument: }
      {normal_text:``category---}
-     *@var C1 l1
+     *normal_command@var C1 l1
       *brace_container C1
        {normal_text:th  ere}
      {normal_text:?\'\'}
      {spaces_after_argument:\\n}
-   *@direntry C3 l2
+   *normal_command@direntry C3 l2
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
@@ -39,11 +39,11 @@ $result_tree_text{'direntry_dircategory_and_commands'} = '*document_root C3
      *menu_entry_description C1
       *preformatted C3
        {normal_text:``hello---}
-       *@var C1 l3
+       *normal_command@var C1 l3
         *brace_container C1
          {normal_text:there}
        {normal_text:?\'\'\\n}
-    *@end C1 l4
+    *normal_command@end C1 l4
     |EXTRA
     |text_arg:{direntry}
      *line_arg C3
@@ -51,12 +51,12 @@ $result_tree_text{'direntry_dircategory_and_commands'} = '*document_root C3
       {normal_text:direntry}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@dircategory C1 l6
+   *normal_command@dircategory C1 l6
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:cat2}
      {spaces_after_argument:\\n}
-   *@direntry C4 l7
+   *normal_command@direntry C4 l7
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
@@ -77,7 +77,7 @@ $result_tree_text{'direntry_dircategory_and_commands'} = '*document_root C3
      *preformatted C2
       {after_menu_description_line:\\n}
       {normal_text:menutitle\\n}
-    *@end C1 l12
+    *normal_command@end C1 l12
     |EXTRA
     |text_arg:{direntry}
      *line_arg C3
@@ -86,7 +86,7 @@ $result_tree_text{'direntry_dircategory_and_commands'} = '*document_root C3
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    {empty_line:\\n}
- *@node C1 l15 {Top}
+ *normal_command@node C1 l15 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -96,7 +96,7 @@ $result_tree_text{'direntry_dircategory_and_commands'} = '*document_root C3
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C3 l16 {Test dircategory and direntry}
+ *normal_command@top C3 l16 {Test dircategory and direntry}
  |EXTRA
  |section_level:{0}
  |section_number:{1}

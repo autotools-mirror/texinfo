@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'nodedescriptionblock_descriptions'} = '*document_root C13
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'nodedescriptionblock_descriptions'} = '*document_root C13
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C4 l2 {test of nodedescriptionblock used in menu}
+ *normal_command@top C4 l2 {test of nodedescriptionblock used in menu}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -31,7 +31,7 @@ $result_tree_text{'nodedescriptionblock_descriptions'} = '*document_root C13
     {normal_text:test of nodedescriptionblock used in menu}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C8 l4
+  *normal_command@menu C8 l4
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -96,7 +96,7 @@ $result_tree_text{'nodedescriptionblock_descriptions'} = '*document_root C13
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l11
+   *normal_command@end C1 l11
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -104,7 +104,7 @@ $result_tree_text{'nodedescriptionblock_descriptions'} = '*document_root C13
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l13 {toto}
+ *normal_command@node C1 l13 {toto}
  |EXTRA
  |identifier:{toto}
  |is_target:{1}
@@ -114,7 +114,7 @@ $result_tree_text{'nodedescriptionblock_descriptions'} = '*document_root C13
     {spaces_before_argument: }
     {normal_text:toto}
     {spaces_after_argument:\\n}
- *@chapter C6 l14 {Toto}
+ *normal_command@chapter C6 l14 {Toto}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -125,37 +125,37 @@ $result_tree_text{'nodedescriptionblock_descriptions'} = '*document_root C13
     {normal_text:Toto}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@nodedescription C1 l16
+  *normal_command@nodedescription C1 l16
    *line_arg C10
     {spaces_before_argument: }
     {normal_text:toto is there:: and the }
-    *@emph C1 l16
+    *normal_command@emph C1 l16
      *brace_container C1
       {normal_text:is a description}
-    *@w C1 l16
+    *normal_command@w C1 l16
      *brace_container C1
       {normal_text:slightly long}
     {normal_text: and }
-    *@verb C1 l16
+    *normal_command@verb C1 l16
      *brace_container C3
       {verb_delimiter::}
       {raw:vv somewhat}
       {verb_delimiter::}
     {normal_text: }
-    *@ringaccent C2 l16
+    *normal_command@ringaccent C2 l16
      {spaces_after_cmd_before_arg: }
      *following_arg C1
       {normal_text:a}
     {normal_text:nexpected}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@nodedescriptionblock C3 l18
+  *normal_command@nodedescriptionblock C3 l18
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C1
     {normal_text:Block along line node description for toto\\n}
-   *@end C1 l20
+   *normal_command@end C1 l20
    |EXTRA
    |text_arg:{nodedescriptionblock}
     *line_arg C3
@@ -163,7 +163,7 @@ $result_tree_text{'nodedescriptionblock_descriptions'} = '*document_root C13
      {normal_text:nodedescriptionblock}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l22 {titi}
+ *normal_command@node C1 l22 {titi}
  |EXTRA
  |identifier:{titi}
  |is_target:{1}
@@ -173,7 +173,7 @@ $result_tree_text{'nodedescriptionblock_descriptions'} = '*document_root C13
     {spaces_before_argument: }
     {normal_text:titi}
     {spaces_after_argument:\\n}
- *@chapter C4 l23 {Titi}
+ *normal_command@chapter C4 l23 {Titi}
  |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
@@ -184,13 +184,13 @@ $result_tree_text{'nodedescriptionblock_descriptions'} = '*document_root C13
     {normal_text:Titi}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@nodedescriptionblock C3 l25
+  *normal_command@nodedescriptionblock C3 l25
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C1
     {normal_text:description of titi in block\\n}
-   *@end C1 l27
+   *normal_command@end C1 l27
    |EXTRA
    |text_arg:{nodedescriptionblock}
     *line_arg C3
@@ -198,7 +198,7 @@ $result_tree_text{'nodedescriptionblock_descriptions'} = '*document_root C13
      {normal_text:nodedescriptionblock}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l29 {other}
+ *normal_command@node C1 l29 {other}
  |EXTRA
  |identifier:{other}
  |is_target:{1}
@@ -208,7 +208,7 @@ $result_tree_text{'nodedescriptionblock_descriptions'} = '*document_root C13
     {spaces_before_argument: }
     {normal_text:other}
     {spaces_after_argument:\\n}
- *@chapter C4 l30 {Other}
+ *normal_command@chapter C4 l30 {Other}
  |EXTRA
  |section_heading_number:{3}
  |section_level:{1}
@@ -219,7 +219,7 @@ $result_tree_text{'nodedescriptionblock_descriptions'} = '*document_root C13
     {normal_text:Other}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@nodedescriptionblock C7 l32
+  *normal_command@nodedescriptionblock C7 l32
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -229,20 +229,20 @@ $result_tree_text{'nodedescriptionblock_descriptions'} = '*document_root C13
    *paragraph C1
     {normal_text:Para2\\n}
    {empty_line:\\n}
-   *@quotation C3 l37
+   *normal_command@quotation C3 l37
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *paragraph C1
      {normal_text:a quotation in description\\n}
-    *@end C1 l39
+    *normal_command@end C1 l39
     |EXTRA
     |text_arg:{quotation}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:quotation}
       {spaces_after_argument:\\n}
-   *@end C1 l40
+   *normal_command@end C1 l40
    |EXTRA
    |text_arg:{nodedescriptionblock}
     *line_arg C3
@@ -250,7 +250,7 @@ $result_tree_text{'nodedescriptionblock_descriptions'} = '*document_root C13
      {normal_text:nodedescriptionblock}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l42 {a somewhat long node without description nor following space}
+ *normal_command@node C1 l42 {a somewhat long node without description nor following space}
  |EXTRA
  |identifier:{a-somewhat-long-node-without-description-nor-following-space}
  |is_target:{1}
@@ -260,7 +260,7 @@ $result_tree_text{'nodedescriptionblock_descriptions'} = '*document_root C13
     {spaces_before_argument: }
     {normal_text:a somewhat long node without description nor following space}
     {spaces_after_argument:\\n}
- *@chapter C6 l43 {Somewhat long}
+ *normal_command@chapter C6 l43 {Somewhat long}
  |EXTRA
  |section_heading_number:{4}
  |section_level:{1}
@@ -271,13 +271,13 @@ $result_tree_text{'nodedescriptionblock_descriptions'} = '*document_root C13
     {normal_text:Somewhat long}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@nodedescriptionblock C3 l45
+  *normal_command@nodedescriptionblock C3 l45
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C1
     {normal_text:Block description before, not as long as the node\\n}
-   *@end C1 l47
+   *normal_command@end C1 l47
    |EXTRA
    |text_arg:{nodedescriptionblock}
     *line_arg C3
@@ -285,13 +285,13 @@ $result_tree_text{'nodedescriptionblock_descriptions'} = '*document_root C13
      {normal_text:nodedescriptionblock}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@nodedescription C1 l49
+  *normal_command@nodedescription C1 l49
    *line_arg C3
     {spaces_before_argument: }
     {normal_text:not as long as the node}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l51 {node double nodedescriptionblock}
+ *normal_command@node C1 l51 {node double nodedescriptionblock}
  |EXTRA
  |identifier:{node-double-nodedescriptionblock}
  |is_target:{1}
@@ -301,7 +301,7 @@ $result_tree_text{'nodedescriptionblock_descriptions'} = '*document_root C13
     {spaces_before_argument: }
     {normal_text:node double nodedescriptionblock}
     {spaces_after_argument:\\n}
- *@chapter C6 l52 {test double}
+ *normal_command@chapter C6 l52 {test double}
  |EXTRA
  |section_heading_number:{5}
  |section_level:{1}
@@ -312,13 +312,13 @@ $result_tree_text{'nodedescriptionblock_descriptions'} = '*document_root C13
     {normal_text:test double}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@nodedescriptionblock C3 l54
+  *normal_command@nodedescriptionblock C3 l54
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C1
     {normal_text:block desc 1\\n}
-   *@end C1 l56
+   *normal_command@end C1 l56
    |EXTRA
    |text_arg:{nodedescriptionblock}
     *line_arg C3
@@ -326,13 +326,13 @@ $result_tree_text{'nodedescriptionblock_descriptions'} = '*document_root C13
      {normal_text:nodedescriptionblock}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@nodedescriptionblock C3 l58
+  *normal_command@nodedescriptionblock C3 l58
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C1
     {normal_text:block desc 2\\n}
-   *@end C1 l60
+   *normal_command@end C1 l60
    |EXTRA
    |text_arg:{nodedescriptionblock}
     *line_arg C3

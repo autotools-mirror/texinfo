@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'two_nodes_at_the_end_texi2html'} = '*document_root C7
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'two_nodes_at_the_end_texi2html'} = '*document_root C7
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C4 l2 {top}
+ *normal_command@top C4 l2 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -31,7 +31,7 @@ $result_tree_text{'two_nodes_at_the_end_texi2html'} = '*document_root C7
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C5 l4
+  *normal_command@menu C5 l4
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -68,7 +68,7 @@ $result_tree_text{'two_nodes_at_the_end_texi2html'} = '*document_root C7
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l8
+   *normal_command@end C1 l8
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -76,7 +76,7 @@ $result_tree_text{'two_nodes_at_the_end_texi2html'} = '*document_root C7
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l10 {chapter 1}
+ *normal_command@node C1 l10 {chapter 1}
  |EXTRA
  |identifier:{chapter-1}
  |is_target:{1}
@@ -104,7 +104,7 @@ $result_tree_text{'two_nodes_at_the_end_texi2html'} = '*document_root C7
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@chapter C2 l11 {chapter c1}
+ *normal_command@chapter C2 l11 {chapter c1}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -115,7 +115,7 @@ $result_tree_text{'two_nodes_at_the_end_texi2html'} = '*document_root C7
     {normal_text:chapter c1}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C4 l13 {node after chapter 1}
+ *normal_command@node C4 l13 {node after chapter 1}
  |EXTRA
  |identifier:{node-after-chapter-1}
  |is_target:{1}
@@ -129,7 +129,7 @@ $result_tree_text{'two_nodes_at_the_end_texi2html'} = '*document_root C7
   *paragraph C1
    {normal_text:in node after chapter 1\\n}
   {empty_line:\\n}
- *@node C1 l17 {last node in chapter 1}
+ *normal_command@node C1 l17 {last node in chapter 1}
  |EXTRA
  |identifier:{last-node-in-chapter-1}
  |is_target:{1}

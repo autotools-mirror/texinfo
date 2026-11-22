@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'comment_in_linemacro_call'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C2
-   *@linemacro C4 l1
+   *normal_command@linemacro C4 l1
    |EXTRA
    |formal_args:A{a|b}
    |macro_name:{lm}
@@ -19,7 +19,7 @@ $result_tree_text{'comment_in_linemacro_call'} = '*document_root C1
      {macro_line: lm {a, b}\\n}
     {raw:c \\a\\ d\\n}
     {raw:\\b\\\\n}
-    *@end C1 l4
+    *normal_command@end C1 l4
     |EXTRA
     |text_arg:{linemacro}
      *line_arg C3
@@ -38,11 +38,11 @@ $result_tree_text{'comment_in_linemacro_call'} = '*document_root C1
      >*linemacro_arg C2
       >{spaces_before_argument: }
       >{macro_call_arg_text:out}
-   *@code C1 l7:@lm
+   *normal_command@code C1 l7:@lm
     *brace_container C4
      {normal_text:\\n}
      {normal_text:something }
-     *@comment C1
+     *normal_command@comment C1
       *line_arg C3
        {spaces_before_argument: }
        {rawline_text:in} d}

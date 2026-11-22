@@ -12,7 +12,7 @@ $result_tree_text{'url_no_braces'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *paragraph C1
-   *@url l1
+   *normal_command@url l1
 ';
 
 

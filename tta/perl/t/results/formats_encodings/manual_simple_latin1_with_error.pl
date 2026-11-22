@@ -14,7 +14,7 @@ $result_tree_text{'manual_simple_latin1_with_error'} = '*document_root C6
    {text_before_beginning:\\input texinfo.tex\\n}
    {text_before_beginning:\\n}
   *preamble_before_content C2
-   *@documentencoding C1 manual_simple_latin1_with_error.texi:l3
+   *normal_command@documentencoding C1 manual_simple_latin1_with_error.texi:l3
    |EXTRA
    |global_command_number:{1}
    |input_encoding_name:{iso-8859-1}
@@ -24,7 +24,7 @@ $result_tree_text{'manual_simple_latin1_with_error'} = '*document_root C6
      {normal_text:iso-8859-1}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@node C1 manual_simple_latin1_with_error.texi:l5 {Top}
+ *normal_command@node C1 manual_simple_latin1_with_error.texi:l5 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -34,7 +34,7 @@ $result_tree_text{'manual_simple_latin1_with_error'} = '*document_root C6
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 manual_simple_latin1_with_error.texi:l6 {Testé}
+ *normal_command@top C2 manual_simple_latin1_with_error.texi:l6 {Testé}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -44,7 +44,7 @@ $result_tree_text{'manual_simple_latin1_with_error'} = '*document_root C6
     {normal_text:Testé}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C2 manual_simple_latin1_with_error.texi:l8 {ésseulé}
+ *normal_command@node C2 manual_simple_latin1_with_error.texi:l8 {ésseulé}
  |EXTRA
  |identifier:{_00e9sseul_00e9}
  |is_target:{1}
@@ -55,7 +55,7 @@ $result_tree_text{'manual_simple_latin1_with_error'} = '*document_root C6
     {normal_text:ésseulé}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 manual_simple_latin1_with_error.texi:l10 {Chapitré}
+ *normal_command@node C1 manual_simple_latin1_with_error.texi:l10 {Chapitré}
  |EXTRA
  |identifier:{Chapitr_00e9}
  |is_target:{1}
@@ -65,7 +65,7 @@ $result_tree_text{'manual_simple_latin1_with_error'} = '*document_root C6
     {spaces_before_argument: }
     {normal_text:Chapitré}
     {spaces_after_argument:\\n}
- *@chapter C4 manual_simple_latin1_with_error.texi:l11 {Chapitré}
+ *normal_command@chapter C4 manual_simple_latin1_with_error.texi:l11 {Chapitré}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -76,7 +76,7 @@ $result_tree_text{'manual_simple_latin1_with_error'} = '*document_root C6
     {normal_text:Chapitré}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@value C1
+  *normal_command@value C1
    *brace_container C1
     {normal_text:non_connùe}
   {normal_text:\\n}

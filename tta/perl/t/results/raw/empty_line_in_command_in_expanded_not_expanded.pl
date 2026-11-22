@@ -13,7 +13,7 @@ $result_tree_text{'empty_line_in_command_in_expanded_not_expanded'} = '*document
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content C3
-   *@tex C3 l2
+   *normal_command@tex C3 l2
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
@@ -25,7 +25,7 @@ $result_tree_text{'empty_line_in_command_in_expanded_not_expanded'} = '*document
      {raw:@code{v\\n}
      {raw:\\n}
      {raw:n}\\n}
-    *@end C1 l10
+    *normal_command@end C1 l10
     |EXTRA
     |text_arg:{tex}
      *line_arg C3
@@ -33,12 +33,12 @@ $result_tree_text{'empty_line_in_command_in_expanded_not_expanded'} = '*document
       {normal_text:tex}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@html C3 l12
+   *normal_command@html C3 l12
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *rawpreformatted C5
-     *@anchor C1 l13
+     *normal_command@anchor C1 l13
      |EXTRA
      |identifier:{ha-hb}
      |is_target:{1}
@@ -48,13 +48,13 @@ $result_tree_text{'empty_line_in_command_in_expanded_not_expanded'} = '*document
        {normal_text:hb}
      {normal_text:.\\n}
      {empty_line:\\n}
-     *@code C1 l17
+     *normal_command@code C1 l17
       *brace_container C3
        {normal_text:hv\\n}
        {empty_line:\\n}
        {normal_text:hn}
      {normal_text:\\n}
-    *@end C1 l20
+    *normal_command@end C1 l20
     |EXTRA
     |text_arg:{html}
      *line_arg C3

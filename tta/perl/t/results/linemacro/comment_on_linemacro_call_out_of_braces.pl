@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'comment_on_linemacro_call_out_of_braces'} = '*document_root C1
  *before_node_section C6
   *preamble_before_content C2
-   *@linemacro C5 l1
+   *normal_command@linemacro C5 l1
    |EXTRA
    |formal_args:A{a|b|c}
    |macro_name:{lm}
@@ -20,7 +20,7 @@ $result_tree_text{'comment_on_linemacro_call_out_of_braces'} = '*document_root C
     {raw:first |\\a\\|\\n}
     {raw:second |\\b\\|\\n}
     {raw:third |\\c\\|\\n}
-    *@end C1 l5
+    *normal_command@end C1 l5
     |EXTRA
     |text_arg:{linemacro}
      *line_arg C3
@@ -43,7 +43,7 @@ $result_tree_text{'comment_on_linemacro_call_out_of_braces'} = '*document_root C
    {normal_text:third ||}
    >SOURCEMARKS
    >linemacro_expansion<end;1><p:8>
-   *@c C1
+   *normal_command@c C1
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:comment {in braces}}
@@ -60,7 +60,7 @@ $result_tree_text{'comment_on_linemacro_call_out_of_braces'} = '*document_root C
    {normal_text:third ||}
    >SOURCEMARKS
    >linemacro_expansion<end;2><p:8>
-   *@c C1
+   *normal_command@c C1
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:comment early n l m}
@@ -85,7 +85,7 @@ $result_tree_text{'comment_on_linemacro_call_out_of_braces'} = '*document_root C
    {normal_text:third ||}
    >SOURCEMARKS
    >linemacro_expansion<end;3><p:8>
-   *@comment C1
+   *normal_command@comment C1
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:on second {line comment}}

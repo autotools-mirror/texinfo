@@ -11,15 +11,15 @@ use Encode;
 $result_tree_text{'tab_in_table_in_example'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@example C3 l1
+  *normal_command@example C3 l1
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
-   *@table C4 l2
+   *normal_command@table C4 l2
     *arguments_line C1
      *block_line_arg C3
       {spaces_before_argument: }
-      *@code l2
+      *normal_command@code l2
       {spaces_after_argument:\\n}
     *before_item C1
      *preformatted C2
@@ -27,7 +27,7 @@ $result_tree_text{'tab_in_table_in_example'} = '*document_root C1
       {normal_text:in tab\\n}
     *table_entry C2
      *table_term C1
-      *@item C1 l4
+      *normal_command@item C1 l4
        *line_arg C3
         {spaces_before_argument: }
         {normal_text:table item}
@@ -38,14 +38,14 @@ $result_tree_text{'tab_in_table_in_example'} = '*document_root C1
       *preformatted C2
        {ignorable_spaces_after_command: }
        {normal_text:other tab\\n}
-    *@end C1 l7
+    *normal_command@end C1 l7
     |EXTRA
     |text_arg:{table}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:table}
       {spaces_after_argument:\\n}
-   *@end C1 l8
+   *normal_command@end C1 l8
    |EXTRA
    |text_arg:{example}
     *line_arg C3

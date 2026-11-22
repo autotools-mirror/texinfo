@@ -11,19 +11,19 @@ use Encode;
 $result_tree_text{'command_in_end_expanded_raw_one_char_before_command'} = '*document_root C1
  *before_node_section C1
   *preamble_before_content C1
-   *@tex C3 l1
+   *normal_command@tex C3 l1
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *rawpreformatted C1
      {normal_text:In TeX\\n}
-    *@end C1 l3
+    *normal_command@end C1 l3
     |EXTRA
     |text_arg:{tex}
      *line_arg C5
       {spaces_before_argument: }
       {normal_text:t}
-      *@asis C1 l3
+      *normal_command@asis C1 l3
        *brace_container
       {normal_text:ex}
       {spaces_after_argument:\\n}

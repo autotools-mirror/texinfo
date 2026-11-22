@@ -13,35 +13,35 @@ $result_tree_text{'indent_before_macro_definition_and_other'} = '*document_root 
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content C2
-   *@indent l2
+   *normal_command@indent l2
    {ignorable_spaces_after_command:\\n}
-  *@author C1 l3
+  *normal_command@author C1 l3
   |EXTRA
   |global_command_number:{1}
    *line_arg C3
     {spaces_before_argument: }
     {normal_text:someone}
     {spaces_after_argument:\\n}
-  *@image C1 l4
+  *normal_command@image C1 l4
   |EXTRA
   |input_encoding_name:{utf-8}
    *brace_arg C1
     {normal_text:my_image}
   {normal_text:\\n}
-  *@vskip C1
+  *normal_command@vskip C1
    *line_arg C3
     {spaces_before_argument: }
     {rawline_text:0pt plus 1filll}
     {spaces_after_argument:\\n}
-  *@html C3 l6
+  *normal_command@html C3 l6
   >SOURCEMARKS
   >ignored_conditional_block<1>
-   >*@ifnothtml C3 l9
+   >*normal_command@ifnothtml C3 l9
     >*arguments_line C1
      >*block_line_arg C1
       >{spaces_before_argument:\\n}
     >{raw:not html\\n}
-    >*@end C1 l11
+    >*normal_command@end C1 l11
     >|EXTRA
     >|text_arg:{ifnothtml}
      >*line_arg C3
@@ -53,21 +53,21 @@ $result_tree_text{'indent_before_macro_definition_and_other'} = '*document_root 
      {spaces_before_argument:\\n}
    *rawpreformatted C1
     {normal_text:<code>in c</code>\\n}
-   *@end C1 l8
+   *normal_command@end C1 l8
    |EXTRA
    |text_arg:{html}
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:html}
      {spaces_after_argument:\\n}
-  *@setchapternewpage C1 l12
+  *normal_command@setchapternewpage C1 l12
   |EXTRA
   |misc_args:A{on}
    *line_arg C3
     {spaces_before_argument: }
     {normal_text:on}
     {spaces_after_argument:\\n}
-  *@anchor C1 l13
+  *normal_command@anchor C1 l13
   |EXTRA
   |identifier:{spot}
   |is_target:{1}
@@ -81,14 +81,14 @@ $result_tree_text{'indent_before_macro_definition_and_other'} = '*document_root 
     {spaces_before_argument: }
     {normal_text:ei}
     {spaces_after_argument:\\n}
-  *@macro C3 l15
+  *normal_command@macro C3 l15
   |EXTRA
   |formal_args:A{g}
   |macro_name:{aaa}
    *arguments_line C1
     {macro_line: aaa {g}\\n}
    {raw:ll /g/\\n}
-   *@end C1 l17
+   *normal_command@end C1 l17
    |EXTRA
    |text_arg:{macro}
     *line_arg C3

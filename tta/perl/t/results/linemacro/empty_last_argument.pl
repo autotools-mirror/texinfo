@@ -11,14 +11,14 @@ use Encode;
 $result_tree_text{'empty_last_argument'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C3
-   *@defcodeindex C1 l1
+   *normal_command@defcodeindex C1 l1
    |EXTRA
    |misc_args:A{BI}
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:BI}
      {spaces_after_argument:\\n}
-   *@linemacro C4 l2
+   *normal_command@linemacro C4 l2
    |EXTRA
    |formal_args:A{symbol|rest}
    |macro_name:{defbuiltin}
@@ -26,7 +26,7 @@ $result_tree_text{'empty_last_argument'} = '*document_root C1
      {macro_line: defbuiltin {symbol, rest}\\n}
     {raw:@BIindex \\symbol\\\\n}
     {raw:@defline Builtin \\symbol\\ \\rest\\\\n}
-    *@end C1 l5
+    *normal_command@end C1 l5
     |EXTRA
     |text_arg:{linemacro}
      *line_arg C3
@@ -34,7 +34,7 @@ $result_tree_text{'empty_last_argument'} = '*document_root C1
       {normal_text:linemacro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-  *@defblock C8 l7
+  *normal_command@defblock C8 l7
    *arguments_line C1
     *block_line_arg C1
     >SOURCEMARKS
@@ -55,7 +55,7 @@ $result_tree_text{'empty_last_argument'} = '*document_root C1
       {spaces_before_argument: }
       {normal_text:foo}
       {spaces_after_argument:\\n}
-   *@defline C1 l8:@defbuiltin
+   *normal_command@defline C1 l8:@defbuiltin
    |EXTRA
    |def_command:{defline}
    |original_def_cmdname:{defline}
@@ -86,7 +86,7 @@ $result_tree_text{'empty_last_argument'} = '*document_root C1
       {spaces_before_argument: }
       {normal_text:foo}
       {spaces_after_argument:\\n}
-   *@defline C1 l10:@defbuiltin
+   *normal_command@defline C1 l10:@defbuiltin
    |EXTRA
    |def_command:{defline}
    |original_def_cmdname:{defline}
@@ -120,7 +120,7 @@ $result_tree_text{'empty_last_argument'} = '*document_root C1
       {spaces_before_argument: }
       {normal_text:foo}
       {spaces_after_argument:\\n}
-   *@defline C1 l12:@defbuiltin
+   *normal_command@defline C1 l12:@defbuiltin
    |EXTRA
    |def_command:{defline}
    |original_def_cmdname:{defline}
@@ -139,7 +139,7 @@ $result_tree_text{'empty_last_argument'} = '*document_root C1
       >SOURCEMARKS
       >linemacro_expansion<end;3>
      {spaces_after_argument:\\n}
-   *@end C1 l13
+   *normal_command@end C1 l13
    |EXTRA
    |text_arg:{defblock}
     *line_arg C3

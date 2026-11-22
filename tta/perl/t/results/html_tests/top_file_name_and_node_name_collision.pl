@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'top_file_name_and_node_name_collision'} = '*document_root C6
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {my node}
+ *normal_command@node C1 l1 {my node}
  |EXTRA
  |identifier:{my-node}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'top_file_name_and_node_name_collision'} = '*document_root C6
     {spaces_before_argument: }
     {normal_text:my node}
     {spaces_after_argument:\\n}
- *@chapter C2 l2 {chap my node}
+ *normal_command@chapter C2 l2 {chap my node}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -32,7 +32,7 @@ $result_tree_text{'top_file_name_and_node_name_collision'} = '*document_root C6
     {normal_text:chap my node}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l4 {other node}
+ *normal_command@node C1 l4 {other node}
  |EXTRA
  |identifier:{other-node}
  |is_target:{1}
@@ -42,7 +42,7 @@ $result_tree_text{'top_file_name_and_node_name_collision'} = '*document_root C6
     {spaces_before_argument: }
     {normal_text:other node}
     {spaces_after_argument:\\n}
- *@chapter C2 l5 {chapter}
+ *normal_command@chapter C2 l5 {chapter}
  |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
@@ -53,7 +53,7 @@ $result_tree_text{'top_file_name_and_node_name_collision'} = '*document_root C6
     {normal_text:chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@top C2 l7 {top}
+ *normal_command@top C2 l7 {top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}

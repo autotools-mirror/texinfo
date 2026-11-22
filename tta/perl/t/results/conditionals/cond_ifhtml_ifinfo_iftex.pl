@@ -14,19 +14,19 @@ $result_tree_text{'cond_ifhtml_ifinfo_iftex'} = '*document_root C5
    {text_before_beginning:\\input texinfo\\n}
    {text_before_beginning:\\n}
   *preamble_before_content C4
-   *@c C1
+   *normal_command@c C1
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:test conditions}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@html C3 cond.texi:l5
+   *normal_command@html C3 cond.texi:l5
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *rawpreformatted C1
      {normal_text:This is html text.\\n}
-    *@end C1 cond.texi:l7
+    *normal_command@end C1 cond.texi:l7
     |EXTRA
     |text_arg:{html}
      *line_arg C3
@@ -36,7 +36,7 @@ $result_tree_text{'cond_ifhtml_ifinfo_iftex'} = '*document_root C5
    {empty_line:\\n}
    >SOURCEMARKS
    >expanded_conditional_command<start;1><p:1>
-    >*@ifhtml C1 cond.texi:l9
+    >*normal_command@ifhtml C1 cond.texi:l9
      >*arguments_line C1
       >*block_line_arg C1
        >{spaces_before_argument:\\n}
@@ -44,7 +44,7 @@ $result_tree_text{'cond_ifhtml_ifinfo_iftex'} = '*document_root C5
    {normal_text:This is ifhtml text.\\n}
    >SOURCEMARKS
    >expanded_conditional_command<end;1><p:21>
-    >*@end C1 cond.texi:l11
+    >*normal_command@end C1 cond.texi:l11
     >|EXTRA
     >|text_arg:{ifhtml}
      >*line_arg C3
@@ -54,12 +54,12 @@ $result_tree_text{'cond_ifhtml_ifinfo_iftex'} = '*document_root C5
   {empty_line:\\n}
   >SOURCEMARKS
   >ignored_conditional_block<1><p:1>
-   >*@ifnothtml C3 cond.texi:l13
+   >*normal_command@ifnothtml C3 cond.texi:l13
     >*arguments_line C1
      >*block_line_arg C1
       >{spaces_before_argument:\\n}
     >{raw:This is ifnothtml text.\\n}
-    >*@end C1 cond.texi:l15
+    >*normal_command@end C1 cond.texi:l15
     >|EXTRA
     >|text_arg:{ifnothtml}
      >*line_arg C3
@@ -67,7 +67,7 @@ $result_tree_text{'cond_ifhtml_ifinfo_iftex'} = '*document_root C5
       >{normal_text:ifnothtml}
       >{spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 cond.texi:l17 {Top}
+ *normal_command@node C1 cond.texi:l17 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -77,7 +77,7 @@ $result_tree_text{'cond_ifhtml_ifinfo_iftex'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 cond.texi:l18 {conditionals}
+ *normal_command@top C2 cond.texi:l18 {conditionals}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -87,7 +87,7 @@ $result_tree_text{'cond_ifhtml_ifinfo_iftex'} = '*document_root C5
     {normal_text:conditionals}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C12 cond.texi:l20 {chap}
+ *normal_command@node C12 cond.texi:l20 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -101,7 +101,7 @@ $result_tree_text{'cond_ifhtml_ifinfo_iftex'} = '*document_root C5
   {empty_line:\\n}
   >SOURCEMARKS
   >expanded_conditional_command<start;2><p:1>
-   >*@ifinfo C1 cond.texi:l23
+   >*normal_command@ifinfo C1 cond.texi:l23
     >*arguments_line C1
      >*block_line_arg C1
       >{spaces_before_argument:\\n}
@@ -109,7 +109,7 @@ $result_tree_text{'cond_ifhtml_ifinfo_iftex'} = '*document_root C5
    {normal_text:This is ifinfo text.\\n}
    >SOURCEMARKS
    >expanded_conditional_command<end;2><p:21>
-    >*@end C1 cond.texi:l25
+    >*normal_command@end C1 cond.texi:l25
     >|EXTRA
     >|text_arg:{ifinfo}
      >*line_arg C3
@@ -119,12 +119,12 @@ $result_tree_text{'cond_ifhtml_ifinfo_iftex'} = '*document_root C5
   {empty_line:\\n}
   >SOURCEMARKS
   >ignored_conditional_block<2><p:1>
-   >*@ifnotinfo C3 cond.texi:l27
+   >*normal_command@ifnotinfo C3 cond.texi:l27
     >*arguments_line C1
      >*block_line_arg C1
       >{spaces_before_argument:\\n}
     >{raw:This is ifnotinfo text.\\n}
-    >*@end C1 cond.texi:l29
+    >*normal_command@end C1 cond.texi:l29
     >|EXTRA
     >|text_arg:{ifnotinfo}
      >*line_arg C3
@@ -133,13 +133,13 @@ $result_tree_text{'cond_ifhtml_ifinfo_iftex'} = '*document_root C5
       >{spaces_after_argument:\\n}
   {empty_line:\\n}
   {empty_line:\\n}
-  *@tex C3 cond.texi:l32
+  *normal_command@tex C3 cond.texi:l32
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *rawpreformatted C1
     {normal_text:This is tex text.\\n}
-   *@end C1 cond.texi:l34
+   *normal_command@end C1 cond.texi:l34
    |EXTRA
    |text_arg:{tex}
     *line_arg C3
@@ -149,7 +149,7 @@ $result_tree_text{'cond_ifhtml_ifinfo_iftex'} = '*document_root C5
   {empty_line:\\n}
   >SOURCEMARKS
   >expanded_conditional_command<start;3><p:1>
-   >*@iftex C1 cond.texi:l36
+   >*normal_command@iftex C1 cond.texi:l36
     >*arguments_line C1
      >*block_line_arg C1
       >{spaces_before_argument:\\n}
@@ -157,7 +157,7 @@ $result_tree_text{'cond_ifhtml_ifinfo_iftex'} = '*document_root C5
    {normal_text:This is iftex text.\\n}
    >SOURCEMARKS
    >expanded_conditional_command<end;3><p:20>
-    >*@end C1 cond.texi:l38
+    >*normal_command@end C1 cond.texi:l38
     >|EXTRA
     >|text_arg:{iftex}
      >*line_arg C3
@@ -167,12 +167,12 @@ $result_tree_text{'cond_ifhtml_ifinfo_iftex'} = '*document_root C5
   {empty_line:\\n}
   >SOURCEMARKS
   >ignored_conditional_block<3><p:1>
-   >*@ifnottex C3 cond.texi:l40
+   >*normal_command@ifnottex C3 cond.texi:l40
     >*arguments_line C1
      >*block_line_arg C1
       >{spaces_before_argument:\\n}
     >{raw:This is ifnottex text.\\n}
-    >*@end C1 cond.texi:l42
+    >*normal_command@end C1 cond.texi:l42
     >|EXTRA
     >|text_arg:{ifnottex}
      >*line_arg C3
@@ -180,7 +180,7 @@ $result_tree_text{'cond_ifhtml_ifinfo_iftex'} = '*document_root C5
       >{normal_text:ifnottex}
       >{spaces_after_argument:\\n}
   {empty_line:\\n}
- *@bye C1
+ *normal_command@bye C1
   *line_arg C1
    {spaces_before_argument:\\n}
 ';

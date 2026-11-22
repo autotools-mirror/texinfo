@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'note_in_strong'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
- *@node C15 l1 {Top}
+ *normal_command@node C15 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -24,14 +24,14 @@ $result_tree_text{'note_in_strong'} = '*document_root C2
   {empty_line:\\n}
   *paragraph C3
    {normal_text:3 One }
-   *@strong C1 l3
+   *normal_command@strong C1 l3
     *brace_container C1
      {normal_text:Note}
    {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C3
    {normal_text:5 }
-   *@strong C1 l5
+   *normal_command@strong C1 l5
     *brace_container C1
      {normal_text:Note a}
    {normal_text:.\\n}
@@ -40,28 +40,28 @@ $result_tree_text{'note_in_strong'} = '*document_root C2
   {empty_line:\\n}
   *paragraph C3
    {normal_text:9 }
-   *@strong C1 l9
+   *normal_command@strong C1 l9
     *brace_container C1
      {normal_text:note}
    {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C3
    {normal_text:11 }
-   *@strong C1 l11
+   *normal_command@strong C1 l11
     *brace_container C1
      {normal_text:note b}
    {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C3
    {normal_text:13 }
-   *@strong C1 l13
+   *normal_command@strong C1 l13
     *brace_container C1
      {normal_text: note}
    {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C3
    {normal_text:15 }
-   *@strong C1 l15
+   *normal_command@strong C1 l15
     *brace_container C1
      {normal_text:note-bbb}
    {normal_text:.\\n}

@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'empty_index_entry'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content
- *@node C2 l1 {Top}
+ *normal_command@node C2 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -22,7 +22,7 @@ $result_tree_text{'empty_index_entry'} = '*document_root C3
     {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C5 l3 {chap}
+ *normal_command@node C5 l3 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -34,7 +34,7 @@ $result_tree_text{'empty_index_entry'} = '*document_root C3
     {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@deffn C2 l5
+  *normal_command@deffn C2 l5
    *def_line C1 l5
    |EXTRA
    |def_command:{deffn}
@@ -48,7 +48,7 @@ $result_tree_text{'empty_index_entry'} = '*document_root C3
       *bracketed_arg C1 l5
        {spaces_before_argument: }
      {spaces_after_argument:\\n}
-   *@end C1 l6
+   *normal_command@end C1 l6
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3
@@ -56,7 +56,7 @@ $result_tree_text{'empty_index_entry'} = '*document_root C3
      {normal_text:deffn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@printindex C1 l8
+  *normal_command@printindex C1 l8
   |EXTRA
   |global_command_number:{1}
   |misc_args:A{fn}

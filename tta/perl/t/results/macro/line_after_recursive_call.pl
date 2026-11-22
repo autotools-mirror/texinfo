@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'line_after_recursive_call'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C1
-   *@macro C5 l1
+   *normal_command@macro C5 l1
    |EXTRA
    |formal_args:A{}
    |macro_name:{mac}
@@ -20,7 +20,7 @@ $result_tree_text{'line_after_recursive_call'} = '*document_root C1
     {raw:ggg\\n}
     {raw:@mac xxx\\n}
     {raw:fff\\n}
-    *@end C1 l5
+    *normal_command@end C1 l5
     |EXTRA
     |text_arg:{macro}
      *line_arg C3

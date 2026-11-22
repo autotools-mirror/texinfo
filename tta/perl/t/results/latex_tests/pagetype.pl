@@ -11,15 +11,15 @@ use Encode;
 $result_tree_text{'pagetype'} = '*document_root C6
  *before_node_section C1
   *preamble_before_content C4
-   *@afourpaper C1 l1
+   *normal_command@afourpaper C1 l1
     *line_arg C1
      {spaces_before_argument:\\n}
    {empty_line:\\n}
-   *@afourwide C1 l3
+   *normal_command@afourwide C1 l3
     *line_arg C1
      {spaces_before_argument:\\n}
    {empty_line:\\n}
- *@node C1 l5 {Top}
+ *normal_command@node C1 l5 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -29,7 +29,7 @@ $result_tree_text{'pagetype'} = '*document_root C6
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l6 {section top}
+ *normal_command@top C2 l6 {section top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -39,7 +39,7 @@ $result_tree_text{'pagetype'} = '*document_root C6
     {normal_text:section top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l8 {chapter}
+ *normal_command@node C1 l8 {chapter}
  |EXTRA
  |identifier:{chapter}
  |is_target:{1}
@@ -49,7 +49,7 @@ $result_tree_text{'pagetype'} = '*document_root C6
     {spaces_before_argument: }
     {normal_text:chapter}
     {spaces_after_argument:\\n}
- *@chapter C11 l9 {Chapter}
+ *normal_command@chapter C11 l9 {Chapter}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -60,7 +60,7 @@ $result_tree_text{'pagetype'} = '*document_root C6
     {normal_text:Chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@smallbook C1 l11
+  *normal_command@smallbook C1 l11
    *line_arg C1
     {spaces_before_argument:\\n}
   {empty_line:\\n}
@@ -70,14 +70,14 @@ $result_tree_text{'pagetype'} = '*document_root C6
   {empty_line:\\n}
   *paragraph C2
    {normal_text:In smallbook\\n}
-   *@afourpaper C1 l16
+   *normal_command@afourpaper C1 l16
     *line_arg C1
      {spaces_before_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
    {normal_text:After afourpaper\\n}
   {empty_line:\\n}
- *@chapter C3 l20 {afourpaper reset}
+ *normal_command@chapter C3 l20 {afourpaper reset}
  |EXTRA
  |identifier:{afourpaper-reset}
  |is_target:{1}

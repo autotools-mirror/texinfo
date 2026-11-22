@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'anchor_and_spaces'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'anchor_and_spaces'} = '*document_root C3
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C7 l2 {Element}
+ *normal_command@top C7 l2 {Element}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -30,7 +30,7 @@ $result_tree_text{'anchor_and_spaces'} = '*document_root C3
     {spaces_before_argument: }
     {normal_text:Element}
     {spaces_after_argument:\\n}
-  *@anchor C1 l3
+  *normal_command@anchor C1 l3
   |EXTRA
   |identifier:{anchor-0}
   |is_target:{1}
@@ -40,7 +40,7 @@ $result_tree_text{'anchor_and_spaces'} = '*document_root C3
   {empty_line:\\n}
   *paragraph C3
    {normal_text:Now }
-   *@anchor C1 l5
+   *normal_command@anchor C1 l5
    |EXTRA
    |identifier:{anchor1}
    |is_target:{1}
@@ -50,7 +50,7 @@ $result_tree_text{'anchor_and_spaces'} = '*document_root C3
   {empty_line:\\n}
   *paragraph C3
    {normal_text:No space}
-   *@anchor C1 l7
+   *normal_command@anchor C1 l7
    |EXTRA
    |identifier:{anchor2}
    |is_target:{1}

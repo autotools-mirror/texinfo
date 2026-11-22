@@ -11,21 +11,21 @@ use Encode;
 $result_tree_text{'formats_not_closed_in_example'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@example C4 l1
+  *normal_command@example C4 l1
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C1
     {empty_line:\\n}
-   *@table C2 l3
+   *normal_command@table C2 l3
     *arguments_line C1
      *block_line_arg C3
       {spaces_before_argument: }
-      *@asis l3
+      *normal_command@asis l3
       {spaces_after_argument:\\n}
     *table_entry C2
      *table_term C1
-      *@item C1 l4
+      *normal_command@item C1 l4
        *line_arg C3
         {spaces_before_argument: }
         {normal_text:item}
@@ -35,27 +35,27 @@ $result_tree_text{'formats_not_closed_in_example'} = '*document_root C1
        {normal_text:table line\\n}
        {empty_line:\\n}
        {normal_text:Some text.\\n}
-      *@enumerate C4 l8
+      *normal_command@enumerate C4 l8
        *arguments_line C1
         *block_line_arg C1
          {spaces_before_argument:\\n}
        *before_item C1
         *preformatted C1
          {empty_line:\\n}
-       *@item C1 l10
+       *normal_command@item C1 l10
        |EXTRA
        |item_number:{1}
         *preformatted C2
          {ignorable_spaces_after_command: }
          {normal_text:first item\\n}
-       *@item C1 l11
+       *normal_command@item C1 l11
        |EXTRA
        |item_number:{2}
         *preformatted C3
          {ignorable_spaces_after_command: }
          {normal_text:an item\\n}
          {empty_line:\\n}
-   *@end C1 l13
+   *normal_command@end C1 l13
    |EXTRA
    |text_arg:{example}
     *line_arg C3

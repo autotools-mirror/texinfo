@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'headings_after_lone_nodes'} = '*document_root C13
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'headings_after_lone_nodes'} = '*document_root C13
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l2 {top}
+ *normal_command@top C2 l2 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -31,7 +31,7 @@ $result_tree_text{'headings_after_lone_nodes'} = '*document_root C13
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l4 {chap}
+ *normal_command@node C1 l4 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -41,7 +41,7 @@ $result_tree_text{'headings_after_lone_nodes'} = '*document_root C13
     {spaces_before_argument: }
     {normal_text:chap}
     {spaces_after_argument:\\n}
- *@chapter C2 l5 {Chap}
+ *normal_command@chapter C2 l5 {Chap}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -52,7 +52,7 @@ $result_tree_text{'headings_after_lone_nodes'} = '*document_root C13
     {normal_text:Chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C5 l7 {Qt}
+ *normal_command@node C5 l7 {Qt}
  |EXTRA
  |identifier:{Qt}
  |is_target:{1}
@@ -62,7 +62,7 @@ $result_tree_text{'headings_after_lone_nodes'} = '*document_root C13
     {spaces_before_argument: }
     {normal_text:Qt}
     {spaces_after_argument:\\n}
-  *@subheading C1 l8
+  *normal_command@subheading C1 l8
   |EXTRA
   |global_command_number:{1}
   |heading_number:{1}
@@ -74,7 +74,7 @@ $result_tree_text{'headings_after_lone_nodes'} = '*document_root C13
   *paragraph C1
    {normal_text:Some text\\n}
   {empty_line:\\n}
- *@node C20 l12 {Other}
+ *normal_command@node C20 l12 {Other}
  |EXTRA
  |identifier:{Other}
  |is_target:{1}
@@ -85,7 +85,7 @@ $result_tree_text{'headings_after_lone_nodes'} = '*document_root C13
     {normal_text:Other}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@anchor C1 l14
+  *normal_command@anchor C1 l14
   |EXTRA
   |identifier:{toto}
   |is_target:{1}
@@ -93,25 +93,25 @@ $result_tree_text{'headings_after_lone_nodes'} = '*document_root C13
     {normal_text:toto}
   {spaces_after_close_brace:\\n}
   {empty_line:\\n}
-  *@nodedescription C1 l16
+  *normal_command@nodedescription C1 l16
    *line_arg C3
     {spaces_before_argument: }
     {normal_text:Describe Other}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@c C1
+  *normal_command@c C1
    *line_arg C3
     {spaces_before_argument: }
     {rawline_text:comment}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@contents C1 l20
+  *normal_command@contents C1 l20
   |EXTRA
   |global_command_number:{1}
    *line_arg C1
     {spaces_before_argument:\\n}
   {empty_line:\\n}
-  *@frenchspacing C1 l22
+  *normal_command@frenchspacing C1 l22
   |EXTRA
   |global_command_number:{1}
   |misc_args:A{on}
@@ -120,13 +120,13 @@ $result_tree_text{'headings_after_lone_nodes'} = '*document_root C13
     {normal_text:on}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@tex C3 l24
+  *normal_command@tex C3 l24
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *elided_rawpreformatted C1
     {raw:tex format raw\\n}
-   *@end C1 l26
+   *normal_command@end C1 l26
    |EXTRA
    |text_arg:{tex}
     *line_arg C3
@@ -134,12 +134,12 @@ $result_tree_text{'headings_after_lone_nodes'} = '*document_root C13
      {normal_text:tex}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@ignore C3 l28
+  *normal_command@ignore C3 l28
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    {raw:in ignore\\n}
-   *@end C1 l30
+   *normal_command@end C1 l30
    |EXTRA
    |text_arg:{ignore}
     *line_arg C3
@@ -149,12 +149,12 @@ $result_tree_text{'headings_after_lone_nodes'} = '*document_root C13
   {empty_line:\\n}
   >SOURCEMARKS
   >ignored_conditional_block<1><p:1>
-   >*@iftex C3 l32
+   >*normal_command@iftex C3 l32
     >*arguments_line C1
      >*block_line_arg C1
       >{spaces_before_argument:\\n}
     >{raw:in iftex\\n}
-    >*@end C1 l34
+    >*normal_command@end C1 l34
     >|EXTRA
     >|text_arg:{iftex}
      >*line_arg C3
@@ -162,7 +162,7 @@ $result_tree_text{'headings_after_lone_nodes'} = '*document_root C13
       >{normal_text:iftex}
       >{spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@subsubheading C1 l36
+  *normal_command@subsubheading C1 l36
   |EXTRA
   |global_command_number:{1}
   |heading_number:{2}
@@ -171,7 +171,7 @@ $result_tree_text{'headings_after_lone_nodes'} = '*document_root C13
     {normal_text:Finally!}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C6 l38 {Not associated}
+ *normal_command@node C6 l38 {Not associated}
  |EXTRA
  |identifier:{Not-associated}
  |is_target:{1}
@@ -185,7 +185,7 @@ $result_tree_text{'headings_after_lone_nodes'} = '*document_root C13
   *paragraph C1
    {normal_text:Some para\\n}
   {empty_line:\\n}
-  *@heading C1 l42
+  *normal_command@heading C1 l42
   |EXTRA
   |global_command_number:{1}
   |heading_number:{3}
@@ -194,7 +194,7 @@ $result_tree_text{'headings_after_lone_nodes'} = '*document_root C13
     {normal_text:should not be associated}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C6 l44 {2 not}
+ *normal_command@node C6 l44 {2 not}
  |EXTRA
  |identifier:{2-not}
  |is_target:{1}
@@ -205,13 +205,13 @@ $result_tree_text{'headings_after_lone_nodes'} = '*document_root C13
     {normal_text:2 not}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@quotation C3 l46
+  *normal_command@quotation C3 l46
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C1
     {normal_text:in quotation\\n}
-   *@end C1 l48
+   *normal_command@end C1 l48
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3
@@ -219,7 +219,7 @@ $result_tree_text{'headings_after_lone_nodes'} = '*document_root C13
      {normal_text:quotation}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@heading C1 l50
+  *normal_command@heading C1 l50
   |EXTRA
   |global_command_number:{2}
   |heading_number:{4}
@@ -228,7 +228,7 @@ $result_tree_text{'headings_after_lone_nodes'} = '*document_root C13
     {normal_text:should not be associated}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C6 l52 {3 not}
+ *normal_command@node C6 l52 {3 not}
  |EXTRA
  |identifier:{3-not}
  |is_target:{1}
@@ -239,13 +239,13 @@ $result_tree_text{'headings_after_lone_nodes'} = '*document_root C13
     {normal_text:3 not}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@html C3 l54
+  *normal_command@html C3 l54
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *rawpreformatted C1
     {normal_text:in html\\n}
-   *@end C1 l56
+   *normal_command@end C1 l56
    |EXTRA
    |text_arg:{html}
     *line_arg C3
@@ -253,7 +253,7 @@ $result_tree_text{'headings_after_lone_nodes'} = '*document_root C13
      {normal_text:html}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@heading C1 l58
+  *normal_command@heading C1 l58
   |EXTRA
   |global_command_number:{3}
   |heading_number:{5}
@@ -262,7 +262,7 @@ $result_tree_text{'headings_after_lone_nodes'} = '*document_root C13
     {normal_text:should not be associated}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C6 l60 {4 not}
+ *normal_command@node C6 l60 {4 not}
  |EXTRA
  |identifier:{4-not}
  |is_target:{1}
@@ -273,7 +273,7 @@ $result_tree_text{'headings_after_lone_nodes'} = '*document_root C13
     {normal_text:4 not}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@sp C1 l62
+  *normal_command@sp C1 l62
   |EXTRA
   |misc_args:A{2}
    *line_arg C3
@@ -281,7 +281,7 @@ $result_tree_text{'headings_after_lone_nodes'} = '*document_root C13
     {normal_text:2}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@heading C1 l64
+  *normal_command@heading C1 l64
   |EXTRA
   |global_command_number:{4}
   |heading_number:{6}
@@ -290,7 +290,7 @@ $result_tree_text{'headings_after_lone_nodes'} = '*document_root C13
     {normal_text:should not be associated}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C6 l66 {5 not}
+ *normal_command@node C6 l66 {5 not}
  |EXTRA
  |identifier:{5-not}
  |is_target:{1}
@@ -301,7 +301,7 @@ $result_tree_text{'headings_after_lone_nodes'} = '*document_root C13
     {normal_text:5 not}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C3 l68
+  *normal_command@menu C3 l68
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -316,7 +316,7 @@ $result_tree_text{'headings_after_lone_nodes'} = '*document_root C13
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l70
+   *normal_command@end C1 l70
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -324,7 +324,7 @@ $result_tree_text{'headings_after_lone_nodes'} = '*document_root C13
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@heading C1 l72
+  *normal_command@heading C1 l72
   |EXTRA
   |global_command_number:{5}
   |heading_number:{7}
@@ -333,7 +333,7 @@ $result_tree_text{'headings_after_lone_nodes'} = '*document_root C13
     {normal_text:should not be associated}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C2 l74 {subnode}
+ *normal_command@node C2 l74 {subnode}
  |EXTRA
  |identifier:{subnode}
  |is_target:{1}

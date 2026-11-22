@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'detailmenu_on_subnodes'} = '*document_root C13
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'detailmenu_on_subnodes'} = '*document_root C13
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C4 l2 {top}
+ *normal_command@top C4 l2 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -31,7 +31,7 @@ $result_tree_text{'detailmenu_on_subnodes'} = '*document_root C13
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C8 l4
+  *normal_command@menu C8 l4
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -60,7 +60,7 @@ $result_tree_text{'detailmenu_on_subnodes'} = '*document_root C13
    *menu_comment C1
     *preformatted C1
      {after_menu_description_line:\\n}
-   *@detailmenu C3 l8
+   *normal_command@detailmenu C3 l8
    |EXTRA
    |global_command_number:{1}
     *arguments_line C1
@@ -77,7 +77,7 @@ $result_tree_text{'detailmenu_on_subnodes'} = '*document_root C13
      *menu_entry_description C1
       *preformatted C1
        {normal_text:\\n}
-    *@end C1 l10
+    *normal_command@end C1 l10
     |EXTRA
     |text_arg:{detailmenu}
      *line_arg C3
@@ -87,7 +87,7 @@ $result_tree_text{'detailmenu_on_subnodes'} = '*document_root C13
    *menu_comment C1
     *preformatted C1
      {empty_line:\\n}
-   *@detailmenu C5 l12
+   *normal_command@detailmenu C5 l12
    |EXTRA
    |global_command_number:{2}
     *arguments_line C1
@@ -119,14 +119,14 @@ $result_tree_text{'detailmenu_on_subnodes'} = '*document_root C13
      *menu_entry_description C1
       *preformatted C1
        {normal_text:\\n}
-    *@end C1 l17
+    *normal_command@end C1 l17
     |EXTRA
     |text_arg:{detailmenu}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:detailmenu}
       {spaces_after_argument:\\n}
-   *@end C1 l18
+   *normal_command@end C1 l18
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -134,7 +134,7 @@ $result_tree_text{'detailmenu_on_subnodes'} = '*document_root C13
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l20 {chapter}
+ *normal_command@node C1 l20 {chapter}
  |EXTRA
  |identifier:{chapter}
  |is_target:{1}
@@ -144,7 +144,7 @@ $result_tree_text{'detailmenu_on_subnodes'} = '*document_root C13
     {spaces_before_argument: }
     {normal_text:chapter}
     {spaces_after_argument:\\n}
- *@chapter C4 l21 {chapter}
+ *normal_command@chapter C4 l21 {chapter}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -155,7 +155,7 @@ $result_tree_text{'detailmenu_on_subnodes'} = '*document_root C13
     {normal_text:chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C3 l23
+  *normal_command@menu C3 l23
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -170,7 +170,7 @@ $result_tree_text{'detailmenu_on_subnodes'} = '*document_root C13
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l25
+   *normal_command@end C1 l25
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -178,7 +178,7 @@ $result_tree_text{'detailmenu_on_subnodes'} = '*document_root C13
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l27 {section}
+ *normal_command@node C1 l27 {section}
  |EXTRA
  |identifier:{section}
  |is_target:{1}
@@ -188,7 +188,7 @@ $result_tree_text{'detailmenu_on_subnodes'} = '*document_root C13
     {spaces_before_argument: }
     {normal_text:section}
     {spaces_after_argument:\\n}
- *@section C2 l28 {section}
+ *normal_command@section C2 l28 {section}
  |EXTRA
  |section_heading_number:{1.1}
  |section_level:{2}
@@ -199,7 +199,7 @@ $result_tree_text{'detailmenu_on_subnodes'} = '*document_root C13
     {normal_text:section}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l30 {chapter 2}
+ *normal_command@node C1 l30 {chapter 2}
  |EXTRA
  |identifier:{chapter-2}
  |is_target:{1}
@@ -209,7 +209,7 @@ $result_tree_text{'detailmenu_on_subnodes'} = '*document_root C13
     {spaces_before_argument: }
     {normal_text:chapter 2}
     {spaces_after_argument:\\n}
- *@chapter C4 l31 {chapter 2}
+ *normal_command@chapter C4 l31 {chapter 2}
  |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
@@ -220,7 +220,7 @@ $result_tree_text{'detailmenu_on_subnodes'} = '*document_root C13
     {normal_text:chapter 2}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C4 l33
+  *normal_command@menu C4 l33
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -246,7 +246,7 @@ $result_tree_text{'detailmenu_on_subnodes'} = '*document_root C13
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l36
+   *normal_command@end C1 l36
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -254,7 +254,7 @@ $result_tree_text{'detailmenu_on_subnodes'} = '*document_root C13
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l38 {section chap 2}
+ *normal_command@node C1 l38 {section chap 2}
  |EXTRA
  |identifier:{section-chap-2}
  |is_target:{1}
@@ -264,7 +264,7 @@ $result_tree_text{'detailmenu_on_subnodes'} = '*document_root C13
     {spaces_before_argument: }
     {normal_text:section chap 2}
     {spaces_after_argument:\\n}
- *@section C2 l39 {section chap 2}
+ *normal_command@section C2 l39 {section chap 2}
  |EXTRA
  |section_heading_number:{2.1}
  |section_level:{2}
@@ -275,7 +275,7 @@ $result_tree_text{'detailmenu_on_subnodes'} = '*document_root C13
     {normal_text:section chap 2}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l41 {unnumberedsec}
+ *normal_command@node C1 l41 {unnumberedsec}
  |EXTRA
  |identifier:{unnumberedsec}
  |is_target:{1}
@@ -285,7 +285,7 @@ $result_tree_text{'detailmenu_on_subnodes'} = '*document_root C13
     {spaces_before_argument: }
     {normal_text:unnumberedsec}
     {spaces_after_argument:\\n}
- *@unnumberedsec C1 l42 {unnumberedsec}
+ *normal_command@unnumberedsec C1 l42 {unnumberedsec}
  |EXTRA
  |section_level:{2}
  |section_number:{6}

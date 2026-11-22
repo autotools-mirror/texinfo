@@ -19,7 +19,7 @@ NodeNext: [U1]
 NodeForward: [U1]
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -29,7 +29,7 @@ NodeForward: [U1]
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C4 l2 {top}
+ *normal_command@top C4 l2 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -39,7 +39,7 @@ NodeForward: [U1]
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C4 l4
+  *normal_command@menu C4 l4
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -65,7 +65,7 @@ NodeForward: [U1]
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l7
+   *normal_command@end C1 l7
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -87,7 +87,7 @@ NodePrev: [U0]
 NodeUp: [U0]
 NodeForward: [U2]
 NodeBack: [U0]
- *@node C2 l9 {chapter node}
+ *normal_command@node C2 l9 {chapter node}
  |EXTRA
  |identifier:{chapter-node}
  |is_target:{1}
@@ -98,7 +98,7 @@ NodeBack: [U0]
     {normal_text:chapter node}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@chapter C2 l11 {chapter node}
+ *normal_command@chapter C2 l11 {chapter node}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -118,7 +118,7 @@ FastBack: [U1]
 NodePrev: [U1]
 NodeUp: [U0]
 NodeBack: [U1]
- *@node C1 l13 {part chapter node}
+ *normal_command@node C1 l13 {part chapter node}
  |EXTRA
  |identifier:{part-chapter-node}
  |is_target:{1}
@@ -128,7 +128,7 @@ NodeBack: [U1]
     {spaces_before_argument: }
     {normal_text:part chapter node}
     {spaces_after_argument:\\n}
- *@part C2 l14 {part}
+ *normal_command@part C2 l14 {part}
  |EXTRA
  |global_command_number:{1}
  |section_level:{0}
@@ -139,7 +139,7 @@ NodeBack: [U1]
     {normal_text:part}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@chapter C3 l16 {chapter with part node}
+ *normal_command@chapter C3 l16 {chapter with part node}
  |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
@@ -150,7 +150,7 @@ NodeBack: [U1]
     {normal_text:chapter with part node}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@contents C1 l18
+  *normal_command@contents C1 l18
   |EXTRA
   |global_command_number:{1}
    *line_arg C1

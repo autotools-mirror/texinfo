@@ -11,27 +11,27 @@ use Encode;
 $result_tree_text{'form_feeds_in_preamble'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content C9
-   *@settitle C1 l1
+   *normal_command@settitle C1 l1
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:A manual}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
    {empty_line:\\f\\n}
-   *@c C1
+   *normal_command@c C1
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:comment}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@macro C3 l6
+   *normal_command@macro C3 l6
    |EXTRA
    |formal_args:A{field}
    |macro_name:{cdfRef}
     *arguments_line C1
      {macro_line: cdfRef{field}\\n}
     {raw:@ref{\\field\\ (Compact Disc fields)}\\n}
-    *@end C1 l8
+    *normal_command@end C1 l8
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -41,7 +41,7 @@ $result_tree_text{'form_feeds_in_preamble'} = '*document_root C3
    {empty_line:\\n}
    {empty_line:\\f\\n}
    {empty_line:\\n}
- *@node C1 l12 {Top}
+ *normal_command@node C1 l12 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -51,7 +51,7 @@ $result_tree_text{'form_feeds_in_preamble'} = '*document_root C3
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C1 l13 {The}
+ *normal_command@top C1 l13 {The}
  |EXTRA
  |section_level:{0}
  |section_number:{1}

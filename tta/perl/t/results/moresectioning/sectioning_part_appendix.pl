@@ -17,7 +17,7 @@ FastForward: [U1]
 Next: [U5]
  *before_node_section C1
   *preamble_before_content
- *@top C2 l1 {top}
+ *normal_command@top C2 l1 {top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -38,7 +38,7 @@ Back: [U0]
 FastForward: [U5]
 FastBack: [U0]
 Up: [U0]
- *@chapter C2 l3 {chapter}
+ *normal_command@chapter C2 l3 {chapter}
  |EXTRA
  |identifier:{chapter}
  |is_target:{1}
@@ -60,7 +60,7 @@ Back: [U1]
 FastForward: [U5]
 FastBack: [U1]
 Up: [U1]
- *@section C2 l5 {section}
+ *normal_command@section C2 l5 {section}
  |EXTRA
  |identifier:{section}
  |is_target:{1}
@@ -82,7 +82,7 @@ Back: [U2]
 FastForward: [U5]
 FastBack: [U1]
 Up: [U2]
- *@subsection C2 l7 {subsection}
+ *normal_command@subsection C2 l7 {subsection}
  |EXTRA
  |identifier:{subsection}
  |is_target:{1}
@@ -104,7 +104,7 @@ Back: [U3]
 FastForward: [U5]
 FastBack: [U1]
 Up: [U3]
- *@subsubsection C2 l9 {subsubsection}
+ *normal_command@subsubsection C2 l9 {subsubsection}
  |EXTRA
  |identifier:{subsubsection}
  |is_target:{1}
@@ -126,7 +126,7 @@ Back: [U4]
 FastForward: [U6]
 FastBack: [U1]
 Next: [U6]
- *@part C2 l11 {part}
+ *normal_command@part C2 l11 {part}
  |EXTRA
  |global_command_number:{1}
  |section_level:{0}
@@ -137,7 +137,7 @@ Next: [U6]
     {normal_text:part}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@chapter C2 l13 {chapter in part}
+ *normal_command@chapter C2 l13 {chapter in part}
  |EXTRA
  |identifier:{chapter-in-part}
  |is_target:{1}
@@ -161,7 +161,7 @@ FastBack: [U5]
 Next: [U7]
 Prev: [U5]
 Up: [U5]
- *@chapter C2 l15 {second chapter in part}
+ *normal_command@chapter C2 l15 {second chapter in part}
  |EXTRA
  |identifier:{second-chapter-in-part}
  |is_target:{1}
@@ -184,7 +184,7 @@ FastForward: [U8]
 FastBack: [U6]
 Prev: [U6]
 Up: [U5]
- *@unnumbered C2 l17 {unnumbered}
+ *normal_command@unnumbered C2 l17 {unnumbered}
  |EXTRA
  |identifier:{unnumbered}
  |is_target:{1}
@@ -204,7 +204,7 @@ Forward: [U9]
 Back: [U7]
 FastBack: [U7]
 Prev: [U5]
- *@appendix C2 l19 {appendix}
+ *normal_command@appendix C2 l19 {appendix}
  |EXTRA
  |identifier:{appendix}
  |is_target:{1}
@@ -224,7 +224,7 @@ This: [U9]
 Back: [U8]
 FastBack: [U8]
 Up: [U8]
- *@appendixsec C1 l21 {appendixsec}
+ *normal_command@appendixsec C1 l21 {appendixsec}
  |EXTRA
  |identifier:{appendixsec}
  |is_target:{1}

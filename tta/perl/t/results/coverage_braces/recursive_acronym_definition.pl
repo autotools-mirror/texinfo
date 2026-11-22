@@ -12,17 +12,17 @@ $result_tree_text{'recursive_acronym_definition'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *paragraph C2
-   *@acronym C2 l1
+   *normal_command@acronym C2 l1
     *brace_arg C1
      {normal_text:GNU}
     *brace_arg C3
      {spaces_before_argument: }
-     *@acronym C2 l1
+     *normal_command@acronym C2 l1
       *brace_arg C1
        {normal_text:GNU}
       *brace_arg C3
        {spaces_before_argument: }
-       *@acronym C2 l1
+       *normal_command@acronym C2 l1
         *brace_arg C1
          {normal_text:GNU}
         *brace_arg C2

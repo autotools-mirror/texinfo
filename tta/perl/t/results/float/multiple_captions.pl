@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'multiple_captions'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'multiple_captions'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l2 {top}
+ *normal_command@top C2 l2 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -31,7 +31,7 @@ $result_tree_text{'multiple_captions'} = '*document_root C5
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l4 {chap}
+ *normal_command@node C1 l4 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -41,7 +41,7 @@ $result_tree_text{'multiple_captions'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:chap}
     {spaces_after_argument:\\n}
- *@chapter C5 l5 {chap}
+ *normal_command@chapter C5 l5 {chap}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -52,7 +52,7 @@ $result_tree_text{'multiple_captions'} = '*document_root C5
     {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@float C6 l7
+  *normal_command@float C6 l7
   |EXTRA
   |float_number:{1.1}
   |float_type:{a}
@@ -67,17 +67,17 @@ $result_tree_text{'multiple_captions'} = '*document_root C5
      {spaces_before_argument: }
      {normal_text:b}
      {spaces_after_argument:\\n}
-   *@caption C1 l8
+   *normal_command@caption C1 l8
     *brace_command_context C1
      *paragraph C1
       {normal_text:caption 1}
    {spaces_after_close_brace:\\n}
-   *@caption C1 l9
+   *normal_command@caption C1 l9
     *brace_command_context C1
      *paragraph C1
       {normal_text:multiple}
    {spaces_after_close_brace:\\n}
-   *@end C1 l10
+   *normal_command@end C1 l10
    |EXTRA
    |text_arg:{float}
     *line_arg C3
@@ -85,7 +85,7 @@ $result_tree_text{'multiple_captions'} = '*document_root C5
      {normal_text:float}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@float C11 l12
+  *normal_command@float C11 l12
   |EXTRA
   |float_number:{1.1}
   |float_type:{c}
@@ -100,12 +100,12 @@ $result_tree_text{'multiple_captions'} = '*document_root C5
      {spaces_before_argument: }
      {normal_text:d}
      {spaces_after_argument:\\n}
-   *@shortcaption C1 l13
+   *normal_command@shortcaption C1 l13
     *brace_command_context C1
      *paragraph C1
       {normal_text:shortcaption 1}
    {spaces_after_close_brace:\\n}
-   *@shortcaption C1 l14
+   *normal_command@shortcaption C1 l14
     *brace_command_context C1
      *paragraph C1
       {normal_text:multiple shortc 1}
@@ -114,12 +114,12 @@ $result_tree_text{'multiple_captions'} = '*document_root C5
    *paragraph C1
     {normal_text:Something.\\n}
    {empty_line:\\n}
-   *@shortcaption C1 l18
+   *normal_command@shortcaption C1 l18
     *brace_command_context C1
      *paragraph C1
       {normal_text:another}
    {spaces_after_close_brace:\\n}
-   *@end C1 l19
+   *normal_command@end C1 l19
    |EXTRA
    |text_arg:{float}
     *line_arg C3

@@ -11,18 +11,18 @@ use Encode;
 $result_tree_text{'only_comment_on_quotation_line'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@quotation C3 l1
+  *normal_command@quotation C3 l1
    *arguments_line C1
     *block_line_arg C2
      {spaces_before_argument: }
-     *@c C1
+     *normal_command@c C1
       *line_arg C3
        {spaces_before_argument: }
        {rawline_text:comment}
        {spaces_after_argument:\\n}
    *paragraph C1
     {normal_text:In quotation\\n}
-   *@end C1 l3
+   *normal_command@end C1 l3
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3

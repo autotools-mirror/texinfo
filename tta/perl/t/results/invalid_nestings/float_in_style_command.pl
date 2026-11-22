@@ -12,10 +12,10 @@ $result_tree_text{'float_in_style_command'} = '*document_root C1
  *before_node_section C3
   *preamble_before_content
   *paragraph C1
-   *@code C1 l1
+   *normal_command@code C1 l1
     *brace_container C1
      {normal_text:\\n}
-  *@float C5 l2
+  *normal_command@float C5 l2
   |EXTRA
   |float_number:{1}
   |float_type:{A}
@@ -32,12 +32,12 @@ $result_tree_text{'float_in_style_command'} = '*document_root C1
      {spaces_after_argument:\\n}
    *paragraph C1
     {normal_text:in float\\n}
-   *@caption C1 l4
+   *normal_command@caption C1 l4
     *brace_command_context C1
      *paragraph C1
       {normal_text:Caption}
    {spaces_after_close_brace:\\n}
-   *@end C1 l5
+   *normal_command@end C1 l5
    |EXTRA
    |text_arg:{float}
     *line_arg C3

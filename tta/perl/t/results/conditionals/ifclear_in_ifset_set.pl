@@ -13,7 +13,7 @@ $result_tree_text{'ifclear_in_ifset_set'} = '*document_root C1
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content C4
-   *@set C1
+   *normal_command@set C1
    |EXTRA
    |misc_args:A{a|}
     *line_arg C3
@@ -23,32 +23,32 @@ $result_tree_text{'ifclear_in_ifset_set'} = '*document_root C1
    {empty_line:\\n}
    >SOURCEMARKS
    >expanded_conditional_command<start;1><p:1>
-    >*@ifset C1 l4
+    >*normal_command@ifset C1 l4
      >*arguments_line C1
       >*block_line_arg C3
        >{spaces_before_argument: }
        >{normal_text:a}
        >{spaces_after_argument:\\n}
    >expanded_conditional_command<start;2><p:1>
-    >*@ifclear C1 l5
+    >*normal_command@ifclear C1 l5
      >*arguments_line C1
       >*block_line_arg C4
        >{spaces_before_argument: }
        >{normal_text:ok}
        >{spaces_after_argument: }
-       >*@c C1
+       >*normal_command@c C1
         >*line_arg C3
          >{spaces_before_argument: }
          >{rawline_text:- ok, ignored}
          >{spaces_after_argument:\\n}
-   *@end C1 l6
+   *normal_command@end C1 l6
    |EXTRA
    |text_arg:{junky   - ok, ignored}
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:junky   - ok, ignored}
      {spaces_after_argument:\\n}
-   *@c C1
+   *normal_command@c C1
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:WRONG - missing @end ifset.}

@@ -12,7 +12,7 @@ $result_tree_text{'inlinefmtifelse_nesting'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *paragraph C2
-   *@inlinefmtifelse C3 l1
+   *normal_command@inlinefmtifelse C3 l1
    |EXTRA
    |expand_index:{2}
    |format:{info}
@@ -22,7 +22,7 @@ $result_tree_text{'inlinefmtifelse_nesting'} = '*document_root C1
      {raw: @footnote{See.}}
     *brace_arg C2
      {spaces_before_argument: }
-     *@emph C1 l1
+     *normal_command@emph C1 l1
       *brace_container C1
        {normal_text:text}
    {normal_text:\\n}

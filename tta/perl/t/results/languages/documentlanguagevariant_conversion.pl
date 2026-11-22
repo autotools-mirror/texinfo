@@ -13,11 +13,11 @@ $result_tree_text{'documentlanguagevariant_conversion'} = '*document_root C5
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content C5
-   *@copying C3 l2
+   *normal_command@copying C3 l2
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
-    *@defivar C2 l3
+    *normal_command@defivar C2 l3
      *def_line C1 l3
      |EXTRA
      |def_command:{defivar}
@@ -44,14 +44,14 @@ $result_tree_text{'documentlanguagevariant_conversion'} = '*document_root C5
         *def_line_arg C1
          {normal_text:CCC}
        {spaces_after_argument:\\n}
-     *@end C1 l4
+     *normal_command@end C1 l4
      |EXTRA
      |text_arg:{defivar}
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:defivar}
        {spaces_after_argument:\\n}
-    *@end C1 l5
+    *normal_command@end C1 l5
     |EXTRA
     |text_arg:{copying}
      *line_arg C3
@@ -59,7 +59,7 @@ $result_tree_text{'documentlanguagevariant_conversion'} = '*document_root C5
       {normal_text:copying}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@documentlanguage C1 l7
+   *normal_command@documentlanguage C1 l7
    |EXTRA
    |global_command_number:{1}
    |text_arg:{qaa}
@@ -67,7 +67,7 @@ $result_tree_text{'documentlanguagevariant_conversion'} = '*document_root C5
      {spaces_before_argument: }
      {normal_text:qaa}
      {spaces_after_argument:\\n}
-   *@documentlanguagevariant C1 l8
+   *normal_command@documentlanguagevariant C1 l8
    |EXTRA
    |global_command_number:{1}
     *line_arg C3
@@ -75,7 +75,7 @@ $result_tree_text{'documentlanguagevariant_conversion'} = '*document_root C5
      {normal_text:1234}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@node C1 l10 {Top}
+ *normal_command@node C1 l10 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -85,7 +85,7 @@ $result_tree_text{'documentlanguagevariant_conversion'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l11 {top}
+ *normal_command@top C2 l11 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -95,7 +95,7 @@ $result_tree_text{'documentlanguagevariant_conversion'} = '*document_root C5
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l13 {chap}
+ *normal_command@node C1 l13 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -105,7 +105,7 @@ $result_tree_text{'documentlanguagevariant_conversion'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:chap}
     {spaces_after_argument:\\n}
- *@chapter C19 l14 {Chap}
+ *normal_command@chapter C19 l14 {Chap}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -117,7 +117,7 @@ $result_tree_text{'documentlanguagevariant_conversion'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C4
-   *@xref C2 l16
+   *normal_command@xref C2 l16
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -127,7 +127,7 @@ $result_tree_text{'documentlanguagevariant_conversion'} = '*document_root C5
      {spaces_before_argument: }
      {normal_text:f}
    {normal_text:.\\n}
-   *@abbr C2 l17
+   *normal_command@abbr C2 l17
     *brace_arg C1
      {normal_text:A}
     *brace_arg C2
@@ -135,7 +135,7 @@ $result_tree_text{'documentlanguagevariant_conversion'} = '*document_root C5
      {normal_text:Akl}
    {normal_text:\\n}
   {empty_line:\\n}
-  *@defivar C2 l19
+  *normal_command@defivar C2 l19
    *def_line C1 l19
    |EXTRA
    |def_command:{defivar}
@@ -168,7 +168,7 @@ $result_tree_text{'documentlanguagevariant_conversion'} = '*document_root C5
       *def_line_arg C1
        {normal_text:ivar}
      {spaces_after_argument:\\n}
-   *@end C1 l20
+   *normal_command@end C1 l20
    |EXTRA
    |text_arg:{defivar}
     *line_arg C3
@@ -176,13 +176,13 @@ $result_tree_text{'documentlanguagevariant_conversion'} = '*document_root C5
      {normal_text:defivar}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@documentlanguagevariant C1 l22
+  *normal_command@documentlanguagevariant C1 l22
   |EXTRA
   |global_command_number:{2}
    *line_arg C1
     {spaces_before_argument:\\n}
   {empty_line:\\n}
-  *@defivar C2 l24
+  *normal_command@defivar C2 l24
    *def_line C1 l24
    |EXTRA
    |def_command:{defivar}
@@ -213,7 +213,7 @@ $result_tree_text{'documentlanguagevariant_conversion'} = '*document_root C5
       *def_line_arg C1
        {normal_text:ivar}
      {spaces_after_argument:\\n}
-   *@end C1 l25
+   *normal_command@end C1 l25
    |EXTRA
    |text_arg:{defivar}
     *line_arg C3
@@ -222,7 +222,7 @@ $result_tree_text{'documentlanguagevariant_conversion'} = '*document_root C5
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C4
-   *@xref C2 l27
+   *normal_command@xref C2 l27
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -232,7 +232,7 @@ $result_tree_text{'documentlanguagevariant_conversion'} = '*document_root C5
      {spaces_before_argument: }
      {normal_text:s}
    {normal_text:.\\n}
-   *@abbr C2 l28
+   *normal_command@abbr C2 l28
     *brace_arg C1
      {normal_text:B}
     *brace_arg C2
@@ -240,14 +240,14 @@ $result_tree_text{'documentlanguagevariant_conversion'} = '*document_root C5
      {normal_text:Bkl}
    {normal_text:\\n}
   {empty_line:\\n}
-  *@documentlanguagevariant C1 l30
+  *normal_command@documentlanguagevariant C1 l30
   |EXTRA
   |global_command_number:{3}
    *line_arg C3
     {spaces_before_argument: }
     {normal_text:1234}
     {spaces_after_argument:\\n}
-  *@documentlanguage C1 l31
+  *normal_command@documentlanguage C1 l31
   |EXTRA
   |global_command_number:{2}
   |text_arg:{qaa}
@@ -257,7 +257,7 @@ $result_tree_text{'documentlanguagevariant_conversion'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C4
-   *@xref C2 l33
+   *normal_command@xref C2 l33
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -267,7 +267,7 @@ $result_tree_text{'documentlanguagevariant_conversion'} = '*document_root C5
      {spaces_before_argument: }
      {normal_text:t}
    {normal_text:.\\n}
-   *@abbr C2 l34
+   *normal_command@abbr C2 l34
     *brace_arg C1
      {normal_text:C}
     *brace_arg C2
@@ -276,7 +276,7 @@ $result_tree_text{'documentlanguagevariant_conversion'} = '*document_root C5
    {normal_text:\\n}
   {empty_line:\\n}
   {empty_line:\\n}
-  *@defivar C2 l37
+  *normal_command@defivar C2 l37
    *def_line C1 l37
    |EXTRA
    |def_command:{defivar}
@@ -307,7 +307,7 @@ $result_tree_text{'documentlanguagevariant_conversion'} = '*document_root C5
       *def_line_arg C1
        {normal_text:change}
      {spaces_after_argument:\\n}
-   *@end C1 l38
+   *normal_command@end C1 l38
    |EXTRA
    |text_arg:{defivar}
     *line_arg C3

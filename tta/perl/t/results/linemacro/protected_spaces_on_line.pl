@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'protected_spaces_on_line'} = '*document_root C1
  *before_node_section C9
   *preamble_before_content C2
-   *@linemacro C5 l1
+   *normal_command@linemacro C5 l1
    |EXTRA
    |formal_args:A{first|rest}
    |macro_name:{test}
@@ -20,7 +20,7 @@ $result_tree_text{'protected_spaces_on_line'} = '*document_root C1
     {raw:@deffn Function \\first\\ \\rest\\\\n}
     {raw:something\\n}
     {raw:@end deffn\\n}
-    *@end C1 l5
+    *normal_command@end C1 l5
     |EXTRA
     |text_arg:{linemacro}
      *line_arg C3
@@ -37,7 +37,7 @@ $result_tree_text{'protected_spaces_on_line'} = '*document_root C1
      >*linemacro_arg C2
       >{spaces_before_argument: }
       >{macro_call_arg_text:(bar, baz)@\\n continuation line}
-  *@deffn C3 l8:@test
+  *normal_command@deffn C3 l8:@test
    *def_line C1 l8:@test
    |EXTRA
    |def_command:{deffn}
@@ -77,7 +77,7 @@ $result_tree_text{'protected_spaces_on_line'} = '*document_root C1
    *def_item C1
     *paragraph C1
      {normal_text:something\\n}
-   *@end C1 l8:@test
+   *normal_command@end C1 l8:@test
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3
@@ -96,7 +96,7 @@ $result_tree_text{'protected_spaces_on_line'} = '*document_root C1
     >*linemacro_arg C2
      >{spaces_before_argument: }
      >{macro_call_arg_text:(bar, baz) rest@ and more}
-  *@deffn C3 l10:@test
+  *normal_command@deffn C3 l10:@test
    *def_line C1 l10:@test
    |EXTRA
    |def_command:{deffn}
@@ -111,7 +111,7 @@ $result_tree_text{'protected_spaces_on_line'} = '*document_root C1
      *def_name C1
       *def_line_arg C3
        {normal_text:foo}
-       *@ 
+       *normal_command@ 
        {normal_text:b}
      {spaces: }
      {delimiter:(}
@@ -130,7 +130,7 @@ $result_tree_text{'protected_spaces_on_line'} = '*document_root C1
        {normal_text:rest}
      *def_arg C1
       *def_line_arg C1
-       *@ 
+       *normal_command@ 
      *def_arg C1
       *def_line_arg C1
        {normal_text:and}
@@ -142,7 +142,7 @@ $result_tree_text{'protected_spaces_on_line'} = '*document_root C1
    *def_item C1
     *paragraph C1
      {normal_text:something\\n}
-   *@end C1 l10:@test
+   *normal_command@end C1 l10:@test
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3
@@ -161,7 +161,7 @@ $result_tree_text{'protected_spaces_on_line'} = '*document_root C1
     >*linemacro_arg C2
      >{spaces_before_argument: }
      >{macro_call_arg_text:(bar, baz)@@}
-  *@deffn C3 l12:@test
+  *normal_command@deffn C3 l12:@test
    *def_line C1 l12:@test
    |EXTRA
    |def_command:{deffn}
@@ -189,12 +189,12 @@ $result_tree_text{'protected_spaces_on_line'} = '*document_root C1
      {delimiter:)}
      *def_arg C1
       *def_line_arg C1
-       *@@
+       *normal_command@@
      {spaces_after_argument:\\n}
    *def_item C1
     *paragraph C1
      {normal_text:something\\n}
-   *@end C1 l12:@test
+   *normal_command@end C1 l12:@test
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3

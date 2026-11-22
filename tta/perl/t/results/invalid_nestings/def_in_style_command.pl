@@ -12,10 +12,10 @@ $result_tree_text{'def_in_style_command'} = '*document_root C1
  *before_node_section C3
   *preamble_before_content
   *paragraph C1
-   *@code C1 l1
+   *normal_command@code C1 l1
     *brace_container C1
      {normal_text:\\n}
-  *@defun C3 l2
+  *normal_command@defun C3 l2
    *def_line C1 l2
    |EXTRA
    |def_command:{defun}
@@ -40,7 +40,7 @@ $result_tree_text{'def_in_style_command'} = '*document_root C1
    *def_item C1
     *paragraph C1
      {normal_text:text\\n}
-   *@end C1 l4
+   *normal_command@end C1 l4
    |EXTRA
    |text_arg:{defun}
     *line_arg C3

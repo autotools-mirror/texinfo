@@ -13,7 +13,7 @@ $result_tree_text{'def'} = '*document_root C1
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content
-  *@deffn C3 l2
+  *normal_command@deffn C3 l2
    *def_line C1 l2
    |EXTRA
    |def_command:{deffn}
@@ -36,7 +36,7 @@ $result_tree_text{'def'} = '*document_root C1
    *def_item C1
     *paragraph C1
      {normal_text:d--effn\\n}
-   *@end C1 l4
+   *normal_command@end C1 l4
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3
@@ -44,7 +44,7 @@ $result_tree_text{'def'} = '*document_root C1
      {normal_text:deffn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@deffn C3 l6
+  *normal_command@deffn C3 l6
    *def_line C1 l6
    |EXTRA
    |def_command:{deffn}
@@ -76,7 +76,7 @@ $result_tree_text{'def'} = '*document_root C1
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@*
+       *normal_command@*
      {spaces: }
      *def_arg C1
       *def_line_arg C1
@@ -93,7 +93,7 @@ $result_tree_text{'def'} = '*document_root C1
    *def_item C1
     *paragraph C1
      {normal_text:def--fn\\n}
-   *@end C1 l9
+   *normal_command@end C1 l9
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3
@@ -101,7 +101,7 @@ $result_tree_text{'def'} = '*document_root C1
      {normal_text:deffn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@deffn C17 l11
+  *normal_command@deffn C17 l11
    *def_line C1 l11
    |EXTRA
    |def_command:{deffn}
@@ -115,7 +115,7 @@ $result_tree_text{'def'} = '*document_root C1
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       *@var C1 l11
+       *normal_command@var C1 l11
         *brace_container C1
          {normal_text:i}
      {spaces: }
@@ -127,7 +127,7 @@ $result_tree_text{'def'} = '*document_root C1
       *def_line_arg C1
        {normal_text:g}
      {spaces_after_argument:\\n}
-   *@deffnx C1 l12
+   *normal_command@deffnx C1 l12
    |EXTRA
    |def_command:{deffn}
    |index_entry:I{fn,4}
@@ -145,7 +145,7 @@ $result_tree_text{'def'} = '*document_root C1
      *def_arg C1
       *bracketed_arg l12
      {spaces_after_argument:\\n}
-   *@deffnx C1 l13
+   *normal_command@deffnx C1 l13
    |EXTRA
    |def_command:{deffn}
    |index_entry:I{fn,5}
@@ -163,7 +163,7 @@ $result_tree_text{'def'} = '*document_root C1
      *def_arg C1
       *bracketed_arg l13
      {spaces_after_argument:\\n}
-   *@deffnx C1 l14
+   *normal_command@deffnx C1 l14
    |EXTRA
    |def_command:{deffn}
    |index_entry:I{fn,6}
@@ -182,7 +182,7 @@ $result_tree_text{'def'} = '*document_root C1
      *def_arg C1
       *bracketed_arg l14
      {spaces_after_argument:  \\n}
-   *@deffnx C1 l15
+   *normal_command@deffnx C1 l15
    |EXTRA
    |def_command:{deffn}
    |index_entry:I{fn,7}
@@ -201,7 +201,7 @@ $result_tree_text{'def'} = '*document_root C1
      *def_arg C1
       *bracketed_arg l15
      {spaces_after_argument:\\n}
-   *@deffnx C1 l16
+   *normal_command@deffnx C1 l16
    |EXTRA
    |def_command:{deffn}
    |index_entry:I{fn,8}
@@ -214,7 +214,7 @@ $result_tree_text{'def'} = '*document_root C1
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       *@b C1 l16
+       *normal_command@b C1 l16
         *brace_container C1
          {normal_text:id ule}
      {spaces: }
@@ -222,7 +222,7 @@ $result_tree_text{'def'} = '*document_root C1
       *def_line_arg C1
        {normal_text:truc}
      {spaces_after_argument:\\n}
-   *@deffnx C1 l17
+   *normal_command@deffnx C1 l17
    |EXTRA
    |def_command:{deffn}
    |index_entry:I{fn,9}
@@ -235,10 +235,10 @@ $result_tree_text{'def'} = '*document_root C1
      {spaces: }
      *def_name C1
       *def_line_arg C1
-       *@b C1 l17
+       *normal_command@b C1 l17
         *brace_container C3
          {normal_text:id }
-         *@samp C1 l17
+         *normal_command@samp C1 l17
           *brace_container C1
            {normal_text:i}
          {normal_text: ule}
@@ -247,7 +247,7 @@ $result_tree_text{'def'} = '*document_root C1
       *def_line_arg C1
        {normal_text:truc}
      {spaces_after_argument:\\n}
-   *@deffnx C1 l18
+   *normal_command@deffnx C1 l18
    |EXTRA
    |def_command:{deffn}
    |index_entry:I{fn,10}
@@ -260,7 +260,7 @@ $result_tree_text{'def'} = '*document_root C1
       *def_line_arg C1
        {normal_text:machin}
      {spaces_after_argument:\\n}
-   *@deffnx C1 l19
+   *normal_command@deffnx C1 l19
    |EXTRA
    |def_command:{deffn}
    |index_entry:I{fn,11}
@@ -273,7 +273,7 @@ $result_tree_text{'def'} = '*document_root C1
       *bracketed_arg C1 l19
        {normal_text:bidule machin}
      {spaces_after_argument:\\n}
-   *@deffnx C1 l20
+   *normal_command@deffnx C1 l20
    |EXTRA
    |def_command:{deffn}
    |index_entry:I{fn,12}
@@ -287,7 +287,7 @@ $result_tree_text{'def'} = '*document_root C1
       *def_line_arg C1
        {normal_text:machin}
      {spaces_after_argument:\\n}
-   *@deffnx C1 l21
+   *normal_command@deffnx C1 l21
    |EXTRA
    |def_command:{deffn}
    |index_entry:I{fn,13}
@@ -315,12 +315,12 @@ $result_tree_text{'def'} = '*document_root C1
        {normal_text:comment}
      {spaces_after_argument:\\n}
    *inter_def_item C1
-    *@c C1
+    *normal_command@c C1
      *line_arg C3
       {spaces_before_argument: }
       {rawline_text:comment}
       {spaces_after_argument:\\n}
-   *@deffnx C1 l23
+   *normal_command@deffnx C1 l23
    |EXTRA
    |def_command:{deffn}
    |index_entry:I{fn,14}
@@ -348,12 +348,12 @@ $result_tree_text{'def'} = '*document_root C1
        {normal_text:item}
      {spaces_after_argument:\\n}
    *inter_def_item C1
-    *@c C1
+    *normal_command@c C1
      *line_arg C3
       {spaces_before_argument: }
       {rawline_text:comment}
       {spaces_after_argument:\\n}
-   *@deffnx C1 l25
+   *normal_command@deffnx C1 l25
    |EXTRA
    |def_command:{deffn}
    |index_entry:I{fn,15}
@@ -383,7 +383,7 @@ $result_tree_text{'def'} = '*document_root C1
    *def_item C1
     *paragraph C1
      {normal_text:Various deff lines\\n}
-   *@end C1 l27
+   *normal_command@end C1 l27
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3

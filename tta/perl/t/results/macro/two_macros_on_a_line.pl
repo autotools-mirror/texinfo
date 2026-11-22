@@ -11,14 +11,14 @@ use Encode;
 $result_tree_text{'two_macros_on_a_line'} = '*document_root C1
  *before_node_section C10
   *preamble_before_content C5
-   *@macro C3 l1
+   *normal_command@macro C3 l1
    |EXTRA
    |formal_args:A{}
    |macro_name:{mymacro}
     *arguments_line C1
      {macro_line: mymacro\\n}
     {raw:in mymacro\\n}
-    *@end C1 l3
+    *normal_command@end C1 l3
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -26,7 +26,7 @@ $result_tree_text{'two_macros_on_a_line'} = '*document_root C1
       {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@macro C5 l5
+   *normal_command@macro C5 l5
    |EXTRA
    |formal_args:A{arg}
    |macro_name:{mymacrowithargs}
@@ -35,7 +35,7 @@ $result_tree_text{'two_macros_on_a_line'} = '*document_root C1
     {raw:in with args\\n}
     {raw:now the arg \\arg\\\\n}
     {raw:after\\n}
-    *@end C1 l9
+    *normal_command@end C1 l9
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -45,15 +45,15 @@ $result_tree_text{'two_macros_on_a_line'} = '*document_root C1
    {empty_line:\\n}
    {empty_line:\\n}
   *paragraph C11
-   *@@
+   *normal_command@@
    {normal_text:mymacro}
-   *@{
-   *@}
+   *normal_command@{
+   *normal_command@}
    {normal_text: }
-   *@@
+   *normal_command@@
    {normal_text:mymacro}
-   *@{
-   *@}
+   *normal_command@{
+   *normal_command@}
    {normal_text:\\n}
    {normal_text:in mymacro in mymacro\\n}
    >SOURCEMARKS
@@ -67,12 +67,12 @@ $result_tree_text{'two_macros_on_a_line'} = '*document_root C1
    >macro_expansion<end;2><p:21>
   {empty_line:\\n}
   *paragraph C8
-   *@@
+   *normal_command@@
    {normal_text:mymacro }
-   *@@
+   *normal_command@@
    {normal_text:mymacro}
-   *@{
-   *@}
+   *normal_command@{
+   *normal_command@}
    {normal_text:\\n}
    {normal_text:in mymacro in mymacro\\n}
    >SOURCEMARKS
@@ -85,12 +85,12 @@ $result_tree_text{'two_macros_on_a_line'} = '*document_root C1
    >macro_expansion<end;4><p:21>
   {empty_line:\\n}
   *paragraph C8
-   *@@
+   *normal_command@@
    {normal_text:mymacro}
-   *@{
-   *@}
+   *normal_command@{
+   *normal_command@}
    {normal_text: }
-   *@@
+   *normal_command@@
    {normal_text:mymacro\\n}
    {normal_text:in mymacro in mymacro\\n}
    >SOURCEMARKS

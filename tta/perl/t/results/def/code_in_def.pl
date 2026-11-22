@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'code_in_def'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@deftypefn C3 l1
+  *normal_command@deftypefn C3 l1
    *def_line C1 l1
    |EXTRA
    |def_command:{deftypefn}
@@ -34,10 +34,10 @@ $result_tree_text{'code_in_def'} = '*document_root C1
      {delimiter:(}
      *def_typearg C1
       *def_line_arg C1
-       *@code C1 l1
+       *normal_command@code C1 l1
         *brace_container C2
          {normal_text:const std::vector<int>}
-         *@&
+         *normal_command@&
      {spaces: }
      *def_arg C1
       *def_line_arg C1
@@ -47,11 +47,11 @@ $result_tree_text{'code_in_def'} = '*document_root C1
    *def_item C1
     *paragraph C3
      {normal_text:Documentation of }
-     *@code C1 l2
+     *normal_command@code C1 l2
       *brace_container C1
        {normal_text:foo}
      {normal_text:.\\n}
-   *@end C1 l3
+   *normal_command@end C1 l3
    |EXTRA
    |text_arg:{deftypefn}
     *line_arg C3

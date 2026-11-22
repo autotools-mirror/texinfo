@@ -13,14 +13,14 @@ $result_tree_text{'implicit_quoting_one_arg'} = '*document_root C1
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content C2
-   *@macro C3 l2
+   *normal_command@macro C3 l2
    |EXTRA
    |formal_args:A{a}
    |macro_name:{FIXAME}
     *arguments_line C1
      {macro_line: FIXAME{a}\\n}
     {raw:@strong{FIXAME: \\a\\}\\n}
-    *@end C1 l4
+    *normal_command@end C1 l4
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -34,7 +34,7 @@ $result_tree_text{'implicit_quoting_one_arg'} = '*document_root C1
      >*brace_arg C1
       >{macro_call_arg_text:Many arguments, separated by commas, are processed here}
   *paragraph C2
-   *@strong C1 l6:@FIXAME
+   *normal_command@strong C1 l6:@FIXAME
    >SOURCEMARKS
    >macro_expansion<end;1>
     *brace_container C1

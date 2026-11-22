@@ -15,33 +15,33 @@ $result_tree_text{'protect_spaces_on_line'} = '*document_root C1
   *preamble_before_content
   *paragraph C5
    {normal_text:Before samp. }
-   *@samp C1 l2
+   *normal_command@samp C1 l2
     *brace_container C1
      {normal_text:a}
    {normal_text:. after samp, w }
-   *@w C1 l2
+   *normal_command@w C1 l2
     *brace_container C1
      {normal_text:in   w. after dot}
    {normal_text:  afterw\\n}
   {empty_line:\\n}
-  *@quotation C3 l4
+  *normal_command@quotation C3 l4
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
-   *@exdent C1 l5
+   *normal_command@exdent C1 l5
     *line_arg C7
      {spaces_before_argument: }
      {normal_text:before samp. }
-     *@samp C1 l5
+     *normal_command@samp C1 l5
       *brace_container C1
        {normal_text:a}
      {normal_text:. after samp, w }
-     *@w C1 l5
+     *normal_command@w C1 l5
       *brace_container C1
        {normal_text:in   w. after dot}
      {normal_text:  afterw}
      {spaces_after_argument:\\n}
-   *@end C1 l6
+   *normal_command@end C1 l6
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3

@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'backslash_in_arg'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'backslash_in_arg'} = '*document_root C3
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@node C9 l2 {chap}
+ *normal_command@node C9 l2 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -33,14 +33,14 @@ $result_tree_text{'backslash_in_arg'} = '*document_root C3
     {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@macro C3 l4
+  *normal_command@macro C3 l4
   |EXTRA
   |formal_args:A{TEXT}
   |macro_name:{funindex}
    *arguments_line C1
     {macro_line: funindex {TEXT}\\n}
    {raw:@findex \\TEXT\\\\n}
-   *@end C1 l6
+   *normal_command@end C1 l6
    |EXTRA
    |text_arg:{macro}
     *line_arg C3
@@ -112,7 +112,7 @@ $result_tree_text{'backslash_in_arg'} = '*document_root C3
     >SOURCEMARKS
     >macro_expansion<end;4><p:2>
     {spaces_after_argument:\\n}
-  *@printindex C1 l12
+  *normal_command@printindex C1 l12
   |EXTRA
   |global_command_number:{1}
   |misc_args:A{fn}

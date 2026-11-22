@@ -14,7 +14,7 @@ $result_tree_text{'split_nocopying_split'} = '*document_root C6
    {text_before_beginning:\\input texinfo\\n}
    {text_before_beginning:\\n}
   *preamble_before_content
- *@node C1 split_nocopying.texi:l3 {Top}
+ *normal_command@node C1 split_nocopying.texi:l3 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -24,7 +24,7 @@ $result_tree_text{'split_nocopying_split'} = '*document_root C6
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C6 split_nocopying.texi:l4 {Test file used to test split Info without @@copying}
+ *normal_command@top C6 split_nocopying.texi:l4 {Test file used to test split Info without @@copying}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -32,14 +32,14 @@ $result_tree_text{'split_nocopying_split'} = '*document_root C6
    *line_arg C5
     {spaces_before_argument: }
     {normal_text:Test file used to test split Info without }
-    *@@
+    *normal_command@@
     {normal_text:copying}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C1
    {normal_text:This is the top node.\\n}
   {empty_line:\\n}
-  *@menu C3 split_nocopying.texi:l8
+  *normal_command@menu C3 split_nocopying.texi:l8
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -54,7 +54,7 @@ $result_tree_text{'split_nocopying_split'} = '*document_root C6
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 split_nocopying.texi:l10
+   *normal_command@end C1 split_nocopying.texi:l10
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -62,7 +62,7 @@ $result_tree_text{'split_nocopying_split'} = '*document_root C6
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 split_nocopying.texi:l12 {Ch1}
+ *normal_command@node C1 split_nocopying.texi:l12 {Ch1}
  |EXTRA
  |identifier:{Ch1}
  |is_target:{1}
@@ -72,7 +72,7 @@ $result_tree_text{'split_nocopying_split'} = '*document_root C6
     {spaces_before_argument: }
     {normal_text:Ch1}
     {spaces_after_argument:\\n}
- *@chapter C4 split_nocopying.texi:l13 {Ch1}
+ *normal_command@chapter C4 split_nocopying.texi:l13 {Ch1}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -86,7 +86,7 @@ $result_tree_text{'split_nocopying_split'} = '*document_root C6
   *paragraph C1
    {normal_text:First chapter.\\n}
   {empty_line:\\n}
- *@bye C1
+ *normal_command@bye C1
   *line_arg C1
    {spaces_before_argument:\\n}
 ';

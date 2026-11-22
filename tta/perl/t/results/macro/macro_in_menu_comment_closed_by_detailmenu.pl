@@ -11,14 +11,14 @@ use Encode;
 $result_tree_text{'macro_in_menu_comment_closed_by_detailmenu'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C2
-   *@macro C3 l1
+   *normal_command@macro C3 l1
    |EXTRA
    |formal_args:A{}
    |macro_name:{emptystring}
     *arguments_line C1
      {macro_line: emptystring\\n}
     {raw:\\n}
-    *@end C1 l3
+    *normal_command@end C1 l3
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -26,7 +26,7 @@ $result_tree_text{'macro_in_menu_comment_closed_by_detailmenu'} = '*document_roo
       {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-  *@menu C4 l5
+  *normal_command@menu C4 l5
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -36,7 +36,7 @@ $result_tree_text{'macro_in_menu_comment_closed_by_detailmenu'} = '*document_roo
     >*macro_call@emptystring C1
      >*brace_arg
    >macro_expansion<end;1>
-   *@detailmenu C3 l6
+   *normal_command@detailmenu C3 l6
    |EXTRA
    |global_command_number:{1}
     *arguments_line C1
@@ -53,14 +53,14 @@ $result_tree_text{'macro_in_menu_comment_closed_by_detailmenu'} = '*document_roo
      *menu_entry_description C1
       *preformatted C1
        {normal_text:\\n}
-    *@end C1 l8
+    *normal_command@end C1 l8
     |EXTRA
     |text_arg:{detailmenu}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:detailmenu}
       {spaces_after_argument:\\n}
-   *@end C1 l9
+   *normal_command@end C1 l9
    |EXTRA
    |text_arg:{menu}
     *line_arg C3

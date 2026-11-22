@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'menu_entry_name'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@menu C12 l1
+  *normal_command@menu C12 l1
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -193,7 +193,7 @@ $result_tree_text{'menu_entry_name'} = '*document_root C1
     *menu_entry_description C1
      *preformatted C1
       {normal_text:d\\n}
-   *@end C1 l12
+   *normal_command@end C1 l12
    |EXTRA
    |text_arg:{menu}
     *line_arg C3

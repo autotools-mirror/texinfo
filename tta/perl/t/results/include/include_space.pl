@@ -14,7 +14,7 @@ $result_tree_text{'include_space'} = '*document_root C1
    {normal_text:}
    >SOURCEMARKS
    >include<start;1>
-    >*@include C1 l1
+    >*normal_command@include C1 l1
     >|EXTRA
     >|text_arg:{inc_file.texi}
      >*line_arg C3

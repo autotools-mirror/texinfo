@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'commands_in_nodedescriptionblock'} = '*document_root C7
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'commands_in_nodedescriptionblock'} = '*document_root C7
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C6 l2 {test commands in nodedescriptionblock}
+ *normal_command@top C6 l2 {test commands in nodedescriptionblock}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -31,7 +31,7 @@ $result_tree_text{'commands_in_nodedescriptionblock'} = '*document_root C7
     {normal_text:test commands in nodedescriptionblock}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C4 l4
+  *normal_command@menu C4 l4
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -57,7 +57,7 @@ $result_tree_text{'commands_in_nodedescriptionblock'} = '*document_root C7
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l7
+   *normal_command@end C1 l7
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -66,14 +66,14 @@ $result_tree_text{'commands_in_nodedescriptionblock'} = '*document_root C7
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C4
-   *@ref C1 l9
+   *normal_command@ref C1 l9
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{in-nodescription}
      {normal_text:in nodescription}
    {normal_text:, }
-   *@ref C1 l9
+   *normal_command@ref C1 l9
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -81,7 +81,7 @@ $result_tree_text{'commands_in_nodedescriptionblock'} = '*document_root C7
      {normal_text:f1}
    {normal_text:.\\n}
   {empty_line:\\n}
- *@node C1 l11 {node1}
+ *normal_command@node C1 l11 {node1}
  |EXTRA
  |identifier:{node1}
  |is_target:{1}
@@ -91,7 +91,7 @@ $result_tree_text{'commands_in_nodedescriptionblock'} = '*document_root C7
     {spaces_before_argument: }
     {normal_text:node1}
     {spaces_after_argument:\\n}
- *@chapter C4 l12 {chap1}
+ *normal_command@chapter C4 l12 {chap1}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -102,11 +102,11 @@ $result_tree_text{'commands_in_nodedescriptionblock'} = '*document_root C7
     {normal_text:chap1}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@nodedescriptionblock C10 l14
+  *normal_command@nodedescriptionblock C10 l14
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
-   *@anchor C1 l15
+   *normal_command@anchor C1 l15
    |EXTRA
    |identifier:{in-nodescription}
    |is_target:{1}
@@ -115,14 +115,14 @@ $result_tree_text{'commands_in_nodedescriptionblock'} = '*document_root C7
    {spaces_after_close_brace:\\n}
    {empty_line:\\n}
    *paragraph C8
-    *@ref C1 l17
+    *normal_command@ref C1 l17
      *brace_arg C1
      |EXTRA
      |node_content:A{0|0}
      |normalized:{node2}
       {normal_text:node2}
     {normal_text:. Footnote}
-    *@footnote C1 l17
+    *normal_command@footnote C1 l17
     |EXTRA
     |global_command_number:{1}
      *brace_command_context C1
@@ -130,7 +130,7 @@ $result_tree_text{'commands_in_nodedescriptionblock'} = '*document_root C7
        {normal_text:in footnote}
     {normal_text:. Some text to see\\n}
     {normal_text:where the max column could be. }
-    *@w C1 l18
+    *normal_command@w C1 l18
      *brace_container C1
       {normal_text:in w}
     {normal_text:.\\n}
@@ -143,7 +143,7 @@ $result_tree_text{'commands_in_nodedescriptionblock'} = '*document_root C7
       {normal_text:in nodedescriptionblock}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@float C6 l21
+   *normal_command@float C6 l21
    |EXTRA
    |float_number:{1.1}
    |float_type:{tfloat}
@@ -158,18 +158,18 @@ $result_tree_text{'commands_in_nodedescriptionblock'} = '*document_root C7
       {spaces_before_argument: }
       {normal_text:f1}
       {spaces_after_argument:\\n}
-    *@image C1 l22
+    *normal_command@image C1 l22
     |EXTRA
     |input_encoding_name:{utf-8}
      *brace_arg C1
       {normal_text:float_image}
     {normal_text:\\n}
-    *@caption C1 l23
+    *normal_command@caption C1 l23
      *brace_command_context C1
       *paragraph C1
        {normal_text:Cap1}
     {spaces_after_close_brace:\\n}
-    *@end C1 l24
+    *normal_command@end C1 l24
     |EXTRA
     |text_arg:{float}
      *line_arg C3
@@ -178,7 +178,7 @@ $result_tree_text{'commands_in_nodedescriptionblock'} = '*document_root C7
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    {empty_line:\\n}
-   *@end C1 l27
+   *normal_command@end C1 l27
    |EXTRA
    |text_arg:{nodedescriptionblock}
     *line_arg C3
@@ -186,7 +186,7 @@ $result_tree_text{'commands_in_nodedescriptionblock'} = '*document_root C7
      {normal_text:nodedescriptionblock}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l29 {node2}
+ *normal_command@node C1 l29 {node2}
  |EXTRA
  |identifier:{node2}
  |is_target:{1}
@@ -197,7 +197,7 @@ $result_tree_text{'commands_in_nodedescriptionblock'} = '*document_root C7
     {spaces_before_argument: }
     {normal_text:node2}
     {spaces_after_argument:\\n}
- *@chapter C11 l30 {chap2}
+ *normal_command@chapter C11 l30 {chap2}
  |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
@@ -209,14 +209,14 @@ $result_tree_text{'commands_in_nodedescriptionblock'} = '*document_root C7
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C4
-   *@ref C1 l32
+   *normal_command@ref C1 l32
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{in-nodescription}
      {normal_text:in nodescription}
    {normal_text:, }
-   *@ref C1 l32
+   *normal_command@ref C1 l32
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -224,12 +224,12 @@ $result_tree_text{'commands_in_nodedescriptionblock'} = '*document_root C7
      {normal_text:f1}
    {normal_text:.\\n}
   {empty_line:\\n}
-  *@c C1
+  *normal_command@c C1
    *line_arg C3
     {spaces_before_argument: }
     {rawline_text:node1 again to test two nodescription expansions}
     {spaces_after_argument:\\n}
-  *@menu C3 l35
+  *normal_command@menu C3 l35
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -244,7 +244,7 @@ $result_tree_text{'commands_in_nodedescriptionblock'} = '*document_root C7
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l37
+   *normal_command@end C1 l37
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -252,7 +252,7 @@ $result_tree_text{'commands_in_nodedescriptionblock'} = '*document_root C7
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@printindex C1 l39
+  *normal_command@printindex C1 l39
   |EXTRA
   |global_command_number:{1}
   |misc_args:A{cp}
@@ -261,7 +261,7 @@ $result_tree_text{'commands_in_nodedescriptionblock'} = '*document_root C7
     {normal_text:cp}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@listoffloats C1 l41
+  *normal_command@listoffloats C1 l41
   |EXTRA
   |float_type:{tfloat}
   |global_command_number:{1}

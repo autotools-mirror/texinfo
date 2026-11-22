@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'rec_nodes'} = '*document_root C6
  *before_node_section C1
   *preamble_before_content
- *@node C5 l1 {Top}
+ *normal_command@node C5 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -24,7 +24,7 @@ $result_tree_text{'rec_nodes'} = '*document_root C6
   *paragraph C1
    {normal_text:Top node\\n}
   {empty_line:\\n}
-  *@menu C4 l4
+  *normal_command@menu C4 l4
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -50,7 +50,7 @@ $result_tree_text{'rec_nodes'} = '*document_root C6
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l7
+   *normal_command@end C1 l7
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -58,7 +58,7 @@ $result_tree_text{'rec_nodes'} = '*document_root C6
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C4 l9 {chap node}
+ *normal_command@node C4 l9 {chap node}
  |EXTRA
  |identifier:{chap-node}
  |is_target:{1}
@@ -80,7 +80,7 @@ $result_tree_text{'rec_nodes'} = '*document_root C6
     {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C4 l11
+  *normal_command@menu C4 l11
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -106,7 +106,7 @@ $result_tree_text{'rec_nodes'} = '*document_root C6
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l14
+   *normal_command@end C1 l14
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -114,7 +114,7 @@ $result_tree_text{'rec_nodes'} = '*document_root C6
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C4 l16 {other node}
+ *normal_command@node C4 l16 {other node}
  |EXTRA
  |identifier:{other-node}
  |is_target:{1}
@@ -132,7 +132,7 @@ $result_tree_text{'rec_nodes'} = '*document_root C6
     {normal_text:chap node}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C3 l18
+  *normal_command@menu C3 l18
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument: \\n}
@@ -147,7 +147,7 @@ $result_tree_text{'rec_nodes'} = '*document_root C6
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l20
+   *normal_command@end C1 l20
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -155,7 +155,7 @@ $result_tree_text{'rec_nodes'} = '*document_root C6
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C5 l22 {node up node following second}
+ *normal_command@node C5 l22 {node up node following second}
  |EXTRA
  |identifier:{node-up-node-following-second}
  |is_target:{1}
@@ -172,7 +172,7 @@ $result_tree_text{'rec_nodes'} = '*document_root C6
    |normalized:{node-following-second}
     {normal_text:node following second}
     {spaces_after_argument:\\n}
-  *@menu C3 l23
+  *normal_command@menu C3 l23
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -187,7 +187,7 @@ $result_tree_text{'rec_nodes'} = '*document_root C6
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l25
+   *normal_command@end C1 l25
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -198,7 +198,7 @@ $result_tree_text{'rec_nodes'} = '*document_root C6
   *paragraph C1
    {normal_text:in node up node following second\\n}
   {empty_line:\\n}
- *@node C4 l29 {node following second}
+ *normal_command@node C4 l29 {node following second}
  |EXTRA
  |identifier:{node-following-second}
  |is_target:{1}
@@ -218,7 +218,7 @@ $result_tree_text{'rec_nodes'} = '*document_root C6
   {empty_line:\\n}
   *paragraph C1
    {normal_text:in node following second\\n}
-  *@menu C3 l32
+  *normal_command@menu C3 l32
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -233,7 +233,7 @@ $result_tree_text{'rec_nodes'} = '*document_root C6
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l34
+   *normal_command@end C1 l34
    |EXTRA
    |text_arg:{menu}
     *line_arg C3

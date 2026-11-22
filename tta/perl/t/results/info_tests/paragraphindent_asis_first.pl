@@ -17,7 +17,7 @@ $result_tree_text{'paragraphindent_asis_first'} = '*document_root C1
   *paragraph C1
    {normal_text:bbb\\n}
   {empty_line:\\n}
-  *@paragraphindent C1 l4
+  *normal_command@paragraphindent C1 l4
   |EXTRA
   |global_command_number:{1}
   |misc_args:A{asis}

@@ -524,11 +524,9 @@ const STRING_LIST *txi_ext_element_formal_args (ELEMENT *element);
 // New element and element modification
 
 // swig_interface.h
-// is_text_element is used to disambiguate between text element and
-// container element when the type is NUL
 %rename(store_new_element) txi_ext_store_new_element;
 ELEMENT *txi_ext_store_new_element (DOCUMENT *document, const char *type_name,
-                                const char *command_name, int is_text_element);
+                                    const char *command_name);
 
 %rename(element_reset_text) txi_ext_element_reset_text;
 void txi_ext_element_reset_text (ELEMENT *element);

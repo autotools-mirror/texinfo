@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'verb_in_linemacro_call'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C2
-   *@linemacro C6 l1
+   *normal_command@linemacro C6 l1
    |EXTRA
    |formal_args:A{a|b|c|d}
    |macro_name:{mycommand}
@@ -21,7 +21,7 @@ $result_tree_text{'verb_in_linemacro_call'} = '*document_root C1
     {raw:second \\b\\\\n}
     {raw:third \\c\\\\n}
     {raw:@defline \\a\\ \\d\\\\n}
-    *@end C1 l6
+    *normal_command@end C1 l6
     |EXTRA
     |text_arg:{linemacro}
      *line_arg C3
@@ -29,7 +29,7 @@ $result_tree_text{'verb_in_linemacro_call'} = '*document_root C1
       {normal_text:linemacro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-  *@defblock C4 l8
+  *normal_command@defblock C4 l8
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -52,20 +52,20 @@ $result_tree_text{'verb_in_linemacro_call'} = '*document_root C1
         >{spaces_before_argument: }
         >{macro_call_arg_text:other {j}}
      {normal_text:second }
-     *@verb C1 l9:@mycommand
+     *normal_command@verb C1 l9:@mycommand
       *brace_container C3
        {verb_delimiter::}
        {raw: in verb }
        {verb_delimiter::}
      {normal_text:\\n}
      {normal_text:third A }
-     *@verb C1 l9:@mycommand
+     *normal_command@verb C1 l9:@mycommand
       *brace_container C3
        {verb_delimiter:|}
        {raw: in bracketed }
        {verb_delimiter:|}
      {normal_text: \\n}
-   *@defline C1 l9:@mycommand
+   *normal_command@defline C1 l9:@mycommand
    |EXTRA
    |def_command:{defline}
    |original_def_cmdname:{defline}
@@ -85,7 +85,7 @@ $result_tree_text{'verb_in_linemacro_call'} = '*document_root C1
       >linemacro_expansion<end;1>
        {normal_text:j}
      {spaces_after_argument:\\n}
-   *@end C1 l10
+   *normal_command@end C1 l10
    |EXTRA
    |text_arg:{defblock}
     *line_arg C3

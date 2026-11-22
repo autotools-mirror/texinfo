@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'verb_in_menu_description'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {first}
+ *normal_command@node C1 l1 {first}
  |EXTRA
  |identifier:{first}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'verb_in_menu_description'} = '*document_root C3
     {spaces_before_argument: }
     {normal_text:first}
     {spaces_after_argument:\\n}
- *@top C3 l2 {top}
+ *normal_command@top C3 l2 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -31,7 +31,7 @@ $result_tree_text{'verb_in_menu_description'} = '*document_root C3
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C4 l4
+  *normal_command@menu C4 l4
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -47,7 +47,7 @@ $result_tree_text{'verb_in_menu_description'} = '*document_root C3
     *menu_entry_description C1
      *preformatted C3
       {normal_text:\\n}
-      *@verb C1 l6
+      *normal_command@verb C1 l6
        *brace_container C4
         {verb_delimiter::}
         {raw: in verb\\n}
@@ -57,7 +57,7 @@ $result_tree_text{'verb_in_menu_description'} = '*document_root C3
    *menu_comment C1
     *preformatted C1
      {after_menu_description_line:\\n}
-   *@end C1 l10
+   *normal_command@end C1 l10
    |EXTRA
    |text_arg:{menu}
     *line_arg C3

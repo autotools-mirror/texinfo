@@ -11,11 +11,11 @@ use Encode;
 $result_tree_text{'float_in_block_commands'} = '*document_root C1
  *before_node_section C7
   *preamble_before_content
-  *@example C3 l1
+  *normal_command@example C3 l1
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
-   *@float C5 l2
+   *normal_command@float C5 l2
    |EXTRA
    |float_number:{1}
    |float_type:{Text}
@@ -30,21 +30,21 @@ $result_tree_text{'float_in_block_commands'} = '*document_root C1
       {spaces_before_argument: }
       {normal_text:in example}
       {spaces_after_argument:\\n}
-    *@caption C1 l3
+    *normal_command@caption C1 l3
      *brace_command_context C1
       *paragraph C1
        {normal_text:float in example}
     {spaces_after_close_brace:}
     *preformatted C1
      {normal_text:\\n}
-    *@end C1 l4
+    *normal_command@end C1 l4
     |EXTRA
     |text_arg:{float}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:float}
       {spaces_after_argument:\\n}
-   *@end C1 l5
+   *normal_command@end C1 l5
    |EXTRA
    |text_arg:{example}
     *line_arg C3
@@ -52,11 +52,11 @@ $result_tree_text{'float_in_block_commands'} = '*document_root C1
      {normal_text:example}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@quotation C3 l7
+  *normal_command@quotation C3 l7
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
-   *@float C4 l8
+   *normal_command@float C4 l8
    |EXTRA
    |float_number:{2}
    |float_type:{Text}
@@ -71,19 +71,19 @@ $result_tree_text{'float_in_block_commands'} = '*document_root C1
       {spaces_before_argument: }
       {normal_text:in quotation}
       {spaces_after_argument:\\n}
-    *@caption C1 l9
+    *normal_command@caption C1 l9
      *brace_command_context C1
       *paragraph C1
        {normal_text:float in quotation}
     {spaces_after_close_brace:\\n}
-    *@end C1 l10
+    *normal_command@end C1 l10
     |EXTRA
     |text_arg:{float}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:float}
       {spaces_after_argument:\\n}
-   *@end C1 l11
+   *normal_command@end C1 l11
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3
@@ -91,11 +91,11 @@ $result_tree_text{'float_in_block_commands'} = '*document_root C1
      {normal_text:quotation}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@cartouche C3 l13
+  *normal_command@cartouche C3 l13
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
-   *@float C4 l14
+   *normal_command@float C4 l14
    |EXTRA
    |float_number:{3}
    |float_type:{Text}
@@ -110,19 +110,19 @@ $result_tree_text{'float_in_block_commands'} = '*document_root C1
       {spaces_before_argument: }
       {normal_text:in cartouche}
       {spaces_after_argument:\\n}
-    *@caption C1 l15
+    *normal_command@caption C1 l15
      *brace_command_context C1
       *paragraph C1
        {normal_text:float in cartouche}
     {spaces_after_close_brace:\\n}
-    *@end C1 l16
+    *normal_command@end C1 l16
     |EXTRA
     |text_arg:{float}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:float}
       {spaces_after_argument:\\n}
-   *@end C1 l17
+   *normal_command@end C1 l17
    |EXTRA
    |text_arg:{cartouche}
     *line_arg C3

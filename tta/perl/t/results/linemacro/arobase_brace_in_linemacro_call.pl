@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'arobase_brace_in_linemacro_call'} = '*document_root C1
  *before_node_section C4
   *preamble_before_content C2
-   *@linemacro C4 l1
+   *normal_command@linemacro C4 l1
    |EXTRA
    |formal_args:A{arg1|arg2}
    |macro_name:{simplemac}
@@ -19,7 +19,7 @@ $result_tree_text{'arobase_brace_in_linemacro_call'} = '*document_root C1
      {macro_line: simplemac { arg1 , arg2 }\\n}
     {raw:first: \\arg1\\|\\n}
     {raw:second: \\arg2\\|\\n}
-    *@end C1 l4
+    *normal_command@end C1 l4
     |EXTRA
     |text_arg:{linemacro}
      *line_arg C3
@@ -37,10 +37,10 @@ $result_tree_text{'arobase_brace_in_linemacro_call'} = '*document_root C1
      >*linemacro_arg C2
       >{spaces_before_argument: }
       >{bracketed_linemacro_arg: @} }
-   *@{
+   *normal_command@{
    {normal_text: |\\n}
    {normal_text:second:  }
-   *@}
+   *normal_command@}
    {normal_text: |\\n}
    >SOURCEMARKS
    >linemacro_expansion<end;1><p:2>
@@ -55,10 +55,10 @@ $result_tree_text{'arobase_brace_in_linemacro_call'} = '*document_root C1
      >*linemacro_arg C2
       >{spaces_before_argument: }
       >{bracketed_linemacro_arg: @{ }
-   *@}
+   *normal_command@}
    {normal_text: |\\n}
    {normal_text:second:  }
-   *@{
+   *normal_command@{
    {normal_text: |\\n}
    >SOURCEMARKS
    >linemacro_expansion<end;2><p:2>

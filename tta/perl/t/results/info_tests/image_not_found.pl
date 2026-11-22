@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'image_not_found'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
- *@node C3 l1 {Top}
+ *normal_command@node C3 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'image_not_found'} = '*document_root C2
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
-  *@image C1 l2
+  *normal_command@image C1 l2
   |EXTRA
   |input_encoding_name:{utf-8}
    *brace_arg C1

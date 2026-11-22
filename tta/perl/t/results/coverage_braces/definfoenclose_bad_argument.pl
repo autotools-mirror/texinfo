@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'definfoenclose_bad_argument'} = '*document_root C1
  *before_node_section C1
   *preamble_before_content C1
-   *@definfoenclose C1 l1
+   *normal_command@definfoenclose C1 l1
     *line_arg C2
      {spaces_before_argument: }
      {normal_text:#phoo,;,:}

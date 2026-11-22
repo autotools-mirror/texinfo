@@ -13,7 +13,7 @@ $result_tree_text{'protected_node_parentheses'} = '*document_root C4
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content
- *@node C1 l2 {first}
+ *normal_command@node C1 l2 {first}
  |EXTRA
  |identifier:{first}
  |is_target:{1}
@@ -23,7 +23,7 @@ $result_tree_text{'protected_node_parentheses'} = '*document_root C4
     {spaces_before_argument: }
     {normal_text:first}
     {spaces_after_argument:\\n}
- *@top C4 l3 {top}
+ *normal_command@top C4 l3 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -33,7 +33,7 @@ $result_tree_text{'protected_node_parentheses'} = '*document_root C4
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C3 l5
+  *normal_command@menu C3 l5
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -43,7 +43,7 @@ $result_tree_text{'protected_node_parentheses'} = '*document_root C4
     |EXTRA
     |node_content:A{0|1}
     |normalized:{_0028manual_0029-name}
-     *@asis C1 l6
+     *normal_command@asis C1 l6
       *brace_container C1
        {normal_text:(}
      {normal_text:manual) name}
@@ -51,7 +51,7 @@ $result_tree_text{'protected_node_parentheses'} = '*document_root C4
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l7
+   *normal_command@end C1 l7
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -59,7 +59,7 @@ $result_tree_text{'protected_node_parentheses'} = '*document_root C4
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C8 l9 {@asis{(}manual) name}
+ *normal_command@node C8 l9 {@asis{(}manual) name}
  |EXTRA
  |identifier:{_0028manual_0029-name}
  |is_target:{1}
@@ -67,42 +67,42 @@ $result_tree_text{'protected_node_parentheses'} = '*document_root C4
   *arguments_line C1
    *line_arg C4
     {spaces_before_argument: }
-    *@asis C1 l9
+    *normal_command@asis C1 l9
      *brace_container C1
       {normal_text:(}
     {normal_text:manual) name}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@anchor C1 l11
+  *normal_command@anchor C1 l11
   |EXTRA
   |identifier:{_0028manual2_0029-name2}
   |is_target:{1}
    *brace_arg C2
-    *@asis C1 l11
+    *normal_command@asis C1 l11
      *brace_container C1
       {normal_text:(}
     {normal_text:manual2) name2}
   {spaces_after_close_brace:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@ref C1 l13
+   *normal_command@ref C1 l13
     *brace_arg C2
     |EXTRA
     |node_content:A{0|1}
     |normalized:{_0028manual2_0029-name2}
-     *@asis C1 l13
+     *normal_command@asis C1 l13
       *brace_container C1
        {normal_text:(}
      {normal_text:manual2) name2}
    {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@ref C1 l15
+   *normal_command@ref C1 l15
     *brace_arg C2
     |EXTRA
     |node_content:A{0|1}
     |normalized:{_0028manual_0029-name}
-     *@asis C1 l15
+     *normal_command@asis C1 l15
       *brace_container C1
        {normal_text:(}
      {normal_text:manual) name}

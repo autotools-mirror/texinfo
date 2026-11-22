@@ -68,6 +68,7 @@ sub _correct_level($$;$) {
     while ($remaining_level) {
       my $element
        = Texinfo::TreeElement::new({'cmdname' => $cmdname,
+                                    'type' => 'normal_command',
                                     'parent' => $parent});
       push @{$parent->{'contents'}}, $element;
       my $line_args
@@ -141,7 +142,8 @@ sub fill_gaps_in_sectioning_in_document($;$) {
          Texinfo::TreeElement::new({'cmdname' =>
           $Texinfo::Common::level_to_structuring_command{'unnumbered'}
                                                 ->[$current_section_level],
-          'parent' => $root,
+                                   'type' => 'normal_command',
+                                   'parent' => $root,
         });
         my $arguments_line
           = Texinfo::TreeElement::new({'type' => 'arguments_line',
@@ -161,6 +163,7 @@ sub fill_gaps_in_sectioning_in_document($;$) {
         } else {
           my $asis_command
             = Texinfo::TreeElement::new({'cmdname' => 'asis',
+                                         'type' => 'normal_command',
                                          'parent' => $line_arg});
           $asis_command->{'contents'} = [
              Texinfo::TreeElement::new({'type' => 'brace_container',
@@ -292,9 +295,11 @@ sub _complete_node_menu($;$) {
       if (!defined($current_menu)) {
         my $section = $node_relations->{'associated_section'}->{'element'};
         $current_menu
-          = Texinfo::TreeElement::new({'contents' => \@pending,
+          = Texinfo::TreeElement::new({'cmdname' => 'menu',
+                                       'type' => 'normal_command',
+                                       'contents' => \@pending,
                                        'parent' => $section});
-        Texinfo::Structuring::new_block_command($current_menu, 'menu');
+        Texinfo::Structuring::new_block_command($current_menu);
         _prepend_new_menu_in_node_section($node_relations,
                                           $section, $current_menu);
       } else {

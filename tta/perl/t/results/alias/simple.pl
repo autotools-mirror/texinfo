@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'simple'} = '*document_root C1
  *before_node_section C4
   *preamble_before_content C4
-   *@alias C1 l1
+   *normal_command@alias C1 l1
    |EXTRA
    |misc_args:A{myalias|code}
     *line_arg C3
@@ -19,14 +19,14 @@ $result_tree_text{'simple'} = '*document_root C1
      {normal_text:myalias = code}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@alias C1 l3
+   *normal_command@alias C1 l3
    |EXTRA
    |misc_args:A{o-theralias|verb}
     *line_arg C4
      {spaces_before_argument: }
      {normal_text:o-theralias=verb}
      {spaces_after_argument: }
-     *@c C1
+     *normal_command@c C1
       *line_arg C3
        {spaces_before_argument: }
        {rawline_text:comment}
@@ -34,7 +34,7 @@ $result_tree_text{'simple'} = '*document_root C1
    {empty_line:\\n}
   *paragraph C3
    {normal_text:Should be code: }
-   *@code C1 l5
+   *normal_command@code C1 l5
    |EXTRA
    |alias_of:{myalias}
     *brace_container C1
@@ -43,7 +43,7 @@ $result_tree_text{'simple'} = '*document_root C1
   {empty_line:\\n}
   *paragraph C3
    {normal_text:Should be verb: }
-   *@verb C1 l7
+   *normal_command@verb C1 l7
    |EXTRA
    |alias_of:{o-theralias}
     *brace_container C3

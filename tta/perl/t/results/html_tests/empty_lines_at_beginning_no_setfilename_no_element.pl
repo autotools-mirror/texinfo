@@ -15,7 +15,7 @@ $result_tree_text{'empty_lines_at_beginning_no_setfilename_no_element'} = '*docu
    {text_before_beginning:\\n}
    {text_before_beginning:\\n}
   *preamble_before_content
-  *@center C1 empty_lines_at_beginning_no_setfilename_no_element.texi:l4
+  *normal_command@center C1 empty_lines_at_beginning_no_setfilename_no_element.texi:l4
    *line_arg C3
     {spaces_before_argument: }
     {normal_text:centered}
@@ -24,7 +24,7 @@ $result_tree_text{'empty_lines_at_beginning_no_setfilename_no_element'} = '*docu
   *paragraph C1
    {normal_text:Some text.\\n}
   {empty_line:\\n}
- *@bye C1
+ *normal_command@bye C1
   *line_arg C1
    {spaces_before_argument:\\n}
 ';

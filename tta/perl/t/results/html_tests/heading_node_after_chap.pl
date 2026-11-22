@@ -11,12 +11,12 @@ use Encode;
 $result_tree_text{'heading_node_after_chap'} = '*document_root C6
  *before_node_section C1
   *preamble_before_content C1
-   *@settitle C1 l1
+   *normal_command@settitle C1 l1
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:heading node after chap}
      {spaces_after_argument:\\n}
- *@node C1 l2 {Cap 1}
+ *normal_command@node C1 l2 {Cap 1}
  |EXTRA
  |identifier:{Cap-1}
  |is_target:{1}
@@ -26,7 +26,7 @@ $result_tree_text{'heading_node_after_chap'} = '*document_root C6
     {spaces_before_argument: }
     {normal_text:Cap 1}
     {spaces_after_argument:\\n}
- *@chapter C5 l3 {Chapter One}
+ *normal_command@chapter C5 l3 {Chapter One}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -37,13 +37,13 @@ $result_tree_text{'heading_node_after_chap'} = '*document_root C6
     {normal_text:Chapter One}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@c C1
+  *normal_command@c C1
    *line_arg C3
     {spaces_before_argument: }
     {rawline_text:needed to have Node 1 referenced}
     {spaces_after_argument:\\n}
   *paragraph C2
-   *@xref C1 l6
+   *normal_command@xref C1 l6
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -51,7 +51,7 @@ $result_tree_text{'heading_node_after_chap'} = '*document_root C6
      {normal_text:Node 1}
    {normal_text:\\n}
   {empty_line:\\n}
- *@node C1 l8 {Cap 2}
+ *normal_command@node C1 l8 {Cap 2}
  |EXTRA
  |identifier:{Cap-2}
  |is_target:{1}
@@ -61,7 +61,7 @@ $result_tree_text{'heading_node_after_chap'} = '*document_root C6
     {spaces_before_argument: }
     {normal_text:Cap 2}
     {spaces_after_argument:\\n}
- *@chapter C2 l9 {Chapter Two}
+ *normal_command@chapter C2 l9 {Chapter Two}
  |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
@@ -72,7 +72,7 @@ $result_tree_text{'heading_node_after_chap'} = '*document_root C6
     {normal_text:Chapter Two}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C2 l11 {Node 1}
+ *normal_command@node C2 l11 {Node 1}
  |EXTRA
  |identifier:{Node-1}
  |is_target:{1}
@@ -82,7 +82,7 @@ $result_tree_text{'heading_node_after_chap'} = '*document_root C6
     {spaces_before_argument: }
     {normal_text:Node 1}
     {spaces_after_argument:\\n}
-  *@heading C1 l12
+  *normal_command@heading C1 l12
   |EXTRA
   |global_command_number:{1}
   |heading_number:{1}

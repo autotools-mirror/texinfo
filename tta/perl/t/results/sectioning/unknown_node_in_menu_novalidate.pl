@@ -11,11 +11,11 @@ use Encode;
 $result_tree_text{'unknown_node_in_menu_novalidate'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content C2
-   *@novalidate C1 l1
+   *normal_command@novalidate C1 l1
     *line_arg C1
      {spaces_before_argument:\\n}
    {empty_line:\\n}
- *@node C3 l3 {first}
+ *normal_command@node C3 l3 {first}
  |EXTRA
  |identifier:{first}
  |is_target:{1}
@@ -26,7 +26,7 @@ $result_tree_text{'unknown_node_in_menu_novalidate'} = '*document_root C2
     {normal_text:first}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C3 l5
+  *normal_command@menu C3 l5
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -41,7 +41,7 @@ $result_tree_text{'unknown_node_in_menu_novalidate'} = '*document_root C2
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l7
+   *normal_command@end C1 l7
    |EXTRA
    |text_arg:{menu}
     *line_arg C3

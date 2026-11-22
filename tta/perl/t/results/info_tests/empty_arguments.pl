@@ -14,14 +14,14 @@ $result_tree_text{'empty_arguments'} = '*document_root C1
    {text_before_beginning:\\n}
   *preamble_before_content
   *paragraph C6
-   *@strong C1 l2
+   *normal_command@strong C1 l2
     *brace_container
    {normal_text:\\n}
-   *@uref C2 l3
+   *normal_command@uref C2 l3
     *brace_arg
     *brace_arg
    {normal_text:\\n}
-   *@abbr C2 l4
+   *normal_command@abbr C2 l4
     *brace_arg C1
      {normal_text:a}
     *brace_arg

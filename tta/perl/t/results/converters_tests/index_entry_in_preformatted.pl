@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'index_entry_in_preformatted'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'index_entry_in_preformatted'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l2 {top}
+ *normal_command@top C2 l2 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -31,7 +31,7 @@ $result_tree_text{'index_entry_in_preformatted'} = '*document_root C5
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l4 {chap}
+ *normal_command@node C1 l4 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -41,7 +41,7 @@ $result_tree_text{'index_entry_in_preformatted'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:chap}
     {spaces_after_argument:\\n}
- *@chapter C3 l5 {Chapter}
+ *normal_command@chapter C3 l5 {Chapter}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -52,7 +52,7 @@ $result_tree_text{'index_entry_in_preformatted'} = '*document_root C5
     {normal_text:Chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@example C3 l7
+  *normal_command@example C3 l7
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -75,7 +75,7 @@ $result_tree_text{'index_entry_in_preformatted'} = '*document_root C5
       {spaces_before_argument: }
       {normal_text:other}
       {spaces_after_argument: }
-      *@c C1
+      *normal_command@c C1
        *line_arg C3
         {spaces_before_argument: }
         {rawline_text:comment}
@@ -89,7 +89,7 @@ $result_tree_text{'index_entry_in_preformatted'} = '*document_root C5
       {spaces_before_argument: }
       {normal_text:last}
       {spaces_after_argument:\\n}
-   *@end C1 l14
+   *normal_command@end C1 l14
    |EXTRA
    |text_arg:{example}
     *line_arg C3

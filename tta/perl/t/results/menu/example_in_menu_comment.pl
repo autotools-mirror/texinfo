@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'example_in_menu_comment'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@menu C4 l1
+  *normal_command@menu C4 l1
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -29,7 +29,7 @@ $result_tree_text{'example_in_menu_comment'} = '*document_root C1
    *menu_comment C3
     *preformatted C1
      {after_menu_description_line:\\n}
-    *@example C3 l4
+    *normal_command@example C3 l4
      *arguments_line C1
       *block_line_arg C1
        {spaces_before_argument:\\n}
@@ -37,7 +37,7 @@ $result_tree_text{'example_in_menu_comment'} = '*document_root C1
       {normal_text:in \\n}
       {empty_line:\\n}
       {normal_text:example\\n}
-     *@end C1 l8
+     *normal_command@end C1 l8
      |EXTRA
      |text_arg:{example}
       *line_arg C3
@@ -48,7 +48,7 @@ $result_tree_text{'example_in_menu_comment'} = '*document_root C1
      {empty_line:\\n}
      {normal_text:menu comment.\\n}
      {empty_line:\\n}
-   *@end C1 l12
+   *normal_command@end C1 l12
    |EXTRA
    |text_arg:{menu}
     *line_arg C3

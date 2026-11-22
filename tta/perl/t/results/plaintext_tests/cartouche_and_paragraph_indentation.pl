@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'cartouche_and_paragraph_indentation'} = '*document_root C7
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {top}
+ *normal_command@node C1 l1 {top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'cartouche_and_paragraph_indentation'} = '*document_root C7
     {spaces_before_argument: }
     {normal_text:top}
     {spaces_after_argument:\\n}
- *@top C2 l2 {top}
+ *normal_command@top C2 l2 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -31,7 +31,7 @@ $result_tree_text{'cartouche_and_paragraph_indentation'} = '*document_root C7
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l4 {chap}
+ *normal_command@node C1 l4 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -41,7 +41,7 @@ $result_tree_text{'cartouche_and_paragraph_indentation'} = '*document_root C7
     {spaces_before_argument: }
     {normal_text:chap}
     {spaces_after_argument:\\n}
- *@chapter C8 l5 {chap}
+ *normal_command@chapter C8 l5 {chap}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -58,7 +58,7 @@ $result_tree_text{'cartouche_and_paragraph_indentation'} = '*document_root C7
   *paragraph C1
    {normal_text:bb\\n}
   {empty_line:\\n}
-  *@cartouche C7 l11
+  *normal_command@cartouche C7 l11
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
@@ -71,7 +71,7 @@ $result_tree_text{'cartouche_and_paragraph_indentation'} = '*document_root C7
    *paragraph C1
     {normal_text:dd\\n}
    {empty_line:\\n}
-   *@end C1 l17
+   *normal_command@end C1 l17
    |EXTRA
    |text_arg:{cartouche}
     *line_arg C3
@@ -79,7 +79,7 @@ $result_tree_text{'cartouche_and_paragraph_indentation'} = '*document_root C7
      {normal_text:cartouche}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l19 {chap2}
+ *normal_command@node C1 l19 {chap2}
  |EXTRA
  |identifier:{chap2}
  |is_target:{1}
@@ -89,7 +89,7 @@ $result_tree_text{'cartouche_and_paragraph_indentation'} = '*document_root C7
     {spaces_before_argument: }
     {normal_text:chap2}
     {spaces_after_argument:\\n}
- *@chapter C6 l20 {c2}
+ *normal_command@chapter C6 l20 {c2}
  |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
@@ -100,7 +100,7 @@ $result_tree_text{'cartouche_and_paragraph_indentation'} = '*document_root C7
     {normal_text:c2}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@cartouche C7 l22
+  *normal_command@cartouche C7 l22
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
@@ -113,7 +113,7 @@ $result_tree_text{'cartouche_and_paragraph_indentation'} = '*document_root C7
    *paragraph C1
     {normal_text:mm\\n}
    {empty_line:\\n}
-   *@end C1 l28
+   *normal_command@end C1 l28
    |EXTRA
    |text_arg:{cartouche}
     *line_arg C3

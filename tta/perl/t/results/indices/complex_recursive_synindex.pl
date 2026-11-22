@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'complex_recursive_synindex'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'complex_recursive_synindex'} = '*document_root C3
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@node C38 l2 {chap}
+ *normal_command@node C38 l2 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -33,35 +33,35 @@ $result_tree_text{'complex_recursive_synindex'} = '*document_root C3
     {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@defindex C1 l4
+  *normal_command@defindex C1 l4
   |EXTRA
   |misc_args:A{aaa}
    *line_arg C3
     {spaces_before_argument: }
     {normal_text:aaa}
     {spaces_after_argument:\\n}
-  *@defindex C1 l5
+  *normal_command@defindex C1 l5
   |EXTRA
   |misc_args:A{bbb}
    *line_arg C3
     {spaces_before_argument: }
     {normal_text:bbb}
     {spaces_after_argument:\\n}
-  *@defindex C1 l6
+  *normal_command@defindex C1 l6
   |EXTRA
   |misc_args:A{ccc}
    *line_arg C3
     {spaces_before_argument: }
     {normal_text:ccc}
     {spaces_after_argument:\\n}
-  *@defindex C1 l7
+  *normal_command@defindex C1 l7
   |EXTRA
   |misc_args:A{ddd}
    *line_arg C3
     {spaces_before_argument: }
     {normal_text:ddd}
     {spaces_after_argument:\\n}
-  *@defindex C1 l8
+  *normal_command@defindex C1 l8
   |EXTRA
   |misc_args:A{eee}
    *line_arg C3
@@ -69,27 +69,27 @@ $result_tree_text{'complex_recursive_synindex'} = '*document_root C3
     {normal_text:eee}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@synindex C1 l10
+  *normal_command@synindex C1 l10
   |EXTRA
   |misc_args:A{aaa|bbb}
    *line_arg C3
     {spaces_before_argument: }
     {normal_text:aaa bbb}
     {spaces_after_argument:\\n}
-  *@synindex C1 l11
+  *normal_command@synindex C1 l11
    *line_arg C3
     {spaces_before_argument: }
     {normal_text:bbb aaa}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@synindex C1 l13
+  *normal_command@synindex C1 l13
   |EXTRA
   |misc_args:A{ccc|aaa}
    *line_arg C3
     {spaces_before_argument: }
     {normal_text:ccc aaa}
     {spaces_after_argument:\\n}
-  *@synindex C1 l14
+  *normal_command@synindex C1 l14
   |EXTRA
   |misc_args:A{ddd|bbb}
    *line_arg C3
@@ -105,14 +105,14 @@ $result_tree_text{'complex_recursive_synindex'} = '*document_root C3
     {normal_text:e before synindex}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@synindex C1 l17
+  *normal_command@synindex C1 l17
   |EXTRA
   |misc_args:A{eee|ddd}
    *line_arg C3
     {spaces_before_argument: }
     {normal_text:eee ddd}
     {spaces_after_argument:\\n}
-  *@synindex C1 l18
+  *normal_command@synindex C1 l18
    *line_arg C3
     {spaces_before_argument: }
     {normal_text:bbb eee}
@@ -161,7 +161,7 @@ $result_tree_text{'complex_recursive_synindex'} = '*document_root C3
   {empty_line:\\n}
   *paragraph C1
    {normal_text:bbb\\n}
-  *@printindex C1 l27
+  *normal_command@printindex C1 l27
   |EXTRA
   |global_command_number:{1}
   |misc_args:A{bbb}
@@ -172,7 +172,7 @@ $result_tree_text{'complex_recursive_synindex'} = '*document_root C3
   {empty_line:\\n}
   *paragraph C1
    {normal_text:aaa\\n}
-  *@printindex C1 l30
+  *normal_command@printindex C1 l30
   |EXTRA
   |global_command_number:{2}
   |misc_args:A{aaa}
@@ -183,7 +183,7 @@ $result_tree_text{'complex_recursive_synindex'} = '*document_root C3
   {empty_line:\\n}
   *paragraph C1
    {normal_text:ccc\\n}
-  *@printindex C1 l33
+  *normal_command@printindex C1 l33
   |EXTRA
   |global_command_number:{3}
   |misc_args:A{ccc}
@@ -194,7 +194,7 @@ $result_tree_text{'complex_recursive_synindex'} = '*document_root C3
   {empty_line:\\n}
   *paragraph C1
    {normal_text:ddd\\n}
-  *@printindex C1 l36
+  *normal_command@printindex C1 l36
   |EXTRA
   |global_command_number:{4}
   |misc_args:A{ddd}
@@ -205,7 +205,7 @@ $result_tree_text{'complex_recursive_synindex'} = '*document_root C3
   {empty_line:\\n}
   *paragraph C1
    {normal_text:eee\\n}
-  *@printindex C1 l39
+  *normal_command@printindex C1 l39
   |EXTRA
   |global_command_number:{5}
   |misc_args:A{eee}

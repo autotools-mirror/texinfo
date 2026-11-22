@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'all_spaces'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content C2
-   *@documentencoding C1 all_spaces.texi:l1
+   *normal_command@documentencoding C1 all_spaces.texi:l1
    |EXTRA
    |global_command_number:{1}
    |input_encoding_name:{utf-8}
@@ -21,7 +21,7 @@ $result_tree_text{'all_spaces'} = '*document_root C3
      {normal_text:utf-8}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@node C1 all_spaces.texi:l3 {Top}
+ *normal_command@node C1 all_spaces.texi:l3 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -31,7 +31,7 @@ $result_tree_text{'all_spaces'} = '*document_root C3
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@node C58 all_spaces.texi:l4 {chap}
+ *normal_command@node C58 all_spaces.texi:l4 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -109,7 +109,7 @@ $result_tree_text{'all_spaces'} = '*document_root C3
   *paragraph C1
    {normal_text:HAIR SPACE: | |\\n}
   {empty_line:\\n}
-  *@c C1
+  *normal_command@c C1
    *line_arg C3
     {spaces_before_argument: }
     {rawline_text:Perl and C code give different width.}
@@ -117,7 +117,7 @@ $result_tree_text{'all_spaces'} = '*document_root C3
   *paragraph C1
    {normal_text:LINE SEPARATOR: | |\\n}
   {empty_line:\\n}
-  *@c C1
+  *normal_command@c C1
    *line_arg C3
     {spaces_before_argument: }
     {rawline_text:Perl and C code give different width.}

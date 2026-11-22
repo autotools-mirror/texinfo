@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'node_empty_direction'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {name}
+ *normal_command@node C1 l1 {name}
  |EXTRA
  |identifier:{name}
  |is_target:{1}

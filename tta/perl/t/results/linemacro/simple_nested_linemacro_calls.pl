@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'simple_nested_linemacro_calls'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
- *@node C7 l1 {Top}
+ *normal_command@node C7 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -22,14 +22,14 @@ $result_tree_text{'simple_nested_linemacro_calls'} = '*document_root C2
     {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@linemacro C3 l3
+  *normal_command@linemacro C3 l3
   |EXTRA
   |formal_args:A{a|b|rest}
   |macro_name:{inside}
    *arguments_line C1
     {macro_line: inside {a, b, rest}\\n}
    {raw:inside {\\a\\ operator \\b\\} \\rest\\\\n}
-   *@end C1 l5
+   *normal_command@end C1 l5
    |EXTRA
    |text_arg:{linemacro}
     *line_arg C3
@@ -37,7 +37,7 @@ $result_tree_text{'simple_nested_linemacro_calls'} = '*document_root C2
      {normal_text:linemacro}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@linemacro C4 l7
+  *normal_command@linemacro C4 l7
   |EXTRA
   |formal_args:A{one|two|three}
   |macro_name:{outside}
@@ -45,7 +45,7 @@ $result_tree_text{'simple_nested_linemacro_calls'} = '*document_root C2
     {macro_line: outside {one, two, three}\\n}
    {raw:@defline \\one\\ {\\two\\} \\three\\\\n}
    {raw:@cindex \\two\\\\n}
-   *@end C1 l10
+   *normal_command@end C1 l10
    |EXTRA
    |text_arg:{linemacro}
     *line_arg C3
@@ -53,7 +53,7 @@ $result_tree_text{'simple_nested_linemacro_calls'} = '*document_root C2
      {normal_text:linemacro}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@defblock C4 l12
+  *normal_command@defblock C4 l12
    *arguments_line C1
     *block_line_arg C1
     >SOURCEMARKS
@@ -69,7 +69,7 @@ $result_tree_text{'simple_nested_linemacro_calls'} = '*document_root C2
        >{spaces_before_argument: }
        >{macro_call_arg_text:@inside {X} {Y} ( remaining, type typed )}
      {spaces_before_argument:\\n}
-   *@defline C1 l13:@outside
+   *normal_command@defline C1 l13:@outside
    |EXTRA
    |def_command:{defline}
    |original_def_cmdname:{defline}
@@ -133,7 +133,7 @@ $result_tree_text{'simple_nested_linemacro_calls'} = '*document_root C2
       >SOURCEMARKS
       >linemacro_expansion<end;1><p:10>
       {spaces_after_argument:\\n}
-   *@end C1 l14
+   *normal_command@end C1 l14
    |EXTRA
    |text_arg:{defblock}
     *line_arg C3

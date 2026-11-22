@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'section_chapter_before_top_nodes'} = '*document_root C7
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {section node}
+ *normal_command@node C1 l1 {section node}
  |EXTRA
  |identifier:{section-node}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'section_chapter_before_top_nodes'} = '*document_root C7
     {spaces_before_argument: }
     {normal_text:section node}
     {spaces_after_argument:\\n}
- *@section C2 l2 {section}
+ *normal_command@section C2 l2 {section}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{2}
@@ -32,7 +32,7 @@ $result_tree_text{'section_chapter_before_top_nodes'} = '*document_root C7
     {normal_text:section}
     {spaces_after_argument: \\n}
   {empty_line:\\n}
- *@node C1 l4 {chapter node}
+ *normal_command@node C1 l4 {chapter node}
  |EXTRA
  |identifier:{chapter-node}
  |is_target:{1}
@@ -42,7 +42,7 @@ $result_tree_text{'section_chapter_before_top_nodes'} = '*document_root C7
     {spaces_before_argument: }
     {normal_text:chapter node}
     {spaces_after_argument:\\n}
- *@chapter C4 l5 {chapter}
+ *normal_command@chapter C4 l5 {chapter}
  |EXTRA
  |section_heading_number:{2}
  |section_level:{2}
@@ -53,7 +53,7 @@ $result_tree_text{'section_chapter_before_top_nodes'} = '*document_root C7
     {normal_text:chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C3 l7
+  *normal_command@menu C3 l7
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -68,7 +68,7 @@ $result_tree_text{'section_chapter_before_top_nodes'} = '*document_root C7
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l9
+   *normal_command@end C1 l9
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -76,7 +76,7 @@ $result_tree_text{'section_chapter_before_top_nodes'} = '*document_root C7
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l11 {Top}
+ *normal_command@node C1 l11 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -86,7 +86,7 @@ $result_tree_text{'section_chapter_before_top_nodes'} = '*document_root C7
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C4 l12 {top}
+ *normal_command@top C4 l12 {top}
  |EXTRA
  |section_level:{2}
  |section_number:{3}
@@ -96,7 +96,7 @@ $result_tree_text{'section_chapter_before_top_nodes'} = '*document_root C7
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C3 l14
+  *normal_command@menu C3 l14
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -111,7 +111,7 @@ $result_tree_text{'section_chapter_before_top_nodes'} = '*document_root C7
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l16
+   *normal_command@end C1 l16
    |EXTRA
    |text_arg:{menu}
     *line_arg C3

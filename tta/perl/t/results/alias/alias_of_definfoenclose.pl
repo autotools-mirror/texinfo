@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'alias_of_definfoenclose'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C4
-   *@definfoenclose C1 l1
+   *normal_command@definfoenclose C1 l1
    |EXTRA
    |misc_args:A{phoo|;|:}
     *line_arg C3
@@ -19,7 +19,7 @@ $result_tree_text{'alias_of_definfoenclose'} = '*document_root C1
      {normal_text:phoo,;,:}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@alias C1 l3
+   *normal_command@alias C1 l3
    |EXTRA
    |misc_args:A{new|phoo}
     *line_arg C3

@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'macro_expansion_end_in_ignored_ifset_content'} = '*document_root C1
  *before_node_section C1
   *preamble_before_content C2
-   *@macro C4 l1
+   *normal_command@macro C4 l1
    |EXTRA
    |formal_args:A{}
    |macro_name:{beginifsetcontent}
@@ -19,7 +19,7 @@ $result_tree_text{'macro_expansion_end_in_ignored_ifset_content'} = '*document_r
      {macro_line: beginifsetcontent\\n}
     {raw:@ifset a\\n}
     {raw:going \\n}
-    *@end C1 l4
+    *normal_command@end C1 l4
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -32,7 +32,7 @@ $result_tree_text{'macro_expansion_end_in_ignored_ifset_content'} = '*document_r
     >*macro_call@beginifsetcontent C1
      >*brace_arg
    >ignored_conditional_block<1><p:1>
-    >*@ifset C4 l6:@beginifsetcontent
+    >*normal_command@ifset C4 l6:@beginifsetcontent
      >*arguments_line C1
       >*block_line_arg C3
        >{spaces_before_argument: }
@@ -42,7 +42,7 @@ $result_tree_text{'macro_expansion_end_in_ignored_ifset_content'} = '*document_r
      >>SOURCEMARKS
      >>macro_expansion<end;1><p:6>
      >{raw: into the code\\n}
-     >*@end C1 l7
+     >*normal_command@end C1 l7
      >|EXTRA
      >|text_arg:{ifset}
       >*line_arg C3

@@ -11,13 +11,13 @@ use Encode;
 $result_tree_text{'quotation_beginning_and_end_on_line'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@quotation C2 l1
+  *normal_command@quotation C2 l1
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
      {normal_text:in quotation}
      {spaces_after_argument: }
-   *@end C1 l1
+   *normal_command@end C1 l1
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3

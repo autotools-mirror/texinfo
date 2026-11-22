@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'tex_expanded_in_caption_multiple_time'} = '*document_root C1
  *before_node_section C4
   *preamble_before_content
-  *@float C5 l1
+  *normal_command@float C5 l1
   |EXTRA
   |float_number:{1}
   |float_type:{A}
@@ -28,16 +28,16 @@ $result_tree_text{'tex_expanded_in_caption_multiple_time'} = '*document_root C1
      {spaces_after_argument:\\n}
    *paragraph C1
     {normal_text:My float.\\n}
-   *@caption C1 l3
+   *normal_command@caption C1 l3
     *brace_command_context C2
      {spaces_before_argument:\\n}
-     *@tex C3 l4
+     *normal_command@tex C3 l4
       *arguments_line C1
        *block_line_arg C1
         {spaces_before_argument:\\n}
       *rawpreformatted C1
        {normal_text:aa\\n}
-      *@end C1 l6
+      *normal_command@end C1 l6
       |EXTRA
       |text_arg:{tex}
        *line_arg C3
@@ -45,7 +45,7 @@ $result_tree_text{'tex_expanded_in_caption_multiple_time'} = '*document_root C1
         {normal_text:tex}
         {spaces_after_argument:\\n}
    {spaces_after_close_brace:\\n}
-   *@end C1 l8
+   *normal_command@end C1 l8
    |EXTRA
    |text_arg:{float}
     *line_arg C3
@@ -53,7 +53,7 @@ $result_tree_text{'tex_expanded_in_caption_multiple_time'} = '*document_root C1
      {normal_text:float}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@listoffloats C1 l10
+  *normal_command@listoffloats C1 l10
   |EXTRA
   |float_type:{A}
   |global_command_number:{1}

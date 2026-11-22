@@ -14,7 +14,7 @@ $result_tree_text{'cpp_lines'} = '*document_root C4
    *preamble_before_beginning C1
     {text_before_beginning:\\input texinfo\\n}
   *preamble_before_content C3
-   *@setfilename C1 cpp_lines.texi:l2
+   *normal_command@setfilename C1 cpp_lines.texi:l2
    |EXTRA
    |text_arg:{cpp_lines.info}
     *line_arg C3
@@ -27,12 +27,12 @@ $result_tree_text{'cpp_lines'} = '*document_root C4
    >line_directive<2><p:1>{ # 66 "g_f" 4 \\n}
    {empty_line:\\n}
   *paragraph C2
-   *@email C1 g_f:l68
+   *normal_command@email C1 g_f:l68
     *brace_arg C1
      {normal_text:before top}
    {normal_text:.\\n}
   {empty_line:\\n}
- *@node C1 g_f:l70 {Top}
+ *normal_command@node C1 g_f:l70 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -42,7 +42,7 @@ $result_tree_text{'cpp_lines'} = '*document_root C4
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@node C55 g_f:l71 {chap}
+ *normal_command@node C55 g_f:l71 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -59,13 +59,13 @@ $result_tree_text{'cpp_lines'} = '*document_root C4
    >SOURCEMARKS
    >line_directive<3><p:6>{# 46\\n}
   {empty_line:\\n}
-  *@verbatim C4 g_f:l48
+  *normal_command@verbatim C4 g_f:l48
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    {raw:\\n}
    {raw:  #line 5 "f"\\n}
-   *@end C1 g_f:l51
+   *normal_command@end C1 g_f:l51
    |EXTRA
    |text_arg:{verbatim}
     *line_arg C3
@@ -73,14 +73,14 @@ $result_tree_text{'cpp_lines'} = '*document_root C4
      {normal_text:verbatim}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@macro C3 g_f:l53
+  *normal_command@macro C3 g_f:l53
   |EXTRA
   |formal_args:A{}
   |macro_name:{macr}
    *arguments_line C1
     {macro_line: macr\\n}
    {raw:# line 7 "k"\\n}
-   *@end C1 g_f:l55
+   *normal_command@end C1 g_f:l55
    |EXTRA
    |text_arg:{macro}
     *line_arg C3
@@ -89,7 +89,7 @@ $result_tree_text{'cpp_lines'} = '*document_root C4
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@email C1 g_f:l57
+   *normal_command@email C1 g_f:l57
     *brace_arg C1
      {normal_text:after lacro def}
    {normal_text:\\n}
@@ -103,12 +103,12 @@ $result_tree_text{'cpp_lines'} = '*document_root C4
    >macro_expansion<end;1><p:12>
   {empty_line:\\n}
   *paragraph C2
-   *@email C1 g_f:l61
+   *normal_command@email C1 g_f:l61
     *brace_arg C1
      {normal_text:after macro call}
    {normal_text:.\\n}
   {empty_line:\\n}
-  *@macro C4 g_f:l63
+  *normal_command@macro C4 g_f:l63
   |EXTRA
   |formal_args:A{}
   |macro_name:{macrtwo}
@@ -116,7 +116,7 @@ $result_tree_text{'cpp_lines'} = '*document_root C4
     {macro_line: macrtwo\\n}
    {raw:line before\\n}
    {raw:# line 666 "x"\\n}
-   *@end C1 g_f:l66
+   *normal_command@end C1 g_f:l66
    |EXTRA
    |text_arg:{macro}
     *line_arg C3
@@ -125,7 +125,7 @@ $result_tree_text{'cpp_lines'} = '*document_root C4
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@email C1 g_f:l68
+   *normal_command@email C1 g_f:l68
     *brace_arg C1
      {normal_text:after macrotwo def}
    {normal_text:\\n}
@@ -141,14 +141,14 @@ $result_tree_text{'cpp_lines'} = '*document_root C4
    >macro_expansion<end;2><p:14>
   {empty_line:\\n}
   *paragraph C2
-   *@email C1 g_f:l72
+   *normal_command@email C1 g_f:l72
     *brace_arg C1
      {normal_text:after macrotwo call}
    {normal_text:. \\n}
   {empty_line:\\n}
   >SOURCEMARKS
   >include<start;1><p:1>
-   >*@include C1 g_f:l74
+   >*normal_command@include C1 g_f:l74
    >|EXTRA
    >|text_arg:{file_with_cpp_lines.texi}
     >*line_arg C3
@@ -160,7 +160,7 @@ $result_tree_text{'cpp_lines'} = '*document_root C4
   >line_directive<4><p:1>{#line 8 "inc"\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@email C1 inc:l10
+   *normal_command@email C1 inc:l10
     *brace_arg C1
      {normal_text:in}
    {normal_text:\\n}
@@ -169,13 +169,13 @@ $result_tree_text{'cpp_lines'} = '*document_root C4
   >line_directive<5><p:1>{#line 78 "grrr"\\n}
   >include<end;1><p:1>
   *paragraph C2
-   *@email C1 g_f:l75
+   *normal_command@email C1 g_f:l75
     *brace_arg C1
      {normal_text:after inc}
    {normal_text:. \\n}
   {empty_line:\\n}
   *paragraph C2
-   *@verb C1 g_f:l77
+   *normal_command@verb C1 g_f:l77
     *brace_container C4
      {verb_delimiter::}
      {raw:\\n}
@@ -184,14 +184,14 @@ $result_tree_text{'cpp_lines'} = '*document_root C4
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@email C1 g_f:l81
+   *normal_command@email C1 g_f:l81
     *brace_arg C1
      {normal_text:after verb}
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C3
    {normal_text:a}
-   *@footnote C1 g_f:l83
+   *normal_command@footnote C1 g_f:l83
    |EXTRA
    |global_command_number:{1}
     *brace_command_context C2
@@ -204,7 +204,7 @@ $result_tree_text{'cpp_lines'} = '*document_root C4
   {empty_line:\\n}
   *paragraph C3
    {normal_text:a}
-   *@footnote C1 footnote:l28
+   *normal_command@footnote C1 footnote:l28
    |EXTRA
    |global_command_number:{2}
     *brace_command_context C3
@@ -218,7 +218,7 @@ $result_tree_text{'cpp_lines'} = '*document_root C4
   {empty_line:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@email C2 footnote2:l40
+   *normal_command@email C2 footnote2:l40
     *brace_arg C2
      {spaces_before_argument: \\n}
      >SOURCEMARKS
@@ -233,7 +233,7 @@ $result_tree_text{'cpp_lines'} = '*document_root C4
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@email C2 email2:l64
+   *normal_command@email C2 email2:l64
     *brace_arg C3
      {spaces_before_argument:\\n}
      {spaces_before_argument: }
@@ -246,7 +246,7 @@ $result_tree_text{'cpp_lines'} = '*document_root C4
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@email C2 email2:l69
+   *normal_command@email C2 email2:l69
     *brace_arg C3
      {spaces_before_argument: \\n}
      >SOURCEMARKS
@@ -263,7 +263,7 @@ $result_tree_text{'cpp_lines'} = '*document_root C4
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C1
-   *@email C1 email12:l64
+   *normal_command@email C1 email12:l64
     *brace_arg C2
      {spaces_before_argument: \\n}
      >SOURCEMARKS
@@ -286,7 +286,7 @@ $result_tree_text{'cpp_lines'} = '*document_root C4
   >SOURCEMARKS
   >line_directive<15><p:1>{#line 5 "accentêd"\\n}
   {empty_line:\\n}
-  *@documentlanguage C1 accentêd:l7
+  *normal_command@documentlanguage C1 accentêd:l7
   |EXTRA
   |global_command_number:{1}
   |text_arg:{làng}
@@ -295,7 +295,7 @@ $result_tree_text{'cpp_lines'} = '*document_root C4
     {normal_text:làng}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@bye C1
+ *normal_command@bye C1
   *line_arg C1
    {spaces_before_argument:\\n}
 ';

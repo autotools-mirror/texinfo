@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'macro_expansion_end_in_ignored_nested_different_conditional'} = '*document_root C1
  *before_node_section C1
   *preamble_before_content C2
-   *@macro C5 l1
+   *normal_command@macro C5 l1
    |EXTRA
    |formal_args:A{}
    |macro_name:{beginnestedcond}
@@ -20,7 +20,7 @@ $result_tree_text{'macro_expansion_end_in_ignored_nested_different_conditional'}
     {raw:@ifset a\\n}
     {raw:@ifclear b\\n}
     {raw:GG\\n}
-    *@end C1 l5
+    *normal_command@end C1 l5
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -33,7 +33,7 @@ $result_tree_text{'macro_expansion_end_in_ignored_nested_different_conditional'}
     >*macro_call@beginnestedcond C1
      >*brace_arg
    >ignored_conditional_block<1><p:1>
-    >*@ifset C5 l7:@beginnestedcond
+    >*normal_command@ifset C5 l7:@beginnestedcond
      >*arguments_line C1
       >*block_line_arg C3
        >{spaces_before_argument: }
@@ -44,7 +44,7 @@ $result_tree_text{'macro_expansion_end_in_ignored_nested_different_conditional'}
      >>SOURCEMARKS
      >>macro_expansion<end;1><p:2>
      >{raw:\\n}
-     >*@end C1 l8
+     >*normal_command@end C1 l8
      >|EXTRA
      >|text_arg:{ifset}
       >*line_arg C3

@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'value_after_accent'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C1
-   *@set C1
+   *normal_command@set C1
    |EXTRA
    |misc_args:A{a_letter|a}
     *line_arg C3
@@ -19,25 +19,25 @@ $result_tree_text{'value_after_accent'} = '*document_root C1
      {rawline_text:a_letter a}
      {spaces_after_argument:\\n}
   *paragraph C3
-   *@ringaccent C2 l2
+   *normal_command@ringaccent C2 l2
    >SOURCEMARKS
    >value_expansion<end;1>
     {spaces_after_cmd_before_arg: }
     >SOURCEMARKS
     >value_expansion<start;1><p:1>{a}
-     >*@value C1
+     >*normal_command@value C1
       >*brace_container C1
        >{normal_text:a_letter}
     *following_arg C1
      {normal_text:a}
    {normal_text:\\n}
-   *@~ C2 l3
+   *normal_command@~ C2 l3
    >SOURCEMARKS
    >value_expansion<end;2>
     {spaces_after_cmd_before_arg:}
     >SOURCEMARKS
     >value_expansion<start;2>{a}
-     >*@value C1
+     >*normal_command@value C1
       >*brace_container C1
        >{normal_text:a_letter}
     *following_arg C1

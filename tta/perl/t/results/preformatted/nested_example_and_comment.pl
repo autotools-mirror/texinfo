@@ -11,23 +11,23 @@ use Encode;
 $result_tree_text{'nested_example_and_comment'} = '*document_root C1
  *before_node_section C6
   *preamble_before_content
-  *@example C5 l1
+  *normal_command@example C5 l1
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C2
     {normal_text:First line 0 }
-    *@c C1
+    *normal_command@c C1
      *line_arg C2
       {rawline_text:}
       {spaces_after_argument:\\n}
-   *@example C3 l3
+   *normal_command@example C3 l3
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *preformatted C1
      {normal_text:Nested example\\n}
-    *@end C1 l5
+    *normal_command@end C1 l5
     |EXTRA
     |text_arg:{example}
      *line_arg C3
@@ -36,7 +36,7 @@ $result_tree_text{'nested_example_and_comment'} = '*document_root C1
       {spaces_after_argument:\\n}
    *preformatted C1
     {normal_text:In first one\\n}
-   *@end C1 l7
+   *normal_command@end C1 l7
    |EXTRA
    |text_arg:{example}
     *line_arg C3
@@ -44,27 +44,27 @@ $result_tree_text{'nested_example_and_comment'} = '*document_root C1
      {normal_text:example}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@example C5 l9
+  *normal_command@example C5 l9
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C2
     {normal_text:First line 1 }
-    *@c C1
+    *normal_command@c C1
      *line_arg C2
       {rawline_text:}
       {spaces_after_argument:\\n}
-   *@example C3 l11
+   *normal_command@example C3 l11
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *preformatted C2
      {normal_text:Nested example }
-     *@c C1
+     *normal_command@c C1
       *line_arg C2
        {rawline_text:}
        {spaces_after_argument:\\n}
-    *@end C1 l13
+    *normal_command@end C1 l13
     |EXTRA
     |text_arg:{example}
      *line_arg C3
@@ -73,7 +73,7 @@ $result_tree_text{'nested_example_and_comment'} = '*document_root C1
       {spaces_after_argument:\\n}
    *preformatted C1
     {normal_text:In first one\\n}
-   *@end C1 l15
+   *normal_command@end C1 l15
    |EXTRA
    |text_arg:{example}
     *line_arg C3
@@ -81,27 +81,27 @@ $result_tree_text{'nested_example_and_comment'} = '*document_root C1
      {normal_text:example}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@example C5 l17
+  *normal_command@example C5 l17
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C2
     {normal_text:First line 2 }
-    *@c C1
+    *normal_command@c C1
      *line_arg C2
       {rawline_text:}
       {spaces_after_argument:\\n}
-   *@example C3 l19
+   *normal_command@example C3 l19
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *preformatted C2
      {normal_text:Nested example }
-     *@c C1
+     *normal_command@c C1
       *line_arg C2
        {rawline_text:}
        {spaces_after_argument:\\n}
-    *@end C1 l21
+    *normal_command@end C1 l21
     |EXTRA
     |text_arg:{example}
      *line_arg C3
@@ -110,11 +110,11 @@ $result_tree_text{'nested_example_and_comment'} = '*document_root C1
       {spaces_after_argument:\\n}
    *preformatted C2
     {normal_text:In first one }
-    *@c C1
+    *normal_command@c C1
      *line_arg C2
       {rawline_text:}
       {spaces_after_argument:\\n}
-   *@end C1 l23
+   *normal_command@end C1 l23
    |EXTRA
    |text_arg:{example}
     *line_arg C3

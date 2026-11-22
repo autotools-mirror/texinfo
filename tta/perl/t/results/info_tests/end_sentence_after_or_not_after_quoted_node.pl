@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'end_sentence_after_or_not_after_quoted_node'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'end_sentence_after_or_not_after_quoted_node'} = '*document_ro
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C14 l2 {top}
+ *normal_command@top C14 l2 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -32,7 +32,7 @@ $result_tree_text{'end_sentence_after_or_not_after_quoted_node'} = '*document_ro
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C4
-   *@ref C2 l4
+   *normal_command@ref C2 l4
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -42,7 +42,7 @@ $result_tree_text{'end_sentence_after_or_not_after_quoted_node'} = '*document_ro
      {spaces_before_argument: }
      {normal_text:n}
    {normal_text:. b.\\n}
-   *@ref C2 l5
+   *normal_command@ref C2 l5
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -54,7 +54,7 @@ $result_tree_text{'end_sentence_after_or_not_after_quoted_node'} = '*document_ro
    {normal_text:. b.\\n}
   {empty_line:\\n}
   *paragraph C4
-   *@ref C2 l7
+   *normal_command@ref C2 l7
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -64,7 +64,7 @@ $result_tree_text{'end_sentence_after_or_not_after_quoted_node'} = '*document_ro
      {spaces_before_argument: }
      {normal_text:n}
    {normal_text:. v.\\n}
-   *@ref C2 l8
+   *normal_command@ref C2 l8
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -75,28 +75,28 @@ $result_tree_text{'end_sentence_after_or_not_after_quoted_node'} = '*document_ro
      {normal_text:n}
    {normal_text:. v.\\n}
   {empty_line:\\n}
-  *@anchor C1 l10
+  *normal_command@anchor C1 l10
   |EXTRA
   |identifier:{aaa}
   |is_target:{1}
    *brace_arg C1
     {normal_text:aaa}
   {spaces_after_close_brace:\\n}
-  *@anchor C1 l11
+  *normal_command@anchor C1 l11
   |EXTRA
   |identifier:{aaB}
   |is_target:{1}
    *brace_arg C1
     {normal_text:aaB}
   {spaces_after_close_brace:\\n}
-  *@anchor C1 l12
+  *normal_command@anchor C1 l12
   |EXTRA
   |identifier:{c_002edd}
   |is_target:{1}
    *brace_arg C1
     {normal_text:c.dd}
   {spaces_after_close_brace:\\n}
-  *@anchor C1 l13
+  *normal_command@anchor C1 l13
   |EXTRA
   |identifier:{c_002edD}
   |is_target:{1}

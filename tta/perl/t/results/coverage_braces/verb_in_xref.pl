@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'verb_in_xref'} = '*document_root C1
  *before_node_section C5
   *preamble_before_content
-  *@anchor C1 l1
+  *normal_command@anchor C1 l1
   |EXTRA
   |identifier:{point}
   |is_target:{1}
@@ -20,7 +20,7 @@ $result_tree_text{'verb_in_xref'} = '*document_root C1
   {spaces_after_close_brace:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@xref C2 l3
+   *normal_command@xref C2 l3
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -28,7 +28,7 @@ $result_tree_text{'verb_in_xref'} = '*document_root C1
      {normal_text:point}
     *brace_arg C2
      {spaces_before_argument: }
-     *@verb C1 l3
+     *normal_command@verb C1 l3
       *brace_container C6
        {verb_delimiter:*}
        {raw:with\\n}

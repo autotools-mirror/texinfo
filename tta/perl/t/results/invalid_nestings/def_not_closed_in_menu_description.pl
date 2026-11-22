@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'def_not_closed_in_menu_description'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@menu C3 l1
+  *normal_command@menu C3 l1
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -27,7 +27,7 @@ $result_tree_text{'def_not_closed_in_menu_description'} = '*document_root C1
     *menu_entry_description C2
      *preformatted C1
       {normal_text:before deff }
-     *@deffn C2 l2
+     *normal_command@deffn C2 l2
       *def_line C1 l2
       |EXTRA
       |def_command:{deffn}
@@ -51,7 +51,7 @@ $result_tree_text{'def_not_closed_in_menu_description'} = '*document_root C1
        *preformatted C2
         {empty_line:\\n}
         {normal_text:deffn text\\n}
-   *@end C1 l5
+   *normal_command@end C1 l5
    |EXTRA
    |text_arg:{menu}
     *line_arg C3

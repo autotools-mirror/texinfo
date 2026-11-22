@@ -15,7 +15,7 @@ NodePrev: [U0]
 NodeUp: [U0]
  *before_node_section C1
   *preamble_before_content
- *@node C4 l1 {Top}
+ *normal_command@node C4 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -26,7 +26,7 @@ NodeUp: [U0]
     {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C3 l3
+  *normal_command@menu C3 l3
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -41,7 +41,7 @@ NodeUp: [U0]
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l5
+   *normal_command@end C1 l5
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -49,7 +49,7 @@ NodeUp: [U0]
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l7 {First}
+ *normal_command@node C1 l7 {First}
  |EXTRA
  |identifier:{First}
  |is_target:{1}
@@ -59,7 +59,7 @@ NodeUp: [U0]
     {spaces_before_argument: }
     {normal_text:First}
     {spaces_after_argument:\\n}
- *@chapter C1 l8 {chap}
+ *normal_command@chapter C1 l8 {chap}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}

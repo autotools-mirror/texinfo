@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'top_no_argument_and_top_node'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'top_no_argument_and_top_node'} = '*document_root C3
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C1 l2
+ *normal_command@top C1 l2
  |EXTRA
  |section_level:{0}
  |section_number:{1}

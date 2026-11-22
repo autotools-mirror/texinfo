@@ -11,35 +11,35 @@ use Encode;
 $result_tree_text{'on_subheading_line'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@subheading C1 l1
+  *normal_command@subheading C1 l1
   |EXTRA
   |global_command_number:{1}
   |heading_number:{1}
    *line_arg C10
     {spaces_before_argument: }
-    *@noindent l1
+    *normal_command@noindent l1
     {ignorable_spaces_after_command: }
     {normal_text:Text }
-    *@titlefont C1 l1
+    *normal_command@titlefont C1 l1
     |EXTRA
     |global_command_number:{1}
      *brace_container C1
       {normal_text:in titlefont}
     {normal_text: }
-    *@anchor C1 l1
+    *normal_command@anchor C1 l1
     |EXTRA
     |identifier:{in-anchor}
     |is_target:{1}
      *brace_arg C1
       {normal_text:in anchor}
-    *@footnote C1 l1
+    *normal_command@footnote C1 l1
     |EXTRA
     |global_command_number:{1}
      *brace_command_context C1
       *paragraph C1
        {normal_text:footnote}
     {normal_text: }
-    *@exdent C1 l1
+    *normal_command@exdent C1 l1
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:exdent}

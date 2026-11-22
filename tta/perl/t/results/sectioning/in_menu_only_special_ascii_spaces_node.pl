@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'in_menu_only_special_ascii_spaces_node'} = '*document_root C7
  *before_node_section C1
   *preamble_before_content
- *@node C1 in_menu_only_special_ascii_spaces_node.texi:l1 {Top}
+ *normal_command@node C1 in_menu_only_special_ascii_spaces_node.texi:l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'in_menu_only_special_ascii_spaces_node'} = '*document_root C7
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C4 in_menu_only_special_ascii_spaces_node.texi:l2 {top}
+ *normal_command@top C4 in_menu_only_special_ascii_spaces_node.texi:l2 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -31,7 +31,7 @@ $result_tree_text{'in_menu_only_special_ascii_spaces_node'} = '*document_root C7
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C4 in_menu_only_special_ascii_spaces_node.texi:l4
+  *normal_command@menu C4 in_menu_only_special_ascii_spaces_node.texi:l4
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -49,7 +49,7 @@ $result_tree_text{'in_menu_only_special_ascii_spaces_node'} = '*document_root C7
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 in_menu_only_special_ascii_spaces_node.texi:l7
+   *normal_command@end C1 in_menu_only_special_ascii_spaces_node.texi:l7
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -57,11 +57,11 @@ $result_tree_text{'in_menu_only_special_ascii_spaces_node'} = '*document_root C7
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 in_menu_only_special_ascii_spaces_node.texi:l9
+ *normal_command@node C1 in_menu_only_special_ascii_spaces_node.texi:l9
   *arguments_line C1
    *line_arg C1
     {spaces_before_argument: '."\r".'\\n}
- *@chapter C2 in_menu_only_special_ascii_spaces_node.texi:l10 {CARRIAGE RETURN|'."\r".'|}
+ *normal_command@chapter C2 in_menu_only_special_ascii_spaces_node.texi:l10 {CARRIAGE RETURN|'."\r".'|}
  |EXTRA
  |identifier:{CARRIAGE-RETURN_007c-_007c}
  |is_target:{1}
@@ -74,11 +74,11 @@ $result_tree_text{'in_menu_only_special_ascii_spaces_node'} = '*document_root C7
     {normal_text:CARRIAGE RETURN|'."\r".'|}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 in_menu_only_special_ascii_spaces_node.texi:l12
+ *normal_command@node C1 in_menu_only_special_ascii_spaces_node.texi:l12
   *arguments_line C1
    *line_arg C1
     {spaces_before_argument: \\t\\f\\n}
- *@chapter C2 in_menu_only_special_ascii_spaces_node.texi:l13 {CHARACTER TABULATION|	| FORM FEED||}
+ *normal_command@chapter C2 in_menu_only_special_ascii_spaces_node.texi:l13 {CHARACTER TABULATION|	| FORM FEED||}
  |EXTRA
  |identifier:{CHARACTER-TABULATION_007c-_007c-FORM-FEED_007c-_007c}
  |is_target:{1}

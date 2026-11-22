@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'non_break_spaces'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content C2
-   *@documentencoding C1 non_break_spaces.texi:l1
+   *normal_command@documentencoding C1 non_break_spaces.texi:l1
    |EXTRA
    |global_command_number:{1}
    |input_encoding_name:{utf-8}
@@ -21,7 +21,7 @@ $result_tree_text{'non_break_spaces'} = '*document_root C2
      {normal_text:utf-8}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@node C3 non_break_spaces.texi:l3 {Top}
+ *normal_command@node C3 non_break_spaces.texi:l3 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}

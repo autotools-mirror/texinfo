@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'double_top_in_menu'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content
- *@node C5 l1 {ToP}
+ *normal_command@node C5 l1 {ToP}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -30,7 +30,7 @@ $result_tree_text{'double_top_in_menu'} = '*document_root C3
   *paragraph C1
    {normal_text:Top node\\n}
   {empty_line:\\n}
-  *@menu C4 l4
+  *normal_command@menu C4 l4
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -56,7 +56,7 @@ $result_tree_text{'double_top_in_menu'} = '*document_root C3
     *menu_entry_description C1
      *preformatted C1
       {normal_text:myself\\n}
-   *@end C1 l7
+   *normal_command@end C1 l7
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -64,7 +64,7 @@ $result_tree_text{'double_top_in_menu'} = '*document_root C3
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C2 l9 {top}
+ *normal_command@node C2 l9 {top}
  |EXTRA
  |identifier:{Top}
  |node_number:{2}

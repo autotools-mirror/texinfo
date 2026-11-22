@@ -12,18 +12,18 @@ $result_tree_text{'empty_refs'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *paragraph C4
-   *@xref C1 l1
+   *normal_command@xref C1 l1
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
-     *@:
+     *normal_command@:
    {normal_text:.\\n}
-   *@xref C1 l2
+   *normal_command@xref C1 l2
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{-}
-     *@asis C1 l2
+     *normal_command@asis C1 l2
       *brace_container C1
        {normal_text: }
    {normal_text:.\\n}

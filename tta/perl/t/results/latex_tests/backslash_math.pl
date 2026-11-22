@@ -12,12 +12,12 @@ $result_tree_text{'backslash_math'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *paragraph C2
-   *@math C1 l1
+   *normal_command@math C1 l1
     *brace_arg C5
      {normal_text:a }
-     *@\\
+     *normal_command@\\
      {normal_text: b }
-     *@backslashchar C1 l1
+     *normal_command@backslashchar C1 l1
       *brace_container
      {normal_text: c}
    {normal_text:.\\n}

@@ -13,7 +13,7 @@ $result_tree_text{'math'} = '*document_root C1
   *preamble_before_content
   *paragraph C3
    {normal_text:Simple math\\n}
-   *@math C1 l2
+   *normal_command@math C1 l2
     *brace_arg C4
      {normal_text:--}
      *balanced_braces C1 l2
@@ -25,39 +25,39 @@ $result_tree_text{'math'} = '*document_root C1
   {empty_line:\\n}
   *paragraph C5
    {normal_text:Math with }
-   *@@
+   *normal_command@@
    {normal_text:-command\\n}
-   *@math C1 l5
+   *normal_command@math C1 l5
     *brace_arg C5
-     *@code C1 l5
+     *normal_command@code C1 l5
       *brace_container C1
        {normal_text:math code}
      {normal_text: a < b \\sum}
-     *@sub C1 l5
+     *normal_command@sub C1 l5
       *brace_container C1
        {normal_text:i}
      {normal_text: q}
-     *@sup C1 l5
+     *normal_command@sup C1 l5
       *brace_container C1
        {normal_text:2}
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C3
    {normal_text:Complex\\n}
-   *@math C1 l8
+   *normal_command@math C1 l8
     *brace_arg C8
      {spaces_before_argument: }
      {normal_text:\\underline}
      *balanced_braces C3 l8
       {normal_text:{}
-      *@code C1 l8
+      *normal_command@code C1 l8
        *brace_container C2
         {normal_text:math \\hbox}
         *balanced_braces C1 l8
          {normal_text:{ code }}
       {normal_text:}}
      {normal_text: }
-     *@\\
+     *normal_command@\\
      {normal_text:i \\sum_}
      *balanced_braces C1 l8
       {normal_text:{i}}
@@ -69,18 +69,18 @@ $result_tree_text{'math'} = '*document_root C1
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C4
-   *@@
+   *normal_command@@
    {normal_text:\\ outside of math\\n}
-   *@\\
+   *normal_command@\\
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C5
    {normal_text:The 3}
-   *@sup C1 l13
+   *normal_command@sup C1 l13
     *brace_container C1
      {normal_text:rd}
    {normal_text:is the I}
-   *@sub C1 l13
+   *normal_command@sub C1 l13
     *brace_container C1
      {normal_text:r}
    {normal_text:.\\n}

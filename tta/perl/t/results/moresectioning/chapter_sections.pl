@@ -17,7 +17,7 @@ FastForward: [U1]
 Next: [U1]
  *before_node_section C1
   *preamble_before_content
- *@unnumbered C2 l1 {unnumbered}
+ *normal_command@unnumbered C2 l1 {unnumbered}
  |EXTRA
  |identifier:{unnumbered}
  |is_target:{1}
@@ -39,7 +39,7 @@ FastForward: [U3]
 FastBack: [U0]
 Next: [U3]
 Prev: [U0]
- *@chapter C2 l3 {First chapter}
+ *normal_command@chapter C2 l3 {First chapter}
  |EXTRA
  |identifier:{First-chapter}
  |is_target:{1}
@@ -61,7 +61,7 @@ Back: [U1]
 FastForward: [U3]
 FastBack: [U1]
 Up: [U1]
- *@section C2 l5 {second}
+ *normal_command@section C2 l5 {second}
  |EXTRA
  |identifier:{second}
  |is_target:{1}
@@ -84,7 +84,7 @@ FastForward: [U7]
 FastBack: [U1]
 Next: [U7]
 Prev: [U1]
- *@chapter C2 l7 {Chapter}
+ *normal_command@chapter C2 l7 {Chapter}
  |EXTRA
  |identifier:{Chapter}
  |is_target:{1}
@@ -106,7 +106,7 @@ Back: [U3]
 FastForward: [U7]
 FastBack: [U3]
 Up: [U3]
- *@section C2 l9 {Section of chapter}
+ *normal_command@section C2 l9 {Section of chapter}
  |EXTRA
  |identifier:{Section-of-chapter}
  |is_target:{1}
@@ -129,7 +129,7 @@ FastForward: [U7]
 FastBack: [U3]
 Next: [U6]
 Up: [U4]
- *@subsection C2 l11 {subsection 1}
+ *normal_command@subsection C2 l11 {subsection 1}
  |EXTRA
  |identifier:{subsection-1}
  |is_target:{1}
@@ -152,7 +152,7 @@ FastForward: [U7]
 FastBack: [U3]
 Prev: [U5]
 Up: [U4]
- *@subsection C2 l13 {subsection 2}
+ *normal_command@subsection C2 l13 {subsection 2}
  |EXTRA
  |identifier:{subsection-2}
  |is_target:{1}
@@ -172,7 +172,7 @@ This: [U7]
 Back: [U6]
 FastBack: [U3]
 Prev: [U3]
- *@chapter C1 l15 {Chapter 2}
+ *normal_command@chapter C1 l15 {Chapter 2}
  |EXTRA
  |identifier:{Chapter-2}
  |is_target:{1}

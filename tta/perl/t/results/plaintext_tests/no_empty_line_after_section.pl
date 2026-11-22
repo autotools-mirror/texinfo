@@ -13,7 +13,7 @@ $result_tree_text{'no_empty_line_after_section'} = '*document_root C5
   *preamble_before_content
   *paragraph C1
    {normal_text:Text\\n}
- *@top C3 l2 {top}
+ *normal_command@top C3 l2 {top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -27,7 +27,7 @@ $result_tree_text{'no_empty_line_after_section'} = '*document_root C5
   *paragraph C1
    {normal_text:Other text\\n}
   {empty_line:\\n}
- *@chapter C4 l5 {chap}
+ *normal_command@chapter C4 l5 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -39,7 +39,7 @@ $result_tree_text{'no_empty_line_after_section'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:chap}
     {spaces_after_argument:\\n}
-  *@c C1
+  *normal_command@c C1
    *line_arg C3
     {spaces_before_argument: }
     {rawline_text:comment}
@@ -47,12 +47,12 @@ $result_tree_text{'no_empty_line_after_section'} = '*document_root C5
   {empty_line:\\n}
   *paragraph C2
    {normal_text:Para\\n}
-   *@comment C1
+   *normal_command@comment C1
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:c}
      {spaces_after_argument:\\n}
- *@section C4 l10 {sec}
+ *normal_command@section C4 l10 {sec}
  |EXTRA
  |identifier:{sec}
  |is_target:{1}
@@ -65,19 +65,19 @@ $result_tree_text{'no_empty_line_after_section'} = '*document_root C5
     {normal_text:sec}
     {spaces_after_argument:\\n}
   *paragraph C2
-   *@uref C1 l11
+   *normal_command@uref C1 l11
     *brace_arg C1
      {normal_text:url}
    {normal_text: A.\\n}
   {empty_line:\\n}
-  *@sp C1 l13
+  *normal_command@sp C1 l13
   |EXTRA
   |misc_args:A{3}
    *line_arg C3
     {spaces_before_argument: }
     {normal_text:3}
     {spaces_after_argument:\\n}
- *@section C5 l14 {after sp}
+ *normal_command@section C5 l14 {after sp}
  |EXTRA
  |identifier:{after-sp}
  |is_target:{1}
@@ -89,7 +89,7 @@ $result_tree_text{'no_empty_line_after_section'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:after sp}
     {spaces_after_argument:\\n}
-  *@indent l15
+  *normal_command@indent l15
   {ignorable_spaces_after_command:\\n}
   *paragraph C1
   |EXTRA

@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'dotless_argument_non_ascii'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'dotless_argument_non_ascii'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l2 {top}
+ *normal_command@top C2 l2 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -31,7 +31,7 @@ $result_tree_text{'dotless_argument_non_ascii'} = '*document_root C5
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l4 {chap}
+ *normal_command@node C1 l4 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -41,7 +41,7 @@ $result_tree_text{'dotless_argument_non_ascii'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:chap}
     {spaces_after_argument:\\n}
- *@chapter C2 l5 {Chapter}
+ *normal_command@chapter C2 l5 {Chapter}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -52,11 +52,11 @@ $result_tree_text{'dotless_argument_non_ascii'} = '*document_root C5
     {normal_text:Chapter}
     {spaces_after_argument:\\n}
   *paragraph C4
-   *@dotless C1 l6
+   *normal_command@dotless C1 l6
     *brace_container C1
      {normal_text:ê}
    {normal_text:\\n}
-   *@dotless C2 l7
+   *normal_command@dotless C2 l7
     {spaces_after_cmd_before_arg: }
     *following_arg C1
      {normal_text:ê}

@@ -11,22 +11,22 @@ use Encode;
 $result_tree_text{'heading_commands_in_documentlanguage'} = '*document_root C1
  *before_node_section C1
   *preamble_before_content C1
-   *@documentlanguage C1 l1
+   *normal_command@documentlanguage C1 l1
    |EXTRA
    |global_command_number:{1}
    |text_arg:{    b}
     *line_arg C10
      {spaces_before_argument: }
-     *@code C1 l1
+     *normal_command@code C1 l1
       *brace_container C2
        {normal_text:aaa }
-       *@thischapter
+       *normal_command@thischapter
      {normal_text: }
-     *@|
+     *normal_command@|
      {normal_text: }
-     *@thissection
+     *normal_command@thissection
      {normal_text: }
-     *@|
+     *normal_command@|
      {normal_text: b}
      {spaces_after_argument:\\n}
 ';

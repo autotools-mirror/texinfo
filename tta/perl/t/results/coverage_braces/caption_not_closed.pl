@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'caption_not_closed'} = '*document_root C2
  *before_node_section C3
   *preamble_before_content
-  *@float C4 l1
+  *normal_command@float C4 l1
   |EXTRA
   |float_type:{Text}
   |global_command_number:{1}
@@ -21,20 +21,20 @@ $result_tree_text{'caption_not_closed'} = '*document_root C2
      {normal_text:Text}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@caption C1 l3
+   *normal_command@caption C1 l3
     *brace_command_context C4
      *paragraph C1
       {normal_text:Not closed caption\\n}
      {empty_line:\\n}
      *paragraph C6
       {normal_text:The caption is closed as soon as }
-      *@@
+      *normal_command@@
       {normal_text:end float is encountered, since\\n}
       {normal_text:as much as possible is closed in order to find the }
-      *@@
+      *normal_command@@
       {normal_text:float beginning.\\n}
      {empty_line:\\n}
-   *@end C1 l8
+   *normal_command@end C1 l8
    |EXTRA
    |text_arg:{float}
     *line_arg C3
@@ -42,7 +42,7 @@ $result_tree_text{'caption_not_closed'} = '*document_root C2
      {normal_text:float}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@bye C1
+ *normal_command@bye C1
   *line_arg C1
    {spaces_before_argument:\\n}
 ';

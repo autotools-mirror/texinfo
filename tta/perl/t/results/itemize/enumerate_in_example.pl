@@ -13,21 +13,21 @@ $result_tree_text{'enumerate_in_example'} = '*document_root C1
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content
-  *@example C3 l2
+  *normal_command@example C3 l2
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
-   *@enumerate C4 l3
+   *normal_command@enumerate C4 l3
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
-    *@item C1 l4
+    *normal_command@item C1 l4
     |EXTRA
     |item_number:{1}
      *preformatted C2
       {ignorable_spaces_after_command: }
       {normal_text:first item\\n}
-    *@item C1 l5
+    *normal_command@item C1 l5
     |EXTRA
     |item_number:{2}
      *preformatted C4
@@ -35,14 +35,14 @@ $result_tree_text{'enumerate_in_example'} = '*document_root C1
       {normal_text:second  item\\n}
       {empty_line:\\n}
       {normal_text:still second\\n}
-    *@end C1 l8
+    *normal_command@end C1 l8
     |EXTRA
     |text_arg:{enumerate}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:enumerate}
       {spaces_after_argument:\\n}
-   *@end C1 l9
+   *normal_command@end C1 l9
    |EXTRA
    |text_arg:{example}
     *line_arg C3

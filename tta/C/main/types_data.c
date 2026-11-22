@@ -6,7 +6,7 @@ const TYPE_DATA type_data[] = {
 {0, 0},
 {"index_entry_command", TF_with_command},
 {"definfoenclose_command", TF_with_command},
-{"normal_command", TF_c_only},
+{"normal_command", 0},
 {"after_menu_description_line", TF_text},
 {"space_at_end_menu_node", TF_text},
 {"empty_line", TF_text | TF_leading_space | TF_trailing_space},

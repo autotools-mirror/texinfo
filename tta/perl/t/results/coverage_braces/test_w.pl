@@ -12,7 +12,7 @@ $result_tree_text{'test_w'} = '*document_root C1
  *before_node_section C33
   *preamble_before_content
   *paragraph C2
-   *@w C1 l1
+   *normal_command@w C1 l1
     *brace_container C2
      {normal_text:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa bbbbbbbbbbbbb bbbbb bbb b b b b b b b b b bb .\\n}
      {normal_text:ccc dddd}
@@ -20,19 +20,19 @@ $result_tree_text{'test_w'} = '*document_root C1
   {empty_line:\\n}
   *paragraph C3
    {normal_text:a a a a a a a a a a a a a a a a a a a a a a a a a a a a  }
-   *@w C1 l4
+   *normal_command@w C1 l4
     *brace_container C1
      {normal_text:b a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a}
    {normal_text:\\n}
   {empty_line:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@w C1 l7
+   *normal_command@w C1 l7
     *brace_container
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@w C1 l9
+   *normal_command@w C1 l9
     *brace_container C2
      {normal_text: a rr   \\n}
      {normal_text:  ggg.}
@@ -40,27 +40,27 @@ $result_tree_text{'test_w'} = '*document_root C1
   {empty_line:\\n}
   *paragraph C3
    {normal_text:AA}
-   *@w C1 l12
+   *normal_command@w C1 l12
     *brace_container
    {normal_text:bbb.\\n}
   {empty_line:\\n}
   *paragraph C3
    {normal_text:FF}
-   *@w C1 l14
+   *normal_command@w C1 l14
     *brace_container C1
      {normal_text:d}
    {normal_text:nnn.\\n}
   {empty_line:\\n}
   *paragraph C3
    {normal_text:aa}
-   *@w C1 l16
+   *normal_command@w C1 l16
     *brace_container C1
      {normal_text:  f  f}
    {normal_text:ggg.\\n}
   {empty_line:\\n}
   *paragraph C3
    {normal_text:aa2}
-   *@w C1 l18
+   *normal_command@w C1 l18
     *brace_container C1
      {normal_text:  f  f }
    {normal_text:ggg2.\\n}
@@ -68,7 +68,7 @@ $result_tree_text{'test_w'} = '*document_root C1
   {empty_line:\\n}
   *paragraph C3
    {normal_text:aa3 }
-   *@w C1 l21
+   *normal_command@w C1 l21
     *brace_container C1
      {normal_text:  f  f }
    {normal_text:ggg3.\\n}
@@ -76,50 +76,50 @@ $result_tree_text{'test_w'} = '*document_root C1
   {empty_line:\\n}
   *paragraph C3
    {normal_text:aa4 }
-   *@w C1 l24
+   *normal_command@w C1 l24
     *brace_container C1
      {normal_text:  f  f }
    {normal_text: ggg4.\\n}
   {empty_line:\\n}
   *paragraph C3
    {normal_text:aa5 }
-   *@w C1 l26
+   *normal_command@w C1 l26
     *brace_container
    {normal_text: ggg5.\\n}
   {empty_line:\\n}
   *paragraph C3
    {normal_text:aa6 }
-   *@w C1 l28
+   *normal_command@w C1 l28
     *brace_container
    {normal_text:ggg6.\\n}
   {empty_line:\\n}
   *paragraph C3
    {normal_text:aa6}
-   *@w C1 l30
+   *normal_command@w C1 l30
     *brace_container
    {normal_text: ggg6.\\n}
   {empty_line:\\n}
   *paragraph C3
    {normal_text:aaf }
-   *@w C1 l32
+   *normal_command@w C1 l32
     *brace_container C1
      {normal_text: }
    {normal_text: bbb.\\n}
   {empty_line:\\n}
   *paragraph C5
    {normal_text:begin and end quotations: }
-   *@w C1 l34
+   *normal_command@w C1 l34
     *brace_container C1
-     *@t C1 l34
+     *normal_command@t C1 l34
       *brace_container C7
        {normal_text:`}
-       *@w C1 l34
+       *normal_command@w C1 l34
         *brace_container
        {normal_text:`}
-       *@dots C1 l34
+       *normal_command@dots C1 l34
         *brace_container
        {normal_text:\'}
-       *@w C1 l34
+       *normal_command@w C1 l34
         *brace_container
        {normal_text:\'}
    {normal_text:.  This\\n}

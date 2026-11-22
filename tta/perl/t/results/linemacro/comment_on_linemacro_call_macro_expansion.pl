@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'comment_on_linemacro_call_macro_expansion'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C4
-   *@linemacro C4 l1
+   *normal_command@linemacro C4 l1
    |EXTRA
    |formal_args:A{a|b}
    |macro_name:{lm}
@@ -19,7 +19,7 @@ $result_tree_text{'comment_on_linemacro_call_macro_expansion'} = '*document_root
      {macro_line: lm {a, b}\\n}
     {raw:first |\\a\\|\\n}
     {raw:second |\\b\\|\\n}
-    *@end C1 l4
+    *normal_command@end C1 l4
     |EXTRA
     |text_arg:{linemacro}
      *line_arg C3
@@ -27,7 +27,7 @@ $result_tree_text{'comment_on_linemacro_call_macro_expansion'} = '*document_root
       {normal_text:linemacro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@macro C4 l6
+   *normal_command@macro C4 l6
    |EXTRA
    |formal_args:A{a}
    |macro_name:{mymacro}
@@ -35,7 +35,7 @@ $result_tree_text{'comment_on_linemacro_call_macro_expansion'} = '*document_root
      {macro_line: mymacro {a}\\n}
     {raw:macro \\a\\ text\\n}
     {raw:after arg\\n}
-    *@end C1 l9
+    *normal_command@end C1 l9
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -63,7 +63,7 @@ $result_tree_text{'comment_on_linemacro_call_macro_expansion'} = '*document_root
    {normal_text:second ||}
    >SOURCEMARKS
    >linemacro_expansion<end;1><p:9>
-   *@c C1
+   *normal_command@c C1
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:in comment text}

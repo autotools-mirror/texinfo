@@ -13,7 +13,7 @@ $result_tree_text{'float_without_type'} = '*document_root C2
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content
- *@node C5 l2 {Top}
+ *normal_command@node C5 l2 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -24,7 +24,7 @@ $result_tree_text{'float_without_type'} = '*document_root C2
     {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@float C3 l4
+  *normal_command@float C3 l4
   |EXTRA
   |float_type:{a}
   |global_command_number:{1}
@@ -36,7 +36,7 @@ $result_tree_text{'float_without_type'} = '*document_root C2
      {spaces_before_argument:\\n}
    *paragraph C1
     {normal_text:aa\\n}
-   *@end C1 l6
+   *normal_command@end C1 l6
    |EXTRA
    |text_arg:{float}
     *line_arg C3
@@ -44,7 +44,7 @@ $result_tree_text{'float_without_type'} = '*document_root C2
      {normal_text:float}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@listoffloats C1 l8
+  *normal_command@listoffloats C1 l8
   |EXTRA
   |float_type:{a}
   |global_command_number:{1}

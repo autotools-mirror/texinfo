@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'test_fill_gaps_in_sectioning'} = '*document_root C6
  *before_node_section C1
   *preamble_before_content
- *@top C2 l1 {top}
+ *normal_command@top C2 l1 {top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -23,7 +23,7 @@ $result_tree_text{'test_fill_gaps_in_sectioning'} = '*document_root C6
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@chapter C2 l3 {Chap}
+ *normal_command@chapter C2 l3 {Chap}
  |EXTRA
  |identifier:{Chap}
  |is_target:{1}
@@ -36,7 +36,7 @@ $result_tree_text{'test_fill_gaps_in_sectioning'} = '*document_root C6
     {normal_text:Chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@section C2 l5 {Section}
+ *normal_command@section C2 l5 {Section}
  |EXTRA
  |identifier:{Section}
  |is_target:{1}
@@ -49,18 +49,18 @@ $result_tree_text{'test_fill_gaps_in_sectioning'} = '*document_root C6
     {normal_text:Section}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@unnumberedsubsec C2 {@asis{}}
+ *normal_command@unnumberedsubsec C2 {@asis{}}
  |EXTRA
  |section_level:{3}
  |section_number:{4}
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    *@asis C1
+    *normal_command@asis C1
      *brace_container
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@subsubsection C1 l7 {There}
+ *normal_command@subsubsection C1 l7 {There}
  |EXTRA
  |identifier:{There}
  |is_target:{1}

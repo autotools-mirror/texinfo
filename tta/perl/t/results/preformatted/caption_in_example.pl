@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'caption_in_example'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@float C4 l1
+  *normal_command@float C4 l1
   |EXTRA
   |float_type:{float}
   |global_command_number:{1}
@@ -21,14 +21,14 @@ $result_tree_text{'caption_in_example'} = '*document_root C1
      {normal_text:float}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@example C6 l3
+   *normal_command@example C6 l3
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *preformatted C2
      {normal_text:in example \\n}
      {empty_line:\\n}
-    *@caption C1 l6
+    *normal_command@caption C1 l6
      *brace_command_context C1
       *paragraph C1
        {normal_text:caption}
@@ -37,14 +37,14 @@ $result_tree_text{'caption_in_example'} = '*document_root C1
      {normal_text:\\n}
      {empty_line:\\n}
      {normal_text:After caption\\n}
-    *@end C1 l9
+    *normal_command@end C1 l9
     |EXTRA
     |text_arg:{example}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:example}
       {spaces_after_argument:\\n}
-   *@end C1 l10
+   *normal_command@end C1 l10
    |EXTRA
    |text_arg:{float}
     *line_arg C3

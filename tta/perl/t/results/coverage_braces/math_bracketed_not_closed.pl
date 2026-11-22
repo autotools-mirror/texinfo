@@ -12,7 +12,7 @@ $result_tree_text{'math_bracketed_not_closed'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *paragraph C1
-   *@math C1 l1
+   *normal_command@math C1 l1
     *brace_arg C3
      *balanced_braces C1 l1
       {normal_text:{x^i}}

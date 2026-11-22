@@ -11,31 +11,31 @@ use Encode;
 $result_tree_text{'comments_on_misc_command_line'} = '*document_root C1
  *before_node_section C9
   *preamble_before_content C4
-   *@setfilename C1 l1
+   *normal_command@setfilename C1 l1
    |EXTRA
    |text_arg:{comments_on_misc_command_line.info}
     *line_arg C4
      {spaces_before_argument:  }
      {normal_text:comments_on_misc_command_line.info}
      {spaces_after_argument:  }
-     *@c C1
+     *normal_command@c C1
       *line_arg C3
        {spaces_before_argument: }
        {rawline_text:setfilename (text)}
        {spaces_after_argument:\\n}
-   *@definfoenclose C1 l2
+   *normal_command@definfoenclose C1 l2
    |EXTRA
    |misc_args:A{phoo|;|:}
     *line_arg C4
      {spaces_before_argument: }
      {normal_text:phoo,;,:}
      {spaces_after_argument:  }
-     *@c C1
+     *normal_command@c C1
       *line_arg C3
        {spaces_before_argument: }
        {rawline_text:definfoenclose (number)}
        {spaces_after_argument:\\n}
-   *@firstparagraphindent C1 l3
+   *normal_command@firstparagraphindent C1 l3
    |EXTRA
    |global_command_number:{1}
    |misc_args:A{none}
@@ -43,56 +43,56 @@ $result_tree_text{'comments_on_misc_command_line'} = '*document_root C1
      {spaces_before_argument: }
      {normal_text:none}
      {spaces_after_argument: }
-     *@c C1
+     *normal_command@c C1
       *line_arg C3
        {spaces_before_argument: }
        {rawline_text:c (number)}
        {spaces_after_argument:\\n}
-   *@raisesections C1
+   *normal_command@raisesections C1
     *line_arg C2
      {spaces_before_argument: }
-     *@c C1
+     *normal_command@c C1
       *line_arg C3
        {spaces_before_argument: }
        {rawline_text:raisesections (skipline)}
        {spaces_after_argument:\\n}
-  *@insertcopying C1 l5
+  *normal_command@insertcopying C1 l5
   |EXTRA
   |global_command_number:{1}
    *line_arg C2
     {spaces_before_argument:  }
-    *@comment C1
+    *normal_command@comment C1
      *line_arg C3
       {spaces_before_argument:  }
       {rawline_text:(noarg)}
       {spaces_after_argument:\\n}
-  *@pagesizes C1 l6
+  *normal_command@pagesizes C1 l6
    *line_arg C4
     {spaces_before_argument: }
     {normal_text:200mm}
     {spaces_after_argument: }
-    *@c C1
+    *normal_command@c C1
      *line_arg C3
       {spaces_before_argument: }
       {rawline_text:pagesizes  (line)}
       {spaces_after_argument:\\n}
-  *@everyheading C1 l7
+  *normal_command@everyheading C1 l7
    *line_arg C7
     {spaces_before_argument: }
-    *@thispage
+    *normal_command@thispage
     {normal_text: }
-    *@|
+    *normal_command@|
     {normal_text: aaa}
     {spaces_after_argument: }
-    *@c C1
+    *normal_command@c C1
      *line_arg C3
       {spaces_before_argument: }
       {rawline_text:everyheading (lineraw)}
       {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@indent l9
+  *normal_command@indent l9
   {ignorable_spaces_after_command: }
-  *@c C1
+  *normal_command@c C1
    *line_arg C3
     {spaces_before_argument: }
     {rawline_text:indent (skipspace)}

@@ -13,13 +13,13 @@ $result_tree_text{'block_commands'} = '*document_root C1
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content
-  *@group C3 l2
+  *normal_command@group C3 l2
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C1
     {normal_text:in group\\n}
-   *@end C1 l4
+   *normal_command@end C1 l4
    |EXTRA
    |text_arg:{group}
     *line_arg C3
@@ -27,7 +27,7 @@ $result_tree_text{'block_commands'} = '*document_root C1
      {normal_text:group}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@quotation C3 l6
+  *normal_command@quotation C3 l6
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
@@ -35,7 +35,7 @@ $result_tree_text{'block_commands'} = '*document_root C1
      {spaces_after_argument:\\n}
    *paragraph C1
     {normal_text:in quotation\\n}
-   *@end C1 l8
+   *normal_command@end C1 l8
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3
@@ -43,7 +43,7 @@ $result_tree_text{'block_commands'} = '*document_root C1
      {normal_text:quotation}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@float C7 l10
+  *normal_command@float C7 l10
   |EXTRA
   |float_number:{1}
   |float_type:{a float}
@@ -62,7 +62,7 @@ $result_tree_text{'block_commands'} = '*document_root C1
     {normal_text:In float\\n}
    {empty_line:\\n}
    {empty_line:\\n}
-   *@caption C1 l14
+   *normal_command@caption C1 l14
     *brace_command_context C3
      *paragraph C1
       {normal_text:in caption\\n}
@@ -70,7 +70,7 @@ $result_tree_text{'block_commands'} = '*document_root C1
      *paragraph C1
       {normal_text:in caption}
    {spaces_after_close_brace:\\n}
-   *@end C1 l17
+   *normal_command@end C1 l17
    |EXTRA
    |text_arg:{float}
     *line_arg C3

@@ -13,13 +13,13 @@ $result_tree_text{'thischapter_in_math_in_evenfooting'} = '*document_root C1
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content C1
-   *@evenfooting C1 l2
+   *normal_command@evenfooting C1 l2
     *line_arg C3
      {spaces_before_argument: }
-     *@math C1 l2
+     *normal_command@math C1 l2
       *brace_arg C2
        {normal_text:aa }
-       *@thischapter
+       *normal_command@thischapter
      {spaces_after_argument:\\n}
 ';
 

@@ -11,35 +11,35 @@ use Encode;
 $result_tree_text{'xref_quote_long_item'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@table C4 l1
+  *normal_command@table C4 l1
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     *@asis l1
+     *normal_command@asis l1
      {spaces_after_argument:\\n}
    *before_item C1
     {empty_line:\\n}
    *table_entry C2
     *table_term C1
-     *@item C1 l3
+     *normal_command@item C1 l3
       *line_arg C3
        {spaces_before_argument: }
-       *@code C1 l3
+       *normal_command@code C1 l3
         *brace_container C2
-         *@@
+         *normal_command@@
          {normal_text:verbatiminclude}
        {spaces_after_argument:\\n}
     *table_definition C2
      *paragraph C2
-      *@xref C4 l4
+      *normal_command@xref C4 l4
        *brace_arg C5
        |EXTRA
        |node_content:A{0|4}
         {normal_text:Texinfo::Convert::Utils $tree = expand_verbatiminclude($registrar}
-        *@comma C1 l4
+        *normal_command@comma C1 l4
          *brace_container
         {normal_text: $configuration_information}
-        *@comma C1 l4
+        *normal_command@comma C1 l4
          *brace_container
         {normal_text: $verbatiminclude)}
        *brace_arg
@@ -51,7 +51,7 @@ $result_tree_text{'xref_quote_long_item'} = '*document_root C1
         {normal_text:tp_api}
       {normal_text:.\\n}
      {empty_line:\\n}
-   *@end C1 l7
+   *normal_command@end C1 l7
    |EXTRA
    |text_arg:{table}
     *line_arg C3

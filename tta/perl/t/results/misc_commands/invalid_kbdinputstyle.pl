@@ -13,7 +13,7 @@ $result_tree_text{'invalid_kbdinputstyle'} = '*document_root C1
   *preamble_before_content
   *paragraph C2
    {normal_text:kbdinputstyle }
-   *@kbdinputstyle C1 l1
+   *normal_command@kbdinputstyle C1 l1
    |EXTRA
    |global_command_number:{1}
     *line_arg C3

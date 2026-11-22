@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'accents_in_var_enable_encoding'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C2
-   *@documentencoding C1 l1
+   *normal_command@documentencoding C1 l1
    |EXTRA
    |global_command_number:{1}
    |input_encoding_name:{utf-8}
@@ -22,18 +22,18 @@ $result_tree_text{'accents_in_var_enable_encoding'} = '*document_root C1
      {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C2
-   *@var C1 l3
+   *normal_command@var C1 l3
     *brace_container C6
      {normal_text:AA}
-     *@, C1 l3
+     *normal_command@, C1 l3
       *following_arg C1
        {normal_text:c}
      {normal_text: }
-     *@u C1 l3
+     *normal_command@u C1 l3
       *brace_container C1
        {normal_text:r}
      {normal_text: }
-     *@` C1 l3
+     *normal_command@` C1 l3
       *following_arg C1
        {normal_text:e}
    {normal_text:.\\n}

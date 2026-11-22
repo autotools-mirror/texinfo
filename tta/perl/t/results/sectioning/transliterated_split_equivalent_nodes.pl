@@ -17,7 +17,7 @@ NodeNext: [U1]
 NodeForward: [U1]
  *before_node_section C1
   *preamble_before_content
- *@node C4 l1 {top}
+ *normal_command@node C4 l1 {top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -28,7 +28,7 @@ NodeForward: [U1]
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C5 l3
+  *normal_command@menu C5 l3
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -38,7 +38,7 @@ NodeForward: [U1]
     |EXTRA
     |node_content:A{0|0}
     |normalized:{_00e3}
-     *@~ C1 l4
+     *normal_command@~ C1 l4
       *following_arg C1
        {normal_text:a}
     {menu_entry_separator:::}
@@ -62,14 +62,14 @@ NodeForward: [U1]
     |EXTRA
     |node_content:A{0|0}
     |normalized:{_00e2}
-     *@^ C1 l6
+     *normal_command@^ C1 l6
       *following_arg C1
        {normal_text:a}
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l7
+   *normal_command@end C1 l7
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -88,7 +88,7 @@ NodePrev: [U0]
 NodeUp: [U0]
 NodeForward: [U2]
 NodeBack: [U0]
- *@node C1 l9 {@~a}
+ *normal_command@node C1 l9 {@~a}
  |EXTRA
  |identifier:{_00e3}
  |is_target:{1}
@@ -96,18 +96,18 @@ NodeBack: [U0]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    *@~ C1 l9
+    *normal_command@~ C1 l9
      *following_arg C1
       {normal_text:a}
     {spaces_after_argument:\\n}
- *@unnumbered C2 l10 {@~a}
+ *normal_command@unnumbered C2 l10 {@~a}
  |EXTRA
  |section_level:{1}
  |section_number:{1}
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    *@~ C1 l10
+    *normal_command@~ C1 l10
      *following_arg C1
       {normal_text:a}
     {spaces_after_argument:\\n}
@@ -124,7 +124,7 @@ NodePrev: [U1]
 NodeUp: [U0]
 NodeForward: [U3]
 NodeBack: [U1]
- *@node C2 l12 {n}
+ *normal_command@node C2 l12 {n}
  |EXTRA
  |identifier:{n}
  |is_target:{1}
@@ -144,7 +144,7 @@ FastBack: [U1]
 NodePrev: [U2]
 NodeUp: [U0]
 NodeBack: [U2]
- *@node C1 l14 {@^a}
+ *normal_command@node C1 l14 {@^a}
  |EXTRA
  |identifier:{_00e2}
  |is_target:{1}
@@ -152,7 +152,7 @@ NodeBack: [U2]
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    *@^ C1 l14
+    *normal_command@^ C1 l14
      *following_arg C1
       {normal_text:a}
     {spaces_after_argument:\\n}

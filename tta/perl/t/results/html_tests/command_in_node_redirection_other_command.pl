@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'command_in_node_redirection_other_command'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'command_in_node_redirection_other_command'} = '*document_root
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C4 l2 {t @r{in r}}
+ *normal_command@top C4 l2 {t @r{in r}}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -29,17 +29,17 @@ $result_tree_text{'command_in_node_redirection_other_command'} = '*document_root
    *line_arg C4
     {spaces_before_argument: }
     {normal_text:t }
-    *@r C1 l2
+    *normal_command@r C1 l2
      *brace_container C1
       {normal_text:in r}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@anchor C1 l4
+  *normal_command@anchor C1 l4
   |EXTRA
   |identifier:{gg}
   |is_target:{1}
    *brace_arg C1
-    *@sansserif C1 l4
+    *normal_command@sansserif C1 l4
      *brace_container C1
       {normal_text:gg}
   {spaces_after_close_brace:\\n}

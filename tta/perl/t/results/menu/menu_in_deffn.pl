@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'menu_in_deffn'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
- *@node C3 l1 {first}
+ *normal_command@node C3 l1 {first}
  |EXTRA
  |identifier:{first}
  |is_target:{1}
@@ -22,7 +22,7 @@ $result_tree_text{'menu_in_deffn'} = '*document_root C2
     {normal_text:first}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@deffn C3 l3
+  *normal_command@deffn C3 l3
    *def_line C1 l3
    |EXTRA
    |def_command:{deffn}
@@ -44,7 +44,7 @@ $result_tree_text{'menu_in_deffn'} = '*document_root C2
        {normal_text:c}
      {spaces_after_argument: \\n}
    *def_item C1
-    *@menu C3 l4
+    *normal_command@menu C3 l4
      *arguments_line C1
       *block_line_arg C1
        {spaces_before_argument:\\n}
@@ -60,14 +60,14 @@ $result_tree_text{'menu_in_deffn'} = '*document_root C2
       *menu_entry_description C1
        *preformatted C1
         {normal_text:\\n}
-     *@end C1 l6
+     *normal_command@end C1 l6
      |EXTRA
      |text_arg:{menu}
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:menu}
        {spaces_after_argument:\\n}
-   *@end C1 l7
+   *normal_command@end C1 l7
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3

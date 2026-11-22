@@ -11,14 +11,14 @@ use Encode;
 $result_tree_text{'implicit_quoting_recursion'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C2
-   *@rmacro C3 l1
+   *normal_command@rmacro C3 l1
    |EXTRA
    |formal_args:A{a|b}
    |macro_name:{cat}
     *arguments_line C1
      {macro_line: cat{a,b}\\n}
     {raw:\\a\\\\b\\\\n}
-    *@end C1 l3
+    *normal_command@end C1 l3
     |EXTRA
     |text_arg:{rmacro}
      *line_arg C3

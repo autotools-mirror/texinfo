@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'out_of_multitable'} = '*document_root C1
  *before_node_section C1
   *preamble_before_content C1
-   *@columnfractions C1 l1
+   *normal_command@columnfractions C1 l1
    |EXTRA
    |misc_args:A{0.6|0.4}
     *line_arg C2

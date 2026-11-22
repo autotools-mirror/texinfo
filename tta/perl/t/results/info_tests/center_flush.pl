@@ -11,13 +11,13 @@ use Encode;
 $result_tree_text{'center_flush'} = '*document_root C1
  *before_node_section C6
   *preamble_before_content
-  *@center C1 l1
+  *normal_command@center C1 l1
    *line_arg C3
     {spaces_before_argument: }
     {normal_text:centered}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@flushleft C10 l3
+  *normal_command@flushleft C10 l3
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -35,7 +35,7 @@ $result_tree_text{'center_flush'} = '*document_root C1
    {empty_line:\\n}
    *paragraph C4
     {normal_text:Now anchor\\n}
-    *@anchor C1 l14
+    *normal_command@anchor C1 l14
     |EXTRA
     |identifier:{anchor-in-flushleft}
     |is_target:{1}
@@ -43,7 +43,7 @@ $result_tree_text{'center_flush'} = '*document_root C1
       {normal_text:anchor in flushleft}
     {spaces_after_close_brace:\\n}
     {normal_text:after anchor\\n}
-   *@end C1 l16
+   *normal_command@end C1 l16
    |EXTRA
    |text_arg:{flushleft}
     *line_arg C3
@@ -51,7 +51,7 @@ $result_tree_text{'center_flush'} = '*document_root C1
      {normal_text:flushleft}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@flushright C10 l18
+  *normal_command@flushright C10 l18
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -69,7 +69,7 @@ $result_tree_text{'center_flush'} = '*document_root C1
    {empty_line:\\n}
    *paragraph C8
     {normal_text:Now anchor\\n}
-    *@anchor C1 l29
+    *normal_command@anchor C1 l29
     |EXTRA
     |identifier:{anchor-in-flushright}
     |is_target:{1}
@@ -78,7 +78,7 @@ $result_tree_text{'center_flush'} = '*document_root C1
     {spaces_after_close_brace:\\n}
     {normal_text:after anchor\\n}
     {normal_text:Second anchor in text }
-    *@anchor C1 l31
+    *normal_command@anchor C1 l31
     |EXTRA
     |identifier:{second-anchor-in-flushright}
     |is_target:{1}
@@ -86,7 +86,7 @@ $result_tree_text{'center_flush'} = '*document_root C1
       {normal_text:second anchor in flushright}
     {spaces_after_close_brace: }
     {normal_text:after anchor.\\n}
-   *@end C1 l32
+   *normal_command@end C1 l32
    |EXTRA
    |text_arg:{flushright}
     *line_arg C3

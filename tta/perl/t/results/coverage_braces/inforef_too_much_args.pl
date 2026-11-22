@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'inforef_too_much_args'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
- *@node C3 l1 {chapter}
+ *normal_command@node C3 l1 {chapter}
  |EXTRA
  |identifier:{chapter}
  |is_target:{1}
@@ -23,7 +23,7 @@ $result_tree_text{'inforef_too_much_args'} = '*document_root C2
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@inforef C3 l3
+   *normal_command@inforef C3 l3
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}

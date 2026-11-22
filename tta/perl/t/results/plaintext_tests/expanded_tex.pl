@@ -13,7 +13,7 @@ $result_tree_text{'expanded_tex'} = '*document_root C1
   *preamble_before_content
   *paragraph C3
    {normal_text:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\\n}
-   *@tex C3 l2
+   *normal_command@tex C3 l2
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
@@ -21,7 +21,7 @@ $result_tree_text{'expanded_tex'} = '*document_root C1
      {normal_text:TTT\\n}
      {normal_text:GGG\\n}
      {normal_text:HHH\\n}
-    *@end C1 l6
+    *normal_command@end C1 l6
     |EXTRA
     |text_arg:{tex}
      *line_arg C3

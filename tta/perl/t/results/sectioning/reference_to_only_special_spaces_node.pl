@@ -13,7 +13,7 @@ $result_tree_text{'reference_to_only_special_spaces_node'} = '*document_root C8
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content
- *@node C1 reference_to_only_special_spaces_node.texi:l2 {Top}
+ *normal_command@node C1 reference_to_only_special_spaces_node.texi:l2 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -23,7 +23,7 @@ $result_tree_text{'reference_to_only_special_spaces_node'} = '*document_root C8
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 reference_to_only_special_spaces_node.texi:l3 {top}
+ *normal_command@top C2 reference_to_only_special_spaces_node.texi:l3 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -33,7 +33,7 @@ $result_tree_text{'reference_to_only_special_spaces_node'} = '*document_root C8
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 reference_to_only_special_spaces_node.texi:l5 {   }
+ *normal_command@node C1 reference_to_only_special_spaces_node.texi:l5 {   }
  |EXTRA
  |identifier:{_2002_2003_2002}
  |is_target:{1}
@@ -43,7 +43,7 @@ $result_tree_text{'reference_to_only_special_spaces_node'} = '*document_root C8
     {spaces_before_argument: }
     {normal_text:   }
     {spaces_after_argument:\\n}
- *@chapter C4 reference_to_only_special_spaces_node.texi:l6 {EN QUAD| | EM QUAD| | EN SPACE| |}
+ *normal_command@chapter C4 reference_to_only_special_spaces_node.texi:l6 {EN QUAD| | EM QUAD| | EN SPACE| |}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -55,7 +55,7 @@ $result_tree_text{'reference_to_only_special_spaces_node'} = '*document_root C8
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@ref C2 reference_to_only_special_spaces_node.texi:l8
+   *normal_command@ref C2 reference_to_only_special_spaces_node.texi:l8
     *brace_arg C2
     |EXTRA
     |node_content:A{1|1}
@@ -67,18 +67,18 @@ $result_tree_text{'reference_to_only_special_spaces_node'} = '*document_root C8
      {normal_text:   }
    {normal_text:.\\n}
   {empty_line:\\n}
- *@node C1 reference_to_only_special_spaces_node.texi:l10 {@code{   }}
+ *normal_command@node C1 reference_to_only_special_spaces_node.texi:l10 {@code{   }}
  |EXTRA
  |identifier:{_2002_2003_2002}
  |node_number:{3}
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    *@code C1 reference_to_only_special_spaces_node.texi:l10
+    *normal_command@code C1 reference_to_only_special_spaces_node.texi:l10
      *brace_container C1
       {normal_text:   }
     {spaces_after_argument:\\n}
- *@chapter C5 reference_to_only_special_spaces_node.texi:l11 {@code{EN QUAD| | EM QUAD| | EN SPACE| |}}
+ *normal_command@chapter C5 reference_to_only_special_spaces_node.texi:l11 {@code{EN QUAD| | EM QUAD| | EN SPACE| |}}
  |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
@@ -86,29 +86,29 @@ $result_tree_text{'reference_to_only_special_spaces_node'} = '*document_root C8
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    *@code C1 reference_to_only_special_spaces_node.texi:l11
+    *normal_command@code C1 reference_to_only_special_spaces_node.texi:l11
      *brace_container C1
       {normal_text:EN QUAD| | EM QUAD| | EN SPACE| |}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@ref C2 reference_to_only_special_spaces_node.texi:l13
+   *normal_command@ref C2 reference_to_only_special_spaces_node.texi:l13
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{_2002_2003_2002}
-     *@code C1 reference_to_only_special_spaces_node.texi:l13
+     *normal_command@code C1 reference_to_only_special_spaces_node.texi:l13
       *brace_container C1
        {normal_text:   }
     *brace_arg C2
      {spaces_before_argument: }
-     *@code C1 reference_to_only_special_spaces_node.texi:l13
+     *normal_command@code C1 reference_to_only_special_spaces_node.texi:l13
       *brace_container C1
        {normal_text:   }
    {normal_text:.\\n}
   {empty_line:\\n}
   {empty_line:\\n}
- *@bye C1
+ *normal_command@bye C1
   *line_arg C1
    {spaces_before_argument:\\n}
 ';

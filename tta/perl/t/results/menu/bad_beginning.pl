@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'bad_beginning'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@menu C3 l1
+  *normal_command@menu C3 l1
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -21,11 +21,11 @@ $result_tree_text{'bad_beginning'} = '*document_root C1
      {normal_text:*\\n}
      {normal_text:*something::\\n}
      {normal_text:*}
-     *@code C1 l5
+     *normal_command@code C1 l5
       *brace_container C1
        {normal_text:in code}
      {normal_text:::\\n}
-   *@end C1 l6
+   *normal_command@end C1 l6
    |EXTRA
    |text_arg:{menu}
     *line_arg C2

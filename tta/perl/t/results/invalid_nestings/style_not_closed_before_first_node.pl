@@ -12,11 +12,11 @@ $result_tree_text{'style_not_closed_before_first_node'} = '*document_root C2
  *before_node_section C2
   *preamble_before_content
   *paragraph C1
-   *@code C1 l1
+   *normal_command@code C1 l1
     *brace_container C2
      {normal_text:in code\\n}
      {empty_line:\\n}
- *@node C2 l3 {Top}
+ *normal_command@node C2 l3 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}

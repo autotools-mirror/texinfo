@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'missing_formal_arg'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C3
-   *@linemacro C3 l1
+   *normal_command@linemacro C3 l1
    |EXTRA
    |formal_args:A{a||b}
    |invalid_syntax:{1}
@@ -19,7 +19,7 @@ $result_tree_text{'missing_formal_arg'} = '*document_root C1
     *arguments_line C1
      {macro_line: mymacro {a, , b}\\n}
     {raw:\\a\\ and \\b\\.\\n}
-    *@end C1 l3
+    *normal_command@end C1 l3
     |EXTRA
     |text_arg:{linemacro}
      *line_arg C3

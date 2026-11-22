@@ -11,36 +11,36 @@ use Encode;
 $result_tree_text{'empty_commands'} = '*document_root C1
  *before_node_section C5
   *preamble_before_content
-  *@titlefont C1 l1
+  *normal_command@titlefont C1 l1
   |EXTRA
   |global_command_number:{1}
    *brace_container
   {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C15
-   *@uref C1 l3
+   *normal_command@uref C1 l3
     *brace_arg
    {normal_text: }
-   *@abbr C1 l3
+   *normal_command@abbr C1 l3
     *brace_arg
    {normal_text: }
-   *@email C1 l3
+   *normal_command@email C1 l3
     *brace_arg
    {normal_text: }
-   *@code C1 l3
+   *normal_command@code C1 l3
     *brace_container
-   *@footnote C1 l3
+   *normal_command@footnote C1 l3
    |EXTRA
    |global_command_number:{1}
     *brace_command_context
    {normal_text: }
-   *@~ C1 l3
+   *normal_command@~ C1 l3
     *brace_container
    {normal_text: }
-   *@dotless C1 l3
+   *normal_command@dotless C1 l3
     *brace_container
    {normal_text: }
-   *@verb C1 l3
+   *normal_command@verb C1 l3
     *brace_container C2
      {verb_delimiter:;}
      {verb_delimiter:;}

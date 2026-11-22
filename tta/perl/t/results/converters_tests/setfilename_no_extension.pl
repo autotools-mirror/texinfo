@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'setfilename_no_extension'} = '*document_root C4
  *before_node_section C1
   *preamble_before_content C2
-   *@setfilename C1 l1
+   *normal_command@setfilename C1 l1
    |EXTRA
    |text_arg:{setfilename_no_extension}
     *line_arg C3
@@ -19,7 +19,7 @@ $result_tree_text{'setfilename_no_extension'} = '*document_root C4
      {normal_text:setfilename_no_extension}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@node C1 l3 {Top}
+ *normal_command@node C1 l3 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -29,7 +29,7 @@ $result_tree_text{'setfilename_no_extension'} = '*document_root C4
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l4 {top}
+ *normal_command@top C2 l4 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -39,7 +39,7 @@ $result_tree_text{'setfilename_no_extension'} = '*document_root C4
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C3 l6 {chap}
+ *normal_command@node C3 l6 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}

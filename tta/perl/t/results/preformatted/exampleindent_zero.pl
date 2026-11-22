@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'exampleindent_zero'} = '*document_root C1
  *before_node_section C6
   *preamble_before_content C2
-   *@exampleindent C1 l1
+   *normal_command@exampleindent C1 l1
    |EXTRA
    |global_command_number:{1}
    |misc_args:A{asis}
@@ -20,13 +20,13 @@ $result_tree_text{'exampleindent_zero'} = '*document_root C1
      {normal_text:asis}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
-  *@example C3 l3
+  *normal_command@example C3 l3
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C1
     {normal_text:EXAMPLE INDENT asis\\n}
-   *@end C1 l5
+   *normal_command@end C1 l5
    |EXTRA
    |text_arg:{example}
     *line_arg C3
@@ -34,7 +34,7 @@ $result_tree_text{'exampleindent_zero'} = '*document_root C1
      {normal_text:example}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@exampleindent C1 l7
+  *normal_command@exampleindent C1 l7
   |EXTRA
   |global_command_number:{2}
   |misc_args:A{0}
@@ -43,13 +43,13 @@ $result_tree_text{'exampleindent_zero'} = '*document_root C1
     {normal_text:0}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@example C3 l9
+  *normal_command@example C3 l9
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C1
     {normal_text:EXAMPLE INDENT 0\\n}
-   *@end C1 l11
+   *normal_command@end C1 l11
    |EXTRA
    |text_arg:{example}
     *line_arg C3

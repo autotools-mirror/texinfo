@@ -14,24 +14,24 @@ $result_tree_text{'defcondx_Dbar'} = '*document_root C3
    {text_before_beginning:\\input texinfo\\n}
    {text_before_beginning:\\n}
   *preamble_before_content C5
-   *@c C1
+   *normal_command@c C1
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:test def*x in a conditional}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@c C1
+   *normal_command@c C1
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:set this from the command line.}
      {spaces_after_argument:\\n}
-   *@c C1
+   *normal_command@c C1
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:set bar}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@top C4 defxcond.texi:l8 {deffnx inside conditional}
+ *normal_command@top C4 defxcond.texi:l8 {deffnx inside conditional}
  |EXTRA
  |identifier:{deffnx-inside-conditional}
  |is_target:{1}
@@ -43,7 +43,7 @@ $result_tree_text{'defcondx_Dbar'} = '*document_root C3
     {normal_text:deffnx inside conditional}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@deffn C5 defxcond.texi:l10
+  *normal_command@deffn C5 defxcond.texi:l10
    *def_line C1 defxcond.texi:l10
    |EXTRA
    |def_command:{deffn}
@@ -58,19 +58,19 @@ $result_tree_text{'defcondx_Dbar'} = '*document_root C3
     {empty_line:\\n}
     >SOURCEMARKS
     >expanded_conditional_command<start;1><p:1>
-     >*@ifset C1 defxcond.texi:l12
+     >*normal_command@ifset C1 defxcond.texi:l12
       >*arguments_line C1
        >*block_line_arg C3
         >{spaces_before_argument: }
         >{normal_text:bar}
         >{spaces_after_argument:\\n}
-   *@deffnx C1 defxcond.texi:l13
+   *normal_command@deffnx C1 defxcond.texi:l13
    |EXTRA
    |def_command:{deffn}
    |original_def_cmdname:{deffnx}
    >SOURCEMARKS
    >expanded_conditional_command<end;1>
-    >*@end C1 defxcond.texi:l14
+    >*normal_command@end C1 defxcond.texi:l14
     >|EXTRA
     >|text_arg:{ifset}
      >*line_arg C3
@@ -88,7 +88,7 @@ $result_tree_text{'defcondx_Dbar'} = '*document_root C3
     *paragraph C1
      {normal_text:Documentation.\\n}
     {empty_line:\\n}
-   *@end C1 defxcond.texi:l18
+   *normal_command@end C1 defxcond.texi:l18
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3
@@ -96,7 +96,7 @@ $result_tree_text{'defcondx_Dbar'} = '*document_root C3
      {normal_text:deffn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@bye C1
+ *normal_command@bye C1
   *line_arg C1
    {spaces_before_argument:\\n}
 ';

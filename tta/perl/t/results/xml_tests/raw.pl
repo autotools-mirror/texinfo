@@ -11,13 +11,13 @@ use Encode;
 $result_tree_text{'raw'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C2
-   *@tex C3 l1
+   *normal_command@tex C3 l1
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *rawpreformatted C1
      {normal_text:in <tex>\\n}
-    *@end C1 l3
+    *normal_command@end C1 l3
     |EXTRA
     |text_arg:{tex}
      *line_arg C3
@@ -27,13 +27,13 @@ $result_tree_text{'raw'} = '*document_root C1
    {empty_line:\\n}
   *paragraph C2
    {normal_text:Para\\n}
-   *@xml C3 l6
+   *normal_command@xml C3 l6
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *rawpreformatted C1
      {normal_text:<in />\\n}
-    *@end C1 l8
+    *normal_command@end C1 l8
     |EXTRA
     |text_arg:{xml}
      *line_arg C3

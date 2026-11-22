@@ -14,7 +14,7 @@ $result_tree_text{'contents_in_middle_section_separate_element'} = '*document_ro
    {text_before_beginning:\\input texinfo @c -*-texinfo-*-\\n}
    {text_before_beginning:\\n}
   *preamble_before_content
- *@node C1 contents_in_middle_section.texi:l3 {Top}
+ *normal_command@node C1 contents_in_middle_section.texi:l3 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -24,7 +24,7 @@ $result_tree_text{'contents_in_middle_section_separate_element'} = '*document_ro
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C6 contents_in_middle_section.texi:l4 {Contents in section}
+ *normal_command@top C6 contents_in_middle_section.texi:l4 {Contents in section}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -37,7 +37,7 @@ $result_tree_text{'contents_in_middle_section_separate_element'} = '*document_ro
   *paragraph C1
    {normal_text:Content in section.\\n}
   {empty_line:\\n}
-  *@menu C3 contents_in_middle_section.texi:l8
+  *normal_command@menu C3 contents_in_middle_section.texi:l8
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument: \\n}
@@ -52,7 +52,7 @@ $result_tree_text{'contents_in_middle_section_separate_element'} = '*document_ro
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 contents_in_middle_section.texi:l10
+   *normal_command@end C1 contents_in_middle_section.texi:l10
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -60,7 +60,7 @@ $result_tree_text{'contents_in_middle_section_separate_element'} = '*document_ro
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 contents_in_middle_section.texi:l12 {chapter}
+ *normal_command@node C1 contents_in_middle_section.texi:l12 {chapter}
  |EXTRA
  |identifier:{chapter}
  |is_target:{1}
@@ -70,7 +70,7 @@ $result_tree_text{'contents_in_middle_section_separate_element'} = '*document_ro
     {spaces_before_argument: }
     {normal_text:chapter}
     {spaces_after_argument:\\n}
- *@chapter C5 contents_in_middle_section.texi:l13 {Chapter 1}
+ *normal_command@chapter C5 contents_in_middle_section.texi:l13 {Chapter 1}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -82,7 +82,7 @@ $result_tree_text{'contents_in_middle_section_separate_element'} = '*document_ro
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   {empty_line:\\n}
-  *@menu C4 contents_in_middle_section.texi:l16
+  *normal_command@menu C4 contents_in_middle_section.texi:l16
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -108,7 +108,7 @@ $result_tree_text{'contents_in_middle_section_separate_element'} = '*document_ro
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 contents_in_middle_section.texi:l19
+   *normal_command@end C1 contents_in_middle_section.texi:l19
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -116,7 +116,7 @@ $result_tree_text{'contents_in_middle_section_separate_element'} = '*document_ro
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 contents_in_middle_section.texi:l21 {section}
+ *normal_command@node C1 contents_in_middle_section.texi:l21 {section}
  |EXTRA
  |identifier:{section}
  |is_target:{1}
@@ -126,7 +126,7 @@ $result_tree_text{'contents_in_middle_section_separate_element'} = '*document_ro
     {spaces_before_argument: }
     {normal_text:section}
     {spaces_after_argument:\\n}
- *@section C5 contents_in_middle_section.texi:l22 {section}
+ *normal_command@section C5 contents_in_middle_section.texi:l22 {section}
  |EXTRA
  |section_heading_number:{1.1}
  |section_level:{2}
@@ -139,13 +139,13 @@ $result_tree_text{'contents_in_middle_section_separate_element'} = '*document_ro
   {empty_line:\\n}
   *paragraph C1
    {normal_text:The section with contents\\n}
-  *@contents C1 contents_in_middle_section.texi:l25
+  *normal_command@contents C1 contents_in_middle_section.texi:l25
   |EXTRA
   |global_command_number:{1}
    *line_arg C1
     {spaces_before_argument:\\n}
   {empty_line:\\n}
- *@node C1 contents_in_middle_section.texi:l27 {section1}
+ *normal_command@node C1 contents_in_middle_section.texi:l27 {section1}
  |EXTRA
  |identifier:{section1}
  |is_target:{1}
@@ -155,7 +155,7 @@ $result_tree_text{'contents_in_middle_section_separate_element'} = '*document_ro
     {spaces_before_argument: }
     {normal_text:section1}
     {spaces_after_argument:\\n}
- *@section C4 contents_in_middle_section.texi:l28 {section 1}
+ *normal_command@section C4 contents_in_middle_section.texi:l28 {section 1}
  |EXTRA
  |section_heading_number:{1.2}
  |section_level:{2}
@@ -169,7 +169,7 @@ $result_tree_text{'contents_in_middle_section_separate_element'} = '*document_ro
   *paragraph C1
    {normal_text:Section 1.\\n}
   {empty_line:\\n}
- *@bye C1
+ *normal_command@bye C1
   *line_arg C1
    {spaces_before_argument:\\n}
 ';

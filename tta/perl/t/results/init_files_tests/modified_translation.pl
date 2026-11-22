@@ -12,11 +12,11 @@ $result_tree_text{'modified_translation'} = '*document_root C1
  *before_node_section C11
   *preamble_before_content
   *paragraph C2
-   *@error C1 l1
+   *normal_command@error C1 l1
     *brace_container
    {normal_text:.\\n}
   {empty_line:\\n}
-  *@documentlanguage C1 l3
+  *normal_command@documentlanguage C1 l3
   |EXTRA
   |global_command_number:{1}
   |text_arg:{fr}
@@ -27,11 +27,11 @@ $result_tree_text{'modified_translation'} = '*document_root C1
   {empty_line:\\n}
   *paragraph C3
    {normal_text:fr }
-   *@error C1 l5
+   *normal_command@error C1 l5
     *brace_container
    {normal_text:.\\n}
   {empty_line:\\n}
-  *@documentlanguage C1 l7
+  *normal_command@documentlanguage C1 l7
   |EXTRA
   |global_command_number:{2}
   |text_arg:{pt}
@@ -42,7 +42,7 @@ $result_tree_text{'modified_translation'} = '*document_root C1
   {empty_line:\\n}
   *paragraph C3
    {normal_text:pt }
-   *@error C1 l9
+   *normal_command@error C1 l9
     *brace_container
    {normal_text:.\\n}
   {empty_line:\\n}

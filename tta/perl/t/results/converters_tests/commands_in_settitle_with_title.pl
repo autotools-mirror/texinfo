@@ -11,52 +11,52 @@ use Encode;
 $result_tree_text{'commands_in_settitle_with_title'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content C2
-   *@settitle C1 l1
+   *normal_command@settitle C1 l1
     *line_arg C15
      {spaces_before_argument: }
-     *@sc C1 l1
+     *normal_command@sc C1 l1
       *brace_container C6
        {normal_text:sc }
-       *@~ C1 l1
+       *normal_command@~ C1 l1
         *following_arg C1
          {normal_text:n}
        {normal_text: }
-       *@aa C1 l1
+       *normal_command@aa C1 l1
         *brace_container
        {normal_text: }
-       *@TeX C1 l1
+       *normal_command@TeX C1 l1
         *brace_container
      {normal_text: node }
-     *@" C1 l1
+     *normal_command@" C1 l1
       *following_arg C1
        {normal_text:i}
      {normal_text: }
-     *@" C1 l1
+     *normal_command@" C1 l1
       *brace_container C1
-       *@dotless C1 l1
+       *normal_command@dotless C1 l1
         *brace_container C1
          {normal_text:i}
      {normal_text: }
-     *@` C1 l1
+     *normal_command@` C1 l1
       *brace_container C1
-       *@= C1 l1
+       *normal_command@= C1 l1
         *following_arg C1
          {normal_text:E}
      {normal_text: }
-     *@l C1 l1
+     *normal_command@l C1 l1
       *brace_container
      {normal_text: }
-     *@, C1 l1
+     *normal_command@, C1 l1
       *brace_container C1
-       *@\' C1 l1
+       *normal_command@\' C1 l1
         *following_arg C1
          {normal_text:C}
      {normal_text: }
-     *@exclamdown C1 l1
+     *normal_command@exclamdown C1 l1
       *brace_container
      {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@node C1 l3 {Top}
+ *normal_command@node C1 l3 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -66,7 +66,7 @@ $result_tree_text{'commands_in_settitle_with_title'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l4 {top}
+ *normal_command@top C2 l4 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -76,7 +76,7 @@ $result_tree_text{'commands_in_settitle_with_title'} = '*document_root C5
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l6 {chapter}
+ *normal_command@node C1 l6 {chapter}
  |EXTRA
  |identifier:{chapter}
  |is_target:{1}
@@ -86,7 +86,7 @@ $result_tree_text{'commands_in_settitle_with_title'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:chapter}
     {spaces_after_argument:\\n}
- *@chapter C4 l7 {Chap}
+ *normal_command@chapter C4 l7 {Chap}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}

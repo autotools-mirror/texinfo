@@ -13,17 +13,17 @@ $result_tree_text{'format_on_first_footnote_line'} = '*document_root C1
   *preamble_before_content
   *paragraph C3
    {normal_text:Texte}
-   *@footnote C1 l1
+   *normal_command@footnote C1 l1
    |EXTRA
    |global_command_number:{1}
     *brace_command_context C1
-     *@quotation C3 l1
+     *normal_command@quotation C3 l1
       *arguments_line C1
        *block_line_arg C1
         {spaces_before_argument:\\n}
       *paragraph C1
        {normal_text:in quotation on the first footnote line\\n}
-      *@end C1 l3
+      *normal_command@end C1 l3
       |EXTRA
       |text_arg:{quotation}
        *line_arg C3
@@ -34,17 +34,17 @@ $result_tree_text{'format_on_first_footnote_line'} = '*document_root C1
   {empty_line:\\n}
   *paragraph C3
    {normal_text:Last text }
-   *@footnote C1 l6
+   *normal_command@footnote C1 l6
    |EXTRA
    |global_command_number:{2}
     *brace_command_context C2
-     *@example C3 l6
+     *normal_command@example C3 l6
       *arguments_line C1
        *block_line_arg C1
         {spaces_before_argument:\\n}
       *preformatted C1
        {normal_text:in example\\n}
-      *@end C1 l8
+      *normal_command@end C1 l8
       |EXTRA
       |text_arg:{example}
        *line_arg C3

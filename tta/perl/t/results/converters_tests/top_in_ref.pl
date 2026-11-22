@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'top_in_ref'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content
- *@node C2 l1 {Top}
+ *normal_command@node C2 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -22,7 +22,7 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
     {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C7 l3 {chap refs node}
+ *normal_command@node C7 l3 {chap refs node}
  |EXTRA
  |identifier:{chap-refs-node}
  |is_target:{1}
@@ -34,15 +34,15 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C56
-   *@code C1 l5
+   *normal_command@code C1 l5
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:ref}
-     *@{
+     *normal_command@{
      {normal_text:Top,cross ref name}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@ref C2 l5
+   *normal_command@ref C2 l5
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -51,15 +51,15 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
     *brace_arg C1
      {normal_text:cross ref name}
    {normal_text:\\n}
-   *@code C1 l6
+   *normal_command@code C1 l6
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:ref}
-     *@{
+     *normal_command@{
      {normal_text:Top,,title}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@ref C3 l6
+   *normal_command@ref C3 l6
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -69,15 +69,15 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
     *brace_arg C1
      {normal_text:title}
    {normal_text:\\n}
-   *@code C1 l7
+   *normal_command@code C1 l7
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:ref}
-     *@{
+     *normal_command@{
      {normal_text:Top,,,file name}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@ref C4 l7
+   *normal_command@ref C4 l7
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -87,15 +87,15 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
     *brace_arg C1
      {normal_text:file name}
    {normal_text:\\n}
-   *@code C1 l8
+   *normal_command@code C1 l8
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:ref}
-     *@{
+     *normal_command@{
      {normal_text:Top,,,,manual}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@ref C5 l8
+   *normal_command@ref C5 l8
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -106,15 +106,15 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
     *brace_arg C1
      {normal_text:manual}
    {normal_text:\\n}
-   *@code C1 l9
+   *normal_command@code C1 l9
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:ref}
-     *@{
+     *normal_command@{
      {normal_text:Top,cross ref name,title,}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@ref C4 l9
+   *normal_command@ref C4 l9
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -126,15 +126,15 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
      {normal_text:title}
     *brace_arg
    {normal_text:\\n}
-   *@code C1 l10
+   *normal_command@code C1 l10
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:ref}
-     *@{
+     *normal_command@{
      {normal_text:Top,cross ref name,,file name}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@ref C4 l10
+   *normal_command@ref C4 l10
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -145,15 +145,15 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
     *brace_arg C1
      {normal_text:file name}
    {normal_text:\\n}
-   *@code C1 l11
+   *normal_command@code C1 l11
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:ref}
-     *@{
+     *normal_command@{
      {normal_text:Top,cross ref name,,,manual}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@ref C5 l11
+   *normal_command@ref C5 l11
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -165,15 +165,15 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
     *brace_arg C1
      {normal_text:manual}
    {normal_text:\\n}
-   *@code C1 l12
+   *normal_command@code C1 l12
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:ref}
-     *@{
+     *normal_command@{
      {normal_text:Top,cross ref name,title,file name}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@ref C4 l12
+   *normal_command@ref C4 l12
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -185,15 +185,15 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
     *brace_arg C1
      {normal_text:file name}
    {normal_text:\\n}
-   *@code C1 l13
+   *normal_command@code C1 l13
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:ref}
-     *@{
+     *normal_command@{
      {normal_text:Top,cross ref name,title,,manual}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@ref C5 l13
+   *normal_command@ref C5 l13
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -206,15 +206,15 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
     *brace_arg C1
      {normal_text:manual}
    {normal_text:\\n}
-   *@code C1 l14
+   *normal_command@code C1 l14
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:ref}
-     *@{
+     *normal_command@{
      {normal_text:Top,cross ref name,title, file name, manual}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@ref C5 l14
+   *normal_command@ref C5 l14
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -230,15 +230,15 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
      {spaces_before_argument: }
      {normal_text:manual}
    {normal_text:\\n}
-   *@code C1 l15
+   *normal_command@code C1 l15
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:ref}
-     *@{
+     *normal_command@{
      {normal_text:Top,,title,file name}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@ref C4 l15
+   *normal_command@ref C4 l15
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -249,15 +249,15 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
     *brace_arg C1
      {normal_text:file name}
    {normal_text:\\n}
-   *@code C1 l16
+   *normal_command@code C1 l16
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:ref}
-     *@{
+     *normal_command@{
      {normal_text:Top,,title,,manual}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@ref C5 l16
+   *normal_command@ref C5 l16
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -269,15 +269,15 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
     *brace_arg C1
      {normal_text:manual}
    {normal_text:\\n}
-   *@code C1 l17
+   *normal_command@code C1 l17
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:ref}
-     *@{
+     *normal_command@{
      {normal_text:Top,,title, file name, manual}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@ref C5 l17
+   *normal_command@ref C5 l17
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -292,15 +292,15 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
      {spaces_before_argument: }
      {normal_text:manual}
    {normal_text:\\n}
-   *@code C1 l18
+   *normal_command@code C1 l18
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:ref}
-     *@{
+     *normal_command@{
      {normal_text:Top,,,file name,manual}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@ref C5 l18
+   *normal_command@ref C5 l18
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -314,15 +314,15 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C56
-   *@code C1 l20
+   *normal_command@code C1 l20
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:ref}
-     *@{
+     *normal_command@{
      {normal_text:(pman)Top,cross ref name}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@ref C2 l20
+   *normal_command@ref C2 l20
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -331,15 +331,15 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
     *brace_arg C1
      {normal_text:cross ref name}
    {normal_text:\\n}
-   *@code C1 l21
+   *normal_command@code C1 l21
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:ref}
-     *@{
+     *normal_command@{
      {normal_text:(pman)Top,,title}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@ref C3 l21
+   *normal_command@ref C3 l21
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -349,15 +349,15 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
     *brace_arg C1
      {normal_text:title}
    {normal_text:\\n}
-   *@code C1 l22
+   *normal_command@code C1 l22
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:ref}
-     *@{
+     *normal_command@{
      {normal_text:(pman)Top,,,file name}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@ref C4 l22
+   *normal_command@ref C4 l22
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -367,15 +367,15 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
     *brace_arg C1
      {normal_text:file name}
    {normal_text:\\n}
-   *@code C1 l23
+   *normal_command@code C1 l23
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:ref}
-     *@{
+     *normal_command@{
      {normal_text:(pman)Top,,,,manual}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@ref C5 l23
+   *normal_command@ref C5 l23
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -386,15 +386,15 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
     *brace_arg C1
      {normal_text:manual}
    {normal_text:\\n}
-   *@code C1 l24
+   *normal_command@code C1 l24
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:ref}
-     *@{
+     *normal_command@{
      {normal_text:(pman)Top,cross ref name,title,}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@ref C4 l24
+   *normal_command@ref C4 l24
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -406,15 +406,15 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
      {normal_text:title}
     *brace_arg
    {normal_text:\\n}
-   *@code C1 l25
+   *normal_command@code C1 l25
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:ref}
-     *@{
+     *normal_command@{
      {normal_text:(pman)Top,cross ref name,,file name}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@ref C4 l25
+   *normal_command@ref C4 l25
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -425,15 +425,15 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
     *brace_arg C1
      {normal_text:file name}
    {normal_text:\\n}
-   *@code C1 l26
+   *normal_command@code C1 l26
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:ref}
-     *@{
+     *normal_command@{
      {normal_text:(pman)Top,cross ref name,,,manual}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@ref C5 l26
+   *normal_command@ref C5 l26
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -445,15 +445,15 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
     *brace_arg C1
      {normal_text:manual}
    {normal_text:\\n}
-   *@code C1 l27
+   *normal_command@code C1 l27
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:ref}
-     *@{
+     *normal_command@{
      {normal_text:(pman)Top,cross ref name,title,file name}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@ref C4 l27
+   *normal_command@ref C4 l27
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -465,15 +465,15 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
     *brace_arg C1
      {normal_text:file name}
    {normal_text:\\n}
-   *@code C1 l28
+   *normal_command@code C1 l28
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:ref}
-     *@{
+     *normal_command@{
      {normal_text:(pman)Top,cross ref name,title,,manual}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@ref C5 l28
+   *normal_command@ref C5 l28
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -486,15 +486,15 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
     *brace_arg C1
      {normal_text:manual}
    {normal_text:\\n}
-   *@code C1 l29
+   *normal_command@code C1 l29
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:ref}
-     *@{
+     *normal_command@{
      {normal_text:(pman)Top,cross ref name,title, file name, manual}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@ref C5 l29
+   *normal_command@ref C5 l29
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -510,15 +510,15 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
      {spaces_before_argument: }
      {normal_text:manual}
    {normal_text:\\n}
-   *@code C1 l30
+   *normal_command@code C1 l30
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:ref}
-     *@{
+     *normal_command@{
      {normal_text:(pman)Top,,title,file name}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@ref C4 l30
+   *normal_command@ref C4 l30
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -529,15 +529,15 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
     *brace_arg C1
      {normal_text:file name}
    {normal_text:\\n}
-   *@code C1 l31
+   *normal_command@code C1 l31
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:ref}
-     *@{
+     *normal_command@{
      {normal_text:(pman)Top,,title,,manual}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@ref C5 l31
+   *normal_command@ref C5 l31
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -549,15 +549,15 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
     *brace_arg C1
      {normal_text:manual}
    {normal_text:\\n}
-   *@code C1 l32
+   *normal_command@code C1 l32
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:ref}
-     *@{
+     *normal_command@{
      {normal_text:(pman)Top,,title, file name, manual}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@ref C5 l32
+   *normal_command@ref C5 l32
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -572,15 +572,15 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
      {spaces_before_argument: }
      {normal_text:manual}
    {normal_text:\\n}
-   *@code C1 l33
+   *normal_command@code C1 l33
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:ref}
-     *@{
+     *normal_command@{
      {normal_text:(pman)Top,,,file name,manual}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@ref C5 l33
+   *normal_command@ref C5 l33
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -594,15 +594,15 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C16
-   *@code C1 l35
+   *normal_command@code C1 l35
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:inforef}
-     *@{
+     *normal_command@{
      {normal_text:Top, cross ref name, file name}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@inforef C3 l35
+   *normal_command@inforef C3 l35
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -614,30 +614,30 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
      {spaces_before_argument: }
      {normal_text:file name}
    {normal_text:\\n}
-   *@code C1 l36
+   *normal_command@code C1 l36
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:inforef}
-     *@{
+     *normal_command@{
      {normal_text:Top}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@inforef C1 l36
+   *normal_command@inforef C1 l36
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{Top}
      {normal_text:Top}
    {normal_text:\\n}
-   *@code C1 l37
+   *normal_command@code C1 l37
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:inforef}
-     *@{
+     *normal_command@{
      {normal_text:Top, cross ref name}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@inforef C2 l37
+   *normal_command@inforef C2 l37
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -647,15 +647,15 @@ $result_tree_text{'top_in_ref'} = '*document_root C3
      {spaces_before_argument: }
      {normal_text:cross ref name}
    {normal_text:\\n}
-   *@code C1 l38
+   *normal_command@code C1 l38
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:inforef}
-     *@{
+     *normal_command@{
      {normal_text:Top,,file name}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@inforef C3 l38
+   *normal_command@inforef C3 l38
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}

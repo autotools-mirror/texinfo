@@ -11,14 +11,14 @@ use Encode;
 $result_tree_text{'macro_call_in_inlinefmtifelse_format'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C2
-   *@macro C3 l1
+   *normal_command@macro C3 l1
    |EXTRA
    |formal_args:A{}
    |macro_name:{inlinefirstarg}
     *arguments_line C1
      {macro_line: inlinefirstarg\\n}
     {raw:ex, before, after\\n}
-    *@end C1 l3
+    *normal_command@end C1 l3
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -28,7 +28,7 @@ $result_tree_text{'macro_call_in_inlinefmtifelse_format'} = '*document_root C1
    {empty_line:\\n}
   *paragraph C3
    {normal_text:Toto }
-   *@inlinefmtifelse C3 l5
+   *normal_command@inlinefmtifelse C3 l5
    |EXTRA
    |expand_index:{2}
    |format:{tex}

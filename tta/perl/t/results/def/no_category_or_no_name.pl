@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'no_category_or_no_name'} = '*document_root C1
  *before_node_section C6
   *preamble_before_content
-  *@deffn C3 l1
+  *normal_command@deffn C3 l1
    *def_line C1 l1
    |EXTRA
    |def_command:{deffn}
@@ -21,7 +21,7 @@ $result_tree_text{'no_category_or_no_name'} = '*document_root C1
    *def_item C1
     *paragraph C1
      {normal_text:no category no name\\n}
-   *@end C1 l3
+   *normal_command@end C1 l3
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3
@@ -29,7 +29,7 @@ $result_tree_text{'no_category_or_no_name'} = '*document_root C1
      {normal_text:deffn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@deffn C3 l5
+  *normal_command@deffn C3 l5
    *def_line C1 l5
    |EXTRA
    |def_command:{deffn}
@@ -43,7 +43,7 @@ $result_tree_text{'no_category_or_no_name'} = '*document_root C1
    *def_item C1
     *paragraph C1
      {normal_text:no name\\n}
-   *@end C1 l7
+   *normal_command@end C1 l7
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3
@@ -51,7 +51,7 @@ $result_tree_text{'no_category_or_no_name'} = '*document_root C1
      {normal_text:deffn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@deffn C5 l9
+  *normal_command@deffn C5 l9
    *def_line C1 l9
    |EXTRA
    |def_command:{deffn}
@@ -75,7 +75,7 @@ $result_tree_text{'no_category_or_no_name'} = '*document_root C1
       *def_line_arg C1
        {normal_text:d}
      {spaces_after_argument: \\n}
-   *@deffnx C1 l10
+   *normal_command@deffnx C1 l10
    |EXTRA
    |def_command:{deffn}
    |original_def_cmdname:{deffnx}
@@ -85,7 +85,7 @@ $result_tree_text{'no_category_or_no_name'} = '*document_root C1
       *def_line_arg C1
        {normal_text:deffnx_category}
      {spaces_after_argument:\\n}
-   *@deffnx C1 l11
+   *normal_command@deffnx C1 l11
    |EXTRA
    |def_command:{deffn}
    |original_def_cmdname:{deffnx}
@@ -94,7 +94,7 @@ $result_tree_text{'no_category_or_no_name'} = '*document_root C1
    *def_item C1
     *paragraph C1
      {normal_text:with deffnx missing category or name\\n}
-   *@end C1 l13
+   *normal_command@end C1 l13
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3

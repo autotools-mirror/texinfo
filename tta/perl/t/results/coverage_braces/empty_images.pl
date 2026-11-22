@@ -11,13 +11,13 @@ use Encode;
 $result_tree_text{'empty_images'} = '*document_root C1
  *before_node_section C11
   *preamble_before_content
-  *@image C1 l1
+  *normal_command@image C1 l1
   |EXTRA
   |input_encoding_name:{utf-8}
    *brace_arg
   {normal_text:\\n}
   {empty_line:\\n}
-  *@image C5 l3
+  *normal_command@image C5 l3
   |EXTRA
   |input_encoding_name:{utf-8}
    *brace_arg C1
@@ -33,23 +33,23 @@ $result_tree_text{'empty_images'} = '*document_root C1
     {normal_text:dd}
   {normal_text:\\n}
   {empty_line:\\n}
-  *@image C4 l5
+  *normal_command@image C4 l5
   |EXTRA
   |input_encoding_name:{utf-8}
    *brace_arg
    *brace_arg
    *brace_arg
    *brace_arg C1
-    *@ 
+    *normal_command@ 
   {normal_text:\\n}
-  *@image C4 l6
+  *normal_command@image C4 l6
   |EXTRA
   |input_encoding_name:{utf-8}
    *brace_arg
    *brace_arg
    *brace_arg
    *brace_arg C1
-    *@:
+    *normal_command@:
   {normal_text:\\n}
 ';
 

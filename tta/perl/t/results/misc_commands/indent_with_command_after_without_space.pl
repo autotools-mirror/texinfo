@@ -11,11 +11,11 @@ use Encode;
 $result_tree_text{'indent_with_command_after_without_space'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C1
-   *@indent l1
+   *normal_command@indent l1
   *paragraph C2
   |EXTRA
   |indent:{1}
-   *@AA C1 l1
+   *normal_command@AA C1 l1
     *brace_container
    {normal_text: b\\n}
 ';

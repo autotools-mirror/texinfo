@@ -14,7 +14,7 @@ $result_tree_text{'raiselowersections'} = '*document_root C14
    {text_before_beginning:\\input texinfo @c -*-texinfo-*-\\n}
    {text_before_beginning:\\n}
   *preamble_before_content
- *@node C1 l3 {Top}
+ *normal_command@node C1 l3 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -24,14 +24,14 @@ $result_tree_text{'raiselowersections'} = '*document_root C14
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C3 l4
+ *normal_command@top C3 l4
  |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
    *line_arg C1
     {spaces_before_argument:\\n}
-  *@menu C4 l5
+  *normal_command@menu C4 l5
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -57,7 +57,7 @@ $result_tree_text{'raiselowersections'} = '*document_root C14
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l8
+   *normal_command@end C1 l8
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -65,7 +65,7 @@ $result_tree_text{'raiselowersections'} = '*document_root C14
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l10 {Chapter}
+ *normal_command@node C1 l10 {Chapter}
  |EXTRA
  |identifier:{Chapter}
  |is_target:{1}
@@ -75,7 +75,7 @@ $result_tree_text{'raiselowersections'} = '*document_root C14
     {spaces_before_argument: }
     {normal_text:Chapter}
     {spaces_after_argument:\\n}
- *@chapter C11 l11 {Chapter}
+ *normal_command@chapter C11 l11 {Chapter}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -86,14 +86,14 @@ $result_tree_text{'raiselowersections'} = '*document_root C14
     {normal_text:Chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C4 l13
+  *normal_command@menu C4 l13
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *menu_comment
    >SOURCEMARKS
    >expanded_conditional_command<start;1>
-    >*@ifclear C1 l14
+    >*normal_command@ifclear C1 l14
      >*arguments_line C1
       >*block_line_arg C3
        >{spaces_before_argument: }
@@ -112,14 +112,14 @@ $result_tree_text{'raiselowersections'} = '*document_root C14
       {normal_text:\\n}
       >SOURCEMARKS
       >expanded_conditional_command<end;1><p:1>
-       >*@end C1 l16
+       >*normal_command@end C1 l16
        >|EXTRA
        >|text_arg:{ifclear}
         >*line_arg C3
          >{spaces_before_argument: }
          >{normal_text:ifclear}
          >{spaces_after_argument:\\n}
-   *@end C1 l17
+   *normal_command@end C1 l17
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -127,7 +127,7 @@ $result_tree_text{'raiselowersections'} = '*document_root C14
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@set C1
+  *normal_command@set C1
   |EXTRA
   |misc_args:A{do-top|}
    *line_arg C3
@@ -135,20 +135,20 @@ $result_tree_text{'raiselowersections'} = '*document_root C14
     {rawline_text:do-top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@lowersections C1
+  *normal_command@lowersections C1
    *line_arg C1
     {spaces_before_argument:\\n}
   {empty_line:\\n}
   >SOURCEMARKS
   >expanded_conditional_command<start;2><p:1>
-   >*@ifclear C1 l23
+   >*normal_command@ifclear C1 l23
     >*arguments_line C1
      >*block_line_arg C3
       >{spaces_before_argument: }
       >{normal_text:include}
       >{spaces_after_argument:\\n}
   >include<start;1><p:1>
-   >*@include C1 l24
+   >*normal_command@include C1 l24
    >|EXTRA
    >|text_arg:{section_file.texi}
     >*line_arg C3
@@ -157,7 +157,7 @@ $result_tree_text{'raiselowersections'} = '*document_root C14
      >{spaces_after_argument:\\n}
   *paragraph C2
    {normal_text:\\input texinfo }
-   *@c C1
+   *normal_command@c C1
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:-*-texinfo-*-}
@@ -165,7 +165,7 @@ $result_tree_text{'raiselowersections'} = '*document_root C14
   {empty_line:\\n}
   >SOURCEMARKS
   >ignored_conditional_block<1><p:1>
-   >*@ifclear C8 section_file.texi:l3
+   >*normal_command@ifclear C8 section_file.texi:l3
     >*arguments_line C1
      >*block_line_arg C3
       >{spaces_before_argument: }
@@ -177,7 +177,7 @@ $result_tree_text{'raiselowersections'} = '*document_root C14
     >{raw:@menu\\n}
     >{raw:* Chapter in included file::\\n}
     >{raw:@end menu\\n}
-    >*@end C1 section_file.texi:l10
+    >*normal_command@end C1 section_file.texi:l10
     >|EXTRA
     >|text_arg:{ifclear}
      >*line_arg C3
@@ -185,7 +185,7 @@ $result_tree_text{'raiselowersections'} = '*document_root C14
       >{normal_text:ifclear}
       >{spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 section_file.texi:l12 {Chapter in included file}
+ *normal_command@node C1 section_file.texi:l12 {Chapter in included file}
  |EXTRA
  |identifier:{Chapter-in-included-file}
  |is_target:{1}
@@ -195,7 +195,7 @@ $result_tree_text{'raiselowersections'} = '*document_root C14
     {spaces_before_argument: }
     {normal_text:Chapter in included file}
     {spaces_after_argument:\\n}
- *@chapter C4 section_file.texi:l13 {Chapter in included file}
+ *normal_command@chapter C4 section_file.texi:l13 {Chapter in included file}
  |EXTRA
  |level_modifier:{-1}
  |section_heading_number:{1.1}
@@ -207,7 +207,7 @@ $result_tree_text{'raiselowersections'} = '*document_root C14
     {normal_text:Chapter in included file}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C3 section_file.texi:l15
+  *normal_command@menu C3 section_file.texi:l15
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -222,7 +222,7 @@ $result_tree_text{'raiselowersections'} = '*document_root C14
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 section_file.texi:l17
+   *normal_command@end C1 section_file.texi:l17
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -230,7 +230,7 @@ $result_tree_text{'raiselowersections'} = '*document_root C14
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 section_file.texi:l19 {Section}
+ *normal_command@node C1 section_file.texi:l19 {Section}
  |EXTRA
  |identifier:{Section}
  |is_target:{1}
@@ -240,7 +240,7 @@ $result_tree_text{'raiselowersections'} = '*document_root C14
     {spaces_before_argument: }
     {normal_text:Section}
     {spaces_after_argument:\\n}
- *@section C4 section_file.texi:l20 {Section}
+ *normal_command@section C4 section_file.texi:l20 {Section}
  |EXTRA
  |level_modifier:{-1}
  |section_heading_number:{1.1.1}
@@ -252,7 +252,7 @@ $result_tree_text{'raiselowersections'} = '*document_root C14
     {normal_text:Section}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C3 section_file.texi:l22
+  *normal_command@menu C3 section_file.texi:l22
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -267,7 +267,7 @@ $result_tree_text{'raiselowersections'} = '*document_root C14
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 section_file.texi:l24
+   *normal_command@end C1 section_file.texi:l24
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -275,7 +275,7 @@ $result_tree_text{'raiselowersections'} = '*document_root C14
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 section_file.texi:l26 {Subsection}
+ *normal_command@node C1 section_file.texi:l26 {Subsection}
  |EXTRA
  |identifier:{Subsection}
  |is_target:{1}
@@ -285,7 +285,7 @@ $result_tree_text{'raiselowersections'} = '*document_root C14
     {spaces_before_argument: }
     {normal_text:Subsection}
     {spaces_after_argument:\\n}
- *@subsection C7 section_file.texi:l27 {Subsection}
+ *normal_command@subsection C7 section_file.texi:l27 {Subsection}
  |EXTRA
  |level_modifier:{-1}
  |section_heading_number:{1.1.1.1}
@@ -299,7 +299,7 @@ $result_tree_text{'raiselowersections'} = '*document_root C14
   {empty_line:\\n}
   >SOURCEMARKS
   >ignored_conditional_block<2><p:1>
-   >*@ifset C8 section_file.texi:l29
+   >*normal_command@ifset C8 section_file.texi:l29
     >*arguments_line C1
      >*block_line_arg C3
       >{spaces_before_argument: }
@@ -311,7 +311,7 @@ $result_tree_text{'raiselowersections'} = '*document_root C14
     >{raw:\\n}
     >{raw:@node Subsubsection\\n}
     >{raw:@subsubsection Subsubsection\\n}
-    >*@end C1 section_file.texi:l36
+    >*normal_command@end C1 section_file.texi:l36
     >|EXTRA
     >|text_arg:{ifset}
      >*line_arg C3
@@ -321,7 +321,7 @@ $result_tree_text{'raiselowersections'} = '*document_root C14
   {empty_line:\\n}
   >SOURCEMARKS
   >ignored_conditional_block<3><p:1>
-   >*@ifclear C4 section_file.texi:l38
+   >*normal_command@ifclear C4 section_file.texi:l38
     >*arguments_line C1
      >*block_line_arg C3
       >{spaces_before_argument: }
@@ -329,7 +329,7 @@ $result_tree_text{'raiselowersections'} = '*document_root C14
       >{spaces_after_argument:\\n}
     >{raw:@contents\\n}
     >{raw:@bye\\n}
-    >*@end C1 section_file.texi:l41
+    >*normal_command@end C1 section_file.texi:l41
     >|EXTRA
     >|text_arg:{ifclear}
      >*line_arg C3
@@ -338,18 +338,18 @@ $result_tree_text{'raiselowersections'} = '*document_root C14
       >{spaces_after_argument:\\n}
   >include<end;1><p:1>
   >expanded_conditional_command<end;2><p:1>
-   >*@end C1 l25
+   >*normal_command@end C1 l25
    >|EXTRA
    >|text_arg:{ifclear}
     >*line_arg C3
      >{spaces_before_argument: }
      >{normal_text:ifclear}
      >{spaces_after_argument:\\n}
-  *@raisesections C1
+  *normal_command@raisesections C1
    *line_arg C1
     {spaces_before_argument:\\n}
   {empty_line:\\n}
-  *@clear C1
+  *normal_command@clear C1
   |EXTRA
   |misc_args:A{do-top}
    *line_arg C3
@@ -357,7 +357,7 @@ $result_tree_text{'raiselowersections'} = '*document_root C14
     {rawline_text:do-top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l30 {Second chapter}
+ *normal_command@node C1 l30 {Second chapter}
  |EXTRA
  |identifier:{Second-chapter}
  |is_target:{1}
@@ -367,7 +367,7 @@ $result_tree_text{'raiselowersections'} = '*document_root C14
     {spaces_before_argument: }
     {normal_text:Second chapter}
     {spaces_after_argument:\\n}
- *@chapter C5 l31 {Second chapter}
+ *normal_command@chapter C5 l31 {Second chapter}
  |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
@@ -381,12 +381,12 @@ $result_tree_text{'raiselowersections'} = '*document_root C14
   *paragraph C1
    {normal_text:Second chapter\\n}
   {empty_line:\\n}
-  *@contents C1 l35
+  *normal_command@contents C1 l35
   |EXTRA
   |global_command_number:{1}
    *line_arg C1
     {spaces_before_argument:\\n}
- *@bye C1
+ *normal_command@bye C1
   *line_arg C1
    {spaces_before_argument:\\n}
 ';

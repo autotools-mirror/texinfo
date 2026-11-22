@@ -16,36 +16,36 @@ $result_tree_text{'also_not_line'} = '*document_root C1
   *preamble_before_content
   *paragraph C1
    {normal_text:page }
-  *@page C1
+  *normal_command@page C1
    *line_arg C1
     {spaces_before_argument: \\n}
   *paragraph C6
    {normal_text:noindent }
-   *@noindent l4
+   *normal_command@noindent l4
    {ignorable_spaces_after_command: }
    {normal_text:refill }
-   *@refill
+   *normal_command@refill
    {normal_text: something\\n}
   {empty_line:\\n}
-  *@noindent l6
+  *normal_command@noindent l6
   {ignorable_spaces_after_command:     }
   *paragraph C8
   |EXTRA
   |noindent:{1}
    {normal_text:noindent at beginning of line\\n}
-   *@noindent l7
+   *normal_command@noindent l7
    {ignorable_spaces_after_command:  \\n}
    {normal_text:noindent on the preceding line\\n}
    {normal_text:  }
-   *@noindent l9
+   *normal_command@noindent l9
    {ignorable_spaces_after_command:    }
    {normal_text:noindent after space at beginning of line\\n}
-  *@page C1
+  *normal_command@page C1
    *line_arg C3
     {spaces_before_argument:         }
     {rawline_text:page at beginning of line}
     {spaces_after_argument:\\n}
-  *@page C1
+  *normal_command@page C1
    *line_arg C1
     {spaces_before_argument:\\n}
   *paragraph C1
@@ -53,24 +53,24 @@ $result_tree_text{'also_not_line'} = '*document_root C1
   {empty_line:\\n}
   *paragraph C1
    {normal_text:page }
-  *@page C1
+  *normal_command@page C1
    *line_arg C1
     {spaces_before_argument:   \\n}
   *paragraph C8
    {normal_text:noindent }
-   *@noindent l15
+   *normal_command@noindent l15
    {ignorable_spaces_after_command:    }
    {normal_text:refill }
-   *@refill
+   *normal_command@refill
    {normal_text: \\n}
    {normal_text:novalidate }
-   *@novalidate C1 l16
+   *normal_command@novalidate C1 l16
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:something}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@subheading C1 l18
+  *normal_command@subheading C1 l18
   |EXTRA
   |global_command_number:{1}
   |heading_number:{1}
@@ -82,13 +82,13 @@ $result_tree_text{'also_not_line'} = '*document_root C1
   *paragraph C3
    {normal_text:Only valid between iftex:\\n}
    {normal_text:vskip }
-   *@vskip C1
+   *normal_command@vskip C1
     *line_arg C1
      {spaces_before_argument: \\n}
   {empty_line:\\n}
   *paragraph C1
    {normal_text:exdent }
-  *@exdent C1 l23
+  *normal_command@exdent C1 l23
    *line_arg C3
     {spaces_before_argument: }
     {normal_text:line after exdent}

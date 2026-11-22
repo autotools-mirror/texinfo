@@ -18,7 +18,7 @@ NodeNext: [U1]
 NodeForward: [U1]
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -28,7 +28,7 @@ NodeForward: [U1]
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C4 l2 {top}
+ *normal_command@top C4 l2 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -38,7 +38,7 @@ NodeForward: [U1]
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C5 l4
+  *normal_command@menu C5 l4
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -75,7 +75,7 @@ NodeForward: [U1]
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l8
+   *normal_command@end C1 l8
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -98,7 +98,7 @@ NodePrev: [U0]
 NodeUp: [U0]
 NodeForward: [U1]
 NodeBack: [U0]
- *@node C1 l10 {chapter 1}
+ *normal_command@node C1 l10 {chapter 1}
  |EXTRA
  |identifier:{chapter-1}
  |is_target:{1}
@@ -126,7 +126,7 @@ NodeBack: [U0]
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@chapter C2 l11 {chapter c1}
+ *normal_command@chapter C2 l11 {chapter c1}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -137,7 +137,7 @@ NodeBack: [U0]
     {normal_text:chapter c1}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C2 l13 {node between chapters}
+ *normal_command@node C2 l13 {node between chapters}
  |EXTRA
  |identifier:{node-between-chapters}
  |is_target:{1}
@@ -158,7 +158,7 @@ Prev: [U1]
 Up: [U0]
 NodePrev: [U1]
 NodeUp: [U0]
- *@node C1 l15 {chapter 2}
+ *normal_command@node C1 l15 {chapter 2}
  |EXTRA
  |identifier:{chapter-2}
  |is_target:{1}
@@ -168,7 +168,7 @@ NodeUp: [U0]
     {spaces_before_argument: }
     {normal_text:chapter 2}
     {spaces_after_argument:\\n}
- *@chapter C1 l16 {chapter c2}
+ *normal_command@chapter C1 l16 {chapter c2}
  |EXTRA
  |section_heading_number:{2}
  |section_level:{1}

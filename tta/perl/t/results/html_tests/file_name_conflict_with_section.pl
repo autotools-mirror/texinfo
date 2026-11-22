@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'file_name_conflict_with_section'} = '*document_root C4
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'file_name_conflict_with_section'} = '*document_root C4
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C4 l2 {top}
+ *normal_command@top C4 l2 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -30,7 +30,7 @@ $result_tree_text{'file_name_conflict_with_section'} = '*document_root C4
     {spaces_before_argument: }
     {normal_text:top}
     {spaces_after_argument:\\n}
-  *@anchor C1 l3
+  *normal_command@anchor C1 l3
   |EXTRA
   |identifier:{Chap}
   |is_target:{1}
@@ -38,7 +38,7 @@ $result_tree_text{'file_name_conflict_with_section'} = '*document_root C4
     {normal_text:Chap}
   {spaces_after_close_brace:\\n}
   {empty_line:\\n}
- *@chapter C1 l5 {Chap}
+ *normal_command@chapter C1 l5 {Chap}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}

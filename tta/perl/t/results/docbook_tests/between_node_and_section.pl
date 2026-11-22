@@ -13,7 +13,7 @@ $result_tree_text{'between_node_and_section'} = '*document_root C7
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content
- *@node C1 l2 {chap}
+ *normal_command@node C1 l2 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -23,7 +23,7 @@ $result_tree_text{'between_node_and_section'} = '*document_root C7
     {spaces_before_argument: }
     {normal_text:chap}
     {spaces_after_argument:\\n}
- *@chapter C2 l3 {Chap}
+ *normal_command@chapter C2 l3 {Chap}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -34,7 +34,7 @@ $result_tree_text{'between_node_and_section'} = '*document_root C7
     {normal_text:Chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l5 {sec1}
+ *normal_command@node C1 l5 {sec1}
  |EXTRA
  |identifier:{sec1}
  |is_target:{1}
@@ -44,7 +44,7 @@ $result_tree_text{'between_node_and_section'} = '*document_root C7
     {spaces_before_argument: }
     {normal_text:sec1}
     {spaces_after_argument:\\n}
- *@section C2 l6 {sec1}
+ *normal_command@section C2 l6 {sec1}
  |EXTRA
  |section_heading_number:{1.1}
  |section_level:{2}
@@ -55,7 +55,7 @@ $result_tree_text{'between_node_and_section'} = '*document_root C7
     {normal_text:sec1}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C3 l8 {sec2}
+ *normal_command@node C3 l8 {sec2}
  |EXTRA
  |identifier:{sec2}
  |is_target:{1}
@@ -65,14 +65,14 @@ $result_tree_text{'between_node_and_section'} = '*document_root C7
     {spaces_before_argument: }
     {normal_text:sec2}
     {spaces_after_argument:\\n}
-  *@anchor C1 l9
+  *normal_command@anchor C1 l9
   |EXTRA
   |identifier:{Old-name}
   |is_target:{1}
    *brace_arg C1
     {normal_text:Old name}
   {spaces_after_close_brace:\\n}
- *@section C1 l10 {sec2}
+ *normal_command@section C1 l10 {sec2}
  |EXTRA
  |section_heading_number:{1.2}
  |section_level:{2}

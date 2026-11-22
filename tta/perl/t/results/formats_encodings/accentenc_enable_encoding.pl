@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'accentenc_enable_encoding'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content C2
-   *@documentencoding C1 l1
+   *normal_command@documentencoding C1 l1
    |EXTRA
    |global_command_number:{1}
    |input_encoding_name:{iso-8859-1}
@@ -21,7 +21,7 @@ $result_tree_text{'accentenc_enable_encoding'} = '*document_root C3
      {normal_text:ISO-8859-1}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@node C1 l3 {first}
+ *normal_command@node C1 l3 {first}
  |EXTRA
  |identifier:{first}
  |is_target:{1}
@@ -31,7 +31,7 @@ $result_tree_text{'accentenc_enable_encoding'} = '*document_root C3
     {spaces_before_argument: }
     {normal_text:first}
     {spaces_after_argument:\\n}
- *@top C77 l4 {top}
+ *normal_command@top C77 l4 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -43,136 +43,136 @@ $result_tree_text{'accentenc_enable_encoding'} = '*document_root C3
   {empty_line:\\n}
   *paragraph C5
    {normal_text:should be e`: }
-   *@` C1 l6
+   *normal_command@` C1 l6
     *brace_container C1
      {normal_text:e}
    {normal_text: }
-   *@` C1 l6
+   *normal_command@` C1 l6
     *following_arg C1
      {normal_text:e}
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C5
    {normal_text:should be e\': }
-   *@\' C1 l8
+   *normal_command@\' C1 l8
     *brace_container C1
      {normal_text:e}
    {normal_text: }
-   *@\' C1 l8
+   *normal_command@\' C1 l8
     *following_arg C1
      {normal_text:e}
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C5
    {normal_text:should be e^: }
-   *@^ C1 l10
+   *normal_command@^ C1 l10
     *brace_container C1
      {normal_text:e}
    {normal_text: }
-   *@^ C1 l10
+   *normal_command@^ C1 l10
     *following_arg C1
      {normal_text:e}
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C5
    {normal_text:should be u": }
-   *@" C1 l12
+   *normal_command@" C1 l12
     *brace_container C1
      {normal_text:u}
    {normal_text: }
-   *@" C1 l12
+   *normal_command@" C1 l12
     *following_arg C1
      {normal_text:u}
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C5
    {normal_text:should be i`: }
-   *@` C1 l14
+   *normal_command@` C1 l14
     *brace_container C1
      {normal_text:i}
    {normal_text: }
-   *@` C1 l14
+   *normal_command@` C1 l14
     *following_arg C1
      {normal_text:i}
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C5
    {normal_text:should be i\': }
-   *@\' C1 l16
+   *normal_command@\' C1 l16
     *brace_container C1
      {normal_text:i}
    {normal_text: }
-   *@\' C1 l16
+   *normal_command@\' C1 l16
     *following_arg C1
      {normal_text:i}
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C5
    {normal_text:should be i^: }
-   *@^ C1 l18
+   *normal_command@^ C1 l18
     *brace_container C1
      {normal_text:i}
    {normal_text: }
-   *@^ C1 l18
+   *normal_command@^ C1 l18
     *following_arg C1
      {normal_text:i}
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C5
    {normal_text:should be u": }
-   *@" C1 l20
+   *normal_command@" C1 l20
     *brace_container C1
      {normal_text:u}
    {normal_text: }
-   *@" C1 l20
+   *normal_command@" C1 l20
     *following_arg C1
      {normal_text:u}
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C5
    {normal_text:should be c,: }
-   *@, C1 l22
+   *normal_command@, C1 l22
     *brace_container C1
      {normal_text:c}
    {normal_text: }
-   *@, C1 l22
+   *normal_command@, C1 l22
     *following_arg C1
      {normal_text:c}
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C5
    {normal_text:should be n~: }
-   *@~ C1 l24
+   *normal_command@~ C1 l24
     *brace_container C1
      {normal_text:n}
    {normal_text: }
-   *@~ C1 l24
+   *normal_command@~ C1 l24
     *following_arg C1
      {normal_text:n}
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C5
    {normal_text:should be e=: }
-   *@= C1 l26
+   *normal_command@= C1 l26
     *brace_container C1
      {normal_text:e}
    {normal_text: }
-   *@= C1 l26
+   *normal_command@= C1 l26
     *following_arg C1
      {normal_text:e}
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C7
    {normal_text:should be e}
-   *@w C1 l28
+   *normal_command@w C1 l28
     *brace_container C1
      {normal_text:\'}
    {normal_text:\': }
-   *@H C1 l28
+   *normal_command@H C1 l28
     *brace_container C1
      {normal_text:e}
    {normal_text: }
-   *@H C2 l28
+   *normal_command@H C2 l28
     {spaces_after_cmd_before_arg: }
     *following_arg C1
      {normal_text:e}
@@ -180,11 +180,11 @@ $result_tree_text{'accentenc_enable_encoding'} = '*document_root C3
   {empty_line:\\n}
   *paragraph C5
    {normal_text:should be e.: }
-   *@dotaccent C1 l30
+   *normal_command@dotaccent C1 l30
     *brace_container C1
      {normal_text:e}
    {normal_text: }
-   *@dotaccent C2 l30
+   *normal_command@dotaccent C2 l30
     {spaces_after_cmd_before_arg: }
     *following_arg C1
      {normal_text:e}
@@ -192,11 +192,11 @@ $result_tree_text{'accentenc_enable_encoding'} = '*document_root C3
   {empty_line:\\n}
   *paragraph C5
    {normal_text:should be e*: }
-   *@ringaccent C1 l32
+   *normal_command@ringaccent C1 l32
     *brace_container C1
      {normal_text:e}
    {normal_text: }
-   *@ringaccent C2 l32
+   *normal_command@ringaccent C2 l32
     {spaces_after_cmd_before_arg: }
     *following_arg C1
      {normal_text:e}
@@ -204,18 +204,18 @@ $result_tree_text{'accentenc_enable_encoding'} = '*document_root C3
   {empty_line:\\n}
   *paragraph C3
    {normal_text:should be ee[: }
-   *@tieaccent C1 l34
+   *normal_command@tieaccent C1 l34
     *brace_container C1
      {normal_text:ee}
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C5
    {normal_text:should be e(: }
-   *@u C1 l36
+   *normal_command@u C1 l36
     *brace_container C1
      {normal_text:e}
    {normal_text: }
-   *@u C2 l36
+   *normal_command@u C2 l36
     {spaces_after_cmd_before_arg: }
     *following_arg C1
      {normal_text:e}
@@ -223,11 +223,11 @@ $result_tree_text{'accentenc_enable_encoding'} = '*document_root C3
   {empty_line:\\n}
   *paragraph C5
    {normal_text:should be e_: }
-   *@ubaraccent C1 l38
+   *normal_command@ubaraccent C1 l38
     *brace_container C1
      {normal_text:e}
    {normal_text: }
-   *@ubaraccent C2 l38
+   *normal_command@ubaraccent C2 l38
     {spaces_after_cmd_before_arg: }
     *following_arg C1
      {normal_text:e}
@@ -235,11 +235,11 @@ $result_tree_text{'accentenc_enable_encoding'} = '*document_root C3
   {empty_line:\\n}
   *paragraph C5
    {normal_text:should be .e: }
-   *@udotaccent C1 l40
+   *normal_command@udotaccent C1 l40
     *brace_container C1
      {normal_text:e}
    {normal_text: }
-   *@udotaccent C2 l40
+   *normal_command@udotaccent C2 l40
     {spaces_after_cmd_before_arg: }
     *following_arg C1
      {normal_text:e}
@@ -247,11 +247,11 @@ $result_tree_text{'accentenc_enable_encoding'} = '*document_root C3
   {empty_line:\\n}
   *paragraph C5
    {normal_text:should be e<: }
-   *@v C1 l42
+   *normal_command@v C1 l42
     *brace_container C1
      {normal_text:e}
    {normal_text: }
-   *@v C2 l42
+   *normal_command@v C2 l42
     {spaces_after_cmd_before_arg: }
     *following_arg C1
      {normal_text:e}
@@ -259,11 +259,11 @@ $result_tree_text{'accentenc_enable_encoding'} = '*document_root C3
   {empty_line:\\n}
   *paragraph C5
    {normal_text:should be a; : }
-   *@ogonek C1 l44
+   *normal_command@ogonek C1 l44
     *brace_container C1
      {normal_text:a}
    {normal_text: }
-   *@ogonek C2 l44
+   *normal_command@ogonek C2 l44
     {spaces_after_cmd_before_arg: }
     *following_arg C1
      {normal_text:a}
@@ -271,11 +271,11 @@ $result_tree_text{'accentenc_enable_encoding'} = '*document_root C3
   {empty_line:\\n}
   *paragraph C5
    {normal_text:should be e; : }
-   *@ogonek C1 l46
+   *normal_command@ogonek C1 l46
     *brace_container C1
      {normal_text:e}
    {normal_text: }
-   *@ogonek C2 l46
+   *normal_command@ogonek C2 l46
     {spaces_after_cmd_before_arg: }
     *following_arg C1
      {normal_text:e}
@@ -283,156 +283,156 @@ $result_tree_text{'accentenc_enable_encoding'} = '*document_root C3
   {empty_line:\\n}
   *paragraph C5
    {normal_text:upside down: }
-   *@questiondown C1 l48
+   *normal_command@questiondown C1 l48
     *brace_container
    {normal_text: }
-   *@exclamdown C1 l48
+   *normal_command@exclamdown C1 l48
     *brace_container
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C5
    {normal_text:A-with-circle: }
-   *@aa C1 l50
+   *normal_command@aa C1 l50
     *brace_container
    {normal_text:,}
-   *@AA C1 l50
+   *normal_command@AA C1 l50
     *brace_container
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C9
    {normal_text:AE, OE ligatures: }
-   *@ae C1 l52
+   *normal_command@ae C1 l52
     *brace_container
    {normal_text: }
-   *@AE C1 l52
+   *normal_command@AE C1 l52
     *brace_container
    {normal_text: }
-   *@oe C1 l52
+   *normal_command@oe C1 l52
     *brace_container
    {normal_text: }
-   *@OE C1 l52
+   *normal_command@OE C1 l52
     *brace_container
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C5
    {normal_text:dotless i, j: }
-   *@dotless C1 l54
+   *normal_command@dotless C1 l54
     *brace_container C1
      {normal_text:i}
    {normal_text: }
-   *@dotless C1 l54
+   *normal_command@dotless C1 l54
     *brace_container C1
      {normal_text:j}
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C5
    {normal_text:Polish suppressed-L: }
-   *@l C1 l56
+   *normal_command@l C1 l56
     *brace_container
    {normal_text: }
-   *@L C1 l56
+   *normal_command@L C1 l56
     *brace_container
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C5
    {normal_text:O-with-slash: }
-   *@o C1 l58
+   *normal_command@o C1 l58
     *brace_container
    {normal_text: }
-   *@O C1 l58
+   *normal_command@O C1 l58
     *brace_container
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C3
    {normal_text:es-zet or sharp S: }
-   *@ss C1 l60
+   *normal_command@ss C1 l60
     *brace_container
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C3
    {normal_text:pounds sterling: }
-   *@pounds C1 l62
+   *normal_command@pounds C1 l62
     *brace_container
    {normal_text:\\n}
   {empty_line:\\n}
-  *@c C1
+  *normal_command@c C1
    *line_arg C3
     {spaces_before_argument: }
     {rawline_text:arg is command -- @dotless{i} is special-cased for HTML}
     {spaces_after_argument:\\n}
   *paragraph C3
    {normal_text:should be dotless i`: }
-   *@` C1 l65
+   *normal_command@` C1 l65
     *brace_container C1
-     *@dotless C1 l65
+     *normal_command@dotless C1 l65
       *brace_container C1
        {normal_text:i}
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C3
    {normal_text:should be dotless i\': }
-   *@\' C1 l67
+   *normal_command@\' C1 l67
     *brace_container C1
-     *@dotless C1 l67
+     *normal_command@dotless C1 l67
       *brace_container C1
        {normal_text:i}
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C3
    {normal_text:should be dotless i^: }
-   *@^ C1 l69
+   *normal_command@^ C1 l69
     *brace_container C1
-     *@dotless C1 l69
+     *normal_command@dotless C1 l69
       *brace_container C1
        {normal_text:i}
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C3
    {normal_text:should be dotless i": }
-   *@" C1 l71
+   *normal_command@" C1 l71
     *brace_container C1
-     *@dotless C1 l71
+     *normal_command@dotless C1 l71
       *brace_container C1
        {normal_text:i}
    {normal_text:\\n}
   {empty_line:\\n}
-  *@c C1
+  *normal_command@c C1
    *line_arg C3
     {spaces_before_argument: }
     {rawline_text:arg is command -- @dotless{j}}
     {spaces_after_argument:\\n}
   *paragraph C3
    {normal_text:should be dotless j`: }
-   *@` C1 l74
+   *normal_command@` C1 l74
     *brace_container C1
-     *@dotless C1 l74
+     *normal_command@dotless C1 l74
       *brace_container C1
        {normal_text:j}
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C3
    {normal_text:should be dotless j\': }
-   *@\' C1 l76
+   *normal_command@\' C1 l76
     *brace_container C1
-     *@dotless C1 l76
+     *normal_command@dotless C1 l76
       *brace_container C1
        {normal_text:j}
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C3
    {normal_text:should be dotless j^: }
-   *@^ C1 l78
+   *normal_command@^ C1 l78
     *brace_container C1
-     *@dotless C1 l78
+     *normal_command@dotless C1 l78
       *brace_container C1
        {normal_text:j}
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C3
    {normal_text:should be dotless j": }
-   *@" C1 l80
+   *normal_command@" C1 l80
     *brace_container C1
-     *@dotless C1 l80
+     *normal_command@dotless C1 l80
       *brace_container C1
        {normal_text:j}
    {normal_text:\\n}

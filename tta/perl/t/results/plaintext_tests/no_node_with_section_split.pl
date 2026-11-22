@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'no_node_with_section_split'} = '*document_root C7
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'no_node_with_section_split'} = '*document_root C7
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l2 {aa}
+ *normal_command@top C2 l2 {aa}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -31,7 +31,7 @@ $result_tree_text{'no_node_with_section_split'} = '*document_root C7
     {normal_text:aa}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l4 {one}
+ *normal_command@node C1 l4 {one}
  |EXTRA
  |added:{1}
  |identifier:{one}
@@ -42,7 +42,7 @@ $result_tree_text{'no_node_with_section_split'} = '*document_root C7
     {spaces_before_argument: }
     {normal_text:one}
     {spaces_after_argument:\\n}
- *@chapter C2 l4 {one}
+ *normal_command@chapter C2 l4 {one}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -53,7 +53,7 @@ $result_tree_text{'no_node_with_section_split'} = '*document_root C7
     {normal_text:one}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l6 {two}
+ *normal_command@node C1 l6 {two}
  |EXTRA
  |added:{1}
  |identifier:{two}
@@ -64,7 +64,7 @@ $result_tree_text{'no_node_with_section_split'} = '*document_root C7
     {spaces_before_argument: }
     {normal_text:two}
     {spaces_after_argument:\\n}
- *@chapter C1 l6 {two}
+ *normal_command@chapter C1 l6 {two}
  |EXTRA
  |section_heading_number:{2}
  |section_level:{1}

@@ -11,15 +11,15 @@ use Encode;
 $result_tree_text{'itemx_in_itemize_enumerate_in_table'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@table C3 l1
+  *normal_command@table C3 l1
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     *@strong l1
+     *normal_command@strong l1
      {spaces_after_argument:\\n}
    *table_entry C2
     *table_term C1
-     *@item C1 l2
+     *normal_command@item C1 l2
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:item}
@@ -28,17 +28,17 @@ $result_tree_text{'itemx_in_itemize_enumerate_in_table'} = '*document_root C1
      {empty_line:\\n}
      *paragraph C1
       {normal_text:In item, nested itemize\\n}
-     *@itemize C3 l5
+     *normal_command@itemize C3 l5
       *arguments_line C1
        *block_line_arg C1
         {spaces_before_argument:\\n}
       *before_item C1
-       *@itemx C1 l6
+       *normal_command@itemx C1 l6
         *line_arg C3
          {spaces_before_argument: }
          {normal_text:in nested itemize itemx}
          {spaces_after_argument:\\n}
-      *@end C1 l7
+      *normal_command@end C1 l7
       |EXTRA
       |text_arg:{itemize}
        *line_arg C3
@@ -46,17 +46,17 @@ $result_tree_text{'itemx_in_itemize_enumerate_in_table'} = '*document_root C1
         {normal_text:itemize}
         {spaces_after_argument:\\n}
      {empty_line:\\n}
-     *@enumerate C3 l9
+     *normal_command@enumerate C3 l9
       *arguments_line C1
        *block_line_arg C1
         {spaces_before_argument:\\n}
       *before_item C1
-       *@itemx C1 l10
+       *normal_command@itemx C1 l10
         *line_arg C3
          {spaces_before_argument: }
          {normal_text:in nested enumerate itemx}
          {spaces_after_argument:\\n}
-      *@end C1 l11
+      *normal_command@end C1 l11
       |EXTRA
       |text_arg:{enumerate}
        *line_arg C3
@@ -64,7 +64,7 @@ $result_tree_text{'itemx_in_itemize_enumerate_in_table'} = '*document_root C1
         {normal_text:enumerate}
         {spaces_after_argument:\\n}
      {empty_line:\\n}
-   *@end C1 l13
+   *normal_command@end C1 l13
    |EXTRA
    |text_arg:{table}
     *line_arg C3

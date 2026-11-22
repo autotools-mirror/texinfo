@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'protect_comma_macro_line'} = '*document_root C1
  *before_node_section C4
   *preamble_before_content C2
-   *@macro C6 l1
+   *normal_command@macro C6 l1
    |EXTRA
    |formal_args:A{arg}
    |macro_name:{macrotwo}
@@ -21,7 +21,7 @@ $result_tree_text{'protect_comma_macro_line'} = '*document_root C1
     {raw:and another one on another line \\arg\\\\n}
     {raw:\\n}
     {raw:and a last in another paragraph\\n}
-    *@end C1 l6
+    *normal_command@end C1 l6
     |EXTRA
     |text_arg:{macro}
      *line_arg C3

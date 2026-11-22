@@ -11,14 +11,14 @@ use Encode;
 $result_tree_text{'documentlanguagevariant_documentscript'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C3
-   *@documentlanguagevariant C1 l1
+   *normal_command@documentlanguagevariant C1 l1
    |EXTRA
    |global_command_number:{1}
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:1901}
      {spaces_after_argument:\\n}
-   *@documentscript C1 l2
+   *normal_command@documentscript C1 l2
    |EXTRA
    |global_command_number:{1}
    |text_arg:{Latn}
@@ -28,7 +28,7 @@ $result_tree_text{'documentlanguagevariant_documentscript'} = '*document_root C1
      {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C2
-   *@error C1 l4
+   *normal_command@error C1 l4
     *brace_container
    {normal_text:.\\n}
 ';

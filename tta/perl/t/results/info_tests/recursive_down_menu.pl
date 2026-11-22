@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'recursive_down_menu'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'recursive_down_menu'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l2 {top}
+ *normal_command@top C2 l2 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -31,7 +31,7 @@ $result_tree_text{'recursive_down_menu'} = '*document_root C5
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l4 {chapN}
+ *normal_command@node C1 l4 {chapN}
  |EXTRA
  |identifier:{chapN}
  |is_target:{1}
@@ -41,7 +41,7 @@ $result_tree_text{'recursive_down_menu'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:chapN}
     {spaces_after_argument:\\n}
- *@chapter C3 l5 {Intro}
+ *normal_command@chapter C3 l5 {Intro}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -52,7 +52,7 @@ $result_tree_text{'recursive_down_menu'} = '*document_root C5
     {normal_text:Intro}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C3 l7
+  *normal_command@menu C3 l7
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -67,7 +67,7 @@ $result_tree_text{'recursive_down_menu'} = '*document_root C5
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l9
+   *normal_command@end C1 l9
    |EXTRA
    |text_arg:{menu}
     *line_arg C3

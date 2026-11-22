@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'special_characters_in_float_type'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'special_characters_in_float_type'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l2 {top}
+ *normal_command@top C2 l2 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -31,7 +31,7 @@ $result_tree_text{'special_characters_in_float_type'} = '*document_root C5
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l4 {chap}
+ *normal_command@node C1 l4 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -41,7 +41,7 @@ $result_tree_text{'special_characters_in_float_type'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:chap}
     {spaces_after_argument:\\n}
- *@chapter C5 l5 {chap}
+ *normal_command@chapter C5 l5 {chap}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -52,7 +52,7 @@ $result_tree_text{'special_characters_in_float_type'} = '*document_root C5
     {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@float C5 l7
+  *normal_command@float C5 l7
   |EXTRA
   |float_number:{1.1}
   |float_type:{A < " `` ` \' \' \\aaa . --- in var}
@@ -63,33 +63,33 @@ $result_tree_text{'special_characters_in_float_type'} = '*document_root C5
     *block_line_arg C5
      {spaces_before_argument: }
      {normal_text:A < " `` ` \' \' \\aaa }
-     *@.
+     *normal_command@.
      {normal_text: --- }
-     *@var C1 l7
+     *normal_command@var C1 l7
       *brace_container C1
        {normal_text:in var}
     *block_line_arg C6
      {spaces_before_argument: }
      {normal_text:L < " `` ` \' \' \\aaa }
-     *@.
+     *normal_command@.
      {normal_text: --- }
-     *@var C1 l7
+     *normal_command@var C1 l7
       *brace_container C1
        {normal_text:in var}
      {spaces_after_argument:\\n}
    *paragraph C1
     {normal_text:F\\n}
-   *@caption C1 l9
+   *normal_command@caption C1 l9
     *brace_command_context C1
      *paragraph C4
       {normal_text:float A < " `` ` \' \' \\aaa }
-      *@.
+      *normal_command@.
       {normal_text: --- }
-      *@var C1 l9
+      *normal_command@var C1 l9
        *brace_container C1
         {normal_text:in var}
    {spaces_after_close_brace:\\n}
-   *@end C1 l10
+   *normal_command@end C1 l10
    |EXTRA
    |text_arg:{float}
     *line_arg C3
@@ -97,16 +97,16 @@ $result_tree_text{'special_characters_in_float_type'} = '*document_root C5
      {normal_text:float}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@listoffloats C1 l12
+  *normal_command@listoffloats C1 l12
   |EXTRA
   |float_type:{A < " `` ` \' \' \\aaa . --- in var}
   |global_command_number:{1}
    *line_arg C6
     {spaces_before_argument: }
     {normal_text:A < " `` ` \' \' \\aaa }
-    *@.
+    *normal_command@.
     {normal_text: --- }
-    *@var C1 l12
+    *normal_command@var C1 l12
      *brace_container C1
       {normal_text:in var}
     {spaces_after_argument:\\n}

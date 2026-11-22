@@ -13,7 +13,7 @@ $result_tree_text{'double_include'} = '*document_root C1
   *preamble_before_beginning C1
   >SOURCEMARKS
   >include<start;2>
-   >*@include C1 l2
+   >*normal_command@include C1 l2
    >|EXTRA
    >|text_arg:{inc_file.texi}
     >*line_arg C3
@@ -22,7 +22,7 @@ $result_tree_text{'double_include'} = '*document_root C1
      >{spaces_after_argument: }
      >>SOURCEMARKS
      >>include<start;1><p:1>
-      >>*@include C1 l2
+      >>*normal_command@include C1 l2
       >>|EXTRA
       >>|text_arg:{inc_file.texi}
        >>*line_arg C3

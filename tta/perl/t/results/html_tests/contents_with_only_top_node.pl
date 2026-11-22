@@ -13,7 +13,7 @@ $result_tree_text{'contents_with_only_top_node'} = '*document_root C2
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content
- *@node C3 l2 {Top}
+ *normal_command@node C3 l2 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -24,7 +24,7 @@ $result_tree_text{'contents_with_only_top_node'} = '*document_root C2
     {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@contents C1 l4
+  *normal_command@contents C1 l4
   |EXTRA
   |global_command_number:{1}
    *line_arg C1

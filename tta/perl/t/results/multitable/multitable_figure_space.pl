@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'multitable_figure_space'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@multitable C3 l1
+  *normal_command@multitable C3 l1
   |EXTRA
   |max_columns:{2}
    *arguments_line C1
@@ -27,13 +27,13 @@ $result_tree_text{'multitable_figure_space'} = '*document_root C1
     *row C2
     |EXTRA
     |row_number:{1}
-     *@item C2 l2
+     *normal_command@item C2 l2
      |EXTRA
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
        {normal_text:   55 }
-     *@tab C2 l2
+     *normal_command@tab C2 l2
      |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
@@ -42,13 +42,13 @@ $result_tree_text{'multitable_figure_space'} = '*document_root C1
     *row C2
     |EXTRA
     |row_number:{2}
-     *@item C2 l3
+     *normal_command@item C2 l3
      |EXTRA
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
        {normal_text:  535 }
-     *@tab C2 l3
+     *normal_command@tab C2 l3
      |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
@@ -57,19 +57,19 @@ $result_tree_text{'multitable_figure_space'} = '*document_root C1
     *row C2
     |EXTRA
     |row_number:{3}
-     *@item C2 l4
+     *normal_command@item C2 l4
      |EXTRA
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
        {normal_text:49303 }
-     *@tab C2 l4
+     *normal_command@tab C2 l4
      |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C1
        {normal_text:explanation\\n}
-   *@end C1 l5
+   *normal_command@end C1 l5
    |EXTRA
    |text_arg:{multitable}
     *line_arg C3

@@ -16,7 +16,7 @@ NodeForward: [U0]
 NodeBack: [U0]
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {part node before top}
+ *normal_command@node C1 l1 {part node before top}
  |EXTRA
  |identifier:{part-node-before-top}
  |is_target:{1}
@@ -38,7 +38,7 @@ NodeBack: [U0]
    |normalized:{Top}
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@part C2 l2 {part}
+ *normal_command@part C2 l2 {part}
  |EXTRA
  |global_command_number:{1}
  |section_level:{0}
@@ -49,7 +49,7 @@ NodeBack: [U0]
     {normal_text:part}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l4 {Top}
+ *normal_command@node C1 l4 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -59,7 +59,7 @@ NodeBack: [U0]
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C3 l5 {top}
+ *normal_command@top C3 l5 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{2}
@@ -69,7 +69,7 @@ NodeBack: [U0]
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C3 l7
+  *normal_command@menu C3 l7
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -84,7 +84,7 @@ NodeBack: [U0]
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l9
+   *normal_command@end C1 l9
    |EXTRA
    |text_arg:{menu}
     *line_arg C3

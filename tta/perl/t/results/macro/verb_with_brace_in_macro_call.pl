@@ -13,14 +13,14 @@ $result_tree_text{'verb_with_brace_in_macro_call'} = '*document_root C1
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content C2
-   *@macro C3 l2
+   *normal_command@macro C3 l2
    |EXTRA
    |formal_args:A{a|b|c}
    |macro_name:{mycommand}
     *arguments_line C1
      {macro_line: mycommand {a, b, c}\\n}
     {raw:\\a\\|\\b\\|\\c\\\\n}
-    *@end C1 l4
+    *normal_command@end C1 l4
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -38,7 +38,7 @@ $result_tree_text{'verb_with_brace_in_macro_call'} = '*document_root C1
       >{spaces_before_argument: }
       >{macro_call_arg_text:verb :}
   *paragraph C1
-   *@verb C1 l6:@mycommand
+   *normal_command@verb C1 l6:@mycommand
     *brace_container C5
      {verb_delimiter::}
      {raw: in }|verb :|}

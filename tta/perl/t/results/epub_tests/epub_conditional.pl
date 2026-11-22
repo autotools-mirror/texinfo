@@ -11,14 +11,14 @@ use Encode;
 $result_tree_text{'epub_conditional'} = '*document_root C5
  *before_node_section C3
   *preamble_before_content C2
-   *@documentinfo C4 l1
+   *normal_command@documentinfo C4 l1
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
-    *@title C1 l2
+    *normal_command@title C1 l2
     >SOURCEMARKS
     >expanded_conditional_command<start;1>
-     >*@ifepub C1 l3
+     >*normal_command@ifepub C1 l3
       >*arguments_line C1
        >*block_line_arg C1
         >{spaces_before_argument:\\n}
@@ -26,12 +26,12 @@ $result_tree_text{'epub_conditional'} = '*document_root C5
       {spaces_before_argument: }
       {normal_text:title}
       {spaces_after_argument:\\n}
-    *@subtitle C1 l4
+    *normal_command@subtitle C1 l4
     |EXTRA
     |global_command_number:{1}
     >SOURCEMARKS
     >expanded_conditional_command<end;1>
-     >*@end C1 l5
+     >*normal_command@end C1 l5
      >|EXTRA
      >|text_arg:{ifepub}
       >*line_arg C3
@@ -39,12 +39,12 @@ $result_tree_text{'epub_conditional'} = '*document_root C5
        >{normal_text:ifepub}
        >{spaces_after_argument:\\n}
     >ignored_conditional_block<1>
-     >*@ifnotepub C3 l6
+     >*normal_command@ifnotepub C3 l6
       >*arguments_line C1
        >*block_line_arg C1
         >{spaces_before_argument:\\n}
       >{raw:@subtitle Online\\n}
-      >*@end C1 l8
+      >*normal_command@end C1 l8
       >|EXTRA
       >|text_arg:{ifnotepub}
        >*line_arg C3
@@ -55,7 +55,7 @@ $result_tree_text{'epub_conditional'} = '*document_root C5
       {spaces_before_argument: }
       {normal_text:A book}
       {spaces_after_argument:\\n}
-    *@end C1 l9
+    *normal_command@end C1 l9
     |EXTRA
     |text_arg:{documentinfo}
      *line_arg C3
@@ -63,11 +63,11 @@ $result_tree_text{'epub_conditional'} = '*document_root C5
       {normal_text:documentinfo}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-  *@maketitle C1 l11
+  *normal_command@maketitle C1 l11
    *line_arg C1
     {spaces_before_argument:\\n}
   {empty_line:\\n}
- *@node C1 l13 {Top}
+ *normal_command@node C1 l13 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -77,7 +77,7 @@ $result_tree_text{'epub_conditional'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l14 {top}
+ *normal_command@top C2 l14 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -87,7 +87,7 @@ $result_tree_text{'epub_conditional'} = '*document_root C5
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l16 {chapter}
+ *normal_command@node C1 l16 {chapter}
  |EXTRA
  |identifier:{chapter}
  |is_target:{1}
@@ -97,7 +97,7 @@ $result_tree_text{'epub_conditional'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:chapter}
     {spaces_after_argument:\\n}
- *@chapter C7 l17 {Chap}
+ *normal_command@chapter C7 l17 {Chap}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -110,14 +110,14 @@ $result_tree_text{'epub_conditional'} = '*document_root C5
   {empty_line:\\n}
   >SOURCEMARKS
   >expanded_conditional_command<start;2><p:1>
-   >*@ifepub C1 l19
+   >*normal_command@ifepub C1 l19
     >*arguments_line C1
      >*block_line_arg C1
       >{spaces_before_argument:\\n}
-  *@html C3 l20
+  *normal_command@html C3 l20
   >SOURCEMARKS
   >expanded_conditional_command<end;2>
-   >*@end C1 l23
+   >*normal_command@end C1 l23
    >|EXTRA
    >|text_arg:{ifepub}
     >*line_arg C3
@@ -129,7 +129,7 @@ $result_tree_text{'epub_conditional'} = '*document_root C5
      {spaces_before_argument:\\n}
    *rawpreformatted C1
     {normal_text:<section role="doc-part" aria-labelledby="p1">\\n}
-   *@end C1 l22
+   *normal_command@end C1 l22
    |EXTRA
    |text_arg:{html}
     *line_arg C3
@@ -142,14 +142,14 @@ $result_tree_text{'epub_conditional'} = '*document_root C5
   {empty_line:\\n}
   >SOURCEMARKS
   >expanded_conditional_command<start;3><p:1>
-   >*@ifepub C1 l27
+   >*normal_command@ifepub C1 l27
     >*arguments_line C1
      >*block_line_arg C1
       >{spaces_before_argument:\\n}
-  *@html C3 l28
+  *normal_command@html C3 l28
   >SOURCEMARKS
   >expanded_conditional_command<end;3>
-   >*@end C1 l31
+   >*normal_command@end C1 l31
    >|EXTRA
    >|text_arg:{ifepub}
     >*line_arg C3
@@ -161,7 +161,7 @@ $result_tree_text{'epub_conditional'} = '*document_root C5
      {spaces_before_argument:\\n}
    *rawpreformatted C1
     {normal_text:</section>\\n}
-   *@end C1 l30
+   *normal_command@end C1 l30
    |EXTRA
    |text_arg:{html}
     *line_arg C3

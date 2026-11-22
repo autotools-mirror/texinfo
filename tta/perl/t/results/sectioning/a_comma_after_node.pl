@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'a_comma_after_node'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
- *@node C3 l1 {Commands}
+ *normal_command@node C3 l1 {Commands}
  |EXTRA
  |identifier:{Commands}
  |is_target:{1}

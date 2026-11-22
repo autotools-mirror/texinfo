@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'ifset_in_macro'} = '*document_root C1
  *before_node_section C1
   *preamble_before_content C2
-   *@macro C5 l1
+   *normal_command@macro C5 l1
    |EXTRA
    |formal_args:A{arg}
    |macro_name:{note}
@@ -20,7 +20,7 @@ $result_tree_text{'ifset_in_macro'} = '*document_root C1
     {raw:@ifset notes \\n}
     {raw:\\arg\\\\n}
     {raw:@end ifset\\n}
-    *@end C1 l5
+    *normal_command@end C1 l5
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -35,7 +35,7 @@ $result_tree_text{'ifset_in_macro'} = '*document_root C1
       >{spaces_before_argument:\\n}
       >{macro_call_arg_text:arg\\n}
    >ignored_conditional_block<1><p:1>
-    >*@ifset C4 l9:@note
+    >*normal_command@ifset C4 l9:@note
      >*arguments_line C1
       >*block_line_arg C3
        >{spaces_before_argument: }
@@ -43,7 +43,7 @@ $result_tree_text{'ifset_in_macro'} = '*document_root C1
        >{spaces_after_argument: \\n}
      >{raw:arg\\n}
      >{raw:\\n}
-     >*@end C1 l9:@note
+     >*normal_command@end C1 l9:@note
      >|EXTRA
      >|text_arg:{ifset}
       >*line_arg C3

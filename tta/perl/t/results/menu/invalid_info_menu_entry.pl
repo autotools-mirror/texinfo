@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'invalid_info_menu_entry'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
- *@node C3 l1 {Top}
+ *normal_command@node C3 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -22,7 +22,7 @@ $result_tree_text{'invalid_info_menu_entry'} = '*document_root C2
     {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C7 l3
+  *normal_command@menu C7 l3
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -36,7 +36,7 @@ $result_tree_text{'invalid_info_menu_entry'} = '*document_root C2
      {normal_text:(}
      {normal_text:f}
      {normal_text:)}
-     *@asis C1 l4
+     *normal_command@asis C1 l4
       *brace_container C1
        {normal_text:a:}
     {menu_entry_separator:::}
@@ -46,7 +46,7 @@ $result_tree_text{'invalid_info_menu_entry'} = '*document_root C2
    *menu_entry C6 l5
     {menu_entry_leading_text:* }
     *menu_entry_name C1
-     *@asis C1 l5
+     *normal_command@asis C1 l5
       *brace_container C1
        {normal_text:name:}
     {menu_entry_separator:: }
@@ -76,7 +76,7 @@ $result_tree_text{'invalid_info_menu_entry'} = '*document_root C2
      {normal_text:(}
      {normal_text:f}
      {normal_text:)}
-     *@asis C1 l6
+     *normal_command@asis C1 l6
       *brace_container C1
        {normal_text:node. }
     {menu_entry_separator:. }
@@ -96,7 +96,7 @@ $result_tree_text{'invalid_info_menu_entry'} = '*document_root C2
      {normal_text:(}
      {normal_text:f}
      {normal_text:)}
-     *@asis C1 l7
+     *normal_command@asis C1 l7
       *brace_container C1
        {normal_text:node,n}
     {menu_entry_separator:. }
@@ -116,14 +116,14 @@ $result_tree_text{'invalid_info_menu_entry'} = '*document_root C2
      {normal_text:(}
      {normal_text:f}
      {normal_text:)}
-     *@asis C1 l8
+     *normal_command@asis C1 l8
       *brace_container C1
        {normal_text:node\\tn}
     {menu_entry_separator:. }
     *menu_entry_description C1
      *preformatted C1
       {normal_text:d3\\n}
-   *@end C1 l9
+   *normal_command@end C1 l9
    |EXTRA
    |text_arg:{menu}
     *line_arg C3

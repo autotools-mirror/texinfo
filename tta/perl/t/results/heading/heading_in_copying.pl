@@ -11,21 +11,21 @@ use Encode;
 $result_tree_text{'heading_in_copying'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content C2
-   *@copying C7 l1
+   *normal_command@copying C7 l1
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     {empty_line:\\n}
-    *@heading C1 l3
+    *normal_command@heading C1 l3
     |EXTRA
     |global_command_number:{1}
     |heading_number:{1}
      *line_arg C6
       {spaces_before_argument: }
       {normal_text:in copying }
-      *@@
+      *normal_command@@
       {normal_text: }
-      *@emph C1 l3
+      *normal_command@emph C1 l3
        *brace_container C1
         {normal_text:heading}
       {spaces_after_argument:\\n}
@@ -38,20 +38,20 @@ $result_tree_text{'heading_in_copying'} = '*document_root C3
       {normal_text:cindex copying}
       {spaces_after_argument:\\n}
     {empty_line:\\n}
-    *@subheading C1 l6
+    *normal_command@subheading C1 l6
     |EXTRA
     |global_command_number:{1}
     |heading_number:{2}
      *line_arg C6
       {spaces_before_argument: }
       {normal_text:second in copying }
-      *@@
+      *normal_command@@
       {normal_text: }
-      *@emph C1 l6
+      *normal_command@emph C1 l6
        *brace_container C1
         {normal_text:subheading}
       {spaces_after_argument:\\n}
-    *@end C1 l7
+    *normal_command@end C1 l7
     |EXTRA
     |text_arg:{copying}
      *line_arg C3
@@ -59,7 +59,7 @@ $result_tree_text{'heading_in_copying'} = '*document_root C3
       {normal_text:copying}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@node C1 l9 {Top}
+ *normal_command@node C1 l9 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -69,7 +69,7 @@ $result_tree_text{'heading_in_copying'} = '*document_root C3
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@node C3 l10 {chap}
+ *normal_command@node C3 l10 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -80,7 +80,7 @@ $result_tree_text{'heading_in_copying'} = '*document_root C3
     {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@insertcopying C1 l12
+  *normal_command@insertcopying C1 l12
   |EXTRA
   |global_command_number:{1}
    *line_arg C1

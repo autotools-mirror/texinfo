@@ -13,7 +13,7 @@ $result_tree_text{'displaymath'} = '*document_root C1
   *preamble_before_content
   *paragraph C1
    {normal_text:Simple\\n}
-  *@displaymath C7 l2
+  *normal_command@displaymath C7 l2
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -24,7 +24,7 @@ $result_tree_text{'displaymath'} = '*document_root C1
    *balanced_braces C1 l3
     {normal_text:{\\tan y}}
    {normal_text:\\n}
-   *@end C1 l4
+   *normal_command@end C1 l4
    |EXTRA
    |text_arg:{displaymath}
     *line_arg C3
@@ -34,25 +34,25 @@ $result_tree_text{'displaymath'} = '*document_root C1
   {empty_line:\\n}
   *paragraph C3
    {normal_text:Math with }
-   *@@
+   *normal_command@@
    {normal_text:-command\\n}
-  *@displaymath C8 l7
+  *normal_command@displaymath C8 l7
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
-   *@code C1 l8
+   *normal_command@code C1 l8
     *brace_container C1
      {normal_text:math code}
    {normal_text: a < b \\sum}
-   *@sub C1 l8
+   *normal_command@sub C1 l8
     *brace_container C1
      {normal_text:i}
    {normal_text: q}
-   *@sup C1 l8
+   *normal_command@sup C1 l8
     *brace_container C1
      {normal_text:2}
    {normal_text:\\n}
-   *@end C1 l9
+   *normal_command@end C1 l9
    |EXTRA
    |text_arg:{displaymath}
     *line_arg C3
@@ -62,21 +62,21 @@ $result_tree_text{'displaymath'} = '*document_root C1
   {empty_line:\\n}
   *paragraph C1
    {normal_text:Complex\\n}
-  *@displaymath C10 l12
+  *normal_command@displaymath C10 l12
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    {normal_text: \\underline}
    *balanced_braces C3 l13
     {normal_text:{}
-    *@code C1 l13
+    *normal_command@code C1 l13
      *brace_container C2
       {normal_text:math \\hbox}
       *balanced_braces C1 l13
        {normal_text:{ code }}
     {normal_text:}}
    {normal_text: }
-   *@\\
+   *normal_command@\\
    {normal_text:i \\sum_}
    *balanced_braces C1 l13
     {normal_text:{i}}
@@ -86,7 +86,7 @@ $result_tree_text{'displaymath'} = '*document_root C1
      {normal_text:{f}}
     {normal_text:}}
    {normal_text:\\n}
-   *@end C1 l14
+   *normal_command@end C1 l14
    |EXTRA
    |text_arg:{displaymath}
     *line_arg C3
@@ -96,17 +96,17 @@ $result_tree_text{'displaymath'} = '*document_root C1
   {empty_line:\\n}
   *paragraph C1
    {normal_text:With a comment\\n}
-  *@displaymath C4 l17
+  *normal_command@displaymath C4 l17
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
-   *@c C1
+   *normal_command@c C1
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:comment in displaymath}
      {spaces_after_argument:\\n}
    {normal_text:a/2\\n}
-   *@end C1 l20
+   *normal_command@end C1 l20
    |EXTRA
    |text_arg:{displaymath}
     *line_arg C3

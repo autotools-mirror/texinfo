@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'double_top_section'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content
- *@top C4 l1 {First top}
+ *normal_command@top C4 l1 {First top}
  |EXTRA
  |identifier:{First-top}
  |is_target:{1}
@@ -26,7 +26,7 @@ $result_tree_text{'double_top_section'} = '*document_root C3
   *paragraph C1
    {normal_text:First top.\\n}
   {empty_line:\\n}
- *@top C3 l5 {Second top}
+ *normal_command@top C3 l5 {Second top}
  |EXTRA
  |identifier:{Second-top}
  |is_target:{1}

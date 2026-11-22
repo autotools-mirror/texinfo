@@ -11,12 +11,12 @@ use Encode;
 $result_tree_text{'ignore_spaces_and_comments'} = '*document_root C1
  *before_node_section C1
   *preamble_before_content C9
-   *@ignore C3 l1
+   *normal_command@ignore C3 l1
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     {raw:No space no comment\\n}
-    *@end C1 l3
+    *normal_command@end C1 l3
     |EXTRA
     |text_arg:{ignore}
      *line_arg C3
@@ -24,12 +24,12 @@ $result_tree_text{'ignore_spaces_and_comments'} = '*document_root C1
       {normal_text:ignore}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@ignore C3 l5
+   *normal_command@ignore C3 l5
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:  \\n}
     {raw:Spaces no comment\\n}
-    *@end C1 l7
+    *normal_command@end C1 l7
     |EXTRA
     |text_arg:{ignore}
      *line_arg C3
@@ -37,16 +37,16 @@ $result_tree_text{'ignore_spaces_and_comments'} = '*document_root C1
       {normal_text:ignore}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@ignore C3 l9
+   *normal_command@ignore C3 l9
     *arguments_line C1
      *block_line_arg C1
-      *@c C1
+      *normal_command@c C1
        *line_arg C3
         {spaces_before_argument: }
         {rawline_text:no space comment}
         {spaces_after_argument:\\n}
     {raw:Comment\\n}
-    *@end C1 l11
+    *normal_command@end C1 l11
     |EXTRA
     |text_arg:{ignore}
      *line_arg C3
@@ -54,17 +54,17 @@ $result_tree_text{'ignore_spaces_and_comments'} = '*document_root C1
       {normal_text:ignore}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@ignore C3 l13
+   *normal_command@ignore C3 l13
     *arguments_line C1
      *block_line_arg C2
       {spaces_before_argument:  }
-      *@comment C1
+      *normal_command@comment C1
        *line_arg C3
         {spaces_before_argument: }
         {rawline_text:space comment}
         {spaces_after_argument:\\n}
     {raw:Space Comment\\n}
-    *@end C1 l15
+    *normal_command@end C1 l15
     |EXTRA
     |text_arg:{ignore}
      *line_arg C3
@@ -72,16 +72,16 @@ $result_tree_text{'ignore_spaces_and_comments'} = '*document_root C1
       {normal_text:ignore}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@ignore C3 l17
+   *normal_command@ignore C3 l17
     *arguments_line C1
      *block_line_arg C2
       {spaces_before_argument: }
-      *@c C1
+      *normal_command@c C1
        *line_arg C2
         {rawline_text:}
         {spaces_after_argument:\\n}
     {raw:Space Comment no argument\\n}
-    *@end C1 l19
+    *normal_command@end C1 l19
     |EXTRA
     |text_arg:{ignore}
      *line_arg C3

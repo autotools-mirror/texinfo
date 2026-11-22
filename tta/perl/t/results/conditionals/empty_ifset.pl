@@ -14,14 +14,14 @@ $result_tree_text{'empty_ifset'} = '*document_root C1
    {normal_text:}
    >SOURCEMARKS
    >ignored_conditional_block<1>
-    >*@ifset C5 l1
+    >*normal_command@ifset C5 l1
      >*arguments_line C1
       >*block_line_arg C1
        >{spaces_before_argument:\\n}
      >{raw:\\n}
      >{raw:Something\\n}
      >{raw:\\n}
-     >*@end C1 l5
+     >*normal_command@end C1 l5
      >|EXTRA
      >|text_arg:{ifset}
       >*line_arg C3

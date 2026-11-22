@@ -15,7 +15,7 @@ This: [U0]
 Forward: [U1]
  *before_node_section C1
   *preamble_before_content
- *@chapter C2 l1 {chapter}
+ *normal_command@chapter C2 l1 {chapter}
  |EXTRA
  |identifier:{chapter}
  |is_target:{1}
@@ -33,7 +33,7 @@ unit_directions:D[prev->[U0]]
 UNIT_DIRECTIONS
 This: [U1]
 Back: [U0]
- *@part C1 l3 {part}
+ *normal_command@part C1 l3 {part}
  |EXTRA
  |global_command_number:{1}
  |section_level:{0}

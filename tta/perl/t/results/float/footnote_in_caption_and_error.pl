@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'footnote_in_caption_and_error'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'footnote_in_caption_and_error'} = '*document_root C3
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@node C5 l2 {chap}
+ *normal_command@node C5 l2 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -32,7 +32,7 @@ $result_tree_text{'footnote_in_caption_and_error'} = '*document_root C3
     {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@listoffloats C1 l4
+  *normal_command@listoffloats C1 l4
   |EXTRA
   |float_type:{fl}
   |global_command_number:{1}
@@ -41,7 +41,7 @@ $result_tree_text{'footnote_in_caption_and_error'} = '*document_root C3
     {normal_text:fl}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@float C5 l6
+  *normal_command@float C5 l6
   |EXTRA
   |float_number:{1}
   |float_type:{fl}
@@ -58,19 +58,19 @@ $result_tree_text{'footnote_in_caption_and_error'} = '*document_root C3
      {spaces_after_argument:\\n}
    *paragraph C1
     {normal_text:In float.\\n}
-   *@caption C1 l8
+   *normal_command@caption C1 l8
     *brace_command_context C1
      *paragraph C2
       {normal_text:in caption}
-      *@footnote C1 l8
+      *normal_command@footnote C1 l8
       |EXTRA
       |global_command_number:{1}
        *brace_command_context C1
         *paragraph C2
          {normal_text:in footnote }
-         *@error l8
+         *normal_command@error l8
    {spaces_after_close_brace:\\n}
-   *@end C1 l9
+   *normal_command@end C1 l9
    |EXTRA
    |text_arg:{float}
     *line_arg C3

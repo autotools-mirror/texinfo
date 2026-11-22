@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'empty_line'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@example C3 l1
+  *normal_command@example C3 l1
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -19,7 +19,7 @@ $result_tree_text{'empty_line'} = '*document_root C1
     {normal_text:example\\n}
     {empty_line:\\n}
     {normal_text:after empty line\\n}
-   *@end C1 l5
+   *normal_command@end C1 l5
    |EXTRA
    |text_arg:{example}
     *line_arg C3

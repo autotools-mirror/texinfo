@@ -11,14 +11,14 @@ use Encode;
 $result_tree_text{'line_end_accent_command_macro_call'} = '*document_root C1
  *before_node_section C11
   *preamble_before_content C2
-   *@macro C3 l1
+   *normal_command@macro C3 l1
    |EXTRA
    |formal_args:A{}
    |macro_name:{expand}
     *arguments_line C1
      {macro_line: expand {}\\n}
     {raw:@center A @ringaccent \\n}
-    *@end C1 l3
+    *normal_command@end C1 l3
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -30,11 +30,11 @@ $result_tree_text{'line_end_accent_command_macro_call'} = '*document_root C1
    >macro_expansion<start;1><p:1>
     >*macro_call@expand C1
      >*brace_arg
-  *@center C1 l5:@expand
+  *normal_command@center C1 l5:@expand
    *line_arg C4
     {spaces_before_argument: }
     {normal_text:A }
-    *@ringaccent C1 l5:@expand
+    *normal_command@ringaccent C1 l5:@expand
      {spaces_after_cmd_before_arg: }
      >SOURCEMARKS
      >macro_expansion<end;1><p:1>
@@ -43,14 +43,14 @@ $result_tree_text{'line_end_accent_command_macro_call'} = '*document_root C1
   *paragraph C1
    {normal_text:a\\n}
   {empty_line:\\n}
-  *@macro C3 l8
+  *normal_command@macro C3 l8
   |EXTRA
   |formal_args:A{}
   |macro_name:{nospace}
    *arguments_line C1
     {macro_line: nospace {}\\n}
    {raw:@center B @ringaccent\\n}
-   *@end C1 l10
+   *normal_command@end C1 l10
    |EXTRA
    |text_arg:{macro}
     *line_arg C3
@@ -62,11 +62,11 @@ $result_tree_text{'line_end_accent_command_macro_call'} = '*document_root C1
   >macro_expansion<start;2><p:1>
    >*macro_call@nospace C1
     >*brace_arg
-  *@center C1 l12:@nospace
+  *normal_command@center C1 l12:@nospace
    *line_arg C4
     {spaces_before_argument: }
     {normal_text:B }
-    *@ringaccent C1 l12:@nospace
+    *normal_command@ringaccent C1 l12:@nospace
      {spaces_after_cmd_before_arg:}
      >SOURCEMARKS
      >macro_expansion<end;2>

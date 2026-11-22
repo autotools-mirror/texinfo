@@ -13,7 +13,7 @@ $result_tree_text{'paragraph_in_style_command'} = '*document_root C1
   *preamble_before_content
   *paragraph C2
    {normal_text:a 2 paragraphs sample }
-   *@samp C1 l1
+   *normal_command@samp C1 l1
     *brace_container C2
      {normal_text:in first paragraph\\n}
      {empty_line:\\n}
@@ -22,7 +22,7 @@ $result_tree_text{'paragraph_in_style_command'} = '*document_root C1
   {empty_line:\\n}
   *paragraph C2
    {normal_text:a 3 paragraphs sample }
-   *@samp C1 l5
+   *normal_command@samp C1 l5
     *brace_container C2
      {normal_text:in first paragraph\\n}
      {empty_line:\\n}

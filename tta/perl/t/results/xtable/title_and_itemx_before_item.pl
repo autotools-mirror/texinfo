@@ -11,23 +11,23 @@ use Encode;
 $result_tree_text{'title_and_itemx_before_item'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@table C4 l1
+  *normal_command@table C4 l1
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     *@emph l1
+     *normal_command@emph l1
      {spaces_after_argument:\\n}
    *before_item C1
     *paragraph C1
      {normal_text:Title\\n}
    *table_entry C1
     *table_term C1
-     *@itemx C1 l3
+     *normal_command@itemx C1 l3
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:in itemx}
        {spaces_after_argument:\\n}
-   *@end C1 l4
+   *normal_command@end C1 l4
    |EXTRA
    |text_arg:{table}
     *line_arg C3

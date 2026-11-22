@@ -11,14 +11,14 @@ use Encode;
 $result_tree_text{'metadata_in_documentinfo'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content C2
-   *@documentinfo C5 l1
+   *normal_command@documentinfo C5 l1
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
-    *@title C1 l2
+    *normal_command@title C1 l2
     >SOURCEMARKS
     >ignored_conditional_block<1>
-     >*@ifepub C15 l3
+     >*normal_command@ifepub C15 l3
       >*arguments_line C1
        >*block_line_arg C1
         >{spaces_before_argument:\\n}
@@ -35,7 +35,7 @@ $result_tree_text{'metadata_in_documentinfo'} = '*document_root C5
       >{raw:      aut\\n}
       >{raw:   </meta>\\n}
       >{raw:@end html\\n}
-      >*@end C1 l17
+      >*normal_command@end C1 l17
       >|EXTRA
       >|text_arg:{ifepub}
        >*line_arg C3
@@ -43,7 +43,7 @@ $result_tree_text{'metadata_in_documentinfo'} = '*document_root C5
         >{normal_text:ifepub}
         >{spaces_after_argument:\\n}
     >expanded_conditional_command<start;1>
-     >*@ifnotepub C1 l18
+     >*normal_command@ifnotepub C1 l18
       >*arguments_line C1
        >*block_line_arg C1
         >{spaces_before_argument:\\n}
@@ -51,10 +51,10 @@ $result_tree_text{'metadata_in_documentinfo'} = '*document_root C5
       {spaces_before_argument: }
       {normal_text:The Title}
       {spaces_after_argument:\\n}
-    *@html C3 l19
+    *normal_command@html C3 l19
     >SOURCEMARKS
     >expanded_conditional_command<end;1>
-     >*@end C1 l22
+     >*normal_command@end C1 l22
      >|EXTRA
      >|text_arg:{ifnotepub}
       >*line_arg C3
@@ -66,14 +66,14 @@ $result_tree_text{'metadata_in_documentinfo'} = '*document_root C5
        {spaces_before_argument:\\n}
      *rawpreformatted C1
       {normal_text:<meta name="creator" content="Some Body" />\\n}
-     *@end C1 l21
+     *normal_command@end C1 l21
      |EXTRA
      |text_arg:{html}
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:html}
        {spaces_after_argument:\\n}
-    *@docbook C3 l23
+    *normal_command@docbook C3 l23
      *arguments_line C1
       *block_line_arg C1
        {spaces_before_argument:\\n}
@@ -103,14 +103,14 @@ $result_tree_text{'metadata_in_documentinfo'} = '*document_root C5
       {normal_text:    </authorblurb>\\n}
       {normal_text:  </editor>\\n}
       {normal_text:</authorgroup>\\n}
-     *@end C1 l49
+     *normal_command@end C1 l49
      |EXTRA
      |text_arg:{docbook}
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:docbook}
        {spaces_after_argument:\\n}
-    *@end C1 l50
+    *normal_command@end C1 l50
     |EXTRA
     |text_arg:{documentinfo}
      *line_arg C3
@@ -118,7 +118,7 @@ $result_tree_text{'metadata_in_documentinfo'} = '*document_root C5
       {normal_text:documentinfo}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@node C1 l52 {Top}
+ *normal_command@node C1 l52 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -128,7 +128,7 @@ $result_tree_text{'metadata_in_documentinfo'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l53 {top}
+ *normal_command@top C2 l53 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -138,7 +138,7 @@ $result_tree_text{'metadata_in_documentinfo'} = '*document_root C5
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l55 {chapter}
+ *normal_command@node C1 l55 {chapter}
  |EXTRA
  |identifier:{chapter}
  |is_target:{1}
@@ -148,7 +148,7 @@ $result_tree_text{'metadata_in_documentinfo'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:chapter}
     {spaces_after_argument:\\n}
- *@chapter C1 l56 {Chap}
+ *normal_command@chapter C1 l56 {Chap}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}

@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'macro_defined_txiinternalvalue_in_translation'} = '*document_root C1
  *before_node_section C5
   *preamble_before_content
-  *@sp C1 l1
+  *normal_command@sp C1 l1
   |EXTRA
   |misc_args:A{1}
    *line_arg C3
@@ -19,7 +19,7 @@ $result_tree_text{'macro_defined_txiinternalvalue_in_translation'} = '*document_
     {normal_text:1}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@sp C1 l3
+  *normal_command@sp C1 l3
   |EXTRA
   |misc_args:A{2}
    *line_arg C3

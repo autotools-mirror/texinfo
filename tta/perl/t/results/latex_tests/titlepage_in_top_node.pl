@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'titlepage_in_top_node'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'titlepage_in_top_node'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C6 l2 {top sectionning}
+ *normal_command@top C6 l2 {top sectionning}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -34,16 +34,16 @@ $result_tree_text{'titlepage_in_top_node'} = '*document_root C5
   *paragraph C1
    {normal_text:In top\\n}
   {empty_line:\\n}
-  *@titlepage C3 l6
+  *normal_command@titlepage C3 l6
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
-   *@title C1 l7
+   *normal_command@title C1 l7
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:the TTitle}
      {spaces_after_argument:\\n}
-   *@end C1 l8
+   *normal_command@end C1 l8
    |EXTRA
    |text_arg:{titlepage}
     *line_arg C3
@@ -51,7 +51,7 @@ $result_tree_text{'titlepage_in_top_node'} = '*document_root C5
      {normal_text:titlepage}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l10 {chap}
+ *normal_command@node C1 l10 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -61,7 +61,7 @@ $result_tree_text{'titlepage_in_top_node'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:chap}
     {spaces_after_argument:\\n}
- *@chapter C3 l11 {chap}
+ *normal_command@chapter C3 l11 {chap}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}

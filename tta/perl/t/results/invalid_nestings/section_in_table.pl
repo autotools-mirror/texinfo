@@ -11,22 +11,22 @@ use Encode;
 $result_tree_text{'section_in_table'} = '*document_root C2
  *before_node_section C2
   *preamble_before_content
-  *@table C2 l1
+  *normal_command@table C2 l1
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     *@asis l1
+     *normal_command@asis l1
      {spaces_after_argument:\\n}
    *table_entry C2
     *table_term C1
-     *@item C1 l2
+     *normal_command@item C1 l2
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:Before}
        {spaces_after_argument:\\n}
     *table_definition C1
      {empty_line:\\n}
- *@section C5 l4 {Subsection}
+ *normal_command@section C5 l4 {Subsection}
  |EXTRA
  |identifier:{Subsection}
  |is_target:{1}

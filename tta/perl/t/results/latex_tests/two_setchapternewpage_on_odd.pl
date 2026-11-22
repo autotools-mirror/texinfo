@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'two_setchapternewpage_on_odd'} = '*document_root C1
  *before_node_section C1
   *preamble_before_content C3
-   *@setchapternewpage C1 l1
+   *normal_command@setchapternewpage C1 l1
    |EXTRA
    |misc_args:A{on}
     *line_arg C3
@@ -19,7 +19,7 @@ $result_tree_text{'two_setchapternewpage_on_odd'} = '*document_root C1
      {normal_text:on}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@setchapternewpage C1 l3
+   *normal_command@setchapternewpage C1 l3
    |EXTRA
    |misc_args:A{odd}
     *line_arg C3

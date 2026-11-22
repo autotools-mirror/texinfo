@@ -11,14 +11,14 @@ use Encode;
 $result_tree_text{'macro_in_ifset'} = '*document_root C1
  *before_node_section C1
   *preamble_before_content C2
-   *@macro C3 l1
+   *normal_command@macro C3 l1
    |EXTRA
    |formal_args:A{arg}
    |macro_name:{macroone}
     *arguments_line C1
      {macro_line: macroone {arg}\\n}
     {raw:@end ifset\\n}
-    *@end C1 l3
+    *normal_command@end C1 l3
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -28,7 +28,7 @@ $result_tree_text{'macro_in_ifset'} = '*document_root C1
    {empty_line:\\n}
    >SOURCEMARKS
    >ignored_conditional_block<1><p:1>
-    >*@ifset C4 l5
+    >*normal_command@ifset C4 l5
      >*arguments_line C1
       >*block_line_arg C3
        >{spaces_before_argument: }
@@ -36,7 +36,7 @@ $result_tree_text{'macro_in_ifset'} = '*document_root C1
        >{spaces_after_argument:\\n}
      >{raw:@macroone\\n}
      >{raw:in ifset\\n}
-     >*@end C1 l8
+     >*normal_command@end C1 l8
      >|EXTRA
      >|text_arg:{ifset}
       >*line_arg C3

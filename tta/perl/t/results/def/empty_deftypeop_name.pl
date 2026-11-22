@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'empty_deftypeop_name'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@deftypeop C2 l1
+  *normal_command@deftypeop C2 l1
    *def_line C1 l1
    |EXTRA
    |def_command:{deftypeop}
@@ -21,25 +21,25 @@ $result_tree_text{'empty_deftypeop_name'} = '*document_root C1
      *def_category C1
       *def_line_arg C2
        {normal_text:Command}
-       *@code C1 l1
+       *normal_command@code C1 l1
         *brace_container C1
          {normal_text:com}
      {spaces: }
      *def_class C1
       *bracketed_arg C2 l1
        {normal_text:Window}
-       *@code C1 l1
+       *normal_command@code C1 l1
         *brace_container C1
          {normal_text:int}
      {spaces: }
      *def_type C1
       *def_line_arg C2
        {normal_text:expose}
-       *@var C1 l1
+       *normal_command@var C1 l1
         *brace_container C1
          {normal_text:exp}
      {spaces_after_argument:\\n}
-   *@end C1 l2
+   *normal_command@end C1 l2
    |EXTRA
    |text_arg:{deftypeop}
     *line_arg C3

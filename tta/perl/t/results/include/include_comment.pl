@@ -14,13 +14,13 @@ $result_tree_text{'include_comment'} = '*document_root C1
    {normal_text:}
    >SOURCEMARKS
    >include<start;1>
-    >*@include C1 l1
+    >*normal_command@include C1 l1
     >|EXTRA
     >|text_arg:{inc_file.texi}
      >*line_arg C3
       >{spaces_before_argument: }
       >{normal_text:inc_file.texi}
-      >*@c C1
+      >*normal_command@c C1
        >*line_arg C2
         >{spaces_before_argument: }
         >{rawline_text:comment}

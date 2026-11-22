@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'empty_node_in_html_title_no_sec_name'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'empty_node_in_html_title_no_sec_name'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l2 {top}
+ *normal_command@top C2 l2 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -31,11 +31,11 @@ $result_tree_text{'empty_node_in_html_title_no_sec_name'} = '*document_root C5
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l4
+ *normal_command@node C1 l4
   *arguments_line C1
    *line_arg C1
     {spaces_before_argument:\\n}
- *@chapter C1 l5 {chap}
+ *normal_command@chapter C1 l5 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}

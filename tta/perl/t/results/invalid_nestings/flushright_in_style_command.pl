@@ -12,16 +12,16 @@ $result_tree_text{'flushright_in_style_command'} = '*document_root C1
  *before_node_section C3
   *preamble_before_content
   *paragraph C1
-   *@code C1 l1
+   *normal_command@code C1 l1
     *brace_container C1
      {normal_text:\\n}
-  *@flushright C3 l2
+  *normal_command@flushright C3 l2
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *paragraph C1
     {normal_text:in flushright\\n}
-   *@end C1 l4
+   *normal_command@end C1 l4
    |EXTRA
    |text_arg:{flushright}
     *line_arg C3

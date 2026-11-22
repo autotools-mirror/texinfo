@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'test_insert_nodes_nodedescription'} = '*document_root C9
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |added:{1}
  |identifier:{Top}
@@ -22,7 +22,7 @@ $result_tree_text{'test_insert_nodes_nodedescription'} = '*document_root C9
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C3 l1 {top}
+ *normal_command@top C3 l1 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -31,13 +31,13 @@ $result_tree_text{'test_insert_nodes_nodedescription'} = '*document_root C9
     {spaces_before_argument: }
     {normal_text:top}
     {spaces_after_argument:\\n}
-  *@nodedescription C1 l2
+  *normal_command@nodedescription C1 l2
    *line_arg C3
     {spaces_before_argument: }
     {normal_text:D1}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l4 {Chap}
+ *normal_command@node C1 l4 {Chap}
  |EXTRA
  |added:{1}
  |identifier:{Chap}
@@ -48,7 +48,7 @@ $result_tree_text{'test_insert_nodes_nodedescription'} = '*document_root C9
     {spaces_before_argument: }
     {normal_text:Chap}
     {spaces_after_argument:\\n}
- *@chapter C2 l4 {Chap}
+ *normal_command@chapter C2 l4 {Chap}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -59,7 +59,7 @@ $result_tree_text{'test_insert_nodes_nodedescription'} = '*document_root C9
     {normal_text:Chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l6 {Sec}
+ *normal_command@node C1 l6 {Sec}
  |EXTRA
  |added:{1}
  |identifier:{Sec}
@@ -70,7 +70,7 @@ $result_tree_text{'test_insert_nodes_nodedescription'} = '*document_root C9
     {spaces_before_argument: }
     {normal_text:Sec}
     {spaces_after_argument:\\n}
- *@section C4 l6 {Sec}
+ *normal_command@section C4 l6 {Sec}
  |EXTRA
  |section_heading_number:{1.1}
  |section_level:{2}
@@ -80,18 +80,18 @@ $result_tree_text{'test_insert_nodes_nodedescription'} = '*document_root C9
     {spaces_before_argument: }
     {normal_text:Sec}
     {spaces_after_argument:\\n}
-  *@nodedescription C1 l7
+  *normal_command@nodedescription C1 l7
    *line_arg C3
     {spaces_before_argument: }
     {normal_text:D2}
     {spaces_after_argument:\\n}
-  *@nodedescription C1 l8
+  *normal_command@nodedescription C1 l8
    *line_arg C3
     {spaces_before_argument: }
     {normal_text:D3}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l10 {Subsec}
+ *normal_command@node C1 l10 {Subsec}
  |EXTRA
  |added:{1}
  |identifier:{Subsec}
@@ -102,7 +102,7 @@ $result_tree_text{'test_insert_nodes_nodedescription'} = '*document_root C9
     {spaces_before_argument: }
     {normal_text:Subsec}
     {spaces_after_argument:\\n}
- *@subsection C2 l10 {Subsec}
+ *normal_command@subsection C2 l10 {Subsec}
  |EXTRA
  |section_heading_number:{1.1.1}
  |section_level:{3}

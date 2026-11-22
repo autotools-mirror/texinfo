@@ -15,7 +15,7 @@ $result_tree_text{'index_no_node'} = '*document_root C7
     {text_before_beginning:\\input texinfo @c -*-texinfo-*-\\n}
     {text_before_beginning:\\n}
   *preamble_before_content C2
-   *@setfilename C1 index_no_node.texi:l3
+   *normal_command@setfilename C1 index_no_node.texi:l3
    |EXTRA
    |text_arg:{index_no_node}
     *line_arg C3
@@ -32,7 +32,7 @@ $result_tree_text{'index_no_node'} = '*document_root C7
     {spaces_after_argument:\\n}
   *paragraph C1
    {normal_text:Garbage\\n}
-  *@printindex C1 index_no_node.texi:l7
+  *normal_command@printindex C1 index_no_node.texi:l7
   |EXTRA
   |global_command_number:{1}
   |misc_args:A{cp}
@@ -42,7 +42,7 @@ $result_tree_text{'index_no_node'} = '*document_root C7
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   {empty_line:\\n}
- *@unnumbered C8 index_no_node.texi:l10 {unnumbered}
+ *normal_command@unnumbered C8 index_no_node.texi:l10 {unnumbered}
  |EXTRA
  |identifier:{unnumbered}
  |is_target:{1}
@@ -53,7 +53,7 @@ $result_tree_text{'index_no_node'} = '*document_root C7
     {spaces_before_argument: }
     {normal_text:unnumbered}
     {spaces_after_argument:\\n}
-  *@printindex C1 index_no_node.texi:l11
+  *normal_command@printindex C1 index_no_node.texi:l11
   |EXTRA
   |global_command_number:{2}
    *line_arg C3
@@ -78,7 +78,7 @@ $result_tree_text{'index_no_node'} = '*document_root C7
      {normal_text:unnumbered after text}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@printindex C1 index_no_node.texi:l17
+  *normal_command@printindex C1 index_no_node.texi:l17
   |EXTRA
   |global_command_number:{3}
   |misc_args:A{cp}
@@ -87,7 +87,7 @@ $result_tree_text{'index_no_node'} = '*document_root C7
     {normal_text:cp}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@top C15 index_no_node.texi:l19 {top section}
+ *normal_command@top C15 index_no_node.texi:l19 {top section}
  |EXTRA
  |identifier:{top-section}
  |is_target:{1}
@@ -144,7 +144,7 @@ $result_tree_text{'index_no_node'} = '*document_root C7
   *paragraph C1
    {normal_text:Top node\\n}
   {empty_line:\\n}
-  *@printindex C1 index_no_node.texi:l29
+  *normal_command@printindex C1 index_no_node.texi:l29
   |EXTRA
   |global_command_number:{4}
   |misc_args:A{cp}
@@ -162,7 +162,7 @@ $result_tree_text{'index_no_node'} = '*document_root C7
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   {empty_line:\\n}
- *@section C7 index_no_node.texi:l34 {second}
+ *normal_command@section C7 index_no_node.texi:l34 {second}
  |EXTRA
  |identifier:{second}
  |is_target:{1}
@@ -174,7 +174,7 @@ $result_tree_text{'index_no_node'} = '*document_root C7
     {normal_text:second}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@printindex C1 index_no_node.texi:l36
+  *normal_command@printindex C1 index_no_node.texi:l36
   |EXTRA
   |global_command_number:{5}
   |misc_args:A{cp}
@@ -199,7 +199,7 @@ $result_tree_text{'index_no_node'} = '*document_root C7
      {normal_text:second}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@printindex C1 index_no_node.texi:l41
+  *normal_command@printindex C1 index_no_node.texi:l41
   |EXTRA
   |global_command_number:{6}
   |misc_args:A{cp}
@@ -207,7 +207,7 @@ $result_tree_text{'index_no_node'} = '*document_root C7
     {spaces_before_argument: }
     {normal_text:cp}
     {spaces_after_argument:\\n}
- *@chapter C6 index_no_node.texi:l42 {Chapter}
+ *normal_command@chapter C6 index_no_node.texi:l42 {Chapter}
  |EXTRA
  |identifier:{Chapter}
  |is_target:{1}
@@ -227,7 +227,7 @@ $result_tree_text{'index_no_node'} = '*document_root C7
     {normal_text:chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@printindex C1 index_no_node.texi:l45
+  *normal_command@printindex C1 index_no_node.texi:l45
   |EXTRA
   |global_command_number:{7}
   |misc_args:A{cp}
@@ -245,7 +245,7 @@ $result_tree_text{'index_no_node'} = '*document_root C7
      {normal_text:Chapter2}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@chapter C4 index_no_node.texi:l49 {Chapter 2}
+ *normal_command@chapter C4 index_no_node.texi:l49 {Chapter 2}
  |EXTRA
  |identifier:{Chapter-2}
  |is_target:{1}
@@ -261,7 +261,7 @@ $result_tree_text{'index_no_node'} = '*document_root C7
   *paragraph C1
    {normal_text:In chapter 2\\n}
   {empty_line:\\n}
- *@bye C1
+ *normal_command@bye C1
   *line_arg C1
    {spaces_before_argument:\\n}
 ';

@@ -11,13 +11,13 @@ use Encode;
 $result_tree_text{'anchor_in_copying_insertcopying_titlepage'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content C4
-   *@copying C3 l1
+   *normal_command@copying C3 l1
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *paragraph C3
      {normal_text:Cop. }
-     *@anchor C1 l2
+     *normal_command@anchor C1 l2
      |EXTRA
      |identifier:{a-in-copying}
      |is_target:{1}
@@ -26,7 +26,7 @@ $result_tree_text{'anchor_in_copying_insertcopying_titlepage'} = '*document_root
       |element_region:{copying}
        {normal_text:a in copying}
      {normal_text:. Ying.\\n}
-    *@end C1 l3
+    *normal_command@end C1 l3
     |EXTRA
     |text_arg:{copying}
      *line_arg C3
@@ -34,20 +34,20 @@ $result_tree_text{'anchor_in_copying_insertcopying_titlepage'} = '*document_root
       {normal_text:copying}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@titlepage C8 l5
+   *normal_command@titlepage C8 l5
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
-    *@title C1 l6
+    *normal_command@title C1 l6
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:Manual}
       {spaces_after_argument:\\n}
     {empty_line:\\n}
-    *@page C1
+    *normal_command@page C1
      *line_arg C1
       {spaces_before_argument:\\n}
-    *@anchor C1 l9
+    *normal_command@anchor C1 l9
     |EXTRA
     |identifier:{a-in-titlepage}
     |is_target:{1}
@@ -56,12 +56,12 @@ $result_tree_text{'anchor_in_copying_insertcopying_titlepage'} = '*document_root
      |element_region:{titlepage}
       {normal_text:a in titlepage}
     {spaces_after_close_brace:\\n}
-    *@insertcopying C1 l10
+    *normal_command@insertcopying C1 l10
     |EXTRA
     |global_command_number:{1}
      *line_arg C1
       {spaces_before_argument:\\n}
-    *@end C1 l11
+    *normal_command@end C1 l11
     |EXTRA
     |text_arg:{titlepage}
      *line_arg C3
@@ -69,7 +69,7 @@ $result_tree_text{'anchor_in_copying_insertcopying_titlepage'} = '*document_root
       {normal_text:titlepage}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@node C1 l13 {Top}
+ *normal_command@node C1 l13 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -79,7 +79,7 @@ $result_tree_text{'anchor_in_copying_insertcopying_titlepage'} = '*document_root
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l14 {top}
+ *normal_command@top C2 l14 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -89,7 +89,7 @@ $result_tree_text{'anchor_in_copying_insertcopying_titlepage'} = '*document_root
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l16 {Chapter}
+ *normal_command@node C1 l16 {Chapter}
  |EXTRA
  |identifier:{Chapter}
  |is_target:{1}
@@ -99,7 +99,7 @@ $result_tree_text{'anchor_in_copying_insertcopying_titlepage'} = '*document_root
     {spaces_before_argument: }
     {normal_text:Chapter}
     {spaces_after_argument:\\n}
- *@chapter C3 l17 {Chap}
+ *normal_command@chapter C3 l17 {Chap}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -111,14 +111,14 @@ $result_tree_text{'anchor_in_copying_insertcopying_titlepage'} = '*document_root
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C4
-   *@pxref C1 l19
+   *normal_command@pxref C1 l19
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{a-in-copying}
      {normal_text:a in copying}
    {normal_text:.\\n}
-   *@pxref C1 l20
+   *normal_command@pxref C1 l20
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}

@@ -12,7 +12,7 @@ $result_tree_text{'ref_to_unknown_node'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *paragraph C2
-   *@xref C1 l1
+   *normal_command@xref C1 l1
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}

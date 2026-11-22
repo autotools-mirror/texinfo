@@ -479,7 +479,9 @@ sub _new_node($$;$$) {
       tree_remove_parents($node);
     }
 
-    $node = Texinfo::TreeElement::new({'cmdname' => 'node', 'extra' => {}});
+    $node = Texinfo::TreeElement::new({'cmdname' => 'node',
+                                       'type' => 'normal_command',
+                                       'extra' => {}});
 
     # In general there is a source info for the associated command, there
     # may be none for generated sectioning commands, for example for fill

@@ -13,21 +13,21 @@ $result_tree_text{'noindent_after_smallexample'} = '*document_root C1
   *preamble_before_content
   *paragraph C1
    {normal_text:To obtain.\\n}
-  *@smallexample C3 l2
+  *normal_command@smallexample C3 l2
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C2
     {normal_text:$ wget \'http://savannah.gnu.org/cgi-bin/viewcvs/config/config/config.guess?rev=HEAD&content-type=text/plain\'\\n}
     {normal_text:$ wget \'http://savannah.gnu.org/cgi-bin/viewcvs/config/config/config.sub?rev=HEAD&content-type=text/plain\'\\n}
-   *@end C1 l5
+   *normal_command@end C1 l5
    |EXTRA
    |text_arg:{smallexample}
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:smallexample}
      {spaces_after_argument:\\n}
-  *@noindent l6
+  *normal_command@noindent l6
   {ignorable_spaces_after_command:\\n}
   *paragraph C1
   |EXTRA

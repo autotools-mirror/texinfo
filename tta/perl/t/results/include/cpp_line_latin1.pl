@@ -14,7 +14,7 @@ $result_tree_text{'cpp_line_latin1'} = '*document_root C5
    {text_before_beginning:\\input texinfo\\n}
    {text_before_beginning:\\n}
   *preamble_before_content C2
-   *@documentencoding C1 cpp_line_latin1.texi:l3
+   *normal_command@documentencoding C1 cpp_line_latin1.texi:l3
    |EXTRA
    |global_command_number:{1}
    |input_encoding_name:{iso-8859-1}
@@ -24,7 +24,7 @@ $result_tree_text{'cpp_line_latin1'} = '*document_root C5
      {normal_text:ISO-8859-1}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@node C1 cpp_line_latin1.texi:l5 {Top}
+ *normal_command@node C1 cpp_line_latin1.texi:l5 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -34,7 +34,7 @@ $result_tree_text{'cpp_line_latin1'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 cpp_line_latin1.texi:l6
+ *normal_command@top C2 cpp_line_latin1.texi:l6
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -42,7 +42,7 @@ $result_tree_text{'cpp_line_latin1'} = '*document_root C5
    *line_arg C1
     {spaces_before_argument:\\n}
   {empty_line:\\n}
- *@node C7 cpp_line_latin1.texi:l8 {chap}
+ *normal_command@node C7 cpp_line_latin1.texi:l8 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -61,7 +61,7 @@ $result_tree_text{'cpp_line_latin1'} = '*document_root C5
   *paragraph C1
    {normal_text:aaa\\n}
   {empty_line:\\n}
- *@bye C1
+ *normal_command@bye C1
   *line_arg C1
    {spaces_before_argument:\\n}
 ';

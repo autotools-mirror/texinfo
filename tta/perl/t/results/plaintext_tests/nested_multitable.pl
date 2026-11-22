@@ -13,7 +13,7 @@ $result_tree_text{'nested_multitable'} = '*document_root C1
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content
-  *@multitable C3 l2
+  *normal_command@multitable C3 l2
   |EXTRA
   |max_columns:{2}
    *arguments_line C1
@@ -21,7 +21,7 @@ $result_tree_text{'nested_multitable'} = '*document_root C1
      {spaces_before_argument: }
      *bracketed_arg C3 l2
       {normal_text:truc AAAA }
-      *@ 
+      *normal_command@ 
       {normal_text: machin}
      {normal_text:    }
      *bracketed_arg C1 l2
@@ -31,11 +31,11 @@ $result_tree_text{'nested_multitable'} = '*document_root C1
     *row C2
     |EXTRA
     |row_number:{1}
-     *@item C3 l3
+     *normal_command@item C3 l3
      |EXTRA
      |cell_number:{1}
       {ignorable_spaces_after_command:\\n}
-      *@multitable C3 l4
+      *normal_command@multitable C3 l4
       |EXTRA
       |max_columns:{2}
        *arguments_line C1
@@ -51,19 +51,19 @@ $result_tree_text{'nested_multitable'} = '*document_root C1
         *row C2
         |EXTRA
         |row_number:{1}
-         *@item C2 l5
+         *normal_command@item C2 l5
          |EXTRA
          |cell_number:{1}
           {ignorable_spaces_after_command: }
           *paragraph C1
            {normal_text:AAAA }
-         *@tab C2 l5
+         *normal_command@tab C2 l5
          |EXTRA
          |cell_number:{2}
           {ignorable_spaces_after_command: }
           *paragraph C1
            {normal_text:machin\\n}
-       *@end C1 l6
+       *normal_command@end C1 l6
        |EXTRA
        |text_arg:{multitable}
         *line_arg C3
@@ -71,7 +71,7 @@ $result_tree_text{'nested_multitable'} = '*document_root C1
          {normal_text:multitable}
          {spaces_after_argument:\\n}
       {spaces_before_paragraph: }
-     *@tab C2 l7
+     *normal_command@tab C2 l7
      |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
@@ -80,19 +80,19 @@ $result_tree_text{'nested_multitable'} = '*document_root C1
     *row C2
     |EXTRA
     |row_number:{2}
-     *@item C2 l8
+     *normal_command@item C2 l8
      |EXTRA
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
        {normal_text:other item }
-     *@tab C2 l8
+     *normal_command@tab C2 l8
      |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C1
        {normal_text:in tab\\n}
-   *@end C1 l9
+   *normal_command@end C1 l9
    |EXTRA
    |text_arg:{multitable}
     *line_arg C3

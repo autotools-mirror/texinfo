@@ -11,13 +11,13 @@ use Encode;
 $result_tree_text{'unclosed_verb_on_misc_line'} = '*document_root C1
  *before_node_section C1
   *preamble_before_content C1
-   *@setfilename C1 l1
+   *normal_command@setfilename C1 l1
    |EXTRA
    |text_arg:{name }
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:name }
-     *@verb C1 l1
+     *normal_command@verb C1 l1
       *brace_container C3
        {verb_delimiter:f}
        {raw:ile.texi}

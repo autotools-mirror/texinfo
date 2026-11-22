@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'quote_node_names_info'} = '*document_root C12
  *before_node_section C1
   *preamble_before_content
- *@node C1 nodequote.texi:l1 {Top}
+ *normal_command@node C1 nodequote.texi:l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'quote_node_names_info'} = '*document_root C12
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C30 nodequote.texi:l2
+ *normal_command@top C30 nodequote.texi:l2
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -30,7 +30,7 @@ $result_tree_text{'quote_node_names_info'} = '*document_root C12
     {spaces_before_argument:\\n}
   {empty_line:\\n}
   *paragraph C4
-   *@xref C2 nodequote.texi:l4
+   *normal_command@xref C2 nodequote.texi:l4
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -40,7 +40,7 @@ $result_tree_text{'quote_node_names_info'} = '*document_root C12
      {spaces_before_argument: }
      {normal_text:the::caption and a word}
    {normal_text:\\n}
-   *@xref C2 nodequote.texi:l5
+   *normal_command@xref C2 nodequote.texi:l5
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -52,7 +52,7 @@ $result_tree_text{'quote_node_names_info'} = '*document_root C12
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C4
-   *@xref C2 nodequote.texi:l7
+   *normal_command@xref C2 nodequote.texi:l7
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -62,7 +62,7 @@ $result_tree_text{'quote_node_names_info'} = '*document_root C12
      {spaces_before_argument: }
      {normal_text:the::caption and a word}
    {normal_text:\\n}
-   *@xref C2 nodequote.texi:l8
+   *normal_command@xref C2 nodequote.texi:l8
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -74,7 +74,7 @@ $result_tree_text{'quote_node_names_info'} = '*document_root C12
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C4
-   *@xref C2 nodequote.texi:l10
+   *normal_command@xref C2 nodequote.texi:l10
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -84,7 +84,7 @@ $result_tree_text{'quote_node_names_info'} = '*document_root C12
      {spaces_before_argument: }
      {normal_text:the::caption and a word}
    {normal_text:\\n}
-   *@xref C2 nodequote.texi:l11
+   *normal_command@xref C2 nodequote.texi:l11
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -96,7 +96,7 @@ $result_tree_text{'quote_node_names_info'} = '*document_root C12
    {normal_text:.mrmrmrmmrmrmr\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@xref C1 nodequote.texi:l13
+   *normal_command@xref C1 nodequote.texi:l13
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -105,19 +105,19 @@ $result_tree_text{'quote_node_names_info'} = '*document_root C12
    {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@xref C1 nodequote.texi:l15
+   *normal_command@xref C1 nodequote.texi:l15
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{secret_002cnode}
-     *@asis C1 nodequote.texi:l15
+     *normal_command@asis C1 nodequote.texi:l15
       *brace_container C1
        {normal_text:secret,node}
    {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C3
    {normal_text:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA }
-   *@xref C1 nodequote.texi:l17
+   *normal_command@xref C1 nodequote.texi:l17
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -126,7 +126,7 @@ $result_tree_text{'quote_node_names_info'} = '*document_root C12
    {normal_text:.)\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@xref C5 nodequote.texi:l19
+   *normal_command@xref C5 nodequote.texi:l19
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -140,7 +140,7 @@ $result_tree_text{'quote_node_names_info'} = '*document_root C12
    {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@xref C5 nodequote.texi:l21
+   *normal_command@xref C5 nodequote.texi:l21
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -154,7 +154,7 @@ $result_tree_text{'quote_node_names_info'} = '*document_root C12
    {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@xref C5 nodequote.texi:l23
+   *normal_command@xref C5 nodequote.texi:l23
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -171,7 +171,7 @@ $result_tree_text{'quote_node_names_info'} = '*document_root C12
    {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@xref C5 nodequote.texi:l25
+   *normal_command@xref C5 nodequote.texi:l25
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -188,7 +188,7 @@ $result_tree_text{'quote_node_names_info'} = '*document_root C12
    {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@xref C5 nodequote.texi:l27
+   *normal_command@xref C5 nodequote.texi:l27
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -206,7 +206,7 @@ $result_tree_text{'quote_node_names_info'} = '*document_root C12
    {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@xref C5 nodequote.texi:l29
+   *normal_command@xref C5 nodequote.texi:l29
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -224,7 +224,7 @@ $result_tree_text{'quote_node_names_info'} = '*document_root C12
    {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@xref C5 nodequote.texi:l31
+   *normal_command@xref C5 nodequote.texi:l31
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -241,7 +241,7 @@ $result_tree_text{'quote_node_names_info'} = '*document_root C12
      {normal_text:Book Title}
    {normal_text:.\\n}
   {empty_line:\\n}
-  *@menu C8 nodequote.texi:l33
+  *normal_command@menu C8 nodequote.texi:l33
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -252,7 +252,7 @@ $result_tree_text{'quote_node_names_info'} = '*document_root C12
     |node_content:A{0|2}
     |normalized:{blah_003ablah}
      {normal_text:blah}
-     *@asis C1 nodequote.texi:l34
+     *normal_command@asis C1 nodequote.texi:l34
       *brace_container C1
        {normal_text::}
      {normal_text:blah}
@@ -270,7 +270,7 @@ $result_tree_text{'quote_node_names_info'} = '*document_root C12
     |node_content:A{0|2}
     |normalized:{blumpty_002efump}
      {normal_text:blumpty}
-     *@asis C1 nodequote.texi:l35
+     *normal_command@asis C1 nodequote.texi:l35
       *brace_container C1
        {normal_text:.}
      {normal_text:fump}
@@ -293,7 +293,7 @@ $result_tree_text{'quote_node_names_info'} = '*document_root C12
     {menu_entry_leading_text:* }
     *menu_entry_name C3
      {normal_text:funny}
-     *@asis C1 nodequote.texi:l37
+     *normal_command@asis C1 nodequote.texi:l37
       *brace_container C1
        {normal_text::}
      {normal_text:label}
@@ -302,7 +302,7 @@ $result_tree_text{'quote_node_names_info'} = '*document_root C12
     |EXTRA
     |node_content:A{0|0}
     |normalized:{secret_002cnode}
-     *@asis C1 nodequote.texi:l37
+     *normal_command@asis C1 nodequote.texi:l37
       *brace_container C1
        {normal_text:secret,node}
     {menu_entry_separator:.}
@@ -324,7 +324,7 @@ $result_tree_text{'quote_node_names_info'} = '*document_root C12
    *menu_comment C1
     *preformatted C1
      {after_menu_description_line:\\n}
-   *@end C1 nodequote.texi:l40
+   *normal_command@end C1 nodequote.texi:l40
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -332,7 +332,7 @@ $result_tree_text{'quote_node_names_info'} = '*document_root C12
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 nodequote.texi:l42 {blah:blah}
+ *normal_command@node C1 nodequote.texi:l42 {blah:blah}
  |EXTRA
  |identifier:{blah_003ablah}
  |is_target:{1}
@@ -342,7 +342,7 @@ $result_tree_text{'quote_node_names_info'} = '*document_root C12
     {spaces_before_argument: }
     {normal_text:blah:blah}
     {spaces_after_argument:\\n}
- *@chapter C4 nodequote.texi:l43 {blah:blah}
+ *normal_command@chapter C4 nodequote.texi:l43 {blah:blah}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -356,7 +356,7 @@ $result_tree_text{'quote_node_names_info'} = '*document_root C12
   *paragraph C1
    {normal_text:stuff here.\\n}
   {empty_line:\\n}
- *@node C1 nodequote.texi:l47 {blumpty.fump}
+ *normal_command@node C1 nodequote.texi:l47 {blumpty.fump}
  |EXTRA
  |identifier:{blumpty_002efump}
  |is_target:{1}
@@ -366,7 +366,7 @@ $result_tree_text{'quote_node_names_info'} = '*document_root C12
     {spaces_before_argument: }
     {normal_text:blumpty.fump}
     {spaces_after_argument:\\n}
- *@chapter C2 nodequote.texi:l48 {blumpty.fump}
+ *normal_command@chapter C2 nodequote.texi:l48 {blumpty.fump}
  |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
@@ -377,7 +377,7 @@ $result_tree_text{'quote_node_names_info'} = '*document_root C12
     {normal_text:blumpty.fump}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 nodequote.texi:l50 {normal node}
+ *normal_command@node C1 nodequote.texi:l50 {normal node}
  |EXTRA
  |identifier:{normal-node}
  |is_target:{1}
@@ -394,7 +394,7 @@ $result_tree_text{'quote_node_names_info'} = '*document_root C12
     {spaces_before_argument: }
     {normal_text:(}
     {normal_text:man}
-    *@comma C1 nodequote.texi:l50
+    *normal_command@comma C1 nodequote.texi:l50
      *brace_container
     {normal_text:u:a.l}
     {normal_text:)}
@@ -409,7 +409,7 @@ $result_tree_text{'quote_node_names_info'} = '*document_root C12
     {normal_text:man_ual}
     {normal_text:)}
     {normal_text:direct}
-    *@comma C1 nodequote.texi:l50
+    *normal_command@comma C1 nodequote.texi:l50
      *brace_container
     {normal_text:ion}
    *line_arg C6
@@ -423,7 +423,7 @@ $result_tree_text{'quote_node_names_info'} = '*document_root C12
     {normal_text:)}
     {normal_text:direct::i.on}
     {spaces_after_argument:\\n}
- *@chapter C2 nodequote.texi:l51 {normal node}
+ *normal_command@chapter C2 nodequote.texi:l51 {normal node}
  |EXTRA
  |section_heading_number:{3}
  |section_level:{1}
@@ -434,7 +434,7 @@ $result_tree_text{'quote_node_names_info'} = '*document_root C12
     {normal_text:normal node}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 nodequote.texi:l53 {@asis{secret,node}}
+ *normal_command@node C1 nodequote.texi:l53 {@asis{secret,node}}
  |EXTRA
  |identifier:{secret_002cnode}
  |is_target:{1}
@@ -442,11 +442,11 @@ $result_tree_text{'quote_node_names_info'} = '*document_root C12
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    *@asis C1 nodequote.texi:l53
+    *normal_command@asis C1 nodequote.texi:l53
      *brace_container C1
       {normal_text:secret,node}
     {spaces_after_argument:\\n}
- *@chapter C2 nodequote.texi:l54 {@asis{secret,node}}
+ *normal_command@chapter C2 nodequote.texi:l54 {@asis{secret,node}}
  |EXTRA
  |section_heading_number:{4}
  |section_level:{1}
@@ -454,12 +454,12 @@ $result_tree_text{'quote_node_names_info'} = '*document_root C12
   *arguments_line C1
    *line_arg C3
     {spaces_before_argument: }
-    *@asis C1 nodequote.texi:l54
+    *normal_command@asis C1 nodequote.texi:l54
      *brace_container C1
       {normal_text:secret,node}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C3 nodequote.texi:l56 {top secret node}
+ *normal_command@node C3 nodequote.texi:l56 {top secret node}
  |EXTRA
  |identifier:{top-secret-node}
  |is_target:{1}

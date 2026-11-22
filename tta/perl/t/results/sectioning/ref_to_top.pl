@@ -13,7 +13,7 @@ $result_tree_text{'ref_to_top'} = '*document_root C3
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content
- *@node C1 l2 {ToP}
+ *normal_command@node C1 l2 {ToP}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -23,7 +23,7 @@ $result_tree_text{'ref_to_top'} = '*document_root C3
     {spaces_before_argument: }
     {normal_text:ToP}
     {spaces_after_argument:\\n}
- *@top C3 l3 {top}
+ *normal_command@top C3 l3 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -34,7 +34,7 @@ $result_tree_text{'ref_to_top'} = '*document_root C3
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@xref C1 l5
+   *normal_command@xref C1 l5
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}

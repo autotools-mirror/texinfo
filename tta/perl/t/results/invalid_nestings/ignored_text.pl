@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'ignored_text'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
- *@node C2 l1 {before ignore}
+ *normal_command@node C2 l1 {before ignore}
  |EXTRA
  |identifier:{before-ignore}
  |is_target:{1}
@@ -23,7 +23,7 @@ $result_tree_text{'ignored_text'} = '*document_root C2
     {spaces_after_argument: }
     >SOURCEMARKS
     >ignored_conditional_block<1><p:1>
-     >*@ifinfo C1 l1
+     >*normal_command@ifinfo C1 l1
       >*arguments_line C1
        >*block_line_arg C1
         >{spaces_before_argument:\\n}

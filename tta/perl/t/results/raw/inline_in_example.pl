@@ -11,13 +11,13 @@ use Encode;
 $result_tree_text{'inline_in_example'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@example C3 l1
+  *normal_command@example C3 l1
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C9
     {normal_text:A }
-    *@inlineraw C2 l2
+    *normal_command@inlineraw C2 l2
     |EXTRA
     |expand_index:{1}
     |format:{plaintext}
@@ -28,11 +28,11 @@ $result_tree_text{'inline_in_example'} = '*document_root C1
       {normal_text:plaintext \\n}
       {empty_line:\\n}
       {normal_text:`` }
-      *@lbracechar C1 l4
+      *normal_command@lbracechar C1 l4
        *brace_container
       {normal_text: }
     {normal_text: a.\\n}
-    *@inlinefmt C2 l5
+    *normal_command@inlinefmt C2 l5
     |EXTRA
     |expand_index:{1}
     |format:{plaintext}
@@ -44,7 +44,7 @@ $result_tree_text{'inline_in_example'} = '*document_root C1
     {normal_text:.\\n}
     {empty_line:\\n}
     {normal_text:  Now html\\n}
-    *@inlineraw C2 l8
+    *normal_command@inlineraw C2 l8
     |EXTRA
     |expand_index:{1}
     |format:{html}
@@ -54,12 +54,12 @@ $result_tree_text{'inline_in_example'} = '*document_root C1
       {spaces_before_argument: \\n}
       {spaces_before_argument:\\n}
       {normal_text:in <i>}
-      *@acronym C1 l10
+      *normal_command@acronym C1 l10
        *brace_arg C1
         {normal_text:HTML}
       {normal_text:</i>}
     {normal_text:.\\n}
-   *@end C1 l11
+   *normal_command@end C1 l11
    |EXTRA
    |text_arg:{example}
     *line_arg C3

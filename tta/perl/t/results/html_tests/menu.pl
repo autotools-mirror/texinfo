@@ -13,7 +13,7 @@ $result_tree_text{'menu'} = '*document_root C3
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content
- *@node C1 l2 {Top}
+ *normal_command@node C1 l2 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -23,7 +23,7 @@ $result_tree_text{'menu'} = '*document_root C3
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C3 l3
+ *normal_command@top C3 l3
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -31,7 +31,7 @@ $result_tree_text{'menu'} = '*document_root C3
    *line_arg C1
     {spaces_before_argument:\\n}
   {empty_line:\\n}
-  *@menu C10 l5
+  *normal_command@menu C10 l5
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -47,17 +47,17 @@ $result_tree_text{'menu'} = '*document_root C3
     *menu_entry_description C3
      *preformatted C1
       {normal_text:description\\n}
-     *@itemize C3 l7
+     *normal_command@itemize C3 l7
       *arguments_line C1
        *block_line_arg C1
         {spaces_before_argument:\\n}
-      *@item C1 l8
+      *normal_command@item C1 l8
       |EXTRA
       |item_number:{1}
        *preformatted C2
         {ignorable_spaces_after_command: }
         {normal_text:idescr\\n}
-      *@end C1 l9
+      *normal_command@end C1 l9
       |EXTRA
       |text_arg:{itemize}
        *line_arg C3
@@ -65,13 +65,13 @@ $result_tree_text{'menu'} = '*document_root C3
         {normal_text:itemize}
         {spaces_after_argument:\\n}
      *preformatted C2
-      *@html C3 l10
+      *normal_command@html C3 l10
        *arguments_line C1
         *block_line_arg C1
          {spaces_before_argument:\\n}
        *rawpreformatted C1
         {normal_text:in html\\n}
-       *@end C1 l12
+       *normal_command@end C1 l12
        |EXTRA
        |text_arg:{html}
         *line_arg C3
@@ -84,17 +84,17 @@ $result_tree_text{'menu'} = '*document_root C3
      {after_menu_description_line:\\n}
      {normal_text:CCC\\n}
      {empty_line:\\n}
-    *@itemize C3 l17
+    *normal_command@itemize C3 l17
      *arguments_line C1
       *block_line_arg C1
        {spaces_before_argument:\\n}
-     *@item C1 l18
+     *normal_command@item C1 l18
      |EXTRA
      |item_number:{1}
       *preformatted C2
        {ignorable_spaces_after_command: }
        {normal_text:iaa\\n}
-     *@end C1 l19
+     *normal_command@end C1 l19
      |EXTRA
      |text_arg:{itemize}
       *line_arg C3
@@ -103,13 +103,13 @@ $result_tree_text{'menu'} = '*document_root C3
        {spaces_after_argument:\\n}
     *preformatted C5
      {empty_line:\\n}
-     *@html C3 l21
+     *normal_command@html C3 l21
       *arguments_line C1
        *block_line_arg C1
         {spaces_before_argument:\\n}
       *rawpreformatted C1
        {normal_text:in html title\\n}
-      *@end C1 l23
+      *normal_command@end C1 l23
       |EXTRA
       |text_arg:{html}
        *line_arg C3
@@ -119,17 +119,17 @@ $result_tree_text{'menu'} = '*document_root C3
      {empty_line:\\n}
      {normal_text:BBB\\n}
      {empty_line:\\n}
-    *@itemize C3 l27
+    *normal_command@itemize C3 l27
      *arguments_line C1
       *block_line_arg C1
        {spaces_before_argument:\\n}
-     *@item C1 l28
+     *normal_command@item C1 l28
      |EXTRA
      |item_number:{1}
       *preformatted C2
        {ignorable_spaces_after_command: }
        {normal_text:ibb\\n}
-     *@end C1 l29
+     *normal_command@end C1 l29
      |EXTRA
      |text_arg:{itemize}
       *line_arg C3
@@ -181,7 +181,7 @@ $result_tree_text{'menu'} = '*document_root C3
    *menu_comment C1
     *preformatted C1
      {after_menu_description_line:\\n}
-   *@detailmenu C9 l38
+   *normal_command@detailmenu C9 l38
    |EXTRA
    |global_command_number:{1}
     *arguments_line C1
@@ -199,17 +199,17 @@ $result_tree_text{'menu'} = '*document_root C3
      *menu_entry_description C3
       *preformatted C1
        {normal_text:detaildescription\\n}
-      *@itemize C3 l40
+      *normal_command@itemize C3 l40
        *arguments_line C1
         *block_line_arg C1
          {spaces_before_argument:\\n}
-       *@item C1 l41
+       *normal_command@item C1 l41
        |EXTRA
        |item_number:{1}
         *preformatted C2
          {ignorable_spaces_after_command: }
          {normal_text:idetaildescr\\n}
-       *@end C1 l42
+       *normal_command@end C1 l42
        |EXTRA
        |text_arg:{itemize}
         *line_arg C3
@@ -217,13 +217,13 @@ $result_tree_text{'menu'} = '*document_root C3
          {normal_text:itemize}
          {spaces_after_argument:\\n}
       *preformatted C2
-       *@html C3 l43
+       *normal_command@html C3 l43
         *arguments_line C1
          *block_line_arg C1
           {spaces_before_argument:\\n}
         *rawpreformatted C1
          {normal_text:detailin detailhtml\\n}
-        *@end C1 l45
+        *normal_command@end C1 l45
         |EXTRA
         |text_arg:{html}
          *line_arg C3
@@ -236,17 +236,17 @@ $result_tree_text{'menu'} = '*document_root C3
       {after_menu_description_line:\\n}
       {normal_text:detailCCC\\n}
       {empty_line:\\n}
-     *@itemize C3 l50
+     *normal_command@itemize C3 l50
       *arguments_line C1
        *block_line_arg C1
         {spaces_before_argument:\\n}
-      *@item C1 l51
+      *normal_command@item C1 l51
       |EXTRA
       |item_number:{1}
        *preformatted C2
         {ignorable_spaces_after_command: }
         {normal_text:detailiaa\\n}
-      *@end C1 l52
+      *normal_command@end C1 l52
       |EXTRA
       |text_arg:{itemize}
        *line_arg C3
@@ -255,13 +255,13 @@ $result_tree_text{'menu'} = '*document_root C3
         {spaces_after_argument:\\n}
      *preformatted C5
       {empty_line:\\n}
-      *@html C3 l54
+      *normal_command@html C3 l54
        *arguments_line C1
         *block_line_arg C1
          {spaces_before_argument:\\n}
        *rawpreformatted C1
         {normal_text:detailin html detailtitle\\n}
-       *@end C1 l56
+       *normal_command@end C1 l56
        |EXTRA
        |text_arg:{html}
         *line_arg C3
@@ -271,17 +271,17 @@ $result_tree_text{'menu'} = '*document_root C3
       {empty_line:\\n}
       {normal_text:detailBBB\\n}
       {empty_line:\\n}
-     *@itemize C3 l60
+     *normal_command@itemize C3 l60
       *arguments_line C1
        *block_line_arg C1
         {spaces_before_argument:\\n}
-      *@item C1 l61
+      *normal_command@item C1 l61
       |EXTRA
       |item_number:{1}
        *preformatted C2
         {ignorable_spaces_after_command: }
         {normal_text:detailibb\\n}
-      *@end C1 l62
+      *normal_command@end C1 l62
       |EXTRA
       |text_arg:{itemize}
        *line_arg C3
@@ -333,14 +333,14 @@ $result_tree_text{'menu'} = '*document_root C3
     *menu_comment C1
      *preformatted C1
       {after_menu_description_line:\\n}
-    *@end C1 l71
+    *normal_command@end C1 l71
     |EXTRA
     |text_arg:{detailmenu}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:detailmenu}
       {spaces_after_argument:\\n}
-   *@end C1 l72
+   *normal_command@end C1 l72
    |EXTRA
    |text_arg:{menu}
     *line_arg C3

@@ -11,41 +11,41 @@ use Encode;
 $result_tree_text{'example_at_commands_arguments'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@example C3 l1
+  *normal_command@example C3 l1
    *arguments_line C3
     *block_line_arg C14
      {spaces_before_argument: }
      {normal_text:some  thing }
-     *@^ C1 l1
+     *normal_command@^ C1 l1
       *following_arg C1
        {normal_text:e}
      {normal_text: }
-     *@TeX C1 l1
+     *normal_command@TeX C1 l1
       *brace_container
      {normal_text: }
-     *@exclamdown C1 l1
+     *normal_command@exclamdown C1 l1
       *brace_container
      {normal_text: }
-     *@code C1 l1
+     *normal_command@code C1 l1
       *brace_container C1
        {normal_text:---}
      {normal_text: }
-     *@enddots C1 l1
+     *normal_command@enddots C1 l1
       *brace_container
      {normal_text: !_- _---_ < " & }
-     *@ 
-     *@comma C1 l1
+     *normal_command@ 
+     *normal_command@comma C1 l1
       *brace_container
     *block_line_arg C1
-     *@@
+     *normal_command@@
     *block_line_arg C2
      {normal_text:0}
      {spaces_after_argument:\\n}
    *preformatted C3
     {normal_text:example with }
-    *@@
+    *normal_command@@
     {normal_text:-commands and other special characters\\n}
-   *@end C1 l3
+   *normal_command@end C1 l3
    |EXTRA
    |text_arg:{example}
     *line_arg C3

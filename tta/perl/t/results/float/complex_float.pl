@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'complex_float'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'complex_float'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C10 l2 {Test floats}
+ *normal_command@top C10 l2 {Test floats}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -33,7 +33,7 @@ $result_tree_text{'complex_float'} = '*document_root C5
   {empty_line:\\n}
   *paragraph C1
    {normal_text:A list of floats at the beginning.\\n}
-  *@listoffloats C1 l5
+  *normal_command@listoffloats C1 l5
   |EXTRA
   |float_type:{Text}
   |global_command_number:{1}
@@ -44,7 +44,7 @@ $result_tree_text{'complex_float'} = '*document_root C5
   {empty_line:\\n}
   *paragraph C1
    {normal_text:After the listoffloats.\\n}
-  *@menu C3 l8
+  *normal_command@menu C3 l8
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -59,7 +59,7 @@ $result_tree_text{'complex_float'} = '*document_root C5
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l10
+   *normal_command@end C1 l10
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -67,7 +67,7 @@ $result_tree_text{'complex_float'} = '*document_root C5
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@float C24 l12
+  *normal_command@float C24 l12
   |EXTRA
   |float_number:{1}
   |float_type:{Text}
@@ -84,14 +84,14 @@ $result_tree_text{'complex_float'} = '*document_root C5
      {spaces_after_argument:\\n}
    *paragraph C3
     {normal_text:An example of float }
-    *@enddots C1 l13
+    *normal_command@enddots C1 l13
      *brace_container
     {normal_text:\\n}
    {empty_line:\\n}
-   *@c C1
+   *normal_command@c C1
    >SOURCEMARKS
    >ignored_conditional_block<1>
-    >*@ifset C12 l16
+    >*normal_command@ifset C12 l16
      >*arguments_line C1
       >*block_line_arg C3
        >{spaces_before_argument: }
@@ -107,7 +107,7 @@ $result_tree_text{'complex_float'} = '*document_root C5
      >{raw:@item truc @tab bidule\\n}
      >{raw:@item truc @tab bidule\\n}
      >{raw:@end multitable\\n}
-     >*@end C1 l27
+     >*normal_command@end C1 l27
      >|EXTRA
      >|text_arg:{ifset}
       >*line_arg C3
@@ -132,15 +132,15 @@ $result_tree_text{'complex_float'} = '*document_root C5
    {empty_line:\\n}
    *paragraph C1
     {normal_text:A table.\\n}
-   *@table C3 l33
+   *normal_command@table C3 l33
     *arguments_line C1
      *block_line_arg C3
       {spaces_before_argument: }
-      *@emph l33
+      *normal_command@emph l33
       {spaces_after_argument:\\n}
     *table_entry C2
      *table_term C1
-      *@item C1 l34
+      *normal_command@item C1 l34
        *line_arg C3
         {spaces_before_argument: }
         {normal_text:truc}
@@ -148,7 +148,7 @@ $result_tree_text{'complex_float'} = '*document_root C5
      *table_definition C1
       *paragraph C1
        {normal_text:line\\n}
-    *@end C1 l36
+    *normal_command@end C1 l36
     |EXTRA
     |text_arg:{table}
      *line_arg C3
@@ -158,20 +158,20 @@ $result_tree_text{'complex_float'} = '*document_root C5
    {empty_line:\\n}
    *paragraph C1
     {normal_text:An itemize.\\n}
-   *@itemize C3 l39
+   *normal_command@itemize C3 l39
     *arguments_line C1
      *block_line_arg C3
       {spaces_before_argument: }
-      *@minus l39
+      *normal_command@minus l39
       {spaces_after_argument:\\n}
-    *@item C2 l40
+    *normal_command@item C2 l40
     |EXTRA
     |item_number:{1}
      {ignorable_spaces_after_command: }
      *paragraph C2
       {normal_text:truc \\n}
       {normal_text:line\\n}
-    *@end C1 l42
+    *normal_command@end C1 l42
     |EXTRA
     |text_arg:{itemize}
      *line_arg C3
@@ -181,7 +181,7 @@ $result_tree_text{'complex_float'} = '*document_root C5
    {empty_line:\\n}
    *paragraph C6
     {normal_text:A ref.\\n}
-    *@xref C2 l45
+    *normal_command@xref C2 l45
      *brace_arg C1
      |EXTRA
      |node_content:A{0|0}
@@ -191,7 +191,7 @@ $result_tree_text{'complex_float'} = '*document_root C5
       {normal_text:xref Text with features}
     {normal_text:.\\n}
     {normal_text:A footnote.\\n}
-    *@footnote C1 l47
+    *normal_command@footnote C1 l47
     |EXTRA
     |global_command_number:{1}
      *brace_command_context C1
@@ -200,63 +200,63 @@ $result_tree_text{'complex_float'} = '*document_root C5
     {normal_text:.\\n}
    {empty_line:\\n}
    *paragraph C17
-    *@TeX C1 l49
+    *normal_command@TeX C1 l49
      *brace_container
     {normal_text: and }
-    *@emph C1 l49
+    *normal_command@emph C1 l49
      *brace_container C2
-      *@b C1 l49
+      *normal_command@b C1 l49
        *brace_container C3
         {normal_text:t}
-        *@\' C1 l49
+        *normal_command@\' C1 l49
          *following_arg C1
           {normal_text:e}
-        *@^ C1 l49
+        *normal_command@^ C1 l49
          *brace_container C1
-          *@dotless C1 l49
+          *normal_command@dotless C1 l49
            *brace_container C1
             {normal_text:i}
-      *@url C1 l49
+      *normal_command@url C1 l49
        *brace_arg C1
         {normal_text:an_url}
     {normal_text: }
-    *@sc C1 l49
+    *normal_command@sc C1 l49
      *brace_container C1
       {normal_text:and}
     {normal_text: }
-    *@verb C1 l49
+    *normal_command@verb C1 l49
      *brace_container C3
       {verb_delimiter:!}
       {raw:it is @verb}
       {verb_delimiter:!}
     {normal_text: }
-    *@ 
+    *normal_command@ 
     {normal_text:a wo}
-    *@-
+    *normal_command@-
     {normal_text:rd }
-    *@!
-    *@@
+    *normal_command@!
+    *normal_command@@
     {normal_text: }
-    *@AE C1 l49
+    *normal_command@AE C1 l49
      *brace_container
     {normal_text:.\\n}
    {empty_line:\\n}
-   *@caption C1 l51
+   *normal_command@caption C1 l51
     *brace_command_context C20
      {spaces_before_argument: }
      *paragraph C4
       {normal_text:An example of float caption}
-      *@enddots C1 l51
+      *normal_command@enddots C1 l51
        *brace_container
       {normal_text:\\n}
       {normal_text:An example.\\n}
-     *@example C3 l53
+     *normal_command@example C3 l53
       *arguments_line C1
        *block_line_arg C1
         {spaces_before_argument: \\n}
       *preformatted C1
        {normal_text:example\\n}
-      *@end C1 l55
+      *normal_command@end C1 l55
       |EXTRA
       |text_arg:{example}
        *line_arg C3
@@ -264,7 +264,7 @@ $result_tree_text{'complex_float'} = '*document_root C5
         {normal_text:example}
         {spaces_after_argument:\\n}
      {empty_line:\\n}
-     *@anchor C1 l57
+     *normal_command@anchor C1 l57
      |EXTRA
      |identifier:{Anchor-in-caption}
      |is_target:{1}
@@ -274,15 +274,15 @@ $result_tree_text{'complex_float'} = '*document_root C5
      {empty_line:\\n}
      *paragraph C1
       {normal_text:A table.\\n}
-     *@table C3 l60
+     *normal_command@table C3 l60
       *arguments_line C1
        *block_line_arg C3
         {spaces_before_argument: }
-        *@emph l60
+        *normal_command@emph l60
         {spaces_after_argument:\\n}
       *table_entry C2
        *table_term C1
-        *@item C1 l61
+        *normal_command@item C1 l61
          *line_arg C3
           {spaces_before_argument: }
           {normal_text:truc}
@@ -290,7 +290,7 @@ $result_tree_text{'complex_float'} = '*document_root C5
        *table_definition C1
         *paragraph C1
          {normal_text:line\\n}
-      *@end C1 l63
+      *normal_command@end C1 l63
       |EXTRA
       |text_arg:{table}
        *line_arg C3
@@ -300,7 +300,7 @@ $result_tree_text{'complex_float'} = '*document_root C5
      {empty_line:\\n}
      *paragraph C1
       {normal_text:A multitable.\\n}
-     *@multitable C3 l66
+     *normal_command@multitable C3 l66
      |EXTRA
      |max_columns:{2}
       *arguments_line C1
@@ -316,13 +316,13 @@ $result_tree_text{'complex_float'} = '*document_root C5
        *row C2
        |EXTRA
        |row_number:{1}
-        *@item C2 l67
+        *normal_command@item C2 l67
         |EXTRA
         |cell_number:{1}
          {ignorable_spaces_after_command: }
          *paragraph C1
           {normal_text:truc }
-        *@tab C2 l67
+        *normal_command@tab C2 l67
         |EXTRA
         |cell_number:{2}
          {ignorable_spaces_after_command: }
@@ -331,19 +331,19 @@ $result_tree_text{'complex_float'} = '*document_root C5
        *row C2
        |EXTRA
        |row_number:{2}
-        *@item C2 l68
+        *normal_command@item C2 l68
         |EXTRA
         |cell_number:{1}
          {ignorable_spaces_after_command: }
          *paragraph C1
           {normal_text:truc }
-        *@tab C2 l68
+        *normal_command@tab C2 l68
         |EXTRA
         |cell_number:{2}
          {ignorable_spaces_after_command: }
          *paragraph C1
           {normal_text:bidule\\n}
-      *@end C1 l69
+      *normal_command@end C1 l69
       |EXTRA
       |text_arg:{multitable}
        *line_arg C3
@@ -363,20 +363,20 @@ $result_tree_text{'complex_float'} = '*document_root C5
      {empty_line:\\n}
      *paragraph C1
       {normal_text:An itemize.\\n}
-     *@itemize C3 l74
+     *normal_command@itemize C3 l74
       *arguments_line C1
        *block_line_arg C3
         {spaces_before_argument: }
-        *@minus l74
+        *normal_command@minus l74
         {spaces_after_argument:\\n}
-      *@item C2 l75
+      *normal_command@item C2 l75
       |EXTRA
       |item_number:{1}
        {ignorable_spaces_after_command: }
        *paragraph C2
         {normal_text:truc \\n}
         {normal_text:line\\n}
-      *@end C1 l77
+      *normal_command@end C1 l77
       |EXTRA
       |text_arg:{itemize}
        *line_arg C3
@@ -386,7 +386,7 @@ $result_tree_text{'complex_float'} = '*document_root C5
      {empty_line:\\n}
      *paragraph C6
       {normal_text:A ref.\\n}
-      *@xref C2 l80
+      *normal_command@xref C2 l80
        *brace_arg C1
        |EXTRA
        |node_content:A{0|0}
@@ -396,7 +396,7 @@ $result_tree_text{'complex_float'} = '*document_root C5
         {normal_text:xref Text with features caption}
       {normal_text:.\\n}
       {normal_text:A footnote.\\n}
-      *@footnote C1 l82
+      *normal_command@footnote C1 l82
       |EXTRA
       |global_command_number:{2}
        *brace_command_context C1
@@ -405,94 +405,94 @@ $result_tree_text{'complex_float'} = '*document_root C5
       {normal_text:.\\n}
      {empty_line:\\n}
      *paragraph C17
-      *@TeX C1 l84
+      *normal_command@TeX C1 l84
        *brace_container
       {normal_text: and }
-      *@emph C1 l84
+      *normal_command@emph C1 l84
        *brace_container C2
-        *@b C1 l84
+        *normal_command@b C1 l84
          *brace_container C3
           {normal_text:t}
-          *@\' C1 l84
+          *normal_command@\' C1 l84
            *following_arg C1
             {normal_text:e}
-          *@^ C1 l84
+          *normal_command@^ C1 l84
            *brace_container C1
-            *@dotless C1 l84
+            *normal_command@dotless C1 l84
              *brace_container C1
               {normal_text:i}
-        *@url C1 l84
+        *normal_command@url C1 l84
          *brace_arg C1
           {normal_text:an_url}
       {normal_text: }
-      *@sc C1 l84
+      *normal_command@sc C1 l84
        *brace_container C1
         {normal_text:and}
       {normal_text: }
-      *@verb C1 l84
+      *normal_command@verb C1 l84
        *brace_container C3
         {verb_delimiter:!}
         {raw:it is @verb}
         {verb_delimiter:!}
       {normal_text: }
-      *@ 
+      *normal_command@ 
       {normal_text:a wo}
-      *@-
+      *normal_command@-
       {normal_text:rd }
-      *@!
-      *@@
+      *normal_command@!
+      *normal_command@@
       {normal_text: }
-      *@AE C1 l84
+      *normal_command@AE C1 l84
        *brace_container
       {normal_text:.\\n}
    {spaces_after_close_brace:\\n}
    {empty_line:\\n}
-   *@shortcaption C1 l87
+   *normal_command@shortcaption C1 l87
     *brace_command_context C1
      *paragraph C17
-      *@TeX C1 l87
+      *normal_command@TeX C1 l87
        *brace_container
       {normal_text: and }
-      *@emph C1 l87
+      *normal_command@emph C1 l87
        *brace_container C2
-        *@b C1 l87
+        *normal_command@b C1 l87
          *brace_container C3
           {normal_text:t}
-          *@\' C1 l87
+          *normal_command@\' C1 l87
            *following_arg C1
             {normal_text:e}
-          *@^ C1 l87
+          *normal_command@^ C1 l87
            *brace_container C1
-            *@dotless C1 l87
+            *normal_command@dotless C1 l87
              *brace_container C1
               {normal_text:i}
-        *@url C1 l87
+        *normal_command@url C1 l87
          *brace_arg C1
           {normal_text:an_url}
       {normal_text: }
-      *@sc C1 l87
+      *normal_command@sc C1 l87
        *brace_container C1
         {normal_text:and}
       {normal_text: }
-      *@verb C1 l87
+      *normal_command@verb C1 l87
        *brace_container C3
         {verb_delimiter:!}
         {raw:it is @verb}
         {verb_delimiter:!}
       {normal_text: }
-      *@ 
+      *normal_command@ 
       {normal_text:a wo}
-      *@-
+      *normal_command@-
       {normal_text:rd }
-      *@!
-      *@@
+      *normal_command@!
+      *normal_command@@
       {normal_text: }
-      *@AE C1 l87
+      *normal_command@AE C1 l87
        *brace_container
       {normal_text:.}
    {spaces_after_close_brace:\\n}
    {empty_line:\\n}
-   *@end C1 l89
+   *normal_command@end C1 l89
    |EXTRA
    |text_arg:{float}
     *line_arg C3
@@ -500,7 +500,7 @@ $result_tree_text{'complex_float'} = '*document_root C5
      {normal_text:float}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l91 {chapter}
+ *normal_command@node C1 l91 {chapter}
  |EXTRA
  |identifier:{chapter}
  |is_target:{1}
@@ -510,7 +510,7 @@ $result_tree_text{'complex_float'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:chapter}
     {spaces_after_argument:\\n}
- *@chapter C6 l92 {A chapter}
+ *normal_command@chapter C6 l92 {A chapter}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -521,7 +521,7 @@ $result_tree_text{'complex_float'} = '*document_root C5
     {normal_text:A chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@float C8 l94
+  *normal_command@float C8 l94
   |EXTRA
   |float_number:{1.1}
   |float_type:{Text}
@@ -540,22 +540,22 @@ $result_tree_text{'complex_float'} = '*document_root C5
    *paragraph C1
     {normal_text:Float text of a float with a lot of features.\\n}
    {empty_line:\\n}
-   *@caption C1 l98
+   *normal_command@caption C1 l98
     *brace_command_context C20
      {spaces_before_argument: }
      *paragraph C4
       {normal_text:An example of float caption}
-      *@enddots C1 l98
+      *normal_command@enddots C1 l98
        *brace_container
       {normal_text: 2\\n}
       {normal_text:An example 2.\\n}
-     *@example C3 l100
+     *normal_command@example C3 l100
       *arguments_line C1
        *block_line_arg C1
         {spaces_before_argument: \\n}
       *preformatted C1
        {normal_text:example 2\\n}
-      *@end C1 l102
+      *normal_command@end C1 l102
       |EXTRA
       |text_arg:{example}
        *line_arg C3
@@ -565,15 +565,15 @@ $result_tree_text{'complex_float'} = '*document_root C5
      {empty_line:\\n}
      *paragraph C1
       {normal_text:A table 2.\\n}
-     *@table C3 l105
+     *normal_command@table C3 l105
       *arguments_line C1
        *block_line_arg C3
         {spaces_before_argument: }
-        *@emph l105
+        *normal_command@emph l105
         {spaces_after_argument:\\n}
       *table_entry C2
        *table_term C1
-        *@item C1 l106
+        *normal_command@item C1 l106
          *line_arg C3
           {spaces_before_argument: }
           {normal_text:truc 2}
@@ -581,7 +581,7 @@ $result_tree_text{'complex_float'} = '*document_root C5
        *table_definition C1
         *paragraph C1
          {normal_text:line 2\\n}
-      *@end C1 l108
+      *normal_command@end C1 l108
       |EXTRA
       |text_arg:{table}
        *line_arg C3
@@ -591,7 +591,7 @@ $result_tree_text{'complex_float'} = '*document_root C5
      {empty_line:\\n}
      *paragraph C1
       {normal_text:A multitable 2.\\n}
-     *@multitable C3 l111
+     *normal_command@multitable C3 l111
      |EXTRA
      |max_columns:{2}
       *arguments_line C1
@@ -607,13 +607,13 @@ $result_tree_text{'complex_float'} = '*document_root C5
        *row C2
        |EXTRA
        |row_number:{1}
-        *@item C2 l112
+        *normal_command@item C2 l112
         |EXTRA
         |cell_number:{1}
          {ignorable_spaces_after_command: }
          *paragraph C1
           {normal_text:truc 2 }
-        *@tab C2 l112
+        *normal_command@tab C2 l112
         |EXTRA
         |cell_number:{2}
          {ignorable_spaces_after_command: }
@@ -622,19 +622,19 @@ $result_tree_text{'complex_float'} = '*document_root C5
        *row C2
        |EXTRA
        |row_number:{2}
-        *@item C2 l113
+        *normal_command@item C2 l113
         |EXTRA
         |cell_number:{1}
          {ignorable_spaces_after_command: }
          *paragraph C1
           {normal_text:truc 2 }
-        *@tab C2 l113
+        *normal_command@tab C2 l113
         |EXTRA
         |cell_number:{2}
          {ignorable_spaces_after_command: }
          *paragraph C1
           {normal_text:bidule\\n}
-      *@end C1 l114
+      *normal_command@end C1 l114
       |EXTRA
       |text_arg:{multitable}
        *line_arg C3
@@ -654,20 +654,20 @@ $result_tree_text{'complex_float'} = '*document_root C5
      {empty_line:\\n}
      *paragraph C1
       {normal_text:An itemize 2.\\n}
-     *@itemize C3 l119
+     *normal_command@itemize C3 l119
       *arguments_line C1
        *block_line_arg C3
         {spaces_before_argument: }
-        *@minus l119
+        *normal_command@minus l119
         {spaces_after_argument:\\n}
-      *@item C2 l120
+      *normal_command@item C2 l120
       |EXTRA
       |item_number:{1}
        {ignorable_spaces_after_command: }
        *paragraph C2
         {normal_text:truc 2\\n}
         {normal_text:line\\n}
-      *@end C1 l122
+      *normal_command@end C1 l122
       |EXTRA
       |text_arg:{itemize}
        *line_arg C3
@@ -675,7 +675,7 @@ $result_tree_text{'complex_float'} = '*document_root C5
         {normal_text:itemize}
         {spaces_after_argument:\\n}
      {empty_line:\\n}
-     *@anchor C1 l124
+     *normal_command@anchor C1 l124
      |EXTRA
      |identifier:{Anchor-in-caption-2}
      |is_target:{1}
@@ -685,7 +685,7 @@ $result_tree_text{'complex_float'} = '*document_root C5
      {empty_line:\\n}
      *paragraph C6
       {normal_text:A ref 2.\\n}
-      *@xref C2 l127
+      *normal_command@xref C2 l127
        *brace_arg C1
        |EXTRA
        |node_content:A{0|0}
@@ -695,7 +695,7 @@ $result_tree_text{'complex_float'} = '*document_root C5
         {normal_text:xref Text with features caption}
       {normal_text:.\\n}
       {normal_text:A footnote 2.\\n}
-      *@footnote C1 l129
+      *normal_command@footnote C1 l129
       |EXTRA
       |global_command_number:{3}
        *brace_command_context C1
@@ -704,49 +704,49 @@ $result_tree_text{'complex_float'} = '*document_root C5
       {normal_text:.\\n}
      {empty_line:\\n}
      *paragraph C17
-      *@TeX C1 l131
+      *normal_command@TeX C1 l131
        *brace_container
       {normal_text: and }
-      *@emph C1 l131
+      *normal_command@emph C1 l131
        *brace_container C2
-        *@b C1 l131
+        *normal_command@b C1 l131
          *brace_container C3
           {normal_text:t}
-          *@\' C1 l131
+          *normal_command@\' C1 l131
            *following_arg C1
             {normal_text:e}
-          *@^ C1 l131
+          *normal_command@^ C1 l131
            *brace_container C1
-            *@dotless C1 l131
+            *normal_command@dotless C1 l131
              *brace_container C1
               {normal_text:i}
-        *@url C1 l131
+        *normal_command@url C1 l131
          *brace_arg C1
           {normal_text:an_url}
       {normal_text: }
-      *@sc C1 l131
+      *normal_command@sc C1 l131
        *brace_container C1
         {normal_text:and}
       {normal_text: }
-      *@verb C1 l131
+      *normal_command@verb C1 l131
        *brace_container C3
         {verb_delimiter:!}
         {raw:it is @verb}
         {verb_delimiter:!}
       {normal_text: }
-      *@ 
+      *normal_command@ 
       {normal_text:a wo}
-      *@-
+      *normal_command@-
       {normal_text:rd }
-      *@!
-      *@@
+      *normal_command@!
+      *normal_command@@
       {normal_text: }
-      *@AE C1 l131
+      *normal_command@AE C1 l131
        *brace_container
       {normal_text:.\\n}
    {spaces_after_close_brace:\\n}
    {empty_line:\\n}
-   *@end C1 l134
+   *normal_command@end C1 l134
    |EXTRA
    |text_arg:{float}
     *line_arg C3
@@ -755,7 +755,7 @@ $result_tree_text{'complex_float'} = '*document_root C5
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@xref C1 l136
+   *normal_command@xref C1 l136
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}

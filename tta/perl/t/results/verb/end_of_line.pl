@@ -13,7 +13,7 @@ $result_tree_text{'end_of_line'} = '*document_root C1
   *preamble_before_content
   *paragraph C3
    {normal_text:verb at end of line }
-   *@verb C1 l1
+   *normal_command@verb C1 l1
     *brace_container C4
      {raw:\\n}
      {raw:\\n}

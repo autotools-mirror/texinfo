@@ -13,7 +13,7 @@ $result_tree_text{'inlineraw_with_empty_line'} = '*document_root C1
   *preamble_before_content
   *paragraph C5
    {normal_text:A }
-   *@inlineraw C2 l1
+   *normal_command@inlineraw C2 l1
    |EXTRA
    |expand_index:{1}
    |format:{plaintext}
@@ -23,11 +23,11 @@ $result_tree_text{'inlineraw_with_empty_line'} = '*document_root C1
      {spaces_before_argument: }
      {normal_text:plaintext ``\\n}
      {empty_line:\\n}
-     *@lbracechar C1 l3
+     *normal_command@lbracechar C1 l3
       *brace_container
      {normal_text: }
    {normal_text: a.  Now html\\n}
-   *@inlineraw C2 l4
+   *normal_command@inlineraw C2 l4
    |EXTRA
    |expand_index:{1}
    |format:{html}
@@ -38,7 +38,7 @@ $result_tree_text{'inlineraw_with_empty_line'} = '*document_root C1
      {normal_text:in \\n}
      {empty_line:\\n}
      {normal_text:<i>}
-     *@acronym C1 l6
+     *normal_command@acronym C1 l6
       *brace_arg C1
        {normal_text:HTML}
      {normal_text:</i>}

@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'text_block_before_defline'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'text_block_before_defline'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l2 {top}
+ *normal_command@top C2 l2 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -31,7 +31,7 @@ $result_tree_text{'text_block_before_defline'} = '*document_root C5
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l4 {chapt}
+ *normal_command@node C1 l4 {chapt}
  |EXTRA
  |identifier:{chapt}
  |is_target:{1}
@@ -41,7 +41,7 @@ $result_tree_text{'text_block_before_defline'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:chapt}
     {spaces_after_argument:\\n}
- *@chapter C3 l5 {Chap}
+ *normal_command@chapter C3 l5 {Chap}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -52,14 +52,14 @@ $result_tree_text{'text_block_before_defline'} = '*document_root C5
     {normal_text:Chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@defblock C4 l7
+  *normal_command@defblock C4 l7
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *before_defline C6
     *paragraph C3
      {normal_text:Some text}
-     *@footnote C1 l8
+     *normal_command@footnote C1 l8
      |EXTRA
      |global_command_number:{1}
       *brace_command_context C1
@@ -67,13 +67,13 @@ $result_tree_text{'text_block_before_defline'} = '*document_root C5
         {normal_text:In footnote}
      {normal_text:.\\n}
     {empty_line:\\n}
-    *@example C3 l10
+    *normal_command@example C3 l10
      *arguments_line C1
       *block_line_arg C1
        {spaces_before_argument:\\n}
      *preformatted C1
       {normal_text:an example\\n}
-     *@end C1 l12
+     *normal_command@end C1 l12
      |EXTRA
      |text_arg:{example}
       *line_arg C3
@@ -81,7 +81,7 @@ $result_tree_text{'text_block_before_defline'} = '*document_root C5
        {normal_text:example}
        {spaces_after_argument:\\n}
     {empty_line:\\n}
-    *@menu C3 l14
+    *normal_command@menu C3 l14
      *arguments_line C1
       *block_line_arg C1
        {spaces_before_argument:\\n}
@@ -97,7 +97,7 @@ $result_tree_text{'text_block_before_defline'} = '*document_root C5
       *menu_entry_description C1
        *preformatted C1
         {normal_text:\\n}
-     *@end C1 l16
+     *normal_command@end C1 l16
      |EXTRA
      |text_arg:{menu}
       *line_arg C3
@@ -105,7 +105,7 @@ $result_tree_text{'text_block_before_defline'} = '*document_root C5
        {normal_text:menu}
        {spaces_after_argument:\\n}
     {empty_line:\\n}
-   *@defline C1 l18
+   *normal_command@defline C1 l18
    |EXTRA
    |def_command:{defline}
    |original_def_cmdname:{defline}
@@ -127,7 +127,7 @@ $result_tree_text{'text_block_before_defline'} = '*document_root C5
       *def_line_arg C1
        {normal_text:d}
      {spaces_after_argument:\\n}
-   *@end C1 l19
+   *normal_command@end C1 l19
    |EXTRA
    |text_arg:{defblock}
     *line_arg C3

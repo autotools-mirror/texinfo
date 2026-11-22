@@ -12,12 +12,12 @@ $result_tree_text{'end_of_lines_protected_in_footnote'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *paragraph C2
-   *@footnote C1 l1
+   *normal_command@footnote C1 l1
    |EXTRA
    |global_command_number:{1}
     *brace_command_context C2
      {spaces_before_argument:\\n}
-     *@deffn C3 l2
+     *normal_command@deffn C3 l2
       *def_line C1 l2
       |EXTRA
       |def_command:{deffn}
@@ -63,11 +63,11 @@ $result_tree_text{'end_of_lines_protected_in_footnote'} = '*document_root C1
         {spaces: }
         *def_arg C1
          *def_line_arg C1
-          *@@
+          *normal_command@@
         {spaces: }
         *def_arg C1
          *def_line_arg C1
-          *@@
+          *normal_command@@
           >SOURCEMARKS
           >defline_continuation<3>
         {spaces: }
@@ -78,7 +78,7 @@ $result_tree_text{'end_of_lines_protected_in_footnote'} = '*document_root C1
       *def_item C1
        *paragraph C1
         {normal_text:deffn\\n}
-      *@end C1 l7
+      *normal_command@end C1 l7
       |EXTRA
       |text_arg:{deffn}
        *line_arg C3

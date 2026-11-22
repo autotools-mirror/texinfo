@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'definfoenclose_no_braces'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C1
-   *@definfoenclose C1 l1
+   *normal_command@definfoenclose C1 l1
    |EXTRA
    |misc_args:A{phoo|;|:}
     *line_arg C3

@@ -12,7 +12,7 @@ $result_tree_text{'inlinefmtifelse_with_commands'} = '*document_root C1
  *before_node_section C12
   *preamble_before_content
   *paragraph C2
-   *@inlinefmtifelse C3 l1
+   *normal_command@inlinefmtifelse C3 l1
    |EXTRA
    |expand_index:{2}
    |format:{html}
@@ -22,13 +22,13 @@ $result_tree_text{'inlinefmtifelse_with_commands'} = '*document_root C1
      {raw:if @code{html}}
     *brace_arg C2
      {normal_text:else }
-     *@code C1 l1
+     *normal_command@code C1 l1
       *brace_container C1
        {normal_text:html}
    {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@inlinefmtifelse C3 l3
+   *normal_command@inlinefmtifelse C3 l3
    |EXTRA
    |expand_index:{2}
    |format:{plaintext}
@@ -38,13 +38,13 @@ $result_tree_text{'inlinefmtifelse_with_commands'} = '*document_root C1
      {raw:if @emph{plaintext}}
     *brace_arg C2
      {normal_text:else }
-     *@emph C1 l3
+     *normal_command@emph C1 l3
       *brace_container C1
        {normal_text:plaintext}
    {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@inlinefmtifelse C3 l5
+   *normal_command@inlinefmtifelse C3 l5
    |EXTRA
    |expand_index:{2}
    |format:{xml}
@@ -55,13 +55,13 @@ $result_tree_text{'inlinefmtifelse_with_commands'} = '*document_root C1
     *brace_arg C3
      {spaces_before_argument: }
      {normal_text:xml }
-     *@env C1 l5
+     *normal_command@env C1 l5
       *brace_container C1
        {normal_text:else}
    {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@inlinefmtifelse C3 l7
+   *normal_command@inlinefmtifelse C3 l7
    |EXTRA
    |expand_index:{2}
    |format:{docbook}
@@ -74,14 +74,14 @@ $result_tree_text{'inlinefmtifelse_with_commands'} = '*document_root C1
     *brace_arg C4
      {spaces_before_argument: }
      {normal_text:else }
-     *@strong C1 l7
+     *normal_command@strong C1 l7
       *brace_container C1
        {normal_text:docbook spaces}
      {normal_text: }
    {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@inlinefmtifelse C3 l9
+   *normal_command@inlinefmtifelse C3 l9
    |EXTRA
    |expand_index:{2}
    |format:{tex}
@@ -90,14 +90,14 @@ $result_tree_text{'inlinefmtifelse_with_commands'} = '*document_root C1
     *elided_brace_command_arg C1
      {raw:if @var{tex}}
     *brace_arg C2
-     *@var C1 l9
+     *normal_command@var C1 l9
       *brace_container C1
        {normal_text:else}
      {normal_text: tex}
    {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@inlinefmtifelse C3 l11
+   *normal_command@inlinefmtifelse C3 l11
    |EXTRA
    |expand_index:{2}
    |format:{latex}
@@ -106,7 +106,7 @@ $result_tree_text{'inlinefmtifelse_with_commands'} = '*document_root C1
     *elided_brace_command_arg C1
      {raw:if @sc{latex}}
     *brace_arg C2
-     *@sc C1 l11
+     *normal_command@sc C1 l11
       *brace_container C1
        {normal_text:else}
      {normal_text: latex}

@@ -15,7 +15,7 @@ $result_tree_text{'float_copying'} = '*document_root C6
     {text_before_beginning:\\input texinfo @c -*-texinfo-*-\\n}
     {text_before_beginning:\\n}
   *preamble_before_content C4
-   *@setfilename C1 float_copying.texi:l3
+   *normal_command@setfilename C1 float_copying.texi:l3
    |EXTRA
    |text_arg:{float_copying.info}
     *line_arg C3
@@ -23,12 +23,12 @@ $result_tree_text{'float_copying'} = '*document_root C6
      {normal_text:float_copying.info}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@copying C4 float_copying.texi:l5
+   *normal_command@copying C4 float_copying.texi:l5
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument: \\n}
     {empty_line:\\n}
-    *@float C7 float_copying.texi:l7
+    *normal_command@float C7 float_copying.texi:l7
     |EXTRA
     |float_number:{1}
     |float_type:{Copyright notice}
@@ -48,18 +48,18 @@ $result_tree_text{'float_copying'} = '*document_root C6
       {normal_text:Public domain is not really a licence, as it means than \\n}
       {normal_text:the author abandon his copyright.\\n}
      {empty_line:\\n}
-     *@caption C1 float_copying.texi:l12
+     *normal_command@caption C1 float_copying.texi:l12
       *brace_command_context C6
        *paragraph C3
         {normal_text:The Public Domain notice}
-        *@footnote C1 float_copying.texi:l12
+        *normal_command@footnote C1 float_copying.texi:l12
         |EXTRA
         |global_command_number:{1}
          *brace_command_context C8
           {spaces_before_argument:\\n}
           *paragraph C3
            {normal_text:The caption copying footnote\\n}
-           *@anchor C1 float_copying.texi:l14
+           *normal_command@anchor C1 float_copying.texi:l14
            |EXTRA
            |identifier:{caption-copying-footnote-anchor}
            |is_target:{1}
@@ -88,7 +88,7 @@ $result_tree_text{'float_copying'} = '*document_root C6
           {empty_line:\\n}
           *paragraph C3
            {normal_text:see }
-           *@ref C1 float_copying.texi:l19
+           *normal_command@ref C1 float_copying.texi:l19
             *brace_arg C1
             |EXTRA
             |node_content:A{0|0}
@@ -98,7 +98,7 @@ $result_tree_text{'float_copying'} = '*document_root C6
           {empty_line:\\n}
         {normal_text:\\n}
        {empty_line:\\n}
-       *@anchor C1 float_copying.texi:l23
+       *normal_command@anchor C1 float_copying.texi:l23
        |EXTRA
        |identifier:{public-domain-anchor}
        |is_target:{1}
@@ -124,14 +124,14 @@ $result_tree_text{'float_copying'} = '*document_root C6
          {normal_text:indexed caption function}
          {spaces_after_argument:\\n}
      {spaces_after_close_brace:\\n}
-     *@end C1 float_copying.texi:l27
+     *normal_command@end C1 float_copying.texi:l27
      |EXTRA
      |text_arg:{float}
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:float}
        {spaces_after_argument:\\n}
-    *@end C1 float_copying.texi:l28
+    *normal_command@end C1 float_copying.texi:l28
     |EXTRA
     |text_arg:{copying}
      *line_arg C3
@@ -139,7 +139,7 @@ $result_tree_text{'float_copying'} = '*document_root C6
       {normal_text:copying}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@node C1 float_copying.texi:l30 {Top}
+ *normal_command@node C1 float_copying.texi:l30 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -149,7 +149,7 @@ $result_tree_text{'float_copying'} = '*document_root C6
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C12 float_copying.texi:l31 {Top}
+ *normal_command@top C12 float_copying.texi:l31 {Top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -170,7 +170,7 @@ $result_tree_text{'float_copying'} = '*document_root C6
   {empty_line:\\n}
   *paragraph C3
    {normal_text:See the caption }
-   *@ref C1 float_copying.texi:l35
+   *normal_command@ref C1 float_copying.texi:l35
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -180,7 +180,7 @@ $result_tree_text{'float_copying'} = '*document_root C6
   {empty_line:\\n}
   *paragraph C3
    {normal_text:See the float }
-   *@ref C1 float_copying.texi:l37
+   *normal_command@ref C1 float_copying.texi:l37
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -188,13 +188,13 @@ $result_tree_text{'float_copying'} = '*document_root C6
      {normal_text:public domain}
    {normal_text:.\\n}
   {empty_line:\\n}
-  *@insertcopying C1 float_copying.texi:l39
+  *normal_command@insertcopying C1 float_copying.texi:l39
   |EXTRA
   |global_command_number:{1}
    *line_arg C1
     {spaces_before_argument:\\n}
   {empty_line:\\n}
-  *@menu C3 float_copying.texi:l41
+  *normal_command@menu C3 float_copying.texi:l41
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -209,7 +209,7 @@ $result_tree_text{'float_copying'} = '*document_root C6
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 float_copying.texi:l43
+   *normal_command@end C1 float_copying.texi:l43
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -217,7 +217,7 @@ $result_tree_text{'float_copying'} = '*document_root C6
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 float_copying.texi:l45 {Copying and floats}
+ *normal_command@node C1 float_copying.texi:l45 {Copying and floats}
  |EXTRA
  |identifier:{Copying-and-floats}
  |is_target:{1}
@@ -228,7 +228,7 @@ $result_tree_text{'float_copying'} = '*document_root C6
     {spaces_before_argument: }
     {normal_text:Copying and floats}
     {spaces_after_argument:\\n}
- *@appendix C20 float_copying.texi:l46 {Copying and floats}
+ *normal_command@appendix C20 float_copying.texi:l46 {Copying and floats}
  |EXTRA
  |section_heading_number:{A}
  |section_level:{1}
@@ -245,7 +245,7 @@ $result_tree_text{'float_copying'} = '*document_root C6
   {empty_line:\\n}
   *paragraph C3
    {normal_text:See the caption }
-   *@ref C1 float_copying.texi:l51
+   *normal_command@ref C1 float_copying.texi:l51
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -255,7 +255,7 @@ $result_tree_text{'float_copying'} = '*document_root C6
   {empty_line:\\n}
   *paragraph C3
    {normal_text:See the float }
-   *@ref C1 float_copying.texi:l53
+   *normal_command@ref C1 float_copying.texi:l53
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -272,18 +272,18 @@ $result_tree_text{'float_copying'} = '*document_root C6
     {normal_text:listofloats}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@insertcopying C1 float_copying.texi:l57
+  *normal_command@insertcopying C1 float_copying.texi:l57
   |EXTRA
   |global_command_number:{2}
    *line_arg C1
     {spaces_before_argument:\\n}
-  *@insertcopying C1 float_copying.texi:l58
+  *normal_command@insertcopying C1 float_copying.texi:l58
   |EXTRA
   |global_command_number:{3}
    *line_arg C1
     {spaces_before_argument:\\n}
   {empty_line:\\n}
-  *@subheading C1 float_copying.texi:l60
+  *normal_command@subheading C1 float_copying.texi:l60
   |EXTRA
   |global_command_number:{1}
   |heading_number:{1}
@@ -291,7 +291,7 @@ $result_tree_text{'float_copying'} = '*document_root C6
     {spaces_before_argument: }
     {normal_text:listoffloats}
     {spaces_after_argument:\\n}
-  *@listoffloats C1 float_copying.texi:l61
+  *normal_command@listoffloats C1 float_copying.texi:l61
   |EXTRA
   |float_type:{Copyright notice}
   |global_command_number:{1}
@@ -300,7 +300,7 @@ $result_tree_text{'float_copying'} = '*document_root C6
     {normal_text:Copyright notice}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@subheading C1 float_copying.texi:l63
+  *normal_command@subheading C1 float_copying.texi:l63
   |EXTRA
   |global_command_number:{2}
   |heading_number:{2}
@@ -308,7 +308,7 @@ $result_tree_text{'float_copying'} = '*document_root C6
     {spaces_before_argument: }
     {normal_text:printindex}
     {spaces_after_argument:\\n}
-  *@printindex C1 float_copying.texi:l64
+  *normal_command@printindex C1 float_copying.texi:l64
   |EXTRA
   |global_command_number:{1}
   |misc_args:A{cp}
@@ -316,7 +316,7 @@ $result_tree_text{'float_copying'} = '*document_root C6
     {spaces_before_argument: }
     {normal_text:cp}
     {spaces_after_argument:\\n}
-  *@printindex C1 float_copying.texi:l65
+  *normal_command@printindex C1 float_copying.texi:l65
   |EXTRA
   |global_command_number:{2}
   |misc_args:A{fn}
@@ -325,7 +325,7 @@ $result_tree_text{'float_copying'} = '*document_root C6
     {normal_text:fn}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@bye C1
+ *normal_command@bye C1
   *line_arg C1
    {spaces_before_argument:\\n}
 ';

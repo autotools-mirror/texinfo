@@ -11,14 +11,14 @@ use Encode;
 $result_tree_text{'documentlanguagevariant_arguments'} = '*document_root C1
  *before_node_section C1
   *preamble_before_content C7
-   *@documentlanguagevariant C1 l1
+   *normal_command@documentlanguagevariant C1 l1
    |EXTRA
    |global_command_number:{1}
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:arg}
      {spaces_after_argument:\\n}
-   *@documentlanguagevariant C2 l2
+   *normal_command@documentlanguagevariant C2 l2
    |EXTRA
    |global_command_number:{2}
     *line_arg C2
@@ -28,7 +28,7 @@ $result_tree_text{'documentlanguagevariant_arguments'} = '*document_root C1
      {spaces_before_argument: }
      {normal_text:two}
      {spaces_after_argument:\\n}
-   *@documentlanguagevariant C2 l3
+   *normal_command@documentlanguagevariant C2 l3
    |EXTRA
    |global_command_number:{3}
     *line_arg C3
@@ -37,12 +37,12 @@ $result_tree_text{'documentlanguagevariant_arguments'} = '*document_root C1
      {spaces_after_argument: }
     *line_arg C1
      {spaces_before_argument:\\n}
-   *@documentlanguagevariant C1 l4
+   *normal_command@documentlanguagevariant C1 l4
    |EXTRA
    |global_command_number:{4}
     *line_arg C1
      {spaces_before_argument:    \\n}
-   *@documentlanguagevariant C5 l5
+   *normal_command@documentlanguagevariant C5 l5
    |EXTRA
    |global_command_number:{5}
     *line_arg C3
@@ -60,12 +60,12 @@ $result_tree_text{'documentlanguagevariant_arguments'} = '*document_root C1
      {normal_text:fourth}
     *line_arg C1
      {spaces_before_argument:   \\n}
-   *@documentlanguagevariant C1 l6
+   *normal_command@documentlanguagevariant C1 l6
    |EXTRA
    |global_command_number:{6}
     *line_arg C1
      {spaces_before_argument:\\n}
-   *@documentlanguagevariant C2 l7
+   *normal_command@documentlanguagevariant C2 l7
    |EXTRA
    |global_command_number:{7}
     *line_arg C1

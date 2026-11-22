@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'missing_detailmenu_on_subnodes'} = '*document_root C13
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'missing_detailmenu_on_subnodes'} = '*document_root C13
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C4 l2 {top}
+ *normal_command@top C4 l2 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -31,7 +31,7 @@ $result_tree_text{'missing_detailmenu_on_subnodes'} = '*document_root C13
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C9 l4
+  *normal_command@menu C9 l4
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -98,7 +98,7 @@ $result_tree_text{'missing_detailmenu_on_subnodes'} = '*document_root C13
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l14
+   *normal_command@end C1 l14
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -106,7 +106,7 @@ $result_tree_text{'missing_detailmenu_on_subnodes'} = '*document_root C13
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l16 {chapter}
+ *normal_command@node C1 l16 {chapter}
  |EXTRA
  |identifier:{chapter}
  |is_target:{1}
@@ -116,7 +116,7 @@ $result_tree_text{'missing_detailmenu_on_subnodes'} = '*document_root C13
     {spaces_before_argument: }
     {normal_text:chapter}
     {spaces_after_argument:\\n}
- *@chapter C4 l17 {chapter}
+ *normal_command@chapter C4 l17 {chapter}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -127,7 +127,7 @@ $result_tree_text{'missing_detailmenu_on_subnodes'} = '*document_root C13
     {normal_text:chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C3 l19
+  *normal_command@menu C3 l19
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -142,7 +142,7 @@ $result_tree_text{'missing_detailmenu_on_subnodes'} = '*document_root C13
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l21
+   *normal_command@end C1 l21
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -150,7 +150,7 @@ $result_tree_text{'missing_detailmenu_on_subnodes'} = '*document_root C13
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l23 {section}
+ *normal_command@node C1 l23 {section}
  |EXTRA
  |identifier:{section}
  |is_target:{1}
@@ -160,7 +160,7 @@ $result_tree_text{'missing_detailmenu_on_subnodes'} = '*document_root C13
     {spaces_before_argument: }
     {normal_text:section}
     {spaces_after_argument:\\n}
- *@section C2 l24 {section}
+ *normal_command@section C2 l24 {section}
  |EXTRA
  |section_heading_number:{1.1}
  |section_level:{2}
@@ -171,7 +171,7 @@ $result_tree_text{'missing_detailmenu_on_subnodes'} = '*document_root C13
     {normal_text:section}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l26 {chapter 2}
+ *normal_command@node C1 l26 {chapter 2}
  |EXTRA
  |identifier:{chapter-2}
  |is_target:{1}
@@ -181,7 +181,7 @@ $result_tree_text{'missing_detailmenu_on_subnodes'} = '*document_root C13
     {spaces_before_argument: }
     {normal_text:chapter 2}
     {spaces_after_argument:\\n}
- *@chapter C4 l27 {chapter 2}
+ *normal_command@chapter C4 l27 {chapter 2}
  |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
@@ -192,7 +192,7 @@ $result_tree_text{'missing_detailmenu_on_subnodes'} = '*document_root C13
     {normal_text:chapter 2}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C4 l29
+  *normal_command@menu C4 l29
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -218,7 +218,7 @@ $result_tree_text{'missing_detailmenu_on_subnodes'} = '*document_root C13
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l32
+   *normal_command@end C1 l32
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -226,7 +226,7 @@ $result_tree_text{'missing_detailmenu_on_subnodes'} = '*document_root C13
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l34 {section chap 2}
+ *normal_command@node C1 l34 {section chap 2}
  |EXTRA
  |identifier:{section-chap-2}
  |is_target:{1}
@@ -236,7 +236,7 @@ $result_tree_text{'missing_detailmenu_on_subnodes'} = '*document_root C13
     {spaces_before_argument: }
     {normal_text:section chap 2}
     {spaces_after_argument:\\n}
- *@section C2 l35 {section chap 2}
+ *normal_command@section C2 l35 {section chap 2}
  |EXTRA
  |section_heading_number:{2.1}
  |section_level:{2}
@@ -247,7 +247,7 @@ $result_tree_text{'missing_detailmenu_on_subnodes'} = '*document_root C13
     {normal_text:section chap 2}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l37 {unnumberedsec}
+ *normal_command@node C1 l37 {unnumberedsec}
  |EXTRA
  |identifier:{unnumberedsec}
  |is_target:{1}
@@ -257,7 +257,7 @@ $result_tree_text{'missing_detailmenu_on_subnodes'} = '*document_root C13
     {spaces_before_argument: }
     {normal_text:unnumberedsec}
     {spaces_after_argument:\\n}
- *@unnumberedsec C1 l38 {unnumberedsec}
+ *normal_command@unnumberedsec C1 l38 {unnumberedsec}
  |EXTRA
  |section_level:{2}
  |section_number:{6}

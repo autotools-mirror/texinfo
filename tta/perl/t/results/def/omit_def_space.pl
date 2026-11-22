@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'omit_def_space'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content
- *@node C2 l1 {Top}
+ *normal_command@node C2 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -22,7 +22,7 @@ $result_tree_text{'omit_def_space'} = '*document_root C3
     {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C5 l3 {chap}
+ *normal_command@node C5 l3 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -33,7 +33,7 @@ $result_tree_text{'omit_def_space'} = '*document_root C3
     {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@set C1
+  *normal_command@set C1
   |EXTRA
   |misc_args:A{txidefnamenospace|}
    *line_arg C3
@@ -41,7 +41,7 @@ $result_tree_text{'omit_def_space'} = '*document_root C3
     {rawline_text:txidefnamenospace}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@defun C4 l7
+  *normal_command@defun C4 l7
    *def_line C1 l7
    |EXTRA
    |def_command:{defun}
@@ -72,7 +72,7 @@ $result_tree_text{'omit_def_space'} = '*document_root C3
        {normal_text:arg2}
      {delimiter:)}
      {spaces_after_argument:\\n}
-   *@defunx C1 l8
+   *normal_command@defunx C1 l8
    |EXTRA
    |def_command:{defun}
    |element_node:{chap}
@@ -100,7 +100,7 @@ $result_tree_text{'omit_def_space'} = '*document_root C3
    *def_item C1
     *paragraph C1
      {normal_text:explain\\n}
-   *@end C1 l10
+   *normal_command@end C1 l10
    |EXTRA
    |text_arg:{defun}
     *line_arg C3

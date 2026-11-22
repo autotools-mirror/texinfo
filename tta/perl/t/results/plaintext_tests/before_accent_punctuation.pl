@@ -13,7 +13,7 @@ $result_tree_text{'before_accent_punctuation'} = '*document_root C1
   *preamble_before_content
   *paragraph C2
    {normal_text:a. }
-   *@^ C1 l1
+   *normal_command@^ C1 l1
     *following_arg C1
      {normal_text:a}
 ';

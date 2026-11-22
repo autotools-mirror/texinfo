@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'empty_multitable_with_cells'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@multitable C3 l1
+  *normal_command@multitable C3 l1
   |EXTRA
   |max_columns:{0}
    *arguments_line C1
@@ -30,7 +30,7 @@ $result_tree_text{'empty_multitable_with_cells'} = '*document_root C1
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:item in empty m\\n}
-   *@end C1 l4
+   *normal_command@end C1 l4
    |EXTRA
    |text_arg:{multitable}
     *line_arg C3

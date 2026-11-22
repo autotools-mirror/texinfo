@@ -17,7 +17,7 @@ FastForward: [U1]
 Next: [U1]
  *before_node_section C1
   *preamble_before_content
- *@top C2 l1 {top}
+ *normal_command@top C2 l1 {top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -35,7 +35,7 @@ UNIT_DIRECTIONS
 This: [U1]
 Back: [U0]
 FastBack: [U0]
- *@part C2 l3 {part}
+ *normal_command@part C2 l3 {part}
  |EXTRA
  |global_command_number:{1}
  |section_level:{0}
@@ -46,7 +46,7 @@ FastBack: [U0]
     {normal_text:part}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@chapter C1 l5 {chapter}
+ *normal_command@chapter C1 l5 {chapter}
  |EXTRA
  |identifier:{chapter}
  |is_target:{1}

@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'translation_in_parser_in_translation'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content C2
-   *@documentlanguage C1 l1
+   *normal_command@documentlanguage C1 l1
    |EXTRA
    |global_command_number:{1}
    |text_arg:{fr}
@@ -20,7 +20,7 @@ $result_tree_text{'translation_in_parser_in_translation'} = '*document_root C5
      {normal_text:fr}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@node C1 l3 {Top}
+ *normal_command@node C1 l3 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -30,7 +30,7 @@ $result_tree_text{'translation_in_parser_in_translation'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l4 {top}
+ *normal_command@top C2 l4 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -40,7 +40,7 @@ $result_tree_text{'translation_in_parser_in_translation'} = '*document_root C5
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l6 {chap}
+ *normal_command@node C1 l6 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -50,7 +50,7 @@ $result_tree_text{'translation_in_parser_in_translation'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:chap}
     {spaces_after_argument:\\n}
- *@chapter C4 l7 {Chap}
+ *normal_command@chapter C4 l7 {Chap}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -61,7 +61,7 @@ $result_tree_text{'translation_in_parser_in_translation'} = '*document_root C5
     {normal_text:Chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@deftypeop C3 l9
+  *normal_command@deftypeop C3 l9
    *def_line C1 l9
    |EXTRA
    |def_command:{deftypeop}
@@ -94,7 +94,7 @@ $result_tree_text{'translation_in_parser_in_translation'} = '*document_root C5
    *def_item C1
     *paragraph C1
      {normal_text:DOC\\n}
-   *@end C1 l11
+   *normal_command@end C1 l11
    |EXTRA
    |text_arg:{deftypeop}
     *line_arg C3

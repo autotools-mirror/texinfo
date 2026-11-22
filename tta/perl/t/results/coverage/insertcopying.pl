@@ -11,27 +11,27 @@ use Encode;
 $result_tree_text{'insertcopying'} = '*document_root C1
  *before_node_section C4
   *preamble_before_content C2
-   *@copying C5 l1
+   *normal_command@copying C5 l1
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *paragraph C1
      {normal_text:License.\\n}
     {empty_line:\\n}
-    *@quotation C3 l4
+    *normal_command@quotation C3 l4
      *arguments_line C1
       *block_line_arg C1
        {spaces_before_argument: \\n}
      *paragraph C1
       {normal_text:You are not allowed.\\n}
-     *@end C1 l6
+     *normal_command@end C1 l6
      |EXTRA
      |text_arg:{quotation}
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:quotation}
        {spaces_after_argument:\\n}
-    *@end C1 l7
+    *normal_command@end C1 l7
     |EXTRA
     |text_arg:{copying}
      *line_arg C3
@@ -42,7 +42,7 @@ $result_tree_text{'insertcopying'} = '*document_root C1
   *paragraph C1
    {normal_text:License:\\n}
   {empty_line:\\n}
-  *@insertcopying C1 l11
+  *normal_command@insertcopying C1 l11
   |EXTRA
   |global_command_number:{1}
    *line_arg C1

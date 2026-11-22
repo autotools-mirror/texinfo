@@ -18,7 +18,7 @@ $result_tree_text{'section_on_index_entry_line'} = '*document_root C2
     {spaces_before_argument: }
     {normal_text:a}
     {spaces_after_argument: }
- *@section C3 l1 {b}
+ *normal_command@section C3 l1 {b}
  |EXTRA
  |identifier:{b}
  |is_target:{1}

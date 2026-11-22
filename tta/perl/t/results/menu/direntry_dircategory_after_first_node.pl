@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'direntry_dircategory_after_first_node'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'direntry_dircategory_after_first_node'} = '*document_root C3
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C4 l2 {direntry direcategory after first node}
+ *normal_command@top C4 l2 {direntry direcategory after first node}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -31,12 +31,12 @@ $result_tree_text{'direntry_dircategory_after_first_node'} = '*document_root C3
     {normal_text:direntry direcategory after first node}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@dircategory C1 l4
+  *normal_command@dircategory C1 l4
    *line_arg C3
     {spaces_before_argument: }
     {normal_text:Cat}
     {spaces_after_argument:\\n}
-  *@direntry C3 l5
+  *normal_command@direntry C3 l5
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -55,7 +55,7 @@ $result_tree_text{'direntry_dircategory_after_first_node'} = '*document_root C3
     *menu_entry_description C1
      *preformatted C1
       {normal_text:in text\\n}
-   *@end C1 l7
+   *normal_command@end C1 l7
    |EXTRA
    |text_arg:{direntry}
     *line_arg C3

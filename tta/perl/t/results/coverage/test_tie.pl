@@ -13,7 +13,7 @@ $result_tree_text{'test_tie'} = '*document_root C1
   *preamble_before_content
   *paragraph C3
    {normal_text:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA}
-   *@tie C1 l1
+   *normal_command@tie C1 l1
     *brace_container
    {normal_text:BBBBBBBBBBB\\n}
 ';

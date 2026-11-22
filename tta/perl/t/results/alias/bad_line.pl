@@ -13,17 +13,17 @@ $result_tree_text{'bad_line'} = '*document_root C1
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content C3
-   *@alias C1 l2
+   *normal_command@alias C1 l2
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:garbage-on-line =cmd garbage}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@alias C1 l4
+   *normal_command@alias C1 l4
     *line_arg C4
      {spaces_before_argument: }
      {normal_text:garbage-on-line =cmd }
-     *@code C1 l4
+     *normal_command@code C1 l4
       *brace_container C1
        {normal_text:in code}
      {spaces_after_argument:\\n}

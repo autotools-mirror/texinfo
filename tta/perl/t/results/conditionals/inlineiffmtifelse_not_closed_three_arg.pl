@@ -12,7 +12,7 @@ $result_tree_text{'inlineiffmtifelse_not_closed_three_arg'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *paragraph C1
-   *@inlinefmtifelse C3 l1
+   *normal_command@inlinefmtifelse C3 l1
    |EXTRA
    |expand_index:{2}
    |format:{html}

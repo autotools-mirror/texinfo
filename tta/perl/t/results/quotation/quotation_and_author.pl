@@ -14,11 +14,11 @@ $result_tree_text{'quotation_and_author'} = '*document_root C1
   *paragraph C1
    {normal_text:Text before quotation\\n}
   {empty_line:\\n}
-  *@quotation C4 l3
+  *normal_command@quotation C4 l3
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument: \\n}
-   *@author C1 l4
+   *normal_command@author C1 l4
    |EXTRA
    |global_command_number:{1}
     *line_arg C3
@@ -27,7 +27,7 @@ $result_tree_text{'quotation_and_author'} = '*document_root C1
      {spaces_after_argument:\\n}
    *paragraph C1
     {normal_text:A quot---ation\\n}
-   *@end C1 l6
+   *normal_command@end C1 l6
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3
@@ -38,11 +38,11 @@ $result_tree_text{'quotation_and_author'} = '*document_root C1
   *paragraph C1
    {normal_text:Text between quotation and smallquotation\\n}
   {empty_line:\\n}
-  *@smallquotation C4 l10
+  *normal_command@smallquotation C4 l10
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
-   *@author C1 l11
+   *normal_command@author C1 l11
    |EXTRA
    |global_command_number:{2}
     *line_arg C3
@@ -51,7 +51,7 @@ $result_tree_text{'quotation_and_author'} = '*document_root C1
      {spaces_after_argument:\\n}
    *paragraph C1
     {normal_text:in small---quotation.\\n}
-   *@end C1 l13
+   *normal_command@end C1 l13
    |EXTRA
    |text_arg:{smallquotation}
     *line_arg C3
@@ -59,13 +59,13 @@ $result_tree_text{'quotation_and_author'} = '*document_root C1
      {normal_text:smallquotation}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@quotation C4 l15
+  *normal_command@quotation C4 l15
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
      {normal_text:Note}
      {spaces_after_argument:\\n}
-   *@author C1 l16
+   *normal_command@author C1 l16
    |EXTRA
    |global_command_number:{3}
     *line_arg C3
@@ -74,7 +74,7 @@ $result_tree_text{'quotation_and_author'} = '*document_root C1
      {spaces_after_argument:\\n}
    *paragraph C1
     {normal_text:A Note\\n}
-   *@end C1 l18
+   *normal_command@end C1 l18
    |EXTRA
    |text_arg:{quotation}
     *line_arg C3

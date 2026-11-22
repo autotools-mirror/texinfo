@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'macro_end_call_in_ignored_raw'} = '*document_root C1
  *before_node_section C1
   *preamble_before_content C3
-   *@macro C4 l1
+   *normal_command@macro C4 l1
    |EXTRA
    |formal_args:A{}
    |macro_name:{startraw}
@@ -19,7 +19,7 @@ $result_tree_text{'macro_end_call_in_ignored_raw'} = '*document_root C1
      {macro_line: startraw\\n}
     {raw:@tex\\n}
     {raw:inT\\n}
-    *@end C1 l4
+    *normal_command@end C1 l4
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -31,7 +31,7 @@ $result_tree_text{'macro_end_call_in_ignored_raw'} = '*document_root C1
    >macro_expansion<start;1><p:1>
     >*macro_call@startraw C1
      >*brace_arg
-   *@tex C3 l6:@startraw
+   *normal_command@tex C3 l6:@startraw
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
@@ -40,7 +40,7 @@ $result_tree_text{'macro_end_call_in_ignored_raw'} = '*document_root C1
      >SOURCEMARKS
      >macro_expansion<end;1><p:3>
      {raw:\\n}
-    *@end C1 l7
+    *normal_command@end C1 l7
     |EXTRA
     |text_arg:{tex}
      *line_arg C3

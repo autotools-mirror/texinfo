@@ -13,7 +13,7 @@ $result_tree_text{'reference_to_external_manual'} = '*document_root C2
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content
- *@node C3 l2 {first}
+ *normal_command@node C3 l2 {first}
  |EXTRA
  |identifier:{first}
  |is_target:{1}
@@ -24,7 +24,7 @@ $result_tree_text{'reference_to_external_manual'} = '*document_root C2
     {normal_text:first}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C3 l4
+  *normal_command@menu C3 l4
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -40,7 +40,7 @@ $result_tree_text{'reference_to_external_manual'} = '*document_root C2
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l6
+   *normal_command@end C1 l6
    |EXTRA
    |text_arg:{menu}
     *line_arg C3

@@ -14,7 +14,7 @@ $result_tree_text{'htmlxref_nodes'} = '*document_root C9
    {text_before_beginning:\\input texinfo @c -*-texinfo-*-\\n}
    {text_before_beginning:\\n}
   *preamble_before_content
- *@node C1 test_refs.texi:l3 {Top}
+ *normal_command@node C1 test_refs.texi:l3 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -24,7 +24,7 @@ $result_tree_text{'htmlxref_nodes'} = '*document_root C9
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C41 test_refs.texi:l4 {Test refs}
+ *normal_command@top C41 test_refs.texi:l4 {Test refs}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -34,7 +34,7 @@ $result_tree_text{'htmlxref_nodes'} = '*document_root C9
     {normal_text:Test refs}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C3 test_refs.texi:l6
+  *normal_command@menu C3 test_refs.texi:l6
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -49,7 +49,7 @@ $result_tree_text{'htmlxref_nodes'} = '*document_root C9
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 test_refs.texi:l8
+   *normal_command@end C1 test_refs.texi:l8
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -57,7 +57,7 @@ $result_tree_text{'htmlxref_nodes'} = '*document_root C9
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@subheading C1 test_refs.texi:l10
+  *normal_command@subheading C1 test_refs.texi:l10
   |EXTRA
   |global_command_number:{1}
   |heading_number:{1}
@@ -67,13 +67,13 @@ $result_tree_text{'htmlxref_nodes'} = '*document_root C9
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C5
-   *@verb C1 test_refs.texi:l12
+   *normal_command@verb C1 test_refs.texi:l12
     *brace_container C3
      {verb_delimiter::}
      {raw: a  node }
      {verb_delimiter::}
    {normal_text: }
-   *@ref C4 test_refs.texi:l12
+   *normal_command@ref C4 test_refs.texi:l12
     *brace_arg C3
     |EXTRA
     |node_content:A{1|1}
@@ -85,16 +85,16 @@ $result_tree_text{'htmlxref_nodes'} = '*document_root C9
     *brace_arg C2
      {spaces_before_argument: }
      {normal_text:manual}
-   *@*
+   *normal_command@*
    {normal_text:\\n}
-  *@example C3 test_refs.texi:l13
+  *normal_command@example C3 test_refs.texi:l13
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C2
     {normal_text:mono : manual.html#a-node\\n}
     {normal_text:split: ../manual/a-node.html#a-node\\n}
-   *@end C1 test_refs.texi:l16
+   *normal_command@end C1 test_refs.texi:l16
    |EXTRA
    |text_arg:{example}
     *line_arg C3
@@ -103,13 +103,13 @@ $result_tree_text{'htmlxref_nodes'} = '*document_root C9
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C4
-   *@verb C1 test_refs.texi:l18
+   *normal_command@verb C1 test_refs.texi:l18
     *brace_container C3
      {verb_delimiter:;}
      {raw::}
      {verb_delimiter:;}
    {normal_text: }
-   *@ref C4 test_refs.texi:l18
+   *normal_command@ref C4 test_refs.texi:l18
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -119,14 +119,14 @@ $result_tree_text{'htmlxref_nodes'} = '*document_root C9
     *brace_arg C1
      {normal_text:manual}
    {normal_text:\\n}
-  *@example C3 test_refs.texi:l19
+  *normal_command@example C3 test_refs.texi:l19
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C2
     {normal_text:mono : manual.html#_003a\\n}
     {normal_text:split: ../manual/_003a.html#_003a\\n}
-   *@end C1 test_refs.texi:l22
+   *normal_command@end C1 test_refs.texi:l22
    |EXTRA
    |text_arg:{example}
     *line_arg C3
@@ -135,13 +135,13 @@ $result_tree_text{'htmlxref_nodes'} = '*document_root C9
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C5
-   *@verb C1 test_refs.texi:l24
+   *normal_command@verb C1 test_refs.texi:l24
     *brace_container C3
      {verb_delimiter::}
      {raw:Top}
      {verb_delimiter::}
    {normal_text: }
-   *@ref C4 test_refs.texi:l24
+   *normal_command@ref C4 test_refs.texi:l24
     *brace_arg C3
     |EXTRA
     |node_content:A{1|1}
@@ -153,16 +153,16 @@ $result_tree_text{'htmlxref_nodes'} = '*document_root C9
     *brace_arg C2
      {spaces_before_argument: }
      {normal_text:manual}
-   *@*
+   *normal_command@*
    {normal_text: \\n}
-  *@example C3 test_refs.texi:l25
+  *normal_command@example C3 test_refs.texi:l25
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C2
     {normal_text:mono : manual.html#Top\\n}
     {normal_text:split: ../manual/index.html#Top\\n}
-   *@end C1 test_refs.texi:l28
+   *normal_command@end C1 test_refs.texi:l28
    |EXTRA
    |text_arg:{example}
     *line_arg C3
@@ -170,7 +170,7 @@ $result_tree_text{'htmlxref_nodes'} = '*document_root C9
      {normal_text:example}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@subheading C1 test_refs.texi:l30
+  *normal_command@subheading C1 test_refs.texi:l30
   |EXTRA
   |global_command_number:{2}
   |heading_number:{2}
@@ -180,13 +180,13 @@ $result_tree_text{'htmlxref_nodes'} = '*document_root C9
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C5
-   *@verb C1 test_refs.texi:l32
+   *normal_command@verb C1 test_refs.texi:l32
     *brace_container C3
      {verb_delimiter::}
      {raw:../manual/doc.texi}
      {verb_delimiter::}
    {normal_text: }
-   *@ref C4 test_refs.texi:l32
+   *normal_command@ref C4 test_refs.texi:l32
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -196,16 +196,16 @@ $result_tree_text{'htmlxref_nodes'} = '*document_root C9
     *brace_arg C2
      {spaces_before_argument: }
      {normal_text:../manual/doc}
-   *@*
+   *normal_command@*
    {normal_text:\\n}
-  *@example C3 test_refs.texi:l33
+  *normal_command@example C3 test_refs.texi:l33
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C2
     {normal_text:mono : doc.html#node\\n}
     {normal_text:split: ../doc/node.html#node\\n}
-   *@end C1 test_refs.texi:l36
+   *normal_command@end C1 test_refs.texi:l36
    |EXTRA
    |text_arg:{example}
     *line_arg C3
@@ -213,7 +213,7 @@ $result_tree_text{'htmlxref_nodes'} = '*document_root C9
      {normal_text:example}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@subheading C1 test_refs.texi:l38
+  *normal_command@subheading C1 test_refs.texi:l38
   |EXTRA
   |global_command_number:{3}
   |heading_number:{3}
@@ -223,26 +223,26 @@ $result_tree_text{'htmlxref_nodes'} = '*document_root C9
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C4
-   *@verb C1 test_refs.texi:l40
+   *normal_command@verb C1 test_refs.texi:l40
     *brace_container C3
      {verb_delimiter::}
      {raw:!_"#$%&\'()*+-.}
      {verb_delimiter::}
    {normal_text: }
-   *@ref C1 test_refs.texi:l40
+   *normal_command@ref C1 test_refs.texi:l40
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{_0021_005f_0022_0023_0024_0025_0026_0027_0028_0029_002a_002b_002d_002e}
      {normal_text:!_"#$%&\'()*+-.}
    {normal_text:\\n}
-  *@example C3 test_refs.texi:l41
+  *normal_command@example C3 test_refs.texi:l41
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C1
     {normal_text:target: #_0021_005f_0022_0023_0024_0025_0026_0027_0028_0029_002a_002b_002d_002e\\n}
-   *@end C1 test_refs.texi:l43
+   *normal_command@end C1 test_refs.texi:l43
    |EXTRA
    |text_arg:{example}
     *line_arg C3
@@ -251,27 +251,27 @@ $result_tree_text{'htmlxref_nodes'} = '*document_root C9
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C5
-   *@verb C1 test_refs.texi:l45
+   *normal_command@verb C1 test_refs.texi:l45
     *brace_container C3
      {verb_delimiter::}
      {raw:/;<=>?[\\]^_`|~}
      {verb_delimiter::}
    {normal_text: }
-   *@ref C1 test_refs.texi:l45
+   *normal_command@ref C1 test_refs.texi:l45
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{_002f_003b_003c_003d_003e_003f_005b_005c_005d_005e_005f_0060_007c_007e}
      {normal_text:/;<=>?[\\]^_`|~}
-   *@*
+   *normal_command@*
    {normal_text:\\n}
-  *@example C3 test_refs.texi:l46
+  *normal_command@example C3 test_refs.texi:l46
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C1
     {normal_text:target: #_002f_003b_003c_003d_003e_003f_005b_005c_005d_005e_005f_0060_007c_007e\\n}
-   *@end C1 test_refs.texi:l48
+   *normal_command@end C1 test_refs.texi:l48
    |EXTRA
    |text_arg:{example}
     *line_arg C3
@@ -280,13 +280,13 @@ $result_tree_text{'htmlxref_nodes'} = '*document_root C9
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C4
-   *@verb C1 test_refs.texi:l50
+   *normal_command@verb C1 test_refs.texi:l50
     *brace_container C3
      {verb_delimiter::}
      {raw:Top}
      {verb_delimiter::}
    {normal_text: }
-   *@ref C1 test_refs.texi:l50
+   *normal_command@ref C1 test_refs.texi:l50
     *brace_arg C2
     |EXTRA
     |node_content:A{1|1}
@@ -294,13 +294,13 @@ $result_tree_text{'htmlxref_nodes'} = '*document_root C9
      {spaces_before_argument: }
      {normal_text:Top}
    {normal_text:\\n}
-  *@example C3 test_refs.texi:l51
+  *normal_command@example C3 test_refs.texi:l51
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C1
     {normal_text:target: #Top\\n}
-   *@end C1 test_refs.texi:l53
+   *normal_command@end C1 test_refs.texi:l53
    |EXTRA
    |text_arg:{example}
     *line_arg C3
@@ -309,13 +309,13 @@ $result_tree_text{'htmlxref_nodes'} = '*document_root C9
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C4
-   *@verb C1 test_refs.texi:l55
+   *normal_command@verb C1 test_refs.texi:l55
     *brace_container C3
      {verb_delimiter::}
      {raw: local   node}
      {verb_delimiter::}
    {normal_text: }
-   *@ref C1 test_refs.texi:l55
+   *normal_command@ref C1 test_refs.texi:l55
     *brace_arg C2
     |EXTRA
     |node_content:A{1|1}
@@ -323,13 +323,13 @@ $result_tree_text{'htmlxref_nodes'} = '*document_root C9
      {spaces_before_argument:  }
      {normal_text:local   node}
    {normal_text:\\n}
-  *@example C3 test_refs.texi:l56
+  *normal_command@example C3 test_refs.texi:l56
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C1
     {normal_text:target: #local-node\\n}
-   *@end C1 test_refs.texi:l58
+   *normal_command@end C1 test_refs.texi:l58
    |EXTRA
    |text_arg:{example}
     *line_arg C3
@@ -337,32 +337,32 @@ $result_tree_text{'htmlxref_nodes'} = '*document_root C9
      {normal_text:example}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@c C1
+  *normal_command@c C1
    *line_arg C3
     {spaces_before_argument: }
     {rawline_text:before 2026 was a reference to the mtexinfo external manual}
     {spaces_after_argument:\\n}
   *paragraph C4
-   *@verb C1 test_refs.texi:l61
+   *normal_command@verb C1 test_refs.texi:l61
     *brace_container C3
      {verb_delimiter::}
      {raw:(mtexinfo)Cross References}
      {verb_delimiter::}
    {normal_text: }
-   *@ref C1 test_refs.texi:l61
+   *normal_command@ref C1 test_refs.texi:l61
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{_0028mtexinfo_0029Cross-References}
      {normal_text:(mtexinfo)Cross References}
    {normal_text:\\n}
-  *@example C3 test_refs.texi:l62
+  *normal_command@example C3 test_refs.texi:l62
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C1
     {normal_text:target: #_0028mtexinfo_0029Cross-References\\n}
-   *@end C1 test_refs.texi:l64
+   *normal_command@end C1 test_refs.texi:l64
    |EXTRA
    |text_arg:{example}
     *line_arg C3
@@ -370,7 +370,7 @@ $result_tree_text{'htmlxref_nodes'} = '*document_root C9
      {normal_text:example}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@anchor C1 test_refs.texi:l66
+  *normal_command@anchor C1 test_refs.texi:l66
   |EXTRA
   |identifier:{_0028mtexinfo_0029Cross-References}
   |is_target:{1}
@@ -378,7 +378,7 @@ $result_tree_text{'htmlxref_nodes'} = '*document_root C9
     {normal_text:(mtexinfo)Cross References}
   {spaces_after_close_brace:\\n}
   {empty_line:\\n}
- *@node C1 test_refs.texi:l68 {other nodes}
+ *normal_command@node C1 test_refs.texi:l68 {other nodes}
  |EXTRA
  |identifier:{other-nodes}
  |is_target:{1}
@@ -406,7 +406,7 @@ $result_tree_text{'htmlxref_nodes'} = '*document_root C9
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@chapter C9 test_refs.texi:l69 {Chapter with nodes}
+ *normal_command@chapter C9 test_refs.texi:l69 {Chapter with nodes}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -417,13 +417,13 @@ $result_tree_text{'htmlxref_nodes'} = '*document_root C9
     {normal_text:Chapter with nodes}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@example C3 test_refs.texi:l71
+  *normal_command@example C3 test_refs.texi:l71
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C1
     {normal_text:id: other-nodes\\n}
-   *@end C1 test_refs.texi:l73
+   *normal_command@end C1 test_refs.texi:l73
    |EXTRA
    |text_arg:{example}
     *line_arg C3
@@ -432,13 +432,13 @@ $result_tree_text{'htmlxref_nodes'} = '*document_root C9
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C4
-   *@verb C1 test_refs.texi:l75
+   *normal_command@verb C1 test_refs.texi:l75
     *brace_container C3
      {verb_delimiter::}
      {raw:Top}
      {verb_delimiter::}
    {normal_text: }
-   *@ref C1 test_refs.texi:l75
+   *normal_command@ref C1 test_refs.texi:l75
     *brace_arg C2
     |EXTRA
     |node_content:A{1|1}
@@ -446,13 +446,13 @@ $result_tree_text{'htmlxref_nodes'} = '*document_root C9
      {spaces_before_argument: }
      {normal_text:Top}
    {normal_text:\\n}
-  *@example C3 test_refs.texi:l76
+  *normal_command@example C3 test_refs.texi:l76
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C1
     {normal_text:target: #Top\\n}
-   *@end C1 test_refs.texi:l78
+   *normal_command@end C1 test_refs.texi:l78
    |EXTRA
    |text_arg:{example}
     *line_arg C3
@@ -460,7 +460,7 @@ $result_tree_text{'htmlxref_nodes'} = '*document_root C9
      {normal_text:example}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C5 test_refs.texi:l80
+  *normal_command@menu C5 test_refs.texi:l80
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -497,7 +497,7 @@ $result_tree_text{'htmlxref_nodes'} = '*document_root C9
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 test_refs.texi:l84
+   *normal_command@end C1 test_refs.texi:l84
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -505,7 +505,7 @@ $result_tree_text{'htmlxref_nodes'} = '*document_root C9
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C3 test_refs.texi:l86 {!_"#$%&\'()*+-.}
+ *normal_command@node C3 test_refs.texi:l86 {!_"#$%&\'()*+-.}
  |EXTRA
  |identifier:{_0021_005f_0022_0023_0024_0025_0026_0027_0028_0029_002a_002b_002d_002e}
  |is_target:{1}
@@ -533,13 +533,13 @@ $result_tree_text{'htmlxref_nodes'} = '*document_root C9
     {spaces_before_argument: }
     {normal_text:other nodes}
     {spaces_after_argument:\\n}
-  *@example C3 test_refs.texi:l87
+  *normal_command@example C3 test_refs.texi:l87
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C1
     {normal_text:id: _0021_005f_0022_0023_0024_0025_0026_0027_0028_0029_002a_002b_002d_002e\\n}
-   *@end C1 test_refs.texi:l89
+   *normal_command@end C1 test_refs.texi:l89
    |EXTRA
    |text_arg:{example}
     *line_arg C3
@@ -547,7 +547,7 @@ $result_tree_text{'htmlxref_nodes'} = '*document_root C9
      {normal_text:example}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C3 test_refs.texi:l91 {/;<=>?[\\]^_`|~}
+ *normal_command@node C3 test_refs.texi:l91 {/;<=>?[\\]^_`|~}
  |EXTRA
  |identifier:{_002f_003b_003c_003d_003e_003f_005b_005c_005d_005e_005f_0060_007c_007e}
  |is_target:{1}
@@ -573,13 +573,13 @@ $result_tree_text{'htmlxref_nodes'} = '*document_root C9
     {spaces_before_argument: }
     {normal_text:other nodes}
     {spaces_after_argument:\\n}
-  *@example C3 test_refs.texi:l92
+  *normal_command@example C3 test_refs.texi:l92
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C1
     {normal_text:id: 002f_003b_003c_003d_003e_003f_005b_005c_005d_005e_005f_0060_007c_007e\\n}
-   *@end C1 test_refs.texi:l94
+   *normal_command@end C1 test_refs.texi:l94
    |EXTRA
    |text_arg:{example}
     *line_arg C3
@@ -587,7 +587,7 @@ $result_tree_text{'htmlxref_nodes'} = '*document_root C9
      {normal_text:example}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C3 test_refs.texi:l96 {local   node}
+ *normal_command@node C3 test_refs.texi:l96 {local   node}
  |EXTRA
  |identifier:{local-node}
  |is_target:{1}
@@ -608,13 +608,13 @@ $result_tree_text{'htmlxref_nodes'} = '*document_root C9
    |normalized:{other-nodes}
     {normal_text:other nodes}
     {spaces_after_argument:\\n}
-  *@example C3 test_refs.texi:l97
+  *normal_command@example C3 test_refs.texi:l97
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C1
     {normal_text:id: local-node\\n}
-   *@end C1 test_refs.texi:l99
+   *normal_command@end C1 test_refs.texi:l99
    |EXTRA
    |text_arg:{example}
     *line_arg C3
@@ -622,7 +622,7 @@ $result_tree_text{'htmlxref_nodes'} = '*document_root C9
      {normal_text:example}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@bye C1
+ *normal_command@bye C1
   *line_arg C1
    {spaces_before_argument:\\n}
 ';

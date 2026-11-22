@@ -13,7 +13,7 @@ $result_tree_text{'deftypefnnewline_for_copying_before'} = '*document_root C5
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content C4
-   *@deftypefnnewline C1 l2
+   *normal_command@deftypefnnewline C1 l2
    |EXTRA
    |global_command_number:{1}
    |misc_args:A{on}
@@ -22,11 +22,11 @@ $result_tree_text{'deftypefnnewline_for_copying_before'} = '*document_root C5
      {normal_text:on}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@copying C3 l4
+   *normal_command@copying C3 l4
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
-    *@deftypefun C3 l5
+    *normal_command@deftypefun C3 l5
      *def_line C1 l5
      |EXTRA
      |def_command:{deftypefun}
@@ -56,14 +56,14 @@ $result_tree_text{'deftypefnnewline_for_copying_before'} = '*document_root C5
      *def_item C1
       *paragraph C1
        {normal_text:BODY-OF-DESCRIPTION\\n}
-     *@end C1 l7
+     *normal_command@end C1 l7
      |EXTRA
      |text_arg:{deftypefun}
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:deftypefun}
        {spaces_after_argument:\\n}
-    *@end C1 l8
+    *normal_command@end C1 l8
     |EXTRA
     |text_arg:{copying}
      *line_arg C3
@@ -71,7 +71,7 @@ $result_tree_text{'deftypefnnewline_for_copying_before'} = '*document_root C5
       {normal_text:copying}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@node C1 l10 {Top}
+ *normal_command@node C1 l10 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -81,7 +81,7 @@ $result_tree_text{'deftypefnnewline_for_copying_before'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l11 {top}
+ *normal_command@top C2 l11 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -91,7 +91,7 @@ $result_tree_text{'deftypefnnewline_for_copying_before'} = '*document_root C5
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l13 {chap}
+ *normal_command@node C1 l13 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -101,7 +101,7 @@ $result_tree_text{'deftypefnnewline_for_copying_before'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:chap}
     {spaces_after_argument:\\n}
- *@chapter C4 l14 {Chapter}
+ *normal_command@chapter C4 l14 {Chapter}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -112,7 +112,7 @@ $result_tree_text{'deftypefnnewline_for_copying_before'} = '*document_root C5
     {normal_text:Chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@deftypefun C3 l16
+  *normal_command@deftypefun C3 l16
    *def_line C1 l16
    |EXTRA
    |def_command:{deftypefun}
@@ -142,7 +142,7 @@ $result_tree_text{'deftypefnnewline_for_copying_before'} = '*document_root C5
    *def_item C1
     *paragraph C1
      {normal_text:do something with input\\n}
-   *@end C1 l18
+   *normal_command@end C1 l18
    |EXTRA
    |text_arg:{deftypefun}
     *line_arg C3

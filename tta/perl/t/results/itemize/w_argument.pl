@@ -11,32 +11,32 @@ use Encode;
 $result_tree_text{'w_argument'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@itemize C4 l1
+  *normal_command@itemize C4 l1
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     *@w C1 l1
+     *normal_command@w C1 l1
       *brace_container
      {spaces_after_argument:\\n}
-   *@item C2 l2
+   *normal_command@item C2 l2
    |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C2
-     *@option C1 l2
+     *normal_command@option C1 l2
       *brace_container C1
        {normal_text:--build=}
      {normal_text: platform on which the program is compiled,\\n}
-   *@item C2 l3
+   *normal_command@item C2 l3
    |EXTRA
    |item_number:{2}
     {ignorable_spaces_after_command: }
     *paragraph C2
-     *@option C1 l3
+     *normal_command@option C1 l3
       *brace_container C1
        {normal_text:--target=}
      {normal_text: target platform on which the program is processed.\\n}
-   *@end C1 l4
+   *normal_command@end C1 l4
    |EXTRA
    |text_arg:{itemize}
     *line_arg C3

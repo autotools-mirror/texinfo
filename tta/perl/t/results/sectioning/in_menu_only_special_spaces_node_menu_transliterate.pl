@@ -13,7 +13,7 @@ $result_tree_text{'in_menu_only_special_spaces_node_menu_transliterate'} = '*doc
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content
- *@node C1 in_menu_only_special_spaces_node.texi:l2 {Top}
+ *normal_command@node C1 in_menu_only_special_spaces_node.texi:l2 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -23,7 +23,7 @@ $result_tree_text{'in_menu_only_special_spaces_node_menu_transliterate'} = '*doc
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C5 in_menu_only_special_spaces_node.texi:l3 {top}
+ *normal_command@top C5 in_menu_only_special_spaces_node.texi:l3 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -33,7 +33,7 @@ $result_tree_text{'in_menu_only_special_spaces_node_menu_transliterate'} = '*doc
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C8 in_menu_only_special_spaces_node.texi:l5
+  *normal_command@menu C8 in_menu_only_special_spaces_node.texi:l5
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -95,12 +95,12 @@ $result_tree_text{'in_menu_only_special_spaces_node_menu_transliterate'} = '*doc
     *menu_entry_description C1
      *preformatted C2
       {normal_text:\\n}
-      *@c C1
+      *normal_command@c C1
        *line_arg C3
         {spaces_before_argument: }
         {rawline_text:*   ::}
         {spaces_after_argument:\\n}
-   *@end C1 in_menu_only_special_spaces_node.texi:l13
+   *normal_command@end C1 in_menu_only_special_spaces_node.texi:l13
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -109,7 +109,7 @@ $result_tree_text{'in_menu_only_special_spaces_node_menu_transliterate'} = '*doc
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   {empty_line:\\n}
- *@node C1 in_menu_only_special_spaces_node.texi:l16 {   }
+ *normal_command@node C1 in_menu_only_special_spaces_node.texi:l16 {   }
  |EXTRA
  |identifier:{_2002_2003_2002}
  |is_target:{1}
@@ -119,7 +119,7 @@ $result_tree_text{'in_menu_only_special_spaces_node_menu_transliterate'} = '*doc
     {spaces_before_argument: }
     {normal_text:   }
     {spaces_after_argument:\\n}
- *@chapter C2 in_menu_only_special_spaces_node.texi:l17 {EN QUAD| | EM QUAD| | EN SPACE| |}
+ *normal_command@chapter C2 in_menu_only_special_spaces_node.texi:l17 {EN QUAD| | EM QUAD| | EN SPACE| |}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -130,11 +130,11 @@ $result_tree_text{'in_menu_only_special_spaces_node_menu_transliterate'} = '*doc
     {normal_text:EN QUAD| | EM QUAD| | EN SPACE| |}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 in_menu_only_special_spaces_node.texi:l19
+ *normal_command@node C1 in_menu_only_special_spaces_node.texi:l19
   *arguments_line C1
    *line_arg C1
     {spaces_before_argument: \\t\\f\\n}
- *@chapter C2 in_menu_only_special_spaces_node.texi:l20 {CHARACTER TABULATION|	| FORM FEED|| LINE TABULATION||}
+ *normal_command@chapter C2 in_menu_only_special_spaces_node.texi:l20 {CHARACTER TABULATION|	| FORM FEED|| LINE TABULATION||}
  |EXTRA
  |identifier:{CHARACTER-TABULATION_007c-_007c-FORM-FEED_007c-_007c-LINE-TABULATION_007c-_007c}
  |is_target:{1}
@@ -147,11 +147,11 @@ $result_tree_text{'in_menu_only_special_spaces_node_menu_transliterate'} = '*doc
     {normal_text:CHARACTER TABULATION|\\t| FORM FEED|\\f| LINE TABULATION||}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 in_menu_only_special_spaces_node.texi:l22
+ *normal_command@node C1 in_menu_only_special_spaces_node.texi:l22
   *arguments_line C1
    *line_arg C1
     {spaces_before_argument: '."\r".'\\n}
- *@chapter C2 in_menu_only_special_spaces_node.texi:l23 {CARRIAGE RETURN|'."\r".'|}
+ *normal_command@chapter C2 in_menu_only_special_spaces_node.texi:l23 {CARRIAGE RETURN|'."\r".'|}
  |EXTRA
  |identifier:{CARRIAGE-RETURN_007c-_007c}
  |is_target:{1}
@@ -164,7 +164,7 @@ $result_tree_text{'in_menu_only_special_spaces_node_menu_transliterate'} = '*doc
     {normal_text:CARRIAGE RETURN|'."\r".'|}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 in_menu_only_special_spaces_node.texi:l25 {  }
+ *normal_command@node C1 in_menu_only_special_spaces_node.texi:l25 {  }
  |EXTRA
  |identifier:{_0085_00a0_1680}
  |is_target:{1}
@@ -174,7 +174,7 @@ $result_tree_text{'in_menu_only_special_spaces_node_menu_transliterate'} = '*doc
     {spaces_before_argument: }
     {normal_text:  }
     {spaces_after_argument:\\n}
- *@chapter C4 in_menu_only_special_spaces_node.texi:l26 {NO-BREAK SPACE| |}
+ *normal_command@chapter C4 in_menu_only_special_spaces_node.texi:l26 {NO-BREAK SPACE| |}
  |EXTRA
  |section_heading_number:{4}
  |section_level:{1}
@@ -184,18 +184,18 @@ $result_tree_text{'in_menu_only_special_spaces_node_menu_transliterate'} = '*doc
     {spaces_before_argument: }
     {normal_text:NO-BREAK SPACE| |}
     {spaces_after_argument:\\n}
-  *@c C1
+  *normal_command@c C1
    *line_arg C3
     {spaces_before_argument: }
     {rawline_text:different transliteration in Perl and C}
     {spaces_after_argument:\\n}
-  *@c C1
+  *normal_command@c C1
    *line_arg C3
     {spaces_before_argument: }
     {rawline_text:NEXT LINE (NEL)|| OGHAM SPACE MARK| |}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 in_menu_only_special_spaces_node.texi:l30 {᠎ }
+ *normal_command@node C1 in_menu_only_special_spaces_node.texi:l30 {᠎ }
  |EXTRA
  |identifier:{_180e_2003}
  |is_target:{1}
@@ -205,7 +205,7 @@ $result_tree_text{'in_menu_only_special_spaces_node_menu_transliterate'} = '*doc
     {spaces_before_argument: }
     {normal_text:᠎ }
     {spaces_after_argument:\\n}
- *@chapter C4 in_menu_only_special_spaces_node.texi:l31 {EM SPACE| |}
+ *normal_command@chapter C4 in_menu_only_special_spaces_node.texi:l31 {EM SPACE| |}
  |EXTRA
  |section_heading_number:{5}
  |section_level:{1}
@@ -215,18 +215,18 @@ $result_tree_text{'in_menu_only_special_spaces_node_menu_transliterate'} = '*doc
     {spaces_before_argument: }
     {normal_text:EM SPACE| |}
     {spaces_after_argument:\\n}
-  *@c C1
+  *normal_command@c C1
    *line_arg C3
     {spaces_before_argument: }
     {rawline_text:different transliteration in Perl and C}
     {spaces_after_argument:\\n}
-  *@c C1
+  *normal_command@c C1
    *line_arg C3
     {spaces_before_argument: }
     {rawline_text:MONGOLIAN VOWEL SEPARATOR|᠎|}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 in_menu_only_special_spaces_node.texi:l35 {         　}
+ *normal_command@node C1 in_menu_only_special_spaces_node.texi:l35 {         　}
  |EXTRA
  |identifier:{_2004_2005_2006_2007_2008_2009_200a_202f_205f_3000}
  |is_target:{1}
@@ -236,7 +236,7 @@ $result_tree_text{'in_menu_only_special_spaces_node_menu_transliterate'} = '*doc
     {spaces_before_argument: }
     {normal_text:         　}
     {spaces_after_argument:\\n}
- *@chapter C7 in_menu_only_special_spaces_node.texi:l36 {THREE-PER-EM SPACE| | FOUR-PER-EM SPACE| | SIX-PER-EM SPACE| | PUNCTUATION SPACE| | THIN SPACE| | HAIR SPACE| | NARROW NO-BREAK SPACE| | IDEOGRAPHIC SPACE|　|}
+ *normal_command@chapter C7 in_menu_only_special_spaces_node.texi:l36 {THREE-PER-EM SPACE| | FOUR-PER-EM SPACE| | SIX-PER-EM SPACE| | PUNCTUATION SPACE| | THIN SPACE| | HAIR SPACE| | NARROW NO-BREAK SPACE| | IDEOGRAPHIC SPACE|　|}
  |EXTRA
  |section_heading_number:{6}
  |section_level:{1}
@@ -246,29 +246,29 @@ $result_tree_text{'in_menu_only_special_spaces_node_menu_transliterate'} = '*doc
     {spaces_before_argument: }
     {normal_text:THREE-PER-EM SPACE| | FOUR-PER-EM SPACE| | SIX-PER-EM SPACE| | PUNCTUATION SPACE| | THIN SPACE| | HAIR SPACE| | NARROW NO-BREAK SPACE| | IDEOGRAPHIC SPACE|　|}
     {spaces_after_argument:\\n}
-  *@c C1
+  *normal_command@c C1
    *line_arg C3
     {spaces_before_argument: }
     {rawline_text:FIGURE SPACE| | MEDIUM MATHEMATICAL SPACE| |}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@c C1
+  *normal_command@c C1
    *line_arg C3
     {spaces_before_argument: }
     {rawline_text:Perl and C code give different width.}
     {spaces_after_argument:\\n}
-  *@c C1
+  *normal_command@c C1
    *line_arg C3
     {spaces_before_argument: }
     {rawline_text:@node   }
     {spaces_after_argument:\\n}
-  *@c C1
+  *normal_command@c C1
    *line_arg C3
     {spaces_before_argument: }
     {rawline_text:@chapter LINE SEPARATOR| | PARAGRAPH SEPARATOR| |}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@bye C1
+ *normal_command@bye C1
   *line_arg C1
    {spaces_before_argument:\\n}
 ';

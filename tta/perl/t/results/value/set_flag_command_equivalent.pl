@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'set_flag_command_equivalent'} = '*document_root C1
  *before_node_section C4
   *preamble_before_content C2
-   *@set C1 l1
+   *normal_command@set C1 l1
    |EXTRA
    |global_command_number:{1}
    |misc_args:A{txicodequoteundirected|}
@@ -24,12 +24,12 @@ $result_tree_text{'set_flag_command_equivalent'} = '*document_root C1
    {normal_text:.\\n}
    >SOURCEMARKS
    >value_expansion<start;1>{}
-    >*@value C1
+    >*normal_command@value C1
      >*brace_container C1
       >{normal_text:txicodequoteundirected}
    >value_expansion<end;1>
   {empty_line:\\n}
-  *@clear C1 l5
+  *normal_command@clear C1 l5
   |EXTRA
   |global_command_number:{2}
   |misc_args:A{txicodequoteundirected}

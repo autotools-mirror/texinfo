@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'submenu_in_example'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
- *@node C3 l1 {first}
+ *normal_command@node C3 l1 {first}
  |EXTRA
  |identifier:{first}
  |is_target:{1}
@@ -22,7 +22,7 @@ $result_tree_text{'submenu_in_example'} = '*document_root C2
     {normal_text:first}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@example C4 l3
+  *normal_command@example C4 l3
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -30,7 +30,7 @@ $result_tree_text{'submenu_in_example'} = '*document_root C2
     {empty_line:\\n}
     {normal_text:in example\\n}
     {empty_line:\\n}
-   *@menu C9 l7
+   *normal_command@menu C9 l7
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
@@ -38,11 +38,11 @@ $result_tree_text{'submenu_in_example'} = '*document_root C2
      *preformatted C2
       {normal_text:in submenu\\n}
       {empty_line:\\n}
-    *@menu C2 l10
+    *normal_command@menu C2 l10
      *arguments_line C1
       *block_line_arg C1
        {spaces_before_argument:\\n}
-     *@end C1 l11
+     *normal_command@end C1 l11
      |EXTRA
      |text_arg:{menu}
       *line_arg C3
@@ -52,14 +52,14 @@ $result_tree_text{'submenu_in_example'} = '*document_root C2
     *menu_comment C1
      *preformatted C1
       {empty_line:\\n}
-    *@menu C3 l13
+    *normal_command@menu C3 l13
      *arguments_line C1
       *block_line_arg C1
        {spaces_before_argument:\\n}
      *menu_comment C1
       *preformatted C1
        {normal_text:in submenu\\n}
-     *@end C1 l15
+     *normal_command@end C1 l15
      |EXTRA
      |text_arg:{menu}
       *line_arg C3
@@ -69,25 +69,25 @@ $result_tree_text{'submenu_in_example'} = '*document_root C2
     *menu_comment C1
      *preformatted C1
       {empty_line:\\n}
-    *@menu C3 l17
+    *normal_command@menu C3 l17
      *arguments_line C1
       *block_line_arg C1
        {spaces_before_argument:\\n}
      *menu_comment C1
-      *@quotation C3 l18
+      *normal_command@quotation C3 l18
        *arguments_line C1
         *block_line_arg C1
          {spaces_before_argument:\\n}
        *preformatted C1
         {normal_text:A quot---ation in submenu\\n}
-       *@end C1 l20
+       *normal_command@end C1 l20
        |EXTRA
        |text_arg:{quotation}
         *line_arg C3
          {spaces_before_argument: }
          {normal_text:quotation}
          {spaces_after_argument:\\n}
-     *@end C1 l21
+     *normal_command@end C1 l21
      |EXTRA
      |text_arg:{menu}
       *line_arg C3
@@ -97,7 +97,7 @@ $result_tree_text{'submenu_in_example'} = '*document_root C2
     *menu_comment C5
      *preformatted C1
       {empty_line:\\n}
-     *@subheading C1 l23
+     *normal_command@subheading C1 l23
      |EXTRA
      |global_command_number:{1}
      |heading_number:{1}
@@ -107,17 +107,17 @@ $result_tree_text{'submenu_in_example'} = '*document_root C2
        {spaces_after_argument:\\n}
      *preformatted C1
       {empty_line:\\n}
-     *@enumerate C3 l25
+     *normal_command@enumerate C3 l25
       *arguments_line C1
        *block_line_arg C1
         {spaces_before_argument:\\n}
-      *@item C1 l26
+      *normal_command@item C1 l26
       |EXTRA
       |item_number:{1}
        *preformatted C2
         {ignorable_spaces_after_command: }
         {normal_text:e--numerate\\n}
-      *@end C1 l27
+      *normal_command@end C1 l27
       |EXTRA
       |text_arg:{enumerate}
        *line_arg C3
@@ -126,14 +126,14 @@ $result_tree_text{'submenu_in_example'} = '*document_root C2
         {spaces_after_argument:\\n}
      *preformatted C1
       {empty_line:\\n}
-    *@end C1 l29
+    *normal_command@end C1 l29
     |EXTRA
     |text_arg:{menu}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:menu}
       {spaces_after_argument:\\n}
-   *@end C1 l30
+   *normal_command@end C1 l30
    |EXTRA
    |text_arg:{example}
     *line_arg C3

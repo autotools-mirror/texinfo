@@ -13,7 +13,7 @@ $result_tree_text{'encoding_index_utf8'} = '*document_root C5
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content C2
-   *@documentencoding C1 encoding_index_utf8.texi:l2
+   *normal_command@documentencoding C1 encoding_index_utf8.texi:l2
    |EXTRA
    |global_command_number:{1}
    |input_encoding_name:{utf-8}
@@ -23,7 +23,7 @@ $result_tree_text{'encoding_index_utf8'} = '*document_root C5
      {normal_text:utf-8}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@node C1 encoding_index_utf8.texi:l4 {Top}
+ *normal_command@node C1 encoding_index_utf8.texi:l4 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -33,7 +33,7 @@ $result_tree_text{'encoding_index_utf8'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 encoding_index_utf8.texi:l5 {encoding index utf8}
+ *normal_command@top C2 encoding_index_utf8.texi:l5 {encoding index utf8}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -43,7 +43,7 @@ $result_tree_text{'encoding_index_utf8'} = '*document_root C5
     {normal_text:encoding index utf8}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C59 encoding_index_utf8.texi:l7 {chap}
+ *normal_command@node C59 encoding_index_utf8.texi:l7 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -69,17 +69,17 @@ $result_tree_text{'encoding_index_utf8'} = '*document_root C5
   |index_entry:I{cp,2}
    *line_arg C7
     {spaces_before_argument: }
-    *@" C1 encoding_index_utf8.texi:l10
+    *normal_command@" C1 encoding_index_utf8.texi:l10
      *brace_container C1
       {normal_text:i}
     {normal_text: }
-    *@" C1 encoding_index_utf8.texi:l10
+    *normal_command@" C1 encoding_index_utf8.texi:l10
      *brace_container C1
       {normal_text:i}
-    *@" C1 encoding_index_utf8.texi:l10
+    *normal_command@" C1 encoding_index_utf8.texi:l10
      *brace_container C1
       {normal_text:i}
-    *@" C1 encoding_index_utf8.texi:l10
+    *normal_command@" C1 encoding_index_utf8.texi:l10
      *brace_container C1
       {normal_text:i}
     {spaces_after_argument:\\n}
@@ -89,20 +89,20 @@ $result_tree_text{'encoding_index_utf8'} = '*document_root C5
   |index_entry:I{cp,3}
    *line_arg C8
     {spaces_before_argument: }
-    *@^ C1 encoding_index_utf8.texi:l11
+    *normal_command@^ C1 encoding_index_utf8.texi:l11
      *following_arg C1
       {normal_text:i}
     {normal_text: }
-    *@^ C1 encoding_index_utf8.texi:l11
+    *normal_command@^ C1 encoding_index_utf8.texi:l11
      *following_arg C1
       {normal_text:i}
-    *@^ C1 encoding_index_utf8.texi:l11
+    *normal_command@^ C1 encoding_index_utf8.texi:l11
      *following_arg C1
       {normal_text:i}
-    *@^ C1 encoding_index_utf8.texi:l11
+    *normal_command@^ C1 encoding_index_utf8.texi:l11
      *following_arg C1
       {normal_text:i}
-    *@^ C1 encoding_index_utf8.texi:l11
+    *normal_command@^ C1 encoding_index_utf8.texi:l11
      *following_arg C1
       {normal_text:i}
     {spaces_after_argument:\\n}
@@ -336,7 +336,7 @@ $result_tree_text{'encoding_index_utf8'} = '*document_root C5
   |index_entry:I{cp,32}
    *line_arg C3
     {spaces_before_argument: }
-    *@l C1 encoding_index_utf8.texi:l40
+    *normal_command@l C1 encoding_index_utf8.texi:l40
      *brace_container
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 encoding_index_utf8.texi:l41
@@ -345,7 +345,7 @@ $result_tree_text{'encoding_index_utf8'} = '*document_root C5
   |index_entry:I{cp,33}
    *line_arg C3
     {spaces_before_argument: }
-    *@L C1 encoding_index_utf8.texi:l41
+    *normal_command@L C1 encoding_index_utf8.texi:l41
      *brace_container
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 encoding_index_utf8.texi:l42
@@ -354,11 +354,11 @@ $result_tree_text{'encoding_index_utf8'} = '*document_root C5
   |index_entry:I{cp,34}
    *line_arg C6
     {spaces_before_argument: }
-    *@dotless C1 encoding_index_utf8.texi:l42
+    *normal_command@dotless C1 encoding_index_utf8.texi:l42
      *brace_container C1
       {normal_text:i}
     {normal_text: }
-    *@dotless C1 encoding_index_utf8.texi:l42
+    *normal_command@dotless C1 encoding_index_utf8.texi:l42
      *brace_container C1
       {normal_text:i}
     {normal_text: (dotless)}
@@ -369,15 +369,15 @@ $result_tree_text{'encoding_index_utf8'} = '*document_root C5
   |index_entry:I{cp,35}
    *line_arg C6
     {spaces_before_argument: }
-    *@^ C1 encoding_index_utf8.texi:l43
+    *normal_command@^ C1 encoding_index_utf8.texi:l43
      *brace_container C1
-      *@dotless C1 encoding_index_utf8.texi:l43
+      *normal_command@dotless C1 encoding_index_utf8.texi:l43
        *brace_container C1
         {normal_text:i}
     {normal_text: }
-    *@^ C1 encoding_index_utf8.texi:l43
+    *normal_command@^ C1 encoding_index_utf8.texi:l43
      *brace_container C1
-      *@dotless C1 encoding_index_utf8.texi:l43
+      *normal_command@dotless C1 encoding_index_utf8.texi:l43
        *brace_container C1
         {normal_text:i}
     {normal_text: (dotless)}
@@ -388,7 +388,7 @@ $result_tree_text{'encoding_index_utf8'} = '*document_root C5
   |index_entry:I{cp,36}
    *line_arg C3
     {spaces_before_argument: }
-    *@ss C1 encoding_index_utf8.texi:l44
+    *normal_command@ss C1 encoding_index_utf8.texi:l44
      *brace_container
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 encoding_index_utf8.texi:l45
@@ -397,7 +397,7 @@ $result_tree_text{'encoding_index_utf8'} = '*document_root C5
   |index_entry:I{cp,37}
    *line_arg C3
     {spaces_before_argument: }
-    *@euro C1 encoding_index_utf8.texi:l45
+    *normal_command@euro C1 encoding_index_utf8.texi:l45
      *brace_container
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 encoding_index_utf8.texi:l46
@@ -406,7 +406,7 @@ $result_tree_text{'encoding_index_utf8'} = '*document_root C5
   |index_entry:I{cp,38}
    *line_arg C3
     {spaces_before_argument: }
-    *@AE C1 encoding_index_utf8.texi:l46
+    *normal_command@AE C1 encoding_index_utf8.texi:l46
      *brace_container
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 encoding_index_utf8.texi:l47
@@ -415,7 +415,7 @@ $result_tree_text{'encoding_index_utf8'} = '*document_root C5
   |index_entry:I{cp,39}
    *line_arg C3
     {spaces_before_argument: }
-    *@exclamdown C1 encoding_index_utf8.texi:l47
+    *normal_command@exclamdown C1 encoding_index_utf8.texi:l47
      *brace_container
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 encoding_index_utf8.texi:l48
@@ -424,7 +424,7 @@ $result_tree_text{'encoding_index_utf8'} = '*document_root C5
   |index_entry:I{cp,40}
    *line_arg C3
     {spaces_before_argument: }
-    *@TH C1 encoding_index_utf8.texi:l48
+    *normal_command@TH C1 encoding_index_utf8.texi:l48
      *brace_container
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 encoding_index_utf8.texi:l49
@@ -433,7 +433,7 @@ $result_tree_text{'encoding_index_utf8'} = '*document_root C5
   |index_entry:I{cp,41}
    *line_arg C3
     {spaces_before_argument: }
-    *@DH C1 encoding_index_utf8.texi:l49
+    *normal_command@DH C1 encoding_index_utf8.texi:l49
      *brace_container
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 encoding_index_utf8.texi:l50
@@ -442,7 +442,7 @@ $result_tree_text{'encoding_index_utf8'} = '*document_root C5
   |index_entry:I{cp,42}
    *line_arg C3
     {spaces_before_argument: }
-    *@textdegree C1 encoding_index_utf8.texi:l50
+    *normal_command@textdegree C1 encoding_index_utf8.texi:l50
      *brace_container
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 encoding_index_utf8.texi:l51
@@ -467,7 +467,7 @@ $result_tree_text{'encoding_index_utf8'} = '*document_root C5
   |index_entry:I{cp,45}
    *line_arg C3
     {spaces_before_argument: }
-    *@quotedblleft C1 encoding_index_utf8.texi:l53
+    *normal_command@quotedblleft C1 encoding_index_utf8.texi:l53
      *brace_container
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 encoding_index_utf8.texi:l54
@@ -476,7 +476,7 @@ $result_tree_text{'encoding_index_utf8'} = '*document_root C5
   |index_entry:I{cp,46}
    *line_arg C3
     {spaces_before_argument: }
-    *@geq C1 encoding_index_utf8.texi:l54
+    *normal_command@geq C1 encoding_index_utf8.texi:l54
      *brace_container
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 encoding_index_utf8.texi:l55
@@ -485,7 +485,7 @@ $result_tree_text{'encoding_index_utf8'} = '*document_root C5
   |index_entry:I{cp,47}
    *line_arg C3
     {spaces_before_argument: }
-    *@comma C1 encoding_index_utf8.texi:l55
+    *normal_command@comma C1 encoding_index_utf8.texi:l55
      *brace_container
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 encoding_index_utf8.texi:l56
@@ -534,7 +534,7 @@ $result_tree_text{'encoding_index_utf8'} = '*document_root C5
   |index_entry:I{cp,53}
    *line_arg C3
     {spaces_before_argument: }
-    *@@
+    *normal_command@@
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 encoding_index_utf8.texi:l62
   |EXTRA
@@ -553,7 +553,7 @@ $result_tree_text{'encoding_index_utf8'} = '*document_root C5
     {normal_text:---}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@printindex C1 encoding_index_utf8.texi:l65
+  *normal_command@printindex C1 encoding_index_utf8.texi:l65
   |EXTRA
   |global_command_number:{1}
   |misc_args:A{cp}
@@ -561,7 +561,7 @@ $result_tree_text{'encoding_index_utf8'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:cp}
     {spaces_after_argument:\\n}
- *@bye C1
+ *normal_command@bye C1
   *line_arg C1
    {spaces_before_argument:\\n}
 ';

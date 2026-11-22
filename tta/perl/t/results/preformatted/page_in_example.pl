@@ -11,16 +11,16 @@ use Encode;
 $result_tree_text{'page_in_example'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@example C4 l1
+  *normal_command@example C4 l1
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
-   *@page C1
+   *normal_command@page C1
     *line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C1
     {normal_text:text\\n}
-   *@end C1 l4
+   *normal_command@end C1 l4
    |EXTRA
    |text_arg:{example}
     *line_arg C3

@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'contents_in_html_text'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content
- *@top C2 l1 {top}
+ *normal_command@top C2 l1 {top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -23,7 +23,7 @@ $result_tree_text{'contents_in_html_text'} = '*document_root C5
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@chapter C2 l3 {Chap1}
+ *normal_command@chapter C2 l3 {Chap1}
  |EXTRA
  |identifier:{Chap1}
  |is_target:{1}
@@ -36,7 +36,7 @@ $result_tree_text{'contents_in_html_text'} = '*document_root C5
     {normal_text:Chap1}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@section C2 l5 {Sec 1}
+ *normal_command@section C2 l5 {Sec 1}
  |EXTRA
  |identifier:{Sec-1}
  |is_target:{1}
@@ -49,7 +49,7 @@ $result_tree_text{'contents_in_html_text'} = '*document_root C5
     {normal_text:Sec 1}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@chapter C4 l7 {Chap2}
+ *normal_command@chapter C4 l7 {Chap2}
  |EXTRA
  |identifier:{Chap2}
  |is_target:{1}
@@ -62,12 +62,12 @@ $result_tree_text{'contents_in_html_text'} = '*document_root C5
     {normal_text:Chap2}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@shortcontents C1 l9
+  *normal_command@shortcontents C1 l9
   |EXTRA
   |global_command_number:{1}
    *line_arg C1
     {spaces_before_argument:\\n}
-  *@contents C1 l10
+  *normal_command@contents C1 l10
   |EXTRA
   |global_command_number:{1}
    *line_arg C1

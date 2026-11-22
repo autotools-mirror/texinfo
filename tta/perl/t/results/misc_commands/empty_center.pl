@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'empty_center'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@center C1 l1
+  *normal_command@center C1 l1
    *line_arg C1
     {spaces_before_argument: \\n}
 ';

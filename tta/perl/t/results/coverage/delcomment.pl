@@ -14,12 +14,12 @@ $result_tree_text{'delcomment'} = '*document_root C2
    {text_before_beginning:\\input texinfo\\n}
    {text_before_beginning:\\n}
   *preamble_before_content C4
-   *@c C1
+   *normal_command@c C1
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:this tests both the del comment and a file without}
      {spaces_after_argument:\\n}
-   *@c C1
+   *normal_command@c C1
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:element.}
@@ -31,7 +31,7 @@ $result_tree_text{'delcomment'} = '*document_root C2
   *paragraph C1
    {normal_text:This line is the only output.\\n}
   {empty_line:\\n}
- *@bye C1
+ *normal_command@bye C1
   *line_arg C1
    {spaces_before_argument:\\n}
 ';

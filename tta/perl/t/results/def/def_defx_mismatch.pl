@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'def_defx_mismatch'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@defun C4 l1
+  *normal_command@defun C4 l1
    *def_line C1 l1
    |EXTRA
    |def_command:{defun}
@@ -35,16 +35,16 @@ $result_tree_text{'def_defx_mismatch'} = '*document_root C1
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@var C1 l1
+       *normal_command@var C1 l1
         *brace_container C1
          {normal_text:arg}
      {spaces: }
      *def_arg C1
       *def_line_arg C1
-       *@dots C1 l1
+       *normal_command@dots C1 l1
         *brace_container
      {spaces_after_argument:\\n}
-   *@deffnx C1 l2
+   *normal_command@deffnx C1 l2
    |EXTRA
    |def_command:{deffn}
    |index_entry:I{fn,2}
@@ -81,7 +81,7 @@ $result_tree_text{'def_defx_mismatch'} = '*document_root C1
     *paragraph C1
      {normal_text:In defun.\\n}
     {empty_line:\\n}
-   *@end C1 l6
+   *normal_command@end C1 l6
    |EXTRA
    |text_arg:{defun}
     *line_arg C3

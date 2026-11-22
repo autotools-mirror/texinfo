@@ -11,14 +11,14 @@ use Encode;
 $result_tree_text{'macro_call_in_node_manual'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C12
-   *@macro C3 l1
+   *normal_command@macro C3 l1
    |EXTRA
    |formal_args:A{}
    |macro_name:{openbrace}
     *arguments_line C1
      {macro_line: openbrace\\n}
     {raw:(\\n}
-    *@end C1 l3
+    *normal_command@end C1 l3
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -26,14 +26,14 @@ $result_tree_text{'macro_call_in_node_manual'} = '*document_root C1
       {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@macro C3 l5
+   *normal_command@macro C3 l5
    |EXTRA
    |formal_args:A{}
    |macro_name:{openbracetext}
     *arguments_line C1
      {macro_line: openbracetext\\n}
     {raw:(begin\\n}
-    *@end C1 l7
+    *normal_command@end C1 l7
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -41,14 +41,14 @@ $result_tree_text{'macro_call_in_node_manual'} = '*document_root C1
       {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@macro C3 l9
+   *normal_command@macro C3 l9
    |EXTRA
    |formal_args:A{}
    |macro_name:{manualnameend}
     *arguments_line C1
      {macro_line: manualnameend\\n}
     {raw:last\\n}
-    *@end C1 l11
+    *normal_command@end C1 l11
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -56,14 +56,14 @@ $result_tree_text{'macro_call_in_node_manual'} = '*document_root C1
       {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@macro C3 l13
+   *normal_command@macro C3 l13
    |EXTRA
    |formal_args:A{}
    |macro_name:{manualnameendbrace}
     *arguments_line C1
      {macro_line: manualnameendbrace\\n}
     {raw:last)\\n}
-    *@end C1 l15
+    *normal_command@end C1 l15
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -71,14 +71,14 @@ $result_tree_text{'macro_call_in_node_manual'} = '*document_root C1
       {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@macro C3 l17
+   *normal_command@macro C3 l17
    |EXTRA
    |formal_args:A{}
    |macro_name:{manualnameendbracespace}
     *arguments_line C1
      {macro_line: manualnameendbracespace\\n}
     {raw:last)   \\n}
-    *@end C1 l19
+    *normal_command@end C1 l19
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -86,14 +86,14 @@ $result_tree_text{'macro_call_in_node_manual'} = '*document_root C1
       {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@macro C3 l21
+   *normal_command@macro C3 l21
    |EXTRA
    |formal_args:A{}
    |macro_name:{manualnameendbracespacetext}
     *arguments_line C1
      {macro_line: manualnameendbracespacetext\\n}
     {raw:last)  mynode\\n}
-    *@end C1 l23
+    *normal_command@end C1 l23
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -101,7 +101,7 @@ $result_tree_text{'macro_call_in_node_manual'} = '*document_root C1
       {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-  *@menu C10 l25
+  *normal_command@menu C10 l25
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -218,7 +218,7 @@ $result_tree_text{'macro_call_in_node_manual'} = '*document_root C1
      {normal_text:begin}
      >SOURCEMARKS
      >macro_expansion<end;7><p:5>
-     *@code C1 l31
+     *normal_command@code C1 l31
      >SOURCEMARKS
      >macro_expansion<start;8>
       >*macro_call@manualnameendbrace C1
@@ -277,7 +277,7 @@ $result_tree_text{'macro_call_in_node_manual'} = '*document_root C1
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l34
+   *normal_command@end C1 l34
    |EXTRA
    |text_arg:{menu}
     *line_arg C3

@@ -11,13 +11,13 @@ use Encode;
 $result_tree_text{'empty_table'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@table C2 l1
+  *normal_command@table C2 l1
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     *@code l1
+     *normal_command@code l1
      {spaces_after_argument:\\n}
-   *@end C1 l2
+   *normal_command@end C1 l2
    |EXTRA
    |text_arg:{table}
     *line_arg C3

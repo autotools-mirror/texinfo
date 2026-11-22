@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'refs_formatting'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {chapter}
+ *normal_command@node C1 l1 {chapter}
  |EXTRA
  |identifier:{chapter}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
     {spaces_before_argument: }
     {normal_text:chapter}
     {spaces_after_argument:\\n}
- *@chapter C7 l2 {chapter}
+ *normal_command@chapter C7 l2 {chapter}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -33,15 +33,15 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C56
-   *@code C1 l4
+   *normal_command@code C1 l4
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:ref}
-     *@{
+     *normal_command@{
      {normal_text:chapter,cross ref name}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@ref C2 l4
+   *normal_command@ref C2 l4
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -50,15 +50,15 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
     *brace_arg C1
      {normal_text:cross ref name}
    {normal_text:\\n}
-   *@code C1 l5
+   *normal_command@code C1 l5
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:ref}
-     *@{
+     *normal_command@{
      {normal_text:chapter,,title}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@ref C3 l5
+   *normal_command@ref C3 l5
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -68,15 +68,15 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
     *brace_arg C1
      {normal_text:title}
    {normal_text:\\n}
-   *@code C1 l6
+   *normal_command@code C1 l6
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:ref}
-     *@{
+     *normal_command@{
      {normal_text:chapter,,,file name}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@ref C4 l6
+   *normal_command@ref C4 l6
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -86,15 +86,15 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
     *brace_arg C1
      {normal_text:file name}
    {normal_text:\\n}
-   *@code C1 l7
+   *normal_command@code C1 l7
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:ref}
-     *@{
+     *normal_command@{
      {normal_text:chapter,,,,manual}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@ref C5 l7
+   *normal_command@ref C5 l7
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -105,15 +105,15 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
     *brace_arg C1
      {normal_text:manual}
    {normal_text:\\n}
-   *@code C1 l8
+   *normal_command@code C1 l8
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:ref}
-     *@{
+     *normal_command@{
      {normal_text:chapter,cross ref name,title,}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@ref C4 l8
+   *normal_command@ref C4 l8
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -125,15 +125,15 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
      {normal_text:title}
     *brace_arg
    {normal_text:\\n}
-   *@code C1 l9
+   *normal_command@code C1 l9
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:ref}
-     *@{
+     *normal_command@{
      {normal_text:chapter,cross ref name,,file name}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@ref C4 l9
+   *normal_command@ref C4 l9
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -144,15 +144,15 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
     *brace_arg C1
      {normal_text:file name}
    {normal_text:\\n}
-   *@code C1 l10
+   *normal_command@code C1 l10
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:ref}
-     *@{
+     *normal_command@{
      {normal_text:chapter,cross ref name,,,manual}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@ref C5 l10
+   *normal_command@ref C5 l10
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -164,15 +164,15 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
     *brace_arg C1
      {normal_text:manual}
    {normal_text:\\n}
-   *@code C1 l11
+   *normal_command@code C1 l11
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:ref}
-     *@{
+     *normal_command@{
      {normal_text:chapter,cross ref name,title,file name}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@ref C4 l11
+   *normal_command@ref C4 l11
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -184,15 +184,15 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
     *brace_arg C1
      {normal_text:file name}
    {normal_text:\\n}
-   *@code C1 l12
+   *normal_command@code C1 l12
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:ref}
-     *@{
+     *normal_command@{
      {normal_text:chapter,cross ref name,title,,manual}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@ref C5 l12
+   *normal_command@ref C5 l12
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -205,15 +205,15 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
     *brace_arg C1
      {normal_text:manual}
    {normal_text:\\n}
-   *@code C1 l13
+   *normal_command@code C1 l13
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:ref}
-     *@{
+     *normal_command@{
      {normal_text:chapter,cross ref name,title, file name, manual}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@ref C5 l13
+   *normal_command@ref C5 l13
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -229,15 +229,15 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
      {spaces_before_argument: }
      {normal_text:manual}
    {normal_text:\\n}
-   *@code C1 l14
+   *normal_command@code C1 l14
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:ref}
-     *@{
+     *normal_command@{
      {normal_text:chapter,,title,file name}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@ref C4 l14
+   *normal_command@ref C4 l14
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -248,15 +248,15 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
     *brace_arg C1
      {normal_text:file name}
    {normal_text:\\n}
-   *@code C1 l15
+   *normal_command@code C1 l15
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:ref}
-     *@{
+     *normal_command@{
      {normal_text:chapter,,title,,manual}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@ref C5 l15
+   *normal_command@ref C5 l15
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -268,15 +268,15 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
     *brace_arg C1
      {normal_text:manual}
    {normal_text:\\n}
-   *@code C1 l16
+   *normal_command@code C1 l16
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:ref}
-     *@{
+     *normal_command@{
      {normal_text:chapter,,title, file name, manual}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@ref C5 l16
+   *normal_command@ref C5 l16
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -291,15 +291,15 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
      {spaces_before_argument: }
      {normal_text:manual}
    {normal_text:\\n}
-   *@code C1 l17
+   *normal_command@code C1 l17
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:ref}
-     *@{
+     *normal_command@{
      {normal_text:chapter,,,file name,manual}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@ref C5 l17
+   *normal_command@ref C5 l17
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -313,15 +313,15 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C56
-   *@code C1 l19
+   *normal_command@code C1 l19
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:ref}
-     *@{
+     *normal_command@{
      {normal_text:(pman)anode,cross ref name}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@ref C2 l19
+   *normal_command@ref C2 l19
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -330,15 +330,15 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
     *brace_arg C1
      {normal_text:cross ref name}
    {normal_text:\\n}
-   *@code C1 l20
+   *normal_command@code C1 l20
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:ref}
-     *@{
+     *normal_command@{
      {normal_text:(pman)anode,,title}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@ref C3 l20
+   *normal_command@ref C3 l20
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -348,15 +348,15 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
     *brace_arg C1
      {normal_text:title}
    {normal_text:\\n}
-   *@code C1 l21
+   *normal_command@code C1 l21
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:ref}
-     *@{
+     *normal_command@{
      {normal_text:(pman)anode,,,file name}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@ref C4 l21
+   *normal_command@ref C4 l21
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -366,15 +366,15 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
     *brace_arg C1
      {normal_text:file name}
    {normal_text:\\n}
-   *@code C1 l22
+   *normal_command@code C1 l22
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:ref}
-     *@{
+     *normal_command@{
      {normal_text:(pman)anode,,,,manual}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@ref C5 l22
+   *normal_command@ref C5 l22
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -385,15 +385,15 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
     *brace_arg C1
      {normal_text:manual}
    {normal_text:\\n}
-   *@code C1 l23
+   *normal_command@code C1 l23
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:ref}
-     *@{
+     *normal_command@{
      {normal_text:(pman)anode,cross ref name,title,}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@ref C4 l23
+   *normal_command@ref C4 l23
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -405,15 +405,15 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
      {normal_text:title}
     *brace_arg
    {normal_text:\\n}
-   *@code C1 l24
+   *normal_command@code C1 l24
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:ref}
-     *@{
+     *normal_command@{
      {normal_text:(pman)anode,cross ref name,,file name}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@ref C4 l24
+   *normal_command@ref C4 l24
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -424,15 +424,15 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
     *brace_arg C1
      {normal_text:file name}
    {normal_text:\\n}
-   *@code C1 l25
+   *normal_command@code C1 l25
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:ref}
-     *@{
+     *normal_command@{
      {normal_text:(pman)anode,cross ref name,,,manual}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@ref C5 l25
+   *normal_command@ref C5 l25
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -444,15 +444,15 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
     *brace_arg C1
      {normal_text:manual}
    {normal_text:\\n}
-   *@code C1 l26
+   *normal_command@code C1 l26
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:ref}
-     *@{
+     *normal_command@{
      {normal_text:(pman)anode,cross ref name,title,file name}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@ref C4 l26
+   *normal_command@ref C4 l26
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -464,15 +464,15 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
     *brace_arg C1
      {normal_text:file name}
    {normal_text:\\n}
-   *@code C1 l27
+   *normal_command@code C1 l27
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:ref}
-     *@{
+     *normal_command@{
      {normal_text:(pman)anode,cross ref name,title,,manual}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@ref C5 l27
+   *normal_command@ref C5 l27
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -485,15 +485,15 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
     *brace_arg C1
      {normal_text:manual}
    {normal_text:\\n}
-   *@code C1 l28
+   *normal_command@code C1 l28
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:ref}
-     *@{
+     *normal_command@{
      {normal_text:(pman)anode,cross ref name,title, file name, manual}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@ref C5 l28
+   *normal_command@ref C5 l28
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -509,15 +509,15 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
      {spaces_before_argument: }
      {normal_text:manual}
    {normal_text:\\n}
-   *@code C1 l29
+   *normal_command@code C1 l29
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:ref}
-     *@{
+     *normal_command@{
      {normal_text:(pman)anode,,title,file name}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@ref C4 l29
+   *normal_command@ref C4 l29
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -528,15 +528,15 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
     *brace_arg C1
      {normal_text:file name}
    {normal_text:\\n}
-   *@code C1 l30
+   *normal_command@code C1 l30
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:ref}
-     *@{
+     *normal_command@{
      {normal_text:(pman)anode,,title,,manual}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@ref C5 l30
+   *normal_command@ref C5 l30
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -548,15 +548,15 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
     *brace_arg C1
      {normal_text:manual}
    {normal_text:\\n}
-   *@code C1 l31
+   *normal_command@code C1 l31
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:ref}
-     *@{
+     *normal_command@{
      {normal_text:(pman)anode,,title, file name, manual}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@ref C5 l31
+   *normal_command@ref C5 l31
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -571,15 +571,15 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
      {spaces_before_argument: }
      {normal_text:manual}
    {normal_text:\\n}
-   *@code C1 l32
+   *normal_command@code C1 l32
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:ref}
-     *@{
+     *normal_command@{
      {normal_text:(pman)anode,,,file name,manual}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@ref C5 l32
+   *normal_command@ref C5 l32
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -593,15 +593,15 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C16
-   *@code C1 l34
+   *normal_command@code C1 l34
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:inforef}
-     *@{
+     *normal_command@{
      {normal_text:chapter, cross ref name, file name}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@inforef C3 l34
+   *normal_command@inforef C3 l34
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -613,30 +613,30 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
      {spaces_before_argument: }
      {normal_text:file name}
    {normal_text:\\n}
-   *@code C1 l35
+   *normal_command@code C1 l35
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:inforef}
-     *@{
+     *normal_command@{
      {normal_text:chapter}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@inforef C1 l35
+   *normal_command@inforef C1 l35
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
     |normalized:{chapter}
      {normal_text:chapter}
    {normal_text:\\n}
-   *@code C1 l36
+   *normal_command@code C1 l36
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:inforef}
-     *@{
+     *normal_command@{
      {normal_text:chapter, cross ref name}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@inforef C2 l36
+   *normal_command@inforef C2 l36
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -646,15 +646,15 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
      {spaces_before_argument: }
      {normal_text:cross ref name}
    {normal_text:\\n}
-   *@code C1 l37
+   *normal_command@code C1 l37
     *brace_container C5
-     *@@
+     *normal_command@@
      {normal_text:inforef}
-     *@{
+     *normal_command@{
      {normal_text:chapter,,file name}
-     *@}
+     *normal_command@}
    {normal_text: }
-   *@inforef C3 l37
+   *normal_command@inforef C3 l37
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}

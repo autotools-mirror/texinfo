@@ -11,11 +11,11 @@ use Encode;
 $result_tree_text{'empty_item_itemx'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@vtable C6 l1
+  *normal_command@vtable C6 l1
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     *@asis l1
+     *normal_command@asis l1
      {spaces_after_argument:\\n}
    *before_item C3
     {empty_line:\\n}
@@ -24,17 +24,17 @@ $result_tree_text{'empty_item_itemx'} = '*document_root C1
     {empty_line:\\n}
    *table_entry C1
     *table_term C3
-     *@item C1 l5
+     *normal_command@item C1 l5
      |EXTRA
      |index_entry:I{vr,1}
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:first item}
        {spaces_after_argument:\\n}
-     *@itemx C1 l6
+     *normal_command@itemx C1 l6
       *line_arg C1
        {spaces_before_argument:\\n}
-     *@itemx C1 l7
+     *normal_command@itemx C1 l7
      |EXTRA
      |index_entry:I{vr,2}
       *line_arg C3
@@ -43,19 +43,19 @@ $result_tree_text{'empty_item_itemx'} = '*document_root C1
        {spaces_after_argument:\\n}
    *table_entry C1
     *table_term C1
-     *@item C1 l8
+     *normal_command@item C1 l8
       *line_arg C1
        {spaces_before_argument: \\n}
    *table_entry C1
     *table_term C1
-     *@item C1 l9
+     *normal_command@item C1 l9
      |EXTRA
      |index_entry:I{vr,3}
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:in item before end table}
        {spaces_after_argument:\\n}
-   *@end C1 l10
+   *normal_command@end C1 l10
    |EXTRA
    |text_arg:{vtable}
     *line_arg C3

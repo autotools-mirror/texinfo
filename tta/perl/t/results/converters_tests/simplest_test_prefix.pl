@@ -14,7 +14,7 @@ $result_tree_text{'simplest_test_prefix'} = '*document_root C3
    {text_before_beginning:\\input texinfo @c -*-texinfo-*-\\n}
    {text_before_beginning:\\n}
   *preamble_before_content
- *@node C4 simplest.texi:l3 {Top}
+ *normal_command@node C4 simplest.texi:l3 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -27,10 +27,10 @@ $result_tree_text{'simplest_test_prefix'} = '*document_root C3
   {empty_line:\\n}
   *paragraph C3
    {normal_text:This is a very simple texi manual }
-   *@ 
+   *normal_command@ 
    {normal_text: <>.\\n}
   {empty_line:\\n}
- *@bye C1
+ *normal_command@bye C1
   *line_arg C1
    {spaces_before_argument:\\n}
 ';

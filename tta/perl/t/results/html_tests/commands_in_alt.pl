@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'commands_in_alt'} = '*document_root C1
  *before_node_section C5
   *preamble_before_content
-  *@image C4 l1
+  *normal_command@image C4 l1
   |EXTRA
   |input_encoding_name:{utf-8}
    *brace_arg C1
@@ -20,17 +20,17 @@ $result_tree_text{'commands_in_alt'} = '*document_root C1
    *brace_arg
    *brace_arg C2
     {normal_text:alt -- }
-    *@b C1 l1
+    *normal_command@b C1 l1
      *brace_container C1
       {normal_text:in b}
   {normal_text:\\n}
   {empty_line:\\n}
-  *@example C3 l3
+  *normal_command@example C3 l3
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C2
-    *@image C4 l4
+    *normal_command@image C4 l4
     |EXTRA
     |input_encoding_name:{utf-8}
      *brace_arg C1
@@ -39,11 +39,11 @@ $result_tree_text{'commands_in_alt'} = '*document_root C1
      *brace_arg
      *brace_arg C2
       {normal_text:alt -- }
-      *@b C1 l4
+      *normal_command@b C1 l4
        *brace_container C1
         {normal_text:in b}
     {normal_text:\\n}
-   *@end C1 l5
+   *normal_command@end C1 l5
    |EXTRA
    |text_arg:{example}
     *line_arg C3

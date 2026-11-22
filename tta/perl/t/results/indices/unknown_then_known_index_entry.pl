@@ -14,7 +14,7 @@ $result_tree_text{'unknown_then_known_index_entry'} = '*document_root C1
    {spaces_before_paragraph: }
   *paragraph C3
    {normal_text:someindex entry.\\n}
-   *@defindex C1 l2
+   *normal_command@defindex C1 l2
    |EXTRA
    |misc_args:A{some}
     *line_arg C3

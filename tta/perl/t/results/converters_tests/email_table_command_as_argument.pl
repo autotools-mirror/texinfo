@@ -11,25 +11,25 @@ use Encode;
 $result_tree_text{'email_table_command_as_argument'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
-  *@table C3 l1
+  *normal_command@table C3 l1
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     *@email l1
+     *normal_command@email l1
      {spaces_after_argument:\\n}
    *table_entry C2
     *table_term C1
-     *@item C1 l2
+     *normal_command@item C1 l2
       *line_arg C5
        {spaces_before_argument: }
        {normal_text:www-discuss}
-       *@@
+       *normal_command@@
        {normal_text:gnu.org}
        {spaces_after_argument:\\n}
     *table_definition C1
      *paragraph C1
       {normal_text:discussion\\n}
-   *@end C1 l4
+   *normal_command@end C1 l4
    |EXTRA
    |text_arg:{table}
     *line_arg C3

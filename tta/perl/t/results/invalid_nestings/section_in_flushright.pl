@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'section_in_flushright'} = '*document_root C2
  *before_node_section C2
   *preamble_before_content
-  *@flushright C4 l1
+  *normal_command@flushright C4 l1
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -19,7 +19,7 @@ $result_tree_text{'section_in_flushright'} = '*document_root C2
    *paragraph C1
     {normal_text:text flushed right\\n}
    {empty_line:\\n}
- *@section C1 l5 {a section}
+ *normal_command@section C1 l5 {a section}
  |EXTRA
  |identifier:{a-section}
  |is_target:{1}

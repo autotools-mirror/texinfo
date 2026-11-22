@@ -176,7 +176,7 @@ char *normalize_encoding_name (const char *text, int *possible_encoding);
 
 /* create a new element based on type and command name */
 ELEMENT *new_element_from_names (const char *type_name,
-                        const char *command_name, int is_text_element);
+                                 const char *command_name);
 ELEMENT *item_line_parent (ELEMENT *current);
 ELEMENT *get_label_element (const ELEMENT *e);
 char *normalize_top_node_name (char *node_name);

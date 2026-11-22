@@ -11,14 +11,14 @@ use Encode;
 $result_tree_text{'macro_for_end'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C2
-   *@macro C3 l1
+   *normal_command@macro C3 l1
    |EXTRA
    |formal_args:A{}
    |macro_name:{myend}
     *arguments_line C1
      {macro_line: myend\\n}
     {raw:@end\\n}
-    *@end C1 l3
+    *normal_command@end C1 l3
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -26,7 +26,7 @@ $result_tree_text{'macro_for_end'} = '*document_root C1
       {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-  *@cartouche C2 l5
+  *normal_command@cartouche C2 l5
    *arguments_line C1
     *block_line_arg C1
     >SOURCEMARKS
@@ -34,7 +34,7 @@ $result_tree_text{'macro_for_end'} = '*document_root C1
      >*macro_call@myend C1
       >*brace_arg
      {spaces_before_argument:\\n}
-   *@end C1 l6:@myend
+   *normal_command@end C1 l6:@myend
    |EXTRA
    |text_arg:{cartouche}
     *line_arg C3

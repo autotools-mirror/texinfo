@@ -13,7 +13,7 @@ $result_tree_text{'preformatted'} = '*document_root C1
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content
-  *@example C3 l2
+  *normal_command@example C3 l2
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -21,7 +21,7 @@ $result_tree_text{'preformatted'} = '*document_root C1
     {normal_text:e--xample  some  \\n}
     {empty_line:\\n}
     {normal_text:   text\\n}
-   *@end C1 l6
+   *normal_command@end C1 l6
    |EXTRA
    |text_arg:{example}
     *line_arg C3
@@ -29,19 +29,19 @@ $result_tree_text{'preformatted'} = '*document_root C1
      {normal_text:example}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@format C3 l8
+  *normal_command@format C3 l8
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
-   *@vtable C3 l9
+   *normal_command@vtable C3 l9
     *arguments_line C1
      *block_line_arg C3
       {spaces_before_argument: }
-      *@code l9
+      *normal_command@code l9
       {spaces_after_argument:\\n}
     *table_entry C2
      *table_term C1
-      *@item C1 l10
+      *normal_command@item C1 l10
       |EXTRA
       |index_entry:I{vr,1}
        *line_arg C3
@@ -52,14 +52,14 @@ $result_tree_text{'preformatted'} = '*document_root C1
       *preformatted C2
        {empty_line:\\n}
        {normal_text:in table in format\\n}
-    *@end C1 l13
+    *normal_command@end C1 l13
     |EXTRA
     |text_arg:{vtable}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:vtable}
       {spaces_after_argument:\\n}
-   *@end C1 l14
+   *normal_command@end C1 l14
    |EXTRA
    |text_arg:{format}
     *line_arg C3

@@ -11,14 +11,14 @@ use Encode;
 $result_tree_text{'empty_macro_argument'} = '*document_root C1
  *before_node_section C6
   *preamble_before_content C2
-   *@macro C3 l1
+   *normal_command@macro C3 l1
    |EXTRA
    |formal_args:A{}
    |macro_name:{mymacro}
     *arguments_line C1
      {macro_line: mymacro{}\\n}
     {raw:text\\n}
-    *@end C1 l3
+    *normal_command@end C1 l3
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -50,14 +50,14 @@ $result_tree_text{'empty_macro_argument'} = '*document_root C1
       >{macro_call_arg_text:x}
    >macro_expansion<end;4><p:19>
   {empty_line:\\n}
-  *@macro C3 l7
+  *normal_command@macro C3 l7
   |EXTRA
   |formal_args:A{arg}
   |macro_name:{mytwo}
    *arguments_line C1
     {macro_line: mytwo{arg}\\n}
    {raw:X\\arg\\X\\n}
-   *@end C1 l9
+   *normal_command@end C1 l9
    |EXTRA
    |text_arg:{macro}
     *line_arg C3

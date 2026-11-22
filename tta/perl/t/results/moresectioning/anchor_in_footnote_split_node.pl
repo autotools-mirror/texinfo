@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'anchor_in_footnote_split_node'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'anchor_in_footnote_split_node'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C6 l2 {Top}
+ *normal_command@top C6 l2 {Top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -33,13 +33,13 @@ $result_tree_text{'anchor_in_footnote_split_node'} = '*document_root C5
   {empty_line:\\n}
   *paragraph C3
    {normal_text:In top node}
-   *@footnote C1 l4
+   *normal_command@footnote C1 l4
    |EXTRA
    |global_command_number:{1}
     *brace_command_context C1
      *paragraph C3
       {normal_text:in footnote\\n}
-      *@anchor C1 l5
+      *normal_command@anchor C1 l5
       |EXTRA
       |identifier:{Anchor-in-footnote}
       |is_target:{1}
@@ -48,7 +48,7 @@ $result_tree_text{'anchor_in_footnote_split_node'} = '*document_root C5
       {normal_text:.\\n}
    {normal_text:\\n}
   {empty_line:\\n}
-  *@menu C3 l8
+  *normal_command@menu C3 l8
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -63,7 +63,7 @@ $result_tree_text{'anchor_in_footnote_split_node'} = '*document_root C5
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l10
+   *normal_command@end C1 l10
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -71,7 +71,7 @@ $result_tree_text{'anchor_in_footnote_split_node'} = '*document_root C5
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l12 {chapter}
+ *normal_command@node C1 l12 {chapter}
  |EXTRA
  |identifier:{chapter}
  |is_target:{1}
@@ -81,7 +81,7 @@ $result_tree_text{'anchor_in_footnote_split_node'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:chapter}
     {spaces_after_argument:\\n}
- *@chapter C3 l13 {Chap}
+ *normal_command@chapter C3 l13 {Chap}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -93,7 +93,7 @@ $result_tree_text{'anchor_in_footnote_split_node'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@ref C1 l15
+   *normal_command@ref C1 l15
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}

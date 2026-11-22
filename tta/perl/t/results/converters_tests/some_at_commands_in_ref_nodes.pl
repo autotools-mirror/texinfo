@@ -13,7 +13,7 @@ $result_tree_text{'some_at_commands_in_ref_nodes'} = '*document_root C5
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content
- *@node C1 l2 {Top}
+ *normal_command@node C1 l2 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -23,7 +23,7 @@ $result_tree_text{'some_at_commands_in_ref_nodes'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C4 l3 {Top}
+ *normal_command@top C4 l3 {Top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -33,7 +33,7 @@ $result_tree_text{'some_at_commands_in_ref_nodes'} = '*document_root C5
     {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C3 l5
+  *normal_command@menu C3 l5
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -44,51 +44,51 @@ $result_tree_text{'some_at_commands_in_ref_nodes'} = '*document_root C5
     |node_content:A{0|13}
     |normalized:{A-sc-_00f1-_00e5-TeX-node-_00ef-_00ef-_1e14-_0142-_1e08-_00a1}
      {normal_text:A }
-     *@sc C1 l6
+     *normal_command@sc C1 l6
       *brace_container C6
        {normal_text:sc }
-       *@~ C1 l6
+       *normal_command@~ C1 l6
         *following_arg C1
          {normal_text:n}
        {normal_text: }
-       *@aa C1 l6
+       *normal_command@aa C1 l6
         *brace_container
        {normal_text: }
-       *@TeX C1 l6
+       *normal_command@TeX C1 l6
         *brace_container
      {normal_text: node }
-     *@" C1 l6
+     *normal_command@" C1 l6
       *following_arg C1
        {normal_text:i}
      {normal_text: }
-     *@" C1 l6
+     *normal_command@" C1 l6
       *brace_container C1
-       *@dotless C1 l6
+       *normal_command@dotless C1 l6
         *brace_container C1
          {normal_text:i}
      {normal_text: }
-     *@` C1 l6
+     *normal_command@` C1 l6
       *brace_container C1
-       *@= C1 l6
+       *normal_command@= C1 l6
         *following_arg C1
          {normal_text:E}
      {normal_text: }
-     *@l C1 l6
+     *normal_command@l C1 l6
       *brace_container
      {normal_text: }
-     *@, C1 l6
+     *normal_command@, C1 l6
       *brace_container C1
-       *@\' C1 l6
+       *normal_command@\' C1 l6
         *following_arg C1
          {normal_text:C}
      {normal_text: }
-     *@exclamdown C1 l6
+     *normal_command@exclamdown C1 l6
       *brace_container
     {menu_entry_separator:::}
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l7
+   *normal_command@end C1 l7
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -96,7 +96,7 @@ $result_tree_text{'some_at_commands_in_ref_nodes'} = '*document_root C5
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l9 {A @sc{sc @~n @aa{} @TeX{}} node @"i @"{@dotless{i}} @`{@=E} @l{} @,{@\'C} @exclamdown{}}
+ *normal_command@node C1 l9 {A @sc{sc @~n @aa{} @TeX{}} node @"i @"{@dotless{i}} @`{@=E} @l{} @,{@\'C} @exclamdown{}}
  |EXTRA
  |identifier:{A-sc-_00f1-_00e5-TeX-node-_00ef-_00ef-_1e14-_0142-_1e08-_00a1}
  |is_target:{1}
@@ -105,48 +105,48 @@ $result_tree_text{'some_at_commands_in_ref_nodes'} = '*document_root C5
    *line_arg C16
     {spaces_before_argument: }
     {normal_text:A }
-    *@sc C1 l9
+    *normal_command@sc C1 l9
      *brace_container C6
       {normal_text:sc }
-      *@~ C1 l9
+      *normal_command@~ C1 l9
        *following_arg C1
         {normal_text:n}
       {normal_text: }
-      *@aa C1 l9
+      *normal_command@aa C1 l9
        *brace_container
       {normal_text: }
-      *@TeX C1 l9
+      *normal_command@TeX C1 l9
        *brace_container
     {normal_text: node }
-    *@" C1 l9
+    *normal_command@" C1 l9
      *following_arg C1
       {normal_text:i}
     {normal_text: }
-    *@" C1 l9
+    *normal_command@" C1 l9
      *brace_container C1
-      *@dotless C1 l9
+      *normal_command@dotless C1 l9
        *brace_container C1
         {normal_text:i}
     {normal_text: }
-    *@` C1 l9
+    *normal_command@` C1 l9
      *brace_container C1
-      *@= C1 l9
+      *normal_command@= C1 l9
        *following_arg C1
         {normal_text:E}
     {normal_text: }
-    *@l C1 l9
+    *normal_command@l C1 l9
      *brace_container
     {normal_text: }
-    *@, C1 l9
+    *normal_command@, C1 l9
      *brace_container C1
-      *@\' C1 l9
+      *normal_command@\' C1 l9
        *following_arg C1
         {normal_text:C}
     {normal_text: }
-    *@exclamdown C1 l9
+    *normal_command@exclamdown C1 l9
      *brace_container
     {spaces_after_argument:\\n}
- *@chapter C5 l10 {A @sc{sc} node @"i @"{@dotless{i}} @`{@=E} @l{} @,{@\'C} @exclamdown{}}
+ *normal_command@chapter C5 l10 {A @sc{sc} node @"i @"{@dotless{i}} @`{@=E} @l{} @,{@\'C} @exclamdown{}}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -155,75 +155,75 @@ $result_tree_text{'some_at_commands_in_ref_nodes'} = '*document_root C5
    *line_arg C16
     {spaces_before_argument:  }
     {normal_text:A }
-    *@sc C1 l10
+    *normal_command@sc C1 l10
      *brace_container C1
       {normal_text:sc}
     {normal_text: node }
-    *@" C1 l10
+    *normal_command@" C1 l10
      *following_arg C1
       {normal_text:i}
     {normal_text: }
-    *@" C1 l10
+    *normal_command@" C1 l10
      *brace_container C1
-      *@dotless C1 l10
+      *normal_command@dotless C1 l10
        *brace_container C1
         {normal_text:i}
     {normal_text: }
-    *@` C1 l10
+    *normal_command@` C1 l10
      *brace_container C1
-      *@= C1 l10
+      *normal_command@= C1 l10
        *following_arg C1
         {normal_text:E}
     {normal_text: }
-    *@l C1 l10
+    *normal_command@l C1 l10
      *brace_container
     {normal_text: }
-    *@, C1 l10
+    *normal_command@, C1 l10
      *brace_container C1
-      *@\' C1 l10
+      *normal_command@\' C1 l10
        *following_arg C1
         {normal_text:C}
     {normal_text: }
-    *@exclamdown C1 l10
+    *normal_command@exclamdown C1 l10
      *brace_container
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C3
    {normal_text:see }
-   *@ref C4 l12
+   *normal_command@ref C4 l12
     *brace_arg C14
     |EXTRA
     |node_content:A{0|13}
      {normal_text:a }
-     *@strong C1 l12
+     *normal_command@strong C1 l12
       *brace_container C1
        {normal_text:strong}
      {normal_text: ref with }
-     *@sc C1 l12
+     *normal_command@sc C1 l12
       *brace_container C1
        {normal_text:sc}
-     *@comma C1 l12
+     *normal_command@comma C1 l12
       *brace_container
      {normal_text: a i trema }
-     *@" C1 l12
+     *normal_command@" C1 l12
       *following_arg C1
        {normal_text:i}
-     *@comma C1 l12
+     *normal_command@comma C1 l12
       *brace_container
      {normal_text: a dotless i trema }
-     *@" C1 l12
+     *normal_command@" C1 l12
       *brace_container C1
-       *@dotless C1 l12
+       *normal_command@dotless C1 l12
         *brace_container C1
          {normal_text:i}
      {normal_text: }
-     *@` C1 l12
+     *normal_command@` C1 l12
       *brace_container C1
-       *@= C1 l12
+       *normal_command@= C1 l12
         *following_arg C1
          {normal_text:E}
      {normal_text: and exclamdown }
-     *@exclamdown C1 l12
+     *normal_command@exclamdown C1 l12
       *brace_container
     *brace_arg
     *brace_arg
@@ -232,51 +232,51 @@ $result_tree_text{'some_at_commands_in_ref_nodes'} = '*document_root C5
    {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@xref C1 l14
+   *normal_command@xref C1 l14
     *brace_arg C14
     |EXTRA
     |node_content:A{0|13}
     |normalized:{A-sc-_00f1-_00e5-TeX-node-_00ef-_00ef-_1e14-_0142-_1e08-_00a1}
      {normal_text:A }
-     *@sc C1 l14
+     *normal_command@sc C1 l14
       *brace_container C6
        {normal_text:sc }
-       *@~ C1 l14
+       *normal_command@~ C1 l14
         *following_arg C1
          {normal_text:n}
        {normal_text: }
-       *@aa C1 l14
+       *normal_command@aa C1 l14
         *brace_container
        {normal_text: }
-       *@TeX C1 l14
+       *normal_command@TeX C1 l14
         *brace_container
      {normal_text: node }
-     *@" C1 l14
+     *normal_command@" C1 l14
       *following_arg C1
        {normal_text:i}
      {normal_text: }
-     *@" C1 l14
+     *normal_command@" C1 l14
       *brace_container C1
-       *@dotless C1 l14
+       *normal_command@dotless C1 l14
         *brace_container C1
          {normal_text:i}
      {normal_text: }
-     *@` C1 l14
+     *normal_command@` C1 l14
       *brace_container C1
-       *@= C1 l14
+       *normal_command@= C1 l14
         *following_arg C1
          {normal_text:E}
      {normal_text: }
-     *@l C1 l14
+     *normal_command@l C1 l14
       *brace_container
      {normal_text: }
-     *@, C1 l14
+     *normal_command@, C1 l14
       *brace_container C1
-       *@\' C1 l14
+       *normal_command@\' C1 l14
         *following_arg C1
          {normal_text:C}
      {normal_text: }
-     *@exclamdown C1 l14
+     *normal_command@exclamdown C1 l14
       *brace_container
    {normal_text:.\\n}
 ';

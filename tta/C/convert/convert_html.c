@@ -1360,7 +1360,7 @@ html_convert_tree_append (CONVERTER *self, const ELEMENT *element,
         text_printf (&command_type, "@%s ", command_name);
     }
 
-  if (element->type && !(type_data[element->type].flags & TF_c_only))
+  if (element->type)
     text_append (&command_type, type_data[element->type].name);
 
   if (self->conf->DEBUG.o.integer > 0)
@@ -1421,15 +1421,11 @@ html_convert_tree_append (CONVERTER *self, const ELEMENT *element,
 
   /* ignored if ignored both as type and command */
   if ((element->type
-       && (self_html->current_types_conversion_function[element->type].status
-                                                     == FRS_status_ignored
-         /* type unknown in Perl.  They cannot be customized as ignored
-            but correspond to @-commands only.  We always consider them
-            to be ignored as type, in the next condition it is checked
-            if they are ignored as commands */
-           || type_data[element->type].flags & TF_c_only))
-       && (!cmd
-           || self_html->current_commands_conversion_function[cmd].status
+       && (element->type == ET_normal_command
+           || self_html->current_types_conversion_function[element->type].status
+                                                     == FRS_status_ignored))
+      && (!cmd
+          || self_html->current_commands_conversion_function[cmd].status
                                                      == FRS_status_ignored))
     {
       if (self->conf->DEBUG.o.integer > 0)
@@ -1853,9 +1849,6 @@ html_convert_tree_append (CONVERTER *self, const ELEMENT *element,
 
       if (self_html->current_types_conversion_function[type].type_conversion)
         {
-          /* Normally there should not be c_only types here, since
-             they should be associated with commands and we are in code
-             called only if there is no command. */
           if (!self_html->current_types_conversion_function[type].type_conversion)
             {
               char *message;

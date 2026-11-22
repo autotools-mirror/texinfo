@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'empty_set_in_ifclear'} = '*document_root C1
  *before_node_section C1
   *preamble_before_content C2
-   *@set C1
+   *normal_command@set C1
    |EXTRA
    |misc_args:A{a|}
     *line_arg C3
@@ -21,14 +21,14 @@ $result_tree_text{'empty_set_in_ifclear'} = '*document_root C1
    {empty_line:\\n}
    >SOURCEMARKS
    >ignored_conditional_block<1><p:1>
-    >*@ifclear C3 l3
+    >*normal_command@ifclear C3 l3
      >*arguments_line C1
       >*block_line_arg C3
        >{spaces_before_argument: }
        >{normal_text:a}
        >{spaces_after_argument:\\n}
      >{raw:a is set to:|@value{a}|.\\n}
-     >*@end C1 l5
+     >*normal_command@end C1 l5
      >|EXTRA
      >|text_arg:{ifclear}
       >*line_arg C2

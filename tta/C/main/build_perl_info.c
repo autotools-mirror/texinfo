@@ -822,8 +822,7 @@ build_base_element (ELEMENT *e, HV *hv)
 
   /* non-text elements */
 
-  if (e->type
-      && !(type_data[e->type].flags & TF_c_only))
+  if (e->type)
     {
       sv = newSVpv (type_data[e->type].name, 0);
       STORE("type", sv, HSH_type);

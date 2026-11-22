@@ -13,18 +13,18 @@ $result_tree_text{'test_errormsg'} = '*document_root C1
   *preamble_before_content
   *paragraph C5
    {normal_text:Some text\\n}
-   *@errormsg C1 l2
+   *normal_command@errormsg C1 l2
     *brace_arg C4
      {normal_text:Text }
-     *@~ C1 l2
+     *normal_command@~ C1 l2
       *following_arg C1
        {normal_text:e}
      {normal_text: }
-     *@code C1 l2
+     *normal_command@code C1 l2
       *brace_container C1
        {normal_text:code}
    {normal_text:\\n}
-   *@errormsg C1 l3
+   *normal_command@errormsg C1 l3
     *brace_arg C3
      {spaces_before_argument:  }
      {normal_text:with surrounding spaces}

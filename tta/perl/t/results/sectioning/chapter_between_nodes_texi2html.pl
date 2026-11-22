@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'chapter_between_nodes_texi2html'} = '*document_root C6
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'chapter_between_nodes_texi2html'} = '*document_root C6
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C5 l2 {top section}
+ *normal_command@top C5 l2 {top section}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -33,7 +33,7 @@ $result_tree_text{'chapter_between_nodes_texi2html'} = '*document_root C6
   *paragraph C1
    {normal_text:Top node\\n}
   {empty_line:\\n}
-  *@menu C3 l5
+  *normal_command@menu C3 l5
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -48,7 +48,7 @@ $result_tree_text{'chapter_between_nodes_texi2html'} = '*document_root C6
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l7
+   *normal_command@end C1 l7
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -56,7 +56,7 @@ $result_tree_text{'chapter_between_nodes_texi2html'} = '*document_root C6
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@chapter C4 l9 {Chapter}
+ *normal_command@chapter C4 l9 {Chapter}
  |EXTRA
  |identifier:{Chapter}
  |is_target:{1}
@@ -72,7 +72,7 @@ $result_tree_text{'chapter_between_nodes_texi2html'} = '*document_root C6
   *paragraph C1
    {normal_text:In chapter\\n}
   {empty_line:\\n}
- *@node C1 l13 {section node}
+ *normal_command@node C1 l13 {section node}
  |EXTRA
  |identifier:{section-node}
  |is_target:{1}
@@ -89,7 +89,7 @@ $result_tree_text{'chapter_between_nodes_texi2html'} = '*document_root C6
    |normalized:{Top}
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@section C5 l14 {section}
+ *normal_command@section C5 l14 {section}
  |EXTRA
  |section_heading_number:{1.1}
  |section_level:{2}
@@ -103,7 +103,7 @@ $result_tree_text{'chapter_between_nodes_texi2html'} = '*document_root C6
   *paragraph C1
    {normal_text:section.\\n}
   {empty_line:\\n}
-  *@contents C1 l18
+  *normal_command@contents C1 l18
   |EXTRA
   |global_command_number:{1}
    *line_arg C1

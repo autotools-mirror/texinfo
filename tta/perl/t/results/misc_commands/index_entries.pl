@@ -19,7 +19,7 @@ $result_tree_text{'index_entries'} = '*document_root C1
     {normal_text:cindex entry}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@defindex C1 l3
+  *normal_command@defindex C1 l3
   |EXTRA
   |misc_args:A{truc}
    *line_arg C3

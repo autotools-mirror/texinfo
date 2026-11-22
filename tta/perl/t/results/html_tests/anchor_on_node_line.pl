@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'anchor_on_node_line'} = '*document_root C6
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'anchor_on_node_line'} = '*document_root C6
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l2 {top}
+ *normal_command@top C2 l2 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -31,7 +31,7 @@ $result_tree_text{'anchor_on_node_line'} = '*document_root C6
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C2 l4 {lone node @anchor{iln} a}
+ *normal_command@node C2 l4 {lone node @anchor{iln} a}
  |EXTRA
  |identifier:{lone-node-a}
  |is_target:{1}
@@ -40,7 +40,7 @@ $result_tree_text{'anchor_on_node_line'} = '*document_root C6
    *line_arg C6
     {spaces_before_argument: }
     {normal_text:lone node }
-    *@anchor C1 l4
+    *normal_command@anchor C1 l4
     |EXTRA
     |identifier:{iln}
     |is_target:{1}
@@ -50,7 +50,7 @@ $result_tree_text{'anchor_on_node_line'} = '*document_root C6
     {normal_text:a}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l6 {chapter node @anchor{cnl} b}
+ *normal_command@node C1 l6 {chapter node @anchor{cnl} b}
  |EXTRA
  |identifier:{chapter-node-b}
  |is_target:{1}
@@ -59,7 +59,7 @@ $result_tree_text{'anchor_on_node_line'} = '*document_root C6
    *line_arg C6
     {spaces_before_argument: }
     {normal_text:chapter node }
-    *@anchor C1 l6
+    *normal_command@anchor C1 l6
     |EXTRA
     |identifier:{cnl}
     |is_target:{1}
@@ -68,7 +68,7 @@ $result_tree_text{'anchor_on_node_line'} = '*document_root C6
     {spaces_after_close_brace: }
     {normal_text:b}
     {spaces_after_argument:\\n}
- *@chapter C6 l7 {chap}
+ *normal_command@chapter C6 l7 {chap}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -80,7 +80,7 @@ $result_tree_text{'anchor_on_node_line'} = '*document_root C6
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@xref C1 l9
+   *normal_command@xref C1 l9
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -89,7 +89,7 @@ $result_tree_text{'anchor_on_node_line'} = '*document_root C6
    {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@xref C1 l11
+   *normal_command@xref C1 l11
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}

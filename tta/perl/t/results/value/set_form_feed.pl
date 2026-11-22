@@ -11,21 +11,21 @@ use Encode;
 $result_tree_text{'set_form_feed'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C4
-   *@set C1
+   *normal_command@set C1
    |EXTRA
    |misc_args:A{gg|a\\a\\f\\\\}
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:gg \\f a\\a\\f\\\\}
      {spaces_after_argument:\\n}
-   *@set C1
+   *normal_command@set C1
    |EXTRA
    |misc_args:A{hh|}
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:hh\\f}
      {spaces_after_argument:\\n}
-   *@set C1
+   *normal_command@set C1
    |EXTRA
    |misc_args:A{ll|}
     *line_arg C3
@@ -34,22 +34,22 @@ $result_tree_text{'set_form_feed'} = '*document_root C1
      {spaces_after_argument:\\n}
    {empty_line:\\n}
   *paragraph C2
-   *@code C1 l5
+   *normal_command@code C1 l5
     *brace_container C1
      {normal_text:a\\a\\f\\\\. . }
      >SOURCEMARKS
      >value_expansion<start;1>{a\\a\\f\\\\}
-      >*@value C1
+      >*normal_command@value C1
        >*brace_container C1
         >{normal_text:gg}
      >value_expansion<end;1><p:7>
      >value_expansion<start;2><p:9>{}
-      >*@value C1
+      >*normal_command@value C1
        >*brace_container C1
         >{normal_text:hh}
      >value_expansion<end;2><p:9>
      >value_expansion<start;3><p:11>{}
-      >*@value C1
+      >*normal_command@value C1
        >*brace_container C1
         >{normal_text:ll}
      >value_expansion<end;3><p:11>

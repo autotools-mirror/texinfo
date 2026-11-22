@@ -11,45 +11,45 @@ use Encode;
 $result_tree_text{'documentdescription'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content C2
-   *@documentdescription C3 l1
+   *normal_command@documentdescription C3 l1
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *paragraph C15
      {normal_text:in }
-     *@code C1 l2
+     *normal_command@code C1 l2
       *brace_container C1
        {normal_text:documentdescri---ption}
      {normal_text: --- }
-     *@bullet C1 l2
+     *normal_command@bullet C1 l2
       *brace_container
      {normal_text: }
-     *@enddots C1 l2
+     *normal_command@enddots C1 l2
       *brace_container
      {normal_text: }
-     *@verb C1 l2
+     *normal_command@verb C1 l2
       *brace_container C3
        {verb_delimiter::}
        {raw:"verb}
        {verb_delimiter::}
      {normal_text: }
-     *@aa C1 l2
+     *normal_command@aa C1 l2
       *brace_container
      {normal_text: }
-     *@^ C1 l2
+     *normal_command@^ C1 l2
       *brace_container C1
-       *@dotless C1 l2
+       *normal_command@dotless C1 l2
         *brace_container C1
          {normal_text:i}
      {normal_text: }
-     *@email C1 l2
+     *normal_command@email C1 l2
       *brace_arg C2
-       *@code C1 l2
+       *normal_command@code C1 l2
         *brace_container C1
          {normal_text:some}
        {normal_text:body}
      {normal_text:\\n}
-    *@end C1 l3
+    *normal_command@end C1 l3
     |EXTRA
     |text_arg:{documentdescription}
      *line_arg C3
@@ -57,7 +57,7 @@ $result_tree_text{'documentdescription'} = '*document_root C2
       {normal_text:documentdescription}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@top C1 l5 {top}
+ *normal_command@top C1 l5 {top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}

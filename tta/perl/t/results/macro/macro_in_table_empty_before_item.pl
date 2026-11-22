@@ -11,13 +11,13 @@ use Encode;
 $result_tree_text{'macro_in_table_empty_before_item'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C2
-   *@macro C2 l1
+   *normal_command@macro C2 l1
    |EXTRA
    |formal_args:A{}
    |macro_name:{emptymacro}
     *arguments_line C1
      {macro_line: emptymacro\\n}
-    *@end C1 l2
+    *normal_command@end C1 l2
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -25,11 +25,11 @@ $result_tree_text{'macro_in_table_empty_before_item'} = '*document_root C1
       {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-  *@table C4 l4
+  *normal_command@table C4 l4
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     *@code l4
+     *normal_command@code l4
      {spaces_after_argument:\\n}
    *before_item C1
     {normal_text:}
@@ -40,12 +40,12 @@ $result_tree_text{'macro_in_table_empty_before_item'} = '*document_root C1
     >macro_expansion<end;1>
    *table_entry C1
     *table_term C1
-     *@item C1 l5
+     *normal_command@item C1 l5
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:citem}
        {spaces_after_argument:\\n}
-   *@end C1 l6
+   *normal_command@end C1 l6
    |EXTRA
    |text_arg:{table}
     *line_arg C3

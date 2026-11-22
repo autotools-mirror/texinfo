@@ -11,12 +11,12 @@ use Encode;
 $result_tree_text{'heading_between'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content C1
-   *@settitle C1 l1
+   *normal_command@settitle C1 l1
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:heading between}
      {spaces_after_argument:\\n}
- *@node C1 l2 {Chapter}
+ *normal_command@node C1 l2 {Chapter}
  |EXTRA
  |identifier:{Chapter}
  |is_target:{1}
@@ -26,7 +26,7 @@ $result_tree_text{'heading_between'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Chapter}
     {spaces_after_argument:\\n}
- *@chapter C4 l3 {Chapter}
+ *normal_command@chapter C4 l3 {Chapter}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -37,7 +37,7 @@ $result_tree_text{'heading_between'} = '*document_root C5
     {normal_text:Chapter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@subsubheading C1 l5
+  *normal_command@subsubheading C1 l5
   |EXTRA
   |global_command_number:{1}
   |heading_number:{1}
@@ -46,7 +46,7 @@ $result_tree_text{'heading_between'} = '*document_root C5
     {normal_text:Topic}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l7 {Section}
+ *normal_command@node C1 l7 {Section}
  |EXTRA
  |identifier:{Section}
  |is_target:{1}
@@ -56,7 +56,7 @@ $result_tree_text{'heading_between'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Section}
     {spaces_after_argument:\\n}
- *@section C2 l8 {Section}
+ *normal_command@section C2 l8 {Section}
  |EXTRA
  |section_heading_number:{1.1}
  |section_level:{2}

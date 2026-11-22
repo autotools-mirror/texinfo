@@ -11,13 +11,13 @@ use Encode;
 $result_tree_text{'error_in_sectioning_command'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content C2
-   *@contents C1 l1
+   *normal_command@contents C1 l1
    |EXTRA
    |global_command_number:{1}
     *line_arg C1
      {spaces_before_argument:\\n}
    {empty_line:\\n}
- *@node C1 l3 {Top}
+ *normal_command@node C1 l3 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -27,7 +27,7 @@ $result_tree_text{'error_in_sectioning_command'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l4 {top section}
+ *normal_command@top C2 l4 {top section}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -37,7 +37,7 @@ $result_tree_text{'error_in_sectioning_command'} = '*document_root C5
     {normal_text:top section}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l6 {@code{@@error@{@}} (@error{}): Indicating an Error Message}
+ *normal_command@node C1 l6 {@code{@@error@{@}} (@error{}): Indicating an Error Message}
  |EXTRA
  |identifier:{_0040error_007b_007d-_0028error_002d_002d_003e_0029_003a-Indicating-an-Error-Message}
  |is_target:{1}
@@ -45,18 +45,18 @@ $result_tree_text{'error_in_sectioning_command'} = '*document_root C5
   *arguments_line C1
    *line_arg C6
     {spaces_before_argument: }
-    *@code C1 l6
+    *normal_command@code C1 l6
      *brace_container C4
-      *@@
+      *normal_command@@
       {normal_text:error}
-      *@{
-      *@}
+      *normal_command@{
+      *normal_command@}
     {normal_text: (}
-    *@error C1 l6
+    *normal_command@error C1 l6
      *brace_container
     {normal_text:): Indicating an Error Message}
     {spaces_after_argument:\\n}
- *@chapter C3 l7 {@code{@@error@{@}} (@error{}): Indicating an Error Message}
+ *normal_command@chapter C3 l7 {@code{@@error@{@}} (@error{}): Indicating an Error Message}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -64,21 +64,21 @@ $result_tree_text{'error_in_sectioning_command'} = '*document_root C5
   *arguments_line C1
    *line_arg C6
     {spaces_before_argument: }
-    *@code C1 l7
+    *normal_command@code C1 l7
      *brace_container C4
-      *@@
+      *normal_command@@
       {normal_text:error}
-      *@{
-      *@}
+      *normal_command@{
+      *normal_command@}
     {normal_text: (}
-    *@error C1 l7
+    *normal_command@error C1 l7
      *brace_container
     {normal_text:): Indicating an Error Message}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C3
    {normal_text:Describe }
-   *@error C1 l9
+   *normal_command@error C1 l9
     *brace_container
    {normal_text:.\\n}
 ';

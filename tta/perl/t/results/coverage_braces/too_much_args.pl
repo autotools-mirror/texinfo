@@ -12,7 +12,7 @@ $result_tree_text{'too_much_args'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *paragraph C1
-   *@abbr C2 l1
+   *normal_command@abbr C2 l1
     *brace_arg C1
      {normal_text:AZE}
     *brace_arg C2

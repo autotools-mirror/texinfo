@@ -13,14 +13,14 @@ $result_tree_text{'macro_in_menu'} = '*document_root C1
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content C12
-   *@macro C3 l2
+   *normal_command@macro C3 l2
    |EXTRA
    |formal_args:A{}
    |macro_name:{astar}
     *arguments_line C1
      {macro_line: astar\\n}
     {raw:*\\n}
-    *@end C1 l4
+    *normal_command@end C1 l4
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -28,14 +28,14 @@ $result_tree_text{'macro_in_menu'} = '*document_root C1
       {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@macro C3 l6
+   *normal_command@macro C3 l6
    |EXTRA
    |formal_args:A{}
    |macro_name:{starspaces}
     *arguments_line C1
      {macro_line: starspaces\\n}
     {raw:* \\n}
-    *@end C1 l8
+    *normal_command@end C1 l8
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -43,14 +43,14 @@ $result_tree_text{'macro_in_menu'} = '*document_root C1
       {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@macro C3 l10
+   *normal_command@macro C3 l10
    |EXTRA
    |formal_args:A{}
    |macro_name:{spaces}
     *arguments_line C1
      {macro_line: spaces\\n}
     {raw:  \\n}
-    *@end C1 l12
+    *normal_command@end C1 l12
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -58,14 +58,14 @@ $result_tree_text{'macro_in_menu'} = '*document_root C1
       {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@macro C3 l14
+   *normal_command@macro C3 l14
    |EXTRA
    |formal_args:A{}
    |macro_name:{aspace}
     *arguments_line C1
      {macro_line: aspace\\n}
     {raw: \\n}
-    *@end C1 l16
+    *normal_command@end C1 l16
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -73,14 +73,14 @@ $result_tree_text{'macro_in_menu'} = '*document_root C1
       {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@macro C3 l18
+   *normal_command@macro C3 l18
    |EXTRA
    |formal_args:A{}
    |macro_name:{twocolon}
     *arguments_line C1
      {macro_line: twocolon\\n}
     {raw:::\\n}
-    *@end C1 l20
+    *normal_command@end C1 l20
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -88,14 +88,14 @@ $result_tree_text{'macro_in_menu'} = '*document_root C1
       {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@macro C3 l22
+   *normal_command@macro C3 l22
    |EXTRA
    |formal_args:A{}
    |macro_name:{acolon}
     *arguments_line C1
      {macro_line: acolon\\n}
     {raw::\\n}
-    *@end C1 l24
+    *normal_command@end C1 l24
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -103,7 +103,7 @@ $result_tree_text{'macro_in_menu'} = '*document_root C1
       {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-  *@menu C8 l26
+  *normal_command@menu C8 l26
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -219,7 +219,7 @@ $result_tree_text{'macro_in_menu'} = '*document_root C1
     *menu_entry_description C1
      *preformatted C1
       {normal_text:description\\n}
-   *@end C1 l34
+   *normal_command@end C1 l34
    |EXTRA
    |text_arg:{menu}
     *line_arg C3

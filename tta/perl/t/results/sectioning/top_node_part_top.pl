@@ -13,7 +13,7 @@ UNIT_DIRECTIONS
 This: [U0]
  *before_node_section C1
   *preamble_before_content
- *@node C2 l1 {Top}
+ *normal_command@node C2 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -24,7 +24,7 @@ This: [U0]
     {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@part C2 l3 {part}
+ *normal_command@part C2 l3 {part}
  |EXTRA
  |global_command_number:{1}
  |section_level:{0}
@@ -35,7 +35,7 @@ This: [U0]
     {normal_text:part}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@top C1 l5 {top}
+ *normal_command@top C1 l5 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{2}

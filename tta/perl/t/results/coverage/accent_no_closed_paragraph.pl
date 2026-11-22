@@ -12,7 +12,7 @@ $result_tree_text{'accent_no_closed_paragraph'} = '*document_root C1
  *before_node_section C3
   *preamble_before_content
   *paragraph C1
-   *@~ C1 l1
+   *normal_command@~ C1 l1
     *brace_container C2
      {normal_text:e\\n}
      {empty_line:\\n}

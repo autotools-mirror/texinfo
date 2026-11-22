@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'inter_item_commands_in_enumerate'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content
- *@node C1 l1 {Top}
+ *normal_command@node C1 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -21,7 +21,7 @@ $result_tree_text{'inter_item_commands_in_enumerate'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l2 {top}
+ *normal_command@top C2 l2 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -31,7 +31,7 @@ $result_tree_text{'inter_item_commands_in_enumerate'} = '*document_root C5
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l4 {chapter}
+ *normal_command@node C1 l4 {chapter}
  |EXTRA
  |identifier:{chapter}
  |is_target:{1}
@@ -41,7 +41,7 @@ $result_tree_text{'inter_item_commands_in_enumerate'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:chapter}
     {spaces_after_argument:\\n}
- *@chapter C14 l5 {chap}
+ *normal_command@chapter C14 l5 {chap}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -52,24 +52,24 @@ $result_tree_text{'inter_item_commands_in_enumerate'} = '*document_root C5
     {normal_text:chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@enumerate C4 l7
+  *normal_command@enumerate C4 l7
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *before_item C2
     {empty_line:\\n}
-    *@comment C1
+    *normal_command@comment C1
      *line_arg C3
       {spaces_before_argument: }
       {rawline_text:comment before first item in enumerate}
       {spaces_after_argument:\\n}
-   *@item C2 l10
+   *normal_command@item C2 l10
    |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:e--numerate\\n}
-   *@end C1 l11
+   *normal_command@end C1 l11
    |EXTRA
    |text_arg:{enumerate}
     *line_arg C3
@@ -77,7 +77,7 @@ $result_tree_text{'inter_item_commands_in_enumerate'} = '*document_root C5
      {normal_text:enumerate}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@enumerate C4 l13
+  *normal_command@enumerate C4 l13
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -92,13 +92,13 @@ $result_tree_text{'inter_item_commands_in_enumerate'} = '*document_root C5
       {normal_text:index inter in enumerate between lines}
       {spaces_after_argument:\\n}
     {empty_line:\\n}
-   *@item C2 l17
+   *normal_command@item C2 l17
    |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:enumerate item\\n}
-   *@end C1 l18
+   *normal_command@end C1 l18
    |EXTRA
    |text_arg:{enumerate}
     *line_arg C3
@@ -106,7 +106,7 @@ $result_tree_text{'inter_item_commands_in_enumerate'} = '*document_root C5
      {normal_text:enumerate}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@enumerate C4 l20
+  *normal_command@enumerate C4 l20
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -120,13 +120,13 @@ $result_tree_text{'inter_item_commands_in_enumerate'} = '*document_root C5
       {spaces_before_argument: }
       {normal_text:index inter in enumerate after line}
       {spaces_after_argument:\\n}
-   *@item C2 l23
+   *normal_command@item C2 l23
    |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:enumerate item\\n}
-   *@end C1 l24
+   *normal_command@end C1 l24
    |EXTRA
    |text_arg:{enumerate}
     *line_arg C3
@@ -134,7 +134,7 @@ $result_tree_text{'inter_item_commands_in_enumerate'} = '*document_root C5
      {normal_text:enumerate}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@enumerate C4 l26
+  *normal_command@enumerate C4 l26
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -148,13 +148,13 @@ $result_tree_text{'inter_item_commands_in_enumerate'} = '*document_root C5
       {normal_text:index inter in enumerate before line}
       {spaces_after_argument:\\n}
     {empty_line:\\n}
-   *@item C2 l29
+   *normal_command@item C2 l29
    |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:enumerate item\\n}
-   *@end C1 l30
+   *normal_command@end C1 l30
    |EXTRA
    |text_arg:{enumerate}
     *line_arg C3
@@ -162,7 +162,7 @@ $result_tree_text{'inter_item_commands_in_enumerate'} = '*document_root C5
      {normal_text:enumerate}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@enumerate C4 l32
+  *normal_command@enumerate C4 l32
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -177,13 +177,13 @@ $result_tree_text{'inter_item_commands_in_enumerate'} = '*document_root C5
        {spaces_before_argument: }
        {normal_text:cindex}
        {spaces_after_argument:\\n}
-   *@item C2 l35
+   *normal_command@item C2 l35
    |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:enum\\n}
-   *@end C1 l36
+   *normal_command@end C1 l36
    |EXTRA
    |text_arg:{enumerate}
     *line_arg C3
@@ -191,7 +191,7 @@ $result_tree_text{'inter_item_commands_in_enumerate'} = '*document_root C5
      {normal_text:enumerate}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@enumerate C4 l38
+  *normal_command@enumerate C4 l38
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -204,7 +204,7 @@ $result_tree_text{'inter_item_commands_in_enumerate'} = '*document_root C5
       {spaces_before_argument: }
       {normal_text:first idx}
       {spaces_after_argument:\\n}
-    *@comment C1
+    *normal_command@comment C1
      *line_arg C3
       {spaces_before_argument: }
       {rawline_text:comment}
@@ -225,13 +225,13 @@ $result_tree_text{'inter_item_commands_in_enumerate'} = '*document_root C5
       {spaces_before_argument: }
       {normal_text:another}
       {spaces_after_argument:\\n}
-   *@item C2 l43
+   *normal_command@item C2 l43
    |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:enum\\n}
-   *@end C1 l44
+   *normal_command@end C1 l44
    |EXTRA
    |text_arg:{enumerate}
     *line_arg C3

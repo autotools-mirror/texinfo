@@ -13,51 +13,51 @@ $result_tree_text{'punctuation_in_command_end_line'} = '*document_root C1
   *preamble_before_content
   *paragraph C27
    {normal_text:Text. Email }
-   *@email C2 l1
+   *normal_command@email C2 l1
     *brace_arg C1
      {normal_text:.}
     *brace_arg C1
      {normal_text:.}
    {normal_text:\\n}
    {normal_text:dmn }
-   *@dmn C1 l2
+   *normal_command@dmn C1 l2
     *brace_container C1
      {normal_text:1.}
    {normal_text:\\n}
    {normal_text:and text. indicateurl }
-   *@indicateurl C1 l3
+   *normal_command@indicateurl C1 l3
     *brace_container C1
      {normal_text:.}
    {normal_text:\\n}
    {normal_text:and then kbd }
-   *@kbd C1 l4
+   *normal_command@kbd C1 l4
     *brace_container C1
      {normal_text:.}
    {normal_text:\\n}
    {normal_text:and math }
-   *@math C1 l5
+   *normal_command@math C1 l5
     *brace_arg C1
      {normal_text:.}
    {normal_text:\\n}
    {normal_text:and cite }
-   *@cite C1 l6
+   *normal_command@cite C1 l6
     *brace_container C1
      {normal_text:.}
    {normal_text:\\n}
    {normal_text:and emph }
-   *@emph C1 l7
+   *normal_command@emph C1 l7
     *brace_container C1
      {normal_text:.}
    {normal_text:\\n}
    {normal_text:text. asis in code }
-   *@code C1 l8
+   *normal_command@code C1 l8
     *brace_container C1
-     *@asis C1 l8
+     *normal_command@asis C1 l8
       *brace_container C1
        {normal_text:.}
    {normal_text:\\n}
    {normal_text:text. a dot before a emph open .}
-   *@emph C1 l9
+   *normal_command@emph C1 l9
     *brace_container C2
      {normal_text:\\n}
      {normal_text:and in emph.}

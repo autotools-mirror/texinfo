@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'form_feeds'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content
- *@node C2 l1 {Top}
+ *normal_command@node C2 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -22,7 +22,7 @@ $result_tree_text{'form_feeds'} = '*document_root C3
     {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C40 l3 {chapnode}
+ *normal_command@node C40 l3 {chapnode}
  |EXTRA
  |identifier:{chap-node}
  |is_target:{1}
@@ -49,24 +49,24 @@ $result_tree_text{'form_feeds'} = '*document_root C3
    {normal_text:dd\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@code C1 l11
+   *normal_command@code C1 l11
     *brace_container C1
      {normal_text:end in code\\f}
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@code C1 l13
+   *normal_command@code C1 l13
     *brace_container C1
      {normal_text:\\fbegin in code}
    {normal_text:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@code C1 l15
+   *normal_command@code C1 l15
     *brace_container C1
      {normal_text:middle\\f in code}
    {normal_text:\\n}
   {empty_line:\\n}
-  *@anchor C1 l17
+  *normal_command@anchor C1 l17
   |EXTRA
   |identifier:{aa}
   |is_target:{1}
@@ -75,14 +75,14 @@ $result_tree_text{'form_feeds'} = '*document_root C3
   {spaces_after_close_brace:\\f}
   *paragraph C6
    {normal_text:something }
-   *@email C2 l17
+   *normal_command@email C2 l17
     *brace_arg C2
      {spaces_before_argument:\\f}
      {normal_text:aaa}
     *brace_arg C2
      {spaces_before_argument: \\f }
      {normal_text:fff}
-   *@footnote C1 l17
+   *normal_command@footnote C1 l17
    |EXTRA
    |global_command_number:{1}
     *brace_command_context C4
@@ -92,7 +92,7 @@ $result_tree_text{'form_feeds'} = '*document_root C3
       {normal_text:f1 }
      {empty_line:\\f}
    {normal_text: }
-   *@footnote C1 l18
+   *normal_command@footnote C1 l18
    |EXTRA
    |global_command_number:{2}
     *brace_command_context C4
@@ -105,7 +105,7 @@ $result_tree_text{'form_feeds'} = '*document_root C3
    {normal_text:.\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@xref C1 l20
+   *normal_command@xref C1 l20
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}
@@ -113,13 +113,13 @@ $result_tree_text{'form_feeds'} = '*document_root C3
      {normal_text:chap\\fnode}
    {normal_text:\\n}
   {empty_line:\\n}
-  *@example C3 l22
+  *normal_command@example C3 l22
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument: \\f\\n}
    *preformatted C1
     {normal_text:in example\\n}
-   *@end C1 l24
+   *normal_command@end C1 l24
    |EXTRA
    |text_arg:{example}
     *line_arg C3
@@ -127,24 +127,24 @@ $result_tree_text{'form_feeds'} = '*document_root C3
      {normal_text:example}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@center C1 l26
+  *normal_command@center C1 l26
    *line_arg C3
     {spaces_before_argument: \\f }
     {normal_text:around center}
     {spaces_after_argument: \\f\\n}
-  *@center C1 l27
+  *normal_command@center C1 l27
    *line_arg C3
     {spaces_before_argument: }
     {normal_text:in \\fcenter}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@indicateurl C1 l29
+   *normal_command@indicateurl C1 l29
     *brace_container C1
      {normal_text: \\f in indicateurl}
    {normal_text:\\n}
   {empty_line:\\n}
-  *@deffn C4 l31
+  *normal_command@deffn C4 l31
    *def_line C1 l31
    |EXTRA
    |def_command:{deffn}
@@ -183,7 +183,7 @@ $result_tree_text{'form_feeds'} = '*document_root C3
        {normal_text:arg}
        {spaces_after_argument:\\f }
      {spaces_after_argument: \\f\\n}
-   *@deffnx C1 l32
+   *normal_command@deffnx C1 l32
    |EXTRA
    |def_command:{deffn}
    |element_node:{chap-node}
@@ -224,7 +224,7 @@ $result_tree_text{'form_feeds'} = '*document_root C3
    *def_item C1
     *paragraph C1
      {normal_text:T\\n}
-   *@end C1 l34
+   *normal_command@end C1 l34
    |EXTRA
    |text_arg:{deffn}
     *line_arg C3
@@ -232,7 +232,7 @@ $result_tree_text{'form_feeds'} = '*document_root C3
      {normal_text:deffn}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@float C9 l36
+  *normal_command@float C9 l36
   |EXTRA
   |float_type:{}
   |global_command_number:{1}
@@ -241,7 +241,7 @@ $result_tree_text{'form_feeds'} = '*document_root C3
      {spaces_before_argument:\\n}
    *paragraph C1
     {normal_text:a float\\n}
-   *@caption C1 l38
+   *normal_command@caption C1 l38
     *brace_command_context C6
      {spaces_before_argument:\\f }
      *paragraph C1
@@ -254,7 +254,7 @@ $result_tree_text{'form_feeds'} = '*document_root C3
    {spaces_after_close_brace: \\f }
    *paragraph C1
     {normal_text:Toto\\n}
-   *@shortcaption C1 l39
+   *normal_command@shortcaption C1 l39
     *brace_command_context C6
      {spaces_before_argument:\\f }
      *paragraph C1
@@ -267,7 +267,7 @@ $result_tree_text{'form_feeds'} = '*document_root C3
    {spaces_after_close_brace: \\f }
    *paragraph C1
     {normal_text:After shc\\n}
-   *@end C1 l40
+   *normal_command@end C1 l40
    |EXTRA
    |text_arg:{float}
     *line_arg C3
@@ -275,7 +275,7 @@ $result_tree_text{'form_feeds'} = '*document_root C3
      {normal_text:float}
      {spaces_after_argument: \\f\\n}
   {empty_line:\\n}
-  *@float C3 l42
+  *normal_command@float C3 l42
   |EXTRA
   |float_number:{1}
   |float_type:{type}
@@ -293,7 +293,7 @@ $result_tree_text{'form_feeds'} = '*document_root C3
      {spaces_after_argument: \\f\\n}
    *paragraph C1
     {normal_text:in float\\n}
-   *@end C1 l44
+   *normal_command@end C1 l44
    |EXTRA
    |text_arg:{float}
     *line_arg C3
@@ -301,7 +301,7 @@ $result_tree_text{'form_feeds'} = '*document_root C3
      {normal_text:float}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@listoffloats C1 l46
+  *normal_command@listoffloats C1 l46
   |EXTRA
   |float_type:{type}
   |global_command_number:{1}

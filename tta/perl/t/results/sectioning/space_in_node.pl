@@ -13,7 +13,7 @@ $result_tree_text{'space_in_node'} = '*document_root C5
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content
- *@node C4 l2 {Top}
+ *normal_command@node C4 l2 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -24,7 +24,7 @@ $result_tree_text{'space_in_node'} = '*document_root C5
     {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@menu C5 l4
+  *normal_command@menu C5 l4
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -65,7 +65,7 @@ $result_tree_text{'space_in_node'} = '*document_root C5
     *menu_entry_description C1
      *preformatted C1
       {normal_text:\\n}
-   *@end C1 l8
+   *normal_command@end C1 l8
    |EXTRA
    |text_arg:{menu}
     *line_arg C3
@@ -73,7 +73,7 @@ $result_tree_text{'space_in_node'} = '*document_root C5
      {normal_text:menu}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C2 l10 {Chap first  here}
+ *normal_command@node C2 l10 {Chap first  here}
  |EXTRA
  |identifier:{Chap-first-here}
  |is_target:{1}
@@ -84,7 +84,7 @@ $result_tree_text{'space_in_node'} = '*document_root C5
     {normal_text:Chap first  here}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C2 l12 {Test               title}
+ *normal_command@node C2 l12 {Test               title}
  |EXTRA
  |identifier:{Test-title}
  |is_target:{1}
@@ -95,7 +95,7 @@ $result_tree_text{'space_in_node'} = '*document_root C5
     {normal_text:Test               title}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l14 {Last with spaces}
+ *normal_command@node C1 l14 {Last with spaces}
  |EXTRA
  |identifier:{Last-with-spaces}
  |is_target:{1}

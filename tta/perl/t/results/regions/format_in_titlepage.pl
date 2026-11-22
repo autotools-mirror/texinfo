@@ -11,18 +11,18 @@ use Encode;
 $result_tree_text{'format_in_titlepage'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content C2
-   *@titlepage C5 l1
+   *normal_command@titlepage C5 l1
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     {empty_line:\\n}
-    *@format C3 l3
+    *normal_command@format C3 l3
      *arguments_line C1
       *block_line_arg C1
        {spaces_before_argument:\\n}
      *preformatted C1
       {normal_text:Published\\n}
-     *@end C1 l5
+     *normal_command@end C1 l5
      |EXTRA
      |text_arg:{format}
       *line_arg C3
@@ -30,7 +30,7 @@ $result_tree_text{'format_in_titlepage'} = '*document_root C3
        {normal_text:format}
        {spaces_after_argument:\\n}
     {empty_line:\\n}
-    *@end C1 l7
+    *normal_command@end C1 l7
     |EXTRA
     |text_arg:{titlepage}
      *line_arg C3
@@ -38,7 +38,7 @@ $result_tree_text{'format_in_titlepage'} = '*document_root C3
       {normal_text:titlepage}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@node C1 l9 {Top}
+ *normal_command@node C1 l9 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -48,7 +48,7 @@ $result_tree_text{'format_in_titlepage'} = '*document_root C3
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@node C2 l10 {chap}
+ *normal_command@node C2 l10 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}

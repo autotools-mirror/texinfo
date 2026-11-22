@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'lone_contents'} = '*document_root C1
  *before_node_section C1
   *preamble_before_content C1
-   *@contents C1 l1
+   *normal_command@contents C1 l1
    |EXTRA
    |global_command_number:{1}
     *line_arg C1

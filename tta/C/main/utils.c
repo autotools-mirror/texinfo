@@ -1075,13 +1075,6 @@ allocate_file_stream (OUTPUT_FILES_INFORMATION *self, const char *file_path)
 
 /* Create a new element based on type name and command name.
 
-   The function accepts both
-   - giving types to most elements like in C code
-   - empty types for most @-command elements and normal text as in Perl.
-     Since an empty type can correspond both to normal text and to
-     a container without type, IS_TEXT_ELEMENT should be set with
-     an empty type to get normal text.  The preferred mode of operation
-     to have consistent Texinfo tree description in high-level languages.
    The distinction between @item as line command in @table and @item in
    other context cannot be done with the name only, so @item as line
    command in @table should be specified with the item_LINE command name,
@@ -1090,12 +1083,11 @@ allocate_file_stream (OUTPUT_FILES_INFORMATION *self, const char *file_path)
    Should only be needed for interfaces to other languages.
  */
 ELEMENT *
-new_element_from_names (const char *type_name, const char *command_name,
-                        int is_text_element)
+new_element_from_names (const char *type_name, const char *command_name)
 {
   enum element_type e_type = ET_NONE;
 
-  if (type_name && strlen(type_name))
+  if (type_name && strcmp (type_name, ""))
     {
       e_type = find_element_type ((char *)type_name);
       /* unknown type */
@@ -1103,14 +1095,10 @@ new_element_from_names (const char *type_name, const char *command_name,
         return 0;
     }
 
-  if ((is_text_element && e_type == ET_NONE)
-      || type_data[e_type].flags & TF_text)
+  if (type_data[e_type].flags & TF_text)
     {
-      if (command_name && strlen (command_name))
+      if (command_name && strcmp (command_name, ""))
         return 0;
-
-      if (e_type == ET_NONE)
-        e_type = ET_normal_text;
 
       return new_text_element (e_type);
     }

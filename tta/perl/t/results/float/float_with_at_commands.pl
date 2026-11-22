@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'float_with_at_commands'} = '*document_root C1
  *before_node_section C5
   *preamble_before_content
-  *@float C7 l1
+  *normal_command@float C7 l1
   |EXTRA
   |float_number:{1}
   |float_type:{entrée}
@@ -22,18 +22,18 @@ $result_tree_text{'float_with_at_commands'} = '*document_root C1
     *block_line_arg C4
      {spaces_before_argument: }
      {normal_text:entr}
-     *@\' C1 l1
+     *normal_command@\' C1 l1
       *following_arg C1
        {normal_text:e}
      {normal_text:e}
     *block_line_arg C7
      {spaces_before_argument: }
      {normal_text:premi}
-     *@` C1 l1
+     *normal_command@` C1 l1
       *following_arg C1
        {normal_text:e}
      {normal_text:re entr}
-     *@\' C1 l1
+     *normal_command@\' C1 l1
       *following_arg C1
        {normal_text:e}
      {normal_text:e}
@@ -41,29 +41,29 @@ $result_tree_text{'float_with_at_commands'} = '*document_root C1
    {empty_line:\\n}
    *paragraph C5
     {normal_text:Ceci est notre premi}
-    *@` C1 l3
+    *normal_command@` C1 l3
      *following_arg C1
       {normal_text:e}
     {normal_text:re entr}
-    *@\' C1 l3
+    *normal_command@\' C1 l3
      *following_arg C1
       {normal_text:e}
     {normal_text:e.\\n}
-   *@caption C1 l4
+   *normal_command@caption C1 l4
     *brace_command_context C1
      *paragraph C5
       {normal_text:La premi}
-      *@` C1 l4
+      *normal_command@` C1 l4
        *following_arg C1
         {normal_text:e}
       {normal_text:re entr}
-      *@\' C1 l4
+      *normal_command@\' C1 l4
        *following_arg C1
         {normal_text:e}
       {normal_text:e est importante}
    {spaces_after_close_brace:\\n}
    {empty_line:\\n}
-   *@end C1 l6
+   *normal_command@end C1 l6
    |EXTRA
    |text_arg:{float}
     *line_arg C3
@@ -72,14 +72,14 @@ $result_tree_text{'float_with_at_commands'} = '*document_root C1
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   {empty_line:\\n}
-  *@listoffloats C1 l9
+  *normal_command@listoffloats C1 l9
   |EXTRA
   |float_type:{entrée}
   |global_command_number:{1}
    *line_arg C5
     {spaces_before_argument: }
     {normal_text:entr}
-    *@\' C1 l9
+    *normal_command@\' C1 l9
      *following_arg C1
       {normal_text:e}
     {normal_text:e}

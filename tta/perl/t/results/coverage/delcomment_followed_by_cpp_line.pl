@@ -14,12 +14,12 @@ $result_tree_text{'delcomment_followed_by_cpp_line'} = '*document_root C2
    {text_before_beginning:\\input texinfo\\n}
    {text_before_beginning:\\n}
   *preamble_before_content C3
-   *@c C1
+   *normal_command@c C1
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:this tests both the del comment and a file without}
      {spaces_after_argument:\\n}
-   *@c C1
+   *normal_command@c C1
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:element.}
@@ -48,7 +48,7 @@ $result_tree_text{'delcomment_followed_by_cpp_line'} = '*document_root C2
   {empty_line:\\n}
   {empty_line:\\n}
   {empty_line:\\n}
- *@bye C1
+ *normal_command@bye C1
   *line_arg C1
    {spaces_before_argument:\\n}
 ';

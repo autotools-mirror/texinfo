@@ -41,7 +41,7 @@ definfoenclose_command                 with_command
 
 # only in C.  These types should only be used in code to set the
 # type at the element creation.
-normal_command                           c_only
+normal_command
 
 # For text elements
 after_menu_description_line               text

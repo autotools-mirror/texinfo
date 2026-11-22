@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'spaces_info_lost'} = '*document_root C1
  *before_node_section C4
   *preamble_before_content
-  *@display C3 l1
+  *normal_command@display C3 l1
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument:  }
@@ -19,7 +19,7 @@ $result_tree_text{'spaces_info_lost'} = '*document_root C1
      {spaces_after_argument: \\n}
    *preformatted C1
     {normal_text:in bad display\\n}
-   *@end C1 l3
+   *normal_command@end C1 l3
    |EXTRA
    |text_arg:{display}
     *line_arg C3
@@ -27,12 +27,12 @@ $result_tree_text{'spaces_info_lost'} = '*document_root C1
      {normal_text:display}
      {spaces_after_argument: \\n}
   {empty_line:\\n}
-  *@verbatim C3 l5
+  *normal_command@verbatim C3 l5
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:  \\n}
    {raw:in verbatim @g \\n}
-   *@end C1 l7
+   *normal_command@end C1 l7
    |EXTRA
    |text_arg:{verbatim}
     *line_arg C3

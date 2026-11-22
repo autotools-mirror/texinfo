@@ -13,14 +13,14 @@ $result_tree_text{'macro_in_menu_comment_like_entry'} = '*document_root C1
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content C2
-   *@macro C3 l2
+   *normal_command@macro C3 l2
    |EXTRA
    |formal_args:A{}
    |macro_name:{emptystring}
     *arguments_line C1
      {macro_line: emptystring\\n}
     {raw:\\n}
-    *@end C1 l4
+    *normal_command@end C1 l4
     |EXTRA
     |text_arg:{macro}
      *line_arg C3
@@ -28,7 +28,7 @@ $result_tree_text{'macro_in_menu_comment_like_entry'} = '*document_root C1
       {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-  *@menu C3 l6
+  *normal_command@menu C3 l6
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
@@ -44,7 +44,7 @@ $result_tree_text{'macro_in_menu_comment_like_entry'} = '*document_root C1
       >*macro_call@emptystring C1
        >*brace_arg
      >macro_expansion<end;2><p:3>
-     *@b C1 l7
+     *normal_command@b C1 l7
      >SOURCEMARKS
      >macro_expansion<start;4>
       >*macro_call@emptystring C1
@@ -58,12 +58,12 @@ $result_tree_text{'macro_in_menu_comment_like_entry'} = '*document_root C1
          >*brace_arg
        >macro_expansion<end;3><p:1>
      {normal_text:: }
-     *@c C1
+     *normal_command@c C1
       *line_arg C3
        {spaces_before_argument: }
        {rawline_text:c}
        {spaces_after_argument:\\n}
-   *@end C1 l8
+   *normal_command@end C1 l8
    |EXTRA
    |text_arg:{menu}
     *line_arg C3

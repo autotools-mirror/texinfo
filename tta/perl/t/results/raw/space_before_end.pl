@@ -11,14 +11,14 @@ use Encode;
 $result_tree_text{'space_before_end'} = '*document_root C1
  *before_node_section C4
   *preamble_before_content C2
-   *@tex C3 l1
+   *normal_command@tex C3 l1
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *rawpreformatted C2
      {normal_text:in tex\\n}
      {normal_text:    }
-    *@end C1 l3
+    *normal_command@end C1 l3
     |EXTRA
     |text_arg:{tex}
      *line_arg C3
@@ -26,13 +26,13 @@ $result_tree_text{'space_before_end'} = '*document_root C1
       {normal_text:tex}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-  *@verbatim C4 l5
+  *normal_command@verbatim C4 l5
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    {raw:in verbatim\\n}
    {raw:    }
-   *@end C1 l7
+   *normal_command@end C1 l7
    |EXTRA
    |text_arg:{verbatim}
     *line_arg C3
@@ -40,14 +40,14 @@ $result_tree_text{'space_before_end'} = '*document_root C1
      {normal_text:verbatim}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@html C4 l9
+  *normal_command@html C4 l9
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *elided_rawpreformatted C1
     {raw:in html\\n}
    {normal_text:   }
-   *@end C1 l11
+   *normal_command@end C1 l11
    |EXTRA
    |text_arg:{html}
     *line_arg C3

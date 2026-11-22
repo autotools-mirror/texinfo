@@ -173,28 +173,28 @@ while (1) {
 #my $result_string = Texinfo_SWIG_Interface_Tests::protect_perl_string($result);
 #print STDERR "'$result_string'\n";
 
-my $reference = '[T: View toto.  And then mine and yours . .\\n]|4
+my $reference = 'normal_text[T: View toto.  And then mine and yours . .\\n]|4
  0: c:1; s:1; p:5|(toto){@value{myval}}
  1: c:1; s:2; p:9|
  2: c:1; s:1; p:16|{@do {mine, yours }}
  3: c:1; s:2; p:37|
-[T: toto]|2
+normal_text[T: toto]|2
  0: c:2; s:1; p:0|(toto){@value{myval}}
  1: c:2; s:2; p:4|
-[T: then feet  and foot.]|2
+normal_text[T: then feet  and foot.]|2
  0: c:2; s:1; p:0|{@do{ feet , foot}}
  1: c:2; s:2; p:20|
-[T: OO the arg\\n]|2
+normal_text[T: OO the arg\\n]|2
  0: c:3; s:1; p:0|{@onearg the arg}
  1: c:3; s:2; p:10|
-[T: text before OO another arg]|1
+normal_text[T: text before OO another arg]|1
  0: c:4; s:1; p:12|{@onearg  another arg@comment am I there?}
 rawline_text[T: am I there?]|1
  0: c:4; s:2; p:11|
 empty_line[T: \\n]|1
  0: c:1; s:1; p:1|{@lm @
 }
-[T: bullet\\n]|1
+normal_text[T: bullet\\n]|1
  0: c:1; s:2; p:6|
 block_line_arg|1
  0: c:2; s:1; p:0|{@defbuiltin {my foo} a last {} arg{ument}}

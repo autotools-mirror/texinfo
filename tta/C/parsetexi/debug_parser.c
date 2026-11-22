@@ -103,7 +103,7 @@ print_element_debug_parser (const ELEMENT *e, int print_parent)
 
   text_init (&text);
   text_append (&text, "");
-  if (e->type && !(type_data[e->type].flags & TF_c_only))
+  if (e->type)
     text_printf (&text, "(%s)", type_data[e->type].name);
   if (type_data[e->type].flags & TF_text)
     {
@@ -128,8 +128,7 @@ print_element_debug_parser (const ELEMENT *e, int print_parent)
       if (print_parent && e->e.c->parent)
         {
           text_append (&text, " <- ");
-          if (e->e.c->parent->type
-              && !(type_data[e->e.c->parent->type].flags & TF_c_only))
+          if (e->e.c->parent->type)
             text_printf (&text, "(%s)",
                          type_data[e->e.c->parent->type].name);
           if (e->e.c->parent->e.c->cmd)

@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'top_no_sectioning_command'} = '*document_root C4
  *before_node_section C1
   *preamble_before_content
- *@node C2 l1 {Top}
+ *normal_command@node C2 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -22,7 +22,7 @@ $result_tree_text{'top_no_sectioning_command'} = '*document_root C4
     {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l3 {Chapter}
+ *normal_command@node C1 l3 {Chapter}
  |EXTRA
  |identifier:{Chapter}
  |is_target:{1}
@@ -32,7 +32,7 @@ $result_tree_text{'top_no_sectioning_command'} = '*document_root C4
     {spaces_before_argument: }
     {normal_text:Chapter}
     {spaces_after_argument:\\n}
- *@chapter C3 l4 {Chap}
+ *normal_command@chapter C3 l4 {Chap}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -44,7 +44,7 @@ $result_tree_text{'top_no_sectioning_command'} = '*document_root C4
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *paragraph C2
-   *@pxref C1 l6
+   *normal_command@pxref C1 l6
     *brace_arg C1
     |EXTRA
     |node_content:A{0|0}

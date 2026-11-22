@@ -13,7 +13,7 @@ $result_tree_text{'documentscript_before_documentlanguage'} = '*document_root C5
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content C4
-   *@documentscript C1 l2
+   *normal_command@documentscript C1 l2
    |EXTRA
    |global_command_number:{1}
    |text_arg:{Latn}
@@ -22,7 +22,7 @@ $result_tree_text{'documentscript_before_documentlanguage'} = '*document_root C5
      {normal_text:Latn}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
-   *@documentlanguage C1 l4
+   *normal_command@documentlanguage C1 l4
    |EXTRA
    |global_command_number:{1}
    |text_arg:{sr}
@@ -31,7 +31,7 @@ $result_tree_text{'documentscript_before_documentlanguage'} = '*document_root C5
      {normal_text:sr}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@node C1 l6 {Top}
+ *normal_command@node C1 l6 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -41,7 +41,7 @@ $result_tree_text{'documentscript_before_documentlanguage'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l7 {top}
+ *normal_command@top C2 l7 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}
@@ -51,7 +51,7 @@ $result_tree_text{'documentscript_before_documentlanguage'} = '*document_root C5
     {normal_text:top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
- *@node C1 l9 {chap}
+ *normal_command@node C1 l9 {chap}
  |EXTRA
  |identifier:{chap}
  |is_target:{1}
@@ -61,7 +61,7 @@ $result_tree_text{'documentscript_before_documentlanguage'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:chap}
     {spaces_after_argument:\\n}
- *@chapter C3 l10 {Chap}
+ *normal_command@chapter C3 l10 {Chap}
  |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
@@ -72,7 +72,7 @@ $result_tree_text{'documentscript_before_documentlanguage'} = '*document_root C5
     {normal_text:Chap}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@defivar C2 l12
+  *normal_command@defivar C2 l12
    *def_line C1 l12
    |EXTRA
    |def_command:{defivar}
@@ -103,7 +103,7 @@ $result_tree_text{'documentscript_before_documentlanguage'} = '*document_root C5
       *def_line_arg C1
        {normal_text:ivar}
      {spaces_after_argument:\\n}
-   *@end C1 l13
+   *normal_command@end C1 l13
    |EXTRA
    |text_arg:{defivar}
     *line_arg C3

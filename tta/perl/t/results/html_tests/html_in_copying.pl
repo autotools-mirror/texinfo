@@ -13,27 +13,27 @@ $result_tree_text{'html_in_copying'} = '*document_root C3
   *preamble_before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content C2
-   *@copying C5 l2
+   *normal_command@copying C5 l2
     *arguments_line C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *paragraph C1
      {normal_text:Copying\\n}
     {empty_line:\\n}
-    *@html C3 l5
+    *normal_command@html C3 l5
      *arguments_line C1
       *block_line_arg C1
        {spaces_before_argument:\\n}
      *rawpreformatted C1
       {normal_text:in <b>html</b> in copying `` \\n}
-     *@end C1 l7
+     *normal_command@end C1 l7
      |EXTRA
      |text_arg:{html}
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:html}
        {spaces_after_argument:\\n}
-    *@end C1 l8
+    *normal_command@end C1 l8
     |EXTRA
     |text_arg:{copying}
      *line_arg C3
@@ -41,7 +41,7 @@ $result_tree_text{'html_in_copying'} = '*document_root C3
       {normal_text:copying}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
- *@node C1 l10 {Top}
+ *normal_command@node C1 l10 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -51,7 +51,7 @@ $result_tree_text{'html_in_copying'} = '*document_root C3
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
- *@top C2 l11 {top}
+ *normal_command@top C2 l11 {top}
  |EXTRA
  |section_level:{0}
  |section_number:{1}

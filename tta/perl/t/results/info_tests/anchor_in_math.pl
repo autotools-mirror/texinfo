@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'anchor_in_math'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
- *@node C6 l1 {Top}
+ *normal_command@node C6 l1 {Top}
  |EXTRA
  |identifier:{Top}
  |is_target:{1}
@@ -24,10 +24,10 @@ $result_tree_text{'anchor_in_math'} = '*document_root C2
   {empty_line:\\n}
   *paragraph C3
    {normal_text:Some }
-   *@math C1 l3
+   *normal_command@math C1 l3
     *brace_arg C2
      {normal_text:A + B }
-     *@anchor C1 l3
+     *normal_command@anchor C1 l3
      |EXTRA
      |identifier:{in-math}
      |is_target:{1}
@@ -35,12 +35,12 @@ $result_tree_text{'anchor_in_math'} = '*document_root C2
        {normal_text:in math}
    {normal_text: and after.\\n}
   {empty_line:\\n}
-  *@displaymath C11 l5
+  *normal_command@displaymath C11 l5
    *arguments_line C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    {normal_text:f(x) = }
-   *@anchor C1 l6
+   *normal_command@anchor C1 l6
    |EXTRA
    |identifier:{equal-point}
    |is_target:{1}
@@ -53,14 +53,14 @@ $result_tree_text{'anchor_in_math'} = '*document_root C2
    *balanced_braces C1 l6
     {normal_text:{b}}
    {normal_text: }
-   *@anchor C1 l6
+   *normal_command@anchor C1 l6
    |EXTRA
    |identifier:{displm-point}
    |is_target:{1}
     *brace_arg C1
      {normal_text:displm point}
    {spaces_after_close_brace:\\n}
-   *@end C1 l7
+   *normal_command@end C1 l7
    |EXTRA
    |text_arg:{displaymath}
     *line_arg C3

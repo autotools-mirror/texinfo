@@ -11,20 +11,20 @@ use Encode;
 $result_tree_text{'itemize_line_commands_with_brace'} = '*document_root C1
  *before_node_section C4
   *preamble_before_content
-  *@itemize C3 l1
+  *normal_command@itemize C3 l1
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     *@bullet C1 l1
+     *normal_command@bullet C1 l1
       *brace_container
      {spaces_after_argument:\\n}
-   *@item C2 l2
+   *normal_command@item C2 l2
    |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:bullet\\n}
-   *@end C1 l3
+   *normal_command@end C1 l3
    |EXTRA
    |text_arg:{itemize}
     *line_arg C3
@@ -32,20 +32,20 @@ $result_tree_text{'itemize_line_commands_with_brace'} = '*document_root C1
      {normal_text:itemize}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@itemize C3 l5
+  *normal_command@itemize C3 l5
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     *@minus C1 l5
+     *normal_command@minus C1 l5
       *brace_container
      {spaces_after_argument:\\n}
-   *@item C2 l6
+   *normal_command@item C2 l6
    |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:minus\\n}
-   *@end C1 l7
+   *normal_command@end C1 l7
    |EXTRA
    |text_arg:{itemize}
     *line_arg C3

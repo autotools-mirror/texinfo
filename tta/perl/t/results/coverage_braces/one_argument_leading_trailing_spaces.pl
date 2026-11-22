@@ -12,23 +12,23 @@ $result_tree_text{'one_argument_leading_trailing_spaces'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *paragraph C30
-   *@code C1 l1
+   *normal_command@code C1 l1
     *brace_container C1
      {normal_text: in code }
    {normal_text: }
-   *@slanted C1 l1
+   *normal_command@slanted C1 l1
     *brace_container C1
      {normal_text: in slanted }
    {normal_text: }
-   *@var C1 l1
+   *normal_command@var C1 l1
     *brace_container C1
      {normal_text: var }
    {normal_text: }
-   *@sub C1 l1
+   *normal_command@sub C1 l1
     *brace_container C1
      {normal_text: sub }
    {normal_text:\\n}
-   *@hyphenation C1 l2
+   *normal_command@hyphenation C1 l2
    |EXTRA
    |global_command_number:{1}
     *brace_arg C3
@@ -36,47 +36,47 @@ $result_tree_text{'one_argument_leading_trailing_spaces'} = '*document_root C1
      {normal_text:a-b c-d}
      {spaces_after_argument: }
    {spaces_after_close_brace:\\n}
-   *@indicateurl C1 l3
+   *normal_command@indicateurl C1 l3
     *brace_container C1
      {normal_text: http://example.com }
    {normal_text: }
-   *@U C1 l3
+   *normal_command@U C1 l3
     *brace_arg C3
      {spaces_before_argument: }
      {normal_text:1234}
      {spaces_after_argument: }
    {normal_text: }
-   *@w C1 l3
+   *normal_command@w C1 l3
     *brace_container C1
      {normal_text: w }
    {normal_text: }
-   *@verb C1 l3
+   *normal_command@verb C1 l3
     *brace_container C3
      {verb_delimiter::}
      {raw: verb }
      {verb_delimiter::}
    {normal_text:.\\n}
-   *@^ C1 l4
+   *normal_command@^ C1 l4
     *brace_container C1
      {normal_text: e }
    {normal_text: }
-   *@ringaccent C1 l4
+   *normal_command@ringaccent C1 l4
     *brace_container C1
      {normal_text: a }
    {normal_text: }
-   *@dotless C1 l4
+   *normal_command@dotless C1 l4
     *brace_container C1
      {normal_text: i }
    {normal_text: }
-   *@tieaccent C1 l4
+   *normal_command@tieaccent C1 l4
     *brace_container C1
      {normal_text: bb }
    {normal_text:\\n}
-   *@aa C1 l5
+   *normal_command@aa C1 l5
     *brace_container C1
      {normal_text: i }
    {normal_text: }
-   *@enddots C1 l5
+   *normal_command@enddots C1 l5
     *brace_container C1
      {normal_text: ei }
    {normal_text:\\n}

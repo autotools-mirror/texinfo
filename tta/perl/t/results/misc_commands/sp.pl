@@ -15,14 +15,14 @@ $result_tree_text{'sp'} = '*document_root C1
   *preamble_before_content
   *paragraph C1
    {normal_text:Text line followed on the same line and another below }
-  *@sp C1 l2
+  *normal_command@sp C1 l2
   |EXTRA
   |misc_args:A{1}
    *line_arg C3
     {spaces_before_argument: }
     {normal_text:1}
     {spaces_after_argument:\\n}
-  *@sp C1 l3
+  *normal_command@sp C1 l3
   |EXTRA
   |misc_args:A{2}
    *line_arg C3
@@ -31,7 +31,7 @@ $result_tree_text{'sp'} = '*document_root C1
     {spaces_after_argument:\\n}
   *paragraph C1
    {normal_text:Text line after the sp followed by a sp }
-  *@sp C1 l4
+  *normal_command@sp C1 l4
   |EXTRA
   |misc_args:A{1}
    *line_arg C3
@@ -42,14 +42,14 @@ $result_tree_text{'sp'} = '*document_root C1
    {normal_text:Text line after the text line followed by the sp.\\n}
    >SOURCEMARKS
    >expanded_conditional_command<start;1><p:50>
-    >*@ifnottex C1 l6
+    >*normal_command@ifnottex C1 l6
      >*arguments_line C1
       >*block_line_arg C1
        >{spaces_before_argument:\\n}
-  *@sp C1 l7
+  *normal_command@sp C1 l7
   >SOURCEMARKS
   >expanded_conditional_command<end;1>
-   >*@end C1 l8
+   >*normal_command@end C1 l8
    >|EXTRA
    >|text_arg:{ifnottex}
     >*line_arg C3

@@ -11,24 +11,24 @@ use Encode;
 $result_tree_text{'set_on_item_line'} = '*document_root C1
  *before_node_section C4
   *preamble_before_content
-  *@table C5 l1
+  *normal_command@table C5 l1
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     *@code l1
+     *normal_command@code l1
      {spaces_after_argument:\\n}
    *table_entry C2
     *table_term C1
-     *@item C1 l2
+     *normal_command@item C1 l2
       *line_arg C2
        {spaces_before_argument: }
-       *@set C1
+       *normal_command@set C1
        |EXTRA
        |misc_args:A{ca|b}
         *line_arg C3
          {spaces_before_argument: }
          {rawline_text:ca b}
-         *@c C1
+         *normal_command@c C1
           *line_arg C2
            {rawline_text:}
            {spaces_after_argument:\\n}
@@ -38,17 +38,17 @@ $result_tree_text{'set_on_item_line'} = '*document_root C1
       {normal_text:in item\\n}
    *table_entry C2
     *table_term C1
-     *@item C1 l5
+     *normal_command@item C1 l5
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:cjj }
-       *@set C1
+       *normal_command@set C1
        |EXTRA
        |misc_args:A{cj|}
         *line_arg C3
          {spaces_before_argument: }
          {rawline_text:cj}
-         *@c C1
+         *normal_command@c C1
           *line_arg C2
            {rawline_text:}
            {spaces_after_argument:\\n}
@@ -57,21 +57,21 @@ $result_tree_text{'set_on_item_line'} = '*document_root C1
       {normal_text:line\\n}
    *table_entry C1
     *table_term C1
-     *@item C1 l7
+     *normal_command@item C1 l7
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:cvvv }
-       *@set C1
+       *normal_command@set C1
        |EXTRA
        |misc_args:A{cg|}
         *line_arg C3
          {spaces_before_argument: }
          {rawline_text:cg}
-         *@c C1
+         *normal_command@c C1
           *line_arg C2
            {rawline_text:}
            {spaces_after_argument:\\n}
-   *@end C1 l8
+   *normal_command@end C1 l8
    |EXTRA
    |text_arg:{table}
     *line_arg C3
@@ -79,18 +79,18 @@ $result_tree_text{'set_on_item_line'} = '*document_root C1
      {normal_text:table}
      {spaces_after_argument:\\n}
   {empty_line:\\n}
-  *@table C5 l10
+  *normal_command@table C5 l10
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
-     *@code l10
+     *normal_command@code l10
      {spaces_after_argument:\\n}
    *table_entry C2
     *table_term C1
-     *@item C1 l11
+     *normal_command@item C1 l11
       *line_arg C2
        {spaces_before_argument: }
-       *@set C1
+       *normal_command@set C1
        |EXTRA
        |misc_args:A{a|b}
         *line_arg C3
@@ -103,11 +103,11 @@ $result_tree_text{'set_on_item_line'} = '*document_root C1
       {normal_text:in item\\n}
    *table_entry C2
     *table_term C1
-     *@item C1 l14
+     *normal_command@item C1 l14
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:jj }
-       *@set C1
+       *normal_command@set C1
        |EXTRA
        |misc_args:A{j|}
         *line_arg C3
@@ -119,18 +119,18 @@ $result_tree_text{'set_on_item_line'} = '*document_root C1
       {normal_text:line\\n}
    *table_entry C1
     *table_term C1
-     *@item C1 l16
+     *normal_command@item C1 l16
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:vvv }
-       *@set C1
+       *normal_command@set C1
        |EXTRA
        |misc_args:A{g|}
         *line_arg C3
          {spaces_before_argument: }
          {rawline_text:g}
          {spaces_after_argument:\\n}
-   *@end C1 l17
+   *normal_command@end C1 l17
    |EXTRA
    |text_arg:{table}
     *line_arg C3
