@@ -1230,7 +1230,7 @@ static ELEMENT *
 new_value_element (enum command_id cmd, const char *flag,
                    int flag_len, ELEMENT *spaces_element)
 {
-  ELEMENT *value_elt = new_command_element (ET_brace_command, cmd);
+  ELEMENT *value_elt = new_command_element (cmd);
   ELEMENT *brace_container = new_element (ET_brace_container);
   /* occasionnally considered as text in conversion, so make it normal text */
   ELEMENT *value_text = new_text_element (ET_normal_text);

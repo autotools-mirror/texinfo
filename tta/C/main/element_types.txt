@@ -41,12 +41,7 @@ definfoenclose_command                 with_command
 
 # only in C.  These types should only be used in code to set the
 # type at the element creation.
-nobrace_command                        c_only
-line_command                           c_only
-block_command                          c_only
-brace_command                          c_only
-# BRACE_context commands
-context_brace_command                  c_only
+normal_command                           c_only
 
 # For text elements
 after_menu_description_line               text

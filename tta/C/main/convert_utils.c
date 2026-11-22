@@ -57,9 +57,8 @@ static const ELEMENT *default_asis_command;
 void
 setup_convert_utils (void)
 {
-  default_bullet_command = new_command_element (ET_brace_command,
-                                                CM_bullet);
-  default_asis_command = new_command_element (ET_brace_command, CM_asis);
+  default_bullet_command = new_command_element (CM_bullet);
+  default_asis_command = new_command_element (CM_asis);
 }
 
 /* ALTIMP Texinfo::Common */
@@ -89,7 +88,7 @@ new_tree_added_elements (enum tree_added_elements_status status)
   return new;
 }
 
-ELEMENT *
+static ELEMENT *
 new_element_added (TREE_ADDED_ELEMENTS *added_elements, enum element_type type)
 {
   ELEMENT *new = new_element (type);
@@ -97,16 +96,19 @@ new_element_added (TREE_ADDED_ELEMENTS *added_elements, enum element_type type)
   return new;
 }
 
-ELEMENT *
+static ELEMENT *
 new_command_element_added (TREE_ADDED_ELEMENTS *added_elements,
                            enum element_type type,
-                           enum command_id cmd)
+                           enum command_id cmd,
+                           const char *command_name)
 {
-  ELEMENT *new = new_command_element (type, cmd);
+  ELEMENT *new = new_command_type_element (type, cmd,
+                                           command_name);
   add_to_element_list (&added_elements->added, new);
   return new;
 }
 
+/*
 ELEMENT *
 new_text_element_added (TREE_ADDED_ELEMENTS *added_elements,
                         enum element_type type)
@@ -115,6 +117,7 @@ new_text_element_added (TREE_ADDED_ELEMENTS *added_elements,
   add_to_element_list (&added_elements->added, new);
   return new;
 }
+ */
 
 void
 clear_tree_added_elements (TREE_ADDED_ELEMENTS *tree_elements)
@@ -661,7 +664,7 @@ expand_verbatiminclude (const ELEMENT *current,
         {
           conversion
            = get_encoding_conversion (input_encoding, &input_conversions);
-          verbatiminclude = new_command_element (ET_block_command, CM_verbatim);
+          verbatiminclude = new_command_element (CM_verbatim);
           while (1)
             {
               size_t n;
@@ -1115,7 +1118,8 @@ table_item_content_tree (CONVERTER *self, const ELEMENT *element)
             = element_builtin_data_cmd (command_as_argument);
 
       command
-        = new_command_element_added (tree, command_as_argument->type, cmd);
+        = new_command_element_added (tree, command_as_argument->type,
+                              cmd, command_as_argument->e.c->command_name);
       tree->tree = command;
 
       command->e.c->source_info = element->e.c->source_info;
@@ -1130,15 +1134,10 @@ table_item_content_tree (CONVERTER *self, const ELEMENT *element)
                                                    AI_key_begin);
           const char *end = lookup_extra_string (command_as_argument,
                                                  AI_key_end);
-          const char *command_name
-            = command_as_argument->e.c->command_name;
-
           if (begin)
             add_extra_string_dup (command, AI_key_begin, begin);
           if (end)
             add_extra_string_dup (command, AI_key_end, end);
-          if (command_name)
-            command->e.c->command_name = strdup (command_name);
         }
       if (command_data[data_cmd].data == BRACE_context)
         {

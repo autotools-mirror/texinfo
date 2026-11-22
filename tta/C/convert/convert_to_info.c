@@ -992,8 +992,7 @@ info_format_footnotes (CONVERTER *self, const OUTPUT_UNIT *output_unit)
         {
           ELEMENT *footnotes_node_arg = new_element (ET_line_arg);
           ELEMENT *footnotes_suffix = new_element (ET_other_text);
-          footnotes_node
-            = new_command_element (ET_line_command, CM_node);
+          footnotes_node = new_command_element (CM_node);
           ELEMENT *footnote_arguments_line
             = new_element (ET_arguments_line);
           ELEMENT *label_element_copy = copy_contents (label_element, 0,
@@ -1043,8 +1042,7 @@ info_format_footnotes (CONVERTER *self, const OUTPUT_UNIT *output_unit)
               char *footnote_anchor_id;
 
               ELEMENT *footnote_anchor_arg = new_element (ET_brace_arg);
-              ELEMENT *footnote_anchor = new_command_element (ET_brace_command,
-                                                              CM_anchor);
+              ELEMENT *footnote_anchor = new_command_element (CM_anchor);
               ELEMENT *label_element_copy = copy_contents (label_element, 0,
                                                            ET_NONE);
               ELEMENT *footnote_anchor_postfix_e
@@ -1100,9 +1098,7 @@ info_format_reference_to_footnote (CONVERTER *self)
       text_append_n (open_parenthese->e.text, " (", 2);
       ELEMENT *close_parenthese = new_text_element (ET_other_text);
       text_append_n (close_parenthese->e.text, ")", 1);
-      ELEMENT *footnote_pxref
-                     = new_command_element (ET_brace_command,
-                                            CM_pxref);
+      ELEMENT *footnote_pxref = new_command_element (CM_pxref);
       ELEMENT *footnote_brace_arg = new_element (ET_brace_arg);
       ELEMENT *footnote_name = new_text_element (ET_other_text);
       text_printf (footnote_name->e.text, "-Footnote-%d",

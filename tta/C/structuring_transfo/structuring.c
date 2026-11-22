@@ -62,7 +62,7 @@ new_block_command (ELEMENT *element)
   ELEMENT *block_line_arg = new_element (ET_block_line_arg);
   ELEMENT *arguments_line = new_element (ET_arguments_line);
   ELEMENT *arg_spaces_before = new_text_element (ET_spaces_before_argument);
-  ELEMENT *end = new_command_element (ET_line_command, CM_end);
+  ELEMENT *end = new_command_element (CM_end);
   ELEMENT *end_args = new_element (ET_line_arg);
   ELEMENT *end_spaces_before = new_text_element (ET_spaces_before_argument);
   ELEMENT *end_spaces_after = new_text_element (ET_spaces_after_argument);
@@ -658,7 +658,7 @@ new_node (ERROR_MESSAGE_LIST *error_messages, ELEMENT *node_tree,
           text_append (spaces_before->e.text, " ");
         }
 
-      node = new_command_element (ET_line_command, CM_node);
+      node = new_command_element (CM_node);
       add_to_element_contents (node, arguments_line);
       add_to_element_contents (arguments_line, node_line_arg);
 
@@ -3171,7 +3171,7 @@ new_complete_node_menu (const NODE_RELATIONS *node_relations,
      new_block_command */
 
   associated_section_relations = node_relations->associated_section;
-  new_menu = new_command_element (ET_block_command, CM_menu);
+  new_menu = new_command_element (CM_menu);
 
   for (i = 0; i < node_childs->number; i++)
     {
@@ -3496,8 +3496,7 @@ new_detailmenu (ERROR_MESSAGE_LIST *error_messages,
   /* only holds contents here, will add spaces and end in
      new_block_command */
 
-  ELEMENT *new_detailmenu_e = new_command_element (ET_block_command,
-                                                   CM_detailmenu);
+  ELEMENT *new_detailmenu_e = new_command_element (CM_detailmenu);
 
   if (menus && menus->number > 0)
     {

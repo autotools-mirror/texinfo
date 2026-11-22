@@ -14,7 +14,9 @@ extern const ASSOCIATED_INFO_DATA associated_info_table[];
 
 ASSOCIATED_INFO *new_associated_info (void);
 ELEMENT *new_element (enum element_type type);
-ELEMENT *new_command_element (enum element_type type, enum command_id cmd);
+ELEMENT *new_command_element (enum command_id cmd);
+ELEMENT *new_command_type_element (enum element_type type, enum command_id cmd,
+                                   const char *command_name);
 ELEMENT *new_text_element (enum element_type type);
 ELEMENT_LIST *new_list (void);
 CONST_ELEMENT_LIST *new_const_element_list (void);

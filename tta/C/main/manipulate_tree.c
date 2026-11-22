@@ -226,8 +226,9 @@ copy_tree_internal (ELEMENT* current, ELEMENT_LIST *other_trees)
   /* not already copied, do the copy */
   if (type_data[current->type].flags & TF_text)
     new = new_text_element (current->type);
-  else if (current->e.c->cmd)
-    new = new_command_element (current->type, current->e.c->cmd);
+  else if (current->e.c->cmd || current->e.c->command_name)
+    new = new_command_type_element (current->type, current->e.c->cmd,
+                                    current->e.c->command_name);
   else
     new = new_element (current->type);
 
@@ -258,11 +259,6 @@ copy_tree_internal (ELEMENT* current, ELEMENT_LIST *other_trees)
         add_element_to_element_contents (new, added);
       else
         add_to_contents_as_array (new, added);
-    }
-
-  if (current->e.c->command_name)
-    {
-      new->e.c->command_name = strdup (current->e.c->command_name);
     }
 
   copy_associated_info (&current->e.c->extra_info, &new->e.c->extra_info,
@@ -510,7 +506,7 @@ copy_container_contents (const ELEMENT *container)
 {
   ELEMENT *result;
   if (container->e.c->cmd)
-    result = new_command_element (container->type, container->e.c->cmd);
+    result = new_command_element (container->e.c->cmd);
   else
     result = new_element (container->type);
 
@@ -1833,7 +1829,7 @@ ELEMENT *
 new_asis_command_with_text (const char *text, ELEMENT *parent,
                             enum element_type type)
 {
-  ELEMENT *new_command = new_command_element (ET_brace_command, CM_asis);
+  ELEMENT *new_command = new_command_element (CM_asis);
   ELEMENT *brace_container = new_element (ET_brace_container);
   ELEMENT *text_elt = new_text_element (type);
   if (parent)
@@ -1909,11 +1905,9 @@ protect_text (ELEMENT *current, const char *to_protect)
                   size_t i;
                   for (i = 0; i < to_protect_nr; i++)
                     {
-                      ELEMENT *comma
-                       = new_command_element (ET_brace_command,
-                                              CM_comma);
+                      ELEMENT *comma = new_command_element (CM_comma);
                       ELEMENT *brace_container
-                           = new_element (ET_brace_container);
+                         = new_element (ET_brace_container);
                       add_to_element_contents (comma, brace_container);
                       add_to_element_list (container, comma);
                       if (u8_text)

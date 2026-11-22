@@ -68,10 +68,27 @@ new_element (enum element_type type)
   return e;
 }
 
+/* for commands with dynamically generated command name, with type
+   determining the command category.  For definfoenclose'd, macro
+   call and index commands */
 ELEMENT *
-new_command_element (enum element_type type, enum command_id cmd)
+new_command_type_element (enum element_type type, enum command_id cmd,
+                          const char *command_name)
 {
   ELEMENT *e = new_element (type);
+
+  e->e.c->cmd = cmd;
+
+  if (command_name)
+    e->e.c->command_name = strdup (command_name);
+
+  return e;
+}
+
+ELEMENT *
+new_command_element (enum command_id cmd)
+{
+  ELEMENT *e = new_element (ET_normal_command);
 
   e->e.c->cmd = cmd;
 

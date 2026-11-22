@@ -1,5 +1,32 @@
 2026-11-22  Patrice Dumas  <pertusus@free.fr>
 
+	* tta/C/main/convert_utils.c (new_command_element_added)
+	(table_item_content_tree), tta/C/main/tree.c
+	(new_command_type_element), tta/C/main/manipulate_tree.c
+	(copy_tree_internal), tta/C/main/utils.c (new_element_from_names),
+	tta/C/parsetexi/handle_commands.c (handle_line_command)
+	(handle_brace_command), tta/C/parsetexi/macro.c (handle_macro),
+	tta/C/parsetexi/end_line.c (end_line_misc_line): add
+	new_command_type_element for commands with dynamically generated
+	command name, with type determining the command category such as
+	definfoenclose'd, macro call and index commands, with the command name
+	string in argument.  Use for the corresponding elements creation, and
+	remove setting command_name separately.  Use also in
+	new_command_element_added, copy_tree_internal and
+	new_element_from_names.
+
+	* tta/C/main/tree.c (new_command_element),
+	tta/C/main/element_types.txt, tta/C/main/utils.c
+	(new_element_from_names): add the normal_command element type and
+	remove all the more specific c_only types for commands.  Remove type
+	argument of new_command_element, always set ET_normal_command.  Updae
+	callers.
+
+	* tta/C/main/convert_utils.c: comment out unused
+	new_text_element_added.
+
+2026-11-22  Patrice Dumas  <pertusus@free.fr>
+
 	* tta/C/main/element_types.awk: fix type_data first item.
 
 2026-11-22  Patrice Dumas  <pertusus@free.fr>

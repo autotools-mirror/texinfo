@@ -5416,8 +5416,7 @@ format_element_footer (CONVERTER *self,
 void
 html_default_format_date_in_header (CONVERTER *self, TEXT *result)
 {
-  ELEMENT *today_element = new_command_element (ET_brace_command,
-                                                CM_today);
+  ELEMENT *today_element = new_command_element (CM_today);
   char *today;
 
   add_tree_to_build (self, today_element);
@@ -9073,8 +9072,7 @@ html_convert_float_command (CONVERTER *self, const enum command_id cmd,
   if (prepended)
     {
       ELEMENT *args = new_element (ET_brace_container);
-      ELEMENT *strong_element
-        = new_command_element (ET_brace_command, CM_strong);
+      ELEMENT *strong_element = new_command_element (CM_strong);
 
       add_to_element_contents (strong_element, args);
       add_to_element_contents (args, prepended);
@@ -11214,8 +11212,7 @@ html_convert_printindex_command (CONVERTER *self, const enum command_id cmd,
               char *explanation;
               if (html_commands_data[letter_cmd].upper_case_cmd)
                 {
-                   formatted_command
-                     = new_command_element (ET_brace_command,
+                   formatted_command = new_command_element (
                              html_commands_data[letter_cmd].upper_case_cmd);
                 }
 

@@ -31,10 +31,6 @@ void setup_convert_utils (void);
 
 TREE_ADDED_ELEMENTS *new_tree_added_elements
                       (enum tree_added_elements_status status);
-ELEMENT *new_element_added (TREE_ADDED_ELEMENTS *added_elements,
-                            enum element_type type);
-ELEMENT *new_text_element_added (TREE_ADDED_ELEMENTS *added_elements,
-                                 enum element_type type);
 void clear_tree_added_elements (TREE_ADDED_ELEMENTS *tree_elements);
 void free_tree_added_elements (TREE_ADDED_ELEMENTS *tree_elements);
 void destroy_tree_added_elements (TREE_ADDED_ELEMENTS *tree_elements);

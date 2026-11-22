@@ -5063,7 +5063,7 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
                   FORMAT_CONTEXT *top_format_context
                    = top_(format_context) (&self_plaintext->format_context);
                   ELEMENT *titlefont_with_level
-                    = new_command_element (ET_brace_command, CM_titlefont);
+                    = new_command_element (CM_titlefont);
                   add_extra_integer (titlefont_with_level,
                                      AI_key_section_level, 0);
 

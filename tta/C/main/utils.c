@@ -1115,14 +1115,14 @@ new_element_from_names (const char *type_name, const char *command_name,
       return new_text_element (e_type);
     }
 
-  if (command_name && strlen (command_name))
+  if (command_name && strcmp (command_name, ""))
     {
       enum command_id cmd;
 
       if (type_data[e_type].flags & TF_with_command)
         {
-          ELEMENT *e = new_command_element (e_type, CM_NONE);
-          e->e.c->command_name = strdup (command_name);
+          ELEMENT *e = new_command_type_element (e_type,
+                                    CM_NONE, command_name);
           return e;
         }
 
@@ -1132,24 +1132,7 @@ new_element_from_names (const char *type_name, const char *command_name,
       if (cmd == CM_NONE)
         return 0;
 
-      /* determines the type of the command */
-      if (e_type == ET_NONE)
-        {
-          if (command_data[cmd].flags & CF_nobrace)
-            e_type = ET_nobrace_command;
-          else if (command_data[cmd].flags & CF_line)
-            e_type = ET_line_command;
-          else if (command_data[cmd].flags & CF_block)
-            e_type = ET_block_command;
-          else if (command_data[cmd].flags & CF_brace)
-            {
-              if (command_data[cmd].data == BRACE_context)
-                e_type = ET_context_brace_command;
-              else
-                e_type = ET_brace_command;
-            }
-        }
-      return new_command_element (e_type, cmd);
+      return new_command_element (cmd);
     }
 
   return new_element (e_type);

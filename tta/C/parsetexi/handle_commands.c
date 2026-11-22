@@ -351,7 +351,7 @@ handle_other_command (ELEMENT *current, const char **line_inout,
   arg_spec = parsed_command_data(cmd).data;
   if (arg_spec != NOBRACE_skipspace)
     {
-      command_e = new_command_element (ET_nobrace_command, cmd);
+      command_e = new_command_element (cmd);
       add_to_element_contents (current, command_e);
       if (parsed_command_data(cmd).flags & CF_in_heading_spec
           && (nesting_context.basic_inline_stack_on_line.number <= 0
@@ -405,7 +405,7 @@ handle_other_command (ELEMENT *current, const char **line_inout,
                 {
                   debug ("C|ITEM CONTAINER");
                   counter_inc (&count_items);
-                  command_e = new_command_element (ET_nobrace_command, cmd);
+                  command_e = new_command_element (cmd);
 
                   add_extra_integer (command_e, AI_key_item_number,
                                      counter_value (&count_items, parent));
@@ -458,8 +458,7 @@ handle_other_command (ELEMENT *current, const char **line_inout,
                   else
                     {
                       counter_inc (&count_cells);
-                      command_e
-                        = new_command_element (ET_nobrace_command, cmd);
+                      command_e = new_command_element (cmd);
                       add_to_element_contents (row, command_e);
                       current = command_e;
                       debug ("C|TAB");
@@ -482,7 +481,7 @@ handle_other_command (ELEMENT *current, const char **line_inout,
                   add_extra_integer (row, AI_key_row_number,
                                      parent->e.c->contents.number - 2);
 
-                  command_e = new_command_element (ET_nobrace_command, cmd);
+                  command_e = new_command_element (cmd);
                   add_to_element_contents (row, command_e);
                   current = command_e;
 
@@ -508,7 +507,7 @@ handle_other_command (ELEMENT *current, const char **line_inout,
         }
       else
         {
-          command_e = new_command_element (ET_nobrace_command, cmd);
+          command_e = new_command_element (cmd);
           command_e->e.c->source_info = current_source_info;
           add_to_element_contents (current, command_e);
           if ((cmd == CM_indent || cmd == CM_noindent)
@@ -642,7 +641,7 @@ add_comment_at_end (ELEMENT *line_args, ELEMENT *text_element,
   else
     cmd = CM_comment;
 
-  comment_e = new_command_element (ET_line_command, cmd);
+  comment_e = new_command_element (cmd);
   add_to_element_contents (comment_e, comment_line_args);
   add_to_contents_as_array (comment_line_args, comment_text_element);
 
@@ -794,7 +793,7 @@ handle_line_command (ELEMENT *current, const char **line_inout,
 
       if (!ignored)
         {
-          command_e = new_command_element (ET_line_command, cmd);
+          command_e = new_command_element (cmd);
           add_to_element_contents (current, command_e);
 
           add_to_element_contents (command_e, line_args);
@@ -934,7 +933,7 @@ handle_line_command (ELEMENT *current, const char **line_inout,
                           command_name(cmd));
               current = begin_preformatted (current);
             }
-          command_e = new_command_element (ET_line_command, cmd);
+          command_e = new_command_element (cmd);
           command_e->e.c->source_info = current_source_info;
           add_to_element_contents (current, command_e);
         }
@@ -943,9 +942,10 @@ handle_line_command (ELEMENT *current, const char **line_inout,
           /* Add to contents */
 
           if (parsed_command_data(cmd).flags & CF_index_entry_command)
-            command_e = new_command_element (ET_index_entry_command, cmd);
+            command_e = new_command_type_element (ET_index_entry_command, cmd,
+                                                  command_name(cmd));
           else
-            command_e = new_command_element (ET_line_command, cmd);
+            command_e = new_command_element (cmd);
 
           command_e->e.c->source_info = current_source_info;
 
@@ -1221,7 +1221,7 @@ handle_block_command (ELEMENT *current, const char **line_inout,
     {
       ELEMENT *def_line;
       char *val;
-      block = new_command_element (ET_block_command, cmd);
+      block = new_command_element (cmd);
       block->e.c->source_info = current_source_info;
 
       def_line = new_element (ET_def_line);
@@ -1242,7 +1242,7 @@ handle_block_command (ELEMENT *current, const char **line_inout,
     }
   else
     {
-      block = new_command_element (ET_block_command, cmd);
+      block = new_command_element (cmd);
 
       if (parsed_command_data(cmd).data == BLOCK_preformatted)
         push_context (ct_preformatted, cmd);
@@ -1354,11 +1354,10 @@ handle_brace_command (ELEMENT *current, const char **line_inout,
   debug ("C|OPEN BRACE @%s", command_name(cmd));
 
   if (parsed_command_data(cmd).flags & CF_INFOENCLOSE)
-    command_e = new_command_element (ET_definfoenclose_command, cmd);
-  else if (parsed_command_data(cmd).data == BRACE_context)
-    command_e = new_command_element (ET_context_brace_command, cmd);
+    command_e = new_command_type_element (ET_definfoenclose_command, cmd,
+                                          command_name(cmd));
   else
-    command_e = new_command_element (ET_brace_command, cmd);
+    command_e = new_command_element (cmd);
 
   /* The line number information is only ever used for brace commands
      if the command is given with braces, but it's easier just to always
@@ -1387,7 +1386,6 @@ handle_brace_command (ELEMENT *current, const char **line_inout,
               add_extra_string_dup (command_e, AI_key_begin, ie->begin);
               add_extra_string_dup (command_e, AI_key_end, ie->end);
             }
-          command_e->e.c->command_name = strdup (command_name(cmd));
         }
       else if (cmd == CM_kbd)
         {

@@ -85,7 +85,7 @@ correct_level (const ELEMENT *section, ELEMENT *parent, int modifier)
       remaining_level = abs (level_to_remove);
       while (remaining_level > 0)
         {
-          ELEMENT *element = new_command_element (ET_line_command, cmd);
+          ELEMENT *element = new_command_element (cmd);
           ELEMENT *line_args = new_element (ET_line_arg);
           ELEMENT *spaces_before = new_element (ET_spaces_before_argument);
 
@@ -187,7 +187,7 @@ fill_gaps_in_sectioning_in_document (DOCUMENT *document,
               ELEMENT *empty_line = new_text_element (ET_empty_line);
 
               current_section_level++;
-              new_section = new_command_element (ET_line_command,
+              new_section = new_command_element (
           level_to_structuring_command[CM_unnumbered][current_section_level]);
 
               text_append (spaces_before_argument->e.text, " ");
@@ -206,8 +206,7 @@ fill_gaps_in_sectioning_in_document (DOCUMENT *document,
                 }
               else
                 {
-                  ELEMENT *asis_command
-                    = new_command_element (ET_brace_command, CM_asis);
+                  ELEMENT *asis_command = new_command_element (CM_asis);
                   ELEMENT *brace_container
                     = new_element (ET_brace_container);
                   add_to_element_contents (asis_command, brace_container);
@@ -662,7 +661,7 @@ complete_node_menu (NODE_RELATIONS *node_relations,
      inserted */
               ELEMENT *section
                 = (ELEMENT *)node_relations->associated_section->element;
-              current_menu = new_command_element (ET_block_command, CM_menu);
+              current_menu = new_command_element (CM_menu);
               insert_list_slice_into_contents (current_menu, 0,
                                                pending, 0,
                                                pending->number);
@@ -1030,9 +1029,7 @@ protect_hashchar_at_line_beginning_internal (const char *type,
                       size_t leading_spaces_nr;
                       ELEMENT *leading_spaces
                            = new_text_element (ET_normal_text);
-                      ELEMENT *hashchar
-                       = new_command_element (ET_brace_command,
-                                              CM_hashchar);
+                      ELEMENT *hashchar = new_command_element (CM_hashchar);
                       ELEMENT *arg = new_element (ET_brace_container);
                       /* count UTF-8 encoded Unicode characters for
                          source marks locations */
