@@ -12,7 +12,6 @@ $result_tree_text{'submenu_in_example'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C3 l1 {first}
- |EXTRA
  |identifier:{first}
  |is_target:{1}
  |node_number:{1}
@@ -43,7 +42,6 @@ $result_tree_text{'submenu_in_example'} = '*document_root C2
       *block_line_arg C1
        {spaces_before_argument:\\n}
      *normal_command@end C1 l11
-     |EXTRA
      |text_arg:{menu}
       *line_arg C3
        {spaces_before_argument: }
@@ -60,7 +58,6 @@ $result_tree_text{'submenu_in_example'} = '*document_root C2
       *preformatted C1
        {normal_text:in submenu\\n}
      *normal_command@end C1 l15
-     |EXTRA
      |text_arg:{menu}
       *line_arg C3
        {spaces_before_argument: }
@@ -81,14 +78,12 @@ $result_tree_text{'submenu_in_example'} = '*document_root C2
        *preformatted C1
         {normal_text:A quot---ation in submenu\\n}
        *normal_command@end C1 l20
-       |EXTRA
        |text_arg:{quotation}
         *line_arg C3
          {spaces_before_argument: }
          {normal_text:quotation}
          {spaces_after_argument:\\n}
      *normal_command@end C1 l21
-     |EXTRA
      |text_arg:{menu}
       *line_arg C3
        {spaces_before_argument: }
@@ -98,7 +93,6 @@ $result_tree_text{'submenu_in_example'} = '*document_root C2
      *preformatted C1
       {empty_line:\\n}
      *normal_command@subheading C1 l23
-     |EXTRA
      |global_command_number:{1}
      |heading_number:{1}
       *line_arg C3
@@ -112,13 +106,11 @@ $result_tree_text{'submenu_in_example'} = '*document_root C2
        *block_line_arg C1
         {spaces_before_argument:\\n}
       *normal_command@item C1 l26
-      |EXTRA
       |item_number:{1}
        *preformatted C2
         {ignorable_spaces_after_command: }
         {normal_text:e--numerate\\n}
       *normal_command@end C1 l27
-      |EXTRA
       |text_arg:{enumerate}
        *line_arg C3
         {spaces_before_argument: }
@@ -127,14 +119,12 @@ $result_tree_text{'submenu_in_example'} = '*document_root C2
      *preformatted C1
       {empty_line:\\n}
     *normal_command@end C1 l29
-    |EXTRA
     |text_arg:{menu}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:menu}
       {spaces_after_argument:\\n}
    *normal_command@end C1 l30
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }

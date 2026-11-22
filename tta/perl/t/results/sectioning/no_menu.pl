@@ -12,7 +12,6 @@ $result_tree_text{'no_menu'} = '*document_root C9
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -22,7 +21,6 @@ $result_tree_text{'no_menu'} = '*document_root C9
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C2 l2
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -30,7 +28,6 @@ $result_tree_text{'no_menu'} = '*document_root C9
     {spaces_before_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l4 {c1}
- |EXTRA
  |identifier:{c1}
  |is_target:{1}
  |node_number:{2}
@@ -40,7 +37,6 @@ $result_tree_text{'no_menu'} = '*document_root C9
     {normal_text:c1}
     {spaces_after_argument:\\n}
  *normal_command@chapter C2 l5 {c1}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -51,7 +47,6 @@ $result_tree_text{'no_menu'} = '*document_root C9
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l7 {c2}
- |EXTRA
  |identifier:{c2}
  |is_target:{1}
  |node_number:{3}
@@ -61,7 +56,6 @@ $result_tree_text{'no_menu'} = '*document_root C9
     {normal_text:c2}
     {spaces_after_argument:\\n}
  *normal_command@chapter C2 l8 {c2}
- |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
  |section_number:{3}
@@ -72,7 +66,6 @@ $result_tree_text{'no_menu'} = '*document_root C9
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l10 {c3}
- |EXTRA
  |identifier:{c3}
  |is_target:{1}
  |node_number:{4}
@@ -82,7 +75,6 @@ $result_tree_text{'no_menu'} = '*document_root C9
     {normal_text:c3}
     {spaces_after_argument:\\n}
  *normal_command@chapter C1 l11 {c3}
- |EXTRA
  |section_heading_number:{3}
  |section_level:{1}
  |section_number:{4}

@@ -14,7 +14,6 @@ $result_tree_text{'menu'} = '*document_root C3
    {text_before_beginning:\\n}
   *preamble_before_content
  *normal_command@node C1 l2 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -24,7 +23,6 @@ $result_tree_text{'menu'} = '*document_root C3
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C3 l3
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -38,7 +36,6 @@ $result_tree_text{'menu'} = '*document_root C3
    *menu_entry C4 l6
     {menu_entry_leading_text:* }
     *menu_entry_node C3
-    |EXTRA
     |manual_content:A{1|1}
      {normal_text:(}
      {normal_text:ggg}
@@ -52,13 +49,11 @@ $result_tree_text{'menu'} = '*document_root C3
        *block_line_arg C1
         {spaces_before_argument:\\n}
       *normal_command@item C1 l8
-      |EXTRA
       |item_number:{1}
        *preformatted C2
         {ignorable_spaces_after_command: }
         {normal_text:idescr\\n}
       *normal_command@end C1 l9
-      |EXTRA
       |text_arg:{itemize}
        *line_arg C3
         {spaces_before_argument: }
@@ -72,7 +67,6 @@ $result_tree_text{'menu'} = '*document_root C3
        *rawpreformatted C1
         {normal_text:in html\\n}
        *normal_command@end C1 l12
-       |EXTRA
        |text_arg:{html}
         *line_arg C3
          {spaces_before_argument: }
@@ -89,13 +83,11 @@ $result_tree_text{'menu'} = '*document_root C3
       *block_line_arg C1
        {spaces_before_argument:\\n}
      *normal_command@item C1 l18
-     |EXTRA
      |item_number:{1}
       *preformatted C2
        {ignorable_spaces_after_command: }
        {normal_text:iaa\\n}
      *normal_command@end C1 l19
-     |EXTRA
      |text_arg:{itemize}
       *line_arg C3
        {spaces_before_argument: }
@@ -110,7 +102,6 @@ $result_tree_text{'menu'} = '*document_root C3
       *rawpreformatted C1
        {normal_text:in html title\\n}
       *normal_command@end C1 l23
-      |EXTRA
       |text_arg:{html}
        *line_arg C3
         {spaces_before_argument: }
@@ -124,13 +115,11 @@ $result_tree_text{'menu'} = '*document_root C3
       *block_line_arg C1
        {spaces_before_argument:\\n}
      *normal_command@item C1 l28
-     |EXTRA
      |item_number:{1}
       *preformatted C2
        {ignorable_spaces_after_command: }
        {normal_text:ibb\\n}
      *normal_command@end C1 l29
-     |EXTRA
      |text_arg:{itemize}
       *line_arg C3
        {spaces_before_argument: }
@@ -139,7 +128,6 @@ $result_tree_text{'menu'} = '*document_root C3
    *menu_entry C4 l30
     {menu_entry_leading_text:* }
     *menu_entry_node C3
-    |EXTRA
     |manual_content:A{1|1}
      {normal_text:(}
      {normal_text:manual}
@@ -156,7 +144,6 @@ $result_tree_text{'menu'} = '*document_root C3
    *menu_entry C4 l34
     {menu_entry_leading_text:* }
     *menu_entry_node C3
-    |EXTRA
     |manual_content:A{1|1}
      {normal_text:(}
      {normal_text:after_comment}
@@ -169,7 +156,6 @@ $result_tree_text{'menu'} = '*document_root C3
    *menu_entry C4 l36
     {menu_entry_leading_text:* }
     *menu_entry_node C3
-    |EXTRA
     |manual_content:A{1|1}
      {normal_text:(}
      {normal_text:after_description}
@@ -182,7 +168,6 @@ $result_tree_text{'menu'} = '*document_root C3
     *preformatted C1
      {after_menu_description_line:\\n}
    *normal_command@detailmenu C9 l38
-   |EXTRA
    |global_command_number:{1}
     *arguments_line C1
      *block_line_arg C1
@@ -190,7 +175,6 @@ $result_tree_text{'menu'} = '*document_root C3
     *menu_entry C4 l39
      {menu_entry_leading_text:* }
      *menu_entry_node C3
-     |EXTRA
      |manual_content:A{1|1}
       {normal_text:(}
       {normal_text:detailggg}
@@ -204,13 +188,11 @@ $result_tree_text{'menu'} = '*document_root C3
         *block_line_arg C1
          {spaces_before_argument:\\n}
        *normal_command@item C1 l41
-       |EXTRA
        |item_number:{1}
         *preformatted C2
          {ignorable_spaces_after_command: }
          {normal_text:idetaildescr\\n}
        *normal_command@end C1 l42
-       |EXTRA
        |text_arg:{itemize}
         *line_arg C3
          {spaces_before_argument: }
@@ -224,7 +206,6 @@ $result_tree_text{'menu'} = '*document_root C3
         *rawpreformatted C1
          {normal_text:detailin detailhtml\\n}
         *normal_command@end C1 l45
-        |EXTRA
         |text_arg:{html}
          *line_arg C3
           {spaces_before_argument: }
@@ -241,13 +222,11 @@ $result_tree_text{'menu'} = '*document_root C3
        *block_line_arg C1
         {spaces_before_argument:\\n}
       *normal_command@item C1 l51
-      |EXTRA
       |item_number:{1}
        *preformatted C2
         {ignorable_spaces_after_command: }
         {normal_text:detailiaa\\n}
       *normal_command@end C1 l52
-      |EXTRA
       |text_arg:{itemize}
        *line_arg C3
         {spaces_before_argument: }
@@ -262,7 +241,6 @@ $result_tree_text{'menu'} = '*document_root C3
        *rawpreformatted C1
         {normal_text:detailin html detailtitle\\n}
        *normal_command@end C1 l56
-       |EXTRA
        |text_arg:{html}
         *line_arg C3
          {spaces_before_argument: }
@@ -276,13 +254,11 @@ $result_tree_text{'menu'} = '*document_root C3
        *block_line_arg C1
         {spaces_before_argument:\\n}
       *normal_command@item C1 l61
-      |EXTRA
       |item_number:{1}
        *preformatted C2
         {ignorable_spaces_after_command: }
         {normal_text:detailibb\\n}
       *normal_command@end C1 l62
-      |EXTRA
       |text_arg:{itemize}
        *line_arg C3
         {spaces_before_argument: }
@@ -291,7 +267,6 @@ $result_tree_text{'menu'} = '*document_root C3
     *menu_entry C4 l63
      {menu_entry_leading_text:* }
      *menu_entry_node C3
-     |EXTRA
      |manual_content:A{1|1}
       {normal_text:(}
       {normal_text:detailmanual}
@@ -308,7 +283,6 @@ $result_tree_text{'menu'} = '*document_root C3
     *menu_entry C4 l67
      {menu_entry_leading_text:* }
      *menu_entry_node C3
-     |EXTRA
      |manual_content:A{1|1}
       {normal_text:(}
       {normal_text:detailafter_comment}
@@ -321,7 +295,6 @@ $result_tree_text{'menu'} = '*document_root C3
     *menu_entry C4 l69
      {menu_entry_leading_text:* }
      *menu_entry_node C3
-     |EXTRA
      |manual_content:A{1|1}
       {normal_text:(}
       {normal_text:detailafter_description}
@@ -334,14 +307,12 @@ $result_tree_text{'menu'} = '*document_root C3
      *preformatted C1
       {after_menu_description_line:\\n}
     *normal_command@end C1 l71
-    |EXTRA
     |text_arg:{detailmenu}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:detailmenu}
       {spaces_after_argument:\\n}
    *normal_command@end C1 l72
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }

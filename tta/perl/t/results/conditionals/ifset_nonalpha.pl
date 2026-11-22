@@ -21,7 +21,6 @@ $result_tree_text{'ifset_nonalpha'} = '*document_root C1
        >{normal_text:A/B}
        >{spaces_after_argument:\\n}
      >*normal_command@end C1 l2
-     >|EXTRA
      >|text_arg:{ifset}
       >*line_arg C3
        >{spaces_before_argument: }

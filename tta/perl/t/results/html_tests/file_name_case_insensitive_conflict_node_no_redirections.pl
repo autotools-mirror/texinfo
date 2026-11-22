@@ -12,7 +12,6 @@ $result_tree_text{'file_name_case_insensitive_conflict_node_no_redirections'} = 
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -22,7 +21,6 @@ $result_tree_text{'file_name_case_insensitive_conflict_node_no_redirections'} = 
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C2 l2 {top section}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -32,7 +30,6 @@ $result_tree_text{'file_name_case_insensitive_conflict_node_no_redirections'} = 
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l4 {chap}
- |EXTRA
  |identifier:{chap}
  |is_target:{1}
  |node_number:{2}
@@ -42,7 +39,6 @@ $result_tree_text{'file_name_case_insensitive_conflict_node_no_redirections'} = 
     {normal_text:chap}
     {spaces_after_argument:\\n}
  *normal_command@chapter C5 l5 {Chapter}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -53,7 +49,6 @@ $result_tree_text{'file_name_case_insensitive_conflict_node_no_redirections'} = 
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@anchor C1 l7
-  |EXTRA
   |identifier:{fOO}
   |is_target:{1}
    *brace_arg C1
@@ -61,7 +56,6 @@ $result_tree_text{'file_name_case_insensitive_conflict_node_no_redirections'} = 
   {spaces_after_close_brace:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l9 {Foo}
- |EXTRA
  |identifier:{Foo}
  |is_target:{1}
  |node_number:{3}
@@ -71,7 +65,6 @@ $result_tree_text{'file_name_case_insensitive_conflict_node_no_redirections'} = 
     {normal_text:Foo}
     {spaces_after_argument:\\n}
  *normal_command@section C2 l10 {Foo}
- |EXTRA
  |section_heading_number:{1.1}
  |section_level:{2}
  |section_number:{3}
@@ -82,7 +75,6 @@ $result_tree_text{'file_name_case_insensitive_conflict_node_no_redirections'} = 
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l12 {Bar}
- |EXTRA
  |identifier:{Bar}
  |is_target:{1}
  |node_number:{4}
@@ -92,7 +84,6 @@ $result_tree_text{'file_name_case_insensitive_conflict_node_no_redirections'} = 
     {normal_text:Bar}
     {spaces_after_argument:\\n}
  *normal_command@section C2 l13 {Bar}
- |EXTRA
  |section_heading_number:{1.2}
  |section_level:{2}
  |section_number:{4}
@@ -103,7 +94,6 @@ $result_tree_text{'file_name_case_insensitive_conflict_node_no_redirections'} = 
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l15 {foo}
- |EXTRA
  |identifier:{foo}
  |is_target:{1}
  |node_number:{5}
@@ -113,7 +103,6 @@ $result_tree_text{'file_name_case_insensitive_conflict_node_no_redirections'} = 
     {normal_text:foo}
     {spaces_after_argument:\\n}
  *normal_command@section C5 l16 {foo}
- |EXTRA
  |section_heading_number:{1.3}
  |section_level:{2}
  |section_number:{5}
@@ -126,7 +115,6 @@ $result_tree_text{'file_name_case_insensitive_conflict_node_no_redirections'} = 
   *paragraph C2
    *normal_command@xref C1 l18
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{foo}
      {normal_text:foo}
@@ -135,7 +123,6 @@ $result_tree_text{'file_name_case_insensitive_conflict_node_no_redirections'} = 
   *paragraph C2
    *normal_command@xref C1 l20
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{Foo}
      {normal_text:Foo}

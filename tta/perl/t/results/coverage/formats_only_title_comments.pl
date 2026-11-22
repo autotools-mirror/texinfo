@@ -24,7 +24,6 @@ $result_tree_text{'formats_only_title_comments'} = '*document_root C1
     *paragraph C1
      {normal_text:before first itemize\\n}
    *normal_command@end C1 l4
-   |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }
@@ -49,7 +48,6 @@ $result_tree_text{'formats_only_title_comments'} = '*document_root C1
     *paragraph C1
      {normal_text:before first enumerate\\n}
    *normal_command@end C1 l9
-   |EXTRA
    |text_arg:{enumerate}
     *line_arg C3
      {spaces_before_argument: }
@@ -71,7 +69,6 @@ $result_tree_text{'formats_only_title_comments'} = '*document_root C1
     *paragraph C1
      {normal_text:before first table\\n}
    *normal_command@end C1 l14
-   |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
@@ -93,7 +90,6 @@ $result_tree_text{'formats_only_title_comments'} = '*document_root C1
     *paragraph C1
      {normal_text:before first vtable\\n}
    *normal_command@end C1 l18
-   |EXTRA
    |text_arg:{vtable}
     *line_arg C3
      {spaces_before_argument: }
@@ -101,13 +97,11 @@ $result_tree_text{'formats_only_title_comments'} = '*document_root C1
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@multitable C3 l20
-  |EXTRA
   |max_columns:{2}
    *arguments_line C1
     *block_line_arg C2
      {spaces_before_argument: }
      *normal_command@columnfractions C1 l20
-     |EXTRA
      |misc_args:A{0.5|0.5}
       *line_arg C3
        {spaces_before_argument: }
@@ -122,7 +116,6 @@ $result_tree_text{'formats_only_title_comments'} = '*document_root C1
     *paragraph C1
      {normal_text:before first multitable\\n}
    *normal_command@end C1 l23
-   |EXTRA
    |text_arg:{multitable}
     *line_arg C3
      {spaces_before_argument: }

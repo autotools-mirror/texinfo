@@ -12,7 +12,6 @@ $result_tree_text{'recursive_expansion_in_set'} = '*document_root C1
  *before_node_section C1
   *preamble_before_content C2
    *normal_command@set C1
-   |EXTRA
    |misc_args:A{V|@value{V}}
     *line_arg C3
      {spaces_before_argument: }

@@ -704,8 +704,8 @@ sub _debug_protect_eol($) {
 
 # currently no element ARRAY
 # therefore no call to element_number_or_error
-sub _print_element_associated_info($$$$$;$$) {
-  my ($associated_info, $header, $level, $prepended, $current_nr,
+sub _print_element_associated_info($$$$;$$) {
+  my ($associated_info, $level, $prepended, $current_nr,
       $fname_encoding, $use_filename) = @_;
 
   my @keys = sort(keys(%$associated_info));
@@ -719,7 +719,7 @@ sub _print_element_associated_info($$$$$;$$) {
     $info_prepended = $ADDITIONAL_INFO_PREPEND;
   }
 
-  my $result = (' ' x $level) . $info_prepended . "$header\n";
+  my $result = '';
 
   foreach my $key (@keys) {
     my $had_eol = 0;
@@ -897,8 +897,8 @@ sub print_element_details($$$$;$$) {
     }
 
     ($current_nr, $result_info)
-      = _print_element_associated_info($extra, "EXTRA", $level,
-                                       $prepended, $current_nr,
+      = _print_element_associated_info($extra, $level, $prepended,
+                                       $current_nr,
                                        $fname_encoding, $use_filename);
     $result .= $result_info;
   }

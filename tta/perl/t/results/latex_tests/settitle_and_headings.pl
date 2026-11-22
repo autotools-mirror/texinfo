@@ -20,7 +20,6 @@ $result_tree_text{'settitle_and_headings'} = '*document_root C2
      {spaces_after_argument:\\n}
    {empty_line:\\n}
    *normal_command@headings C1 l3
-   |EXTRA
    |global_command_number:{1}
    |misc_args:A{double}
     *line_arg C3
@@ -29,7 +28,6 @@ $result_tree_text{'settitle_and_headings'} = '*document_root C2
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *normal_command@chapter C9 l5 {chap}
- |EXTRA
  |identifier:{chap}
  |is_target:{1}
  |section_heading_number:{1}

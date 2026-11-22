@@ -20,7 +20,6 @@ $result_tree_text{'detailmenu_in_description'} = '*document_root C1
    *menu_entry C4 l3
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{Copying-Conditions}
      {normal_text:Copying Conditions}
@@ -29,7 +28,6 @@ $result_tree_text{'detailmenu_in_description'} = '*document_root C1
      *preformatted C1
       {normal_text:Your rights.\\n}
    *normal_command@detailmenu C3 l4
-   |EXTRA
    |global_command_number:{1}
     *arguments_line C1
      *block_line_arg C1
@@ -37,7 +35,6 @@ $result_tree_text{'detailmenu_in_description'} = '*document_root C1
     *menu_entry C4 l5
      {menu_entry_leading_text:* }
      *menu_entry_node C1
-     |EXTRA
      |node_content:A{0|0}
      |normalized:{detailmenu}
       {normal_text:detailmenu}
@@ -46,14 +43,12 @@ $result_tree_text{'detailmenu_in_description'} = '*document_root C1
       *preformatted C1
        {normal_text:\\n}
     *normal_command@end C1 l6
-    |EXTRA
     |text_arg:{detailmenu}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:detailmenu}
       {spaces_after_argument:\\n}
    *normal_command@end C1 l7
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }

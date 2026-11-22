@@ -26,7 +26,6 @@ $result_tree_text{'no_argument_for_table'} = '*document_root C1
      *paragraph C1
       {normal_text:In item.\\n}
    *normal_command@end C1 l4
-   |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }

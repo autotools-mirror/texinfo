@@ -14,7 +14,6 @@ $result_tree_text{'check_htmlxref_no_use_nodes'} = '*document_root C6
    {text_before_beginning:\\n}
   *preamble_before_content
  *normal_command@node C1 l2 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -23,20 +22,17 @@ $result_tree_text{'check_htmlxref_no_use_nodes'} = '*document_root C6
     {spaces_before_argument: }
     {normal_text:Top}
    *line_arg C4
-   |EXTRA
    |manual_content:A{2|2}
     {spaces_before_argument: }
     {normal_text:(}
     {normal_text:../there/no_existing_no_manual_direction}
     {normal_text:)}
    *line_arg C2
-   |EXTRA
    |node_content:A{1|1}
    |normalized:{first}
     {spaces_before_argument: }
     {normal_text:first}
    *line_arg C5
-   |EXTRA
    |manual_content:A{2|2}
     {spaces_before_argument: }
     {normal_text:(}
@@ -44,7 +40,6 @@ $result_tree_text{'check_htmlxref_no_use_nodes'} = '*document_root C6
     {normal_text:)}
     {spaces_after_argument:\\n}
  *normal_command@top C6 l3 {top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -56,7 +51,6 @@ $result_tree_text{'check_htmlxref_no_use_nodes'} = '*document_root C6
   *paragraph C4
    *normal_command@ref C4 l5
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
      {normal_text:a}
     *brace_arg C2
@@ -71,7 +65,6 @@ $result_tree_text{'check_htmlxref_no_use_nodes'} = '*document_root C6
    {normal_text:\\n}
    *normal_command@ref C4 l6
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
      {normal_text:a}
     *brace_arg C2
@@ -92,7 +85,6 @@ $result_tree_text{'check_htmlxref_no_use_nodes'} = '*document_root C6
    *menu_entry C4 l9
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{first}
      {normal_text:first}
@@ -103,7 +95,6 @@ $result_tree_text{'check_htmlxref_no_use_nodes'} = '*document_root C6
    *menu_entry C4 l10
     {menu_entry_leading_text:* }
     *menu_entry_node C3
-    |EXTRA
     |manual_content:A{1|1}
      {normal_text:(}
      {normal_text:other_no_existing_no_manual}
@@ -115,7 +106,6 @@ $result_tree_text{'check_htmlxref_no_use_nodes'} = '*document_root C6
    *menu_entry C4 l11
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{chapter}
      {normal_text:chapter}
@@ -124,7 +114,6 @@ $result_tree_text{'check_htmlxref_no_use_nodes'} = '*document_root C6
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 l12
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -132,7 +121,6 @@ $result_tree_text{'check_htmlxref_no_use_nodes'} = '*document_root C6
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C2 l14 {first}
- |EXTRA
  |identifier:{first}
  |is_target:{1}
  |node_number:{2}
@@ -141,7 +129,6 @@ $result_tree_text{'check_htmlxref_no_use_nodes'} = '*document_root C6
     {spaces_before_argument: }
     {normal_text:first}
    *line_arg C5
-   |EXTRA
    |manual_content:A{2|2}
     {spaces_before_argument: }
     {normal_text:(}
@@ -150,7 +137,6 @@ $result_tree_text{'check_htmlxref_no_use_nodes'} = '*document_root C6
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l16 {chapter}
- |EXTRA
  |identifier:{chapter}
  |is_target:{1}
  |node_number:{3}
@@ -159,14 +145,12 @@ $result_tree_text{'check_htmlxref_no_use_nodes'} = '*document_root C6
     {spaces_before_argument: }
     {normal_text:chapter}
    *line_arg C4
-   |EXTRA
    |manual_content:A{2|2}
     {spaces_before_argument: }
     {normal_text:(}
     {normal_text:chap_not_existing}
     {normal_text:)}
    *line_arg C6
-   |EXTRA
    |manual_content:A{2|2}
    |node_content:A{4|4}
    |normalized:{node-in-dir}
@@ -177,7 +161,6 @@ $result_tree_text{'check_htmlxref_no_use_nodes'} = '*document_root C6
     {normal_text:node in dir}
     {spaces_after_argument:\\n}
  *normal_command@chapter C3 l17 {Chapter}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -190,7 +173,6 @@ $result_tree_text{'check_htmlxref_no_use_nodes'} = '*document_root C6
   *paragraph C2
    *normal_command@xref C4 l19
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
      {normal_text:aa}
     *brace_arg

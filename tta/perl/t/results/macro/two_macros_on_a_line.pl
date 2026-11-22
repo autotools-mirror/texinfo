@@ -12,14 +12,12 @@ $result_tree_text{'two_macros_on_a_line'} = '*document_root C1
  *before_node_section C10
   *preamble_before_content C5
    *normal_command@macro C3 l1
-   |EXTRA
    |formal_args:A{}
    |macro_name:{mymacro}
     *arguments_line C1
      {macro_line: mymacro\\n}
     {raw:in mymacro\\n}
     *normal_command@end C1 l3
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -27,7 +25,6 @@ $result_tree_text{'two_macros_on_a_line'} = '*document_root C1
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *normal_command@macro C5 l5
-   |EXTRA
    |formal_args:A{arg}
    |macro_name:{mymacrowithargs}
     *arguments_line C1
@@ -36,7 +33,6 @@ $result_tree_text{'two_macros_on_a_line'} = '*document_root C1
     {raw:now the arg \\arg\\\\n}
     {raw:after\\n}
     *normal_command@end C1 l9
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }

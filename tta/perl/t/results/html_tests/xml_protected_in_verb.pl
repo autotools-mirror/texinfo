@@ -17,7 +17,6 @@ $result_tree_text{'xml_protected_in_verb'} = '*document_root C1
      {spaces_before_argument:\\n}
    {raw:<a>\\n}
    *normal_command@end C1 l3
-   |EXTRA
    |text_arg:{verbatim}
     *line_arg C3
      {spaces_before_argument: }
@@ -33,7 +32,6 @@ $result_tree_text{'xml_protected_in_verb'} = '*document_root C1
    {normal_text:.\\n}
   {empty_line:\\n}
   *normal_command@verbatiminclude C1 l7
-  |EXTRA
   |input_encoding_name:{utf-8}
   |text_arg:{file_with_xml_chars.texi}
    *line_arg C3

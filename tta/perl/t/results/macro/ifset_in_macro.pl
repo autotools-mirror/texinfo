@@ -12,7 +12,6 @@ $result_tree_text{'ifset_in_macro'} = '*document_root C1
  *before_node_section C1
   *preamble_before_content C2
    *normal_command@macro C5 l1
-   |EXTRA
    |formal_args:A{arg}
    |macro_name:{note}
     *arguments_line C1
@@ -21,7 +20,6 @@ $result_tree_text{'ifset_in_macro'} = '*document_root C1
     {raw:\\arg\\\\n}
     {raw:@end ifset\\n}
     *normal_command@end C1 l5
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -44,7 +42,6 @@ $result_tree_text{'ifset_in_macro'} = '*document_root C1
      >{raw:arg\\n}
      >{raw:\\n}
      >*normal_command@end C1 l9:@note
-     >|EXTRA
      >|text_arg:{ifset}
       >*line_arg C3
        >{spaces_before_argument: }

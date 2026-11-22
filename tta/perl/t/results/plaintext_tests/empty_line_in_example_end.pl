@@ -19,7 +19,6 @@ $result_tree_text{'empty_line_in_example_end'} = '*document_root C1
     {normal_text:in example\\n}
     {empty_line:\\n}
    *normal_command@end C1 l4
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }

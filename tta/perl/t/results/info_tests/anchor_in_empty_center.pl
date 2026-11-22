@@ -12,7 +12,6 @@ $result_tree_text{'anchor_in_empty_center'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C7 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -28,7 +27,6 @@ $result_tree_text{'anchor_in_empty_center'} = '*document_root C2
     *normal_command@asis C1 l3
      *brace_container
     *normal_command@anchor C1 l3
-    |EXTRA
     |identifier:{toto}
     |is_target:{1}
      *brace_arg C1
@@ -44,7 +42,6 @@ $result_tree_text{'anchor_in_empty_center'} = '*document_root C2
     *normal_command@asis C1 l7
      *brace_container
     *normal_command@anchor C1 l7
-    |EXTRA
     |identifier:{titi}
     |is_target:{1}
      *brace_arg C1

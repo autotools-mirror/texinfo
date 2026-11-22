@@ -18,7 +18,6 @@ $result_tree_text{'novalidate_empty_refs'} = '*document_root C5
      {spaces_before_argument:\\n}
    {empty_line:\\n}
  *normal_command@node C4 l4 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -31,13 +30,11 @@ $result_tree_text{'novalidate_empty_refs'} = '*document_root C5
   *paragraph C4
    *normal_command@xref C1 l6
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
      *normal_command@:
    {normal_text:.\\n}
    *normal_command@xref C1 l7
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{-}
      *normal_command@asis C1 l7

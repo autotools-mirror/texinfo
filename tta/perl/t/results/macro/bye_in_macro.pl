@@ -12,7 +12,6 @@ $result_tree_text{'bye_in_macro'} = '*document_root C3
  *before_node_section C2
   *preamble_before_content C2
    *normal_command@macro C6 l1
-   |EXTRA
    |formal_args:A{}
    |macro_name:{byeinmacro}
     *arguments_line C1
@@ -22,7 +21,6 @@ $result_tree_text{'bye_in_macro'} = '*document_root C3
     {raw:\\n}
     {raw:after bye\\n}
     *normal_command@end C1 l6
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }

@@ -26,7 +26,6 @@ $result_tree_text{'thispart'} = '*document_root C11
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *normal_command@node C1 l3 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -36,7 +35,6 @@ $result_tree_text{'thispart'} = '*document_root C11
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C2 l4 {top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -46,7 +44,6 @@ $result_tree_text{'thispart'} = '*document_root C11
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@part C1 l6 {Part I:@* The beginning}
- |EXTRA
  |global_command_number:{1}
  |section_level:{0}
  |section_number:{2}
@@ -58,7 +55,6 @@ $result_tree_text{'thispart'} = '*document_root C11
     {normal_text: The beginning}
     {spaces_after_argument:\\n}
  *normal_command@node C1 l7 {first}
- |EXTRA
  |identifier:{first}
  |is_target:{1}
  |node_number:{2}
@@ -68,7 +64,6 @@ $result_tree_text{'thispart'} = '*document_root C11
     {normal_text:first}
     {spaces_after_argument:\\n}
  *normal_command@chapter C4 l8 {Chap1}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{3}
@@ -82,7 +77,6 @@ $result_tree_text{'thispart'} = '*document_root C11
    {normal_text:In chap1\\n}
   {empty_line:\\n}
  *normal_command@part C1 l12 {Part II}
- |EXTRA
  |global_command_number:{2}
  |section_level:{0}
  |section_number:{4}
@@ -92,7 +86,6 @@ $result_tree_text{'thispart'} = '*document_root C11
     {normal_text:Part II}
     {spaces_after_argument:\\n}
  *normal_command@node C1 l13 {second}
- |EXTRA
  |identifier:{second}
  |is_target:{1}
  |node_number:{3}
@@ -102,7 +95,6 @@ $result_tree_text{'thispart'} = '*document_root C11
     {normal_text:second}
     {spaces_after_argument:\\n}
  *normal_command@chapter C4 l14 {chap2}
- |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
  |section_number:{5}
@@ -116,7 +108,6 @@ $result_tree_text{'thispart'} = '*document_root C11
    {normal_text:In chap2\\n}
   {empty_line:\\n}
  *normal_command@part C2 l18 {App}
- |EXTRA
  |global_command_number:{3}
  |section_level:{0}
  |section_number:{6}
@@ -127,7 +118,6 @@ $result_tree_text{'thispart'} = '*document_root C11
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@appendix C3 l20 {Appendix}
- |EXTRA
  |identifier:{Appendix}
  |is_target:{1}
  |section_heading_number:{A}

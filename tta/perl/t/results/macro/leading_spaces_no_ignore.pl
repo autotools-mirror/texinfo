@@ -12,7 +12,6 @@ $result_tree_text{'leading_spaces_no_ignore'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C3
    *normal_command@macro C4 l1
-   |EXTRA
    |formal_args:A{}
    |macro_name:{mymacro}
     *arguments_line C1
@@ -20,7 +19,6 @@ $result_tree_text{'leading_spaces_no_ignore'} = '*document_root C1
     {raw:  Some  here\\n}
     {raw:  text\\n}
     *normal_command@end C1 l4
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }

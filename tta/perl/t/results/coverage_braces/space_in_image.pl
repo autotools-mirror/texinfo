@@ -12,7 +12,6 @@ $result_tree_text{'space_in_image'} = '*document_root C1
  *before_node_section C3
   *preamble_before_content
   *normal_command@image C5 l1
-  |EXTRA
   |input_encoding_name:{utf-8}
    *brace_arg C3
     {spaces_before_argument: }
@@ -32,7 +31,6 @@ $result_tree_text{'space_in_image'} = '*document_root C1
   *paragraph C3
    {normal_text:. }
    *normal_command@image C1 l1
-   |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C3
      {spaces_before_argument: }

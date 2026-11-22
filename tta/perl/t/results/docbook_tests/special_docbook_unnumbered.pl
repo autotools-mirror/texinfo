@@ -12,7 +12,6 @@ $result_tree_text{'special_docbook_unnumbered'} = '*document_root C11
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -22,7 +21,6 @@ $result_tree_text{'special_docbook_unnumbered'} = '*document_root C11
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C6 l2 {top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -41,7 +39,6 @@ $result_tree_text{'special_docbook_unnumbered'} = '*document_root C11
    *menu_entry C4 l7
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{Dedication}
      {normal_text:Dedication}
@@ -52,7 +49,6 @@ $result_tree_text{'special_docbook_unnumbered'} = '*document_root C11
    *menu_entry C4 l8
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{preface}
      {normal_text:preface}
@@ -63,7 +59,6 @@ $result_tree_text{'special_docbook_unnumbered'} = '*document_root C11
    *menu_entry C4 l9
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{colophon}
      {normal_text:colophon}
@@ -74,7 +69,6 @@ $result_tree_text{'special_docbook_unnumbered'} = '*document_root C11
    *menu_entry C4 l10
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{acknowledgements}
      {normal_text:acknowledgements}
@@ -83,7 +77,6 @@ $result_tree_text{'special_docbook_unnumbered'} = '*document_root C11
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 l11
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -91,7 +84,6 @@ $result_tree_text{'special_docbook_unnumbered'} = '*document_root C11
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l13 {Dedication}
- |EXTRA
  |identifier:{Dedication}
  |is_target:{1}
  |node_number:{2}
@@ -101,7 +93,6 @@ $result_tree_text{'special_docbook_unnumbered'} = '*document_root C11
     {normal_text:Dedication}
     {spaces_after_argument:\\n}
  *normal_command@unnumbered C4 l14 {a dedication}
- |EXTRA
  |section_level:{1}
  |section_number:{2}
   *arguments_line C1
@@ -114,7 +105,6 @@ $result_tree_text{'special_docbook_unnumbered'} = '*document_root C11
    {normal_text:Dedicated\\n}
   {empty_line:\\n}
  *normal_command@node C1 l18 {preface}
- |EXTRA
  |identifier:{preface}
  |is_target:{1}
  |node_number:{3}
@@ -124,7 +114,6 @@ $result_tree_text{'special_docbook_unnumbered'} = '*document_root C11
     {normal_text:preface}
     {spaces_after_argument:\\n}
  *normal_command@unnumbered C4 l19 {The Preface}
- |EXTRA
  |section_level:{1}
  |section_number:{3}
   *arguments_line C1
@@ -137,7 +126,6 @@ $result_tree_text{'special_docbook_unnumbered'} = '*document_root C11
    {normal_text:Preface.\\n}
   {empty_line:\\n}
  *normal_command@node C1 l23 {colophon}
- |EXTRA
  |identifier:{colophon}
  |is_target:{1}
  |node_number:{4}
@@ -147,7 +135,6 @@ $result_tree_text{'special_docbook_unnumbered'} = '*document_root C11
     {normal_text:colophon}
     {spaces_after_argument:\\n}
  *normal_command@unnumbered C4 l24 {A colophon}
- |EXTRA
  |section_level:{1}
  |section_number:{4}
   *arguments_line C1
@@ -160,7 +147,6 @@ $result_tree_text{'special_docbook_unnumbered'} = '*document_root C11
    {normal_text:Glossary\\n}
   {empty_line:\\n}
  *normal_command@node C1 l28 {acknowledgements}
- |EXTRA
  |identifier:{acknowledgements}
  |is_target:{1}
  |node_number:{5}
@@ -170,7 +156,6 @@ $result_tree_text{'special_docbook_unnumbered'} = '*document_root C11
     {normal_text:acknowledgements}
     {spaces_after_argument:\\n}
  *normal_command@chapter C3 l29 {A chapter Acnkowledgements}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{5}

@@ -18,7 +18,6 @@ $result_tree_text{'contents'} = '*document_root C1
    *normal_command@@
    {normal_text:contents }
   *normal_command@contents C1 l2
-  |EXTRA
   |global_command_number:{1}
    *line_arg C3
     {spaces_before_argument: }
@@ -29,7 +28,6 @@ $result_tree_text{'contents'} = '*document_root C1
    *normal_command@@
    {normal_text:contents }
   *normal_command@contents C1 l3
-  |EXTRA
   |global_command_number:{2}
    *line_arg C3
     {spaces_before_argument: }
@@ -38,7 +36,6 @@ $result_tree_text{'contents'} = '*document_root C1
   *paragraph C1
    {normal_text:Third content on the following line on his own\\n}
   *normal_command@contents C1 l5
-  |EXTRA
   |global_command_number:{3}
    *line_arg C1
     {spaces_before_argument:\\n}
@@ -46,7 +43,6 @@ $result_tree_text{'contents'} = '*document_root C1
    {normal_text:Line following contents\\n}
    {normal_text:shortcontents }
   *normal_command@shortcontents C1 l7
-  |EXTRA
   |global_command_number:{1}
    *line_arg C3
     {spaces_before_argument: }
@@ -55,7 +51,6 @@ $result_tree_text{'contents'} = '*document_root C1
   *paragraph C1
    {normal_text:shortcontents }
   *normal_command@shortcontents C1 l8
-  |EXTRA
   |global_command_number:{2}
    *line_arg C3
     {spaces_before_argument: }
@@ -64,7 +59,6 @@ $result_tree_text{'contents'} = '*document_root C1
   *paragraph C1
    {normal_text:summarycontents }
   *normal_command@summarycontents C1 l9
-  |EXTRA
   |global_command_number:{3}
    *line_arg C3
     {spaces_before_argument: }

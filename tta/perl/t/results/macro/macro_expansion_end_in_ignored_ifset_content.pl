@@ -12,7 +12,6 @@ $result_tree_text{'macro_expansion_end_in_ignored_ifset_content'} = '*document_r
  *before_node_section C1
   *preamble_before_content C2
    *normal_command@macro C4 l1
-   |EXTRA
    |formal_args:A{}
    |macro_name:{beginifsetcontent}
     *arguments_line C1
@@ -20,7 +19,6 @@ $result_tree_text{'macro_expansion_end_in_ignored_ifset_content'} = '*document_r
     {raw:@ifset a\\n}
     {raw:going \\n}
     *normal_command@end C1 l4
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -43,7 +41,6 @@ $result_tree_text{'macro_expansion_end_in_ignored_ifset_content'} = '*document_r
      >>macro_expansion<end;1><p:6>
      >{raw: into the code\\n}
      >*normal_command@end C1 l7
-     >|EXTRA
      >|text_arg:{ifset}
       >*line_arg C3
        >{spaces_before_argument: }

@@ -12,7 +12,6 @@ $result_tree_text{'east_asian_in_w'} = '*document_root C1
  *before_node_section C7
   *preamble_before_content C2
    *normal_command@documentencoding C1 east_asian_in_w.texi:l1
-   |EXTRA
    |global_command_number:{1}
    |input_encoding_name:{utf-8}
    |text_arg:{utf-8}
@@ -32,7 +31,6 @@ $result_tree_text{'east_asian_in_w'} = '*document_root C1
   *normal_command@noindent east_asian_in_w.texi:l6
   {ignorable_spaces_after_command:\\n}
   *paragraph C2
-  |EXTRA
   |noindent:{1}
    {normal_text:This option overrides an include file name section and aaaaa aaaa\\n}
    {normal_text:(包含文字).\\n}

@@ -12,7 +12,6 @@ $result_tree_text{'anchor_after_text_in_flushright'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C3 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -29,7 +28,6 @@ $result_tree_text{'anchor_after_text_in_flushright'} = '*document_root C2
    *paragraph C3
     {normal_text:something\\n}
     *normal_command@anchor C1 l5
-    |EXTRA
     |identifier:{point}
     |is_target:{1}
      *brace_arg C1
@@ -37,7 +35,6 @@ $result_tree_text{'anchor_after_text_in_flushright'} = '*document_root C2
     {spaces_after_close_brace:\\n}
    {empty_line:\\n}
    *normal_command@end C1 l7
-   |EXTRA
    |text_arg:{flushright}
     *line_arg C3
      {spaces_before_argument: }

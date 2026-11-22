@@ -21,17 +21,14 @@ $result_tree_text{'anchor_in_copying'} = '*document_root C3
     *paragraph C3
      {normal_text:Copying.\\n}
      *normal_command@anchor C1 l5
-     |EXTRA
      |identifier:{Copying-information}
      |is_target:{1}
       *brace_arg C1
-      |EXTRA
       |element_region:{copying}
        {normal_text:Copying information}
      {spaces_after_close_brace:\\n}
     {empty_line:\\n}
     *normal_command@end C1 l7
-    |EXTRA
     |text_arg:{copying}
      *line_arg C3
       {spaces_before_argument: }
@@ -39,7 +36,6 @@ $result_tree_text{'anchor_in_copying'} = '*document_root C3
       {spaces_after_argument:\\n}
    {empty_line:\\n}
  *normal_command@node C2 l9 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -50,7 +46,6 @@ $result_tree_text{'anchor_in_copying'} = '*document_root C3
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C8 l11 {chap}
- |EXTRA
  |identifier:{chap}
  |is_target:{1}
  |node_number:{2}
@@ -61,13 +56,11 @@ $result_tree_text{'anchor_in_copying'} = '*document_root C3
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@insertcopying C1 l13
-  |EXTRA
   |global_command_number:{1}
    *line_arg C1
     {spaces_before_argument:\\n}
   {empty_line:\\n}
   *normal_command@insertcopying C1 l15
-  |EXTRA
   |global_command_number:{2}
    *line_arg C1
     {spaces_before_argument:\\n}
@@ -75,7 +68,6 @@ $result_tree_text{'anchor_in_copying'} = '*document_root C3
   *paragraph C2
    *normal_command@xref C1 l17
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{Copying-information}
      {normal_text:Copying information}

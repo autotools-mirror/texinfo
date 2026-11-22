@@ -12,7 +12,6 @@ $result_tree_text{'anchor_zero'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C6 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -23,7 +22,6 @@ $result_tree_text{'anchor_zero'} = '*document_root C2
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@anchor C1 l3
-  |EXTRA
   |identifier:{0}
   |is_target:{1}
    *brace_arg C1
@@ -34,7 +32,6 @@ $result_tree_text{'anchor_zero'} = '*document_root C2
   *paragraph C2
    *normal_command@xref C1 l5
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{0}
      {normal_text:0}

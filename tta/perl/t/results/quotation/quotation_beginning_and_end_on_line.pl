@@ -18,7 +18,6 @@ $result_tree_text{'quotation_beginning_and_end_on_line'} = '*document_root C1
      {normal_text:in quotation}
      {spaces_after_argument: }
    *normal_command@end C1 l1
-   |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }

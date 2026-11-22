@@ -13,7 +13,6 @@ $result_tree_text{'empty_def_arguments'} = '*document_root C1
   *preamble_before_content
   *normal_command@deffn C10 l1
    *def_line C1 l1
-   |EXTRA
    |def_command:{deffn}
    |index_entry:I{fn,1}
    |original_def_cmdname:{deffn}
@@ -38,7 +37,6 @@ $result_tree_text{'empty_def_arguments'} = '*document_root C1
        {normal_text:g}
      {spaces_after_argument:\\n}
    *normal_command@deffnx C1 l2
-   |EXTRA
    |def_command:{deffn}
    |original_def_cmdname:{deffnx}
     *line_arg C3
@@ -54,13 +52,11 @@ $result_tree_text{'empty_def_arguments'} = '*document_root C1
          {normal_text: ule}
      {spaces_after_argument:    \\n}
    *normal_command@deffnx C1 l3
-   |EXTRA
    |def_command:{deffn}
    |original_def_cmdname:{deffnx}
     *line_arg C1
      {spaces_before_argument: \\n}
    *normal_command@deffnx C1 l4
-   |EXTRA
    |def_command:{deffn}
    |original_def_cmdname:{deffnx}
     *line_arg C3
@@ -70,7 +66,6 @@ $result_tree_text{'empty_def_arguments'} = '*document_root C1
        {normal_text:aaa}
      {spaces_after_argument:\\n}
    *normal_command@deffnx C1 l5
-   |EXTRA
    |def_command:{deffn}
    |original_def_cmdname:{deffnx}
     *line_arg C5
@@ -82,7 +77,6 @@ $result_tree_text{'empty_def_arguments'} = '*document_root C1
       *bracketed_arg l5
      {spaces_after_argument:\\n}
    *normal_command@deffnx C1 l6
-   |EXTRA
    |def_command:{deffn}
    |original_def_cmdname:{deffnx}
     *line_arg C2
@@ -90,7 +84,6 @@ $result_tree_text{'empty_def_arguments'} = '*document_root C1
       *bracketed_arg l6
      {spaces_after_argument:\\n}
    *normal_command@deffnx C1 l7
-   |EXTRA
    |def_command:{deffn}
    |original_def_cmdname:{deffnx}
     *line_arg C4
@@ -103,7 +96,6 @@ $result_tree_text{'empty_def_arguments'} = '*document_root C1
        {spaces_before_argument: }
      {spaces_after_argument:\\n}
    *normal_command@deffnx C1 l8
-   |EXTRA
    |def_command:{deffn}
    |original_def_cmdname:{deffnx}
     *line_arg C2
@@ -112,7 +104,6 @@ $result_tree_text{'empty_def_arguments'} = '*document_root C1
        {normal_text:truc}
      {spaces_after_argument:\\n}
    *normal_command@deffnx C1 l9
-   |EXTRA
    |def_command:{deffn}
    |original_def_cmdname:{deffnx}
     *line_arg C4
@@ -123,7 +114,6 @@ $result_tree_text{'empty_def_arguments'} = '*document_root C1
       *bracketed_arg l9
      {spaces_after_argument:\\n}
    *normal_command@end C1 l10
-   |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }

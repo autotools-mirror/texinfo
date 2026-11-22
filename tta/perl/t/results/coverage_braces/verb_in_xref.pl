@@ -12,7 +12,6 @@ $result_tree_text{'verb_in_xref'} = '*document_root C1
  *before_node_section C5
   *preamble_before_content
   *normal_command@anchor C1 l1
-  |EXTRA
   |identifier:{point}
   |is_target:{1}
    *brace_arg C1
@@ -22,7 +21,6 @@ $result_tree_text{'verb_in_xref'} = '*document_root C1
   *paragraph C2
    *normal_command@xref C2 l3
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{point}
      {normal_text:point}

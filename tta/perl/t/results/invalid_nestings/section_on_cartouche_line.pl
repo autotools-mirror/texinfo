@@ -15,7 +15,6 @@ $result_tree_text{'section_on_cartouche_line'} = '*document_root C3
    *arguments_line C1
     *block_line_arg
  *normal_command@section C3 l1 {first}
- |EXTRA
  |identifier:{first}
  |is_target:{1}
  |section_heading_number:{1}
@@ -32,7 +31,6 @@ $result_tree_text{'section_on_cartouche_line'} = '*document_root C3
     *block_line_arg C1
      {spaces_before_argument: }
  *normal_command@section C1 l3 {second spaces}
- |EXTRA
  |identifier:{second-spaces}
  |is_target:{1}
  |section_heading_number:{2}

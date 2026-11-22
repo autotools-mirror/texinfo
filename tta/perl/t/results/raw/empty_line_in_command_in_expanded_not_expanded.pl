@@ -26,7 +26,6 @@ $result_tree_text{'empty_line_in_command_in_expanded_not_expanded'} = '*document
      {raw:\\n}
      {raw:n}\\n}
     *normal_command@end C1 l10
-    |EXTRA
     |text_arg:{tex}
      *line_arg C3
       {spaces_before_argument: }
@@ -39,7 +38,6 @@ $result_tree_text{'empty_line_in_command_in_expanded_not_expanded'} = '*document
       {spaces_before_argument:\\n}
     *rawpreformatted C5
      *normal_command@anchor C1 l13
-     |EXTRA
      |identifier:{ha-hb}
      |is_target:{1}
       *brace_arg C3
@@ -55,7 +53,6 @@ $result_tree_text{'empty_line_in_command_in_expanded_not_expanded'} = '*document
        {normal_text:hn}
      {normal_text:\\n}
     *normal_command@end C1 l20
-    |EXTRA
     |text_arg:{html}
      *line_arg C3
       {spaces_before_argument: }

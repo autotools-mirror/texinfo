@@ -25,7 +25,6 @@ $result_tree_text{'space_at_commands_end_quotation_line'} = '*document_root C1
     *normal_command@@
     {normal_text:quotation line.\\n}
    *normal_command@end C1 l3
-   |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }
@@ -49,7 +48,6 @@ $result_tree_text{'space_at_commands_end_quotation_line'} = '*document_root C1
     *normal_command@@
     {normal_text:quotation line.\\n}
    *normal_command@end C1 l7
-   |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }

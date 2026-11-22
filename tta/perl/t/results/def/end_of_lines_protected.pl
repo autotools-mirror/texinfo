@@ -13,7 +13,6 @@ $result_tree_text{'end_of_lines_protected'} = '*document_root C1
   *preamble_before_content
   *normal_command@deffn C3 l1
    *def_line C1 l1
-   |EXTRA
    |def_command:{deffn}
    |index_entry:I{fn,1}
    |original_def_cmdname:{deffn}
@@ -69,7 +68,6 @@ $result_tree_text{'end_of_lines_protected'} = '*document_root C1
     *paragraph C1
      {normal_text:deffn\\n}
    *normal_command@end C1 l6
-   |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }

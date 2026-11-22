@@ -12,7 +12,6 @@ $result_tree_text{'footnote_in_caption'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -22,7 +21,6 @@ $result_tree_text{'footnote_in_caption'} = '*document_root C3
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@node C5 l2 {chap}
- |EXTRA
  |identifier:{chap}
  |is_target:{1}
  |node_number:{2}
@@ -33,7 +31,6 @@ $result_tree_text{'footnote_in_caption'} = '*document_root C3
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@listoffloats C1 l4
-  |EXTRA
   |float_type:{fl}
   |global_command_number:{1}
    *line_arg C3
@@ -42,7 +39,6 @@ $result_tree_text{'footnote_in_caption'} = '*document_root C3
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@float C5 l6
-  |EXTRA
   |float_number:{1}
   |float_type:{fl}
   |global_command_number:{1}
@@ -63,14 +59,12 @@ $result_tree_text{'footnote_in_caption'} = '*document_root C3
      *paragraph C2
       {normal_text:in caption}
       *normal_command@footnote C1 l8
-      |EXTRA
       |global_command_number:{1}
        *brace_command_context C1
         *paragraph C1
          {normal_text:in footnote}
    {spaces_after_close_brace:\\n}
    *normal_command@end C1 l9
-   |EXTRA
    |text_arg:{float}
     *line_arg C3
      {spaces_before_argument: }

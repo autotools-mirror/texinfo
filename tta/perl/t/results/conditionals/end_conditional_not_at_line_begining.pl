@@ -21,7 +21,6 @@ $result_tree_text{'end_conditional_not_at_line_begining'} = '*document_root C1
      >{raw:inhtml\\n}
      >{raw:  }
      >*normal_command@end C1 l3
-     >|EXTRA
      >|text_arg:{ifhtml}
       >*line_arg C3
        >{spaces_before_argument: }

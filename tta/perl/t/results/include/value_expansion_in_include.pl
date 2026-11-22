@@ -12,7 +12,6 @@ $result_tree_text{'value_expansion_in_include'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content C9
    *normal_command@set C1
-   |EXTRA
    |misc_args:A{testvar|incl-incl.txi}
     *line_arg C3
      {spaces_before_argument: }
@@ -25,7 +24,6 @@ $result_tree_text{'value_expansion_in_include'} = '*document_root C3
      {rawline_text:test - in the variable name, and concatenation of text after.}
      {spaces_after_argument:\\n}
    *normal_command@set C1
-   |EXTRA
    |misc_args:A{test-var|incl-incl.tx}
     *line_arg C3
      {spaces_before_argument: }
@@ -38,7 +36,6 @@ $result_tree_text{'value_expansion_in_include'} = '*document_root C3
      {rawline_text:test - in the variable name, and concatenation of text before and after.}
      {spaces_after_argument:\\n}
    *normal_command@set C1
-   |EXTRA
    |misc_args:A{test_var|ncl-incl.tx}
     *line_arg C3
      {spaces_before_argument: }
@@ -47,7 +44,6 @@ $result_tree_text{'value_expansion_in_include'} = '*document_root C3
    {empty_line:\\n}
    {empty_line:\\n}
  *normal_command@node C1 l10 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -57,7 +53,6 @@ $result_tree_text{'value_expansion_in_include'} = '*document_root C3
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@node C18 l11 {chap}
- |EXTRA
  |identifier:{chap}
  |is_target:{1}
  |node_number:{2}
@@ -72,7 +67,6 @@ $result_tree_text{'value_expansion_in_include'} = '*document_root C3
    >SOURCEMARKS
    >include<start;1><p:17>
     >*normal_command@include C1 l13
-    >|EXTRA
     >|text_arg:{incl-incl.txi}
      >*line_arg C3
       >{spaces_before_argument: }
@@ -96,7 +90,6 @@ $result_tree_text{'value_expansion_in_include'} = '*document_root C3
   *paragraph C1
    {normal_text:testvar verbatiminclude: }
   *normal_command@verbatiminclude C1 l15
-  |EXTRA
   |input_encoding_name:{utf-8}
   |text_arg:{incl-incl.txi}
    *line_arg C3
@@ -117,7 +110,6 @@ $result_tree_text{'value_expansion_in_include'} = '*document_root C3
    >SOURCEMARKS
    >include<start;2><p:18>
     >*normal_command@include C1 l18
-    >|EXTRA
     >|text_arg:{incl-incl.txi}
      >*line_arg C3
       >{spaces_before_argument: }
@@ -141,7 +133,6 @@ $result_tree_text{'value_expansion_in_include'} = '*document_root C3
   *paragraph C1
    {normal_text:test-var verbatiminclude: }
   *normal_command@verbatiminclude C1 l20
-  |EXTRA
   |input_encoding_name:{utf-8}
   |text_arg:{incl-incl.txi}
    *line_arg C3
@@ -162,7 +153,6 @@ $result_tree_text{'value_expansion_in_include'} = '*document_root C3
    >SOURCEMARKS
    >include<start;3><p:18>
     >*normal_command@include C1 l23
-    >|EXTRA
     >|text_arg:{incl-incl.txi}
      >*line_arg C3
       >{spaces_before_argument: }
@@ -185,7 +175,6 @@ $result_tree_text{'value_expansion_in_include'} = '*document_root C3
   *paragraph C1
    {normal_text:test_var verbatiminclude: }
   *normal_command@verbatiminclude C1 l25
-  |EXTRA
   |input_encoding_name:{utf-8}
   |text_arg:{incl-incl.txi}
    *line_arg C3

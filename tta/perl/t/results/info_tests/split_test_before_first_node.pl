@@ -12,7 +12,6 @@ $result_tree_text{'split_test_before_first_node'} = '*document_root C5
  *before_node_section C3
   *preamble_before_content C2
    *normal_command@setfilename C1 l1
-   |EXTRA
    |text_arg:{split_test_before_first_node.info}
     *line_arg C3
      {spaces_before_argument: }
@@ -23,7 +22,6 @@ $result_tree_text{'split_test_before_first_node'} = '*document_root C5
    {normal_text:truc machin et reuc machin  ze aze zea zae eaz eaz zae\\n}
   {empty_line:\\n}
  *normal_command@node C1 l5 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -33,7 +31,6 @@ $result_tree_text{'split_test_before_first_node'} = '*document_root C5
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C6 l6 {top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -52,7 +49,6 @@ $result_tree_text{'split_test_before_first_node'} = '*document_root C5
    *menu_entry C4 l11
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{chap1}
      {normal_text:chap1}
@@ -61,7 +57,6 @@ $result_tree_text{'split_test_before_first_node'} = '*document_root C5
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 l12
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -69,7 +64,6 @@ $result_tree_text{'split_test_before_first_node'} = '*document_root C5
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l14 {chap1}
- |EXTRA
  |identifier:{chap1}
  |is_target:{1}
  |node_number:{2}
@@ -79,7 +73,6 @@ $result_tree_text{'split_test_before_first_node'} = '*document_root C5
     {normal_text:chap1}
     {spaces_after_argument:\\n}
  *normal_command@chapter C4 l15 {chap}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}

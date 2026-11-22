@@ -12,14 +12,12 @@ $result_tree_text{'macro_end_call_in_ignored_inlineraw'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C2
    *normal_command@macro C3 l1
-   |EXTRA
    |formal_args:A{}
    |macro_name:{startraw}
     *arguments_line C1
      {macro_line: startraw\\n}
     {raw:Para @inlineraw{tex, in@something\\n}
     *normal_command@end C1 l3
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -33,7 +31,6 @@ $result_tree_text{'macro_end_call_in_ignored_inlineraw'} = '*document_root C1
     >*macro_call@startraw C1
      >*brace_arg
    *normal_command@inlineraw C2 l5:@startraw
-   |EXTRA
    |format:{tex}
     *brace_arg C1
      {normal_text:tex}

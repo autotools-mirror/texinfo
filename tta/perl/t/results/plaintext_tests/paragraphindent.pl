@@ -19,7 +19,6 @@ $result_tree_text{'paragraphindent'} = '*document_root C1
    {normal_text:aaa b default\\n}
   {empty_line:\\n}
   *normal_command@paragraphindent C1 l5
-  |EXTRA
   |global_command_number:{1}
   |misc_args:A{asis}
    *line_arg C3
@@ -32,7 +31,6 @@ $result_tree_text{'paragraphindent'} = '*document_root C1
    {normal_text:aaa b asis\\n}
   {empty_line:\\n}
   *normal_command@paragraphindent C1 l9
-  |EXTRA
   |global_command_number:{2}
   |misc_args:A{0}
    *line_arg C3
@@ -45,7 +43,6 @@ $result_tree_text{'paragraphindent'} = '*document_root C1
    {normal_text:aaa b 0\\n}
   {empty_line:\\n}
   *normal_command@paragraphindent C1 l13
-  |EXTRA
   |global_command_number:{3}
   |misc_args:A{7}
    *line_arg C3

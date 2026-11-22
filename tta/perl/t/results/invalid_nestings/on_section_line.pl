@@ -13,7 +13,6 @@ $result_tree_text{'on_section_line'} = '*document_root C2
   *preamble_before_content
  *normal_command@section C1 l1 {@noindent Text @titlefont{in titlefont} @anchor{in anchor}@footnote{footnote} @exdent exdent
 }
- |EXTRA
  |identifier:{Text-in-titlefont-}
  |is_target:{1}
  |section_heading_number:{1}
@@ -26,19 +25,16 @@ $result_tree_text{'on_section_line'} = '*document_root C2
     {ignorable_spaces_after_command: }
     {normal_text:Text }
     *normal_command@titlefont C1 l1
-    |EXTRA
     |global_command_number:{1}
      *brace_container C1
       {normal_text:in titlefont}
     {normal_text: }
     *normal_command@anchor C1 l1
-    |EXTRA
     |identifier:{in-anchor}
     |is_target:{1}
      *brace_arg C1
       {normal_text:in anchor}
     *normal_command@footnote C1 l1
-    |EXTRA
     |global_command_number:{1}
      *brace_command_context C1
       *paragraph C1

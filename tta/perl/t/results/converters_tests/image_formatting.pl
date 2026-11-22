@@ -12,7 +12,6 @@ $result_tree_text{'image_formatting'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -22,7 +21,6 @@ $result_tree_text{'image_formatting'} = '*document_root C5
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C2 l2 {top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -32,7 +30,6 @@ $result_tree_text{'image_formatting'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l4 {chap}
- |EXTRA
  |identifier:{chap}
  |is_target:{1}
  |node_number:{2}
@@ -42,7 +39,6 @@ $result_tree_text{'image_formatting'} = '*document_root C5
     {normal_text:chap}
     {spaces_after_argument:\\n}
  *normal_command@chapter C10 l5 {Chapter}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -62,7 +58,6 @@ $result_tree_text{'image_formatting'} = '*document_root C5
      *normal_command@}
    {normal_text: }
    *normal_command@image C1 l7
-   |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C1
      {normal_text:f--ile}
@@ -76,7 +71,6 @@ $result_tree_text{'image_formatting'} = '*document_root C5
      *normal_command@}
    {normal_text: }
    *normal_command@image C2 l8
-   |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C1
      {normal_text:f--ile}
@@ -92,7 +86,6 @@ $result_tree_text{'image_formatting'} = '*document_root C5
      *normal_command@}
    {normal_text: }
    *normal_command@image C3 l9
-   |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C1
      {normal_text:f--ile}
@@ -109,7 +102,6 @@ $result_tree_text{'image_formatting'} = '*document_root C5
      *normal_command@}
    {normal_text: }
    *normal_command@image C4 l10
-   |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C1
      {normal_text:f--ile}
@@ -127,7 +119,6 @@ $result_tree_text{'image_formatting'} = '*document_root C5
      *normal_command@}
    {normal_text: }
    *normal_command@image C5 l11
-   |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C1
      {normal_text:f--ile}
@@ -146,7 +137,6 @@ $result_tree_text{'image_formatting'} = '*document_root C5
      *normal_command@}
    {normal_text: }
    *normal_command@image C5 l12
-   |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C1
      {normal_text:f--ile}
@@ -167,7 +157,6 @@ $result_tree_text{'image_formatting'} = '*document_root C5
      {normal_text:f--ile,aze,az,alt,}
    {normal_text: }
    *normal_command@image C5 l13
-   |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C1
      {normal_text:f--ile}
@@ -188,7 +177,6 @@ $result_tree_text{'image_formatting'} = '*document_root C5
      *normal_command@}
    {normal_text: }
    *normal_command@image C4 l14
-   |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C1
      {normal_text:f-ile}
@@ -222,7 +210,6 @@ $result_tree_text{'image_formatting'} = '*document_root C5
      *normal_command@}
    {normal_text: }
    *normal_command@image C5 l15
-   |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C3
      *normal_command@file C1 l15
@@ -244,13 +231,11 @@ $result_tree_text{'image_formatting'} = '*document_root C5
      *normal_command@}
    {normal_text:\\n}
    *normal_command@image C1 l16
-   |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C1
      {normal_text:image}
    {normal_text: }
    *normal_command@image C1 l16
-   |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C1
      {normal_text:image}
@@ -270,7 +255,6 @@ $result_tree_text{'image_formatting'} = '*document_root C5
       *normal_command@}
     {normal_text: }
     *normal_command@image C1 l19
-    |EXTRA
     |input_encoding_name:{utf-8}
      *brace_arg C1
       {normal_text:f--ile}
@@ -284,7 +268,6 @@ $result_tree_text{'image_formatting'} = '*document_root C5
       *normal_command@}
     {normal_text: }
     *normal_command@image C2 l20
-    |EXTRA
     |input_encoding_name:{utf-8}
      *brace_arg C1
       {normal_text:f--ile}
@@ -300,7 +283,6 @@ $result_tree_text{'image_formatting'} = '*document_root C5
       *normal_command@}
     {normal_text: }
     *normal_command@image C3 l21
-    |EXTRA
     |input_encoding_name:{utf-8}
      *brace_arg C1
       {normal_text:f--ile}
@@ -317,7 +299,6 @@ $result_tree_text{'image_formatting'} = '*document_root C5
       *normal_command@}
     {normal_text: }
     *normal_command@image C4 l22
-    |EXTRA
     |input_encoding_name:{utf-8}
      *brace_arg C1
       {normal_text:f--ile}
@@ -335,7 +316,6 @@ $result_tree_text{'image_formatting'} = '*document_root C5
       *normal_command@}
     {normal_text: }
     *normal_command@image C5 l23
-    |EXTRA
     |input_encoding_name:{utf-8}
      *brace_arg C1
       {normal_text:f--ile}
@@ -354,7 +334,6 @@ $result_tree_text{'image_formatting'} = '*document_root C5
       *normal_command@}
     {normal_text: }
     *normal_command@image C5 l24
-    |EXTRA
     |input_encoding_name:{utf-8}
      *brace_arg C1
       {normal_text:f--ile}
@@ -376,7 +355,6 @@ $result_tree_text{'image_formatting'} = '*document_root C5
       *normal_command@}
     {normal_text: }
     *normal_command@image C4 l25
-    |EXTRA
     |input_encoding_name:{utf-8}
      *brace_arg C1
       {normal_text:f-ile}
@@ -410,7 +388,6 @@ $result_tree_text{'image_formatting'} = '*document_root C5
       *normal_command@}
     {normal_text: }
     *normal_command@image C5 l26
-    |EXTRA
     |input_encoding_name:{utf-8}
      *brace_arg C3
       *normal_command@file C1 l26
@@ -432,19 +409,16 @@ $result_tree_text{'image_formatting'} = '*document_root C5
       *normal_command@}
     {normal_text:\\n}
     *normal_command@image C1 l27
-    |EXTRA
     |input_encoding_name:{utf-8}
      *brace_arg C1
       {normal_text:image}
     {normal_text: }
     *normal_command@image C1 l27
-    |EXTRA
     |input_encoding_name:{utf-8}
      *brace_arg C1
       {normal_text:image}
     {normal_text:\\n}
    *normal_command@end C1 l28
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
@@ -452,7 +426,6 @@ $result_tree_text{'image_formatting'} = '*document_root C5
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@image C4 l30
-  |EXTRA
   |input_encoding_name:{utf-8}
    *brace_arg C1
     {normal_text:f--ile}
@@ -465,7 +438,6 @@ $result_tree_text{'image_formatting'} = '*document_root C5
   *paragraph C3
    {normal_text:in para\\n}
    *normal_command@image C4 l33
-   |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C1
      {normal_text:f--ile}

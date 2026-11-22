@@ -18,7 +18,6 @@ $result_tree_text{'command_in_end_ignored_raw_command_after'} = '*document_root 
     *elided_rawpreformatted C1
      {raw:In html\\n}
     *normal_command@end C1 l3
-    |EXTRA
     |text_arg:{html}
      *line_arg C4
       {spaces_before_argument: }

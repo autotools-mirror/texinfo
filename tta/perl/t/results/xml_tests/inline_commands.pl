@@ -13,7 +13,6 @@ $result_tree_text{'inline_commands'} = '*document_root C1
   *preamble_before_content
   *paragraph C4
    *normal_command@inlineraw C2 l1
-   |EXTRA
    |expand_index:{1}
    |format:{xml}
     *brace_arg C1
@@ -23,7 +22,6 @@ $result_tree_text{'inline_commands'} = '*document_root C1
      {normal_text:<sc>xml inlineraw</sc>}
    {normal_text:\\n}
    *normal_command@inlineraw C2 l2
-   |EXTRA
    |format:{html}
     *brace_arg C1
      {normal_text:html}
@@ -33,7 +31,6 @@ $result_tree_text{'inline_commands'} = '*document_root C1
   {empty_line:\\n}
   *paragraph C4
    *normal_command@inlinefmt C2 l4
-   |EXTRA
    |expand_index:{1}
    |format:{xml}
     *brace_arg C1
@@ -46,7 +43,6 @@ $result_tree_text{'inline_commands'} = '*document_root C1
      {normal_text:, xml}
    {normal_text:\\n}
    *normal_command@inlinefmt C2 l5
-   |EXTRA
    |format:{html}
     *brace_arg C1
      {normal_text:html}
@@ -56,7 +52,6 @@ $result_tree_text{'inline_commands'} = '*document_root C1
   {empty_line:\\n}
   *paragraph C4
    *normal_command@inlinefmtifelse C3 l7
-   |EXTRA
    |expand_index:{1}
    |format:{xml}
     *brace_arg C1
@@ -71,7 +66,6 @@ $result_tree_text{'inline_commands'} = '*document_root C1
      {raw: else xml}
    {normal_text:\\n}
    *normal_command@inlinefmtifelse C3 l8
-   |EXTRA
    |expand_index:{2}
    |format:{html}
     *brace_arg C1

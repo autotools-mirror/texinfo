@@ -12,7 +12,6 @@ $result_tree_text{'spaces_in_empty_node_names'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C4 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -29,7 +28,6 @@ $result_tree_text{'spaces_in_empty_node_names'} = '*document_root C5
    *menu_entry C4 l4
     {menu_entry_leading_text:* }
     *menu_entry_node C2
-    |EXTRA
     |node_content:A{0|1}
     |normalized:{-}
      *normal_command@ 
@@ -41,7 +39,6 @@ $result_tree_text{'spaces_in_empty_node_names'} = '*document_root C5
    *menu_entry C4 l5
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{-}
      *normal_command@verb C1 l5
@@ -56,7 +53,6 @@ $result_tree_text{'spaces_in_empty_node_names'} = '*document_root C5
    *menu_entry C4 l6
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{-}
      *normal_command@ 
@@ -65,7 +61,6 @@ $result_tree_text{'spaces_in_empty_node_names'} = '*document_root C5
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 l7
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -103,7 +98,6 @@ $result_tree_text{'spaces_in_empty_node_names'} = '*document_root C5
   *paragraph C2
    *normal_command@ref C1 l15
     *brace_arg C2
-    |EXTRA
     |node_content:A{0|1}
     |normalized:{-}
      *normal_command@ 
@@ -113,7 +107,6 @@ $result_tree_text{'spaces_in_empty_node_names'} = '*document_root C5
   *paragraph C2
    *normal_command@ref C1 l17
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{-}
      *normal_command@verb C1 l17
@@ -126,7 +119,6 @@ $result_tree_text{'spaces_in_empty_node_names'} = '*document_root C5
   *paragraph C2
    *normal_command@ref C1 l19
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{-}
      *normal_command@w C1 l19

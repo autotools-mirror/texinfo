@@ -12,14 +12,12 @@ $result_tree_text{'blockitem_no_item'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C2
    *normal_command@linemacro C3 l1
-   |EXTRA
    |formal_args:A{a|b|c}
    |macro_name:{mycommand}
     *arguments_line C1
      {macro_line: mycommand {a, b, c}\\n}
     {raw:\\a\\, \\b\\ \\c\\\\n}
     *normal_command@end C1 l3
-    |EXTRA
     |text_arg:{linemacro}
      *line_arg C3
       {spaces_before_argument: }
@@ -48,7 +46,6 @@ $result_tree_text{'blockitem_no_item'} = '*document_root C1
         >{macro_call_arg_text:f @\\n@end itemize}
      *normal_command@\\n
    *normal_command@end C1 l8:@mycommand
-   |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }

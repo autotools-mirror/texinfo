@@ -14,7 +14,6 @@ $result_tree_text{'inlinefmtspaces'} = '*document_root C1
   *paragraph C5
    {normal_text:A }
    *normal_command@inlinefmt C3 l1
-   |EXTRA
    |expand_index:{1}
    |format:{plaintext}
     {spaces_after_cmd_before_arg: }
@@ -30,7 +29,6 @@ $result_tree_text{'inlinefmtspaces'} = '*document_root C1
      {normal_text: }
    {normal_text: a.  Now html\\n}
    *normal_command@inlinefmt C2 l2
-   |EXTRA
    |expand_index:{1}
    |format:{html}
     *brace_arg C3

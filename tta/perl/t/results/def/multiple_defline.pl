@@ -16,7 +16,6 @@ $result_tree_text{'multiple_defline'} = '*document_root C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *normal_command@defline C1 l2
-   |EXTRA
    |def_command:{defline}
    |original_def_cmdname:{defline}
     *line_arg C9
@@ -40,7 +39,6 @@ $result_tree_text{'multiple_defline'} = '*document_root C1
      {normal_text:description1 description1 description1 description1 description1\\n}
      {normal_text:description1 description1 description1 description1 description1\\n}
    *normal_command@defline C1 l5
-   |EXTRA
    |def_command:{defline}
    |original_def_cmdname:{defline}
     *line_arg C12
@@ -69,7 +67,6 @@ $result_tree_text{'multiple_defline'} = '*document_root C1
      {normal_text:description2 description2 description2 description2 description2\\n}
      {normal_text:description2 description2 description2 description2 description2\\n}
    *normal_command@end C1 l8
-   |EXTRA
    |text_arg:{defblock}
     *line_arg C3
      {spaces_before_argument: }

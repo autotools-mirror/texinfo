@@ -18,19 +18,16 @@ $result_tree_text{'enumerate_argument_item'} = '*document_root C1
      {normal_text:1}
      {spaces_after_argument:\\n}
    *normal_command@item C2 l2
-   |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:numeric first\\n}
    *normal_command@item C2 l3
-   |EXTRA
    |item_number:{2}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:numeric second\\n}
    *normal_command@end C1 l4
-   |EXTRA
    |text_arg:{enumerate}
     *line_arg C3
      {spaces_before_argument: }
@@ -48,19 +45,16 @@ $result_tree_text{'enumerate_argument_item'} = '*document_root C1
        {rawline_text:comment}
        {spaces_after_argument:\\n}
    *normal_command@item C2 l7
-   |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:upper case first\\n}
    *normal_command@item C2 l8
-   |EXTRA
    |item_number:{2}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:upper case second\\n}
    *normal_command@end C1 l9
-   |EXTRA
    |text_arg:{enumerate}
     *line_arg C3
      {spaces_before_argument: }
@@ -79,19 +73,16 @@ $result_tree_text{'enumerate_argument_item'} = '*document_root C1
        {rawline_text:comment}
        {spaces_after_argument:\\n}
    *normal_command@item C2 l12
-   |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:lower case first\\n}
    *normal_command@item C2 l13
-   |EXTRA
    |item_number:{2}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:lower case second\\n}
    *normal_command@end C1 l14
-   |EXTRA
    |text_arg:{enumerate}
     *line_arg C3
      {spaces_before_argument: }
@@ -105,19 +96,16 @@ $result_tree_text{'enumerate_argument_item'} = '*document_root C1
      {normal_text:0}
      {spaces_after_argument:\\n}
    *normal_command@item C2 l17
-   |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:numeric zero first\\n}
    *normal_command@item C2 l18
-   |EXTRA
    |item_number:{2}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:numeric zero second\\n}
    *normal_command@end C1 l19
-   |EXTRA
    |text_arg:{enumerate}
     *line_arg C3
      {spaces_before_argument: }

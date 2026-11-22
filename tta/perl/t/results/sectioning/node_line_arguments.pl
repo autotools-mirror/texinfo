@@ -14,7 +14,6 @@ $result_tree_text{'node_line_arguments'} = '*document_root C8
    {text_before_beginning:\\n}
   *preamble_before_content
  *normal_command@node C1 l2 {one arg1}
- |EXTRA
  |identifier:{one-arg1}
  |is_target:{1}
  |node_number:{1}
@@ -24,7 +23,6 @@ $result_tree_text{'node_line_arguments'} = '*document_root C8
     {normal_text:one arg1}
     {spaces_after_argument: \\n}
  *normal_command@node C1 l3 {one arg2}
- |EXTRA
  |identifier:{one-arg2}
  |is_target:{1}
  |node_number:{2}
@@ -33,14 +31,12 @@ $result_tree_text{'node_line_arguments'} = '*document_root C8
     {spaces_before_argument: }
     {normal_text:one arg2}
    *line_arg C3
-   |EXTRA
    |node_content:A{1|1}
    |normalized:{two-arg}
     {spaces_before_argument: }
     {normal_text:two arg}
     {spaces_after_argument:\\n}
  *normal_command@node C1 l4 {one arg3}
- |EXTRA
  |identifier:{one-arg3}
  |is_target:{1}
  |node_number:{3}
@@ -49,20 +45,17 @@ $result_tree_text{'node_line_arguments'} = '*document_root C8
     {spaces_before_argument: }
     {normal_text:one arg3}
    *line_arg C2
-   |EXTRA
    |node_content:A{1|1}
    |normalized:{two-arg}
     {spaces_before_argument: }
     {normal_text:two arg}
    *line_arg C3
-   |EXTRA
    |node_content:A{1|1}
    |normalized:{three-arg}
     {spaces_before_argument: }
     {normal_text:three arg}
     {spaces_after_argument:\\n}
  *normal_command@node C1 l5 {one arg4}
- |EXTRA
  |identifier:{one-arg4}
  |is_target:{1}
  |node_number:{4}
@@ -71,26 +64,22 @@ $result_tree_text{'node_line_arguments'} = '*document_root C8
     {spaces_before_argument: }
     {normal_text:one arg4}
    *line_arg C2
-   |EXTRA
    |node_content:A{1|1}
    |normalized:{two-arg}
     {spaces_before_argument: }
     {normal_text:two arg}
    *line_arg C2
-   |EXTRA
    |node_content:A{1|1}
    |normalized:{three-arg}
     {spaces_before_argument: }
     {normal_text:three arg}
    *line_arg C3
-   |EXTRA
    |node_content:A{1|1}
    |normalized:{four-arg}
     {spaces_before_argument: }
     {normal_text:four arg}
     {spaces_after_argument:\\n}
  *normal_command@node C2 l6 {one arg5}
- |EXTRA
  |identifier:{one-arg5}
  |is_target:{1}
  |node_number:{5}
@@ -99,19 +88,16 @@ $result_tree_text{'node_line_arguments'} = '*document_root C8
     {spaces_before_argument: }
     {normal_text:one arg5}
    *line_arg C2
-   |EXTRA
    |node_content:A{1|1}
    |normalized:{two-arg}
     {spaces_before_argument: }
     {normal_text:two arg}
    *line_arg C2
-   |EXTRA
    |node_content:A{1|1}
    |normalized:{three-arg}
     {spaces_before_argument: }
     {normal_text:three arg}
    *line_arg C3
-   |EXTRA
    |node_content:A{1|1}
    |normalized:{four-arg-five-arg}
     {spaces_before_argument: }
@@ -119,7 +105,6 @@ $result_tree_text{'node_line_arguments'} = '*document_root C8
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C2 l8 {comment}
- |EXTRA
  |identifier:{comment}
  |is_target:{1}
  |node_number:{6}
@@ -134,7 +119,6 @@ $result_tree_text{'node_line_arguments'} = '*document_root C8
       {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l10 {arg1 @comma{} arg2}
- |EXTRA
  |identifier:{arg1-_002c-arg2}
  |is_target:{1}
  |node_number:{7}
@@ -146,7 +130,6 @@ $result_tree_text{'node_line_arguments'} = '*document_root C8
      *brace_container
     {normal_text: arg2}
    *line_arg C3
-   |EXTRA
    |node_content:A{1|2}
    |normalized:{_00e7edilla}
     {spaces_before_argument: }
@@ -155,7 +138,6 @@ $result_tree_text{'node_line_arguments'} = '*document_root C8
       {normal_text:c}
     {normal_text:edilla}
    *line_arg C4
-   |EXTRA
    |node_content:A{1|1}
    |normalized:{comma-in-strong_002c}
     {spaces_before_argument: }

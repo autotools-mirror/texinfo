@@ -12,7 +12,6 @@ $result_tree_text{'link'} = '*document_root C4
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 l1 {One}
- |EXTRA
  |identifier:{One}
  |is_target:{1}
  |node_number:{1}
@@ -22,7 +21,6 @@ $result_tree_text{'link'} = '*document_root C4
     {normal_text:One}
     {spaces_after_argument:\\n}
  *normal_command@chapter C4 l2 {ONEX}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{1}
@@ -36,7 +34,6 @@ $result_tree_text{'link'} = '*document_root C4
    {normal_text:target node\\n}
   {empty_line:\\n}
  *normal_command@node C19 l6 {Two}
- |EXTRA
  |identifier:{Two}
  |is_target:{1}
  |node_number:{2}
@@ -49,7 +46,6 @@ $result_tree_text{'link'} = '*document_root C4
   *paragraph C2
    {normal_text:xrefautomaticsectiontitle off\\n}
    *normal_command@xrefautomaticsectiontitle C1 l9
-   |EXTRA
    |global_command_number:{1}
    |misc_args:A{off}
     *line_arg C3
@@ -60,7 +56,6 @@ $result_tree_text{'link'} = '*document_root C4
   *paragraph C2
    *normal_command@link C1 l11
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{One}
      {normal_text:One}
@@ -69,7 +64,6 @@ $result_tree_text{'link'} = '*document_root C4
   *paragraph C2
    *normal_command@link C2 l13
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{One}
      {normal_text:One}
@@ -81,7 +75,6 @@ $result_tree_text{'link'} = '*document_root C4
   *paragraph C2
    {normal_text:xrefautomaticsectiontitle on\\n}
    *normal_command@xrefautomaticsectiontitle C1 l16
-   |EXTRA
    |global_command_number:{2}
    |misc_args:A{on}
     *line_arg C3
@@ -92,7 +85,6 @@ $result_tree_text{'link'} = '*document_root C4
   *paragraph C2
    *normal_command@link C1 l18
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{One}
      {normal_text:One}
@@ -101,7 +93,6 @@ $result_tree_text{'link'} = '*document_root C4
   *paragraph C2
    *normal_command@link C2 l20
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{One}
      {normal_text:One}
@@ -116,7 +107,6 @@ $result_tree_text{'link'} = '*document_root C4
   *paragraph C2
    *normal_command@link C3 l24
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
      {normal_text:Introduction}
     *brace_arg
@@ -127,7 +117,6 @@ $result_tree_text{'link'} = '*document_root C4
   *paragraph C2
    *normal_command@link C3 l26
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
      {normal_text:Introduction}
     *brace_arg C1

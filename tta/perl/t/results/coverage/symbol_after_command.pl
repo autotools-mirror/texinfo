@@ -64,7 +64,6 @@ $result_tree_text{'symbol_after_command'} = '*document_root C1
        {normal_text:: colon}
        {spaces_after_argument:\\n}
    *normal_command@end C1 l9
-   |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }

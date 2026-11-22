@@ -26,7 +26,6 @@ $result_tree_text{'comment_example_and_blank_lines'} = '*document_root C1
       {rawline_text:comment}
       {spaces_after_argument:\\n}
    *normal_command@end C1 l5
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
@@ -48,7 +47,6 @@ $result_tree_text{'comment_example_and_blank_lines'} = '*document_root C1
       {rawline_text:comment}
       {spaces_after_argument:\\n}
    *normal_command@end C1 l11
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
@@ -64,7 +62,6 @@ $result_tree_text{'comment_example_and_blank_lines'} = '*document_root C1
    *preformatted C1
     {normal_text:no comment, blank after\\n}
    *normal_command@end C1 l16
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
@@ -81,7 +78,6 @@ $result_tree_text{'comment_example_and_blank_lines'} = '*document_root C1
    *preformatted C1
     {normal_text:no comment, no blank after\\n}
    *normal_command@end C1 l22
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }

@@ -15,7 +15,6 @@ $result_tree_text{'include_comment'} = '*document_root C1
    >SOURCEMARKS
    >include<start;1>
     >*normal_command@include C1 l1
-    >|EXTRA
     >|text_arg:{inc_file.texi}
      >*line_arg C3
       >{spaces_before_argument: }

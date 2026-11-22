@@ -14,7 +14,6 @@ $result_tree_text{'test_sp'} = '*document_root C1
   *paragraph C1
    {normal_text:Para\\n}
   *normal_command@sp C1 l2
-  |EXTRA
   |misc_args:A{1}
    *line_arg C3
     {spaces_before_argument: }
@@ -27,7 +26,6 @@ $result_tree_text{'test_sp'} = '*document_root C1
    {normal_text:sp:\\n}
   {empty_line:\\n}
   *normal_command@sp C1 l6
-  |EXTRA
   |misc_args:A{1}
    *line_arg C3
     {spaces_before_argument: }
@@ -35,7 +33,6 @@ $result_tree_text{'test_sp'} = '*document_root C1
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@sp C1 l8
-  |EXTRA
   |misc_args:A{2}
    *line_arg C3
     {spaces_before_argument: }
@@ -47,7 +44,6 @@ $result_tree_text{'test_sp'} = '*document_root C1
   *paragraph C1
    {normal_text:A\\n}
   *normal_command@sp C1 l12
-  |EXTRA
   |misc_args:A{2}
    *line_arg C3
     {spaces_before_argument: }
@@ -59,7 +55,6 @@ $result_tree_text{'test_sp'} = '*document_root C1
   *paragraph C1
    {normal_text:sp after para\\n}
   *normal_command@sp C1 l16
-  |EXTRA
   |misc_args:A{1}
    *line_arg C3
     {spaces_before_argument: }

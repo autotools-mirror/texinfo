@@ -12,7 +12,6 @@ $result_tree_text{'simple'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *normal_command@float C6 l1
-  |EXTRA
   |float_number:{1}
   |float_type:{Type}
   |global_command_number:{1}
@@ -35,7 +34,6 @@ $result_tree_text{'simple'} = '*document_root C1
       {normal_text:Caption.}
    {spaces_after_close_brace:\\n}
    *normal_command@end C1 l5
-   |EXTRA
    |text_arg:{float}
     *line_arg C2
      {spaces_before_argument: }

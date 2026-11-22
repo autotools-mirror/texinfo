@@ -12,7 +12,6 @@ $result_tree_text{'ref_to_float'} = '*document_root C1
  *before_node_section C8
   *preamble_before_content
   *normal_command@float C3 l1
-  |EXTRA
   |float_number:{1}
   |float_type:{Text}
   |global_command_number:{1}
@@ -29,7 +28,6 @@ $result_tree_text{'ref_to_float'} = '*document_root C1
    *paragraph C1
     {normal_text:Float\\n}
    *normal_command@end C1 l3
-   |EXTRA
    |text_arg:{float}
     *line_arg C3
      {spaces_before_argument: }
@@ -37,7 +35,6 @@ $result_tree_text{'ref_to_float'} = '*document_root C1
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@float C3 l5
-  |EXTRA
   |float_number:{1}
   |float_type:{}
   |global_command_number:{2}
@@ -53,7 +50,6 @@ $result_tree_text{'ref_to_float'} = '*document_root C1
    *paragraph C1
     {normal_text:In foat 2.\\n}
    *normal_command@end C1 l7
-   |EXTRA
    |text_arg:{float}
     *line_arg C3
      {spaces_before_argument: }
@@ -63,7 +59,6 @@ $result_tree_text{'ref_to_float'} = '*document_root C1
   *paragraph C2
    *normal_command@ref C1 l9
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{Label1}
      {normal_text:Label1}
@@ -72,7 +67,6 @@ $result_tree_text{'ref_to_float'} = '*document_root C1
   *paragraph C2
    *normal_command@ref C1 l11
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{Label2}
      {normal_text:Label2}

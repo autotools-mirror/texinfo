@@ -19,13 +19,11 @@ $result_tree_text{'itemize_line_commands_with_brace'} = '*document_root C1
       *brace_container
      {spaces_after_argument:\\n}
    *normal_command@item C2 l2
-   |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:bullet\\n}
    *normal_command@end C1 l3
-   |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }
@@ -40,13 +38,11 @@ $result_tree_text{'itemize_line_commands_with_brace'} = '*document_root C1
       *brace_container
      {spaces_after_argument:\\n}
    *normal_command@item C2 l6
-   |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:minus\\n}
    *normal_command@end C1 l7
-   |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }

@@ -12,7 +12,6 @@ $result_tree_text{'informative_commands_in_top_node'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -22,7 +21,6 @@ $result_tree_text{'informative_commands_in_top_node'} = '*document_root C5
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C7 l2 {top sectionning}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -32,7 +30,6 @@ $result_tree_text{'informative_commands_in_top_node'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@paragraphindent C1 l4
-  |EXTRA
   |global_command_number:{1}
   |misc_args:A{5}
    *line_arg C3
@@ -58,7 +55,6 @@ $result_tree_text{'informative_commands_in_top_node'} = '*document_root C5
       *normal_command@thischaptername
     {spaces_after_argument:\\n}
   *normal_command@paragraphindent C1 l7
-  |EXTRA
   |global_command_number:{2}
   |misc_args:A{2}
    *line_arg C3
@@ -67,7 +63,6 @@ $result_tree_text{'informative_commands_in_top_node'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l9 {next node}
- |EXTRA
  |identifier:{next-node}
  |is_target:{1}
  |node_number:{2}
@@ -77,7 +72,6 @@ $result_tree_text{'informative_commands_in_top_node'} = '*document_root C5
     {normal_text:next node}
     {spaces_after_argument:\\n}
  *normal_command@chapter C3 l10 {chap}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}

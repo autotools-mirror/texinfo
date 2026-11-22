@@ -12,7 +12,6 @@ $result_tree_text{'multiple_documentlanguage'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content C4
    *normal_command@documentlanguage C1 l1
-   |EXTRA
    |global_command_number:{1}
    |text_arg:{fr}
     *line_arg C3
@@ -26,7 +25,6 @@ $result_tree_text{'multiple_documentlanguage'} = '*document_root C5
       {spaces_before_argument:\\n}
     *normal_command@defivar C3 l4
      *def_line C1 l4
-     |EXTRA
      |def_command:{defivar}
      |documentlanguage:{fr}
      |element_region:{copying}
@@ -35,10 +33,8 @@ $result_tree_text{'multiple_documentlanguage'} = '*document_root C5
       *block_line_arg C9
        (i){spaces_before_argument: }
        *def_category C1
-       |EXTRA
        |inserted:{1}
         *untranslated_def_line_arg C1
-        |EXTRA
         |documentlanguage:{fr}
         |translation_context:{category of instance variables in object-oriented programming for @defivar}
          {untranslated:Instance Variable}
@@ -61,14 +57,12 @@ $result_tree_text{'multiple_documentlanguage'} = '*document_root C5
         *brace_container
        {normal_text:\\n}
      *normal_command@end C1 l6
-     |EXTRA
      |text_arg:{defivar}
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:defivar}
        {spaces_after_argument:\\n}
     *normal_command@end C1 l7
-    |EXTRA
     |text_arg:{copying}
      *line_arg C3
       {spaces_before_argument: }
@@ -76,7 +70,6 @@ $result_tree_text{'multiple_documentlanguage'} = '*document_root C5
       {spaces_after_argument:\\n}
    {empty_line:\\n}
  *normal_command@node C1 l9 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -86,7 +79,6 @@ $result_tree_text{'multiple_documentlanguage'} = '*document_root C5
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C2 l10 {top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -96,7 +88,6 @@ $result_tree_text{'multiple_documentlanguage'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l12 {chap}
- |EXTRA
  |identifier:{chap}
  |is_target:{1}
  |isindex:{1}
@@ -107,7 +98,6 @@ $result_tree_text{'multiple_documentlanguage'} = '*document_root C5
     {normal_text:chap}
     {spaces_after_argument:\\n}
  *normal_command@chapter C15 l13 {Chap}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -119,7 +109,6 @@ $result_tree_text{'multiple_documentlanguage'} = '*document_root C5
   {empty_line:\\n}
   *normal_command@defivar C3 l15
    *def_line C1 l15
-   |EXTRA
    |def_command:{defivar}
    |documentlanguage:{fr}
    |element_node:{chap}
@@ -128,10 +117,8 @@ $result_tree_text{'multiple_documentlanguage'} = '*document_root C5
     *block_line_arg C9
      (i){spaces_before_argument: }
      *def_category C1
-     |EXTRA
      |inserted:{1}
       *untranslated_def_line_arg C1
-      |EXTRA
       |documentlanguage:{fr}
       |translation_context:{category of instance variables in object-oriented programming for @defivar}
        {untranslated:Instance Variable}
@@ -154,7 +141,6 @@ $result_tree_text{'multiple_documentlanguage'} = '*document_root C5
       *brace_container
      {normal_text:\\n}
    *normal_command@end C1 l17
-   |EXTRA
    |text_arg:{defivar}
     *line_arg C3
      {spaces_before_argument: }
@@ -162,7 +148,6 @@ $result_tree_text{'multiple_documentlanguage'} = '*document_root C5
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@documentlanguage C1 l19
-  |EXTRA
   |global_command_number:{2}
   |text_arg:{de}
    *line_arg C3
@@ -171,13 +156,11 @@ $result_tree_text{'multiple_documentlanguage'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@insertcopying C1 l21
-  |EXTRA
   |global_command_number:{1}
    *line_arg C1
     {spaces_before_argument:\\n}
   {empty_line:\\n}
   *normal_command@documentlanguage C1 l23
-  |EXTRA
   |global_command_number:{3}
   |text_arg:{hr}
    *line_arg C3
@@ -187,7 +170,6 @@ $result_tree_text{'multiple_documentlanguage'} = '*document_root C5
   {empty_line:\\n}
   *normal_command@defivar C3 l25
    *def_line C1 l25
-   |EXTRA
    |def_command:{defivar}
    |documentlanguage:{hr}
    |element_node:{chap}
@@ -196,10 +178,8 @@ $result_tree_text{'multiple_documentlanguage'} = '*document_root C5
     *block_line_arg C9
      (i){spaces_before_argument: }
      *def_category C1
-     |EXTRA
      |inserted:{1}
       *untranslated_def_line_arg C1
-      |EXTRA
       |documentlanguage:{hr}
       |translation_context:{category of instance variables in object-oriented programming for @defivar}
        {untranslated:Instance Variable}
@@ -222,7 +202,6 @@ $result_tree_text{'multiple_documentlanguage'} = '*document_root C5
       *brace_container
      {normal_text:\\n}
    *normal_command@end C1 l27
-   |EXTRA
    |text_arg:{defivar}
     *line_arg C3
      {spaces_before_argument: }
@@ -230,13 +209,11 @@ $result_tree_text{'multiple_documentlanguage'} = '*document_root C5
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@insertcopying C1 l29
-  |EXTRA
   |global_command_number:{2}
    *line_arg C1
     {spaces_before_argument:\\n}
   {empty_line:\\n}
   *normal_command@printindex C1 l31
-  |EXTRA
   |global_command_number:{1}
   |misc_args:A{vr}
    *line_arg C3

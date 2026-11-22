@@ -12,14 +12,12 @@ $result_tree_text{'macro_in_menu_comment_closed_by_detailmenu'} = '*document_roo
  *before_node_section C2
   *preamble_before_content C2
    *normal_command@macro C3 l1
-   |EXTRA
    |formal_args:A{}
    |macro_name:{emptystring}
     *arguments_line C1
      {macro_line: emptystring\\n}
     {raw:\\n}
     *normal_command@end C1 l3
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -37,7 +35,6 @@ $result_tree_text{'macro_in_menu_comment_closed_by_detailmenu'} = '*document_roo
      >*brace_arg
    >macro_expansion<end;1>
    *normal_command@detailmenu C3 l6
-   |EXTRA
    |global_command_number:{1}
     *arguments_line C1
      *block_line_arg C1
@@ -45,7 +42,6 @@ $result_tree_text{'macro_in_menu_comment_closed_by_detailmenu'} = '*document_roo
     *menu_entry C4 l7
      {menu_entry_leading_text:* }
      *menu_entry_node C1
-     |EXTRA
      |node_content:A{0|0}
      |normalized:{second}
       {normal_text:second}
@@ -54,14 +50,12 @@ $result_tree_text{'macro_in_menu_comment_closed_by_detailmenu'} = '*document_roo
       *preformatted C1
        {normal_text:\\n}
     *normal_command@end C1 l8
-    |EXTRA
     |text_arg:{detailmenu}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:detailmenu}
       {spaces_after_argument:\\n}
    *normal_command@end C1 l9
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }

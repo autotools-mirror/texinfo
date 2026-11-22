@@ -16,7 +16,6 @@ $result_tree_text{'adjacent_defline'} = '*document_root C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *normal_command@defline C1 l2
-   |EXTRA
    |def_command:{defline}
    |original_def_cmdname:{defline}
     *line_arg C9
@@ -36,7 +35,6 @@ $result_tree_text{'adjacent_defline'} = '*document_root C1
      {delimiter:)}
      {spaces_after_argument:\\n}
    *normal_command@defline C1 l3
-   |EXTRA
    |def_command:{defline}
    |original_def_cmdname:{defline}
     *line_arg C12
@@ -64,7 +62,6 @@ $result_tree_text{'adjacent_defline'} = '*document_root C1
     *paragraph C1
      {normal_text:description\\n}
    *normal_command@end C1 l5
-   |EXTRA
    |text_arg:{defblock}
     *line_arg C3
      {spaces_before_argument: }

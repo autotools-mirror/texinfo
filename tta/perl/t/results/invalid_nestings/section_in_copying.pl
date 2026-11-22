@@ -20,7 +20,6 @@ $result_tree_text{'section_in_copying'} = '*document_root C2
      {normal_text:in copying\\n}
     {empty_line:\\n}
  *normal_command@section C1 l5 {section}
- |EXTRA
  |identifier:{section}
  |is_target:{1}
  |section_heading_number:{1}

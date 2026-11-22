@@ -14,7 +14,6 @@ $result_tree_text{'command_line_in_paragraph'} = '*document_root C1
   *paragraph C3
    {normal_text:documentlanguage on its line\\n}
    *normal_command@documentlanguage C1 l2
-   |EXTRA
    |global_command_number:{1}
    |text_arg:{en}
     *line_arg C3

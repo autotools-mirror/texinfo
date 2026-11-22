@@ -30,7 +30,6 @@ $result_tree_text{'epub_metadata'} = '*document_root C5
     >SOURCEMARKS
     >expanded_conditional_command<end;1>
      >*normal_command@end C1 l17
-     >|EXTRA
      >|text_arg:{ifepub}
       >*line_arg C3
        >{spaces_before_argument: }
@@ -45,7 +44,6 @@ $result_tree_text{'epub_metadata'} = '*document_root C5
       >{raw:<meta name="creator" content="Some Body" />\\n}
       >{raw:@end html\\n}
       >*normal_command@end C1 l22
-      >|EXTRA
       >|text_arg:{ifnotepub}
        >*line_arg C3
         >{spaces_before_argument: }
@@ -67,14 +65,12 @@ $result_tree_text{'epub_metadata'} = '*document_root C5
       {normal_text:      aut\\n}
       {normal_text:   </meta>\\n}
      *normal_command@end C1 l16
-     |EXTRA
      |text_arg:{html}
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:html}
        {spaces_after_argument:\\n}
     *normal_command@end C1 l23
-    |EXTRA
     |text_arg:{documentinfo}
      *line_arg C3
       {spaces_before_argument: }
@@ -82,7 +78,6 @@ $result_tree_text{'epub_metadata'} = '*document_root C5
       {spaces_after_argument:\\n}
    {empty_line:\\n}
  *normal_command@node C1 l25 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -92,7 +87,6 @@ $result_tree_text{'epub_metadata'} = '*document_root C5
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C2 l26 {top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -102,7 +96,6 @@ $result_tree_text{'epub_metadata'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l28 {chapter}
- |EXTRA
  |identifier:{chapter}
  |is_target:{1}
  |node_number:{2}
@@ -112,7 +105,6 @@ $result_tree_text{'epub_metadata'} = '*document_root C5
     {normal_text:chapter}
     {spaces_after_argument:\\n}
  *normal_command@chapter C1 l29 {Chap}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}

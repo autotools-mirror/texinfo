@@ -12,7 +12,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -22,7 +21,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@node C105 l2 {chap}
- |EXTRA
  |identifier:{chap}
  |is_target:{1}
  |isindex:{1}
@@ -33,7 +31,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
     {normal_text:chap}
     {spaces_after_argument:\\n}
   *normal_command@xrefname C1 l3
-  |EXTRA
   |global_command_number:{1}
   |heading_number:{1}
    *line_arg C3
@@ -43,7 +40,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
   {empty_line:\\n}
   *normal_command@deffn C2 l5
    *def_line C1 l5
-   |EXTRA
    |def_command:{deffn}
    |element_node:{chap}
    |index_entry:I{fn,1}
@@ -132,7 +128,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
        {normal_text:last}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l7
-   |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
@@ -141,7 +136,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
   {empty_line:\\n}
   *normal_command@defvr C2 l9
    *def_line C1 l9
-   |EXTRA
    |def_command:{defvr}
    |element_node:{chap}
    |index_entry:I{vr,1}
@@ -222,7 +216,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
        {normal_text:last}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l11
-   |EXTRA
    |text_arg:{defvr}
     *line_arg C3
      {spaces_before_argument: }
@@ -231,7 +224,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
   {empty_line:\\n}
   *normal_command@deftypefn C2 l13
    *def_line C1 l13
-   |EXTRA
    |def_command:{deftypefn}
    |element_node:{chap}
    |index_entry:I{fn,2}
@@ -274,7 +266,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
      {delimiter:)}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l14
-   |EXTRA
    |text_arg:{deftypefn}
     *line_arg C3
      {spaces_before_argument: }
@@ -283,7 +274,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
   {empty_line:\\n}
   *normal_command@deftypefn C2 l16
    *def_line C1 l16
-   |EXTRA
    |def_command:{deftypefn}
    |element_node:{chap}
    |index_entry:I{fn,3}
@@ -392,7 +382,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
        {normal_text:last}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l18
-   |EXTRA
    |text_arg:{deftypefn}
     *line_arg C3
      {spaces_before_argument: }
@@ -401,7 +390,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
   {empty_line:\\n}
   *normal_command@deftypefn C2 l20
    *def_line C1 l20
-   |EXTRA
    |def_command:{deftypefn}
    |element_node:{chap}
    |index_entry:I{fn,4}
@@ -425,7 +413,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
        {normal_text:[something}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l21
-   |EXTRA
    |text_arg:{deftypefn}
     *line_arg C3
      {spaces_before_argument: }
@@ -434,7 +421,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
   {empty_line:\\n}
   *normal_command@deftypefn C2 l23
    *def_line C1 l23
-   |EXTRA
    |def_command:{deftypefn}
    |element_node:{chap}
    |index_entry:I{fn,5}
@@ -508,7 +494,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
        {normal_text:end}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l25
-   |EXTRA
    |text_arg:{deftypefn}
     *line_arg C3
      {spaces_before_argument: }
@@ -517,7 +502,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
   {empty_line:\\n}
   *normal_command@deftypevr C2 l27
    *def_line C1 l27
-   |EXTRA
    |def_command:{deftypevr}
    |element_node:{chap}
    |index_entry:I{vr,2}
@@ -594,7 +578,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
        {normal_text:last}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l29
-   |EXTRA
    |text_arg:{deftypevr}
     *line_arg C3
      {spaces_before_argument: }
@@ -603,7 +586,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
   {empty_line:\\n}
   *normal_command@deftp C2 l31
    *def_line C1 l31
-   |EXTRA
    |def_command:{deftp}
    |element_node:{chap}
    |index_entry:I{tp,1}
@@ -684,7 +666,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
        {normal_text:last}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l33
-   |EXTRA
    |text_arg:{deftp}
     *line_arg C3
      {spaces_before_argument: }
@@ -693,7 +674,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
   {empty_line:\\n}
   *normal_command@defcv C2 l35
    *def_line C1 l35
-   |EXTRA
    |def_command:{defcv}
    |element_node:{chap}
    |index_entry:I{vr,3}
@@ -770,7 +750,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
        {normal_text:last}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l37
-   |EXTRA
    |text_arg:{defcv}
     *line_arg C3
      {spaces_before_argument: }
@@ -779,7 +758,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
   {empty_line:\\n}
   *normal_command@deftypecv C2 l39
    *def_line C1 l39
-   |EXTRA
    |def_command:{deftypecv}
    |element_node:{chap}
    |index_entry:I{vr,4}
@@ -862,7 +840,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
        {normal_text:last}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l41
-   |EXTRA
    |text_arg:{deftypecv}
     *line_arg C3
      {spaces_before_argument: }
@@ -871,7 +848,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
   {empty_line:\\n}
   *normal_command@defop C2 l43
    *def_line C1 l43
-   |EXTRA
    |def_command:{defop}
    |element_node:{chap}
    |index_entry:I{fn,6}
@@ -948,7 +924,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
        {normal_text:last}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l45
-   |EXTRA
    |text_arg:{defop}
     *line_arg C3
      {spaces_before_argument: }
@@ -957,7 +932,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
   {empty_line:\\n}
   *normal_command@deftypeop C2 l47
    *def_line C1 l47
-   |EXTRA
    |def_command:{deftypeop}
    |element_node:{chap}
    |index_entry:I{fn,7}
@@ -1040,7 +1014,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
        {normal_text:last}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l49
-   |EXTRA
    |text_arg:{deftypeop}
     *line_arg C3
      {spaces_before_argument: }
@@ -1049,7 +1022,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
   {empty_line:\\n}
   *normal_command@deftypeop C2 l51
    *def_line C1 l51
-   |EXTRA
    |def_command:{deftypeop}
    |element_node:{chap}
    |index_entry:I{fn,8}
@@ -1083,7 +1055,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
        {normal_text:arg}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l52
-   |EXTRA
    |text_arg:{deftypeop}
     *line_arg C3
      {spaces_before_argument: }
@@ -1092,7 +1063,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
   {empty_line:\\n}
   *normal_command@deftypeop C2 l54
    *def_line C1 l54
-   |EXTRA
    |def_command:{deftypeop}
    |element_node:{chap}
    |index_entry:I{fn,9}
@@ -1126,7 +1096,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
        {normal_text:arg}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l55
-   |EXTRA
    |text_arg:{deftypeop}
     *line_arg C3
      {spaces_before_argument: }
@@ -1135,7 +1104,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
   {empty_line:\\n}
   *normal_command@deftypeop C2 l57
    *def_line C1 l57
-   |EXTRA
    |def_command:{deftypeop}
    |element_node:{chap}
    |index_entry:I{fn,10}
@@ -1169,7 +1137,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
        {normal_text:arg}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l58
-   |EXTRA
    |text_arg:{deftypeop}
     *line_arg C3
      {spaces_before_argument: }
@@ -1178,7 +1145,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
   {empty_line:\\n}
   *normal_command@deftypeop C2 l60
    *def_line C1 l60
-   |EXTRA
    |def_command:{deftypeop}
    |element_node:{chap}
    |index_entry:I{fn,11}
@@ -1212,7 +1178,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
        {normal_text:arg}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l61
-   |EXTRA
    |text_arg:{deftypeop}
     *line_arg C3
      {spaces_before_argument: }
@@ -1221,7 +1186,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
   {empty_line:\\n}
   *normal_command@deftypeop C2 l63
    *def_line C1 l63
-   |EXTRA
    |def_command:{deftypeop}
    |element_node:{chap}
    |index_entry:I{fn,12}
@@ -1255,7 +1219,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
        {normal_text:arg}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l64
-   |EXTRA
    |text_arg:{deftypeop}
     *line_arg C3
      {spaces_before_argument: }
@@ -1264,7 +1227,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
   {empty_line:\\n}
   *normal_command@deftypeop C2 l66
    *def_line C1 l66
-   |EXTRA
    |def_command:{deftypeop}
    |element_node:{chap}
    |index_entry:I{fn,13}
@@ -1298,7 +1260,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
        {normal_text:arg}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l67
-   |EXTRA
    |text_arg:{deftypeop}
     *line_arg C3
      {spaces_before_argument: }
@@ -1307,7 +1268,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
   {empty_line:\\n}
   *normal_command@deftypeop C2 l69
    *def_line C1 l69
-   |EXTRA
    |def_command:{deftypeop}
    |element_node:{chap}
    |index_entry:I{fn,14}
@@ -1341,7 +1301,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
        {normal_text:arg}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l70
-   |EXTRA
    |text_arg:{deftypeop}
     *line_arg C3
      {spaces_before_argument: }
@@ -1350,7 +1309,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
   {empty_line:\\n}
   *normal_command@deftypeop C2 l72
    *def_line C1 l72
-   |EXTRA
    |def_command:{deftypeop}
    |element_node:{chap}
    |index_entry:I{fn,15}
@@ -1384,7 +1342,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
        {normal_text:arg}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l73
-   |EXTRA
    |text_arg:{deftypeop}
     *line_arg C3
      {spaces_before_argument: }
@@ -1393,7 +1350,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
   {empty_line:\\n}
   *normal_command@deftypeop C2 l75
    *def_line C1 l75
-   |EXTRA
    |def_command:{deftypeop}
    |element_node:{chap}
    |index_entry:I{fn,16}
@@ -1427,7 +1383,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
        {normal_text:arg}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l76
-   |EXTRA
    |text_arg:{deftypeop}
     *line_arg C3
      {spaces_before_argument: }
@@ -1436,7 +1391,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
   {empty_line:\\n}
   *normal_command@deftypeop C2 l78
    *def_line C1 l78
-   |EXTRA
    |def_command:{deftypeop}
    |element_node:{chap}
    |index_entry:I{fn,17}
@@ -1470,7 +1424,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
        {normal_text:arg}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l79
-   |EXTRA
    |text_arg:{deftypeop}
     *line_arg C3
      {spaces_before_argument: }
@@ -1479,7 +1432,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
   {empty_line:\\n}
   *normal_command@deftypeop C2 l81
    *def_line C1 l81
-   |EXTRA
    |def_command:{deftypeop}
    |element_node:{chap}
    |index_entry:I{fn,18}
@@ -1513,7 +1465,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
        {normal_text:arg}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l82
-   |EXTRA
    |text_arg:{deftypeop}
     *line_arg C3
      {spaces_before_argument: }
@@ -1522,7 +1473,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
   {empty_line:\\n}
   *normal_command@deftypeop C2 l84
    *def_line C1 l84
-   |EXTRA
    |def_command:{deftypeop}
    |element_node:{chap}
    |index_entry:I{fn,19}
@@ -1556,7 +1506,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
        {normal_text:arg}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l85
-   |EXTRA
    |text_arg:{deftypeop}
     *line_arg C3
      {spaces_before_argument: }
@@ -1565,7 +1514,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
   {empty_line:\\n}
   *normal_command@deftypeop C2 l87
    *def_line C1 l87
-   |EXTRA
    |def_command:{deftypeop}
    |element_node:{chap}
    |index_entry:I{fn,20}
@@ -1599,7 +1547,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
        {normal_text:arg}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l88
-   |EXTRA
    |text_arg:{deftypeop}
     *line_arg C3
      {spaces_before_argument: }
@@ -1608,7 +1555,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
   {empty_line:\\n}
   *normal_command@deftypeop C2 l90
    *def_line C1 l90
-   |EXTRA
    |def_command:{deftypeop}
    |element_node:{chap}
    |index_entry:I{fn,21}
@@ -1641,7 +1587,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
        {normal_text:name}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l91
-   |EXTRA
    |text_arg:{deftypeop}
     *line_arg C3
      {spaces_before_argument: }
@@ -1650,7 +1595,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
   {empty_line:\\n}
   *normal_command@defun C2 l93
    *def_line C1 l93
-   |EXTRA
    |def_command:{defun}
    |element_node:{chap}
    |index_entry:I{fn,22}
@@ -1658,7 +1602,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
     *block_line_arg C11
      (i){spaces_before_argument: }
      *def_category C1
-     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {normal_text:Function}
@@ -1680,7 +1623,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
        {normal_text:arguments}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l94
-   |EXTRA
    |text_arg:{defun}
     *line_arg C3
      {spaces_before_argument: }
@@ -1689,7 +1631,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
   {empty_line:\\n}
   *normal_command@deffn C2 l96
    *def_line C1 l96
-   |EXTRA
    |def_command:{deffn}
    |element_node:{chap}
    |index_entry:I{fn,23}
@@ -1721,7 +1662,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
          {normal_text:A4}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l97
-   |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
@@ -1730,7 +1670,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
   {empty_line:\\n}
   *normal_command@deffn C2 l99
    *def_line C1 l99
-   |EXTRA
    |def_command:{deffn}
    |element_node:{chap}
    |index_entry:I{fn,24}
@@ -1762,7 +1701,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
          {normal_text:A4}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l100
-   |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
@@ -1771,7 +1709,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
   {empty_line:\\n}
   *normal_command@defvr C2 l102
    *def_line C1 l102
-   |EXTRA
    |def_command:{defvr}
    |element_node:{chap}
    |index_entry:I{vr,5}
@@ -1803,7 +1740,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
          {normal_text:A4}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l103
-   |EXTRA
    |text_arg:{defvr}
     *line_arg C3
      {spaces_before_argument: }
@@ -1812,7 +1748,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
   {empty_line:\\n}
   *normal_command@defvr C2 l105
    *def_line C1 l105
-   |EXTRA
    |def_command:{defvr}
    |element_node:{chap}
    |index_entry:I{vr,6}
@@ -1844,7 +1779,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
          {normal_text:A4}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l106
-   |EXTRA
    |text_arg:{defvr}
     *line_arg C3
      {spaces_before_argument: }
@@ -1853,7 +1787,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
   {empty_line:\\n}
   *normal_command@deftypefn C2 l108
    *def_line C1 l108
-   |EXTRA
    |def_command:{deftypefn}
    |element_node:{chap}
    |index_entry:I{fn,25}
@@ -1891,7 +1824,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
          {normal_text:A5}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l109
-   |EXTRA
    |text_arg:{deftypefn}
     *line_arg C3
      {spaces_before_argument: }
@@ -1900,7 +1832,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
   {empty_line:\\n}
   *normal_command@deftypefn C2 l111
    *def_line C1 l111
-   |EXTRA
    |def_command:{deftypefn}
    |element_node:{chap}
    |index_entry:I{fn,26}
@@ -1938,7 +1869,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
          {normal_text:A5}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l112
-   |EXTRA
    |text_arg:{deftypefn}
     *line_arg C3
      {spaces_before_argument: }
@@ -1947,7 +1877,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
   {empty_line:\\n}
   *normal_command@deftypevr C2 l114
    *def_line C1 l114
-   |EXTRA
    |def_command:{deftypevr}
    |element_node:{chap}
    |index_entry:I{vr,7}
@@ -1985,7 +1914,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
          {normal_text:A5}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l115
-   |EXTRA
    |text_arg:{deftypevr}
     *line_arg C3
      {spaces_before_argument: }
@@ -1994,7 +1922,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
   {empty_line:\\n}
   *normal_command@deftypevr C2 l117
    *def_line C1 l117
-   |EXTRA
    |def_command:{deftypevr}
    |element_node:{chap}
    |index_entry:I{vr,8}
@@ -2032,7 +1959,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
          {normal_text:A5}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l118
-   |EXTRA
    |text_arg:{deftypevr}
     *line_arg C3
      {spaces_before_argument: }
@@ -2041,7 +1967,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
   {empty_line:\\n}
   *normal_command@deftp C2 l120
    *def_line C1 l120
-   |EXTRA
    |def_command:{deftp}
    |element_node:{chap}
    |index_entry:I{tp,2}
@@ -2073,7 +1998,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
          {normal_text:A4}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l121
-   |EXTRA
    |text_arg:{deftp}
     *line_arg C3
      {spaces_before_argument: }
@@ -2082,7 +2006,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
   {empty_line:\\n}
   *normal_command@deftp C2 l123
    *def_line C1 l123
-   |EXTRA
    |def_command:{deftp}
    |element_node:{chap}
    |index_entry:I{tp,3}
@@ -2114,7 +2037,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
          {normal_text:A4}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l124
-   |EXTRA
    |text_arg:{deftp}
     *line_arg C3
      {spaces_before_argument: }
@@ -2123,7 +2045,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
   {empty_line:\\n}
   *normal_command@defcv C2 l126
    *def_line C1 l126
-   |EXTRA
    |def_command:{defcv}
    |element_node:{chap}
    |index_entry:I{vr,9}
@@ -2161,7 +2082,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
          {normal_text:A5}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l127
-   |EXTRA
    |text_arg:{defcv}
     *line_arg C3
      {spaces_before_argument: }
@@ -2170,7 +2090,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
   {empty_line:\\n}
   *normal_command@deftp C2 l129
    *def_line C1 l129
-   |EXTRA
    |def_command:{deftp}
    |element_node:{chap}
    |index_entry:I{tp,4}
@@ -2208,7 +2127,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
          {normal_text:A5}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l130
-   |EXTRA
    |text_arg:{deftp}
     *line_arg C3
      {spaces_before_argument: }
@@ -2217,7 +2135,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
   {empty_line:\\n}
   *normal_command@deftypecv C2 l132
    *def_line C1 l132
-   |EXTRA
    |def_command:{deftypecv}
    |element_node:{chap}
    |index_entry:I{vr,10}
@@ -2261,7 +2178,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
          {normal_text:A6}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l133
-   |EXTRA
    |text_arg:{deftypecv}
     *line_arg C3
      {spaces_before_argument: }
@@ -2270,7 +2186,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
   {empty_line:\\n}
   *normal_command@deftypecv C2 l135
    *def_line C1 l135
-   |EXTRA
    |def_command:{deftypecv}
    |element_node:{chap}
    |index_entry:I{vr,11}
@@ -2314,7 +2229,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
          {normal_text:A6}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l136
-   |EXTRA
    |text_arg:{deftypecv}
     *line_arg C3
      {spaces_before_argument: }
@@ -2323,7 +2237,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
   {empty_line:\\n}
   *normal_command@defop C2 l138
    *def_line C1 l138
-   |EXTRA
    |def_command:{defop}
    |element_node:{chap}
    |index_entry:I{fn,27}
@@ -2361,7 +2274,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
          {normal_text:A5}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l139
-   |EXTRA
    |text_arg:{defop}
     *line_arg C3
      {spaces_before_argument: }
@@ -2370,7 +2282,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
   {empty_line:\\n}
   *normal_command@defop C2 l141
    *def_line C1 l141
-   |EXTRA
    |def_command:{defop}
    |element_node:{chap}
    |index_entry:I{fn,28}
@@ -2408,7 +2319,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
          {normal_text:A5}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l142
-   |EXTRA
    |text_arg:{defop}
     *line_arg C3
      {spaces_before_argument: }
@@ -2417,7 +2327,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
   {empty_line:\\n}
   *normal_command@deftypeop C2 l144
    *def_line C1 l144
-   |EXTRA
    |def_command:{deftypeop}
    |element_node:{chap}
    |index_entry:I{fn,29}
@@ -2461,7 +2370,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
          {normal_text:A6}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l145
-   |EXTRA
    |text_arg:{deftypeop}
     *line_arg C3
      {spaces_before_argument: }
@@ -2470,7 +2378,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
   {empty_line:\\n}
   *normal_command@deftypeop C2 l147
    *def_line C1 l147
-   |EXTRA
    |def_command:{deftypeop}
    |element_node:{chap}
    |index_entry:I{fn,30}
@@ -2514,7 +2421,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
          {normal_text:A6}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l148
-   |EXTRA
    |text_arg:{deftypeop}
     *line_arg C3
      {spaces_before_argument: }
@@ -2523,7 +2429,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
   {empty_line:\\n}
   *normal_command@deftypefn C2 l150
    *def_line C1 l150
-   |EXTRA
    |def_command:{deftypefn}
    |element_node:{chap}
    |index_entry:I{fn,31}
@@ -2567,7 +2472,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
          {normal_text:A4}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l151
-   |EXTRA
    |text_arg:{deftypefn}
     *line_arg C3
      {spaces_before_argument: }
@@ -2576,7 +2480,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
   {empty_line:\\n}
   *normal_command@deftypefn C2 l153
    *def_line C1 l153
-   |EXTRA
    |def_command:{deftypefn}
    |element_node:{chap}
    |index_entry:I{fn,32}
@@ -2620,7 +2523,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
          {normal_text:A4}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l154
-   |EXTRA
    |text_arg:{deftypefn}
     *line_arg C3
      {spaces_before_argument: }
@@ -2628,7 +2530,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@heading C1 l156
-  |EXTRA
   |global_command_number:{1}
   |heading_number:{2}
    *line_arg C3
@@ -2636,7 +2537,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
     {normal_text:Functions}
     {spaces_after_argument:\\n}
   *normal_command@printindex C1 l157
-  |EXTRA
   |global_command_number:{1}
   |misc_args:A{fn}
    *line_arg C3
@@ -2645,7 +2545,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@heading C1 l159
-  |EXTRA
   |global_command_number:{2}
   |heading_number:{3}
    *line_arg C3
@@ -2653,7 +2552,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
     {normal_text:Types}
     {spaces_after_argument:\\n}
   *normal_command@printindex C1 l160
-  |EXTRA
   |global_command_number:{2}
   |misc_args:A{tp}
    *line_arg C3
@@ -2662,7 +2560,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@heading C1 l162
-  |EXTRA
   |global_command_number:{3}
   |heading_number:{4}
    *line_arg C3
@@ -2670,7 +2567,6 @@ $result_tree_text{'all_commands_delimiters_printindex'} = '*document_root C3
     {normal_text:Variables}
     {spaces_after_argument:\\n}
   *normal_command@printindex C1 l163
-  |EXTRA
   |global_command_number:{3}
   |misc_args:A{vr}
    *line_arg C3

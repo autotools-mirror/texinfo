@@ -14,7 +14,6 @@ $result_tree_text{'protected_node_parentheses'} = '*document_root C4
    {text_before_beginning:\\n}
   *preamble_before_content
  *normal_command@node C1 l2 {first}
- |EXTRA
  |identifier:{first}
  |is_target:{1}
  |node_number:{1}
@@ -24,7 +23,6 @@ $result_tree_text{'protected_node_parentheses'} = '*document_root C4
     {normal_text:first}
     {spaces_after_argument:\\n}
  *normal_command@top C4 l3 {top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -40,7 +38,6 @@ $result_tree_text{'protected_node_parentheses'} = '*document_root C4
    *menu_entry C4 l6
     {menu_entry_leading_text:* }
     *menu_entry_node C2
-    |EXTRA
     |node_content:A{0|1}
     |normalized:{_0028manual_0029-name}
      *normal_command@asis C1 l6
@@ -52,7 +49,6 @@ $result_tree_text{'protected_node_parentheses'} = '*document_root C4
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 l7
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -60,7 +56,6 @@ $result_tree_text{'protected_node_parentheses'} = '*document_root C4
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C8 l9 {@asis{(}manual) name}
- |EXTRA
  |identifier:{_0028manual_0029-name}
  |is_target:{1}
  |node_number:{2}
@@ -74,7 +69,6 @@ $result_tree_text{'protected_node_parentheses'} = '*document_root C4
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@anchor C1 l11
-  |EXTRA
   |identifier:{_0028manual2_0029-name2}
   |is_target:{1}
    *brace_arg C2
@@ -87,7 +81,6 @@ $result_tree_text{'protected_node_parentheses'} = '*document_root C4
   *paragraph C2
    *normal_command@ref C1 l13
     *brace_arg C2
-    |EXTRA
     |node_content:A{0|1}
     |normalized:{_0028manual2_0029-name2}
      *normal_command@asis C1 l13
@@ -99,7 +92,6 @@ $result_tree_text{'protected_node_parentheses'} = '*document_root C4
   *paragraph C2
    *normal_command@ref C1 l15
     *brace_arg C2
-    |EXTRA
     |node_content:A{0|1}
     |normalized:{_0028manual_0029-name}
      *normal_command@asis C1 l15

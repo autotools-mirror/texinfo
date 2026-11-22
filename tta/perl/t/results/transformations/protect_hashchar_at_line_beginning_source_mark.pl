@@ -14,14 +14,12 @@ $result_tree_text{'protect_hashchar_at_line_beginning_source_mark'} = '*document
    {text_before_beginning:\\n}
   *preamble_before_content C2
    *normal_command@macro C3 cpp_directives_line_value_macro.texi:l2
-   |EXTRA
    |formal_args:A{}
    |macro_name:{vvv}
     *arguments_line C1
      {macro_line: vvv {}\\n}
     {raw:#line 30 "toto"\\n}
     *normal_command@end C1 cpp_directives_line_value_macro.texi:l4
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -41,14 +39,12 @@ $result_tree_text{'protect_hashchar_at_line_beginning_source_mark'} = '*document
    >macro_expansion<end;1><p:14>
   {empty_line:\\n}
   *normal_command@macro C3 cpp_directives_line_value_macro.texi:l8
-  |EXTRA
   |formal_args:A{}
   |macro_name:{machash}
    *arguments_line C1
     {macro_line: machash {}\\n}
    {raw:#\\n}
    *normal_command@end C1 cpp_directives_line_value_macro.texi:l10
-   |EXTRA
    |text_arg:{macro}
     *line_arg C3
      {spaces_before_argument: }
@@ -68,14 +64,12 @@ $result_tree_text{'protect_hashchar_at_line_beginning_source_mark'} = '*document
    {normal_text: 130\\n}
   {empty_line:\\n}
   *normal_command@macro C3 cpp_directives_line_value_macro.texi:l14
-  |EXTRA
   |formal_args:A{arg}
   |macro_name:{numberfileflag}
    *arguments_line C1
     {macro_line: numberfileflag {arg}\\n}
    {raw:\\arg\\ "titi" 3\\arg\\\\n}
    *normal_command@end C1 cpp_directives_line_value_macro.texi:l16
-   |EXTRA
    |text_arg:{macro}
     *line_arg C3
      {spaces_before_argument: }
@@ -94,7 +88,6 @@ $result_tree_text{'protect_hashchar_at_line_beginning_source_mark'} = '*document
    >macro_expansion<end;3><p:16>
   {empty_line:\\n}
   *normal_command@set C1
-  |EXTRA
   |misc_args:A{hash|#}
    *line_arg C3
     {spaces_before_argument: }

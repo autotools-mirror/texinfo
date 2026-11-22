@@ -12,7 +12,6 @@ $result_tree_text{'setchapternewpage_on_odd_titlepage_set_headings'} = '*documen
  *before_node_section C1
   *preamble_before_content C7
    *normal_command@setchapternewpage C1 l1
-   |EXTRA
    |misc_args:A{on}
     *line_arg C3
      {spaces_before_argument: }
@@ -20,7 +19,6 @@ $result_tree_text{'setchapternewpage_on_odd_titlepage_set_headings'} = '*documen
      {spaces_after_argument:\\n}
    {empty_line:\\n}
    *normal_command@setchapternewpage C1 l3
-   |EXTRA
    |misc_args:A{odd}
     *line_arg C3
      {spaces_before_argument: }
@@ -34,7 +32,6 @@ $result_tree_text{'setchapternewpage_on_odd_titlepage_set_headings'} = '*documen
     *paragraph C1
      {normal_text:in titlepage\\n}
     *normal_command@end C1 l7
-    |EXTRA
     |text_arg:{titlepage}
      *line_arg C3
       {spaces_before_argument: }
@@ -42,7 +39,6 @@ $result_tree_text{'setchapternewpage_on_odd_titlepage_set_headings'} = '*documen
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *normal_command@headings C1 l9
-   |EXTRA
    |global_command_number:{1}
    |misc_args:A{off}
     *line_arg C3

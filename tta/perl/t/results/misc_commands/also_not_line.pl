@@ -30,7 +30,6 @@ $result_tree_text{'also_not_line'} = '*document_root C1
   *normal_command@noindent l6
   {ignorable_spaces_after_command:     }
   *paragraph C8
-  |EXTRA
   |noindent:{1}
    {normal_text:noindent at beginning of line\\n}
    *normal_command@noindent l7
@@ -71,7 +70,6 @@ $result_tree_text{'also_not_line'} = '*document_root C1
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@subheading C1 l18
-  |EXTRA
   |global_command_number:{1}
   |heading_number:{1}
    *line_arg C3

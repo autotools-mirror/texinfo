@@ -14,7 +14,6 @@ This: [U0]
  *before_node_section C1
   *preamble_before_content
  *normal_command@part C2 l1 {part}
- |EXTRA
  |global_command_number:{1}
  |section_level:{0}
  |section_number:{1}
@@ -25,7 +24,6 @@ This: [U0]
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@chapter C1 l3 {chapter}
- |EXTRA
  |identifier:{chapter}
  |is_target:{1}
  |section_heading_number:{1}

@@ -23,7 +23,6 @@ $result_tree_text{'section_in_math'} = '*document_root C3
       {empty_line:\\n}
       {normal_text:}}
  *normal_command@section C3 l4 {sec1}
- |EXTRA
  |identifier:{sec1}
  |is_target:{1}
  |section_heading_number:{1}
@@ -44,7 +43,6 @@ $result_tree_text{'section_in_math'} = '*document_root C3
      {spaces_after_argument:\\n}
      {empty_line:\\n}
  *normal_command@section C1 l8 {sec2}
- |EXTRA
  |identifier:{sec2}
  |is_target:{1}
  |section_heading_number:{2}

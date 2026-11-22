@@ -12,7 +12,6 @@ $result_tree_text{'fullwidth_in_prototype'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *normal_command@multitable C3 l1
-  |EXTRA
   |max_columns:{3}
    *arguments_line C1
     *block_line_arg C7
@@ -28,10 +27,8 @@ $result_tree_text{'fullwidth_in_prototype'} = '*document_root C1
      {spaces_after_argument:\\n}
    *multitable_body C1
     *row C3
-    |EXTRA
     |row_number:{1}
      *normal_command@item C2 l2
-     |EXTRA
      |cell_number:{1}
       {ignorable_spaces_after_command:\\n}
       *paragraph C6
@@ -42,7 +39,6 @@ $result_tree_text{'fullwidth_in_prototype'} = '*document_root C1
        {normal_text:aaa aà aaa aa aaa aa\\n}
        {normal_text:aaa aà aaa aa aaa aa\\n}
      *normal_command@tab C2 l9
-     |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command:\\n}
       *paragraph C6
@@ -53,7 +49,6 @@ $result_tree_text{'fullwidth_in_prototype'} = '*document_root C1
        {normal_text:aaa aà aaa aa aaa aa\\n}
        {normal_text:aaa aà aaa aa aaa aa\\n}
      *normal_command@tab C2 l16
-     |EXTRA
      |cell_number:{3}
       {ignorable_spaces_after_command:\\n}
       *paragraph C6
@@ -64,7 +59,6 @@ $result_tree_text{'fullwidth_in_prototype'} = '*document_root C1
        {normal_text:aaa aà aaa aa aaa aa\\n}
        {normal_text:aaa aà aaa aa aaa aa\\n}
    *normal_command@end C1 l23
-   |EXTRA
    |text_arg:{multitable}
     *line_arg C3
      {spaces_before_argument: }

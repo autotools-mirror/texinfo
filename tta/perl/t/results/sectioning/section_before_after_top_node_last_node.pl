@@ -12,7 +12,6 @@ $result_tree_text{'section_before_after_top_node_last_node'} = '*document_root C
  *before_node_section C1
   *preamble_before_content
  *normal_command@unnumbered C2 l1 {before}
- |EXTRA
  |identifier:{before}
  |is_target:{1}
  |section_level:{1}
@@ -24,7 +23,6 @@ $result_tree_text{'section_before_after_top_node_last_node'} = '*document_root C
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l3 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -34,7 +32,6 @@ $result_tree_text{'section_before_after_top_node_last_node'} = '*document_root C
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C2 l4 {top section}
- |EXTRA
  |section_level:{1}
  |section_number:{2}
   *arguments_line C1
@@ -44,7 +41,6 @@ $result_tree_text{'section_before_after_top_node_last_node'} = '*document_root C
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@chapter C4 l6 {Chapter}
- |EXTRA
  |identifier:{Chapter}
  |is_target:{1}
  |section_heading_number:{1}
@@ -60,7 +56,6 @@ $result_tree_text{'section_before_after_top_node_last_node'} = '*document_root C
    {normal_text:in chapter\\n}
   {empty_line:\\n}
  *normal_command@node C1 l10 {node after}
- |EXTRA
  |identifier:{node-after}
  |is_target:{1}
  |node_number:{2}

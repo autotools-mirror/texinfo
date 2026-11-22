@@ -13,7 +13,6 @@ $result_tree_text{'def_groupings_args'} = '*document_root C1
   *preamble_before_content
   *normal_command@deffn C2 l1
    *def_line C1 l1
-   |EXTRA
    |def_command:{deffn}
    |index_entry:I{fn,1}
    |original_def_cmdname:{deffn}
@@ -32,7 +31,6 @@ $result_tree_text{'def_groupings_args'} = '*document_root C1
        {normal_text:c}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l2
-   |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
@@ -41,7 +39,6 @@ $result_tree_text{'def_groupings_args'} = '*document_root C1
   {empty_line:\\n}
   *normal_command@deffn C2 l4
    *def_line C1 l4
-   |EXTRA
    |def_command:{deffn}
    |original_def_cmdname:{deffn}
     *block_line_arg C3
@@ -54,7 +51,6 @@ $result_tree_text{'def_groupings_args'} = '*document_root C1
          {normal_text:g1}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l5
-   |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
@@ -63,7 +59,6 @@ $result_tree_text{'def_groupings_args'} = '*document_root C1
   {empty_line:\\n}
   *normal_command@deffn C2 l7
    *def_line C1 l7
-   |EXTRA
    |def_command:{deffn}
    |index_entry:I{fn,2}
    |original_def_cmdname:{deffn}
@@ -94,7 +89,6 @@ $result_tree_text{'def_groupings_args'} = '*document_root C1
      {delimiter:)}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l8
-   |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }

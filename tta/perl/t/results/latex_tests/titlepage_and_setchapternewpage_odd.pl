@@ -12,7 +12,6 @@ $result_tree_text{'titlepage_and_setchapternewpage_odd'} = '*document_root C1
  *before_node_section C1
   *preamble_before_content C4
    *normal_command@setchapternewpage C1 l1
-   |EXTRA
    |misc_args:A{odd}
     *line_arg C3
      {spaces_before_argument: }
@@ -26,7 +25,6 @@ $result_tree_text{'titlepage_and_setchapternewpage_odd'} = '*document_root C1
     *paragraph C1
      {normal_text:in titlepage\\n}
     *normal_command@end C1 l5
-    |EXTRA
     |text_arg:{titlepage}
      *line_arg C3
       {spaces_before_argument: }

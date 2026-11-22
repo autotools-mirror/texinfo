@@ -20,7 +20,6 @@ $result_tree_text{'block_not_matching'} = '*document_root C1
   {empty_line:\\n}
   *normal_command@deffn C2 l5
    *def_line C1 l5
-   |EXTRA
    |def_command:{deffn}
    |index_entry:I{fn,1}
    |original_def_cmdname:{deffn}

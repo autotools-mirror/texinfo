@@ -50,7 +50,6 @@ $result_tree_text{'documentdescription'} = '*document_root C2
        {normal_text:body}
      {normal_text:\\n}
     *normal_command@end C1 l3
-    |EXTRA
     |text_arg:{documentdescription}
      *line_arg C3
       {spaces_before_argument: }
@@ -58,7 +57,6 @@ $result_tree_text{'documentdescription'} = '*document_root C2
       {spaces_after_argument:\\n}
    {empty_line:\\n}
  *normal_command@top C1 l5 {top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |section_level:{0}

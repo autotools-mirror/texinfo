@@ -12,7 +12,6 @@ $result_tree_text{'inter_item_commands_in_enumerate'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -22,7 +21,6 @@ $result_tree_text{'inter_item_commands_in_enumerate'} = '*document_root C5
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C2 l2 {top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -32,7 +30,6 @@ $result_tree_text{'inter_item_commands_in_enumerate'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l4 {chapter}
- |EXTRA
  |identifier:{chapter}
  |is_target:{1}
  |node_number:{2}
@@ -42,7 +39,6 @@ $result_tree_text{'inter_item_commands_in_enumerate'} = '*document_root C5
     {normal_text:chapter}
     {spaces_after_argument:\\n}
  *normal_command@chapter C14 l5 {chap}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -64,13 +60,11 @@ $result_tree_text{'inter_item_commands_in_enumerate'} = '*document_root C5
       {rawline_text:comment before first item in enumerate}
       {spaces_after_argument:\\n}
    *normal_command@item C2 l10
-   |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:e--numerate\\n}
    *normal_command@end C1 l11
-   |EXTRA
    |text_arg:{enumerate}
     *line_arg C3
      {spaces_before_argument: }
@@ -84,7 +78,6 @@ $result_tree_text{'inter_item_commands_in_enumerate'} = '*document_root C5
    *before_item C3
     {empty_line:\\n}
     *index_entry_command@cindex C1 l15
-    |EXTRA
     |element_node:{chapter}
     |index_entry:I{cp,1}
      *line_arg C3
@@ -93,13 +86,11 @@ $result_tree_text{'inter_item_commands_in_enumerate'} = '*document_root C5
       {spaces_after_argument:\\n}
     {empty_line:\\n}
    *normal_command@item C2 l17
-   |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:enumerate item\\n}
    *normal_command@end C1 l18
-   |EXTRA
    |text_arg:{enumerate}
     *line_arg C3
      {spaces_before_argument: }
@@ -113,7 +104,6 @@ $result_tree_text{'inter_item_commands_in_enumerate'} = '*document_root C5
    *before_item C2
     {empty_line:\\n}
     *index_entry_command@cindex C1 l22
-    |EXTRA
     |element_node:{chapter}
     |index_entry:I{cp,2}
      *line_arg C3
@@ -121,13 +111,11 @@ $result_tree_text{'inter_item_commands_in_enumerate'} = '*document_root C5
       {normal_text:index inter in enumerate after line}
       {spaces_after_argument:\\n}
    *normal_command@item C2 l23
-   |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:enumerate item\\n}
    *normal_command@end C1 l24
-   |EXTRA
    |text_arg:{enumerate}
     *line_arg C3
      {spaces_before_argument: }
@@ -140,7 +128,6 @@ $result_tree_text{'inter_item_commands_in_enumerate'} = '*document_root C5
      {spaces_before_argument:\\n}
    *before_item C2
     *index_entry_command@cindex C1 l27
-    |EXTRA
     |element_node:{chapter}
     |index_entry:I{cp,3}
      *line_arg C3
@@ -149,13 +136,11 @@ $result_tree_text{'inter_item_commands_in_enumerate'} = '*document_root C5
       {spaces_after_argument:\\n}
     {empty_line:\\n}
    *normal_command@item C2 l29
-   |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:enumerate item\\n}
    *normal_command@end C1 l30
-   |EXTRA
    |text_arg:{enumerate}
     *line_arg C3
      {spaces_before_argument: }
@@ -170,7 +155,6 @@ $result_tree_text{'inter_item_commands_in_enumerate'} = '*document_root C5
     *paragraph C2
      {normal_text:Title\\n}
      *index_entry_command@cindex C1 l34
-     |EXTRA
      |element_node:{chapter}
      |index_entry:I{cp,4}
       *line_arg C3
@@ -178,13 +162,11 @@ $result_tree_text{'inter_item_commands_in_enumerate'} = '*document_root C5
        {normal_text:cindex}
        {spaces_after_argument:\\n}
    *normal_command@item C2 l35
-   |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:enum\\n}
    *normal_command@end C1 l36
-   |EXTRA
    |text_arg:{enumerate}
     *line_arg C3
      {spaces_before_argument: }
@@ -197,7 +179,6 @@ $result_tree_text{'inter_item_commands_in_enumerate'} = '*document_root C5
      {spaces_before_argument:\\n}
    *before_item C4
     *index_entry_command@cindex C1 l39
-    |EXTRA
     |element_node:{chapter}
     |index_entry:I{cp,5}
      *line_arg C3
@@ -210,7 +191,6 @@ $result_tree_text{'inter_item_commands_in_enumerate'} = '*document_root C5
       {rawline_text:comment}
       {spaces_after_argument:\\n}
     *index_entry_command@cindex C1 l41
-    |EXTRA
     |element_node:{chapter}
     |index_entry:I{cp,6}
      *line_arg C3
@@ -218,7 +198,6 @@ $result_tree_text{'inter_item_commands_in_enumerate'} = '*document_root C5
       {normal_text:sedond idx}
       {spaces_after_argument:\\n}
     *index_entry_command@cindex C1 l42
-    |EXTRA
     |element_node:{chapter}
     |index_entry:I{cp,7}
      *line_arg C3
@@ -226,13 +205,11 @@ $result_tree_text{'inter_item_commands_in_enumerate'} = '*document_root C5
       {normal_text:another}
       {spaces_after_argument:\\n}
    *normal_command@item C2 l43
-   |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:enum\\n}
    *normal_command@end C1 l44
-   |EXTRA
    |text_arg:{enumerate}
     *line_arg C3
      {spaces_before_argument: }

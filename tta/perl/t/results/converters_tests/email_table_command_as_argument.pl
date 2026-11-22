@@ -30,7 +30,6 @@ $result_tree_text{'email_table_command_as_argument'} = '*document_root C1
      *paragraph C1
       {normal_text:discussion\\n}
    *normal_command@end C1 l4
-   |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }

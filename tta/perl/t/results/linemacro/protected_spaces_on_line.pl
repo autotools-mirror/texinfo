@@ -12,7 +12,6 @@ $result_tree_text{'protected_spaces_on_line'} = '*document_root C1
  *before_node_section C9
   *preamble_before_content C2
    *normal_command@linemacro C5 l1
-   |EXTRA
    |formal_args:A{first|rest}
    |macro_name:{test}
     *arguments_line C1
@@ -21,7 +20,6 @@ $result_tree_text{'protected_spaces_on_line'} = '*document_root C1
     {raw:something\\n}
     {raw:@end deffn\\n}
     *normal_command@end C1 l5
-    |EXTRA
     |text_arg:{linemacro}
      *line_arg C3
       {spaces_before_argument: }
@@ -39,7 +37,6 @@ $result_tree_text{'protected_spaces_on_line'} = '*document_root C1
       >{macro_call_arg_text:(bar, baz)@\\n continuation line}
   *normal_command@deffn C3 l8:@test
    *def_line C1 l8:@test
-   |EXTRA
    |def_command:{deffn}
    |index_entry:I{fn,1}
    |original_def_cmdname:{deffn}
@@ -78,7 +75,6 @@ $result_tree_text{'protected_spaces_on_line'} = '*document_root C1
     *paragraph C1
      {normal_text:something\\n}
    *normal_command@end C1 l8:@test
-   |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
@@ -98,7 +94,6 @@ $result_tree_text{'protected_spaces_on_line'} = '*document_root C1
      >{macro_call_arg_text:(bar, baz) rest@ and more}
   *normal_command@deffn C3 l10:@test
    *def_line C1 l10:@test
-   |EXTRA
    |def_command:{deffn}
    |index_entry:I{fn,2}
    |original_def_cmdname:{deffn}
@@ -143,7 +138,6 @@ $result_tree_text{'protected_spaces_on_line'} = '*document_root C1
     *paragraph C1
      {normal_text:something\\n}
    *normal_command@end C1 l10:@test
-   |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
@@ -163,7 +157,6 @@ $result_tree_text{'protected_spaces_on_line'} = '*document_root C1
      >{macro_call_arg_text:(bar, baz)@@}
   *normal_command@deffn C3 l12:@test
    *def_line C1 l12:@test
-   |EXTRA
    |def_command:{deffn}
    |index_entry:I{fn,3}
    |original_def_cmdname:{deffn}
@@ -195,7 +188,6 @@ $result_tree_text{'protected_spaces_on_line'} = '*document_root C1
     *paragraph C1
      {normal_text:something\\n}
    *normal_command@end C1 l12:@test
-   |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }

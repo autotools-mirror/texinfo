@@ -19,7 +19,6 @@ NodeForward: [U1]
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -29,7 +28,6 @@ NodeForward: [U1]
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C4 l2 {top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -45,7 +43,6 @@ NodeForward: [U1]
    *menu_entry C4 l5
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{chapter-1}
      {normal_text:chapter 1}
@@ -56,7 +53,6 @@ NodeForward: [U1]
    *menu_entry C4 l6
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{node-after-chapter-1}
      {normal_text:node after chapter 1}
@@ -67,7 +63,6 @@ NodeForward: [U1]
    *menu_entry C4 l7
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{last-node-in-chapter-1}
      {normal_text:last node in chapter 1}
@@ -76,7 +71,6 @@ NodeForward: [U1]
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 l8
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -96,7 +90,6 @@ NodeUp: [U0]
 NodeForward: [U1]
 NodeBack: [U0]
  *normal_command@node C1 l10 {chapter 1}
- |EXTRA
  |identifier:{chapter-1}
  |is_target:{1}
  |node_number:{2}
@@ -105,26 +98,22 @@ NodeBack: [U0]
     {spaces_before_argument: }
     {normal_text:chapter 1}
    *line_arg C2
-   |EXTRA
    |node_content:A{1|1}
    |normalized:{node-after-chapter-1}
     {spaces_before_argument: }
     {normal_text:node after chapter 1}
    *line_arg C2
-   |EXTRA
    |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
     {normal_text:Top}
    *line_arg C3
-   |EXTRA
    |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@chapter C2 l11 {chapter c1}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -135,7 +124,6 @@ NodeBack: [U0]
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C4 l13 {node after chapter 1}
- |EXTRA
  |identifier:{node-after-chapter-1}
  |is_target:{1}
  |node_number:{3}
@@ -149,7 +137,6 @@ NodeBack: [U0]
    {normal_text:in node after chapter 1\\n}
   {empty_line:\\n}
  *normal_command@node C1 l17 {last node in chapter 1}
- |EXTRA
  |identifier:{last-node-in-chapter-1}
  |is_target:{1}
  |node_number:{4}

@@ -54,7 +54,6 @@ $result_tree_text{'kbd'} = '*document_root C1
       {normal_text:in example in kbd}
     {normal_text:.\\n}
    *normal_command@end C1 l12
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
@@ -77,7 +76,6 @@ $result_tree_text{'kbd'} = '*document_root C1
       {normal_text:in format in kbd}
     {normal_text:.\\n}
    *normal_command@end C1 l19
-   |EXTRA
    |text_arg:{format}
     *line_arg C3
      {spaces_before_argument: }

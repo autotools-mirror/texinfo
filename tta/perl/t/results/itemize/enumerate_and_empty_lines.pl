@@ -16,13 +16,11 @@ $result_tree_text{'enumerate_and_empty_lines'} = '*document_root C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *normal_command@item C2 l2
-   |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:first item\\n}
    *normal_command@item C2 l3
-   |EXTRA
    |item_number:{2}
     {ignorable_spaces_after_command: \\n}
     *normal_command@example C3 l4
@@ -34,21 +32,18 @@ $result_tree_text{'enumerate_and_empty_lines'} = '*document_root C1
       {empty_line:\\n}
       {normal_text:end example.\\n}
      *normal_command@end C1 l8
-     |EXTRA
      |text_arg:{example}
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:example}
        {spaces_after_argument:\\n}
    *normal_command@item C3 l9
-   |EXTRA
    |item_number:{3}
     {ignorable_spaces_after_command: \\n}
     {empty_line:\\n}
     *paragraph C1
      {normal_text:empty line.\\n}
    *normal_command@item C3 l12
-   |EXTRA
    |item_number:{4}
     {ignorable_spaces_after_command:\\n}
     {empty_line:\\n}
@@ -59,14 +54,12 @@ $result_tree_text{'enumerate_and_empty_lines'} = '*document_root C1
      *preformatted C1
       {normal_text:In second example\\n}
      *normal_command@end C1 l16
-     |EXTRA
      |text_arg:{example}
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:example}
        {spaces_after_argument:\\n}
    *normal_command@item C3 l17
-   |EXTRA
    |item_number:{5}
     {ignorable_spaces_after_command: \\n}
     *normal_command@quotation C3 l18
@@ -76,7 +69,6 @@ $result_tree_text{'enumerate_and_empty_lines'} = '*document_root C1
      *paragraph C1
       {normal_text:Quotation\\n}
      *normal_command@end C1 l20
-     |EXTRA
      |text_arg:{quotation}
       *line_arg C3
        {spaces_before_argument: }
@@ -84,7 +76,6 @@ $result_tree_text{'enumerate_and_empty_lines'} = '*document_root C1
        {spaces_after_argument:\\n}
     {empty_line:\\n}
    *normal_command@item C3 l22
-   |EXTRA
    |item_number:{6}
     {ignorable_spaces_after_command:\\n}
     {empty_line:\\n}
@@ -95,14 +86,12 @@ $result_tree_text{'enumerate_and_empty_lines'} = '*document_root C1
      *paragraph C1
       {normal_text:quotation after a blank line\\n}
      *normal_command@end C1 l26
-     |EXTRA
      |text_arg:{quotation}
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:quotation}
        {spaces_after_argument:\\n}
    *normal_command@end C1 l27
-   |EXTRA
    |text_arg:{enumerate}
     *line_arg C3
      {spaces_before_argument: }
@@ -114,13 +103,11 @@ $result_tree_text{'enumerate_and_empty_lines'} = '*document_root C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *normal_command@item C2 l30
-   |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa fffffffff ggggggggg vvvvvvvvv ggggggggg h\\n}
    *normal_command@end C1 l31
-   |EXTRA
    |text_arg:{enumerate}
     *line_arg C3
      {spaces_before_argument: }

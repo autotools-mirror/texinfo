@@ -12,7 +12,6 @@ $result_tree_text{'ref_in_ref'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C2 l1 {first}
- |EXTRA
  |identifier:{first}
  |is_target:{1}
  |node_number:{1}
@@ -24,12 +23,10 @@ $result_tree_text{'ref_in_ref'} = '*document_root C2
   *paragraph C1
    *normal_command@ref C1 l2
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{first}
      *normal_command@ref C1 l2
       *brace_arg C1
-      |EXTRA
       |node_content:A{0|0}
       |normalized:{first}
        {normal_text:first}

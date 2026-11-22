@@ -14,7 +14,6 @@ $result_tree_text{'macro_expansion'} = '*document_root C1
    {text_before_beginning:\\n}
   *preamble_before_content C2
    *normal_command@macro C6 l2
-   |EXTRA
    |formal_args:A{arg1|arg2}
    |macro_name:{macroone}
     *arguments_line C1
@@ -24,7 +23,6 @@ $result_tree_text{'macro_expansion'} = '*document_root C1
     {raw:\\arg2\\\\n}
     {raw:@end verbatim\\n}
     *normal_command@end C1 l7
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -48,7 +46,6 @@ $result_tree_text{'macro_expansion'} = '*document_root C1
      {spaces_before_argument:\\n}
    {raw:second arg\\n}
    *normal_command@end C1 l9:@macroone
-   |EXTRA
    |text_arg:{verbatim.}
     *line_arg C3
      {spaces_before_argument: }
@@ -74,7 +71,6 @@ $result_tree_text{'macro_expansion'} = '*document_root C1
      {spaces_before_argument:\\n}
    {raw:\\n}
    *normal_command@end C1 l11:@macroone
-   |EXTRA
    |text_arg:{verbatim.}
     *line_arg C3
      {spaces_before_argument: }
@@ -94,7 +90,6 @@ $result_tree_text{'macro_expansion'} = '*document_root C1
      {spaces_before_argument:\\n}
    {raw:\\n}
    *normal_command@end C1 l13:@macroone
-   |EXTRA
    |text_arg:{verbatim my arg.}
     *line_arg C3
      {spaces_before_argument: }
@@ -119,7 +114,6 @@ $result_tree_text{'macro_expansion'} = '*document_root C1
      {spaces_before_argument:\\n}
    {raw:@macroone{nested second arg}\\n}
    *normal_command@end C1 l15:@macroone
-   |EXTRA
    |text_arg:{verbatim.}
     *line_arg C3
      {spaces_before_argument: }
@@ -150,7 +144,6 @@ $result_tree_text{'macro_expansion'} = '*document_root C1
      {spaces_before_argument:\\n}
    {raw:{} \\ \\n}
    *normal_command@end C1 l17:@macroone
-   |EXTRA
    |text_arg:{verbatim.}
     *line_arg C3
      {spaces_before_argument: }
@@ -180,7 +173,6 @@ $result_tree_text{'macro_expansion'} = '*document_root C1
    {raw:\\n}
    {raw:\\n}
    *normal_command@end C1 l23:@macroone
-   |EXTRA
    |text_arg:{verbatim.}
     *line_arg C2
      {spaces_before_argument: }

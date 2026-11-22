@@ -12,7 +12,6 @@ $result_tree_text{'test_allowcodebreaks'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -22,7 +21,6 @@ $result_tree_text{'test_allowcodebreaks'} = '*document_root C3
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@node C23 l2 {chap}
- |EXTRA
  |identifier:{chap}
  |is_target:{1}
  |node_number:{2}
@@ -33,7 +31,6 @@ $result_tree_text{'test_allowcodebreaks'} = '*document_root C3
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@macro C8 l4
-  |EXTRA
   |formal_args:A{nr}
   |macro_name:{testallowcodebreakspara}
    *arguments_line C1
@@ -45,7 +42,6 @@ $result_tree_text{'test_allowcodebreaks'} = '*document_root C3
    {raw:@samp{fff-- --- minus@minus{}b aa-tt@\'eff_gg aa@r{r-oman} \\n}
    {raw:anc-hor@anchor{A node\\nr\\}}\\n}
    *normal_command@end C1 l11
-   |EXTRA
    |text_arg:{macro}
     *line_arg C3
      {spaces_before_argument: }
@@ -53,7 +49,6 @@ $result_tree_text{'test_allowcodebreaks'} = '*document_root C3
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@macro C6 l13
-  |EXTRA
   |formal_args:A{}
   |macro_name:{testallowcodebreaksexample}
    *arguments_line C1
@@ -63,7 +58,6 @@ $result_tree_text{'test_allowcodebreaks'} = '*document_root C3
    {raw:@code{in-example}\\n}
    {raw:@end example\\n}
    *normal_command@end C1 l18
-   |EXTRA
    |text_arg:{macro}
     *line_arg C3
      {spaces_before_argument: }
@@ -132,7 +126,6 @@ $result_tree_text{'test_allowcodebreaks'} = '*document_root C3
      {normal_text: \\n}
      {normal_text:anc-hor}
      *normal_command@anchor C1 l21:@testallowcodebreakspara
-     |EXTRA
      |identifier:{A-node0}
      |is_target:{1}
       *brace_arg C1
@@ -153,7 +146,6 @@ $result_tree_text{'test_allowcodebreaks'} = '*document_root C3
       {normal_text:in-example}
     {normal_text:\\n}
    *normal_command@end C1 l22:@testallowcodebreaksexample
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
@@ -163,7 +155,6 @@ $result_tree_text{'test_allowcodebreaks'} = '*document_root C3
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@allowcodebreaks C1 l24
-  |EXTRA
   |global_command_number:{1}
   |misc_args:A{false}
    *line_arg C3
@@ -232,7 +223,6 @@ $result_tree_text{'test_allowcodebreaks'} = '*document_root C3
      {normal_text: \\n}
      {normal_text:anc-hor}
      *normal_command@anchor C1 l26:@testallowcodebreakspara
-     |EXTRA
      |identifier:{A-node1}
      |is_target:{1}
       *brace_arg C1
@@ -253,7 +243,6 @@ $result_tree_text{'test_allowcodebreaks'} = '*document_root C3
       {normal_text:in-example}
     {normal_text:\\n}
    *normal_command@end C1 l27:@testallowcodebreaksexample
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
@@ -326,7 +315,6 @@ $result_tree_text{'test_allowcodebreaks'} = '*document_root C3
        {normal_text: \\n}
        {normal_text:anc-hor}
        *normal_command@anchor C1 l30:@testallowcodebreakspara
-       |EXTRA
        |identifier:{A-nodew}
        |is_target:{1}
         *brace_arg C1
@@ -346,7 +334,6 @@ $result_tree_text{'test_allowcodebreaks'} = '*document_root C3
         {normal_text:in-example}
     {normal_text:\\n}
    *normal_command@end C1 l35
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
@@ -354,7 +341,6 @@ $result_tree_text{'test_allowcodebreaks'} = '*document_root C3
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@allowcodebreaks C1 l37
-  |EXTRA
   |global_command_number:{2}
   |misc_args:A{true}
    *line_arg C3
@@ -423,7 +409,6 @@ $result_tree_text{'test_allowcodebreaks'} = '*document_root C3
      {normal_text: \\n}
      {normal_text:anc-hor}
      *normal_command@anchor C1 l39:@testallowcodebreakspara
-     |EXTRA
      |identifier:{A-node2}
      |is_target:{1}
       *brace_arg C1
@@ -444,7 +429,6 @@ $result_tree_text{'test_allowcodebreaks'} = '*document_root C3
       {normal_text:in-example}
     {normal_text:\\n}
    *normal_command@end C1 l40:@testallowcodebreaksexample
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }

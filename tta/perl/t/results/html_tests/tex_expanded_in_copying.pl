@@ -22,14 +22,12 @@ $result_tree_text{'tex_expanded_in_copying'} = '*document_root C1
      *rawpreformatted C1
       {normal_text:aa\\n}
      *normal_command@end C1 l4
-     |EXTRA
      |text_arg:{tex}
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:tex}
        {spaces_after_argument:\\n}
     *normal_command@end C1 l5
-    |EXTRA
     |text_arg:{copying}
      *line_arg C3
       {spaces_before_argument: }

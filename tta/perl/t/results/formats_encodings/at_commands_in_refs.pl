@@ -12,7 +12,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -22,7 +21,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C4 l2 {Top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -38,7 +36,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
    *menu_entry C4 l5
     {menu_entry_leading_text:* }
     *menu_entry_node C5
-    |EXTRA
     |node_content:A{0|4}
     |normalized:{-_007b-_007d}
      *normal_command@-
@@ -53,7 +50,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
    *menu_entry C4 l6
     {menu_entry_leading_text:* }
     *menu_entry_node C17
-    |EXTRA
     |node_content:A{0|16}
     |normalized:{-_0021-_002e-_002e-_003f-_0040}
      *normal_command@ 
@@ -80,7 +76,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
    *menu_entry C4 l7
     {menu_entry_leading_text:* }
     *menu_entry_node C9
-    |EXTRA
     |node_content:A{0|8}
     |normalized:{_0040-_007b-_007d-_005c-_0023}
      *normal_command@atchar C1 l7
@@ -104,7 +99,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
    *menu_entry C4 l8
     {menu_entry_leading_text:* }
     *menu_entry_node C9
-    |EXTRA
     |node_content:A{0|8}
     |normalized:{LaTeX-TeX-_002c-_2026-_002e_002e_002e}
      *normal_command@LaTeX C1 l8
@@ -128,7 +122,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
    *menu_entry C4 l9
     {menu_entry_leading_text:* }
     *menu_entry_node C5
-    |EXTRA
     |node_content:A{0|4}
     |normalized:{error_002d_002d_003e-_20ac-_00a1}
      *normal_command@error C1 l9
@@ -146,7 +139,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
    *menu_entry C4 l10
     {menu_entry_leading_text:* }
     *menu_entry_node C5
-    |EXTRA
     |node_content:A{0|4}
     |normalized:{_00aa-_00ba-_00bf}
      *normal_command@ordf C1 l10
@@ -164,7 +156,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
    *menu_entry C4 l11
     {menu_entry_leading_text:* }
     *menu_entry_node C6
-    |EXTRA
     |node_content:A{0|5}
     |normalized:{a-b-_00e5}
      {normal_text:a}
@@ -183,7 +174,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
    *menu_entry C4 l12
     {menu_entry_leading_text:* }
     *menu_entry_node C25
-    |EXTRA
     |node_content:A{0|24}
     |normalized:{_00c5-_00e6-_0153-_00c6-_0152-_00f8-_00d8-_00df-_0142-_0141-_00d0-_00f0-_00fe}
      *normal_command@AA C1 l12
@@ -231,7 +221,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
    *menu_entry C4 l13
     {menu_entry_leading_text:* }
     *menu_entry_node C21
-    |EXTRA
     |node_content:A{0|20}
     |normalized:{_00e4-_1ebd-_00ee-_00e2-_00e0-_00e9-_00e7-_0113-e_030a-e_030b-_0119}
      *normal_command@" C1 l13
@@ -286,7 +275,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
    *menu_entry C4 l14
     {menu_entry_leading_text:* }
     *menu_entry_node C13
-    |EXTRA
     |node_content:A{0|12}
     |normalized:{_0117-_0115-e_0332-_1eb9-_011b-_0237-e_0361e}
      *normal_command@dotaccent C1 l14
@@ -323,7 +311,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
    *menu_entry C4 l15
     {menu_entry_leading_text:* }
     *menu_entry_node C5
-    |EXTRA
     |node_content:A{0|4}
     |normalized:{_0131-_1e14-_1e08}
      *normal_command@dotless C1 l15
@@ -348,7 +335,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
    *menu_entry C4 l16
     {menu_entry_leading_text:* }
     *menu_entry_node C11
-    |EXTRA
     |node_content:A{0|10}
     |normalized:{_201c-_201d-_2018-_2019-_201e-_201a}
      *normal_command@quotedblleft C1 l16
@@ -375,7 +361,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
    *menu_entry C4 l17
     {menu_entry_leading_text:* }
     *menu_entry_node C11
-    |EXTRA
     |node_content:A{0|10}
     |normalized:{_00ab-_00bb-_00ab-_00bb-_2039-_203a}
      *normal_command@guillemetleft C1 l17
@@ -402,7 +387,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
    *menu_entry C4 l18
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{_0060_0060-_0027_0027-_002d_002d_002d-_002d_002d-_0060-_0027}
      {normal_text:`` \'\' --- -- ` \'}
@@ -413,7 +397,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
    *menu_entry C4 l19
     {menu_entry_leading_text:* }
     *menu_entry_node C5
-    |EXTRA
     |node_content:A{0|4}
     |normalized:{AAA-AAA-BBB}
      *normal_command@acronym C2 l19
@@ -437,7 +420,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
    *menu_entry C4 l20
     {menu_entry_leading_text:* }
     *menu_entry_node C5
-    |EXTRA
     |node_content:A{0|4}
     |normalized:{CCC-CCC-DDD}
      *normal_command@abbr C2 l20
@@ -461,7 +443,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
    *menu_entry C4 l21
     {menu_entry_leading_text:* }
     *menu_entry_node C3
-    |EXTRA
     |node_content:A{0|2}
     |normalized:{someone_0040somewher-no_005fexplain_0040there}
      *normal_command@email C2 l21
@@ -485,17 +466,14 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
    *menu_entry C4 l22
     {menu_entry_leading_text:* }
     *menu_entry_node C3
-    |EXTRA
     |node_content:A{0|2}
     |normalized:{f_002d_002dile1-f_002d_002dile}
      *normal_command@image C1 l22
-     |EXTRA
      |input_encoding_name:{utf-8}
       *brace_arg C1
        {normal_text:f--ile1}
      {normal_text:  }
      *normal_command@image C5 l22
-     |EXTRA
      |input_encoding_name:{utf-8}
       *brace_arg C1
        {normal_text:f--ile}
@@ -514,7 +492,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
    *menu_entry C4 l23
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{-_0040-_007b_007d-_002e-}
      *normal_command@verb C1 l23
@@ -529,7 +506,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
    *menu_entry C4 l24
     {menu_entry_leading_text:* }
     *menu_entry_node C17
-    |EXTRA
     |node_content:A{0|16}
     |normalized:{cite-asis-in-_0040w-b-in-r-sc-str-t-var-dfn-i}
      *normal_command@cite C1 l24
@@ -582,7 +558,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
    *menu_entry C4 l25
     {menu_entry_leading_text:* }
     *menu_entry_node C13
-    |EXTRA
     |node_content:A{0|12}
     |normalized:{env-code-option-samp-command-file-C_002dx-ESC}
      *normal_command@env C1 l25
@@ -622,7 +597,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
    *menu_entry C4 l26
     {menu_entry_leading_text:* }
     *menu_entry_node C2
-    |EXTRA
     |node_content:A{0|1}
     |normalized:{8_002e27in}
      {normal_text:8.27}
@@ -636,7 +610,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
    *menu_entry C4 l27
     {menu_entry_leading_text:* }
     *menu_entry_node C3
-    |EXTRA
     |node_content:A{0|2}
     |normalized:{sansserif-slanted}
      *normal_command@sansserif C1 l27
@@ -653,7 +626,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
    *menu_entry C4 l28
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{indicateurl}
      *normal_command@indicateurl C1 l28
@@ -666,7 +638,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
    *menu_entry C4 l29
     {menu_entry_leading_text:* }
     *menu_entry_node C3
-    |EXTRA
     |node_content:A{0|2}
     |normalized:{gH-3rd}
      *normal_command@sub C1 l29
@@ -683,7 +654,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
    *menu_entry C4 l30
     {menu_entry_leading_text:* }
     *menu_entry_node C5
-    |EXTRA
     |node_content:A{0|4}
     |normalized:{http_003a_002f_002fsomewhere_005faaa-url-_002fman_002ecgi_002f1_002fls}
      *normal_command@url C1 l30
@@ -708,7 +678,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 l31
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -716,7 +685,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l33 {@- @{ @}}
- |EXTRA
  |identifier:{-_007b-_007d}
  |is_target:{1}
  |node_number:{2}
@@ -730,7 +698,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
     *normal_command@}
     {spaces_after_argument:\\n}
  *normal_command@chapter C2 l34 {@- @{ @}}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -745,7 +712,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l36 {@  @	 @! @* @. @: .@: @? @@}
- |EXTRA
  |identifier:{-_0021-_002e-_002e-_003f-_0040}
  |is_target:{1}
  |node_number:{3}
@@ -771,7 +737,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
     *normal_command@@
     {spaces_after_argument:\\n}
  *normal_command@chapter C2 l37 {@  @	 @! @* @. @: .@: @? @@}
- |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
  |section_number:{3}
@@ -798,7 +763,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l39 {@atchar{} @lbracechar{} @rbracechar{} @backslashchar{} @hashchar{}}
- |EXTRA
  |identifier:{_0040-_007b-_007d-_005c-_0023}
  |is_target:{1}
  |node_number:{4}
@@ -821,7 +785,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
      *brace_container
     {spaces_after_argument:\\n}
  *normal_command@chapter C2 l40 {@atchar{} @lbracechar{} @rbracechar{} @backslashchar{} @hashchar{}}
- |EXTRA
  |section_heading_number:{3}
  |section_level:{1}
  |section_number:{4}
@@ -845,7 +808,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l42 {@LaTeX{} @TeX{} @comma{} @dots{} @enddots{}}
- |EXTRA
  |identifier:{LaTeX-TeX-_002c-_2026-_002e_002e_002e}
  |is_target:{1}
  |node_number:{5}
@@ -868,7 +830,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
      *brace_container
     {spaces_after_argument:\\n}
  *normal_command@chapter C2 l43 {@LaTeX{} @TeX{} @comma{} @dots{} @enddots{}}
- |EXTRA
  |section_heading_number:{4}
  |section_level:{1}
  |section_number:{5}
@@ -892,7 +853,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l45 {@error{} @euro{} @exclamdown{}}
- |EXTRA
  |identifier:{error_002d_002d_003e-_20ac-_00a1}
  |is_target:{1}
  |node_number:{6}
@@ -909,7 +869,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
      *brace_container
     {spaces_after_argument:\\n}
  *normal_command@chapter C2 l46 {@error{} @euro{} @exclamdown{}}
- |EXTRA
  |section_heading_number:{5}
  |section_level:{1}
  |section_number:{6}
@@ -927,7 +886,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l48 {@ordf{} @ordm{} @questiondown{}}
- |EXTRA
  |identifier:{_00aa-_00ba-_00bf}
  |is_target:{1}
  |node_number:{7}
@@ -944,7 +902,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
      *brace_container
     {spaces_after_argument:\\n}
  *normal_command@chapter C2 l49 {@ordf{} @ordm{} @questiondown{}}
- |EXTRA
  |section_heading_number:{6}
  |section_level:{1}
  |section_number:{7}
@@ -962,7 +919,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l51 {a@tie{}b @today{} @aa{}}
- |EXTRA
  |identifier:{a-b-_00e5}
  |is_target:{1}
  |node_number:{8}
@@ -980,7 +936,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
      *brace_container
     {spaces_after_argument:\\n}
  *normal_command@chapter C2 l52 {a@tie{}b @today{} @aa{}}
- |EXTRA
  |section_heading_number:{7}
  |section_level:{1}
  |section_number:{8}
@@ -999,7 +954,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l54 {@AA{} @ae{} @oe{} @AE{} @OE{} @o{} @O{} @ss{} @l{} @L{} @DH{} @dh{} @th{}}
- |EXTRA
  |identifier:{_00c5-_00e6-_0153-_00c6-_0152-_00f8-_00d8-_00df-_0142-_0141-_00d0-_00f0-_00fe}
  |is_target:{1}
  |node_number:{9}
@@ -1046,7 +1000,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
      *brace_container
     {spaces_after_argument:\\n}
  *normal_command@chapter C2 l55 {@AA{} @ae{} @oe{} @AE{} @OE{} @o{} @O{} @ss{} @l{} @L{} @DH{} @dh{} @th{}}
- |EXTRA
  |section_heading_number:{8}
  |section_level:{1}
  |section_number:{9}
@@ -1094,7 +1047,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l57 {@"{a} @~{e} @^{@dotless{i}} @^{a} @`{a} @\'e @,{c} @={e} @ringaccent{e} @H{e} @ogonek{e}}
- |EXTRA
  |identifier:{_00e4-_1ebd-_00ee-_00e2-_00e0-_00e9-_00e7-_0113-e_030a-e_030b-_0119}
  |is_target:{1}
  |node_number:{10}
@@ -1148,7 +1100,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
       {normal_text:e}
     {spaces_after_argument:\\n}
  *normal_command@chapter C2 l58 {@"{a} @~{e} @^{@dotless{i}} @^{a} @`{a} @\'e @,{c} @={e} @ringaccent{e} @H{e} @ogonek{e}}
- |EXTRA
  |section_heading_number:{9}
  |section_level:{1}
  |section_number:{10}
@@ -1203,7 +1154,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l60 {@dotaccent{e} @u{e} @ubaraccent{e} @udotaccent{e} @v{e} @dotless{j} @tieaccent{ee}}
- |EXTRA
  |identifier:{_0117-_0115-e_0332-_1eb9-_011b-_0237-e_0361e}
  |is_target:{1}
  |node_number:{11}
@@ -1239,7 +1189,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
       {normal_text:ee}
     {spaces_after_argument:\\n}
  *normal_command@chapter C2 l61 {@dotaccent{e} @u{e} @ubaraccent{e} @udotaccent{e} @v{e} @dotless{j} @tieaccent{ee}}
- |EXTRA
  |section_heading_number:{10}
  |section_level:{1}
  |section_number:{11}
@@ -1276,7 +1225,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l63 {@dotless{i} @`{@=E} @,{@\'C}}
- |EXTRA
  |identifier:{_0131-_1e14-_1e08}
  |is_target:{1}
  |node_number:{12}
@@ -1300,7 +1248,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
         {normal_text:C}
     {spaces_after_argument:\\n}
  *normal_command@chapter C2 l64 {@dotless{i} @`{@=E} @,{@\'C}}
- |EXTRA
  |section_heading_number:{11}
  |section_level:{1}
  |section_number:{12}
@@ -1325,7 +1272,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l66 {@quotedblleft{} @quotedblright{} @quoteleft{} @quoteright{} @quotedblbase{} @quotesinglbase{}}
- |EXTRA
  |identifier:{_201c-_201d-_2018-_2019-_201e-_201a}
  |is_target:{1}
  |node_number:{13}
@@ -1351,7 +1297,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
      *brace_container
     {spaces_after_argument:\\n}
  *normal_command@chapter C2 l67 {@quotedblleft{} @quotedblright{} @quoteleft{} @quoteright{} @quotedblbase{} @quotesinglbase{}}
- |EXTRA
  |section_heading_number:{12}
  |section_level:{1}
  |section_number:{13}
@@ -1378,7 +1323,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l69 {@guillemetleft{} @guillemetright{} @guillemotleft{} @guillemotright{} @guilsinglleft{} @guilsinglright{}}
- |EXTRA
  |identifier:{_00ab-_00bb-_00ab-_00bb-_2039-_203a}
  |is_target:{1}
  |node_number:{14}
@@ -1404,7 +1348,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
      *brace_container
     {spaces_after_argument:\\n}
  *normal_command@chapter C2 l70 {@guillemetleft{} @guillemetright{} @guillemotleft{} @guillemotright{} @guilsinglleft{} @guilsinglright{}}
- |EXTRA
  |section_heading_number:{13}
  |section_level:{1}
  |section_number:{14}
@@ -1431,7 +1374,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l72 {`` \'\' --- -- ` \'}
- |EXTRA
  |identifier:{_0060_0060-_0027_0027-_002d_002d_002d-_002d_002d-_0060-_0027}
  |is_target:{1}
  |node_number:{15}
@@ -1441,7 +1383,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
     {normal_text:`` \'\' --- -- ` \'}
     {spaces_after_argument:\\n}
  *normal_command@chapter C2 l73 {`` \'\' --- -- ` \'}
- |EXTRA
  |section_heading_number:{14}
  |section_level:{1}
  |section_number:{15}
@@ -1452,7 +1393,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l75 {@acronym{AAA, fff} @acronym{AAA} @acronym{BBB}}
- |EXTRA
  |identifier:{AAA-AAA-BBB}
  |is_target:{1}
  |node_number:{16}
@@ -1475,7 +1415,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
       {normal_text:BBB}
     {spaces_after_argument:\\n}
  *normal_command@chapter C2 l76 {@acronym{AAA, fff} @acronym{AAA} @acronym{BBB}}
- |EXTRA
  |section_heading_number:{15}
  |section_level:{1}
  |section_number:{16}
@@ -1499,7 +1438,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l78 {@abbr{CCC, rrr} @abbr{CCC} @abbr{DDD}}
- |EXTRA
  |identifier:{CCC-CCC-DDD}
  |is_target:{1}
  |node_number:{17}
@@ -1528,7 +1466,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
       {normal_text:DDD}
     {spaces_after_argument:\\n}
  *normal_command@chapter C2 l80 {@abbr{CCC, rrr} @abbr{CCC} @abbr{DDD}}
- |EXTRA
  |section_heading_number:{16}
  |section_level:{1}
  |section_number:{17}
@@ -1537,7 +1474,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
    >SOURCEMARKS
    >expanded_conditional_command<end;1>
     >*normal_command@end C1 l81
-    >|EXTRA
     >|text_arg:{ifnottex}
      >*line_arg C3
       >{spaces_before_argument: }
@@ -1561,7 +1497,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l83 {@email{someone@@somewher, the someone} @email{no_explain@@there}}
- |EXTRA
  |identifier:{someone_0040somewher-no_005fexplain_0040there}
  |is_target:{1}
  |node_number:{18}
@@ -1584,7 +1519,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
       {normal_text:there}
     {spaces_after_argument:\\n}
  *normal_command@chapter C2 l84 {@email{someone@@somewher, the someone} @email{no_explain@@there}}
- |EXTRA
  |section_heading_number:{17}
  |section_level:{1}
  |section_number:{18}
@@ -1608,7 +1542,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l86 {@image{f--ile1}  @image{f--ile,aze,az,alt,e--xt}}
- |EXTRA
  |identifier:{f_002d_002dile1-f_002d_002dile}
  |is_target:{1}
  |node_number:{19}
@@ -1622,13 +1555,11 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
        >{spaces_before_argument:\\n}
     {spaces_before_argument: }
     *normal_command@image C1 l86
-    |EXTRA
     |input_encoding_name:{utf-8}
      *brace_arg C1
       {normal_text:f--ile1}
     {normal_text:  }
     *normal_command@image C5 l86
-    |EXTRA
     |input_encoding_name:{utf-8}
      *brace_arg C1
       {normal_text:f--ile}
@@ -1642,7 +1573,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
       {normal_text:e--xt}
     {spaces_after_argument:\\n}
  *normal_command@chapter C2 l88 {@image{f--ile1}  @image{f--ile,aze,az,alt,e--xt}}
- |EXTRA
  |section_heading_number:{18}
  |section_level:{1}
  |section_number:{19}
@@ -1651,7 +1581,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
    >SOURCEMARKS
    >expanded_conditional_command<end;2>
     >*normal_command@end C1 l89
-    >|EXTRA
     >|text_arg:{ifnottex}
      >*line_arg C3
       >{spaces_before_argument: }
@@ -1659,13 +1588,11 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
       >{spaces_after_argument:\\n}
     {spaces_before_argument: }
     *normal_command@image C1 l88
-    |EXTRA
     |input_encoding_name:{utf-8}
      *brace_arg C1
       {normal_text:f--ile1}
     {normal_text:  }
     *normal_command@image C5 l88
-    |EXTRA
     |input_encoding_name:{utf-8}
      *brace_arg C1
       {normal_text:f--ile}
@@ -1680,7 +1607,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l91 {@verb{. @ {} . .}}
- |EXTRA
  |identifier:{-_0040-_007b_007d-_002e-}
  |is_target:{1}
  |node_number:{20}
@@ -1700,7 +1626,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
       {verb_delimiter:.}
     {spaces_after_argument:\\n}
  *normal_command@chapter C2 l93 {@verb{. @ {} . .}}
- |EXTRA
  |section_heading_number:{19}
  |section_level:{1}
  |section_number:{20}
@@ -1709,7 +1634,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
    >SOURCEMARKS
    >expanded_conditional_command<end;3>
     >*normal_command@end C1 l94
-    >|EXTRA
     >|text_arg:{ifnottex}
      >*line_arg C3
       >{spaces_before_argument: }
@@ -1724,7 +1648,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l96 {@cite{cite @asis{asis}} @w{in @@w @b{b}} @r{in r} @sc{sc} @strong{str} @t{t} @var{var} @dfn{dfn} @i{i}}
- |EXTRA
  |identifier:{cite-asis-in-_0040w-b-in-r-sc-str-t-var-dfn-i}
  |is_target:{1}
  |node_number:{21}
@@ -1776,7 +1699,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
       {normal_text:i}
     {spaces_after_argument:\\n}
  *normal_command@chapter C2 l97 {@cite{cite @asis{asis}} @w{in @@w @b{b}} @r{in r} @sc{sc} @strong{str} @t{t} @var{var} @dfn{dfn} @i{i}}
- |EXTRA
  |section_heading_number:{20}
  |section_level:{1}
  |section_number:{21}
@@ -1829,7 +1751,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l99 {@env{env} @code{code} @option{option} @samp{samp} @command{command} @file{file} @kbd{C-x @key{ESC}}}
- |EXTRA
  |identifier:{env-code-option-samp-command-file-C_002dx-ESC}
  |is_target:{1}
  |node_number:{22}
@@ -1868,7 +1789,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
         {normal_text:ESC}
     {spaces_after_argument:\\n}
  *normal_command@chapter C2 l100 {@env{env} @code{code} @option{option} @samp{samp} @command{command} @file{file} @kbd{C-x @key{ESC}}}
- |EXTRA
  |section_heading_number:{21}
  |section_level:{1}
  |section_number:{22}
@@ -1908,7 +1828,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l102 {8.27@dmn{in}}
- |EXTRA
  |identifier:{8_002e27in}
  |is_target:{1}
  |node_number:{23}
@@ -1921,7 +1840,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
       {normal_text:in}
     {spaces_after_argument:\\n}
  *normal_command@chapter C2 l103 {8.27@dmn{in}}
- |EXTRA
  |section_heading_number:{22}
  |section_level:{1}
  |section_number:{23}
@@ -1935,7 +1853,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l105 {@sansserif{sansserif} @slanted{slanted}}
- |EXTRA
  |identifier:{sansserif-slanted}
  |is_target:{1}
  |node_number:{24}
@@ -1951,7 +1868,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
       {normal_text:slanted}
     {spaces_after_argument:\\n}
  *normal_command@chapter C2 l106 {@sansserif{sansserif} @slanted{slanted}}
- |EXTRA
  |section_heading_number:{23}
  |section_level:{1}
  |section_number:{24}
@@ -1968,7 +1884,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l108 {@indicateurl{indicateurl}}
- |EXTRA
  |identifier:{indicateurl}
  |is_target:{1}
  |node_number:{25}
@@ -1980,7 +1895,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
       {normal_text:indicateurl}
     {spaces_after_argument:\\n}
  *normal_command@chapter C2 l109 {@indicateurl{indicateurl}}
- |EXTRA
  |section_heading_number:{24}
  |section_level:{1}
  |section_number:{25}
@@ -1993,7 +1907,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l111 {@sub{g}H 3@sup{rd}}
- |EXTRA
  |identifier:{gH-3rd}
  |is_target:{1}
  |node_number:{26}
@@ -2009,7 +1922,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
       {normal_text:rd}
     {spaces_after_argument:\\n}
  *normal_command@chapter C2 l112 {@sub{g}H 3@sup{rd}}
- |EXTRA
  |section_heading_number:{25}
  |section_level:{1}
  |section_number:{26}
@@ -2026,7 +1938,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l114 {@url{http://somewhere_aaa} @url{url, text} @uref{/man.cgi/1/ls,,ls}}
- |EXTRA
  |identifier:{http_003a_002f_002fsomewhere_005faaa-url-_002fman_002ecgi_002f1_002fls}
  |is_target:{1}
  |node_number:{27}
@@ -2052,7 +1963,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
       {normal_text:ls}
     {spaces_after_argument:\\n}
  *normal_command@chapter C65 l115 {@url{http://somewhere_aaa} @url{url, text} @uref{/man.cgi/1/ls,,ls}}
- |EXTRA
  |section_heading_number:{26}
  |section_level:{1}
  |section_number:{27}
@@ -2081,7 +1991,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
   *paragraph C2
    *normal_command@ref C1 l117
     *brace_arg C5
-    |EXTRA
     |node_content:A{0|4}
     |normalized:{-_007b-_007d}
      *normal_command@-
@@ -2094,7 +2003,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
   *paragraph C2
    *normal_command@ref C1 l119
     *brace_arg C17
-    |EXTRA
     |node_content:A{0|16}
     |normalized:{-_0021-_002e-_002e-_003f-_0040}
      *normal_command@ 
@@ -2119,7 +2027,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
   *paragraph C2
    *normal_command@ref C1 l121
     *brace_arg C9
-    |EXTRA
     |node_content:A{0|8}
     |normalized:{_0040-_007b-_007d-_005c-_0023}
      *normal_command@atchar C1 l121
@@ -2141,7 +2048,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
   *paragraph C2
    *normal_command@ref C1 l123
     *brace_arg C9
-    |EXTRA
     |node_content:A{0|8}
     |normalized:{LaTeX-TeX-_002c-_2026-_002e_002e_002e}
      *normal_command@LaTeX C1 l123
@@ -2163,7 +2069,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
   *paragraph C2
    *normal_command@ref C1 l125
     *brace_arg C5
-    |EXTRA
     |node_content:A{0|4}
     |normalized:{error_002d_002d_003e-_20ac-_00a1}
      *normal_command@error C1 l125
@@ -2179,7 +2084,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
   *paragraph C2
    *normal_command@ref C1 l127
     *brace_arg C5
-    |EXTRA
     |node_content:A{0|4}
     |normalized:{_00aa-_00ba-_00bf}
      *normal_command@ordf C1 l127
@@ -2195,7 +2099,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
   *paragraph C2
    *normal_command@ref C1 l129
     *brace_arg C6
-    |EXTRA
     |node_content:A{0|5}
     |normalized:{a-b-_00e5}
      {normal_text:a}
@@ -2212,7 +2115,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
   *paragraph C2
    *normal_command@ref C1 l131
     *brace_arg C25
-    |EXTRA
     |node_content:A{0|24}
     |normalized:{_00c5-_00e6-_0153-_00c6-_0152-_00f8-_00d8-_00df-_0142-_0141-_00d0-_00f0-_00fe}
      *normal_command@AA C1 l131
@@ -2258,7 +2160,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
   *paragraph C2
    *normal_command@ref C1 l133
     *brace_arg C21
-    |EXTRA
     |node_content:A{0|20}
     |normalized:{_00e4-_1ebd-_00ee-_00e2-_00e0-_00e9-_00e7-_0113-e_030a-e_030b-_0119}
      *normal_command@" C1 l133
@@ -2311,7 +2212,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
   *paragraph C2
    *normal_command@ref C1 l135
     *brace_arg C13
-    |EXTRA
     |node_content:A{0|12}
     |normalized:{_0117-_0115-e_0332-_1eb9-_011b-_0237-e_0361e}
      *normal_command@dotaccent C1 l135
@@ -2346,7 +2246,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
   *paragraph C2
    *normal_command@ref C1 l137
     *brace_arg C5
-    |EXTRA
     |node_content:A{0|4}
     |normalized:{_0131-_1e14-_1e08}
      *normal_command@dotless C1 l137
@@ -2369,7 +2268,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
   *paragraph C2
    *normal_command@ref C1 l139
     *brace_arg C11
-    |EXTRA
     |node_content:A{0|10}
     |normalized:{_201c-_201d-_2018-_2019-_201e-_201a}
      *normal_command@quotedblleft C1 l139
@@ -2394,7 +2292,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
   *paragraph C2
    *normal_command@ref C1 l141
     *brace_arg C11
-    |EXTRA
     |node_content:A{0|10}
     |normalized:{_00ab-_00bb-_00ab-_00bb-_2039-_203a}
      *normal_command@guillemetleft C1 l141
@@ -2419,7 +2316,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
   *paragraph C2
    *normal_command@ref C1 l143
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{_0060_0060-_0027_0027-_002d_002d_002d-_002d_002d-_0060-_0027}
      {normal_text:`` \'\' --- -- ` \'}
@@ -2428,7 +2324,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
   *paragraph C2
    *normal_command@ref C1 l145
     *brace_arg C5
-    |EXTRA
     |node_content:A{0|4}
     |normalized:{AAA-AAA-BBB}
      *normal_command@acronym C2 l145
@@ -2456,7 +2351,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
   *paragraph C2
    *normal_command@ref C1 l148
     *brace_arg C5
-    |EXTRA
     |node_content:A{0|4}
     |normalized:{CCC-CCC-DDD}
      *normal_command@abbr C2 l148
@@ -2477,7 +2371,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
    >SOURCEMARKS
    >expanded_conditional_command<end;4><p:1>
     >*normal_command@end C1 l149
-    >|EXTRA
     >|text_arg:{ifnottex}
      >*line_arg C3
       >{spaces_before_argument: }
@@ -2487,7 +2380,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
   *paragraph C2
    *normal_command@ref C1 l151
     *brace_arg C3
-    |EXTRA
     |node_content:A{0|2}
     |normalized:{someone_0040somewher-no_005fexplain_0040there}
      *normal_command@email C2 l151
@@ -2515,17 +2407,14 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
   *paragraph C2
    *normal_command@ref C1 l154
     *brace_arg C3
-    |EXTRA
     |node_content:A{0|2}
     |normalized:{f_002d_002dile1-f_002d_002dile}
      *normal_command@image C1 l154
-     |EXTRA
      |input_encoding_name:{utf-8}
       *brace_arg C1
        {normal_text:f--ile1}
      {normal_text:  }
      *normal_command@image C5 l154
-     |EXTRA
      |input_encoding_name:{utf-8}
       *brace_arg C1
        {normal_text:f--ile}
@@ -2542,7 +2431,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
   *paragraph C2
    *normal_command@ref C1 l156
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{-_0040-_007b_007d-_002e-}
      *normal_command@verb C1 l156
@@ -2554,7 +2442,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
    >SOURCEMARKS
    >expanded_conditional_command<end;5><p:1>
     >*normal_command@end C1 l157
-    >|EXTRA
     >|text_arg:{ifnottex}
      >*line_arg C3
       >{spaces_before_argument: }
@@ -2564,7 +2451,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
   *paragraph C2
    *normal_command@ref C1 l159
     *brace_arg C17
-    |EXTRA
     |node_content:A{0|16}
     |normalized:{cite-asis-in-_0040w-b-in-r-sc-str-t-var-dfn-i}
      *normal_command@cite C1 l159
@@ -2615,7 +2501,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
   *paragraph C2
    *normal_command@ref C1 l161
     *brace_arg C13
-    |EXTRA
     |node_content:A{0|12}
     |normalized:{env-code-option-samp-command-file-C_002dx-ESC}
      *normal_command@env C1 l161
@@ -2653,7 +2538,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
   *paragraph C2
    *normal_command@ref C1 l163
     *brace_arg C2
-    |EXTRA
     |node_content:A{0|1}
     |normalized:{8_002e27in}
      {normal_text:8.27}
@@ -2665,7 +2549,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
   *paragraph C2
    *normal_command@ref C1 l165
     *brace_arg C3
-    |EXTRA
     |node_content:A{0|2}
     |normalized:{sansserif-slanted}
      *normal_command@sansserif C1 l165
@@ -2680,7 +2563,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
   *paragraph C2
    *normal_command@ref C1 l167
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{indicateurl}
      *normal_command@indicateurl C1 l167
@@ -2691,7 +2573,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
   *paragraph C2
    *normal_command@ref C1 l169
     *brace_arg C3
-    |EXTRA
     |node_content:A{0|2}
     |normalized:{gH-3rd}
      *normal_command@sub C1 l169
@@ -2706,7 +2587,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
   *paragraph C2
    *normal_command@ref C1 l171
     *brace_arg C5
-    |EXTRA
     |node_content:A{0|4}
     |normalized:{http_003a_002f_002fsomewhere_005faaa-url-_002fman_002ecgi_002f1_002fls}
      *normal_command@url C1 l171
@@ -2731,7 +2611,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
   *paragraph C2
    *normal_command@ref C1 l173
     *brace_arg C5
-    |EXTRA
     |node_content:A{0|4}
     |normalized:{_2022-_00a9-_2261}
      *normal_command@bullet C1 l173
@@ -2747,7 +2626,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
   *paragraph C2
    *normal_command@ref C1 l175
     *brace_arg C9
-    |EXTRA
     |node_content:A{0|8}
     |normalized:{_2265-_2264-_2192-_21a6-_2212}
      *normal_command@geq C1 l175
@@ -2769,7 +2647,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
   *paragraph C2
    *normal_command@ref C1 l177
     *brace_arg C9
-    |EXTRA
     |node_content:A{0|8}
     |normalized:{_22c6-_00a3-_22a3-_00ae-_21d2}
      *normal_command@point C1 l177
@@ -2791,7 +2668,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
   *paragraph C2
    *normal_command@ref C1 l179
     *brace_arg C3
-    |EXTRA
     |node_content:A{0|2}
     |normalized:{_00b0-_00de}
      *normal_command@textdegree C1 l179
@@ -2809,7 +2685,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
    *menu_entry C4 l183
     {menu_entry_leading_text:* }
     *menu_entry_node C5
-    |EXTRA
     |node_content:A{0|4}
     |normalized:{_2022-_00a9-_2261}
      *normal_command@bullet C1 l183
@@ -2827,7 +2702,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
    *menu_entry C4 l184
     {menu_entry_leading_text:* }
     *menu_entry_node C9
-    |EXTRA
     |node_content:A{0|8}
     |normalized:{_2265-_2264-_2192-_21a6-_2212}
      *normal_command@geq C1 l184
@@ -2851,7 +2725,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
    *menu_entry C4 l185
     {menu_entry_leading_text:* }
     *menu_entry_node C9
-    |EXTRA
     |node_content:A{0|8}
     |normalized:{_22c6-_00a3-_22a3-_00ae-_21d2}
      *normal_command@point C1 l185
@@ -2875,7 +2748,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
    *menu_entry C4 l186
     {menu_entry_leading_text:* }
     *menu_entry_node C3
-    |EXTRA
     |node_content:A{0|2}
     |normalized:{_00b0-_00de}
      *normal_command@textdegree C1 l186
@@ -2888,7 +2760,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 l187
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -2896,7 +2767,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l189 {@bullet{} @copyright{} @equiv{}}
- |EXTRA
  |identifier:{_2022-_00a9-_2261}
  |is_target:{1}
  |node_number:{28}
@@ -2913,7 +2783,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
      *brace_container
     {spaces_after_argument:\\n}
  *normal_command@section C2 l190 {@bullet{} @copyright{} @equiv{}}
- |EXTRA
  |section_heading_number:{26.1}
  |section_level:{2}
  |section_number:{28}
@@ -2931,7 +2800,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l192 {@geq{} @leq{} @arrow{} @expansion{} @minus{}}
- |EXTRA
  |identifier:{_2265-_2264-_2192-_21a6-_2212}
  |is_target:{1}
  |node_number:{29}
@@ -2954,7 +2822,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
      *brace_container
     {spaces_after_argument:\\n}
  *normal_command@section C2 l193 {@geq{} @leq{} @arrow{} @expansion{} @minus{}}
- |EXTRA
  |section_heading_number:{26.2}
  |section_level:{2}
  |section_number:{29}
@@ -2978,7 +2845,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l195 {@point{} @pounds{} @print{} @registeredsymbol{} @result{}}
- |EXTRA
  |identifier:{_22c6-_00a3-_22a3-_00ae-_21d2}
  |is_target:{1}
  |node_number:{30}
@@ -3001,7 +2867,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
      *brace_container
     {spaces_after_argument:\\n}
  *normal_command@section C2 l196 {@point{} @pounds{} @print{} @registeredsymbol{} @result{}}
- |EXTRA
  |section_heading_number:{26.3}
  |section_level:{2}
  |section_number:{30}
@@ -3025,7 +2890,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l198 {@textdegree{} @TH{}}
- |EXTRA
  |identifier:{_00b0-_00de}
  |is_target:{1}
  |node_number:{31}
@@ -3039,7 +2903,6 @@ $result_tree_text{'at_commands_in_refs'} = '*document_root C63
      *brace_container
     {spaces_after_argument:\\n}
  *normal_command@section C2 l199 {@textdegree{} @TH{}}
- |EXTRA
  |section_heading_number:{26.4}
  |section_level:{2}
  |section_number:{31}

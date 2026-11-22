@@ -12,7 +12,6 @@ $result_tree_text{'test_index'} = '*document_root C13
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -22,7 +21,6 @@ $result_tree_text{'test_index'} = '*document_root C13
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C12 l2 {Element top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -34,7 +32,6 @@ $result_tree_text{'test_index'} = '*document_root C13
   *paragraph C2
    *normal_command@xref C1 l4
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{a-counting-anchor}
      {normal_text:a counting anchor}
@@ -43,7 +40,6 @@ $result_tree_text{'test_index'} = '*document_root C13
   *paragraph C5
    {normal_text:before menu.\\n}
    *index_entry_command@cindex C1 l7
-   |EXTRA
    |element_node:{Top}
    |index_entry:I{cp,1}
     *line_arg C3
@@ -51,7 +47,6 @@ $result_tree_text{'test_index'} = '*document_root C13
      {normal_text:in Top}
      {spaces_after_argument:\\n}
    *index_entry_command@cindex C1 l8
-   |EXTRA
    |element_node:{Top}
    |index_entry:I{cp,2}
     *line_arg C3
@@ -59,7 +54,6 @@ $result_tree_text{'test_index'} = '*document_root C13
      *normal_command@@
      {spaces_after_argument:\\n}
    *index_entry_command@cindex C1 l9
-   |EXTRA
    |element_node:{Top}
    |index_entry:I{cp,3}
     *line_arg C3
@@ -68,7 +62,6 @@ $result_tree_text{'test_index'} = '*document_root C13
       *brace_container
      {spaces_after_argument:\\n}
    *index_entry_command@cindex C1 l10
-   |EXTRA
    |element_node:{Top}
    |index_entry:I{cp,4}
     *line_arg C3
@@ -78,7 +71,6 @@ $result_tree_text{'test_index'} = '*document_root C13
   {empty_line:\\n}
   *normal_command@deffn C4 l12
    *def_line C1 l12
-   |EXTRA
    |def_command:{deffn}
    |element_node:{Top}
    |index_entry:I{fn,1}
@@ -104,7 +96,6 @@ $result_tree_text{'test_index'} = '*document_root C13
        {normal_text:g}
      {spaces_after_argument:\\n}
    *normal_command@deffnx C1 l13
-   |EXTRA
    |def_command:{deffn}
    |element_node:{Top}
    |index_entry:I{fn,2}
@@ -130,7 +121,6 @@ $result_tree_text{'test_index'} = '*document_root C13
    *def_item C1
     {empty_line:\\n}
    *normal_command@end C1 l15
-   |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
@@ -146,7 +136,6 @@ $result_tree_text{'test_index'} = '*document_root C13
    *table_entry C2
     *table_term C1
      *normal_command@item C1 l18
-     |EXTRA
      |element_node:{Top}
      |index_entry:I{fn,3}
       *line_arg C3
@@ -160,7 +149,6 @@ $result_tree_text{'test_index'} = '*document_root C13
    *table_entry C2
     *table_term C2
      *normal_command@item C1 l21
-     |EXTRA
      |element_node:{Top}
      |index_entry:I{fn,4}
       *line_arg C3
@@ -168,7 +156,6 @@ $result_tree_text{'test_index'} = '*document_root C13
        {normal_text:second fun}
        {spaces_after_argument:\\n}
      *normal_command@itemx C1 l22
-     |EXTRA
      |element_node:{Top}
      |index_entry:I{fn,5}
       *line_arg C3
@@ -178,7 +165,6 @@ $result_tree_text{'test_index'} = '*document_root C13
     *table_definition C1
      {empty_line:\\n}
    *normal_command@end C1 l24
-   |EXTRA
    |text_arg:{ftable}
     *line_arg C3
      {spaces_before_argument: }
@@ -192,7 +178,6 @@ $result_tree_text{'test_index'} = '*document_root C13
    *menu_entry C4 l27
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{name}
      {normal_text:name}
@@ -203,7 +188,6 @@ $result_tree_text{'test_index'} = '*document_root C13
    *menu_entry C4 l28
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{name1-looooooooooooooooooooooooooooooooooooooooooooooooooooooooong}
      {normal_text:name1 looooooooooooooooooooooooooooooooooooooooooooooooooooooooong}
@@ -212,7 +196,6 @@ $result_tree_text{'test_index'} = '*document_root C13
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 l29
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -220,7 +203,6 @@ $result_tree_text{'test_index'} = '*document_root C13
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l31 {name}
- |EXTRA
  |identifier:{name}
  |is_target:{1}
  |node_number:{2}
@@ -230,7 +212,6 @@ $result_tree_text{'test_index'} = '*document_root C13
     {normal_text:name}
     {spaces_after_argument:\\n}
  *normal_command@chapter C171 l32 {A chapter}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -241,7 +222,6 @@ $result_tree_text{'test_index'} = '*document_root C13
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 l34
-  |EXTRA
   |element_node:{name}
   |index_entry:I{cp,5}
    *line_arg C3
@@ -249,7 +229,6 @@ $result_tree_text{'test_index'} = '*document_root C13
     {normal_text:index entry looooooooooooooooooooooooooooooooooooooooooooooooooooooooong}
     {spaces_after_argument:\\n}
   *index_entry_command@findex C1 l35
-  |EXTRA
   |element_node:{name}
   |index_entry:I{fn,6}
    *line_arg C3
@@ -260,7 +239,6 @@ $result_tree_text{'test_index'} = '*document_root C13
   *paragraph C3
    {normal_text:A paragraph \\n}
    *index_entry_command@findex C1 l38
-   |EXTRA
    |element_node:{name}
    |index_entry:I{fn,7}
     *line_arg C3
@@ -285,7 +263,6 @@ $result_tree_text{'test_index'} = '*document_root C13
    {normal_text:a\\n}
   {empty_line:\\n}
   *index_entry_command@findex C1 l51
-  |EXTRA
   |element_node:{name}
   |index_entry:I{fn,8}
    *line_arg C3
@@ -519,7 +496,6 @@ $result_tree_text{'test_index'} = '*document_root C13
    {normal_text:b\\n}
   {empty_line:\\n}
   *index_entry_command@findex C1 l203
-  |EXTRA
   |element_node:{name}
   |index_entry:I{fn,9}
    *line_arg C3
@@ -528,7 +504,6 @@ $result_tree_text{'test_index'} = '*document_root C13
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l205 {name1 looooooooooooooooooooooooooooooooooooooooooooooooooooooooong}
- |EXTRA
  |identifier:{name1-looooooooooooooooooooooooooooooooooooooooooooooooooooooooong}
  |is_target:{1}
  |isindex:{1}
@@ -539,7 +514,6 @@ $result_tree_text{'test_index'} = '*document_root C13
     {normal_text:name1 looooooooooooooooooooooooooooooooooooooooooooooooooooooooong}
     {spaces_after_argument:\\n}
  *normal_command@appendix C13 l206 {Index}
- |EXTRA
  |section_heading_number:{A}
  |section_level:{1}
  |section_number:{3}
@@ -550,7 +524,6 @@ $result_tree_text{'test_index'} = '*document_root C13
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 l208
-  |EXTRA
   |element_node:{name1-looooooooooooooooooooooooooooooooooooooooooooooooooooooooong}
   |index_entry:I{cp,6}
    *line_arg C3
@@ -563,7 +536,6 @@ $result_tree_text{'test_index'} = '*document_root C13
   *paragraph C1
    {normal_text:Concept index\\n}
   *normal_command@printindex C1 l212
-  |EXTRA
   |global_command_number:{1}
   |misc_args:A{cp}
    *line_arg C3
@@ -572,7 +544,6 @@ $result_tree_text{'test_index'} = '*document_root C13
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@findex C1 l214
-  |EXTRA
   |element_node:{name1-looooooooooooooooooooooooooooooooooooooooooooooooooooooooong}
   |index_entry:I{fn,10}
    *line_arg C3
@@ -583,7 +554,6 @@ $result_tree_text{'test_index'} = '*document_root C13
   *paragraph C1
    {normal_text:Functions index\\n}
   *normal_command@printindex C1 l217
-  |EXTRA
   |global_command_number:{2}
   |misc_args:A{fn}
    *line_arg C3
@@ -592,7 +562,6 @@ $result_tree_text{'test_index'} = '*document_root C13
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@appendixsec C2 l219 {appendixsec}
- |EXTRA
  |identifier:{appendixsec}
  |is_target:{1}
  |section_heading_number:{A.1}
@@ -605,7 +574,6 @@ $result_tree_text{'test_index'} = '*document_root C13
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@appendixsubsec C2 l221 {appendixsubsec}
- |EXTRA
  |identifier:{appendixsubsec}
  |is_target:{1}
  |section_heading_number:{A.1.1}
@@ -618,7 +586,6 @@ $result_tree_text{'test_index'} = '*document_root C13
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@appendixsubsubsec C4 l223 {appendixsubsubsec}
- |EXTRA
  |identifier:{appendixsubsubsec}
  |is_target:{1}
  |section_heading_number:{A.1.1.1}
@@ -631,7 +598,6 @@ $result_tree_text{'test_index'} = '*document_root C13
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@chapheading C1 l225
-  |EXTRA
   |global_command_number:{1}
   |heading_number:{1}
    *line_arg C3
@@ -640,7 +606,6 @@ $result_tree_text{'test_index'} = '*document_root C13
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@centerchap C2 l227 {centerchap}
- |EXTRA
  |identifier:{centerchap}
  |is_target:{1}
  |section_level:{1}
@@ -652,7 +617,6 @@ $result_tree_text{'test_index'} = '*document_root C13
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@chapter C7 l229 {chapter end}
- |EXTRA
  |identifier:{chapter-end}
  |is_target:{1}
  |section_heading_number:{B}
@@ -665,7 +629,6 @@ $result_tree_text{'test_index'} = '*document_root C13
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 l231
-  |EXTRA
   |element_node:{name1-looooooooooooooooooooooooooooooooooooooooooooooooooooooooong}
   |index_entry:I{cp,7}
    *line_arg C3
@@ -674,7 +637,6 @@ $result_tree_text{'test_index'} = '*document_root C13
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@anchor C1 l233
-  |EXTRA
   |identifier:{a-counting-anchor}
   |is_target:{1}
    *brace_arg C1

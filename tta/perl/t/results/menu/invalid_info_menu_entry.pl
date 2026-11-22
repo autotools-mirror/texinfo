@@ -12,7 +12,6 @@ $result_tree_text{'invalid_info_menu_entry'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C3 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -29,7 +28,6 @@ $result_tree_text{'invalid_info_menu_entry'} = '*document_root C2
    *menu_entry C4 l4
     {menu_entry_leading_text:* }
     *menu_entry_node C4
-    |EXTRA
     |manual_content:A{1|1}
     |node_content:A{3|3}
     |normalized:{a_003a}
@@ -51,7 +49,6 @@ $result_tree_text{'invalid_info_menu_entry'} = '*document_root C2
        {normal_text:name:}
     {menu_entry_separator:: }
     *menu_entry_node C4
-    |EXTRA
     |manual_content:A{1|1}
     |node_content:A{3|3}
     |normalized:{node}
@@ -69,7 +66,6 @@ $result_tree_text{'invalid_info_menu_entry'} = '*document_root C2
      {normal_text:name}
     {menu_entry_separator:: }
     *menu_entry_node C4
-    |EXTRA
     |manual_content:A{1|1}
     |node_content:A{3|3}
     |normalized:{node_002e-}
@@ -89,7 +85,6 @@ $result_tree_text{'invalid_info_menu_entry'} = '*document_root C2
      {normal_text:name}
     {menu_entry_separator:: }
     *menu_entry_node C4
-    |EXTRA
     |manual_content:A{1|1}
     |node_content:A{3|3}
     |normalized:{node_002cn}
@@ -109,7 +104,6 @@ $result_tree_text{'invalid_info_menu_entry'} = '*document_root C2
      {normal_text:name}
     {menu_entry_separator:: }
     *menu_entry_node C4
-    |EXTRA
     |manual_content:A{1|1}
     |node_content:A{3|3}
     |normalized:{node-n}
@@ -124,7 +118,6 @@ $result_tree_text{'invalid_info_menu_entry'} = '*document_root C2
      *preformatted C1
       {normal_text:d3\\n}
    *normal_command@end C1 l9
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }

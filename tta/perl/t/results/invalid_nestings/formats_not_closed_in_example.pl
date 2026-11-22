@@ -43,20 +43,17 @@ $result_tree_text{'formats_not_closed_in_example'} = '*document_root C1
         *preformatted C1
          {empty_line:\\n}
        *normal_command@item C1 l10
-       |EXTRA
        |item_number:{1}
         *preformatted C2
          {ignorable_spaces_after_command: }
          {normal_text:first item\\n}
        *normal_command@item C1 l11
-       |EXTRA
        |item_number:{2}
         *preformatted C3
          {ignorable_spaces_after_command: }
          {normal_text:an item\\n}
          {empty_line:\\n}
    *normal_command@end C1 l13
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }

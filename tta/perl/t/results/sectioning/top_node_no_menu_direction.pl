@@ -12,7 +12,6 @@ $result_tree_text{'top_node_no_menu_direction'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C4 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -29,7 +28,6 @@ $result_tree_text{'top_node_no_menu_direction'} = '*document_root C3
    *menu_entry C4 l4
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{chap-node}
      {normal_text:chap node}
@@ -40,7 +38,6 @@ $result_tree_text{'top_node_no_menu_direction'} = '*document_root C3
    *menu_entry C4 l5
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{Top}
      {normal_text:TOP}
@@ -49,7 +46,6 @@ $result_tree_text{'top_node_no_menu_direction'} = '*document_root C3
      *preformatted C1
       {normal_text:myself\\n}
    *normal_command@end C1 l6
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -57,7 +53,6 @@ $result_tree_text{'top_node_no_menu_direction'} = '*document_root C3
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l8 {chap node}
- |EXTRA
  |identifier:{chap-node}
  |is_target:{1}
  |node_number:{2}
@@ -67,12 +62,10 @@ $result_tree_text{'top_node_no_menu_direction'} = '*document_root C3
     {normal_text:chap node}
    *line_arg
    *line_arg C1
-   |EXTRA
    |node_content:A{0|0}
    |normalized:{Top}
     {normal_text:top}
    *line_arg C2
-   |EXTRA
    |node_content:A{0|0}
    |normalized:{Top}
     {normal_text:TOP}

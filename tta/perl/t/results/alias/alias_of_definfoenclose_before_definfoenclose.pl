@@ -12,7 +12,6 @@ $result_tree_text{'alias_of_definfoenclose_before_definfoenclose'} = '*document_
  *before_node_section C2
   *preamble_before_content C4
    *normal_command@alias C1 l1
-   |EXTRA
    |misc_args:A{new|phoo}
     *line_arg C3
      {spaces_before_argument: }
@@ -20,7 +19,6 @@ $result_tree_text{'alias_of_definfoenclose_before_definfoenclose'} = '*document_
      {spaces_after_argument:\\n}
    {empty_line:\\n}
    *normal_command@definfoenclose C1 l3
-   |EXTRA
    |misc_args:A{phoo|;|:}
     *line_arg C3
      {spaces_before_argument: }
@@ -29,7 +27,6 @@ $result_tree_text{'alias_of_definfoenclose_before_definfoenclose'} = '*document_
    {empty_line:\\n}
   *paragraph C2
    *definfoenclose_command@phoo C1 l5
-   |EXTRA
    |alias_of:{new}
    |begin:{;}
    |end:{:}

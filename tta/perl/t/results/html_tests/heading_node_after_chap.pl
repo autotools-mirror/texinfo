@@ -17,7 +17,6 @@ $result_tree_text{'heading_node_after_chap'} = '*document_root C6
      {normal_text:heading node after chap}
      {spaces_after_argument:\\n}
  *normal_command@node C1 l2 {Cap 1}
- |EXTRA
  |identifier:{Cap-1}
  |is_target:{1}
  |node_number:{1}
@@ -27,7 +26,6 @@ $result_tree_text{'heading_node_after_chap'} = '*document_root C6
     {normal_text:Cap 1}
     {spaces_after_argument:\\n}
  *normal_command@chapter C5 l3 {Chapter One}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{1}
@@ -45,14 +43,12 @@ $result_tree_text{'heading_node_after_chap'} = '*document_root C6
   *paragraph C2
    *normal_command@xref C1 l6
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{Node-1}
      {normal_text:Node 1}
    {normal_text:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l8 {Cap 2}
- |EXTRA
  |identifier:{Cap-2}
  |is_target:{1}
  |node_number:{2}
@@ -62,7 +58,6 @@ $result_tree_text{'heading_node_after_chap'} = '*document_root C6
     {normal_text:Cap 2}
     {spaces_after_argument:\\n}
  *normal_command@chapter C2 l9 {Chapter Two}
- |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
  |section_number:{2}
@@ -73,7 +68,6 @@ $result_tree_text{'heading_node_after_chap'} = '*document_root C6
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C2 l11 {Node 1}
- |EXTRA
  |identifier:{Node-1}
  |is_target:{1}
  |node_number:{3}
@@ -83,7 +77,6 @@ $result_tree_text{'heading_node_after_chap'} = '*document_root C6
     {normal_text:Node 1}
     {spaces_after_argument:\\n}
   *normal_command@heading C1 l12
-  |EXTRA
   |global_command_number:{1}
   |heading_number:{1}
    *line_arg C3

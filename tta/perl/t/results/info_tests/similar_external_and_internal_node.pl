@@ -12,7 +12,6 @@ $result_tree_text{'similar_external_and_internal_node'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C3 l1 {aa}
- |EXTRA
  |identifier:{aa}
  |is_target:{1}
  |node_number:{1}
@@ -21,7 +20,6 @@ $result_tree_text{'similar_external_and_internal_node'} = '*document_root C2
     {spaces_before_argument: }
     {normal_text:aa}
    *line_arg C6
-   |EXTRA
    |manual_content:A{2|2}
    |node_content:A{4|4}
    |normalized:{bb}
@@ -35,7 +33,6 @@ $result_tree_text{'similar_external_and_internal_node'} = '*document_root C2
   *paragraph C8
    *normal_command@xref C4 l3
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
      *normal_command@emph C1 l3
       *brace_container C1
@@ -47,7 +44,6 @@ $result_tree_text{'similar_external_and_internal_node'} = '*document_root C2
    {normal_text:.\\n}
    *normal_command@xref C5 l4
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
      *normal_command@var C1 l4
       *brace_container C1
@@ -60,7 +56,6 @@ $result_tree_text{'similar_external_and_internal_node'} = '*document_root C2
    {normal_text:.\\n}
    *normal_command@xref C1 l5
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{aa}
      *normal_command@emph C1 l5
@@ -69,7 +64,6 @@ $result_tree_text{'similar_external_and_internal_node'} = '*document_root C2
    {normal_text:.\\n}
    *normal_command@xref C1 l6
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{aa}
      *normal_command@var C1 l6

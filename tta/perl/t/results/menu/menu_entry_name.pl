@@ -21,7 +21,6 @@ $result_tree_text{'menu_entry_name'} = '*document_root C1
      {normal_text:a}
     {menu_entry_separator:: }
     *menu_entry_node C5
-    |EXTRA
     |manual_content:A{1|1}
     |node_content:A{3|4}
     |normalized:{b}
@@ -36,7 +35,6 @@ $result_tree_text{'menu_entry_name'} = '*document_root C1
      {normal_text:a}
     {menu_entry_separator:: }
     *menu_entry_node C4
-    |EXTRA
     |manual_content:A{1|1}
     |node_content:A{3|3}
     |normalized:{b1_002ec}
@@ -54,7 +52,6 @@ $result_tree_text{'menu_entry_name'} = '*document_root C1
      {normal_text:a}
     {menu_entry_separator:: }
     *menu_entry_node C4
-    |EXTRA
     |manual_content:A{1|1}
     |node_content:A{3|3}
     |normalized:{b2_002ec}
@@ -72,7 +69,6 @@ $result_tree_text{'menu_entry_name'} = '*document_root C1
      {normal_text:a}
     {menu_entry_separator:: }
     *menu_entry_node C4
-    |EXTRA
     |manual_content:A{1|1}
     |node_content:A{3|3}
     |normalized:{b3_002ec}
@@ -90,7 +86,6 @@ $result_tree_text{'menu_entry_name'} = '*document_root C1
      {normal_text:a}
     {menu_entry_separator:: }
     *menu_entry_node C4
-    |EXTRA
     |manual_content:A{1|1}
     |node_content:A{3|3}
     |normalized:{b1_002e}
@@ -108,7 +103,6 @@ $result_tree_text{'menu_entry_name'} = '*document_root C1
      {normal_text:a }
     {menu_entry_separator:: }
     *menu_entry_node C5
-    |EXTRA
     |manual_content:A{1|1}
     |node_content:A{4|4}
     |normalized:{b2-_002e}
@@ -127,7 +121,6 @@ $result_tree_text{'menu_entry_name'} = '*document_root C1
      {normal_text:a.n}
     {menu_entry_separator:: }
     *menu_entry_node C4
-    |EXTRA
     |manual_content:A{1|1}
     |node_content:A{3|3}
     |normalized:{b3_002e}
@@ -145,7 +138,6 @@ $result_tree_text{'menu_entry_name'} = '*document_root C1
      {normal_text:a}
     {menu_entry_separator:: }
     *menu_entry_node C4
-    |EXTRA
     |manual_content:A{1|1}
     |node_content:A{3|3}
     |normalized:{b1_002ec}
@@ -163,7 +155,6 @@ $result_tree_text{'menu_entry_name'} = '*document_root C1
      {normal_text:a}
     {menu_entry_separator:: }
     *menu_entry_node C4
-    |EXTRA
     |manual_content:A{1|1}
     |node_content:A{3|3}
     |normalized:{b2_002ec}
@@ -181,7 +172,6 @@ $result_tree_text{'menu_entry_name'} = '*document_root C1
      {normal_text:a}
     {menu_entry_separator:: }
     *menu_entry_node C4
-    |EXTRA
     |manual_content:A{1|1}
     |node_content:A{3|3}
     |normalized:{b3_002ec}
@@ -194,7 +184,6 @@ $result_tree_text{'menu_entry_name'} = '*document_root C1
      *preformatted C1
       {normal_text:d\\n}
    *normal_command@end C1 l12
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }

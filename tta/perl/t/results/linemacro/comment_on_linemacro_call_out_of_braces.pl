@@ -12,7 +12,6 @@ $result_tree_text{'comment_on_linemacro_call_out_of_braces'} = '*document_root C
  *before_node_section C6
   *preamble_before_content C2
    *normal_command@linemacro C5 l1
-   |EXTRA
    |formal_args:A{a|b|c}
    |macro_name:{lm}
     *arguments_line C1
@@ -21,7 +20,6 @@ $result_tree_text{'comment_on_linemacro_call_out_of_braces'} = '*document_root C
     {raw:second |\\b\\|\\n}
     {raw:third |\\c\\|\\n}
     *normal_command@end C1 l5
-    |EXTRA
     |text_arg:{linemacro}
      *line_arg C3
       {spaces_before_argument: }

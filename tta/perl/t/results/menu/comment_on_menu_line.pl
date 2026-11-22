@@ -12,7 +12,6 @@ $result_tree_text{'comment_on_menu_line'} = '*document_root C4
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C4 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -33,7 +32,6 @@ $result_tree_text{'comment_on_menu_line'} = '*document_root C4
    *menu_entry C4 l4
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{first}
      {normal_text:first}
@@ -42,7 +40,6 @@ $result_tree_text{'comment_on_menu_line'} = '*document_root C4
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 l5
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -50,7 +47,6 @@ $result_tree_text{'comment_on_menu_line'} = '*document_root C4
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@chapter C1 l7 {first}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{1}
@@ -60,7 +56,6 @@ $result_tree_text{'comment_on_menu_line'} = '*document_root C4
     {normal_text:first}
     {spaces_after_argument:\\n}
  *normal_command@node C1 l8 {first}
- |EXTRA
  |identifier:{first}
  |is_target:{1}
  |node_number:{2}

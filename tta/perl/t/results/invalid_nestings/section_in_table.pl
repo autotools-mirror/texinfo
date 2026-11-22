@@ -27,7 +27,6 @@ $result_tree_text{'section_in_table'} = '*document_root C2
     *table_definition C1
      {empty_line:\\n}
  *normal_command@section C5 l4 {Subsection}
- |EXTRA
  |identifier:{Subsection}
  |is_target:{1}
  |section_heading_number:{1}

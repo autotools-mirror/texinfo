@@ -12,7 +12,6 @@ $result_tree_text{'end_sentence_after_or_not_after_quoted_node'} = '*document_ro
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -22,7 +21,6 @@ $result_tree_text{'end_sentence_after_or_not_after_quoted_node'} = '*document_ro
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C14 l2 {top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -34,7 +32,6 @@ $result_tree_text{'end_sentence_after_or_not_after_quoted_node'} = '*document_ro
   *paragraph C4
    *normal_command@ref C2 l4
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{aaa}
      {normal_text:aaa}
@@ -44,7 +41,6 @@ $result_tree_text{'end_sentence_after_or_not_after_quoted_node'} = '*document_ro
    {normal_text:. b.\\n}
    *normal_command@ref C2 l5
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{aaB}
      {normal_text:aaB}
@@ -56,7 +52,6 @@ $result_tree_text{'end_sentence_after_or_not_after_quoted_node'} = '*document_ro
   *paragraph C4
    *normal_command@ref C2 l7
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{c_002edd}
      {normal_text:c.dd}
@@ -66,7 +61,6 @@ $result_tree_text{'end_sentence_after_or_not_after_quoted_node'} = '*document_ro
    {normal_text:. v.\\n}
    *normal_command@ref C2 l8
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{c_002edD}
      {normal_text:c.dD}
@@ -76,28 +70,24 @@ $result_tree_text{'end_sentence_after_or_not_after_quoted_node'} = '*document_ro
    {normal_text:. v.\\n}
   {empty_line:\\n}
   *normal_command@anchor C1 l10
-  |EXTRA
   |identifier:{aaa}
   |is_target:{1}
    *brace_arg C1
     {normal_text:aaa}
   {spaces_after_close_brace:\\n}
   *normal_command@anchor C1 l11
-  |EXTRA
   |identifier:{aaB}
   |is_target:{1}
    *brace_arg C1
     {normal_text:aaB}
   {spaces_after_close_brace:\\n}
   *normal_command@anchor C1 l12
-  |EXTRA
   |identifier:{c_002edd}
   |is_target:{1}
    *brace_arg C1
     {normal_text:c.dd}
   {spaces_after_close_brace:\\n}
   *normal_command@anchor C1 l13
-  |EXTRA
   |identifier:{c_002edD}
   |is_target:{1}
    *brace_arg C1

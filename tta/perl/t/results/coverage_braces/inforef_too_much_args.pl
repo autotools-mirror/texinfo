@@ -12,7 +12,6 @@ $result_tree_text{'inforef_too_much_args'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C3 l1 {chapter}
- |EXTRA
  |identifier:{chapter}
  |is_target:{1}
  |node_number:{1}
@@ -25,7 +24,6 @@ $result_tree_text{'inforef_too_much_args'} = '*document_root C2
   *paragraph C2
    *normal_command@inforef C3 l3
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
      {normal_text:chapter}
     *brace_arg C2

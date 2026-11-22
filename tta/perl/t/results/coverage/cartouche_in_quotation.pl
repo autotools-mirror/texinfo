@@ -24,7 +24,6 @@ $result_tree_text{'cartouche_in_quotation'} = '*document_root C1
     *paragraph C1
      {normal_text:In cartouche in quotation\\n}
     *normal_command@end C1 l5
-    |EXTRA
     |text_arg:{cartouche}
      *line_arg C3
       {spaces_before_argument: }
@@ -33,7 +32,6 @@ $result_tree_text{'cartouche_in_quotation'} = '*document_root C1
    *paragraph C1
     {normal_text:end quotation\\n}
    *normal_command@end C1 l7
-   |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }

@@ -12,7 +12,6 @@ $result_tree_text{'macro_expansion_end_in_conditional_end'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C4
    *normal_command@macro C5 l1
-   |EXTRA
    |formal_args:A{}
    |macro_name:{beginendcond}
     *arguments_line C1
@@ -21,7 +20,6 @@ $result_tree_text{'macro_expansion_end_in_conditional_end'} = '*document_root C1
     {raw:Defined\\n}
     {raw:@end if\\n}
     *normal_command@end C1 l5
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -29,7 +27,6 @@ $result_tree_text{'macro_expansion_end_in_conditional_end'} = '*document_root C1
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *normal_command@set C1
-   |EXTRA
    |misc_args:A{flag|1}
     *line_arg C3
      {spaces_before_argument: }
@@ -52,7 +49,6 @@ $result_tree_text{'macro_expansion_end_in_conditional_end'} = '*document_root C1
    >SOURCEMARKS
    >expanded_conditional_command<end;1><p:8>
     >*normal_command@end C1 l9:@beginendcond
-    >|EXTRA
     >|text_arg:{ifset}
      >*line_arg C3
       >{spaces_before_argument: }

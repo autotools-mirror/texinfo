@@ -37,7 +37,6 @@ $result_tree_text{'section_in_nested_block_commands'} = '*document_root C2
        {normal_text:in quotation\\n}
       {empty_line:\\n}
  *normal_command@section C1 l9 {a section}
- |EXTRA
  |identifier:{a-section}
  |is_target:{1}
  |section_heading_number:{1}

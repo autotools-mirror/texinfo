@@ -18,7 +18,6 @@ $result_tree_text{'menu_entry_node_comments'} = '*document_root C1
    *menu_entry C4 l2
     {menu_entry_leading_text:* }
     *menu_entry_node C4
-    |EXTRA
     |manual_content:A{1|1}
     |node_content:A{3|3}
     |normalized:{a1c}
@@ -37,7 +36,6 @@ $result_tree_text{'menu_entry_node_comments'} = '*document_root C1
    *menu_entry C4 l3
     {menu_entry_leading_text:* }
     *menu_entry_node C4
-    |EXTRA
     |manual_content:A{1|1}
     |node_content:A{3|3}
     |normalized:{a2c}
@@ -56,7 +54,6 @@ $result_tree_text{'menu_entry_node_comments'} = '*document_root C1
    *menu_entry C4 l4
     {menu_entry_leading_text:* }
     *menu_entry_node C4
-    |EXTRA
     |manual_content:A{1|1}
     |node_content:A{3|3}
     |normalized:{a3c}
@@ -76,7 +73,6 @@ $result_tree_text{'menu_entry_node_comments'} = '*document_root C1
    *menu_entry C4 l5
     {menu_entry_leading_text:* }
     *menu_entry_node C6
-    |EXTRA
     |manual_content:A{1|1}
     |node_content:A{4|5}
     |normalized:{a4}
@@ -95,7 +91,6 @@ $result_tree_text{'menu_entry_node_comments'} = '*document_root C1
         {rawline_text:c}
         {spaces_after_argument:\\n}
    *normal_command@end C1 l6
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }

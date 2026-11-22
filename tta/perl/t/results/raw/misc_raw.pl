@@ -20,7 +20,6 @@ $result_tree_text{'misc_raw'} = '*document_root C1
     *rawpreformatted C1
      {normal_text:in html <br> }
     *normal_command@end C1 l3
-    |EXTRA
     |text_arg:{html}
      *line_arg C3
       {spaces_before_argument: }
@@ -34,7 +33,6 @@ $result_tree_text{'misc_raw'} = '*document_root C1
       {normal_text:in tex}
       {spaces_after_argument:\\n}
     *normal_command@end C1 l6
-    |EXTRA
     |text_arg:{tex}
      *line_arg C3
       {spaces_before_argument: }
@@ -48,7 +46,6 @@ $result_tree_text{'misc_raw'} = '*document_root C1
    {raw:in  v---erbatim`` <>\\n}
    {raw:in verbatim2\\n}
    *normal_command@end C1 l11
-   |EXTRA
    |text_arg:{verbatim}
     *line_arg C3
      {spaces_before_argument: }

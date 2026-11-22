@@ -12,7 +12,6 @@ $result_tree_text{'node_nested_parentheses'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C3 l1 {first}
- |EXTRA
  |identifier:{first}
  |is_target:{1}
  |node_number:{1}
@@ -29,7 +28,6 @@ $result_tree_text{'node_nested_parentheses'} = '*document_root C2
    *menu_entry C4 l4
     {menu_entry_leading_text:* }
     *menu_entry_node C3
-    |EXTRA
     |manual_content:A{1|1}
      {normal_text:(}
      {normal_text:(some) file}
@@ -41,7 +39,6 @@ $result_tree_text{'node_nested_parentheses'} = '*document_root C2
    *menu_entry C4 l5
     {menu_entry_leading_text:* }
     *menu_entry_node C4
-    |EXTRA
     |manual_content:A{1|1}
     |node_content:A{3|3}
     |normalized:{node-name}
@@ -56,7 +53,6 @@ $result_tree_text{'node_nested_parentheses'} = '*document_root C2
    *menu_entry C4 l6
     {menu_entry_leading_text:* }
     *menu_entry_node C5
-    |EXTRA
     |manual_content:A{1|1}
     |node_content:A{4|4}
     |normalized:{close_0029}
@@ -74,7 +70,6 @@ $result_tree_text{'node_nested_parentheses'} = '*document_root C2
    *menu_entry C4 l7
     {menu_entry_leading_text:* }
     *menu_entry_node C3
-    |EXTRA
     |node_content:A{0|2}
     |normalized:{_0028_0029_0029_0029-error}
      {normal_text:(}
@@ -87,7 +82,6 @@ $result_tree_text{'node_nested_parentheses'} = '*document_root C2
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 l8
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }

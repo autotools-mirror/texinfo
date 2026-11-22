@@ -35,7 +35,6 @@ $result_tree_text{'heading_command_in_commands'} = '*document_root C1
       {normal_text:in example}
       {spaces_after_argument:\\n}
    *normal_command@end C1 l8
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
@@ -52,7 +51,6 @@ $result_tree_text{'heading_command_in_commands'} = '*document_root C1
      {normal_text:in quotation}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l12
-   |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }

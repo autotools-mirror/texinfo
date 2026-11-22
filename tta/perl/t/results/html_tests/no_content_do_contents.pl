@@ -15,7 +15,6 @@ $result_tree_text{'no_content_do_contents'} = '*document_root C6
    {text_before_beginning:\\n}
   *preamble_before_content
  *normal_command@node C1 no_content.texi:l3 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -25,7 +24,6 @@ $result_tree_text{'no_content_do_contents'} = '*document_root C6
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C6 no_content.texi:l4 {No ccontent}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -44,7 +42,6 @@ $result_tree_text{'no_content_do_contents'} = '*document_root C6
    *menu_entry C4 no_content.texi:l9
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{chapter}
      {normal_text:chapter}
@@ -53,7 +50,6 @@ $result_tree_text{'no_content_do_contents'} = '*document_root C6
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 no_content.texi:l10
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -61,7 +57,6 @@ $result_tree_text{'no_content_do_contents'} = '*document_root C6
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 no_content.texi:l12 {chapter}
- |EXTRA
  |identifier:{chapter}
  |is_target:{1}
  |node_number:{2}
@@ -71,7 +66,6 @@ $result_tree_text{'no_content_do_contents'} = '*document_root C6
     {normal_text:chapter}
     {spaces_after_argument:\\n}
  *normal_command@chapter C4 no_content.texi:l13 {Chapter 1}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}

@@ -21,7 +21,6 @@ $result_tree_text{'thischapter_in_footnote_in_evenfooting'} = '*document_root C1
       *brace_container C2
        {normal_text:GG}
        *normal_command@footnote C1 l2
-       |EXTRA
        |global_command_number:{1}
         *brace_command_context C1
          *paragraph C2
@@ -31,7 +30,6 @@ $result_tree_text{'thischapter_in_footnote_in_evenfooting'} = '*document_root C1
      *normal_command@|
      {normal_text: }
      *normal_command@footnote C1 l2
-     |EXTRA
      |global_command_number:{2}
       *brace_command_context C1
        *paragraph C2

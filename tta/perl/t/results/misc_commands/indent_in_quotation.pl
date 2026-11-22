@@ -18,11 +18,9 @@ $result_tree_text{'indent_in_quotation'} = '*document_root C1
    *normal_command@indent l2
    {ignorable_spaces_after_command:\\n}
    *paragraph C1
-   |EXTRA
    |indent:{1}
     {normal_text:indent in quotation\\n}
    *normal_command@end C1 l4
-   |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }

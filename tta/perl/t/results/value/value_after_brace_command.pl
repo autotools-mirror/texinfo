@@ -12,14 +12,12 @@ $result_tree_text{'value_after_brace_command'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C3
    *normal_command@set C1
-   |EXTRA
    |misc_args:A{bracedletter|{a}}
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:bracedletter {a}}
      {spaces_after_argument:\\n}
    *normal_command@set C1
-   |EXTRA
    |misc_args:A{unknowncmd|@unknown}
     *line_arg C3
      {spaces_before_argument: }

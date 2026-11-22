@@ -12,7 +12,6 @@ $result_tree_text{'kbdinputstyle'} = '*document_root C1
  *before_node_section C27
   *preamble_before_content C2
    *normal_command@macro C14 l1
-   |EXTRA
    |formal_args:A{}
    |macro_name:{codekbdmacro}
     *arguments_line C1
@@ -30,7 +29,6 @@ $result_tree_text{'kbdinputstyle'} = '*document_root C1
     {raw:@code{for nesting in example @r{r in code in example @kbd{in r in code in example}}}\\n}
     {raw:@end example\\n}
     *normal_command@end C1 l14
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -42,7 +40,6 @@ $result_tree_text{'kbdinputstyle'} = '*document_root C1
    {normal_text:kbdinputstyle code\\n}
   {empty_line:\\n}
   *normal_command@kbdinputstyle C1 l18
-  |EXTRA
   |global_command_number:{1}
   |misc_args:A{code}
    *line_arg C3
@@ -63,7 +60,6 @@ $result_tree_text{'kbdinputstyle'} = '*document_root C1
        {normal_text:in nested code}
    {normal_text:.\\n}
    *normal_command@kbd C1 l20:@codekbdmacro
-   |EXTRA
    |code:{1}
     *brace_container C1
      {normal_text:kbd out of example}
@@ -72,7 +68,6 @@ $result_tree_text{'kbdinputstyle'} = '*document_root C1
     *brace_container C2
      {normal_text:kbd }
      *normal_command@kbd C1 l20:@codekbdmacro
-     |EXTRA
      |code:{1}
       *brace_container C1
        {normal_text:in code}
@@ -84,7 +79,6 @@ $result_tree_text{'kbdinputstyle'} = '*document_root C1
       *brace_container C2
        {normal_text:r in code }
        *normal_command@kbd C1 l20:@codekbdmacro
-       |EXTRA
        |code:{1}
         *brace_container C1
          {normal_text:in r in code}
@@ -105,7 +99,6 @@ $result_tree_text{'kbdinputstyle'} = '*document_root C1
         {normal_text:in nested code}
     {normal_text:.\\n}
     *normal_command@kbd C1 l20:@codekbdmacro
-    |EXTRA
     |code:{1}
      *brace_container C1
       {normal_text:kbd in example}
@@ -114,7 +107,6 @@ $result_tree_text{'kbdinputstyle'} = '*document_root C1
      *brace_container C3
       {normal_text:kbd }
       *normal_command@kbd C1 l20:@codekbdmacro
-      |EXTRA
       |code:{1}
        *brace_container C1
         {normal_text:in code}
@@ -127,13 +119,11 @@ $result_tree_text{'kbdinputstyle'} = '*document_root C1
        *brace_container C2
         {normal_text:r in code in example }
         *normal_command@kbd C1 l20:@codekbdmacro
-        |EXTRA
         |code:{1}
          *brace_container C1
           {normal_text:in r in code in example}
     {normal_text:\\n}
    *normal_command@end C1 l20:@codekbdmacro
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
@@ -147,7 +137,6 @@ $result_tree_text{'kbdinputstyle'} = '*document_root C1
    {normal_text:kbdinputstyle example\\n}
   {empty_line:\\n}
   *normal_command@kbdinputstyle C1 l24
-  |EXTRA
   |global_command_number:{2}
   |misc_args:A{example}
    *line_arg C3
@@ -168,7 +157,6 @@ $result_tree_text{'kbdinputstyle'} = '*document_root C1
        {normal_text:in nested code}
    {normal_text:.\\n}
    *normal_command@kbd C1 l26:@codekbdmacro
-   |EXTRA
    |code:{1}
     *brace_container C1
      {normal_text:kbd out of example}
@@ -177,7 +165,6 @@ $result_tree_text{'kbdinputstyle'} = '*document_root C1
     *brace_container C2
      {normal_text:kbd }
      *normal_command@kbd C1 l26:@codekbdmacro
-     |EXTRA
      |code:{1}
       *brace_container C1
        {normal_text:in code}
@@ -189,7 +176,6 @@ $result_tree_text{'kbdinputstyle'} = '*document_root C1
       *brace_container C2
        {normal_text:r in code }
        *normal_command@kbd C1 l26:@codekbdmacro
-       |EXTRA
        |code:{1}
         *brace_container C1
          {normal_text:in r in code}
@@ -232,7 +218,6 @@ $result_tree_text{'kbdinputstyle'} = '*document_root C1
           {normal_text:in r in code in example}
     {normal_text:\\n}
    *normal_command@end C1 l26:@codekbdmacro
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
@@ -246,7 +231,6 @@ $result_tree_text{'kbdinputstyle'} = '*document_root C1
    {normal_text:kbdinputstyle distinct\\n}
   {empty_line:\\n}
   *normal_command@kbdinputstyle C1 l30
-  |EXTRA
   |global_command_number:{3}
   |misc_args:A{distinct}
    *line_arg C3
@@ -325,7 +309,6 @@ $result_tree_text{'kbdinputstyle'} = '*document_root C1
           {normal_text:in r in code in example}
     {normal_text:\\n}
    *normal_command@end C1 l32:@codekbdmacro
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }

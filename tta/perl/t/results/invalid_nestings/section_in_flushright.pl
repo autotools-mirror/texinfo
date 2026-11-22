@@ -20,7 +20,6 @@ $result_tree_text{'section_in_flushright'} = '*document_root C2
     {normal_text:text flushed right\\n}
    {empty_line:\\n}
  *normal_command@section C1 l5 {a section}
- |EXTRA
  |identifier:{a-section}
  |is_target:{1}
  |section_heading_number:{1}

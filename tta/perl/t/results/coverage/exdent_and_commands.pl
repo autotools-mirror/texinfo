@@ -36,7 +36,6 @@ $result_tree_text{'exdent_and_commands'} = '*document_root C1
    *paragraph C1
     {normal_text:after exdented\\n}
    *normal_command@end C1 l7
-   |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }
@@ -68,7 +67,6 @@ $result_tree_text{'exdent_and_commands'} = '*document_root C1
    *preformatted C1
     {normal_text:after exdented\\n}
    *normal_command@end C1 l15
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }

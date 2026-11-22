@@ -18,7 +18,6 @@ $result_tree_text{'text_on_example_command_line'} = '*document_root C1
      {normal_text:text on line}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l2
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
@@ -34,7 +33,6 @@ $result_tree_text{'text_on_example_command_line'} = '*document_root C1
    *preformatted C1
     {normal_text:normal text\\n}
    *normal_command@end C1 l6
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
@@ -48,7 +46,6 @@ $result_tree_text{'text_on_example_command_line'} = '*document_root C1
    *preformatted C1
     {normal_text:in example\\n}
    *normal_command@end C1 l10
-   |EXTRA
    |text_arg:{example text after end}
     *line_arg C3
      {spaces_before_argument: }
@@ -64,14 +61,12 @@ $result_tree_text{'text_on_example_command_line'} = '*document_root C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *normal_command@end C1 l14
-    |EXTRA
     |text_arg:{example text after end example nested in example}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:example text after end example nested in example}
       {spaces_after_argument:\\n}
    *normal_command@end C1 l15
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }

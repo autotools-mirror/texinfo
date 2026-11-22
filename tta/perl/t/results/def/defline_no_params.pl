@@ -16,7 +16,6 @@ $result_tree_text{'defline_no_params'} = '*document_root C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *normal_command@defline C1 l2
-   |EXTRA
    |def_command:{defline}
    |original_def_cmdname:{defline}
     *line_arg C5
@@ -33,7 +32,6 @@ $result_tree_text{'defline_no_params'} = '*document_root C1
     *paragraph C1
      {normal_text:Description of truc\\n}
    *normal_command@end C1 l4
-   |EXTRA
    |text_arg:{defblock}
     *line_arg C3
      {spaces_before_argument: }

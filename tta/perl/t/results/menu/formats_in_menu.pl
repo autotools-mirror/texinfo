@@ -12,7 +12,6 @@ $result_tree_text{'formats_in_menu'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C3 l1 {first}
- |EXTRA
  |identifier:{first}
  |is_target:{1}
  |node_number:{1}
@@ -29,7 +28,6 @@ $result_tree_text{'formats_in_menu'} = '*document_root C2
    *menu_entry C4 l4
     {menu_entry_leading_text:* }
     *menu_entry_node C3
-    |EXTRA
     |manual_content:A{1|1}
      {normal_text:(}
      {normal_text:gcc}
@@ -55,7 +53,6 @@ $result_tree_text{'formats_in_menu'} = '*document_root C2
         *preformatted C1
          {normal_text:* table line::\\n}
       *normal_command@end C1 l8
-      |EXTRA
       |text_arg:{table}
        *line_arg C3
         {spaces_before_argument: }
@@ -67,7 +64,6 @@ $result_tree_text{'formats_in_menu'} = '*document_root C2
    *menu_entry C4 l10
     {menu_entry_leading_text:* }
     *menu_entry_node C3
-    |EXTRA
     |manual_content:A{1|1}
      {normal_text:(}
      {normal_text:info}
@@ -83,7 +79,6 @@ $result_tree_text{'formats_in_menu'} = '*document_root C2
       {raw:some @ verb{x atim\\n}
       {raw:* texinfo:: in @ verbatim\\n}
       *normal_command@end C1 l14
-      |EXTRA
       |text_arg:{verbatim}
        *line_arg C3
         {spaces_before_argument: }
@@ -92,7 +87,6 @@ $result_tree_text{'formats_in_menu'} = '*document_root C2
    *menu_entry C4 l15
     {menu_entry_leading_text:* }
     *menu_entry_node C3
-    |EXTRA
     |manual_content:A{1|1}
      {normal_text:(}
      {normal_text:manual2}
@@ -109,7 +103,6 @@ $result_tree_text{'formats_in_menu'} = '*document_root C2
         {empty_line:\\n}
         {normal_text:<i></i>\\n}
        *normal_command@end C1 l19
-       |EXTRA
        |text_arg:{html}
         *line_arg C3
          {spaces_before_argument: }
@@ -119,7 +112,6 @@ $result_tree_text{'formats_in_menu'} = '*document_root C2
    *menu_entry C4 l21
     {menu_entry_leading_text:* }
     *menu_entry_node C3
-    |EXTRA
     |manual_content:A{1|1}
      {normal_text:(}
      {normal_text:truc}
@@ -143,7 +135,6 @@ $result_tree_text{'formats_in_menu'} = '*document_root C2
       {normal_text:* subsubsection::\\n}
       {normal_text:Menu comment\\n}
      *normal_command@end C1 l27
-     |EXTRA
      |text_arg:{example}
       *line_arg C3
        {spaces_before_argument: }
@@ -152,7 +143,6 @@ $result_tree_text{'formats_in_menu'} = '*document_root C2
     *preformatted C1
      {empty_line:\\n}
    *normal_command@end C1 l29
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }

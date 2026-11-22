@@ -12,7 +12,6 @@ $result_tree_text{'table_nested'} = '*document_root C1
  *before_node_section C9
   *preamble_before_content C2
    *normal_command@macro C23 l1
-   |EXTRA
    |formal_args:A{}
    |macro_name:{myvtable}
     *arguments_line C1
@@ -39,7 +38,6 @@ $result_tree_text{'table_nested'} = '*document_root C1
     {raw:@end table\\n}
     {raw:After table.\\n}
     *normal_command@end C1 l23
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -65,14 +63,12 @@ $result_tree_text{'table_nested'} = '*document_root C1
     *table_entry C2
      *table_term C2
       *normal_command@item C1 l27:@myvtable
-      |EXTRA
       |index_entry:I{vr,1}
        *line_arg C3
         {spaces_before_argument: }
         {normal_text:first item}
         {spaces_after_argument:\\n}
       *normal_command@itemx C1 l27:@myvtable
-      |EXTRA
       |index_entry:I{vr,2}
        *line_arg C3
         {spaces_before_argument: }
@@ -86,7 +82,6 @@ $result_tree_text{'table_nested'} = '*document_root C1
     *table_entry C2
      *table_term C1
       *normal_command@item C1 l27:@myvtable
-      |EXTRA
       |index_entry:I{vr,3}
        *line_arg C3
         {spaces_before_argument: }
@@ -100,14 +95,12 @@ $result_tree_text{'table_nested'} = '*document_root C1
     *table_entry C1
      *table_term C1
       *normal_command@item C1 l27:@myvtable
-      |EXTRA
       |index_entry:I{vr,4}
        *line_arg C3
         {spaces_before_argument: }
         {normal_text:last}
         {spaces_after_argument:\\n}
     *normal_command@end C1 l27:@myvtable
-    |EXTRA
     |text_arg:{vtable}
      *line_arg C3
       {spaces_before_argument: }
@@ -143,7 +136,6 @@ $result_tree_text{'table_nested'} = '*document_root C1
       *paragraph C1
        {normal_text:Text without blank line 2\\n}
     *normal_command@end C1 l27:@myvtable
-    |EXTRA
     |text_arg:{table}
      *line_arg C3
       {spaces_before_argument: }
@@ -154,7 +146,6 @@ $result_tree_text{'table_nested'} = '*document_root C1
     >SOURCEMARKS
     >macro_expansion<end;1><p:12>
    *normal_command@end C1 l28
-   |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }
@@ -181,14 +172,12 @@ $result_tree_text{'table_nested'} = '*document_root C1
     *table_entry C2
      *table_term C2
       *normal_command@item C1 l32:@myvtable
-      |EXTRA
       |index_entry:I{vr,5}
        *line_arg C3
         {spaces_before_argument: }
         {normal_text:first item}
         {spaces_after_argument:\\n}
       *normal_command@itemx C1 l32:@myvtable
-      |EXTRA
       |index_entry:I{vr,6}
        *line_arg C3
         {spaces_before_argument: }
@@ -202,7 +191,6 @@ $result_tree_text{'table_nested'} = '*document_root C1
     *table_entry C2
      *table_term C1
       *normal_command@item C1 l32:@myvtable
-      |EXTRA
       |index_entry:I{vr,7}
        *line_arg C3
         {spaces_before_argument: }
@@ -216,14 +204,12 @@ $result_tree_text{'table_nested'} = '*document_root C1
     *table_entry C1
      *table_term C1
       *normal_command@item C1 l32:@myvtable
-      |EXTRA
       |index_entry:I{vr,8}
        *line_arg C3
         {spaces_before_argument: }
         {normal_text:last}
         {spaces_after_argument:\\n}
     *normal_command@end C1 l32:@myvtable
-    |EXTRA
     |text_arg:{vtable}
      *line_arg C3
       {spaces_before_argument: }
@@ -259,7 +245,6 @@ $result_tree_text{'table_nested'} = '*document_root C1
       *preformatted C1
        {normal_text:Text without blank line 2\\n}
     *normal_command@end C1 l32:@myvtable
-    |EXTRA
     |text_arg:{table}
      *line_arg C3
       {spaces_before_argument: }
@@ -270,7 +255,6 @@ $result_tree_text{'table_nested'} = '*document_root C1
     >SOURCEMARKS
     >macro_expansion<end;2><p:12>
    *normal_command@end C1 l33
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
@@ -300,14 +284,12 @@ $result_tree_text{'table_nested'} = '*document_root C1
      *table_entry C2
       *table_term C2
        *normal_command@item C1 l38:@myvtable
-       |EXTRA
        |index_entry:I{vr,9}
         *line_arg C3
          {spaces_before_argument: }
          {normal_text:first item}
          {spaces_after_argument:\\n}
        *normal_command@itemx C1 l38:@myvtable
-       |EXTRA
        |index_entry:I{vr,10}
         *line_arg C3
          {spaces_before_argument: }
@@ -321,7 +303,6 @@ $result_tree_text{'table_nested'} = '*document_root C1
      *table_entry C2
       *table_term C1
        *normal_command@item C1 l38:@myvtable
-       |EXTRA
        |index_entry:I{vr,11}
         *line_arg C3
          {spaces_before_argument: }
@@ -335,14 +316,12 @@ $result_tree_text{'table_nested'} = '*document_root C1
      *table_entry C1
       *table_term C1
        *normal_command@item C1 l38:@myvtable
-       |EXTRA
        |index_entry:I{vr,12}
         *line_arg C3
          {spaces_before_argument: }
          {normal_text:last}
          {spaces_after_argument:\\n}
      *normal_command@end C1 l38:@myvtable
-     |EXTRA
      |text_arg:{vtable}
       *line_arg C3
        {spaces_before_argument: }
@@ -378,7 +357,6 @@ $result_tree_text{'table_nested'} = '*document_root C1
        *paragraph C1
         {normal_text:Text without blank line 2\\n}
      *normal_command@end C1 l38:@myvtable
-     |EXTRA
      |text_arg:{table}
       *line_arg C3
        {spaces_before_argument: }
@@ -389,14 +367,12 @@ $result_tree_text{'table_nested'} = '*document_root C1
      >SOURCEMARKS
      >macro_expansion<end;3><p:12>
     *normal_command@end C1 l39
-    |EXTRA
     |text_arg:{quotation}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:quotation}
       {spaces_after_argument:\\n}
    *normal_command@end C1 l40
-   |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }

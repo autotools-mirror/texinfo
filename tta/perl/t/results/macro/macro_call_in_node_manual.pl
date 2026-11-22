@@ -12,14 +12,12 @@ $result_tree_text{'macro_call_in_node_manual'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C12
    *normal_command@macro C3 l1
-   |EXTRA
    |formal_args:A{}
    |macro_name:{openbrace}
     *arguments_line C1
      {macro_line: openbrace\\n}
     {raw:(\\n}
     *normal_command@end C1 l3
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -27,14 +25,12 @@ $result_tree_text{'macro_call_in_node_manual'} = '*document_root C1
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *normal_command@macro C3 l5
-   |EXTRA
    |formal_args:A{}
    |macro_name:{openbracetext}
     *arguments_line C1
      {macro_line: openbracetext\\n}
     {raw:(begin\\n}
     *normal_command@end C1 l7
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -42,14 +38,12 @@ $result_tree_text{'macro_call_in_node_manual'} = '*document_root C1
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *normal_command@macro C3 l9
-   |EXTRA
    |formal_args:A{}
    |macro_name:{manualnameend}
     *arguments_line C1
      {macro_line: manualnameend\\n}
     {raw:last\\n}
     *normal_command@end C1 l11
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -57,14 +51,12 @@ $result_tree_text{'macro_call_in_node_manual'} = '*document_root C1
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *normal_command@macro C3 l13
-   |EXTRA
    |formal_args:A{}
    |macro_name:{manualnameendbrace}
     *arguments_line C1
      {macro_line: manualnameendbrace\\n}
     {raw:last)\\n}
     *normal_command@end C1 l15
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -72,14 +64,12 @@ $result_tree_text{'macro_call_in_node_manual'} = '*document_root C1
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *normal_command@macro C3 l17
-   |EXTRA
    |formal_args:A{}
    |macro_name:{manualnameendbracespace}
     *arguments_line C1
      {macro_line: manualnameendbracespace\\n}
     {raw:last)   \\n}
     *normal_command@end C1 l19
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -87,14 +77,12 @@ $result_tree_text{'macro_call_in_node_manual'} = '*document_root C1
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *normal_command@macro C3 l21
-   |EXTRA
    |formal_args:A{}
    |macro_name:{manualnameendbracespacetext}
     *arguments_line C1
      {macro_line: manualnameendbracespacetext\\n}
     {raw:last)  mynode\\n}
     *normal_command@end C1 l23
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -108,7 +96,6 @@ $result_tree_text{'macro_call_in_node_manual'} = '*document_root C1
    *menu_entry C4 l26
     {menu_entry_leading_text:* }
     *menu_entry_node C3
-    |EXTRA
     |manual_content:A{1|1}
      {normal_text:(}
      >SOURCEMARKS
@@ -125,7 +112,6 @@ $result_tree_text{'macro_call_in_node_manual'} = '*document_root C1
    *menu_entry C4 l27
     {menu_entry_leading_text:* }
     *menu_entry_node C3
-    |EXTRA
     |manual_content:A{1|1}
      {normal_text:(}
      >SOURCEMARKS
@@ -143,7 +129,6 @@ $result_tree_text{'macro_call_in_node_manual'} = '*document_root C1
    *menu_entry C4 l28
     {menu_entry_leading_text:* }
     *menu_entry_node C4
-    |EXTRA
     |manual_content:A{1|1}
     |node_content:A{3|3}
     |normalized:{the-node}
@@ -164,7 +149,6 @@ $result_tree_text{'macro_call_in_node_manual'} = '*document_root C1
    *menu_entry C4 l29
     {menu_entry_leading_text:* }
     *menu_entry_node C3
-    |EXTRA
     |manual_content:A{1|1}
      {normal_text:(}
      >SOURCEMARKS
@@ -186,7 +170,6 @@ $result_tree_text{'macro_call_in_node_manual'} = '*document_root C1
    *menu_entry C4 l30
     {menu_entry_leading_text:* }
     *menu_entry_node C5
-    |EXTRA
     |manual_content:A{1|1}
     |node_content:A{4|4}
     |normalized:{distant}
@@ -208,7 +191,6 @@ $result_tree_text{'macro_call_in_node_manual'} = '*document_root C1
    *menu_entry C4 l31
     {menu_entry_leading_text:* }
     *menu_entry_node C5
-    |EXTRA
     |manual_content:A{1|3}
      {normal_text:(}
      >SOURCEMARKS
@@ -236,7 +218,6 @@ $result_tree_text{'macro_call_in_node_manual'} = '*document_root C1
    *menu_entry C4 l32
     {menu_entry_leading_text:* }
     *menu_entry_node C5
-    |EXTRA
     |manual_content:A{1|1}
     |node_content:A{4|4}
     |normalized:{thenode}
@@ -258,7 +239,6 @@ $result_tree_text{'macro_call_in_node_manual'} = '*document_root C1
    *menu_entry C4 l33
     {menu_entry_leading_text:* }
     *menu_entry_node C5
-    |EXTRA
     |manual_content:A{1|1}
     |node_content:A{4|4}
     |normalized:{mynodeand-after}
@@ -278,7 +258,6 @@ $result_tree_text{'macro_call_in_node_manual'} = '*document_root C1
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 l34
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }

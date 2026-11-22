@@ -12,7 +12,6 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -22,7 +21,6 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C2 l2 {top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -32,7 +30,6 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l4 {chapter}
- |EXTRA
  |identifier:{chapter}
  |is_target:{1}
  |node_number:{2}
@@ -42,7 +39,6 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
     {normal_text:chapter}
     {spaces_after_argument:\\n}
  *normal_command@chapter C27 l5 {chap}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -66,7 +62,6 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
        {rawline_text:comment in table}
        {spaces_after_argument:\\n}
      *normal_command@item C1 l9
-     |EXTRA
      |element_node:{chapter}
      |index_entry:I{vr,1}
       *line_arg C3
@@ -77,7 +72,6 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
      *paragraph C1
       {normal_text:l--ine\\n}
    *normal_command@end C1 l11
-   |EXTRA
    |text_arg:{vtable}
     *line_arg C3
      {spaces_before_argument: }
@@ -93,7 +87,6 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
    *table_entry C2
     *table_term C3
      *normal_command@item C1 l14
-     |EXTRA
      |element_node:{chapter}
      |index_entry:I{vr,2}
       *line_arg C3
@@ -107,7 +100,6 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
         {rawline_text:comment between item and itemx}
         {spaces_after_argument:\\n}
      *normal_command@itemx C1 l16
-     |EXTRA
      |element_node:{chapter}
      |index_entry:I{vr,3}
       *line_arg C3
@@ -118,7 +110,6 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
      *paragraph C1
       {normal_text:l--ine\\n}
    *normal_command@end C1 l18
-   |EXTRA
    |text_arg:{vtable}
     *line_arg C3
      {spaces_before_argument: }
@@ -134,7 +125,6 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
    *table_entry C2
     *table_term C3
      *normal_command@item C1 l21
-     |EXTRA
      |element_node:{chapter}
      |index_entry:I{fn,1}
       *line_arg C3
@@ -143,7 +133,6 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
        {spaces_after_argument:\\n}
      *inter_item C3
       *index_entry_command@cindex C1 l22
-      |EXTRA
       |element_node:{chapter}
       |index_entry:I{cp,1}
        *line_arg C3
@@ -161,7 +150,6 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
         {rawline_text:and another comment}
         {spaces_after_argument:\\n}
      *normal_command@itemx C1 l25
-     |EXTRA
      |element_node:{chapter}
      |index_entry:I{fn,2}
       *line_arg C3
@@ -174,7 +162,6 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
    *table_entry C2
     *table_term C3
      *normal_command@item C1 l27
-     |EXTRA
      |element_node:{chapter}
      |index_entry:I{fn,3}
       *line_arg C3
@@ -190,7 +177,6 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
         {spaces_after_argument:\\n}
       {empty_line:\\n}
      *normal_command@itemx C1 l31
-     |EXTRA
      |element_node:{chapter}
      |index_entry:I{fn,4}
       *line_arg C3
@@ -205,7 +191,6 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
        {rawline_text:comment at end}
        {spaces_after_argument:\\n}
    *normal_command@end C1 l34
-   |EXTRA
    |text_arg:{ftable}
     *line_arg C3
      {spaces_before_argument: }
@@ -221,7 +206,6 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
    *table_entry C2
     *table_term C3
      *normal_command@item C1 l37
-     |EXTRA
      |element_node:{chapter}
      |index_entry:I{fn,5}
       *line_arg C3
@@ -230,7 +214,6 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
        {spaces_after_argument:\\n}
      *inter_item C1
       *index_entry_command@cindex C1 l38
-      |EXTRA
       |element_node:{chapter}
       |index_entry:I{cp,2}
        *line_arg C3
@@ -238,7 +221,6 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
         {normal_text:index entry between item and itemx}
         {spaces_after_argument:\\n}
      *normal_command@itemx C1 l39
-     |EXTRA
      |element_node:{chapter}
      |index_entry:I{fn,6}
       *line_arg C3
@@ -249,7 +231,6 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
      *paragraph C1
       {normal_text:l--ine\\n}
    *normal_command@end C1 l41
-   |EXTRA
    |text_arg:{ftable}
     *line_arg C3
      {spaces_before_argument: }
@@ -265,7 +246,6 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
    *table_entry C2
     *table_term C3
      *index_entry_command@cindex C1 l44
-     |EXTRA
      |element_node:{chapter}
      |index_entry:I{cp,3}
       *line_arg C3
@@ -286,7 +266,6 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
      *paragraph C1
       {normal_text:l--ine\\n}
    *normal_command@end C1 l48
-   |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
@@ -301,7 +280,6 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
      {spaces_after_argument:\\n}
    *before_item C2
     *index_entry_command@cindex C1 l51
-    |EXTRA
     |element_node:{chapter}
     |index_entry:I{cp,4}
      *line_arg C3
@@ -318,7 +296,6 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
        {normal_text:abb}
        {spaces_after_argument:\\n}
    *normal_command@end C1 l54
-   |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
@@ -334,7 +311,6 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
    *table_entry C2
     *table_term C3
      *index_entry_command@cindex C1 l57
-     |EXTRA
      |element_node:{chapter}
      |index_entry:I{cp,5}
       *line_arg C3
@@ -355,7 +331,6 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
      *paragraph C1
       {normal_text:l--ine samp\\n}
    *normal_command@end C1 l61
-   |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
@@ -370,7 +345,6 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
      {spaces_after_argument:\\n}
    *before_item C2
     *index_entry_command@cindex C1 l64
-    |EXTRA
     |element_node:{chapter}
     |index_entry:I{cp,6}
      *line_arg C3
@@ -387,7 +361,6 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
        {normal_text:asamp--bb}
        {spaces_after_argument:\\n}
    *normal_command@end C1 l67
-   |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
@@ -403,7 +376,6 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
    *before_item C3
     {empty_line:\\n}
     *index_entry_command@cindex C1 l71
-    |EXTRA
     |element_node:{chapter}
     |index_entry:I{cp,7}
      *line_arg C3
@@ -419,7 +391,6 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
        {normal_text:asamp--bb1}
        {spaces_after_argument:\\n}
    *normal_command@end C1 l74
-   |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
@@ -434,7 +405,6 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
      {spaces_after_argument: \\n}
    *before_item C2
     *index_entry_command@cindex C1 l77
-    |EXTRA
     |element_node:{chapter}
     |index_entry:I{cp,8}
      *line_arg C3
@@ -450,7 +420,6 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
        {normal_text:asamp--bb2}
        {spaces_after_argument:\\n}
    *normal_command@end C1 l80
-   |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
@@ -468,7 +437,6 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
    *table_entry C1
     *table_term C2
      *index_entry_command@cindex C1 l84
-     |EXTRA
      |element_node:{chapter}
      |index_entry:I{cp,9}
       *line_arg C3
@@ -481,7 +449,6 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
        {normal_text:asamp--bb2}
        {spaces_after_argument:\\n}
    *normal_command@end C1 l86
-   |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
@@ -497,7 +464,6 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
    *table_entry C1
     *table_term C5
      *index_entry_command@cindex C1 l89
-     |EXTRA
      |element_node:{chapter}
      |index_entry:I{cp,10}
       *line_arg C3
@@ -510,7 +476,6 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
        {rawline_text:commant}
        {spaces_after_argument:\\n}
      *index_entry_command@cindex C1 l91
-     |EXTRA
      |element_node:{chapter}
      |index_entry:I{cp,11}
       *line_arg C3
@@ -518,7 +483,6 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
        {normal_text:second}
        {spaces_after_argument:\\n}
      *index_entry_command@cindex C1 l92
-     |EXTRA
      |element_node:{chapter}
      |index_entry:I{cp,12}
       *line_arg C3
@@ -531,7 +495,6 @@ $result_tree_text{'inter_item_commands_in_table'} = '*document_root C5
        {normal_text:asamp--bb2}
        {spaces_after_argument:\\n}
    *normal_command@end C1 l94
-   |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }

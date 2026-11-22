@@ -52,14 +52,12 @@ $result_tree_text{'at_commands_glued_in_example'} = '*document_root C1
     {normal_text:ref}
     *normal_command@ref C1 l8
      *brace_arg C1
-     |EXTRA
      |node_content:A{0|0}
      |normalized:{Top}
       {normal_text:Top}
     {normal_text:ref.\\n}
     {normal_text:Foornote}
     *normal_command@footnote C1 l9
-    |EXTRA
     |global_command_number:{1}
      *brace_command_context C1
       *paragraph C1
@@ -81,7 +79,6 @@ $result_tree_text{'at_commands_glued_in_example'} = '*document_root C1
     {normal_text:after noindent\\n}
     {normal_text:sp}
     *normal_command@sp C1 l13
-    |EXTRA
     |misc_args:A{4}
      *line_arg C3
       {spaces_before_argument: }
@@ -89,7 +86,6 @@ $result_tree_text{'at_commands_glued_in_example'} = '*document_root C1
       {spaces_after_argument:\\n}
     {normal_text:anchor}
     *normal_command@anchor C1 l14
-    |EXTRA
     |identifier:{anchor}
     |is_target:{1}
      *brace_arg C1
@@ -97,14 +93,12 @@ $result_tree_text{'at_commands_glued_in_example'} = '*document_root C1
     {normal_text:anchor\\n}
     {normal_text:index}
     *index_entry_command@cindex C1 l15
-    |EXTRA
     |index_entry:I{cp,1}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:index}
       {spaces_after_argument:\\n}
    *normal_command@end C1 l16
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }

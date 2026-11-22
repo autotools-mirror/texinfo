@@ -14,7 +14,6 @@ $result_tree_text{'japanese_shift_jis'} = '*document_root C8
    *preamble_before_beginning C1
     {text_before_beginning:\\input texinfo @c -*- coding: utf-8; mode: texinfo; -*-\\n}
    *normal_command@documentencoding C1 japanese_shift_jis.texi:l2
-   |EXTRA
    |global_command_number:{1}
    |input_encoding_name:{shift_jis}
    |text_arg:{shift_jis}
@@ -24,7 +23,6 @@ $result_tree_text{'japanese_shift_jis'} = '*document_root C8
      {spaces_after_argument:\\n}
   *preamble_before_content C5
    *normal_command@setfilename C1 japanese_shift_jis.texi:l3
-   |EXTRA
    |text_arg:{japanese_shift_jis.info}
     *line_arg C3
      {spaces_before_argument: }
@@ -37,7 +35,6 @@ $result_tree_text{'japanese_shift_jis'} = '*document_root C8
      {spaces_after_argument:\\n}
    {empty_line:\\n}
    *normal_command@documentlanguage C1 japanese_shift_jis.texi:l6
-   |EXTRA
    |global_command_number:{1}
    |text_arg:{ja}
     *line_arg C3
@@ -46,7 +43,6 @@ $result_tree_text{'japanese_shift_jis'} = '*document_root C8
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *normal_command@node C1 japanese_shift_jis.texi:l8 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -56,7 +52,6 @@ $result_tree_text{'japanese_shift_jis'} = '*document_root C8
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C9 japanese_shift_jis.texi:l9 {GNU LilyPond --- 学習マニュアル}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -90,7 +85,6 @@ $result_tree_text{'japanese_shift_jis'} = '*document_root C8
       {normal_text:英語で書かれた注意書きだけが法的に有効です。}
     {normal_text:\\n}
    *normal_command@end C1 japanese_shift_jis.texi:l20
-   |EXTRA
    |text_arg:{copying}
     *line_arg C3
      {spaces_before_argument: }
@@ -108,7 +102,6 @@ $result_tree_text{'japanese_shift_jis'} = '*document_root C8
    *menu_entry C4 japanese_shift_jis.texi:l26
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{Preface}
      {normal_text:Preface}
@@ -119,7 +112,6 @@ $result_tree_text{'japanese_shift_jis'} = '*document_root C8
    *menu_entry C4 japanese_shift_jis.texi:l27
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{Introduction}
      {normal_text:Introduction}
@@ -128,7 +120,6 @@ $result_tree_text{'japanese_shift_jis'} = '*document_root C8
      *preformatted C1
       {normal_text:LilyPond とは何なのか、なぜ LilyPond を使うのか、どうやって LilyPond を使うのか\\n}
    *normal_command@end C1 japanese_shift_jis.texi:l28
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -136,7 +127,6 @@ $result_tree_text{'japanese_shift_jis'} = '*document_root C8
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 japanese_shift_jis.texi:l30 {Preface}
- |EXTRA
  |identifier:{Preface}
  |is_target:{1}
  |node_number:{2}
@@ -146,7 +136,6 @@ $result_tree_text{'japanese_shift_jis'} = '*document_root C8
     {normal_text:Preface}
     {spaces_after_argument:\\n}
  *normal_command@chapter C5 japanese_shift_jis.texi:l31 {Preface}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -161,7 +150,6 @@ $result_tree_text{'japanese_shift_jis'} = '*document_root C8
   {empty_line:\\n}
   {empty_line:\\n}
  *normal_command@node C1 japanese_shift_jis.texi:l36 {Introduction}
- |EXTRA
  |identifier:{Introduction}
  |is_target:{1}
  |node_number:{3}
@@ -171,7 +159,6 @@ $result_tree_text{'japanese_shift_jis'} = '*document_root C8
     {normal_text:Introduction}
     {spaces_after_argument:\\n}
  *normal_command@chapter C4 japanese_shift_jis.texi:l37 {Introduction}
- |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
  |section_number:{3}

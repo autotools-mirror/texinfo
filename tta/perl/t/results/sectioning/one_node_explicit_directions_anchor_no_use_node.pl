@@ -12,7 +12,6 @@ $result_tree_text{'one_node_explicit_directions_anchor_no_use_node'} = '*documen
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C6 l1 {one node}
- |EXTRA
  |identifier:{one-node}
  |is_target:{1}
  |node_number:{1}
@@ -23,7 +22,6 @@ $result_tree_text{'one_node_explicit_directions_anchor_no_use_node'} = '*documen
    *line_arg
    *line_arg
    *line_arg C4
-   |EXTRA
    |manual_content:A{1|1}
     {normal_text:(}
     {normal_text:dir}
@@ -35,7 +33,6 @@ $result_tree_text{'one_node_explicit_directions_anchor_no_use_node'} = '*documen
   *paragraph C3
    {normal_text:anchor ref }
    *normal_command@anchor C1 l4
-   |EXTRA
    |identifier:{ref}
    |is_target:{1}
     *brace_arg C1
@@ -46,7 +43,6 @@ $result_tree_text{'one_node_explicit_directions_anchor_no_use_node'} = '*documen
    {normal_text:ref to ref }
    *normal_command@ref C1 l6
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{ref}
      {normal_text:ref}

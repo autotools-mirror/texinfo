@@ -12,26 +12,22 @@ $result_tree_text{'on_index_entry_line'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *index_entry_command@cindex C1 l1
-  |EXTRA
   |index_entry:I{cp,1}
    *line_arg C9
     {spaces_before_argument: }
     *normal_command@indent l1
     {ignorable_spaces_after_command: }
     *normal_command@titlefont C1 l1
-    |EXTRA
     |global_command_number:{1}
      *brace_container C1
       {normal_text:in titlefont}
     {normal_text: }
     *normal_command@anchor C1 l1
-    |EXTRA
     |identifier:{in-anchor}
     |is_target:{1}
      *brace_arg C1
       {normal_text:in anchor}
     *normal_command@footnote C1 l1
-    |EXTRA
     |global_command_number:{1}
      *brace_command_context C1
       *paragraph C1

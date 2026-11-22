@@ -12,7 +12,6 @@ $result_tree_text{'redefined_need'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *normal_command@need C1 l1
-  |EXTRA
   |misc_args:A{0.1}
    *line_arg C3
     {spaces_before_argument: }

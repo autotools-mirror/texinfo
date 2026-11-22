@@ -24,7 +24,6 @@ $result_tree_text{'cartouche_title_and_content'} = '*document_root C1
     {normal_text:Text on documentation explaining something important out of the main\\n}
     {normal_text:flow of the text.\\n}
    *normal_command@end C1 l4
-   |EXTRA
    |text_arg:{cartouche}
     *line_arg C3
      {spaces_before_argument: }

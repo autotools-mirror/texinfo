@@ -15,7 +15,6 @@ $result_tree_text{'index_no_node_no_top'} = '*document_root C7
    {text_before_beginning:\\n}
   *preamble_before_content
   *index_entry_command@cindex C1 index_no_node_no_top.texi:l3
-  |EXTRA
   |index_entry:I{cp,1}
    *line_arg C3
     {spaces_before_argument: }
@@ -24,7 +23,6 @@ $result_tree_text{'index_no_node_no_top'} = '*document_root C7
   *paragraph C1
    {normal_text:Garbage\\n}
   *normal_command@printindex C1 index_no_node_no_top.texi:l5
-  |EXTRA
   |global_command_number:{1}
   |misc_args:A{cp}
    *line_arg C3
@@ -34,7 +32,6 @@ $result_tree_text{'index_no_node_no_top'} = '*document_root C7
   {empty_line:\\n}
   {empty_line:\\n}
  *normal_command@unnumbered C8 index_no_node_no_top.texi:l8 {unnumbered}
- |EXTRA
  |identifier:{unnumbered}
  |is_target:{1}
  |section_level:{1}
@@ -45,7 +42,6 @@ $result_tree_text{'index_no_node_no_top'} = '*document_root C7
     {normal_text:unnumbered}
     {spaces_after_argument:\\n}
   *normal_command@printindex C1 index_no_node_no_top.texi:l9
-  |EXTRA
   |global_command_number:{2}
    *line_arg C3
     {spaces_before_argument: }
@@ -53,7 +49,6 @@ $result_tree_text{'index_no_node_no_top'} = '*document_root C7
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 index_no_node_no_top.texi:l11
-  |EXTRA
   |index_entry:I{cp,2}
    *line_arg C3
     {spaces_before_argument: }
@@ -62,7 +57,6 @@ $result_tree_text{'index_no_node_no_top'} = '*document_root C7
   *paragraph C2
    {normal_text:in unnumbered\\n}
    *index_entry_command@cindex C1 index_no_node_no_top.texi:l13
-   |EXTRA
    |index_entry:I{cp,3}
     *line_arg C3
      {spaces_before_argument: }
@@ -70,7 +64,6 @@ $result_tree_text{'index_no_node_no_top'} = '*document_root C7
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@printindex C1 index_no_node_no_top.texi:l15
-  |EXTRA
   |global_command_number:{3}
   |misc_args:A{cp}
    *line_arg C3
@@ -79,7 +72,6 @@ $result_tree_text{'index_no_node_no_top'} = '*document_root C7
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@unnumbered C15 index_no_node_no_top.texi:l17 {top (chapter) section}
- |EXTRA
  |identifier:{top-_0028chapter_0029-section}
  |is_target:{1}
  |section_level:{1}
@@ -91,42 +83,36 @@ $result_tree_text{'index_no_node_no_top'} = '*document_root C7
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 index_no_node_no_top.texi:l19
-  |EXTRA
   |index_entry:I{cp,4}
    *line_arg C3
     {spaces_before_argument: }
     {normal_text:top section}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_no_node_no_top.texi:l20
-  |EXTRA
   |index_entry:I{cp,5}
    *line_arg C3
     {spaces_before_argument: }
     {normal_text:top section}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_no_node_no_top.texi:l21
-  |EXTRA
   |index_entry:I{cp,6}
    *line_arg C3
     {spaces_before_argument: }
     {normal_text:top section}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_no_node_no_top.texi:l22
-  |EXTRA
   |index_entry:I{cp,7}
    *line_arg C3
     {spaces_before_argument: }
     {normal_text:top section}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_no_node_no_top.texi:l23
-  |EXTRA
   |index_entry:I{cp,8}
    *line_arg C3
     {spaces_before_argument: }
     {normal_text:top section}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_no_node_no_top.texi:l24
-  |EXTRA
   |index_entry:I{cp,9}
    *line_arg C3
     {spaces_before_argument: }
@@ -136,7 +122,6 @@ $result_tree_text{'index_no_node_no_top'} = '*document_root C7
    {normal_text:Top node\\n}
   {empty_line:\\n}
   *normal_command@printindex C1 index_no_node_no_top.texi:l27
-  |EXTRA
   |global_command_number:{4}
   |misc_args:A{cp}
    *line_arg C3
@@ -145,7 +130,6 @@ $result_tree_text{'index_no_node_no_top'} = '*document_root C7
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 index_no_node_no_top.texi:l29
-  |EXTRA
   |index_entry:I{cp,10}
    *line_arg C3
     {spaces_before_argument: }
@@ -154,7 +138,6 @@ $result_tree_text{'index_no_node_no_top'} = '*document_root C7
   {empty_line:\\n}
   {empty_line:\\n}
  *normal_command@section C7 index_no_node_no_top.texi:l32 {second}
- |EXTRA
  |identifier:{second}
  |is_target:{1}
  |section_level:{2}
@@ -166,7 +149,6 @@ $result_tree_text{'index_no_node_no_top'} = '*document_root C7
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@printindex C1 index_no_node_no_top.texi:l34
-  |EXTRA
   |global_command_number:{5}
   |misc_args:A{cp}
    *line_arg C3
@@ -174,7 +156,6 @@ $result_tree_text{'index_no_node_no_top'} = '*document_root C7
     {normal_text:cp}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_no_node_no_top.texi:l35
-  |EXTRA
   |index_entry:I{cp,11}
    *line_arg C3
     {spaces_before_argument: }
@@ -183,7 +164,6 @@ $result_tree_text{'index_no_node_no_top'} = '*document_root C7
   *paragraph C2
    {normal_text:second node\\n}
    *index_entry_command@cindex C1 index_no_node_no_top.texi:l37
-   |EXTRA
    |index_entry:I{cp,12}
     *line_arg C3
      {spaces_before_argument: }
@@ -191,7 +171,6 @@ $result_tree_text{'index_no_node_no_top'} = '*document_root C7
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@printindex C1 index_no_node_no_top.texi:l39
-  |EXTRA
   |global_command_number:{6}
   |misc_args:A{cp}
    *line_arg C3
@@ -199,7 +178,6 @@ $result_tree_text{'index_no_node_no_top'} = '*document_root C7
     {normal_text:cp}
     {spaces_after_argument:\\n}
  *normal_command@chapter C6 index_no_node_no_top.texi:l40 {Chapter}
- |EXTRA
  |identifier:{Chapter}
  |is_target:{1}
  |section_heading_number:{1}
@@ -211,7 +189,6 @@ $result_tree_text{'index_no_node_no_top'} = '*document_root C7
     {normal_text:Chapter}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_no_node_no_top.texi:l41
-  |EXTRA
   |index_entry:I{cp,13}
    *line_arg C3
     {spaces_before_argument: }
@@ -219,7 +196,6 @@ $result_tree_text{'index_no_node_no_top'} = '*document_root C7
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@printindex C1 index_no_node_no_top.texi:l43
-  |EXTRA
   |global_command_number:{7}
   |misc_args:A{cp}
    *line_arg C3
@@ -229,7 +205,6 @@ $result_tree_text{'index_no_node_no_top'} = '*document_root C7
   *paragraph C2
    {normal_text:Text of chapter\\n}
    *index_entry_command@cindex C1 index_no_node_no_top.texi:l45
-   |EXTRA
    |index_entry:I{cp,14}
     *line_arg C3
      {spaces_before_argument: }
@@ -237,7 +212,6 @@ $result_tree_text{'index_no_node_no_top'} = '*document_root C7
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@chapter C4 index_no_node_no_top.texi:l47 {Chapter 2}
- |EXTRA
  |identifier:{Chapter-2}
  |is_target:{1}
  |section_heading_number:{2}

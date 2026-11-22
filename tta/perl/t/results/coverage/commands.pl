@@ -65,7 +65,6 @@ $result_tree_text{'commands'} = '*document_root C1
    {normal_text:.\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 l8
-  |EXTRA
   |index_entry:I{cp,1}
    *line_arg C4
     {spaces_before_argument: }
@@ -75,7 +74,6 @@ $result_tree_text{'commands'} = '*document_root C1
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@majorheading C1 l10
-  |EXTRA
   |global_command_number:{1}
   |heading_number:{1}
    *line_arg C4

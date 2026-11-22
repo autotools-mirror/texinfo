@@ -12,7 +12,6 @@ $result_tree_text{'comment_on_linemacro_call_macro_expansion'} = '*document_root
  *before_node_section C2
   *preamble_before_content C4
    *normal_command@linemacro C4 l1
-   |EXTRA
    |formal_args:A{a|b}
    |macro_name:{lm}
     *arguments_line C1
@@ -20,7 +19,6 @@ $result_tree_text{'comment_on_linemacro_call_macro_expansion'} = '*document_root
     {raw:first |\\a\\|\\n}
     {raw:second |\\b\\|\\n}
     *normal_command@end C1 l4
-    |EXTRA
     |text_arg:{linemacro}
      *line_arg C3
       {spaces_before_argument: }
@@ -28,7 +26,6 @@ $result_tree_text{'comment_on_linemacro_call_macro_expansion'} = '*document_root
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *normal_command@macro C4 l6
-   |EXTRA
    |formal_args:A{a}
    |macro_name:{mymacro}
     *arguments_line C1
@@ -36,7 +33,6 @@ $result_tree_text{'comment_on_linemacro_call_macro_expansion'} = '*document_root
     {raw:macro \\a\\ text\\n}
     {raw:after arg\\n}
     *normal_command@end C1 l9
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }

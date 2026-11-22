@@ -12,7 +12,6 @@ $result_tree_text{'top_node_up_explicit'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -21,21 +20,18 @@ $result_tree_text{'top_node_up_explicit'} = '*document_root C5
     {spaces_before_argument: }
     {normal_text:Top}
    *line_arg C4
-   |EXTRA
    |manual_content:A{2|2}
     {spaces_before_argument: }
     {normal_text:(}
     {normal_text:dir}
     {normal_text:)}
    *line_arg C4
-   |EXTRA
    |manual_content:A{2|2}
     {spaces_before_argument: }
     {normal_text:(}
     {normal_text:weird}
     {normal_text:)}
    *line_arg C5
-   |EXTRA
    |manual_content:A{2|2}
     {spaces_before_argument: }
     {normal_text:(}
@@ -43,7 +39,6 @@ $result_tree_text{'top_node_up_explicit'} = '*document_root C5
     {normal_text:)}
     {spaces_after_argument:\\n}
  *normal_command@top C6 l2 {The top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -62,7 +57,6 @@ $result_tree_text{'top_node_up_explicit'} = '*document_root C5
    *menu_entry C4 l7
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{Chap}
      {normal_text:Chap}
@@ -71,7 +65,6 @@ $result_tree_text{'top_node_up_explicit'} = '*document_root C5
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 l8
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -79,7 +72,6 @@ $result_tree_text{'top_node_up_explicit'} = '*document_root C5
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l10 {Chap}
- |EXTRA
  |identifier:{Chap}
  |is_target:{1}
  |node_number:{2}
@@ -89,7 +81,6 @@ $result_tree_text{'top_node_up_explicit'} = '*document_root C5
     {normal_text:Chap}
     {spaces_after_argument:\\n}
  *normal_command@chapter C3 l11 {A chapter}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}

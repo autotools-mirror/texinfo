@@ -14,7 +14,6 @@ This: [U0]
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C2 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -25,7 +24,6 @@ This: [U0]
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@part C2 l3 {part}
- |EXTRA
  |global_command_number:{1}
  |section_level:{0}
  |section_number:{1}
@@ -36,7 +34,6 @@ This: [U0]
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@top C1 l5 {top}
- |EXTRA
  |section_level:{0}
  |section_number:{2}
   *arguments_line C1

@@ -13,7 +13,6 @@ $result_tree_text{'inlineifsetifclear'} = '*document_root C1
   *preamble_before_content
   *paragraph C2
    *normal_command@inlineifclear C2 l1
-   |EXTRA
    |expand_index:{1}
    |format:{aaa}
     *brace_arg C1
@@ -25,7 +24,6 @@ $result_tree_text{'inlineifsetifclear'} = '*document_root C1
   {empty_line:\\n}
   *paragraph C2
    *normal_command@inlineifset C2 l3
-   |EXTRA
    |format:{aaa}
     *brace_arg C1
      {normal_text:aaa}
@@ -34,7 +32,6 @@ $result_tree_text{'inlineifsetifclear'} = '*document_root C1
    {normal_text:.\\n}
   {empty_line:\\n}
   *normal_command@set C1
-  |EXTRA
   |misc_args:A{aaa|}
    *line_arg C3
     {spaces_before_argument: }
@@ -43,7 +40,6 @@ $result_tree_text{'inlineifsetifclear'} = '*document_root C1
   {empty_line:\\n}
   *paragraph C2
    *normal_command@inlineifclear C2 l7
-   |EXTRA
    |format:{aaa}
     *brace_arg C1
      {normal_text:aaa}
@@ -53,7 +49,6 @@ $result_tree_text{'inlineifsetifclear'} = '*document_root C1
   {empty_line:\\n}
   *paragraph C2
    *normal_command@inlineifset C2 l9
-   |EXTRA
    |expand_index:{1}
    |format:{aaa}
     *brace_arg C1

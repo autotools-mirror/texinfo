@@ -12,7 +12,6 @@ $result_tree_text{'setfilename'} = '*document_root C1
  *before_node_section C1
   *preamble_before_content C5
    *normal_command@setfilename C1 l1
-   |EXTRA
    |text_arg:{file_comment}
     *line_arg C3
      {spaces_before_argument: }
@@ -23,14 +22,12 @@ $result_tree_text{'setfilename'} = '*document_root C1
        {rawline_text:comment}
        {spaces_after_argument:\\n}
    *normal_command@setfilename C1 l2
-   |EXTRA
    |text_arg:{file_and_spaces}
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:file_and_spaces}
      {spaces_after_argument:   \\n}
    *normal_command@setfilename C1 l3
-   |EXTRA
    |text_arg:{file_space_comment}
     *line_arg C4
      {spaces_before_argument: }

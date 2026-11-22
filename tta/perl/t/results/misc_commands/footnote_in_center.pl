@@ -16,7 +16,6 @@ $result_tree_text{'footnote_in_center'} = '*document_root C1
     {spaces_before_argument: }
     {normal_text:Centered text with a footnote}
     *normal_command@footnote C1 l1
-    |EXTRA
     |global_command_number:{1}
      *brace_command_context C3
       *paragraph C2
@@ -44,14 +43,12 @@ $result_tree_text{'footnote_in_center'} = '*document_root C1
           *preformatted C1
            {normal_text:line\\n}
         *normal_command@end C1 l8
-        |EXTRA
         |text_arg:{table}
          *line_arg C3
           {spaces_before_argument: }
           {normal_text:table}
           {spaces_after_argument: \\n}
        *normal_command@end C1 l9
-       |EXTRA
        |text_arg:{example}
         *line_arg C3
          {spaces_before_argument: }

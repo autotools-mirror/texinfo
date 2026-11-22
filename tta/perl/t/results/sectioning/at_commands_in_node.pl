@@ -12,7 +12,6 @@ $result_tree_text{'at_commands_in_node'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 l1 {A @sc{sc} node @"i @"{@dotless{i}} @`{@=E} @l{} @,{@\'C} @exclamdown{}}
- |EXTRA
  |identifier:{A-sc-node-_00ef-_00ef-_1e14-_0142-_1e08-_00a1}
  |is_target:{1}
  |node_number:{1}

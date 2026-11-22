@@ -16,7 +16,6 @@ $result_tree_text{'float_in_block_commands'} = '*document_root C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *normal_command@float C5 l2
-   |EXTRA
    |float_number:{1}
    |float_type:{Text}
    |global_command_number:{1}
@@ -38,14 +37,12 @@ $result_tree_text{'float_in_block_commands'} = '*document_root C1
     *preformatted C1
      {normal_text:\\n}
     *normal_command@end C1 l4
-    |EXTRA
     |text_arg:{float}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:float}
       {spaces_after_argument:\\n}
    *normal_command@end C1 l5
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
@@ -57,7 +54,6 @@ $result_tree_text{'float_in_block_commands'} = '*document_root C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *normal_command@float C4 l8
-   |EXTRA
    |float_number:{2}
    |float_type:{Text}
    |global_command_number:{2}
@@ -77,14 +73,12 @@ $result_tree_text{'float_in_block_commands'} = '*document_root C1
        {normal_text:float in quotation}
     {spaces_after_close_brace:\\n}
     *normal_command@end C1 l10
-    |EXTRA
     |text_arg:{float}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:float}
       {spaces_after_argument:\\n}
    *normal_command@end C1 l11
-   |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }
@@ -96,7 +90,6 @@ $result_tree_text{'float_in_block_commands'} = '*document_root C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *normal_command@float C4 l14
-   |EXTRA
    |float_number:{3}
    |float_type:{Text}
    |global_command_number:{3}
@@ -116,14 +109,12 @@ $result_tree_text{'float_in_block_commands'} = '*document_root C1
        {normal_text:float in cartouche}
     {spaces_after_close_brace:\\n}
     *normal_command@end C1 l16
-    |EXTRA
     |text_arg:{float}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:float}
       {spaces_after_argument:\\n}
    *normal_command@end C1 l17
-   |EXTRA
    |text_arg:{cartouche}
     *line_arg C3
      {spaces_before_argument: }

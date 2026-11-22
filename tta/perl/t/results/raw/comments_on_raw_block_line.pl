@@ -22,7 +22,6 @@ $result_tree_text{'comments_on_raw_block_line'} = '*document_root C1
     *elided_rawpreformatted C1
      {raw:In HTML\\n}
     *normal_command@end C1 l3
-    |EXTRA
     |text_arg:{html}
      *line_arg C3
       {spaces_before_argument: }
@@ -44,7 +43,6 @@ $result_tree_text{'comments_on_raw_block_line'} = '*document_root C1
     *rawpreformatted C1
      {normal_text:In TeX\\n}
     *normal_command@end C1 l7
-    |EXTRA
     |text_arg:{tex}
      *line_arg C3
       {spaces_before_argument: }

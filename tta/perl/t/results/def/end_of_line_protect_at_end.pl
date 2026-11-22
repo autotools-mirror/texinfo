@@ -15,7 +15,6 @@ $result_tree_text{'end_of_line_protect_at_end'} = '*document_root C1
   *preamble_before_content
   *normal_command@deffn C1 l2
    *def_line C1 l2
-   |EXTRA
    |def_command:{deffn}
    |index_entry:I{fn,1}
    |original_def_cmdname:{deffn}

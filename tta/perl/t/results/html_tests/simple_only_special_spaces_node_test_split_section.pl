@@ -19,7 +19,6 @@ NodeForward: [U1]
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 simple_only_special_spaces_node.texi:l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -29,7 +28,6 @@ NodeForward: [U1]
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C2 simple_only_special_spaces_node.texi:l2 {top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -52,7 +50,6 @@ NodePrev: [U0]
 NodeUp: [U0]
 NodeBack: [U0]
  *normal_command@node C1 simple_only_special_spaces_node.texi:l4 {  }
- |EXTRA
  |identifier:{_2002_2003}
  |is_target:{1}
  |node_number:{2}
@@ -62,7 +59,6 @@ NodeBack: [U0]
     {normal_text:  }
     {spaces_after_argument:\\n}
  *normal_command@chapter C2 simple_only_special_spaces_node.texi:l5 {EN QUAD| |}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -88,7 +84,6 @@ Next: [U3]
 Prev: [U1]
 Up: [U0]
  *normal_command@chapter C2 simple_only_special_spaces_node.texi:l8 {CARRIAGE RETURN|'."\r".'|}
- |EXTRA
  |identifier:{CARRIAGE-RETURN_007c-_007c}
  |is_target:{1}
  |section_heading_number:{2}
@@ -110,7 +105,6 @@ Prev: [U2]
 Up: [U0]
 NodeUp: [U0]
  *normal_command@node C1 simple_only_special_spaces_node.texi:l10 {  }
- |EXTRA
  |identifier:{_2004_2005}
  |is_target:{1}
  |node_number:{3}
@@ -120,7 +114,6 @@ NodeUp: [U0]
     {normal_text:  }
     {spaces_after_argument:\\n}
  *normal_command@chapter C2 simple_only_special_spaces_node.texi:l11 {THREE-PER-EM SPACE}
- |EXTRA
  |section_heading_number:{3}
  |section_level:{1}
  |section_number:{4}

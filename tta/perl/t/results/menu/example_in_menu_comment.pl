@@ -18,7 +18,6 @@ $result_tree_text{'example_in_menu_comment'} = '*document_root C1
    *menu_entry C4 l2
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{entry}
      {normal_text:entry}
@@ -38,7 +37,6 @@ $result_tree_text{'example_in_menu_comment'} = '*document_root C1
       {empty_line:\\n}
       {normal_text:example\\n}
      *normal_command@end C1 l8
-     |EXTRA
      |text_arg:{example}
       *line_arg C3
        {spaces_before_argument: }
@@ -49,7 +47,6 @@ $result_tree_text{'example_in_menu_comment'} = '*document_root C1
      {normal_text:menu comment.\\n}
      {empty_line:\\n}
    *normal_command@end C1 l12
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }

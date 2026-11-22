@@ -12,14 +12,12 @@ $result_tree_text{'texinfo_command_alias'} = '*document_root C1
  *before_node_section C7
   *preamble_before_content C4
    *normal_command@macro C3 l1
-   |EXTRA
    |formal_args:A{arg}
    |macro_name:{mystrong}
     *arguments_line C1
      {macro_line: mystrong {arg}\\n}
     {raw:!!\\arg\\!!\\n}
     *normal_command@end C1 l3
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -27,7 +25,6 @@ $result_tree_text{'texinfo_command_alias'} = '*document_root C1
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *normal_command@alias C1 l5
-   |EXTRA
    |misc_args:A{strong|mystrong}
     *line_arg C3
      {spaces_before_argument: }
@@ -39,14 +36,12 @@ $result_tree_text{'texinfo_command_alias'} = '*document_root C1
    >SOURCEMARKS
    >macro_expansion<start;1>
     >*macro_call@mystrong C1
-    >|EXTRA
     >|alias_of:{strong}
      >*brace_arg C1
       >{macro_call_arg_text:aa}
    >macro_expansion<end;1><p:6>
   {empty_line:\\n}
   *normal_command@definfoenclose C1 l9
-  |EXTRA
   |misc_args:A{mystrong|;|:}
    *line_arg C3
     {spaces_before_argument: }
@@ -55,7 +50,6 @@ $result_tree_text{'texinfo_command_alias'} = '*document_root C1
   {empty_line:\\n}
   *paragraph C2
    *definfoenclose_command@mystrong C1 l11
-   |EXTRA
    |alias_of:{strong}
    |begin:{;}
    |end:{:}

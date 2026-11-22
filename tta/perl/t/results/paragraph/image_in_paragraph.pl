@@ -14,7 +14,6 @@ $result_tree_text{'image_in_paragraph'} = '*document_root C1
   *paragraph C3
    {normal_text:Para. }
    *normal_command@image C5 l1
-   |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C1
      {normal_text:aa}

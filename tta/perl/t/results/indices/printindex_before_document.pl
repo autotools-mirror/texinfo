@@ -14,7 +14,6 @@ $result_tree_text{'printindex_before_document'} = '*document_root C1
    {text_before_beginning:\\n}
   *preamble_before_content
   *normal_command@printindex C1 l2
-  |EXTRA
   |global_command_number:{1}
   |misc_args:A{cp}
    *line_arg C3

@@ -12,7 +12,6 @@ $result_tree_text{'documentencoding_utf8'} = '*document_root C1
  *before_node_section C1
   *preamble_before_content C2
    *normal_command@documentencoding C1 l1
-   |EXTRA
    |global_command_number:{1}
    |input_encoding_name:{utf-8}
    |text_arg:{utf8}

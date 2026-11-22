@@ -12,7 +12,6 @@ $result_tree_text{'macro_call_empty_two_arg'} = '*document_root C1
  *before_node_section C23
   *preamble_before_content C2
    *normal_command@macro C4 l1
-   |EXTRA
    |formal_args:A{aa|bb}
    |macro_name:{twoa}
     *arguments_line C1
@@ -20,7 +19,6 @@ $result_tree_text{'macro_call_empty_two_arg'} = '*document_root C1
     {raw:first \\aa\\,\\n}
     {raw:second \\bb\\,\\n}
     *normal_command@end C1 l4
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }

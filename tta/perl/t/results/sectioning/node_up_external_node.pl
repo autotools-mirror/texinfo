@@ -18,7 +18,6 @@ NodeForward: [U1]
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C4 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -35,7 +34,6 @@ NodeForward: [U1]
    *menu_entry C4 l4
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{chap-first}
      {normal_text:chap first}
@@ -44,7 +42,6 @@ NodeForward: [U1]
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 l5
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -62,7 +59,6 @@ NodeUp: (manual3)
 NodeForward: (manual1)
 NodeBack: [U0]
  *normal_command@node C1 l7 {chap first}
- |EXTRA
  |identifier:{chap-first}
  |is_target:{1}
  |node_number:{2}
@@ -71,14 +67,12 @@ NodeBack: [U0]
     {spaces_before_argument: }
     {normal_text:chap first}
    *line_arg C4
-   |EXTRA
    |manual_content:A{2|2}
     {spaces_before_argument: }
     {normal_text:(}
     {normal_text:manual1}
     {normal_text:)}
    *line_arg C5
-   |EXTRA
    |manual_content:A{2|2}
     {spaces_before_argument: }
     {normal_text:(}
@@ -86,7 +80,6 @@ NodeBack: [U0]
     {normal_text:)}
     {spaces_after_argument: }
    *line_arg C5
-   |EXTRA
    |manual_content:A{2|2}
     {spaces_before_argument: }
     {normal_text:(}

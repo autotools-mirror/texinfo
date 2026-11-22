@@ -24,7 +24,6 @@ $result_tree_text{'not_set'} = '*document_root C1
      >{raw:Flag a is set.\\n}
      >{raw:\\n}
      >*normal_command@end C1 l5
-     >|EXTRA
      >|text_arg:{ifset}
       >*line_arg C3
        >{spaces_before_argument: }

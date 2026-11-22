@@ -12,7 +12,6 @@ $result_tree_text{'multitable_not_closed'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *normal_command@multitable C1 l1
-  |EXTRA
   |max_columns:{2}
    *arguments_line C1
     *block_line_arg C5

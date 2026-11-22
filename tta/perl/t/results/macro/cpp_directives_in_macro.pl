@@ -14,14 +14,12 @@ $result_tree_text{'cpp_directives_in_macro'} = '*document_root C1
    {text_before_beginning:\\n}
   *preamble_before_content C2
    *normal_command@macro C3 cpp_directives_in_macro.texi:l2
-   |EXTRA
    |formal_args:A{out}
    |macro_name:{simplemacro}
     *arguments_line C1
      {macro_line: simplemacro{out}\\n}
     {raw:\\out\\\\n}
     *normal_command@end C1 cpp_directives_in_macro.texi:l4
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }

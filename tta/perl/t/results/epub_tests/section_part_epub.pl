@@ -12,7 +12,6 @@ $result_tree_text{'section_part_epub'} = '*document_root C4
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -22,7 +21,6 @@ $result_tree_text{'section_part_epub'} = '*document_root C4
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@section C2 l2 {section}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{2}
  |section_number:{1}
@@ -33,7 +31,6 @@ $result_tree_text{'section_part_epub'} = '*document_root C4
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@part C1 l4 {part}
- |EXTRA
  |global_command_number:{1}
  |section_level:{0}
  |section_number:{2}

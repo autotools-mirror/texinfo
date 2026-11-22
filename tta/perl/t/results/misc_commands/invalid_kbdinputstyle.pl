@@ -14,7 +14,6 @@ $result_tree_text{'invalid_kbdinputstyle'} = '*document_root C1
   *paragraph C2
    {normal_text:kbdinputstyle }
    *normal_command@kbdinputstyle C1 l1
-   |EXTRA
    |global_command_number:{1}
     *line_arg C3
      {spaces_before_argument: }

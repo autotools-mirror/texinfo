@@ -12,42 +12,36 @@ $result_tree_text{'api_doc_with_linemacro'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C7
    *normal_command@linemacro C3 l1
-   |EXTRA
    |formal_args:A{param|type}
    |macro_name:{param}
     *arguments_line C1
      {macro_line: param {param, type}\\n}
     {raw:@defline Parameter @var{\\param\\} @code{ : \\type\\}\\n}
     *normal_command@end C1 l3
-    |EXTRA
     |text_arg:{linemacro}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:linemacro}
       {spaces_after_argument:\\n}
    *normal_command@linemacro C3 l4
-   |EXTRA
    |formal_args:A{param|type}
    |macro_name:{returns}
     *arguments_line C1
      {macro_line: returns {param, type}\\n}
     {raw:@defline {Return Value} @var{\\param\\} @code{ : \\type\\}\\n}
     *normal_command@end C1 l6
-    |EXTRA
     |text_arg:{linemacro}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:linemacro}
       {spaces_after_argument:\\n}
    *normal_command@linemacro C3 l7
-   |EXTRA
    |formal_args:A{exception}
    |macro_name:{raises}
     *arguments_line C1
      {macro_line: raises {exception}\\n}
     {raw:@defline {Exception} \\exception\\\\n}
     *normal_command@end C1 l9
-    |EXTRA
     |text_arg:{linemacro}
      *line_arg C3
       {spaces_before_argument: }
@@ -55,14 +49,12 @@ $result_tree_text{'api_doc_with_linemacro'} = '*document_root C1
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *normal_command@set C1
-   |EXTRA
    |misc_args:A{txidefnamenospace|}
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:txidefnamenospace}
      {spaces_after_argument:\\n}
    *normal_command@clear C1
-   |EXTRA
    |misc_args:A{txicodevaristt}
     *line_arg C3
      {spaces_before_argument: }
@@ -74,7 +66,6 @@ $result_tree_text{'api_doc_with_linemacro'} = '*document_root C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *normal_command@defline C1 l15
-   |EXTRA
    |def_command:{defline}
    |omit_def_name_space:{1}
    |original_def_cmdname:{defline}
@@ -142,7 +133,6 @@ $result_tree_text{'api_doc_with_linemacro'} = '*document_root C1
          >{macro_call_arg_text:array_like}
        {spaces_before_argument:\\n}
      *normal_command@defline C1 l19:@param
-     |EXTRA
      |def_command:{defline}
      |omit_def_name_space:{1}
      |original_def_cmdname:{defline}
@@ -180,7 +170,6 @@ $result_tree_text{'api_doc_with_linemacro'} = '*document_root C1
          >{spaces_before_argument: }
          >{macro_call_arg_text:int, optional}
      *normal_command@defline C1 l22:@param
-     |EXTRA
      |def_command:{defline}
      |omit_def_name_space:{1}
      |original_def_cmdname:{defline}
@@ -223,7 +212,6 @@ $result_tree_text{'api_doc_with_linemacro'} = '*document_root C1
          >{spaces_before_argument: }
          >{macro_call_arg_text:int, optional}
      *normal_command@defline C1 l26:@param
-     |EXTRA
      |def_command:{defline}
      |omit_def_name_space:{1}
      |original_def_cmdname:{defline}
@@ -261,7 +249,6 @@ $result_tree_text{'api_doc_with_linemacro'} = '*document_root C1
          >{spaces_before_argument: }
          >{macro_call_arg_text:complex ndarray}
      *normal_command@defline C1 l29:@returns
-     |EXTRA
      |def_command:{defline}
      |omit_def_name_space:{1}
      |original_def_cmdname:{defline}
@@ -296,7 +283,6 @@ $result_tree_text{'api_doc_with_linemacro'} = '*document_root C1
          >{spaces_before_argument: }
          >{macro_call_arg_text:IndexError}
      *normal_command@defline C1 l32:@raises
-     |EXTRA
      |def_command:{defline}
      |omit_def_name_space:{1}
      |original_def_cmdname:{defline}
@@ -325,7 +311,6 @@ $result_tree_text{'api_doc_with_linemacro'} = '*document_root C1
        {normal_text:.\\n}
       {empty_line:\\n}
      *normal_command@end C1 l35
-     |EXTRA
      |text_arg:{defblock}
       *line_arg C3
        {spaces_before_argument: }
@@ -333,7 +318,6 @@ $result_tree_text{'api_doc_with_linemacro'} = '*document_root C1
        {spaces_after_argument:\\n}
     {empty_line:\\n}
    *normal_command@end C1 l37
-   |EXTRA
    |text_arg:{defblock}
     *line_arg C3
      {spaces_before_argument: }

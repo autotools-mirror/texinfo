@@ -14,14 +14,12 @@ $result_tree_text{'macro_in_ifset'} = '*document_root C1
    {text_before_beginning:\\n}
   *preamble_before_content C3
    *normal_command@macro C3 l2
-   |EXTRA
    |formal_args:A{}
    |macro_name:{truc}
     *arguments_line C1
      {macro_line: truc {}\\n}
     {raw:truc\\n}
     *normal_command@end C1 l4
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -41,7 +39,6 @@ $result_tree_text{'macro_in_ifset'} = '*document_root C1
      >{raw:in ifset\\n}
      >{raw:@end macro\\n}
      >*normal_command@end C1 l11
-     >|EXTRA
      >|text_arg:{ifset}
       >*line_arg C3
        >{spaces_before_argument: }

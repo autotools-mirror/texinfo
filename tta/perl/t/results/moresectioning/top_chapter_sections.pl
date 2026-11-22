@@ -17,7 +17,6 @@ FastForward: [U1]
  *before_node_section C1
   *preamble_before_content
  *normal_command@top C2 l1 {top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |section_level:{0}
@@ -39,7 +38,6 @@ FastBack: [U0]
 Next: [U2]
 Up: [U0]
  *normal_command@unnumbered C2 l3 {unnumbered}
- |EXTRA
  |identifier:{unnumbered}
  |is_target:{1}
  |section_level:{1}
@@ -62,7 +60,6 @@ Next: [U4]
 Prev: [U1]
 Up: [U0]
  *normal_command@chapter C2 l5 {First chapter}
- |EXTRA
  |identifier:{First-chapter}
  |is_target:{1}
  |section_heading_number:{1}
@@ -84,7 +81,6 @@ FastForward: [U4]
 FastBack: [U2]
 Up: [U2]
  *normal_command@section C2 l7 {second}
- |EXTRA
  |identifier:{second}
  |is_target:{1}
  |section_heading_number:{1.1}
@@ -108,7 +104,6 @@ Next: [U8]
 Prev: [U2]
 Up: [U0]
  *normal_command@chapter C2 l9 {Chapter}
- |EXTRA
  |identifier:{Chapter}
  |is_target:{1}
  |section_heading_number:{2}
@@ -130,7 +125,6 @@ FastForward: [U8]
 FastBack: [U4]
 Up: [U4]
  *normal_command@section C2 l11 {Section of chapter}
- |EXTRA
  |identifier:{Section-of-chapter}
  |is_target:{1}
  |section_heading_number:{2.1}
@@ -153,7 +147,6 @@ FastBack: [U4]
 Next: [U7]
 Up: [U5]
  *normal_command@subsection C2 l13 {subsection 1}
- |EXTRA
  |identifier:{subsection-1}
  |is_target:{1}
  |section_heading_number:{2.1.1}
@@ -176,7 +169,6 @@ FastBack: [U4]
 Prev: [U6]
 Up: [U5]
  *normal_command@subsection C2 l15 {subsection 2}
- |EXTRA
  |identifier:{subsection-2}
  |is_target:{1}
  |section_heading_number:{2.1.2}
@@ -197,7 +189,6 @@ FastBack: [U4]
 Prev: [U4]
 Up: [U0]
  *normal_command@chapter C1 l17 {Chapter 2}
- |EXTRA
  |identifier:{Chapter-2}
  |is_target:{1}
  |section_heading_number:{3}

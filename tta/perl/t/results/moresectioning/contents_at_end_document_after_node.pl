@@ -12,7 +12,6 @@ $result_tree_text{'contents_at_end_document_after_node'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -22,7 +21,6 @@ $result_tree_text{'contents_at_end_document_after_node'} = '*document_root C5
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C4 l2 {contents at end document after node}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -38,7 +36,6 @@ $result_tree_text{'contents_at_end_document_after_node'} = '*document_root C5
    *menu_entry C4 l5
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{a-node}
      {normal_text:a node}
@@ -47,7 +44,6 @@ $result_tree_text{'contents_at_end_document_after_node'} = '*document_root C5
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 l6
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -55,7 +51,6 @@ $result_tree_text{'contents_at_end_document_after_node'} = '*document_root C5
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@chapter C2 l8 {chap}
- |EXTRA
  |identifier:{chap}
  |is_target:{1}
  |section_heading_number:{1}
@@ -68,7 +63,6 @@ $result_tree_text{'contents_at_end_document_after_node'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C3 l10 {a node}
- |EXTRA
  |identifier:{a-node}
  |is_target:{1}
  |node_number:{2}
@@ -79,14 +73,12 @@ $result_tree_text{'contents_at_end_document_after_node'} = '*document_root C5
    *line_arg
    *line_arg
    *line_arg C2
-   |EXTRA
    |node_content:A{0|0}
    |normalized:{Top}
     {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@contents C1 l12
-  |EXTRA
   |global_command_number:{1}
    *line_arg C1
     {spaces_before_argument:\\n}

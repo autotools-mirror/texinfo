@@ -20,7 +20,6 @@ $result_tree_text{'section_in_footnote'} = '*document_root C2
      {spaces_before_argument:\\n}
      {empty_line:\\n}
  *normal_command@section C1 l4 {a section}
- |EXTRA
  |identifier:{a-section}
  |is_target:{1}
  |section_heading_number:{1}

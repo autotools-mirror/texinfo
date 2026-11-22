@@ -12,7 +12,6 @@ $result_tree_text{'anchor_in_heading'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -22,7 +21,6 @@ $result_tree_text{'anchor_in_heading'} = '*document_root C3
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C3 l2 {top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -32,14 +30,12 @@ $result_tree_text{'anchor_in_heading'} = '*document_root C3
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@heading C1 l4
-  |EXTRA
   |global_command_number:{1}
   |heading_number:{1}
    *line_arg C6
     {spaces_before_argument: }
     {normal_text:Heading }
     *normal_command@anchor C1 l4
-    |EXTRA
     |identifier:{point}
     |is_target:{1}
      *brace_arg C1

@@ -13,7 +13,6 @@ $result_tree_text{'wrong_braces_simple'} = '*document_root C1
   *preamble_before_content
   *normal_command@deffn C2 l1
    *def_line C1 l1
-   |EXTRA
    |def_command:{deffn}
    |index_entry:I{fn,1}
    |original_def_cmdname:{deffn}
@@ -40,7 +39,6 @@ $result_tree_text{'wrong_braces_simple'} = '*document_root C1
        {normal_text:and}
      {spaces_after_argument: \\n}
    *normal_command@end C1 l2
-   |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
@@ -49,7 +47,6 @@ $result_tree_text{'wrong_braces_simple'} = '*document_root C1
   {empty_line:\\n}
   *normal_command@deffn C2 l4
    *def_line C1 l4
-   |EXTRA
    |def_command:{deffn}
    |index_entry:I{fn,2}
    |original_def_cmdname:{deffn}
@@ -80,7 +77,6 @@ $result_tree_text{'wrong_braces_simple'} = '*document_root C1
        {normal_text:after}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l5
-   |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
@@ -89,7 +85,6 @@ $result_tree_text{'wrong_braces_simple'} = '*document_root C1
   {empty_line:\\n}
   *normal_command@deffn C2 l7
    *def_line C1 l7
-   |EXTRA
    |def_command:{deffn}
    |index_entry:I{fn,3}
    |original_def_cmdname:{deffn}
@@ -119,7 +114,6 @@ $result_tree_text{'wrong_braces_simple'} = '*document_root C1
       *bracketed_arg C1 l7
        {spaces_before_argument:\\n}
    *normal_command@end C1 l8
-   |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
@@ -128,7 +122,6 @@ $result_tree_text{'wrong_braces_simple'} = '*document_root C1
   {empty_line:\\n}
   *normal_command@deffn C2 l10
    *def_line C1 l10
-   |EXTRA
    |def_command:{deffn}
    |index_entry:I{fn,4}
    |original_def_cmdname:{deffn}
@@ -160,7 +153,6 @@ $result_tree_text{'wrong_braces_simple'} = '*document_root C1
        {normal_text:and after}
        {spaces_after_argument:\\n}
    *normal_command@end C1 l11
-   |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
@@ -169,7 +161,6 @@ $result_tree_text{'wrong_braces_simple'} = '*document_root C1
   {empty_line:\\n}
   *normal_command@deffn C6 l13
    *def_line C1 l13
-   |EXTRA
    |def_command:{deffn}
    |index_entry:I{fn,5}
    |original_def_cmdname:{deffn}
@@ -196,7 +187,6 @@ $result_tree_text{'wrong_braces_simple'} = '*document_root C1
        {normal_text:e}
      {spaces_after_argument:\\n}
    *normal_command@deffnx C1 l14
-   |EXTRA
    |def_command:{deffn}
    |index_entry:I{fn,6}
    |original_def_cmdname:{deffnx}
@@ -223,7 +213,6 @@ $result_tree_text{'wrong_braces_simple'} = '*document_root C1
        {normal_text:and}
      {spaces_after_argument: \\n}
    *normal_command@deffnx C1 l15
-   |EXTRA
    |def_command:{deffn}
    |index_entry:I{fn,7}
    |original_def_cmdname:{deffnx}
@@ -254,7 +243,6 @@ $result_tree_text{'wrong_braces_simple'} = '*document_root C1
        {normal_text:after}
      {spaces_after_argument:\\n}
    *normal_command@deffnx C1 l16
-   |EXTRA
    |def_command:{deffn}
    |index_entry:I{fn,8}
    |original_def_cmdname:{deffnx}
@@ -284,7 +272,6 @@ $result_tree_text{'wrong_braces_simple'} = '*document_root C1
       *bracketed_arg C1 l16
        {spaces_before_argument:\\n}
    *normal_command@deffnx C1 l17
-   |EXTRA
    |def_command:{deffn}
    |index_entry:I{fn,9}
    |original_def_cmdname:{deffnx}
@@ -316,7 +303,6 @@ $result_tree_text{'wrong_braces_simple'} = '*document_root C1
        {normal_text:and after}
        {spaces_after_argument:\\n}
    *normal_command@end C1 l18
-   |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }

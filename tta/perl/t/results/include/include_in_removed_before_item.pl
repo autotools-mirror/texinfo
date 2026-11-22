@@ -23,7 +23,6 @@ $result_tree_text{'include_in_removed_before_item'} = '*document_root C1
      >SOURCEMARKS
      >include<start;1>
       >*normal_command@include C1 l3
-      >|EXTRA
       >|text_arg:{only_comment.texi}
        >*line_arg C3
         >{spaces_before_argument: }
@@ -46,7 +45,6 @@ $result_tree_text{'include_in_removed_before_item'} = '*document_root C1
        {normal_text:FOO}
        {spaces_after_argument:\\n}
    *normal_command@end C1 l5
-   |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }

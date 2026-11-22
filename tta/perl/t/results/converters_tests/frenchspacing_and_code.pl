@@ -14,7 +14,6 @@ $result_tree_text{'frenchspacing_and_code'} = '*document_root C7
    {text_before_beginning:\\n}
   *preamble_before_content C2
    *normal_command@frenchspacing C1 l2
-   |EXTRA
    |global_command_number:{1}
    |misc_args:A{on}
     *line_arg C3
@@ -23,7 +22,6 @@ $result_tree_text{'frenchspacing_and_code'} = '*document_root C7
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *normal_command@node C1 l4 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -33,7 +31,6 @@ $result_tree_text{'frenchspacing_and_code'} = '*document_root C7
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C2 l5 {top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -43,7 +40,6 @@ $result_tree_text{'frenchspacing_and_code'} = '*document_root C7
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l7 {chapter frenchspacing}
- |EXTRA
  |identifier:{chapter-frenchspacing}
  |is_target:{1}
  |node_number:{2}
@@ -53,7 +49,6 @@ $result_tree_text{'frenchspacing_and_code'} = '*document_root C7
     {normal_text:chapter frenchspacing}
     {spaces_after_argument:\\n}
  *normal_command@chapter C13 l8 {Chap frenchspacing}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -79,7 +74,6 @@ $result_tree_text{'frenchspacing_and_code'} = '*document_root C7
    *preformatted C1
     {normal_text:c: d? j\\n}
    *normal_command@end C1 l16
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
@@ -88,7 +82,6 @@ $result_tree_text{'frenchspacing_and_code'} = '*document_root C7
   {empty_line:\\n}
   *normal_command@deftypeop C3 l18
    *def_line C1 l18
-   |EXTRA
    |def_command:{deftypeop}
    |element_node:{chapter-frenchspacing}
    |index_entry:I{fn,1}
@@ -139,7 +132,6 @@ $result_tree_text{'frenchspacing_and_code'} = '*document_root C7
     *paragraph C1
      {normal_text:deftypeop\\n}
    *normal_command@end C1 l20
-   |EXTRA
    |text_arg:{deftypeop}
     *line_arg C3
      {spaces_before_argument: }
@@ -148,7 +140,6 @@ $result_tree_text{'frenchspacing_and_code'} = '*document_root C7
   {empty_line:\\n}
   *normal_command@defop C3 l22
    *def_line C1 l22
-   |EXTRA
    |def_command:{defop}
    |element_node:{chapter-frenchspacing}
    |index_entry:I{fn,2}
@@ -195,7 +186,6 @@ $result_tree_text{'frenchspacing_and_code'} = '*document_root C7
     *paragraph C1
      {normal_text:defop\\n}
    *normal_command@end C1 l24
-   |EXTRA
    |text_arg:{defop}
     *line_arg C3
      {spaces_before_argument: }
@@ -203,7 +193,6 @@ $result_tree_text{'frenchspacing_and_code'} = '*document_root C7
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@frenchspacing C1 l26
-  |EXTRA
   |global_command_number:{2}
   |misc_args:A{off}
    *line_arg C3
@@ -211,7 +200,6 @@ $result_tree_text{'frenchspacing_and_code'} = '*document_root C7
     {normal_text:off}
     {spaces_after_argument:\\n}
  *normal_command@node C1 l27 {chap no}
- |EXTRA
  |identifier:{chap-no}
  |is_target:{1}
  |node_number:{3}
@@ -221,7 +209,6 @@ $result_tree_text{'frenchspacing_and_code'} = '*document_root C7
     {normal_text:chap no}
     {spaces_after_argument:\\n}
  *normal_command@chapter C11 l28 {Chap no}
- |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
  |section_number:{3}
@@ -247,7 +234,6 @@ $result_tree_text{'frenchspacing_and_code'} = '*document_root C7
    *preformatted C1
     {normal_text:c: d? jn\\n}
    *normal_command@end C1 l36
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
@@ -256,7 +242,6 @@ $result_tree_text{'frenchspacing_and_code'} = '*document_root C7
   {empty_line:\\n}
   *normal_command@deftypeop C3 l38
    *def_line C1 l38
-   |EXTRA
    |def_command:{deftypeop}
    |element_node:{chap-no}
    |index_entry:I{fn,3}
@@ -307,7 +292,6 @@ $result_tree_text{'frenchspacing_and_code'} = '*document_root C7
     *paragraph C1
      {normal_text:deftypeop n\\n}
    *normal_command@end C1 l40
-   |EXTRA
    |text_arg:{deftypeop}
     *line_arg C3
      {spaces_before_argument: }
@@ -316,7 +300,6 @@ $result_tree_text{'frenchspacing_and_code'} = '*document_root C7
   {empty_line:\\n}
   *normal_command@defop C3 l42
    *def_line C1 l42
-   |EXTRA
    |def_command:{defop}
    |element_node:{chap-no}
    |index_entry:I{fn,4}
@@ -363,7 +346,6 @@ $result_tree_text{'frenchspacing_and_code'} = '*document_root C7
     *paragraph C1
      {normal_text:defop n\\n}
    *normal_command@end C1 l44
-   |EXTRA
    |text_arg:{defop}
     *line_arg C3
      {spaces_before_argument: }

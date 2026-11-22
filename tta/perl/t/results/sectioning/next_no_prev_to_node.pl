@@ -12,7 +12,6 @@ $result_tree_text{'next_no_prev_to_node'} = '*document_root C4
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C4 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -29,7 +28,6 @@ $result_tree_text{'next_no_prev_to_node'} = '*document_root C4
    *menu_entry C4 l4
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{chap-first-node}
      {normal_text:chap first node}
@@ -40,7 +38,6 @@ $result_tree_text{'next_no_prev_to_node'} = '*document_root C4
    *menu_entry C4 l5
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{no-return}
      {normal_text:no return}
@@ -49,7 +46,6 @@ $result_tree_text{'next_no_prev_to_node'} = '*document_root C4
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 l6
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -57,7 +53,6 @@ $result_tree_text{'next_no_prev_to_node'} = '*document_root C4
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C2 l8 {chap first node}
- |EXTRA
  |identifier:{chap-first-node}
  |is_target:{1}
  |node_number:{2}
@@ -66,14 +61,12 @@ $result_tree_text{'next_no_prev_to_node'} = '*document_root C4
     {spaces_before_argument: }
     {normal_text:chap first node}
    *line_arg C2
-   |EXTRA
    |node_content:A{1|1}
    |normalized:{no-return}
     {spaces_before_argument: }
     {normal_text:no return}
    *line_arg
    *line_arg C3
-   |EXTRA
    |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
@@ -81,7 +74,6 @@ $result_tree_text{'next_no_prev_to_node'} = '*document_root C4
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l10 {no return}
- |EXTRA
  |identifier:{no-return}
  |is_target:{1}
  |node_number:{3}
@@ -92,7 +84,6 @@ $result_tree_text{'next_no_prev_to_node'} = '*document_root C4
    *line_arg
    *line_arg
    *line_arg C3
-   |EXTRA
    |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }

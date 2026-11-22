@@ -12,7 +12,6 @@ $result_tree_text{'macro_in_value'} = '*document_root C1
  *before_node_section C4
   *preamble_before_content C4
    *normal_command@macro C5 l1
-   |EXTRA
    |formal_args:A{}
    |macro_name:{ab}
     *arguments_line C1
@@ -21,7 +20,6 @@ $result_tree_text{'macro_in_value'} = '*document_root C1
     {raw:\\n}
     {raw:b\\n}
     *normal_command@end C1 l5
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -29,7 +27,6 @@ $result_tree_text{'macro_in_value'} = '*document_root C1
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *normal_command@set C1
-   |EXTRA
    |misc_args:A{flagab|@ab}
     *line_arg C3
      {spaces_before_argument: }

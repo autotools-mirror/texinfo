@@ -12,7 +12,6 @@ $result_tree_text{'comment_on_ifset_line'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C2
    *normal_command@set C1
-   |EXTRA
    |misc_args:A{x|}
     *line_arg C3
      {spaces_before_argument: }
@@ -35,7 +34,6 @@ $result_tree_text{'comment_on_ifset_line'} = '*document_root C1
    >SOURCEMARKS
    >expanded_conditional_command<end;1><p:3>
     >*normal_command@end C1 l5
-    >|EXTRA
     >|text_arg:{ifset}
      >*line_arg C3
       >{spaces_before_argument: }
@@ -56,7 +54,6 @@ $result_tree_text{'comment_on_ifset_line'} = '*document_root C1
    >SOURCEMARKS
    >expanded_conditional_command<end;2><p:3>
     >*normal_command@end C1 l8
-    >|EXTRA
     >|text_arg:{ifset}
      >*line_arg C3
       >{spaces_before_argument: }
@@ -76,7 +73,6 @@ $result_tree_text{'comment_on_ifset_line'} = '*document_root C1
    >SOURCEMARKS
    >expanded_conditional_command<end;3><p:3>
     >*normal_command@end C1 l11
-    >|EXTRA
     >|text_arg:{ifset}
      >*line_arg C3
       >{spaces_before_argument: }
@@ -97,7 +93,6 @@ $result_tree_text{'comment_on_ifset_line'} = '*document_root C1
    >SOURCEMARKS
    >expanded_conditional_command<end;4><p:3>
     >*normal_command@end C1 l14
-    >|EXTRA
     >|text_arg:{ifset}
      >*line_arg C3
       >{spaces_before_argument: }
@@ -119,7 +114,6 @@ $result_tree_text{'comment_on_ifset_line'} = '*document_root C1
    >SOURCEMARKS
    >expanded_conditional_command<end;5><p:3>
     >*normal_command@end C1 l17
-    >|EXTRA
     >|text_arg:{ifset}
      >*line_arg C3
       >{spaces_before_argument: }
@@ -140,7 +134,6 @@ $result_tree_text{'comment_on_ifset_line'} = '*document_root C1
    >SOURCEMARKS
    >expanded_conditional_command<end;6><p:3>
     >*normal_command@end C1 l20
-    >|EXTRA
     >|text_arg:{ifset}
      >*line_arg C3
       >{spaces_before_argument: }

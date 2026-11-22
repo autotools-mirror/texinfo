@@ -12,28 +12,24 @@ $result_tree_text{'definfoenclose_texinfo_commands'} = '*document_root C1
  *before_node_section C6
   *preamble_before_content C5
    *normal_command@definfoenclose C1 l1
-   |EXTRA
    |misc_args:A{verb|;;|!!}
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:verb,;;,!!}
      {spaces_after_argument:\\n}
    *normal_command@definfoenclose C1 l2
-   |EXTRA
    |misc_args:A{TeX|aa|bb}
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:TeX,aa,bb}
      {spaces_after_argument:\\n}
    *normal_command@definfoenclose C1 l3
-   |EXTRA
    |misc_args:A{strong|(|)}
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:strong,(,)}
      {spaces_after_argument:\\n}
    *normal_command@definfoenclose C1 l4
-   |EXTRA
    |misc_args:A{quotation|q|e}
     *line_arg C3
      {spaces_before_argument: }
@@ -53,7 +49,6 @@ $result_tree_text{'definfoenclose_texinfo_commands'} = '*document_root C1
     *brace_container
    {normal_text:. }
    *definfoenclose_command@strong C1 l8
-   |EXTRA
    |begin:{(}
    |end:{)}
     *brace_container C1
@@ -69,7 +64,6 @@ $result_tree_text{'definfoenclose_texinfo_commands'} = '*document_root C1
    *paragraph C1
     {normal_text:in quotation\\n}
    *normal_command@end C1 l12
-   |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }

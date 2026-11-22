@@ -24,14 +24,12 @@ $result_tree_text{'nested_block_commands'} = '*document_root C1
     *paragraph C1
      {normal_text:in quotation\\n}
     *normal_command@end C1 l5
-    |EXTRA
     |text_arg:{quotation}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:quotation}
       {spaces_after_argument:\\n}
    *normal_command@end C1 l6
-   |EXTRA
    |text_arg:{group}
     *line_arg C3
      {spaces_before_argument: }
@@ -49,14 +47,12 @@ $result_tree_text{'nested_block_commands'} = '*document_root C1
     *paragraph C1
      {normal_text:in quotation\\n}
     *normal_command@end C1 l11
-    |EXTRA
     |text_arg:{quotation}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:quotation}
       {spaces_after_argument:\\n}
    *normal_command@end C1 l12
-   |EXTRA
    |text_arg:{group}
     *line_arg C3
      {spaces_before_argument: }
@@ -76,7 +72,6 @@ $result_tree_text{'nested_block_commands'} = '*document_root C1
     *paragraph C1
      {normal_text:in quotation\\n}
     *normal_command@end C1 l18
-    |EXTRA
     |text_arg:{quotation}
      *line_arg C3
       {spaces_before_argument: }
@@ -85,7 +80,6 @@ $result_tree_text{'nested_block_commands'} = '*document_root C1
    *paragraph C1
     {normal_text:after quotation\\n}
    *normal_command@end C1 l20
-   |EXTRA
    |text_arg:{group}
     *line_arg C3
      {spaces_before_argument: }
@@ -106,14 +100,12 @@ $result_tree_text{'nested_block_commands'} = '*document_root C1
     *paragraph C1
      {normal_text:in quotation\\n}
     *normal_command@end C1 l27
-    |EXTRA
     |text_arg:{quotation}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:quotation}
       {spaces_after_argument:\\n}
    *normal_command@end C1 l28
-   |EXTRA
    |text_arg:{group}
     *line_arg C3
      {spaces_before_argument: }
@@ -135,14 +127,12 @@ $result_tree_text{'nested_block_commands'} = '*document_root C1
     *paragraph C1
      {normal_text:in quotation\\n}
     *normal_command@end C1 l36
-    |EXTRA
     |text_arg:{quotation}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:quotation}
       {spaces_after_argument:\\n}
    *normal_command@end C1 l37
-   |EXTRA
    |text_arg:{group}
     *line_arg C3
      {spaces_before_argument: }
@@ -163,14 +153,12 @@ $result_tree_text{'nested_block_commands'} = '*document_root C1
     *paragraph C1
      {normal_text:in quotation\\n}
     *normal_command@end C1 l44
-    |EXTRA
     |text_arg:{quotation}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:quotation}
       {spaces_after_argument:\\n}
    *normal_command@end C1 l45
-   |EXTRA
    |text_arg:{group}
     *line_arg C3
      {spaces_before_argument: }
@@ -189,14 +177,12 @@ $result_tree_text{'nested_block_commands'} = '*document_root C1
     *paragraph C1
      {normal_text:in quotation sp b\\n}
     *normal_command@end C1 l51
-    |EXTRA
     |text_arg:{quotation}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:quotation}
       {spaces_after_argument:\\n}
    *normal_command@end C1 l52
-   |EXTRA
    |text_arg:{group}
     *line_arg C3
      {spaces_before_argument: }
@@ -216,14 +202,12 @@ $result_tree_text{'nested_block_commands'} = '*document_root C1
      {normal_text:in quotation sp b a\\n}
     {empty_line:\\n}
     *normal_command@end C1 l59
-    |EXTRA
     |text_arg:{quotation}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:quotation}
       {spaces_after_argument:\\n}
    *normal_command@end C1 l60
-   |EXTRA
    |text_arg:{group}
     *line_arg C3
      {spaces_before_argument: }
@@ -242,14 +226,12 @@ $result_tree_text{'nested_block_commands'} = '*document_root C1
      {normal_text:in quotation sp a\\n}
     {empty_line:\\n}
     *normal_command@end C1 l66
-    |EXTRA
     |text_arg:{quotation}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:quotation}
       {spaces_after_argument:\\n}
    *normal_command@end C1 l67
-   |EXTRA
    |text_arg:{group}
     *line_arg C3
      {spaces_before_argument: }
@@ -267,7 +249,6 @@ $result_tree_text{'nested_block_commands'} = '*document_root C1
     *paragraph C1
      {normal_text:in quotation\\n}
     *normal_command@end C1 l72
-    |EXTRA
     |text_arg:{quotation}
      *line_arg C3
       {spaces_before_argument: }
@@ -277,7 +258,6 @@ $result_tree_text{'nested_block_commands'} = '*document_root C1
    *paragraph C1
     {normal_text:After quotation sp b\\n}
    *normal_command@end C1 l75
-   |EXTRA
    |text_arg:{group}
     *line_arg C3
      {spaces_before_argument: }
@@ -295,7 +275,6 @@ $result_tree_text{'nested_block_commands'} = '*document_root C1
     *paragraph C1
      {normal_text:in quotation\\n}
     *normal_command@end C1 l80
-    |EXTRA
     |text_arg:{quotation}
      *line_arg C3
       {spaces_before_argument: }
@@ -305,7 +284,6 @@ $result_tree_text{'nested_block_commands'} = '*document_root C1
     {normal_text:After quotation sp a\\n}
    {empty_line:\\n}
    *normal_command@end C1 l83
-   |EXTRA
    |text_arg:{group}
     *line_arg C3
      {spaces_before_argument: }
@@ -323,7 +301,6 @@ $result_tree_text{'nested_block_commands'} = '*document_root C1
     *paragraph C1
      {normal_text:in quotation\\n}
     *normal_command@end C1 l88
-    |EXTRA
     |text_arg:{quotation}
      *line_arg C3
       {spaces_before_argument: }
@@ -334,7 +311,6 @@ $result_tree_text{'nested_block_commands'} = '*document_root C1
     {normal_text:After quotation sp b a\\n}
    {empty_line:\\n}
    *normal_command@end C1 l92
-   |EXTRA
    |text_arg:{group}
     *line_arg C3
      {spaces_before_argument: }

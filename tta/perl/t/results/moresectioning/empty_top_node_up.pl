@@ -12,7 +12,6 @@ $result_tree_text{'empty_top_node_up'} = '*document_root C4
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -22,7 +21,6 @@ $result_tree_text{'empty_top_node_up'} = '*document_root C4
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C4 l2 {empty top node up}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -38,7 +36,6 @@ $result_tree_text{'empty_top_node_up'} = '*document_root C4
    *menu_entry C4 l5
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{chap}
      {normal_text:chap}
@@ -47,7 +44,6 @@ $result_tree_text{'empty_top_node_up'} = '*document_root C4
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 l6
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -55,7 +51,6 @@ $result_tree_text{'empty_top_node_up'} = '*document_root C4
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l8 {chap}
- |EXTRA
  |identifier:{chap}
  |is_target:{1}
  |node_number:{2}

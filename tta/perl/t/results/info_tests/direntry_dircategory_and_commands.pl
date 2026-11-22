@@ -30,7 +30,6 @@ $result_tree_text{'direntry_dircategory_and_commands'} = '*document_root C3
       {normal_text:foo}
      {menu_entry_separator:: }
      *menu_entry_node C3
-     |EXTRA
      |manual_content:A{1|1}
       {normal_text:(}
       {normal_text:foo}
@@ -44,7 +43,6 @@ $result_tree_text{'direntry_dircategory_and_commands'} = '*document_root C3
          {normal_text:there}
        {normal_text:?\'\'\\n}
     *normal_command@end C1 l4
-    |EXTRA
     |text_arg:{direntry}
      *line_arg C3
       {spaces_before_argument: }
@@ -63,7 +61,6 @@ $result_tree_text{'direntry_dircategory_and_commands'} = '*document_root C3
     *menu_entry C4 l8
      {menu_entry_leading_text:* }
      *menu_entry_node C2
-     |EXTRA
      |node_content:A{0|1}
      |normalized:{aaa}
       {normal_text:aaa}
@@ -78,7 +75,6 @@ $result_tree_text{'direntry_dircategory_and_commands'} = '*document_root C3
       {after_menu_description_line:\\n}
       {normal_text:menutitle\\n}
     *normal_command@end C1 l12
-    |EXTRA
     |text_arg:{direntry}
      *line_arg C3
       {spaces_before_argument: }
@@ -87,7 +83,6 @@ $result_tree_text{'direntry_dircategory_and_commands'} = '*document_root C3
    {empty_line:\\n}
    {empty_line:\\n}
  *normal_command@node C1 l15 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -97,7 +92,6 @@ $result_tree_text{'direntry_dircategory_and_commands'} = '*document_root C3
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C3 l16 {Test dircategory and direntry}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1

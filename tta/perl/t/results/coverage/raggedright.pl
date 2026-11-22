@@ -20,7 +20,6 @@ $result_tree_text{'raggedright'} = '*document_root C1
    *paragraph C1
     {normal_text:in raggedright\\n}
    *normal_command@end C1 l4
-   |EXTRA
    |text_arg:{raggedright}
     *line_arg C3
      {spaces_before_argument: }

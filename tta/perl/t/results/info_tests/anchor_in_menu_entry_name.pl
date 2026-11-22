@@ -12,7 +12,6 @@ $result_tree_text{'anchor_in_menu_entry_name'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C4 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -31,7 +30,6 @@ $result_tree_text{'anchor_in_menu_entry_name'} = '*document_root C3
     *menu_entry_name C4
      {normal_text:name }
      *normal_command@anchor C1 l4
-     |EXTRA
      |identifier:{point}
      |is_target:{1}
       *brace_arg C1
@@ -40,7 +38,6 @@ $result_tree_text{'anchor_in_menu_entry_name'} = '*document_root C3
      {normal_text:after anchor}
     {menu_entry_separator:: }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{first}
      {normal_text:first}
@@ -49,7 +46,6 @@ $result_tree_text{'anchor_in_menu_entry_name'} = '*document_root C3
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 l5
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -57,7 +53,6 @@ $result_tree_text{'anchor_in_menu_entry_name'} = '*document_root C3
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l7 {first}
- |EXTRA
  |identifier:{first}
  |is_target:{1}
  |node_number:{2}

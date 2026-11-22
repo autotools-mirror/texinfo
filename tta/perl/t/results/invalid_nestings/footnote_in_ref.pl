@@ -12,7 +12,6 @@ $result_tree_text{'footnote_in_ref'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C3 l1 {first}
- |EXTRA
  |identifier:{first}
  |is_target:{1}
  |node_number:{1}
@@ -30,7 +29,6 @@ $result_tree_text{'footnote_in_ref'} = '*document_root C2
      {spaces_before_argument: }
      {normal_text:Text}
      *normal_command@footnote C1 l3
-     |EXTRA
      |global_command_number:{1}
       *brace_command_context C3
        *paragraph C1

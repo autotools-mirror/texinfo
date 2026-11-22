@@ -14,7 +14,6 @@ $result_tree_text{'unknown_encoding'} = '*document_root C2
    {text_before_beginning:\\n}
   *preamble_before_content C2
    *normal_command@documentencoding C1 l2
-   |EXTRA
    |global_command_number:{1}
    |text_arg:{ggg}
     *line_arg C3
@@ -23,7 +22,6 @@ $result_tree_text{'unknown_encoding'} = '*document_root C2
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *normal_command@node C2 l4 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}

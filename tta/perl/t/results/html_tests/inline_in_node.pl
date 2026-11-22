@@ -15,7 +15,6 @@ $result_tree_text{'inline_in_node'} = '*document_root C5
     *line_arg C5
      {spaces_before_argument: }
      *normal_command@inlineraw C2 l1
-     |EXTRA
      |expand_index:{1}
      |format:{html}
       *brace_arg C1
@@ -24,7 +23,6 @@ $result_tree_text{'inline_in_node'} = '*document_root C5
        {normal_text:<strong class="ttitle">}
      {normal_text:Title}
      *normal_command@inlineraw C2 l1
-     |EXTRA
      |expand_index:{1}
      |format:{html}
       *brace_arg C1
@@ -34,7 +32,6 @@ $result_tree_text{'inline_in_node'} = '*document_root C5
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *normal_command@node C1 l3 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -44,7 +41,6 @@ $result_tree_text{'inline_in_node'} = '*document_root C5
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C2 l4
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -52,7 +48,6 @@ $result_tree_text{'inline_in_node'} = '*document_root C5
     {spaces_before_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l6 {@inlineraw{html,<code class="tnode">}One@inlineraw{html,</code>}}
- |EXTRA
  |identifier:{htmlOnehtml}
  |is_target:{1}
  |node_number:{2}
@@ -60,7 +55,6 @@ $result_tree_text{'inline_in_node'} = '*document_root C5
    *line_arg C5
     {spaces_before_argument: }
     *normal_command@inlineraw C2 l6
-    |EXTRA
     |expand_index:{1}
     |format:{html}
      *brace_arg C1
@@ -69,7 +63,6 @@ $result_tree_text{'inline_in_node'} = '*document_root C5
       {normal_text:<code class="tnode">}
     {normal_text:One}
     *normal_command@inlineraw C2 l6
-    |EXTRA
     |expand_index:{1}
     |format:{html}
      *brace_arg C1
@@ -78,7 +71,6 @@ $result_tree_text{'inline_in_node'} = '*document_root C5
       {normal_text:</code>}
     {spaces_after_argument:\\n}
  *normal_command@chapter C2 l7 {@inlineraw{html,<span class="test">}One@inlineraw{html,</span>}}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -86,7 +78,6 @@ $result_tree_text{'inline_in_node'} = '*document_root C5
    *line_arg C5
     {spaces_before_argument: }
     *normal_command@inlineraw C2 l7
-    |EXTRA
     |expand_index:{1}
     |format:{html}
      *brace_arg C1
@@ -95,7 +86,6 @@ $result_tree_text{'inline_in_node'} = '*document_root C5
       {normal_text:<span class="test">}
     {normal_text:One}
     *normal_command@inlineraw C2 l7
-    |EXTRA
     |expand_index:{1}
     |format:{html}
      *brace_arg C1

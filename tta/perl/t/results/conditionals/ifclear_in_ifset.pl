@@ -22,7 +22,6 @@ $result_tree_text{'ifclear_in_ifset'} = '*document_root C1
     >{raw:@ifclear ok  - ok, ignored\\n}
     >{raw:@end junky   - ok, ignored\\n}
     >*normal_command@end C1 l5
-    >|EXTRA
     >|text_arg:{ifset}
      >*line_arg C3
       >{spaces_before_argument: }

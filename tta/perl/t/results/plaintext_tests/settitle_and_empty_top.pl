@@ -18,7 +18,6 @@ $result_tree_text{'settitle_and_empty_top'} = '*document_root C2
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *normal_command@top C2 l3
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1

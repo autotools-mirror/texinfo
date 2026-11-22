@@ -22,7 +22,6 @@ $result_tree_text{'tab_item_in_example'} = '*document_root C1
     {ignorable_spaces_after_command: }
     {normal_text:in item\\n}
    *normal_command@end C1 l4
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }

@@ -13,13 +13,11 @@ $result_tree_text{'all_empty_def'} = '*document_root C1
   *preamble_before_content
   *normal_command@deffn C2 l1
    *def_line C1 l1
-   |EXTRA
    |def_command:{deffn}
    |original_def_cmdname:{deffn}
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *normal_command@end C1 l2
-   |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
@@ -28,13 +26,11 @@ $result_tree_text{'all_empty_def'} = '*document_root C1
   {empty_line:\\n}
   *normal_command@defvr C2 l4
    *def_line C1 l4
-   |EXTRA
    |def_command:{defvr}
    |original_def_cmdname:{defvr}
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *normal_command@end C1 l5
-   |EXTRA
    |text_arg:{defvr}
     *line_arg C3
      {spaces_before_argument: }
@@ -43,13 +39,11 @@ $result_tree_text{'all_empty_def'} = '*document_root C1
   {empty_line:\\n}
   *normal_command@deftypefn C2 l7
    *def_line C1 l7
-   |EXTRA
    |def_command:{deftypefn}
    |original_def_cmdname:{deftypefn}
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *normal_command@end C1 l8
-   |EXTRA
    |text_arg:{deftypefn}
     *line_arg C3
      {spaces_before_argument: }
@@ -58,13 +52,11 @@ $result_tree_text{'all_empty_def'} = '*document_root C1
   {empty_line:\\n}
   *normal_command@deftypeop C2 l10
    *def_line C1 l10
-   |EXTRA
    |def_command:{deftypeop}
    |original_def_cmdname:{deftypeop}
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *normal_command@end C1 l11
-   |EXTRA
    |text_arg:{deftypeop}
     *line_arg C3
      {spaces_before_argument: }
@@ -73,13 +65,11 @@ $result_tree_text{'all_empty_def'} = '*document_root C1
   {empty_line:\\n}
   *normal_command@deftypevr C2 l13
    *def_line C1 l13
-   |EXTRA
    |def_command:{deftypevr}
    |original_def_cmdname:{deftypevr}
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *normal_command@end C1 l14
-   |EXTRA
    |text_arg:{deftypevr}
     *line_arg C3
      {spaces_before_argument: }
@@ -88,13 +78,11 @@ $result_tree_text{'all_empty_def'} = '*document_root C1
   {empty_line:\\n}
   *normal_command@defcv C2 l16
    *def_line C1 l16
-   |EXTRA
    |def_command:{defcv}
    |original_def_cmdname:{defcv}
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *normal_command@end C1 l17
-   |EXTRA
    |text_arg:{defcv}
     *line_arg C3
      {spaces_before_argument: }
@@ -103,13 +91,11 @@ $result_tree_text{'all_empty_def'} = '*document_root C1
   {empty_line:\\n}
   *normal_command@deftypecv C2 l19
    *def_line C1 l19
-   |EXTRA
    |def_command:{deftypecv}
    |original_def_cmdname:{deftypecv}
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *normal_command@end C1 l20
-   |EXTRA
    |text_arg:{deftypecv}
     *line_arg C3
      {spaces_before_argument: }
@@ -118,13 +104,11 @@ $result_tree_text{'all_empty_def'} = '*document_root C1
   {empty_line:\\n}
   *normal_command@defop C2 l22
    *def_line C1 l22
-   |EXTRA
    |def_command:{defop}
    |original_def_cmdname:{defop}
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *normal_command@end C1 l23
-   |EXTRA
    |text_arg:{defop}
     *line_arg C3
      {spaces_before_argument: }
@@ -133,13 +117,11 @@ $result_tree_text{'all_empty_def'} = '*document_root C1
   {empty_line:\\n}
   *normal_command@deftp C2 l25
    *def_line C1 l25
-   |EXTRA
    |def_command:{deftp}
    |original_def_cmdname:{deftp}
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *normal_command@end C1 l26
-   |EXTRA
    |text_arg:{deftp}
     *line_arg C3
      {spaces_before_argument: }

@@ -12,13 +12,11 @@ $result_tree_text{'empty_macro_in_text_no_arg'} = '*document_root C1
  *before_node_section C6
   *preamble_before_content C3
    *normal_command@macro C2 l1
-   |EXTRA
    |formal_args:A{}
    |macro_name:{texnl}
     *arguments_line C1
      {macro_line: texnl{}\\n}
     *normal_command@end C1 l2
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -34,13 +32,11 @@ $result_tree_text{'empty_macro_in_text_no_arg'} = '*document_root C1
    >macro_expansion<end;1><p:5>
   {empty_line:\\n}
   *normal_command@macro C2 l6
-  |EXTRA
   |formal_args:A{}
   |macro_name:{texnltwo}
    *arguments_line C1
     {macro_line: texnltwo\\n}
    *normal_command@end C1 l7
-   |EXTRA
    |text_arg:{macro}
     *line_arg C3
      {spaces_before_argument: }

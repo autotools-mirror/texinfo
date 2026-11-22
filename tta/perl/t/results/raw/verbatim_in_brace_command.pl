@@ -21,7 +21,6 @@ $result_tree_text{'verbatim_in_brace_command'} = '*document_root C1
      {spaces_before_argument:\\n}
    {raw:in verbatim\\n}
    *normal_command@end C1 l4
-   |EXTRA
    |text_arg:{verbatim}
     *line_arg C3
      {spaces_before_argument: }

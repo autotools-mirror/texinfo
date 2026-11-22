@@ -12,7 +12,6 @@ $result_tree_text{'comment_on_set_line'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C5
    *normal_command@set C1
-   |EXTRA
    |misc_args:A{x|}
     *line_arg C3
      {spaces_before_argument: }
@@ -22,7 +21,6 @@ $result_tree_text{'comment_on_set_line'} = '*document_root C1
        {rawline_text:}
        {spaces_after_argument:\\n}
    *normal_command@set C1
-   |EXTRA
    |misc_args:A{y|}
     *line_arg C3
      {spaces_before_argument: }
@@ -32,7 +30,6 @@ $result_tree_text{'comment_on_set_line'} = '*document_root C1
        {rawline_text:}
        {spaces_after_argument:\\n}
    *normal_command@set C1
-   |EXTRA
    |misc_args:A{z|g}
     *line_arg C3
      {spaces_before_argument: }
@@ -42,7 +39,6 @@ $result_tree_text{'comment_on_set_line'} = '*document_root C1
        {rawline_text:}
        {spaces_after_argument:\\n}
    *normal_command@set C1
-   |EXTRA
    |misc_args:A{t|a vv}
     *line_arg C3
      {spaces_before_argument: }

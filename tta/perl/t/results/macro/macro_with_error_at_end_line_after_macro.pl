@@ -12,14 +12,12 @@ $result_tree_text{'macro_with_error_at_end_line_after_macro'} = '*document_root 
  *before_node_section C2
   *preamble_before_content C2
    *normal_command@macro C3 l1
-   |EXTRA
    |formal_args:A{string}
    |macro_name:{witherror}
     *arguments_line C1
      {macro_line: witherror{string}\\n}
     {raw:@center\\n}
     *normal_command@end C1 l3
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }

@@ -16,14 +16,12 @@ $result_tree_text{'insertcopying_in_example'} = '*document_root C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *normal_command@insertcopying C1 l2
-   |EXTRA
    |global_command_number:{1}
     *line_arg C1
      {spaces_before_argument:\\n}
    *preformatted C1
     {normal_text:text\\n}
    *normal_command@end C1 l4
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }

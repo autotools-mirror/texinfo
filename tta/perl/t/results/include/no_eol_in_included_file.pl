@@ -16,7 +16,6 @@ $result_tree_text{'no_eol_in_included_file'} = '*document_root C1
    >SOURCEMARKS
    >include<start;1><p:12>
     >*normal_command@include C1 l2
-    >|EXTRA
     >|text_arg:{include_noeol.texi}
      >*line_arg C3
       >{spaces_before_argument: }

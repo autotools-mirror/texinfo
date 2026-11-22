@@ -13,7 +13,6 @@ $result_tree_text{'inlinefmtifelse_with_commands'} = '*document_root C1
   *preamble_before_content
   *paragraph C2
    *normal_command@inlinefmtifelse C3 l1
-   |EXTRA
    |expand_index:{2}
    |format:{html}
     *brace_arg C1
@@ -29,7 +28,6 @@ $result_tree_text{'inlinefmtifelse_with_commands'} = '*document_root C1
   {empty_line:\\n}
   *paragraph C2
    *normal_command@inlinefmtifelse C3 l3
-   |EXTRA
    |expand_index:{2}
    |format:{plaintext}
     *brace_arg C1
@@ -45,7 +43,6 @@ $result_tree_text{'inlinefmtifelse_with_commands'} = '*document_root C1
   {empty_line:\\n}
   *paragraph C2
    *normal_command@inlinefmtifelse C3 l5
-   |EXTRA
    |expand_index:{2}
    |format:{xml}
     *brace_arg C1
@@ -62,7 +59,6 @@ $result_tree_text{'inlinefmtifelse_with_commands'} = '*document_root C1
   {empty_line:\\n}
   *paragraph C2
    *normal_command@inlinefmtifelse C3 l7
-   |EXTRA
    |expand_index:{2}
    |format:{docbook}
     *brace_arg C3
@@ -82,7 +78,6 @@ $result_tree_text{'inlinefmtifelse_with_commands'} = '*document_root C1
   {empty_line:\\n}
   *paragraph C2
    *normal_command@inlinefmtifelse C3 l9
-   |EXTRA
    |expand_index:{2}
    |format:{tex}
     *brace_arg C1
@@ -98,7 +93,6 @@ $result_tree_text{'inlinefmtifelse_with_commands'} = '*document_root C1
   {empty_line:\\n}
   *paragraph C2
    *normal_command@inlinefmtifelse C3 l11
-   |EXTRA
    |expand_index:{2}
    |format:{latex}
     *brace_arg C1

@@ -12,7 +12,6 @@ $result_tree_text{'direntry_dircategory_after_first_node'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -22,7 +21,6 @@ $result_tree_text{'direntry_dircategory_after_first_node'} = '*document_root C3
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C4 l2 {direntry direcategory after first node}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -46,7 +44,6 @@ $result_tree_text{'direntry_dircategory_after_first_node'} = '*document_root C3
      {normal_text:in text}
     {menu_entry_separator:: }
     *menu_entry_node C3
-    |EXTRA
     |manual_content:A{1|1}
      {normal_text:(}
      {normal_text:in_text}
@@ -56,7 +53,6 @@ $result_tree_text{'direntry_dircategory_after_first_node'} = '*document_root C3
      *preformatted C1
       {normal_text:in text\\n}
    *normal_command@end C1 l7
-   |EXTRA
    |text_arg:{direntry}
     *line_arg C3
      {spaces_before_argument: }

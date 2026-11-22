@@ -45,7 +45,6 @@ $result_tree_text{'item_in_ref'} = '*document_root C1
        {normal_text:second item}
        {spaces_after_argument:\\n}
    *normal_command@end C1 l7
-   |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }

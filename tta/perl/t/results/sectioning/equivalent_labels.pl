@@ -12,7 +12,6 @@ $result_tree_text{'equivalent_labels'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C8 l1 {first}
- |EXTRA
  |identifier:{first}
  |is_target:{1}
  |node_number:{1}
@@ -23,7 +22,6 @@ $result_tree_text{'equivalent_labels'} = '*document_root C2
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@anchor C1 l3
-  |EXTRA
   |identifier:{anch}
   |is_target:{1}
    *brace_arg C1
@@ -34,7 +32,6 @@ $result_tree_text{'equivalent_labels'} = '*document_root C2
    {normal_text:.\\n}
   {empty_line:\\n}
   *normal_command@float C3 l5
-  |EXTRA
   |float_number:{1}
   |float_type:{truc}
   |global_command_number:{1}
@@ -51,7 +48,6 @@ $result_tree_text{'equivalent_labels'} = '*document_root C2
    *paragraph C1
     {normal_text:In float\\n}
    *normal_command@end C1 l7
-   |EXTRA
    |text_arg:{float}
     *line_arg C3
      {spaces_before_argument: }
@@ -65,7 +61,6 @@ $result_tree_text{'equivalent_labels'} = '*document_root C2
    *menu_entry C4 l10
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{anch}
      {normal_text:anch}
@@ -76,7 +71,6 @@ $result_tree_text{'equivalent_labels'} = '*document_root C2
    *menu_entry C4 l11
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{floa}
      *normal_command@code C1 l11
@@ -87,7 +81,6 @@ $result_tree_text{'equivalent_labels'} = '*document_root C2
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 l12
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }

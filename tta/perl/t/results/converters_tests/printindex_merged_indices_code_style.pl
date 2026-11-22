@@ -12,7 +12,6 @@ $result_tree_text{'printindex_merged_indices_code_style'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -22,7 +21,6 @@ $result_tree_text{'printindex_merged_indices_code_style'} = '*document_root C5
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C2 l2 {top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -32,7 +30,6 @@ $result_tree_text{'printindex_merged_indices_code_style'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l4 {chap}
- |EXTRA
  |identifier:{chap}
  |is_target:{1}
  |isindex:{1}
@@ -43,7 +40,6 @@ $result_tree_text{'printindex_merged_indices_code_style'} = '*document_root C5
     {normal_text:chap}
     {spaces_after_argument:\\n}
  *normal_command@chapter C25 l5 {Chapter}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -54,7 +50,6 @@ $result_tree_text{'printindex_merged_indices_code_style'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@synindex C1 l7
-  |EXTRA
   |misc_args:A{cp|fn}
    *line_arg C3
     {spaces_before_argument: }
@@ -62,7 +57,6 @@ $result_tree_text{'printindex_merged_indices_code_style'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@synindex C1 l9
-  |EXTRA
   |misc_args:A{vr|fn}
    *line_arg C3
     {spaces_before_argument: }
@@ -70,7 +64,6 @@ $result_tree_text{'printindex_merged_indices_code_style'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 l11
-  |EXTRA
   |element_node:{chap}
   |index_entry:I{cp,1}
    *line_arg C3
@@ -79,7 +72,6 @@ $result_tree_text{'printindex_merged_indices_code_style'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@vindex C1 l13
-  |EXTRA
   |element_node:{chap}
   |index_entry:I{vr,1}
    *line_arg C3
@@ -88,7 +80,6 @@ $result_tree_text{'printindex_merged_indices_code_style'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@findex C1 l15
-  |EXTRA
   |element_node:{chap}
   |index_entry:I{fn,1}
    *line_arg C3
@@ -97,7 +88,6 @@ $result_tree_text{'printindex_merged_indices_code_style'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@defcodeindex C1 l17
-  |EXTRA
   |misc_args:A{cdi}
    *line_arg C3
     {spaces_before_argument: }
@@ -105,7 +95,6 @@ $result_tree_text{'printindex_merged_indices_code_style'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@synindex C1 l19
-  |EXTRA
   |misc_args:A{cdi|fn}
    *line_arg C3
     {spaces_before_argument: }
@@ -113,7 +102,6 @@ $result_tree_text{'printindex_merged_indices_code_style'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@cdiindex C1 l21
-  |EXTRA
   |element_node:{chap}
   |index_entry:I{cdi,1}
    *line_arg C3
@@ -122,7 +110,6 @@ $result_tree_text{'printindex_merged_indices_code_style'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@defindex C1 l23
-  |EXTRA
   |misc_args:A{ddi}
    *line_arg C3
     {spaces_before_argument: }
@@ -130,7 +117,6 @@ $result_tree_text{'printindex_merged_indices_code_style'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@syncodeindex C1 l25
-  |EXTRA
   |misc_args:A{ddi|cp}
    *line_arg C3
     {spaces_before_argument: }
@@ -138,7 +124,6 @@ $result_tree_text{'printindex_merged_indices_code_style'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@ddiindex C1 l27
-  |EXTRA
   |element_node:{chap}
   |index_entry:I{ddi,1}
    *line_arg C3
@@ -147,7 +132,6 @@ $result_tree_text{'printindex_merged_indices_code_style'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@printindex C1 l29
-  |EXTRA
   |global_command_number:{1}
   |misc_args:A{fn}
    *line_arg C3

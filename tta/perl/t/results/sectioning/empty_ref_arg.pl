@@ -12,7 +12,6 @@ $result_tree_text{'empty_ref_arg'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C3 l1 {first}
- |EXTRA
  |identifier:{first}
  |is_target:{1}
  |node_number:{1}
@@ -25,7 +24,6 @@ $result_tree_text{'empty_ref_arg'} = '*document_root C2
   *paragraph C8
    *normal_command@ref C2 l3
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{first}
      {normal_text:first}
@@ -35,7 +33,6 @@ $result_tree_text{'empty_ref_arg'} = '*document_root C2
    {normal_text:\\n}
    *normal_command@ref C3 l4
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{first}
      {normal_text:first}
@@ -47,7 +44,6 @@ $result_tree_text{'empty_ref_arg'} = '*document_root C2
    {normal_text:\\n}
    *normal_command@ref C3 l5
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{first}
      {normal_text:first}
@@ -60,7 +56,6 @@ $result_tree_text{'empty_ref_arg'} = '*document_root C2
    {normal_text:\\n}
    *normal_command@ref C3 l6
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{first}
      {normal_text:first}

@@ -12,7 +12,6 @@ $result_tree_text{'entry_after_detailmenu'} = '*document_root C4
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C4 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -27,7 +26,6 @@ $result_tree_text{'entry_after_detailmenu'} = '*document_root C4
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *normal_command@detailmenu C3 l4
-   |EXTRA
    |global_command_number:{1}
     *arguments_line C1
      *block_line_arg C1
@@ -35,7 +33,6 @@ $result_tree_text{'entry_after_detailmenu'} = '*document_root C4
     *menu_entry C4 l5
      {menu_entry_leading_text:* }
      *menu_entry_node C1
-     |EXTRA
      |node_content:A{0|0}
      |normalized:{second}
       {normal_text:second}
@@ -44,7 +41,6 @@ $result_tree_text{'entry_after_detailmenu'} = '*document_root C4
       *preformatted C1
        {normal_text:\\n}
     *normal_command@end C1 l6
-    |EXTRA
     |text_arg:{detailmenu}
      *line_arg C3
       {spaces_before_argument: }
@@ -58,7 +54,6 @@ $result_tree_text{'entry_after_detailmenu'} = '*document_root C4
    *menu_entry C4 l10
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{chap-first}
      {normal_text:chap first}
@@ -70,7 +65,6 @@ $result_tree_text{'entry_after_detailmenu'} = '*document_root C4
     *preformatted C1
      {after_menu_description_line:\\n}
    *normal_command@detailmenu C3 l12
-   |EXTRA
    |global_command_number:{2}
     *arguments_line C1
      *block_line_arg C1
@@ -78,7 +72,6 @@ $result_tree_text{'entry_after_detailmenu'} = '*document_root C4
     *menu_entry C4 l13
      {menu_entry_leading_text:* }
      *menu_entry_node C1
-     |EXTRA
      |node_content:A{0|0}
      |normalized:{second}
       {normal_text:second}
@@ -87,7 +80,6 @@ $result_tree_text{'entry_after_detailmenu'} = '*document_root C4
       *preformatted C1
        {normal_text:\\n}
     *normal_command@end C1 l14
-    |EXTRA
     |text_arg:{detailmenu}
      *line_arg C3
       {spaces_before_argument: }
@@ -96,7 +88,6 @@ $result_tree_text{'entry_after_detailmenu'} = '*document_root C4
    *menu_entry C4 l15
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{second}
      {normal_text:second}
@@ -105,7 +96,6 @@ $result_tree_text{'entry_after_detailmenu'} = '*document_root C4
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 l16
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -113,7 +103,6 @@ $result_tree_text{'entry_after_detailmenu'} = '*document_root C4
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l18 {chap first}
- |EXTRA
  |identifier:{chap-first}
  |is_target:{1}
  |node_number:{2}
@@ -123,7 +112,6 @@ $result_tree_text{'entry_after_detailmenu'} = '*document_root C4
     {normal_text:chap first}
     {spaces_after_argument:\\n}
  *normal_command@node C1 l19 {second}
- |EXTRA
  |identifier:{second}
  |is_target:{1}
  |node_number:{3}

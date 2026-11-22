@@ -20,7 +20,6 @@ $result_tree_text{'beginning_and_end_on_line'} = '*document_root C1
       {normal_text:in tex}
       {spaces_after_argument: }
     *normal_command@end C1 l2
-    |EXTRA
     |text_arg:{tex}
      *line_arg C3
       {spaces_before_argument: }
@@ -34,7 +33,6 @@ $result_tree_text{'beginning_and_end_on_line'} = '*document_root C1
      {normal_text:in verbatim}
      {spaces_after_argument: }
    *normal_command@end C1 l4
-   |EXTRA
    |text_arg:{verbatim}
     *line_arg C3
      {spaces_before_argument: }
@@ -48,7 +46,6 @@ $result_tree_text{'beginning_and_end_on_line'} = '*document_root C1
      {normal_text:in html}
      {spaces_after_argument: }
    *normal_command@end C1 l6
-   |EXTRA
    |text_arg:{html}
     *line_arg C3
      {spaces_before_argument: }

@@ -27,7 +27,6 @@ $result_tree_text{'cond_no-ifhtml_no-ifinfo_no-iftex'} = '*document_root C5
     *elided_rawpreformatted C1
      {raw:This is html text.\\n}
     *normal_command@end C1 cond.texi:l7
-    |EXTRA
     |text_arg:{html}
      *line_arg C3
       {spaces_before_argument: }
@@ -42,7 +41,6 @@ $result_tree_text{'cond_no-ifhtml_no-ifinfo_no-iftex'} = '*document_root C5
        >{spaces_before_argument:\\n}
      >{raw:This is ifhtml text.\\n}
      >*normal_command@end C1 cond.texi:l11
-     >|EXTRA
      >|text_arg:{ifhtml}
       >*line_arg C3
        >{spaces_before_argument: }
@@ -60,7 +58,6 @@ $result_tree_text{'cond_no-ifhtml_no-ifinfo_no-iftex'} = '*document_root C5
    >SOURCEMARKS
    >expanded_conditional_command<end;1><p:24>
     >*normal_command@end C1 cond.texi:l15
-    >|EXTRA
     >|text_arg:{ifnothtml}
      >*line_arg C3
       >{spaces_before_argument: }
@@ -68,7 +65,6 @@ $result_tree_text{'cond_no-ifhtml_no-ifinfo_no-iftex'} = '*document_root C5
       >{spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 cond.texi:l17 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -78,7 +74,6 @@ $result_tree_text{'cond_no-ifhtml_no-ifinfo_no-iftex'} = '*document_root C5
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C2 cond.texi:l18 {conditionals}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -88,7 +83,6 @@ $result_tree_text{'cond_no-ifhtml_no-ifinfo_no-iftex'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C12 cond.texi:l20 {chap}
- |EXTRA
  |identifier:{chap}
  |is_target:{1}
  |node_number:{2}
@@ -107,7 +101,6 @@ $result_tree_text{'cond_no-ifhtml_no-ifinfo_no-iftex'} = '*document_root C5
       >{spaces_before_argument:\\n}
     >{raw:This is ifinfo text.\\n}
     >*normal_command@end C1 cond.texi:l25
-    >|EXTRA
     >|text_arg:{ifinfo}
      >*line_arg C3
       >{spaces_before_argument: }
@@ -125,7 +118,6 @@ $result_tree_text{'cond_no-ifhtml_no-ifinfo_no-iftex'} = '*document_root C5
    >SOURCEMARKS
    >expanded_conditional_command<end;2><p:24>
     >*normal_command@end C1 cond.texi:l29
-    >|EXTRA
     >|text_arg:{ifnotinfo}
      >*line_arg C3
       >{spaces_before_argument: }
@@ -140,7 +132,6 @@ $result_tree_text{'cond_no-ifhtml_no-ifinfo_no-iftex'} = '*document_root C5
    *elided_rawpreformatted C1
     {raw:This is tex text.\\n}
    *normal_command@end C1 cond.texi:l34
-   |EXTRA
    |text_arg:{tex}
     *line_arg C3
      {spaces_before_argument: }
@@ -155,7 +146,6 @@ $result_tree_text{'cond_no-ifhtml_no-ifinfo_no-iftex'} = '*document_root C5
       >{spaces_before_argument:\\n}
     >{raw:This is iftex text.\\n}
     >*normal_command@end C1 cond.texi:l38
-    >|EXTRA
     >|text_arg:{iftex}
      >*line_arg C3
       >{spaces_before_argument: }
@@ -173,7 +163,6 @@ $result_tree_text{'cond_no-ifhtml_no-ifinfo_no-iftex'} = '*document_root C5
    >SOURCEMARKS
    >expanded_conditional_command<end;3><p:23>
     >*normal_command@end C1 cond.texi:l42
-    >|EXTRA
     >|text_arg:{ifnottex}
      >*line_arg C3
       >{spaces_before_argument: }

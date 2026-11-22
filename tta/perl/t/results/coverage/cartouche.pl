@@ -18,7 +18,6 @@ $result_tree_text{'cartouche'} = '*document_root C1
    *paragraph C1
     {normal_text:in cartouche.\\n}
    *normal_command@end C1 l3
-   |EXTRA
    |text_arg:{cartouche}
     *line_arg C3
      {spaces_before_argument: }
@@ -36,7 +35,6 @@ $result_tree_text{'cartouche'} = '*document_root C1
    *paragraph C1
     {normal_text:Out of main text\\n}
    *normal_command@end C1 l7
-   |EXTRA
    |text_arg:{cartouche}
     *line_arg C3
      {spaces_before_argument: }

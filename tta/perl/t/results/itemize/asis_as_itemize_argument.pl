@@ -18,13 +18,11 @@ $result_tree_text{'asis_as_itemize_argument'} = '*document_root C1
      *normal_command@asis l1
      {spaces_after_argument:\\n}
    *normal_command@item C2 l2
-   |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:as is\\n}
    *normal_command@end C1 l3
-   |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }

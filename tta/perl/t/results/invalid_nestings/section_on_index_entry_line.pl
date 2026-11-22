@@ -12,14 +12,12 @@ $result_tree_text{'section_on_index_entry_line'} = '*document_root C2
  *before_node_section C2
   *preamble_before_content
   *index_entry_command@cindex C1 l1
-  |EXTRA
   |index_entry:I{cp,1}
    *line_arg C3
     {spaces_before_argument: }
     {normal_text:a}
     {spaces_after_argument: }
  *normal_command@section C3 l1 {b}
- |EXTRA
  |identifier:{b}
  |is_target:{1}
  |section_heading_number:{1}

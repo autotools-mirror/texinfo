@@ -20,7 +20,6 @@ $result_tree_text{'today_in_copying'} = '*document_root C4
       *brace_container
      {normal_text:.\\n}
     *normal_command@end C1 l3
-    |EXTRA
     |text_arg:{copying}
      *line_arg C3
       {spaces_before_argument: }
@@ -28,7 +27,6 @@ $result_tree_text{'today_in_copying'} = '*document_root C4
       {spaces_after_argument:\\n}
    {empty_line:\\n}
  *normal_command@node C1 l5 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -38,7 +36,6 @@ $result_tree_text{'today_in_copying'} = '*document_root C4
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C2 l6 {top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -48,7 +45,6 @@ $result_tree_text{'today_in_copying'} = '*document_root C4
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C3 l8 {chap}
- |EXTRA
  |identifier:{chap}
  |is_target:{1}
  |node_number:{2}
@@ -59,7 +55,6 @@ $result_tree_text{'today_in_copying'} = '*document_root C4
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@insertcopying C1 l10
-  |EXTRA
   |global_command_number:{1}
    *line_arg C1
     {spaces_before_argument:\\n}

@@ -12,7 +12,6 @@ $result_tree_text{'at_commands_in_raw'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -22,7 +21,6 @@ $result_tree_text{'at_commands_in_raw'} = '*document_root C5
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C4 l2 {top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -32,14 +30,12 @@ $result_tree_text{'at_commands_in_raw'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@macro C3 l4
-  |EXTRA
   |formal_args:A{}
   |macro_name:{othermacro}
    *arguments_line C1
     {macro_line: othermacro{}\\n}
    {raw:Other macro\\n}
    *normal_command@end C1 l6
-   |EXTRA
    |text_arg:{macro}
     *line_arg C3
      {spaces_before_argument: }
@@ -47,7 +43,6 @@ $result_tree_text{'at_commands_in_raw'} = '*document_root C5
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l8 {chap}
- |EXTRA
  |identifier:{chap}
  |is_target:{1}
  |isindex:{1}
@@ -58,7 +53,6 @@ $result_tree_text{'at_commands_in_raw'} = '*document_root C5
     {normal_text:chap}
     {spaces_after_argument:\\n}
  *normal_command@chapter C36 l9 {Chapter}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -75,21 +69,18 @@ $result_tree_text{'at_commands_in_raw'} = '*document_root C5
    *rawpreformatted C5
     {normal_text:<b>in b}
     *normal_command@footnote C1 l12
-    |EXTRA
     |global_command_number:{1}
      *brace_command_context C1
       *paragraph C1
        {normal_text:in footnote}
     {normal_text:.</b>\\n}
     *normal_command@anchor C1 l13
-    |EXTRA
     |identifier:{anchor-in-html}
     |is_target:{1}
      *brace_arg C1
       {normal_text:anchor in html}
     {spaces_after_close_brace:\\n}
    *normal_command@end C1 l14
-   |EXTRA
    |text_arg:{html}
     *line_arg C3
      {spaces_before_argument: }
@@ -100,7 +91,6 @@ $result_tree_text{'at_commands_in_raw'} = '*document_root C5
     *brace_container C1
      {normal_text:in kbd before tex}
    *normal_command@footnote C1 l15
-   |EXTRA
    |global_command_number:{2}
     *brace_command_context C1
      *paragraph C1
@@ -156,7 +146,6 @@ $result_tree_text{'at_commands_in_raw'} = '*document_root C5
     {raw:@unmacro othermacro\\n}
     {raw:\\n}
    *normal_command@end C1 l61
-   |EXTRA
    |text_arg:{tex}
     *line_arg C3
      {spaces_before_argument: }
@@ -180,7 +169,6 @@ $result_tree_text{'at_commands_in_raw'} = '*document_root C5
   *paragraph C2
    *normal_command@xref C1 l69
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{anchor-in-html}
      {normal_text:anchor in html}
@@ -189,13 +177,11 @@ $result_tree_text{'at_commands_in_raw'} = '*document_root C5
   *paragraph C3
    *normal_command@ref C1 l71
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{anchor-in-tex}
      {normal_text:anchor in tex}
    {normal_text:.\\n}
    *index_entry_command@findex C1 l72
-   |EXTRA
    |element_node:{chap}
    |index_entry:I{fn,1}
     *line_arg C3
@@ -208,7 +194,6 @@ $result_tree_text{'at_commands_in_raw'} = '*document_root C5
    {normal_text:newidx entry\\n}
   {empty_line:\\n}
   *normal_command@printindex C1 l76
-  |EXTRA
   |global_command_number:{1}
   |misc_args:A{cp}
    *line_arg C3
@@ -216,7 +201,6 @@ $result_tree_text{'at_commands_in_raw'} = '*document_root C5
     {normal_text:cp}
     {spaces_after_argument:\\n}
   *normal_command@printindex C1 l77
-  |EXTRA
   |global_command_number:{2}
   |misc_args:A{fn}
    *line_arg C3
@@ -225,7 +209,6 @@ $result_tree_text{'at_commands_in_raw'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@listoffloats C1 l79
-  |EXTRA
   |float_type:{Figs}
   |global_command_number:{1}
    *line_arg C3

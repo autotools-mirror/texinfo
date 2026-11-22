@@ -14,14 +14,12 @@ $result_tree_text{'heading_in_footnote'} = '*document_root C1
   *paragraph C3
    {normal_text:T}
    *normal_command@footnote C1 l1
-   |EXTRA
    |global_command_number:{1}
     *brace_command_context C5
      {spaces_before_argument:\\n}
      *paragraph C1
       {normal_text:AAA\\n}
      *normal_command@heading C1 l3
-     |EXTRA
      |global_command_number:{1}
      |heading_number:{1}
       *line_arg C3
@@ -29,7 +27,6 @@ $result_tree_text{'heading_in_footnote'} = '*document_root C1
        {normal_text:H1}
        {spaces_after_argument:\\n}
      *index_entry_command@cindex C1 l4
-     |EXTRA
      |index_entry:I{cp,1}
       *line_arg C3
        {spaces_before_argument: }

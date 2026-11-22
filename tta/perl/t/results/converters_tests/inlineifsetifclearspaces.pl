@@ -13,7 +13,6 @@ $result_tree_text{'inlineifsetifclearspaces'} = '*document_root C1
   *preamble_before_content
   *paragraph C2
    *normal_command@inlineifclear C3 l1
-   |EXTRA
    |expand_index:{1}
    |format:{aaa}
     {spaces_after_cmd_before_arg:\\n}
@@ -28,7 +27,6 @@ $result_tree_text{'inlineifsetifclearspaces'} = '*document_root C1
   {empty_line:\\n}
   *paragraph C2
    *normal_command@inlineifset C3 l4
-   |EXTRA
    |format:{aaa}
     {spaces_after_cmd_before_arg:\\n}
     *brace_arg C3
@@ -40,7 +38,6 @@ $result_tree_text{'inlineifsetifclearspaces'} = '*document_root C1
    {normal_text:.\\n}
   {empty_line:\\n}
   *normal_command@set C1
-  |EXTRA
   |misc_args:A{aaa|}
    *line_arg C3
     {spaces_before_argument: }
@@ -49,7 +46,6 @@ $result_tree_text{'inlineifsetifclearspaces'} = '*document_root C1
   {empty_line:\\n}
   *paragraph C2
    *normal_command@inlineifclear C3 l9
-   |EXTRA
    |format:{aaa}
     {spaces_after_cmd_before_arg: }
     *brace_arg C3
@@ -62,7 +58,6 @@ $result_tree_text{'inlineifsetifclearspaces'} = '*document_root C1
   {empty_line:\\n}
   *paragraph C2
    *normal_command@inlineifset C3 l11
-   |EXTRA
    |expand_index:{1}
    |format:{aaa}
     {spaces_after_cmd_before_arg: }

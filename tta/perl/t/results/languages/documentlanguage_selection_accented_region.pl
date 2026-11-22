@@ -14,7 +14,6 @@ $result_tree_text{'documentlanguage_selection_accented_region'} = '*document_roo
    {text_before_beginning:\\n}
   *preamble_before_content C2
    *normal_command@documentlanguage C1 l2
-   |EXTRA
    |global_command_number:{1}
    |text_arg:{fr_ÂD}
     *line_arg C3
@@ -23,7 +22,6 @@ $result_tree_text{'documentlanguage_selection_accented_region'} = '*document_roo
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *normal_command@node C1 l4 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -33,7 +31,6 @@ $result_tree_text{'documentlanguage_selection_accented_region'} = '*document_roo
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C4 l5 {top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -44,7 +41,6 @@ $result_tree_text{'documentlanguage_selection_accented_region'} = '*document_roo
   {empty_line:\\n}
   *normal_command@defivar C2 l7
    *def_line C1 l7
-   |EXTRA
    |def_command:{defivar}
    |element_node:{Top}
    |index_entry:I{vr,1}
@@ -52,7 +48,6 @@ $result_tree_text{'documentlanguage_selection_accented_region'} = '*document_roo
     *block_line_arg C9
      (i){spaces_before_argument: }
      *def_category C1
-     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {normal_text:Instance Variable}
@@ -70,7 +65,6 @@ $result_tree_text{'documentlanguage_selection_accented_region'} = '*document_roo
        {normal_text:Selected?}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l8
-   |EXTRA
    |text_arg:{defivar}
     *line_arg C3
      {spaces_before_argument: }

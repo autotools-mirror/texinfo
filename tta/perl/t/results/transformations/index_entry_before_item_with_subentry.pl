@@ -12,7 +12,6 @@ $result_tree_text{'index_entry_before_item_with_subentry'} = '*document_root C7
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -22,7 +21,6 @@ $result_tree_text{'index_entry_before_item_with_subentry'} = '*document_root C7
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C2 l2 {top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -32,7 +30,6 @@ $result_tree_text{'index_entry_before_item_with_subentry'} = '*document_root C7
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l4 {Chap}
- |EXTRA
  |identifier:{Chap}
  |is_target:{1}
  |node_number:{2}
@@ -42,7 +39,6 @@ $result_tree_text{'index_entry_before_item_with_subentry'} = '*document_root C7
     {normal_text:Chap}
     {spaces_after_argument:\\n}
  *normal_command@chapter C4 l5 {chap}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -57,18 +53,15 @@ $result_tree_text{'index_entry_before_item_with_subentry'} = '*document_root C7
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *normal_command@item C3 l8
-   |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:first item\\n}
     {empty_line:\\n}
    *normal_command@item C3 l11
-   |EXTRA
    |item_number:{2}
     {ignorable_spaces_after_command: \\n}
     *index_entry_command@cindex C1 l10
-    |EXTRA
     |element_node:{Chap}
     |index_entry:I{cp,1}
      *line_arg C4
@@ -83,7 +76,6 @@ $result_tree_text{'index_entry_before_item_with_subentry'} = '*document_root C7
     *paragraph C1
      {normal_text:second item\\n}
    *normal_command@end C1 l12
-   |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }
@@ -91,7 +83,6 @@ $result_tree_text{'index_entry_before_item_with_subentry'} = '*document_root C7
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l14 {Node index}
- |EXTRA
  |identifier:{Node-index}
  |is_target:{1}
  |isindex:{1}
@@ -102,7 +93,6 @@ $result_tree_text{'index_entry_before_item_with_subentry'} = '*document_root C7
     {normal_text:Node index}
     {spaces_after_argument:\\n}
  *normal_command@chapter C3 l15 {Chap printindex}
- |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
  |section_number:{3}
@@ -113,7 +103,6 @@ $result_tree_text{'index_entry_before_item_with_subentry'} = '*document_root C7
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@printindex C1 l17
-  |EXTRA
   |global_command_number:{1}
   |misc_args:A{cp}
    *line_arg C3

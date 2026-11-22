@@ -12,7 +12,6 @@ $result_tree_text{'multitable_flushright_image'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *normal_command@multitable C3 l1
-  |EXTRA
   |max_columns:{2}
    *arguments_line C1
     *block_line_arg C5
@@ -25,10 +24,8 @@ $result_tree_text{'multitable_flushright_image'} = '*document_root C1
      {spaces_after_argument:\\n}
    *multitable_body C2
     *row C2
-    |EXTRA
     |row_number:{1}
      *normal_command@item C3 l2
-     |EXTRA
      |cell_number:{1}
       {ignorable_spaces_after_command:\\n}
       *normal_command@flushright C8 l3
@@ -40,7 +37,6 @@ $result_tree_text{'multitable_flushright_image'} = '*document_root C1
          {spaces_before_argument: }
          {normal_text:CCCC }
          *normal_command@image C1 l4
-         |EXTRA
          |input_encoding_name:{utf-8}
           *brace_arg C1
            {normal_text:figure}
@@ -49,7 +45,6 @@ $result_tree_text{'multitable_flushright_image'} = '*document_root C1
        *paragraph C6
         {normal_text:AAA\\n}
         *normal_command@image C5 l7
-        |EXTRA
         |input_encoding_name:{utf-8}
          *brace_arg C1
           {normal_text:figure}
@@ -64,7 +59,6 @@ $result_tree_text{'multitable_flushright_image'} = '*document_root C1
         {normal_text:\\n}
         {normal_text:BBB }
         *normal_command@image C5 l8
-        |EXTRA
         |input_encoding_name:{utf-8}
          *brace_arg C1
           {normal_text:figure}
@@ -79,7 +73,6 @@ $result_tree_text{'multitable_flushright_image'} = '*document_root C1
         {normal_text:\\n}
        {empty_line:\\n}
        *normal_command@image C5 l10
-       |EXTRA
        |input_encoding_name:{utf-8}
         *brace_arg C1
          {normal_text:figure}
@@ -93,7 +86,6 @@ $result_tree_text{'multitable_flushright_image'} = '*document_root C1
          {normal_text:txt}
        {normal_text:\\n}
        *normal_command@end C1 l11
-       |EXTRA
        |text_arg:{flushright}
         *line_arg C3
          {spaces_before_argument: }
@@ -101,7 +93,6 @@ $result_tree_text{'multitable_flushright_image'} = '*document_root C1
          {spaces_after_argument:\\n}
       {empty_line:\\n}
      *normal_command@tab C8 l13
-     |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command:\\n}
       *normal_command@center C1 l14
@@ -109,7 +100,6 @@ $result_tree_text{'multitable_flushright_image'} = '*document_root C1
         {spaces_before_argument: }
         {normal_text:CCCC }
         *normal_command@image C1 l14
-        |EXTRA
         |input_encoding_name:{utf-8}
          *brace_arg C1
           {normal_text:figure}
@@ -118,7 +108,6 @@ $result_tree_text{'multitable_flushright_image'} = '*document_root C1
       *paragraph C6
        {normal_text:AAA\\n}
        *normal_command@image C5 l17
-       |EXTRA
        |input_encoding_name:{utf-8}
         *brace_arg C1
          {normal_text:figure}
@@ -133,7 +122,6 @@ $result_tree_text{'multitable_flushright_image'} = '*document_root C1
        {normal_text:\\n}
        {normal_text:BBB }
        *normal_command@image C5 l18
-       |EXTRA
        |input_encoding_name:{utf-8}
         *brace_arg C1
          {normal_text:figure}
@@ -148,7 +136,6 @@ $result_tree_text{'multitable_flushright_image'} = '*document_root C1
        {normal_text:\\n}
       {empty_line:\\n}
       *normal_command@image C5 l20
-      |EXTRA
       |input_encoding_name:{utf-8}
        *brace_arg C1
         {normal_text:figure}
@@ -163,10 +150,8 @@ $result_tree_text{'multitable_flushright_image'} = '*document_root C1
       {normal_text:\\n}
       {empty_line:\\n}
     *row C2
-    |EXTRA
     |row_number:{2}
      *normal_command@item C2 l22
-     |EXTRA
      |cell_number:{1}
       {ignorable_spaces_after_command:\\n}
       *normal_command@flushright C8 l23
@@ -176,14 +161,12 @@ $result_tree_text{'multitable_flushright_image'} = '*document_root C1
        *paragraph C3
         {normal_text:FFFR }
         *normal_command@image C1 l24
-        |EXTRA
         |input_encoding_name:{utf-8}
          *brace_arg C1
           {normal_text:figure}
         {normal_text:\\n}
        {empty_line:\\n}
        *normal_command@image C1 l26
-       |EXTRA
        |input_encoding_name:{utf-8}
         *brace_arg C1
          {normal_text:figure}
@@ -192,26 +175,22 @@ $result_tree_text{'multitable_flushright_image'} = '*document_root C1
        *paragraph C5
         {normal_text:AA }
         *normal_command@image C1 l28
-        |EXTRA
         |input_encoding_name:{utf-8}
          *brace_arg C1
           {normal_text:figure}
         {normal_text: BB }
         *normal_command@image C1 l28
-        |EXTRA
         |input_encoding_name:{utf-8}
          *brace_arg C1
           {normal_text:figure}
         {normal_text:\\n}
        *normal_command@end C1 l29
-       |EXTRA
        |text_arg:{flushright}
         *line_arg C3
          {spaces_before_argument: }
          {normal_text:flushright}
          {spaces_after_argument:\\n}
      *normal_command@tab C2 l30
-     |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command:\\n}
       *normal_command@flushleft C8 l31
@@ -221,14 +200,12 @@ $result_tree_text{'multitable_flushright_image'} = '*document_root C1
        *paragraph C3
         {normal_text:FFFL }
         *normal_command@image C1 l32
-        |EXTRA
         |input_encoding_name:{utf-8}
          *brace_arg C1
           {normal_text:figure}
         {normal_text:\\n}
        {empty_line:\\n}
        *normal_command@image C1 l34
-       |EXTRA
        |input_encoding_name:{utf-8}
         *brace_arg C1
          {normal_text:figure}
@@ -237,26 +214,22 @@ $result_tree_text{'multitable_flushright_image'} = '*document_root C1
        *paragraph C5
         {normal_text:AA }
         *normal_command@image C1 l36
-        |EXTRA
         |input_encoding_name:{utf-8}
          *brace_arg C1
           {normal_text:figure}
         {normal_text: BB }
         *normal_command@image C1 l36
-        |EXTRA
         |input_encoding_name:{utf-8}
          *brace_arg C1
           {normal_text:figure}
         {normal_text:\\n}
        *normal_command@end C1 l37
-       |EXTRA
        |text_arg:{flushleft}
         *line_arg C3
          {spaces_before_argument: }
          {normal_text:flushleft}
          {spaces_after_argument:\\n}
    *normal_command@end C1 l38
-   |EXTRA
    |text_arg:{multitable}
     *line_arg C3
      {spaces_before_argument: }

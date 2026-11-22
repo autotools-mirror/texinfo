@@ -31,7 +31,6 @@ $result_tree_text{'inter_item_commands_in_table_in_example'} = '*document_root C
       *inter_item C1
        *preformatted C3
         *index_entry_command@cindex C1 l4
-        |EXTRA
         |index_entry:I{cp,1}
          *line_arg C3
           {spaces_before_argument: }
@@ -71,14 +70,12 @@ $result_tree_text{'inter_item_commands_in_table_in_example'} = '*document_root C
         {normal_text:d}
         {spaces_after_argument:\\n}
     *normal_command@end C1 l12
-    |EXTRA
     |text_arg:{table}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:table}
       {spaces_after_argument:\\n}
    *normal_command@end C1 l13
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }

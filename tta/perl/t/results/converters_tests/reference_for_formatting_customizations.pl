@@ -12,7 +12,6 @@ $result_tree_text{'reference_for_formatting_customizations'} = '*document_root C
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 formatting_customizations_input.texi:l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -22,7 +21,6 @@ $result_tree_text{'reference_for_formatting_customizations'} = '*document_root C
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C2 formatting_customizations_input.texi:l2 {top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -32,7 +30,6 @@ $result_tree_text{'reference_for_formatting_customizations'} = '*document_root C
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 formatting_customizations_input.texi:l4 {chapt}
- |EXTRA
  |identifier:{chapt}
  |is_target:{1}
  |node_number:{2}
@@ -42,7 +39,6 @@ $result_tree_text{'reference_for_formatting_customizations'} = '*document_root C
     {normal_text:chapt}
     {spaces_after_argument:\\n}
  *normal_command@chapter C4 formatting_customizations_input.texi:l5 {Chap}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}

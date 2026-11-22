@@ -19,7 +19,6 @@ NodeUp: (dir)
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 l1 {a node}
- |EXTRA
  |identifier:{a-node}
  |is_target:{1}
  |node_number:{1}
@@ -30,14 +29,12 @@ NodeUp: (dir)
    *line_arg
    *line_arg
    *line_arg C4
-   |EXTRA
    |manual_content:A{1|1}
     {normal_text:(}
     {normal_text:dir}
     {normal_text:)}
     {spaces_after_argument:\\n}
  *normal_command@unnumbered C4 l2 {unnumbered}
- |EXTRA
  |section_level:{1}
  |section_number:{1}
   *arguments_line C1
@@ -50,7 +47,6 @@ NodeUp: (dir)
    {normal_text:in unnumbered\\n}
   {empty_line:\\n}
  *normal_command@top C3 l6 {top section}
- |EXTRA
  |identifier:{top-section}
  |is_target:{1}
  |section_level:{1}
@@ -71,7 +67,6 @@ Back: [U0]
 Prev: [U0]
 NodeUp: (dir)
  *normal_command@node C1 l9 {second}
- |EXTRA
  |identifier:{second}
  |is_target:{1}
  |node_number:{2}
@@ -82,14 +77,12 @@ NodeUp: (dir)
    *line_arg
    *line_arg
    *line_arg C4
-   |EXTRA
    |manual_content:A{1|1}
     {normal_text:(}
     {normal_text:dir}
     {normal_text:)}
     {spaces_after_argument:\\n}
  *normal_command@chapter C3 l10 {Chapter}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{3}

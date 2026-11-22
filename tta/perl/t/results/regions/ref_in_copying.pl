@@ -18,13 +18,11 @@ $result_tree_text{'ref_in_copying'} = '*document_root C5
     *paragraph C2
      *normal_command@ref C1 l2
       *brace_arg C1
-      |EXTRA
       |node_content:A{0|0}
       |normalized:{GFDL}
        {normal_text:GFDL}
      {normal_text:\\n}
     *normal_command@end C1 l3
-    |EXTRA
     |text_arg:{copying}
      *line_arg C3
       {spaces_before_argument: }
@@ -32,7 +30,6 @@ $result_tree_text{'ref_in_copying'} = '*document_root C5
       {spaces_after_argument:\\n}
    {empty_line:\\n}
  *normal_command@node C1 l5 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -42,7 +39,6 @@ $result_tree_text{'ref_in_copying'} = '*document_root C5
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C6 l6 {top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -52,7 +48,6 @@ $result_tree_text{'ref_in_copying'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@insertcopying C1 l8
-  |EXTRA
   |global_command_number:{1}
    *line_arg C1
     {spaces_before_argument:\\n}
@@ -64,7 +59,6 @@ $result_tree_text{'ref_in_copying'} = '*document_root C5
    *menu_entry C4 l11
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{GFDL}
      {normal_text:GFDL}
@@ -73,7 +67,6 @@ $result_tree_text{'ref_in_copying'} = '*document_root C5
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 l12
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -81,7 +74,6 @@ $result_tree_text{'ref_in_copying'} = '*document_root C5
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l14 {GFDL}
- |EXTRA
  |identifier:{GFDL}
  |is_target:{1}
  |node_number:{2}
@@ -91,7 +83,6 @@ $result_tree_text{'ref_in_copying'} = '*document_root C5
     {normal_text:GFDL}
     {spaces_after_argument:\\n}
  *normal_command@chapter C2 l15 {GFDL}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}

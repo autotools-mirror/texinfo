@@ -20,7 +20,6 @@ $result_tree_text{'maketitle_documentinfo_publication'} = '*document_root C8
     *paragraph C1
      {normal_text:C\'est toto\\n}
     *normal_command@end C1 maketitle_documentinfo_publication.texi:l4
-    |EXTRA
     |text_arg:{publication}
      *line_arg C3
       {spaces_before_argument: }
@@ -32,7 +31,6 @@ $result_tree_text{'maketitle_documentinfo_publication'} = '*document_root C8
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *normal_command@author C1 maketitle_documentinfo_publication.texi:l7
-    |EXTRA
     |global_command_number:{1}
      *line_arg C3
       {spaces_before_argument: }
@@ -44,21 +42,18 @@ $result_tree_text{'maketitle_documentinfo_publication'} = '*document_root C8
       {normal_text:TTT}
       {spaces_after_argument:\\n}
     *normal_command@author C1 maketitle_documentinfo_publication.texi:l9
-    |EXTRA
     |global_command_number:{2}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:Gàther Person}
       {spaces_after_argument:\\n}
     *normal_command@subtitle C1 maketitle_documentinfo_publication.texi:l10
-    |EXTRA
     |global_command_number:{1}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:ST1}
       {spaces_after_argument:\\n}
     *normal_command@subtitle C1 maketitle_documentinfo_publication.texi:l11
-    |EXTRA
     |global_command_number:{2}
      *line_arg C3
       {spaces_before_argument: }
@@ -67,7 +62,6 @@ $result_tree_text{'maketitle_documentinfo_publication'} = '*document_root C8
     *paragraph C1
      {normal_text:Toto\\n}
     *normal_command@end C1 maketitle_documentinfo_publication.texi:l13
-    |EXTRA
     |text_arg:{documentinfo}
      *line_arg C3
       {spaces_before_argument: }
@@ -81,7 +75,6 @@ $result_tree_text{'maketitle_documentinfo_publication'} = '*document_root C8
     *paragraph C1
      {normal_text:You shoukd\\n}
     *normal_command@end C1 maketitle_documentinfo_publication.texi:l17
-    |EXTRA
     |text_arg:{copying}
      *line_arg C3
       {spaces_before_argument: }
@@ -89,7 +82,6 @@ $result_tree_text{'maketitle_documentinfo_publication'} = '*document_root C8
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *normal_command@contents C1 maketitle_documentinfo_publication.texi:l19
-   |EXTRA
    |global_command_number:{1}
     *line_arg C1
      {spaces_before_argument:\\n}
@@ -99,7 +91,6 @@ $result_tree_text{'maketitle_documentinfo_publication'} = '*document_root C8
     {spaces_before_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 maketitle_documentinfo_publication.texi:l23 {top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -109,7 +100,6 @@ $result_tree_text{'maketitle_documentinfo_publication'} = '*document_root C8
     {normal_text:top}
     {spaces_after_argument:\\n}
  *normal_command@top C4 maketitle_documentinfo_publication.texi:l24 {top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -122,7 +112,6 @@ $result_tree_text{'maketitle_documentinfo_publication'} = '*document_root C8
    {normal_text:aaa\\n}
   {empty_line: \\n}
  *normal_command@node C1 maketitle_documentinfo_publication.texi:l28 {chùpter}
- |EXTRA
  |identifier:{ch_00f9pter}
  |is_target:{1}
  |node_number:{2}
@@ -132,7 +121,6 @@ $result_tree_text{'maketitle_documentinfo_publication'} = '*document_root C8
     {normal_text:chùpter}
     {spaces_after_argument:\\n}
  *normal_command@chapter C2 maketitle_documentinfo_publication.texi:l29 {chap}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -143,7 +131,6 @@ $result_tree_text{'maketitle_documentinfo_publication'} = '*document_root C8
     {spaces_after_argument:\\n}
   {empty_line: \\n}
  *normal_command@node C1 maketitle_documentinfo_publication.texi:l31 {section}
- |EXTRA
  |identifier:{section}
  |is_target:{1}
  |node_number:{3}
@@ -153,7 +140,6 @@ $result_tree_text{'maketitle_documentinfo_publication'} = '*document_root C8
     {normal_text:section}
     {spaces_after_argument:\\n}
  *normal_command@section C2 maketitle_documentinfo_publication.texi:l32 {Sec}
- |EXTRA
  |section_heading_number:{1.1}
  |section_level:{2}
  |section_number:{3}

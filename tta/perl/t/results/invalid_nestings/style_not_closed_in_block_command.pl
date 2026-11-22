@@ -21,7 +21,6 @@ $result_tree_text{'style_not_closed_in_block_command'} = '*document_root C1
      *brace_container C1
       {normal_text:in code \\n}
    *normal_command@end C1 l3
-   |EXTRA
    |text_arg:{cartouche}
     *line_arg C3
      {spaces_before_argument: }

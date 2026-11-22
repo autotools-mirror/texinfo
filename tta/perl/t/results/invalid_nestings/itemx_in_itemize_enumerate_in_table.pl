@@ -39,7 +39,6 @@ $result_tree_text{'itemx_in_itemize_enumerate_in_table'} = '*document_root C1
          {normal_text:in nested itemize itemx}
          {spaces_after_argument:\\n}
       *normal_command@end C1 l7
-      |EXTRA
       |text_arg:{itemize}
        *line_arg C3
         {spaces_before_argument: }
@@ -57,7 +56,6 @@ $result_tree_text{'itemx_in_itemize_enumerate_in_table'} = '*document_root C1
          {normal_text:in nested enumerate itemx}
          {spaces_after_argument:\\n}
       *normal_command@end C1 l11
-      |EXTRA
       |text_arg:{enumerate}
        *line_arg C3
         {spaces_before_argument: }
@@ -65,7 +63,6 @@ $result_tree_text{'itemx_in_itemize_enumerate_in_table'} = '*document_root C1
         {spaces_after_argument:\\n}
      {empty_line:\\n}
    *normal_command@end C1 l13
-   |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }

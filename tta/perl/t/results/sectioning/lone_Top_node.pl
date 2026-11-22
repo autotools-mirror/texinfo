@@ -16,7 +16,6 @@ NodeUp: [U0]
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C4 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -33,7 +32,6 @@ NodeUp: [U0]
    *menu_entry C4 l4
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{First}
      {normal_text:First}
@@ -42,7 +40,6 @@ NodeUp: [U0]
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 l5
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -50,7 +47,6 @@ NodeUp: [U0]
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l7 {First}
- |EXTRA
  |identifier:{First}
  |is_target:{1}
  |node_number:{2}
@@ -60,7 +56,6 @@ NodeUp: [U0]
     {normal_text:First}
     {spaces_after_argument:\\n}
  *normal_command@chapter C1 l8 {chap}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{1}

@@ -14,14 +14,12 @@ $result_tree_text{'recursive_call_in_rmacro'} = '*document_root C1
    {text_before_beginning:\\n}
   *preamble_before_content C4
    *normal_command@rmacro C3 l2
-   |EXTRA
    |formal_args:A{}
    |macro_name:{rec}
     *arguments_line C1
      {macro_line: rec\\n}
     {raw:@rec{}\\n}
     *normal_command@end C1 l4
-    |EXTRA
     |text_arg:{rmacro}
      *line_arg C3
       {spaces_before_argument: }

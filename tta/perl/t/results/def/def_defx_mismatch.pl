@@ -13,14 +13,12 @@ $result_tree_text{'def_defx_mismatch'} = '*document_root C1
   *preamble_before_content
   *normal_command@defun C4 l1
    *def_line C1 l1
-   |EXTRA
    |def_command:{defun}
    |index_entry:I{fn,1}
    |original_def_cmdname:{defun}
     *block_line_arg C11
      (i){spaces_before_argument: }
      *def_category C1
-     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {normal_text:Function}
@@ -45,7 +43,6 @@ $result_tree_text{'def_defx_mismatch'} = '*document_root C1
         *brace_container
      {spaces_after_argument:\\n}
    *normal_command@deffnx C1 l2
-   |EXTRA
    |def_command:{deffn}
    |index_entry:I{fn,2}
    |not_after_command:{1}
@@ -82,7 +79,6 @@ $result_tree_text{'def_defx_mismatch'} = '*document_root C1
      {normal_text:In defun.\\n}
     {empty_line:\\n}
    *normal_command@end C1 l6
-   |EXTRA
    |text_arg:{defun}
     *line_arg C3
      {spaces_before_argument: }

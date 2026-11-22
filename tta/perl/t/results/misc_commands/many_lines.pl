@@ -34,7 +34,6 @@ $result_tree_text{'many_lines'} = '*document_root C1
      {spaces_after_argument:\\n}
    {normal_text:headings }
    *normal_command@headings C1 l4
-   |EXTRA
    |global_command_number:{1}
     *line_arg C3
      {spaces_before_argument: }
@@ -85,7 +84,6 @@ $result_tree_text{'many_lines'} = '*document_root C1
   *paragraph C1
    {normal_text:need }
   *normal_command@need C1 l12
-  |EXTRA
   |misc_args:A{0.1}
    *line_arg C3
     {spaces_before_argument: }
@@ -112,7 +110,6 @@ $result_tree_text{'many_lines'} = '*document_root C1
      {spaces_after_argument:\\n}
    {normal_text:kbdinputstyle code }
    *normal_command@kbdinputstyle C1 l16
-   |EXTRA
    |global_command_number:{1}
     *line_arg C3
      {spaces_before_argument: }
@@ -138,7 +135,6 @@ $result_tree_text{'many_lines'} = '*document_root C1
      {spaces_after_argument:\\n}
    {normal_text:paragraphindent asis }
    *normal_command@paragraphindent C1 l20
-   |EXTRA
    |global_command_number:{1}
    |misc_args:A{asis}
     *line_arg C3
@@ -147,7 +143,6 @@ $result_tree_text{'many_lines'} = '*document_root C1
      {spaces_after_argument:\\n}
    {normal_text:paragraphindent 0 }
    *normal_command@paragraphindent C1 l21
-   |EXTRA
    |global_command_number:{2}
    |misc_args:A{0}
     *line_arg C3
@@ -156,7 +151,6 @@ $result_tree_text{'many_lines'} = '*document_root C1
      {spaces_after_argument:\\n}
    {normal_text:paragraphindent none }
    *normal_command@paragraphindent C1 l22
-   |EXTRA
    |global_command_number:{3}
    |misc_args:A{none}
     *line_arg C3
@@ -165,7 +159,6 @@ $result_tree_text{'many_lines'} = '*document_root C1
      {spaces_after_argument:\\n}
    {normal_text:paragraphindent 4 }
    *normal_command@paragraphindent C1 l23
-   |EXTRA
    |global_command_number:{4}
    |misc_args:A{4}
     *line_arg C3
@@ -174,7 +167,6 @@ $result_tree_text{'many_lines'} = '*document_root C1
      {spaces_after_argument:\\n}
    {normal_text:firstparagraphindent insert }
    *normal_command@firstparagraphindent C1 l24
-   |EXTRA
    |global_command_number:{1}
    |misc_args:A{insert}
     *line_arg C3
@@ -183,7 +175,6 @@ $result_tree_text{'many_lines'} = '*document_root C1
      {spaces_after_argument:\\n}
    {normal_text:firstparagraphindent 3 }
    *normal_command@firstparagraphindent C1 l25
-   |EXTRA
    |global_command_number:{2}
     *line_arg C3
      {spaces_before_argument: }
@@ -191,7 +182,6 @@ $result_tree_text{'many_lines'} = '*document_root C1
      {spaces_after_argument:\\n}
    {normal_text:exampleindent 6 }
    *normal_command@exampleindent C1 l26
-   |EXTRA
    |global_command_number:{1}
     *line_arg C3
      {spaces_before_argument: }
@@ -199,7 +189,6 @@ $result_tree_text{'many_lines'} = '*document_root C1
      {spaces_after_argument:\\n}
    {normal_text:exampleindent 6 }
    *normal_command@exampleindent C1 l27
-   |EXTRA
    |global_command_number:{2}
    |misc_args:A{6}
     *line_arg C3
@@ -208,7 +197,6 @@ $result_tree_text{'many_lines'} = '*document_root C1
      {spaces_after_argument:\\n}
    {normal_text:footnotestyle }
    *normal_command@footnotestyle C1 l28
-   |EXTRA
    |misc_args:A{end}
     *line_arg C3
      {spaces_before_argument: }
@@ -216,7 +204,6 @@ $result_tree_text{'many_lines'} = '*document_root C1
      {spaces_after_argument: \\n}
    {normal_text:footnotestyle }
    *normal_command@footnotestyle C1 l29
-   |EXTRA
    |misc_args:A{separate}
     *line_arg C3
      {spaces_before_argument: }
@@ -224,7 +211,6 @@ $result_tree_text{'many_lines'} = '*document_root C1
      {spaces_after_argument: \\n}
    {normal_text:documentencoding }
    *normal_command@documentencoding C1 l30
-   |EXTRA
    |global_command_number:{1}
    |text_arg:{US-ascii encoding name}
     *line_arg C3
@@ -232,7 +218,6 @@ $result_tree_text{'many_lines'} = '*document_root C1
      {normal_text:US-ascii encoding name}
      {spaces_after_argument:\\n}
    *normal_command@documentencoding C1 l31
-   |EXTRA
    |global_command_number:{2}
    |input_encoding_name:{iso-8859-1}
    |text_arg:{ISO-8859-1}
@@ -242,7 +227,6 @@ $result_tree_text{'many_lines'} = '*document_root C1
      {spaces_after_argument:\\n}
    {normal_text:frenchspacing }
    *normal_command@frenchspacing C1 l32
-   |EXTRA
    |global_command_number:{1}
    |misc_args:A{on}
     *line_arg C3
@@ -251,7 +235,6 @@ $result_tree_text{'many_lines'} = '*document_root C1
      {spaces_after_argument:\\n}
    {normal_text:frenchspacing }
    *normal_command@frenchspacing C1 l33
-   |EXTRA
    |global_command_number:{2}
    |misc_args:A{off}
     *line_arg C3
@@ -260,7 +243,6 @@ $result_tree_text{'many_lines'} = '*document_root C1
      {spaces_after_argument:\\n}
    {normal_text:fonttextsize }
    *normal_command@fonttextsize C1 l34
-   |EXTRA
    |misc_args:A{10}
     *line_arg C3
      {spaces_before_argument: }
@@ -273,7 +255,6 @@ $result_tree_text{'many_lines'} = '*document_root C1
      {normal_text:bottom on line following everyheadingmarks}
      {spaces_after_argument:\\n}
    *normal_command@allowcodebreaks C1 l36
-   |EXTRA
    |global_command_number:{1}
    |misc_args:A{false}
     *line_arg C3
@@ -281,7 +262,6 @@ $result_tree_text{'many_lines'} = '*document_root C1
      {normal_text:false}
      {spaces_after_argument:\\n}
    *normal_command@allowcodebreaks C1 l37
-   |EXTRA
    |global_command_number:{2}
    |misc_args:A{true}
     *line_arg C3

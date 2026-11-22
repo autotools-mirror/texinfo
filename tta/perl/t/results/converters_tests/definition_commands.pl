@@ -12,7 +12,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -22,7 +21,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C2 l2 {top section}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -32,7 +30,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l4 {chapter}
- |EXTRA
  |identifier:{chapter}
  |is_target:{1}
  |node_number:{2}
@@ -42,7 +39,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     {normal_text:chapter}
     {spaces_after_argument:\\n}
  *normal_command@chapter C39 l5 {chapter}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -54,7 +50,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
   {empty_line:\\n}
   *normal_command@deffn C3 l7
    *def_line C1 l7
-   |EXTRA
    |def_command:{deffn}
    |element_node:{chapter}
    |index_entry:I{fn,1}
@@ -89,7 +84,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:a--rg2}
      {normal_text:\\n}
    *normal_command@end C1 l9
-   |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
@@ -98,7 +92,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
   {empty_line:\\n}
   *normal_command@deffn C3 l11
    *def_line C1 l11
-   |EXTRA
    |def_command:{deffn}
    |element_node:{chapter}
    |index_entry:I{fn,2}
@@ -137,7 +130,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:a--rg2}
      {normal_text:\\n}
    *normal_command@end C1 l13
-   |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
@@ -146,7 +138,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
   {empty_line:\\n}
   *normal_command@deffn C3 l15
    *def_line C1 l15
-   |EXTRA
    |def_command:{deffn}
    |element_node:{chapter}
    |index_entry:I{fn,3}
@@ -189,7 +180,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:a--rg2}
      {normal_text:\\n}
    *normal_command@end C1 l17
-   |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
@@ -198,7 +188,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
   {empty_line:\\n}
   *normal_command@defspec C17 l19
    *def_line C1 l19
-   |EXTRA
    |def_command:{defspec}
    |element_node:{chapter}
    |index_entry:I{fn,4}
@@ -206,7 +195,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *block_line_arg C21
      (i){spaces_before_argument: }
      *def_category C1
-     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {normal_text:Special Form}
@@ -242,7 +230,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:default}
      {spaces_after_argument:\\n}
    *normal_command@defspecx C1 l20
-   |EXTRA
    |def_command:{defspec}
    |element_node:{chapter}
    |index_entry:I{fn,5}
@@ -250,7 +237,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *line_arg C20
      (i){spaces_before_argument: }
      *def_category C1
-     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {normal_text:Special Form}
@@ -297,7 +283,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:r}
      {spaces_after_argument:\\n}
    *normal_command@defspecx C1 l21
-   |EXTRA
    |def_command:{defspec}
    |element_node:{chapter}
    |index_entry:I{fn,6}
@@ -305,7 +290,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *line_arg C20
      (i){spaces_before_argument: }
      *def_category C1
-     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {normal_text:Special Form}
@@ -352,7 +336,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:var}
      {spaces_after_argument:\\n}
    *normal_command@defspecx C1 l22
-   |EXTRA
    |def_command:{defspec}
    |element_node:{chapter}
    |index_entry:I{fn,7}
@@ -360,7 +343,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *line_arg C20
      (i){spaces_before_argument: }
      *def_category C1
-     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {normal_text:Special Form}
@@ -407,7 +389,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:slanted}
      {spaces_after_argument:\\n}
    *normal_command@defspecx C1 l23
-   |EXTRA
    |def_command:{defspec}
    |element_node:{chapter}
    |index_entry:I{fn,8}
@@ -415,7 +396,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *line_arg C20
      (i){spaces_before_argument: }
      *def_category C1
-     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {normal_text:Special Form}
@@ -462,7 +442,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:code}
      {spaces_after_argument:\\n}
    *normal_command@defspecx C1 l24
-   |EXTRA
    |def_command:{defspec}
    |element_node:{chapter}
    |index_entry:I{fn,9}
@@ -470,7 +449,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *line_arg C20
      (i){spaces_before_argument: }
      *def_category C1
-     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {normal_text:Special Form}
@@ -517,7 +495,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:t}
      {spaces_after_argument:\\n}
    *normal_command@defspecx C1 l25
-   |EXTRA
    |def_command:{defspec}
    |element_node:{chapter}
    |index_entry:I{fn,10}
@@ -525,7 +502,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *line_arg C20
      (i){spaces_before_argument: }
      *def_category C1
-     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {normal_text:Special Form}
@@ -578,7 +554,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:t:b}
      {spaces_after_argument:\\n}
    *normal_command@defspecx C1 l26
-   |EXTRA
    |def_command:{defspec}
    |element_node:{chapter}
    |index_entry:I{fn,11}
@@ -586,7 +561,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *line_arg C20
      (i){spaces_before_argument: }
      *def_category C1
-     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {normal_text:Special Form}
@@ -639,7 +613,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:r:var}
      {spaces_after_argument:\\n}
    *normal_command@defspecx C1 l27
-   |EXTRA
    |def_command:{defspec}
    |element_node:{chapter}
    |index_entry:I{fn,12}
@@ -647,7 +620,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *line_arg C20
      (i){spaces_before_argument: }
      *def_category C1
-     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {normal_text:Special Form}
@@ -700,7 +672,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:r:slanted}
      {spaces_after_argument:\\n}
    *normal_command@defspecx C1 l28
-   |EXTRA
    |def_command:{defspec}
    |element_node:{chapter}
    |index_entry:I{fn,13}
@@ -708,7 +679,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *line_arg C20
      (i){spaces_before_argument: }
      *def_category C1
-     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {normal_text:Special Form}
@@ -761,7 +731,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:r:code}
      {spaces_after_argument:\\n}
    *normal_command@defspecx C1 l29
-   |EXTRA
    |def_command:{defspec}
    |element_node:{chapter}
    |index_entry:I{fn,14}
@@ -769,7 +738,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *line_arg C20
      (i){spaces_before_argument: }
      *def_category C1
-     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {normal_text:Special Form}
@@ -822,7 +790,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:r:t}
      {spaces_after_argument:\\n}
    *normal_command@defspecx C1 l30
-   |EXTRA
    |def_command:{defspec}
    |element_node:{chapter}
    |index_entry:I{fn,15}
@@ -830,7 +797,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *line_arg C20
      (i){spaces_before_argument: }
      *def_category C1
-     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {normal_text:Special Form}
@@ -883,7 +849,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:code:var}
      {spaces_after_argument:\\n}
    *normal_command@defspecx C1 l31
-   |EXTRA
    |def_command:{defspec}
    |element_node:{chapter}
    |index_entry:I{fn,16}
@@ -891,7 +856,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *line_arg C20
      (i){spaces_before_argument: }
      *def_category C1
-     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {normal_text:Special Form}
@@ -944,7 +908,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:t:var}
      {spaces_after_argument:\\n}
    *normal_command@defspecx C1 l32
-   |EXTRA
    |def_command:{defspec}
    |element_node:{chapter}
    |index_entry:I{fn,17}
@@ -952,7 +915,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *line_arg C20
      (i){spaces_before_argument: }
      *def_category C1
-     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {normal_text:Special Form}
@@ -1005,7 +967,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:code:slanted}
      {spaces_after_argument:\\n}
    *normal_command@defspecx C1 l33
-   |EXTRA
    |def_command:{defspec}
    |element_node:{chapter}
    |index_entry:I{fn,18}
@@ -1013,7 +974,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *line_arg C20
      (i){spaces_before_argument: }
      *def_category C1
-     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {normal_text:Special Form}
@@ -1069,7 +1029,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *paragraph C1
      {normal_text:separators\\n}
    *normal_command@end C1 l35
-   |EXTRA
    |text_arg:{defspec}
     *line_arg C3
      {spaces_before_argument: }
@@ -1078,7 +1037,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
   {empty_line:\\n}
   *normal_command@defspec C17 l37
    *def_line C1 l37
-   |EXTRA
    |def_command:{defspec}
    |element_node:{chapter}
    |index_entry:I{fn,19}
@@ -1086,7 +1044,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *block_line_arg C9
      (i){spaces_before_argument: }
      *def_category C1
-     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {normal_text:Special Form}
@@ -1104,7 +1061,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:default}
      {spaces_after_argument:\\n}
    *normal_command@defspecx C1 l38
-   |EXTRA
    |def_command:{defspec}
    |element_node:{chapter}
    |index_entry:I{fn,20}
@@ -1112,7 +1068,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *line_arg C9
      (i){spaces_before_argument: }
      *def_category C1
-     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {normal_text:Special Form}
@@ -1132,7 +1087,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:var}
      {spaces_after_argument:\\n}
    *normal_command@defspecx C1 l39
-   |EXTRA
    |def_command:{defspec}
    |element_node:{chapter}
    |index_entry:I{fn,21}
@@ -1140,7 +1094,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *line_arg C9
      (i){spaces_before_argument: }
      *def_category C1
-     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {normal_text:Special Form}
@@ -1160,7 +1113,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:r}
      {spaces_after_argument:\\n}
    *normal_command@defspecx C1 l40
-   |EXTRA
    |def_command:{defspec}
    |element_node:{chapter}
    |index_entry:I{fn,22}
@@ -1168,7 +1120,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *line_arg C9
      (i){spaces_before_argument: }
      *def_category C1
-     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {normal_text:Special Form}
@@ -1188,7 +1139,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:slanted}
      {spaces_after_argument:\\n}
    *normal_command@defspecx C1 l41
-   |EXTRA
    |def_command:{defspec}
    |element_node:{chapter}
    |index_entry:I{fn,23}
@@ -1196,7 +1146,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *line_arg C9
      (i){spaces_before_argument: }
      *def_category C1
-     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {normal_text:Special Form}
@@ -1216,7 +1165,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:code}
      {spaces_after_argument:\\n}
    *normal_command@defspecx C1 l42
-   |EXTRA
    |def_command:{defspec}
    |element_node:{chapter}
    |index_entry:I{fn,24}
@@ -1224,7 +1172,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *line_arg C9
      (i){spaces_before_argument: }
      *def_category C1
-     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {normal_text:Special Form}
@@ -1244,7 +1191,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:t}
      {spaces_after_argument:\\n}
    *normal_command@defspecx C1 l43
-   |EXTRA
    |def_command:{defspec}
    |element_node:{chapter}
    |index_entry:I{fn,25}
@@ -1252,7 +1198,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *line_arg C9
      (i){spaces_before_argument: }
      *def_category C1
-     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {normal_text:Special Form}
@@ -1274,7 +1219,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:t:b}
      {spaces_after_argument:\\n}
    *normal_command@defspecx C1 l44
-   |EXTRA
    |def_command:{defspec}
    |element_node:{chapter}
    |index_entry:I{fn,26}
@@ -1282,7 +1226,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *line_arg C9
      (i){spaces_before_argument: }
      *def_category C1
-     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {normal_text:Special Form}
@@ -1304,7 +1247,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:r:var}
      {spaces_after_argument:\\n}
    *normal_command@defspecx C1 l45
-   |EXTRA
    |def_command:{defspec}
    |element_node:{chapter}
    |index_entry:I{fn,27}
@@ -1312,7 +1254,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *line_arg C9
      (i){spaces_before_argument: }
      *def_category C1
-     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {normal_text:Special Form}
@@ -1334,7 +1275,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:r:slanted}
      {spaces_after_argument:\\n}
    *normal_command@defspecx C1 l46
-   |EXTRA
    |def_command:{defspec}
    |element_node:{chapter}
    |index_entry:I{fn,28}
@@ -1342,7 +1282,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *line_arg C9
      (i){spaces_before_argument: }
      *def_category C1
-     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {normal_text:Special Form}
@@ -1364,7 +1303,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:r:code}
      {spaces_after_argument:\\n}
    *normal_command@defspecx C1 l47
-   |EXTRA
    |def_command:{defspec}
    |element_node:{chapter}
    |index_entry:I{fn,29}
@@ -1372,7 +1310,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *line_arg C9
      (i){spaces_before_argument: }
      *def_category C1
-     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {normal_text:Special Form}
@@ -1394,7 +1331,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:r:t}
      {spaces_after_argument:\\n}
    *normal_command@defspecx C1 l48
-   |EXTRA
    |def_command:{defspec}
    |element_node:{chapter}
    |index_entry:I{fn,30}
@@ -1402,7 +1338,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *line_arg C9
      (i){spaces_before_argument: }
      *def_category C1
-     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {normal_text:Special Form}
@@ -1424,7 +1359,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:code:var}
      {spaces_after_argument:\\n}
    *normal_command@defspecx C1 l49
-   |EXTRA
    |def_command:{defspec}
    |element_node:{chapter}
    |index_entry:I{fn,31}
@@ -1432,7 +1366,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *line_arg C9
      (i){spaces_before_argument: }
      *def_category C1
-     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {normal_text:Special Form}
@@ -1454,7 +1387,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:t:var}
      {spaces_after_argument:\\n}
    *normal_command@defspecx C1 l50
-   |EXTRA
    |def_command:{defspec}
    |element_node:{chapter}
    |index_entry:I{fn,32}
@@ -1462,7 +1394,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *line_arg C9
      (i){spaces_before_argument: }
      *def_category C1
-     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {normal_text:Special Form}
@@ -1484,7 +1415,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:code:slanted}
      {spaces_after_argument:\\n}
    *normal_command@defspecx C1 l51
-   |EXTRA
    |def_command:{defspec}
    |element_node:{chapter}
    |index_entry:I{fn,33}
@@ -1492,7 +1422,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *line_arg C9
      (i){spaces_before_argument: }
      *def_category C1
-     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {normal_text:Special Form}
@@ -1517,7 +1446,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *paragraph C1
      {normal_text:name\\n}
    *normal_command@end C1 l53
-   |EXTRA
    |text_arg:{defspec}
     *line_arg C3
      {spaces_before_argument: }
@@ -1526,7 +1454,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
   {empty_line:\\n}
   *normal_command@deffn C7 l55
    *def_line C1 l55
-   |EXTRA
    |def_command:{deffn}
    |element_node:{chapter}
    |index_entry:I{fn,34}
@@ -1554,7 +1481,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {delimiter:]}
      {spaces_after_argument:\\n}
    *normal_command@deffnx C1 l56
-   |EXTRA
    |def_command:{deffn}
    |element_node:{chapter}
    |index_entry:I{fn,35}
@@ -1582,7 +1508,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
         *brace_container
      {spaces_after_argument:\\n}
    *normal_command@deffnx C1 l57
-   |EXTRA
    |def_command:{deffn}
    |element_node:{chapter}
    |index_entry:I{fn,36}
@@ -1610,7 +1535,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
         *brace_container
      {spaces_after_argument:\\n}
    *normal_command@deffnx C1 l58
-   |EXTRA
    |def_command:{deffn}
    |element_node:{chapter}
    |index_entry:I{fn,37}
@@ -1657,7 +1581,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
          {normal_text:]}
      {spaces_after_argument:\\n}
    *normal_command@deffnx C1 l59
-   |EXTRA
    |def_command:{deffn}
    |element_node:{chapter}
    |index_entry:I{fn,38}
@@ -1701,7 +1624,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:fn}
      {normal_text:).\\n}
    *normal_command@end C1 l63
-   |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
@@ -1710,7 +1632,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
   {empty_line:\\n}
   *normal_command@defspec C4 l65
    *def_line C1 l65
-   |EXTRA
    |def_command:{defspec}
    |element_node:{chapter}
    |index_entry:I{fn,39}
@@ -1718,7 +1639,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *block_line_arg C59
      (i){spaces_before_argument: }
      *def_category C1
-     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {normal_text:Special Form}
@@ -1908,7 +1828,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
            {normal_text:]}
      {spaces_after_argument:\\n}
    *normal_command@defspecx C1 l66
-   |EXTRA
    |def_command:{defspec}
    |element_node:{chapter}
    |index_entry:I{fn,40}
@@ -1916,7 +1835,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *line_arg C22
      (i){spaces_before_argument: }
      *def_category C1
-     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {normal_text:Special Form}
@@ -1982,7 +1900,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *paragraph C1
      {normal_text:test formatting of separators\\n}
    *normal_command@end C1 l68
-   |EXTRA
    |text_arg:{defspec}
     *line_arg C3
      {spaces_before_argument: }
@@ -1991,7 +1908,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
   {empty_line:\\n}
   *normal_command@deftypefn C3 l70
    *def_line C1 l70
-   |EXTRA
    |def_command:{deftypefn}
    |element_node:{chapter}
    |index_entry:I{fn,41}
@@ -2047,7 +1963,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:b--ar}
      {normal_text:\\n}
    *normal_command@end C1 l72
-   |EXTRA
    |text_arg:{deftypefn}
     *line_arg C3
      {spaces_before_argument: }
@@ -2056,7 +1971,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
   {empty_line:\\n}
   *normal_command@deftypefn C3 l74
    *def_line C1 l74
-   |EXTRA
    |def_command:{deftypefn}
    |element_node:{chapter}
    |index_entry:I{fn,42}
@@ -2116,7 +2030,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:b--ar}
      {normal_text:\\n}
    *normal_command@end C1 l76
-   |EXTRA
    |text_arg:{deftypefn}
     *line_arg C3
      {spaces_before_argument: }
@@ -2126,12 +2039,10 @@ $result_tree_text{'definition_commands'} = '*document_root C5
   *normal_command@noindent l78
   {ignorable_spaces_after_command: }
   *paragraph C1
-  |EXTRA
   |noindent:{1}
    {normal_text:produces:\\n}
   *normal_command@defcv C3 l79
    *def_line C1 l79
-   |EXTRA
    |def_command:{defcv}
    |element_node:{chapter}
    |index_entry:I{vr,1}
@@ -2156,7 +2067,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
       *brace_container
      {normal_text:\\n}
    *normal_command@end C1 l81
-   |EXTRA
    |text_arg:{defcv}
     *line_arg C3
      {spaces_before_argument: }
@@ -2165,7 +2075,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
   {empty_line:\\n}
   *normal_command@deftypecv C3 l83
    *def_line C1 l83
-   |EXTRA
    |def_command:{deftypecv}
    |element_node:{chapter}
    |index_entry:I{vr,2}
@@ -2196,7 +2105,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
       *brace_container
      {normal_text:\\n}
    *normal_command@end C1 l85
-   |EXTRA
    |text_arg:{deftypecv}
     *line_arg C3
      {spaces_before_argument: }
@@ -2209,7 +2117,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
      {spaces_before_argument:\\n}
    *normal_command@deftypefn C3 l88
     *def_line C1 l88
-    |EXTRA
     |def_command:{deftypefn}
     |element_node:{chapter}
     |index_entry:I{fn,43}
@@ -2265,14 +2172,12 @@ $result_tree_text{'definition_commands'} = '*document_root C5
         {normal_text:bar}
       {normal_text:\\n}
     *normal_command@end C1 l90
-    |EXTRA
     |text_arg:{deftypefn}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:deftypefn}
       {spaces_after_argument:\\n}
    *normal_command@end C1 l91
-   |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }
@@ -2281,7 +2186,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
   {empty_line:\\n}
   *normal_command@defun C3 l93
    *def_line C1 l93
-   |EXTRA
    |def_command:{defun}
    |element_node:{chapter}
    |index_entry:I{fn,44}
@@ -2289,7 +2193,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *block_line_arg C11
      (i){spaces_before_argument: }
      *def_category C1
-     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {normal_text:Function}
@@ -2325,7 +2228,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:arguments}
      {normal_text:\\n}
    *normal_command@end C1 l95
-   |EXTRA
    |text_arg:{defun}
     *line_arg C3
      {spaces_before_argument: }
@@ -2334,7 +2236,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
   {empty_line:\\n}
   *normal_command@defun C3 l97
    *def_line C1 l97
-   |EXTRA
    |def_command:{defun}
    |element_node:{chapter}
    |index_entry:I{fn,45}
@@ -2342,7 +2243,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *block_line_arg C11
      (i){spaces_before_argument: }
      *def_category C1
-     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {normal_text:Function}
@@ -2379,7 +2279,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:arguments}
      {normal_text:\\n}
    *normal_command@end C1 l99
-   |EXTRA
    |text_arg:{defun}
     *line_arg C3
      {spaces_before_argument: }
@@ -2388,7 +2287,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
   {empty_line:\\n}
   *normal_command@deffn C3 l101
    *def_line C1 l101
-   |EXTRA
    |def_command:{deffn}
    |element_node:{chapter}
    |index_entry:I{fn,46}
@@ -2473,7 +2371,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *paragraph C1
      {normal_text:In deffn with code and var used\\n}
    *normal_command@end C1 l104
-   |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
@@ -2482,7 +2379,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
   {empty_line:\\n}
   *normal_command@deftypefn C17 l106
    *def_line C1 l106
-   |EXTRA
    |def_command:{deftypefn}
    |element_node:{chapter}
    |index_entry:I{fn,47}
@@ -2531,7 +2427,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:default}
      {spaces_after_argument:\\n}
    *normal_command@deftypefnx C1 l107
-   |EXTRA
    |def_command:{deftypefn}
    |element_node:{chapter}
    |index_entry:I{fn,48}
@@ -2588,7 +2483,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:r}
      {spaces_after_argument:\\n}
    *normal_command@deftypefnx C1 l108
-   |EXTRA
    |def_command:{deftypefn}
    |element_node:{chapter}
    |index_entry:I{fn,49}
@@ -2645,7 +2539,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:var}
      {spaces_after_argument:\\n}
    *normal_command@deftypefnx C1 l109
-   |EXTRA
    |def_command:{deftypefn}
    |element_node:{chapter}
    |index_entry:I{fn,50}
@@ -2702,7 +2595,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:slanted}
      {spaces_after_argument:\\n}
    *normal_command@deftypefnx C1 l110
-   |EXTRA
    |def_command:{deftypefn}
    |element_node:{chapter}
    |index_entry:I{fn,51}
@@ -2759,7 +2651,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:code}
      {spaces_after_argument:\\n}
    *normal_command@deftypefnx C1 l111
-   |EXTRA
    |def_command:{deftypefn}
    |element_node:{chapter}
    |index_entry:I{fn,52}
@@ -2816,7 +2707,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:t}
      {spaces_after_argument:\\n}
    *normal_command@deftypefnx C1 l112
-   |EXTRA
    |def_command:{deftypefn}
    |element_node:{chapter}
    |index_entry:I{fn,53}
@@ -2877,7 +2767,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:t:b}
      {spaces_after_argument:\\n}
    *normal_command@deftypefnx C1 l113
-   |EXTRA
    |def_command:{deftypefn}
    |element_node:{chapter}
    |index_entry:I{fn,54}
@@ -2938,7 +2827,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:r:var}
      {spaces_after_argument:\\n}
    *normal_command@deftypefnx C1 l114
-   |EXTRA
    |def_command:{deftypefn}
    |element_node:{chapter}
    |index_entry:I{fn,55}
@@ -2999,7 +2887,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:r:slanted}
      {spaces_after_argument:\\n}
    *normal_command@deftypefnx C1 l115
-   |EXTRA
    |def_command:{deftypefn}
    |element_node:{chapter}
    |index_entry:I{fn,56}
@@ -3060,7 +2947,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:r:code}
      {spaces_after_argument:\\n}
    *normal_command@deftypefnx C1 l116
-   |EXTRA
    |def_command:{deftypefn}
    |element_node:{chapter}
    |index_entry:I{fn,57}
@@ -3121,7 +3007,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:r:t}
      {spaces_after_argument:\\n}
    *normal_command@deftypefnx C1 l117
-   |EXTRA
    |def_command:{deftypefn}
    |element_node:{chapter}
    |index_entry:I{fn,58}
@@ -3182,7 +3067,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:code:var}
      {spaces_after_argument:\\n}
    *normal_command@deftypefnx C1 l118
-   |EXTRA
    |def_command:{deftypefn}
    |element_node:{chapter}
    |index_entry:I{fn,59}
@@ -3243,7 +3127,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:t:var}
      {spaces_after_argument:\\n}
    *normal_command@deftypefnx C1 l119
-   |EXTRA
    |def_command:{deftypefn}
    |element_node:{chapter}
    |index_entry:I{fn,60}
@@ -3304,7 +3187,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:code:slanted}
      {spaces_after_argument:\\n}
    *normal_command@deftypefnx C1 l120
-   |EXTRA
    |def_command:{deftypefn}
    |element_node:{chapter}
    |index_entry:I{fn,61}
@@ -3368,7 +3250,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *paragraph C1
      {normal_text:separators\\n}
    *normal_command@end C1 l122
-   |EXTRA
    |text_arg:{deftypefn}
     *line_arg C3
      {spaces_before_argument: }
@@ -3377,7 +3258,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
   {empty_line:\\n}
   *normal_command@deftypefn C17 l124
    *def_line C1 l124
-   |EXTRA
    |def_command:{deftypefn}
    |element_node:{chapter}
    |index_entry:I{fn,62}
@@ -3426,7 +3306,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:default}
      {spaces_after_argument:\\n}
    *normal_command@deftypefnx C1 l125
-   |EXTRA
    |def_command:{deftypefn}
    |element_node:{chapter}
    |index_entry:I{fn,63}
@@ -3477,7 +3356,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:r}
      {spaces_after_argument:\\n}
    *normal_command@deftypefnx C1 l126
-   |EXTRA
    |def_command:{deftypefn}
    |element_node:{chapter}
    |index_entry:I{fn,64}
@@ -3528,7 +3406,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:var}
      {spaces_after_argument:\\n}
    *normal_command@deftypefnx C1 l127
-   |EXTRA
    |def_command:{deftypefn}
    |element_node:{chapter}
    |index_entry:I{fn,65}
@@ -3579,7 +3456,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:slanted}
      {spaces_after_argument:\\n}
    *normal_command@deftypefnx C1 l128
-   |EXTRA
    |def_command:{deftypefn}
    |element_node:{chapter}
    |index_entry:I{fn,66}
@@ -3630,7 +3506,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:code}
      {spaces_after_argument:\\n}
    *normal_command@deftypefnx C1 l129
-   |EXTRA
    |def_command:{deftypefn}
    |element_node:{chapter}
    |index_entry:I{fn,67}
@@ -3681,7 +3556,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:t}
      {spaces_after_argument:\\n}
    *normal_command@deftypefnx C1 l130
-   |EXTRA
    |def_command:{deftypefn}
    |element_node:{chapter}
    |index_entry:I{fn,68}
@@ -3734,7 +3608,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:t:b}
      {spaces_after_argument:\\n}
    *normal_command@deftypefnx C1 l131
-   |EXTRA
    |def_command:{deftypefn}
    |element_node:{chapter}
    |index_entry:I{fn,69}
@@ -3787,7 +3660,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:r:var}
      {spaces_after_argument:\\n}
    *normal_command@deftypefnx C1 l132
-   |EXTRA
    |def_command:{deftypefn}
    |element_node:{chapter}
    |index_entry:I{fn,70}
@@ -3840,7 +3712,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:r:slanted}
      {spaces_after_argument:\\n}
    *normal_command@deftypefnx C1 l133
-   |EXTRA
    |def_command:{deftypefn}
    |element_node:{chapter}
    |index_entry:I{fn,71}
@@ -3893,7 +3764,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:r:code}
      {spaces_after_argument:\\n}
    *normal_command@deftypefnx C1 l134
-   |EXTRA
    |def_command:{deftypefn}
    |element_node:{chapter}
    |index_entry:I{fn,72}
@@ -3946,7 +3816,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:r:t}
      {spaces_after_argument:\\n}
    *normal_command@deftypefnx C1 l135
-   |EXTRA
    |def_command:{deftypefn}
    |element_node:{chapter}
    |index_entry:I{fn,73}
@@ -3999,7 +3868,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:code:var}
      {spaces_after_argument:\\n}
    *normal_command@deftypefnx C1 l136
-   |EXTRA
    |def_command:{deftypefn}
    |element_node:{chapter}
    |index_entry:I{fn,74}
@@ -4052,7 +3920,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:t:var}
      {spaces_after_argument:\\n}
    *normal_command@deftypefnx C1 l137
-   |EXTRA
    |def_command:{deftypefn}
    |element_node:{chapter}
    |index_entry:I{fn,75}
@@ -4105,7 +3972,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
        {normal_text:code:slanted}
      {spaces_after_argument:\\n}
    *normal_command@deftypefnx C1 l138
-   |EXTRA
    |def_command:{deftypefn}
    |element_node:{chapter}
    |index_entry:I{fn,76}
@@ -4161,7 +4027,6 @@ $result_tree_text{'definition_commands'} = '*document_root C5
     *paragraph C1
      {normal_text:name\\n}
    *normal_command@end C1 l140
-   |EXTRA
    |text_arg:{deftypefn}
     *line_arg C3
      {spaces_before_argument: }

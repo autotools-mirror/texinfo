@@ -17,7 +17,6 @@ $result_tree_text{'quotation_author'} = '*document_root C1
      {spaces_before_argument:\\n}
    {empty_line:\\n}
    *normal_command@author C1 l3
-   |EXTRA
    |global_command_number:{1}
     *line_arg C3
      {spaces_before_argument: }
@@ -26,7 +25,6 @@ $result_tree_text{'quotation_author'} = '*document_root C1
    *paragraph C3
     {normal_text:quotation\\n}
     *normal_command@author C1 l5
-    |EXTRA
     |global_command_number:{2}
      *line_arg C5
       {spaces_before_argument: }
@@ -39,7 +37,6 @@ $result_tree_text{'quotation_author'} = '*document_root C1
     {normal_text:quotation continues.\\n}
    {empty_line:\\n}
    *normal_command@end C1 l8
-   |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }

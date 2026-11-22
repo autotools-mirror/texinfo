@@ -19,7 +19,6 @@ $result_tree_text{'w_argument'} = '*document_root C1
       *brace_container
      {spaces_after_argument:\\n}
    *normal_command@item C2 l2
-   |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C2
@@ -28,7 +27,6 @@ $result_tree_text{'w_argument'} = '*document_root C1
        {normal_text:--build=}
      {normal_text: platform on which the program is compiled,\\n}
    *normal_command@item C2 l3
-   |EXTRA
    |item_number:{2}
     {ignorable_spaces_after_command: }
     *paragraph C2
@@ -37,7 +35,6 @@ $result_tree_text{'w_argument'} = '*document_root C1
        {normal_text:--target=}
      {normal_text: target platform on which the program is processed.\\n}
    *normal_command@end C1 l4
-   |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }

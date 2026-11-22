@@ -12,7 +12,6 @@ $result_tree_text{'inter_item_commands_in_multitable'} = '*document_root C1
  *before_node_section C7
   *preamble_before_content
   *normal_command@multitable C4 l1
-  |EXTRA
   |max_columns:{1}
    *arguments_line C1
     *block_line_arg C3
@@ -29,17 +28,14 @@ $result_tree_text{'inter_item_commands_in_multitable'} = '*document_root C1
     {empty_line:\\n}
    *multitable_body C2
     *row C1
-    |EXTRA
     |row_number:{1}
      *normal_command@item C5 l4
-     |EXTRA
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
        {normal_text:truc\\n}
       {empty_line:\\n}
       *index_entry_command@cindex C1 l6
-      |EXTRA
       |index_entry:I{cp,1}
        *line_arg C3
         {spaces_before_argument: }
@@ -47,10 +43,8 @@ $result_tree_text{'inter_item_commands_in_multitable'} = '*document_root C1
         {spaces_after_argument:\\n}
       {empty_line:\\n}
     *row C1
-    |EXTRA
     |row_number:{2}
      *normal_command@item C2 l8
-     |EXTRA
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C2
@@ -61,7 +55,6 @@ $result_tree_text{'inter_item_commands_in_multitable'} = '*document_root C1
          {rawline_text:last comment}
          {spaces_after_argument:\\n}
    *normal_command@end C1 l10
-   |EXTRA
    |text_arg:{multitable}
     *line_arg C3
      {spaces_before_argument: }
@@ -69,13 +62,11 @@ $result_tree_text{'inter_item_commands_in_multitable'} = '*document_root C1
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@multitable C4 l12
-  |EXTRA
   |max_columns:{2}
    *arguments_line C1
     *block_line_arg C2
      {spaces_before_argument: }
      *normal_command@columnfractions C1 l12
-     |EXTRA
      |misc_args:A{0.6|0.4}
       *line_arg C3
        {spaces_before_argument: }
@@ -83,32 +74,26 @@ $result_tree_text{'inter_item_commands_in_multitable'} = '*document_root C1
        {spaces_after_argument:\\n}
    *multitable_head C1
     *row C2
-    |EXTRA
     |row_number:{1}
      *normal_command@headitem C2 l13
-     |EXTRA
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
        {normal_text:mu--ltitable headitem }
      *normal_command@tab C2 l13
-     |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C1
        {normal_text:another tab\\n}
    *multitable_body C3
     *row C2
-    |EXTRA
     |row_number:{2}
      *normal_command@item C2 l14
-     |EXTRA
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
        {normal_text:mu--ltitable item }
      *normal_command@tab C2 l14
-     |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C2
@@ -119,38 +104,31 @@ $result_tree_text{'inter_item_commands_in_multitable'} = '*document_root C1
          {rawline_text:comment in multitable}
          {spaces_after_argument:\\n}
     *row C2
-    |EXTRA
     |row_number:{3}
      *normal_command@item C2 l16
-     |EXTRA
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
        {normal_text:mu--ltitable item 2 }
      *normal_command@tab C2 l16
-     |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C2
        {normal_text:multitable tab 2\\n}
        *index_entry_command@cindex C1 l17
-       |EXTRA
        |index_entry:I{cp,2}
         *line_arg C3
          {spaces_before_argument: }
          {normal_text:index entry within multitable}
          {spaces_after_argument:\\n}
     *row C1
-    |EXTRA
     |row_number:{4}
      *normal_command@item C2 l18
-     |EXTRA
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
        {normal_text:lone mu--ltitable item\\n}
    *normal_command@end C1 l19
-   |EXTRA
    |text_arg:{multitable}
     *line_arg C3
      {spaces_before_argument: }
@@ -158,7 +136,6 @@ $result_tree_text{'inter_item_commands_in_multitable'} = '*document_root C1
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@multitable C4 l21
-  |EXTRA
   |max_columns:{1}
    *arguments_line C1
     *block_line_arg C3
@@ -170,7 +147,6 @@ $result_tree_text{'inter_item_commands_in_multitable'} = '*document_root C1
     *paragraph C2
      {normal_text:Title\\n}
      *index_entry_command@cindex C1 l23
-     |EXTRA
      |index_entry:I{cp,3}
       *line_arg C3
        {spaces_before_argument: }
@@ -178,16 +154,13 @@ $result_tree_text{'inter_item_commands_in_multitable'} = '*document_root C1
        {spaces_after_argument:\\n}
    *multitable_body C1
     *row C1
-    |EXTRA
     |row_number:{1}
      *normal_command@item C2 l24
-     |EXTRA
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
        {normal_text:thing\\n}
    *normal_command@end C1 l25
-   |EXTRA
    |text_arg:{multitable}
     *line_arg C3
      {spaces_before_argument: }

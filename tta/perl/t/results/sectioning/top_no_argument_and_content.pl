@@ -12,7 +12,6 @@ $result_tree_text{'top_no_argument_and_content'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
  *normal_command@top C3 l1
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1

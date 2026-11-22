@@ -18,7 +18,6 @@ $result_tree_text{'table_not_closed_in_menu_description'} = '*document_root C1
    *menu_entry C4 l2
     {menu_entry_leading_text:* }
     *menu_entry_node C3
-    |EXTRA
     |manual_content:A{1|1}
      {normal_text:(}
      {normal_text:gcc}
@@ -44,7 +43,6 @@ $result_tree_text{'table_not_closed_in_menu_description'} = '*document_root C1
         *preformatted C1
          {normal_text:table line\\n}
    *normal_command@end C1 l5
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }

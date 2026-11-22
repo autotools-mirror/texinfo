@@ -20,7 +20,6 @@ NodeForward: [U1]
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 complex_sectioning_case.texi:l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -29,19 +28,16 @@ NodeForward: [U1]
     {spaces_before_argument: }
     {normal_text:Top}
    *line_arg C1
-   |EXTRA
    |node_content:A{0|0}
    |normalized:{First-node}
     {normal_text:First node}
    *line_arg C4
-   |EXTRA
    |manual_content:A{1|1}
     {normal_text:(}
     {normal_text:dir}
     {normal_text:)}
     {spaces_after_argument:\\n}
  *normal_command@top C3 complex_sectioning_case.texi:l2
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -54,7 +50,6 @@ NodeForward: [U1]
    *menu_entry C4 complex_sectioning_case.texi:l4
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{First-node}
      {normal_text:First node}
@@ -65,7 +60,6 @@ NodeForward: [U1]
    *menu_entry C4 complex_sectioning_case.texi:l5
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{between-node}
      {normal_text:between node}
@@ -76,7 +70,6 @@ NodeForward: [U1]
    *menu_entry C4 complex_sectioning_case.texi:l6
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{Second-node}
      {normal_text:Second node}
@@ -87,7 +80,6 @@ NodeForward: [U1]
    *menu_entry C4 complex_sectioning_case.texi:l7
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{Third-node-unnumbered}
      {normal_text:Third node unnumbered}
@@ -98,7 +90,6 @@ NodeForward: [U1]
    *menu_entry C4 complex_sectioning_case.texi:l8
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{continuity}
      {normal_text:continuity}
@@ -109,7 +100,6 @@ NodeForward: [U1]
    *menu_entry C4 complex_sectioning_case.texi:l9
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{Last-node-no-description}
      {normal_text:Last node no description}
@@ -118,7 +108,6 @@ NodeForward: [U1]
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 complex_sectioning_case.texi:l10
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -140,7 +129,6 @@ NodeUp: [U0]
 NodeForward: [U2]
 NodeBack: [U0]
  *normal_command@node C1 complex_sectioning_case.texi:l12 {First node}
- |EXTRA
  |identifier:{First-node}
  |is_target:{1}
  |node_number:{2}
@@ -150,18 +138,15 @@ NodeBack: [U0]
     {normal_text:First node}
    *line_arg
    *line_arg C1
-   |EXTRA
    |node_content:A{0|0}
    |normalized:{Top}
     {normal_text:Top}
    *line_arg C2
-   |EXTRA
    |node_content:A{0|0}
    |normalized:{Top}
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@chapter C5 complex_sectioning_case.texi:l13 {first node chapter}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -180,7 +165,6 @@ NodeBack: [U0]
    *menu_entry C4 complex_sectioning_case.texi:l17
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{unnumbered}
      {normal_text:unnumbered}
@@ -191,7 +175,6 @@ NodeBack: [U0]
    *menu_entry C4 complex_sectioning_case.texi:l18
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{unnumbered2}
      {normal_text:unnumbered2}
@@ -202,7 +185,6 @@ NodeBack: [U0]
    *menu_entry C4 complex_sectioning_case.texi:l19
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{numbered}
      {normal_text:numbered}
@@ -214,7 +196,6 @@ NodeBack: [U0]
     *preformatted C1
      {after_menu_description_line:\\n}
    *normal_command@end C1 complex_sectioning_case.texi:l21
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -236,7 +217,6 @@ NodeUp: [U1]
 NodeForward: [U3]
 NodeBack: [U1]
  *normal_command@node C1 complex_sectioning_case.texi:l23 {unnumbered}
- |EXTRA
  |identifier:{unnumbered}
  |is_target:{1}
  |node_number:{3}
@@ -246,7 +226,6 @@ NodeBack: [U1]
     {normal_text:unnumbered}
     {spaces_after_argument:\\n}
  *normal_command@unnumberedsec C4 complex_sectioning_case.texi:l24 {unnumbered section}
- |EXTRA
  |section_level:{2}
  |section_number:{3}
   *arguments_line C1
@@ -262,7 +241,6 @@ NodeBack: [U1]
    *menu_entry C4 complex_sectioning_case.texi:l27
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{unnumbered-sub}
      {normal_text:unnumbered sub}
@@ -273,7 +251,6 @@ NodeBack: [U1]
    *menu_entry C4 complex_sectioning_case.texi:l28
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{numbered-sub}
      {normal_text:numbered sub}
@@ -284,7 +261,6 @@ NodeBack: [U1]
    *menu_entry C4 complex_sectioning_case.texi:l29
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{unnumbered-sub2}
      {normal_text:unnumbered sub2}
@@ -295,7 +271,6 @@ NodeBack: [U1]
    *menu_entry C4 complex_sectioning_case.texi:l30
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{numbered-sub2}
      {normal_text:numbered sub2}
@@ -304,7 +279,6 @@ NodeBack: [U1]
      *preformatted C1
       {normal_text:nu2\\n}
    *normal_command@end C1 complex_sectioning_case.texi:l31
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -326,7 +300,6 @@ NodeUp: [U2]
 NodeForward: [U4]
 NodeBack: [U2]
  *normal_command@node C1 complex_sectioning_case.texi:l33 {unnumbered sub}
- |EXTRA
  |identifier:{unnumbered-sub}
  |is_target:{1}
  |node_number:{4}
@@ -336,7 +309,6 @@ NodeBack: [U2]
     {normal_text:unnumbered sub}
     {spaces_after_argument:\\n}
  *normal_command@unnumberedsubsec C2 complex_sectioning_case.texi:l34 {unnumbered subsection}
- |EXTRA
  |section_level:{3}
  |section_number:{4}
   *arguments_line C1
@@ -362,7 +334,6 @@ NodeUp: [U2]
 NodeForward: [U5]
 NodeBack: [U3]
  *normal_command@node C1 complex_sectioning_case.texi:l36 {numbered sub}
- |EXTRA
  |identifier:{numbered-sub}
  |is_target:{1}
  |node_number:{5}
@@ -372,7 +343,6 @@ NodeBack: [U3]
     {normal_text:numbered sub}
     {spaces_after_argument:\\n}
  *normal_command@subsection C2 complex_sectioning_case.texi:l37 {numbered subsection}
- |EXTRA
  |section_level:{3}
  |section_number:{5}
   *arguments_line C1
@@ -398,7 +368,6 @@ NodeUp: [U2]
 NodeForward: [U6]
 NodeBack: [U4]
  *normal_command@node C1 complex_sectioning_case.texi:l39 {unnumbered sub2}
- |EXTRA
  |identifier:{unnumbered-sub2}
  |is_target:{1}
  |node_number:{6}
@@ -408,7 +377,6 @@ NodeBack: [U4]
     {normal_text:unnumbered sub2}
     {spaces_after_argument:\\n}
  *normal_command@unnumberedsubsec C2 complex_sectioning_case.texi:l40 {unnumbered subsection2}
- |EXTRA
  |section_level:{3}
  |section_number:{6}
   *arguments_line C1
@@ -432,7 +400,6 @@ NodeUp: [U2]
 NodeForward: [U7]
 NodeBack: [U5]
  *normal_command@node C1 complex_sectioning_case.texi:l42 {numbered sub2}
- |EXTRA
  |identifier:{numbered-sub2}
  |is_target:{1}
  |node_number:{7}
@@ -442,7 +409,6 @@ NodeBack: [U5]
     {normal_text:numbered sub2}
     {spaces_after_argument:\\n}
  *normal_command@subsection C2 complex_sectioning_case.texi:l43 {numbered subsection2}
- |EXTRA
  |section_level:{3}
  |section_number:{7}
   *arguments_line C1
@@ -468,7 +434,6 @@ NodeUp: [U1]
 NodeForward: [U8]
 NodeBack: [U6]
  *normal_command@node C1 complex_sectioning_case.texi:l45 {unnumbered2}
- |EXTRA
  |identifier:{unnumbered2}
  |is_target:{1}
  |node_number:{8}
@@ -478,7 +443,6 @@ NodeBack: [U6]
     {normal_text:unnumbered2}
     {spaces_after_argument:\\n}
  *normal_command@unnumberedsec C4 complex_sectioning_case.texi:l46 {unnumbered section2}
- |EXTRA
  |section_level:{2}
  |section_number:{8}
   *arguments_line C1
@@ -494,7 +458,6 @@ NodeBack: [U6]
    *menu_entry C4 complex_sectioning_case.texi:l49
     {menu_entry_leading_text:*  }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{numbered-sub3}
      {normal_text:numbered sub3}
@@ -503,7 +466,6 @@ NodeBack: [U6]
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 complex_sectioning_case.texi:l50
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -523,7 +485,6 @@ NodeUp: [U7]
 NodeForward: [U9]
 NodeBack: [U7]
  *normal_command@node C1 complex_sectioning_case.texi:l52 {numbered sub3}
- |EXTRA
  |identifier:{numbered-sub3}
  |is_target:{1}
  |node_number:{9}
@@ -533,7 +494,6 @@ NodeBack: [U7]
     {normal_text:numbered sub3}
     {spaces_after_argument:\\n}
  *normal_command@subsection C3 complex_sectioning_case.texi:l53 {numbered subsection3}
- |EXTRA
  |section_level:{3}
  |section_number:{9}
   *arguments_line C1
@@ -557,7 +517,6 @@ NodePrev: [U7]
 NodeUp: [U1]
 NodeBack: [U8]
  *normal_command@node C1 complex_sectioning_case.texi:l56 {numbered}
- |EXTRA
  |identifier:{numbered}
  |is_target:{1}
  |node_number:{10}
@@ -567,7 +526,6 @@ NodeBack: [U8]
     {normal_text:numbered}
     {spaces_after_argument:\\n}
  *normal_command@section C2 complex_sectioning_case.texi:l57 {numbered section}
- |EXTRA
  |section_heading_number:{1.1}
  |section_level:{2}
  |section_number:{10}
@@ -587,7 +545,6 @@ FastForward: [U11]
 FastBack: [U1]
 NodeUp: [U0]
  *normal_command@node C4 complex_sectioning_case.texi:l59 {between node}
- |EXTRA
  |identifier:{between-node}
  |is_target:{1}
  |node_number:{11}
@@ -598,7 +555,6 @@ NodeUp: [U0]
    *line_arg
    *line_arg
    *line_arg C2
-   |EXTRA
    |node_content:A{0|0}
    |normalized:{Top}
     {normal_text:Top}
@@ -622,7 +578,6 @@ NodeNext: [U12]
 NodeUp: [U0]
 NodeForward: [U12]
  *normal_command@node C4 complex_sectioning_case.texi:l63 {Second node}
- |EXTRA
  |identifier:{Second-node}
  |is_target:{1}
  |node_number:{12}
@@ -631,13 +586,11 @@ NodeForward: [U12]
     {spaces_before_argument: }
     {normal_text:Second node}
    *line_arg C1
-   |EXTRA
    |node_content:A{0|0}
    |normalized:{Third-node-unnumbered}
     {normal_text:Third node unnumbered}
    *line_arg
    *line_arg C2
-   |EXTRA
    |node_content:A{0|0}
    |normalized:{Top}
     {normal_text:Top}
@@ -647,7 +600,6 @@ NodeForward: [U12]
    {normal_text:Second node text\\n}
   {empty_line:\\n}
  *normal_command@chapter C4 complex_sectioning_case.texi:l67 {second node chapter}
- |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
  |section_number:{11}
@@ -677,7 +629,6 @@ NodeUp: [U0]
 NodeForward: [U13]
 NodeBack: [U11]
  *normal_command@node C1 complex_sectioning_case.texi:l71 {Third node unnumbered}
- |EXTRA
  |identifier:{Third-node-unnumbered}
  |is_target:{1}
  |node_number:{13}
@@ -687,7 +638,6 @@ NodeBack: [U11]
     {normal_text:Third node unnumbered}
     {spaces_after_argument:\\n}
  *normal_command@unnumbered C4 complex_sectioning_case.texi:l72 {unnumbered chapter}
- |EXTRA
  |section_level:{1}
  |section_number:{12}
   *arguments_line C1
@@ -714,7 +664,6 @@ NodeUp: [U0]
 NodeForward: [U12]
 NodeBack: [U12]
  *normal_command@node C1 complex_sectioning_case.texi:l76 {continuity}
- |EXTRA
  |identifier:{continuity}
  |is_target:{1}
  |node_number:{14}
@@ -723,26 +672,22 @@ NodeBack: [U12]
     {spaces_before_argument: }
     {normal_text:continuity}
    *line_arg C2
-   |EXTRA
    |node_content:A{1|1}
    |normalized:{Third-node-unnumbered}
     {spaces_before_argument:  }
     {normal_text:Third node unnumbered}
    *line_arg C2
-   |EXTRA
    |node_content:A{1|1}
    |normalized:{Last-node-no-description}
     {spaces_before_argument: }
     {normal_text:Last node no description}
    *line_arg C3
-   |EXTRA
    |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@unnumbered C4 complex_sectioning_case.texi:l77 {unnumbered continuity}
- |EXTRA
  |section_level:{1}
  |section_number:{13}
   *arguments_line C1
@@ -764,7 +709,6 @@ FastBack: [U13]
 NodePrev: [U13]
 NodeUp: [U0]
  *normal_command@node C3 complex_sectioning_case.texi:l82 {Last node no description}
- |EXTRA
  |identifier:{Last-node-no-description}
  |is_target:{1}
  |node_number:{15}
@@ -774,19 +718,16 @@ NodeUp: [U0]
     {normal_text:Last node no description}
    *line_arg
    *line_arg C1
-   |EXTRA
    |node_content:A{0|0}
    |normalized:{continuity}
     {normal_text:continuity}
    *line_arg C2
-   |EXTRA
    |node_content:A{0|0}
    |normalized:{Top}
     {normal_text:Top}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@contents C1 complex_sectioning_case.texi:l84
-  |EXTRA
   |global_command_number:{1}
    *line_arg C1
     {spaces_before_argument:\\n}

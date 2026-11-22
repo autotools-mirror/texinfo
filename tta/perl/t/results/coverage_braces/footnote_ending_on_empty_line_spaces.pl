@@ -14,7 +14,6 @@ $result_tree_text{'footnote_ending_on_empty_line_spaces'} = '*document_root C1
   *paragraph C2
    {normal_text:text}
    *normal_command@footnote C1 l1
-   |EXTRA
    |global_command_number:{1}
     *brace_command_context C4
      {spaces_before_argument: }

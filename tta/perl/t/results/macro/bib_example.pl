@@ -107,7 +107,6 @@ $result_tree_text{'bib_example'} = '*document_root C9
    >SOURCEMARKS
    >include<start;1><p:1>
     >*normal_command@include C1 bib-example.texi:l25
-    >|EXTRA
     >|text_arg:{my-bib-macros.texi}
      >*line_arg C3
       >{spaces_before_argument: }
@@ -799,14 +798,12 @@ $result_tree_text{'bib_example'} = '*document_root C9
      {spaces_after_argument:\\n}
    {empty_line:\\n}
    *normal_command@macro C3 my-bib-macros.texi:l162
-   |EXTRA
    |formal_args:A{node}
    |macro_name:{mybibsetrefnode}
     *arguments_line C1
      {macro_line: mybibsetrefnode{node}\\n}
     {raw:@set mybibrefnode \\node\\\\n}
     *normal_command@end C1 my-bib-macros.texi:l164
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -825,14 +822,12 @@ $result_tree_text{'bib_example'} = '*document_root C9
      {spaces_after_argument:\\n}
    {empty_line:\\n}
    *normal_command@macro C3 my-bib-macros.texi:l169
-   |EXTRA
    |formal_args:A{}
    |macro_name:{mybibnode}
     *arguments_line C1
      {macro_line: mybibnode{}\\n}
     {raw:@value{mybibrefnode}\\n}
     *normal_command@end C1 my-bib-macros.texi:l171
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -851,7 +846,6 @@ $result_tree_text{'bib_example'} = '*document_root C9
      {spaces_after_argument:\\n}
    {empty_line:\\n}
    *normal_command@macro C7 my-bib-macros.texi:l176
-   |EXTRA
    |formal_args:A{node}
    |macro_name:{mybibusetable}
     *arguments_line C1
@@ -862,7 +856,6 @@ $result_tree_text{'bib_example'} = '*document_root C9
     {raw:@end ifset\\n}
     {raw:@mybibsetrefnode{\\node\\}\\n}
     *normal_command@end C1 my-bib-macros.texi:l182
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -881,7 +874,6 @@ $result_tree_text{'bib_example'} = '*document_root C9
      {spaces_after_argument:\\n}
    {empty_line:\\n}
    *normal_command@macro C7 my-bib-macros.texi:l187
-   |EXTRA
    |formal_args:A{node}
    |macro_name:{mybibuselist}
     *arguments_line C1
@@ -892,7 +884,6 @@ $result_tree_text{'bib_example'} = '*document_root C9
     {raw:@end ifset\\n}
     {raw:@mybibsetrefnode{\\node\\}\\n}
     *normal_command@end C1 my-bib-macros.texi:l193
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -907,7 +898,6 @@ $result_tree_text{'bib_example'} = '*document_root C9
      {spaces_after_argument:\\n}
    {empty_line:\\n}
    *normal_command@macro C10 my-bib-macros.texi:l198
-   |EXTRA
    |formal_args:A{ref}
    |macro_name:{mybibcite}
     *arguments_line C1
@@ -921,7 +911,6 @@ $result_tree_text{'bib_example'} = '*document_root C9
     {raw:@end ifset\\n}
     {raw:\\n}
     *normal_command@end C1 my-bib-macros.texi:l207
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -929,14 +918,12 @@ $result_tree_text{'bib_example'} = '*document_root C9
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *normal_command@macro C3 my-bib-macros.texi:l209
-   |EXTRA
    |formal_args:A{node|ref}
    |macro_name:{mybibmakeref}
     *arguments_line C1
      {macro_line: mybibmakeref{node, ref}\\n}
     {raw:(See item [\\ref\\] in @ref{\\node\\, \\ref\\}.)\\n}
     *normal_command@end C1 my-bib-macros.texi:l211
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -950,7 +937,6 @@ $result_tree_text{'bib_example'} = '*document_root C9
      {spaces_after_argument:\\n}
    {empty_line:\\n}
    *normal_command@macro C16 my-bib-macros.texi:l215
-   |EXTRA
    |formal_args:A{ref}
    |macro_name:{mybibitem}
     *arguments_line C1
@@ -970,7 +956,6 @@ $result_tree_text{'bib_example'} = '*document_root C9
     {raw:@end ifset\\n}
     {raw:\\n}
     *normal_command@end C1 my-bib-macros.texi:l230
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -989,7 +974,6 @@ $result_tree_text{'bib_example'} = '*document_root C9
      {rawline_text:%% my-bib-macros.texi ends here}
      {spaces_after_argument:\\n}
    *normal_command@set C1
-   |EXTRA
    |misc_args:A{mybiblist|true}
    >SOURCEMARKS
    >ignored_conditional_block<1>
@@ -1001,7 +985,6 @@ $result_tree_text{'bib_example'} = '*document_root C9
        >{spaces_after_argument:\\n}
      >{raw:@clear mybibtable\\n}
      >*normal_command@end C1 bib-example.texi:l26:@mybibuselist
-     >|EXTRA
      >|text_arg:{ifset}
       >*line_arg C3
        >{spaces_before_argument: }
@@ -1016,7 +999,6 @@ $result_tree_text{'bib_example'} = '*document_root C9
      {rawline_text:mybiblist true}
      {spaces_after_argument:\\n}
    *normal_command@set C1
-   |EXTRA
    |misc_args:A{mybibrefnode|References}
     *line_arg C3
      {spaces_before_argument: }
@@ -1033,7 +1015,6 @@ $result_tree_text{'bib_example'} = '*document_root C9
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *normal_command@node C1 bib-example.texi:l30 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -1043,7 +1024,6 @@ $result_tree_text{'bib_example'} = '*document_root C9
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C4 bib-example.texi:l31 {Top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -1059,7 +1039,6 @@ $result_tree_text{'bib_example'} = '*document_root C9
    *menu_entry C4 bib-example.texi:l34
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{Introduction}
      {normal_text:Introduction}
@@ -1070,7 +1049,6 @@ $result_tree_text{'bib_example'} = '*document_root C9
    *menu_entry C4 bib-example.texi:l35
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{References}
      {normal_text:References}
@@ -1092,7 +1070,6 @@ $result_tree_text{'bib_example'} = '*document_root C9
     *preformatted C1
      {after_menu_description_line:\\n}
    *normal_command@end C1 bib-example.texi:l37
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -1100,7 +1077,6 @@ $result_tree_text{'bib_example'} = '*document_root C9
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 bib-example.texi:l39 {Introduction}
- |EXTRA
  |identifier:{Introduction}
  |is_target:{1}
  |node_number:{2}
@@ -1110,7 +1086,6 @@ $result_tree_text{'bib_example'} = '*document_root C9
     {normal_text:Introduction}
     {spaces_after_argument:\\n}
  *normal_command@chapter C4 bib-example.texi:l40 {Introduction}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -1137,7 +1112,6 @@ $result_tree_text{'bib_example'} = '*document_root C9
        >{spaces_after_argument:\\n}
      >{raw:@mybibmakeref{mybibsetrefnode was not used, LaTeX2e}\\n}
      >*normal_command@end C1 bib-example.texi:l43:@mybibcite
-     >|EXTRA
      >|text_arg:{ifclear}
       >*line_arg C3
        >{spaces_before_argument: }
@@ -1167,7 +1141,6 @@ $result_tree_text{'bib_example'} = '*document_root C9
       >{macro_call_arg_text:LaTeX2e}
    *normal_command@ref C2 bib-example.texi:l43:@mybibmakeref
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{References}
      {normal_text:References}
@@ -1189,7 +1162,6 @@ $result_tree_text{'bib_example'} = '*document_root C9
    >macro_expansion<end;5><p:2>
    >expanded_conditional_command<end;1><p:3>
     >*normal_command@end C1 bib-example.texi:l43:@mybibcite
-    >|EXTRA
     >|text_arg:{ifset}
      >*line_arg C3
       >{spaces_before_argument: }
@@ -1200,7 +1172,6 @@ $result_tree_text{'bib_example'} = '*document_root C9
    {normal_text:currently supported in Texinfo.\\n}
   {empty_line:\\n}
  *normal_command@node C1 bib-example.texi:l46 {References}
- |EXTRA
  |identifier:{References}
  |is_target:{1}
  |node_number:{3}
@@ -1221,7 +1192,6 @@ $result_tree_text{'bib_example'} = '*document_root C9
     >macro_expansion<end;7><p:10>
     {spaces_after_argument:\\n}
  *normal_command@chapter C4 bib-example.texi:l47 {References}
- |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
  |section_number:{3}
@@ -1256,7 +1226,6 @@ $result_tree_text{'bib_example'} = '*document_root C9
       >{raw:@set mybiblist true\\n}
       >{raw:@end ifclear\\n}
       >*normal_command@end C1 bib-example.texi:l51:@mybibitem
-      >|EXTRA
       >|text_arg:{ifclear}
        >*line_arg C3
         >{spaces_before_argument: }
@@ -1270,11 +1239,9 @@ $result_tree_text{'bib_example'} = '*document_root C9
         >{normal_text:mybiblist}
         >{spaces_after_argument:\\n}
    *normal_command@item C4 bib-example.texi:l51:@mybibitem
-   |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command:\\n}
     *normal_command@anchor C1 bib-example.texi:l51:@mybibitem
-    |EXTRA
     |identifier:{LaTeX2e}
     |is_target:{1}
      *brace_arg C1
@@ -1284,7 +1251,6 @@ $result_tree_text{'bib_example'} = '*document_root C9
      >SOURCEMARKS
      >expanded_conditional_command<end;2><p:10>
       >*normal_command@end C1 bib-example.texi:l51:@mybibitem
-      >|EXTRA
       >|text_arg:{ifset}
        >*line_arg C3
         >{spaces_before_argument: }
@@ -1301,7 +1267,6 @@ $result_tree_text{'bib_example'} = '*document_root C9
          >{spaces_after_argument:\\n}
        >{raw:@item @anchor{LaTeX2e}[LaTeX2e]\\n}
        >*normal_command@end C1 bib-example.texi:l51:@mybibitem
-       >|EXTRA
        >|text_arg:{ifset}
         >*line_arg C3
          >{spaces_before_argument: }
@@ -1317,7 +1282,6 @@ $result_tree_text{'bib_example'} = '*document_root C9
      {normal_text:Massachusetts, 1994.\\n}
     {empty_line:\\n}
    *normal_command@end C1 bib-example.texi:l55
-   |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }

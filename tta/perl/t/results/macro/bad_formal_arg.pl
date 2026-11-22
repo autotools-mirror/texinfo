@@ -14,7 +14,6 @@ $result_tree_text{'bad_formal_arg'} = '*document_root C1
    {text_before_beginning:\\n}
   *preamble_before_content C5
    *normal_command@macro C3 l2
-   |EXTRA
    |formal_args:A{|not_empty}
    |invalid_syntax:{1}
    |macro_name:{bad}
@@ -22,7 +21,6 @@ $result_tree_text{'bad_formal_arg'} = '*document_root C1
      {macro_line: bad  { , not_empty}\\n}
     {raw:in bad macro\\n}
     *normal_command@end C1 l4
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -30,7 +28,6 @@ $result_tree_text{'bad_formal_arg'} = '*document_root C1
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *normal_command@macro C3 l6
-   |EXTRA
    |formal_args:A{first|in 2arg}
    |invalid_syntax:{1}
    |macro_name:{badspace}
@@ -38,7 +35,6 @@ $result_tree_text{'bad_formal_arg'} = '*document_root C1
      {macro_line: badspace{first, in 2arg}\\n}
     {raw:bad space\\n}
     *normal_command@end C1 l8
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -46,7 +42,6 @@ $result_tree_text{'bad_formal_arg'} = '*document_root C1
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *normal_command@macro C6 l10
-   |EXTRA
    |formal_args:A{:::}
    |invalid_syntax:{1}
    |macro_name:{abar}
@@ -57,7 +52,6 @@ $result_tree_text{'bad_formal_arg'} = '*document_root C1
     {raw:in macro foo\\n}
     {raw:@end macro\\n}
     *normal_command@end C1 l15
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }

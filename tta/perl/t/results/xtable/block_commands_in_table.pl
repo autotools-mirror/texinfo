@@ -12,7 +12,6 @@ $result_tree_text{'block_commands_in_table'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -22,7 +21,6 @@ $result_tree_text{'block_commands_in_table'} = '*document_root C5
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C2 l2 {Element}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -32,7 +30,6 @@ $result_tree_text{'block_commands_in_table'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l4 {chap}
- |EXTRA
  |identifier:{chap}
  |is_target:{1}
  |node_number:{2}
@@ -42,7 +39,6 @@ $result_tree_text{'block_commands_in_table'} = '*document_root C5
     {normal_text:chap}
     {spaces_after_argument:\\n}
  *normal_command@chapter C10 l5 {Chapter}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -92,7 +88,6 @@ $result_tree_text{'block_commands_in_table'} = '*document_root C5
        {empty_line:\\n}
        {normal_text:end example.\\n}
       *normal_command@end C1 l18
-      |EXTRA
       |text_arg:{example}
        *line_arg C3
         {spaces_before_argument: }
@@ -124,7 +119,6 @@ $result_tree_text{'block_commands_in_table'} = '*document_root C5
       *paragraph C1
        {normal_text:Quotation\\n}
       *normal_command@end C1 l25
-      |EXTRA
       |text_arg:{quotation}
        *line_arg C3
         {spaces_before_argument: }
@@ -147,14 +141,12 @@ $result_tree_text{'block_commands_in_table'} = '*document_root C5
       *paragraph C1
        {normal_text:quotation after a blank line\\n}
       *normal_command@end C1 l31
-      |EXTRA
       |text_arg:{quotation}
        *line_arg C3
         {spaces_before_argument: }
         {normal_text:quotation}
         {spaces_after_argument:\\n}
    *normal_command@end C1 l32
-   |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
@@ -170,7 +162,6 @@ $result_tree_text{'block_commands_in_table'} = '*document_root C5
    *table_entry C2
     *table_term C4
      *normal_command@item C1 l35
-     |EXTRA
      |element_node:{chap}
      |index_entry:I{vr,1}
       *line_arg C3
@@ -184,7 +175,6 @@ $result_tree_text{'block_commands_in_table'} = '*document_root C5
         {rawline_text:comment}
         {spaces_after_argument:\\n}
      *index_entry_command@vindex C1 l37
-     |EXTRA
      |element_node:{chap}
      |index_entry:I{vr,2}
       *line_arg C3
@@ -192,7 +182,6 @@ $result_tree_text{'block_commands_in_table'} = '*document_root C5
        {normal_text:vindex}
        {spaces_after_argument:\\n}
      *normal_command@itemx C1 l38
-     |EXTRA
      |element_node:{chap}
      |index_entry:I{vr,3}
       *line_arg C3
@@ -204,7 +193,6 @@ $result_tree_text{'block_commands_in_table'} = '*document_root C5
      *paragraph C1
       {normal_text:Description\\n}
    *normal_command@end C1 l41
-   |EXTRA
    |text_arg:{vtable}
     *line_arg C3
      {spaces_before_argument: }
@@ -219,7 +207,6 @@ $result_tree_text{'block_commands_in_table'} = '*document_root C5
    *table_entry C2
     *table_term C3
      *normal_command@item C1 l43
-     |EXTRA
      |element_node:{chap}
      |index_entry:I{vr,4}
       *line_arg C3
@@ -229,7 +216,6 @@ $result_tree_text{'block_commands_in_table'} = '*document_root C5
      *inter_item C1
       {empty_line:\\n}
      *normal_command@itemx C1 l45
-     |EXTRA
      |element_node:{chap}
      |index_entry:I{vr,5}
       *line_arg C3
@@ -242,7 +228,6 @@ $result_tree_text{'block_commands_in_table'} = '*document_root C5
       {normal_text:Description.\\n}
      {empty_line:\\n}
    *normal_command@end C1 l49
-   |EXTRA
    |text_arg:{vtable}
     *line_arg C3
      {spaces_before_argument: }
@@ -278,7 +263,6 @@ $result_tree_text{'block_commands_in_table'} = '*document_root C5
      *paragraph C1
       {normal_text:Text without blank line 2\\n}
    *normal_command@end C1 l57
-   |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }

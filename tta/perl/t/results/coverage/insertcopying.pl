@@ -25,14 +25,12 @@ $result_tree_text{'insertcopying'} = '*document_root C1
      *paragraph C1
       {normal_text:You are not allowed.\\n}
      *normal_command@end C1 l6
-     |EXTRA
      |text_arg:{quotation}
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:quotation}
        {spaces_after_argument:\\n}
     *normal_command@end C1 l7
-    |EXTRA
     |text_arg:{copying}
      *line_arg C3
       {spaces_before_argument: }
@@ -43,7 +41,6 @@ $result_tree_text{'insertcopying'} = '*document_root C1
    {normal_text:License:\\n}
   {empty_line:\\n}
   *normal_command@insertcopying C1 l11
-  |EXTRA
   |global_command_number:{1}
    *line_arg C1
     {spaces_before_argument:\\n}

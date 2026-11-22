@@ -32,7 +32,6 @@ $result_tree_text{'mathjax_with_texinfo_no_convert_to_latex'} = '*document_root 
      {normal_text:i}
    {normal_text:\\n}
    *normal_command@end C1 l3
-   |EXTRA
    |text_arg:{displaymath}
     *line_arg C3
      {spaces_before_argument: }

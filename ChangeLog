@@ -1,5 +1,12 @@
 2026-11-22  Patrice Dumas  <pertusus@free.fr>
 
+	* tta/C/main/manipulate_tree.c (print_info_strings)
+	(print_element_extra), tta/perl/Texinfo/ManipulateTree.pm
+	(_print_element_associated_info, print_element_details): do not print
+	a header in print_info_strings as there is only one possibility now.
+
+2026-11-22  Patrice Dumas  <pertusus@free.fr>
+
 	use normal_command for normal command element type in Perl as in C
 
 	* tta/C/api_for_swig/swig_interface.c (txi_ext_element_type)

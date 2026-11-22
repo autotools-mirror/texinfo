@@ -12,7 +12,6 @@ $result_tree_text{'nodes_no_section_footnote_no_top_node_output'} = '*document_r
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -22,7 +21,6 @@ $result_tree_text{'nodes_no_section_footnote_no_top_node_output'} = '*document_r
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@node C3 l2 {chap}
- |EXTRA
  |identifier:{chap}
  |is_target:{1}
  |node_number:{2}
@@ -35,7 +33,6 @@ $result_tree_text{'nodes_no_section_footnote_no_top_node_output'} = '*document_r
   *paragraph C3
    {normal_text:a}
    *normal_command@footnote C1 l4
-   |EXTRA
    |global_command_number:{1}
     *brace_command_context C1
      *paragraph C1

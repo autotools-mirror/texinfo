@@ -28,7 +28,6 @@ $result_tree_text{'brace_in_index'} = '*document_root C1
    *normal_command@{
    {normal_text:\\n}
    *normal_command@end C1 l7
-   |EXTRA
    |text_arg:{displaymath}
     *line_arg C3
      {spaces_before_argument: }
@@ -36,7 +35,6 @@ $result_tree_text{'brace_in_index'} = '*document_root C1
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 l9
-  |EXTRA
   |index_entry:I{cp,1}
    *line_arg C3
     {spaces_before_argument: }
@@ -44,7 +42,6 @@ $result_tree_text{'brace_in_index'} = '*document_root C1
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 l11
-  |EXTRA
   |index_entry:I{cp,2}
    *line_arg C3
     {spaces_before_argument: }
@@ -54,7 +51,6 @@ $result_tree_text{'brace_in_index'} = '*document_root C1
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 l13
-  |EXTRA
   |index_entry:I{cp,3}
    *line_arg C3
     {spaces_before_argument: }
@@ -65,14 +61,12 @@ $result_tree_text{'brace_in_index'} = '*document_root C1
   {empty_line:\\n}
   *normal_command@defun C3 l15
    *def_line C1 l15
-   |EXTRA
    |def_command:{defun}
    |index_entry:I{fn,1}
    |original_def_cmdname:{defun}
     *block_line_arg C9
      (i){spaces_before_argument: }
      *def_category C1
-     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {normal_text:Function}
@@ -93,7 +87,6 @@ $result_tree_text{'brace_in_index'} = '*document_root C1
     *paragraph C1
      {normal_text:CCC\\n}
    *normal_command@end C1 l17
-   |EXTRA
    |text_arg:{defun}
     *line_arg C3
      {spaces_before_argument: }

@@ -12,7 +12,6 @@ $result_tree_text{'protect_comma_macro_line'} = '*document_root C1
  *before_node_section C4
   *preamble_before_content C2
    *normal_command@macro C6 l1
-   |EXTRA
    |formal_args:A{arg}
    |macro_name:{macrotwo}
     *arguments_line C1
@@ -22,7 +21,6 @@ $result_tree_text{'protect_comma_macro_line'} = '*document_root C1
     {raw:\\n}
     {raw:and a last in another paragraph\\n}
     *normal_command@end C1 l6
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }

@@ -14,7 +14,6 @@ $result_tree_text{'in_menu_only_special_spaces_node'} = '*document_root C16
    {text_before_beginning:\\n}
   *preamble_before_content
  *normal_command@node C1 in_menu_only_special_spaces_node.texi:l2 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -24,7 +23,6 @@ $result_tree_text{'in_menu_only_special_spaces_node'} = '*document_root C16
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C5 in_menu_only_special_spaces_node.texi:l3 {top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -40,7 +38,6 @@ $result_tree_text{'in_menu_only_special_spaces_node'} = '*document_root C16
    *menu_entry C4 in_menu_only_special_spaces_node.texi:l6
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{_2002_2003_2002}
      {normal_text:   }
@@ -65,7 +62,6 @@ $result_tree_text{'in_menu_only_special_spaces_node'} = '*document_root C16
    *menu_entry C4 in_menu_only_special_spaces_node.texi:l9
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{_0085_00a0_1680}
      {normal_text:  }
@@ -76,7 +72,6 @@ $result_tree_text{'in_menu_only_special_spaces_node'} = '*document_root C16
    *menu_entry C4 in_menu_only_special_spaces_node.texi:l10
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{_180e_2003}
      {normal_text:᠎ }
@@ -87,7 +82,6 @@ $result_tree_text{'in_menu_only_special_spaces_node'} = '*document_root C16
    *menu_entry C4 in_menu_only_special_spaces_node.texi:l11
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{_2004_2005_2006_2007_2008_2009_200a_202f_205f_3000}
      {normal_text:         　}
@@ -101,7 +95,6 @@ $result_tree_text{'in_menu_only_special_spaces_node'} = '*document_root C16
         {rawline_text:*   ::}
         {spaces_after_argument:\\n}
    *normal_command@end C1 in_menu_only_special_spaces_node.texi:l13
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -110,7 +103,6 @@ $result_tree_text{'in_menu_only_special_spaces_node'} = '*document_root C16
   {empty_line:\\n}
   {empty_line:\\n}
  *normal_command@node C1 in_menu_only_special_spaces_node.texi:l16 {   }
- |EXTRA
  |identifier:{_2002_2003_2002}
  |is_target:{1}
  |node_number:{2}
@@ -120,7 +112,6 @@ $result_tree_text{'in_menu_only_special_spaces_node'} = '*document_root C16
     {normal_text:   }
     {spaces_after_argument:\\n}
  *normal_command@chapter C2 in_menu_only_special_spaces_node.texi:l17 {EN QUAD| | EM QUAD| | EN SPACE| |}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -135,7 +126,6 @@ $result_tree_text{'in_menu_only_special_spaces_node'} = '*document_root C16
    *line_arg C1
     {spaces_before_argument: \\t\\f\\n}
  *normal_command@chapter C2 in_menu_only_special_spaces_node.texi:l20 {CHARACTER TABULATION|	| FORM FEED|| LINE TABULATION||}
- |EXTRA
  |identifier:{CHARACTER-TABULATION_007c-_007c-FORM-FEED_007c-_007c-LINE-TABULATION_007c-_007c}
  |is_target:{1}
  |section_heading_number:{2}
@@ -152,7 +142,6 @@ $result_tree_text{'in_menu_only_special_spaces_node'} = '*document_root C16
    *line_arg C1
     {spaces_before_argument: '."\r".'\\n}
  *normal_command@chapter C2 in_menu_only_special_spaces_node.texi:l23 {CARRIAGE RETURN|'."\r".'|}
- |EXTRA
  |identifier:{CARRIAGE-RETURN_007c-_007c}
  |is_target:{1}
  |section_heading_number:{3}
@@ -165,7 +154,6 @@ $result_tree_text{'in_menu_only_special_spaces_node'} = '*document_root C16
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 in_menu_only_special_spaces_node.texi:l25 {  }
- |EXTRA
  |identifier:{_0085_00a0_1680}
  |is_target:{1}
  |node_number:{3}
@@ -175,7 +163,6 @@ $result_tree_text{'in_menu_only_special_spaces_node'} = '*document_root C16
     {normal_text:  }
     {spaces_after_argument:\\n}
  *normal_command@chapter C4 in_menu_only_special_spaces_node.texi:l26 {NO-BREAK SPACE| |}
- |EXTRA
  |section_heading_number:{4}
  |section_level:{1}
  |section_number:{5}
@@ -196,7 +183,6 @@ $result_tree_text{'in_menu_only_special_spaces_node'} = '*document_root C16
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 in_menu_only_special_spaces_node.texi:l30 {᠎ }
- |EXTRA
  |identifier:{_180e_2003}
  |is_target:{1}
  |node_number:{4}
@@ -206,7 +192,6 @@ $result_tree_text{'in_menu_only_special_spaces_node'} = '*document_root C16
     {normal_text:᠎ }
     {spaces_after_argument:\\n}
  *normal_command@chapter C4 in_menu_only_special_spaces_node.texi:l31 {EM SPACE| |}
- |EXTRA
  |section_heading_number:{5}
  |section_level:{1}
  |section_number:{6}
@@ -227,7 +212,6 @@ $result_tree_text{'in_menu_only_special_spaces_node'} = '*document_root C16
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 in_menu_only_special_spaces_node.texi:l35 {         　}
- |EXTRA
  |identifier:{_2004_2005_2006_2007_2008_2009_200a_202f_205f_3000}
  |is_target:{1}
  |node_number:{5}
@@ -237,7 +221,6 @@ $result_tree_text{'in_menu_only_special_spaces_node'} = '*document_root C16
     {normal_text:         　}
     {spaces_after_argument:\\n}
  *normal_command@chapter C7 in_menu_only_special_spaces_node.texi:l36 {THREE-PER-EM SPACE| | FOUR-PER-EM SPACE| | SIX-PER-EM SPACE| | PUNCTUATION SPACE| | THIN SPACE| | HAIR SPACE| | NARROW NO-BREAK SPACE| | IDEOGRAPHIC SPACE|　|}
- |EXTRA
  |section_heading_number:{6}
  |section_level:{1}
  |section_number:{7}

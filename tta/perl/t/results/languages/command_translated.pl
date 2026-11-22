@@ -12,7 +12,6 @@ $result_tree_text{'command_translated'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content C2
    *normal_command@documentlanguage C1 l1
-   |EXTRA
    |global_command_number:{1}
    |text_arg:{fr}
     *line_arg C3
@@ -21,7 +20,6 @@ $result_tree_text{'command_translated'} = '*document_root C5
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *normal_command@node C1 l3 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -31,7 +29,6 @@ $result_tree_text{'command_translated'} = '*document_root C5
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C4 l4 {top @error{}}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -48,7 +45,6 @@ $result_tree_text{'command_translated'} = '*document_root C5
    {normal_text:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l8 {chapter @error{}}
- |EXTRA
  |identifier:{chapter-error_002d_002d_003e}
  |is_target:{1}
  |node_number:{2}
@@ -60,7 +56,6 @@ $result_tree_text{'command_translated'} = '*document_root C5
      *brace_container
     {spaces_after_argument:\\n}
  *normal_command@chapter C1 l9 {Chapter}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}

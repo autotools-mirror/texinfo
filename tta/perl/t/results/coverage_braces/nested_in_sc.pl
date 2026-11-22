@@ -33,7 +33,6 @@ $result_tree_text{'nested_in_sc'} = '*document_root C1
           *brace_container
        {normal_text: }
        *normal_command@footnote C1 l1
-       |EXTRA
        |global_command_number:{1}
         *brace_command_context C1
          *paragraph C1

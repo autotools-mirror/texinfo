@@ -17,7 +17,6 @@ FastForward: [U4]
  *before_node_section C1
   *preamble_before_content
  *normal_command@chapter C2 l1 {chapter}
- |EXTRA
  |identifier:{chapter}
  |is_target:{1}
  |section_heading_number:{1}
@@ -39,7 +38,6 @@ FastForward: [U4]
 FastBack: [U0]
 Up: [U0]
  *normal_command@section C2 l3 {section}
- |EXTRA
  |identifier:{section}
  |is_target:{1}
  |section_heading_number:{1.1}
@@ -61,7 +59,6 @@ FastForward: [U4]
 FastBack: [U0]
 Up: [U1]
  *normal_command@subsection C2 l5 {subsection}
- |EXTRA
  |identifier:{subsection}
  |is_target:{1}
  |section_heading_number:{1.1.1}
@@ -83,7 +80,6 @@ FastForward: [U4]
 FastBack: [U0]
 Up: [U2]
  *normal_command@subsubsection C2 l7 {subsubsection}
- |EXTRA
  |identifier:{subsubsection}
  |is_target:{1}
  |section_heading_number:{1.1.1.1}
@@ -105,7 +101,6 @@ FastForward: [U5]
 FastBack: [U0]
 Next: [U5]
  *normal_command@part C2 l9 {part}
- |EXTRA
  |global_command_number:{1}
  |section_level:{0}
  |section_number:{5}
@@ -116,7 +111,6 @@ Next: [U5]
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@chapter C2 l11 {chapter in part}
- |EXTRA
  |identifier:{chapter-in-part}
  |is_target:{1}
  |section_heading_number:{2}
@@ -140,7 +134,6 @@ Next: [U6]
 Prev: [U4]
 Up: [U4]
  *normal_command@chapter C2 l13 {second chapter in part}
- |EXTRA
  |identifier:{second-chapter-in-part}
  |is_target:{1}
  |section_heading_number:{3}
@@ -163,7 +156,6 @@ FastBack: [U5]
 Prev: [U5]
 Up: [U4]
  *normal_command@unnumbered C2 l15 {unnumbered}
- |EXTRA
  |identifier:{unnumbered}
  |is_target:{1}
  |section_level:{1}
@@ -183,7 +175,6 @@ Back: [U6]
 FastBack: [U6]
 Prev: [U4]
  *normal_command@appendix C2 l17 {appendix}
- |EXTRA
  |identifier:{appendix}
  |is_target:{1}
  |section_heading_number:{A}
@@ -203,7 +194,6 @@ Back: [U7]
 FastBack: [U7]
 Up: [U7]
  *normal_command@appendixsec C1 l19 {appendixsec}
- |EXTRA
  |identifier:{appendixsec}
  |is_target:{1}
  |section_heading_number:{A.1}

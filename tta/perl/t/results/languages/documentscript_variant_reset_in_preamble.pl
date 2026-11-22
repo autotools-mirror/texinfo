@@ -12,7 +12,6 @@ $result_tree_text{'documentscript_variant_reset_in_preamble'} = '*document_root 
  *before_node_section C1
   *preamble_before_content C6
    *normal_command@documentlanguage C1 l1
-   |EXTRA
    |global_command_number:{1}
    |text_arg:{sr}
     *line_arg C3
@@ -20,7 +19,6 @@ $result_tree_text{'documentscript_variant_reset_in_preamble'} = '*document_root 
      {normal_text:sr}
      {spaces_after_argument:\\n}
    *normal_command@documentscript C1 l2
-   |EXTRA
    |global_command_number:{1}
    |text_arg:{Latn}
     *line_arg C3
@@ -28,7 +26,6 @@ $result_tree_text{'documentscript_variant_reset_in_preamble'} = '*document_root 
      {normal_text:Latn}
      {spaces_after_argument:\\n}
    *normal_command@documentlanguagevariant C1 l3
-   |EXTRA
    |global_command_number:{1}
     *line_arg C3
      {spaces_before_argument: }
@@ -36,7 +33,6 @@ $result_tree_text{'documentscript_variant_reset_in_preamble'} = '*document_root 
      {spaces_after_argument:\\n}
    {empty_line:\\n}
    *normal_command@documentlanguage C1 l5
-   |EXTRA
    |global_command_number:{2}
    |text_arg:{sr}
     *line_arg C3
@@ -45,7 +41,6 @@ $result_tree_text{'documentscript_variant_reset_in_preamble'} = '*document_root 
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *normal_command@node C1 l7 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -55,7 +50,6 @@ $result_tree_text{'documentscript_variant_reset_in_preamble'} = '*document_root 
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C2 l8 {top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -65,7 +59,6 @@ $result_tree_text{'documentscript_variant_reset_in_preamble'} = '*document_root 
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l10 {chap}
- |EXTRA
  |identifier:{chap}
  |is_target:{1}
  |node_number:{2}
@@ -75,7 +68,6 @@ $result_tree_text{'documentscript_variant_reset_in_preamble'} = '*document_root 
     {normal_text:chap}
     {spaces_after_argument:\\n}
  *normal_command@chapter C6 l11 {chap}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -87,7 +79,6 @@ $result_tree_text{'documentscript_variant_reset_in_preamble'} = '*document_root 
   {empty_line:\\n}
   *normal_command@defivar C2 l13
    *def_line C1 l13
-   |EXTRA
    |def_command:{defivar}
    |documentlanguage:{sr}
    |element_node:{chap}
@@ -96,10 +87,8 @@ $result_tree_text{'documentscript_variant_reset_in_preamble'} = '*document_root 
     *block_line_arg C11
      (i){spaces_before_argument: }
      *def_category C1
-     |EXTRA
      |inserted:{1}
       *untranslated_def_line_arg C1
-      |EXTRA
       |documentlanguage:{sr}
       |translation_context:{category of instance variables in object-oriented programming for @defivar}
        {untranslated:Instance Variable}
@@ -121,7 +110,6 @@ $result_tree_text{'documentscript_variant_reset_in_preamble'} = '*document_root 
        {normal_text:ivar}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l14
-   |EXTRA
    |text_arg:{defivar}
     *line_arg C3
      {spaces_before_argument: }
@@ -131,7 +119,6 @@ $result_tree_text{'documentscript_variant_reset_in_preamble'} = '*document_root 
   *paragraph C4
    *normal_command@xref C2 l16
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{Top}
      {normal_text:Top}

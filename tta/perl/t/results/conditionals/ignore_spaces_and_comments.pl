@@ -17,7 +17,6 @@ $result_tree_text{'ignore_spaces_and_comments'} = '*document_root C1
       {spaces_before_argument:\\n}
     {raw:No space no comment\\n}
     *normal_command@end C1 l3
-    |EXTRA
     |text_arg:{ignore}
      *line_arg C3
       {spaces_before_argument: }
@@ -30,7 +29,6 @@ $result_tree_text{'ignore_spaces_and_comments'} = '*document_root C1
       {spaces_before_argument:  \\n}
     {raw:Spaces no comment\\n}
     *normal_command@end C1 l7
-    |EXTRA
     |text_arg:{ignore}
      *line_arg C3
       {spaces_before_argument: }
@@ -47,7 +45,6 @@ $result_tree_text{'ignore_spaces_and_comments'} = '*document_root C1
         {spaces_after_argument:\\n}
     {raw:Comment\\n}
     *normal_command@end C1 l11
-    |EXTRA
     |text_arg:{ignore}
      *line_arg C3
       {spaces_before_argument: }
@@ -65,7 +62,6 @@ $result_tree_text{'ignore_spaces_and_comments'} = '*document_root C1
         {spaces_after_argument:\\n}
     {raw:Space Comment\\n}
     *normal_command@end C1 l15
-    |EXTRA
     |text_arg:{ignore}
      *line_arg C3
       {spaces_before_argument: }
@@ -82,7 +78,6 @@ $result_tree_text{'ignore_spaces_and_comments'} = '*document_root C1
         {spaces_after_argument:\\n}
     {raw:Space Comment no argument\\n}
     *normal_command@end C1 l19
-    |EXTRA
     |text_arg:{ignore}
      *line_arg C3
       {spaces_before_argument: }

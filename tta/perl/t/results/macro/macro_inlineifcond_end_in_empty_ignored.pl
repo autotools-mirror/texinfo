@@ -12,14 +12,12 @@ $result_tree_text{'macro_inlineifcond_end_in_empty_ignored'} = '*document_root C
  *before_node_section C4
   *preamble_before_content C1
    *normal_command@macro C3 l1
-   |EXTRA
    |formal_args:A{}
    |macro_name:{setargendignored}
     *arguments_line C1
      {macro_line: setargendignored\\n}
     {raw:ag,\\n}
     *normal_command@end C1 l3
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -28,7 +26,6 @@ $result_tree_text{'macro_inlineifcond_end_in_empty_ignored'} = '*document_root C
   *paragraph C3
    {normal_text:Toto }
    *normal_command@inlineifset C2 l4
-   |EXTRA
    |format:{flag}
     *brace_arg C1
      {normal_text:flag}
@@ -45,7 +42,6 @@ $result_tree_text{'macro_inlineifcond_end_in_empty_ignored'} = '*document_root C
   *paragraph C3
    {normal_text:Again with space }
    *normal_command@inlineifset C2 l6
-   |EXTRA
    |format:{flag}
     *brace_arg C1
      {normal_text:flag}

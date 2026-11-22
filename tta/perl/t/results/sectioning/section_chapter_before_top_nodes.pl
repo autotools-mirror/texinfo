@@ -12,7 +12,6 @@ $result_tree_text{'section_chapter_before_top_nodes'} = '*document_root C7
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 l1 {section node}
- |EXTRA
  |identifier:{section-node}
  |is_target:{1}
  |node_number:{1}
@@ -22,7 +21,6 @@ $result_tree_text{'section_chapter_before_top_nodes'} = '*document_root C7
     {normal_text:section node}
     {spaces_after_argument:\\n}
  *normal_command@section C2 l2 {section}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{2}
  |section_number:{1}
@@ -33,7 +31,6 @@ $result_tree_text{'section_chapter_before_top_nodes'} = '*document_root C7
     {spaces_after_argument: \\n}
   {empty_line:\\n}
  *normal_command@node C1 l4 {chapter node}
- |EXTRA
  |identifier:{chapter-node}
  |is_target:{1}
  |node_number:{2}
@@ -43,7 +40,6 @@ $result_tree_text{'section_chapter_before_top_nodes'} = '*document_root C7
     {normal_text:chapter node}
     {spaces_after_argument:\\n}
  *normal_command@chapter C4 l5 {chapter}
- |EXTRA
  |section_heading_number:{2}
  |section_level:{2}
  |section_number:{2}
@@ -60,7 +56,6 @@ $result_tree_text{'section_chapter_before_top_nodes'} = '*document_root C7
    *menu_entry C4 l8
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{section-node}
      {normal_text:section node}
@@ -69,7 +64,6 @@ $result_tree_text{'section_chapter_before_top_nodes'} = '*document_root C7
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 l9
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -77,7 +71,6 @@ $result_tree_text{'section_chapter_before_top_nodes'} = '*document_root C7
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l11 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{3}
@@ -87,7 +80,6 @@ $result_tree_text{'section_chapter_before_top_nodes'} = '*document_root C7
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C4 l12 {top}
- |EXTRA
  |section_level:{2}
  |section_number:{3}
   *arguments_line C1
@@ -103,7 +95,6 @@ $result_tree_text{'section_chapter_before_top_nodes'} = '*document_root C7
    *menu_entry C4 l15
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{chapter-node}
      {normal_text:chapter node}
@@ -112,7 +103,6 @@ $result_tree_text{'section_chapter_before_top_nodes'} = '*document_root C7
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 l16
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }

@@ -12,7 +12,6 @@ $result_tree_text{'sections'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
  *normal_command@chapter C1 l1 {a chapter}
- |EXTRA
  |identifier:{a-chapter}
  |is_target:{1}
  |section_heading_number:{1}

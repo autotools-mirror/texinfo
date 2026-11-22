@@ -18,7 +18,6 @@ $result_tree_text{'titlepage_and_headings'} = '*document_root C1
     *paragraph C1
      {normal_text:in titlepage\\n}
     *normal_command@end C1 l3
-    |EXTRA
     |text_arg:{titlepage}
      *line_arg C3
       {spaces_before_argument: }

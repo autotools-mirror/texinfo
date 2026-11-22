@@ -14,7 +14,6 @@ $result_tree_text{'empty_titlefont'} = '*document_root C1
    {text_before_beginning:\\n}
   *preamble_before_content
   *normal_command@titlefont C1 l2
-  |EXTRA
   |global_command_number:{1}
    *brace_container
   {normal_text:\\n}

@@ -12,7 +12,6 @@ $result_tree_text{'multiple_in_preamble_before_node'} = '*document_root C5
  *before_node_section C5
   *preamble_before_content C6
    *normal_command@documentlanguage C1 l1
-   |EXTRA
    |global_command_number:{1}
    |text_arg:{fr}
     *line_arg C3
@@ -26,7 +25,6 @@ $result_tree_text{'multiple_in_preamble_before_node'} = '*document_root C5
       {spaces_before_argument:\\n}
     *normal_command@defivar C3 l4
      *def_line C1 l4
-     |EXTRA
      |def_command:{defivar}
      |documentlanguage:{fr}
      |element_region:{copying}
@@ -35,10 +33,8 @@ $result_tree_text{'multiple_in_preamble_before_node'} = '*document_root C5
       *block_line_arg C9
        (i){spaces_before_argument: }
        *def_category C1
-       |EXTRA
        |inserted:{1}
         *untranslated_def_line_arg C1
-        |EXTRA
         |documentlanguage:{fr}
         |translation_context:{category of instance variables in object-oriented programming for @defivar}
          {untranslated:Instance Variable}
@@ -61,14 +57,12 @@ $result_tree_text{'multiple_in_preamble_before_node'} = '*document_root C5
         *brace_container
        {normal_text:\\n}
      *normal_command@end C1 l6
-     |EXTRA
      |text_arg:{defivar}
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:defivar}
        {spaces_after_argument:\\n}
     *normal_command@end C1 l7
-    |EXTRA
     |text_arg:{copying}
      *line_arg C3
       {spaces_before_argument: }
@@ -76,7 +70,6 @@ $result_tree_text{'multiple_in_preamble_before_node'} = '*document_root C5
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *normal_command@documentlanguage C1 l9
-   |EXTRA
    |global_command_number:{2}
    |text_arg:{hr}
     *line_arg C3
@@ -88,7 +81,6 @@ $result_tree_text{'multiple_in_preamble_before_node'} = '*document_root C5
    {normal_text:Text ending the preamble\\n}
   {empty_line:\\n}
   *normal_command@documentlanguage C1 l13
-  |EXTRA
   |global_command_number:{3}
   |text_arg:{de}
    *line_arg C3
@@ -97,7 +89,6 @@ $result_tree_text{'multiple_in_preamble_before_node'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l15 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -107,7 +98,6 @@ $result_tree_text{'multiple_in_preamble_before_node'} = '*document_root C5
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C2 l16 {top section}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -117,7 +107,6 @@ $result_tree_text{'multiple_in_preamble_before_node'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l18 {chapter}
- |EXTRA
  |identifier:{chapter}
  |is_target:{1}
  |node_number:{2}
@@ -127,7 +116,6 @@ $result_tree_text{'multiple_in_preamble_before_node'} = '*document_root C5
     {normal_text:chapter}
     {spaces_after_argument:\\n}
  *normal_command@chapter C3 l19 {chap}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -139,7 +127,6 @@ $result_tree_text{'multiple_in_preamble_before_node'} = '*document_root C5
   {empty_line:\\n}
   *normal_command@defivar C3 l21
    *def_line C1 l21
-   |EXTRA
    |def_command:{defivar}
    |documentlanguage:{de}
    |element_node:{chapter}
@@ -148,10 +135,8 @@ $result_tree_text{'multiple_in_preamble_before_node'} = '*document_root C5
     *block_line_arg C9
      (i){spaces_before_argument: }
      *def_category C1
-     |EXTRA
      |inserted:{1}
       *untranslated_def_line_arg C1
-      |EXTRA
       |documentlanguage:{de}
       |translation_context:{category of instance variables in object-oriented programming for @defivar}
        {untranslated:Instance Variable}
@@ -174,7 +159,6 @@ $result_tree_text{'multiple_in_preamble_before_node'} = '*document_root C5
       *brace_container
      {normal_text:\\n}
    *normal_command@end C1 l23
-   |EXTRA
    |text_arg:{defivar}
     *line_arg C3
      {spaces_before_argument: }

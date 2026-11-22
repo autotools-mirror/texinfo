@@ -14,7 +14,6 @@ $result_tree_text{'definfoenclose_with_empty_arg'} = '*document_root C1
    {text_before_beginning:\\n}
   *preamble_before_content C2
    *normal_command@definfoenclose C1 l2
-   |EXTRA
    |misc_args:A{headword||:}
     *line_arg C3
      {spaces_before_argument: }
@@ -24,7 +23,6 @@ $result_tree_text{'definfoenclose_with_empty_arg'} = '*document_root C1
   *paragraph C3
    {normal_text:My }
    *definfoenclose_command@headword C1 l4
-   |EXTRA
    |begin:{}
    |end:{:}
     *brace_container C1

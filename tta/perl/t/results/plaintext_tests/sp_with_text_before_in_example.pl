@@ -20,7 +20,6 @@ $result_tree_text{'sp_with_text_before_in_example'} = '*document_root C1
    *preformatted C3
     {normal_text:sp}
     *normal_command@sp C1 l3
-    |EXTRA
     |misc_args:A{4}
      *line_arg C3
       {spaces_before_argument: }
@@ -28,7 +27,6 @@ $result_tree_text{'sp_with_text_before_in_example'} = '*document_root C1
       {spaces_after_argument:\\n}
     {normal_text:text\\n}
    *normal_command@end C1 l5
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }

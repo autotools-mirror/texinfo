@@ -14,7 +14,6 @@ $result_tree_text{'footnote'} = '*document_root C1
   *paragraph C3
    {normal_text:text}
    *normal_command@footnote C1 l1
-   |EXTRA
    |global_command_number:{1}
     *brace_command_context C3
      *paragraph C1

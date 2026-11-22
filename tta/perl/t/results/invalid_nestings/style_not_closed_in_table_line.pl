@@ -39,7 +39,6 @@ $result_tree_text{'style_not_closed_in_table_line'} = '*document_root C1
        {normal_text:in item}
        {spaces_after_argument:\\n}
    *normal_command@end C1 l5
-   |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }

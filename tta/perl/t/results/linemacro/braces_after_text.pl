@@ -12,14 +12,12 @@ $result_tree_text{'braces_after_text'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C2
    *normal_command@linemacro C3 l1
-   |EXTRA
    |formal_args:A{a|b|c}
    |macro_name:{mymacro}
     *arguments_line C1
      {macro_line: mymacro {a, b, c}\\n}
     {raw:@defline \\a\\ \\b\\ \\c\\\\n}
     *normal_command@end C1 l3
-    |EXTRA
     |text_arg:{linemacro}
      *line_arg C3
       {spaces_before_argument: }
@@ -43,7 +41,6 @@ $result_tree_text{'braces_after_text'} = '*document_root C1
        >{bracketed_linemacro_arg:}
      {spaces_before_argument:\\n}
    *normal_command@defline C1 l6:@mymacro
-   |EXTRA
    |def_command:{defline}
    |original_def_cmdname:{defline}
     *line_arg C5
@@ -63,7 +60,6 @@ $result_tree_text{'braces_after_text'} = '*document_root C1
      >SOURCEMARKS
      >linemacro_expansion<end;1><p:1>
    *normal_command@end C1 l7
-   |EXTRA
    |text_arg:{defblock}
     *line_arg C3
      {spaces_before_argument: }

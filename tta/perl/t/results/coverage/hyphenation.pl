@@ -14,7 +14,6 @@ $result_tree_text{'hyphenation'} = '*document_root C1
    {text_before_beginning:\\n}
   *preamble_before_content C3
    *normal_command@hyphenation C1 l2
-   |EXTRA
    |global_command_number:{1}
     *brace_arg C2
      {normal_text:some-where}

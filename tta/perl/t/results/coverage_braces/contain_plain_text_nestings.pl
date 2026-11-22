@@ -12,7 +12,6 @@ $result_tree_text{'contain_plain_text_nestings'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -22,7 +21,6 @@ $result_tree_text{'contain_plain_text_nestings'} = '*document_root C5
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C2 l2 {top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -32,7 +30,6 @@ $result_tree_text{'contain_plain_text_nestings'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l4 {chap}
- |EXTRA
  |identifier:{chap}
  |is_target:{1}
  |isindex:{1}
@@ -43,7 +40,6 @@ $result_tree_text{'contain_plain_text_nestings'} = '*document_root C5
     {normal_text:chap}
     {spaces_after_argument:\\n}
  *normal_command@chapter C8 l5 {Chap}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -63,7 +59,6 @@ $result_tree_text{'contain_plain_text_nestings'} = '*document_root C5
      {normal_text: text}
    {normal_text:.\\n}
    *normal_command@hyphenation C1 l8
-   |EXTRA
    |global_command_number:{1}
     *brace_arg C2
      *normal_command@code C1 l8
@@ -79,7 +74,6 @@ $result_tree_text{'contain_plain_text_nestings'} = '*document_root C5
      {normal_text: text}
    {normal_text:\\n}
    *index_entry_command@cindex C1 l10
-   |EXTRA
    |element_node:{chap}
    |index_entry:I{cp,1}
    |sortas:{ text}
@@ -106,7 +100,6 @@ $result_tree_text{'contain_plain_text_nestings'} = '*document_root C5
     *brace_container C2
      *normal_command@ref C2 l13
       *brace_arg C1
-      |EXTRA
       |node_content:A{0|0}
       |normalized:{Top}
        {normal_text:Top}
@@ -116,12 +109,10 @@ $result_tree_text{'contain_plain_text_nestings'} = '*document_root C5
      {normal_text: text}
    {normal_text:.\\n}
    *normal_command@hyphenation C1 l14
-   |EXTRA
    |global_command_number:{2}
     *brace_arg C2
      *normal_command@ref C2 l14
       *brace_arg C1
-      |EXTRA
       |node_content:A{0|0}
       |normalized:{Top}
        {normal_text:Top}
@@ -134,7 +125,6 @@ $result_tree_text{'contain_plain_text_nestings'} = '*document_root C5
     *brace_container C2
      *normal_command@ref C2 l15
       *brace_arg C1
-      |EXTRA
       |node_content:A{0|0}
       |normalized:{Top}
        {normal_text:Top}
@@ -144,7 +134,6 @@ $result_tree_text{'contain_plain_text_nestings'} = '*document_root C5
      {normal_text: text}
    {normal_text:\\n}
    *index_entry_command@cindex C1 l16
-   |EXTRA
    |element_node:{chap}
    |index_entry:I{cp,2}
    |sortas:{ text}
@@ -156,7 +145,6 @@ $result_tree_text{'contain_plain_text_nestings'} = '*document_root C5
       *brace_arg C2
        *normal_command@ref C2 l16
         *brace_arg C1
-        |EXTRA
         |node_content:A{0|0}
         |normalized:{Top}
          {normal_text:Top}
@@ -167,7 +155,6 @@ $result_tree_text{'contain_plain_text_nestings'} = '*document_root C5
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@printindex C1 l18
-  |EXTRA
   |global_command_number:{1}
   |misc_args:A{cp}
    *line_arg C3

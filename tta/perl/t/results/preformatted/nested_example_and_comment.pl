@@ -28,7 +28,6 @@ $result_tree_text{'nested_example_and_comment'} = '*document_root C1
     *preformatted C1
      {normal_text:Nested example\\n}
     *normal_command@end C1 l5
-    |EXTRA
     |text_arg:{example}
      *line_arg C3
       {spaces_before_argument: }
@@ -37,7 +36,6 @@ $result_tree_text{'nested_example_and_comment'} = '*document_root C1
    *preformatted C1
     {normal_text:In first one\\n}
    *normal_command@end C1 l7
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
@@ -65,7 +63,6 @@ $result_tree_text{'nested_example_and_comment'} = '*document_root C1
        {rawline_text:}
        {spaces_after_argument:\\n}
     *normal_command@end C1 l13
-    |EXTRA
     |text_arg:{example}
      *line_arg C3
       {spaces_before_argument: }
@@ -74,7 +71,6 @@ $result_tree_text{'nested_example_and_comment'} = '*document_root C1
    *preformatted C1
     {normal_text:In first one\\n}
    *normal_command@end C1 l15
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
@@ -102,7 +98,6 @@ $result_tree_text{'nested_example_and_comment'} = '*document_root C1
        {rawline_text:}
        {spaces_after_argument:\\n}
     *normal_command@end C1 l21
-    |EXTRA
     |text_arg:{example}
      *line_arg C3
       {spaces_before_argument: }
@@ -115,7 +110,6 @@ $result_tree_text{'nested_example_and_comment'} = '*document_root C1
       {rawline_text:}
       {spaces_after_argument:\\n}
    *normal_command@end C1 l23
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }

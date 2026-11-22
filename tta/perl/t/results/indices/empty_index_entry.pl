@@ -12,7 +12,6 @@ $result_tree_text{'empty_index_entry'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C2 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -23,7 +22,6 @@ $result_tree_text{'empty_index_entry'} = '*document_root C3
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C5 l3 {chap}
- |EXTRA
  |identifier:{chap}
  |is_target:{1}
  |isindex:{1}
@@ -36,7 +34,6 @@ $result_tree_text{'empty_index_entry'} = '*document_root C3
   {empty_line:\\n}
   *normal_command@deffn C2 l5
    *def_line C1 l5
-   |EXTRA
    |def_command:{deffn}
    |original_def_cmdname:{deffn}
     *block_line_arg C5
@@ -49,7 +46,6 @@ $result_tree_text{'empty_index_entry'} = '*document_root C3
        {spaces_before_argument: }
      {spaces_after_argument:\\n}
    *normal_command@end C1 l6
-   |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
@@ -57,7 +53,6 @@ $result_tree_text{'empty_index_entry'} = '*document_root C3
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@printindex C1 l8
-  |EXTRA
   |global_command_number:{1}
   |misc_args:A{fn}
    *line_arg C3

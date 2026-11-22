@@ -15,7 +15,6 @@ $result_tree_text{'navigation_section_no_header_vertical'} = '*document_root C10
    {text_before_beginning:\\n}
   *preamble_before_content
  *normal_command@node C1 navigation.texi:l3 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -25,7 +24,6 @@ $result_tree_text{'navigation_section_no_header_vertical'} = '*document_root C10
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C4 navigation.texi:l4 {File used for navigation testing}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -41,7 +39,6 @@ $result_tree_text{'navigation_section_no_header_vertical'} = '*document_root C10
    *menu_entry C4 navigation.texi:l7
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{chapter}
      {normal_text:chapter}
@@ -50,7 +47,6 @@ $result_tree_text{'navigation_section_no_header_vertical'} = '*document_root C10
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 navigation.texi:l8
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -58,7 +54,6 @@ $result_tree_text{'navigation_section_no_header_vertical'} = '*document_root C10
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 navigation.texi:l10 {chapter}
- |EXTRA
  |identifier:{chapter}
  |is_target:{1}
  |node_number:{2}
@@ -68,7 +63,6 @@ $result_tree_text{'navigation_section_no_header_vertical'} = '*document_root C10
     {normal_text:chapter}
     {spaces_after_argument:\\n}
  *normal_command@chapter C4 navigation.texi:l11 {First chapter}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -85,7 +79,6 @@ $result_tree_text{'navigation_section_no_header_vertical'} = '*document_root C10
    *menu_entry C4 navigation.texi:l14
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{section}
      {normal_text:section}
@@ -94,7 +87,6 @@ $result_tree_text{'navigation_section_no_header_vertical'} = '*document_root C10
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 navigation.texi:l15
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -102,7 +94,6 @@ $result_tree_text{'navigation_section_no_header_vertical'} = '*document_root C10
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 navigation.texi:l17 {section}
- |EXTRA
  |identifier:{section}
  |is_target:{1}
  |node_number:{3}
@@ -112,7 +103,6 @@ $result_tree_text{'navigation_section_no_header_vertical'} = '*document_root C10
     {normal_text:section}
     {spaces_after_argument:\\n}
  *normal_command@section C30 navigation.texi:l18 {Section in chapter}
- |EXTRA
  |section_heading_number:{1.1}
  |section_level:{2}
  |section_number:{3}
@@ -169,7 +159,6 @@ $result_tree_text{'navigation_section_no_header_vertical'} = '*document_root C10
    *menu_entry C4 navigation.texi:l48
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{subsection}
      {normal_text:subsection}
@@ -178,7 +167,6 @@ $result_tree_text{'navigation_section_no_header_vertical'} = '*document_root C10
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 navigation.texi:l49
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -186,7 +174,6 @@ $result_tree_text{'navigation_section_no_header_vertical'} = '*document_root C10
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 navigation.texi:l51 {subsection}
- |EXTRA
  |identifier:{subsection}
  |is_target:{1}
  |node_number:{4}
@@ -196,7 +183,6 @@ $result_tree_text{'navigation_section_no_header_vertical'} = '*document_root C10
     {normal_text:subsection}
     {spaces_after_argument:\\n}
  *normal_command@subsection C4 navigation.texi:l52 {Sub section in section}
- |EXTRA
  |section_heading_number:{1.1.1}
  |section_level:{3}
  |section_number:{4}
@@ -207,7 +193,6 @@ $result_tree_text{'navigation_section_no_header_vertical'} = '*document_root C10
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@contents C1 navigation.texi:l54
-  |EXTRA
   |global_command_number:{1}
    *line_arg C1
     {spaces_before_argument:\\n}

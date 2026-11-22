@@ -12,7 +12,6 @@ $result_tree_text{'menu_title_before_entries'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C4 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -32,7 +31,6 @@ $result_tree_text{'menu_title_before_entries'} = '*document_root C3
    *menu_entry C4 l5
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{chap-subnode}
      {normal_text:chap subnode}
@@ -41,7 +39,6 @@ $result_tree_text{'menu_title_before_entries'} = '*document_root C3
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 l6
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -49,7 +46,6 @@ $result_tree_text{'menu_title_before_entries'} = '*document_root C3
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l8 {chap subnode}
- |EXTRA
  |identifier:{chap-subnode}
  |is_target:{1}
  |node_number:{2}

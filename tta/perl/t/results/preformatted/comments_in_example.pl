@@ -31,7 +31,6 @@ $result_tree_text{'comments_in_example'} = '*document_root C1
       {rawline_text:comment}
       {spaces_after_argument:\\n}
    *normal_command@end C1 l5
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
@@ -52,7 +51,6 @@ $result_tree_text{'comments_in_example'} = '*document_root C1
       {rawline_text:comment}
       {spaces_after_argument:\\n}
    *normal_command@end C1 l10
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
@@ -75,7 +73,6 @@ $result_tree_text{'comments_in_example'} = '*document_root C1
     {empty_line:\\n}
     {normal_text:second line\\n}
    *normal_command@end C1 l17
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }

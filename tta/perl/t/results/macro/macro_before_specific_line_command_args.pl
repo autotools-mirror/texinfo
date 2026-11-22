@@ -12,14 +12,12 @@ $result_tree_text{'macro_before_specific_line_command_args'} = '*document_root C
  *before_node_section C1
   *preamble_before_content C3
    *normal_command@macro C3 l1
-   |EXTRA
    |formal_args:A{}
    |macro_name:{cpfn}
     *arguments_line C1
      {macro_line: cpfn\\n}
     {raw: cp fn\\n}
     *normal_command@end C1 l3
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -27,7 +25,6 @@ $result_tree_text{'macro_before_specific_line_command_args'} = '*document_root C
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *normal_command@syncodeindex C1 l5
-   |EXTRA
    |misc_args:A{cp|fn}
     *line_arg C3
      {spaces_before_argument: }

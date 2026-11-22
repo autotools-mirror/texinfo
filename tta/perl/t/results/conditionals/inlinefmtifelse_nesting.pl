@@ -13,7 +13,6 @@ $result_tree_text{'inlinefmtifelse_nesting'} = '*document_root C1
   *preamble_before_content
   *paragraph C2
    *normal_command@inlinefmtifelse C3 l1
-   |EXTRA
    |expand_index:{2}
    |format:{info}
     *brace_arg C1

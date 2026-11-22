@@ -14,7 +14,6 @@ $result_tree_text{'ref_tests'} = '*document_root C2
    {text_before_beginning:\\n}
   *preamble_before_content
  *normal_command@node C7 l2 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -27,7 +26,6 @@ $result_tree_text{'ref_tests'} = '*document_root C2
   *paragraph C6
    *normal_command@ref C4 l4
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
      {normal_text:in ref followed by comma}
     *brace_arg
@@ -38,7 +36,6 @@ $result_tree_text{'ref_tests'} = '*document_root C2
    {normal_text:, \\n}
    *normal_command@ref C4 l5
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
      {normal_text:in ref not followed by comma}
     *brace_arg
@@ -51,7 +48,6 @@ $result_tree_text{'ref_tests'} = '*document_root C2
     *brace_container C1
      *normal_command@ref C4 l6
       *brace_arg C1
-      |EXTRA
       |node_content:A{0|0}
        {normal_text:in ref followed by end command}
       *brace_arg
@@ -65,7 +61,6 @@ $result_tree_text{'ref_tests'} = '*document_root C2
   *paragraph C8
    *normal_command@ref C4 l9
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
      {normal_text:in ref followed by comma}
     *brace_arg C2
@@ -78,7 +73,6 @@ $result_tree_text{'ref_tests'} = '*document_root C2
    {normal_text:,\\n}
    *normal_command@ref C4 l10
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
      {normal_text:in ref not followed by comma}
     *brace_arg C2
@@ -93,7 +87,6 @@ $result_tree_text{'ref_tests'} = '*document_root C2
     *brace_container C1
      *normal_command@ref C4 l11
       *brace_arg C1
-      |EXTRA
       |node_content:A{0|0}
        {normal_text:in ref followed by end command}
       *brace_arg C2
@@ -106,7 +99,6 @@ $result_tree_text{'ref_tests'} = '*document_root C2
    {normal_text:.\\n}
    *normal_command@ref C4 l12
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
      {normal_text:in ref ending with a dot.}
     *brace_arg C2

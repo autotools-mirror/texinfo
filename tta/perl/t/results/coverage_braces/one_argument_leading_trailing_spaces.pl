@@ -29,7 +29,6 @@ $result_tree_text{'one_argument_leading_trailing_spaces'} = '*document_root C1
      {normal_text: sub }
    {normal_text:\\n}
    *normal_command@hyphenation C1 l2
-   |EXTRA
    |global_command_number:{1}
     *brace_arg C3
      {spaces_before_argument: }

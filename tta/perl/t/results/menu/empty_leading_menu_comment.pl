@@ -12,7 +12,6 @@ $result_tree_text{'empty_leading_menu_comment'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C3 l1 {first}
- |EXTRA
  |identifier:{first}
  |is_target:{1}
  |node_number:{1}
@@ -32,7 +31,6 @@ $result_tree_text{'empty_leading_menu_comment'} = '*document_root C2
    *menu_entry C4 l5
     {menu_entry_leading_text:* }
     *menu_entry_node C4
-    |EXTRA
     |manual_content:A{1|1}
     |node_content:A{3|3}
     |normalized:{b}
@@ -45,7 +43,6 @@ $result_tree_text{'empty_leading_menu_comment'} = '*document_root C2
      *preformatted C1
       {normal_text:desc\\n}
    *normal_command@end C1 l6
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }

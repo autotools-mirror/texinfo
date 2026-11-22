@@ -33,7 +33,6 @@ $result_tree_text{'text_between_item_itemx'} = '*document_root C1
        {normal_text:in itemx}
        {spaces_after_argument:\\n}
    *normal_command@end C1 l5
-   |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }

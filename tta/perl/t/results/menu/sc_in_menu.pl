@@ -14,7 +14,6 @@ $result_tree_text{'sc_in_menu'} = '*document_root C3
    {text_before_beginning:\\n}
   *preamble_before_content
  *normal_command@node C4 l2 {first}
- |EXTRA
  |identifier:{first}
  |is_target:{1}
  |node_number:{1}
@@ -36,7 +35,6 @@ $result_tree_text{'sc_in_menu'} = '*document_root C3
        {normal_text:value}
     {menu_entry_separator::}
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{node}
      *normal_command@sc C1 l5
@@ -81,14 +79,12 @@ $result_tree_text{'sc_in_menu'} = '*document_root C3
         {normal_text:menu-example comment}
       {normal_text:\\n}
      *normal_command@end C1 l13
-     |EXTRA
      |text_arg:{example}
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:example}
        {spaces_after_argument:\\n}
    *normal_command@end C1 l14
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -96,7 +92,6 @@ $result_tree_text{'sc_in_menu'} = '*document_root C3
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C4 l16 {@sc{node}}
- |EXTRA
  |identifier:{node}
  |is_target:{1}
  |node_number:{2}
@@ -124,7 +119,6 @@ $result_tree_text{'sc_in_menu'} = '*document_root C3
         {normal_text:example value}
      {menu_entry_separator::}
      *menu_entry_node C4
-     |EXTRA
      |manual_content:A{1|1}
      |node_content:A{3|3}
      |normalized:{example-node}
@@ -149,14 +143,12 @@ $result_tree_text{'sc_in_menu'} = '*document_root C3
         {normal_text:example comment}
       {normal_text:\\n}
     *normal_command@end C1 l23
-    |EXTRA
     |text_arg:{menu}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:menu}
       {spaces_after_argument:\\n}
    *normal_command@end C1 l24
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }

@@ -12,7 +12,6 @@ $result_tree_text{'quoted_xref_in_flushright'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -22,7 +21,6 @@ $result_tree_text{'quoted_xref_in_flushright'} = '*document_root C5
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C2 l2 {top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -32,7 +30,6 @@ $result_tree_text{'quoted_xref_in_flushright'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l4 {a:@comma{}b}
- |EXTRA
  |identifier:{a_003a_002cb}
  |is_target:{1}
  |node_number:{2}
@@ -45,7 +42,6 @@ $result_tree_text{'quoted_xref_in_flushright'} = '*document_root C5
     {normal_text:b}
     {spaces_after_argument:\\n}
  *normal_command@chapter C3 l5 {a:@comma{}b}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -67,7 +63,6 @@ $result_tree_text{'quoted_xref_in_flushright'} = '*document_root C5
     {normal_text:Some }
     *normal_command@ref C1 l9
      *brace_arg C3
-     |EXTRA
      |node_content:A{0|2}
      |normalized:{a_003a_002cb}
       {normal_text:a:}
@@ -77,7 +72,6 @@ $result_tree_text{'quoted_xref_in_flushright'} = '*document_root C5
     {normal_text: after\\n}
     {normal_text:more text\\n}
    *normal_command@end C1 l11
-   |EXTRA
    |text_arg:{flushright}
     *line_arg C3
      {spaces_before_argument: }

@@ -14,14 +14,12 @@ $result_tree_text{'cpp_directives_after_macros'} = '*document_root C1
    {text_before_beginning:\\n}
   *preamble_before_content C6
    *normal_command@macro C3 cpp_directives_after_macros.texi:l2
-   |EXTRA
    |formal_args:A{}
    |macro_name:{noargsspaces}
     *arguments_line C1
      {macro_line: noargsspaces\\n}
     {raw:  \\n}
     *normal_command@end C1 cpp_directives_after_macros.texi:l4
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -29,14 +27,12 @@ $result_tree_text{'cpp_directives_after_macros'} = '*document_root C1
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *normal_command@macro C3 cpp_directives_after_macros.texi:l6
-   |EXTRA
    |formal_args:A{}
    |macro_name:{emptyexpansion}
     *arguments_line C1
      {macro_line: emptyexpansion\\n}
     {raw:\\n}
     *normal_command@end C1 cpp_directives_after_macros.texi:l8
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }

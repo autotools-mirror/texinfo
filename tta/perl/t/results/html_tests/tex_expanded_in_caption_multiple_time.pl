@@ -12,7 +12,6 @@ $result_tree_text{'tex_expanded_in_caption_multiple_time'} = '*document_root C1
  *before_node_section C4
   *preamble_before_content
   *normal_command@float C5 l1
-  |EXTRA
   |float_number:{1}
   |float_type:{A}
   |global_command_number:{1}
@@ -38,7 +37,6 @@ $result_tree_text{'tex_expanded_in_caption_multiple_time'} = '*document_root C1
       *rawpreformatted C1
        {normal_text:aa\\n}
       *normal_command@end C1 l6
-      |EXTRA
       |text_arg:{tex}
        *line_arg C3
         {spaces_before_argument: }
@@ -46,7 +44,6 @@ $result_tree_text{'tex_expanded_in_caption_multiple_time'} = '*document_root C1
         {spaces_after_argument:\\n}
    {spaces_after_close_brace:\\n}
    *normal_command@end C1 l8
-   |EXTRA
    |text_arg:{float}
     *line_arg C3
      {spaces_before_argument: }
@@ -54,7 +51,6 @@ $result_tree_text{'tex_expanded_in_caption_multiple_time'} = '*document_root C1
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@listoffloats C1 l10
-  |EXTRA
   |float_type:{A}
   |global_command_number:{1}
    *line_arg C3

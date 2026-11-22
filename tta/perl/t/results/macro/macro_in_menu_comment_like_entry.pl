@@ -14,14 +14,12 @@ $result_tree_text{'macro_in_menu_comment_like_entry'} = '*document_root C1
    {text_before_beginning:\\n}
   *preamble_before_content C2
    *normal_command@macro C3 l2
-   |EXTRA
    |formal_args:A{}
    |macro_name:{emptystring}
     *arguments_line C1
      {macro_line: emptystring\\n}
     {raw:\\n}
     *normal_command@end C1 l4
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -64,7 +62,6 @@ $result_tree_text{'macro_in_menu_comment_like_entry'} = '*document_root C1
        {rawline_text:c}
        {spaces_after_argument:\\n}
    *normal_command@end C1 l8
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }

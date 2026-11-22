@@ -14,13 +14,11 @@ $result_tree_text{'customize_translations'} = '*document_root C15
    {text_before_beginning:\\n}
   *preamble_before_content C2
    *normal_command@contents C1 l2
-   |EXTRA
    |global_command_number:{1}
     *line_arg C1
      {spaces_before_argument:\\n}
    {empty_line:\\n}
  *normal_command@node C1 l4 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -30,7 +28,6 @@ $result_tree_text{'customize_translations'} = '*document_root C15
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C2 l5 {top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -40,7 +37,6 @@ $result_tree_text{'customize_translations'} = '*document_root C15
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l7 {Chapter}
- |EXTRA
  |identifier:{Chapter}
  |is_target:{1}
  |node_number:{2}
@@ -50,7 +46,6 @@ $result_tree_text{'customize_translations'} = '*document_root C15
     {normal_text:Chapter}
     {spaces_after_argument:\\n}
  *normal_command@chapter C5 l8 {chap}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -66,7 +61,6 @@ $result_tree_text{'customize_translations'} = '*document_root C15
    {normal_text:.\\n}
   {empty_line:\\n}
   *normal_command@documentlanguage C1 l12
-  |EXTRA
   |global_command_number:{1}
   |text_arg:{fr}
    *line_arg C3
@@ -74,7 +68,6 @@ $result_tree_text{'customize_translations'} = '*document_root C15
     {normal_text:fr}
     {spaces_after_argument:\\n}
  *normal_command@node C1 l13 {Chapter fr}
- |EXTRA
  |identifier:{Chapter-fr}
  |is_target:{1}
  |node_number:{3}
@@ -84,7 +77,6 @@ $result_tree_text{'customize_translations'} = '*document_root C15
     {normal_text:Chapter fr}
     {spaces_after_argument:\\n}
  *normal_command@chapter C4 l14 {chap fr}
- |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
  |section_number:{3}
@@ -100,7 +92,6 @@ $result_tree_text{'customize_translations'} = '*document_root C15
    {normal_text:.\\n}
   {empty_line:\\n}
  *normal_command@node C1 l18 {section fr}
- |EXTRA
  |identifier:{section-fr}
  |is_target:{1}
  |node_number:{4}
@@ -110,7 +101,6 @@ $result_tree_text{'customize_translations'} = '*document_root C15
     {normal_text:section fr}
     {spaces_after_argument:\\n}
  *normal_command@section C3 l19 {sec fr}
- |EXTRA
  |section_heading_number:{2.1}
  |section_level:{2}
  |section_number:{4}
@@ -121,7 +111,6 @@ $result_tree_text{'customize_translations'} = '*document_root C15
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@documentlanguage C1 l21
-  |EXTRA
   |global_command_number:{2}
   |text_arg:{de}
    *line_arg C3
@@ -129,7 +118,6 @@ $result_tree_text{'customize_translations'} = '*document_root C15
     {normal_text:de}
     {spaces_after_argument:\\n}
  *normal_command@node C1 l22 {Chapter de}
- |EXTRA
  |identifier:{Chapter-de}
  |is_target:{1}
  |node_number:{5}
@@ -139,7 +127,6 @@ $result_tree_text{'customize_translations'} = '*document_root C15
     {normal_text:Chapter de}
     {spaces_after_argument:\\n}
  *normal_command@chapter C5 l23 {chap de}
- |EXTRA
  |section_heading_number:{3}
  |section_level:{1}
  |section_number:{5}
@@ -155,7 +142,6 @@ $result_tree_text{'customize_translations'} = '*document_root C15
    {normal_text:.\\n}
   {empty_line:\\n}
   *normal_command@documentlanguage C1 l27
-  |EXTRA
   |global_command_number:{3}
   |text_arg:{de_AT}
    *line_arg C3
@@ -163,7 +149,6 @@ $result_tree_text{'customize_translations'} = '*document_root C15
     {normal_text:de_AT}
     {spaces_after_argument:\\n}
  *normal_command@node C1 l28 {Chapter de_AT}
- |EXTRA
  |identifier:{Chapter-de_005fAT}
  |is_target:{1}
  |node_number:{6}
@@ -173,7 +158,6 @@ $result_tree_text{'customize_translations'} = '*document_root C15
     {normal_text:Chapter de_AT}
     {spaces_after_argument:\\n}
  *normal_command@chapter C4 l29 {chap de_AT}
- |EXTRA
  |section_heading_number:{4}
  |section_level:{1}
  |section_number:{6}
@@ -189,7 +173,6 @@ $result_tree_text{'customize_translations'} = '*document_root C15
    {normal_text:.\\n}
   {empty_line:\\n}
  *normal_command@node C1 l33 {Last chapter}
- |EXTRA
  |identifier:{Last-chapter}
  |is_target:{1}
  |node_number:{7}
@@ -199,7 +182,6 @@ $result_tree_text{'customize_translations'} = '*document_root C15
     {normal_text:Last chapter}
     {spaces_after_argument:\\n}
  *normal_command@chapter C2 l34 {Last Chapter}
- |EXTRA
  |section_heading_number:{5}
  |section_level:{1}
  |section_number:{7}

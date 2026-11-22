@@ -18,7 +18,6 @@ $result_tree_text{'menu_entry_node'} = '*document_root C1
    *menu_entry C4 l2
     {menu_entry_leading_text:* }
     *menu_entry_node C4
-    |EXTRA
     |manual_content:A{1|1}
     |node_content:A{3|3}
     |normalized:{a1}
@@ -33,7 +32,6 @@ $result_tree_text{'menu_entry_node'} = '*document_root C1
    *menu_entry C4 l3
     {menu_entry_leading_text:* }
     *menu_entry_node C4
-    |EXTRA
     |manual_content:A{1|1}
     |node_content:A{3|3}
     |normalized:{a2}
@@ -48,7 +46,6 @@ $result_tree_text{'menu_entry_node'} = '*document_root C1
    *menu_entry C4 l4
     {menu_entry_leading_text:* }
     *menu_entry_node C4
-    |EXTRA
     |manual_content:A{1|1}
     |node_content:A{3|3}
     |normalized:{a3}
@@ -63,7 +60,6 @@ $result_tree_text{'menu_entry_node'} = '*document_root C1
    *menu_entry C4 l5
     {menu_entry_leading_text:* }
     *menu_entry_node C6
-    |EXTRA
     |manual_content:A{1|1}
     |node_content:A{3|5}
     |normalized:{_0040a}
@@ -78,7 +74,6 @@ $result_tree_text{'menu_entry_node'} = '*document_root C1
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 l6
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }

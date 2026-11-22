@@ -12,7 +12,6 @@ $result_tree_text{'empty_value_in_line'} = '*document_root C1
  *before_node_section C4
   *preamble_before_content C2
    *normal_command@set C1
-   |EXTRA
    |misc_args:A{myspace|}
     *line_arg C3
      {spaces_before_argument: }

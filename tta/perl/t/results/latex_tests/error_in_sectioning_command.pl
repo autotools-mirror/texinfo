@@ -12,13 +12,11 @@ $result_tree_text{'error_in_sectioning_command'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content C2
    *normal_command@contents C1 l1
-   |EXTRA
    |global_command_number:{1}
     *line_arg C1
      {spaces_before_argument:\\n}
    {empty_line:\\n}
  *normal_command@node C1 l3 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -28,7 +26,6 @@ $result_tree_text{'error_in_sectioning_command'} = '*document_root C5
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C2 l4 {top section}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -38,7 +35,6 @@ $result_tree_text{'error_in_sectioning_command'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l6 {@code{@@error@{@}} (@error{}): Indicating an Error Message}
- |EXTRA
  |identifier:{_0040error_007b_007d-_0028error_002d_002d_003e_0029_003a-Indicating-an-Error-Message}
  |is_target:{1}
  |node_number:{2}
@@ -57,7 +53,6 @@ $result_tree_text{'error_in_sectioning_command'} = '*document_root C5
     {normal_text:): Indicating an Error Message}
     {spaces_after_argument:\\n}
  *normal_command@chapter C3 l7 {@code{@@error@{@}} (@error{}): Indicating an Error Message}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}

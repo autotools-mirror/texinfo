@@ -12,7 +12,6 @@ $result_tree_text{'missing_detailmenu_on_subnodes'} = '*document_root C13
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -22,7 +21,6 @@ $result_tree_text{'missing_detailmenu_on_subnodes'} = '*document_root C13
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C4 l2 {top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -38,7 +36,6 @@ $result_tree_text{'missing_detailmenu_on_subnodes'} = '*document_root C13
    *menu_entry C4 l5
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{chapter}
      {normal_text:chapter}
@@ -49,7 +46,6 @@ $result_tree_text{'missing_detailmenu_on_subnodes'} = '*document_root C13
    *menu_entry C4 l6
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{chapter-2}
      {normal_text:chapter 2}
@@ -63,7 +59,6 @@ $result_tree_text{'missing_detailmenu_on_subnodes'} = '*document_root C13
    *menu_entry C4 l8
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{section}
      {normal_text:section}
@@ -79,7 +74,6 @@ $result_tree_text{'missing_detailmenu_on_subnodes'} = '*document_root C13
    *menu_entry C4 l12
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{section-chap-2}
      {normal_text:section chap 2}
@@ -90,7 +84,6 @@ $result_tree_text{'missing_detailmenu_on_subnodes'} = '*document_root C13
    *menu_entry C4 l13
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{unnumberedsec}
      {normal_text:unnumberedsec}
@@ -99,7 +92,6 @@ $result_tree_text{'missing_detailmenu_on_subnodes'} = '*document_root C13
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 l14
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -107,7 +99,6 @@ $result_tree_text{'missing_detailmenu_on_subnodes'} = '*document_root C13
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l16 {chapter}
- |EXTRA
  |identifier:{chapter}
  |is_target:{1}
  |node_number:{2}
@@ -117,7 +108,6 @@ $result_tree_text{'missing_detailmenu_on_subnodes'} = '*document_root C13
     {normal_text:chapter}
     {spaces_after_argument:\\n}
  *normal_command@chapter C4 l17 {chapter}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -134,7 +124,6 @@ $result_tree_text{'missing_detailmenu_on_subnodes'} = '*document_root C13
    *menu_entry C4 l20
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{section}
      {normal_text:section}
@@ -143,7 +132,6 @@ $result_tree_text{'missing_detailmenu_on_subnodes'} = '*document_root C13
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 l21
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -151,7 +139,6 @@ $result_tree_text{'missing_detailmenu_on_subnodes'} = '*document_root C13
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l23 {section}
- |EXTRA
  |identifier:{section}
  |is_target:{1}
  |node_number:{3}
@@ -161,7 +148,6 @@ $result_tree_text{'missing_detailmenu_on_subnodes'} = '*document_root C13
     {normal_text:section}
     {spaces_after_argument:\\n}
  *normal_command@section C2 l24 {section}
- |EXTRA
  |section_heading_number:{1.1}
  |section_level:{2}
  |section_number:{3}
@@ -172,7 +158,6 @@ $result_tree_text{'missing_detailmenu_on_subnodes'} = '*document_root C13
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l26 {chapter 2}
- |EXTRA
  |identifier:{chapter-2}
  |is_target:{1}
  |node_number:{4}
@@ -182,7 +167,6 @@ $result_tree_text{'missing_detailmenu_on_subnodes'} = '*document_root C13
     {normal_text:chapter 2}
     {spaces_after_argument:\\n}
  *normal_command@chapter C4 l27 {chapter 2}
- |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
  |section_number:{4}
@@ -199,7 +183,6 @@ $result_tree_text{'missing_detailmenu_on_subnodes'} = '*document_root C13
    *menu_entry C4 l30
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{section-chap-2}
      {normal_text:section chap 2}
@@ -210,7 +193,6 @@ $result_tree_text{'missing_detailmenu_on_subnodes'} = '*document_root C13
    *menu_entry C4 l31
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{unnumberedsec}
      {normal_text:unnumberedsec}
@@ -219,7 +201,6 @@ $result_tree_text{'missing_detailmenu_on_subnodes'} = '*document_root C13
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 l32
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -227,7 +208,6 @@ $result_tree_text{'missing_detailmenu_on_subnodes'} = '*document_root C13
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l34 {section chap 2}
- |EXTRA
  |identifier:{section-chap-2}
  |is_target:{1}
  |node_number:{5}
@@ -237,7 +217,6 @@ $result_tree_text{'missing_detailmenu_on_subnodes'} = '*document_root C13
     {normal_text:section chap 2}
     {spaces_after_argument:\\n}
  *normal_command@section C2 l35 {section chap 2}
- |EXTRA
  |section_heading_number:{2.1}
  |section_level:{2}
  |section_number:{5}
@@ -248,7 +227,6 @@ $result_tree_text{'missing_detailmenu_on_subnodes'} = '*document_root C13
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l37 {unnumberedsec}
- |EXTRA
  |identifier:{unnumberedsec}
  |is_target:{1}
  |node_number:{6}
@@ -258,7 +236,6 @@ $result_tree_text{'missing_detailmenu_on_subnodes'} = '*document_root C13
     {normal_text:unnumberedsec}
     {spaces_after_argument:\\n}
  *normal_command@unnumberedsec C1 l38 {unnumberedsec}
- |EXTRA
  |section_level:{2}
  |section_number:{6}
   *arguments_line C1

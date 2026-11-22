@@ -12,7 +12,6 @@ $result_tree_text{'test_insert_nodes_reallocated_nodedescriptionblock'} = '*docu
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -22,7 +21,6 @@ $result_tree_text{'test_insert_nodes_reallocated_nodedescriptionblock'} = '*docu
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C2 l2 {top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -32,7 +30,6 @@ $result_tree_text{'test_insert_nodes_reallocated_nodedescriptionblock'} = '*docu
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l4 {chap}
- |EXTRA
  |identifier:{chap}
  |is_target:{1}
  |node_number:{2}
@@ -42,7 +39,6 @@ $result_tree_text{'test_insert_nodes_reallocated_nodedescriptionblock'} = '*docu
     {normal_text:chap}
     {spaces_after_argument:\\n}
  *normal_command@chapter C2 l5 {Chap}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -53,7 +49,6 @@ $result_tree_text{'test_insert_nodes_reallocated_nodedescriptionblock'} = '*docu
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l7 {Sec}
- |EXTRA
  |added:{1}
  |identifier:{Sec}
  |is_target:{1}
@@ -64,7 +59,6 @@ $result_tree_text{'test_insert_nodes_reallocated_nodedescriptionblock'} = '*docu
     {normal_text:Sec}
     {spaces_after_argument:\\n}
  *normal_command@section C5 l7 {Sec}
- |EXTRA
  |section_heading_number:{1.1}
  |section_level:{2}
  |section_number:{3}
@@ -80,7 +74,6 @@ $result_tree_text{'test_insert_nodes_reallocated_nodedescriptionblock'} = '*docu
    *paragraph C1
     {normal_text:D1\\n}
    *normal_command@end C1 l10
-   |EXTRA
    |text_arg:{nodedescriptionblock}
     *line_arg C3
      {spaces_before_argument: }
@@ -94,7 +87,6 @@ $result_tree_text{'test_insert_nodes_reallocated_nodedescriptionblock'} = '*docu
    *paragraph C1
     {normal_text:D2\\n}
    *normal_command@end C1 l14
-   |EXTRA
    |text_arg:{nodedescriptionblock}
     *line_arg C3
      {spaces_before_argument: }
@@ -102,7 +94,6 @@ $result_tree_text{'test_insert_nodes_reallocated_nodedescriptionblock'} = '*docu
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l16 {Subsec}
- |EXTRA
  |added:{1}
  |identifier:{Subsec}
  |is_target:{1}
@@ -113,7 +104,6 @@ $result_tree_text{'test_insert_nodes_reallocated_nodedescriptionblock'} = '*docu
     {normal_text:Subsec}
     {spaces_after_argument:\\n}
  *normal_command@subsection C2 l16 {Subsec}
- |EXTRA
  |section_heading_number:{1.1.1}
  |section_level:{3}
  |section_number:{4}

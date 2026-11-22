@@ -20,7 +20,6 @@ $result_tree_text{'sample_utf8'} = '*document_root C10
      {spaces_after_argument:\\n}
   *preamble_before_content C12
    *normal_command@setfilename C1 sample_utf8.texi:l3
-   |EXTRA
    |text_arg:{sample_utf8.info}
     *line_arg C3
      {spaces_before_argument: }
@@ -32,7 +31,6 @@ $result_tree_text{'sample_utf8'} = '*document_root C10
      {normal_text:Sample 示例 ĄĘ ù}
      {spaces_after_argument:\\n}
    *normal_command@documentencoding C1 sample_utf8.texi:l5
-   |EXTRA
    |global_command_number:{1}
    |input_encoding_name:{utf-8}
    |text_arg:{UTF-8}
@@ -57,7 +55,6 @@ $result_tree_text{'sample_utf8'} = '*document_root C10
      {normal_text:Copyright (C) 2005 Someone.\\n}
      {normal_text:Texinfo中文示例\\n}
     *normal_command@end C1 sample_utf8.texi:l13
-    |EXTRA
     |text_arg:{copying}
      *line_arg C3
       {spaces_before_argument: }
@@ -84,12 +81,10 @@ $result_tree_text{'sample_utf8'} = '*document_root C10
        {rawline_text:0pt plus 1filll}
        {spaces_after_argument:\\n}
     *normal_command@insertcopying C1 sample_utf8.texi:l20
-    |EXTRA
     |global_command_number:{1}
      *line_arg C1
       {spaces_before_argument:\\n}
     *normal_command@end C1 sample_utf8.texi:l21
-    |EXTRA
     |text_arg:{titlepage}
      *line_arg C3
       {spaces_before_argument: }
@@ -102,7 +97,6 @@ $result_tree_text{'sample_utf8'} = '*document_root C10
      {rawline_text:Output the table of the contents at the beginning.}
      {spaces_after_argument:\\n}
    *normal_command@contents C1 sample_utf8.texi:l24
-   |EXTRA
    |global_command_number:{1}
     *line_arg C1
      {spaces_before_argument:\\n}
@@ -114,7 +108,6 @@ $result_tree_text{'sample_utf8'} = '*document_root C10
       >*block_line_arg C1
        >{spaces_before_argument:\\n}
  *normal_command@node C1 sample_utf8.texi:l27 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -124,7 +117,6 @@ $result_tree_text{'sample_utf8'} = '*document_root C10
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C7 sample_utf8.texi:l28 {Texinfo中文示例}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -134,12 +126,10 @@ $result_tree_text{'sample_utf8'} = '*document_root C10
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@insertcopying C1 sample_utf8.texi:l30
-  |EXTRA
   |global_command_number:{2}
   >SOURCEMARKS
   >expanded_conditional_command<end;1>
    >*normal_command@end C1 sample_utf8.texi:l31
-   >|EXTRA
    >|text_arg:{ifnottex}
     >*line_arg C3
      >{spaces_before_argument: }
@@ -155,7 +145,6 @@ $result_tree_text{'sample_utf8'} = '*document_root C10
    *menu_entry C4 sample_utf8.texi:l34
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{_7b2c_4e00_7ae0_ff08First-Chapter_ff09}
      {normal_text:第一章（First Chapter）}
@@ -167,7 +156,6 @@ $result_tree_text{'sample_utf8'} = '*document_root C10
    *menu_entry C4 sample_utf8.texi:l36
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{Second-Chapter-AE-_0104_0118-ae-_0105_0119}
      {normal_text:Second Chapter AE ĄĘ ae ąę}
@@ -178,7 +166,6 @@ $result_tree_text{'sample_utf8'} = '*document_root C10
    *menu_entry C4 sample_utf8.texi:l37
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{Index-node}
      {normal_text:Index node}
@@ -187,7 +174,6 @@ $result_tree_text{'sample_utf8'} = '*document_root C10
      *preformatted C1
       {normal_text:Complete index.\\n}
    *normal_command@end C1 sample_utf8.texi:l38
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -196,7 +182,6 @@ $result_tree_text{'sample_utf8'} = '*document_root C10
   {empty_line:\\n}
   {empty_line:\\n}
  *normal_command@node C1 sample_utf8.texi:l41 {第一章（First Chapter）}
- |EXTRA
  |identifier:{_7b2c_4e00_7ae0_ff08First-Chapter_ff09}
  |is_target:{1}
  |node_number:{2}
@@ -206,7 +191,6 @@ $result_tree_text{'sample_utf8'} = '*document_root C10
     {normal_text:第一章（First Chapter）}
     {spaces_after_argument:\\n}
  *normal_command@chapter C10 sample_utf8.texi:l42 {第一章（First Chapter）}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -217,7 +201,6 @@ $result_tree_text{'sample_utf8'} = '*document_root C10
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 sample_utf8.texi:l44
-  |EXTRA
   |element_node:{_7b2c_4e00_7ae0_ff08First-Chapter_ff09}
   |index_entry:I{cp,1}
    *line_arg C3
@@ -228,7 +211,6 @@ $result_tree_text{'sample_utf8'} = '*document_root C10
   *paragraph C4
    {normal_text:This is the first chapter. 这是第一章。\\n}
    *index_entry_command@cindex C1 sample_utf8.texi:l47
-   |EXTRA
    |element_node:{_7b2c_4e00_7ae0_ff08First-Chapter_ff09}
    |index_entry:I{cp,2}
     *line_arg C3
@@ -236,7 +218,6 @@ $result_tree_text{'sample_utf8'} = '*document_root C10
      {normal_text:另一个，index entry}
      {spaces_after_argument:\\n}
    *index_entry_command@cindex C1 sample_utf8.texi:l48
-   |EXTRA
    |element_node:{_7b2c_4e00_7ae0_ff08First-Chapter_ff09}
    |index_entry:I{cp,3}
     *line_arg C3
@@ -244,7 +225,6 @@ $result_tree_text{'sample_utf8'} = '*document_root C10
      {normal_text:ĄĘ ae ąę}
      {spaces_after_argument:\\n}
    *index_entry_command@cindex C1 sample_utf8.texi:l49
-   |EXTRA
    |element_node:{_7b2c_4e00_7ae0_ff08First-Chapter_ff09}
    |index_entry:I{cp,4}
     *line_arg C3
@@ -260,7 +240,6 @@ $result_tree_text{'sample_utf8'} = '*document_root C10
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *normal_command@item C3 sample_utf8.texi:l54
-   |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C2
@@ -268,14 +247,12 @@ $result_tree_text{'sample_utf8'} = '*document_root C10
      {normal_text:This is the first item.\\n}
     {empty_line:\\n}
    *normal_command@item C2 sample_utf8.texi:l57
-   |EXTRA
    |item_number:{2}
     {ignorable_spaces_after_command: }
     *paragraph C2
      {normal_text:ĄĘ\\n}
      {normal_text:This is the second item.\\n}
    *normal_command@end C1 sample_utf8.texi:l59
-   |EXTRA
    |text_arg:{enumerate}
     *line_arg C3
      {spaces_before_argument: }
@@ -283,7 +260,6 @@ $result_tree_text{'sample_utf8'} = '*document_root C10
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 sample_utf8.texi:l61 {Second Chapter AE ĄĘ ae ąę}
- |EXTRA
  |identifier:{Second-Chapter-AE-_0104_0118-ae-_0105_0119}
  |is_target:{1}
  |node_number:{3}
@@ -293,7 +269,6 @@ $result_tree_text{'sample_utf8'} = '*document_root C10
     {normal_text:Second Chapter AE ĄĘ ae ąę}
     {spaces_after_argument:\\n}
  *normal_command@chapter C4 sample_utf8.texi:l62 {Chapter 2 AE ĄĘ ae ąę}
- |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
  |section_number:{3}
@@ -307,7 +282,6 @@ $result_tree_text{'sample_utf8'} = '*document_root C10
    {normal_text:Zażółć gęślą jaźń!\\n}
   {empty_line:\\n}
  *normal_command@node C1 sample_utf8.texi:l66 {Index node}
- |EXTRA
  |identifier:{Index-node}
  |is_target:{1}
  |isindex:{1}
@@ -318,7 +292,6 @@ $result_tree_text{'sample_utf8'} = '*document_root C10
     {normal_text:Index node}
     {spaces_after_argument:\\n}
  *normal_command@unnumbered C4 sample_utf8.texi:l67 {Index}
- |EXTRA
  |section_level:{1}
  |section_number:{4}
   *arguments_line C1
@@ -328,7 +301,6 @@ $result_tree_text{'sample_utf8'} = '*document_root C10
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@printindex C1 sample_utf8.texi:l69
-  |EXTRA
   |global_command_number:{1}
   |misc_args:A{cp}
    *line_arg C3

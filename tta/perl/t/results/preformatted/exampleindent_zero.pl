@@ -12,7 +12,6 @@ $result_tree_text{'exampleindent_zero'} = '*document_root C1
  *before_node_section C6
   *preamble_before_content C2
    *normal_command@exampleindent C1 l1
-   |EXTRA
    |global_command_number:{1}
    |misc_args:A{asis}
     *line_arg C3
@@ -27,7 +26,6 @@ $result_tree_text{'exampleindent_zero'} = '*document_root C1
    *preformatted C1
     {normal_text:EXAMPLE INDENT asis\\n}
    *normal_command@end C1 l5
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
@@ -35,7 +33,6 @@ $result_tree_text{'exampleindent_zero'} = '*document_root C1
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@exampleindent C1 l7
-  |EXTRA
   |global_command_number:{2}
   |misc_args:A{0}
    *line_arg C3
@@ -50,7 +47,6 @@ $result_tree_text{'exampleindent_zero'} = '*document_root C1
    *preformatted C1
     {normal_text:EXAMPLE INDENT 0\\n}
    *normal_command@end C1 l11
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }

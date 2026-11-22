@@ -25,7 +25,6 @@ $result_tree_text{'command_conditionals'} = '*document_root C1
    >SOURCEMARKS
    >expanded_conditional_command<end;1><p:51>
     >*normal_command@end C1 l3
-    >|EXTRA
     >|text_arg:{ifset}
      >*line_arg C3
       >{spaces_before_argument: }
@@ -42,7 +41,6 @@ $result_tree_text{'command_conditionals'} = '*document_root C1
       >{spaces_after_argument:\\n}
     >{raw:Bad, @@nodexyz is defined.\\n}
     >*normal_command@end C1 l7
-    >|EXTRA
     >|text_arg:{ifcommanddefined}
      >*line_arg C3
       >{spaces_before_argument: }
@@ -62,7 +60,6 @@ $result_tree_text{'command_conditionals'} = '*document_root C1
    >SOURCEMARKS
    >expanded_conditional_command<end;2><p:24>
     >*normal_command@end C1 l10
-    >|EXTRA
     >|text_arg:{ifcommandnotdefined}
      >*line_arg C3
       >{spaces_before_argument: }
@@ -84,7 +81,6 @@ $result_tree_text{'command_conditionals'} = '*document_root C1
    >SOURCEMARKS
    >expanded_conditional_command<end;3><p:17>
     >*normal_command@end C1 l14
-    >|EXTRA
     >|text_arg:{ifcommanddefined}
      >*line_arg C3
       >{spaces_before_argument: }
@@ -99,7 +95,6 @@ $result_tree_text{'command_conditionals'} = '*document_root C1
        >{spaces_after_argument:\\n}
      >{raw:Bad, @@node is not defined.\\n}
      >*normal_command@end C1 l17
-     >|EXTRA
      >|text_arg:{ifcommandnotdefined}
       >*line_arg C3
        >{spaces_before_argument: }
@@ -116,7 +111,6 @@ $result_tree_text{'command_conditionals'} = '*document_root C1
       >{spaces_after_argument:\\n}
     >{raw:Unfortunately, @@mathcode is defined.\\n}
     >*normal_command@end C1 l21
-    >|EXTRA
     >|text_arg:{ifcommanddefined}
      >*line_arg C3
       >{spaces_before_argument: }
@@ -136,7 +130,6 @@ $result_tree_text{'command_conditionals'} = '*document_root C1
    >SOURCEMARKS
    >expanded_conditional_command<end;4><p:25>
     >*normal_command@end C1 l24
-    >|EXTRA
     >|text_arg:{ifcommandnotdefined}
      >*line_arg C3
       >{spaces_before_argument: }

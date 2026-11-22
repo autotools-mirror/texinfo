@@ -12,7 +12,6 @@ $result_tree_text{'image_extension'} = '*document_root C1
  *before_node_section C3
   *preamble_before_content
   *normal_command@image C5 l1
-  |EXTRA
   |input_encoding_name:{utf-8}
    *brace_arg C1
     {normal_text:f---ile}

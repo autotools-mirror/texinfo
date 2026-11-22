@@ -12,14 +12,12 @@ $result_tree_text{'value_in_invalid_documentencoding'} = '*document_root C1
  *before_node_section C1
   *preamble_before_content C2
    *normal_command@set C1
-   |EXTRA
    |misc_args:A{badvalue|bad}
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:badvalue bad}
      {spaces_after_argument:\\n}
    *normal_command@documentencoding C1 l2
-   |EXTRA
    |global_command_number:{1}
    |text_arg:{bad}
     *line_arg C3

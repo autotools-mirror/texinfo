@@ -25,7 +25,6 @@ $result_tree_text{'plaintext_ifinfo_ifnotplaintext'} = '*document_root C1
        >{spaces_before_argument:\\n}
      >{raw:This will be in Info, but not plain text.\\n}
      >*normal_command@end C1 l4
-     >|EXTRA
      >|text_arg:{ifnotplaintext}
       >*line_arg C3
        >{spaces_before_argument: }
@@ -33,7 +32,6 @@ $result_tree_text{'plaintext_ifinfo_ifnotplaintext'} = '*document_root C1
        >{spaces_after_argument:\\n}
    >expanded_conditional_command<end;1>
     >*normal_command@end C1 l5
-    >|EXTRA
     >|text_arg:{ifinfo}
      >*line_arg C3
       >{spaces_before_argument: }

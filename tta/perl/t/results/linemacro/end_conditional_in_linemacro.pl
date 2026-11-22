@@ -12,14 +12,12 @@ $result_tree_text{'end_conditional_in_linemacro'} = '*document_root C1
  *before_node_section C4
   *preamble_before_content C2
    *normal_command@linemacro C3 l1
-   |EXTRA
    |formal_args:A{a}
    |macro_name:{lm}
     *arguments_line C1
      {macro_line: lm {a}\\n}
     {raw:\\a\\\\n}
     *normal_command@end C1 l3
-    |EXTRA
     |text_arg:{linemacro}
      *line_arg C3
       {spaces_before_argument: }
@@ -46,7 +44,6 @@ $result_tree_text{'end_conditional_in_linemacro'} = '*document_root C1
    >SOURCEMARKS
    >expanded_conditional_command<end;1><p:2>
     >*normal_command@end C1 l7:@lm
-    >|EXTRA
     >|text_arg:{ifclear}
      >*line_arg C3
       >{spaces_before_argument: }
@@ -65,7 +62,6 @@ $result_tree_text{'end_conditional_in_linemacro'} = '*document_root C1
       >{spaces_after_argument:\\n}
     >{raw:@lm {text\\n}
     >*normal_command@end C1 l11
-    >|EXTRA
     >|text_arg:{ifset}
      >*line_arg C3
       >{spaces_before_argument: }

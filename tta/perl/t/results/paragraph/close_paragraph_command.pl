@@ -14,7 +14,6 @@ $result_tree_text{'close_paragraph_command'} = '*document_root C1
   *paragraph C1
    {normal_text:para }
   *normal_command@titlefont C1 l1
-  |EXTRA
   |global_command_number:{1}
    *brace_container C1
     {normal_text:in titlefont}
@@ -24,7 +23,6 @@ $result_tree_text{'close_paragraph_command'} = '*document_root C1
   *paragraph C1
    {normal_text:p before sp\\n}
   *normal_command@sp C1 l4
-  |EXTRA
   |misc_args:A{4}
    *line_arg C3
     {spaces_before_argument: }

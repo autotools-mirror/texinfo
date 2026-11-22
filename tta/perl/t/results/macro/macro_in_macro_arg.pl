@@ -14,14 +14,12 @@ $result_tree_text{'macro_in_macro_arg'} = '*document_root C1
    {text_before_beginning:\\n}
   *preamble_before_content C6
    *normal_command@macro C3 l2
-   |EXTRA
    |formal_args:A{}
    |macro_name:{macroone}
     *arguments_line C1
      {macro_line: macroone\\n}
     {raw:a, @macrotwo\\n}
     *normal_command@end C1 l4
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -29,14 +27,12 @@ $result_tree_text{'macro_in_macro_arg'} = '*document_root C1
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *normal_command@macro C3 l6
-   |EXTRA
    |formal_args:A{arg}
    |macro_name:{macrotwo}
     *arguments_line C1
      {macro_line: macrotwo{arg}\\n}
     {raw:hello \\arg\\ after arg\\n}
     *normal_command@end C1 l8
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -44,7 +40,6 @@ $result_tree_text{'macro_in_macro_arg'} = '*document_root C1
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *normal_command@macro C4 l10
-   |EXTRA
    |formal_args:A{text|arg}
    |macro_name:{macrothree}
     *arguments_line C1
@@ -52,7 +47,6 @@ $result_tree_text{'macro_in_macro_arg'} = '*document_root C1
     {raw:\\text\\\\n}
     {raw:&&&& \\arg\\\\n}
     *normal_command@end C1 l13
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }

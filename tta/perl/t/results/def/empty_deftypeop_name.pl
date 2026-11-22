@@ -13,7 +13,6 @@ $result_tree_text{'empty_deftypeop_name'} = '*document_root C1
   *preamble_before_content
   *normal_command@deftypeop C2 l1
    *def_line C1 l1
-   |EXTRA
    |def_command:{deftypeop}
    |original_def_cmdname:{deftypeop}
     *block_line_arg C7
@@ -40,7 +39,6 @@ $result_tree_text{'empty_deftypeop_name'} = '*document_root C1
          {normal_text:exp}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l2
-   |EXTRA
    |text_arg:{deftypeop}
     *line_arg C3
      {spaces_before_argument: }

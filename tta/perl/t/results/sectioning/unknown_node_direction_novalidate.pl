@@ -16,7 +16,6 @@ $result_tree_text{'unknown_node_direction_novalidate'} = '*document_root C2
      {spaces_before_argument:\\n}
    {empty_line:\\n}
  *normal_command@node C1 l3 {one arg2}
- |EXTRA
  |identifier:{one-arg2}
  |is_target:{1}
  |node_number:{1}
@@ -25,7 +24,6 @@ $result_tree_text{'unknown_node_direction_novalidate'} = '*document_root C2
     {spaces_before_argument: }
     {normal_text:one arg2}
    *line_arg C3
-   |EXTRA
    |node_content:A{1|1}
    |normalized:{two-arg}
     {spaces_before_argument: }

@@ -13,7 +13,6 @@ $result_tree_text{'section_on_defx_line'} = '*document_root C2
   *preamble_before_content
   *normal_command@deffn C2 l1
    *def_line C1 l1
-   |EXTRA
    |def_command:{deffn}
    |index_entry:I{fn,1}
    |original_def_cmdname:{deffn}
@@ -36,7 +35,6 @@ $result_tree_text{'section_on_defx_line'} = '*document_root C2
        {normal_text:l}
      {spaces_after_argument: \\n}
    *normal_command@deffnx C1 l2
-   |EXTRA
    |def_command:{deffn}
    |index_entry:I{fn,2}
    |original_def_cmdname:{deffnx}
@@ -51,7 +49,6 @@ $result_tree_text{'section_on_defx_line'} = '*document_root C2
        {normal_text:b}
      {spaces_after_argument: }
  *normal_command@section C4 l2 {s}
- |EXTRA
  |identifier:{s}
  |is_target:{1}
  |section_heading_number:{1}

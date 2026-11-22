@@ -12,7 +12,6 @@ $result_tree_text{'acronym_in_node_and_section'} = '*document_root C9
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 l1 {top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -22,7 +21,6 @@ $result_tree_text{'acronym_in_node_and_section'} = '*document_root C9
     {normal_text:top}
     {spaces_after_argument:\\n}
  *normal_command@top C2 l2 {top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -32,7 +30,6 @@ $result_tree_text{'acronym_in_node_and_section'} = '*document_root C9
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l4 {chap}
- |EXTRA
  |identifier:{chap}
  |is_target:{1}
  |node_number:{2}
@@ -42,7 +39,6 @@ $result_tree_text{'acronym_in_node_and_section'} = '*document_root C9
     {normal_text:chap}
     {spaces_after_argument:\\n}
  *normal_command@chapter C2 l5 {chap}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -53,7 +49,6 @@ $result_tree_text{'acronym_in_node_and_section'} = '*document_root C9
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l7 {sec define}
- |EXTRA
  |identifier:{sec-define}
  |is_target:{1}
  |node_number:{3}
@@ -63,7 +58,6 @@ $result_tree_text{'acronym_in_node_and_section'} = '*document_root C9
     {normal_text:sec define}
     {spaces_after_argument:\\n}
  *normal_command@section C4 l8 {define}
- |EXTRA
  |section_heading_number:{1.1}
  |section_level:{2}
  |section_number:{3}
@@ -83,7 +77,6 @@ $result_tree_text{'acronym_in_node_and_section'} = '*document_root C9
    {normal_text:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l12 {sec here is @acronym{GHJ}}
- |EXTRA
  |identifier:{sec-here-is-GHJ}
  |is_target:{1}
  |node_number:{4}
@@ -96,7 +89,6 @@ $result_tree_text{'acronym_in_node_and_section'} = '*document_root C9
       {normal_text:GHJ}
     {spaces_after_argument:\\n}
  *normal_command@section C3 l13 {here is @acronym{GHJ}}
- |EXTRA
  |section_heading_number:{1.2}
  |section_level:{2}
  |section_number:{4}

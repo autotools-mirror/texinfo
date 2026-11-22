@@ -12,7 +12,6 @@ $result_tree_text{'empty_multitable_with_cells'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *normal_command@multitable C3 l1
-  |EXTRA
   |max_columns:{0}
    *arguments_line C1
     *block_line_arg C1
@@ -31,7 +30,6 @@ $result_tree_text{'empty_multitable_with_cells'} = '*document_root C1
     *paragraph C1
      {normal_text:item in empty m\\n}
    *normal_command@end C1 l4
-   |EXTRA
    |text_arg:{multitable}
     *line_arg C3
      {spaces_before_argument: }

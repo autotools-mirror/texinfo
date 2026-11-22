@@ -24,14 +24,12 @@ $result_tree_text{'nested_formats'} = '*document_root C1
      {normal_text:in -- format/example\\n}
      {empty_line:\\n}
     *normal_command@end C1 l6
-    |EXTRA
     |text_arg:{example}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:example}
       {spaces_after_argument:\\n}
    *normal_command@end C1 l7
-   |EXTRA
    |text_arg:{format}
     *line_arg C3
      {spaces_before_argument: }
@@ -51,14 +49,12 @@ $result_tree_text{'nested_formats'} = '*document_root C1
      {normal_text:in -- example/format\\n}
      {empty_line:\\n}
     *normal_command@end C1 l14
-    |EXTRA
     |text_arg:{format}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:format}
       {spaces_after_argument:\\n}
    *normal_command@end C1 l15
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }

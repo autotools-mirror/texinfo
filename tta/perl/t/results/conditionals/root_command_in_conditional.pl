@@ -19,7 +19,6 @@ $result_tree_text{'root_command_in_conditional'} = '*document_root C2
       >*block_line_arg C1
        >{spaces_before_argument:\\n}
  *normal_command@node C1 l2 {Getting Started}
- |EXTRA
  |identifier:{Getting-Started}
  |is_target:{1}
  |node_number:{1}
@@ -28,25 +27,21 @@ $result_tree_text{'root_command_in_conditional'} = '*document_root C2
     {spaces_before_argument: }
     {normal_text:Getting Started}
    *line_arg C2
-   |EXTRA
    |node_content:A{1|1}
    |normalized:{Tutorial}
     {spaces_before_argument: }
     {normal_text:Tutorial}
    *line_arg C2
-   |EXTRA
    |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
     {normal_text:Top}
    *line_arg C3
-   |EXTRA
    |node_content:A{1|1}
    |normalized:{Top}
    >SOURCEMARKS
    >expanded_conditional_command<end;1>
     >*normal_command@end C1 l3
-    >|EXTRA
     >|text_arg:{ifnottex}
      >*line_arg C3
       >{spaces_before_argument: }

@@ -13,7 +13,6 @@ $result_tree_text{'inlineiffmtifelse_not_closed'} = '*document_root C1
   *preamble_before_content
   *paragraph C1
    *normal_command@inlinefmtifelse C2 l1
-   |EXTRA
    |expand_index:{2}
    |format:{html}
     *brace_arg C1

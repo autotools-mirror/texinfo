@@ -18,7 +18,6 @@ $result_tree_text{'ref_in_multitable'} = '*document_root C1
   *paragraph C2
    *normal_command@ref C1 l3
     *brace_arg C2
-    |EXTRA
     |node_content:A{0|1}
     |normalized:{XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XX}
      {normal_text:XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XX XXX XXX XXX XXX \\n}
@@ -26,13 +25,11 @@ $result_tree_text{'ref_in_multitable'} = '*document_root C1
    {normal_text:.\\n}
   {empty_line:\\n}
   *normal_command@multitable C3 l6
-  |EXTRA
   |max_columns:{2}
    *arguments_line C1
     *block_line_arg C2
      {spaces_before_argument: }
      *normal_command@columnfractions C1 l6
-     |EXTRA
      |misc_args:A{.35|.65}
       *line_arg C3
        {spaces_before_argument: }
@@ -40,79 +37,65 @@ $result_tree_text{'ref_in_multitable'} = '*document_root C1
        {spaces_after_argument:\\n}
    *multitable_body C3
     *row C2
-    |EXTRA
     |row_number:{1}
      *normal_command@item C2 l7
-     |EXTRA
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
        {normal_text:XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XX\\n}
      *normal_command@tab C2 l8
-     |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C3
        {normal_text:See }
        *normal_command@ref C1 l8
         *brace_arg C1
-        |EXTRA
         |node_content:A{0|0}
         |normalized:{RRR-RRR-RRR-RRR-RRR-RRR-RRR-RRR-RRR-RRRR}
          {normal_text:RRR RRR RRR RRR RRR RRR RRR RRR RRR RRRR}
        {normal_text:.\\n}
     *row C2
-    |EXTRA
     |row_number:{2}
      *normal_command@item C2 l9
-     |EXTRA
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
        {normal_text:XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XX\\n}
      *normal_command@tab C2 l10
-     |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C3
        {normal_text:See }
        *normal_command@ref C1 l10
         *brace_arg C1
-        |EXTRA
         |node_content:A{0|0}
         |normalized:{SSS-SSS-SSS-SSS-SSS-SSS-SSS-SSS-SSS-SSS-SSS-SSS-SSSSS}
          {normal_text:SSS SSS SSS SSS SSS SSS SSS SSS SSS SSS SSS SSS SSSSS}
        {normal_text:.\\n}
     *row C2
-    |EXTRA
     |row_number:{3}
      *normal_command@item C2 l11
-     |EXTRA
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C3
        {normal_text:adsf}
        *normal_command@footnote C1 l11
-       |EXTRA
        |global_command_number:{1}
         *brace_command_context C1
          *paragraph C1
           *normal_command@ref C1 l11
            *brace_arg C2
-           |EXTRA
            |node_content:A{0|1}
            |normalized:{XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XX}
             {normal_text:XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XX \\n}
             {normal_text:XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XX}
        {normal_text: }
      *normal_command@tab C2 l12
-     |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: \\n}
       *paragraph C1
        {normal_text:second column\\n}
    *normal_command@end C1 l14
-   |EXTRA
    |text_arg:{multitable}
     *line_arg C3
      {spaces_before_argument: }
@@ -122,7 +105,6 @@ $result_tree_text{'ref_in_multitable'} = '*document_root C1
   *paragraph C2
    *normal_command@ref C1 l16
     *brace_arg C2
-    |EXTRA
     |node_content:A{0|1}
     |normalized:{XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XXX-XX}
      {normal_text:XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XX XXX XXX XXX XXX \\n}

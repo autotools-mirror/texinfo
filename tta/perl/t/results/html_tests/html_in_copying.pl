@@ -27,14 +27,12 @@ $result_tree_text{'html_in_copying'} = '*document_root C3
      *rawpreformatted C1
       {normal_text:in <b>html</b> in copying `` \\n}
      *normal_command@end C1 l7
-     |EXTRA
      |text_arg:{html}
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:html}
        {spaces_after_argument:\\n}
     *normal_command@end C1 l8
-    |EXTRA
     |text_arg:{copying}
      *line_arg C3
       {spaces_before_argument: }
@@ -42,7 +40,6 @@ $result_tree_text{'html_in_copying'} = '*document_root C3
       {spaces_after_argument:\\n}
    {empty_line:\\n}
  *normal_command@node C1 l10 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -52,7 +49,6 @@ $result_tree_text{'html_in_copying'} = '*document_root C3
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C2 l11 {top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1

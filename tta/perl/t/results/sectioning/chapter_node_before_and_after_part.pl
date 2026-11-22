@@ -14,7 +14,6 @@ $result_tree_text{'chapter_node_before_and_after_part'} = '*document_root C6
    {text_before_beginning:\\n}
   *preamble_before_content
  *normal_command@node C1 l2 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -24,7 +23,6 @@ $result_tree_text{'chapter_node_before_and_after_part'} = '*document_root C6
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@chapter C4 l3 {chapter}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{1}
@@ -41,7 +39,6 @@ $result_tree_text{'chapter_node_before_and_after_part'} = '*document_root C6
    *menu_entry C4 l6
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{after}
      {normal_text:after}
@@ -50,7 +47,6 @@ $result_tree_text{'chapter_node_before_and_after_part'} = '*document_root C6
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 l7
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -58,7 +54,6 @@ $result_tree_text{'chapter_node_before_and_after_part'} = '*document_root C6
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@part C2 l9 {part}
- |EXTRA
  |global_command_number:{1}
  |section_level:{0}
  |section_number:{2}
@@ -69,7 +64,6 @@ $result_tree_text{'chapter_node_before_and_after_part'} = '*document_root C6
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l11 {after}
- |EXTRA
  |identifier:{after}
  |is_target:{1}
  |node_number:{2}
@@ -79,7 +73,6 @@ $result_tree_text{'chapter_node_before_and_after_part'} = '*document_root C6
     {normal_text:after}
     {spaces_after_argument:\\n}
  *normal_command@chapter C3 l12 {chapter 2}
- |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
  |section_number:{3}
@@ -90,7 +83,6 @@ $result_tree_text{'chapter_node_before_and_after_part'} = '*document_root C6
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@contents C1 l14
-  |EXTRA
   |global_command_number:{1}
    *line_arg C1
     {spaces_before_argument:\\n}

@@ -12,7 +12,6 @@ $result_tree_text{'sc_with_utf8_enable_encoding'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C1
    *normal_command@documentencoding C1 l1
-   |EXTRA
    |global_command_number:{1}
    |input_encoding_name:{utf-8}
    |text_arg:{utf-8}

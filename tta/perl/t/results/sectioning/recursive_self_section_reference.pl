@@ -12,7 +12,6 @@ $result_tree_text{'recursive_self_section_reference'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 l1 {sharp}
- |EXTRA
  |identifier:{sharp}
  |is_target:{1}
  |node_number:{1}
@@ -22,7 +21,6 @@ $result_tree_text{'recursive_self_section_reference'} = '*document_root C3
     {normal_text:sharp}
     {spaces_after_argument:\\n}
  *normal_command@chapter C1 l2 {@ref{sharp} tuple}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{1}
@@ -31,7 +29,6 @@ $result_tree_text{'recursive_self_section_reference'} = '*document_root C3
     {spaces_before_argument: }
     *normal_command@ref C1 l2
      *brace_arg C1
-     |EXTRA
      |node_content:A{0|0}
      |normalized:{sharp}
       {normal_text:sharp}

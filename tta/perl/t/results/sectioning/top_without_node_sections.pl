@@ -17,7 +17,6 @@ FastForward: [U1]
  *before_node_section C1
   *preamble_before_content
  *normal_command@top C3 l1 {top section}
- |EXTRA
  |identifier:{top-section}
  |is_target:{1}
  |section_level:{0}
@@ -39,7 +38,6 @@ FastBack: [U0]
 Up: [U0]
 NodeUp: (dir)
  *normal_command@node C1 l4 {second}
- |EXTRA
  |identifier:{second}
  |is_target:{1}
  |node_number:{1}
@@ -50,14 +48,12 @@ NodeUp: (dir)
    *line_arg
    *line_arg
    *line_arg C4
-   |EXTRA
    |manual_content:A{1|1}
     {normal_text:(}
     {normal_text:dir}
     {normal_text:)}
     {spaces_after_argument:\\n}
  *normal_command@chapter C3 l5 {Chapter}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}

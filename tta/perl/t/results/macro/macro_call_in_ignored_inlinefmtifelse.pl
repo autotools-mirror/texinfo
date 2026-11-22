@@ -12,14 +12,12 @@ $result_tree_text{'macro_call_in_ignored_inlinefmtifelse'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C2
    *normal_command@macro C3 l1
-   |EXTRA
    |formal_args:A{}
    |macro_name:{commafmt}
     *arguments_line C1
      {macro_line: commafmt\\n}
     {raw:before comma, after\\n}
     *normal_command@end C1 l3
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -29,7 +27,6 @@ $result_tree_text{'macro_call_in_ignored_inlinefmtifelse'} = '*document_root C1
   *paragraph C3
    {normal_text:Toto }
    *normal_command@inlinefmtifelse C2 l5
-   |EXTRA
    |expand_index:{2}
    |format:{tex}
     *brace_arg C1

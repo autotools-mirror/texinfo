@@ -12,14 +12,12 @@ $result_tree_text{'macro_in_menu_description'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C2
    *normal_command@macro C3 l1
-   |EXTRA
    |formal_args:A{}
    |macro_name:{emptystring}
     *arguments_line C1
      {macro_line: emptystring\\n}
     {raw:\\n}
     *normal_command@end C1 l3
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -33,7 +31,6 @@ $result_tree_text{'macro_in_menu_description'} = '*document_root C1
    *menu_entry C4 l6
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{Copying-Conditions}
      {normal_text:Copying Conditions}
@@ -50,7 +47,6 @@ $result_tree_text{'macro_in_menu_description'} = '*document_root C1
        >*brace_arg
      >macro_expansion<end;1>
    *normal_command@end C1 l8
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }

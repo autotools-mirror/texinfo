@@ -12,7 +12,6 @@ $result_tree_text{'commands_in_alt'} = '*document_root C1
  *before_node_section C5
   *preamble_before_content
   *normal_command@image C4 l1
-  |EXTRA
   |input_encoding_name:{utf-8}
    *brace_arg C1
     {normal_text:f--ile}
@@ -31,7 +30,6 @@ $result_tree_text{'commands_in_alt'} = '*document_root C1
      {spaces_before_argument:\\n}
    *preformatted C2
     *normal_command@image C4 l4
-    |EXTRA
     |input_encoding_name:{utf-8}
      *brace_arg C1
       {normal_text:f--ile}
@@ -44,7 +42,6 @@ $result_tree_text{'commands_in_alt'} = '*document_root C1
         {normal_text:in b}
     {normal_text:\\n}
    *normal_command@end C1 l5
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }

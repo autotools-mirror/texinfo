@@ -12,7 +12,6 @@ $result_tree_text{'value_in_node'} = '*document_root C6
  *before_node_section C1
   *preamble_before_content C2
    *normal_command@set C1
-   |EXTRA
    |misc_args:A{node1|Node 1}
     *line_arg C3
      {spaces_before_argument: }
@@ -20,7 +19,6 @@ $result_tree_text{'value_in_node'} = '*document_root C6
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *normal_command@node C1 l3 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -29,21 +27,18 @@ $result_tree_text{'value_in_node'} = '*document_root C6
     {spaces_before_argument: }
     {normal_text:Top}
    *line_arg C4
-   |EXTRA
    |manual_content:A{2|2}
     {spaces_before_argument: }
     {normal_text:(}
     {normal_text:dir}
     {normal_text:)}
    *line_arg C4
-   |EXTRA
    |manual_content:A{2|2}
     {spaces_before_argument: }
     {normal_text:(}
     {normal_text:dir}
     {normal_text:)}
    *line_arg C5
-   |EXTRA
    |manual_content:A{2|2}
     {spaces_before_argument: }
     {normal_text:(}
@@ -51,7 +46,6 @@ $result_tree_text{'value_in_node'} = '*document_root C6
     {normal_text:)}
     {spaces_after_argument:\\n}
  *normal_command@top C4 l4 {Expansion in Node Names}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -67,7 +61,6 @@ $result_tree_text{'value_in_node'} = '*document_root C6
    *menu_entry C4 l7
     {menu_entry_leading_text:* }
     *menu_entry_node C2
-    |EXTRA
     |node_content:A{0|1}
     |normalized:{Node-1}
      {normal_text:Node 1}
@@ -83,7 +76,6 @@ $result_tree_text{'value_in_node'} = '*document_root C6
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 l8
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -91,7 +83,6 @@ $result_tree_text{'value_in_node'} = '*document_root C6
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l10 {Node 1}
- |EXTRA
  |identifier:{Node-1}
  |is_target:{1}
  |node_number:{2}
@@ -108,20 +99,17 @@ $result_tree_text{'value_in_node'} = '*document_root C6
     >value_expansion<end;2><p:6>
    *line_arg
    *line_arg C2
-   |EXTRA
    |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
     {normal_text:Top}
    *line_arg C3
-   |EXTRA
    |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@chapter C6 l11 {Chapter 1}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -132,7 +120,6 @@ $result_tree_text{'value_in_node'} = '*document_root C6
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@set C1
-  |EXTRA
   |misc_args:A{sec1|Section 1.1}
    *line_arg C3
     {spaces_before_argument: }
@@ -146,7 +133,6 @@ $result_tree_text{'value_in_node'} = '*document_root C6
    *menu_entry C4 l16
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{Section-1_002e1}
      {normal_text:Section 1.1}
@@ -161,7 +147,6 @@ $result_tree_text{'value_in_node'} = '*document_root C6
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 l17
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -169,7 +154,6 @@ $result_tree_text{'value_in_node'} = '*document_root C6
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C3 l19 {Section 1.1}
- |EXTRA
  |identifier:{Section-1_002e1}
  |is_target:{1}
  |node_number:{3}
@@ -180,13 +164,11 @@ $result_tree_text{'value_in_node'} = '*document_root C6
    *line_arg C1
     {spaces_before_argument: }
    *line_arg C2
-   |EXTRA
    |node_content:A{1|1}
    |normalized:{Node-1}
     {spaces_before_argument: }
     {normal_text:Node 1}
    *line_arg C3
-   |EXTRA
    |node_content:A{1|1}
    |normalized:{Node-1}
     {spaces_before_argument: }
@@ -196,7 +178,6 @@ $result_tree_text{'value_in_node'} = '*document_root C6
   *paragraph C2
    *normal_command@xref C1 l21
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{Node-1}
      {normal_text:Node 1}

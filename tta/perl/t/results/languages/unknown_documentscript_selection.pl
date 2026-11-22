@@ -19,7 +19,6 @@ $result_tree_text{'unknown_documentscript_selection'} = '*document_root C5
       {spaces_before_argument:\\n}
     *normal_command@defivar C2 l3
      *def_line C1 l3
-     |EXTRA
      |def_command:{defivar}
      |element_region:{copying}
      |index_entry:I{vr,1}
@@ -27,7 +26,6 @@ $result_tree_text{'unknown_documentscript_selection'} = '*document_root C5
       *block_line_arg C9
        (i){spaces_before_argument: }
        *def_category C1
-       |EXTRA
        |inserted:{1}
         *def_line_arg C1
          {normal_text:Instance Variable}
@@ -45,14 +43,12 @@ $result_tree_text{'unknown_documentscript_selection'} = '*document_root C5
          {normal_text:CCC}
        {spaces_after_argument:\\n}
      *normal_command@end C1 l4
-     |EXTRA
      |text_arg:{defivar}
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:defivar}
        {spaces_after_argument:\\n}
     *normal_command@end C1 l5
-    |EXTRA
     |text_arg:{copying}
      *line_arg C3
       {spaces_before_argument: }
@@ -60,7 +56,6 @@ $result_tree_text{'unknown_documentscript_selection'} = '*document_root C5
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *normal_command@documentlanguage C1 l7
-   |EXTRA
    |global_command_number:{1}
    |text_arg:{sr}
     *line_arg C3
@@ -68,7 +63,6 @@ $result_tree_text{'unknown_documentscript_selection'} = '*document_root C5
      {normal_text:sr}
      {spaces_after_argument:\\n}
    *normal_command@documentscript C1 l8
-   |EXTRA
    |global_command_number:{1}
    |text_arg:{UkNo}
     *line_arg C3
@@ -77,7 +71,6 @@ $result_tree_text{'unknown_documentscript_selection'} = '*document_root C5
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *normal_command@node C1 l10 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -87,7 +80,6 @@ $result_tree_text{'unknown_documentscript_selection'} = '*document_root C5
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C2 l11 {top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -97,7 +89,6 @@ $result_tree_text{'unknown_documentscript_selection'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l13 {chap}
- |EXTRA
  |identifier:{chap}
  |is_target:{1}
  |node_number:{2}
@@ -107,7 +98,6 @@ $result_tree_text{'unknown_documentscript_selection'} = '*document_root C5
     {normal_text:chap}
     {spaces_after_argument:\\n}
  *normal_command@chapter C17 l14 {Chap}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -119,7 +109,6 @@ $result_tree_text{'unknown_documentscript_selection'} = '*document_root C5
   {empty_line:\\n}
   *normal_command@defivar C2 l16
    *def_line C1 l16
-   |EXTRA
    |def_command:{defivar}
    |documentlanguage:{sr}
    |documentscript:{UkNo}
@@ -129,10 +118,8 @@ $result_tree_text{'unknown_documentscript_selection'} = '*document_root C5
     *block_line_arg C9
      (i){spaces_before_argument: }
      *def_category C1
-     |EXTRA
      |inserted:{1}
       *untranslated_def_line_arg C1
-      |EXTRA
       |documentlanguage:{sr}
       |documentscript:{UkNo}
       |translation_context:{category of instance variables in object-oriented programming for @defivar}
@@ -151,7 +138,6 @@ $result_tree_text{'unknown_documentscript_selection'} = '*document_root C5
        {normal_text:ivar}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l17
-   |EXTRA
    |text_arg:{defivar}
     *line_arg C3
      {spaces_before_argument: }
@@ -159,7 +145,6 @@ $result_tree_text{'unknown_documentscript_selection'} = '*document_root C5
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@documentscript C1 l19
-  |EXTRA
   |global_command_number:{2}
   |text_arg:{}
    *line_arg C1
@@ -167,7 +152,6 @@ $result_tree_text{'unknown_documentscript_selection'} = '*document_root C5
   {empty_line:\\n}
   *normal_command@defivar C2 l21
    *def_line C1 l21
-   |EXTRA
    |def_command:{defivar}
    |documentlanguage:{sr}
    |element_node:{chap}
@@ -176,10 +160,8 @@ $result_tree_text{'unknown_documentscript_selection'} = '*document_root C5
     *block_line_arg C9
      (i){spaces_before_argument: }
      *def_category C1
-     |EXTRA
      |inserted:{1}
       *untranslated_def_line_arg C1
-      |EXTRA
       |documentlanguage:{sr}
       |translation_context:{category of instance variables in object-oriented programming for @defivar}
        {untranslated:Instance Variable}
@@ -197,7 +179,6 @@ $result_tree_text{'unknown_documentscript_selection'} = '*document_root C5
        {normal_text:ivar}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l22
-   |EXTRA
    |text_arg:{defivar}
     *line_arg C3
      {spaces_before_argument: }
@@ -205,7 +186,6 @@ $result_tree_text{'unknown_documentscript_selection'} = '*document_root C5
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@documentscript C1 l24
-  |EXTRA
   |global_command_number:{3}
   |text_arg:{Bad}
    *line_arg C3
@@ -213,7 +193,6 @@ $result_tree_text{'unknown_documentscript_selection'} = '*document_root C5
     {normal_text:Bad}
     {spaces_after_argument:\\n}
   *normal_command@documentlanguage C1 l25
-  |EXTRA
   |global_command_number:{2}
   |text_arg:{az}
    *line_arg C3
@@ -223,7 +202,6 @@ $result_tree_text{'unknown_documentscript_selection'} = '*document_root C5
   {empty_line:\\n}
   *normal_command@defivar C2 l27
    *def_line C1 l27
-   |EXTRA
    |def_command:{defivar}
    |documentlanguage:{az}
    |element_node:{chap}
@@ -232,10 +210,8 @@ $result_tree_text{'unknown_documentscript_selection'} = '*document_root C5
     *block_line_arg C9
      (i){spaces_before_argument: }
      *def_category C1
-     |EXTRA
      |inserted:{1}
       *untranslated_def_line_arg C1
-      |EXTRA
       |documentlanguage:{az}
       |translation_context:{category of instance variables in object-oriented programming for @defivar}
        {untranslated:Instance Variable}
@@ -253,7 +229,6 @@ $result_tree_text{'unknown_documentscript_selection'} = '*document_root C5
        {normal_text:change}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l28
-   |EXTRA
    |text_arg:{defivar}
     *line_arg C3
      {spaces_before_argument: }
@@ -261,7 +236,6 @@ $result_tree_text{'unknown_documentscript_selection'} = '*document_root C5
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@documentscript C1 l30
-  |EXTRA
   |global_command_number:{4}
   |text_arg:{wwrong}
    *line_arg C3
@@ -271,7 +245,6 @@ $result_tree_text{'unknown_documentscript_selection'} = '*document_root C5
   {empty_line:\\n}
   *normal_command@defivar C2 l32
    *def_line C1 l32
-   |EXTRA
    |def_command:{defivar}
    |documentlanguage:{az}
    |documentscript:{wwrong}
@@ -281,10 +254,8 @@ $result_tree_text{'unknown_documentscript_selection'} = '*document_root C5
     *block_line_arg C9
      (i){spaces_before_argument: }
      *def_category C1
-     |EXTRA
      |inserted:{1}
       *untranslated_def_line_arg C1
-      |EXTRA
       |documentlanguage:{az}
       |documentscript:{wwrong}
       |translation_context:{category of instance variables in object-oriented programming for @defivar}
@@ -303,7 +274,6 @@ $result_tree_text{'unknown_documentscript_selection'} = '*document_root C5
        {normal_text:change}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l33
-   |EXTRA
    |text_arg:{defivar}
     *line_arg C3
      {spaces_before_argument: }

@@ -18,7 +18,6 @@ $result_tree_text{'end_bad_end_argument_and_superfluous_arg'} = '*document_root 
    *paragraph C2
     {normal_text:In quotation\\n}
     *normal_command@end C1 l3
-    |EXTRA
     |text_arg:{: }
      *line_arg C4
       {spaces_before_argument: }

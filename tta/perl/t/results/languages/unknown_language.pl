@@ -12,7 +12,6 @@ $result_tree_text{'unknown_language'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content C2
    *normal_command@documentlanguage C1 l1
-   |EXTRA
    |global_command_number:{1}
    |text_arg:{unknown}
     *line_arg C3
@@ -21,7 +20,6 @@ $result_tree_text{'unknown_language'} = '*document_root C5
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *normal_command@node C1 l3 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -31,7 +29,6 @@ $result_tree_text{'unknown_language'} = '*document_root C5
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C2 l4 {unknkown language}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -41,7 +38,6 @@ $result_tree_text{'unknown_language'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l6 {chapter}
- |EXTRA
  |identifier:{chapter}
  |is_target:{1}
  |node_number:{2}
@@ -51,7 +47,6 @@ $result_tree_text{'unknown_language'} = '*document_root C5
     {normal_text:chapter}
     {spaces_after_argument:\\n}
  *normal_command@chapter C7 l7 {Chapter}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -65,14 +60,12 @@ $result_tree_text{'unknown_language'} = '*document_root C5
    {normal_text:Unknown language. }
    *normal_command@xref C1 l9
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{Top}
      {normal_text:Top}
    {normal_text:.\\n}
   {empty_line:\\n}
   *normal_command@documentlanguage C1 l11
-  |EXTRA
   |global_command_number:{2}
   |text_arg:{another_UNKNOWN}
    *line_arg C3
@@ -84,7 +77,6 @@ $result_tree_text{'unknown_language'} = '*document_root C5
    {normal_text:Another unknown language. }
    *normal_command@xref C1 l13
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{Top}
      {normal_text:Top}

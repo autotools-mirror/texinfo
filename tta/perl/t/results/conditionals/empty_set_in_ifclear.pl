@@ -12,7 +12,6 @@ $result_tree_text{'empty_set_in_ifclear'} = '*document_root C1
  *before_node_section C1
   *preamble_before_content C2
    *normal_command@set C1
-   |EXTRA
    |misc_args:A{a|}
     *line_arg C3
      {spaces_before_argument: }
@@ -29,7 +28,6 @@ $result_tree_text{'empty_set_in_ifclear'} = '*document_root C1
        >{spaces_after_argument:\\n}
      >{raw:a is set to:|@value{a}|.\\n}
      >*normal_command@end C1 l5
-     >|EXTRA
      >|text_arg:{ifclear}
       >*line_arg C2
        >{spaces_before_argument: }

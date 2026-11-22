@@ -14,7 +14,6 @@ $result_tree_text{'ifclear_in_ifset_set'} = '*document_root C1
    {text_before_beginning:\\n}
   *preamble_before_content C4
    *normal_command@set C1
-   |EXTRA
    |misc_args:A{a|}
     *line_arg C3
      {spaces_before_argument: }
@@ -42,7 +41,6 @@ $result_tree_text{'ifclear_in_ifset_set'} = '*document_root C1
          >{rawline_text:- ok, ignored}
          >{spaces_after_argument:\\n}
    *normal_command@end C1 l6
-   |EXTRA
    |text_arg:{junky   - ok, ignored}
     *line_arg C3
      {spaces_before_argument: }

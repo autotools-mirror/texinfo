@@ -18,7 +18,6 @@ $result_tree_text{'table_not_closed_in_menu_comment'} = '*document_root C1
    *menu_entry C4 l2
     {menu_entry_leading_text:* }
     *menu_entry_node C3
-    |EXTRA
     |manual_content:A{1|1}
      {normal_text:(}
      {normal_text:manual}
@@ -48,7 +47,6 @@ $result_tree_text{'table_not_closed_in_menu_comment'} = '*document_root C1
         {normal_text:comment\\n}
         {normal_text:* (manual2)::\\n}
    *normal_command@end C1 l8
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }

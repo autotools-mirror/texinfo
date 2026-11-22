@@ -14,7 +14,6 @@ $result_tree_text{'part_chapter_appendix'} = '*document_root C4
    {text_before_beginning:\\n}
   *preamble_before_content
  *normal_command@part C2 l2 {Part 1}
- |EXTRA
  |global_command_number:{1}
  |section_level:{0}
  |section_number:{1}
@@ -25,7 +24,6 @@ $result_tree_text{'part_chapter_appendix'} = '*document_root C4
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@chapter C2 l4 {chapter}
- |EXTRA
  |identifier:{chapter}
  |is_target:{1}
  |section_heading_number:{1}
@@ -38,7 +36,6 @@ $result_tree_text{'part_chapter_appendix'} = '*document_root C4
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@appendix C1 l6 {Appendix}
- |EXTRA
  |identifier:{Appendix}
  |is_target:{1}
  |section_heading_number:{A}

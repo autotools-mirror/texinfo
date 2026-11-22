@@ -12,7 +12,6 @@ $result_tree_text{'nodedescription_description_no_use_nodes'} = '*document_root 
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -22,7 +21,6 @@ $result_tree_text{'nodedescription_description_no_use_nodes'} = '*document_root 
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C2 l2 {test of descriptions with nodedescription*}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -32,7 +30,6 @@ $result_tree_text{'nodedescription_description_no_use_nodes'} = '*document_root 
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l4 {toto}
- |EXTRA
  |identifier:{toto}
  |is_target:{1}
  |node_number:{2}
@@ -42,7 +39,6 @@ $result_tree_text{'nodedescription_description_no_use_nodes'} = '*document_root 
     {normal_text:toto}
     {spaces_after_argument:\\n}
  *normal_command@chapter C6 l5 {Toto}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -83,7 +79,6 @@ $result_tree_text{'nodedescription_description_no_use_nodes'} = '*document_root 
    *paragraph C1
     {normal_text:Block along line node description for toto\\n}
    *normal_command@end C1 l11
-   |EXTRA
    |text_arg:{nodedescriptionblock}
     *line_arg C3
      {spaces_before_argument: }
@@ -91,7 +86,6 @@ $result_tree_text{'nodedescription_description_no_use_nodes'} = '*document_root 
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l13 {titi}
- |EXTRA
  |identifier:{titi}
  |is_target:{1}
  |node_number:{3}
@@ -101,7 +95,6 @@ $result_tree_text{'nodedescription_description_no_use_nodes'} = '*document_root 
     {normal_text:titi}
     {spaces_after_argument:\\n}
  *normal_command@chapter C4 l14 {Titi}
- |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
  |section_number:{3}
@@ -118,7 +111,6 @@ $result_tree_text{'nodedescription_description_no_use_nodes'} = '*document_root 
    *paragraph C1
     {normal_text:description of titi in block\\n}
    *normal_command@end C1 l18
-   |EXTRA
    |text_arg:{nodedescriptionblock}
     *line_arg C3
      {spaces_before_argument: }
@@ -126,7 +118,6 @@ $result_tree_text{'nodedescription_description_no_use_nodes'} = '*document_root 
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l20 {other}
- |EXTRA
  |identifier:{other}
  |is_target:{1}
  |node_number:{4}
@@ -136,7 +127,6 @@ $result_tree_text{'nodedescription_description_no_use_nodes'} = '*document_root 
     {normal_text:other}
     {spaces_after_argument:\\n}
  *normal_command@chapter C3 l21 {Other}
- |EXTRA
  |section_heading_number:{3}
  |section_level:{1}
  |section_number:{4}

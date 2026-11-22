@@ -16,7 +16,6 @@ $result_tree_text{'definfoenclose'} = '*document_root C1
   *paragraph C2
    {normal_text:definfoenclose phoo,//,\\  }
    *normal_command@definfoenclose C1 l2
-   |EXTRA
    |misc_args:A{phoo|//|\\}
     *line_arg C3
      {spaces_before_argument: }
@@ -25,7 +24,6 @@ $result_tree_text{'definfoenclose'} = '*document_root C1
   {empty_line:\\n}
   *paragraph C2
    *definfoenclose_command@phoo C1 l4
-   |EXTRA
    |begin:{//}
    |end:{\\}
     *brace_container C1
@@ -35,7 +33,6 @@ $result_tree_text{'definfoenclose'} = '*document_root C1
   *paragraph C2
    {normal_text:definfoenclose phi,:,:  }
    *normal_command@definfoenclose C1 l6
-   |EXTRA
    |misc_args:A{phi|:|:}
     *line_arg C3
      {spaces_before_argument: }
@@ -44,7 +41,6 @@ $result_tree_text{'definfoenclose'} = '*document_root C1
   {empty_line:\\n}
   *paragraph C2
    *definfoenclose_command@phi C1 l8
-   |EXTRA
    |begin:{:}
    |end:{:}
     *brace_container C1
@@ -58,7 +54,6 @@ $result_tree_text{'definfoenclose'} = '*document_root C1
    {normal_text:\\n}
   {empty_line:\\n}
   *normal_command@definfoenclose C1 l12
-  |EXTRA
   |misc_args:A{strong|(strong:|:)}
    *line_arg C3
     {spaces_before_argument: }
@@ -67,7 +62,6 @@ $result_tree_text{'definfoenclose'} = '*document_root C1
   {empty_line:\\n}
   *paragraph C2
    *definfoenclose_command@strong C1 l14
-   |EXTRA
    |begin:{(strong:}
    |end:{:)}
     *brace_container C1

@@ -12,7 +12,6 @@ $result_tree_text{'no_brace_caption'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -22,7 +21,6 @@ $result_tree_text{'no_brace_caption'} = '*document_root C5
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C2 l2 {top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -32,7 +30,6 @@ $result_tree_text{'no_brace_caption'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l4 {chap}
- |EXTRA
  |identifier:{chap}
  |is_target:{1}
  |node_number:{2}
@@ -42,7 +39,6 @@ $result_tree_text{'no_brace_caption'} = '*document_root C5
     {normal_text:chap}
     {spaces_after_argument:\\n}
  *normal_command@chapter C5 l5 {Chap}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -53,7 +49,6 @@ $result_tree_text{'no_brace_caption'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@float C4 l7
-  |EXTRA
   |float_number:{1.1}
   |float_type:{a}
   |global_command_number:{1}
@@ -72,7 +67,6 @@ $result_tree_text{'no_brace_caption'} = '*document_root C5
    *normal_command@caption C1 l9
     {spaces_after_cmd_before_arg:\\n}
    *normal_command@end C1 l10
-   |EXTRA
    |text_arg:{float}
     *line_arg C3
      {spaces_before_argument: }
@@ -80,7 +74,6 @@ $result_tree_text{'no_brace_caption'} = '*document_root C5
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@listoffloats C1 l12
-  |EXTRA
   |float_type:{a}
   |global_command_number:{1}
    *line_arg C3

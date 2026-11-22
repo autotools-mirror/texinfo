@@ -17,7 +17,6 @@ $result_tree_text{'sp_empty_lines_1_no_arg_zero'} = '*document_root C1
   *paragraph C1
    {normal_text:A010\\n}
   *normal_command@sp C1 l4
-  |EXTRA
   |misc_args:A{1}
    *line_arg C3
     {spaces_before_argument: }
@@ -27,7 +26,6 @@ $result_tree_text{'sp_empty_lines_1_no_arg_zero'} = '*document_root C1
    {normal_text:A110\\n}
   {empty_line:\\n}
   *normal_command@sp C1 l7
-  |EXTRA
   |misc_args:A{1}
    *line_arg C3
     {spaces_before_argument: }
@@ -37,7 +35,6 @@ $result_tree_text{'sp_empty_lines_1_no_arg_zero'} = '*document_root C1
    {normal_text:A011\\n}
   {empty_line:\\n}
   *normal_command@sp C1 l10
-  |EXTRA
   |misc_args:A{1}
    *line_arg C3
     {spaces_before_argument: }
@@ -47,7 +44,6 @@ $result_tree_text{'sp_empty_lines_1_no_arg_zero'} = '*document_root C1
    {normal_text:A111\\n}
   {empty_line:\\n}
   *normal_command@sp C1 l13
-  |EXTRA
   |misc_args:A{1}
    *line_arg C3
     {spaces_before_argument: }
@@ -57,7 +53,6 @@ $result_tree_text{'sp_empty_lines_1_no_arg_zero'} = '*document_root C1
   *paragraph C1
    {normal_text:A000\\n}
   *normal_command@sp C1 l16
-  |EXTRA
   |misc_args:A{0}
    *line_arg C3
     {spaces_before_argument: }
@@ -67,7 +62,6 @@ $result_tree_text{'sp_empty_lines_1_no_arg_zero'} = '*document_root C1
    {normal_text:A100\\n}
   {empty_line:\\n}
   *normal_command@sp C1 l19
-  |EXTRA
   |misc_args:A{0}
    *line_arg C3
     {spaces_before_argument: }
@@ -77,7 +71,6 @@ $result_tree_text{'sp_empty_lines_1_no_arg_zero'} = '*document_root C1
    {normal_text:A001\\n}
   {empty_line:\\n}
   *normal_command@sp C1 l22
-  |EXTRA
   |misc_args:A{0}
    *line_arg C3
     {spaces_before_argument: }
@@ -87,7 +80,6 @@ $result_tree_text{'sp_empty_lines_1_no_arg_zero'} = '*document_root C1
    {normal_text:A101\\n}
   {empty_line:\\n}
   *normal_command@sp C1 l25
-  |EXTRA
   |misc_args:A{0}
    *line_arg C3
     {spaces_before_argument: }

@@ -12,7 +12,6 @@ $result_tree_text{'detailmenu_on_subnodes'} = '*document_root C13
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -22,7 +21,6 @@ $result_tree_text{'detailmenu_on_subnodes'} = '*document_root C13
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C4 l2 {top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -38,7 +36,6 @@ $result_tree_text{'detailmenu_on_subnodes'} = '*document_root C13
    *menu_entry C4 l5
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{chapter}
      {normal_text:chapter}
@@ -49,7 +46,6 @@ $result_tree_text{'detailmenu_on_subnodes'} = '*document_root C13
    *menu_entry C4 l6
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{chapter-2}
      {normal_text:chapter 2}
@@ -61,7 +57,6 @@ $result_tree_text{'detailmenu_on_subnodes'} = '*document_root C13
     *preformatted C1
      {after_menu_description_line:\\n}
    *normal_command@detailmenu C3 l8
-   |EXTRA
    |global_command_number:{1}
     *arguments_line C1
      *block_line_arg C1
@@ -69,7 +64,6 @@ $result_tree_text{'detailmenu_on_subnodes'} = '*document_root C13
     *menu_entry C4 l9
      {menu_entry_leading_text:* }
      *menu_entry_node C1
-     |EXTRA
      |node_content:A{0|0}
      |normalized:{section}
       {normal_text:section}
@@ -78,7 +72,6 @@ $result_tree_text{'detailmenu_on_subnodes'} = '*document_root C13
       *preformatted C1
        {normal_text:\\n}
     *normal_command@end C1 l10
-    |EXTRA
     |text_arg:{detailmenu}
      *line_arg C3
       {spaces_before_argument: }
@@ -88,7 +81,6 @@ $result_tree_text{'detailmenu_on_subnodes'} = '*document_root C13
     *preformatted C1
      {empty_line:\\n}
    *normal_command@detailmenu C5 l12
-   |EXTRA
    |global_command_number:{2}
     *arguments_line C1
      *block_line_arg C1
@@ -100,7 +92,6 @@ $result_tree_text{'detailmenu_on_subnodes'} = '*document_root C13
     *menu_entry C4 l15
      {menu_entry_leading_text:* }
      *menu_entry_node C1
-     |EXTRA
      |node_content:A{0|0}
      |normalized:{section-chap-2}
       {normal_text:section chap 2}
@@ -111,7 +102,6 @@ $result_tree_text{'detailmenu_on_subnodes'} = '*document_root C13
     *menu_entry C4 l16
      {menu_entry_leading_text:* }
      *menu_entry_node C1
-     |EXTRA
      |node_content:A{0|0}
      |normalized:{unnumberedsec}
       {normal_text:unnumberedsec}
@@ -120,14 +110,12 @@ $result_tree_text{'detailmenu_on_subnodes'} = '*document_root C13
       *preformatted C1
        {normal_text:\\n}
     *normal_command@end C1 l17
-    |EXTRA
     |text_arg:{detailmenu}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:detailmenu}
       {spaces_after_argument:\\n}
    *normal_command@end C1 l18
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -135,7 +123,6 @@ $result_tree_text{'detailmenu_on_subnodes'} = '*document_root C13
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l20 {chapter}
- |EXTRA
  |identifier:{chapter}
  |is_target:{1}
  |node_number:{2}
@@ -145,7 +132,6 @@ $result_tree_text{'detailmenu_on_subnodes'} = '*document_root C13
     {normal_text:chapter}
     {spaces_after_argument:\\n}
  *normal_command@chapter C4 l21 {chapter}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -162,7 +148,6 @@ $result_tree_text{'detailmenu_on_subnodes'} = '*document_root C13
    *menu_entry C4 l24
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{section}
      {normal_text:section}
@@ -171,7 +156,6 @@ $result_tree_text{'detailmenu_on_subnodes'} = '*document_root C13
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 l25
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -179,7 +163,6 @@ $result_tree_text{'detailmenu_on_subnodes'} = '*document_root C13
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l27 {section}
- |EXTRA
  |identifier:{section}
  |is_target:{1}
  |node_number:{3}
@@ -189,7 +172,6 @@ $result_tree_text{'detailmenu_on_subnodes'} = '*document_root C13
     {normal_text:section}
     {spaces_after_argument:\\n}
  *normal_command@section C2 l28 {section}
- |EXTRA
  |section_heading_number:{1.1}
  |section_level:{2}
  |section_number:{3}
@@ -200,7 +182,6 @@ $result_tree_text{'detailmenu_on_subnodes'} = '*document_root C13
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l30 {chapter 2}
- |EXTRA
  |identifier:{chapter-2}
  |is_target:{1}
  |node_number:{4}
@@ -210,7 +191,6 @@ $result_tree_text{'detailmenu_on_subnodes'} = '*document_root C13
     {normal_text:chapter 2}
     {spaces_after_argument:\\n}
  *normal_command@chapter C4 l31 {chapter 2}
- |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
  |section_number:{4}
@@ -227,7 +207,6 @@ $result_tree_text{'detailmenu_on_subnodes'} = '*document_root C13
    *menu_entry C4 l34
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{section-chap-2}
      {normal_text:section chap 2}
@@ -238,7 +217,6 @@ $result_tree_text{'detailmenu_on_subnodes'} = '*document_root C13
    *menu_entry C4 l35
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{unnumberedsec}
      {normal_text:unnumberedsec}
@@ -247,7 +225,6 @@ $result_tree_text{'detailmenu_on_subnodes'} = '*document_root C13
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 l36
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -255,7 +232,6 @@ $result_tree_text{'detailmenu_on_subnodes'} = '*document_root C13
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l38 {section chap 2}
- |EXTRA
  |identifier:{section-chap-2}
  |is_target:{1}
  |node_number:{5}
@@ -265,7 +241,6 @@ $result_tree_text{'detailmenu_on_subnodes'} = '*document_root C13
     {normal_text:section chap 2}
     {spaces_after_argument:\\n}
  *normal_command@section C2 l39 {section chap 2}
- |EXTRA
  |section_heading_number:{2.1}
  |section_level:{2}
  |section_number:{5}
@@ -276,7 +251,6 @@ $result_tree_text{'detailmenu_on_subnodes'} = '*document_root C13
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l41 {unnumberedsec}
- |EXTRA
  |identifier:{unnumberedsec}
  |is_target:{1}
  |node_number:{6}
@@ -286,7 +260,6 @@ $result_tree_text{'detailmenu_on_subnodes'} = '*document_root C13
     {normal_text:unnumberedsec}
     {spaces_after_argument:\\n}
  *normal_command@unnumberedsec C1 l42 {unnumberedsec}
- |EXTRA
  |section_level:{2}
  |section_number:{6}
   *arguments_line C1

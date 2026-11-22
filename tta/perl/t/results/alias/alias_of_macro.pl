@@ -12,14 +12,12 @@ $result_tree_text{'alias_of_macro'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C4
    *normal_command@macro C3 l1
-   |EXTRA
    |formal_args:A{thearg}
    |macro_name:{mymacro}
     *arguments_line C1
      {macro_line: mymacro {thearg}\\n}
     {raw:||\\thearg||\\n}
     *normal_command@end C1 l3
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -27,7 +25,6 @@ $result_tree_text{'alias_of_macro'} = '*document_root C1
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *normal_command@alias C1 l5
-   |EXTRA
    |misc_args:A{new|mymacro}
     *line_arg C3
      {spaces_before_argument: }
@@ -39,7 +36,6 @@ $result_tree_text{'alias_of_macro'} = '*document_root C1
    >SOURCEMARKS
    >macro_expansion<start;1>
     >*macro_call@mymacro C1
-    >|EXTRA
     >|alias_of:{new}
      >*brace_arg C1
       >{macro_call_arg_text:tt}

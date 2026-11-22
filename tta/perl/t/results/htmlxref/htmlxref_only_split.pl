@@ -15,7 +15,6 @@ $result_tree_text{'htmlxref_only_split'} = '*document_root C9
    {text_before_beginning:\\n}
   *preamble_before_content
  *normal_command@node C1 test_refs.texi:l3 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -25,7 +24,6 @@ $result_tree_text{'htmlxref_only_split'} = '*document_root C9
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C41 test_refs.texi:l4 {Test refs}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -41,7 +39,6 @@ $result_tree_text{'htmlxref_only_split'} = '*document_root C9
    *menu_entry C4 test_refs.texi:l7
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{other-nodes}
      {normal_text:other nodes}
@@ -50,7 +47,6 @@ $result_tree_text{'htmlxref_only_split'} = '*document_root C9
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 test_refs.texi:l8
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -58,7 +54,6 @@ $result_tree_text{'htmlxref_only_split'} = '*document_root C9
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@subheading C1 test_refs.texi:l10
-  |EXTRA
   |global_command_number:{1}
   |heading_number:{1}
    *line_arg C3
@@ -75,7 +70,6 @@ $result_tree_text{'htmlxref_only_split'} = '*document_root C9
    {normal_text: }
    *normal_command@ref C4 test_refs.texi:l12
     *brace_arg C3
-    |EXTRA
     |node_content:A{1|1}
      {spaces_before_argument: }
      {normal_text:a  node}
@@ -95,7 +89,6 @@ $result_tree_text{'htmlxref_only_split'} = '*document_root C9
     {normal_text:mono : manual.html#a-node\\n}
     {normal_text:split: ../manual/a-node.html#a-node\\n}
    *normal_command@end C1 test_refs.texi:l16
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
@@ -111,7 +104,6 @@ $result_tree_text{'htmlxref_only_split'} = '*document_root C9
    {normal_text: }
    *normal_command@ref C4 test_refs.texi:l18
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
      {normal_text::}
     *brace_arg
@@ -127,7 +119,6 @@ $result_tree_text{'htmlxref_only_split'} = '*document_root C9
     {normal_text:mono : manual.html#_003a\\n}
     {normal_text:split: ../manual/_003a.html#_003a\\n}
    *normal_command@end C1 test_refs.texi:l22
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
@@ -143,7 +134,6 @@ $result_tree_text{'htmlxref_only_split'} = '*document_root C9
    {normal_text: }
    *normal_command@ref C4 test_refs.texi:l24
     *brace_arg C3
-    |EXTRA
     |node_content:A{1|1}
      {spaces_before_argument: }
      {normal_text:top}
@@ -163,7 +153,6 @@ $result_tree_text{'htmlxref_only_split'} = '*document_root C9
     {normal_text:mono : manual.html#Top\\n}
     {normal_text:split: ../manual/index.html#Top\\n}
    *normal_command@end C1 test_refs.texi:l28
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
@@ -171,7 +160,6 @@ $result_tree_text{'htmlxref_only_split'} = '*document_root C9
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@subheading C1 test_refs.texi:l30
-  |EXTRA
   |global_command_number:{2}
   |heading_number:{2}
    *line_arg C3
@@ -188,7 +176,6 @@ $result_tree_text{'htmlxref_only_split'} = '*document_root C9
    {normal_text: }
    *normal_command@ref C4 test_refs.texi:l32
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
      {normal_text:node}
     *brace_arg
@@ -206,7 +193,6 @@ $result_tree_text{'htmlxref_only_split'} = '*document_root C9
     {normal_text:mono : doc.html#node\\n}
     {normal_text:split: ../doc/node.html#node\\n}
    *normal_command@end C1 test_refs.texi:l36
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
@@ -214,7 +200,6 @@ $result_tree_text{'htmlxref_only_split'} = '*document_root C9
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@subheading C1 test_refs.texi:l38
-  |EXTRA
   |global_command_number:{3}
   |heading_number:{3}
    *line_arg C3
@@ -231,7 +216,6 @@ $result_tree_text{'htmlxref_only_split'} = '*document_root C9
    {normal_text: }
    *normal_command@ref C1 test_refs.texi:l40
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{_0021_005f_0022_0023_0024_0025_0026_0027_0028_0029_002a_002b_002d_002e}
      {normal_text:!_"#$%&\'()*+-.}
@@ -243,7 +227,6 @@ $result_tree_text{'htmlxref_only_split'} = '*document_root C9
    *preformatted C1
     {normal_text:target: #_0021_005f_0022_0023_0024_0025_0026_0027_0028_0029_002a_002b_002d_002e\\n}
    *normal_command@end C1 test_refs.texi:l43
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
@@ -259,7 +242,6 @@ $result_tree_text{'htmlxref_only_split'} = '*document_root C9
    {normal_text: }
    *normal_command@ref C1 test_refs.texi:l45
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{_002f_003b_003c_003d_003e_003f_005b_005c_005d_005e_005f_0060_007c_007e}
      {normal_text:/;<=>?[\\]^_`|~}
@@ -272,7 +254,6 @@ $result_tree_text{'htmlxref_only_split'} = '*document_root C9
    *preformatted C1
     {normal_text:target: #_002f_003b_003c_003d_003e_003f_005b_005c_005d_005e_005f_0060_007c_007e\\n}
    *normal_command@end C1 test_refs.texi:l48
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
@@ -288,7 +269,6 @@ $result_tree_text{'htmlxref_only_split'} = '*document_root C9
    {normal_text: }
    *normal_command@ref C1 test_refs.texi:l50
     *brace_arg C2
-    |EXTRA
     |node_content:A{1|1}
     |normalized:{Top}
      {spaces_before_argument: }
@@ -301,7 +281,6 @@ $result_tree_text{'htmlxref_only_split'} = '*document_root C9
    *preformatted C1
     {normal_text:target: #Top\\n}
    *normal_command@end C1 test_refs.texi:l53
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
@@ -317,7 +296,6 @@ $result_tree_text{'htmlxref_only_split'} = '*document_root C9
    {normal_text: }
    *normal_command@ref C1 test_refs.texi:l55
     *brace_arg C2
-    |EXTRA
     |node_content:A{1|1}
     |normalized:{local-node}
      {spaces_before_argument:  }
@@ -330,7 +308,6 @@ $result_tree_text{'htmlxref_only_split'} = '*document_root C9
    *preformatted C1
     {normal_text:target: #local-node\\n}
    *normal_command@end C1 test_refs.texi:l58
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
@@ -351,7 +328,6 @@ $result_tree_text{'htmlxref_only_split'} = '*document_root C9
    {normal_text: }
    *normal_command@ref C1 test_refs.texi:l61
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{_0028mtexinfo_0029Cross-References}
      {normal_text:(mtexinfo)Cross References}
@@ -363,7 +339,6 @@ $result_tree_text{'htmlxref_only_split'} = '*document_root C9
    *preformatted C1
     {normal_text:target: #_0028mtexinfo_0029Cross-References\\n}
    *normal_command@end C1 test_refs.texi:l64
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
@@ -371,7 +346,6 @@ $result_tree_text{'htmlxref_only_split'} = '*document_root C9
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@anchor C1 test_refs.texi:l66
-  |EXTRA
   |identifier:{_0028mtexinfo_0029Cross-References}
   |is_target:{1}
    *brace_arg C1
@@ -379,7 +353,6 @@ $result_tree_text{'htmlxref_only_split'} = '*document_root C9
   {spaces_after_close_brace:\\n}
   {empty_line:\\n}
  *normal_command@node C1 test_refs.texi:l68 {other nodes}
- |EXTRA
  |identifier:{other-nodes}
  |is_target:{1}
  |node_number:{2}
@@ -388,26 +361,22 @@ $result_tree_text{'htmlxref_only_split'} = '*document_root C9
     {spaces_before_argument: }
     {normal_text:other nodes}
    *line_arg C2
-   |EXTRA
    |node_content:A{1|1}
    |normalized:{_0021_005f_0022_0023_0024_0025_0026_0027_0028_0029_002a_002b_002d_002e}
     {spaces_before_argument: }
     {normal_text:!_"#$%&\'()*+-.}
    *line_arg C2
-   |EXTRA
    |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
     {normal_text:Top}
    *line_arg C3
-   |EXTRA
    |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@chapter C9 test_refs.texi:l69 {Chapter with nodes}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -424,7 +393,6 @@ $result_tree_text{'htmlxref_only_split'} = '*document_root C9
    *preformatted C1
     {normal_text:id: other-nodes\\n}
    *normal_command@end C1 test_refs.texi:l73
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
@@ -440,7 +408,6 @@ $result_tree_text{'htmlxref_only_split'} = '*document_root C9
    {normal_text: }
    *normal_command@ref C1 test_refs.texi:l75
     *brace_arg C2
-    |EXTRA
     |node_content:A{1|1}
     |normalized:{Top}
      {spaces_before_argument: }
@@ -453,7 +420,6 @@ $result_tree_text{'htmlxref_only_split'} = '*document_root C9
    *preformatted C1
     {normal_text:target: #Top\\n}
    *normal_command@end C1 test_refs.texi:l78
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
@@ -467,7 +433,6 @@ $result_tree_text{'htmlxref_only_split'} = '*document_root C9
    *menu_entry C4 test_refs.texi:l81
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{_0021_005f_0022_0023_0024_0025_0026_0027_0028_0029_002a_002b_002d_002e}
      {normal_text:!_"#$%&\'()*+-.}
@@ -478,7 +443,6 @@ $result_tree_text{'htmlxref_only_split'} = '*document_root C9
    *menu_entry C4 test_refs.texi:l82
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{_002f_003b_003c_003d_003e_003f_005b_005c_005d_005e_005f_0060_007c_007e}
      {normal_text:/;<=>?[\\]^_`|~}
@@ -489,7 +453,6 @@ $result_tree_text{'htmlxref_only_split'} = '*document_root C9
    *menu_entry C4 test_refs.texi:l83
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{local-node}
      {normal_text:local node}
@@ -498,7 +461,6 @@ $result_tree_text{'htmlxref_only_split'} = '*document_root C9
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 test_refs.texi:l84
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -506,7 +468,6 @@ $result_tree_text{'htmlxref_only_split'} = '*document_root C9
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C3 test_refs.texi:l86 {!_"#$%&\'()*+-.}
- |EXTRA
  |identifier:{_0021_005f_0022_0023_0024_0025_0026_0027_0028_0029_002a_002b_002d_002e}
  |is_target:{1}
  |node_number:{3}
@@ -515,19 +476,16 @@ $result_tree_text{'htmlxref_only_split'} = '*document_root C9
     {spaces_before_argument: }
     {normal_text:!_"#$%&\'()*+-.}
    *line_arg C2
-   |EXTRA
    |node_content:A{1|1}
    |normalized:{_002f_003b_003c_003d_003e_003f_005b_005c_005d_005e_005f_0060_007c_007e}
     {spaces_before_argument: }
     {normal_text:/;<=>?[\\]^_`|~}
    *line_arg C2
-   |EXTRA
    |node_content:A{1|1}
    |normalized:{other-nodes}
     {spaces_before_argument: }
     {normal_text:other nodes}
    *line_arg C3
-   |EXTRA
    |node_content:A{1|1}
    |normalized:{other-nodes}
     {spaces_before_argument: }
@@ -540,7 +498,6 @@ $result_tree_text{'htmlxref_only_split'} = '*document_root C9
    *preformatted C1
     {normal_text:id: _0021_005f_0022_0023_0024_0025_0026_0027_0028_0029_002a_002b_002d_002e\\n}
    *normal_command@end C1 test_refs.texi:l89
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
@@ -548,7 +505,6 @@ $result_tree_text{'htmlxref_only_split'} = '*document_root C9
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C3 test_refs.texi:l91 {/;<=>?[\\]^_`|~}
- |EXTRA
  |identifier:{_002f_003b_003c_003d_003e_003f_005b_005c_005d_005e_005f_0060_007c_007e}
  |is_target:{1}
  |node_number:{4}
@@ -557,17 +513,14 @@ $result_tree_text{'htmlxref_only_split'} = '*document_root C9
     {spaces_before_argument: }
     {normal_text:/;<=>?[\\]^_`|~}
    *line_arg C1
-   |EXTRA
    |node_content:A{0|0}
    |normalized:{local-node}
     {normal_text:local   node}
    *line_arg C1
-   |EXTRA
    |node_content:A{0|0}
    |normalized:{_0021_005f_0022_0023_0024_0025_0026_0027_0028_0029_002a_002b_002d_002e}
     {normal_text:!_"#$%&\'()*+-.}
    *line_arg C3
-   |EXTRA
    |node_content:A{1|1}
    |normalized:{other-nodes}
     {spaces_before_argument: }
@@ -580,7 +533,6 @@ $result_tree_text{'htmlxref_only_split'} = '*document_root C9
    *preformatted C1
     {normal_text:id: 002f_003b_003c_003d_003e_003f_005b_005c_005d_005e_005f_0060_007c_007e\\n}
    *normal_command@end C1 test_refs.texi:l94
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
@@ -588,7 +540,6 @@ $result_tree_text{'htmlxref_only_split'} = '*document_root C9
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C3 test_refs.texi:l96 {local   node}
- |EXTRA
  |identifier:{local-node}
  |is_target:{1}
  |node_number:{5}
@@ -598,12 +549,10 @@ $result_tree_text{'htmlxref_only_split'} = '*document_root C9
     {normal_text:local   node}
    *line_arg
    *line_arg C1
-   |EXTRA
    |node_content:A{0|0}
    |normalized:{_002f_003b_003c_003d_003e_003f_005b_005c_005d_005e_005f_0060_007c_007e}
     {normal_text:/;<=>?[\\]^_`|~}
    *line_arg C2
-   |EXTRA
    |node_content:A{0|0}
    |normalized:{other-nodes}
     {normal_text:other nodes}
@@ -615,7 +564,6 @@ $result_tree_text{'htmlxref_only_split'} = '*document_root C9
    *preformatted C1
     {normal_text:id: local-node\\n}
    *normal_command@end C1 test_refs.texi:l99
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }

@@ -16,7 +16,6 @@ $result_tree_text{'unknown_node_in_menu_novalidate'} = '*document_root C2
      {spaces_before_argument:\\n}
    {empty_line:\\n}
  *normal_command@node C3 l3 {first}
- |EXTRA
  |identifier:{first}
  |is_target:{1}
  |node_number:{1}
@@ -33,7 +32,6 @@ $result_tree_text{'unknown_node_in_menu_novalidate'} = '*document_root C2
    *menu_entry C4 l6
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{unknown}
      {normal_text:unknown}
@@ -42,7 +40,6 @@ $result_tree_text{'unknown_node_in_menu_novalidate'} = '*document_root C2
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 l7
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }

@@ -12,7 +12,6 @@ $result_tree_text{'parenthesis_in_node_name_explicit_refs'} = '*document_root C7
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -22,7 +21,6 @@ $result_tree_text{'parenthesis_in_node_name_explicit_refs'} = '*document_root C7
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C6 l2
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -39,7 +37,6 @@ $result_tree_text{'parenthesis_in_node_name_explicit_refs'} = '*document_root C7
    *menu_entry C4 l7
     {menu_entry_leading_text:* }
     *menu_entry_node C2
-    |EXTRA
     |node_content:A{0|1}
     |normalized:{One_003a}
      {normal_text:One}
@@ -53,7 +50,6 @@ $result_tree_text{'parenthesis_in_node_name_explicit_refs'} = '*document_root C7
    *menu_entry C4 l8
     {menu_entry_leading_text:* }
     *menu_entry_node C3
-    |EXTRA
     |manual_content:A{1|1}
      {normal_text:(}
      {normal_text:Two}
@@ -63,7 +59,6 @@ $result_tree_text{'parenthesis_in_node_name_explicit_refs'} = '*document_root C7
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 l9
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -71,7 +66,6 @@ $result_tree_text{'parenthesis_in_node_name_explicit_refs'} = '*document_root C7
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l11 {One:}
- |EXTRA
  |identifier:{One_003a}
  |is_target:{1}
  |node_number:{2}
@@ -80,27 +74,23 @@ $result_tree_text{'parenthesis_in_node_name_explicit_refs'} = '*document_root C7
     {spaces_before_argument: }
     {normal_text:One:}
    *line_arg C4
-   |EXTRA
    |manual_content:A{2|2}
     {spaces_before_argument: }
     {normal_text:(}
     {normal_text:Two}
     {normal_text:)}
    *line_arg C2
-   |EXTRA
    |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
     {normal_text:Top}
    *line_arg C3
-   |EXTRA
    |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@chapter C4 l12 {One:}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -114,7 +104,6 @@ $result_tree_text{'parenthesis_in_node_name_explicit_refs'} = '*document_root C7
    {normal_text:AA.\\n}
   {empty_line:\\n}
  *normal_command@node C1 l16 {@asis{(}Two)}
- |EXTRA
  |added:{1}
  |identifier:{_0028Two_0029}
  |is_target:{1}
@@ -128,7 +117,6 @@ $result_tree_text{'parenthesis_in_node_name_explicit_refs'} = '*document_root C7
     {normal_text:Two)}
     {spaces_after_argument:\\n}
  *normal_command@chapter C5 l16 {(Two)}
- |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
  |section_number:{3}
@@ -144,7 +132,6 @@ $result_tree_text{'parenthesis_in_node_name_explicit_refs'} = '*document_root C7
   *paragraph C2
    *normal_command@xref C1 l20
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{_0028Two_0029}
      {normal_text:(Two)}

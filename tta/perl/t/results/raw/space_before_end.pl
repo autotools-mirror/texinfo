@@ -19,7 +19,6 @@ $result_tree_text{'space_before_end'} = '*document_root C1
      {normal_text:in tex\\n}
      {normal_text:    }
     *normal_command@end C1 l3
-    |EXTRA
     |text_arg:{tex}
      *line_arg C3
       {spaces_before_argument:  }
@@ -33,7 +32,6 @@ $result_tree_text{'space_before_end'} = '*document_root C1
    {raw:in verbatim\\n}
    {raw:    }
    *normal_command@end C1 l7
-   |EXTRA
    |text_arg:{verbatim}
     *line_arg C3
      {spaces_before_argument:  }
@@ -48,7 +46,6 @@ $result_tree_text{'space_before_end'} = '*document_root C1
     {raw:in html\\n}
    {normal_text:   }
    *normal_command@end C1 l11
-   |EXTRA
    |text_arg:{html}
     *line_arg C3
      {spaces_before_argument: }

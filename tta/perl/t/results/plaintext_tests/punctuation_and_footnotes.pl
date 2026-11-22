@@ -16,7 +16,6 @@ $result_tree_text{'punctuation_and_footnotes'} = '*document_root C1
   *paragraph C8
    {normal_text:Text.}
    *normal_command@footnote C1 l2
-   |EXTRA
    |global_command_number:{1}
     *brace_command_context C1
      *paragraph C1
@@ -24,14 +23,12 @@ $result_tree_text{'punctuation_and_footnotes'} = '*document_root C1
    {normal_text: Sentence \\n}
    {normal_text:end.}
    *normal_command@footnote C1 l3
-   |EXTRA
    |global_command_number:{2}
     *brace_command_context C1
      *paragraph C1
       {normal_text:after period double}
    {normal_text:  S2.}
    *normal_command@footnote C1 l3
-   |EXTRA
    |global_command_number:{3}
     *brace_command_context C1
      *paragraph C1
@@ -41,14 +38,12 @@ $result_tree_text{'punctuation_and_footnotes'} = '*document_root C1
   *paragraph C8
    {normal_text:No PERIOD.}
    *normal_command@footnote C1 l5
-   |EXTRA
    |global_command_number:{4}
     *brace_command_context C1
      *paragraph C1
       {normal_text:no period}
    {normal_text: worD.}
    *normal_command@footnote C1 l5
-   |EXTRA
    |global_command_number:{5}
     *brace_command_context C1
      *paragraph C1
@@ -56,7 +51,6 @@ $result_tree_text{'punctuation_and_footnotes'} = '*document_root C1
    {normal_text:  w2 \\n}
    {normal_text:wW.}
    *normal_command@footnote C1 l6
-   |EXTRA
    |global_command_number:{6}
     *brace_command_context C1
      *paragraph C1
@@ -67,7 +61,6 @@ $result_tree_text{'punctuation_and_footnotes'} = '*document_root C1
    {normal_text:Force PERIOD}
    *normal_command@.
    *normal_command@footnote C1 l8
-   |EXTRA
    |global_command_number:{7}
     *brace_command_context C1
      *paragraph C1
@@ -76,7 +69,6 @@ $result_tree_text{'punctuation_and_footnotes'} = '*document_root C1
    {normal_text:W}
    *normal_command@.
    *normal_command@footnote C1 l9
-   |EXTRA
    |global_command_number:{8}
     *brace_command_context C1
      *paragraph C1
@@ -85,7 +77,6 @@ $result_tree_text{'punctuation_and_footnotes'} = '*document_root C1
    {normal_text:W}
    *normal_command@.
    *normal_command@footnote C1 l10
-   |EXTRA
    |global_command_number:{9}
     *brace_command_context C1
      *paragraph C1
@@ -96,7 +87,6 @@ $result_tree_text{'punctuation_and_footnotes'} = '*document_root C1
    {normal_text:Force no period.}
    *normal_command@:
    *normal_command@footnote C1 l12
-   |EXTRA
    |global_command_number:{10}
     *brace_command_context C1
      *paragraph C1
@@ -105,7 +95,6 @@ $result_tree_text{'punctuation_and_footnotes'} = '*document_root C1
    {normal_text:w.}
    *normal_command@:
    *normal_command@footnote C1 l13
-   |EXTRA
    |global_command_number:{11}
     *brace_command_context C1
      *paragraph C1
@@ -114,7 +103,6 @@ $result_tree_text{'punctuation_and_footnotes'} = '*document_root C1
    {normal_text:w.}
    *normal_command@:
    *normal_command@footnote C1 l14
-   |EXTRA
    |global_command_number:{12}
     *brace_command_context C1
      *paragraph C1

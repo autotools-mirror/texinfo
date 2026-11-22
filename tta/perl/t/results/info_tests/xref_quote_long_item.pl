@@ -33,7 +33,6 @@ $result_tree_text{'xref_quote_long_item'} = '*document_root C1
      *paragraph C2
       *normal_command@xref C4 l4
        *brace_arg C5
-       |EXTRA
        |node_content:A{0|4}
         {normal_text:Texinfo::Convert::Utils $tree = expand_verbatiminclude($registrar}
         *normal_command@comma C1 l4
@@ -52,7 +51,6 @@ $result_tree_text{'xref_quote_long_item'} = '*document_root C1
       {normal_text:.\\n}
      {empty_line:\\n}
    *normal_command@end C1 l7
-   |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }

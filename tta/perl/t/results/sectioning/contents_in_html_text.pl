@@ -12,7 +12,6 @@ $result_tree_text{'contents_in_html_text'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content
  *normal_command@top C2 l1 {top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |section_level:{0}
@@ -24,7 +23,6 @@ $result_tree_text{'contents_in_html_text'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@chapter C2 l3 {Chap1}
- |EXTRA
  |identifier:{Chap1}
  |is_target:{1}
  |section_heading_number:{1}
@@ -37,7 +35,6 @@ $result_tree_text{'contents_in_html_text'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@section C2 l5 {Sec 1}
- |EXTRA
  |identifier:{Sec-1}
  |is_target:{1}
  |section_heading_number:{1.1}
@@ -50,7 +47,6 @@ $result_tree_text{'contents_in_html_text'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@chapter C4 l7 {Chap2}
- |EXTRA
  |identifier:{Chap2}
  |is_target:{1}
  |section_heading_number:{2}
@@ -63,12 +59,10 @@ $result_tree_text{'contents_in_html_text'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@shortcontents C1 l9
-  |EXTRA
   |global_command_number:{1}
    *line_arg C1
     {spaces_before_argument:\\n}
   *normal_command@contents C1 l10
-  |EXTRA
   |global_command_number:{1}
    *line_arg C1
     {spaces_before_argument:\\n}

@@ -12,7 +12,6 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 l1 {chapter}
- |EXTRA
  |identifier:{chapter}
  |is_target:{1}
  |node_number:{1}
@@ -22,7 +21,6 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
     {normal_text:chapter}
     {spaces_after_argument:\\n}
  *normal_command@chapter C7 l2 {chapter}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{1}
@@ -43,7 +41,6 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
    {normal_text: }
    *normal_command@ref C2 l4
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{chapter}
      {normal_text:chapter}
@@ -60,7 +57,6 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
    {normal_text: }
    *normal_command@ref C3 l5
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{chapter}
      {normal_text:chapter}
@@ -78,7 +74,6 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
    {normal_text: }
    *normal_command@ref C4 l6
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
      {normal_text:chapter}
     *brace_arg
@@ -96,7 +91,6 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
    {normal_text: }
    *normal_command@ref C5 l7
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
      {normal_text:chapter}
     *brace_arg
@@ -115,7 +109,6 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
    {normal_text: }
    *normal_command@ref C4 l8
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{chapter}
      {normal_text:chapter}
@@ -135,7 +128,6 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
    {normal_text: }
    *normal_command@ref C4 l9
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
      {normal_text:chapter}
     *brace_arg C1
@@ -154,7 +146,6 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
    {normal_text: }
    *normal_command@ref C5 l10
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
      {normal_text:chapter}
     *brace_arg C1
@@ -174,7 +165,6 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
    {normal_text: }
    *normal_command@ref C4 l11
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
      {normal_text:chapter}
     *brace_arg C1
@@ -194,7 +184,6 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
    {normal_text: }
    *normal_command@ref C5 l12
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
      {normal_text:chapter}
     *brace_arg C1
@@ -215,7 +204,6 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
    {normal_text: }
    *normal_command@ref C5 l13
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
      {normal_text:chapter}
     *brace_arg C1
@@ -239,7 +227,6 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
    {normal_text: }
    *normal_command@ref C4 l14
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
      {normal_text:chapter}
     *brace_arg
@@ -258,7 +245,6 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
    {normal_text: }
    *normal_command@ref C5 l15
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
      {normal_text:chapter}
     *brace_arg
@@ -278,7 +264,6 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
    {normal_text: }
    *normal_command@ref C5 l16
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
      {normal_text:chapter}
     *brace_arg
@@ -301,7 +286,6 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
    {normal_text: }
    *normal_command@ref C5 l17
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
      {normal_text:chapter}
     *brace_arg
@@ -323,7 +307,6 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
    {normal_text: }
    *normal_command@ref C2 l19
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{_0028pman_0029anode}
      {normal_text:(pman)anode}
@@ -340,7 +323,6 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
    {normal_text: }
    *normal_command@ref C3 l20
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{_0028pman_0029anode}
      {normal_text:(pman)anode}
@@ -358,7 +340,6 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
    {normal_text: }
    *normal_command@ref C4 l21
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
      {normal_text:(pman)anode}
     *brace_arg
@@ -376,7 +357,6 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
    {normal_text: }
    *normal_command@ref C5 l22
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
      {normal_text:(pman)anode}
     *brace_arg
@@ -395,7 +375,6 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
    {normal_text: }
    *normal_command@ref C4 l23
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{_0028pman_0029anode}
      {normal_text:(pman)anode}
@@ -415,7 +394,6 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
    {normal_text: }
    *normal_command@ref C4 l24
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
      {normal_text:(pman)anode}
     *brace_arg C1
@@ -434,7 +412,6 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
    {normal_text: }
    *normal_command@ref C5 l25
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
      {normal_text:(pman)anode}
     *brace_arg C1
@@ -454,7 +431,6 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
    {normal_text: }
    *normal_command@ref C4 l26
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
      {normal_text:(pman)anode}
     *brace_arg C1
@@ -474,7 +450,6 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
    {normal_text: }
    *normal_command@ref C5 l27
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
      {normal_text:(pman)anode}
     *brace_arg C1
@@ -495,7 +470,6 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
    {normal_text: }
    *normal_command@ref C5 l28
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
      {normal_text:(pman)anode}
     *brace_arg C1
@@ -519,7 +493,6 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
    {normal_text: }
    *normal_command@ref C4 l29
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
      {normal_text:(pman)anode}
     *brace_arg
@@ -538,7 +511,6 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
    {normal_text: }
    *normal_command@ref C5 l30
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
      {normal_text:(pman)anode}
     *brace_arg
@@ -558,7 +530,6 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
    {normal_text: }
    *normal_command@ref C5 l31
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
      {normal_text:(pman)anode}
     *brace_arg
@@ -581,7 +552,6 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
    {normal_text: }
    *normal_command@ref C5 l32
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
      {normal_text:(pman)anode}
     *brace_arg
@@ -603,7 +573,6 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
    {normal_text: }
    *normal_command@inforef C3 l34
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
      {normal_text:chapter}
     *brace_arg C2
@@ -623,7 +592,6 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
    {normal_text: }
    *normal_command@inforef C1 l35
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{chapter}
      {normal_text:chapter}
@@ -638,7 +606,6 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
    {normal_text: }
    *normal_command@inforef C2 l36
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{chapter}
      {normal_text:chapter}
@@ -656,7 +623,6 @@ $result_tree_text{'refs_formatting'} = '*document_root C3
    {normal_text: }
    *normal_command@inforef C3 l37
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
      {normal_text:chapter}
     *brace_arg

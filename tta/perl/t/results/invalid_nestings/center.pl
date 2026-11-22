@@ -17,19 +17,16 @@ $result_tree_text{'center'} = '*document_root C1
     *normal_command@indent l1
     {ignorable_spaces_after_command: }
     *normal_command@titlefont C1 l1
-    |EXTRA
     |global_command_number:{1}
      *brace_container C1
       {normal_text:in titlefont}
     {normal_text: }
     *normal_command@anchor C1 l1
-    |EXTRA
     |identifier:{in-anchor}
     |is_target:{1}
      *brace_arg C1
       {normal_text:in anchor}
     *normal_command@footnote C1 l1
-    |EXTRA
     |global_command_number:{1}
      *brace_command_context C1
       *paragraph C1
@@ -41,7 +38,6 @@ $result_tree_text{'center'} = '*document_root C1
     {spaces_before_argument: }
     {normal_text:center }
     *index_entry_command@cindex C1 l3
-    |EXTRA
     |index_entry:I{cp,1}
      *line_arg C3
       {spaces_before_argument: }
@@ -115,7 +111,6 @@ $result_tree_text{'center'} = '*document_root C1
       {normal_text:first item on center line}
       {spaces_after_argument:\\n}
    *normal_command@end C1 l23
-   |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
@@ -144,7 +139,6 @@ $result_tree_text{'center'} = '*document_root C1
        {normal_text:second item on center line}
        {spaces_after_argument:\\n}
    *normal_command@end C1 l28
-   |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
@@ -188,7 +182,6 @@ $result_tree_text{'center'} = '*document_root C1
    {normal_text:End of samp\\n}
   {empty_line:\\n}
   *normal_command@multitable C3 l39
-  |EXTRA
   |max_columns:{2}
    *arguments_line C1
     *block_line_arg C5
@@ -201,16 +194,13 @@ $result_tree_text{'center'} = '*document_root C1
      {spaces_after_argument:\\n}
    *multitable_body C1
     *row C2
-    |EXTRA
     |row_number:{1}
      *normal_command@item C2 l40
-     |EXTRA
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
        {normal_text:truc }
      *normal_command@tab C4 l40
-     |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C1
@@ -230,7 +220,6 @@ $result_tree_text{'center'} = '*document_root C1
         {normal_text:cstruc}
         {spaces_after_argument:\\n}
    *normal_command@end C1 l43
-   |EXTRA
    |text_arg:{multitable}
     *line_arg C3
      {spaces_before_argument: }

@@ -15,14 +15,12 @@ $result_tree_text{'unknown_then_known_index_entry'} = '*document_root C1
   *paragraph C3
    {normal_text:someindex entry.\\n}
    *normal_command@defindex C1 l2
-   |EXTRA
    |misc_args:A{some}
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:some}
      {spaces_after_argument:\\n}
    *index_entry_command@someindex C1 l3
-   |EXTRA
    |index_entry:I{some,1}
     *line_arg C3
      {spaces_before_argument: }

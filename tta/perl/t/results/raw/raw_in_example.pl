@@ -23,14 +23,12 @@ $result_tree_text{'raw_in_example'} = '*document_root C1
      *rawpreformatted C1
       {normal_text:in html\\n}
      *normal_command@end C1 l4
-     |EXTRA
      |text_arg:{html}
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:html}
        {spaces_after_argument:\\n}
    *normal_command@end C1 l5
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
@@ -52,7 +50,6 @@ $result_tree_text{'raw_in_example'} = '*document_root C1
       {normal_text:Some html <code>some code</code>.\\n}
       {empty_line:\\n}
      *normal_command@end C1 l13
-     |EXTRA
      |text_arg:{html}
       *line_arg C3
        {spaces_before_argument: }
@@ -72,7 +69,6 @@ $result_tree_text{'raw_in_example'} = '*document_root C1
       {normal_text:$$\\n}
       {empty_line:\\n}
      *normal_command@end C1 l23
-     |EXTRA
      |text_arg:{tex}
       *line_arg C3
        {spaces_before_argument: }
@@ -80,7 +76,6 @@ $result_tree_text{'raw_in_example'} = '*document_root C1
        {spaces_after_argument:\\n}
     {empty_line:\\n}
    *normal_command@end C1 l25
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }

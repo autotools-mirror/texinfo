@@ -20,7 +20,6 @@ $result_tree_text{'index_special_region'} = '*document_root C7
       {spaces_before_argument: \\n}
     {empty_line:\\n}
     *index_entry_command@cindex C1 index_special_region.texi:l5
-    |EXTRA
     |element_region:{copying}
     |index_entry:I{cp,1}
      *line_arg C3
@@ -28,11 +27,9 @@ $result_tree_text{'index_special_region'} = '*document_root C7
       {normal_text:Copying this document}
       {spaces_after_argument:\\n}
     *normal_command@anchor C1 index_special_region.texi:l6
-    |EXTRA
     |identifier:{Copying-information}
     |is_target:{1}
      *brace_arg C1
-     |EXTRA
      |element_region:{copying}
       {normal_text:Copying information}
     {spaces_after_close_brace:\\n}
@@ -41,15 +38,12 @@ $result_tree_text{'index_special_region'} = '*document_root C7
      {normal_text:This is a test manual, trivially and explicitly in the public\\n}
      {normal_text:domain}
      *normal_command@footnote C1 index_special_region.texi:l9
-     |EXTRA
      |global_command_number:{1}
       *brace_command_context C5
        *normal_command@anchor C1 index_special_region.texi:l9
-       |EXTRA
        |identifier:{Public-domain-reference}
        |is_target:{1}
         *brace_arg C1
-        |EXTRA
         |element_region:{copying}
          {normal_text:Public domain reference}
        {spaces_after_close_brace: }
@@ -58,7 +52,6 @@ $result_tree_text{'index_special_region'} = '*document_root C7
         {normal_text:domain is something you should allready know\\n}
        {empty_line:\\n}
        *index_entry_command@cindex C1 index_special_region.texi:l12
-       |EXTRA
        |element_region:{copying}
        |index_entry:I{cp,2}
         *line_arg C3
@@ -68,7 +61,6 @@ $result_tree_text{'index_special_region'} = '*document_root C7
      {normal_text:.\\n}
     {empty_line:\\n}
     *normal_command@printindex C1 index_special_region.texi:l15
-    |EXTRA
     |global_command_number:{1}
     |misc_args:A{cp}
      *line_arg C3
@@ -77,7 +69,6 @@ $result_tree_text{'index_special_region'} = '*document_root C7
       {spaces_after_argument:\\n}
     {empty_line:\\n}
     *normal_command@end C1 index_special_region.texi:l17
-    |EXTRA
     |text_arg:{copying}
      *line_arg C3
       {spaces_before_argument: }
@@ -90,7 +81,6 @@ $result_tree_text{'index_special_region'} = '*document_root C7
       {spaces_before_argument:\\n}
     {empty_line:\\n}
     *index_entry_command@cindex C1 index_special_region.texi:l21
-    |EXTRA
     |element_region:{titlepage}
     |index_entry:I{cp,3}
      *line_arg C3
@@ -98,11 +88,9 @@ $result_tree_text{'index_special_region'} = '*document_root C7
       {normal_text:Titlepage index}
       {spaces_after_argument:\\n}
     *normal_command@anchor C1 index_special_region.texi:l22
-    |EXTRA
     |identifier:{Titlepage-anchor}
     |is_target:{1}
      *brace_arg C1
-     |EXTRA
      |element_region:{titlepage}
       {normal_text:Titlepage anchor}
     {spaces_after_close_brace:\\n}
@@ -110,15 +98,12 @@ $result_tree_text{'index_special_region'} = '*document_root C7
     *paragraph C3
      {normal_text:This is the titlepage}
      *normal_command@footnote C1 index_special_region.texi:l24
-     |EXTRA
      |global_command_number:{2}
       *brace_command_context C5
        *normal_command@anchor C1 index_special_region.texi:l24
-       |EXTRA
        |identifier:{Titlepage-footnote-anchor}
        |is_target:{1}
         *brace_arg C1
-        |EXTRA
         |element_region:{titlepage}
          {normal_text:Titlepage footnote anchor}
        {spaces_after_close_brace:\\n}
@@ -126,7 +111,6 @@ $result_tree_text{'index_special_region'} = '*document_root C7
         {normal_text:This is a fine document.\\n}
        {empty_line:\\n}
        *index_entry_command@cindex C1 index_special_region.texi:l27
-       |EXTRA
        |element_region:{titlepage}
        |index_entry:I{cp,4}
         *line_arg C3
@@ -136,12 +120,10 @@ $result_tree_text{'index_special_region'} = '*document_root C7
      {normal_text:\\n}
     {empty_line:\\n}
     *normal_command@insertcopying C1 index_special_region.texi:l30
-    |EXTRA
     |global_command_number:{1}
      *line_arg C1
       {spaces_before_argument:\\n}
     *normal_command@end C1 index_special_region.texi:l31
-    |EXTRA
     |text_arg:{titlepage}
      *line_arg C3
       {spaces_before_argument: }
@@ -149,7 +131,6 @@ $result_tree_text{'index_special_region'} = '*document_root C7
       {spaces_after_argument:\\n}
    {empty_line:\\n}
  *normal_command@node C1 index_special_region.texi:l33 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -159,7 +140,6 @@ $result_tree_text{'index_special_region'} = '*document_root C7
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C1 index_special_region.texi:l34 {Top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -168,7 +148,6 @@ $result_tree_text{'index_special_region'} = '*document_root C7
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@chapter C15 index_special_region.texi:l35 {Chapter}
- |EXTRA
  |identifier:{Chapter}
  |is_target:{1}
  |section_heading_number:{1}
@@ -186,7 +165,6 @@ $result_tree_text{'index_special_region'} = '*document_root C7
       {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@insertcopying C1 index_special_region.texi:l37
-  |EXTRA
   |global_command_number:{2}
    *line_arg C1
     {spaces_before_argument:\\n}
@@ -200,7 +178,6 @@ $result_tree_text{'index_special_region'} = '*document_root C7
    {normal_text:and titlepage, and various wrong index entries.\\n}
   {empty_line:\\n}
   *index_entry_command@findex C1 index_special_region.texi:l42
-  |EXTRA
   |element_node:{Top}
   |index_entry:I{fn,1}
    *line_arg C3
@@ -213,7 +190,6 @@ $result_tree_text{'index_special_region'} = '*document_root C7
     {spaces_before_argument:\\n}
   *normal_command@deffn C4 index_special_region.texi:l45
    *def_line C1 index_special_region.texi:l45
-   |EXTRA
    |def_command:{deffn}
    |original_def_cmdname:{deffn}
     *block_line_arg C4
@@ -226,7 +202,6 @@ $result_tree_text{'index_special_region'} = '*document_root C7
        {spaces_before_argument: }
      {spaces_after_argument:\\n}
    *normal_command@deffnx C1 index_special_region.texi:l46
-   |EXTRA
    |def_command:{deffn}
    |original_def_cmdname:{deffnx}
     *line_arg C2
@@ -235,7 +210,6 @@ $result_tree_text{'index_special_region'} = '*document_root C7
        {normal_text:truc}
      {spaces_after_argument:\\n}
    *normal_command@deffnx C1 index_special_region.texi:l47
-   |EXTRA
    |def_command:{deffn}
    |original_def_cmdname:{deffnx}
     *line_arg C4
@@ -246,7 +220,6 @@ $result_tree_text{'index_special_region'} = '*document_root C7
       *bracketed_arg index_special_region.texi:l47
      {spaces_after_argument:\\n}
    *normal_command@end C1 index_special_region.texi:l48
-   |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
@@ -265,7 +238,6 @@ $result_tree_text{'index_special_region'} = '*document_root C7
    *table_entry C1
     *table_term C1
      *normal_command@item C1 index_special_region.texi:l52
-     |EXTRA
      |element_node:{Top}
      |index_entry:I{fn,2}
       *line_arg C3
@@ -273,7 +245,6 @@ $result_tree_text{'index_special_region'} = '*document_root C7
        {normal_text:fun}
        {spaces_after_argument:\\n}
    *normal_command@end C1 index_special_region.texi:l53
-   |EXTRA
    |text_arg:{ftable}
     *line_arg C3
      {spaces_before_argument: }
@@ -287,7 +258,6 @@ $result_tree_text{'index_special_region'} = '*document_root C7
    *menu_entry C4 index_special_region.texi:l56
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{Copying-and-indices}
      {normal_text:Copying and indices}
@@ -296,7 +266,6 @@ $result_tree_text{'index_special_region'} = '*document_root C7
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 index_special_region.texi:l57
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -304,7 +273,6 @@ $result_tree_text{'index_special_region'} = '*document_root C7
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 index_special_region.texi:l59 {Copying and indices}
- |EXTRA
  |identifier:{Copying-and-indices}
  |is_target:{1}
  |isindex:{1}
@@ -315,7 +283,6 @@ $result_tree_text{'index_special_region'} = '*document_root C7
     {normal_text:Copying and indices}
     {spaces_after_argument:\\n}
  *normal_command@appendix C18 index_special_region.texi:l60 {Copying and indices}
- |EXTRA
  |section_heading_number:{A}
  |section_level:{1}
  |section_number:{3}
@@ -329,7 +296,6 @@ $result_tree_text{'index_special_region'} = '*document_root C7
    {normal_text:In the appendix, we print the indices and references.\\n}
   {empty_line:\\n}
   *index_entry_command@findex C1 index_special_region.texi:l64
-  |EXTRA
   |element_node:{Copying-and-indices}
   |index_entry:I{fn,3}
    *line_arg C3
@@ -338,7 +304,6 @@ $result_tree_text{'index_special_region'} = '*document_root C7
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 index_special_region.texi:l66
-  |EXTRA
   |element_node:{Copying-and-indices}
   |index_entry:I{cp,5}
    *line_arg C3
@@ -349,14 +314,12 @@ $result_tree_text{'index_special_region'} = '*document_root C7
   *paragraph C4
    *normal_command@ref C1 index_special_region.texi:l68
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{Copying-information}
      {normal_text:Copying information}
    {normal_text: for the copying information.\\n}
    *normal_command@ref C1 index_special_region.texi:l69
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{Public-domain-reference}
      {normal_text:Public domain reference}
@@ -365,27 +328,23 @@ $result_tree_text{'index_special_region'} = '*document_root C7
   *paragraph C4
    *normal_command@ref C1 index_special_region.texi:l71
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{Titlepage-anchor}
      {normal_text:Titlepage anchor}
    {normal_text: for the titlepage.\\n}
    *normal_command@ref C1 index_special_region.texi:l72
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{Titlepage-footnote-anchor}
      {normal_text:Titlepage footnote anchor}
    {normal_text: for reference on the titlepage.\\n}
   {empty_line:\\n}
   *normal_command@insertcopying C1 index_special_region.texi:l74
-  |EXTRA
   |global_command_number:{3}
    *line_arg C1
     {spaces_before_argument:\\n}
   {empty_line:\\n}
   *normal_command@printindex C1 index_special_region.texi:l76
-  |EXTRA
   |global_command_number:{2}
   |misc_args:A{cp}
    *line_arg C3
@@ -393,7 +352,6 @@ $result_tree_text{'index_special_region'} = '*document_root C7
     {normal_text:cp}
     {spaces_after_argument:\\n}
   *normal_command@printindex C1 index_special_region.texi:l77
-  |EXTRA
   |global_command_number:{3}
   |misc_args:A{fn}
    *line_arg C3
@@ -402,7 +360,6 @@ $result_tree_text{'index_special_region'} = '*document_root C7
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@contents C1 index_special_region.texi:l79
-  |EXTRA
   |global_command_number:{1}
    *line_arg C1
     {spaces_before_argument:\\n}

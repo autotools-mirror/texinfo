@@ -12,21 +12,18 @@ $result_tree_text{'macro_in_invalid_documentencoding'} = '*document_root C1
  *before_node_section C1
   *preamble_before_content C2
    *normal_command@macro C3 l1
-   |EXTRA
    |formal_args:A{}
    |macro_name:{badmacro}
     *arguments_line C1
      {macro_line: badmacro\\n}
     {raw:badm\\n}
     *normal_command@end C1 l3
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:macro}
       {spaces_after_argument:\\n}
    *normal_command@documentencoding C1 l4
-   |EXTRA
    |global_command_number:{1}
    |text_arg:{badm}
     *line_arg C3

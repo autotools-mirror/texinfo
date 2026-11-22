@@ -12,7 +12,6 @@ $result_tree_text{'multitable_begin_with_tab'} = '*document_root C1
  *before_node_section C4
   *preamble_before_content
   *normal_command@multitable C3 l1
-  |EXTRA
   |max_columns:{2}
    *arguments_line C1
     *block_line_arg C5
@@ -28,7 +27,6 @@ $result_tree_text{'multitable_begin_with_tab'} = '*document_root C1
     *paragraph C1
      {normal_text:t\\n}
    *normal_command@end C1 l3
-   |EXTRA
    |text_arg:{multitable}
     *line_arg C3
      {spaces_before_argument: }
@@ -36,7 +34,6 @@ $result_tree_text{'multitable_begin_with_tab'} = '*document_root C1
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@multitable C4 l5
-  |EXTRA
   |max_columns:{2}
    *arguments_line C1
     *block_line_arg C5
@@ -53,16 +50,13 @@ $result_tree_text{'multitable_begin_with_tab'} = '*document_root C1
      {normal_text:t2\\n}
    *multitable_body C1
     *row C1
-    |EXTRA
     |row_number:{1}
      *normal_command@item C2 l7
-     |EXTRA
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
        {normal_text:it\\n}
    *normal_command@end C1 l8
-   |EXTRA
    |text_arg:{multitable}
     *line_arg C3
      {spaces_before_argument: }

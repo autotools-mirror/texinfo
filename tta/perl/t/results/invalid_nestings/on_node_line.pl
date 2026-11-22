@@ -12,7 +12,6 @@ $result_tree_text{'on_node_line'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 l1 {@ref{a, b, c, filename}}
- |EXTRA
  |identifier:{a}
  |is_target:{1}
  |node_number:{1}
@@ -21,7 +20,6 @@ $result_tree_text{'on_node_line'} = '*document_root C2
     {spaces_before_argument: }
     *normal_command@ref C4 l1
      *brace_arg C1
-     |EXTRA
      |node_content:A{0|0}
       {normal_text:a}
      *brace_arg C2
@@ -34,7 +32,6 @@ $result_tree_text{'on_node_line'} = '*document_root C2
       {spaces_before_argument: }
       {normal_text:filename}
    *line_arg C9
-   |EXTRA
    |manual_content:A{2|2}
    |node_content:A{5|8}
    |normalized:{-}
@@ -42,7 +39,6 @@ $result_tree_text{'on_node_line'} = '*document_root C2
     {normal_text:(}
     *normal_command@pxref C4 l1
      *brace_arg C1
-     |EXTRA
      |node_content:A{0|0}
       {normal_text:Top}
      *brace_arg
@@ -53,13 +49,11 @@ $result_tree_text{'on_node_line'} = '*document_root C2
     {normal_text:)}
     {normal_text: }
     *normal_command@anchor C1 l1
-    |EXTRA
     |identifier:{in-anchor}
     |is_target:{1}
      *brace_arg C1
       {normal_text:in anchor}
     *normal_command@footnote C1 l1
-    |EXTRA
     |global_command_number:{1}
      *brace_command_context C1
       *paragraph C1

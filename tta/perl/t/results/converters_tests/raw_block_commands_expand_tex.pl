@@ -20,7 +20,6 @@ $result_tree_text{'raw_block_commands_expand_tex'} = '*document_root C1
     *rawpreformatted C1
      {normal_text:<blink>html</blink> ``}\\n}
     *normal_command@end C1 l4
-    |EXTRA
     |text_arg:{html}
      *line_arg C3
       {spaces_before_argument: }
@@ -34,7 +33,6 @@ $result_tree_text{'raw_block_commands_expand_tex'} = '*document_root C1
     *rawpreformatted C1
      {normal_text:<para>xml</para> ``}\\n}
     *normal_command@end C1 l8
-    |EXTRA
     |text_arg:{xml}
      *line_arg C3
       {spaces_before_argument: }
@@ -48,7 +46,6 @@ $result_tree_text{'raw_block_commands_expand_tex'} = '*document_root C1
     *rawpreformatted C1
      {normal_text:<emphasis>docbook</emphasis> ``}\\n}
     *normal_command@end C1 l12
-    |EXTRA
     |text_arg:{docbook}
      *line_arg C3
       {spaces_before_argument: }
@@ -68,7 +65,6 @@ $result_tree_text{'raw_block_commands_expand_tex'} = '*document_root C1
         {normal_text:{ code }}
      {normal_text:}$ ``\\n}
     *normal_command@end C1 l16
-    |EXTRA
     |text_arg:{tex}
      *line_arg C3
       {spaces_before_argument: }
@@ -88,7 +84,6 @@ $result_tree_text{'raw_block_commands_expand_tex'} = '*document_root C1
         {normal_text:{ code }}
      {normal_text:}{b}$ ``\\n}
     *normal_command@end C1 l20
-    |EXTRA
     |text_arg:{latex}
      *line_arg C3
       {spaces_before_argument: }

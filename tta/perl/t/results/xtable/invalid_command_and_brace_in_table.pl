@@ -24,7 +24,6 @@ $result_tree_text{'invalid_command_and_brace_in_table'} = '*document_root C1
      {normal_text:long title\\n}
      {normal_text:Item line\\n}
    *normal_command@end C1 l5
-   |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }

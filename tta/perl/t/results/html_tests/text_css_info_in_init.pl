@@ -12,7 +12,6 @@ $result_tree_text{'text_css_info_in_init'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -22,7 +21,6 @@ $result_tree_text{'text_css_info_in_init'} = '*document_root C3
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C8 l2 {top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -46,7 +44,6 @@ $result_tree_text{'text_css_info_in_init'} = '*document_root C3
    {normal_text:\\n}
   {empty_line:\\n}
   *normal_command@titlefont C1 l8
-  |EXTRA
   |global_command_number:{1}
    *brace_container C1
     {normal_text:in a new heading}

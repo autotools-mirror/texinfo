@@ -12,7 +12,6 @@ $result_tree_text{'shortcontents_no_top'} = '*document_root C4
  *before_node_section C1
   *preamble_before_content
  *normal_command@chapter C2 l1 {chap}
- |EXTRA
  |identifier:{chap}
  |is_target:{1}
  |section_heading_number:{1}
@@ -25,7 +24,6 @@ $result_tree_text{'shortcontents_no_top'} = '*document_root C4
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@chapter C2 l3 {chap2}
- |EXTRA
  |identifier:{chap2}
  |is_target:{1}
  |section_heading_number:{2}
@@ -38,7 +36,6 @@ $result_tree_text{'shortcontents_no_top'} = '*document_root C4
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@section C3 l5 {sec}
- |EXTRA
  |identifier:{sec}
  |is_target:{1}
  |section_heading_number:{2.1}
@@ -51,7 +48,6 @@ $result_tree_text{'shortcontents_no_top'} = '*document_root C4
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@shortcontents C1 l7
-  |EXTRA
   |global_command_number:{1}
    *line_arg C1
     {spaces_before_argument:\\n}

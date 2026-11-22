@@ -12,7 +12,6 @@ $result_tree_text{'ignored_value_definition'} = '*document_root C1
  *before_node_section C4
   *preamble_before_content C2
    *normal_command@set C1
-   |EXTRA
    |misc_args:A{aa|outside}
     *line_arg C3
      {spaces_before_argument: }
@@ -21,7 +20,6 @@ $result_tree_text{'ignored_value_definition'} = '*document_root C1
    {empty_line:\\n}
   *paragraph C2
    *normal_command@inlinefmt C2 l3
-   |EXTRA
    |format:{tex}
     *brace_arg C1
      {normal_text:tex}

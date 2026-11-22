@@ -12,7 +12,6 @@ $result_tree_text{'a_comma_after_node'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C3 l1 {Commands}
- |EXTRA
  |identifier:{Commands}
  |is_target:{1}
  |node_number:{1}
@@ -21,13 +20,11 @@ $result_tree_text{'a_comma_after_node'} = '*document_root C2
     {spaces_before_argument: }
     {normal_text:Commands}
    *line_arg C2
-   |EXTRA
    |node_content:A{1|1}
    |normalized:{Requirements}
     {spaces_before_argument: }
     {normal_text:Requirements}
    *line_arg C3
-   |EXTRA
    |node_content:A{1|1}
    |normalized:{Nodes-and-Menus}
     {spaces_before_argument: }

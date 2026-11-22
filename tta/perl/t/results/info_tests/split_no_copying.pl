@@ -15,7 +15,6 @@ $result_tree_text{'split_no_copying'} = '*document_root C7
     {text_before_beginning:\\input texinfo\\n}
   *preamble_before_content C2
    *normal_command@setfilename C1 l2
-   |EXTRA
    |text_arg:{split_no_copying.info}
     *line_arg C3
      {spaces_before_argument: }
@@ -23,7 +22,6 @@ $result_tree_text{'split_no_copying'} = '*document_root C7
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *normal_command@node C1 l4 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -33,7 +31,6 @@ $result_tree_text{'split_no_copying'} = '*document_root C7
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C6 l5 {Top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -52,7 +49,6 @@ $result_tree_text{'split_no_copying'} = '*document_root C7
    *menu_entry C4 l10
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{Ch1}
      {normal_text:Ch1}
@@ -61,7 +57,6 @@ $result_tree_text{'split_no_copying'} = '*document_root C7
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 l11
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -69,7 +64,6 @@ $result_tree_text{'split_no_copying'} = '*document_root C7
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l13 {Ch1}
- |EXTRA
  |identifier:{Ch1}
  |is_target:{1}
  |node_number:{2}
@@ -79,7 +73,6 @@ $result_tree_text{'split_no_copying'} = '*document_root C7
     {normal_text:Ch1}
     {spaces_after_argument:\\n}
  *normal_command@chapter C4 l14 {Ch1}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}

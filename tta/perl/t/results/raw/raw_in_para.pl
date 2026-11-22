@@ -19,7 +19,6 @@ $result_tree_text{'raw_in_para'} = '*document_root C1
      {spaces_before_argument:\\n}
    {raw:in verbatim\\n}
    *normal_command@end C1 l4
-   |EXTRA
    |text_arg:{verbatim}
     *line_arg C3
      {spaces_before_argument: }
@@ -35,7 +34,6 @@ $result_tree_text{'raw_in_para'} = '*document_root C1
     *rawpreformatted C1
      {normal_text:in html\\n}
     *normal_command@end C1 l9
-    |EXTRA
     |text_arg:{html}
      *line_arg C3
       {spaces_before_argument: }
@@ -54,7 +52,6 @@ $result_tree_text{'raw_in_para'} = '*document_root C1
      {empty_line:\\n}
      {normal_text:in tex2\\n}
     *normal_command@end C1 l17
-    |EXTRA
     |text_arg:{tex}
      *line_arg C3
       {spaces_before_argument: }

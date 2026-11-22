@@ -15,7 +15,6 @@ $result_tree_text{'inline_expand_tex'} = '*document_root C1
   *preamble_before_content
   *paragraph C12
    *normal_command@inlinefmt C2 l2
-   |EXTRA
    |format:{html}
     *brace_arg C1
      {normal_text:html}
@@ -23,7 +22,6 @@ $result_tree_text{'inline_expand_tex'} = '*document_root C1
      {raw: <blink>html</blink> ``}
    {normal_text:, \\n}
    *normal_command@inlinefmt C2 l3
-   |EXTRA
    |format:{plaintext}
     *brace_arg C1
      {normal_text:plaintext}
@@ -31,7 +29,6 @@ $result_tree_text{'inline_expand_tex'} = '*document_root C1
      {raw: plaintext ``}
    {normal_text:, \\n}
    *normal_command@inlinefmt C2 l4
-   |EXTRA
    |format:{xml}
     *brace_arg C1
      {normal_text:xml}
@@ -39,7 +36,6 @@ $result_tree_text{'inline_expand_tex'} = '*document_root C1
      {raw: <para>xml</para> ``}
    {normal_text:,\\n}
    *normal_command@inlinefmt C2 l5
-   |EXTRA
    |format:{docbook}
     *brace_arg C1
      {normal_text:docbook}
@@ -47,7 +43,6 @@ $result_tree_text{'inline_expand_tex'} = '*document_root C1
      {raw: <emphasis>docbook</emphasis> ``}
    {normal_text:, \\n}
    *normal_command@inlinefmt C2 l6
-   |EXTRA
    |expand_index:{1}
    |format:{tex}
     *brace_arg C1
@@ -60,7 +55,6 @@ $result_tree_text{'inline_expand_tex'} = '*document_root C1
        {normal_text:tex \\hbox code }
    {normal_text:$ ``\\n}
    *normal_command@inlinefmt C2 l7
-   |EXTRA
    |format:{latex}
     *brace_arg C1
      {normal_text:latex}
@@ -71,7 +65,6 @@ $result_tree_text{'inline_expand_tex'} = '*document_root C1
   {empty_line:\\n}
   *paragraph C12
    *normal_command@inlineraw C2 l10
-   |EXTRA
    |format:{html}
     *brace_arg C1
      {normal_text:html}
@@ -79,7 +72,6 @@ $result_tree_text{'inline_expand_tex'} = '*document_root C1
      {raw: raw <blink>html</blink> ``}
    {normal_text:, \\n}
    *normal_command@inlineraw C2 l11
-   |EXTRA
    |format:{plaintext}
     *brace_arg C1
      {normal_text:plaintext}
@@ -87,7 +79,6 @@ $result_tree_text{'inline_expand_tex'} = '*document_root C1
      {raw: raw plaintext ``}
    {normal_text:, \\n}
    *normal_command@inlineraw C2 l12
-   |EXTRA
    |format:{xml}
     *brace_arg C1
      {normal_text:xml}
@@ -95,7 +86,6 @@ $result_tree_text{'inline_expand_tex'} = '*document_root C1
      {raw: raw <para>xml</para> ``}
    {normal_text:,\\n}
    *normal_command@inlineraw C2 l13
-   |EXTRA
    |format:{docbook}
     *brace_arg C1
      {normal_text:docbook}
@@ -103,7 +93,6 @@ $result_tree_text{'inline_expand_tex'} = '*document_root C1
      {raw: raw <emphasis>docbook</emphasis> ``}
    {normal_text:, \\n}
    *normal_command@inlineraw C2 l14
-   |EXTRA
    |expand_index:{1}
    |format:{tex}
     *brace_arg C1
@@ -122,7 +111,6 @@ $result_tree_text{'inline_expand_tex'} = '*document_root C1
      {normal_text:$ ``}
    {normal_text:\\n}
    *normal_command@inlineraw C2 l15
-   |EXTRA
    |format:{latex}
     *brace_arg C1
      {normal_text:latex}

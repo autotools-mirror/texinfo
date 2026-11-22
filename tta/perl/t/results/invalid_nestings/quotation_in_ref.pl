@@ -12,7 +12,6 @@ $result_tree_text{'quotation_in_ref'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C5 l1 {first}
- |EXTRA
  |identifier:{first}
  |is_target:{1}
  |node_number:{1}
@@ -35,7 +34,6 @@ $result_tree_text{'quotation_in_ref'} = '*document_root C2
    *paragraph C1
     {normal_text:quotation in ref\\n}
    *normal_command@end C1 l6
-   |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }

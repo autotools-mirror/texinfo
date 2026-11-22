@@ -28,7 +28,6 @@ $result_tree_text{'shorttitlepage'} = '*document_root C3
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *normal_command@node C1 l4 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -38,7 +37,6 @@ $result_tree_text{'shorttitlepage'} = '*document_root C3
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C5 l5 {Top of @@title @sc{html} @code{test}}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1

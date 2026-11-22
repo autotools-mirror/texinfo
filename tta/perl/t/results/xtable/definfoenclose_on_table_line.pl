@@ -12,7 +12,6 @@ $result_tree_text{'definfoenclose_on_table_line'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C2
    *normal_command@definfoenclose C1 l1
-   |EXTRA
    |misc_args:A{phi|:|:}
     *line_arg C3
      {spaces_before_argument: }
@@ -24,7 +23,6 @@ $result_tree_text{'definfoenclose_on_table_line'} = '*document_root C1
     *block_line_arg C3
      {spaces_before_argument: }
      *definfoenclose_command@phi l3
-     |EXTRA
      |begin:{:}
      |end:{:}
      {spaces_after_argument:\\n}
@@ -45,7 +43,6 @@ $result_tree_text{'definfoenclose_on_table_line'} = '*document_root C1
      *paragraph C1
       {normal_text:table content.\\n}
    *normal_command@end C1 l8
-   |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }

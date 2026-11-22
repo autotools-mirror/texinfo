@@ -47,7 +47,6 @@ $result_tree_text{'menu_entry_no_entry'} = '*document_root C1
        {rawline_text:c}
        {spaces_after_argument:\\n}
    *normal_command@end C1 l8
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }

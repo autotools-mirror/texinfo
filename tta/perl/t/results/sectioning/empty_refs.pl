@@ -14,13 +14,11 @@ $result_tree_text{'empty_refs'} = '*document_root C1
   *paragraph C4
    *normal_command@xref C1 l1
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
      *normal_command@:
    {normal_text:.\\n}
    *normal_command@xref C1 l2
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{-}
      *normal_command@asis C1 l2

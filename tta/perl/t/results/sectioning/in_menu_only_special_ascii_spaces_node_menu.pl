@@ -12,7 +12,6 @@ $result_tree_text{'in_menu_only_special_ascii_spaces_node_menu'} = '*document_ro
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 in_menu_only_special_ascii_spaces_node.texi:l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -22,7 +21,6 @@ $result_tree_text{'in_menu_only_special_ascii_spaces_node_menu'} = '*document_ro
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C4 in_menu_only_special_ascii_spaces_node.texi:l2 {top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -50,7 +48,6 @@ $result_tree_text{'in_menu_only_special_ascii_spaces_node_menu'} = '*document_ro
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 in_menu_only_special_ascii_spaces_node.texi:l7
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -62,7 +59,6 @@ $result_tree_text{'in_menu_only_special_ascii_spaces_node_menu'} = '*document_ro
    *line_arg C1
     {spaces_before_argument: '."\r".'\\n}
  *normal_command@chapter C2 in_menu_only_special_ascii_spaces_node.texi:l10 {CARRIAGE RETURN|'."\r".'|}
- |EXTRA
  |identifier:{CARRIAGE-RETURN_007c-_007c}
  |is_target:{1}
  |section_heading_number:{1}
@@ -79,7 +75,6 @@ $result_tree_text{'in_menu_only_special_ascii_spaces_node_menu'} = '*document_ro
    *line_arg C1
     {spaces_before_argument: \\t\\f\\n}
  *normal_command@chapter C2 in_menu_only_special_ascii_spaces_node.texi:l13 {CHARACTER TABULATION|	| FORM FEED||}
- |EXTRA
  |identifier:{CHARACTER-TABULATION_007c-_007c-FORM-FEED_007c-_007c}
  |is_target:{1}
  |section_heading_number:{2}

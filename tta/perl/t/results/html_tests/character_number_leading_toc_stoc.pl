@@ -12,7 +12,6 @@ $result_tree_text{'character_number_leading_toc_stoc'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content
  *normal_command@top C1 l1 {top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |section_level:{0}
@@ -23,7 +22,6 @@ $result_tree_text{'character_number_leading_toc_stoc'} = '*document_root C5
     {normal_text:top}
     {spaces_after_argument:\\n}
  *normal_command@chapter C1 l2 {0}
- |EXTRA
  |identifier:{0}
  |is_target:{1}
  |section_heading_number:{1}
@@ -35,7 +33,6 @@ $result_tree_text{'character_number_leading_toc_stoc'} = '*document_root C5
     {normal_text:0}
     {spaces_after_argument:\\n}
  *normal_command@unnumbered C1 l3 {_}
- |EXTRA
  |identifier:{_005f}
  |is_target:{1}
  |section_level:{1}
@@ -46,7 +43,6 @@ $result_tree_text{'character_number_leading_toc_stoc'} = '*document_root C5
     {normal_text:_}
     {spaces_after_argument:\\n}
  *normal_command@section C6 l4 {?}
- |EXTRA
  |identifier:{_003f}
  |is_target:{1}
  |section_level:{2}
@@ -58,13 +54,11 @@ $result_tree_text{'character_number_leading_toc_stoc'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@contents C1 l6
-  |EXTRA
   |global_command_number:{1}
    *line_arg C1
     {spaces_before_argument:\\n}
   {empty_line:\\n}
   *normal_command@shortcontents C1 l8
-  |EXTRA
   |global_command_number:{1}
    *line_arg C1
     {spaces_before_argument:\\n}

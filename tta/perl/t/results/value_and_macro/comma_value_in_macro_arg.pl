@@ -12,7 +12,6 @@ $result_tree_text{'comma_value_in_macro_arg'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C4
    *normal_command@set C1
-   |EXTRA
    |misc_args:A{comma|,}
     *line_arg C3
      {spaces_before_argument: }
@@ -20,14 +19,12 @@ $result_tree_text{'comma_value_in_macro_arg'} = '*document_root C1
      {spaces_after_argument:\\n}
    {empty_line:\\n}
    *normal_command@macro C3 l3
-   |EXTRA
    |formal_args:A{arg1|arg2}
    |macro_name:{macro1}
     *arguments_line C1
      {macro_line: macro1 { arg1 , arg2 }\\n}
     {raw:result: @emph{\\arg1\\} protected \\\\ -> \\\\arg1\\\\ @emph{\\arg2\\}\\n}
     *normal_command@end C1 l5
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }

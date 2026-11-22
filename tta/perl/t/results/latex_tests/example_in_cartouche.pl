@@ -21,7 +21,6 @@ $result_tree_text{'example_in_cartouche'} = '*document_root C1
    *paragraph C1
     {normal_text:New para\\n}
    *normal_command@end C1 l5
-   |EXTRA
    |text_arg:{cartouche}
     *line_arg C3
      {spaces_before_argument: }
@@ -40,14 +39,12 @@ $result_tree_text{'example_in_cartouche'} = '*document_root C1
      {normal_text:% pwd\\n}
      {normal_text:/usr/local/share/emacs\\n}
     *normal_command@end C1 l11
-    |EXTRA
     |text_arg:{example}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:example}
       {spaces_after_argument:\\n}
    *normal_command@end C1 l12
-   |EXTRA
    |text_arg:{cartouche}
     *line_arg C3
      {spaces_before_argument: }

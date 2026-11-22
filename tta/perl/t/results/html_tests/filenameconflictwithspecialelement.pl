@@ -12,7 +12,6 @@ $result_tree_text{'filenameconflictwithspecialelement'} = '*document_root C5
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -22,7 +21,6 @@ $result_tree_text{'filenameconflictwithspecialelement'} = '*document_root C5
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C4 l2 {top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -33,7 +31,6 @@ $result_tree_text{'filenameconflictwithspecialelement'} = '*document_root C5
   {empty_line:\\n}
   *paragraph C2
    *normal_command@footnote C1 l4
-   |EXTRA
    |global_command_number:{1}
     *brace_command_context C1
      *paragraph C1
@@ -41,7 +38,6 @@ $result_tree_text{'filenameconflictwithspecialelement'} = '*document_root C5
    {normal_text:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l6 {chap}
- |EXTRA
  |identifier:{chap}
  |is_target:{1}
  |node_number:{2}
@@ -51,7 +47,6 @@ $result_tree_text{'filenameconflictwithspecialelement'} = '*document_root C5
     {normal_text:chap}
     {spaces_after_argument:\\n}
  *normal_command@chapter C7 l7 {chap}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -65,7 +60,6 @@ $result_tree_text{'filenameconflictwithspecialelement'} = '*document_root C5
    {normal_text:Need 2 elements for separate footnotes.\\n}
   {empty_line:\\n}
   *normal_command@anchor C1 l11
-  |EXTRA
   |identifier:{filenameconflictwithspecialelement-fot}
   |is_target:{1}
    *brace_arg C1

@@ -12,7 +12,6 @@ $result_tree_text{'paragraph_indent_asis'} = '*document_root C1
  *before_node_section C5
   *preamble_before_content C3
    *normal_command@paragraphindent C1 l1
-   |EXTRA
    |global_command_number:{1}
    |misc_args:A{asis}
     *line_arg C3
@@ -33,7 +32,6 @@ $result_tree_text{'paragraph_indent_asis'} = '*document_root C1
    *paragraph C1
     {normal_text:in quotation\\n}
    *normal_command@end C1 l8
-   |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }

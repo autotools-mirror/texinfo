@@ -12,7 +12,6 @@ $result_tree_text{'conversion_with_undef_customization'} = '*document_root C7
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -22,7 +21,6 @@ $result_tree_text{'conversion_with_undef_customization'} = '*document_root C7
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C5 l2 {top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -32,18 +30,15 @@ $result_tree_text{'conversion_with_undef_customization'} = '*document_root C7
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@contents C1 l4
-  |EXTRA
   |global_command_number:{1}
    *line_arg C1
     {spaces_before_argument:\\n}
   *normal_command@shortcontents C1 l5
-  |EXTRA
   |global_command_number:{1}
    *line_arg C1
     {spaces_before_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l7 {chap@^e}
- |EXTRA
  |identifier:{chap_00ea}
  |is_target:{1}
  |node_number:{2}
@@ -56,7 +51,6 @@ $result_tree_text{'conversion_with_undef_customization'} = '*document_root C7
       {normal_text:e}
     {spaces_after_argument:\\n}
  *normal_command@chapter C6 l8 {Chap@^e}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -72,7 +66,6 @@ $result_tree_text{'conversion_with_undef_customization'} = '*document_root C7
   *paragraph C3
    {normal_text:Text}
    *normal_command@footnote C1 l10
-   |EXTRA
    |global_command_number:{1}
     *brace_command_context C1
      *paragraph C2
@@ -83,7 +76,6 @@ $result_tree_text{'conversion_with_undef_customization'} = '*document_root C7
    {normal_text:\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 l12
-  |EXTRA
   |element_node:{chap_00ea}
   |index_entry:I{cp,1}
    *line_arg C3
@@ -92,7 +84,6 @@ $result_tree_text{'conversion_with_undef_customization'} = '*document_root C7
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l14 {sec}
- |EXTRA
  |identifier:{sec}
  |is_target:{1}
  |isindex:{1}
@@ -103,7 +94,6 @@ $result_tree_text{'conversion_with_undef_customization'} = '*document_root C7
     {normal_text:sec}
     {spaces_after_argument:\\n}
  *normal_command@section C5 l15 {Section}
- |EXTRA
  |section_heading_number:{1.1}
  |section_level:{2}
  |section_number:{3}
@@ -114,7 +104,6 @@ $result_tree_text{'conversion_with_undef_customization'} = '*document_root C7
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@printindex C1 l17
-  |EXTRA
   |global_command_number:{1}
   |misc_args:A{cp}
    *line_arg C3
@@ -124,7 +113,6 @@ $result_tree_text{'conversion_with_undef_customization'} = '*document_root C7
   {empty_line:\\n}
   *normal_command@deftypefn C3 l19
    *def_line C1 l19
-   |EXTRA
    |def_command:{deftypefn}
    |element_node:{sec}
    |index_entry:I{fn,1}
@@ -159,7 +147,6 @@ $result_tree_text{'conversion_with_undef_customization'} = '*document_root C7
     *paragraph C1
      {normal_text:A def.\\n}
    *normal_command@end C1 l21
-   |EXTRA
    |text_arg:{deftypefn}
     *line_arg C3
      {spaces_before_argument: }

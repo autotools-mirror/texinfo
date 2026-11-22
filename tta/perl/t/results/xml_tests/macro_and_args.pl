@@ -12,13 +12,11 @@ $result_tree_text{'macro_and_args'} = '*document_root C1
  *before_node_section C1
   *preamble_before_content C3
    *normal_command@macro C2 l1
-   |EXTRA
    |formal_args:A{aaa|2b-bb}
    |macro_name:{good}
     *arguments_line C1
      {macro_line: good { aaa, 2b-bb}\\n}
     *normal_command@end C1 l2
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -26,14 +24,12 @@ $result_tree_text{'macro_and_args'} = '*document_root C1
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *normal_command@macro C2 l4
-   |EXTRA
    |formal_args:A{ggg"@@^_ ff|nnn_b|ccc v}
    |invalid_syntax:{1}
    |macro_name:{bad}
     *arguments_line C1
      {macro_line: bad { ggg"@@^_ ff, nnn_b, ccc v}\\n}
     *normal_command@end C1 l5
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }

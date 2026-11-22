@@ -15,7 +15,6 @@ $result_tree_text{'anchor_and_empty_lines'} = '*document_root C1
    {normal_text:text 1.\\n}
   {empty_line:\\n}
   *normal_command@anchor C1 l3
-  |EXTRA
   |identifier:{in-anchor}
   |is_target:{1}
    *brace_arg C1

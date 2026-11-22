@@ -14,7 +14,6 @@ $result_tree_text{'inlinefmt_with_empty_line'} = '*document_root C1
   *paragraph C2
    {normal_text:A }
    *normal_command@inlinefmt C2 l1
-   |EXTRA
    |expand_index:{1}
    |format:{plaintext}
     *brace_arg C1
@@ -28,7 +27,6 @@ $result_tree_text{'inlinefmt_with_empty_line'} = '*document_root C1
     *brace_container
    {normal_text:  a.  Now html\\n}
    *normal_command@inlinefmt C2 l4
-   |EXTRA
    |expand_index:{1}
    |format:{html}
     *brace_arg C1

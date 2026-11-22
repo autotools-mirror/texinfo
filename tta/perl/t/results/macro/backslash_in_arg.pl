@@ -12,7 +12,6 @@ $result_tree_text{'backslash_in_arg'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -22,7 +21,6 @@ $result_tree_text{'backslash_in_arg'} = '*document_root C3
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@node C9 l2 {chap}
- |EXTRA
  |identifier:{chap}
  |is_target:{1}
  |isindex:{1}
@@ -34,14 +32,12 @@ $result_tree_text{'backslash_in_arg'} = '*document_root C3
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@macro C3 l4
-  |EXTRA
   |formal_args:A{TEXT}
   |macro_name:{funindex}
    *arguments_line C1
     {macro_line: funindex {TEXT}\\n}
    {raw:@findex \\TEXT\\\\n}
    *normal_command@end C1 l6
-   |EXTRA
    |text_arg:{macro}
     *line_arg C3
      {spaces_before_argument: }
@@ -55,7 +51,6 @@ $result_tree_text{'backslash_in_arg'} = '*document_root C3
      >{spaces_before_argument: }
      >{normal_text:\\\\q}
   *index_entry_command@findex C1 l8:@funindex
-  |EXTRA
   |element_node:{chap}
   |index_entry:I{fn,1}
   >SOURCEMARKS
@@ -72,7 +67,6 @@ $result_tree_text{'backslash_in_arg'} = '*document_root C3
     >macro_expansion<end;1><p:3>
     {spaces_after_argument:\\n}
   *index_entry_command@findex C1 l9:@funindex
-  |EXTRA
   |element_node:{chap}
   |index_entry:I{fn,2}
   >SOURCEMARKS
@@ -88,7 +82,6 @@ $result_tree_text{'backslash_in_arg'} = '*document_root C3
     >macro_expansion<end;2><p:2>
     {spaces_after_argument:\\n}
   *index_entry_command@findex C1 l10:@funindex
-  |EXTRA
   |element_node:{chap}
   |index_entry:I{fn,3}
   >SOURCEMARKS
@@ -103,7 +96,6 @@ $result_tree_text{'backslash_in_arg'} = '*document_root C3
     >macro_expansion<end;3><p:2>
     {spaces_after_argument:\\n}
   *index_entry_command@findex C1 l11:@funindex
-  |EXTRA
   |element_node:{chap}
   |index_entry:I{fn,4}
    *line_arg C3
@@ -113,7 +105,6 @@ $result_tree_text{'backslash_in_arg'} = '*document_root C3
     >macro_expansion<end;4><p:2>
     {spaces_after_argument:\\n}
   *normal_command@printindex C1 l12
-  |EXTRA
   |global_command_number:{1}
   |misc_args:A{fn}
    *line_arg C3

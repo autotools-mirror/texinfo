@@ -20,7 +20,6 @@ $result_tree_text{'consecutive_conditionals'} = '*document_root C1
        >{spaces_before_argument:\\n}
      >{raw:in ifinfo\\n}
      >*normal_command@end C1 l3
-     >|EXTRA
      >|text_arg:{ifinfo}
       >*line_arg C3
        >{spaces_before_argument: }
@@ -33,7 +32,6 @@ $result_tree_text{'consecutive_conditionals'} = '*document_root C1
        >{spaces_before_argument:\\n}
      >{raw:in iftex\\n}
      >*normal_command@end C1 l6
-     >|EXTRA
      >|text_arg:{iftex}
       >*line_arg C3
        >{spaces_before_argument: }
@@ -41,7 +39,6 @@ $result_tree_text{'consecutive_conditionals'} = '*document_root C1
        >{spaces_after_argument:\\n}
    {empty_line:\\n}
    *normal_command@set C1
-   |EXTRA
    |misc_args:A{b|}
     *line_arg C3
      {spaces_before_argument: }
@@ -58,7 +55,6 @@ $result_tree_text{'consecutive_conditionals'} = '*document_root C1
        >{spaces_after_argument:\\n}
      >{raw:in ifclear\\n}
      >*normal_command@end C1 l12
-     >|EXTRA
      >|text_arg:{ifclear}
       >*line_arg C3
        >{spaces_before_argument: }
@@ -73,7 +69,6 @@ $result_tree_text{'consecutive_conditionals'} = '*document_root C1
        >{spaces_after_argument:\\n}
      >{raw:in ifset\\n}
      >*normal_command@end C1 l15
-     >|EXTRA
      >|text_arg:{ifset}
       >*line_arg C3
        >{spaces_before_argument: }

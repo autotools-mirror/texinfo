@@ -12,7 +12,6 @@ $result_tree_text{'test_format_single_footnote_in_inline_content'} = '*document_
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -22,7 +21,6 @@ $result_tree_text{'test_format_single_footnote_in_inline_content'} = '*document_
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C2 l2 {top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -32,7 +30,6 @@ $result_tree_text{'test_format_single_footnote_in_inline_content'} = '*document_
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l4 {chap}
- |EXTRA
  |identifier:{chap}
  |is_target:{1}
  |node_number:{2}
@@ -42,7 +39,6 @@ $result_tree_text{'test_format_single_footnote_in_inline_content'} = '*document_
     {normal_text:chap}
     {spaces_after_argument:\\n}
  *normal_command@chapter C9 l5 {Chap}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -55,7 +51,6 @@ $result_tree_text{'test_format_single_footnote_in_inline_content'} = '*document_
   *paragraph C3
    {normal_text:a}
    *normal_command@footnote C1 l7
-   |EXTRA
    |global_command_number:{1}
     *brace_command_context C1
      *paragraph C1
@@ -65,7 +60,6 @@ $result_tree_text{'test_format_single_footnote_in_inline_content'} = '*document_
   *paragraph C3
    {normal_text:b}
    *normal_command@footnote C1 l9
-   |EXTRA
    |global_command_number:{2}
     *brace_command_context C3
      *normal_command@c C1
@@ -81,7 +75,6 @@ $result_tree_text{'test_format_single_footnote_in_inline_content'} = '*document_
       *preformatted C1
        {normal_text:in    example\\n}
       *normal_command@end C1 l13
-      |EXTRA
       |text_arg:{example}
        *line_arg C3
         {spaces_before_argument: }
@@ -92,7 +85,6 @@ $result_tree_text{'test_format_single_footnote_in_inline_content'} = '*document_
   *paragraph C3
    {normal_text:c}
    *normal_command@footnote C1 l16
-   |EXTRA
    |global_command_number:{3}
     *brace_command_context C3
      {spaces_before_argument:\\n}
@@ -103,7 +95,6 @@ $result_tree_text{'test_format_single_footnote_in_inline_content'} = '*document_
   *paragraph C3
    {normal_text:d}
    *normal_command@footnote C1 l20
-   |EXTRA
    |global_command_number:{4}
     *brace_command_context C2
      {spaces_before_argument:\\n}
@@ -114,7 +105,6 @@ $result_tree_text{'test_format_single_footnote_in_inline_content'} = '*document_
         {normal_text:qtitle}
         {spaces_after_argument:\\n}
       *normal_command@author C1 l22
-      |EXTRA
       |global_command_number:{1}
        *line_arg C3
         {spaces_before_argument: }
@@ -123,7 +113,6 @@ $result_tree_text{'test_format_single_footnote_in_inline_content'} = '*document_
       *paragraph C1
        {normal_text:In quotation\\n}
       *normal_command@end C1 l24
-      |EXTRA
       |text_arg:{quotation}
        *line_arg C3
         {spaces_before_argument: }

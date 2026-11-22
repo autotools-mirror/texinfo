@@ -16,7 +16,6 @@ $result_tree_text{'equivalent_nodes_novalidate'} = '*document_root C3
      {spaces_before_argument:\\n}
    {empty_line:\\n}
  *normal_command@node C4 l3 {first}
- |EXTRA
  |identifier:{first}
  |is_target:{1}
  |node_number:{1}
@@ -25,7 +24,6 @@ $result_tree_text{'equivalent_nodes_novalidate'} = '*document_root C3
     {spaces_before_argument: }
     {normal_text:first}
    *line_arg C3
-   |EXTRA
    |node_content:A{1|1}
    |normalized:{node}
     {spaces_before_argument: }
@@ -41,7 +39,6 @@ $result_tree_text{'equivalent_nodes_novalidate'} = '*document_root C3
    *menu_entry C4 l6
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{node}
      *normal_command@strong C1 l6
@@ -52,7 +49,6 @@ $result_tree_text{'equivalent_nodes_novalidate'} = '*document_root C3
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 l7
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -60,7 +56,6 @@ $result_tree_text{'equivalent_nodes_novalidate'} = '*document_root C3
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C3 l9 {@samp{node}}
- |EXTRA
  |identifier:{node}
  |is_target:{1}
  |node_number:{2}
@@ -75,7 +70,6 @@ $result_tree_text{'equivalent_nodes_novalidate'} = '*document_root C3
   *paragraph C2
    *normal_command@xref C1 l11
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{node}
      {normal_text:node}

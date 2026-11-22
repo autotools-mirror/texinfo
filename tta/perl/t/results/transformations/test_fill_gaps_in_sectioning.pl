@@ -12,7 +12,6 @@ $result_tree_text{'test_fill_gaps_in_sectioning'} = '*document_root C6
  *before_node_section C1
   *preamble_before_content
  *normal_command@top C2 l1 {top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |section_level:{0}
@@ -24,7 +23,6 @@ $result_tree_text{'test_fill_gaps_in_sectioning'} = '*document_root C6
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@chapter C2 l3 {Chap}
- |EXTRA
  |identifier:{Chap}
  |is_target:{1}
  |section_heading_number:{1}
@@ -37,7 +35,6 @@ $result_tree_text{'test_fill_gaps_in_sectioning'} = '*document_root C6
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@section C2 l5 {Section}
- |EXTRA
  |identifier:{Section}
  |is_target:{1}
  |section_heading_number:{1.1}
@@ -50,7 +47,6 @@ $result_tree_text{'test_fill_gaps_in_sectioning'} = '*document_root C6
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@unnumberedsubsec C2 {@asis{}}
- |EXTRA
  |section_level:{3}
  |section_number:{4}
   *arguments_line C1
@@ -61,7 +57,6 @@ $result_tree_text{'test_fill_gaps_in_sectioning'} = '*document_root C6
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@subsubsection C1 l7 {There}
- |EXTRA
  |identifier:{There}
  |is_target:{1}
  |section_level:{4}

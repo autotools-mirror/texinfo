@@ -12,7 +12,6 @@ $result_tree_text{'multitable_one_column_too_much_cells'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *normal_command@multitable C3 l1
-  |EXTRA
   |max_columns:{1}
    *arguments_line C1
     *block_line_arg C3
@@ -22,10 +21,8 @@ $result_tree_text{'multitable_one_column_too_much_cells'} = '*document_root C1
      {spaces_after_argument:\\n}
    *multitable_body C4
     *row C1
-    |EXTRA
     |row_number:{1}
      *normal_command@item C8 l2
-     |EXTRA
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
@@ -40,19 +37,15 @@ $result_tree_text{'multitable_one_column_too_much_cells'} = '*document_root C1
       *paragraph C1
        {normal_text:3rd  additiona tab\\n}
     *row C1
-    |EXTRA
     |row_number:{2}
      *normal_command@item C2 l3
-     |EXTRA
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
        {normal_text:a1\\n}
     *row C1
-    |EXTRA
     |row_number:{3}
      *normal_command@item C8 l4
-     |EXTRA
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
@@ -67,10 +60,8 @@ $result_tree_text{'multitable_one_column_too_much_cells'} = '*document_root C1
       *paragraph C1
        {normal_text:3rd  additional tab2\\n}
     *row C1
-    |EXTRA
     |row_number:{4}
      *normal_command@item C4 l5
-     |EXTRA
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
@@ -79,7 +70,6 @@ $result_tree_text{'multitable_one_column_too_much_cells'} = '*document_root C1
       *paragraph C1
        {normal_text:one additional tab\\n}
    *normal_command@end C1 l6
-   |EXTRA
    |text_arg:{multitable}
     *line_arg C3
      {spaces_before_argument: }

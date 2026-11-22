@@ -12,7 +12,6 @@ $result_tree_text{'custom_heading_with_include_in_command'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content C3
    *normal_command@setchapternewpage C1 l1
-   |EXTRA
    |misc_args:A{odd}
     *line_arg C3
      {spaces_before_argument: }
@@ -35,7 +34,6 @@ $result_tree_text{'custom_heading_with_include_in_command'} = '*document_root C2
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *normal_command@node C1 l4 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -45,7 +43,6 @@ $result_tree_text{'custom_heading_with_include_in_command'} = '*document_root C2
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C4 l5 {top sectionning}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -55,13 +52,11 @@ $result_tree_text{'custom_heading_with_include_in_command'} = '*document_root C2
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@contents C1 l7
-  |EXTRA
   |global_command_number:{1}
    *line_arg C1
     {spaces_before_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l9 {in main}
- |EXTRA
  |identifier:{in-main}
  |is_target:{1}
  |node_number:{2}
@@ -71,7 +66,6 @@ $result_tree_text{'custom_heading_with_include_in_command'} = '*document_root C2
     {normal_text:in main}
     {spaces_after_argument:\\n}
  *normal_command@chapter C6 l10 {chap in main}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -82,12 +76,10 @@ $result_tree_text{'custom_heading_with_include_in_command'} = '*document_root C2
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@set C1
-  |EXTRA
   |misc_args:A{do-top|}
   >SOURCEMARKS
   >include<start;1>
    >*normal_command@include C1 l13
-   >|EXTRA
    >|text_arg:{section_file.texi}
     >*line_arg C3
      >{spaces_before_argument: }
@@ -120,7 +112,6 @@ $result_tree_text{'custom_heading_with_include_in_command'} = '*document_root C2
     >{raw:* Chapter in included file::\\n}
     >{raw:@end menu\\n}
     >*normal_command@end C1 section_file.texi:l10
-    >|EXTRA
     >|text_arg:{ifclear}
      >*line_arg C3
       >{spaces_before_argument: }
@@ -128,7 +119,6 @@ $result_tree_text{'custom_heading_with_include_in_command'} = '*document_root C2
       >{spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 section_file.texi:l12 {Chapter in included file}
- |EXTRA
  |identifier:{Chapter-in-included-file}
  |is_target:{1}
  |node_number:{3}
@@ -138,7 +128,6 @@ $result_tree_text{'custom_heading_with_include_in_command'} = '*document_root C2
     {normal_text:Chapter in included file}
     {spaces_after_argument:\\n}
  *normal_command@chapter C4 section_file.texi:l13 {Chapter in included file}
- |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
  |section_number:{3}
@@ -155,7 +144,6 @@ $result_tree_text{'custom_heading_with_include_in_command'} = '*document_root C2
    *menu_entry C4 section_file.texi:l16
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{Section}
      {normal_text:Section}
@@ -164,7 +152,6 @@ $result_tree_text{'custom_heading_with_include_in_command'} = '*document_root C2
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 section_file.texi:l17
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -172,7 +159,6 @@ $result_tree_text{'custom_heading_with_include_in_command'} = '*document_root C2
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 section_file.texi:l19 {Section}
- |EXTRA
  |identifier:{Section}
  |is_target:{1}
  |node_number:{4}
@@ -182,7 +168,6 @@ $result_tree_text{'custom_heading_with_include_in_command'} = '*document_root C2
     {normal_text:Section}
     {spaces_after_argument:\\n}
  *normal_command@section C4 section_file.texi:l20 {Section}
- |EXTRA
  |section_heading_number:{2.1}
  |section_level:{2}
  |section_number:{4}
@@ -199,7 +184,6 @@ $result_tree_text{'custom_heading_with_include_in_command'} = '*document_root C2
    *menu_entry C4 section_file.texi:l23
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{Subsection}
      {normal_text:Subsection}
@@ -208,7 +192,6 @@ $result_tree_text{'custom_heading_with_include_in_command'} = '*document_root C2
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 section_file.texi:l24
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -216,7 +199,6 @@ $result_tree_text{'custom_heading_with_include_in_command'} = '*document_root C2
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 section_file.texi:l26 {Subsection}
- |EXTRA
  |identifier:{Subsection}
  |is_target:{1}
  |node_number:{5}
@@ -226,7 +208,6 @@ $result_tree_text{'custom_heading_with_include_in_command'} = '*document_root C2
     {normal_text:Subsection}
     {spaces_after_argument:\\n}
  *normal_command@subsection C5 section_file.texi:l27 {Subsection}
- |EXTRA
  |section_heading_number:{2.1.1}
  |section_level:{3}
  |section_number:{5}
@@ -251,7 +232,6 @@ $result_tree_text{'custom_heading_with_include_in_command'} = '*document_root C2
     >{raw:@node Subsubsection\\n}
     >{raw:@subsubsection Subsubsection\\n}
     >*normal_command@end C1 section_file.texi:l36
-    >|EXTRA
     >|text_arg:{ifset}
      >*line_arg C3
       >{spaces_before_argument: }
@@ -269,7 +249,6 @@ $result_tree_text{'custom_heading_with_include_in_command'} = '*document_root C2
     >{raw:@contents\\n}
     >{raw:@bye\\n}
     >*normal_command@end C1 section_file.texi:l41
-    >|EXTRA
     >|text_arg:{ifclear}
      >*line_arg C3
       >{spaces_before_argument: }
@@ -280,7 +259,6 @@ $result_tree_text{'custom_heading_with_include_in_command'} = '*document_root C2
   >SOURCEMARKS
   >include<start;2><p:1>
    >*normal_command@include C1 l15
-   >|EXTRA
    >|text_arg:{section_file_no_node.texi}
     >*line_arg C3
      >{spaces_before_argument: }
@@ -288,7 +266,6 @@ $result_tree_text{'custom_heading_with_include_in_command'} = '*document_root C2
      >{spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@chapter C2 section_file_no_node.texi:l2 {Chapter in included file}
- |EXTRA
  |section_heading_number:{3}
  |section_level:{1}
  |section_number:{6}
@@ -299,7 +276,6 @@ $result_tree_text{'custom_heading_with_include_in_command'} = '*document_root C2
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@section C2 section_file_no_node.texi:l4 {Section}
- |EXTRA
  |section_heading_number:{3.1}
  |section_level:{2}
  |section_number:{7}
@@ -310,7 +286,6 @@ $result_tree_text{'custom_heading_with_include_in_command'} = '*document_root C2
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@subsection C5 section_file_no_node.texi:l6 {Subsection}
- |EXTRA
  |section_heading_number:{3.1.1}
  |section_level:{3}
  |section_number:{8}
@@ -330,7 +305,6 @@ $result_tree_text{'custom_heading_with_include_in_command'} = '*document_root C2
       >{spaces_after_argument:\\n}
     >{raw:@subsubsection Subsubsection\\n}
     >*normal_command@end C1 section_file_no_node.texi:l10
-    >|EXTRA
     >|text_arg:{ifset}
      >*line_arg C3
       >{spaces_before_argument: }
@@ -343,7 +317,6 @@ $result_tree_text{'custom_heading_with_include_in_command'} = '*document_root C2
   >SOURCEMARKS
   >include<start;3><p:1>
    >*normal_command@include C1 l17
-   >|EXTRA
    >|text_arg:{section_file_no_node_include.texi}
     >*line_arg C3
      >{spaces_before_argument: }
@@ -351,7 +324,6 @@ $result_tree_text{'custom_heading_with_include_in_command'} = '*document_root C2
      >{spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@chapter C2 section_file_no_node_include.texi:l2 {Chapter in included file Include}
- |EXTRA
  |identifier:{Chapter-in-included-file-Include}
  |is_target:{1}
  |section_heading_number:{4}
@@ -364,7 +336,6 @@ $result_tree_text{'custom_heading_with_include_in_command'} = '*document_root C2
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@section C2 section_file_no_node_include.texi:l4 {Section Include}
- |EXTRA
  |identifier:{Section-Include}
  |is_target:{1}
  |section_heading_number:{4.1}
@@ -377,7 +348,6 @@ $result_tree_text{'custom_heading_with_include_in_command'} = '*document_root C2
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@subsection C6 section_file_no_node_include.texi:l6 {Subsection Include}
- |EXTRA
  |identifier:{Subsection-Include}
  |is_target:{1}
  |section_heading_number:{4.1.1}
@@ -399,7 +369,6 @@ $result_tree_text{'custom_heading_with_include_in_command'} = '*document_root C2
       >{spaces_after_argument:\\n}
     >{raw:@subsubsection Subsubsection Include\\n}
     >*normal_command@end C1 section_file_no_node_include.texi:l10
-    >|EXTRA
     >|text_arg:{ifset}
      >*line_arg C3
       >{spaces_before_argument: }
@@ -412,7 +381,6 @@ $result_tree_text{'custom_heading_with_include_in_command'} = '*document_root C2
   >SOURCEMARKS
   >include<start;4><p:1>
    >*normal_command@include C1 section_file_no_node_include.texi:l14
-   >|EXTRA
    >|text_arg:{section_file_no_node.texi}
     >*line_arg C3
      >{spaces_before_argument: }
@@ -420,7 +388,6 @@ $result_tree_text{'custom_heading_with_include_in_command'} = '*document_root C2
      >{spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@chapter C2 section_file_no_node.texi:l2 {Chapter in included file}
- |EXTRA
  |section_heading_number:{5}
  |section_level:{1}
  |section_number:{12}
@@ -431,7 +398,6 @@ $result_tree_text{'custom_heading_with_include_in_command'} = '*document_root C2
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@section C2 section_file_no_node.texi:l4 {Section}
- |EXTRA
  |section_heading_number:{5.1}
  |section_level:{2}
  |section_number:{13}
@@ -442,7 +408,6 @@ $result_tree_text{'custom_heading_with_include_in_command'} = '*document_root C2
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@subsection C6 section_file_no_node.texi:l6 {Subsection}
- |EXTRA
  |section_heading_number:{5.1.1}
  |section_level:{3}
  |section_number:{14}
@@ -462,7 +427,6 @@ $result_tree_text{'custom_heading_with_include_in_command'} = '*document_root C2
       >{spaces_after_argument:\\n}
     >{raw:@subsubsection Subsubsection\\n}
     >*normal_command@end C1 section_file_no_node.texi:l10
-    >|EXTRA
     >|text_arg:{ifset}
      >*line_arg C3
       >{spaces_before_argument: }
@@ -478,7 +442,6 @@ $result_tree_text{'custom_heading_with_include_in_command'} = '*document_root C2
   >SOURCEMARKS
   >include<start;5><p:1>
    >*normal_command@include C1 l19
-   >|EXTRA
    >|text_arg:{section_file_no_node.texi}
     >*line_arg C3
      >{spaces_before_argument: }
@@ -486,7 +449,6 @@ $result_tree_text{'custom_heading_with_include_in_command'} = '*document_root C2
      >{spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@chapter C2 section_file_no_node.texi:l2 {Chapter in included file}
- |EXTRA
  |section_heading_number:{6}
  |section_level:{1}
  |section_number:{15}
@@ -497,7 +459,6 @@ $result_tree_text{'custom_heading_with_include_in_command'} = '*document_root C2
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@section C2 section_file_no_node.texi:l4 {Section}
- |EXTRA
  |section_heading_number:{6.1}
  |section_level:{2}
  |section_number:{16}
@@ -508,7 +469,6 @@ $result_tree_text{'custom_heading_with_include_in_command'} = '*document_root C2
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@subsection C4 section_file_no_node.texi:l6 {Subsection}
- |EXTRA
  |section_heading_number:{6.1.1}
  |section_level:{3}
  |section_number:{17}
@@ -528,7 +488,6 @@ $result_tree_text{'custom_heading_with_include_in_command'} = '*document_root C2
       >{spaces_after_argument:\\n}
     >{raw:@subsubsection Subsubsection\\n}
     >*normal_command@end C1 section_file_no_node.texi:l10
-    >|EXTRA
     >|text_arg:{ifset}
      >*line_arg C3
       >{spaces_before_argument: }
@@ -539,7 +498,6 @@ $result_tree_text{'custom_heading_with_include_in_command'} = '*document_root C2
   >include<end;5><p:1>
   {empty_line:\\n}
  *normal_command@node C1 l21 {last chap}
- |EXTRA
  |identifier:{last-chap}
  |is_target:{1}
  |node_number:{6}
@@ -549,7 +507,6 @@ $result_tree_text{'custom_heading_with_include_in_command'} = '*document_root C2
     {normal_text:last chap}
     {spaces_after_argument:\\n}
  *normal_command@chapter C2 l22 {A last}
- |EXTRA
  |section_heading_number:{7}
  |section_level:{1}
  |section_number:{18}

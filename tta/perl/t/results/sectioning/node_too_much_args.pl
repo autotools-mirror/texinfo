@@ -12,7 +12,6 @@ $result_tree_text{'node_too_much_args'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 l1 {first}
- |EXTRA
  |identifier:{first}
  |is_target:{1}
  |node_number:{1}
@@ -25,7 +24,6 @@ $result_tree_text{'node_too_much_args'} = '*document_root C2
    *line_arg C1
     {spaces_before_argument: }
    *line_arg C4
-   |EXTRA
    |manual_content:A{2|2}
     {spaces_before_argument:  }
     {normal_text:(}

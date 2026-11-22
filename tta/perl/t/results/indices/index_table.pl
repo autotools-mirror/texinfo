@@ -15,7 +15,6 @@ $result_tree_text{'index_table'} = '*document_root C12
    {text_before_beginning:\\n}
   *preamble_before_content
  *normal_command@node C1 index_table.texi:l3 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -25,7 +24,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C3 index_table.texi:l4 {Test for indices}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -40,7 +38,6 @@ $result_tree_text{'index_table'} = '*document_root C12
    *menu_entry C4 index_table.texi:l6
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{node-with-ftable-and-vtable}
      {normal_text:node with ftable and vtable}
@@ -51,7 +48,6 @@ $result_tree_text{'index_table'} = '*document_root C12
    *menu_entry C4 index_table.texi:l7
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{node-with-printindex}
      {normal_text:node with printindex}
@@ -62,7 +58,6 @@ $result_tree_text{'index_table'} = '*document_root C12
    *menu_entry C4 index_table.texi:l8
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{indices-refs}
      {normal_text:indices refs}
@@ -71,7 +66,6 @@ $result_tree_text{'index_table'} = '*document_root C12
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 index_table.texi:l9
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -79,7 +73,6 @@ $result_tree_text{'index_table'} = '*document_root C12
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 index_table.texi:l11 {node with ftable and vtable}
- |EXTRA
  |identifier:{node-with-ftable-and-vtable}
  |is_target:{1}
  |node_number:{2}
@@ -89,7 +82,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:node with ftable and vtable}
     {spaces_after_argument:\\n}
  *normal_command@chapter C13 index_table.texi:l12 {first node chapter, with ftable and vtable}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -100,7 +92,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 index_table.texi:l14
-  |EXTRA
   |element_node:{node-with-ftable-and-vtable}
   |index_entry:I{cp,1}
    *line_arg C3
@@ -111,7 +102,6 @@ $result_tree_text{'index_table'} = '*document_root C12
   *paragraph C2
    {normal_text:Some text\\n}
    *index_entry_command@cindex C1 index_table.texi:l17
-   |EXTRA
    |element_node:{node-with-ftable-and-vtable}
    |index_entry:I{cp,2}
     *line_arg C3
@@ -130,7 +120,6 @@ $result_tree_text{'index_table'} = '*document_root C12
    *table_entry C2
     *table_term C2
      *normal_command@item C1 index_table.texi:l22
-     |EXTRA
      |element_node:{node-with-ftable-and-vtable}
      |index_entry:I{vr,1}
       *line_arg C3
@@ -138,7 +127,6 @@ $result_tree_text{'index_table'} = '*document_root C12
        {normal_text:var1}
        {spaces_after_argument:\\n}
      *normal_command@itemx C1 index_table.texi:l23
-     |EXTRA
      |element_node:{node-with-ftable-and-vtable}
      |index_entry:I{vr,2}
       *line_arg C3
@@ -149,7 +137,6 @@ $result_tree_text{'index_table'} = '*document_root C12
      *paragraph C1
       {normal_text:var1 et var2\\n}
    *normal_command@end C1 index_table.texi:l25
-   |EXTRA
    |text_arg:{vtable}
     *line_arg C3
      {spaces_before_argument: }
@@ -167,7 +154,6 @@ $result_tree_text{'index_table'} = '*document_root C12
    *table_entry C2
     *table_term C2
      *normal_command@item C1 index_table.texi:l29
-     |EXTRA
      |element_node:{node-with-ftable-and-vtable}
      |index_entry:I{fn,1}
       *line_arg C3
@@ -175,7 +161,6 @@ $result_tree_text{'index_table'} = '*document_root C12
        {normal_text:fun1}
        {spaces_after_argument:\\n}
      *normal_command@itemx C1 index_table.texi:l30
-     |EXTRA
      |element_node:{node-with-ftable-and-vtable}
      |index_entry:I{fn,2}
       *line_arg C3
@@ -188,7 +173,6 @@ $result_tree_text{'index_table'} = '*document_root C12
    *table_entry C2
     *table_term C1
      *normal_command@item C1 index_table.texi:l32
-     |EXTRA
      |element_node:{node-with-ftable-and-vtable}
      |index_entry:I{fn,3}
       *line_arg C3
@@ -199,7 +183,6 @@ $result_tree_text{'index_table'} = '*document_root C12
      *paragraph C1
       {normal_text:and even more   \\n}
    *normal_command@end C1 index_table.texi:l34
-   |EXTRA
    |text_arg:{ftable}
     *line_arg C3
      {spaces_before_argument: }
@@ -207,7 +190,6 @@ $result_tree_text{'index_table'} = '*document_root C12
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 index_table.texi:l36 {node with printindex}
- |EXTRA
  |identifier:{node-with-printindex}
  |is_target:{1}
  |isindex:{1}
@@ -218,7 +200,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:node with printindex}
     {spaces_after_argument:\\n}
  *normal_command@chapter C6 index_table.texi:l37 {node with printindex}
- |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
  |section_number:{3}
@@ -229,7 +210,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@printindex C1 index_table.texi:l39
-  |EXTRA
   |global_command_number:{1}
   |misc_args:A{fn}
    *line_arg C3
@@ -237,7 +217,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:fn}
     {spaces_after_argument:\\n}
   *normal_command@printindex C1 index_table.texi:l40
-  |EXTRA
   |global_command_number:{2}
   |misc_args:A{vr}
    *line_arg C3
@@ -245,7 +224,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:vr}
     {spaces_after_argument:\\n}
   *normal_command@printindex C1 index_table.texi:l41
-  |EXTRA
   |global_command_number:{3}
   |misc_args:A{cp}
    *line_arg C3
@@ -254,7 +232,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 index_table.texi:l43 {indices refs}
- |EXTRA
  |identifier:{indices-refs}
  |is_target:{1}
  |isindex:{1}
@@ -265,7 +242,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:indices refs}
     {spaces_after_argument:\\n}
  *normal_command@chapter C135 index_table.texi:l44 {Indices refs}
- |EXTRA
  |section_heading_number:{3}
  |section_level:{1}
  |section_number:{4}
@@ -281,7 +257,6 @@ $result_tree_text{'index_table'} = '*document_root C12
    *menu_entry C4 index_table.texi:l46
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{node}
      {normal_text:node}
@@ -290,14 +265,12 @@ $result_tree_text{'index_table'} = '*document_root C12
      *preformatted C1
       {normal_text:node \\n}
    *normal_command@end C1 index_table.texi:l47
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:menu}
      {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l48
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,3}
    *line_arg C3
@@ -305,7 +278,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l49
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,4}
    *line_arg C3
@@ -313,7 +285,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:aoncept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l50
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,5}
    *line_arg C3
@@ -321,7 +292,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:zoncept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l51
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,6}
    *line_arg C3
@@ -329,7 +299,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:eoncept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l52
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,7}
    *line_arg C3
@@ -337,7 +306,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:roncept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l53
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,8}
    *line_arg C3
@@ -345,7 +313,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:toncept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l54
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,9}
    *line_arg C3
@@ -353,7 +320,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:yoncept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l55
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,10}
    *line_arg C3
@@ -361,7 +327,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:uoncept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l56
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,11}
    *line_arg C3
@@ -369,7 +334,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:ioncept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l57
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,12}
    *line_arg C3
@@ -377,7 +341,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:ooncept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l58
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,13}
    *line_arg C3
@@ -385,7 +348,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:poncept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l59
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,14}
    *line_arg C3
@@ -393,7 +355,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:qoncept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l60
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,15}
    *line_arg C3
@@ -401,7 +362,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concep}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l61
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,16}
    *line_arg C3
@@ -409,7 +369,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:rsconcept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l62
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,17}
    *line_arg C3
@@ -417,7 +376,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:soncept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l63
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,18}
    *line_arg C3
@@ -425,7 +383,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:doncept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l64
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,19}
    *line_arg C3
@@ -433,7 +390,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:foncept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l65
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,20}
    *line_arg C3
@@ -441,7 +397,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:goncept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l66
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,21}
    *line_arg C3
@@ -449,7 +404,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:honcept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l67
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,22}
    *line_arg C3
@@ -457,7 +411,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:joncept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l68
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,23}
    *line_arg C3
@@ -465,7 +418,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:koncept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l69
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,24}
    *line_arg C3
@@ -473,7 +425,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:loncept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l70
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,25}
    *line_arg C3
@@ -481,7 +432,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:moncept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l71
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,26}
    *line_arg C3
@@ -489,7 +439,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:roncept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l72
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,27}
    *line_arg C3
@@ -497,7 +446,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:woncept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l73
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,28}
    *line_arg C3
@@ -505,7 +453,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:xoncept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l74
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,29}
    *line_arg C3
@@ -513,7 +460,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:voncept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l75
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,30}
    *line_arg C3
@@ -521,7 +467,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:boncept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l76
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,31}
    *line_arg C3
@@ -529,7 +474,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:noncept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l77
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,32}
    *line_arg C3
@@ -537,7 +481,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:,oncept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l78
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,33}
    *line_arg C3
@@ -545,7 +488,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:?oncept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l79
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,34}
    *line_arg C3
@@ -553,7 +495,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:;oncept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l80
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,35}
    *line_arg C3
@@ -561,7 +502,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:/oncept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l81
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,36}
    *line_arg C3
@@ -569,7 +509,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:!oncept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l82
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,37}
    *line_arg C3
@@ -577,7 +516,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:cancept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l83
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,38}
    *line_arg C3
@@ -585,7 +523,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:czncept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l84
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,39}
    *line_arg C3
@@ -593,7 +530,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:cencept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l85
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,40}
    *line_arg C3
@@ -601,7 +537,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:ctncept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l86
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,41}
    *line_arg C3
@@ -609,7 +544,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:cyncept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l87
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,42}
    *line_arg C3
@@ -617,7 +551,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:cuncept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l88
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,43}
    *line_arg C3
@@ -625,7 +558,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:cincept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l89
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,44}
    *line_arg C3
@@ -633,7 +565,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l90
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,45}
    *line_arg C3
@@ -641,7 +572,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:cpncept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l91
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,46}
    *line_arg C3
@@ -649,7 +579,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:cqncept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l92
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,47}
    *line_arg C3
@@ -657,7 +586,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:csncept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l93
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,48}
    *line_arg C3
@@ -665,7 +593,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:cdncept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l94
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,49}
    *line_arg C3
@@ -673,7 +600,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:cfncept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l95
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,50}
    *line_arg C3
@@ -681,7 +607,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:cgncept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l96
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,51}
    *line_arg C3
@@ -689,7 +614,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:chncept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l97
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,52}
    *line_arg C3
@@ -697,7 +621,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:cjncept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l98
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,53}
    *line_arg C3
@@ -705,7 +628,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:ckncept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l99
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,54}
    *line_arg C3
@@ -713,7 +635,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:clncept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l100
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,55}
    *line_arg C3
@@ -721,7 +642,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:cmncept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l101
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,56}
    *line_arg C3
@@ -729,7 +649,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:csdcept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l102
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,57}
    *line_arg C3
@@ -737,7 +656,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:cxncept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l103
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,58}
    *line_arg C3
@@ -745,7 +663,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:cvncept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l104
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,59}
    *line_arg C3
@@ -753,7 +670,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:cbncept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l105
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,60}
    *line_arg C3
@@ -761,7 +677,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:cnncept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l106
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,61}
    *line_arg C3
@@ -769,7 +684,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:c,ncept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l107
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,62}
    *line_arg C3
@@ -777,7 +691,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:crncept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l108
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,63}
    *line_arg C3
@@ -785,7 +698,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l109
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,64}
    *line_arg C3
@@ -793,7 +705,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l110
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,65}
    *line_arg C3
@@ -801,7 +712,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l111
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,66}
    *line_arg C3
@@ -809,7 +719,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l112
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,67}
    *line_arg C3
@@ -817,7 +726,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l113
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,68}
    *line_arg C3
@@ -825,7 +733,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l114
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,69}
    *line_arg C3
@@ -833,7 +740,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l115
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,70}
    *line_arg C3
@@ -841,7 +747,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l116
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,71}
    *line_arg C3
@@ -849,7 +754,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l117
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,72}
    *line_arg C3
@@ -857,7 +761,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l118
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,73}
    *line_arg C3
@@ -865,7 +768,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l119
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,74}
    *line_arg C3
@@ -873,7 +775,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l120
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,75}
    *line_arg C3
@@ -881,7 +782,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l121
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,76}
    *line_arg C3
@@ -889,7 +789,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l122
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,77}
    *line_arg C3
@@ -897,7 +796,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l123
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,78}
    *line_arg C3
@@ -905,7 +803,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l124
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,79}
    *line_arg C3
@@ -913,7 +810,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l125
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,80}
    *line_arg C3
@@ -921,7 +817,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l126
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,81}
    *line_arg C3
@@ -929,7 +824,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l127
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,82}
    *line_arg C3
@@ -937,7 +831,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l128
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,83}
    *line_arg C3
@@ -945,7 +838,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l129
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,84}
    *line_arg C3
@@ -953,7 +845,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l130
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,85}
    *line_arg C3
@@ -961,7 +852,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l131
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,86}
    *line_arg C3
@@ -969,7 +859,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l132
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,87}
    *line_arg C3
@@ -977,7 +866,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l133
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,88}
    *line_arg C3
@@ -985,7 +873,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l134
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,89}
    *line_arg C3
@@ -993,7 +880,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l135
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,90}
    *line_arg C3
@@ -1001,7 +887,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l136
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,91}
    *line_arg C3
@@ -1009,7 +894,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l137
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,92}
    *line_arg C3
@@ -1017,7 +901,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l138
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,93}
    *line_arg C3
@@ -1025,7 +908,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l139
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,94}
    *line_arg C3
@@ -1033,7 +915,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l140
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,95}
    *line_arg C3
@@ -1041,7 +922,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l141
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,96}
    *line_arg C3
@@ -1049,7 +929,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l142
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,97}
    *line_arg C3
@@ -1057,7 +936,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l143
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,98}
    *line_arg C3
@@ -1065,7 +943,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l144
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,99}
    *line_arg C3
@@ -1073,7 +950,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l145
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,100}
    *line_arg C3
@@ -1081,7 +957,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l146
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,101}
    *line_arg C3
@@ -1089,7 +964,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l147
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,102}
    *line_arg C3
@@ -1097,7 +971,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l148
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,103}
    *line_arg C3
@@ -1105,7 +978,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l149
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,104}
    *line_arg C3
@@ -1113,7 +985,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l150
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,105}
    *line_arg C3
@@ -1121,7 +992,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l151
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,106}
    *line_arg C3
@@ -1129,7 +999,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l152
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,107}
    *line_arg C3
@@ -1137,7 +1006,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l153
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,108}
    *line_arg C3
@@ -1145,7 +1013,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l154
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,109}
    *line_arg C3
@@ -1153,7 +1020,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l155
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,110}
    *line_arg C3
@@ -1161,7 +1027,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l156
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,111}
    *line_arg C3
@@ -1169,7 +1034,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l157
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,112}
    *line_arg C3
@@ -1177,7 +1041,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l158
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,113}
    *line_arg C3
@@ -1185,7 +1048,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l159
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,114}
    *line_arg C3
@@ -1193,7 +1055,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l160
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,115}
    *line_arg C3
@@ -1201,7 +1062,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l161
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,116}
    *line_arg C3
@@ -1209,7 +1069,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l162
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,117}
    *line_arg C3
@@ -1217,7 +1076,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l163
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,118}
    *line_arg C3
@@ -1225,7 +1083,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l164
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,119}
    *line_arg C3
@@ -1233,7 +1090,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l165
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,120}
    *line_arg C3
@@ -1241,7 +1097,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l166
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,121}
    *line_arg C3
@@ -1249,7 +1104,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l167
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,122}
    *line_arg C3
@@ -1257,7 +1111,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l168
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,123}
    *line_arg C3
@@ -1265,7 +1118,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l169
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,124}
    *line_arg C3
@@ -1273,7 +1125,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l170
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,125}
    *line_arg C3
@@ -1281,7 +1132,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l171
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,126}
    *line_arg C3
@@ -1289,7 +1139,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l172
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,127}
    *line_arg C3
@@ -1297,7 +1146,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l173
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,128}
    *line_arg C3
@@ -1305,7 +1153,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l174
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,129}
    *line_arg C3
@@ -1313,7 +1160,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {normal_text:concept}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_table.texi:l175
-  |EXTRA
   |element_node:{indices-refs}
   |index_entry:I{cp,130}
    *line_arg C3
@@ -1332,7 +1178,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@printindex C1 index_table.texi:l179
-  |EXTRA
   |global_command_number:{4}
   |misc_args:A{cp}
    *line_arg C3
@@ -1341,7 +1186,6 @@ $result_tree_text{'index_table'} = '*document_root C12
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 index_table.texi:l181 {node}
- |EXTRA
  |identifier:{node}
  |is_target:{1}
  |node_number:{5}
@@ -1354,7 +1198,6 @@ $result_tree_text{'index_table'} = '*document_root C12
    *line_arg C1
     {spaces_before_argument:\\n}
  *normal_command@section C5 index_table.texi:l182 {node}
- |EXTRA
  |section_heading_number:{3.1}
  |section_level:{2}
  |section_number:{5}
@@ -1368,7 +1211,6 @@ $result_tree_text{'index_table'} = '*document_root C12
    {normal_text:A section following the indices.\\n}
   {empty_line:\\n}
   *normal_command@contents C1 index_table.texi:l186
-  |EXTRA
   |global_command_number:{1}
    *line_arg C1
     {spaces_before_argument:\\n}

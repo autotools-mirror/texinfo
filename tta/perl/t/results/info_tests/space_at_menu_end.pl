@@ -12,7 +12,6 @@ $result_tree_text{'space_at_menu_end'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C5 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -29,7 +28,6 @@ $result_tree_text{'space_at_menu_end'} = '*document_root C2
    *menu_entry C4 l4
     {menu_entry_leading_text:* }
     *menu_entry_node C3
-    |EXTRA
     |manual_content:A{1|1}
      {normal_text:(}
      {normal_text:out}
@@ -42,7 +40,6 @@ $result_tree_text{'space_at_menu_end'} = '*document_root C2
     *preformatted C1
      {after_menu_description_line:\\n}
    *normal_command@end C1 l6
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }

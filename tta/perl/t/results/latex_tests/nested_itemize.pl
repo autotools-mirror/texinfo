@@ -18,14 +18,12 @@ $result_tree_text{'nested_itemize'} = '*document_root C1
    *before_item C1
     {spaces_before_paragraph:   }
    *normal_command@item C2 l2
-   |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C2
      {normal_text:First level item\\n}
      {normal_text:   }
    *normal_command@item C3 l3
-   |EXTRA
    |item_number:{2}
     {ignorable_spaces_after_command: }
     *paragraph C1
@@ -37,14 +35,12 @@ $result_tree_text{'nested_itemize'} = '*document_root C1
      *before_item C1
       {spaces_before_paragraph:     }
      *normal_command@item C2 l5
-     |EXTRA
      |item_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C2
        {normal_text:Second level item\\n}
        {normal_text:     }
      *normal_command@item C3 l6
-     |EXTRA
      |item_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C1
@@ -56,14 +52,12 @@ $result_tree_text{'nested_itemize'} = '*document_root C1
        *before_item C1
         {spaces_before_paragraph:       }
        *normal_command@item C2 l8
-       |EXTRA
        |item_number:{1}
         {ignorable_spaces_after_command: }
         *paragraph C2
          {normal_text:Third level item\\n}
          {normal_text:       }
        *normal_command@item C3 l9
-       |EXTRA
        |item_number:{2}
         {ignorable_spaces_after_command: }
         *paragraph C1
@@ -75,41 +69,35 @@ $result_tree_text{'nested_itemize'} = '*document_root C1
          *before_item C1
           {spaces_before_paragraph:         }
          *normal_command@item C2 l11
-         |EXTRA
          |item_number:{1}
           {ignorable_spaces_after_command: }
           *paragraph C2
            {normal_text:Fourth level item\\n}
            {normal_text:         }
          *normal_command@item C2 l12
-         |EXTRA
          |item_number:{2}
           {ignorable_spaces_after_command: }
           *paragraph C1
            {normal_text:Fourth level item\\n}
          *normal_command@end C1 l13
-         |EXTRA
          |text_arg:{itemize}
           *line_arg C3
            {spaces_before_argument: }
            {normal_text:itemize}
            {spaces_after_argument:\\n}
        *normal_command@end C1 l14
-       |EXTRA
        |text_arg:{itemize}
         *line_arg C3
          {spaces_before_argument: }
          {normal_text:itemize}
          {spaces_after_argument:\\n}
      *normal_command@end C1 l15
-     |EXTRA
      |text_arg:{itemize}
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:itemize}
        {spaces_after_argument:\\n}
    *normal_command@end C1 l16
-   |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }

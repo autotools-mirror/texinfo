@@ -12,7 +12,6 @@ $result_tree_text{'recursive_alias'} = '*document_root C1
  *before_node_section C4
   *preamble_before_content C6
    *normal_command@alias C1 l1
-   |EXTRA
    |misc_args:A{new|strong}
     *line_arg C3
      {spaces_before_argument: }
@@ -20,7 +19,6 @@ $result_tree_text{'recursive_alias'} = '*document_root C1
      {spaces_after_argument:\\n}
    {empty_line:\\n}
    *normal_command@alias C1 l3
-   |EXTRA
    |misc_args:A{other|new}
     *line_arg C3
      {spaces_before_argument: }
@@ -28,7 +26,6 @@ $result_tree_text{'recursive_alias'} = '*document_root C1
      {spaces_after_argument:\\n}
    {empty_line:\\n}
    *normal_command@alias C1 l5
-   |EXTRA
    |misc_args:A{strong|other}
     *line_arg C3
      {spaces_before_argument: }
@@ -37,7 +34,6 @@ $result_tree_text{'recursive_alias'} = '*document_root C1
    {empty_line:\\n}
   *paragraph C2
    *normal_command@strong C1 l7
-   |EXTRA
    |alias_of:{other}
     *brace_container C1
      {normal_text:aa}

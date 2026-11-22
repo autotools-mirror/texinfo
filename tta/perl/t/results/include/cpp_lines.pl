@@ -15,7 +15,6 @@ $result_tree_text{'cpp_lines'} = '*document_root C4
     {text_before_beginning:\\input texinfo\\n}
   *preamble_before_content C3
    *normal_command@setfilename C1 cpp_lines.texi:l2
-   |EXTRA
    |text_arg:{cpp_lines.info}
     *line_arg C3
      {spaces_before_argument: }
@@ -33,7 +32,6 @@ $result_tree_text{'cpp_lines'} = '*document_root C4
    {normal_text:.\\n}
   {empty_line:\\n}
  *normal_command@node C1 g_f:l70 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -43,7 +41,6 @@ $result_tree_text{'cpp_lines'} = '*document_root C4
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@node C55 g_f:l71 {chap}
- |EXTRA
  |identifier:{chap}
  |is_target:{1}
  |node_number:{2}
@@ -66,7 +63,6 @@ $result_tree_text{'cpp_lines'} = '*document_root C4
    {raw:\\n}
    {raw:  #line 5 "f"\\n}
    *normal_command@end C1 g_f:l51
-   |EXTRA
    |text_arg:{verbatim}
     *line_arg C3
      {spaces_before_argument: }
@@ -74,14 +70,12 @@ $result_tree_text{'cpp_lines'} = '*document_root C4
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@macro C3 g_f:l53
-  |EXTRA
   |formal_args:A{}
   |macro_name:{macr}
    *arguments_line C1
     {macro_line: macr\\n}
    {raw:# line 7 "k"\\n}
    *normal_command@end C1 g_f:l55
-   |EXTRA
    |text_arg:{macro}
     *line_arg C3
      {spaces_before_argument: }
@@ -109,7 +103,6 @@ $result_tree_text{'cpp_lines'} = '*document_root C4
    {normal_text:.\\n}
   {empty_line:\\n}
   *normal_command@macro C4 g_f:l63
-  |EXTRA
   |formal_args:A{}
   |macro_name:{macrtwo}
    *arguments_line C1
@@ -117,7 +110,6 @@ $result_tree_text{'cpp_lines'} = '*document_root C4
    {raw:line before\\n}
    {raw:# line 666 "x"\\n}
    *normal_command@end C1 g_f:l66
-   |EXTRA
    |text_arg:{macro}
     *line_arg C3
      {spaces_before_argument: }
@@ -149,7 +141,6 @@ $result_tree_text{'cpp_lines'} = '*document_root C4
   >SOURCEMARKS
   >include<start;1><p:1>
    >*normal_command@include C1 g_f:l74
-   >|EXTRA
    >|text_arg:{file_with_cpp_lines.texi}
     >*line_arg C3
      >{spaces_before_argument: }
@@ -192,7 +183,6 @@ $result_tree_text{'cpp_lines'} = '*document_root C4
   *paragraph C3
    {normal_text:a}
    *normal_command@footnote C1 g_f:l83
-   |EXTRA
    |global_command_number:{1}
     *brace_command_context C2
      {spaces_before_argument:\\n}
@@ -205,7 +195,6 @@ $result_tree_text{'cpp_lines'} = '*document_root C4
   *paragraph C3
    {normal_text:a}
    *normal_command@footnote C1 footnote:l28
-   |EXTRA
    |global_command_number:{2}
     *brace_command_context C3
      {spaces_before_argument:\\n}
@@ -287,7 +276,6 @@ $result_tree_text{'cpp_lines'} = '*document_root C4
   >line_directive<15><p:1>{#line 5 "accentêd"\\n}
   {empty_line:\\n}
   *normal_command@documentlanguage C1 accentêd:l7
-  |EXTRA
   |global_command_number:{1}
   |text_arg:{làng}
    *line_arg C3

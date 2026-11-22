@@ -12,7 +12,6 @@ $result_tree_text{'form_feeds'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C2 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -23,7 +22,6 @@ $result_tree_text{'form_feeds'} = '*document_root C3
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C40 l3 {chapnode}
- |EXTRA
  |identifier:{chap-node}
  |is_target:{1}
  |node_number:{2}
@@ -67,7 +65,6 @@ $result_tree_text{'form_feeds'} = '*document_root C3
    {normal_text:\\n}
   {empty_line:\\n}
   *normal_command@anchor C1 l17
-  |EXTRA
   |identifier:{aa}
   |is_target:{1}
    *brace_arg C1
@@ -83,7 +80,6 @@ $result_tree_text{'form_feeds'} = '*document_root C3
      {spaces_before_argument: \\f }
      {normal_text:fff}
    *normal_command@footnote C1 l17
-   |EXTRA
    |global_command_number:{1}
     *brace_command_context C4
      {spaces_before_argument:\\n}
@@ -93,7 +89,6 @@ $result_tree_text{'form_feeds'} = '*document_root C3
      {empty_line:\\f}
    {normal_text: }
    *normal_command@footnote C1 l18
-   |EXTRA
    |global_command_number:{2}
     *brace_command_context C4
      {spaces_before_argument: \\f }
@@ -107,7 +102,6 @@ $result_tree_text{'form_feeds'} = '*document_root C3
   *paragraph C2
    *normal_command@xref C1 l20
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{chap-node}
      {normal_text:chap\\fnode}
@@ -120,7 +114,6 @@ $result_tree_text{'form_feeds'} = '*document_root C3
    *preformatted C1
     {normal_text:in example\\n}
    *normal_command@end C1 l24
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
@@ -146,7 +139,6 @@ $result_tree_text{'form_feeds'} = '*document_root C3
   {empty_line:\\n}
   *normal_command@deffn C4 l31
    *def_line C1 l31
-   |EXTRA
    |def_command:{deffn}
    |element_node:{chap-node}
    |index_entry:I{fn,1}
@@ -184,7 +176,6 @@ $result_tree_text{'form_feeds'} = '*document_root C3
        {spaces_after_argument:\\f }
      {spaces_after_argument: \\f\\n}
    *normal_command@deffnx C1 l32
-   |EXTRA
    |def_command:{deffn}
    |element_node:{chap-node}
    |index_entry:I{fn,2}
@@ -225,7 +216,6 @@ $result_tree_text{'form_feeds'} = '*document_root C3
     *paragraph C1
      {normal_text:T\\n}
    *normal_command@end C1 l34
-   |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
@@ -233,7 +223,6 @@ $result_tree_text{'form_feeds'} = '*document_root C3
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@float C9 l36
-  |EXTRA
   |float_type:{}
   |global_command_number:{1}
    *arguments_line C1
@@ -268,7 +257,6 @@ $result_tree_text{'form_feeds'} = '*document_root C3
    *paragraph C1
     {normal_text:After shc\\n}
    *normal_command@end C1 l40
-   |EXTRA
    |text_arg:{float}
     *line_arg C3
      {spaces_before_argument: }
@@ -276,7 +264,6 @@ $result_tree_text{'form_feeds'} = '*document_root C3
      {spaces_after_argument: \\f\\n}
   {empty_line:\\n}
   *normal_command@float C3 l42
-  |EXTRA
   |float_number:{1}
   |float_type:{type}
   |global_command_number:{2}
@@ -294,7 +281,6 @@ $result_tree_text{'form_feeds'} = '*document_root C3
    *paragraph C1
     {normal_text:in float\\n}
    *normal_command@end C1 l44
-   |EXTRA
    |text_arg:{float}
     *line_arg C3
      {spaces_before_argument: }
@@ -302,7 +288,6 @@ $result_tree_text{'form_feeds'} = '*document_root C3
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@listoffloats C1 l46
-  |EXTRA
   |float_type:{type}
   |global_command_number:{1}
    *line_arg C3

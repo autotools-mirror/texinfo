@@ -12,21 +12,18 @@ $result_tree_text{'value_in_index_commands'} = '*document_root C3
  *before_node_section C11
   *preamble_before_content C9
    *normal_command@set C1
-   |EXTRA
    |misc_args:A{cp|cp}
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:cp cp}
      {spaces_after_argument:\\n}
    *normal_command@set C1
-   |EXTRA
    |misc_args:A{fn|fn}
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:fn fn}
      {spaces_after_argument:\\n}
    *normal_command@set C1
-   |EXTRA
    |misc_args:A{syncodeindex_command|@syncodeindex}
     *line_arg C3
      {spaces_before_argument: }
@@ -34,7 +31,6 @@ $result_tree_text{'value_in_index_commands'} = '*document_root C3
      {spaces_after_argument:\\n}
    {empty_line:\\n}
    *normal_command@syncodeindex C1 l5
-   |EXTRA
    |misc_args:A{cp|fn}
    >SOURCEMARKS
    >value_expansion<start;3>{@syncodeindex}
@@ -58,7 +54,6 @@ $result_tree_text{'value_in_index_commands'} = '*document_root C3
      >value_expansion<end;2><p:5>
      {spaces_after_argument:\\n}
    *normal_command@syncodeindex C1 l6
-   |EXTRA
    |misc_args:A{cp|fn}
     *line_arg C3
      {spaces_before_argument: }
@@ -68,7 +63,6 @@ $result_tree_text{'value_in_index_commands'} = '*document_root C3
      {spaces_after_argument:\\n}
    {empty_line:\\n}
    *normal_command@set C1
-   |EXTRA
    |misc_args:A{truc|truc}
     *line_arg C3
      {spaces_before_argument: }
@@ -78,7 +72,6 @@ $result_tree_text{'value_in_index_commands'} = '*document_root C3
   *paragraph C3
    {normal_text:definedx truc\\n}
    *normal_command@defindex C1 l11
-   |EXTRA
    |misc_args:A{truc}
     *line_arg C3
      {spaces_before_argument: }
@@ -94,7 +87,6 @@ $result_tree_text{'value_in_index_commands'} = '*document_root C3
    {normal_text:after\\n}
   {empty_line:\\n}
   *normal_command@set C1
-  |EXTRA
   |misc_args:A{trucindex_command|@trucindex}
    *line_arg C3
     {spaces_before_argument: }
@@ -102,7 +94,6 @@ $result_tree_text{'value_in_index_commands'} = '*document_root C3
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@set C1
-  |EXTRA
   |misc_args:A{codeidx|codeidx}
    *line_arg C3
     {spaces_before_argument: }
@@ -110,7 +101,6 @@ $result_tree_text{'value_in_index_commands'} = '*document_root C3
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@defcodeindex C1 l18
-  |EXTRA
   |misc_args:A{codeidx}
    *line_arg C3
     {spaces_before_argument: }
@@ -125,7 +115,6 @@ $result_tree_text{'value_in_index_commands'} = '*document_root C3
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@set C1
-  |EXTRA
   |misc_args:A{defcodeindex_entry|a @var{index entry} t@\'e @^{@dotless{i}}}
    *line_arg C3
     {spaces_before_argument: }
@@ -133,7 +122,6 @@ $result_tree_text{'value_in_index_commands'} = '*document_root C3
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l22 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -143,7 +131,6 @@ $result_tree_text{'value_in_index_commands'} = '*document_root C3
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@node C14 l23 {chap}
- |EXTRA
  |identifier:{chap}
  |is_target:{1}
  |isindex:{1}
@@ -160,7 +147,6 @@ $result_tree_text{'value_in_index_commands'} = '*document_root C3
     >*brace_container C1
      >{normal_text:trucindex_command}
   *index_entry_command@trucindex C1 l25
-  |EXTRA
   |element_node:{chap}
   |index_entry:I{truc,1}
    *line_arg C3
@@ -171,7 +157,6 @@ $result_tree_text{'value_in_index_commands'} = '*document_root C3
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@codeidxindex C1 l27
-  |EXTRA
   |element_node:{chap}
   |index_entry:I{codeidx,1}
    *line_arg C8
@@ -200,7 +185,6 @@ $result_tree_text{'value_in_index_commands'} = '*document_root C3
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@kindex C1 l29
-  |EXTRA
   |element_node:{chap}
   |index_entry:I{ky,1}
    *line_arg C3
@@ -215,7 +199,6 @@ $result_tree_text{'value_in_index_commands'} = '*document_root C3
     >value_expansion<end;8><p:4>
     {spaces_after_argument:\\n}
   *index_entry_command@pindex C1 l30
-  |EXTRA
   |element_node:{chap}
   |index_entry:I{pg,1}
    *line_arg C3
@@ -232,7 +215,6 @@ $result_tree_text{'value_in_index_commands'} = '*document_root C3
   *paragraph C1
    {normal_text:value truc\\n}
   *normal_command@printindex C1 l33
-  |EXTRA
   |global_command_number:{1}
   |misc_args:A{truc}
    *line_arg C3
@@ -250,7 +232,6 @@ $result_tree_text{'value_in_index_commands'} = '*document_root C3
   *paragraph C1
    {normal_text:value cp\\n}
   *normal_command@printindex C1 l36
-  |EXTRA
   |global_command_number:{2}
   |misc_args:A{cp}
    *line_arg C3

@@ -24,7 +24,6 @@ $result_tree_text{'comment_in_quotation'} = '*document_root C1
       {rawline_text:}
       {spaces_after_argument:\\n}
    *normal_command@end C1 l4
-   |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }
@@ -42,7 +41,6 @@ $result_tree_text{'comment_in_quotation'} = '*document_root C1
       {rawline_text:}
       {spaces_after_argument:\\n}
    *normal_command@end C1 l8
-   |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }

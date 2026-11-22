@@ -12,13 +12,11 @@ $result_tree_text{'empty_item_tab'} = '*document_root C1
  *before_node_section C4
   *preamble_before_content
   *normal_command@multitable C3 l1
-  |EXTRA
   |max_columns:{1}
    *arguments_line C1
     *block_line_arg C2
      {spaces_before_argument: }
      *normal_command@columnfractions C1 l1
-     |EXTRA
      |misc_args:A{1.0}
       *line_arg C3
        {spaces_before_argument: }
@@ -26,38 +24,29 @@ $result_tree_text{'empty_item_tab'} = '*document_root C1
        {spaces_after_argument:\\n}
    *multitable_body C4
     *row C1
-    |EXTRA
     |row_number:{1}
      *normal_command@item C2 l2
-     |EXTRA
      |cell_number:{1}
       {ignorable_spaces_after_command:\\n}
       {empty_line:\\n}
     *row C1
-    |EXTRA
     |row_number:{2}
      *normal_command@item C1 l4
-     |EXTRA
      |cell_number:{1}
       {ignorable_spaces_after_command:\\n}
     *row C1
-    |EXTRA
     |row_number:{3}
      *normal_command@item C2 l5
-     |EXTRA
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
        {normal_text:text\\n}
     *row C1
-    |EXTRA
     |row_number:{4}
      *normal_command@item C1 l6
-     |EXTRA
      |cell_number:{1}
       {ignorable_spaces_after_command:\\n}
    *normal_command@end C1 l7
-   |EXTRA
    |text_arg:{multitable}
     *line_arg C3
      {spaces_before_argument: }
@@ -65,13 +54,11 @@ $result_tree_text{'empty_item_tab'} = '*document_root C1
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@multitable C3 l9
-  |EXTRA
   |max_columns:{2}
    *arguments_line C1
     *block_line_arg C2
      {spaces_before_argument: }
      *normal_command@columnfractions C1 l9
-     |EXTRA
      |misc_args:A{0.5|0.5}
       *line_arg C3
        {spaces_before_argument: }
@@ -79,97 +66,75 @@ $result_tree_text{'empty_item_tab'} = '*document_root C1
        {spaces_after_argument:\\n}
    *multitable_body C8
     *row C1
-    |EXTRA
     |row_number:{1}
      *normal_command@item C2 l10
-     |EXTRA
      |cell_number:{1}
       {ignorable_spaces_after_command:\\n}
       {empty_line:\\n}
     *row C1
-    |EXTRA
     |row_number:{2}
      *normal_command@item C1 l12
-     |EXTRA
      |cell_number:{1}
       {ignorable_spaces_after_command:\\n}
     *row C1
-    |EXTRA
     |row_number:{3}
      *normal_command@item C3 l13
-     |EXTRA
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
        {normal_text:only item\\n}
       {empty_line:\\n}
     *row C2
-    |EXTRA
     |row_number:{4}
      *normal_command@item C2 l15
-     |EXTRA
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
        {normal_text:item text }
      *normal_command@tab C1 l15
-     |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command:\\n}
     *row C2
-    |EXTRA
     |row_number:{5}
      *normal_command@item C2 l16
-     |EXTRA
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
        {normal_text:item new line\\n}
      *normal_command@tab C2 l17
-     |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command:\\n}
       {empty_line:\\n}
     *row C2
-    |EXTRA
     |row_number:{6}
      *normal_command@item C1 l19
-     |EXTRA
      |cell_number:{1}
       {ignorable_spaces_after_command: }
      *normal_command@tab C1 l19
-     |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command:\\n}
     *row C2
-    |EXTRA
     |row_number:{7}
      *normal_command@item C1 l20
-     |EXTRA
      |cell_number:{1}
       {ignorable_spaces_after_command:\\n}
      *normal_command@tab C2 l21
-     |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command:\\n}
       {empty_line:\\n}
     *row C2
-    |EXTRA
     |row_number:{8}
      *normal_command@item C2 l23
-     |EXTRA
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
        {normal_text:not empty }
      *normal_command@tab C2 l23
-     |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C1
        {normal_text:tab not empty\\n}
    *normal_command@end C1 l24
-   |EXTRA
    |text_arg:{multitable}
     *line_arg C3
      {spaces_before_argument: }

@@ -12,13 +12,11 @@ $result_tree_text{'no_macrobody'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C4
    *normal_command@macro C2 l1
-   |EXTRA
    |formal_args:A{arg}
    |macro_name:{nomacrobody}
     *arguments_line C1
      {macro_line: nomacrobody {arg}\\n}
     *normal_command@end C1 l2
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }

@@ -14,14 +14,12 @@ $result_tree_text{'cpp_directives_line_value_macro'} = '*document_root C1
    {text_before_beginning:\\n}
   *preamble_before_content C2
    *normal_command@macro C3 cpp_directives_line_value_macro.texi:l2
-   |EXTRA
    |formal_args:A{}
    |macro_name:{vvv}
     *arguments_line C1
      {macro_line: vvv {}\\n}
     {raw:#line 30 "toto"\\n}
     *normal_command@end C1 cpp_directives_line_value_macro.texi:l4
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -37,14 +35,12 @@ $result_tree_text{'cpp_directives_line_value_macro'} = '*document_root C1
    >macro_expansion<end;1><p:15>
   {empty_line:\\n}
   *normal_command@macro C3 cpp_directives_line_value_macro.texi:l8
-  |EXTRA
   |formal_args:A{}
   |macro_name:{machash}
    *arguments_line C1
     {macro_line: machash {}\\n}
    {raw:#\\n}
    *normal_command@end C1 cpp_directives_line_value_macro.texi:l10
-   |EXTRA
    |text_arg:{macro}
     *line_arg C3
      {spaces_before_argument: }
@@ -60,14 +56,12 @@ $result_tree_text{'cpp_directives_line_value_macro'} = '*document_root C1
    >macro_expansion<end;2><p:1>
   {empty_line:\\n}
   *normal_command@macro C3 cpp_directives_line_value_macro.texi:l14
-  |EXTRA
   |formal_args:A{arg}
   |macro_name:{numberfileflag}
    *arguments_line C1
     {macro_line: numberfileflag {arg}\\n}
    {raw:\\arg\\ "titi" 3\\arg\\\\n}
    *normal_command@end C1 cpp_directives_line_value_macro.texi:l16
-   |EXTRA
    |text_arg:{macro}
     *line_arg C3
      {spaces_before_argument: }
@@ -84,7 +78,6 @@ $result_tree_text{'cpp_directives_line_value_macro'} = '*document_root C1
    >macro_expansion<end;3><p:17>
   {empty_line:\\n}
   *normal_command@set C1
-  |EXTRA
   |misc_args:A{hash|#}
    *line_arg C3
     {spaces_before_argument: }

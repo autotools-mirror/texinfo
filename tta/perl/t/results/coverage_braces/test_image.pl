@@ -12,7 +12,6 @@ $result_tree_text{'test_image'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content C4
    *normal_command@macro C5 l1
-   |EXTRA
    |formal_args:A{}
    |macro_name:{files-char}
     *arguments_line C1
@@ -21,7 +20,6 @@ $result_tree_text{'test_image'} = '*document_root C3
     {raw:\\n}
     {raw:In text @image{f@@i--le@/.@.  a@@<"%@@@verb{:  < & @ % " :} ,1in, 1cm, alt @b{@^{@dotless{i}}--le@/.@.}  a@*<"%@@@verb{:  < & @ % " :}  ,.ext@@i--le@/.@.  a@@<"%@@@verb{:  < & @ % " :}}.\\n}
     *normal_command@end C1 l5
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -39,7 +37,6 @@ $result_tree_text{'test_image'} = '*document_root C3
       >*macro_call@files-char C1
        >*brace_arg
      *normal_command@image C5 l9:@files-char
-     |EXTRA
      |input_encoding_name:{utf-8}
       *brace_arg C12
        {normal_text:f}
@@ -82,7 +79,6 @@ $result_tree_text{'test_image'} = '*document_root C3
     *paragraph C3
      {normal_text:In text }
      *normal_command@image C5 l9:@files-char
-     |EXTRA
      |input_encoding_name:{utf-8}
       *brace_arg C12
        {normal_text:f}
@@ -150,7 +146,6 @@ $result_tree_text{'test_image'} = '*document_root C3
      >SOURCEMARKS
      >macro_expansion<end;1><p:1>
     *normal_command@end C1 l10
-    |EXTRA
     |text_arg:{copying}
      *line_arg C3
       {spaces_before_argument: }
@@ -158,7 +153,6 @@ $result_tree_text{'test_image'} = '*document_root C3
       {spaces_after_argument:\\n}
    {empty_line:\\n}
  *normal_command@node C1 l12 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -168,7 +162,6 @@ $result_tree_text{'test_image'} = '*document_root C3
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@node C16 l13 {chapter}
- |EXTRA
  |identifier:{chapter}
  |is_target:{1}
  |node_number:{2}
@@ -183,7 +176,6 @@ $result_tree_text{'test_image'} = '*document_root C3
    >*macro_call@files-char C1
     >*brace_arg
   *normal_command@image C5 l15:@files-char
-  |EXTRA
   |input_encoding_name:{utf-8}
    *brace_arg C12
     {normal_text:f}
@@ -226,7 +218,6 @@ $result_tree_text{'test_image'} = '*document_root C3
   *paragraph C3
    {normal_text:In text }
    *normal_command@image C5 l15:@files-char
-   |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C12
      {normal_text:f}
@@ -297,7 +288,6 @@ $result_tree_text{'test_image'} = '*document_root C3
   *paragraph C1
    {normal_text:Insertcopying\\n}
   *normal_command@insertcopying C1 l18
-  |EXTRA
   |global_command_number:{1}
    *line_arg C1
     {spaces_before_argument:\\n}
@@ -313,7 +303,6 @@ $result_tree_text{'test_image'} = '*document_root C3
      >*macro_call@files-char C1
       >*brace_arg
     *normal_command@image C5 l21:@files-char
-    |EXTRA
     |input_encoding_name:{utf-8}
      *brace_arg C12
       {normal_text:f}
@@ -355,7 +344,6 @@ $result_tree_text{'test_image'} = '*document_root C3
     {empty_line:\\n}
     {normal_text:In text }
     *normal_command@image C5 l21:@files-char
-    |EXTRA
     |input_encoding_name:{utf-8}
      *brace_arg C12
       {normal_text:f}
@@ -423,7 +411,6 @@ $result_tree_text{'test_image'} = '*document_root C3
     >SOURCEMARKS
     >macro_expansion<end;3><p:1>
    *normal_command@end C1 l22
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
@@ -431,7 +418,6 @@ $result_tree_text{'test_image'} = '*document_root C3
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@float C9 l24
-  |EXTRA
   |float_number:{1}
   |float_type:{Image}
   |global_command_number:{1}
@@ -450,7 +436,6 @@ $result_tree_text{'test_image'} = '*document_root C3
      {normal_text:Image with commands}
      {spaces_after_argument:\\n}
    *normal_command@image C5 l25:@files-char
-   |EXTRA
    |input_encoding_name:{utf-8}
     *brace_arg C12
      {normal_text:f}
@@ -493,7 +478,6 @@ $result_tree_text{'test_image'} = '*document_root C3
    *paragraph C3
     {normal_text:In text }
     *normal_command@image C5 l25:@files-char
-    |EXTRA
     |input_encoding_name:{utf-8}
      *brace_arg C12
       {normal_text:f}
@@ -569,7 +553,6 @@ $result_tree_text{'test_image'} = '*document_root C3
       >*macro_call@files-char C1
        >*brace_arg
      *normal_command@image C5 l27:@files-char
-     |EXTRA
      |input_encoding_name:{utf-8}
       *brace_arg C12
        {normal_text:f}
@@ -612,7 +595,6 @@ $result_tree_text{'test_image'} = '*document_root C3
      *paragraph C3
       {normal_text:In text }
       *normal_command@image C5 l27:@files-char
-      |EXTRA
       |input_encoding_name:{utf-8}
        *brace_arg C12
         {normal_text:f}
@@ -681,7 +663,6 @@ $result_tree_text{'test_image'} = '*document_root C3
       >macro_expansion<end;5><p:1>
    {spaces_after_close_brace:\\n}
    *normal_command@end C1 l28
-   |EXTRA
    |text_arg:{float}
     *line_arg C3
      {spaces_before_argument: }
@@ -689,7 +670,6 @@ $result_tree_text{'test_image'} = '*document_root C3
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@listoffloats C1 l30
-  |EXTRA
   |float_type:{Image}
   |global_command_number:{1}
    *line_arg C3

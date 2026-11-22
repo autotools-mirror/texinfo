@@ -26,7 +26,6 @@ $result_tree_text{'bad_beginning'} = '*document_root C1
        {normal_text:in code}
      {normal_text:::\\n}
    *normal_command@end C1 l6
-   |EXTRA
    |text_arg:{menu}
     *line_arg C2
      {spaces_before_argument: }

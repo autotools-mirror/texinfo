@@ -12,7 +12,6 @@ $result_tree_text{'top_is_an_anchor'} = '*document_root C1
  *before_node_section C3
   *preamble_before_content C2
    *normal_command@setfilename C1 l1
-   |EXTRA
    |text_arg:{top_is_an_anchor.info}
     *line_arg C3
      {spaces_before_argument: }
@@ -20,7 +19,6 @@ $result_tree_text{'top_is_an_anchor'} = '*document_root C1
      {spaces_after_argument:\\n}
    {empty_line:\\n}
   *normal_command@anchor C1 l3
-  |EXTRA
   |identifier:{Top}
   |is_target:{1}
    *brace_arg C1

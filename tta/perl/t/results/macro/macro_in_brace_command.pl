@@ -12,14 +12,12 @@ $result_tree_text{'macro_in_brace_command'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C4
    *normal_command@macro C3 l1
-   |EXTRA
    |formal_args:A{}
    |macro_name:{foo}
     *arguments_line C1
      {macro_line: foo\\n}
     {raw:foo-expansion\\n}
     *normal_command@end C1 l3
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -27,14 +25,12 @@ $result_tree_text{'macro_in_brace_command'} = '*document_root C1
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *normal_command@macro C3 l5
-   |EXTRA
    |formal_args:A{}
    |macro_name:{abar}
     *arguments_line C1
      {macro_line: abar\\n}
     {raw:bar-expansion\\n}
     *normal_command@end C1 l7
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -48,7 +44,6 @@ $result_tree_text{'macro_in_brace_command'} = '*document_root C1
      *normal_command@bullet l9
      {spaces_after_argument:\\n}
    *normal_command@item C2 l10
-   |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C3
@@ -71,7 +66,6 @@ $result_tree_text{'macro_in_brace_command'} = '*document_root C1
      {normal_text:,\\n}
      {normal_text:  also helped.\\n}
    *normal_command@end C1 l12
-   |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }

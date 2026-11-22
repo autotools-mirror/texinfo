@@ -12,7 +12,6 @@ $result_tree_text{'empty_type_float_empty_line_with_noindent'} = '*document_root
  *before_node_section C6
   *preamble_before_content
   *normal_command@float C3 l1
-  |EXTRA
   |float_type:{}
   |global_command_number:{1}
    *arguments_line C1
@@ -21,7 +20,6 @@ $result_tree_text{'empty_type_float_empty_line_with_noindent'} = '*document_root
    *paragraph C1
     {normal_text:toto\\n}
    *normal_command@end C1 l3
-   |EXTRA
    |text_arg:{float}
     *line_arg C3
      {spaces_before_argument: }
@@ -30,7 +28,6 @@ $result_tree_text{'empty_type_float_empty_line_with_noindent'} = '*document_root
   *normal_command@noindent l4
   {ignorable_spaces_after_command:\\n}
   *paragraph C1
-  |EXTRA
   |noindent:{1}
    {normal_text:Titi\\n}
   {empty_line:\\n}

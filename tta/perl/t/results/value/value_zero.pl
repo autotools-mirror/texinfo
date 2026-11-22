@@ -12,7 +12,6 @@ $result_tree_text{'value_zero'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C1
    *normal_command@set C1
-   |EXTRA
    |misc_args:A{zero|0}
     *line_arg C3
      {spaces_before_argument: }

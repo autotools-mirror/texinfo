@@ -12,7 +12,6 @@ $result_tree_text{'simple_documentlanguage'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content C2
    *normal_command@documentlanguage C1 l1
-   |EXTRA
    |global_command_number:{1}
    |text_arg:{fr}
     *line_arg C3
@@ -21,7 +20,6 @@ $result_tree_text{'simple_documentlanguage'} = '*document_root C3
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *normal_command@node C1 l3 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -31,7 +29,6 @@ $result_tree_text{'simple_documentlanguage'} = '*document_root C3
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@node C3 l4 {chap}
- |EXTRA
  |identifier:{chap}
  |is_target:{1}
  |node_number:{2}
@@ -43,7 +40,6 @@ $result_tree_text{'simple_documentlanguage'} = '*document_root C3
   {empty_line:\\n}
   *normal_command@defivar C2 l6
    *def_line C1 l6
-   |EXTRA
    |def_command:{defivar}
    |documentlanguage:{fr}
    |element_node:{chap}
@@ -52,10 +48,8 @@ $result_tree_text{'simple_documentlanguage'} = '*document_root C3
     *block_line_arg C9
      (i){spaces_before_argument: }
      *def_category C1
-     |EXTRA
      |inserted:{1}
       *untranslated_def_line_arg C1
-      |EXTRA
       |documentlanguage:{fr}
       |translation_context:{category of instance variables in object-oriented programming for @defivar}
        {untranslated:Instance Variable}
@@ -73,7 +67,6 @@ $result_tree_text{'simple_documentlanguage'} = '*document_root C3
        {normal_text:CCC}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l7
-   |EXTRA
    |text_arg:{defivar}
     *line_arg C3
      {spaces_before_argument: }

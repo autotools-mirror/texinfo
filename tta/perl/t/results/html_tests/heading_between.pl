@@ -17,7 +17,6 @@ $result_tree_text{'heading_between'} = '*document_root C5
      {normal_text:heading between}
      {spaces_after_argument:\\n}
  *normal_command@node C1 l2 {Chapter}
- |EXTRA
  |identifier:{Chapter}
  |is_target:{1}
  |node_number:{1}
@@ -27,7 +26,6 @@ $result_tree_text{'heading_between'} = '*document_root C5
     {normal_text:Chapter}
     {spaces_after_argument:\\n}
  *normal_command@chapter C4 l3 {Chapter}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{1}
@@ -38,7 +36,6 @@ $result_tree_text{'heading_between'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@subsubheading C1 l5
-  |EXTRA
   |global_command_number:{1}
   |heading_number:{1}
    *line_arg C3
@@ -47,7 +44,6 @@ $result_tree_text{'heading_between'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l7 {Section}
- |EXTRA
  |identifier:{Section}
  |is_target:{1}
  |node_number:{2}
@@ -57,7 +53,6 @@ $result_tree_text{'heading_between'} = '*document_root C5
     {normal_text:Section}
     {spaces_after_argument:\\n}
  *normal_command@section C2 l8 {Section}
- |EXTRA
  |section_heading_number:{1.1}
  |section_level:{2}
  |section_number:{2}

@@ -19,7 +19,6 @@ NodeForward: [U1]
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -29,7 +28,6 @@ NodeForward: [U1]
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C4 l2 {the top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -62,7 +60,6 @@ NodeForward: [U1]
    *menu_entry C4 l8
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{umlaut}
      {normal_text:umlaut}
@@ -73,7 +70,6 @@ NodeForward: [U1]
    *menu_entry C4 l9
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{circumflex}
      {normal_text:circumflex}
@@ -82,7 +78,6 @@ NodeForward: [U1]
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 l10
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -105,7 +100,6 @@ NodeUp: [U0]
 NodeForward: [U1]
 NodeBack: [U0]
  *normal_command@node C1 l12 {umlaut}
- |EXTRA
  |identifier:{umlaut}
  |is_target:{1}
  |node_number:{2}
@@ -115,7 +109,6 @@ NodeBack: [U0]
     {normal_text:umlaut}
     {spaces_after_argument:\\n}
  *normal_command@chapter C4 l13 {umlaut}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -132,7 +125,6 @@ NodeBack: [U0]
    *menu_entry C4 l16
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{_00ef}
      *normal_command@" C1 l16
@@ -145,7 +137,6 @@ NodeBack: [U0]
    *menu_entry C4 l17
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{_0129}
      *normal_command@~ C1 l17
@@ -158,7 +149,6 @@ NodeBack: [U0]
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 l18
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -166,7 +156,6 @@ NodeBack: [U0]
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C2 l20 {@"i}
- |EXTRA
  |identifier:{_00ef}
  |is_target:{1}
  |node_number:{3}
@@ -179,7 +168,6 @@ NodeBack: [U0]
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C2 l22 {@~{@dotless{i}}}
- |EXTRA
  |identifier:{_0129}
  |is_target:{1}
  |node_number:{4}
@@ -206,7 +194,6 @@ NodeUp: [U0]
 NodeForward: [U2]
 NodeBack: [U2]
  *normal_command@node C1 l24 {circumflex}
- |EXTRA
  |identifier:{circumflex}
  |is_target:{1}
  |node_number:{5}
@@ -216,7 +203,6 @@ NodeBack: [U2]
     {normal_text:circumflex}
     {spaces_after_argument:\\n}
  *normal_command@chapter C4 l25 {circumflex}
- |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
  |section_number:{3}
@@ -233,7 +219,6 @@ NodeBack: [U2]
    *menu_entry C4 l28
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{_00ee}
      *normal_command@^ C1 l28
@@ -244,7 +229,6 @@ NodeBack: [U2]
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 l29
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -252,7 +236,6 @@ NodeBack: [U2]
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l31 {@^i}
- |EXTRA
  |identifier:{_00ee}
  |is_target:{1}
  |node_number:{6}

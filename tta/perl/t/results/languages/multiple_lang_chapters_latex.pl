@@ -14,7 +14,6 @@ $result_tree_text{'multiple_lang_chapters_latex'} = '*document_root C13
    {text_before_beginning:\\n}
   *preamble_before_content C5
    *normal_command@documentencoding C1 l2
-   |EXTRA
    |global_command_number:{1}
    |input_encoding_name:{utf-8}
    |text_arg:{utf-8}
@@ -32,7 +31,6 @@ $result_tree_text{'multiple_lang_chapters_latex'} = '*document_root C13
        >{spaces_before_argument:\\n}
      >{raw:@documentlanguage ja\\n}
      >*normal_command@end C1 l7
-     >|EXTRA
      >|text_arg:{iftex}
       >*line_arg C3
        >{spaces_before_argument: }
@@ -48,13 +46,11 @@ $result_tree_text{'multiple_lang_chapters_latex'} = '*document_root C13
      {rawline_text:@node Top is ignored in TeX and LaTeX, so switch here}
      {spaces_after_argument:\\n}
    *normal_command@documentlanguage C1 l9
-   |EXTRA
    |global_command_number:{1}
    |text_arg:{ja}
    >SOURCEMARKS
    >expanded_conditional_command<end;1>
     >*normal_command@end C1 l10
-    >|EXTRA
     >|text_arg:{iflatex}
      >*line_arg C3
       >{spaces_before_argument: }
@@ -66,7 +62,6 @@ $result_tree_text{'multiple_lang_chapters_latex'} = '*document_root C13
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *normal_command@node C1 l12 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -76,7 +71,6 @@ $result_tree_text{'multiple_lang_chapters_latex'} = '*document_root C13
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C5 l13 {Multi language file}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -92,7 +86,6 @@ $result_tree_text{'multiple_lang_chapters_latex'} = '*document_root C13
    *menu_entry C4 l16
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{chapter-ja}
      {normal_text:chapter ja}
@@ -103,7 +96,6 @@ $result_tree_text{'multiple_lang_chapters_latex'} = '*document_root C13
    *menu_entry C4 l17
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{chapter-en}
      {normal_text:chapter en}
@@ -114,7 +106,6 @@ $result_tree_text{'multiple_lang_chapters_latex'} = '*document_root C13
    *menu_entry C4 l18
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{chapter-fr_005fFR}
      {normal_text:chapter fr_FR}
@@ -125,7 +116,6 @@ $result_tree_text{'multiple_lang_chapters_latex'} = '*document_root C13
    *menu_entry C4 l19
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{chapter-de}
      {normal_text:chapter de}
@@ -136,7 +126,6 @@ $result_tree_text{'multiple_lang_chapters_latex'} = '*document_root C13
    *menu_entry C4 l20
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{chapter-pt_005fBR}
      {normal_text:chapter pt_BR}
@@ -145,7 +134,6 @@ $result_tree_text{'multiple_lang_chapters_latex'} = '*document_root C13
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 l21
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -153,7 +141,6 @@ $result_tree_text{'multiple_lang_chapters_latex'} = '*document_root C13
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@documentlanguage C1 l23
-  |EXTRA
   |global_command_number:{2}
   |text_arg:{ja}
    *line_arg C3
@@ -161,7 +148,6 @@ $result_tree_text{'multiple_lang_chapters_latex'} = '*document_root C13
     {normal_text:ja}
     {spaces_after_argument:\\n}
  *normal_command@node C1 l24 {chapter ja}
- |EXTRA
  |identifier:{chapter-ja}
  |is_target:{1}
  |node_number:{2}
@@ -171,7 +157,6 @@ $result_tree_text{'multiple_lang_chapters_latex'} = '*document_root C13
     {normal_text:chapter ja}
     {spaces_after_argument:\\n}
  *normal_command@chapter C6 l25 {ja}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -185,14 +170,12 @@ $result_tree_text{'multiple_lang_chapters_latex'} = '*document_root C13
    {normal_text:In japanese. }
    *normal_command@xref C1 l27
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{chapter-ja}
      {normal_text:chapter ja}
    {normal_text:.\\n}
   *normal_command@defivar C2 l28
    *def_line C1 l28
-   |EXTRA
    |def_command:{defivar}
    |documentlanguage:{ja}
    |element_node:{chapter-ja}
@@ -201,10 +184,8 @@ $result_tree_text{'multiple_lang_chapters_latex'} = '*document_root C13
     *block_line_arg C9
      (i){spaces_before_argument: }
      *def_category C1
-     |EXTRA
      |inserted:{1}
       *untranslated_def_line_arg C1
-      |EXTRA
       |documentlanguage:{ja}
       |translation_context:{category of instance variables in object-oriented programming for @defivar}
        {untranslated:Instance Variable}
@@ -222,7 +203,6 @@ $result_tree_text{'multiple_lang_chapters_latex'} = '*document_root C13
        {normal_text:CCC}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l29
-   |EXTRA
    |text_arg:{defivar}
     *line_arg C3
      {spaces_before_argument: }
@@ -230,7 +210,6 @@ $result_tree_text{'multiple_lang_chapters_latex'} = '*document_root C13
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@documentlanguage C1 l31
-  |EXTRA
   |global_command_number:{3}
   |text_arg:{en}
    *line_arg C3
@@ -238,7 +217,6 @@ $result_tree_text{'multiple_lang_chapters_latex'} = '*document_root C13
     {normal_text:en}
     {spaces_after_argument:\\n}
  *normal_command@node C1 l32 {chapter en}
- |EXTRA
  |identifier:{chapter-en}
  |is_target:{1}
  |node_number:{3}
@@ -248,7 +226,6 @@ $result_tree_text{'multiple_lang_chapters_latex'} = '*document_root C13
     {normal_text:chapter en}
     {spaces_after_argument:\\n}
  *normal_command@chapter C6 l33 {en}
- |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
  |section_number:{3}
@@ -262,14 +239,12 @@ $result_tree_text{'multiple_lang_chapters_latex'} = '*document_root C13
    {normal_text:In english. }
    *normal_command@xref C1 l35
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{chapter-ja}
      {normal_text:chapter ja}
    {normal_text:.\\n}
   *normal_command@defivar C2 l36
    *def_line C1 l36
-   |EXTRA
    |def_command:{defivar}
    |documentlanguage:{en}
    |element_node:{chapter-en}
@@ -278,10 +253,8 @@ $result_tree_text{'multiple_lang_chapters_latex'} = '*document_root C13
     *block_line_arg C9
      (i){spaces_before_argument: }
      *def_category C1
-     |EXTRA
      |inserted:{1}
       *untranslated_def_line_arg C1
-      |EXTRA
       |documentlanguage:{en}
       |translation_context:{category of instance variables in object-oriented programming for @defivar}
        {untranslated:Instance Variable}
@@ -299,7 +272,6 @@ $result_tree_text{'multiple_lang_chapters_latex'} = '*document_root C13
        {normal_text:CCC}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l37
-   |EXTRA
    |text_arg:{defivar}
     *line_arg C3
      {spaces_before_argument: }
@@ -307,7 +279,6 @@ $result_tree_text{'multiple_lang_chapters_latex'} = '*document_root C13
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@documentlanguage C1 l39
-  |EXTRA
   |global_command_number:{4}
   |text_arg:{fr_FR}
    *line_arg C3
@@ -315,7 +286,6 @@ $result_tree_text{'multiple_lang_chapters_latex'} = '*document_root C13
     {normal_text:fr_FR}
     {spaces_after_argument:\\n}
  *normal_command@node C1 l40 {chapter fr_FR}
- |EXTRA
  |identifier:{chapter-fr_005fFR}
  |is_target:{1}
  |node_number:{4}
@@ -325,7 +295,6 @@ $result_tree_text{'multiple_lang_chapters_latex'} = '*document_root C13
     {normal_text:chapter fr_FR}
     {spaces_after_argument:\\n}
  *normal_command@chapter C5 l41 {fr_FR}
- |EXTRA
  |section_heading_number:{3}
  |section_level:{1}
  |section_number:{4}
@@ -337,7 +306,6 @@ $result_tree_text{'multiple_lang_chapters_latex'} = '*document_root C13
   {empty_line:\\n}
   *normal_command@defivar C2 l43
    *def_line C1 l43
-   |EXTRA
    |def_command:{defivar}
    |documentlanguage:{fr_FR}
    |element_node:{chapter-fr_005fFR}
@@ -346,10 +314,8 @@ $result_tree_text{'multiple_lang_chapters_latex'} = '*document_root C13
     *block_line_arg C9
      (i){spaces_before_argument: }
      *def_category C1
-     |EXTRA
      |inserted:{1}
       *untranslated_def_line_arg C1
-      |EXTRA
       |documentlanguage:{fr_FR}
       |translation_context:{category of instance variables in object-oriented programming for @defivar}
        {untranslated:Instance Variable}
@@ -367,7 +333,6 @@ $result_tree_text{'multiple_lang_chapters_latex'} = '*document_root C13
        {normal_text:CCC}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l44
-   |EXTRA
    |text_arg:{defivar}
     *line_arg C3
      {spaces_before_argument: }
@@ -375,7 +340,6 @@ $result_tree_text{'multiple_lang_chapters_latex'} = '*document_root C13
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@documentlanguage C1 l46
-  |EXTRA
   |global_command_number:{5}
   |text_arg:{de}
    *line_arg C3
@@ -383,7 +347,6 @@ $result_tree_text{'multiple_lang_chapters_latex'} = '*document_root C13
     {normal_text:de}
     {spaces_after_argument:\\n}
  *normal_command@node C1 l47 {chapter de}
- |EXTRA
  |identifier:{chapter-de}
  |is_target:{1}
  |node_number:{5}
@@ -393,7 +356,6 @@ $result_tree_text{'multiple_lang_chapters_latex'} = '*document_root C13
     {normal_text:chapter de}
     {spaces_after_argument:\\n}
  *normal_command@chapter C3 l48 {de}
- |EXTRA
  |section_heading_number:{4}
  |section_level:{1}
  |section_number:{5}
@@ -404,7 +366,6 @@ $result_tree_text{'multiple_lang_chapters_latex'} = '*document_root C13
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@documentlanguage C1 l50
-  |EXTRA
   |global_command_number:{6}
   |text_arg:{pt_BR}
    *line_arg C3
@@ -412,7 +373,6 @@ $result_tree_text{'multiple_lang_chapters_latex'} = '*document_root C13
     {normal_text:pt_BR}
     {spaces_after_argument:\\n}
  *normal_command@node C1 l51 {chapter pt_BR}
- |EXTRA
  |identifier:{chapter-pt_005fBR}
  |is_target:{1}
  |node_number:{6}
@@ -422,7 +382,6 @@ $result_tree_text{'multiple_lang_chapters_latex'} = '*document_root C13
     {normal_text:chapter pt_BR}
     {spaces_after_argument:\\n}
  *normal_command@chapter C3 l52 {pt_bR}
- |EXTRA
  |section_heading_number:{5}
  |section_level:{1}
  |section_number:{6}
@@ -436,7 +395,6 @@ $result_tree_text{'multiple_lang_chapters_latex'} = '*document_root C13
    {normal_text:In brazilian. }
    *normal_command@xref C1 l54
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{chapter-ja}
      {normal_text:chapter ja}

@@ -13,7 +13,6 @@ $result_tree_text{'double_command'} = '*document_root C1
   *preamble_before_content
   *normal_command@deffn C3 l1
    *def_line C1 l1
-   |EXTRA
    |def_command:{deffn}
    |index_entry:I{fn,2}
    |original_def_cmdname:{deffn}
@@ -51,7 +50,6 @@ $result_tree_text{'double_command'} = '*document_root C1
      *def_arg C1
       *def_line_arg C1
        *normal_command@deffnx C1 l1
-       |EXTRA
        |def_command:{deffn}
        |index_entry:I{fn,1}
        |not_after_command:{1}
@@ -96,7 +94,6 @@ $result_tree_text{'double_command'} = '*document_root C1
     *paragraph C1
      {normal_text:aaa\\n}
    *normal_command@end C1 l3
-   |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
@@ -105,7 +102,6 @@ $result_tree_text{'double_command'} = '*document_root C1
   {empty_line:\\n}
   *normal_command@deffn C3 l5
    *def_line C1 l5
-   |EXTRA
    |def_command:{deffn}
    |index_entry:I{fn,3}
    |original_def_cmdname:{deffn}
@@ -127,7 +123,6 @@ $result_tree_text{'double_command'} = '*document_root C1
       *def_line_arg C1
        *normal_command@defvr C1 l5
         *def_line C1 l5
-        |EXTRA
         |def_command:{defvr}
         |index_entry:I{vr,1}
         |original_def_cmdname:{defvr}
@@ -145,7 +140,6 @@ $result_tree_text{'double_command'} = '*document_root C1
     *paragraph C1
      {normal_text:bbb\\n}
    *normal_command@end C1 l7
-   |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }

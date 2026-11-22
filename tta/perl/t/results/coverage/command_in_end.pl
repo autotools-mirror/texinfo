@@ -32,7 +32,6 @@ $result_tree_text{'command_in_end'} = '*document_root C1
     *paragraph C2
      {normal_text:In quotation\\n}
      *normal_command@end C1 l7
-     |EXTRA
      |text_arg:{q}
       *line_arg C4
        {spaces_before_argument: }
@@ -49,7 +48,6 @@ $result_tree_text{'command_in_end'} = '*document_root C1
      *paragraph C2
       {normal_text:In quotation\\n}
       *normal_command@end C1 l11
-      |EXTRA
       |text_arg:{qu}
        *line_arg C4
         {spaces_before_argument: }
@@ -66,7 +64,6 @@ $result_tree_text{'command_in_end'} = '*document_root C1
       *paragraph C2
        {normal_text:In quotation\\n}
        *normal_command@end C1 l15
-       |EXTRA
        |text_arg:{quotn}
         *line_arg C5
          {spaces_before_argument: }
@@ -84,7 +81,6 @@ $result_tree_text{'command_in_end'} = '*document_root C1
        *paragraph C1
         {normal_text:In quotation\\n}
        *normal_command@end C1 l19
-       |EXTRA
        |text_arg:{quotation}
         *line_arg C5
          {spaces_before_argument: }
@@ -101,7 +97,6 @@ $result_tree_text{'command_in_end'} = '*document_root C1
        *paragraph C1
         {normal_text:In quotation\\n}
        *normal_command@end C1 l23
-       |EXTRA
        |text_arg:{quotation}
         *line_arg C5
          {spaces_before_argument: }
@@ -118,7 +113,6 @@ $result_tree_text{'command_in_end'} = '*document_root C1
        *paragraph C1
         {normal_text:In quotation\\n}
        *normal_command@end C1 l27
-       |EXTRA
        |text_arg:{quotation}
         *line_arg C5
          {spaces_before_argument: }

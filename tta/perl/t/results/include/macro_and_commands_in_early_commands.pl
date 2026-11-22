@@ -12,14 +12,12 @@ $result_tree_text{'macro_and_commands_in_early_commands'} = '*document_root C4
  *before_node_section C2
   *preamble_before_setfilename C2
    *normal_command@macro C3 l1
-   |EXTRA
    |formal_args:A{}
    |macro_name:{begin-file}
     *arguments_line C1
      {macro_line: begin-file\\n}
     {raw:macro_i--n_pass@@\\n}
     *normal_command@end C1 l3
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -28,7 +26,6 @@ $result_tree_text{'macro_and_commands_in_early_commands'} = '*document_root C4
    {empty_line:\\n}
   *preamble_before_content C8
    *normal_command@setfilename C1 l5
-   |EXTRA
    |text_arg:{macro_i--n_pass@texi_commands.info}
     *line_arg C5
      {spaces_before_argument: }
@@ -44,14 +41,12 @@ $result_tree_text{'macro_and_commands_in_early_commands'} = '*document_root C4
      {spaces_after_argument:\\n}
    {empty_line:\\n}
    *normal_command@macro C3 l7
-   |EXTRA
    |formal_args:A{}
    |macro_name:{latin1}
     *arguments_line C1
      {macro_line: latin1 \\n}
     {raw:ISO-8859-1@@\\n}
     *normal_command@end C1 l9
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -59,7 +54,6 @@ $result_tree_text{'macro_and_commands_in_early_commands'} = '*document_root C4
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *normal_command@documentencoding C1 l11
-   |EXTRA
    |global_command_number:{1}
    |input_encoding_name:{iso-8859-1}
    |text_arg:{ISO-8859-1@}
@@ -76,7 +70,6 @@ $result_tree_text{'macro_and_commands_in_early_commands'} = '*document_root C4
      {spaces_after_argument:\\n}
    {empty_line:\\n}
    *normal_command@macro C4 l13
-   |EXTRA
    |formal_args:A{}
    |macro_name:{multiinclude}
     *arguments_line C1
@@ -84,7 +77,6 @@ $result_tree_text{'macro_and_commands_in_early_commands'} = '*document_root C4
     {raw:macro_included.texi\\n}
     {raw:@include inc_@@f--ile.texi\\n}
     *normal_command@end C1 l16
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -92,7 +84,6 @@ $result_tree_text{'macro_and_commands_in_early_commands'} = '*document_root C4
       {spaces_after_argument:\\n}
    {empty_line:\\n}
  *normal_command@node C1 l18 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -102,7 +93,6 @@ $result_tree_text{'macro_and_commands_in_early_commands'} = '*document_root C4
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C2 l19 {top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -112,7 +102,6 @@ $result_tree_text{'macro_and_commands_in_early_commands'} = '*document_root C4
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C8 l21 {chap}
- |EXTRA
  |identifier:{chap}
  |is_target:{1}
  |node_number:{2}
@@ -125,7 +114,6 @@ $result_tree_text{'macro_and_commands_in_early_commands'} = '*document_root C4
   >SOURCEMARKS
   >include<start;1><p:1>
    >*normal_command@include C1 l23
-   >|EXTRA
    >|text_arg:{macro_included.texi}
     >*line_arg C3
      >{spaces_before_argument: }
@@ -135,14 +123,12 @@ $result_tree_text{'macro_and_commands_in_early_commands'} = '*document_root C4
      >{normal_text:macro_included.texi}
      >{spaces_after_argument:\\n}
   *normal_command@macro C3 macro_included.texi:l1
-  |EXTRA
   |formal_args:A{}
   |macro_name:{themacro}
   >SOURCEMARKS
   >include<end;1>
   >include<start;2>
    >*normal_command@include C1 l23:@multiinclude
-   >|EXTRA
    >|text_arg:{inc_@f--ile.texi}
     >*line_arg C5
      >{spaces_before_argument: }
@@ -156,7 +142,6 @@ $result_tree_text{'macro_and_commands_in_early_commands'} = '*document_root C4
     {macro_line: themacro\\n}
    {raw:in themacro\\n}
    *normal_command@end C1 macro_included.texi:l3
-   |EXTRA
    |text_arg:{macro}
     *line_arg C3
      {spaces_before_argument: }
@@ -176,7 +161,6 @@ $result_tree_text{'macro_and_commands_in_early_commands'} = '*document_root C4
    >macro_expansion<end;4><p:11>
   {empty_line:\\n}
   *normal_command@verbatiminclude C1 l27
-  |EXTRA
   |input_encoding_name:{iso-8859-1}
   |text_arg:{inc_@f--ile.texi}
    *line_arg C5

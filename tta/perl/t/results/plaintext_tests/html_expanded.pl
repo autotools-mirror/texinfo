@@ -20,7 +20,6 @@ $result_tree_text{'html_expanded'} = '*document_root C1
     *rawpreformatted C1
      {normal_text:html\\n}
     *normal_command@end C1 l4
-    |EXTRA
     |text_arg:{html}
      *line_arg C3
       {spaces_before_argument: }

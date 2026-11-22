@@ -20,13 +20,11 @@ $result_tree_text{'item_container'} = '*document_root C1
      {normal_text:+}
      {spaces_after_argument:\\n}
    *normal_command@item C2 l3
-   |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:i--tem +\\n}
    *normal_command@end C1 l4
-   |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }
@@ -40,14 +38,12 @@ $result_tree_text{'item_container'} = '*document_root C1
      *normal_command@bullet l6
      {spaces_after_argument:\\n}
    *normal_command@item C3 l7
-   |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command:\\n}
     {spaces_before_paragraph: }
     *paragraph C1
      {normal_text:b--ullet\\n}
    *normal_command@end C1 l9
-   |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }
@@ -59,13 +55,11 @@ $result_tree_text{'item_container'} = '*document_root C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *normal_command@item C2 l12
-   |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:no itemize argument\\n}
    *normal_command@end C1 l13
-   |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }

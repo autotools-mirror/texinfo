@@ -14,18 +14,15 @@ $result_tree_text{'customize_special_element'} = '*document_root C7
    {text_before_beginning:\\n}
   *preamble_before_content C3
    *normal_command@contents C1 l2
-   |EXTRA
    |global_command_number:{1}
     *line_arg C1
      {spaces_before_argument:\\n}
    *normal_command@shortcontents C1 l3
-   |EXTRA
    |global_command_number:{1}
     *line_arg C1
      {spaces_before_argument:\\n}
    {empty_line:\\n}
  *normal_command@node C1 l5 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -35,7 +32,6 @@ $result_tree_text{'customize_special_element'} = '*document_root C7
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C2 l6 {top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -45,7 +41,6 @@ $result_tree_text{'customize_special_element'} = '*document_root C7
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l8 {Chapter}
- |EXTRA
  |identifier:{Chapter}
  |is_target:{1}
  |node_number:{2}
@@ -55,7 +50,6 @@ $result_tree_text{'customize_special_element'} = '*document_root C7
     {normal_text:Chapter}
     {spaces_after_argument:\\n}
  *normal_command@chapter C3 l9 {chap}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -66,7 +60,6 @@ $result_tree_text{'customize_special_element'} = '*document_root C7
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@documentlanguage C1 l11
-  |EXTRA
   |global_command_number:{1}
   |text_arg:{fr}
    *line_arg C3
@@ -74,7 +67,6 @@ $result_tree_text{'customize_special_element'} = '*document_root C7
     {normal_text:fr}
     {spaces_after_argument:\\n}
  *normal_command@node C1 l12 {Chapter fr}
- |EXTRA
  |identifier:{Chapter-fr}
  |is_target:{1}
  |node_number:{3}
@@ -84,7 +76,6 @@ $result_tree_text{'customize_special_element'} = '*document_root C7
     {normal_text:Chapter fr}
     {spaces_after_argument:\\n}
  *normal_command@chapter C3 l13 {chap fr}
- |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
  |section_number:{3}
@@ -97,7 +88,6 @@ $result_tree_text{'customize_special_element'} = '*document_root C7
   *paragraph C3
    {normal_text:Text}
    *normal_command@footnote C1 l15
-   |EXTRA
    |global_command_number:{1}
     *brace_command_context C1
      *paragraph C1

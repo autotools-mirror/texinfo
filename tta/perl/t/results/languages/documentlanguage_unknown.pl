@@ -106,7 +106,6 @@ $result_tree_text{'documentlanguage_unknown'} = '*document_root C6
      {spaces_after_argument:\\n}
    {empty_line:\\n}
    *normal_command@documentlanguage C1 documentlanguage.texi:l22
-   |EXTRA
    |global_command_number:{1}
    |text_arg:{pt}
     *line_arg C3
@@ -115,7 +114,6 @@ $result_tree_text{'documentlanguage_unknown'} = '*document_root C6
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *normal_command@node C1 documentlanguage.texi:l24 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -125,7 +123,6 @@ $result_tree_text{'documentlanguage_unknown'} = '*document_root C6
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C2 documentlanguage.texi:l25 {top section}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -135,7 +132,6 @@ $result_tree_text{'documentlanguage_unknown'} = '*document_root C6
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 documentlanguage.texi:l27 {chapter}
- |EXTRA
  |identifier:{chapter}
  |is_target:{1}
  |isindex:{1}
@@ -146,7 +142,6 @@ $result_tree_text{'documentlanguage_unknown'} = '*document_root C6
     {normal_text:chapter}
     {spaces_after_argument:\\n}
  *normal_command@chapter C8 documentlanguage.texi:l28 {Chapter}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -159,7 +154,6 @@ $result_tree_text{'documentlanguage_unknown'} = '*document_root C6
   *paragraph C2
    *normal_command@xref C1 documentlanguage.texi:l30
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{chapter}
      {normal_text:chapter}
@@ -167,7 +161,6 @@ $result_tree_text{'documentlanguage_unknown'} = '*document_root C6
   {empty_line:\\n}
   *normal_command@deftypemethod C3 documentlanguage.texi:l32
    *def_line C1 documentlanguage.texi:l32
-   |EXTRA
    |def_command:{deftypemethod}
    |documentlanguage:{unknown}
    |element_node:{chapter}
@@ -176,10 +169,8 @@ $result_tree_text{'documentlanguage_unknown'} = '*document_root C6
     *block_line_arg C11
      (i){spaces_before_argument: }
      *def_category C1
-     |EXTRA
      |inserted:{1}
       *untranslated_def_line_arg C1
-      |EXTRA
       |documentlanguage:{unknown}
       |translation_context:{category of methods with data type in object-oriented programming for @deftypemethod}
        {untranslated:Method}
@@ -204,7 +195,6 @@ $result_tree_text{'documentlanguage_unknown'} = '*document_root C6
     *paragraph C1
      {normal_text:Some text.\\n}
    *normal_command@end C1 documentlanguage.texi:l34
-   |EXTRA
    |text_arg:{deftypemethod}
     *line_arg C3
      {spaces_before_argument: }
@@ -212,7 +202,6 @@ $result_tree_text{'documentlanguage_unknown'} = '*document_root C6
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@printindex C1 documentlanguage.texi:l36
-  |EXTRA
   |global_command_number:{1}
   |misc_args:A{fn}
    *line_arg C3

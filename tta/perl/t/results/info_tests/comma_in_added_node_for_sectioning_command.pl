@@ -12,7 +12,6 @@ $result_tree_text{'comma_in_added_node_for_sectioning_command'} = '*document_roo
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 l1 {Top}
- |EXTRA
  |added:{1}
  |identifier:{Top}
  |is_target:{1}
@@ -23,7 +22,6 @@ $result_tree_text{'comma_in_added_node_for_sectioning_command'} = '*document_roo
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C2 l1 {top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -33,7 +31,6 @@ $result_tree_text{'comma_in_added_node_for_sectioning_command'} = '*document_roo
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l3 {Titles (headers@comma{} footers)}
- |EXTRA
  |added:{1}
  |identifier:{Titles-_0028headers_002c-footers_0029}
  |is_target:{1}
@@ -47,7 +44,6 @@ $result_tree_text{'comma_in_added_node_for_sectioning_command'} = '*document_roo
     {normal_text: footers)}
     {spaces_after_argument:\\n}
  *normal_command@chapter C2 l3 {Titles (headers, footers)}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}

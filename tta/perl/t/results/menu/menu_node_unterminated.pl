@@ -12,7 +12,6 @@ $result_tree_text{'menu_node_unterminated'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C3 l1 {first}
- |EXTRA
  |identifier:{first}
  |is_target:{1}
  |node_number:{1}
@@ -32,13 +31,11 @@ $result_tree_text{'menu_node_unterminated'} = '*document_root C2
      {normal_text:Example}
     {menu_entry_separator:: }
     *menu_entry_node C2
-    |EXTRA
     |node_content:A{0|1}
     |normalized:{Examples-of-Login-Verification-Functions}
      {normal_text:Examples of Login Verification Functions}
      {space_at_end_menu_node:\\n}
    *normal_command@end C1 l5
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }

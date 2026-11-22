@@ -14,7 +14,6 @@ $result_tree_text{'verbatiminclude'} = '*document_root C1
    {text_before_beginning:\\n}
   *preamble_before_content
   *normal_command@verbatiminclude C1 l2
-  |EXTRA
   |input_encoding_name:{utf-8}
   |text_arg:{incl-incl.txi}
    *line_arg C3

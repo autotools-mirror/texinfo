@@ -18,7 +18,6 @@ $result_tree_text{'command_in_end_expanded_raw_one_char_before_command'} = '*doc
     *rawpreformatted C1
      {normal_text:In TeX\\n}
     *normal_command@end C1 l3
-    |EXTRA
     |text_arg:{tex}
      *line_arg C5
       {spaces_before_argument: }

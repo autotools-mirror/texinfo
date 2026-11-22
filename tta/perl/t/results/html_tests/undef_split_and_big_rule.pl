@@ -14,7 +14,6 @@ $result_tree_text{'undef_split_and_big_rule'} = '*document_root C6
   *paragraph C1
    {normal_text:node Top\\n}
  *normal_command@top C2 l2 {top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |section_level:{0}
@@ -26,7 +25,6 @@ $result_tree_text{'undef_split_and_big_rule'} = '*document_root C6
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l4 {chap}
- |EXTRA
  |identifier:{chap}
  |is_target:{1}
  |node_number:{1}
@@ -36,7 +34,6 @@ $result_tree_text{'undef_split_and_big_rule'} = '*document_root C6
     {normal_text:chap}
     {spaces_after_argument:\\n}
  *normal_command@chapter C2 l5 {Chapter}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -47,7 +44,6 @@ $result_tree_text{'undef_split_and_big_rule'} = '*document_root C6
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l7 {sec}
- |EXTRA
  |identifier:{sec}
  |is_target:{1}
  |node_number:{2}
@@ -57,7 +53,6 @@ $result_tree_text{'undef_split_and_big_rule'} = '*document_root C6
     {normal_text:sec}
     {spaces_after_argument:\\n}
  *normal_command@section C1 l8 {Sec}
- |EXTRA
  |section_heading_number:{1.1}
  |section_level:{2}
  |section_number:{3}

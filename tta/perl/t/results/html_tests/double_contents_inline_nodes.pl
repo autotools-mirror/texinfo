@@ -15,13 +15,11 @@ $result_tree_text{'double_contents_inline_nodes'} = '*document_root C8
    {text_before_beginning:\\n}
   *preamble_before_content C2
    *normal_command@contents C1 double_contents.texi:l3
-   |EXTRA
    |global_command_number:{1}
     *line_arg C1
      {spaces_before_argument:\\n}
    {empty_line:\\n}
  *normal_command@node C1 double_contents.texi:l5 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -31,7 +29,6 @@ $result_tree_text{'double_contents_inline_nodes'} = '*document_root C8
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C6 double_contents.texi:l6 {Double contents}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -50,7 +47,6 @@ $result_tree_text{'double_contents_inline_nodes'} = '*document_root C8
    *menu_entry C4 double_contents.texi:l11
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{chapter}
      {normal_text:chapter}
@@ -59,7 +55,6 @@ $result_tree_text{'double_contents_inline_nodes'} = '*document_root C8
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 double_contents.texi:l12
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -67,7 +62,6 @@ $result_tree_text{'double_contents_inline_nodes'} = '*document_root C8
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 double_contents.texi:l14 {chapter}
- |EXTRA
  |identifier:{chapter}
  |is_target:{1}
  |node_number:{2}
@@ -77,7 +71,6 @@ $result_tree_text{'double_contents_inline_nodes'} = '*document_root C8
     {normal_text:chapter}
     {spaces_after_argument:\\n}
  *normal_command@chapter C7 double_contents.texi:l15 {Chapter 1}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -88,7 +81,6 @@ $result_tree_text{'double_contents_inline_nodes'} = '*document_root C8
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@contents C1 double_contents.texi:l17
-  |EXTRA
   |global_command_number:{2}
    *line_arg C1
     {spaces_before_argument:\\n}
@@ -102,7 +94,6 @@ $result_tree_text{'double_contents_inline_nodes'} = '*document_root C8
    *menu_entry C4 double_contents.texi:l21
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{section}
      {normal_text:section}
@@ -111,7 +102,6 @@ $result_tree_text{'double_contents_inline_nodes'} = '*document_root C8
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 double_contents.texi:l22
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -119,7 +109,6 @@ $result_tree_text{'double_contents_inline_nodes'} = '*document_root C8
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 double_contents.texi:l24 {section}
- |EXTRA
  |identifier:{section}
  |is_target:{1}
  |node_number:{3}
@@ -129,7 +118,6 @@ $result_tree_text{'double_contents_inline_nodes'} = '*document_root C8
     {normal_text:section}
     {spaces_after_argument:\\n}
  *normal_command@section C3 double_contents.texi:l25 {section with contents}
- |EXTRA
  |section_heading_number:{1.1}
  |section_level:{2}
  |section_number:{3}
@@ -139,7 +127,6 @@ $result_tree_text{'double_contents_inline_nodes'} = '*document_root C8
     {normal_text:section with contents}
     {spaces_after_argument:\\n}
   *normal_command@contents C1 double_contents.texi:l26
-  |EXTRA
   |global_command_number:{3}
    *line_arg C1
     {spaces_before_argument:\\n}

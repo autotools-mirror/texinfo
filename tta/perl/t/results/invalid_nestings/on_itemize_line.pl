@@ -18,19 +18,16 @@ $result_tree_text{'on_itemize_line'} = '*document_root C1
      *normal_command@indent l1
      {ignorable_spaces_after_command: }
      *normal_command@titlefont C1 l1
-     |EXTRA
      |global_command_number:{1}
       *brace_container C1
        {normal_text:in titlefont}
      {normal_text: }
      *normal_command@anchor C1 l1
-     |EXTRA
      |identifier:{in-anchor}
      |is_target:{1}
       *brace_arg C1
        {normal_text:in anchor}
      *normal_command@footnote C1 l1
-     |EXTRA
      |global_command_number:{1}
       *brace_command_context C1
        *paragraph C1
@@ -42,13 +39,11 @@ $result_tree_text{'on_itemize_line'} = '*document_root C1
        {normal_text:exdent}
        {spaces_after_argument:\\n}
    *normal_command@item C2 l2
-   |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:in item.\\n}
    *normal_command@end C1 l3
-   |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }
@@ -64,7 +59,6 @@ $result_tree_text{'on_itemize_line'} = '*document_root C1
      {normal_text:in item}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l6
-   |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }

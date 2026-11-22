@@ -12,7 +12,6 @@ $result_tree_text{'star_at_command_formatting'} = '*document_root C1
  *before_node_section C9
   *preamble_before_content C2
    *normal_command@macro C14 l1
-   |EXTRA
    |formal_args:A{}
    |macro_name:{mymacro}
     *arguments_line C1
@@ -30,7 +29,6 @@ $result_tree_text{'star_at_command_formatting'} = '*document_root C1
     {raw:And now with * asis with space @@asis: @* @asis{ }\\n}
     {raw:And end para.\\n}
     *normal_command@end C1 l14
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -169,7 +167,6 @@ $result_tree_text{'star_at_command_formatting'} = '*document_root C1
     >SOURCEMARKS
     >macro_expansion<end;2><p:13>
    *normal_command@end C1 l21
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
@@ -245,7 +242,6 @@ $result_tree_text{'star_at_command_formatting'} = '*document_root C1
     >SOURCEMARKS
     >macro_expansion<end;3><p:13>
    *normal_command@end C1 l26
-   |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }

@@ -34,7 +34,6 @@ $result_tree_text{'accents'} = '*document_root C1
    *normal_command@^ C1 l5
     *brace_container C1
      *normal_command@anchor C1 l5
-     |EXTRA
      |identifier:{truc}
      |is_target:{1}
       *brace_arg C1

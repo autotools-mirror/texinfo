@@ -42,7 +42,6 @@ $result_tree_text{'protect_spaces_on_line'} = '*document_root C1
      {normal_text:  afterw}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l6
-   |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }

@@ -24,7 +24,6 @@ $result_tree_text{'commands_in_ifset'} = '*document_root C1
     >{raw:@end ifsettruc\\n}
     >{raw:open { \\n}
     >*normal_command@end C1 l7
-    >|EXTRA
     >|text_arg:{ifset}
      >*line_arg C3
       >{spaces_before_argument: }
@@ -47,7 +46,6 @@ $result_tree_text{'commands_in_ifset'} = '*document_root C1
      >{raw:@table\\n}
      >{raw:@bye\\n}
      >*normal_command@end C1 l15
-     >|EXTRA
      >|text_arg:{ifset}
       >*line_arg C3
        >{spaces_before_argument: }

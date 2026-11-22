@@ -12,13 +12,11 @@ $result_tree_text{'good_comment'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *normal_command@multitable C2 l1
-  |EXTRA
   |max_columns:{3}
    *arguments_line C1
     *block_line_arg C2
      {spaces_before_argument: }
      *normal_command@columnfractions C1 l1
-     |EXTRA
      |misc_args:A{0.4|.6|5.}
       *line_arg C3
        {spaces_before_argument: }
@@ -29,7 +27,6 @@ $result_tree_text{'good_comment'} = '*document_root C1
          {rawline_text:comment}
          {spaces_after_argument:\\n}
    *normal_command@end C1 l2
-   |EXTRA
    |text_arg:{multitable}
     *line_arg C2
      {spaces_before_argument: }

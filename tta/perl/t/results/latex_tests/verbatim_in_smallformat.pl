@@ -21,14 +21,12 @@ $result_tree_text{'verbatim_in_smallformat'} = '*document_root C1
       {spaces_before_argument:\\n}
     {raw:... still verbatim, but in a smaller font ...\\n}
     *normal_command@end C1 l4
-    |EXTRA
     |text_arg:{verbatim}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:verbatim}
       {spaces_after_argument:\\n}
    *normal_command@end C1 l5
-   |EXTRA
    |text_arg:{smallformat}
     *line_arg C3
      {spaces_before_argument: }

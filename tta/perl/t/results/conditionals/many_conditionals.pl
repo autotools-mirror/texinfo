@@ -18,7 +18,6 @@ $result_tree_text{'many_conditionals'} = '*document_root C1
     *rawpreformatted C1
      {normal_text:This is html text.\\n}
     *normal_command@end C1 l3
-    |EXTRA
     |text_arg:{html}
      *line_arg C3
       {spaces_before_argument: }
@@ -36,7 +35,6 @@ $result_tree_text{'many_conditionals'} = '*document_root C1
    >SOURCEMARKS
    >expanded_conditional_command<end;1><p:21>
     >*normal_command@end C1 l7
-    >|EXTRA
     >|text_arg:{ifhtml}
      >*line_arg C3
       >{spaces_before_argument: }
@@ -51,7 +49,6 @@ $result_tree_text{'many_conditionals'} = '*document_root C1
       >{spaces_before_argument:\\n}
     >{raw:This is ifnothtml text.\\n}
     >*normal_command@end C1 l11
-    >|EXTRA
     >|text_arg:{ifnothtml}
      >*line_arg C3
       >{spaces_before_argument: }
@@ -70,7 +67,6 @@ $result_tree_text{'many_conditionals'} = '*document_root C1
    >SOURCEMARKS
    >expanded_conditional_command<end;2><p:21>
     >*normal_command@end C1 l16
-    >|EXTRA
     >|text_arg:{ifinfo}
      >*line_arg C3
       >{spaces_before_argument: }
@@ -85,7 +81,6 @@ $result_tree_text{'many_conditionals'} = '*document_root C1
       >{spaces_before_argument:\\n}
     >{raw:This is ifnotinfo text.\\n}
     >*normal_command@end C1 l20
-    >|EXTRA
     >|text_arg:{ifnotinfo}
      >*line_arg C3
       >{spaces_before_argument: }
@@ -100,7 +95,6 @@ $result_tree_text{'many_conditionals'} = '*document_root C1
    *elided_rawpreformatted C1
     {raw:This is tex text.\\n}
    *normal_command@end C1 l25
-   |EXTRA
    |text_arg:{tex}
     *line_arg C3
      {spaces_before_argument: }
@@ -115,7 +109,6 @@ $result_tree_text{'many_conditionals'} = '*document_root C1
       >{spaces_before_argument:\\n}
     >{raw:This is iftex text.\\n}
     >*normal_command@end C1 l29
-    >|EXTRA
     >|text_arg:{iftex}
      >*line_arg C3
       >{spaces_before_argument: }
@@ -133,7 +126,6 @@ $result_tree_text{'many_conditionals'} = '*document_root C1
    >SOURCEMARKS
    >expanded_conditional_command<end;3><p:23>
     >*normal_command@end C1 l33
-    >|EXTRA
     >|text_arg:{ifnottex}
      >*line_arg C3
       >{spaces_before_argument: }

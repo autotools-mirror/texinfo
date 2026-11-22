@@ -18,7 +18,6 @@ NodeForward: [U1]
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C4 l1 {top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -35,7 +34,6 @@ NodeForward: [U1]
    *menu_entry C4 l4
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{_00e3}
      *normal_command@~ C1 l4
@@ -48,7 +46,6 @@ NodeForward: [U1]
    *menu_entry C4 l5
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{n}
      {normal_text:n}
@@ -59,7 +56,6 @@ NodeForward: [U1]
    *menu_entry C4 l6
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{_00e2}
      *normal_command@^ C1 l6
@@ -70,7 +66,6 @@ NodeForward: [U1]
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 l7
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -89,7 +84,6 @@ NodeUp: [U0]
 NodeForward: [U2]
 NodeBack: [U0]
  *normal_command@node C1 l9 {@~a}
- |EXTRA
  |identifier:{_00e3}
  |is_target:{1}
  |node_number:{2}
@@ -101,7 +95,6 @@ NodeBack: [U0]
       {normal_text:a}
     {spaces_after_argument:\\n}
  *normal_command@unnumbered C2 l10 {@~a}
- |EXTRA
  |section_level:{1}
  |section_number:{1}
   *arguments_line C1
@@ -125,7 +118,6 @@ NodeUp: [U0]
 NodeForward: [U3]
 NodeBack: [U1]
  *normal_command@node C2 l12 {n}
- |EXTRA
  |identifier:{n}
  |is_target:{1}
  |node_number:{3}
@@ -145,7 +137,6 @@ NodePrev: [U2]
 NodeUp: [U0]
 NodeBack: [U2]
  *normal_command@node C1 l14 {@^a}
- |EXTRA
  |identifier:{_00e2}
  |is_target:{1}
  |node_number:{4}

@@ -13,7 +13,6 @@ $result_tree_text{'protected_brace'} = '*document_root C1
   *preamble_before_content
   *normal_command@deffn C2 l1
    *def_line C1 l1
-   |EXTRA
    |def_command:{deffn}
    |index_entry:I{fn,1}
    |original_def_cmdname:{deffn}
@@ -28,7 +27,6 @@ $result_tree_text{'protected_brace'} = '*document_root C1
        *normal_command@{
      {spaces_after_argument:\\n}
    *normal_command@end C1 l2
-   |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }

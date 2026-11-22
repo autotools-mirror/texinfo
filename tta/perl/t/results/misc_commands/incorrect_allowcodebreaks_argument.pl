@@ -12,7 +12,6 @@ $result_tree_text{'incorrect_allowcodebreaks_argument'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C1
    *normal_command@allowcodebreaks C1 l1
-   |EXTRA
    |global_command_number:{1}
     *line_arg C3
      {spaces_before_argument: }

@@ -18,7 +18,6 @@ $result_tree_text{'sp_in_example'} = '*document_root C1
    *preformatted C18
     {normal_text:Para\\n}
     *normal_command@sp C1 l3
-    |EXTRA
     |misc_args:A{1}
      *line_arg C3
       {spaces_before_argument: }
@@ -30,7 +29,6 @@ $result_tree_text{'sp_in_example'} = '*document_root C1
     {normal_text:sp:\\n}
     {empty_line:\\n}
     *normal_command@sp C1 l7
-    |EXTRA
     |misc_args:A{1}
      *line_arg C3
       {spaces_before_argument: }
@@ -38,7 +36,6 @@ $result_tree_text{'sp_in_example'} = '*document_root C1
       {spaces_after_argument:\\n}
     {empty_line:\\n}
     *normal_command@sp C1 l9
-    |EXTRA
     |misc_args:A{2}
      *line_arg C3
       {spaces_before_argument: }
@@ -48,7 +45,6 @@ $result_tree_text{'sp_in_example'} = '*document_root C1
     {empty_line:\\n}
     {normal_text:A\\n}
     *normal_command@sp C1 l13
-    |EXTRA
     |misc_args:A{2}
      *line_arg C3
       {spaces_before_argument: }
@@ -58,14 +54,12 @@ $result_tree_text{'sp_in_example'} = '*document_root C1
     {empty_line:\\n}
     {normal_text:sp after para\\n}
     *normal_command@sp C1 l17
-    |EXTRA
     |misc_args:A{1}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:1}
       {spaces_after_argument:\\n}
    *normal_command@end C1 l18
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }

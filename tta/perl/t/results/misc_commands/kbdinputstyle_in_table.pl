@@ -12,7 +12,6 @@ $result_tree_text{'kbdinputstyle_in_table'} = '*document_root C1
  *before_node_section C33
   *preamble_before_content C2
    *normal_command@macro C19 l1
-   |EXTRA
    |formal_args:A{}
    |macro_name:{codekbdmacro}
     *arguments_line C1
@@ -35,7 +34,6 @@ $result_tree_text{'kbdinputstyle_in_table'} = '*document_root C1
     {raw:@end table\\n}
     {raw:@end example\\n}
     *normal_command@end C1 l19
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -47,7 +45,6 @@ $result_tree_text{'kbdinputstyle_in_table'} = '*document_root C1
    {normal_text:kbdinputstyle code\\n}
   {empty_line:\\n}
   *normal_command@kbdinputstyle C1 l23
-  |EXTRA
   |global_command_number:{1}
   |misc_args:A{code}
    *line_arg C3
@@ -60,13 +57,11 @@ $result_tree_text{'kbdinputstyle_in_table'} = '*document_root C1
    >*macro_call@codekbdmacro C1
     >*brace_arg
   *normal_command@table C3 l25:@codekbdmacro
-  |EXTRA
   |command_as_argument_kbd_code:{1}
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
      *normal_command@kbd l25:@codekbdmacro
-     |EXTRA
      |code:{1}
      {spaces_after_argument:\\n}
    *table_entry C1
@@ -77,7 +72,6 @@ $result_tree_text{'kbdinputstyle_in_table'} = '*document_root C1
        {normal_text:i--tem out of example}
        {spaces_after_argument:\\n}
    *normal_command@end C1 l25:@codekbdmacro
-   |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
@@ -85,13 +79,11 @@ $result_tree_text{'kbdinputstyle_in_table'} = '*document_root C1
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@table C3 l25:@codekbdmacro
-  |EXTRA
   |command_as_argument_kbd_code:{1}
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
      *normal_command@kbd C1 l25:@codekbdmacro
-     |EXTRA
      |code:{1}
       *brace_container
      {spaces_after_argument:\\n}
@@ -103,7 +95,6 @@ $result_tree_text{'kbdinputstyle_in_table'} = '*document_root C1
        {normal_text:braced i--tem out of example}
        {spaces_after_argument:\\n}
    *normal_command@end C1 l25:@codekbdmacro
-   |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
@@ -117,13 +108,11 @@ $result_tree_text{'kbdinputstyle_in_table'} = '*document_root C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *normal_command@table C3 l25:@codekbdmacro
-   |EXTRA
    |command_as_argument_kbd_code:{1}
     *arguments_line C1
      *block_line_arg C3
       {spaces_before_argument: }
       *normal_command@kbd l25:@codekbdmacro
-      |EXTRA
       |code:{1}
       {spaces_after_argument:\\n}
     *table_entry C1
@@ -134,20 +123,17 @@ $result_tree_text{'kbdinputstyle_in_table'} = '*document_root C1
         {normal_text:i--tem in example}
         {spaces_after_argument:\\n}
     *normal_command@end C1 l25:@codekbdmacro
-    |EXTRA
     |text_arg:{table}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:table}
       {spaces_after_argument:\\n}
    *normal_command@table C3 l25:@codekbdmacro
-   |EXTRA
    |command_as_argument_kbd_code:{1}
     *arguments_line C1
      *block_line_arg C3
       {spaces_before_argument: }
       *normal_command@kbd C1 l25:@codekbdmacro
-      |EXTRA
       |code:{1}
        *brace_container
       {spaces_after_argument:\\n}
@@ -159,14 +145,12 @@ $result_tree_text{'kbdinputstyle_in_table'} = '*document_root C1
         {normal_text:braced i--tem in example}
         {spaces_after_argument:\\n}
     *normal_command@end C1 l25:@codekbdmacro
-    |EXTRA
     |text_arg:{table}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:table}
       {spaces_after_argument:\\n}
    *normal_command@end C1 l25:@codekbdmacro
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
@@ -180,7 +164,6 @@ $result_tree_text{'kbdinputstyle_in_table'} = '*document_root C1
    {normal_text:kbdinputstyle example\\n}
   {empty_line:\\n}
   *normal_command@kbdinputstyle C1 l29
-  |EXTRA
   |global_command_number:{2}
   |misc_args:A{example}
    *line_arg C3
@@ -193,13 +176,11 @@ $result_tree_text{'kbdinputstyle_in_table'} = '*document_root C1
    >*macro_call@codekbdmacro C1
     >*brace_arg
   *normal_command@table C3 l31:@codekbdmacro
-  |EXTRA
   |command_as_argument_kbd_code:{1}
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
      *normal_command@kbd l31:@codekbdmacro
-     |EXTRA
      |code:{1}
      {spaces_after_argument:\\n}
    *table_entry C1
@@ -210,7 +191,6 @@ $result_tree_text{'kbdinputstyle_in_table'} = '*document_root C1
        {normal_text:i--tem out of example}
        {spaces_after_argument:\\n}
    *normal_command@end C1 l31:@codekbdmacro
-   |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
@@ -218,13 +198,11 @@ $result_tree_text{'kbdinputstyle_in_table'} = '*document_root C1
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@table C3 l31:@codekbdmacro
-  |EXTRA
   |command_as_argument_kbd_code:{1}
    *arguments_line C1
     *block_line_arg C3
      {spaces_before_argument: }
      *normal_command@kbd C1 l31:@codekbdmacro
-     |EXTRA
      |code:{1}
       *brace_container
      {spaces_after_argument:\\n}
@@ -236,7 +214,6 @@ $result_tree_text{'kbdinputstyle_in_table'} = '*document_root C1
        {normal_text:braced i--tem out of example}
        {spaces_after_argument:\\n}
    *normal_command@end C1 l31:@codekbdmacro
-   |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
@@ -263,7 +240,6 @@ $result_tree_text{'kbdinputstyle_in_table'} = '*document_root C1
         {normal_text:i--tem in example}
         {spaces_after_argument:\\n}
     *normal_command@end C1 l31:@codekbdmacro
-    |EXTRA
     |text_arg:{table}
      *line_arg C3
       {spaces_before_argument: }
@@ -284,14 +260,12 @@ $result_tree_text{'kbdinputstyle_in_table'} = '*document_root C1
         {normal_text:braced i--tem in example}
         {spaces_after_argument:\\n}
     *normal_command@end C1 l31:@codekbdmacro
-    |EXTRA
     |text_arg:{table}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:table}
       {spaces_after_argument:\\n}
    *normal_command@end C1 l31:@codekbdmacro
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
@@ -305,7 +279,6 @@ $result_tree_text{'kbdinputstyle_in_table'} = '*document_root C1
    {normal_text:kbdinputstyle distinct\\n}
   {empty_line:\\n}
   *normal_command@kbdinputstyle C1 l35
-  |EXTRA
   |global_command_number:{3}
   |misc_args:A{distinct}
    *line_arg C3
@@ -331,7 +304,6 @@ $result_tree_text{'kbdinputstyle_in_table'} = '*document_root C1
        {normal_text:i--tem out of example}
        {spaces_after_argument:\\n}
    *normal_command@end C1 l37:@codekbdmacro
-   |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
@@ -353,7 +325,6 @@ $result_tree_text{'kbdinputstyle_in_table'} = '*document_root C1
        {normal_text:braced i--tem out of example}
        {spaces_after_argument:\\n}
    *normal_command@end C1 l37:@codekbdmacro
-   |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
@@ -380,7 +351,6 @@ $result_tree_text{'kbdinputstyle_in_table'} = '*document_root C1
         {normal_text:i--tem in example}
         {spaces_after_argument:\\n}
     *normal_command@end C1 l37:@codekbdmacro
-    |EXTRA
     |text_arg:{table}
      *line_arg C3
       {spaces_before_argument: }
@@ -401,14 +371,12 @@ $result_tree_text{'kbdinputstyle_in_table'} = '*document_root C1
         {normal_text:braced i--tem in example}
         {spaces_after_argument:\\n}
     *normal_command@end C1 l37:@codekbdmacro
-    |EXTRA
     |text_arg:{table}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:table}
       {spaces_after_argument:\\n}
    *normal_command@end C1 l37:@codekbdmacro
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }

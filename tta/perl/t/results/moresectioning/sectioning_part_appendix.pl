@@ -18,7 +18,6 @@ Next: [U5]
  *before_node_section C1
   *preamble_before_content
  *normal_command@top C2 l1 {top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |section_level:{0}
@@ -39,7 +38,6 @@ FastForward: [U5]
 FastBack: [U0]
 Up: [U0]
  *normal_command@chapter C2 l3 {chapter}
- |EXTRA
  |identifier:{chapter}
  |is_target:{1}
  |section_heading_number:{1}
@@ -61,7 +59,6 @@ FastForward: [U5]
 FastBack: [U1]
 Up: [U1]
  *normal_command@section C2 l5 {section}
- |EXTRA
  |identifier:{section}
  |is_target:{1}
  |section_heading_number:{1.1}
@@ -83,7 +80,6 @@ FastForward: [U5]
 FastBack: [U1]
 Up: [U2]
  *normal_command@subsection C2 l7 {subsection}
- |EXTRA
  |identifier:{subsection}
  |is_target:{1}
  |section_heading_number:{1.1.1}
@@ -105,7 +101,6 @@ FastForward: [U5]
 FastBack: [U1]
 Up: [U3]
  *normal_command@subsubsection C2 l9 {subsubsection}
- |EXTRA
  |identifier:{subsubsection}
  |is_target:{1}
  |section_heading_number:{1.1.1.1}
@@ -127,7 +122,6 @@ FastForward: [U6]
 FastBack: [U1]
 Next: [U6]
  *normal_command@part C2 l11 {part}
- |EXTRA
  |global_command_number:{1}
  |section_level:{0}
  |section_number:{6}
@@ -138,7 +132,6 @@ Next: [U6]
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@chapter C2 l13 {chapter in part}
- |EXTRA
  |identifier:{chapter-in-part}
  |is_target:{1}
  |section_heading_number:{2}
@@ -162,7 +155,6 @@ Next: [U7]
 Prev: [U5]
 Up: [U5]
  *normal_command@chapter C2 l15 {second chapter in part}
- |EXTRA
  |identifier:{second-chapter-in-part}
  |is_target:{1}
  |section_heading_number:{3}
@@ -185,7 +177,6 @@ FastBack: [U6]
 Prev: [U6]
 Up: [U5]
  *normal_command@unnumbered C2 l17 {unnumbered}
- |EXTRA
  |identifier:{unnumbered}
  |is_target:{1}
  |section_level:{1}
@@ -205,7 +196,6 @@ Back: [U7]
 FastBack: [U7]
 Prev: [U5]
  *normal_command@appendix C2 l19 {appendix}
- |EXTRA
  |identifier:{appendix}
  |is_target:{1}
  |section_heading_number:{A}
@@ -225,7 +215,6 @@ Back: [U8]
 FastBack: [U8]
 Up: [U8]
  *normal_command@appendixsec C1 l21 {appendixsec}
- |EXTRA
  |identifier:{appendixsec}
  |is_target:{1}
  |section_heading_number:{A.1}

@@ -14,14 +14,12 @@ $result_tree_text{'node_on_index_entry_line'} = '*document_root C2
    {text_before_beginning:\\n}
   *preamble_before_content
   *index_entry_command@cindex C1 l2
-  |EXTRA
   |index_entry:I{cp,1}
    *line_arg C3
     {spaces_before_argument: }
     {normal_text:entry}
     {spaces_after_argument: }
  *normal_command@node C3 l2 {a}
- |EXTRA
  |identifier:{a}
  |is_target:{1}
  |node_number:{1}
@@ -30,7 +28,6 @@ $result_tree_text{'node_on_index_entry_line'} = '*document_root C2
     {spaces_before_argument: }
     {normal_text:a}
    *line_arg C5
-   |EXTRA
    |manual_content:A{2|2}
    |node_content:A{4|4}
    |normalized:{b}
@@ -40,7 +37,6 @@ $result_tree_text{'node_on_index_entry_line'} = '*document_root C2
     {normal_text:)}
     {normal_text:b}
    *line_arg C5
-   |EXTRA
    |manual_content:A{2|2}
    |node_content:A{4|4}
    |normalized:{c}
@@ -50,7 +46,6 @@ $result_tree_text{'node_on_index_entry_line'} = '*document_root C2
     {normal_text:)}
     {normal_text:c}
    *line_arg C6
-   |EXTRA
    |manual_content:A{2|2}
    |node_content:A{4|4}
    |normalized:{d}

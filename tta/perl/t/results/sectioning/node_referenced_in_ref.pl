@@ -12,7 +12,6 @@ $result_tree_text{'node_referenced_in_ref'} = '*document_root C4
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C6 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -29,7 +28,6 @@ $result_tree_text{'node_referenced_in_ref'} = '*document_root C4
    *menu_entry C4 l4
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{chap-first-level-node}
      {normal_text:chap first level node}
@@ -38,7 +36,6 @@ $result_tree_text{'node_referenced_in_ref'} = '*document_root C4
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 l5
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -48,14 +45,12 @@ $result_tree_text{'node_referenced_in_ref'} = '*document_root C4
   *paragraph C2
    *normal_command@ref C1 l7
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{second-level-node}
      {normal_text:second level node}
    {normal_text:.\\n}
   {empty_line:\\n}
  *normal_command@node C2 l9 {chap first level node}
- |EXTRA
  |identifier:{chap-first-level-node}
  |is_target:{1}
  |node_number:{2}
@@ -66,7 +61,6 @@ $result_tree_text{'node_referenced_in_ref'} = '*document_root C4
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l11 {second level node}
- |EXTRA
  |identifier:{second-level-node}
  |is_target:{1}
  |node_number:{3}

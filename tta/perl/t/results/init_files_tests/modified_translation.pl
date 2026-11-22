@@ -17,7 +17,6 @@ $result_tree_text{'modified_translation'} = '*document_root C1
    {normal_text:.\\n}
   {empty_line:\\n}
   *normal_command@documentlanguage C1 l3
-  |EXTRA
   |global_command_number:{1}
   |text_arg:{fr}
    *line_arg C3
@@ -32,7 +31,6 @@ $result_tree_text{'modified_translation'} = '*document_root C1
    {normal_text:.\\n}
   {empty_line:\\n}
   *normal_command@documentlanguage C1 l7
-  |EXTRA
   |global_command_number:{2}
   |text_arg:{pt}
    *line_arg C3

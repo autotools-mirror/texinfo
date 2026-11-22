@@ -15,7 +15,6 @@ $result_tree_text{'inline'} = '*document_root C1
   *preamble_before_content
   *paragraph C12
    *normal_command@inlinefmt C2 l2
-   |EXTRA
    |expand_index:{1}
    |format:{html}
     *brace_arg C1
@@ -25,7 +24,6 @@ $result_tree_text{'inline'} = '*document_root C1
      {normal_text:<blink>html</blink> ``}
    {normal_text:, \\n}
    *normal_command@inlinefmt C2 l3
-   |EXTRA
    |expand_index:{1}
    |format:{plaintext}
     *brace_arg C1
@@ -35,7 +33,6 @@ $result_tree_text{'inline'} = '*document_root C1
      {normal_text:plaintext ``}
    {normal_text:, \\n}
    *normal_command@inlinefmt C2 l4
-   |EXTRA
    |format:{xml}
     *brace_arg C1
      {normal_text:xml}
@@ -43,7 +40,6 @@ $result_tree_text{'inline'} = '*document_root C1
      {raw: <para>xml</para> ``}
    {normal_text:,\\n}
    *normal_command@inlinefmt C2 l5
-   |EXTRA
    |expand_index:{1}
    |format:{docbook}
     *brace_arg C1
@@ -53,7 +49,6 @@ $result_tree_text{'inline'} = '*document_root C1
      {normal_text:<emphasis>docbook</emphasis> ``}
    {normal_text:, \\n}
    *normal_command@inlinefmt C2 l6
-   |EXTRA
    |format:{tex}
     *brace_arg C1
      {normal_text:tex}
@@ -61,7 +56,6 @@ $result_tree_text{'inline'} = '*document_root C1
      {raw: $\\underline{a < b @code{tex \\hbox{ code }}}$ ``}
    {normal_text:\\n}
    *normal_command@inlinefmt C2 l7
-   |EXTRA
    |expand_index:{1}
    |format:{latex}
     *brace_arg C1
@@ -87,7 +81,6 @@ $result_tree_text{'inline'} = '*document_root C1
   {empty_line:\\n}
   *paragraph C12
    *normal_command@inlineraw C2 l10
-   |EXTRA
    |expand_index:{1}
    |format:{html}
     *brace_arg C1
@@ -97,7 +90,6 @@ $result_tree_text{'inline'} = '*document_root C1
      {normal_text:raw <blink>html</blink> ``}
    {normal_text:, \\n}
    *normal_command@inlineraw C2 l11
-   |EXTRA
    |expand_index:{1}
    |format:{plaintext}
     *brace_arg C1
@@ -107,7 +99,6 @@ $result_tree_text{'inline'} = '*document_root C1
      {normal_text:raw plaintext ``}
    {normal_text:, \\n}
    *normal_command@inlineraw C2 l12
-   |EXTRA
    |format:{xml}
     *brace_arg C1
      {normal_text:xml}
@@ -115,7 +106,6 @@ $result_tree_text{'inline'} = '*document_root C1
      {raw: raw <para>xml</para> ``}
    {normal_text:,\\n}
    *normal_command@inlineraw C2 l13
-   |EXTRA
    |expand_index:{1}
    |format:{docbook}
     *brace_arg C1
@@ -125,7 +115,6 @@ $result_tree_text{'inline'} = '*document_root C1
      {normal_text:raw <emphasis>docbook</emphasis> ``}
    {normal_text:, \\n}
    *normal_command@inlineraw C2 l14
-   |EXTRA
    |format:{tex}
     *brace_arg C1
      {normal_text:tex}
@@ -133,7 +122,6 @@ $result_tree_text{'inline'} = '*document_root C1
      {raw: raw $\\underline{a < b @code{tex \\hbox{ code }}}$ ``}
    {normal_text:\\n}
    *normal_command@inlineraw C2 l15
-   |EXTRA
    |expand_index:{1}
    |format:{latex}
     *brace_arg C1

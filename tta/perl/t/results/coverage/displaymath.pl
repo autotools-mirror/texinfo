@@ -25,7 +25,6 @@ $result_tree_text{'displaymath'} = '*document_root C1
     {normal_text:{\\tan y}}
    {normal_text:\\n}
    *normal_command@end C1 l4
-   |EXTRA
    |text_arg:{displaymath}
     *line_arg C3
      {spaces_before_argument: }
@@ -53,7 +52,6 @@ $result_tree_text{'displaymath'} = '*document_root C1
      {normal_text:2}
    {normal_text:\\n}
    *normal_command@end C1 l9
-   |EXTRA
    |text_arg:{displaymath}
     *line_arg C3
      {spaces_before_argument: }
@@ -87,7 +85,6 @@ $result_tree_text{'displaymath'} = '*document_root C1
     {normal_text:}}
    {normal_text:\\n}
    *normal_command@end C1 l14
-   |EXTRA
    |text_arg:{displaymath}
     *line_arg C3
      {spaces_before_argument: }
@@ -107,7 +104,6 @@ $result_tree_text{'displaymath'} = '*document_root C1
      {spaces_after_argument:\\n}
    {normal_text:a/2\\n}
    *normal_command@end C1 l20
-   |EXTRA
    |text_arg:{displaymath}
     *line_arg C3
      {spaces_before_argument: }

@@ -21,7 +21,6 @@ $result_tree_text{'ignored_in_ifset'} = '*document_root C1
       >{spaces_after_argument:\\n}
     >{raw:@ignore\\n}
     >*normal_command@end C1 l4
-    >|EXTRA
     >|text_arg:{ifset}
      >*line_arg C3
       >{spaces_before_argument: }
@@ -42,7 +41,6 @@ $result_tree_text{'ignored_in_ifset'} = '*document_root C1
       >{spaces_after_argument:\\n}
     >{raw:@verbatim\\n}
     >*normal_command@end C1 l11
-    >|EXTRA
     >|text_arg:{ifset}
      >*line_arg C3
       >{spaces_before_argument: }
@@ -59,7 +57,6 @@ $result_tree_text{'ignored_in_ifset'} = '*document_root C1
       >{spaces_after_argument:\\n}
     >{raw:@verb{%\\n}
     >*normal_command@end C1 l17
-    >|EXTRA
     >|text_arg:{ifset}
      >*line_arg C3
       >{spaces_before_argument: }

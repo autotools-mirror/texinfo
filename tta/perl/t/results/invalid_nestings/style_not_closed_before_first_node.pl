@@ -17,7 +17,6 @@ $result_tree_text{'style_not_closed_before_first_node'} = '*document_root C2
      {normal_text:in code\\n}
      {empty_line:\\n}
  *normal_command@node C2 l3 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}

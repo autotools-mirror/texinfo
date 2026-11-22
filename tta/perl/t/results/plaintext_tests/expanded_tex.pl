@@ -22,7 +22,6 @@ $result_tree_text{'expanded_tex'} = '*document_root C1
      {normal_text:GGG\\n}
      {normal_text:HHH\\n}
     *normal_command@end C1 l6
-    |EXTRA
     |text_arg:{tex}
      *line_arg C3
       {spaces_before_argument: }

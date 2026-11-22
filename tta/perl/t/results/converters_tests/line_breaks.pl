@@ -20,7 +20,6 @@ $result_tree_text{'line_breaks'} = '*document_root C5
      *normal_command@*
      {normal_text: yes!\\n}
     *normal_command@end C1 l3
-    |EXTRA
     |text_arg:{documentdescription}
      *line_arg C3
       {spaces_before_argument: }
@@ -43,7 +42,6 @@ $result_tree_text{'line_breaks'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l8 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -53,7 +51,6 @@ $result_tree_text{'line_breaks'} = '*document_root C5
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C2 l9 {a @* top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -65,7 +62,6 @@ $result_tree_text{'line_breaks'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l11 {a @* new node}
- |EXTRA
  |identifier:{a-new-node}
  |is_target:{1}
  |node_number:{2}
@@ -77,7 +73,6 @@ $result_tree_text{'line_breaks'} = '*document_root C5
     {normal_text: new node}
     {spaces_after_argument:\\n}
  *normal_command@chapter C11 l12 {a @* chapter}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -124,7 +119,6 @@ $result_tree_text{'line_breaks'} = '*document_root C5
       {normal_text:Text, }
       *normal_command@ref C2 l19
        *brace_arg C3
-       |EXTRA
        |node_content:A{0|2}
        |normalized:{a-new-node}
         {normal_text:a }
@@ -137,7 +131,6 @@ $result_tree_text{'line_breaks'} = '*document_root C5
         {normal_text: something}
       {normal_text:.\\n}
    *normal_command@end C1 l20
-   |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
@@ -155,7 +148,6 @@ $result_tree_text{'line_breaks'} = '*document_root C5
    *paragraph C1
     {normal_text:T\\n}
    *normal_command@end C1 l24
-   |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }
@@ -171,7 +163,6 @@ $result_tree_text{'line_breaks'} = '*document_root C5
     *normal_command@*
     {normal_text: example\\n}
    *normal_command@end C1 l28
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
@@ -190,7 +181,6 @@ $result_tree_text{'line_breaks'} = '*document_root C5
    *paragraph C2
     *normal_command@xref C1 l33
      *brace_arg C3
-     |EXTRA
      |node_content:A{0|2}
      |normalized:{a-new-node}
       {normal_text:a }
@@ -198,7 +188,6 @@ $result_tree_text{'line_breaks'} = '*document_root C5
       {normal_text: new node}
     {normal_text:.\\n}
    *normal_command@end C1 l34
-   |EXTRA
    |text_arg:{flushright}
     *line_arg C3
      {spaces_before_argument: }

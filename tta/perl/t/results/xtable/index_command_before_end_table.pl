@@ -36,14 +36,12 @@ $result_tree_text{'index_command_before_end_table'} = '*document_root C1
       {normal_text:aaaaa\\n}
      {empty_line:\\n}
      *index_entry_command@vindex C1 l7
-     |EXTRA
      |index_entry:I{vr,1}
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:var}
        {spaces_after_argument:\\n}
    *normal_command@end C1 l8
-   |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }

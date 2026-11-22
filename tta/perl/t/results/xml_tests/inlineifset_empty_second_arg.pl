@@ -14,7 +14,6 @@ $result_tree_text{'inlineifset_empty_second_arg'} = '*document_root C1
   *paragraph C3
    {normal_text:Toto }
    *normal_command@inlineifset C2 l1
-   |EXTRA
    |format:{flag}
     *brace_arg C1
      {normal_text:flag}
@@ -25,7 +24,6 @@ $result_tree_text{'inlineifset_empty_second_arg'} = '*document_root C1
   *paragraph C3
    {normal_text:Again with space }
    *normal_command@inlineifset C2 l3
-   |EXTRA
    |format:{flag}
     *brace_arg C1
      {normal_text:flag}

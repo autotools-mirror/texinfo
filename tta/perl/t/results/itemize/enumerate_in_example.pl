@@ -22,13 +22,11 @@ $result_tree_text{'enumerate_in_example'} = '*document_root C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *normal_command@item C1 l4
-    |EXTRA
     |item_number:{1}
      *preformatted C2
       {ignorable_spaces_after_command: }
       {normal_text:first item\\n}
     *normal_command@item C1 l5
-    |EXTRA
     |item_number:{2}
      *preformatted C4
       {ignorable_spaces_after_command: }
@@ -36,14 +34,12 @@ $result_tree_text{'enumerate_in_example'} = '*document_root C1
       {empty_line:\\n}
       {normal_text:still second\\n}
     *normal_command@end C1 l8
-    |EXTRA
     |text_arg:{enumerate}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:enumerate}
       {spaces_after_argument:\\n}
    *normal_command@end C1 l9
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }

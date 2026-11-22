@@ -12,7 +12,6 @@ $result_tree_text{'ref_in_preformatted'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C6 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -29,7 +28,6 @@ $result_tree_text{'ref_in_preformatted'} = '*document_root C3
    *menu_entry C4 l4
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{chap-nnn-the-node-name}
      {normal_text:chap nnn the node name}
@@ -38,7 +36,6 @@ $result_tree_text{'ref_in_preformatted'} = '*document_root C3
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 l5
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -53,14 +50,12 @@ $result_tree_text{'ref_in_preformatted'} = '*document_root C3
     {normal_text:Now }
     *normal_command@ref C1 l8
      *brace_arg C2
-     |EXTRA
      |node_content:A{0|1}
      |normalized:{chap-nnn-the-node-name}
       {normal_text:chap nnn the\\n}
       {normal_text:node name}
     {normal_text:\\n}
    *normal_command@end C1 l10
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
@@ -68,7 +63,6 @@ $result_tree_text{'ref_in_preformatted'} = '*document_root C3
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l12 {chap nnn the node name}
- |EXTRA
  |identifier:{chap-nnn-the-node-name}
  |is_target:{1}
  |node_number:{2}

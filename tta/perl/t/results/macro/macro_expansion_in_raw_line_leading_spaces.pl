@@ -12,14 +12,12 @@ $result_tree_text{'macro_expansion_in_raw_line_leading_spaces'} = '*document_roo
  *before_node_section C1
   *preamble_before_content C7
    *normal_command@macro C3 l1
-   |EXTRA
    |formal_args:A{a}
    |macro_name:{mymac}
     *arguments_line C1
      {macro_line: mymac {a}\\n}
     {raw:@set \\n}
     *normal_command@end C1 l3
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -31,7 +29,6 @@ $result_tree_text{'macro_expansion_in_raw_line_leading_spaces'} = '*document_roo
     >*macro_call@mymac C1
      >*brace_arg
    *normal_command@set C1
-   |EXTRA
    |misc_args:A{b|c}
     *line_arg C3
      {spaces_before_argument:  }
@@ -41,14 +38,12 @@ $result_tree_text{'macro_expansion_in_raw_line_leading_spaces'} = '*document_roo
      {spaces_after_argument:\\n}
    {empty_line:\\n}
    *normal_command@macro C3 l7
-   |EXTRA
    |formal_args:A{}
    |macro_name:{mycontents}
     *arguments_line C1
      {macro_line: mycontents {} \\n}
     {raw:@contents\\n}
     *normal_command@end C1 l9
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -60,7 +55,6 @@ $result_tree_text{'macro_expansion_in_raw_line_leading_spaces'} = '*document_roo
     >*macro_call@mycontents C1
      >*brace_arg
    *normal_command@contents C1 l11:@mycontents
-   |EXTRA
    |global_command_number:{1}
     *line_arg C2
      {spaces_before_argument:  }

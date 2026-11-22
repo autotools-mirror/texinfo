@@ -12,14 +12,12 @@ $result_tree_text{'macro_end_call_in_ignored_inlinefmtifelse_else'} = '*document
  *before_node_section C2
   *preamble_before_content C2
    *normal_command@macro C3 l1
-   |EXTRA
    |formal_args:A{}
    |macro_name:{endcallinignoredinlineelse}
     *arguments_line C1
      {macro_line: endcallinignoredinlineelse\\n}
     {raw:own, ignored\\n}
     *normal_command@end C1 l3
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -29,7 +27,6 @@ $result_tree_text{'macro_end_call_in_ignored_inlinefmtifelse_else'} = '*document
   *paragraph C3
    {normal_text:Toto }
    *normal_command@inlinefmtifelse C3 l5
-   |EXTRA
    |expand_index:{1}
    |format:{html}
     *brace_arg C1

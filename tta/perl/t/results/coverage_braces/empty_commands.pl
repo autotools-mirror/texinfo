@@ -12,7 +12,6 @@ $result_tree_text{'empty_commands'} = '*document_root C1
  *before_node_section C5
   *preamble_before_content
   *normal_command@titlefont C1 l1
-  |EXTRA
   |global_command_number:{1}
    *brace_container
   {normal_text:\\n}
@@ -30,7 +29,6 @@ $result_tree_text{'empty_commands'} = '*document_root C1
    *normal_command@code C1 l3
     *brace_container
    *normal_command@footnote C1 l3
-   |EXTRA
    |global_command_number:{1}
     *brace_command_context
    {normal_text: }

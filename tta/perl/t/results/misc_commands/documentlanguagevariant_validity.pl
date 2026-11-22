@@ -12,7 +12,6 @@ $result_tree_text{'documentlanguagevariant_validity'} = '*document_root C1
  *before_node_section C1
   *preamble_before_content C9
    *normal_command@documentlanguagevariant C2 l1
-   |EXTRA
    |global_command_number:{1}
     *line_arg C2
      {spaces_before_argument: }
@@ -22,7 +21,6 @@ $result_tree_text{'documentlanguagevariant_validity'} = '*document_root C1
      {normal_text:1606nict}
      {spaces_after_argument:\\n}
    *normal_command@documentlanguagevariant C1 l2
-   |EXTRA
    |global_command_number:{2}
     *line_arg C4
      {spaces_before_argument: }
@@ -32,7 +30,6 @@ $result_tree_text{'documentlanguagevariant_validity'} = '*document_root C1
        {normal_text:something}
      {spaces_after_argument:\\n}
    *normal_command@documentlanguagevariant C1 l3
-   |EXTRA
    |global_command_number:{3}
     *line_arg C4
      {spaces_before_argument: }
@@ -42,7 +39,6 @@ $result_tree_text{'documentlanguagevariant_validity'} = '*document_root C1
        {normal_text:e}
      {spaces_after_argument:\\n}
    *normal_command@documentlanguagevariant C1 l4
-   |EXTRA
    |global_command_number:{4}
     *line_arg C4
      {spaces_before_argument: }
@@ -51,7 +47,6 @@ $result_tree_text{'documentlanguagevariant_validity'} = '*document_root C1
       *brace_container
      {spaces_after_argument:\\n}
    *normal_command@documentlanguagevariant C2 l5
-   |EXTRA
    |global_command_number:{5}
     *line_arg C3
      {spaces_before_argument: }
@@ -62,7 +57,6 @@ $result_tree_text{'documentlanguagevariant_validity'} = '*document_root C1
      {normal_text:a b}
      {spaces_after_argument:\\n}
    *normal_command@documentlanguagevariant C2 l6
-   |EXTRA
    |global_command_number:{6}
     *line_arg C2
      {spaces_before_argument: }
@@ -72,7 +66,6 @@ $result_tree_text{'documentlanguagevariant_validity'} = '*document_root C1
      {normal_text:!l}
      {spaces_after_argument:\\n}
    *normal_command@documentlanguagevariant C1 l7
-   |EXTRA
    |global_command_number:{7}
     *line_arg C3
      {spaces_before_argument: }
@@ -80,14 +73,12 @@ $result_tree_text{'documentlanguagevariant_validity'} = '*document_root C1
       *brace_container
      {spaces_after_argument:\\n}
    *normal_command@documentlanguagevariant C1 l8
-   |EXTRA
    |global_command_number:{8}
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:aùbc}
      {spaces_after_argument:\\n}
    *normal_command@documentlanguagevariant C1 l9
-   |EXTRA
    |global_command_number:{9}
     *line_arg C3
      {spaces_before_argument: }

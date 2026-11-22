@@ -16,7 +16,6 @@ $result_tree_text{'heading_in_example'} = '*document_root C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *normal_command@heading C1 l2
-   |EXTRA
    |global_command_number:{1}
    |heading_number:{1}
     *line_arg C6
@@ -29,7 +28,6 @@ $result_tree_text{'heading_in_example'} = '*document_root C1
        {normal_text:heading}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l3
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }

@@ -12,7 +12,6 @@ $result_tree_text{'dot_and_dot_space_in_node_menu_entry'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C4 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -32,7 +31,6 @@ $result_tree_text{'dot_and_dot_space_in_node_menu_entry'} = '*document_root C3
      {normal_text:name}
     {menu_entry_separator:: }
     *menu_entry_node C4
-    |EXTRA
     |node_content:A{0|3}
     |normalized:{aa_002ebb_002e-c}
      {normal_text:aa.bb}
@@ -42,7 +40,6 @@ $result_tree_text{'dot_and_dot_space_in_node_menu_entry'} = '*document_root C3
      {normal_text:c}
      {space_at_end_menu_node:\\n}
    *normal_command@end C1 l5
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -50,7 +47,6 @@ $result_tree_text{'dot_and_dot_space_in_node_menu_entry'} = '*document_root C3
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l7 {aa.bb@asis{. }c}
- |EXTRA
  |identifier:{aa_002ebb_002e-c}
  |is_target:{1}
  |node_number:{2}

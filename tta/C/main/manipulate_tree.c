@@ -1205,7 +1205,7 @@ compare_name_value (const void *a, const void *b)
  */
 static void
 print_info_strings (ADDITIONAL_INFO_NAME_VAL_LIST *info_strings, int level,
-                    const char *prepended, TEXT *result, const char *header)
+                    const char *prepended, TEXT *result)
 {
   size_t i;
   int j;
@@ -1222,12 +1222,6 @@ print_info_strings (ADDITIONAL_INFO_NAME_VAL_LIST *info_strings, int level,
 
   qsort (info_strings->list, info_strings->number,
          sizeof (ADDITIONAL_INFO_NAME_VAL), compare_name_value);
-
-  for (j = 0; j < level; j++)
-    text_append_n (result, " ", 1);
-  text_append (result, info_prepended);
-  text_append (result, header);
-  text_append_n (result, "\n", 1);
 
   for (i = 0; i < info_strings->number; i++)
     {
@@ -1553,7 +1547,7 @@ print_element_extra (ELEMENT *element, int level,
     }
   free (elements_values_list.list);
 
-  print_info_strings (&info_strings, level, prepended, result, "EXTRA");
+  print_info_strings (&info_strings, level, prepended, result);
   return current_nr;
 }
 

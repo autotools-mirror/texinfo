@@ -25,14 +25,12 @@ $result_tree_text{'form_feeds_in_preamble'} = '*document_root C3
      {spaces_after_argument:\\n}
    {empty_line:\\n}
    *normal_command@macro C3 l6
-   |EXTRA
    |formal_args:A{field}
    |macro_name:{cdfRef}
     *arguments_line C1
      {macro_line: cdfRef{field}\\n}
     {raw:@ref{\\field\\ (Compact Disc fields)}\\n}
     *normal_command@end C1 l8
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -42,7 +40,6 @@ $result_tree_text{'form_feeds_in_preamble'} = '*document_root C3
    {empty_line:\\f\\n}
    {empty_line:\\n}
  *normal_command@node C1 l12 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -52,7 +49,6 @@ $result_tree_text{'form_feeds_in_preamble'} = '*document_root C3
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C1 l13 {The}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1

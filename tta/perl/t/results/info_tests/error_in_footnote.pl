@@ -14,7 +14,6 @@ $result_tree_text{'error_in_footnote'} = '*document_root C2
    {text_before_beginning:\\n}
   *preamble_before_content
  *normal_command@node C7 l2 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -25,7 +24,6 @@ $result_tree_text{'error_in_footnote'} = '*document_root C2
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@float C7 l4
-  |EXTRA
   |float_number:{1}
   |float_type:{Text}
   |global_command_number:{1}
@@ -56,7 +54,6 @@ $result_tree_text{'error_in_footnote'} = '*document_root C2
       {normal_text:.  \\n}
       {normal_text:Now footnote}
       *normal_command@footnote C1 l10
-      |EXTRA
       |global_command_number:{1}
        *brace_command_context C1
         *paragraph C5
@@ -69,7 +66,6 @@ $result_tree_text{'error_in_footnote'} = '*document_root C2
          {normal_text:.}
    {spaces_after_close_brace:\\n}
    *normal_command@end C1 l12
-   |EXTRA
    |text_arg:{float}
     *line_arg C3
      {spaces_before_argument: }
@@ -77,7 +73,6 @@ $result_tree_text{'error_in_footnote'} = '*document_root C2
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@listoffloats C1 l14
-  |EXTRA
   |float_type:{Text}
   |global_command_number:{1}
    *line_arg C3
@@ -86,7 +81,6 @@ $result_tree_text{'error_in_footnote'} = '*document_root C2
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@listoffloats C1 l16
-  |EXTRA
   |float_type:{Text}
   |global_command_number:{2}
    *line_arg C3

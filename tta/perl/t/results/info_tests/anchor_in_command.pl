@@ -12,7 +12,6 @@ $result_tree_text{'anchor_in_command'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C3 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -43,7 +42,6 @@ $result_tree_text{'anchor_in_command'} = '*document_root C2
       *brace_container C2
        {normal_text:emph2 }
        *normal_command@anchor C1 l5
-       |EXTRA
        |identifier:{anchor-in-emph}
        |is_target:{1}
         *brace_arg C1

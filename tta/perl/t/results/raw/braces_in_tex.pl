@@ -24,7 +24,6 @@ $result_tree_text{'braces_in_tex'} = '*document_root C1
      {normal_text:\\over \\sigma_i\\right)^2 \\n}
      {normal_text:$$\\n}
     *normal_command@end C1 l8
-    |EXTRA
     |text_arg:{tex}
      *line_arg C3
       {spaces_before_argument: }
@@ -48,14 +47,12 @@ $result_tree_text{'braces_in_tex'} = '*document_root C1
       {normal_text:\\over \\sigma_i\\right)^2 \\n}
       {normal_text:$$\\n}
      *normal_command@end C1 l18
-     |EXTRA
      |text_arg:{tex}
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:tex}
        {spaces_after_argument:\\n}
    *normal_command@end C1 l19
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }

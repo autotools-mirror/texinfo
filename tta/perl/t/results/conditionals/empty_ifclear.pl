@@ -22,7 +22,6 @@ $result_tree_text{'empty_ifclear'} = '*document_root C1
      >{raw:Something\\n}
      >{raw:\\n}
      >*normal_command@end C1 l5
-     >|EXTRA
      >|text_arg:{ifclear}
       >*line_arg C3
        >{spaces_before_argument: }

@@ -12,14 +12,12 @@ $result_tree_text{'value_on_ifset'} = '*document_root C1
  *before_node_section C3
   *preamble_before_content C3
    *normal_command@set C1
-   |EXTRA
    |misc_args:A{xval|x}
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:xval x}
      {spaces_after_argument:\\n}
    *normal_command@set C1
-   |EXTRA
    |misc_args:A{x|1}
     *line_arg C3
      {spaces_before_argument: }
@@ -46,7 +44,6 @@ $result_tree_text{'value_on_ifset'} = '*document_root C1
    >SOURCEMARKS
    >expanded_conditional_command<end;1><p:9>
     >*normal_command@end C1 l6
-    >|EXTRA
     >|text_arg:{ifset}
      >*line_arg C3
       >{spaces_before_argument: }
@@ -65,7 +62,6 @@ $result_tree_text{'value_on_ifset'} = '*document_root C1
     >{raw:INTERNALXV\\n}
     >{raw:@end ifset\\n}
     >*normal_command@end C1 l12
-    >|EXTRA
     >|text_arg:{ifset}
      >*line_arg C3
       >{spaces_before_argument: }

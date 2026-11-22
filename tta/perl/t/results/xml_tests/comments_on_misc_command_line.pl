@@ -12,7 +12,6 @@ $result_tree_text{'comments_on_misc_command_line'} = '*document_root C1
  *before_node_section C9
   *preamble_before_content C4
    *normal_command@setfilename C1 l1
-   |EXTRA
    |text_arg:{comments_on_misc_command_line.info}
     *line_arg C4
      {spaces_before_argument:  }
@@ -24,7 +23,6 @@ $result_tree_text{'comments_on_misc_command_line'} = '*document_root C1
        {rawline_text:setfilename (text)}
        {spaces_after_argument:\\n}
    *normal_command@definfoenclose C1 l2
-   |EXTRA
    |misc_args:A{phoo|;|:}
     *line_arg C4
      {spaces_before_argument: }
@@ -36,7 +34,6 @@ $result_tree_text{'comments_on_misc_command_line'} = '*document_root C1
        {rawline_text:definfoenclose (number)}
        {spaces_after_argument:\\n}
    *normal_command@firstparagraphindent C1 l3
-   |EXTRA
    |global_command_number:{1}
    |misc_args:A{none}
     *line_arg C4
@@ -57,7 +54,6 @@ $result_tree_text{'comments_on_misc_command_line'} = '*document_root C1
        {rawline_text:raisesections (skipline)}
        {spaces_after_argument:\\n}
   *normal_command@insertcopying C1 l5
-  |EXTRA
   |global_command_number:{1}
    *line_arg C2
     {spaces_before_argument:  }
@@ -98,7 +94,6 @@ $result_tree_text{'comments_on_misc_command_line'} = '*document_root C1
     {rawline_text:indent (skipspace)}
     {spaces_after_argument:\\n}
   *paragraph C1
-  |EXTRA
   |indent:{1}
    {normal_text:Para.\\n}
 ';

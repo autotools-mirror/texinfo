@@ -12,7 +12,6 @@ $result_tree_text{'empty_menu_description'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C3 l1 {first}
- |EXTRA
  |identifier:{first}
  |is_target:{1}
  |node_number:{1}
@@ -32,7 +31,6 @@ $result_tree_text{'empty_menu_description'} = '*document_root C2
      {normal_text:a}
     {menu_entry_separator::}
     *menu_entry_node C5
-    |EXTRA
     |manual_content:A{1|1}
     |node_content:A{3|4}
     |normalized:{b}
@@ -46,7 +44,6 @@ $result_tree_text{'empty_menu_description'} = '*document_root C2
     *preformatted C1
      {after_menu_description_line:\\n}
    *normal_command@end C1 l6
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }

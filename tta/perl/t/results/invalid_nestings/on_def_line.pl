@@ -13,7 +13,6 @@ $result_tree_text{'on_def_line'} = '*document_root C1
   *preamble_before_content
   *normal_command@deffn C3 l1
    *def_line C1 l1
-   |EXTRA
    |def_command:{deffn}
    |index_entry:I{fn,1}
    |original_def_cmdname:{deffn}
@@ -22,7 +21,6 @@ $result_tree_text{'on_def_line'} = '*document_root C1
      *def_category C1
       *bracketed_arg C1 l1
        *normal_command@anchor C1 l1
-       |EXTRA
        |identifier:{in-anchor}
        |is_target:{1}
         *brace_arg C1
@@ -31,7 +29,6 @@ $result_tree_text{'on_def_line'} = '*document_root C1
      *def_name C1
       *def_line_arg C1
        *normal_command@titlefont C1 l1
-       |EXTRA
        |global_command_number:{1}
         *brace_container C1
          {normal_text:in titlefont}
@@ -39,7 +36,6 @@ $result_tree_text{'on_def_line'} = '*document_root C1
      *def_arg C1
       *def_line_arg C1
        *normal_command@footnote C1 l1
-       |EXTRA
        |global_command_number:{1}
         *brace_command_context C1
          *paragraph C1
@@ -53,7 +49,6 @@ $result_tree_text{'on_def_line'} = '*document_root C1
          {normal_text:exdent}
          {spaces_after_argument:\\n}
    *normal_command@deffnx C1 l2
-   |EXTRA
    |def_command:{deffn}
    |index_entry:I{fn,2}
    |original_def_cmdname:{deffnx}
@@ -62,7 +57,6 @@ $result_tree_text{'on_def_line'} = '*document_root C1
      *def_category C1
       *bracketed_arg C1 l2
        *normal_command@anchor C1 l2
-       |EXTRA
        |identifier:{in-anchorx}
        |is_target:{1}
         *brace_arg C1
@@ -71,7 +65,6 @@ $result_tree_text{'on_def_line'} = '*document_root C1
      *def_name C1
       *def_line_arg C1
        *normal_command@titlefont C1 l2
-       |EXTRA
        |global_command_number:{2}
         *brace_container C1
          {normal_text:in titlefontx}
@@ -79,7 +72,6 @@ $result_tree_text{'on_def_line'} = '*document_root C1
      *def_arg C1
       *def_line_arg C1
        *normal_command@footnote C1 l2
-       |EXTRA
        |global_command_number:{2}
         *brace_command_context C1
          *paragraph C1
@@ -93,7 +85,6 @@ $result_tree_text{'on_def_line'} = '*document_root C1
          {normal_text:exdentx}
          {spaces_after_argument:\\n}
    *normal_command@end C1 l3
-   |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }

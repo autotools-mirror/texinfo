@@ -36,7 +36,6 @@ $result_tree_text{'table'} = '*document_root C1
      *paragraph C1
       {normal_text:In table\\n}
    *normal_command@end C1 l7
-   |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
@@ -60,7 +59,6 @@ $result_tree_text{'table'} = '*document_root C1
       {rawline_text:after vtable}
       {spaces_after_argument:\\n}
     *index_entry_command@cindex C1 l11
-    |EXTRA
     |index_entry:I{cp,1}
      *line_arg C3
       {spaces_before_argument: }
@@ -70,7 +68,6 @@ $result_tree_text{'table'} = '*document_root C1
    *table_entry C2
     *table_term C4
      *normal_command@item C1 l13
-     |EXTRA
      |index_entry:I{vr,1}
       *line_arg C3
        {spaces_before_argument: }
@@ -83,14 +80,12 @@ $result_tree_text{'table'} = '*document_root C1
         {rawline_text:after item}
         {spaces_after_argument:\\n}
      *index_entry_command@kindex C1 l15
-     |EXTRA
      |index_entry:I{ky,1}
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:key}
        {spaces_after_argument:\\n}
      *normal_command@itemx C1 l16
-     |EXTRA
      |index_entry:I{vr,2}
       *line_arg C4
        {spaces_before_argument: }
@@ -104,7 +99,6 @@ $result_tree_text{'table'} = '*document_root C1
     *table_definition C1
      {empty_line:\\n}
    *normal_command@end C1 l18
-   |EXTRA
    |text_arg:{vtable}
     *line_arg C3
      {spaces_before_argument: }
@@ -125,7 +119,6 @@ $result_tree_text{'table'} = '*document_root C1
        {normal_text:unknown command after indicating command}
        {spaces_after_argument:\\n}
    *normal_command@end C1 l22
-   |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }

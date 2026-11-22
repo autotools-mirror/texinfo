@@ -14,13 +14,11 @@ $result_tree_text{'no_paragraph_commands'} = '*document_root C1
    *normal_command@*
    {normal_text:\\n}
   *normal_command@titlefont C1 l2
-  |EXTRA
   |global_command_number:{1}
    *brace_container C1
     {normal_text:title font}
   {normal_text:\\n}
   *normal_command@image C5 l3
-  |EXTRA
   |input_encoding_name:{utf-8}
    *brace_arg C1
     {normal_text:aa}

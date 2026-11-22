@@ -44,7 +44,6 @@ $result_tree_text{'nested_ignore_with_comments'} = '*document_root C1
     {raw:@end ignore\\n}
     {raw:\\n}
     *normal_command@end C1 l30
-    |EXTRA
     |text_arg:{ignore}
      *line_arg C3
       {spaces_before_argument: }

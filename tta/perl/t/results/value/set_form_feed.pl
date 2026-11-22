@@ -12,21 +12,18 @@ $result_tree_text{'set_form_feed'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C4
    *normal_command@set C1
-   |EXTRA
    |misc_args:A{gg|a\\a\\f\\\\}
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:gg \\f a\\a\\f\\\\}
      {spaces_after_argument:\\n}
    *normal_command@set C1
-   |EXTRA
    |misc_args:A{hh|}
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:hh\\f}
      {spaces_after_argument:\\n}
    *normal_command@set C1
-   |EXTRA
    |misc_args:A{ll|}
     *line_arg C3
      {spaces_before_argument: }

@@ -12,7 +12,6 @@ $result_tree_text{'nodes_before_top'} = '*document_root C7
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C4 l1 {first}
- |EXTRA
  |identifier:{first}
  |is_target:{1}
  |node_number:{1}
@@ -21,7 +20,6 @@ $result_tree_text{'nodes_before_top'} = '*document_root C7
     {spaces_before_argument: }
     {normal_text:first}
    *line_arg C2
-   |EXTRA
    |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
@@ -29,7 +27,6 @@ $result_tree_text{'nodes_before_top'} = '*document_root C7
    *line_arg C1
     {spaces_before_argument: }
    *line_arg C4
-   |EXTRA
    |manual_content:A{1|1}
     {normal_text:(}
     {normal_text:dir}
@@ -43,7 +40,6 @@ $result_tree_text{'nodes_before_top'} = '*document_root C7
    *menu_entry C4 l4
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{node-in-menu-before-top}
      {normal_text:node in menu before top}
@@ -52,7 +48,6 @@ $result_tree_text{'nodes_before_top'} = '*document_root C7
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 l5
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -60,7 +55,6 @@ $result_tree_text{'nodes_before_top'} = '*document_root C7
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C2 l7 {node in menu before top}
- |EXTRA
  |identifier:{node-in-menu-before-top}
  |is_target:{1}
  |node_number:{2}
@@ -71,14 +65,12 @@ $result_tree_text{'nodes_before_top'} = '*document_root C7
    *line_arg
    *line_arg
    *line_arg C2
-   |EXTRA
    |node_content:A{0|0}
    |normalized:{first}
     {normal_text:first}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l9 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{3}
@@ -88,13 +80,11 @@ $result_tree_text{'nodes_before_top'} = '*document_root C7
     {normal_text:Top}
    *line_arg
    *line_arg C2
-   |EXTRA
    |node_content:A{0|0}
    |normalized:{first}
     {normal_text:first}
     {spaces_after_argument:\\n}
  *normal_command@top C4 l10 {top section}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -110,7 +100,6 @@ $result_tree_text{'nodes_before_top'} = '*document_root C7
    *menu_entry C4 l13
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{second-node}
      {normal_text:second node}
@@ -119,7 +108,6 @@ $result_tree_text{'nodes_before_top'} = '*document_root C7
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 l14
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -127,7 +115,6 @@ $result_tree_text{'nodes_before_top'} = '*document_root C7
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l16 {second node}
- |EXTRA
  |identifier:{second-node}
  |is_target:{1}
  |node_number:{4}
@@ -137,7 +124,6 @@ $result_tree_text{'nodes_before_top'} = '*document_root C7
     {normal_text:second node}
     {spaces_after_argument:\\n}
  *normal_command@chapter C1 l17 {a chapter}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}

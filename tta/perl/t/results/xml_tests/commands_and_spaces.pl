@@ -12,7 +12,6 @@ $result_tree_text{'commands_and_spaces'} = '*document_root C2
  *before_node_section C2
   *preamble_before_setfilename C2
    *normal_command@set C1
-   |EXTRA
    |misc_args:A{foo|some @value}
     *line_arg C3
      {spaces_before_argument:  }
@@ -21,7 +20,6 @@ $result_tree_text{'commands_and_spaces'} = '*document_root C2
    {empty_line:\\n}
   *preamble_before_content C4
    *normal_command@setfilename C1 l3
-   |EXTRA
    |text_arg:{commands_and_spaces.info}
     *line_arg C3
      {spaces_before_argument:  }
@@ -29,7 +27,6 @@ $result_tree_text{'commands_and_spaces'} = '*document_root C2
      {spaces_after_argument:  \\n}
    {empty_line:\\n}
    *normal_command@unmacro C1
-   |EXTRA
    |misc_args:A{ggg}
     *line_arg C3
      {spaces_before_argument:  }
@@ -37,7 +34,6 @@ $result_tree_text{'commands_and_spaces'} = '*document_root C2
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *normal_command@node C46 l7 {a}
- |EXTRA
  |identifier:{a}
  |is_target:{1}
  |node_number:{1}
@@ -47,20 +43,17 @@ $result_tree_text{'commands_and_spaces'} = '*document_root C2
     {normal_text:a}
     {spaces_after_argument: }
    *line_arg C3
-   |EXTRA
    |manual_content:A{1|1}
     {normal_text:(}
     {normal_text:b}
     {normal_text:)}
    *line_arg C4
-   |EXTRA
    |manual_content:A{1|1}
     {normal_text:(}
     {normal_text:c}
     {normal_text:)}
     {spaces_after_argument: }
    *line_arg C5
-   |EXTRA
    |manual_content:A{2|2}
     {spaces_before_argument: }
     {normal_text:(}
@@ -77,26 +70,22 @@ $result_tree_text{'commands_and_spaces'} = '*document_root C2
   *normal_command@indent l11
   {ignorable_spaces_after_command:  }
   *paragraph C1
-  |EXTRA
   |indent:{1}
    {normal_text:after indent.\\n}
   {empty_line:\\n}
   *normal_command@indent l13
   {ignorable_spaces_after_command:\\n}
   *paragraph C1
-  |EXTRA
   |indent:{1}
    {normal_text:line after indent\\n}
   {empty_line:\\n}
   *normal_command@indent l16
   {ignorable_spaces_after_command:  \\n}
   *paragraph C1
-  |EXTRA
   |indent:{1}
    {normal_text:endof line with spaces line after indent\\n}
   {empty_line:\\n}
   *normal_command@image C5 l19
-  |EXTRA
   |input_encoding_name:{utf-8}
    *brace_arg C3
     {spaces_before_argument: }
@@ -116,7 +105,6 @@ $result_tree_text{'commands_and_spaces'} = '*document_root C2
   {normal_text:\\n}
   {empty_line:\\n}
   *normal_command@image C5 l21
-  |EXTRA
   |input_encoding_name:{utf-8}
    *brace_arg C3
     {spaces_before_argument: }
@@ -145,7 +133,6 @@ $result_tree_text{'commands_and_spaces'} = '*document_root C2
    *paragraph C1
     {normal_text:Q\\n}
    *normal_command@end C1 l26
-   |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }
@@ -153,7 +140,6 @@ $result_tree_text{'commands_and_spaces'} = '*document_root C2
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@float C8 l28
-  |EXTRA
   |float_number:{1}
   |float_type:{ff}
   |global_command_number:{1}
@@ -185,7 +171,6 @@ $result_tree_text{'commands_and_spaces'} = '*document_root C2
    *paragraph C1
     {normal_text:g.\\n}
    *normal_command@end C1 l32
-   |EXTRA
    |text_arg:{float}
     *line_arg C3
      {spaces_before_argument: }
@@ -193,20 +178,17 @@ $result_tree_text{'commands_and_spaces'} = '*document_root C2
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@multitable C2 l34
-  |EXTRA
   |max_columns:{2}
    *arguments_line C1
     *block_line_arg C2
      {spaces_before_argument:  }
      *normal_command@columnfractions C1 l34
-     |EXTRA
      |misc_args:A{0.4|0.6}
       *line_arg C3
        {spaces_before_argument:  }
        {normal_text:0.4  0.6}
        {spaces_after_argument:  \\n}
    *normal_command@end C1 l35
-   |EXTRA
    |text_arg:{multitable}
     *line_arg C3
      {spaces_before_argument: }
@@ -214,7 +196,6 @@ $result_tree_text{'commands_and_spaces'} = '*document_root C2
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@multitable C2 l37
-  |EXTRA
   |max_columns:{2}
    *arguments_line C1
     *block_line_arg C8
@@ -231,7 +212,6 @@ $result_tree_text{'commands_and_spaces'} = '*document_root C2
      {normal_text:gg hh j}
      {spaces_after_argument: \\n}
    *normal_command@end C1 l38
-   |EXTRA
    |text_arg:{multitable}
     *line_arg C3
      {spaces_before_argument: }
@@ -244,7 +224,6 @@ $result_tree_text{'commands_and_spaces'} = '*document_root C2
      {spaces_before_argument:  \\n}
    {raw:in verbatim @g \\n}
    *normal_command@end C1 l42
-   |EXTRA
    |text_arg:{verbatim}
     *line_arg C3
      {spaces_before_argument: }
@@ -258,7 +237,6 @@ $result_tree_text{'commands_and_spaces'} = '*document_root C2
    *rawpreformatted C1
     {normal_text:in tex\\n}
    *normal_command@end C1 l46
-   |EXTRA
    |text_arg:{tex}
     *line_arg C3
      {spaces_before_argument:  }
@@ -272,7 +250,6 @@ $result_tree_text{'commands_and_spaces'} = '*document_root C2
    *preformatted C1
     {normal_text:in example\\n}
    *normal_command@end C1 l50
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument:  }
@@ -293,7 +270,6 @@ $result_tree_text{'commands_and_spaces'} = '*document_root C2
        {normal_text:in item}
        {spaces_after_argument: \\n}
    *normal_command@end C1 l54
-   |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument:   }
@@ -303,7 +279,6 @@ $result_tree_text{'commands_and_spaces'} = '*document_root C2
   *paragraph C3
    {normal_text:T}
    *normal_command@footnote C1 l56
-   |EXTRA
    |global_command_number:{1}
     *brace_command_context C2
      {spaces_before_argument:  }
@@ -330,7 +305,6 @@ $result_tree_text{'commands_and_spaces'} = '*document_root C2
   {empty_line:\\n}
   *normal_command@deffn C3 l62
    *def_line C1 l62
-   |EXTRA
    |def_command:{deffn}
    |element_node:{a}
    |index_entry:I{fn,1}
@@ -371,7 +345,6 @@ $result_tree_text{'commands_and_spaces'} = '*document_root C2
     *paragraph C1
      {normal_text:T\\n}
    *normal_command@end C1 l64
-   |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }

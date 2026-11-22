@@ -14,7 +14,6 @@ $result_tree_text{'special_spaces_in_nodes'} = '*document_root C14
    {text_before_beginning:\\n}
   *preamble_before_content
  *normal_command@node C1 special_spaces_in_nodes.texi:l2 {Top }
- |EXTRA
  |identifier:{Top_2002}
  |is_target:{1}
  |node_number:{1}
@@ -24,7 +23,6 @@ $result_tree_text{'special_spaces_in_nodes'} = '*document_root C14
     {normal_text:Top }
     {spaces_after_argument: \\n}
  *normal_command@top C2 special_spaces_in_nodes.texi:l3 {top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -34,7 +32,6 @@ $result_tree_text{'special_spaces_in_nodes'} = '*document_root C14
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 special_spaces_in_nodes.texi:l5 {EN QUAD| | EM QUAD| | EN SPACE| |}
- |EXTRA
  |identifier:{EN-QUAD_007c_2002_007c-EM-QUAD_007c_2003_007c-EN-SPACE_007c_2002_007c}
  |is_target:{1}
  |node_number:{2}
@@ -44,7 +41,6 @@ $result_tree_text{'special_spaces_in_nodes'} = '*document_root C14
     {normal_text:EN QUAD| | EM QUAD| | EN SPACE| |}
     {spaces_after_argument:\\n}
  *normal_command@chapter C5 special_spaces_in_nodes.texi:l6 {chap}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -62,7 +58,6 @@ $result_tree_text{'special_spaces_in_nodes'} = '*document_root C14
    *menu_entry C4 special_spaces_in_nodes.texi:l10
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{CHARACTER-TABULATION_007c-_007c-FORM-FEED_007c-_007c-LINE-TABULATION_007c-_007c}
      {normal_text:CHARACTER TABULATION|\\t| FORM FEED|\\f| LINE TABULATION||}
@@ -73,7 +68,6 @@ $result_tree_text{'special_spaces_in_nodes'} = '*document_root C14
    *menu_entry C4 special_spaces_in_nodes.texi:l11
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{CARRIAGE-RETURN_007c-_007c}
      {normal_text:CARRIAGE RETURN|'."\r".'|}
@@ -84,7 +78,6 @@ $result_tree_text{'special_spaces_in_nodes'} = '*document_root C14
    *menu_entry C4 special_spaces_in_nodes.texi:l12
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{NEXT-LINE-_0028NEL_0029_007c_0085_007c-NO_002dBREAK-SPACE_007c_00a0_007c-OGHAM-SPACE-MARK_007c_1680_007c}
      {normal_text:NEXT LINE (NEL)|| NO-BREAK SPACE| | OGHAM SPACE MARK| |}
@@ -95,7 +88,6 @@ $result_tree_text{'special_spaces_in_nodes'} = '*document_root C14
    *menu_entry C4 special_spaces_in_nodes.texi:l13
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{MONGOLIAN-VOWEL-SEPARATOR_007c_180e_007c-EM-SPACE_007c_2003_007c}
      {normal_text:MONGOLIAN VOWEL SEPARATOR|᠎| EM SPACE| |}
@@ -106,7 +98,6 @@ $result_tree_text{'special_spaces_in_nodes'} = '*document_root C14
    *menu_entry C4 special_spaces_in_nodes.texi:l14
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{THREE_002dPER_002dEM-SPACE_007c_2004_007c-FOUR_002dPER_002dEM-SPACE_007c_2005_007c-SIX_002dPER_002dEM-SPACE_007c_2006_007c}
      {normal_text:THREE-PER-EM SPACE| | FOUR-PER-EM SPACE| | SIX-PER-EM SPACE| |}
@@ -117,7 +108,6 @@ $result_tree_text{'special_spaces_in_nodes'} = '*document_root C14
    *menu_entry C4 special_spaces_in_nodes.texi:l15
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{FIGURE-SPACE_007c_2007_007c-PUNCTUATION-SPACE_007c_2008_007c-THIN-SPACE_007c_2009_007c}
      {normal_text:FIGURE SPACE| | PUNCTUATION SPACE| | THIN SPACE| |}
@@ -128,7 +118,6 @@ $result_tree_text{'special_spaces_in_nodes'} = '*document_root C14
    *menu_entry C4 special_spaces_in_nodes.texi:l16
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{HAIR-SPACE_007c_200a_007c-LINE-SEPARATOR_007c_2028_007c-PARAGRAPH-SEPARATOR_007c_2029_007c}
      {normal_text:HAIR SPACE| | LINE SEPARATOR| | PARAGRAPH SEPARATOR| |}
@@ -139,7 +128,6 @@ $result_tree_text{'special_spaces_in_nodes'} = '*document_root C14
    *menu_entry C4 special_spaces_in_nodes.texi:l17
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{NARROW-NO_002dBREAK-SPACE_007c_202f_007c-MEDIUM-MATHEMATICAL-SPACE_007c_205f_007c-IDEOGRAPHIC-SPACE_007c_3000_007c}
      {normal_text:NARROW NO-BREAK SPACE| | MEDIUM MATHEMATICAL SPACE| | IDEOGRAPHIC SPACE|　|}
@@ -148,7 +136,6 @@ $result_tree_text{'special_spaces_in_nodes'} = '*document_root C14
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 special_spaces_in_nodes.texi:l18
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -156,7 +143,6 @@ $result_tree_text{'special_spaces_in_nodes'} = '*document_root C14
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C2 special_spaces_in_nodes.texi:l20 {CHARACTER TABULATION|	| FORM FEED|| LINE TABULATION||}
- |EXTRA
  |identifier:{CHARACTER-TABULATION_007c-_007c-FORM-FEED_007c-_007c-LINE-TABULATION_007c-_007c}
  |is_target:{1}
  |node_number:{3}
@@ -167,7 +153,6 @@ $result_tree_text{'special_spaces_in_nodes'} = '*document_root C14
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C2 special_spaces_in_nodes.texi:l22 {CARRIAGE RETURN|'."\r".'|}
- |EXTRA
  |identifier:{CARRIAGE-RETURN_007c-_007c}
  |is_target:{1}
  |node_number:{4}
@@ -178,7 +163,6 @@ $result_tree_text{'special_spaces_in_nodes'} = '*document_root C14
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C2 special_spaces_in_nodes.texi:l24 {NEXT LINE (NEL)|| NO-BREAK SPACE| | OGHAM SPACE MARK| |}
- |EXTRA
  |identifier:{NEXT-LINE-_0028NEL_0029_007c_0085_007c-NO_002dBREAK-SPACE_007c_00a0_007c-OGHAM-SPACE-MARK_007c_1680_007c}
  |is_target:{1}
  |node_number:{5}
@@ -189,7 +173,6 @@ $result_tree_text{'special_spaces_in_nodes'} = '*document_root C14
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C2 special_spaces_in_nodes.texi:l26 {MONGOLIAN VOWEL SEPARATOR|᠎| EM SPACE| |}
- |EXTRA
  |identifier:{MONGOLIAN-VOWEL-SEPARATOR_007c_180e_007c-EM-SPACE_007c_2003_007c}
  |is_target:{1}
  |node_number:{6}
@@ -200,7 +183,6 @@ $result_tree_text{'special_spaces_in_nodes'} = '*document_root C14
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C2 special_spaces_in_nodes.texi:l28 {THREE-PER-EM SPACE| | FOUR-PER-EM SPACE| | SIX-PER-EM SPACE| |}
- |EXTRA
  |identifier:{THREE_002dPER_002dEM-SPACE_007c_2004_007c-FOUR_002dPER_002dEM-SPACE_007c_2005_007c-SIX_002dPER_002dEM-SPACE_007c_2006_007c}
  |is_target:{1}
  |node_number:{7}
@@ -211,7 +193,6 @@ $result_tree_text{'special_spaces_in_nodes'} = '*document_root C14
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C3 special_spaces_in_nodes.texi:l30 {FIGURE SPACE| | PUNCTUATION SPACE| | THIN SPACE| |}
- |EXTRA
  |identifier:{FIGURE-SPACE_007c_2007_007c-PUNCTUATION-SPACE_007c_2008_007c-THIN-SPACE_007c_2009_007c}
  |is_target:{1}
  |node_number:{8}
@@ -227,7 +208,6 @@ $result_tree_text{'special_spaces_in_nodes'} = '*document_root C14
     {rawline_text:Perl and C code give different width.}
     {spaces_after_argument:\\n}
  *normal_command@node C2 special_spaces_in_nodes.texi:l33 {HAIR SPACE| | LINE SEPARATOR| | PARAGRAPH SEPARATOR| |}
- |EXTRA
  |identifier:{HAIR-SPACE_007c_200a_007c-LINE-SEPARATOR_007c_2028_007c-PARAGRAPH-SEPARATOR_007c_2029_007c}
  |is_target:{1}
  |node_number:{9}
@@ -238,7 +218,6 @@ $result_tree_text{'special_spaces_in_nodes'} = '*document_root C14
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C4 special_spaces_in_nodes.texi:l35 {NARROW NO-BREAK SPACE| | MEDIUM MATHEMATICAL SPACE| | IDEOGRAPHIC SPACE|　|}
- |EXTRA
  |identifier:{NARROW-NO_002dBREAK-SPACE_007c_202f_007c-MEDIUM-MATHEMATICAL-SPACE_007c_205f_007c-IDEOGRAPHIC-SPACE_007c_3000_007c}
  |is_target:{1}
  |node_number:{10}
@@ -251,7 +230,6 @@ $result_tree_text{'special_spaces_in_nodes'} = '*document_root C14
   *paragraph C2
    *normal_command@ref C1 special_spaces_in_nodes.texi:l37
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{NEXT-LINE-_0028NEL_0029_007c_0085_007c-NO_002dBREAK-SPACE_007c_00a0_007c-OGHAM-SPACE-MARK_007c_1680_007c}
      {normal_text:NEXT LINE (NEL)|| NO-BREAK SPACE| | OGHAM SPACE MARK| |}

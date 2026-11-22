@@ -37,7 +37,6 @@ $result_tree_text{'sc_formatting_with_css'} = '*document_root C1
       {normal_text:small case in example}
     {normal_text: MORE text.\\n}
    *normal_command@end C1 l7
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }

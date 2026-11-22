@@ -12,14 +12,12 @@ $result_tree_text{'macro_expansion_in_multitable_prototype'} = '*document_root C
  *before_node_section C2
   *preamble_before_content C4
    *normal_command@macro C3 l1
-   |EXTRA
    |formal_args:A{}
    |macro_name:{simple}
     *arguments_line C1
      {macro_line: simple\\n}
     {raw:ab\\n}
     *normal_command@end C1 l3
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -27,14 +25,12 @@ $result_tree_text{'macro_expansion_in_multitable_prototype'} = '*document_root C
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *normal_command@macro C3 l5
-   |EXTRA
    |formal_args:A{arg}
    |macro_name:{endbrace}
     *arguments_line C1
      {macro_line: endbrace {arg}\\n}
     {raw:c\\arg\\d}\\n}
     *normal_command@end C1 l7
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -42,7 +38,6 @@ $result_tree_text{'macro_expansion_in_multitable_prototype'} = '*document_root C
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *normal_command@multitable C3 l9
-  |EXTRA
   |max_columns:{5}
    *arguments_line C1
     *block_line_arg C11
@@ -101,40 +96,33 @@ $result_tree_text{'macro_expansion_in_multitable_prototype'} = '*document_root C
      {spaces_after_argument:\\n}
    *multitable_body C1
     *row C5
-    |EXTRA
     |row_number:{1}
      *normal_command@item C2 l10
-     |EXTRA
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
        {normal_text:l1 }
      *normal_command@tab C2 l10
-     |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C1
        {normal_text:t1 }
      *normal_command@tab C2 l10
-     |EXTRA
      |cell_number:{3}
       {ignorable_spaces_after_command: }
       *paragraph C1
        {normal_text:t2 }
      *normal_command@tab C2 l10
-     |EXTRA
      |cell_number:{4}
       {ignorable_spaces_after_command: }
       *paragraph C1
        {normal_text:t3 }
      *normal_command@tab C2 l10
-     |EXTRA
      |cell_number:{5}
       {ignorable_spaces_after_command: }
       *paragraph C1
        {normal_text:t4\\n}
    *normal_command@end C1 l11
-   |EXTRA
    |text_arg:{multitable}
     *line_arg C3
      {spaces_before_argument: }

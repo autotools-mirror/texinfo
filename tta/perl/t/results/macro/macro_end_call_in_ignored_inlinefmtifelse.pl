@@ -12,14 +12,12 @@ $result_tree_text{'macro_end_call_in_ignored_inlinefmtifelse'} = '*document_root
  *before_node_section C2
   *preamble_before_content C2
    *normal_command@macro C3 l1
-   |EXTRA
    |formal_args:A{}
    |macro_name:{inlinefirstfmt}
     *arguments_line C1
      {macro_line: inlinefirstfmt\\n}
     {raw:Toto @inlinefmtifelse{tex, before\\n}
     *normal_command@end C1 l3
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -33,7 +31,6 @@ $result_tree_text{'macro_end_call_in_ignored_inlinefmtifelse'} = '*document_root
     >*macro_call@inlinefirstfmt C1
      >*brace_arg
    *normal_command@inlinefmtifelse C3 l5:@inlinefirstfmt
-   |EXTRA
    |expand_index:{2}
    |format:{tex}
     *brace_arg C1

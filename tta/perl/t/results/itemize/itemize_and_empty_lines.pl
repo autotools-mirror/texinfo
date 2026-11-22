@@ -18,13 +18,11 @@ $result_tree_text{'itemize_and_empty_lines'} = '*document_root C1
      {normal_text:youhou}
      {spaces_after_argument:\\n}
    *normal_command@item C2 l2
-   |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:first item\\n}
    *normal_command@item C2 l3
-   |EXTRA
    |item_number:{2}
     {ignorable_spaces_after_command:\\n}
     *normal_command@example C3 l4
@@ -36,21 +34,18 @@ $result_tree_text{'itemize_and_empty_lines'} = '*document_root C1
       {empty_line:\\n}
       {normal_text:end example.\\n}
      *normal_command@end C1 l8
-     |EXTRA
      |text_arg:{example}
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:example}
        {spaces_after_argument:\\n}
    *normal_command@item C3 l9
-   |EXTRA
    |item_number:{3}
     {ignorable_spaces_after_command:\\n}
     {empty_line:\\n}
     *paragraph C1
      {normal_text:empty line.\\n}
    *normal_command@item C5 l12
-   |EXTRA
    |item_number:{4}
     {ignorable_spaces_after_command:\\n}
     {empty_line:\\n}
@@ -61,7 +56,6 @@ $result_tree_text{'itemize_and_empty_lines'} = '*document_root C1
      *preformatted C1
       {normal_text:In second example\\n}
      *normal_command@end C1 l16
-     |EXTRA
      |text_arg:{example}
       *line_arg C3
        {spaces_before_argument: }
@@ -74,7 +68,6 @@ $result_tree_text{'itemize_and_empty_lines'} = '*document_root C1
      *paragraph C1
       {normal_text:Quotation\\n}
      *normal_command@end C1 l19
-     |EXTRA
      |text_arg:{quotation}
       *line_arg C3
        {spaces_before_argument: }
@@ -82,7 +75,6 @@ $result_tree_text{'itemize_and_empty_lines'} = '*document_root C1
        {spaces_after_argument:\\n}
     {empty_line:\\n}
    *normal_command@item C3 l21
-   |EXTRA
    |item_number:{5}
     {ignorable_spaces_after_command:\\n}
     {empty_line:\\n}
@@ -93,14 +85,12 @@ $result_tree_text{'itemize_and_empty_lines'} = '*document_root C1
      *paragraph C1
       {normal_text:quotation after a blank line\\n}
      *normal_command@end C1 l25
-     |EXTRA
      |text_arg:{quotation}
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:quotation}
        {spaces_after_argument:\\n}
    *normal_command@end C1 l26
-   |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }
@@ -112,13 +102,11 @@ $result_tree_text{'itemize_and_empty_lines'} = '*document_root C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *normal_command@item C2 l29
-   |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:first item\\n}
    *normal_command@item C2 l30
-   |EXTRA
    |item_number:{2}
     {ignorable_spaces_after_command:\\n}
     *normal_command@example C3 l31
@@ -130,21 +118,18 @@ $result_tree_text{'itemize_and_empty_lines'} = '*document_root C1
       {empty_line:\\n}
       {normal_text:end example.\\n}
      *normal_command@end C1 l35
-     |EXTRA
      |text_arg:{example}
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:example}
        {spaces_after_argument:\\n}
    *normal_command@item C3 l36
-   |EXTRA
    |item_number:{3}
     {ignorable_spaces_after_command:\\n}
     {empty_line:\\n}
     *paragraph C1
      {normal_text:empty line.\\n}
    *normal_command@item C3 l39
-   |EXTRA
    |item_number:{4}
     {ignorable_spaces_after_command:\\n}
     {empty_line:\\n}
@@ -155,14 +140,12 @@ $result_tree_text{'itemize_and_empty_lines'} = '*document_root C1
      *preformatted C1
       {normal_text:In second example\\n}
      *normal_command@end C1 l43
-     |EXTRA
      |text_arg:{example}
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:example}
        {spaces_after_argument:\\n}
    *normal_command@item C3 l44
-   |EXTRA
    |item_number:{5}
     {ignorable_spaces_after_command:\\n}
     *normal_command@quotation C3 l45
@@ -172,7 +155,6 @@ $result_tree_text{'itemize_and_empty_lines'} = '*document_root C1
      *paragraph C1
       {normal_text:Quotation\\n}
      *normal_command@end C1 l47
-     |EXTRA
      |text_arg:{quotation}
       *line_arg C3
        {spaces_before_argument: }
@@ -180,7 +162,6 @@ $result_tree_text{'itemize_and_empty_lines'} = '*document_root C1
        {spaces_after_argument:\\n}
     {empty_line:\\n}
    *normal_command@item C3 l49
-   |EXTRA
    |item_number:{6}
     {ignorable_spaces_after_command:\\n}
     {empty_line:\\n}
@@ -191,14 +172,12 @@ $result_tree_text{'itemize_and_empty_lines'} = '*document_root C1
      *paragraph C1
       {normal_text:quotation after a blank line\\n}
      *normal_command@end C1 l53
-     |EXTRA
      |text_arg:{quotation}
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:quotation}
        {spaces_after_argument:\\n}
    *normal_command@end C1 l54
-   |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }
@@ -214,14 +193,12 @@ $result_tree_text{'itemize_and_empty_lines'} = '*document_root C1
      *normal_command@minus l57
      {spaces_after_argument:\\n}
    *normal_command@item C2 l58
-   |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C2
      {normal_text:truc \\n}
      {normal_text:line\\n}
    *normal_command@end C1 l60
-   |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }
@@ -240,7 +217,6 @@ $result_tree_text{'itemize_and_empty_lines'} = '*document_root C1
      *normal_command@minus l65
      {spaces_after_argument:\\n}
    *normal_command@item C4 l66
-   |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C2
@@ -253,13 +229,11 @@ $result_tree_text{'itemize_and_empty_lines'} = '*document_root C1
        *normal_command@bullet l68
        {spaces_after_argument:\\n}
      *normal_command@item C2 l69
-     |EXTRA
      |item_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
        {normal_text:in nested itemize\\n}
      *normal_command@end C1 l70
-     |EXTRA
      |text_arg:{itemize}
       *line_arg C3
        {spaces_before_argument: }
@@ -268,7 +242,6 @@ $result_tree_text{'itemize_and_empty_lines'} = '*document_root C1
     *paragraph C1
      {normal_text:After inside nested itemize.\\n}
    *normal_command@end C1 l72
-   |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }
@@ -284,26 +257,22 @@ $result_tree_text{'itemize_and_empty_lines'} = '*document_root C1
      *normal_command@bullet l75
      {spaces_after_argument:\\n}
    *normal_command@item C2 l76
-   |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:the version number of Texinfo and the program(s) or manual(s) involved.\\n}
    *normal_command@item C2 l77
-   |EXTRA
    |item_number:{2}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:hardware and operating system names and versions.\\n}
    *normal_command@item C2 l78
-   |EXTRA
    |item_number:{3}
     {ignorable_spaces_after_command: }
     *paragraph C2
      {normal_text:something aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaa\\n}
      {normal_text:b b bbbbbbbbbbbbbbbbbbbbbbb.\\n}
    *normal_command@end C1 l80
-   |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }

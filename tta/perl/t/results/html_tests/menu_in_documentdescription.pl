@@ -12,7 +12,6 @@ $result_tree_text{'menu_in_documentdescription'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -22,7 +21,6 @@ $result_tree_text{'menu_in_documentdescription'} = '*document_root C3
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C3 l2 {top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -42,7 +40,6 @@ $result_tree_text{'menu_in_documentdescription'} = '*document_root C3
     *menu_entry C4 l6
      {menu_entry_leading_text:* }
      *menu_entry_node C4
-     |EXTRA
      |manual_content:A{1|1}
      |node_content:A{3|3}
      |normalized:{b}
@@ -55,14 +52,12 @@ $result_tree_text{'menu_in_documentdescription'} = '*document_root C3
       *preformatted C1
        {normal_text:\\n}
     *normal_command@end C1 l7
-    |EXTRA
     |text_arg:{menu}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:menu}
       {spaces_after_argument:\\n}
    *normal_command@end C1 l8
-   |EXTRA
    |text_arg:{documentdescription}
     *line_arg C3
      {spaces_before_argument: }

@@ -14,7 +14,6 @@ $result_tree_text{'multiple_include_encodings'} = '*document_root C19
    {text_before_beginning:\\input texinfo.tex\\n}
   *preamble_before_content C10
    *normal_command@documentencoding C1 multiple_include_encodings.texi:l2
-   |EXTRA
    |global_command_number:{1}
    |input_encoding_name:{iso-8859-1}
    |text_arg:{ISO-8859-1}
@@ -30,7 +29,6 @@ $result_tree_text{'multiple_include_encodings'} = '*document_root C19
     *paragraph C1
      {normal_text:Télé.\\n}
     *normal_command@end C1 multiple_include_encodings.texi:l6
-    |EXTRA
     |text_arg:{copying}
      *line_arg C3
       {spaces_before_argument: }
@@ -40,14 +38,12 @@ $result_tree_text{'multiple_include_encodings'} = '*document_root C19
    >SOURCEMARKS
    >include<start;1><p:1>
     >*normal_command@include C1 multiple_include_encodings.texi:l8
-    >|EXTRA
     >|text_arg:{documentdescription_EUC_CN.texi}
      >*line_arg C3
       >{spaces_before_argument: }
       >{normal_text:documentdescription_EUC_CN.texi}
       >{spaces_after_argument:\\n}
    *normal_command@documentencoding C1 documentdescription_EUC_CN.texi:l1
-   |EXTRA
    |global_command_number:{2}
    |input_encoding_name:{euc-cn}
    |text_arg:{EUC-CN}
@@ -65,7 +61,6 @@ $result_tree_text{'multiple_include_encodings'} = '*document_root C19
     *paragraph C1
      {normal_text:Sample 示例 \\n}
     *normal_command@end C1 documentdescription_EUC_CN.texi:l5
-    |EXTRA
     |text_arg:{documentdescription}
      *line_arg C3
       {spaces_before_argument: }
@@ -73,7 +68,6 @@ $result_tree_text{'multiple_include_encodings'} = '*document_root C19
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *normal_command@documentencoding C1 multiple_include_encodings.texi:l10
-   |EXTRA
    |global_command_number:{3}
    |input_encoding_name:{iso-8859-1}
    |text_arg:{ISO-8859-1}
@@ -83,7 +77,6 @@ $result_tree_text{'multiple_include_encodings'} = '*document_root C19
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *normal_command@node C1 multiple_include_encodings.texi:l12 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -93,7 +86,6 @@ $result_tree_text{'multiple_include_encodings'} = '*document_root C19
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C4 multiple_include_encodings.texi:l13 {include files with multiple encodings}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -105,7 +97,6 @@ $result_tree_text{'multiple_include_encodings'} = '*document_root C19
   >SOURCEMARKS
   >include<start;2><p:1>
    >*normal_command@include C1 multiple_include_encodings.texi:l15
-   >|EXTRA
    >|text_arg:{verbatim_encoded_latin1.texi}
     >*line_arg C3
      >{spaces_before_argument: }
@@ -117,7 +108,6 @@ $result_tree_text{'multiple_include_encodings'} = '*document_root C19
    >include<end;2><p:2>
   {empty_line:\\n}
  *normal_command@node C1 multiple_include_encodings.texi:l17 {ä ë ï ö ü ÿ Ä Ë Ï Ö Ü}
- |EXTRA
  |identifier:{_00e4-_00eb-_00ef-_00f6-_00fc-_00ff-_00c4-_00cb-_00cf-_00d6-_00dc}
  |is_target:{1}
  |node_number:{2}
@@ -127,7 +117,6 @@ $result_tree_text{'multiple_include_encodings'} = '*document_root C19
     {normal_text:ä ë ï ö ü ÿ Ä Ë Ï Ö Ü}
     {spaces_after_argument:\\n}
  *normal_command@chapter C6 multiple_include_encodings.texi:l18 {ä ë ï ö ü ÿ Ä Ë Ï Ö Ü}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -140,14 +129,12 @@ $result_tree_text{'multiple_include_encodings'} = '*document_root C19
   >SOURCEMARKS
   >include<start;3><p:1>
    >*normal_command@include C1 multiple_include_encodings.texi:l20
-   >|EXTRA
    >|text_arg:{chapter_japanese_shift_jis.texi}
     >*line_arg C3
      >{spaces_before_argument: }
      >{normal_text:chapter_japanese_shift_jis.texi}
      >{spaces_after_argument:\\n}
   *normal_command@documentencoding C1 chapter_japanese_shift_jis.texi:l1
-  |EXTRA
   |global_command_number:{4}
   |input_encoding_name:{shift_jis}
   |text_arg:{shift_jis}
@@ -156,7 +143,6 @@ $result_tree_text{'multiple_include_encodings'} = '*document_root C19
     {normal_text:shift_jis}
     {spaces_after_argument:\\n}
   *normal_command@documentlanguage C1 chapter_japanese_shift_jis.texi:l2
-  |EXTRA
   |global_command_number:{1}
   |text_arg:{ja}
    *line_arg C3
@@ -166,7 +152,6 @@ $result_tree_text{'multiple_include_encodings'} = '*document_root C19
   {empty_line:\\n}
   {empty_line:\\n}
  *normal_command@node C1 chapter_japanese_shift_jis.texi:l5 {Preface}
- |EXTRA
  |identifier:{Preface}
  |is_target:{1}
  |node_number:{3}
@@ -176,7 +161,6 @@ $result_tree_text{'multiple_include_encodings'} = '*document_root C19
     {normal_text:Preface}
     {spaces_after_argument:\\n}
  *normal_command@chapter C7 chapter_japanese_shift_jis.texi:l6 {Preface}
- |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
  |section_number:{3}
@@ -194,7 +178,6 @@ $result_tree_text{'multiple_include_encodings'} = '*document_root C19
   {empty_line:\\n}
   {empty_line:\\n}
  *normal_command@node C1 chapter_japanese_shift_jis.texi:l13 {Introduction}
- |EXTRA
  |identifier:{Introduction}
  |is_target:{1}
  |node_number:{4}
@@ -204,7 +187,6 @@ $result_tree_text{'multiple_include_encodings'} = '*document_root C19
     {normal_text:Introduction}
     {spaces_after_argument:\\n}
  *normal_command@chapter C7 chapter_japanese_shift_jis.texi:l14 {Introduction}
- |EXTRA
  |section_heading_number:{3}
  |section_level:{1}
  |section_number:{4}
@@ -223,14 +205,12 @@ $result_tree_text{'multiple_include_encodings'} = '*document_root C19
   >SOURCEMARKS
   >include<start;4><p:1>
    >*normal_command@include C1 multiple_include_encodings.texi:l22
-   >|EXTRA
    >|text_arg:{chapter_char_latin2_latin2_in_refs.texi}
     >*line_arg C3
      >{spaces_before_argument: }
      >{normal_text:chapter_char_latin2_latin2_in_refs.texi}
      >{spaces_after_argument:\\n}
   *normal_command@documentencoding C1 chapter_char_latin2_latin2_in_refs.texi:l1
-  |EXTRA
   |global_command_number:{5}
   |input_encoding_name:{iso-8859-2}
   |text_arg:{ISO-8859-2}
@@ -240,7 +220,6 @@ $result_tree_text{'multiple_include_encodings'} = '*document_root C19
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 chapter_char_latin2_latin2_in_refs.texi:l3 {char latin2 latin2}
- |EXTRA
  |identifier:{char-latin2-latin2}
  |is_target:{1}
  |isindex:{1}
@@ -251,7 +230,6 @@ $result_tree_text{'multiple_include_encodings'} = '*document_root C19
     {normal_text:char latin2 latin2}
     {spaces_after_argument:\\n}
  *normal_command@chapter C9 chapter_char_latin2_latin2_in_refs.texi:l4 {char latin2 latin2 in refs}
- |EXTRA
  |section_heading_number:{4}
  |section_level:{1}
  |section_number:{5}
@@ -264,14 +242,12 @@ $result_tree_text{'multiple_include_encodings'} = '*document_root C19
   *paragraph C2
    *normal_command@ref C1 chapter_char_latin2_latin2_in_refs.texi:l6
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{_0104-_0105-_02db-_0118-_0119}
      {normal_text:Ą ą ˛ Ę ę}
    {normal_text:.\\n}
   {empty_line:\\n}
   *normal_command@printindex C1 chapter_char_latin2_latin2_in_refs.texi:l8
-  |EXTRA
   |global_command_number:{1}
   |misc_args:A{cp}
    *line_arg C3
@@ -291,7 +267,6 @@ $result_tree_text{'multiple_include_encodings'} = '*document_root C19
    *menu_entry C4 chapter_char_latin2_latin2_in_refs.texi:l12
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{_0104-_0105-_02db-_0118-_0119}
      {normal_text:Ą ą ˛ Ę ę}
@@ -300,7 +275,6 @@ $result_tree_text{'multiple_include_encodings'} = '*document_root C19
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 chapter_char_latin2_latin2_in_refs.texi:l13
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -308,7 +282,6 @@ $result_tree_text{'multiple_include_encodings'} = '*document_root C19
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 chapter_char_latin2_latin2_in_refs.texi:l15 {Ą ą ˛ Ę ę}
- |EXTRA
  |identifier:{_0104-_0105-_02db-_0118-_0119}
  |is_target:{1}
  |node_number:{6}
@@ -318,7 +291,6 @@ $result_tree_text{'multiple_include_encodings'} = '*document_root C19
     {normal_text:Ą ą ˛ Ę ę}
     {spaces_after_argument:\\n}
  *normal_command@section C7 chapter_char_latin2_latin2_in_refs.texi:l16 {Ą ą ˛ Ę ę}
- |EXTRA
  |section_heading_number:{4.1}
  |section_level:{2}
  |section_number:{6}
@@ -329,7 +301,6 @@ $result_tree_text{'multiple_include_encodings'} = '*document_root C19
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 chapter_char_latin2_latin2_in_refs.texi:l18
-  |EXTRA
   |element_node:{_0104-_0105-_02db-_0118-_0119}
   |index_entry:I{cp,1}
    *line_arg C3
@@ -343,14 +314,12 @@ $result_tree_text{'multiple_include_encodings'} = '*document_root C19
   >SOURCEMARKS
   >include<start;5><p:1>
    >*normal_command@include C1 multiple_include_encodings.texi:l24
-   >|EXTRA
    >|text_arg:{chapter_chinese_mixed_with_en_EUC_CN.texi}
     >*line_arg C3
      >{spaces_before_argument: }
      >{normal_text:chapter_chinese_mixed_with_en_EUC_CN.texi}
      >{spaces_after_argument:\\n}
   *normal_command@documentencoding C1 chapter_chinese_mixed_with_en_EUC_CN.texi:l1
-  |EXTRA
   |global_command_number:{6}
   |input_encoding_name:{euc-cn}
   |text_arg:{EUC-CN}
@@ -360,7 +329,6 @@ $result_tree_text{'multiple_include_encodings'} = '*document_root C19
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 chapter_chinese_mixed_with_en_EUC_CN.texi:l3 {Mixed english and chinese EUC-CN}
- |EXTRA
  |identifier:{Mixed-english-and-chinese-EUC_002dCN}
  |is_target:{1}
  |node_number:{7}
@@ -370,7 +338,6 @@ $result_tree_text{'multiple_include_encodings'} = '*document_root C19
     {normal_text:Mixed english and chinese EUC-CN}
     {spaces_after_argument:\\n}
  *normal_command@chapter C25 chapter_chinese_mixed_with_en_EUC_CN.texi:l4 {Mixed english and chinese EUC-CN}
- |EXTRA
  |section_heading_number:{5}
  |section_level:{1}
  |section_number:{7}
@@ -432,14 +399,12 @@ $result_tree_text{'multiple_include_encodings'} = '*document_root C19
   >SOURCEMARKS
   >include<start;6><p:1>
    >*normal_command@include C1 multiple_include_encodings.texi:l29
-   >|EXTRA
    >|text_arg:{chapter_chinese_mixed_with_en.texi}
     >*line_arg C3
      >{spaces_before_argument: }
      >{normal_text:chapter_chinese_mixed_with_en.texi}
      >{spaces_after_argument:\\n}
   *normal_command@documentencoding C1 chapter_chinese_mixed_with_en.texi:l1
-  |EXTRA
   |global_command_number:{7}
   |input_encoding_name:{utf-8}
   |text_arg:{utf-8}
@@ -449,7 +414,6 @@ $result_tree_text{'multiple_include_encodings'} = '*document_root C19
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 chapter_chinese_mixed_with_en.texi:l3 {Mixed chinese and english utf-8}
- |EXTRA
  |identifier:{Mixed-chinese-and-english-utf_002d8}
  |is_target:{1}
  |node_number:{8}
@@ -459,7 +423,6 @@ $result_tree_text{'multiple_include_encodings'} = '*document_root C19
     {normal_text:Mixed chinese and english utf-8}
     {spaces_after_argument:\\n}
  *normal_command@chapter C21 chapter_chinese_mixed_with_en.texi:l4 {Mixed chinese and english utf-8}
- |EXTRA
  |section_heading_number:{6}
  |section_level:{1}
  |section_number:{8}

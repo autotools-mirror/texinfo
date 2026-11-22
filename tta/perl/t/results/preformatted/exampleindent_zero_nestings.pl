@@ -12,7 +12,6 @@ $result_tree_text{'exampleindent_zero_nestings'} = '*document_root C1
  *before_node_section C30
   *preamble_before_content C1
    *normal_command@exampleindent C1 l1
-   |EXTRA
    |global_command_number:{1}
    |misc_args:A{asis}
     *line_arg C3
@@ -30,14 +29,12 @@ $result_tree_text{'exampleindent_zero_nestings'} = '*document_root C1
     *preformatted C1
      {normal_text:EXAMPLE INDENT in quotation\\n}
     *normal_command@end C1 l5
-    |EXTRA
     |text_arg:{quotation}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:quotation}
       {spaces_after_argument:\\n}
    *normal_command@end C1 l6
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
@@ -55,14 +52,12 @@ $result_tree_text{'exampleindent_zero_nestings'} = '*document_root C1
     *preformatted C1
      {normal_text:quotation EXAMPLE INDENT\\n}
     *normal_command@end C1 l11
-    |EXTRA
     |text_arg:{example}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:example}
       {spaces_after_argument:\\n}
    *normal_command@end C1 l12
-   |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }
@@ -80,14 +75,12 @@ $result_tree_text{'exampleindent_zero_nestings'} = '*document_root C1
     *preformatted C1
      {normal_text:EXAMPLE INDENT in display\\n}
     *normal_command@end C1 l17
-    |EXTRA
     |text_arg:{display}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:display}
       {spaces_after_argument:\\n}
    *normal_command@end C1 l18
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
@@ -105,14 +98,12 @@ $result_tree_text{'exampleindent_zero_nestings'} = '*document_root C1
     *preformatted C1
      {normal_text:EXAMPLE INDENT in format\\n}
     *normal_command@end C1 l23
-    |EXTRA
     |text_arg:{format}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:format}
       {spaces_after_argument:\\n}
    *normal_command@end C1 l24
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
@@ -125,7 +116,6 @@ $result_tree_text{'exampleindent_zero_nestings'} = '*document_root C1
      {spaces_before_argument:\\n}
    *normal_command@deffn C3 l27
     *def_line C1 l27
-    |EXTRA
     |def_command:{deffn}
     |index_entry:I{fn,1}
     |original_def_cmdname:{deffn}
@@ -148,14 +138,12 @@ $result_tree_text{'exampleindent_zero_nestings'} = '*document_root C1
        {normal_text:EXDENT}
        {spaces_after_argument:\\n}
     *normal_command@end C1 l30
-    |EXTRA
     |text_arg:{deffn}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:deffn}
       {spaces_after_argument:\\n}
    *normal_command@end C1 l31
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
@@ -185,14 +173,12 @@ $result_tree_text{'exampleindent_zero_nestings'} = '*document_root C1
       {normal_text:exdented second}
       {spaces_after_argument:\\n}
     *normal_command@end C1 l39
-    |EXTRA
     |text_arg:{example}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:example}
       {spaces_after_argument:\\n}
    *normal_command@end C1 l40
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
@@ -215,14 +201,12 @@ $result_tree_text{'exampleindent_zero_nestings'} = '*document_root C1
     *preformatted C1
      {normal_text:AA\\n}
     *normal_command@end C1 l46
-    |EXTRA
     |text_arg:{example}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:example}
       {spaces_after_argument:\\n}
    *normal_command@end C1 l47
-   |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }
@@ -230,7 +214,6 @@ $result_tree_text{'exampleindent_zero_nestings'} = '*document_root C1
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@exampleindent C1 l49
-  |EXTRA
   |global_command_number:{2}
   |misc_args:A{0}
    *line_arg C3
@@ -248,14 +231,12 @@ $result_tree_text{'exampleindent_zero_nestings'} = '*document_root C1
     *preformatted C1
      {normal_text:EXAMPLE INDENT in quotation\\n}
     *normal_command@end C1 l53
-    |EXTRA
     |text_arg:{quotation}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:quotation}
       {spaces_after_argument:\\n}
    *normal_command@end C1 l54
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
@@ -273,14 +254,12 @@ $result_tree_text{'exampleindent_zero_nestings'} = '*document_root C1
     *preformatted C1
      {normal_text:quotation EXAMPLE INDENT\\n}
     *normal_command@end C1 l59
-    |EXTRA
     |text_arg:{example}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:example}
       {spaces_after_argument:\\n}
    *normal_command@end C1 l60
-   |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }
@@ -298,14 +277,12 @@ $result_tree_text{'exampleindent_zero_nestings'} = '*document_root C1
     *preformatted C1
      {normal_text:EXAMPLE INDENT in display\\n}
     *normal_command@end C1 l65
-    |EXTRA
     |text_arg:{display}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:display}
       {spaces_after_argument:\\n}
    *normal_command@end C1 l66
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
@@ -323,14 +300,12 @@ $result_tree_text{'exampleindent_zero_nestings'} = '*document_root C1
     *preformatted C1
      {normal_text:EXAMPLE INDENT in format\\n}
     *normal_command@end C1 l71
-    |EXTRA
     |text_arg:{format}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:format}
       {spaces_after_argument:\\n}
    *normal_command@end C1 l72
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
@@ -343,7 +318,6 @@ $result_tree_text{'exampleindent_zero_nestings'} = '*document_root C1
      {spaces_before_argument:\\n}
    *normal_command@deffn C3 l75
     *def_line C1 l75
-    |EXTRA
     |def_command:{deffn}
     |index_entry:I{fn,2}
     |original_def_cmdname:{deffn}
@@ -366,14 +340,12 @@ $result_tree_text{'exampleindent_zero_nestings'} = '*document_root C1
        {normal_text:EXDENT}
        {spaces_after_argument:\\n}
     *normal_command@end C1 l78
-    |EXTRA
     |text_arg:{deffn}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:deffn}
       {spaces_after_argument:\\n}
    *normal_command@end C1 l79
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
@@ -403,14 +375,12 @@ $result_tree_text{'exampleindent_zero_nestings'} = '*document_root C1
       {normal_text:exdented second}
       {spaces_after_argument:\\n}
     *normal_command@end C1 l87
-    |EXTRA
     |text_arg:{example}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:example}
       {spaces_after_argument:\\n}
    *normal_command@end C1 l88
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
@@ -433,14 +403,12 @@ $result_tree_text{'exampleindent_zero_nestings'} = '*document_root C1
     *preformatted C1
      {normal_text:AA\\n}
     *normal_command@end C1 l94
-    |EXTRA
     |text_arg:{example}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:example}
       {spaces_after_argument:\\n}
    *normal_command@end C1 l95
-   |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }

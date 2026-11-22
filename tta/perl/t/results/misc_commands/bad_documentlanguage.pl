@@ -16,7 +16,6 @@ $result_tree_text{'bad_documentlanguage'} = '*document_root C1
   *paragraph C2
    {normal_text:documentlanguage }
    *normal_command@documentlanguage C1 l2
-   |EXTRA
    |global_command_number:{1}
    |text_arg:{en}
     *line_arg C3
@@ -25,14 +24,12 @@ $result_tree_text{'bad_documentlanguage'} = '*document_root C1
      {spaces_after_argument: \\n}
   {empty_line:\\n}
   *normal_command@documentlanguage C1 l4
-  |EXTRA
   |global_command_number:{2}
   |text_arg:{en }
    *line_arg C3
     {spaces_before_argument:  }
     {normal_text:en }
     *normal_command@documentlanguage C1 l4
-    |EXTRA
     |global_command_number:{3}
     |text_arg:{en}
      *line_arg C3
@@ -41,7 +38,6 @@ $result_tree_text{'bad_documentlanguage'} = '*document_root C1
       {spaces_after_argument:  \\n}
   {empty_line:\\n}
   *normal_command@documentlanguage C1 l6
-  |EXTRA
   |global_command_number:{4}
   |text_arg:{en  after documentlanguage}
    *line_arg C3

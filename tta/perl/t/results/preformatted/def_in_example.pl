@@ -17,14 +17,12 @@ $result_tree_text{'def_in_example'} = '*document_root C1
      {spaces_before_argument:\\n}
    *normal_command@defun C3 l2
     *def_line C1 l2
-    |EXTRA
     |def_command:{defun}
     |index_entry:I{fn,1}
     |original_def_cmdname:{defun}
      *block_line_arg C7
       (i){spaces_before_argument: }
       *def_category C1
-      |EXTRA
       |inserted:{1}
        *def_line_arg C1
         {normal_text:Function}
@@ -41,14 +39,12 @@ $result_tree_text{'def_in_example'} = '*document_root C1
      *preformatted C1
       {normal_text:in defun\\n}
     *normal_command@end C1 l4
-    |EXTRA
     |text_arg:{defun}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:defun}
       {spaces_after_argument:\\n}
    *normal_command@end C1 l5
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }

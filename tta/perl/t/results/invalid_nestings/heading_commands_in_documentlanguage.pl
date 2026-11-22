@@ -12,7 +12,6 @@ $result_tree_text{'heading_commands_in_documentlanguage'} = '*document_root C1
  *before_node_section C1
   *preamble_before_content C1
    *normal_command@documentlanguage C1 l1
-   |EXTRA
    |global_command_number:{1}
    |text_arg:{    b}
     *line_arg C10

@@ -12,7 +12,6 @@ $result_tree_text{'raw_block_on_line'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *index_entry_command@cindex C1 l1
-  |EXTRA
   |index_entry:I{cp,1}
    *line_arg C2
     {spaces_before_argument: }

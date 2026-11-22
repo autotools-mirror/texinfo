@@ -36,7 +36,6 @@ $result_tree_text{'metadata_in_documentinfo'} = '*document_root C5
       >{raw:   </meta>\\n}
       >{raw:@end html\\n}
       >*normal_command@end C1 l17
-      >|EXTRA
       >|text_arg:{ifepub}
        >*line_arg C3
         >{spaces_before_argument: }
@@ -55,7 +54,6 @@ $result_tree_text{'metadata_in_documentinfo'} = '*document_root C5
     >SOURCEMARKS
     >expanded_conditional_command<end;1>
      >*normal_command@end C1 l22
-     >|EXTRA
      >|text_arg:{ifnotepub}
       >*line_arg C3
        >{spaces_before_argument: }
@@ -67,7 +65,6 @@ $result_tree_text{'metadata_in_documentinfo'} = '*document_root C5
      *rawpreformatted C1
       {normal_text:<meta name="creator" content="Some Body" />\\n}
      *normal_command@end C1 l21
-     |EXTRA
      |text_arg:{html}
       *line_arg C3
        {spaces_before_argument: }
@@ -104,14 +101,12 @@ $result_tree_text{'metadata_in_documentinfo'} = '*document_root C5
       {normal_text:  </editor>\\n}
       {normal_text:</authorgroup>\\n}
      *normal_command@end C1 l49
-     |EXTRA
      |text_arg:{docbook}
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:docbook}
        {spaces_after_argument:\\n}
     *normal_command@end C1 l50
-    |EXTRA
     |text_arg:{documentinfo}
      *line_arg C3
       {spaces_before_argument: }
@@ -119,7 +114,6 @@ $result_tree_text{'metadata_in_documentinfo'} = '*document_root C5
       {spaces_after_argument:\\n}
    {empty_line:\\n}
  *normal_command@node C1 l52 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -129,7 +123,6 @@ $result_tree_text{'metadata_in_documentinfo'} = '*document_root C5
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C2 l53 {top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -139,7 +132,6 @@ $result_tree_text{'metadata_in_documentinfo'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l55 {chapter}
- |EXTRA
  |identifier:{chapter}
  |is_target:{1}
  |node_number:{2}
@@ -149,7 +141,6 @@ $result_tree_text{'metadata_in_documentinfo'} = '*document_root C5
     {normal_text:chapter}
     {spaces_after_argument:\\n}
  *normal_command@chapter C1 l56 {Chap}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}

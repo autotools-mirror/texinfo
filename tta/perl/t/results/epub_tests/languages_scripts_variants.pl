@@ -12,7 +12,6 @@ $result_tree_text{'languages_scripts_variants'} = '*document_root C4
  *before_node_section C1
   *preamble_before_content C3
    *normal_command@documentlanguage C1 l1
-   |EXTRA
    |global_command_number:{1}
    |text_arg:{az}
     *line_arg C3
@@ -20,7 +19,6 @@ $result_tree_text{'languages_scripts_variants'} = '*document_root C4
      {normal_text:az}
      {spaces_after_argument:\\n}
    *normal_command@documentscript C1 l2
-   |EXTRA
    |global_command_number:{1}
    |text_arg:{Latn}
     *line_arg C3
@@ -29,7 +27,6 @@ $result_tree_text{'languages_scripts_variants'} = '*document_root C4
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *normal_command@node C1 l4 {top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -39,7 +36,6 @@ $result_tree_text{'languages_scripts_variants'} = '*document_root C4
     {normal_text:top}
     {spaces_after_argument:\\n}
  *normal_command@top C3 l5 {top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -51,7 +47,6 @@ $result_tree_text{'languages_scripts_variants'} = '*document_root C4
   *paragraph C1
    {normal_text:node chap\\n}
  *normal_command@chapter C32 l8 {chap}
- |EXTRA
  |identifier:{chap}
  |is_target:{1}
  |section_heading_number:{1}
@@ -64,7 +59,6 @@ $result_tree_text{'languages_scripts_variants'} = '*document_root C4
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@documentlanguage C1 l10
-  |EXTRA
   |global_command_number:{2}
   |text_arg:{sr}
    *line_arg C3
@@ -72,7 +66,6 @@ $result_tree_text{'languages_scripts_variants'} = '*document_root C4
     {normal_text:sr}
     {spaces_after_argument:\\n}
   *normal_command@documentscript C1 l11
-  |EXTRA
   |global_command_number:{2}
   |text_arg:{Latn}
    *line_arg C3
@@ -80,7 +73,6 @@ $result_tree_text{'languages_scripts_variants'} = '*document_root C4
     {normal_text:Latn}
     {spaces_after_argument:\\n}
   *normal_command@documentlanguagevariant C1 l12
-  |EXTRA
   |global_command_number:{1}
    *line_arg C3
     {spaces_before_argument: }
@@ -88,14 +80,12 @@ $result_tree_text{'languages_scripts_variants'} = '*document_root C4
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@documentscript C1 l14
-  |EXTRA
   |global_command_number:{3}
   |text_arg:{}
    *line_arg C1
     {spaces_before_argument:\\n}
   {empty_line:\\n}
   *normal_command@documentlanguagevariant C1 l16
-  |EXTRA
   |global_command_number:{2}
    *line_arg C3
     {spaces_before_argument: }
@@ -103,7 +93,6 @@ $result_tree_text{'languages_scripts_variants'} = '*document_root C4
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@documentlanguagevariant C2 l18
-  |EXTRA
   |global_command_number:{3}
    *line_arg C1
     {spaces_before_argument: }
@@ -111,7 +100,6 @@ $result_tree_text{'languages_scripts_variants'} = '*document_root C4
     {spaces_before_argument:\\n}
   {empty_line:\\n}
   *normal_command@documentscript C1 l20
-  |EXTRA
   |global_command_number:{4}
   |text_arg:{Cyrl}
    *line_arg C3
@@ -120,7 +108,6 @@ $result_tree_text{'languages_scripts_variants'} = '*document_root C4
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@documentlanguage C1 l22
-  |EXTRA
   |global_command_number:{3}
   |text_arg:{fr}
    *line_arg C3
@@ -129,7 +116,6 @@ $result_tree_text{'languages_scripts_variants'} = '*document_root C4
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@documentlanguage C1 l24
-  |EXTRA
   |global_command_number:{4}
   |text_arg:{az}
    *line_arg C3
@@ -138,7 +124,6 @@ $result_tree_text{'languages_scripts_variants'} = '*document_root C4
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@documentlanguage C1 l26
-  |EXTRA
   |global_command_number:{5}
   |text_arg:{az}
    *line_arg C3
@@ -146,7 +131,6 @@ $result_tree_text{'languages_scripts_variants'} = '*document_root C4
     {normal_text:az}
     {spaces_after_argument:\\n}
   *normal_command@documentscript C1 l27
-  |EXTRA
   |global_command_number:{5}
   |text_arg:{Cyrl}
    *line_arg C3
@@ -155,7 +139,6 @@ $result_tree_text{'languages_scripts_variants'} = '*document_root C4
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@documentscript C1 l29
-  |EXTRA
   |global_command_number:{6}
   |text_arg:{Arab}
    *line_arg C3
@@ -164,7 +147,6 @@ $result_tree_text{'languages_scripts_variants'} = '*document_root C4
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@documentscript C1 l31
-  |EXTRA
   |global_command_number:{7}
   |text_arg:{Cyrl}
    *line_arg C3
@@ -173,7 +155,6 @@ $result_tree_text{'languages_scripts_variants'} = '*document_root C4
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@documentlanguage C1 l33
-  |EXTRA
   |global_command_number:{6}
   |text_arg:{fr_FR}
    *line_arg C3
@@ -182,7 +163,6 @@ $result_tree_text{'languages_scripts_variants'} = '*document_root C4
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@documentlanguage C1 l35
-  |EXTRA
   |global_command_number:{7}
   |text_arg:{oc}
    *line_arg C3
@@ -191,7 +171,6 @@ $result_tree_text{'languages_scripts_variants'} = '*document_root C4
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@documentlanguagevariant C1 l37
-  |EXTRA
   |global_command_number:{4}
    *line_arg C3
     {spaces_before_argument: }
@@ -199,7 +178,6 @@ $result_tree_text{'languages_scripts_variants'} = '*document_root C4
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@documentlanguagevariant C1 l39
-  |EXTRA
   |global_command_number:{5}
    *line_arg C3
     {spaces_before_argument: }

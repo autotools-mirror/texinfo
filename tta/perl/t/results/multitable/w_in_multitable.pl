@@ -12,7 +12,6 @@ $result_tree_text{'w_in_multitable'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *normal_command@multitable C3 l1
-  |EXTRA
   |max_columns:{2}
    *arguments_line C1
     *block_line_arg C5
@@ -25,10 +24,8 @@ $result_tree_text{'w_in_multitable'} = '*document_root C1
      {spaces_after_argument:\\n}
    *multitable_body C1
     *row C2
-    |EXTRA
     |row_number:{1}
      *normal_command@item C2 l2
-     |EXTRA
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C2
@@ -38,13 +35,11 @@ $result_tree_text{'w_in_multitable'} = '*document_root C1
          {normal_text:bbbbbbbbbb}
        {normal_text:\\n}
      *normal_command@tab C2 l4
-     |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C1
        {normal_text:gg\\n}
    *normal_command@end C1 l5
-   |EXTRA
    |text_arg:{multitable}
     *line_arg C3
      {spaces_before_argument: }

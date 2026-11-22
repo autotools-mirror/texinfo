@@ -12,7 +12,6 @@ $result_tree_text{'external_node_in_menu'} = '*document_root C7
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -22,7 +21,6 @@ $result_tree_text{'external_node_in_menu'} = '*document_root C7
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C4 l2 {top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -38,7 +36,6 @@ $result_tree_text{'external_node_in_menu'} = '*document_root C7
    *menu_entry C4 l5
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{nchapter1}
      {normal_text:nchapter1}
@@ -49,7 +46,6 @@ $result_tree_text{'external_node_in_menu'} = '*document_root C7
    *menu_entry C4 l6
     {menu_entry_leading_text:* }
     *menu_entry_node C4
-    |EXTRA
     |manual_content:A{1|1}
     |node_content:A{3|3}
     |normalized:{other}
@@ -64,7 +60,6 @@ $result_tree_text{'external_node_in_menu'} = '*document_root C7
    *menu_entry C4 l7
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{nchapter2}
      {normal_text:nchapter2}
@@ -73,7 +68,6 @@ $result_tree_text{'external_node_in_menu'} = '*document_root C7
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 l8
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -81,7 +75,6 @@ $result_tree_text{'external_node_in_menu'} = '*document_root C7
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l10 {nchapter1}
- |EXTRA
  |identifier:{nchapter1}
  |is_target:{1}
  |node_number:{2}
@@ -91,7 +84,6 @@ $result_tree_text{'external_node_in_menu'} = '*document_root C7
     {normal_text:nchapter1}
     {spaces_after_argument:\\n}
  *normal_command@chapter C2 l11 {chap1}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -102,7 +94,6 @@ $result_tree_text{'external_node_in_menu'} = '*document_root C7
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l13 {nchapter2}
- |EXTRA
  |identifier:{nchapter2}
  |is_target:{1}
  |node_number:{3}
@@ -112,7 +103,6 @@ $result_tree_text{'external_node_in_menu'} = '*document_root C7
     {normal_text:nchapter2}
     {spaces_after_argument:\\n}
  *normal_command@chapter C1 l14 {chap2}
- |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
  |section_number:{3}

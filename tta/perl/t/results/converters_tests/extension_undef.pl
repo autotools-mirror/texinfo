@@ -14,7 +14,6 @@ $result_tree_text{'extension_undef'} = '*document_root C4
   *paragraph C1
    {normal_text:node Top\\n}
  *normal_command@top C2 l2 {top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |section_level:{0}
@@ -26,7 +25,6 @@ $result_tree_text{'extension_undef'} = '*document_root C4
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l4 {chapter}
- |EXTRA
  |identifier:{chapter}
  |is_target:{1}
  |node_number:{1}
@@ -36,7 +34,6 @@ $result_tree_text{'extension_undef'} = '*document_root C4
     {normal_text:chapter}
     {spaces_after_argument:\\n}
  *normal_command@chapter C1 l5 {Chap}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}

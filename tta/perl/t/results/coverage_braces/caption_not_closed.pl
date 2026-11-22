@@ -12,7 +12,6 @@ $result_tree_text{'caption_not_closed'} = '*document_root C2
  *before_node_section C3
   *preamble_before_content
   *normal_command@float C4 l1
-  |EXTRA
   |float_type:{Text}
   |global_command_number:{1}
    *arguments_line C1
@@ -35,7 +34,6 @@ $result_tree_text{'caption_not_closed'} = '*document_root C2
       {normal_text:float beginning.\\n}
      {empty_line:\\n}
    *normal_command@end C1 l8
-   |EXTRA
    |text_arg:{float}
     *line_arg C3
      {spaces_before_argument: }

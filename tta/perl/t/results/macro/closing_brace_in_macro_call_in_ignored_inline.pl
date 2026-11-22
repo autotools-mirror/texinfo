@@ -12,14 +12,12 @@ $result_tree_text{'closing_brace_in_macro_call_in_ignored_inline'} = '*document_
  *before_node_section C4
   *preamble_before_content C2
    *normal_command@macro C3 l1
-   |EXTRA
    |formal_args:A{}
    |macro_name:{closebrace}
     *arguments_line C1
      {macro_line: closebrace\\n}
     {raw:}\\n}
     *normal_command@end C1 l3
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -28,7 +26,6 @@ $result_tree_text{'closing_brace_in_macro_call_in_ignored_inline'} = '*document_
    {empty_line:\\n}
   *paragraph C3
    *normal_command@inlinefmt C2 l5
-   |EXTRA
    |expand_index:{1}
    |format:{html}
    >SOURCEMARKS
@@ -47,7 +44,6 @@ $result_tree_text{'closing_brace_in_macro_call_in_ignored_inline'} = '*document_
   {empty_line:\\n}
   *paragraph C1
    *normal_command@inlinefmt C2 l9
-   |EXTRA
    |format:{tex}
     *brace_arg C1
      {normal_text:tex}

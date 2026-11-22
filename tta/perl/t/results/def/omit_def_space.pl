@@ -12,7 +12,6 @@ $result_tree_text{'omit_def_space'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C2 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -23,7 +22,6 @@ $result_tree_text{'omit_def_space'} = '*document_root C3
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C5 l3 {chap}
- |EXTRA
  |identifier:{chap}
  |is_target:{1}
  |node_number:{2}
@@ -34,7 +32,6 @@ $result_tree_text{'omit_def_space'} = '*document_root C3
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@set C1
-  |EXTRA
   |misc_args:A{txidefnamenospace|}
    *line_arg C3
     {spaces_before_argument: }
@@ -43,7 +40,6 @@ $result_tree_text{'omit_def_space'} = '*document_root C3
   {empty_line:\\n}
   *normal_command@defun C4 l7
    *def_line C1 l7
-   |EXTRA
    |def_command:{defun}
    |element_node:{chap}
    |index_entry:I{fn,1}
@@ -52,7 +48,6 @@ $result_tree_text{'omit_def_space'} = '*document_root C3
     *block_line_arg C12
      (i){spaces_before_argument: }
      *def_category C1
-     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {normal_text:Function}
@@ -73,7 +68,6 @@ $result_tree_text{'omit_def_space'} = '*document_root C3
      {delimiter:)}
      {spaces_after_argument:\\n}
    *normal_command@defunx C1 l8
-   |EXTRA
    |def_command:{defun}
    |element_node:{chap}
    |index_entry:I{fn,2}
@@ -82,7 +76,6 @@ $result_tree_text{'omit_def_space'} = '*document_root C3
     *line_arg C9
      (i){spaces_before_argument: }
      *def_category C1
-     |EXTRA
      |inserted:{1}
       *def_line_arg C1
        {normal_text:Function}
@@ -101,7 +94,6 @@ $result_tree_text{'omit_def_space'} = '*document_root C3
     *paragraph C1
      {normal_text:explain\\n}
    *normal_command@end C1 l10
-   |EXTRA
    |text_arg:{defun}
     *line_arg C3
      {spaces_before_argument: }

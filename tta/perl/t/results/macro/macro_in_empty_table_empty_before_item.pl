@@ -12,13 +12,11 @@ $result_tree_text{'macro_in_empty_table_empty_before_item'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C2
    *normal_command@macro C2 l1
-   |EXTRA
    |formal_args:A{}
    |macro_name:{emptymacro}
     *arguments_line C1
      {macro_line: emptymacro\\n}
     *normal_command@end C1 l2
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -38,7 +36,6 @@ $result_tree_text{'macro_in_empty_table_empty_before_item'} = '*document_root C1
      >*brace_arg
    >macro_expansion<end;1>
    *normal_command@end C1 l5
-   |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }

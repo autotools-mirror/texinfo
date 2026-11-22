@@ -15,7 +15,6 @@ $result_tree_text{'loweredheading'} = '*document_root C3
     *line_arg C1
      {spaces_before_argument:\\n}
  *normal_command@section C2 l2 {Foo}
- |EXTRA
  |identifier:{Foo}
  |is_target:{1}
  |level_modifier:{-1}
@@ -28,7 +27,6 @@ $result_tree_text{'loweredheading'} = '*document_root C3
     {normal_text:Foo}
     {spaces_after_argument:\\n}
   *normal_command@heading C1 l3
-  |EXTRA
   |global_command_number:{1}
   |heading_number:{1}
   |level_modifier:{-1}

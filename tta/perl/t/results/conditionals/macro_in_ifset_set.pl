@@ -14,7 +14,6 @@ $result_tree_text{'macro_in_ifset_set'} = '*document_root C1
    {text_before_beginning:\\n}
   *preamble_before_content C7
    *normal_command@set C1
-   |EXTRA
    |misc_args:A{a|}
     *line_arg C3
      {spaces_before_argument: }
@@ -22,14 +21,12 @@ $result_tree_text{'macro_in_ifset_set'} = '*document_root C1
      {spaces_after_argument:\\n}
    {empty_line:\\n}
    *normal_command@macro C3 l4
-   |EXTRA
    |formal_args:A{}
    |macro_name:{truc}
     *arguments_line C1
      {macro_line: truc {}\\n}
     {raw:truc\\n}
     *normal_command@end C1 l6
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -45,20 +42,17 @@ $result_tree_text{'macro_in_ifset_set'} = '*document_root C1
        >{normal_text:a}
        >{spaces_after_argument:\\n}
    *normal_command@unmacro C1
-   |EXTRA
    |misc_args:A{truc}
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:truc}
      {spaces_after_argument:\\n}
    *normal_command@macro C3 l10
-   |EXTRA
    |formal_args:A{}
    |macro_name:{truc}
    >SOURCEMARKS
    >expanded_conditional_command<end;1>
     >*normal_command@end C1 l13
-    >|EXTRA
     >|text_arg:{ifset}
      >*line_arg C3
       >{spaces_before_argument: }
@@ -68,7 +62,6 @@ $result_tree_text{'macro_in_ifset_set'} = '*document_root C1
      {macro_line: truc{}\\n}
     {raw:in ifset\\n}
     *normal_command@end C1 l12
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }

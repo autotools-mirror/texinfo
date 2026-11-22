@@ -21,7 +21,6 @@ $result_tree_text{'paragraphindent_not_in_preamble'} = '*document_root C5
     *paragraph C1
      {normal_text:Copying second para.\\n}
     *normal_command@end C1 l5
-    |EXTRA
     |text_arg:{copying}
      *line_arg C3
       {spaces_before_argument: }
@@ -29,7 +28,6 @@ $result_tree_text{'paragraphindent_not_in_preamble'} = '*document_root C5
       {spaces_after_argument:\\n}
    {empty_line:\\n}
  *normal_command@node C1 l7 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -39,7 +37,6 @@ $result_tree_text{'paragraphindent_not_in_preamble'} = '*document_root C5
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C10 l8 {test @@paragraphindent effect in preamble}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -57,7 +54,6 @@ $result_tree_text{'paragraphindent_not_in_preamble'} = '*document_root C5
    {normal_text:Before paragraphindent.\\n}
   {empty_line:\\n}
   *normal_command@paragraphindent C1 l14
-  |EXTRA
   |global_command_number:{1}
   |misc_args:A{1}
    *line_arg C3

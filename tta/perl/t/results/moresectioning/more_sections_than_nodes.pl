@@ -12,7 +12,6 @@ $result_tree_text{'more_sections_than_nodes'} = '*document_root C19
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -22,7 +21,6 @@ $result_tree_text{'more_sections_than_nodes'} = '*document_root C19
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C4 l2 {top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -38,7 +36,6 @@ $result_tree_text{'more_sections_than_nodes'} = '*document_root C19
    *menu_entry C4 l5
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{n-c2}
      {normal_text:n c2}
@@ -49,7 +46,6 @@ $result_tree_text{'more_sections_than_nodes'} = '*document_root C19
    *menu_entry C4 l6
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{n-c3}
      {normal_text:n c3}
@@ -60,7 +56,6 @@ $result_tree_text{'more_sections_than_nodes'} = '*document_root C19
    *menu_entry C4 l7
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{n-c3-s1-s2}
      {normal_text:n c3 s1 s2}
@@ -69,7 +64,6 @@ $result_tree_text{'more_sections_than_nodes'} = '*document_root C19
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 l8
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -77,7 +71,6 @@ $result_tree_text{'more_sections_than_nodes'} = '*document_root C19
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@chapter C2 l10 {c1}
- |EXTRA
  |identifier:{c1}
  |is_target:{1}
  |section_heading_number:{1}
@@ -90,7 +83,6 @@ $result_tree_text{'more_sections_than_nodes'} = '*document_root C19
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l12 {n c2}
- |EXTRA
  |identifier:{n-c2}
  |is_target:{1}
  |node_number:{2}
@@ -100,7 +92,6 @@ $result_tree_text{'more_sections_than_nodes'} = '*document_root C19
     {normal_text:n c2}
     {spaces_after_argument:\\n}
  *normal_command@chapter C2 l13 {c2}
- |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
  |section_number:{3}
@@ -111,7 +102,6 @@ $result_tree_text{'more_sections_than_nodes'} = '*document_root C19
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@section C2 l15 {s1}
- |EXTRA
  |identifier:{s1}
  |is_target:{1}
  |section_heading_number:{2.1}
@@ -124,7 +114,6 @@ $result_tree_text{'more_sections_than_nodes'} = '*document_root C19
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l17 {n c3}
- |EXTRA
  |identifier:{n-c3}
  |is_target:{1}
  |node_number:{3}
@@ -133,26 +122,22 @@ $result_tree_text{'more_sections_than_nodes'} = '*document_root C19
     {spaces_before_argument: }
     {normal_text:n c3}
    *line_arg C2
-   |EXTRA
    |node_content:A{1|1}
    |normalized:{n-c3-s1-s2}
     {spaces_before_argument: }
     {normal_text:n c3 s1 s2}
    *line_arg C2
-   |EXTRA
    |node_content:A{1|1}
    |normalized:{n-c2}
     {spaces_before_argument: }
     {normal_text:n c2}
    *line_arg C3
-   |EXTRA
    |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@chapter C4 l18 {c3}
- |EXTRA
  |section_heading_number:{3}
  |section_level:{1}
  |section_number:{5}
@@ -169,7 +154,6 @@ $result_tree_text{'more_sections_than_nodes'} = '*document_root C19
    *menu_entry C4 l21
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{n-c3-s-2}
      {normal_text:n c3 s 2}
@@ -178,7 +162,6 @@ $result_tree_text{'more_sections_than_nodes'} = '*document_root C19
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 l22
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -186,7 +169,6 @@ $result_tree_text{'more_sections_than_nodes'} = '*document_root C19
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@section C2 l24 {C3 s1}
- |EXTRA
  |identifier:{C3-s1}
  |is_target:{1}
  |section_heading_number:{3.1}
@@ -199,7 +181,6 @@ $result_tree_text{'more_sections_than_nodes'} = '*document_root C19
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l26 {n c3 s 2}
- |EXTRA
  |identifier:{n-c3-s-2}
  |is_target:{1}
  |node_number:{4}
@@ -209,7 +190,6 @@ $result_tree_text{'more_sections_than_nodes'} = '*document_root C19
     {normal_text:n c3 s 2}
     {spaces_after_argument:\\n}
  *normal_command@section C2 l27 {c3 s2}
- |EXTRA
  |section_heading_number:{3.2}
  |section_level:{2}
  |section_number:{7}
@@ -220,7 +200,6 @@ $result_tree_text{'more_sections_than_nodes'} = '*document_root C19
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@section C2 l29 {c3 s3}
- |EXTRA
  |identifier:{c3-s3}
  |is_target:{1}
  |section_heading_number:{3.3}
@@ -233,7 +212,6 @@ $result_tree_text{'more_sections_than_nodes'} = '*document_root C19
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@chapter C2 l31 {c4}
- |EXTRA
  |identifier:{c4}
  |is_target:{1}
  |section_heading_number:{4}
@@ -246,7 +224,6 @@ $result_tree_text{'more_sections_than_nodes'} = '*document_root C19
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@section C2 l33 {c3 s1}
- |EXTRA
  |identifier:{c3-s1}
  |is_target:{1}
  |section_heading_number:{4.1}
@@ -259,7 +236,6 @@ $result_tree_text{'more_sections_than_nodes'} = '*document_root C19
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@subsection C2 l35 {c3 s1 s1}
- |EXTRA
  |identifier:{c3-s1-s1}
  |is_target:{1}
  |section_heading_number:{4.1.1}
@@ -272,7 +248,6 @@ $result_tree_text{'more_sections_than_nodes'} = '*document_root C19
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l37 {n c3 s1 s2}
- |EXTRA
  |identifier:{n-c3-s1-s2}
  |is_target:{1}
  |node_number:{5}
@@ -282,18 +257,15 @@ $result_tree_text{'more_sections_than_nodes'} = '*document_root C19
     {normal_text:n c3 s1 s2}
    *line_arg
    *line_arg C1
-   |EXTRA
    |node_content:A{0|0}
    |normalized:{n-c3}
     {normal_text:n c3}
    *line_arg C2
-   |EXTRA
    |node_content:A{0|0}
    |normalized:{Top}
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@subsection C2 l38 {c3 s1 s2}
- |EXTRA
  |section_heading_number:{4.1.2}
  |section_level:{3}
  |section_number:{12}
@@ -304,7 +276,6 @@ $result_tree_text{'more_sections_than_nodes'} = '*document_root C19
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@appendix C1 l40 {appendix}
- |EXTRA
  |identifier:{appendix}
  |is_target:{1}
  |section_heading_number:{A}

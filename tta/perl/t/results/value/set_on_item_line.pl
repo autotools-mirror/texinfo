@@ -23,7 +23,6 @@ $result_tree_text{'set_on_item_line'} = '*document_root C1
       *line_arg C2
        {spaces_before_argument: }
        *normal_command@set C1
-       |EXTRA
        |misc_args:A{ca|b}
         *line_arg C3
          {spaces_before_argument: }
@@ -43,7 +42,6 @@ $result_tree_text{'set_on_item_line'} = '*document_root C1
        {spaces_before_argument: }
        {normal_text:cjj }
        *normal_command@set C1
-       |EXTRA
        |misc_args:A{cj|}
         *line_arg C3
          {spaces_before_argument: }
@@ -62,7 +60,6 @@ $result_tree_text{'set_on_item_line'} = '*document_root C1
        {spaces_before_argument: }
        {normal_text:cvvv }
        *normal_command@set C1
-       |EXTRA
        |misc_args:A{cg|}
         *line_arg C3
          {spaces_before_argument: }
@@ -72,7 +69,6 @@ $result_tree_text{'set_on_item_line'} = '*document_root C1
            {rawline_text:}
            {spaces_after_argument:\\n}
    *normal_command@end C1 l8
-   |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
@@ -91,7 +87,6 @@ $result_tree_text{'set_on_item_line'} = '*document_root C1
       *line_arg C2
        {spaces_before_argument: }
        *normal_command@set C1
-       |EXTRA
        |misc_args:A{a|b}
         *line_arg C3
          {spaces_before_argument: }
@@ -108,7 +103,6 @@ $result_tree_text{'set_on_item_line'} = '*document_root C1
        {spaces_before_argument: }
        {normal_text:jj }
        *normal_command@set C1
-       |EXTRA
        |misc_args:A{j|}
         *line_arg C3
          {spaces_before_argument: }
@@ -124,14 +118,12 @@ $result_tree_text{'set_on_item_line'} = '*document_root C1
        {spaces_before_argument: }
        {normal_text:vvv }
        *normal_command@set C1
-       |EXTRA
        |misc_args:A{g|}
         *line_arg C3
          {spaces_before_argument: }
          {rawline_text:g}
          {spaces_after_argument:\\n}
    *normal_command@end C1 l17
-   |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }

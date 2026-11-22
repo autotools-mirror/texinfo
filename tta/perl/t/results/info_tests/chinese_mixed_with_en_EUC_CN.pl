@@ -14,7 +14,6 @@ $result_tree_text{'chinese_mixed_with_en_EUC_CN'} = '*document_root C6
    {text_before_beginning:\\input texinfo\\n}
   *preamble_before_content C3
    *normal_command@documentencoding C1 chinese_mixed_with_en_EUC_CN.texi:l2
-   |EXTRA
    |global_command_number:{1}
    |input_encoding_name:{euc-cn}
    |text_arg:{EUC-CN}
@@ -29,7 +28,6 @@ $result_tree_text{'chinese_mixed_with_en_EUC_CN'} = '*document_root C6
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *normal_command@node C1 chinese_mixed_with_en_EUC_CN.texi:l5 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -39,7 +37,6 @@ $result_tree_text{'chinese_mixed_with_en_EUC_CN'} = '*document_root C6
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C4 chinese_mixed_with_en_EUC_CN.texi:l6 {Mixed chinese and english}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -52,7 +49,6 @@ $result_tree_text{'chinese_mixed_with_en_EUC_CN'} = '*document_root C6
    {normal_text:Example of english and chinese, chinese aligned or not.\\n}
   {empty_line:\\n}
  *normal_command@node C1 chinese_mixed_with_en_EUC_CN.texi:l10 {Mixed english and chinese}
- |EXTRA
  |identifier:{Mixed-english-and-chinese}
  |is_target:{1}
  |node_number:{2}
@@ -62,7 +58,6 @@ $result_tree_text{'chinese_mixed_with_en_EUC_CN'} = '*document_root C6
     {normal_text:Mixed english and chinese}
     {spaces_after_argument:\\n}
  *normal_command@chapter C19 chinese_mixed_with_en_EUC_CN.texi:l11 {Mixed english and chinese}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}

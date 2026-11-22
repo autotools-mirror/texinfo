@@ -45,21 +45,18 @@ $result_tree_text{'table_in_example_in_display'} = '*document_root C1
        *preformatted C1
         {normal_text:Line\\n}
      *normal_command@end C1 l11
-     |EXTRA
      |text_arg:{table}
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:table}
        {spaces_after_argument:\\n}
     *normal_command@end C1 l12
-    |EXTRA
     |text_arg:{example}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:example}
       {spaces_after_argument:\\n}
    *normal_command@end C1 l13
-   |EXTRA
    |text_arg:{display}
     *line_arg C3
      {spaces_before_argument: }

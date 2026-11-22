@@ -12,7 +12,6 @@ $result_tree_text{'float_long_captions'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C7 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -23,7 +22,6 @@ $result_tree_text{'float_long_captions'} = '*document_root C2
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@float C4 l3
-  |EXTRA
   |float_number:{1}
   |float_type:{Text}
   |global_command_number:{1}
@@ -43,7 +41,6 @@ $result_tree_text{'float_long_captions'} = '*document_root C2
       {normal_text:AAAAAAAAAAAAAAAA BBBBB CCCCCCCCCCC}
    {spaces_after_close_brace:\\n}
    *normal_command@end C1 l5
-   |EXTRA
    |text_arg:{float}
     *line_arg C3
      {spaces_before_argument: }
@@ -51,7 +48,6 @@ $result_tree_text{'float_long_captions'} = '*document_root C2
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@float C4 l7
-  |EXTRA
   |float_number:{2}
   |float_type:{Text}
   |global_command_number:{2}
@@ -71,7 +67,6 @@ $result_tree_text{'float_long_captions'} = '*document_root C2
       {normal_text:AAAAAAAAAAAAAAAA BBBBBB CCCCCCCCCCC}
    {spaces_after_close_brace:\\n}
    *normal_command@end C1 l9
-   |EXTRA
    |text_arg:{float}
     *line_arg C3
      {spaces_before_argument: }
@@ -79,7 +74,6 @@ $result_tree_text{'float_long_captions'} = '*document_root C2
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@listoffloats C1 l11
-  |EXTRA
   |float_type:{Text}
   |global_command_number:{1}
    *line_arg C3

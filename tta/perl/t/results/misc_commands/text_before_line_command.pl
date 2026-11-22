@@ -22,7 +22,6 @@ $result_tree_text{'text_before_line_command'} = '*document_root C3
   *paragraph C1
    {normal_text:i}
  *normal_command@node C2 l3 {LD Version Scripts}
- |EXTRA
  |identifier:{LD-Version-Scripts}
  |is_target:{1}
  |node_number:{1}
@@ -34,7 +33,6 @@ $result_tree_text{'text_before_line_command'} = '*document_root C3
   *paragraph C1
    {normal_text:--- }
  *normal_command@chapter C6 l4 {LD Version Scripts}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{1}
@@ -47,7 +45,6 @@ $result_tree_text{'text_before_line_command'} = '*document_root C3
   *paragraph C1
    {normal_text:ddd }
   *normal_command@contents C1 l6
-  |EXTRA
   |global_command_number:{1}
    *line_arg C1
     {spaces_before_argument:\\n}
@@ -59,7 +56,6 @@ $result_tree_text{'text_before_line_command'} = '*document_root C3
    *paragraph C3
     {normal_text:aaa }
     *normal_command@author C1 l9
-    |EXTRA
     |global_command_number:{1}
      *line_arg C3
       {spaces_before_argument: }
@@ -67,7 +63,6 @@ $result_tree_text{'text_before_line_command'} = '*document_root C3
       {spaces_after_argument:\\n}
     {normal_text:quotation\\n}
    *normal_command@end C1 l11
-   |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }

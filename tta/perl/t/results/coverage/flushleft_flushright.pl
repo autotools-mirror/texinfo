@@ -25,7 +25,6 @@ $result_tree_text{'flushleft_flushright'} = '*document_root C1
    *paragraph C1
     {normal_text:lhds\\n}
    *normal_command@end C1 l8
-   |EXTRA
    |text_arg:{flushleft}
     *line_arg C3
      {spaces_before_argument: }
@@ -44,7 +43,6 @@ $result_tree_text{'flushleft_flushright'} = '*document_root C1
    *paragraph C1
     {normal_text:lhds\\n}
    *normal_command@end C1 l16
-   |EXTRA
    |text_arg:{flushright}
     *line_arg C3
      {spaces_before_argument: }

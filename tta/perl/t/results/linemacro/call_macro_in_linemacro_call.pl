@@ -12,7 +12,6 @@ $result_tree_text{'call_macro_in_linemacro_call'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C4
    *normal_command@linemacro C4 l1
-   |EXTRA
    |formal_args:A{a|b}
    |macro_name:{lm}
     *arguments_line C1
@@ -20,7 +19,6 @@ $result_tree_text{'call_macro_in_linemacro_call'} = '*document_root C1
     {raw:@quotation \\a\\\\n}
     {raw:now second arg: \\b\\\\n}
     *normal_command@end C1 l4
-    |EXTRA
     |text_arg:{linemacro}
      *line_arg C3
       {spaces_before_argument: }
@@ -28,7 +26,6 @@ $result_tree_text{'call_macro_in_linemacro_call'} = '*document_root C1
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *normal_command@macro C5 l6
-   |EXTRA
    |formal_args:A{c|d}
    |macro_name:{mymacro}
     *arguments_line C1
@@ -37,7 +34,6 @@ $result_tree_text{'call_macro_in_linemacro_call'} = '*document_root C1
     {raw:@item \\d\\\\n}
     {raw:@end table\\n}
     *normal_command@end C1 l10
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -82,7 +78,6 @@ $result_tree_text{'call_macro_in_linemacro_call'} = '*document_root C1
         {normal_text:ggg}
         {spaces_after_argument:\\n}
     *normal_command@end C1 l14:@mymacro
-    |EXTRA
     |text_arg:{table}
      *line_arg C3
       {spaces_before_argument: }
@@ -101,7 +96,6 @@ $result_tree_text{'call_macro_in_linemacro_call'} = '*document_root C1
    {empty_line: \\n}
    {empty_line:\\n}
    *normal_command@end C1 l17
-   |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }

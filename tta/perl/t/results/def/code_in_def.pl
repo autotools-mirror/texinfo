@@ -13,7 +13,6 @@ $result_tree_text{'code_in_def'} = '*document_root C1
   *preamble_before_content
   *normal_command@deftypefn C3 l1
    *def_line C1 l1
-   |EXTRA
    |def_command:{deftypefn}
    |index_entry:I{fn,1}
    |original_def_cmdname:{deftypefn}
@@ -52,7 +51,6 @@ $result_tree_text{'code_in_def'} = '*document_root C1
        {normal_text:foo}
      {normal_text:.\\n}
    *normal_command@end C1 l3
-   |EXTRA
    |text_arg:{deftypefn}
     *line_arg C3
      {spaces_before_argument: }

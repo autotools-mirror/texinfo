@@ -12,7 +12,6 @@ $result_tree_text{'spaces_before_value'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C2
    *normal_command@set C1
-   |EXTRA
    |misc_args:A{var|val}
     *line_arg C3
      {spaces_before_argument: }

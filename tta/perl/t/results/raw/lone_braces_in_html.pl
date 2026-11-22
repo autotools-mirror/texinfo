@@ -18,7 +18,6 @@ $result_tree_text{'lone_braces_in_html'} = '*document_root C1
     *rawpreformatted C1
      {normal_text:}\\n}
     *normal_command@end C1 l3
-    |EXTRA
     |text_arg:{html}
      *line_arg C3
       {spaces_before_argument: }
@@ -32,7 +31,6 @@ $result_tree_text{'lone_braces_in_html'} = '*document_root C1
     *rawpreformatted C1
      {normal_text:{\\n}
     *normal_command@end C1 l7
-    |EXTRA
     |text_arg:{html}
      *line_arg C3
       {spaces_before_argument: }

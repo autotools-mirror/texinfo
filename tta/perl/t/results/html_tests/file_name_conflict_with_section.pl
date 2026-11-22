@@ -12,7 +12,6 @@ $result_tree_text{'file_name_conflict_with_section'} = '*document_root C4
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -22,7 +21,6 @@ $result_tree_text{'file_name_conflict_with_section'} = '*document_root C4
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C4 l2 {top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -31,7 +29,6 @@ $result_tree_text{'file_name_conflict_with_section'} = '*document_root C4
     {normal_text:top}
     {spaces_after_argument:\\n}
   *normal_command@anchor C1 l3
-  |EXTRA
   |identifier:{Chap}
   |is_target:{1}
    *brace_arg C1
@@ -39,7 +36,6 @@ $result_tree_text{'file_name_conflict_with_section'} = '*document_root C4
   {spaces_after_close_brace:\\n}
   {empty_line:\\n}
  *normal_command@chapter C1 l5 {Chap}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}

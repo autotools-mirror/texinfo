@@ -17,16 +17,13 @@ $result_tree_text{'anchor_in_titlepage_titlepage'} = '*document_root C5
       {spaces_before_argument:\\n}
     {empty_line:\\n}
     *normal_command@anchor C1 l3
-    |EXTRA
     |identifier:{in-titlepage}
     |is_target:{1}
      *brace_arg C1
-     |EXTRA
      |element_region:{titlepage}
       {normal_text:in titlepage}
     {spaces_after_close_brace:\\n}
     *normal_command@end C1 l4
-    |EXTRA
     |text_arg:{titlepage}
      *line_arg C3
       {spaces_before_argument: }
@@ -34,7 +31,6 @@ $result_tree_text{'anchor_in_titlepage_titlepage'} = '*document_root C5
       {spaces_after_argument:\\n}
    {empty_line:\\n}
  *normal_command@top C1 l6 {top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -43,7 +39,6 @@ $result_tree_text{'anchor_in_titlepage_titlepage'} = '*document_root C5
     {normal_text:top}
     {spaces_after_argument:\\n}
  *normal_command@node C2 l7 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -54,7 +49,6 @@ $result_tree_text{'anchor_in_titlepage_titlepage'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@chapter C1 l9 {Chapter}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -64,7 +58,6 @@ $result_tree_text{'anchor_in_titlepage_titlepage'} = '*document_root C5
     {normal_text:Chapter}
     {spaces_after_argument:\\n}
  *normal_command@node C3 l10 {nchap}
- |EXTRA
  |identifier:{nchap}
  |is_target:{1}
  |node_number:{2}
@@ -77,7 +70,6 @@ $result_tree_text{'anchor_in_titlepage_titlepage'} = '*document_root C5
   *paragraph C2
    *normal_command@xref C1 l12
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{in-titlepage}
      {normal_text:in titlepage}

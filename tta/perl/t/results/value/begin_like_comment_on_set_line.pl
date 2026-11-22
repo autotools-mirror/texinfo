@@ -17,7 +17,6 @@ $result_tree_text{'begin_like_comment_on_set_line'} = '*document_root C1
      {rawline_text:x@come with me}
      {spaces_after_argument:\\n}
    *normal_command@set C1
-   |EXTRA
    |misc_args:A{y|some thing @commentary is it}
     *line_arg C3
      {spaces_before_argument: }

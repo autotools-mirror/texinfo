@@ -16,7 +16,6 @@ $result_tree_text{'node_in_copying'} = '*document_root C2
      *block_line_arg C1
       {spaces_before_argument:\\n}
  *normal_command@node C2 l2 {node}
- |EXTRA
  |identifier:{node}
  |is_target:{1}
  |node_number:{1}

@@ -38,7 +38,6 @@ $result_tree_text{'commands_in_math'} = '*document_root C1
    *normal_command@*
    {normal_text:\\n}
    *normal_command@end C1 l5
-   |EXTRA
    |text_arg:{displaymath}
     *line_arg C3
      {spaces_before_argument: }
@@ -187,7 +186,6 @@ $result_tree_text{'commands_in_math'} = '*document_root C1
     *brace_container
    {normal_text:\\n}
    *normal_command@end C1 l14
-   |EXTRA
    |text_arg:{displaymath}
     *line_arg C3
      {spaces_before_argument: }
@@ -311,7 +309,6 @@ $result_tree_text{'commands_in_math'} = '*document_root C1
     *brace_container
    {normal_text: \\n}
    *normal_command@end C1 l24
-   |EXTRA
    |text_arg:{displaymath}
     *line_arg C3
      {spaces_before_argument: }
@@ -374,7 +371,6 @@ $result_tree_text{'commands_in_math'} = '*document_root C1
     *brace_container
    {normal_text:\\n}
    *normal_command@end C1 l31
-   |EXTRA
    |text_arg:{displaymath}
     *line_arg C3
      {spaces_before_argument: }

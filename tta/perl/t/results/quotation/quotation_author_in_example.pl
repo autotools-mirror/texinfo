@@ -21,7 +21,6 @@ $result_tree_text{'quotation_author_in_example'} = '*document_root C1
       {spaces_before_argument: \\n}
     *preformatted C2
      *normal_command@author C1 l3
-     |EXTRA
      |global_command_number:{1}
       *line_arg C3
        {spaces_before_argument: }
@@ -29,14 +28,12 @@ $result_tree_text{'quotation_author_in_example'} = '*document_root C1
        {spaces_after_argument:\\n}
      {normal_text:A quot---ation\\n}
     *normal_command@end C1 l5
-    |EXTRA
     |text_arg:{quotation}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:quotation}
       {spaces_after_argument:\\n}
    *normal_command@end C1 l6
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }

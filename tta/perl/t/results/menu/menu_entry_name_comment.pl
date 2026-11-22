@@ -21,7 +21,6 @@ $result_tree_text{'menu_entry_name_comment'} = '*document_root C1
      {normal_text:a}
     {menu_entry_separator:: }
     *menu_entry_node C4
-    |EXTRA
     |manual_content:A{1|1}
     |node_content:A{3|3}
     |normalized:{b}
@@ -42,7 +41,6 @@ $result_tree_text{'menu_entry_name_comment'} = '*document_root C1
      {normal_text:a}
     {menu_entry_separator:: }
     *menu_entry_node C5
-    |EXTRA
     |manual_content:A{1|1}
     |node_content:A{3|4}
     |normalized:{b}
@@ -64,7 +62,6 @@ $result_tree_text{'menu_entry_name_comment'} = '*document_root C1
      {normal_text:a}
     {menu_entry_separator:: }
     *menu_entry_node C4
-    |EXTRA
     |manual_content:A{1|1}
     |node_content:A{3|3}
     |normalized:{b1c_002ec}
@@ -86,7 +83,6 @@ $result_tree_text{'menu_entry_name_comment'} = '*document_root C1
      {normal_text:a}
     {menu_entry_separator:: }
     *menu_entry_node C4
-    |EXTRA
     |manual_content:A{1|1}
     |node_content:A{3|3}
     |normalized:{b2c_002ec}
@@ -108,7 +104,6 @@ $result_tree_text{'menu_entry_name_comment'} = '*document_root C1
      {normal_text:a}
     {menu_entry_separator:: }
     *menu_entry_node C4
-    |EXTRA
     |manual_content:A{1|1}
     |node_content:A{3|3}
     |normalized:{b3c_002ec}
@@ -126,7 +121,6 @@ $result_tree_text{'menu_entry_name_comment'} = '*document_root C1
         {rawline_text:c}
         {spaces_after_argument:\\n}
    *normal_command@end C1 l7
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }

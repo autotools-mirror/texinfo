@@ -18,7 +18,6 @@ $result_tree_text{'bad_enumerate_arguments'} = '*document_root C1
      {normal_text:a b}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l2
-   |EXTRA
    |text_arg:{enumerate}
     *line_arg C3
      {spaces_before_argument: }
@@ -32,7 +31,6 @@ $result_tree_text{'bad_enumerate_arguments'} = '*document_root C1
      {normal_text:!}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l5
-   |EXTRA
    |text_arg:{enumerate}
     *line_arg C3
      {spaces_before_argument: }
@@ -48,7 +46,6 @@ $result_tree_text{'bad_enumerate_arguments'} = '*document_root C1
        {normal_text:a}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l8
-   |EXTRA
    |text_arg:{enumerate}
     *line_arg C3
      {spaces_before_argument: }
@@ -63,7 +60,6 @@ $result_tree_text{'bad_enumerate_arguments'} = '*document_root C1
      *normal_command@@
      {spaces_after_argument:\\n}
    *normal_command@end C1 l11
-   |EXTRA
    |text_arg:{enumerate}
     *line_arg C3
      {spaces_before_argument: }
@@ -77,7 +73,6 @@ $result_tree_text{'bad_enumerate_arguments'} = '*document_root C1
      {normal_text:a0}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l14
-   |EXTRA
    |text_arg:{enumerate}
     *line_arg C3
      {spaces_before_argument: }

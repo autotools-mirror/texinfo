@@ -18,7 +18,6 @@ $result_tree_text{'inline_in_example'} = '*document_root C1
    *preformatted C9
     {normal_text:A }
     *normal_command@inlineraw C2 l2
-    |EXTRA
     |expand_index:{1}
     |format:{plaintext}
      *brace_arg C1
@@ -33,7 +32,6 @@ $result_tree_text{'inline_in_example'} = '*document_root C1
       {normal_text: }
     {normal_text: a.\\n}
     *normal_command@inlinefmt C2 l5
-    |EXTRA
     |expand_index:{1}
     |format:{plaintext}
      *brace_arg C1
@@ -45,7 +43,6 @@ $result_tree_text{'inline_in_example'} = '*document_root C1
     {empty_line:\\n}
     {normal_text:  Now html\\n}
     *normal_command@inlineraw C2 l8
-    |EXTRA
     |expand_index:{1}
     |format:{html}
      *brace_arg C1
@@ -60,7 +57,6 @@ $result_tree_text{'inline_in_example'} = '*document_root C1
       {normal_text:</i>}
     {normal_text:.\\n}
    *normal_command@end C1 l11
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }

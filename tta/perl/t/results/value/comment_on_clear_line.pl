@@ -12,28 +12,24 @@ $result_tree_text{'comment_on_clear_line'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C10
    *normal_command@set C1
-   |EXTRA
    |misc_args:A{x|}
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:x}
      {spaces_after_argument:\\n}
    *normal_command@set C1
-   |EXTRA
    |misc_args:A{y|}
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:y}
      {spaces_after_argument:\\n}
    *normal_command@set C1
-   |EXTRA
    |misc_args:A{z|g}
     *line_arg C3
      {spaces_before_argument: }
      {rawline_text:z g}
      {spaces_after_argument:\\n}
    *normal_command@set C1
-   |EXTRA
    |misc_args:A{t|a vv}
     *line_arg C3
      {spaces_before_argument: }
@@ -44,7 +40,6 @@ $result_tree_text{'comment_on_clear_line'} = '*document_root C1
        {spaces_after_argument:\\n}
    {empty_line:\\n}
    *normal_command@clear C1
-   |EXTRA
    |misc_args:A{x}
     *line_arg C3
      {spaces_before_argument: }
@@ -54,7 +49,6 @@ $result_tree_text{'comment_on_clear_line'} = '*document_root C1
        {rawline_text:}
        {spaces_after_argument:\\n}
    *normal_command@clear C1
-   |EXTRA
    |misc_args:A{y}
     *line_arg C3
      {spaces_before_argument: }

@@ -12,14 +12,12 @@ $result_tree_text{'complex_argument'} = '*document_root C1
  *before_node_section C11
   *preamble_before_content C6
    *normal_command@macro C3 l1
-   |EXTRA
    |formal_args:A{arg}
    |macro_name:{macrotwo}
     *arguments_line C1
      {macro_line: macrotwo{arg}\\n}
     {raw:coucou \\arg\\ after arg\\n}
     *normal_command@end C1 l3
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -27,7 +25,6 @@ $result_tree_text{'complex_argument'} = '*document_root C1
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *normal_command@macro C6 l5
-   |EXTRA
    |formal_args:A{}
    |macro_name:{macrofour}
     *arguments_line C1
@@ -37,7 +34,6 @@ $result_tree_text{'complex_argument'} = '*document_root C1
     {raw:3\\n}
     {raw:4\\n}
     *normal_command@end C1 l10
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -45,7 +41,6 @@ $result_tree_text{'complex_argument'} = '*document_root C1
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *normal_command@macro C4 l12
-   |EXTRA
    |formal_args:A{text|arg}
    |macro_name:{macrothree}
     *arguments_line C1
@@ -53,7 +48,6 @@ $result_tree_text{'complex_argument'} = '*document_root C1
     {raw:\\text\\\\n}
     {raw:&&&& \\arg\\\\n}
     *normal_command@end C1 l15
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -96,7 +90,6 @@ $result_tree_text{'complex_argument'} = '*document_root C1
    >SOURCEMARKS
    >macro_expansion<end;2><p:1>
    *normal_command@headings C1 l38:@macrothree
-   |EXTRA
    |global_command_number:{1}
     *line_arg C3
      {spaces_before_argument: }
@@ -117,7 +110,6 @@ $result_tree_text{'complex_argument'} = '*document_root C1
      {spaces_before_argument:\\n}
    {raw:@macrotwo\\n}
    *normal_command@end C1 l38:@macrothree
-   |EXTRA
    |text_arg:{verbatim}
     *line_arg C3
      {spaces_before_argument: }
@@ -129,21 +121,18 @@ $result_tree_text{'complex_argument'} = '*document_root C1
      {spaces_before_argument:\\n}
    {raw:@macrofour\\n}
    *normal_command@end C1 l38:@macrothree
-   |EXTRA
    |text_arg:{ignore}
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:ignore}
      {spaces_after_argument:\\n}
   *normal_command@macro C3 l38:@macrothree
-  |EXTRA
   |formal_args:A{truc}
   |macro_name:{macroseven}
    *arguments_line C1
     {macro_line: macroseven {truc}\\n}
    {raw:@emph{\\truc\\}\\n}
    *normal_command@end C1 l38:@macrothree
-   |EXTRA
    |text_arg:{macro}
     *line_arg C3
      {spaces_before_argument: }
@@ -159,7 +148,6 @@ $result_tree_text{'complex_argument'} = '*document_root C1
        >{spaces_before_argument:\\n}
      >{raw:@macrofour\\n}
      >*normal_command@end C1 l38:@macrothree
-     >|EXTRA
      >|text_arg:{ifinfo}
       >*line_arg C3
        >{spaces_before_argument: }
@@ -172,7 +160,6 @@ $result_tree_text{'complex_argument'} = '*document_root C1
        >{spaces_before_argument:\\n}
      >{raw:@macrotwo{aa,bb}\\n}
      >*normal_command@end C1 l38:@macrothree
-     >|EXTRA
      >|text_arg:{iftex}
       >*line_arg C3
        >{spaces_before_argument: }

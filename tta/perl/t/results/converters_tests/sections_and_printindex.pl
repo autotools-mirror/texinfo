@@ -12,7 +12,6 @@ $result_tree_text{'sections_and_printindex'} = '*document_root C8
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -22,7 +21,6 @@ $result_tree_text{'sections_and_printindex'} = '*document_root C8
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C2 l2 {for example}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -32,7 +30,6 @@ $result_tree_text{'sections_and_printindex'} = '*document_root C8
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l4 {node}
- |EXTRA
  |identifier:{node}
  |is_target:{1}
  |node_number:{2}
@@ -42,7 +39,6 @@ $result_tree_text{'sections_and_printindex'} = '*document_root C8
     {normal_text:node}
     {spaces_after_argument:\\n}
  *normal_command@chapter C3 l5 {chap}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -53,7 +49,6 @@ $result_tree_text{'sections_and_printindex'} = '*document_root C8
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 l7
-  |EXTRA
   |element_node:{node}
   |index_entry:I{cp,1}
    *line_arg C3
@@ -61,7 +56,6 @@ $result_tree_text{'sections_and_printindex'} = '*document_root C8
     {normal_text:entry1}
     {spaces_after_argument:\\n}
  *normal_command@node C1 l8 {sec}
- |EXTRA
  |identifier:{sec}
  |is_target:{1}
  |isindex:{1}
@@ -72,7 +66,6 @@ $result_tree_text{'sections_and_printindex'} = '*document_root C8
     {normal_text:sec}
     {spaces_after_argument:\\n}
  *normal_command@section C3 l9 {Sec}
- |EXTRA
  |section_heading_number:{1.1}
  |section_level:{2}
  |section_number:{3}
@@ -83,7 +76,6 @@ $result_tree_text{'sections_and_printindex'} = '*document_root C8
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 l11
-  |EXTRA
   |element_node:{sec}
   |index_entry:I{cp,2}
    *line_arg C3
@@ -91,7 +83,6 @@ $result_tree_text{'sections_and_printindex'} = '*document_root C8
     {normal_text:entry2}
     {spaces_after_argument:\\n}
  *normal_command@appendix C4 l12 {App}
- |EXTRA
  |identifier:{App}
  |is_target:{1}
  |section_heading_number:{A}
@@ -104,7 +95,6 @@ $result_tree_text{'sections_and_printindex'} = '*document_root C8
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@printindex C1 l14
-  |EXTRA
   |global_command_number:{1}
   |misc_args:A{cp}
    *line_arg C3

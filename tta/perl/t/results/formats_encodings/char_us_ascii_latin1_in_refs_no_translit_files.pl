@@ -15,7 +15,6 @@ $result_tree_text{'char_us_ascii_latin1_in_refs_no_translit_files'} = '*document
    {text_before_beginning:\\n}
   *preamble_before_content C2
    *normal_command@documentencoding C1 char_us_ascii_latin1_in_refs.texi:l3
-   |EXTRA
    |global_command_number:{1}
    |input_encoding_name:{us-ascii}
    |text_arg:{US-ASCII}
@@ -25,7 +24,6 @@ $result_tree_text{'char_us_ascii_latin1_in_refs_no_translit_files'} = '*document
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *normal_command@node C1 char_us_ascii_latin1_in_refs.texi:l5 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |isindex:{1}
@@ -36,7 +34,6 @@ $result_tree_text{'char_us_ascii_latin1_in_refs_no_translit_files'} = '*document
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C6 char_us_ascii_latin1_in_refs.texi:l6 {accented char in latin1 in refs}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -46,7 +43,6 @@ $result_tree_text{'char_us_ascii_latin1_in_refs_no_translit_files'} = '*document
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@printindex C1 char_us_ascii_latin1_in_refs.texi:l8
-  |EXTRA
   |global_command_number:{1}
   |misc_args:A{cp}
    *line_arg C3
@@ -61,7 +57,6 @@ $result_tree_text{'char_us_ascii_latin1_in_refs_no_translit_files'} = '*document
    *menu_entry C4 char_us_ascii_latin1_in_refs.texi:l11
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{_00e4-_00eb-_00ef-_00f6-_00fc-_00ff-_00c4-_00cb-_00cf-_00d6-_00dc}
      {normal_text:ä ë ï ö ü ÿ Ä Ë Ï Ö Ü}
@@ -72,7 +67,6 @@ $result_tree_text{'char_us_ascii_latin1_in_refs_no_translit_files'} = '*document
    *menu_entry C4 char_us_ascii_latin1_in_refs.texi:l12
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{_00e9}
      {normal_text:é}
@@ -83,7 +77,6 @@ $result_tree_text{'char_us_ascii_latin1_in_refs_no_translit_files'} = '*document
    *menu_entry C4 char_us_ascii_latin1_in_refs.texi:l13
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{_00e0-_00e8-_00f9}
      {normal_text:à è ù}
@@ -94,7 +87,6 @@ $result_tree_text{'char_us_ascii_latin1_in_refs_no_translit_files'} = '*document
    *menu_entry C4 char_us_ascii_latin1_in_refs.texi:l14
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{_00e2-_00ea-_00ee-_00f4-_00fb-_00c2-_00ca-_00ce-_00d4-_00db}
      {normal_text:â ê î ô û Â Ê Î Ô Û}
@@ -105,7 +97,6 @@ $result_tree_text{'char_us_ascii_latin1_in_refs_no_translit_files'} = '*document
    *menu_entry C4 char_us_ascii_latin1_in_refs.texi:l15
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{_00e7}
      {normal_text:ç}
@@ -114,7 +105,6 @@ $result_tree_text{'char_us_ascii_latin1_in_refs_no_translit_files'} = '*document
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 char_us_ascii_latin1_in_refs.texi:l16
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -122,7 +112,6 @@ $result_tree_text{'char_us_ascii_latin1_in_refs_no_translit_files'} = '*document
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 char_us_ascii_latin1_in_refs.texi:l18 {ä ë ï ö ü ÿ Ä Ë Ï Ö Ü}
- |EXTRA
  |identifier:{_00e4-_00eb-_00ef-_00f6-_00fc-_00ff-_00c4-_00cb-_00cf-_00d6-_00dc}
  |is_target:{1}
  |node_number:{2}
@@ -132,7 +121,6 @@ $result_tree_text{'char_us_ascii_latin1_in_refs_no_translit_files'} = '*document
     {normal_text:ä ë ï ö ü ÿ Ä Ë Ï Ö Ü}
     {spaces_after_argument:\\n}
  *normal_command@chapter C2 char_us_ascii_latin1_in_refs.texi:l19 {ä ë ï ö ü ÿ Ä Ë Ï Ö Ü}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -143,7 +131,6 @@ $result_tree_text{'char_us_ascii_latin1_in_refs_no_translit_files'} = '*document
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 char_us_ascii_latin1_in_refs.texi:l21 {é}
- |EXTRA
  |identifier:{_00e9}
  |is_target:{1}
  |node_number:{3}
@@ -153,7 +140,6 @@ $result_tree_text{'char_us_ascii_latin1_in_refs_no_translit_files'} = '*document
     {normal_text:é}
     {spaces_after_argument:\\n}
  *normal_command@chapter C2 char_us_ascii_latin1_in_refs.texi:l22 {é}
- |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
  |section_number:{3}
@@ -164,7 +150,6 @@ $result_tree_text{'char_us_ascii_latin1_in_refs_no_translit_files'} = '*document
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 char_us_ascii_latin1_in_refs.texi:l24 {à è ù}
- |EXTRA
  |identifier:{_00e0-_00e8-_00f9}
  |is_target:{1}
  |node_number:{4}
@@ -174,7 +159,6 @@ $result_tree_text{'char_us_ascii_latin1_in_refs_no_translit_files'} = '*document
     {normal_text:à è ù}
     {spaces_after_argument:\\n}
  *normal_command@chapter C2 char_us_ascii_latin1_in_refs.texi:l25 {à è ù}
- |EXTRA
  |section_heading_number:{3}
  |section_level:{1}
  |section_number:{4}
@@ -185,7 +169,6 @@ $result_tree_text{'char_us_ascii_latin1_in_refs_no_translit_files'} = '*document
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 char_us_ascii_latin1_in_refs.texi:l27 {â ê î ô û Â Ê Î Ô Û}
- |EXTRA
  |identifier:{_00e2-_00ea-_00ee-_00f4-_00fb-_00c2-_00ca-_00ce-_00d4-_00db}
  |is_target:{1}
  |node_number:{5}
@@ -195,7 +178,6 @@ $result_tree_text{'char_us_ascii_latin1_in_refs_no_translit_files'} = '*document
     {normal_text:â ê î ô û Â Ê Î Ô Û}
     {spaces_after_argument:\\n}
  *normal_command@chapter C2 char_us_ascii_latin1_in_refs.texi:l28 {â ê î ô û Â Ê Î Ô Û}
- |EXTRA
  |section_heading_number:{4}
  |section_level:{1}
  |section_number:{5}
@@ -206,7 +188,6 @@ $result_tree_text{'char_us_ascii_latin1_in_refs_no_translit_files'} = '*document
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 char_us_ascii_latin1_in_refs.texi:l30 {ç}
- |EXTRA
  |identifier:{_00e7}
  |is_target:{1}
  |node_number:{6}
@@ -216,7 +197,6 @@ $result_tree_text{'char_us_ascii_latin1_in_refs_no_translit_files'} = '*document
     {normal_text:ç}
     {spaces_after_argument:\\n}
  *normal_command@chapter C11 char_us_ascii_latin1_in_refs.texi:l31 {ç}
- |EXTRA
  |section_heading_number:{5}
  |section_level:{1}
  |section_number:{6}
@@ -229,42 +209,36 @@ $result_tree_text{'char_us_ascii_latin1_in_refs_no_translit_files'} = '*document
   *paragraph C10
    *normal_command@ref C1 char_us_ascii_latin1_in_refs.texi:l33
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{_00e4-_00eb-_00ef-_00f6-_00fc-_00ff-_00c4-_00cb-_00cf-_00d6-_00dc}
      {normal_text:ä ë ï ö ü ÿ Ä Ë Ï Ö Ü}
    {normal_text:\\n}
    *normal_command@ref C1 char_us_ascii_latin1_in_refs.texi:l34
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{_00e9}
      {normal_text:é}
    {normal_text:\\n}
    *normal_command@ref C1 char_us_ascii_latin1_in_refs.texi:l35
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{_00e0-_00e8-_00f9}
      {normal_text:à è ù}
    {normal_text:\\n}
    *normal_command@ref C1 char_us_ascii_latin1_in_refs.texi:l36
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{_00e2-_00ea-_00ee-_00f4-_00fb-_00c2-_00ca-_00ce-_00d4-_00db}
      {normal_text:â ê î ô û Â Ê Î Ô Û}
    {normal_text:\\n}
    *normal_command@ref C1 char_us_ascii_latin1_in_refs.texi:l37
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{_00e7}
      {normal_text:ç}
    {normal_text:\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 char_us_ascii_latin1_in_refs.texi:l39
-  |EXTRA
   |element_node:{_00e7}
   |index_entry:I{cp,1}
    *line_arg C3
@@ -272,7 +246,6 @@ $result_tree_text{'char_us_ascii_latin1_in_refs_no_translit_files'} = '*document
     {normal_text:ä ë ï ö ü ÿ}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 char_us_ascii_latin1_in_refs.texi:l40
-  |EXTRA
   |element_node:{_00e7}
   |index_entry:I{cp,2}
    *line_arg C3
@@ -280,7 +253,6 @@ $result_tree_text{'char_us_ascii_latin1_in_refs_no_translit_files'} = '*document
     {normal_text:Ä Ë Ï Ö Ü}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 char_us_ascii_latin1_in_refs.texi:l41
-  |EXTRA
   |element_node:{_00e7}
   |index_entry:I{cp,3}
    *line_arg C3
@@ -288,7 +260,6 @@ $result_tree_text{'char_us_ascii_latin1_in_refs_no_translit_files'} = '*document
     {normal_text:é}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 char_us_ascii_latin1_in_refs.texi:l42
-  |EXTRA
   |element_node:{_00e7}
   |index_entry:I{cp,4}
    *line_arg C3
@@ -296,7 +267,6 @@ $result_tree_text{'char_us_ascii_latin1_in_refs_no_translit_files'} = '*document
     {normal_text:è}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 char_us_ascii_latin1_in_refs.texi:l43
-  |EXTRA
   |element_node:{_00e7}
   |index_entry:I{cp,5}
    *line_arg C3
@@ -304,7 +274,6 @@ $result_tree_text{'char_us_ascii_latin1_in_refs_no_translit_files'} = '*document
     {normal_text:â ê î ô û Â Ê Î Ô Û}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 char_us_ascii_latin1_in_refs.texi:l44
-  |EXTRA
   |element_node:{_00e7}
   |index_entry:I{cp,6}
    *line_arg C3

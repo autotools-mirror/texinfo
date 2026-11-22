@@ -40,7 +40,6 @@ $result_tree_text{'example_class'} = '*document_root C1
     *normal_command@}
     {normal_text:\\n}
    *normal_command@end C1 l10
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }

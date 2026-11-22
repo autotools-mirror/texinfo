@@ -12,13 +12,11 @@ $result_tree_text{'macro_in_empty_multitable_empty_before_item'} = '*document_ro
  *before_node_section C2
   *preamble_before_content C2
    *normal_command@macro C2 l1
-   |EXTRA
    |formal_args:A{}
    |macro_name:{emptymacro}
     *arguments_line C1
      {macro_line: emptymacro\\n}
     *normal_command@end C1 l2
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -26,13 +24,11 @@ $result_tree_text{'macro_in_empty_multitable_empty_before_item'} = '*document_ro
       {spaces_after_argument:\\n}
    {empty_line:\\n}
   *normal_command@multitable C3 l4
-  |EXTRA
   |max_columns:{3}
    *arguments_line C1
     *block_line_arg C2
      {spaces_before_argument: }
      *normal_command@columnfractions C1 l4
-     |EXTRA
      |misc_args:A{0.4|.6|5.}
       *line_arg C3
        {spaces_before_argument: }
@@ -45,7 +41,6 @@ $result_tree_text{'macro_in_empty_multitable_empty_before_item'} = '*document_ro
      >*brace_arg
    >macro_expansion<end;1>
    *normal_command@end C1 l5
-   |EXTRA
    |text_arg:{multitable}
     *line_arg C3
      {spaces_before_argument: }

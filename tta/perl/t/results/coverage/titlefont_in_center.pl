@@ -17,7 +17,6 @@ $result_tree_text{'titlefont_in_center'} = '*document_root C1
    *line_arg C3
     {spaces_before_argument: }
     *normal_command@titlefont C1 l2
-    |EXTRA
     |global_command_number:{1}
      *brace_container C1
       {normal_text:A manual}

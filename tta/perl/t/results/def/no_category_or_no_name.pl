@@ -13,7 +13,6 @@ $result_tree_text{'no_category_or_no_name'} = '*document_root C1
   *preamble_before_content
   *normal_command@deffn C3 l1
    *def_line C1 l1
-   |EXTRA
    |def_command:{deffn}
    |original_def_cmdname:{deffn}
     *block_line_arg C1
@@ -22,7 +21,6 @@ $result_tree_text{'no_category_or_no_name'} = '*document_root C1
     *paragraph C1
      {normal_text:no category no name\\n}
    *normal_command@end C1 l3
-   |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
@@ -31,7 +29,6 @@ $result_tree_text{'no_category_or_no_name'} = '*document_root C1
   {empty_line:\\n}
   *normal_command@deffn C3 l5
    *def_line C1 l5
-   |EXTRA
    |def_command:{deffn}
    |original_def_cmdname:{deffn}
     *block_line_arg C3
@@ -44,7 +41,6 @@ $result_tree_text{'no_category_or_no_name'} = '*document_root C1
     *paragraph C1
      {normal_text:no name\\n}
    *normal_command@end C1 l7
-   |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }
@@ -53,7 +49,6 @@ $result_tree_text{'no_category_or_no_name'} = '*document_root C1
   {empty_line:\\n}
   *normal_command@deffn C5 l9
    *def_line C1 l9
-   |EXTRA
    |def_command:{deffn}
    |index_entry:I{fn,1}
    |original_def_cmdname:{deffn}
@@ -76,7 +71,6 @@ $result_tree_text{'no_category_or_no_name'} = '*document_root C1
        {normal_text:d}
      {spaces_after_argument: \\n}
    *normal_command@deffnx C1 l10
-   |EXTRA
    |def_command:{deffn}
    |original_def_cmdname:{deffnx}
     *line_arg C3
@@ -86,7 +80,6 @@ $result_tree_text{'no_category_or_no_name'} = '*document_root C1
        {normal_text:deffnx_category}
      {spaces_after_argument:\\n}
    *normal_command@deffnx C1 l11
-   |EXTRA
    |def_command:{deffn}
    |original_def_cmdname:{deffnx}
     *line_arg C1
@@ -95,7 +88,6 @@ $result_tree_text{'no_category_or_no_name'} = '*document_root C1
     *paragraph C1
      {normal_text:with deffnx missing category or name\\n}
    *normal_command@end C1 l13
-   |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }

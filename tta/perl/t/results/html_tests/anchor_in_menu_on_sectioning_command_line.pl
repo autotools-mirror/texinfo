@@ -12,7 +12,6 @@ $result_tree_text{'anchor_in_menu_on_sectioning_command_line'} = '*document_root
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 l1 {chap}
- |EXTRA
  |identifier:{chap}
  |is_target:{1}
  |node_number:{1}
@@ -22,7 +21,6 @@ $result_tree_text{'anchor_in_menu_on_sectioning_command_line'} = '*document_root
     {normal_text:chap}
     {spaces_after_argument:\\n}
  *normal_command@chapter C3 l2 {chapter @anchor{ggg} after}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{1}
@@ -31,7 +29,6 @@ $result_tree_text{'anchor_in_menu_on_sectioning_command_line'} = '*document_root
     {spaces_before_argument: }
     {normal_text:chapter }
     *normal_command@anchor C1 l2
-    |EXTRA
     |identifier:{ggg}
     |is_target:{1}
      *brace_arg C1
@@ -47,7 +44,6 @@ $result_tree_text{'anchor_in_menu_on_sectioning_command_line'} = '*document_root
    *menu_entry C4 l5
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{ggg}
      {normal_text:ggg}
@@ -56,7 +52,6 @@ $result_tree_text{'anchor_in_menu_on_sectioning_command_line'} = '*document_root
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 l6
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }

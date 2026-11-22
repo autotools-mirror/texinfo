@@ -14,7 +14,6 @@ $result_tree_text{'invalid_node_name_no_warning'} = '*document_root C5
    {text_before_beginning:\\n}
   *preamble_before_content
  *normal_command@node C4 l2 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -36,7 +35,6 @@ $result_tree_text{'invalid_node_name_no_warning'} = '*document_root C5
        {normal_text:truc:}
     {menu_entry_separator:: }
     *menu_entry_node C2
-    |EXTRA
     |node_content:A{0|1}
     |normalized:{nodename_002e-a}
      *normal_command@asis C1 l5
@@ -49,7 +47,6 @@ $result_tree_text{'invalid_node_name_no_warning'} = '*document_root C5
      {normal_text:machin}
     {menu_entry_separator:: }
     *menu_entry_node C3
-    |EXTRA
     |node_content:A{0|2}
     |normalized:{node_002ccomma}
      {normal_text:node}
@@ -63,7 +60,6 @@ $result_tree_text{'invalid_node_name_no_warning'} = '*document_root C5
    *menu_entry C4 l7
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{bidule_003a}
      *normal_command@asis C1 l7
@@ -74,7 +70,6 @@ $result_tree_text{'invalid_node_name_no_warning'} = '*document_root C5
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 l8
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -82,7 +77,6 @@ $result_tree_text{'invalid_node_name_no_warning'} = '*document_root C5
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C2 l10 {@asis{nodename. a}}
- |EXTRA
  |identifier:{nodename_002e-a}
  |is_target:{1}
  |node_number:{2}
@@ -95,7 +89,6 @@ $result_tree_text{'invalid_node_name_no_warning'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C2 l12 {node@comma{}comma}
- |EXTRA
  |identifier:{node_002ccomma}
  |is_target:{1}
  |node_number:{3}
@@ -109,7 +102,6 @@ $result_tree_text{'invalid_node_name_no_warning'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C3 l14 {@asis{bidule:}}
- |EXTRA
  |identifier:{bidule_003a}
  |is_target:{1}
  |node_number:{4}
@@ -124,7 +116,6 @@ $result_tree_text{'invalid_node_name_no_warning'} = '*document_root C5
   *paragraph C6
    *normal_command@ref C2 l16
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{nodename_002e-a}
      *normal_command@asis C1 l16
@@ -138,7 +129,6 @@ $result_tree_text{'invalid_node_name_no_warning'} = '*document_root C5
    {normal_text:. }
    *normal_command@ref C2 l16
     *brace_arg C3
-    |EXTRA
     |node_content:A{0|2}
     |normalized:{node_002ccomma}
      {normal_text:node}
@@ -151,7 +141,6 @@ $result_tree_text{'invalid_node_name_no_warning'} = '*document_root C5
    {normal_text:.\\n}
    *normal_command@ref C1 l17
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{bidule_003a}
      *normal_command@asis C1 l17

@@ -14,7 +14,6 @@ $result_tree_text{'no_empty_line_after_section'} = '*document_root C5
   *paragraph C1
    {normal_text:Text\\n}
  *normal_command@top C3 l2 {top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |section_level:{0}
@@ -28,7 +27,6 @@ $result_tree_text{'no_empty_line_after_section'} = '*document_root C5
    {normal_text:Other text\\n}
   {empty_line:\\n}
  *normal_command@chapter C4 l5 {chap}
- |EXTRA
  |identifier:{chap}
  |is_target:{1}
  |section_heading_number:{1}
@@ -53,7 +51,6 @@ $result_tree_text{'no_empty_line_after_section'} = '*document_root C5
      {rawline_text:c}
      {spaces_after_argument:\\n}
  *normal_command@section C4 l10 {sec}
- |EXTRA
  |identifier:{sec}
  |is_target:{1}
  |section_heading_number:{1.1}
@@ -71,14 +68,12 @@ $result_tree_text{'no_empty_line_after_section'} = '*document_root C5
    {normal_text: A.\\n}
   {empty_line:\\n}
   *normal_command@sp C1 l13
-  |EXTRA
   |misc_args:A{3}
    *line_arg C3
     {spaces_before_argument: }
     {normal_text:3}
     {spaces_after_argument:\\n}
  *normal_command@section C5 l14 {after sp}
- |EXTRA
  |identifier:{after-sp}
  |is_target:{1}
  |section_heading_number:{1.2}
@@ -92,7 +87,6 @@ $result_tree_text{'no_empty_line_after_section'} = '*document_root C5
   *normal_command@indent l15
   {ignorable_spaces_after_command:\\n}
   *paragraph C1
-  |EXTRA
   |indent:{1}
    {normal_text:Para indented.\\n}
   {empty_line:\\n}

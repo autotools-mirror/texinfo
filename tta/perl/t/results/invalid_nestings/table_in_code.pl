@@ -33,7 +33,6 @@ $result_tree_text{'table_in_code'} = '*document_root C1
      *paragraph C1
       {normal_text:text\\n}
    *normal_command@end C1 l6
-   |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }

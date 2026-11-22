@@ -25,7 +25,6 @@ $result_tree_text{'itemx_before_item'} = '*document_root C1
        {normal_text:in itemx}
        {spaces_after_argument:\\n}
    *normal_command@end C1 l3
-   |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }

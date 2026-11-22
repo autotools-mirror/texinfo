@@ -15,7 +15,6 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
    {text_before_beginning:\\n}
   *preamble_before_content
  *normal_command@node C1 indices_in_begin_tables_lists.texi:l3 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -25,7 +24,6 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C2 indices_in_begin_tables_lists.texi:l4 {top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -35,7 +33,6 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 indices_in_begin_tables_lists.texi:l6 {chapter}
- |EXTRA
  |identifier:{chapter}
  |is_target:{1}
  |node_number:{2}
@@ -45,7 +42,6 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
     {normal_text:chapter}
     {spaces_after_argument:\\n}
  *normal_command@chapter C44 indices_in_begin_tables_lists.texi:l7 {chap}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -68,7 +64,6 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
       {rawline_text:comment in itemize}
       {spaces_after_argument:\\n}
     *index_entry_command@cindex C1 indices_in_begin_tables_lists.texi:l11
-    |EXTRA
     |element_node:{chapter}
     |index_entry:I{cp,1}
      *line_arg C3
@@ -76,13 +71,11 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
       {normal_text:also a cindex in itemize}
       {spaces_after_argument:\\n}
    *normal_command@item C2 indices_in_begin_tables_lists.texi:l12
-   |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:e--mph item\\n}
    *normal_command@end C1 indices_in_begin_tables_lists.texi:l13
-   |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }
@@ -97,7 +90,6 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
      {spaces_after_argument:\\n}
    *before_item C1
     *index_entry_command@cindex C1 indices_in_begin_tables_lists.texi:l16
-    |EXTRA
     |element_node:{chapter}
     |index_entry:I{cp,2}
      *line_arg C3
@@ -105,17 +97,14 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
       {normal_text:index entry within itemize}
       {spaces_after_argument:\\n}
    *normal_command@item C2 indices_in_begin_tables_lists.texi:l17
-   |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:i--tem 1\\n}
    *normal_command@item C3 indices_in_begin_tables_lists.texi:l18
-   |EXTRA
    |item_number:{2}
     {ignorable_spaces_after_command: }
     *index_entry_command@cindex C1 indices_in_begin_tables_lists.texi:l18
-    |EXTRA
     |element_node:{chapter}
     |index_entry:I{cp,3}
      *line_arg C5
@@ -127,7 +116,6 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
     *paragraph C1
      {normal_text:i--tem 2\\n}
    *normal_command@end C1 indices_in_begin_tables_lists.texi:l20
-   |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }
@@ -147,7 +135,6 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
     *paragraph C2
      {normal_text:T--ext before items.\\n}
      *index_entry_command@cindex C1 indices_in_begin_tables_lists.texi:l25
-     |EXTRA
      |element_node:{chapter}
      |index_entry:I{cp,4}
       *line_arg C3
@@ -155,13 +142,11 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
        {normal_text:also a cindex in itemize}
        {spaces_after_argument:\\n}
    *normal_command@item C2 indices_in_begin_tables_lists.texi:l26
-   |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:bullet item\\n}
    *normal_command@end C1 indices_in_begin_tables_lists.texi:l27
-   |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }
@@ -180,13 +165,11 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
       {rawline_text:comment before first item in enumerate}
       {spaces_after_argument:\\n}
    *normal_command@item C2 indices_in_begin_tables_lists.texi:l32
-   |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:e--numerate\\n}
    *normal_command@end C1 indices_in_begin_tables_lists.texi:l33
-   |EXTRA
    |text_arg:{enumerate}
     *line_arg C3
      {spaces_before_argument: }
@@ -200,7 +183,6 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
    *before_item C3
     {empty_line:\\n}
     *index_entry_command@cindex C1 indices_in_begin_tables_lists.texi:l37
-    |EXTRA
     |element_node:{chapter}
     |index_entry:I{cp,5}
      *line_arg C3
@@ -209,13 +191,11 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
       {spaces_after_argument:\\n}
     {empty_line:\\n}
    *normal_command@item C2 indices_in_begin_tables_lists.texi:l39
-   |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:enumerate item\\n}
    *normal_command@end C1 indices_in_begin_tables_lists.texi:l40
-   |EXTRA
    |text_arg:{enumerate}
     *line_arg C3
      {spaces_before_argument: }
@@ -229,7 +209,6 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
    *before_item C2
     {empty_line:\\n}
     *index_entry_command@cindex C1 indices_in_begin_tables_lists.texi:l44
-    |EXTRA
     |element_node:{chapter}
     |index_entry:I{cp,6}
      *line_arg C3
@@ -237,13 +216,11 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
       {normal_text:index inter in enumerate after line}
       {spaces_after_argument:\\n}
    *normal_command@item C2 indices_in_begin_tables_lists.texi:l45
-   |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:enumerate item\\n}
    *normal_command@end C1 indices_in_begin_tables_lists.texi:l46
-   |EXTRA
    |text_arg:{enumerate}
     *line_arg C3
      {spaces_before_argument: }
@@ -256,7 +233,6 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
      {spaces_before_argument:\\n}
    *before_item C2
     *index_entry_command@cindex C1 indices_in_begin_tables_lists.texi:l49
-    |EXTRA
     |element_node:{chapter}
     |index_entry:I{cp,7}
      *line_arg C3
@@ -265,13 +241,11 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
       {spaces_after_argument:\\n}
     {empty_line:\\n}
    *normal_command@item C2 indices_in_begin_tables_lists.texi:l51
-   |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:enumerate item\\n}
    *normal_command@end C1 indices_in_begin_tables_lists.texi:l52
-   |EXTRA
    |text_arg:{enumerate}
     *line_arg C3
      {spaces_before_argument: }
@@ -286,7 +260,6 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
     *paragraph C2
      {normal_text:Title\\n}
      *index_entry_command@cindex C1 indices_in_begin_tables_lists.texi:l56
-     |EXTRA
      |element_node:{chapter}
      |index_entry:I{cp,8}
       *line_arg C3
@@ -294,13 +267,11 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
        {normal_text:cindex}
        {spaces_after_argument:\\n}
    *normal_command@item C2 indices_in_begin_tables_lists.texi:l57
-   |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:enum\\n}
    *normal_command@end C1 indices_in_begin_tables_lists.texi:l58
-   |EXTRA
    |text_arg:{enumerate}
     *line_arg C3
      {spaces_before_argument: }
@@ -313,7 +284,6 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
      {spaces_before_argument:\\n}
    *before_item C4
     *index_entry_command@cindex C1 indices_in_begin_tables_lists.texi:l61
-    |EXTRA
     |element_node:{chapter}
     |index_entry:I{cp,9}
      *line_arg C3
@@ -326,7 +296,6 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
       {rawline_text:comment}
       {spaces_after_argument:\\n}
     *index_entry_command@cindex C1 indices_in_begin_tables_lists.texi:l63
-    |EXTRA
     |element_node:{chapter}
     |index_entry:I{cp,10}
      *line_arg C3
@@ -334,7 +303,6 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
       {normal_text:sedond idx}
       {spaces_after_argument:\\n}
     *index_entry_command@cindex C1 indices_in_begin_tables_lists.texi:l64
-    |EXTRA
     |element_node:{chapter}
     |index_entry:I{cp,11}
      *line_arg C3
@@ -342,13 +310,11 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
       {normal_text:another}
       {spaces_after_argument:\\n}
    *normal_command@item C2 indices_in_begin_tables_lists.texi:l65
-   |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:enum\\n}
    *normal_command@end C1 indices_in_begin_tables_lists.texi:l66
-   |EXTRA
    |text_arg:{enumerate}
     *line_arg C3
      {spaces_before_argument: }
@@ -367,7 +333,6 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
      *preformatted C3
       {empty_line:\\n}
       *index_entry_command@cindex C1 indices_in_begin_tables_lists.texi:l71
-      |EXTRA
       |element_node:{chapter}
       |index_entry:I{cp,12}
        *line_arg C3
@@ -376,7 +341,6 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
         {spaces_after_argument:\\n}
       {empty_line:\\n}
     *normal_command@item C1 indices_in_begin_tables_lists.texi:l73
-    |EXTRA
     |item_number:{1}
      *preformatted C6
       {ignorable_spaces_after_command: }
@@ -384,7 +348,6 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
       {empty_line:\\n}
       {normal_text:Something\\n}
       *index_entry_command@cindex C1 indices_in_begin_tables_lists.texi:l76
-      |EXTRA
       |element_node:{chapter}
       |index_entry:I{cp,13}
        *line_arg C3
@@ -392,7 +355,6 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
         {normal_text:in example itemize before item 1}
         {spaces_after_argument:\\n}
       *index_entry_command@cindex C1 indices_in_begin_tables_lists.texi:l77
-      |EXTRA
       |element_node:{chapter}
       |index_entry:I{cp,14}
        *line_arg C3
@@ -400,14 +362,12 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
         {normal_text:in example itemize before item 2}
         {spaces_after_argument:\\n}
     *normal_command@item C1 indices_in_begin_tables_lists.texi:l78
-    |EXTRA
     |item_number:{2}
      *preformatted C4
       {ignorable_spaces_after_command: }
       {normal_text:second item\\n}
       {empty_line:\\n}
       *index_entry_command@cindex C1 indices_in_begin_tables_lists.texi:l80
-      |EXTRA
       |element_node:{chapter}
       |index_entry:I{cp,15}
        *line_arg C3
@@ -415,13 +375,11 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
         {normal_text:in example itemize alone before item}
         {spaces_after_argument:\\n}
     *normal_command@item C1 indices_in_begin_tables_lists.texi:l81
-    |EXTRA
     |item_number:{3}
      *preformatted C5
       {ignorable_spaces_after_command:\\n}
       {empty_line:\\n}
       *index_entry_command@cindex C1 indices_in_begin_tables_lists.texi:l83
-      |EXTRA
       |element_node:{chapter}
       |index_entry:I{cp,16}
        *line_arg C3
@@ -434,7 +392,6 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
         {rawline_text:in comment}
         {spaces_after_argument:\\n}
       *index_entry_command@cindex C1 indices_in_begin_tables_lists.texi:l85
-      |EXTRA
       |element_node:{chapter}
       |index_entry:I{cp,17}
        *line_arg C3
@@ -442,14 +399,12 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
         {normal_text:in example itemize after comment}
         {spaces_after_argument:\\n}
     *normal_command@item C1 indices_in_begin_tables_lists.texi:l86
-    |EXTRA
     |item_number:{4}
      *preformatted C5
       {ignorable_spaces_after_command: }
       {normal_text:item after entry and comment\\n}
       {empty_line:\\n}
       *index_entry_command@cindex C1 indices_in_begin_tables_lists.texi:l88
-      |EXTRA
       |element_node:{chapter}
       |index_entry:I{cp,18}
        *line_arg C3
@@ -462,14 +417,12 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
         {rawline_text:comment after index entry}
         {spaces_after_argument:\\n}
     *normal_command@item C1 indices_in_begin_tables_lists.texi:l90
-    |EXTRA
     |item_number:{5}
      *preformatted C5
       {ignorable_spaces_after_command: }
       {normal_text:comment and entry\\n}
       {empty_line:\\n}
       *index_entry_command@cindex C1 indices_in_begin_tables_lists.texi:l92
-      |EXTRA
       |element_node:{chapter}
       |index_entry:I{cp,19}
        *line_arg C3
@@ -478,14 +431,12 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
         {spaces_after_argument:\\n}
       {normal_text:Some thing in pre\\n}
     *normal_command@item C1 indices_in_begin_tables_lists.texi:l94
-    |EXTRA
     |item_number:{6}
      *preformatted C6
       {ignorable_spaces_after_command: }
       {normal_text:more item\\n}
       {empty_line:\\n}
       *index_entry_command@cindex C1 indices_in_begin_tables_lists.texi:l96
-      |EXTRA
       |element_node:{chapter}
       |index_entry:I{cp,20}
        *line_arg C3
@@ -499,18 +450,15 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
         {rawline_text:in c}
         {spaces_after_argument:\\n}
     *normal_command@item C1 indices_in_begin_tables_lists.texi:l99
-    |EXTRA
     |item_number:{7}
      *preformatted C2
       {ignorable_spaces_after_command: }
       {normal_text:another one item\\n}
     *normal_command@item C1 indices_in_begin_tables_lists.texi:l100
-    |EXTRA
     |item_number:{8}
      *preformatted C2
       {ignorable_spaces_after_command: }
       *index_entry_command@cindex C1 indices_in_begin_tables_lists.texi:l100
-      |EXTRA
       |element_node:{chapter}
       |index_entry:I{cp,21}
        *line_arg C3
@@ -518,20 +466,17 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
         {normal_text:direct in item in preformatted}
         {spaces_after_argument:\\n}
     *normal_command@item C1 indices_in_begin_tables_lists.texi:l101
-    |EXTRA
     |item_number:{9}
      *preformatted C2
       {ignorable_spaces_after_command: }
       {normal_text:last item\\n}
     *normal_command@end C1 indices_in_begin_tables_lists.texi:l102
-    |EXTRA
     |text_arg:{itemize}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:itemize}
       {spaces_after_argument:\\n}
    *normal_command@end C1 indices_in_begin_tables_lists.texi:l103
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
@@ -552,7 +497,6 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
        {rawline_text:comment in table}
        {spaces_after_argument:\\n}
      *normal_command@item C1 indices_in_begin_tables_lists.texi:l107
-     |EXTRA
      |element_node:{chapter}
      |index_entry:I{vr,1}
       *line_arg C3
@@ -563,7 +507,6 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
      *paragraph C1
       {normal_text:l--ine\\n}
    *normal_command@end C1 indices_in_begin_tables_lists.texi:l109
-   |EXTRA
    |text_arg:{vtable}
     *line_arg C3
      {spaces_before_argument: }
@@ -579,7 +522,6 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
    *table_entry C2
     *table_term C3
      *normal_command@item C1 indices_in_begin_tables_lists.texi:l112
-     |EXTRA
      |element_node:{chapter}
      |index_entry:I{vr,2}
       *line_arg C3
@@ -593,7 +535,6 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
         {rawline_text:comment between item and itemx}
         {spaces_after_argument:\\n}
      *normal_command@itemx C1 indices_in_begin_tables_lists.texi:l114
-     |EXTRA
      |element_node:{chapter}
      |index_entry:I{vr,3}
       *line_arg C3
@@ -604,7 +545,6 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
      *paragraph C1
       {normal_text:l--ine\\n}
    *normal_command@end C1 indices_in_begin_tables_lists.texi:l116
-   |EXTRA
    |text_arg:{vtable}
     *line_arg C3
      {spaces_before_argument: }
@@ -620,7 +560,6 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
    *table_entry C2
     *table_term C3
      *normal_command@item C1 indices_in_begin_tables_lists.texi:l119
-     |EXTRA
      |element_node:{chapter}
      |index_entry:I{fn,1}
       *line_arg C3
@@ -629,7 +568,6 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
        {spaces_after_argument:\\n}
      *inter_item C3
       *index_entry_command@cindex C1 indices_in_begin_tables_lists.texi:l120
-      |EXTRA
       |element_node:{chapter}
       |index_entry:I{cp,22}
        *line_arg C3
@@ -647,7 +585,6 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
         {rawline_text:and another comment}
         {spaces_after_argument:\\n}
      *normal_command@itemx C1 indices_in_begin_tables_lists.texi:l123
-     |EXTRA
      |element_node:{chapter}
      |index_entry:I{fn,2}
       *line_arg C3
@@ -660,7 +597,6 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
    *table_entry C2
     *table_term C3
      *normal_command@item C1 indices_in_begin_tables_lists.texi:l125
-     |EXTRA
      |element_node:{chapter}
      |index_entry:I{fn,3}
       *line_arg C3
@@ -676,7 +612,6 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
         {spaces_after_argument:\\n}
       {empty_line:\\n}
      *normal_command@itemx C1 indices_in_begin_tables_lists.texi:l129
-     |EXTRA
      |element_node:{chapter}
      |index_entry:I{fn,4}
       *line_arg C3
@@ -691,7 +626,6 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
        {rawline_text:comment at end}
        {spaces_after_argument:\\n}
    *normal_command@end C1 indices_in_begin_tables_lists.texi:l132
-   |EXTRA
    |text_arg:{ftable}
     *line_arg C3
      {spaces_before_argument: }
@@ -707,7 +641,6 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
    *table_entry C2
     *table_term C3
      *index_entry_command@cindex C1 indices_in_begin_tables_lists.texi:l135
-     |EXTRA
      |element_node:{chapter}
      |index_entry:I{cp,23}
       *line_arg C3
@@ -728,7 +661,6 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
      *paragraph C1
       {normal_text:l--ine\\n}
    *normal_command@end C1 indices_in_begin_tables_lists.texi:l139
-   |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
@@ -743,7 +675,6 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
      {spaces_after_argument:\\n}
    *before_item C2
     *index_entry_command@cindex C1 indices_in_begin_tables_lists.texi:l142
-    |EXTRA
     |element_node:{chapter}
     |index_entry:I{cp,24}
      *line_arg C3
@@ -760,7 +691,6 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
        {normal_text:abb}
        {spaces_after_argument:\\n}
    *normal_command@end C1 indices_in_begin_tables_lists.texi:l145
-   |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
@@ -776,7 +706,6 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
    *table_entry C2
     *table_term C3
      *index_entry_command@cindex C1 indices_in_begin_tables_lists.texi:l148
-     |EXTRA
      |element_node:{chapter}
      |index_entry:I{cp,25}
       *line_arg C3
@@ -797,7 +726,6 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
      *paragraph C1
       {normal_text:l--ine samp\\n}
    *normal_command@end C1 indices_in_begin_tables_lists.texi:l152
-   |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
@@ -812,7 +740,6 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
      {spaces_after_argument:\\n}
    *before_item C2
     *index_entry_command@cindex C1 indices_in_begin_tables_lists.texi:l155
-    |EXTRA
     |element_node:{chapter}
     |index_entry:I{cp,26}
      *line_arg C3
@@ -829,7 +756,6 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
        {normal_text:asamp--bb}
        {spaces_after_argument:\\n}
    *normal_command@end C1 indices_in_begin_tables_lists.texi:l158
-   |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
@@ -845,7 +771,6 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
    *before_item C3
     {empty_line:\\n}
     *index_entry_command@cindex C1 indices_in_begin_tables_lists.texi:l162
-    |EXTRA
     |element_node:{chapter}
     |index_entry:I{cp,27}
      *line_arg C3
@@ -861,7 +786,6 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
        {normal_text:asamp--bb1}
        {spaces_after_argument:\\n}
    *normal_command@end C1 indices_in_begin_tables_lists.texi:l165
-   |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
@@ -876,7 +800,6 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
      {spaces_after_argument:\\n}
    *before_item C2
     *index_entry_command@cindex C1 indices_in_begin_tables_lists.texi:l168
-    |EXTRA
     |element_node:{chapter}
     |index_entry:I{cp,28}
      *line_arg C3
@@ -892,7 +815,6 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
        {normal_text:asamp--bb2}
        {spaces_after_argument:\\n}
    *normal_command@end C1 indices_in_begin_tables_lists.texi:l171
-   |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
@@ -910,7 +832,6 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
    *table_entry C1
     *table_term C2
      *index_entry_command@cindex C1 indices_in_begin_tables_lists.texi:l175
-     |EXTRA
      |element_node:{chapter}
      |index_entry:I{cp,29}
       *line_arg C3
@@ -923,7 +844,6 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
        {normal_text:asamp--bb2}
        {spaces_after_argument:\\n}
    *normal_command@end C1 indices_in_begin_tables_lists.texi:l177
-   |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
@@ -939,7 +859,6 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
    *table_entry C1
     *table_term C5
      *index_entry_command@cindex C1 indices_in_begin_tables_lists.texi:l180
-     |EXTRA
      |element_node:{chapter}
      |index_entry:I{cp,30}
       *line_arg C3
@@ -952,7 +871,6 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
        {rawline_text:commant}
        {spaces_after_argument:\\n}
      *index_entry_command@cindex C1 indices_in_begin_tables_lists.texi:l182
-     |EXTRA
      |element_node:{chapter}
      |index_entry:I{cp,31}
       *line_arg C3
@@ -960,7 +878,6 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
        {normal_text:second}
        {spaces_after_argument:\\n}
      *index_entry_command@cindex C1 indices_in_begin_tables_lists.texi:l183
-     |EXTRA
      |element_node:{chapter}
      |index_entry:I{cp,32}
       *line_arg C3
@@ -973,7 +890,6 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
        {normal_text:asamp--bb2}
        {spaces_after_argument:\\n}
    *normal_command@end C1 indices_in_begin_tables_lists.texi:l185
-   |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }
@@ -981,7 +897,6 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 indices_in_begin_tables_lists.texi:l187 {printindex}
- |EXTRA
  |identifier:{printindex}
  |is_target:{1}
  |isindex:{1}
@@ -992,7 +907,6 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
     {normal_text:printindex}
     {spaces_after_argument:\\n}
  *normal_command@chapter C8 indices_in_begin_tables_lists.texi:l188 {printindex}
- |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
  |section_number:{3}
@@ -1003,7 +917,6 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@printindex C1 indices_in_begin_tables_lists.texi:l190
-  |EXTRA
   |global_command_number:{1}
   |misc_args:A{cp}
    *line_arg C3
@@ -1012,7 +925,6 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@printindex C1 indices_in_begin_tables_lists.texi:l192
-  |EXTRA
   |global_command_number:{2}
   |misc_args:A{vr}
    *line_arg C3
@@ -1021,7 +933,6 @@ $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@printindex C1 indices_in_begin_tables_lists.texi:l194
-  |EXTRA
   |global_command_number:{3}
   |misc_args:A{fn}
    *line_arg C3

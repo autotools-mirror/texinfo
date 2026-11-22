@@ -15,7 +15,6 @@ $result_tree_text{'manual_simple_utf8_with_error'} = '*document_root C6
    {text_before_beginning:\\n}
   *preamble_before_content
  *normal_command@node C1 manual_simple_utf8_with_error.texi:l3 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -25,7 +24,6 @@ $result_tree_text{'manual_simple_utf8_with_error'} = '*document_root C6
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C2 manual_simple_utf8_with_error.texi:l4 {Testé}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -35,7 +33,6 @@ $result_tree_text{'manual_simple_utf8_with_error'} = '*document_root C6
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C2 manual_simple_utf8_with_error.texi:l6 {ésseulé}
- |EXTRA
  |identifier:{_00e9sseul_00e9}
  |is_target:{1}
  |node_number:{2}
@@ -46,7 +43,6 @@ $result_tree_text{'manual_simple_utf8_with_error'} = '*document_root C6
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 manual_simple_utf8_with_error.texi:l8 {Chapitré}
- |EXTRA
  |identifier:{Chapitr_00e9}
  |is_target:{1}
  |node_number:{3}
@@ -56,7 +52,6 @@ $result_tree_text{'manual_simple_utf8_with_error'} = '*document_root C6
     {normal_text:Chapitré}
     {spaces_after_argument:\\n}
  *normal_command@chapter C4 manual_simple_utf8_with_error.texi:l9 {Chapitré}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}

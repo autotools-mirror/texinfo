@@ -12,7 +12,6 @@ $result_tree_text{'anchor_in_math'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C6 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -28,7 +27,6 @@ $result_tree_text{'anchor_in_math'} = '*document_root C2
     *brace_arg C2
      {normal_text:A + B }
      *normal_command@anchor C1 l3
-     |EXTRA
      |identifier:{in-math}
      |is_target:{1}
       *brace_arg C1
@@ -41,7 +39,6 @@ $result_tree_text{'anchor_in_math'} = '*document_root C2
      {spaces_before_argument:\\n}
    {normal_text:f(x) = }
    *normal_command@anchor C1 l6
-   |EXTRA
    |identifier:{equal-point}
    |is_target:{1}
     *brace_arg C1
@@ -54,14 +51,12 @@ $result_tree_text{'anchor_in_math'} = '*document_root C2
     {normal_text:{b}}
    {normal_text: }
    *normal_command@anchor C1 l6
-   |EXTRA
    |identifier:{displm-point}
    |is_target:{1}
     *brace_arg C1
      {normal_text:displm point}
    {spaces_after_close_brace:\\n}
    *normal_command@end C1 l7
-   |EXTRA
    |text_arg:{displaymath}
     *line_arg C3
      {spaces_before_argument: }

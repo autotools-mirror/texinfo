@@ -17,7 +17,6 @@ $result_tree_text{'no_element'} = '*document_root C1
      {normal_text:no_element test}
      {spaces_after_argument:\\n}
    *normal_command@documentencoding C1 l2
-   |EXTRA
    |global_command_number:{1}
    |input_encoding_name:{iso-8859-1}
    |text_arg:{ISO-8859-1}
@@ -28,7 +27,6 @@ $result_tree_text{'no_element'} = '*document_root C1
    {empty_line:\\n}
    {empty_line:\\n}
   *normal_command@anchor C1 l5
-  |EXTRA
   |identifier:{An-anchor}
   |is_target:{1}
    *brace_arg C1
@@ -39,7 +37,6 @@ $result_tree_text{'no_element'} = '*document_root C1
    {normal_text:Ref to the anchor:\\n}
    *normal_command@ref C1 l8
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{An-anchor}
      {normal_text:An anchor}
@@ -49,7 +46,6 @@ $result_tree_text{'no_element'} = '*document_root C1
    {normal_text:Ref to the anchor in footnote:\\n}
    *normal_command@ref C1 l11
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{Anchor-in-footnote}
      {normal_text:Anchor in footnote}
@@ -57,14 +53,12 @@ $result_tree_text{'no_element'} = '*document_root C1
   {empty_line:\\n}
   *paragraph C2
    *normal_command@footnote C1 l13
-   |EXTRA
    |global_command_number:{1}
     *brace_command_context C6
      *paragraph C1
       {normal_text:In footnote.\\n}
      {empty_line:\\n}
      *normal_command@anchor C1 l15
-     |EXTRA
      |identifier:{Anchor-in-footnote}
      |is_target:{1}
       *brace_arg C1
@@ -75,7 +69,6 @@ $result_tree_text{'no_element'} = '*document_root C1
       {normal_text:Ref to main text anchor\\n}
       *normal_command@ref C1 l18
        *brace_arg C1
-       |EXTRA
        |node_content:A{0|0}
        |normalized:{An-anchor}
         {normal_text:An anchor}
@@ -83,7 +76,6 @@ $result_tree_text{'no_element'} = '*document_root C1
    {normal_text:\\n}
   {empty_line:\\n}
   *normal_command@float C3 l21
-  |EXTRA
   |float_number:{1}
   |float_type:{}
   |global_command_number:{1}
@@ -99,7 +91,6 @@ $result_tree_text{'no_element'} = '*document_root C1
    *paragraph C1
     {normal_text:In float\\n}
    *normal_command@end C1 l23
-   |EXTRA
    |text_arg:{float}
     *line_arg C3
      {spaces_before_argument: }
@@ -110,7 +101,6 @@ $result_tree_text{'no_element'} = '*document_root C1
    {normal_text:Ref to float\\n}
    *normal_command@ref C1 l26
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{float-anchor}
      {normal_text:float anchor}
@@ -123,7 +113,6 @@ $result_tree_text{'no_element'} = '*document_root C1
    *menu_entry C4 l29
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{An-anchor}
      {normal_text:An anchor}
@@ -132,7 +121,6 @@ $result_tree_text{'no_element'} = '*document_root C1
      *preformatted C1
       {normal_text:menu entry pointing to the anchor.\\n}
    *normal_command@end C1 l30
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -140,7 +128,6 @@ $result_tree_text{'no_element'} = '*document_root C1
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 l32
-  |EXTRA
   |index_entry:I{cp,1}
    *line_arg C3
     {spaces_before_argument: }

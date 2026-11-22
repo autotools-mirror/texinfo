@@ -25,7 +25,6 @@ $result_tree_text{'flushleft_flushright_in_quotation'} = '*document_root C1
     *paragraph C1
      {normal_text:f l\\n}
     *normal_command@end C1 l5
-    |EXTRA
     |text_arg:{flushleft}
      *line_arg C3
       {spaces_before_argument: }
@@ -40,14 +39,12 @@ $result_tree_text{'flushleft_flushright_in_quotation'} = '*document_root C1
     *paragraph C1
      {normal_text:f r\\n}
     *normal_command@end C1 l9
-    |EXTRA
     |text_arg:{flushright}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:flushright}
       {spaces_after_argument:\\n}
    *normal_command@end C1 l10
-   |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }

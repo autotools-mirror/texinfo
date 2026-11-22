@@ -12,13 +12,11 @@ $result_tree_text{'multitable_two_columns_too_much_cells'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *normal_command@multitable C3 l1
-  |EXTRA
   |max_columns:{2}
    *arguments_line C1
     *block_line_arg C2
      {spaces_before_argument: }
      *normal_command@columnfractions C1 l1
-     |EXTRA
      |misc_args:A{0.4|0.6}
       *line_arg C3
        {spaces_before_argument: }
@@ -26,16 +24,13 @@ $result_tree_text{'multitable_two_columns_too_much_cells'} = '*document_root C1
        {spaces_after_argument:\\n}
    *multitable_body C3
     *row C2
-    |EXTRA
     |row_number:{1}
      *normal_command@item C2 l2
-     |EXTRA
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
        {normal_text:first }
      *normal_command@tab C8 l2
-     |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C1
@@ -50,25 +45,20 @@ $result_tree_text{'multitable_two_columns_too_much_cells'} = '*document_root C1
       *paragraph C1
        {normal_text:third out\\n}
     *row C1
-    |EXTRA
     |row_number:{2}
      *normal_command@item C2 l3
-     |EXTRA
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
        {normal_text:first1 \\n}
     *row C2
-    |EXTRA
     |row_number:{3}
      *normal_command@item C2 l4
-     |EXTRA
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
        {normal_text:first2 }
      *normal_command@tab C4 l4
-     |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C1
@@ -77,7 +67,6 @@ $result_tree_text{'multitable_two_columns_too_much_cells'} = '*document_root C1
       *paragraph C1
        {normal_text:first2 out\\n}
    *normal_command@end C1 l5
-   |EXTRA
    |text_arg:{multitable}
     *line_arg C3
      {spaces_before_argument: }

@@ -12,7 +12,6 @@ $result_tree_text{'node_sectop_before_lone_node_Top'} = '*document_root C6
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 l1 {node before}
- |EXTRA
  |identifier:{node-before}
  |is_target:{1}
  |node_number:{1}
@@ -22,7 +21,6 @@ $result_tree_text{'node_sectop_before_lone_node_Top'} = '*document_root C6
     {normal_text:node before}
     {spaces_after_argument:\\n}
  *normal_command@top C4 l2 {top sectionning}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -35,7 +33,6 @@ $result_tree_text{'node_sectop_before_lone_node_Top'} = '*document_root C6
    {normal_text:in node before\\n}
   {empty_line:\\n}
  *normal_command@node C4 l6 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{2}
@@ -49,7 +46,6 @@ $result_tree_text{'node_sectop_before_lone_node_Top'} = '*document_root C6
    {normal_text:in node Top\\n}
   {empty_line:\\n}
  *normal_command@node C1 l10 {chap}
- |EXTRA
  |identifier:{chap}
  |is_target:{1}
  |node_number:{3}
@@ -59,7 +55,6 @@ $result_tree_text{'node_sectop_before_lone_node_Top'} = '*document_root C6
     {normal_text:chap}
     {spaces_after_argument:\\n}
  *normal_command@chapter C3 l11 {chap}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}

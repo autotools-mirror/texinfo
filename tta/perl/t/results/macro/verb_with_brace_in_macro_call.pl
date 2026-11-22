@@ -14,14 +14,12 @@ $result_tree_text{'verb_with_brace_in_macro_call'} = '*document_root C1
    {text_before_beginning:\\n}
   *preamble_before_content C2
    *normal_command@macro C3 l2
-   |EXTRA
    |formal_args:A{a|b|c}
    |macro_name:{mycommand}
     *arguments_line C1
      {macro_line: mycommand {a, b, c}\\n}
     {raw:\\a\\|\\b\\|\\c\\\\n}
     *normal_command@end C1 l4
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }

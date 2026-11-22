@@ -23,7 +23,6 @@ $result_tree_text{'comment_on_group_line'} = '*document_root C1
    *paragraph C1
     {normal_text:in group.\\n}
    *normal_command@end C1 l3
-   |EXTRA
    |text_arg:{group}
     *line_arg C3
      {spaces_before_argument: }

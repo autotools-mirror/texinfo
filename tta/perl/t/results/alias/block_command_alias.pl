@@ -12,7 +12,6 @@ $result_tree_text{'block_command_alias'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C2
    *normal_command@alias C1 l1
-   |EXTRA
    |misc_args:A{lang|lisp}
     *line_arg C3
      {spaces_before_argument: }
@@ -20,7 +19,6 @@ $result_tree_text{'block_command_alias'} = '*document_root C1
      {spaces_after_argument:\\n}
    {empty_line:\\n}
   *normal_command@lisp C2 l3
-  |EXTRA
   |alias_of:{lang}
    *arguments_line C1
     *block_line_arg C1
@@ -28,7 +26,6 @@ $result_tree_text{'block_command_alias'} = '*document_root C1
    *preformatted C2
     {normal_text:in lang\\n}
     *normal_command@end C1 l5
-    |EXTRA
     |text_arg:{lang}
      *line_arg C3
       {spaces_before_argument: }

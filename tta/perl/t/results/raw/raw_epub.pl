@@ -15,7 +15,6 @@ $result_tree_text{'raw_epub'} = '*document_root C1
   *paragraph C2
    {normal_text:in EPUB\\n}
    *normal_command@end C1 l3
-   |EXTRA
    |text_arg:{epub}
     *line_arg C3
      {spaces_before_argument: }

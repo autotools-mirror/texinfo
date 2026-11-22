@@ -12,19 +12,16 @@ $result_tree_text{'include_setfilename_on_setfilename_line'} = '*document_root C
  *before_node_section C1
   *preamble_before_content C1
    *normal_command@setfilename C1 l1
-   |EXTRA
    |text_arg:{file }
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:file }
      *normal_command@setfilename C1 l1
-     |EXTRA
      |text_arg:{other file }
       *line_arg C3
        {spaces_before_argument: }
        {normal_text:other file }
        *normal_command@include C1 l1
-       |EXTRA
        |text_arg:{are you joking!}
         *line_arg C3
          {spaces_before_argument: }

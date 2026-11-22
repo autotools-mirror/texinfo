@@ -15,7 +15,6 @@ $result_tree_text{'index_split'} = '*document_root C21
    {text_before_beginning:\\n}
   *preamble_before_content
  *normal_command@node C1 index_split.texi:l3 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |isindex:{1}
@@ -26,7 +25,6 @@ $result_tree_text{'index_split'} = '*document_root C21
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C13 index_split.texi:l4 {split indices}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -35,7 +33,6 @@ $result_tree_text{'index_split'} = '*document_root C21
     {normal_text:split indices}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_split.texi:l5
-  |EXTRA
   |element_node:{Top}
   |index_entry:I{cp,1}
    *line_arg C3
@@ -44,7 +41,6 @@ $result_tree_text{'index_split'} = '*document_root C21
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@printindex C1 index_split.texi:l7
-  |EXTRA
   |global_command_number:{1}
   |misc_args:A{cp}
    *line_arg C3
@@ -53,7 +49,6 @@ $result_tree_text{'index_split'} = '*document_root C21
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@printindex C1 index_split.texi:l9
-  |EXTRA
   |global_command_number:{2}
   |misc_args:A{fn}
    *line_arg C3
@@ -65,7 +60,6 @@ $result_tree_text{'index_split'} = '*document_root C21
    {normal_text:And one one more index\\n}
   {empty_line:\\n}
   *normal_command@printindex C1 index_split.texi:l13
-  |EXTRA
   |global_command_number:{3}
   |misc_args:A{cp}
    *line_arg C3
@@ -80,7 +74,6 @@ $result_tree_text{'index_split'} = '*document_root C21
    *menu_entry C4 index_split.texi:l16
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{Top}
      {normal_text:Top}
@@ -91,7 +84,6 @@ $result_tree_text{'index_split'} = '*document_root C21
    *menu_entry C4 index_split.texi:l17
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{first}
      {normal_text:first}
@@ -102,7 +94,6 @@ $result_tree_text{'index_split'} = '*document_root C21
    *menu_entry C4 index_split.texi:l18
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{second-chapter}
      {normal_text:second chapter}
@@ -111,7 +102,6 @@ $result_tree_text{'index_split'} = '*document_root C21
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 index_split.texi:l19
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -119,7 +109,6 @@ $result_tree_text{'index_split'} = '*document_root C21
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C10 index_split.texi:l21 {first}
- |EXTRA
  |identifier:{first}
  |is_target:{1}
  |isindex:{1}
@@ -133,7 +122,6 @@ $result_tree_text{'index_split'} = '*document_root C21
   *paragraph C5
    {normal_text:Text and then index entries\\n}
    *index_entry_command@cindex C1 index_split.texi:l24
-   |EXTRA
    |element_node:{first}
    |index_entry:I{cp,2}
     *line_arg C3
@@ -141,7 +129,6 @@ $result_tree_text{'index_split'} = '*document_root C21
      {normal_text:entry in node}
      {spaces_after_argument:\\n}
    *index_entry_command@cindex C1 index_split.texi:l25
-   |EXTRA
    |element_node:{first}
    |index_entry:I{cp,3}
     *line_arg C3
@@ -149,7 +136,6 @@ $result_tree_text{'index_split'} = '*document_root C21
      {normal_text:! entry in node}
      {spaces_after_argument:\\n}
    *index_entry_command@findex C1 index_split.texi:l26
-   |EXTRA
    |element_node:{first}
    |index_entry:I{fn,1}
     *line_arg C3
@@ -157,7 +143,6 @@ $result_tree_text{'index_split'} = '*document_root C21
      {normal_text:fun in node}
      {spaces_after_argument:\\n}
    *index_entry_command@cindex C1 index_split.texi:l27
-   |EXTRA
    |element_node:{first}
    |index_entry:I{cp,4}
     *line_arg C3
@@ -166,7 +151,6 @@ $result_tree_text{'index_split'} = '*document_root C21
      {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@printindex C1 index_split.texi:l29
-  |EXTRA
   |global_command_number:{4}
   |misc_args:A{cp}
    *line_arg C3
@@ -175,7 +159,6 @@ $result_tree_text{'index_split'} = '*document_root C21
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@printindex C1 index_split.texi:l31
-  |EXTRA
   |global_command_number:{5}
   |misc_args:A{fn}
    *line_arg C3
@@ -184,7 +167,6 @@ $result_tree_text{'index_split'} = '*document_root C21
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 index_split.texi:l33
-  |EXTRA
   |element_node:{first}
   |index_entry:I{cp,5}
    *line_arg C3
@@ -193,7 +175,6 @@ $result_tree_text{'index_split'} = '*document_root C21
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@chapter C7 index_split.texi:l35 {First chapter}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -203,7 +184,6 @@ $result_tree_text{'index_split'} = '*document_root C21
     {normal_text:First chapter}
     {spaces_after_argument:\\n}
   *index_entry_command@findex C1 index_split.texi:l36
-  |EXTRA
   |element_node:{first}
   |index_entry:I{fn,2}
    *line_arg C3
@@ -211,7 +191,6 @@ $result_tree_text{'index_split'} = '*document_root C21
     {normal_text:a function}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 index_split.texi:l37
-  |EXTRA
   |element_node:{first}
   |index_entry:I{cp,6}
    *line_arg C3
@@ -219,7 +198,6 @@ $result_tree_text{'index_split'} = '*document_root C21
     {normal_text:a concept in first}
     {spaces_after_argument:\\n}
   *index_entry_command@findex C1 index_split.texi:l38
-  |EXTRA
   |element_node:{first}
   |index_entry:I{fn,3}
    *line_arg C3
@@ -234,7 +212,6 @@ $result_tree_text{'index_split'} = '*document_root C21
    *menu_entry C4 index_split.texi:l41
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{section-1}
      {normal_text:section 1}
@@ -245,7 +222,6 @@ $result_tree_text{'index_split'} = '*document_root C21
    *menu_entry C4 index_split.texi:l42
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{section-2}
      {normal_text:section 2}
@@ -256,7 +232,6 @@ $result_tree_text{'index_split'} = '*document_root C21
    *menu_entry C4 index_split.texi:l43
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{section-3}
      {normal_text:section 3}
@@ -267,7 +242,6 @@ $result_tree_text{'index_split'} = '*document_root C21
    *menu_entry C4 index_split.texi:l44
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{node-in-section-3}
      {normal_text:node in section 3}
@@ -278,7 +252,6 @@ $result_tree_text{'index_split'} = '*document_root C21
    *menu_entry C4 index_split.texi:l45
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{node-2-in-section-3}
      {normal_text:node 2 in section 3}
@@ -289,7 +262,6 @@ $result_tree_text{'index_split'} = '*document_root C21
    *menu_entry C4 index_split.texi:l46
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{node-3-in-section-3}
      {normal_text:node 3 in section 3}
@@ -298,7 +270,6 @@ $result_tree_text{'index_split'} = '*document_root C21
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 index_split.texi:l47
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -306,7 +277,6 @@ $result_tree_text{'index_split'} = '*document_root C21
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 index_split.texi:l49 {section 1}
- |EXTRA
  |identifier:{section-1}
  |is_target:{1}
  |isindex:{1}
@@ -317,7 +287,6 @@ $result_tree_text{'index_split'} = '*document_root C21
     {normal_text:section 1}
     {spaces_after_argument:\\n}
  *normal_command@section C11 index_split.texi:l50 {Section 1}
- |EXTRA
  |section_heading_number:{1.1}
  |section_level:{2}
  |section_number:{3}
@@ -328,7 +297,6 @@ $result_tree_text{'index_split'} = '*document_root C21
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 index_split.texi:l52
-  |EXTRA
   |element_node:{section-1}
   |index_entry:I{cp,7}
    *line_arg C3
@@ -343,7 +311,6 @@ $result_tree_text{'index_split'} = '*document_root C21
    *menu_entry C4 index_split.texi:l55
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{subsection-1}
      {normal_text:subsection 1}
@@ -354,7 +321,6 @@ $result_tree_text{'index_split'} = '*document_root C21
    *menu_entry C4 index_split.texi:l56
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{subsection-2}
      {normal_text:subsection 2}
@@ -363,7 +329,6 @@ $result_tree_text{'index_split'} = '*document_root C21
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 index_split.texi:l57
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -373,7 +338,6 @@ $result_tree_text{'index_split'} = '*document_root C21
    {normal_text:The index once more\\n}
   {empty_line:\\n}
   *normal_command@printindex C1 index_split.texi:l60
-  |EXTRA
   |global_command_number:{6}
   |misc_args:A{cp}
    *line_arg C3
@@ -382,7 +346,6 @@ $result_tree_text{'index_split'} = '*document_root C21
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 index_split.texi:l62
-  |EXTRA
   |element_node:{section-1}
   |index_entry:I{cp,8}
    *line_arg C3
@@ -391,7 +354,6 @@ $result_tree_text{'index_split'} = '*document_root C21
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 index_split.texi:l64 {subsection 1}
- |EXTRA
  |identifier:{subsection-1}
  |is_target:{1}
  |node_number:{4}
@@ -401,7 +363,6 @@ $result_tree_text{'index_split'} = '*document_root C21
     {normal_text:subsection 1}
     {spaces_after_argument:\\n}
  *normal_command@subsection C4 index_split.texi:l65 {Subsection 1}
- |EXTRA
  |section_heading_number:{1.1.1}
  |section_level:{3}
  |section_number:{4}
@@ -415,7 +376,6 @@ $result_tree_text{'index_split'} = '*document_root C21
    {normal_text:In subsection 1\\n}
   {empty_line:\\n}
  *normal_command@node C1 index_split.texi:l69 {subsection 2}
- |EXTRA
  |identifier:{subsection-2}
  |is_target:{1}
  |isindex:{1}
@@ -426,7 +386,6 @@ $result_tree_text{'index_split'} = '*document_root C21
     {normal_text:subsection 2}
     {spaces_after_argument:\\n}
  *normal_command@subsection C10 index_split.texi:l70 {Subsection 2}
- |EXTRA
  |section_heading_number:{1.1.2}
  |section_level:{3}
  |section_number:{5}
@@ -440,7 +399,6 @@ $result_tree_text{'index_split'} = '*document_root C21
    {normal_text:index in subsction 2\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 index_split.texi:l74
-  |EXTRA
   |element_node:{subsection-2}
   |index_entry:I{cp,9}
    *line_arg C3
@@ -449,7 +407,6 @@ $result_tree_text{'index_split'} = '*document_root C21
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@printindex C1 index_split.texi:l76
-  |EXTRA
   |global_command_number:{7}
   |misc_args:A{cp}
    *line_arg C3
@@ -458,7 +415,6 @@ $result_tree_text{'index_split'} = '*document_root C21
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 index_split.texi:l78
-  |EXTRA
   |element_node:{subsection-2}
   |index_entry:I{cp,10}
    *line_arg C3
@@ -467,7 +423,6 @@ $result_tree_text{'index_split'} = '*document_root C21
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 index_split.texi:l80 {section 2}
- |EXTRA
  |identifier:{section-2}
  |is_target:{1}
  |node_number:{6}
@@ -477,7 +432,6 @@ $result_tree_text{'index_split'} = '*document_root C21
     {normal_text:section 2}
     {spaces_after_argument:\\n}
  *normal_command@section C4 index_split.texi:l81 {Section 2}
- |EXTRA
  |section_heading_number:{1.2}
  |section_level:{2}
  |section_number:{6}
@@ -491,7 +445,6 @@ $result_tree_text{'index_split'} = '*document_root C21
    {normal_text:Section 2\\n}
   {empty_line:\\n}
  *normal_command@node C1 index_split.texi:l85 {section 3}
- |EXTRA
  |identifier:{section-3}
  |is_target:{1}
  |isindex:{1}
@@ -502,7 +455,6 @@ $result_tree_text{'index_split'} = '*document_root C21
     {normal_text:section 3}
     {spaces_after_argument:\\n}
  *normal_command@section C6 index_split.texi:l86 {Section 3}
- |EXTRA
  |section_heading_number:{1.3}
  |section_level:{2}
  |section_number:{7}
@@ -513,7 +465,6 @@ $result_tree_text{'index_split'} = '*document_root C21
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 index_split.texi:l88
-  |EXTRA
   |element_node:{section-3}
   |index_entry:I{cp,11}
    *line_arg C3
@@ -522,7 +473,6 @@ $result_tree_text{'index_split'} = '*document_root C21
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@printindex C1 index_split.texi:l90
-  |EXTRA
   |global_command_number:{8}
   |misc_args:A{cp}
    *line_arg C3
@@ -531,7 +481,6 @@ $result_tree_text{'index_split'} = '*document_root C21
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C5 index_split.texi:l92 {node in section 3}
- |EXTRA
  |identifier:{node-in-section-3}
  |is_target:{1}
  |node_number:{8}
@@ -541,19 +490,16 @@ $result_tree_text{'index_split'} = '*document_root C21
     {normal_text:node in section 3}
    *line_arg
    *line_arg C1
-   |EXTRA
    |node_content:A{0|0}
    |normalized:{section-3}
     {normal_text:section 3}
    *line_arg C2
-   |EXTRA
    |node_content:A{0|0}
    |normalized:{first}
     {normal_text:first}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 index_split.texi:l94
-  |EXTRA
   |element_node:{node-in-section-3}
   |index_entry:I{cp,12}
    *line_arg C3
@@ -564,7 +510,6 @@ $result_tree_text{'index_split'} = '*document_root C21
    {normal_text:Text for the node in section 3\\n}
   {empty_line:\\n}
  *normal_command@node C13 index_split.texi:l97 {node 2 in section 3}
- |EXTRA
  |identifier:{node-2-in-section-3}
  |is_target:{1}
  |isindex:{1}
@@ -576,14 +521,12 @@ $result_tree_text{'index_split'} = '*document_root C21
    *line_arg
    *line_arg
    *line_arg C2
-   |EXTRA
    |node_content:A{0|0}
    |normalized:{first}
     {normal_text:first}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 index_split.texi:l99
-  |EXTRA
   |element_node:{node-2-in-section-3}
   |index_entry:I{cp,13}
    *line_arg C3
@@ -594,7 +537,6 @@ $result_tree_text{'index_split'} = '*document_root C21
    {normal_text:Text for the node 2 in section 3\\n}
   {empty_line:\\n}
   *normal_command@printindex C1 index_split.texi:l102
-  |EXTRA
   |global_command_number:{9}
   |misc_args:A{cp}
    *line_arg C3
@@ -603,7 +545,6 @@ $result_tree_text{'index_split'} = '*document_root C21
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 index_split.texi:l104
-  |EXTRA
   |element_node:{node-2-in-section-3}
   |index_entry:I{cp,14}
    *line_arg C3
@@ -612,7 +553,6 @@ $result_tree_text{'index_split'} = '*document_root C21
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@printindex C1 index_split.texi:l106
-  |EXTRA
   |global_command_number:{10}
   |misc_args:A{cp}
    *line_arg C3
@@ -621,7 +561,6 @@ $result_tree_text{'index_split'} = '*document_root C21
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 index_split.texi:l108
-  |EXTRA
   |element_node:{node-2-in-section-3}
   |index_entry:I{cp,15}
    *line_arg C3
@@ -630,7 +569,6 @@ $result_tree_text{'index_split'} = '*document_root C21
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C4 index_split.texi:l110 {node 3 in section 3}
- |EXTRA
  |identifier:{node-3-in-section-3}
  |is_target:{1}
  |node_number:{10}
@@ -641,14 +579,12 @@ $result_tree_text{'index_split'} = '*document_root C21
    *line_arg
    *line_arg
    *line_arg C2
-   |EXTRA
    |node_content:A{0|0}
    |normalized:{first}
     {normal_text:first}
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 index_split.texi:l112
-  |EXTRA
   |element_node:{node-3-in-section-3}
   |index_entry:I{cp,16}
    *line_arg C3
@@ -657,7 +593,6 @@ $result_tree_text{'index_split'} = '*document_root C21
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 index_split.texi:l114 {second chapter}
- |EXTRA
  |identifier:{second-chapter}
  |is_target:{1}
  |node_number:{11}
@@ -667,7 +602,6 @@ $result_tree_text{'index_split'} = '*document_root C21
     {normal_text:second chapter}
     {spaces_after_argument:\\n}
  *normal_command@chapter C4 index_split.texi:l115 {Second chapter}
- |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
  |section_number:{8}

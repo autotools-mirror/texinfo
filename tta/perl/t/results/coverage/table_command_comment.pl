@@ -29,7 +29,6 @@ $result_tree_text{'table_command_comment'} = '*document_root C1
        {normal_text:item}
        {spaces_after_argument:\\n}
    *normal_command@end C1 l3
-   |EXTRA
    |text_arg:{table}
     *line_arg C2
      {spaces_before_argument: }

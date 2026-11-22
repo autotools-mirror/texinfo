@@ -12,14 +12,12 @@ $result_tree_text{'ifset_and_end_isef_in_macro'} = '*document_root C1
  *before_node_section C1
   *preamble_before_content C4
    *normal_command@macro C3 l1
-   |EXTRA
    |formal_args:A{}
    |macro_name:{beginifset}
     *arguments_line C1
      {macro_line: beginifset {}\\n}
     {raw:@ifset a\\n}
     *normal_command@end C1 l3
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -27,14 +25,12 @@ $result_tree_text{'ifset_and_end_isef_in_macro'} = '*document_root C1
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *normal_command@macro C3 l5
-   |EXTRA
    |formal_args:A{}
    |macro_name:{endifset}
     *arguments_line C1
      {macro_line: endifset {}\\n}
     {raw:@end ifset\\n}
     *normal_command@end C1 l7
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }

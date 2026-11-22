@@ -14,7 +14,6 @@ $result_tree_text{'xref_test'} = '*document_root C2
    {text_before_beginning:\\n}
   *preamble_before_content
  *normal_command@node C3 l2 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -27,7 +26,6 @@ $result_tree_text{'xref_test'} = '*document_root C2
   *paragraph C10
    *normal_command@xref C4 l4
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
      {normal_text:in xref}
     *brace_arg
@@ -38,7 +36,6 @@ $result_tree_text{'xref_test'} = '*document_root C2
    {normal_text:. }
    *normal_command@xref C4 l4
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
      {normal_text:bad xref}
     *brace_arg
@@ -51,7 +48,6 @@ $result_tree_text{'xref_test'} = '*document_root C2
     *brace_container C1
      *normal_command@xref C4 l5
       *brace_arg C1
-      |EXTRA
       |node_content:A{0|0}
        {normal_text:bad nested xref}
       *brace_arg
@@ -62,7 +58,6 @@ $result_tree_text{'xref_test'} = '*document_root C2
    {normal_text:.\\n}
    *normal_command@xref C4 l6
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
      {normal_text:in ref ending with a dot.}
     *brace_arg C2
@@ -75,7 +70,6 @@ $result_tree_text{'xref_test'} = '*document_root C2
    {normal_text: ! after xref and dot inside.\\n}
    *normal_command@xref C3 l7
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{in-ref-followed-by-symbol}
      {normal_text:in ref followed by symbol}

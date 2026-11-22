@@ -12,7 +12,6 @@ $result_tree_text{'node_up_direction_for_top_with_manual'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -23,7 +22,6 @@ $result_tree_text{'node_up_direction_for_top_with_manual'} = '*document_root C2
    *line_arg
    *line_arg
    *line_arg C5
-   |EXTRA
    |manual_content:A{1|1}
    |node_content:A{3|3}
    |normalized:{Top}

@@ -12,14 +12,12 @@ $result_tree_text{'macro_in_def_delimiters'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C2
    *normal_command@macro C3 l1
-   |EXTRA
    |formal_args:A{}
    |macro_name:{string}
     *arguments_line C1
      {macro_line: string\\n}
     {raw:aa(b *c)\\n}
     *normal_command@end C1 l3
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -28,7 +26,6 @@ $result_tree_text{'macro_in_def_delimiters'} = '*document_root C1
    {empty_line:\\n}
   *normal_command@deffn C1 l5
    *def_line C1 l5
-   |EXTRA
    |def_command:{deffn}
    |index_entry:I{fn,1}
    |original_def_cmdname:{deffn}

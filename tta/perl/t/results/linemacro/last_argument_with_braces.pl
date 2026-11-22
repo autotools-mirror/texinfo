@@ -12,7 +12,6 @@ $result_tree_text{'last_argument_with_braces'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C2
    *normal_command@linemacro C4 l1
-   |EXTRA
    |formal_args:A{symbol|rest}
    |macro_name:{defbuiltin}
     *arguments_line C1
@@ -20,7 +19,6 @@ $result_tree_text{'last_argument_with_braces'} = '*document_root C1
     {raw:@defline \\symbol\\ f r\\n}
     {raw:@defline expand Builtin and \\rest\\\\n}
     *normal_command@end C1 l4
-    |EXTRA
     |text_arg:{linemacro}
      *line_arg C3
       {spaces_before_argument: }
@@ -41,7 +39,6 @@ $result_tree_text{'last_argument_with_braces'} = '*document_root C1
        >{macro_call_arg_text:a last {} arg{ument}}
      {spaces_before_argument:\\n}
    *normal_command@defline C1 l7:@defbuiltin
-   |EXTRA
    |def_command:{defline}
    |original_def_cmdname:{defline}
     *line_arg C9
@@ -63,7 +60,6 @@ $result_tree_text{'last_argument_with_braces'} = '*document_root C1
        {normal_text:r}
      {spaces_after_argument:\\n}
    *normal_command@defline C1 l7:@defbuiltin
-   |EXTRA
    |def_command:{defline}
    |original_def_cmdname:{defline}
     *line_arg C16
@@ -112,7 +108,6 @@ $result_tree_text{'last_argument_with_braces'} = '*document_root C1
        >{spaces_before_argument: }
        >{macro_call_arg_text:{} {}}
    *normal_command@defline C1 l9:@defbuiltin
-   |EXTRA
    |def_command:{defline}
    |original_def_cmdname:{defline}
     *line_arg C9
@@ -134,7 +129,6 @@ $result_tree_text{'last_argument_with_braces'} = '*document_root C1
        {normal_text:r}
      {spaces_after_argument:\\n}
    *normal_command@defline C1 l9:@defbuiltin
-   |EXTRA
    |def_command:{defline}
    |original_def_cmdname:{defline}
     *line_arg C11
@@ -171,7 +165,6 @@ $result_tree_text{'last_argument_with_braces'} = '*document_root C1
        >{spaces_before_argument: }
        >{macro_call_arg_text:{second arg} remaining on {line}}
    *normal_command@defline C1 l11:@defbuiltin
-   |EXTRA
    |def_command:{defline}
    |original_def_cmdname:{defline}
     *line_arg C9
@@ -193,7 +186,6 @@ $result_tree_text{'last_argument_with_braces'} = '*document_root C1
        {normal_text:r}
      {spaces_after_argument:\\n}
    *normal_command@defline C1 l11:@defbuiltin
-   |EXTRA
    |def_command:{defline}
    |original_def_cmdname:{defline}
     *line_arg C15
@@ -229,7 +221,6 @@ $result_tree_text{'last_argument_with_braces'} = '*document_root C1
        {normal_text:line}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l12
-   |EXTRA
    |text_arg:{defblock}
     *line_arg C3
      {spaces_before_argument: }

@@ -12,7 +12,6 @@ $result_tree_text{'documentscript_argument'} = '*document_root C1
  *before_node_section C1
   *preamble_before_content C14
    *normal_command@documentscript C1 l1
-   |EXTRA
    |global_command_number:{1}
    |text_arg:{Kits}
     *line_arg C3
@@ -20,7 +19,6 @@ $result_tree_text{'documentscript_argument'} = '*document_root C1
      {normal_text:Kits}
      {spaces_after_argument:\\n}
    *normal_command@documentscript C1 l2
-   |EXTRA
    |global_command_number:{2}
    |text_arg:{kits}
     *line_arg C3
@@ -28,7 +26,6 @@ $result_tree_text{'documentscript_argument'} = '*document_root C1
      {normal_text:kits}
      {spaces_after_argument:\\n}
    *normal_command@documentscript C1 l3
-   |EXTRA
    |global_command_number:{3}
    |text_arg:{cyrillic}
     *line_arg C3
@@ -36,7 +33,6 @@ $result_tree_text{'documentscript_argument'} = '*document_root C1
      {normal_text:cyrillic}
      {spaces_after_argument:\\n}
    *normal_command@documentscript C1 l4
-   |EXTRA
    |global_command_number:{4}
    |text_arg:{Cyrillic}
     *line_arg C3
@@ -44,13 +40,11 @@ $result_tree_text{'documentscript_argument'} = '*document_root C1
      {normal_text:Cyrillic}
      {spaces_after_argument:  \\n}
    *normal_command@documentscript C1 l5
-   |EXTRA
    |global_command_number:{5}
    |text_arg:{}
     *line_arg C1
      {spaces_before_argument:     \\n}
    *normal_command@documentscript C1 l6
-   |EXTRA
    |global_command_number:{6}
    |text_arg:{unknown}
     *line_arg C3
@@ -58,13 +52,11 @@ $result_tree_text{'documentscript_argument'} = '*document_root C1
      {normal_text:unknown}
      {spaces_after_argument:\\n}
    *normal_command@documentscript C1 l7
-   |EXTRA
    |global_command_number:{7}
    |text_arg:{}
     *line_arg C1
      {spaces_before_argument:\\n}
    *normal_command@documentscript C1 l8
-   |EXTRA
    |global_command_number:{8}
    |text_arg:{UKNO}
     *line_arg C3
@@ -72,7 +64,6 @@ $result_tree_text{'documentscript_argument'} = '*document_root C1
      {normal_text:UKNO}
      {spaces_after_argument:\\n}
    *normal_command@documentscript C1 l9
-   |EXTRA
    |global_command_number:{9}
    |text_arg:{AÂbc}
     *line_arg C3
@@ -80,7 +71,6 @@ $result_tree_text{'documentscript_argument'} = '*document_root C1
      {normal_text:AÂbc}
      {spaces_after_argument:\\n}
    *normal_command@documentscript C1 l10
-   |EXTRA
    |global_command_number:{10}
    |text_arg:{M让}
     *line_arg C3
@@ -88,7 +78,6 @@ $result_tree_text{'documentscript_argument'} = '*document_root C1
      {normal_text:M让}
      {spaces_after_argument:\\n}
    *normal_command@documentscript C1 l11
-   |EXTRA
    |global_command_number:{11}
    |text_arg:{a}
     *line_arg C3
@@ -96,7 +85,6 @@ $result_tree_text{'documentscript_argument'} = '*document_root C1
      {normal_text:a}
      {spaces_after_argument:\\n}
    *normal_command@documentscript C1 l12
-   |EXTRA
    |global_command_number:{12}
    |text_arg:{UknowN}
     *line_arg C3
@@ -104,7 +92,6 @@ $result_tree_text{'documentscript_argument'} = '*document_root C1
      {normal_text:UknowN}
      {spaces_after_argument:\\n}
    *normal_command@documentscript C1 l13
-   |EXTRA
    |global_command_number:{13}
    |text_arg:{j  k}
     *line_arg C3
@@ -112,7 +99,6 @@ $result_tree_text{'documentscript_argument'} = '*document_root C1
      {normal_text:j  k}
      {spaces_after_argument:\\n}
    *normal_command@documentscript C1 l14
-   |EXTRA
    |global_command_number:{14}
    |text_arg:{a%}
     *line_arg C3

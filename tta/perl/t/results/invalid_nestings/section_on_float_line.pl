@@ -12,7 +12,6 @@ $result_tree_text{'section_on_float_line'} = '*document_root C2
  *before_node_section C2
   *preamble_before_content
   *normal_command@float C1 l1
-  |EXTRA
   |float_number:{1}
   |float_type:{t}
   |global_command_number:{1}
@@ -27,7 +26,6 @@ $result_tree_text{'section_on_float_line'} = '*document_root C2
      {normal_text:l}
      {spaces_after_argument: }
  *normal_command@section C1 l1 {first}
- |EXTRA
  |identifier:{first}
  |is_target:{1}
  |section_heading_number:{1}

@@ -24,14 +24,12 @@ $result_tree_text{'nested_indentedblock'} = '*document_root C1
     *preformatted C1
      {normal_text:   f  f  f``g\\n}
     *normal_command@end C1 l5
-    |EXTRA
     |text_arg:{indentedblock}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:indentedblock}
       {spaces_after_argument:\\n}
    *normal_command@end C1 l6
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }
@@ -52,14 +50,12 @@ $result_tree_text{'nested_indentedblock'} = '*document_root C1
     *preformatted C1
      {normal_text:in example\\n}
     *normal_command@end C1 l12
-    |EXTRA
     |text_arg:{example}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:example}
       {spaces_after_argument:\\n}
    *normal_command@end C1 l13
-   |EXTRA
    |text_arg:{indentedblock}
     *line_arg C3
      {spaces_before_argument: }

@@ -12,7 +12,6 @@ $result_tree_text{'macro_imbricated_with_beginning_command_name'} = '*document_r
  *before_node_section C1
   *preamble_before_content C2
    *normal_command@macro C5 l1
-   |EXTRA
    |formal_args:A{}
    |macro_name:{foo}
     *arguments_line C1
@@ -21,7 +20,6 @@ $result_tree_text{'macro_imbricated_with_beginning_command_name'} = '*document_r
     {raw:@macrototo\\n}
     {raw:in macrototo\\n}
     *normal_command@end C1 l5
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }

@@ -22,7 +22,6 @@ NodeForward: [U1]
    {text_before_beginning:\\n}
   *preamble_before_content
  *normal_command@node C1 transliterated_names_conflicts.texi:l3 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -32,7 +31,6 @@ NodeForward: [U1]
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C2 transliterated_names_conflicts.texi:l4 {Same transliterated names}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -57,7 +55,6 @@ NodeUp: [U0]
 NodeForward: [U2]
 NodeBack: [U0]
  *normal_command@node C1 transliterated_names_conflicts.texi:l6 {Prés}
- |EXTRA
  |identifier:{Pr_00e9s}
  |is_target:{1}
  |node_number:{2}
@@ -67,7 +64,6 @@ NodeBack: [U0]
     {normal_text:Prés}
     {spaces_after_argument:\\n}
  *normal_command@chapter C2 transliterated_names_conflicts.texi:l7 {Prés}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -89,7 +85,6 @@ NodePrev: [U1]
 NodeUp: [U0]
 NodeBack: [U1]
  *normal_command@node C1 transliterated_names_conflicts.texi:l9 {Other node}
- |EXTRA
  |identifier:{Other-node}
  |is_target:{1}
  |node_number:{3}
@@ -99,7 +94,6 @@ NodeBack: [U1]
     {normal_text:Other node}
     {spaces_after_argument:\\n}
  *normal_command@chapter C7 transliterated_names_conflicts.texi:l10 {Other chapter}
- |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
  |section_number:{3}
@@ -110,7 +104,6 @@ NodeBack: [U1]
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@anchor C1 transliterated_names_conflicts.texi:l12
-  |EXTRA
   |identifier:{Pr_00eas}
   |is_target:{1}
    *brace_arg C1
@@ -118,7 +111,6 @@ NodeBack: [U1]
   {spaces_after_close_brace:\\n}
   {empty_line:\\n}
   *normal_command@float C3 transliterated_names_conflicts.texi:l14
-  |EXTRA
   |float_number:{2.1}
   |float_type:{Figure}
   |global_command_number:{1}
@@ -135,7 +127,6 @@ NodeBack: [U1]
    *paragraph C1
     {normal_text:In figure\\n}
    *normal_command@end C1 transliterated_names_conflicts.texi:l16
-   |EXTRA
    |text_arg:{float}
     *line_arg C3
      {spaces_before_argument: }

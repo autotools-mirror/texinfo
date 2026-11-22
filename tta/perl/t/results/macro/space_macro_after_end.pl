@@ -12,14 +12,12 @@ $result_tree_text{'space_macro_after_end'} = '*document_root C1
  *before_node_section C1
   *preamble_before_content C3
    *normal_command@macro C3 l1
-   |EXTRA
    |formal_args:A{}
    |macro_name:{spaces}
     *arguments_line C1
      {macro_line: spaces\\n}
     {raw:  \\n}
     *normal_command@end C1 l3
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -33,7 +31,6 @@ $result_tree_text{'space_macro_after_end'} = '*document_root C1
     *rawpreformatted C1
      {normal_text:in html\\n}
     *normal_command@end C1 l7
-    |EXTRA
     |text_arg:{html}
      *line_arg C3
       {spaces_before_argument: }

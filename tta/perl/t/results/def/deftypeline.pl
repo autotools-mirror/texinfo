@@ -16,7 +16,6 @@ $result_tree_text{'deftypeline'} = '*document_root C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *normal_command@deftypeline C1 l2
-   |EXTRA
    |def_command:{deftypeline}
    |original_def_cmdname:{deftypeline}
     *line_arg C18
@@ -62,7 +61,6 @@ $result_tree_text{'deftypeline'} = '*document_root C1
       *brace_container
      {normal_text:\\n}
    *normal_command@end C1 l4
-   |EXTRA
    |text_arg:{defblock}
     *line_arg C3
      {spaces_before_argument: }

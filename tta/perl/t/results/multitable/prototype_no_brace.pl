@@ -12,7 +12,6 @@ $result_tree_text{'prototype_no_brace'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *normal_command@multitable C2 l1
-  |EXTRA
   |max_columns:{0}
    *arguments_line C1
     *block_line_arg C5
@@ -24,7 +23,6 @@ $result_tree_text{'prototype_no_brace'} = '*document_root C1
      {normal_text: b    cc}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l2
-   |EXTRA
    |text_arg:{multitable}
     *line_arg C3
      {spaces_before_argument: }

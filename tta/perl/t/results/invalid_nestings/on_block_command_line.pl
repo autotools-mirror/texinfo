@@ -12,41 +12,34 @@ $result_tree_text{'on_block_command_line'} = '*document_root C1
  *before_node_section C4
   *preamble_before_content
   *normal_command@multitable C3 l1
-  |EXTRA
   |max_columns:{1}
    *arguments_line C1
     *block_line_arg C5
      {spaces_before_argument: }
      *bracketed_arg C1 l1
       *normal_command@anchor C1 l1
-      |EXTRA
       |identifier:{in-anchor}
       |is_target:{1}
        *brace_arg C1
         {normal_text:in anchor}
      {normal_text: }
      *normal_command@titlefont C1 l1
-     |EXTRA
      |global_command_number:{1}
       *brace_container C1
        {normal_text:in titlefont}
      {spaces_after_argument:\\n}
    *multitable_body C1
     *row C1
-    |EXTRA
     |row_number:{1}
      *normal_command@item C3 l2
-     |EXTRA
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *normal_command@titlefont C1 l2
-      |EXTRA
       |global_command_number:{2}
        *brace_container C1
         {normal_text:in titlefont}
       {normal_text:\\n}
    *normal_command@end C1 l3
-   |EXTRA
    |text_arg:{multitable}
     *line_arg C3
      {spaces_before_argument: }
@@ -60,19 +53,16 @@ $result_tree_text{'on_block_command_line'} = '*document_root C1
      *normal_command@indent l5
      {ignorable_spaces_after_command: }
      *normal_command@titlefont C1 l5
-     |EXTRA
      |global_command_number:{3}
       *brace_container C1
        {normal_text:in titlefont}
      {normal_text: }
      *normal_command@anchor C1 l5
-     |EXTRA
      |identifier:{in-quotation-anchor}
      |is_target:{1}
       *brace_arg C1
        {normal_text:in quotation anchor}
      *normal_command@footnote C1 l5
-     |EXTRA
      |global_command_number:{1}
       *brace_command_context C1
        *paragraph C1
@@ -84,7 +74,6 @@ $result_tree_text{'on_block_command_line'} = '*document_root C1
        {normal_text:exdent}
        {spaces_after_argument:\\n}
    *normal_command@end C1 l6
-   |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }

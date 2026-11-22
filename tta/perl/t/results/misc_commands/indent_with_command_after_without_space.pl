@@ -13,7 +13,6 @@ $result_tree_text{'indent_with_command_after_without_space'} = '*document_root C
   *preamble_before_content C1
    *normal_command@indent l1
   *paragraph C2
-  |EXTRA
   |indent:{1}
    *normal_command@AA C1 l1
     *brace_container

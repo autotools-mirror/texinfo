@@ -18,7 +18,6 @@ Next: [U1]
  *before_node_section C1
   *preamble_before_content
  *normal_command@unnumbered C4 l1 {before nodes}
- |EXTRA
  |identifier:{before-nodes}
  |is_target:{1}
  |section_level:{1}
@@ -40,7 +39,6 @@ Back: [U0]
 FastBack: [U0]
 Prev: [U0]
  *normal_command@node C1 l5 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -50,7 +48,6 @@ Prev: [U0]
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C2 l6 {top section}
- |EXTRA
  |section_level:{1}
  |section_number:{2}
   *arguments_line C1

@@ -14,7 +14,6 @@ $result_tree_text{'nested_multitable'} = '*document_root C1
    {text_before_beginning:\\n}
   *preamble_before_content
   *normal_command@multitable C3 l2
-  |EXTRA
   |max_columns:{2}
    *arguments_line C1
     *block_line_arg C5
@@ -29,14 +28,11 @@ $result_tree_text{'nested_multitable'} = '*document_root C1
      {spaces_after_argument:\\n}
    *multitable_body C2
     *row C2
-    |EXTRA
     |row_number:{1}
      *normal_command@item C3 l3
-     |EXTRA
      |cell_number:{1}
       {ignorable_spaces_after_command:\\n}
       *normal_command@multitable C3 l4
-      |EXTRA
       |max_columns:{2}
        *arguments_line C1
         *block_line_arg C5
@@ -49,22 +45,18 @@ $result_tree_text{'nested_multitable'} = '*document_root C1
          {spaces_after_argument:\\n}
        *multitable_body C1
         *row C2
-        |EXTRA
         |row_number:{1}
          *normal_command@item C2 l5
-         |EXTRA
          |cell_number:{1}
           {ignorable_spaces_after_command: }
           *paragraph C1
            {normal_text:AAAA }
          *normal_command@tab C2 l5
-         |EXTRA
          |cell_number:{2}
           {ignorable_spaces_after_command: }
           *paragraph C1
            {normal_text:machin\\n}
        *normal_command@end C1 l6
-       |EXTRA
        |text_arg:{multitable}
         *line_arg C3
          {spaces_before_argument: }
@@ -72,28 +64,23 @@ $result_tree_text{'nested_multitable'} = '*document_root C1
          {spaces_after_argument:\\n}
       {spaces_before_paragraph: }
      *normal_command@tab C2 l7
-     |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C1
        {normal_text:bidule\\n}
     *row C2
-    |EXTRA
     |row_number:{2}
      *normal_command@item C2 l8
-     |EXTRA
      |cell_number:{1}
       {ignorable_spaces_after_command: }
       *paragraph C1
        {normal_text:other item }
      *normal_command@tab C2 l8
-     |EXTRA
      |cell_number:{2}
       {ignorable_spaces_after_command: }
       *paragraph C1
        {normal_text:in tab\\n}
    *normal_command@end C1 l9
-   |EXTRA
    |text_arg:{multitable}
     *line_arg C3
      {spaces_before_argument: }

@@ -12,7 +12,6 @@ $result_tree_text{'caption_in_example'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *normal_command@float C4 l1
-  |EXTRA
   |float_type:{float}
   |global_command_number:{1}
    *arguments_line C1
@@ -38,14 +37,12 @@ $result_tree_text{'caption_in_example'} = '*document_root C1
      {empty_line:\\n}
      {normal_text:After caption\\n}
     *normal_command@end C1 l9
-    |EXTRA
     |text_arg:{example}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:example}
       {spaces_after_argument:\\n}
    *normal_command@end C1 l10
-   |EXTRA
    |text_arg:{float}
     *line_arg C3
      {spaces_before_argument: }

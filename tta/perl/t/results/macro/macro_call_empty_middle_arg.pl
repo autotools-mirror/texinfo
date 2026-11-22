@@ -12,7 +12,6 @@ $result_tree_text{'macro_call_empty_middle_arg'} = '*document_root C1
  *before_node_section C6
   *preamble_before_content C2
    *normal_command@macro C5 l1
-   |EXTRA
    |formal_args:A{aa|bb|cc}
    |macro_name:{threea}
     *arguments_line C1
@@ -21,7 +20,6 @@ $result_tree_text{'macro_call_empty_middle_arg'} = '*document_root C1
     {raw:second \\bb\\,\\n}
     {raw:third \\cc\\,\\n}
     *normal_command@end C1 l5
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }

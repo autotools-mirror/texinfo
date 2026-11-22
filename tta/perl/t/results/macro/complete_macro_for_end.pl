@@ -12,14 +12,12 @@ $result_tree_text{'complete_macro_for_end'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C2
    *normal_command@macro C3 l1
-   |EXTRA
    |formal_args:A{}
    |macro_name:{theend}
     *arguments_line C1
      {macro_line: theend\\n}
     {raw:@end cartouche\\n}
     *normal_command@end C1 l3
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -35,7 +33,6 @@ $result_tree_text{'complete_macro_for_end'} = '*document_root C1
       >*brace_arg
      {spaces_before_argument:\\n}
    *normal_command@end C1 l6:@theend
-   |EXTRA
    |text_arg:{cartouche}
     *line_arg C2
      {spaces_before_argument: }

@@ -12,7 +12,6 @@ $result_tree_text{'accentenc'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content C2
    *normal_command@documentencoding C1 l1
-   |EXTRA
    |global_command_number:{1}
    |input_encoding_name:{iso-8859-1}
    |text_arg:{ISO-8859-1}
@@ -22,7 +21,6 @@ $result_tree_text{'accentenc'} = '*document_root C3
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *normal_command@node C1 l3 {first}
- |EXTRA
  |identifier:{first}
  |is_target:{1}
  |node_number:{1}
@@ -32,7 +30,6 @@ $result_tree_text{'accentenc'} = '*document_root C3
     {normal_text:first}
     {spaces_after_argument:\\n}
  *normal_command@top C77 l4 {top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1

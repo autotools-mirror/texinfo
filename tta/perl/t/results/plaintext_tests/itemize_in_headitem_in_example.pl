@@ -24,7 +24,6 @@ $result_tree_text{'itemize_in_headitem_in_example'} = '*document_root C1
       {ignorable_spaces_after_command: }
       {normal_text:a \\n}
     *normal_command@end C1 l4
-    |EXTRA
     |text_arg:{itemize}
      *line_arg C3
       {spaces_before_argument: }
@@ -37,7 +36,6 @@ $result_tree_text{'itemize_in_headitem_in_example'} = '*document_root C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *normal_command@item C2 l7
-    |EXTRA
     |item_number:{1}
      *preformatted C2
       {ignorable_spaces_after_command: }
@@ -46,7 +44,6 @@ $result_tree_text{'itemize_in_headitem_in_example'} = '*document_root C1
       {ignorable_spaces_after_command: }
       {normal_text:ccc\\n}
     *normal_command@end C1 l9
-    |EXTRA
     |text_arg:{itemize}
      *line_arg C3
       {spaces_before_argument: }
@@ -63,13 +60,11 @@ $result_tree_text{'itemize_in_headitem_in_example'} = '*document_root C1
       {ignorable_spaces_after_command: }
       {normal_text:ddd\\n}
     *normal_command@item C1 l13
-    |EXTRA
     |item_number:{1}
      *preformatted C2
       {ignorable_spaces_after_command: }
       {normal_text:eee\\n}
     *normal_command@end C1 l14
-    |EXTRA
     |text_arg:{itemize}
      *line_arg C3
       {spaces_before_argument: }
@@ -82,7 +77,6 @@ $result_tree_text{'itemize_in_headitem_in_example'} = '*document_root C1
      *block_line_arg C1
       {spaces_before_argument:\\n}
     *normal_command@item C2 l17
-    |EXTRA
     |item_number:{1}
      *preformatted C2
       {ignorable_spaces_after_command: }
@@ -91,13 +85,11 @@ $result_tree_text{'itemize_in_headitem_in_example'} = '*document_root C1
       {ignorable_spaces_after_command: }
       {normal_text:ggg\\n}
     *normal_command@item C1 l19
-    |EXTRA
     |item_number:{2}
      *preformatted C2
       {ignorable_spaces_after_command: }
       {normal_text:hhh\\n}
     *normal_command@end C1 l20
-    |EXTRA
     |text_arg:{itemize}
      *line_arg C3
       {spaces_before_argument: }
@@ -106,7 +98,6 @@ $result_tree_text{'itemize_in_headitem_in_example'} = '*document_root C1
    *preformatted C1
     {empty_line:\\n}
    *normal_command@end C1 l22
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }

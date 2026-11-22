@@ -12,7 +12,6 @@ $result_tree_text{'verb_in_menu_description'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 l1 {first}
- |EXTRA
  |identifier:{first}
  |is_target:{1}
  |node_number:{1}
@@ -22,7 +21,6 @@ $result_tree_text{'verb_in_menu_description'} = '*document_root C3
     {normal_text:first}
     {spaces_after_argument:\\n}
  *normal_command@top C3 l2 {top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -38,7 +36,6 @@ $result_tree_text{'verb_in_menu_description'} = '*document_root C3
    *menu_entry C4 l5
     {menu_entry_leading_text:* }
     *menu_entry_node C3
-    |EXTRA
     |manual_content:A{1|1}
      {normal_text:(}
      {normal_text:manual}
@@ -58,7 +55,6 @@ $result_tree_text{'verb_in_menu_description'} = '*document_root C3
     *preformatted C1
      {after_menu_description_line:\\n}
    *normal_command@end C1 l10
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }

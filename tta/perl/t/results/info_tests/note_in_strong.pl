@@ -12,7 +12,6 @@ $result_tree_text{'note_in_strong'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C15 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}

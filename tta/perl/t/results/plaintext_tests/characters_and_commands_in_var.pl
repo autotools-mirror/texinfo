@@ -64,7 +64,6 @@ $result_tree_text{'characters_and_commands_in_var'} = '*document_root C1
   *paragraph C3
    {normal_text:AAA}
    *normal_command@footnote C1 l8
-   |EXTRA
    |global_command_number:{1}
     *brace_command_context C1
      *paragraph C6

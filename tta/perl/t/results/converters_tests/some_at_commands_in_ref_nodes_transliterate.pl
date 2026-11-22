@@ -14,7 +14,6 @@ $result_tree_text{'some_at_commands_in_ref_nodes_transliterate'} = '*document_ro
    {text_before_beginning:\\n}
   *preamble_before_content
  *normal_command@node C1 l2 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -24,7 +23,6 @@ $result_tree_text{'some_at_commands_in_ref_nodes_transliterate'} = '*document_ro
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C4 l3 {Top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -40,7 +38,6 @@ $result_tree_text{'some_at_commands_in_ref_nodes_transliterate'} = '*document_ro
    *menu_entry C4 l6
     {menu_entry_leading_text:* }
     *menu_entry_node C14
-    |EXTRA
     |node_content:A{0|13}
     |normalized:{A-sc-_00f1-_00e5-TeX-node-_00ef-_00ef-_1e14-_0142-_1e08-_00a1}
      {normal_text:A }
@@ -89,7 +86,6 @@ $result_tree_text{'some_at_commands_in_ref_nodes_transliterate'} = '*document_ro
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 l7
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -97,7 +93,6 @@ $result_tree_text{'some_at_commands_in_ref_nodes_transliterate'} = '*document_ro
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l9 {A @sc{sc @~n @aa{} @TeX{}} node @"i @"{@dotless{i}} @`{@=E} @l{} @,{@\'C} @exclamdown{}}
- |EXTRA
  |identifier:{A-sc-_00f1-_00e5-TeX-node-_00ef-_00ef-_1e14-_0142-_1e08-_00a1}
  |is_target:{1}
  |node_number:{2}
@@ -147,7 +142,6 @@ $result_tree_text{'some_at_commands_in_ref_nodes_transliterate'} = '*document_ro
      *brace_container
     {spaces_after_argument:\\n}
  *normal_command@chapter C5 l10 {A @sc{sc} node @"i @"{@dotless{i}} @`{@=E} @l{} @,{@\'C} @exclamdown{}}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -192,7 +186,6 @@ $result_tree_text{'some_at_commands_in_ref_nodes_transliterate'} = '*document_ro
    {normal_text:see }
    *normal_command@ref C4 l12
     *brace_arg C14
-    |EXTRA
     |node_content:A{0|13}
      {normal_text:a }
      *normal_command@strong C1 l12
@@ -234,7 +227,6 @@ $result_tree_text{'some_at_commands_in_ref_nodes_transliterate'} = '*document_ro
   *paragraph C2
    *normal_command@xref C1 l14
     *brace_arg C14
-    |EXTRA
     |node_content:A{0|13}
     |normalized:{A-sc-_00f1-_00e5-TeX-node-_00ef-_00ef-_1e14-_0142-_1e08-_00a1}
      {normal_text:A }

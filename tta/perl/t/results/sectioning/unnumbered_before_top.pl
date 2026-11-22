@@ -12,7 +12,6 @@ $result_tree_text{'unnumbered_before_top'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content
  *normal_command@unnumbered C2 l1 {before top}
- |EXTRA
  |identifier:{before-top}
  |is_target:{1}
  |section_level:{1}
@@ -24,7 +23,6 @@ $result_tree_text{'unnumbered_before_top'} = '*document_root C3
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@top C1 l3 {top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |section_level:{1}

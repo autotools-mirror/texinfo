@@ -14,14 +14,12 @@ $result_tree_text{'implicit_quoting_one_arg'} = '*document_root C1
    {text_before_beginning:\\n}
   *preamble_before_content C2
    *normal_command@macro C3 l2
-   |EXTRA
    |formal_args:A{a}
    |macro_name:{FIXAME}
     *arguments_line C1
      {macro_line: FIXAME{a}\\n}
     {raw:@strong{FIXAME: \\a\\}\\n}
     *normal_command@end C1 l4
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }

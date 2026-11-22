@@ -18,7 +18,6 @@ $result_tree_text{'empty_quotation_with_arg_followed_by_quotation'} = '*document
      {normal_text:something}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l2
-   |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }
@@ -32,7 +31,6 @@ $result_tree_text{'empty_quotation_with_arg_followed_by_quotation'} = '*document
    *paragraph C1
     {normal_text:In quotation\\n}
    *normal_command@end C1 l6
-   |EXTRA
    |text_arg:{quotation}
     *line_arg C3
      {spaces_before_argument: }

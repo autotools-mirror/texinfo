@@ -13,7 +13,6 @@ $result_tree_text{'inter_item_commands_in_def'} = '*document_root C1
   *preamble_before_content
   *normal_command@deffn C7 l1
    *def_line C1 l1
-   |EXTRA
    |def_command:{deffn}
    |index_entry:I{fn,1}
    |original_def_cmdname:{deffn}
@@ -45,7 +44,6 @@ $result_tree_text{'inter_item_commands_in_def'} = '*document_root C1
       {spaces_after_argument:\\n}
     {empty_line:\\n}
    *normal_command@deffnx C1 l4
-   |EXTRA
    |def_command:{deffn}
    |index_entry:I{fn,2}
    |original_def_cmdname:{deffnx}
@@ -65,14 +63,12 @@ $result_tree_text{'inter_item_commands_in_def'} = '*document_root C1
      {spaces_after_argument:  \\n}
    *inter_def_item C1
     *index_entry_command@cindex C1 l5
-    |EXTRA
     |index_entry:I{cp,1}
      *line_arg C3
       {spaces_before_argument: }
       {normal_text:between deffnx}
       {spaces_after_argument:\\n}
    *normal_command@deffnx C1 l6
-   |EXTRA
    |def_command:{deffn}
    |index_entry:I{fn,3}
    |original_def_cmdname:{deffnx}
@@ -98,7 +94,6 @@ $result_tree_text{'inter_item_commands_in_def'} = '*document_root C1
      {spaces_after_argument:\\n}
    *def_item C3
     *index_entry_command@cindex C1 l7
-    |EXTRA
     |index_entry:I{cp,2}
      *line_arg C3
       {spaces_before_argument: }
@@ -108,7 +103,6 @@ $result_tree_text{'inter_item_commands_in_def'} = '*document_root C1
     *paragraph C1
      {normal_text:In deff item.\\n}
    *normal_command@end C1 l10
-   |EXTRA
    |text_arg:{deffn}
     *line_arg C3
      {spaces_before_argument: }

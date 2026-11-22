@@ -22,7 +22,6 @@ $result_tree_text{'cartouche_in_style_command'} = '*document_root C1
    *paragraph C1
     {normal_text:cartouche\\n}
    *normal_command@end C1 l4
-   |EXTRA
    |text_arg:{cartouche}
     *line_arg C3
      {spaces_before_argument: }

@@ -18,20 +18,17 @@ $result_tree_text{'empty_multitable_in_itemize'} = '*document_root C1
      {normal_text:a--n itemize line}
      {spaces_after_argument:\\n}
    *normal_command@item C5 l2
-   |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:in macro\\n}
     {empty_line:\\n}
     *normal_command@multitable C2 l4
-    |EXTRA
     |max_columns:{0}
      *arguments_line C1
       *block_line_arg C1
        {spaces_before_argument:\\n}
      *normal_command@end C1 l5
-     |EXTRA
      |text_arg:{multitable}
       *line_arg C3
        {spaces_before_argument: }
@@ -39,7 +36,6 @@ $result_tree_text{'empty_multitable_in_itemize'} = '*document_root C1
        {spaces_after_argument:\\n}
     {empty_line:\\n}
    *normal_command@end C1 l7
-   |EXTRA
    |text_arg:{itemize}
     *line_arg C3
      {spaces_before_argument: }

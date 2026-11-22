@@ -18,19 +18,16 @@ $result_tree_text{'enumerate_arguments'} = '*document_root C1
      {normal_text:a}
      {spaces_after_argument:\\n}
    *normal_command@item C2 l2
-   |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:value\\n}
    *normal_command@item C2 l3
-   |EXTRA
    |item_number:{2}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:value\\n}
    *normal_command@end C1 l4
-   |EXTRA
    |text_arg:{enumerate}
     *line_arg C3
      {spaces_before_argument: }
@@ -44,19 +41,16 @@ $result_tree_text{'enumerate_arguments'} = '*document_root C1
      {normal_text:A}
      {spaces_after_argument:\\n}
    *normal_command@item C2 l7
-   |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:value\\n}
    *normal_command@item C2 l8
-   |EXTRA
    |item_number:{2}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:value\\n}
    *normal_command@end C1 l9
-   |EXTRA
    |text_arg:{enumerate}
     *line_arg C3
      {spaces_before_argument: }
@@ -70,19 +64,16 @@ $result_tree_text{'enumerate_arguments'} = '*document_root C1
      {normal_text:c}
      {spaces_after_argument:\\n}
    *normal_command@item C2 l12
-   |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:value\\n}
    *normal_command@item C2 l13
-   |EXTRA
    |item_number:{2}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:value\\n}
    *normal_command@end C1 l14
-   |EXTRA
    |text_arg:{enumerate}
     *line_arg C3
      {spaces_before_argument: }
@@ -96,19 +87,16 @@ $result_tree_text{'enumerate_arguments'} = '*document_root C1
      {normal_text:C}
      {spaces_after_argument:\\n}
    *normal_command@item C2 l17
-   |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:value\\n}
    *normal_command@item C2 l18
-   |EXTRA
    |item_number:{2}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:value\\n}
    *normal_command@end C1 l19
-   |EXTRA
    |text_arg:{enumerate}
     *line_arg C3
      {spaces_before_argument: }
@@ -122,19 +110,16 @@ $result_tree_text{'enumerate_arguments'} = '*document_root C1
      {normal_text:1}
      {spaces_after_argument:\\n}
    *normal_command@item C2 l22
-   |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:value\\n}
    *normal_command@item C2 l23
-   |EXTRA
    |item_number:{2}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:value\\n}
    *normal_command@end C1 l24
-   |EXTRA
    |text_arg:{enumerate}
     *line_arg C3
      {spaces_before_argument: }
@@ -148,19 +133,16 @@ $result_tree_text{'enumerate_arguments'} = '*document_root C1
      {normal_text:3}
      {spaces_after_argument:\\n}
    *normal_command@item C2 l27
-   |EXTRA
    |item_number:{1}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:value\\n}
    *normal_command@item C2 l28
-   |EXTRA
    |item_number:{2}
     {ignorable_spaces_after_command: }
     *paragraph C1
      {normal_text:value\\n}
    *normal_command@end C1 l29
-   |EXTRA
    |text_arg:{enumerate}
     *line_arg C3
      {spaces_before_argument: }

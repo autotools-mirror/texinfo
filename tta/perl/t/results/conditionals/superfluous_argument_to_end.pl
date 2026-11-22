@@ -23,7 +23,6 @@ $result_tree_text{'superfluous_argument_to_end'} = '*document_root C1
    >SOURCEMARKS
    >expanded_conditional_command<end;1><p:9>
     >*normal_command@end C1 l3
-    >|EXTRA
     >|text_arg:{ifnothtml superfluous}
      >*line_arg C3
       >{spaces_before_argument: }

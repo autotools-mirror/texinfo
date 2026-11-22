@@ -18,7 +18,6 @@ $result_tree_text{'empty_table'} = '*document_root C1
      *normal_command@code l1
      {spaces_after_argument:\\n}
    *normal_command@end C1 l2
-   |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }

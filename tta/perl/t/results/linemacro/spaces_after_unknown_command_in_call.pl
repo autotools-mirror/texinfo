@@ -12,7 +12,6 @@ $result_tree_text{'spaces_after_unknown_command_in_call'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C2
    *normal_command@linemacro C5 l1
-   |EXTRA
    |formal_args:A{first|second|rest}
    |macro_name:{mylinecommand}
     *arguments_line C1
@@ -21,7 +20,6 @@ $result_tree_text{'spaces_after_unknown_command_in_call'} = '*document_root C1
     {raw:@defline category \\first\\ A \\second\\ B \\rest\\\\n}
     {raw:@end defblock\\n}
     *normal_command@end C1 l5
-    |EXTRA
     |text_arg:{linemacro}
      *line_arg C3
       {spaces_before_argument: }
@@ -45,7 +43,6 @@ $result_tree_text{'spaces_after_unknown_command_in_call'} = '*document_root C1
     *block_line_arg C1
      {spaces_before_argument:\\n}
    *normal_command@defline C1 l7:@mylinecommand
-   |EXTRA
    |def_command:{defline}
    |original_def_cmdname:{defline}
     *line_arg C13
@@ -78,7 +75,6 @@ $result_tree_text{'spaces_after_unknown_command_in_call'} = '*document_root C1
        {normal_text:rest}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l7:@mylinecommand
-   |EXTRA
    |text_arg:{defblock}
     *line_arg C3
      {spaces_before_argument: }

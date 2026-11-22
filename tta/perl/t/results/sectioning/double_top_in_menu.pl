@@ -12,7 +12,6 @@ $result_tree_text{'double_top_in_menu'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C5 l1 {ToP}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -21,7 +20,6 @@ $result_tree_text{'double_top_in_menu'} = '*document_root C3
     {spaces_before_argument: }
     {normal_text:ToP}
    *line_arg C3
-   |EXTRA
    |node_content:A{1|1}
    |normalized:{Top}
     {spaces_before_argument: }
@@ -37,7 +35,6 @@ $result_tree_text{'double_top_in_menu'} = '*document_root C3
    *menu_entry C4 l5
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{Top}
      {normal_text:top}
@@ -48,7 +45,6 @@ $result_tree_text{'double_top_in_menu'} = '*document_root C3
    *menu_entry C4 l6
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{Top}
      {normal_text:TOP}
@@ -57,7 +53,6 @@ $result_tree_text{'double_top_in_menu'} = '*document_root C3
      *preformatted C1
       {normal_text:myself\\n}
    *normal_command@end C1 l7
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -65,7 +60,6 @@ $result_tree_text{'double_top_in_menu'} = '*document_root C3
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C2 l9 {top}
- |EXTRA
  |identifier:{Top}
  |node_number:{2}
   *arguments_line C4
@@ -74,12 +68,10 @@ $result_tree_text{'double_top_in_menu'} = '*document_root C3
     {normal_text:top}
    *line_arg
    *line_arg C1
-   |EXTRA
    |node_content:A{0|0}
    |normalized:{Top}
     {normal_text:ToP}
    *line_arg C2
-   |EXTRA
    |node_content:A{0|0}
    |normalized:{Top}
     {normal_text:Top}

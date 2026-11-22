@@ -12,7 +12,6 @@ $result_tree_text{'no_colon_in_menu'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C3 l1 {first}
- |EXTRA
  |identifier:{first}
  |is_target:{1}
  |node_number:{1}
@@ -30,7 +29,6 @@ $result_tree_text{'no_colon_in_menu'} = '*document_root C2
     *preformatted C1
      {normal_text:* a\\n}
    *normal_command@end C1 l5
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }

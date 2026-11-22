@@ -12,13 +12,11 @@ $result_tree_text{'non_ascii_in_macro_name'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content C2
    *normal_command@macro C3 l1
-   |EXTRA
    |invalid_syntax:{1}
     *arguments_line C1
      {macro_line: parenbrève {a}\\n}
     {raw:(@`{\\a\\})\\n}
     *normal_command@end C1 l3
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }

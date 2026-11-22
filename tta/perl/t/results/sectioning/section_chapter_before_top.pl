@@ -12,7 +12,6 @@ $result_tree_text{'section_chapter_before_top'} = '*document_root C4
  *before_node_section C1
   *preamble_before_content
  *normal_command@section C2 l1 {section}
- |EXTRA
  |identifier:{section}
  |is_target:{1}
  |section_heading_number:{1}
@@ -25,7 +24,6 @@ $result_tree_text{'section_chapter_before_top'} = '*document_root C4
     {spaces_after_argument: \\n}
   {empty_line:\\n}
  *normal_command@chapter C2 l3 {chapter}
- |EXTRA
  |identifier:{chapter}
  |is_target:{1}
  |section_heading_number:{2}
@@ -38,7 +36,6 @@ $result_tree_text{'section_chapter_before_top'} = '*document_root C4
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@top C1 l5 {top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |section_level:{2}

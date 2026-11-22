@@ -14,7 +14,6 @@ $result_tree_text{'known_encoding'} = '*document_root C2
    {text_before_beginning:\\n}
   *preamble_before_content C2
    *normal_command@documentencoding C1 l2
-   |EXTRA
    |global_command_number:{1}
    |input_encoding_name:{iso-8859-1}
    |text_arg:{latin1}
@@ -24,7 +23,6 @@ $result_tree_text{'known_encoding'} = '*document_root C2
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *normal_command@node C2 l4 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}

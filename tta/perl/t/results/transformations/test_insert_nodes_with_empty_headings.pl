@@ -12,7 +12,6 @@ $result_tree_text{'test_insert_nodes_with_empty_headings'} = '*document_root C12
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 l1 {Top}
- |EXTRA
  |added:{1}
  |identifier:{Top}
  |is_target:{1}
@@ -23,7 +22,6 @@ $result_tree_text{'test_insert_nodes_with_empty_headings'} = '*document_root C12
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C2 l1 {top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -33,7 +31,6 @@ $result_tree_text{'test_insert_nodes_with_empty_headings'} = '*document_root C12
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l3 {Chap}
- |EXTRA
  |added:{1}
  |identifier:{Chap}
  |is_target:{1}
@@ -44,7 +41,6 @@ $result_tree_text{'test_insert_nodes_with_empty_headings'} = '*document_root C12
     {normal_text:Chap}
     {spaces_after_argument:\\n}
  *normal_command@chapter C2 l3 {Chap}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -55,7 +51,6 @@ $result_tree_text{'test_insert_nodes_with_empty_headings'} = '*document_root C12
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l5 { [+1+]}
- |EXTRA
  |added:{1}
  |identifier:{-_005b_002b1_002b_005d}
  |is_target:{1}
@@ -67,7 +62,6 @@ $result_tree_text{'test_insert_nodes_with_empty_headings'} = '*document_root C12
     {normal_text: [+1+]}
     {spaces_after_argument:\\n}
  *normal_command@section C2 l5
- |EXTRA
  |section_heading_number:{1.1}
  |section_level:{2}
  |section_number:{3}
@@ -76,7 +70,6 @@ $result_tree_text{'test_insert_nodes_with_empty_headings'} = '*document_root C12
     {spaces_before_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l7 { [+2+]}
- |EXTRA
  |added:{1}
  |identifier:{-_005b_002b2_002b_005d}
  |is_target:{1}
@@ -88,7 +81,6 @@ $result_tree_text{'test_insert_nodes_with_empty_headings'} = '*document_root C12
     {normal_text: [+2+]}
     {spaces_after_argument:\\n}
  *normal_command@section C2 l7
- |EXTRA
  |section_heading_number:{1.2}
  |section_level:{2}
  |section_number:{4}
@@ -104,7 +96,6 @@ $result_tree_text{'test_insert_nodes_with_empty_headings'} = '*document_root C12
      *brace_container
     {spaces_after_argument:\\n}
  *normal_command@node C1 l10 {@strong{} [+3+]}
- |EXTRA
  |added:{1}
  |identifier:{-_005b_002b3_002b_005d}
  |is_target:{1}
@@ -117,7 +108,6 @@ $result_tree_text{'test_insert_nodes_with_empty_headings'} = '*document_root C12
     {normal_text: [+3+]}
     {spaces_after_argument:\\n}
  *normal_command@section C1 l10 {@strong{}}
- |EXTRA
  |section_heading_number:{1.3}
  |section_level:{2}
  |section_number:{5}

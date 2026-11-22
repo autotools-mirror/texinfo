@@ -20,7 +20,6 @@ $result_tree_text{'ifnotinfo_exception'} = '*document_root C1
        >{spaces_before_argument:\\n}
      >{raw:in ifnotinfo\\n}
      >*normal_command@end C1 l3
-     >|EXTRA
      >|text_arg:{ifnotinfo}
       >*line_arg C3
        >{spaces_before_argument: }

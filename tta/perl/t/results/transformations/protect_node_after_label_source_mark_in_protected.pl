@@ -12,14 +12,12 @@ $result_tree_text{'protect_node_after_label_source_mark_in_protected'} = '*docum
  *before_node_section C2
   *preamble_before_content C4
    *normal_command@macro C3 l1
-   |EXTRA
    |formal_args:A{}
    |macro_name:{vvv}
     *arguments_line C1
      {macro_line: vvv {}\\n}
     {raw:some text .,\\n}
     *normal_command@end C1 l3
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -27,7 +25,6 @@ $result_tree_text{'protect_node_after_label_source_mark_in_protected'} = '*docum
       {spaces_after_argument:\\n}
    {empty_line:\\n}
    *normal_command@set C1
-   |EXTRA
    |misc_args:A{punct|,.}
     *line_arg C3
      {spaces_before_argument: }

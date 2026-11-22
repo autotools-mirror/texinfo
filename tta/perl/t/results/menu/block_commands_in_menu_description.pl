@@ -12,7 +12,6 @@ $result_tree_text{'block_commands_in_menu_description'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 l1 {first}
- |EXTRA
  |identifier:{first}
  |is_target:{1}
  |node_number:{1}
@@ -22,7 +21,6 @@ $result_tree_text{'block_commands_in_menu_description'} = '*document_root C3
     {normal_text:first}
     {spaces_after_argument:\\n}
  *normal_command@top C3 l2 {top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -38,7 +36,6 @@ $result_tree_text{'block_commands_in_menu_description'} = '*document_root C3
    *menu_entry C4 l5
     {menu_entry_leading_text:* }
     *menu_entry_node C3
-    |EXTRA
     |manual_content:A{1|1}
      {normal_text:(}
      {normal_text:manual}
@@ -55,14 +52,12 @@ $result_tree_text{'block_commands_in_menu_description'} = '*document_root C3
        *preformatted C1
         {empty_line:\\n}
       *normal_command@item C1 l8
-      |EXTRA
       |item_number:{1}
        *preformatted C3
         {ignorable_spaces_after_command: }
         {normal_text:in item\\n}
         {empty_line:\\n}
       *normal_command@end C1 l10
-      |EXTRA
       |text_arg:{itemize}
        *line_arg C3
         {spaces_before_argument: }
@@ -90,7 +85,6 @@ $result_tree_text{'block_commands_in_menu_description'} = '*document_root C3
          {normal_text:Text.\\n}
          {empty_line:\\n}
       *normal_command@end C1 l17
-      |EXTRA
       |text_arg:{table}
        *line_arg C3
         {spaces_before_argument: }
@@ -106,7 +100,6 @@ $result_tree_text{'block_commands_in_menu_description'} = '*document_root C3
         {normal_text:<b> in html </b>\\n}
         {empty_line:\\n}
        *normal_command@end C1 l22
-       |EXTRA
        |text_arg:{html}
         *line_arg C3
          {spaces_before_argument: }
@@ -118,14 +111,12 @@ $result_tree_text{'block_commands_in_menu_description'} = '*document_root C3
         {spaces_before_argument:\\n}
       {raw:\\n}
       *normal_command@end C1 l25
-      |EXTRA
       |text_arg:{verbatim}
        *line_arg C3
         {spaces_before_argument: }
         {normal_text:verbatim}
         {spaces_after_argument:\\n}
    *normal_command@end C1 l26
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }

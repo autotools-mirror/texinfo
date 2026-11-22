@@ -14,7 +14,6 @@ $result_tree_text{'nested_args'} = '*document_root C1
   *paragraph C2
    *normal_command@xref C4 l1
     *brace_arg C3
-    |EXTRA
     |node_content:A{0|2}
      *normal_command@@
      {normal_text: }

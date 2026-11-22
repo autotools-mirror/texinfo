@@ -12,14 +12,12 @@ $result_tree_text{'print_merged_index'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content C1
    *normal_command@syncodeindex C1 l1
-   |EXTRA
    |misc_args:A{fn|cp}
     *line_arg C3
      {spaces_before_argument: }
      {normal_text:fn cp}
      {spaces_after_argument:\\n}
  *normal_command@node C1 l2 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -29,7 +27,6 @@ $result_tree_text{'print_merged_index'} = '*document_root C3
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@node C2 l3 {chap}
- |EXTRA
  |identifier:{chap}
  |is_target:{1}
  |isindex:{1}
@@ -40,7 +37,6 @@ $result_tree_text{'print_merged_index'} = '*document_root C3
     {normal_text:chap}
     {spaces_after_argument:\\n}
   *normal_command@printindex C1 l4
-  |EXTRA
   |global_command_number:{1}
   |misc_args:A{fn}
    *line_arg C2

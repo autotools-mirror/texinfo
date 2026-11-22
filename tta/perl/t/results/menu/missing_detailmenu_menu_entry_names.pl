@@ -12,7 +12,6 @@ $result_tree_text{'missing_detailmenu_menu_entry_names'} = '*document_root C15
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C1 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -22,7 +21,6 @@ $result_tree_text{'missing_detailmenu_menu_entry_names'} = '*document_root C15
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C4 l2 {top}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -35,7 +33,6 @@ $result_tree_text{'missing_detailmenu_menu_entry_names'} = '*document_root C15
    {normal_text:text\\n}
   {empty_line:\\n}
  *normal_command@node C1 l6 {C1}
- |EXTRA
  |identifier:{C1}
  |is_target:{1}
  |node_number:{2}
@@ -45,7 +42,6 @@ $result_tree_text{'missing_detailmenu_menu_entry_names'} = '*document_root C15
     {normal_text:C1}
     {spaces_after_argument:\\n}
  *normal_command@chapter C4 l7 {C1}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -62,7 +58,6 @@ $result_tree_text{'missing_detailmenu_menu_entry_names'} = '*document_root C15
    *menu_entry C4 l10
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{C1-Sec1}
      {normal_text:C1 Sec1}
@@ -73,7 +68,6 @@ $result_tree_text{'missing_detailmenu_menu_entry_names'} = '*document_root C15
    *menu_entry C4 l11
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{C1-Sec2}
      {normal_text:C1 Sec2}
@@ -85,7 +79,6 @@ $result_tree_text{'missing_detailmenu_menu_entry_names'} = '*document_root C15
     *preformatted C1
      {after_menu_description_line:\\n}
    *normal_command@end C1 l13
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -93,7 +86,6 @@ $result_tree_text{'missing_detailmenu_menu_entry_names'} = '*document_root C15
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l15 {C1 Sec1}
- |EXTRA
  |identifier:{C1-Sec1}
  |is_target:{1}
  |node_number:{3}
@@ -103,7 +95,6 @@ $result_tree_text{'missing_detailmenu_menu_entry_names'} = '*document_root C15
     {normal_text:C1 Sec1}
     {spaces_after_argument:\\n}
  *normal_command@section C2 l16 {C1 Sec1}
- |EXTRA
  |section_heading_number:{1.1}
  |section_level:{2}
  |section_number:{3}
@@ -114,7 +105,6 @@ $result_tree_text{'missing_detailmenu_menu_entry_names'} = '*document_root C15
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l18 {C1 Sec2}
- |EXTRA
  |identifier:{C1-Sec2}
  |is_target:{1}
  |node_number:{4}
@@ -124,7 +114,6 @@ $result_tree_text{'missing_detailmenu_menu_entry_names'} = '*document_root C15
     {normal_text:C1 Sec2}
     {spaces_after_argument:\\n}
  *normal_command@section C2 l19 {C1 Sec2}
- |EXTRA
  |section_heading_number:{1.2}
  |section_level:{2}
  |section_number:{4}
@@ -135,7 +124,6 @@ $result_tree_text{'missing_detailmenu_menu_entry_names'} = '*document_root C15
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l21 {C2}
- |EXTRA
  |identifier:{C2}
  |is_target:{1}
  |node_number:{5}
@@ -145,7 +133,6 @@ $result_tree_text{'missing_detailmenu_menu_entry_names'} = '*document_root C15
     {normal_text:C2}
     {spaces_after_argument:\\n}
  *normal_command@chapter C4 l22 {C2}
- |EXTRA
  |section_heading_number:{2}
  |section_level:{1}
  |section_number:{5}
@@ -165,7 +152,6 @@ $result_tree_text{'missing_detailmenu_menu_entry_names'} = '*document_root C15
      {normal_text:Sec1}
     {menu_entry_separator:: }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{C2-Sec1}
      {normal_text:C2 Sec1}
@@ -176,7 +162,6 @@ $result_tree_text{'missing_detailmenu_menu_entry_names'} = '*document_root C15
    *menu_entry C4 l26
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{C2-Sec2}
      {normal_text:C2 Sec2}
@@ -188,7 +173,6 @@ $result_tree_text{'missing_detailmenu_menu_entry_names'} = '*document_root C15
     *preformatted C1
      {after_menu_description_line:\\n}
    *normal_command@end C1 l28
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -196,7 +180,6 @@ $result_tree_text{'missing_detailmenu_menu_entry_names'} = '*document_root C15
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l30 {C2 Sec1}
- |EXTRA
  |identifier:{C2-Sec1}
  |is_target:{1}
  |node_number:{6}
@@ -206,7 +189,6 @@ $result_tree_text{'missing_detailmenu_menu_entry_names'} = '*document_root C15
     {normal_text:C2 Sec1}
     {spaces_after_argument:\\n}
  *normal_command@section C2 l31 {C2 Sec1}
- |EXTRA
  |section_heading_number:{2.1}
  |section_level:{2}
  |section_number:{6}
@@ -217,7 +199,6 @@ $result_tree_text{'missing_detailmenu_menu_entry_names'} = '*document_root C15
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l33 {C2 Sec2}
- |EXTRA
  |identifier:{C2-Sec2}
  |is_target:{1}
  |node_number:{7}
@@ -227,7 +208,6 @@ $result_tree_text{'missing_detailmenu_menu_entry_names'} = '*document_root C15
     {normal_text:C2 Sec2}
     {spaces_after_argument:\\n}
  *normal_command@section C1 l34 {C2 Sec2}
- |EXTRA
  |section_heading_number:{2.2}
  |section_level:{2}
  |section_number:{7}

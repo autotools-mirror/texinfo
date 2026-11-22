@@ -12,7 +12,6 @@ $result_tree_text{'empty_label_with_space'} = '*document_root C1
  *before_node_section C2
   *preamble_before_content
   *normal_command@float C2 l1
-  |EXTRA
   |float_type:{Type}
   |global_command_number:{1}
    *arguments_line C2
@@ -22,7 +21,6 @@ $result_tree_text{'empty_label_with_space'} = '*document_root C1
     *block_line_arg C1
      {spaces_before_argument: \\n}
    *normal_command@end C1 l2
-   |EXTRA
    |text_arg:{float}
     *line_arg C3
      {spaces_before_argument: }

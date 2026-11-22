@@ -16,7 +16,6 @@ $result_tree_text{'ref_in_style_command'} = '*document_root C1
     *brace_container C1
      *normal_command@ref C3 l1
       *brace_arg C1
-      |EXTRA
       |node_content:A{0|0}
       |normalized:{other-node}
        {normal_text:other node}

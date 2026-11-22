@@ -12,7 +12,6 @@ $result_tree_text{'macro_end_call_in_ignored_raw'} = '*document_root C1
  *before_node_section C1
   *preamble_before_content C3
    *normal_command@macro C4 l1
-   |EXTRA
    |formal_args:A{}
    |macro_name:{startraw}
     *arguments_line C1
@@ -20,7 +19,6 @@ $result_tree_text{'macro_end_call_in_ignored_raw'} = '*document_root C1
     {raw:@tex\\n}
     {raw:inT\\n}
     *normal_command@end C1 l4
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -41,7 +39,6 @@ $result_tree_text{'macro_end_call_in_ignored_raw'} = '*document_root C1
      >macro_expansion<end;1><p:3>
      {raw:\\n}
     *normal_command@end C1 l7
-    |EXTRA
     |text_arg:{tex}
      *line_arg C3
       {spaces_before_argument: }

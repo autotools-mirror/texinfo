@@ -12,7 +12,6 @@ $result_tree_text{'macro_expansion_end_in_ignored_nested_different_conditional'}
  *before_node_section C1
   *preamble_before_content C2
    *normal_command@macro C5 l1
-   |EXTRA
    |formal_args:A{}
    |macro_name:{beginnestedcond}
     *arguments_line C1
@@ -21,7 +20,6 @@ $result_tree_text{'macro_expansion_end_in_ignored_nested_different_conditional'}
     {raw:@ifclear b\\n}
     {raw:GG\\n}
     *normal_command@end C1 l5
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -45,7 +43,6 @@ $result_tree_text{'macro_expansion_end_in_ignored_nested_different_conditional'}
      >>macro_expansion<end;1><p:2>
      >{raw:\\n}
      >*normal_command@end C1 l8
-     >|EXTRA
      >|text_arg:{ifset}
       >*line_arg C3
        >{spaces_before_argument: }

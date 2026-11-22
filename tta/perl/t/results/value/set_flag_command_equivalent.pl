@@ -12,7 +12,6 @@ $result_tree_text{'set_flag_command_equivalent'} = '*document_root C1
  *before_node_section C4
   *preamble_before_content C2
    *normal_command@set C1 l1
-   |EXTRA
    |global_command_number:{1}
    |misc_args:A{txicodequoteundirected|}
     *line_arg C3
@@ -30,7 +29,6 @@ $result_tree_text{'set_flag_command_equivalent'} = '*document_root C1
    >value_expansion<end;1>
   {empty_line:\\n}
   *normal_command@clear C1 l5
-  |EXTRA
   |global_command_number:{2}
   |misc_args:A{txicodequoteundirected}
    *line_arg C3

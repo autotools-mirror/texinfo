@@ -15,7 +15,6 @@ $result_tree_text{'simple_no_eol'} = '*document_root C1
    >SOURCEMARKS
    >include<start;1>
     >*normal_command@include C1 l1
-    >|EXTRA
     >|text_arg:{inc_file.texi}
      >*line_arg C2
       >{spaces_before_argument: }

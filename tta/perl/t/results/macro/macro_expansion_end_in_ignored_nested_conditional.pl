@@ -12,7 +12,6 @@ $result_tree_text{'macro_expansion_end_in_ignored_nested_conditional'} = '*docum
  *before_node_section C1
   *preamble_before_content C2
    *normal_command@macro C5 l1
-   |EXTRA
    |formal_args:A{}
    |macro_name:{beginnestedcond}
     *arguments_line C1
@@ -21,7 +20,6 @@ $result_tree_text{'macro_expansion_end_in_ignored_nested_conditional'} = '*docum
     {raw:@ifset b\\n}
     {raw:GG\\n}
     *normal_command@end C1 l5
-    |EXTRA
     |text_arg:{macro}
      *line_arg C3
       {spaces_before_argument: }
@@ -46,7 +44,6 @@ $result_tree_text{'macro_expansion_end_in_ignored_nested_conditional'} = '*docum
      >{raw:\\n}
      >{raw:@end ifset\\n}
      >*normal_command@end C1 l9
-     >|EXTRA
      >|text_arg:{ifset}
       >*line_arg C3
        >{spaces_before_argument: }

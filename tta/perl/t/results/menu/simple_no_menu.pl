@@ -29,7 +29,6 @@ $result_tree_text{'simple_no_menu'} = '*document_root C1
      {normal_text:menu entry name }
     {menu_entry_separator:: }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{node}
      {normal_text:node}
@@ -40,7 +39,6 @@ $result_tree_text{'simple_no_menu'} = '*document_root C1
    *menu_entry C4 l7
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{node-name}
      {normal_text:node name}
@@ -54,7 +52,6 @@ $result_tree_text{'simple_no_menu'} = '*document_root C1
      {normal_text:other entry}
     {menu_entry_separator:: }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{node}
      {normal_text:node}
@@ -65,7 +62,6 @@ $result_tree_text{'simple_no_menu'} = '*document_root C1
    *menu_entry C4 l9
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{last}
      {normal_text:last}
@@ -82,7 +78,6 @@ $result_tree_text{'simple_no_menu'} = '*document_root C1
    *menu_entry C4 l14
     {menu_entry_leading_text:* }
     *menu_entry_node C2
-    |EXTRA
     |node_content:A{0|1}
     |normalized:{last-node-entry}
      {normal_text:last node entry}
@@ -92,7 +87,6 @@ $result_tree_text{'simple_no_menu'} = '*document_root C1
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 l15
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }

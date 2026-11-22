@@ -13,7 +13,6 @@ $result_tree_text{'defx_after_text'} = '*document_root C1
   *preamble_before_content
   *normal_command@deffn C4 l1
    *def_line C1 l1
-   |EXTRA
    |def_command:{deffn}
    |index_entry:I{fn,1}
    |original_def_cmdname:{deffn}
@@ -41,7 +40,6 @@ $result_tree_text{'defx_after_text'} = '*document_root C1
     *paragraph C1
      {normal_text:Text in deffn\\n}
    *normal_command@deffnx C1 l3
-   |EXTRA
    |def_command:{deffn}
    |index_entry:I{fn,2}
    |not_after_command:{1}
@@ -61,7 +59,6 @@ $result_tree_text{'defx_after_text'} = '*document_root C1
        {normal_text:machin...}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l4
-   |EXTRA
    |text_arg:{deffn}
     *line_arg C2
      {spaces_before_argument: }

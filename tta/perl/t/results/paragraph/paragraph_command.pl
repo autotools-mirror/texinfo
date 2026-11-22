@@ -40,7 +40,6 @@ $result_tree_text{'paragraph_command'} = '*document_root C1
    {normal_text: email.\\n}
   {empty_line:\\n}
   *normal_command@definfoenclose C1 l11
-  |EXTRA
   |misc_args:A{foo|\\|//}
    *line_arg C3
     {spaces_before_argument: }
@@ -48,7 +47,6 @@ $result_tree_text{'paragraph_command'} = '*document_root C1
     {spaces_after_argument:\\n}
   *paragraph C2
    *definfoenclose_command@foo C1 l12
-   |EXTRA
    |begin:{\\}
    |end:{//}
     *brace_container C2
@@ -58,7 +56,6 @@ $result_tree_text{'paragraph_command'} = '*document_root C1
   {empty_line:\\n}
   *paragraph C2
    *normal_command@footnote C1 l14
-   |EXTRA
    |global_command_number:{1}
     *brace_command_context C1
      *paragraph C1

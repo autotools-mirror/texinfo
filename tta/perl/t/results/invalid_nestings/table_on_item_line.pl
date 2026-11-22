@@ -44,7 +44,6 @@ $result_tree_text{'table_on_item_line'} = '*document_root C1
       {normal_text:in nested table line\\n}
       {normal_text:   }
    *normal_command@end C1 l5
-   |EXTRA
    |text_arg:{table}
     *line_arg C3
      {spaces_before_argument: }

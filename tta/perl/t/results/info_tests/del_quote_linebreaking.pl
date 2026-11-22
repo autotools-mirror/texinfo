@@ -18,7 +18,6 @@ $result_tree_text{'del_quote_linebreaking'} = '*document_root C1
    {normal_text:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx }
    *normal_command@xref C5 l3
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
      {normal_text:noxde}
     *brace_arg
@@ -34,7 +33,6 @@ $result_tree_text{'del_quote_linebreaking'} = '*document_root C1
    {normal_text:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx }
    *normal_command@xref C5 l5
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
      {normal_text:noxde}
     *brace_arg
@@ -50,7 +48,6 @@ $result_tree_text{'del_quote_linebreaking'} = '*document_root C1
    {normal_text:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx }
    *normal_command@xref C5 l7
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
      {normal_text:noxde}
     *brace_arg
@@ -69,7 +66,6 @@ $result_tree_text{'del_quote_linebreaking'} = '*document_root C1
    {normal_text:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx }
    *normal_command@xref C5 l11
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
      {normal_text:no:de}
     *brace_arg
@@ -85,7 +81,6 @@ $result_tree_text{'del_quote_linebreaking'} = '*document_root C1
    {normal_text:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx }
    *normal_command@xref C5 l13
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
      {normal_text:no:de}
     *brace_arg
@@ -101,7 +96,6 @@ $result_tree_text{'del_quote_linebreaking'} = '*document_root C1
    {normal_text:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx }
    *normal_command@xref C5 l15
     *brace_arg C1
-    |EXTRA
     |node_content:A{0|0}
      {normal_text:no:de}
     *brace_arg

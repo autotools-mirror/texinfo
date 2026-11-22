@@ -18,7 +18,6 @@ $result_tree_text{'section_on_enumerate_line'} = '*document_root C3
      {normal_text:something}
      {spaces_after_argument: }
  *normal_command@section C3 l1 {first}
- |EXTRA
  |identifier:{first}
  |is_target:{1}
  |section_heading_number:{1}
@@ -37,7 +36,6 @@ $result_tree_text{'section_on_enumerate_line'} = '*document_root C3
      {normal_text:4}
      {spaces_after_argument: }
  *normal_command@section C1 l3 {second}
- |EXTRA
  |identifier:{second}
  |is_target:{1}
  |section_heading_number:{2}

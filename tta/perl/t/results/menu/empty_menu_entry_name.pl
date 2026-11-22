@@ -12,7 +12,6 @@ $result_tree_text{'empty_menu_entry_name'} = '*document_root C3
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C4 l1 {first}
- |EXTRA
  |identifier:{first}
  |is_target:{1}
  |node_number:{1}
@@ -31,7 +30,6 @@ $result_tree_text{'empty_menu_entry_name'} = '*document_root C3
     *menu_entry_name
     {menu_entry_separator:: }
     *menu_entry_node C3
-    |EXTRA
     |manual_content:A{1|1}
      {normal_text:(}
      {normal_text:vvv}
@@ -45,7 +43,6 @@ $result_tree_text{'empty_menu_entry_name'} = '*document_root C3
     *menu_entry_name
     {menu_entry_separator::}
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{aaa}
      {normal_text:aaa}
@@ -54,7 +51,6 @@ $result_tree_text{'empty_menu_entry_name'} = '*document_root C3
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 l6
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -62,7 +58,6 @@ $result_tree_text{'empty_menu_entry_name'} = '*document_root C3
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l8 {aaa}
- |EXTRA
  |identifier:{aaa}
  |is_target:{1}
  |node_number:{2}

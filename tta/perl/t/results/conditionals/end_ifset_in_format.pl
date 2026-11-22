@@ -14,7 +14,6 @@ $result_tree_text{'end_ifset_in_format'} = '*document_root C1
    {text_before_beginning:\\n}
   *preamble_before_content C3
    *normal_command@set C1
-   |EXTRA
    |misc_args:A{notset|}
     *line_arg C3
      {spaces_before_argument: }
@@ -35,7 +34,6 @@ $result_tree_text{'end_ifset_in_format'} = '*document_root C1
       {spaces_before_argument:\\n}
     {raw:@end ifset\\n}
     *normal_command@end C1 l7
-    |EXTRA
     |text_arg:{ignore}
      *line_arg C3
       {spaces_before_argument: }
@@ -46,7 +44,6 @@ $result_tree_text{'end_ifset_in_format'} = '*document_root C1
    >SOURCEMARKS
    >expanded_conditional_command<end;1><p:5>
     >*normal_command@end C1 l9
-    >|EXTRA
     >|text_arg:{ifset}
      >*line_arg C3
       >{spaces_before_argument: }
@@ -65,7 +62,6 @@ $result_tree_text{'end_ifset_in_format'} = '*document_root C1
   >SOURCEMARKS
   >expanded_conditional_command<end;2>
    >*normal_command@end C1 l15
-   >|EXTRA
    >|text_arg:{ifset}
     >*line_arg C3
      >{spaces_before_argument: }
@@ -76,7 +72,6 @@ $result_tree_text{'end_ifset_in_format'} = '*document_root C1
      {spaces_before_argument:\\n}
    {raw:@end ifset\\n}
    *normal_command@end C1 l14
-   |EXTRA
    |text_arg:{verbatim}
     *line_arg C3
      {spaces_before_argument: }
@@ -102,7 +97,6 @@ $result_tree_text{'end_ifset_in_format'} = '*document_root C1
    >SOURCEMARKS
    >expanded_conditional_command<end;3><p:1>
     >*normal_command@end C1 l21
-    >|EXTRA
     >|text_arg:{ifset}
      >*line_arg C3
       >{spaces_before_argument: }

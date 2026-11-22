@@ -18,7 +18,6 @@ $result_tree_text{'enumerate_argument'} = '*document_root C1
      {normal_text:1}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l2
-   |EXTRA
    |text_arg:{enumerate}
     *line_arg C3
      {spaces_before_argument: }
@@ -36,7 +35,6 @@ $result_tree_text{'enumerate_argument'} = '*document_root C1
        {rawline_text:comment}
        {spaces_after_argument:\\n}
    *normal_command@end C1 l5
-   |EXTRA
    |text_arg:{enumerate}
     *line_arg C3
      {spaces_before_argument: }
@@ -55,7 +53,6 @@ $result_tree_text{'enumerate_argument'} = '*document_root C1
        {rawline_text:comment}
        {spaces_after_argument:\\n}
    *normal_command@end C1 l8
-   |EXTRA
    |text_arg:{enumerate}
     *line_arg C3
      {spaces_before_argument: }
@@ -69,7 +66,6 @@ $result_tree_text{'enumerate_argument'} = '*document_root C1
      {normal_text:0}
      {spaces_after_argument:\\n}
    *normal_command@end C1 l11
-   |EXTRA
    |text_arg:{enumerate}
     *line_arg C3
      {spaces_before_argument: }

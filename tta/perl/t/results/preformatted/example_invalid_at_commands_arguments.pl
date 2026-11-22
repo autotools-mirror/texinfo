@@ -17,7 +17,6 @@ $result_tree_text{'example_invalid_at_commands_arguments'} = '*document_root C1
      {spaces_before_argument: }
      *normal_command@ref C4 l1
       *brace_arg C1
-      |EXTRA
       |node_content:A{0|0}
        {normal_text:a}
       *brace_arg C1
@@ -30,7 +29,6 @@ $result_tree_text{'example_invalid_at_commands_arguments'} = '*document_root C1
     *block_line_arg C4
      {spaces_before_argument: }
      *normal_command@anchor C1 l1
-     |EXTRA
      |identifier:{an-anchor}
      |is_target:{1}
       *brace_arg C1
@@ -45,7 +43,6 @@ $result_tree_text{'example_invalid_at_commands_arguments'} = '*document_root C1
        {normal_text:in center}
        {spaces_after_argument:\\n}
    *normal_command@end C1 l2
-   |EXTRA
    |text_arg:{example}
     *line_arg C3
      {spaces_before_argument: }

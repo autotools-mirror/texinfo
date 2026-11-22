@@ -14,7 +14,6 @@ $result_tree_text{'indices'} = '*document_root C5
    {text_before_beginning:\\n}
   *preamble_before_content C2
    *normal_command@set C1
-   |EXTRA
    |misc_args:A{txiindexbackslashignore|}
     *line_arg C3
      {spaces_before_argument: }
@@ -22,7 +21,6 @@ $result_tree_text{'indices'} = '*document_root C5
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *normal_command@node C1 l4 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -32,7 +30,6 @@ $result_tree_text{'indices'} = '*document_root C5
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C2 l5 {top section}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -42,7 +39,6 @@ $result_tree_text{'indices'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 l7 {chapter}
- |EXTRA
  |identifier:{chapter}
  |is_target:{1}
  |isindex:{1}
@@ -53,7 +49,6 @@ $result_tree_text{'indices'} = '*document_root C5
     {normal_text:chapter}
     {spaces_after_argument:\\n}
  *normal_command@chapter C22 l8 {Index}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}
@@ -64,7 +59,6 @@ $result_tree_text{'indices'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 l10
-  |EXTRA
   |element_node:{chapter}
   |index_entry:I{cp,1}
   |index_ignore_chars:{\\}
@@ -79,7 +73,6 @@ $result_tree_text{'indices'} = '*document_root C5
       {normal_text:o}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 l11
-  |EXTRA
   |element_node:{chapter}
   |index_entry:I{cp,2}
   |index_ignore_chars:{\\}
@@ -88,7 +81,6 @@ $result_tree_text{'indices'} = '*document_root C5
     {normal_text:AA}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 l12
-  |EXTRA
   |element_node:{chapter}
   |index_entry:I{cp,3}
   |index_ignore_chars:{\\}
@@ -97,7 +89,6 @@ $result_tree_text{'indices'} = '*document_root C5
     {normal_text:aa}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 l13
-  |EXTRA
   |element_node:{chapter}
   |index_entry:I{cp,4}
   |index_ignore_chars:{\\}
@@ -106,7 +97,6 @@ $result_tree_text{'indices'} = '*document_root C5
     {normal_text:i}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 l14
-  |EXTRA
   |element_node:{chapter}
   |index_entry:I{cp,5}
   |index_ignore_chars:{\\}
@@ -115,7 +105,6 @@ $result_tree_text{'indices'} = '*document_root C5
     {normal_text:Z}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 l15
-  |EXTRA
   |element_node:{chapter}
   |index_entry:I{cp,6}
   |index_ignore_chars:{\\}
@@ -127,7 +116,6 @@ $result_tree_text{'indices'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 l17
-  |EXTRA
   |element_node:{chapter}
   |index_entry:I{cp,7}
   |index_ignore_chars:{\\}
@@ -150,7 +138,6 @@ $result_tree_text{'indices'} = '*document_root C5
       {normal_text:o}
     {spaces_after_argument: }
     *normal_command@subentry C1 l17
-    |EXTRA
     |sortas:{a!"@b}
      *line_arg C14
       {spaces_before_argument: }
@@ -196,7 +183,6 @@ $result_tree_text{'indices'} = '*document_root C5
           {normal_text:o}
       {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 l18
-  |EXTRA
   |element_node:{chapter}
   |index_entry:I{cp,8}
   |index_ignore_chars:{\\}
@@ -205,7 +191,6 @@ $result_tree_text{'indices'} = '*document_root C5
     {normal_text:\\cmd}
     {spaces_after_argument:\\n}
   *index_entry_command@cindex C1 l19
-  |EXTRA
   |element_node:{chapter}
   |index_entry:I{cp,9}
   |index_ignore_chars:{\\}
@@ -220,7 +205,6 @@ $result_tree_text{'indices'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@clear C1
-  |EXTRA
   |misc_args:A{txiindexbackslashignore}
    *line_arg C3
     {spaces_before_argument: }
@@ -228,7 +212,6 @@ $result_tree_text{'indices'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@cindex C1 l23
-  |EXTRA
   |element_node:{chapter}
   |index_entry:I{cp,10}
    *line_arg C5
@@ -245,7 +228,6 @@ $result_tree_text{'indices'} = '*document_root C5
       {spaces_after_argument:\\n}
   {empty_line:\\n}
   *index_entry_command@findex C1 l25
-  |EXTRA
   |element_node:{chapter}
   |index_entry:I{fn,1}
    *line_arg C6
@@ -261,7 +243,6 @@ $result_tree_text{'indices'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@printindex C1 l27
-  |EXTRA
   |global_command_number:{1}
   |misc_args:A{cp}
    *line_arg C3
@@ -270,7 +251,6 @@ $result_tree_text{'indices'} = '*document_root C5
     {spaces_after_argument:\\n}
   {empty_line:\\n}
   *normal_command@printindex C1 l29
-  |EXTRA
   |global_command_number:{2}
   |misc_args:A{fn}
    *line_arg C3

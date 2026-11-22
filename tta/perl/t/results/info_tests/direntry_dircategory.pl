@@ -16,7 +16,6 @@ $result_tree_text{'direntry_dircategory'} = '*document_root C6
     {text_before_beginning:\\n}
   *preamble_before_content C9
    *normal_command@setfilename C1 direntry_dircategory.texi:l3
-   |EXTRA
    |text_arg:{direntry_dircategory.info}
     *line_arg C3
      {spaces_before_argument: }
@@ -42,7 +41,6 @@ $result_tree_text{'direntry_dircategory'} = '*document_root C6
       {normal_text:foo}
      {menu_entry_separator:: }
      *menu_entry_node C3
-     |EXTRA
      |manual_content:A{1|1}
       {normal_text:(}
       {normal_text:foo}
@@ -56,7 +54,6 @@ $result_tree_text{'direntry_dircategory'} = '*document_root C6
          {normal_text:there}
        {normal_text:?\'\'\\n}
     *normal_command@end C1 direntry_dircategory.texi:l8
-    |EXTRA
     |text_arg:{direntry}
      *line_arg C3
       {spaces_before_argument: }
@@ -75,7 +72,6 @@ $result_tree_text{'direntry_dircategory'} = '*document_root C6
     *menu_entry C4 direntry_dircategory.texi:l12
      {menu_entry_leading_text:* }
      *menu_entry_node C2
-     |EXTRA
      |node_content:A{0|1}
      |normalized:{aaa}
       {normal_text:aaa}
@@ -90,7 +86,6 @@ $result_tree_text{'direntry_dircategory'} = '*document_root C6
       {after_menu_description_line:\\n}
       {normal_text:menutitle\\n}
     *normal_command@end C1 direntry_dircategory.texi:l16
-    |EXTRA
     |text_arg:{direntry}
      *line_arg C3
       {spaces_before_argument: }
@@ -99,7 +94,6 @@ $result_tree_text{'direntry_dircategory'} = '*document_root C6
    {empty_line:\\n}
    {empty_line:\\n}
  *normal_command@node C1 direntry_dircategory.texi:l19 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -109,7 +103,6 @@ $result_tree_text{'direntry_dircategory'} = '*document_root C6
     {normal_text:Top}
     {spaces_after_argument:\\n}
  *normal_command@top C8 direntry_dircategory.texi:l20 {Test dircategory and direntry}
- |EXTRA
  |section_level:{0}
  |section_number:{1}
   *arguments_line C1
@@ -135,7 +128,6 @@ $result_tree_text{'direntry_dircategory'} = '*document_root C6
      {normal_text:in text}
     {menu_entry_separator:: }
     *menu_entry_node C3
-    |EXTRA
     |manual_content:A{1|1}
      {normal_text:(}
      {normal_text:in_text}
@@ -145,7 +137,6 @@ $result_tree_text{'direntry_dircategory'} = '*document_root C6
      *preformatted C1
       {normal_text:in text\\n}
    *normal_command@end C1 direntry_dircategory.texi:l26
-   |EXTRA
    |text_arg:{direntry}
     *line_arg C3
      {spaces_before_argument: }
@@ -159,7 +150,6 @@ $result_tree_text{'direntry_dircategory'} = '*document_root C6
    *menu_entry C4 direntry_dircategory.texi:l29
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{chapter}
      {normal_text:chapter}
@@ -168,7 +158,6 @@ $result_tree_text{'direntry_dircategory'} = '*document_root C6
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 direntry_dircategory.texi:l30
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -176,7 +165,6 @@ $result_tree_text{'direntry_dircategory'} = '*document_root C6
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C1 direntry_dircategory.texi:l32 {chapter}
- |EXTRA
  |identifier:{chapter}
  |is_target:{1}
  |node_number:{2}
@@ -186,7 +174,6 @@ $result_tree_text{'direntry_dircategory'} = '*document_root C6
     {normal_text:chapter}
     {spaces_after_argument:\\n}
  *normal_command@chapter C4 direntry_dircategory.texi:l33 {chapter}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{2}

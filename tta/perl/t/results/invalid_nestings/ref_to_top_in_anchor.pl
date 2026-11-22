@@ -12,7 +12,6 @@ $result_tree_text{'ref_to_top_in_anchor'} = '*document_root C2
  *before_node_section C1
   *preamble_before_content
  *normal_command@node C2 l1 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -22,14 +21,12 @@ $result_tree_text{'ref_to_top_in_anchor'} = '*document_root C2
     {normal_text:Top}
     {spaces_after_argument:\\n}
   *normal_command@anchor C1 l2
-  |EXTRA
   |identifier:{TOP-Top}
   |is_target:{1}
    *brace_arg C2
     {normal_text:TOP }
     *normal_command@ref C1 l2
      *brace_arg C1
-     |EXTRA
      |node_content:A{0|0}
      |normalized:{Top}
       {normal_text:Top}

@@ -21,7 +21,6 @@ $result_tree_text{'node_footnote_separated'} = '*document_root C8
      {spaces_after_argument:\\n}
    {empty_line:\\n}
  *normal_command@node C4 node_footnote.texi:l5 {Top}
- |EXTRA
  |identifier:{Top}
  |is_target:{1}
  |node_number:{1}
@@ -38,7 +37,6 @@ $result_tree_text{'node_footnote_separated'} = '*document_root C8
    *menu_entry C4 node_footnote.texi:l8
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{_00e1}
      *normal_command@\' C1 node_footnote.texi:l8
@@ -51,7 +49,6 @@ $result_tree_text{'node_footnote_separated'} = '*document_root C8
    *menu_entry C4 node_footnote.texi:l9
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{_00e2}
      *normal_command@^ C1 node_footnote.texi:l9
@@ -64,7 +61,6 @@ $result_tree_text{'node_footnote_separated'} = '*document_root C8
    *menu_entry C4 node_footnote.texi:l10
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{chapter}
      {normal_text:chapter}
@@ -75,7 +71,6 @@ $result_tree_text{'node_footnote_separated'} = '*document_root C8
    *menu_entry C4 node_footnote.texi:l11
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{_00e0}
      *normal_command@` C1 node_footnote.texi:l11
@@ -86,7 +81,6 @@ $result_tree_text{'node_footnote_separated'} = '*document_root C8
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 node_footnote.texi:l12
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -94,7 +88,6 @@ $result_tree_text{'node_footnote_separated'} = '*document_root C8
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C4 node_footnote.texi:l14 {@\'a}
- |EXTRA
  |identifier:{_00e1}
  |is_target:{1}
  |node_number:{2}
@@ -114,7 +107,6 @@ $result_tree_text{'node_footnote_separated'} = '*document_root C8
    {normal_text:,\\n}
    {normal_text:Footnote 1}
    *normal_command@footnote C1 node_footnote.texi:l17
-   |EXTRA
    |global_command_number:{1}
     *brace_command_context C1
      *paragraph C2
@@ -125,7 +117,6 @@ $result_tree_text{'node_footnote_separated'} = '*document_root C8
    {normal_text:.\\n}
   {empty_line:\\n}
  *normal_command@node C4 node_footnote.texi:l19 {@^a}
- |EXTRA
  |identifier:{_00e2}
  |is_target:{1}
  |node_number:{3}
@@ -145,7 +136,6 @@ $result_tree_text{'node_footnote_separated'} = '*document_root C8
    {normal_text:,\\n}
    {normal_text:Footnote 2}
    *normal_command@footnote C1 node_footnote.texi:l22
-   |EXTRA
    |global_command_number:{2}
     *brace_command_context C1
      *paragraph C2
@@ -156,7 +146,6 @@ $result_tree_text{'node_footnote_separated'} = '*document_root C8
    {normal_text:.\\n}
   {empty_line:\\n}
  *normal_command@node C1 node_footnote.texi:l24 {chapter}
- |EXTRA
  |identifier:{chapter}
  |is_target:{1}
  |node_number:{4}
@@ -166,7 +155,6 @@ $result_tree_text{'node_footnote_separated'} = '*document_root C8
     {normal_text:chapter}
     {spaces_after_argument:\\n}
  *normal_command@chapter C4 node_footnote.texi:l25 {chapter}
- |EXTRA
  |section_heading_number:{1}
  |section_level:{1}
  |section_number:{1}
@@ -183,7 +171,6 @@ $result_tree_text{'node_footnote_separated'} = '*document_root C8
    *menu_entry C4 node_footnote.texi:l28
     {menu_entry_leading_text:* }
     *menu_entry_node C1
-    |EXTRA
     |node_content:A{0|0}
     |normalized:{_00e0}
      *normal_command@` C1 node_footnote.texi:l28
@@ -194,7 +181,6 @@ $result_tree_text{'node_footnote_separated'} = '*document_root C8
      *preformatted C1
       {normal_text:\\n}
    *normal_command@end C1 node_footnote.texi:l29
-   |EXTRA
    |text_arg:{menu}
     *line_arg C3
      {spaces_before_argument: }
@@ -202,7 +188,6 @@ $result_tree_text{'node_footnote_separated'} = '*document_root C8
      {spaces_after_argument:\\n}
   {empty_line:\\n}
  *normal_command@node C4 node_footnote.texi:l31 {@`a}
- |EXTRA
  |identifier:{_00e0}
  |is_target:{1}
  |node_number:{5}
@@ -222,7 +207,6 @@ $result_tree_text{'node_footnote_separated'} = '*document_root C8
    {normal_text:,\\n}
    {normal_text:Footnote 3}
    *normal_command@footnote C1 node_footnote.texi:l34
-   |EXTRA
    |global_command_number:{3}
     *brace_command_context C1
      *paragraph C2
