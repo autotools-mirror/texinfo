@@ -468,7 +468,8 @@ sub my_test_documentation_convert_index_entry_command_type($$$$) {
     $result .= "</table>\n";
     return $result;
   } else {
-    my $text_element = {'text' => '@'.$cmdname};
+    my $text_element = Texinfo::TreeElement::new({'text' => '@'.$cmdname,
+                                                  'type' => 'normal_text'});
     my $tree = $converter->cdt('No value for @strong{{item}}',
                                    {'item' => $text_element});
     my $no_value_converted_output = $converter->convert_tree($tree);

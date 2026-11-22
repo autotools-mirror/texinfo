@@ -147,8 +147,8 @@ sub _info_header($$$) {
   if (defined($global_commands) and exists($global_commands->{'copying'})) {
     print STDERR "COPYING HEADER\n" if ($self->get_conf('DEBUG'));
     $self->{'in_copying_header'} = 1;
-    $self->_convert({'contents' =>
-          $global_commands->{'copying'}->{'contents'}});
+    $self->_convert(Texinfo::TreeElement::new({'contents' =>
+                         $global_commands->{'copying'}->{'contents'}}));
     $self->format_footnotes();
     delete $self->{'in_copying_header'};
   }
@@ -985,7 +985,8 @@ sub format_ref($$$$) {
     # Add a Top node to have a node name.
     # Should probably be removed about 10-15 years after Info
     # reader have been fixed.
-    $label_element = {'text' => 'Top'};
+    $label_element = Texinfo::TreeElement::new({'text' => 'Top',
+                                                'type' => 'normal_text'});
   }
 
   if (defined($label_element)) {
@@ -1023,8 +1024,8 @@ sub format_ref($$$$) {
            if ($pre_quote);
 
     $self->{'formatters'}->[-1]->{'suppress_styles'} = 1;
-    $self->_convert(Texinfo::TreeElement::new(
-                  {'type' => '_stop_upper_case',
+    $self->_convert(Texinfo::TreeElement::new({
+                   'type' => '_stop_upper_case',
                    'contents' => [
                      Texinfo::TreeElement::new({'type' => '_code',
                       'contents' => [$label_element]})]}));

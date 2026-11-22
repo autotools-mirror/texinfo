@@ -8648,8 +8648,11 @@ sub _convert($$;$) {
   my ($self, $element, $explanation) = @_;
 
   if (!defined($element)) {
-    cluck('BUG: _convert: element UNDEF');
+    cluck('BUG: HTML _convert: element UNDEF');
     return '';
+  }
+  if (ref($element) ne 'Texinfo::TreeElement') {
+    cluck('BUG: HTML _convert: not an element: '.ref($element));
   }
 
   # to help debug and trace

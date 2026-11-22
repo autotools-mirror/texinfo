@@ -203,8 +203,7 @@ sub _copy_tree($;$) {
         $new->{$info_type}->{$key} = $value;
       } elsif (ref($value) eq 'ARRAY') {
         # formerly menus, now in node relations
-        if (ref($value->[0]) eq 'HASH'
-            or ref($value->[0]) eq 'Texinfo::TreeElement') {
+        if (ref($value->[0]) eq 'Texinfo::TreeElement') {
           #print STDERR "II ARRAY $key $value\n";
           if ($other_trees) {
             $new->{$info_type}->{$key} = [];
@@ -220,7 +219,7 @@ sub _copy_tree($;$) {
           print STDERR "Unexpected array $info_type [$command_or_type]{$key}: "
                                                      .ref($value->[0])."\n";
         }
-      } elsif (ref($value) eq 'HASH' or ref($value) eq 'Texinfo::TreeElement') {
+      } elsif (ref($value) eq 'Texinfo::TreeElement') {
         # currently no key associated to a hash reference
         #print STDERR "II HASH $key $value\n";
         if (not $other_trees
@@ -302,8 +301,7 @@ sub _remove_element_copy_info($;$$) {
       my $value = $current->{$info_type}->{$key};
       #print STDERR (' ' x $level) . "K $info_type $key |$value\n";
       if (ref($value) eq 'ARRAY') {
-        if (ref($value->[0]) eq 'HASH'
-            or ref($value->[0]) eq 'Texinfo::TreeElement') {
+        if (ref($value->[0]) eq 'Texinfo::TreeElement') {
         #print STDERR (' ' x $level) .
         #           "Array $command_or_type $info_type -> $key\n";
           # formerly menus now in node relations
@@ -313,8 +311,7 @@ sub _remove_element_copy_info($;$$) {
                                       $added_root_elements);
           }
         }
-      } elsif (ref($value) eq 'HASH'
-               or ref($value) eq 'Texinfo::TreeElement') {
+      } elsif (ref($value) eq 'Texinfo::TreeElement') {
         #print STDERR (' ' x $level)
         #         . "Hash $command_or_type $info_type -> $key\n";
         if ($extra_directions{$key}) {
@@ -648,8 +645,7 @@ sub element_number_or_error($) {
   my $element = shift;
 
   if (ref($element) eq ''
-      or (ref($element) ne 'HASH'
-          and ref($element) ne 'Texinfo::TreeElement')) {
+      or ref($element) ne 'Texinfo::TreeElement') {
     cluck("element_number_or_error: not an hash: $element\n");
   }
 
@@ -736,8 +732,8 @@ sub _print_element_associated_info($$$$$;$$) {
       } else {
         $result .= "{${value}}";
       }
-    } elsif (($ref eq 'HASH' or $ref eq 'Texinfo::TreeElement')
-              and $out_of_tree_element_name{$key}) {
+    } elsif ($ref eq 'Texinfo::TreeElement'
+             and $out_of_tree_element_name{$key}) {
       # currently no extra_element_oot, only extra_element_info
       my $info_e_text;
       ($current_nr, $info_e_text)
@@ -746,7 +742,7 @@ sub _print_element_associated_info($$$$$;$$) {
                                           $fname_encoding, $use_filename);
       $result .= "\n$info_e_text";
       $had_eol = 1;
-    } elsif ($ref eq 'HASH' or $ref eq 'Texinfo::TreeElement') {
+    } elsif ($ref eq 'Texinfo::TreeElement') {
       if ($extra_directions{$key}) {
         # no corresponding key currently (would have been extra_directions)
         my @directions_strings;
@@ -803,6 +799,10 @@ sub _print_element_associated_info($$$$$;$$) {
 
 sub print_element_base($$$;$$) {
   my ($element, $level, $prepended, $fname_encoding, $use_filename) = @_;
+
+  if (!defined($element) or ref($element) ne 'Texinfo::TreeElement') {
+    confess('not an element in print_element_base');
+  }
 
   my $result = ' ' x $level;
 
@@ -1019,8 +1019,7 @@ sub modify_tree($$;$) {
   #print STDERR "modify_tree tree: $tree\n";
 
   if (!defined($tree)
-      or (ref($tree) ne 'HASH' and ref($tree) ne 'Texinfo::TreeElement')) {
-      #or (ref($tree) ne 'Texinfo::TreeElement')) {
+      or ref($tree) ne 'Texinfo::TreeElement') {
     cluck "tree ".(!defined($tree) ? 'UNDEF' : "not a hash: $tree");
     return undef;
   }
@@ -1188,7 +1187,7 @@ sub protect_first_parenthesis($) {
   confess("BUG: protect_first_parenthesis element undef")
     if (!defined($element));
   confess("BUG: protect_first_parenthesis not a hash")
-    if (ref($element) ne 'HASH' and ref($element) ne 'Texinfo::TreeElement');
+    if (ref($element) ne 'Texinfo::TreeElement');
   #print STDERR "protect_first_parenthesis: $element->{'contents'}\n";
 
   return if (!exists($element->{'contents'}));

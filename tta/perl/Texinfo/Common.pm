@@ -995,8 +995,8 @@ sub file_separator_canonpath($) {
 sub empty_spaces_argument($) {
   my $element = shift;
 
-  confess() if (!defined($element) or (ref($element) ne 'HASH'
-                             and ref($element) ne 'Texinfo::TreeElement'));
+  #confess() if (!defined($element)
+  #              or ref($element) ne 'Texinfo::TreeElement');
 
   return 1 if (!exists($element->{'contents'}));
 

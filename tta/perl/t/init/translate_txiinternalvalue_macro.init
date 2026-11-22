@@ -1,4 +1,6 @@
 
+use Texinfo::TreeElement;
+
 texinfo_register_command_formatting('sp', \&my_sp_formatting);
 
 sub my_sp_formatting($$$$$) {
@@ -11,7 +13,9 @@ sub my_sp_formatting($$$$$) {
     my $translated_tree = $self->cdt('@macro txiinternalvalue
 user internalvalue
 @end macro
-{myarg} @TeX{}', {'myarg' => {'contents' => [{'text' => $sp_nr}]}});
+{myarg} @TeX{}', {'myarg' => Texinfo::TreeElement::new({'contents' => [
+                             Texinfo::TreeElement::new({'text' => $sp_nr,
+                                              'type' => 'normal_text'})]})});
     #print STDERR "T ".Texinfo::Common::debug_print_tree($translated_tree)."\n";
     $result = $self->convert_tree($translated_tree);
     return $result;

@@ -1341,7 +1341,8 @@ sub node_name($$) {
       # node direction to an external node
       my ($begin, $end) = @{$node->{'extra'}->{'node_content'}};
       $label_element
-        = {'contents' => [@{$node->{'contents'}}[$begin .. $end]]};
+        = Texinfo::TreeElement::new({
+              'contents' => [@{$node->{'contents'}}[$begin .. $end]]});
     } elsif (exists($Texinfo::Commands::sectioning_heading_commands{
                                                   $node->{'cmdname'}})) {
       # @ref is accepted in section name, not in @node and similar.  It would
@@ -2862,12 +2863,12 @@ sub _convert($$) {
   my ($self, $element) = @_;
 
   if (!defined($element)) {
-    cluck("BUG? Plaintext _convert element undef\n");
+    cluck("BUG: Plaintext _convert element undef");
+  }
+  if (ref($element) ne 'Texinfo::TreeElement') {
+    cluck('BUG: Plaintext _convert: not an element: '.ref($element));
   }
 
-  #if (ref($element) ne 'HASH' and ref($element) ne 'Texinfo::TreeElement') {
-  #  cluck();
-  #}
   #print STDERR "CTPI "
   # .Texinfo::ManipulateTree::element_print_details($element)."\n";
 
@@ -3487,8 +3488,8 @@ sub _convert($$) {
                                    {'value' => $args->[0]});
         my $piece;
         if ($formatter->{'_top_formatter'}) {
-          $piece = {'type' => 'paragraph',
-                        'contents' => [$expansion]};
+          $piece = Texinfo::TreeElement::new({'type' => 'paragraph',
+                                       'contents' => [$expansion]});
         } else {
           $piece = $expansion;
         }
@@ -3740,8 +3741,9 @@ sub _convert($$) {
           # or @enumerate in @*table, which is erroneous
           return;
         }
-        my $frenchspacing_element = {'type' => '_frenchspacing',
-                                     'contents' => [$table_item_tree]};
+        my $frenchspacing_element
+         = Texinfo::TreeElement::new({'type' => '_frenchspacing',
+                                      'contents' => [$table_item_tree]});
         $self->convert_line($frenchspacing_element,
                $self->{'format_context'}->[-2]->{'context_indent_len'});
         _ensure_end_of_line($self);
@@ -3807,8 +3809,9 @@ sub _convert($$) {
                                          'pending_text' => [['']]};
       if (exists($element->{'contents'}->[0]->{'contents'})) {
         $self->convert_line(
-             {'type' => '_frenchspacing',
-              'contents' => [$element->{'contents'}->[0]]},
+             Texinfo::TreeElement::new({
+              'type' => '_frenchspacing',
+              'contents' => [$element->{'contents'}->[0]]}),
              0);
       }
       if (!_pending_is_empty(
@@ -3865,7 +3868,8 @@ sub _convert($$) {
       if (defined($global_commands)
           and exists($global_commands->{'copying'})) {
         my $inserted =
-         {'contents' => $global_commands->{'copying'}->{'contents'}};
+         Texinfo::TreeElement::new({
+             'contents' => $global_commands->{'copying'}->{'contents'}});
         _convert($self, $inserted);
       }
       return;
@@ -4310,7 +4314,8 @@ sub _convert($$) {
                  'context_indent_len' => $description_indent_length,
                };
 
-              $formatted_elt = {'contents' => $node_description->{'contents'}};
+              $formatted_elt = Texinfo::TreeElement::new({
+                 'contents' => $node_description->{'contents'}});
             }
             _convert($self, $formatted_elt);
             if (!$long_description) {
