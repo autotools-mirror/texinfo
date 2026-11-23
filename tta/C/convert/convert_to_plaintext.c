@@ -6026,275 +6026,272 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
         }
     }
 
-  /* FIXME remove this condition */
-  if (type != ET_NONE)
+  if (type == ET_paragraph)
     {
-      if (type == ET_paragraph)
+      TEXT_CONTEXT *text_element_context
+      = top_(text_element_context) (&self_plaintext->text_element_context);
+      int paragraphindent = self->conf->paragraphindent.o.integer;
+      enum command_id context_cmd
+         = *top_(command) (&self_plaintext->context);
+      FORMAT_CONTEXT *top_format
+        = top_(format_context) (&self_plaintext->format_context);
+
+      int para_indent_size = -1;
+      int para_indent_next = -1;
+      if (top_format->cmd == CM_NONE /* '_top_format' in Perl */
+          && paragraphindent >= 0
+          && (element->flags & EF_indent
+              || (!(element->flags & EF_noindent)
+                  && (top_format->paragraph_count
+                      || (self->conf->firstparagraphindent.o.string
+     && !strcmp (self->conf->firstparagraphindent.o.string, "insert")))
+                  && text_element_context->counter == 0)))
         {
-          TEXT_CONTEXT *text_element_context
-          = top_(text_element_context) (&self_plaintext->text_element_context);
-          int paragraphindent = self->conf->paragraphindent.o.integer;
-          enum command_id context_cmd
-             = *top_(command) (&self_plaintext->context);
-          FORMAT_CONTEXT *top_format
-            = top_(format_context) (&self_plaintext->format_context);
+          para_indent_size = paragraphindent;
+          para_indent_next = 0;
+        }
 
-          int para_indent_size = -1;
-          int para_indent_next = -1;
-          if (top_format->cmd == CM_NONE /* '_top_format' in Perl */
-              && paragraphindent >= 0
-              && (element->flags & EF_indent
-                  || (!(element->flags & EF_noindent)
-                      && (top_format->paragraph_count
-                          || (self->conf->firstparagraphindent.o.string
-         && !strcmp (self->conf->firstparagraphindent.o.string, "insert")))
-                      && text_element_context->counter == 0)))
-            {
-              para_indent_size = paragraphindent;
-              para_indent_next = 0;
-            }
+      FORMATTER new_paragraph
+        = new_paragraph_formatter (self, para_indent_size,
+                                   para_indent_next);
 
-          FORMATTER new_paragraph
-            = new_paragraph_formatter (self, para_indent_size,
-                                       para_indent_next);
+      push_formatter (self, &new_paragraph);
 
-          push_formatter (self, &new_paragraph);
+      top_format->paragraph_count++;
 
-          top_format->paragraph_count++;
+      if (context_cmd == CM_flushright)
+        {
+          push_count_context (&self_plaintext->count_context);
+        }
+    }
+  else if (type == ET_preformatted || type == ET_rawpreformatted)
+    {
+      enum command_id context_cmd
+         = *top_(command) (&self_plaintext->context);
+     /* if in a description reuse the main menu unfilled, to keep things
+        simpler and avoid having to do a separate count. */
+      if (type == ET_rawpreformatted
+          || !element->e.c->parent
+          || element->e.c->parent->type != ET_menu_entry_description)
+        {
+          FORMATTER new_preformatted
+            = new_unfilled_formatter (self, -1);
+          preformatted = &new_preformatted;
+          push_formatter (self, preformatted);
 
           if (context_cmd == CM_flushright)
             {
               push_count_context (&self_plaintext->count_context);
             }
         }
-      else if (type == ET_preformatted || type == ET_rawpreformatted)
-        {
-          enum command_id context_cmd
-             = *top_(command) (&self_plaintext->context);
-     /* if in a description reuse the main menu unfilled, to keep things
-        simpler and avoid having to do a separate count. */
-          if (type == ET_rawpreformatted
-              || !element->e.c->parent
-              || element->e.c->parent->type != ET_menu_entry_description)
-            {
-              FORMATTER new_preformatted
-                = new_unfilled_formatter (self, -1);
-              preformatted = &new_preformatted;
-              push_formatter (self, preformatted);
+    }
+  else if (type == ET_def_line)
+    {
+      convert_def_line (self, element);
+      return;
+    }
+  else if (type == ET_menu_entry)
+    {
+      int entry_name_seen = 0;
+      const ELEMENT *menu_entry_node;
+      size_t i;
+      int warn_special_char
+        = (self->conf->INFO_SPECIAL_CHARS_WARNING.o.integer > 0
+           && !self_plaintext->silent);
 
-              if (context_cmd == CM_flushright)
+      for (i = 0; i < element->e.c->contents.number; i++)
+        {
+          const ELEMENT *content = element->e.c->contents.list[i];
+          if (content->type == ET_menu_entry_leading_text)
+            stream_output_add_next (self, content->e.text->text,
+                                    content->e.text->end, 0);
+          else if (content->type == ET_menu_entry_node)
+            {
+              ELEMENT *entry_node = new_element (ET__code);
+              /* Flush output so not to include in node text. */
+              const TEXT pending_word = para_add_pending_word (1);
+              stream_output_n (self, pending_word.text, pending_word.end);
+              TEXT node_text;
+              int node_quoting_required = 0;
+
+              menu_entry_node = content;
+
+              FORMATTER *formatter
+                = top_(formatter) (&self_plaintext->formatters);
+              formatter->suppress_styles = 1;
+              formatter->no_added_eol = 1;
+
+              push_count_context (&self_plaintext->count_context);
+
+              add_to_contents_as_array (entry_node, (ELEMENT *)content);
+              convert_to_plaintext_internal (self, entry_node);
+
+              destroy_element (entry_node);
+
+              const TEXT n_pending_word = para_add_pending_word (1);
+              stream_output_n (self, n_pending_word.text,
+                               n_pending_word.end);
+
+              node_text = stream_to_text (self);
+              pop_count_context (&self_plaintext->count_context);
+
+              formatter
+                = top_(formatter) (&self_plaintext->formatters);
+              formatter->suppress_styles = 0;
+              formatter->no_added_eol = 0;
+
+              if (node_text.text[0] == '('
+                  && self->conf->INFO_SPECIAL_CHARS_QUOTE.o.integer > 0)
                 {
-                  push_count_context (&self_plaintext->count_context);
+                  const INTEGER_LIST *manual_content
+                        = lookup_extra_integer_list (menu_entry_node,
+                                                     AI_key_manual_content);
+                  if (!manual_content)
+                    node_quoting_required = 1;
                 }
-            }
-        }
-      else if (type == ET_def_line)
-        {
-          convert_def_line (self, element);
-          return;
-        }
-      else if (type == ET_menu_entry)
-        {
-          int entry_name_seen = 0;
-          const ELEMENT *menu_entry_node;
-          size_t i;
-          int warn_special_char
-            = (self->conf->INFO_SPECIAL_CHARS_WARNING.o.integer > 0
-               && !self_plaintext->silent);
 
-          for (i = 0; i < element->e.c->contents.number; i++)
-            {
-              const ELEMENT *content = element->e.c->contents.list[i];
-              if (content->type == ET_menu_entry_leading_text)
-                stream_output_add_next (self, content->e.text->text,
-                                        content->e.text->end, 0);
-              else if (content->type == ET_menu_entry_node)
+              if (warn_special_char
+                  || self->conf->INFO_SPECIAL_CHARS_QUOTE.o.integer > 0)
                 {
-                  ELEMENT *entry_node = new_element (ET__code);
-                  /* Flush output so not to include in node text. */
-                  const TEXT pending_word = para_add_pending_word (1);
-                  stream_output_n (self, pending_word.text, pending_word.end);
-                  TEXT node_text;
-                  int node_quoting_required = 0;
+                  const char *check_chars;
+                  const char *p;
+                  char shown_char[3];
 
-                  menu_entry_node = content;
+                  if (entry_name_seen)
+                    check_chars = ",\t.";
+                  else
+                    check_chars = ":";
 
-                  FORMATTER *formatter
-                    = top_(formatter) (&self_plaintext->formatters);
-                  formatter->suppress_styles = 1;
-                  formatter->no_added_eol = 1;
-
-                  push_count_context (&self_plaintext->count_context);
-
-                  add_to_contents_as_array (entry_node, (ELEMENT *)content);
-                  convert_to_plaintext_internal (self, entry_node);
-
-                  destroy_element (entry_node);
-
-                  const TEXT n_pending_word = para_add_pending_word (1);
-                  stream_output_n (self, n_pending_word.text,
-                                   n_pending_word.end);
-
-                  node_text = stream_to_text (self);
-                  pop_count_context (&self_plaintext->count_context);
-
-                  formatter
-                    = top_(formatter) (&self_plaintext->formatters);
-                  formatter->suppress_styles = 0;
-                  formatter->no_added_eol = 0;
-
-                  if (node_text.text[0] == '('
-                      && self->conf->INFO_SPECIAL_CHARS_QUOTE.o.integer > 0)
+                  p = node_text.text;
+                  while (p)
                     {
-                      const INTEGER_LIST *manual_content
-                            = lookup_extra_integer_list (menu_entry_node,
-                                                         AI_key_manual_content);
-                      if (!manual_content)
+                      const char *q = strpbrk (p, check_chars);
+
+                      if (!q)
+                        break;
+
+                      if (*q == '.')
+                        {
+                          if (! *(q+1))
+                            break;
+                          if (!strchr (whitespace_chars, *(q+1)))
+                            {
+                              p = q+1;
+                              continue;
+                            }
+                          shown_char[1] = *(q+1);
+                          shown_char[2] = '\0';
+                        }
+                      else
+                        shown_char[1] = '\0';
+                      shown_char[0] = *q;
+
+                      if (warn_special_char)
+                        {
+                          message_list_command_warn (&self->error_messages,
+                           (self->conf && self->conf->DEBUG.o.integer > 0),
+                           element, 0,
+                         "menu entry node name should not contain `%s'",
+                           shown_char);
+                        }
+                      if (self->conf->INFO_SPECIAL_CHARS_QUOTE.o.integer > 0)
+                        node_quoting_required = 1;
+
+                      break;
+                    }
+
+         /* also protect . although only '. ' ends the node name in menu,
+            to simplify Info readers. */
+                  if (self->conf->INFO_SPECIAL_CHARS_QUOTE.o.integer > 0
+                      && entry_name_seen && !node_quoting_required)
+                    {
+                      const char *q = strpbrk (node_text.text, ".");
+                      if (q)
                         node_quoting_required = 1;
                     }
-
-                  if (warn_special_char
-                      || self->conf->INFO_SPECIAL_CHARS_QUOTE.o.integer > 0)
+                }
+              if (node_quoting_required)
+                {
+                  stream_output_n (self, node_quote, 1);
+                  if (node_text.text[node_text.end -1] == '\n')
                     {
-                      const char *check_chars;
-                      const char *p;
-                      char shown_char[3];
-
-                      if (entry_name_seen)
-                        check_chars = ",\t.";
-                      else
-                        check_chars = ":";
-
-                      p = node_text.text;
-                      while (p)
-                        {
-                          const char *q = strpbrk (p, check_chars);
-
-                          if (!q)
-                            break;
-
-                          if (*q == '.')
-                            {
-                              if (! *(q+1))
-                                break;
-                              if (!strchr (whitespace_chars, *(q+1)))
-                                {
-                                  p = q+1;
-                                  continue;
-                                }
-                              shown_char[1] = *(q+1);
-                              shown_char[2] = '\0';
-                            }
-                          else
-                            shown_char[1] = '\0';
-                          shown_char[0] = *q;
-
-                          if (warn_special_char)
-                            {
-                              message_list_command_warn (&self->error_messages,
-                               (self->conf && self->conf->DEBUG.o.integer > 0),
-                               element, 0,
-                             "menu entry node name should not contain `%s'",
-                               shown_char);
-                            }
-                          if (self->conf->INFO_SPECIAL_CHARS_QUOTE.o.integer > 0)
-                            node_quoting_required = 1;
-
-                          break;
-                        }
-
-             /* also protect . although only '. ' ends the node name in menu,
-                to simplify Info readers. */
-                      if (self->conf->INFO_SPECIAL_CHARS_QUOTE.o.integer > 0
-                          && entry_name_seen && !node_quoting_required)
-                        {
-                          const char *q = strpbrk (node_text.text, ".");
-                          if (q)
-                            node_quoting_required = 1;
-                        }
-                    }
-                  if (node_quoting_required)
-                    {
+                      stream_output_n (self, node_text.text,
+                                       node_text.end -1);
                       stream_output_n (self, node_quote, 1);
-                      if (node_text.text[node_text.end -1] == '\n')
-                        {
-                          stream_output_n (self, node_text.text,
-                                           node_text.end -1);
-                          stream_output_n (self, node_quote, 1);
-                          stream_output_n (self, "\n", 1);
-                        }
-                      else
-                        {
-                          stream_output_n (self, node_text.text, node_text.end);
-                          stream_output_n (self, node_quote, 1);
-                        }
+                      stream_output_n (self, "\n", 1);
                     }
                   else
-                    stream_output_n (self, node_text.text, node_text.end);
-
-                  free (node_text.text);
-                }
-              else if (content->type == ET_menu_entry_name)
-                {/* Flush output so not to include in name text */
-                  const TEXT pending_word = para_add_pending_word (1);
-                  stream_output_n (self, pending_word.text, pending_word.end);
-                  TEXT entry_name;
-                  int name_quoting_required = 0;
-
-                  FORMATTER *formatter
-                    = top_(formatter) (&self_plaintext->formatters);
-                  formatter->no_added_eol = 1;
-
-                  push_count_context (&self_plaintext->count_context);
-
-                  convert_to_plaintext_internal (self, content);
-
-                  const TEXT n_pending_word = para_add_pending_word (1);
-                  stream_output_n (self, n_pending_word.text,
-                                   n_pending_word.end);
-
-                  entry_name = stream_to_text (self);
-                  pop_count_context (&self_plaintext->count_context);
-
-                  formatter
-                    = top_(formatter) (&self_plaintext->formatters);
-                  formatter->no_added_eol = 0;
-
-                  entry_name_seen = 1;
-
-                  if (warn_special_char
-                      || self->conf->INFO_SPECIAL_CHARS_QUOTE.o.integer > 0)
                     {
-                      const char *p;
-
-                      p = strpbrk (entry_name.text, ":");
-
-                      if (p)
-                        {
-                          if (warn_special_char)
-                            {
-                              message_list_command_warn (&self->error_messages,
-                               (self->conf && self->conf->DEBUG.o.integer > 0),
-                               element, 0,
-                             "menu entry name should not contain `:'");
-                            }
-                          if (self->conf->INFO_SPECIAL_CHARS_QUOTE.o.integer > 0)
-                            name_quoting_required = 1;
-                        }
+                      stream_output_n (self, node_text.text, node_text.end);
+                      stream_output_n (self, node_quote, 1);
                     }
-                  if (name_quoting_required)
-                    stream_output_n (self, node_quote, 1);
-                  stream_output_n (self, entry_name.text, entry_name.end);
-                  if (name_quoting_required)
-                    stream_output_n (self, node_quote, 1);
-
-                  free (entry_name.text);
                 }
-              /* empty description */
-              else if (content->type == ET_menu_entry_description
-                       && (content->e.c->contents.number == 0
-                           || (content->e.c->contents.number == 1
-                               &&
+              else
+                stream_output_n (self, node_text.text, node_text.end);
+
+              free (node_text.text);
+            }
+          else if (content->type == ET_menu_entry_name)
+            {/* Flush output so not to include in name text */
+              const TEXT pending_word = para_add_pending_word (1);
+              stream_output_n (self, pending_word.text, pending_word.end);
+              TEXT entry_name;
+              int name_quoting_required = 0;
+
+              FORMATTER *formatter
+                = top_(formatter) (&self_plaintext->formatters);
+              formatter->no_added_eol = 1;
+
+              push_count_context (&self_plaintext->count_context);
+
+              convert_to_plaintext_internal (self, content);
+
+              const TEXT n_pending_word = para_add_pending_word (1);
+              stream_output_n (self, n_pending_word.text,
+                               n_pending_word.end);
+
+              entry_name = stream_to_text (self);
+              pop_count_context (&self_plaintext->count_context);
+
+              formatter
+                = top_(formatter) (&self_plaintext->formatters);
+              formatter->no_added_eol = 0;
+
+              entry_name_seen = 1;
+
+              if (warn_special_char
+                  || self->conf->INFO_SPECIAL_CHARS_QUOTE.o.integer > 0)
+                {
+                  const char *p;
+
+                  p = strpbrk (entry_name.text, ":");
+
+                  if (p)
+                    {
+                      if (warn_special_char)
+                        {
+                          message_list_command_warn (&self->error_messages,
+                           (self->conf && self->conf->DEBUG.o.integer > 0),
+                           element, 0,
+                         "menu entry name should not contain `:'");
+                        }
+                      if (self->conf->INFO_SPECIAL_CHARS_QUOTE.o.integer > 0)
+                        name_quoting_required = 1;
+                    }
+                }
+              if (name_quoting_required)
+                stream_output_n (self, node_quote, 1);
+              stream_output_n (self, entry_name.text, entry_name.end);
+              if (name_quoting_required)
+                stream_output_n (self, node_quote, 1);
+
+              free (entry_name.text);
+            }
+          /* empty description */
+          else if (content->type == ET_menu_entry_description
+                   && (content->e.c->contents.number == 0
+                       || (content->e.c->contents.number == 1
+                           &&
             (content->e.c->contents.list[0]->e.c->contents.number == 0
              || (content->e.c->contents.list[0]->e.c->contents.number == 1
                  && type_data[
@@ -6303,240 +6300,239 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
        content->e.c->contents.list[0]->e.c->contents.list[0]->e.text->text[
   strspn (content->e.c->contents.list[0]->e.c->contents.list[0]->e.text->text,
           whitespace_chars)] == '\0')))))
-                {
-                  const ELEMENT *node_description = 0;
-                  int long_description = 0;
-                  const char *normalized;
-                  if (menu_entry_node)
+            {
+              const ELEMENT *node_description = 0;
+              int long_description = 0;
+              const char *normalized;
+              if (menu_entry_node)
+               {
+                 normalized
+                  = lookup_extra_string (menu_entry_node,
+                                         AI_key_normalized);
+                 if (normalized)
                    {
-                     normalized
-                      = lookup_extra_string (menu_entry_node,
-                                             AI_key_normalized);
-                     if (normalized)
+                     const ELEMENT *node_element
+                       = find_identifier_target (
+                              &self->document->identifiers_target,
+                              normalized);
+                     if (node_element
+                         && node_element->e.c->cmd == CM_node)
                        {
-                         const ELEMENT *node_element
-                           = find_identifier_target (
-                                  &self->document->identifiers_target,
-                                  normalized);
-                         if (node_element
-                             && node_element->e.c->cmd == CM_node)
+                         const NODE_RELATIONS_LIST *nodes_list
+                           = &self->document->nodes_list;
+                         int status;
+                         size_t node_number
+                           = lookup_extra_integer (node_element,
+                              AI_key_node_number, &status);
+                         if (status == 0)
                            {
-                             const NODE_RELATIONS_LIST *nodes_list
-                               = &self->document->nodes_list;
-                             int status;
-                             size_t node_number
-                               = lookup_extra_integer (node_element,
-                                  AI_key_node_number, &status);
-                             if (status == 0)
+                             const NODE_RELATIONS *node_relations
+                               = nodes_list->list[node_number -1];
+                             if (node_relations->node_descriptions
+                              && node_relations->node_descriptions->number)
+                               node_description
+                                = node_relations->node_descriptions->list[0];
+                             else if (node_relations->node_long_descriptions
+                        && node_relations->node_long_descriptions->number)
                                {
-                                 const NODE_RELATIONS *node_relations
-                                   = nodes_list->list[node_number -1];
-                                 if (node_relations->node_descriptions
-                                  && node_relations->node_descriptions->number)
-                                   node_description
-                                    = node_relations->node_descriptions->list[0];
-                                 else if (node_relations->node_long_descriptions
-                            && node_relations->node_long_descriptions->number)
-                                   {
-                                     node_description
-                             = node_relations->node_long_descriptions->list[0];
-                                     long_description = 1;
-                                   }
+                                 node_description
+                         = node_relations->node_long_descriptions->list[0];
+                                 long_description = 1;
                                }
                            }
                        }
-                    }
-                  if (node_description)
+                   }
+                }
+              if (node_description)
+                {
+                  int description_align_column;
+                  int description_indent_length;
+                  uintptr_t seen_description_nr = 0;
+                  if (
+        self->conf->AUTO_MENU_DESCRIPTION_ALIGN_COLUMN.o.integer > 0)
+                    description_align_column
+             = self->conf->AUTO_MENU_DESCRIPTION_ALIGN_COLUMN.o.integer;
+                  else
                     {
-                      int description_align_column;
-                      int description_indent_length;
-                      uintptr_t seen_description_nr = 0;
-                      if (
-            self->conf->AUTO_MENU_DESCRIPTION_ALIGN_COLUMN.o.integer > 0)
-                        description_align_column
-                 = self->conf->AUTO_MENU_DESCRIPTION_ALIGN_COLUMN.o.integer;
-                      else
-                        {
-                          TEXT_CONTEXT *text_element_context
-                             = top_(text_element_context)
-                                    (&self_plaintext->text_element_context);
-                          description_align_column
-                            = (int) (text_element_context->max
-                                  * description_align_column_factor);
-                        }
-                      description_indent_length = description_align_column-1;
+                      TEXT_CONTEXT *text_element_context
+                         = top_(text_element_context)
+                                (&self_plaintext->text_element_context);
+                      description_align_column
+                        = (int) (text_element_context->max
+                              * description_align_column_factor);
+                    }
+                  description_indent_length = description_align_column-1;
 
-                      if (! is_c_hashmap_registered (
-                            &self_plaintext->seen_node_descriptions,
-                                         normalized))
-                        {
-                          c_hashmap_register (
-                                 &self_plaintext->seen_node_descriptions,
-                                         normalized, 0);
-                        }
-                      else
-                        {
-                          int found;
-                          seen_description_nr = (uintptr_t) c_hashmap_value (
+                  if (! is_c_hashmap_registered (
+                        &self_plaintext->seen_node_descriptions,
+                                     normalized))
+                    {
+                      c_hashmap_register (
                              &self_plaintext->seen_node_descriptions,
-                             normalized, &found);
-                        }
-                      seen_description_nr++;
-                      c_hashmap_set_value (
-                             &self_plaintext->seen_node_descriptions,
-                             normalized, (const void *)seen_description_nr);
+                                     normalized, 0);
+                    }
+                  else
+                    {
+                      int found;
+                      seen_description_nr = (uintptr_t) c_hashmap_value (
+                         &self_plaintext->seen_node_descriptions,
+                         normalized, &found);
+                    }
+                  seen_description_nr++;
+                  c_hashmap_set_value (
+                         &self_plaintext->seen_node_descriptions,
+                         normalized, (const void *)seen_description_nr);
 
-                      /* flush the current unfilled container */
+                  /* flush the current unfilled container */
+                  const TEXT pending_word = para_add_pending_word (1);
+                  stream_output_n (self, pending_word.text,
+                                   pending_word.end);
+
+                  int text_count = para_counter ();
+
+                  if (text_count >= description_indent_length)
+                    {
+                      stream_output_add_text (self, "  ", 2, 0);
                       const TEXT pending_word = para_add_pending_word (1);
                       stream_output_n (self, pending_word.text,
                                        pending_word.end);
-
-                      int text_count = para_counter ();
-
-                      if (text_count >= description_indent_length)
-                        {
-                          stream_output_add_text (self, "  ", 2, 0);
-                          const TEXT pending_word = para_add_pending_word (1);
-                          stream_output_n (self, pending_word.text,
-                                           pending_word.end);
-                          text_count += 2;
-                        }
+                      text_count += 2;
+                    }
 
 
-                      TEXT_CONTEXT *top_text_element_context
-                        = top_(text_element_context)
-                                 (&self_plaintext->text_element_context);
-                      TEXT_CONTEXT text_element_context = { text_count, 0 };
+                  TEXT_CONTEXT *top_text_element_context
+                    = top_(text_element_context)
+                             (&self_plaintext->text_element_context);
+                  TEXT_CONTEXT text_element_context = { text_count, 0 };
 
-                      if (self->conf->AUTO_MENU_MAX_WIDTH.o.integer > 0)
-                        text_element_context.max
-                          = self->conf->AUTO_MENU_MAX_WIDTH.o.integer;
-                      else
-                        { /* e.g. 72 -> 79 */
-                          text_element_context.max
-                            = (int) (top_text_element_context->max * 1.1);
-                        }
-                      add_(text_element_context) (
-                              &self_plaintext->text_element_context,
-                              text_element_context);
+                  if (self->conf->AUTO_MENU_MAX_WIDTH.o.integer > 0)
+                    text_element_context.max
+                      = self->conf->AUTO_MENU_MAX_WIDTH.o.integer;
+                  else
+                    { /* e.g. 72 -> 79 */
+                      text_element_context.max
+                        = (int) (top_text_element_context->max * 1.1);
+                    }
+                  add_(text_element_context) (
+                          &self_plaintext->text_element_context,
+                          text_element_context);
 
       /* avoid messages if formatting the node description more than once */
-                      if (seen_description_nr > 1)
-                        self_plaintext->silent++;
+                  if (seen_description_nr > 1)
+                    self_plaintext->silent++;
 
 
-                      if (!long_description)
-                        {
-                 /* push a paragraph container to format the description. */
-                          FORMATTER description_para
-                            = new_paragraph_formatter (self,
-                                             description_indent_length, -1);
-                          push_formatter (self, &description_para);
-                          convert_to_plaintext_internal (self,
-                                    node_description->e.c->contents.list[0]);
-                          const TEXT_AND_LINE_COUNT end_result = para_end ();
-                          stream_output_nl (self, end_result);
-                          para_destroy ();
-                          pop_formatter (self, 0);
-                        }
-                      else
-                        {
-                          FORMAT_CONTEXT format_context = { 0 };
-                          format_context.cmd = node_description->e.c->cmd;
-                          format_context.context_indent_len
-                                       = description_indent_length;
-                          format_context.paragraph_count = 0;
-
-                          add_(format_context) (&self_plaintext->format_context,
-                                        format_context);
-
-                          ELEMENT *formatted_elt
-                            = new_element (ET_generic_container);
-                          insert_slice_into_contents (formatted_elt,
-                               formatted_elt->e.c->contents.number,
-                               node_description, 1,
-                               node_description->e.c->contents.number);
-
-                          convert_to_plaintext_internal (self, formatted_elt);
-                          destroy_element (formatted_elt);
-
-                          pop_(format_context)
-                                 (&self_plaintext->format_context);
-                        }
-
-                      pop_(text_element_context)
-                             (&self_plaintext->text_element_context);
-                      if (seen_description_nr > 1)
-                        self_plaintext->silent--;
+                  if (!long_description)
+                    {
+             /* push a paragraph container to format the description. */
+                      FORMATTER description_para
+                        = new_paragraph_formatter (self,
+                                         description_indent_length, -1);
+                      push_formatter (self, &description_para);
+                      convert_to_plaintext_internal (self,
+                                node_description->e.c->contents.list[0]);
+                      const TEXT_AND_LINE_COUNT end_result = para_end ();
+                      stream_output_nl (self, end_result);
+                      para_destroy ();
+                      pop_formatter (self, 0);
                     }
                   else
-                    convert_to_plaintext_internal (self, content);
+                    {
+                      FORMAT_CONTEXT format_context = { 0 };
+                      format_context.cmd = node_description->e.c->cmd;
+                      format_context.context_indent_len
+                                   = description_indent_length;
+                      format_context.paragraph_count = 0;
+
+                      add_(format_context) (&self_plaintext->format_context,
+                                    format_context);
+
+                      ELEMENT *formatted_elt
+                        = new_element (ET_generic_container);
+                      insert_slice_into_contents (formatted_elt,
+                           formatted_elt->e.c->contents.number,
+                           node_description, 1,
+                           node_description->e.c->contents.number);
+
+                      convert_to_plaintext_internal (self, formatted_elt);
+                      destroy_element (formatted_elt);
+
+                      pop_(format_context)
+                             (&self_plaintext->format_context);
+                    }
+
+                  pop_(text_element_context)
+                         (&self_plaintext->text_element_context);
+                  if (seen_description_nr > 1)
+                    self_plaintext->silent--;
                 }
               else
                 convert_to_plaintext_internal (self, content);
             }
+          else
+            convert_to_plaintext_internal (self, content);
+        }
 
   /* If we are nested inside an @example, a 'menu_entry_description' may not
      have been processed yet, and we need to output any pending spaces
      before 'end_line' throws them away.  The argument to 'add_pending_word'
      does this. */
-          if (element->e.c->parent
-              && element->e.c->parent->type == ET_preformatted)
-            {
-              const TEXT pending_word = para_add_pending_word (1);
-              stream_output_n (self, pending_word.text, pending_word.end);
-            }
-          else
-            {
-              const TEXT pending_word = para_add_pending_word (0);
-              stream_output_n (self, pending_word.text, pending_word.end);
-              para_end_line ();
-              ensure_end_of_line (self);
-            }
-          return;
-        }
-      else if (type == ET__frenchspacing)
+      if (element->e.c->parent
+          && element->e.c->parent->type == ET_preformatted)
         {
-          FORMATTER *formatter
-                = top_(formatter) (&self_plaintext->formatters);
-          add_(integer) (&formatter->frenchspacing_stack, 1);
-          para_set_conf_frenchspacing (1);
+          const TEXT pending_word = para_add_pending_word (1);
+          stream_output_n (self, pending_word.text, pending_word.end);
         }
-      else if (type == ET__code)
+      else
         {
-          FORMATTER *formatter
-                = top_(formatter) (&self_plaintext->formatters);
-          open_code (formatter);
+          const TEXT pending_word = para_add_pending_word (0);
+          stream_output_n (self, pending_word.text, pending_word.end);
+          para_end_line ();
+          ensure_end_of_line (self);
         }
-      else if (type == ET__stop_upper_case)
-        {
-          FORMATTER *formatter
-                = top_(formatter) (&self_plaintext->formatters);
-          UPPER_CASE upper_case = { 0 };
-          add_(upper_case) (formatter->upper_case_stack, upper_case);
-        }
-      else if (type == ET__suppress_styles)
-        {
-          FORMATTER *formatter
-                = top_(formatter) (&self_plaintext->formatters);
-          formatter->suppress_styles = 1;
-        }
-      else if (type == ET_untranslated_def_line_arg)
-        {
-          const char *category_text
-            = element->e.c->contents.list[0]->e.text->text;
-          const char *translation_context
-            = lookup_extra_string (element, AI_key_translation_context);
+      return;
+    }
+  else if (type == ET__frenchspacing)
+    {
+      FORMATTER *formatter
+            = top_(formatter) (&self_plaintext->formatters);
+      add_(integer) (&formatter->frenchspacing_stack, 1);
+      para_set_conf_frenchspacing (1);
+    }
+  else if (type == ET__code)
+    {
+      FORMATTER *formatter
+            = top_(formatter) (&self_plaintext->formatters);
+      open_code (formatter);
+    }
+  else if (type == ET__stop_upper_case)
+    {
+      FORMATTER *formatter
+            = top_(formatter) (&self_plaintext->formatters);
+      UPPER_CASE upper_case = { 0 };
+      add_(upper_case) (formatter->upper_case_stack, upper_case);
+    }
+  else if (type == ET__suppress_styles)
+    {
+      FORMATTER *formatter
+            = top_(formatter) (&self_plaintext->formatters);
+      formatter->suppress_styles = 1;
+    }
+  else if (type == ET_untranslated_def_line_arg)
+    {
+      const char *category_text
+        = element->e.c->contents.list[0]->e.text->text;
+      const char *translation_context
+        = lookup_extra_string (element, AI_key_translation_context);
 
-          ELEMENT *tree = cdt_tree (category_text, self, 0,
-                                    translation_context);
+      ELEMENT *tree = cdt_tree (category_text, self, 0,
+                                translation_context);
 
-          convert_to_plaintext_internal (self, tree);
+      convert_to_plaintext_internal (self, tree);
 
-          destroy_element_and_children (tree);
+      destroy_element_and_children (tree);
 
-          return;
-        }
+      return;
     }
 
   /* Convert any contents */
@@ -6557,239 +6553,234 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
         */
     }
 
-  /* Now closing.  First, close types. */
-  /* FIXME remove this condition */
-  if (type != ET_NONE)
+  /* close containers */
+  if (type == ET__frenchspacing)
     {
-      if (type == ET__frenchspacing)
-        {
-          FORMATTER *formatter
-                = top_(formatter) (&self_plaintext->formatters);
-          pop_(integer) (&formatter->frenchspacing_stack);
+      FORMATTER *formatter
+            = top_(formatter) (&self_plaintext->formatters);
+      pop_(integer) (&formatter->frenchspacing_stack);
 
-          para_set_conf_frenchspacing (*(top_(integer)
-                                 (&formatter->frenchspacing_stack)));
-        }
-      else if (type == ET__code)
-        {
-          FORMATTER *formatter
-                = top_(formatter) (&self_plaintext->formatters);
-          close_code (formatter);
-        }
-      else if (type == ET__stop_upper_case)
-        {
-          FORMATTER *formatter
-                = top_(formatter) (&self_plaintext->formatters);
-          pop_(upper_case) (formatter->upper_case_stack);
-        }
-      else if (type == ET__suppress_styles)
-        {
-          FORMATTER *formatter
-                = top_(formatter) (&self_plaintext->formatters);
-          formatter->suppress_styles = 0;
-        }
-      else if (type == ET_row)
-        {
-          COUNT_CONTEXT *count_context
-           = top_(count_context) (&self_plaintext->count_context);
-          int i;
-          FORMAT_CONTEXT *top_format
-            = top_(format_context) (&self_plaintext->format_context);
-          /* used to register the index entry locations and pass them
-             to the parent, not for conversion */
-          int max_cell_nr = top_format->cell_idx;
+      para_set_conf_frenchspacing (*(top_(integer)
+                             (&formatter->frenchspacing_stack)));
+    }
+  else if (type == ET__code)
+    {
+      FORMATTER *formatter
+            = top_(formatter) (&self_plaintext->formatters);
+      close_code (formatter);
+    }
+  else if (type == ET__stop_upper_case)
+    {
+      FORMATTER *formatter
+            = top_(formatter) (&self_plaintext->formatters);
+      pop_(upper_case) (formatter->upper_case_stack);
+    }
+  else if (type == ET__suppress_styles)
+    {
+      FORMATTER *formatter
+            = top_(formatter) (&self_plaintext->formatters);
+      formatter->suppress_styles = 0;
+    }
+  else if (type == ET_row)
+    {
+      COUNT_CONTEXT *count_context
+       = top_(count_context) (&self_plaintext->count_context);
+      int i;
+      FORMAT_CONTEXT *top_format
+        = top_(format_context) (&self_plaintext->format_context);
+      /* used to register the index entry locations and pass them
+         to the parent, not for conversion */
+      int max_cell_nr = top_format->cell_idx;
      /* beginning of cell in character width based on column sizes given
         in the specification of the table. */
-          int *cell_beginnings = (int *) malloc (max_cell_nr * sizeof (int));
+      int *cell_beginnings = (int *) malloc (max_cell_nr * sizeof (int));
      /* array of lines in each cell, with pending text gathered with the
         max limit on line length per column, for each cell. */
-          PENDING_TEXT_LIST_LINES *cell_lines = top_format->row_cell_lines;
-          int cell_beginning = 0;
+      PENDING_TEXT_LIST_LINES *cell_lines = top_format->row_cell_lines;
+      int cell_beginning = 0;
      /* number maximum of line for the cells in this row */
-          int max_lines = 0;
-          int indent_len = top_format->context_indent_len;
-          PENDING_TEXT_LIST *result = &count_context->pending_text;
+      int max_lines = 0;
+      int indent_len = top_format->context_indent_len;
+      PENDING_TEXT_LIST *result = &count_context->pending_text;
 
-          for (i = 0; i < max_cell_nr; i++)
+      for (i = 0; i < max_cell_nr; i++)
+        {
+          cell_beginnings[i] = cell_beginning;
+          int cell_width;
+          int cell_idx = i;
+          if (cell_idx < top_format->columns_size_nr)
+            cell_width = top_format->columns_size[i];
+          else
+            cell_width = 2;
+          cell_beginning += cell_width + 1;
+
+          int cell_lines_nr = cell_lines[i].number;
+          if (cell_lines_nr > max_lines)
+            max_lines = cell_lines_nr;
+        }
+
+      /* In the following loop, we do not use stream_output for added
+         spaces and newlines because we never know if there is
+         a trailing anchor at the end of the previous cell or line */
+      int line_idx;
+      for (line_idx = 0; line_idx < max_lines; line_idx++)
+        {
+          int line_width = indent_len;
+          int cell_idx;
+          int indent_done = 0;
+          if (indent_len == 0)
+            indent_done = 1;
+          /*
+           determine the last cell index in the line, to fill spaces in
+           cells preceding that cell on the line */
+          int last_cell = 0;
+          for (cell_idx = 0; cell_idx < max_cell_nr; cell_idx++)
             {
-              cell_beginnings[i] = cell_beginning;
-              int cell_width;
-              int cell_idx = i;
-              if (cell_idx < top_format->columns_size_nr)
-                cell_width = top_format->columns_size[i];
-              else
-                cell_width = 2;
-              cell_beginning += cell_width + 1;
-
-              int cell_lines_nr = cell_lines[i].number;
-              if (cell_lines_nr > max_lines)
-                max_lines = cell_lines_nr;
+              if (cell_lines[cell_idx].number >= (unsigned int)line_idx +1)
+                 last_cell = cell_idx+1;
             }
 
-          /* In the following loop, we do not use stream_output for added
-             spaces and newlines because we never know if there is
-             a trailing anchor at the end of the previous cell or line */
-          int line_idx;
-          for (line_idx = 0; line_idx < max_lines; line_idx++)
+          for (cell_idx = 0; cell_idx < last_cell; cell_idx++)
             {
-              int line_width = indent_len;
-              int cell_idx;
-              int indent_done = 0;
-              if (indent_len == 0)
-                indent_done = 1;
-              /*
-               determine the last cell index in the line, to fill spaces in
-               cells preceding that cell on the line */
-              int last_cell = 0;
-              for (cell_idx = 0; cell_idx < max_cell_nr; cell_idx++)
+              if (cell_lines[cell_idx].number >= (unsigned int)line_idx +1)
                 {
-                  if (cell_lines[cell_idx].number >= (unsigned int)line_idx +1)
-                     last_cell = cell_idx+1;
-                }
-
-              for (cell_idx = 0; cell_idx < last_cell; cell_idx++)
-                {
-                  if (cell_lines[cell_idx].number >= (unsigned int)line_idx +1)
+                  PENDING_TEXT_LIST *cell_line
+                    = &cell_lines[cell_idx].list[line_idx];
+                  size_t j;
+                  for (j = cell_line->number; j > 0; j--)
                     {
-                      PENDING_TEXT_LIST *cell_line
-                        = &cell_lines[cell_idx].list[line_idx];
-                      size_t j;
-                      for (j = cell_line->number; j > 0; j--)
+                      PENDING_TEXT *pending_text = &cell_line->list[j -1];
+                      TEXT *t = &pending_text->text;
+                      if (t->end > 0)
                         {
-                          PENDING_TEXT *pending_text = &cell_line->list[j -1];
-                          TEXT *t = &pending_text->text;
-                          if (t->end > 0)
+                          if (t->text[t->end -1] == '\n')
                             {
-                              if (t->text[t->end -1] == '\n')
-                                {
-                                  t->text[t->end -1] = '\0';
-                                  t->end--;
-                                }
-                              break;
+                              t->text[t->end -1] = '\0';
+                              t->end--;
                             }
-                        }
-
-                      for (j = 0; j < cell_line->number; j++)
-                        {
-                          PENDING_TEXT *pending_text = &cell_line->list[j];
-                          TEXT *t = &pending_text->text;
-                          if (t->end > 0 || pending_text->type != PLT_text)
-                            {
-                              if (!indent_done)
-                                {
-                                  if (indent_len > 0)
-                                    {
-                                      PENDING_TEXT *spaces
-                                      = add_top_pending_text (result, PLT_text);
-                                      const char *spaces_str
-                                        = get_n_spaces (indent_len);
-                                      text_append_n (&spaces->text, spaces_str,
-                                                     indent_len);
-                                      indent_done = 1;
-                                    }
-                                }
-                            }
-                          if (pending_text->type == PLT_quoted_image)
-                            line_width += IMAGE_WIDTH;
-                          else
-                            line_width += width_multibyte (t->text, t->end);
-                          PENDING_TEXT *dst_pending_text
-                            = add_top_pending_text (result, PLT_text);
-                          replace_pending_text (dst_pending_text, pending_text);
+                          break;
                         }
                     }
-                  if (cell_idx+1 < last_cell)
+
+                  for (j = 0; j < cell_line->number; j++)
                     {
-                      if (line_width < indent_len
-                                    + cell_beginnings[cell_idx+1])
+                      PENDING_TEXT *pending_text = &cell_line->list[j];
+                      TEXT *t = &pending_text->text;
+                      if (t->end > 0 || pending_text->type != PLT_text)
                         {
-                          int spaces_nr;
                           if (!indent_done)
                             {
-                              PENDING_TEXT *spaces
-                                 = add_top_pending_text (result, PLT_text);
-                              const char *spaces_str = get_n_spaces (indent_len);
-                              text_append_n (&spaces->text,
-                                             spaces_str, indent_len);
-                              indent_done = 1;
+                              if (indent_len > 0)
+                                {
+                                  PENDING_TEXT *spaces
+                                  = add_top_pending_text (result, PLT_text);
+                                  const char *spaces_str
+                                    = get_n_spaces (indent_len);
+                                  text_append_n (&spaces->text, spaces_str,
+                                                 indent_len);
+                                  indent_done = 1;
+                                }
                             }
-                          spaces_nr = indent_len
-                                         + cell_beginnings[cell_idx+1]
-                                         - line_width;
-                          if (spaces_nr > 0)
-                            {
-                              PENDING_TEXT *spaces
-                                 = add_top_pending_text (result, PLT_text);
-                              const char *spaces_str = get_n_spaces (spaces_nr);
-                              text_append_n (&spaces->text,
-                                             spaces_str, spaces_nr);
-                            }
-                          line_width += spaces_nr;
                         }
+                      if (pending_text->type == PLT_quoted_image)
+                        line_width += IMAGE_WIDTH;
+                      else
+                        line_width += width_multibyte (t->text, t->end);
+                      PENDING_TEXT *dst_pending_text
+                        = add_top_pending_text (result, PLT_text);
+                      replace_pending_text (dst_pending_text, pending_text);
                     }
                 }
-              PENDING_TEXT *new_nl = add_top_pending_text (result, PLT_text);
-              text_append_n (&new_nl->text, "\n", 1);
+              if (cell_idx+1 < last_cell)
+                {
+                  if (line_width < indent_len
+                                + cell_beginnings[cell_idx+1])
+                    {
+                      int spaces_nr;
+                      if (!indent_done)
+                        {
+                          PENDING_TEXT *spaces
+                             = add_top_pending_text (result, PLT_text);
+                          const char *spaces_str = get_n_spaces (indent_len);
+                          text_append_n (&spaces->text,
+                                         spaces_str, indent_len);
+                          indent_done = 1;
+                        }
+                      spaces_nr = indent_len
+                                     + cell_beginnings[cell_idx+1]
+                                     - line_width;
+                      if (spaces_nr > 0)
+                        {
+                          PENDING_TEXT *spaces
+                             = add_top_pending_text (result, PLT_text);
+                          const char *spaces_str = get_n_spaces (spaces_nr);
+                          text_append_n (&spaces->text,
+                                         spaces_str, spaces_nr);
+                        }
+                      line_width += spaces_nr;
+                    }
+                }
             }
-          free (cell_beginnings);
+          PENDING_TEXT *new_nl = add_top_pending_text (result, PLT_text);
+          text_append_n (&new_nl->text, "\n", 1);
+        }
+      free (cell_beginnings);
 
-          if (top_format->item_command == CM_headitem)
-            {
-              int k;
+      if (top_format->item_command == CM_headitem)
+        {
+          int k;
         /* at this point cell_beginning is at the beginning of
            the cell following the end of the table -> full width */
-              for (k = 0; k < indent_len; k++)
-                stream_output_n (self, " ", 1);
-              for (k = 0; k < cell_beginning; k++)
-                stream_output_n (self, "-", 1);
-              stream_output_n (self, "\n", 1);
-              max_lines++;
-            }
-
-          count_context->lines += max_lines;
-
-          top_format->cell_idx = 0;
-          for (i = 0; i < max_cell_nr; i++)
-            clear_pending_text_lines (&cell_lines[i]);
+          for (k = 0; k < indent_len; k++)
+            stream_output_n (self, " ", 1);
+          for (k = 0; k < cell_beginning; k++)
+            stream_output_n (self, "-", 1);
+          stream_output_n (self, "\n", 1);
+          max_lines++;
         }
-      else if (type == ET_before_node_section)
-        {
-          TEXT result;
-          TEXT text;
-          text_init (&text);
-          text_init (&result);
 
-          ensure_end_of_line (self);
-          COUNT_CONTEXT *count_context
-            = top_(count_context) (&self_plaintext->count_context);
-          PENDING_TEXT_LIST *pending_texts = &count_context->pending_text;
-          /* here we copy without releasing, as we want to have the pending
-             texts be processed as usual in the following of the code */
-          for (i = 0; i < pending_texts->number; i++)
-            {
-              PENDING_TEXT *pending_text = &pending_texts->list[i];
-              TEXT *t = &pending_text->text;
-              text_append_n (&text, t->text, t->end);
-            }
+      count_context->lines += max_lines;
 
-          if (self_plaintext->encoding_object)
-            {
-              TEXT converted_text
-               = encode_with_iconv (self_plaintext->encoding_object->iconv,
-                                              text.text, text.end,
-                                              0, ieh_error, 0);
-              self_plaintext->text_before_first_node = converted_text;
-              free (text.text);
-            }
-          else
-            self_plaintext->text_before_first_node = text;
-
-          return;
-        }
+      top_format->cell_idx = 0;
+      for (i = 0; i < max_cell_nr; i++)
+        clear_pending_text_lines (&cell_lines[i]);
     }
+  else if (type == ET_before_node_section)
+    {
+      TEXT result;
+      TEXT text;
+      text_init (&text);
+      text_init (&result);
 
+      ensure_end_of_line (self);
+      COUNT_CONTEXT *count_context
+        = top_(count_context) (&self_plaintext->count_context);
+      PENDING_TEXT_LIST *pending_texts = &count_context->pending_text;
+      /* here we copy without releasing, as we want to have the pending
+         texts be processed as usual in the following of the code */
+      for (i = 0; i < pending_texts->number; i++)
+        {
+          PENDING_TEXT *pending_text = &pending_texts->list[i];
+          TEXT *t = &pending_text->text;
+          text_append_n (&text, t->text, t->end);
+        }
+
+      if (self_plaintext->encoding_object)
+        {
+          TEXT converted_text
+           = encode_with_iconv (self_plaintext->encoding_object->iconv,
+                                          text.text, text.end,
+                                          0, ieh_error, 0);
+          self_plaintext->text_before_first_node = converted_text;
+          free (text.text);
+        }
+      else
+        self_plaintext->text_before_first_node = text;
+
+      return;
+    }
   /* Close paragraphs and preformatted. */
-  if (type == ET_paragraph)
+  else if (type == ET_paragraph)
     {
       TEXT_CONTEXT *text_element_context
         = top_(text_element_context) (&self_plaintext->text_element_context);

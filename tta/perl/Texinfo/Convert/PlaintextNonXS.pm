@@ -4056,333 +4056,330 @@ sub _convert($$) {
 
   # open 'type' constructs.
   my $paragraph;
-  # FIXME remove this condition
-  if (defined($type)) {
-    if ($type eq 'paragraph') {
-      my ($para_indent_size, $para_indent_next);
-      # indent. Not first paragraph.
-      if ($self->{'format_context'}->[-1]->{'cmdname'} eq '_top_format'
-          and $self->get_conf('paragraphindent') >= 0
-          and ((exists($element->{'extra'})
-                and $element->{'extra'}->{'indent'})
-             or (!(exists($element->{'extra'})
-                   and $element->{'extra'}->{'noindent'})
-                and ($self->{'format_context'}->[-1]->{'paragraph_count'}
-                  or $self->get_conf('firstparagraphindent') eq 'insert')
-               and !$self->{'text_element_context'}->[-1]->{'counter'}))) {
-        $para_indent_size = $self->get_conf('paragraphindent');
-        $para_indent_next = 0;
-      }
-      $paragraph = new_paragraph_formatter($self, $para_indent_size,
-                                           $para_indent_next);
-      push @{$self->{'formatters'}}, $paragraph;
-      $self->{'format_context'}->[-1]->{'paragraph_count'}++;
+  if ($type eq 'paragraph') {
+    my ($para_indent_size, $para_indent_next);
+    # indent. Not first paragraph.
+    if ($self->{'format_context'}->[-1]->{'cmdname'} eq '_top_format'
+        and $self->get_conf('paragraphindent') >= 0
+        and ((exists($element->{'extra'})
+              and $element->{'extra'}->{'indent'})
+           or (!(exists($element->{'extra'})
+                 and $element->{'extra'}->{'noindent'})
+              and ($self->{'format_context'}->[-1]->{'paragraph_count'}
+                or $self->get_conf('firstparagraphindent') eq 'insert')
+             and !$self->{'text_element_context'}->[-1]->{'counter'}))) {
+      $para_indent_size = $self->get_conf('paragraphindent');
+      $para_indent_next = 0;
+    }
+    $paragraph = new_paragraph_formatter($self, $para_indent_size,
+                                         $para_indent_next);
+    push @{$self->{'formatters'}}, $paragraph;
+    $self->{'format_context'}->[-1]->{'paragraph_count'}++;
+    if ($self->{'context'}->[-1] eq 'flushright') {
+      push @{$self->{'count_context'}}, {'lines' => 0,
+                                         'index_entry_locations' => [],
+                                         'pending_text' => [['']]};
+    }
+  } elsif ($type eq 'preformatted'
+           or $type eq 'rawpreformatted') {
+    # if in a description reuse the main menu unfilled, to keep things
+    # simpler and avoid having to do a separate count.
+    if ($type eq 'rawpreformatted'
+        or !exists($element->{'parent'}->{'type'})
+        or $element->{'parent'}->{'type'} ne 'menu_entry_description') {
+      $preformatted = new_unfilled_formatter($self);
+      push @{$self->{'formatters'}}, $preformatted;
       if ($self->{'context'}->[-1] eq 'flushright') {
         push @{$self->{'count_context'}}, {'lines' => 0,
-                                           'index_entry_locations' => [],
-                                           'pending_text' => [['']]};
+                                         'index_entry_locations' => [],
+                                         'pending_text' => [['']]};
       }
-    } elsif ($type eq 'preformatted'
-             or $type eq 'rawpreformatted') {
-      # if in a description reuse the main menu unfilled, to keep things
-      # simpler and avoid having to do a separate count.
-      if ($type eq 'rawpreformatted'
-          or !exists($element->{'parent'}->{'type'})
-          or $element->{'parent'}->{'type'} ne 'menu_entry_description') {
-        $preformatted = new_unfilled_formatter($self);
-        push @{$self->{'formatters'}}, $preformatted;
-        if ($self->{'context'}->[-1] eq 'flushright') {
-          push @{$self->{'count_context'}}, {'lines' => 0,
-                                           'index_entry_locations' => [],
-                                           'pending_text' => [['']]};
+    }
+  } elsif ($type eq 'def_line') {
+    _convert_def_line($self, $element);
+    return;
+  } elsif ($type eq 'menu_entry') {
+    my $entry_name_seen = 0;
+    my $menu_entry_node;
+    foreach my $content (@{$element->{'contents'}}) {
+      if ($content->{'type'} eq 'menu_entry_leading_text') {
+        if (exists($content->{'text'})) {
+          _stream_output_add_next($self, $content->{'text'});
         }
-      }
-    } elsif ($type eq 'def_line') {
-      _convert_def_line($self, $element);
-      return;
-    } elsif ($type eq 'menu_entry') {
-      my $entry_name_seen = 0;
-      my $menu_entry_node;
-      foreach my $content (@{$element->{'contents'}}) {
-        if ($content->{'type'} eq 'menu_entry_leading_text') {
-          if (exists($content->{'text'})) {
-            _stream_output_add_next($self, $content->{'text'});
+      } elsif ($content->{'type'} eq 'menu_entry_node') {
+        # Flush output so not to include in node text.
+        _stream_output($self,
+                       add_pending_word($formatter->{'container'}, 1));
+
+        $menu_entry_node = $content;
+        my ($pre_quote, $post_quote);
+        $self->{'formatters'}->[-1]->{'suppress_styles'} = 1;
+        $self->{'formatters'}->[-1]->{'no_added_eol'} = 1;
+
+        push @{$self->{'count_context'}}, {'lines' => 0,
+                                           'pending_text' => [['']]};
+        _convert($self, Texinfo::TreeElement::new({'type' => '_code',
+                                            'contents' => [$content]}));
+
+        _stream_output($self,
+                       add_pending_word($formatter->{'container'}, 1));
+        my $node_text = _stream_to_text($self);
+        pop @{$self->{'count_context'}};
+
+        delete $self->{'formatters'}->[-1]->{'suppress_styles'};
+        delete $self->{'formatters'}->[-1]->{'no_added_eol'};
+
+        my $need_quoting;
+
+        # Quote a node beginning with a parenthesis that is not an external
+        # name.  Happens for nodes added for sectioning commands.
+        if (substr($node_text, 0, 1) eq '('
+            and !exists($menu_entry_node->{'extra'}->{'manual_content'})) {
+          if ($self->{'info_special_chars_quote'}) {
+            $need_quoting = 1;
           }
-        } elsif ($content->{'type'} eq 'menu_entry_node') {
-          # Flush output so not to include in node text.
-          _stream_output($self,
-                         add_pending_word($formatter->{'container'}, 1));
+        }
 
-          $menu_entry_node = $content;
-          my ($pre_quote, $post_quote);
-          $self->{'formatters'}->[-1]->{'suppress_styles'} = 1;
-          $self->{'formatters'}->[-1]->{'no_added_eol'} = 1;
-
-          push @{$self->{'count_context'}}, {'lines' => 0,
-                                             'pending_text' => [['']]};
-          _convert($self, Texinfo::TreeElement::new({'type' => '_code',
-                                              'contents' => [$content]}));
-
-          _stream_output($self,
-                         add_pending_word($formatter->{'container'}, 1));
-          my $node_text = _stream_to_text($self);
-          pop @{$self->{'count_context'}};
-
-          delete $self->{'formatters'}->[-1]->{'suppress_styles'};
-          delete $self->{'formatters'}->[-1]->{'no_added_eol'};
-
-          my $need_quoting;
-
-          # Quote a node beginning with a parenthesis that is not an external
-          # name.  Happens for nodes added for sectioning commands.
-          if (substr($node_text, 0, 1) eq '('
-              and !exists($menu_entry_node->{'extra'}->{'manual_content'})) {
+        if ($entry_name_seen) {
+          if ($node_text =~ /([,\t]|\.\s)/) {
+            if ($self->{'info_special_chars_warning'}) {
+              $self->plaintext_line_warn($self, sprintf(__(
+                 "menu entry node name should not contain `%s'"), $1),
+                             $element->{'source_info'});
+            }
             if ($self->{'info_special_chars_quote'}) {
               $need_quoting = 1;
             }
+          # also protect . although only '. ' ends the node name in menu,
+          # to simplify Info readers.
+          } elsif ($node_text =~ /\./
+                   and $self->{'info_special_chars_quote'}) {
+            $need_quoting = 1;
           }
-
-          if ($entry_name_seen) {
-            if ($node_text =~ /([,\t]|\.\s)/) {
-              if ($self->{'info_special_chars_warning'}) {
-                $self->plaintext_line_warn($self, sprintf(__(
-                   "menu entry node name should not contain `%s'"), $1),
-                               $element->{'source_info'});
-              }
-              if ($self->{'info_special_chars_quote'}) {
-                $need_quoting = 1;
-              }
-            # also protect . although only '. ' ends the node name in menu,
-            # to simplify Info readers.
-            } elsif ($node_text =~ /\./
-                     and $self->{'info_special_chars_quote'}) {
-              $need_quoting = 1;
-            }
-          } else {
-            if ($node_text =~ /:/) {
-              if ($self->{'info_special_chars_warning'}) {
-                $self->plaintext_line_warn($self, __(
-                 "menu entry node name should not contain `:'"),
-                               $element->{'source_info'});
-              }
-              if ($self->{'info_special_chars_quote'}) {
-                $need_quoting = 1;
-              }
-            }
-          }
-          if ($need_quoting) {
-            my $node_quote = "\x{7f}";
-            my $added_new_line = '';
-            if (chomp($node_text)) {
-              $added_new_line = "\n";
-            }
-            _stream_output($self, $node_quote.$node_text.$node_quote
-                                  .$added_new_line);
-          } else {
-            _stream_output($self, $node_text);
-          }
-        } elsif ($content->{'type'} eq 'menu_entry_name') {
-          # Flush output so not to include in name text
-          _stream_output($self,
-                         add_pending_word($formatter->{'container'}, 1));
-
-          my ($pre_quote, $post_quote);
-          $self->{'formatters'}->[-1]->{'no_added_eol'} = 1;
-
-          push @{$self->{'count_context'}}, {'lines' => 0,
-                                             'pending_text' => [['']]};
-          _convert($self, $content);
-          _stream_output($self,
-                        add_pending_word($formatter->{'container'}, 1));
-          my $entry_name = _stream_to_text($self);
-          pop @{$self->{'count_context'}};
-
-          delete $self->{'formatters'}->[-1]->{'no_added_eol'};
-
-          $entry_name_seen = 1;
-          $pre_quote = $post_quote = '';
-          if ($entry_name =~ /:/) {
+        } else {
+          if ($node_text =~ /:/) {
             if ($self->{'info_special_chars_warning'}) {
               $self->plaintext_line_warn($self, __(
-                 "menu entry name should not contain `:'"),
-                               $element->{'source_info'});
+               "menu entry node name should not contain `:'"),
+                             $element->{'source_info'});
             }
             if ($self->{'info_special_chars_quote'}) {
-              $pre_quote = $post_quote = "\x{7f}";
+              $need_quoting = 1;
             }
           }
-          _stream_output($self, $pre_quote.$entry_name.$post_quote);
-        # empty description
-        } elsif ($content->{'type'} eq 'menu_entry_description'
-                 and (not exists($content->{'contents'})
-                      or (scalar(@{$content->{'contents'}}) == 1
-                          # preformatted inside menu_entry_description
-                          and (not exists($content->{'contents'}->[0]
-                                                               ->{'contents'})
-                               or (scalar(@{$content->{'contents'}->[0]
-                                                         ->{'contents'}}) == 1)
-                                   and exists($content->{'contents'}->[0]
-                                                 ->{'contents'}->[0]->{'text'})
-                                   and $content->{'contents'}->[0]
-                                  ->{'contents'}->[0]->{'text'} !~ /\S/)))) {
-          my $identifiers_target;
-          if (exists($self->{'document'})) {
-            $identifiers_target = $self->{'document'}->labels_information();
+        }
+        if ($need_quoting) {
+          my $node_quote = "\x{7f}";
+          my $added_new_line = '';
+          if (chomp($node_text)) {
+            $added_new_line = "\n";
           }
+          _stream_output($self, $node_quote.$node_text.$node_quote
+                                .$added_new_line);
+        } else {
+          _stream_output($self, $node_text);
+        }
+      } elsif ($content->{'type'} eq 'menu_entry_name') {
+        # Flush output so not to include in name text
+        _stream_output($self,
+                       add_pending_word($formatter->{'container'}, 1));
 
-          my $node_description;
-          my $long_description = 0;
-          if (defined($menu_entry_node) and exists($menu_entry_node->{'extra'})
-              and defined($menu_entry_node->{'extra'}->{'normalized'})
-              and $identifiers_target
-                ->{$menu_entry_node->{'extra'}->{'normalized'}}) {
-            my $node_element = $identifiers_target
-                ->{$menu_entry_node->{'extra'}->{'normalized'}};
-            if ($node_element->{'cmdname'} eq 'node'
-                and exists($self->{'document'})) {
-              my $nodes_list = $self->{'document'}->nodes_list();
-              my $node_relations
-                = $nodes_list->[$node_element->{'extra'}->{'node_number'} -1];
-              if (exists($node_relations->{'node_descriptions'})) {
-                $node_description = $node_relations->{'node_descriptions'}->[0];
-              } elsif (exists($node_relations->{'node_long_descriptions'})) {
-                $node_description
-                  = $node_relations->{'node_long_descriptions'}->[0];
-                $long_description = 1;
-              }
+        my ($pre_quote, $post_quote);
+        $self->{'formatters'}->[-1]->{'no_added_eol'} = 1;
+
+        push @{$self->{'count_context'}}, {'lines' => 0,
+                                           'pending_text' => [['']]};
+        _convert($self, $content);
+        _stream_output($self,
+                      add_pending_word($formatter->{'container'}, 1));
+        my $entry_name = _stream_to_text($self);
+        pop @{$self->{'count_context'}};
+
+        delete $self->{'formatters'}->[-1]->{'no_added_eol'};
+
+        $entry_name_seen = 1;
+        $pre_quote = $post_quote = '';
+        if ($entry_name =~ /:/) {
+          if ($self->{'info_special_chars_warning'}) {
+            $self->plaintext_line_warn($self, __(
+               "menu entry name should not contain `:'"),
+                             $element->{'source_info'});
+          }
+          if ($self->{'info_special_chars_quote'}) {
+            $pre_quote = $post_quote = "\x{7f}";
+          }
+        }
+        _stream_output($self, $pre_quote.$entry_name.$post_quote);
+      # empty description
+      } elsif ($content->{'type'} eq 'menu_entry_description'
+               and (not exists($content->{'contents'})
+                    or (scalar(@{$content->{'contents'}}) == 1
+                        # preformatted inside menu_entry_description
+                        and (not exists($content->{'contents'}->[0]
+                                                             ->{'contents'})
+                             or (scalar(@{$content->{'contents'}->[0]
+                                                       ->{'contents'}}) == 1)
+                                 and exists($content->{'contents'}->[0]
+                                               ->{'contents'}->[0]->{'text'})
+                                 and $content->{'contents'}->[0]
+                                ->{'contents'}->[0]->{'text'} !~ /\S/)))) {
+        my $identifiers_target;
+        if (exists($self->{'document'})) {
+          $identifiers_target = $self->{'document'}->labels_information();
+        }
+
+        my $node_description;
+        my $long_description = 0;
+        if (defined($menu_entry_node) and exists($menu_entry_node->{'extra'})
+            and defined($menu_entry_node->{'extra'}->{'normalized'})
+            and $identifiers_target
+              ->{$menu_entry_node->{'extra'}->{'normalized'}}) {
+          my $node_element = $identifiers_target
+              ->{$menu_entry_node->{'extra'}->{'normalized'}};
+          if ($node_element->{'cmdname'} eq 'node'
+              and exists($self->{'document'})) {
+            my $nodes_list = $self->{'document'}->nodes_list();
+            my $node_relations
+              = $nodes_list->[$node_element->{'extra'}->{'node_number'} -1];
+            if (exists($node_relations->{'node_descriptions'})) {
+              $node_description = $node_relations->{'node_descriptions'}->[0];
+            } elsif (exists($node_relations->{'node_long_descriptions'})) {
+              $node_description
+                = $node_relations->{'node_long_descriptions'}->[0];
+              $long_description = 1;
             }
           }
+        }
 
-          if (defined($node_description)) {
-            my $description_align_column;
-            if (defined($self->get_conf('AUTO_MENU_DESCRIPTION_ALIGN_COLUMN'))
-                and $self->get_conf('AUTO_MENU_DESCRIPTION_ALIGN_COLUMN') > 0) {
-              $description_align_column
-                 = $self->get_conf('AUTO_MENU_DESCRIPTION_ALIGN_COLUMN');
-            } else {
-              $description_align_column
-               = int($self->{'text_element_context'}->[-1]->{'max'}
-                    * $description_align_column_factor);
-            }
-            my $description_indent_length = $description_align_column - 1;
+        if (defined($node_description)) {
+          my $description_align_column;
+          if (defined($self->get_conf('AUTO_MENU_DESCRIPTION_ALIGN_COLUMN'))
+              and $self->get_conf('AUTO_MENU_DESCRIPTION_ALIGN_COLUMN') > 0) {
+            $description_align_column
+               = $self->get_conf('AUTO_MENU_DESCRIPTION_ALIGN_COLUMN');
+          } else {
+            $description_align_column
+             = int($self->{'text_element_context'}->[-1]->{'max'}
+                  * $description_align_column_factor);
+          }
+          my $description_indent_length = $description_align_column - 1;
 
-            if (! exists($self->{'seen_node_descriptions'}
-                                            ->{$node_description})) {
-              $self->{'seen_node_descriptions'}->{$node_description} = 0;
-            }
-            $self->{'seen_node_descriptions'}->{$node_description}++;
+          if (! exists($self->{'seen_node_descriptions'}
+                                          ->{$node_description})) {
+            $self->{'seen_node_descriptions'}->{$node_description} = 0;
+          }
+          $self->{'seen_node_descriptions'}->{$node_description}++;
 
-            # flush the current unfilled container
+          # flush the current unfilled container
+          _stream_output($self,
+                         add_pending_word($formatter->{'container'}, 1));
+          my $formatted_elt;
+          my $description_para;
+          my $text_count
+           = Texinfo::Convert::Paragraph::counter($formatter->{'container'});
+
+          if ($text_count >= $description_indent_length) {
+            my $inserted_space = '  ';
+            _stream_output_add_text($self, $inserted_space);
             _stream_output($self,
                            add_pending_word($formatter->{'container'}, 1));
-            my $formatted_elt;
-            my $description_para;
-            my $text_count
-             = Texinfo::Convert::Paragraph::counter($formatter->{'container'});
+            $text_count += length($inserted_space);
+          }
 
-            if ($text_count >= $description_indent_length) {
-              my $inserted_space = '  ';
-              _stream_output_add_text($self, $inserted_space);
-              _stream_output($self,
-                             add_pending_word($formatter->{'container'}, 1));
-              $text_count += length($inserted_space);
-            }
+          my $text_element_context = { 'counter' => $text_count };
 
-            my $text_element_context = { 'counter' => $text_count };
-
-            if (defined($self->get_conf('AUTO_MENU_MAX_WIDTH'))
-                and $self->get_conf('AUTO_MENU_MAX_WIDTH') > 0) {
-              $text_element_context->{'max'}
-                 = $self->get_conf('AUTO_MENU_MAX_WIDTH');
-            } else {
-              # e.g. 72 -> 79
-              $text_element_context->{'max'}
-                 = int($self->{'text_element_context'}->[-1]->{'max'}
-                       * 1.1);
-            }
-
-            push @{$self->{'text_element_context'}}, $text_element_context;
-
-            # avoid messages if formatting the node description more than once
-            if ($self->{'seen_node_descriptions'}->{$node_description} > 1) {
-              $self->{'silent'} = 0 if (!exists($self->{'silent'}));
-              $self->{'silent'}++;
-            }
-
-            if (!$long_description) {
-              # push a paragraph container to format the description.
-              $description_para = new_paragraph_formatter($self,
-                                       $description_indent_length);
-              push @{$self->{'formatters'}}, $description_para;
-              $formatted_elt = $node_description->{'contents'}->[0];
-            } else {
-              push @{$self->{'format_context'}},
-               { 'cmdname' => $node_description->{'cmdname'},
-                 'paragraph_count' => 0,
-                 'context_indent_len' => $description_indent_length,
-               };
-
-              $formatted_elt
-               = Texinfo::TreeElement::new({'type' => 'generic_container',
-                 'contents' => $node_description->{'contents'}});
-            }
-            _convert($self, $formatted_elt);
-            if (!$long_description) {
-              my ($result_text, $count)
-        = Texinfo::Convert::Paragraph::end($description_para->{'container'});
-              _stream_output_nl($self, $result_text, $count);
-              destroy_formatter(pop @{$self->{'formatters'}});
-            } else {
-              pop @{$self->{'format_context'}};
-            }
-            pop @{$self->{'text_element_context'}};
-            if ($self->{'seen_node_descriptions'}->{$node_description} > 1) {
-              $self->{'silent'}--;
-            }
+          if (defined($self->get_conf('AUTO_MENU_MAX_WIDTH'))
+              and $self->get_conf('AUTO_MENU_MAX_WIDTH') > 0) {
+            $text_element_context->{'max'}
+               = $self->get_conf('AUTO_MENU_MAX_WIDTH');
           } else {
-            _convert($self, $content);
+            # e.g. 72 -> 79
+            $text_element_context->{'max'}
+               = int($self->{'text_element_context'}->[-1]->{'max'}
+                     * 1.1);
+          }
+
+          push @{$self->{'text_element_context'}}, $text_element_context;
+
+          # avoid messages if formatting the node description more than once
+          if ($self->{'seen_node_descriptions'}->{$node_description} > 1) {
+            $self->{'silent'} = 0 if (!exists($self->{'silent'}));
+            $self->{'silent'}++;
+          }
+
+          if (!$long_description) {
+            # push a paragraph container to format the description.
+            $description_para = new_paragraph_formatter($self,
+                                     $description_indent_length);
+            push @{$self->{'formatters'}}, $description_para;
+            $formatted_elt = $node_description->{'contents'}->[0];
+          } else {
+            push @{$self->{'format_context'}},
+             { 'cmdname' => $node_description->{'cmdname'},
+               'paragraph_count' => 0,
+               'context_indent_len' => $description_indent_length,
+             };
+
+            $formatted_elt
+             = Texinfo::TreeElement::new({'type' => 'generic_container',
+               'contents' => $node_description->{'contents'}});
+          }
+          _convert($self, $formatted_elt);
+          if (!$long_description) {
+            my ($result_text, $count)
+      = Texinfo::Convert::Paragraph::end($description_para->{'container'});
+            _stream_output_nl($self, $result_text, $count);
+            destroy_formatter(pop @{$self->{'formatters'}});
+          } else {
+            pop @{$self->{'format_context'}};
+          }
+          pop @{$self->{'text_element_context'}};
+          if ($self->{'seen_node_descriptions'}->{$node_description} > 1) {
+            $self->{'silent'}--;
           }
         } else {
           _convert($self, $content);
         }
-      }
-      # If we are nested inside an @example, a 'menu_entry_description' may not
-      # have been processed yet, and we need to output any pending spaces
-      # before 'end_line' throws them away.  The argument to 'add_pending_word'
-      # does this.
-      if (exists($element->{'parent'}->{'type'})
-          and $element->{'parent'}->{'type'} eq 'preformatted') {
-        _stream_output($self,
-                       add_pending_word($formatter->{'container'}, 1));
       } else {
-        _stream_output($self,
-                       add_pending_word($formatter->{'container'}));
-        Texinfo::Convert::Paragraph::end_line($formatter->{'container'});
-        _ensure_end_of_line($self);
+        _convert($self, $content);
       }
-
-      return;
-    } elsif ($type eq '_frenchspacing') {
-      push @{$formatter->{'frenchspacing_stack'}}, 'on';
-      set_frenchspacing($formatter->{'container'}, 1);
-    } elsif ($type eq '_code') {
-      _open_code($formatter);
-    } elsif ($type eq '_stop_upper_case') {
-      push @{$formatter->{'upper_case_stack'}}, {};
-    } elsif ($type eq '_suppress_styles') {
-      $self->{'formatters'}->[-1]->{'suppress_styles'} = 1;
-    } elsif ($type eq 'untranslated_def_line_arg') {
-      my $tree;
-      if (exists($element->{'extra'})
-          and exists($element->{'extra'}->{'translation_context'})) {
-        $tree = $self->pcdt($element->{'extra'}->{'translation_context'},
-                            $element->{'contents'}->[0]->{'text'});
-      } else {
-        $tree = $self->cdt($element->{'contents'}->[0]->{'text'});
-      }
-      _convert($self, $tree);
-      return;
     }
+    # If we are nested inside an @example, a 'menu_entry_description' may not
+    # have been processed yet, and we need to output any pending spaces
+    # before 'end_line' throws them away.  The argument to 'add_pending_word'
+    # does this.
+    if (exists($element->{'parent'}->{'type'})
+        and $element->{'parent'}->{'type'} eq 'preformatted') {
+      _stream_output($self,
+                     add_pending_word($formatter->{'container'}, 1));
+    } else {
+      _stream_output($self,
+                     add_pending_word($formatter->{'container'}));
+      Texinfo::Convert::Paragraph::end_line($formatter->{'container'});
+      _ensure_end_of_line($self);
+    }
+
+    return;
+  } elsif ($type eq '_frenchspacing') {
+    push @{$formatter->{'frenchspacing_stack'}}, 'on';
+    set_frenchspacing($formatter->{'container'}, 1);
+  } elsif ($type eq '_code') {
+    _open_code($formatter);
+  } elsif ($type eq '_stop_upper_case') {
+    push @{$formatter->{'upper_case_stack'}}, {};
+  } elsif ($type eq '_suppress_styles') {
+    $self->{'formatters'}->[-1]->{'suppress_styles'} = 1;
+  } elsif ($type eq 'untranslated_def_line_arg') {
+    my $tree;
+    if (exists($element->{'extra'})
+        and exists($element->{'extra'}->{'translation_context'})) {
+      $tree = $self->pcdt($element->{'extra'}->{'translation_context'},
+                          $element->{'contents'}->[0]->{'text'});
+    } else {
+      $tree = $self->cdt($element->{'contents'}->[0]->{'text'});
+    }
+    _convert($self, $tree);
+    return;
   }
 
   # The processing of contents is done here.
@@ -4401,128 +4398,126 @@ sub _convert($$) {
     }
   }
 
-  # now closing. First, close types.
-  # FIXME remove this condition
-  if (defined($type)) {
-    if ($type eq '_frenchspacing') {
-      pop @{$formatter->{'frenchspacing_stack'}};
-      my $frenchspacing = 0;
-      $frenchspacing = 1 if ($formatter->{'frenchspacing_stack'}->[-1] eq 'on');
-      set_frenchspacing($formatter->{'container'}, $frenchspacing);
-    } elsif ($type eq '_code') {
-      _close_code($formatter);
-    } elsif ($type eq '_stop_upper_case') {
-      pop @{$formatter->{'upper_case_stack'}};
-    } elsif ($type eq '_suppress_styles') {
-      delete $self->{'formatters'}->[-1]->{'suppress_styles'};
-    } elsif ($type eq 'row') {
-      # beginning of cell in character width based on column sizes given
-      # in the specification of the table.
-      my @cell_beginnings;
-      # array of lines in each cell, already formatted using the max limit
-      # on line length per column, for each cell.
-      my $cell_lines = $self->{'format_context'}->[-1]->{'row_cell_lines'};
-      my $cell_beginning = 0;
-      my $max_cell_nr = scalar(@{$cell_lines});
-      # number maximum of line for the cells in this row
-      my $max_lines = 0;
-      my $indent_len
-        = $self->{'format_context'}->[-1]->{'context_indent_len'};
-      for (my $cell_idx = 0; $cell_idx < $max_cell_nr; $cell_idx++) {
-        $cell_beginnings[$cell_idx] = $cell_beginning;
-        my $cell_width
-           = $self->{'format_context'}->[-1]->{'columns_size'}->[$cell_idx];
-        $cell_width = 2 if (!defined($cell_width));
-        $cell_beginning += $cell_width +1;
+  # now closing. First, close containers.
+  if ($type eq '_frenchspacing') {
+    pop @{$formatter->{'frenchspacing_stack'}};
+    my $frenchspacing = 0;
+    $frenchspacing = 1 if ($formatter->{'frenchspacing_stack'}->[-1] eq 'on');
+    set_frenchspacing($formatter->{'container'}, $frenchspacing);
+  } elsif ($type eq '_code') {
+    _close_code($formatter);
+  } elsif ($type eq '_stop_upper_case') {
+    pop @{$formatter->{'upper_case_stack'}};
+  } elsif ($type eq '_suppress_styles') {
+    delete $self->{'formatters'}->[-1]->{'suppress_styles'};
+  } elsif ($type eq 'row') {
+    # beginning of cell in character width based on column sizes given
+    # in the specification of the table.
+    my @cell_beginnings;
+    # array of lines in each cell, already formatted using the max limit
+    # on line length per column, for each cell.
+    my $cell_lines = $self->{'format_context'}->[-1]->{'row_cell_lines'};
+    my $cell_beginning = 0;
+    my $max_cell_nr = scalar(@{$cell_lines});
+    # number maximum of line for the cells in this row
+    my $max_lines = 0;
+    my $indent_len
+      = $self->{'format_context'}->[-1]->{'context_indent_len'};
+    for (my $cell_idx = 0; $cell_idx < $max_cell_nr; $cell_idx++) {
+      $cell_beginnings[$cell_idx] = $cell_beginning;
+      my $cell_width
+         = $self->{'format_context'}->[-1]->{'columns_size'}->[$cell_idx];
+      $cell_width = 2 if (!defined($cell_width));
+      $cell_beginning += $cell_width +1;
 
-        $max_lines = scalar(@{$cell_lines->[$cell_idx]})
-          if (scalar(@{$cell_lines->[$cell_idx]}) > $max_lines);
+      $max_lines = scalar(@{$cell_lines->[$cell_idx]})
+        if (scalar(@{$cell_lines->[$cell_idx]}) > $max_lines);
+    }
+
+    # this is used to keep track of the last cell with content.
+    my $result = $self->{'count_context'}->[-1]->{'pending_text'};
+    for (my $line_idx = 0; $line_idx < $max_lines; $line_idx++) {
+     my $line_width = $indent_len;
+     # determine the last cell index in the line, to fill spaces in
+     # cells preceding that cell on the line
+      my $last_cell = 0;
+      for (my $cell_idx = 0; $cell_idx < $max_cell_nr; $cell_idx++) {
+        $last_cell = $cell_idx+1
+          if (defined($cell_lines->[$cell_idx]->[$line_idx]));
+      }
+      my $indent_done;
+      if ($indent_len <= 0) {
+        $indent_done = 1;
       }
 
-      # this is used to keep track of the last cell with content.
-      my $result = $self->{'count_context'}->[-1]->{'pending_text'};
-      for (my $line_idx = 0; $line_idx < $max_lines; $line_idx++) {
-        my $line_width = $indent_len;
-        # determine the last cell index in the line, to fill spaces in
-        # cells preceding that cell on the line
-        my $last_cell = 0;
-        for (my $cell_idx = 0; $cell_idx < $max_cell_nr; $cell_idx++) {
-          $last_cell = $cell_idx+1
-            if (defined($cell_lines->[$cell_idx]->[$line_idx]));
-        }
-        my $indent_done;
-        if ($indent_len <= 0) {
-          $indent_done = 1;
-        }
-
-        for (my $cell_idx = 0; $cell_idx < $last_cell; $cell_idx++) {
-          if (defined($cell_lines->[$cell_idx]->[$line_idx])) {
-            my $cell_line = [@{$cell_lines->[$cell_idx]->[$line_idx]}];
-            # remove end of line
-            for (my $j = scalar(@$cell_line); $j > 0; $j--) {
-              my $pending_text = $cell_line->[$j -1];
-              if ($pending_text->[0] eq '') {
-                next;
-              }
-              chomp($pending_text->[0]);
-              last;
+      for (my $cell_idx = 0; $cell_idx < $last_cell; $cell_idx++) {
+        if (defined($cell_lines->[$cell_idx]->[$line_idx])) {
+          my $cell_line = [@{$cell_lines->[$cell_idx]->[$line_idx]}];
+          # remove end of line
+          for (my $j = scalar(@$cell_line); $j > 0; $j--) {
+            my $pending_text = $cell_line->[$j -1];
+            if ($pending_text->[0] eq '') {
+              next;
             }
-
-            # add cell line to results while computing width
-            foreach my $pending_text (@$cell_line) {
-              if ($pending_text->[0] ne ''
-                  or defined($pending_text->[1])) {
-                if (not $indent_done) {
-                  # Do not use _stream_output, as we never know if there
-                  # is an anchor from the end of a cell in the previous
-                  # text.
-                  push @$result, [' ' x $indent_len];
-                  $indent_done = 1;
-                }
-              }
-              if (defined($pending_text->[1])
-                  and $pending_text->[1]->{'conv_type'} eq 'quoted_image') {
-                $line_width += $IMAGE_WIDTH;
-              } else {
-                $line_width
-                += Texinfo::Convert::Unicode::string_width($pending_text->[0]);
-              }
-              push @$result, $pending_text;
-            }
+            chomp($pending_text->[0]);
+            last;
           }
-          if ($cell_idx+1 < $last_cell) {
-            if ($line_width < $indent_len + $cell_beginnings[$cell_idx+1]) {
+
+          # add cell line to results while computing width
+          foreach my $pending_text (@$cell_line) {
+            if ($pending_text->[0] ne ''
+                or defined($pending_text->[1])) {
               if (not $indent_done) {
+                # Do not use _stream_output, as we never know if there
+                # is an anchor from the end of a cell in the previous
+                # text.
                 push @$result, [' ' x $indent_len];
                 $indent_done = 1;
               }
-              # add inter cell spaces
-              my $spaces = ' '
-                  x ($indent_len + $cell_beginnings[$cell_idx+1] - $line_width);
-              $line_width += length($spaces);
-              push @$result, [$spaces];
             }
+            if (defined($pending_text->[1])
+                and $pending_text->[1]->{'conv_type'} eq 'quoted_image') {
+              $line_width += $IMAGE_WIDTH;
+            } else {
+              $line_width
+              += Texinfo::Convert::Unicode::string_width($pending_text->[0]);
+            }
+            push @$result, $pending_text;
           }
         }
-        push @$result, ["\n"];
+        if ($cell_idx+1 < $last_cell) {
+          if ($line_width < $indent_len + $cell_beginnings[$cell_idx+1]) {
+            if (not $indent_done) {
+              push @$result, [' ' x $indent_len];
+              $indent_done = 1;
+            }
+            # add inter cell spaces
+            my $spaces = ' '
+                x ($indent_len + $cell_beginnings[$cell_idx+1] - $line_width);
+            $line_width += length($spaces);
+            push @$result, [$spaces];
+          }
+        }
       }
-      if ($self->{'format_context'}->[-1]->{'item_command'} eq 'headitem') {
-        # at this point cell_beginning is at the beginning of
-        # the cell following the end of the table -> full width
-        my $line = (' ' x $indent_len) . ('-' x $cell_beginning) . "\n";
-        _stream_output($self, $line);
-        $max_lines++;
-      }
-
-      $self->{'count_context'}->[-1]->{'lines'} += $max_lines;
-      $self->{'format_context'}->[-1]->{'row_cell_lines'} = [];
-    } elsif ($type eq 'before_node_section') {
-      _ensure_end_of_line($self);
-      my $text = _pending_to_text($self,
-                    $self->{'count_context'}->[-1]->{'pending_text'});
-      $self->{'text_before_first_node'} = _encode_string($self, $text);
+      push @$result, ["\n"];
     }
+    if ($self->{'format_context'}->[-1]->{'item_command'} eq 'headitem') {
+      # at this point cell_beginning is at the beginning of
+      # the cell following the end of the table -> full width
+      my $line = (' ' x $indent_len) . ('-' x $cell_beginning) . "\n";
+      _stream_output($self, $line);
+      $max_lines++;
+    }
+
+    $self->{'count_context'}->[-1]->{'lines'} += $max_lines;
+    $self->{'format_context'}->[-1]->{'row_cell_lines'} = [];
+  } elsif ($type eq 'before_node_section') {
+    _ensure_end_of_line($self);
+    my $text = _pending_to_text($self,
+                  $self->{'count_context'}->[-1]->{'pending_text'});
+    $self->{'text_before_first_node'} = _encode_string($self, $text);
   }
+
   # close paragraphs and preformatted
   if (defined($paragraph)) {
     my ($result_text, $count)

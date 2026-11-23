@@ -8732,10 +8732,8 @@ sub _convert($$;$) {
   # better to consider them as a def_line type, as the whole point of the
   # def_line type is to handle the same the def*x and def* line formatting.
   if (exists($element->{'cmdname'})
-      and !((exists($element->{'type'})
-             and $element->{'type'} eq 'definfoenclose_command')
-            or (exists($element->{'type'})
-                and $element->{'type'} eq 'index_entry_command'))) {
+      and !($element->{'type'} eq 'definfoenclose_command'
+            or $element->{'type'} eq 'index_entry_command')) {
     my $command_name = $element->{'cmdname'};
 
     my $data_command_name;
@@ -8943,8 +8941,7 @@ sub _convert($$;$) {
       }
       return '';
     }
-  } elsif (exists($element->{'type'})) {
-
+  } else { # containers without @-command, definfoenclose and index commands
     my $result = '';
     my $type_name = $element->{'type'};
 
@@ -8964,7 +8961,7 @@ sub _convert($$;$) {
       }
     } elsif (exists($element->{'contents'})
              and $type_name ne 'untranslated_def_line_arg') {
-      # generic_container
+      # for generic_container...
       my $content_idx = 0;
       foreach my $content (@{$element->{'contents'}}) {
         $content_formatted
@@ -8985,27 +8982,6 @@ sub _convert($$;$) {
     }
     print STDERR "DO type ($type_name) => `$result'\n" if $debug;
     return $result;
-    # no type, no cmdname, but contents.
-  } elsif (exists($element->{'contents'})) {
-    # FIXME should not be possible anymore
-    # this happens inside accents, for section/node names, for @images.
-    my $content_formatted = '';
-    my $content_idx = 0;
-    foreach my $content (@{$element->{'contents'}}) {
-      $content_formatted .= _convert($self, $content,
-                                            "$command_type C[$content_idx]");
-      $content_idx++;
-    }
-    print STDERR "UNNAMED HOLDER => `$content_formatted'\n" if $debug;
-    return $content_formatted;
-  } else {
-    # FIXME should not be possible anymore
-    print STDERR "UNNAMED empty\n" if $debug;
-    if (defined($self->{'types_conversion'}->{''})) {
-      return &{$self->{'types_conversion'}->{''}} ($self, $element);
-    } else {
-      return '';
-    }
   }
   print STDERR "DEBUG: HERE!($element)\n";
 }

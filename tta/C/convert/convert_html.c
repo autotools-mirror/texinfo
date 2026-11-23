@@ -1801,7 +1801,7 @@ html_convert_tree_append (CONVERTER *self, const ELEMENT *element,
           goto out;
         }
     }
-  else if (element->type)
+  else
     {
       enum element_type type = element->type;
       TEXT type_result;
@@ -1831,7 +1831,7 @@ html_convert_tree_append (CONVERTER *self, const ELEMENT *element,
         }
       else if (element->e.c->contents.number > 0
                && type != ET_untranslated_def_line_arg)
-        /* generic_container */
+        /* generic_container... */
         {
           size_t content_idx;
           text_append (&content_formatted, "");
@@ -1876,47 +1876,6 @@ html_convert_tree_append (CONVERTER *self, const ELEMENT *element,
         }
       ADD(type_result.text);
       free (type_result.text);
-
-      goto out;
-    }
-  else if (element->e.c->contents.number > 0)
-    {/* FIXME should not be possible anymore */
-      /* no type, no cmdname, but contents. */
-      /* this happens inside accents, for section/node names, for @images. */
-      TEXT content_formatted;
-
-      text_init (&content_formatted);
-      text_append (&content_formatted, "");
-
-      size_t content_idx;
-      for (content_idx = 0; content_idx < element->e.c->contents.number;
-           content_idx++)
-        {
-          const ELEMENT *content = element->e.c->contents.list[content_idx];
-          char *explanation;
-          xasprintf (&explanation, " C[%zu]", content_idx);
-          html_convert_tree_append (self, content, &content_formatted,
-                                    explanation);
-          free (explanation);
-        }
-
-      if (self->conf->DEBUG.o.integer > 0)
-        fprintf (stderr, "C|UNNAMED HOLDER => `%s'\n", content_formatted.text);
-      ADD(content_formatted.text);
-      free (content_formatted.text);
-      goto out;
-    }
-  else
-    {/* FIXME should not be possible anymore */
-      if (self->conf->DEBUG.o.integer > 0)
-        fprintf (stderr, "C|UNNAMED empty\n");
-      if (self_html->current_types_conversion_function[0].type_conversion)
-        {
-          if (!self_html->current_types_conversion_function[0].type_conversion)
-            fatal ("ET_NONE conversion function NULL");
-          (*self_html->current_types_conversion_function[0].type_conversion)
-                           (self, 0, element, "", result);
-        }
 
       goto out;
     }
