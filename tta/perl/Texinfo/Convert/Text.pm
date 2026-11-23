@@ -552,6 +552,8 @@ sub _convert($$) {
         and exists($element->{'contents'}->[0]->{'type'})
         and $element->{'contents'}->[0]->{'type'} eq 'line_arg') {
       $data_cmdname = 'item_LINE';
+    } elsif ($element->{'type'} eq 'definfoenclose_command') {
+      $data_cmdname = 'definfoenclose_command';
     } else {
       $data_cmdname = $cmdname;
     }
@@ -625,20 +627,19 @@ sub _convert($$) {
       $result = text_accents($element, $options->{'enabled_encoding'},
                              $options->{'set_case'});
       return $result;
-    } elsif (exists($Texinfo::Commands::brace_commands{$cmdname})
-             or $element->{'type'} eq 'definfoenclose_command') {
+    } elsif (exists($Texinfo::Commands::brace_commands{$data_cmdname})) {
       my $args = Texinfo::Common::get_non_empty_brace_args($element);
       if (!defined($args)) {
         return '';
       }
       $result = '';
-      if ($cmdname eq 'image') {
+      if ($data_cmdname eq 'image') {
         if (defined($args->[0])) {
           $options->{'_code_state'}++;
           $result = _convert($options, $args->[0]);
           $options->{'_code_state'}--;
         }
-      } elsif ($cmdname eq 'email') {
+      } elsif ($data_cmdname eq 'email') {
         my $text;
         $text = _convert($options, $args->[1])
            if (defined($args->[1]));
@@ -649,7 +650,7 @@ sub _convert($$) {
           $result = _convert($options, $args->[0]);
           $options->{'_code_state'}--;
         }
-      } elsif ($cmdname eq 'uref' or $cmdname eq 'url') {
+      } elsif ($data_cmdname eq 'uref' or $data_cmdname eq 'url') {
         my $replacement;
         $replacement = _convert($options, $args->[2])
           if (defined($args->[2]));
@@ -668,7 +669,7 @@ sub _convert($$) {
             }
           }
         }
-      } elsif (exists($Texinfo::Commands::explained_commands{$cmdname})) {
+      } elsif (exists($Texinfo::Commands::explained_commands{$data_cmdname})) {
         if (defined($args->[0])) {
           $result = _convert($options, $args->[0]);
         }
@@ -678,7 +679,7 @@ sub _convert($$) {
             $result .= " ($explanation)";
           }
         }
-      } elsif ($Texinfo::Commands::brace_commands{$cmdname} eq 'inline') {
+      } elsif ($Texinfo::Commands::brace_commands{$data_cmdname} eq 'inline') {
         if ($cmdname eq 'inlineraw') {
           $options->{'_raw_state'}++;
         }
@@ -697,7 +698,7 @@ sub _convert($$) {
         if ($cmdname eq 'inlineraw') {
           $options->{'_raw_state'}--;
         }
-      } elsif ($cmdname eq 'U') {
+      } elsif ($data_cmdname eq 'U') {
         if (defined($args->[0])) {
           my ($arg_text, $surplus_arg)
             = Texinfo::Common::simple_arg_text($args->[0]);
@@ -725,15 +726,15 @@ sub _convert($$) {
       } elsif (defined($args->[0])) {
         my $in_code;
 
-        $options->{'set_case'}++ if ($cmdname eq 'sc');
-        if (exists($Texinfo::Commands::brace_code_commands{$cmdname})
-            or exists($Texinfo::Commands::math_commands{$cmdname})) {
+        $options->{'set_case'}++ if ($data_cmdname eq 'sc');
+        if (exists($Texinfo::Commands::brace_code_commands{$data_cmdname})
+            or exists($Texinfo::Commands::math_commands{$data_cmdname})) {
           $in_code = 1;
         }
         $options->{'_code_state'}++ if ($in_code);
         $result = _convert($options, $args->[0]);
         $options->{'_code_state'}-- if ($in_code);
-        $options->{'set_case'}-- if ($cmdname eq 'sc');
+        $options->{'set_case'}-- if ($data_cmdname eq 'sc');
       }
       return $result;
     # block commands

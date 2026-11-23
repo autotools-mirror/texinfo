@@ -1,5 +1,11 @@
 2026-11-23  Patrice Dumas  <pertusus@free.fr>
 
+	* tta/perl/Texinfo/Convert/Text.pm (_convert): set $data_cmdname to
+	the generic name for definfoenclose_command and use $data_cmdname in
+	brace commands related code.
+
+2026-11-23  Patrice Dumas  <pertusus@free.fr>
+
 	* tta/C/convert/convert_html.c (html_convert_tree_append),
 	tta/perl/Texinfo/Convert/HTML.pm (_convert): type is always set now,
 	remove impossible cases.
