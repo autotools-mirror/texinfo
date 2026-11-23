@@ -1,3 +1,19 @@
+2026-11-23  Patrice Dumas  <pertusus@free.fr>
+
+	* tta/C/main/element_types.txt: add generic_container.
+
+	* tta/C/*/*.c, tta/perl/Texinfo/*.pm, tta/perl/Texinfo/Convert/*.pm,
+	tta/perl/t/init/documentation_examples.pm,
+	tta/perl/t/init/translate_txiinternalvalue_macro.init: use
+	generic_container type instead of NONE or no type in Perl for new
+	element type.  Always use a type type in Perl element creation.
+
+	* tta/C/tree_elements/get_perl_tree_elements.c (new_element_from_sv):
+	move local variable definition in block.  Do not set normal_text type
+	if the type is not found.
+
+	* doc/texi2any_api.texi: update.
+
 2026-11-22  Patrice Dumas  <pertusus@free.fr>
 
 	* tta/C/main/manipulate_tree.c (print_info_strings)

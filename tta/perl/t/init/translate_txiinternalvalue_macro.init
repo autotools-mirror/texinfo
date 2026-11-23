@@ -13,7 +13,9 @@ sub my_sp_formatting($$$$$) {
     my $translated_tree = $self->cdt('@macro txiinternalvalue
 user internalvalue
 @end macro
-{myarg} @TeX{}', {'myarg' => Texinfo::TreeElement::new({'contents' => [
+{myarg} @TeX{}', {'myarg' => Texinfo::TreeElement::new({
+                        'type' => 'generic_container',
+                        'contents' => [
                              Texinfo::TreeElement::new({'text' => $sp_nr,
                                               'type' => 'normal_text'})]})});
     #print STDERR "T ".Texinfo::Common::debug_print_tree($translated_tree)."\n";

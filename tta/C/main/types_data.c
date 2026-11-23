@@ -33,6 +33,7 @@ const TYPE_DATA type_data[] = {
 {"paragraph", 0},
 {"preformatted", 0},
 {"rawpreformatted", 0},
+{"generic_container", 0},
 {"arguments_line", 0},
 {"brace_command_context", 0},
 {"brace_container", 0},

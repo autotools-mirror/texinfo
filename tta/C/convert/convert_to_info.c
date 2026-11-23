@@ -186,7 +186,7 @@ info_header (CONVERTER *self, const char *input_basefile,
 
   if (self->document->global_commands.copying)
     {
-      ELEMENT *tmp = new_element (ET_NONE);
+      ELEMENT *tmp = new_element (ET_generic_container);
       if (self->conf->DEBUG.o.integer > 0)
         fprintf (stderr, "COPYING HEADER\n");
       self_plaintext->in_copying_header = 1;
@@ -996,7 +996,7 @@ info_format_footnotes (CONVERTER *self, const OUTPUT_UNIT *output_unit)
           ELEMENT *footnote_arguments_line
             = new_element (ET_arguments_line);
           ELEMENT *label_element_copy = copy_contents (label_element, 0,
-                                                       ET_NONE);
+                                                       ET_generic_container);
           char *footnote_node_id;
           NODE_RELATIONS footnotes_node_relations = { 0 };
 
@@ -1044,7 +1044,7 @@ info_format_footnotes (CONVERTER *self, const OUTPUT_UNIT *output_unit)
               ELEMENT *footnote_anchor_arg = new_element (ET_brace_arg);
               ELEMENT *footnote_anchor = new_command_element (CM_anchor);
               ELEMENT *label_element_copy = copy_contents (label_element, 0,
-                                                           ET_NONE);
+                                                       ET_generic_container);
               ELEMENT *footnote_anchor_postfix_e
                 = new_text_element (ET_other_text);
               text_printf (footnote_anchor_postfix_e->e.text, "-Footnote-%d",
@@ -1093,7 +1093,7 @@ info_format_reference_to_footnote (CONVERTER *self)
         = self_plaintext->current_node->e.c->contents.list[0];
       ELEMENT *line_arg = arguments_line->e.c->contents.list[0];
 
-      ELEMENT *footnote_ref = new_element (ET_NONE);
+      ELEMENT *footnote_ref = new_element (ET_generic_container);
       ELEMENT *open_parenthese = new_text_element (ET_other_text);
       text_append_n (open_parenthese->e.text, " (", 2);
       ELEMENT *close_parenthese = new_text_element (ET_other_text);
@@ -1302,7 +1302,7 @@ info_format_ref (CONVERTER *self, enum command_id cmd,
 
   if (args[3])
     {
-      ELEMENT *file = new_element (ET_NONE);
+      ELEMENT *file = new_element (ET_generic_container);
       ELEMENT *open_parenthese = new_text_element (ET_other_text);
       text_append_n (open_parenthese->e.text, "(", 1);
       ELEMENT *close_parenthese = new_text_element (ET_other_text);

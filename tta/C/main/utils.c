@@ -3080,12 +3080,11 @@ find_innermost_accent_contents (const ELEMENT *element)
       add_(const_element) (&accent_stack->stack, current);
 
       args = get_non_empty_brace_args (current);
-      /* A bogus accent, that may happen */
       if (args->number > 0 && args->list[0])
         arg = args->list[0];
-
       destroy_const_element_list (args);
 
+      /* A bogus accent, that may happen */
       if (!arg)
         return accent_stack;
 
@@ -3128,7 +3127,7 @@ find_innermost_accent_contents (const ELEMENT *element)
     }
   if (argument.number > 0)
     {
-      accent_stack->argument = new_element (ET_NONE);
+      accent_stack->argument = new_element (ET_generic_container);
       insert_list_slice_into_contents (accent_stack->argument,
                              0, &argument, 0, argument.number);
       argument.number = 0;

@@ -38,9 +38,7 @@
 # Types for @-commands
 index_entry_command                    with_command
 definfoenclose_command                 with_command
-
-# only in C.  These types should only be used in code to set the
-# type at the element creation.
+# command without a special type
 normal_command
 
 # For text elements
@@ -75,6 +73,10 @@ preamble_before_content
 paragraph
 preformatted
 rawpreformatted
+
+# container not appearing in the original tree.  May be added to the
+# tree by transformations.
+generic_container
 
 # @-commands arguments containers
 arguments_line

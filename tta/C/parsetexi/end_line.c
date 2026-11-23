@@ -1584,7 +1584,7 @@ end_line_misc_line (ELEMENT *current)
           parse_node_manual (node_line_arg, &direction_label_info);
           if (direction_label_info.node_content)
             {
-              ELEMENT *tmp = new_element (ET_NONE);
+              ELEMENT *tmp = new_element (ET_generic_container);
               char *normalized;
 
               add_extra_integer_list (node_line_arg, AI_key_node_content,

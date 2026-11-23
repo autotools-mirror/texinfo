@@ -140,7 +140,7 @@ sub merge_indices($) {
 sub _remove_def_types($) {
   my $element = shift;
 
-  delete $element->{'type'};
+  $element->{'type'} = 'generic_container';
   if (exists($element->{'contents'})
       and exists($element->{'contents'}->[0]->{'type'})
       and $element->{'contents'}->[0]->{'type'} eq 'bracketed_arg') {
@@ -200,7 +200,8 @@ sub get_index_content_info_element($;$) {
 
       if ($prefer_reference_element) {
         my $text_element;
-        my $index_entry_normalized = Texinfo::TreeElement::new({});
+        my $index_entry_normalized
+          = Texinfo::TreeElement::new({'type' => 'generic_container'});
 
         if (exists($Texinfo::Commands::def_class_method_commands{
                                                    $def_command})) {
@@ -268,8 +269,8 @@ sub element_index_content_element($;$$) {
                    undef, $debug_level);
   }
 
-  # prefer a type-less container rather than 'root_line' returned by gdt
-  delete $index_element->{'type'};
+  # prefer a generic container rather than 'root_line' returned by gdt
+  $index_element->{'type'} = 'generic_container';
 
   return $index_element;
 }

@@ -165,7 +165,7 @@ destroy_merged_indices (MERGED_INDICES *merged_indices)
 static void
 remove_def_types (ELEMENT *element)
 {
-  element->type = ET_NONE;
+  element->type = ET_generic_container;
 
   if (element->e.c->contents.number
       && element->e.c->contents.list[0]->type == ET_bracketed_arg)
@@ -251,8 +251,8 @@ get_index_content_info_element (const ELEMENT *element,
           if (prefer_reference_element)
             {
               ELEMENT *text_element = new_text_element (ET_normal_text);
-              /* container without type */
-              ELEMENT *index_entry_normalized = new_element (ET_NONE);
+              ELEMENT *index_entry_normalized
+                                   = new_element (ET_generic_container);
 
               if (command_data[def_command].flags
                                              & CF_def_class_method)
@@ -291,8 +291,7 @@ get_index_content_info_element (const ELEMENT *element,
    useful, and could have been set to NULL, as this function is only called
    with the default translations, which do not include any @-command
    requiring small strings. It is better to keep it, though to avoid
-   surprises, for instance if the translations used through this function
-   could be customized.
+   surprises.
  */
 ELEMENT *
 element_index_content_element (const ELEMENT *element,
@@ -340,8 +339,8 @@ element_index_content_element (const ELEMENT *element,
 
   destroy_named_string_element_list (substrings);
 
-  /* prefer a type-less container rather than 'root_line' returned by gdt */
-  index_element->type = ET_NONE;
+  /* prefer a generic container rather than 'root_line' returned by gdt */
+  index_element->type = ET_generic_container;
 
   return index_element;
 }

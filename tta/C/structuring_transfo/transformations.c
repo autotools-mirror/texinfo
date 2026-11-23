@@ -201,8 +201,9 @@ fill_gaps_in_sectioning_in_document (DOCUMENT *document,
 
               if (commands_heading_content)
                 {
-                  line_content = copy_contents (commands_heading_content, 0,
-                                                ET_NONE);
+                  line_content
+                    = copy_contents (commands_heading_content, 0,
+                                     ET_generic_container);
                 }
               else
                 {

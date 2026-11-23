@@ -314,7 +314,8 @@ sub sectioning_targets($;$) {
     my $arguments_line = $content->{'contents'}->[0];
     my $line_arg = $arguments_line->{'contents'}->[0];
 
-    my $node_tree = Texinfo::ManipulateTree::copy_contents($line_arg);
+    my $node_tree = Texinfo::ManipulateTree::copy_contents($line_arg,
+                                                    'generic_container');
 
     next if (!exists($node_tree->{'contents'}));
 

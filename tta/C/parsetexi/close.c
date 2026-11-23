@@ -522,7 +522,7 @@ close_current (ELEMENT *current,
   else
     {
       /* should never get here */
-      fprintf (stderr, "BUG? closing container without type\n");
+      fprintf (stderr, "BUG: closing container without type\n");
       if (current->e.c->parent)
         current = current->e.c->parent;
     }

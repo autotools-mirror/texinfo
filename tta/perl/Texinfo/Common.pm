@@ -1064,8 +1064,7 @@ sub non_leading_trailing_tree($) {
     return undef;
   }
 
-  my $result = Texinfo::TreeElement::new({});
-
+  my $result = Texinfo::TreeElement::new({'type' => 'generic_container'});
   $result->{'contents'} = [@{$tree->{'contents'}}[$start_idx .. $end_idx]];
 
   return $result;
@@ -1080,7 +1079,7 @@ sub non_trailing_tree($) {
     return undef;
   }
 
-  my $result = Texinfo::TreeElement::new({});
+  my $result = Texinfo::TreeElement::new({'type' => 'generic_container'});
   $result->{'contents'} = [@{$tree->{'contents'}}[0 .. $end_idx]];
 
   return $result;
@@ -1181,7 +1180,8 @@ sub find_innermost_accent_contents($) {
     }
     # we go here if there was no nested accent
     my $element_inside
-        = Texinfo::TreeElement::new({'contents' => $text_contents});
+        = Texinfo::TreeElement::new({'type' => 'generic_container',
+                                     'contents' => $text_contents});
     return ($element_inside, \@accent_commands);
   }
 }
@@ -1254,7 +1254,8 @@ sub block_line_command_as_argument($) {
   return undef;
 }
 
-my $default_bullet_command = Texinfo::TreeElement::new({'cmdname' => 'bullet'});
+my $default_bullet_command = Texinfo::TreeElement::new({'cmdname' => 'bullet',
+                                                 'type' => 'normal_command'});
 
 # ALTIMP C/main/convert_utils.c
 # TODO document in POD? (already in texi2any_api)
@@ -1300,7 +1301,8 @@ sub item_line_block_line_argument_command($) {
   return $arg;
 }
 
-my $default_asis_command = Texinfo::TreeElement::new({'cmdname' => 'asis'});
+my $default_asis_command = Texinfo::TreeElement::new({'cmdname' => 'asis',
+                                              'type' => 'normal_command'});
 
 # ALTIMP C/main/convert_utils.c
 # always return something

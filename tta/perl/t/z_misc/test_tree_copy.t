@@ -41,7 +41,8 @@ ok(1, 'modules loading');
 # extra information pointing to elements elsewhere in the tree does not
 # happen.
 my $tref = Texinfo::TreeElement::new({'type' => 'document_root',
-            'contents' => [Texinfo::TreeElement::new({'text' => 'x'}),
+            'contents' => [Texinfo::TreeElement::new({'text' => 'x',
+                                                       'type' => 'normal_text'}),
                            Texinfo::TreeElement::new({'type' => 'paragraph',
                             'extra' => {'thing' =>
                               Texinfo::TreeElement::new({'type' => 'container',
@@ -51,7 +52,8 @@ my $tref = Texinfo::TreeElement::new({'type' => 'document_root',
                               })
                              }
                             }),
-                            Texinfo::TreeElement::new({'text' => "\n"}),
+                            Texinfo::TreeElement::new({'text' => "\n",
+                                                       'type' => 'normal_text'}),
                            ]
             });
 

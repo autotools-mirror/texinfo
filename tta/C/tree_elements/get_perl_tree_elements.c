@@ -95,7 +95,6 @@ new_element_from_sv (DOCUMENT *document, const SV *element_hash,
   SV **cmdname_sv;
   SV **contents_sv;
   SV **source_info_sv;
-  enum element_type e_type = ET_NONE;
   const char *cmdname = 0;
   const char *type_name = 0;
 
@@ -111,12 +110,13 @@ new_element_from_sv (DOCUMENT *document, const SV *element_hash,
   FETCH(text);
   if (text_sv && SvOK (*text_sv))
     {
-      const char *text = SvPVutf8_nolen (*text_sv);
+      enum element_type e_type = ET_NONE;
       if (type_name)
         e_type = find_element_type ((char *)type_name);
       if (e_type == ET_NONE)
-        e_type = ET_normal_text;
+        return 0;
       e = new_text_element (e_type);
+      const char *text = SvPVutf8_nolen (*text_sv);
       text_append (e->e.text, text);
       return e;
     }

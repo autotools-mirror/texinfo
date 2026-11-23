@@ -72,7 +72,7 @@ converter_index_content_element (const ELEMENT *element,
   destroy_named_string_element_list (substrings);
 
   /* prefer a type-less container rather than 'root_line' returned by gdt */
-  index_element->type = ET_NONE;
+  index_element->type = ET_generic_container;
 
   return index_element;
 }
@@ -250,7 +250,7 @@ index_entry_first_letter_text_or_command (const INDEX_ENTRY *index_entry,
 
       if (entry_tree_element->e.c->contents.number <= 0)
         {
-          parsed_element = new_element (ET_NONE);
+          parsed_element = new_element (ET_generic_container);
           add_to_contents_as_array (parsed_element, index_entry_element);
         }
       else

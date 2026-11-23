@@ -1231,8 +1231,9 @@ sub command_description($$;$) {
       $description_element = $node_description->{'contents'}->[0];
     } else {
       # nodedescriptionblock
-      $description_element = Texinfo::TreeElement::new(
-            {'contents' => $node_description->{'contents'}});
+      $description_element
+       = Texinfo::TreeElement::new({'type' => 'generic_container',
+                    'contents' => $node_description->{'contents'}});
     }
     my $multiple_formatted;
     if ($formatted_nodedescription_nr > 1) {
@@ -3767,8 +3768,9 @@ sub _prepare_index_entries_targets($) {
           = $self->converter_index_content_element($main_entry_element, 1);
         # construct element to convert to a normalized identifier to use as
         # hrefs target
-        my $normalize_index_element = Texinfo::TreeElement::new(
-           {'contents' => [$entry_reference_content_element]});
+        my $normalize_index_element
+          = Texinfo::TreeElement::new({'type' => 'generic_container',
+                          'contents' => [$entry_reference_content_element]});
 
         my $subentries_tree
          = Texinfo::Convert::Utils::comma_index_subentries_tree(
@@ -4614,8 +4616,8 @@ sub _prepare_converted_output_info($$$$) {
   # copying comment
   if (defined($global_commands) and exists($global_commands->{'copying'})) {
     my $copying_comment = Texinfo::Convert::Text::convert_to_text(
-     Texinfo::TreeElement::new(
-      {'contents' => $global_commands->{'copying'}->{'contents'}}),
+     Texinfo::TreeElement::new({'type' => 'generic_container',
+           'contents' => $global_commands->{'copying'}->{'contents'}}),
      $self->{'convert_text_options'});
     if ($copying_comment ne '') {
       $self->{'converter_info'}->{'copying_comment'}
@@ -4629,8 +4631,8 @@ sub _prepare_converted_output_info($$$$) {
       = $self->get_conf('documentdescription');
   } elsif (defined($global_commands)
            and exists($global_commands->{'documentdescription'})) {
-    my $tmp = Texinfo::TreeElement::new({'contents'
-               => $global_commands->{'documentdescription'}->{'contents'}});
+    my $tmp = Texinfo::TreeElement::new({'type' => 'generic_container',
+      'contents' => $global_commands->{'documentdescription'}->{'contents'}});
 
     my $documentdescription_string
       = $self->convert_tree_new_formatting_context($tmp,
@@ -4675,7 +4677,8 @@ sub _prepare_converted_output_info($$$$) {
   if ($self->get_conf('DATE_IN_HEADER')) {
     my $today
       = $self->convert_tree_new_formatting_context(
-           Texinfo::TreeElement::new({'cmdname' => 'today'}),
+           Texinfo::TreeElement::new({'cmdname' => 'today',
+                                      'type' => 'normal_command'}),
                                                    'DATE_IN_HEADER');
     my $date =
       $self->close_html_lone_element(
@@ -5007,8 +5010,8 @@ sub _node_redirections($$$$) {
 
         my $translit_filename
    = Texinfo::Convert::NodeNameNormalization::normalize_transliterate_texinfo(
-        Texinfo::TreeElement::new(
-          {'contents' => $label_element->{'contents'}}));
+        Texinfo::TreeElement::new({'type' => 'generic_container',
+                     'contents' => $label_element->{'contents'}}));
 
         $translit_filename = $self->_id_to_filename($translit_filename);
         $translit_filename = $translit_filename.$added_translit_extension;
@@ -5651,7 +5654,8 @@ sub output_internal_links($) {
             push @contents, @{$subentries_tree->{'contents'}};
           }
           my $index_term = Texinfo::Convert::Text::convert_to_text(
-                Texinfo::TreeElement::new({'contents' => \@contents}),
+                Texinfo::TreeElement::new({'type' => 'generic_container',
+                                           'contents' => \@contents}),
                                             $self->{'convert_text_options'});
           if ($in_code) {
             Texinfo::Convert::Text::reset_options_code(

@@ -1443,7 +1443,7 @@ plaintext_convert_node_name (CONVERTER *self, const ELEMENT *element,
       /* external node */
       const INTEGER_LIST *node_content
          = lookup_extra_integer_list (element, AI_key_node_content);
-      label_element = new_element (ET_NONE);
+      label_element = new_element (ET_generic_container);
       insert_slice_into_contents (label_element, 0, element,
                                   node_content->list[0],
                                   node_content->list[1] +1);
@@ -1457,7 +1457,7 @@ plaintext_convert_node_name (CONVERTER *self, const ELEMENT *element,
     as targets, but in case they are, we remove the @ref for the label
     to be consistent with @node and similar.
      */
-      heading_copy = copy_contents (label_element, 0, ET_NONE);
+      heading_copy = copy_contents (label_element, 0, ET_generic_container);
       label_element = reference_to_arg_in_tree (heading_copy,
                                                 self->document);
     }
@@ -2656,7 +2656,7 @@ plaintext_process_printindex (CONVERTER *self,
           if (in_code)
             referred_tree = new_element (ET__code);
           else
-            referred_tree = new_element (ET_NONE);
+            referred_tree = new_element (ET_generic_container);
 
           add_to_contents_as_array (referred_tree, referred_copy);
 
@@ -5743,7 +5743,7 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
           const ELEMENT *copying = self->document->global_commands.copying;
           if (copying)
             {
-              ELEMENT *copying_content = new_element (ET_NONE);
+              ELEMENT *copying_content = new_element (ET_generic_container);
               insert_slice_into_contents (copying_content,
                                copying_content->e.c->contents.number,
                                copying, 1, copying->e.c->contents.number);
@@ -6026,6 +6026,7 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
         }
     }
 
+  /* FIXME remove this condition */
   if (type != ET_NONE)
     {
       if (type == ET_paragraph)
@@ -6449,7 +6450,8 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
                           add_(format_context) (&self_plaintext->format_context,
                                         format_context);
 
-                          ELEMENT *formatted_elt = new_element (ET_NONE);
+                          ELEMENT *formatted_elt
+                            = new_element (ET_generic_container);
                           insert_slice_into_contents (formatted_elt,
                                formatted_elt->e.c->contents.number,
                                node_description, 1,
@@ -6556,6 +6558,7 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
     }
 
   /* Now closing.  First, close types. */
+  /* FIXME remove this condition */
   if (type != ET_NONE)
     {
       if (type == ET__frenchspacing)

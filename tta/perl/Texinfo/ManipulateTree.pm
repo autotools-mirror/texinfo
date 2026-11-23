@@ -150,14 +150,12 @@ sub _copy_tree($;$) {
     return $current->{'_copy'};
   }
 
-  my $new = Texinfo::TreeElement::new({});
-  foreach my $key ('type', 'text') {
-    $new->{$key} = $current->{$key} if (exists($current->{$key}));
-  }
+  my $new = Texinfo::TreeElement::new({'type' => $current->{'type'}});
 
   $current->{'_copy'} = $new;
 
   if (exists($current->{'text'})) {
+    $new->{'text'} = $current->{'text'};
     if (exists($current->{'inserted_text'})) {
       $new->{'inserted_text'} = 1;
     }
@@ -360,14 +358,10 @@ sub copy_element_tree($;$) {
   return $copy;
 }
 
-sub copy_contents($;$) {
+sub copy_contents($$) {
   my ($element, $type) = @_;
 
-  my $tmp = {};
-  if (defined($type)) {
-    $tmp->{'type'} = $type;
-  }
-  my $copied = Texinfo::TreeElement::new($tmp);
+  my $copied = Texinfo::TreeElement::new({'type' => $type});
 
   my ($start_idx, $end_idx)
     = Texinfo::Common::non_leading_trailing_indices($element);
@@ -1268,12 +1262,12 @@ sub _reference_to_arg($$$) {
     foreach my $index (@args_try_order) {
       if (defined($current->{'contents'}->[$index])) {
         my $arg = $current->{'contents'}->[$index];
-        # this will not detect if the arg expands as spaces only, like
-        # @asis{ }, @ , but it is not an issue or could even be considered
-        # as a feature.
+        # this will not detect if the arg has non space contents but still
+        # expands as spaces only, like @asis{ }, @ , but it is not an issue
+        # or could even be considered as a feature.
         if (!Texinfo::Common::is_content_empty($arg)) {
-          my $new
-            = Texinfo::TreeElement::new({'parent' => $current->{'parent'}});
+          my $new = Texinfo::TreeElement::new({'type' => 'generic_container',
+                                          'parent' => $current->{'parent'}});
           foreach my $content (@{$arg->{'contents'}}) {
             if (!exists($content->{'type'})
                 or ($content->{'type'} ne 'spaces_before_argument'

@@ -773,7 +773,7 @@ external_node_href (CONVERTER *self, const ELEMENT *external_node,
 
   if (node_content)
     {
-      ELEMENT *tmp = new_element (ET_NONE);
+      ELEMENT *tmp = new_element (ET_generic_container);
       insert_slice_into_contents (tmp, 0, external_node,
                                   node_content->list[0],
                                   node_content->list[1] +1);
@@ -812,7 +812,7 @@ external_node_href (CONVERTER *self, const ELEMENT *external_node,
       char *htmlxref_href = 0;
       enum htmlxref_split_type split_found = htmlxref_split_type_none;
       HTMLXREF_MANUAL *htmlxref_manual;
-      ELEMENT *tmp = new_element (ET_NONE);
+      ELEMENT *tmp = new_element (ET_generic_container);
       insert_slice_into_contents (tmp, 0, external_node,
                                   manual_content->list[0],
                                   manual_content->list[1] +1);
@@ -1629,7 +1629,7 @@ html_command_description (CONVERTER *self, const ELEMENT *command,
             description_element = node_description->e.c->contents.list[0];
           else
             {
-              description_element = new_element (ET_NONE);
+              description_element = new_element (ET_generic_container);
               description_element->e.c->contents
                  = node_description->e.c->contents;
               add_tree_to_build (self, description_element);
@@ -5815,7 +5815,7 @@ format_maketitle (CONVERTER *self, TEXT *result)
 
   if (document_info)
     {
-      ELEMENT *e = new_element (ET_NONE);
+      ELEMENT *e = new_element (ET_generic_container);
       char *make_title_attribute_class = html_attribute_class (self, "div",
                                                &maketitle_titlepage_classes);
       text_append (result, make_title_attribute_class);
@@ -5856,7 +5856,7 @@ html_default_format_titlepage (CONVERTER *self)
   if (self->document->global_commands.titlepage)
     {
       open_quotation_titlepage_stack (self, 0);
-      ELEMENT *tmp = new_element (ET_NONE);
+      ELEMENT *tmp = new_element (ET_generic_container);
       tmp->e.c->contents = self->document->global_commands.titlepage->e.c->contents;
       html_convert_tree_append (self, tmp, &result, "convert titlepage");
       tmp->e.c->contents.list = 0;
@@ -8323,7 +8323,7 @@ html_convert_xref_command (CONVERTER *self, const enum command_id cmd,
 
       if (file)
         {
-          label_element = new_element (ET_NONE);
+          label_element = new_element (ET_generic_container);
           open_p = new_text_element (ET_normal_text);
           close_p = new_text_element (ET_normal_text);
 
@@ -8351,7 +8351,7 @@ html_convert_xref_command (CONVERTER *self, const enum command_id cmd,
               node_element = arg_node;
 
               if (!label_element)
-                label_element = new_element (ET_NONE);
+                label_element = new_element (ET_generic_container);
 
               INTEGER_LIST *label_node_content = new_integer_list ();
               add_(integer) (label_node_content,
@@ -10089,7 +10089,7 @@ html_convert_insertcopying_command (CONVERTER *self, const enum command_id cmd,
 {
   if (self->document->global_commands.copying)
     {
-      ELEMENT *tmp = new_element (ET_NONE);
+      ELEMENT *tmp = new_element (ET_generic_container);
       tmp->e.c->contents = self->document->global_commands.copying->e.c->contents;
       html_convert_tree_append (self, tmp, result, "convert insertcopying");
       tmp->e.c->contents.list = 0;
@@ -10598,7 +10598,7 @@ html_convert_printindex_command (CONVERTER *self, const enum command_id cmd,
 
           in_code = entry_index->in_code;
 
-          entry_ref_tree = new_element (ET_NONE);
+          entry_ref_tree = new_element (ET_generic_container);
 
           add_to_contents_as_array (entry_ref_tree, entry_content_element);
 
@@ -10633,7 +10633,7 @@ html_convert_printindex_command (CONVERTER *self, const enum command_id cmd,
               if (line_arg->e.c->contents.number > 0)
                 {
                   size_t k;
-                  subentry_tree = new_element (ET_NONE);
+                  subentry_tree = new_element (ET_generic_container);
 
                   for (k = 0; k < line_arg->e.c->contents.number; k++)
                     {
@@ -10655,7 +10655,7 @@ html_convert_printindex_command (CONVERTER *self, const enum command_id cmd,
                     {
                       if (!subentry_tree)
                         {
-                          subentry_tree = new_element (ET_NONE);
+                          subentry_tree = new_element (ET_generic_container);
                         }
                       insert_list_slice_into_contents (subentry_tree,
                            subentry_tree->e.c->contents.number,
@@ -12453,7 +12453,7 @@ html_convert_menu_entry_type (CONVERTER *self, const enum element_type type,
             description_element = node_description->e.c->contents.list[0];
           else
             {
-              description_element = new_element (ET_NONE);
+              description_element = new_element (ET_generic_container);
               description_element->e.c->contents
                 = node_description->e.c->contents;
               add_tree_to_build (self, description_element);
@@ -12597,9 +12597,10 @@ html_convert_menu_entry_type (CONVERTER *self, const enum element_type type,
           if (!long_description)
             description_element = node_description->e.c->contents.list[0];
           else
-            {
-              description_element = new_element (ET_NONE);
-              description_element->e.c->contents = node_description->e.c->contents;
+            {/* nodedescriptionblock */
+              description_element = new_element (ET_generic_container);
+              description_element->e.c->contents
+                  = node_description->e.c->contents;
               add_tree_to_build (self, description_element);
             }
 
@@ -13924,7 +13925,7 @@ html_output_internal_links (CONVERTER *self)
                   if (in_code)
                     self->convert_text_options->code_state++;
 
-                  entry_ref_tree = new_element (ET_NONE);
+                  entry_ref_tree = new_element (ET_generic_container);
 
                   add_to_contents_as_array (entry_ref_tree,
                                             entry_content_element);

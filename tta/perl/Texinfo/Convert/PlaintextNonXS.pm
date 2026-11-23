@@ -1341,7 +1341,7 @@ sub node_name($$) {
       # node direction to an external node
       my ($begin, $end) = @{$node->{'extra'}->{'node_content'}};
       $label_element
-        = Texinfo::TreeElement::new({
+        = Texinfo::TreeElement::new({'type' => 'generic_container',
               'contents' => [@{$node->{'contents'}}[$begin .. $end]]});
     } elsif (exists($Texinfo::Commands::sectioning_heading_commands{
                                                   $node->{'cmdname'}})) {
@@ -1351,7 +1351,8 @@ sub node_name($$) {
       # as targets, but in case they are, we remove the @ref for the label
       # to be consistent with @node and similar.
       my $heading_copy
-        = Texinfo::ManipulateTree::copy_contents($label_element);
+        = Texinfo::ManipulateTree::copy_contents($label_element,
+                                                 'generic_container');
       $label_element
         = Texinfo::ManipulateTree::reference_to_arg_in_tree($heading_copy,
                                                       $self->{'document'});
@@ -1959,12 +1960,13 @@ sub process_printindex($$;$) {
     my $entry_content_element
       = $self->converter_index_content_element($main_entry_element);
 
-    my $entry_tree
-     = Texinfo::TreeElement::new({'contents' => [$entry_content_element]});
+    my $entry_tree;
     if ($indices_information->{$entry_index_name}->{'in_code'}) {
-      $entry_tree->{'type'} = '_code';
+      $entry_tree = Texinfo::TreeElement::new({'type' => '_code',
+                                  'contents' => [$entry_content_element]});
     } else {
-      $entry_tree->{'type'} = '_frenchspacing';
+      $entry_tree = Texinfo::TreeElement::new({'type' => '_frenchspacing',
+                                  'contents' => [$entry_content_element]});
     }
     my $subentries_tree
        = Texinfo::Convert::Utils::comma_index_subentries_tree(
@@ -2001,9 +2003,14 @@ sub process_printindex($$;$) {
 
     if (defined($referred_entry)) {
       my $line_width = 0;
-      my $referred_tree = Texinfo::TreeElement::new({});
-      $referred_tree->{'type'} = '_code'
-        if ($indices_information->{$entry_index_name}->{'in_code'});
+      my $referred_tree;
+      if ($indices_information->{$entry_index_name}->{'in_code'}) {
+        $referred_tree
+          = Texinfo::TreeElement::new({'type' => '_code',});
+      } else {
+        $referred_tree
+          = Texinfo::TreeElement::new({'type' => 'generic_container',});
+      }
       $referred_tree->{'contents'} = [$referred_entry];
 
       # indent with the same width as '* ', but do not use * such that the
@@ -2370,7 +2377,7 @@ sub format_ref($$$$) {
         # case of a completely empty @*ref.
         my $substrings = {'node'
                        => Texinfo::TreeElement::new({'text' => 'Top',
-                                                     'type' => 'normal_text'})};
+                                                     'type' => 'other_text'})};
         if ($cmdname eq 'xref' or $cmdname eq 'inforef') {
           $tree = $self->cdt('See {node}', $substrings);
         } elsif ($cmdname eq 'pxref') {
@@ -2610,7 +2617,7 @@ sub _convert_def_line($$) {
        = Texinfo::TreeElement::new({'type' => '_code', 'contents' => [$name]});
     } else {
       $formatted_name = Texinfo::TreeElement::new({'text' => '',
-                                                   'type' => 'normal_text'});
+                                                   'type' => 'other_text'});
     }
     my $formatted_arguments;
     if (defined($arguments)) {
@@ -3450,8 +3457,9 @@ sub _convert($$) {
       } elsif ($cmdname eq 'titlefont') {
         if (defined($args) and defined($args->[0])) {
           _text_heading($self,
-           Texinfo::TreeElement::new({'extra' => {'section_level' => 0},
-                                      'cmdname' => 'titlefont'}),
+           Texinfo::TreeElement::new({'cmdname' => 'titlefont',
+                                      'type' => 'normal_command',
+                                      'extra' => {'section_level' => 0},}),
                             $args->[0],
                             $self->get_conf('NUMBER_SECTIONS'),
                $self->{'format_context'}->[-1]->{'context_indent_len'}, 1);
@@ -3769,7 +3777,7 @@ sub _convert($$) {
         # this is the text prepended to items.
         _convert($self, $prepended_element);
         _convert($self, Texinfo::TreeElement::new({ 'text' => ' ',
-                                                    'type' => 'normal_text' }));
+                                                    'type' => 'other_text' }));
       }
       my ($result_text, $count)
         = Texinfo::Convert::Paragraph::end($line->{'container'});
@@ -3809,8 +3817,7 @@ sub _convert($$) {
                                          'pending_text' => [['']]};
       if (exists($element->{'contents'}->[0]->{'contents'})) {
         $self->convert_line(
-             Texinfo::TreeElement::new({
-              'type' => '_frenchspacing',
+             Texinfo::TreeElement::new({'type' => '_frenchspacing',
               'contents' => [$element->{'contents'}->[0]]}),
              0);
       }
@@ -3868,7 +3875,7 @@ sub _convert($$) {
       if (defined($global_commands)
           and exists($global_commands->{'copying'})) {
         my $inserted =
-         Texinfo::TreeElement::new({
+         Texinfo::TreeElement::new({'type' => 'generic_container',
              'contents' => $global_commands->{'copying'}->{'contents'}});
         _convert($self, $inserted);
       }
@@ -4049,6 +4056,7 @@ sub _convert($$) {
 
   # open 'type' constructs.
   my $paragraph;
+  # FIXME remove this condition
   if (defined($type)) {
     if ($type eq 'paragraph') {
       my ($para_indent_size, $para_indent_next);
@@ -4314,7 +4322,8 @@ sub _convert($$) {
                  'context_indent_len' => $description_indent_length,
                };
 
-              $formatted_elt = Texinfo::TreeElement::new({
+              $formatted_elt
+               = Texinfo::TreeElement::new({'type' => 'generic_container',
                  'contents' => $node_description->{'contents'}});
             }
             _convert($self, $formatted_elt);
@@ -4393,6 +4402,7 @@ sub _convert($$) {
   }
 
   # now closing. First, close types.
+  # FIXME remove this condition
   if (defined($type)) {
     if ($type eq '_frenchspacing') {
       pop @{$formatter->{'frenchspacing_stack'}};

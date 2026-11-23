@@ -5183,7 +5183,7 @@ prepare_index_entries_targets (CONVERTER *self)
                = converter_index_content_element (main_entry_element, self, 1);
         /* construct element to convert to a normalized identifier to use as
            hrefs target */
-              normalize_index_element = new_element (ET_NONE);
+              normalize_index_element = new_element (ET_generic_container);
               add_to_contents_as_array (normalize_index_element,
                                         entry_reference_content_element);
 

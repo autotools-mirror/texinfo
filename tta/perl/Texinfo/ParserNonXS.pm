@@ -4164,8 +4164,10 @@ sub _end_line_misc_line($$$) {
         }
         if (exists($node_line_arg->{'extra'}->{'node_content'})) {
           my ($begin, $end) = @{$node_line_arg->{'extra'}->{'node_content'}};
-          my $node_content = {'contents'
-            => [@{$node_line_arg->{'contents'}}[$begin .. $end]]};
+          my $node_content = Texinfo::TreeElement::new({
+           'type' => 'generic_container',
+           'contents'
+              => [@{$node_line_arg->{'contents'}}[$begin .. $end]]});
           my $normalized
        = Texinfo::Convert::NodeNameNormalization::convert_to_node_identifier(
                                       $node_content);
@@ -6654,14 +6656,14 @@ sub _handle_open_brace($$$$) {
           = $commands_args_number{$command} - 1;
     }
 
-    my $arg = Texinfo::TreeElement::new({'parent' => $current});
-    push @{$current->{'contents'}}, $arg;
-    $current = $arg;
     push @{$self->{'nesting_context'}->{'basic_inline_stack'}}, $command
       if (defined($self->{'basic_inline_commands'})
           and $self->{'basic_inline_commands'}->{$command});
     if ($command eq 'verb') {
-      $current->{'type'} = 'brace_container';
+      my $arg = Texinfo::TreeElement::new({'type' => 'brace_container',
+                                           'parent' => $current});
+      push @{$current->{'contents'}}, $arg;
+      $current = $arg;
       while ($line eq '') {
         # the delimiter may be in macro expansion
         ($line, $source_info) = _next_text($self, $current);
@@ -6689,7 +6691,10 @@ sub _handle_open_brace($$$$) {
         push @{$current->{'contents'}}, $delimiter_element;
       }
     } elsif ($self->{'brace_commands'}->{$command} eq 'context') {
-      $current->{'type'} = 'brace_command_context';
+      my $arg = Texinfo::TreeElement::new({'type' => 'brace_command_context',
+                                           'parent' => $current});
+      push @{$current->{'contents'}}, $arg;
+      $current = $arg;
       if ($command eq 'caption' or $command eq 'shortcaption') {
         $self->{'nesting_context'}->{'caption'} += 1;
         if (!exists($current->{'parent'}->{'parent'})
@@ -6730,10 +6735,12 @@ sub _handle_open_brace($$$$) {
       $spaces_e->{'text'} = $1;
     } else {
       # Commands that disregard leading whitespace.
+      my $arg;
       if ($brace_commands{$command}
           and ($brace_commands{$command} eq 'arguments'
                or $brace_commands{$command} eq 'inline')) {
-        $current->{'type'} = 'brace_arg';
+        $arg = Texinfo::TreeElement::new({'type' => 'brace_arg',
+                                          'parent' => $current});
 
         if ($command eq 'inlineraw') {
           _push_context($self, 'ct_inlineraw', $command);
@@ -6741,8 +6748,11 @@ sub _handle_open_brace($$$$) {
           _push_context($self, 'ct_math', $command);
         }
       } else {
-        $current->{'type'} = 'brace_container';
+        $arg = Texinfo::TreeElement::new({'type' => 'brace_container',
+                                          'parent' => $current});
       }
+      push @{$current->{'contents'}}, $arg;
+      $current = $arg;
     }
     print STDERR "OPENED \@$current->{'parent'}->{'cmdname'}, remaining: "
       .(defined($current->{'parent'}->{'remaining_args'})
@@ -7047,7 +7057,7 @@ sub _handle_comma($$$$) {
   _isolate_leading_trailing($self, $current);
   # type corresponds to three possible containers: in brace commands,
   # line of block command (float or example) or line (node).
-  my $type = $current->{'type'};
+  #my $type = $current->{'type'};
   #die ("type: $type\n") if ($type ne 'brace_container'
   #                          and $type ne 'brace_arg'
   #                          and $type ne 'block_line_arg'
@@ -7073,7 +7083,8 @@ sub _handle_comma($$$$) {
       # and put it in extra format
       if (exists($current->{'contents'})) {
         foreach my $content (@{$current->{'contents'}}) {
-          if (exists($content->{'text'}) and $content->{'type'} eq 'normal_text') {
+          if (exists($content->{'text'})
+              and $content->{'type'} eq 'normal_text') {
             $inline_type = $content->{'text'};
             last;
           }
@@ -7215,7 +7226,8 @@ sub _handle_comma($$$$) {
     }
   }
   my $new_arg
-    = Texinfo::TreeElement::new({'type' => $type, 'parent' => $argument,});
+    = Texinfo::TreeElement::new({'type' => $current->{'type'},
+                                 'parent' => $argument,});
   push @{$argument->{'contents'}}, $new_arg;
 
   return ($new_arg, $line, $source_info);
@@ -7230,7 +7242,8 @@ sub _new_macro($$$) {
   if (exists($current->{'contents'})) {
     $macrobody =
        Texinfo::Convert::Texinfo::convert_to_texinfo(
-         Texinfo::TreeElement::new({ 'contents' => $current->{'contents'} }));
+         Texinfo::TreeElement::new({'type' => 'generic_container',
+                                    'contents' => $current->{'contents'} }));
   }
   $self->{'macros'}->{$name} = {
     'element' => $current,

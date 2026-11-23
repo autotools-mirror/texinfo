@@ -33,6 +33,8 @@ use if $] >= 5.014, re => '/a';
 # To check if there is no erroneous autovivification
 #no autovivification qw(fetch delete exists store strict);
 
+use Carp qw(cluck confess);
+
 use Unicode::Normalize;
 use Text::Unidecode;
 
@@ -228,6 +230,16 @@ sub _convert($);
 
 sub _convert($) {
   my $element = shift;
+
+  # can be useful to uncomment from time to time to verify that all the
+  # elements are initialized properly.
+  #if (!defined($element)) {
+  #  confess('BUG: NodeNameNormalization _convert: element UNDEF');
+  #  return '';
+  #}
+  #if (ref($element) ne 'Texinfo::TreeElement') {
+  #  confess('BUG: NodeNameNormalization _convert: not an element: '.ref($element));
+  #}
 
   if (exists($element->{'text'})) {
     return '' if (exists($element->{'type'})

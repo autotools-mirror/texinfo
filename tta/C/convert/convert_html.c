@@ -1112,7 +1112,7 @@ html_prepare_converted_output_info (CONVERTER *self, const char *output_file,
   if (self->document->global_commands.copying)
     {
       char *copying_comment;
-      ELEMENT *tmp = new_element (ET_NONE);
+      ELEMENT *tmp = new_element (ET_generic_container);
 
       tmp->e.c->contents = self->document->global_commands.copying->e.c->contents;
 
@@ -1134,7 +1134,7 @@ html_prepare_converted_output_info (CONVERTER *self, const char *output_file,
      = strdup (self->conf->documentdescription.o.string);
   else if (self->document->global_commands.documentdescription)
     {
-      ELEMENT *tmp = new_element (ET_NONE);
+      ELEMENT *tmp = new_element (ET_generic_container);
       char *documentdescription_string;
       size_t documentdescription_string_len;
 
@@ -1480,7 +1480,7 @@ html_convert_tree_append (CONVERTER *self, const ELEMENT *element,
 
               if (convert_to_latex)
                 { /* displaymath */
-                  ELEMENT *tmp = new_element (ET_NONE);
+                  ELEMENT *tmp = new_element (ET_generic_container);
                   char *latex_content;
 
                   add_tree_to_build (self, tmp);
@@ -1819,7 +1819,7 @@ html_convert_tree_append (CONVERTER *self, const ELEMENT *element,
       text_init (&content_formatted);
 
       if (type == ET_definfoenclose_command)
-        {
+        {/* FIXME looks wrong */
           if (element->e.c->contents.number > 0)
             {
               html_convert_tree_append (self, element->e.c->contents.list[0],
@@ -1829,6 +1829,7 @@ html_convert_tree_append (CONVERTER *self, const ELEMENT *element,
         }
       else if (element->e.c->contents.number > 0
                && type != ET_untranslated_def_line_arg)
+        /* generic_container */
         {
           size_t content_idx;
           text_append (&content_formatted, "");
@@ -1848,7 +1849,7 @@ html_convert_tree_append (CONVERTER *self, const ELEMENT *element,
       html_convert_type_update_context (self, type);
 
       if (self_html->current_types_conversion_function[type].type_conversion)
-        {
+        {/* FIXME it is the same condition, remove */
           if (!self_html->current_types_conversion_function[type].type_conversion)
             {
               char *message;
@@ -1877,7 +1878,7 @@ html_convert_tree_append (CONVERTER *self, const ELEMENT *element,
       goto out;
     }
   else if (element->e.c->contents.number > 0)
-    {
+    {/* FIXME should not be possible anymore */
       /* no type, no cmdname, but contents. */
       /* this happens inside accents, for section/node names, for @images. */
       TEXT content_formatted;
@@ -1904,7 +1905,7 @@ html_convert_tree_append (CONVERTER *self, const ELEMENT *element,
       goto out;
     }
   else
-    {
+    {/* FIXME should not be possible anymore */
       if (self->conf->DEBUG.o.integer > 0)
         fprintf (stderr, "C|UNNAMED empty\n");
       if (self_html->current_types_conversion_function[0].type_conversion)

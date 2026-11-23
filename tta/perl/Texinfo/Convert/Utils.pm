@@ -310,7 +310,8 @@ sub comma_index_subentries_tree($;$) {
   }
 
   if (scalar(@contents)) {
-    return Texinfo::TreeElement::new({'contents' => \@contents});
+    return Texinfo::TreeElement::new({'type' => 'generic_container',
+                                      'contents' => \@contents});
   }
   return undef;
 }
@@ -340,7 +341,8 @@ sub definition_arguments_content($) {
     shift @args;
   }
   if (scalar(@args) > 0) {
-    $args = Texinfo::TreeElement::new({'contents' => \@args});
+    $args = Texinfo::TreeElement::new({'type' => 'generic_container',
+                                       'contents' => \@args});
   }
   return ($category, $class, $type, $name, $args);
 }
@@ -525,8 +527,9 @@ sub expand_verbatiminclude($$$$$;$$) {
         binmode(VERBINCLUDE, ":encoding($input_encoding)");
       }
       $verbatiminclude
-        = Texinfo::TreeElement::new({ 'cmdname' => 'verbatim',
-                                      'contents' => [],});
+        = Texinfo::TreeElement::new({'cmdname' => 'verbatim',
+                                     'type' => 'normal_command',
+                                     'contents' => [],});
       while (<VERBINCLUDE>) {
         push @{$verbatiminclude->{'contents'}},
           Texinfo::TreeElement::new({'type' => 'raw', 'text' => $_ });

@@ -148,7 +148,7 @@ copy_associated_info (ASSOCIATED_INFO *info, ASSOCIATED_INFO *new_info,
              */
             ELEMENT *f = k_ref->k.element;
             KEY_PAIR *k = get_associated_info_key (new_info, key);
-            ELEMENT *new_extra_element = new_element (ET_NONE);
+            ELEMENT *new_extra_element = new_element (ET_generic_container);
             k->k.element = new_extra_element;
             for (j = 0; j < f->e.c->contents.number; j++)
               {
@@ -474,7 +474,12 @@ copy_contents (const ELEMENT *element, ELEMENT_LIST *added_root_elements,
 {
   int non_empty;
   ARG_INDICES arg_indices;
-  ELEMENT *tmp = new_element (type);
+  ELEMENT *copied;
+
+  if (type == ET_NONE)
+    abort ();
+
+  copied = new_element (type);
 
   non_empty = non_leading_trailing_indices (element,
                                             &arg_indices);
@@ -482,15 +487,15 @@ copy_contents (const ELEMENT *element, ELEMENT_LIST *added_root_elements,
   if (non_empty)
     {
       ELEMENT *result;
-      insert_slice_into_contents (tmp, 0, element,
+      insert_slice_into_contents (copied, 0, element,
                                   arg_indices.start,
                                   arg_indices.end +1);
-      result = copy_element_tree (tmp, added_root_elements);
-      destroy_element (tmp);
+      result = copy_element_tree (copied, added_root_elements);
+      destroy_element (copied);
       return result;
     }
 
-  return tmp;
+  return copied;
 }
 
 
@@ -2128,7 +2133,7 @@ reference_to_arg_internal (const char *type,
                   size_t i;
                   ARG_INDICES arg_indices;
                   int non_empty;
-                  ELEMENT *new = new_element (ET_NONE);
+                  ELEMENT *new = new_element (ET_generic_container);
 
                   if (removed != arg)
                     fatal ("BUG: reference_to_arg_internal removed != arg");

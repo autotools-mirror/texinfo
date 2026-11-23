@@ -158,7 +158,7 @@ sub fill_gaps_in_sectioning_in_document($;$) {
         if (defined($commands_heading_content)) {
           $line_content
             = Texinfo::ManipulateTree::copy_contents(
-                                               $commands_heading_content);
+                        $commands_heading_content, 'generic_container');
           $line_content->{'parent'} = $line_arg;
         } else {
           my $asis_command

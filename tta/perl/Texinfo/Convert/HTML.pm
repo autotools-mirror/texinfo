@@ -604,8 +604,8 @@ sub _external_node_href($$$) {
   my $node_content;
   if (exists($external_node->{'extra'}->{'node_content'})) {
     my ($begin, $end) = @{$external_node->{'extra'}->{'node_content'}};
-    $node_content = {'contents'
-            => [@{$external_node->{'contents'}}[$begin .. $end]]};
+    $node_content = Texinfo::TreeElement::new({'type' => 'generic_container',
+     'contents' => [@{$external_node->{'contents'}}[$begin .. $end]]});
   }
   my ($target_filebase, $external_file_extension, $target)
      = _standard_label_id_file($self, $normalized, $node_content,
@@ -629,8 +629,10 @@ sub _external_node_href($$$) {
   if (exists($external_node->{'extra'}->{'manual_content'})) {
     my ($begin_manual, $end_manual)
       = @{$external_node->{'extra'}->{'manual_content'}};
-    my $manual_content = {'contents'
-        => [@{$external_node->{'contents'}}[$begin_manual .. $end_manual]]};
+    my $manual_content
+     = Texinfo::TreeElement::new({'type' => 'generic_container',
+      'contents'
+        => [@{$external_node->{'contents'}}[$begin_manual .. $end_manual]]});
     Texinfo::Convert::Text::set_options_code($self->{'convert_text_options'});
     my $manual_name = Texinfo::Convert::Text::convert_to_text(
                             $manual_content,
@@ -3951,8 +3953,8 @@ sub _convert_insertcopying_command($$$) {
 
   if (defined($global_commands) and exists($global_commands->{'copying'})) {
     return $self->convert_tree(
-      Texinfo::TreeElement::new(
-       {'contents' => $global_commands->{'copying'}->{'contents'}}),
+      Texinfo::TreeElement::new({'type' => 'generic_container',
+            'contents' => $global_commands->{'copying'}->{'contents'}}),
                                'convert insertcopying');
   }
   return '';
@@ -4123,6 +4125,7 @@ sub _convert_float_command($$$$$) {
     # if not empty?
     $prepended_text = $self->convert_tree_new_formatting_context(
      Texinfo::TreeElement::new({'cmdname' => 'strong',
+                                'type' => 'normal_command',
                                 'contents' => [
                    Texinfo::TreeElement::new({'type' => 'brace_container',
                                               'contents' => [$prepended]})]}),
@@ -4683,8 +4686,9 @@ sub _convert_xref_command($$$$) {
     my $label_element;
     # file argument
     if (defined($file)) {
-      $label_element = Texinfo::TreeElement::new(
-       {'extra' => {'manual_content' => [1, 1]},
+      $label_element
+       = Texinfo::TreeElement::new({'type' => 'generic_container',
+       'extra' => {'manual_content' => [1, 1]},
        'contents' => [Texinfo::TreeElement::new({'text' => '(',
                                                'type' => 'normal_text'}),
                       $file_arg->{'arg_tree'},
@@ -4698,8 +4702,9 @@ sub _convert_xref_command($$$$) {
       $node_element = $arg_node;
 
       if (!defined($label_element)) {
-        $label_element = Texinfo::TreeElement::new({'contents' => [],
-                                                    'extra' => {}});
+        $label_element
+          = Texinfo::TreeElement::new({'type' => 'generic_container',
+                                    'contents' => [], 'extra' => {}});
       }
       my ($begin, $end) = @{$arg_node->{'extra'}->{'node_content'}};
       my $len = scalar(@{$label_element->{'contents'}});
@@ -4963,7 +4968,8 @@ sub _convert_printindex_command($$$$) {
       $in_code = 1
        if ($indices_information->{$entry_index_name}->{'in_code'});
       my $entry_ref_tree
-        = Texinfo::TreeElement::new({'contents' => [$entry_content_element]});
+        = Texinfo::TreeElement::new({'type' => 'generic_container',
+                               'contents' => [$entry_content_element]});
 
 
       # determine the trees and normalized main entry and subentries, to be
@@ -4994,7 +5000,8 @@ sub _convert_printindex_command($$$$) {
                                   and $content->{'cmdname'} eq 'subentry');
             }
             $subentry_tree
-              = Texinfo::TreeElement::new({'contents' => \@contents});
+              = Texinfo::TreeElement::new({'type' => 'generic_container',
+                                           'contents' => \@contents});
           }
           if ($subentry_level >= $subentries_max_level) {
             # at the max, concatenate the remaining subentries
@@ -5005,8 +5012,9 @@ sub _convert_printindex_command($$$$) {
                 push @{$subentry_tree->{'contents'}},
                   @{$other_subentries_tree->{'contents'}};
               } else {
-                $subentry_tree = Texinfo::TreeElement::new(
-                  {'contents' => [@{$other_subentries_tree->{'contents'}}]});
+                $subentry_tree
+                 = Texinfo::TreeElement::new({'type' => 'generic_container',
+                  'contents' => [@{$other_subentries_tree->{'contents'}}]});
               }
             }
           } elsif (defined($subentry_tree)) {
@@ -5343,7 +5351,8 @@ sub _convert_printindex_command($$$$) {
             and $cmdname ne uc($cmdname)
             and exists($letter_no_arg_commands{uc($cmdname)})) {
           $letter_command
-            = Texinfo::TreeElement::new({'cmdname' => uc($cmdname)});
+            = Texinfo::TreeElement::new({'cmdname' => uc($cmdname),
+                                         'type' => 'normal_command'});
         }
         $formatted_letter = $self->convert_tree($letter_command,
                                                 "index letter $letter command");
@@ -6231,8 +6240,9 @@ sub _convert_menu_entry_type($$$) {
         $description_element = $node_description->{'contents'}->[0];
       } else {
         # nodedescriptionblock
-        $description_element = Texinfo::TreeElement::new(
-           {'contents' => $node_description->{'contents'}});
+        $description_element
+           = Texinfo::TreeElement::new({'type' => 'generic_container',
+                       'contents' => $node_description->{'contents'}});
       }
       my $multiple_formatted;
       if ($formatted_nodedescription_nr > 1) {
@@ -6295,8 +6305,9 @@ sub _convert_menu_entry_type($$$) {
       $description_element = $node_description->{'contents'}->[0];
     } else {
       # nodedescriptionblock
-      $description_element = Texinfo::TreeElement::new(
-        {'contents' => $node_description->{'contents'}});
+      $description_element
+        = Texinfo::TreeElement::new({'type' => 'generic_container',
+                     'contents' => $node_description->{'contents'}});
     }
     my $multiple_formatted;
     if ($formatted_nodedescription_nr > 1) {
@@ -6777,7 +6788,8 @@ sub _format_maketile($$) {
         push @contents, @{$document_info->{$cmdname}};
       }
     }
-    my $element = Texinfo::TreeElement::new({'contents' => \@contents});
+    my $element = Texinfo::TreeElement::new({'type' => 'generic_container',
+                                             'contents' => \@contents});
     # we do not need to collect the author commands in documentinfo, so
     # we use a little trick to initialize the authors number to -1
     # to mean that we are in documentinfo
@@ -6813,8 +6825,8 @@ sub _default_format_titlepage($) {
     # to mean that we are in titlepage
     _open_quotation_titlepage_stack($self, -1);
     $titlepage_text = $self->convert_tree(
-      Texinfo::TreeElement::new(
-       {'contents' => $global_commands->{'titlepage'}->{'contents'}}),
+      Texinfo::TreeElement::new({'type' => 'generic_container',
+         'contents' => $global_commands->{'titlepage'}->{'contents'}}),
                                           'convert titlepage');
     my $quotation_titlepage_nr = $self->get_shared_conversion_state('quotation',
                                                   'quotation_titlepage_stack');
@@ -8757,8 +8769,9 @@ sub _convert($$;$) {
           # displaymath
           $content_formatted
            = Texinfo::Convert::LaTeX::convert_to_latex_math(undef,
-            Texinfo::TreeElement::new({'contents' => $element->{'contents'}}),
-                                         $self->{'options_latex_math'});
+            Texinfo::TreeElement::new({'type' => 'generic_container',
+                                'contents' => $element->{'contents'}}),
+                                           $self->{'options_latex_math'});
         } else {
           my $contents_nr = scalar(@{$element->{'contents'}});
           for (my $idx = 0; $idx < $contents_nr; $idx++) {
@@ -8945,11 +8958,13 @@ sub _convert($$;$) {
     my $content_formatted = '';
     if ($type_name eq 'definfoenclose_command') {
       if (exists($element->{'contents'})) {
+        # FIXME looks wrong
         $content_formatted = _convert($self, $element->{'contents'}->[0],
                                              "DEFINFOENCLOSE_ARG");
       }
     } elsif (exists($element->{'contents'})
              and $type_name ne 'untranslated_def_line_arg') {
+      # generic_container
       my $content_idx = 0;
       foreach my $content (@{$element->{'contents'}}) {
         $content_formatted
@@ -8972,6 +8987,7 @@ sub _convert($$;$) {
     return $result;
     # no type, no cmdname, but contents.
   } elsif (exists($element->{'contents'})) {
+    # FIXME should not be possible anymore
     # this happens inside accents, for section/node names, for @images.
     my $content_formatted = '';
     my $content_idx = 0;
@@ -8983,6 +8999,7 @@ sub _convert($$;$) {
     print STDERR "UNNAMED HOLDER => `$content_formatted'\n" if $debug;
     return $content_formatted;
   } else {
+    # FIXME should not be possible anymore
     print STDERR "UNNAMED empty\n" if $debug;
     if (defined($self->{'types_conversion'}->{''})) {
       return &{$self->{'types_conversion'}->{''}} ($self, $element);

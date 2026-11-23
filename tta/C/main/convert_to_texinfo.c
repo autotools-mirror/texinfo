@@ -217,7 +217,7 @@ convert_contents_to_texinfo (const ELEMENT *e)
   if (non_empty)
     {
       TEXT result;
-      ELEMENT *tmp = new_element (ET_NONE);
+      ELEMENT *tmp = new_element (ET_generic_container);
       insert_slice_into_contents (tmp, 0, e, arg_indices.start,
                                   arg_indices.end +1);
       result = convert_to_texinfo_text (tmp);
@@ -270,7 +270,7 @@ check_node_same_texinfo_code (const ELEMENT *reference_node,
       const ELEMENT *last_content = last_contents_child (node_content);
       if (last_content && last_content->type == ET_space_at_end_menu_node)
         {
-          ELEMENT *tmp_elt = new_element (ET_NONE);
+          ELEMENT *tmp_elt = new_element (ET_generic_container);
           insert_slice_into_contents (tmp_elt, 0,
                                       node_content, 0,
                                       node_content->e.c->contents.number -1);

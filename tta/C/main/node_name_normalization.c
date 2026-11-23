@@ -343,7 +343,7 @@ convert_to_node_identifier (const ELEMENT *element)
 char *
 convert_contents_to_node_identifier (const ELEMENT *e)
 {
-  ELEMENT *tmp = new_element (ET_NONE);
+  ELEMENT *tmp = new_element (ET_generic_container);
   char *result;
 
   tmp->e.c->contents = e->e.c->contents;
@@ -370,7 +370,7 @@ convert_to_identifier (const ELEMENT *element)
 char *
 convert_contents_to_identifier (const ELEMENT *e)
 {
-  ELEMENT *tmp = new_element (ET_NONE);
+  ELEMENT *tmp = new_element (ET_generic_container);
   char *result;
 
   tmp->e.c->contents = e->e.c->contents;
@@ -422,7 +422,7 @@ normalize_transliterate_texinfo (const ELEMENT *e)
 char *
 normalize_transliterate_texinfo_contents (const ELEMENT *e)
 {
-  ELEMENT *tmp = new_element (ET_NONE);
+  ELEMENT *tmp = new_element (ET_generic_container);
   char *result;
 
   tmp->e.c->contents = e->e.c->contents;

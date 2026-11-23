@@ -622,13 +622,13 @@ sub normalized_sectioning_command_filename($$) {
   if ($self->get_conf('TRANSLITERATE_FILE_NAMES')) {
     $normalized_name
     = Texinfo::Convert::NodeNameNormalization::normalize_transliterate_texinfo(
-        Texinfo::TreeElement::new(
-         {'contents' => $label_element->{'contents'}}));
+        Texinfo::TreeElement::new({'type' => 'generic_container',
+                         'contents' => $label_element->{'contents'}}));
   } else {
     $normalized_name
      = Texinfo::Convert::NodeNameNormalization::convert_to_identifier(
-           Texinfo::TreeElement::new(
-             { 'contents' => $label_element->{'contents'} }));
+           Texinfo::TreeElement::new({'type' => 'generic_container',
+                        'contents' => $label_element->{'contents'} }));
   }
 
   my $filename = $self->_id_to_filename($normalized_name);
@@ -646,16 +646,16 @@ sub node_information_filename($$$) {
     if ($self->get_conf('TRANSLITERATE_FILE_NAMES')) {
       $filename
   = Texinfo::Convert::NodeNameNormalization::normalize_transliterate_texinfo(
-     Texinfo::TreeElement::new(
-       {'contents' => $label_element->{'contents'}}));
+     Texinfo::TreeElement::new({'type' => 'generic_container',
+                      'contents' => $label_element->{'contents'}}));
     } else {
       $filename = $normalized;
     }
   } elsif (defined($label_element)) {
     $filename
      = Texinfo::Convert::NodeNameNormalization::convert_to_node_identifier(
-           Texinfo::TreeElement::new(
-             { 'contents' => $label_element->{'contents'} }));
+           Texinfo::TreeElement::new({'type' => 'generic_container',
+                      'contents' => $label_element->{'contents'}}));
   } else {
     $filename = '';
   }
@@ -998,8 +998,8 @@ sub converter_index_content_element($$;$) {
                                   $element, $substrings);
   }
 
-  # prefer a type-less container rather than 'root_line' returned by gdt
-  delete $index_element->{'type'};
+  # prefer a generic container rather than 'root_line' returned by gdt
+  $index_element->{'type'} = 'generic_container';
 
   return $index_element;
 }
@@ -1098,9 +1098,11 @@ sub index_entry_first_letter_text_or_command($$) {
                                             ->{'index_ignore_chars'});
     }
     my $parsed_element;
+    # FIXME strange code needs a comment
     if (!exists($entry_tree_element->{'contents'})) {
       $parsed_element
-        = Texinfo::TreeElement::new({'contents' => [$entry_tree_element]});
+        = Texinfo::TreeElement::new({'type' => 'generic_container',
+                                     'contents' => [$entry_tree_element]});
     } else {
       $parsed_element = $entry_tree_element;
     }
@@ -1735,6 +1737,7 @@ sub table_item_content_tree($$) {
     my $command_as_argument_cmdname = $command_as_argument->{'cmdname'};
     my $command = Texinfo::TreeElement::new(
                   {'cmdname' => $command_as_argument_cmdname,
+                   'type' => $command_as_argument->{'type'},
                    'source_info' => $element->{'source_info'},});
     if (exists($table_command->{'extra'})
         and $table_command->{'extra'}->{'command_as_argument_kbd_code'}) {
@@ -1744,7 +1747,6 @@ sub table_item_content_tree($$) {
     my $builtin_cmdname;
     if (exists($command_as_argument->{'type'})
         and $command_as_argument->{'type'} eq 'definfoenclose_command') {
-      $command->{'type'} = $command_as_argument->{'type'};
       $command->{'extra'} = {} if (!exists($command->{'extra'}));
       $command->{'extra'}->{'begin'}
         = $command_as_argument->{'extra'}->{'begin'};

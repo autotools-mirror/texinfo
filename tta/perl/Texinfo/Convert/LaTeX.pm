@@ -1244,11 +1244,12 @@ sub output($$) {
                                    'type' => $root->{'type'}})
       if (not defined($modified_root));
     push @{$modified_root->{'contents'}},
+        # FIXME not an existing type
         Texinfo::TreeElement::new({'type' => 'ignored_top_node_paragraph',
          'contents' => [
           Texinfo::TreeElement::new({'type' => 'paragraph', 'contents' => [
            Texinfo::TreeElement::new({'text' => "\n(`Top' node ignored)\n",
-                                      'type' => 'ignored_top_node'})]})]});
+                                      'type' => 'other_text'})]})]});
   }
 
   if (not defined($modified_root)) {
@@ -4028,6 +4029,7 @@ sub _convert($$) {
           # in abbr spaces never end a sentence.
           my $argument;
           if ($cmdname eq 'abbr') {
+            # FIXME not an existing type
             $argument
               = Texinfo::TreeElement::new({'type' => '_dot_not_end_sentence',
                                   'contents' => [$args->[0]]});

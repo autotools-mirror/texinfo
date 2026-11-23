@@ -474,8 +474,9 @@ sub _convert_def_line($$) {
                                    $options->{'current_lang_translations'},
                                    $options->{'DEBUG'});
   if (defined($parsed_definition_category)) {
-    my $converted_element = Texinfo::TreeElement::new(
-       {'contents' => [$parsed_definition_category,
+    my $converted_element = Texinfo::TreeElement::new({
+            'type' => 'generic_container',
+            'contents' => [$parsed_definition_category,
                        Texinfo::TreeElement::new({'text' => ': ',
                                                   'type' => 'normal_text'})]});
     my $contents = $converted_element->{'contents'};

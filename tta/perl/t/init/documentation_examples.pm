@@ -366,7 +366,8 @@ sub my_final_convert_paragraph_type($$$$) {
   my @contents = @{$element->{'contents'}};
   push @contents, Texinfo::TreeElement::new({'text' => ' HTML text ',
                                              'type' => 'normal_text'});
-  my $new_element = Texinfo::TreeElement::new({'contents' => \@contents});
+  my $new_element = Texinfo::TreeElement::new({
+    'type' => 'generic_container', 'contents' => \@contents});
   my $result = $converter->set_context_convert_tree($new_element,
                                 $Texinfo::Convert::HTML::CTXF_code);
   return "<p>".$prepended.$result."</p>";

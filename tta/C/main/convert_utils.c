@@ -793,7 +793,7 @@ definition_arguments_content (const ELEMENT *element)
         }
       if (i < def_line_args->e.c->contents.number - 1)
         {
-          ELEMENT *args = new_element (ET_NONE);
+          ELEMENT *args = new_element (ET_generic_container);
           insert_slice_into_contents (args, 0, def_line_args, i + 1,
                                  def_line_args->e.c->contents.number);
           result->args = args;

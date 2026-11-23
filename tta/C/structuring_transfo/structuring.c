@@ -456,7 +456,7 @@ sectioning_targets (DOCUMENT *document, int warn_duplicate_section_target)
       arguments_line = content->e.c->contents.list[0];
       line_arg = arguments_line->e.c->contents.list[0];
 
-      node_tree = copy_contents (line_arg, 0, ET_NONE);
+      node_tree = copy_contents (line_arg, 0, ET_generic_container);
 
       if (node_tree->e.c->contents.number == 0)
         {
@@ -981,7 +981,7 @@ insert_nodes_for_sectioning_commands (DOCUMENT *document,
               if (content->e.c->cmd == CM_top)
                 {
                   ELEMENT *top_node_text = new_text_element (ET_normal_text);
-                  new_node_tree = new_element (ET_NONE);
+                  new_node_tree = new_element (ET_generic_container);
                   text_append (top_node_text->e.text, "Top");
                   add_to_contents_as_array (new_node_tree, top_node_text);
                 }
@@ -991,7 +991,7 @@ insert_nodes_for_sectioning_commands (DOCUMENT *document,
                     = content->e.c->contents.list[0];
                   const ELEMENT *line_arg
                     = arguments_line->e.c->contents.list[0];
-                  new_node_tree = copy_contents (line_arg, 0, ET_NONE);
+                  new_node_tree = copy_contents (line_arg, 0, ET_generic_container);
                 }
               normalized = convert_to_node_identifier (new_node_tree);
 
@@ -2816,13 +2816,13 @@ associate_internal_references (DOCUMENT *document)
         = lookup_extra_integer_list (label_element, AI_key_node_content);
       if (label_node_content)
         {
-          ELEMENT *tmp = new_element (ET_NONE);
+          ELEMENT *tmp = new_element (ET_generic_container);
           insert_slice_into_contents (tmp, 0, label_element,
                                   label_node_content->list[0],
                                   label_node_content->list[1] +1);
 
           char *normalized
-            = convert_contents_to_node_identifier (tmp);
+            = convert_to_node_identifier (tmp);
           if (normalized)
             {
               if (strlen (normalized))
@@ -3079,7 +3079,7 @@ new_node_menu_entry (const NODE_RELATIONS *node_relations, int use_sections)
   if (parsed_entry_node.node_content)
     {
       char *normalized;
-      ELEMENT *tmp = new_element (ET_NONE);
+      ELEMENT *tmp = new_element (ET_generic_container);
       add_extra_integer_list (menu_entry_node, AI_key_node_content,
                               parsed_entry_node.node_content);
       insert_slice_into_contents (tmp, 0, menu_entry_node,
@@ -3214,7 +3214,7 @@ new_complete_node_menu (const NODE_RELATIONS *node_relations,
                       const ELEMENT *part_line_arg
                         = part_arguments_line->e.c->contents.list[0];
                       ELEMENT *part_title_copy
-                       = copy_contents (part_line_arg, 0, ET_NONE);
+                       = copy_contents (part_line_arg, 0, ET_generic_container);
                       NAMED_STRING_ELEMENT_LIST *substrings
                                        = new_named_string_element_list ();
                       ELEMENT *part_title;
@@ -3402,7 +3402,8 @@ print_down_menus (const ELEMENT *node, CONST_ELEMENT_LIST *up_nodes,
           node_name_element = arguments_line->e.c->contents.list[0];
         }
 
-      node_title_copy = copy_contents (node_name_element, 0, ET_NONE);
+      node_title_copy
+        = copy_contents (node_name_element, 0, ET_generic_container);
 
       insert_menu_comment_content (master_menu_contents,
                                    0, node_title_copy, 0);

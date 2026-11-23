@@ -449,7 +449,7 @@ convert_def_line (const ELEMENT *element, TEXT_OPTIONS *text_options,
                                  text_options->DEBUG, 0);
   if (parsed_definition_category)
     {
-      ELEMENT *converted_element = new_element (ET_NONE);
+      ELEMENT *converted_element = new_element (ET_generic_container);
       ELEMENT *text_colon = new_text_element (ET_normal_text);
       ELEMENT *text_eol = new_text_element (ET_normal_text);
       ELEMENT *type_text_space = 0;

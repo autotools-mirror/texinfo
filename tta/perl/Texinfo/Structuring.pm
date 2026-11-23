@@ -144,11 +144,11 @@ sub _associate_internal_references($) {
     if (exists($label_element->{'extra'})
         and exists($label_element->{'extra'}->{'node_content'})) {
       my ($begin, $end) = @{$label_element->{'extra'}->{'node_content'}};
-      my $node_content = {'contents'
-            => [@{$label_element->{'contents'}}[$begin .. $end]]};
+      my $tmp = Texinfo::TreeElement::new({'type' => 'generic_container',
+          'contents' => [@{$label_element->{'contents'}}[$begin .. $end]]});
       my $normalized =
         Texinfo::Convert::NodeNameNormalization::convert_to_node_identifier(
-                              $node_content);
+                              $tmp);
       $label_element->{'extra'}->{'normalized'} = $normalized
         if (defined($normalized) and $normalized ne '');
     }
@@ -314,11 +314,12 @@ sub new_node_menu_entry($;$) {
 
     if (exists($menu_entry_node->{'extra'}->{'node_content'})) {
       my ($begin, $end) = @{$menu_entry_node->{'extra'}->{'node_content'}};
-      my $node_content = {'contents'
-          => [@{$menu_entry_node->{'contents'}}[$begin .. $end]]};
+      my $tmp
+       = Texinfo::TreeElement::new({'type' => 'generic_container',
+        'contents' => [@{$menu_entry_node->{'contents'}}[$begin .. $end]]});
       $menu_entry_node->{'extra'}->{'normalized'}
       = Texinfo::Convert::NodeNameNormalization::convert_to_node_identifier(
-             $node_content);
+             $tmp);
     }
   }
 
@@ -443,7 +444,8 @@ sub new_complete_node_menu($;$$$) {
             = $associated_part->{'element'}->{'contents'}->[0];
           my $part_line_arg = $part_arguments_line->{'contents'}->[0];
           my $part_title_copy
-            = Texinfo::ManipulateTree::copy_contents($part_line_arg);
+            = Texinfo::ManipulateTree::copy_contents($part_line_arg,
+                                                     'generic_container');
           my $part_title
            = Texinfo::Translations::gdt('Part: {part_title}',
                                         $lang_translations,
@@ -670,7 +672,8 @@ sub _print_down_menus($$$$$$;$) {
     }
 
     my $node_title_copy
-      = Texinfo::ManipulateTree::copy_contents($node_name_element);
+      = Texinfo::ManipulateTree::copy_contents($node_name_element,
+                                               'generic_container');
 
     _insert_menu_comment_content(\@master_menu_contents, 0,
                                  $node_title_copy, 0);

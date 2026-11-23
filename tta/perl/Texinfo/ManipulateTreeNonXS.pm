@@ -536,8 +536,8 @@ sub _new_node($$;$$) {
 
     $normalized
        = Texinfo::Convert::NodeNameNormalization::convert_to_node_identifier(
-           Texinfo::TreeElement::new(
-                       { 'contents' => $node_line_arg->{'contents'} }));
+           Texinfo::TreeElement::new({'type' => 'generic_container',
+                            'contents' => $node_line_arg->{'contents'} }));
     if (!$appended_number) {
       $normalized_reference = $normalized;
     }
@@ -658,13 +658,14 @@ sub insert_nodes_for_sectioning_commands($;$) {
       my $new_node_tree;
       if ($content->{'cmdname'} eq 'top') {
         $new_node_tree
-         = Texinfo::TreeElement::new({'contents' => [
+         = Texinfo::TreeElement::new({'type' => 'generic_container',
+                                      'contents' => [
                       Texinfo::TreeElement::new({'text' => 'Top',
                                                  'type' => 'normal_text'})]});
       } else {
         my $arguments_line = $content->{'contents'}->[0];
         my $line_arg = $arguments_line->{'contents'}->[0];
-        $new_node_tree = copy_contents($line_arg);
+        $new_node_tree = copy_contents($line_arg, 'generic_container');
       }
       my $normalized =
        Texinfo::Convert::NodeNameNormalization::convert_to_node_identifier(

@@ -150,12 +150,12 @@ $result_tree_text{'various_added_nodes_and_refs'} = '*document_root C19
    *line_arg C7
     {spaces_before_argument: }
     {normal_text:changed }
-    * C1
+    *generic_container C1
      *normal_command@code C1
       *brace_container C1
        {normal_text:node}
     {normal_text: and (}
-    * C1
+    *generic_container C1
      *normal_command@samp C1
       *brace_container C1
        {normal_text:file}

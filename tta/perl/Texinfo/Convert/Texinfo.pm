@@ -132,7 +132,8 @@ sub check_node_same_texinfo_code($$) {
       my $contents = [@{$node_content->{'contents'}}];
       pop @$contents;
       $contents_node
-        = Texinfo::TreeElement::new({'contents' => $contents});
+        = Texinfo::TreeElement::new({'type' => 'generic_container',
+                                     'contents' => $contents});
     }
     $node_texi = convert_contents_to_texinfo($contents_node);
     $node_texi =~ s/\s+/ /g;
