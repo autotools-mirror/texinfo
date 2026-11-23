@@ -368,7 +368,6 @@ t/results/coverage/punctuation_in_line_commands.pl
 t/results/coverage/quotation_author.pl
 t/results/coverage/raggedright.pl
 t/results/coverage/setfilename_in_paragraph.pl
-t/results/coverage/spaces_after_braced_command.pl
 t/results/coverage/spaces_no_brace_after_braced_command.pl
 t/results/coverage/spaces_unknown_command_after_braced_command.pl
 t/results/coverage/symbol_after_block.pl
@@ -446,6 +445,7 @@ t/results/coverage_braces/space_command_in_image.pl
 t/results/coverage_braces/space_in_anchor.pl
 t/results/coverage_braces/space_in_footnote.pl
 t/results/coverage_braces/space_in_image.pl
+t/results/coverage_braces/spaces_after_braced_command.pl
 t/results/coverage_braces/strong_no_braces.pl
 t/results/coverage_braces/test_image.pl
 t/results/coverage_braces/test_w.pl

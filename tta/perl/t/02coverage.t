@@ -616,24 +616,6 @@ In float with caption.
 ['at_after_accent_command',
 '@ringaccent @@. @^@@.
 '],
-# FIXME move to coverage_brace
-['spaces_after_braced_command',
-'@code {b}
-
-@samp
-{v}
-
-@AA
- {}
-
-@email
-{a, b 
- }
-
-@TeX
-
-{}
-'],
 ['setfilename_in_paragraph',
 'Some text
 @setfilename setfilename_in_paragraph.info

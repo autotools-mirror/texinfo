@@ -114,6 +114,23 @@ my @test_cases = (
 @printindex cp
 
 @cindex aa @seeentry'],
+['spaces_after_braced_command',
+'@code {b}
+
+@samp
+{v}
+
+@AA
+ {}
+
+@email
+{a, b 
+ }
+
+@TeX
+
+{}
+'],
 ['verb_in_xref',
 '@anchor{point}
 
