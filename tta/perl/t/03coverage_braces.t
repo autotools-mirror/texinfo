@@ -330,6 +330,11 @@ Text @w{@ref{Top, cross in w} text}.
 in quotation
 @end quotation
 '],
+['definfoenclose_space_before_brace',
+'@definfoenclose phoo,;,!
+
+@phoo {h}
+']
 );
 
 my @test_invalid = (

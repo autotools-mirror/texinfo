@@ -7654,7 +7654,7 @@ sub _process_remaining_on_line($$$$) {
 
     # Note that non ascii spaces do not count as spaces
     if ($line =~ /^(\s+)/
-        and ($brace_commands{$current->{'cmdname'}} eq 'accent'
+        and ($self->{'brace_commands'}->{$current->{'cmdname'}} eq 'accent'
              or $self->{'conf'}->{'IGNORE_SPACE_AFTER_BRACED_COMMAND_NAME'})) {
       my $added_space = $1;
       my $additional_newline;

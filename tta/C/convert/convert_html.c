@@ -1819,13 +1819,15 @@ html_convert_tree_append (CONVERTER *self, const ELEMENT *element,
       text_init (&content_formatted);
 
       if (type == ET_definfoenclose_command)
-        {/* FIXME looks wrong */
-          if (element->e.c->contents.number > 0)
+        {
+          CONST_ELEMENT_LIST *args = get_non_empty_brace_args (element);
+          if (args->number > 0 && args->list[0])
             {
-              html_convert_tree_append (self, element->e.c->contents.list[0],
+              html_convert_tree_append (self, args->list[0],
                                         &content_formatted,
                                         "DEFINFOENCLOSE_ARG");
             }
+          destroy_const_element_list (args);
         }
       else if (element->e.c->contents.number > 0
                && type != ET_untranslated_def_line_arg)

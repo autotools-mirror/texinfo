@@ -625,7 +625,8 @@ sub _convert($$) {
       $result = text_accents($element, $options->{'enabled_encoding'},
                              $options->{'set_case'});
       return $result;
-    } elsif (exists($Texinfo::Commands::brace_commands{$cmdname})) {
+    } elsif (exists($Texinfo::Commands::brace_commands{$cmdname})
+             or $element->{'type'} eq 'definfoenclose_command') {
       my $args = Texinfo::Common::get_non_empty_brace_args($element);
       if (!defined($args)) {
         return '';

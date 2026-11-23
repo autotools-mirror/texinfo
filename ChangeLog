@@ -1,5 +1,21 @@
 2026-11-23  Patrice Dumas  <pertusus@free.fr>
 
+	* tta/perl/Texinfo/ParserNonXS.pm (_process_remaining_on_line): use
+	dynamically set brace_commands.
+
+	* tta/C/convert/convert_html.c (html_convert_tree_append),
+	tta/perl/Texinfo/Convert/HTML.pm (_convert): call
+	get_non_empty_brace_args for definfoenclose command.
+
+	* tta/perl/Texinfo/Convert/Text.pm (_convert): handle definfoenclose
+	command together with brace commands.
+
+	* tta/perl/t/03coverage_braces.t (definfoenclose_space_before_brace),
+	tta/perl/t/test_files_generated_list.txt: test definfoenclose command
+	with a space before the opening brace.
+
+2026-11-23  Patrice Dumas  <pertusus@free.fr>
+
 	* tta/C/main/element_types.txt: add generic_container.
 
 	* tta/C/*/*.c, tta/perl/Texinfo/*.pm, tta/perl/Texinfo/Convert/*.pm,

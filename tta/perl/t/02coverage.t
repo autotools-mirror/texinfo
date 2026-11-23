@@ -616,6 +616,7 @@ In float with caption.
 ['at_after_accent_command',
 '@ringaccent @@. @^@@.
 '],
+# FIXME move to coverage_brace
 ['spaces_after_braced_command',
 '@code {b}
 

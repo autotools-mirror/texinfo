@@ -8957,9 +8957,9 @@ sub _convert($$;$) {
 
     my $content_formatted = '';
     if ($type_name eq 'definfoenclose_command') {
-      if (exists($element->{'contents'})) {
-        # FIXME looks wrong
-        $content_formatted = _convert($self, $element->{'contents'}->[0],
+      my $args = Texinfo::Common::get_non_empty_brace_args($element);
+      if (defined($args) and defined($args->[0])) {
+        $content_formatted = _convert($self, $args->[0],
                                              "DEFINFOENCLOSE_ARG");
       }
     } elsif (exists($element->{'contents'})

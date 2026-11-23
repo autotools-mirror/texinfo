@@ -396,6 +396,7 @@ t/results/coverage_braces/command_in_dotless.pl
 t/results/coverage_braces/contain_plain_text_nestings.pl
 t/results/coverage_braces/definfoenclose_bad_argument.pl
 t/results/coverage_braces/definfoenclose_no_braces.pl
+t/results/coverage_braces/definfoenclose_space_before_brace.pl
 t/results/coverage_braces/definfoenclose_texinfo_commands.pl
 t/results/coverage_braces/email_no_braces.pl
 t/results/coverage_braces/email_possibilities.pl
