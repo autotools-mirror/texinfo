@@ -78,7 +78,7 @@ ELEMENT *modify_tree (ELEMENT *tree,
  ELEMENT_LIST *(*operation)(const char *type, ELEMENT *element, void *argument),
                       void *argument);
 
-ELEMENT *new_asis_command_with_text (const char *text, ELEMENT *parent,
+ELEMENT *new_asis_command_with_text (const char *text, const ELEMENT *parent,
                                      enum element_type type);
 
 ELEMENT *protect_colon_in_tree (ELEMENT *tree);

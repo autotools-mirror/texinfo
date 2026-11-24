@@ -1,5 +1,26 @@
 2026-11-24  Patrice Dumas  <pertusus@free.fr>
 
+	* tta/C/convert/convert_to_plaintext.c (plaintext_convert_node_name):
+	use a variable for the external node case as a new element is setup.
+
+	* tta/C/main/utils.c (get_label_element),
+	tta/C/structuring_transfo/transformations.c
+	(protect_first_parenthesis_in_targets_internal): have
+	get_label_element return const.
+
+	* tta/C/main/utils.c (get_label_element), tta/perl/Texinfo/Common.pm
+	(get_label_element): use get_non_empty_brace_args for anchor.  Report
+	from Bruno Haible on segfault for info-stdn.
+
+	* tta/C/main/manipulate_tree.c (new_asis_command_with_text): make
+	argument const.
+
+	* tta/perl/t/test_files_generated_list.txt,
+	tta/perl/t/40moresectioning.t (space_before_anchor_braces): new
+	minimal case test based on info-stdn segfault.
+
+2026-11-24  Patrice Dumas  <pertusus@free.fr>
+
 	* tta/perl/Texinfo/Convert/DocBook.pm,
 	tta/perl/Texinfo/Convert/LaTeX.pm, tta/perl/Texinfo/Convert/Text.pm:
 	type is always set now, remove unneeded conditions.

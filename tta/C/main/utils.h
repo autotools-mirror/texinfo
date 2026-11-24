@@ -178,7 +178,7 @@ char *normalize_encoding_name (const char *text, int *possible_encoding);
 ELEMENT *new_element_from_names (const char *type_name,
                                  const char *command_name);
 ELEMENT *item_line_parent (ELEMENT *current);
-ELEMENT *get_label_element (const ELEMENT *e);
+const ELEMENT *get_label_element (const ELEMENT *e);
 char *normalize_top_node_name (char *node_name);
 void normalize_top_node_name_text (TEXT *node_name);
 int empty_spaces_argument (const ELEMENT *element);

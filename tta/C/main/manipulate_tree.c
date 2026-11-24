@@ -1823,14 +1823,15 @@ modify_tree (ELEMENT *tree,
 }
 
 ELEMENT *
-new_asis_command_with_text (const char *text, ELEMENT *parent,
+new_asis_command_with_text (const char *text, const ELEMENT *parent,
                             enum element_type type)
 {
   ELEMENT *new_command = new_command_element (CM_asis);
   ELEMENT *brace_container = new_element (ET_brace_container);
   ELEMENT *text_elt = new_text_element (type);
+  /* cast to drop const; the parent is not actually modified */
   if (parent)
-    new_command->e.c->parent = parent;
+    new_command->e.c->parent = (ELEMENT *)parent;
   add_to_element_contents (new_command, brace_container);
   text_append (text_elt->e.text, text);
   add_to_contents_as_array (brace_container, text_elt);

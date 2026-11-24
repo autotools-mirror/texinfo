@@ -1433,20 +1433,23 @@ plaintext_convert_node_name (CONVERTER *self, const ELEMENT *element,
                              STRING_WITH_WIDTH *string_result)
 {
   PLAINTEXT_CONVERTER_STATE *self_plaintext = self->plaintext_converter;
-  ELEMENT *label_element = get_label_element (element);
-  ELEMENT *node_text;
+  const ELEMENT *label_element = get_label_element (element);
+  ELEMENT *node_text = new_element (ET__code);
   ELEMENT *heading_copy = 0;
   TEXT result;
+  ELEMENT *node_content_e = 0;
 
   if (!label_element)
     {
       /* external node */
       const INTEGER_LIST *node_content
          = lookup_extra_integer_list (element, AI_key_node_content);
-      label_element = new_element (ET_generic_container);
-      insert_slice_into_contents (label_element, 0, element,
+      node_content_e = new_element (ET_generic_container);
+      insert_slice_into_contents (node_content_e, 0, element,
                                   node_content->list[0],
                                   node_content->list[1] +1);
+
+      add_to_contents_as_array (node_text, node_content_e);
     }
   else if (command_data[element->e.c->cmd].flags & CF_sectioning_heading)
     {
@@ -1458,13 +1461,13 @@ plaintext_convert_node_name (CONVERTER *self, const ELEMENT *element,
     to be consistent with @node and similar.
      */
       heading_copy = copy_contents (label_element, 0, ET_generic_container);
-      label_element = reference_to_arg_in_tree (heading_copy,
-                                                self->document);
+      ELEMENT *target_e = reference_to_arg_in_tree (heading_copy,
+                                                    self->document);
+      add_to_contents_as_array (node_text, target_e);
     }
-
-  node_text = new_element (ET__code);
+  else
   /* cast to drop const */
-  add_to_contents_as_array (node_text, label_element);
+    add_to_contents_as_array (node_text, (ELEMENT *)label_element);
 
   if (!node_names_formatter)
     {
@@ -1487,6 +1490,9 @@ plaintext_convert_node_name (CONVERTER *self, const ELEMENT *element,
 
   para_end_line ();
   para_end ();
+
+  if (node_content_e)
+    destroy_element (node_content_e);
   if (heading_copy)
     destroy_element_and_children (node_text);
   else

@@ -34,6 +34,7 @@
 /* get_label_element and collapse_spaces */
 #include "utils.h"
 #include "debug.h"
+/* #include "manipulate_tree.h" */
 #include "convert_to_texinfo.h"
 
 

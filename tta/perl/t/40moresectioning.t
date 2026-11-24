@@ -399,6 +399,12 @@ Ref to footnote anchor
   {'TOP_NODE_UP' => '@acronym{GNU, @acronym{GNU}\'s Not Unix} manuals',
    'TOP_NODE_UP_URL' => 'https://www.gnu.org/manual/'}
 ],
+# here because what is also tested is the internal references association
+['space_before_anchor_braces',
+'@anchor {point}
+
+@ref{point}
+'],
 );
 
 

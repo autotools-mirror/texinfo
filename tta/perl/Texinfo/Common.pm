@@ -2233,10 +2233,12 @@ sub get_label_element($) {
   if (exists($Texinfo::Commands::root_commands{$current->{'cmdname'}})) {
     # first content of arguments_line type element
     return $current->{'contents'}->[0]->{'contents'}->[0];
-  } elsif (($current->{'cmdname'} eq 'anchor'
-            or $current->{'cmdname'} eq 'namedanchor')
-           and exists($current->{'contents'})) {
-    return $current->{'contents'}->[0];
+  } elsif ($current->{'cmdname'} eq 'anchor'
+           or $current->{'cmdname'} eq 'namedanchor') {
+    my $args = get_non_empty_brace_args($current);
+    if ($args and defined($args->[0])) {
+      return $args->[0];
+    }
   } elsif ($current->{'cmdname'} eq 'float'
            and scalar(@{$current->{'contents'}->[0]->{'contents'}}) >= 2) {
     # second content of arguments_line, ie second argument on line

@@ -1149,15 +1149,21 @@ item_line_parent (ELEMENT *current)
 /* ALTIMP perl/Texinfo/Common.pm */
 /* The caller should take care not to call get_label_element on a text
    element */
-ELEMENT *
+const ELEMENT *
 get_label_element (const ELEMENT *e)
 {
   if (command_data[e->e.c->cmd].flags & CF_root)
     /* first content of arguments_line type element */
     return e->e.c->contents.list[0]->e.c->contents.list[0];
-  else if ((e->e.c->cmd == CM_anchor || e->e.c->cmd == CM_namedanchor)
-           && e->e.c->contents.number > 0)
-    return e->e.c->contents.list[0];
+  else if (e->e.c->cmd == CM_anchor || e->e.c->cmd == CM_namedanchor)
+    {
+      CONST_ELEMENT_LIST *args = get_non_empty_brace_args (e);
+      const ELEMENT *result = 0;
+      if (args->number > 0 && args->list[0])
+        result = args->list[0];
+      destroy_const_element_list (args);
+      return result;
+    }
   else if (e->e.c->cmd == CM_float
            && e->e.c->contents.list[0]->e.c->contents.number >= 2)
     /* second content of arguments_line, ie second argument on line */
