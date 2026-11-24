@@ -821,7 +821,7 @@ sub command_text($$;$) {
       # element is never directly an @-command.  It can be an @-command
       # argument, in a menu, or a reconstituted tree.
       $context_str .= '@'.$command->{'cmdname'};
-    } elsif (exists($command->{'type'})) {
+    } else {
       $context_str .= $command->{'type'};
     }
 
@@ -915,8 +915,7 @@ sub _html_get_tree_root_element($$;$) {
 
   my ($output_unit, $root_command);
   while (1) {
-    if (exists($current->{'type'})
-       and $current->{'type'} eq 'special_unit_element') {
+    if ($current->{'type'} eq 'special_unit_element') {
       return ($current->{'associated_unit'}, $current);
     }
     if (exists($current->{'cmdname'})) {
@@ -4426,7 +4425,6 @@ sub _convert_item_command($$$$$) {
       return '';
     }
   } elsif (exists($command->{'contents'})
-           and exists($command->{'contents'}->[0]->{'type'})
            and $command->{'contents'}->[0]->{'type'} eq 'line_arg') {
     if (!Texinfo::Common::empty_spaces_argument($command->{'contents'}->[0])) {
 
@@ -4470,8 +4468,7 @@ sub _convert_item_command($$$$$) {
     } else {
       return '';
     }
-  } elsif ($command->{'parent'}->{'type'}
-           and $command->{'parent'}->{'type'} eq 'row') {
+  } elsif ($command->{'parent'}->{'type'} eq 'row') {
     return &{$self->command_conversion('tab')}($self, $cmdname, $command,
                                                            $args, $content);
   }
@@ -5810,8 +5807,7 @@ sub _convert_preformatted_type($$$$) {
   # menu_entry_description is always in a preformatted container
   # in the tree, as the whole menu is meant to be an
   # environment where spaces and newlines are preserved.
-  if (exists($element->{'parent'}->{'type'})
-      and $element->{'parent'}->{'type'} eq 'menu_entry_description') {
+  if ($element->{'parent'}->{'type'} eq 'menu_entry_description') {
     if (!inside_preformatted($self)) {
       # If not in preformatted block command,
       # we don't preserve spaces and newlines in menu_entry_description,
@@ -7416,7 +7412,7 @@ sub _file_header_information($$;$) {
       my $context_str = 'file_header_title-element-';
       if (exists($command->{'cmdname'})) {
         $context_str .= '@'.$command->{'cmdname'};
-      } elsif (exists($command->{'type'})) {
+      } else {
         $context_str .= $command->{'type'};
       }
       # NOTE 'element_title' is not unique although this could be called
@@ -8672,9 +8668,7 @@ sub _convert($$;$) {
   if (exists($element->{'cmdname'})) {
     $command_type = "\@$element->{'cmdname'} ";
   }
-  if (exists($element->{'type'})) {
-    $command_type .= $element->{'type'};
-  }
+  $command_type .= $element->{'type'};
 
   # cache return value of get_conf for speed
   my $debug = $self->get_conf('DEBUG');
@@ -8694,8 +8688,7 @@ sub _convert($$;$) {
 
   # Process text
   if (exists($element->{'text'})) {
-    if (exists($element->{'type'})
-        and exists($self->{'types_conversion'}->{$element->{'type'}})
+    if (exists($self->{'types_conversion'}->{$element->{'type'}})
         and !defined($self->{'types_conversion'}->{$element->{'type'}})) {
       if ($debug) {
         print STDERR "IGNORE TEXT $command_type\n";
@@ -8704,7 +8697,7 @@ sub _convert($$;$) {
     }
     my $result;
     # already converted to html, keep it as is
-    if (exists($element->{'type'}) and $element->{'type'} eq '_converted') {
+    if ($element->{'type'} eq '_converted') {
       $result = $element->{'text'};
     } else {
       $result = &{$self->{'types_conversion'}->{'text'}} ($self,
@@ -8738,7 +8731,6 @@ sub _convert($$;$) {
     my $data_command_name;
     if ($command_name eq 'item'
         and exists($element->{'contents'})
-        and exists($element->{'contents'}->[0]->{'type'})
         and $element->{'contents'}->[0]->{'type'} eq 'line_arg') {
       $data_command_name = 'item_LINE';
     } else {
@@ -8786,15 +8778,13 @@ sub _convert($$;$) {
               and $line_commands{$command_name} eq 'line')
           or (($command_name eq 'item' or $command_name eq 'itemx')
               and exists($element->{'contents'})
-              and exists($element->{'contents'}->[0]->{'type'})
               and $element->{'contents'}->[0]->{'type'} eq 'line_arg')
           or ($command_name eq 'quotation'
               or $command_name eq 'smallquotation')
           or $command_name eq 'float'
           or $command_name eq 'cartouche') {
         my $arguments_list;
-        if (exists($element->{'contents'}->[0]->{'type'})
-            and $element->{'contents'}->[0]->{'type'} eq 'arguments_line') {
+        if ($element->{'contents'}->[0]->{'type'} eq 'arguments_line') {
           $arguments_list = $element->{'contents'}->[0]->{'contents'};
         } else {
           $arguments_list = $element->{'contents'};
@@ -8807,8 +8797,7 @@ sub _convert($$;$) {
         my $spec_nr = scalar(@args_specification);
         my $arg_idx = -1;
         foreach my $arg (@{$arguments_list}) {
-          if (exists($arg->{'type'})
-              and $arg->{'type'} eq 'spaces_after_cmd_before_arg') {
+          if ($arg->{'type'} eq 'spaces_after_cmd_before_arg') {
             next;
           }
           $arg_idx++;

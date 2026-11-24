@@ -1,5 +1,11 @@
 2026-11-24  Patrice Dumas  <pertusus@free.fr>
 
+	* tta/perl/Texinfo/Convert/HTML.pm,
+	tta/perl/Texinfo/Convert/HTMLNonXS.pm: remove conditions on type being
+	defined now that all elements have a type.
+
+2026-11-24  Patrice Dumas  <pertusus@free.fr>
+
 	* tta/C/convert/convert_html.c (html_convert_tree_append),
 	tta/perl/Texinfo/Convert/HTML.pm (_convert): remove an impossible
 	condition now that all elements have a type.

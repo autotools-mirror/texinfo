@@ -905,8 +905,7 @@ sub _internal_command_tree($$$) {
     if (!exists($target->{'tree'})) {
       my $tree;
       my $in_code;
-      if (exists($command->{'type'})
-          and $command->{'type'} eq 'special_unit_element') {
+      if ($command->{'type'} eq 'special_unit_element') {
         my $special_unit_variety
            = $command->{'associated_unit'}->{'special_unit_variety'};
         $tree
@@ -1175,8 +1174,7 @@ sub command_description($$;$) {
       return $target->{$cached_type};
     }
 
-    if ((exists($command->{'type'})
-         and $command->{'type'} eq 'special_unit_element')
+    if ($command->{'type'} eq 'special_unit_element'
         or (exists($command->{'cmdname'})
             and ($command->{'cmdname'} eq 'anchor'
                  or $command->{'cmdname'} eq 'namedanchor'
@@ -4650,8 +4648,7 @@ sub _prepare_converted_output_info($$$$) {
     if (exists($documentinfo->{'contents'})) {
       my $metadata_in_documentinfo = '';
       foreach my $element (@{$documentinfo->{'contents'}}) {
-        if ((exists($element->{'type'})
-             and $element->{'type'} eq 'arguments_line'
+        if ($element->{'type'} eq 'arguments_line'
             or (exists($element->{'cmdname'})
                 and (exists(
         $Texinfo::Commands::metadata_commands{$element->{'cmdname'}})
@@ -4660,7 +4657,7 @@ sub _prepare_converted_output_info($$$$) {
     # container.  This allows to have EPUB metadata even without a specific
     # @epub raw format command.
                      or ($element->{'cmdname'} eq 'html'
-                         and $self->is_format_expanded('epub')))))) {
+                         and $self->is_format_expanded('epub'))))) {
           next;
         }
         $metadata_in_documentinfo
