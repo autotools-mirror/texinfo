@@ -1,5 +1,9 @@
 2026-11-24  Patrice Dumas  <pertusus@free.fr>
 
+	* tta/C/main/types_data.h: remove TF_c_only.
+
+2026-11-24  Patrice Dumas  <pertusus@free.fr>
+
 	* tta/C/convert/convert_to_plaintext.c (plaintext_convert_node_name):
 	use a variable for the external node case as a new element is setup.
 
