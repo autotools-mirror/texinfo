@@ -1137,8 +1137,8 @@ html_converter_get_customization_sv (SV *converter_sv,
   for (i = 0; i < TXI_TREE_TYPES_NUMBER; i++)
     {
       const char *ref_name;
-      if (i == 0)
-        ref_name = "";
+      if (i == ET_NONE)
+        continue;
       else
         ref_name = type_data[i].name;
       FORMATTING_REFERENCE *open_formatting_reference

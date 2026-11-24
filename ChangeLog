@@ -1,5 +1,18 @@
 2026-11-24  Patrice Dumas  <pertusus@free.fr>
 
+	* tta/C/convert/convert_html.c (html_convert_tree_append),
+	tta/perl/Texinfo/Convert/HTML.pm (_convert): remove an impossible
+	condition now that all elements have a type.
+
+	* tta/perl/XSTexinfo/convert/get_html_perl_info.c
+	(html_converter_get_customization_sv): skip ET_NONE instead of mapping
+	to the empty string as name.
+
+	* tta/C/convert/convert_html.c (html_convert_tree_append): remove an
+	impossible condition.
+
+2026-11-24  Patrice Dumas  <pertusus@free.fr>
+
 	* tta/C/main/types_data.h: remove TF_c_only.
 
 2026-11-24  Patrice Dumas  <pertusus@free.fr>

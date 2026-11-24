@@ -8716,12 +8716,11 @@ sub _convert($$;$) {
     return $result;
   }
 
-  if ((exists($element->{'type'})
-        and exists($self->{'types_conversion'}->{$element->{'type'}})
-        and !defined($self->{'types_conversion'}->{$element->{'type'}}))
-       or (exists($element->{'cmdname'})
-            and exists($self->{'commands_conversion'}->{$element->{'cmdname'}})
-            and !defined($self->{'commands_conversion'}->{$element->{'cmdname'}}))) {
+  if ((exists($self->{'types_conversion'}->{$element->{'type'}})
+       and !defined($self->{'types_conversion'}->{$element->{'type'}}))
+      or (exists($element->{'cmdname'})
+          and exists($self->{'commands_conversion'}->{$element->{'cmdname'}})
+          and !defined($self->{'commands_conversion'}->{$element->{'cmdname'}}))) {
     if ($debug) {
       print STDERR "IGNORED $command_type\n";
     }
@@ -8961,7 +8960,6 @@ sub _convert($$;$) {
       }
     } elsif (exists($element->{'contents'})
              and $type_name ne 'untranslated_def_line_arg') {
-      # for generic_container...
       my $content_idx = 0;
       foreach my $content (@{$element->{'contents'}}) {
         $content_formatted
@@ -8978,6 +8976,8 @@ sub _convert($$;$) {
                                                  $element,
                                                  $content_formatted);
     } else {
+      # containers without conversion function such as generic_container
+      # are processed here
       $result .= $content_formatted;
     }
     print STDERR "DO type ($type_name) => `$result'\n" if $debug;

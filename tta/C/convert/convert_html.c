@@ -1381,7 +1381,6 @@ html_convert_tree_append (CONVERTER *self, const ELEMENT *element,
   if (type_data[element->type].flags & TF_text)
     {
       TEXT text_result;
-      /* NOTE C only text types cannot be ignored here */
       if (self_html->current_types_conversion_function[element->type].status
                                                      == FRS_status_ignored)
         {
@@ -1420,10 +1419,9 @@ html_convert_tree_append (CONVERTER *self, const ELEMENT *element,
     }
 
   /* ignored if ignored both as type and command */
-  if ((element->type
-       && (element->type == ET_normal_command
+  if ((element->type == ET_normal_command
            || self_html->current_types_conversion_function[element->type].status
-                                                     == FRS_status_ignored))
+                                                     == FRS_status_ignored)
       && (!cmd
           || self_html->current_commands_conversion_function[cmd].status
                                                      == FRS_status_ignored))
@@ -1831,7 +1829,6 @@ html_convert_tree_append (CONVERTER *self, const ELEMENT *element,
         }
       else if (element->e.c->contents.number > 0
                && type != ET_untranslated_def_line_arg)
-        /* generic_container... */
         {
           size_t content_idx;
           text_append (&content_formatted, "");
@@ -1851,20 +1848,13 @@ html_convert_tree_append (CONVERTER *self, const ELEMENT *element,
       html_convert_type_update_context (self, type);
 
       if (self_html->current_types_conversion_function[type].type_conversion)
-        {/* FIXME it is the same condition, remove */
-          if (!self_html->current_types_conversion_function[type].type_conversion)
-            {
-              char *message;
-              xasprintf (&message, "conversion for type %s is NULL",
-                         type_data[type].name);
-              fatal (message);
-              free (message);
-            }
+        {
           (*self_html->current_types_conversion_function[type].type_conversion)
                (self, type, element, content_formatted.text, &type_result);
         }
       else if (content_formatted.end > 0)
-        {
+        {/* containers without conversion function such as generic_container
+            are processed here */
           text_append (&type_result, content_formatted.text);
         }
       free (content_formatted.text);
