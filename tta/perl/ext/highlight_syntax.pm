@@ -279,7 +279,8 @@ sub _convert_element($$) {
   Texinfo::Convert::Text::set_options_code(
                            $self->{'convert_text_options'});
   my $text = Texinfo::Convert::Text::convert_to_text(
-                                {'contents' => \@contents},
+         Texinfo::TreeElement::new({'type' => 'generic_container',
+                                        'contents' => \@contents}),
                                 $self->{'convert_text_options'});
   Texinfo::Convert::Text::reset_options_code(
                                  $self->{'convert_text_options'});

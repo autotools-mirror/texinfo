@@ -566,11 +566,10 @@ sub conversion_output_begin($;$$) {
     if (exists($documentinfo->{'contents'})) {
       my $metadata_in_documentinfo = '';
       foreach my $element (@{$documentinfo->{'contents'}}) {
-        if ((exists($element->{'type'})
-             and $element->{'type'} eq 'arguments_line'
+        if ($element->{'type'} eq 'arguments_line'
             or (exists($element->{'cmdname'})
                 and exists(
-        $Texinfo::Commands::metadata_commands{$element->{'cmdname'}})))) {
+        $Texinfo::Commands::metadata_commands{$element->{'cmdname'}}))) {
           next;
         }
         $metadata_in_documentinfo .= $self->convert_tree($element);
@@ -883,6 +882,14 @@ sub _convert($$;$);
 sub _convert($$;$) {
   my ($self, $element) = @_;
 
+  #if (!defined($element)) {
+  #  confess('BUG: DocBook _convert: element UNDEF');
+  #  return '';
+  #}
+  #if (ref($element) ne 'Texinfo::TreeElement') {
+  #  confess('BUG: DocBook _convert: not an element: '.ref($element));
+  #}
+
   my $e_type = $element->{'type'};
 
   my $debug_element_nr;
@@ -892,7 +899,7 @@ sub _convert($$;$) {
     print STDERR "element $debug_element_nr";
     print STDERR " cmd: $element->{'cmdname'},"
       if (exists($element->{'cmdname'}));
-    print STDERR " type: $e_type" if (defined($e_type));
+    print STDERR " type: $e_type";
     if (exists($self->{'document_context'}->[-1]->{'preformatted_stack'})) {
       print STDERR " (".join('|',
        @{$self->{'document_context'}->[-1]->{'preformatted_stack'}}).")";
@@ -906,11 +913,10 @@ sub _convert($$;$) {
   }
 
   if (exists($element->{'text'})) {
-    return ''
-      if (defined($e_type) and $ignored_text_types{$e_type});
+    return '' if ($ignored_text_types{$e_type});
 
     my $text = $element->{'text'};
-    if (defined($e_type) and $e_type eq '_converted') {
+    if ($e_type eq '_converted') {
       return $text;
     } elsif ($self->{'document_context'}->[-1]->{'raw'}) {
       return $text;
@@ -925,7 +931,7 @@ sub _convert($$;$) {
       $result_text =~ s/ +/$nbsp/g;
     }
     $result_text = _protect_text($self, $result_text);
-    if (!(defined($e_type) and $e_type eq 'raw')
+    if ($e_type ne 'raw'
         and !$self->{'document_context'}->[-1]->{'monospace'}->[-1]) {
       $result_text
         = $self->xml_format_text_with_numeric_entities($result_text);
@@ -934,7 +940,7 @@ sub _convert($$;$) {
     return $result_text;
   }
 
-  return '' if (defined($e_type) and $ignored_types{$e_type});
+  return '' if ($ignored_types{$e_type});
   #warn " onto main conditional\n";
   my $result = '';
   my $cmdname;
@@ -991,7 +997,6 @@ sub _convert($$;$) {
         push @close_format_elements, 'listitem';
       } elsif (($cmdname eq 'item' or $cmdname eq 'itemx')
                and exists($element->{'contents'})
-               and exists($element->{'contents'}->[0]->{'type'})
                and $element->{'contents'}->[0]->{'type'} eq 'line_arg') {
         $result .= "<term>" if ($cmdname eq 'itemx');
         $result .= _index_entry($self, $element);
@@ -1010,7 +1015,6 @@ sub _convert($$;$) {
       } else {
         unless (($cmdname eq 'item' or $cmdname eq 'headitem'
                  or $cmdname eq 'tab')
-                and exists($element->{'parent'}->{'type'})
                 and $element->{'parent'}->{'type'} eq 'row') {
           warn "BUG: multitable cell command not in a row "
             .Texinfo::Common::debug_print_element($element, 1);
@@ -1018,8 +1022,7 @@ sub _convert($$;$) {
         $result .= "<entry>";
         push @close_format_elements, 'entry';
       }
-    } elsif (defined($e_type)
-             and $e_type eq 'index_entry_command') {
+    } elsif ($e_type eq 'index_entry_command') {
       my $end_line;
       if (exists($element->{'extra'})
           and exists($element->{'extra'}->{'index_entry'})) {
@@ -1279,8 +1282,7 @@ sub _convert($$;$) {
         # ignore all the other line commands
         return '';
       }
-    } elsif (defined($e_type)
-             and $e_type eq 'definfoenclose_command') {
+    } elsif ($e_type eq 'definfoenclose_command') {
       my $args = Texinfo::Common::get_non_empty_brace_args($element);
       if (defined($args) and defined($args->[0])) {
         my $arg_text = _convert($self, $args->[0]);
@@ -1831,8 +1833,7 @@ sub _convert($$;$) {
           if (exists($block_line_arg->{'contents'})) {
             $multiply = 1;
             foreach my $content (@{$block_line_arg->{'contents'}}) {
-              if (exists($content->{'type'})
-                  and $content->{'type'} eq 'bracketed_arg') {
+              if ($content->{'type'} eq 'bracketed_arg') {
                 my $prototype_text = '';
                 if (exists($content->{'contents'})) {
                   Texinfo::Convert::Text::set_options_encoding_if_not_ascii(
@@ -1932,34 +1933,31 @@ sub _convert($$;$) {
   #warn " end of cmdname\n";
 
 
-  if (defined($e_type)) {
+  if ($container_ignored_if_empty{$e_type}
+      and !exists($element->{'contents'})) {
+    return $result;
+  }
 
-    if ($container_ignored_if_empty{$e_type}
-        and !exists($element->{'contents'})) {
-      return $result;
+  #warn " have type $e_type\n";
+  if (exists($docbook_preformatted_formats{$e_type})) {
+    push @{$self->{'document_context'}->[-1]->{'preformatted_stack'}},
+       $docbook_preformatted_formats{$e_type};
+  }
+  if (defined($type_elements{$e_type})) {
+    $result .= "<$type_elements{$e_type}>";
+  } elsif ($e_type eq 'preformatted') {
+    $result .= "<$self->{'document_context'}->[-1]->{'preformatted_stack'}->[-1]>";
+    $self->{'document_context'}->[-1]->{'in_preformatted'} = 1;
+  } elsif ($e_type eq 'def_line') {
+    my $def_line_result = _convert_def_line($self, $element);
+    if (defined($def_line_result)) {
+      $result .= $def_line_result;
     }
-
-    #warn " have type $e_type\n";
-    if (exists($docbook_preformatted_formats{$e_type})) {
-      push @{$self->{'document_context'}->[-1]->{'preformatted_stack'}},
-         $docbook_preformatted_formats{$e_type};
-    }
-    if (defined($type_elements{$e_type})) {
-      $result .= "<$type_elements{$e_type}>";
-    } elsif ($e_type eq 'preformatted') {
-      $result .= "<$self->{'document_context'}->[-1]->{'preformatted_stack'}->[-1]>";
-      $self->{'document_context'}->[-1]->{'in_preformatted'} = 1;
-    } elsif ($e_type eq 'def_line') {
-      my $def_line_result = _convert_def_line($self, $element);
-      if (defined($def_line_result)) {
-        $result .= $def_line_result;
-      }
-      return $result;
-    } elsif ($e_type eq 'table_term') {
-      # should be closed by the @item.  Allows to have the index entries in
-      # term, which is better than out.
-      $result .= "<term>";
-    }
+    return $result;
+  } elsif ($e_type eq 'table_term') {
+    # should be closed by the @item.  Allows to have the index entries in
+    # term, which is better than out.
+    $result .= "<term>";
   }
 
   if (exists($element->{'contents'})) {
@@ -1978,7 +1976,6 @@ sub _convert($$;$) {
     if (defined($self->{'pending_prepend'})
         # not restricted enough, includes line_args, for instance
         #and Texinfo::Common::element_is_inline($element, 1)) {
-        and defined($e_type)
         and ($e_type eq 'paragraph'
              or $e_type eq 'preformatted')) {
       $result .= $self->{'pending_prepend'};
@@ -1995,13 +1992,11 @@ sub _convert($$;$) {
       if ($in_code);
   }
 
-  if (defined($e_type)) {
-    if (defined($type_elements{$e_type})) {
-      $result .= "</$type_elements{$e_type}>";
-    } elsif ($e_type eq 'preformatted') {
-      $result .= "</$self->{'document_context'}->[-1]->{'preformatted_stack'}->[-1]>";
-      delete $self->{'document_context'}->[-1]->{'in_preformatted'};
-    }
+  if (defined($type_elements{$e_type})) {
+    $result .= "</$type_elements{$e_type}>";
+  } elsif ($e_type eq 'preformatted') {
+    $result .= "</$self->{'document_context'}->[-1]->{'preformatted_stack'}->[-1]>";
+    delete $self->{'document_context'}->[-1]->{'in_preformatted'};
   }
 
   foreach my $format_element (@close_format_elements) {
@@ -2022,8 +2017,7 @@ sub _convert($$;$) {
       pop @{$self->{'document_context'}};
     }
 
-  } elsif (defined($e_type)
-           and exists($docbook_preformatted_formats{$e_type})) {
+  } elsif (exists($docbook_preformatted_formats{$e_type})) {
     my $format = pop @{$self->{'document_context'}->[-1]->{'preformatted_stack'}};
     die "BUG $format ne $docbook_preformatted_formats{$e_type}"
       if ($format ne $docbook_preformatted_formats{$e_type});
@@ -2066,11 +2060,11 @@ sub _convert($$;$) {
         pop @{$self->{'lang_stack'}};
       }
     }
-  } elsif (defined($e_type) and $e_type eq 'before_node_section'
+  } elsif ($e_type eq 'before_node_section'
            and !$self->get_conf('_DOCBOOK_PIECE')) {
     # ignore text before the first @node or sectioning command
     # as DocBook does not allow content not within some semantic
-    # markup, unless _DOCBOOK_PIECE is set to mean that a the output is not
+    # markup; unless _DOCBOOK_PIECE is set to mean that a the output is not
     # a full book.
     return '';
   }

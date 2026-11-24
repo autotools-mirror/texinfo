@@ -536,7 +536,6 @@ convert_to_text_internal (const ELEMENT *element, TEXT_OPTIONS *text_options,
           const char *p;
           char *cased = 0;
           char *text;
-          /* text type should always be set */
 
           if (text_options->set_case)
             {
@@ -1049,6 +1048,8 @@ convert_to_text_internal (const ELEMENT *element, TEXT_OPTIONS *text_options,
           free (spec);
         }
     }
+
+  /* containers */
   if (element->type == ET_def_line)
     {
       convert_def_line (element, text_options, result);

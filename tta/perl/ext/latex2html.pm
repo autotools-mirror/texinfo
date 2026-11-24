@@ -275,7 +275,8 @@ sub l2h_process($$) {
       if ($command eq 'math') {
         $tree = $element->{'contents'}->[0];
       } else {
-        $tree = {'contents' => [@{$element->{'contents'}}]};
+        $tree = Texinfo::TreeElement::new({'type' => 'generic_container',
+                                'contents' => [@{$element->{'contents'}}]});
         while (scalar(@{$tree->{'contents'}})
                and $tree->{'contents'}->[0]->{'type'}
                and ($tree->{'contents'}->[0]->{'type'} eq 'empty_line_after_command'

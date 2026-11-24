@@ -2082,6 +2082,7 @@ sub count_bytes($;$) {
 }
 
 # custom heading command line is split at @|
+# FIXME return a list instead of a pseudo tree element
 sub split_custom_heading_command_contents($) {
   my $element = shift;
 
@@ -2094,7 +2095,9 @@ sub split_custom_heading_command_contents($) {
   my $nr_split_contents = 0;
 
   my $result = {'contents' => []};
-  my $heading_element = {'contents' => []};
+  my $heading_element
+    = Texinfo::TreeElement::new({'type' => 'generic_container',
+                                 'contents' => []});
   push @{$result->{'contents'}}, $heading_element;
 
   for (my $i = 0; $i < $contents_nr; $i++) {
@@ -2104,7 +2107,9 @@ sub split_custom_heading_command_contents($) {
     if (exists($current_content->{'cmdname'})
         and $current_content->{'cmdname'} eq '|') {
       if ($nr_split_contents < 2) {
-        $heading_element = {'contents' => []};
+        $heading_element
+         = Texinfo::TreeElement::new({'type' => 'generic_container',
+                                      'contents' => []});
         push @{$result->{'contents'}}, $heading_element;
         $nr_split_contents++;
       }

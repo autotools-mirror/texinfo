@@ -506,6 +506,15 @@ sub _convert_def_line($$) {
 sub _convert($$) {
   my ($options, $element) = @_;
 
+  # can be uncommented from time to time to verify
+  #if (!defined($element)) {
+  #  confess('BUG: Text _convert: element UNDEF');
+  #  return '';
+  #}
+  #if (ref($element) ne 'Texinfo::TreeElement') {
+  #  confess('BUG: Text _convert: not an element: '.ref($element));
+  #}
+
   #print STDERR "E: c: ".(defined($options->{'_code_state'})
   #                         ? $options->{'_code_state'} : 'UNDEF')
   #   ." r: ".(defined($options->{'_raw_state'})
@@ -517,13 +526,11 @@ sub _convert($$) {
   }
 
   if (exists($element->{'text'})) {
-    if (exists($element->{'type'})
-         and $ignored_text_types{$element->{'type'}}) {
+    if ($ignored_text_types{$element->{'type'}}) {
       return '';
     }
     my $result = $element->{'text'};
-    if ((! exists($element->{'type'})
-         or $element->{'type'} ne 'raw')
+    if ($element->{'type'} ne 'raw'
         and !$options->{'_raw_state'}) {
       if ($options->{'set_case'}) {
         if ($options->{'set_case'} > 0) {
@@ -549,7 +556,6 @@ sub _convert($$) {
     $cmdname = $element->{'cmdname'};
     if ($cmdname eq 'item'
         and exists($element->{'contents'})
-        and exists($element->{'contents'}->[0]->{'type'})
         and $element->{'contents'}->[0]->{'type'} eq 'line_arg') {
       $data_cmdname = 'item_LINE';
     } elsif ($element->{'type'} eq 'definfoenclose_command') {
@@ -559,9 +565,8 @@ sub _convert($$) {
     }
   }
 
-  return '' if (!(exists($element->{'type'})
-                  and $element->{'type'} eq 'def_line')
-     and ((exists($element->{'type'}) and $ignored_types{$element->{'type'}})
+  return '' if (!($element->{'type'} eq 'def_line')
+     and ($ignored_types{$element->{'type'}}
           or (defined($cmdname)
              and (exists($ignored_brace_commands{$cmdname})
                  or exists($ignored_block_commands{$cmdname})
@@ -585,8 +590,7 @@ sub _convert($$) {
                                   or !defined($element->{'extra'}
                                                          ->{'expand_index'})))))
              # here ignore most of the line commands
-                 or (exists($element->{'type'})
-                     and $element->{'type'} eq 'index_entry_command')
+                 or ($element->{'type'} eq 'index_entry_command')
                  or (exists($line_commands{$data_cmdname})
                      and !exists($formatted_line_commands{$data_cmdname})
                      and !exists($def_commands{$data_cmdname})
@@ -824,43 +828,44 @@ sub _convert($$) {
       $result .= Texinfo::Common::enumerate_item_representation($element).'. ';
     }
   }
-  if (exists($element->{'type'})) {
-    if ($element->{'type'} eq 'def_line') {
-      $result = _convert_def_line($options, $element);
-      return $result;
-    } elsif ($element->{'type'} eq 'untranslated_def_line_arg') {
-      my $tree;
-      my $category_text = $element->{'contents'}->[0]->{'text'};
-      my $translation_context;
-      if (exists($element->{'extra'})
-          and defined($element->{'extra'}->{'translation_context'})) {
-        $translation_context = $element->{'extra'}->{'translation_context'};
-      }
 
-      if ($options and exists($options->{'current_lang_translations'})) {
-        # the tree documentlanguage corresponds to the documentlanguage
-        # at the place of the tree, but the caller may want to use
-        # another documentlanguage, for instance the documentlanguage at
-        # the end of the preamble, so we let the caller set it.
-        $tree = Texinfo::Translations::gdt($category_text,
-                               $options->{'current_lang_translations'}, undef,
-                               $translation_context, $options->{'DEBUG'});
-      } else {
-        # if there is no documentlanguage information, we use the
-        # documentlanguage available in the tree.
-        my $new_lang_translations
-          = Texinfo::Translations::new_element_language_translation(
-               $Texinfo::Translations::converters_translation_cache,
-               $element);
-
-        $tree = Texinfo::Translations::gdt($category_text,
-                             $new_lang_translations, undef,
-                             $translation_context, $options->{'DEBUG'});
-      }
-      $result = _convert($options, $tree);
-      return $result;
+  # containers
+  if ($element->{'type'} eq 'def_line') {
+    $result = _convert_def_line($options, $element);
+    return $result;
+  } elsif ($element->{'type'} eq 'untranslated_def_line_arg') {
+    my $tree;
+    my $category_text = $element->{'contents'}->[0]->{'text'};
+    my $translation_context;
+    if (exists($element->{'extra'})
+        and defined($element->{'extra'}->{'translation_context'})) {
+      $translation_context = $element->{'extra'}->{'translation_context'};
     }
+
+    if ($options and exists($options->{'current_lang_translations'})) {
+      # the tree documentlanguage corresponds to the documentlanguage
+      # at the place of the tree, but the caller may want to use
+      # another documentlanguage, for instance the documentlanguage at
+      # the end of the preamble, so we let the caller set it.
+      $tree = Texinfo::Translations::gdt($category_text,
+                             $options->{'current_lang_translations'}, undef,
+                             $translation_context, $options->{'DEBUG'});
+    } else {
+      # if there is no documentlanguage information, we use the
+      # documentlanguage available in the tree.
+      my $new_lang_translations
+        = Texinfo::Translations::new_element_language_translation(
+             $Texinfo::Translations::converters_translation_cache,
+             $element);
+
+      $tree = Texinfo::Translations::gdt($category_text,
+                           $new_lang_translations, undef,
+                           $translation_context, $options->{'DEBUG'});
+    }
+    $result = _convert($options, $tree);
+    return $result;
   }
+
   if (exists($element->{'contents'})) {
     my $in_code;
     my $in_raw;
@@ -869,7 +874,7 @@ sub _convert($$) {
               or exists($Texinfo::Commands::math_commands{$cmdname})
               or (exists($Texinfo::Commands::block_commands{$cmdname})
                   and $Texinfo::Commands::block_commands{$cmdname} eq 'raw')))
-         or ($element->{'type'} and $element->{'type'} eq 'menu_entry_node')) {
+         or $element->{'type'} eq 'menu_entry_node') {
       $in_code = 1;
     } elsif (defined($cmdname)
              and exists($Texinfo::Commands::block_commands{$cmdname})
@@ -887,10 +892,9 @@ sub _convert($$) {
     $options->{'_raw_state'}-- if ($in_raw);
     $options->{'_code_state'}-- if ($in_code);
   }
-  if (exists($element->{'type'}) and $element->{'type'} eq 'menu_entry'
-      and (!exists($element->{'parent'}->{'type'})
-           or ($element->{'parent'}->{'type'} ne 'preformatted'
-               and $element->{'parent'}->{'type'} ne 'rawpreformatted'))) {
+  if ($element->{'type'} eq 'menu_entry'
+      and ($element->{'parent'}->{'type'} ne 'preformatted'
+           and $element->{'parent'}->{'type'} ne 'rawpreformatted')) {
     chomp($result);
     $result .= "\n";
   }

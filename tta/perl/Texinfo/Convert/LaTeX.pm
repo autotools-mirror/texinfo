@@ -2118,7 +2118,9 @@ sub _begin_document($) {
     \\vglue\\titlepagetopglue\n";
       $self->{'titlepage_formatting'} = {'in_front_cover' => 1};
       _push_new_context($self, 'titlepage');
-      $result .= _convert($self, {'contents' => $element->{'contents'}});
+      $result .= _convert($self,
+         Texinfo::TreeElement::new({'type' => 'generic_container',
+                                    'contents' => $element->{'contents'}}));
       _pop_context($self);
       $result .= _finish_front_cover_page($self);
       $result .= "\\end{titlepage}\n";
@@ -3085,12 +3087,14 @@ sub _make_title($$) {
 
       if (exists($title_page_info->{'copying'})) {
         $result .= _convert($self,
-              {'contents' => $title_page_info->{'copying'}->{'contents'}});
+            Texinfo::TreeElement::new({'type' => 'generic_container',
+              'contents' => $title_page_info->{'copying'}->{'contents'}}));
       }
       if (exists($title_page_info->{'publication'})) {
         $result .= "\n";
         $result .= _convert($self,
-              {'contents' => $title_page_info->{'publication'}->{'contents'}});
+            Texinfo::TreeElement::new({'type' => 'generic_container',
+             'contents' => $title_page_info->{'publication'}->{'contents'}}));
       }
     }
     $result .= "\\end{titlepage}\n";
@@ -3135,6 +3139,15 @@ sub _convert($$);
 # Convert the Texinfo tree under $ELEMENT
 sub _convert($$) {
   my ($self, $element) = @_;
+
+  # can be uncommented from time to time to verify
+  #if (!defined($element)) {
+  #  confess('BUG: LaTeX _convert: element UNDEF');
+  #  return '';
+  #}
+  #if (ref($element) ne 'Texinfo::TreeElement') {
+  #  confess('BUG: LaTeX _convert: not an element: '.ref($element));
+  #}
 
   if ($self->{'debug'}) {
     print STDERR "CONVLTX "
@@ -3188,7 +3201,7 @@ sub _convert($$) {
   my $type = $element->{'type'};
   my $cmdname = $element->{'cmdname'};
 
-  if ((defined($type) and exists($self->{'ignored_types'}->{$type}))
+  if (exists($self->{'ignored_types'}->{$type})
        or (defined($cmdname)
             and (exists($self->{'ignored_commands'}->{$cmdname})
                  or (exists($Texinfo::Commands::brace_commands{$cmdname})
@@ -3222,7 +3235,7 @@ sub _convert($$) {
          and not (exists($node_element->{'extra'})
                   and exists($node_element->{'extra'}->{'identifier'})
                   and $node_element->{'extra'}->{'identifier'} eq 'Top'))
-         or (defined($type) and $type eq 'ignored_top_node_paragraph')
+         or $type eq 'ignored_top_node_paragraph'
         or (defined($cmdname) and $cmdname eq 'part')) {
       $self->{'formatting_context'}->[-1]->{'in_skipped_node_top'} = 0;
     } elsif (not ((defined($cmdname)
@@ -3231,13 +3244,13 @@ sub _convert($$) {
                         or $cmdname eq 'float'
                         or $cmdname eq 'anchor'
                         or $cmdname eq 'namedanchor'))
-                   or (defined($type) and $type eq 'paragraph'))) {
+                   or $type eq 'paragraph')) {
       return '';
     }
   }
 
   # in ignorable spaces, keep only form feeds.
-  if (defined($type) and exists($self->{'ignorable_space_types'}->{$type})) {
+  if (exists($self->{'ignorable_space_types'}->{$type})) {
     if ($type eq 'spaces_after_close_brace') {
       if ($element->{'text'} =~ /\f/) {
         $result = '\par{}';
@@ -3246,7 +3259,7 @@ sub _convert($$) {
     return $result;
   }
 
-  if (defined($type) and ($type eq 'empty_line')) {
+  if ($type eq 'empty_line') {
     if ($element->{'text'} =~ /\f/) {
       $result .= '\par{}';
     }
@@ -3387,12 +3400,10 @@ sub _convert($$) {
       return $result;
     # commands with braces
     } elsif (exists($Texinfo::Commands::brace_commands{$cmdname})
-             or (exists($element->{'type'})
-               and $element->{'type'} eq 'definfoenclose_command')) {
+             or $element->{'type'} eq 'definfoenclose_command') {
       my $args = Texinfo::Common::get_non_empty_brace_args($element);
       if (exists($LaTeX_style_brace_commands{'cmd_text'}->{$cmdname})
-           or (exists($element->{'type'})
-               and $element->{'type'} eq 'definfoenclose_command')) {
+           or $element->{'type'} eq 'definfoenclose_command') {
         my $did_stop_embrac = 0;
         ($result, $did_stop_embrac) = _stop_embrac($self, $result)
            if ($cmdname eq 'r');
@@ -3695,8 +3706,7 @@ sub _convert($$) {
               $result .= "\\url{$url_text}";
             }
           } elsif (scalar(@{$args}) == 2 and defined($args->[1])) {
-            unshift @{$self->{'current_contents'}->[-1]},
-                            {'contents' => $args->[1]->{'contents'}};
+            unshift @{$self->{'current_contents'}->[-1]}, $args->[1];
           }
         }
       } elsif ($cmdname eq 'footnote') {
@@ -3810,8 +3820,7 @@ sub _convert($$) {
                       }
                     }
                     last;
-                  } elsif ($current->{'type'}
-                           and $current->{'type'} eq 'before_node_section') {
+                  } elsif ($current->{'type'} eq 'before_node_section') {
                     # anchor before Top node, can be in copying, titlepage,
                     # or directly in the main document.
                     # Could also be before setfilename.
@@ -3878,8 +3887,7 @@ sub _convert($$) {
                                             $reference->{'contents'}->[1])) {
                   $name = $reference->{'contents'}->[1];
                 } elsif (defined($section_command)) {
-                  if (exists($section_command->{'contents'}->[0]->{'type'})
-                      and $section_command->{'contents'}->[0]->{'type'}
+                  if ($section_command->{'contents'}->[0]->{'type'}
                                                        eq 'arguments_line') {
                     my $arguments_line = $section_command->{'contents'}->[0];
                     $name = $arguments_line->{'contents'}->[0];
@@ -4182,8 +4190,8 @@ sub _convert($$) {
       } elsif ($cmdname eq 'value') {
         my $expansion = $self->cdt('@{No value for `{value}\'@}',
                                  {'value' => $args->[0]});
-        $expansion = {'type' => 'paragraph',
-                      'contents' => [$expansion]};
+        $expansion = Texinfo::TreeElement::new({'type' => 'paragraph',
+                                          'contents' => [$expansion]});
         $result .= _convert($self, $expansion);
       }
       # end of brace commands
@@ -4277,7 +4285,7 @@ sub _convert($$) {
             my @prototypes_length;
             my $total_length = 0.;
             foreach my $content (@{$block_line_arg->{'contents'}}) {
-              if ($content->{'type'} and $content->{'type'} eq 'bracketed_arg') {
+              if ($content->{'type'} eq 'bracketed_arg') {
                 my $prototype_text = '';
                 if ($content->{'contents'}) {
                   $prototype_text
@@ -4437,7 +4445,6 @@ sub _convert($$) {
       }
       return $result unless ($root_commands{$element->{'cmdname'}});
     } elsif (($cmdname eq 'item' or $cmdname eq 'itemx')
-             and $element->{'contents'}->[0]->{'type'}
              and $element->{'contents'}->[0]->{'type'} eq 'line_arg') {
       # item in @*table
       my $last_item = 0;
@@ -4528,7 +4535,8 @@ sub _convert($$) {
       if (defined($global_commands)
           and exists($global_commands->{'copying'})) {
         unshift @{$self->{'current_contents'}->[-1]},
-           {'contents' => $global_commands->{'copying'}->{'contents'}};
+           Texinfo::TreeElement::new({'type' => 'generic_container',
+              'contents' => $global_commands->{'copying'}->{'contents'}});
       }
       return $result;
     } elsif ($cmdname eq 'maketitle') {
@@ -4736,8 +4744,7 @@ sub _convert($$) {
       $unknown_command = 1;
     }
     if ($unknown_command
-        and !(exists($element->{'type'})
-              and ($element->{'type'} eq 'index_entry_command'))
+        and $element->{'type'} ne 'index_entry_command'
         # commands like def*x are not processed above, since only the def_line
         # associated is processed. If they have no name and no category they
         # are not considered as index entries either so they have a specific
@@ -4751,85 +4758,81 @@ sub _convert($$) {
     }
   }
 
-  # open 'type' constructs.
-  if (exists($element->{'type'})) {
-    if (exists($container_ignored_if_empty{$element->{'type'}})
-        and !exists($element->{'contents'})) {
-      return $result;
-    }
+  # open container constructs.
+  if (exists($container_ignored_if_empty{$element->{'type'}})
+      and !exists($element->{'contents'})) {
+    return $result;
+  }
 
 
-    if ($element->{'type'} eq 'index_entry_command') {
-      $result .= _index_entry($self, $element);
-      return $result;
+  if ($element->{'type'} eq 'index_entry_command') {
+    $result .= _index_entry($self, $element);
+    return $result;
+  }
+  if ($element->{'type'} eq 'def_line') {
+    $result .= _convert_def_line($self, $element);
+    return $result;
+  } elsif ($element->{'type'} eq 'def_item') {
+    $result .= "\\begin{Texinfoindented}\n";
+    # Remove vertical space and start paragaph, avoiding adding
+    # more vertical space.
+    $result .= "\\unskip{\\parskip=0pt\\noindent}%\n";
+  } elsif ($element->{'type'} eq 'table_term') {
+    $result .= '\item[{\parbox[b]{\linewidth}{%'."\n";
+    # count @item/@itemx to add //\n to each except for the last
+    my $nr_item = 0;
+    foreach my $content (@{$element->{'contents'}}) {
+      if (exists($content->{'cmdname'}) and
+          ($content->{'cmdname'} eq 'item'
+           or $content->{'cmdname'} eq 'itemx')) {
+        $nr_item++;
+      }
     }
-    if ($element->{'type'} eq 'def_line') {
-      $result .= _convert_def_line($self, $element);
-      return $result;
-    } elsif ($element->{'type'} eq 'def_item') {
-      $result .= "\\begin{Texinfoindented}\n";
-      # Remove vertical space and start paragaph, avoiding adding
-      # more vertical space.
-      $result .= "\\unskip{\\parskip=0pt\\noindent}%\n";
-    } elsif ($element->{'type'} eq 'table_term') {
-      $result .= '\item[{\parbox[b]{\linewidth}{%'."\n";
-      # count @item/@itemx to add //\n to each except for the last
-      my $nr_item = 0;
-      foreach my $content (@{$element->{'contents'}}) {
-        if (exists($content->{'cmdname'}) and
-            ($content->{'cmdname'} eq 'item'
-             or $content->{'cmdname'} eq 'itemx')) {
-          $nr_item++;
-        }
-      }
-      push @{$self->{'formatting_context'}->[-1]->{'nr_table_items_context'}},
-             $nr_item;
-    } elsif ($element->{'type'} eq 'inter_item') {
-      # the whole @item/@itemx formatting is put in a parbox, in which
-      # there should not be paragraphs, so we remove empty lines from
-      # inter_item.  We format directly here while ignoring the empty lines
-      # for performance reasons, and not below like all the contents, to
-      # avoid needing to check if in table items using a context information,
-      # we know that only comments and index entries or a lone preformatted
-      # should be in inter_item.
-      if (exists($element->{'contents'})) {
-        # if in an preformatted context, ie in @example, the inter_item
-        # content is within a preformatted.  In that case we use content
-        # from within the preformatted.  We do not do anything that is done
-        # in _open_preformatted/_close_preformatted as the only things
-        # that should be in inter_item, besides empty lines we want to
-        # remove, are comments and index entries, which formatting should
-        # not be affected.
-        my $contents_element;
-        if (exists($element->{'contents'}->[0]->{'type'})
-            and $element->{'contents'}->[0]->{'type'} eq 'preformatted') {
-          $contents_element = $element->{'contents'}->[0];
-        } else {
-          $contents_element = $element;
-        }
-        foreach my $content (@{$contents_element->{'contents'}}) {
-          $result .= _convert($self, $content)
-            unless (exists($content->{'type'})
-                    and $content->{'type'} eq 'empty_line');
-        }
-      }
-      return $result;
-    } elsif ($element->{'type'} eq 'preformatted') {
-      $result .= _open_preformatted($self, $element);
-    } elsif ($element->{'type'} eq '_dot_not_end_sentence') {
-      $self->{'formatting_context'}->[-1]->{'dot_not_end_sentence'} += 1;
-    } elsif ($element->{'type'} eq 'untranslated_def_line_arg') {
-      my $tree;
-      if (exists($element->{'extra'})
-          and defined($element->{'extra'}->{'translation_context'})) {
-        $tree = $self->pcdt($element->{'extra'}->{'translation_context'},
-                            $element->{'contents'}->[0]->{'text'});
+    push @{$self->{'formatting_context'}->[-1]->{'nr_table_items_context'}},
+           $nr_item;
+  } elsif ($element->{'type'} eq 'inter_item') {
+    # the whole @item/@itemx formatting is put in a parbox, in which
+    # there should not be paragraphs, so we remove empty lines from
+    # inter_item.  We format directly here while ignoring the empty lines
+    # for performance reasons, and not below like all the contents, to
+    # avoid needing to check if in table items using a context information,
+    # we know that only comments and index entries or a lone preformatted
+    # should be in inter_item.
+    if (exists($element->{'contents'})) {
+      # if in an preformatted context, ie in @example, the inter_item
+      # content is within a preformatted.  In that case we use content
+      # from within the preformatted.  We do not do anything that is done
+      # in _open_preformatted/_close_preformatted as the only things
+      # that should be in inter_item, besides empty lines we want to
+      # remove, are comments and index entries, which formatting should
+      # not be affected.
+      my $contents_element;
+      if ($element->{'contents'}->[0]->{'type'} eq 'preformatted') {
+        $contents_element = $element->{'contents'}->[0];
       } else {
-        $tree = $self->cdt($element->{'contents'}->[0]->{'text'});
+        $contents_element = $element;
       }
-      my $converted = _convert($self, $tree);
-      return $converted;
+      foreach my $content (@{$contents_element->{'contents'}}) {
+        $result .= _convert($self, $content)
+          unless ($content->{'type'} eq 'empty_line');
+      }
     }
+    return $result;
+  } elsif ($element->{'type'} eq 'preformatted') {
+    $result .= _open_preformatted($self, $element);
+  } elsif ($element->{'type'} eq '_dot_not_end_sentence') {
+    $self->{'formatting_context'}->[-1]->{'dot_not_end_sentence'} += 1;
+  } elsif ($element->{'type'} eq 'untranslated_def_line_arg') {
+    my $tree;
+    if (exists($element->{'extra'})
+        and defined($element->{'extra'}->{'translation_context'})) {
+      $tree = $self->pcdt($element->{'extra'}->{'translation_context'},
+                          $element->{'contents'}->[0]->{'text'});
+    } else {
+      $tree = $self->cdt($element->{'contents'}->[0]->{'text'});
+    }
+    my $converted = _convert($self, $tree);
+    return $converted;
   }
 
   # The processing of contents is done here.
@@ -4854,46 +4857,44 @@ sub _convert($$) {
     pop @{$self->{'current_contents'}};
   }
 
-  # now closing. First, close types.
-  if (defined($type)) {
-    if ($type eq '_dot_not_end_sentence') {
-      $self->{'formatting_context'}->[-1]->{'dot_not_end_sentence'} -= 1;
-    } elsif ($type eq 'def_item') {
-      $result .= "\\end{Texinfoindented}\n";
-    } elsif ($type eq 'table_term') {
-      $result .= '}}]'."\n";
-      pop @{$self->{'formatting_context'}->[-1]->{'nr_table_items_context'}};
-    } elsif ($type eq 'preformatted') {
-      $result .= _close_preformatted($self, $element);
-    } elsif ($type eq 'before_item') {
-      # LaTeX environments do not accept text before the first item, add
-      # an item:
-      if ($result =~ /\S/) {
-        # FIXME if there is only an index element it is content and
-        # triggers an empty \item.  It is mitigated by
-        # move_index_entries_after_items for enumerate and itemize, but not
-        # for @*table.
-        if (exists($block_commands{$element->{'parent'}->{'cmdname'}})
-            and $block_commands{$element->{'parent'}->{'cmdname'}} eq 'item_line') {
-          # it is important to have an empty optional argument otherwise
-          # a quoted command will output the quotes, even with a detection
-          # of empty argument (tested with diverse possibilities)
-          $result = '\item[] '.$result;
-        } else {
-          $result = '\item '.$result;
-        }
+  # now closing. First, close containers.
+  if ($type eq '_dot_not_end_sentence') {
+    $self->{'formatting_context'}->[-1]->{'dot_not_end_sentence'} -= 1;
+  } elsif ($type eq 'def_item') {
+    $result .= "\\end{Texinfoindented}\n";
+  } elsif ($type eq 'table_term') {
+    $result .= '}}]'."\n";
+    pop @{$self->{'formatting_context'}->[-1]->{'nr_table_items_context'}};
+  } elsif ($type eq 'preformatted') {
+    $result .= _close_preformatted($self, $element);
+  } elsif ($type eq 'before_item') {
+    # LaTeX environments do not accept text before the first item, add
+    # an item:
+    if ($result =~ /\S/) {
+      # FIXME if there is only an index element it is content and
+      # triggers an empty \item.  It is mitigated by
+      # move_index_entries_after_items for enumerate and itemize, but not
+      # for @*table.
+      if (exists($block_commands{$element->{'parent'}->{'cmdname'}})
+          and $block_commands{$element->{'parent'}->{'cmdname'}} eq 'item_line') {
+        # it is important to have an empty optional argument otherwise
+        # a quoted command will output the quotes, even with a detection
+        # of empty argument (tested with diverse possibilities)
+        $result = '\item[] '.$result;
+      } else {
+        $result = '\item '.$result;
       }
-    } elsif ($type eq 'row') {
-      chomp($result);
-      # can happen with diverse added @-command, in particular index commands
-      if ($result =~ /%$/) {
-        $result .= "\n";
-      }
-      $result .= '\\\\'."\n";
-    } elsif ($type eq $latex_document_type) {
-      # type marking the beginning of content
-      $result .= _begin_document($self);
     }
+  } elsif ($type eq 'row') {
+    chomp($result);
+    # can happen with diverse added @-command, in particular index commands
+    if ($result =~ /%$/) {
+      $result .= "\n";
+    }
+    $result .= '\\\\'."\n";
+  } elsif ($type eq $latex_document_type) {
+    # type marking the beginning of content
+    $result .= _begin_document($self);
   }
 
   # close commands
@@ -4984,8 +4985,7 @@ sub _convert($$) {
       my $old_math_style
          = pop @{$self->{'formatting_context'}->[-1]->{'math_style'}};
       die if ($old_math_style ne 'one-line');
-    } elsif (exists($element->{'parent'}->{'type'})
-             and $element->{'parent'}->{'type'} eq 'row') {
+    } elsif ($element->{'parent'}->{'type'} eq 'row') {
       my $cell_nr = $element->{'extra'}->{'cell_number'};
       my $multitable = $element->{'parent'}->{'parent'}->{'parent'};
       my $max_columns = $multitable->{'extra'}->{'max_columns'};
@@ -5065,11 +5065,11 @@ sub convert_math_to_images($$$;$) {
     if ($cmdname eq 'math') {
       $tree = $element->{'contents'}->[0];
     } elsif (exists($element->{'contents'})) {
-      $tree = {'contents' => [@{$element->{'contents'}}]};
+      $tree = Texinfo::TreeElement::new({'type' => 'generic_container',
+                                    'contents' => [@{$element->{'contents'}}]});
       # remove the arguments_line element
       shift @{$tree->{'contents'}};
       if (scalar(@{$tree->{'contents'}})
-          and exists($tree->{'contents'}->[0]->{'type'})
           and ($tree->{'contents'}->[0]->{'type'} eq 'empty_line_after_command'
                or $tree->{'contents'}->[0]->{'type'} eq 'elided_brace_command_arg'
                or $tree->{'contents'}->[0]->{'type'} eq 'elided_rawpreformatted')) {
