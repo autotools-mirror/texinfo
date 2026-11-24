@@ -2887,30 +2887,28 @@ sub _convert($$) {
     # First handle empty lines. This has to be done before the handling
     # of text below to be sure that an empty line is always processed
     # especially
-    if (defined($type)) {
-      if ($type eq 'empty_line'
-          or $type eq 'after_menu_description_line') {
-        $self->{'text_element_context'}->[-1]->{'counter'} = 0;
-        if ($element->{'text'} =~ /\f/) {
-          my $result = _get_form_feeds($element->{'text'});
-          _stream_output($self, $result);
-        }
-        if (exists(
-             $preformatted_context_commands{$self->{'context'}->[-1]})) {
-          _stream_output_add_text($self, "\n");
-        } else {
-          _add_newline_if_needed($self);
-        }
-        return;
-      # ignoreable spaces
-      } elsif (exists($ignorable_space_types{$type})) {
-        if ($type eq 'spaces_after_close_brace'
-            and $element->{'text'} =~ /\f/) {
-          my $result = _get_form_feeds($element->{'text'});
-          _stream_output($self, $result);
-        }
-        return;
+    if ($type eq 'empty_line'
+        or $type eq 'after_menu_description_line') {
+      $self->{'text_element_context'}->[-1]->{'counter'} = 0;
+      if ($element->{'text'} =~ /\f/) {
+        my $result = _get_form_feeds($element->{'text'});
+        _stream_output($self, $result);
       }
+      if (exists(
+           $preformatted_context_commands{$self->{'context'}->[-1]})) {
+        _stream_output_add_text($self, "\n");
+      } else {
+        _add_newline_if_needed($self);
+      }
+      return;
+    # ignoreable spaces
+    } elsif (exists($ignorable_space_types{$type})) {
+      if ($type eq 'spaces_after_close_brace'
+          and $element->{'text'} =~ /\f/) {
+        my $result = _get_form_feeds($element->{'text'});
+        _stream_output($self, $result);
+      }
+      return;
     }
 
     # '_top_formatter' is only set in the formatter setup when calling
@@ -2921,7 +2919,7 @@ sub _convert($$) {
     # handled above and some other text elements that can appear outside of
     # paragraphs, lines and blocks that should only contain spaces.
     if (!$formatter->{'_top_formatter'}) {
-      if (defined($type) and $type eq 'raw') {
+      if ($type eq 'raw') {
         # in raw block like verbatim or ignore, ignored Texinfo, and in @verb.
         _stream_output_add_next($self, $element->{'text'});
       } else {
@@ -2939,7 +2937,7 @@ sub _convert($$) {
         _stream_output_add_text($self, $text,
                        $formatter->{'upper_case_stack'}->[-1]->{'upper_case'});
       }
-    } elsif (defined($type) and $type eq 'spaces_before_paragraph') {
+    } elsif ($type eq 'spaces_before_paragraph') {
       my $indent = $self->get_conf('paragraphindent');
       # NOTE in other cases than paragraphindent -2/'asis', form feeds
       # are ignored.
@@ -2966,7 +2964,7 @@ sub _convert($$) {
     return;
   }
 
-  return if (defined($type) and exists($ignored_types{$type}));
+  return if (exists($ignored_types{$type}));
 
   my $cmdname = $element->{'cmdname'};
   if (defined($cmdname)) {
@@ -3016,7 +3014,7 @@ sub _convert($$) {
     $self->{'index_entry_info'}->{$element} = $index_entry_info;
   }
 
-  if (defined($type) and $type eq 'index_entry_command') {
+  if ($type eq 'index_entry_command') {
     return;
   }
 
@@ -3055,7 +3053,7 @@ sub _convert($$) {
                                         $formatter->{'container'})
         if ($accented_text ne '');
       return;
-    } elsif (defined($type) and $type eq 'definfoenclose_command') {
+    } elsif ($type eq 'definfoenclose_command') {
       _stream_output_add_next($self, $element->{'extra'}->{'begin'}, 1);
       my $args = Texinfo::Common::get_non_empty_brace_args($element);
       if (defined($args) and defined($args->[0])) {
@@ -3628,8 +3626,7 @@ sub _convert($$) {
           my $block_line_arg = $arguments_line->{'contents'}->[0];
           if (exists($block_line_arg->{'contents'})) {
             foreach my $content (@{$block_line_arg->{'contents'}}) {
-              if (exists($content->{'type'})
-                  and $content->{'type'} eq 'bracketed_arg') {
+              if ($content->{'type'} eq 'bracketed_arg') {
                 my $column_size = 0;
                 if (exists($content->{'contents'})) {
                   my (undef, $width)
@@ -3739,7 +3736,6 @@ sub _convert($$) {
       return unless(exists($root_commands{$cmdname}));
     } elsif (($cmdname eq 'item' or $cmdname eq 'itemx')
              and exists($element->{'contents'})
-             and exists($element->{'contents'}->[0]->{'type'})
              and $element->{'contents'}->[0]->{'type'} eq 'line_arg') {
       if (!Texinfo::Common::empty_spaces_argument(
                                     $element->{'contents'}->[0])) {
@@ -3965,15 +3961,13 @@ sub _convert($$) {
               # we iterate over the contents of a paragraph rather than
               # converting the paragraph itself.
               foreach my $content (@{$caption_arg->{'contents'}}) {
-                if (exists($content->{'type'})
-                    and $content->{'type'} eq 'paragraph'
+                if ($content->{'type'} eq 'paragraph'
                     and exists($content->{'contents'})) {
                   foreach my $subelement (@{$content->{'contents'}}) {
                     _convert($self, $subelement);
                   }
                   last;
-                } elsif (!defined($content->{'type'})
-                         or $content->{'type'} ne 'spaces_before_argument') {
+                } elsif ($content->{'type'} ne 'spaces_before_argument') {
                   _convert($self, $content);
                   last;
                 }
@@ -4085,7 +4079,6 @@ sub _convert($$) {
     # if in a description reuse the main menu unfilled, to keep things
     # simpler and avoid having to do a separate count.
     if ($type eq 'rawpreformatted'
-        or !exists($element->{'parent'}->{'type'})
         or $element->{'parent'}->{'type'} ne 'menu_entry_description') {
       $preformatted = new_unfilled_formatter($self);
       push @{$self->{'formatters'}}, $preformatted;
@@ -4348,8 +4341,7 @@ sub _convert($$) {
     # have been processed yet, and we need to output any pending spaces
     # before 'end_line' throws them away.  The argument to 'add_pending_word'
     # does this.
-    if (exists($element->{'parent'}->{'type'})
-        and $element->{'parent'}->{'type'} eq 'preformatted') {
+    if ($element->{'parent'}->{'type'} eq 'preformatted') {
       _stream_output($self,
                      add_pending_word($formatter->{'container'}, 1));
     } else {
