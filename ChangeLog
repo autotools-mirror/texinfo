@@ -1,5 +1,15 @@
 2026-11-25  Patrice Dumas  <pertusus@free.fr>
 
+	no messages for detailmenu in plaintext/Info
+
+	* tta/C/convert/convert_to_plaintext.c
+	(convert_to_plaintext_internal),
+	tta/perl/Texinfo/Convert/PlaintextNonXS.pm (_convert): increase silent
+	for detailmenu.  There are no source info information and it would be
+	redundant with errors for the menus.
+
+2026-11-25  Patrice Dumas  <pertusus@free.fr>
+
 	* tta/C/structuring_transfo/structuring.c (reassociate_to_node): check
 	EF_def_line on the element.
 

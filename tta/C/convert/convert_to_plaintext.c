@@ -5323,7 +5323,13 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
                 }
             }
           else if (plaintext_commands_data[cmd].flags & PF_menu)
-            menu (self, element);
+            {
+            /* no message in detailmenu, there are no source info information
+               and it would be redundant with errors for the menus */
+              if (cmd == CM_detailmenu)
+                self_plaintext->silent++;
+              menu (self, element);
+            }
           else if (cmd == CM_multitable)
             {
               DOCUMENT_CONTEXT *top_document_context
@@ -6975,6 +6981,11 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
           free (authors->list);
 
           pop_(quotations_authors) (&document_context->quotations_authors);
+        }
+      else if (plaintext_commands_data[cmd].flags & PF_menu)
+        {
+          if (cmd == CM_detailmenu)
+            self_plaintext->silent--;
         }
       else if (cmd == CM_multitable)
         {

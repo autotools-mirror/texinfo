@@ -3605,6 +3605,12 @@ sub _convert($$) {
           $self->{'text_element_context'}->[-1]->{'counter'} += $width;
         }
       } elsif (exists($menu_commands{$cmdname})) {
+        if ($cmdname eq 'detailmenu') {
+          # no message in detailmenu, there are no source info information
+          # and it would be redundant with errors for the menus
+          $self->{'silent'} = 0 if (!exists($self->{'silent'}));
+          $self->{'silent'}++;
+        }
         _menu($self, $element);
       } elsif ($cmdname eq 'multitable') {
         my $columnsize = [];
@@ -4601,6 +4607,8 @@ sub _convert($$) {
                {'author' => $author->{'contents'}->[0]}));
         }
       }
+    } elsif (exists($menu_commands{$cmdname})) {
+      $self->{'silent'}-- if ($cmdname eq 'detailmenu');
     } elsif ($cmdname eq 'multitable') {
       $self->{'document_context'}->[-1]->{'in_multitable'}--;
     } elsif (exists($root_commands{$cmdname})
