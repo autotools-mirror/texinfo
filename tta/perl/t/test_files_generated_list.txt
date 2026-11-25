@@ -2792,6 +2792,7 @@ t/results/sectioning/anchor_zero.pl
 t/results/sectioning/at_commands_in_node.pl
 t/results/sectioning/automatic_menu_referencing_node.pl
 t/results/sectioning/automatic_menu_with_heading.pl
+t/results/sectioning/brace_command_space_before_brace_in_node.pl
 t/results/sectioning/chapter_before_and_after_part.pl
 t/results/sectioning/chapter_before_part.pl
 t/results/sectioning/chapter_between_nodes.pl

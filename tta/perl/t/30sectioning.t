@@ -997,6 +997,38 @@ $unnumbered_top_without_node_text,
 
 ', {'FORMAT_MENU' => 'menu', 'CHECK_NORMAL_MENU_STRUCTURE' => 1},
    {'FORMAT_MENU' => 'menu'}],
+['brace_command_space_before_brace_in_node',
+'@node Top
+@top top
+
+@node @atchar {} @TeX {} @exclamdown {} @today {} @AE {} @~ {e} @ringaccent e
+@chapter @atchar {} @TeX {} @exclamdown {} @today {} @AE {} @~ {e} @ringaccent e
+
+@section s @atchar {} @TeX {} @exclamdown {} @today {} @AE {} @~ {e} @ringaccent e
+
+@node @acronym {AAA, fff} @verb {. @ {} . .} @code {code} @r {r} 8.27@dmn {in}
+@chapter @acronym {AAA, fff} @verb {. @ {} . .} @code {code} @r {r} 8.27@dmn {in}
+
+@section s @acronym {AAA, fff} @verb {. @ {} . .} @code {code} @r {r} 8.27@dmn {in}
+
+@node @link {@atchar {} @TeX {} @exclamdown {} @today {} @AE {} @~ {e} @ringaccent e} @ref {@acronym {AAA, fff} @verb {. @ {} . .} @code {code} @r {r} 8.27@dmn {in}}
+@chapter @link {@atchar {} @TeX {} @exclamdown {} @today {} @AE {} @~ {e} @ringaccent e} @ref {@acronym {AAA, fff} @verb {. @ {} . .} @code {code} @r {r} 8.27@dmn {in}}
+
+@section s @link {@atchar {} @TeX {} @exclamdown {} @today {} @AE {} @~ {e} @ringaccent e} @ref {@acronym {AAA, fff} @verb {. @ {} . .} @code {code} @r {r} 8.27@dmn {in}}
+
+@node @link {external, , manuuuu} @ref {,,,, This} @link {, , lman}
+@chapter @link {external, , manuuuu} @ref {,,,, This} @link {, , lman}
+
+@section s @link {external, , manuuuu} @ref {,,,, This} @link {, , lman}
+
+@definfoenclose phoo,;,:
+@node @phoo {aphb}
+@chapter @phoo {aphb}
+
+@section s @phoo {aphb}
+
+', {'AUTO_SECTION_NODE' => 1,},
+],
 );
 
 

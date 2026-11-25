@@ -26,14 +26,16 @@ if (defined($srcdir)) {
 }
 
 my $strings_textdomain = 'texinfo_document';
-Locale::Messages->select_package ('gettext_pp');
-Locale::Messages::bindtextdomain ('texinfo_document', 't/locales');
+Locale::Messages->select_package('gettext_pp');
+Locale::Messages::bindtextdomain('texinfo_document', 't/locales');
 
 ok(1, 'modules loading');
 
 my $parser = Texinfo::Parser::parser({'INCLUDE_DIRECTORIES' => [
                                           $srcdir.'t/include/'],
                                       'EXPANDED_FORMATS' => ['html', 'tex']});
+
+# NOTE the tests test node normalization pure Perl code only, not C/XS.
 
 # Check that NodeNameNormalization do not break with complete
 # Texinfo trees.  Not much check of the output for these tests.
