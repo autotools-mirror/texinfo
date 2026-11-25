@@ -521,7 +521,7 @@ foreach my $brace_command (keys (%brace_commands)) {
 
 my %in_basic_inline_commands = %in_full_text_commands;
 foreach my $not_in_basic_inline_commands
-              ('xref', 'ref', 'pxref', 'inforef',
+              ('xref', 'ref', 'pxref', 'inforef', 'link',
                'titlefont', 'anchor', 'namedanchor', 'footnote', 'verb') {
   delete $in_basic_inline_commands{$not_in_basic_inline_commands};
 }
@@ -533,7 +533,7 @@ foreach my $in_heading_spec (keys(%in_heading_spec_commands)) {
 my %contain_basic_inline_with_refs_commands = (%sectioning_heading_commands,
                                       %def_commands);
 my %ok_in_basic_inline_with_refs_commands;
-foreach my $permitted_command ('xref', 'ref', 'pxref', 'inforef') {
+foreach my $permitted_command ('xref', 'ref', 'pxref', 'inforef', 'link') {
   $ok_in_basic_inline_with_refs_commands{$permitted_command} = 1;
 }
 
@@ -6827,7 +6827,7 @@ sub _handle_close_brace($$$) {
            "command \@%s missing a node or external manual argument"),
                               $closed_cmdname), $source_info);
       } else {
-        my $arg_label = $ref->{'contents'}->[0];
+        my $arg_label = $args->[0];
         my ($first_idx, $end_idx)
          = Texinfo::Common::non_leading_trailing_indices($arg_label);
 

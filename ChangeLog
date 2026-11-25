@@ -1,5 +1,13 @@
 2026-11-25  Patrice Dumas  <pertusus@free.fr>
 
+	* tta/perl/Texinfo/ParserNonXS.pm (%in_basic_inline_commands)
+	(%ok_in_basic_inline_with_refs_commands): add link.
+
+	* tta/perl/Texinfo/ParserNonXS.pm (_handle_close_brace): use args
+	obtained from get_non_empty_brace_args consistently for @ref.
+
+2026-11-25  Patrice Dumas  <pertusus@free.fr>
+
 	* tta/perl/Texinfo/ManipulateTreeNonXS.pm (_new_node): add
 	source_info if present.
 
