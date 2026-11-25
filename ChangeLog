@@ -1,5 +1,12 @@
 2026-11-25  Patrice Dumas  <pertusus@free.fr>
 
+	* tta/C/convert/format_html.c (html_convert_xref_command),
+	tta/perl/Texinfo/Convert/HTML.pm (_convert_xref_command): only use
+	arguments, not the tree, as there could be a space between command and
+	opening brace.
+
+2026-11-25  Patrice Dumas  <pertusus@free.fr>
+
 	no messages for detailmenu in plaintext/Info
 
 	* tta/C/convert/convert_to_plaintext.c

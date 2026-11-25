@@ -8136,8 +8136,8 @@ html_convert_xref_command (CONVERTER *self, const enum command_id cmd,
       && strlen (args_formatted->args[4].formatted[AFT_type_normal]))
     book = args_formatted->args[4].formatted[AFT_type_normal];
 
-  if (element->e.c->contents.number > 0)
-    arg_node = element->e.c->contents.list[0];
+  if (args_formatted->number > 0)
+    arg_node = args_formatted->args[0].arg_tree;
 
   /* check for internal reference */
   if (cmd != CM_inforef && !book && !file && arg_node)

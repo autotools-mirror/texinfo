@@ -4563,7 +4563,10 @@ sub _convert_xref_command($$$$) {
     if (defined($args->[4]) and exists($args->[4]->{'normal'})
         and $args->[4]->{'normal'} ne '');
 
-  my $arg_node = $command->{'contents'}->[0];
+  my $arg_node;
+  if (defined($args->[0])) {
+    $arg_node = $args->[0]->{'arg_tree'};
+  }
 
   # internal reference
   if ($cmdname ne 'inforef' and !defined($book) and !defined($file)
