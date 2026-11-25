@@ -1,5 +1,16 @@
 2026-11-25  Patrice Dumas  <pertusus@free.fr>
 
+	* tta/C/main/manipulate_tree.c (reference_to_arg_internal): call
+	element_builtin_data_cmd to get a cmd that can always be used for
+	flags.  Copy the argument contents, do not remove the rgument holder
+	from the tree, such that it is destroyed when the parent is destroyed.
+
+	* tta/perl/Texinfo/ManipulateTree.pm (_reference_to_arg),
+	tta/C/main/manipulate_tree.c (reference_to_arg_internal): use
+	get_non_empty_brace_args to get the arguments.
+
+2026-11-25  Patrice Dumas  <pertusus@free.fr>
+
 	* tta/C/convert/format_html.c (html_convert_xref_command),
 	tta/perl/Texinfo/Convert/HTML.pm (_convert_xref_command): only use
 	arguments, not the tree, as there could be a space between command and

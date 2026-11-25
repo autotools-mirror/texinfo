@@ -1234,7 +1234,8 @@ sub _reference_to_arg($$$) {
   if (exists($current->{'cmdname'}) and
       exists($Texinfo::Commands::ref_commands{$current->{'cmdname'}})) {
 
-    if (!exists($current->{'contents'})) {
+    my $args = Texinfo::Common::get_non_empty_brace_args($current);
+    if (!defined($args)) {
       $current = undef;
       return [];
     }
@@ -1254,8 +1255,8 @@ sub _reference_to_arg($$$) {
       @args_try_order = (0, 1, 2, 4, 3);
     }
     foreach my $index (@args_try_order) {
-      if (defined($current->{'contents'}->[$index])) {
-        my $arg = $current->{'contents'}->[$index];
+      if (defined($args->[$index])) {
+        my $arg = $args->[$index];
         # this will not detect if the arg has non space contents but still
         # expands as spaces only, like @asis{ }, @ , but it is not an issue
         # or could even be considered as a feature.
