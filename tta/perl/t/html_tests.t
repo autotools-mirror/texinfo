@@ -925,6 +925,26 @@ In top node
 
 ', {'AUTO_SECTION_NODE' => 1,},
 ],
+['reassociation_of_def_index_entries',
+'@node Top
+@top top
+
+@node chapter
+@chapter Chap
+
+@section no node
+
+@defun some bibliography aa
+@defunx other baba toto
+Add
+@end defun
+
+@node app
+@appendix App
+
+@printindex fn
+', {'AUTO_SECTION_NODE' => 1,},
+],
 );
 
 my $test_accents_sc_no_brace_commands_quotes = '@u{--a}

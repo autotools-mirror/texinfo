@@ -73,7 +73,8 @@ enum extra_type {
 #define EF_indent                        0x0100
 #define EF_noindent                      0x0200
 #define EF_isindex                       0x0400
-/* not in Perl */
+/* either a @def* line command or a def_line type
+   Not in Perl */
 #define EF_def_line                      0x0800
 /* transiently used for numbering of the elements for the representation
    of the tree.  Not currently used. */

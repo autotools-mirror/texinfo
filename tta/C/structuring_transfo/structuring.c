@@ -819,8 +819,7 @@ reassociate_to_node (const char *type, ELEMENT *current, void *argument)
            /* following for index entries */
       else if (current->e.c->cmd == CM_item || current->e.c->cmd == CM_itemx
                || current->type == ET_index_entry_command
-               || (current->e.c->parent
-                   && current->e.c->parent->flags & EF_def_line))
+               || current->flags & EF_def_line)
         {
           const char *element_node
             = lookup_extra_string (current, AI_key_element_node);

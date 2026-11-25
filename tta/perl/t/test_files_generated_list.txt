@@ -1080,6 +1080,7 @@ t/results/html_tests/nodedescription_description_no_use_nodes/res_html/other.htm
 t/results/html_tests/nodedescription_description_no_use_nodes/res_html/titi.html
 t/results/html_tests/nodedescription_description_no_use_nodes/res_html/toto.html
 t/results/html_tests/raw_html.pl
+t/results/html_tests/reassociation_of_def_index_entries.pl
 t/results/html_tests/redirection_same_labels.pl
 t/results/html_tests/redirection_same_labels/res_html/_00ee.html
 t/results/html_tests/redirection_same_labels/res_html/_00ef.html
