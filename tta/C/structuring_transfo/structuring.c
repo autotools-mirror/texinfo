@@ -2809,7 +2809,15 @@ associate_internal_references (DOCUMENT *document)
       if (ref->type == ET_menu_entry_node)
         label_element = ref;
       else
-        label_element = ref->e.c->contents.list[0];
+        {
+          size_t i;
+          for (i = 0; i < ref->e.c->contents.number; i++)
+            {
+              label_element = ref->e.c->contents.list[i];
+              if (label_element->type != ET_spaces_after_cmd_before_arg)
+                break;
+            }
+        }
 
       label_node_content
         = lookup_extra_integer_list (label_element, AI_key_node_content);

@@ -138,7 +138,12 @@ sub _associate_internal_references($) {
     if ($ref->{'type'} eq 'menu_entry_node') {
       $label_element = $ref;
     } else {
-      $label_element = $ref->{'contents'}->[0];
+      foreach my $content (@{$ref->{'contents'}}) {
+        if ($content->{'type'} ne 'spaces_after_cmd_before_arg') {
+          $label_element = $content;
+          last;
+        }
+      }
     }
 
     if (exists($label_element->{'extra'})
@@ -253,6 +258,8 @@ sub new_node_menu_entry($;$) {
 
   if (exists($node->{'source_info'})) {
     $entry->{'source_info'} = {%{$node->{'source_info'}}};
+  } else {
+    # TODO warn?  Errors messages will not be correctly formatted
   }
 
   my $menu_entry_node
@@ -548,6 +555,7 @@ sub new_detailmenu($$$$$$;$$) {
 sub new_complete_menu_master_menu($$$$) {
   my ($self, $labels, $nodes_list, $node_relations) = @_;
 
+  # menu for the node itself
   my $menu_node
     = new_complete_node_menu($node_relations,
                         $self->{'current_lang_translations'},
@@ -586,14 +594,17 @@ sub new_complete_menu_master_menu($$$$) {
   return $menu_node;
 }
 
-# returns menu contents
+# returns menu contents.  Called for the detailmenu.
 sub _print_down_menus($$$$$$;$);
 sub _print_down_menus($$$$$$;$) {
   my ($node, $up_nodes, $converter, $document, $identifier_target, $nodes_list,
       $use_sections) = @_;
 
-  # NOTE the menus are not used directly, the entry of the menus are copied
-  # and returned in @master_menu_contents.
+  # NOTE menus are generated normally for the sub-nodes (with information
+  # for messages), but sub-node menus are not used directly, the entry of
+  # the menus are copied and returned in @master_menu_contents.  Having a
+  # copy being done means that information for messages are not present in
+  # detailmenu.
   my @menus;
 
   my @master_menu_contents;
