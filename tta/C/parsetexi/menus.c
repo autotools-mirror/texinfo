@@ -319,7 +319,7 @@ end_line_menu_entry (ELEMENT *current)
       /* If contents empty or is all whitespace. */
       if (current->e.c->contents.number == 0
           || (current->e.c->contents.number == 1
-              && last->type == ET_normal_text
+              && type_data[last->type].flags & TF_text
               && last->e.text->end > 0
               && !last->e.text->text[strspn (last->e.text->text,
                                           whitespace_chars)]))
@@ -411,7 +411,7 @@ end_line_menu_entry (ELEMENT *current)
               for (j = 0; j < arg->e.c->contents.number; j++)
                 {
                   e = arg->e.c->contents.list[j];
-                  if (e->type == ET_normal_text)
+                  if (type_data[e->type].flags & TF_text)
                     {
                       current = merge_text (current, e->e.text->text,
                                             e->e.text->end, e);

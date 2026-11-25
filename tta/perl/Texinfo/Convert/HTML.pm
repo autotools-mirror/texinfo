@@ -6170,11 +6170,11 @@ sub _convert_menu_entry_type($$$) {
                     and (not (exists($menu_description->{'contents'}->[0]
                                                              ->{'contents'}))
                          or (scalar(@{$menu_description->{'contents'}->[0]
-                                                         ->{'contents'}}) == 1)
+                                                         ->{'contents'}}) == 1
                              and exists($menu_description->{'contents'}->[0]
                                                  ->{'contents'}->[0]->{'text'})
                              and $menu_description->{'contents'}->[0]
-                                  ->{'contents'}->[0]->{'text'} !~ /\S/))))) {
+                                  ->{'contents'}->[0]->{'text'} !~ /\S/)))))) {
         $formatted_nodedescription_nr
           = _formatted_nodedescription_nr($self, $node);
       }

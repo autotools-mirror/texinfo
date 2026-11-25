@@ -751,9 +751,7 @@ end_line_def_line (ELEMENT *current)
           if (arg->type == ET_bracketed_arg
               && (arg->e.c->contents.number == 0
                   || (arg->e.c->contents.number == 1
-                      && (arg->e.c->contents.list[0]->type == ET_normal_text
-                          || arg->e.c->contents.list[0]->type
-                                             == ET_spaces_before_argument)
+                      && type_data[arg->e.c->contents.list[0]->type].flags & TF_text
                       && (t = arg->e.c->contents.list[0]->e.text->text)
                       && t[strspn (t, whitespace_chars)] == '\0')))
             {

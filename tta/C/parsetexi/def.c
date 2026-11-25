@@ -210,7 +210,7 @@ static void
 split_delimiters (ELEMENT *current, size_t starting_idx)
 {
   size_t i;
-  static char *chars = "[](),";
+  static const char *delimiter_chars = "[](),";
   for (i = starting_idx; i < current->e.c->contents.number; i++)
     {
       ELEMENT *e = current->e.c->contents.list[i];
@@ -225,7 +225,7 @@ split_delimiters (ELEMENT *current, size_t starting_idx)
 
       if (e->type == ET_spaces || e->type == ET_bracketed_arg)
         continue;
-      else if (e->type != ET_normal_text)
+      else if (!(type_data[e->type].flags & TF_text))
         {
           new = new_element (ET_def_line_arg);
           new->e.c->parent = e->e.c->parent;
@@ -244,7 +244,7 @@ split_delimiters (ELEMENT *current, size_t starting_idx)
 
       while (1)
         {
-          if (strchr (chars, *p))
+          if (strchr (delimiter_chars, *p))
             {
               new = new_text_element (ET_delimiter);
               text_append_n (new->e.text, p, 1);
@@ -266,7 +266,7 @@ split_delimiters (ELEMENT *current, size_t starting_idx)
             }
 
           ELEMENT *new_text = new_text_element (ET_normal_text);
-          len = strcspn (p, chars);
+          len = strcspn (p, delimiter_chars);
           text_append_n (new_text->e.text, p, len);
 
           if (u8_text)

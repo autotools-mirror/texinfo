@@ -966,8 +966,8 @@ protect_hashchar_at_line_beginning_internal (const char *type,
   for (i = 0; i < parent_contents_nr; i++)
     {
       ELEMENT *current = parent->e.c->contents.list[i];
-      if ((current->type == ET_normal_text || current->type == ET_raw)
-           && current->e.text->end > 0)
+      if (type_data[current->type].flags & TF_text
+          && current->e.text->end > 0)
         {
           char *filename;
           int line_no = 0;

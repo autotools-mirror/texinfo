@@ -1,5 +1,23 @@
 2026-11-25  Patrice Dumas  <pertusus@free.fr>
 
+	* tta/C/convert/format_html.c (html_convert_menu_entry_type),
+	tta/C/main/manipulate_tree.c (parse_node_manual),
+	tta/C/parsetexi/def.c (split_delimiters), tta/C/parsetexi/end_line.c
+	(end_line_def_line), tta/C/parsetexi/handle_commands.c
+	(check_no_text), tta/C/parsetexi/menus.c (end_line_menu_entry),
+	tta/C/structuring_transfo/transformations.c
+	(protect_hashchar_at_line_beginning_internal): check that a type is
+	text, not that it is a specific text type (usually normal_text), when
+	what really matters is that it is text, for clearer code.
+
+	* tta/C/parsetexi/def.c (split_delimiters): rename chars as
+	delimiter_chars.
+
+	* tta/perl/Texinfo/Convert/HTML.pm (_convert_menu_entry_type): change
+	parentheses for clearer code.
+
+2026-11-25  Patrice Dumas  <pertusus@free.fr>
+
 	* tta/perl/Texinfo/ParserNonXS.pm (_isolate_trailing_spaces_element):
 	make type argument of _isolate_trailing_spaces_element mandatory.  Do
 	not set type to normal_text as it is confusing because it will be
