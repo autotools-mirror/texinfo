@@ -2361,12 +2361,14 @@ sub _set_custom_headings($$$) {
   _push_new_context($self, 'custom_heading');
   $self->{'formatting_context'}->[-1]->{'in_custom_heading'} = 1;
   if (defined($headings_spec_element)) {
-    foreach my $location_heading_spec (@{$headings_spec_element->{'contents'}}) {
+    foreach my $location_heading_spec (@{$headings_spec_element}) {
       $location_index++;
-      my $heading = _convert($self, $location_heading_spec);
-      $heading =~ s/^\s*//;
-      $heading =~ s/\s*$//;
-      $headings[$location_index] = $heading;
+      if (defined($location_heading_spec)) {
+        my $heading = _convert($self, $location_heading_spec);
+        $heading =~ s/^\s*//;
+        $heading =~ s/\s*$//;
+        $headings[$location_index] = $heading;
+      }
     }
   }
   _pop_context($self);

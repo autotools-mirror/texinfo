@@ -2066,7 +2066,6 @@ sub count_bytes($;$) {
 }
 
 # custom heading command line is split at @|
-# FIXME return a list instead of a pseudo tree element
 sub split_custom_heading_command_contents($) {
   my $element = shift;
 
@@ -2078,11 +2077,8 @@ sub split_custom_heading_command_contents($) {
 
   my $nr_split_contents = 0;
 
-  my $result = {'contents' => []};
-  my $heading_element
-    = Texinfo::TreeElement::new({'type' => 'generic_container',
-                                 'contents' => []});
-  push @{$result->{'contents'}}, $heading_element;
+  my @result;
+  my $heading_element;
 
   for (my $i = 0; $i < $contents_nr; $i++) {
     my $current_content = $element->{'contents'}->[$i];
@@ -2091,18 +2087,28 @@ sub split_custom_heading_command_contents($) {
     if (exists($current_content->{'cmdname'})
         and $current_content->{'cmdname'} eq '|') {
       if ($nr_split_contents < 2) {
-        $heading_element
-         = Texinfo::TreeElement::new({'type' => 'generic_container',
-                                      'contents' => []});
-        push @{$result->{'contents'}}, $heading_element;
+        if (!defined($heading_element)) {
+          push @result, undef;
+        } else {
+          $heading_element = undef;
+        }
         $nr_split_contents++;
       }
     } else {
+      if (!defined($heading_element)) {
+        $heading_element
+          = Texinfo::TreeElement::new({'type' => 'generic_container',
+                                 'contents' => []});
+        push @result, $heading_element;
+      }
       push @{$heading_element->{'contents'}}, $current_content;
     }
   }
-
-  return $result;
+  if (scalar(@result)) {
+    return \@result;
+  } else {
+    return undef;
+  }
 }
 
 # not currently used
@@ -2778,13 +2784,14 @@ X<C<set_output_encoding>>
 If not already set, set C<OUTPUT_ENCODING_NAME> based on input file
 encoding.
 
-=item $split_contents = split_custom_heading_command_contents($element)
+=item \@split_heading = split_custom_heading_command_contents($element)
 X<C<split_custom_heading_command_contents>>
 
 Split the I<$element> contents at C<@|> in at max three parts.
-Return an element containing the split parts in contents, or C<undef> if
-the I<$element> has no useful content.  The input I<$element>
-is supposed to be the argument line element of
+Return an array reference containing the split parts as Texinfo tree elements,
+or undef if there is no content for a part.  Return C<undef> instead of an
+array reference if the I<$element> has no useful content.  The input
+I<$element> is supposed to be the argument line element of
 C<%Texinfo::Commands::heading_spec_commands> commands such as C<@everyheading>.
 
 =item $status = valid_customization_option($name)

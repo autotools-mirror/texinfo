@@ -395,14 +395,15 @@ argument was found and the customization variable was set.
 If not already set, set @code{OUTPUT_ENCODING_NAME} based on input file
 encoding.
 
-@item $split_contents = split_custom_heading_command_contents($element)
-@anchor{Texinfo@asis{::}Common $split_contents = split_custom_heading_command_contents($element)}
+@item \@@split_heading = split_custom_heading_command_contents($element)
+@anchor{Texinfo@asis{::}Common \@@split_heading = split_custom_heading_command_contents($element)}
 @cindex @code{split_custom_heading_command_contents}
 
 Split the @emph{$element} contents at @code{@@|} in at max three parts.
-Return an element containing the split parts in contents, or @code{undef} if
-the @emph{$element} has no useful content.  The input @emph{$element}
-is supposed to be the argument line element of
+Return an array reference containing the split parts as Texinfo tree elements,
+or undef if there is no content for a part.  Return @code{undef} instead of an
+array reference if the @emph{$element} has no useful content.  The input
+@emph{$element} is supposed to be the argument line element of
 @code{%Texinfo::Commands::heading_spec_commands} commands such as @code{@@everyheading}.
 
 @item $status = valid_customization_option($name)

@@ -1,5 +1,14 @@
 2026-11-25  Patrice Dumas  <pertusus@free.fr>
 
+	* tta/perl/Texinfo/Common.pm (split_custom_heading_command_contents),
+	tta/perl/Texinfo/Convert/LaTeX.pm (_set_custom_headings): have
+	split_custom_heading_command_contents return an array instead of a
+	pseudo tree element.  If there is no content in a heading, let it be
+	undef instead of an element with empty contents.  Update
+	_set_custom_headings.
+
+2026-11-25  Patrice Dumas  <pertusus@free.fr>
+
 	* tta/perl/t/test_files_generated_list.txt, tta/perl/t/30sectioning.t
 	(brace_command_space_before_brace_in_node): test commands with space
 	after command before brace in node and sectioning command with
@@ -40,7 +49,7 @@
 
 	* tta/C/main/manipulate_tree.c (reference_to_arg_internal): call
 	element_builtin_data_cmd to get a cmd that can always be used for
-	flags.  Copy the argument contents, do not remove the rgument holder
+	flags.  Copy the argument contents, do not remove the argument holder
 	from the tree, such that it is destroyed when the parent is destroyed.
 
 	* tta/perl/Texinfo/ManipulateTree.pm (_reference_to_arg),
