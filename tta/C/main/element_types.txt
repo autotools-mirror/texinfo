@@ -166,8 +166,9 @@ text
 # for HTML converter
 _converted                                text
 
-# For Plaintext/Info converter
+# Next are for Plaintext/Info converter
 _code
+# next also for LaTeX
 _frenchspacing
 _stop_upper_case
 _suppress_styles

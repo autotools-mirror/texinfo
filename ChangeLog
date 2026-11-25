@@ -1,5 +1,11 @@
 2026-11-25  Patrice Dumas  <pertusus@free.fr>
 
+	* tta/perl/Texinfo/Convert/LaTeX.pm (_convert): use _frenchspacing
+	instead of _dot_not_end_sentence as type name to have the same as in
+	the plaintext converter.
+
+2026-11-25  Patrice Dumas  <pertusus@free.fr>
+
 	* tta/perl/Texinfo/Common.pm (split_custom_heading_command_contents),
 	tta/perl/Texinfo/Convert/LaTeX.pm (_set_custom_headings): have
 	split_custom_heading_command_contents return an array instead of a

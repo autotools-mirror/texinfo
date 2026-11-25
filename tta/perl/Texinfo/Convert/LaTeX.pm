@@ -4039,9 +4039,9 @@ sub _convert($$) {
           # in abbr spaces never end a sentence.
           my $argument;
           if ($cmdname eq 'abbr') {
-            # FIXME not an existing type
+            # use the same type name as in the plaintext converter
             $argument
-              = Texinfo::TreeElement::new({'type' => '_dot_not_end_sentence',
+              = Texinfo::TreeElement::new({'type' => '_frenchspacing',
                                   'contents' => [$args->[0]]});
           } else {
           # TODO in TeX, acronym is in a smaller font (1pt less).
@@ -4822,7 +4822,7 @@ sub _convert($$) {
     return $result;
   } elsif ($element->{'type'} eq 'preformatted') {
     $result .= _open_preformatted($self, $element);
-  } elsif ($element->{'type'} eq '_dot_not_end_sentence') {
+  } elsif ($element->{'type'} eq '_frenchspacing') {
     $self->{'formatting_context'}->[-1]->{'dot_not_end_sentence'} += 1;
   } elsif ($element->{'type'} eq 'untranslated_def_line_arg') {
     my $tree;
@@ -4860,7 +4860,7 @@ sub _convert($$) {
   }
 
   # now closing. First, close containers.
-  if ($type eq '_dot_not_end_sentence') {
+  if ($type eq '_frenchspacing') {
     $self->{'formatting_context'}->[-1]->{'dot_not_end_sentence'} -= 1;
   } elsif ($type eq 'def_item') {
     $result .= "\\end{Texinfoindented}\n";
