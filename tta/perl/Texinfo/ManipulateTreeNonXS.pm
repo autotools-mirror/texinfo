@@ -548,6 +548,12 @@ sub _new_node($$;$$) {
   $node->{'extra'}->{'identifier'} = $normalized;
   $node->{'extra'}->{'added'} = 1;
 
+  if (defined($associated_command)
+      and exists($associated_command->{'source_info'})) {
+    # no source_info may happen if the associated command is generated
+    $node->{'source_info'} = {%{$associated_command->{'source_info'}}};
+  }
+
   if (defined($associated_command) and defined($normalized_reference)
       and $normalized_reference ne $normalized
       and defined($identifier_target)) {
