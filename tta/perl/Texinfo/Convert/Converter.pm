@@ -1535,9 +1535,8 @@ sub comment_end_line_end_space($$) {
     my $end_idx = scalar(@{$element->{'contents'}}) - 1;
     while ($end_idx >= 0) {
       my $content = $element->{'contents'}->[$end_idx];
-      if (exists($content->{'type'})
-          and ($content->{'type'} eq 'spaces_after_argument'
-               or $content->{'type'} eq 'spaces_before_argument')) {
+      if ($content->{'type'} eq 'spaces_after_argument'
+          or $content->{'type'} eq 'spaces_before_argument') {
         my $text = $content->{'text'};
         if (chomp($text)) {
           $end_line = "\n";
@@ -1714,8 +1713,7 @@ sub table_item_content_tree($$) {
 
   # not in a @*table item/itemx.  Exemple in test with @itemx in @itemize
   # in @table
-  if (!exists($element->{'parent'}->{'type'})
-      or $element->{'parent'}->{'type'} ne 'table_term') {
+  if ($element->{'parent'}->{'type'} ne 'table_term') {
     return undef;
   }
   my $table_command = $element->{'parent'}->{'parent'}->{'parent'};
@@ -1745,8 +1743,7 @@ sub table_item_content_tree($$) {
     }
     # command name for the Texinfo::Commands hashes tests
     my $builtin_cmdname;
-    if (exists($command_as_argument->{'type'})
-        and $command_as_argument->{'type'} eq 'definfoenclose_command') {
+    if ($command_as_argument->{'type'} eq 'definfoenclose_command') {
       $command->{'extra'} = {} if (!exists($command->{'extra'}));
       $command->{'extra'}->{'begin'}
         = $command_as_argument->{'extra'}->{'begin'};

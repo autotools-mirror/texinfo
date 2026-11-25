@@ -127,7 +127,6 @@ sub check_node_same_texinfo_code($$) {
   if (defined($node_content)) {
     my $contents_node = $node_content;
     if ($node_content->{'contents'}->[-1]->{'type'}
-        and $node_content->{'contents'}->[-1]->{'type'}
                                       eq 'space_at_end_menu_node') {
       my $contents = [@{$node_content->{'contents'}}];
       pop @$contents;
@@ -154,9 +153,7 @@ sub root_heading_command_to_texinfo($) {
   if (exists($element->{'cmdname'})) {
     if (($element->{'cmdname'} eq 'node'
          or exists($sectioning_heading_commands{$element->{'cmdname'}}))
-        and exists($element->{'contents'}->[0]->{'type'})
         and $element->{'contents'}->[0]->{'type'} eq 'arguments_line'
-        and exists($element->{'contents'}->[0]->{'contents'}->[0]->{'type'})
         # Should always be true
         and $element->{'contents'}->[0]->{'contents'}->[0]->{'type'}
                                                            eq 'line_arg'
@@ -218,18 +215,15 @@ sub _convert_to_texinfo($) {
 
   return '' if ((exists($element->{'extra'})
                  and $element->{'extra'}->{'inserted'})
-                or (exists($element->{'type'})
-                    and $element->{'type'} eq 'arguments_line'));
+                or $element->{'type'} eq 'arguments_line');
 
   if (exists($element->{'text'})) {
     return '' if (exists($element->{'inserted_text'}));
-    if (exists($element->{'type'})
-        and $element->{'type'} eq 'bracketed_linemacro_arg') {
+    if ($element->{'type'} eq 'bracketed_linemacro_arg') {
       $result .= '{';
     }
     $result .= $element->{'text'};
-    if (exists($element->{'type'})
-        and $element->{'type'} eq 'bracketed_linemacro_arg') {
+    if ($element->{'type'} eq 'bracketed_linemacro_arg') {
       $result .= '}';
     }
   } else {
@@ -237,7 +231,6 @@ sub _convert_to_texinfo($) {
       my $cmdname = $element->{'cmdname'};
       my $data_cmdname;
       if ($cmdname eq 'item' and $element->{'contents'}
-          and exists($element->{'contents'}->[0]->{'type'})
           and $element->{'contents'}->[0]->{'type'} eq 'line_arg') {
         $data_cmdname = 'item_LINE';
       } else {
@@ -252,15 +245,13 @@ sub _convert_to_texinfo($) {
         # item, tab and headitem are nobrace commands with contents
         return $result if (!exists($element->{'contents'}));
       } elsif (exists($element->{'contents'})
-          and (exists($element->{'contents'}->[0]->{'type'})
-               and $element->{'contents'}->[0]->{'type'} eq 'arguments_line')) {
+          and $element->{'contents'}->[0]->{'type'} eq 'arguments_line') {
         # root commands and block commands that are not def commands
         $result .= _convert_args($element->{'contents'}->[0]);
       } elsif (exists($brace_commands{$cmdname})
-               or (exists($element->{'type'})
-                   and ($element->{'type'} eq 'definfoenclose_command'
-                        or $element->{'type'} eq 'macro_call'
-                        or $element->{'type'} eq 'rmacro_call'))) {
+               or $element->{'type'} eq 'definfoenclose_command'
+               or $element->{'type'} eq 'macro_call'
+               or $element->{'type'} eq 'rmacro_call') {
         # contents may not be set for a command without braces.  In that
         # case it is better if the command is considered as a command without
         # argument.
@@ -284,23 +275,20 @@ sub _convert_to_texinfo($) {
         $result .= '}' if ($braces);
         return $result;
       } elsif (exists($line_commands{$data_cmdname})
-               or (exists($element->{'type'})
-                   and ($element->{'type'} eq 'index_entry_command'
-                        or $element->{'type'} eq 'macro_call_line'
-                        or $element->{'type'} eq 'rmacro_call_line'))) {
+               or $element->{'type'} eq 'index_entry_command'
+               or $element->{'type'} eq 'macro_call_line'
+               or $element->{'type'} eq 'rmacro_call_line') {
         # line commands that are not root commands
         $result .= _convert_args($element);
         return $result;
       } elsif (exists($def_commands{$data_cmdname})
-               or (exists($element->{'type'})
-                   and ($element->{'type'} eq 'linemacro_call'))) {
+               or $element->{'type'} eq 'linemacro_call') {
         # @def* commands (that are also block commands)
       } else {
         warn "BUG: Unknown command type to convert to texinfo: $cmdname\n";
       }
     } else {
-      if (exists($element->{'type'})
-          and $element->{'type'} eq 'bracketed_arg') {
+      if ($element->{'type'} eq 'bracketed_arg') {
         $result .= '{';
       }
     }
@@ -311,8 +299,7 @@ sub _convert_to_texinfo($) {
       }
     }
 
-    $result .= '}' if (exists($element->{'type'})
-                       and $element->{'type'} eq 'bracketed_arg');
+    $result .= '}' if ($element->{'type'} eq 'bracketed_arg');
   }
   return $result;
 }

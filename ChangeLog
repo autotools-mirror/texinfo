@@ -1,5 +1,14 @@
 2026-11-24  Patrice Dumas  <pertusus@free.fr>
 
+	* tta/perl/Texinfo/Convert/Converter.pm,
+	tta/perl/Texinfo/Convert/NodeNameNormalization.pm,
+	tta/perl/Texinfo/Convert/Texinfo.pm,
+	tta/perl/Texinfo/Convert/TextContent.pm,
+	tta/perl/Texinfo/Convert/Utils.pm: remove conditions on type being
+	defined now that all elements have a type.
+
+2026-11-24  Patrice Dumas  <pertusus@free.fr>
+
 	* tta/perl/Texinfo/Common.pm, tta/perl/Texinfo/Indices.pm,
 	tta/perl/Texinfo/ManipulateTree.pm,
 	tta/perl/Texinfo/ManipulateTreeNonXS.pm,

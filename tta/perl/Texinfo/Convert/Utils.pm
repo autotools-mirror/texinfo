@@ -624,8 +624,7 @@ sub _find_element_authors_internal($$) {
         or exists($Texinfo::Commands::line_commands{$cmdname})) {
       return;
     }
-  } elsif (exists($element->{'type'})
-           and $element->{'type'} eq 'arguments_line') {
+  } elsif ($element->{'type'} eq 'arguments_line') {
     return;
   }
   if (exists($element->{'contents'})) {
@@ -663,8 +662,7 @@ sub find_root_command_next_heading_command($$;$$) {
         #print STDERR "HEADING FOUND ASSOCIATED $content->{'cmdname'}\n";
         return $content;
       }
-      if (exists($content->{'type'})
-          and $content->{'type'} eq 'index_entry_command') {
+      if ($content->{'type'} eq 'index_entry_command') {
         if ($do_not_ignore_index_entries) {
           return undef;
         } else {
@@ -713,10 +711,8 @@ sub find_root_command_next_heading_command($$;$$) {
         }
       }
     }
-    if (exists($content->{'type'})) {
-      if ($content->{'type'} eq 'paragraph') {
-        return undef;
-      }
+    if ($content->{'type'} eq 'paragraph') {
+      return undef;
     }
     # normally should not happen at the top level as text at top
     # level should only contain spaces (empty lines, text before

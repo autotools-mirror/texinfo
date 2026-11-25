@@ -242,28 +242,23 @@ sub _convert($) {
   #}
 
   if (exists($element->{'text'})) {
-    return '' if (exists($element->{'type'})
-                  and $ignored_text_types{$element->{'type'}});
+    return '' if ($ignored_text_types{$element->{'type'}});
     my $result = $element->{'text'};
     $result =~ s/\s+/ /g;
     return $result;
   }
 
-  return '' if ((exists($element->{'type'})
-                 and $ignored_types{$element->{'type'}})
+  return '' if ($ignored_types{$element->{'type'}}
           or (exists($element->{'cmdname'})
              and (exists($ignored_brace_commands{$element->{'cmdname'}})
                  # here ignore the 'regular' line commands
                  or (exists($element->{'contents'})
-                     and exists($element->{'contents'}->[0]->{'type'})
                      and $element->{'contents'}->[0]->{'type'} eq 'line_arg')
                  # here ignore the root-level line commands, @node and
                  # sectioning commands
                  or (exists($element->{'contents'})
-                     and exists($element->{'contents'}->[0]->{'type'})
                    and $element->{'contents'}->[0]->{'type'} eq 'arguments_line'
                    and exists($element->{'contents'}->[0]->{'contents'})
-           and exists($element->{'contents'}->[0]->{'contents'}->[0]->{'type'})
  and $element->{'contents'}->[0]->{'contents'}->[0]->{'type'} eq 'line_arg'))));
   if (exists($element->{'cmdname'})) {
     my $cmdname = $element->{'cmdname'};
@@ -285,6 +280,7 @@ sub _convert($) {
          = Texinfo::Convert::Unicode::encoded_accents(undef, $accent_text,
                                                   $stack, 'utf-8', undef);
       return $accented_char;
+    # FIXME text case + use get_non_empty_brace_args
     } elsif (exists($Texinfo::Commands::ref_commands{$cmdname})) {
       return '' if (!exists($element->{'contents'}));
       my @args_try_order;
@@ -302,10 +298,10 @@ sub _convert($) {
       return '';
     # Here all the commands with args are processed, if they have
     # more than one arg the first one is used.
+    # FIXME test case + use get_non_empty_brace_args
     } elsif (exists($element->{'contents'})
-           and ((exists($element->{'contents'}->[0]->{'type'})
-                 and ($element->{'contents'}->[0]->{'type'} eq 'brace_container'
-                      or $element->{'contents'}->[0]->{'type'} eq 'brace_arg'))
+           and ($element->{'contents'}->[0]->{'type'} eq 'brace_container'
+                or $element->{'contents'}->[0]->{'type'} eq 'brace_arg'
                 or $cmdname eq 'math')) {
       return _convert($element->{'contents'}->[0]);
     }

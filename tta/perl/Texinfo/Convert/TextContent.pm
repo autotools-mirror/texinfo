@@ -130,7 +130,6 @@ sub _convert($$) {
   if (exists($element->{'cmdname'})) {
     if ($element->{'cmdname'} eq 'item'
         and exists($element->{'contents'})
-        and exists($element->{'contents'}->[0]->{'type'})
         and $element->{'contents'}->[0]->{'type'} eq 'line_arg') {
       $data_cmdname = 'item_LINE';
     } else {
@@ -139,12 +138,9 @@ sub _convert($$) {
   }
 
   return ''
-  if (!(exists($element->{'type'})
-        and $element->{'type'} eq 'def_line')
-     and ((exists($element->{'type'})
-           and exists($ignored_types{$element->{'type'}}))
-          or (exists($element->{'type'})
-              and $element->{'type'} eq 'arguments_line'
+  if ($element->{'type'} ne 'def_line'
+     and (exists($ignored_types{$element->{'type'}}))
+          or ($element->{'type'} eq 'arguments_line'
               and exists($Texinfo::Commands::blockitem_commands{
                                 $element->{'parent'}->{'cmdname'}}))
           or (exists($element->{'cmdname'})
@@ -161,11 +157,10 @@ sub _convert($$) {
                      and $self->get_conf('FORMAT_MENU') eq 'nomenu')
              # here ignore most of the line commands
                  or (exists($element->{'contents'})
-                     and exists($element->{'contents'}->[0]->{'type'})
                      and ($element->{'contents'}->[0]->{'type'} eq 'line_arg'
                           or $element->{'contents'}->[0]->{'type'} eq 'rawline_arg')
                      and !exists(
-                      $self->{'formatted_line_commands'}->{$data_cmdname}))))));
+                      $self->{'formatted_line_commands'}->{$data_cmdname})))));
   if (exists($element->{'text'})) {
     return $element->{'text'};
   }
@@ -208,8 +203,7 @@ sub _convert($$) {
     for (my $i = $start; $i < $contents_nr; $i++) {
       my $content = $element->{'contents'}->[$i];
       $result .= _convert($self, $content);
-      if (exists($content->{'type'})
-          and $content->{'type'} eq 'block_line_arg'
+      if ($content->{'type'} eq 'block_line_arg'
           and $result =~ /\S/) {
         my ($end_spaces, $end_line, $end_comment)
            = $self->comment_end_line_end_space($content);
@@ -218,7 +212,7 @@ sub _convert($$) {
     }
   }
 
-  if (exists($element->{'type'}) and $element->{'type'} eq 'line_arg') {
+  if ($element->{'type'} eq 'line_arg') {
     $result .= "\n";
   }
 
