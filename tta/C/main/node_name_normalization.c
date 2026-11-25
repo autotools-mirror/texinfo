@@ -159,19 +159,19 @@ convert_to_normalized_internal (const ELEMENT *e, TEXT *result)
         {
           int order_index = 0;
           int *arguments_order = ref_5_args_order;
+          CONST_ELEMENT_LIST *args = get_non_empty_brace_args (e);
           if (cmd == CM_inforef || cmd == CM_link)
             arguments_order = ref_3_args_order;
           while (arguments_order[order_index] >= 0)
             {
               /* no risk with that casting as idx < 5 */
               size_t idx = (size_t) arguments_order[order_index];
-              if (e->e.c->contents.number > idx)
+              if (args->number > idx && args->list[idx])
                 {
                   TEXT arg_text;
 
                   text_init (&arg_text);
-                  convert_to_normalized_internal (
-                    e->e.c->contents.list[idx], &arg_text);
+                  convert_to_normalized_internal (args->list[idx], &arg_text);
                   if (arg_text.end > 0)
                     {
                       char *non_space_char = arg_text.text
@@ -186,14 +186,25 @@ convert_to_normalized_internal (const ELEMENT *e, TEXT *result)
                 }
               order_index++;
             }
+          destroy_const_element_list (args);
           return;
         }
-      else if (e->e.c->contents.number > 0
-               && (e->e.c->contents.list[0]->type == ET_brace_container
-                   || e->e.c->contents.list[0]->type == ET_brace_arg
-                   || cmd == CM_math))
+      else if (command_data[cmd].flags & CF_brace)
         {
-          convert_to_normalized_internal (e->e.c->contents.list[0], result);
+          if (e->e.c->contents.number > 0)
+            {
+              size_t i;
+              for (i = 0; i < e->e.c->contents.number; i++)
+                {
+                  ELEMENT *content = e->e.c->contents.list[i];
+
+                  if (content->type != ET_spaces_after_cmd_before_arg)
+                    {
+                      convert_to_normalized_internal (content, result);
+                      break;
+                    }
+                }
+            }
           return;
         }
     }

@@ -280,9 +280,9 @@ sub _convert($) {
          = Texinfo::Convert::Unicode::encoded_accents(undef, $accent_text,
                                                   $stack, 'utf-8', undef);
       return $accented_char;
-    # FIXME text case + use get_non_empty_brace_args
     } elsif (exists($Texinfo::Commands::ref_commands{$cmdname})) {
-      return '' if (!exists($element->{'contents'}));
+      my $args = Texinfo::Common::get_non_empty_brace_args($element);
+      return '' if (!$args);
       my @args_try_order;
       if ($cmdname eq 'inforef' or $cmdname eq 'link') {
         @args_try_order = (0, 1, 2);
@@ -290,20 +290,24 @@ sub _convert($) {
         @args_try_order = (0, 1, 2, 4, 3);
       }
       foreach my $index (@args_try_order) {
-        if (defined($element->{'contents'}->[$index])) {
-          my $text = _convert($element->{'contents'}->[$index]);
+        if (defined($args->[$index])) {
+          my $text = _convert($args->[$index]);
           return $text if (defined($text) and $text =~ /\S/);
         }
       }
       return '';
     # Here all the commands with args are processed, if they have
     # more than one arg the first one is used.
-    # FIXME test case + use get_non_empty_brace_args
-    } elsif (exists($element->{'contents'})
-           and ($element->{'contents'}->[0]->{'type'} eq 'brace_container'
-                or $element->{'contents'}->[0]->{'type'} eq 'brace_arg'
-                or $cmdname eq 'math')) {
-      return _convert($element->{'contents'}->[0]);
+    } elsif (exists($Texinfo::Commands::brace_commands{$cmdname})
+             or $element->{'type'} eq 'definfoenclose_command') {
+      if (exists($element->{'contents'})) {
+        foreach my $content (@{$element->{'contents'}}) {
+          if ($content->{'type'} ne 'spaces_after_cmd_before_arg') {
+            return _convert($content);
+          }
+        }
+      }
+      return '';
     }
   }
   my $result = '';
