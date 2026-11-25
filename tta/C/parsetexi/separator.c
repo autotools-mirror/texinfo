@@ -604,11 +604,13 @@ handle_comma (ELEMENT *current, const char **line_inout)
               for (i = 0; i < current->e.c->contents.number; i++)
                 {
                   const ELEMENT *content = current->e.c->contents.list[i];
-                  if (content->type == ET_normal_text
-                      && content->e.text->end > 0)
+                  if (content->type != ET_spaces_before_argument)
                     {
-                      inline_type = content->e.text->text;
-                      break;
+                      if (type_data[content->type].flags & TF_text)
+                        {
+                          inline_type = content->e.text->text;
+                          break;
+                        }
                     }
                 }
             }

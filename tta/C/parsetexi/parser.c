@@ -980,7 +980,7 @@ abort_empty_line (ELEMENT *current)
 /* returns the input ELEMENT if the element text consists only of spaces.
    If there are trailing spaces in ELEMENT, remove them from ELEMENT,
    create and return a new element holding the removed trailing spaces.
-   Otherwise return 0.
+   Otherwise return NULL.
  */
 static ELEMENT *
 isolate_trailing_spaces_element (enum element_type spaces_type,
@@ -997,7 +997,8 @@ isolate_trailing_spaces_element (enum element_type spaces_type,
        i--)
     trailing_spaces++;
 
-  /* only spaces in input element text, return the element */
+  /* only spaces in input element text; return the element, leave
+     the choice to set the type to the caller */
   if (i < 0)
     return element;
 
@@ -1148,6 +1149,9 @@ isolate_leading_trailing (ELEMENT *current, int isolate_leading_only)
           if (spaces_element == last_element)
             {
               if (!(type_data[last_element->type].flags & TF_trailing_space))
+                /* keep some special spaces as is when they carry an interesting
+                   information and should not be ignored in most cases as
+                   spaces_after_argument should */
                 spaces_element->type = ET_spaces_after_argument;
               else
                 {

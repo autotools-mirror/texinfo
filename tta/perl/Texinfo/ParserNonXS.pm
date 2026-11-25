@@ -2437,8 +2437,8 @@ sub _merge_text($$$;$) {
     if ($text =~ /^(\s+)/) {
       $leading_spaces = $1;
     }
-    if ($leading_space_types{$last_element->{'type'}}) {
-      my $last_elt_type = $last_element->{'type'};
+    my $last_elt_type = $last_element->{'type'};
+    if (exists($leading_space_types{$last_elt_type})) {
       if ($leading_spaces) {
         print STDERR "MERGE_TEXT ADD leading empty |$leading_spaces|"
                   ." to $last_elt_type\n"
@@ -2451,6 +2451,7 @@ sub _merge_text($$$;$) {
         # This is different from calling do_abort_empty_line and
         # afterwards adding a new element if there are source marks:
         # we avoid an empty element being added by reusing.
+        # Note that $popped_element is the same as $last_element.
         my $popped_element = _pop_element_from_contents($self, $current);
         $popped_element->{'type'} = 'normal_text';
         $popped_element->{'text'} = $text;
@@ -3114,19 +3115,19 @@ sub _set_non_ignored_space_in_index_before_command($);
 sub _set_non_ignored_space_in_index_before_command($) {
   my $content = shift;
 
-  my $pending_spaces_element = 0;
+  my $pending_spaces_element;
   foreach my $element (@{$content->{'contents'}}) {
     if ($element->{'type'} eq 'internal_spaces_before_brace_in_index') {
       # set to "spaces_at_end" in case there are only spaces after
       $element->{'type'} = 'spaces_at_end';
       $pending_spaces_element = $element;
-    } elsif ($pending_spaces_element
+    } elsif (defined($pending_spaces_element)
              and not ((exists($element->{'cmdname'})
                        and $in_index_commands{$element->{'cmdname'}})
                       or $element->{'type'} eq 'spaces_after_close_brace')
              and (! _check_empty_expansion([$element]))) {
       $pending_spaces_element->{'type'} = 'normal_text';
-      $pending_spaces_element = 0;
+      $pending_spaces_element = undef;
     }
     if (exists($element->{'cmdname'})
         and $element->{'cmdname'} eq 'subentry'
@@ -3156,7 +3157,7 @@ sub _abort_empty_line($$) {
   if (exists($current->{'contents'})) {
     my $last_element = $current->{'contents'}->[-1];
     my $type = $last_element->{'type'};
-    if ($leading_space_types{$type}) {
+    if (exists($leading_space_types{$type})) {
       if ($self->{'conf'}->{'DEBUG'}) {
         print STDERR "ABORT EMPTY in "
            .Texinfo::Common::debug_print_element($current)
@@ -3197,13 +3198,12 @@ sub _abort_empty_line($$) {
   }
 }
 
-sub _isolate_trailing_spaces_element($;$) {
+sub _isolate_trailing_spaces_element($$) {
   my ($element, $type) = @_;
 
   my $new_space_element;
 
   if ($element->{'text'} =~ s/(\s+)$//) {
-    $type = 'normal_text' if (!defined($type));
     $new_space_element = Texinfo::TreeElement::new({'text' => $1,
                                                   'type' => $type});
     if (exists($element->{'source_marks'})) {
@@ -3228,9 +3228,9 @@ sub _isolate_trailing_space($$) {
       if ($last_element->{'text'} !~ /\S/) {
         $last_element->{'type'} = $spaces_type;
       } else {
-        my $new_space_element = _isolate_trailing_spaces_element($last_element);
+        my $new_space_element
+          = _isolate_trailing_spaces_element($last_element, $spaces_type);
         if (defined($new_space_element)) {
-          $new_space_element->{'type'} = $spaces_type;
           push @{$current->{'contents'}}, $new_space_element;
         }
       }
@@ -3314,7 +3314,7 @@ sub _isolate_leading_trailing($$;$) {
       if ($last_element->{'text'} !~ /\S/) {
         # keep some special spaces as is when they carry an interesting
         # information and should not be ignored in most cases as
-        # spaces_after_argument is
+        # spaces_after_argument should
         if (!$trailing_space_types{$e_type}) {
           $last_element->{'type'} = 'spaces_after_argument';
         } else {
@@ -3409,24 +3409,24 @@ sub _split_element_def_args($$$$) {
     return $element;
   } elsif (exists($element->{'text'})) {
     my @elements;
-    my $type;
+    # split at spaces and non-space and alternate.
+    # if undef, next type is normal text, otherwise $next_space_type value
+    # is the next type, and a space type.
+    my $next_space_type;
     # NOTE Non-ascii space is considered as argument here
     my @split_text = split /(?<=\s)(?=\S)|(?<=\S)(?=\s)/, $element->{'text'};
     if ($split_text[0] =~ /^\s*$/) {
-      # NOTE this changes, in particular, spaces_before_argument
-      # and spaces_after_argument types.  It is needed, as afterwards,
-      # spaces types other than 'spaces' are not handled correctly as
-      # arguments separators
-      $type = 'spaces';
+      # Start with spaces.
+      $next_space_type = 'spaces';
     }
     my $current_position = 0;
     foreach my $t (@split_text) {
       my $e_type;
-      if (defined($type)) {
-        $e_type = $type;
-        $type = undef;
+      if (defined($next_space_type)) {
+        $e_type = $next_space_type;
+        $next_space_type = undef;
       } else {
-        $type = 'spaces';
+        $next_space_type = 'spaces';
         $e_type = 'normal_text';
       }
       my $e = Texinfo::TreeElement::new({'text' => $t, 'type' => $e_type});
@@ -7016,10 +7016,11 @@ sub _handle_comma($$$$) {
       # and put it in extra format
       if (exists($current->{'contents'})) {
         foreach my $content (@{$current->{'contents'}}) {
-          if (exists($content->{'text'})
-              and $content->{'type'} eq 'normal_text') {
-            $inline_type = $content->{'text'};
-            last;
+          if ($content->{'type'} ne 'spaces_before_argument') {
+            if (exists($content->{'text'})) {
+              $inline_type = $content->{'text'};
+              last;
+            }
           }
         }
       }

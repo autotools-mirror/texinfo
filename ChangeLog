@@ -1,5 +1,25 @@
 2026-11-25  Patrice Dumas  <pertusus@free.fr>
 
+	* tta/perl/Texinfo/ParserNonXS.pm (_isolate_trailing_spaces_element):
+	make type argument of _isolate_trailing_spaces_element mandatory.  Do
+	not set type to normal_text as it is confusing because it will be
+	replaced afterwards and do not repalce afterwards but set directly in
+	_isolate_trailing_spaces_element.
+
+	* tta/C/parsetexi/separator.c (handle_comma),
+	tta/perl/Texinfo/ParserNonXS.pm (_handle_comma): ignore
+	spaces_before_argument and use as argument the first space of any
+	other type.
+
+	* tta/perl/Texinfo/ParserNonXS.pm
+	(_set_non_ignored_space_in_index_before_command): use undef instead of
+	0 when there is no pending element.
+
+	* tta/perl/Texinfo/ParserNonXS.pm (_split_element_def_args): rename
+	type as next_space_type to clarify code.
+
+2026-11-25  Patrice Dumas  <pertusus@free.fr>
+
 	* tta/perl/Texinfo/Convert/LaTeX.pm (_convert): use _frenchspacing
 	instead of _dot_not_end_sentence as type name to have the same as in
 	the plaintext converter.
