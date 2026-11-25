@@ -47,8 +47,7 @@ sub unsplit($) {
   my $document = shift;
 
   my $root = $document->tree();
-  if (!exists($root->{'type'}) or $root->{'type'} ne 'document_root'
-      or !exists($root->{'contents'})) {
+  if ($root->{'type'} ne 'document_root' or !exists($root->{'contents'})) {
     return 0;
   }
 

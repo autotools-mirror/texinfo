@@ -1,5 +1,16 @@
 2026-11-24  Patrice Dumas  <pertusus@free.fr>
 
+	* tta/perl/Texinfo/Common.pm, tta/perl/Texinfo/Indices.pm,
+	tta/perl/Texinfo/ManipulateTree.pm,
+	tta/perl/Texinfo/ManipulateTreeNonXS.pm,
+	tta/perl/Texinfo/OutputUnitsNonXS.pm, tta/perl/Texinfo/Reader.pm,
+	tta/perl/Texinfo/Structuring.pm, tta/perl/Texinfo/StructuringNonXS.pm,
+	tta/perl/Texinfo/Transformations.pm,
+	tta/perl/Texinfo/TransformationsNonXS.pm: remove conditions on type
+	being defined now that all elements have a type.
+
+2026-11-24  Patrice Dumas  <pertusus@free.fr>
+
 	* tta/perl/Texinfo/ParserNonXS.pm: remove conditions on type being
 	defined now that all elements have a type.
 

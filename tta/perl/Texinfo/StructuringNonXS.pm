@@ -470,8 +470,7 @@ sub _register_menu_node_targets($$$) {
   if (exists($node_relations->{'menus'})) {
     foreach my $menu (@{$node_relations->{'menus'}}) {
       foreach my $menu_content (@{$menu->{'contents'}}) {
-        if (exists($menu_content->{'type'})
-            and $menu_content->{'type'} eq 'menu_entry') {
+        if ($menu_content->{'type'} eq 'menu_entry') {
           my $menu_node = normalized_entry_associated_internal_node
                             ($menu_content, $identifier_target);
           $register->{$menu_node} = 1 if (defined($menu_node));
@@ -625,8 +624,7 @@ sub complete_node_tree_with_menus($) {
         my $previous_node_relations;
         my $previous_node;
         foreach my $menu_content (@{$menu->{'contents'}}) {
-          if (exists($menu_content->{'type'})
-              and $menu_content->{'type'} eq 'menu_entry') {
+          if ($menu_content->{'type'} eq 'menu_entry') {
             my $menu_node;
             my $menu_node_relations;
             foreach my $content (@{$menu_content->{'contents'}}) {
@@ -706,8 +704,7 @@ sub complete_node_tree_with_menus($) {
   if ($check_menu_entries and exists($global_commands->{'detailmenu'})) {
     foreach my $detailmenu (@{$global_commands->{'detailmenu'}}) {
       foreach my $menu_content (@{$detailmenu->{'contents'}}) {
-        if (exists($menu_content->{'type'})
-            and $menu_content->{'type'} eq 'menu_entry') {
+        if ($menu_content->{'type'} eq 'menu_entry') {
           foreach my $content (@{$menu_content->{'contents'}}) {
             if ($content->{'type'} eq 'menu_entry_node') {
               if (not (exists($content->{'extra'})
@@ -747,8 +744,7 @@ sub check_node_tree_menu_structure($) {
       if (exists($node_relations->{'menus'})) {
         foreach my $menu (@{$node_relations->{'menus'}}) {
           foreach my $menu_content (@{$menu->{'contents'}}) {
-            next if (!exists($menu_content->{'type'})
-                     or $menu_content->{'type'} ne 'menu_entry');
+            next if ($menu_content->{'type'} ne 'menu_entry');
             my $menu_node = normalized_entry_associated_internal_node
                               ($menu_content, $identifier_target);
             if (defined($menu_node) and $menu_node->{'cmdname'} eq 'node') {
@@ -824,8 +820,7 @@ sub check_node_tree_menu_structure($) {
         # to see based on what came before.
         MENU_CONTENT:
         foreach my $menu_content (@{$menu->{'contents'}}) {
-          next if (!exists($menu_content->{'type'})
-                   or $menu_content->{'type'} ne 'menu_entry');
+          next if ($menu_content->{'type'} ne 'menu_entry');
           my $menu_node
             = normalized_entry_associated_internal_node
                 ($menu_content, $identifier_target);
@@ -995,8 +990,7 @@ sub check_node_tree_menu_structure($) {
       my ($menu_prev_node, $menu_prev_node_directions);
       foreach my $menu (@{$node_relations->{'menus'}}) {
         foreach my $menu_content (@{$menu->{'contents'}}) {
-          next if !defined($menu_content->{'type'})
-            or $menu_content->{'type'} ne 'menu_entry';
+          next if ($menu_content->{'type'} ne 'menu_entry');
           my $menu_node = normalized_entry_associated_internal_node
                             ($menu_content, $identifier_target);
           next if (!defined($menu_node)
@@ -1534,8 +1528,7 @@ sub print_nodes_list($) {
       $result .= " menus:\n";
       foreach my $menu (@{$node_relations->{'menus'}}) {
         foreach my $menu_content (@{$menu->{'contents'}}) {
-          if (exists($menu_content->{'type'})
-              and $menu_content->{'type'} eq 'menu_entry') {
+          if ($menu_content->{'type'} eq 'menu_entry') {
             my $menu_node;
             foreach my $content (@{$menu_content->{'contents'}}) {
               if ($content->{'type'} eq 'menu_entry_node') {

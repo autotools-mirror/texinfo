@@ -144,9 +144,8 @@ sub _move_selected_element_index_entries_after_items($) {
         and exists($previous->{'contents'})) {
 
       my $previous_ending_container;
-      if (exists($previous->{'contents'}->[-1]->{'type'})
-          and ($previous->{'contents'}->[-1]->{'type'} eq 'paragraph'
-               or $previous->{'contents'}->[-1]->{'type'} eq 'preformatted')) {
+      if ($previous->{'contents'}->[-1]->{'type'} eq 'paragraph'
+          or $previous->{'contents'}->[-1]->{'type'} eq 'preformatted') {
         # for preformatted, happens if in @itemize/enumerate in @example
         # or similar.
         # for paragraph happens if there is a paragraph at the end
@@ -164,8 +163,7 @@ sub _move_selected_element_index_entries_after_items($) {
       my $last_entry_idx = -1;
       for (my $i = $contents_nr -1; $i >= 0; $i--) {
         my $content = $previous_ending_container->{'contents'}->[$i];
-        if (exists($content->{'type'})
-            and $content->{'type'} eq 'index_entry_command') {
+        if ($content->{'type'} eq 'index_entry_command') {
           $last_entry_idx = $i;
         } elsif (not (exists($content->{'cmdname'})
                       and ($content->{'cmdname'} eq 'c'
@@ -177,7 +175,6 @@ sub _move_selected_element_index_entries_after_items($) {
       if ($last_entry_idx >= 0) {
         my $item_container;
         if (exists($item->{'contents'})
-            and exists($item->{'contents'}->[0]->{'type'})
             and $item->{'contents'}->[0]->{'type'} eq 'preformatted') {
           $item_container = $item->{'contents'}->[0];
         } else {
@@ -192,7 +189,6 @@ sub _move_selected_element_index_entries_after_items($) {
 
         my $insertion_idx = 0;
         if (exists($item_container->{'contents'})
-            and exists($item_container->{'contents'}->[0]->{'type'})
             and $item_container->{'contents'}->[0]->{'type'}
                                 eq 'ignorable_spaces_after_command') {
           # insert after leading spaces, and add an end of line if there
@@ -242,7 +238,6 @@ sub _relate_index_entries_to_table_items_in($$) {
 
   foreach my $table_entry (@{$table->{'contents'}}) {
     next unless(exists($table_entry->{'contents'})
-                and exists($table_entry->{'type'})
                 and $table_entry->{'type'} eq 'table_entry');
 
     my $term = $table_entry->{'contents'}->[0];
@@ -252,13 +247,11 @@ sub _relate_index_entries_to_table_items_in($$) {
     # Move any index entries from the start of a 'table_definition' to
     # the 'table_term'.
     if (defined($table_entry->{'contents'}->[1])
-        and exists($table_entry->{'contents'}->[1]->{'type'})
         and $table_entry->{'contents'}->[1]->{'type'} eq 'table_definition') {
       $definition = $table_entry->{'contents'}->[1];
       my $nr_index_entry_command = 0;
       foreach my $child (@{$definition->{'contents'}}) {
-        if (exists($child->{'type'})
-            and $child->{'type'} eq 'index_entry_command') {
+        if ($child->{'type'} eq 'index_entry_command') {
           $child->{'parent'} = $term;
           $nr_index_entry_command++;
         } else {
@@ -271,15 +264,14 @@ sub _relate_index_entries_to_table_items_in($$) {
       }
     }
 
-    if (exists($term->{'type'}) and $term->{'type'} eq 'table_term') {
+    if ($term->{'type'} eq 'table_term') {
       # Relate the first index_entry_command in the 'table_term' to
       # the term itself.
 
       my $index_entry;
       my $index_element;
       foreach my $content (@{$term->{'contents'}}) {
-        if (exists($content->{'type'})
-            and $content->{'type'} eq 'index_entry_command') {
+        if ($content->{'type'} eq 'index_entry_command') {
           if (!$index_entry) {
             my $index_info;
             $index_element = $content;
@@ -434,8 +426,7 @@ sub _new_node($$;$$) {
     $node_tree->{'contents'} = [Texinfo::TreeElement::new({'text' => '',
                                                  'type' => 'normal_text'})];
     $empty_node = 1;
-  } elsif (exists($node_tree->{'contents'}->[0]->{'type'})
-           and $node_tree->{'contents'}->[0]->{'type'}
+  } elsif ($node_tree->{'contents'}->[0]->{'type'}
                                            eq 'spaces_before_argument') {
     $tree_space_before = shift(@{$node_tree->{'contents'}});
   }
@@ -448,8 +439,7 @@ sub _new_node($$;$$) {
   }
   my $spaces_after_text = '';
   my $tree_space_after;
-  if (exists($node_tree->{'contents'}->[-1]->{'type'})
-      and $node_tree->{'contents'}->[-1]->{'type'}
+  if ($node_tree->{'contents'}->[-1]->{'type'}
                                         eq 'spaces_after_argument') {
     $tree_space_after = pop @{$node_tree->{'contents'}};
   } elsif (scalar(@{$node_tree->{'contents'}}) > 0

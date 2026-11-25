@@ -137,7 +137,7 @@ sub read($) {
 
   if (exists($element->{'text'})) {
     my $type = $element->{'type'};
-    if (defined($type) and $ignorable_text_types{$type}) {
+    if ($ignorable_text_types{$type}) {
       $token->{'category'} = Texinfo::Reader->TXI_READ_IGNORABLE_TEXT;
     } else {
       $token->{'category'} = Texinfo::Reader->TXI_READ_TEXT;

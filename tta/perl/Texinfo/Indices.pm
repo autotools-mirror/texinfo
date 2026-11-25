@@ -142,7 +142,6 @@ sub _remove_def_types($) {
 
   $element->{'type'} = 'generic_container';
   if (exists($element->{'contents'})
-      and exists($element->{'contents'}->[0]->{'type'})
       and $element->{'contents'}->[0]->{'type'} eq 'bracketed_arg') {
         # use brace_arg instead of bracketed_arg to avoid specific def
         # type for the conversion of the index entry, but still have

@@ -250,7 +250,7 @@ sub _complete_node_menu($;$) {
         and scalar(@{$node_relations->{'menus'}})) {
       foreach my $menu (@{$node_relations->{'menus'}}) {
         foreach my $entry (@{$menu->{'contents'}}) {
-          if (exists($entry->{'type'}) and $entry->{'type'} eq 'menu_entry') {
+          if ($entry->{'type'} eq 'menu_entry') {
             my $normalized_entry_node
               = Texinfo::ManipulateTree::normalized_menu_entry_internal_node(
                                                                        $entry);
@@ -443,11 +443,9 @@ sub regenerate_master_menu($;$) {
         # remove internal refs of removed entries
         my $internal_references = $document->internal_references_information();
         foreach my $detailmenu_entry (@{$entry->{'contents'}}) {
-          if (exists($detailmenu_entry->{'type'})
-              and $detailmenu_entry->{'type'} eq 'menu_entry') {
+          if ($detailmenu_entry->{'type'} eq 'menu_entry') {
             foreach my $entry_content (@{$detailmenu_entry->{'contents'}}) {
-              if (exists($entry_content->{'type'})
-                  and $entry_content->{'type'} eq 'menu_entry_node') {
+              if ($entry_content->{'type'} eq 'menu_entry_node') {
                 Texinfo::Common::replace_remove_list_element(
                                                       $internal_references,
                                                       $entry_content);
@@ -471,10 +469,8 @@ sub regenerate_master_menu($;$) {
   $new_detailmenu->{'parent'} = $last_menu;
   if ($index) {
     my $last_element = $last_menu->{'contents'}->[$index-1];
-    if (exists($last_element->{'type'})
-        and $last_element->{'type'} eq 'menu_comment'
+    if ($last_element->{'type'} eq 'menu_comment'
         and scalar(@{$last_element->{'contents'}})
-        and exists($last_element->{'contents'}->[-1]->{'type'})
         and $last_element->{'contents'}->[-1]->{'type'} eq 'preformatted') {
       {
         # already a menu comment at the end of the menu, add an empty line
@@ -484,8 +480,7 @@ sub regenerate_master_menu($;$) {
                                        'text' => "\n",});
         push @{$preformatted->{'contents'}}, $empty_line;
       }
-    } elsif (exists($last_element->{'type'})
-             and $last_element->{'type'} eq 'menu_entry') {
+    } elsif ($last_element->{'type'} eq 'menu_entry') {
       # there is a last menu entry, add a menu comment containing an empty line
       # after it
       my $menu_comment

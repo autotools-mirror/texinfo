@@ -73,10 +73,9 @@ sub menu_to_simple_menu($) {
 
   my @contents;
   foreach my $content (@{$menu->{'contents'}}) {
-    if (exists($content->{'type'}) and $content->{'type'} eq 'menu_comment') {
+    if ($content->{'type'} eq 'menu_comment') {
       push @contents, @{$content->{'contents'}};
-    } elsif (exists($content->{'type'})
-             and $content->{'type'} eq 'menu_entry') {
+    } elsif ($content->{'type'} eq 'menu_entry') {
       my $preformatted = {'type' => 'preformatted', 'contents' => [$content]};
       push @contents, $preformatted;
       $content->{'parent'} = $preformatted;
@@ -85,8 +84,7 @@ sub menu_to_simple_menu($) {
       my @args = @{$content->{'contents'}};
       @{$content->{'contents'}} = ();
       while (@args) {
-        if (exists($args[0]->{'type'})
-            and $args[0]->{'type'} eq 'menu_entry_description') {
+        if ($args[0]->{'type'} eq 'menu_entry_description') {
           my $description = shift @args;
           push @contents, @{$description->{'contents'}};
           push @contents, @args;
@@ -111,7 +109,7 @@ sub menu_to_simple_menu($) {
   my $current_preformatted;
   foreach my $content (@contents) {
     $content->{'parent'} = $menu;
-    if (exists($content->{'type'}) and $content->{'type'} eq 'preformatted') {
+    if ($content->{'type'} eq 'preformatted') {
       if (!defined($current_preformatted)) {
         $current_preformatted = $content;
         push @{$menu->{'contents'}}, $content;
@@ -143,7 +141,7 @@ sub _protect_hashchar_at_line_beginning($$$) {
       $current->{'text'} =~ /^\s*#\s*(line)? (\d+)(( "([^"]+)")(\s+\d+)*)?\s*$/) {
       # protect if first in container, or if after a newline
       if ($i == 0
-          or ($i == 1 and exists($parent->{'contents'}->[0]->{'type'})
+          or ($i == 1
               and ($parent->{'contents'}->[0]->{'type'} eq 'arguments_line'
                   # for example @quotation # line 100 "toto"
                   # but it is not clear if it is correct
@@ -152,7 +150,7 @@ sub _protect_hashchar_at_line_beginning($$$) {
           or (exists($parent->{'contents'}->[$i-1]->{'text'})
               and $parent->{'contents'}->[$i-1]->{'text'} =~ /\n$/)) {
         # do not actually protect in raw block command, but warn
-        if (exists($current->{'type'}) and $current->{'type'} eq 'raw') {
+        if ($current->{'type'} eq 'raw') {
           my $parent_for_warn = $parent;
           while ($parent_for_warn) {
             if (exists($parent_for_warn->{'cmdname'})

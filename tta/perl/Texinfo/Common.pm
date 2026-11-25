@@ -740,8 +740,7 @@ sub non_leading_trailing_indices($) {
   if (exists($tree->{'contents'})) {
     my $start_idx = 0;
     foreach my $content (@{$tree->{'contents'}}) {
-      if (exists($content->{'type'})
-          and $content->{'type'} eq 'spaces_before_argument') {
+      if ($content->{'type'} eq 'spaces_before_argument') {
         $start_idx++;
       } elsif (exists($content->{'cmdname'})
                and ($content->{'cmdname'} eq 'comment'
@@ -757,8 +756,7 @@ sub non_leading_trailing_indices($) {
     my $end_idx = scalar(@{$tree->{'contents'}}) - 1;
     while ($end_idx > 0) {
       my $content = $tree->{'contents'}->[$end_idx];
-      if (exists($content->{'type'})
-          and $content->{'type'} eq 'spaces_after_argument') {
+      if ($content->{'type'} eq 'spaces_after_argument') {
         $end_idx--;
       } elsif (exists($content->{'cmdname'})
                and ($content->{'cmdname'} eq 'comment'
@@ -1002,9 +1000,6 @@ sub empty_spaces_argument($) {
 
   foreach my $content (@{$element->{'contents'}}) {
     if (exists($content->{'text'})) {
-      if (!exists($content->{'type'})) {
-        return 0;
-      }
       if ($content->{'type'} ne 'spaces_before_argument') {
         return 0;
       }
@@ -1030,9 +1025,8 @@ sub simple_arg_text($) {
   if (exists($element->{'contents'})) {
     foreach my $content (@{$element->{'contents'}}) {
       if (exists($content->{'text'})) {
-        if (exists($content->{'type'})
-            and ($content->{'type'} eq 'spaces_before_argument'
-                 or $content->{'type'} eq 'spaces_after_argument')) {
+        if ($content->{'type'} eq 'spaces_before_argument'
+            or $content->{'type'} eq 'spaces_after_argument') {
           next;
         } elsif (!defined($result)) {
           $result = $content->{'text'};
@@ -1093,8 +1087,7 @@ sub get_non_empty_brace_args($) {
 
   my @args;
   foreach my $arg (@{$element->{'contents'}}) {
-    next if (exists($arg->{'type'})
-             and $arg->{'type'} eq 'spaces_after_cmd_before_arg');
+    next if ($arg->{'type'} eq 'spaces_after_cmd_before_arg');
     if (empty_spaces_argument($arg)) {
       push @args, undef;
     } else {
@@ -1115,10 +1108,8 @@ sub get_verb_delimiter($) {
 
   if (exists($element->{'contents'})) {
     foreach my $content (@{$element->{'contents'}}) {
-      if (exists($content->{'type'})
-          and $content->{'type'} eq 'brace_container'
+      if ($content->{'type'} eq 'brace_container'
           and exists($content->{'contents'})
-          and exists($content->{'contents'}->[0]->{'type'})
           and $content->{'contents'}->[0]->{'type'} eq 'verb_delimiter') {
         return $content->{'contents'}->[0]->{'text'};
       }
@@ -1223,9 +1214,8 @@ sub block_line_argument_command($) {
     if (exists($arg->{'cmdname'})
         and (!exists($arg->{'contents'})
              or (scalar(@{$arg->{'contents'}}) == 1
-                 and ((exists($arg->{'contents'}->[0]->{'type'})
-                      and $arg->{'contents'}->[0]->{'type'}
-                                          eq 'spaces_after_cmd_before_arg')
+                 and ($arg->{'contents'}->[0]->{'type'}
+                                          eq 'spaces_after_cmd_before_arg'
                       or !exists($arg->{'contents'}->[0]->{'contents'}))))) {
       return $arg;
     }
@@ -1246,8 +1236,7 @@ sub block_line_command_as_argument($) {
     my $cmdname = $arg->{'cmdname'};
     if ((exists($Texinfo::Commands::brace_commands{$cmdname})
          and $Texinfo::Commands::brace_commands{$cmdname} ne 'accent')
-        or (exists($arg->{'type'})
-            and $arg->{'type'} eq 'definfoenclose_command')) {
+        or $arg->{'type'} eq 'definfoenclose_command') {
       return $arg;
     }
   }
@@ -1669,8 +1658,7 @@ sub in_preamble($) {
 
   my $current_element = $element;
   while (exists($current_element->{'parent'})) {
-    if (exists($current_element->{'parent'}->{'type'})
-        and $current_element->{'parent'}->{'type'} eq 'preamble_before_content') {
+    if ($current_element->{'parent'}->{'type'} eq 'preamble_before_content') {
       return 1;
     }
     $current_element = $current_element->{'parent'};
@@ -1934,11 +1922,9 @@ sub is_content_empty($;$) {
         next;
       }
     }
-    next if (exists($content->{'type'})
-             and $content->{'type'} eq 'arguments_line');
+    next if ($content->{'type'} eq 'arguments_line');
     if (exists($content->{'cmdname'})) {
-      if (exists($content->{'type'})
-          and $content->{'type'} eq 'index_entry_command') {
+      if ($content->{'type'} eq 'index_entry_command') {
         if ($do_not_ignore_index_entries) {
           return 0;
         } else {
@@ -1971,10 +1957,8 @@ sub is_content_empty($;$) {
         return 0;
       }
     }
-    if (exists($content->{'type'})) {
-      if ($content->{'type'} eq 'paragraph') {
-        return 0;
-      }
+    if ($content->{'type'} eq 'paragraph') {
+      return 0;
     }
     if (not is_content_empty($content, $do_not_ignore_index_entries)) {
       return 0;
@@ -2007,7 +1991,7 @@ foreach my $command (
 sub element_inline_or_block($) {
   my $current = shift;
 
-  if (exists($current->{'type'}) and $inline_types{$current->{'type'}}) {
+  if ($inline_types{$current->{'type'}}) {
     return 1;
   } else {
     my $cmdname = $current->{'cmdname'};
@@ -2313,7 +2297,7 @@ sub debug_print_element($;$) {
       return "debug_print_element: $current not a tree element";
     }
   }
-  $result .= "($current->{'type'})" if (exists($current->{'type'}));
+  $result .= "($current->{'type'})";
   if (exists($current->{'text'})) {
     if ($current->{'text'} eq '') {
       $result .= "[T]";
@@ -2332,7 +2316,7 @@ sub debug_print_element($;$) {
   if ($print_parent and exists($current->{'parent'})) {
     my $parent = $current->{'parent'};
     $result .= ' <- ';
-    $result .= "($parent->{'type'})" if (exists($parent->{'type'}));
+    $result .= "($parent->{'type'})";
     $result .= "\@$parent->{'cmdname'}" if (exists($parent->{'cmdname'}));
   }
   return $result;

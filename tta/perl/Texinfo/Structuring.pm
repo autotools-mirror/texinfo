@@ -135,7 +135,7 @@ sub _associate_internal_references($) {
 
   foreach my $ref (@$refs) {
     my $label_element;
-    if (exists($ref->{'type'}) and $ref->{'type'} eq 'menu_entry_node') {
+    if ($ref->{'type'} eq 'menu_entry_node') {
       $label_element = $ref;
     } else {
       $label_element = $ref->{'contents'}->[0];
@@ -153,7 +153,7 @@ sub _associate_internal_references($) {
         if (defined($normalized) and $normalized ne '');
     }
 
-    if (exists($ref->{'type'}) and $ref->{'type'} eq 'menu_entry_node') {
+    if ($ref->{'type'} eq 'menu_entry_node') {
       # similar messages are output in _check_menu_entry
       next;
     } elsif (exists($label_element->{'extra'})) {
@@ -495,7 +495,7 @@ sub new_detailmenu($$$$$$;$$) {
   if (defined($menus) and scalar(@$menus)) {
     foreach my $menu (@$menus) {
       foreach my $entry (@{$menu->{'contents'}}) {
-        if (exists($entry->{'type'}) and $entry->{'type'} eq 'menu_entry') {
+        if ($entry->{'type'} eq 'menu_entry') {
           my $node
         = Texinfo::ManipulateTree::normalized_entry_associated_internal_node(
                                                   $entry, $identifier_target);
@@ -614,11 +614,9 @@ sub _print_down_menus($$$$$$;$) {
       next if (!exists($menu->{'contents'}));
       foreach my $entry (@{$menu->{'contents'}}) {
         next if (!exists($entry->{'contents'})
-                 or !exists($entry->{'type'})
                  or $entry->{'type'} ne 'menu_entry');
         foreach my $entry_content (@{$entry->{'contents'}}) {
-          if (exists($entry_content->{'type'})
-              and $entry_content->{'type'} eq 'menu_entry_name') {
+          if ($entry_content->{'type'} eq 'menu_entry_name') {
             $menu_entry_name_found = 1;
             last MENUS;
           }
@@ -644,7 +642,7 @@ sub _print_down_menus($$$$$$;$) {
   my @node_children;
   foreach my $menu (@menus) {
     foreach my $entry (@{$menu->{'contents'}}) {
-      if (exists($entry->{'type'}) and $entry->{'type'} eq 'menu_entry') {
+      if ($entry->{'type'} eq 'menu_entry') {
         push @master_menu_contents,
                Texinfo::ManipulateTree::copy_element_tree($entry);
         # gather node children to recursively print their menus

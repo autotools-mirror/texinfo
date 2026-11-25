@@ -166,7 +166,7 @@ sub _copy_tree($;$) {
   if (exists($current->{'cmdname'})) {
     $new->{'cmdname'} = $current->{'cmdname'};
     $command_or_type = '@'.$current->{'cmdname'};
-  } elsif (exists($current->{'type'})) {
+  } else {
     $command_or_type = $current->{'type'};
   }
 
@@ -261,7 +261,7 @@ sub _remove_element_copy_info($;$$) {
   my $command_or_type = '';
   if (exists($current->{'cmdname'})) {
     $command_or_type = '@'.$current->{'cmdname'};
-  } elsif (exists($current->{'type'})) {
+  } else {
     $command_or_type = $current->{'type'};
   }
 
@@ -509,7 +509,7 @@ sub set_element_tree_numbers($$) {
 
   my $builtin_cmdname;
 
-  if (defined($type) and $type eq 'definfoenclose_command') {
+  if ($type eq 'definfoenclose_command') {
     $builtin_cmdname = 'definfoenclose_command';
   } elsif (defined($cmdname)) {
     $builtin_cmdname = $cmdname;
@@ -591,11 +591,8 @@ sub _print_text_element($$$;$$) {
 
   my $element_text = _debug_protect_eol($element->{'text'});
 
-  if (exists($element->{'type'})) {
-    $result .= "{$element->{'type'}:${element_text}}";
-  } else {
-    $result .= "{${element_text}}";
-  }
+  $result .= "{$element->{'type'}:${element_text}}";
+
   # this is for debug, text element should not have parent
   if (exists($element->{'parent'})) {
     $result .= "p";
@@ -819,9 +816,7 @@ sub print_element_base($$$;$$) {
     $result .= "$element->{'_number'} ";
   }
 
-  if (exists($element->{'type'})) {
-    $result .= $element->{'type'};
-  }
+  $result .= $element->{'type'};
 
   my $cmdname = $element->{'cmdname'};
   if (defined($cmdname)) {
@@ -1194,8 +1189,7 @@ sub protect_first_parenthesis($) {
     my $content = $element->{'contents'}->[$i];
     return if (!exists($content->{'text'}));
     if ($content->{'text'} eq ''
-        or (exists($content->{'type'})
-            and $content->{'type'} eq 'spaces_before_argument')) {
+        or $content->{'type'} eq 'spaces_before_argument') {
       next;
     }
     if ($content->{'text'} =~ /^\(/) {
@@ -1269,9 +1263,8 @@ sub _reference_to_arg($$$) {
           my $new = Texinfo::TreeElement::new({'type' => 'generic_container',
                                           'parent' => $current->{'parent'}});
           foreach my $content (@{$arg->{'contents'}}) {
-            if (!exists($content->{'type'})
-                or ($content->{'type'} ne 'spaces_before_argument'
-                    and $content->{'type'} ne 'spaces_after_argument')) {
+            if ($content->{'type'} ne 'spaces_before_argument'
+                and $content->{'type'} ne 'spaces_after_argument') {
               $content->{'parent'} = $new if (exists($content->{'parent'}));
               push @{$new->{'contents'}}, $content;
             }
@@ -1347,8 +1340,7 @@ sub first_menu_node($$) {
   if (exists($node_relations->{'menus'})) {
     foreach my $menu (@{$node_relations->{'menus'}}) {
       foreach my $menu_content (@{$menu->{'contents'}}) {
-        if (exists($menu_content->{'type'})
-            and $menu_content->{'type'} eq 'menu_entry') {
+        if ($menu_content->{'type'} eq 'menu_entry') {
           my $menu_node
             = normalized_entry_associated_internal_node($menu_content,
                                                         $identifier_target);
