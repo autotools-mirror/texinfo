@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'multiple_lang_chapters'} = '*document_root C13
  *before_node_section C2
   *before_beginning C1
-   {text_before_beginning:\\n}
+   {empty_line:\\n}
   *preamble_before_content C5
    *normal_command@documentencoding C1 l2
    |global_command_number:{1}

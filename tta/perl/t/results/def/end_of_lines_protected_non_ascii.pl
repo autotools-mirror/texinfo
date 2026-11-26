@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'end_of_lines_protected_non_ascii'} = '*document_root C1
  *before_node_section C4
   *before_beginning C1
-   {text_before_beginning:\\n}
+   {empty_line:\\n}
   *preamble_before_content
   *normal_command@deffn C3 end_of_lines_protected_non_ascii.texi:l2
    *def_line C1 end_of_lines_protected_non_ascii.texi:l2

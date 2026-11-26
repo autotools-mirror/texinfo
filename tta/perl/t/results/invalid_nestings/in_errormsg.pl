@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'in_errormsg'} = '*document_root C1
  *before_node_section C8
   *before_beginning C1
-   {text_before_beginning:\\n}
+   {empty_line:\\n}
   *preamble_before_content
   *normal_command@anchor C1 l2
   |identifier:{in-ref}

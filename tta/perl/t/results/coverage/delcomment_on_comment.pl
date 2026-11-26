@@ -11,8 +11,8 @@ use Encode;
 $result_tree_text{'delcomment_on_comment'} = '*document_root C2
  *before_node_section C4
   *before_beginning C2
-   {text_before_beginning:\\input texinfo\\n}
-   {text_before_beginning:\\n}
+   {raw:\\input texinfo\\n}
+   {empty_line:\\n}
   *preamble_before_content
   *paragraph C2
    {normal_text:some text }

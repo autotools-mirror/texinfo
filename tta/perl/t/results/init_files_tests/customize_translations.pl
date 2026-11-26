@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'customize_translations'} = '*document_root C15
  *before_node_section C2
   *before_beginning C1
-   {text_before_beginning:\\n}
+   {empty_line:\\n}
   *preamble_before_content C2
    *normal_command@contents C1 l2
    |global_command_number:{1}

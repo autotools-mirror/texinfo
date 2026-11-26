@@ -11,8 +11,8 @@ use Encode;
 $result_tree_text{'things_before_setfilename_no_element'} = '*document_root C1
  *before_node_section C6
   *before_beginning C27
-   {text_before_beginning:\\input texinfo\\n}
-   {text_before_beginning:\\n}
+   {raw:\\input texinfo\\n}
+   {empty_line:\\n}
    *normal_command@anchor C1 things_before_setfilename_no_element.texi:l3
    |identifier:{An-anchor}
    |is_target:{1}

@@ -27,7 +27,7 @@ $result_tree_text{'ifclear_in_ifset'} = '*document_root C1
       >{spaces_before_argument: }
       >{normal_text:ifset}
       >{spaces_after_argument:\\n}
-   {text_before_beginning:\\n}
+   {empty_line:\\n}
   *preamble_before_content C1
    *normal_command@c C1
     *line_arg C3

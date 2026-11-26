@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'documentinfo_with_empty_line'} = '*document_root C5
  *before_node_section C2
   *before_beginning C1
-   {text_before_beginning:\\n}
+   {empty_line:\\n}
   *preamble_before_content C2
    *normal_command@documentinfo C5 l2
     *arguments_line C1

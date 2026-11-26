@@ -11,8 +11,8 @@ use Encode;
 $result_tree_text{'documentlanguage_option'} = '*document_root C6
  *before_node_section C2
   *before_beginning C2
-   {text_before_beginning:\\input texinfo @c -*-texinfo-*-\\n}
-   {text_before_beginning:\\n}
+   {raw:\\input texinfo @c -*-texinfo-*-\\n}
+   {empty_line:\\n}
   *preamble_before_content C21
    *normal_command@c C1
     *line_arg C3

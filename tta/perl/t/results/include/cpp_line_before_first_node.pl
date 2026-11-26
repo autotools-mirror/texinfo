@@ -13,8 +13,8 @@ $result_tree_text{'cpp_line_before_first_node'} = '*document_root C2
   *before_beginning C2
   >SOURCEMARKS
   >line_directive<1>{#line 100 "foo.ptexi"\\n}
-   {text_before_beginning:\\input texinfo\\n}
-   {text_before_beginning:\\n}
+   {raw:\\input texinfo\\n}
+   {empty_line:\\n}
   *preamble_before_content C3
    {empty_line:\\n}
    {empty_line:\\n}

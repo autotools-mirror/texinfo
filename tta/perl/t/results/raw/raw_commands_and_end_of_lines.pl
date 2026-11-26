@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'raw_commands_and_end_of_lines'} = '*document_root C1
  *before_node_section C43
   *before_beginning C1
-   {text_before_beginning:\\n}
+   {empty_line:\\n}
   *preamble_before_content C2
    *normal_command@html C3 l2
     *arguments_line C1

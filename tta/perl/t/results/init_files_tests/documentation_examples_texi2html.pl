@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'documentation_examples_texi2html'} = '*document_root C11
  *before_node_section C2
   *before_beginning C1
-   {text_before_beginning:\\n}
+   {empty_line:\\n}
   *preamble_before_content C4
    *normal_command@settitle C1 l2
     *line_arg C9

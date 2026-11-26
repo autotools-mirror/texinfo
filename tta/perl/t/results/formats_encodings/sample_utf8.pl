@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'sample_utf8'} = '*document_root C10
  *before_node_section C2
   *before_beginning C2
-   {text_before_beginning:\\input texinfo   @c -*-texinfo-*-\\n}
+   {raw:\\input texinfo   @c -*-texinfo-*-\\n}
    *normal_command@c C1
     *line_arg C3
      {spaces_before_argument: }

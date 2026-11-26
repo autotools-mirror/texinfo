@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'empty_line_in_command_in_expanded_not_expanded'} = '*document_root C1
  *before_node_section C2
   *before_beginning C1
-   {text_before_beginning:\\n}
+   {empty_line:\\n}
   *preamble_before_content C3
    *normal_command@tex C3 l2
     *arguments_line C1

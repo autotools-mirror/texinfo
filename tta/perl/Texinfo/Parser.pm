@@ -640,10 +640,6 @@ index command, when there are only spaces after the interrupting
 
 Text appearing after @bye.
 
-=item text_before_beginning
-
-Text appearing before real content, including the C<\input texinfo.tex>.
-
 =item untranslated
 
 English text added by the parser that may need to be translated

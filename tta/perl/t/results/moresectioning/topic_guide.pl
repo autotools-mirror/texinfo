@@ -11,8 +11,8 @@ use Encode;
 $result_tree_text{'topic_guide'} = '*document_root C13
  *before_node_section C2
   *before_beginning C2
-   {text_before_beginning:\\input texinfo.tex\\n}
-   {text_before_beginning:\\n}
+   {raw:\\input texinfo.tex\\n}
+   {empty_line:\\n}
   *preamble_before_content
  *normal_command@node C1 topic_guide.texi:l3 {Top}
  |identifier:{Top}

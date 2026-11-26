@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'double_recursive_macro_call'} = '*document_root C1
  *before_node_section C2
   *before_beginning C1
-   {text_before_beginning:\\n}
+   {empty_line:\\n}
   *preamble_before_content C5
    *normal_command@macro C3 l2
    |formal_args:A{arg}

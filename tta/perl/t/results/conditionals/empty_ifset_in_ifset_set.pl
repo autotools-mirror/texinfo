@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'empty_ifset_in_ifset_set'} = '*document_root C1
  *before_node_section C3
   *before_beginning C1
-   {text_before_beginning:\\n}
+   {empty_line:\\n}
   *preamble_before_content C2
    *normal_command@set C1
    |misc_args:A{notset|}

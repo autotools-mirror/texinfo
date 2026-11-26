@@ -599,7 +599,10 @@ parse_texi_document (void)
       if (!e_before_beginning)
         e_before_beginning = new_element (ET_before_beginning);
 
-      l = new_text_element (ET_text_before_beginning);
+      if (!*linep)
+        l = new_text_element (ET_empty_line);
+      else
+        l = new_text_element (ET_raw);
       text_append (l->e.text, line);
       add_to_contents_as_array (e_before_beginning, l);
     }

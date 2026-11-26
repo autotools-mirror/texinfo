@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'center'} = '*document_root C1
  *before_node_section C4
   *before_beginning C1
-   {text_before_beginning:\\n}
+   {empty_line:\\n}
   *preamble_before_content
   *normal_command@center C1 l2
    *line_arg C4

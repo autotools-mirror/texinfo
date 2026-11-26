@@ -11,8 +11,8 @@ use Encode;
 $result_tree_text{'nodes_before_top_split_chapter_no_nodes'} = '*document_root C9
  *before_node_section C2
   *before_beginning C2
-   {text_before_beginning:\\input texinfo @c -*-texinfo-*-\\n}
-   {text_before_beginning:\\n}
+   {raw:\\input texinfo @c -*-texinfo-*-\\n}
+   {empty_line:\\n}
   *preamble_before_content C3
    *normal_command@c C1
     *line_arg C3

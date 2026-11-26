@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'commands_in_math'} = '*document_root C1
  *before_node_section C9
   *before_beginning C1
-   {text_before_beginning:\\n}
+   {empty_line:\\n}
   *preamble_before_content
   *normal_command@displaymath C15 l2
    *arguments_line C1

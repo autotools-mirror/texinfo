@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'indent_before_macro_definition_and_other'} = '*document_root C1
  *before_node_section C13
   *before_beginning C1
-   {text_before_beginning:\\n}
+   {empty_line:\\n}
   *preamble_before_content C2
    *normal_command@indent l2
    {ignorable_spaces_after_command:\\n}

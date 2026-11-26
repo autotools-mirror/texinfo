@@ -18,8 +18,8 @@ NodeNext: [U1]
 NodeForward: [U1]
  *before_node_section C2
   *before_beginning C2
-   {text_before_beginning:\\input texinfo.tex\\n}
-   {text_before_beginning:\\n}
+   {raw:\\input texinfo.tex\\n}
+   {empty_line:\\n}
   *preamble_before_content
  *normal_command@node C1 transliterated_names_conflicts.texi:l3 {Top}
  |identifier:{Top}

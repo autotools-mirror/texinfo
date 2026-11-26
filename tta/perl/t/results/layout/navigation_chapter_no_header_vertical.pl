@@ -11,8 +11,8 @@ use Encode;
 $result_tree_text{'navigation_chapter_no_header_vertical'} = '*document_root C10
  *before_node_section C2
   *before_beginning C2
-   {text_before_beginning:\\input texinfo @c -*-texinfo-*-\\n}
-   {text_before_beginning:\\n}
+   {raw:\\input texinfo @c -*-texinfo-*-\\n}
+   {empty_line:\\n}
   *preamble_before_content
  *normal_command@node C1 navigation.texi:l3 {Top}
  |identifier:{Top}

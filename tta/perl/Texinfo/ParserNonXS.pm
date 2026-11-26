@@ -1102,9 +1102,14 @@ sub _parse_texi_document($) {
                         'contents' => [], 'parent' => $before_node_section });
         push @{$before_node_section->{'contents'}}, $e_before_beginning;
       }
+      my $type;
+      if ($line =~ /^\s*$/) {
+        $type = 'empty_line';
+      } else {
+        $type = 'raw';
+      }
       push @{$e_before_beginning->{'contents'}},
-        Texinfo::TreeElement::new({'text' => $line,
-                                   'type' => 'text_before_beginning',});
+          Texinfo::TreeElement::new({'text' => $line, 'type' => $type,});
     } else {
       # This line is not part of the before_beginning element.
       # Shove back into input stream.

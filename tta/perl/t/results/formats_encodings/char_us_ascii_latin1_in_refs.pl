@@ -11,8 +11,8 @@ use Encode;
 $result_tree_text{'char_us_ascii_latin1_in_refs'} = '*document_root C14
  *before_node_section C2
   *before_beginning C2
-   {text_before_beginning:\\input texinfo\\n}
-   {text_before_beginning:\\n}
+   {raw:\\input texinfo\\n}
+   {empty_line:\\n}
   *preamble_before_content C2
    *normal_command@documentencoding C1 char_us_ascii_latin1_in_refs.texi:l3
    |global_command_number:{1}

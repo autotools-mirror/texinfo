@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'customize_special_element'} = '*document_root C7
  *before_node_section C2
   *before_beginning C1
-   {text_before_beginning:\\n}
+   {empty_line:\\n}
   *preamble_before_content C3
    *normal_command@contents C1 l2
    |global_command_number:{1}

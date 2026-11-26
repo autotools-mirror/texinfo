@@ -11,8 +11,8 @@ use Encode;
 $result_tree_text{'minimal_empty_with_bye'} = '*document_root C2
  *before_node_section C2
   *before_beginning C2
-   {text_before_beginning:\\input texinfo.tex\\n}
-   {text_before_beginning:\\n}
+   {raw:\\input texinfo.tex\\n}
+   {empty_line:\\n}
   *preamble_before_content
  *normal_command@bye C1
   *line_arg C1

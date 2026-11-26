@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'no_documentencoding_and_insertions'} = '*document_root C1
  *before_node_section C5
   *before_beginning C1
-   {text_before_beginning:\\n}
+   {empty_line:\\n}
   *preamble_before_content
   *paragraph C5
    {normal_text:-- --- \'\' `` ` \' }

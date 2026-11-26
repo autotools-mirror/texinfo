@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'chinese_mixed_with_en_EUC_CN'} = '*document_root C6
  *before_node_section C2
   *before_beginning C1
-   {text_before_beginning:\\input texinfo\\n}
+   {raw:\\input texinfo\\n}
   *preamble_before_content C3
    *normal_command@documentencoding C1 chinese_mixed_with_en_EUC_CN.texi:l2
    |global_command_number:{1}

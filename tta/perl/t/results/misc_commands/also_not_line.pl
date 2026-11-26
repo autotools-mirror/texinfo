@@ -11,8 +11,8 @@ use Encode;
 $result_tree_text{'also_not_line'} = '*document_root C1
  *before_node_section C23
   *before_beginning C2
-   {text_before_beginning:\\n}
-   {text_before_beginning:\\n}
+   {empty_line:\\n}
+   {empty_line:\\n}
   *preamble_before_content
   *paragraph C1
    {normal_text:page }

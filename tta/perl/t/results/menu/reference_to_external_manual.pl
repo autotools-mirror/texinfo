@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'reference_to_external_manual'} = '*document_root C2
  *before_node_section C2
   *before_beginning C1
-   {text_before_beginning:\\n}
+   {empty_line:\\n}
   *preamble_before_content
  *normal_command@node C3 l2 {first}
  |identifier:{first}

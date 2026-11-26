@@ -1,5 +1,13 @@
 2026-11-26  Patrice Dumas  <pertusus@free.fr>
 
+	* tta/C/main/element_types.txt, tta/C/parsetexi/parser.c
+	(parse_texi_document), tta/perl/Texinfo/ParserNonXS.pm
+	(_parse_texi_document): use empty_line type for empty line in
+	before_beginning and raw for the \input line.  Remove
+	text_before_beginning.
+
+2026-11-26  Patrice Dumas  <pertusus@free.fr>
+
 	rename preamble_before_beginning as before_beginning
 
 	* tta/C/parsetexi/parser.c (rearrange_tree_beginning)

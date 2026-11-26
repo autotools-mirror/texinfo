@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'only_special_spaces_node_transliterate'} = '*document_root C16
  *before_node_section C2
   *before_beginning C1
-   {text_before_beginning:\\n}
+   {empty_line:\\n}
   *preamble_before_content
  *normal_command@node C1 only_special_spaces_node.texi:l2 {Top}
  |identifier:{Top}

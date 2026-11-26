@@ -665,11 +665,6 @@ index command, when there are only spaces after the interrupting
 
 Text appearing after @@bye.
 
-@item text_before_beginning
-@anchor{Texinfo@asis{::}Parser text_before_beginning}
-
-Text appearing before real content, including the @code{\input texinfo.tex}.
-
 @item untranslated
 @anchor{Texinfo@asis{::}Parser untranslated}
 

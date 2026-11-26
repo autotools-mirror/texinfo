@@ -11,8 +11,8 @@ use Encode;
 $result_tree_text{'manual_simple_latin1_with_error'} = '*document_root C6
  *before_node_section C2
   *before_beginning C2
-   {text_before_beginning:\\input texinfo.tex\\n}
-   {text_before_beginning:\\n}
+   {raw:\\input texinfo.tex\\n}
+   {empty_line:\\n}
   *preamble_before_content C2
    *normal_command@documentencoding C1 manual_simple_latin1_with_error.texi:l3
    |global_command_number:{1}

@@ -11,9 +11,9 @@ use Encode;
 $result_tree_text{'empty_lines_at_beginning_no_setfilename_no_element'} = '*document_root C2
  *before_node_section C6
   *before_beginning C3
-   {text_before_beginning:\\input texinfo\\n}
-   {text_before_beginning:\\n}
-   {text_before_beginning:\\n}
+   {raw:\\input texinfo\\n}
+   {empty_line:\\n}
+   {empty_line:\\n}
   *preamble_before_content
   *normal_command@center C1 empty_lines_at_beginning_no_setfilename_no_element.texi:l4
    *line_arg C3

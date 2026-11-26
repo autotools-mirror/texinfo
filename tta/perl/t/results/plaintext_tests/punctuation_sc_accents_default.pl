@@ -11,8 +11,8 @@ use Encode;
 $result_tree_text{'punctuation_sc_accents_default'} = '*document_root C5
  *before_node_section C2
   *before_beginning C2
-   {text_before_beginning:\\input texinfo\\n}
-   {text_before_beginning:\\n}
+   {raw:\\input texinfo\\n}
+   {empty_line:\\n}
   *preamble_before_content
  *normal_command@node C1 punctuation_small_case_accents_utf8.texi:l3 {top}
  |identifier:{Top}

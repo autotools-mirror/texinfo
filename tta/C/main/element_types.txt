@@ -47,7 +47,6 @@ spaces_at_end                             text,ignorable_text
 spaces_after_close_brace                  text,leading_space,ignorable_text
 spaces_before_paragraph                   text
 text_after_end                            text
-text_before_beginning                     text
 normal_text                               text
 # before and after arguments, to be ignored
 spaces_after_argument                     text,ignorable_text

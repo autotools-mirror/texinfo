@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'definfoenclose_with_empty_arg'} = '*document_root C1
  *before_node_section C4
   *before_beginning C1
-   {text_before_beginning:\\n}
+   {empty_line:\\n}
   *preamble_before_content C2
    *normal_command@definfoenclose C1 l2
    |misc_args:A{headword||:}

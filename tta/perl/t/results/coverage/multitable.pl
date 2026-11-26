@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'multitable'} = '*document_root C1
  *before_node_section C5
   *before_beginning C1
-   {text_before_beginning:\\n}
+   {empty_line:\\n}
   *preamble_before_content
   *normal_command@multitable C4 l2
   |max_columns:{2}

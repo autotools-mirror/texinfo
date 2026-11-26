@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'shorttitlepage'} = '*document_root C3
  *before_node_section C2
   *before_beginning C1
-   {text_before_beginning:\\n}
+   {empty_line:\\n}
   *preamble_before_content C2
    *normal_command@shorttitlepage C1 l2
     *line_arg C7

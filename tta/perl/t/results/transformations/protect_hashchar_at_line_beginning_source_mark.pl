@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'protect_hashchar_at_line_beginning_source_mark'} = '*document_root C1
  *before_node_section C17
   *before_beginning C1
-   {text_before_beginning:\\n}
+   {empty_line:\\n}
   *preamble_before_content C2
    *normal_command@macro C3 cpp_directives_line_value_macro.texi:l2
    |formal_args:A{}

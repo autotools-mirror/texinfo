@@ -11,8 +11,8 @@ use Encode;
 $result_tree_text{'cond_info_no-ifhtml_no-ifinfo_no-iftex'} = '*document_root C5
  *before_node_section C4
   *before_beginning C2
-   {text_before_beginning:\\input texinfo\\n}
-   {text_before_beginning:\\n}
+   {raw:\\input texinfo\\n}
+   {empty_line:\\n}
   *preamble_before_content C5
    *normal_command@c C1
     *line_arg C3

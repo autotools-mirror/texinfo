@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'encoding_index_latin1'} = '*document_root C5
  *before_node_section C2
   *before_beginning C1
-   {text_before_beginning:\\n}
+   {empty_line:\\n}
   *preamble_before_content C2
    *normal_command@documentencoding C1 encoding_index_latin1.texi:l2
    |global_command_number:{1}

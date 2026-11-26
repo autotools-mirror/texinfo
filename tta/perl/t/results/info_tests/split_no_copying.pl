@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'split_no_copying'} = '*document_root C7
  *before_node_section C2
   *before_beginning C1
-   {text_before_beginning:\\input texinfo\\n}
+   {raw:\\input texinfo\\n}
   *preamble_before_content C2
    *normal_command@setfilename C1 l2
    |text_arg:{split_no_copying.info}

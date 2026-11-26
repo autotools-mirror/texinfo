@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'some_at_commands_in_ref_nodes'} = '*document_root C5
  *before_node_section C2
   *before_beginning C1
-   {text_before_beginning:\\n}
+   {empty_line:\\n}
   *preamble_before_content
  *normal_command@node C1 l2 {Top}
  |identifier:{Top}

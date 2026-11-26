@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'contents_with_only_top_node'} = '*document_root C2
  *before_node_section C2
   *before_beginning C1
-   {text_before_beginning:\\n}
+   {empty_line:\\n}
   *preamble_before_content
  *normal_command@node C3 l2 {Top}
  |identifier:{Top}

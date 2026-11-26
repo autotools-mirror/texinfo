@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'table_in_example_in_display'} = '*document_root C1
  *before_node_section C5
   *before_beginning C1
-   {text_before_beginning:\\n}
+   {empty_line:\\n}
   *preamble_before_content
   *paragraph C1
    {normal_text:T\\n}

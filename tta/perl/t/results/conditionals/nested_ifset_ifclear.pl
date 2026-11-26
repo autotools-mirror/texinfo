@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'nested_ifset_ifclear'} = '*document_root C1
  *before_node_section C13
   *before_beginning C1
-   {text_before_beginning:\\n}
+   {empty_line:\\n}
   *preamble_before_content C4
    *normal_command@macro C10 l2
    |formal_args:A{}

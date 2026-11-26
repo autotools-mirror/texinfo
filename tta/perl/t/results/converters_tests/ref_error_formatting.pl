@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'ref_error_formatting'} = '*document_root C1
  *before_node_section C9
   *before_beginning C1
-   {text_before_beginning:\\n}
+   {empty_line:\\n}
   *preamble_before_content
   *paragraph C4
    *normal_command@code C1 l2

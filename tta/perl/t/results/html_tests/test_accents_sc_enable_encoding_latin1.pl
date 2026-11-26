@@ -11,8 +11,8 @@ use Encode;
 $result_tree_text{'test_accents_sc_enable_encoding_latin1'} = '*document_root C5
  *before_node_section C2
   *before_beginning C2
-   {text_before_beginning:\\input texinfo\\n}
-   {text_before_beginning:\\n}
+   {raw:\\input texinfo\\n}
+   {empty_line:\\n}
   *preamble_before_content C2
    *normal_command@documentencoding C1 punctuation_small_case_accents_latin1.texi:l3
    |global_command_number:{1}

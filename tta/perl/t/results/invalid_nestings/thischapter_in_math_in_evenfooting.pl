@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'thischapter_in_math_in_evenfooting'} = '*document_root C1
  *before_node_section C2
   *before_beginning C1
-   {text_before_beginning:\\n}
+   {empty_line:\\n}
   *preamble_before_content C1
    *normal_command@evenfooting C1 l2
     *line_arg C3

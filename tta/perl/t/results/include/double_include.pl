@@ -27,7 +27,7 @@ $result_tree_text{'double_include'} = '*document_root C1
         >>{spaces_before_argument: }
         >>{normal_text:inc_file.texi}
         >>{spaces_after_argument:\\n}
-   {text_before_beginning:\\n}
+   {empty_line:\\n}
   *preamble_before_content
   *paragraph C2
    {normal_text:In included file.\\n}

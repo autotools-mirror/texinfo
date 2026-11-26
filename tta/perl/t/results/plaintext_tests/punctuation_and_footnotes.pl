@@ -11,7 +11,7 @@ use Encode;
 $result_tree_text{'punctuation_and_footnotes'} = '*document_root C1
  *before_node_section C9
   *before_beginning C1
-   {text_before_beginning:\\n}
+   {empty_line:\\n}
   *preamble_before_content
   *paragraph C8
    {normal_text:Text.}
