@@ -2847,7 +2847,7 @@ parse_texi (ELEMENT *current_elt)
       current = close_commands (current, CM_NONE, &dummy, CM_NONE);
 
       /* Make sure we are at the very top - we could have stopped at a root
-         command element (@node, @top, @section), with "document_root" still
+         command element (@node, @top, @section), with the document root still
          to go.  (This happens if the file didn't end with "@bye".) */
       while (current->e.c->parent)
         current = current->e.c->parent;

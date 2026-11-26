@@ -2365,7 +2365,6 @@ sub _close_commands($$$;$$) {
         # stop if the command is found
   while (!(defined($closed_block_command) and exists($current->{'cmdname'})
            and $current->{'cmdname'} eq $closed_block_command)
-         # Stop if at the root
          and exists($current->{'parent'})
          # Stop if at a type at the root
          and $current->{'type'} ne 'before_node_section'
@@ -6032,7 +6031,7 @@ sub _handle_line_command($$$$$$) {
     $current = _close_commands($self, $current, $source_info, undef,
                                $command);
     # if the root command happens in a Texinfo fragment going through
-    # parse_string we are directly in the root_line document
+    # parse_string we are directly in the string document
     # root container (in this case _close_commands returned immediately),
     # and there is no parent for $current.
     # In any other situation, _close_command stops at the preceding
@@ -8115,7 +8114,7 @@ sub _parse_texi($$) {
   $current = _close_commands($self, $current, $source_info);
 
   # Make sure we are at the very top - we could have stopped at a root
-  # command element (@node, @top, @section), with "document_root" still
+  # command element (@node, @top, @section), with the document root still
   # to go.  (This happens if the file didn't end with "@bye".)
   while (exists($current->{'parent'})) {
     $current = $current->{'parent'};

@@ -343,7 +343,7 @@ unsplit (DOCUMENT *document)
   int unsplit_needed = 0;
   size_t i;
 
-  if (root->type != ET_document_root || root->e.c->contents.number <= 0)
+  if (root->e.c->contents.number <= 0)
     return 0;
 
   for (i = 0; i < root->e.c->contents.number; i++)

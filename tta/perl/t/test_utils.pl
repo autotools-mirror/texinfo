@@ -473,11 +473,10 @@ sub convert_to_docbook($$$$$) {
 
   my $tree = $document->tree();
 
-  # 'before_node_section' is normally ignored in conversion to DocBook and
-  # it is the type, in 'document_root' that holds content that appear before
-  # @node and sectioning command.  To be able to have tests of simple
+  # The first element before nodes and sections is normally ignored in
+  # conversion to DocBook.  To be able to have tests of simple
   # Texinfo code without sectioning or @node command with DocBook,
-  # set the customization variable that mean that the document is not a
+  # set the customization variable that means that the document is not a
   # full book.
   if ($tree->{'contents'} and scalar(@{$tree->{'contents'}}) == 1) {
     $converter_options->{'_DOCBOOK_PIECE'} = 1;

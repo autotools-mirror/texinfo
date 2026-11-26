@@ -38,19 +38,15 @@ sub _find_text($) {
   my $root = shift;
 
   my $current = $root;
-  while (exists($current->{'contents'})
-         and exists($current->{'type'})
-         and ($current->{'type'} eq 'root_line'
-          # following could be useful if parse_piece is used
-              or $current->{'type'} eq 'before_node_section'
-              or $current->{'type'} eq 'document_root'
-              or $current->{'type'} eq 'paragraph')) {
-    $current = $current->{'contents'}->[0];
+  while (1) {
+    if (exists($current->{'text'})) {
+      return $current;
+    } elsif (exists($current->{'contents'})) {
+      $current = $current->{'contents'}->[0]
+    } else {
+      return undef;
+    }
   }
-  if (not exists($current->{'text'})) {
-    return undef;
-  }
-  return $current;
 }
 
 sub run_test($$$$) {

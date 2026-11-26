@@ -1,5 +1,15 @@
 2026-11-26  Patrice Dumas  <pertusus@free.fr>
 
+	* tta/C/main/output_unit.c (unsplit), : no need to check that we are
+	in document root, the root elements associated to output units are
+	only here anyway.
+
+	* tta/perl/t/z_misc/accents.t (_find_accent),
+	tta/perl/t/z_misc/test_brace_count.t (_find_text): go through
+	containers without naming them to find a commmand or text.
+
+2026-11-26  Patrice Dumas  <pertusus@free.fr>
+
 	merge preamble_before_setfilename into preamble_before_beginning
 
 	* tta/C/parsetexi/parser.c (rearrange_tree_beginning),
