@@ -229,7 +229,7 @@ Nodes and sections @@-commands elements follow.  The node
 or sectioning command elements @code{contents} hold all the elements corresponding
 to Texinfo code before the next node or sectioning command element or @code{@@bye}.
 If present in the Texinfo document, the @code{@@bye} element is next.  If there is
-content after @code{@@bye}, it is last in the @emph{postamble_after_end} container
+content after @code{@@bye}, it is last in the @emph{after_end} container
 element.
 
 The first element of a node or sectioning command @code{contents}
@@ -660,11 +660,6 @@ Space within an index @@-command before an @@-command interrupting the
 index command, when there are only spaces after the interrupting
 @@-command.
 
-@item text_after_end
-@anchor{Texinfo@asis{::}Parser text_after_end}
-
-Text appearing after @@bye.
-
 @item untranslated
 @anchor{Texinfo@asis{::}Parser untranslated}
 
@@ -704,10 +699,10 @@ fragments using @code{parse_string}.  @code{document_root} is the document
 root otherwise.
 
 @code{document_root} first content should be @code{before_node_section}, then nodes and
-sections @@-commands elements, @code{@@bye} element and @code{postamble_after_end}.
+sections @@-commands elements, @code{@@bye} element and @code{after_end}.
 
-@item postamble_after_end
-@anchor{Texinfo@asis{::}Parser postamble_after_end}
+@item after_end
+@anchor{Texinfo@asis{::}Parser after_end}
 
 This container holds everything appearing after @@bye.
 

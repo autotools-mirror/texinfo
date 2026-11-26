@@ -295,7 +295,7 @@ foreach my $type (
 
 my %ignored_types;
 foreach my $type (
-            'postamble_after_end',
+            'after_end',
             'before_beginning',
             'arguments_line') {
   $ignored_types{$type} = 1;

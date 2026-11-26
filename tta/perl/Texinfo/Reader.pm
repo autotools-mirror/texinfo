@@ -64,7 +64,6 @@ foreach my $text_type (
             'ignorable_spaces_after_command',
             'spaces_after_close_brace',
             'spaces_at_end',
-            #'text_after_end',
             'spaces_after_argument',
             'spaces_after_cmd_before_arg',
             'spaces_before_argument',

@@ -472,12 +472,12 @@ $result_tree_text{'multiple_include_encodings'} = '*document_root C19
  *normal_command@bye C1
   *line_arg C1
    {spaces_before_argument:\\n}
- *postamble_after_end C3
+ *after_end C3
   {normal_text:}
   >SOURCEMARKS
   >include<end;6>
-  {text_after_end:\\n}
-  {text_after_end:@bye\\n}
+  {raw:\\n}
+  {raw:@bye\\n}
 ';
 
 

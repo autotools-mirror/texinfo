@@ -35,14 +35,14 @@ $result_tree_text{'bye_in_macro'} = '*document_root C3
  *normal_command@bye C1
   *line_arg C1
    {spaces_before_argument:\\n}
- *postamble_after_end C5
-  {text_after_end:\\n}
-  {text_after_end:after bye}
+ *after_end C5
+  {raw:\\n}
+  {raw:after bye}
   >SOURCEMARKS
   >macro_expansion<end;1><p:9>
-  {text_after_end:\\n}
-  {text_after_end:\\n}
-  {text_after_end:After end\\n}
+  {raw:\\n}
+  {raw:\\n}
+  {raw:After end\\n}
 ';
 
 

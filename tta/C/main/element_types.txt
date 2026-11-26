@@ -46,7 +46,6 @@ ignorable_spaces_after_command            text,leading_space,ignorable_text
 spaces_at_end                             text,ignorable_text
 spaces_after_close_brace                  text,leading_space,ignorable_text
 spaces_before_paragraph                   text
-text_after_end                            text
 normal_text                               text
 # before and after arguments, to be ignored
 spaces_after_argument                     text,ignorable_text
@@ -58,7 +57,7 @@ verb_delimiter                            text,ignorable_text
 document_root
 root_line
 before_node_section
-postamble_after_end
+after_end
 before_beginning
 preamble_before_content
 paragraph

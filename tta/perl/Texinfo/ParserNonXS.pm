@@ -1003,8 +1003,8 @@ sub parse_file($$) {
 sub _rearrange_tree_beginning($$) {
   my ($document, $before_node_section) = @_;
 
-  # Put everything before @setfilename and after before_beginning
-  # in before_beginning, adding a before_beginning element if needed
+  # Put everything before @setfilename in before_beginning, adding a
+  # before_beginning element if needed
   my $setfilename = $document->global_commands_information()->{'setfilename'};
   if (defined($setfilename) and exists($before_node_section->{'contents'})) {
     # setfilename index
@@ -8136,7 +8136,7 @@ sub _parse_texi($$) {
   if (defined($line) and $status == $FINISHED_TOTALLY) {
     print STDERR "GATHER AFTER BYE\n" if ($self->{'conf'}->{'DEBUG'});
     my $element_after_bye
-      = Texinfo::TreeElement::new({'type' => 'postamble_after_end',
+      = Texinfo::TreeElement::new({'type' => 'after_end',
                                    'contents' => [],
                                    'parent' => $current});
     while (1) {
@@ -8145,7 +8145,7 @@ sub _parse_texi($$) {
       last if (!defined($line));
       push @{$element_after_bye->{'contents'}},
         Texinfo::TreeElement::new({'text' => $line,
-                                   'type' => 'text_after_end',});
+                                   'type' => 'raw',});
     }
     if (scalar(@{$element_after_bye->{'contents'}})) {
       push @{$current->{'contents'}}, $element_after_bye;

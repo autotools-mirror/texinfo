@@ -527,8 +527,8 @@ $result_tree_text{'sectioning_check_menu_structure'} = '*document_root C29
  *normal_command@bye C1
   *line_arg C1
    {spaces_before_argument:\\n}
- *postamble_after_end C1
-  {text_after_end:\\n}
+ *after_end C1
+  {raw:\\n}
 ';
 
 

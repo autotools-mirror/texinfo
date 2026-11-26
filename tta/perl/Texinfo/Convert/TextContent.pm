@@ -65,7 +65,7 @@ foreach my $type (
 }
 
 foreach my $type (
-            'postamble_after_end',
+            'after_end',
             'before_beginning',
             ) {
   $ignored_types{$type} = 1;

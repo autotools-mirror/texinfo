@@ -5713,7 +5713,7 @@ foreach my $type (
 }
 
 foreach my $type (
-            'postamble_after_end',
+            'after_end',
             'before_beginning',
             'arguments_line') {
   $default_types_conversion{$type} = undef;

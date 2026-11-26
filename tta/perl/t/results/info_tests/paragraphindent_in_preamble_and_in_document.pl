@@ -78,8 +78,8 @@ $result_tree_text{'paragraphindent_in_preamble_and_in_document'} = '*document_ro
  *normal_command@bye C1
   *line_arg C1
    {spaces_before_argument:\\n}
- *postamble_after_end C1
-  {text_after_end:\\n}
+ *after_end C1
+  {raw:\\n}
 ';
 
 

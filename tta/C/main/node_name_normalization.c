@@ -94,7 +94,7 @@ convert_to_normalized_internal (const ELEMENT *e, TEXT *result)
 
   cmd = element_builtin_data_cmd (e);
 
-  if ((e->type == ET_postamble_after_end
+  if ((e->type == ET_after_end
        || e->type == ET_before_beginning
       )
       || (cmd

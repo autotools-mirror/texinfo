@@ -257,7 +257,7 @@ Nodes and sections @-commands elements follow.  The node
 or sectioning command elements C<contents> hold all the elements corresponding
 to Texinfo code before the next node or sectioning command element or C<@bye>.
 If present in the Texinfo document, the C<@bye> element is next.  If there is
-content after C<@bye>, it is last in the I<postamble_after_end> container
+content after C<@bye>, it is last in the I<after_end> container
 element.
 
 The first element of a node or sectioning command C<contents>
@@ -636,10 +636,6 @@ Space within an index @-command before an @-command interrupting the
 index command, when there are only spaces after the interrupting
 @-command.
 
-=item text_after_end
-
-Text appearing after @bye.
-
 =item untranslated
 
 English text added by the parser that may need to be translated
@@ -674,9 +670,9 @@ fragments using C<parse_string>.  C<document_root> is the document
 root otherwise.
 
 C<document_root> first content should be C<before_node_section>, then nodes and
-sections @-commands elements, C<@bye> element and C<postamble_after_end>.
+sections @-commands elements, C<@bye> element and C<after_end>.
 
-=item postamble_after_end
+=item after_end
 
 This container holds everything appearing after @bye.
 

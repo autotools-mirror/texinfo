@@ -2867,7 +2867,7 @@ parse_texi (ELEMENT *current_elt)
   /* Gather text after @bye */
   if (line && status == FINISHED_TOTALLY) {
     ELEMENT *element_after_bye;
-    element_after_bye = new_element (ET_postamble_after_end);
+    element_after_bye = new_element (ET_after_end);
 
     debug ("C|GATHER AFTER BYE");
 
@@ -2879,7 +2879,7 @@ parse_texi (ELEMENT *current_elt)
         if (!allocated_line)
           break; /* Out of input. */
 
-        e = new_text_element (ET_text_after_end);
+        e = new_text_element (ET_raw);
         text_append (e->e.text, line);
         add_to_contents_as_array (element_after_bye, e);
       }

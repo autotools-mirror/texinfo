@@ -18,9 +18,9 @@ $result_tree_text{'text_before_and_after_bye'} = '*document_root C3
    {spaces_before_argument: }
    {rawline_text:on bye line}
    {spaces_after_argument:\\n}
- *postamble_after_end C2
-  {text_after_end:\\n}
-  {text_after_end:after bye\\n}
+ *after_end C2
+  {raw:\\n}
+  {raw:after bye\\n}
 ';
 
 

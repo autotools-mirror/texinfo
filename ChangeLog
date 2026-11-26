@@ -1,5 +1,12 @@
 2026-11-26  Patrice Dumas  <pertusus@free.fr>
 
+	* tta/C/main/element_types.txt, tta/C/parsetexi/parser.c (parse_texi),
+	tta/perl/Texinfo/ParserNonXS.pm (_parse_texi): rename
+	postamble_after_end to after_end.  Use raw type for text in after_end.
+	Remove the text_after_end type.
+
+2026-11-26  Patrice Dumas  <pertusus@free.fr>
+
 	* tta/C/main/element_types.txt, tta/C/parsetexi/parser.c
 	(parse_texi_document), tta/perl/Texinfo/ParserNonXS.pm
 	(_parse_texi_document): use empty_line type for empty line in
