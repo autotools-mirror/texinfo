@@ -1,5 +1,11 @@
 2026-11-25  Patrice Dumas  <pertusus@free.fr>
 
+	remove other_text
+
+	* tta/C/main/element_types.txt: remove other_text.
+
+2026-11-25  Patrice Dumas  <pertusus@free.fr>
+
 	merge other_text in normal_text
 
 	* tta/C/main/convert_utils.c (comma_index_subentries_tree_internal)

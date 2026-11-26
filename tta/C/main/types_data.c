@@ -18,7 +18,6 @@ const TYPE_DATA type_data[] = {
 {"text_after_end", TF_text},
 {"text_before_beginning", TF_text},
 {"normal_text", TF_text},
-{"other_text", TF_text},
 {"spaces_after_argument", TF_text | TF_ignorable_text},
 {"spaces_before_argument", TF_text | TF_leading_space | TF_ignorable_text},
 {"spaces_after_cmd_before_arg", TF_text | TF_ignorable_text},

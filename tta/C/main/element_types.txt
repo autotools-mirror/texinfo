@@ -49,9 +49,6 @@ spaces_before_paragraph                   text
 text_after_end                            text
 text_before_beginning                     text
 normal_text                               text
-# text not in the regular converted tree elements.
-# Could be part of informative command arguments, for added separators...
-other_text                                text
 # before and after arguments, to be ignored
 spaces_after_argument                     text,ignorable_text
 spaces_before_argument                    text,leading_space,ignorable_text
