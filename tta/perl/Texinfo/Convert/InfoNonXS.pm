@@ -682,7 +682,7 @@ sub format_footnotes($;$) {
         = Texinfo::TreeElement::new({'type' => 'line_arg',
                              'contents' => [$label_element,
                         Texinfo::TreeElement::new({'text' => '-Footnotes',
-                                                   'type' => 'other_text'})]});
+                                                   'type' => 'normal_text'})]});
       my $footnotes_node = Texinfo::TreeElement::new({
         'cmdname' => 'node',
         'type' => 'normal_command',
@@ -719,7 +719,7 @@ sub format_footnotes($;$) {
         $footnote_anchor_arg->{'type'} = 'brace_arg';
         push @{$footnote_anchor_arg->{'contents'}},
                Texinfo::TreeElement::new({'text' => $footnote_anchor_postfix,
-                                          'type' => 'other_text'});
+                                          'type' => 'normal_text'});
         my $footnote_anchor = Texinfo::TreeElement::new({'cmdname' => 'anchor',
                                     'type' => 'normal_command',
                                     'contents' => [$footnote_anchor_arg],
@@ -759,7 +759,7 @@ sub format_reference_to_footnote($) {
     $self->_convert(Texinfo::TreeElement::new({'type' => 'generic_container',
       'contents' =>
            [Texinfo::TreeElement::new({'text' => ' (',
-                                       'type' => 'other_text'}),
+                                       'type' => 'normal_text'}),
             Texinfo::TreeElement::new({'cmdname' => 'pxref',
                                        'type' => 'normal_command',
              'contents' => [
@@ -768,13 +768,13 @@ sub format_reference_to_footnote($) {
                    $line_arg,
                    Texinfo::TreeElement::new(
                         {'text' => "-Footnote-$self->{'footnote_index'}",
-                         'type' => 'other_text'})
+                         'type' => 'normal_text'})
                 ]
                })
              ]
             }),
             Texinfo::TreeElement::new({'text' => ')',
-                                       'type' => 'other_text'})],
+                                       'type' => 'normal_text'})],
       }));
   }
 }
@@ -888,10 +888,10 @@ sub format_ref($$$$) {
   my $note_element;
   if ($cmdname eq 'xref') {
     $note_element = Texinfo::TreeElement::new({'text' => '*Note ',
-                                               'type' => 'other_text'});
+                                               'type' => 'normal_text'});
   } else {
     $note_element = Texinfo::TreeElement::new({'text' => '*note ',
-                                               'type' => 'other_text'});
+                                               'type' => 'normal_text'});
   }
 
   $self->_convert(Texinfo::TreeElement::new({'type' => '_stop_upper_case',
@@ -933,13 +933,13 @@ sub format_ref($$$$) {
     my $file = Texinfo::TreeElement::new({'type' => 'generic_container',
             'contents' => [
                Texinfo::TreeElement::new({'text' => '(',
-                                          'type' => 'other_text'}),
+                                          'type' => 'normal_text'}),
                Texinfo::TreeElement::new({'type' => '_stop_upper_case',
                   'contents' => [Texinfo::TreeElement::new(
                                   {'type' => '_code',
                                    'contents' => [$args->[3]]})],}),
                Texinfo::TreeElement::new({'text' => ')',
-                                          'type' => 'other_text'}),]});
+                                          'type' => 'normal_text'}),]});
     $self->_convert($file);
     $has_file = 1;
   } elsif (defined($args->[4])) {
@@ -947,7 +947,7 @@ sub format_ref($$$$) {
     # even though the manual name is not known.  This should only
     # happen if a book argument is given, but no manual name.
     $self->_convert(Texinfo::TreeElement::new({'text' => '()',
-                                               'type' => 'other_text'}));
+                                               'type' => 'normal_text'}));
     $has_file = 1;
   }
 
@@ -990,7 +990,7 @@ sub format_ref($$$$) {
     # Should probably be removed about 10-15 years after Info
     # reader have been fixed.
     $label_element = Texinfo::TreeElement::new({'text' => 'Top',
-                                                'type' => 'other_text'});
+                                                'type' => 'normal_text'});
   }
 
   if (defined($label_element)) {
@@ -1180,10 +1180,10 @@ sub format_node($$;$) {
           = Texinfo::TreeElement::new({'type' => '_code',
                       'contents' => [
                         Texinfo::TreeElement::new({'text' => '(',
-                                                   'type' => 'other_text'}),
+                                                   'type' => 'normal_text'}),
                 @{$node_direction->{'contents'}}[$begin_manual .. $end_manual],
                                Texinfo::TreeElement::new({'text' => ')',
-                                                 'type' => 'other_text'})]});
+                                                 'type' => 'normal_text'})]});
         $self->convert_line($file_formatted, undef, 1);
       }
 

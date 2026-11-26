@@ -40,8 +40,10 @@ DOCUMENT_INFO *get_titlepage_publication_info (DOCUMENT *document);
 void destroy_document_info (DOCUMENT_INFO *document_info);
 
 ELEMENT_LIST *comma_index_subentries_tree (const ELEMENT *current,
+                                           ELEMENT_LIST *added_elements,
                                            char *separator);
-void free_comma_index_subentries_tree (ELEMENT_LIST *element);
+void free_comma_index_subentries_tree (ELEMENT_LIST *element_list,
+                                       ELEMENT_LIST *added_element_list);
 
 ELEMENT *expand_today (int test, const LANG_TRANSLATION *lang_translation,
                        int debug, CONVERTER_CDT_TREE *converter_cdt_tree);

@@ -1249,7 +1249,7 @@ sub output($$) {
          'contents' => [
           Texinfo::TreeElement::new({'type' => 'paragraph', 'contents' => [
            Texinfo::TreeElement::new({'text' => "\n(`Top' node ignored)\n",
-                                      'type' => 'other_text'})]})]});
+                                      'type' => 'normal_text'})]})]});
   }
 
   if (not defined($modified_root)) {

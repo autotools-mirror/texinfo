@@ -2377,7 +2377,7 @@ sub format_ref($$$$) {
         # case of a completely empty @*ref.
         my $substrings = {'node'
                        => Texinfo::TreeElement::new({'text' => 'Top',
-                                                     'type' => 'other_text'})};
+                                                     'type' => 'normal_text'})};
         if ($cmdname eq 'xref' or $cmdname eq 'inforef') {
           $tree = $self->cdt('See {node}', $substrings);
         } elsif ($cmdname eq 'pxref') {
@@ -2617,7 +2617,7 @@ sub _convert_def_line($$) {
        = Texinfo::TreeElement::new({'type' => '_code', 'contents' => [$name]});
     } else {
       $formatted_name = Texinfo::TreeElement::new({'text' => '',
-                                                   'type' => 'other_text'});
+                                                   'type' => 'normal_text'});
     }
     my $formatted_arguments;
     if (defined($arguments)) {
@@ -3779,7 +3779,7 @@ sub _convert($$) {
         # this is the text prepended to items.
         _convert($self, $prepended_element);
         _convert($self, Texinfo::TreeElement::new({ 'text' => ' ',
-                                                    'type' => 'other_text' }));
+                                                    'type' => 'normal_text' }));
       }
       my ($result_text, $count)
         = Texinfo::Convert::Paragraph::end($line->{'container'});

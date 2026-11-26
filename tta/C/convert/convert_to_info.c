@@ -991,7 +991,7 @@ info_format_footnotes (CONVERTER *self, const OUTPUT_UNIT *output_unit)
       else
         {
           ELEMENT *footnotes_node_arg = new_element (ET_line_arg);
-          ELEMENT *footnotes_suffix = new_element (ET_other_text);
+          ELEMENT *footnotes_suffix = new_text_element (ET_normal_text);
           footnotes_node = new_command_element (CM_node);
           ELEMENT *footnote_arguments_line
             = new_element (ET_arguments_line);
@@ -1046,7 +1046,7 @@ info_format_footnotes (CONVERTER *self, const OUTPUT_UNIT *output_unit)
               ELEMENT *label_element_copy = copy_contents (label_element, 0,
                                                        ET_generic_container);
               ELEMENT *footnote_anchor_postfix_e
-                = new_text_element (ET_other_text);
+                = new_text_element (ET_normal_text);
               text_printf (footnote_anchor_postfix_e->e.text, "-Footnote-%d",
                            footnote_info->number);
 
@@ -1094,13 +1094,13 @@ info_format_reference_to_footnote (CONVERTER *self)
       ELEMENT *line_arg = arguments_line->e.c->contents.list[0];
 
       ELEMENT *footnote_ref = new_element (ET_generic_container);
-      ELEMENT *open_parenthese = new_text_element (ET_other_text);
+      ELEMENT *open_parenthese = new_text_element (ET_normal_text);
       text_append_n (open_parenthese->e.text, " (", 2);
-      ELEMENT *close_parenthese = new_text_element (ET_other_text);
+      ELEMENT *close_parenthese = new_text_element (ET_normal_text);
       text_append_n (close_parenthese->e.text, ")", 1);
       ELEMENT *footnote_pxref = new_command_element (CM_pxref);
       ELEMENT *footnote_brace_arg = new_element (ET_brace_arg);
-      ELEMENT *footnote_name = new_text_element (ET_other_text);
+      ELEMENT *footnote_name = new_text_element (ET_normal_text);
       text_printf (footnote_name->e.text, "-Footnote-%d",
                    self_plaintext->footnote_index);
 
@@ -1245,7 +1245,7 @@ info_format_ref (CONVERTER *self, enum command_id cmd,
   para_set_conf_double_width_no_break (1);
 
   note_stop_upper_case_element = new_element (ET__stop_upper_case);
-  note_element = new_text_element (ET_other_text);
+  note_element = new_text_element (ET_normal_text);
 
   if (cmd == CM_xref)
     text_append_n (note_element->e.text, "*Note ", 6);
@@ -1303,9 +1303,9 @@ info_format_ref (CONVERTER *self, enum command_id cmd,
   if (args[3])
     {
       ELEMENT *file = new_element (ET_generic_container);
-      ELEMENT *open_parenthese = new_text_element (ET_other_text);
+      ELEMENT *open_parenthese = new_text_element (ET_normal_text);
       text_append_n (open_parenthese->e.text, "(", 1);
-      ELEMENT *close_parenthese = new_text_element (ET_other_text);
+      ELEMENT *close_parenthese = new_text_element (ET_normal_text);
       text_append_n (close_parenthese->e.text, ")", 1);
       ELEMENT *file_code_element = new_element (ET__code);
       ELEMENT *file_stop_upper_case_element
@@ -1330,7 +1330,7 @@ info_format_ref (CONVERTER *self, enum command_id cmd,
      /* add a () such that the node is considered to be external,
         even though the manual name is not known.  This should only
         happen if a book argument is given, but no manual name. */
-      ELEMENT *e_parentheses = new_text_element (ET_other_text);
+      ELEMENT *e_parentheses = new_text_element (ET_normal_text);
       text_append_n (e_parentheses->e.text, "()", 2);
       convert_to_plaintext_internal (self, e_parentheses);
       destroy_element (e_parentheses);
@@ -1388,7 +1388,7 @@ info_format_ref (CONVERTER *self, enum command_id cmd,
      Should probably be removed about 10-15 years after Info
      reader have been fixed. */
 
-      node_element = new_text_element (ET_other_text);
+      node_element = new_text_element (ET_normal_text);
       text_append_n (node_element->e.text, "Top", 3);
       label_element = 0;
     }
@@ -1687,9 +1687,9 @@ info_format_node (CONVERTER *self, const ELEMENT *node,
           if (manual_content)
             {
               ELEMENT *direction_file_code_element = new_element (ET__code);
-              ELEMENT *open_parenthese = new_text_element (ET_other_text);
+              ELEMENT *open_parenthese = new_text_element (ET_normal_text);
               text_append_n (open_parenthese->e.text, "(", 1);
-              ELEMENT *close_parenthese = new_text_element (ET_other_text);
+              ELEMENT *close_parenthese = new_text_element (ET_normal_text);
               text_append_n (close_parenthese->e.text, ")", 1);
               add_element_to_element_contents (direction_file_code_element,
                                                open_parenthese);

@@ -5136,6 +5136,7 @@ prepare_index_entries_targets (CONVERTER *self)
   if (self->document->indices_info.number > 0)
     {
       size_t i;
+      static ELEMENT_LIST subentry_added_elements;
       self_html->shared_conversion_state.formatted_index_entries
         = (int **) malloc (self->sorted_index_names.number * sizeof (int *));
 
@@ -5188,7 +5189,8 @@ prepare_index_entries_targets (CONVERTER *self)
                                         entry_reference_content_element);
 
               subentries_tree
-               = comma_index_subentries_tree (main_entry_element, " ");
+               = comma_index_subentries_tree (main_entry_element,
+                                              &subentry_added_elements, " ");
               if (subentries_tree)
                 {
                   insert_list_slice_into_contents (normalize_index_element,
@@ -5201,7 +5203,8 @@ prepare_index_entries_targets (CONVERTER *self)
 
               destroy_element (normalize_index_element);
               if (subentries_tree)
-                free_comma_index_subentries_tree (subentries_tree);
+                free_comma_index_subentries_tree (subentries_tree,
+                                                  &subentry_added_elements);
 
               destroy_element_and_children (entry_reference_content_element);
 

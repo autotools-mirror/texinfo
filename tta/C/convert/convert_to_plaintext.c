@@ -2409,6 +2409,7 @@ plaintext_process_printindex (CONVERTER *self,
   TEXT line_part;
   C_HASHMAP *entry_counts;
   int fillcolumn = self->conf->FILLCOLUMN.o.integer;
+  static ELEMENT_LIST subentry_added_elements;
 
   /* misc_args is not set with NO_INDEX set */
   misc_args = lookup_extra_string_list (printindex, AI_key_misc_args);
@@ -2611,7 +2612,8 @@ plaintext_process_printindex (CONVERTER *self,
       entry_content_element
         = converter_index_content_element (main_entry_element, self, 0);
 
-      subentries_tree = comma_index_subentries_tree (main_entry_element, 0);
+      subentries_tree = comma_index_subentries_tree (main_entry_element,
+                                               &subentry_added_elements, 0);
 
       entry_index = self->sorted_index_names.list[entry_index_nr-1];
       in_code = entry_index->in_code;
@@ -2955,7 +2957,8 @@ plaintext_process_printindex (CONVERTER *self,
      finalize_entry:
       free (entry_text.text);
       if (subentries_tree)
-        free_comma_index_subentries_tree (subentries_tree);
+        free_comma_index_subentries_tree (subentries_tree,
+                                       &subentry_added_elements);
       destroy_element (entry_tree_element);
       destroy_element_and_children (entry_content_element);
     }
@@ -3283,7 +3286,7 @@ plaintext_format_ref (CONVERTER *self, enum command_id cmd,
             }
           else
             {
-              ELEMENT *top_text = new_text_element (ET_other_text);
+              ELEMENT *top_text = new_text_element (ET_normal_text);
               text_append_n (top_text->e.text, "Top", 3);
               add_element_to_named_string_element_list (substrings,
                                                         "node", top_text);
@@ -3727,7 +3730,7 @@ convert_def_line (CONVERTER *self, const ELEMENT *element)
           add_to_element_contents (formatted_name, name_copy);
         }
       else
-        formatted_name = new_text_element (ET_other_text);
+        formatted_name = new_text_element (ET_normal_text);
 
       if (parsed_def->args)
         {
@@ -5611,7 +5614,7 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
             }
           else
             {
-              ELEMENT *space_element = new_text_element (ET_other_text);
+              ELEMENT *space_element = new_text_element (ET_normal_text);
               text_append_n (space_element->e.text, " ", 1);
               const ELEMENT *prepended_element
                 = item_itemize_prepended (element);

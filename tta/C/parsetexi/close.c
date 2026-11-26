@@ -164,7 +164,7 @@ close_all_style_commands (ELEMENT *current,
 static int
 is_container_empty (const ELEMENT *current)
 {
-  /* all kind of text elements, including other_text (in some args) */
+  /* all kind of text elements */
   if (type_data[current->type].flags & TF_text)
     {
       if (current->e.text->end == 0)

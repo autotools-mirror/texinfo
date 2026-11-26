@@ -10402,6 +10402,7 @@ html_convert_printindex_command (CONVERTER *self, const enum command_id cmd,
   char *non_alpha_text = 0;
   char *language;
   INDEX_SORTED_BY_LETTER *sorted_indexes_by_letter;
+  static ELEMENT_LIST subentry_added_elements;
 
   /* misc_args is not set with NO_INDEX set */
   misc_args = lookup_extra_string_list (element, AI_key_misc_args);
@@ -10650,7 +10651,8 @@ html_convert_printindex_command (CONVERTER *self, const enum command_id cmd,
                 {
                   /* at the max, concatenate the remaining subentries */
                   other_subentries_tree
-                    = comma_index_subentries_tree (subentry, 0);
+                    = comma_index_subentries_tree (subentry,
+                                                 &subentry_added_elements, 0);
                   if (other_subentries_tree)
                     {
                       if (!subentry_tree)
@@ -11164,7 +11166,8 @@ html_convert_printindex_command (CONVERTER *self, const enum command_id cmd,
             destroy_element (entry_tree);
 
           if (other_subentries_tree)
-            free_comma_index_subentries_tree (other_subentries_tree);
+            free_comma_index_subentries_tree (other_subentries_tree,
+                                              &subentry_added_elements);
 
           destroy_element (entry_ref_tree);
 
@@ -13855,6 +13858,7 @@ html_output_internal_links (CONVERTER *self)
   if (sorted_indexes_by_letter)
     {
       size_t i;
+      static ELEMENT_LIST subentry_added_elements;
       for (i = 0; i < self->sorted_index_names.number; i++)
         {
           const INDEX *current_index = self->sorted_index_names.list[i];
@@ -13931,7 +13935,8 @@ html_output_internal_links (CONVERTER *self)
                   add_to_contents_as_array (entry_ref_tree,
                                             entry_content_element);
                   subentries_tree
-                    = comma_index_subentries_tree (main_entry_element, 0);
+                    = comma_index_subentries_tree (main_entry_element,
+                                          &subentry_added_elements, 0);
                   if (subentries_tree)
                     {
                       insert_list_slice_into_contents (entry_ref_tree,
@@ -13947,7 +13952,8 @@ html_output_internal_links (CONVERTER *self)
                     self->convert_text_options->code_state--;
 
                   if (subentries_tree)
-                    free_comma_index_subentries_tree (subentries_tree);
+                    free_comma_index_subentries_tree (subentries_tree,
+                                               &subentry_added_elements);
 
                   destroy_element (entry_ref_tree);
 

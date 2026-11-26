@@ -1,5 +1,17 @@
 2026-11-25  Patrice Dumas  <pertusus@free.fr>
 
+	merge other_text in normal_text
+
+	* tta/C/main/convert_utils.c (comma_index_subentries_tree_internal)
+	(comma_index_subentries_tree, free_comma_index_subentries_tree): add
+	an element list as argument and register added element in the list.
+	Free the elements in the list in free_comma_index_subentries_tree
+	and reset the list.  Update callers.
+
+	Replace other_text by normal_text all over.
+
+2026-11-25  Patrice Dumas  <pertusus@free.fr>
+
 	* tta/C/convert/format_html.c (html_convert_menu_entry_type),
 	tta/C/main/manipulate_tree.c (parse_node_manual),
 	tta/C/parsetexi/def.c (split_delimiters), tta/C/parsetexi/end_line.c

@@ -250,6 +250,7 @@ get_titlepage_publication_info (DOCUMENT *document)
 
 static void
 comma_index_subentries_tree_internal (const ELEMENT *current,
+                                      ELEMENT_LIST *added_elements,
                                       const char *separator,
                                       ELEMENT_LIST *result)
 {
@@ -262,10 +263,12 @@ comma_index_subentries_tree_internal (const ELEMENT *current,
       if (!(type_data[content->type].flags & TF_text)
           && content->e.c->cmd == CM_subentry)
         {
-          ELEMENT *e_separator = new_text_element (ET_other_text);
+          ELEMENT *e_separator = new_text_element (ET_normal_text);
           text_append (e_separator->e.text, separator);
           add_to_element_list (result, e_separator);
-          comma_index_subentries_tree_internal (content, separator, result);
+          add_to_element_list (added_elements, e_separator);
+          comma_index_subentries_tree_internal (content, added_elements,
+                                                separator, result);
         }
       else
         add_to_element_list (result, content);
@@ -274,7 +277,7 @@ comma_index_subentries_tree_internal (const ELEMENT *current,
 
 ELEMENT_LIST *
 comma_index_subentries_tree (const ELEMENT *current,
-                             char *separator)
+                             ELEMENT_LIST *added_elements, char *separator)
 {
   size_t i;
   ELEMENT_LIST *result = new_list ();
@@ -289,10 +292,11 @@ comma_index_subentries_tree (const ELEMENT *current,
       if (!(type_data[content->type].flags & TF_text)
           && content->e.c->cmd == CM_subentry)
         {
-          ELEMENT *e_separator = new_text_element (ET_other_text);
+          ELEMENT *e_separator = new_text_element (ET_normal_text);
           text_append (e_separator->e.text, subentry_separator);
           add_to_element_list (result, e_separator);
-          comma_index_subentries_tree_internal (content,
+          add_to_element_list (added_elements, e_separator);
+          comma_index_subentries_tree_internal (content, added_elements,
                                                 subentry_separator, result);
         }
     }
@@ -307,16 +311,17 @@ comma_index_subentries_tree (const ELEMENT *current,
 }
 
 void
-free_comma_index_subentries_tree (ELEMENT_LIST *element_list)
+free_comma_index_subentries_tree (ELEMENT_LIST *element_list,
+                                  ELEMENT_LIST *added_element_list)
 {
   /* destroy separator elements */
   size_t i;
-  for (i = 0; i < element_list->number; i++)
+  for (i = 0; i < added_element_list->number; i++)
     {
-      ELEMENT *content = element_list->list[i];
-      if (content->type == ET_other_text)
-        destroy_element (content);
+      ELEMENT *content = added_element_list->list[i];
+      destroy_element (content);
     }
+  added_element_list->number = 0;
   destroy_list (element_list);
 }
 
