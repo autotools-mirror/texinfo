@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'setfilename_in_paragraph'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_beginning C1
+  *before_beginning C1
    *paragraph C1
     {normal_text:Some text\\n}
   *preamble_before_content C1

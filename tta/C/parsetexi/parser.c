@@ -406,8 +406,8 @@ rearrange_tree_beginning (ELEMENT *before_node_section,
   ELEMENT *informational_preamble;
   size_t first_idx;
 
- /* Put everything before @setfilename and after preamble_before_beginning
-    in preamble_before_beginning, adding preamble_before_beginning if needed */
+ /* Put everything before @setfilename and after before_beginning
+    in before_beginning, adding a before_beginning element if needed */
   if (document->global_commands.setfilename
       && before_node_section->e.c->contents.number > 0)
     {
@@ -417,7 +417,7 @@ rearrange_tree_beginning (ELEMENT *before_node_section,
       for (; i < before_node_section->e.c->contents.number; i++)
         {
           const ELEMENT *content = before_node_section->e.c->contents.list[i];
-          if (content->type == ET_preamble_before_beginning)
+          if (content->type == ET_before_beginning)
             i_beginning = i + 1;
           else if (!(type_data[content->type].flags & TF_text)
                    && content->e.c->cmd == CM_setfilename)
@@ -428,17 +428,16 @@ rearrange_tree_beginning (ELEMENT *before_node_section,
           && i < before_node_section->e.c->contents.number)
         {
            size_t j;
-           ELEMENT *preamble_before_beginning;
+           ELEMENT *e_before_beginning;
 
            if (i_beginning == 0)
-             preamble_before_beginning
-               = new_element (ET_preamble_before_beginning);
+             e_before_beginning = new_element (ET_before_beginning);
            else
-             preamble_before_beginning
+             e_before_beginning
               = before_node_section->e.c->contents.list[i_beginning -1];
 
-           insert_slice_into_contents (preamble_before_beginning,
-                       preamble_before_beginning->e.c->contents.number,
+           insert_slice_into_contents (e_before_beginning,
+                       e_before_beginning->e.c->contents.number,
                                        before_node_section,
                                        i_beginning, i);
            for (j = i_beginning; j < i; j++)
@@ -446,14 +445,14 @@ rearrange_tree_beginning (ELEMENT *before_node_section,
                ELEMENT *content = before_node_section->e.c->contents.list[j];
                if (!(type_data[content->type].flags & TF_text)
                    && content->e.c->parent)
-                 content->e.c->parent = preamble_before_beginning;
+                 content->e.c->parent = e_before_beginning;
              }
            remove_slice_from_contents (before_node_section,
                                        i_beginning, i);
 
            if (i_beginning == 0)
              insert_into_contents (before_node_section,
-                                   preamble_before_beginning, 0);
+                                   e_before_beginning, 0);
         }
     }
 
@@ -468,7 +467,7 @@ rearrange_tree_beginning (ELEMENT *before_node_section,
       for (; i < before_node_section->e.c->contents.number; i++)
         {
           const ELEMENT *content = before_node_section->e.c->contents.list[i];
-          if (content->type == ET_preamble_before_beginning)
+          if (content->type == ET_before_beginning)
             first_idx = i+1;
           else if (content->type == ET_paragraph
                    || (!(type_data[content->type].flags & TF_text)
@@ -574,10 +573,10 @@ parse_texi_document (void)
   const char *linep;
 
   ELEMENT *before_node_section = setup_document_root_and_before_node_section ();
-  ELEMENT *preamble_before_beginning = 0;
+  ELEMENT *e_before_beginning = 0;
 
   /* Put all the empty lines up to a line starting "\input" inside a
-     "preamble_before_beginning" element. */
+     "before_beginning" element. */
   while (1)
     {
       ELEMENT *l;
@@ -591,22 +590,22 @@ parse_texi_document (void)
       linep += strspn (linep, whitespace_chars);
       if (*linep && !looking_at (linep, "\\input"))
         {
-          /* This line is not part of the preamble_before_beginning.
+          /* This line is not part of the before_beginning element.
              Push back into input stream. */
           input_pushback (line);
           break;
         }
 
-      if (!preamble_before_beginning)
-        preamble_before_beginning = new_element (ET_preamble_before_beginning);
+      if (!e_before_beginning)
+        e_before_beginning = new_element (ET_before_beginning);
 
       l = new_text_element (ET_text_before_beginning);
       text_append (l->e.text, line);
-      add_to_contents_as_array (preamble_before_beginning, l);
+      add_to_contents_as_array (e_before_beginning, l);
     }
 
-  if (preamble_before_beginning)
-    add_to_element_contents (before_node_section, preamble_before_beginning);
+  if (e_before_beginning)
+    add_to_element_contents (before_node_section, e_before_beginning);
 
   parse_texi (before_node_section);
 

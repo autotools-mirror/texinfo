@@ -204,7 +204,7 @@ static enum element_type ignored_types[] = {
     ET_arguments_line,
     ET_ignorable_spaces_after_command,
     ET_postamble_after_end,
-    ET_preamble_before_beginning,
+    ET_before_beginning,
     ET_spaces_at_end,
     ET_spaces_before_paragraph,
     ET_spaces_after_close_brace,

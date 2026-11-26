@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'encoding_index_ascii_enable_encoding'} = '*document_root C4
  *before_node_section C2
-  *preamble_before_beginning C1
+  *before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content C3
    *normal_command@setfilename C1 l2

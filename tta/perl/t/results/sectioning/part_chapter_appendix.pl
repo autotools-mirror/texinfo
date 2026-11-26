@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'part_chapter_appendix'} = '*document_root C4
  *before_node_section C2
-  *preamble_before_beginning C1
+  *before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content
  *normal_command@part C2 l2 {Part 1}

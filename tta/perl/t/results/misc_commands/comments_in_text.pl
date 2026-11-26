@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'comments_in_text'} = '*document_root C1
  *before_node_section C5
-  *preamble_before_beginning C1
+  *before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content C2
    *normal_command@c C1

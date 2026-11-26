@@ -26,7 +26,7 @@ const TYPE_DATA type_data[] = {
 {"root_line", 0},
 {"before_node_section", 0},
 {"postamble_after_end", 0},
-{"preamble_before_beginning", 0},
+{"before_beginning", 0},
 {"preamble_before_content", 0},
 {"paragraph", 0},
 {"preformatted", 0},

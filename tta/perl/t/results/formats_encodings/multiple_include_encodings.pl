@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'multiple_include_encodings'} = '*document_root C19
  *before_node_section C2
-  *preamble_before_beginning C1
+  *before_beginning C1
    {text_before_beginning:\\input texinfo.tex\\n}
   *preamble_before_content C10
    *normal_command@documentencoding C1 multiple_include_encodings.texi:l2

@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'no_punctuation_commands'} = '*document_root C1
  *before_node_section C13
-  *preamble_before_beginning C1
+  *before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content
   *paragraph C13

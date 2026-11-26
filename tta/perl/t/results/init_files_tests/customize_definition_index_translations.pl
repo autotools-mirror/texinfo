@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'customize_definition_index_translations'} = '*document_root C16
  *before_node_section C2
-  *preamble_before_beginning C2
+  *before_beginning C2
    {text_before_beginning:\\input texinfo @c -*-texinfo-*-\\n}
    {text_before_beginning:\\n}
   *preamble_before_content C2

@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'paragraphindent_asis_first'} = '*document_root C1
  *before_node_section C7
-  *preamble_before_beginning C1
+  *before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content C1
    {spaces_before_paragraph:     }

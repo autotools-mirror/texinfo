@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'end_of_lines_protected_non_ascii'} = '*document_root C1
  *before_node_section C4
-  *preamble_before_beginning C1
+  *before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content
   *normal_command@deffn C3 end_of_lines_protected_non_ascii.texi:l2

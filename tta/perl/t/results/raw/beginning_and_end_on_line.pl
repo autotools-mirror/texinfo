@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'beginning_and_end_on_line'} = '*document_root C1
  *before_node_section C5
-  *preamble_before_beginning C1
+  *before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content C2
    *normal_command@tex C2 l2

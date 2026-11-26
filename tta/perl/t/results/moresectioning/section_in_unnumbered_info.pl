@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'section_in_unnumbered_info'} = '*document_root C65
  *before_node_section C2
-  *preamble_before_beginning C1
+  *before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content
  *normal_command@node C1 section_in_unnumbered_text.texi:l2 {Top}

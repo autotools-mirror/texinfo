@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'empty_ifset_in_ifset_no_set'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_beginning C1
+  *before_beginning C1
   >SOURCEMARKS
   >ignored_conditional_block<1>
    >*normal_command@ifset C5 l2

@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'commands_and_spaces'} = '*document_root C2
  *before_node_section C2
-  *preamble_before_beginning C2
+  *before_beginning C2
    *normal_command@set C1
    |misc_args:A{foo|some @value}
     *line_arg C3

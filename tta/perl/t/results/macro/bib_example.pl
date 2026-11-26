@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'bib_example'} = '*document_root C9
  *before_node_section C2
-  *preamble_before_beginning C1
+  *before_beginning C1
    {text_before_beginning:\\input texinfo   @c -*-texinfo-*-\\n}
   *preamble_before_content C218
    *normal_command@c C1

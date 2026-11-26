@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'contents_in_middle_section'} = '*document_root C10
  *before_node_section C2
-  *preamble_before_beginning C2
+  *before_beginning C2
    {text_before_beginning:\\input texinfo @c -*-texinfo-*-\\n}
    {text_before_beginning:\\n}
   *preamble_before_content

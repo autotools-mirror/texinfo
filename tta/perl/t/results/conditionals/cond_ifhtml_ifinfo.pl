@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'cond_ifhtml_ifinfo'} = '*document_root C5
  *before_node_section C5
-  *preamble_before_beginning C2
+  *before_beginning C2
    {text_before_beginning:\\input texinfo\\n}
    {text_before_beginning:\\n}
   *preamble_before_content C4

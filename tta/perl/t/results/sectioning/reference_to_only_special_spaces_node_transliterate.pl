@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'reference_to_only_special_spaces_node_transliterate'} = '*document_root C8
  *before_node_section C2
-  *preamble_before_beginning C1
+  *before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content
  *normal_command@node C1 reference_to_only_special_spaces_node.texi:l2 {Top}

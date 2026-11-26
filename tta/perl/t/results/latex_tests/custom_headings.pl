@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'custom_headings'} = '*document_root C8
  *before_node_section C2
-  *preamble_before_beginning C1
+  *before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content C3
    *normal_command@evenheading C1 l2

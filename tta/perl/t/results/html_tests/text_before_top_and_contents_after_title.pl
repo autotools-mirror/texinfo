@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'text_before_top_and_contents_after_title'} = '*document_root C4
  *before_node_section C4
-  *preamble_before_beginning C1
+  *before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content
   *paragraph C1

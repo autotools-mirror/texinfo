@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'index_special_region_no_insertcopying_titlepage_no_nodes'} = '*document_root C7
  *before_node_section C2
-  *preamble_before_beginning C2
+  *before_beginning C2
    {text_before_beginning:\\input texinfo @c -*-texinfo-*-\\n}
    {text_before_beginning:\\n}
   *preamble_before_content C4

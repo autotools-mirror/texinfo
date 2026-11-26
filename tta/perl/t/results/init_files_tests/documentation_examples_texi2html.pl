@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'documentation_examples_texi2html'} = '*document_root C11
  *before_node_section C2
-  *preamble_before_beginning C1
+  *before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content C4
    *normal_command@settitle C1 l2

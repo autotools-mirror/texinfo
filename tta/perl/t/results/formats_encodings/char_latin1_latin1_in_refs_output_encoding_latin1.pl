@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'char_latin1_latin1_in_refs_output_encoding_latin1'} = '*document_root C14
  *before_node_section C2
-  *preamble_before_beginning C2
+  *before_beginning C2
    {text_before_beginning:\\input texinfo\\n}
    {text_before_beginning:\\n}
   *preamble_before_content C2

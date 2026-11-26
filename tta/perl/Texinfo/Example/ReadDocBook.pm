@@ -276,7 +276,7 @@ foreach my $type (
             'menu_entry_leading_text',
             'menu_entry_separator',
             'postamble_after_end',
-            'preamble_before_beginning',
+            'before_beginning',
             #'arguments_line',
   ) {
   $ignored_types{$type} = 1;

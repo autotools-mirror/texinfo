@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'macro_expansion'} = '*document_root C1
  *before_node_section C21
-  *preamble_before_beginning C1
+  *before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content C2
    *normal_command@macro C6 l2

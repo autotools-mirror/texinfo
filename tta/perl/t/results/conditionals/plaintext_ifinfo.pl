@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'plaintext_ifinfo'} = '*document_root C1
  *before_node_section C3
-  *preamble_before_beginning C1
+  *before_beginning C1
   >SOURCEMARKS
   >expanded_conditional_command<start;1>
    >*normal_command@ifinfo C1 l2

@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'documentscript_selection'} = '*document_root C5
  *before_node_section C2
-  *preamble_before_beginning C1
+  *before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content C5
    *normal_command@copying C3 l2

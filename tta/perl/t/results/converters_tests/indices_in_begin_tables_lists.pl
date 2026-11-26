@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'indices_in_begin_tables_lists'} = '*document_root C8
  *before_node_section C2
-  *preamble_before_beginning C2
+  *before_beginning C2
    {text_before_beginning:\\input texinfo.tex\\n}
    {text_before_beginning:\\n}
   *preamble_before_content

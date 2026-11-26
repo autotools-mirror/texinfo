@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'delcomment_followed_by_cpp_line'} = '*document_root C2
  *before_node_section C16
-  *preamble_before_beginning C2
+  *before_beginning C2
    {text_before_beginning:\\input texinfo\\n}
    {text_before_beginning:\\n}
   *preamble_before_content C3

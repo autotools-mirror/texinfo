@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'defcondx_Ubar'} = '*document_root C3
  *before_node_section C2
-  *preamble_before_beginning C2
+  *before_beginning C2
    {text_before_beginning:\\input texinfo\\n}
    {text_before_beginning:\\n}
   *preamble_before_content C5

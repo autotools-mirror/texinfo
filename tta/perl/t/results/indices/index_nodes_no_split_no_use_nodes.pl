@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'index_nodes_no_split_no_use_nodes'} = '*document_root C7
  *before_node_section C2
-  *preamble_before_beginning C2
+  *before_beginning C2
    {text_before_beginning:\\input texinfo @c -*-texinfo-*-\\n}
    {text_before_beginning:\\n}
   *preamble_before_content

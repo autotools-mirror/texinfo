@@ -245,14 +245,14 @@ If it is useful, it would only need to be available through the
 SWIG interface, not in texi2any.
 
 
-From Gavin on the preamble_before_beginning implementation:
+From Gavin on the before_beginning implementation:
 Another way might be to add special input code to trim off and return
 a file prelude.  This would moves the handling of this from the "parser" code
 to the "input" code.  This would avoid the problematic "pushing back" of input
 and would be a clean way of doing this.  It would isolate the handling of
 the "\input" line from the other parsing code.
 
-I understand that the main purpose of the preamble_before_beginning element
+I understand that the main purpose of the before_beginning element
 is not to lose information so that the original Texinfo file could be
 regenerated.  If that's the case, maybe the input code could return
 all the text in this preamble as one long string - it wouldn't have to be

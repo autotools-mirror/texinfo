@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'empty_nodes_with_commands'} = '*document_root C5
  *before_node_section C2
-  *preamble_before_beginning C1
+  *before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content
  *normal_command@node C2 l2

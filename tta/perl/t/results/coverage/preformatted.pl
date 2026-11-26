@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'preformatted'} = '*document_root C1
  *before_node_section C5
-  *preamble_before_beginning C1
+  *before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content
   *normal_command@example C3 l2

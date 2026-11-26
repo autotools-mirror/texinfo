@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'empty_listoffloats_with_floats'} = '*document_root C1
  *before_node_section C11
-  *preamble_before_beginning C1
+  *before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content
   *normal_command@float C3 l2

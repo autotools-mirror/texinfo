@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'maketitle_documentinfo_publication'} = '*document_root C8
  *before_node_section C4
-  *preamble_before_beginning C1
+  *before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content C8
    *normal_command@publication C3 maketitle_documentinfo_publication.texi:l2

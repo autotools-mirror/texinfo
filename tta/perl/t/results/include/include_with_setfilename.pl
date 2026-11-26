@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'include_with_setfilename'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_beginning C3
+  *before_beginning C3
    {normal_text:}
    >SOURCEMARKS
    >include<start;1>

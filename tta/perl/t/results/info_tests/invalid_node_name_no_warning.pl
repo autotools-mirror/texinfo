@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'invalid_node_name_no_warning'} = '*document_root C5
  *before_node_section C2
-  *preamble_before_beginning C1
+  *before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content
  *normal_command@node C4 l2 {Top}

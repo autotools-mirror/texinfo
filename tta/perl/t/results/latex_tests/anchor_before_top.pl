@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'anchor_before_top'} = '*document_root C5
  *before_node_section C5
-  *preamble_before_beginning C1
+  *before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content
   *normal_command@anchor C1 l2

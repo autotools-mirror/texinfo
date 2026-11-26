@@ -236,8 +236,8 @@ A full Texinfo tree is rooted at a I<document_root> type element.
 I<document_root> first element in C<contents> should be a
 I<before_node_section> container for content appearing before the first node or
 sectioning command.  I<before_node_section> first content is
-I<preamble_before_beginning>.  If there is a C<@setfilename>,
-I<preamble_before_beginning> holds everything before C<@setfilename> (It may
+I<before_beginning>.  If there is a C<@setfilename>,
+I<before_beginning> holds everything before C<@setfilename> (It may
 contains paragraphs and block commands elements before C<@setfilename>, if any,
 although it is not recommended to have such content). If there is no
 C<@setfilename>, it contains the C<\input texinfo.tex> line and following blank
@@ -684,7 +684,7 @@ sections @-commands elements, C<@bye> element and C<postamble_after_end>.
 
 This container holds everything appearing after @bye.
 
-=item preamble_before_beginning
+=item before_beginning
 
 This container holds everything appearing before the first content, including
 the C<\input texinfo.tex> line and following blank lines.

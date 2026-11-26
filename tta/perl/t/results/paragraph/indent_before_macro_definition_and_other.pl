@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'indent_before_macro_definition_and_other'} = '*document_root C1
  *before_node_section C13
-  *preamble_before_beginning C1
+  *before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content C2
    *normal_command@indent l2

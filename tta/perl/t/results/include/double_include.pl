@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'double_include'} = '*document_root C1
  *before_node_section C3
-  *preamble_before_beginning C1
+  *before_beginning C1
   >SOURCEMARKS
   >include<start;2>
    >*normal_command@include C1 l2

@@ -1003,8 +1003,8 @@ sub parse_file($$) {
 sub _rearrange_tree_beginning($$) {
   my ($document, $before_node_section) = @_;
 
-  # Put everything before @setfilename and after preamble_before_beginning
-  # in preamble_before_beginning, adding preamble_before_beginning if needed
+  # Put everything before @setfilename and after before_beginning
+  # in before_beginning, adding a before_beginning element if needed
   my $setfilename = $document->global_commands_information()->{'setfilename'};
   if (defined($setfilename) and exists($before_node_section->{'contents'})) {
     # setfilename index
@@ -1012,7 +1012,7 @@ sub _rearrange_tree_beginning($$) {
     my $i_beginning = 0;
     for (; $i < scalar(@{$before_node_section->{'contents'}}); $i++) {
       my $content = $before_node_section->{'contents'}->[$i];
-      if ($content->{'type'} eq 'preamble_before_beginning') {
+      if ($content->{'type'} eq 'before_beginning') {
         $i_beginning = $i + 1;
       } elsif (exists($content->{'cmdname'})
           and $content->{'cmdname'} eq 'setfilename') {
@@ -1022,24 +1022,24 @@ sub _rearrange_tree_beginning($$) {
     # setfilename itself remains in the same element.
     if ($i > $i_beginning
         and $i < scalar(@{$before_node_section->{'contents'}})) {
-      my $preamble_before_beginning;
+      my $e_before_beginning;
       my @moved = splice(@{$before_node_section->{'contents'}},
                          $i_beginning, $i - $i_beginning);
       my $before_setfilename;
       if ($i_beginning == 0) {
-        $preamble_before_beginning
-          = Texinfo::TreeElement::new({'type' => 'preamble_before_beginning',
+        $e_before_beginning
+          = Texinfo::TreeElement::new({'type' => 'before_beginning',
                                  'parent' => $before_node_section,});
         unshift (@{$before_node_section->{'contents'}},
-                    $preamble_before_beginning);
+                    $e_before_beginning);
       } else {
-        $preamble_before_beginning
+        $e_before_beginning
           = $before_node_section->{'contents'}->[$i_beginning -1];
       }
-      push @{$preamble_before_beginning->{'contents'}}, @moved;
+      push @{$e_before_beginning->{'contents'}}, @moved;
 
       foreach my $content (@moved) {
-        $content->{'parent'} = $preamble_before_beginning
+        $content->{'parent'} = $e_before_beginning
           if (exists($content->{'parent'}));
       }
     }
@@ -1056,7 +1056,7 @@ sub _rearrange_tree_beginning($$) {
     my $i = 0;
     for (; $i < scalar(@{$before_node_section->{'contents'}}); $i++) {
       my $content = $before_node_section->{'contents'}->[$i];
-      if ($content->{'type'} eq 'preamble_before_beginning') {
+      if ($content->{'type'} eq 'before_beginning') {
         $first_idx = $i +1;
       } elsif ($content->{'type'} eq 'paragraph'
                or (exists($content->{'cmdname'}) and
@@ -1089,24 +1089,24 @@ sub _parse_texi_document($) {
   my $source_info;
 
   # put the empty lines and the \input line in a container at the beginning
-  my $preamble_before_beginning;
+  my $e_before_beginning;
   while (1) {
     my $line;
     ($line, $source_info) = _next_text($self);
     last if (!defined($line));
     # non ascii spaces do not start content
     if ($line =~ /^ *\\input/ or $line =~ /^\s*$/) {
-      if (not defined($preamble_before_beginning)) {
-        $preamble_before_beginning
-          = Texinfo::TreeElement::new({'type' => 'preamble_before_beginning',
+      if (not defined($e_before_beginning)) {
+        $e_before_beginning
+          = Texinfo::TreeElement::new({'type' => 'before_beginning',
                         'contents' => [], 'parent' => $before_node_section });
-        push @{$before_node_section->{'contents'}}, $preamble_before_beginning;
+        push @{$before_node_section->{'contents'}}, $e_before_beginning;
       }
-      push @{$preamble_before_beginning->{'contents'}},
+      push @{$e_before_beginning->{'contents'}},
         Texinfo::TreeElement::new({'text' => $line,
                                    'type' => 'text_before_beginning',});
     } else {
-      # This line is not part of the preamble_before_beginning.
+      # This line is not part of the before_beginning element.
       # Shove back into input stream.
       _input_pushback_text($self, $line);
       last;

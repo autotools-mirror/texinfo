@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'cpp_directives_line_value_macro'} = '*document_root C1
  *before_node_section C17
-  *preamble_before_beginning C1
+  *before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content C2
    *normal_command@macro C3 cpp_directives_line_value_macro.texi:l2

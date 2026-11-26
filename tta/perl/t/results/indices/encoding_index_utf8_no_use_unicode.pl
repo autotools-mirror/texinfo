@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'encoding_index_utf8_no_use_unicode'} = '*document_root C5
  *before_node_section C2
-  *preamble_before_beginning C1
+  *before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content C2
    *normal_command@documentencoding C1 encoding_index_utf8.texi:l2

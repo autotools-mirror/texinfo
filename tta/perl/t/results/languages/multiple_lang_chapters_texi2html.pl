@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'multiple_lang_chapters_texi2html'} = '*document_root C13
  *before_node_section C2
-  *preamble_before_beginning C1
+  *before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content C4
    *normal_command@documentencoding C1 l2

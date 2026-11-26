@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'newline_and_continuation_in_brace'} = '*document_root C1
  *before_node_section C3
-  *preamble_before_beginning C1
+  *before_beginning C1
    {text_before_beginning:\\n}
   *preamble_before_content C2
    *normal_command@linemacro C3 l2
