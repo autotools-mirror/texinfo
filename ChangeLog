@@ -1,5 +1,10 @@
 2026-11-26  Patrice Dumas  <pertusus@free.fr>
 
+	* tta/C/main/convert_utils.c, tta/perl/Texinfo/Convert/Utils.pm:
+	remove unused find_root_command_next_heading_command function.
+
+2026-11-26  Patrice Dumas  <pertusus@free.fr>
+
 	* tta/C/main/element_types.txt, tta/C/main/utils.c (in_preamble),
 	tta/C/parsetexi/parser.c (rearrange_tree_beginning),
 	tta/perl/Texinfo/Convert/LaTeX.pm ($latex_document_type),

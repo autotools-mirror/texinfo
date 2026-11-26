@@ -644,86 +644,6 @@ sub find_element_authors($$) {
   }
 }
 
-# Similar to Texinfo::Common::is_content_empty
-# Unused
-sub find_root_command_next_heading_command($$;$$) {
-  my ($root, $expanded_format_raw, $do_not_ignore_contents,
-      $do_not_ignore_index_entries) = @_;
-
-  return undef if (!exists($root->{'contents'}));
-
-  $expanded_format_raw = {} if (!defined($expanded_format_raw));
-
-  foreach my $content (@{$root->{'contents'}}) {
-    #print STDERR Texinfo::Common::debug_print_element($content)."\n";
-    if (exists($content->{'cmdname'})) {
-      if (exists(
-           $Texinfo::Commands::sectioning_heading_commands{$content->{'cmdname'}})) {
-        #print STDERR "HEADING FOUND ASSOCIATED $content->{'cmdname'}\n";
-        return $content;
-      }
-      if ($content->{'type'} eq 'index_entry_command') {
-        if ($do_not_ignore_index_entries) {
-          return undef;
-        } else {
-          next;
-        }
-      }
-      if (exists($Texinfo::Commands::line_commands{$content->{'cmdname'}})) {
-        if (exists(
-              $Texinfo::Commands::formatted_line_commands{$content->{'cmdname'}})
-            or exists(
-                 $Texinfo::Commands::formattable_line_commands{$content->{'cmdname'}})
-            or ($do_not_ignore_contents
-                and ($content->{'cmdname'} eq 'contents'
-                     or $content->{'cmdname'} eq 'shortcontents'
-                     or $content->{'cmdname'} eq 'summarycontents'))) {
-          return undef;
-        } else {
-          next;
-        }
-      } elsif (exists($Texinfo::Commands::nobrace_commands{$content->{'cmdname'}})) {
-        if (exists(
-            $Texinfo::Commands::formatted_nobrace_commands{$content->{'cmdname'}})) {
-          return undef;
-        } else {
-          next;
-        }
-      } elsif (exists($Texinfo::Commands::block_commands{$content->{'cmdname'}})) {
-        if (exists(
-             $Texinfo::Commands::non_formatted_block_commands{$content->{'cmdname'}})
-            or $Texinfo::Commands::block_commands{$content->{'cmdname'}} eq 'region'
-            # ignored conditional
-            or $Texinfo::Commands::block_commands{$content->{'cmdname'}} eq 'conditional'
-            or ($Texinfo::Commands::block_commands{$content->{'cmdname'}} eq 'format_raw'
-                and !$expanded_format_raw->{$content->{'cmdname'}})) {
-          next;
-        } else {
-          return undef;
-        }
-      # brace commands
-      } else {
-        if (exists(
-             $Texinfo::Commands::non_formatted_brace_commands{$content->{'cmdname'}})) {
-          next;
-        } else {
-          return undef;
-        }
-      }
-    }
-    if ($content->{'type'} eq 'paragraph') {
-      return undef;
-    }
-    # normally should not happen at the top level as text at top
-    # level should only contain spaces (empty lines, text before
-    # paragraphs).
-    if (exists($content->{'text'}) and $content->{'text'} =~ /\S/) {
-      return undef;
-    }
-  }
-  return undef;
-}
-
 # ALTIMP C/main/convert_utils.c
 sub encoded_output_file_name($$$$;$) {
   my ($file_name, $output_file_name_encoding,
@@ -884,25 +804,6 @@ $input_file_name_encoding, $doc_encoding_for_input_file_name, $locale_encoding,
 $document, $input_file_encoding) >>.  The optional I<$converter>
 argument is used to output error messages.  This function returns a
 C<@verbatim> tree elements after finding the included file and reading it.
-
-=begin comment
-
-=item $heading_element = find_root_command_next_heading_command($element, $expanded_format_raw, $do_not_ignore_contents, $do_not_ignore_index_entries)
-
-Return an heading element found in the I<$element> contents if it
-appears before contents that could be formatted.  I<$expanded_format_raw>
-is a hash reference with raw output formats (html, docbook, xml...) as
-keys, associated value should be set for expanded raw output formats.
-I<$do_not_ignore_contents> is optional.  If set, C<@contents> and
-C<@shortcontents> are considered to be formatted.
-I<$do_not_ignore_index_entries> is optional.  If set, index entries
-are considered to be formatted.
-
-Only heading elements corresponding to C<@heading>, C<@subheading> and similar
-@-commands that are not associated to nodes in general are found, not
-sectioning commands.
-
-=end comment
 
 =item $documentinfo_info = get_document_documentinfo($document)
 X<C<get_document_documentinfo>>
