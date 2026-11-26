@@ -1,5 +1,10 @@
 2026-11-26  Patrice Dumas  <pertusus@free.fr>
 
+	* tta/perl/Texinfo/Convert/DocBook.pm (%ignored_types): do not ignore
+	explictly menu related types, menus are already ignored.
+
+2026-11-26  Patrice Dumas  <pertusus@free.fr>
+
 	* tta/C/main/convert_utils.c, tta/perl/Texinfo/Convert/Utils.pm:
 	remove unused find_root_command_next_heading_command function.
 

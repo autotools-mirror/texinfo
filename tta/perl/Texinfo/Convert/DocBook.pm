@@ -248,9 +248,6 @@ foreach my $text_type (
 
 my %ignored_types;
 foreach my $type (
-            # TODO verify that the two menu element can be seen
-            'menu_entry_leading_text',
-            'menu_entry_separator',
             'after_end',
             'before_beginning',
             'arguments_line',
