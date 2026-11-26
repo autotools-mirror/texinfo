@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'indentedblock'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content
+  *preamble
   *normal_command@indentedblock C6 l1
    *arguments_line C1
     *block_line_arg C1

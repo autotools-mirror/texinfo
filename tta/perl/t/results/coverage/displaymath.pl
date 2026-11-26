@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'displaymath'} = '*document_root C1
  *before_node_section C12
-  *preamble_before_content
+  *preamble
   *paragraph C1
    {normal_text:Simple\\n}
   *normal_command@displaymath C7 l2

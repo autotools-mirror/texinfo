@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'test_w'} = '*document_root C1
  *before_node_section C33
-  *preamble_before_content
+  *preamble
   *paragraph C2
    *normal_command@w C1 l1
     *brace_container C2

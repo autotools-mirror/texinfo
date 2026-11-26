@@ -13,7 +13,7 @@ $result_tree_text{'test_accents_sc_default_usascii'} = '*document_root C5
   *before_beginning C2
    {raw:\\input texinfo\\n}
    {empty_line:\\n}
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@documentencoding C1 punctuation_small_case_accents_us_ascii.texi:l3
    |global_command_number:{1}
    |input_encoding_name:{us-ascii}

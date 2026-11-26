@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'no_titlepage_and_setchapternewpage_on'} = '*document_root C1
  *before_node_section C1
-  *preamble_before_content C1
+  *preamble C1
    *normal_command@setchapternewpage C1 l1
    |misc_args:A{on}
     *line_arg C3

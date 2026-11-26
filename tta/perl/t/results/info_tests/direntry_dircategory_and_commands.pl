@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'direntry_dircategory_and_commands'} = '*document_root C3
  *before_node_section C1
-  *preamble_before_content C7
+  *preamble C7
    *normal_command@dircategory C1 l1
     *line_arg C5
      {spaces_before_argument: }

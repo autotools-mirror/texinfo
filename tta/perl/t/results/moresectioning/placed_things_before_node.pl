@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'placed_things_before_node'} = '*document_root C5
  *before_node_section C18
-  *preamble_before_content
+  *preamble
   *normal_command@anchor C1 l1
   |identifier:{An-anchor}
   |is_target:{1}

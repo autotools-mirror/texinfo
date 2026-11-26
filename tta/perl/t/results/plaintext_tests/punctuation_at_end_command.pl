@@ -12,7 +12,7 @@ $result_tree_text{'punctuation_at_end_command'} = '*document_root C1
  *before_node_section C3
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content
+  *preamble
   *paragraph C21
    {normal_text:Text. Email }
    *normal_command@email C2 l2

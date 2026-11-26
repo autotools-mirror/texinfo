@@ -13,7 +13,7 @@ $result_tree_text{'direntry_dircategory'} = '*document_root C6
   *before_beginning C2
    {raw:\\input texinfo @c -*-texinfo-*-\\n}
    {empty_line:\\n}
-  *preamble_before_content C9
+  *preamble C9
    *normal_command@setfilename C1 direntry_dircategory.texi:l3
    |text_arg:{direntry_dircategory.info}
     *line_arg C3

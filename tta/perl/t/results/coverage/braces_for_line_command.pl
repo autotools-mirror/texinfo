@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'braces_for_line_command'} = '*document_root C1
  *before_node_section C1
-  *preamble_before_content C1
+  *preamble C1
    *normal_command@settitle C1 l1
     *line_arg C4
      {normal_text:In title }

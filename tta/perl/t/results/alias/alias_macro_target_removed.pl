@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'alias_macro_target_removed'} = '*document_root C1
  *before_node_section C6
-  *preamble_before_content C4
+  *preamble C4
    *normal_command@macro C3 l1
    |formal_args:A{arg}
    |macro_name:{mystrong}

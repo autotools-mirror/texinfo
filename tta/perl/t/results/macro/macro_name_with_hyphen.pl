@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'macro_name_with_hyphen'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@macro C3 l1
    |formal_args:A{arg-one|arg2}
    |macro_name:{macro-one}

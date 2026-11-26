@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'macro_call_empty_middle_arg'} = '*document_root C1
  *before_node_section C6
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@macro C5 l1
    |formal_args:A{aa|bb|cc}
    |macro_name:{threea}

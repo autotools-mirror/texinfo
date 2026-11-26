@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'brace_commands_spaces_end_of_lines'} = '*document_root C1
  *before_node_section C18
-  *preamble_before_content
+  *preamble
   *normal_command@image C1 l1
   |input_encoding_name:{utf-8}
    *brace_arg C2

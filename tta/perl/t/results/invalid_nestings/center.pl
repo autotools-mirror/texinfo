@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'center'} = '*document_root C1
  *before_node_section C42
-  *preamble_before_content
+  *preamble
   *normal_command@center C1 l1
    *line_arg C8
     {spaces_before_argument: }

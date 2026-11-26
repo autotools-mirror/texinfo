@@ -12,7 +12,7 @@ $result_tree_text{'no_documentencoding_and_insertions'} = '*document_root C1
  *before_node_section C5
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content
+  *preamble
   *paragraph C5
    {normal_text:-- --- \'\' `` ` \' }
    *normal_command@code C1 l2

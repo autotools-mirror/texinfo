@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'footnote_in_command_not_closed'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content
+  *preamble
   *paragraph C2
    {normal_text:aaa}
    *normal_command@code C1 l1

@@ -457,7 +457,7 @@ rearrange_tree_beginning (ELEMENT *before_node_section,
     }
 
   /* add a preamble for informational commands */
-  informational_preamble = new_element (ET_preamble_before_content);
+  informational_preamble = new_element (ET_preamble);
   /* index of the first element of the preamble */
   first_idx = 0;
   if (before_node_section->e.c->contents.number > 0)

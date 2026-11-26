@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'comment_example_and_blank_lines'} = '*document_root C1
  *before_node_section C16
-  *preamble_before_content
+  *preamble
   *paragraph C1
    {normal_text:Para.\\n}
   {empty_line:\\n}

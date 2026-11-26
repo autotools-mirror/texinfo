@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'expanded_tex'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content
+  *preamble
   *paragraph C3
    {normal_text:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\\n}
    *normal_command@tex C3 l2

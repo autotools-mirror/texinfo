@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'macro_definition_in_include'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content C3
+  *preamble C3
    {normal_text:}
    >SOURCEMARKS
    >include<start;1>

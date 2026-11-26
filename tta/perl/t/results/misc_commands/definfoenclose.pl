@@ -12,7 +12,7 @@ $result_tree_text{'definfoenclose'} = '*document_root C1
  *before_node_section C15
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content
+  *preamble
   *paragraph C2
    {normal_text:definfoenclose phoo,//,\\  }
    *normal_command@definfoenclose C1 l2

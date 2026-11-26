@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'format_on_first_footnote_line'} = '*document_root C1
  *before_node_section C4
-  *preamble_before_content
+  *preamble
   *paragraph C3
    {normal_text:Texte}
    *normal_command@footnote C1 l1

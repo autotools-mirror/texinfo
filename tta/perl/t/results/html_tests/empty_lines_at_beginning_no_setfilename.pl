@@ -14,7 +14,7 @@ $result_tree_text{'empty_lines_at_beginning_no_setfilename'} = '*document_root C
    {raw:\\input texinfo\\n}
    {empty_line:\\n}
    {empty_line:\\n}
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@c C1
     *line_arg C3
      {spaces_before_argument: }

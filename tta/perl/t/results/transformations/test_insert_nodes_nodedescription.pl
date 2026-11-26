@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'test_insert_nodes_nodedescription'} = '*document_root C9
  *before_node_section C1
-  *preamble_before_content
+  *preamble
  *normal_command@node C1 l1 {Top}
  |added:{1}
  |identifier:{Top}

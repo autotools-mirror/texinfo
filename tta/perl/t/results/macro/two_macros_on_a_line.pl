@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'two_macros_on_a_line'} = '*document_root C1
  *before_node_section C10
-  *preamble_before_content C5
+  *preamble C5
    *normal_command@macro C3 l1
    |formal_args:A{}
    |macro_name:{mymacro}

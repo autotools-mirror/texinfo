@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'one_subsection'} = '*document_root C2
  *before_node_section C1
-  *preamble_before_content
+  *preamble
  *normal_command@subsection C1 l1 {The subsection}
  |identifier:{The-subsection}
  |is_target:{1}

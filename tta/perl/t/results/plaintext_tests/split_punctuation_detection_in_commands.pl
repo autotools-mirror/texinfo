@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'split_punctuation_detection_in_commands'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content
+  *preamble
   *paragraph C8
    {normal_text:Before }
    *normal_command@asis C1 l1

@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'node_in_copying_not_closed'} = '*document_root C3
  *before_node_section C1
-  *preamble_before_content C1
+  *preamble C1
    *normal_command@copying C5 l1
     *arguments_line C1
      *block_line_arg C1

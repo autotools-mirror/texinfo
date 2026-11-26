@@ -12,7 +12,7 @@ $result_tree_text{'in_menu_only_special_spaces_node'} = '*document_root C16
  *before_node_section C2
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content
+  *preamble
  *normal_command@node C1 in_menu_only_special_spaces_node.texi:l2 {Top}
  |identifier:{Top}
  |is_target:{1}

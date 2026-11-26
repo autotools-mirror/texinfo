@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'protected_spaces_on_line'} = '*document_root C1
  *before_node_section C9
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@linemacro C5 l1
    |formal_args:A{first|rest}
    |macro_name:{test}

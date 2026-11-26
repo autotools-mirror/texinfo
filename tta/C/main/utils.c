@@ -2979,7 +2979,7 @@ in_preamble (const ELEMENT *element)
   const ELEMENT *current_element = element;
   while (current_element->e.c->parent)
     {
-      if (current_element->e.c->parent->type == ET_preamble_before_content)
+      if (current_element->e.c->parent->type == ET_preamble)
         return 1;
       current_element = current_element->e.c->parent;
     }

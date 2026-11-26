@@ -13,7 +13,7 @@ $result_tree_text{'defcondx_Ubar'} = '*document_root C3
   *before_beginning C2
    {raw:\\input texinfo\\n}
    {empty_line:\\n}
-  *preamble_before_content C5
+  *preamble C5
    *normal_command@c C1
     *line_arg C3
      {spaces_before_argument: }

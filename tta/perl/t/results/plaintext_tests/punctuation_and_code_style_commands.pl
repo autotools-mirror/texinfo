@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'punctuation_and_code_style_commands'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content
+  *preamble
   *paragraph C18
    *normal_command@command C1 l1
     *brace_container C1

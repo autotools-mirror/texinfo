@@ -18,7 +18,7 @@ $result_tree_text{'plaintext_ifinfo'} = '*document_root C1
      >*block_line_arg C1
       >{spaces_before_argument:\\n}
    {empty_line:\\n}
-  *preamble_before_content
+  *preamble
   *paragraph C1
    {normal_text:this text will appear only in Info and plain text.\\n}
    >SOURCEMARKS

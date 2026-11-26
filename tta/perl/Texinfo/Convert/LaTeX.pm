@@ -1161,7 +1161,7 @@ sub _associate_other_nodes_to_sections($$$) {
 # this type marks where the \begin{document} should be,
 # after the @-commands in preamble.  It is not setup
 # when using parse_piece only.
-my $latex_document_type = 'preamble_before_content';
+my $latex_document_type = 'preamble';
 
 sub output($$) {
   my ($self, $document) = @_;

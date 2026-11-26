@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'line_breaks'} = '*document_root C5
  *before_node_section C3
-  *preamble_before_content C3
+  *preamble C3
    *normal_command@documentdescription C3 l1
     *arguments_line C1
      *block_line_arg C1

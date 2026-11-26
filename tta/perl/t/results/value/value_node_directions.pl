@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'value_node_directions'} = '*document_root C7
  *before_node_section C1
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@set C1
    |misc_args:A{a--foo|bar}
     *line_arg C3

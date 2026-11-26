@@ -15,7 +15,7 @@ This: [U0]
 Forward: [U1]
 FastForward: [U1]
  *before_node_section C1
-  *preamble_before_content
+  *preamble
  *normal_command@top C2 l1 {top}
  |identifier:{Top}
  |is_target:{1}

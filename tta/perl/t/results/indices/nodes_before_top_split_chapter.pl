@@ -13,7 +13,7 @@ $result_tree_text{'nodes_before_top_split_chapter'} = '*document_root C9
   *before_beginning C2
    {raw:\\input texinfo @c -*-texinfo-*-\\n}
    {empty_line:\\n}
-  *preamble_before_content C3
+  *preamble C3
    *normal_command@c C1
     *line_arg C3
      {spaces_before_argument: }

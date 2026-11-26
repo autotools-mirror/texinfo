@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'end_of_line_end_file'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content
+  *preamble
   *normal_command@deffn C1 l1
    *def_line C1 l1
    |def_command:{deffn}

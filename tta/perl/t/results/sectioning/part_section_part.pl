@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'part_section_part'} = '*document_root C4
  *before_node_section C1
-  *preamble_before_content
+  *preamble
  *normal_command@part C2 l1 {Part1}
  |global_command_number:{1}
  |section_level:{0}

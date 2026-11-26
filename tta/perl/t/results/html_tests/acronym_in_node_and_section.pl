@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'acronym_in_node_and_section'} = '*document_root C9
  *before_node_section C1
-  *preamble_before_content
+  *preamble
  *normal_command@node C1 l1 {top}
  |identifier:{Top}
  |is_target:{1}

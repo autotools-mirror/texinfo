@@ -12,7 +12,7 @@ $result_tree_text{'indices'} = '*document_root C5
  *before_node_section C2
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@set C1
    |misc_args:A{txiindexbackslashignore|}
     *line_arg C3

@@ -18,7 +18,7 @@ $result_tree_text{'commands_and_spaces'} = '*document_root C2
      {rawline_text:foo   some @value}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
-  *preamble_before_content C4
+  *preamble C4
    *normal_command@setfilename C1 l3
    |text_arg:{commands_and_spaces.info}
     *line_arg C3

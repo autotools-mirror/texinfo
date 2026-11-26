@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'inlinefmt_with_empty_line'} = '*document_root C1
  *before_node_section C4
-  *preamble_before_content
+  *preamble
   *paragraph C2
    {normal_text:A }
    *normal_command@inlinefmt C2 l1

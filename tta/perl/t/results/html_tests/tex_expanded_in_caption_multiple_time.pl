@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'tex_expanded_in_caption_multiple_time'} = '*document_root C1
  *before_node_section C4
-  *preamble_before_content
+  *preamble
   *normal_command@float C5 l1
   |float_number:{1}
   |float_type:{A}

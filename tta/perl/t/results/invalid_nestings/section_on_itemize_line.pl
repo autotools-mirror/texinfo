@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'section_on_itemize_line'} = '*document_root C5
  *before_node_section C2
-  *preamble_before_content
+  *preamble
   *normal_command@itemize C1 l1
    *arguments_line C1
     *block_line_arg C3

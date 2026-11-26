@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'space_in_setfilename'} = '*document_root C2
  *before_node_section C1
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@setfilename C1 l1
     *line_arg C5
      {spaces_before_argument: }

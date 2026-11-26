@@ -13,7 +13,7 @@ $result_tree_text{'customize_definition_index_translations'} = '*document_root C
   *before_beginning C2
    {raw:\\input texinfo @c -*-texinfo-*-\\n}
    {empty_line:\\n}
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@syncodeindex C1 customize_definition_index_translations.texi:l3
    |misc_args:A{vr|fn}
     *line_arg C3

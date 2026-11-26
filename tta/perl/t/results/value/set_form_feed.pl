@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'set_form_feed'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content C4
+  *preamble C4
    *normal_command@set C1
    |misc_args:A{gg|a\\a\\f\\\\}
     *line_arg C3

@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'comments_on_raw_block_line'} = '*document_root C1
  *before_node_section C1
-  *preamble_before_content C3
+  *preamble C3
    *normal_command@html C3 l1
     *arguments_line C1
      *block_line_arg C1

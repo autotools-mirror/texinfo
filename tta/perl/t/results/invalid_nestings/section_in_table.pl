@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'section_in_table'} = '*document_root C2
  *before_node_section C2
-  *preamble_before_content
+  *preamble
   *normal_command@table C2 l1
    *arguments_line C1
     *block_line_arg C3

@@ -25,7 +25,7 @@ $result_tree_text{'info_ifplaintext'} = '*document_root C1
       >{normal_text:ifplaintext}
       >{spaces_after_argument:\\n}
    {empty_line:\\n}
-  *preamble_before_content
+  *preamble
 ';
 
 

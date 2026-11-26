@@ -16,7 +16,7 @@ Forward: [U1]
 FastForward: [U1]
 Next: [U1]
  *before_node_section C1
-  *preamble_before_content
+  *preamble
  *normal_command@unnumbered C4 l1 {before nodes}
  |identifier:{before-nodes}
  |is_target:{1}

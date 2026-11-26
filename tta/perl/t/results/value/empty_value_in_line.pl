@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'empty_value_in_line'} = '*document_root C1
  *before_node_section C4
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@set C1
    |misc_args:A{myspace|}
     *line_arg C3

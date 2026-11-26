@@ -12,7 +12,7 @@ $result_tree_text{'section_in_footnote'} = '*document_root C2
  *before_node_section C3
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content
+  *preamble
   *paragraph C2
    {normal_text:Text}
    *normal_command@footnote C1 l2

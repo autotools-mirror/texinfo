@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'vbar_in_index'} = '*document_root C1
  *before_node_section C3
-  *preamble_before_content
+  *preamble
   *index_entry_command@findex C1 l1
   |index_entry:I{fn,1}
    *line_arg C3

@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'on_node_line'} = '*document_root C2
  *before_node_section C1
-  *preamble_before_content
+  *preamble
  *normal_command@node C1 l1 {@ref{a, b, c, filename}}
  |identifier:{a}
  |is_target:{1}

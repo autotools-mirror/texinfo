@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'verb_with_arobase_in_linemacro_call'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@linemacro C3 l1
    |formal_args:A{a|b|c}
    |macro_name:{mycommand}

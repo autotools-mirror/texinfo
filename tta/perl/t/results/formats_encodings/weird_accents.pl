@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'weird_accents'} = '*document_root C5
  *before_node_section C1
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@documentencoding C1 l1
    |global_command_number:{1}
    |input_encoding_name:{iso-8859-1}

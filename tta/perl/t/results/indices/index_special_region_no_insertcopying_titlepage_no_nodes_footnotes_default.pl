@@ -13,7 +13,7 @@ $result_tree_text{'index_special_region_no_insertcopying_titlepage_no_nodes_foot
   *before_beginning C2
    {raw:\\input texinfo @c -*-texinfo-*-\\n}
    {empty_line:\\n}
-  *preamble_before_content C4
+  *preamble C4
    *normal_command@copying C14 index_special_region_no_insertcopying.texi:l3
     *arguments_line C1
      *block_line_arg C1

@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'fonttextsize'} = '*document_root C10
  *before_node_section C1
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@fonttextsize C1 l1
    |misc_args:A{10}
     *line_arg C3

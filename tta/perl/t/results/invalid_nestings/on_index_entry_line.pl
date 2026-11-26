@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'on_index_entry_line'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content
+  *preamble
   *index_entry_command@cindex C1 l1
   |index_entry:I{cp,1}
    *line_arg C9

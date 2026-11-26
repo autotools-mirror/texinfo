@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'group_beginning_and_end_on_line'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content
+  *preamble
   *normal_command@group C2 l1
    *arguments_line C1
     *block_line_arg C3

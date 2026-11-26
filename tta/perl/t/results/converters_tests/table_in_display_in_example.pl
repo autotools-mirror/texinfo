@@ -12,7 +12,7 @@ $result_tree_text{'table_in_display_in_example'} = '*document_root C1
  *before_node_section C5
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content
+  *preamble
   *paragraph C1
    {normal_text:T\\n}
   {empty_line:\\n}

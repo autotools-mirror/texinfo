@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'equivalent_nodes_novalidate'} = '*document_root C3
  *before_node_section C1
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@novalidate C1 l1
     *line_arg C1
      {spaces_before_argument:\\n}

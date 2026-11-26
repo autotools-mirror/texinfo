@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'raw_in_para'} = '*document_root C1
  *before_node_section C9
-  *preamble_before_content
+  *preamble
   *paragraph C1
    {normal_text:para\\n}
   *normal_command@verbatim C3 l2

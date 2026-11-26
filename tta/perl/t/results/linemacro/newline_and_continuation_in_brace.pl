@@ -12,7 +12,7 @@ $result_tree_text{'newline_and_continuation_in_brace'} = '*document_root C1
  *before_node_section C3
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@linemacro C3 l2
    |formal_args:A{first|second|rest}
    |macro_name:{mylinecommand}

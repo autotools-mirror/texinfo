@@ -12,7 +12,7 @@ $result_tree_text{'float_without_type'} = '*document_root C2
  *before_node_section C2
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content
+  *preamble
  *normal_command@node C5 l2 {Top}
  |identifier:{Top}
  |is_target:{1}

@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'double_recursive_self_section_reference'} = '*document_root C5
  *before_node_section C1
-  *preamble_before_content
+  *preamble
  *normal_command@node C1 l1 {n1}
  |identifier:{n1}
  |is_target:{1}

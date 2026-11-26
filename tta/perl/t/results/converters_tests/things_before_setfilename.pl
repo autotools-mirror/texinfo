@@ -171,7 +171,7 @@ $result_tree_text{'things_before_setfilename'} = '*document_root C5
      {normal_text:Text}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@setfilename C1 things_before_setfilename.texi:l44
    |text_arg:{things_before_setfilename.info}
     *line_arg C3

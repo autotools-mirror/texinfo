@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'line_after_recursive_call'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content C1
+  *preamble C1
    *normal_command@macro C5 l1
    |formal_args:A{}
    |macro_name:{mac}

@@ -13,7 +13,7 @@ $result_tree_text{'also_not_line'} = '*document_root C1
   *before_beginning C2
    {empty_line:\\n}
    {empty_line:\\n}
-  *preamble_before_content
+  *preamble
   *paragraph C1
    {normal_text:page }
   *normal_command@page C1

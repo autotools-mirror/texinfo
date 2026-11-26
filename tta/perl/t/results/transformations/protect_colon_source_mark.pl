@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'protect_colon_source_mark'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@macro C3 l1
    |formal_args:A{arg}
    |macro_name:{klm}

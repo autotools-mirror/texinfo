@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'loweredheading'} = '*document_root C3
  *before_node_section C1
-  *preamble_before_content C1
+  *preamble C1
    *normal_command@lowersections C1
     *line_arg C1
      {spaces_before_argument:\\n}

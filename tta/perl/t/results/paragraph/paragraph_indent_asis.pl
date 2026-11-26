@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'paragraph_indent_asis'} = '*document_root C1
  *before_node_section C5
-  *preamble_before_content C3
+  *preamble C3
    *normal_command@paragraphindent C1 l1
    |global_command_number:{1}
    |misc_args:A{asis}

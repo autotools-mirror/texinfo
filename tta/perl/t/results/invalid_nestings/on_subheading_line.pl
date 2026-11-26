@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'on_subheading_line'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content
+  *preamble
   *normal_command@subheading C1 l1
   |global_command_number:{1}
   |heading_number:{1}

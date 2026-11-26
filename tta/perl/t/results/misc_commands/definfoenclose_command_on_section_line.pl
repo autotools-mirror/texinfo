@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'definfoenclose_command_on_section_line'} = '*document_root C3
  *before_node_section C1
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@definfoenclose C1 l1
    |misc_args:A{somed|!|:}
     *line_arg C3

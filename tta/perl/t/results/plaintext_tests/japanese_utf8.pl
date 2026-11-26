@@ -20,7 +20,7 @@ $result_tree_text{'japanese_utf8'} = '*document_root C8
      {spaces_before_argument: }
      {normal_text:UTF-8}
      {spaces_after_argument:\\n}
-  *preamble_before_content C5
+  *preamble C5
    *normal_command@setfilename C1 japanese_utf8.texi:l3
    |text_arg:{japanese_utf8.info}
     *line_arg C3

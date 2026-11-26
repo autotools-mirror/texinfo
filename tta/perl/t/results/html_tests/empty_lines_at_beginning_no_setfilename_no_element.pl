@@ -14,7 +14,7 @@ $result_tree_text{'empty_lines_at_beginning_no_setfilename_no_element'} = '*docu
    {raw:\\input texinfo\\n}
    {empty_line:\\n}
    {empty_line:\\n}
-  *preamble_before_content
+  *preamble
   *normal_command@center C1 empty_lines_at_beginning_no_setfilename_no_element.texi:l4
    *line_arg C3
     {spaces_before_argument: }

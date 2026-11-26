@@ -13,7 +13,7 @@ $result_tree_text{'simplest_no_node_section'} = '*document_root C2
   *before_beginning C2
    {raw:\\input texinfo @c -*-texinfo-*-\\n}
    {empty_line:\\n}
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@setfilename C1 simplest_no_node_section.texi:l3
    |text_arg:{simplest_no_node_section.info}
     *line_arg C3

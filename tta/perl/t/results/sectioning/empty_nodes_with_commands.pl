@@ -12,7 +12,7 @@ $result_tree_text{'empty_nodes_with_commands'} = '*document_root C5
  *before_node_section C2
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content
+  *preamble
  *normal_command@node C2 l2
   *arguments_line C1
    *line_arg C2

@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'pagetype'} = '*document_root C6
  *before_node_section C1
-  *preamble_before_content C4
+  *preamble C4
    *normal_command@afourpaper C1 l1
     *line_arg C1
      {spaces_before_argument:\\n}

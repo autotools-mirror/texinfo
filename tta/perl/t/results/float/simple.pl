@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'simple'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content
+  *preamble
   *normal_command@float C6 l1
   |float_number:{1}
   |float_type:{Type}

@@ -12,7 +12,7 @@ $result_tree_text{'custom_headings'} = '*document_root C8
  *before_node_section C2
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content C3
+  *preamble C3
    *normal_command@evenheading C1 l2
     *line_arg C17
      {spaces_before_argument: }

@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'test_errormsg'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content
+  *preamble
   *paragraph C5
    {normal_text:Some text\\n}
    *normal_command@errormsg C1 l2

@@ -12,7 +12,7 @@ $result_tree_text{'multiple_lang_chapters_texi2html'} = '*document_root C13
  *before_node_section C2
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content C4
+  *preamble C4
    *normal_command@documentencoding C1 l2
    |global_command_number:{1}
    |input_encoding_name:{utf-8}

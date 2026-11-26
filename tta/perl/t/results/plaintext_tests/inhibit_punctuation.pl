@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'inhibit_punctuation'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content
+  *preamble
   *paragraph C23
    {normal_text:foo vs.}
    *normal_command@:

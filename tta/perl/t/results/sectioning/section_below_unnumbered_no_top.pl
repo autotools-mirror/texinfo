@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'section_below_unnumbered_no_top'} = '*document_root C3
  *before_node_section C1
-  *preamble_before_content
+  *preamble
  *normal_command@unnumbered C1 l1 {U}
  |identifier:{U}
  |is_target:{1}

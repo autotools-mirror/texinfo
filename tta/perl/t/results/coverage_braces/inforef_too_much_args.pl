@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'inforef_too_much_args'} = '*document_root C2
  *before_node_section C1
-  *preamble_before_content
+  *preamble
  *normal_command@node C3 l1 {chapter}
  |identifier:{chapter}
  |is_target:{1}

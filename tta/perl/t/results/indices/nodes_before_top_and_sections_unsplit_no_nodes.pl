@@ -13,7 +13,7 @@ $result_tree_text{'nodes_before_top_and_sections_unsplit_no_nodes'} = '*document
   *before_beginning C2
    {raw:\\input texinfo @c -*-texinfo-*-\\n}
    {empty_line:\\n}
-  *preamble_before_content
+  *preamble
  *normal_command@node C10 nodes_before_top_and_sections.texi:l3 {first before top}
  |identifier:{first-before-top}
  |is_target:{1}

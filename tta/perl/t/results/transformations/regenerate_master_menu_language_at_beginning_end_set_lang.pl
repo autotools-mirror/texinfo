@@ -13,7 +13,7 @@ $result_tree_text{'regenerate_master_menu_language_at_beginning_end_set_lang'} =
   *before_beginning C2
    {raw:\\input texinfo   @c -*-texinfo-*-\\n}
    {empty_line:\\n}
-  *preamble_before_content C4
+  *preamble C4
    *normal_command@documentlanguage C1 no_detailmenu_lang_at_begin_end.texi:l3
    |global_command_number:{1}
    |text_arg:{sr}

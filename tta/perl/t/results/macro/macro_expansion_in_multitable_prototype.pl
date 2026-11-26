@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'macro_expansion_in_multitable_prototype'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content C4
+  *preamble C4
    *normal_command@macro C3 l1
    |formal_args:A{}
    |macro_name:{simple}

@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'unknown_macro_on_line_command'} = '*document_root C1
  *before_node_section C1
-  *preamble_before_content C1
+  *preamble C1
    *normal_command@setfilename C1 l1
    |text_arg:{file}
     *line_arg C2

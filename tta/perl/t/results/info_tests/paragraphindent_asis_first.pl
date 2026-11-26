@@ -12,7 +12,7 @@ $result_tree_text{'paragraphindent_asis_first'} = '*document_root C1
  *before_node_section C7
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content C1
+  *preamble C1
    {spaces_before_paragraph:     }
   *paragraph C1
    {normal_text:bbb\\n}

@@ -12,7 +12,7 @@ $result_tree_text{'epub_inline_conditional'} = '*document_root C5
  *before_node_section C2
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content
+  *preamble
  *normal_command@node C1 l2 {Top}
  |identifier:{Top}
  |is_target:{1}

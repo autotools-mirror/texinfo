@@ -13,7 +13,7 @@ $result_tree_text{'navigation_chapter_vertical'} = '*document_root C10
   *before_beginning C2
    {raw:\\input texinfo @c -*-texinfo-*-\\n}
    {empty_line:\\n}
-  *preamble_before_content
+  *preamble
  *normal_command@node C1 navigation.texi:l3 {Top}
  |identifier:{Top}
  |is_target:{1}

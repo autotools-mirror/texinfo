@@ -13,7 +13,7 @@ $result_tree_text{'short_topic_guide_no_auto_detailmenu'} = '*document_root C11
   *before_beginning C2
    {raw:\\input texinfo.tex\\n}
    {empty_line:\\n}
-  *preamble_before_content
+  *preamble
  *normal_command@node C1 short_topic_guide.texi:l3 {Top}
  |identifier:{Top}
  |is_target:{1}

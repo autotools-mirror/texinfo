@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'brace_opened_no_command'} = '*document_root C2
  *before_node_section C2
-  *preamble_before_content
+  *preamble
   *paragraph C5
    {normal_text:anchortruc}
    *normal_command@}

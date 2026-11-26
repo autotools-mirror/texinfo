@@ -13,7 +13,7 @@ $result_tree_text{'manual_simple_latin1_with_error'} = '*document_root C6
   *before_beginning C2
    {raw:\\input texinfo.tex\\n}
    {empty_line:\\n}
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@documentencoding C1 manual_simple_latin1_with_error.texi:l3
    |global_command_number:{1}
    |input_encoding_name:{iso-8859-1}

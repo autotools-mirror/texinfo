@@ -12,7 +12,7 @@ $result_tree_text{'bad_documentlanguage'} = '*document_root C1
  *before_node_section C7
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content
+  *preamble
   *paragraph C2
    {normal_text:documentlanguage }
    *normal_command@documentlanguage C1 l2

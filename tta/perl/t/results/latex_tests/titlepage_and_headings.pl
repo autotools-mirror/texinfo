@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'titlepage_and_headings'} = '*document_root C1
  *before_node_section C1
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@titlepage C3 l1
     *arguments_line C1
      *block_line_arg C1

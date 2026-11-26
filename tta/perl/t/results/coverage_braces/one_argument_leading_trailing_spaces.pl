@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'one_argument_leading_trailing_spaces'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content
+  *preamble
   *paragraph C30
    *normal_command@code C1 l1
     *brace_container C1

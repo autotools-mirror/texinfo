@@ -12,7 +12,7 @@ $result_tree_text{'ifclear_in_ifset_set'} = '*document_root C1
  *before_node_section C2
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content C4
+  *preamble C4
    *normal_command@set C1
    |misc_args:A{a|}
     *line_arg C3

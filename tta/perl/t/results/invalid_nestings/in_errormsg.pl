@@ -12,7 +12,7 @@ $result_tree_text{'in_errormsg'} = '*document_root C1
  *before_node_section C8
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content
+  *preamble
   *normal_command@anchor C1 l2
   |identifier:{in-ref}
   |is_target:{1}

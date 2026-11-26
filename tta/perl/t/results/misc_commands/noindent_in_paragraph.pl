@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'noindent_in_paragraph'} = '*document_root C1
  *before_node_section C4
-  *preamble_before_content
+  *preamble
   *paragraph C4
    {normal_text:Begin para\\n}
    *normal_command@noindent l2

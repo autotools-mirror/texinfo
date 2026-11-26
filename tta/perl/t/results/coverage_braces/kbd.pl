@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'kbd'} = '*document_root C1
  *before_node_section C14
-  *preamble_before_content
+  *preamble
   *paragraph C3
    {normal_text:kbd: }
    *normal_command@code C1 l1

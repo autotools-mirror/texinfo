@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'value_on_ifset'} = '*document_root C1
  *before_node_section C3
-  *preamble_before_content C3
+  *preamble C3
    *normal_command@set C1
    |misc_args:A{xval|x}
     *line_arg C3

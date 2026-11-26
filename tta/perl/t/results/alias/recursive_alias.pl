@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'recursive_alias'} = '*document_root C1
  *before_node_section C4
-  *preamble_before_content C6
+  *preamble C6
    *normal_command@alias C1 l1
    |misc_args:A{new|strong}
     *line_arg C3

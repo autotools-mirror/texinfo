@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'characters_and_commands_in_var'} = '*document_root C1
  *before_node_section C8
-  *preamble_before_content
+  *preamble
   *paragraph C8
    *normal_command@var C1 l1
     *brace_container C1

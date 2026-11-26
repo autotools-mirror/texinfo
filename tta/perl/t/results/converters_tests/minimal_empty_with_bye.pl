@@ -13,7 +13,7 @@ $result_tree_text{'minimal_empty_with_bye'} = '*document_root C2
   *before_beginning C2
    {raw:\\input texinfo.tex\\n}
    {empty_line:\\n}
-  *preamble_before_content
+  *preamble
  *normal_command@bye C1
   *line_arg C1
    {spaces_before_argument:\\n}

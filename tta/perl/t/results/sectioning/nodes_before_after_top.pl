@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'nodes_before_after_top'} = '*document_root C7
  *before_node_section C1
-  *preamble_before_content
+  *preamble
  *normal_command@node C4 l1 {node before}
  |identifier:{node-before}
  |is_target:{1}

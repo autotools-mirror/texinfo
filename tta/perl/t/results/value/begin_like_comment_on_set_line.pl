@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'begin_like_comment_on_set_line'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content C3
+  *preamble C3
    *normal_command@set C1
     *line_arg C3
      {spaces_before_argument: }

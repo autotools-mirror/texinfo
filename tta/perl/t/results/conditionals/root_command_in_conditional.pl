@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'root_command_in_conditional'} = '*document_root C2
  *before_node_section C1
-  *preamble_before_content C1
+  *preamble C1
    {normal_text:}
    >SOURCEMARKS
    >expanded_conditional_command<start;1>

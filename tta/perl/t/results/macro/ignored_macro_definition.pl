@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'ignored_macro_definition'} = '*document_root C1
  *before_node_section C4
-  *preamble_before_content C3
+  *preamble C3
    *normal_command@macro C3 l1
    |formal_args:A{}
    |macro_name:{mymacro}

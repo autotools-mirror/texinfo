@@ -12,7 +12,7 @@ $result_tree_text{'ifset_in_command'} = '*document_root C1
  *before_node_section C3
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content
+  *preamble
   *paragraph C2
    *normal_command@file C1 l2
     *brace_container C2

@@ -12,7 +12,7 @@ $result_tree_text{'part_before_section'} = 'U0 unit{C3}{S:@section 1 section}
 UNIT_DIRECTIONS
 This: [U0]
  *before_node_section C1
-  *preamble_before_content
+  *preamble
  *normal_command@part C2 l1 {part}
  |global_command_number:{1}
  |section_level:{0}

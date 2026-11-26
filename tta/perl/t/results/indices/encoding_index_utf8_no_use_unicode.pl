@@ -12,7 +12,7 @@ $result_tree_text{'encoding_index_utf8_no_use_unicode'} = '*document_root C5
  *before_node_section C2
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@documentencoding C1 encoding_index_utf8.texi:l2
    |global_command_number:{1}
    |input_encoding_name:{utf-8}

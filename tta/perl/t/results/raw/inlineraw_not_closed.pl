@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'inlineraw_not_closed'} = '*document_root C2
  *before_node_section C2
-  *preamble_before_content
+  *preamble
   *paragraph C1
    *normal_command@inlineraw C2 l1
    |expand_index:{1}

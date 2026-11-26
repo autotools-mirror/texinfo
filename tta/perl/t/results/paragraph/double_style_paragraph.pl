@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'double_style_paragraph'} = '*document_root C1
  *before_node_section C5
-  *preamble_before_content
+  *preamble
   *paragraph C1
    *normal_command@emph C1 l1
     *brace_container C1

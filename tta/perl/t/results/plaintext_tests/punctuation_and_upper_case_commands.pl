@@ -12,7 +12,7 @@ $result_tree_text{'punctuation_and_upper_case_commands'} = '*document_root C1
  *before_node_section C5
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content
+  *preamble
   *paragraph C18
    *normal_command@var C1 l2
     *brace_container C1

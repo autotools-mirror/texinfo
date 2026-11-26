@@ -215,7 +215,7 @@ although it is not recommended to have such content). If there is no
 @code{@@setfilename}, it contains the @code{\input texinfo.tex} line and following blank
 lines.
 
-The second container in @emph{before_node_section} is @emph{preamble_before_content}.
+The second container in @emph{before_node_section} is @emph{preamble}.
 It contains everything appearing before the first formatted content such as
 empty lines text elements,
 elements corresponding to line commands such as @code{@@documentlanguage} or
@@ -714,8 +714,8 @@ the @code{\input texinfo.tex} line and following blank lines.
 If there is a @code{@@setfilename}, this container holds everything that appears
 before @code{@@setfilename}.
 
-@item preamble_before_content
-@anchor{Texinfo@asis{::}Parser preamble_before_content}
+@item preamble
+@anchor{Texinfo@asis{::}Parser preamble}
 
 This container holds everything appearing before the first formatted content,
 corresponding to the @emph{preamble} in the Texinfo documentation.

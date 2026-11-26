@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'headings_nodes_before_chapter'} = '*document_root C7
  *before_node_section C1
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@settitle C1 l1
     *line_arg C3
      {spaces_before_argument: }

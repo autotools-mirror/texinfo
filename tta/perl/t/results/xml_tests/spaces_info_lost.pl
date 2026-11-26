@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'spaces_info_lost'} = '*document_root C1
  *before_node_section C4
-  *preamble_before_content
+  *preamble
   *normal_command@display C3 l1
    *arguments_line C1
     *block_line_arg C3

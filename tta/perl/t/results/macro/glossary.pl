@@ -13,7 +13,7 @@ $result_tree_text{'glossary'} = '*document_root C5
   *before_beginning C2
    {raw:\\input texinfo.tex\\n}
    {empty_line:\\n}
-  *preamble_before_content C8
+  *preamble C8
    *normal_command@setfilename C1 glossary.texi:l3
    |text_arg:{glossary}
     *line_arg C3

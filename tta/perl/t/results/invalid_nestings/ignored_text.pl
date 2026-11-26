@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'ignored_text'} = '*document_root C2
  *before_node_section C1
-  *preamble_before_content
+  *preamble
  *normal_command@node C2 l1 {before ignore}
  |identifier:{before-ignore}
  |is_target:{1}

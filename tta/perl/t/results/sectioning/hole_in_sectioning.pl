@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'hole_in_sectioning'} = '*document_root C6
  *before_node_section C1
-  *preamble_before_content
+  *preamble
  *normal_command@top C2 l1 {Top}
  |identifier:{Top}
  |is_target:{1}

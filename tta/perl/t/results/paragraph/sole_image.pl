@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'sole_image'} = '*document_root C1
  *before_node_section C5
-  *preamble_before_content
+  *preamble
   *normal_command@image C1 l1
   |input_encoding_name:{utf-8}
    *brace_arg C1

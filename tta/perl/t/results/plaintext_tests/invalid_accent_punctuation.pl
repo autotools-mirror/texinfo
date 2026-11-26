@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'invalid_accent_punctuation'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content
+  *preamble
   *paragraph C3
    {normal_text:a. }
    *normal_command@^ l1

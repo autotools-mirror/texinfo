@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'raw_epub'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content C1
+  *preamble C1
    {empty_line:\\n}
   *paragraph C2
    {normal_text:in EPUB\\n}

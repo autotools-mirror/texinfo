@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'punctuation_abbr_acronym'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content
+  *preamble
   *paragraph C16
    *normal_command@abbr C1 l1
     *brace_arg C1

@@ -12,7 +12,7 @@ $result_tree_text{'section_in_math'} = '*document_root C3
  *before_node_section C3
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content
+  *preamble
   *paragraph C2
    {normal_text:Some }
    *normal_command@math C1 l2

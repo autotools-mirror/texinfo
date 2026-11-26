@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'enumerate_argument_item'} = '*document_root C1
  *before_node_section C8
-  *preamble_before_content
+  *preamble
   *normal_command@enumerate C4 l1
    *arguments_line C1
     *block_line_arg C3

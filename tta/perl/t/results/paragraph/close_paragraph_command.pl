@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'close_paragraph_command'} = '*document_root C1
  *before_node_section C8
-  *preamble_before_content
+  *preamble
   *paragraph C1
    {normal_text:para }
   *normal_command@titlefont C1 l1

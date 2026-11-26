@@ -12,7 +12,7 @@ $result_tree_text{'protect_spaces_on_line'} = '*document_root C1
  *before_node_section C5
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content
+  *preamble
   *paragraph C5
    {normal_text:Before samp. }
    *normal_command@samp C1 l2

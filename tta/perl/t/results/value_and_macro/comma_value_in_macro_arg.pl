@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'comma_value_in_macro_arg'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content C4
+  *preamble C4
    *normal_command@set C1
    |misc_args:A{comma|,}
     *line_arg C3

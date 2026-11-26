@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'double_top_section'} = '*document_root C3
  *before_node_section C1
-  *preamble_before_content
+  *preamble
  *normal_command@top C4 l1 {First top}
  |identifier:{First-top}
  |is_target:{1}

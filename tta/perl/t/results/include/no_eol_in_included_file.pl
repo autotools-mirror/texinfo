@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'no_eol_in_included_file'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content
+  *preamble
   *paragraph C3
    {normal_text:Some thing.\\n}
    >SOURCEMARKS

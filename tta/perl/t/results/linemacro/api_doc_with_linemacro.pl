@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'api_doc_with_linemacro'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content C7
+  *preamble C7
    *normal_command@linemacro C3 l1
    |formal_args:A{param|type}
    |macro_name:{param}

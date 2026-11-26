@@ -12,7 +12,7 @@ $result_tree_text{'raw_block_commands'} = '*document_root C1
  *before_node_section C2
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content C9
+  *preamble C9
    *normal_command@html C3 l2
     *arguments_line C1
      *block_line_arg C1

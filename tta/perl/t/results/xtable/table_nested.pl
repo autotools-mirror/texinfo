@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'table_nested'} = '*document_root C1
  *before_node_section C9
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@macro C23 l1
    |formal_args:A{}
    |macro_name:{myvtable}

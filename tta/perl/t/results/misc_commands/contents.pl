@@ -12,7 +12,7 @@ $result_tree_text{'contents'} = '*document_root C1
  *before_node_section C14
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content
+  *preamble
   *paragraph C3
    {normal_text:first }
    *normal_command@@

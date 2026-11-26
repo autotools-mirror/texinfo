@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'verb_in_xref'} = '*document_root C1
  *before_node_section C5
-  *preamble_before_content
+  *preamble
   *normal_command@anchor C1 l1
   |identifier:{point}
   |is_target:{1}

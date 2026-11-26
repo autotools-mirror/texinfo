@@ -13,7 +13,7 @@ $result_tree_text{'float_copying'} = '*document_root C6
   *before_beginning C2
    {raw:\\input texinfo @c -*-texinfo-*-\\n}
    {empty_line:\\n}
-  *preamble_before_content C4
+  *preamble C4
    *normal_command@setfilename C1 float_copying.texi:l3
    |text_arg:{float_copying.info}
     *line_arg C3

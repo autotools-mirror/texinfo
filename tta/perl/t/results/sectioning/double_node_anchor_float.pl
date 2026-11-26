@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'double_node_anchor_float'} = '*document_root C5
  *before_node_section C1
-  *preamble_before_content
+  *preamble
  *normal_command@node C2 l1 {node1}
  |identifier:{node1}
  |is_target:{1}

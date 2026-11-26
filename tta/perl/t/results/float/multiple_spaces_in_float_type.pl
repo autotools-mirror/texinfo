@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'multiple_spaces_in_float_type'} = '*document_root C1
  *before_node_section C4
-  *preamble_before_content
+  *preamble
   *normal_command@float C3 l1
   |float_number:{1}
   |float_type:{Type of Float}

@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'inlinefmtifelse'} = '*document_root C1
  *before_node_section C16
-  *preamble_before_content
+  *preamble
   *paragraph C4
    *normal_command@inlinefmtifelse C3 l1
    |expand_index:{2}

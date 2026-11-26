@@ -12,7 +12,7 @@ $result_tree_text{'titlefont_in_center'} = '*document_root C1
  *before_node_section C3
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content
+  *preamble
   *normal_command@center C1 l2
    *line_arg C3
     {spaces_before_argument: }

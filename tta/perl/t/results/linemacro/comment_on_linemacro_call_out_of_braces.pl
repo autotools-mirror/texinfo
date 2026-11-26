@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'comment_on_linemacro_call_out_of_braces'} = '*document_root C1
  *before_node_section C6
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@linemacro C5 l1
    |formal_args:A{a|b|c}
    |macro_name:{lm}

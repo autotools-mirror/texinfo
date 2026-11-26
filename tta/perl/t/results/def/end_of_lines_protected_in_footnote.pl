@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'end_of_lines_protected_in_footnote'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content
+  *preamble
   *paragraph C2
    *normal_command@footnote C1 l1
    |global_command_number:{1}

@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'east_asian_in_w'} = '*document_root C1
  *before_node_section C7
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@documentencoding C1 east_asian_in_w.texi:l1
    |global_command_number:{1}
    |input_encoding_name:{utf-8}

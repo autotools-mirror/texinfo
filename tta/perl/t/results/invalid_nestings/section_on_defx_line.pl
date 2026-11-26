@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'section_on_defx_line'} = '*document_root C2
  *before_node_section C2
-  *preamble_before_content
+  *preamble
   *normal_command@deffn C2 l1
    *def_line C1 l1
    |def_command:{deffn}

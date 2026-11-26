@@ -12,7 +12,7 @@ $result_tree_text{'node_on_index_entry_line'} = '*document_root C2
  *before_node_section C3
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content
+  *preamble
   *index_entry_command@cindex C1 l2
   |index_entry:I{cp,1}
    *line_arg C3

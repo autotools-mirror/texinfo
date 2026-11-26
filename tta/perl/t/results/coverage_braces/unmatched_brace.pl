@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'unmatched_brace'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content
+  *preamble
   *paragraph C4
    *normal_command@samp C1 l1
     *brace_container C1

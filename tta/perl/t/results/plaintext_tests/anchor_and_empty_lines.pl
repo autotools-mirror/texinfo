@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'anchor_and_empty_lines'} = '*document_root C1
  *before_node_section C7
-  *preamble_before_content
+  *preamble
   *paragraph C1
    {normal_text:text 1.\\n}
   {empty_line:\\n}

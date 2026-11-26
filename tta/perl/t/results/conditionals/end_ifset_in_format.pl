@@ -12,7 +12,7 @@ $result_tree_text{'end_ifset_in_format'} = '*document_root C1
  *before_node_section C7
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content C3
+  *preamble C3
    *normal_command@set C1
    |misc_args:A{notset|}
     *line_arg C3

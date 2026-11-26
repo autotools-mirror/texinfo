@@ -1,5 +1,14 @@
 2026-11-26  Patrice Dumas  <pertusus@free.fr>
 
+	* tta/C/main/element_types.txt, tta/C/main/utils.c (in_preamble),
+	tta/C/parsetexi/parser.c (rearrange_tree_beginning),
+	tta/perl/Texinfo/Convert/LaTeX.pm ($latex_document_type),
+	tta/perl/Texinfo/ParserNonXS.pm (_rearrange_tree_beginning),
+	tta/perl/Texinfo/Common.pm (in_preamble): rename
+	preamble_before_content as preamble.
+
+2026-11-26  Patrice Dumas  <pertusus@free.fr>
+
 	* tta/C/main/element_types.txt, tta/C/parsetexi/parser.c (parse_texi),
 	tta/perl/Texinfo/ParserNonXS.pm (_parse_texi): rename
 	postamble_after_end to after_end.  Use raw type for text in after_end.

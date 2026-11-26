@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'paragraphindent_and_preamble'} = '*document_root C5
  *before_node_section C3
-  *preamble_before_content C4
+  *preamble C4
    *normal_command@copying C5 l1
     *arguments_line C1
      *block_line_arg C1

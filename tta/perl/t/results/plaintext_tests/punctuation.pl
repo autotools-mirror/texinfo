@@ -12,7 +12,7 @@ $result_tree_text{'punctuation'} = '*document_root C1
  *before_node_section C13
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content
+  *preamble
   *paragraph C1
    {normal_text:Dot. Exclam! Question? Dot.  Exclam!  Question?  GAAA.\\n}
   {empty_line:\\n}

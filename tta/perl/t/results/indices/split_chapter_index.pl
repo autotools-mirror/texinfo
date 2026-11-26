@@ -13,7 +13,7 @@ $result_tree_text{'split_chapter_index'} = '*document_root C10
   *before_beginning C2
    {raw:\\input texinfo @c -*-texinfo-*-\\n}
    {empty_line:\\n}
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@setfilename C1 split_chapter_index.texi:l3
    |text_arg:{split_chapter_index}
     *line_arg C3

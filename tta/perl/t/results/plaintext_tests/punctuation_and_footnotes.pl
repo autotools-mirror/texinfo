@@ -12,7 +12,7 @@ $result_tree_text{'punctuation_and_footnotes'} = '*document_root C1
  *before_node_section C9
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content
+  *preamble
   *paragraph C8
    {normal_text:Text.}
    *normal_command@footnote C1 l2

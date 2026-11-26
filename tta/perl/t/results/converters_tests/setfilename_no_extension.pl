@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'setfilename_no_extension'} = '*document_root C4
  *before_node_section C1
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@setfilename C1 l1
    |text_arg:{setfilename_no_extension}
     *line_arg C3

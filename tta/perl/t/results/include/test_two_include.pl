@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'test_two_include'} = '*document_root C1
  *before_node_section C10
-  *preamble_before_content
+  *preamble
   *paragraph C5
    {normal_text:Include version\\n}
    >SOURCEMARKS

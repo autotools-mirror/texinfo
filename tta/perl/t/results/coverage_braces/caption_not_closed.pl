@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'caption_not_closed'} = '*document_root C2
  *before_node_section C3
-  *preamble_before_content
+  *preamble
   *normal_command@float C4 l1
   |float_type:{Text}
   |global_command_number:{1}

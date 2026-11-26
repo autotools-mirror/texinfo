@@ -24,7 +24,7 @@ $result_tree_text{'empty_ifset_in_ifset_no_set'} = '*document_root C1
     >{raw:@end verbatim\\n}
     >{raw:@end ifset\\n}
    {empty_line:\\n}
-  *preamble_before_content
+  *preamble
 ';
 
 

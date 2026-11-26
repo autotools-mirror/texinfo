@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'inlineifsetifclear'} = '*document_root C1
  *before_node_section C10
-  *preamble_before_content
+  *preamble
   *paragraph C2
    *normal_command@inlineifclear C2 l1
    |expand_index:{1}

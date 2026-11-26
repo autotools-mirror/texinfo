@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'split_test_before_first_node'} = '*document_root C5
  *before_node_section C3
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@setfilename C1 l1
    |text_arg:{split_test_before_first_node.info}
     *line_arg C3

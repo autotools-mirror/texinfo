@@ -13,7 +13,7 @@ $result_tree_text{'indices_in_begin_tables_lists_entries_after_item'} = '*docume
   *before_beginning C2
    {raw:\\input texinfo.tex\\n}
    {empty_line:\\n}
-  *preamble_before_content
+  *preamble
  *normal_command@node C1 indices_in_begin_tables_lists.texi:l3 {Top}
  |identifier:{Top}
  |is_target:{1}

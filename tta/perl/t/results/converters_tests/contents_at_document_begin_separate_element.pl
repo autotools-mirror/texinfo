@@ -13,7 +13,7 @@ $result_tree_text{'contents_at_document_begin_separate_element'} = '*document_ro
   *before_beginning C2
    {raw:\\input texinfo @c -*-texinfo-*-\\n}
    {empty_line:\\n}
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@contents C1 contents_at_document_begin.texi:l3
    |global_command_number:{1}
     *line_arg C1

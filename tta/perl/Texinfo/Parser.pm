@@ -243,7 +243,7 @@ although it is not recommended to have such content). If there is no
 C<@setfilename>, it contains the C<\input texinfo.tex> line and following blank
 lines.
 
-The second container in I<before_node_section> is I<preamble_before_content>.
+The second container in I<before_node_section> is I<preamble>.
 It contains everything appearing before the first formatted content such as
 empty lines text elements,
 elements corresponding to line commands such as C<@documentlanguage> or
@@ -683,7 +683,7 @@ the C<\input texinfo.tex> line and following blank lines.
 If there is a C<@setfilename>, this container holds everything that appears
 before C<@setfilename>.
 
-=item preamble_before_content
+=item preamble
 
 This container holds everything appearing before the first formatted content,
 corresponding to the I<preamble> in the Texinfo documentation.

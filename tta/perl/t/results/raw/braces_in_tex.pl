@@ -12,7 +12,7 @@ $result_tree_text{'braces_in_tex'} = '*document_root C1
  *before_node_section C4
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content C3
+  *preamble C3
    *normal_command@tex C3 l2
     *arguments_line C1
      *block_line_arg C1

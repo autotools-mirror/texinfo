@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'macro_inlineifcond_end_in_empty_set'} = '*document_root C1
  *before_node_section C4
-  *preamble_before_content C1
+  *preamble C1
    *normal_command@macro C3 l1
    |formal_args:A{}
    |macro_name:{clearargendignored}

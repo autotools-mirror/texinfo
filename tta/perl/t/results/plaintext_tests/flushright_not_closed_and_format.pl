@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'flushright_not_closed_and_format'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content
+  *preamble
   *normal_command@flushright C4 l1
    *arguments_line C1
     *block_line_arg C1

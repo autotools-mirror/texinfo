@@ -12,7 +12,7 @@ $result_tree_text{'error_in_footnote'} = '*document_root C2
  *before_node_section C2
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content
+  *preamble
  *normal_command@node C7 l2 {Top}
  |identifier:{Top}
  |is_target:{1}

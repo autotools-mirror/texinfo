@@ -12,7 +12,7 @@ $result_tree_text{'section_below_unnumbered'} = '*document_root C8
  *before_node_section C2
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@contents C1 l2
    |global_command_number:{1}
     *line_arg C1

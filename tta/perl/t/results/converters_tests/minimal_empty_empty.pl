@@ -13,7 +13,7 @@ $result_tree_text{'minimal_empty_empty'} = '*document_root C1
   *before_beginning C2
    {empty_line:\\n}
    {empty_line:\\n}
-  *preamble_before_content
+  *preamble
 ';
 
 

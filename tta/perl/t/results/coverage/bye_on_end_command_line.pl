@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'bye_on_end_command_line'} = '*document_root C2
  *before_node_section C2
-  *preamble_before_content
+  *preamble
   *normal_command@cartouche C3 l1
    *arguments_line C1
     *block_line_arg C1

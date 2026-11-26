@@ -1658,7 +1658,7 @@ sub in_preamble($) {
 
   my $current_element = $element;
   while (exists($current_element->{'parent'})) {
-    if ($current_element->{'parent'}->{'type'} eq 'preamble_before_content') {
+    if ($current_element->{'parent'}->{'type'} eq 'preamble') {
       return 1;
     }
     $current_element = $current_element->{'parent'};

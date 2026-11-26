@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'print_merged_index'} = '*document_root C3
  *before_node_section C1
-  *preamble_before_content C1
+  *preamble C1
    *normal_command@syncodeindex C1 l1
    |misc_args:A{fn|cp}
     *line_arg C3

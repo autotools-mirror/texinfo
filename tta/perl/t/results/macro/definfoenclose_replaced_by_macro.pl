@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'definfoenclose_replaced_by_macro'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content C4
+  *preamble C4
    *normal_command@definfoenclose C1 l1
    |misc_args:A{phoo|;|:}
     *line_arg C3

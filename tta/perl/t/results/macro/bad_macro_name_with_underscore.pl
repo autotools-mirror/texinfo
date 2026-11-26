@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'bad_macro_name_with_underscore'} = '*document_root C1
  *before_node_section C1
-  *preamble_before_content C1
+  *preamble C1
    *normal_command@macro C3 l1
    |formal_args:A{arg1|arg2}
    |macro_name:{the_macro}

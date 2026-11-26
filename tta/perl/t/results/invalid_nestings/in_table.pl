@@ -12,7 +12,7 @@ $result_tree_text{'in_table'} = '*document_root C3
  *before_node_section C2
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content
+  *preamble
  *normal_command@node C1 l2 {Top}
  |identifier:{Top}
  |is_target:{1}

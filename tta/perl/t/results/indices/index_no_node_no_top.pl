@@ -13,7 +13,7 @@ $result_tree_text{'index_no_node_no_top'} = '*document_root C7
   *before_beginning C2
    {raw:\\input texinfo @c -*-texinfo-*-\\n}
    {empty_line:\\n}
-  *preamble_before_content
+  *preamble
   *index_entry_command@cindex C1 index_no_node_no_top.texi:l3
   |index_entry:I{cp,1}
    *line_arg C3

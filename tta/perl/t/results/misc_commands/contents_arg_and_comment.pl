@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'contents_arg_and_comment'} = '*document_root C1
  *before_node_section C1
-  *preamble_before_content C1
+  *preamble C1
    *normal_command@contents C1 l1
    |global_command_number:{1}
     *line_arg C3

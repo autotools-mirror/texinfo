@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'simple_only_special_spaces_node_no_translit_files'} = '*document_root C9
  *before_node_section C1
-  *preamble_before_content
+  *preamble
  *normal_command@node C1 simple_only_special_spaces_node.texi:l1 {Top}
  |identifier:{Top}
  |is_target:{1}

@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'comment_on_linemacro_call_macro_expansion'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content C4
+  *preamble C4
    *normal_command@linemacro C4 l1
    |formal_args:A{a|b}
    |macro_name:{lm}

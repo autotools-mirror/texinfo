@@ -36,7 +36,7 @@ $result_tree_text{'macro_in_early_commands'} = '*document_root C4
       {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-  *preamble_before_content C10
+  *preamble C10
    *normal_command@setfilename C1 l8
    |text_arg:{macro_in_passtexi_commands.info}
     *line_arg C3

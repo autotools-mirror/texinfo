@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'commands_in_email'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content
+  *preamble
   *paragraph C1
    *normal_command@email C1 l1
     *brace_arg C4

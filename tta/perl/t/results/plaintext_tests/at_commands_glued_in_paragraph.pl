@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'at_commands_glued_in_paragraph'} = '*document_root C1
  *before_node_section C4
-  *preamble_before_content
+  *preamble
   *paragraph C35
    {normal_text:at}
    *normal_command@@

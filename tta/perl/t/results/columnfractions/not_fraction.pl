@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'not_fraction'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content
+  *preamble
   *normal_command@multitable C2 l1
   |max_columns:{0}
    *arguments_line C1

@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'implicit_quoting_recursion'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@rmacro C3 l1
    |formal_args:A{a|b}
    |macro_name:{cat}

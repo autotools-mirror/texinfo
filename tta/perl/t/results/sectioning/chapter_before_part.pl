@@ -14,7 +14,7 @@ UNIT_DIRECTIONS
 This: [U0]
 Forward: [U1]
  *before_node_section C1
-  *preamble_before_content
+  *preamble
  *normal_command@chapter C2 l1 {chapter}
  |identifier:{chapter}
  |is_target:{1}

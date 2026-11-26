@@ -13,7 +13,7 @@ $result_tree_text{'index_table_chapter_no_node'} = '*document_root C12
   *before_beginning C2
    {raw:\\input texinfo @c -*-texinfo-*-\\n}
    {empty_line:\\n}
-  *preamble_before_content
+  *preamble
  *normal_command@node C1 index_table.texi:l3 {Top}
  |identifier:{Top}
  |is_target:{1}

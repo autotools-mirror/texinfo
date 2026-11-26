@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'author_outside_titlepage_quotation'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content
+  *preamble
   *normal_command@author C1 l1
   |global_command_number:{1}
    *line_arg C3

@@ -12,7 +12,7 @@ $result_tree_text{'chinese_mixed_with_en'} = '*document_root C6
  *before_node_section C2
   *before_beginning C1
    {raw:\\input texinfo\\n}
-  *preamble_before_content C3
+  *preamble C3
    *normal_command@documentencoding C1 chinese_mixed_with_en.texi:l2
    |global_command_number:{1}
    |input_encoding_name:{utf-8}

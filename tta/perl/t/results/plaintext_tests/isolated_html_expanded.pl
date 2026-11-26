@@ -12,7 +12,7 @@ $result_tree_text{'isolated_html_expanded'} = '*document_root C1
  *before_node_section C2
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content C1
+  *preamble C1
    *normal_command@html C3 l2
     *arguments_line C1
      *block_line_arg C1

@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'documentscript_argument'} = '*document_root C1
  *before_node_section C1
-  *preamble_before_content C14
+  *preamble C14
    *normal_command@documentscript C1 l1
    |global_command_number:{1}
    |text_arg:{Kits}

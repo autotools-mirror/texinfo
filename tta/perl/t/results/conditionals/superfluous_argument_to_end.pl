@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'superfluous_argument_to_end'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content C1
+  *preamble C1
    {normal_text:}
    >SOURCEMARKS
    >expanded_conditional_command<start;1>

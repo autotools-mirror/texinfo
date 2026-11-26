@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'similar_external_and_internal_node'} = '*document_root C2
  *before_node_section C1
-  *preamble_before_content
+  *preamble
  *normal_command@node C3 l1 {aa}
  |identifier:{aa}
  |is_target:{1}

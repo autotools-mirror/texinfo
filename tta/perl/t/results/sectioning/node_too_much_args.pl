@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'node_too_much_args'} = '*document_root C2
  *before_node_section C1
-  *preamble_before_content
+  *preamble
  *normal_command@node C1 l1 {first}
  |identifier:{first}
  |is_target:{1}

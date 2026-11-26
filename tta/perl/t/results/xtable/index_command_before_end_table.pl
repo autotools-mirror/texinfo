@@ -12,7 +12,7 @@ $result_tree_text{'index_command_before_end_table'} = '*document_root C1
  *before_node_section C3
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content
+  *preamble
   *normal_command@table C3 l2
    *arguments_line C1
     *block_line_arg C3

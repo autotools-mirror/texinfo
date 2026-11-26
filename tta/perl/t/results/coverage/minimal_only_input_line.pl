@@ -12,7 +12,7 @@ $result_tree_text{'minimal_only_input_line'} = '*document_root C1
  *before_node_section C2
   *before_beginning C1
    {raw:\\input texinfo.tex\\n}
-  *preamble_before_content
+  *preamble
 ';
 
 

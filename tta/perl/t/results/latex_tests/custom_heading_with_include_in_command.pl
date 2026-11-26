@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'custom_heading_with_include_in_command'} = '*document_root C25
  *before_node_section C1
-  *preamble_before_content C3
+  *preamble C3
    *normal_command@setchapternewpage C1 l1
    |misc_args:A{odd}
     *line_arg C3

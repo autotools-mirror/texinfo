@@ -12,7 +12,7 @@ $result_tree_text{'documentlanguagevariant_selection'} = '*document_root C5
  *before_node_section C2
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content C5
+  *preamble C5
    *normal_command@copying C3 l2
     *arguments_line C1
      *block_line_arg C1

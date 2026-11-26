@@ -12,7 +12,7 @@ $result_tree_text{'empty_line_in_command_in_expanded_not_expanded'} = '*document
  *before_node_section C2
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content C3
+  *preamble C3
    *normal_command@tex C3 l2
     *arguments_line C1
      *block_line_arg C1

@@ -12,7 +12,7 @@ $result_tree_text{'bad_formal_arg'} = '*document_root C1
  *before_node_section C2
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content C5
+  *preamble C5
    *normal_command@macro C3 l2
    |formal_args:A{|not_empty}
    |invalid_syntax:{1}

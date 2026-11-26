@@ -12,7 +12,7 @@ $result_tree_text{'documentlanguage_selection_accented_region'} = '*document_roo
  *before_node_section C2
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@documentlanguage C1 l2
    |global_command_number:{1}
    |text_arg:{fr_ÂD}

@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'recursive_linemacro_in_body'} = '*document_root C1
  *before_node_section C1
-  *preamble_before_content C3
+  *preamble C3
    *normal_command@linemacro C3 l1
    |formal_args:A{arg|other}
    |macro_name:{anorecurse}

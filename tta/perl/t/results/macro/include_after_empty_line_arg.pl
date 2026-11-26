@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'include_after_empty_line_arg'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@macro C3 l1
    |formal_args:A{body}
    |macro_name:{mymacro}

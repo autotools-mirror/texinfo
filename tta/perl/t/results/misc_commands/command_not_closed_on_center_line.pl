@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'command_not_closed_on_center_line'} = '*document_root C1
  *before_node_section C3
-  *preamble_before_content
+  *preamble
   *normal_command@center C1 l1
    *line_arg C3
     {spaces_before_argument: }

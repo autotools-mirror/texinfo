@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'value_expansion_in_include'} = '*document_root C3
  *before_node_section C1
-  *preamble_before_content C9
+  *preamble C9
    *normal_command@set C1
    |misc_args:A{testvar|incl-incl.txi}
     *line_arg C3

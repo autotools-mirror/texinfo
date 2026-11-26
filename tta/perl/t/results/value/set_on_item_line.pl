@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'set_on_item_line'} = '*document_root C1
  *before_node_section C4
-  *preamble_before_content
+  *preamble
   *normal_command@table C5 l1
    *arguments_line C1
     *block_line_arg C3

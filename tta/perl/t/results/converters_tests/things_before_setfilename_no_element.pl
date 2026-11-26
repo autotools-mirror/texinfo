@@ -171,7 +171,7 @@ $result_tree_text{'things_before_setfilename_no_element'} = '*document_root C1
      {normal_text:Text}
      {spaces_after_argument:\\n}
    {empty_line:\\n}
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@setfilename C1 things_before_setfilename_no_element.texi:l44
    |text_arg:{things_before_setfilename_no_element.info}
     *line_arg C3

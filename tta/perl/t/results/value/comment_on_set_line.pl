@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'comment_on_set_line'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content C5
+  *preamble C5
    *normal_command@set C1
    |misc_args:A{x|}
     *line_arg C3

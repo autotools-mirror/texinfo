@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'tab_in_index'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content
+  *preamble
   *normal_command@multitable C3 l1
   |max_columns:{2}
    *arguments_line C1

@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'at_commands_in_refs'} = '*document_root C63
  *before_node_section C1
-  *preamble_before_content
+  *preamble
  *normal_command@node C1 l1 {Top}
  |identifier:{Top}
  |is_target:{1}

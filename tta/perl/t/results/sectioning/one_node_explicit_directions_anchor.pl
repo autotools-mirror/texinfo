@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'one_node_explicit_directions_anchor'} = '*document_root C2
  *before_node_section C1
-  *preamble_before_content
+  *preamble
  *normal_command@node C6 l1 {one node}
  |identifier:{one-node}
  |is_target:{1}

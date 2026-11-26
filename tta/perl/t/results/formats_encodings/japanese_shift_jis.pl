@@ -20,7 +20,7 @@ $result_tree_text{'japanese_shift_jis'} = '*document_root C8
      {spaces_before_argument: }
      {normal_text:shift_jis}
      {spaces_after_argument:\\n}
-  *preamble_before_content C5
+  *preamble C5
    *normal_command@setfilename C1 japanese_shift_jis.texi:l3
    |text_arg:{japanese_shift_jis.info}
     *line_arg C3

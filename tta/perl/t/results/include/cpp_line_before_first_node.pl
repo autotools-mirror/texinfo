@@ -15,7 +15,7 @@ $result_tree_text{'cpp_line_before_first_node'} = '*document_root C2
   >line_directive<1>{#line 100 "foo.ptexi"\\n}
    {raw:\\input texinfo\\n}
    {empty_line:\\n}
-  *preamble_before_content C3
+  *preamble C3
    {empty_line:\\n}
    {empty_line:\\n}
    {empty_line:\\n}

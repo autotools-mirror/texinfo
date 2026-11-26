@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'indent_with_command_after_without_space'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content C1
+  *preamble C1
    *normal_command@indent l1
   *paragraph C2
   |indent:{1}

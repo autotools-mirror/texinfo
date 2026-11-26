@@ -12,7 +12,7 @@ $result_tree_text{'beginning_and_end_on_line'} = '*document_root C1
  *before_node_section C5
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@tex C2 l2
     *arguments_line C1
      *block_line_arg C3

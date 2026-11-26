@@ -12,7 +12,7 @@ $result_tree_text{'macro_in_ifset_set'} = '*document_root C1
  *before_node_section C3
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content C7
+  *preamble C7
    *normal_command@set C1
    |misc_args:A{a|}
     *line_arg C3

@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'bye_in_macro'} = '*document_root C3
  *before_node_section C2
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@macro C6 l1
    |formal_args:A{}
    |macro_name:{byeinmacro}

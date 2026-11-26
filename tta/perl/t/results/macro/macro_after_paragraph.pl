@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'macro_after_paragraph'} = '*document_root C1
  *before_node_section C4
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@macro C4 l1
    |formal_args:A{}
    |macro_name:{mymacro}

@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'paragraph_no_paragraph'} = '*document_root C1
  *before_node_section C5
-  *preamble_before_content C4
+  *preamble C4
    *normal_command@linemacro C3 l1
    |formal_args:A{a|b|c}
    |macro_name:{mycommand}

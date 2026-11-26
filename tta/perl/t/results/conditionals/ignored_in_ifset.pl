@@ -27,7 +27,7 @@ $result_tree_text{'ignored_in_ifset'} = '*document_root C1
       >{normal_text:ifset}
       >{spaces_after_argument:\\n}
    {empty_line:\\n}
-  *preamble_before_content
+  *preamble
   *paragraph C1
    {normal_text:text\\n}
   {empty_line:\\n}

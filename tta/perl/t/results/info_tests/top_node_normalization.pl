@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'top_node_normalization'} = '*document_root C2
  *before_node_section C1
-  *preamble_before_content
+  *preamble
  *normal_command@node C5 l1 {ToP}
  |identifier:{Top}
  |is_target:{1}

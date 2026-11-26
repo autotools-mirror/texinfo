@@ -13,7 +13,7 @@ $result_tree_text{'delcomment_on_comment'} = '*document_root C2
   *before_beginning C2
    {raw:\\input texinfo\\n}
    {empty_line:\\n}
-  *preamble_before_content
+  *preamble
   *paragraph C2
    {normal_text:some text }
    *normal_command@c C1

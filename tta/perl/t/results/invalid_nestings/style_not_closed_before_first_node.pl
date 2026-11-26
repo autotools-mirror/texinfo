@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'style_not_closed_before_first_node'} = '*document_root C2
  *before_node_section C2
-  *preamble_before_content
+  *preamble
   *paragraph C1
    *normal_command@code C1 l1
     *brace_container C2

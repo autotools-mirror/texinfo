@@ -12,7 +12,7 @@ $result_tree_text{'noindent_indent'} = '*document_root C1
  *before_node_section C15
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@indent l2
    {ignorable_spaces_after_command:\\n}
   *paragraph C1

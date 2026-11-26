@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'comma_node_in_file_name'} = '*document_root C5
  *before_node_section C1
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@setfilename C1 l1
    |text_arg:{before_comma, Node: after_node.info}
     *line_arg C3

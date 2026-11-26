@@ -27,7 +27,7 @@ $result_tree_text{'bad_ifclear_argument'} = '*document_root C1
       >{normal_text:ifclear}
       >{spaces_after_argument:\\n}
    {empty_line:\\n}
-  *preamble_before_content
+  *preamble
 ';
 
 

@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'macro_imbricated_with_beginning_command_name'} = '*document_root C1
  *before_node_section C1
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@macro C5 l1
    |formal_args:A{}
    |macro_name:{foo}

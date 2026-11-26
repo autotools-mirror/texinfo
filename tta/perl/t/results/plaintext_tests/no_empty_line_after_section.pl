@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'no_empty_line_after_section'} = '*document_root C5
  *before_node_section C2
-  *preamble_before_content
+  *preamble
   *paragraph C1
    {normal_text:Text\\n}
  *normal_command@top C3 l2 {top}

@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'definfoenclose_texinfo_commands'} = '*document_root C1
  *before_node_section C6
-  *preamble_before_content C5
+  *preamble C5
    *normal_command@definfoenclose C1 l1
    |misc_args:A{verb|;;|!!}
     *line_arg C3

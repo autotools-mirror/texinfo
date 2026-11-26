@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'protect_comma_macro_line'} = '*document_root C1
  *before_node_section C4
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@macro C6 l1
    |formal_args:A{arg}
    |macro_name:{macrotwo}

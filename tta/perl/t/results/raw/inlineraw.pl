@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'inlineraw'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content
+  *preamble
   *paragraph C5
    {normal_text:A }
    *normal_command@inlineraw C2 l1

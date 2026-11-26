@@ -12,7 +12,7 @@ $result_tree_text{'ref_error_formatting'} = '*document_root C1
  *before_node_section C9
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content
+  *preamble
   *paragraph C4
    *normal_command@code C1 l2
     *brace_container C5

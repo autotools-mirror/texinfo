@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'alias_of_added_index_before_added_index'} = '*document_root C5
  *before_node_section C1
-  *preamble_before_content C4
+  *preamble C4
    *normal_command@alias C1 l1
    |misc_args:A{new|sliindex}
     *line_arg C3

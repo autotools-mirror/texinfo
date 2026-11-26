@@ -12,7 +12,7 @@ $result_tree_text{'text_before_top_and_contents_after_title'} = '*document_root 
  *before_node_section C4
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content
+  *preamble
   *paragraph C1
    {normal_text:Some text before top\\n}
   {empty_line:\\n}

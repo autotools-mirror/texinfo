@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'test_index'} = '*document_root C13
  *before_node_section C1
-  *preamble_before_content
+  *preamble
  *normal_command@node C1 l1 {Top}
  |identifier:{Top}
  |is_target:{1}

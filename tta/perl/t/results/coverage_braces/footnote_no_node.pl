@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'footnote_no_node'} = '*document_root C2
  *before_node_section C1
-  *preamble_before_content
+  *preamble
  *normal_command@top C3 l1 {top}
  |identifier:{Top}
  |is_target:{1}

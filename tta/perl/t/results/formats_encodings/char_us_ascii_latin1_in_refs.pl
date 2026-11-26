@@ -13,7 +13,7 @@ $result_tree_text{'char_us_ascii_latin1_in_refs'} = '*document_root C14
   *before_beginning C2
    {raw:\\input texinfo\\n}
    {empty_line:\\n}
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@documentencoding C1 char_us_ascii_latin1_in_refs.texi:l3
    |global_command_number:{1}
    |input_encoding_name:{us-ascii}

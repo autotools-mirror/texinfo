@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'example_invalid_at_commands_arguments'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content
+  *preamble
   *normal_command@example C2 l1
    *arguments_line C3
     *block_line_arg C3

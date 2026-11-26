@@ -13,7 +13,7 @@ $result_tree_text{'manual_simple_utf8_with_error'} = '*document_root C6
   *before_beginning C2
    {raw:\\input texinfo.tex\\n}
    {empty_line:\\n}
-  *preamble_before_content
+  *preamble
  *normal_command@node C1 manual_simple_utf8_with_error.texi:l3 {Top}
  |identifier:{Top}
  |is_target:{1}

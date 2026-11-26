@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'empty_last_argument'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content C3
+  *preamble C3
    *normal_command@defcodeindex C1 l1
    |misc_args:A{BI}
     *line_arg C3

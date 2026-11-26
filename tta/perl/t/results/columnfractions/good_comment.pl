@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'good_comment'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content
+  *preamble
   *normal_command@multitable C2 l1
   |max_columns:{3}
    *arguments_line C1

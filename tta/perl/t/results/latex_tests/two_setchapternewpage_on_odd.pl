@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'two_setchapternewpage_on_odd'} = '*document_root C1
  *before_node_section C1
-  *preamble_before_content C3
+  *preamble C3
    *normal_command@setchapternewpage C1 l1
    |misc_args:A{on}
     *line_arg C3

@@ -12,7 +12,7 @@ $result_tree_text{'novalidate_empty_refs'} = '*document_root C5
  *before_node_section C2
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@novalidate C1 l2
     *line_arg C1
      {spaces_before_argument:\\n}

@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'indent_with_text_after_without_space'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content C3
+  *preamble C3
    *normal_command@set C1
    |misc_args:A{myvalue|a}
     *line_arg C3

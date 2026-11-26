@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'end_of_line'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content
+  *preamble
   *paragraph C3
    {normal_text:verb at end of line }
    *normal_command@verb C1 l1

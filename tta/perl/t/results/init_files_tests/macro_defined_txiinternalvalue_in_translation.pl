@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'macro_defined_txiinternalvalue_in_translation'} = '*document_root C1
  *before_node_section C5
-  *preamble_before_content
+  *preamble
   *normal_command@sp C1 l1
   |misc_args:A{1}
    *line_arg C3

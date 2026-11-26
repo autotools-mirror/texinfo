@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'anchor_in_empty_center'} = '*document_root C2
  *before_node_section C1
-  *preamble_before_content
+  *preamble
  *normal_command@node C7 l1 {Top}
  |identifier:{Top}
  |is_target:{1}

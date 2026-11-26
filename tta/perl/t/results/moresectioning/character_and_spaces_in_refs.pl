@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'character_and_spaces_in_refs'} = '*document_root C11
  *before_node_section C1
-  *preamble_before_content
+  *preamble
  *normal_command@node C1 character_and_spaces_in_refs_text.texi:l1 {Top}
  |identifier:{Top}
  |is_target:{1}

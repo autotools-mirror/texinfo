@@ -12,7 +12,7 @@ $result_tree_text{'top_node_and_bye'} = 'U0 unit{C3}
 UNIT_DIRECTIONS
 This: [U0]
  *before_node_section C1
-  *preamble_before_content
+  *preamble
  *normal_command@node C2 l1 {Top}
  |identifier:{Top}
  |is_target:{1}

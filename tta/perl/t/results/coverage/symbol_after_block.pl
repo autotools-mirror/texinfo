@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'symbol_after_block'} = '*document_root C1
  *before_node_section C36
-  *preamble_before_content C4
+  *preamble C4
    *normal_command@html C3 l1
     *arguments_line C1
      *block_line_arg C1

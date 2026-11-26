@@ -12,7 +12,7 @@ $result_tree_text{'between_node_and_section'} = '*document_root C7
  *before_node_section C2
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content
+  *preamble
  *normal_command@node C1 l2 {chap}
  |identifier:{chap}
  |is_target:{1}

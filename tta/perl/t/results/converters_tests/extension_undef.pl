@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'extension_undef'} = '*document_root C4
  *before_node_section C2
-  *preamble_before_content
+  *preamble
   *paragraph C1
    {normal_text:node Top\\n}
  *normal_command@top C2 l2 {top}

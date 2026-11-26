@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'empty_line_in_braces_in_math_at_begin_line'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content
+  *preamble
   *paragraph C1
    *normal_command@math C1 l1
     *brace_arg C5

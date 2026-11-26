@@ -17,7 +17,7 @@ FastForward: [U0]
 FastBack: [U0]
 NodeUp: (dir)
  *before_node_section C1
-  *preamble_before_content
+  *preamble
  *normal_command@node C1 l1 {a node}
  |identifier:{a-node}
  |is_target:{1}

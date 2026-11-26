@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'text_before_line_command'} = '*document_root C3
  *before_node_section C4
-  *preamble_before_content
+  *preamble
   *paragraph C2
    {normal_text:before title }
    *normal_command@title C1 l1

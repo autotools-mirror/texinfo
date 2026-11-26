@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'double_command'} = '*document_root C1
  *before_node_section C4
-  *preamble_before_content
+  *preamble
   *normal_command@deffn C3 l1
    *def_line C1 l1
    |def_command:{deffn}

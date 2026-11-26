@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'listoffloats_with_commands'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content
+  *preamble
   *normal_command@listoffloats C1 l1
   |float_type:{théorème}
   |global_command_number:{1}

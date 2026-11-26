@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'menutextorder'} = '*document_root C15
  *before_node_section C3
-  *preamble_before_content
+  *preamble
   *normal_command@menu C4 l1
    *arguments_line C1
     *block_line_arg C1

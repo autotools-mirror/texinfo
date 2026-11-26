@@ -13,7 +13,7 @@ $result_tree_text{'punctuation_sc_accents_ascii_glyph_latin1'} = '*document_root
   *before_beginning C2
    {raw:\\input texinfo\\n}
    {empty_line:\\n}
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@documentencoding C1 punctuation_small_case_accents_latin1.texi:l3
    |global_command_number:{1}
    |input_encoding_name:{iso-8859-1}

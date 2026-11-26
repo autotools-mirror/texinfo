@@ -13,7 +13,7 @@ $result_tree_text{'contents_at_end_inline'} = '*document_root C6
   *before_beginning C2
    {raw:\\input texinfo @c -*-texinfo-*-\\n}
    {empty_line:\\n}
-  *preamble_before_content
+  *preamble
  *normal_command@node C1 contents_at_end.texi:l3 {Top}
  |identifier:{Top}
  |is_target:{1}

@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'form_feeds_in_preamble'} = '*document_root C3
  *before_node_section C1
-  *preamble_before_content C9
+  *preamble C9
    *normal_command@settitle C1 l1
     *line_arg C3
      {spaces_before_argument: }

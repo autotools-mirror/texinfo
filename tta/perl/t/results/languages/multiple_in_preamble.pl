@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'multiple_in_preamble'} = '*document_root C5
  *before_node_section C1
-  *preamble_before_content C6
+  *preamble C6
    *normal_command@documentlanguage C1 l1
    |global_command_number:{1}
    |text_arg:{hr}

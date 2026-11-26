@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'pagesizes'} = '*document_root C6
  *before_node_section C1
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@pagesizes C1 l1
     *line_arg C3
      {spaces_before_argument: }

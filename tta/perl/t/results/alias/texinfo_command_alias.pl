@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'texinfo_command_alias'} = '*document_root C1
  *before_node_section C7
-  *preamble_before_content C4
+  *preamble C4
    *normal_command@macro C3 l1
    |formal_args:A{arg}
    |macro_name:{mystrong}

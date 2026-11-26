@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'ref_in_multitable'} = '*document_root C1
  *before_node_section C6
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@novalidate C1 l1
     *line_arg C1
      {spaces_before_argument:\\n}

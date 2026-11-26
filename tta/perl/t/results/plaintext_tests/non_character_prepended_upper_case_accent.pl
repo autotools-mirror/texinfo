@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'non_character_prepended_upper_case_accent'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content
+  *preamble
   *paragraph C4
    *normal_command@udotaccent C1 l1
     *brace_container C1

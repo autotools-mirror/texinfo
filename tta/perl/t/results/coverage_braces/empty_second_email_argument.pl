@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'empty_second_email_argument'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content
+  *preamble
   *paragraph C1
    *normal_command@email C2 l1
     *brace_arg C4

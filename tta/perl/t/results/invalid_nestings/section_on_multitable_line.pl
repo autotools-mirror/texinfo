@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'section_on_multitable_line'} = '*document_root C4
  *before_node_section C2
-  *preamble_before_content
+  *preamble
   *normal_command@multitable C1 l1
   |max_columns:{0}
    *arguments_line C1

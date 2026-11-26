@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'value_in_index_commands'} = '*document_root C3
  *before_node_section C11
-  *preamble_before_content C9
+  *preamble C9
    *normal_command@set C1
    |misc_args:A{cp|cp}
     *line_arg C3

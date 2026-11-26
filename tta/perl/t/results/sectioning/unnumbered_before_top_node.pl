@@ -12,7 +12,7 @@ $result_tree_text{'unnumbered_before_top_node'} = 'U0 unit{C3}{S:@unnumbered bef
 UNIT_DIRECTIONS
 This: [U0]
  *before_node_section C1
-  *preamble_before_content
+  *preamble
  *normal_command@unnumbered C2 l1 {before nodes}
  |identifier:{before-nodes}
  |is_target:{1}

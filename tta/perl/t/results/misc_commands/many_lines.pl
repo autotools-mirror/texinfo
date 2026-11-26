@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'many_lines'} = '*document_root C1
  *before_node_section C10
-  *preamble_before_content
+  *preamble
   *paragraph C21
    {normal_text:pagesizes }
    *normal_command@pagesizes C1 l1

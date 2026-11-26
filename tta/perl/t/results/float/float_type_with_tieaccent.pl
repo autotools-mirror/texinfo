@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'float_type_with_tieaccent'} = '*document_root C1
  *before_node_section C4
-  *preamble_before_content
+  *preamble
   *normal_command@float C3 l1
   |float_number:{1}
   |float_type:{A 1͡a 第͡H ê͡一 and text}

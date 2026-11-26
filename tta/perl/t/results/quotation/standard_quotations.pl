@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'standard_quotations'} = '*document_root C1
  *before_node_section C12
-  *preamble_before_content
+  *preamble
   *normal_command@quotation C3 l1
    *arguments_line C1
     *block_line_arg C3

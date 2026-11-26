@@ -13,7 +13,7 @@ $result_tree_text{'split_nocopying_split'} = '*document_root C6
   *before_beginning C2
    {raw:\\input texinfo\\n}
    {empty_line:\\n}
-  *preamble_before_content
+  *preamble
  *normal_command@node C1 split_nocopying.texi:l3 {Top}
  |identifier:{Top}
  |is_target:{1}

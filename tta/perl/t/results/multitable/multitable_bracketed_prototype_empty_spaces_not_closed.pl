@@ -12,7 +12,7 @@ $result_tree_text{'multitable_bracketed_prototype_empty_spaces_not_closed'} = '*
  *before_node_section C3
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content
+  *preamble
   *normal_command@multitable C2 l2
   |max_columns:{1}
    *arguments_line C1

@@ -12,7 +12,7 @@ $result_tree_text{'verbatiminclude'} = '*document_root C1
  *before_node_section C3
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content
+  *preamble
   *normal_command@verbatiminclude C1 l2
   |input_encoding_name:{utf-8}
   |text_arg:{incl-incl.txi}

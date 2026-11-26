@@ -207,7 +207,7 @@ my %docbook_no_warn_empty_types;
 # for a few containers.
 foreach my $type ('brace_container', 'bracketed_arg', 'brace_command_context',
                   'preformatted', 'before_item', 'line_arg', 'block_line_arg',
-                  'preamble_before_content', 'before_node_section') {
+                  'preamble', 'before_node_section') {
   $docbook_no_warn_empty_types{$type} = 1;
 }
 

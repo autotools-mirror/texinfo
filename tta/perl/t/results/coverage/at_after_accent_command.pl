@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'at_after_accent_command'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content
+  *preamble
   *paragraph C6
    *normal_command@ringaccent C1 l1
     {spaces_after_cmd_before_arg: }

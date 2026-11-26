@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'non_ascii_in_macro_name'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@macro C3 l1
    |invalid_syntax:{1}
     *arguments_line C1

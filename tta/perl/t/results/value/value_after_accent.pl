@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'value_after_accent'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content C1
+  *preamble C1
    *normal_command@set C1
    |misc_args:A{a_letter|a}
     *line_arg C3

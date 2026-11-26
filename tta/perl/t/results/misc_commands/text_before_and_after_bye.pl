@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'text_before_and_after_bye'} = '*document_root C3
  *before_node_section C2
-  *preamble_before_content
+  *preamble
   *paragraph C1
    {normal_text:Before bye }
  *normal_command@bye C1

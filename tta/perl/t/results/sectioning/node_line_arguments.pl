@@ -12,7 +12,7 @@ $result_tree_text{'node_line_arguments'} = '*document_root C8
  *before_node_section C2
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content
+  *preamble
  *normal_command@node C1 l2 {one arg1}
  |identifier:{one-arg1}
  |is_target:{1}

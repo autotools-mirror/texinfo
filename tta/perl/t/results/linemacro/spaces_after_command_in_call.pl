@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'spaces_after_command_in_call'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@linemacro C5 l1
    |formal_args:A{first|second|rest}
    |macro_name:{mylinecommand}

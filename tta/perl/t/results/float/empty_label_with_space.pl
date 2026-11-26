@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'empty_label_with_space'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content
+  *preamble
   *normal_command@float C2 l1
   |float_type:{Type}
   |global_command_number:{1}

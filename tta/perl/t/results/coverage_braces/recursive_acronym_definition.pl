@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'recursive_acronym_definition'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content
+  *preamble
   *paragraph C2
    *normal_command@acronym C2 l1
     *brace_arg C1

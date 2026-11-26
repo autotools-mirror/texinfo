@@ -12,7 +12,7 @@ $result_tree_text{'inline_expand_tex'} = '*document_root C1
  *before_node_section C6
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content
+  *preamble
   *paragraph C12
    *normal_command@inlinefmt C2 l2
    |format:{html}

@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'character_number_leading_toc_stoc'} = '*document_root C5
  *before_node_section C1
-  *preamble_before_content
+  *preamble
  *normal_command@top C1 l1 {top}
  |identifier:{Top}
  |is_target:{1}

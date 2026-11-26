@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'section_chapter_before_top_nodes'} = '*document_root C7
  *before_node_section C1
-  *preamble_before_content
+  *preamble
  *normal_command@node C1 l1 {section node}
  |identifier:{section-node}
  |is_target:{1}

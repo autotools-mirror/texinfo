@@ -24,7 +24,7 @@ $result_tree_text{'macro_and_commands_in_early_commands'} = '*document_root C4
       {normal_text:macro}
       {spaces_after_argument:\\n}
    {empty_line:\\n}
-  *preamble_before_content C8
+  *preamble C8
    *normal_command@setfilename C1 l5
    |text_arg:{macro_i--n_pass@texi_commands.info}
     *line_arg C5

@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'expansion_order'} = '*document_root C1
  *before_node_section C3
-  *preamble_before_content C4
+  *preamble C4
    *normal_command@macro C3 l1
    |formal_args:A{arg}
    |macro_name:{bidule}

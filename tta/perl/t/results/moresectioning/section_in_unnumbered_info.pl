@@ -12,7 +12,7 @@ $result_tree_text{'section_in_unnumbered_info'} = '*document_root C65
  *before_node_section C2
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content
+  *preamble
  *normal_command@node C1 section_in_unnumbered_text.texi:l2 {Top}
  |identifier:{Top}
  |is_target:{1}

@@ -13,7 +13,7 @@ $result_tree_text{'topic_guide'} = '*document_root C13
   *before_beginning C2
    {raw:\\input texinfo.tex\\n}
    {empty_line:\\n}
-  *preamble_before_content
+  *preamble
  *normal_command@node C1 topic_guide.texi:l3 {Top}
  |identifier:{Top}
  |is_target:{1}

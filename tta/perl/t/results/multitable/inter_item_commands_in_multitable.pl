@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'inter_item_commands_in_multitable'} = '*document_root C1
  *before_node_section C7
-  *preamble_before_content
+  *preamble
   *normal_command@multitable C4 l1
   |max_columns:{1}
    *arguments_line C1

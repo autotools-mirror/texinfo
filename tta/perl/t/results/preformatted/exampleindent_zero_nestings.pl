@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'exampleindent_zero_nestings'} = '*document_root C1
  *before_node_section C30
-  *preamble_before_content C1
+  *preamble C1
    *normal_command@exampleindent C1 l1
    |global_command_number:{1}
    |misc_args:A{asis}

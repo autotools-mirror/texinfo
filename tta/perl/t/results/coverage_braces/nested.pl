@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'nested'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content
+  *preamble
   *paragraph C3
    {normal_text:type the characters }
    *normal_command@kbd C1 l1

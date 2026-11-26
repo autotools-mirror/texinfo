@@ -30,7 +30,7 @@ $result_tree_text{'commands_in_ifset'} = '*document_root C1
       >{normal_text:ifset}
       >{spaces_after_argument:\\n}
    {empty_line:\\n}
-  *preamble_before_content C1
+  *preamble C1
    {empty_line:\\n}
    >SOURCEMARKS
    >ignored_conditional_block<2><p:1>

@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'dot_and_dot_space_in_node_menu_entry'} = '*document_root C3
  *before_node_section C1
-  *preamble_before_content
+  *preamble
  *normal_command@node C4 l1 {Top}
  |identifier:{Top}
  |is_target:{1}

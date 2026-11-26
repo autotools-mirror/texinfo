@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'bad_argument'} = '*document_root C1
  *before_node_section C1
-  *preamble_before_content C7
+  *preamble C7
    *normal_command@macro C3 l1
    |invalid_syntax:{1}
     *arguments_line C1

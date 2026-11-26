@@ -13,7 +13,7 @@ UNIT_DIRECTIONS
 This: [U0]
 NodeUp: (dir)
  *before_node_section C1
-  *preamble_before_content
+  *preamble
  *normal_command@top C3 l1 {top section}
  |identifier:{top-section}
  |is_target:{1}

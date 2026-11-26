@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'end_of_line_in_uref'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content
+  *preamble
   *paragraph C3
    {normal_text:See the }
    *normal_command@uref C2 l1

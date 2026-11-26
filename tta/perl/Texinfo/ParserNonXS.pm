@@ -1047,7 +1047,7 @@ sub _rearrange_tree_beginning($$) {
 
   # add a preamble for informational commands.  Add it even if empty.
   my $informational_preamble
-    = Texinfo::TreeElement::new({'type' => 'preamble_before_content',
+    = Texinfo::TreeElement::new({'type' => 'preamble',
                                  'parent' => $before_node_section,});
   # index of the first element of the preamble
   my $first_idx = 0;

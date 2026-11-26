@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'consecutive_conditionals'} = '*document_root C1
  *before_node_section C1
-  *preamble_before_content C4
+  *preamble C4
    {normal_text:}
    >SOURCEMARKS
    >ignored_conditional_block<1>

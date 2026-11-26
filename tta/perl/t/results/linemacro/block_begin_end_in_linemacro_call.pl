@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'block_begin_end_in_linemacro_call'} = '*document_root C1
  *before_node_section C18
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@linemacro C3 l1
    |formal_args:A{a}
    |macro_name:{lm}

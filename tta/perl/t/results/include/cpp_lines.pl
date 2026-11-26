@@ -12,7 +12,7 @@ $result_tree_text{'cpp_lines'} = '*document_root C4
  *before_node_section C4
   *before_beginning C1
    {raw:\\input texinfo\\n}
-  *preamble_before_content C3
+  *preamble C3
    *normal_command@setfilename C1 cpp_lines.texi:l2
    |text_arg:{cpp_lines.info}
     *line_arg C3

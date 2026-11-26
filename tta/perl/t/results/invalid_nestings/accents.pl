@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'accents'} = '*document_root C1
  *before_node_section C4
-  *preamble_before_content
+  *preamble
   *paragraph C5
    {normal_text:Valid\\n}
    *normal_command@~ C1 l2

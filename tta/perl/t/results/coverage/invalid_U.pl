@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'invalid_U'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content
+  *preamble
   *paragraph C19
    *normal_command@U C1 l1
     {spaces_after_cmd_before_arg: }

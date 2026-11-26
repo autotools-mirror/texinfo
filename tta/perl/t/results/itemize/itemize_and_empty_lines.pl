@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'itemize_and_empty_lines'} = '*document_root C1
  *before_node_section C15
-  *preamble_before_content
+  *preamble
   *normal_command@itemize C7 l1
    *arguments_line C1
     *block_line_arg C3

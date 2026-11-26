@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'comment_space_command_on_line'} = '*document_root C6
  *before_node_section C1
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@settitle C1 l1
     *line_arg C4
      {spaces_before_argument: }

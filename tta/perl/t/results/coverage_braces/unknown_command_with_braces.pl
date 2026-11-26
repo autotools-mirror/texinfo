@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'unknown_command_with_braces'} = '*document_root C1
  *before_node_section C13
-  *preamble_before_content
+  *preamble
   *paragraph C1
    {normal_text:Unknown thing \\n}
   {empty_line:\\n}

@@ -13,7 +13,7 @@ $result_tree_text{'minimal_empty_with_input'} = '*document_root C1
   *before_beginning C2
    {raw:\\input texinfo.tex\\n}
    {empty_line:\\n}
-  *preamble_before_content
+  *preamble
 ';
 
 

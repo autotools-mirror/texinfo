@@ -32,7 +32,7 @@ $result_tree_text{'include_with_setfilename'} = '*document_root C1
     {normal_text:In included file.\\n}
     >SOURCEMARKS
     >include<end;1><p:18>
-  *preamble_before_content C1
+  *preamble C1
    *normal_command@setfilename C1 l2
    |text_arg:{include_with_setfilename.info}
     *line_arg C3

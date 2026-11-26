@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'command_conditionals_user_defined'} = '*document_root C1
  *before_node_section C8
-  *preamble_before_content C8
+  *preamble C8
    *normal_command@macro C3 l1
    |formal_args:A{}
    |macro_name:{truc}

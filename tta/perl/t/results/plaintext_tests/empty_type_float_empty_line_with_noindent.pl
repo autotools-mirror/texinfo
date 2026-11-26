@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'empty_type_float_empty_line_with_noindent'} = '*document_root C1
  *before_node_section C6
-  *preamble_before_content
+  *preamble
   *normal_command@float C3 l1
   |float_type:{}
   |global_command_number:{1}

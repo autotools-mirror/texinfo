@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'test_deftypefnnewline'} = '*document_root C5
  *before_node_section C1
-  *preamble_before_content C4
+  *preamble C4
    *normal_command@setfilename C1 l1
    |text_arg:{test_deftypefnnewline.info}
     *line_arg C3

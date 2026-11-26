@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'not_only_characters'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@set C1
    |misc_args:A{-e_\'::;|hh}
     *line_arg C3

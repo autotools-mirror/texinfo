@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'not_i_j_in_dotless'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content
+  *preamble
   *paragraph C4
    *normal_command@dotless C2 l1
     {spaces_after_cmd_before_arg: }

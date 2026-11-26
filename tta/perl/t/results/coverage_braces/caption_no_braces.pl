@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'caption_no_braces'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content
+  *preamble
   *normal_command@caption l1
 ';
 

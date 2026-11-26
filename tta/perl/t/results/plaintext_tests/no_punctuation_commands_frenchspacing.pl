@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'no_punctuation_commands_frenchspacing'} = '*document_root C1
  *before_node_section C12
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@frenchspacing C1 l1
    |global_command_number:{1}
    |misc_args:A{on}

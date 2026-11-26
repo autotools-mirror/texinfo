@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'auto_top_section'} = '*document_root C3
  *before_node_section C1
-  *preamble_before_content
+  *preamble
  *normal_command@node C1 l1 {Top}
  |added:{1}
  |identifier:{Top}

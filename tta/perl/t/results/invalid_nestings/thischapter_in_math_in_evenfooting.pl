@@ -12,7 +12,7 @@ $result_tree_text{'thischapter_in_math_in_evenfooting'} = '*document_root C1
  *before_node_section C2
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content C1
+  *preamble C1
    *normal_command@evenfooting C1 l2
     *line_arg C3
      {spaces_before_argument: }

@@ -12,7 +12,7 @@ $result_tree_text{'nested_ifset_ifclear'} = '*document_root C1
  *before_node_section C13
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content C4
+  *preamble C4
    *normal_command@macro C10 l2
    |formal_args:A{}
    |macro_name:{conditionals}

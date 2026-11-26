@@ -12,7 +12,7 @@ $result_tree_text{'special_spaces_in_nodes'} = '*document_root C14
  *before_node_section C2
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content
+  *preamble
  *normal_command@node C1 special_spaces_in_nodes.texi:l2 {Top }
  |identifier:{Top_2002}
  |is_target:{1}

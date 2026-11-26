@@ -12,7 +12,7 @@ $result_tree_text{'multiple_include_encodings'} = '*document_root C19
  *before_node_section C2
   *before_beginning C1
    {raw:\\input texinfo.tex\\n}
-  *preamble_before_content C10
+  *preamble C10
    *normal_command@documentencoding C1 multiple_include_encodings.texi:l2
    |global_command_number:{1}
    |input_encoding_name:{iso-8859-1}

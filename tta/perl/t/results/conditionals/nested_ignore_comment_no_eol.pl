@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'nested_ignore_comment_no_eol'} = '*document_root C1
  *before_node_section C1
-  *preamble_before_content C1
+  *preamble C1
    *normal_command@ignore C2 l1
     *arguments_line C1
      *block_line_arg C1

@@ -12,7 +12,7 @@ $result_tree_text{'encoding_index_ascii'} = '*document_root C4
  *before_node_section C2
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content C3
+  *preamble C3
    *normal_command@setfilename C1 l2
    |text_arg:{encoding_index_ascii.info}
     *line_arg C3

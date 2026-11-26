@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'paragraph_in_style_command'} = '*document_root C1
  *before_node_section C8
-  *preamble_before_content
+  *preamble
   *paragraph C2
    {normal_text:a 2 paragraphs sample }
    *normal_command@samp C1 l1

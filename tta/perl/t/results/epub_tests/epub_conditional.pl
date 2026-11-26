@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'epub_conditional'} = '*document_root C5
  *before_node_section C3
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@documentinfo C4 l1
     *arguments_line C1
      *block_line_arg C1

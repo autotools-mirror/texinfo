@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'inline_in_node'} = '*document_root C5
  *before_node_section C1
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@settitle C1 l1
     *line_arg C5
      {spaces_before_argument: }

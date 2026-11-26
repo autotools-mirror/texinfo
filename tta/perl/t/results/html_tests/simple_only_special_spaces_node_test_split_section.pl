@@ -17,7 +17,7 @@ FastForward: [U1]
 NodeNext: [U1]
 NodeForward: [U1]
  *before_node_section C1
-  *preamble_before_content
+  *preamble
  *normal_command@node C1 simple_only_special_spaces_node.texi:l1 {Top}
  |identifier:{Top}
  |is_target:{1}

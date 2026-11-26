@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'def_groupings_args'} = '*document_root C1
  *before_node_section C6
-  *preamble_before_content
+  *preamble
   *normal_command@deffn C2 l1
    *def_line C1 l1
    |def_command:{deffn}

@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'macro_no_argument'} = '*document_root C1
  *before_node_section C1
-  *preamble_before_content C1
+  *preamble C1
    *normal_command@macro C1 l1
    |invalid_syntax:{1}
     *arguments_line C1

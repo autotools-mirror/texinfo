@@ -12,7 +12,7 @@ $result_tree_text{'section_node_before_part'} = '*document_root C4
  *before_node_section C2
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content
+  *preamble
  *normal_command@node C1 l2 {Top}
  |identifier:{Top}
  |is_target:{1}

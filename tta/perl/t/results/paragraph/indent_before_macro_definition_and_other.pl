@@ -12,7 +12,7 @@ $result_tree_text{'indent_before_macro_definition_and_other'} = '*document_root 
  *before_node_section C13
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@indent l2
    {ignorable_spaces_after_command:\\n}
   *normal_command@author C1 l3

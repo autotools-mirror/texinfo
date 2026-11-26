@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'image_inline_or_not'} = '*document_root C5
  *before_node_section C6
-  *preamble_before_content
+  *preamble
   *normal_command@image C1 l1
   |input_encoding_name:{utf-8}
    *brace_arg C1

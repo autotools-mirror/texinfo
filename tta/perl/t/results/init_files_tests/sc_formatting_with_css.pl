@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'sc_formatting_with_css'} = '*document_root C1
  *before_node_section C5
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@settitle C1 l1
     *line_arg C5
      {spaces_before_argument: }

@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'set_flag_command_equivalent'} = '*document_root C1
  *before_node_section C4
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@set C1 l1
    |global_command_number:{1}
    |misc_args:A{txicodequoteundirected|}

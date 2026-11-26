@@ -17,7 +17,7 @@ $result_tree_text{'sample_utf8'} = '*document_root C10
      {spaces_before_argument: }
      {rawline_text:%**start of header}
      {spaces_after_argument:\\n}
-  *preamble_before_content C12
+  *preamble C12
    *normal_command@setfilename C1 sample_utf8.texi:l3
    |text_arg:{sample_utf8.info}
     *line_arg C3

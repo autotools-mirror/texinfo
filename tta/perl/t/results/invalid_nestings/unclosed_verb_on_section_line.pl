@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'unclosed_verb_on_section_line'} = '*document_root C2
  *before_node_section C1
-  *preamble_before_content
+  *preamble
  *normal_command@section C1 l1 {in section @verb{Truc
 
 Now text.

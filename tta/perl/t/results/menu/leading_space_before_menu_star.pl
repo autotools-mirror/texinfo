@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'leading_space_before_menu_star'} = '*document_root C2
  *before_node_section C1
-  *preamble_before_content
+  *preamble
  *normal_command@node C3 l1 {a node}
  |identifier:{a-node}
  |is_target:{1}

@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'anchor_not_closed'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content
+  *preamble
   *normal_command@anchor C1 l1
    *brace_arg C3
     {normal_text:my anchor}

@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'arobase_brace_in_linemacro_call'} = '*document_root C1
  *before_node_section C4
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@linemacro C4 l1
    |formal_args:A{arg1|arg2}
    |macro_name:{simplemac}

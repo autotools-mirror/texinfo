@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'macro_before_specific_line_command_args'} = '*document_root C1
  *before_node_section C1
-  *preamble_before_content C3
+  *preamble C3
    *normal_command@macro C3 l1
    |formal_args:A{}
    |macro_name:{cpfn}

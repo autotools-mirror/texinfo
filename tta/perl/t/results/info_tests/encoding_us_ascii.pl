@@ -12,7 +12,7 @@ $result_tree_text{'encoding_us_ascii'} = '*document_root C2
  *before_node_section C2
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@documentencoding C1 l2
    |global_command_number:{1}
    |input_encoding_name:{us-ascii}

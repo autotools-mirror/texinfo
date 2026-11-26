@@ -13,7 +13,7 @@ $result_tree_text{'master_menu_fr'} = '*document_root C7
   *before_beginning C2
    {raw:\\input texinfo.tex\\n}
    {empty_line:\\n}
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@documentlanguage C1 no_master_menu_fr.texi:l3
    |global_command_number:{1}
    |text_arg:{fr}

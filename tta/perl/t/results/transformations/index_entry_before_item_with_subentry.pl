@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'index_entry_before_item_with_subentry'} = '*document_root C7
  *before_node_section C1
-  *preamble_before_content
+  *preamble
  *normal_command@node C1 l1 {Top}
  |identifier:{Top}
  |is_target:{1}

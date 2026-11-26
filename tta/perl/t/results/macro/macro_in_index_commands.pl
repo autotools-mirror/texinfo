@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'macro_in_index_commands'} = '*document_root C3
  *before_node_section C11
-  *preamble_before_content C9
+  *preamble C9
    *normal_command@macro C3 l1
    |formal_args:A{}
    |macro_name:{cp}

@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'footnotestyle_separate_html_text_no_monolithic'} = '*document_root C5
  *before_node_section C1
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@footnotestyle C1 l1
    |misc_args:A{separate}
     *line_arg C3

@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'contents_at_begin_chapter_without_node'} = '*document_root C4
  *before_node_section C1
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@contents C1 l1
    |global_command_number:{1}
     *line_arg C1

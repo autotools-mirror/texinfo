@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'two_footnotes_in_nodes_separate_no_header'} = '*document_root C5
  *before_node_section C1
-  *preamble_before_content C1
+  *preamble C1
    *normal_command@footnotestyle C1 l1
    |misc_args:A{separate}
     *line_arg C3

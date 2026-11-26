@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'double_top_in_menu'} = '*document_root C3
  *before_node_section C1
-  *preamble_before_content
+  *preamble
  *normal_command@node C5 l1 {ToP}
  |identifier:{Top}
  |is_target:{1}

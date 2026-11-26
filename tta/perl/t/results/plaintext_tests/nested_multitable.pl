@@ -12,7 +12,7 @@ $result_tree_text{'nested_multitable'} = '*document_root C1
  *before_node_section C3
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content
+  *preamble
   *normal_command@multitable C3 l2
   |max_columns:{2}
    *arguments_line C1

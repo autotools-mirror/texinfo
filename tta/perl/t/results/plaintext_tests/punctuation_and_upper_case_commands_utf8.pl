@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'punctuation_and_upper_case_commands_utf8'} = '*document_root C1
  *before_node_section C4
-  *preamble_before_content C1
+  *preamble C1
    *normal_command@documentencoding C1 l1
    |global_command_number:{1}
    |input_encoding_name:{utf-8}

@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'caption_in_example'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content
+  *preamble
   *normal_command@float C4 l1
   |float_type:{float}
   |global_command_number:{1}

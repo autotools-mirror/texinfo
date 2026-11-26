@@ -18,7 +18,7 @@ NodeNext: [U1]
 NodePrev: (dir)
 NodeForward: [U1]
  *before_node_section C1
-  *preamble_before_content
+  *preamble
  *normal_command@node C1 complex_sectioning_case.texi:l1 {Top}
  |identifier:{Top}
  |is_target:{1}

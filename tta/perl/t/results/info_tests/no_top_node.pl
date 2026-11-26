@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'no_top_node'} = '*document_root C2
  *before_node_section C1
-  *preamble_before_content
+  *preamble
  *normal_command@node C1 l1 {node Top not Top node}
  |identifier:{node-Top-not-Top-node}
  |is_target:{1}

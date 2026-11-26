@@ -20,7 +20,7 @@ NodeForward: [U1]
   *before_beginning C2
    {raw:\\input texinfo.tex\\n}
    {empty_line:\\n}
-  *preamble_before_content
+  *preamble
  *normal_command@node C1 transliterated_names_conflicts.texi:l3 {Top}
  |identifier:{Top}
  |is_target:{1}

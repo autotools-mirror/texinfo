@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'top_without_node_texi2html_no_use_nodes'} = '*document_root C4
  *before_node_section C1
-  *preamble_before_content
+  *preamble
  *normal_command@top C3 l1 {top section}
  |identifier:{top-section}
  |is_target:{1}

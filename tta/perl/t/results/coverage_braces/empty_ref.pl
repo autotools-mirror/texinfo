@@ -12,7 +12,7 @@ $result_tree_text{'empty_ref'} = '*document_root C1
  *before_node_section C3
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content
+  *preamble
   *paragraph C9
    *normal_command@ref C1 l2
     *brace_arg

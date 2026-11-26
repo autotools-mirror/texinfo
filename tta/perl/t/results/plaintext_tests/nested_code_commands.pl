@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'nested_code_commands'} = '*document_root C1
  *before_node_section C6
-  *preamble_before_content
+  *preamble
   *paragraph C16
    *normal_command@code C1 l1
     *brace_container C2

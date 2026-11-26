@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'macro_expansion_in_set_comment_leading_spaces'} = '*document_root C1
  *before_node_section C1
-  *preamble_before_content C4
+  *preamble C4
    *normal_command@macro C3 l1
    |formal_args:A{a}
    |macro_name:{mymac}

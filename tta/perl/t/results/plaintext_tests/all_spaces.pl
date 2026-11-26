@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'all_spaces'} = '*document_root C3
  *before_node_section C1
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@documentencoding C1 all_spaces.texi:l1
    |global_command_number:{1}
    |input_encoding_name:{utf-8}

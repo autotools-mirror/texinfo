@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'last_argument_with_braces'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@linemacro C4 l1
    |formal_args:A{symbol|rest}
    |macro_name:{defbuiltin}

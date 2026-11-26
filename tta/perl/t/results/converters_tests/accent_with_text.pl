@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'accent_with_text'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content
+  *preamble
   *paragraph C10
    *normal_command@u C1 l1
     *brace_container C1

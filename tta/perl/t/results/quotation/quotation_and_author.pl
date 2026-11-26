@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'quotation_and_author'} = '*document_root C1
  *before_node_section C10
-  *preamble_before_content
+  *preamble
   *paragraph C1
    {normal_text:Text before quotation\\n}
   {empty_line:\\n}

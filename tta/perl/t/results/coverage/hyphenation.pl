@@ -12,7 +12,7 @@ $result_tree_text{'hyphenation'} = '*document_root C1
  *before_node_section C2
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content C3
+  *preamble C3
    *normal_command@hyphenation C1 l2
    |global_command_number:{1}
     *brace_arg C2

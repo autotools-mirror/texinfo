@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'command_brace_no_arg_punctuation'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content
+  *preamble
   *paragraph C8
    *normal_command@TeX C1 l1
     *brace_container

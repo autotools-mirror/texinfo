@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'item_tab_outside_of_table_lists'} = '*document_root C1
  *before_node_section C6
-  *preamble_before_content
+  *preamble
   *normal_command@itemx C1 l1
    *line_arg C3
     {spaces_before_argument: }

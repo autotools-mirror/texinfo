@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'translation_in_parser_in_translation'} = '*document_root C5
  *before_node_section C1
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@documentlanguage C1 l1
    |global_command_number:{1}
    |text_arg:{fr}

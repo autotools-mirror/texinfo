@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'ifclear_in_macro'} = '*document_root C1
  *before_node_section C3
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@macro C5 l1
    |formal_args:A{arg}
    |macro_name:{note}

@@ -59,7 +59,7 @@ root_line
 before_node_section
 after_end
 before_beginning
-preamble_before_content
+preamble
 paragraph
 preformatted
 rawpreformatted

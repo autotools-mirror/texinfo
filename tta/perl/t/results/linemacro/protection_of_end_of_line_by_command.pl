@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'protection_of_end_of_line_by_command'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@linemacro C3 l1
    |formal_args:A{one}
    |macro_name:{lm}

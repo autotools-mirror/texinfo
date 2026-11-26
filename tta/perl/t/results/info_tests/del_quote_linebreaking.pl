@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'del_quote_linebreaking'} = '*document_root C1
  *before_node_section C17
-  *preamble_before_content
+  *preamble
   *paragraph C1
    {normal_text:first para\\n}
   {empty_line:\\n}

@@ -16,7 +16,7 @@ Forward: [U1]
 NodeUp: (dir)
 NodeForward: [U1]
  *before_node_section C1
-  *preamble_before_content
+  *preamble
  *normal_command@node C5 l1 {first}
  |identifier:{first}
  |is_target:{1}

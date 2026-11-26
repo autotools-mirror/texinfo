@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'empty_deftype'} = '*document_root C1
  *before_node_section C8
-  *preamble_before_content
+  *preamble
   *normal_command@deftypefun C3 l1
    *def_line C1 l1
    |def_command:{deftypefun}

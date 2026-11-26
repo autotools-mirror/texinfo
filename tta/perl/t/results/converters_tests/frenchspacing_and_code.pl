@@ -12,7 +12,7 @@ $result_tree_text{'frenchspacing_and_code'} = '*document_root C7
  *before_node_section C2
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@frenchspacing C1 l2
    |global_command_number:{1}
    |misc_args:A{on}

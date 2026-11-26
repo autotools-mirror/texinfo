@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'top_file_name_and_node_name_collision'} = '*document_root C6
  *before_node_section C1
-  *preamble_before_content
+  *preamble
  *normal_command@node C1 l1 {my node}
  |identifier:{my-node}
  |is_target:{1}

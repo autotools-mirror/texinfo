@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'punctuation_in_command_end_line'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content
+  *preamble
   *paragraph C27
    {normal_text:Text. Email }
    *normal_command@email C2 l1

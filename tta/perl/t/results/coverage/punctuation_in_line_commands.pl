@@ -12,7 +12,7 @@ $result_tree_text{'punctuation_in_line_commands'} = '*document_root C3
  *before_node_section C2
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content
+  *preamble
  *normal_command@node C1 l2 {node! After punc}
  |identifier:{node_0021-After-punc}
  |is_target:{1}

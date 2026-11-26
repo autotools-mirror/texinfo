@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'anchor_in_footnote_separate_split_node'} = '*document_root C5
  *before_node_section C1
-  *preamble_before_content C1
+  *preamble C1
    *normal_command@footnotestyle C1 l1
    |misc_args:A{separate}
     *line_arg C3

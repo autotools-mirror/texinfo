@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'command_in_heading_footing'} = '*document_root C1
  *before_node_section C4
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@everyheading C1 l1
     *line_arg C6
      {spaces_before_argument: }

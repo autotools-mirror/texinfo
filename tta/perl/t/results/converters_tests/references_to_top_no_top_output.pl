@@ -12,7 +12,7 @@ $result_tree_text{'references_to_top_no_top_output'} = '*document_root C5
  *before_node_section C2
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content C4
+  *preamble C4
    *normal_command@setfilename C1 l2
    |text_arg:{references_to_top_no_top_output.info}
     *line_arg C3

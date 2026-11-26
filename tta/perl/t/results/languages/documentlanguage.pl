@@ -13,7 +13,7 @@ $result_tree_text{'documentlanguage'} = '*document_root C6
   *before_beginning C2
    {raw:\\input texinfo @c -*-texinfo-*-\\n}
    {empty_line:\\n}
-  *preamble_before_content C21
+  *preamble C21
    *normal_command@c C1
     *line_arg C3
      {spaces_before_argument: }

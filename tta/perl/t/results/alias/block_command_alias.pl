@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'block_command_alias'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@alias C1 l1
    |misc_args:A{lang|lisp}
     *line_arg C3

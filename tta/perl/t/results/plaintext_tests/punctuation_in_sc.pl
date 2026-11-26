@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'punctuation_in_sc'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content
+  *preamble
   *paragraph C5
    {normal_text:one }
    *normal_command@sc C1 l1

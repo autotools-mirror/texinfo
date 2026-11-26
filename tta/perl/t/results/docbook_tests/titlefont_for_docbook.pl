@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'titlefont_for_docbook'} = '*document_root C1
  *before_node_section C3
-  *preamble_before_content
+  *preamble
   *normal_command@titlefont C1 l1
   |global_command_number:{1}
    *brace_container C1

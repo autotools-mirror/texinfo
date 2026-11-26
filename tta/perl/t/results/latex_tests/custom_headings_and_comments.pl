@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'custom_headings_and_comments'} = '*document_root C7
  *before_node_section C1
-  *preamble_before_content C3
+  *preamble C3
    *normal_command@evenheading C1 l1
     *line_arg C17
      {spaces_before_argument: }

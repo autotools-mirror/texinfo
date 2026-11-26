@@ -12,7 +12,7 @@ $result_tree_text{'anchor_before_top'} = '*document_root C5
  *before_node_section C5
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content
+  *preamble
   *normal_command@anchor C1 l2
   |identifier:{a-before-Top}
   |is_target:{1}

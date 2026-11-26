@@ -13,7 +13,7 @@ $result_tree_text{'punctuation_sc_accents_disable_encoding'} = '*document_root C
   *before_beginning C2
    {raw:\\input texinfo\\n}
    {empty_line:\\n}
-  *preamble_before_content
+  *preamble
  *normal_command@node C1 punctuation_small_case_accents_utf8.texi:l3 {top}
  |identifier:{Top}
  |is_target:{1}

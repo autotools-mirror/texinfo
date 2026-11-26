@@ -12,7 +12,7 @@ $result_tree_text{'punctuation_commands'} = '*document_root C1
  *before_node_section C15
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content
+  *preamble
   *paragraph C13
    {normal_text:Dot}
    *normal_command@.

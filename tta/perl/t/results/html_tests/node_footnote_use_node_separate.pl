@@ -13,7 +13,7 @@ $result_tree_text{'node_footnote_use_node_separate'} = '*document_root C8
   *before_beginning C2
    {raw:\\input texinfo @c -*-texinfo-*-\\n}
    {empty_line:\\n}
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@c C1
     *line_arg C3
      {spaces_before_argument: }

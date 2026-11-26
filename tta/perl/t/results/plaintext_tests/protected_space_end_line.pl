@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'protected_space_end_line'} = '*document_root C1
  *before_node_section C8
-  *preamble_before_content
+  *preamble
   *paragraph C1
    {normal_text:First para\\n}
   {empty_line:\\n}

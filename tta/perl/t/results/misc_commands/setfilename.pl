@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'setfilename'} = '*document_root C1
  *before_node_section C1
-  *preamble_before_content C5
+  *preamble C5
    *normal_command@setfilename C1 l1
    |text_arg:{file_comment}
     *line_arg C3

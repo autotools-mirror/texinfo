@@ -12,7 +12,7 @@ $result_tree_text{'flushleft_flushright'} = '*document_root C1
  *before_node_section C5
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content
+  *preamble
   *normal_command@flushleft C5 l2
    *arguments_line C1
     *block_line_arg C1

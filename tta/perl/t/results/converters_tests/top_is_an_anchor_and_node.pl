@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'top_is_an_anchor_and_node'} = '*document_root C2
  *before_node_section C4
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@setfilename C1 l1
    |text_arg:{top_is_an_anchor_and_node.info}
     *line_arg C3

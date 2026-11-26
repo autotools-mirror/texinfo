@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'paragraphindent_not_in_preamble'} = '*document_root C5
  *before_node_section C1
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@copying C5 l1
     *arguments_line C1
      *block_line_arg C1

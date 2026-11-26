@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'comments_on_misc_command_line'} = '*document_root C1
  *before_node_section C9
-  *preamble_before_content C4
+  *preamble C4
    *normal_command@setfilename C1 l1
    |text_arg:{comments_on_misc_command_line.info}
     *line_arg C4

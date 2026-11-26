@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'on_block_command_line'} = '*document_root C1
  *before_node_section C4
-  *preamble_before_content
+  *preamble
   *normal_command@multitable C3 l1
   |max_columns:{1}
    *arguments_line C1

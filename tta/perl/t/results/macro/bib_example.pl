@@ -12,7 +12,7 @@ $result_tree_text{'bib_example'} = '*document_root C9
  *before_node_section C2
   *before_beginning C1
    {raw:\\input texinfo   @c -*-texinfo-*-\\n}
-  *preamble_before_content C218
+  *preamble C218
    *normal_command@c C1
     *line_arg C3
      {spaces_before_argument: }

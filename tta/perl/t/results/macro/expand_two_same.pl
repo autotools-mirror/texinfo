@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'expand_two_same'} = '*document_root C1
  *before_node_section C6
-  *preamble_before_content C1
+  *preamble C1
    *normal_command@macro C4 l1
    |formal_args:A{arg}
    |macro_name:{macrotwo}

@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'def_syn_indices'} = '*document_root C5
  *before_node_section C1
-  *preamble_before_content C2
+  *preamble C2
    *normal_command@syncodeindex C1 l1
    |misc_args:A{cp|fn}
     *line_arg C3

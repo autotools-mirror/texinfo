@@ -12,7 +12,7 @@ $result_tree_text{'sc_in_menu'} = '*document_root C3
  *before_node_section C2
   *before_beginning C1
    {empty_line:\\n}
-  *preamble_before_content
+  *preamble
  *normal_command@node C4 l2 {first}
  |identifier:{first}
  |is_target:{1}

@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'at_commands_in_refs_latin1'} = '*document_root C55
  *before_node_section C1
-  *preamble_before_content C3
+  *preamble C3
    *normal_command@setfilename C1 l1
    |text_arg:{at_commands_in_refs_latin1.info}
     *line_arg C3

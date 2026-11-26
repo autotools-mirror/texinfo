@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'transparent_text'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_content
+  *preamble
   *paragraph C5
    {normal_text:AA}
    *normal_command@footnote C1 l1
