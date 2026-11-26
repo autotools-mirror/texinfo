@@ -1,3 +1,10 @@
+2026-11-26  Patrice Dumas  <pertusus@free.fr>
+
+	* tta/perl/Texinfo/Convert/LaTeX.pm (output, _convert): do not modify
+	the tree to output something at the end if we end up with Top node
+	ignored in the end of the document.  Instead output at the end of the
+	conversion.
+
 2026-11-25  Patrice Dumas  <pertusus@free.fr>
 
 	Update Parser Pod

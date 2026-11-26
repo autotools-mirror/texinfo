@@ -1203,72 +1203,29 @@ sub output($$) {
     }
   }
 
-  my $modified_root;
-
-  # determine if there is a Top node at the end of the document
-  my $in_top_node = undef;
-  foreach my $element_content (@{$root->{'contents'}}) {
-    my $node_element;
-    if (exists($element_content->{'cmdname'})) {
-      my $cmdname = $element_content->{'cmdname'};
-      if ($cmdname eq 'node') {
-        $node_element = $element_content;
-      } elsif ($cmdname eq 'part' and exists($self->{'document'})) {
-        my $sections_list = $self->{'document'}->sections_list();
-        my $part_relations
-    = $sections_list->[$element_content->{'extra'}->{'section_number'} -1];
-        if (exists($part_relations->{'part_following_node'})) {
-          $node_element = $part_relations->{'part_following_node'}->{'element'};
-        }
-      }
-      if (defined($node_element) or $cmdname eq 'part') {
-        if (defined($node_element) and exists($node_element->{'extra'})
-            and exists($node_element->{'extra'}->{'identifier'})
-            and $node_element->{'extra'}->{'identifier'} eq 'Top') {
-          $in_top_node = 1;
-        } else {
-          if ($in_top_node) {
-            $in_top_node = 0;
-            last;
-          }
-        }
-      }
-    }
-  }
-  # nothing after Top node at the end, mark that Top node is ignored
-  # in a container that can be used to mark that content should not
-  # be ignored anymore.
-  if ($in_top_node) {
-    $modified_root
-      = Texinfo::TreeElement::new({'contents' => [ @{$root->{'contents'}} ],
-                                   'type' => $root->{'type'}})
-      if (not defined($modified_root));
-    push @{$modified_root->{'contents'}},
-        # FIXME not an existing type
-        Texinfo::TreeElement::new({'type' => 'ignored_top_node_paragraph',
-         'contents' => [
-          Texinfo::TreeElement::new({'type' => 'paragraph', 'contents' => [
-           Texinfo::TreeElement::new({'text' => "\n(`Top' node ignored)\n",
-                                      'type' => 'normal_text'})]})]});
-  }
-
-  if (not defined($modified_root)) {
-    $modified_root = $root;
-  }
-
-
-  _prepare_conversion($self, $modified_root);
+  _prepare_conversion($self, $root);
 
   $self->{'formatting_context'} = [];
 
   my $result = '';
   $result .= _latex_begin_output($self);
   _push_new_context($self, 'document');
-  $result .= _convert($self, $modified_root);
+  $result .= _convert($self, $root);
+
+  # nothing after Top node at the end, output a text directly in the document to
+  # mark that Top node is ignored
+  if ($self->{'formatting_context'}->[-1]->{'in_skipped_node_top'}) {
+    $self->{'formatting_context'}->[-1]->{'in_skipped_node_top'} = 0;
+    $result .= _convert($self, Texinfo::TreeElement::new({'type' => 'paragraph', 'contents' => [
+           Texinfo::TreeElement::new({'text' => "\n(`Top' node ignored)\n",
+                                      'type' => 'normal_text'})]}));
+  }
+
   _pop_context($self);
   if (scalar(@{$self->{'formatting_context'}}) != 0) {
     warn "BUG: after LaTeX output formatting context not empty\n";
   }
+
   $result .= _latex_footer($self);
 
   my $output = '';
@@ -3237,7 +3194,6 @@ sub _convert($$) {
          and not (exists($node_element->{'extra'})
                   and exists($node_element->{'extra'}->{'identifier'})
                   and $node_element->{'extra'}->{'identifier'} eq 'Top'))
-         or $type eq 'ignored_top_node_paragraph'
         or (defined($cmdname) and $cmdname eq 'part')) {
       $self->{'formatting_context'}->[-1]->{'in_skipped_node_top'} = 0;
     } elsif (not ((defined($cmdname)
