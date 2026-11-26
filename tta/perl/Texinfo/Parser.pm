@@ -212,11 +212,11 @@ X<Texinfo tree elements>
 
 A Texinfo tree element (called element because node is overloaded in
 the Texinfo world) is an hash reference.  There are three main categories
-of tree element.  Tree elements associated with an @-command have a
+of tree element.  Tree elements associated with an @-command, which have a
 C<cmdname> key holding the @-command name.  Tree elements corresponding
-to text fragments have a C<text> key holding the corresponding text.
-Finally, the last category is other elements.  Every tree element
-have a C<type> key.
+to text fragments, which have a C<text> key holding the corresponding text.
+The other elements, called containers are in the last category.  Every tree
+element have a C<type> key.
 
 The C<contents> key holds an array reference for the children of @-command
 tree elements and containers.  In particular for arguments of an @-command,
@@ -226,7 +226,8 @@ within a container, or within a C<@node> or sectioning @-command.  Text
 fragments do not have children.
 
 The C<extra> key is associated to a hash reference and hold information
-gathered during the parsing.
+gathered during the parsing for @-command tree elements and container
+elements.
 
 =head2 Texinfo tree structure
 
@@ -587,6 +588,15 @@ Text appearing on a C<@macro>, C<@linemacro> or C<@rmacro> line after
 the @-command, including the leading space and the newline.  In the
 I<arguments_line> container @-command.
 
+=item menu_entry_leading_text
+
+Contains the star and following spaces at the beginning of a menu entry.
+
+=item menu_entry_separator
+
+Contains the text between a menu entry node and a menu entry name, and text
+between a menu entry node or a menu entry name and a menu entry description, 
+
 =item normal_text
 
 The default type for text elements.  Used when a more specific type is not
@@ -600,12 +610,12 @@ this space should be ignorable (like C<@caption> or C<@sortas>).
 =item spaces_after_argument text
 
 Spaces after @-command arguments before a comma, a closing brace or at end of
-line and spaces appearing before an @-command that are ignorable (spaces
+line.  Spaces appearing before an @-command that are ignorable (spaces
 appearing before a C<@subentry> on an index command line).
 
 =item spaces_after_cmd_before_arg text
 
-Spaces following an @-command before that argument (for accent commands)
+Spaces following an @-command before the argument (for accent commands)
 or before the opening brace.
 
 =item spaces_before_argument text
@@ -740,11 +750,12 @@ with items (C<@table>, C<@multitable>, C<@enumerate>...).
 Those containers occur within the C<contents> array of @-commands taking an
 argument.  I<brace_container> is used for the argument to commands
 taking arguments surrounded by braces when the whole text in the braces
-is in the argument.  I<brace_arg> is used for the arguments to commands taking
+is in the argument (C<@code>).  I<brace_arg> is used for the arguments to commands taking
 arguments surrounded by braces when the leading and, in most cases, trailing
 spaces are not part of the argument, and for arguments in braces separated by
-commas.  I<brace_command_context> is used for @-commands with braces that start
-a new context (C<@footnote>, C<@caption>).
+commas (C<@image>, C<@url>, C<@ref>).  I<brace_command_context> is used for
+@-commands with braces which can contain paragraphs and block commands,
+C<@footnote> and C<@caption> (these commands start a new formatting context).
 
 I<line_arg> is used for commands that take the texinfo code on the rest of the
 line as their argument, such as C<@settitle>, or for C<@node>, C<@section>
@@ -860,11 +871,7 @@ will be in a I<menu_comment>.
 
 =item menu_entry
 
-=item menu_entry_leading_text
-
 =item menu_entry_name
-
-=item menu_entry_separator
 
 =item menu_entry_node
 
@@ -874,14 +881,13 @@ A I<menu_entry> holds a full menu entry, like
 
   * node::    description.
 
-The different elements of the menu entry are in the
-I<menu_entry> C<contents> array reference.
+The different elements of the menu entry are in the I<menu_entry> C<contents>.
 
-I<menu_entry_leading_text> holds the star and following spaces.
-I<menu_entry_name> is the menu entry name (if present), I<menu_entry_node>
+I<menu_entry_leading_text> text element contains the star and following spaces.
+I<menu_entry_name> contains the menu entry name (if present), I<menu_entry_node>
 corresponds to the node in the menu entry, I<menu_entry_separator> holds
 the text after the node and before the description, in most cases
-C<::   >.  Lastly, I<menu_entry_description> is for the description.
+C<::   >.  Lastly, I<menu_entry_description> contains the menu entry description.
 
 =item multitable_head
 

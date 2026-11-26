@@ -182,11 +182,11 @@ described in detail in @ref{Texinfo@asis{::}Report DESCRIPTION}.
 
 A Texinfo tree element (called element because node is overloaded in
 the Texinfo world) is an hash reference.  There are three main categories
-of tree element.  Tree elements associated with an @@-command have a
+of tree element.  Tree elements associated with an @@-command, which have a
 @code{cmdname} key holding the @@-command name.  Tree elements corresponding
-to text fragments have a @code{text} key holding the corresponding text.
-Finally, the last category is other elements.  Every tree element
-have a @code{type} key.
+to text fragments, which have a @code{text} key holding the corresponding text.
+The other elements, called containers are in the last category.  Every tree
+element have a @code{type} key.
 
 The @code{contents} key holds an array reference for the children of @@-command
 tree elements and containers.  In particular for arguments of an @@-command,
@@ -196,7 +196,8 @@ within a container, or within a @code{@@node} or sectioning @@-command.  Text
 fragments do not have children.
 
 The @code{extra} key is associated to a hash reference and hold information
-gathered during the parsing.
+gathered during the parsing for @@-command tree elements and container
+elements.
 
 @node Texinfo@asis{::}Parser Texinfo tree structure
 @subsection Texinfo tree structure
@@ -602,6 +603,17 @@ Text appearing on a @code{@@macro}, @code{@@linemacro} or @code{@@rmacro} line a
 the @@-command, including the leading space and the newline.  In the
 @emph{arguments_line} container @@-command.
 
+@item menu_entry_leading_text
+@anchor{Texinfo@asis{::}Parser menu_entry_leading_text}
+
+Contains the star and following spaces at the beginning of a menu entry.
+
+@item menu_entry_separator
+@anchor{Texinfo@asis{::}Parser menu_entry_separator}
+
+Contains the text between a menu entry node and a menu entry name, and text
+between a menu entry node or a menu entry name and a menu entry description, 
+
 @item normal_text
 @anchor{Texinfo@asis{::}Parser normal_text}
 
@@ -618,13 +630,13 @@ this space should be ignorable (like @code{@@caption} or @code{@@sortas}).
 @anchor{Texinfo@asis{::}Parser spaces_after_argument text}
 
 Spaces after @@-command arguments before a comma, a closing brace or at end of
-line and spaces appearing before an @@-command that are ignorable (spaces
+line.  Spaces appearing before an @@-command that are ignorable (spaces
 appearing before a @code{@@subentry} on an index command line).
 
 @item spaces_after_cmd_before_arg text
 @anchor{Texinfo@asis{::}Parser spaces_after_cmd_before_arg text}
 
-Spaces following an @@-command before that argument (for accent commands)
+Spaces following an @@-command before the argument (for accent commands)
 or before the opening brace.
 
 @item spaces_before_argument text
@@ -781,11 +793,12 @@ with items (@code{@@table}, @code{@@multitable}, @code{@@enumerate}...).
 Those containers occur within the @code{contents} array of @@-commands taking an
 argument.  @emph{brace_container} is used for the argument to commands
 taking arguments surrounded by braces when the whole text in the braces
-is in the argument.  @emph{brace_arg} is used for the arguments to commands taking
+is in the argument (@code{@@code}).  @emph{brace_arg} is used for the arguments to commands taking
 arguments surrounded by braces when the leading and, in most cases, trailing
 spaces are not part of the argument, and for arguments in braces separated by
-commas.  @emph{brace_command_context} is used for @@-commands with braces that start
-a new context (@code{@@footnote}, @code{@@caption}).
+commas (@code{@@image}, @code{@@url}, @code{@@ref}).  @emph{brace_command_context} is used for
+@@-commands with braces which can contain paragraphs and block commands,
+@code{@@footnote} and @code{@@caption} (these commands start a new formatting context).
 
 @emph{line_arg} is used for commands that take the texinfo code on the rest of the
 line as their argument, such as @code{@@settitle}, or for @code{@@node}, @code{@@section}
@@ -928,14 +941,8 @@ will be in a @emph{menu_comment}.
 @item menu_entry
 @anchor{Texinfo@asis{::}Parser menu_entry}
 
-@item menu_entry_leading_text
-@anchor{Texinfo@asis{::}Parser menu_entry_leading_text}
-
 @item menu_entry_name
 @anchor{Texinfo@asis{::}Parser menu_entry_name}
-
-@item menu_entry_separator
-@anchor{Texinfo@asis{::}Parser menu_entry_separator}
 
 @item menu_entry_node
 @anchor{Texinfo@asis{::}Parser menu_entry_node}
@@ -949,14 +956,13 @@ A @emph{menu_entry} holds a full menu entry, like
   * node::    description.
 @end verbatim
 
-The different elements of the menu entry are in the
-@emph{menu_entry} @code{contents} array reference.
+The different elements of the menu entry are in the @emph{menu_entry} @code{contents}.
 
-@emph{menu_entry_leading_text} holds the star and following spaces.
-@emph{menu_entry_name} is the menu entry name (if present), @emph{menu_entry_node}
+@emph{menu_entry_leading_text} text element contains the star and following spaces.
+@emph{menu_entry_name} contains the menu entry name (if present), @emph{menu_entry_node}
 corresponds to the node in the menu entry, @emph{menu_entry_separator} holds
 the text after the node and before the description, in most cases
-@code{::   }.  Lastly, @emph{menu_entry_description} is for the description.
+@code{::   }.  Lastly, @emph{menu_entry_description} contains the menu entry description.
 
 @item multitable_head
 @anchor{Texinfo@asis{::}Parser multitable_head}
