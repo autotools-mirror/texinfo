@@ -215,9 +215,8 @@ the Texinfo world) is an hash reference.  There are three main categories
 of tree element.  Tree elements associated with an @-command have a
 C<cmdname> key holding the @-command name.  Tree elements corresponding
 to text fragments have a C<text> key holding the corresponding text.
-Finally, the last category is other elements, which in most cases have
-a C<type> key holding their name.  Text fragments and @-command elements
-may also have an associated type when such information is needed.
+Finally, the last category is other elements.  Every tree element
+have a C<type> key.
 
 The C<contents> key holds an array reference for the children of @-command
 tree elements and containers.  In particular for arguments of an @-command,
@@ -451,15 +450,15 @@ The text fragment of text elements.
 
 =item type
 
-The type of element considered, in general a container.  Frequent
-types encountered are I<paragraph> for a paragraph container,
-I<brace_container> for the container holding a brace @-commands
-content, I<line_arg> and I<block_line_arg> contain the arguments
-appearing on the line of @-commands.  Text fragments may have a type to
-give an information of the kind of text fragment, for example
-I<spaces_before_paragraph> is associated to spaces appearing
-before a paragraph beginning.  Most @-commands elements do not have
-a type associated.
+The type of element considered.  For built-in Texinfo @-commands
+the type is I<normal_command>.  Otherwise, for elements that are not text
+elements, the type is in general a container.  Frequent types encountered are
+I<paragraph> for a paragraph container, I<brace_container> for the container
+holding a brace @-commands content, I<line_arg> and I<block_line_arg> contain
+the arguments appearing on the line of @-commands.  Text fragments may have a
+type to give an information of the kind of text fragment, for example
+I<spaces_before_paragraph> is associated to spaces appearing before a paragraph
+beginning.
 
 =item contents
 
@@ -514,10 +513,10 @@ C<@defun>).
 
 =head3 Types for command and user-defined macro call elements
 
-Some types can be associated with @-commands (in addition to C<cmdname>),
-although usually there will be no type at all.  The following are the possible
-values of C<type> for tree elements for @-commands and user-defined macro call
-elements.
+Builtin @-commands have the I<normal_type> set.
+Other types can be associated with @-commands, when the @-command name
+can be user-defined.  The following are the possible values of C<type> for tree
+elements for @-commands and user-defined macro call elements.
 
 =over
 
@@ -556,12 +555,15 @@ or rmacro.  It should not appear directly in the tree as the user defined
 call is expanded.  The I<macro_call_line> or I<rmacro_call_line> elements
 are used when there are no braces and the whole line is the argument.
 
+=item normal_command
+
+Type of the remaining @-commands.
+
 =back
 
 =head3 Types for text elements
 
-The text elements may have the following types (or may have no type
-at all):
+The text elements may have the following types:
 
 =over
 
@@ -610,11 +612,10 @@ Text appearing on a C<@macro>, C<@linemacro> or C<@rmacro> line after
 the @-command, including the leading space and the newline.  In the
 I<arguments_line> container @-command.
 
-=item other_text
+=item normal_text
 
-Text elements that are not in the Texinfo tree elements.  It could be part
-of informative out of tree elements, added for separators or used for
-other specific purposes.
+The default type for text elements.  Used when a more specific type is not
+needed.
 
 =item spaces_after_close_brace
 
@@ -733,6 +734,9 @@ text (C<@footnote>, C<@itemize> C<@item>, C<@quotation> for example).  The
 C<preformatted> container holds the content appearing in @-commands like
 C<@example> and the C<rawpreformatted> container holds the content appearing in
 format commands such as C<@html>.  The other containers are more specific.
+A generic container, C<generic_container>, that does not appear directly in
+the Texinfo code parse tree is available for tree transformations or to hold,
+often temporarily, other elements.
 
 The types of container element are the following:
 
@@ -857,6 +861,13 @@ I<untranslated_def_line_arg> is special, as, in general, it should not be
 recursed into, as the text within is untranslated, but the untranslated text
 should be gathered when converting the I<untranslated_def_line_arg> type
 container.
+
+=item generic_container
+
+A container that does not appear directly when Texinfo code is parsed.
+It is typically used to hold elements temporarily before a conversion,
+or to replace specific containers after transformations that replace a command
+by its argument, for instance.
 
 =item menu_comment
 
