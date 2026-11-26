@@ -4199,7 +4199,6 @@ convert_to_plaintext_internal (CONVERTER *self, const ELEMENT *element)
   /* %ignored_types in Plaintext.pm */
   if (type == ET_postamble_after_end
       || type == ET_preamble_before_beginning
-      || type == ET_preamble_before_setfilename
       || type == ET_arguments_line)
     return;
 

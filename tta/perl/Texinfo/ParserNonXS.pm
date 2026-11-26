@@ -1003,33 +1003,45 @@ sub parse_file($$) {
 sub _rearrange_tree_beginning($$) {
   my ($document, $before_node_section) = @_;
 
-  # Put everything before @setfilename in a special type.  This allows to
-  # ignore everything before @setfilename.
+  # Put everything before @setfilename and after preamble_before_beginning
+  # in preamble_before_beginning, adding preamble_before_beginning if needed
   my $setfilename = $document->global_commands_information()->{'setfilename'};
   if (defined($setfilename) and exists($before_node_section->{'contents'})) {
-    # setfilename index, also size of the new element (if found)
+    # setfilename index
     my $i = 0;
+    my $i_beginning = 0;
     for (; $i < scalar(@{$before_node_section->{'contents'}}); $i++) {
       my $content = $before_node_section->{'contents'}->[$i];
-      if (exists($content->{'cmdname'})
+      if ($content->{'type'} eq 'preamble_before_beginning') {
+        $i_beginning = $i + 1;
+      } elsif (exists($content->{'cmdname'})
           and $content->{'cmdname'} eq 'setfilename') {
         last;
       }
     }
     # setfilename itself remains in the same element.
-    if ($i > 0 and $i < scalar(@{$before_node_section->{'contents'}})) {
+    if ($i > $i_beginning
+        and $i < scalar(@{$before_node_section->{'contents'}})) {
+      my $preamble_before_beginning;
       my @moved = splice(@{$before_node_section->{'contents'}},
-                               0, $i);
-      my $before_setfilename
-        = Texinfo::TreeElement::new({'type' => 'preamble_before_setfilename',
-                                    'parent' => $before_node_section,
-                                    'contents' => \@moved});
+                         $i_beginning, $i - $i_beginning);
+      my $before_setfilename;
+      if ($i_beginning == 0) {
+        $preamble_before_beginning
+          = Texinfo::TreeElement::new({'type' => 'preamble_before_beginning',
+                                 'parent' => $before_node_section,});
+        unshift (@{$before_node_section->{'contents'}},
+                    $preamble_before_beginning);
+      } else {
+        $preamble_before_beginning
+          = $before_node_section->{'contents'}->[$i_beginning -1];
+      }
+      push @{$preamble_before_beginning->{'contents'}}, @moved;
+
       foreach my $content (@moved) {
-        $content->{'parent'} = $before_setfilename
+        $content->{'parent'} = $preamble_before_beginning
           if (exists($content->{'parent'}));
       }
-
-      unshift (@{$before_node_section->{'contents'}}, $before_setfilename);
     }
   }
 
@@ -1044,8 +1056,7 @@ sub _rearrange_tree_beginning($$) {
     my $i = 0;
     for (; $i < scalar(@{$before_node_section->{'contents'}}); $i++) {
       my $content = $before_node_section->{'contents'}->[$i];
-      if ($content->{'type'} eq 'preamble_before_beginning'
-          or $content->{'type'} eq 'preamble_before_setfilename') {
+      if ($content->{'type'} eq 'preamble_before_beginning') {
         $first_idx = $i +1;
       } elsif ($content->{'type'} eq 'paragraph'
                or (exists($content->{'cmdname'}) and

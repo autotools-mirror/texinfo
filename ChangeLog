@@ -1,5 +1,19 @@
 2026-11-26  Patrice Dumas  <pertusus@free.fr>
 
+	merge preamble_before_setfilename into preamble_before_beginning
+
+	* tta/C/parsetexi/parser.c (rearrange_tree_beginning),
+	tta/perl/Texinfo/ParserNonXS.pm (rearrange_tree_beginning): do not
+	generate preamble_before_setfilename, instead put everything before
+	@setfilename and after preamble_before_beginning in
+	preamble_before_beginning, adding preamble_before_beginning if needed.
+
+	remove preamble_before_setfilename.
+
+	* tta/perl/Texinfo/Parser.pm: update Pod.
+
+2026-11-26  Patrice Dumas  <pertusus@free.fr>
+
 	readd information of possible type of text in comment
 
 2026-11-26  Patrice Dumas  <pertusus@free.fr>

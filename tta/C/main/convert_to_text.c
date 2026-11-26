@@ -627,7 +627,6 @@ convert_to_text_internal (const ELEMENT *element, TEXT_OPTIONS *text_options,
       || data_cmd == CM_seealso
       || element->type == ET_postamble_after_end
       || element->type == ET_preamble_before_beginning
-      || element->type == ET_preamble_before_setfilename
       || element->type == ET_arguments_line)
     return;
 

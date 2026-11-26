@@ -10,10 +10,9 @@ use Encode;
 
 $result_tree_text{'things_before_setfilename_no_element'} = '*document_root C1
  *before_node_section C6
-  *preamble_before_setfilename C26
-   *preamble_before_beginning C2
-    {text_before_beginning:\\input texinfo\\n}
-    {text_before_beginning:\\n}
+  *preamble_before_beginning C27
+   {text_before_beginning:\\input texinfo\\n}
+   {text_before_beginning:\\n}
    *normal_command@anchor C1 things_before_setfilename_no_element.texi:l3
    |identifier:{An-anchor}
    |is_target:{1}
@@ -347,7 +346,7 @@ $result_converted_errors{'html'}->{'things_before_setfilename_no_element'} = '* 
 
 $result_converted{'xml'}->{'things_before_setfilename_no_element'} = '<preamblebeforebeginning>\\input texinfo
 
-</preamblebeforebeginning><anchor identifier="An-anchor">An anchor</anchor>
+<anchor identifier="An-anchor">An anchor</anchor>
 
 <para>Ref to the anchor:
 <ref label="An-anchor"><xrefnodename>An anchor</xrefnodename></ref>
@@ -388,7 +387,7 @@ $result_converted{'xml'}->{'things_before_setfilename_no_element'} = '<preambleb
 
 <listoffloats type="Text"> Text</listoffloats>
 
-<setfilename file="things_before_setfilename_no_element.info"> things_before_setfilename_no_element.info </setfilename>
+</preamblebeforebeginning><setfilename file="things_before_setfilename_no_element.info"> things_before_setfilename_no_element.info </setfilename>
 
 <para>Ref to anchor
 <ref label="An-anchor"><xrefnodename>An anchor</xrefnodename></ref>

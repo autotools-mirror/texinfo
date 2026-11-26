@@ -406,39 +406,54 @@ rearrange_tree_beginning (ELEMENT *before_node_section,
   ELEMENT *informational_preamble;
   size_t first_idx;
 
-  /* Put everything before @setfilename in a special type.  This allows to
-     ignore everything before @setfilename. */
+ /* Put everything before @setfilename and after preamble_before_beginning
+    in preamble_before_beginning, adding preamble_before_beginning if needed */
   if (document->global_commands.setfilename
       && before_node_section->e.c->contents.number > 0)
     {
-      /* setfilename index, also size of the new element (if found) */
+      /* setfilename index */
       size_t i = 0;
+      size_t i_beginning = 0;
       for (; i < before_node_section->e.c->contents.number; i++)
         {
           const ELEMENT *content = before_node_section->e.c->contents.list[i];
-          if (!(type_data[content->type].flags & TF_text)
-              && content->e.c->cmd == CM_setfilename)
+          if (content->type == ET_preamble_before_beginning)
+            i_beginning = i + 1;
+          else if (!(type_data[content->type].flags & TF_text)
+                   && content->e.c->cmd == CM_setfilename)
             break;
         }
       /* setfilename itself remains in the same element. */
-      if (i > 0 && i < before_node_section->e.c->contents.number)
+      if (i > i_beginning
+          && i < before_node_section->e.c->contents.number)
         {
            size_t j;
-           ELEMENT *before_setfilename
-             = new_element (ET_preamble_before_setfilename);
+           ELEMENT *preamble_before_beginning;
 
-           insert_slice_into_contents (before_setfilename, 0,
-                                       before_node_section, 0, i);
-           for (j = 0; j < i; j++)
+           if (i_beginning == 0)
+             preamble_before_beginning
+               = new_element (ET_preamble_before_beginning);
+           else
+             preamble_before_beginning
+              = before_node_section->e.c->contents.list[i_beginning -1];
+
+           insert_slice_into_contents (preamble_before_beginning,
+                       preamble_before_beginning->e.c->contents.number,
+                                       before_node_section,
+                                       i_beginning, i);
+           for (j = i_beginning; j < i; j++)
              {
-               ELEMENT *content = before_setfilename->e.c->contents.list[j];
+               ELEMENT *content = before_node_section->e.c->contents.list[j];
                if (!(type_data[content->type].flags & TF_text)
                    && content->e.c->parent)
-                 content->e.c->parent = before_setfilename;
+                 content->e.c->parent = preamble_before_beginning;
              }
-           remove_slice_from_contents (before_node_section, 0, i);
+           remove_slice_from_contents (before_node_section,
+                                       i_beginning, i);
 
-           insert_into_contents (before_node_section, before_setfilename, 0);
+           if (i_beginning == 0)
+             insert_into_contents (before_node_section,
+                                   preamble_before_beginning, 0);
         }
     }
 
@@ -453,8 +468,7 @@ rearrange_tree_beginning (ELEMENT *before_node_section,
       for (; i < before_node_section->e.c->contents.number; i++)
         {
           const ELEMENT *content = before_node_section->e.c->contents.list[i];
-          if (content->type == ET_preamble_before_beginning
-              || content->type == ET_preamble_before_setfilename)
+          if (content->type == ET_preamble_before_beginning)
             first_idx = i+1;
           else if (content->type == ET_paragraph
                    || (!(type_data[content->type].flags & TF_text)

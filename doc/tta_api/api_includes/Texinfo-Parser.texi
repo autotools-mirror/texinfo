@@ -207,56 +207,30 @@ gathered during the parsing.
 A full Texinfo tree is rooted at a @emph{document_root} type element.
 @emph{document_root} first element in @code{contents} should be a
 @emph{before_node_section} container for content appearing before the first node or
-sectioning command.  Nodes and sections @@-commands elements follow.  The node
+sectioning command.  @emph{before_node_section} first content is
+@emph{preamble_before_beginning}.  If there is a @code{@@setfilename},
+@emph{preamble_before_beginning} holds everything before @code{@@setfilename} (It may
+contains paragraphs and block commands elements before @code{@@setfilename}, if any,
+although it is not recommended to have such content). If there is no
+@code{@@setfilename}, it contains the @code{\input texinfo.tex} line and following blank
+lines.
+
+The second container in @emph{before_node_section} is @emph{preamble_before_content}.
+It contains everything appearing before the first formatted content such as
+empty lines text elements,
+elements corresponding to line commands such as @code{@@documentlanguage} or
+@code{@@frenchspacing}, block commands such as @code{@@copying} that are not immediately
+output but also raw output block commands such as @code{@@html}.  This container
+corresponding to the @emph{preamble} in the Texinfo documentation.  The paragraphs
+and other contents follow up in @emph{before_node_section} @code{contents} until the
+first node or section.
+
+Nodes and sections @@-commands elements follow.  The node
 or sectioning command elements @code{contents} hold all the elements corresponding
 to Texinfo code before the next node or sectioning command element or @code{@@bye}.
 If present in the Texinfo document, the @code{@@bye} element is next.  If there is
 content after @code{@@bye}, it is last in the @emph{postamble_after_end} container
 element.
-
-The content of @emph{before_node_section} depend on the presence of
-@code{@@setfilename} in the document before the first node or sectioning element:
-
-@table @asis
-@item with @code{@@setfilename}
-@anchor{Texinfo@asis{::}Parser with @code{@@setfilename}}
-
-The first container in @emph{before_node_section} is
-@emph{preamble_before_setfilename}.  The first element in
-@emph{preamble_before_setfilename} is @emph{preamble_before_beginning}, which
-holds everything appearing before the first content, including
-the \input texinfo.tex line and following blank lines.  It may be
-followed by paragraphs and block commands elements, if any, although it is
-not recommended to have such content before @code{@@setfilename}.
-
-The second container in @emph{before_node_section} is
-@emph{preamble_before_content}, which begins with @code{@@setfilename}
-and contains everything appearing before the first formatted content,
-corresponding to the @emph{preamble} in the Texinfo documentation.
-
-The paragraphs and other contents follow up in @emph{before_node_section}
-@code{contents} until the first node or section.
-
-@item without @code{@@setfilename}
-@anchor{Texinfo@asis{::}Parser without @code{@@setfilename}}
-
-The first container in @emph{before_node_section} is @emph{preamble_before_beginning},
-which holds everything appearing before the first content, including
-the \input texinfo.tex line and following blank lines.
-
-It is followed by @emph{preamble_before_content}, which contains everything
-appearing before the first formatted content, corresponding to the @emph{preamble}
-in the Texinfo documentation.
-
-The paragraphs and other contents follow up in @emph{before_node_section}
-@code{contents} until the first node or section.
-
-@end table
-
-@emph{preamble_before_content} contains empty lines text elements,
-elements corresponding to line commands such as @code{@@documentlanguage} or
-@code{@@frenchspacing}, block commands such as @code{@@copying} that are not immediately
-output but also raw output block commands such as @code{@@html}.
 
 The first element of a node or sectioning command @code{contents}
 is an @emph{arguments_line} container holding the command arguments
@@ -564,7 +538,7 @@ are used when there are no braces and the whole line is the argument.
 @item normal_command
 @anchor{Texinfo@asis{::}Parser normal_command}
 
-Type of the remaining @@-commands.
+Type of the remaining @@-command tree elements.
 
 @end table
 
@@ -747,11 +721,8 @@ This container holds everything appearing after @@bye.
 
 This container holds everything appearing before the first content, including
 the @code{\input texinfo.tex} line and following blank lines.
-
-@item preamble_before_setfilename
-@anchor{Texinfo@asis{::}Parser preamble_before_setfilename}
-
-This container holds everything that appears before @code{@@setfilename}.
+If there is a @code{@@setfilename}, this container holds everything that appears
+before @code{@@setfilename}.
 
 @item preamble_before_content
 @anchor{Texinfo@asis{::}Parser preamble_before_content}
@@ -1016,9 +987,8 @@ forming a row.
 
 A paragraph.  The @code{contents} of a paragraph (like other container
 elements for Texinfo content) are elements representing the contents of
-the paragraph in the order they occur, such as text elements
-without a @code{cmdname} or @code{type}, or @@-command elements for commands
-appearing in the paragraph.
+the paragraph in the order they occur, such as text tree elements, or
+@@-command tree elements for commands appearing in the paragraph.
 
 @item preformatted
 @anchor{Texinfo@asis{::}Parser preformatted}
@@ -1307,7 +1277,7 @@ manual name, excluding the parentheses, and a @emph{normalized} key for the
 normalized label, built as specified in the @emph{HTML Xref} Texinfo documentation
 node.
 
-The first node containing a @code{@@printindex} @@-command has the @emph{isindex}
+A node containing a @code{@@printindex} @@-command has the @emph{isindex}
 key set.
 
 @item @code{paragraph}

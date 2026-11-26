@@ -10,10 +10,9 @@ use Encode;
 
 $result_tree_text{'simplest_no_node_section'} = '*document_root C2
  *before_node_section C4
-  *preamble_before_setfilename C1
-   *preamble_before_beginning C2
-    {text_before_beginning:\\input texinfo @c -*-texinfo-*-\\n}
-    {text_before_beginning:\\n}
+  *preamble_before_beginning C2
+   {text_before_beginning:\\input texinfo @c -*-texinfo-*-\\n}
+   {text_before_beginning:\\n}
   *preamble_before_content C2
    *normal_command@setfilename C1 simplest_no_node_section.texi:l3
    |text_arg:{simplest_no_node_section.info}

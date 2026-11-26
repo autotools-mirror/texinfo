@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'setfilename_in_paragraph'} = '*document_root C1
  *before_node_section C2
-  *preamble_before_setfilename C1
+  *preamble_before_beginning C1
    *paragraph C1
     {normal_text:Some text\\n}
   *preamble_before_content C1
@@ -47,8 +47,8 @@ $result_converted{'plaintext'}->{'setfilename_in_paragraph'} = '';
 $result_converted{'html_text'}->{'setfilename_in_paragraph'} = '';
 
 
-$result_converted{'xml'}->{'setfilename_in_paragraph'} = '<para>Some text
-</para><setfilename file="setfilename_in_paragraph.info"> setfilename_in_paragraph.info</setfilename>
+$result_converted{'xml'}->{'setfilename_in_paragraph'} = '<preamblebeforebeginning><para>Some text
+</para></preamblebeforebeginning><setfilename file="setfilename_in_paragraph.info"> setfilename_in_paragraph.info</setfilename>
 ';
 
 

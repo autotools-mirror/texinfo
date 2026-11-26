@@ -10,7 +10,7 @@ use Encode;
 
 $result_tree_text{'commands_and_spaces'} = '*document_root C2
  *before_node_section C2
-  *preamble_before_setfilename C2
+  *preamble_before_beginning C2
    *normal_command@set C1
    |misc_args:A{foo|some @value}
     *line_arg C3
@@ -496,9 +496,9 @@ $result_indices_sort_strings{'commands_and_spaces'} = 'fn:
 ';
 
 
-$result_converted{'xml'}->{'commands_and_spaces'} = '<set name="foo">  foo   some @value</set>
+$result_converted{'xml'}->{'commands_and_spaces'} = '<preamblebeforebeginning><set name="foo">  foo   some @value</set>
 
-<setfilename file="commands_and_spaces.info">  commands_and_spaces.info  </setfilename>
+</preamblebeforebeginning><setfilename file="commands_and_spaces.info">  commands_and_spaces.info  </setfilename>
 
 <unmacro name="ggg">  ggg</unmacro>
 

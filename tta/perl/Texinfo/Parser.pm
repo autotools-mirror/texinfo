@@ -235,55 +235,30 @@ gathered during the parsing.
 A full Texinfo tree is rooted at a I<document_root> type element.
 I<document_root> first element in C<contents> should be a
 I<before_node_section> container for content appearing before the first node or
-sectioning command.  Nodes and sections @-commands elements follow.  The node
+sectioning command.  I<before_node_section> first content is
+I<preamble_before_beginning>.  If there is a C<@setfilename>,
+I<preamble_before_beginning> holds everything before C<@setfilename> (It may
+contains paragraphs and block commands elements before C<@setfilename>, if any,
+although it is not recommended to have such content). If there is no
+C<@setfilename>, it contains the C<\input texinfo.tex> line and following blank
+lines.
+
+The second container in I<before_node_section> is I<preamble_before_content>.
+It contains everything appearing before the first formatted content such as
+empty lines text elements,
+elements corresponding to line commands such as C<@documentlanguage> or
+C<@frenchspacing>, block commands such as C<@copying> that are not immediately
+output but also raw output block commands such as C<@html>.  This container
+corresponding to the I<preamble> in the Texinfo documentation.  The paragraphs
+and other contents follow up in I<before_node_section> C<contents> until the
+first node or section.
+
+Nodes and sections @-commands elements follow.  The node
 or sectioning command elements C<contents> hold all the elements corresponding
 to Texinfo code before the next node or sectioning command element or C<@bye>.
 If present in the Texinfo document, the C<@bye> element is next.  If there is
 content after C<@bye>, it is last in the I<postamble_after_end> container
 element.
-
-The content of I<before_node_section> depend on the presence of
-C<@setfilename> in the document before the first node or sectioning element:
-
-=over
-
-=item with C<@setfilename>
-
-The first container in I<before_node_section> is
-I<preamble_before_setfilename>.  The first element in
-I<preamble_before_setfilename> is I<preamble_before_beginning>, which
-holds everything appearing before the first content, including
-the \input texinfo.tex line and following blank lines.  It may be
-followed by paragraphs and block commands elements, if any, although it is
-not recommended to have such content before C<@setfilename>.
-
-The second container in I<before_node_section> is
-I<preamble_before_content>, which begins with C<@setfilename>
-and contains everything appearing before the first formatted content,
-corresponding to the I<preamble> in the Texinfo documentation.
-
-The paragraphs and other contents follow up in I<before_node_section>
-C<contents> until the first node or section.
-
-=item without C<@setfilename>
-
-The first container in I<before_node_section> is I<preamble_before_beginning>,
-which holds everything appearing before the first content, including
-the \input texinfo.tex line and following blank lines.
-
-It is followed by I<preamble_before_content>, which contains everything
-appearing before the first formatted content, corresponding to the I<preamble>
-in the Texinfo documentation.
-
-The paragraphs and other contents follow up in I<before_node_section>
-C<contents> until the first node or section.
-
-=back
-
-I<preamble_before_content> contains empty lines text elements,
-elements corresponding to line commands such as C<@documentlanguage> or
-C<@frenchspacing>, block commands such as C<@copying> that are not immediately
-output but also raw output block commands such as C<@html>.
 
 The first element of a node or sectioning command C<contents>
 is an I<arguments_line> container holding the command arguments
@@ -557,7 +532,7 @@ are used when there are no braces and the whole line is the argument.
 
 =item normal_command
 
-Type of the remaining @-commands.
+Type of the remaining @-command tree elements.
 
 =back
 
@@ -713,10 +688,8 @@ This container holds everything appearing after @bye.
 
 This container holds everything appearing before the first content, including
 the C<\input texinfo.tex> line and following blank lines.
-
-=item preamble_before_setfilename
-
-This container holds everything that appears before C<@setfilename>.
+If there is a C<@setfilename>, this container holds everything that appears
+before C<@setfilename>.
 
 =item preamble_before_content
 
@@ -933,9 +906,8 @@ forming a row.
 
 A paragraph.  The C<contents> of a paragraph (like other container
 elements for Texinfo content) are elements representing the contents of
-the paragraph in the order they occur, such as text elements
-without a C<cmdname> or C<type>, or @-command elements for commands
-appearing in the paragraph.
+the paragraph in the order they occur, such as text tree elements, or
+@-command tree elements for commands appearing in the paragraph.
 
 =item preformatted
 
@@ -1201,7 +1173,7 @@ references to menu elements occuring in the node.
 
 =end comment
 
-The first node containing a C<@printindex> @-command has the I<isindex>
+A node containing a C<@printindex> @-command has the I<isindex>
 key set.
 
 =item C<paragraph>

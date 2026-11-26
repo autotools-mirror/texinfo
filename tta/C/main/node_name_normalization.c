@@ -96,7 +96,7 @@ convert_to_normalized_internal (const ELEMENT *e, TEXT *result)
 
   if ((e->type == ET_postamble_after_end
        || e->type == ET_preamble_before_beginning
-       || e->type == ET_preamble_before_setfilename)
+      )
       || (cmd
           && ((cmd == CM_anchor
                || cmd == CM_footnote

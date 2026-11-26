@@ -10,10 +10,9 @@ use Encode;
 
 $result_tree_text{'index_no_node'} = '*document_root C7
  *before_node_section C7
-  *preamble_before_setfilename C1
-   *preamble_before_beginning C2
-    {text_before_beginning:\\input texinfo @c -*-texinfo-*-\\n}
-    {text_before_beginning:\\n}
+  *preamble_before_beginning C2
+   {text_before_beginning:\\input texinfo @c -*-texinfo-*-\\n}
+   {text_before_beginning:\\n}
   *preamble_before_content C2
    *normal_command@setfilename C1 index_no_node.texi:l3
    |text_arg:{index_no_node}

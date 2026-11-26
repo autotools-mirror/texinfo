@@ -142,21 +142,6 @@ $result_converted{'html_text'}->{'spaces_after_braced_command'} = '<p><code clas
 ';
 
 
-$result_converted{'xml'}->{'spaces_after_braced_command'} = '<para><code> </code>
-</para>
-<para><samp>
-</samp>
-</para>
-<para>&Aring;
-</para>
-<para><email><emailaddress>
-</emailaddress><emailname>a</emailname></email>
-</para>
-<para>&tex;
-</para>
-';
-
-
 $result_converted{'latex_text'}->{'spaces_after_braced_command'} = '\\begin{document}
 \\texttt{b}
 

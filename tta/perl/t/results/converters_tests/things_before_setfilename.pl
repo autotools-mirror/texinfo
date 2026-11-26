@@ -10,10 +10,9 @@ use Encode;
 
 $result_tree_text{'things_before_setfilename'} = '*document_root C5
  *before_node_section C2
-  *preamble_before_setfilename C26
-   *preamble_before_beginning C2
-    {text_before_beginning:\\input texinfo\\n}
-    {text_before_beginning:\\n}
+  *preamble_before_beginning C27
+   {text_before_beginning:\\input texinfo\\n}
+   {text_before_beginning:\\n}
    *normal_command@anchor C1 things_before_setfilename.texi:l3
    |identifier:{An-anchor}
    |is_target:{1}
@@ -457,7 +456,7 @@ $result_converted_sort_strings{'html'}->{'things_before_setfilename'} = 'cp:
 
 $result_converted{'xml'}->{'things_before_setfilename'} = '<preamblebeforebeginning>\\input texinfo
 
-</preamblebeforebeginning><anchor identifier="An-anchor">An anchor</anchor>
+<anchor identifier="An-anchor">An anchor</anchor>
 
 <para>Ref to the anchor:
 <ref label="An-anchor"><xrefnodename>An anchor</xrefnodename></ref>
@@ -498,7 +497,7 @@ $result_converted{'xml'}->{'things_before_setfilename'} = '<preamblebeforebeginn
 
 <listoffloats type="Text"> Text</listoffloats>
 
-<setfilename file="things_before_setfilename.info"> things_before_setfilename.info </setfilename>
+</preamblebeforebeginning><setfilename file="things_before_setfilename.info"> things_before_setfilename.info </setfilename>
 
 <node identifier="Top"><nodename> Top</nodename><nodenext automatic="on"> chap</nodenext></node>
 <top><sectiontitle> top section</sectiontitle>

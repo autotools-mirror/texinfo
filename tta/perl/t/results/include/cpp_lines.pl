@@ -10,9 +10,8 @@ use Encode;
 
 $result_tree_text{'cpp_lines'} = '*document_root C4
  *before_node_section C4
-  *preamble_before_setfilename C1
-   *preamble_before_beginning C1
-    {text_before_beginning:\\input texinfo\\n}
+  *preamble_before_beginning C1
+   {text_before_beginning:\\input texinfo\\n}
   *preamble_before_content C3
    *normal_command@setfilename C1 cpp_lines.texi:l2
    |text_arg:{cpp_lines.info}

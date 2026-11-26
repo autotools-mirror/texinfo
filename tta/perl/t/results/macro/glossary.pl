@@ -10,10 +10,9 @@ use Encode;
 
 $result_tree_text{'glossary'} = '*document_root C5
  *before_node_section C2
-  *preamble_before_setfilename C1
-   *preamble_before_beginning C2
-    {text_before_beginning:\\input texinfo.tex\\n}
-    {text_before_beginning:\\n}
+  *preamble_before_beginning C2
+   {text_before_beginning:\\input texinfo.tex\\n}
+   {text_before_beginning:\\n}
   *preamble_before_content C8
    *normal_command@setfilename C1 glossary.texi:l3
    |text_arg:{glossary}

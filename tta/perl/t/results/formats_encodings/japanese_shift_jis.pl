@@ -10,9 +10,8 @@ use Encode;
 
 $result_tree_text{'japanese_shift_jis'} = '*document_root C8
  *before_node_section C2
-  *preamble_before_setfilename C2
-   *preamble_before_beginning C1
-    {text_before_beginning:\\input texinfo @c -*- coding: utf-8; mode: texinfo; -*-\\n}
+  *preamble_before_beginning C2
+   {text_before_beginning:\\input texinfo @c -*- coding: utf-8; mode: texinfo; -*-\\n}
    *normal_command@documentencoding C1 japanese_shift_jis.texi:l2
    |global_command_number:{1}
    |input_encoding_name:{shift_jis}
