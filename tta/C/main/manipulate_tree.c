@@ -733,6 +733,7 @@ parse_node_manual (ELEMENT *node, NODE_SPEC_EXTRA *content_indices)
 
   idx = arg_indices.start;
 
+  /* text should be normal_text */
   /* If the content starts with a '(', try to get a manual name. */
   if (type_data[node->e.c->contents.list[idx]->type].flags & TF_text
       && node->e.c->contents.list[idx]->e.text->end > 0
@@ -777,6 +778,7 @@ parse_node_manual (ELEMENT *node, NODE_SPEC_EXTRA *content_indices)
           else
             e = node->e.c->contents.list[idx];
 
+          /* text should be normal_text */
           if (!(type_data[e->type].flags & TF_text))
             {
               /* This non-textual element is in the manual contents. */

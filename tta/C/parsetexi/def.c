@@ -225,6 +225,7 @@ split_delimiters (ELEMENT *current, size_t starting_idx)
 
       if (e->type == ET_spaces || e->type == ET_bracketed_arg)
         continue;
+      /* text should be normal_text */
       else if (!(type_data[e->type].flags & TF_text))
         {
           new = new_element (ET_def_line_arg);

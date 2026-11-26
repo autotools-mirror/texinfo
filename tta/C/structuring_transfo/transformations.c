@@ -966,6 +966,7 @@ protect_hashchar_at_line_beginning_internal (const char *type,
   for (i = 0; i < parent_contents_nr; i++)
     {
       ELEMENT *current = parent->e.c->contents.list[i];
+      /* text should be normal_text or raw */
       if (type_data[current->type].flags & TF_text
           && current->e.text->end > 0)
         {

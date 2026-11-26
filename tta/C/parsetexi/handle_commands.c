@@ -92,6 +92,7 @@ check_no_text (const ELEMENT *current)
           for (j = 0; j < f->e.c->contents.number; j++)
             {
               ELEMENT *g = f->e.c->contents.list[j];
+              /* text should be normal_text */
               if ((type_data[g->type].flags & TF_text
                    && g->e.text->end > 0
                    && g->e.text->text[strspn

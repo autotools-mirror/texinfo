@@ -12348,7 +12348,7 @@ html_convert_menu_entry_type (CONVERTER *self, const enum element_type type,
                || (menu_description->e.c->contents.number == 1
                    && (menu_description->e.c->contents.list[0]->e.c->contents.number <= 0
                        || (menu_description->e.c->contents.list[0]->e.c->contents.number == 1
-                           &&
+                           &&  /* text should be normal_text */
           type_data[menu_description->e.c->contents.list[0]->e.c->contents.list[0]->type].flags & TF_text
    && menu_description->e.c->contents.list[0]->e.c->contents.list[0]->e.text->text[
        strspn (menu_description->e.c->contents.list[0]->e.c->contents.list[0]->e.text->text,
