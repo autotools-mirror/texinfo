@@ -82,9 +82,7 @@ extern CONDITIONAL_ITEM_STACK conditional_stack;
 
 void move_last_space_to_element (ELEMENT *current);
 void abort_empty_line (ELEMENT *current);
-ELEMENT *end_paragraph (ELEMENT *current,
-                        enum command_id closed_block_cmd,
-                        enum command_id interrupting_cmd);
+ELEMENT *end_paragraph (ELEMENT *current, enum command_id closed_block_cmd);
 ELEMENT *end_paragraph_preformatted (ELEMENT *current,
                                  enum command_id closed_block_cmd,
                                  enum command_id interrupting_cmd);
@@ -93,9 +91,6 @@ int kbd_formatted_as_code (void);
 int parent_of_command_as_argument (ELEMENT *current);
 void register_command_as_argument (ELEMENT *cmd_as_arg);
 ELEMENT *begin_preformatted (ELEMENT *current);
-ELEMENT *end_preformatted (ELEMENT *current,
-                           enum command_id closed_block_cmd,
-                           enum command_id interrupting_cmd);
 char *read_command_name (const char **ptr);
 const char *read_comment (const char *line, int *has_comment);
 void isolate_leading_trailing (ELEMENT *current, int isolate_leading_only);

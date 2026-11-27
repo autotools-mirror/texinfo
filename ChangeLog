@@ -1,3 +1,9 @@
+2026-11-27  Patrice Dumas  <pertusus@free.fr>
+
+	* tta/C/parsetexi/parser.c (end_paragraph): remove interrupting_cmd
+	argument, it is always set to 0.  Update callers.  Remove
+	the end_preformatted function, it is not used anywhere.
+
 2026-11-26  Patrice Dumas  <pertusus@free.fr>
 
 	* tta/perl/Texinfo/Convert/DocBook.pm (%ignored_types): do not ignore

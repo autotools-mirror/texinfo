@@ -2010,7 +2010,7 @@ end_line (ELEMENT *current)
       else if (current_context () == ct_paragraph)
         {/* in a paragraph, but not directly.  For instance an empty line
             in a style brace @-command */
-          current = end_paragraph (current, 0, 0);
+          current = end_paragraph (current, 0);
         }
       /* TODO Close brace commands in more contexts?  Other contexts here could
          be ct_preformatted, ct_rawpreformatted, ct_math, ct_inlineraw.
