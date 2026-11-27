@@ -1,5 +1,23 @@
 2026-11-27  Patrice Dumas  <pertusus@free.fr>
 
+	use CM_definfoenclose_command for the definfoenclose'd element cmd
+
+	* tta/C/parsetexi/handle_commands.c (handle_brace_command): use
+	CM_definfoenclose_command for the element created for a
+	definfoenclose'd command, instead of the cmd associated to the
+	user-defined command name.
+
+	* tta/C/parsetexi/close.c (close_brace_command, close_commands),
+	tta/C/parsetexi/end_line.c (end_line_starting_block),
+	tta/C/parsetexi/parser.c (check_valid_nesting)
+	(process_remaining_on_line): call element_command_name on the element
+	instead of command_name on the cmd to get the right command name for
+	definfoenclose'd command as the cmd does not have information on th
+	ecommand name anymore.  Also in check_valid_nesting have
+	invalid_parent be the element and not the cmd.
+
+2026-11-27  Patrice Dumas  <pertusus@free.fr>
+
 	* tta/C/parsetexi/parser.c (end_paragraph): remove interrupting_cmd
 	argument, it is always set to 0.  Update callers.  Remove
 	the end_preformatted function, it is not used anywhere.

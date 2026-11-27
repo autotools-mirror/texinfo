@@ -1006,7 +1006,7 @@ end_line_starting_block (ELEMENT *current)
                                                             != BRACE_noarg)
             {
                command_warn (current, "@%s expected braces",
-                             command_name(command_as_argument->e.c->cmd));
+                             element_command_name (command_as_argument));
             }
         }
       else if (parsed_command_data(command).data == BLOCK_item_line)
@@ -2056,7 +2056,7 @@ end_line (ELEMENT *current)
       if (command_flags(current) & CF_brace)
         {
           line_error ("@%s expected braces",
-                      command_name(current->e.c->cmd));
+                      element_command_name (current));
           current = current->e.c->parent;
         }
 

@@ -1355,7 +1355,8 @@ handle_brace_command (ELEMENT *current, const char **line_inout,
   debug ("C|OPEN BRACE @%s", command_name(cmd));
 
   if (parsed_command_data(cmd).flags & CF_INFOENCLOSE)
-    command_e = new_command_type_element (ET_definfoenclose_command, cmd,
+    command_e = new_command_type_element (ET_definfoenclose_command,
+                                          CM_definfoenclose_command,
                                           command_name(cmd));
   else
     command_e = new_command_element (cmd);

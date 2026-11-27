@@ -44,7 +44,10 @@
 #include "parser.h"
 
 /* Return CURRENT->e.c->parent.  The other arguments are used if an error
-   message should be printed. */
+   message should be printed.
+   The calling possibilities are such that the INTERRUPTING_CMD, if set
+   should be a root command or @bye.
+ */
 ELEMENT *
 close_brace_command (ELEMENT *current,
                      enum command_id closed_block_cmd,
@@ -113,16 +116,16 @@ close_brace_command (ELEMENT *current,
         command_error (current,
                         "@end %s seen before @%s closing brace",
                         command_name(closed_block_cmd),
-                        command_name(current->e.c->cmd));
+                        element_command_name (current));
       else if (interrupting_cmd)
         command_error (current,
                         "@%s seen before @%s closing brace",
                         command_name(interrupting_cmd),
-                        command_name(current->e.c->cmd));
+                        element_command_name (current));
       else if (missing_brace)
          command_error (current,
                         "@%s missing closing brace",
-                        command_name(current->e.c->cmd));
+                        element_command_name (current));
     }
   current = current->e.c->parent;
   return current;
@@ -532,10 +535,11 @@ close_current (ELEMENT *current,
 
 /* Return lowest level ancestor of CURRENT containing a CLOSED_BLOCK_COMMAND
    element, or the lowest level ancestor if CLOSED_BLOCK_COMMAND is 0.
-   Set CLOSED_BLOCK_ELEMENT to the last closed element.  INTERRUPTING is used
-   in close_brace_command to display an error message.  Remove a context from
-   context stack if CLOSED_BLOCK_COMMAND is not 0 and a context was added
-   by the CLOSED_BLOCK_COMMAND.
+   Set CLOSED_BLOCK_ELEMENT to the last closed element.  INTERRUPTING_CMD is
+   used in close_brace_command to display an error message.  It can only
+   be a root_command or @bye.
+   Remove a context from context stack if CLOSED_BLOCK_COMMAND is not 0 and
+   a context was added by the CLOSED_BLOCK_COMMAND.
    CLOSED_BLOCK_COMMAND should be the id of a block command.
  */
 ELEMENT *
@@ -550,7 +554,7 @@ close_commands (ELEMENT *current, enum command_id closed_block_cmd,
   if (command_flags(current) & CF_brace)
     {
       line_error ("@%s expected braces",
-                  command_name(current->e.c->cmd));
+                  element_command_name (current));
       current = current->e.c->parent;
     }
 

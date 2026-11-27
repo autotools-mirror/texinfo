@@ -1283,7 +1283,6 @@ is_end_current_command (enum command_id cmd, const char **line)
 void
 check_valid_nesting (ELEMENT *current, enum command_id cmd)
 {
-  enum command_id invalid_parent = 0;
   const ELEMENT *parent_command;
 
   /* Check whether outer command can contain cmd.  Commands are
@@ -1395,8 +1394,8 @@ check_valid_nesting (ELEMENT *current, enum command_id cmd)
 
   if (!ok)
     {
-      invalid_parent = parent_command->e.c->cmd;
-      if (!invalid_parent)
+      const ELEMENT *invalid_parent = parent_command;
+      if (!invalid_parent->e.c->cmd)
         {
           /* current_context () == ct_def.  Find def block containing
              command. */
@@ -1404,12 +1403,12 @@ check_valid_nesting (ELEMENT *current, enum command_id cmd)
           while (d->e.c->parent
                  && !(d->e.c->parent->flags & EF_def_line))
             d = d->e.c->parent;
-          invalid_parent = d->e.c->parent->e.c->parent->e.c->cmd;
+          invalid_parent = d->e.c->parent->e.c->parent;
         }
 
       line_warn ("@%s should not appear in @%s",
                  command_name(cmd),
-                 command_name(invalid_parent));
+                 element_command_name (invalid_parent));
     }
 }
 
@@ -2132,7 +2131,7 @@ process_remaining_on_line (ELEMENT **current_inout, const char **line_inout)
   if (command_flags(current) & CF_brace && (cmd || command))
     {
       line_error ("@%s expected braces",
-                  command_name(current->e.c->cmd));
+                  element_command_name (current));
       current = current->e.c->parent;
     }
 
@@ -2184,7 +2183,7 @@ process_remaining_on_line (ELEMENT **current_inout, const char **line_inout)
   if (command_flags(current) & CF_brace && *line != '{')
     {
       debug_nonl ("C|BRACE CMD: no brace after @%s||| ",
-                  command_name (current->e.c->cmd));
+                  element_command_name (current));
       debug_print_protected_string (line); debug ("");
 
       if (strchr (whitespace_chars, *line)
@@ -2200,7 +2199,7 @@ process_remaining_on_line (ELEMENT **current_inout, const char **line_inout)
                if (*(line + i) == '\n')
                  {
                    line_warn ("command `@%s' must not be followed by new line",
-                              command_name(current->e.c->cmd));
+                              element_command_name (current));
                    if (current_context () == ct_def
                        || (current_context () == ct_line
                            && top_context_command () != CM_NONE))
@@ -2248,7 +2247,7 @@ process_remaining_on_line (ELEMENT **current_inout, const char **line_inout)
                  {
                    debug ("C|BRACE CMD before brace second newline stops spaces");
                    line_error ("@%s expected braces",
-                               command_name(current->e.c->cmd));
+                               element_command_name (current));
                    current = current->e.c->parent;
                  }
                else
@@ -2298,7 +2297,7 @@ process_remaining_on_line (ELEMENT **current_inout, const char **line_inout)
       else
         {
           line_error ("@%s expected braces",
-                      command_name(current->e.c->cmd));
+                      element_command_name (current));
           current = current->e.c->parent;
         }
     }
