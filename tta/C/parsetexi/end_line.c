@@ -1714,6 +1714,11 @@ end_line_misc_line (ELEMENT *current)
           /* Index commands */
             {
               enter_index_entry (current->e.c->cmd, current);
+              /* the cmd with user bit is needed in enter_index_entry to
+                 find the index, but is not needed afterwards, so replace by
+                 the generic command id */
+              if (cmd & USER_COMMAND_BIT)
+                current->e.c->cmd = CM_index_entry_command;
             }
           /* if there is a brace command interrupting an index or subentry
              command, replace the internal internal_spaces_before_brace_in_index

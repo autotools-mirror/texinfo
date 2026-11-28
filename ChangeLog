@@ -1,5 +1,13 @@
 2026-11-28  Patrice Dumas  <pertusus@free.fr>
 
+	use CM_index_entry_command for the user added index commands
+
+	* tta/C/parsetexi/end_line.c (end_line_misc_line): replace the cmd
+	with user bit by CM_index_entry_command when there is no need for the
+	user-defined command anymore.
+
+2026-11-28  Patrice Dumas  <pertusus@free.fr>
+
 	* tta/C/parsetexi/indices.c (index_of_command): make static.
 	end the loop as soon as there is no more command.
 
