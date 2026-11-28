@@ -32,7 +32,7 @@ BEGIN {
     print "#include \"types_data.h\""                                    > TDC
     print ""                                                             > TDC
     print "const TYPE_DATA type_data[] = {"                              > TDC
-    print "{0, 0},"                                                   > TDC
+    print "{0, 0, CM_NONE},"                                             > TDC
 }
 
 !/^$/ && !/^#/ {
@@ -42,6 +42,7 @@ BEGIN {
     type_flags[t] = $2
     line++
     types[line] = t
+    associated_code[t] = $3
 
     last_type = "ET_" $1
 }
@@ -72,13 +73,18 @@ END {
             }
           }
         }
+        if (associated_command[t] != "") {
+          associated_cmd_str = associated_command[t]
+        } else {
+          associated_cmd_str = "CM_NONE"
+        }
         if (flags_str == "") {
             flags = "0"
         } else {
             flags = "TF_" flags_str
             gsub (/,/, " | TF_", flags)
         }
-        print "{\"" t "\", " flags "}," > TDC
+        print "{\"" t "\", " flags ", " associated_cmd_str "}," > TDC
     }
     print "};" > TDC
 }

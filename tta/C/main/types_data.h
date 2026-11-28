@@ -16,9 +16,12 @@
    You should have received a copy of the GNU General Public License
    along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 
+#include "command_ids.h"
+
 typedef struct types_struct {
   char *name;
   unsigned long flags;
+  enum command_id cmd;
 } TYPE_DATA;
 
 extern const TYPE_DATA type_data[];

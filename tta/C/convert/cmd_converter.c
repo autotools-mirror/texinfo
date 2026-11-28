@@ -259,6 +259,9 @@ const char *xml_text_entity_no_arg_commands[] = {
 0,
 0,
 0,
+0,
+0,
+0,
 "&minus;",  /* minus */
 0,
 0,
@@ -306,6 +309,8 @@ const char *xml_text_entity_no_arg_commands[] = {
 0,
 "&reg;",  /* registeredsymbol */
 "&rArr;",  /* result */
+0,
+0,
 0,
 0,
 0,

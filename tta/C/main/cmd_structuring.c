@@ -254,6 +254,9 @@ int const command_structuring_level[] = {
 -1,
 -1,
 -1,
+-1,
+-1,
+-1,
 1,  /* majorheading */
 -1,
 -1,
@@ -282,6 +285,8 @@ int const command_structuring_level[] = {
 -1,
 -1,
 0,  /* part */
+-1,
+-1,
 -1,
 -1,
 -1,

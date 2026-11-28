@@ -491,6 +491,9 @@ const char *html_style_commands_element[] = {
 0,
 0,
 0,
+0,
+0,
+0,
 "samp",  /* option */
 0,
 0,
@@ -515,6 +518,8 @@ const char *html_style_commands_element[] = {
 0,
 0,
 "span",  /* r */
+0,
+0,
 0,
 0,
 0,

@@ -15,7 +15,8 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-# The first column holds type names, second column contains flags.
+# The first column holds type names, second column contains flags, third
+# column holds associated command id.
 # Flags for text elements:
 #  text: distinguishes text from other elements
 #  leading_space: text elements with spaces appearing before actual text.
@@ -32,8 +33,8 @@
 
 
 # Types for @-commands
-index_entry_command                    with_command
-definfoenclose_command                 with_command
+index_entry_command                    with_command  index_entry_command
+definfoenclose_command                 with_command  definfoenclose_command
 # command without a special type
 normal_command
 
@@ -143,11 +144,11 @@ elided_rawpreformatted
 elided_brace_command_arg
 
 # for macro expansion source marks
-macro_call                                with_command
-rmacro_call                               with_command
-macro_call_line                           with_command
-rmacro_call_line                          with_command
-linemacro_call                            with_command
+macro_call                                with_command    macro_call_command
+rmacro_call                               with_command    rmacro_call_command
+macro_call_line                           with_command    macro_call_line_command
+rmacro_call_line                          with_command    rmacro_call_line_command
+linemacro_call                            with_command    linemacro_call_command
 
 # macro and linemacro (if not bracketed) call arguments texts
 macro_call_arg_text                       text

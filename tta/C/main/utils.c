@@ -1107,10 +1107,10 @@ new_element_from_names (const char *type_name, const char *command_name)
     {
       enum command_id cmd;
 
-      if (type_data[e_type].flags & TF_with_command)
+      if (type_data[e_type].cmd != CM_NONE)
         {
           ELEMENT *e = new_command_type_element (e_type,
-                            type_associated_cmd (e_type), command_name);
+                            type_data[e_type].cmd, command_name);
           return e;
         }
 

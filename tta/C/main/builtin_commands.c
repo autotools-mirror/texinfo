@@ -85,17 +85,19 @@ type_associated_cmd (enum element_type type)
 const char *
 element_command_name (const ELEMENT *e)
 {
-  if (e->e.c->cmd && e->e.c->cmd < BUILTIN_CMD_NUMBER
-    /* this can happen if a tree portion is copied and to simplify
-       following code the generic command is used in the copy */
-      && e->e.c->cmd != CM_index_entry_command
-      && e->e.c->cmd != CM_definfoenclose_command)
-    return command_data[e->e.c->cmd].cmdname;
-  else if (e->e.c->command_name)
+  if (e->e.c->command_name)
     {
       const char *cmdname = e->e.c->command_name;
       return cmdname;
     }
+  else if (e->e.c->cmd && e->e.c->cmd < BUILTIN_CMD_NUMBER)
+    /* this happens with the main tree and if a tree portion
+       is copied and to simplify following code;
+       however, the elements should always have a command_name.
+      && e->e.c->cmd != CM_index_entry_command
+      && e->e.c->cmd != CM_definfoenclose_command)
+     */
+    return command_data[e->e.c->cmd].cmdname;
 
   return 0;
 }

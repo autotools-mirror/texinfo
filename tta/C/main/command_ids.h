@@ -279,11 +279,14 @@ CM_latex,
 CM_lbracechar,
 CM_leq,
 CM_linemacro,
+CM_linemacro_call_command,
 CM_link,
 CM_lisp,
 CM_listoffloats,
 CM_lowersections,
 CM_macro,
+CM_macro_call_command,
+CM_macro_call_line_command,
 CM_majorheading,
 CM_maketitle,
 CM_math,
@@ -338,6 +341,8 @@ CM_registeredsymbol,
 CM_result,
 CM_ringaccent,
 CM_rmacro,
+CM_rmacro_call_command,
+CM_rmacro_call_line_command,
 CM_samp,
 CM_sansserif,
 CM_sc,
@@ -432,7 +437,7 @@ CM_hex_7d,
 CM_hex_7e,
 };
 
-#define BUILTIN_CMD_NUMBER 398
+#define BUILTIN_CMD_NUMBER 403
 
 #define DEPRECATED_CMD_NUMBER 7
 

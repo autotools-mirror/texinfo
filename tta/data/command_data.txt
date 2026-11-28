@@ -27,9 +27,6 @@
 # Internal commands
 # invalid if not accept_internalvalue set in configuration
 txiinternalvalue        brace,internal                  special
-# used in converters for easy access to flags.
-definfoenclose_command  brace,internal                  style_other
-index_entry_command     line,index_entry_command,contain_basic_inline,internal      line
 
 
 ##############################################################
@@ -295,6 +292,16 @@ pindex                  line,index_entry_command,contain_basic_inline      line
 tpindex                 line,index_entry_command,contain_basic_inline      line
 tindex                  line,index_entry_command,contain_basic_inline      line
 
+# for user-defined index commands, at the end of parsing
+index_entry_command     line,index_entry_command,contain_basic_inline      line
+
+# in source marks
+# macro expansion call formatted as a line command
+macro_call_line_command     line,preamble                                  line
+rmacro_call_line_command    line,preamble                                  line
+# linemacro expansion call.  Contains linemacro_arg
+linemacro_call_command      line,preamble,variadic                         line
+
 ##########################################################
 #
 # brace commands
@@ -403,6 +410,9 @@ strong                  brace                           style_other
 sub                     brace                           style_other
 sup                     brace                           style_other
 
+# for commands defined with definfoenclose
+definfoenclose_command  brace                           style_other
+
 # code style commands
 code                    brace,brace_code                      style_code
 command                 brace,brace_code                      style_code
@@ -480,6 +490,10 @@ w                       brace,contain_basic_inline      special
 dmn                     brace,contain_plain_text        other         1
 titlefont               brace,close_paragraph,global,metadata,contain_basic_inline,no_paragraph    other         1
 
+# in source marks
+# macro expansion call formatted as a brce command
+macro_call_command      brace,preamble,no_paragraph,variadic           special
+rmacro_call_command     brace,preamble,no_paragraph,variadic           special
 
 ##########################################################
 #

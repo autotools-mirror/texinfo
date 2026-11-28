@@ -276,6 +276,9 @@ const DIACRITIC_UNICODE unicode_diacritics[] = {
 {0, 0, 0},
 {0, 0, 0},
 {0, 0, 0},
+{0, 0, 0},
+{0, 0, 0},
+{0, 0, 0},
 {"\xcc\xa8", "808", "0328"},  /* ogonek */
 {0, 0, 0},
 {0, 0, 0},
@@ -309,6 +312,8 @@ const DIACRITIC_UNICODE unicode_diacritics[] = {
 {0, 0, 0},
 {0, 0, 0},
 {"\xcc\x8a", "778", "030A"},  /* ringaccent */
+{0, 0, 0},
+{0, 0, 0},
 {0, 0, 0},
 {0, 0, 0},
 {0, 0, 0},
@@ -671,6 +676,9 @@ const COMMAND_UNICODE_CHARACTER base_unicode_map[] = {
 {0, 0, 0},
 {0, 0, 0},
 {0, 0, 0},
+{0, 0, 0},
+{0, 0, 0},
+{0, 0, 0},
 {"00F8", "\xc3\xb8", "\\00F8 "},   /* o */
 {0, 0, 0},
 {0, 0, 0},
@@ -705,6 +713,8 @@ const COMMAND_UNICODE_CHARACTER base_unicode_map[] = {
 {0, 0, 0},
 {0, 0, 0},
 {"007D", "}", "\\007D "},   /* rbracechar */
+{0, 0, 0},
+{0, 0, 0},
 {0, 0, 0},
 {0, 0, 0},
 {0, 0, 0},
@@ -1063,6 +1073,9 @@ const COMMAND_UNICODE_CHARACTER extra_unicode_map[] = {
 {0, 0, 0},
 {0, 0, 0},
 {0, 0, 0},
+{0, 0, 0},
+{0, 0, 0},
+{0, 0, 0},
 {"2212", "\xe2\x88\x92", "\\2212 "},   /* minus */
 {0, 0, 0},
 {0, 0, 0},
@@ -1110,6 +1123,8 @@ const COMMAND_UNICODE_CHARACTER extra_unicode_map[] = {
 {0, 0, 0},
 {"00AE", "\xc2\xae", "\\00AE "},   /* registeredsymbol */
 {"21D2", "\xe2\x87\x92", "\\21D2 "},   /* result */
+{0, 0, 0},
+{0, 0, 0},
 {0, 0, 0},
 {0, 0, 0},
 {0, 0, 0},

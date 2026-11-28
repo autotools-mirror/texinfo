@@ -1,5 +1,23 @@
 2026-11-28  Patrice Dumas  <pertusus@free.fr>
 
+	add generic commands for macro expansion calls and generalize
+
+	* tta/C/main/element_types.awk, tta/C/main/element_types.txt,
+	tta/C/main/types_data.h (TYPE_DATA): add an associated command id
+	field, set from element_types.txt third column.
+
+	* tta/data/command_data.txt: add generic commands for macro calls.
+	Remove inline from definfoenclose_command and index_entry_command.
+
+	* tta/C/main/utils.c (new_element_from_names), tta/C/parsetexi/macro.c
+	(handle_macro): use type_data command id in new_command_type_element
+	call.
+
+	* tta/C/main/builtin_commands.c (element_command_name): check
+	command_name before builtin command name.
+
+2026-11-28  Patrice Dumas  <pertusus@free.fr>
+
 	use CM_index_entry_command for the user added index commands
 
 	* tta/C/parsetexi/end_line.c (end_line_misc_line): replace the cmd
