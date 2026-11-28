@@ -56,7 +56,7 @@ item_multitable_parent (ELEMENT *current)
    children.
 
    NEXT_COMMAND is the command that ends this row, usually CM_item.  It is
-   null at the end of a @table.  If NEXT_COMMAND is given as CM_itemx, gather
+   CM_NONE at the end of a @table.  If NEXT_COMMAND is given as CM_itemx, gather
    an ET_inter_item container instead.  */
 void
 gather_previous_item (ELEMENT *current, enum command_id next_command)
@@ -99,7 +99,7 @@ gather_previous_item (ELEMENT *current, enum command_id next_command)
   end_pos = contents_count;
 
   /* Find the 'end' */
-  if (next_command)
+  if (next_command != CM_NONE)
     {
       /* Don't absorb trailing index entries as they may be included with a
          following @item. */

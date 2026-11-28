@@ -1301,7 +1301,8 @@ end_line_misc_line (ELEMENT *current)
                 {
                   /* Check if argument is a block Texinfo command. */
                   end_id = lookup_command (end_command);
-                  if (end_id == 0 || !(parsed_command_data(end_id).flags & CF_block))
+                  if (end_id == CM_NONE
+                      || !(parsed_command_data(end_id).flags & CF_block))
                     {
                       command_warn (current, "unknown @end %s", end_command);
                       free (end_command); end_command = 0;

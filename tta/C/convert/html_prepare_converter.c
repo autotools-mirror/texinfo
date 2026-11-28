@@ -58,6 +58,9 @@
 #include "targets.h"
 /* unicode_character_brace_no_arg_commands */
 #include "unicode.h"
+/*
+#include "manipulate_tree.h"
+ */
 #include "convert_to_texinfo.h"
 #include "node_name_normalization.h"
 /* nobrace_symbol_text text_brace_no_arg_commands */
@@ -5588,56 +5591,54 @@ html_prepare_output_units_global_targets (CONVERTER *self)
         {
           const OUTPUT_UNIT *document_unit = root_unit->output_unit;
           const ELEMENT *root_command = root_unit->root;
-          if (root_command && root_command->e.c->cmd != CM_NONE)
+          const SECTION_RELATIONS *section_relations = 0;
+          int status;
+          if (root_command->e.c->cmd == CM_node)
             {
-              const SECTION_RELATIONS *section_relations = 0;
-              int status;
-              if (root_command->e.c->cmd == CM_node)
-                {
-                  size_t node_number
-                    = lookup_extra_integer (root_command,
-                                            AI_key_node_number, &status);
-                  const NODE_RELATIONS *node_relations
-                    = self->document->nodes_list.list[node_number -1];
+              size_t node_number
+                = lookup_extra_integer (root_command,
+                                        AI_key_node_number, &status);
+              const NODE_RELATIONS *node_relations
+                = self->document->nodes_list.list[node_number -1];
 
-                  if (node_relations->associated_section)
-                    section_relations = node_relations->associated_section;
-                }
-              else
-                {
-                  size_t section_number
-                        = lookup_extra_integer (root_command,
-                                         AI_key_section_number, &status);
-                  section_relations
-                    = sections_list->list[section_number -1];
-                }
+              if (node_relations->associated_section)
+                section_relations = node_relations->associated_section;
+            }
+          /* avoid root element container */
+          else if (root_command->e.c->cmd != CM_NONE)
+            {
+              size_t section_number
+                    = lookup_extra_integer (root_command,
+                                     AI_key_section_number, &status);
+              section_relations
+                = sections_list->list[section_number -1];
+            }
        /* find the first level 1 sectioning element to associate the printindex
            with */
-              if (section_relations)
+          if (section_relations)
+            {
+              int status;
+              while (1)
                 {
-                  int status;
-                  while (1)
-                    {
-                      int section_level
-                        = lookup_extra_integer (section_relations->element,
-                                            AI_key_section_level, &status);
-                      if (!status && section_level <= 1)
-                        break;
+                  int section_level
+                    = lookup_extra_integer (section_relations->element,
+                                        AI_key_section_level, &status);
+                  if (!status && section_level <= 1)
+                    break;
 
-                      const SECTION_RELATIONS * const *up_section_directions
-                        = section_relations->section_directions;
-                      if (up_section_directions
-                          && up_section_directions[D_up]
-                          && up_section_directions[D_up]
-                                ->element->e.c->associated_unit)
-                        {
-                          section_relations = up_section_directions[D_up];
-                          document_unit
-                            = section_relations->element->e.c->associated_unit;
-                        }
-                      else
-                        break;
+                  const SECTION_RELATIONS * const *up_section_directions
+                    = section_relations->section_directions;
+                  if (up_section_directions
+                      && up_section_directions[D_up]
+                      && up_section_directions[D_up]
+                            ->element->e.c->associated_unit)
+                    {
+                      section_relations = up_section_directions[D_up];
+                      document_unit
+                        = section_relations->element->e.c->associated_unit;
                     }
+                  else
+                    break;
                 }
             }
           self_html->global_units_directions[D_Index] = document_unit;

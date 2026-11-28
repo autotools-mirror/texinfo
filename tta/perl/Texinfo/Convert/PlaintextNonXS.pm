@@ -363,9 +363,9 @@ sub destroy_formatter($) {
 }
 
 sub push_top_formatter($$) {
-  my ($self, $top_context) = @_;
+  my ($self, $top_command_context) = @_;
 
-  push @{$self->{'context'}}, $top_context;
+  push @{$self->{'context'}}, $top_command_context;
   push @{$self->{'format_context'}}, {
                                      'cmdname' => '_top_format',
                                      'context_indent_len' => 0,
@@ -390,13 +390,13 @@ sub push_top_formatter($$) {
 sub pop_top_formatter($) {
   my $self = shift;
 
-  my $old_context = pop @{$self->{'context'}};
+  my $old_command_context = pop @{$self->{'context'}};
   destroy_formatter(pop @{$self->{'formatters'}});
   pop @{$self->{'format_context'}};
   pop @{$self->{'text_element_context'}};
   pop @{$self->{'document_context'}};
 
-  return $old_context;
+  return $old_command_context;
 }
 
 sub converter_defaults($;$) {
@@ -507,6 +507,7 @@ sub conversion_initialization($;$) {
                                      'pending_text' => [['']],
   };
 
+  # Used for command context
   $self->push_top_formatter('_Root_context');
 }
 
@@ -1505,8 +1506,8 @@ sub process_one_footnote($$) {
   }
   _add_newline_if_needed($self);
 
-  my $old_context = $self->pop_top_formatter();
-  die if ($old_context ne 'footnote');
+  my $old_command_context = $self->pop_top_formatter();
+  die if ($old_command_context ne 'footnote');
 }
 
 sub format_footnotes($;$) {
@@ -3448,8 +3449,8 @@ sub _convert($$) {
                   $self->{'elements_images'}->{$element}->{'depth'});
             _add_lines_count($self, $lines_count);
           }
-          my $old_context = pop @{$self->{'context'}};
-          die if ($old_context ne $cmdname);
+          my $old_command_context = pop @{$self->{'context'}};
+          die if ($old_command_context ne $cmdname);
         }
       } elsif ($cmdname eq 'titlefont') {
         if (defined($args) and defined($args->[0])) {
@@ -3978,7 +3979,8 @@ sub _convert($$) {
                 }
               }
               delete $self->{'multiple_pass'};
-              my $old_context = pop @{$self->{'context'}};
+              my $old_command_context = pop @{$self->{'context'}};
+              die if ($old_command_context ne 'listoffloats');
             }
           }
           # flush and add newline
@@ -4654,13 +4656,13 @@ sub _convert($$) {
     # close the contexts and register the cells
     if (exists($preformatted_context_commands{$cmdname})
         or $cmdname eq 'float') {
-      my $old_context = pop @{$self->{'context'}};
-      die "Not a preformatted context: $old_context"
-        if (!exists($preformatted_context_commands{$old_context})
-            and $old_context ne 'float');
+      my $old_command_context = pop @{$self->{'context'}};
+      die "Not a preformatted context: $old_command_context"
+        if (!exists($preformatted_context_commands{$old_command_context})
+            and $old_command_context ne 'float');
     } elsif (exists($flush_commands{$cmdname})) {
-      my $old_context = pop @{$self->{'context'}};
-      die if (! exists($flush_commands{$old_context}));
+      my $old_command_context = pop @{$self->{'context'}};
+      die if (! exists($flush_commands{$old_command_context}));
     }
 
     if (exists($format_context_commands{$cmdname})) {

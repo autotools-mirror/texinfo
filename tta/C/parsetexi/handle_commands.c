@@ -383,7 +383,7 @@ handle_other_command (ELEMENT *current, const char **line_inout,
         }
       else  /* NOBRACE_other */
         {
-          register_global_command (command_e, 0);
+          register_global_command (command_e, CM_NONE);
           if (close_preformatted_command (cmd))
             current = begin_preformatted (current);
         }
@@ -730,6 +730,7 @@ handle_line_command (ELEMENT *current, const char **line_inout,
       STRING_LIST *args = 0;
       ELEMENT *line_args = new_element (ET_line_arg);
       ELEMENT *text_element = new_text_element (ET_rawline_text);
+      /* can be set if there is a @set equivalent to a command */
       enum command_id global_cmd = CM_NONE;
       const char *comment_text = 0;
       int ignored = 0;
@@ -1166,7 +1167,7 @@ handle_line_command (ELEMENT *current, const char **line_inout,
     }
 
   if (command_e)
-    register_global_command (command_e, 0);
+    register_global_command (command_e, CM_NONE);
   if (cmd == CM_dircategory)
     add_to_element_list (&parsed_document->global_commands
                                              .dircategory_direntry,
@@ -1335,7 +1336,7 @@ handle_block_command (ELEMENT *current, const char **line_inout,
   if (parsed_command_data(cmd).flags & CF_contain_basic_inline)
     add_(command) (&nesting_context.basic_inline_stack_block, cmd);
 
-  register_global_command (block, 0);
+  register_global_command (block, CM_NONE);
 
   *line_inout = line;
   *command_element = block;

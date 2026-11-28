@@ -431,7 +431,8 @@ push_top_formatter (CONVERTER *self, enum command_id cmd)
 {
   PLAINTEXT_CONVERTER_STATE *self_plaintext = self->plaintext_converter;
 
-  /* top_format 'cmdname' is '_top_format' in Perl.  Use 0 in C. */
+  /* top_format 'cmdname' is '_top_format' in Perl.  Use 0 in C to
+     set to CM_NONE */
   FORMAT_CONTEXT top_format = { 0 };
   DOCUMENT_CONTEXT document_context = { 0 };
   TEXT_CONTEXT text_element_context = { 0 };
@@ -917,7 +918,7 @@ plaintext_conversion_initialization (CONVERTER *self, DOCUMENT *document)
 
   push_count_context (&self_plaintext->count_context);
 
-  /* _Root_context in Perl, in C use CM_NONE */
+  /* _Root_context in Perl, in C use CM_NONE.  Used for command context */
   push_top_formatter (self, CM_NONE);
 }
 

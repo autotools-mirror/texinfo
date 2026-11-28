@@ -108,6 +108,7 @@ element_builtin_cmd (const ELEMENT *e)
          to memory if returned */
       return CM_NONE;
     }
+  /* not a command element */
   return CM_NONE;
 }
 

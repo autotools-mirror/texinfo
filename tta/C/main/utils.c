@@ -1107,6 +1107,7 @@ new_element_from_names (const char *type_name, const char *command_name)
     {
       enum command_id cmd;
 
+      /* command with type corresponding to a command id */
       if (type_data[e_type].cmd != CM_NONE)
         {
           ELEMENT *e = new_command_type_element (e_type,
@@ -2909,7 +2910,7 @@ informative_command_value (const ELEMENT *element, enum command_id *cmd_out)
 
   /* keeping const would be preferable, but see below it is not possible */
   value = element_value_equivalent (element, cmd_out);
-  if (*cmd_out)
+  if (*cmd_out != CM_NONE)
     return value;
 
   cmd = element_builtin_data_cmd (element);
