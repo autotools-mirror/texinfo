@@ -1,5 +1,12 @@
 2026-11-28  Patrice Dumas  <pertusus@free.fr>
 
+	* tta/C/parsetexi/indices.c (index_of_command): make static.
+	end the loop as soon as there is no more command.
+
+	Other minor changes of code location and spacing.
+
+2026-11-28  Patrice Dumas  <pertusus@free.fr>
+
 	* tta/C/main/builtin_commands.c (type_associated_cmd)
 	(element_builtin_cmd): add type_associated_cmd based on
 	element_builtin_cmd code.

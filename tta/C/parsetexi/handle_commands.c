@@ -943,8 +943,8 @@ handle_line_command (ELEMENT *current, const char **line_inout,
           /* Add to contents */
 
           if (parsed_command_data(cmd).flags & CF_index_entry_command)
-            command_e = new_command_type_element (ET_index_entry_command, cmd,
-                                                  command_name(cmd));
+            command_e = new_command_type_element (ET_index_entry_command,
+                                                  cmd, command_name(cmd));
           else
             command_e = new_command_element (cmd);
 

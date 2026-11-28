@@ -72,7 +72,7 @@ associate_command_to_index (enum command_id cmd, INDEX *idx)
 }
 
 /* Get the index associated with CMD. */
-INDEX *
+static INDEX *
 index_of_command (enum command_id cmd)
 {
   size_t i;
@@ -232,6 +232,8 @@ init_index_commands (void)
               cmd = def_command_indices[i].id[j];
               if (cmd)
                 associate_command_to_index (cmd, idx);
+              else
+                break;
             }
         }
     }
@@ -239,7 +241,7 @@ init_index_commands (void)
 }
 
 /* INDEX_TYPE_CMD is used to determine which index to enter the entry in.
-   index entry.  ELEMENT is the element in the main body of the manual that
+   ELEMENT is the element in the main body of the manual that
    the index entry refers/belongs to.
 */
 void
@@ -249,11 +251,12 @@ enter_index_entry (enum command_id index_type_cmd,
   INDEX *idx;
   INDEX_ENTRY *entry;
   TEXT ignored_chars;
-  const IGNORED_CHARS *ignored_chars_info
-    = &parsed_document->global_info.ignored_chars;
 
   if (global_parser_conf->no_index)
     return;
+
+  const IGNORED_CHARS *ignored_chars_info
+    = &parsed_document->global_info.ignored_chars;
 
   idx = index_of_command (index_type_cmd);
   if (idx->entries_number == idx->entries_space)
