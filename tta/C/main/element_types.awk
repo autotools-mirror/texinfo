@@ -37,12 +37,11 @@ BEGIN {
 
 !/^$/ && !/^#/ {
     print "ET_" $1 ","                                                > ETH
-    array = array "\"" $1 "\",\n"
     t = $1
     type_flags[t] = $2
+    associated_cmd[t] = $3
     line++
     types[line] = t
-    associated_code[t] = $3
 
     last_type = "ET_" $1
 }
@@ -73,8 +72,8 @@ END {
             }
           }
         }
-        if (associated_command[t] != "") {
-          associated_cmd_str = associated_command[t]
+        if (associated_cmd[t] != "") {
+          associated_cmd_str = "CM_" associated_cmd[t]
         } else {
           associated_cmd_str = "CM_NONE"
         }

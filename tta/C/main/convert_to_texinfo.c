@@ -34,7 +34,9 @@
 /* get_label_element and collapse_spaces */
 #include "utils.h"
 #include "debug.h"
-/* #include "manipulate_tree.h" */
+/*
+#include "manipulate_tree.h"
+ */
 #include "convert_to_texinfo.h"
 
 
@@ -142,6 +144,11 @@ convert_to_texinfo_internal (const ELEMENT *e, TEXT *result)
                 ADD("}");
               return;
             }
+          else if (command_data[cmd].flags & CF_def
+                    /* also line command */
+                   || e->type == ET_linemacro_call)
+            { /* @def* commands (that are also block commands) */
+            }
           else if (command_data[cmd].flags & CF_line
                    || e->type == ET_index_entry_command
                    || e->type == ET_macro_call_line
@@ -150,10 +157,6 @@ convert_to_texinfo_internal (const ELEMENT *e, TEXT *result)
           /* line commands that are not root commands */
               convert_args (e, result);
               return;
-            }
-          else if (command_data[cmd].flags & CF_def
-                   || e->type == ET_linemacro_call)
-            { /* @def* commands (that are also block commands) */
             }
           else
             {

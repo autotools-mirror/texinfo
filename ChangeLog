@@ -1,5 +1,19 @@
 2026-11-28  Patrice Dumas  <pertusus@free.fr>
 
+	* tta/C/main/element_types.awk: fix variable name and prepend CM_ to
+	command id.
+
+	* tta/C/main/convert_to_texinfo.c (convert_to_texinfo_internal),
+	tta/perl/Texinfo/Convert/Texinfo.pm (_convert_to_texinfo): put
+	linemacro_call type condition before condition on line command, as
+	linemacro_call is also a line command.
+
+	* tta/C/main/tree.c (new_element, new_command_type_element)
+	(new_command_element, new_text_element): abort if type is ET_NONE or
+	cmd is CM_NONE.
+
+2026-11-28  Patrice Dumas  <pertusus@free.fr>
+
 	* tta/C/main/element_types.txt, tta/C/main/types_data.h,
 	tta/C/api_for_swig/swig_element_types.h: add categories as first flag
 	for types with commands and types of containers, such that every type

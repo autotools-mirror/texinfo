@@ -112,6 +112,8 @@ foreach my $type ($Texinfo::SM_type_defline_continuation,
   $expanded_source_mark_types{$type} = 1;
 }
 
+#print STDERR "TREE: ".Texinfo::tree_print_details($tree)."\n";
+
 my $result = '';
 
 while (1) {

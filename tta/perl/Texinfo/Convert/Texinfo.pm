@@ -274,6 +274,9 @@ sub _convert_to_texinfo($) {
         }
         $result .= '}' if ($braces);
         return $result;
+      } elsif (exists($def_commands{$data_cmdname})
+               or $element->{'type'} eq 'linemacro_call') {
+        # @def* commands (that are also block commands)
       } elsif (exists($line_commands{$data_cmdname})
                or $element->{'type'} eq 'index_entry_command'
                or $element->{'type'} eq 'macro_call_line'
@@ -281,9 +284,6 @@ sub _convert_to_texinfo($) {
         # line commands that are not root commands
         $result .= _convert_args($element);
         return $result;
-      } elsif (exists($def_commands{$data_cmdname})
-               or $element->{'type'} eq 'linemacro_call') {
-        # @def* commands (that are also block commands)
       } else {
         warn "BUG: Unknown command type to convert to texinfo: $cmdname\n";
       }

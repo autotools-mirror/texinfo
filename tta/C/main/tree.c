@@ -57,6 +57,9 @@ new_element (enum element_type type)
 {
   ELEMENT *e;
 
+  if (type == ET_NONE)
+    abort ();
+
   /* alloc_element zeroes *e.  We assume null pointers have bit
      representation of all zeroes. */
   e = alloc_element ();
@@ -77,6 +80,9 @@ new_command_type_element (enum element_type type, enum command_id cmd,
 {
   ELEMENT *e = new_element (type);
 
+  if (cmd == CM_NONE)
+    abort ();
+
   e->e.c->cmd = cmd;
 
   if (command_name)
@@ -88,6 +94,9 @@ new_command_type_element (enum element_type type, enum command_id cmd,
 ELEMENT *
 new_command_element (enum command_id cmd)
 {
+  if (cmd == CM_NONE)
+    abort ();
+
   ELEMENT *e = new_element (ET_normal_command);
 
   e->e.c->cmd = cmd;
@@ -101,10 +110,9 @@ new_text_element (enum element_type type)
   ELEMENT *e;
   e = alloc_element ();
 
-  /*
   if (type == ET_NONE)
     abort ();
-   */
+
   e->type = type;
 
   e->e.text = (TEXT *) malloc (sizeof (TEXT));

@@ -67,8 +67,8 @@ lookup_builtin_command (const char *cmdname)
   return 0;
 }
 
-/* this should be used when the user-defined commands are not available,
-   ie outside of the parser */
+/* To be used when a generic cmd is associated to an element instead of
+   a cmd with USER_COMMAND_BIT set */
 const char *
 element_command_name (const ELEMENT *e)
 {
@@ -89,8 +89,8 @@ element_command_name (const ELEMENT *e)
   return 0;
 }
 
-/* map user-defined element commands to internal commands */
-
+/* Used to map user-defined element commands to internal commands.
+   Now is mainly a debug check */
 enum command_id
 element_builtin_cmd (const ELEMENT *e)
 {
@@ -103,7 +103,7 @@ element_builtin_cmd (const ELEMENT *e)
                debug_str, e->e.c->cmd);
       free (debug_str);
       abort ();
-      /* The e->cmd value being outside of the command id tables
+      /* If the e->e.c->cmd value is outside of the command id tables
          it is likely that it would be associated with incorrect access
          to memory if returned */
       return CM_NONE;
