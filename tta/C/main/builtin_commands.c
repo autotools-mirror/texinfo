@@ -67,19 +67,6 @@ lookup_builtin_command (const char *cmdname)
   return 0;
 }
 
-/* command_id associated to types */
-
-enum command_id
-type_associated_cmd (enum element_type type)
-{
-  if (type == ET_definfoenclose_command)
-    return CM_definfoenclose_command;
-  else if (type == ET_index_entry_command)
-    return CM_index_entry_command;
-  else
-    return CM_NONE;
-}
-
 /* this should be used when the user-defined commands are not available,
    ie outside of the parser */
 const char *
@@ -109,26 +96,19 @@ element_builtin_cmd (const ELEMENT *e)
 {
   if (e->e.c->cmd && e->e.c->cmd < BUILTIN_CMD_NUMBER)
     return e->e.c->cmd;
-  else
+  else if (e->e.c->cmd || e->type == ET_normal_command)
     {
-      enum command_id cmd = type_associated_cmd (e->type);
-      if (cmd != CM_NONE)
-        return cmd;
-
-      if (e->e.c->cmd)
-        {
-          char *debug_str = print_element_debug (e, 0);
-          fprintf (stderr, "BUG: element_builtin_cmd: unexpected %s; add code? (%d)\n",
-                   debug_str, e->e.c->cmd);
-          free (debug_str);
-          /* The e->cmd value being outside of the command id tables
-             it is likely that it would be associated with incorrect access
-             to memory if returned */
-          return 0;
-        }
+      char *debug_str = print_element_debug (e, 0);
+      fprintf (stderr, "BUG: element_builtin_cmd: unexpected %s; add code? (%d)\n",
+               debug_str, e->e.c->cmd);
+      free (debug_str);
+      abort ();
+      /* The e->cmd value being outside of the command id tables
+         it is likely that it would be associated with incorrect access
+         to memory if returned */
+      return CM_NONE;
     }
-  /* should never reach here */
-  return 0;
+  return CM_NONE;
 }
 
 /* map user-defined element commands to internal commands with the right

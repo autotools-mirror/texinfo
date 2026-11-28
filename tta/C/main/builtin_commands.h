@@ -42,7 +42,6 @@ extern int ref_3_args_order[];
 extern int ref_5_args_order[];
 
 enum command_id lookup_builtin_command (const char *cmdname);
-enum command_id type_associated_cmd (enum element_type type);
 const char *element_command_name (const ELEMENT *e);
 enum command_id element_builtin_cmd (const ELEMENT *e);
 enum command_id element_builtin_data_cmd (const ELEMENT *e);

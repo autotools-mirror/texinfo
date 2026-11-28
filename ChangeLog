@@ -1,5 +1,16 @@
 2026-11-28  Patrice Dumas  <pertusus@free.fr>
 
+	* tta/C/parsetexi/end_line.c (end_line_misc_line): set element cmd to
+	generic CM_index_entry_command for user defined index commands for
+	commands without arguments too.
+
+	* tta/C/main/builtin_commands.c (element_builtin_cmd): simplify now
+	that no element in tree should have USER_COMMAND_BIT set.
+
+	Remove unused type_associated_cmd.
+
+2026-11-28  Patrice Dumas  <pertusus@free.fr>
+
 	add generic commands for macro expansion calls and generalize
 
 	* tta/C/main/element_types.awk, tta/C/main/element_types.txt,
