@@ -1110,7 +1110,7 @@ new_element_from_names (const char *type_name, const char *command_name)
       if (type_data[e_type].flags & TF_with_command)
         {
           ELEMENT *e = new_command_type_element (e_type,
-                                    CM_NONE, command_name);
+                            type_associated_cmd (e_type), command_name);
           return e;
         }
 
