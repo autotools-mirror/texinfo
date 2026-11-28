@@ -17,26 +17,26 @@
 
 # The first column holds type names, second column contains flags, third
 # column holds associated command id.
+#
+# Flags for element categories.  Only text used in code
+# text: text element
+# command: element associated to an @-command.  Instead of testing this type
+#          it is in general better to test if cmd is != 0/CM_NONE
+# container: other element
+
 # Flags for text elements:
-#  text: distinguishes text from other elements
 #  leading_space: text elements with spaces appearing before actual text.
 #                 To keep in sync with Perl parser %leading_space_types.
 #  trailing_spaces: text elements with spaces appearing after actual text.
 #                   To keep in sync with Perl parser %trailing_space_types
 #  ignorable_text: used in reader to determine the token category.
-#
-# Other flags:
-#  with_command: type corresponding to @-command with name determined dynamically.
-#                Index commands (that can be added with defindex, for
-#                example), definfoenclose'd commands, user-defined macro calls.
-#                Used in C when passing from Perl.
 
 
 # Types for @-commands
-index_entry_command                    with_command  index_entry_command
-definfoenclose_command                 with_command  definfoenclose_command
+index_entry_command                  command    index_entry_command
+definfoenclose_command               command    definfoenclose_command
 # command without a special type
-normal_command
+normal_command                       command
 
 # For text elements
 after_menu_description_line               text
@@ -55,44 +55,44 @@ spaces_after_cmd_before_arg               text,ignorable_text
 verb_delimiter                            text,ignorable_text
 
 # Containers
-document_root
-root_line
-before_node_section
-after_end
-before_beginning
-preamble
-paragraph
-preformatted
-rawpreformatted
+document_root                        container
+root_line                            container
+before_node_section                  container
+after_end                            container
+before_beginning                     container
+preamble                             container
+paragraph                            container
+preformatted                         container
+rawpreformatted                      container
 
 # container not appearing in the original tree.  May be added to the
 # tree by transformations.
-generic_container
+generic_container                    container
 
 # @-commands arguments containers
-arguments_line
-brace_command_context
+arguments_line                       container
+brace_command_context                container
 # @-commands containers for one argument content
-brace_container
+brace_container                      container
 # with separate leading spaces in info, and trailing (if not in inline)
-brace_arg                                  
+brace_arg                            container
 # with comment_at_end
-block_line_arg                             
-line_arg                                   
-following_arg
+block_line_arg                       container
+line_arg                             container
+following_arg                        container
 # similar to def_line_arg, but for user-defined linemacro calls.  Also
 # similar to line_arg, but not delimited by commas.
-linemacro_arg                              
+linemacro_arg                              container
 
 rawline_text                               text
 
-menu_entry
+menu_entry                                 container
 menu_entry_leading_text                    text
-menu_entry_name
+menu_entry_name                            container
 menu_entry_separator                       text
-menu_entry_node
-menu_entry_description
-menu_comment
+menu_entry_node                            container
+menu_entry_description                     container
+menu_comment                               container
 
 # Used internally
 internal_menu_star                         text
@@ -102,36 +102,36 @@ internal_spaces_before_brace_in_index      text
 macro_line                                 text
 
 # structure of block commands
-before_item
-table_entry
-table_term
-table_definition
-inter_item
-def_line                              
-def_item
-inter_def_item
-before_defline
-multitable_head
-multitable_body
-row
+before_item                                container
+table_entry                                container
+table_term                                 container
+table_definition                           container
+inter_item                                 container
+def_line                                   container
+def_item                                   container
+inter_def_item                             container
+before_defline                             container
+multitable_head                            container
+multitable_body                            container
+row                                        container
 
-balanced_braces
-bracketed_arg                         
+balanced_braces                            container
+bracketed_arg                              container
 
 # container of definition line argument content
-def_line_arg
+def_line_arg                               container
 # A special case, as in general it should not be recursed into,
 # instead the text within should be translated
-untranslated_def_line_arg
+untranslated_def_line_arg                  container
 
 # definition line direct arguments containers.  Contains bracketed_arg
 # and *def_line_arg.
-def_category
-def_class
-def_type
-def_name
-def_typearg
-def_arg
+def_category                              container
+def_class                                 container
+def_type                                  container
+def_name                                  container
+def_typearg                               container
+def_arg                                   container
 
 # text for def commands, definition line direct arguments
 delimiter                                 text
@@ -140,15 +140,15 @@ spaces                                    text
 untranslated                              text
 
 # for unexpanded parts of conditionals
-elided_rawpreformatted
-elided_brace_command_arg
+elided_rawpreformatted                    container
+elided_brace_command_arg                  container
 
 # for macro expansion source marks
-macro_call                                with_command    macro_call_command
-rmacro_call                               with_command    rmacro_call_command
-macro_call_line                           with_command    macro_call_line_command
-rmacro_call_line                          with_command    rmacro_call_line_command
-linemacro_call                            with_command    linemacro_call_command
+macro_call                                command    macro_call_command
+rmacro_call                               command    rmacro_call_command
+macro_call_line                           command    macro_call_line_command
+rmacro_call_line                          command    rmacro_call_line_command
+linemacro_call                            command    linemacro_call_command
 
 # macro and linemacro (if not bracketed) call arguments texts
 macro_call_arg_text                       text
@@ -156,18 +156,18 @@ bracketed_linemacro_arg                    text
 
 # virtual type not corresponding to a specific element in tree, but
 # used for all the elements that hold text, typically in converters.
-text
+text                                      text
 
 # for HTML converter
 _converted                                text
 
 # Next are for Plaintext/Info converter
-_code
+_code                                     container
 # next also for LaTeX
-_frenchspacing
-_stop_upper_case
-_suppress_styles
+_frenchspacing                            container
+_stop_upper_case                          container
+_suppress_styles                          container
 
 # not in parser, for virtual element associated to special output units
-special_unit_element
+special_unit_element                      container
 

@@ -1,5 +1,13 @@
 2026-11-28  Patrice Dumas  <pertusus@free.fr>
 
+	* tta/C/main/element_types.txt, tta/C/main/types_data.h,
+	tta/C/api_for_swig/swig_element_types.h: add categories as first flag
+	for types with commands and types of containers, such that every type
+	has a category, command, text or container.
+	Remove with_command flag.
+
+2026-11-28  Patrice Dumas  <pertusus@free.fr>
+
 	* tta/C/parsetexi/end_line.c (end_line_misc_line): set element cmd to
 	generic CM_index_entry_command for user defined index commands for
 	commands without arguments too.

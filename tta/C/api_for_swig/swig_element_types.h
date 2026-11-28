@@ -43,7 +43,8 @@
 /* next list may need changes for types_data.h flags modifications */
 #define TXI_TY_FLAGS_LIST \
   ty_flag(text) \
-  ty_flag(with_command) \
+  ty_flag(command) \
+  ty_flag(container) \
   ty_flag(leading_space) \
   ty_flag(trailing_space)
 
